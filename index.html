@@ -267,8 +267,7 @@ details.more[open] summary::before{content:'\2212 '}
     scheduling and KPIs.</p></div>
   <div class="xp"><h3>Per Scholas — IT Support Specialist Track</h3><div class="meta">2025 – 2026 · 15-WEEK FULL-TIME PROGRAM</div>
     <p>Earned <b style="color:var(--text)">CompTIA A+ certification</b> and the Google IT Support Professional
-    Certificate; now in Security+ coursework. Also holds ServiceNow, Cisco and GitHub credentials, plus 149
-    Salesforce Trailhead badges.</p></div>
+    Certificate; now in Security+ coursework. Also holds ServiceNow, Cisco and GitHub credentials, plus 41 Salesforce Trailhead trails (149 badges).</p></div>
 </div></section>
 
 <section id="projects"><div class="wrap">
@@ -290,7 +289,7 @@ details.more[open] summary::before{content:'\2212 '}
       <p>A portfolio-site template I'm turning into a service: a personal résumé website like this one, built for you,
       with your projects, credentials and a contact button. Fast, static and free to host.</p>
       <div class="chips"><span class="chip">html · css · js</span><span class="chip">now taking requests</span></div>
-      <p style="margin-top:14px"><a href="#contact">Want one? Get in touch →</a></p>
+      <p style="margin-top:14px"><a href="demo/resume-site/">See the live demo →</a> &nbsp;·&nbsp; <a href="#contact">Want one?</a></p>
     </div>
   </div>
 </div></section>
@@ -413,6 +412,11 @@ const TRAILHEAD = {
   "Nov 2025": ["Data 360 Connectors and Integrations","Statement of Work Best Practices","Explore Data 360 Core Functionality","Customer 360 Data Model for Data 360","Quick Start: Create a Prompt Builder Flex Template","Quick Start: Create a Sales Email Prompt Template","Prompt Builder Basics","Customer Service Incident Management: Quick Look","Service Setup Assistant: Quick Look","Agentforce Service: Quick Look","Virtual Presentations","Project Management Plan Lite","Knowledge-Centered Service with Agentforce Service","Lightning Knowledge Migration","Knowledge Grounding for AI: Quick Look","Einstein Article Recommendations for Service","Knowledge Search Basics","Lightning Knowledge Setup and Customization","EDA Reports","Constituent Management in EDA","Education Architecture Setup","EDA Configuration and Data Import","Get Started with Modern JavaScript Development","JavaScript Skills for Salesforce Developers","The Agentforce Trust Layer","Data and Identity in Data 360","Batch Data Transforms in Data 360: Quick Look","Data 360-Powered Experiences","Introduction to Salesforce Data 360","Resume Writing Strategies","Interview Strategies","Salesforce Consultant: Quick Look","Empathetic Leadership","Salesforce Labs Basics","Consultants on AgentExchange","B2C Commerce Solutions on AgentExchange: Quick Look","Tableau Accelerators on AgentExchange: Quick Look","Data 360 Solutions on AgentExchange: Quick Look","CRM Analytics Mobile Exploration","CRM Analytics Desktop Exploration","CRM Analytics Dashboard Navigation","Identity for Mobile-Centric Customers","Identity for Customers","Alignment with Your Manager","One-on-One Meetings","Storytelling & Communication","Accountability & Delegation","Engagement & Retention","Organizational Alignment (V2MOM)","Culture of Feedback","Trust and Influence","Coaching & Feedback","Great Management","Lightning Web Components Basics","Apex Triggers","Apex Basics & Database","Flow Builder Basics","Get Started with Salesforce Development","Quick Start: Tour the Sample App Gallery","Salesforce Platform Development Basics","Session-Based Permission Sets and Security","Security Basics","Permission Set Groups","Identity Basics","Virtual Events","Virtual Whiteboarding: Quick Look","Virtual Meeting Setup: Quick Look","Salesforce Mobile App Rollout","Use External Services With a Flow","External Services","Approve Records with Approval Processes","Build a Suggestion Box App","Connect Data 360 to Agentforce","Embed Dashboards and Report Charts on Lightning Pages","Quick Start: Reports & Dashboards","Agentforce for Sales: Quick Look","Agentforce for Service","Journey Mapping","Values-Driven Design","Relationship Design","AgentExchange Solutions","Threat Modeling for Developers","Secure Development Lifecycle","Security Principles","Key Management","Public Key Infrastructure and Encryption","Secrets Management for Developers","Effective Emails: Quick Look","Self-Motivation","Personal Productivity","Build a Space Station App","AgentExchange Basics","CRM Analytics Basics","Validation Rules","Formulas and Validations","Lightning App Builder"],
   "Oct 2025": ["Build an Experience Cloud Site with Knowledge and Enhanced Chat","Personalize Experience Cloud Sites with Audience Targeting","Experience Cloud Basics","K-12 Architecture Kit Administration Basics","Education Data Architecture Basics","Salesforce Developer Experience: Quick Look","Fast App Development: Quick Look","Set Up the Service Console","Salesforce Knowledge Basics","Agentforce Service Administration","Quick Start: Lightning Experience for Closers","Chatter for Lightning Experience","Salesforce User Basics","Agentforce Sales Basics","Company-Wide Org Settings","Picklist Administration","Data Quality","Quick Start: Lightning App Builder","Privileged User Responsibilities","Credential Security","Data Security","User Authentication","Virtual Collaboration","Best Practices for Working from Home","Build an App to Track Your Trailblazer Journey","Trailblazer Community Groups","Career Development Planning","The Salesforce Ecosystem: Quick Look","Trailblazer Community: Quick Look","Create a Process for Managing Support Cases","Improve Data Quality for Your Sales and Support Teams","Create Reports and Dashboards for Sales and Marketing Managers","Import and Export with Data Management Tools","Customize a Salesforce Object","Customize a Sales Path for Your Team","Protect Your Data in Salesforce","Customize an Org to Support a New Business Unit","Prepare Your Salesforce Org for Users","Leads and Opportunities","Accounts and Contacts","Chatter Administration for Lightning Experience","User Management","Salesforce CRM","Salesforce Values: Quick Look","Trailhead Playground Management","Your Guide to Trailhead","Reports & Dashboards for Lightning Experience","User Engagement","Lightning Experience Customization","Data Management","Data Modeling","Agentforce 360 Platform Basics"],
 };
+// Completed trails (a trail = a full learning path made of several badges), by month completed
+const TRAILS = {
+  "Jun 2026": ["Learn Management Best Practices","Admin Intermediate","Learn Admin Essentials in Lightning Experience","Developer Beginner","Meet Your Business Needs with AgentExchange","Expand Your Reach with Experience Cloud","Secure Your CRM","Adopt a Designer's Mindset","Enhance Agentforce Service with Lightning Knowledge","Skill Up for the Future with Trailhead","Get Job Ready","Administer Salesforce from Anywhere","Learn CRM Fundamentals for Lightning Experience","Customize your Experience Cloud Site","Build Apps Fast with Platform Services","Admin Beginner","Get Started with Lightning Experience","Build Your Career in the Salesforce Ecosystem","Sell Lightning Fast with Agentforce Sales","Administer Education Data Architecture (EDA)","Build Your Business Skills","Model Data in Data 360","Explore with CRM Analytics","Build Apps Using No-Code Tools in Salesforce","Dive Into Agentforce Service for Salesforce Admins","Manage Data as a Salesforce Admin","Dive Into Agentforce Sales for Admins","Manage Identity and Access","Succeed from Anywhere"],
+  "May 2026": ["Get to Know Salesforce","Develop a Virtual Strategy for Your Business","Implement Secrets Management at Your Organization","Learn Secure Development Best Practices","Explore Lightning Experience Reports & Dashboards","Administer Salesforce for K-12 Educational Institutions","Access Business Processes with External Services","Get Started with Trailhead","Find Your Way Around Trailhead","Learn to Work with JavaScript","Integrate a New Business Organization","Lead During Challenging Times"],
+};
 // first matching rule wins; anything unmatched lands in "Other"
 const TRAIL_TOPICS = [
   ["AI & Agentforce", /Agentforce|Prompt|Einstein|Trust Layer|for AI/],
@@ -458,12 +462,16 @@ const CREDS = {
     }
   }
   const order = [...TRAIL_TOPICS.map(t => t[0]), "Other"].filter(t => topics[t]);
-  const trail = `<details class="issuerbox"><summary>Salesforce Trailhead<span class="n">${badges} badges ▾</span></summary>
-     <div class="cats">${order.map(t => `<details class="cat"><summary>${esc(t)}<span>${topics[t].length}</span></summary>
+  const trailList = Object.entries(TRAILS).flatMap(([m, names]) => names.map(n => [n, m]));
+  const trail = `<details class="issuerbox"><summary>Salesforce Trailhead<span class="n">${trailList.length} trails · ${badges} badges ▾</span></summary>
+     <div class="cats"><details class="cat" open><summary>Completed trails (full learning paths)<span>${trailList.length}</span></summary>
+       <ul>${trailList.map(([n, d]) => `<li><span>${esc(n)}</span><span>${esc(d)}</span></li>`).join("")}</ul></details>
+     <p style="font:500 12px 'JetBrains Mono',monospace;color:var(--faint);margin:14px 2px 2px">BADGES BY TOPIC</p>
+     ${order.map(t => `<details class="cat"><summary>${esc(t)}<span>${topics[t].length}</span></summary>
        <ul>${topics[t].map(([n, d]) => `<li><span>${esc(n)}</span><span>${esc(d)}</span></li>`).join("")}</ul></details>`).join("")}</div></details>`;
 
   document.getElementById("credcount").textContent =
-    `CompTIA A+ certified · Google IT Support certified · Security+ in progress · 50+ credentials, plus ${badges} Trailhead badges`;
+    `CompTIA A+ certified · Google IT Support certified · Security+ in progress · 50+ credentials, plus ${trailList.length} Trailhead trails (${badges} badges)`;
   document.getElementById("credall").innerHTML = Object.entries(CREDS).map(([issuer, list]) =>
     `<details class="issuerbox"><summary>${esc(issuer)}<span class="n">${list.length} ▾</span></summary>
      <ul>${list.map(([n, d]) => `<li><span>${esc(n)}</span><span>${esc(d)}</span></li>`).join("")}</ul></details>`).join("") + trail;
