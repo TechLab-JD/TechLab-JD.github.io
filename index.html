@@ -110,24 +110,49 @@ section .sub{color:var(--faint);margin-bottom:30px;font-size:15px}
 .paper a.go:hover{color:var(--paper-ink)}
 .shopnote{margin-top:24px;font-size:14px;color:var(--faint)}
 
-/* Vectoral Labs: the one card that wears its own brand colors (teal on night) */
-.venture{display:grid;grid-template-columns:1.15fr .85fr;gap:0;background:#0b0b14;border:1px solid rgba(0,212,168,.35);border-radius:18px;overflow:hidden;
-  box-shadow:0 0 0 1px rgba(0,212,168,.08),0 24px 60px -28px rgba(0,212,168,.35);transition:transform .14s,box-shadow .14s}
-.venture:hover{transform:translateY(-3px);box-shadow:0 0 0 1px rgba(0,212,168,.2),0 28px 70px -26px rgba(0,212,168,.45)}
-.venture img{width:100%;height:100%;object-fit:cover;object-position:left top;display:block;border-right:1px solid rgba(0,212,168,.25)}
-.venture .body{padding:28px;display:flex;flex-direction:column;gap:12px}
-.venture .live{font:600 12px 'JetBrains Mono',monospace;color:#00d4a8;letter-spacing:.08em;display:flex;align-items:center;gap:8px}
-.venture .live::before{content:'';width:8px;height:8px;border-radius:50%;background:#00d4a8;box-shadow:0 0 10px #00d4a8}
-.venture h3{font-size:24px;color:#F4F1E6}
-.venture p{font-size:14.5px;color:var(--dim)}
-.venture .lines{display:grid;gap:8px;margin:4px 0}
-.venture .lines div{font-size:14px;color:var(--text);padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.02)}
-.venture .lines b{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.08em;display:block;margin-bottom:2px}
-.venture .lines .t b{color:#00d4a8} .venture .lines .a b{color:#9b6bff}
-.venture .chip{color:#00d4a8;border-color:rgba(0,212,168,.4);background:rgba(0,212,168,.07)}
+/* Vectoral Labs: the one card that wears its own brand colors (teal + violet on night) */
+.venture{position:relative;overflow:hidden;border-radius:20px;padding:34px;background:
+  radial-gradient(ellipse 55% 70% at 100% 0%,rgba(0,212,168,.14),transparent 70%),
+  radial-gradient(ellipse 45% 60% at 0% 100%,rgba(155,107,255,.12),transparent 70%),#0a0a13;
+  border:1px solid rgba(0,212,168,.3);box-shadow:0 26px 70px -34px rgba(0,212,168,.45)}
+.venture::before{content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(0,212,168,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,168,.05) 1px,transparent 1px);
+  background-size:44px 44px;mask-image:linear-gradient(90deg,transparent,#000 60%)}
+.venture>*{position:relative}
+.vhead{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.vmark{display:flex;align-items:center;gap:10px;text-decoration:none}
+.vmark b{font:800 20px 'Space Grotesk',sans-serif;color:#F4F1E6;letter-spacing:.02em}
+.vmark b span{color:#00d4a8}
+.live{margin-left:auto;font:600 12px 'JetBrains Mono',monospace;color:#00d4a8;letter-spacing:.08em;display:flex;align-items:center;gap:8px}
+.live::before{content:'';width:8px;height:8px;border-radius:50%;background:#00d4a8;box-shadow:0 0 10px #00d4a8;animation:blink 2s infinite}
+@keyframes blink{50%{opacity:.35}}
+.venture h3{font-size:clamp(28px,4vw,40px);color:#F4F1E6;margin:22px 0 8px;letter-spacing:-.02em}
+.venture h3 em{font-style:normal;color:#00d4a8}
+.venture .vsub{color:var(--dim);max-width:640px;font-size:15.5px}
+.vlines{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
+.vline{display:block;text-decoration:none;padding:22px;border-radius:14px;background:rgba(255,255,255,.025);border:1px solid var(--line);
+  transition:transform .15s,border-color .15s,background .15s}
+.vline:hover{transform:translateY(-3px)}
+.vline .k{font:600 11.5px 'JetBrains Mono',monospace;letter-spacing:.1em}
+.vline strong{display:block;font:700 19px 'Space Grotesk',sans-serif;color:#F4F1E6;margin:6px 0 6px}
+.vline p{font-size:14px;color:var(--dim)}
+.vline .go{display:inline-block;margin-top:12px;font-weight:600;font-size:14px}
+.vline .go::after{content:' →';transition:margin .15s}
+.vline:hover .go::after{margin-left:4px}
+.vline.t{border-top:3px solid #00d4a8} .vline.t .k,.vline.t .go{color:#00d4a8} .vline.t:hover{border-color:rgba(0,212,168,.5);background:rgba(0,212,168,.05)}
+.vline.a{border-top:3px solid #9b6bff} .vline.a .k,.vline.a .go{color:#b394ff} .vline.a:hover{border-color:rgba(155,107,255,.5);background:rgba(155,107,255,.06)}
+.vfoot{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.vfoot span{font-size:13.5px;color:var(--faint)}
 .btn.teal{background:#00d4a8;color:#06110e}
 .btn.teal:hover{background:#2be3bd}
-@media (max-width:820px){.venture{grid-template-columns:1fr}.venture img{height:auto;aspect-ratio:16/9;border-right:0;border-bottom:1px solid rgba(0,212,168,.25)}}
+.cats{padding:8px 12px 12px}
+.cat{border:1px solid var(--line-soft);border-radius:10px;margin-top:8px;background:rgba(255,255,255,.015)}
+.cat summary{cursor:pointer;list-style:none;padding:11px 14px;display:flex;justify-content:space-between;font:500 14.5px 'Space Grotesk',sans-serif;color:var(--text)}
+.cat summary::-webkit-details-marker{display:none}
+.cat summary span{font:500 12px 'JetBrains Mono',monospace;color:var(--amber)}
+.cat ul{padding:2px 14px 12px}
+.feat .issuer{padding-right:100px}
+@media (max-width:760px){.vlines{grid-template-columns:1fr}.venture{padding:24px}.live{margin-left:0}}
 
 footer{padding:72px 0 84px;border-top:1px solid var(--line-soft);background:#0B101D}
 footer h2{font-size:30px;color:#F4F1E6}
@@ -185,6 +210,7 @@ details.more[open] summary::before{content:'\2212 '}
      a growing line of productivity and study templates.</p>
   <div class="btnrow">
     <a class="btn primary" href="#shop">Browse Steady Systems</a>
+    <a class="btn teal" href="#vectoral">Explore Vectoral Labs</a>
     <a class="btn ghost" href="assets/Jordan-Dorman-Resume.pdf" target="_blank" rel="noopener">Download résumé</a>
     <a class="btn ghost" href="#contact">Get in touch</a>
   </div>
@@ -226,6 +252,10 @@ details.more[open] summary::before{content:'\2212 '}
     <p>Tech &amp; automation services for homes and small businesses: WiFi, smart home, device and AV setup, monthly
     support plans, and AI workflow setups for owner-run shops. Built and run the site, pricing, service catalog and
     lead pipeline.</p></div>
+  <div class="xp"><h3>Founder &amp; Project Lead — Steady Systems (solo project)</h3><div class="meta">SEP 2026 – PRESENT · REMOTE · <a href="https://syssteady.gumroad.com" style="color:var(--amber)">SYSSTEADY.GUMROAD.COM</a></div>
+    <p>Planned and delivered a digital-product line end to end as a one-person project: roadmap and release calendar,
+    scope and pricing, QA and rights-check gates before every release, and an API-driven build-and-publish pipeline
+    with a daily review/approval step. 8 products live in launch week.</p></div>
   <div class="xp"><h3>Sales Consultant — AT&T Authorized Retailer</h3><div class="meta">2024 – PRESENT · DALLAS, TX</div>
     <p>Built automated request-routing and status-tracking workflows; applied ticket-style prioritization and
     escalation to high-volume client requests; customer-facing technical problem-solving.</p></div>
@@ -237,7 +267,7 @@ details.more[open] summary::before{content:'\2212 '}
     scheduling and KPIs.</p></div>
   <div class="xp"><h3>Per Scholas — IT Support Specialist Track</h3><div class="meta">2025 – 2026 · 15-WEEK FULL-TIME PROGRAM</div>
     <p>Earned <b style="color:var(--text)">CompTIA A+ certification</b> and the Google IT Support Professional
-    Certificate; now in Security+ coursework. Also holds ServiceNow, Cisco and GitHub credentials, plus 157+
+    Certificate; now in Security+ coursework. Also holds ServiceNow, Cisco and GitHub credentials, plus 149
     Salesforce Trailhead badges.</p></div>
 </div></section>
 
@@ -256,25 +286,11 @@ details.more[open] summary::before{content:'\2212 '}
       <div class="chips"><span class="chip">python</span><span class="chip">complete</span></div>
       <p style="margin-top:14px"><a href="https://github.com/TechLab-JD/Inventory-Tracker">View repo →</a></p>
     </div>
-    <div class="card"><img class="shot" src="assets/img/task_manager_img.png" alt="Task Manager CLI showing a task table" loading="lazy"><h3>Task Manager CLI</h3>
-      <p>Command-line task manager in Python for creating, editing and completing tasks.</p>
-      <div class="chips"><span class="chip">python</span><span class="chip">complete</span></div>
-      <p style="margin-top:14px"><a href="https://github.com/TechLab-JD/Task-Manager-CLI">View repo →</a></p>
-    </div>
-    <div class="card"><h3>Pokédex Site</h3>
-      <p>API-driven Pokédex interface on GitHub Pages — fetching and rendering live data from a public API.</p>
-      <div class="chips"><span class="chip">html</span><span class="chip">api</span><span class="chip">complete</span></div>
-      <p style="margin-top:14px"><a href="https://github.com/TechLab-JD/Pokemon_Site">View repo →</a></p>
-    </div>
-    <div class="card"><h3>Personal Dashboard</h3>
-      <p>A lightweight personal dashboard — the early prototype of the systems-first habit.</p>
-      <div class="chips"><span class="chip">html</span><span class="chip">prototype</span></div>
-      <p style="margin-top:14px"><a href="https://github.com/TechLab-JD/Personal-Dashboard">View repo →</a></p>
-    </div>
-    <div class="card"><h3>The Odin Project</h3>
-      <p>Coursework and builds from The Odin Project full-stack curriculum.</p>
-      <div class="chips"><span class="chip">css</span><span class="chip">learning</span></div>
-      <p style="margin-top:14px"><a href="https://github.com/TechLab-JD/TheOdinProject">View repo →</a></p>
+    <div class="card" style="border-top:3px solid var(--amber)"><h3>Custom Résumé Websites</h3>
+      <p>A portfolio-site template I'm turning into a service: a personal résumé website like this one, built for you,
+      with your projects, credentials and a contact button. Fast, static and free to host.</p>
+      <div class="chips"><span class="chip">html · css · js</span><span class="chip">now taking requests</span></div>
+      <p style="margin-top:14px"><a href="#contact">Want one? Get in touch →</a></p>
     </div>
   </div>
 </div></section>
@@ -284,19 +300,32 @@ details.more[open] summary::before{content:'\2212 '}
   <h2>Vectoral Labs</h2>
   <p class="sub">my DFW tech &amp; automation business · live and taking bookings</p>
   <div class="venture">
-    <a href="https://vectoral-labs.com" aria-label="Open vectoral-labs.com"><img src="assets/img/vectoral_labs_img.png" alt="The Vectoral Labs homepage: Your tech. Handled." loading="lazy"></a>
-    <div class="body">
+    <div class="vhead">
+      <a class="vmark" href="https://vectoral-labs.com">
+        <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="4" width="56" height="56" rx="13" fill="#0b0b18" stroke="#00d4a8" stroke-width="4"/><polyline points="16,44 26,24 34,36 46,22" fill="none" stroke="#00d4a8" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="46" cy="22" r="4.5" fill="#00d4a8"/></svg>
+        <b>VECTORAL<span>LABS</span></b>
+      </a>
       <span class="live">LIVE · VECTORAL-LABS.COM</span>
-      <h3>Your tech. Handled.</h3>
-      <p>One front door, two lines of work, each with its own back end for leads, clients and follow-up:</p>
-      <div class="lines">
-        <div class="t"><b>TECH SERVICES</b>WiFi, smart home, computers, TV/AV and monthly support plans for homes and offices</div>
-        <div class="a"><b>AI &amp; AUTOMATION</b>review replies, booking reminders, follow-ups and trackers for small businesses</div>
-      </div>
-      <div class="chips" style="margin-top:0"><span class="chip">static site</span><span class="chip">cloudflare pages</span><span class="chip">quote builder</span><span class="chip">js</span></div>
-      <div class="btnrow" style="margin-top:6px">
-        <a class="btn teal" href="https://vectoral-labs.com">Visit the site →</a>
-      </div>
+    </div>
+    <h3>Your tech. <em>Handled.</em></h3>
+    <p class="vsub">A Dallas–Fort Worth tech &amp; automation service I founded and run: one front door, two lines of work.</p>
+    <div class="vlines">
+      <a class="vline t" href="https://vectoral-labs.com/#tech">
+        <span class="k">FOR HOMES &amp; OFFICES</span>
+        <strong>Tech Services</strong>
+        <p>WiFi, smart home, computers, TV/AV and backups at flat starting prices, plus monthly support plans from $25.</p>
+        <span class="go">See services &amp; prices</span>
+      </a>
+      <a class="vline a" href="https://vectoral-labs.com/#ai">
+        <span class="k">FOR SMALL BUSINESSES</span>
+        <strong>AI &amp; Automation</strong>
+        <p>Review replies, booking reminders, quote follow-ups and job trackers, set up in the apps owners already use.</p>
+        <span class="go">Start with a free check</span>
+      </a>
+    </div>
+    <div class="vfoot">
+      <a class="btn teal" href="https://vectoral-labs.com">Visit vectoral-labs.com →</a>
+      <span>Serving Plano · Richardson · Dallas</span>
     </div>
   </div>
 </div></section>
@@ -340,7 +369,7 @@ details.more[open] summary::before{content:'\2212 '}
     <a class="btn ghost" href="https://linkedin.com/in/jordan-dorman">LinkedIn</a>
     <a class="btn ghost" href="https://github.com/TechLab-JD">GitHub</a>
   </div>
-  <p class="foot-note"><span class="dot">●</span> systems: steady &nbsp;·&nbsp; © 2026 Jordan Dorman · Steady Systems</p>
+  <p class="foot-note"><span class="dot">●</span> systems: steady &nbsp;·&nbsp; © 2026 Jordan Dorman · <a href="https://syssteady.gumroad.com" style="color:inherit">Steady Systems</a> · <a href="https://vectoral-labs.com" style="color:inherit">Vectoral Labs</a></p>
 </div></footer>
 
 <script>
@@ -368,13 +397,33 @@ const SKILLS = [
    more:["Logical & analytical reasoning","Design thinking","Constructive feedback","Inclusive teamwork","Time management","Organization","Learning agility","Continuous improvement"]},
 ];
 
+// badge: "CERTIFIED" for real certifications, "CERTIFICATE" for course/program certificates
 const FEATURED = [
   {name:"CompTIA A+", issuer:"CompTIA", when:"Feb 2026 – Feb 2029", badge:"CERTIFIED"},
-  {name:"Google IT Support Professional Certificate", issuer:"Google", when:"Jan 2026 · 6-course series"},
-  {name:"Foundations of Cybersecurity", issuer:"Google", when:"Feb 2026"},
-  {name:"Endpoint Security", issuer:"Cisco", when:"Mar 2026"},
-  {name:"Welcome to ServiceNow (Micro-Certification)", issuer:"ServiceNow", when:"Feb 2026"},
-  {name:"Career Essentials in GitHub", issuer:"GitHub", when:"Dec 2023 · Professional Certificate"},
+  {name:"Google IT Support Professional Certificate", issuer:"Google", when:"Jan 2026 · 6-course series", badge:"CERTIFIED"},
+  {name:"Welcome to ServiceNow (Micro-Certification)", issuer:"ServiceNow", when:"Feb 2026", badge:"CERTIFIED"},
+  {name:"Foundations of Cybersecurity", issuer:"Google", when:"Feb 2026", badge:"CERTIFICATE"},
+  {name:"Endpoint Security", issuer:"Cisco", when:"Mar 2026", badge:"CERTIFICATE"},
+  {name:"Career Essentials in GitHub", issuer:"GitHub", when:"Dec 2023 · Professional Certificate", badge:"CERTIFICATE"},
+];
+
+// Every Trailhead badge, by month earned. Topics are assigned automatically by TRAIL_TOPICS below.
+const TRAILHEAD = {
+  "Dec 2025": ["Data 360 Basics for Marketers"],
+  "Nov 2025": ["Data 360 Connectors and Integrations","Statement of Work Best Practices","Explore Data 360 Core Functionality","Customer 360 Data Model for Data 360","Quick Start: Create a Prompt Builder Flex Template","Quick Start: Create a Sales Email Prompt Template","Prompt Builder Basics","Customer Service Incident Management: Quick Look","Service Setup Assistant: Quick Look","Agentforce Service: Quick Look","Virtual Presentations","Project Management Plan Lite","Knowledge-Centered Service with Agentforce Service","Lightning Knowledge Migration","Knowledge Grounding for AI: Quick Look","Einstein Article Recommendations for Service","Knowledge Search Basics","Lightning Knowledge Setup and Customization","EDA Reports","Constituent Management in EDA","Education Architecture Setup","EDA Configuration and Data Import","Get Started with Modern JavaScript Development","JavaScript Skills for Salesforce Developers","The Agentforce Trust Layer","Data and Identity in Data 360","Batch Data Transforms in Data 360: Quick Look","Data 360-Powered Experiences","Introduction to Salesforce Data 360","Resume Writing Strategies","Interview Strategies","Salesforce Consultant: Quick Look","Empathetic Leadership","Salesforce Labs Basics","Consultants on AgentExchange","B2C Commerce Solutions on AgentExchange: Quick Look","Tableau Accelerators on AgentExchange: Quick Look","Data 360 Solutions on AgentExchange: Quick Look","CRM Analytics Mobile Exploration","CRM Analytics Desktop Exploration","CRM Analytics Dashboard Navigation","Identity for Mobile-Centric Customers","Identity for Customers","Alignment with Your Manager","One-on-One Meetings","Storytelling & Communication","Accountability & Delegation","Engagement & Retention","Organizational Alignment (V2MOM)","Culture of Feedback","Trust and Influence","Coaching & Feedback","Great Management","Lightning Web Components Basics","Apex Triggers","Apex Basics & Database","Flow Builder Basics","Get Started with Salesforce Development","Quick Start: Tour the Sample App Gallery","Salesforce Platform Development Basics","Session-Based Permission Sets and Security","Security Basics","Permission Set Groups","Identity Basics","Virtual Events","Virtual Whiteboarding: Quick Look","Virtual Meeting Setup: Quick Look","Salesforce Mobile App Rollout","Use External Services With a Flow","External Services","Approve Records with Approval Processes","Build a Suggestion Box App","Connect Data 360 to Agentforce","Embed Dashboards and Report Charts on Lightning Pages","Quick Start: Reports & Dashboards","Agentforce for Sales: Quick Look","Agentforce for Service","Journey Mapping","Values-Driven Design","Relationship Design","AgentExchange Solutions","Threat Modeling for Developers","Secure Development Lifecycle","Security Principles","Key Management","Public Key Infrastructure and Encryption","Secrets Management for Developers","Effective Emails: Quick Look","Self-Motivation","Personal Productivity","Build a Space Station App","AgentExchange Basics","CRM Analytics Basics","Validation Rules","Formulas and Validations","Lightning App Builder"],
+  "Oct 2025": ["Build an Experience Cloud Site with Knowledge and Enhanced Chat","Personalize Experience Cloud Sites with Audience Targeting","Experience Cloud Basics","K-12 Architecture Kit Administration Basics","Education Data Architecture Basics","Salesforce Developer Experience: Quick Look","Fast App Development: Quick Look","Set Up the Service Console","Salesforce Knowledge Basics","Agentforce Service Administration","Quick Start: Lightning Experience for Closers","Chatter for Lightning Experience","Salesforce User Basics","Agentforce Sales Basics","Company-Wide Org Settings","Picklist Administration","Data Quality","Quick Start: Lightning App Builder","Privileged User Responsibilities","Credential Security","Data Security","User Authentication","Virtual Collaboration","Best Practices for Working from Home","Build an App to Track Your Trailblazer Journey","Trailblazer Community Groups","Career Development Planning","The Salesforce Ecosystem: Quick Look","Trailblazer Community: Quick Look","Create a Process for Managing Support Cases","Improve Data Quality for Your Sales and Support Teams","Create Reports and Dashboards for Sales and Marketing Managers","Import and Export with Data Management Tools","Customize a Salesforce Object","Customize a Sales Path for Your Team","Protect Your Data in Salesforce","Customize an Org to Support a New Business Unit","Prepare Your Salesforce Org for Users","Leads and Opportunities","Accounts and Contacts","Chatter Administration for Lightning Experience","User Management","Salesforce CRM","Salesforce Values: Quick Look","Trailhead Playground Management","Your Guide to Trailhead","Reports & Dashboards for Lightning Experience","User Engagement","Lightning Experience Customization","Data Management","Data Modeling","Agentforce 360 Platform Basics"],
+};
+// first matching rule wins; anything unmatched lands in "Other"
+const TRAIL_TOPICS = [
+  ["AI & Agentforce", /Agentforce|Prompt|Einstein|Trust Layer|for AI/],
+  ["Education Cloud (EDA / K-12)", /EDA|Education|K-12/],
+  ["Data 360 & Analytics", /Data 360|CRM Analytics|Report|Dashboard|Tableau/],
+  ["Security & Identity", /Secur|Identity|Permission|Credential|Authentication|Key Management|Encryption|Secrets|Threat|Privileged|Protect Your Data/],
+  ["Service Cloud & Knowledge", /Service|Knowledge|Support Cases|Incident|Experience Cloud/],
+  ["Development (Apex, JS, LWC)", /Apex|JavaScript|Web Components|Salesforce Development|Development Basics|Developer Experience|External Services|App Gallery|Fast App/],
+  ["Admin & Platform", /Flow|Validation|Formulas|Picklist|Data Quality|Data Management|Data Modeling|Import|^User |\bOrg\b|Object|App Builder|Lightning Experience|Approval|Chatter|Sales Path|Leads|Accounts|Playground|Mobile App|Space Station|Suggestion Box|Trailblazer Journey|Salesforce CRM|User Basics|Closers/],
+  ["Ecosystem & AgentExchange", /AgentExchange|Trailblazer|Ecosystem|Salesforce Values|Your Guide|Labs Basics/],
+  ["Leadership, Career & Consulting", /Manage|Leadership|Coaching|Feedback|Influence|Alignment|One-on-One|Engagement|Accountability|Storytelling|Resume|Interview|Career|Motivation|Productivity|Virtual|Working from Home|Emails|Design|Journey Mapping|Statement of Work|Consultant/],
 ];
 
 const CREDS = {
@@ -384,7 +433,6 @@ const CREDS = {
   "ServiceNow": [["Micro-Certification: Welcome to ServiceNow","Feb 2026"]],
   "Per Scholas": [["Computer Hardware Basics","Oct 2025"],["Operating Systems Basics","Oct 2025"],["Introduction to Data Science","Oct 2025"]],
   "GitHub": [["Career Essentials in GitHub Professional Certificate","Dec 2023"],["Practical GitHub Actions","Nov 2023"],["Practical GitHub Copilot","Nov 2023"],["Practical GitHub Code Search","Dec 2023"],["Practical GitHub Project Management & Collaboration","Nov 2023"]],
-  "Salesforce Trailhead": [["157+ badges: Platform, Service & Sales Cloud, automation, analytics, security, Apex & LWC","2023–2026"]],
   "LinkedIn Learning": [["Introduction to Artificial Intelligence","May 2026"],["Project Management Skills for Leaders","May 2026"],["Statistics Foundations 1: The Basics","May 2026"],["Daily Habits for Effective People Management","May 2026"],["Critical Roles Consultants Play","May 2026"],["Managing Your Personal Finances","May 2026"],["Google Sheets: Advanced Formulas and Functions","Dec 2023"],["Excel Essential Training (Microsoft 365)","Nov 2023"],["Problem-Solving Techniques","Oct 2023"],["Decision-Making Strategies","Oct 2023"],["Learning Design Thinking","Oct 2023"],["Mastering Communications as a Leader","Oct 2023"],["Giving and Receiving Feedback","Oct 2023"],["How to Sell on Value, Not Price","Oct 2023"],["Learning Agility","Oct 2023"],["+ 9 more on time management, adaptability and professional growth","2023"]],
 };
 
@@ -398,11 +446,27 @@ const CREDS = {
   document.getElementById("credfeatured").innerHTML = FEATURED.map(c =>
     `<div class="card feat">${c.badge ? `<span class="badge">${c.badge}</span>` : ""}<div class="issuer">${esc(c.issuer)}</div>
      <h3 style="margin-top:6px">${esc(c.name)}</h3><div class="when">${esc(c.when)}</div></div>`).join("");
+  // Trailhead: sort every badge into a topic, newest first inside each topic
+  const topics = {};
+  let badges = 0;
+  for (const [month, names] of Object.entries(TRAILHEAD)) {
+    for (const n of names) {
+      const hit = TRAIL_TOPICS.find(([, re]) => re.test(n));
+      const t = hit ? hit[0] : "Other";
+      (topics[t] = topics[t] || []).push([n, month]);
+      badges++;
+    }
+  }
+  const order = [...TRAIL_TOPICS.map(t => t[0]), "Other"].filter(t => topics[t]);
+  const trail = `<details class="issuerbox"><summary>Salesforce Trailhead<span class="n">${badges} badges ▾</span></summary>
+     <div class="cats">${order.map(t => `<details class="cat"><summary>${esc(t)}<span>${topics[t].length}</span></summary>
+       <ul>${topics[t].map(([n, d]) => `<li><span>${esc(n)}</span><span>${esc(d)}</span></li>`).join("")}</ul></details>`).join("")}</div></details>`;
+
   document.getElementById("credcount").textContent =
-    `CompTIA A+ certified · Google IT Support certified · Security+ in progress · 50+ credentials, plus 157+ Trailhead badges`;
+    `CompTIA A+ certified · Google IT Support certified · Security+ in progress · 50+ credentials, plus ${badges} Trailhead badges`;
   document.getElementById("credall").innerHTML = Object.entries(CREDS).map(([issuer, list]) =>
     `<details class="issuerbox"><summary>${esc(issuer)}<span class="n">${list.length} ▾</span></summary>
-     <ul>${list.map(([n, d]) => `<li><span>${esc(n)}</span><span>${esc(d)}</span></li>`).join("")}</ul></details>`).join("");
+     <ul>${list.map(([n, d]) => `<li><span>${esc(n)}</span><span>${esc(d)}</span></li>`).join("")}</ul></details>`).join("") + trail;
 })();
 </script>
 </body>
