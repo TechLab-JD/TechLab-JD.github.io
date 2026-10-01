@@ -208,7 +208,7 @@ footer p{color:var(--dim);margin-top:10px;max-width:560px}
 <section id="projects"><div class="wrap">
   <div class="kicker">04 / PROJECTS</div>
   <h2>On the bench</h2>
-  <p class="sub">code on <a href="https://github.com/TechLab-JD">github.com/TechLab-JD</a> · some finished, some still being built — that's the point</p>
+  <p class="sub">a curated selection · some finished, some still being built — that's the point · <a href="https://github.com/TechLab-JD?tab=repositories">see all repos on GitHub →</a></p>
   <div class="grid cards3">
     <div class="card"><h3>MyOS</h3>
       <p>A modular, forkable personal web OS — customizable tools, JSON-based data, fully static architecture, with an app template and gallery app.</p>
@@ -292,8 +292,6 @@ footer p{color:var(--dim);margin-top:10px;max-width:560px}
   var a = document.getElementById("emaillink");
   function addr(){ return u + "@" + d; }
   a.addEventListener("click", function(e){ e.preventDefault(); location.href = "mailto:" + addr(); });
-  // after first paint, show the address for humans who'd rather copy it
-  setTimeout(function(){ a.textContent = "✉ " + addr(); }, 600);
 })();
 </script>
 </body>
