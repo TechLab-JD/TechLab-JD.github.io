@@ -81,6 +81,7 @@ section .sub{color:var(--faint);margin-bottom:30px;font-size:15px}
 .card h3{font-size:17px;color:#F4F1E6;margin-bottom:9px}
 .card p{font-size:14.5px;color:var(--dim)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.card .shot{display:block;width:calc(100% + 48px);margin:-24px -24px 18px;border-radius:16px 16px 0 0;border-bottom:1px solid var(--line);aspect-ratio:16/7;object-fit:cover;object-position:left top;background:#05080F}
 .chip{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--amber);border:1px solid rgba(232,163,60,.4);border-radius:8px;padding:3px 10px;background:rgba(232,163,60,.07)}
 
 .xp{position:relative;border-left:2px solid var(--line);padding:2px 0 30px 26px}
@@ -144,6 +145,7 @@ footer p{color:var(--dim);margin-top:10px;max-width:560px}
      practical tools — including <b>Steady Systems</b>, a growing line of productivity and study templates.</p>
   <div class="btnrow">
     <a class="btn primary" href="#shop">Browse Steady Systems</a>
+    <a class="btn ghost" href="assets/Jordan-Dorman-Resume.pdf" target="_blank" rel="noopener">Download résumé</a>
     <a class="btn ghost" href="#contact">Get in touch</a>
   </div>
 </div></header>
@@ -213,12 +215,12 @@ footer p{color:var(--dim);margin-top:10px;max-width:560px}
       <div class="chips"><span class="chip">javascript</span><span class="chip">in progress</span></div>
       <p style="margin-top:14px"><a href="https://github.com/TechLab-JD/MyOS">View repo →</a></p>
     </div>
-    <div class="card"><h3>Inventory Tracker</h3>
+    <div class="card"><img class="shot" src="assets/img/inventory_tracker_img.png" alt="Inventory Tracker running in a terminal" loading="lazy"><h3>Inventory Tracker</h3>
       <p>Python inventory tracker built to practice data management: add, update and report on stock.</p>
       <div class="chips"><span class="chip">python</span><span class="chip">complete</span></div>
       <p style="margin-top:14px"><a href="https://github.com/TechLab-JD/Inventory-Tracker">View repo →</a></p>
     </div>
-    <div class="card"><h3>Task Manager CLI</h3>
+    <div class="card"><img class="shot" src="assets/img/task_manager_img.png" alt="Task Manager CLI showing a task table" loading="lazy"><h3>Task Manager CLI</h3>
       <p>Command-line task manager in Python for creating, editing and completing tasks.</p>
       <div class="chips"><span class="chip">python</span><span class="chip">complete</span></div>
       <p style="margin-top:14px"><a href="https://github.com/TechLab-JD/Task-Manager-CLI">View repo →</a></p>
