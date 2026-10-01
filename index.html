@@ -116,6 +116,25 @@ footer p{color:var(--dim);margin-top:10px;max-width:560px}
 .contact{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
 .foot-note{margin-top:42px;font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--faint)}
 .foot-note .dot{color:var(--steady)}
+
+.feat{position:relative;border-top:3px solid var(--amber)}
+.feat .issuer{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--amber);letter-spacing:.06em;text-transform:uppercase}
+.feat .when{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--faint);margin-top:6px}
+.feat .badge{position:absolute;top:16px;right:16px;font:600 11px 'JetBrains Mono',monospace;color:#1A1205;background:var(--amber);border-radius:999px;padding:2px 9px}
+details.more{margin-top:14px}
+details.more summary{cursor:pointer;list-style:none;font:500 13px 'JetBrains Mono',monospace;color:var(--amber)}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary::before{content:'+ '}
+details.more[open] summary::before{content:'\2212 '}
+.issuerbox{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:10px}
+.issuerbox summary{cursor:pointer;list-style:none;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;color:#F4F1E6;font:600 15px 'Space Grotesk',sans-serif}
+.issuerbox summary::-webkit-details-marker{display:none}
+.issuerbox summary .n{font:500 12.5px 'JetBrains Mono',monospace;color:var(--amber)}
+.issuerbox[open] summary{border-bottom:1px solid var(--line)}
+.issuerbox ul{list-style:none;margin:0;padding:10px 18px 16px}
+.issuerbox li{display:flex;justify-content:space-between;gap:14px;padding:6px 0;border-bottom:1px dashed var(--line-soft);font-size:14.5px;color:var(--dim)}
+.issuerbox li:last-child{border-bottom:0}
+.issuerbox li span:last-child{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--faint);white-space:nowrap}
 </style>
 </head>
 <body>
@@ -165,29 +184,21 @@ footer p{color:var(--dim);margin-top:10px;max-width:560px}
 
 <section id="skills"><div class="wrap">
   <div class="kicker">02 / SKILLS</div>
-  <h2>Skills & Training</h2>
-  <p class="sub">CompTIA A+ certified (2026–2029) · Google IT Support certified · Security+ coursework in progress</p>
-  <div class="grid cards3">
-    <div class="card"><h3>Technical Support</h3>
-      <p>End-user support, device setup and configuration, hardware fundamentals, structured troubleshooting,
-      technical documentation.</p>
-      <div class="chips"><span class="chip">windows</span><span class="chip">ticketing</span><span class="chip">troubleshooting</span><span class="chip">docs</span></div>
-    </div>
-    <div class="card"><h3>Salesforce & CRM</h3>
-      <p>Sales Cloud and Service Cloud fundamentals: user management, permission sets, role hierarchy,
-      case management.</p>
-      <div class="chips"><span class="chip">salesforce</span><span class="chip">service-cloud</span><span class="chip">case-mgmt</span></div>
-    </div>
-    <div class="card"><h3>Operations & Automation</h3>
-      <p>Workflow design, prioritization and escalation rules, KPI tracking, process documentation, and
-      automating the boring parts with scripts and templates.</p>
-      <div class="chips"><span class="chip">g-workspace</span><span class="chip">m365</span><span class="chip">spreadsheets</span><span class="chip">python</span></div>
-    </div>
-  </div>
+  <h2>Skills</h2>
+  <p class="sub">the highlights up front · open any card for the full list</p>
+  <div class="grid cards3" id="skillgrid"></div>
+</div></section>
+
+<section id="credentials"><div class="wrap">
+  <div class="kicker">03 / CREDENTIALS</div>
+  <h2>Certifications & Training</h2>
+  <p class="sub" id="credcount">CompTIA A+ certified · Google IT Support certified · Security+ coursework in progress</p>
+  <div class="grid cards3" id="credfeatured"></div>
+  <div id="credall" style="margin-top:22px"></div>
 </div></section>
 
 <section id="experience"><div class="wrap">
-  <div class="kicker">03 / EXPERIENCE</div>
+  <div class="kicker">04 / EXPERIENCE</div>
   <h2>Experience</h2>
   <p class="sub">operations-heavy roles, tech-shaped habits</p>
   <div class="xp"><h3>Sales Consultant — AT&T Authorized Retailer</h3><div class="meta">2024 – PRESENT · DALLAS, TX</div>
@@ -206,7 +217,7 @@ footer p{color:var(--dim);margin-top:10px;max-width:560px}
 </div></section>
 
 <section id="projects"><div class="wrap">
-  <div class="kicker">04 / PROJECTS</div>
+  <div class="kicker">05 / PROJECTS</div>
   <h2>On the bench</h2>
   <p class="sub">a curated selection · some finished, some still being built — that's the point · <a href="https://github.com/TechLab-JD?tab=repositories">see all repos on GitHub →</a></p>
   <div class="grid cards3">
@@ -244,7 +255,7 @@ footer p{color:var(--dim);margin-top:10px;max-width:560px}
 </div></section>
 
 <section id="shop"><div class="wrap">
-  <div class="kicker">05 / SHIPPED</div>
+  <div class="kicker">06 / SHIPPED</div>
   <h2>Steady Systems</h2>
   <p class="sub">templates and tools built because I needed them — now yours for the price of lunch</p>
   <div class="shopgrid">
@@ -273,7 +284,7 @@ footer p{color:var(--dim);margin-top:10px;max-width:560px}
 </div></section>
 
 <footer id="contact"><div class="wrap">
-  <div class="kicker">06 / CONTACT</div>
+  <div class="kicker">07 / CONTACT</div>
   <h2>Let's talk</h2>
   <p>Open to IT support, help desk and systems-adjacent roles — remote or Dallas-area. Fastest way to reach me
      is email.</p>
@@ -292,6 +303,59 @@ footer p{color:var(--dim);margin-top:10px;max-width:560px}
   var a = document.getElementById("emaillink");
   function addr(){ return u + "@" + d; }
   a.addEventListener("click", function(e){ e.preventDefault(); location.href = "mailto:" + addr(); });
+})();
+</script>
+
+<script>
+/* ===== EDIT HERE: the only place skills and credentials live ===== */
+const SKILLS = [
+  {area:"Technical Support & Systems", top:["End-user support","Troubleshooting","Windows 10/11","Device setup","Hardware","Documentation"],
+   more:["Linux fundamentals","Application support","User account management","TCP/IP & networking basics","IoT connectivity","System administration fundamentals","Structured problem resolution"]},
+  {area:"Salesforce & CRM", top:["Service Cloud","Sales Cloud","Case management","Flow Builder","Reports & dashboards","Permission sets"],
+   more:["Role hierarchy","Security & identity","Incident management","Service Console","Lightning Knowledge / KCS","Approval processes","Validation rules","Lightning App Builder","Experience Cloud","Data modeling","Import/export","CRM Analytics","Apex & triggers","Lightning Web Components","Secure development lifecycle"]},
+  {area:"Operations & Leadership", top:["Ticketing & escalation","Team leadership","Training & onboarding","Process documentation","KPI tracking","Project coordination"],
+   more:["Recruiting","Coaching","Performance tracking","Records management","Workflow optimization","Inventory management","Budgeting","Cash handling","Cross-functional collaboration"]},
+  {area:"Tools & Automation", top:["Microsoft 365","Excel","Google Workspace","Google Sheets (advanced)","GitHub","Python"],
+   more:["GitHub Actions","GitHub Copilot","Version control","Workflow automation","Gumroad API publishing","HTML / CSS / JS"]},
+  {area:"Problem-Solving & People", top:["Root cause analysis","Systems thinking","Clear communication","Stakeholder engagement","Adaptability","Self-directed learning"],
+   more:["Logical & analytical reasoning","Design thinking","Constructive feedback","Inclusive teamwork","Time management","Organization","Learning agility","Continuous improvement"]},
+];
+
+const FEATURED = [
+  {name:"CompTIA A+", issuer:"CompTIA", when:"Feb 2026 – Feb 2029", badge:"CERTIFIED"},
+  {name:"Google IT Support Professional Certificate", issuer:"Google", when:"Jan 2026 · 6-course series"},
+  {name:"Foundations of Cybersecurity", issuer:"Google", when:"Feb 2026"},
+  {name:"Endpoint Security", issuer:"Cisco", when:"Mar 2026"},
+  {name:"Welcome to ServiceNow (Micro-Certification)", issuer:"ServiceNow", when:"Feb 2026"},
+  {name:"Career Essentials in GitHub", issuer:"GitHub", when:"Dec 2023 · Professional Certificate"},
+];
+
+const CREDS = {
+  "CompTIA": [["CompTIA A+ (certified, valid to Feb 2029)","Feb 2026"],["Security+ (coursework in progress)","2026"]],
+  "Google": [["IT Support Professional Certificate","Jan 2026"],["Technical Support Fundamentals","Dec 2025"],["The Bits and Bytes of Computer Networking","Dec 2025"],["Operating Systems and You: Becoming a Power User","Dec 2025"],["System Administration and IT Infrastructure Services","Dec 2025"],["IT Security: Defense against the Digital Dark Arts","Jan 2026"],["Foundations of Cybersecurity","Feb 2026"],["Google AI Essentials","Feb 2026"],["Introduction to AI","Feb 2026"],["Discover the Art of Prompting","Feb 2026"],["Maximize Productivity With AI Tools","Feb 2026"],["Use AI Responsibly","Feb 2026"],["Stay Ahead of the AI Curve","Feb 2026"],["Accelerate Your Job Search with AI","Dec 2025"]],
+  "Cisco": [["Endpoint Security","Mar 2026"],["Introduction to IoT and Digital Transformation","Oct 2025"],["Introduction to Data Science & Analytics (NetAcad)","Oct 2025"],["Operating Systems & Hardware Fundamentals (NetAcad)","Sep 2025"]],
+  "ServiceNow": [["Micro-Certification: Welcome to ServiceNow","Feb 2026"]],
+  "Per Scholas": [["Computer Hardware Basics","Oct 2025"],["Operating Systems Basics","Oct 2025"],["Introduction to Data Science","Oct 2025"]],
+  "GitHub": [["Career Essentials in GitHub Professional Certificate","Dec 2023"],["Practical GitHub Actions","Nov 2023"],["Practical GitHub Copilot","Nov 2023"],["Practical GitHub Code Search","Dec 2023"],["Practical GitHub Project Management & Collaboration","Nov 2023"]],
+  "Salesforce Trailhead": [["157+ badges: Platform, Service & Sales Cloud, automation, analytics, security, Apex & LWC","2023–2026"]],
+  "LinkedIn Learning": [["Introduction to Artificial Intelligence","May 2026"],["Project Management Skills for Leaders","May 2026"],["Statistics Foundations 1: The Basics","May 2026"],["Daily Habits for Effective People Management","May 2026"],["Critical Roles Consultants Play","May 2026"],["Managing Your Personal Finances","May 2026"],["Google Sheets: Advanced Formulas and Functions","Dec 2023"],["Excel Essential Training (Microsoft 365)","Nov 2023"],["Problem-Solving Techniques","Oct 2023"],["Decision-Making Strategies","Oct 2023"],["Learning Design Thinking","Oct 2023"],["Mastering Communications as a Leader","Oct 2023"],["Giving and Receiving Feedback","Oct 2023"],["How to Sell on Value, Not Price","Oct 2023"],["Learning Agility","Oct 2023"],["+ 9 more on time management, adaptability and professional growth","2023"]],
+};
+
+/* ===== rendering (no need to edit below) ===== */
+(function(){
+  const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const chips = a => a.map(s => `<span class="chip">${esc(s)}</span>`).join("");
+  document.getElementById("skillgrid").innerHTML = SKILLS.map(s =>
+    `<div class="card"><h3>${esc(s.area)}</h3><div class="chips">${chips(s.top)}</div>
+     <details class="more"><summary>show all ${s.top.length + s.more.length}</summary><div class="chips">${chips(s.more)}</div></details></div>`).join("");
+  document.getElementById("credfeatured").innerHTML = FEATURED.map(c =>
+    `<div class="card feat">${c.badge ? `<span class="badge">${c.badge}</span>` : ""}<div class="issuer">${esc(c.issuer)}</div>
+     <h3 style="margin-top:6px">${esc(c.name)}</h3><div class="when">${esc(c.when)}</div></div>`).join("");
+  document.getElementById("credcount").textContent =
+    `CompTIA A+ certified · Google IT Support certified · Security+ in progress · 50+ credentials, plus 157+ Trailhead badges`;
+  document.getElementById("credall").innerHTML = Object.entries(CREDS).map(([issuer, list]) =>
+    `<details class="issuerbox"><summary>${esc(issuer)}<span class="n">${list.length} ▾</span></summary>
+     <ul>${list.map(([n, d]) => `<li><span>${esc(n)}</span><span>${esc(d)}</span></li>`).join("")}</ul></details>`).join("");
 })();
 </script>
 </body>
