@@ -30,6 +30,7 @@
     "chapters-1": { title: "Core 1 \u2014 Chapters", icon: "📚" },
     "chapters-2": { title: "Core 2 \u2014 Chapters", icon: "📗" },
     "chapters-3": { title: "Security+ \u2014 Chapters", icon: "🛡️" },
+    "synapse":    { title: "Synapse — Security+ Study Zone", icon: "🧠" },
     "practice":   { title: "Practice Test",           icon: "🎯" },
     "flashcards": { title: "Flashcards",               icon: "🃏" },
     "review":     { title: "Review Checklist",         icon: "📋" },
@@ -77,6 +78,7 @@
       certKey: "secplus",
       core: 3,
       apps: [
+        { app: "synapse",    icon: "🧠", label: "Synapse" },
         { app: "chapters-3", icon: "🛡️", label: "Chapters" },
         { app: "practice",   icon: "🎯", label: "Practice Test" },
         { app: "flashcards", icon: "🃏", label: "Flashcards" },
@@ -545,6 +547,17 @@
         Desktop._renderChapterList(winId, 2);
       } else if (app === "chapters-3") {
         Desktop._renderChapterList(winId, 3);
+      } else if (app === "synapse") {
+        /* Synapse is a standalone app (built by study-materials/security-plus/study-zone/build_public.py) */
+        content.style.padding = "0";
+        content.style.overflow = "hidden";
+        content.innerHTML =
+          '<div style="display:flex;flex-direction:column;height:100%;">' +
+            '<div style="display:flex;justify-content:flex-end;padding:4px 8px;border-bottom:1px solid var(--border);">' +
+              '<a href="synapse/index.html" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--text-muted);">Open full screen &#8599;</a>' +
+            '</div>' +
+            '<iframe src="synapse/index.html" title="Synapse Security+ study zone" style="flex:1;width:100%;border:0;background:#fff;"></iframe>' +
+          '</div>';
       } else if (app === "practice") {
         if (window.PracticeLoader) {
           window.PracticeLoader.init(content, params || {});
