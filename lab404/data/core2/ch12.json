@@ -1,0 +1,322 @@
+{
+  "core": 2,
+  "chapter": 12,
+  "title": "Windows Security & Browser Security",
+  "exam_objectives": [
+    "2.2",
+    "2.11"
+  ],
+  "coverage": "PARTIAL",
+  "domain": "security",
+  "domain_label": "Security",
+  "sections": [
+    {
+      "title": "Windows Defender And Firewall",
+      "content": "Windows Defender Antivirus is the built-in endpoint protection in Windows 10 and 11. It provides real-time protection through signature-based detection and behavioral monitoring. Real-time protection scans files as they are accessed and downloaded. Virus definitions are updated automatically through Windows Update. Manual definition updates and on-demand scans are accessible through Settings > Privacy and Security > Windows Security > Virus and threat protection.\nWindows Defender Firewall provides host-based packet filtering â€” controlling which network traffic is allowed to reach the system and which applications can communicate over the network. The firewall operates across three network profiles, each configurable independently.\nDomain profile: applies when the computer is joined to a Windows Active Directory domain and connected to the domain network. Typically less restrictive â€” corporate resources and management tools need access.\nPrivate profile: applies to networks the user has designated as private â€” a home network or a trusted office network. Moderate restrictions.\nPublic profile: applies to unrecognized networks â€” coffee shops, hotels, airports. Most restrictive â€” minimal inbound connections allowed. This is the profile that applies when a laptop connects to a new Wi-Fi network for the first time.\nCreating firewall rules: through Windows Defender Firewall with Advanced Security â€” accessible via the Windows Security app or wf.msc. Inbound rules control what traffic is allowed to reach the system. Outbound rules control what the system can connect to. Rules can be based on port number, protocol, application path, or network profile.\n---",
+      "exam_tips": [
+        "NTFS permissions apply locally AND over the network. Share permissions apply ONLY over the network. When accessing a network share, BOTH sets of permissions apply and the most restrictive combination is enforced."
+      ]
+    },
+    {
+      "title": "User Accounts And Uac",
+      "content": "Windows implements least privilege through user account types.\nStandard user account: the default recommended account for daily use. Can run most applications, access documents, browse the web. Cannot install software, modify system settings, or make changes to the registry without requesting elevation. If malware executes under a standard user context, its capability is limited to what that account can do.\nAdministrator account: full system control. Can install and remove software, change system configuration, manage other user accounts, modify the registry. Administrator accounts should not be used for daily work â€” the expanded permissions expand the attack surface for anything running in that context.\nGuest account: disabled by default in modern Windows. Provides minimal, temporary access without a password requirement. The passwordless nature is itself a security concern.\nPower User: a legacy group from earlier Windows versions with permissions between Standard and Administrator. Largely replaced by UAC in modern Windows environments.\nLocal versus Microsoft accounts. A local account is stored only on the local machine â€” no cloud synchronization, no Microsoft service integration. Managed through Computer Management > Local Users and Groups. Preferred for environments with privacy concerns or where offline access is required. A Microsoft account is a cloud-based identity linked to an email address. Settings, files, and browser data sync across devices. Required for some Windows features and Microsoft Store apps.\nUAC â€” User Account Control: the elevation request mechanism that prevents unauthorized system changes. When an application attempts to make changes that require administrator rights, UAC intercepts the request and displays a prompt.\nThe secure desktop: UAC dims the entire screen and moves the prompt to an isolated session â€” the secure desktop. This prevents malicious applications from programmatically moving the mouse or simulating a click to accept the UAC prompt.\nStandard user behavior: when a standard user encounters a UAC prompt, they see a credential request â€” they must provide administrator credentials to proceed. A standard user who does not have those credentials cannot elevate without contacting an administrator.\nAdministrator behavior: when an administrator encounters a UAC prompt under the default settings, they see a confirmation prompt â€” \"Do you want to allow this app to make changes?\" â€” and must click Yes. Administrators are not running at full elevation all the time.\nUAC notification levels: four levels configurable through Control Panel > User Accounts > Change User Account Control settings. Level one â€” Always notify â€” prompts for all changes, including changes made by the user themselves. Level two â€” the default â€” prompts only when applications request changes, not for manual user changes. Level three â€” same as two but without secure desktop dimming. Level four â€” Never notify â€” effectively disables UAC. Never notify is not recommended.\n---",
+      "exam_tips": [
+        "BitLocker = full drive, requires TPM, Pro/Enterprise/Education only. BitLocker-To-Go = removable media. EFS = file-level, tied to user certificate â€” if certificate is lost without a recovery agent, files may be permanently inaccessible."
+      ]
+    },
+    {
+      "title": "Permissions And Encryption",
+      "content": "NTFS permissions: apply to files and folders on NTFS volumes. Control what users and groups can do with specific resources. NTFS permissions apply whether the user is accessing the resource locally or over a network share. Permission levels include Full Control, Modify, Read and Execute, Read, and Write. Applied through the Security tab in a file or folder's Properties dialog.\nShare permissions: apply only to access over a network share. Three levels: Full Control, Change, and Read. Applied through the Sharing tab in Properties > Advanced Sharing > Permissions.\nWhen both NTFS and share permissions apply to the same resource â€” which is the case whenever a shared folder on an NTFS volume is accessed over the network â€” the most restrictive combination applies. If NTFS grants Modify but the share grants Read, the effective permission is Read.\nInheritance: child objects â€” files and subfolders â€” inherit NTFS permissions from their parent folder by default. This simplifies administration because permissions set on a parent folder propagate down. Inheritance can be disabled on a specific object to set explicit permissions that differ from the parent.\nBitLocker: full drive volume encryption built into Windows. Encrypts the entire drive including the operating system files. Requires either a TPM â€” Trusted Platform Module â€” chip to securely store the encryption key and verify system integrity during boot, or a USB startup key if no TPM is present. Available in Windows Pro, Enterprise, and Education editions. Not available in Windows Home. If a BitLocker-protected drive is removed from the machine, it is unreadable without the recovery key.\nBitLocker-To-Go: BitLocker encryption applied to removable drives â€” USB flash drives, external hard drives. Configured by right-clicking the removable drive in File Explorer and selecting \"Turn on BitLocker.\" Can be unlocked with a password or smart card. Allows the encrypted drive to be read on other Windows computers with the correct password.\nEFS â€” Encrypting File System: file-level encryption on NTFS volumes. Encrypts individual files and folders rather than entire drives. The encryption is transparent to the authorized user â€” they open and save files normally. Encryption is tied to the user account's encryption certificate. If the account is deleted, the certificate is lost, or the profile is corrupted, access to EFS-encrypted files may be permanently lost unless a recovery agent or certificate backup was configured. Available in Windows Pro and above.\n---",
+      "exam_tips": [
+        "UAC's secure desktop â€” the screen-dimming effect â€” is the security mechanism that prevents malicious programs from auto-clicking the confirmation. Level 4 (Never notify) removes this protection entirely."
+      ]
+    },
+    {
+      "title": "Active Directory Administration",
+      "content": "ACTIVE DIRECTORY ADMINISTRATION\nActive Directory is not just a login mechanism â€” it is the management framework for every user, computer, and resource in a Windows domain environment. A+ technicians perform real AD administration tasks. Know them.\nORGANIZATIONAL UNITS.\nOUs are containers within a domain used to organize objects â€” user accounts, computer accounts, groups, and printers. You create an OU for a department or location, move relevant objects into it, and then apply Group Policy Objects to that OU. Every object in the OU inherits the GPO settings. Moving a computer or user account from one OU to another changes which policies apply to it â€” this is the standard method for applying different settings to different parts of the organization.\nUSER ACCOUNT MANAGEMENT.\nUser accounts are created and managed in Active Directory Users and Computers â€” ADUC. Creating an account adds it to the domain, allowing login from any domain-joined machine. When an employee leaves, the standard procedure is to disable the account â€” not delete it. Disabling prevents login while preserving group memberships, permissions, and mailbox associations. Passwords are reset and accounts unlocked from ADUC. Account expiration dates are set in account properties for temporary or contract employees.\nSECURITY GROUPS.\nSecurity groups are the correct mechanism for assigning resource permissions at scale. Add user accounts to a security group. Grant the group access to a shared folder, printer, or application. Every group member inherits the permissions. Remove a user from the group and access is revoked immediately. Never assign permissions per individual user in an AD environment â€” group-based access is manageable; per-user assignments become unmanageable at scale.\nLOGIN SCRIPTS.\nA login script runs automatically when a user logs into the domain. Assigned in the user account's Profile tab in ADUC, or more commonly through Group Policy. Used to map network drives, set environment variables, configure printers, or run startup tasks. Script types: batch (.bat) for legacy environments, PowerShell (.ps1) for modern deployments, VBScript (.vbs) in mixed environments. The script runs in the context of the logged-in user.\nHOME FOLDERS.\nA home folder is a personal network share automatically mapped when the user logs in. Configured in the user account Properties > Profile tab. The path uses the %username% variable â€” for example: \\\\server\\homes\\%username% â€” so each user gets their own subfolder on the server. Home folders provide a consistent location for personal files that is backed up by the server's backup schedule. Because the data is on the server, it is accessible from any machine the user logs into.\nFOLDER REDIRECTION.\nFolder redirection is a Group Policy setting that moves known local folders â€” Desktop, Documents, Downloads, AppData â€” to a network share. The user's experience is unchanged: they see a local path in File Explorer. The data is stored on the server. Benefits: user data is backed up as part of server backup, accessible from any domain machine, and protected even if the local machine fails. Configured under User Configuration > Windows Settings > Folder Redirection in Group Policy Management.\n---",
+      "exam_tips": [
+        "Private/Incognito mode prevents LOCAL history saving only. It provides zero anonymity. Network-level monitoring (ISP, employer, government) can still see all traffic. The A+ exam tests this distinction directly."
+      ]
+    },
+    {
+      "title": "Browser Security",
+      "content": "Downloading browsers: only download browsers from the official vendor site or from official platform app stores. Verify file integrity using a cryptographic hash â€” MD5, SHA-1, or SHA-256 â€” by comparing the hash of the downloaded file against the hash published on the vendor's site. Third-party download aggregator sites may bundle adware, toolbars, PUPs, or modified installers.\nBrowser updates and extensions: keep the browser updated. Browser vulnerabilities are actively exploited â€” zero-day exploits targeting unpatched browsers are common. Enable automatic updates. For extensions: install only from official browser extension stores â€” Chrome Web Store, Firefox Add-ons, Edge Add-ons. Review permissions requested by extensions. An extension that requests \"read all data on all websites\" has very broad access. Remove extensions that are no longer needed. Keep installed extensions updated.\nHTTPS and certificates: a padlock icon in the address bar and \"https://\" prefix indicate a TLS-encrypted connection. The server's SSL/TLS certificate was issued by a trusted Certificate Authority â€” it validates both the server's identity and enables encryption. Certificate warnings â€” \"Your connection is not private\" or \"Connection not secure\" â€” indicate an expired certificate, a self-signed certificate, or a certificate that does not match the domain. These warnings can indicate a man-in-the-middle attack and should not be dismissed without investigation.\nPrivate browsing modes: Chrome calls it Incognito. Edge calls it InPrivate. Firefox calls it Private Window. What private browsing does: prevents the browser from saving browsing history, cookies, form data, and site data locally after the session ends. What private browsing does not do: it does not make you anonymous. Your ISP can see your traffic. Websites you visit can see your IP address. Your employer can monitor your activity if you are on a corporate network. It does not prevent malware. It does not hide your activity from network-level monitoring. Private browsing only prevents the session data from being saved on the local device.\nPassword managers: generate strong, unique passwords for each website and store them securely. Built-in password managers exist in Chrome, Firefox, and Edge â€” they sync encrypted across devices linked to the same browser account. Third-party password managers such as Bitwarden, 1Password, and Dashlane work across all browsers and devices. Benefits: each site gets a unique password â€” eliminates credential reuse risk. Auto-fill reduces phishing effectiveness because the manager will not auto-fill credentials on a fake lookalike domain.\nAdditional browser security features. Pop-up blocker: enabled by default in modern browsers. Prevents unwanted windows from opening â€” including malvertising pop-ups. Ad blockers: browser extensions like uBlock Origin block advertisements and reduce exposure to malvertising. Secure DNS â€” DNS over HTTPS (DoH): encrypts DNS queries so they cannot be intercepted or tampered with by network observers or attackers performing DNS hijacking. Proxy settings: a proxy server sits between the browser and the internet, filtering content or caching pages. Used in corporate environments for content filtering.\n---",
+      "exam_tips": [
+        "Public profile applies to any new, unrecognized network â€” coffee shops, hotels, airports. It is the most restrictive. Domain profile applies only when connected to an Active Directory domain network. Each profile has independent firewall rules.",
+        "OUs are not security groups â€” they organize objects for GPO application and administrative delegation. Moving a computer to a different OU changes the GPOs applied to it. This is the mechanism for applying different settings to different departments.",
+        "When an employee leaves, DISABLE the account â€” do not delete it. Deleting loses group memberships, permissions, and mailbox associations. Disabled accounts cannot log in but preserve all settings for reactivation or audit purposes.",
+        "Never assign permissions per individual user in a domain environment â€” always use security groups. Group-based access is manageable; per-user assignments become unmanageable. This is the correct and expected practice on the A+ exam.",
+        "Home folder uses %username% variable: \\\\server\\homes\\%username%. Each user gets a unique personal share automatically. Folder redirection is transparent to the user â€” they see a local path but data is stored on the server. Both are covered in Objective 2.9 (Active Directory)."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "A laptop is stolen from a car. If BitLocker is enabled, the drive is unreadable without the recovery key. If it is not, everything on it is accessible. The exam tests BitLocker, BitLocker-To-Go, and EFS â€” and the differences between them.",
+      "concept": "BITLOCKER vs EFS â€” WINDOWS ENCRYPTION COMPARED",
+      "summary": "Windows provides two encryption tools for protecting data at rest. They operate at different levels."
+    },
+    {
+      "hook": "Every day users run as administrators â€” and every day that is how malware gets full system access. UAC and standard accounts exist for exactly this reason, and the exam tests both.",
+      "concept": "UAC AND WINDOWS ACCOUNT TYPES â€” LEAST PRIVILEGE IN PRACTICE",
+      "summary": "Windows implements least privilege through two mechanisms: account types and User Account Control. Account types."
+    },
+    {
+      "hook": "Private browsing does not make you anonymous. That is the most common misunderstanding about browser security â€” and the A+ exam tests whether you know the difference between what incognito mode does and what it does not do.",
+      "concept": "BROWSER SECURITY â€” WHAT THE EXAM ACTUALLY TESTS",
+      "summary": "Browser security covers several concepts the exam tests directly. Private browsing â€” Incognito, InPrivate, Private Window: prevents the browser from saving local browsing history, cookies, and form data after the session ends."
+    },
+    {
+      "hook": "Active Directory is not just for domain admins. A+ technicians perform real AD tasks â€” adding users, moving objects, assigning scripts, managing groups. The exam tests whether you know how these tasks work.",
+      "concept": "ACTIVE DIRECTORY ADMINISTRATION â€” OUs, GROUPS, SCRIPTS, HOME FOLDERS",
+      "summary": "Active Directory organizes network objects â€” users, computers, groups, and printers â€” into a hierarchical structure managed from a domain controller. Organizational Units (OUs): containers within the domain used to group objects for administrative purposes."
+    },
+    {
+      "hook": "Windows Defender Antivirus is the built-in endpoint protection in Windows 10 and 11.",
+      "concept": "Windows Defender And Firewall",
+      "summary": "Windows Defender Antivirus is the built-in endpoint protection in Windows 10 and 11. It provides real-time protection through signature-based detection and behavioral monitoring. Real-time protection scans files as they are accessed and downloaded."
+    },
+    {
+      "hook": "Windows implements least privilege through user account types.",
+      "concept": "User Accounts And Uac",
+      "summary": "Windows implements least privilege through user account types. Standard user account: the default recommended account for daily use. Can run most applications, access documents, browse the web."
+    },
+    {
+      "hook": "NTFS permissions: apply to files and folders on NTFS volumes.",
+      "concept": "Permissions And Encryption",
+      "summary": "NTFS permissions: apply to files and folders on NTFS volumes. Control what users and groups can do with specific resources. NTFS permissions apply whether the user is accessing the resource locally or over a network share."
+    },
+    {
+      "hook": "ACTIVE DIRECTORY ADMINISTRATION Active Directory is not just a login mechanism â€” it is the management framework for every user, computer, and resource",
+      "concept": "Active Directory Administration",
+      "summary": "ACTIVE DIRECTORY ADMINISTRATION Active Directory is not just a login mechanism â€” it is the management framework for every user, computer, and resource in a Windows domain environment. A+ technicians perform real AD administration tasks. Know them."
+    },
+    {
+      "hook": "Downloading browsers: only download browsers from the official vendor site or from official platform app stores.",
+      "concept": "Browser Security",
+      "summary": "Downloading browsers: only download browsers from the official vendor site or from official platform app stores. Verify file integrity using a cryptographic hash â€” MD5, SHA-1, or SHA-256 â€” by comparing the hash of the downloaded file against the hash published on the vendor's site. Third-party download aggregator sites may bundle adware, toolbars, PUPs, or modified installers."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "What Windows security feature monitors and controls which applications can make changes to the system?",
+      "options": [
+        "Windows Defender Antivirus",
+        "UAC (User Account Control)",
+        "Windows Firewall",
+        "BitLocker"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What Windows tool provides encryption for the entire OS drive?",
+      "options": [
+        "EFS (Encrypting File System)",
+        "Windows Defender",
+        "BitLocker",
+        "Secure Boot"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "Which type of user account has full system access and can make system-wide changes?",
+      "options": [
+        "Standard user",
+        "Guest",
+        "Power user",
+        "Administrator"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What Windows feature encrypts individual files and folders rather than the entire drive?",
+      "options": [
+        "EFS (Encrypting File System)",
+        "BitLocker",
+        "Windows Defender",
+        "Secure Boot"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A technician notices UAC prompts are completely disabled on a workstation. What security risk does this create?",
+      "options": [
+        "Users cannot install printers",
+        "Malware can make system-level changes without any user authorization prompts",
+        "Windows Update stops working",
+        "Network drives are inaccessible"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What Windows security setting requires users to enter a complex password meeting minimum length and character requirements?",
+      "options": [
+        "UAC settings",
+        "Windows Defender settings",
+        "Password policy in Local Security Policy or Group Policy",
+        "BitLocker settings"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "Which Windows feature logs all successful and failed login attempts for auditing?",
+      "options": [
+        "Windows Defender log",
+        "Windows Update history",
+        "Task Manager",
+        "Security event log in Event Viewer"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A technician needs to ensure that files stored on a user's laptop are encrypted at the folder level, tied to that user's login credentials, and transparent to the user during normal access. Which Windows feature best meets these requirements?",
+      "options": [
+        "Encrypting File System (EFS)",
+        "BitLocker Drive Encryption",
+        "Windows Defender Credential Guard",
+        "NTFS compression"
+      ],
+      "answer": 0,
+      "explanation": "EFS encrypts individual files and folders using the user's credentials, making decryption transparent when logged in as that user. BitLocker encrypts the entire volume and is not tied to individual user credentials for per-file access."
+    },
+    {
+      "q": "A user reports that every time they attempt to install software, a dialog box appears asking whether to allow the program to make changes to the device. Which Windows feature generates this prompt, and what is the security risk of disabling it?",
+      "options": [
+        "Windows Firewall inbound rules; disabling exposes open ports to the network",
+        "User Account Control (UAC); disabling it allows any process to gain elevated privileges silently",
+        "Audit Policy logging; disabling it stops recording security events",
+        "BitLocker pre-boot PIN; disabling it skips pre-boot authentication"
+      ],
+      "answer": 1,
+      "explanation": "UAC generates the elevation prompt. Disabling UAC means malware or unauthorized software can request and receive administrative privileges without any user interaction, significantly increasing attack surface."
+    },
+    {
+      "q": "A security administrator wants to configure Windows so that accounts are automatically locked after five consecutive failed login attempts. Where is this setting configured?",
+      "options": [
+        "Windows Defender Firewall > Advanced Settings > Inbound Rules",
+        "Task Scheduler > Security Tasks > Lockout Trigger",
+        "Local Security Policy > Account Policies > Account Lockout Policy",
+        "Registry Editor > HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer"
+      ],
+      "answer": 2,
+      "explanation": "Account lockout thresholds are managed under Local Security Policy (secpol.msc) at Account Policies > Account Lockout Policy. The administrator sets the lockout threshold, lockout duration, and observation window there."
+    },
+    {
+      "q": "What browser security feature warns users before visiting sites with invalid or expired SSL certificates?",
+      "options": [
+        "Pop-up blocker",
+        "Ad blocker",
+        "Private browsing mode",
+        "SSL/TLS certificate validation and HTTPS warnings"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What browser setting prevents websites from opening unwanted new windows or tabs?",
+      "options": [
+        "Pop-up blocker",
+        "JavaScript disabling",
+        "Cookie settings",
+        "Incognito mode"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What does clearing browser cache and cookies accomplish?",
+      "options": [
+        "Deletes all saved passwords permanently",
+        "Removes stored web content and session data, which can fix page loading issues and improve privacy",
+        "Blocks all future cookies",
+        "Uninstalls browser extensions"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of HTTPS (HTTP Secure)?",
+      "options": [
+        "Makes websites load faster",
+        "Verifies the website content is appropriate",
+        "Encrypts communication between the browser and the web server using TLS",
+        "Blocks malicious downloads automatically"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "Which HTTP response header is specifically designed to prevent clickjacking by controlling whether a page can be displayed inside an iframe?",
+      "options": [
+        "Content-Security-Policy: upgrade-insecure-requests",
+        "X-Frame-Options: DENY or SAMEORIGIN",
+        "Strict-Transport-Security (HSTS)",
+        "X-Content-Type-Options: nosniff"
+      ],
+      "answer": 1,
+      "explanation": "The X-Frame-Options header tells the browser whether to allow a page to be embedded in a frame or iframe. DENY blocks all framing; SAMEORIGIN allows framing only by the same domain. This directly prevents clickjacking attacks where an attacker overlays a transparent malicious frame over a legitimate site."
+    },
+    {
+      "q": "A user notices websites are tracking browsing habits even after clearing browser history. Which files store session and tracking data in the browser, and what is the correct remediation?",
+      "options": [
+        "Cookies; clear cookies and site data in the browser privacy settings",
+        "Cache files; clear the DNS resolver cache using ipconfig /flushdns",
+        "Temporary internet files; disable JavaScript in the browser",
+        "Prefetch files; disable hardware acceleration"
+      ],
+      "answer": 0,
+      "explanation": "Cookies are small text files storing session state and tracking identifiers. Clearing cookies and site data removes tracking information. Browser history and cache are separate; clearing history alone does not remove cookies."
+    },
+    {
+      "q": "A user visits a website and the browser shows \"Your connection is not private\" with error NET::ERR_CERT_AUTHORITY_INVALID. What does this indicate, and what should the user do?",
+      "options": [
+        "The site uses HTTP; the user should type \"https://\" manually",
+        "The site's SSL/TLS certificate is not trusted by the browser; the user should avoid proceeding unless they can verify the site's legitimacy",
+        "The user's connection is too slow to load the certificate; refresh the page",
+        "The browser's CRL is outdated; clear cache and retry"
+      ],
+      "answer": 1,
+      "explanation": "This error means the browser cannot verify the certificate's chain of trust â€” the certificate may be self-signed, expired, or issued by an untrusted CA. Users should not proceed, as the connection may be intercepted."
+    },
+    {
+      "q": "A company wants to prevent employees from using browsers to visit malicious websites and block inappropriate content categories during work hours. Which solution is MOST appropriate?",
+      "options": [
+        "Private browsing mode",
+        "Pop-up blocker",
+        "Content filtering / DNS filtering",
+        "Browser extension auto-update"
+      ],
+      "answer": 2,
+      "explanation": "Content filtering (via browser policy, proxy, or DNS filtering) blocks access to URLs or domains based on policy rules. DNS filtering prevents resolution of malicious or policy-violating domains before a connection is established."
+    },
+    {
+      "q": "A user installs a free browser extension claiming to show coupon codes. Shortly after, new toolbars appear, the search engine changes, and ads appear on previously clean pages. What is the MOST likely explanation?",
+      "options": [
+        "The browser needs updating to support the extension",
+        "Windows Defender is blocking legitimate browser functionality",
+        "The DNS settings were changed by the ISP to show regional ads",
+        "The extension is adware or a potentially unwanted program (PUP) that modified browser settings and injects ads"
+      ],
+      "answer": 3,
+      "explanation": "Browser extensions with broad permissions can modify search engines, inject scripts, and redirect traffic. Free extensions with vague permissions are a common adware delivery vehicle. The extension should be removed and browser settings reset to defaults."
+    },
+    {
+      "q": "Which statement MOST accurately describes what private/incognito browsing mode does and does NOT do?",
+      "options": [
+        "Incognito mode prevents the browser from saving local history, cookies, and form data, but does not hide activity from the network, ISP, or websites visited",
+        "Incognito mode encrypts all web traffic, preventing ISP monitoring",
+        "Incognito mode blocks all cookies and trackers permanently, even after the session ends",
+        "Incognito mode routes traffic through a VPN automatically, masking the user's IP address"
+      ],
+      "answer": 0,
+      "explanation": "Private/incognito mode creates a temporary session discarded when the window closes â€” no local history, cookies, or form data are saved on the device. However, the user's IP address, DNS queries, and traffic remain visible to the network administrator, ISP, and websites visited."
+    }
+  ]
+}

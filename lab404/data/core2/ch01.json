@@ -1,0 +1,378 @@
+{
+  "core": 2,
+  "chapter": 1,
+  "title": "Windows Editions & OS Overview",
+  "exam_objectives": [
+    "1.1",
+    "1.3"
+  ],
+  "coverage": "COVERED",
+  "domain": "os",
+  "domain_label": "Operating Systems",
+  "sections": [
+    {
+      "title": "Os Types And Purposes",
+      "content": "There are four desktop operating systems the exam expects you to know, and three mobile platforms.\nOn the desktop side: Windows holds roughly 75% of the market share for personal and business computers. It is proprietary â€” Microsoft controls it. The exam focuses specifically on Windows 10 and Windows 11.\nLinux is open-source. The source code is publicly available, anyone can build from it, and that is why there are hundreds of distributions â€” called distros. On the server side, Linux runs roughly 80% of all servers globally. The three main distribution families are Red Hat-based, which includes Fedora and CentOS; Debian-based, which includes Ubuntu; and SUSE-based, which includes OpenSUSE.\nmacOS is Apple's desktop OS. It runs exclusively on Apple hardware â€” that is not just a preference, it is an EULA restriction. macOS is built on a Unix-based kernel called Darwin, which is why it behaves similarly to Linux in many ways. macOS updates are free for supported hardware, and Apple typically supports hardware for six or more years.\nChrome OS is Google's Linux-derived OS, designed primarily for Chromebooks. It is web-centered â€” most of what it does lives in the browser and cloud applications. Chrome OS can also run Android APKs, which allows it to run some offline applications. Boot times are extremely fast, often under five seconds, because there is very little local software to initialize.\nOn the mobile side: iOS runs on Apple iPhones. iPadOS runs on Apple iPads â€” it shares a codebase with iOS but adds multitasking features like running two apps side by side and Apple Pencil support. Android is Google's open-source mobile OS, runs on the majority of smartphones globally â€” about 72% market share worldwide â€” and each manufacturer customizes it differently.\n---",
+      "exam_tips": [
+        "The exam focuses on Windows 10 and 11 â€” not Server editions"
+      ]
+    },
+    {
+      "title": "Windows Editions: The Framework",
+      "content": "Now let us get precise about Windows editions, because this is where exam questions live.\nThere are five main editions you need to know for Core 2: Home, Pro, Pro for Workstations, Enterprise, and Education. Think of them as a ladder, where each step adds capabilities to the one below it.\nBefore we go edition by edition, one architectural fact that affects all of them: Windows 11 is 64-bit only. Every edition of Windows 11 requires a 64-bit processor. Windows 10 was available in both 32-bit and 64-bit. That distinction matters.\n---",
+      "exam_tips": [
+        "Android gets ~3 years support; Apple devices get 6+ years"
+      ]
+    },
+    {
+      "title": "Windows Home",
+      "content": "Windows Home is the consumer tier. It is what comes pre-installed on most retail laptops. For personal use â€” gaming, streaming, web browsing, productivity â€” it is sufficient. But for business environments, Home is missing four critical features that the exam specifically tests.\nFirst: no BitLocker. BitLocker is Windows' built-in full-disk encryption. It uses AES encryption and stores the keys in a TPM chip. Home users cannot enable BitLocker. If a device with sensitive data is lost or stolen and it is running Windows Home, the drive is unencrypted.\nSecond: no Group Policy Editor. The tool gpedit.msc does not exist on Home. Group Policy is how administrators enforce configuration settings across a machine or across an entire domain. Without it, centralized management is not possible on that individual machine.\nThird: no domain join. A Windows Home machine cannot be joined to an Active Directory domain. That means it cannot participate in enterprise authentication, receive domain group policies, or access domain resources natively.\nFourth: no Remote Desktop hosting. Windows Home can connect to other machines using RDP as a client â€” but it cannot accept incoming Remote Desktop connections. If a helpdesk technician tries to remote into a Home machine using RDP, the connection will be refused.\nHardware support: Windows 10 Home 64-bit requires a minimum of 2 GB RAM and 20 GB storage. Windows 11 Home requires 4 GB RAM and 64 GB storage. Home supports up to 128 GB of RAM on 64-bit systems.\nLicensing: Home is available as OEM â€” tied to the specific hardware it ships with â€” or Retail, which can be transferred to a new machine.\n---",
+      "exam_tips": [
+        "Home CAN use RDP as a client â€” it just cannot HOST an RDP session"
+      ]
+    },
+    {
+      "title": "Windows Pro",
+      "content": "Windows Pro adds everything Home has and fills in those four gaps.\nBitLocker is included. Group Policy Editor works. Domain join is supported. And Remote Desktop hosting is enabled â€” the machine can accept inbound RDP connections.\nPro also adds Windows Information Protection, which prevents accidental data leakage by controlling which applications can access corporate data.\nHardware: Pro supports up to 2 TB of RAM on 64-bit. Same minimum requirements as Home, but the ceiling is dramatically higher for high-memory workloads.\nLicensing: Pro is available as OEM, Retail, or Volume. Volume licensing allows organizations to manage activation across many machines centrally.\nPro is the standard business edition. Any scenario on the exam that describes domain join, BitLocker, Group Policy, or RDP server â€” the answer involves Pro or higher.\n---",
+      "exam_tips": [
+        "Pro = available OEM, Retail, or Volume licensing"
+      ]
+    },
+    {
+      "title": "Windows Pro For Workstations",
+      "content": "Pro for Workstations is for high-performance computing. Think scientific modeling, 3D rendering, video production at scale, financial simulations.\nIt supports up to 6 TB of RAM. It supports up to 4 physical processors with up to 256 cores total. It also adds support for ReFS â€” the Resilient File System â€” as a local drive option, and it supports high-bandwidth memory architectures.\nThis edition is not for standard business use. It exists for scenarios where the hardware pushes beyond what standard Pro can manage.\n---",
+      "exam_tips": [
+        "Any scenario mentioning these four features = Enterprise answer"
+      ]
+    },
+    {
+      "title": "Windows Enterprise",
+      "content": "Enterprise includes everything in Pro and Pro for Workstations, plus four capabilities that no other edition has.\nApp-V â€” Application Virtualization. Applications run in an isolated, sandboxed environment without being formally installed. The application does not write to the registry or local disk in the traditional sense. This is useful for legacy applications that conflict with other software, or for running multiple versions of the same application on one machine.\nUE-V â€” User Environment Virtualization. This captures a user's application settings and synchronizes them across multiple machines on a domain. A user can log into any machine in the organization and their personalized settings follow them.\nDirectAccess. This provides automatic, always-on, encrypted connectivity to the corporate network without requiring the user to manually initiate a VPN session. The connection is established in the background as soon as the machine has internet access. From the user's perspective, they are always on the corporate network.\nCredential Guard. This uses virtualization-based security to isolate credential hashes and secrets from the main OS. Even if an attacker gains kernel-level access to the system, they cannot extract stored credentials, because those credentials exist in an isolated virtual container that the compromised OS cannot reach.\nEnterprise also supports up to 6 TB of RAM and 4 physical processors, matching Pro for Workstations.\nCritical licensing note: Enterprise is only available through volume licensing. You cannot purchase Enterprise OEM or Retail. It requires a Microsoft volume licensing agreement. This is a common exam question â€” if a scenario asks who can buy Enterprise, the answer is organizations with volume licensing.\n---",
+      "exam_tips": [
+        "This table is the core of Objective 1.3 â€” memorize it"
+      ]
+    },
+    {
+      "title": "Education Editions",
+      "content": "Windows Education is the Enterprise equivalent for educational institutions â€” schools, colleges, universities. It has the same feature set as Enterprise but is licensed specifically for academic use.\nWindows Pro Education mirrors Pro for academic environments.\nBoth are available only through volume licensing agreements with educational institutions. Same features, same hardware support, different licensing terms.\n---",
+      "exam_tips": [
+        "Windows 11 = 64-bit only; Windows 10 had both 32 and 64-bit versions"
+      ]
+    },
+    {
+      "title": "N Versions",
+      "content": "A brief but testable note on N versions. Windows N editions were created for European Union compliance after antitrust rulings that required Microsoft to offer versions without bundled media software.\nThe N stands for \"Not with Media Player.\" N versions exclude Windows Media Player, Music, Video, Voice Recorder, and Skype. All other features remain intact. Microsoft offers a downloadable Media Feature Pack to restore the missing components.\nN editions exist for Home, Pro, Enterprise, and Education. For the exam, if you see a reference to N versions, the answer involves EU antitrust compliance and the absence of multimedia software.\n---",
+      "exam_tips": [
+        "exFAT is the correct answer for USB drives shared between Windows and Mac"
+      ]
+    },
+    {
+      "title": "Filesystem Types",
+      "content": "Every OS uses a filesystem to organize how data is stored on disk. The A+ exam tests you on seven filesystem types.\nNTFS â€” New Technology File System â€” is the Windows default. It supports journaling, which means the OS logs file system changes before writing them, enabling recovery after a crash. NTFS supports file-level permissions, EFS encryption, audit trails, and disk quotas. Volumes can be up to 256 TB in practical use. This is the filesystem you use for internal Windows drives.\nReFS â€” Resilient File System â€” is Microsoft's enterprise filesystem, used primarily on Windows Server. It automatically detects and repairs data corruption. It does not support file compression or disk quotas, but its integrity features make it valuable for storage-heavy environments.\nFAT32 â€” File Allocation Table 32 â€” is legacy and cross-platform. Windows, macOS, and Linux can all read and write FAT32. The critical limitation: maximum individual file size is 4 GB. You cannot store a file larger than 4 GB on a FAT32 volume. Maximum volume size is 2 TB.\nexFAT â€” Extended FAT â€” is the modern replacement for FAT32 on removable media. It is cross-platform, supports files up to 16 exabytes, and has no practical size limits. Best choice for USB drives and SD cards that need to work on both Windows and macOS. It does not have journaling or security features.\next4 â€” Fourth Extended Filesystem â€” is the default for most Linux distributions. It supports journaling, volume sizes up to 1 exabyte, and files up to 16 TB. It is not natively supported on Windows or macOS without third-party drivers.\nXFS is a high-performance journaling filesystem used in enterprise Linux environments. Supports volumes and files up to 8 exabytes. Used where performance and scalability matter more than features like compression.\nAPFS â€” Apple File System â€” is the default on macOS, iOS, and iPadOS since 2018. It is optimized for SSDs, supports encryption and snapshots natively, and allows multiple volumes to share the same physical storage pool. It is not compatible with non-Apple operating systems.\n---",
+      "exam_tips": [
+        "FAT32 4 GB file limit is the most commonly tested FAT32 fact"
+      ]
+    },
+    {
+      "title": "32-Bit Vs 64-Bit",
+      "content": "The last topic for this chapter is processor and OS architecture.\nA 32-bit OS can only address 4 GB of RAM. This is a hard physical limit tied to how 32-bit memory addressing works â€” it can reference 2 to the power of 32 memory addresses, which equals approximately 4 GB. No matter how much physical RAM is installed, a 32-bit OS can only see and use 4 GB.\nA 64-bit OS removes that ceiling. Windows 10 Pro 64-bit supports up to 2 TB. Enterprise and Pro for Workstations support up to 6 TB.\nFor processors: a 32-bit processor â€” x86 â€” can only run a 32-bit OS. A 64-bit processor â€” x64 â€” can run either a 32-bit or 64-bit OS, though there is rarely a reason to run 32-bit on 64-bit hardware.\n64-bit Windows maintains backward compatibility with 32-bit software. It uses a compatibility layer called WOW64 â€” Windows 32-bit on Windows 64-bit â€” to run 32-bit applications on a 64-bit OS. 32-bit Windows cannot run 64-bit applications at all.\nThe exam rule: any scenario that mentions more than 4 GB of RAM means the OS must be 64-bit.\n---",
+      "exam_tips": [
+        "If scenario mentions more than 4 GB RAM â†’ must be 64-bit OS"
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "Windows Home cannot host Remote Desktop. If you put the wrong edition on a business machine, you just broke RDP for every remote worker.",
+      "concept": "WINDOWS HOME vs PRO â€” WHAT THE EXAM ACTUALLY TESTS",
+      "summary": "The CompTIA A+ exam tests whether you know what Windows Home is missing â€” not what it has. Here is the list you need to memorize."
+    },
+    {
+      "hook": "Four Windows features exist only in Enterprise. If you see any of them on an exam question, the answer is Enterprise â€” every time.",
+      "concept": "ENTERPRISE-ONLY WINDOWS FEATURES",
+      "summary": "Windows Enterprise includes everything in Pro, plus four capabilities that no other retail edition has. App-V: Application Virtualization."
+    },
+    {
+      "hook": "Windows 11 will refuse to install if your machine lacks TPM 2.0. That single chip is the most-tested Windows 11 requirement on the A+ exam.",
+      "concept": "WINDOWS 11 HARDWARE REQUIREMENTS",
+      "summary": "Windows 11 has specific hardware requirements that make it more restrictive than Windows 10. You need to know all of them."
+    },
+    {
+      "hook": "If you format a USB drive with NTFS, a Mac might not be able to write to it. Filesystem choice has real consequences â€” and the exam tests every one of them.",
+      "concept": "FILESYSTEM TYPES â€” WHICH ONE GOES WHERE",
+      "summary": "Seven filesystem types appear on the A+ Core 2 exam. Here is how to assign each one."
+    },
+    {
+      "hook": "A 32-bit Windows install on a machine with 16 GB of RAM will only use 4 GB. The rest is physically invisible to the OS.",
+      "concept": "32-BIT vs 64-BIT WINDOWS â€” THE RAM RULE",
+      "summary": "The architecture of the operating system determines how much memory it can address. A 32-bit OS is limited to 4 GB of RAM â€” period."
+    },
+    {
+      "hook": "There are four desktop operating systems the exam expects you to know, and three mobile platforms.",
+      "concept": "Os Types And Purposes",
+      "summary": "There are four desktop operating systems the exam expects you to know, and three mobile platforms. On the desktop side: Windows holds roughly 75% of the market share for personal and business computers. It is proprietary â€” Microsoft controls it."
+    },
+    {
+      "hook": "Now let us get precise about Windows editions, because this is where exam questions live.",
+      "concept": "Windows Editions: The Framework",
+      "summary": "Now let us get precise about Windows editions, because this is where exam questions live. There are five main editions you need to know for Core 2: Home, Pro, Pro for Workstations, Enterprise, and Education. Think of them as a ladder, where each step adds capabilities to the one below it."
+    },
+    {
+      "hook": "Windows Home is the consumer tier.",
+      "concept": "Windows Home",
+      "summary": "Windows Home is the consumer tier. It is what comes pre-installed on most retail laptops. For personal use â€” gaming, streaming, web browsing, productivity â€” it is sufficient."
+    },
+    {
+      "hook": "Windows Pro adds everything Home has and fills in those four gaps.",
+      "concept": "Windows Pro",
+      "summary": "Windows Pro adds everything Home has and fills in those four gaps. BitLocker is included. Group Policy Editor works."
+    },
+    {
+      "hook": "Pro for Workstations is for high-performance computing.",
+      "concept": "Windows Pro For Workstations",
+      "summary": "Pro for Workstations is for high-performance computing. Think scientific modeling, 3D rendering, video production at scale, financial simulations. It supports up to 6 TB of RAM."
+    },
+    {
+      "hook": "Enterprise includes everything in Pro and Pro for Workstations, plus four capabilities that no other edition has.",
+      "concept": "Windows Enterprise",
+      "summary": "Enterprise includes everything in Pro and Pro for Workstations, plus four capabilities that no other edition has. App-V â€” Application Virtualization. Applications run in an isolated, sandboxed environment without being formally installed."
+    },
+    {
+      "hook": "Windows Education is the Enterprise equivalent for educational institutions â€” schools, colleges, universities.",
+      "concept": "Education Editions",
+      "summary": "Windows Education is the Enterprise equivalent for educational institutions â€” schools, colleges, universities. It has the same feature set as Enterprise but is licensed specifically for academic use. Windows Pro Education mirrors Pro for academic environments."
+    },
+    {
+      "hook": "A brief but testable note on N versions.",
+      "concept": "N Versions",
+      "summary": "A brief but testable note on N versions. Windows N editions were created for European Union compliance after antitrust rulings that required Microsoft to offer versions without bundled media software. The N stands for \"Not with Media Player.\" N versions exclude Windows Media Player, Music, Video, Voice Recorder, and Skype."
+    },
+    {
+      "hook": "Every OS uses a filesystem to organize how data is stored on disk.",
+      "concept": "Filesystem Types",
+      "summary": "Every OS uses a filesystem to organize how data is stored on disk. The A+ exam tests you on seven filesystem types. NTFS â€” New Technology File System â€” is the Windows default."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "Which Windows 10/11 edition is required to join a domain and supports BitLocker?",
+      "options": [
+        "Pro",
+        "Home",
+        "S Mode",
+        "SE"
+      ],
+      "answer": 0,
+      "explanation": "Pro (and higher: Enterprise, Education) can join an Active Directory domain and includes BitLocker full-disk encryption. Home is limited to workgroup networking only and lacks both features."
+    },
+    {
+      "q": "Which Windows edition is designed for educational institutions and is available only through academic channels?",
+      "options": [
+        "Windows Pro",
+        "Windows Education",
+        "Windows Enterprise",
+        "Windows Home"
+      ],
+      "answer": 1,
+      "explanation": "Windows Education is licensed exclusively through Microsoft's academic volume programs. It includes all Pro and most Enterprise features and is designed for K-12 and higher-ed deployments."
+    },
+    {
+      "q": "What is the maximum RAM supported by Windows 10/11 Home?",
+      "options": [
+        "4 GB",
+        "16 GB",
+        "128 GB",
+        "2 TB"
+      ],
+      "answer": 2,
+      "explanation": "Windows 10/11 Home supports up to 128 GB RAM. Pro supports up to 2 TB. This distinction matters on the exam: Home is capped for consumer use, while Pro is suitable for memory-intensive workstation workloads."
+    },
+    {
+      "q": "Which Windows feature allows an organization to deploy a standardized OS image across many machines?",
+      "options": [
+        "Cortana",
+        "Hyper-V",
+        "Windows Update",
+        "Windows Deployment Services (WDS)"
+      ],
+      "answer": 3,
+      "explanation": "WDS is a server role that enables network-based (PXE boot) deployment of Windows images (.wim files) to multiple machines simultaneously. It replaces the older Remote Installation Services (RIS)."
+    },
+    {
+      "q": "What Windows edition is a cloud-focused version designed for low-cost devices that runs only Microsoft Store apps and the Edge browser?",
+      "options": [
+        "Windows 10 S Mode",
+        "Windows 10 Pro",
+        "Windows 10 Enterprise",
+        "Windows 10 LTSC"
+      ],
+      "answer": 0,
+      "explanation": "S Mode blocks traditional Win32 (.exe) application installation and restricts browsing to Edge. It improves performance and security on low-end hardware. Users can switch out of S Mode for free (one-way, cannot switch back)."
+    },
+    {
+      "q": "Which Windows 10/11 edition supports Windows Sandbox for running untrusted applications?",
+      "options": [
+        "Home",
+        "Pro and higher",
+        "S Mode",
+        "Education only"
+      ],
+      "answer": 1,
+      "explanation": "Windows Sandbox creates a disposable, isolated virtual desktop. When closed, all changes are discarded â€” no trace left on the host. Requires Pro, Enterprise, or Education; not available in Home."
+    },
+    {
+      "q": "What does LTSC stand for in Windows LTSC editions?",
+      "options": [
+        "Home",
+        "All editions",
+        "Pro and higher",
+        "Enterprise only"
+      ],
+      "answer": 2,
+      "explanation": "All editions can use Remote Desktop as a client (connect out). Only Pro and higher can act as an RDP host (accept incoming connections). Home blocks inbound RDP â€” a common exam scenario where a tech cannot remotely connect to a Home machine."
+    },
+    {
+      "q": "What feature available only in Pro and Enterprise allows applying group policies centrally to all domain-joined computers?",
+      "options": [
+        "Windows Update",
+        "Cortana",
+        "Windows Defender",
+        "Group Policy (via GPO and Active Directory)"
+      ],
+      "answer": 3,
+      "explanation": "Group Policy Objects (GPOs) are delivered by Active Directory domain controllers to domain-joined machines. Home cannot join a domain and therefore cannot receive GPOs. Local Group Policy (gpedit.msc) exists on Pro but applies only to the local machine."
+    },
+    {
+      "q": "A small business owner wants to join company laptops to an Active Directory domain and enforce security policies using Group Policy. Which Windows edition is the MINIMUM requirement to support these features?",
+      "options": [
+        "Windows 11 Pro",
+        "Windows 11 SE",
+        "Windows 11 Home",
+        "Windows 11 Home Single Language"
+      ],
+      "answer": 0,
+      "explanation": "Windows 11 Pro and higher editions support domain join and Group Policy management. Windows 11 Home does not support joining an Active Directory domain. Windows 11 SE is an education-restricted edition without domain join capability."
+    },
+    {
+      "q": "What is the primary difference between a workstation OS and a server OS?",
+      "options": [
+        "Workstation OS requires more RAM",
+        "Server OS cannot run desktop applications",
+        "Server OS is optimized for concurrent network services and multiple simultaneous connections",
+        "Workstation OS is always free"
+      ],
+      "answer": 2,
+      "explanation": "A server OS (Windows Server, Linux server distributions) is tuned for high throughput, many simultaneous connections, and background services. A workstation OS (Windows 10/11, macOS, desktop Linux) is tuned for single-user interactive use and lower latency on foreground tasks."
+    },
+    {
+      "q": "Which mobile OS is proprietary to Apple and runs exclusively on Apple hardware?",
+      "options": [
+        "Android",
+        "HarmonyOS",
+        "Windows Mobile",
+        "iOS"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "[BONUS â€” Beyond A+ Scope] What type of OS runs on embedded devices such as routers, smart TVs, and medical equipment?",
+      "options": [
+        "Embedded or real-time OS (RTOS)",
+        "Desktop OS",
+        "Server OS",
+        "Mobile OS only"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What is the main advantage of an open-source OS like Linux for businesses?",
+      "options": [
+        "More expensive than Windows",
+        "Free to use, modify, and distribute with community support",
+        "Requires proprietary hardware",
+        "Less secure than Windows"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Which OS is commonly used on Apple desktop and laptop computers?",
+      "options": [
+        "iOS",
+        "Android",
+        "macOS",
+        "Windows"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "[BONUS â€” Beyond A+ Scope] True or False: A real-time operating system (RTOS) prioritizes deterministic response times for time-critical operations.",
+      "options": [
+        "iOS supports sideloading apps by default; Android does not",
+        "Android requires all apps to be downloaded from the Apple App Store",
+        "Android apps cannot run on 64-bit processors",
+        "iOS restricts app installation to the Apple App Store by default; Android allows third-party sources"
+      ],
+      "answer": 3,
+      "explanation": "iOS locks users to the App Store by default and does not allow sideloading without jailbreaking. Android allows installation from third-party sources when \"Unknown sources\" or \"Install unknown apps\" is enabled."
+    },
+    {
+      "q": "Which of the following operating systems is BEST described as open-source and freely distributable?",
+      "options": [
+        "Ubuntu 22.04 LTS",
+        "Windows 11 Pro",
+        "iOS 17",
+        "macOS Ventura"
+      ],
+      "answer": 0,
+      "explanation": "Ubuntu is a Linux distribution released under open-source licenses, allowing free download, modification, and redistribution. macOS, Windows, and iOS are proprietary operating systems tied to a license or specific hardware."
+    },
+    {
+      "q": "A user wants to install a 64-bit application on a computer running a 32-bit operating system. What will happen?",
+      "options": [
+        "The application will install but run at reduced speed",
+        "The application will not install because 64-bit apps require a 64-bit OS",
+        "The OS will automatically convert the application to 32-bit",
+        "The application will install normally with no issues"
+      ],
+      "answer": 1,
+      "explanation": "A 64-bit application requires a 64-bit OS and processor. A 32-bit OS cannot run 64-bit applications. The reverse is possible: a 64-bit OS can run most 32-bit apps through the WOW64 compatibility layer on Windows."
+    },
+    {
+      "q": "Which of the following BEST describes a key characteristic of macOS compared to Windows?",
+      "options": [
+        "macOS is open source and can be installed on any x86 hardware",
+        "macOS uses the Windows Registry to store system configuration",
+        "macOS is a proprietary OS designed primarily for Apple hardware",
+        "macOS does not support command-line interfaces"
+      ],
+      "answer": 2,
+      "explanation": "macOS is proprietary software developed by Apple and officially licensed only for Apple hardware. It is not open source, uses configuration files and property lists (not a Windows Registry), and includes a full Terminal application."
+    },
+    {
+      "q": "Which Windows 10/11 edition does NOT support running gpedit.msc (Local Group Policy Editor)?",
+      "options": [
+        "Windows 10/11 Pro",
+        "Windows 10/11 Enterprise",
+        "Windows 10/11 Home",
+        "Windows 10/11 Education"
+      ],
+      "answer": 2,
+      "explanation": "Windows Home edition does not include the Local Group Policy Editor (gpedit.msc). Group Policy support is limited to Pro, Enterprise, and Education editions, which are designed for domain environments and business use."
+    },
+    {
+      "q": "What is the Windows Insider Program, and which user group benefits most from it?",
+      "options": [
+        "A paid support program for enterprise Windows customers with dedicated Microsoft engineers",
+        "An early access program allowing users to test pre-release Windows builds — valuable for IT professionals evaluating upcoming features before general availability",
+        "A program providing free Windows licenses to qualifying non-profit organizations",
+        "A developer certification program for creating Windows Store applications"
+      ],
+      "answer": 1,
+      "explanation": "The Windows Insider Program distributes pre-release Windows builds (Dev, Beta, Release Preview channels) to volunteers. IT professionals use it to test compatibility of business applications with upcoming Windows versions, while enthusiasts get early access to new features before official release."
+    }
+  ]
+}

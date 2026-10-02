@@ -1,0 +1,308 @@
+{
+  "core": 1,
+  "chapter": 7,
+  "title": "Power Supplies & Cooling",
+  "exam_objectives": [
+    "3.4",
+    "3.6"
+  ],
+  "coverage": "COVERED",
+  "domain": "hardware",
+  "domain_label": "Hardware",
+  "sections": [
+    {
+      "title": "Power Supply Unit â€” What It Does",
+      "content": "The PSU has one job: convert AC power from the wall into regulated DC voltages that computer components can use.\nThe incoming voltage is alternating current. In North America, this is 100 to 127 VAC at 60 Hz. In Europe and most of the rest of the world, it is 220 to 240 VAC at 50 Hz. Many modern PSUs are dual-voltage and auto-switching â€” they detect the incoming voltage and configure themselves accordingly. Older units had a physical voltage selector switch that required manual switching. Connecting a 115V-configured PSU to a 230V circuit is a destructive failure mode.\nInside the PSU, the AC is rectified to DC, stepped down via transformers, regulated for precision voltage stability, and filtered to remove electrical noise. The output rails provide 3.3V, 5V, and 12V. The 12V rail carries the majority of the load in modern systems â€” it powers the CPU, GPU, and drives.\nA PSU is never opened for service. Internal capacitors store charge at voltages that can cause serious injury or death even when the unit is unplugged. When a PSU fails, it is replaced as a unit.\n---",
+      "exam_tips": [
+        "The +12V rail is the most critical for modern components. PSUs are replaced, never repaired."
+      ]
+    },
+    {
+      "title": "Psu Wattage And Efficiency",
+      "content": "WATTAGE SIZING.\nThe PSU must be capable of delivering the total power required by all system components. Undersizing a PSU results in system instability â€” random crashes, failed boots, corrupted storage operations â€” because components receive insufficient or fluctuating power.\nTypical system requirements:\n- Standard desktop: 400 to 500W\n- Gaming or workstation with a dedicated GPU: 600W or above\n- High-end systems with powerful GPUs: 850W or above\n- Servers: 1,000W or above per PSU, often with redundant units\nBest practice: select a PSU with 20 to 30 percent headroom above the calculated system power draw. This prevents continuous near-maximum operation, reduces heat inside the unit, and improves component longevity.\nPSU EFFICIENCY â€” 80 PLUS CERTIFICATION.\nNot all power drawn from the wall reaches the components. Some is lost as heat during conversion. The 80 PLUS certification program tests and certifies PSU efficiency â€” what percentage of input power becomes usable DC output.\nCertification tiers and their efficiency ratings at 50% load:\n- 80 PLUS Standard: 80% efficient\n- 80 PLUS Bronze: 82 to 85% efficient\n- 80 PLUS Silver: 85 to 88% efficient\n- 80 PLUS Gold: 87 to 90% efficient\n- 80 PLUS Platinum: 89 to 92% efficient\n- 80 PLUS Titanium: 90 to 94% efficient\nHigher efficiency means less electricity wasted as heat, lower operating temperatures inside the PSU, and reduced energy costs over the system's lifetime. 80 PLUS Gold represents a practical quality threshold for most system builds.\n---",
+      "exam_tips": [
+        "Underpowered PSU = random instability, crashes, corrupted data. Not a boot failure immediately."
+      ]
+    },
+    {
+      "title": "Psu Connectors",
+      "content": "Each PSU connector is keyed and designed for a specific purpose.\n24-PIN ATX CONNECTOR (P1).\nThis is the main motherboard power connection. It delivers 3.3V, 5V, and 12V to the board's power distribution circuits. Some older boards use a 20-pin connector; the 24-pin includes a detachable 4-pin section that allows compatibility.\n4-PIN / 8-PIN CPU POWER CONNECTOR (EPS12V).\nThis connector specifically powers the CPU voltage regulator module on the motherboard. It provides 12V power dedicated to the processor. Some high-performance boards use two 8-pin connectors for enthusiast CPUs.\nPCIe POWER CONNECTORS (6-PIN AND 8-PIN).\nThese connectors power dedicated GPU cards. Entry-level GPUs draw enough power from the PCIe slot alone. Mid-range GPUs require one 8-pin connector. High-end GPUs may require two or more 8-pin connectors. The GPU's power requirement is listed in its specifications.\nSATA POWER CONNECTORS.\nFlat, 15-pin connectors that power SATA hard drives, SATA SSDs, and optical drives.\nMOLEX CONNECTORS.\nOlder 4-pin connectors that deliver 5V and 12V. Used in legacy drives and some case fans. Increasingly rare in modern systems.\nMODULAR AND NON-MODULAR PSUs.\nA non-modular PSU has all cable harnesses permanently attached. Unused cables sit loose inside the case, occupying space and impeding airflow.\nA modular PSU has all or most cable harnesses as detachable connections. Only the cables actually needed are connected. This reduces interior cable clutter, improves airflow, and simplifies cable management.\nSemi-modular PSUs permanently attach the essential cables â€” 24-pin ATX and CPU power â€” while making everything else modular.\nREDUNDANT PSUs.\nIn server environments, redundant power supplies are standard. Two or more PSUs share the load, and either can sustain the full system load independently. If one PSU fails, the other takes over without interruption. Redundant PSUs are hot-swappable â€” they can be replaced while the system is running via a backplane.\n---",
+      "exam_tips": [
+        "Know all six tiers in order. Gold is the standard recommendation for efficiency and reliability."
+      ]
+    },
+    {
+      "title": "Cooling Systems",
+      "content": "All active electronic components convert a portion of their power consumption into heat. Managing that heat is a fundamental system design requirement.\nTHERMAL THROTTLING.\nWhen a CPU or GPU exceeds its safe operating temperature, the processor automatically reduces its clock speed to reduce heat output. This is thermal throttling. The system remains operational but underperforms. Persistent throttling indicates a cooling deficiency.\nAIR COOLING.\nAir cooling is the standard approach for most systems. The cooling path is: component generates heat â†’ thermal paste conducts heat to heatsink â†’ heatsink fins conduct heat to air â†’ fan moves heated air away.\nHeatsinks are made from aluminum or copper. Copper conducts heat more efficiently; aluminum is lighter and less expensive. High-performance heatsinks use heat pipes â€” sealed tubes containing a phase-change working fluid that transfers heat from the component contact area to the fin array at the opposite end.\nThermal paste fills the microscopic surface imperfections between the component heat spreader and the heatsink base. Without thermal paste, the microscopic air gaps between the surfaces would act as insulators, dramatically reducing heat transfer.\nCASE AIRFLOW.\nThe case fans create the airflow path that moves heat out of the chassis. Standard airflow design: intake at the front and bottom, exhaust at the rear and top. Hot air naturally rises, so rear and top exhaust positions align with the convective flow.\nPositive pressure â€” having more intake CFM than exhaust â€” creates a slight positive air pressure inside the case. This reduces dust ingestion through unsealed gaps, since air flows out rather than in through gaps.\nDust accumulation on heatsinks, fan blades, and filters is a significant efficiency-reducer. Blocked airflow is the leading cause of thermal issues in aging systems. Regular cleaning â€” compressed air, clean environment â€” is a maintenance task, not an option.\nLIQUID COOLING.\nLiquid cooling uses a coolant fluid to move heat from the component to a radiator that dissipates it into the air. It is more efficient than air at removing large amounts of heat from a small area â€” relevant for high-TDP CPUs and overclocked systems.\nOpen-loop liquid cooling uses a pump, tubing, water blocks that contact components, a radiator with fans, and a reservoir. Open-loop systems offer the highest performance and customization but require more space, complexity, and periodic maintenance â€” refilling coolant, checking for leaks.\nClosed-loop liquid cooling â€” AIO, All-In-One â€” is a sealed, pre-filled unit. A pump is integrated into a cold plate that contacts the CPU. Tubing connects to a radiator that mounts in the case. The system is maintenance-free. AIO coolers are the practical choice for high-TDP CPU cooling without the complexity of open-loop.\n---",
+      "exam_tips": [
+        "Know which connector powers which component. PCIe power to GPU. EPS12V to CPU."
+      ]
+    },
+    {
+      "title": "Power And Safety",
+      "content": "PSU SAFETY.\nNever open a PSU. Capacitors inside store charge at potentially lethal voltages even after the unit has been unplugged for an extended period. A PSU that fails is replaced. It is never disassembled for repair by a technician.\nSTATIC ELECTRICITY.\nESD â€” Electrostatic Discharge â€” can damage components during handling. Use ESD wrist straps when working inside systems, handle components by edges, and work on anti-static mats when available.\nBEFORE WORKING INSIDE A SYSTEM.\nShut down the system and unplug the power cable from the wall. Press the power button once after unplugging to discharge residual charge in capacitors on the motherboard. Ground yourself. Then proceed.\n---",
+      "exam_tips": [
+        "Thermal throttling is a symptom of cooling failure, not a separate hardware problem."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "A PSU that cannot deliver enough power causes random crashes, failed boots, and corrupted data â€” and the symptoms look identical to a dozen other hardware failures. Understanding what the PSU does is the first step to diagnosing it correctly.",
+      "concept": "PSU FUNCTION & CONNECTORS",
+      "summary": "The Power Supply Unit converts alternating current from the wall outlet â€” typically 100 to 127 VAC in North America or 220 to 240 VAC in Europe â€” into the regulated direct current voltages that computer components require. A PC's components run on three primary DC voltages: 3.3V, 5V, and 12V."
+    },
+    {
+      "hook": "An underpowered PSU does not simply fail to power components â€” it powers them unreliably. Random crashes, failed boots, and corrupted storage are all symptoms of insufficient PSU wattage.",
+      "concept": "PSU WATTAGE & 80 PLUS EFFICIENCY RATINGS",
+      "summary": "PSU wattage is the total power delivery capacity. A system's total power draw â€” CPU, GPU, storage drives, RAM, fans, and peripherals â€” must not exceed the PSU's rated output."
+    },
+    {
+      "hook": "Thermal throttling is the CPU slowing itself down to prevent damage from heat. If your system underperforms under load, cooling failure is the first thing to investigate.",
+      "concept": "COOLING SYSTEMS: AIR VS LIQUID",
+      "summary": "Every active component in a computer system â€” CPU, GPU, storage controllers, VRMs â€” generates heat as a byproduct of operation. Removing that heat is not optional."
+    },
+    {
+      "hook": "The PSU has one job: convert AC power from the wall into regulated DC voltages that computer components can use.",
+      "concept": "Power Supply Unit â€” What It Does",
+      "summary": "The PSU has one job: convert AC power from the wall into regulated DC voltages that computer components can use. The incoming voltage is alternating current. In North America, this is 100 to 127 VAC at 60 Hz."
+    },
+    {
+      "hook": "WATTAGE SIZING.",
+      "concept": "Psu Wattage And Efficiency",
+      "summary": "WATTAGE SIZING. The PSU must be capable of delivering the total power required by all system components. Undersizing a PSU results in system instability â€” random crashes, failed boots, corrupted storage operations â€” because components receive insufficient or fluctuating power."
+    },
+    {
+      "hook": "Each PSU connector is keyed and designed for a specific purpose.",
+      "concept": "Psu Connectors",
+      "summary": "Each PSU connector is keyed and designed for a specific purpose. 24-PIN ATX CONNECTOR (P1). This is the main motherboard power connection."
+    },
+    {
+      "hook": "PSU SAFETY.",
+      "concept": "Power And Safety",
+      "summary": "PSU SAFETY. Never open a PSU. Capacitors inside store charge at potentially lethal voltages even after the unit has been unplugged for an extended period."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "A desktop randomly shuts off under heavy load. The MOST likely hardware cause is:",
+      "options": [
+        "Faulty RAM",
+        "Bad monitor",
+        "Bad hard drive",
+        "Insufficient or failing power supply"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What does the 80 Plus certification on a PSU indicate?",
+      "options": [
+        "At least 80% energy efficiency under standard load conditions",
+        "Minimum power output in watts",
+        "Maximum operating temperature",
+        "Safety compliance standard"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Which PSU connector provides primary power to the motherboard in modern ATX systems?",
+      "options": [
+        "4-pin Molex",
+        "24-pin ATX main connector",
+        "6-pin PCIe",
+        "8-pin EPS CPU connector"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What connector provides supplemental power to high-end graphics cards?",
+      "options": [
+        "SATA power connector",
+        "4-pin Molex",
+        "6-pin or 8-pin PCIe power connector",
+        "24-pin ATX"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A technician is building a workstation with a high-end GPU and multiple drives. What PSU consideration is most important?",
+      "options": [
+        "Smallest physical size",
+        "Highest number of output cables",
+        "Cheapest option available",
+        "Adequate wattage with approximately 20-30% headroom above calculated load"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "Which 80 Plus PSU rating is the first tier certified to reach 90% efficiency at 50% load?",
+      "options": [
+        "80 Plus Platinum",
+        "80 Plus Bronze",
+        "80 Plus Gold",
+        "80 Plus White"
+      ],
+      "answer": 0,
+      "explanation": "80 Plus Platinum is certified at 90/92/89% efficiency at 20/50/100% load. 80 Plus Gold reaches 87/90/87%. The key distinction: Platinum hits 90% at the lower 20% load threshold; Gold only reaches 90% at exactly 50% load. Platinum is the answer for \"consistently 90%+.\""
+    },
+    {
+      "q": "What is the purpose of the 4-pin or 8-pin CPU power connector (EPS12V)?",
+      "options": [
+        "Provides power to SATA drives",
+        "Delivers dedicated 12V power to the CPU voltage regulator modules on the motherboard",
+        "Powers the GPU",
+        "Provides CMOS battery backup"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Before replacing a PSU, what safety step is essential?",
+      "options": [
+        "Remove the GPU first",
+        "Boot into safe mode first",
+        "Unplug the AC power cord and press the power button to discharge capacitors",
+        "Back up all data on the drives"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What does \"single-rail\" vs \"multi-rail\" describe on a PSU?",
+      "options": [
+        "Number of output wattage ratings",
+        "The PSU efficiency rating",
+        "Whether the PSU is modular",
+        "How the 12V output power is distributed â€” single rail has one large 12V output vs. multiple smaller rails"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What effect does positive case pressure have on dust accumulation inside a PC?",
+      "options": [
+        "Positive pressure increases dust by drawing more air through unfiltered openings",
+        "Positive pressure reduces dust ingress by ensuring air exits through gaps rather than entering through them",
+        "Positive pressure has no effect on dust -- only filtered intake fans matter",
+        "Positive pressure increases component temperatures by restricting airflow"
+      ],
+      "answer": 1,
+      "explanation": "Positive case pressure (more intake airflow than exhaust) means air exits through unfiltered case gaps rather than entering through them. Dust follows airflow -- if air exits gaps, dust cannot enter through them."
+    },
+    {
+      "q": "Which DC voltage rail in a PC PSU carries the majority of the system load, powering the CPU, GPU, and storage devices?",
+      "options": [
+        "3.3V rail",
+        "5V rail",
+        "12V rail",
+        "The PSU distributes load equally across all rails"
+      ],
+      "answer": 2,
+      "explanation": "The 12V rail carries the dominant load in modern PCs. CPUs and GPUs are powered primarily from 12V through VRM conversion. The 3.3V and 5V rails power older legacy components and low-power devices."
+    },
+    {
+      "q": "What is thermal throttling, and what triggers it?",
+      "options": [
+        "The PSU reduces output voltage when the CPU draws excessive current",
+        "The CPU automatically reduces its clock speed and voltage when temperature exceeds a safe threshold to prevent damage",
+        "The fan controller increases fan speed when the case temperature rises above a set point",
+        "The BIOS shuts down non-essential PCIe devices to reduce heat output"
+      ],
+      "answer": 1,
+      "explanation": "Thermal throttling is an automatic self-protection mechanism. When CPU or GPU temperature approaches the thermal junction limit, the processor reduces clock speed and voltage to lower heat output, preventing permanent damage."
+    },
+    {
+      "q": "What is the input voltage range for PC power supplies designed for North American use?",
+      "options": [
+        "50-75 VAC",
+        "100-127 VAC",
+        "200-240 VAC",
+        "300-400 VAC"
+      ],
+      "answer": 1,
+      "explanation": "North American AC mains power is 110-120 VAC (the standard range for PSUs in this region is 100-127 VAC). European and many international standards use 220-240 VAC. Dual-voltage PSUs or auto-switching PSUs handle both ranges."
+    },
+    {
+      "q": "What is an all-in-one (AIO) liquid cooler, and how does it differ from a custom loop?",
+      "options": [
+        "An AIO is a sealed, pre-filled closed-loop cooler; a custom loop is open and requires filling and maintenance",
+        "An AIO uses refrigerant like an air conditioner; a custom loop uses water only",
+        "An AIO is passive (no pump); a custom loop uses an active pump",
+        "An AIO cools only the CPU; a custom loop can only cool the GPU"
+      ],
+      "answer": 0,
+      "explanation": "An AIO liquid cooler is a sealed, pre-filled closed-loop system requiring no maintenance or filling. A custom loop uses separate components (reservoir, pump, radiator, fittings) that the builder assembles and fills with coolant."
+    },
+    {
+      "q": "What does the 80 Plus certification on a power supply indicate?",
+      "options": [
+        "The PSU can deliver 80% of its rated wattage under continuous load",
+        "The PSU is at least 80% energy efficient at 20%, 50%, and 100% of rated load",
+        "The PSU has passed 80 hours of continuous load testing",
+        "The PSU has 80% fewer ripple artifacts than an unrated supply"
+      ],
+      "answer": 1,
+      "explanation": "80 Plus certification means the PSU achieves at least 80% efficiency at 20%, 50%, and 100% of rated load. Higher tiers (Bronze, Silver, Gold, Platinum, Titanium) specify higher efficiency thresholds."
+    },
+    {
+      "q": "What is the primary advantage of a modular PSU over a non-modular PSU?",
+      "options": [
+        "Modular PSUs are always more efficient (higher 80 Plus rating)",
+        "Modular PSUs allow unused cables to be detached, reducing cable clutter and improving airflow",
+        "Modular PSUs can supply more total wattage than non-modular equivalents",
+        "Modular PSUs are safer because they disconnect automatically during power surges"
+      ],
+      "answer": 1,
+      "explanation": "A modular PSU allows cables to be attached only as needed. This eliminates the bundle of unused cables stuffed behind the motherboard tray in non-modular PSUs, improving airflow and making cable management easier — particularly important in smaller cases."
+    },
+    {
+      "q": "Which DC voltage rail in an ATX PSU powers USB ports, the motherboard logic, and some older storage devices?",
+      "options": [
+        "+12V rail",
+        "+5V rail and +3.3V rail",
+        "-12V rail",
+        "+5VSB (standby) rail only"
+      ],
+      "answer": 1,
+      "explanation": "The +5V rail powers USB ports (500mA-900mA per port), older SATA/IDE power, and some motherboard logic. The +3.3V rail powers RAM and some chipset components. The +12V rail handles the majority of the CPU and GPU power load in modern systems."
+    },
+    {
+      "q": "A case fan positioned at the front of a PC case typically moves air in which direction?",
+      "options": [
+        "Exhausting warm air out the front panel",
+        "Intake — pulling cool air in from the front toward the rear/top",
+        "Recirculating air internally without affecting case pressure",
+        "The direction depends on fan speed only, not position"
+      ],
+      "answer": 1,
+      "explanation": "Front case fans are configured as intake, drawing cool air in from the front of the case. Rear and top fans act as exhaust, pushing warm air out. This front-to-back/bottom-to-top airflow path moves heat generated by components out of the case efficiently."
+    },
+    {
+      "q": "A server is configured with a redundant power supply (RPS). What benefit does this provide?",
+      "options": [
+        "Doubles the wattage available to the server",
+        "If one PSU fails, the other takes over instantly with zero downtime — both PSUs share the load in normal operation",
+        "Allows the server to run at higher temperatures safely",
+        "Reduces electricity consumption by 50%"
+      ],
+      "answer": 1,
+      "explanation": "Redundant PSU configurations (N+1 redundancy) share the server's power load across two PSUs. If one fails, the other continues supplying full power with no interruption. Failed PSUs can be hot-swapped while the server remains running."
+    },
+    {
+      "q": "What is thermal throttling, and what hardware condition triggers it?",
+      "options": [
+        "Undervolting the CPU to improve efficiency below 50% load",
+        "The CPU automatically reducing its clock speed to generate less heat when the processor temperature approaches its maximum safe operating limit",
+        "A BIOS warning that disables overclocking when the ambient room temperature is too high",
+        "The fan controller increasing fan speed in response to a temperature spike"
+      ],
+      "answer": 1,
+      "explanation": "Thermal throttling is a CPU self-protection mechanism that reduces clock speed (and thus heat output) when junction temperature approaches the TjMax threshold. While it prevents permanent damage, sustained throttling indicates inadequate cooling that should be addressed."
+    }
+  ]
+}

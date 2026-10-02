@@ -1,0 +1,299 @@
+{
+  "core": 1,
+  "chapter": 5,
+  "title": "Motherboards & Expansion Cards",
+  "exam_objectives": [
+    "3.4",
+    "3.5"
+  ],
+  "coverage": "COVERED",
+  "domain": "hardware",
+  "domain_label": "Hardware",
+  "sections": [
+    {
+      "title": "Motherboard Core Functions",
+      "content": "The motherboard is the physical and logical center of the computer system. Every component either mounts to it or connects to it. Understanding what the board does makes every downstream hardware topic easier to follow.\nCOMPONENT HOSTING.\nThe motherboard hosts the CPU in the CPU socket, RAM in the memory slots, storage via SATA connectors or M.2 slots, and expansion cards via PCIe slots. The rear I/O panel provides external connectivity â€” USB, audio, display, network â€” directly from integrated components on the board.\nDATA FLOW MANAGEMENT.\nThe chipset manages communication between the CPU, RAM, storage, and peripheral devices. In modern systems, much of what the chipset controlled has been integrated directly into the CPU â€” but the motherboard still contains the remaining chipset silicon that manages PCIe lanes, SATA ports, USB controllers, and other connectivity.\nEvery data path in the system â€” CPU to RAM, CPU to storage, CPU to GPU â€” runs through buses, which are the electrical pathways on the motherboard. The bandwidth and latency of these pathways affect overall system performance.\nCLOCK TIMING.\nThe system clock â€” an oscillator on the motherboard â€” generates a reference timing signal. All system components synchronize their operations to this signal. Clock speed mismatches between components cause instability.\nPOWER DISTRIBUTION.\nPower from the PSU enters the system through the 24-pin ATX main power connector and the 4-pin or 8-pin CPU power connector on the motherboard. The board regulates and distributes appropriate voltages to all components â€” the VRM, or Voltage Regulator Module, steps down and stabilizes the CPU voltage specifically.\nFIRMWARE HOUSING.\nThe BIOS or UEFI firmware is stored on a chip on the motherboard. This firmware initializes hardware during boot, runs the POST â€” Power-On Self-Test â€” and provides the system configuration interface. We cover BIOS/UEFI in detail in Chapter 24.\n---",
+      "exam_tips": [
+        "Form factor determines case compatibility and expansion ceiling. ATX = most expandable. Mini-ITX = least expandable."
+      ]
+    },
+    {
+      "title": "Motherboard Form Factors",
+      "content": "Form factor defines the physical dimensions of the motherboard, the mounting hole positions, and the expansion capacity. The form factor of the motherboard must be compatible with the selected case.\nATX â€” Advanced Technology Extended.\nATX is the full-size desktop standard. Dimensions: 12 inches by 9.6 inches. An ATX board provides up to 7 expansion slots, multiple RAM slots â€” typically 4 â€” and the most rear I/O options. ATX boards are the choice when maximum expandability is required: server builds, gaming systems, professional workstations. They require ATX or full-tower cases.\nMICRO-ATX.\nMicro-ATX reduces the board to 9.6 inches square. Up to 4 expansion slots. Typically 4 RAM slots, though some have fewer. Micro-ATX boards fit in both Micro-ATX specific cases and standard ATX cases â€” the mounting hole patterns are backward compatible. This flexibility makes Micro-ATX a popular choice for systems that do not need full ATX expansion but might be placed in a larger case.\nMINI-ITX.\nMini-ITX is the small form factor standard at 6.7 inches by 6.7 inches. Only one PCIe expansion slot and two RAM slots. Designed for compact systems where physical footprint is the primary constraint â€” home theater PCs, compact office systems, embedded deployments. Mini-ITX requires a specifically sized case that accommodates its unique mounting holes.\nMULTISOCKET MOTHERBOARDS.\nA specialized category beyond the standard desktop form factors: multisocket motherboards have two or more physical CPU sockets, allowing multiple processors to be installed simultaneously. Each CPU has its own physical die, cores, and cache but shares system resources â€” RAM, PCIe lanes, and I/O â€” with the other CPUs through a high-speed inter-processor interconnect. Intel platforms use QPI â€” QuickPath Interconnect â€” and AMD platforms use Infinity Fabric for CPU-to-CPU communication.\nMultisocket systems are not standard desktop hardware. They appear in enterprise servers and high-end workstations where a single CPU cannot provide sufficient core count, memory bandwidth, or processing capacity for the workload â€” scientific computing, large database servers, virtualization hosts running many simultaneous VMs, and rendering farms. When a scenario describes a server with two physical CPUs installed, it is a multisocket configuration. The A+ exam does not require deep multisocket configuration knowledge â€” you need to recognize what the term means and the context in which it applies.\nAll three standard form factors â€” ATX, Micro-ATX, and Mini-ITX â€” use the same CPU socket types and RAM generations. The differences are purely in physical size and expansion capacity.\n---",
+      "exam_tips": [
+        "GPUs always go in the x16 slot. PCIe is backward compatible â€” smaller cards work in larger slots."
+      ]
+    },
+    {
+      "title": "Pcie Expansion Slots",
+      "content": "PCIe â€” Peripheral Component Interconnect Express â€” is the current standard for expansion slots. It superseded older standards like PCI and AGP. All modern adapter cards use PCIe.\nPCIe is a serial point-to-point bus. Unlike the shared bus of older PCI, each PCIe device has a dedicated lane to the CPU or chipset, which eliminates bandwidth contention between devices.\nLANE CONFIGURATIONS.\nPCIe slots are defined by the number of lanes they provide. Each generation of PCIe specifies bandwidth per lane.\nPCIe x1 is the smallest slot. One lane. Used for low-bandwidth cards: basic NICs, sound cards, USB expansion cards.\nPCIe x4 provides four lanes. Used for mid-bandwidth cards: M.2 NVMe adapters, RAID controllers, capture cards.\nPCIe x8 provides eight lanes. Found in workstations for higher-bandwidth requirements.\nPCIe x16 is the full-size, 16-lane slot. This is where GPUs seat. The highest bandwidth slot on the board. On a board with multiple x16 slots, note that some may electrically operate at x8 due to lane sharing from the chipset.\nBACKWARD COMPATIBILITY.\nPCIe is backward compatible by physical slot size. A smaller card can seat in a larger slot and will function using only the lanes it supports. An x1 card in an x16 slot works â€” using 1 of the 16 available lanes. This allows any card to seat in the largest available slot if other slots are occupied or inaccessible.\nA card cannot benefit from more lanes than it is designed for. An x8 card in an x16 slot uses eight lanes regardless.\nPCIe GENERATIONS.\nPCIe 3.0 provides approximately 1 GB/s per lane. PCIe 4.0 doubles that to approximately 2 GB/s per lane. PCIe 5.0 doubles again. Cards are generally backward compatible across generations at reduced bandwidth. Check the platform specifications for supported PCIe generation.\n---",
+      "exam_tips": [
+        "Standoffs prevent shorts between the motherboard and the metal case. Only install standoffs matching the form factor's mounting holes."
+      ]
+    },
+    {
+      "title": "Adapter Cards",
+      "content": "Adapter cards extend the base capabilities of the system through the PCIe expansion slots.\nVIDEO CARDS (GPUs).\nDedicated graphics cards add a GPU with its own VRAM and processing power, separate from the CPU's integrated graphics. GPUs seat in the x16 PCIe slot and drive monitor outputs for graphically intensive tasks â€” 3D gaming, video editing, CAD, machine learning. They require significant power â€” many require 6-pin or 8-pin PCIe power connectors directly from the PSU in addition to the slot power.\nNETWORK INTERFACE CARDS (NICs).\nNICs add wired, wireless, or fiber network connectivity. Systems without integrated networking, or systems requiring faster or additional network interfaces â€” 10 GbE server connections, for example â€” use PCIe NIC cards. Wireless NICs provide 802.11 Wi-Fi connectivity via an x1 PCIe slot.\nSOUND CARDS.\nDedicated sound cards provide audio processing and connectivity beyond what integrated motherboard audio offers. Used in professional audio production, studio recording, and high-fidelity home theater applications.\nCAPTURE CARDS.\nVideo capture cards accept video input â€” from game consoles, cameras, or other sources â€” and make that video available to recording or streaming software on the host system. They seat in PCIe slots and expose HDMI or other video inputs on the rear bracket.\nSTORAGE CONTROLLERS.\nRAID controllers and SAS host bus adapters add drive connectivity and hardware RAID capabilities beyond what the motherboard's integrated SATA controller provides. Used in servers and NAS builds requiring high drive counts or specific RAID configurations.\n---",
+      "exam_tips": []
+    },
+    {
+      "title": "Motherboard Installation",
+      "content": "Motherboard installation requires precision. Errors here can damage the board and other components.\nStep 1: Review all documentation before beginning. Locate the motherboard manual. Identify all header and connector positions.\nStep 2: Install the I/O shield into the case. The shield clips into the rear opening. It must be installed before the motherboard.\nStep 3: Install standoffs in the case. Standoffs are threaded risers that elevate the motherboard off the case floor â€” preventing electrical shorts between the board and the metal case. Install only the standoffs that correspond to the form factor's mounting holes. Extra standoffs can short the board.\nStep 4: Pre-install the CPU and RAM before mounting the motherboard in the case. This is significantly easier with the board outside the case and on a flat surface.\nStep 5: Lower the motherboard onto the standoffs, aligning the I/O ports with the I/O shield cutouts. Secure with screws â€” do not overtighten. Hand-tight plus a quarter turn is sufficient.\nStep 6: Connect the 24-pin main ATX power connector and the 4-pin or 8-pin CPU power connector.\nStep 7: Connect front panel headers â€” power button, reset button, power LED, HDD LED, and front panel USB and audio. Consult the motherboard manual for pin assignments. Header polarity matters for LEDs.\nStep 8: Connect SATA data cables from storage drives to SATA ports on the board. Connect SATA power from the PSU to the drives.\nStep 9: Manage cables for airflow. Route cables away from fan paths and CPU area. Use cable ties where appropriate.\n---",
+      "exam_tips": []
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "The motherboard is not just a mounting surface. It actively manages data flow, power distribution, and system timing â€” and understanding those functions tells you exactly what can fail when a motherboard has a problem.",
+      "concept": "MOTHERBOARD CORE FUNCTIONS",
+      "summary": "The motherboard performs five core functions in a computer system. It hosts every major component."
+    },
+    {
+      "hook": "PCIe is backward compatible â€” a card with fewer lanes than the slot fits and works. This is the feature that prevents a lot of wasted hardware compatibility headaches.",
+      "concept": "PCIe EXPANSION SLOTS",
+      "summary": "PCIe â€” Peripheral Component Interconnect Express â€” is the primary expansion slot standard in modern systems. It replaced PCI and AGP and is what connects GPUs, NICs, sound cards, storage controllers, and other adapter cards to the motherboard."
+    },
+    {
+      "hook": "Motherboard form factor determines the case, the expansion options, and the upgrade ceiling for an entire system build. It is the first decision, not an afterthought.",
+      "concept": "MOTHERBOARD FORM FACTORS",
+      "summary": "Motherboard form factors define the physical dimensions of the board, the mounting hole positions, and the number of available expansion slots. The form factor must match the case."
+    },
+    {
+      "hook": "Adapter cards are how you customize a system beyond its baseline capabilities â€” and knowing which card does what is directly testable on the A+ exam.",
+      "concept": "ADAPTER CARDS & EXPANSION CAPABILITIES",
+      "summary": "Adapter cards â€” also called expansion cards â€” are boards that seat in PCIe slots to extend what the system can do. Video cards â€” GPUs â€” are the most powerful and most commonly added adapter card."
+    },
+    {
+      "hook": "Adapter cards extend the base capabilities of the system through the PCIe expansion slots.",
+      "concept": "Adapter Cards",
+      "summary": "Adapter cards extend the base capabilities of the system through the PCIe expansion slots. VIDEO CARDS (GPUs). Dedicated graphics cards add a GPU with its own VRAM and processing power, separate from the CPU's integrated graphics."
+    },
+    {
+      "hook": "Motherboard installation requires precision.",
+      "concept": "Motherboard Installation",
+      "summary": "Motherboard installation requires precision. Errors here can damage the board and other components. Step 1: Review all documentation before beginning."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "Which RAID level provides striping with parity and requires a minimum of 3 drives?",
+      "options": [
+        "RAID 0",
+        "RAID 5",
+        "RAID 1",
+        "RAID 6"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What is the most common desktop motherboard form factor?",
+      "options": [
+        "ATX",
+        "Micro-ATX",
+        "Mini-ITX",
+        "E-ATX"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Which PCIe slot is used for modern graphics cards?",
+      "options": [
+        "PCIe x1",
+        "PCIe x4",
+        "PCIe x16",
+        "PCIe x8"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A technician installs a new GPU and the system boots to a black screen. The FIRST thing to check is:",
+      "options": [
+        "Ensure the GPU is fully seated in the PCIe x16 slot and all power connectors are attached",
+        "Update GPU drivers remotely",
+        "Replace the monitor",
+        "Reinstall the OS"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What motherboard component manages USB ports, SATA, audio, and other I/O functions?",
+      "options": [
+        "Northbridge",
+        "CMOS chip",
+        "VRM",
+        "Southbridge or PCH (Platform Controller Hub)"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A POST beep pattern of one long beep followed by two short beeps typically indicates a problem with:",
+      "options": [
+        "Video card or display subsystem",
+        "RAM",
+        "Power supply",
+        "CPU"
+      ],
+      "answer": 0,
+      "explanation": "On AMI BIOS systems, one long beep + two short beeps indicates a video/display subsystem failure. Beep codes are vendor-specific: AMI, Award, and Phoenix each use different patterns for the same errors. Always identify the BIOS vendor before interpreting codes. On Award BIOS, one long + two short al"
+    },
+    {
+      "q": "What are the dimensions of a standard ATX motherboard?",
+      "options": [
+        "9.6 x 9.6 inches",
+        "12 x 9.6 inches",
+        "12 x 13 inches",
+        "6.7 x 6.7 inches"
+      ],
+      "answer": 1,
+      "explanation": "Standard ATX motherboards measure 12 x 9.6 inches (305 x 244 mm). This is the most common form factor for desktop builds, offering the most expansion slots and connectors."
+    },
+    {
+      "q": "What is the maximum number of PCIe expansion slots on a standard Mini-ITX motherboard?",
+      "options": [
+        "Four",
+        "Two",
+        "One",
+        "Zero -- Mini-ITX has no PCIe slots"
+      ],
+      "answer": 2,
+      "explanation": "Mini-ITX motherboards (6.7 x 6.7 inches) typically provide only one PCIe slot due to their compact size. This limits expansion options but allows very small system builds."
+    },
+    {
+      "q": "What is the purpose of standoffs (brass spacers) when installing a motherboard in a case?",
+      "options": [
+        "They provide additional power rails to the motherboard",
+        "They elevate the motherboard off the case floor to prevent electrical shorts between the board and metal chassis",
+        "They absorb vibration from fans to prevent resonance",
+        "They connect the motherboard ground plane to the PSU"
+      ],
+      "answer": 1,
+      "explanation": "Standoffs elevate the motherboard off the metal case floor. Without them, solder points and traces on the bottom of the board would contact the metal case, causing short circuits."
+    },
+    {
+      "q": "What does the VRM (Voltage Regulator Module) on a motherboard do?",
+      "options": [
+        "It converts HDMI signals to DisplayPort for monitor compatibility",
+        "It regulates and steps down voltages from the PSU to the precise levels required by the CPU",
+        "It controls fan speeds based on CPU temperature",
+        "It provides backup power to the CMOS battery circuit"
+      ],
+      "answer": 1,
+      "explanation": "The VRM converts the 12V from the PSU into the precise lower voltages (typically 0.8-1.5V) required by the CPU cores. CPU voltage requirements change dynamically based on load and power states."
+    },
+    {
+      "q": "A Micro-ATX motherboard needs to be installed. Which case types will physically accept it?",
+      "options": [
+        "Only Micro-ATX cases -- it cannot fit in ATX cases",
+        "Only Mini-ITX cases -- Micro-ATX is smaller than Mini-ITX",
+        "Both Micro-ATX cases and standard ATX cases, since ATX cases support smaller form factors",
+        "Only HTPC (home theater) cases"
+      ],
+      "answer": 2,
+      "explanation": "ATX cases are designed with mounting holes for ATX, Micro-ATX, and Mini-ITX boards. A Micro-ATX board will fit and mount correctly in an ATX case using the appropriate standoff positions."
+    },
+    {
+      "q": "What is Secure Boot, and what does it prevent?",
+      "options": [
+        "It encrypts the hard drive contents using TPM-stored keys",
+        "It verifies that boot software is digitally signed by a trusted authority, preventing unsigned bootloaders and rootkits from loading during startup",
+        "It requires a password before the BIOS settings can be accessed",
+        "It disables USB ports during the boot process to prevent cold boot attacks"
+      ],
+      "answer": 1,
+      "explanation": "Secure Boot is a UEFI feature that checks digital signatures of bootloaders and OS kernels before executing them. It prevents rootkits and bootloader malware from loading before the OS."
+    },
+    {
+      "q": "What is the purpose of the TPM (Trusted Platform Module)?",
+      "options": [
+        "It manages USB device permissions during startup",
+        "It provides hardware-based cryptographic functions including secure key storage for disk encryption like BitLocker",
+        "It monitors CPU temperature and throttles speed to prevent overheating",
+        "It manages PCIe lane allocation between the GPU and M.2 slots"
+      ],
+      "answer": 1,
+      "explanation": "The TPM is a dedicated hardware security chip that generates and stores cryptographic keys. It underpins disk encryption (BitLocker uses TPM to store the encryption key), platform integrity measurement, and Windows Hello authentication."
+    },
+    {
+      "q": "Which BIOS/UEFI setting would a technician change to allow booting from a USB drive before the internal SSD?",
+      "options": [
+        "Secure Boot configuration",
+        "Boot order (boot priority) sequence",
+        "SATA operation mode (AHCI vs RAID)",
+        "CPU virtualization support"
+      ],
+      "answer": 1,
+      "explanation": "The boot order (boot priority) setting in BIOS/UEFI determines the sequence in which devices are checked for a bootable OS. Moving USB drives to the top of the boot order allows booting from a USB before the internal drive."
+    },
+    {
+      "q": "What expansion card would a video production workstation need to capture input from an external HDMI or SDI video source?",
+      "options": [
+        "Sound card",
+        "Video capture card",
+        "GPU upgrade",
+        "Network interface card"
+      ],
+      "answer": 1,
+      "explanation": "A video capture card accepts external video input (HDMI, SDI, composite) and makes it available to the system as a video source for recording or live streaming software. A GPU renders graphics but cannot capture external video input."
+    },
+    {
+      "q": "What is the primary difference between a traditional BIOS and UEFI?",
+      "options": [
+        "BIOS supports NVMe drives; UEFI does not",
+        "UEFI is the modern replacement supporting drives larger than 2 TB, faster boot times, a graphical interface, mouse support, and Secure Boot; traditional BIOS is limited to MBR and 2 TB drives",
+        "BIOS supports Secure Boot; UEFI requires a TPM module",
+        "UEFI is only used on server motherboards; BIOS is used on consumer boards"
+      ],
+      "answer": 1,
+      "explanation": "UEFI (Unified Extensible Firmware Interface) replaces legacy BIOS with support for GPT partitioning (drives > 2 TB), faster initialization, a graphical setup interface, mouse support, network boot, and Secure Boot. Legacy BIOS uses MBR and has a 2 TB boot drive limit."
+    },
+    {
+      "q": "What are M.2 key types, and why do they matter when selecting an M.2 drive?",
+      "options": [
+        "Key types indicate the drive capacity; M-key for less than 1 TB, B-key for over 1 TB",
+        "Key types determine the physical notch position and supported interface (B-key = SATA, M-key = NVMe PCIe, B+M = both); the drive must match the slot's supported keys",
+        "Key types indicate the form factor length only (2242, 2260, 2280)",
+        "All M.2 keys are interchangeable — they only affect aesthetics"
+      ],
+      "answer": 1,
+      "explanation": "M.2 key types determine both physical compatibility and supported interfaces. M-keyed slots support NVMe (PCIe), B-keyed slots support SATA and some PCIe, and B+M keyed drives fit both. Installing a SATA drive in an NVMe-only slot or vice versa will result in the drive not being detected."
+    },
+    {
+      "q": "What is the purpose of front panel header pins on a motherboard?",
+      "options": [
+        "They provide power to PCIe expansion cards",
+        "They connect to the case power button, reset button, power LED, HDD activity LED, and USB ports",
+        "They supply backup power to the CMOS battery",
+        "They carry display signals from the integrated GPU to the monitor"
+      ],
+      "answer": 1,
+      "explanation": "Front panel header pins are small pin groups on the motherboard that connect to the PC case's power button, reset button, power LED, storage activity LED, and front-panel USB/audio ports. Incorrectly connected front panel headers result in buttons or LEDs not working."
+    },
+    {
+      "q": "A motherboard has both M.2 and multiple SATA ports. After installing an M.2 NVMe SSD, two SATA ports stop working. What is the MOST likely explanation?",
+      "options": [
+        "The NVMe SSD is consuming too much power, causing SATA ports to shut off",
+        "M.2 NVMe slots share PCIe lanes or SATA controllers with certain SATA ports; enabling M.2 disables those shared ports",
+        "The SATA ports need a firmware update to work with NVMe simultaneously",
+        "The motherboard is defective and should be returned"
+      ],
+      "answer": 1,
+      "explanation": "Many motherboards share controller resources between the M.2 slot and SATA ports. When the M.2 slot is populated, the motherboard re-routes those resources, disabling one or more SATA ports. The motherboard manual specifies which ports are affected."
+    },
+    {
+      "q": "Which battery type is commonly used on PC motherboards to maintain BIOS settings and the real-time clock when the system is unplugged?",
+      "options": [
+        "AA alkaline battery",
+        "CR2032 lithium coin cell battery",
+        "9V rectangular battery",
+        "18650 lithium-ion cell"
+      ],
+      "answer": 1,
+      "explanation": "The CR2032 is a 3V lithium coin cell battery used on virtually all PC motherboards to power the CMOS chip, which stores BIOS settings and the real-time clock. When this battery fails, the system clock resets and BIOS settings may be lost."
+    }
+  ]
+}

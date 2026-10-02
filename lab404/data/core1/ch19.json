@@ -1,0 +1,284 @@
+{
+  "core": 1,
+  "chapter": 19,
+  "title": "Laptop Hardware & Upgrades",
+  "exam_objectives": [
+    "1.1",
+    "1.2"
+  ],
+  "coverage": "COVERED",
+  "domain": "mobile",
+  "domain_label": "Mobile Devices",
+  "sections": [
+    {
+      "title": "Laptop Repair Considerations",
+      "content": "WHY LAPTOPS ARE DIFFERENT.\nDesktop repair is relatively tolerant of mistakes \u00e2\u20ac\u201d components are large, visible, and easy to reseat. Laptop repair requires a different discipline: smaller components, more fragile connections, tighter tolerances, and less room for error.\nLaptops typically use multiple screw sizes within the same chassis. A long screw installed in a short hole can puncture the motherboard from the underside. Photographing the chassis before disassembly, and tracking screw sizes and locations on a magnetic mat or labeled diagram, prevents this class of error.\nMany laptop components are integrated onto the motherboard and are not field-serviceable. Verify before opening: confirm which components have user-accessible slots or bays and which are soldered.\nRIBBON CABLES.\nRibbon cables connect the keyboard, touchpad, display assembly, webcam, and microphone to the motherboard. These cables are the most commonly damaged component during laptop repair.\nEach ribbon cable uses a ZIF \u00e2\u20ac\u201d Zero Insertion Force \u00e2\u20ac\u201d or LIF connector on the motherboard side. The connector has a locking tab \u00e2\u20ac\u201d a thin plastic bar \u00e2\u20ac\u201d that must be unlocked by lifting or sliding it back before the cable can be removed. Pulling the cable without releasing the lock tears the cable or breaks the connector body. Replacement requires routing the cable in correctly and relocking the tab.\nDISPLAY ASSEMBLY.\nThe display assembly contains multiple distinct components: the LCD panel itself, the webcam module at the top of the bezel, the microphone, and \u00e2\u20ac\u201d critically \u00e2\u20ac\u201d the Wi-Fi antenna cables. These antenna cables are thin coaxial wires that run from the wireless adapter card on the motherboard, up through the display hinge, and into the display bezel where they wrap around the perimeter to provide coverage. They must be disconnected from the wireless card and carefully routed when replacing the display.\nTHERMAL MANAGEMENT.\nLaptop cooling systems use small fans connected to heat pipes that route heat from the CPU and GPU to a vent at the edge of the chassis. Dust accumulation in the fan and vent is the primary cause of thermal throttling on aging laptops. Compressed air applied carefully at the vent \u00e2\u20ac\u201d blowing inward to push the dust blockage out \u00e2\u20ac\u201d clears the obstruction. Do not spin the fan with compressed air while the system is off \u00e2\u20ac\u201d the bearings are not designed for that speed without lubrication.\n---",
+      "exam_tips": [
+        "Always unlock the ZIF/LIF connector before removing a ribbon cable. This is a procedural step that appears in scenario questions."
+      ]
+    },
+    {
+      "title": "Battery And Power Systems",
+      "content": "LITHIUM-ION BATTERIES.\nLaptop batteries use Lithium-ion technology. Li-ion batteries have no memory effect \u00e2\u20ac\u201d partial charging does not reduce their maximum capacity.\nLi-ion batteries experience gradual capacity loss over time through charge-discharge cycles and heat exposure. Typical lifespan under normal use is two to three years or several hundred charge cycles. Signs of end-of-life battery: significantly reduced runtime, the battery not charging above a low percentage, or physical swelling.\nA physically swollen laptop battery is a safety hazard. The swelling indicates the battery is off-gassing \u00e2\u20ac\u201d a precursor to thermal failure or fire. A swollen battery must be removed carefully and disposed of at an appropriate facility \u00e2\u20ac\u201d not placed in standard trash.\nBATTERY BEST PRACTICES.\nAvoid regularly draining the battery to zero \u00e2\u20ac\u201d deep discharges accelerate cell degradation.\nAvoid keeping the battery at 100% charge continuously if the laptop is always plugged into AC power. Modern systems often include a battery limit setting that caps charging at 80% to extend lifespan.\nHeat is the primary enemy of Li-ion longevity. Avoid using laptops on soft surfaces that block the vents. Do not leave laptops in hot cars.\nFor long-term storage, charge to approximately 40 to 60 percent before storing.\nAC ADAPTERS.\nAC adapters convert household alternating current to the direct current voltage the laptop requires. Three specifications must match:\nVoltage: this is the critical specification. The output voltage of the adapter must exactly match the laptop's required input voltage. Even a small voltage mismatch can damage the charging circuit, the battery management IC, or the motherboard. The required voltage appears on the laptop's label and on the original adapter.\nAmperage: the adapter must supply at least the amperage the laptop requires. Using an adapter with higher amperage than required is safe \u00e2\u20ac\u201d the laptop draws only what it needs. Using one with lower amperage causes the adapter to run warm and the battery to charge slowly or not at all.\nConnector type: many manufacturers use proprietary barrel connectors. Modern laptops increasingly use USB-C with Power Delivery \u00e2\u20ac\u201d USB-C PD. PD adapters must support the correct wattage profile for the laptop.\n---",
+      "exam_tips": [
+        "Voltage mismatch on an AC adapter can permanently damage the laptop's charging circuit or motherboard. Always verify voltage before connecting a replacement adapter."
+      ]
+    },
+    {
+      "title": "Ram And Storage Upgrades",
+      "content": "LAPTOP RAM \u00e2\u20ac\u201d SODIMM.\nLaptops use SODIMMs \u00e2\u20ac\u201d Small Outline Dual Inline Memory Modules. SODIMMs are physically smaller than the desktop DIMM standard. DDR4 SODIMMs have 260 pins. DDR3 SODIMMs have 204 pins. DDR5 SODIMMs have 262 pins. The notch position differs between generations \u00e2\u20ac\u201d a DDR4 SODIMM cannot be installed in a DDR3 slot.\nBefore purchasing a RAM upgrade: check the laptop manufacturer's documentation for the maximum supported RAM. Identify how many SODIMM slots are present and whether they are occupied. Many thin and light laptops solder the RAM directly to the motherboard \u00e2\u20ac\u201d no SODIMM slots exist. These systems cannot be RAM-upgraded.\nLAPTOP STORAGE OPTIONS.\nLaptops support one or more of these storage interfaces:\n2.5-inch SATA: the traditional laptop bay accepts 2.5-inch hard drives and SSDs. The drive connects via the standard SATA data and power connector. A 2.5-inch SATA SSD is a direct drop-in replacement for a 2.5-inch HDD \u00e2\u20ac\u201d same bay, same connector \u00e2\u20ac\u201d and provides a major performance improvement. The SATA interface limits throughput to approximately 600 MB/s.\nM.2: the modern integrated storage interface. An M.2 slot accepts a module that connects edge-on to the motherboard without a cable. M.2 modules are available in multiple lengths \u00e2\u20ac\u201d 2242 (42 mm long), 2260 (60 mm), and 2280 (80 mm) are the most common. The length designation is part of the module name: 2280 means 22 mm wide and 80 mm long.\nM.2 slots support either SATA or NVMe protocols depending on the slot and module:\nM.2 SATA: faster than a 2.5-inch SATA mechanically but uses the same SATA protocol, limiting throughput to 600 MB/s.\nM.2 NVMe PCIe: uses the PCIe bus for direct high-speed access. Gen 3 NVMe reaches approximately 3500 MB/s. Gen 4 exceeds 7000 MB/s.\nVerify the laptop's M.2 slot supports the protocol of the module being installed \u00e2\u20ac\u201d a PCIe-keyed NVMe module does not work in a SATA-only M.2 slot.\nDRIVE UPGRADE PROCEDURE.\nClone the existing drive to the new one before swapping. Use disk imaging software to create a bit-for-bit copy. This preserves the OS, applications, user data, and all settings. After cloning, swap the drive and verify the system boots from the new drive.\nIf cloning is not possible or desired, replace the drive and reinstall the OS fresh.\n---",
+      "exam_tips": [
+        "M.2 is a form factor, not a protocol. An M.2 slot can support SATA or NVMe \u00e2\u20ac\u201d verify which protocol the laptop's slot supports before purchasing."
+      ]
+    },
+    {
+      "title": "Wireless Adapters And Display Components",
+      "content": "LAPTOP WIRELESS ADAPTERS.\nWireless adapters in laptops are installed on internal slots, not standard PCIe slots. Form factors:\nMini PCIe: found in older laptop designs.\nM.2 with A or E key: the modern standard for laptop wireless adapters. Wi-Fi 6 and Wi-Fi 6E adapters ship as M.2 modules with antenna connectors.\nThe adapter connects to two or three antenna cables that route through the chassis to the display assembly. When replacing a wireless adapter, the antenna cables must be disconnected from the old card and reconnected to the new one. These connectors are small and require a spudger \u00e2\u20ac\u201d not metal tools \u00e2\u20ac\u201d to avoid damaging them.\nDISPLAY COMPONENTS.\nThe laptop display assembly includes the LCD or OLED panel, the backlight system, the webcam and microphone, and the antenna array.\nLCD panels in laptops use LED backlighting universally in modern systems. Older laptops used CCFL \u00e2\u20ac\u201d Cold Cathode Fluorescent Lamp \u00e2\u20ac\u201d backlights, which required a separate inverter board. CCFL backlight failure produces a very dim or completely dark image with the content barely visible when a flashlight is held to the screen.\nDisplay connectors: the panel connects to the laptop's video circuitry via eDP \u00e2\u20ac\u201d Embedded DisplayPort \u00e2\u20ac\u201d on modern systems.\nKEYBOARD AND TOUCHPAD.\nLaptop keyboards connect to the motherboard via ribbon cable. The keyboard may be retained by screws accessible from the bottom panel, screws under the keyboard bezel, or clips along the top edge of the keyboard. The disassembly method varies by manufacturer.\nTouchpads also use ribbon cable connections. Replacement touchpads must match the original connector and physical dimensions.\nBIOMETRIC SENSORS.\nFingerprint readers are integrated into the keyboard deck or the power button. They connect to the motherboard via a small USB or dedicated bus connector. USB external fingerprint readers are also available for systems without an integrated sensor.\nFacial recognition cameras use infrared illumination \u00e2\u20ac\u201d they are IR cameras, not standard webcams. An IR camera is required for Windows Hello facial recognition. Systems with only a standard RGB webcam cannot use Windows Hello face recognition.\nNEAR-FIELD SCANNER.\nNear-field scanners are integrated NFC reader components found in enterprise and government-grade laptops. They allow the laptop to read NFC-enabled credentials \u00e2\u20ac\u201d smart cards, access badges, or mobile device-based credentials \u00e2\u20ac\u201d for authentication purposes. The near-field scanner is distinct from NFC on a smartphone: on a laptop, it is a flat internal component typically positioned near the palm rest or keyboard deck, connected to the motherboard via USB or a proprietary bus. In the CompTIA A+ context, near-field scanner refers specifically to this built-in hardware reader component \u00e2\u20ac\u201d it is listed in Objective 1.1 as a physical laptop component alongside biometric sensors because it serves the same physical access and identity verification function.\nSMART CARD READER.\nSmart card readers are integrated slots in enterprise laptops that accept ISO 7816-standard contact smart cards. A smart card is a credit-card-sized device with an embedded microchip that stores cryptographic credentials \u00e2\u20ac\u201d digital certificates or private keys \u00e2\u20ac\u201d on tamper-resistant hardware. The laptop's reader establishes electrical contact with the card's chip and communicates over the ISO 7816 protocol. Smart card authentication is used for two-factor authentication \u00e2\u20ac\u201d something you have (the physical card) combined with something you know (the PIN) \u00e2\u20ac\u201d in high-security environments including government systems, financial institutions, and healthcare organizations.\nThe smart card reader slot is typically located on the side or front edge of the laptop chassis. It is a replaceable component: the reader connects to the motherboard via USB internally and can be removed and replaced as a unit if it fails. When replacing or upgrading a laptop in a smart card environment, verify the replacement model includes a compatible reader before deployment.\nSPEAKERS.\nLaptop speakers are internal hardware components, typically two small drivers mounted in the chassis \u00e2\u20ac\u201d often below the keyboard, on either side of it, or at the bottom edge of the base panel. They connect to the motherboard's audio subsystem via a small proprietary connector. Laptop speakers are listed in Objective 1.1 as a serviceable component.\nSpeaker replacement follows the same disassembly approach as other internal components: remove the bottom panel, locate the speaker module, disconnect the audio connector, and release any screws or adhesive securing the speaker frame. Replacement speakers must match the physical footprint and connector type of the originals.\nDiagnosing speaker failure: plug a known-good headset into the audio jack and play audio. If headset audio is normal, the audio subsystem is functional \u00e2\u20ac\u201d the failure is in the internal speakers or their connection, not the audio hardware. If audio fails through the headset as well, the audio subsystem or driver is the issue. This distinction determines whether the fix is a software/driver action or a hardware replacement.\n---",
+      "exam_tips": []
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "Laptop repair is not harder than desktop repair \u00e2\u20ac\u201d it is smaller. That makes it slower, more precise, and much less forgiving of the wrong move. Ribbon cables do not bend twice.",
+      "concept": "LAPTOP COMPONENTS AND REPAIR",
+      "summary": "Laptops share the same core component categories as desktops \u00e2\u20ac\u201d CPU, RAM, storage, battery, wireless adapter, display \u00e2\u20ac\u201d but the form factor imposes constraints that change every aspect of how you work on them. Components are smaller."
+    },
+    {
+      "hook": "The wrong AC adapter does not just fail to charge the laptop \u00e2\u20ac\u201d it can damage the battery, the motherboard, or both. Voltage is not a preference \u00e2\u20ac\u201d it is a specification that must be matched exactly.",
+      "concept": "LAPTOP BATTERY AND POWER",
+      "summary": "Laptop batteries use Lithium-ion \u00e2\u20ac\u201d Li-ion \u00e2\u20ac\u201d technology. Li-ion batteries have no memory effect: partial charging does not reduce maximum capacity the way older nickel-cadmium batteries did."
+    },
+    {
+      "hook": "Adding RAM to a laptop is often the highest-impact upgrade for the lowest cost. But if the slots are occupied and you bought the wrong generation, you have a part with nowhere to go.",
+      "concept": "LAPTOP RAM AND STORAGE UPGRADES",
+      "summary": "Laptop RAM uses SODIMMs \u00e2\u20ac\u201d Small Outline Dual Inline Memory Modules. SODIMMs are physically smaller than desktop DIMMs: DDR4 SODIMMs have 260 pins."
+    },
+    {
+      "hook": "LAPTOP WIRELESS ADAPTERS.",
+      "concept": "Wireless Adapters And Display Components",
+      "summary": "LAPTOP WIRELESS ADAPTERS. Wireless adapters in laptops are installed on internal slots, not standard PCIe slots. Form factors: Mini PCIe: found in older laptop designs."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "Which laptop component is most commonly replaced using the bottom access panel without disassembling the entire unit?",
+      "options": [
+        "RAM and storage",
+        "CPU",
+        "Display assembly",
+        "Keyboard backlight"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A laptop will not power on even when plugged in. The AC adapter light is solid. What is the FIRST component to suspect?",
+      "options": [
+        "RAM",
+        "DC jack",
+        "Battery",
+        "Motherboard"
+      ],
+      "answer": 1,
+      "explanation": "A solid AC adapter light confirms the adapter is functional. The DC jack (where the adapter plugs into the laptop) is the next point of failure: the jack can break loose from the motherboard solder points, interrupting power delivery. Suspect the DC jack before the motherboard itself. Note: a broken"
+    },
+    {
+      "q": "What type of drive interface is used by most modern ultrabooks for internal storage?",
+      "options": [
+        "SATA",
+        "IDE",
+        "NVMe M.2",
+        "eSATA"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A technician needs to upgrade the wireless card in a laptop. Which interface does the wireless card most commonly use?",
+      "options": [
+        "PCIe x16",
+        "ExpressCard",
+        "USB 3.0",
+        "Mini PCIe or M.2"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "Which tool is essential when working inside a laptop to prevent electrostatic discharge?",
+      "options": [
+        "ESD strap",
+        "Magnetic screwdriver",
+        "Torx driver set",
+        "Plastic pry tool"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A laptop keyboard stops working after a liquid spill. The FIRST step a technician should take is:",
+      "options": [
+        "Replace the keyboard immediately",
+        "Power off and remove the battery",
+        "Rinse with distilled water",
+        "Run a keyboard diagnostic"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What does the acronym SO-DIMM stand for?",
+      "options": [
+        "Incompatible RAM speed",
+        "Wrong SO-DIMM slot",
+        "RAM not fully seated",
+        "Bad motherboard"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "Which of the following is a characteristic of DDR4 SO-DIMM compared to DDR3?",
+      "options": [
+        "Identical to DDR3 but faster",
+        "Fewer pins and higher voltage",
+        "Same pin count, different notch position",
+        "Higher pin count and lower voltage"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A laptop hard drive makes a clicking sound on startup. What is the MOST likely cause?",
+      "options": [
+        "Failing hard drive heads",
+        "Corrupt OS",
+        "Loose SATA cable",
+        "Low battery"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Which storage form factor is 2.5 inches and commonly used in laptops?",
+      "options": [
+        "3.5\" HDD",
+        "2.5\" SATA SSD or HDD",
+        "M.2 2280",
+        "mSATA"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A technician replaces a laptop thermal paste. What should be done FIRST before applying new paste?",
+      "options": [
+        "Apply new paste directly over old",
+        "Run the laptop to warm up the CPU",
+        "Clean off old paste with isopropyl alcohol",
+        "Remove the fan only, leave the heatsink"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "Which of the following best describes a laptop docking station?",
+      "options": [
+        "Charges the battery faster",
+        "Improves wireless signal strength",
+        "Replaces the laptop built-in display",
+        "Expands connectivity with external ports"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of a laptop heat pipe?",
+      "options": [
+        "Transfers heat from the CPU to the heatsink and fan",
+        "Connects the CPU to the motherboard",
+        "Regulates battery charge cycles",
+        "Grounds the chassis"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A technician opens a laptop to replace the battery. After reassembly, the touchpad stops working. The MOST likely cause is:",
+      "options": [
+        "BIOS corruption",
+        "Touchpad ribbon cable disconnected during reassembly",
+        "Driver uninstalled",
+        "Touchpad hardware failure"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Which laptop component stores the system firmware and BIOS settings?",
+      "options": [
+        "CMOS battery",
+        "RAM",
+        "EEPROM flash chip on the motherboard",
+        "Hard drive boot sector"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A user sees \"96% plugged in, not charging.\" What is the MOST likely explanation?",
+      "options": [
+        "Faulty AC adapter",
+        "Bad DC jack",
+        "Corrupt battery driver",
+        "Battery protection circuit preventing overcharge near full capacity"
+      ],
+      "answer": 3,
+      "explanation": "The Battery Management System (BMS) inside the battery pack intentionally stops charging at approximately 95\u00e2\u20ac\u201c100% to prevent cell damage from overcharging. This is normal behavior. Distinguish from a swollen battery (hardware defect requiring immediate replacement) or a BMS fault (battery won't char"
+    },
+    {
+      "q": "What display technology offers the best contrast ratio and true blacks by turning off individual pixels?",
+      "options": [
+        "OLED",
+        "IPS",
+        "TN",
+        "VA"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A laptop display has a dim image but content is clearly visible. The MOST likely failed component is:",
+      "options": [
+        "LCD panel",
+        "Backlight inverter or LED driver",
+        "GPU",
+        "Display cable"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Which connector type carries both video and power to modern laptop LCD panels internally?",
+      "options": [
+        "HDMI",
+        "VGA",
+        "eDP (Embedded DisplayPort)",
+        "DVI"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A laptop screen is cracked but shows an image on an external monitor. What does this confirm?",
+      "options": [
+        "GPU is failed",
+        "The motherboard is damaged",
+        "The display cable is faulty",
+        "The LCD panel is damaged, not the GPU"
+      ],
+      "answer": 3,
+      "explanation": ""
+    }
+  ]
+}

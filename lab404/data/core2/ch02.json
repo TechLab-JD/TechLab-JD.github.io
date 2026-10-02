@@ -1,0 +1,337 @@
+{
+  "core": 2,
+  "chapter": 2,
+  "title": "OS Installation & Upgrades",
+  "exam_objectives": [
+    "1.2"
+  ],
+  "coverage": "COVERED",
+  "domain": "os",
+  "domain_label": "Operating Systems",
+  "sections": [
+    {
+      "title": "Boot Methods",
+      "content": "Before any OS can be installed, the machine needs to boot into the installer. There are several methods, and the exam expects you to know all of them.\nUSB flash drive or external drive is the most common modern method. You write an ISO image to the drive using a media creation tool â€” Microsoft provides its own â€” and set the BIOS or UEFI to boot from USB first. External SSDs and HDDs work the same way.\nOptical disc â€” DVD or Blu-ray â€” is legacy but still in scope for the exam. Same concept: boot from the disc, installer loads from media.\nNetwork boot via PXE â€” Preboot Execution Environment. The machine boots before any OS is present by reaching out to the network via DHCP. The DHCP server responds with an IP address and the location of a boot server. The machine downloads a boot image from that server. This is how large enterprise deployments work. One important requirement: PXE requires DHCP to function. Without DHCP, the machine cannot locate the boot server.\nInternet-based installation. Some operating systems support downloading installation media directly from the internet during setup. macOS Recovery Mode is the primary example â€” Command + R at startup brings up a recovery environment that can download and reinstall macOS from Apple's servers.\nInternal recovery partition. Many OEM laptops ship with a hidden partition that contains a factory image of the OS. Pressing F11 or Ctrl+F11 at startup â€” depending on manufacturer â€” launches the recovery environment from that partition. Important caveat: if you replace the hard drive, you lose the recovery partition. It lives on the original drive.\nFor all of these methods, the machine's boot order must be configured correctly in BIOS or UEFI. If the boot order is set to boot from the internal drive first, the machine will bypass your USB installer entirely.\n---",
+      "exam_tips": [
+        "PXE boot requires DHCP â€” no DHCP, no network boot"
+      ]
+    },
+    {
+      "title": "Installation Types",
+      "content": "With the machine booted into an installer, you have several types of installation to choose from.\nClean install: the installer formats the target partition and deploys the OS fresh. All data on that partition is deleted â€” files, applications, settings, everything. This is the correct choice when the machine is being repurposed, when the existing OS is corrupted beyond repair, or when you want zero remnants of a previous configuration. Clean installs are reliable and predictable because they start from a known state.\nIn-place upgrade: the new OS version installs over the existing one. User files, applications, and settings are preserved. When Microsoft provided the free Windows 10 to Windows 11 upgrade path, this was the mechanism. The user keeps their environment; the underlying OS is updated.\nWhen performing an in-place upgrade from USB, Windows Setup gives three choices: keep everything â€” files and applications; keep data only â€” files but not applications; or clean install â€” wipe everything. These options exist on the same setup wizard, which is worth knowing.\nAttended installation: a technician or user is physically present and responds to setup prompts. They enter the product key, choose a partition, set time zone, create an account, and so on. This is appropriate for single machines or small deployments.\nUnattended installation: the setup process runs automatically using a preconfigured answer file â€” typically named unattend.xml or autounattend.xml. The answer file contains all the responses that would otherwise require human input. No one needs to be present after the process starts. This is the foundation of enterprise deployment at scale.\nRepair installation: reinstalls or repairs the OS files without deleting user data. Used when Windows is corrupted but the underlying data is intact. In Windows 10 and 11, the \"Reset This PC â€” Keep My Files\" option performs a repair installation â€” it reinstalls Windows but preserves the user's personal files while removing installed applications.\n---",
+      "exam_tips": [
+        "PXE is used for enterprise image deployment â€” zero USB required"
+      ]
+    },
+    {
+      "title": "Image Deployment",
+      "content": "Enterprise environments almost never do manual attended installations on production machines. They use image deployment.\nAn image is a complete snapshot of a configured system â€” OS, drivers, applications, security settings, everything in a single file. A reference machine is built and configured exactly as desired, then captured into an image using tools like DISM, Sysprep, or third-party imaging software.\nThat image is stored on a deployment server. When new machines need to be set up, they PXE boot to the deployment server, pull the image, and receive an identical configuration to every other machine. This guarantees consistency across the fleet. No configuration drift, no missing applications, no accidental variation.\nZero-touch deployment takes this further â€” the entire process is automated from power-on to first login. The technician never manually interacts with the machine at all.\n---",
+      "exam_tips": [
+        "\"Keep My Files\" = repair install; \"Remove Everything\" = clean install"
+      ]
+    },
+    {
+      "title": "Gpt Vs Mbr",
+      "content": "Every drive that will hold an OS needs a partition table â€” a structure that defines how the drive is divided into partitions. There are two standards.\nMBR â€” Master Boot Record â€” is the older standard. The partition table is stored in the very first 512-byte sector of the drive. MBR imposes two significant limitations: a maximum of 4 primary partitions, and a maximum drive size of 2 TB. Any storage capacity beyond 2 TB on an MBR-formatted drive is inaccessible. MBR works with traditional BIOS firmware â€” the kind that appears as a text-based menu during startup.\nGPT â€” GUID Partition Table â€” is the modern standard. It stores partition information in multiple locations across the drive for redundancy, which makes it more resilient to corruption. GPT supports up to 128 partitions on a single disk. It handles drives larger than 2 TB without issue. GPT requires UEFI firmware â€” the graphical, mouse-capable firmware interface that replaced BIOS on modern hardware. Windows 11 requires both GPT and UEFI.\nThe exam pairing to memorize: GPT plus UEFI is modern. MBR plus BIOS is legacy. When you see one, assume the other.\nFor dual-boot setups â€” running two operating systems on one machine â€” GPT can accommodate both OS partitions plus data partitions on a single drive. A common configuration is an NTFS partition for Windows, an ext4 partition for Linux, and optionally an exFAT partition for shared data accessible by both.\n---",
+      "exam_tips": [
+        "Answer file name for Windows unattended install = unattend.xml"
+      ]
+    },
+    {
+      "title": "Upgrade Paths And Edition Changes",
+      "content": "When upgrading an OS, there are two types of upgrade to consider: version upgrades and edition upgrades.\nA version upgrade moves between OS releases â€” Windows 10 to Windows 11, for example. This is an in-place upgrade as we described earlier.\nAn edition upgrade changes the edition within the same OS version â€” Home to Pro, for example. This is done through Settings, using a new product key. You do not need to reinstall the OS.\nEdition upgrades generally move upward: Home can upgrade to Pro. Pro can upgrade to Enterprise. Enterprise cannot be downgraded â€” if a machine has Enterprise and you need to go back to Pro, you must do a clean install.\nBefore any upgrade, the checklist is: verify hardware compatibility, back up all data, confirm that critical applications and drivers are compatible with the target OS, and verify that network drivers are available â€” because if the machine cannot connect to the internet after installation, you have a significant problem.\nFor Windows 11 specifically: the PC Health Check application, provided by Microsoft, runs a compatibility check and confirms whether the machine meets all requirements â€” TPM 2.0, UEFI, 64-bit CPU, 4 GB RAM, 64 GB storage.\n---",
+      "exam_tips": [
+        "GPT + UEFI = modern; MBR + BIOS = legacy â€” know the pairs"
+      ]
+    },
+    {
+      "title": "Product Lifecycle And Eol",
+      "content": "Every operating system has a defined support lifecycle, and where a system sits in that lifecycle determines what updates it receives and what security risk it carries.\nMainstream support is the primary phase â€” minimum five years from release. During mainstream support, the OS receives feature updates, bug fixes, and security patches.\nExtended support follows mainstream â€” typically three to five additional years. During extended support, only security patches are released. No new features, no bug fixes for non-security issues. Extended support exists to give organizations time to migrate to a supported version.\nEnd of Life means the OS is completely off the support calendar. No patches of any kind are released after that date. Any vulnerability discovered after EOL is never fixed. The OS becomes permanently exploitable over time.\nFor the exam: Windows 10 Home and Pro reached EOL in October 2025. Running a post-EOL OS in a production environment violates security best practices.\nThe correct response to an EOL system you cannot immediately replace is to isolate it from the internet, segment it from sensitive network resources, and escalate it as a replacement priority. Running an EOL OS connected to the open internet is an unacceptable risk.\n---",
+      "exam_tips": [
+        "A 4 TB drive formatted with MBR will only show 2 TB to the OS"
+      ]
+    },
+    {
+      "title": "Recovery Options",
+      "content": "Windows includes several built-in recovery mechanisms.\nReset This PC â€” Keep My Files: reinstalls Windows and preserves the user's personal files. Installed applications are removed. This is effectively a repair installation.\nReset This PC â€” Remove Everything: reinstalls Windows and deletes all user data. Use this before decommissioning or repurposing a machine.\nRecovery partition: many OEM systems include a hidden partition that contains a factory image. Accessed by pressing F11 or Ctrl+F11 at startup. Restores the machine to the state it was in when it shipped from the manufacturer â€” including original OS version and OEM software. Limitation: if the hard drive is replaced, the recovery partition is gone.\n---",
+      "exam_tips": [
+        "Windows 10 EOL = October 2025; EOL systems must be isolated",
+        "Enterprise cannot be downgraded to Pro â€” clean install required"
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "A clean install wipes your drive completely. An in-place upgrade does not. Picking the wrong one on a client machine can destroy years of data.",
+      "concept": "CLEAN INSTALL vs IN-PLACE UPGRADE â€” KNOW THE DIFFERENCE",
+      "summary": "When you install an operating system, you are choosing between two fundamentally different approaches. A clean install formats the target partition and deploys a fresh copy of the OS."
+    },
+    {
+      "hook": "If you have a drive larger than 2 TB and you format it with MBR, the OS will only see 2 TB. The rest of the drive is invisible.",
+      "concept": "GPT vs MBR â€” THE PARTITIONING STANDARD YOU NEED TO KNOW",
+      "summary": "Every drive that holds an OS needs a partition table â€” a structure that tells the system how the drive is divided. There are two standards, and the exam tests both."
+    },
+    {
+      "hook": "How do you install Windows on 500 machines without touching a USB drive once? PXE boot. This is how enterprise IT actually deploys operating systems.",
+      "concept": "PXE BOOT â€” HOW ENTERPRISES INSTALL 500 MACHINES AT ONCE",
+      "summary": "PXE stands for Preboot Execution Environment. It is a standard that allows a computer to boot from the network before a local operating system is present."
+    },
+    {
+      "hook": "Windows 10 reached end of life in October 2025. Any machine still running it after that date receives zero security patches. Every vulnerability discovered after that date is permanent.",
+      "concept": "OS END OF LIFE â€” WHY RUNNING AN OLD OS IS A SECURITY RISK",
+      "summary": "Every operating system has a defined product lifecycle. Understanding where a system sits in that lifecycle is part of responsible IT management."
+    },
+    {
+      "hook": "Before any OS can be installed, the machine needs to boot into the installer.",
+      "concept": "Boot Methods",
+      "summary": "Before any OS can be installed, the machine needs to boot into the installer. There are several methods, and the exam expects you to know all of them. USB flash drive or external drive is the most common modern method."
+    },
+    {
+      "hook": "With the machine booted into an installer, you have several types of installation to choose from.",
+      "concept": "Installation Types",
+      "summary": "With the machine booted into an installer, you have several types of installation to choose from. Clean install: the installer formats the target partition and deploys the OS fresh. All data on that partition is deleted â€” files, applications, settings, everything."
+    },
+    {
+      "hook": "Enterprise environments almost never do manual attended installations on production machines.",
+      "concept": "Image Deployment",
+      "summary": "Enterprise environments almost never do manual attended installations on production machines. They use image deployment. An image is a complete snapshot of a configured system â€” OS, drivers, applications, security settings, everything in a single file."
+    },
+    {
+      "hook": "When upgrading an OS, there are two types of upgrade to consider: version upgrades and edition upgrades.",
+      "concept": "Upgrade Paths And Edition Changes",
+      "summary": "When upgrading an OS, there are two types of upgrade to consider: version upgrades and edition upgrades. A version upgrade moves between OS releases â€” Windows 10 to Windows 11, for example. This is an in-place upgrade as we described earlier."
+    },
+    {
+      "hook": "Every operating system has a defined support lifecycle, and where a system sits in that lifecycle determines what updates it receives and what securit",
+      "concept": "Product Lifecycle And Eol",
+      "summary": "Every operating system has a defined support lifecycle, and where a system sits in that lifecycle determines what updates it receives and what security risk it carries. Mainstream support is the primary phase â€” minimum five years from release. During mainstream support, the OS receives feature updates, bug fixes, and security patches."
+    },
+    {
+      "hook": "Windows includes several built-in recovery mechanisms.",
+      "concept": "Recovery Options",
+      "summary": "Windows includes several built-in recovery mechanisms. Reset This PC â€” Keep My Files: reinstalls Windows and preserves the user's personal files. Installed applications are removed."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "What is the FIRST step before performing a Windows OS upgrade?",
+      "options": [
+        "Disable antivirus",
+        "Format the hard drive",
+        "Delete all user profiles",
+        "Back up all user data and verify hardware compatibility"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What Windows installation method allows deploying the OS to multiple machines simultaneously using a network share?",
+      "options": [
+        "Network (PXE) boot installation",
+        "USB installation",
+        "DVD installation",
+        "Manual local installation only"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Which Windows setup method preserves user data and installed applications while upgrading the OS version?",
+      "options": [
+        "Clean installation",
+        "In-place upgrade",
+        "Refresh installation",
+        "Network deployment"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What partitioning scheme is required for UEFI-based Windows installations?",
+      "options": [
+        "MBR (Master Boot Record)",
+        "FAT32",
+        "GPT (GUID Partition Table)",
+        "Dynamic disk"
+      ],
+      "answer": 2,
+      "explanation": "Native UEFI boot requires GPT. However, UEFI firmware with Compatibility Support Module (CSM) enabled can still boot MBR disks in legacy BIOS mode. The exam tests the native UEFI requirement: GPT is required when Secure Boot is active and CSM is disabled."
+    },
+    {
+      "q": "What is the minimum disk space required for a Windows 11 installation?",
+      "options": [
+        "Windows Update Assistant",
+        "Disk Management",
+        "Device Manager",
+        "PC Health Check app (for Windows 11) or Windows Compatibility Advisor"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "After a Windows update causes boot failure, what is the FIRST recovery option to try?",
+      "options": [
+        "Boot to Windows Recovery Environment (WinRE) and use Startup Repair or roll back the update",
+        "Reinstall Windows",
+        "Replace the hard drive",
+        "Reflash BIOS"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A technician is performing a clean installation of Windows 11 on a new NVMe SSD. During setup, the installer cannot detect the drive. Which of the following is the MOST likely cause?",
+      "options": [
+        "The SSD is formatted with FAT32 instead of NTFS",
+        "A third-party driver for the storage controller needs to be loaded during setup",
+        "Windows 11 does not support NVMe SSD installation",
+        "The partition style must be MBR for Windows 11"
+      ],
+      "answer": 1,
+      "explanation": "Windows setup does not always include drivers for NVMe or proprietary RAID controllers. The technician must load the appropriate storage driver via USB using the \"Load driver\" option. Windows 11 requires UEFI and GPT â€” not MBR â€” making option D incorrect."
+    },
+    {
+      "q": "An organization needs to deploy Windows 11 to 200 workstations with identical hardware and specific settings applied automatically. Which installation method is MOST appropriate?",
+      "options": [
+        "Interactive clean install from USB on each machine individually",
+        "In-place upgrade from the Microsoft website on each machine",
+        "Unattended installation using an answer file (autounattend.xml)",
+        "Manual upgrade through Windows Update on each machine"
+      ],
+      "answer": 2,
+      "explanation": "An unattended installation uses an answer file (autounattend.xml) to supply all configuration options automatically, enabling mass deployment without user interaction. Interactive or manual installs on 200 machines would be impractical."
+    },
+    {
+      "q": "A technician is upgrading a computer from Windows 10 Home to Windows 11 Home. Which of the following BEST describes this process?",
+      "options": [
+        "The technician must perform a clean install; in-place upgrades between Home editions are not supported",
+        "The upgrade requires purchasing a separate Windows 11 retail license",
+        "The technician must first upgrade to Windows 10 Pro before upgrading to Windows 11 Home",
+        "The technician can perform an in-place upgrade, which preserves files and settings"
+      ],
+      "answer": 3,
+      "explanation": "An in-place upgrade from Windows 10 Home to Windows 11 Home preserves user files, applications, and settings. Same-tier edition upgrades are a valid in-place upgrade path; a clean install is not required."
+    },
+    {
+      "q": "Which boot method requires a DHCP server to be available on the network before it can function?",
+      "options": [
+        "USB flash drive boot",
+        "Optical disc boot",
+        "PXE (network) boot",
+        "Internal recovery partition boot"
+      ],
+      "answer": 2,
+      "explanation": "PXE (Preboot Execution Environment) boot requires DHCP to function. The machine sends a DHCP request to obtain an IP address and the location of the boot server. Without DHCP, the machine cannot locate the network boot server and the PXE process fails."
+    },
+    {
+      "q": "An organization uses Windows Setup with an autounattend.xml file to deploy Windows 11 without a technician present at each machine. Which installation type does this describe?",
+      "options": [
+        "Attended installation",
+        "Repair installation",
+        "In-place upgrade",
+        "Unattended installation"
+      ],
+      "answer": 3,
+      "explanation": "Unattended installation uses a preconfigured answer file (autounattend.xml or unattend.xml) that supplies all responses to setup prompts automatically. No technician needs to be present after the process starts. This is the foundation of enterprise-scale OS deployment."
+    },
+    {
+      "q": "A 4 TB drive is formatted using MBR partitioning. How much of the drive's capacity will the operating system be able to use?",
+      "options": [
+        "4 TB — MBR supports any drive size",
+        "3 TB — MBR wastes the first 1 TB as overhead",
+        "2 TB — MBR cannot address storage beyond 2 TB",
+        "1 TB — MBR limits each partition to 1 TB"
+      ],
+      "answer": 2,
+      "explanation": "MBR imposes a maximum addressable disk size of 2.2 TB. On a 4 TB drive formatted with MBR, the OS will only see approximately 2 TB. The remaining capacity is inaccessible. GPT must be used for drives larger than 2 TB."
+    },
+    {
+      "q": "A user selects 'Reset This PC — Keep My Files' in Windows 11 recovery options. What is the outcome?",
+      "options": [
+        "Windows is reinstalled and all data including personal files is deleted",
+        "Windows is reinstalled and personal files are preserved, but installed applications are removed",
+        "Only corrupted system files are replaced while applications and data are kept",
+        "The machine reverts to factory settings including OEM software"
+      ],
+      "answer": 1,
+      "explanation": "'Reset This PC — Keep My Files' reinstalls Windows while preserving the user's personal files. Installed third-party applications are removed. This is effectively a repair installation. 'Remove Everything' is the option that deletes all user data."
+    },
+    {
+      "q": "An administrator needs to upgrade a Windows 10 Pro workstation to Windows 10 Enterprise without reinstalling the OS or losing user data. What is the correct method?",
+      "options": [
+        "Perform a clean install of Windows 10 Enterprise",
+        "Run Windows Update and select the Enterprise option",
+        "Use the enterprise upgrade path by entering a new product key in Settings",
+        "Enterprise requires a fresh installation and cannot be upgraded in-place from Pro"
+      ],
+      "answer": 2,
+      "explanation": "An edition upgrade within the same OS version — such as Pro to Enterprise — is performed through Settings using a new product key. No OS reinstall is required. Data and applications are preserved. Note: the reverse (Enterprise to Pro) requires a clean install."
+    },
+    {
+      "q": "After a Windows OS reaches End of Life, what type of updates does Microsoft continue to release?",
+      "options": [
+        "Security patches only, for an extended 5-year period",
+        "Feature updates only",
+        "No updates of any kind are released after the EOL date",
+        "Bug fixes only, with security patches handled by third parties"
+      ],
+      "answer": 2,
+      "explanation": "After an OS reaches End of Life, Microsoft releases no updates of any kind — no security patches, no bug fixes, no feature updates. Any vulnerability discovered after the EOL date will never be fixed, making the OS permanently exploitable over time. Running a post-EOL OS in production violates security best practices."
+    },
+    {
+      "q": "What must be done BEFORE performing a Windows in-place upgrade to ensure recovery is possible if the upgrade fails?",
+      "options": [
+        "Disable Windows Defender to prevent interference with the upgrade process",
+        "Create a full system backup — without a backup, a failed upgrade may result in unrecoverable data loss",
+        "Uninstall all third-party applications before running setup",
+        "Enable fast startup in Power Options to speed up the upgrade process"
+      ],
+      "answer": 1,
+      "explanation": "Creating a backup before any OS upgrade is critical. While in-place upgrades preserve data, complications can occur. A current backup provides a guaranteed recovery point if the upgrade fails midway, corrupts files, or causes application incompatibilities after completion."
+    },
+    {
+      "q": "What is the purpose of a Windows Recovery Partition on the system drive?",
+      "options": [
+        "Stores user backup files automatically using Windows Backup",
+        "Contains the Windows Recovery Environment (WinRE) and Reset This PC files, enabling recovery and repair without external bootable media",
+        "Holds a second copy of Windows for dual-boot configurations",
+        "Acts as a swap partition for virtual memory when RAM is full"
+      ],
+      "answer": 1,
+      "explanation": "The Windows Recovery Partition stores WinRE (Windows Recovery Environment), which provides tools like Startup Repair, System Restore, Reset This PC, and Command Prompt for troubleshooting. It enables recovery when Windows fails to boot, without requiring a USB installation drive."
+    },
+    {
+      "q": "What does the Windows System Preparation Tool (sysprep /generalize) do to a Windows installation image?",
+      "options": [
+        "Compresses the Windows installation to reduce disk space usage",
+        "Removes machine-specific information (computer name, SID, hardware drivers) so the image can be deployed to multiple different computers without identity conflicts",
+        "Creates an encrypted backup of the Windows registry and user profiles",
+        "Configures Windows to run in audit mode for testing hardware compatibility"
+      ],
+      "answer": 1,
+      "explanation": "sysprep /generalize strips hardware-specific drivers, resets the security identifier (SID), removes activation data, and prepares the image for OOBE (Out-of-Box Experience) on first boot. Without generalization, deploying one machine's image to another causes SID conflicts and driver issues in domain environments."
+    },
+    {
+      "q": "Which Windows 11 hardware requirement is unique compared to Windows 10 and commonly causes upgrade failures on older but otherwise capable PCs?",
+      "options": [
+        "Minimum 8 GB of RAM (Windows 10 only requires 4 GB)",
+        "TPM 2.0 chip and Secure Boot-capable UEFI firmware (Windows 10 only required TPM 1.2 and didn't mandate Secure Boot)",
+        "A dedicated GPU with DirectX 12 support",
+        "An SSD as the primary boot drive (Windows 10 runs on HDD)"
+      ],
+      "answer": 1,
+      "explanation": "Windows 11 requires TPM 2.0 and UEFI with Secure Boot capability — requirements not enforced by Windows 10. Many older PCs have TPM 1.2 or TPM disabled in BIOS, and older hardware may use legacy BIOS (MBR) mode. Enabling TPM 2.0 and Secure Boot in UEFI often resolves the requirement check for hardware that is otherwise compatible."
+    },
+    {
+      "q": "A technician installs Windows using a bootable USB drive and performs no customization — the OS is installed with the typical Windows setup wizard. What type of installation is this?",
+      "options": [
+        "Unattended network installation",
+        "Clean attended installation from bootable media",
+        "In-place upgrade from the previous version",
+        "PXE-based image deployment"
+      ],
+      "answer": 1,
+      "explanation": "A clean attended installation boots from installation media (USB/DVD) and runs the interactive Windows Setup wizard — the technician answers prompts for language, license, partition, and user account. No automation, no network deployment. This is the standard manual installation method covered in CompTIA A+."
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "core": 1,
+  "chapter": 2,
+  "title": "PC Fundamentals & Components",
+  "exam_objectives": [
+    "3.1"
+  ],
+  "coverage": "COVERED",
+  "domain": "hardware",
+  "domain_label": "Hardware",
+  "sections": [
+    {
+      "title": "Pc Internal Components",
+      "content": "Every standard desktop PC contains the same six categories of internal components. These are the components you will work with in every hardware-related task on the job and on the exam.\nTHE MOTHERBOARD.\nThe motherboard is the main circuit board of the system. Everything else connects to it. It contains the CPU socket, RAM slots, expansion slots for adapter cards, storage connectors, power connectors, and the I/O ports exposed on the rear of the case.\nThe motherboard determines what CPU you can use, how much RAM the system supports, what form factor the case must be, and what expansion capabilities are available. It is the central hub of the entire system.\nTHE CPU.\nThe CPU â€” Central Processing Unit â€” is the processor. It executes the instructions that make every other function of the system possible. The CPU sits in a socket on the motherboard â€” a specific socket type that must match both the processor and the board.\nThe CPU generates significant heat during operation and requires active cooling: a combination of a heatsink (a block of thermally conductive metal) and a fan that moves air across it. Thermal paste fills the microscopic gaps between the CPU and the heatsink to maximize thermal transfer.\nTHE RAM.\nRAM â€” Random Access Memory â€” is the system's working memory. When your CPU is actively processing data, that data lives in RAM. It is fast enough to keep up with CPU operations, unlike storage.\nRAM is volatile: when power is removed, everything in RAM is gone. This is why unsaved work is lost when a system crashes. The data was in RAM and was not written to persistent storage before power was interrupted.\nADAPTER CARDS.\nAdapter cards are expansion boards that slot into the motherboard's expansion slots to extend the system's capabilities.\nGPU â€” Graphics Processing Units â€” offload graphical processing from the CPU and drive display output for complex graphics, gaming, and compute workloads. Network Interface Cards, or NICs, provide wired or wireless network connectivity. Sound cards improve audio input and output quality beyond what integrated audio can provide.\nSTORAGE DRIVES.\nStorage drives â€” HDD or SSD â€” hold data persistently. Unlike RAM, storage is non-volatile: data remains when the power is off. We cover HDDs, SSDs, and storage technologies in depth in Chapter 6.\nTHE POWER SUPPLY UNIT.\nThe PSU â€” Power Supply Unit â€” converts alternating current from the wall outlet into the direct current voltages the components require. The PSU is the only component in a standard desktop that operates on mains voltage inside the case. For this reason, a PSU is never opened for repair â€” it is replaced as a unit.\nWe cover PSU specifications and wattage ratings in detail in Chapter 7.\n---",
+      "exam_tips": [
+        "Socket type must match between CPU and motherboard. Covered in depth in Ch03."
+      ]
+    },
+    {
+      "title": "External Peripherals",
+      "content": "Peripherals are devices that connect to the system externally. They divide into three functional categories.\nINPUT DEVICES send data into the computer. Keyboards, mice, microphones, cameras, scanners, and drawing tablets are all input devices. The data flows from the peripheral into the system.\nOUTPUT DEVICES receive data from the computer and present it to the user. Monitors, speakers, and printers are output devices. The data flows from the system out to the peripheral.\nEXTERNAL STORAGE devices hold data outside the chassis. They can serve as either input or output depending on the direction of the data transfer â€” when you write to an external drive, it is receiving output; when you read from it, it is providing input.\nSome devices are bidirectional by design. A touchscreen monitor provides display output and also accepts touch input. A USB headset accepts audio output and sends microphone input.\nKnowing which category a device falls into is relevant for troubleshooting â€” input failures present differently from output failures â€” and is foundational knowledge for the exam.\n---",
+      "exam_tips": [
+        "Open expansion slots disrupt airflow and violate EMI shielding. Always install covers."
+      ]
+    },
+    {
+      "title": "Case Design And Form Factors",
+      "content": "TOWER CASES.\nThe tower case is the standard desktop form factor. The side panels are secured with screws or tool-free clips. Access to the interior is gained by removing the side panel.\nThe front panel hosts the power button, power and activity LEDs, USB ports, and on older systems, removable media bays. The rear panel exposes the PSU exhaust and the motherboard's I/O ports. Expansion slot brackets on the rear allow GPU and other card ports to be accessed externally.\nI/O SHIELDS AND SLOT COVERS.\nThe I/O shield is the metal plate that fits the opening between the motherboard's external ports and the rear of the case. It serves three functions: blocking dust from entering through the port cutouts, reducing electromagnetic interference emission from the case, and providing an ESD grounding path through the metal chassis.\nSlot covers fill unused expansion slot openings. They are not optional. Open slots disrupt the internal airflow design of the case â€” hot air escapes through the gaps instead of being directed out through the exhaust fan. They also allow dust ingress and eliminate EMI shielding.\nAlways install slot covers on unused expansion slots. This is a best practice and is testable on the exam.\nALL-IN-ONE SYSTEMS.\nAll-in-one systems integrate the internal components and the display into a single enclosure. The iMac is the most widely recognized example, but Windows all-in-ones exist from multiple manufacturers.\nAdvantages: significantly reduced desk footprint, fewer cables, cleaner appearance. Disadvantages: limited upgradeability, more difficult repairs due to tight component integration, and higher cost when components fail â€” because replacing one failed component often means replacing the entire unit.\nFor enterprise deployments where upgradeability matters, tower systems are preferred. For space-constrained environments or consumer use cases where aesthetics are a priority, all-in-ones are a reasonable choice.\n---",
+      "exam_tips": [
+        "Case matters â€” Mbps vs MBps. Always check capitalization when reading specs."
+      ]
+    },
+    {
+      "title": "Bits, Bytes, And Data Measurement Units",
+      "content": "This section covers one of the most commonly confused topics in computing, and one of the easiest points to lock in on the exam.\nTHE BIT.\nA bit is the smallest unit of digital data. It holds a single binary value: zero or one. All digital information is ultimately composed of bits.\nTHE BYTE.\nA byte is eight bits. This is the fundamental unit used to measure storage capacity.\nTHE CASE RULE.\nLowercase b always denotes bits. Uppercase B always denotes bytes. This convention is universal across the industry.\nNetwork and connection speeds are measured in bits: Kilobits per second (Kbps), Megabits per second (Mbps), Gigabits per second (Gbps). Storage capacity is measured in bytes: Kilobytes (KB), Megabytes (MB), Gigabytes (GB), Terabytes (TB).\nTHE CONVERSION.\nTo convert a speed from bits to bytes, divide by eight. A 100 Mbps internet connection delivers a maximum of 12.5 MBps of actual file transfer throughput. This is the reason download speeds shown in a file manager appear to be one-eighth of the advertised connection speed. The ISP is telling the truth â€” they are just measuring in bits. The file manager is showing you bytes.\nTHE PREFIXES.\nKilo is one thousand. Mega is one million. Giga is one billion. Tera is one trillion. These prefixes apply regardless of whether the base unit is bits or bytes.\nNote: in practice, operating systems have historically used binary prefixes (where 1 KB = 1,024 bytes) rather than decimal prefixes (1 KB = 1,000 bytes). The IEC standardized the binary prefixes as kibibytes, mebibytes, and gibibytes, but the old binary meaning of kilobyte, megabyte, and gigabyte persists in many contexts. For the A+ exam, know that 1 KB = 1,024 bytes in storage contexts.\nPORT VS CONNECTOR.\nOne final definitional point. A port is the physical interface on the computer â€” the receptacle. A connector is the cable end that plugs into the port. These are not interchangeable terms in technical documentation or on the exam.\n---",
+      "exam_tips": []
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "There are six components inside every desktop PC that you need to be able to name, locate, and describe by function. The A+ exam assumes you know all six cold.",
+      "concept": "PC INTERNAL COMPONENTS",
+      "summary": "Every standard PC chassis contains the same core set of internal components. The motherboard is the central circuit board â€” everything else connects to it."
+    },
+    {
+      "hook": "Leaving an expansion slot cover off a PC is not just cosmetic â€” it actively degrades system performance and creates a real hardware risk.",
+      "concept": "CASE TYPES, I/O SHIELDS & SLOT COVERS",
+      "summary": "The system case, or chassis, is more than a box. Its design directly affects thermals, EMI, and serviceability."
+    },
+    {
+      "hook": "A 100 Megabit connection and a 100 Megabyte connection are not the same thing. Off by a factor of eight. This distinction comes up on the exam and in every ISP conversation you will ever have.",
+      "concept": "BITS, BYTES & DATA MEASUREMENT UNITS",
+      "summary": "Data measurement uses two related but distinct units: bits and bytes. A bit is the smallest unit of digital data â€” a single binary value, either 0 or 1."
+    },
+    {
+      "hook": "Port and connector are not the same word. Using them interchangeably is one of the fastest ways to sound uninformed in a technical environment.",
+      "concept": "PORTS VS CONNECTORS",
+      "summary": "A port is a physical interface on the computer â€” the receptacle, the opening, the socket on the device itself. A connector is the end of the cable that plugs into the port."
+    },
+    {
+      "hook": "Peripherals are devices that connect to the system externally.",
+      "concept": "External Peripherals",
+      "summary": "Peripherals are devices that connect to the system externally. They divide into three functional categories. INPUT DEVICES send data into the computer."
+    },
+    {
+      "hook": "TOWER CASES.",
+      "concept": "Case Design And Form Factors",
+      "summary": "TOWER CASES. The tower case is the standard desktop form factor. The side panels are secured with screws or tool-free clips."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "What is the primary function of the motherboard in a PC?",
+      "options": [
+        "Stores long-term data when the system is powered off",
+        "Provides the central interconnect that links all other components",
+        "Converts AC power from the wall to DC voltages for components",
+        "Processes graphics for the display"
+      ],
+      "answer": 1,
+      "explanation": "The motherboard is the main circuit board that provides the electrical connections and physical slots linking the CPU, RAM, storage, GPU, and other components into a functioning system."
+    },
+    {
+      "q": "What does it mean for RAM to be volatile memory?",
+      "options": [
+        "RAM degrades over time and must be replaced periodically",
+        "RAM loses all stored data when power is removed",
+        "RAM operates at variable voltages depending on workload",
+        "RAM can only be read, not written"
+      ],
+      "answer": 1,
+      "explanation": "Volatile memory loses its contents when power is removed. RAM is volatile -- it holds the operating system, applications, and active data only while the system is powered on."
+    },
+    {
+      "q": "A standard keyboard is classified as which type of device?",
+      "options": [
+        "Output device",
+        "Storage device",
+        "Input device",
+        "Processing device"
+      ],
+      "answer": 2,
+      "explanation": "A keyboard is an input device -- it sends data from the user to the computer. Output devices (monitor, speakers, printer) send data from the computer to the user."
+    },
+    {
+      "q": "Which component converts AC power from the wall outlet into the DC voltages used by PC components?",
+      "options": [
+        "Voltage regulator module (VRM) on the motherboard",
+        "UPS battery backup unit",
+        "Power Supply Unit (PSU)",
+        "Capacitor bank on the GPU"
+      ],
+      "answer": 2,
+      "explanation": "The Power Supply Unit (PSU) converts the AC power from the wall (110-120V in North America) into the DC voltages (12V, 5V, 3.3V) used by the motherboard, CPU, RAM, and storage devices."
+    },
+    {
+      "q": "How many bytes are in 1 kibibyte (KiB) using binary definition?",
+      "options": [
+        "1000 bytes",
+        "1024 bytes",
+        "1048 bytes",
+        "1200 bytes"
+      ],
+      "answer": 1,
+      "explanation": "1 kibibyte (KiB) = 1024 bytes (2^10). This is the binary definition used in RAM and OS reporting. 1 kilobyte (KB) in the decimal definition used by storage manufacturers = 1000 bytes."
+    },
+    {
+      "q": "Which expansion card would a technician install to add wireless networking capability to a desktop PC that has no built-in Wi-Fi?",
+      "options": [
+        "Sound card",
+        "Capture card",
+        "Wireless NIC (network interface card)",
+        "Video capture card"
+      ],
+      "answer": 2,
+      "explanation": "A wireless NIC (network interface card) adds Wi-Fi capability. It installs in a PCIe slot and provides an antenna connection for 802.11 wireless connectivity."
+    },
+    {
+      "q": "In computing notation, what does an uppercase B in 500 GB signify?",
+      "options": [
+        "Bits",
+        "Bytes",
+        "Blocks",
+        "Bandwidth"
+      ],
+      "answer": 1,
+      "explanation": "Uppercase B = bytes. Lowercase b = bits. 500 GB means 500 gigabytes. This distinction matters: a 500 Mbps internet connection (megabits per second) delivers approximately 62.5 MB/s (megabytes per second)."
+    },
+    {
+      "q": "A touchscreen display is classified as which type of device?",
+      "options": [
+        "Input device only",
+        "Output device only",
+        "Both input and output (bidirectional)",
+        "Storage device"
+      ],
+      "answer": 2,
+      "explanation": "A touchscreen is both an input device (it receives touch commands from the user) and an output device (it displays images to the user). It is classified as a bidirectional or I/O device."
+    },
+    {
+      "q": "Which PCIe slot width is used for discrete graphics cards to provide maximum bandwidth?",
+      "options": [
+        "PCIe x1",
+        "PCIe x4",
+        "PCIe x8",
+        "PCIe x16"
+      ],
+      "answer": 3,
+      "explanation": "Discrete graphics cards use PCIe x16 slots, which provide the most bandwidth (up to ~32 GB/s bidirectional in PCIe 5.0). x16 is the widest standard PCIe slot configuration."
+    },
+    {
+      "q": "What is the key advantage of a tower desktop over an all-in-one PC?",
+      "options": [
+        "Tower PCs use less power",
+        "Tower PCs have built-in displays",
+        "Tower PCs are more easily upgraded and repaired",
+        "Tower PCs produce less heat"
+      ],
+      "answer": 2,
+      "explanation": "Tower desktops have separate, standard-sized components in a full-size chassis. Individual components (RAM, GPU, storage, PSU) can be upgraded or replaced independently. All-in-ones are compact but use proprietary parts that are difficult to upgrade."
+    },
+    {
+      "q": "Which component serves as the working memory where the CPU stores data it is actively processing?",
+      "options": [
+        "SSD",
+        "HDD",
+        "RAM",
+        "Cache"
+      ],
+      "answer": 2,
+      "explanation": "RAM (Random Access Memory) is the working memory where the CPU stores the operating system, active application data, and in-progress computations. It is much faster than storage but volatile."
+    },
+    {
+      "q": "What is the purpose of slot covers (blanking plates) on the rear of a PC case?",
+      "options": [
+        "They improve airflow by directing air over the motherboard",
+        "They protect unused expansion slots and maintain positive case pressure",
+        "They provide grounding points for components",
+        "They hold the motherboard in position"
+      ],
+      "answer": 1,
+      "explanation": "Slot covers fill unused expansion slot openings in the case. They maintain proper airflow by preventing hot air from recirculating into the case and protect the interior from dust ingress through open slots."
+    },
+    {
+      "q": "What distinguishes a workstation from a standard desktop PC?",
+      "options": [
+        "Workstations are smaller form factor than desktops",
+        "Workstations use laptop components to reduce heat",
+        "Workstations use ECC RAM, high-core-count CPUs, and professional-grade GPUs for demanding tasks like 3D rendering and video editing",
+        "Workstations are defined by their operating system, not hardware"
+      ],
+      "answer": 2,
+      "explanation": "Workstations are high-performance computers designed for technical or creative professional workloads. They typically feature ECC RAM (for error correction), multi-core Xeon or Threadripper CPUs, and professional Quadro/Radeon Pro graphics cards."
+    },
+    {
+      "q": "What does the term 'form factor' describe when referring to a PC case or motherboard?",
+      "options": [
+        "The maximum power consumption of the component",
+        "The physical size, shape, and mounting hole pattern of the component",
+        "The speed rating of the component",
+        "The number of expansion slots the component supports"
+      ],
+      "answer": 1,
+      "explanation": "Form factor defines the physical dimensions, mounting hole positions, and connector placement of a motherboard or case. Common motherboard form factors include ATX, Micro-ATX, and Mini-ITX. Matching form factors ensures compatibility."
+    },
+    {
+      "q": "Which display connector carries both digital video and audio signals and is the most common connection on modern consumer monitors and TVs?",
+      "options": [
+        "VGA",
+        "DVI-D",
+        "HDMI",
+        "DisplayPort"
+      ],
+      "answer": 2,
+      "explanation": "HDMI (High-Definition Multimedia Interface) carries both digital video and audio in a single cable and is standard on consumer televisions, monitors, and AV equipment. DisplayPort also carries audio but is more common in PC monitors and professional applications."
+    },
+    {
+      "q": "Which PC component is responsible for processing graphics calculations and rendering images to the display?",
+      "options": [
+        "CPU (Central Processing Unit)",
+        "GPU (Graphics Processing Unit)",
+        "Chipset (PCH)",
+        "RAM"
+      ],
+      "answer": 1,
+      "explanation": "The GPU (Graphics Processing Unit) is dedicated to parallel graphics calculations, 3D rendering, and video output. Discrete GPUs have their own VRAM and are installed in the PCIe x16 slot."
+    },
+    {
+      "q": "What is the purpose of the internal PC speaker (case speaker)?",
+      "options": [
+        "Provides audio output for the operating system",
+        "Plays the Windows startup sound",
+        "Outputs POST diagnostic beep codes before the OS and audio drivers load",
+        "Provides an emergency alarm when temperatures exceed thresholds"
+      ],
+      "answer": 2,
+      "explanation": "The internal PC speaker is a simple piezoelectric beeper used to output POST diagnostic beep codes during startup. It operates independently of the sound card and audio drivers, making it useful for diagnosing hardware failures before the OS loads."
+    },
+    {
+      "q": "A user's desktop PC has a single video output port. They want to connect two monitors. What is the simplest solution?",
+      "options": [
+        "Install a second PSU",
+        "Add a discrete GPU with multiple video outputs",
+        "Use a USB-to-VGA adapter for both monitors",
+        "Replace the CPU with one that has integrated graphics"
+      ],
+      "answer": 1,
+      "explanation": "Installing a discrete GPU with multiple outputs (HDMI, DisplayPort, DVI) allows multiple monitors to be connected. Many GPUs support two or more monitors natively from a single card."
+    },
+    {
+      "q": "In a PC, which storage type is most commonly used as the primary boot drive in modern systems due to its speed advantage?",
+      "options": [
+        "7200 RPM HDD",
+        "5400 RPM HDD",
+        "Optical drive (SSD)",
+        "NVMe or SATA SSD"
+      ],
+      "answer": 3,
+      "explanation": "SSDs (NVMe or SATA) are the standard boot drive in modern systems due to dramatically faster read/write speeds versus traditional HDDs. NVMe SSDs are especially fast, leveraging PCIe lanes rather than the slower SATA interface."
+    },
+    {
+      "q": "What distinguishes a NIC (Network Interface Card) from a wireless adapter?",
+      "options": [
+        "A NIC connects via RJ-45 Ethernet; a wireless adapter connects via radio frequency (Wi-Fi)",
+        "A NIC uses USB; a wireless adapter uses PCIe",
+        "A NIC supports fiber only; a wireless adapter supports copper",
+        "There is no difference — the terms are interchangeable"
+      ],
+      "answer": 0,
+      "explanation": "A NIC (wired) uses an RJ-45 port to connect to a network via Ethernet cable. A wireless adapter communicates using radio frequency signals (Wi-Fi standards like 802.11ac/ax). Both can be built into the motherboard or added via PCIe/USB."
+    }
+  ]
+}

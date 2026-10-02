@@ -1,0 +1,4258 @@
+[
+  {
+    "q": "Which laptop component is most commonly replaced using the bottom access panel without disassembling the entire unit?",
+    "options": [
+      "RAM and storage",
+      "CPU",
+      "Display assembly",
+      "Keyboard backlight"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A laptop will not power on even when plugged in. The AC adapter light is solid. What is the FIRST component to suspect?",
+    "options": [
+      "RAM",
+      "DC jack",
+      "Battery",
+      "Motherboard"
+    ],
+    "answer": 1,
+    "explanation": "A solid AC adapter light confirms the adapter is functional. The DC jack (where the adapter plugs into the laptop) is the next point of failure: the jack can break loose from the motherboard solder points, interrupting power delivery. Suspect the DC jack before the motherboard itself. Note: a broken",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What type of drive interface is used by most modern ultrabooks for internal storage?",
+    "options": [
+      "SATA",
+      "IDE",
+      "NVMe M.2",
+      "eSATA"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician needs to upgrade the wireless card in a laptop. Which interface does the wireless card most commonly use?",
+    "options": [
+      "PCIe x16",
+      "ExpressCard",
+      "USB 3.0",
+      "Mini PCIe or M.2"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which tool is essential when working inside a laptop to prevent electrostatic discharge?",
+    "options": [
+      "ESD strap",
+      "Magnetic screwdriver",
+      "Torx driver set",
+      "Plastic pry tool"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A laptop keyboard stops working after a liquid spill. The FIRST step a technician should take is:",
+    "options": [
+      "Replace the keyboard immediately",
+      "Power off and remove the battery",
+      "Rinse with distilled water",
+      "Run a keyboard diagnostic"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does the acronym SO-DIMM stand for?",
+    "options": [
+      "Incompatible RAM speed",
+      "Wrong SO-DIMM slot",
+      "RAM not fully seated",
+      "Bad motherboard"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which of the following is a characteristic of DDR4 SO-DIMM compared to DDR3?",
+    "options": [
+      "Identical to DDR3 but faster",
+      "Fewer pins and higher voltage",
+      "Same pin count, different notch position",
+      "Higher pin count and lower voltage"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A laptop hard drive makes a clicking sound on startup. What is the MOST likely cause?",
+    "options": [
+      "Failing hard drive heads",
+      "Corrupt OS",
+      "Loose SATA cable",
+      "Low battery"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which storage form factor is 2.5 inches and commonly used in laptops?",
+    "options": [
+      "3.5\" HDD",
+      "2.5\" SATA SSD or HDD",
+      "M.2 2280",
+      "mSATA"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician replaces a laptop thermal paste. What should be done FIRST before applying new paste?",
+    "options": [
+      "Apply new paste directly over old",
+      "Run the laptop to warm up the CPU",
+      "Clean off old paste with isopropyl alcohol",
+      "Remove the fan only, leave the heatsink"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which of the following best describes a laptop docking station?",
+    "options": [
+      "Charges the battery faster",
+      "Improves wireless signal strength",
+      "Replaces the laptop built-in display",
+      "Expands connectivity with external ports"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the purpose of a laptop heat pipe?",
+    "options": [
+      "Transfers heat from the CPU to the heatsink and fan",
+      "Connects the CPU to the motherboard",
+      "Regulates battery charge cycles",
+      "Grounds the chassis"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician opens a laptop to replace the battery. After reassembly, the touchpad stops working. The MOST likely cause is:",
+    "options": [
+      "BIOS corruption",
+      "Touchpad ribbon cable disconnected during reassembly",
+      "Driver uninstalled",
+      "Touchpad hardware failure"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which laptop component stores the system firmware and BIOS settings?",
+    "options": [
+      "CMOS battery",
+      "RAM",
+      "EEPROM flash chip on the motherboard",
+      "Hard drive boot sector"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A user sees \"96% plugged in, not charging.\" What is the MOST likely explanation?",
+    "options": [
+      "Faulty AC adapter",
+      "Bad DC jack",
+      "Corrupt battery driver",
+      "Battery protection circuit preventing overcharge near full capacity"
+    ],
+    "answer": 3,
+    "explanation": "The Battery Management System (BMS) inside the battery pack intentionally stops charging at approximately 95–100% to prevent cell damage from overcharging. This is normal behavior. Distinguish from a swollen battery (hardware defect requiring immediate replacement) or a BMS fault (battery won't char",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What display technology offers the best contrast ratio and true blacks by turning off individual pixels?",
+    "options": [
+      "OLED",
+      "IPS",
+      "TN",
+      "VA"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A laptop display has a dim image but content is clearly visible. The MOST likely failed component is:",
+    "options": [
+      "LCD panel",
+      "Backlight inverter or LED driver",
+      "GPU",
+      "Display cable"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which connector type carries both video and power to modern laptop LCD panels internally?",
+    "options": [
+      "HDMI",
+      "VGA",
+      "eDP (Embedded DisplayPort)",
+      "DVI"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A laptop screen is cracked but shows an image on an external monitor. What does this confirm?",
+    "options": [
+      "GPU is failed",
+      "The motherboard is damaged",
+      "The display cable is faulty",
+      "The LCD panel is damaged, not the GPU"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the function of a digitizer in a touchscreen laptop?",
+    "options": [
+      "Converts touch input to digital coordinates",
+      "Improves color accuracy",
+      "Provides backlighting",
+      "Manages display resolution"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which display panel type is known for the fastest response times and is popular for gaming?",
+    "options": [
+      "IPS",
+      "TN",
+      "VA",
+      "OLED"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician replaces a laptop LCD but the replacement is slightly dimmer. The MOST likely reason is:",
+    "options": [
+      "Wrong resolution panel",
+      "Corrupt GPU driver",
+      "Wrong backlight voltage or incompatible panel model",
+      "Incorrect aspect ratio"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which mobile display type uses a separate backlight and cannot achieve true black?",
+    "options": [
+      "OLED",
+      "AMOLED",
+      "MicroLED",
+      "LCD"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A user reports their laptop screen flickers randomly. Testing with an external monitor shows no flicker. The MOST likely component at fault is:",
+    "options": [
+      "Laptop display cable or LCD panel",
+      "RAM",
+      "GPU",
+      "Motherboard"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does \"glossy\" vs \"matte\" refer to in laptop screens?",
+    "options": [
+      "Color gamut",
+      "Screen coating that affects glare and reflection",
+      "Panel backlight type",
+      "Resolution standard"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which technology allows a stylus to be used on a tablet display by detecting electromagnetic signals from the pen?",
+    "options": [
+      "Capacitive touch",
+      "Resistive touch",
+      "Active digitizer (EMR)",
+      "Optical touch"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A mobile device screen responds to touches in the wrong location. This is MOST likely a:",
+    "options": [
+      "GPU failure",
+      "Software bug only",
+      "LCD failure",
+      "Touchscreen calibration or digitizer issue"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the typical first step when replacing a laptop display assembly?",
+    "options": [
+      "Disconnect power and remove the battery",
+      "Detach the display cable from the motherboard",
+      "Pry open the display bezel",
+      "Remove the battery"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which display specification describes the number of pixels per inch?",
+    "options": [
+      "Resolution",
+      "PPI (Pixels Per Inch)",
+      "Refresh rate",
+      "Contrast ratio"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A laptop screen shows vertical colored lines but an external display works fine. What is the MOST likely cause?",
+    "options": [
+      "Bad GPU",
+      "Driver corruption",
+      "Damaged LCD panel or loose video cable",
+      "Overheating CPU"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A user wants to connect their laptop to a wired network using a USB-C port only. What device do they need?",
+    "options": [
+      "USB-C to VGA adapter",
+      "Wireless bridge",
+      "Thunderbolt dock without Ethernet",
+      "USB-C hub with Ethernet port"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which mobile port standard supports both data transfer and video output up to 40 Gbps?",
+    "options": [
+      "Thunderbolt 3 or 4",
+      "USB 2.0",
+      "USB 3.0 Type-A",
+      "HDMI 1.4"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A user connects a smartphone to a laptop via USB and wants to transfer files. The phone shows \"Charging only.\" What setting must be changed on the phone?",
+    "options": [
+      "USB tethering",
+      "MTP (Media Transfer Protocol) or file transfer mode",
+      "USB debug mode",
+      "USB OTG"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does USB OTG (On-The-Go) allow a mobile device to do?",
+    "options": [
+      "Charge faster",
+      "Enable wireless syncing",
+      "Act as a USB host to connect peripherals such as drives and keyboards",
+      "Mirror the display"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A laptop only has modern ports (USB-C, HDMI). A user needs to connect a legacy VGA projector. What is needed?",
+    "options": [
+      "Direct connection is possible",
+      "USB-A to VGA active adapter",
+      "DisplayPort to DVI passive adapter",
+      "HDMI to VGA active adapter"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A user wants to use Bluetooth headphones with their laptop. Bluetooth is turned off and grayed out in settings. The MOST likely cause is:",
+    "options": [
+      "Physical or software wireless disable switch is engaged",
+      "Headphones are incompatible",
+      "Driver needs updating",
+      "Bluetooth is not available on this laptop"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the approximate maximum range for standard Bluetooth Class 2 communication?",
+    "options": [
+      "1 meter",
+      "10 meters",
+      "100 meters",
+      "300 meters"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A user plugs a USB device into a laptop port and gets \"USB device not recognized.\" The FIRST step to troubleshoot is:",
+    "options": [
+      "Replace the USB device",
+      "Reinstall the OS",
+      "Try a different USB port on the laptop",
+      "Update BIOS"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which mobile accessory uses NFC for contactless payment?",
+    "options": [
+      "Bluetooth keyboard",
+      "Wireless charging pad",
+      "USB-C charger",
+      "Digital wallet (e.g., Apple Pay, Google Pay)"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What connector type is used by most modern Android phones for charging and data?",
+    "options": [
+      "USB-C",
+      "Micro-USB",
+      "Lightning",
+      "USB-B"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A user wants to charge their laptop and connect two 4K monitors using a single cable. Which technology supports this?",
+    "options": [
+      "USB 3.0 hub",
+      "Thunderbolt 4 dock",
+      "HDMI 1.4 splitter",
+      "USB-A to DisplayPort"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the purpose of a port replicator?",
+    "options": [
+      "Boost wireless signal",
+      "Convert analog ports to digital",
+      "Provide additional ports to a laptop without a full docking station",
+      "Back up data automatically"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A mobile device can send files to nearby devices without pairing. What technology is being used?",
+    "options": [
+      "Bluetooth classic",
+      "NFC",
+      "Infrared",
+      "AirDrop or Nearby Share (using Wi-Fi Direct and Bluetooth)"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which USB specification introduced the reversible connector design?",
+    "options": [
+      "USB-C (USB 3.1 Gen 2 and later)",
+      "USB 3.0",
+      "USB 2.0",
+      "USB 1.1"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A laptop does not recognize an SD card. The card works fine in another device. What should the technician check?",
+    "options": [
+      "Replace the card",
+      "Card format compatibility and SD card reader driver",
+      "Reinstall OS",
+      "Check BIOS for SD support"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the primary purpose of enabling developer mode on a mobile device?",
+    "options": [
+      "Unlock faster charging",
+      "Increase screen brightness",
+      "Access advanced debugging and USB debugging features",
+      "Remove carrier restrictions"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which protocol is connection-oriented and guarantees delivery of packets?",
+    "options": [
+      "UDP",
+      "ARP",
+      "ICMP",
+      "TCP"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What port does HTTP use by default?",
+    "options": [
+      "80",
+      "443",
+      "21",
+      "25"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which protocol uses port 443?",
+    "options": [
+      "HTTP",
+      "HTTPS",
+      "FTP",
+      "SSH"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician needs to securely transfer files to a remote server. Which protocol should be used instead of FTP?",
+    "options": [
+      "TFTP",
+      "HTTP",
+      "SFTP or FTPS",
+      "Telnet"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which port does SMTP use for sending email?",
+    "options": [
+      "110",
+      "143",
+      "993",
+      "25"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "POP3 uses port ___ to retrieve email from a server.",
+    "options": [
+      "IMAP",
+      "SMTP",
+      "POP3",
+      "HTTP"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which protocol uses ports 137-139 and 445 for Windows file sharing?",
+    "options": [
+      "FTP",
+      "SMB",
+      "NFS",
+      "SSH"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What port does RDP (Remote Desktop Protocol) use?",
+    "options": [
+      "TCP",
+      "UDP",
+      "ICMP",
+      "ARP"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the primary advantage of a managed switch over an unmanaged switch?",
+    "options": [
+      "Managed switches are always faster",
+      "Managed switches use wireless instead of wired",
+      "Managed switches require no configuration",
+      "Managed switches allow configuration of VLANs, QoS, and port monitoring"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A device that operates at OSI Layer 3 and routes traffic between different networks is a:",
+    "options": [
+      "Router",
+      "Switch",
+      "Hub",
+      "Bridge"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What device connects network segments and forwards traffic based on MAC addresses?",
+    "options": [
+      "Router",
+      "Switch",
+      "Hub",
+      "Modem"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A PoE switch provides what key benefit?",
+    "options": [
+      "Wireless connectivity to all connected devices",
+      "Automatic IP address assignment",
+      "Power delivery over Ethernet cable to connected devices such as IP cameras",
+      "VPN termination"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the purpose of a patch panel in a network rack?",
+    "options": [
+      "Amplifies network signals",
+      "Monitors network traffic",
+      "Routes traffic between VLANs",
+      "Provides centralized termination points for structured cabling"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What networking device extends the range of a wireless network by receiving and retransmitting the signal?",
+    "options": [
+      "Wireless repeater or extender",
+      "Access point",
+      "Switch",
+      "Firewall"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which device is used to physically connect a computer to a telephone line for DSL access?",
+    "options": [
+      "Cable modem",
+      "DSL modem",
+      "Ethernet switch",
+      "Wireless router"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the maximum number of devices that can be directly connected to a standard 24-port switch?",
+    "options": [
+      "Switch",
+      "Hub",
+      "Router",
+      "Access point"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A NIC (Network Interface Card) operates at which OSI layer?",
+    "options": [
+      "Layer 1",
+      "Layer 4",
+      "Layer 3",
+      "Layer 2"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which Wi-Fi standard operates exclusively on the 5 GHz band and supports speeds up to approximately 3.5 Gbps theoretically?",
+    "options": [
+      "802.11ac (Wi-Fi 5)",
+      "802.11g",
+      "802.11b",
+      "802.11n"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What Wi-Fi standard first introduced MIMO (Multiple Input Multiple Output) and operates on both 2.4 GHz and 5 GHz?",
+    "options": [
+      "802.11a",
+      "802.11n (Wi-Fi 4)",
+      "802.11g",
+      "802.11b"
+    ],
+    "answer": 1,
+    "explanation": "802.11n (Wi-Fi 4) introduced MIMO and is the first dual-band standard. Note: MU-MIMO (Multi-User MIMO) was introduced later with 802.11ac (Wi-Fi 5).",
+    "objective": "2.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which wireless security protocol is considered the strongest for WLANs currently?",
+    "options": [
+      "WEP",
+      "WPA",
+      "WPA3",
+      "WPA2-AES"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does SSID stand for?",
+    "options": [
+      "Wrong password",
+      "MAC address filtering",
+      "Router malfunction",
+      "The device does not support 5 GHz (single-band adapter)"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which 802.11 standard is also known as Wi-Fi 6?",
+    "options": [
+      "802.11ax",
+      "802.11ac",
+      "802.11n",
+      "802.11ad"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does MIMO stand for in wireless networking?",
+    "options": [
+      "Channels 1, 5, and 9",
+      "Channels 1, 6, and 11",
+      "Channels 2, 7, and 12",
+      "Channels 3, 6, and 9"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What encryption standard is used by WPA2?",
+    "options": [
+      "TKIP",
+      "WEP",
+      "AES (CCMP)",
+      "DES"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which wireless standard is designed for short-range, high-bandwidth applications near 60 GHz?",
+    "options": [
+      "802.11ac",
+      "802.11ax",
+      "802.11n",
+      "802.11ad (WiGig)"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A DNS server resolves:",
+    "options": [
+      "Hostnames to IP addresses",
+      "IP addresses to MAC addresses",
+      "IP addresses to physical locations",
+      "MAC addresses to hostnames"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What service allows users to send and receive email across a network?",
+    "options": [
+      "DNS",
+      "Mail server using SMTP, IMAP, and POP3",
+      "DHCP",
+      "FTP server"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A file server provides what primary function?",
+    "options": [
+      "Routes network traffic",
+      "Manages email delivery",
+      "Centralized storage and access to files over the network",
+      "Provides internet access"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does a proxy server do?",
+    "options": [
+      "Assigns IP addresses automatically",
+      "Encrypts all network traffic",
+      "Converts domain names to IP addresses",
+      "Acts as an intermediary between clients and the internet, providing caching and filtering"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which service manages and authenticates users in a Windows domain environment?",
+    "options": [
+      "Active Directory using LDAP",
+      "DNS",
+      "DHCP",
+      "FTP"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the purpose of a syslog server?",
+    "options": [
+      "Synchronize clocks across network devices",
+      "Collect and store log messages from network devices",
+      "Manage IP address allocation",
+      "Provide NTP services"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What protocol is used to synchronize clocks on network devices?",
+    "options": [
+      "DNS",
+      "SNMP",
+      "NTP (Network Time Protocol)",
+      "TFTP"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A TFTP server is commonly used for:",
+    "options": [
+      "Secure file transfers",
+      "Web hosting",
+      "Email routing",
+      "Network device firmware updates and booting diskless workstations"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the purpose of a UTM (Unified Threat Management) appliance?",
+    "options": [
+      "Combine firewall, IDS/IPS, antivirus, and other security functions in one device",
+      "Manage multiple switches from one interface",
+      "Distribute traffic across servers",
+      "Provide DNS and DHCP services"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What IP address range do most home routers assign by default via DHCP?",
+    "options": [
+      "10.0.0.0/8",
+      "192.168.1.0/24",
+      "172.16.0.0/12",
+      "169.254.0.0/16"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A home user wants to prevent specific devices from connecting to their Wi-Fi. What feature accomplishes this?",
+    "options": [
+      "SSID broadcast disable",
+      "WPS",
+      "MAC address filtering",
+      "Port forwarding"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does disabling SSID broadcast accomplish on a home network?",
+    "options": [
+      "Enables faster connection speeds",
+      "Encrypts all wireless traffic",
+      "Blocks all unauthorized devices definitively",
+      "Hides the network name from casual scanning (security through obscurity)"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician is setting up a SOHO network using 192.168.1.0. What subnet mask should be used for a standard home network?",
+    "options": [
+      "Direct incoming internet traffic on a specific port to a specific internal device",
+      "Increase internet speed",
+      "Create a guest wireless network",
+      "Block outgoing traffic"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which cable type is used for standard Ethernet in a SOHO environment?",
+    "options": [
+      "Coaxial",
+      "Cat5e or Cat6 twisted pair",
+      "Fiber optic",
+      "Serial cable"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A new device can connect to Wi-Fi but cannot reach the internet. All other devices work fine. What should be checked FIRST?",
+    "options": [
+      "Router firmware",
+      "Replace the router",
+      "The device IP configuration — correct IP, subnet mask, gateway, and DNS",
+      "Check ISP status"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does NAT accomplish in a SOHO router?",
+    "options": [
+      "Assigns private IPs to devices",
+      "Manages wireless channels",
+      "Filters malicious traffic",
+      "Translates private internal IPs to a single public IP for internet access"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which SOHO router setting restricts internet access for children during certain hours?",
+    "options": [
+      "Parental controls or content filtering with time restrictions",
+      "MAC filtering",
+      "QoS",
+      "VLAN configuration"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the purpose of QoS settings on a SOHO router?",
+    "options": [
+      "Block unauthorized access",
+      "Prioritize certain types of traffic such as video calls or gaming over other traffic",
+      "Extend Wi-Fi range",
+      "Assign static IPs"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is a VLAN?",
+    "options": [
+      "A virtual WAN connection",
+      "A type of wireless network",
+      "A logically separated network within a physical switch infrastructure",
+      "A VPN tunnel"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the default gateway used for on a network?",
+    "options": [
+      "Assigns IP addresses to devices",
+      "Provides wireless connectivity",
+      "Resolves hostnames to IPs",
+      "Routes traffic from the local network to external networks"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A device has IP 192.168.1.50 with subnet mask 255.255.255.0. What is the network address?",
+    "options": [
+      "Class A",
+      "Class B",
+      "Class C",
+      "Class D"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does a subnet mask of /24 (255.255.255.0) indicate?",
+    "options": [
+      "8 host bits available",
+      "24 bits for network, 8 bits for hosts, allowing 254 usable host addresses",
+      "24 maximum hosts",
+      "Class B network only"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which DNS record type maps a hostname to an IPv4 address?",
+    "options": [
+      "AAAA",
+      "MX",
+      "A",
+      "CNAME"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is DNS cache poisoning?",
+    "options": [
+      "Flooding DNS servers with requests",
+      "Blocking DNS port 53",
+      "Intercepting DNS queries in transit",
+      "Corrupting DNS cache entries to redirect users to malicious sites"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which internet connection type uses telephone infrastructure and requires a filter to separate voice and data signals?",
+    "options": [
+      "DSL",
+      "Cable",
+      "Fiber",
+      "Satellite"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What type of network spans a single building or campus?",
+    "options": [
+      "WAN",
+      "LAN",
+      "MAN",
+      "PAN"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Internet access using cell towers is called:",
+    "options": [
+      "DSL",
+      "Satellite",
+      "Cellular (4G or 5G)",
+      "Cable"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the main advantage of cable internet over DSL?",
+    "options": [
+      "Lower cost",
+      "More widely available in rural areas than DSL",
+      "Dedicated non-shared bandwidth",
+      "Higher speeds using shared coaxial cable infrastructure"
+    ],
+    "answer": 3,
+    "explanation": "Cable internet typically delivers higher speeds than DSL. Cable runs over coaxial TV infrastructure (shared); DSL runs over telephone lines (dedicated per user). DSL is generally more widely available in rural areas because telephone infrastructure is more ubiquitous than cable TV infrastructure.",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A WAN connects:",
+    "options": [
+      "Multiple LANs across large geographic distances",
+      "Devices within a single room",
+      "Wireless devices in a personal area",
+      "Floors within one building only"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which technology uses power lines to transmit network data in homes?",
+    "options": [
+      "ISDN",
+      "PLC (Powerline Communication / HomePlug)",
+      "Cable modem",
+      "DSL"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What type of network covers a city or large campus — larger than a LAN but smaller than a WAN?",
+    "options": [
+      "LAN",
+      "PAN",
+      "MAN (Metropolitan Area Network)",
+      "SAN"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which internet connection type is shared among neighborhood users, meaning speeds can decrease during peak hours?",
+    "options": [
+      "DSL",
+      "Dedicated fiber",
+      "T1 line",
+      "Cable"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does \"last mile\" refer to in telecommunications?",
+    "options": [
+      "Satellite",
+      "ISDN",
+      "DSL",
+      "Fixed wireless"
+    ],
+    "answer": 0,
+    "explanation": "Satellite internet uses dish antennas pointed at geostationary satellites (~22,000 miles up) and is the primary broadband option in rural areas lacking cable/fiber. High latency (500–800ms round-trip) is a key characteristic due to signal travel distance.",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician needs to attach an RJ-45 connector to the end of a Cat6 cable. Which tool is required?",
+    "options": [
+      "Punchdown tool",
+      "Crimper",
+      "Cable tester",
+      "Toner probe"
+    ],
+    "answer": 1,
+    "explanation": "A crimper (RJ-45 crimping tool) is used to physically attach an RJ-45 connector to the cable end, locking the conductors in place. It is used when making patch cables or field-terminating cable runs with plugs.",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician is terminating Cat6 cable into a keystone jack in a wall plate. Which tool is used to seat each conductor into the jack?",
+    "options": [
+      "Crimper",
+      "Wire stripper",
+      "Punchdown tool",
+      "Loopback plug"
+    ],
+    "answer": 2,
+    "explanation": "A punchdown tool (impact tool) pushes individual conductors into the IDC (insulation displacement contact) slots of a keystone jack or patch panel (110-block standard). The blade cuts excess wire flush during the punch.",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "After terminating a patch cable, a technician wants to verify that all eight conductors are connected in the correct order and there are no open pairs. Which tool performs this test?",
+    "options": [
+      "Toner probe",
+      "Wi-Fi analyzer",
+      "Loopback plug",
+      "Cable tester"
+    ],
+    "answer": 3,
+    "explanation": "A cable tester (continuity tester) verifies that each pin on one end maps correctly to the matching pin on the other end. It detects opens (broken conductors), shorts (conductors touching), reversed pairs, and miswires. It does not measure signal quality or bandwidth.",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician cannot locate which port in the patch panel corresponds to the wall jack in room 204. Which tool pair is used to identify the cable?",
+    "options": [
+      "Toner probe (tone generator + inductive amplifier)",
+      "Cable tester",
+      "Wi-Fi analyzer",
+      "Network tap"
+    ],
+    "answer": 0,
+    "explanation": "A toner probe has two parts: a tone generator attached to one end of the cable injects an audio signal, and the inductive amplifier (probe) detects the signal by proximity — no electrical contact required. This allows tracing cables through walls, ceilings, and patch panels without cutting into anyt",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician suspects a NIC or switch port is faulty but the network cable and switch appear functional. Which tool tests the port in isolation?",
+    "options": [
+      "Cable tester",
+      "Loopback plug",
+      "Toner probe",
+      "Punchdown tool"
+    ],
+    "answer": 1,
+    "explanation": "A loopback plug connects the transmit (TX) pair to the receive (RX) pair on the same port. When the NIC or switch port sends a signal, it receives its own signal back. Diagnostic software confirms whether the port hardware is functioning. This test isolates the port from all external cable and netwo",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A user reports intermittent Wi-Fi drops. The technician suspects channel interference from neighboring networks. Which tool identifies overlapping channels and signal strength?",
+    "options": [
+      "Cable tester",
+      "Network tap",
+      "Wi-Fi analyzer",
+      "Toner probe"
+    ],
+    "answer": 2,
+    "explanation": "A Wi-Fi analyzer (software or dedicated hardware) displays all visible SSIDs, their broadcast channels, signal strength (dBm), and security type. It identifies channel overlap — a common cause of interference on the 2.4 GHz band where only channels 1, 6, and 11 are non-overlapping.",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A network administrator needs to capture all traffic passing between a firewall and a core switch without disrupting active connections. Which device accomplishes this passively?",
+    "options": [
+      "Loopback plug",
+      "Cable tester",
+      "Wi-Fi analyzer",
+      "Network tap"
+    ],
+    "answer": 3,
+    "explanation": "A network tap (test access point) is an inline passive device that copies all traffic to a monitoring port without affecting the live data flow. Unlike a SPAN port on a switch, a tap cannot drop packets due to oversubscription and does not require switch configuration.",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which networking tool is specifically designed to remove the outer jacket of a UTP cable without cutting through the inner conductor insulation?",
+    "options": [
+      "Wire stripper / cable stripper",
+      "Crimper",
+      "Punchdown tool",
+      "Scissors"
+    ],
+    "answer": 0,
+    "explanation": "A cable stripper (jacket stripper) uses an adjustable blade depth that scores and removes only the outer PVC jacket. Cutting too deep damages the insulation on individual conductors, which can cause intermittent faults. A standard wire stripper for solid wire can cut too deep on twisted pair — use t",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which tool would a technician use to verify that a newly installed structured cabling run meets Cat6 performance specifications (attenuation, NEXT, return loss)?",
+    "options": [
+      "Cable tester (continuity tester)",
+      "Cable certifier",
+      "Toner probe",
+      "Wi-Fi analyzer"
+    ],
+    "answer": 1,
+    "explanation": "A cable certifier (e.g., Fluke DSX series) performs full electrical characterization: insertion loss, near-end crosstalk (NEXT), return loss, and propagation delay. It certifies compliance with TIA/EIA standards. A basic continuity tester only checks wiring order — it cannot certify performance spec",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician needs to identify which wall port connects to a specific patch panel port in a wiring closet without labeled cables. Which tool should they use?",
+    "options": [
+      "Cable certifier",
+      "Wi-Fi analyzer",
+      "Toner probe (tone generator and probe)",
+      "Multimeter"
+    ],
+    "answer": 2,
+    "explanation": "A toner probe sends a tone signal down the cable; the inductive amplifier probe detects it at the other end, allowing the technician to identify cable runs. A cable certifier tests electrical performance specifications, not cable tracing.",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which cable type uses light pulses and is immune to electromagnetic interference?",
+    "options": [
+      "Cat6 UTP",
+      "Coaxial",
+      "STP",
+      "Fiber optic"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What connector is used on standard Cat5e and Cat6 Ethernet cable?",
+    "options": [
+      "RJ-45",
+      "BNC",
+      "RJ-11",
+      "LC"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which cable type is used for cable television and has a center conductor surrounded by shielding?",
+    "options": [
+      "Twisted pair",
+      "Coaxial",
+      "Fiber optic",
+      "Serial"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which fiber optic connector is small, uses a push-pull locking mechanism, and is commonly found in data center patch panels?",
+    "options": [
+      "ST",
+      "SC",
+      "LC",
+      "FC"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What cable category is rated for 10 Gbps up to 55 meters?",
+    "options": [
+      "Cat5",
+      "Cat5e",
+      "Cat6a",
+      "Cat6"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which display cable carries both audio and video signals in a single cable?",
+    "options": [
+      "HDMI",
+      "DVI-D",
+      "VGA",
+      "DVI-A"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician needs to run cable through a plenum space (HVAC airspace above a drop ceiling). Which cable type is required?",
+    "options": [
+      "PVC-jacketed standard cable",
+      "Plenum-rated cable (CMP)",
+      "Standard Cat5e",
+      "Coaxial RG-6"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the maximum data transfer speed of USB 2.0?",
+    "options": [
+      "12 Mbps",
+      "5 Gbps",
+      "480 Mbps",
+      "10 Gbps"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which connector is used for traditional telephone (landline) wall jacks and resembles RJ-45 but is smaller?",
+    "options": [
+      "PVC (polyvinyl chloride) rated",
+      "Armored (metal-jacketed)",
+      "Direct-burial rated",
+      "Plenum-rated (CMP)"
+    ],
+    "answer": 3,
+    "explanation": "Plenum-rated cable uses a fire-retardant low-smoke jacket required by building codes when cables run through HVAC plenum spaces. PVC jackets release toxic smoke when burned, which would be distributed through the air-handling system. Look for CMP (Communications Multipurpose Plenum) rating.",
+    "objective": "3.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which USB connector type uses a reversible, oval-shaped plug and is the standard connector for USB 3.1 Gen 2 and Thunderbolt 3/4 devices?",
+    "options": [
+      "USB-C",
+      "USB-B",
+      "USB Micro-B",
+      "USB-A"
+    ],
+    "answer": 0,
+    "explanation": "USB-C is reversible and supports USB 3.1/3.2, Thunderbolt 3/4, and USB4 depending on the device.",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician identifies a 15-pin D-sub connector arranged in three rows of five pins on the back of an older monitor. What interface does this connector belong to?",
+    "options": [
+      "DVI-D",
+      "VGA (HD-15)",
+      "DisplayPort",
+      "Serial DB-15"
+    ],
+    "answer": 1,
+    "explanation": "VGA uses the HD-15 (D-sub 15) connector with three rows of five pins.",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What fiber optic connector uses a push-pull square housing and is common in enterprise network equipment and ISP infrastructure?",
+    "options": [
+      "LC",
+      "ST",
+      "SC",
+      "FC"
+    ],
+    "answer": 2,
+    "explanation": "SC (Subscriber Connector) has a square push-pull housing. LC is smaller with a latch; ST uses a bayonet twist-lock.",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician sees a port on a workstation with a lightning bolt icon next to a USB-C shaped port. What interface does this indicate?",
+    "options": [
+      "USB 3.2 Gen 2",
+      "USB Power Delivery only",
+      "DisplayPort Alt Mode only",
+      "Thunderbolt 3 or 4"
+    ],
+    "answer": 3,
+    "explanation": "The lightning bolt icon identifies a Thunderbolt port; Thunderbolt 3 and 4 use the USB-C physical connector.",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which connector type is used by eSATA to connect external storage devices, and how does it differ from an internal SATA connector?",
+    "options": [
+      "eSATA uses a modified 7-pin shielded connector rated for repeated hot-plugging; internal SATA uses an unshielded version of the same pin configuration",
+      "eSATA and internal SATA use identical connectors",
+      "eSATA uses RJ-45; internal SATA uses a 7-pin L-shaped connector",
+      "eSATA uses USB-C; internal SATA uses a proprietary connector"
+    ],
+    "answer": 0,
+    "explanation": "eSATA uses a similar 7-pin configuration but with a shielded connector designed for external use and repeated connections.",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A laptop has a Mini DisplayPort. What adapter is needed to connect it to a standard HDMI monitor?",
+    "options": [
+      "No adapter needed — they are the same connector",
+      "Mini DisplayPort to HDMI adapter or cable",
+      "DVI to Mini DisplayPort adapter",
+      "VGA to Mini DisplayPort adapter"
+    ],
+    "answer": 1,
+    "explanation": "Mini DisplayPort and HDMI are different connectors; a passive or active adapter is required.",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which connector type is used by the PS/2 interface for keyboards and mice, and what feature distinguishes the keyboard port from the mouse port on a system with both?",
+    "options": [
+      "USB-A connectors; no visual distinction",
+      "9-pin serial; distinguished by device driver",
+      "6-pin DIN connectors; they are color-coded (purple for keyboard, green for mouse)",
+      "RJ-11; distinguished by port labeling only"
+    ],
+    "answer": 2,
+    "explanation": "PS/2 uses a 6-pin Mini-DIN connector; the keyboard port is purple and the mouse port is green by convention.",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which fiber optic connector is small form-factor, uses a latch mechanism, and is the standard choice for SFP/SFP+ transceivers in enterprise switches?",
+    "options": [
+      "SC (Subscriber Connector)",
+      "ST (Straight Tip)",
+      "FC (Fiber Channel)",
+      "LC (Lucent Connector)"
+    ],
+    "answer": 3,
+    "explanation": "LC connectors are approximately half the size of SC connectors, use a push-pull latch, and are the standard for SFP and SFP+ transceivers in high-density enterprise switch deployments.",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A monitor has a white rectangular connector with 24 pins in three rows plus one additional pin. What connector type and signal does this represent?",
+    "options": [
+      "DVI-D (dual-link) — digital only",
+      "DVI-I — analog and digital",
+      "VGA — analog only",
+      "DisplayPort — digital only"
+    ],
+    "answer": 0,
+    "explanation": "DVI-D dual-link uses 24 data pins plus a ground blade. DVI-I adds analog pins for analog signal support. The white rectangular housing is the DVI standard; pin count distinguishes single-link vs dual-link and -D vs -I.",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A legacy point-of-sale (POS) system uses a 9-pin D-shaped (DE-9) connector for its receipt printer. What interface standard does this connector implement?",
+    "options": [
+      "USB 1.1",
+      "RS-232 serial",
+      "PS/2",
+      "VGA"
+    ],
+    "answer": 1,
+    "explanation": "The DE-9 (9-pin D-sub) connector is the standard physical interface for RS-232 serial communications, used in legacy POS terminals, barcode scanners, and serial printers. PS/2 uses a 6-pin Mini-DIN; VGA uses a 15-pin HD-15 D-sub.",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician installs RAM in a dual-channel configuration. What is required for dual-channel to activate?",
+    "options": [
+      "Any two sticks of the same brand",
+      "Two sticks of different speeds",
+      "Matched pairs installed in the correct slots, typically alternating slots as per motherboard manual",
+      "One stick in each bank regardless of slot"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What type of RAM includes error-correcting code and is primarily used in servers?",
+    "options": [
+      "Standard DIMM",
+      "Buffered DIMM",
+      "SO-DIMM",
+      "ECC RAM"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A computer produces beep codes after new RAM is installed. The MOST likely cause is:",
+    "options": [
+      "RAM not fully seated or incompatible with the motherboard",
+      "Too much RAM installed",
+      "Wrong operating system",
+      "CPU overheating"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does the specification \"DDR4-3200\" indicate?",
+    "options": [
+      "3200 GB capacity",
+      "DDR4 type RAM with a 3200 MT/s transfer rate",
+      "3200 MHz actual base clock",
+      "3200 nanosecond latency"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which Windows feature uses hard disk space as an overflow area when physical RAM is full?",
+    "options": [
+      "Upgrade the CPU",
+      "Increase the page file size only",
+      "Add more physical RAM",
+      "Replace the hard drive with SSD only"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the standard RAM form factor used in desktop computers?",
+    "options": [
+      "SO-DIMM",
+      "MicroDIMM",
+      "RIMM",
+      "DIMM (288-pin for DDR4)"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What specification indicates the CAS latency of a RAM module?",
+    "options": [
+      "CL16 or similar notation such as 16-18-18-38",
+      "DDR4-3200",
+      "8 GB capacity",
+      "1.35V operating voltage"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What should a technician do before installing or removing RAM?",
+    "options": [
+      "Back up the hard drive first",
+      "Power off the system and discharge static using an ESD strap or by touching the chassis",
+      "Update the BIOS first",
+      "Format the drive first"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician installs 3200 MHz DDR4 RAM but the BIOS reports it running at 2133 MHz. What must be enabled in BIOS/UEFI to achieve the rated speed?",
+    "options": [
+      "Dual-channel mode",
+      "ECC support",
+      "XMP (Extreme Memory Profile) or DOCP",
+      "Memory remapping"
+    ],
+    "answer": 2,
+    "explanation": "High-speed DDR4 kits store overclock profiles in the SPD chip using XMP (Intel) or DOCP (AMD). Without enabling XMP/DOCP in BIOS, the system defaults to the JEDEC standard speed (typically 2133 or 2400 MHz) rather than the rated kit speed.",
+    "objective": "3.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which storage technology has no moving parts and stores data on flash memory chips?",
+    "options": [
+      "HDD",
+      "Optical drive",
+      "Tape drive",
+      "SSD"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What RAID level provides disk mirroring with data redundancy but no striping?",
+    "options": [
+      "RAID 1",
+      "RAID 0",
+      "RAID 5",
+      "RAID 10"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which RAID level provides striping with parity and requires a minimum of 3 drives?",
+    "options": [
+      "RAID 0",
+      "RAID 5",
+      "RAID 1",
+      "RAID 6"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A user wants maximum storage capacity across two drives with no redundancy. Which RAID level should be used?",
+    "options": [
+      "Only NVMe SSDs",
+      "Only SATA SSDs",
+      "A small form factor connector that supports both SATA and NVMe SSDs depending on keying",
+      "A USB storage standard"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which storage device uses magnetic platters and a read/write head?",
+    "options": [
+      "SSD",
+      "NVMe",
+      "eMMC",
+      "HDD"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What RPM speed is typical for a standard performance desktop hard drive?",
+    "options": [
+      "7200 RPM",
+      "5400 RPM",
+      "4200 RPM",
+      "15,000 RPM"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "An SSD is significantly faster than an HDD primarily because:",
+    "options": [
+      "It runs at a higher voltage",
+      "It has no moving parts and uses flash memory for near-instant random access",
+      "It uses a different BIOS mode",
+      "It spins faster"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which of the following is NOT a standard RAID level?",
+    "options": [
+      "RAID 0",
+      "RAID 1",
+      "RAID 7",
+      "RAID 5"
+    ],
+    "answer": 2,
+    "explanation": "RAID 7 is not a standard implementation.",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which storage interface provides the highest sequential performance for an M.2 SSD by communicating directly over PCIe lanes, bypassing the SATA controller?",
+    "options": [
+      "SATA III (6 Gbps)",
+      "mSATA",
+      "eSATA",
+      "NVMe via PCIe"
+    ],
+    "answer": 3,
+    "explanation": "NVMe (Non-Volatile Memory Express) communicates directly over PCIe lanes, delivering sequential read speeds of 3,000–7,000+ MB/s versus SATA III's 550 MB/s limit. NVMe and SATA M.2 drives share the same M.2 physical slot but require different controller support.",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the most common desktop motherboard form factor?",
+    "options": [
+      "ATX",
+      "Micro-ATX",
+      "Mini-ITX",
+      "E-ATX"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the purpose of thermal paste when installing a CPU cooler?",
+    "options": [
+      "Adhesive to hold the cooler in place",
+      "Fills microscopic air gaps to improve heat transfer between CPU and cooler",
+      "Provides electrical insulation",
+      "Prevents corrosion on the CPU die"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which PCIe slot is used for modern graphics cards?",
+    "options": [
+      "PCIe x1",
+      "PCIe x4",
+      "PCIe x16",
+      "PCIe x8"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does the chipset on a motherboard control?",
+    "options": [
+      "CPU clock speed",
+      "RAM capacity only",
+      "GPU rendering calculations",
+      "Communication between the CPU, RAM, storage, and I/O devices"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician installs a new GPU and the system boots to a black screen. The FIRST thing to check is:",
+    "options": [
+      "Ensure the GPU is fully seated in the PCIe x16 slot and all power connectors are attached",
+      "Update GPU drivers remotely",
+      "Replace the monitor",
+      "Reinstall the OS"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the purpose of the CMOS battery on a motherboard?",
+    "options": [
+      "Provides backup power for RAM contents",
+      "Maintains BIOS/UEFI settings and the real-time clock when the system is powered off",
+      "Powers the CPU during startup",
+      "Charges the laptop battery"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which specification describes how fast data moves between the CPU and RAM?",
+    "options": [
+      "PCI bus speed",
+      "USB transfer rate",
+      "Memory bus speed or FSB (Front Side Bus)",
+      "SATA throughput"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What motherboard component manages USB ports, SATA, audio, and other I/O functions?",
+    "options": [
+      "Northbridge",
+      "CMOS chip",
+      "VRM",
+      "Southbridge or PCH (Platform Controller Hub)"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A POST beep pattern of one long beep followed by two short beeps typically indicates a problem with:",
+    "options": [
+      "Video card or display subsystem",
+      "RAM",
+      "Power supply",
+      "CPU"
+    ],
+    "answer": 0,
+    "explanation": "On AMI BIOS systems, one long beep + two short beeps indicates a video/display subsystem failure. Beep codes are vendor-specific: AMI, Award, and Phoenix each use different patterns for the same errors. Always identify the BIOS vendor before interpreting codes. On Award BIOS, one long + two short al",
+    "objective": "3.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A PCIe x1 network card needs to be installed but the motherboard's only available slots are PCIe x16. Can the x1 card be placed in the x16 slot?",
+    "options": [
+      "No — PCIe x1 cards cannot physically fit in an x16 slot",
+      "Yes — a smaller PCIe card fits in any larger slot and operates at x1 bandwidth",
+      "Yes — but only if the BIOS is updated first to support cross-slot installation",
+      "No — the card would operate at x16 speed and cause electrical damage"
+    ],
+    "answer": 1,
+    "explanation": "PCIe is backward compatible. A PCIe x1 card physically fits in any larger slot (x4, x8, x16) and operates at x1 bandwidth. The slot width sets the maximum link width; the protocol negotiates the actual width automatically.",
+    "objective": "3.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What PSU form factor is used in standard ATX desktop cases?",
+    "options": [
+      "SFX",
+      "TFX",
+      "ATX",
+      "Flex ATX"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A desktop randomly shuts off under heavy load. The MOST likely hardware cause is:",
+    "options": [
+      "Faulty RAM",
+      "Bad monitor",
+      "Bad hard drive",
+      "Insufficient or failing power supply"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does the 80 Plus certification on a PSU indicate?",
+    "options": [
+      "At least 80% energy efficiency under standard load conditions",
+      "Minimum power output in watts",
+      "Maximum operating temperature",
+      "Safety compliance standard"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which PSU connector provides primary power to the motherboard in modern ATX systems?",
+    "options": [
+      "4-pin Molex",
+      "24-pin ATX main connector",
+      "6-pin PCIe",
+      "8-pin EPS CPU connector"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What connector provides supplemental power to high-end graphics cards?",
+    "options": [
+      "SATA power connector",
+      "4-pin Molex",
+      "6-pin or 8-pin PCIe power connector",
+      "24-pin ATX"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician is building a workstation with a high-end GPU and multiple drives. What PSU consideration is most important?",
+    "options": [
+      "Smallest physical size",
+      "Highest number of output cables",
+      "Cheapest option available",
+      "Adequate wattage with approximately 20-30% headroom above calculated load"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which 80 Plus PSU rating is the first tier certified to reach 90% efficiency at 50% load?",
+    "options": [
+      "80 Plus Platinum",
+      "80 Plus Bronze",
+      "80 Plus Gold",
+      "80 Plus White"
+    ],
+    "answer": 0,
+    "explanation": "80 Plus Platinum is certified at 90/92/89% efficiency at 20/50/100% load. 80 Plus Gold reaches 87/90/87%. The key distinction: Platinum hits 90% at the lower 20% load threshold; Gold only reaches 90% at exactly 50% load. Platinum is the answer for \"consistently 90%+.\"",
+    "objective": "3.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the purpose of the 4-pin or 8-pin CPU power connector (EPS12V)?",
+    "options": [
+      "Provides power to SATA drives",
+      "Delivers dedicated 12V power to the CPU voltage regulator modules on the motherboard",
+      "Powers the GPU",
+      "Provides CMOS battery backup"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Before replacing a PSU, what safety step is essential?",
+    "options": [
+      "Remove the GPU first",
+      "Boot into safe mode first",
+      "Unplug the AC power cord and press the power button to discharge capacitors",
+      "Back up all data on the drives"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does \"single-rail\" vs \"multi-rail\" describe on a PSU?",
+    "options": [
+      "Number of output wattage ratings",
+      "The PSU efficiency rating",
+      "Whether the PSU is modular",
+      "How the 12V output power is distributed — single rail has one large 12V output vs. multiple smaller rails"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What type of printer uses a laser to create an electrostatic image on a drum and then applies toner?",
+    "options": [
+      "Laser",
+      "Dot matrix",
+      "Inkjet",
+      "Thermal"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which laser printer component transfers the toner image from the drum to the paper?",
+    "options": [
+      "Fuser",
+      "Transfer belt or transfer roller",
+      "Developer",
+      "Corona wire"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which step in the laser printing process \"writes\" the image onto the photosensitive drum using a laser beam?",
+    "options": [
+      "Charging",
+      "Developing",
+      "Exposing (writing)",
+      "Transferring"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A laser printer consistently prints a vertical black line down every page. The MOST likely cause is:",
+    "options": [
+      "Low toner",
+      "Fuser failure",
+      "Paper jam residue",
+      "Scratch or damage on the drum surface"
+    ],
+    "answer": 3,
+    "explanation": "A scratch or gouge on the photosensitive drum holds toner in that spot every rotation, producing a consistent vertical black line. Distinguish from: a contaminated primary corona wire (also causes a black line — clean the wire first, cheaper fix), or a defective cleaning blade (causes smearing/strea",
+    "objective": "3.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What protocol allows Windows to automatically discover and install a network printer?",
+    "options": [
+      "WSD (Web Services for Devices) or Bonjour",
+      "FTP",
+      "Telnet",
+      "SNMP"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which printer type is the BEST choice for printing multipart carbon copy forms?",
+    "options": [
+      "Laser",
+      "Impact (dot matrix)",
+      "Thermal",
+      "Inkjet"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the purpose of a DHCP reservation for a network printer?",
+    "options": [
+      "Faster printing speed",
+      "Adds print queue management",
+      "Ensures the printer always receives the same IP address for consistent network access",
+      "Provides wireless encryption for print jobs"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A network printer shows \"offline\" in Windows despite being powered on. The FIRST thing to check is:",
+    "options": [
+      "Reinstall Windows",
+      "Update system BIOS",
+      "Replace toner cartridge",
+      "Verify the printer IP address has not changed and the correct port is configured"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What allows printing from any device to a compatible printer over the internet without local drivers?",
+    "options": [
+      "Cloud printing services such as Google Cloud Print or vendor equivalents",
+      "Direct IP printing only",
+      "FTP print server",
+      "Bluetooth printing"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A print job is stuck in the queue and the printer will not print any subsequent jobs. What Windows service should the technician restart to clear the stuck print queue?",
+    "options": [
+      "Windows Update Service",
+      "Print Spooler service",
+      "Remote Desktop Services",
+      "Background Intelligent Transfer Service (BITS)"
+    ],
+    "answer": 1,
+    "explanation": "The Print Spooler service manages print jobs queued to print devices. Stopping the spooler, deleting files in C:\\Windows\\System32\\spool\\PRINTERS, and restarting the service clears a stuck print queue without rebooting the system.",
+    "objective": "3.7",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which laser printer consumable is replaced most frequently?",
+    "options": [
+      "Fuser assembly",
+      "Drum unit",
+      "Toner cartridge",
+      "Transfer belt"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the correct sequence of the laser printing process?",
+    "options": [
+      "Clean, Charge, Expose, Develop, Transfer, Fuse",
+      "Develop, Charge, Expose, Transfer, Clean, Fuse",
+      "Expose, Charge, Transfer, Develop, Fuse, Clean",
+      "Charge, Expose, Develop, Transfer, Fuse, Clean"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A laser printer produces faded output even after installing a new toner cartridge. The MOST likely cause is:",
+    "options": [
+      "Toner not properly distributed in the cartridge or wrong cartridge model installed",
+      "Wrong paper type",
+      "Print driver issue",
+      "Network connection problem"
+    ],
+    "answer": 0,
+    "explanation": "Triage in order: (1) Confirm the protective sealing/shipping tape was fully removed from the new cartridge — this is the most common cause of faded output after installation. (2) Shake the cartridge gently side to side to redistribute toner. (3) Verify the cartridge part number matches the printer m",
+    "objective": "3.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What type of printer uses a ribbon and impact pins to strike paper, producing characters?",
+    "options": [
+      "Laser",
+      "Impact (dot matrix)",
+      "Inkjet",
+      "Thermal"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What maintenance tasks should be performed after replacing inkjet ink cartridges?",
+    "options": [
+      "Clean the drum unit",
+      "Replace the fuser assembly",
+      "Calibrate the printer and run a printhead cleaning cycle",
+      "Reset the NVRAM"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A thermal receipt printer produces completely blank receipts. The MOST likely cause is:",
+    "options": [
+      "Empty ink cartridge",
+      "Printhead clogged",
+      "Driver not installed",
+      "Paper loaded backward with the non-coated side facing the printhead"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What protective equipment should be worn when replacing laser printer toner?",
+    "options": [
+      "Latex or nitrile gloves and a dust mask",
+      "Safety glasses only",
+      "Face shield",
+      "No protection is needed"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "How should used toner cartridges be disposed of properly?",
+    "options": [
+      "Regular trash bin",
+      "Through manufacturer recycling programs or designated electronics recycling centers",
+      "Incineration",
+      "Rinse with water and discard"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A laser printer produces pages where the toner smears or wipes off when touched. Which component requires replacement?",
+    "options": [
+      "Toner cartridge",
+      "Transfer belt",
+      "Fuser assembly",
+      "Pickup rollers"
+    ],
+    "answer": 2,
+    "explanation": "The fuser assembly applies heat and pressure to permanently bond toner to paper. If toner smears or rubs off after printing, the fuser is not reaching proper temperature or the pressure rollers are worn, indicating it needs replacement.",
+    "objective": "3.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "After an inkjet printer has been unused for several weeks, print quality shows streaks and missing colors. What is the FIRST action a technician should take?",
+    "options": [
+      "Replace all ink cartridges immediately",
+      "Replace the printer",
+      "Disassemble the printer and manually clean with water",
+      "Run the printer's built-in printhead cleaning utility"
+    ],
+    "answer": 3,
+    "explanation": "Inkjet printheads can clog from dried ink during disuse. Most inkjet printers include a maintenance utility (accessible from printer software or control panel) that purges and primes the nozzles. This should be tried before replacing cartridges.",
+    "objective": "3.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A user connects a USB keyboard and it is not recognized. After trying another USB port with no improvement, what is the NEXT step?",
+    "options": [
+      "Check Device Manager for driver issues or unrecognized devices",
+      "Replace the keyboard immediately",
+      "Reinstall the OS",
+      "Update BIOS"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which display setting controls how many pixels are displayed horizontally and vertically?",
+    "options": [
+      "Refresh rate",
+      "Resolution",
+      "Color depth",
+      "Brightness"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A user reports their second monitor shows a duplicate image instead of extended desktop. What setting needs to change?",
+    "options": [
+      "Color profile",
+      "Monitor refresh rate",
+      "Display mode in Windows display settings — change from Duplicate to Extend",
+      "GPU driver version"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the standard refresh rate for most consumer monitors?",
+    "options": [
+      "Replace the monitor",
+      "Update BIOS",
+      "Reinstall the OS",
+      "Recalibrate the touchscreen through system settings"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What type of scanner captures documents by passing a light source over the document and detecting reflected light?",
+    "options": [
+      "Flatbed scanner",
+      "Thermal scanner",
+      "Impact scanner",
+      "Drum scanner"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which device converts physical drawings or documents into digital format?",
+    "options": [
+      "Plotter",
+      "Scanner",
+      "Projector",
+      "Digitizer tablet"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the primary purpose of a barcode reader in a retail environment?",
+    "options": [
+      "Print barcodes on products",
+      "Print customer receipts",
+      "Scan and decode barcode data for point-of-sale systems",
+      "Manage inventory databases directly"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.8",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which cloud service model provides virtualized computing resources such as VMs over the internet?",
+    "options": [
+      "SaaS",
+      "PaaS",
+      "DaaS",
+      "IaaS"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What cloud deployment model is used exclusively by a single organization?",
+    "options": [
+      "Private cloud",
+      "Community cloud",
+      "Public cloud",
+      "Hybrid cloud"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A company uses both on-premises infrastructure and a public cloud provider simultaneously. This is called a:",
+    "options": [
+      "Private cloud",
+      "Hybrid cloud",
+      "Community cloud",
+      "Multi-cloud"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is \"elasticity\" in cloud computing?",
+    "options": [
+      "Physical flexibility of cloud server hardware",
+      "Cost reduction over time through usage",
+      "Ability to automatically scale resources up or down based on demand",
+      "Data center geographic redundancy"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which cloud characteristic allows users to provision services without human interaction from the provider?",
+    "options": [
+      "Resource pooling",
+      "Rapid elasticity",
+      "Measured service",
+      "On-demand self-service"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the MAIN advantage of cloud-based file storage such as OneDrive or Google Drive for end users?",
+    "options": [
+      "Access files from any device with automatic backup and synchronization",
+      "Faster local file access compared to local drives",
+      "Lower internet bandwidth usage",
+      "Better security than all local storage options"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which cloud service model provides a development platform including OS, middleware, and runtime environment?",
+    "options": [
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "FaaS"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does \"multi-tenancy\" mean in cloud computing?",
+    "options": [
+      "Multiple data centers in different regions",
+      "Multiple cloud providers used simultaneously",
+      "Multiple customers sharing the same physical infrastructure",
+      "Multiple administrators managing one cloud account"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which cloud characteristic ensures services are accessible from any device and location over the network?",
+    "options": [
+      "Elasticity",
+      "On-demand self-service",
+      "Metered service",
+      "Broad network access"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the MAIN concern with storing sensitive data in a public cloud environment?",
+    "options": [
+      "Data privacy, compliance requirements, and shared infrastructure security risks",
+      "Slower access speeds compared to local storage",
+      "Higher cost than all on-premises options",
+      "Limited storage capacity"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which of the following is an example of SaaS?",
+    "options": [
+      "Amazon EC2",
+      "Microsoft 365 and Google Workspace",
+      "Microsoft Azure Virtual Machines",
+      "AWS Lambda"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is a CDN (Content Delivery Network) used for?",
+    "options": [
+      "Domain name resolution",
+      "Providing VPN services",
+      "Distributing content geographically closer to users to reduce latency",
+      "Cloud storage backup"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does \"cloud bursting\" refer to?",
+    "options": [
+      "A cloud security breach",
+      "Migrating all workloads to the cloud permanently",
+      "Permanently deleting excess cloud resources",
+      "Automatically offloading excess workloads to the public cloud when on-premises capacity is exceeded"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which cloud characteristic tracks resource usage for billing and audit purposes?",
+    "options": [
+      "Measured service",
+      "Resource pooling",
+      "Rapid elasticity",
+      "On-demand self-service"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A company migrates its email server to Microsoft 365. Which cloud model does this represent?",
+    "options": [
+      "IaaS",
+      "SaaS",
+      "PaaS",
+      "Private cloud"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the purpose of a cloud access security broker (CASB)?",
+    "options": [
+      "Route traffic between cloud regions",
+      "Manage cloud billing and cost allocation",
+      "Enforce security policies between cloud users and cloud service providers",
+      "Provide CDN services"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which term describes the process of moving applications and data from on-premises to a cloud environment?",
+    "options": [
+      "Cloud bursting",
+      "Containerization",
+      "Virtualization",
+      "Cloud migration"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is DaaS (Desktop as a Service)?",
+    "options": [
+      "Virtual desktop environments hosted in the cloud and accessed remotely by users",
+      "Data backup delivered as a service",
+      "Database management service",
+      "DNS delivered as a service"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A small business wants to use cloud software without managing any servers or platforms. Which model is BEST?",
+    "options": [
+      "IaaS",
+      "SaaS",
+      "PaaS",
+      "Private cloud"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the primary benefit of using a cloud provider managed database service?",
+    "options": [
+      "Guaranteed faster query performance",
+      "Lower cost than any on-premises option",
+      "The provider handles patching, backups, scaling, and availability automatically",
+      "Full unrestricted database access"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What software layer allows multiple virtual machines to run simultaneously on a single physical host?",
+    "options": [
+      "BIOS",
+      "Container runtime",
+      "Guest OS",
+      "Hypervisor"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which of the following is an example of a Type 2 hypervisor?",
+    "options": [
+      "VMware Workstation",
+      "Microsoft Hyper-V (bare metal server installation)",
+      "VMware ESXi",
+      "Citrix XenServer"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is a \"sandbox\" in the context of virtualization?",
+    "options": [
+      "Physical isolated hardware environment",
+      "An isolated VM environment for testing software safely without affecting the host system",
+      "Encrypted storage container",
+      "Cloud backup location"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What BIOS/UEFI setting must be enabled for virtualization software to run virtual machines?",
+    "options": [
+      "Secure Boot",
+      "AHCI storage mode",
+      "Intel VT-x or AMD-V (hardware virtualization support)",
+      "XMP memory profile"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the main benefit of using VMs for software testing?",
+    "options": [
+      "VMs require less RAM than native installations",
+      "VMs require no host OS",
+      "VMs always run faster than native installations",
+      "Provides isolated environments that can be rolled back or discarded after testing"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the minimum consideration when selecting a host PC for running virtual machines?",
+    "options": [
+      "Sufficient RAM, CPU cores, and storage to run both host and guest systems simultaneously",
+      "Dedicated GPU",
+      "Network switch",
+      "RAID storage array"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which hypervisor technology is built directly into Windows 10 and 11 Pro and later versions?",
+    "options": [
+      "VMware Workstation",
+      "Microsoft Hyper-V",
+      "Oracle VirtualBox",
+      "Windows Sandbox only"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What resource shortage is MOST likely to cause poor VM performance?",
+    "options": [
+      "Monitor resolution setting",
+      "USB devices attached to the host",
+      "Insufficient RAM allocated to the VM",
+      "External network speed"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does \"guest OS\" refer to in virtualization?",
+    "options": [
+      "The hypervisor software itself",
+      "The cloud provider OS",
+      "The operating system on the physical host",
+      "The operating system running inside the virtual machine"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does network bridging mode do for a VM?",
+    "options": [
+      "Makes the VM appear as a separate device on the physical network with its own IP address",
+      "Gives the VM an isolated private network only",
+      "Shares the host IP address via NAT",
+      "Prevents the VM from accessing any network"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A technician wants to test malware safely. The BEST approach is:",
+    "options": [
+      "Run it directly on the production machine",
+      "Test it in an isolated VM with no network access",
+      "Run it in a Docker container with network access",
+      "Use a separate partition on the same drive"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which virtualization feature passes a physical disk directly to a VM without going through the hypervisor storage layer?",
+    "options": [
+      "VM snapshotting",
+      "NAT networking",
+      "Disk or device passthrough",
+      "VM cloning"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the purpose of VM cloning?",
+    "options": [
+      "Backs up the VM to cloud storage",
+      "Creates a snapshot of the current VM state",
+      "Migrates the VM to different physical hardware",
+      "Creates an identical copy of a VM for rapid deployment or testing"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does CPU affinity do in VM configuration?",
+    "options": [
+      "Assigns specific physical CPU cores to a VM for dedicated processing",
+      "Overclocks the CPU for the VM",
+      "Enables CPU virtualization extensions",
+      "Limits VM network bandwidth"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which tool is used to manage VMware virtual machines on a desktop computer?",
+    "options": [
+      "Hyper-V Manager",
+      "VMware Workstation",
+      "VirtualBox Manager",
+      "Windows Sandbox"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A PC powers on with fans spinning but no POST and no display output. What component should be reseated FIRST?",
+    "options": [
+      "GPU",
+      "CPU",
+      "RAM",
+      "Hard drive"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "5.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A PC emits three short beeps during POST (AMI BIOS) and fails to boot. What does this indicate?",
+    "options": [
+      "Successful POST completion",
+      "Power supply failure",
+      "CPU failure",
+      "RAM error — memory not detected or failed"
+    ],
+    "answer": 3,
+    "explanation": "On AMI BIOS, three short beeps indicate a RAM/memory error (no memory installed, or memory failure). Note: beep codes are vendor-specific. On AMI BIOS, one short beep = successful POST. Always identify the BIOS manufacturer before diagnosing by beep pattern.",
+    "objective": "5.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What tool measures voltages from a PSU to verify it is providing correct power levels?",
+    "options": [
+      "Multimeter or dedicated PSU tester",
+      "POST card",
+      "Cable continuity tester",
+      "Logic analyzer"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "5.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A PC randomly freezes and throws BSODs. Running Memtest86 shows errors. What should be replaced?",
+    "options": [
+      "ipconfig",
+      "sfc /scannow",
+      "chkdsk",
+      "netstat"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "5.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A computer randomly shuts off only under heavy load. Airflow is clear and all fans work. The MOST likely cause is:",
+    "options": [
+      "Bad RAM",
+      "Bad monitor connection",
+      "Inadequate or failing power supply unable to sustain load",
+      "Corrupt operating system"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "5.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What diagnostic device displays POST codes on a small LED panel and is installed in a PCI or PCIe slot?",
+    "options": [
+      "Multimeter",
+      "USB diagnostic dongle",
+      "BIOS display screen",
+      "POST diagnostic card"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "5.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A PC displays \"CPU fan error\" at startup but the fan is visibly spinning. What else could trigger this message?",
+    "options": [
+      "Fan speed below the BIOS minimum threshold, or the fan connected to the wrong header",
+      "CPU temperature too high",
+      "CPU requires replacement",
+      "Thermal paste is missing"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "5.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "After a BIOS update fails and the system will not POST, what recovery option do some motherboards provide?",
+    "options": [
+      "Restore from Windows Recovery Environment",
+      "Dual BIOS or BIOS recovery using a USB flash drive with the correct firmware file",
+      "Replace the CPU",
+      "Clear RAM slots and restart"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "5.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What Windows tool tests RAM for errors and can be launched from the Start menu?",
+    "options": [
+      "chkdsk",
+      "sfc /scannow",
+      "Windows Memory Diagnostic (mdsched.exe)",
+      "Device Manager"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "5.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does a BSOD stop code help a technician identify?",
+    "options": [
+      "Hard drive serial number",
+      "Network configuration details",
+      "Windows license key information",
+      "The specific error type and often the failed driver or component causing the crash"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "5.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which CPU socket type features pins on the motherboard socket and a flat contact pad on the CPU (used by Intel)?",
+    "options": [
+      "LGA (Land Grid Array)",
+      "AM4 (PGA)",
+      "FM2 (AMD)",
+      "TR4"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "5.1",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A user gets \"No bootable device\" at startup. The FIRST things to check are:",
+    "options": [
+      "RAM seating",
+      "Boot order in BIOS and whether the boot drive is detected",
+      "GPU installation",
+      "Network cable connection"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "5.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A hard drive produces a clicking noise during operation. What does this indicate?",
+    "options": [
+      "Normal operation when accessing files",
+      "Drive spinning up normally after a cold start",
+      "Mechanical failure — the read/write head is failing, data is at risk — back up immediately",
+      "Vibration from a nearby case fan"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "5.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What Windows utility checks and attempts to repair hard drive file system errors and bad sectors?",
+    "options": [
+      "sfc",
+      "defrag",
+      "diskpart",
+      "chkdsk"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "5.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which RAID level can survive the simultaneous failure of two drives?",
+    "options": [
+      "RAID 6",
+      "RAID 5",
+      "RAID 1",
+      "RAID 10"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "5.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A RAID 5 array loses one drive and is now in a degraded state. What should the technician do?",
+    "options": [
+      "Immediately shut down and restore from backup",
+      "Replace the failed drive as soon as possible to allow the array to rebuild",
+      "Delete the RAID configuration and start over",
+      "Continue using it as-is since data is still accessible"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "5.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What diagnostic feature monitors hard drive health using internal drive statistics such as reallocated sectors?",
+    "options": [
+      "Device Manager errors",
+      "chkdsk /r only",
+      "S.M.A.R.T. (Self-Monitoring, Analysis and Reporting Technology) via tools like CrystalDiskInfo",
+      "Windows Defender scan"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "5.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A newly installed NVMe SSD is not detected in BIOS. What should be checked?",
+    "options": [
+      "OS version compatibility",
+      "Antivirus software blocking detection",
+      "Windows Disk Management only",
+      "Physical seating in the M.2 slot, BIOS M.2 slot enablement, and correct slot type for NVMe vs SATA"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "5.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A user wants to clone their current HDD to a new SSD. What type of tool is used?",
+    "options": [
+      "Disk cloning software such as Clonezilla or Macrium Reflect",
+      "diskpart command only",
+      "Windows Backup and Restore only",
+      "chkdsk utility"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "5.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does a S.M.A.R.T. status of \"Caution\" or \"Failing\" indicate?",
+    "options": [
+      "Drive is operating normally with minor warnings",
+      "Drive has detected internal errors and potential imminent failure — back up data immediately",
+      "Drive needs defragmentation",
+      "Drive firmware needs updating"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "5.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A storage drive appears in BIOS but not in Windows. The MOST likely solution is:",
+    "options": [
+      "Replace the drive",
+      "Reinstall Windows",
+      "Initialize the drive and create a partition using Windows Disk Management",
+      "Update BIOS"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "5.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which RAID type offers the best read and write performance with no redundancy?",
+    "options": [
+      "RAID 1",
+      "RAID 5",
+      "RAID 10",
+      "RAID 0"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "5.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the FIRST action when a critical drive begins showing S.M.A.R.T. warnings?",
+    "options": [
+      "Back up all data immediately before any further action",
+      "Defragment the drive immediately",
+      "Run chkdsk /f first",
+      "Update the drive firmware"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "5.2",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A monitor displays \"No Signal.\" The PC is powered on and the cable is confirmed secure. What should be checked NEXT?",
+    "options": [
+      "Replace the monitor",
+      "Confirm the correct input source is selected on the monitor",
+      "Update GPU drivers remotely",
+      "Check RAM seating"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "5.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A display shows a flickering image. After replacing the video cable with no improvement, what is the NEXT component to suspect?",
+    "options": [
+      "RAM",
+      "Motherboard",
+      "The monitor panel itself or the GPU",
+      "Power supply"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "5.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is \"pixel pitch\" in a display specification?",
+    "options": [
+      "Number of pixels per inch",
+      "Monitor diagonal size in inches",
+      "The color bit depth setting",
+      "The distance between centers of adjacent pixels — smaller pitch means a sharper image"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "5.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A laptop screen is black but an external monitor connected via HDMI works fine. What should be checked?",
+    "options": [
+      "Laptop display cable, backlight, or LCD panel",
+      "GPU replacement",
+      "RAM modules",
+      "OS reinstallation"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "5.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does \"dead pixel\" mean on a display?",
+    "options": [
+      "A pixel stuck on a bright color permanently",
+      "A pixel that never illuminates and remains black regardless of the displayed content",
+      "A burnt-in image on the screen",
+      "A cluster of bright pixels from overheating"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "5.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A user second monitor shows only a portion of the desktop with the image cut off at edges. What resolves this?",
+    "options": [
+      "Color profile adjustment",
+      "Color calibration reset",
+      "Overscan or underscan setting adjustment, or correcting the display resolution",
+      "Changing brightness setting"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "5.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the FIRST thing to check when a projector displays \"no signal\"?",
+    "options": [
+      "Replace the projector lamp",
+      "Clean the projector lens",
+      "Adjust keystone correction",
+      "Confirm the correct input source is selected and the cable is connected"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "5.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A monitor displays in portrait orientation when it should be landscape. What is the fix?",
+    "options": [
+      "Adjust display orientation in Windows display settings",
+      "Replace the monitor",
+      "Reinstall GPU drivers",
+      "Use a different cable type"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "5.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What GPU temperature range is generally considered acceptable under full load for most consumer graphics cards?",
+    "options": [
+      "30-50 degrees C",
+      "70-85 degrees C (above 95 degrees is a concern for most cards)",
+      "50-65 degrees C",
+      "Over 100 degrees C"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "5.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A projector image appears trapezoidal rather than rectangular. What adjustment corrects this?",
+    "options": [
+      "Zoom control",
+      "Focus ring adjustment",
+      "Keystone correction",
+      "Aspect ratio setting"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "5.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the MOST common reason an HDMI monitor connected to a laptop shows no signal even with a good cable?",
+    "options": [
+      "Laptop GPU failure",
+      "Wrong HDMI version cable",
+      "HDMI port is physically damaged",
+      "Display output mode not configured — use Win+P to select the correct display mode"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "5.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does refresh rate measure in a display?",
+    "options": [
+      "Make the image appear blurry or stretched due to upscaling interpolation",
+      "Make the image sharper due to larger pixels",
+      "Significantly increase GPU performance",
+      "Not affect image quality at all"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "5.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A GPU shows artifacting on screen with normal temperatures. After testing with a different monitor and same result, what is MOST likely?",
+    "options": [
+      "Bad monitor only",
+      "Driver corruption or failing GPU VRAM",
+      "RAM issue on the motherboard",
+      "CPU overheating"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "5.3",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A smartphone will not charge. After trying different cables and chargers with no improvement, what should be inspected?",
+    "options": [
+      "Replace the battery immediately",
+      "SIM card slot condition",
+      "The charging port for debris, lint, or physical damage",
+      "Screen digitizer"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "5.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A mobile device battery drains faster than normal after a software update. The FIRST step is:",
+    "options": [
+      "Replace the battery immediately",
+      "Contact the manufacturer",
+      "Perform a factory reset immediately",
+      "Check for apps using excessive battery, restart the device, or consider rolling back the update"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "5.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A tablet touchscreen is unresponsive in one corner. What should be tried FIRST?",
+    "options": [
+      "Restart the device and attempt touchscreen recalibration",
+      "Replace the screen assembly",
+      "Factory reset the device",
+      "Update the firmware"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "5.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A smartphone camera produces blurry photos regardless of lighting or distance. The MOST likely cause is:",
+    "options": [
+      "Storage is nearly full",
+      "Camera lens is smudged or the optical image stabilization module is faulty",
+      "Camera app needs updating",
+      "Wrong camera mode selected"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "5.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does a mobile device typically do when it overheats as a protective measure?",
+    "options": [
+      "Screen immediately burns out",
+      "Battery swells immediately",
+      "Performance throttling occurs followed by automatic shutdown if cooling is insufficient",
+      "Wi-Fi disconnects only"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "5.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A mobile device has weak Wi-Fi even when close to the router. All other devices connect normally. What should be checked?",
+    "options": [
+      "Router SSID settings",
+      "Device DNS settings",
+      "ISP connection speed",
+      "Device Wi-Fi antenna connection or the device wireless adapter"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "5.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does a soft reset (restart) of a mobile device accomplish?",
+    "options": [
+      "Clears temporary memory and restarts OS processes without data loss",
+      "Erases all user data and apps",
+      "Updates the firmware automatically",
+      "Factory resets the device"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "5.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A smartphone GPS is inaccurate. After confirming GPS is enabled, what else can improve accuracy?",
+    "options": [
+      "Enable NFC",
+      "Toggle location services off and on, or ensure A-GPS is enabled with Wi-Fi or cellular data available",
+      "Remove and reinsert the SIM card",
+      "Disable Bluetooth"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "5.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the purpose of MDM (Mobile Device Management) software?",
+    "options": [
+      "Manage individual app performance metrics",
+      "Increase device battery life",
+      "Centrally manage, secure, monitor, and enforce policies across mobile devices in an organization",
+      "Block all cellular data usage"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "5.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A mobile device cannot make or receive calls but connects to Wi-Fi normally. The MOST likely cause is:",
+    "options": [
+      "Wi-Fi misconfiguration",
+      "Device storage is full",
+      "Bluetooth is disabled",
+      "SIM card issue or cellular service problem"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "5.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does enabling Do Not Disturb mode on a mobile device do?",
+    "options": [
+      "Silences calls, notifications, and alerts based on configured schedule and exceptions",
+      "Turns off Wi-Fi and Bluetooth",
+      "Encrypts device storage",
+      "Enables airplane mode"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "5.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A mobile app crashes immediately on launch. After clearing the app cache with no improvement, what is the NEXT step?",
+    "options": [
+      "Replace the device",
+      "Clear app data or uninstall and reinstall the app",
+      "Immediately factory reset",
+      "Update the OS"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "5.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the FIRST step if a mobile device displays \"SIM not detected\"?",
+    "options": [
+      "Contact the carrier for a replacement SIM",
+      "Replace the phone",
+      "Remove and firmly reseat the SIM card in the tray",
+      "Factory reset the device"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "5.4",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A laser printer produces pages where the toner smears or rubs off easily. The MOST likely failing component is:",
+    "options": [
+      "Drum unit",
+      "Toner cartridge",
+      "Transfer roller",
+      "Fuser assembly"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "5.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A printer produces a blank page every time it prints. The FIRST thing to check is:",
+    "options": [
+      "Toner or ink level, and whether protective tape was removed from a new cartridge",
+      "Network connection",
+      "Print driver version",
+      "USB cable condition"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "5.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does the Windows print spooler service do?",
+    "options": [
+      "Physically routes cables to the printer",
+      "Manages and queues print jobs between applications and the printer",
+      "Controls installation of printer drivers",
+      "Monitors ink or toner levels"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "5.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A laser printer produces a repeating smudge or mark at regular intervals on every page. The MOST likely cause is:",
+    "options": [
+      "Low toner level",
+      "Wrong paper size setting",
+      "Contamination or damage on the drum or rollers at the interval matching the drum circumference",
+      "Network connectivity issue"
+    ],
+    "answer": 2,
+    "explanation": "Repeating defects at regular intervals are caused by a contaminated or damaged component that repeats on every rotation. The interval distance equals the circumference of the offending part. Drum circumference (~94 mm for a typical cartridge) repeats every ~3.7 inches. If the interval is shorter, su",
+    "objective": "5.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does \"toner scatter\" appearing as speckles around text on laser-printed pages typically indicate?",
+    "options": [
+      "Low toner level",
+      "Incorrect printer driver",
+      "Fuser assembly failure",
+      "Damaged drum, high humidity, or incorrect paper type"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "5.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A network printer worked yesterday but shows offline today with no known changes. The FIRST thing to check is:",
+    "options": [
+      "Verify the printer IP address has not changed due to DHCP lease expiration",
+      "Reinstall the printer driver",
+      "Replace the network cable",
+      "Update printer firmware"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "5.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What causes \"ghosting\" on a laser-printed page — a faint duplicate image offset from the main image?",
+    "options": [
+      "Low toner level",
+      "Worn drum unit that is not fully discharging residual charge after the transfer step",
+      "Fuser assembly failure",
+      "Paper curling"
+    ],
+    "answer": 1,
+    "explanation": "Drum ghosting: a worn drum retains residual charge from a prior print cycle, attracting toner in that same pattern on subsequent pages, creating a faint ghost of an earlier image. Fuser ghosting is a distinct failure mode: an underheated fuser partially bonds toner, which remelts further down the sa",
+    "objective": "5.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A laser printer produces streaked output. After replacing the toner cartridge with no improvement, what should be checked next?",
+    "options": [
+      "Fuser assembly",
+      "Transfer roller",
+      "Drum unit",
+      "Paper input tray"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "5.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A printer prints in draft quality even though the quality setting in the print dialog appears correct. What is the MOST likely cause?",
+    "options": [
+      "Ink or toner levels",
+      "Paper type loaded",
+      "Network connection speed",
+      "Whether the correct printer driver for this exact model is installed"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "5.6",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A user can access all local network resources but cannot reach the internet. What is MOST likely misconfigured?",
+    "options": [
+      "Default gateway",
+      "IP address",
+      "Subnet mask",
+      "DNS server"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "5.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A user device has an IP address of 169.254.x.x. What does this indicate?",
+    "options": [
+      "A VPN connection is active",
+      "DHCP failed and the device self-assigned an APIPA address",
+      "A static IP was set incorrectly",
+      "The network adapter has failed"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "5.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which command tests basic network connectivity to a remote host?",
+    "options": [
+      "ipconfig",
+      "netstat",
+      "ping",
+      "nslookup"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "5.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A workstation cannot access any network resources but ipconfig shows a valid IP address. What should be tested NEXT?",
+    "options": [
+      "Call the ISP",
+      "Reinstall Windows",
+      "Replace the network cable",
+      "Ping the default gateway address"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "5.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does the nslookup command do?",
+    "options": [
+      "Queries DNS servers to resolve hostnames to IP addresses for troubleshooting",
+      "Tests network connection speed",
+      "Displays the current routing table",
+      "Resets all network adapter settings"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "5.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A user on a wireless network has slow speeds while others nearby have fast speeds. The MOST likely cause is:",
+    "options": [
+      "ISP is throttling that specific device",
+      "The user device is on the 2.4 GHz band or is far from the router — try switching to 5 GHz",
+      "Router requires replacement",
+      "DNS server issue specific to that device"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "5.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What sequence of commands releases the current DHCP lease and requests a new IP address in Windows?",
+    "options": [
+      "Switch VLAN configuration",
+      "Device IP address configuration",
+      "Cable continuity, connector crimping quality, and correct port connection",
+      "DNS server settings"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "5.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "Which command displays all active network connections and listening ports on a Windows PC?",
+    "options": [
+      "Replace the wireless adapter",
+      "Replace the router",
+      "Reinstall Windows",
+      "Release and renew the IP address, or forget and reconnect to the network"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "5.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What does \"channel bonding\" do in Wi-Fi networking?",
+    "options": [
+      "Combines two or more adjacent channels to increase bandwidth (e.g., 40 MHz, 80 MHz, or 160 MHz channels)",
+      "Combines two frequency bands for enhanced security",
+      "Reduces interference from neighboring networks",
+      "Pairs the router with a specific device MAC address"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "5.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A user cannot browse websites but pinging 8.8.8.8 succeeds. What command directly verifies whether DNS is resolving names correctly?",
+    "options": [
+      "ping google.com",
+      "nslookup google.com",
+      "tracert 8.8.8.8",
+      "netstat -a"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "5.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "What is the purpose of the netsh winsock reset command?",
+    "options": [
+      "Releases the current DHCP lease",
+      "Flushes the DNS resolver cache",
+      "Resets the Windows network stack (Winsock catalog) to fix corruption issues",
+      "Resets the router to factory defaults"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "5.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  },
+  {
+    "q": "A newly installed switch port shows an amber LED instead of green when a device is connected. What does this typically indicate?",
+    "options": [
+      "Normal gigabit link operation",
+      "VLAN configuration mismatch only",
+      "No cable is connected",
+      "Link speed of 10 or 100 Mbps instead of gigabit, or a fault condition depending on switch model"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "5.5",
+    "chapter": 1,
+    "chapter_title": "IT Foundations & Troubleshooting Methodology"
+  }
+]

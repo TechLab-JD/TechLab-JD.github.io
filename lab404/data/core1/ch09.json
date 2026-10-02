@@ -1,0 +1,316 @@
+{
+  "core": 1,
+  "chapter": 9,
+  "title": "Cables, Connectors & USB",
+  "exam_objectives": [
+    "3.1",
+    "3.2"
+  ],
+  "coverage": "COVERED",
+  "domain": "hardware",
+  "domain_label": "Hardware",
+  "sections": [
+    {
+      "title": "Twisted-Pair Ethernet Cable Categories",
+      "content": "Twisted-pair cable is the standard medium for Ethernet local area networks. It gets its name from the pairs of wires twisted together throughout the cable â€” twisting reduces electromagnetic interference between pairs and from external sources.\nCABLE CATEGORIES AND SPEEDS.\nCat 5 supports 100 Mbps. Obsolete â€” do not specify for new installations.\nCat 5e â€” enhanced â€” supports 1 Gbps over 100 meters. The 5e designation indicates reduced crosstalk compared to Cat 5. Cat 5e is still widely deployed and acceptable for 1 Gbps networks.\nCat 6 supports 1 Gbps at the full 100-meter distance and can support 10 Gbps at distances up to 55 meters. Cat 6 includes tighter manufacturing tolerances and typically a separator between pairs.\nCat 6a â€” augmented â€” extends 10 Gbps capability to the full 100-meter standard distance. Cat 6a is thicker and stiffer than Cat 6 due to additional shielding and construction. It is the recommended minimum for new installations targeting 10 Gbps.\nCat 7 supports 10 Gbps at 100 meters with individually shielded pairs. Cat 7 uses proprietary connectors in specification, which limits its practical adoption.\nCat 8 targets 25 to 40 Gbps over very short runs â€” up to 30 meters. Cat 8 is designed for data center applications â€” top-of-rack switch connections, server-to-switch links.\nT568A AND T568B WIRING STANDARDS.\nRJ45 connectors must be crimped with a consistent wiring standard. T568A and T568B define different pin assignments for the eight wires. T568B is more common in the United States. Both are valid â€” but the same standard must be used on both ends of a cable (straight-through) for correct operation. Crossover cables use T568A on one end and T568B on the other.\nUTP AND STP.\nUTP â€” Unshielded Twisted Pair â€” is the standard type. Each pair is twisted but the cable has no additional shielding. STP â€” Shielded Twisted Pair â€” adds foil shielding around the pairs or around the entire cable bundle. STP is used in high-EMI environments â€” manufacturing floors, areas with heavy electrical equipment.\nPLENUM-RATED CABLE.\nStandard Ethernet cable uses a PVC jacket. PVC releases toxic smoke when burned. Building codes require plenum-rated cable in air handling spaces â€” the space above suspended ceilings and below raised floors through which HVAC air circulates. Plenum cable uses a low-smoke, low-toxicity jacket material. Plenum cable costs more than standard cable and is required by code in applicable spaces.\nDIRECT BURIAL CABLE.\nDirect burial cable is rated for underground installation without conduit. The jacket uses materials that resist moisture, soil contact, and the physical stress of soil compression and freeze-thaw cycles. Direct burial cable is required when running cable between buildings or structures underground â€” such as between a main building and a detached garage, outbuilding, or separate campus structure. Standard PVC-jacketed or plenum-rated cable is not suitable for direct burial â€” it degrades when exposed to sustained soil moisture. Direct burial cable may additionally be placed inside conduit for mechanical protection against digging, but the cable itself is rated to survive the underground environment without conduit if conduit is not practical.\n---",
+      "exam_tips": [
+        "Cat 5e = 1 Gbps/100m. Cat 6a = 10 Gbps/100m. These are the most commonly tested."
+      ]
+    },
+    {
+      "title": "Fiber Optic Cables",
+      "content": "Fiber optic cable transmits data as pulses of light rather than electrical signals. This provides several inherent advantages over copper: immunity to EMI, no ground loop issues, support for much higher bandwidth, and the ability to span much greater distances.\nSINGLE-MODE FIBER (SMF).\nSingle-mode fiber has a core diameter of approximately 9 microns. The small core allows only a single propagation path for light â€” the fundamental mode. This eliminates modal dispersion, which is the primary bandwidth-limiting mechanism in multimode fiber. SMF supports data transmission over tens of kilometers. It is used for long-distance runs: building-to-building, campus backbone, metropolitan area networks, and telecommunications infrastructure.\nSMF uses a laser light source. The cable jacket is typically yellow.\nMULTIMODE FIBER (MMF).\nMultimode fiber has a larger core â€” either 50 or 62.5 microns. Multiple light paths can travel through the larger core simultaneously. Modal dispersion â€” slight timing variations as different light paths arrive at slightly different times â€” limits bandwidth over distance. MMF is practical for runs up to approximately 2 kilometers at lower speeds, with shorter maximum distances required for higher bandwidth operation.\nMMF uses an LED light source and is less expensive than SMF. Cable jackets are typically orange or aqua â€” aqua is common in OM3 and OM4 high-bandwidth multimode.\nFIBER CONNECTORS.\nST â€” Straight Tip â€” uses a bayonet twist-lock mechanism. Older style, still found in legacy fiber installations.\nSC â€” Subscriber Connector â€” uses a push-pull square connector. Common in older data center and campus fiber runs.\nLC â€” Lucent Connector â€” is a small form factor push-pull connector. LC is the most common fiber connector type in modern enterprise and data center environments.\nFiber connectors are also described as simplex (single fiber in one direction) or duplex (two fibers for bidirectional communication on a single connector assembly).\n---",
+      "exam_tips": [
+        "Plenum-rated cable is required by building code in air-handling spaces. This is a direct exam objective."
+      ]
+    },
+    {
+      "title": "Usb Standards And Speeds",
+      "content": "USB â€” Universal Serial Bus â€” is the universal standard for peripheral connectivity. Hot-swappable, supports up to 127 devices per host controller in theory, and has evolved through multiple speed generations.\nSPEED GENERATIONS.\nUSB 1.x: 12 Mbps maximum (Full Speed). Legacy.\nUSB 2.0: 480 Mbps (High Speed). Still used for low-bandwidth peripherals.\nUSB 3.0: 5 Gbps (SuperSpeed). This generation introduced the blue interior on USB-A ports.\nUSB 3.1: 10 Gbps (SuperSpeed+).\nUSB 3.2: 20 Gbps using two lanes â€” Gen 2x2.\nUSB4: 40 Gbps. Uses USB-C connector exclusively. Based on Thunderbolt 3 architecture.\nCURRENT NAMING SCHEME.\nThe USB Implementers Forum updated naming conventions to align all USB 3.x speeds under the USB 3.2 umbrella:\n- USB 3.2 Gen 1 = 5 Gbps (formerly USB 3.0)\n- USB 3.2 Gen 2 = 10 Gbps (formerly USB 3.1)\n- USB 3.2 Gen 2x2 = 20 Gbps\nUSB CONNECTOR TYPES.\nType-A: The standard rectangular host connector found on computers and chargers.\nType-B: Square connector, traditionally used on printers and larger peripherals.\nMini-B: Legacy small connector for older devices.\nMicro-B: Older smartphone and peripheral connector.\nUSB-C: Modern, small, oval, reversible connector. USB-C is a connector type â€” it can carry USB 2.0, USB 3.x, USB4, Thunderbolt, DisplayPort, and power simultaneously depending on the implementation.\nUSB POWER DELIVERY.\nStandard USB 3.0 delivers up to 4.5W (5V at 900mA). USB Power Delivery â€” USB-PD â€” increases this dramatically, supporting up to 100W. USB-PD 3.1 extends this to 240W, enabling full laptop charging via USB-C.\nCABLE LENGTH LIMITS.\nUSB signals have maximum recommended cable lengths: approximately 3 meters for low-speed, 5 meters for full/high speed, approximately 3 meters for SuperSpeed. Longer runs require active cables or powered hubs.\n---",
+      "exam_tips": [
+        "SMF = yellow = long distance = laser. MMF = orange/aqua = shorter = LED."
+      ]
+    },
+    {
+      "title": "Thunderbolt",
+      "content": "Thunderbolt is a high-bandwidth interface developed by Intel that multiplexes PCIe, DisplayPort, USB, and power signals over a single cable. Thunderbolt 3 and 4 use the USB-C connector physically but carry far more capability than standard USB.\nTHUNDERBOLT 3 AND 4.\nBoth support 40 Gbps bidirectional data transfer. Thunderbolt supports daisy-chaining up to six devices from a single port. Through the PCIe tunnel, Thunderbolt supports external GPU enclosures. Through the DisplayPort tunnel, Thunderbolt drives display outputs. USB-PD charging is also supported simultaneously.\nThe port is identified by a lightning bolt icon â€” either alone or alongside the USB-C symbol.\nThunderbolt 4 standardized and made mandatory several capabilities that were optional in Thunderbolt 3: minimum 32 Gbps PCIe bandwidth, support for two 4K displays or one 8K display, mandatory 100W charging, and Intel VT-d-based DMA protection against Thunderbolt DMA attacks.\nTHUNDERBOLT 5.\nThunderbolt 5 increases bandwidth to 80 Gbps bidirectional (with 120 Gbps asymmetric burst for display), designed for 8K display support and high-resolution multi-monitor configurations.\nCABLE REQUIREMENTS.\nNot all USB-C cables support Thunderbolt. Thunderbolt requires certified cables. A non-Thunderbolt cable connected between two Thunderbolt ports will operate at USB speeds, not Thunderbolt speeds. Thunderbolt cables are rated and labeled.\n---",
+      "exam_tips": [
+        "LC is the most common modern fiber connector. Know all three for the exam."
+      ]
+    },
+    {
+      "title": "Connector Types",
+      "content": "RJ45: The 8-pin Ethernet connector used for all twisted-pair Ethernet connections. RJ45 connectors use either T568A or T568B wiring standards.\nRJ11: The 6-pin telephone connector used for analog phone lines and legacy DSL. Physically smaller than RJ45 â€” an RJ11 connector will fit into an RJ45 port but will not make a functional Ethernet connection.\nF-type: The threaded coaxial connector used for cable television and cable internet. The cable screws onto the port. RG-6 coaxial is the common standard for modern cable installations.\nDB-9 (Serial / RS-232): 9-pin D-sub connector used for serial management connections to network hardware, UPS management, and older devices.\nPS/2: The legacy round 6-pin DIN connector for keyboards (purple) and mice (green). Still found on some enterprise motherboards for security purposes â€” PS/2 keyboards are not susceptible to USB HID injection attacks.\nPUNCHDOWN BLOCK.\nPunchdown blocks are termination points used in structured cabling to connect individual conductors from cable runs to patch panels, distribution frames, and voice wiring without soldering or crimping.\n110-type block: the standard in modern voice and data wiring. Each conductor from an incoming cable is pressed â€” punched down â€” into an IDC terminal. IDC stands for Insulation Displacement Contact. The terminal's metal slot cuts through the conductor's plastic insulation and makes direct metal-to-metal contact as the conductor seats. The punchdown tool applies controlled pressure and has a blade that trims the excess conductor on the cut side simultaneously. 110-type blocks are found in patch panels, data closets, and wall jacks throughout enterprise structured cabling installations.\n66-type block: an older design still found in legacy telephone wiring. The 66-block uses a different terminal arrangement suited for analog telephone pairs and two-wire circuits. It is less dense than the 110-type and is not appropriate for high-speed Ethernet data wiring. In a large organization, the building may still have 66-blocks for legacy voice circuits running alongside modern 110-type data cabling.\nThe punchdown tool is the specific installation device that seats conductors into both block types. A punchdown block (hardware) is not the same as a punchdown tool (the device used to install conductors into the hardware). Know both terms and the distinction between them for the exam.\nACTIVE VS PASSIVE ADAPTERS.\nPassive adapters change only the physical connector shape. They work only when the source and destination use the same signal type â€” for example, a USB-A to USB-C shape adapter.\nActive adapters perform signal conversion. Required when converting between different signal types â€” DisplayPort output to HDMI input, for example. Using a passive adapter where an active adapter is required results in no signal.\n---",
+      "exam_tips": [
+        "Gen 1 = 5 Gbps. Gen 2 = 10 Gbps. Gen 2x2 = 20 Gbps. USB4 = 40 Gbps.",
+        "Not all USB-C ports are Thunderbolt. Look for the lightning bolt icon. Thunderbolt cables are required for Thunderbolt speeds.",
+        "RJ45 = 8 pins, Ethernet. RJ11 = 6 pins, telephone. These are frequently confused on the exam.",
+        "DisplayPort to HDMI requires an active adapter. Passive adapters will not work for signal conversion."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "Running the wrong Ethernet cable category in a new installation means ripping it out and starting over when you need higher speeds. Know the specifications before you pull cable.",
+      "concept": "NETWORK CABLE CATEGORIES",
+      "summary": "Twisted pair Ethernet cable is classified into categories that define maximum speed and distance. The exam tests these specifications directly."
+    },
+    {
+      "hook": "Fiber optic cable transmits data as light pulses rather than electrical signals â€” which is why it is immune to electromagnetic interference and can carry data across distances that would destroy any copper cable run.",
+      "concept": "FIBER OPTIC CABLES: SINGLE-MODE VS MULTIMODE",
+      "summary": "Fiber optic cable carries data as pulses of light through a glass or plastic core. It is immune to EMI, supports far higher bandwidth than copper, and can span distances impractical for copper cabling."
+    },
+    {
+      "hook": "The USB naming scheme has been revised multiple times, making it one of the most confusing technology specifications in consumer electronics. The exam tests the speeds and generation names â€” and they are not always what they appear to be.",
+      "concept": "USB VERSIONS & SPEEDS",
+      "summary": "USB â€” Universal Serial Bus â€” is the standard interface for most peripherals. Hot-swappable, supports up to 127 devices per host controller, and has gone through multiple speed generations."
+    },
+    {
+      "hook": "A USB-C port and a Thunderbolt port look identical. The only way to tell them apart is the lightning bolt icon. But what they can do is dramatically different.",
+      "concept": "THUNDERBOLT & USB-C",
+      "summary": "USB-C is a connector type â€” a small, oval, reversible connector that has become the modern standard for charging, data, and video on laptops, tablets, and phones. USB-C describes the physical connector, not the protocol or speed."
+    },
+    {
+      "hook": "Connector identification is one of the most frequently illustrated question types on the A+ exam. If you cannot identify RJ45 vs RJ11 by pin count and use case, you are leaving points on the table.",
+      "concept": "CONNECTOR TYPES REFERENCE",
+      "summary": "Several connector types show up repeatedly in IT hardware work and on the exam. RJ45 is the standard Ethernet connector."
+    },
+    {
+      "hook": "Twisted-pair cable is the standard medium for Ethernet local area networks.",
+      "concept": "Twisted-Pair Ethernet Cable Categories",
+      "summary": "Twisted-pair cable is the standard medium for Ethernet local area networks. It gets its name from the pairs of wires twisted together throughout the cable â€” twisting reduces electromagnetic interference between pairs and from external sources. CABLE CATEGORIES AND SPEEDS."
+    },
+    {
+      "hook": "Fiber optic cable transmits data as pulses of light rather than electrical signals.",
+      "concept": "Fiber Optic Cables",
+      "summary": "Fiber optic cable transmits data as pulses of light rather than electrical signals. This provides several inherent advantages over copper: immunity to EMI, no ground loop issues, support for much higher bandwidth, and the ability to span much greater distances. SINGLE-MODE FIBER (SMF)."
+    },
+    {
+      "hook": "USB â€” Universal Serial Bus â€” is the universal standard for peripheral connectivity.",
+      "concept": "Usb Standards And Speeds",
+      "summary": "USB â€” Universal Serial Bus â€” is the universal standard for peripheral connectivity. Hot-swappable, supports up to 127 devices per host controller in theory, and has evolved through multiple speed generations. SPEED GENERATIONS."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "Which cable type uses light pulses and is immune to electromagnetic interference?",
+      "options": [
+        "Cat6 UTP",
+        "Coaxial",
+        "STP",
+        "Fiber optic"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What connector is used on standard Cat5e and Cat6 Ethernet cable?",
+      "options": [
+        "RJ-45",
+        "BNC",
+        "RJ-11",
+        "LC"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Which cable type is used for cable television and has a center conductor surrounded by shielding?",
+      "options": [
+        "Twisted pair",
+        "Coaxial",
+        "Fiber optic",
+        "Serial"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Which fiber optic connector is small, uses a push-pull locking mechanism, and is commonly found in data center patch panels?",
+      "options": [
+        "ST",
+        "SC",
+        "LC",
+        "FC"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What cable category is rated for 10 Gbps up to 55 meters?",
+      "options": [
+        "Cat5",
+        "Cat5e",
+        "Cat6a",
+        "Cat6"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What is the maximum data transfer speed of USB 2.0?",
+      "options": [
+        "12 Mbps",
+        "5 Gbps",
+        "480 Mbps",
+        "10 Gbps"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "Which connector is used for traditional telephone (landline) wall jacks and resembles RJ-45 but is smaller?",
+      "options": [
+        "PVC (polyvinyl chloride) rated",
+        "Armored (metal-jacketed)",
+        "Direct-burial rated",
+        "Plenum-rated (CMP)"
+      ],
+      "answer": 3,
+      "explanation": "Plenum-rated cable uses a fire-retardant low-smoke jacket required by building codes when cables run through HVAC plenum spaces. PVC jackets release toxic smoke when burned, which would be distributed through the air-handling system. Look for CMP (Communications Multipurpose Plenum) rating."
+    },
+    {
+      "q": "Which USB connector type uses a reversible, oval-shaped plug and is the standard connector for USB 3.1 Gen 2 and Thunderbolt 3/4 devices?",
+      "options": [
+        "USB-C",
+        "USB-B",
+        "USB Micro-B",
+        "USB-A"
+      ],
+      "answer": 0,
+      "explanation": "USB-C is reversible and supports USB 3.1/3.2, Thunderbolt 3/4, and USB4 depending on the device."
+    },
+    {
+      "q": "A technician identifies a 15-pin D-sub connector arranged in three rows of five pins on the back of an older monitor. What interface does this connector belong to?",
+      "options": [
+        "DVI-D",
+        "VGA (HD-15)",
+        "DisplayPort",
+        "Serial DB-15"
+      ],
+      "answer": 1,
+      "explanation": "VGA uses the HD-15 (D-sub 15) connector with three rows of five pins."
+    },
+    {
+      "q": "What fiber optic connector uses a push-pull square housing and is common in enterprise network equipment and ISP infrastructure?",
+      "options": [
+        "LC",
+        "ST",
+        "SC",
+        "FC"
+      ],
+      "answer": 2,
+      "explanation": "SC (Subscriber Connector) has a square push-pull housing. LC is smaller with a latch; ST uses a bayonet twist-lock."
+    },
+    {
+      "q": "A technician sees a port on a workstation with a lightning bolt icon next to a USB-C shaped port. What interface does this indicate?",
+      "options": [
+        "USB 3.2 Gen 2",
+        "USB Power Delivery only",
+        "DisplayPort Alt Mode only",
+        "Thunderbolt 3 or 4"
+      ],
+      "answer": 3,
+      "explanation": "The lightning bolt icon identifies a Thunderbolt port; Thunderbolt 3 and 4 use the USB-C physical connector."
+    },
+    {
+      "q": "Which connector type is used by eSATA to connect external storage devices, and how does it differ from an internal SATA connector?",
+      "options": [
+        "eSATA uses a modified 7-pin shielded connector rated for repeated hot-plugging; internal SATA uses an unshielded version of the same pin configuration",
+        "eSATA and internal SATA use identical connectors",
+        "eSATA uses RJ-45; internal SATA uses a 7-pin L-shaped connector",
+        "eSATA uses USB-C; internal SATA uses a proprietary connector"
+      ],
+      "answer": 0,
+      "explanation": "eSATA uses a similar 7-pin configuration but with a shielded connector designed for external use and repeated connections."
+    },
+    {
+      "q": "A laptop has a Mini DisplayPort. What adapter is needed to connect it to a standard HDMI monitor?",
+      "options": [
+        "No adapter needed â€” they are the same connector",
+        "Mini DisplayPort to HDMI adapter or cable",
+        "DVI to Mini DisplayPort adapter",
+        "VGA to Mini DisplayPort adapter"
+      ],
+      "answer": 1,
+      "explanation": "Mini DisplayPort and HDMI are different connectors; a passive or active adapter is required."
+    },
+    {
+      "q": "Which connector type is used by the PS/2 interface for keyboards and mice, and what feature distinguishes the keyboard port from the mouse port on a system with both?",
+      "options": [
+        "USB-A connectors; no visual distinction",
+        "9-pin serial; distinguished by device driver",
+        "6-pin DIN connectors; they are color-coded (purple for keyboard, green for mouse)",
+        "RJ-11; distinguished by port labeling only"
+      ],
+      "answer": 2,
+      "explanation": "PS/2 uses a 6-pin Mini-DIN connector; the keyboard port is purple and the mouse port is green by convention."
+    },
+    {
+      "q": "Which fiber optic connector is small form-factor, uses a latch mechanism, and is the standard choice for SFP/SFP+ transceivers in enterprise switches?",
+      "options": [
+        "SC (Subscriber Connector)",
+        "ST (Straight Tip)",
+        "FC (Fiber Channel)",
+        "LC (Lucent Connector)"
+      ],
+      "answer": 3,
+      "explanation": "LC connectors are approximately half the size of SC connectors, use a push-pull latch, and are the standard for SFP and SFP+ transceivers in high-density enterprise switch deployments."
+    },
+    {
+      "q": "A monitor has a white rectangular connector with 24 pins in three rows plus one additional pin. What connector type and signal does this represent?",
+      "options": [
+        "DVI-D (dual-link) â€” digital only",
+        "DVI-I â€” analog and digital",
+        "VGA â€” analog only",
+        "DisplayPort â€” digital only"
+      ],
+      "answer": 0,
+      "explanation": "DVI-D dual-link uses 24 data pins plus a ground blade. DVI-I adds analog pins for analog signal support. The white rectangular housing is the DVI standard; pin count distinguishes single-link vs dual-link and -D vs -I."
+    },
+    {
+      "q": "A legacy point-of-sale (POS) system uses a 9-pin D-shaped (DE-9) connector for its receipt printer. What interface standard does this connector implement?",
+      "options": [
+        "USB 1.1",
+        "RS-232 serial",
+        "PS/2",
+        "VGA"
+      ],
+      "answer": 1,
+      "explanation": "The DE-9 (9-pin D-sub) connector is the standard physical interface for RS-232 serial communications, used in legacy POS terminals, barcode scanners, and serial printers. PS/2 uses a 6-pin Mini-DIN; VGA uses a 15-pin HD-15 D-sub."
+    },
+    {
+      "q": "What is the primary difference between single-mode and multimode fiber optic cable?",
+      "options": [
+        "Single-mode uses copper core with glass cladding; multimode uses all-glass construction",
+        "Single-mode has a smaller core (~9 microns) using laser light supporting long distances (kilometers); multimode has a larger core (50/62.5 microns) using LED light for shorter distances up to ~550 meters at 10 Gbps",
+        "Single-mode is yellow; multimode is orange — no functional difference otherwise",
+        "Single-mode supports Ethernet only; multimode supports both Ethernet and fiber channel"
+      ],
+      "answer": 1,
+      "explanation": "Single-mode fiber's small core (9 micron) allows only one light path, using laser sources to achieve distances of 10+ km — ideal for WAN and campus backbones. Multimode's larger core (50/62.5 micron) supports multiple light paths, uses cheaper LEDs, but is limited to ~300-550m at 10 Gbps."
+    },
+    {
+      "q": "What color coding is used on USB ports and connectors to identify USB 3.0 (SuperSpeed) ports?",
+      "options": [
+        "Red ports indicate USB 3.0",
+        "Blue ports and connectors indicate USB 3.0 (SuperSpeed)",
+        "Green indicates USB 3.0 charging ports",
+        "USB 3.0 ports are not color-coded — they appear identical to USB 2.0 ports"
+      ],
+      "answer": 1,
+      "explanation": "USB 3.0 (SuperSpeed) ports and connectors are standardized as blue inside the port housing, allowing easy visual identification. USB 2.0 ports are black inside. Some manufacturers use teal or yellow to indicate charging-capable ports."
+    },
+    {
+      "q": "A technician needs to directly connect two network switches without a router. Which cable type was traditionally required before Auto-MDIX was common?",
+      "options": [
+        "Straight-through cable",
+        "Crossover cable (swaps transmit and receive pairs)",
+        "Rollover (console) cable",
+        "Coaxial cable with RJ-45 adapters"
+      ],
+      "answer": 1,
+      "explanation": "Crossover cables swap the transmit and receive pairs, allowing two like devices (switch-to-switch, PC-to-PC) to communicate directly. Modern devices with Auto-MDIX detect the cable type and adjust automatically, but crossover cables remain a key CompTIA A+ topic for legacy and exam scenarios."
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "core": 1,
+  "chapter": 16,
+  "title": "Wireless Networking",
+  "exam_objectives": [
+    "2.2",
+    "2.4"
+  ],
+  "coverage": "COVERED",
+  "domain": "networking",
+  "domain_label": "Networking",
+  "sections": [
+    {
+      "title": "802.11 Wi-Fi Standards",
+      "content": "The IEEE 802.11 standard defines wireless LAN technology. Each revision of the standard added speed, frequency bands, and efficiency improvements. The A+ exam tests the standards by name, frequency band, and maximum theoretical throughput.\n802.11B.\nThe first widely deployed Wi-Fi standard. Operates on the 2.4 GHz band only. Maximum speed: 11 Mbps. Used DSSS â€” Direct-Sequence Spread Spectrum â€” modulation. High susceptibility to interference. Legacy standard, not used in new deployments.\n802.11G.\nImproved speed while maintaining 2.4 GHz operation. Maximum speed: 54 Mbps. Used OFDM â€” Orthogonal Frequency-Division Multiplexing â€” which is more efficient than DSSS. Backward compatible with 802.11b. Also subject to 2.4 GHz interference.\n802.11N â€” WI-FI 4.\nThe first dual-band standard: operates on both 2.4 GHz and 5 GHz. Maximum speed: up to 600 Mbps. Introduced MIMO â€” Multiple Input Multiple Output â€” which uses multiple antennas to transmit and receive multiple data streams simultaneously, increasing throughput and reliability. Introduced channel bonding, combining two adjacent 20 MHz channels into a 40 MHz channel for higher throughput.\n802.11AC â€” WI-FI 5.\n5 GHz band only. Maximum speed: approximately 6.9 Gbps. Expanded channel widths to 80 MHz and 160 MHz. Introduced MU-MIMO â€” Multi-User MIMO â€” allowing the access point to communicate with multiple clients simultaneously on different antenna streams rather than serving them in sequence.\n802.11AX â€” WI-FI 6 AND WI-FI 6E.\nWi-Fi 6 operates on 2.4 GHz and 5 GHz. Wi-Fi 6E adds the 6 GHz band. Maximum speed: approximately 9.6 Gbps. Key improvement: OFDMA â€” Orthogonal Frequency-Division Multiple Access â€” which divides channels into smaller resource units and allows simultaneous transmission to multiple clients. OFDMA significantly improves performance in high-density environments â€” office buildings, stadiums, apartment complexes â€” where many devices compete for airtime.\n802.11BE â€” WI-FI 7.\nThe most recent generation. Supports 320 MHz channels. Introduces Multi-Link Operation â€” MLO â€” allowing devices to transmit and receive simultaneously across multiple frequency bands. Highest throughput available.\n---",
+      "exam_tips": [
+        "Know each standard by name, band, speed, and key technology. Wi-Fi 4/5/6 aliases are commonly used on the exam."
+      ]
+    },
+    {
+      "title": "Frequency Bands And Channels",
+      "content": "FREQUENCY BANDS.\nThree frequency bands are used by modern Wi-Fi.\n2.4 GHz: The most common and most congested band. Longer range and better wall penetration compared to higher frequencies. Interference from microwave ovens, Bluetooth devices, cordless phones, and baby monitors is a persistent problem. The limited channel availability compounds the congestion issue.\n5 GHz: Shorter range than 2.4 GHz, but higher maximum throughput and significantly more available channels. Attenuates more quickly through walls and floors. Preferred for high-throughput applications when devices are close to the access point.\n6 GHz: Available with Wi-Fi 6E and Wi-Fi 7. Very short range. Cleanest spectrum â€” minimal legacy interference because this band was only recently opened for unlicensed use. Requires the newest client devices.\nNON-OVERLAPPING CHANNELS ON 2.4 GHz.\nThe 2.4 GHz band in the United States has 11 channels. The channels overlap with adjacent channels â€” channel 2 overlaps with channels 1 and 3. Only three channels are non-overlapping: channels 1, 6, and 11. When deploying multiple access points in the same area, neighboring APs must use non-overlapping channels to prevent co-channel interference. All three of these channel numbers should be memorized for the exam.\nThe 5 GHz band has over 20 non-overlapping channels available, which is why 5 GHz handles high-density deployments much better than 2.4 GHz.\nCHANNEL WIDTH.\nStandard channel width is 20 MHz. Channel bonding increases the width: 40 MHz bonds two adjacent channels, 80 MHz bonds four, and 160 MHz bonds eight. Wider channels provide higher per-connection throughput. In environments with many neighboring networks, wide channels consume more spectrum and cause interference with neighbors. The tradeoff between channel width and interference must be evaluated based on the environment.\nSIGNAL STRENGTH AND SNR.\nWireless signal strength is measured in dBm â€” decibels relative to one milliwatt. The scale is negative: values closer to zero represent stronger signals.\n-65 dBm: good signal, reliable connection.\n-70 to -80 dBm: marginal, performance may degrade.\nBelow -80 dBm: poor, connection unreliable.\nSignal-to-Noise Ratio â€” SNR â€” is the difference between the received signal and the background noise floor. High SNR produces consistent throughput even at moderate signal levels. Low SNR produces errors and retransmissions even if the raw signal appears adequate.\n---",
+      "exam_tips": [
+        "2.4 GHz non-overlapping channels in the US: 1, 6, and 11. This is directly tested."
+      ]
+    },
+    {
+      "title": "Wireless Security",
+      "content": "WEP â€” WIRED EQUIVALENT PRIVACY.\nWEP was the original wireless security standard. It used the RC4 cipher with static encryption keys. WEP was demonstrated to be broken in minutes using passive packet capture tools. WEP provides no practical security and is completely unsuitable for any deployment.\nWPA â€” WI-FI PROTECTED ACCESS.\nWPA was introduced as an interim standard while the full 802.11i specification was completed. WPA used TKIP â€” Temporal Key Integrity Protocol â€” which addressed some WEP weaknesses by adding per-packet key mixing and message integrity checking. TKIP still relied on RC4 as its underlying cipher and is now deprecated.\nWPA2.\nWPA2 is the implementation of the completed 802.11i standard. It has been mandatory for Wi-Fi certification since 2004. WPA2 supports two encryption options:\nAES â€” Advanced Encryption Standard â€” using CCMP mode. AES is the correct and recommended encryption for WPA2. It is a modern, strong symmetric cipher.\nTKIP â€” included in WPA2 only for backward compatibility with legacy devices that could not support AES. TKIP should not be used if AES is available.\nWPA2 offers two authentication modes:\nWPA2-Personal â€” also called WPA2-PSK: a pre-shared key is configured on the access point. All users share the same passphrase. Simple to deploy. If the passphrase is compromised, the entire network is at risk. Appropriate for home and small business.\nWPA2-Enterprise: uses 802.1X authentication. The access point forwards authentication requests to a RADIUS server. Each user has individual credentials â€” a username and password, certificate, or smart card. The RADIUS server validates the credentials and grants or denies access. Individual credential revocation is possible. Appropriate for corporate environments.\nWPA3.\nWPA3 was introduced in 2018 and improves on WPA2 in four key areas:\nSAE â€” Simultaneous Authentication of Equals â€” replaces the PSK handshake. SAE is resistant to offline dictionary attacks because an attacker must interact with the access point for each password attempt, making brute-force cracking impractical.\nIndividualized data encryption: each client session uses a unique encryption key, even on open public networks â€” through Opportunistic Wireless Encryption.\nForward secrecy: session keys are derived independently from the password. If the passphrase is discovered later, past captured traffic cannot be decrypted.\nMandatory AES: TKIP is not supported in WPA3. AES is required.\n---",
+      "exam_tips": [
+        "WPA2 should always use AES â€” not TKIP. TKIP is in WPA2 only for legacy compatibility and has known vulnerabilities."
+      ]
+    },
+    {
+      "title": "Section 3B: Rfid",
+      "content": "SECTION 3B: RFID â€” RADIO FREQUENCY IDENTIFICATION\nRFID uses radio waves to identify and track objects. An RFID system has two components: a reader that generates a radio frequency field, and a tag attached to the object being identified. Unlike Wi-Fi or Bluetooth, RFID is a one-way identification protocol â€” the tag broadcasts its stored ID when energized by the reader. RFID is tested on the A+ exam in the context of access control and physical security.\nRFID FREQUENCY BANDS.\nLow Frequency â€” LF: 125 to 134 kHz. Short read range â€” up to approximately 10 centimeters. Slower data rate. Used in animal tracking implants, legacy access control cards, and some retail anti-theft systems.\nHigh Frequency â€” HF: 13.56 MHz. Read range up to approximately 1 meter. Used in contactless smart cards, library RFID tags, and NFC â€” Near Field Communication. NFC is a subset of HF RFID operating at 13.56 MHz with read distances under 20 centimeters. NFC is the standard used for mobile payments and modern access control badges. When you tap your phone or badge on a reader, that is HF RFID or NFC.\nUltra High Frequency â€” UHF: 860 to 960 MHz. Read range up to 12 meters or more depending on tag type and reader power. High data transfer rate. Used in supply chain and warehouse inventory management, retail shelf tracking, and highway toll collection systems.\nPASSIVE VS ACTIVE RFID TAGS.\nPassive tags have no internal power source. The reader's electromagnetic field induces a current in the tag's antenna coil â€” that harvested energy powers the microchip, which transmits the tag's stored ID back to the reader. No battery, no maintenance required, very small form factor. The read range is limited by how much energy the tag can harvest from the reader field. Passive tags are the dominant type in access control, supply chain, and retail applications.\nActive tags contain an internal battery and continuously broadcast a signal. Longer range â€” up to hundreds of meters in some implementations. Used for vehicle tracking, container monitoring, and asset tracking where range is the priority. Higher cost and require battery replacement or recharging over time.\nRFID IN ACCESS CONTROL.\nPhysical access control systems use HF RFID or NFC credentials. An employee presents a card or fob to a reader mounted at a door. The reader queries the credential's stored ID and sends it to the access control system. The system checks whether that credential is authorized for that door at the current time. If authorized, the door release triggers. This replaces physical keys with centrally managed digital credentials â€” lost credentials are immediately deactivated in the system without any hardware change. Access logs are generated automatically for audit purposes. Time-of-day restrictions and zone-based access policies can be applied per credential.\nFrom a security perspective: RFID access control is vulnerable to cloning attacks â€” a malicious reader held close to a target's card can silently read and clone the credential. Modern enterprise systems use cryptographically protected credentials that are difficult to clone. Rolling codes and mutual authentication further harden these systems.\n---",
+      "exam_tips": [
+        "WPA2-Enterprise requires a RADIUS server. WPA2-Personal uses a pre-shared key. Know which is appropriate for home vs corporate."
+      ]
+    },
+    {
+      "title": "Wireless Installation And Configuration",
+      "content": "SITE SURVEY.\nWireless installation begins with a site survey. The survey maps the intended coverage area, identifies existing wireless networks and interference sources, evaluates building materials and physical obstructions, and informs access point placement and channel assignments. Wi-Fi analyzer software performs the survey, measuring signal strength in dBm and displaying channel utilization across the spectrum.\nACCESS POINT PLACEMENT.\nCorrect AP placement maximizes coverage and minimizes interference.\nPosition the AP centrally in the coverage area, not in a corner. Signal radiates in all directions â€” a corner placement wastes half the coverage footprint.\nElevate the AP when possible. Higher placement reduces obstruction from furniture and allows signal to propagate horizontally to client devices.\nKeep APs away from known interference sources: microwave ovens, HVAC equipment, and metal cabinets.\nAccount for building materials. Concrete, brick, and metal attenuate wireless signals significantly. Drywall and glass are much more transparent. Plan AP density accordingly.\nIn large areas, deploy multiple APs with overlapping coverage zones. Adjacent APs should use non-overlapping channels. In roaming environments, coverage overlap of approximately 15-20% ensures clients can maintain a connection while transitioning between APs.\nSSID CONFIGURATION.\nThe SSID is the network name. SSIDs should use ASCII characters only â€” special characters can cause compatibility issues with some client devices.\nSSIDs can be broadcast or hidden. Broadcasting is the default. Hiding the SSID removes the network from the visible list on client devices but does not provide meaningful security â€” the SSID is still transmitted in client probe requests.\nA single SSID can be assigned to multiple frequency bands. The access point performs band steering, directing dual-band-capable clients to the less congested or higher-throughput band. Alternatively, separate SSIDs â€” for example, Office and Office_5G â€” allow manual band selection.\nSeparate guest SSIDs should be configured on a separate VLAN to isolate guest traffic from the internal network.\nLONG-RANGE FIXED WIRELESS.\nPoint-to-point wireless links between buildings use directional, high-gain antennas. Requirements: clear line of sight between both antennas â€” no obstructions in the signal path. Proper antenna alignment at both ends. These links can span multiple miles when conditions are met.\n---",
+      "exam_tips": []
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "802.11b, 802.11g, 802.11n, 802.11ac, 802.11ax â€” each generation doubled or tripled the last. The exam tests the standards by name, frequency band, and maximum speed.",
+      "concept": "WI-FI STANDARDS AND FREQUENCIES",
+      "summary": "Wi-Fi is standardized under IEEE 802.11. Each generation added speed, additional frequency bands, and improved efficiency."
+    },
+    {
+      "hook": "Two access points on the same channel do not cooperate â€” they compete. Channel selection is not a preference setting â€” it is a performance decision.",
+      "concept": "CHANNELS AND INTERFERENCE",
+      "summary": "Wireless networks operate on specific frequency channels within their band. The channel is a slice of the frequency band allocated to a single wireless network."
+    },
+    {
+      "hook": "WEP was broken in minutes. WPA was a temporary patch. WPA2 became the standard for 15 years. WPA3 replaced it. The exam tests all four â€” especially which encryption each uses and why WEP is not acceptable.",
+      "concept": "WIRELESS SECURITY: WPA2 AND WPA3",
+      "summary": "WEP â€” Wired Equivalent Privacy â€” was the original wireless encryption standard. It used RC4 encryption and static keys."
+    },
+    {
+      "hook": "Placing an access point in a corner of a building because it is convenient is not installation â€” it is guessing. Proper wireless installation starts with a site survey before a single cable is run.",
+      "concept": "ACCESS POINT INSTALLATION AND SSID",
+      "summary": "The SSID â€” Service Set Identifier â€” is the name that identifies a wireless network. Clients use the SSID to locate and connect to the correct network."
+    },
+    {
+      "hook": "Every access badge you tap to enter a building uses RFID. Every inventory tag scanned in a warehouse uses RFID. The A+ exam expects you to know the frequency bands, the passive vs active distinction, and the access control use case.",
+      "concept": "RFID â€” HOW IT WORKS AND WHERE IT IS USED",
+      "summary": "RFID â€” Radio Frequency Identification â€” uses radio waves to identify and track objects. An RFID system has two components: a reader that generates a radio frequency field and a tag attached to the object being identified."
+    },
+    {
+      "hook": "The IEEE 802.11 standard defines wireless LAN technology.",
+      "concept": "802.11 Wi-Fi Standards",
+      "summary": "The IEEE 802.11 standard defines wireless LAN technology. Each revision of the standard added speed, frequency bands, and efficiency improvements. The A+ exam tests the standards by name, frequency band, and maximum theoretical throughput."
+    },
+    {
+      "hook": "FREQUENCY BANDS.",
+      "concept": "Frequency Bands And Channels",
+      "summary": "FREQUENCY BANDS. Three frequency bands are used by modern Wi-Fi. 2.4 GHz: The most common and most congested band."
+    },
+    {
+      "hook": "WEP â€” WIRED EQUIVALENT PRIVACY.",
+      "concept": "Wireless Security",
+      "summary": "WEP â€” WIRED EQUIVALENT PRIVACY. WEP was the original wireless security standard. It used the RC4 cipher with static encryption keys."
+    },
+    {
+      "hook": "SECTION 3B: RFID â€” RADIO FREQUENCY IDENTIFICATION RFID uses radio waves to identify and track objects.",
+      "concept": "Section 3B: Rfid",
+      "summary": "SECTION 3B: RFID â€” RADIO FREQUENCY IDENTIFICATION RFID uses radio waves to identify and track objects. An RFID system has two components: a reader that generates a radio frequency field, and a tag attached to the object being identified. Unlike Wi-Fi or Bluetooth, RFID is a one-way identification protocol â€” the tag broadcasts its stored ID when energized by the reader."
+    },
+    {
+      "hook": "SITE SURVEY.",
+      "concept": "Wireless Installation And Configuration",
+      "summary": "SITE SURVEY. Wireless installation begins with a site survey. The survey maps the intended coverage area, identifies existing wireless networks and interference sources, evaluates building materials and physical obstructions, and informs access point placement and channel assignments."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "What Wi-Fi standard first introduced MIMO (Multiple Input Multiple Output) and operates on both 2.4 GHz and 5 GHz?",
+      "options": [
+        "802.11a",
+        "802.11n (Wi-Fi 4)",
+        "802.11g",
+        "802.11b"
+      ],
+      "answer": 1,
+      "explanation": "802.11n (Wi-Fi 4) introduced MIMO and is the first dual-band standard. Note: MU-MIMO (Multi-User MIMO) was introduced later with 802.11ac (Wi-Fi 5)."
+    },
+    {
+      "q": "Which wireless security protocol is considered the strongest for WLANs currently?",
+      "options": [
+        "WEP",
+        "WPA",
+        "WPA3",
+        "WPA2-AES"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What does MIMO stand for in wireless networking?",
+      "options": [
+        "Channels 1, 5, and 9",
+        "Channels 1, 6, and 11",
+        "Channels 2, 7, and 12",
+        "Channels 3, 6, and 9"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What encryption standard is used by WPA2?",
+      "options": [
+        "TKIP",
+        "WEP",
+        "AES (CCMP)",
+        "DES"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What is a VLAN?",
+      "options": [
+        "A virtual WAN connection",
+        "A type of wireless network",
+        "A logically separated network within a physical switch infrastructure",
+        "A VPN tunnel"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "Which 802.11 standard operates exclusively on 5 GHz and introduced MU-MIMO?",
+      "options": [
+        "802.11n (Wi-Fi 4)",
+        "802.11g",
+        "802.11ac (Wi-Fi 5)",
+        "802.11ax (Wi-Fi 6)"
+      ],
+      "answer": 2,
+      "explanation": "802.11ac (Wi-Fi 5) operates exclusively at 5 GHz and introduced MU-MIMO, allowing the AP to communicate with multiple clients simultaneously on different antenna streams."
+    },
+    {
+      "q": "On the 2.4 GHz band in the US, which three channels are non-overlapping?",
+      "options": [
+        "1, 5, and 9",
+        "1, 6, and 11",
+        "2, 7, and 12",
+        "3, 6, and 9"
+      ],
+      "answer": 1,
+      "explanation": "Only channels 1, 6, and 11 are non-overlapping on the US 2.4 GHz band. Adjacent APs must use these to prevent co-channel interference."
+    },
+    {
+      "q": "Why was WEP deemed completely insecure?",
+      "options": [
+        "WEP used no encryption at all",
+        "WEP used static RC4 keys recoverable in minutes through passive packet capture",
+        "WEP required a misconfigured RADIUS server",
+        "WEP only supported 2.4 GHz making interception easier"
+      ],
+      "answer": 1,
+      "explanation": "WEP used RC4 with static keys. Passive capture tools analyze IV patterns to recover the key in minutes. WEP provides no practical security and must not be deployed."
+    },
+    {
+      "q": "What key improvement does WPA3 SAE provide over WPA2-PSK?",
+      "options": [
+        "SAE requires a RADIUS server eliminating shared passphrases",
+        "SAE uses a longer key length making brute-force harder",
+        "SAE requires live AP interaction for each password guess, making offline dictionary attacks impractical",
+        "SAE encrypts the SSID so the network name cannot be discovered"
+      ],
+      "answer": 2,
+      "explanation": "WPA3 SAE replaces the WPA2-PSK handshake. Unlike WPA2-PSK which allows captured handshakes to be attacked offline, SAE requires live AP interaction per guess making dictionary attacks impractical."
+    },
+    {
+      "q": "What is the difference between WPA2-Personal and WPA2-Enterprise?",
+      "options": [
+        "WPA2-Personal uses AES; WPA2-Enterprise uses TKIP",
+        "WPA2-Personal uses a shared passphrase for all users; WPA2-Enterprise uses 802.1X with a RADIUS server for individual credentials",
+        "WPA2-Personal requires a wired LAN controller; WPA2-Enterprise operates standalone",
+        "WPA2-Personal is 5 GHz only; WPA2-Enterprise supports both bands"
+      ],
+      "answer": 1,
+      "explanation": "WPA2-Personal uses one shared passphrase for all users. WPA2-Enterprise uses 802.1X with a RADIUS server, authenticating each user with individual credentials allowing per-user revocation."
+    },
+    {
+      "q": "Why is 5 GHz preferred over 2.4 GHz for high-throughput applications?",
+      "options": [
+        "5 GHz has better wall penetration and range",
+        "5 GHz has more non-overlapping channels and less interference, supporting higher throughput when devices are close to the AP",
+        "5 GHz is backward compatible with 802.11b devices",
+        "5 GHz requires no AP -- devices connect peer-to-peer"
+      ],
+      "answer": 1,
+      "explanation": "The 5 GHz band has over 20 non-overlapping channels and less interference from household devices like microwaves and cordless phones, enabling higher throughput for nearby devices."
+    },
+    {
+      "q": "What does a Wi-Fi analyzer display that helps with AP placement and channel assignment?",
+      "options": [
+        "MAC addresses of all connected devices",
+        "All visible SSIDs, their signal strength, operating channels, and frequency bands",
+        "IP addresses assigned by DHCP to wireless clients",
+        "Wiring paths of Ethernet cables connecting APs to switches"
+      ],
+      "answer": 1,
+      "explanation": "A Wi-Fi analyzer displays all visible SSIDs, signal strength (dBm), operating channels, and bands -- identifying channel conflicts and interference to inform AP placement."
+    },
+    {
+      "q": "What RFID frequency band do NFC and modern contactless access control badges use?",
+      "options": [
+        "Low Frequency (LF) at 125 kHz -- range up to 10 cm",
+        "High Frequency (HF) at 13.56 MHz -- range up to approximately 1 meter",
+        "Ultra High Frequency (UHF) at 900 MHz -- range up to 12 meters",
+        "Microwave at 2.4 GHz -- same band as Wi-Fi"
+      ],
+      "answer": 1,
+      "explanation": "NFC and contactless access control badges operate at HF RFID (13.56 MHz). NFC is a subset with read distances under 20 cm, used for mobile payments and access control."
+    },
+    {
+      "q": "802.11ax (Wi-Fi 6) introduced OFDMA. What does OFDMA improve over the OFDM used in earlier standards?",
+      "options": [
+        "OFDMA increases max channel width from 80 MHz to 160 MHz",
+        "OFDMA divides channels into resource units allowing simultaneous transmission to multiple clients, improving performance in dense environments",
+        "OFDMA adds 6 GHz band access that OFDM could not use",
+        "OFDMA replaces MU-MIMO requiring fewer antennas per AP"
+      ],
+      "answer": 1,
+      "explanation": "OFDMA divides channels into smaller resource units and allows the AP to serve multiple clients simultaneously in one transmission window, significantly improving efficiency in high-density environments."
+    },
+    {
+      "q": "Why should a guest wireless SSID be placed on a separate VLAN from the corporate network?",
+      "options": [
+        "Guest devices get stronger encryption on a separate VLAN",
+        "Isolating guest traffic prevents compromised guest devices from accessing internal corporate resources",
+        "A guest VLAN increases wireless range for guest devices",
+        "Guest devices on a separate VLAN bypass DHCP and receive static IPs"
+      ],
+      "answer": 1,
+      "explanation": "VLAN segmentation isolates guest traffic from the internal network. A compromised guest device cannot reach internal servers or sensitive data through the isolated guest segment."
+    },
+    {
+      "q": "What is Wi-Fi 6E, and what frequency band does it introduce?",
+      "options": [
+        "Wi-Fi 6E is a range-extended version of Wi-Fi 6 that improves 2.4 GHz range",
+        "Wi-Fi 6E extends 802.11ax (Wi-Fi 6) into the 6 GHz band, providing additional spectrum and channels for reduced congestion",
+        "Wi-Fi 6E is a competing standard developed by Samsung for 60 GHz operation",
+        "Wi-Fi 6E uses enhanced encryption to improve 5 GHz security"
+      ],
+      "answer": 1,
+      "explanation": "Wi-Fi 6E adds support for the newly opened 6 GHz band (5.925–7.125 GHz in the US) on top of existing 2.4 GHz and 5 GHz. It provides up to 1200 MHz of additional clean spectrum with up to 59 non-overlapping 20 MHz channels, dramatically reducing congestion in high-density environments."
+    },
+    {
+      "q": "What does ESS (Extended Service Set) describe in wireless networking?",
+      "options": [
+        "A single access point and all its associated clients (one wireless cell)",
+        "Multiple access points sharing the same SSID and seamlessly handling client roaming between them across a larger coverage area",
+        "An encrypted wireless segment requiring 802.1X authentication",
+        "The set of extended frequencies available to 802.11ac on 5 GHz"
+      ],
+      "answer": 1,
+      "explanation": "A BSS (Basic Service Set) is one AP and its clients. An ESS (Extended Service Set) links multiple BSSs using the same SSID — clients roam between APs as they move without losing the network connection. Enterprise Wi-Fi deployments use ESS architecture."
+    },
+    {
+      "q": "What was the specific weakness in TKIP (Temporal Key Integrity Protocol) that led to its deprecation?",
+      "options": [
+        "TKIP used a static encryption key that never changed, making it identical to WEP",
+        "TKIP was built on the same RC4 cipher as WEP with added protections that were later found insufficient — cryptographic attacks (TKIP MIC attack) could compromise it",
+        "TKIP was incompatible with 5 GHz operation, limiting its use to 2.4 GHz only",
+        "TKIP required a RADIUS server, making it impractical for home networks"
+      ],
+      "answer": 1,
+      "explanation": "TKIP added per-packet key mixing, message integrity checks, and sequence counters to RC4, addressing WEP's worst flaws. However, researchers later demonstrated attacks against TKIP's MIC (Michael) implementation. WPA2 replaced TKIP with CCMP/AES, which is cryptographically sound."
+    },
+    {
+      "q": "Which IEEE 802.11 standard was the first to introduce the 5 GHz frequency band for Wi-Fi?",
+      "options": [
+        "802.11b (1999) — the first commercial Wi-Fi standard",
+        "802.11a (1999) — operated exclusively on 5 GHz",
+        "802.11g (2003) — added 5 GHz to the existing 2.4 GHz 802.11b",
+        "802.11n (2009) — the first dual-band Wi-Fi standard"
+      ],
+      "answer": 1,
+      "explanation": "802.11a (1999) was the first Wi-Fi standard to use the 5 GHz band, offering up to 54 Mbps. It was released simultaneously with 802.11b (2.4 GHz, 11 Mbps) but was more expensive and had shorter range. 802.11n was the first widely adopted dual-band standard."
+    },
+    {
+      "q": "What is a wireless bridge used for?",
+      "options": [
+        "Extending the range of a wireless network by rebroadcasting the signal",
+        "Connecting two separate wired LANs wirelessly when running a physical cable between locations is impractical",
+        "Improving wireless security by acting as a proxy between clients and the AP",
+        "Converting a 2.4 GHz signal to 5 GHz for backward compatibility with older clients"
+      ],
+      "answer": 1,
+      "explanation": "A wireless bridge creates a point-to-point or point-to-multipoint wireless link between two buildings or network segments, providing LAN connectivity without cabling. It differs from a repeater (which extends a wireless network) — a bridge connects two separate wired segments wirelessly."
+    }
+  ]
+}

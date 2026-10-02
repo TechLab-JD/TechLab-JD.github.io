@@ -1,0 +1,301 @@
+{
+  "core": 2,
+  "chapter": 21,
+  "title": "Professionalism & Communication Techniques",
+  "exam_objectives": [
+    "4.7"
+  ],
+  "coverage": "COVERED",
+  "domain": "operational",
+  "domain_label": "Operational Procedures",
+  "sections": [
+    {
+      "title": "Appearance And Conduct",
+      "content": "Professional appearance means dressing appropriately for the work environment. A field technician visiting a law firm wears business or business-casual attire. A bench technician in a repair shop may have more flexibility. The core principle is that appearance should match or slightly exceed the dress standard of the customer's environment. Appearing sloppy or casual in a formal environment signals that the technician does not take the engagement seriously. CompTIA does not specify a dress code â€” the exam tests whether the technician adapts appearance to the professional context.\nPunctuality: arrive on time. If arrival will be delayed, contact the customer before the scheduled time â€” not after. Showing up late without notice wastes the customer's time and damages trust. Communicating a delay in advance allows the customer to adjust their schedule and demonstrates respect for their time.\nAvoiding distractions during a customer interaction is a specific 4.7 requirement. Distractions include: answering personal phone calls, browsing social media, responding to personal messages, allowing personal conversations with coworkers to interrupt the customer interaction. When with a customer, the customer's issue is the priority. Anything that diverts attention from that issue is a distraction and is unprofessional. This applies whether the technician is on-site or on a support call.\n---",
+      "exam_tips": [
+        "Every 4.7 scenario on the exam has a \"professional\" answer and an \"unprofessional\" answer. The exam never rewards arguing, dismissing, or ignoring the customer. When in doubt, choose the option that listens, clarifies, and communicates."
+      ]
+    },
+    {
+      "title": "Communication Skills",
+      "content": "Proper language â€” avoid jargon, acronyms, and slang unless the customer clearly uses and understands them. A technician who tells a non-technical user to \"check if SMB is enabled on the NAS and verify the ACL on the shared volume\" has communicated nothing useful. Translate technical concepts into plain language. \"There is a settings issue on the device that stores your shared files â€” I will fix the permissions so your team can access them again\" covers the same information at the customer's level. Adjust vocabulary to the audience. Condescension â€” talking down to a customer â€” is the opposite failure mode. Treat the customer as an intelligent adult who happens not to have technical expertise.\nActive listening is a specific exam skill. It means giving full attention to what the customer is saying, not formulating a response while they are still speaking, and not interrupting. Let the customer finish describing the problem before responding. Interrupting signals that the technician already knows the answer before hearing the full context â€” which is often wrong and always rude. After the customer describes the issue, restate it: \"So what you are seeing is that the printer works from your laptop but not from the workstation â€” is that correct?\" Restating confirms understanding and gives the customer a chance to correct misunderstandings before work begins.\nPositive attitude and confidence: a technician who says \"I have no idea what is wrong with this thing\" in front of the customer creates anxiety. Confidence means projecting calm competence â€” not false certainty. \"Let me check a few things to isolate the cause\" is confident without overpromising. Maintain a positive attitude even when the situation is frustrating. Customer-facing frustration is not professional, even when the frustration is justified.\nCultural sensitivity: use professional titles and proper names until a customer indicates they prefer otherwise. Not everyone is comfortable with first-name informality from a technician they have just met. Different professional and cultural contexts have different norms around titles, personal space, and communication formality. Err on the side of formality and adjust when the customer signals they prefer a more casual interaction. Avoid humor or informal language that may land differently across cultural contexts.\n---",
+      "exam_tips": [
+        "\"Communicating a delay before it happens\" is the correct exam answer â€” not after, not at arrival. The exam tests the timing of communication."
+      ]
+    },
+    {
+      "title": "Difficult Customers And Situations",
+      "content": "Handling a difficult customer requires specific behaviors. The exam tests these behaviors as \"do\" and \"do not\" scenarios.\nDo not argue with a customer. If a customer is wrong about the cause of their problem, correct the misunderstanding calmly and factually â€” once. Do not debate. Do not prove them wrong in a way that makes them feel foolish. The goal is to resolve the issue, not to win the argument.\nDo not dismiss a customer's concern. If a customer says they are seeing intermittent errors that cannot be reproduced at the moment, do not tell them the system is fine. Document what they reported, take it seriously, and investigate. Dismissing concerns damages the support relationship and can cause real problems to go unresolved.\nDo not be judgmental. A customer who did not back up their data before a crash, who clicked a phishing link, who installed unauthorized software â€” they know what happened. Adding criticism to a support interaction helps no one. Focus on resolving the situation.\nAsk clarifying questions â€” and make them open-ended. \"What were you doing when the error appeared?\" generates more useful information than \"Did you click something?\" Open-ended questions allow the customer to provide context that the technician would not have thought to ask about. Yes/no questions constrain the answer and can miss critical details.\nRestate the issue to confirm understanding before beginning work. This applies especially in difficult customer interactions where the customer is upset and may not have communicated clearly the first time.\n---",
+      "exam_tips": [
+        "The exam will give a scenario where a technician uses technical language a customer does not understand. The correct answer always involves translating to plain language â€” not simplifying the fix, but simplifying the explanation."
+      ]
+    },
+    {
+      "title": "Expectations, Follow-Up, And Confidentiality",
+      "content": "Setting and meeting expectations: before beginning work, communicate what you plan to do and how long it is expected to take. \"I am going to check the network configuration â€” this should take about fifteen minutes. If I find something more involved, I will let you know before I proceed.\" If the estimate changes during the work, update the customer immediately â€” do not wait until the end to reveal that what was supposed to take fifteen minutes took two hours. Managing expectations throughout the interaction is better than managing disappointment at the end.\nFollow up after resolution. After closing a support ticket or finishing an on-site repair, follow up with the customer to confirm the issue is resolved and they are satisfied. This can be a brief email or a callback. It demonstrates that the technician's job is not done when the fix is applied â€” it is done when the customer confirms the fix worked.\nHandling confidential and sensitive materials: during the course of a support interaction, a technician may have access to information that is not their business to read, share, or retain. This includes personal files on a user's desktop, emails visible on screen, sensitive business documents, and credentials. Handle these with discretion. Do not read personal or business-sensitive content that is not relevant to the repair. Do not share information observed during a support interaction. If a support task requires accessing sensitive data â€” account credentials, financial records, confidential files â€” follow the organization's documented procedures and do not retain that information after the task is complete.\nConfidentiality extends to the customer's physical environment: do not photograph or describe the interior of a client's facility to unauthorized parties. Do not share information about the customer's security setup, vulnerabilities you observed, or internal processes. In many environments, handling of sensitive information during IT support is governed by NDAs or organizational policy â€” a technician's professional obligation does not depend on whether they signed a specific document.\n---",
+      "exam_tips": [
+        "\"Restate the issue before beginning work\" is a specific 4.7 exam answer. Scenarios will ask what to do after the customer describes a problem â€” restating and confirming is correct before any technical action begins."
+      ]
+    },
+    {
+      "title": "Exam Day Summary",
+      "content": "Objective 4.7 scenarios on the exam are straightforward if you remember the core framework: treat the customer as a professional, communicate clearly and honestly, handle difficult situations with calm and restraint, and keep confidential information confidential. The exam will present scenarios and ask which behavior is most appropriate. The answers that argue, dismiss, distract, or condescend are wrong. The answers that listen, clarify, set expectations, and follow through are correct.\nKey items to remember: avoid jargon; ask open-ended questions; restate the issue before beginning work; do not interrupt; communicate delays before they happen, not after; do not argue or be judgmental; follow up after resolution; protect confidential information.\n---",
+      "exam_tips": [
+        "The default safe answer on cultural sensitivity questions is formal, titles-first, and adjusting only when the customer explicitly signals comfort with informality.",
+        "Exam scenarios featuring a frustrated or upset customer always have a wrong answer that involves arguing, dismissing, or proving the customer wrong. Eliminate those first.",
+        "Open-ended questions (\"What were you doing when this happened?\") generate better diagnostic information than closed questions (\"Did you click something?\"). The exam prefers open-ended diagnostic questions in support scenarios.",
+        "\"Inform the customer before beginning if the scope changes\" is a tested behavior. The exam distinguishes between informing before proceeding vs. informing after â€” before is always the correct answer.",
+        "Confidentiality questions test whether the technician understands their access does not equal permission to use that information. Seeing a password on a sticky note does not mean it should be remembered or shared."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "Professional appearance means dressing appropriately for the work environment.",
+      "concept": "Appearance And Conduct",
+      "summary": "Professional appearance means dressing appropriately for the work environment. A field technician visiting a law firm wears business or business-casual attire. A bench technician in a repair shop may have more flexibility."
+    },
+    {
+      "hook": "Proper language â€” avoid jargon, acronyms, and slang unless the customer clearly uses and understands them.",
+      "concept": "Communication Skills",
+      "summary": "Proper language â€” avoid jargon, acronyms, and slang unless the customer clearly uses and understands them. A technician who tells a non-technical user to \"check if SMB is enabled on the NAS and verify the ACL on the shared volume\" has communicated nothing useful. Translate technical concepts into plain language."
+    },
+    {
+      "hook": "Handling a difficult customer requires specific behaviors.",
+      "concept": "Difficult Customers And Situations",
+      "summary": "Handling a difficult customer requires specific behaviors. The exam tests these behaviors as \"do\" and \"do not\" scenarios. Do not argue with a customer."
+    },
+    {
+      "hook": "Setting and meeting expectations: before beginning work, communicate what you plan to do and how long it is expected to take.",
+      "concept": "Expectations, Follow-Up, And Confidentiality",
+      "summary": "Setting and meeting expectations: before beginning work, communicate what you plan to do and how long it is expected to take. \"I am going to check the network configuration â€” this should take about fifteen minutes. If I find something more involved, I will let you know before I proceed.\" If the estimate changes during the work, update the customer immediately â€” do not wait until the end to reveal that what was supposed to take fifteen minutes took two hours."
+    },
+    {
+      "hook": "Objective 4.7 scenarios on the exam are straightforward if you remember the core framework: treat the customer as a professional, communicate clearly ",
+      "concept": "Exam Day Summary",
+      "summary": "Objective 4.7 scenarios on the exam are straightforward if you remember the core framework: treat the customer as a professional, communicate clearly and honestly, handle difficult situations with calm and restraint, and keep confidential information confidential. The exam will present scenarios and ask which behavior is most appropriate. The answers that argue, dismiss, distract, or condescend are wrong."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "A customer is frustrated and speaking loudly. What is the BEST approach?",
+      "options": [
+        "Remain calm, listen actively, and empathize with their frustration",
+        "Match their energy and speak louder",
+        "End the conversation immediately",
+        "Escalate to a manager without speaking to the customer"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What is the appropriate response when you cannot resolve a customer issue yourself?",
+      "options": [
+        "Tell them to figure it out",
+        "Explain what has been tried and escalate to the appropriate person or department",
+        "Pretend the issue is resolved",
+        "Tell them to call the manufacturer"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A customer gives you negative feedback about your service. The BEST professional response is:",
+      "options": [
+        "Defend yourself and explain why the customer is wrong",
+        "Ignore the feedback",
+        "Listen, thank them for the feedback, and use it to improve",
+        "Ask them to submit the feedback in writing only"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What does it mean to set realistic expectations with a customer?",
+      "options": [
+        "Promise the fastest possible resolution to make them happy",
+        "Never commit to any timeframe",
+        "Always underpromise",
+        "Provide an honest assessment of what can be accomplished and by when"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What is the appropriate action if you discover personal photos or documents on a customer device while working on it?",
+      "options": [
+        "Disregard them and maintain the customer privacy â€” only access what is necessary for the repair",
+        "View them for context",
+        "Copy them for documentation",
+        "Delete them as they may contain malware"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A technician is resolving an issue for a user when their personal cell phone rings. What is the most professional response?",
+      "options": [
+        "Answer briefly and tell the caller you'll call back",
+        "Let the call go to voicemail and continue giving the user full attention",
+        "Ask the user to pause while you take the call",
+        "Check the caller ID and decide whether to answer"
+      ],
+      "answer": 1,
+      "explanation": "Letting calls go to voicemail while with a customer demonstrates respect and ensures the user feels heard. Interrupting a customer's explanation for a personal call is unprofessional and undermines trust."
+    },
+    {
+      "q": "A customer is extremely frustrated and begins raising their voice while describing a recurring problem. Which is the most appropriate technician response?",
+      "options": [
+        "Match the customer's tone to demonstrate urgency",
+        "Inform the customer you will not help them until they calm down",
+        "Remain calm, acknowledge the frustration, and focus on resolving the issue",
+        "Transfer the customer to a supervisor immediately"
+      ],
+      "answer": 2,
+      "explanation": "Staying calm and showing empathy de-escalates tense situations. Acknowledging frustration validates the customer's experience without becoming defensive, which is the foundation of professional customer service."
+    },
+    {
+      "q": "After resolving a workstation issue, which action should the technician take before closing the ticket?",
+      "options": [
+        "Reimage the workstation as a precaution",
+        "Back up the workstation immediately",
+        "Submit a change request for the work performed",
+        "Follow up with the user to confirm the issue is resolved and they are satisfied"
+      ],
+      "answer": 3,
+      "explanation": "Following up confirms the fix worked from the user's perspective and demonstrates professional closure. It also provides an opportunity to catch any related issues the user may not have initially reported."
+    },
+    {
+      "q": "A technician is explaining a two-day laptop repair timeline to a user who asks technical questions about the diagnostic process. Which communication approach is most appropriate?",
+      "options": [
+        "Use plain language and avoid excessive jargon so the user understands the situation",
+        "Avoid answering technical questions to save time",
+        "Use precise technical terminology to demonstrate expertise",
+        "Redirect all technical questions to the help desk manager"
+      ],
+      "answer": 0,
+      "explanation": "Avoiding jargon ensures the customer understands what is happening with their equipment and the timeline, building confidence and reducing anxiety. Technicians should adapt their communication style to the audience's technical level."
+    },
+    {
+      "q": "A user mentions during a support call that they are experiencing personal problems affecting their work. Which is the most appropriate response?",
+      "options": [
+        "Offer personal advice and spend time discussing their situation",
+        "Express brief, genuine sympathy and redirect the conversation to the technical issue",
+        "Ignore the comment and continue troubleshooting",
+        "Document the personal information in the support ticket"
+      ],
+      "answer": 1,
+      "explanation": "A brief empathetic acknowledgment is appropriate and human, but the technician should redirect to the technical issue to maintain professionalism and productivity. Personal discussions in support contexts and documenting personal matters in tickets are inappropriate."
+    },
+    {
+      "q": "A technician is on-site helping a user when a coworker walks over and starts a personal conversation with the technician. What is the most professional response?",
+      "options": [
+        "Engage briefly with the coworker and catch up, then return to the user",
+        "Apologize to the user, then have the conversation with the coworker",
+        "Politely tell the coworker you are with a customer and will connect with them afterward, then return full attention to the user",
+        "Let the user and coworker both wait while you check your messages"
+      ],
+      "answer": 2,
+      "explanation": "When working with a customer, the customer's issue has priority. Personal conversations with coworkers are a distraction that signals the customer is not the focus. The professional response is to briefly redirect the coworker and immediately return full attention to the customer."
+    },
+    {
+      "q": "A technician is repairing a laptop and notices a document on the desktop containing what appears to be confidential business contracts. What is the correct action?",
+      "options": [
+        "Open the document briefly to understand the customer's business context",
+        "Copy the file to a USB drive for safekeeping in case the repair fails",
+        "Ignore the document entirely and only access what is necessary to perform the repair",
+        "Mention the document to the user and ask if they want it backed up"
+      ],
+      "answer": 2,
+      "explanation": "A technician's access to a customer's device does not constitute permission to view, copy, or act on information that is not relevant to the repair. Confidential materials observed during support must be disregarded. Only files necessary to complete the technical task should be accessed."
+    },
+    {
+      "q": "A customer reports an intermittent error that the technician cannot reproduce during the site visit. What is the correct professional response?",
+      "options": [
+        "Tell the customer the system is functioning normally and close the ticket",
+        "Document what the customer reported, take it seriously, and investigate further or schedule a follow-up",
+        "Explain to the customer that intermittent issues are unfixable",
+        "Ask the customer to submit a written description before any action is taken"
+      ],
+      "answer": 1,
+      "explanation": "Dismissing a reported problem because it cannot be immediately reproduced damages the support relationship and can allow real problems to go unresolved. The correct approach is to document the report, investigate possible causes, and follow up — not to assume the system is fine."
+    },
+    {
+      "q": "During a support call, the technician discovers that resolving the issue will take significantly longer than the original estimate. What should the technician do?",
+      "options": [
+        "Complete the work and explain the extra time at the end",
+        "Inform the customer immediately that the scope has changed and provide an updated time estimate before continuing",
+        "Rush the repair to stay within the original estimate",
+        "Close the ticket and open a new one for the additional work"
+      ],
+      "answer": 1,
+      "explanation": "Managing expectations throughout an interaction is a core professionalism requirement. When scope changes, the technician must inform the customer before proceeding, not after. Informing the customer after the fact manages disappointment rather than expectations."
+    },
+    {
+      "q": "A technician is introduced to a new client named Dr. Patricia Chen. The client has not indicated any preference. What is the most appropriate way to address her?",
+      "options": [
+        "Address her as Patricia to establish a comfortable, casual rapport",
+        "Address her as Dr. Chen until she indicates she prefers a different form of address",
+        "Address her by her first name since it creates a friendlier support experience",
+        "Ask immediately what name she prefers before saying anything else"
+      ],
+      "answer": 1,
+      "explanation": "The default professional approach is to use formal titles and last names until the customer explicitly signals they prefer informality. Cultural and professional norms vary, and erring on the side of formality avoids the greater mistake of being perceived as presumptuous or disrespectful."
+    },
+    {
+      "q": "A technician discovers what appears to be pirated software on a customer's computer during a routine repair. What is the appropriate professional action?",
+      "options": [
+        "Immediately uninstall the pirated software to protect the customer from legal liability",
+        "Document the finding and follow company policy — typically reporting to a supervisor; do not modify the software without authorization, and maintain confidentiality",
+        "Inform the software vendor directly so they can pursue the customer for copyright infringement",
+        "Ignore it — what software the customer runs is their personal business and not the technician's concern"
+      ],
+      "answer": 1,
+      "explanation": "A technician's role is to service the equipment, not act as a software compliance officer. The correct response is to document the observation and follow company policy — most companies require reporting to a supervisor who determines next steps. Do not uninstall, accuse, or threaten the customer, and maintain professional confidentiality."
+    },
+    {
+      "q": "During an on-site service call, a technician overhears a confidential client business discussion. What is the appropriate professional response?",
+      "options": [
+        "Ask the client to move to a private area before continuing the service call",
+        "Maintain strict confidentiality — do not share, discuss, or use the overheard information; if necessary, politely indicate you need to focus on the repair to avoid overhearing further",
+        "Make note of the information in case it becomes relevant to the service call",
+        "Disclose the information to your manager to ensure the company is aware of potential risks"
+      ],
+      "answer": 1,
+      "explanation": "CompTIA A+ professionalism requires that technicians respect the privacy of client information encountered during service calls. Overheard conversations, documents visible on screens, and files seen during repairs must all be treated with strict confidentiality. Sharing such information — even internally without cause — is unprofessional and potentially illegal."
+    },
+    {
+      "q": "A customer requests that a laptop repair be done by end of day, but the technician knows it requires at least two business days. What is the correct response?",
+      "options": [
+        "Promise end-of-day completion to keep the customer happy, then call later with an 'unexpected complication'",
+        "Honestly communicate the realistic two-day timeline immediately; explain the reason clearly and avoid promising a deadline you cannot meet",
+        "Ask the customer to define a 'minimum acceptable' repair and see if a partial fix can be done today",
+        "Tell the customer to pick up the laptop today and return it in two days for the complete repair"
+      ],
+      "answer": 1,
+      "explanation": "Setting realistic expectations is a core CompTIA A+ professionalism principle. Promising an impossible deadline to avoid short-term conflict creates a larger problem when the promise is broken. Customers appreciate honesty and an explanation — a broken promise damages trust far more than a realistic timeline communicated upfront."
+    },
+    {
+      "q": "A technician has resolved a user's issue. The user says 'I think that's better.' What should the technician do before closing the ticket?",
+      "options": [
+        "Close the ticket immediately — the user confirmed improvement",
+        "Ask the user to specifically confirm the issue is fully resolved to their satisfaction, offer to answer any remaining questions, and document the resolution before closing the work order",
+        "Have the user sign a paper form confirming the repair before any verbal conversation",
+        "Send a follow-up email the next day instead of verifying in person to avoid delaying the technician's schedule"
+      ],
+      "answer": 1,
+      "explanation": "'I think that's better' is not a confirmed resolution. The technician should ask the user to test the specific issue that was reported and confirm it is fully resolved. Verify full system functionality, document what was done and the outcome, and offer brief guidance before closing the ticket — this prevents repeat calls for the same issue."
+    },
+    {
+      "q": "A user asks a technician a question that is outside the technician's area of expertise. What is the most professional response?",
+      "options": [
+        "Provide your best guess to maintain the customer's confidence in your abilities",
+        "Acknowledge the question, be honest that it falls outside your expertise, and direct the user to the appropriate resource, specialist, or support channel",
+        "Tell the user it is not your job and they should contact someone else without further explanation",
+        "Research the answer on the spot regardless of how long it takes to avoid admitting any knowledge gap"
+      ],
+      "answer": 1,
+      "explanation": "Honesty and professional integrity require acknowledging knowledge limits rather than guessing — an incorrect answer from a 'professional' causes harm and erodes trust. Directing the user to the correct resource (another team, vendor support, documentation) resolves their need effectively while maintaining your professional credibility."
+    }
+  ]
+}

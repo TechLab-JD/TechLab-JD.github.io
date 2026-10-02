@@ -1,0 +1,308 @@
+{
+  "core": 1,
+  "chapter": 6,
+  "title": "Storage Devices: HDD, SSD & RAID",
+  "exam_objectives": [
+    "3.4",
+    "3.6"
+  ],
+  "coverage": "COVERED",
+  "domain": "hardware",
+  "domain_label": "Hardware",
+  "sections": [
+    {
+      "title": "Hard Disk Drives",
+      "content": "Hard disk drives store data magnetically on rotating platters. A read/write head on a movable actuator arm positions over the correct track on the platter and reads or writes data as the platter spins beneath it.\nThis mechanical design is efficient and has been refined over decades â€” but the physical movement imposes fundamental limitations.\nCAPACITY AND COST.\nHDDs offer the largest storage capacities at the lowest cost per gigabyte. Consumer HDDs regularly reach 8, 12, 16, 20 terabytes. For bulk data storage â€” surveillance footage, backup archives, media libraries â€” HDDs remain the cost-effective choice.\nPERFORMANCE.\nHDD performance is bounded by physical mechanics. Spindle speed â€” measured in RPM â€” determines how quickly the platter rotates. 5,400 RPM drives are common in low-power applications. 7,200 RPM is the performance standard for desktop HDDs. 10,000 RPM and 15,000 RPM drives exist for enterprise server environments.\nSeek time is the time required for the actuator arm to move to the correct track. Access time is seek time plus rotational latency â€” the time for the target sector to rotate under the head. These physical delays create latency that SSDs eliminate entirely.\nFORM FACTORS.\n3.5-inch HDDs are used in desktop systems. They require a separate SATA power connector and a SATA data cable. 2.5-inch HDDs are used in laptops and external enclosures. Some desktop cases accept 2.5-inch drives via adapter brackets.\nFRAGILITY.\nHDDs are vulnerable to physical shock when operating. The read head floats nanometers above the platter surface. An impact during operation can cause the head to contact the platter â€” a head crash â€” resulting in data loss and physical damage.\n---",
+      "exam_tips": [
+        "SATA max = 600 MBps. NVMe is the high-performance interface."
+      ]
+    },
+    {
+      "title": "Solid-State Drives",
+      "content": "Solid-state drives use NAND flash memory to store data. No moving parts. Data is read and written electronically.\nPERFORMANCE.\nSSD performance is dramatically higher than HDD across all metrics. Random access latency â€” the time to read a random small block of data â€” is measured in microseconds for SSDs versus milliseconds for HDDs. Sequential read and write speeds for SATA SSDs reach 500-600 MBps. NVMe SSDs reach 3,500 MBps on PCIe 3.0 and 7,000 MBps and beyond on PCIe 4.0.\nThis performance differential has a direct user-visible impact: operating system boot times, application launch times, and file operation speeds are all substantially faster on SSD.\nDURABILITY AND POWER.\nWithout moving parts, SSDs are resistant to physical shock and vibration. They operate silently. They consume less power â€” important for laptops where battery runtime matters.\nWEAR LEVELING.\nNAND flash cells have a finite number of write cycles. The SSD controller distributes writes across all cells to prevent any single area from wearing out prematurely â€” this is called wear leveling. SSDs also track remaining write endurance through SMART data, which can be monitored with diagnostic software.\nCOST.\nSSDs cost more per gigabyte than HDDs. The gap has narrowed substantially but has not closed. This is why many systems use an SSD for the OS and applications with a larger HDD for bulk storage.\n---",
+      "exam_tips": [
+        "M.2 does NOT automatically mean NVMe. Verify the interface the motherboard's M.2 slot supports."
+      ]
+    },
+    {
+      "title": "Ssd Interfaces â€” Sata, Nvme, And M.2",
+      "content": "SATA SSDs.\nSATA SSDs use the same interface as SATA HDDs. Maximum throughput is 600 MBps â€” this is a SATA protocol limit, not an SSD flash limit. SATA SSDs typically come in the 2.5-inch form factor with standard SATA data and power connectors. They are a direct replacement for SATA HDDs with a dramatic performance improvement, constrained only by the interface.\nNVMe SSDs.\nNVMe â€” Non-Volatile Memory Express â€” is a protocol designed specifically for flash storage. Unlike SATA, which was designed for spinning disk access patterns, NVMe was built for the access characteristics of NAND flash. NVMe communicates directly over PCIe lanes, bypassing the SATA controller entirely.\nPerformance: NVMe on PCIe 3.0 reaches approximately 3,500 MBps sequential read. NVMe on PCIe 4.0 reaches 7,000 MBps. Latency is also significantly lower than SATA.\nM.2 FORM FACTOR.\nM.2 is a physical connector and form factor â€” not an interface. This distinction is critical. An M.2 slot on a motherboard can carry either SATA or NVMe signals, depending on how the slot is wired.\nM.2 drives and slots use key notches to indicate compatibility:\n- B-key: supports SATA and PCIe x2\n- M-key: supports PCIe x4 (NVMe) and SATA on some implementations\n- B+M key: supports both B and M keyed slots â€” most consumer SSDs use this\nAn NVMe M.2 drive in an M.2 slot wired for SATA only will not work. Always verify that the motherboard's M.2 slot supports the interface â€” SATA, NVMe, or both â€” before purchasing.\nM.2 SSD sizes are designated by numbers: 2230, 2242, 2260, 2280 â€” indicating width and length in millimeters. The most common is 2280 (22mm wide, 80mm long).\n---",
+      "exam_tips": [
+        "RAID 0 = speed, zero fault tolerance. Any failure = total loss."
+      ]
+    },
+    {
+      "title": "Raid â€” Redundant Array Of Independent Disks",
+      "content": "RAID combines multiple physical drives into a single logical storage volume. It can provide performance benefits, redundancy against drive failure, or both â€” depending on the RAID level.\nCritical rule: RAID is not a backup. RAID protects against drive failures. It does not protect against accidental deletion, ransomware, software errors that corrupt data on all mirrors simultaneously, controller failure, or catastrophic physical events. Always maintain separate backups.\nRAID can be implemented in hardware â€” through a dedicated RAID controller card â€” or in software â€” through the operating system. Hardware RAID is generally preferred for performance and reliability in critical systems.\nRAID 0 â€” STRIPING.\nData is split across two or more drives in alternating blocks. Reads and writes to the array are distributed across all drives simultaneously, increasing throughput. No redundancy â€” if any single drive fails, all data on the array is lost. Two drives minimum. Usable capacity equals the total of all drives. RAID 0 is used for performance-critical temporary storage where data loss is acceptable.\nRAID 1 â€” MIRRORING.\nData is written identically to two or more drives. One drive can fail completely; the other continues serving data without interruption. Usable capacity is 50% of total capacity â€” two 4 TB drives yield 4 TB usable. RAID 1 provides fault tolerance at a capacity cost.\nRAID 5 â€” STRIPING WITH PARITY.\nData and parity information are striped across three or more drives. Parity data allows reconstruction of any single drive's content from the remaining drives. The array can survive one drive failure. Minimum three drives. Usable capacity is total capacity minus one drive's worth. Good balance of performance, redundancy, and capacity efficiency.\nRAID 6 â€” STRIPING WITH DUAL PARITY.\nSimilar to RAID 5 but with two independent sets of parity data. The array can survive two simultaneous drive failures. Minimum four drives. Provides greater fault tolerance than RAID 5, at a slight performance cost for writes.\nRAID 10 â€” MIRRORING AND STRIPING.\nAlso written as RAID 1+0. Combines two RAID 1 mirror pairs striped across as RAID 0. Minimum four drives. Provides both the read/write performance of striping and the redundancy of mirroring. Usable capacity is 50%. Higher cost in drives but delivers both performance and fault tolerance.\n---",
+      "exam_tips": [
+        "RAID 5 = 3 drives minimum, 1 failure. RAID 6 = 4 drives minimum, 2 failures. These minimums are tested."
+      ]
+    },
+    {
+      "title": "Removable And External Storage",
+      "content": "EXTERNAL DRIVES.\nExternal HDDs and SSDs connect via USB. Performance is bounded by the USB interface â€” USB 2.0 is far too slow for SSD-class storage. USB 3.0 (5 Gbps) and USB 3.1/3.2 (10-20 Gbps) are appropriate for external SSDs.\nFLASH DRIVES.\nUSB flash drives use NAND flash and connect via USB. They are portable, compact, and available in capacities from a few gigabytes to 1 TB and above. Performance varies by manufacturer and model.\nMEMORY CARDS.\nSD cards and their variants are used in cameras, tablets, and mobile devices. SD supports capacities up to 2 GB. SDHC extends this to 32 GB. SDXC extends to 2 TB. Speed classes â€” Class 2 through Class 10 â€” and UHS ratings â€” UHS-I, UHS-II â€” indicate minimum write speeds important for video recording.\nOPTICAL STORAGE.\nCD â€” Compact Disc â€” stores approximately 700 MB. Originally audio, extended to data and software distribution.\nDVD â€” Digital Versatile Disc â€” stores 4.7 GB on a single-layer single-sided disc, up to 17 GB on dual-layer dual-sided. Used for software, video, and archival storage.\nBlu-ray stores 25 GB per layer, with dual-layer reaching 50 GB. Used for high-definition video and large data archival.\nOptical formats include read-only pressed discs, recordable (R) discs written once, and rewritable (RW) discs that can be erased and rewritten.\n---",
+      "exam_tips": [
+        "CD = 700 MB, DVD = 4.7-17 GB, Blu-ray = 25+ GB. These exact values are tested."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "An HDD dropped from desk height has a reasonable chance of total data loss. An SSD dropped from the same height is probably fine. The reason comes down to fundamental technology differences.",
+      "concept": "HDD VS SSD â€” STORAGE TECHNOLOGY COMPARED",
+      "summary": "Hard disk drives store data magnetically on spinning platters. A read/write head moves across the platter surface to access data."
+    },
+    {
+      "hook": "M.2 is a form factor, not an interface. This distinction trips up a significant number of exam questions â€” because M.2 slots can be either SATA or NVMe, and they are not equivalent.",
+      "concept": "SSD INTERFACES: SATA, NVMe & M.2",
+      "summary": "SSDs connect to the system through one of two interfaces: SATA or NVMe. The interface determines the performance ceiling."
+    },
+    {
+      "hook": "RAID is not a backup. This is the most important sentence in this topic. Many organizations have lost data assuming their RAID array made a separate backup unnecessary.",
+      "concept": "RAID LEVELS EXPLAINED",
+      "summary": "RAID â€” Redundant Array of Independent Disks â€” combines multiple physical drives into a single logical volume. It provides performance, redundancy, or both â€” but it does not replace backups."
+    },
+    {
+      "hook": "CD, DVD, Blu-ray â€” each holds a dramatically different amount of data, and the exam tests all three. Knowing the capacity numbers takes less than a minute to lock in.",
+      "concept": "REMOVABLE & OPTICAL STORAGE",
+      "summary": "Beyond internal drives, several categories of removable and external storage exist. External HDDs and SSDs connect via USB."
+    },
+    {
+      "hook": "Hard disk drives store data magnetically on rotating platters.",
+      "concept": "Hard Disk Drives",
+      "summary": "Hard disk drives store data magnetically on rotating platters. A read/write head on a movable actuator arm positions over the correct track on the platter and reads or writes data as the platter spins beneath it. This mechanical design is efficient and has been refined over decades â€” but the physical movement imposes fundamental limitations."
+    },
+    {
+      "hook": "Solid-state drives use NAND flash memory to store data.",
+      "concept": "Solid-State Drives",
+      "summary": "Solid-state drives use NAND flash memory to store data. No moving parts. Data is read and written electronically."
+    },
+    {
+      "hook": "RAID combines multiple physical drives into a single logical storage volume.",
+      "concept": "Raid â€” Redundant Array Of Independent Disks",
+      "summary": "RAID combines multiple physical drives into a single logical storage volume. It can provide performance benefits, redundancy against drive failure, or both â€” depending on the RAID level. Critical rule: RAID is not a backup."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "Which storage technology has no moving parts and stores data on flash memory chips?",
+      "options": [
+        "HDD",
+        "Optical drive",
+        "Tape drive",
+        "SSD"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What RAID level provides disk mirroring with data redundancy but no striping?",
+      "options": [
+        "RAID 1",
+        "RAID 0",
+        "RAID 5",
+        "RAID 10"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A user wants maximum storage capacity across two drives with no redundancy. Which RAID level should be used?",
+      "options": [
+        "Only NVMe SSDs",
+        "Only SATA SSDs",
+        "A small form factor connector that supports both SATA and NVMe SSDs depending on keying",
+        "A USB storage standard"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "Which storage device uses magnetic platters and a read/write head?",
+      "options": [
+        "SSD",
+        "NVMe",
+        "eMMC",
+        "HDD"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "An SSD is significantly faster than an HDD primarily because:",
+      "options": [
+        "It runs at a higher voltage",
+        "It has no moving parts and uses flash memory for near-instant random access",
+        "It uses a different BIOS mode",
+        "It spins faster"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Which of the following is NOT a standard RAID level?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 7",
+        "RAID 5"
+      ],
+      "answer": 2,
+      "explanation": "RAID 7 is not a standard implementation."
+    },
+    {
+      "q": "Which storage interface provides the highest sequential performance for an M.2 SSD by communicating directly over PCIe lanes, bypassing the SATA controller?",
+      "options": [
+        "SATA III (6 Gbps)",
+        "mSATA",
+        "eSATA",
+        "NVMe via PCIe"
+      ],
+      "answer": 3,
+      "explanation": "NVMe (Non-Volatile Memory Express) communicates directly over PCIe lanes, delivering sequential read speeds of 3,000â€“7,000+ MB/s versus SATA III's 550 MB/s limit. NVMe and SATA M.2 drives share the same M.2 physical slot but require different controller support."
+    },
+    {
+      "q": "What PSU form factor is used in standard ATX desktop cases?",
+      "options": [
+        "SFX",
+        "TFX",
+        "ATX",
+        "Flex ATX"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What is the minimum number of drives required for a RAID 10 array?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": 2,
+      "explanation": "RAID 10 (RAID 1+0) requires a minimum of 4 drives: at least two mirrored pairs that are then striped together. It provides both redundancy and performance."
+    },
+    {
+      "q": "What does wear leveling on an SSD do?",
+      "options": [
+        "It slows write speeds to prevent overheating",
+        "It distributes write operations evenly across all NAND flash cells to extend the drive lifespan",
+        "It monitors for bad sectors and marks them as unusable",
+        "It compresses data before writing to reduce cell wear"
+      ],
+      "answer": 1,
+      "explanation": "NAND flash cells have a limited number of write cycles before failure. Wear leveling distributes writes across all cells evenly so no single cell wears out prematurely, extending overall SSD lifespan."
+    },
+    {
+      "q": "What are the dimensions of an M.2 2280 SSD?",
+      "options": [
+        "22mm x 42mm",
+        "22mm x 60mm",
+        "22mm x 80mm",
+        "30mm x 80mm"
+      ],
+      "answer": 2,
+      "explanation": "The M.2 naming convention encodes size: 2280 = 22mm wide x 80mm long. This is the most common M.2 form factor for consumer SSDs. Other common sizes include 2242 (42mm) and 2260 (60mm)."
+    },
+    {
+      "q": "A RAID array is often described as 'not a backup.' What specific threat does RAID NOT protect against?",
+      "options": [
+        "A single drive failure",
+        "Multiple simultaneous drive failures in RAID 5",
+        "Accidental file deletion, ransomware encryption, or malware corruption",
+        "Physical drive failure from bearing wear"
+      ],
+      "answer": 2,
+      "explanation": "RAID protects against drive hardware failure. It does not protect against accidental deletion, ransomware, or malware -- all of which corrupt or delete the data itself. The RAID controller faithfully mirrors or stripes the corrupted data to all drives."
+    },
+    {
+      "q": "What is the maximum sequential throughput of a SATA III interface?",
+      "options": [
+        "150 MB/s",
+        "300 MB/s",
+        "600 MB/s",
+        "1000 MB/s"
+      ],
+      "answer": 2,
+      "explanation": "SATA III (SATA 6 Gb/s) has a maximum theoretical throughput of 600 MB/s. In practice, SATA SSDs typically reach 500-560 MB/s sequential read/write -- far exceeded by NVMe drives which can reach 7,000 MB/s on PCIe 4.0."
+    },
+    {
+      "q": "Which RAID level requires at least 3 drives, uses distributed parity, and can survive a single drive failure?",
+      "options": [
+        "RAID 0 -- striping only",
+        "RAID 1 -- mirroring only",
+        "RAID 5 -- striping with distributed parity",
+        "RAID 6 -- striping with dual parity"
+      ],
+      "answer": 2,
+      "explanation": "RAID 5 requires a minimum of 3 drives and distributes parity across all drives. If one drive fails, the data can be reconstructed from the parity data on the remaining drives."
+    },
+    {
+      "q": "What is the single-layer Blu-ray disc storage capacity?",
+      "options": [
+        "8.5 GB",
+        "17 GB",
+        "25 GB",
+        "50 GB"
+      ],
+      "answer": 2,
+      "explanation": "A single-layer Blu-ray disc holds 25 GB. A dual-layer Blu-ray holds 50 GB. Blu-ray uses a 405nm blue-violet laser (shorter wavelength than the 650nm red laser used by DVD) allowing higher data density."
+    },
+    {
+      "q": "What is the difference between MLC, TLC, and QLC NAND flash used in SSDs?",
+      "options": [
+        "MLC, TLC, and QLC describe the interface speed (MLC fastest, QLC slowest)",
+        "MLC stores 2 bits/cell (faster, more durable), TLC stores 3 bits/cell (common consumer balance), QLC stores 4 bits/cell (highest density and lowest cost, least endurance)",
+        "MLC is for enterprise SSDs, TLC for consumer, QLC is only used in NVMe drives",
+        "They describe power consumption levels — MLC uses the most power, QLC the least"
+      ],
+      "answer": 1,
+      "explanation": "NAND cell type determines density, cost, and endurance. MLC (2 bits/cell) offers good balance of speed and longevity. TLC (3 bits/cell) is the most common in consumer SSDs. QLC (4 bits/cell) maximizes capacity and reduces cost but has lower write endurance and slower write speeds."
+    },
+    {
+      "q": "What is the purpose of SSD over-provisioning?",
+      "options": [
+        "Extra capacity sold to the customer as a marketing buffer",
+        "Reserved, unaddressable storage used by the SSD controller for wear leveling, garbage collection, and bad block management to extend drive lifespan and performance",
+        "Additional cache memory soldered onto the SSD PCB",
+        "Headroom allocated for RAID parity calculations"
+      ],
+      "answer": 1,
+      "explanation": "Over-provisioning is a portion of NAND flash reserved exclusively for the SSD controller — invisible to the OS. It gives the controller space for wear leveling, garbage collection, and absorbing bad blocks, which maintains consistent performance and extends drive life."
+    },
+    {
+      "q": "What is the difference between SAS (Serial Attached SCSI) and SATA in enterprise storage?",
+      "options": [
+        "SAS uses fiber optic connections; SATA uses copper",
+        "SAS supports higher throughput, dual-port redundancy, longer cable runs, and enterprise reliability; SATA is consumer-grade with a single port and lower cost",
+        "SAS is for SSDs only; SATA is for HDDs only",
+        "There is no performance difference — SAS simply costs more due to branding"
+      ],
+      "answer": 1,
+      "explanation": "SAS is the enterprise successor to SCSI — supporting up to 22.5 Gbps, dual-ported drives (redundant paths), longer cable runs, and 24/7 reliability ratings. SATA is consumer-grade with a single data path, up to 6 Gbps, and is suitable for desktop/light server use."
+    },
+    {
+      "q": "A RAID 1 mirror array indicates one drive has failed. What is the CORRECT immediate action?",
+      "options": [
+        "Shut down the system and do not power it on until both drives are replaced",
+        "Replace the failed drive; the array will automatically rebuild from the surviving healthy drive",
+        "Copy data from the healthy drive manually before replacing the failed one",
+        "Add a third drive to convert RAID 1 to RAID 5 before rebuilding"
+      ],
+      "answer": 1,
+      "explanation": "In RAID 1, all data exists on both drives. When one fails, the array operates in degraded mode using the surviving drive. After replacing the failed drive, the RAID controller automatically rebuilds the mirror — no manual data copy is needed."
+    },
+    {
+      "q": "Which RAID level provides maximum sequential read/write performance across all drives with zero redundancy, making a single drive failure catastrophic?",
+      "options": [
+        "RAID 1",
+        "RAID 5",
+        "RAID 0",
+        "RAID 6"
+      ],
+      "answer": 2,
+      "explanation": "RAID 0 (striping) splits data across all drives for maximum read/write performance — all drives contribute simultaneously. However, it provides no redundancy; if any drive fails, all data in the array is lost because no drive contains a complete copy."
+    }
+  ]
+}

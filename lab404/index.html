@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab404 Study Zone</title>
+  <meta name="description" content="CompTIA A+ 220-1201 & 220-1202 study hub for the Lab404 series. Concept cards, exam tips, and practice tests for all 45 chapters.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none';">
+  <link id="theme-stylesheet" rel="stylesheet" href="css/dark.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <script src="js/theme-init.js"></script>
+</head>
+<body class="os-mode">
+
+<!-- ── Boot Screen ── -->
+<div id="boot-screen" role="status" aria-live="polite">
+  <div class="boot-header">LAB404 STUDY OS</div>
+  <div id="bootLog" class="boot-log"></div>
+  <div class="boot-bar-wrap"><div id="bootBar" class="boot-bar" style="width:0%"></div></div>
+</div>
+
+<!-- ── Desktop ── -->
+<div class="os-desktop">
+  <div class="desktop-icons-area">
+    <!-- Active -->
+    <div class="desktop-icon" data-app="folder-aplus" title="A+ Study Hub" role="button" tabindex="0" aria-label="Open A+ Study Hub">
+      <div class="desktop-icon-img">💻</div>
+      <div class="desktop-icon-label">A+ Hub</div>
+    </div>
+    <!-- Coming soon — clickable, show coming-soon window -->
+    <div class="desktop-icon coming-soon" data-app="folder-netplus" title="Net+ — Coming Soon" role="button" tabindex="0" aria-label="Net+ Study Hub — Coming Soon">
+      <div class="desktop-icon-img">🌐</div>
+      <div class="desktop-icon-label">Net+ Hub</div>
+      <div class="desktop-icon-soon-tag">soon</div>
+    </div>
+    <div class="desktop-icon coming-soon" data-app="folder-secplus" title="Sec+ — Coming Soon" role="button" tabindex="0" aria-label="Sec+ Study Hub — Coming Soon">
+      <div class="desktop-icon-img">🔒</div>
+      <div class="desktop-icon-label">Sec+ Hub</div>
+      <div class="desktop-icon-soon-tag">soon</div>
+    </div>
+    <div class="desktop-icon coming-soon" data-app="folder-linuxplus" title="Linux+ — Coming Soon" role="button" tabindex="0" aria-label="Linux+ Study Hub — Coming Soon">
+      <div class="desktop-icon-img">🐧</div>
+      <div class="desktop-icon-label">Linux+ Hub</div>
+      <div class="desktop-icon-soon-tag">soon</div>
+    </div>
+    <div class="desktop-icon coming-soon" data-app="folder-cloudplus" title="Cloud+ — Coming Soon" role="button" tabindex="0" aria-label="Cloud+ Study Hub — Coming Soon">
+      <div class="desktop-icon-img">☁️</div>
+      <div class="desktop-icon-label">Cloud+ Hub</div>
+      <div class="desktop-icon-soon-tag">soon</div>
+    </div>
+    <div class="desktop-icon coming-soon" data-app="folder-serverplus" title="Server+ — Coming Soon" role="button" tabindex="0" aria-label="Server+ Study Hub — Coming Soon">
+      <div class="desktop-icon-img">🖥️</div>
+      <div class="desktop-icon-label">Server+ Hub</div>
+      <div class="desktop-icon-soon-tag">soon</div>
+    </div>
+    <div class="desktop-icon coming-soon" data-app="folder-cysa" title="CySA+ — Coming Soon" role="button" tabindex="0" aria-label="CySA+ Study Hub — Coming Soon">
+      <div class="desktop-icon-img">🔍</div>
+      <div class="desktop-icon-label">CySA+ Hub</div>
+      <div class="desktop-icon-soon-tag">soon</div>
+    </div>
+    <div class="desktop-icon coming-soon" data-app="folder-pentest" title="PenTest+ — Coming Soon" role="button" tabindex="0" aria-label="PenTest+ Study Hub — Coming Soon">
+      <div class="desktop-icon-img">⚔️</div>
+      <div class="desktop-icon-label">PenTest+ Hub</div>
+      <div class="desktop-icon-soon-tag">soon</div>
+    </div>
+    <div class="desktop-icon coming-soon" data-app="folder-securityx" title="SecurityX — Coming Soon" role="button" tabindex="0" aria-label="SecurityX Study Hub — Coming Soon">
+      <div class="desktop-icon-img">🛡️</div>
+      <div class="desktop-icon-label">SecurityX Hub</div>
+      <div class="desktop-icon-soon-tag">soon</div>
+    </div>
+    <div class="desktop-icon coming-soon" data-app="folder-dataplus" title="Data+ — Coming Soon" role="button" tabindex="0" aria-label="Data+ Study Hub — Coming Soon">
+      <div class="desktop-icon-img">📊</div>
+      <div class="desktop-icon-label">Data+ Hub</div>
+      <div class="desktop-icon-soon-tag">soon</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Taskbar ── -->
+<div class="taskbar" role="toolbar" aria-label="Taskbar">
+  <button class="taskbar-start" id="startBtn" aria-haspopup="true" aria-expanded="false">
+    <svg class="start-ship" viewBox="0 0 18 22" width="16" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M9 1C6 1 4 5 4 9v6h10V9C14 5 12 1 9 1z"/>
+      <path d="M4 12L1 16l3-1"/><path d="M14 12l3 4-3-1"/>
+      <rect x="6" y="15" width="6" height="2" rx="1"/>
+      <path class="start-flame" d="M7.5 17Q9 20.5 10.5 17"/>
+      <circle cx="9" cy="8" r="1.8"/>
+    </svg>
+    LAUNCH
+  </button>
+  <div class="taskbar-windows" id="taskbarWindows" role="list" aria-label="Open windows"></div>
+  <div class="taskbar-tray">
+    <div class="pomo-widget" id="pomoWidget" title="Study Timer — click to start, right-click to reset">
+      <button class="pomo-btn" id="pomoBtn" aria-label="Study timer">⏱</button>
+      <span class="pomo-display" id="pomoDisplay" style="display:none" aria-live="polite"></span>
+    </div>
+    <span class="tray-xp" id="trayXP" title="XP Level"></span>
+    <span class="tray-streak" id="trayStreak" style="display:none"></span>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle dark/light theme">
+      <span class="theme-icon-light">&#9788;</span>
+      <span class="theme-icon-dark" style="display:none">&#9789;</span>
+    </button>
+    <div class="taskbar-clock" id="taskbarClock" aria-live="off"></div>
+  </div>
+</div>
+
+<!-- ── Start Menu ── -->
+<div class="start-menu" id="startMenu" hidden role="menu" aria-label="Start menu">
+  <div class="start-menu-header">
+    <div class="brand">Lab404</div>
+    <div class="sub">A+ Study Hub — 220-1201/1202</div>
+  </div>
+  <div class="start-menu-items">
+    <div class="start-menu-section-label">CompTIA Hubs</div>
+    <button class="start-menu-item" data-app="folder-aplus" role="menuitem">
+      <span class="menu-icon">💻</span> A+ Study Hub
+    </button>
+    <button class="start-menu-item start-menu-item-dim" data-app="folder-netplus" role="menuitem">
+      <span class="menu-icon">🌐</span> Net+ Study Hub <span class="menu-soon">soon</span>
+    </button>
+    <button class="start-menu-item start-menu-item-dim" data-app="folder-secplus" role="menuitem">
+      <span class="menu-icon">🔒</span> Sec+ Study Hub <span class="menu-soon">soon</span>
+    </button>
+    <button class="start-menu-item start-menu-item-dim" data-app="folder-linuxplus" role="menuitem">
+      <span class="menu-icon">🐧</span> Linux+ Study Hub <span class="menu-soon">soon</span>
+    </button>
+    <button class="start-menu-item start-menu-item-dim" data-app="folder-cloudplus" role="menuitem">
+      <span class="menu-icon">☁️</span> Cloud+ Study Hub <span class="menu-soon">soon</span>
+    </button>
+    <button class="start-menu-item start-menu-item-dim" data-app="folder-serverplus" role="menuitem">
+      <span class="menu-icon">🖥️</span> Server+ Study Hub <span class="menu-soon">soon</span>
+    </button>
+    <button class="start-menu-item start-menu-item-dim" data-app="folder-cysa" role="menuitem">
+      <span class="menu-icon">🔍</span> CySA+ Study Hub <span class="menu-soon">soon</span>
+    </button>
+    <button class="start-menu-item start-menu-item-dim" data-app="folder-pentest" role="menuitem">
+      <span class="menu-icon">⚔️</span> PenTest+ Study Hub <span class="menu-soon">soon</span>
+    </button>
+    <button class="start-menu-item start-menu-item-dim" data-app="folder-securityx" role="menuitem">
+      <span class="menu-icon">🛡️</span> SecurityX Study Hub <span class="menu-soon">soon</span>
+    </button>
+    <button class="start-menu-item start-menu-item-dim" data-app="folder-dataplus" role="menuitem">
+      <span class="menu-icon">📊</span> Data+ Study Hub <span class="menu-soon">soon</span>
+    </button>
+    <div class="start-menu-divider"></div>
+    <div class="start-menu-section-label">A+ Tools</div>
+    <button class="start-menu-item" data-app="practice" role="menuitem">
+      <span class="menu-icon">🎯</span> Practice Test
+    </button>
+    <button class="start-menu-item" data-app="flashcards" role="menuitem">
+      <span class="menu-icon">🃏</span> Flashcards
+    </button>
+    <button class="start-menu-item" data-app="review" role="menuitem">
+      <span class="menu-icon">📋</span> Review Checklist
+    </button>
+    <button class="start-menu-item" data-app="glossary" role="menuitem">
+      <span class="menu-icon">📖</span> Glossary
+    </button>
+    <div class="start-menu-divider"></div>
+    <button class="start-menu-item" data-app="notepad" role="menuitem">
+      <span class="menu-icon">📝</span> Notepad
+    </button>
+    <button class="start-menu-item" data-app="data" role="menuitem">
+      <span class="menu-icon">💾</span> Data Manager
+    </button>
+    <button class="start-menu-item" data-app="skills" role="menuitem">
+      <span class="menu-icon">📊</span> Skill Overview
+    </button>
+  </div>
+</div>
+
+<!-- ── Windows layer ── -->
+<div id="windows-layer" aria-live="polite"></div>
+
+<!-- ── Snap preview overlay ── -->
+<div id="snap-preview" class="snap-preview" style="display:none" aria-hidden="true"></div>
+
+<!-- ── Right-click context menu ── -->
+<div id="ctx-menu" class="ctx-menu" role="menu" aria-label="Desktop context menu">
+  <button class="ctx-item" data-ctx="aplus"      role="menuitem">💻 Open A+ Hub</button>
+  <button class="ctx-item" data-ctx="practice"   role="menuitem">🎯 Practice Test</button>
+  <button class="ctx-item" data-ctx="flashcards" role="menuitem">🃏 Flashcards</button>
+  <button class="ctx-item" data-ctx="review"     role="menuitem">📋 Review List</button>
+  <button class="ctx-item" data-ctx="glossary"   role="menuitem">📖 Glossary</button>
+  <div class="ctx-divider" role="separator"></div>
+  <button class="ctx-item" data-ctx="notepad"    role="menuitem">📝 Notepad</button>
+  <div class="ctx-divider" role="separator"></div>
+  <button class="ctx-item" data-ctx="about"      role="menuitem">ℹ️ About</button>
+</div>
+
+<script src="js/theme.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/accordion.js"></script>
+<script src="js/wallpaper.js"></script>
+<script src="js/chapters-data.js"></script>
+<script src="js/chapter-loader.js"></script>
+<script src="js/practice-loader.js"></script>
+<script src="js/flashcard-loader.js"></script>
+<script src="js/glossary-loader.js"></script>
+<script src="js/review-loader.js"></script>
+<script src="js/data-manager.js"></script>
+<script src="js/xp-system.js"></script>
+<script src="js/desktop.js"></script>
+<script src="js/boot.js"></script>
+<script>
+/* ── Pomodoro Study Timer ── */
+(function () {
+  var btn  = document.getElementById("pomoBtn");
+  var disp = document.getElementById("pomoDisplay");
+  var widget = document.getElementById("pomoWidget");
+  if (!btn || !disp) return;
+
+  var WORK_MINS = 25;
+  var seconds = WORK_MINS * 60;
+  var interval = null;
+  var state = "idle"; /* idle | running | paused | done */
+
+  function fmt(s) {
+    var m = Math.floor(s / 60);
+    return (m < 10 ? "0" : "") + m + ":" + (s % 60 < 10 ? "0" : "") + (s % 60);
+  }
+
+  function setState(s) {
+    state = s;
+    widget.className = "pomo-widget" + (s !== "idle" ? " pomo-" + s : "");
+  }
+
+  function reset() {
+    clearInterval(interval); interval = null;
+    seconds = WORK_MINS * 60;
+    disp.style.display = "none";
+    setState("idle");
+    btn.title = "Study Timer — 25 min (click to start)";
+  }
+
+  btn.addEventListener("click", function () {
+    if (state === "idle" || state === "done") {
+      seconds = WORK_MINS * 60;
+      disp.textContent = fmt(seconds);
+      disp.style.display = "";
+      setState("running");
+      btn.title = "Pause";
+      interval = setInterval(function () {
+        seconds--;
+        disp.textContent = fmt(seconds);
+        if (seconds <= 0) {
+          clearInterval(interval); interval = null;
+          setState("done");
+          disp.textContent = "Done!";
+          btn.title = "Click to restart";
+        }
+      }, 1000);
+    } else if (state === "running") {
+      clearInterval(interval); interval = null;
+      setState("paused");
+      btn.title = "Resume";
+    } else if (state === "paused") {
+      setState("running");
+      btn.title = "Pause";
+      interval = setInterval(function () {
+        seconds--;
+        disp.textContent = fmt(seconds);
+        if (seconds <= 0) {
+          clearInterval(interval); interval = null;
+          setState("done");
+          disp.textContent = "Done!";
+          btn.title = "Click to restart";
+        }
+      }, 1000);
+    }
+  });
+
+  btn.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+    reset();
+  });
+})();
+</script>
+<div class="lab404-disclaimer" style="max-width:900px;margin:18px auto 8px;padding:0 20px;font-size:12px;line-height:1.5;color:var(--text-muted,#9090bb);text-align:center">Free, independent study material from the Lab404 series by <a href="https://techlab-jd.github.io" style="color:inherit">Jordan Dorman</a>. All practice questions are original and written for study; they are not real exam questions. Not affiliated with or endorsed by CompTIA. CompTIA and A+ are trademarks of CompTIA, Inc.</div>
+</body>
+</html>

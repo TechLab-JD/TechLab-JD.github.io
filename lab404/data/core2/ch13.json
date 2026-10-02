@@ -1,0 +1,302 @@
+{
+  "core": 2,
+  "chapter": 13,
+  "title": "Workstation Hardening & Mobile Security",
+  "exam_objectives": [
+    "2.7",
+    "2.8"
+  ],
+  "coverage": "COVERED",
+  "domain": "security",
+  "domain_label": "Security",
+  "sections": [
+    {
+      "title": "Workstation Hardening",
+      "content": "Hardening is the process of reducing a system's attack surface by disabling unnecessary functionality, changing insecure defaults, and applying the minimum required configuration for the system's intended function.\nChange default administrator credentials: the default administrator account name \u00e2\u20ac\u201d typically \"Administrator\" on Windows \u00e2\u20ac\u201d and any default password are publicly known. Attackers attempt these credentials as a first step. Rename the built-in Administrator account to a non-obvious name. Set a strong, unique password. This applies not just to workstations but to all devices \u00e2\u20ac\u201d routers, switches, printers, access points.\nDisable the guest account: the Windows guest account provides access to the system without a password. It is disabled by default in modern Windows but should be explicitly verified. An enabled guest account provides a foothold for local access without any credential requirement.\nDisable AutoRun: AutoRun is the feature that automatically executes programs when removable media \u00e2\u20ac\u201d USB drives, CDs, DVDs \u00e2\u20ac\u201d is inserted. Malware spread via AutoRun infected millions of systems before the feature was disabled by default in Windows 7. AutoRun is disabled by default in modern Windows but should be verified through Group Policy \u00e2\u20ac\u201d particularly in enterprise environments where some systems may have older configurations.\nDisable unused services: every service running on a system represents a potential attack vector \u00e2\u20ac\u201d an exploitable code path, a network listener that could be targeted. Identify which services the system requires for its function and disable everything else. Remote Desktop Protocol \u00e2\u20ac\u201d RDP \u00e2\u20ac\u201d should be disabled on systems where remote administration is not needed. Telnet should be disabled on all systems \u00e2\u20ac\u201d it transmits credentials in cleartext. The Print Spooler service has been the target of multiple critical vulnerabilities and should be disabled on servers that do not print. Document what is disabled and why.\nBIOS and UEFI passwords: the supervisor password \u00e2\u20ac\u201d also called administrator password \u00e2\u20ac\u201d controls access to BIOS/UEFI settings and has the highest privilege level. A user with supervisor password access can change the boot order, disable Secure Boot, and alter any system configuration. The user password is required to boot the computer but provides limited access to BIOS settings. Both passwords prevent unauthorized boot order changes \u00e2\u20ac\u201d including booting from a USB drive or live CD, which could be used to bypass OS-level access controls entirely.\nScreensaver lock and session timeout: a workstation left unattended at a logged-in session is an open door. Configure the screensaver to require a password after activation, and set the screensaver timeout to five to fifteen minutes. Enforce this through Group Policy in domain environments. Users should also be trained to manually lock their workstation \u00e2\u20ac\u201d Windows+L \u00e2\u20ac\u201d when stepping away from the desk, even briefly.\nLog off when not in use: more secure than locking. Logging off terminates the session, closes all running applications, and releases any network connections. Required in high-security environments where other users share the physical space.\nAccount management controls: least privilege \u00e2\u20ac\u201d users should operate as standard users, not administrators, for daily work. Administrator accounts should be used only for specific administrative tasks. Restrict login times \u00e2\u20ac\u201d Active Directory allows configuration of hours during which an account is permitted to authenticate. Useful for limiting off-hours access by employees whose job function does not require it.\nFailed login attempt lockout: configure accounts to lock after a defined number of failed authentication attempts \u00e2\u20ac\u201d typically three to five. This prevents brute-force attacks against the password. Locked accounts require administrator intervention to unlock, which creates an audit trail. Too aggressive a lockout threshold \u00e2\u20ac\u201d one or two attempts \u00e2\u20ac\u201d can create denial-of-service conditions through accidental lockouts.\nAccount expiration dates: Active Directory allows setting an expiration date on a user account, after which it is automatically disabled. Essential for contractor and temporary staff accounts. Without expiration dates, accounts for departed personnel remain active until someone manually disables them \u00e2\u20ac\u201d which may never happen.\nSecure and protect critical hardware: physical security is the foundation of workstation security. Cable locks secure laptops to desks. Server rooms should be locked. Physical access to a machine bypasses most software security controls. A person with physical access and a bootable USB drive can access the contents of an unencrypted drive.\nData-at-rest encryption: BitLocker on Windows, FileVault on macOS, LUKS on Linux. Encrypts the drive so that physical theft of the machine does not result in data exposure. The drive is unreadable without the encryption key and authentication.\n---",
+      "exam_tips": [
+        "Change default credentials is ALWAYS the first hardening step. Disable AutoRun prevents malware from self-executing from USB drives. Guest account has no password \u00e2\u20ac\u201d disable it. BIOS supervisor password > user password in privilege level."
+      ]
+    },
+    {
+      "title": "Password Policies",
+      "content": "A password policy defines the requirements that all passwords in the environment must meet.\nLength: minimum eight characters for basic compliance. Twelve or more characters is the current recommendation. Password length is the strongest determinant of crack resistance \u00e2\u20ac\u201d each additional character exponentially increases the search space.\nComplexity: requiring uppercase letters, lowercase letters, numbers, and special characters increases entropy. However, modern guidance from NIST deprioritizes mandatory complexity requirements in favor of length and uniqueness, because complexity requirements often lead to predictable patterns \u00e2\u20ac\u201d \"Password1!\" meets most complexity requirements while being extremely weak.\nUniqueness: each account should have a unique password. Password reuse across systems means a credential breach at one site enables access to all others where that password is reused. Password managers are the practical solution \u00e2\u20ac\u201d they generate and store unique, random passwords for each account.\nExpiration: traditional policy forces password changes every sixty to ninety days. The modern NIST guidance recommends against mandatory rotation unless a credential compromise is known \u00e2\u20ac\u201d because forced rotation often results in predictable passwords like \"Spring2024!\" with minor variations.\nNo personal information: passwords should not contain the user's name, username, birthdate, or other easily guessed personal data.\nAccount password history: prevents reuse of recent passwords when a password change is required.\n---",
+      "exam_tips": [
+        "Swipe = zero security. Pattern = smudge attack vulnerability (oily screen residue reveals pattern). Facial recognition security depends on implementation \u00e2\u20ac\u201d 3D infrared (Face ID) is much more secure than 2D camera. Six-digit minimum PIN for business use."
+      ]
+    },
+    {
+      "title": "Mobile Device Security",
+      "content": "Screen lock methods \u00e2\u20ac\u201d five types appear on the A+ exam.\nFacial recognition: iOS Face ID uses a three-dimensional infrared map of the face \u00e2\u20ac\u201d highly accurate and resistant to photo spoofing. Older 2D facial recognition systems on Android can be defeated by a photograph of the owner's face. Fast and convenient for daily use.\nFingerprint: Touch ID on iOS, integrated sensors on Android. Fast biometric authentication. More secure than a PIN. Requires a backup authentication method \u00e2\u20ac\u201d PIN or passcode \u00e2\u20ac\u201d for situations where the biometric sensor fails.\nPIN: four to six digit numeric code. Six digits minimum is recommended. A four-digit PIN has only 10,000 possible combinations \u00e2\u20ac\u201d limited resistance to targeted guessing. Vulnerable to shoulder surfing. Simple and fast.\nPattern: available on Android. The user draws a path across a grid of dots to unlock. Easy to remember. Vulnerable to smudge attacks \u00e2\u20ac\u201d the pattern is visible as oily residue on the screen. Not recommended for high-security environments.\nSwipe: a simple swipe gesture to dismiss the lock screen. Provides no security whatsoever \u00e2\u20ac\u201d only prevents accidental input. Never acceptable for business or corporate use.\nDevice encryption: full device encryption is enabled by default on iOS when a passcode is set. On Android, encryption is typically enabled by default on modern devices but varies. Encrypts the internal storage so the data is unreadable without authentication \u00e2\u20ac\u201d protects against physical theft and forensic data extraction.\nFailed login attempt restrictions: configure the device to lock or wipe after a defined number of failed unlock attempts. iOS can be configured to erase after ten failed attempts. Android increases the delay between attempts. Enforced through MDM configuration profiles.\nOperating system and application updates: mobile OS updates contain security patches. Enable automatic updates on both iOS and Android. Application updates close vulnerabilities in installed apps. Install apps only from official stores \u00e2\u20ac\u201d Apple App Store and Google Play Store \u00e2\u20ac\u201d and review requested permissions before installation.\nEndpoint security: antivirus and anti-malware are less common on iOS due to the sandboxed application model, but available for Android. Content filtering blocks access to malicious or inappropriate websites. Deployed through MDM profiles.\nLocator applications: Find My on iOS and Find My Device on Android use GPS to locate a lost or stolen device. Can display a custom message on the locked screen, play an audible sound, remotely lock the device, and trigger a remote wipe. These features must be enabled before the device is lost \u00e2\u20ac\u201d they cannot be activated after the fact on a device that was never enrolled.\nRemote wipe: erases all data on the device. Triggered through Find My, MDM, or Exchange ActiveSync. The device must be online to receive the command \u00e2\u20ac\u201d if the device is offline, the command queues and executes when the device next connects. Cannot be undone. Should always be paired with remote backup to enable restoration on a replacement device.\nRemote backup: iCloud for iOS, Google Drive for Android. Automatically backs up device data \u00e2\u20ac\u201d photos, contacts, app data, settings. After a remote wipe, backup data can be restored to a replacement device. Verify that backups are completing successfully and are current.\n---",
+      "exam_tips": [
+        "Remote wipe command queues if the device is offline \u00e2\u20ac\u201d executes when device next connects to internet. Locator apps (Find My, Find My Device) must be enabled BEFORE the device is lost. Remote backup enables restoration after a wipe."
+      ]
+    },
+    {
+      "title": "Mdm And Byod",
+      "content": "Mobile Device Management \u00e2\u20ac\u201d MDM: enterprise platform for centrally managing mobile device fleets. IT administrators use MDM to deploy configuration profiles, enforce security policies, push application installations, track device inventory, monitor compliance status, and execute remote wipes. MDM examples include Microsoft Intune, VMware Workspace ONE, and Jamf Pro.\nConfiguration profiles: pre-built policy packages pushed to devices remotely. Can enforce password requirements, screen lock timeout, encryption settings, VPN configurations, Wi-Fi network profiles, email account setup, and usage restrictions. Users cannot modify settings enforced by a profile \u00e2\u20ac\u201d the profile overrides local settings.\nBYOD \u00e2\u20ac\u201d Bring Your Own Device: employees use personal devices for work tasks. Introduces security challenges. The device is not fully managed \u00e2\u20ac\u201d the employee has personal data on the device alongside corporate data. Privacy concerns limit how aggressively MDM can monitor and control personal devices. Containerization \u00e2\u20ac\u201d isolating corporate apps and data in a separate encrypted container \u00e2\u20ac\u201d is the primary mitigation. The container can be remotely wiped without affecting personal data.\nCorporate-owned devices: the organization owns and controls the device entirely. Full MDM enforcement with no privacy limitations. Can be completely wiped without concern for personal data. Preferred for high-security roles where data exposure would be severe.\nProfile security requirements: MDM can enforce minimum security requirements before a device is permitted to connect to corporate resources. A device without a screen lock, without current patches, or with a jailbroken OS can be blocked from accessing email and internal applications until it meets compliance requirements.\n---",
+      "exam_tips": [
+        "BYOD = personal device with work data = privacy vs security tension. Containerization isolates corporate data in an encrypted container that can be wiped without touching personal data. Corporate-owned = full MDM control, no privacy limitations.",
+        "BitLocker = Windows (Pro+). FileVault = macOS. LUKS = Linux. Each is full disk encryption. iOS encrypts automatically when a passcode is set. Know which tool belongs to which OS \u00e2\u20ac\u201d the exam will mix them."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "Default settings are attacker-friendly. Hardening a workstation means removing everything that does not need to be there and locking down everything that does. The A+ exam tests a specific list of controls.",
+      "concept": "WORKSTATION HARDENING \u00e2\u20ac\u201d THE CONTROLS THE EXAM TESTS",
+      "summary": "Workstation hardening is the process of reducing the attack surface of a system by applying a defined set of security controls. Change default credentials: default administrator account names and passwords are publicly documented for every OS and device."
+    },
+    {
+      "hook": "One of the five mobile screen lock methods provides zero security. If you do not know which one it is, the exam will catch you.",
+      "concept": "MOBILE SCREEN LOCKS \u00e2\u20ac\u201d FIVE TYPES, ONE HAS NO SECURITY AT ALL",
+      "summary": "The A+ exam tests all five mobile screen lock methods \u00e2\u20ac\u201d know them and their security characteristics. Facial recognition: uses the device camera to scan facial features."
+    },
+    {
+      "hook": "A sales rep leaves a company phone in an airport. By the time IT finds out, the data is already at risk. Remote wipe exists for exactly this scenario \u00e2\u20ac\u201d but only if it was configured before the device was lost.",
+      "concept": "REMOTE WIPE, LOCATOR APPS, AND MDM \u00e2\u20ac\u201d MOBILE DEVICE MANAGEMENT",
+      "summary": "Mobile Device Management \u00e2\u20ac\u201d MDM: a platform for centrally managing smartphones, tablets, and other mobile devices. IT deploys configuration profiles remotely \u00e2\u20ac\u201d enforcing password requirements, encryption, screen lock timeout, VPN settings, and email accounts."
+    },
+    {
+      "hook": "Hardening is the process of reducing a system's attack surface by disabling unnecessary functionality, changing insecure defaults, and applying the mi",
+      "concept": "Workstation Hardening",
+      "summary": "Hardening is the process of reducing a system's attack surface by disabling unnecessary functionality, changing insecure defaults, and applying the minimum required configuration for the system's intended function. Change default administrator credentials: the default administrator account name \u00e2\u20ac\u201d typically \"Administrator\" on Windows \u00e2\u20ac\u201d and any default password are publicly known. Attackers attempt these credentials as a first step."
+    },
+    {
+      "hook": "A password policy defines the requirements that all passwords in the environment must meet.",
+      "concept": "Password Policies",
+      "summary": "A password policy defines the requirements that all passwords in the environment must meet. Length: minimum eight characters for basic compliance. Twelve or more characters is the current recommendation."
+    },
+    {
+      "hook": "Screen lock methods \u00e2\u20ac\u201d five types appear on the A+ exam.",
+      "concept": "Mobile Device Security",
+      "summary": "Screen lock methods \u00e2\u20ac\u201d five types appear on the A+ exam. Facial recognition: iOS Face ID uses a three-dimensional infrared map of the face \u00e2\u20ac\u201d highly accurate and resistant to photo spoofing. Older 2D facial recognition systems on Android can be defeated by a photograph of the owner's face."
+    },
+    {
+      "hook": "Mobile Device Management \u00e2\u20ac\u201d MDM: enterprise platform for centrally managing mobile device fleets.",
+      "concept": "Mdm And Byod",
+      "summary": "Mobile Device Management \u00e2\u20ac\u201d MDM: enterprise platform for centrally managing mobile device fleets. IT administrators use MDM to deploy configuration profiles, enforce security policies, push application installations, track device inventory, monitor compliance status, and execute remote wipes. MDM examples include Microsoft Intune, VMware Workspace ONE, and Jamf Pro."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "What is the FIRST security action to take when setting up a new workstation?",
+      "options": [
+        "Change all default passwords and update the OS with all patches",
+        "Install all applications",
+        "Create a guest account",
+        "Disable Windows Defender"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What type of software should be kept updated to ensure it can detect the latest malware?",
+      "options": [
+        "Office productivity applications",
+        "Antivirus and anti-malware software (definitions and engine)",
+        "Screen savers",
+        "Printer drivers"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of a host-based firewall such as Windows Firewall?",
+      "options": [
+        "Replace network firewalls",
+        "Monitor internet speed",
+        "Filter incoming and outgoing traffic on the individual computer",
+        "Provide VPN access"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What security principle means \"never trust, always verify\" \u00e2\u20ac\u201d requiring authentication and authorization for every access request regardless of location?",
+      "options": [
+        "Defense in depth",
+        "Separation of duties",
+        "Least privilege",
+        "Zero trust"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A technician is setting up a standard user account for a new employee. Why is a standard account preferred over an administrator account for daily use?",
+      "options": [
+        "Limits the damage malware can do if the account is compromised",
+        "Standard accounts are faster",
+        "Standard accounts cannot be hacked",
+        "Required by law"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What should be done with user accounts when an employee leaves the organization?",
+      "options": [
+        "Leave them active for IT use",
+        "Disable or delete the account immediately",
+        "Change the password and share it with the team",
+        "Convert to a guest account"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What is the best practice for handling autorun when inserting USB drives?",
+      "options": [
+        "Always allow autorun for convenience",
+        "Only allow autorun for trusted brands",
+        "Disable autorun/autoplay to prevent automatic execution of potentially malicious code",
+        "Format the drive first"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A company policy requires workstations to automatically lock after inactivity and require re-authentication. Which Windows feature enforces this?",
+      "options": [
+        "BitLocker automatic unlock",
+        "Remote Desktop idle session timeout",
+        "Windows Defender Application Control",
+        "Screen saver with password-on-resume enabled"
+      ],
+      "answer": 3,
+      "explanation": "The screen saver timeout combined with \"On resume, display logon screen\" (enforced via Group Policy) is the standard Windows mechanism for automatic workstation locking after inactivity."
+    },
+    {
+      "q": "A technician is hardening a new Windows workstation. Which action BEST demonstrates applying the principle of least privilege?",
+      "options": [
+        "Creating a separate administrator account for administrative tasks and using a standard account for daily use",
+        "Granting the standard user account local administrator rights to simplify software installs",
+        "Disabling Windows Defender to allow all applications to run without restrictions",
+        "Configuring the firewall to allow all outbound traffic by default"
+      ],
+      "answer": 0,
+      "explanation": "Using a standard account for daily tasks and a separate administrator account only when needed limits the damage any malware or mistake can cause, implementing least privilege at the user level."
+    },
+    {
+      "q": "A technician wants to prevent users from running unauthorized applications on company workstations without blocking the entire OS. Which Windows Enterprise feature allows application whitelisting?",
+      "options": [
+        "Windows Defender Firewall inbound rules",
+        "AppLocker",
+        "BitLocker Network Unlock",
+        "Credential Guard"
+      ],
+      "answer": 1,
+      "explanation": "AppLocker allows administrators to define rules permitting or denying specific applications, scripts, and installer files based on file path, publisher signature, or hash. It is the primary application whitelisting tool in Windows Enterprise and Education editions."
+    },
+    {
+      "q": "What mobile security feature wipes the device after a specified number of failed unlock attempts?",
+      "options": [
+        "Remote lock",
+        "Screen lock timeout",
+        "Failed login wipe or remote wipe after threshold",
+        "MDM enrollment"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What MDM capability allows an IT admin to lock or wipe a lost corporate mobile device remotely?",
+      "options": [
+        "Remote desktop",
+        "Biometric enrollment",
+        "App whitelisting",
+        "Remote lock and remote wipe"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What is \"BYOD\" and what is the primary security concern?",
+      "options": [
+        "Bring Your Own Device \u00e2\u20ac\u201d concern is mixing personal and corporate data on unmanaged devices",
+        "Buy Your Own Device \u00e2\u20ac\u201d concern is cost",
+        "Build Your Own Device \u00e2\u20ac\u201d concern is compatibility",
+        "Backup Your Own Data \u00e2\u20ac\u201d concern is compliance"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What type of screen lock is considered the most secure on mobile devices?",
+      "options": [
+        "Swipe pattern",
+        "Strong alphanumeric passcode or biometric with backup passcode",
+        "4-digit PIN",
+        "Face recognition only"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What security feature on mobile devices verifies each app is from a trusted source before installation?",
+      "options": [
+        "VPN",
+        "Screen lock",
+        "App signing and app store vetting (e.g., Play Protect, App Store review)",
+        "Remote wipe"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A company issues smartphones to employees and requires that all corporate data be erasable from any device reported lost or stolen. Which mobile device management capability satisfies this?",
+      "options": [
+        "GPS location tagging",
+        "SIM lock",
+        "Application sandboxing",
+        "Remote wipe"
+      ],
+      "answer": 3,
+      "explanation": "Remote wipe allows an administrator via MDM to send a command that erases all data on the device over the network. GPS helps locate a device but does not protect data on it."
+    },
+    {
+      "q": "An employee enrolls their personal smartphone in the company MDM solution for BYOD access to corporate resources. Which security concern does MDM enrollment PRIMARILY address?",
+      "options": [
+        "Enforcing security policies such as screen lock, encryption, and remote wipe on the personal device",
+        "Preventing the employee from making personal calls during work hours",
+        "Blocking all personal app installations on the employee's device",
+        "Automatically upgrading device hardware to meet corporate standards"
+      ],
+      "answer": 0,
+      "explanation": "MDM enrollment allows IT to enforce baseline security policies on personal devices accessing corporate resources, balancing employee privacy with corporate data protection requirements."
+    },
+    {
+      "q": "The IT department wants to ensure that if the physical storage chip is removed from a corporate smartphone, stored data cannot be read by an attacker. Which feature provides this protection?",
+      "options": [
+        "Remote wipe",
+        "Full device encryption",
+        "SIM lock",
+        "Biometric authentication"
+      ],
+      "answer": 1,
+      "explanation": "Full device encryption encrypts all data on internal storage using a key derived from the user's PIN or password. Without the decryption key, data removed on physical media is unreadable."
+    },
+    {
+      "q": "A mobile device requires a fingerprint scan to unlock. If the fingerprint reader fails, it falls back to a numeric PIN. Which security concept does this configuration illustrate?",
+      "options": [
+        "Application sandboxing with PIN enforcement",
+        "SIM lock with biometric override",
+        "Multi-factor authentication with a fallback method",
+        "Remote wipe triggered by failed biometric attempts"
+      ],
+      "answer": 2,
+      "explanation": "The fingerprint (something you are) and PIN (something you know) represent two authentication factors. The fallback ensures usability when biometrics fail, though the fallback alone is single-factor."
+    },
+    {
+      "q": "An organization's mobile device policy requires all apps on corporate devices to be vetted before installation. Which MDM mechanism enforces this on managed devices?",
+      "options": [
+        "GPS location services",
+        "Automatic OS updates",
+        "SIM lock",
+        "Corporate app catalog / MDM application whitelist"
+      ],
+      "answer": 3,
+      "explanation": "MDM solutions can restrict app installation to an approved corporate catalog, blocking public app stores or sideloaded packages, ensuring all applications have been reviewed for security and compliance."
+    }
+  ]
+}

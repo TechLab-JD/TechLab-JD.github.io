@@ -1,0 +1,48 @@
+/* Dark + Neon Theme — Lab404 A+ Study Hub */
+:root {
+  --bg: #0a0a0f;
+  --surface: #111118;
+  --surface-elevated: #1a1a25;
+  --surface-hover: #22223a;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-accent: rgba(255, 45, 85, 0.3);
+
+  --text: #e8e8ff;
+  --text-muted: #9090bb;
+  --text-faint: #55557a;
+
+  --accent: #ff2d55;
+  --accent2: #00ffcc;
+  --accent3: #7b2fff;
+  --accent-dim: rgba(255, 45, 85, 0.15);
+  --accent2-dim: rgba(0, 255, 204, 0.12);
+  --accent3-dim: rgba(123, 47, 255, 0.15);
+
+  --glow-accent: 0 0 20px rgba(255, 45, 85, 0.4);
+  --glow-accent2: 0 0 20px rgba(0, 255, 204, 0.3);
+  --glow-accent3: 0 0 20px rgba(123, 47, 255, 0.35);
+  --glow-sm: 0 0 8px rgba(255, 45, 85, 0.25);
+
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.5);
+  --shadow-elevated: 0 8px 40px rgba(0, 0, 0, 0.7);
+
+  --nav-bg: rgba(10, 10, 15, 0.92);
+  --hero-overlay: rgba(10, 10, 15, 0.6);
+
+  --correct: #00ffcc;
+  --correct-dim: rgba(0, 255, 204, 0.15);
+  --wrong: #ff2d55;
+  --wrong-dim: rgba(255, 45, 85, 0.15);
+  --warning: #ffcc00;
+  --warning-dim: rgba(255, 204, 0, 0.15);
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  --transition: 0.2s ease;
+  --transition-slow: 0.4s ease;
+
+  color-scheme: dark;
+}

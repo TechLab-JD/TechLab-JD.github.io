@@ -1,0 +1,343 @@
+{
+  "core": 2,
+  "chapter": 6,
+  "title": "macOS & Linux Fundamentals",
+  "exam_objectives": [
+    "1.8",
+    "1.9"
+  ],
+  "coverage": "COVERED",
+  "domain": "os",
+  "domain_label": "Operating Systems",
+  "sections": [
+    {
+      "title": "Macos Application Management",
+      "content": "Applications on macOS use three primary file formats.\n.dmg â€” Disk Image. This is the most common distribution method. When you open a .dmg, it mounts as a virtual drive in Finder. Inside is typically the .app bundle â€” the application â€” along with a shortcut to the Applications folder. The user drags the .app to Applications to install. The .dmg is then ejected and can be deleted. Important: the .dmg is a container, not the installer. The actual installation happens when you drag the .app to /Applications.\n.pkg â€” Package. A more complex installer format that runs an installation wizard similar to a Windows .msi. Can install files to multiple system locations, configure permissions, and run pre- and post-install scripts. Requires administrator privileges.\n.app â€” Application Bundle. A self-contained directory that appears as a single file in Finder. Contains the application binary, resources, and metadata. Can technically be run from any location, though /Applications is standard.\nUninstalling on macOS: App Store apps can be deleted from Launchpad with a long press and clicking X. For others, drag the .app from /Applications to the Trash. However, this does not remove associated files in ~/Library/Application Support and ~/Library/Preferences. A third-party uninstaller is needed to remove those completely.\n---",
+      "exam_tips": [
+        ".dmg is NOT an installer â€” it is a container. The install happens when you drag .app to Applications."
+      ]
+    },
+    {
+      "title": "Macos Directory Structure",
+      "content": "macOS has a Unix-style directory hierarchy. Five locations are exam-critical.\n/Applications: All installed applications. Shared by all user accounts.\n/Users: Home directories for every user. Each user's subdirectory contains Desktop, Documents, Downloads, Pictures, and Music.\n/Library: System-wide support files. Fonts, frameworks, application support data. Shared by all users. Requires administrator rights to modify.\n/System: Core operating system files. Kernel, drivers, essential binaries. Protected by System Integrity Protection â€” SIP â€” which prevents modification even by administrators or root. Never manually edit this directory.\n~/Library â€” the tilde represents the current user's home directory. This is the per-user Library folder, hidden by default in Finder. Contains per-user preferences, caches, and application support data. Access by holding the Option key while clicking Go in the menu bar, or by pressing Command+Shift+G and typing ~/Library.\n---",
+      "exam_tips": [
+        "~ means the current user's home directory. ~/Library is hidden â€” hold Option in Finder Go menu"
+      ]
+    },
+    {
+      "title": "Macos Key Tools",
+      "content": "Time Machine: the native backup utility. Creates automatic incremental snapshots â€” hourly for the past 24 hours, daily for the past month, weekly for older data. Requires an external drive or network storage with sufficient capacity. Can restore the entire system or individual files.\nFileVault: full-disk encryption using XTS-AES-128 with a 256-bit key. Encrypts the entire startup disk. Generates a recovery key that must be stored securely â€” without it, a locked-out user cannot recover data. Enable in System Settings, Privacy and Security.\nSpotlight: system-wide search launched with Command+Space. Searches files, applications, emails, contacts, and even performs calculations and unit conversions. Launch any application by typing its name in Spotlight.\nDisk Utility: located in /Applications/Utilities. Used to format and partition drives, run First Aid to verify and repair disk errors, create and restore disk images. The macOS equivalent of Windows Disk Management, with the addition of disk repair capabilities.\nTerminal: also in /Applications/Utilities. Provides command-line access to the underlying Unix system. macOS supports Bash and Zsh shells. Common commands: ls to list files, cd to change directory, sudo for elevated commands, chmod to change permissions, top for process monitoring.\nForce Quit: Command+Option+Escape opens the Force Quit Applications window. Terminates frozen or unresponsive applications. Equivalent to End Task in Windows Task Manager.\nActivity Monitor: the macOS equivalent of Windows Task Manager. Shows real-time CPU, memory, disk, network, and energy usage by process. Use it to identify resource-hogging applications.\nKeychain: macOS's built-in password manager. Stores passwords, certificates, and private keys. Syncs across Apple devices via iCloud Keychain.\n---",
+      "exam_tips": [
+        "FileVault recovery key must be stored safely â€” without it, a locked-out user loses all data"
+      ]
+    },
+    {
+      "title": "Linux Fundamentals",
+      "content": "Linux is an open-source OS with hundreds of distributions. For the exam, the key distinction is the distribution family, which determines the package manager and package format.\nDebian-based distributions â€” including Ubuntu â€” use apt for package management and .deb packages.\nRed Hat-based distributions â€” including Fedora, CentOS, and RHEL â€” use dnf or yum for package management and .rpm packages.\nSUSE-based distributions use zypper.\nThe Linux boot process: BIOS or UEFI firmware runs first, then hands control to the bootloader â€” typically GRUB2. GRUB loads the Linux kernel into memory. The kernel initializes hardware and then starts systemd, the init system and service manager. systemd is PID 1 â€” the first process â€” and manages all other services.\n---",
+      "exam_tips": [
+        "chmod 777 = anyone can do anything â€” almost always a security mistake"
+      ]
+    },
+    {
+      "title": "Linux File Management Commands",
+      "content": "ls: lists directory contents. ls -la shows all files including hidden ones in long format with permissions. In Linux, hidden files start with a dot.\npwd: print working directory â€” shows your current location in the filesystem.\ncd: change directory. Identical in concept to Windows, but paths use forward slashes. cd .. moves up one level. cd / moves to the root. cd ~ moves to the current user's home directory.\ncp: copy files or directories. cp source destination. Use cp -r for directories.\nmv: move or rename files. mv oldname newname renames. mv file /destination/ moves.\nrm: remove files. Permanent deletion â€” no Recycle Bin equivalent. rm -r removes directories recursively. rm -f forces without prompts. Never run rm -rf / â€” this recursively force-deletes everything from the root directory.\ngrep: search for text patterns within files. grep pattern filename. Common flags: -i for case-insensitive, -r for recursive directory search, -n to show line numbers.\n---",
+      "exam_tips": [
+        "$ prompt = regular user. # prompt = root. If you see #, you have root access."
+      ]
+    },
+    {
+      "title": "Linux Permissions And Administration",
+      "content": "chmod: change file permissions. Uses numeric notation: 4 for read, 2 for write, 1 for execute. Add the values for each of three groups â€” owner, group, other. chmod 755 gives owner full access, group and other read and execute only. chmod 644 gives owner read/write, group and other read only. chmod 700 gives owner full access and nothing to anyone else.\nchown: change file ownership. chown user:group filename. Requires root or sudo.\nsudo: the preferred method to execute commands with elevated privileges. Requires your own password. Logs all commands. sudo apt install package-name installs a package with elevated privileges.\nsu: switches to another user session. Requires the target user's password. Less preferred than sudo because it provides a persistent elevated session with no logging of individual commands.\nPackage management with apt: sudo apt update refreshes the package list. sudo apt upgrade installs all updates. sudo apt install package-name installs a specific package. sudo apt remove removes a package.\nPackage management with dnf: same conceptual workflow, used on Red Hat-based distributions. sudo dnf install package-name.\nsystemctl: manages systemd services. systemctl start service starts a service. systemctl stop service stops it. systemctl restart service restarts it. systemctl status service shows current status. systemctl enable service configures auto-start at boot. systemctl disable service removes auto-start.\n---",
+      "exam_tips": [
+        "Always run `sudo apt update` before `sudo apt upgrade` â€” refresh list before installing updates"
+      ]
+    },
+    {
+      "title": "Linux Configuration Files",
+      "content": "Several configuration files in /etc are exam-relevant.\n/etc/passwd: user account information. One line per user. Contains username, UID, GID, home directory, and default shell. Passwords are not stored here â€” the \"x\" in the password field points to /etc/shadow.\n/etc/shadow: encrypted password storage. Readable only by root. Contains the hashed passwords and password aging information.\n/etc/hosts: static hostname-to-IP mappings. Checked before DNS queries. Used for local name resolution and DNS overrides. Entry format: IP address followed by hostname.\n/etc/fstab: defines filesystems to mount automatically at boot. Errors here can prevent the system from booting.\n/etc/resolv.conf: specifies which DNS servers to use. Format: nameserver followed by IP address.\n---",
+      "exam_tips": [
+        "start = immediate; enable = on next boot. Both are needed to start now AND on reboot.",
+        "/etc/hosts is checked BEFORE DNS â€” can override DNS resolution for specific hostnames"
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "On macOS, the system files that can destroy your installation live in /System. It is protected by SIP â€” and you should never modify it. Knowing what each folder does is testable on the exam.",
+      "concept": "macOS DIRECTORY STRUCTURE â€” 5 FOLDERS YOU NEED TO KNOW",
+      "summary": "macOS uses a Unix-style directory hierarchy. Five locations the exam specifically tests."
+    },
+    {
+      "hook": "chmod 755 means the owner can do everything, and everyone else can read and execute but not write. chmod 777 means anyone can do anything â€” and that is almost always wrong.",
+      "concept": "LINUX FILE PERMISSIONS â€” READ THE NUMBERS",
+      "summary": "Linux permissions are applied to three groups: the owner, the group, and everyone else â€” called \"other.\" Each group gets three potential permissions: read, write, and execute. In the numeric system, each permission has a value."
+    },
+    {
+      "hook": "The root account on Linux has zero restrictions. One typo as root can destroy the entire system. This is why most distributions disable direct root login and use sudo instead.",
+      "concept": "SUDO vs SU â€” WHY SUDO IS SAFER",
+      "summary": "Two commands provide elevated privileges in Linux. su â€” substitute user â€” switches your session to another user account."
+    },
+    {
+      "hook": "You do not download installers on Linux. You tell the package manager what you need and it handles dependencies, downloads, and installation automatically. This is a completely different model than Windows.",
+      "concept": "LINUX PACKAGE MANAGERS â€” APT vs DNF",
+      "summary": "Linux uses package managers to install, update, and remove software. The package manager resolves dependencies â€” software that other software requires â€” automatically."
+    },
+    {
+      "hook": "Applications on macOS use three primary file formats.",
+      "concept": "Macos Application Management",
+      "summary": "Applications on macOS use three primary file formats. .dmg â€” Disk Image. This is the most common distribution method."
+    },
+    {
+      "hook": "macOS has a Unix-style directory hierarchy.",
+      "concept": "Macos Directory Structure",
+      "summary": "macOS has a Unix-style directory hierarchy. Five locations are exam-critical. /Applications: All installed applications."
+    },
+    {
+      "hook": "Time Machine: the native backup utility.",
+      "concept": "Macos Key Tools",
+      "summary": "Time Machine: the native backup utility. Creates automatic incremental snapshots â€” hourly for the past 24 hours, daily for the past month, weekly for older data. Requires an external drive or network storage with sufficient capacity."
+    },
+    {
+      "hook": "Linux is an open-source OS with hundreds of distributions.",
+      "concept": "Linux Fundamentals",
+      "summary": "Linux is an open-source OS with hundreds of distributions. For the exam, the key distinction is the distribution family, which determines the package manager and package format. Debian-based distributions â€” including Ubuntu â€” use apt for package management and .deb packages."
+    },
+    {
+      "hook": "ls: lists directory contents.",
+      "concept": "Linux File Management Commands",
+      "summary": "ls: lists directory contents. ls -la shows all files including hidden ones in long format with permissions. In Linux, hidden files start with a dot."
+    },
+    {
+      "hook": "chmod: change file permissions.",
+      "concept": "Linux Permissions And Administration",
+      "summary": "chmod: change file permissions. Uses numeric notation: 4 for read, 2 for write, 1 for execute. Add the values for each of three groups â€” owner, group, other."
+    },
+    {
+      "hook": "Several configuration files in /etc are exam-relevant.",
+      "concept": "Linux Configuration Files",
+      "summary": "Several configuration files in /etc are exam-relevant. /etc/passwd: user account information. One line per user."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "What is the name of the macOS desktop background area and taskbar equivalent?",
+      "options": [
+        "Finder and Dock",
+        "Start menu",
+        "Taskbar and Desktop",
+        "Spotlight and Launchpad"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What macOS utility is equivalent to Windows Device Manager and Control Panel for system preferences?",
+      "options": [
+        "Finder",
+        "System Preferences (System Settings in macOS Ventura and later)",
+        "Terminal",
+        "Activity Monitor"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Which macOS application is equivalent to Windows Task Manager for viewing running processes and resource usage?",
+      "options": [
+        "Finder",
+        "Disk Utility",
+        "Activity Monitor",
+        "Terminal"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What macOS tool is used for disk partitioning, formatting, and repair?",
+      "options": [
+        "Finder",
+        "System Preferences",
+        "Terminal",
+        "Disk Utility"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "Where are macOS applications typically installed and stored?",
+      "options": [
+        "/usr/local/bin",
+        "/Applications folder",
+        "/System/Library",
+        "~/Library/Application Support"
+      ],
+      "answer": 1,
+      "explanation": "macOS applications are typically stored in the /Applications folder, which is accessible from Finder. Some user-specific apps may be placed in ~/Applications. /System/Library contains system components, and /usr/local/bin is for command-line tools."
+    },
+    {
+      "q": "What does FileVault do on macOS?",
+      "options": [
+        "Provides full-disk encryption for the macOS startup volume using XTS-AES-128",
+        "Manages application windows and virtual desktops (Spaces)",
+        "Indexes and searches files, apps, and web content",
+        "Creates incremental time-stamped backups to an external drive"
+      ],
+      "answer": 0,
+      "explanation": "FileVault is macOS's built-in full-disk encryption feature. It encrypts the entire startup disk using XTS-AES-128 encryption with a 256-bit key. Without the login password or recovery key, data on the drive is inaccessible even if removed."
+    },
+    {
+      "q": "A macOS user wants to restore a file deleted three days ago. Which built-in macOS feature allows them to browse and restore previous file versions?",
+      "options": [
+        "FileVault",
+        "Homebrew",
+        "Time Machine",
+        "Disk Utility"
+      ],
+      "answer": 2,
+      "explanation": "Time Machine is macOS's built-in backup and restore utility that backs up files to an external drive and allows browsing and restoring individual files from past snapshots. FileVault provides full-disk encryption. Homebrew is a third-party package manager. Disk Utility manages partitions and disk he"
+    },
+    {
+      "q": "A macOS user downloads an application from a developer's website as a .dmg file. What is the correct installation procedure?",
+      "options": [
+        "Extract the .dmg contents using Disk Utility before running the installer",
+        "Right-click the .dmg and select \"Run as administrator\" to install",
+        "Open Terminal and run chmod +x on the .dmg file, then execute it",
+        "Double-click the .dmg to mount it, then drag the application to the Applications folder"
+      ],
+      "answer": 3,
+      "explanation": "A .dmg file mounts as a virtual disk when double-clicked. The user drags the application icon to the Applications folder shortcut inside the mounted image to install. \"Run as administrator\" is a Windows concept. chmod is not needed for .dmg installation. Disk Utility is not used to extract .dmg file"
+    },
+    {
+      "q": "What is the command to list files and directories in Linux?",
+      "options": [
+        "ls",
+        "dir",
+        "list",
+        "show"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What Linux command installs packages on Debian-based distributions such as Ubuntu?",
+      "options": [
+        "yum install",
+        "apt install or apt-get install",
+        "rpm -i",
+        "dnf install"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Which Linux file system is most commonly used for Linux root partitions?",
+      "options": [
+        "FAT32",
+        "NTFS",
+        "ext4",
+        "exFAT"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What Linux command changes file permissions?",
+      "options": [
+        "chown",
+        "su",
+        "chgrp",
+        "chmod"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What is the Linux equivalent of Windows Event Viewer for viewing system logs?",
+      "options": [
+        "/var/log/ directory and journalctl command",
+        "syslog GUI",
+        "dmesg only",
+        "/etc/logs"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What command in Linux displays the current running processes?",
+      "options": [
+        "tasklist",
+        "ps aux or top",
+        "proc show",
+        "list processes"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "[BONUS â€” Beyond A+ Scope] Which desktop environment is default on Ubuntu Linux?",
+      "options": [
+        "KDE Plasma",
+        "XFCE",
+        "GNOME",
+        "LXDE"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A Linux technician wants to list all files in the current directory, including hidden files, with detailed permission, owner, size, and modification date information. Which command accomplishes this?",
+      "options": [
+        "ls -d",
+        "ls -r",
+        "dir /a",
+        "ls -la"
+      ],
+      "answer": 3,
+      "explanation": "ls -la combines -l (long format showing permissions, owner, size, date) with -a (show all files including hidden dot-files). dir /a is Windows syntax. ls -d lists directories themselves rather than their contents. ls -r lists files in reverse order only."
+    },
+    {
+      "q": "A Linux technician needs to install a software package on an Ubuntu workstation from the command line. Which package manager and command syntax is correct?",
+      "options": [
+        "apt install packagename",
+        "rpm -i packagename.rpm",
+        "yum install packagename",
+        "brew install packagename"
+      ],
+      "answer": 0,
+      "explanation": "Ubuntu uses the APT (Advanced Package Tool) package manager; the correct command is sudo apt install packagename. yum and rpm are used on Red Hat-based distributions (RHEL, CentOS, Fedora). brew (Homebrew) is a macOS package manager."
+    },
+    {
+      "q": "A technician needs to set file permissions on report.txt so the owner has full access (read, write, execute) while group and others have no permissions. Which chmod command is correct?",
+      "options": [
+        "chmod 777 report.txt",
+        "chmod 700 report.txt",
+        "chmod 644 report.txt",
+        "chmod 755 report.txt"
+      ],
+      "answer": 1,
+      "explanation": "chmod 700 sets rwx (7) for the owner and --- (0) for both group and others. chmod 777 grants all permissions to everyone. chmod 644 gives the owner read/write and group/others read-only. chmod 755 gives the owner full permissions and group/others read and execute."
+    },
+    {
+      "q": "What is the macOS equivalent of the Windows Registry for storing application and system preferences?",
+      "options": [
+        "The /etc/ directory stores all macOS application configuration files",
+        "Property List (.plist) files stored in ~/Library/Preferences/ and /Library/Preferences/ — XML or binary files that store application settings per-user or system-wide",
+        "SQLite databases stored in /var/db/ hold all macOS preferences and settings",
+        "macOS uses the same registry structure as Windows, accessible through System Preferences"
+      ],
+      "answer": 1,
+      "explanation": "macOS uses .plist (Property List) files instead of a centralized registry. Each application stores its preferences as a separate .plist file in the user's or system's Library/Preferences folder. They can be viewed/edited with Property List Editor or command-line tools like 'defaults read/write'."
+    },
+    {
+      "q": "What Linux command changes the ownership of a file or directory to a different user or group?",
+      "options": [
+        "chmod — changes ownership and permissions",
+        "chown username:groupname filename — changes file owner and/or group",
+        "chgrp — changes ownership and group simultaneously",
+        "usermod — modifies file ownership through user account settings"
+      ],
+      "answer": 1,
+      "explanation": "chown (change ownership) changes which user and/or group owns a file or directory. Syntax: 'chown user:group filename' or 'chown user filename'. chgrp changes only the group. chmod changes permissions (read/write/execute) but not ownership. Both chown and chmod require root/sudo privileges for files you don't own."
+    }
+  ]
+}

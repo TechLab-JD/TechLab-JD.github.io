@@ -1,0 +1,296 @@
+{
+  "core": 2,
+  "chapter": 5,
+  "title": "Installing Applications",
+  "exam_objectives": [
+    "1.10"
+  ],
+  "coverage": "COVERED",
+  "domain": "os",
+  "domain_label": "Operating Systems",
+  "sections": [
+    {
+      "title": "System Requirements",
+      "content": "Before installing any application, you must verify that the target machine meets the minimum system requirements. The exam tests all of these.\nCPU requirements: every application specifies a minimum processor. Basic office applications have low requirements. Resource-intensive software â€” video editing, 3D modeling, scientific simulation, gaming â€” may require a minimum clock speed, a minimum number of cores, or specific CPU instruction sets. If the CPU does not meet the minimum, the application may refuse to install or run with significant performance problems.\n32-bit versus 64-bit compatibility: this is the most tested aspect of this objective. A 32-bit CPU can only run a 32-bit OS and 32-bit applications. A 64-bit CPU can run either a 32-bit or 64-bit OS. 64-bit Windows can run both 32-bit and 64-bit applications. 32-bit Windows can only run 32-bit applications â€” period. No 64-bit applications will install on a 32-bit OS.\nOn 64-bit Windows, application install locations are separated by architecture. 64-bit applications install to Program Files. 32-bit applications install to Program Files (x86). The x86 folder exists because 32-bit applications use different libraries than 64-bit ones, and keeping them separate prevents conflicts. Windows uses the WOW64 â€” Windows 32-bit on Windows 64-bit â€” subsystem to run 32-bit applications on the 64-bit OS.\nRAM requirements: every application lists a minimum RAM requirement. Insufficient RAM does not prevent installation, but it results in excessive use of virtual memory â€” the page file â€” which causes dramatic performance degradation. The distinction: the RAM requirement is for available memory, not total installed. If a machine has 16 GB but background processes are consuming 14 GB, the available RAM may not meet the application's minimum.\nStorage: applications range from under 1 GB for simple tools to 50 GB or more for modern games. Account for temporary files during installation and for the application's working data. The available space must exceed the installed size â€” some applications use as much scratch space during installation as the final installed size.\nGraphics requirements: some applications require a dedicated GPU with specific VRAM amounts. Dedicated graphics cards have their own on-board VRAM â€” typically 4 to 16 GB on modern cards â€” and connect via PCIe. Integrated graphics share system RAM and have no dedicated VRAM pool. Applications that require dedicated GPU will either fail to launch or will severely underperform on integrated graphics. Video editing, 3D modeling, CAD applications, and high-end gaming typically require dedicated GPU.\nExternal hardware tokens: some professional applications use physical license enforcement mechanisms. USB security dongles â€” also called hardware keys or HASP keys â€” must be physically attached to the machine for the application to launch. Smart card readers can serve a similar purpose. If the token is missing, the application will not run regardless of software configuration.\nOS compatibility: every application targets specific OS versions. A Windows application built for Windows 10 may not function correctly on Windows 11, or vice versa. Older applications built for Windows 7 may not be compatible with Windows 10 or 11 at all. Verify the supported OS list from the application vendor before installation.\n---",
+      "exam_tips": [
+        "Insufficient RAM doesn't block install â€” but causes heavy page file use and slow performance"
+      ]
+    },
+    {
+      "title": "Distribution Methods",
+      "content": "Applications reach end users through several distribution channels.\nPhysical media: DVD and Blu-ray disc installation is largely legacy. Still seen in some enterprise software and in scenarios where internet connectivity is limited. Physical media is fixed at a specific version â€” you then apply updates after installation.\nISO files: disk image files that can be mounted as virtual optical drives. Windows 10 and 11 support mounting ISO files natively by right-clicking and selecting Mount. Once mounted, the virtual drive appears as a disc drive in File Explorer. ISO files are commonly used for OS installation media and large enterprise software distributions.\nDownloadable packages: the most common modern method. Package formats vary by OS. On Windows: .exe for self-contained executables, .msi for Windows Installer packages. On macOS: .dmg for drag-and-drop app installs, .pkg for more complex package installers. On Linux: .deb for Debian-based distributions like Ubuntu, .rpm for Red Hat-based distributions like Fedora and CentOS. Package managers on Linux â€” apt for Debian-based, yum or dnf for Red Hat-based â€” handle dependency resolution automatically.\nApp stores: the Microsoft Store on Windows, Mac App Store on macOS, and distribution through mobile app stores provide curated, vetted applications with automatic update management. Enterprise deployments may limit installs to approved store applications only.\nImage deployment: enterprise environments deploy preconfigured system images â€” containing the OS, drivers, and all required applications in a single package â€” via network boot or USB. Every machine receives an identical configuration. This is the most consistent and scalable deployment method.\n---",
+      "exam_tips": [
+        "If a required 64-bit app won't install on 32-bit Windows â†’ only fix is to reinstall as 64-bit"
+      ]
+    },
+    {
+      "title": "Impact Considerations",
+      "content": "Before deploying an application to a production environment, assess four types of impact.\nDevice impact: how the application affects the machine's hardware resources. A poorly optimized application that consumes excessive CPU or RAM will degrade performance for everything else running on the machine.\nNetwork impact: cloud-connected applications, update services, and collaboration tools can consume significant bandwidth. An application that phones home continuously can saturate a link on a limited-bandwidth connection. Set such connections as metered if necessary.\nOperation impact: compatibility conflicts with existing software. Two applications that modify the same system files or registry keys can interfere with each other. Security software â€” antivirus, endpoint protection â€” may flag or block newly installed applications. Test new deployments in a staging environment before broad rollout.\nBusiness impact: licensing costs, training requirements for users, and the risk of productivity disruption during transition. Enterprise software often requires specialized configuration by IT before users can work with it effectively.\n---",
+      "exam_tips": [
+        "USB dongle missing = application will not launch, regardless of license key"
+      ]
+    },
+    {
+      "title": "Practical Considerations",
+      "content": "Some applications require specific permissions to install. Running an installer without administrator privileges will either fail or install to a user-local directory that may not function correctly. Always run installers with elevated privileges for system-wide installation.\nSilent installation using .msi: the command msiexec /i package.msi /quiet /norestart installs a package silently without a GUI or reboot prompt. This is used in enterprise scripted deployments.\nApplication removal: use Settings, Apps, Apps and Features or Control Panel, Programs and Features to uninstall. Never delete application folders directly â€” this leaves registry entries and user data behind and can cause issues with reinstallation.\nRepair installation: most installers support a repair mode that reinstalls application files without removing user data or settings. Useful when an application is malfunctioning but you do not want to lose configuration.\n---",
+      "exam_tips": [
+        ".msi supports silent install: msiexec /i package.msi /quiet /norestart",
+        "Test new applications in staging environment before broad production deployment"
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "There are two Program Files folders on 64-bit Windows. If you do not know why, you are missing something the exam specifically tests.",
+      "concept": "WHERE APPS INSTALL ON 64-BIT WINDOWS â€” AND WHY IT MATTERS",
+      "summary": "On a 64-bit Windows installation, there are two separate application directories. Program Files â€” no suffix â€” contains 64-bit applications."
+    },
+    {
+      "hook": "A .deb file will not install on Windows. A .exe will not install on macOS. Distribution format and OS compatibility are the first thing you verify before deploying any software.",
+      "concept": "APPLICATION DISTRIBUTION METHODS â€” HOW SOFTWARE GETS INSTALLED",
+      "summary": "Applications are distributed in different formats depending on the operating system and deployment method. On Windows: .exe files are self-contained executable installers."
+    },
+    {
+      "hook": "Before installing any application, you must verify that the target machine meets the minimum system requirements.",
+      "concept": "System Requirements",
+      "summary": "Before installing any application, you must verify that the target machine meets the minimum system requirements. The exam tests all of these. CPU requirements: every application specifies a minimum processor."
+    },
+    {
+      "hook": "Applications reach end users through several distribution channels.",
+      "concept": "Distribution Methods",
+      "summary": "Applications reach end users through several distribution channels. Physical media: DVD and Blu-ray disc installation is largely legacy. Still seen in some enterprise software and in scenarios where internet connectivity is limited."
+    },
+    {
+      "hook": "Before deploying an application to a production environment, assess four types of impact.",
+      "concept": "Impact Considerations",
+      "summary": "Before deploying an application to a production environment, assess four types of impact. Device impact: how the application affects the machine's hardware resources. A poorly optimized application that consumes excessive CPU or RAM will degrade performance for everything else running on the machine."
+    },
+    {
+      "hook": "Some applications require specific permissions to install.",
+      "concept": "Practical Considerations",
+      "summary": "Some applications require specific permissions to install. Running an installer without administrator privileges will either fail or install to a user-local directory that may not function correctly. Always run installers with elevated privileges for system-wide installation."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "What should be done BEFORE installing a new application on a production system?",
+      "options": [
+        "Create a system restore point and back up important data",
+        "Disable antivirus",
+        "Uninstall all other applications",
+        "Reinstall the OS"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Where are 32-bit applications typically installed on a 64-bit Windows system?",
+      "options": [
+        "C:\\Program Files",
+        "C:\\Program Files (x86)",
+        "C:\\Windows\\System32",
+        "C:\\Users\\AppData"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What file extension is used for Windows application installers created with the Windows Installer technology?",
+      "options": [
+        ".exe",
+        ".bat",
+        ".msi",
+        ".cmd"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of the Windows App Store (Microsoft Store)?",
+      "options": [
+        "Replace all traditional software installation",
+        "Manage drivers and firmware updates",
+        "Only distribute Microsoft first-party apps",
+        "Provide a centralized, curated platform for downloading and updating apps"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A newly installed application causes system instability. What is the BEST first recovery step?",
+      "options": [
+        "Use Programs and Features to uninstall the application, or use System Restore to revert",
+        "Reinstall Windows",
+        "Delete system32 folder",
+        "Run chkdsk"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Where in Windows do you uninstall applications?",
+      "options": [
+        "Task Manager",
+        "Settings > Apps > Installed Apps, or Control Panel > Programs and Features",
+        "Device Manager",
+        "Disk Management"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What is the PRIMARY purpose of a software license key?",
+      "options": [
+        "Encrypts the installation files to prevent unauthorized copying",
+        "Verifies that the software copy is legitimate and activates the product for use",
+        "Prevents installation on more than one computer simultaneously",
+        "Locks the software to a specific hardware fingerprint permanently"
+      ],
+      "answer": 1,
+      "explanation": "A software license key (product key) authenticates the software as a legitimate purchase and activates it. Without a valid key, the software typically runs in trial mode, reduced functionality mode, or won't activate. The key may also be tied to a specific number of activations or devices depending on the license type."
+    },
+    {
+      "q": "A 64-bit application's .exe installer works on a Windows 10 64-bit computer. Will the same installer work on a friend's computer running Windows 10 32-bit?",
+      "options": [
+        "Yes â€” a 64-bit .exe can run on a 32-bit OS with no issues",
+        "Yes â€” .exe files are architecture-independent",
+        "The installer runs but prompts to install a 32-bit version automatically",
+        "No â€” a 64-bit .exe installer will not run on a 32-bit OS"
+      ],
+      "answer": 3,
+      "explanation": "A 64-bit executable requires a 64-bit processor and OS and cannot run on a 32-bit OS. A 32-bit application can typically run on 64-bit Windows through the WOW64 compatibility layer, but not the reverse."
+    },
+    {
+      "q": "A user wants to install an Android application downloaded from a developer's website that is not available in the Google Play Store. Which setting must be enabled on the Android device?",
+      "options": [
+        "Install Unknown Apps (or Unknown Sources)",
+        "Developer Mode",
+        "USB Debugging",
+        "Safe Mode"
+      ],
+      "answer": 0,
+      "explanation": "Sideloading Android apps from outside the Play Store requires enabling \"Install Unknown Apps\" (Android 8+) or \"Unknown Sources\" in Security settings. USB Debugging enables ADB communication. Developer Mode unlocks developer options but is not specifically required for sideloading. Safe Mode disables"
+    },
+    {
+      "q": "Before installing a new application on a Windows workstation, which step should the technician perform FIRST to ensure compatibility?",
+      "options": [
+        "Check the application's icon file format",
+        "Verify the system meets the application's minimum hardware and OS requirements",
+        "Confirm the application supports dark mode",
+        "Check if the application is digitally signed by a government authority"
+      ],
+      "answer": 1,
+      "explanation": "Verifying that the system meets minimum hardware requirements (RAM, CPU speed, disk space) and the correct OS version is the essential first step before installation to prevent compatibility failures. CompTIA A+ emphasizes checking system requirements as part of the installation planning process."
+    },
+    {
+      "q": "A 64-bit Windows 11 system has two Program Files folders: 'Program Files' and 'Program Files (x86)'. Why do both exist?",
+      "options": [
+        "One is for system applications and one is for user applications",
+        "64-bit apps install to 'Program Files' and 32-bit apps install to 'Program Files (x86)' to prevent library conflicts",
+        "One is for Microsoft apps and one is for third-party apps",
+        "The x86 folder is a legacy folder that is no longer used"
+      ],
+      "answer": 1,
+      "explanation": "On 64-bit Windows, 64-bit applications install to 'Program Files' and 32-bit applications install to 'Program Files (x86)'. The separation prevents conflicts between 32-bit and 64-bit libraries. The WOW64 subsystem allows 32-bit apps to run on 64-bit Windows using the separate library set."
+    },
+    {
+      "q": "A professional application requires a USB hardware dongle to be physically attached whenever the software is running. If the dongle is missing, what happens?",
+      "options": [
+        "The application runs in a limited demo mode",
+        "The application prompts for a software license key instead",
+        "The application will not launch regardless of any software configuration",
+        "The application runs normally for 30 days before requiring the dongle"
+      ],
+      "answer": 2,
+      "explanation": "USB security dongles (hardware keys/HASP keys) are physical license enforcement mechanisms. If the dongle is absent, the application will not run — no software workaround exists. The dongle must be physically present on the machine for the application to launch."
+    },
+    {
+      "q": "Which Linux package format and package manager is used on Debian-based distributions such as Ubuntu?",
+      "options": [
+        ".rpm format managed with yum or dnf",
+        ".deb format managed with apt",
+        ".pkg format managed with brew",
+        ".msi format managed with msiexec"
+      ],
+      "answer": 1,
+      "explanation": "Debian-based Linux distributions (Ubuntu, Debian, Linux Mint) use .deb package files managed by the apt package manager. Red Hat-based distributions (Fedora, CentOS, RHEL) use .rpm packages managed by yum or dnf. macOS uses .dmg and .pkg formats."
+    },
+    {
+      "q": "A new cloud-connected collaboration application is being considered for company-wide deployment. Before rollout, a technician should assess which type of impact to understand the application's effect on available network bandwidth?",
+      "options": [
+        "Device impact",
+        "Operation impact",
+        "Network impact",
+        "Business impact"
+      ],
+      "answer": 2,
+      "explanation": "Network impact assessment evaluates how much bandwidth the application consumes. Cloud-connected applications, update services, and collaboration tools can saturate limited-bandwidth connections. Assessing network impact before rollout allows bandwidth throttling or connection settings to be configured appropriately."
+    },
+    {
+      "q": "A technician needs to install an MSI package silently across many workstations without displaying any prompts or triggering an automatic reboot. Which command accomplishes this?",
+      "options": [
+        "msiexec /i package.msi /passive",
+        "msiexec /install package.msi /silent",
+        "msiexec /i package.msi /quiet /norestart",
+        "msiexec /x package.msi /quiet"
+      ],
+      "answer": 2,
+      "explanation": "The command 'msiexec /i package.msi /quiet /norestart' installs the MSI package silently without any GUI and suppresses the automatic reboot prompt. This is the standard command used in scripted enterprise deployments. /x is for uninstalling, not installing."
+    },
+    {
+      "q": "What is the difference between a per-seat software license and a concurrent (floating) license?",
+      "options": [
+        "Per-seat licenses require annual renewal; concurrent licenses are perpetual one-time purchases",
+        "Per-seat requires a separate license for each user or device; concurrent licenses allow a set number of simultaneous users from a shared pool managed by a license server",
+        "Per-seat allows installation on any number of devices; concurrent is limited to one device",
+        "They are equivalent — the terms describe the same licensing model"
+      ],
+      "answer": 1,
+      "explanation": "Per-seat licensing requires one license per user or device, regardless of actual usage. Concurrent licensing allows any user to run the software as long as the number of simultaneous users doesn't exceed the license count — managed by a license server that grants/returns licenses dynamically."
+    },
+    {
+      "q": "Before running an application installer downloaded from a vendor website, what security verification should a technician perform?",
+      "options": [
+        "Check that the file extension is .exe rather than .msi",
+        "Verify the file hash (MD5 or SHA-256) against the vendor's published checksum, and/or verify the digital signature to confirm the file has not been tampered with",
+        "Scan only with Windows Defender — third-party scanners are unnecessary if Defender is updated",
+        "Check that the installer file size matches the vendor's listed file size — hash verification is too time-consuming"
+      ],
+      "answer": 1,
+      "explanation": "Cryptographic hash verification (comparing the downloaded file's SHA-256 hash to the vendor's published hash) confirms the file has not been modified or corrupted. A digital signature from a trusted CA additionally confirms the publisher's identity. This protects against supply chain attacks and tampered downloads."
+    },
+    {
+      "q": "What is the difference between a software subscription license and a perpetual license?",
+      "options": [
+        "Subscription licenses allow more users; perpetual licenses are single-user only",
+        "Subscription: recurring payment for access (software stops working when subscription lapses); perpetual: one-time purchase with permanent right to use that version indefinitely",
+        "Perpetual licenses are only available for server software; subscriptions are for desktop applications",
+        "Both provide lifetime access — the difference is only how the fee is structured"
+      ],
+      "answer": 1,
+      "explanation": "Subscription licenses (e.g., Microsoft 365, Adobe Creative Cloud) require ongoing payments — the software becomes inaccessible when the subscription lapses. Perpetual licenses (e.g., Office 2019, Adobe CS6) allow permanent use of the purchased version. Microsoft has largely shifted from perpetual to subscription models."
+    },
+    {
+      "q": "What is a software repository (repo), and which OS type commonly relies on them for application management?",
+      "options": [
+        "A repository is a code version control system like Git — used by developers on all OSes",
+        "A centralized server hosting vetted software packages with dependency metadata — Linux distributions (Ubuntu/Debian, RHEL/CentOS) use package managers to install software from repos automatically",
+        "A backup server storing software installers for emergency reinstallation on Windows systems",
+        "A corporate internal store for distributing MDM-managed apps to mobile devices"
+      ],
+      "answer": 1,
+      "explanation": "Linux distributions use package managers (apt, dnf, yum, pacman) that download software from curated repositories. Package managers resolve dependencies automatically — installing an app also installs everything it needs. Repos are maintained by distributions and third-party vendors, providing a trusted source for software."
+    },
+    {
+      "q": "What is application virtualization, and how does it differ from traditional installation?",
+      "options": [
+        "Application virtualization requires a virtual machine running a separate OS for each application",
+        "Application virtualization packages an app and all its dependencies into an isolated container that runs without modifying the host OS — eliminating DLL conflicts and allowing multiple app versions to coexist",
+        "Application virtualization is another term for running apps on a remote server (thin client)",
+        "Application virtualization only works for web-based applications — native desktop apps cannot be virtualized"
+      ],
+      "answer": 1,
+      "explanation": "Application virtualization (e.g., Microsoft App-V, MSIX, Portable apps) captures the app and its registry/file system requirements into a self-contained package. It runs isolated from the host OS and other apps, preventing DLL conflicts and simplifying deployment/removal without traditional install/uninstall."
+    }
+  ]
+}

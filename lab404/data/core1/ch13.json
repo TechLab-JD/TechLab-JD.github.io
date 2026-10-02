@@ -1,0 +1,308 @@
+{
+  "core": 1,
+  "chapter": 13,
+  "title": "IP Addressing: IPv4, IPv6 & Subnetting",
+  "exam_objectives": [
+    "2.1",
+    "2.6"
+  ],
+  "coverage": "COVERED",
+  "domain": "networking",
+  "domain_label": "Networking",
+  "sections": [
+    {
+      "title": "Ipv4 Addressing",
+      "content": "STRUCTURE.\nIPv4 addresses are 32-bit values. They are written in dotted decimal notation â€” four decimal numbers separated by periods. Each number represents an 8-bit octet, ranging from 0 to 255.\nExample: 192.168.1.100\nThe 32 bits are divided into two conceptual portions: the network portion and the host portion. Devices on the same subnet share the same network portion. The host portion uniquely identifies each device within the subnet.\nSUBNET MASKS.\nThe subnet mask defines where the boundary between the network and host portions falls. It is a 32-bit value with all the network bits set to 1 and all the host bits set to 0.\nWritten in dotted decimal: 255.255.255.0\nWritten in CIDR prefix notation: /24\nCIDR â€” Classless Inter-Domain Routing â€” notation counts the number of 1-bits in the subnet mask. /24 means 24 bits are set to 1, meaning 24 bits identify the network and the remaining 8 bits are for host addresses.\nCOMMON SUBNET MASKS:\n/8 = 255.0.0.0: The first octet is the network. The remaining 24 bits are host bits. Supports up to approximately 16.7 million host addresses per network. Used in very large networks.\n/16 = 255.255.0.0: The first two octets are the network. 16 host bits. Supports up to approximately 65,534 host addresses per network.\n/24 = 255.255.255.0: The first three octets are the network. 8 host bits. 256 total addresses minus 2 reserved (network and broadcast) = 254 usable host addresses. The most common subnet used in small and medium networks.\nRESERVED ADDRESSES IN A SUBNET.\nIn any subnet, two addresses are not assignable to hosts. The network address â€” where all host bits are zero â€” identifies the subnet itself. In a 192.168.1.0/24 subnet, the network address is 192.168.1.0. The broadcast address â€” where all host bits are one â€” is used to send frames to all hosts on the subnet. In 192.168.1.0/24, the broadcast address is 192.168.1.255. Usable host addresses are 192.168.1.1 through 192.168.1.254.\n---",
+      "exam_tips": [
+        "/24 = 254 usable hosts (256 minus 2 reserved). Know all three standard masks."
+      ]
+    },
+    {
+      "title": "Private Ip Address Ranges And Nat",
+      "content": "RFC 1918 defines three IPv4 address ranges as private â€” not routable on the public internet. Any organization can use these ranges internally without registration.\n10.0.0.0/8: 10.0.0.1 through 10.255.255.255. The largest private block. Used in enterprise networks requiring large numbers of addresses.\n172.16.0.0/12: 172.16.0.1 through 172.31.255.255. A medium-size private block.\n192.168.0.0/16: 192.168.0.1 through 192.168.255.255. The most familiar to home users â€” home routers by default assign addresses from 192.168.0.x or 192.168.1.x.\nNAT â€” NETWORK ADDRESS TRANSLATION.\nPrivate addresses are not routable beyond the local network. When a device with a private IP address needs to access the internet, the router translates the private address to its public IP address before forwarding the packet. Return traffic is translated back to the private IP.\nPAT â€” Port Address Translation â€” is the specific implementation of NAT used by home and small business routers. PAT uses port numbers to track which internal device each connection belongs to. Multiple internal devices can share a single public IP simultaneously â€” each connection is tracked by a unique combination of public IP and port number.\n---",
+      "exam_tips": [
+        "172.16 through 172.31 is private â€” the /12 range is tricky. The end is 172.31, not 172.255."
+      ]
+    },
+    {
+      "title": "Special-Purpose Ipv4 Addresses",
+      "content": "127.0.0.1 â€” LOOPBACK.\nThe loopback address â€” also called localhost â€” routes traffic back to the local system's own network stack without sending anything on the physical network. 127.0.0.1 is used to test local network services. The entire 127.0.0.0/8 range is reserved for loopback, though 127.0.0.1 is the standard address used.\n0.0.0.0 â€” DEFAULT/ANY.\nRepresents any or all IPv4 addresses. Used in routing tables as the default route (0.0.0.0/0) â€” the path traffic takes when no more specific route exists. Also used in server bind addresses to mean \"listen on all interfaces.\"\n255.255.255.255 â€” BROADCAST.\nThe limited broadcast address â€” sends frames to all hosts on the local subnet. Unlike directed broadcast, which targets a specific subnet, 255.255.255.255 is local-only.\n169.254.0.0/16 â€” APIPA.\nAutomatic Private IP Addressing. When a Windows device cannot contact a DHCP server during startup, it self-assigns an address in the 169.254.1.0 through 169.254.254.255 range. This allows limited communication with other APIPA-addressed devices on the same segment.\nOn the exam and in field work: seeing a 169.254 address immediately indicates DHCP failure. Troubleshoot the DHCP server, the network connection, or the DHCP client configuration. An APIPA address is not a valid working network configuration for internet access.\n---",
+      "exam_tips": [
+        "169.254.x.x = APIPA = DHCP server unreachable. This is a direct diagnostic indicator on the exam."
+      ]
+    },
+    {
+      "title": "Ipv6 Addressing",
+      "content": "IPv4's 32-bit address space provides approximately 4.3 billion unique addresses. IPv4 address exhaustion has been formally declared. IPv6 was developed to provide a vastly larger address space: 128-bit addresses enable 3.4 Ã— 10^38 unique addresses â€” effectively unlimited for practical purposes.\nIPv6 ADDRESS FORMAT.\nIPv6 addresses are 128 bits written in hexadecimal, divided into eight groups of four hex digits separated by colons.\nFull form example: 2001:0db8:85a3:0000:0000:8a2e:0370:7334\nABBREVIATION RULES.\nTwo rules reduce IPv6 address length for notation.\nRule 1: Leading zeros within any group can be dropped. 0db8 becomes db8. 0000 becomes 0.\nRule 2: One or more consecutive all-zero groups can be replaced with a double colon (::). This can only be applied once in an address. 2001:0db8:85a3:0000:0000:8a2e:0370:7334 becomes 2001:db8:85a3::8a2e:370:7334 (the two 0000 groups become ::).\nTo expand an abbreviated address, count the existing groups, and fill in enough all-zero groups to reach the total of eight.\nIPv6 STRUCTURE.\nIPv6 uses a fixed structure: the first 64 bits are the network prefix. The last 64 bits are the interface identifier (host portion). Prefix notation such as /64 designates the network prefix length.\n---",
+      "exam_tips": [
+        ":: can only be used once per IPv6 address. If an address has two separate zero sequences, only one gets ::."
+      ]
+    },
+    {
+      "title": "Ipv6 Address Types",
+      "content": "GLOBAL UNICAST.\nGlobal unicast addresses are the public, globally routable IPv6 addresses. They begin with the prefix 2000::/3 â€” addresses starting with binary 001, which covers addresses beginning with 2 or 3 in hex. Global unicast addresses are the IPv6 equivalent of public IPv4 addresses.\nLINK-LOCAL.\nLink-local addresses begin with fe80::/10. Every IPv6 interface automatically generates a link-local address, even without any manual configuration or DHCP. Link-local addresses are not routable beyond the local network segment. They are used for neighbor discovery and other local operations. You will always see a fe80:: address on a functioning IPv6 interface.\nUNIQUE LOCAL.\nUnique local addresses begin with fc00::/7 (covering fc00:: through fdff::). These are the IPv6 equivalent of RFC 1918 private addresses â€” routable within an organization but not globally routable.\nLOOPBACK.\n::1 is the IPv6 loopback address â€” equivalent to 127.0.0.1 in IPv4.\nIPv6 CONFIGURATION METHODS.\nSLAAC â€” Stateless Address Autoconfiguration â€” allows hosts to generate their own IPv6 global unicast addresses without a DHCP server. The host listens for Router Advertisements from the local router, which provide the network prefix. The host appends a self-generated interface identifier (derived from its MAC address via the EUI-64 process, or randomly generated for privacy) to create a complete /64 address.\nDHCPv6 provides stateful IPv6 address assignment. A DHCPv6 server assigns and tracks addresses, similar to DHCP for IPv4.\nNEIGHBOR DISCOVERY PROTOCOL (NDP).\nIn IPv6, ARP is replaced by the Neighbor Discovery Protocol. NDP uses ICMPv6 messages to perform address resolution (finding the MAC address for a known IPv6 address) and router discovery.\nDUAL-STACK.\nMost modern systems and networks run dual-stack â€” both IPv4 and IPv6 simultaneously. Applications connect using whichever protocol is appropriate for the destination. Dual-stack is the practical transition strategy as IPv6 adoption continues.\n---",
+      "exam_tips": [
+        "fe80:: = link-local = always auto-configured, never globally routable. ::1 = IPv6 loopback."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "An IP address without a subnet mask is like a street address without a city. The address alone does not tell you what network it belongs to â€” the subnet mask defines the boundary.",
+      "concept": "IPv4 ADDRESSING & SUBNET MASKS",
+      "summary": "IPv4 addresses are 32-bit values written in dotted decimal notation â€” four numbers separated by periods, each ranging from 0 to 255. For example: 192.168.1.100."
+    },
+    {
+      "hook": "When a device gets a 169.254.x.x address, it did not succeed in getting an IP address â€” it assigned itself one because DHCP failed. Recognizing APIPA on the exam means recognizing a DHCP failure.",
+      "concept": "PRIVATE IPs, NAT & SPECIAL ADDRESSES",
+      "summary": "Three IPv4 address ranges are reserved for private use and cannot be routed on the public internet. They are known as RFC 1918 addresses."
+    },
+    {
+      "hook": "IPv4 can address approximately 4.3 billion devices. IPv6 can address 340 undecillion â€” a number with 39 digits. IPv6 was not optional. IPv4 address space was exhausted years ago.",
+      "concept": "IPv6 ADDRESSING",
+      "summary": "IPv6 uses 128-bit addresses written in hexadecimal. Eight groups of four hexadecimal digits separated by colons."
+    },
+    {
+      "hook": "STRUCTURE.",
+      "concept": "Ipv4 Addressing",
+      "summary": "STRUCTURE. IPv4 addresses are 32-bit values. They are written in dotted decimal notation â€” four decimal numbers separated by periods."
+    },
+    {
+      "hook": "RFC 1918 defines three IPv4 address ranges as private â€” not routable on the public internet.",
+      "concept": "Private Ip Address Ranges And Nat",
+      "summary": "RFC 1918 defines three IPv4 address ranges as private â€” not routable on the public internet. Any organization can use these ranges internally without registration. 10.0.0.0/8: 10.0.0.1 through 10.255.255.255."
+    },
+    {
+      "hook": "127.0.0.1 â€” LOOPBACK.",
+      "concept": "Special-Purpose Ipv4 Addresses",
+      "summary": "127.0.0.1 â€” LOOPBACK. The loopback address â€” also called localhost â€” routes traffic back to the local system's own network stack without sending anything on the physical network. 127.0.0.1 is used to test local network services."
+    },
+    {
+      "hook": "GLOBAL UNICAST.",
+      "concept": "Ipv6 Address Types",
+      "summary": "GLOBAL UNICAST. Global unicast addresses are the public, globally routable IPv6 addresses. They begin with the prefix 2000::/3 â€” addresses starting with binary 001, which covers addresses beginning with 2 or 3 in hex."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "What port does HTTP use by default?",
+      "options": [
+        "80",
+        "443",
+        "21",
+        "25"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Which port does SMTP use for sending email?",
+      "options": [
+        "110",
+        "143",
+        "993",
+        "25"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What IP address range do most home routers assign by default via DHCP?",
+      "options": [
+        "10.0.0.0/8",
+        "192.168.1.0/24",
+        "172.16.0.0/12",
+        "169.254.0.0/16"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A home user wants to prevent specific devices from connecting to their Wi-Fi. What feature accomplishes this?",
+      "options": [
+        "SSID broadcast disable",
+        "WPS",
+        "MAC address filtering",
+        "Port forwarding"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What does disabling SSID broadcast accomplish on a home network?",
+      "options": [
+        "Enables faster connection speeds",
+        "Encrypts all wireless traffic",
+        "Blocks all unauthorized devices definitively",
+        "Hides the network name from casual scanning (security through obscurity)"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A technician is setting up a SOHO network using 192.168.1.0. What subnet mask should be used for a standard home network?",
+      "options": [
+        "Direct incoming internet traffic on a specific port to a specific internal device",
+        "Increase internet speed",
+        "Create a guest wireless network",
+        "Block outgoing traffic"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Which cable type is used for standard Ethernet in a SOHO environment?",
+      "options": [
+        "Coaxial",
+        "Cat5e or Cat6 twisted pair",
+        "Fiber optic",
+        "Serial cable"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A new device can connect to Wi-Fi but cannot reach the internet. All other devices work fine. What should be checked FIRST?",
+      "options": [
+        "Router firmware",
+        "Replace the router",
+        "The device IP configuration â€” correct IP, subnet mask, gateway, and DNS",
+        "Check ISP status"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What does NAT accomplish in a SOHO router?",
+      "options": [
+        "Assigns private IPs to devices",
+        "Manages wireless channels",
+        "Filters malicious traffic",
+        "Translates private internal IPs to a single public IP for internet access"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "Which SOHO router setting restricts internet access for children during certain hours?",
+      "options": [
+        "Parental controls or content filtering with time restrictions",
+        "MAC filtering",
+        "QoS",
+        "VLAN configuration"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of QoS settings on a SOHO router?",
+      "options": [
+        "Block unauthorized access",
+        "Prioritize certain types of traffic such as video calls or gaming over other traffic",
+        "Extend Wi-Fi range",
+        "Assign static IPs"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A device self-assigns the IP address 169.254.14.22. What does this indicate?",
+      "options": [
+        "It is using a valid private RFC 1918 address",
+        "It failed to reach a DHCP server and self-assigned an APIPA address",
+        "It is configured with a static loopback address",
+        "It is connected to a 172.16.0.0/12 enterprise network"
+      ],
+      "answer": 1,
+      "explanation": "The 169.254.0.0/16 range is APIPA. Windows assigns an address here when it cannot reach a DHCP server — a direct indicator of DHCP failure."
+    },
+    {
+      "q": "Which of the following is in the private IPv4 address range defined by RFC 1918?",
+      "options": [
+        "172.32.0.1",
+        "192.169.0.1",
+        "172.20.5.10",
+        "11.0.0.1"
+      ],
+      "answer": 2,
+      "explanation": "The RFC 1918 172.x private range is 172.16.0.0 through 172.31.255.255. 172.20.5.10 falls within this range. 172.32.0.1 is outside it."
+    },
+    {
+      "q": "What is the IPv6 loopback address, and what is its IPv4 equivalent?",
+      "options": [
+        "::1 in IPv6; equivalent to 127.0.0.1 in IPv4",
+        "fe80::1 in IPv6; equivalent to 192.168.0.1 in IPv4",
+        "2001::1 in IPv6; equivalent to 10.0.0.1 in IPv4",
+        "ff02::1 in IPv6; equivalent to 255.255.255.255 in IPv4"
+      ],
+      "answer": 0,
+      "explanation": "::1 is the IPv6 loopback address, equivalent to 127.0.0.1 in IPv4. Both route traffic back to the local system without sending anything on the network."
+    },
+    {
+      "q": "What does PAT (Port Address Translation) allow that basic NAT alone does not?",
+      "options": [
+        "It allows IPv6 to be translated to IPv4",
+        "It allows multiple internal devices to share one public IP simultaneously by tracking connections via unique port numbers",
+        "It provides encryption for all translated traffic",
+        "It assigns permanent public IPs to each internal device"
+      ],
+      "answer": 1,
+      "explanation": "PAT extends NAT by using port numbers to track each internal device's connections, allowing many private-IP devices to share one public IP simultaneously."
+    },
+    {
+      "q": "What is the broadcast address for the network 192.168.10.0/24?",
+      "options": [
+        "192.168.10.0",
+        "192.168.10.128",
+        "192.168.10.254",
+        "192.168.10.255"
+      ],
+      "answer": 3,
+      "explanation": "For a /24 network, the host portion is the last 8 bits. The broadcast address sets all host bits to 1: 192.168.10.255. The network address (192.168.10.0) sets all host bits to 0. Neither is assignable to a host; usable hosts range from .1 to .254."
+    },
+    {
+      "q": "How many usable host IP addresses does a /28 subnet provide?",
+      "options": [
+        "30 usable hosts",
+        "16 usable hosts",
+        "14 usable hosts",
+        "62 usable hosts"
+      ],
+      "answer": 2,
+      "explanation": "/28 leaves 4 bits for the host portion: 2^4 = 16 total addresses. Subtract 2 (network address and broadcast address) = 14 usable host addresses per /28 subnet. This is commonly used for small network segments."
+    },
+    {
+      "q": "Which IPv6 address type begins with FE80::/10 and is used only for communication within a single network segment — not routable between networks?",
+      "options": [
+        "Global unicast address",
+        "Unique local address (ULA)",
+        "Link-local address",
+        "Multicast address"
+      ],
+      "answer": 2,
+      "explanation": "IPv6 link-local addresses (FE80::/10) are automatically configured on every IPv6 interface and are used only for communication within a single link/segment. They are never forwarded by routers, making them analogous to APIPA 169.254.x.x in IPv4."
+    },
+    {
+      "q": "A device has IP address 172.20.5.10 with subnet mask 255.255.0.0. Which private address range class does this fall in?",
+      "options": [
+        "Class A private range (10.0.0.0/8)",
+        "Class B private range (172.16.0.0 – 172.31.255.255)",
+        "Class C private range (192.168.0.0/16)",
+        "This is a public IP address — 172.x.x.x is not private"
+      ],
+      "answer": 1,
+      "explanation": "RFC 1918 defines three private IPv4 ranges. 172.16.0.0 – 172.31.255.255 is the Class B private range. 172.20.x.x falls within this range. These addresses are non-routable on the public internet and used for internal networks."
+    },
+    {
+      "q": "What does CIDR /25 notation indicate about an IPv4 subnet?",
+      "options": [
+        "25 hosts maximum per subnet",
+        "25 network bits, leaving 7 host bits — providing 126 usable host addresses per subnet and splitting a /24 into exactly 2 equal halves",
+        "The subnet starts at the 25th IP address of a block",
+        "25 subnets maximum within a /24 block"
+      ],
+      "answer": 1,
+      "explanation": "A /25 uses 25 bits for the network and 7 bits for hosts. 2^7 = 128 addresses; minus 2 (network + broadcast) = 126 usable hosts. A /25 splits a Class C /24 network into two equal subnets: .0-.127 and .128-.255."
+    }
+  ]
+}

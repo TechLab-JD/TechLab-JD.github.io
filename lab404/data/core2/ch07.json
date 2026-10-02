@@ -1,0 +1,305 @@
+{
+  "core": 2,
+  "chapter": 7,
+  "title": "Cloud-Based Productivity",
+  "exam_objectives": [
+    "1.11"
+  ],
+  "coverage": "COVERED",
+  "domain": "os",
+  "domain_label": "Operating Systems",
+  "sections": [
+    {
+      "title": "Cloud Email",
+      "content": "Cloud-hosted email has largely replaced on-premises mail servers for most organizations.\nMicrosoft 365 uses Exchange Online. Users access email through Outlook on the web, the Outlook desktop client, or mobile apps. The protocols involved: MAPI over HTTPS is the primary protocol for Outlook desktop connections. IMAP and SMTP are supported for third-party email clients. Mailbox storage is typically 50 GB to 100 GB depending on the license tier.\nGoogle Workspace uses Gmail. The primary interface is web-based Gmail. Third-party clients connect via IMAP and SMTP. Google pools email storage with Drive storage.\nCommon configuration tasks: setting up a user's account in their mail client requires the mail server address, protocol, and credentials. Configuring automatic replies, signatures, forwarding rules, and spam filter settings are all standard helpdesk tasks.\n---",
+      "exam_tips": [
+        "MAPI over HTTPS = Outlook desktop protocol. IMAP/SMTP = third-party clients."
+      ]
+    },
+    {
+      "title": "Cloud Storage And Sync",
+      "content": "OneDrive is Microsoft's cloud storage platform. The desktop sync client creates a local OneDrive folder â€” by default at C:\\Users\\username\\OneDrive â€” and synchronizes its contents with cloud storage.\nTwo features reduce local storage impact. Selective sync lets administrators and users choose which OneDrive folders sync to the local drive. Folders not selected remain accessible only from the web. Files On-Demand takes this further: files appear in File Explorer with a cloud icon, but no local data is stored until the file is opened. This gives users apparent access to all their files without consuming local disk space.\nCritical sync settings to know: bandwidth throttling limits how much network bandwidth the sync client uses. Proxy configuration is required in environments that route internet traffic through a corporate proxy. Sharing permissions control whether files can be shared externally.\nGoogle Drive uses similar concepts. Stream mode keeps files in the cloud and downloads on demand. Mirror mode synchronizes all files locally. Shared drives provide team-accessible storage separate from individual accounts.\nTroubleshooting sync issues: check internet connectivity, verify account credentials are current, check the storage quota â€” full quota stops sync â€” look for files with unsupported characters in names, pause and restart the sync client, and as a last resort, unlink and relink the account.\n---",
+      "exam_tips": [
+        "User has low disk space + OneDrive installed = check selective sync and Files On-Demand settings"
+      ]
+    },
+    {
+      "title": "Collaboration Tools",
+      "content": "Modern cloud suites integrate multiple collaboration tools under one platform.\nMicrosoft 365 covers: Word Online, Excel Online, and PowerPoint Online for document collaboration; Teams for videoconferencing with screen sharing, recording, and breakout rooms; Teams Chat for persistent messaging; and SharePoint for team file storage and intranet sites.\nGoogle Workspace covers: Docs, Sheets, and Slides for document collaboration; Google Meet for videoconferencing; Google Chat for messaging; and Google Drive for file storage.\nVideoconferencing configuration requirements for the exam: ensure the machine has a functioning camera, microphone, and audio output. Bandwidth requirements are approximately 1 to 4 Mbps per participant for video. Firewall rules may need to be adjusted to allow the videoconferencing traffic on required ports. Recording permissions are controlled by the administrator.\nReal-time collaboration â€” often called co-authoring â€” allows multiple users to edit a document simultaneously. Changes appear live. Version history is maintained automatically, allowing rollback to earlier versions.\n---",
+      "exam_tips": [
+        "When an account is disabled on-premises, identity sync automatically disables the cloud account too"
+      ]
+    },
+    {
+      "title": "Identity Synchronization",
+      "content": "Most organizations with cloud productivity suites already have on-premises Active Directory. Identity synchronization connects those existing on-premises accounts to cloud services, so users do not have separate credentials for each environment.\nMicrosoft's tool is Azure AD Connect â€” now branded as Microsoft Entra Connect. It is installed on a Windows Server within the on-premises environment. It reads user accounts, groups, and attributes from on-premises Active Directory and replicates them to Azure Active Directory. The default sync interval is 30 minutes. After synchronization, users can authenticate with their on-premises domain credentials against Microsoft 365 services â€” this is hybrid identity.\nPassword synchronization options include: Password Hash Sync â€” the hash of the password is synchronized to the cloud; Pass-through Authentication â€” authentication requests are forwarded to on-premises domain controllers rather than the cloud; and Federation using ADFS â€” authentication is delegated to a federation service.\nGoogle's equivalent is Google Cloud Directory Sync â€” GCDS. It syncs from on-premises Active Directory or any LDAP directory to Google Workspace. The sync is one-directional â€” on-premises to cloud. It runs on a schedule and can sync users, groups, organizational units, and contact information.\nThe result of identity sync: when an account is created on-premises, it automatically appears in the cloud after the next sync cycle. When an account is disabled or deleted on-premises, the cloud account is automatically disabled or deleted. This is critical for offboarding â€” a terminated employee who is removed from Active Directory is also automatically removed from cloud access.\n---",
+      "exam_tips": [
+        "Group-based licensing requires Azure AD Premium â€” not included in all M365 tiers"
+      ]
+    },
+    {
+      "title": "Cloud Licensing",
+      "content": "Cloud productivity licenses are subscription-based â€” per user per month â€” rather than traditional perpetual licenses.\nMicrosoft 365 licensing tiers for business: Business Basic covers web and mobile apps only â€” no desktop Office applications â€” plus email, OneDrive, and Teams. Business Standard adds desktop Office apps. Business Premium adds advanced security and device management features.\nGoogle Workspace tiers: Business Starter, Standard, Plus, and Enterprise â€” differentiated primarily by storage per user, maximum video meeting participants, and security features.\nAssigning licenses: in Microsoft 365 Admin Center, licenses are assigned per user from the purchased license pool. Group-based licensing assigns licenses automatically based on Azure Active Directory group membership â€” when a user joins a group, they automatically receive the associated license. This requires Azure AD Premium.\nLicense management tasks: monitoring the license pool to ensure there are available licenses for new hires, reclaiming licenses from users who have left the organization, and understanding what features each license tier includes so you can recommend the correct tier for each role.\nWhen a subscription expires: a grace period of approximately 30 days maintains reduced functionality. Data is retained but features are restricted. After the grace period, data may be deleted depending on the platform's retention policies. Renewing before expiration prevents disruption.\n---",
+      "exam_tips": []
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "A user's C drive is full and they cannot figure out why. OneDrive synced 800 GB of shared SharePoint files to their laptop. Selective sync would have prevented this entirely.",
+      "concept": "ONEDRIVE SELECTIVE SYNC â€” STOP FILLING YOUR HARD DRIVE",
+      "summary": "Cloud storage sync clients like OneDrive and Google Drive mirror cloud content to the local machine. Without configuration, this can fill a local drive rapidly."
+    },
+    {
+      "hook": "A company moves to Microsoft 365. They have 500 employees already in Active Directory. Do they recreate all 500 accounts in the cloud manually? No. Azure AD Connect does it automatically.",
+      "concept": "AZURE AD CONNECT â€” HOW ON-PREMISES ACCOUNTS GET TO THE CLOUD",
+      "summary": "Identity synchronization bridges on-premises Active Directory with cloud identity providers. The goal is that users have one set of credentials that works for both local resources and cloud services."
+    },
+    {
+      "hook": "Cloud-hosted email has largely replaced on-premises mail servers for most organizations.",
+      "concept": "Cloud Email",
+      "summary": "Cloud-hosted email has largely replaced on-premises mail servers for most organizations. Microsoft 365 uses Exchange Online. Users access email through Outlook on the web, the Outlook desktop client, or mobile apps."
+    },
+    {
+      "hook": "OneDrive is Microsoft's cloud storage platform.",
+      "concept": "Cloud Storage And Sync",
+      "summary": "OneDrive is Microsoft's cloud storage platform. The desktop sync client creates a local OneDrive folder â€” by default at C:\\Users\\username\\OneDrive â€” and synchronizes its contents with cloud storage. Two features reduce local storage impact."
+    },
+    {
+      "hook": "Modern cloud suites integrate multiple collaboration tools under one platform.",
+      "concept": "Collaboration Tools",
+      "summary": "Modern cloud suites integrate multiple collaboration tools under one platform. Microsoft 365 covers: Word Online, Excel Online, and PowerPoint Online for document collaboration; Teams for videoconferencing with screen sharing, recording, and breakout rooms; Teams Chat for persistent messaging; and SharePoint for team file storage and intranet sites. Google Workspace covers: Docs, Sheets, and Slides for document collaboration; Google Meet for videoconferencing; Google Chat for messaging; and Google Drive for file storage."
+    },
+    {
+      "hook": "Most organizations with cloud productivity suites already have on-premises Active Directory.",
+      "concept": "Identity Synchronization",
+      "summary": "Most organizations with cloud productivity suites already have on-premises Active Directory. Identity synchronization connects those existing on-premises accounts to cloud services, so users do not have separate credentials for each environment. Microsoft's tool is Azure AD Connect â€” now branded as Microsoft Entra Connect."
+    },
+    {
+      "hook": "Cloud productivity licenses are subscription-based â€” per user per month â€” rather than traditional perpetual licenses.",
+      "concept": "Cloud Licensing",
+      "summary": "Cloud productivity licenses are subscription-based â€” per user per month â€” rather than traditional perpetual licenses. Microsoft 365 licensing tiers for business: Business Basic covers web and mobile apps only â€” no desktop Office applications â€” plus email, OneDrive, and Teams. Business Standard adds desktop Office apps."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "A company wants all employees to use a hosted email, calendar, and Teams-based collaboration solution managed by Microsoft. Which product suite provides this?",
+      "options": [
+        "Google Workspace",
+        "iCloud",
+        "Microsoft 365 (formerly Office 365)",
+        "Dropbox Business"
+      ],
+      "answer": 2,
+      "explanation": "Microsoft 365 includes Exchange Online (hosted email), SharePoint, OneDrive, and Teams. It is the primary Microsoft cloud productivity suite tested on the 220-1202 exam. Google Workspace is the equivalent Google offering (Gmail, Drive, Meet, Docs)."
+    },
+    {
+      "q": "An email client is being configured to access a Microsoft 365 mailbox with full calendar and contact synchronization, out-of-office rules, and delegate access. Which protocol provides the richest feature set for this configuration?",
+      "options": [
+        "POP3",
+        "IMAP",
+        "SMTP",
+        "MAPI (via Exchange ActiveSync or Outlook)"
+      ],
+      "answer": 3,
+      "explanation": "MAPI (Messaging Application Programming Interface) is the native Microsoft Exchange protocol used by Outlook. It provides full two-way synchronization of email, calendar, contacts, tasks, and delegate permissions. IMAP synchronizes email folders only. POP3 downloads and removes messages from the ser"
+    },
+    {
+      "q": "A user wants to access their OneDrive files in File Explorer without downloading everything to their local disk. Which OneDrive feature accomplishes this?",
+      "options": [
+        "OneDrive Files On-Demand",
+        "OneDrive Sync",
+        "OneDrive Selective Sync",
+        "OneDrive Personal Vault"
+      ],
+      "answer": 0,
+      "explanation": "Files On-Demand displays all OneDrive files in File Explorer as placeholders without consuming local disk space. Files are downloaded only when opened. Selective Sync chooses which folders to sync locally. Personal Vault is a PIN-protected subfolder for sensitive documents."
+    },
+    {
+      "q": "A company needs to synchronize on-premises Active Directory users, passwords, and groups to Microsoft Entra ID (Azure AD) so employees can use the same credentials for both local and Microsoft 365 resources. Which tool performs this synchronization?",
+      "options": [
+        "Azure Site Recovery",
+        "Microsoft Entra Connect (formerly Azure AD Connect)",
+        "Active Directory Federation Services (ADFS) only",
+        "Group Policy Management Console"
+      ],
+      "answer": 1,
+      "explanation": "Microsoft Entra Connect (Azure AD Connect) is the identity synchronization tool that replicates on-premises AD accounts to Entra ID, enabling single sign-on (SSO) across on-premises and cloud resources. Password Hash Sync, Pass-Through Authentication, and Federation are its three authentication opti"
+    },
+    {
+      "q": "A remote employee needs to participate in a video meeting with screen sharing. The company uses Google Workspace. Which tool is appropriate?",
+      "options": [
+        "Microsoft Teams",
+        "Zoom",
+        "Google Meet",
+        "Skype for Business"
+      ],
+      "answer": 2,
+      "explanation": "Google Meet is the video conferencing tool integrated into Google Workspace. It is accessible directly from Gmail and Google Calendar. Teams is the Microsoft 365 equivalent. Both are tested as representative cloud collaboration tools on the 220-1202 exam."
+    },
+    {
+      "q": "A technician is setting up a shared team document space where multiple employees can co-edit files and share announcements. Which Microsoft 365 tool is designed for team document libraries and intranet sites?",
+      "options": [
+        "OneDrive",
+        "Exchange Online",
+        "OneNote",
+        "SharePoint"
+      ],
+      "answer": 3,
+      "explanation": "SharePoint is the Microsoft 365 team site and document library platform. Teams channels are backed by SharePoint document libraries. OneDrive is personal cloud storage per user. SharePoint is appropriate for shared team resources and org-wide intranet content."
+    },
+    {
+      "q": "A company wants employees to collaborate on the same Word document simultaneously from different locations without emailing file attachments. Which Microsoft 365 feature BEST enables real-time co-editing?",
+      "options": [
+        "Co-authoring via Word Online with OneDrive or SharePoint storage",
+        "Microsoft Outlook calendar sharing",
+        "Windows Remote Desktop Protocol (RDP)",
+        "Microsoft Access shared databases"
+      ],
+      "answer": 0,
+      "explanation": "Microsoft 365 supports real-time co-authoring when documents are stored on OneDrive or SharePoint; multiple users see each other's changes live. Remote Desktop shares screen access but not collaborative document editing. Outlook and Access do not provide simultaneous document co-editing."
+    },
+    {
+      "q": "An employee uses a desktop at work, a laptop at home, and a tablet on the go and needs files to always be the latest version on every device. Which cloud feature provides this automatically?",
+      "options": [
+        "Incremental backup",
+        "File synchronization",
+        "Disk imaging",
+        "RAID mirroring"
+      ],
+      "answer": 1,
+      "explanation": "File synchronization (OneDrive, Google Drive, Dropbox) automatically updates files across all connected devices when a change is saved anywhere. Incremental backup stores changed files periodically but is not designed for real-time cross-device file access. Disk imaging and RAID are local storage re"
+    },
+    {
+      "q": "Which of the following is a PRIMARY advantage of a web-based application such as Google Docs compared to a locally installed application?",
+      "options": [
+        "Web-based applications always have more features than installed counterparts",
+        "Web-based applications work without an internet connection",
+        "Web-based applications can be accessed from any device with a browser without local installation",
+        "Web-based applications store data exclusively on the local machine"
+      ],
+      "answer": 2,
+      "explanation": "Web-based applications run in a browser and require no local installation, making them accessible from virtually any internet-connected device. They typically require internet connectivity to function, may have fewer advanced features than desktop equivalents, and store data in the cloud."
+    },
+    {
+      "q": "An organization migrating from locally installed Office 2019 to Microsoft 365 asks about the licensing difference. Which of the following BEST describes Microsoft 365 licensing?",
+      "options": [
+        "A one-time purchase license that includes all future versions permanently",
+        "A perpetual license that must be repurchased with each major Windows version",
+        "A freeware license with unlimited users at no cost",
+        "A subscription-based license paid monthly or annually that includes ongoing updates and cloud services"
+      ],
+      "answer": 3,
+      "explanation": "Microsoft 365 uses a subscription model. Subscribers receive continuous application updates, cloud storage (OneDrive), and the latest feature versions as long as the subscription is active. This differs from perpetual Office licenses (e.g., Office 2021), which are one-time purchases that do not incl"
+    },
+    {
+      "q": "A user's laptop shows very little free disk space but they have only a few local files. OneDrive is installed and configured. What OneDrive setting should the technician check first?",
+      "options": [
+        "OneDrive Personal Vault status",
+        "OneDrive selective sync and Files On-Demand settings",
+        "OneDrive sharing permissions",
+        "OneDrive bandwidth throttle setting"
+      ],
+      "answer": 1,
+      "explanation": "When OneDrive is installed without selective sync or Files On-Demand configured, it may sync large amounts of content — including shared SharePoint libraries — directly to the local drive. The technician should check selective sync to limit which folders sync locally, and enable Files On-Demand so files appear as cloud placeholders without consuming local storage."
+    },
+    {
+      "q": "After an employee's account is disabled in on-premises Active Directory, when will their Microsoft 365 access be automatically revoked?",
+      "options": [
+        "Immediately, as on-premises AD and Microsoft 365 are always in real time sync",
+        "After the next Azure AD Connect sync cycle, which runs on a default interval of 30 minutes",
+        "Only after the administrator manually disables the account in the Microsoft 365 Admin Center",
+        "After 24 hours when the cloud directory refreshes"
+      ],
+      "answer": 1,
+      "explanation": "Microsoft Entra Connect (Azure AD Connect) runs on a default sync interval of 30 minutes. When an account is disabled in on-premises Active Directory, the change replicates to Azure AD after the next sync cycle — automatically disabling the cloud account. This is critical for offboarding terminated employees."
+    },
+    {
+      "q": "A company's Microsoft 365 subscription expires and they do not renew it. Approximately how long do users retain reduced access before data may be deleted?",
+      "options": [
+        "Data is deleted immediately upon expiration",
+        "Users retain full access for 6 months before deletion",
+        "A grace period of approximately 30 days maintains reduced functionality before potential data deletion",
+        "Access and data are retained permanently unless actively deleted by an admin"
+      ],
+      "answer": 2,
+      "explanation": "When a Microsoft 365 subscription expires, a grace period of approximately 30 days begins during which the account enters a restricted state — reduced functionality but data is retained. After the grace period ends, data may be deleted depending on Microsoft's retention policies. Renewing before expiration prevents disruption and data loss."
+    },
+    {
+      "q": "Which Microsoft 365 license tier includes full desktop Office applications (Word, Excel, PowerPoint) in addition to email, OneDrive, and Teams?",
+      "options": [
+        "Microsoft 365 Business Basic",
+        "Microsoft 365 Business Standard",
+        "Microsoft 365 Business Starter",
+        "Microsoft 365 Personal"
+      ],
+      "answer": 1,
+      "explanation": "Microsoft 365 Business Basic includes only web and mobile apps — no desktop Office applications — plus email, OneDrive, and Teams. Business Standard adds the full desktop Office application suite (Word, Excel, PowerPoint, etc.). Business Premium adds advanced security and device management on top of Standard."
+    },
+    {
+      "q": "A user's OneDrive sync has stopped and files are not updating. The technician confirms internet connectivity is working. What should be checked next?",
+      "options": [
+        "Verify the OneDrive account credentials are current and the storage quota is not full",
+        "Reinstall Windows to reset all sync settings",
+        "Upgrade the Microsoft 365 license tier",
+        "Disable the Windows firewall"
+      ],
+      "answer": 0,
+      "explanation": "When OneDrive sync stops despite working internet connectivity, the next steps are to verify account credentials are still valid (not expired or changed) and check whether the storage quota is full. A full quota halts all syncing. Other steps include checking for unsupported filename characters, pausing and restarting the sync client, and as a last resort relinking the account."
+    },
+    {
+      "q": "What is conditional access in Microsoft 365 / Azure Active Directory?",
+      "options": [
+        "A feature that blocks access to M365 after 10 failed login attempts",
+        "A policy engine that grants or denies access to cloud resources based on conditions such as user identity, device compliance, network location, and risk level — for example, requiring MFA when signing in from outside the corporate network",
+        "A setting that limits which Microsoft 365 apps a user can access based on their department",
+        "A data loss prevention rule that prevents sensitive documents from being shared externally"
+      ],
+      "answer": 1,
+      "explanation": "Conditional access evaluates signals (user, device, location, app, risk) to enforce access policies. Common policies include: require MFA from untrusted networks, block access from non-compliant devices, restrict access to specific countries, or require compliant device enrollment for corporate resources."
+    },
+    {
+      "q": "What is the Google Workspace equivalent of Microsoft SharePoint for team file storage and collaboration?",
+      "options": [
+        "Google Drive with Shared Drives (formerly Team Drives) — shared cloud storage for team collaboration",
+        "Google Sites — a website builder with some document storage capabilities",
+        "Google Keep — note-taking and collaboration tool",
+        "Google Classroom — designed for educational institutions, not business collaboration"
+      ],
+      "answer": 0,
+      "explanation": "Google Shared Drives (part of Google Drive) provide shared file storage where content is owned by the organization rather than individuals — similar to SharePoint document libraries. Multiple users can access, edit, and organize files collaboratively, with permissions managed by admins."
+    },
+    {
+      "q": "A user's Microsoft 365 applications say 'Subscription Expired' and have gone into read-only mode. What is the FIRST step to resolve this?",
+      "options": [
+        "Reinstall all Microsoft 365 applications from the Microsoft website",
+        "Verify the subscription status and renew/assign a license in the Microsoft 365 Admin Center, then run 'winword /activate' or sign in again to re-activate",
+        "Perform a factory reset of Windows to clear the expired license state",
+        "Contact Microsoft support — expired licenses cannot be renewed by IT administrators"
+      ],
+      "answer": 1,
+      "explanation": "When a Microsoft 365 subscription lapses, apps enter 'reduced functionality mode' (read-only). The fix is to renew or reassign a valid license in the Microsoft 365 Admin Center, then sign out and back into the Office apps to re-activate. No reinstallation is needed — activation is account-based."
+    },
+    {
+      "q": "What Microsoft 365 feature synchronizes on-premises Active Directory identities to Azure AD for cloud authentication?",
+      "options": [
+        "Active Directory Federation Services (AD FS) — creates a local federation server",
+        "Azure AD Connect — syncs on-premises AD users, passwords, and groups to Azure AD, enabling single sign-on for cloud services",
+        "Microsoft Identity Manager — manages on-premises identity lifecycle only",
+        "Entra Domain Services — provides cloud-based domain services without on-premises servers"
+      ],
+      "answer": 1,
+      "explanation": "Azure AD Connect (now Entra Connect) synchronizes on-premises Active Directory objects (users, groups, passwords) to Azure Active Directory. This enables hybrid identity — users log in with their on-premises credentials and access both on-premises resources and cloud services (M365, Azure) with the same account."
+    },
+    {
+      "q": "What is the difference between Microsoft 365 Personal and Microsoft 365 Business plans?",
+      "options": [
+        "Personal includes more desktop app licenses than Business plans",
+        "Personal is for individuals/households (up to 6 users); Business plans (Basic, Standard, Premium) include IT administration features, custom domain email, compliance tools, and Intune device management for organizational use",
+        "Business plans are cheaper per user than Personal plans for large organizations",
+        "Personal plans include Teams; Business plans do not"
+      ],
+      "answer": 1,
+      "explanation": "Microsoft 365 Personal/Family is designed for home use without administrative management. Business plans add: custom domain email, Microsoft Teams with advanced features, SharePoint, Intune MDM, Azure AD Premium (conditional access), compliance and security tools, and admin center management — features organizations require."
+    }
+  ]
+}

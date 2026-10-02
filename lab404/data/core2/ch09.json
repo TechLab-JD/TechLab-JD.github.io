@@ -1,0 +1,306 @@
+{
+  "core": 2,
+  "chapter": 9,
+  "title": "Social Engineering & Threats",
+  "exam_objectives": [
+    "2.5"
+  ],
+  "coverage": "COVERED",
+  "domain": "security",
+  "domain_label": "Security",
+  "sections": [
+    {
+      "title": "Social Engineering: Phishing And Its Variants",
+      "content": "Social engineering is the practice of manipulating people rather than systems. It exploits trust, authority, urgency, and fear to cause a target to take an action they would not otherwise take.\nPhishing is the most common form. The attacker sends an email that appears to come from a trusted source â€” a bank, IT department, cloud service provider â€” with the goal of getting the recipient to click a malicious link, open a malicious attachment, or submit credentials to a spoofed login page. Attackers register look-alike domains â€” \"micros0ft.com\" instead of \"microsoft.com\" â€” or spoof the display name in the From header to make the message appear legitimate.\nSpear phishing is targeted phishing. The attacker researches the specific organization or individual â€” through LinkedIn, corporate websites, data breach databases, or open-source intelligence â€” and crafts a message that references real names, real projects, and real organizational context. The personalization makes the message far more convincing than generic phishing.\nWhaling is spear phishing directed at executives. A CEO, CFO, or other senior officer is targeted because they have broader system access, financial authority, and can authorize wire transfers or policy exceptions. Whaling attacks are also called Business Email Compromise â€” BEC â€” when they target financial transactions specifically.\nVishing â€” voice phishing â€” uses phone calls. The attacker impersonates IT support, a financial institution, or a government agency. They use social pressure, urgency, and authority to extract credentials, personal information, or to direct the target to install remote access software.\nSmishing â€” SMS phishing â€” delivers the attack via text message. The message typically impersonates a package delivery service, a bank, or a two-factor authentication prompt. A link in the message leads to a credential harvesting site or malware download.\nQR code phishing embeds a malicious URL in a QR code. The code appears in a legitimate-looking email, a printed flyer, or even a sticker placed over a legitimate QR code in a public location. Because humans cannot read QR codes directly, the destination URL is hidden until the device processes it.\n---",
+      "exam_tips": [
+        "Whaling = phishing + executives. Spear phishing = targeted research + personalized message. The delivery method (email) is the same â€” the targeting is what differs."
+      ]
+    },
+    {
+      "title": "Social Engineering: In-Person Techniques",
+      "content": "Not all social engineering is digital. These physical techniques are tested on the exam and are responsible for real-world security incidents.\nShoulder surfing: the attacker observes the target directly â€” watching a password being typed, a PIN entered at a point-of-sale terminal, or sensitive data displayed on a screen. No technical capability required â€” just proximity and observation. Mitigations include screen privacy filters, body positioning awareness, and organizational policies about entering credentials in public spaces.\nTailgating: an unauthorized person follows an authorized person through a secured entry point â€” a door with badge access, a turnstile, or a building lobby â€” before the door closes. The authorized person may be unaware. Piggybacking is the same action but with the authorized person's knowledge and consent â€” holding a door open for someone who asks. Both bypass physical access controls without any credential compromise. Mitigation is the access control vestibule â€” the mantrap â€” which physically prevents this by requiring the first door to close before the second opens.\nImpersonation: the attacker presents a false identity â€” a vendor making a delivery, an IT contractor, a new hire â€” to gain physical access or extract information. Effective impersonation uses props (uniforms, lanyards, tools), a confident demeanor, and a plausible pretext. An IT technician carrying equipment and wearing a polo shirt with a corporate logo encounters very little resistance. Mitigation: verify identity through a secondary channel before granting access. Do not rely on appearance or a claimed email address.\nDumpster diving: recovering discarded documents, printed reports, hardware, or storage media from physical waste. Corporate trash has historically contained printed network diagrams, vendor invoices with account numbers, employee directories, and even sticky notes with written passwords. Old hard drives improperly discarded can yield enormous amounts of sensitive data. Mitigation: cross-cut shredding for paper, certified data destruction or degaussing for storage media.\n---",
+      "exam_tips": [
+        "Tailgating = no consent from authorized person. Piggybacking = authorized person knowingly allows entry. Both bypass physical access controls."
+      ]
+    },
+    {
+      "title": "Network-Level Attacks",
+      "content": "Denial of Service â€” DoS: the attacker sends a flood of traffic or requests to a target system, exhausting its resources â€” bandwidth, CPU, memory, connection table â€” making it unavailable to legitimate users. A single source is the distinguishing characteristic of DoS.\nDistributed Denial of Service â€” DDoS: the same concept, executed at scale using a botnet â€” a network of compromised machines under attacker control. Traffic floods the target from thousands of source addresses simultaneously, making source-based blocking ineffective. DDoS attacks can overwhelm even well-resourced targets. Mitigation requires upstream filtering â€” ISP-level or cloud-based scrubbing services.\nEvil twin: the attacker deploys a rogue wireless access point with the same SSID as a legitimate network â€” \"CoffeeShop_WiFi\" or the corporate guest network. Users' devices may connect automatically based on known SSID matching. Traffic from connected devices passes through the rogue AP, allowing the attacker to intercept unencrypted communications. Mitigation: use VPN when on any untrusted network; configure devices to require manual connection approval for known networks.\nOn-path attack â€” Man-in-the-Middle â€” MITM: the attacker positions themselves between the client and the legitimate server, intercepting traffic in both directions. The client believes it is communicating directly with the server; the server believes it is communicating directly with the client. The attacker can read, modify, and relay traffic. Implemented through ARP cache poisoning on a local network, DNS spoofing, or a rogue access point.\nSpoofing: falsifying the source of a communication. IP spoofing replaces the source IP address in packet headers â€” used in DoS amplification attacks and to obscure the attacker's true location. MAC spoofing replaces the hardware address of a network interface, bypassing MAC-based network access control lists. Email spoofing falsifies the From header to make a message appear to originate from a trusted sender.\n---",
+      "exam_tips": [
+        "DoS = one source. DDoS = botnet (distributed). Evil twin = rogue wireless AP with matching SSID. On-path/MITM are the same attack â€” on-path is the newer CompTIA terminology."
+      ]
+    },
+    {
+      "title": "Vulnerabilities And Application Attacks",
+      "content": "Zero-day: a security vulnerability that is unknown to the vendor at the time of exploitation. Because no patch exists, defenders cannot remediate it through standard patch management. Zero-day vulnerabilities are exploited in the window between discovery and vendor response. Mitigations: layered defenses, behavioral detection, network segmentation â€” because signature-based tools will not detect a zero-day by definition.\nUnpatched systems: known vulnerabilities where patches exist but have not been applied. The majority of successful real-world exploits target known vulnerabilities â€” not zero-days. EternalBlue, the vulnerability exploited by WannaCry, had a patch available 59 days before the attack began. Organizations that had applied MS17-010 were not affected. Patch management is a primary security control.\nEnd-of-life systems: operating systems and software that the vendor has discontinued â€” no more security updates, regardless of severity. Windows XP reached EOL in April 2014. Windows 7 reached EOL in January 2020. Running EOL software is equivalent to running with all known, post-EOL vulnerabilities permanently unpatched.\nBYOD â€” Bring Your Own Device: personal devices connecting to corporate networks or accessing corporate data introduce risks because they are not managed under corporate security policy. They may run EOL software, lack endpoint protection, be connected to consumer cloud services, or be shared with household members who introduce malware. MDM and containerization policies are the primary mitigations.\nSQL injection: the attacker inserts malicious SQL syntax into a user-supplied input field â€” a login box, a search field â€” that is incorporated into a database query without proper input sanitization. If the application passes the raw input to the database engine, the injected SQL executes. A simple payload like OR '1'='1' can bypass authentication. More sophisticated injections can read, modify, or delete database contents. Mitigation: parameterized queries, input validation, and web application firewalls.\nCross-site scripting â€” XSS: the attacker injects malicious JavaScript into web content that is stored or reflected by a vulnerable web application and served to other users. When a victim loads the page, the script executes in their browser â€” stealing cookies, session tokens, or credentials. Unlike SQL injection which targets the database, XSS targets the users of the application.\nBrute-force attack: the attacker systematically tries every possible password combination until the correct one is found. Computationally intensive; effectiveness depends on password length and complexity. Mitigated by account lockout policies, CAPTCHA, and multi-factor authentication.\nDictionary attack: a targeted form of brute-force that tries common words, known password patterns, and entries from leaked credential databases rather than every possible combination. Far more efficient than pure brute-force for accounts with common passwords. Mitigated by enforcing complex password policies and checking passwords against known breach lists.\nInsider threat: a current or former employee, contractor, or partner who uses legitimate access to cause harm â€” intentionally through data theft or sabotage, or unintentionally through negligent behavior. Insider threats are particularly difficult to detect because access is authorized. Mitigations: least privilege, access reviews, user behavior analytics, separation of duties.\nSupply chain attack: the attacker compromises a software vendor, hardware manufacturer, or service provider to introduce malicious code or components into the supply chain. The attack propagates to every customer who installs the compromised software or uses the compromised hardware. The SolarWinds attack is the prominent example â€” malware was inserted into a legitimate software update distributed to thousands of organizations.\n---",
+      "exam_tips": [
+        "Most real-world breaches exploit known, patchable vulnerabilities â€” not zero-days. Patch management is a primary security control.",
+        "SQL injection targets the database. XSS targets users of the application. Both exploit insufficient input validation. Dictionary attack is more efficient than brute-force because it uses known patterns."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "Most breaches do not start with a zero-day exploit. They start with an email. Phishing is the most common attack vector in enterprise environments â€” and the exam tests every variant.",
+      "concept": "PHISHING, VISHING, SMISHING â€” HOW ATTACKERS REACH YOU",
+      "summary": "Phishing is the practice of sending fraudulent messages that impersonate a trusted source to trick the recipient into revealing credentials, clicking a malicious link, or downloading malware. Phishing: delivered via email."
+    },
+    {
+      "hook": "Not every attack happens online. Some of the most effective social engineering techniques require nothing more than a person walking into a building or looking over your shoulder.",
+      "concept": "SHOULDER SURFING, TAILGATING, DUMPSTER DIVING â€” IN-PERSON ATTACKS",
+      "summary": "Social engineering exploits human behavior rather than technical vulnerabilities. These in-person techniques appear on the A+ exam and in real-world security incidents."
+    },
+    {
+      "hook": "Social engineering is not always a person tricking another person. Attackers also manipulate network infrastructure to intercept traffic, overwhelm services, or impersonate trusted access points.",
+      "concept": "DoS, DDoS, EVIL TWIN, ON-PATH â€” NETWORK-LEVEL ATTACKS",
+      "summary": "These network-level attacks appear in the A+ security objectives and require understanding the mechanism â€” not just the name. Denial of Service â€” DoS: the attacker floods a target system with traffic or requests to exhaust its resources and make it unavailable to legitimate users."
+    },
+    {
+      "hook": "Unpatched systems, zero-day vulnerabilities, and injection attacks all show up on the A+ exam. You need to know what each one means â€” not how to write the exploit.",
+      "concept": "ZERO-DAY, SQL INJECTION, XSS â€” THREATS THE EXAM TESTS",
+      "summary": "Zero-day vulnerability: a security flaw in software or hardware that is unknown to the vendor â€” no patch exists. Attackers who discover zero-days have an open window to exploit the vulnerability until it is identified and patched."
+    },
+    {
+      "hook": "Social engineering is the practice of manipulating people rather than systems.",
+      "concept": "Social Engineering: Phishing And Its Variants",
+      "summary": "Social engineering is the practice of manipulating people rather than systems. It exploits trust, authority, urgency, and fear to cause a target to take an action they would not otherwise take. Phishing is the most common form."
+    },
+    {
+      "hook": "Not all social engineering is digital.",
+      "concept": "Social Engineering: In-Person Techniques",
+      "summary": "Not all social engineering is digital. These physical techniques are tested on the exam and are responsible for real-world security incidents. Shoulder surfing: the attacker observes the target directly â€” watching a password being typed, a PIN entered at a point-of-sale terminal, or sensitive data displayed on a screen."
+    },
+    {
+      "hook": "Denial of Service â€” DoS: the attacker sends a flood of traffic or requests to a target system, exhausting its resources â€” bandwidth, CPU, memory, conn",
+      "concept": "Network-Level Attacks",
+      "summary": "Denial of Service â€” DoS: the attacker sends a flood of traffic or requests to a target system, exhausting its resources â€” bandwidth, CPU, memory, connection table â€” making it unavailable to legitimate users. A single source is the distinguishing characteristic of DoS. Distributed Denial of Service â€” DDoS: the same concept, executed at scale using a botnet â€” a network of compromised machines under attacker control."
+    },
+    {
+      "hook": "Zero-day: a security vulnerability that is unknown to the vendor at the time of exploitation.",
+      "concept": "Vulnerabilities And Application Attacks",
+      "summary": "Zero-day: a security vulnerability that is unknown to the vendor at the time of exploitation. Because no patch exists, defenders cannot remediate it through standard patch management. Zero-day vulnerabilities are exploited in the window between discovery and vendor response."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "What social engineering attack sends fraudulent emails appearing to come from a trusted source to steal credentials?",
+      "options": [
+        "Phishing",
+        "Smishing",
+        "Vishing",
+        "Tailgating"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What is \"smishing\"?",
+      "options": [
+        "Phishing via social media",
+        "Phishing via SMS text messages",
+        "Phishing via email attachments",
+        "Physical phishing at a location"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What physical social engineering technique involves following an authorized person through a secure door without authentication?",
+      "options": [
+        "Shoulder surfing",
+        "Dumpster diving",
+        "Tailgating (piggybacking)",
+        "Whaling"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What is a \"whaling\" attack?",
+      "options": [
+        "Phishing targeting a large number of random users",
+        "DDoS attack on a large organization",
+        "Phishing via whale-watching websites",
+        "Targeted phishing against high-value targets such as executives (CEOs, CFOs)"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What does \"shoulder surfing\" mean in security?",
+      "options": [
+        "Browsing over someone shoulder to observe their screen or keyboard input",
+        "Using shoulder pads to carry stolen equipment",
+        "An attack on surfing websites",
+        "Monitoring network traffic on the same network segment"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "[BONUS â€” Beyond A+ Scope] What is a \"watering hole\" attack?",
+      "options": [
+        "Sending malware via email attachments",
+        "Infecting websites frequently visited by the target group to compromise their machines",
+        "Intercepting network traffic at a coffee shop",
+        "Flooding a server with requests"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What is the BEST defense against social engineering attacks?",
+      "options": [
+        "Better antivirus software",
+        "Stronger passwords",
+        "Security awareness training for all employees",
+        "Network firewall upgrades"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "An attacker calls an employee, claims to be from the IT help desk, and says there is an urgent security breach requiring the employee's password to remediate immediately. The employee complies. Which social engineering technique is being used?",
+      "options": [
+        "Tailgating",
+        "Shoulder surfing",
+        "Dumpster diving",
+        "Pretexting"
+      ],
+      "answer": 3,
+      "explanation": "Pretexting involves fabricating a scenario to manipulate a target into divulging information. The attacker invented an urgent help-desk situation to justify requesting the password. Tailgating is physical unauthorized entry; shoulder surfing is visually observing credentials."
+    },
+    {
+      "q": "A financial analyst receives a highly personalized email referencing her name, her manager's name, and a recent project, asking her to wire funds to an external account. This attack is specifically crafted for a single high-value individual rather than a mass audience. What is this called?",
+      "options": [
+        "Spear phishing",
+        "Whaling",
+        "Vishing",
+        "Smishing"
+      ],
+      "answer": 0,
+      "explanation": "Spear phishing is a targeted phishing attack tailored with personal details about a specific individual. Whaling specifically targets executives. Vishing uses voice calls; smishing uses SMS text messages."
+    },
+    {
+      "q": "An attacker waits near a secured building entrance and follows an authorized employee through the door before it closes, gaining physical access without any credentials. Which term describes this technique?",
+      "options": [
+        "Impersonation",
+        "Tailgating",
+        "Watering hole attack",
+        "Pretexting"
+      ],
+      "answer": 1,
+      "explanation": "Tailgating (piggybacking) is the act of following an authorized person through a secured entry without independently authenticating. It is countered with mantraps, turnstiles, and security awareness training."
+    },
+    {
+      "q": "An attacker sets up a wireless access point with the SSID 'CorporateGuest' — the same as the legitimate guest network — to intercept traffic from connecting users. What is this attack called?",
+      "options": [
+        "On-path (man-in-the-middle) attack",
+        "Evil twin attack",
+        "DNS spoofing",
+        "ARP poisoning"
+      ],
+      "answer": 1,
+      "explanation": "An evil twin attack deploys a rogue wireless access point with the same SSID as a legitimate network. Users' devices may connect automatically based on known SSID matching. Traffic from connected devices passes through the rogue AP, allowing the attacker to intercept unencrypted communications. Using a VPN on untrusted networks is the primary mitigation."
+    },
+    {
+      "q": "What distinguishes a DDoS attack from a standard DoS attack?",
+      "options": [
+        "DDoS targets databases while DoS targets web servers",
+        "DDoS uses encrypted traffic while DoS uses unencrypted traffic",
+        "DDoS uses a botnet of many compromised machines to flood the target from multiple sources, while DoS originates from a single source",
+        "DDoS requires physical access to the target network"
+      ],
+      "answer": 2,
+      "explanation": "A DoS (Denial of Service) attack originates from a single source. A DDoS (Distributed Denial of Service) attack uses a botnet — a network of thousands of compromised machines — to flood the target simultaneously from many source addresses, making source-based blocking ineffective. Mitigation requires upstream or cloud-based traffic scrubbing."
+    },
+    {
+      "q": "A web application takes user input from a search field and passes it directly to a database query without sanitization. An attacker enters SQL syntax into the field and is able to read the entire user database. What type of attack is this?",
+      "options": [
+        "Cross-site scripting (XSS)",
+        "Brute-force attack",
+        "SQL injection",
+        "Dictionary attack"
+      ],
+      "answer": 2,
+      "explanation": "SQL injection inserts malicious SQL syntax into a user-supplied input field that is incorporated into a database query without proper input sanitization. If the application passes raw input to the database engine, the injected SQL executes — potentially reading, modifying, or deleting database contents. Parameterized queries and input validation are the primary mitigations."
+    },
+    {
+      "q": "An attacker uses a phone call to impersonate the IT help desk, creates urgency by claiming a security breach, and convinces an employee to provide their network credentials. Which type of social engineering attack is this?",
+      "options": [
+        "Smishing",
+        "Phishing",
+        "Vishing",
+        "Spear phishing"
+      ],
+      "answer": 2,
+      "explanation": "Vishing (voice phishing) uses phone calls to manipulate targets. The attacker impersonates IT support, a financial institution, or a government agency and uses social pressure, urgency, and authority to extract credentials or direct the target to install remote access software. Phishing and spear phishing are email-based; smishing uses SMS text messages."
+    },
+    {
+      "q": "An employee discovers discarded printed network diagrams and a sticky note with a password in the office recycling bin. What physical social engineering technique exploits improperly discarded materials?",
+      "options": [
+        "Tailgating",
+        "Shoulder surfing",
+        "Impersonation",
+        "Dumpster diving"
+      ],
+      "answer": 3,
+      "explanation": "Dumpster diving recovers sensitive information from physical waste — printed documents, hardware, or storage media. Corporate trash has historically contained network diagrams, account numbers, employee directories, and written passwords. Cross-cut shredding for paper and certified data destruction for storage media are the mitigations."
+    },
+    {
+      "q": "What is pretexting in social engineering?",
+      "options": [
+        "Sending a mass email designed to look like it is from a trusted source",
+        "Creating a fabricated scenario (pretext) to manipulate a victim into revealing information or performing an action — for example, impersonating an auditor who needs immediate access to financial records",
+        "Using fake Wi-Fi access points to capture network credentials",
+        "Searching through discarded documents to find sensitive information"
+      ],
+      "answer": 1,
+      "explanation": "Pretexting involves the attacker creating a convincing backstory (a pretext) to establish trust and manipulate the target. Unlike generic phishing, pretexting involves research and personalization — the attacker plays a role (IT support, auditor, executive) to make the request seem legitimate."
+    },
+    {
+      "q": "What is a 'quid pro quo' social engineering attack?",
+      "options": [
+        "An attack where the attacker trades stolen data between criminal organizations",
+        "The attacker offers something of value (free tech support, a gift, a favor) in exchange for information or access — e.g., calling users offering to fix a virus in exchange for their credentials",
+        "An attack targeting a specific executive using personal information gathered from social media",
+        "A type of ARP poisoning where traffic is redirected in exchange for service availability"
+      ],
+      "answer": 1,
+      "explanation": "Quid pro quo (Latin for 'something for something') involves the attacker offering a service or benefit in exchange for information. A classic example: a caller claiming to be IT support offers to fix a problem, then asks for the user's username and password to 'complete the fix.'"
+    },
+    {
+      "q": "What makes spear phishing significantly more dangerous than generic phishing attacks?",
+      "options": [
+        "Spear phishing uses more advanced malware payloads in its attachments",
+        "Spear phishing is targeted and personalized — using the victim's name, role, colleagues, recent activities, or company information gathered through research — making it far more convincing than mass generic phishing",
+        "Spear phishing bypasses email spam filters that catch generic phishing",
+        "Spear phishing only targets executives and high-value targets, while generic phishing targets everyone"
+      ],
+      "answer": 1,
+      "explanation": "Generic phishing sends identical emails to thousands of recipients hoping someone clicks. Spear phishing invests time researching the specific target — including their name, job title, manager's name, recent company events — to craft a highly convincing, personalized message that lowers the victim's defenses."
+    },
+    {
+      "q": "An attacker sends a mass email claiming to be from a bank stating the recipient's account will be suspended in 24 hours unless they click a link. What manipulation technique makes this effective?",
+      "options": [
+        "Spear phishing — the email is highly personalized to the recipient",
+        "Urgency and fear as psychological manipulation — time pressure discourages careful evaluation of the email's authenticity",
+        "Vishing — the email is followed up with a phone call",
+        "Whaling — the technique targets senior bank executives"
+      ],
+      "answer": 1,
+      "explanation": "Creating a false sense of urgency or fear is a core social engineering technique. When people believe immediate negative consequences will occur (account suspended, fine imposed, action required NOW), they act impulsively without taking time to verify the sender or notice phishing indicators."
+    },
+    {
+      "q": "What does 'vishing' stand for, and what communication method does it use?",
+      "options": [
+        "Video phishing — uses deepfake video calls to impersonate executives",
+        "Voice phishing — uses phone calls to manipulate victims into revealing sensitive information, often impersonating banks, tech support, or government agencies",
+        "Virtual phishing — uses simulated corporate portals to capture credentials",
+        "Verified phishing — sends phishing messages from compromised legitimate email accounts"
+      ],
+      "answer": 1,
+      "explanation": "Vishing (Voice phishing) uses phone calls rather than email. Attackers impersonate banks, Microsoft tech support, IRS agents, or other trusted parties to extract account numbers, passwords, or credit card information. Caller ID spoofing makes the call appear to originate from a legitimate organization."
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "core": 2,
+  "chapter": 4,
+  "title": "Windows Networking & Command Line",
+  "exam_objectives": [
+    "1.5",
+    "1.7"
+  ],
+  "coverage": "COVERED",
+  "domain": "os",
+  "domain_label": "Operating Systems",
+  "sections": [
+    {
+      "title": "Network Configuration Fundamentals",
+      "content": "Every Windows client needs four pieces of IP configuration to function on a network: an IP address, a subnet mask, a default gateway, and DNS server addresses.\nThe IP address identifies the machine on the network. IPv4 addresses are 32-bit numbers written in dotted decimal â€” like 192.168.1.100. IPv6 is 128-bit hexadecimal. Private IPv4 ranges the exam tests: 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16.\nThe subnet mask defines which part of the IP address is the network and which is the host. The most common is 255.255.255.0, which in CIDR notation is /24.\nThe default gateway is the router's IP address. All traffic destined for other networks â€” including the internet â€” goes to the default gateway first.\nDNS translates domain names to IP addresses. Without DNS, you can ping 8.8.8.8 but cannot load google.com. The most common exam scenario for DNS failure: the user can access sites by IP but not by name.\nAPIPA: if a Windows machine cannot contact a DHCP server, it assigns itself an address in the 169.254.0.0/16 range. Any machine showing a 169.254.x.x address has lost DHCP connectivity. This is called Automatic Private IP Addressing.\nStatic vs DHCP: servers, printers, and network infrastructure devices use static IP addresses â€” manually configured, never changing. Client workstations use DHCP â€” automatically assigned by a DHCP server, may change on renewal. Configure IP assignment through the network adapter properties â€” select TCP/IPv4, then choose either automatic or manual addressing.\nNetwork profiles: Windows classifies each network connection as Public, Private, or Domain. Public disables network discovery and file sharing â€” use this on coffee shop or airport networks. Private enables network discovery and sharing â€” use this on trusted home or work networks. Domain is auto-detected when a machine joins an Active Directory domain. The profile determines firewall rule behavior â€” more permissive for Private and Domain, more restrictive for Public.\n---",
+      "exam_tips": [
+        "APIPA = 169.254.x.x â€” machine got no DHCP response"
+      ]
+    },
+    {
+      "title": "Domain Vs Workgroup",
+      "content": "Two network models exist for Windows environments.\nA workgroup is a peer-to-peer model. Each computer maintains its own local user account database. To access resources on another machine, a local account must exist on that machine for the accessing user. No centralized management. No Group Policy. No single sign-on. Workgroups are practical for small environments up to about 20 machines. Windows Home edition supports workgroups.\nA domain is an enterprise model. A server running Active Directory Domain Services acts as a domain controller and manages all user accounts centrally. Users authenticate once against the domain controller and receive access to all authorized resources â€” file servers, printers, applications â€” without re-authenticating. This is Single Sign-On.\nDomain join enables Group Policy to be applied from the domain controller to member computers â€” security settings, software deployment, and configuration enforcement can be pushed from one central location to every machine in the domain. Domain join requires Windows Pro or higher. Windows Home cannot join a domain.\nAccess to shared resources uses UNC paths â€” Universal Naming Convention. Format: \\\\servername\\sharename. Example: \\\\fileserver\\documents. You can also use the server's IP address: \\\\192.168.1.50\\shared. Mapped drives assign a network share to a drive letter, making it appear as a local drive in File Explorer.\nProxy servers act as intermediaries between client machines and the internet. Common in corporate environments for content filtering, caching, and monitoring. Configured in Settings, Network and Internet, Proxy. Manual configuration requires the proxy server address and port number.\n---",
+      "exam_tips": [
+        "Setting a hotel Wi-Fi to Private is a security mistake â€” always use Public"
+      ]
+    },
+    {
+      "title": "Network Command Line Tools",
+      "content": "These are the commands that appear on the exam and that you will use on day one of any IT job.\nipconfig: displays TCP/IP configuration. ipconfig shows basic IP, mask, and gateway. ipconfig /all adds the MAC address, DHCP server address, DNS servers, and lease information. ipconfig /release drops the DHCP lease. ipconfig /renew requests a new lease â€” run these in sequence to force a fresh IP assignment. ipconfig /flushdns clears the DNS resolver cache â€” run this after DNS changes or when a machine is resolving a domain to an old address. ipconfig /displaydns shows the current DNS cache contents.\nping: tests network connectivity using ICMP echo requests. ping followed by an IP address or hostname sends four packets by default and shows round-trip time and whether packets were received. ping -t sends continuous packets until interrupted with Ctrl+C. ping -n sets the number of packets. Use ping to verify whether a host is reachable and whether DNS resolution is working. If you can ping by IP but not by name, DNS is the problem.\nnetstat: displays active network connections and open ports. netstat -ano is the standard diagnostic combination â€” all connections, numerical format, with process IDs. Cross-reference the PID column with Task Manager to identify which process owns each connection. netstat -r shows the routing table. netstat -b shows executable names but requires administrator privileges.\nnslookup: queries DNS servers. nslookup hostname shows what DNS server was used and what IP address that server returned. nslookup hostname 8.8.8.8 queries Google's DNS specifically â€” useful when you want to test against a public DNS server instead of the machine's configured one. nslookup runs in interactive mode if you type it without arguments, allowing multiple queries.\ntracert: traces the route to a destination, showing each router hop. Output shows three round-trip times per hop and the router's IP or name. Asterisks at a hop indicate no response â€” could be a filtering router or the point of failure. tracert -d skips hostname resolution for faster output.\npathping: combines tracert and ping. First maps the route, then pings each hop multiple times and calculates packet loss percentage per hop. Much more detailed than tracert but takes five or more minutes to complete. Use when you need to identify which specific router is dropping packets.\nnet use: manages network drive mappings. net use alone lists all current mapped drives. net use Z: \\\\server\\share maps a network share to drive letter Z. net use Z: /delete disconnects the mapping. Add /persistent:yes to make the mapping reconnect at logon.\n---",
+      "exam_tips": [
+        "Windows Home cannot join a domain â€” must be Pro or higher"
+      ]
+    },
+    {
+      "title": "System Management Commands",
+      "content": "sfc â€” System File Checker. Scans all protected Windows system files and replaces corrupted or modified ones from a cached copy. Run as administrator: sfc /scannow. Takes 15 to 30 minutes. If SFC cannot repair some files, run DISM first: DISM /Online /Cleanup-Image /RestoreHealth. DISM downloads clean files from Windows Update and repairs the source that SFC uses. Then run SFC again.\nchkdsk â€” Check Disk. Works at the disk level. chkdsk alone gives a read-only status report. chkdsk /f fixes file system errors. chkdsk /r locates bad sectors and recovers readable data â€” this is the thorough option for suspect drives. Cannot run with /f on the system drive while Windows is running â€” schedules for next boot. Requires administrator privileges.\ndiskpart: advanced disk partitioning. Interactive command-line tool. Enter diskpart, then use list disk, select disk, list partition, create partition, format, and assign letter to configure storage. Much more powerful than Disk Management GUI. Essential for preparing drives from command line during OS deployments. Use with caution â€” the clean command removes all partitions immediately.\ngpupdate: forces an immediate Group Policy update. gpupdate /force reapplies all policy settings, not just changed ones. Policy normally updates every 90 minutes with a random offset; gpupdate forces it immediately for testing new policies.\ngpresult: shows the Resultant Set of Policy â€” what Group Policies are actually applied to the current machine and user. gpresult /r shows a summary. gpresult /h filename.html saves a detailed HTML report. Essential for troubleshooting when expected policies are not applying.\n---",
+      "exam_tips": [
+        "Can ping by IP but not by name? Problem is DNS â†’ run ipconfig /flushdns then nslookup",
+        "netstat -ano shows PID â€” match PID in Task Manager to identify the process",
+        "SFC fails to fix? Run DISM /Online /Cleanup-Image /RestoreHealth first, then retry SFC"
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "A user cannot get on the internet. The first command you run is ipconfig. Everything diagnostic starts here.",
+      "concept": "IPCONFIG â€” THE COMMAND YOU USE EVERY DAY",
+      "summary": "ipconfig displays the TCP/IP configuration for every network adapter on the machine. Four switches cover what the exam tests."
+    },
+    {
+      "hook": "Malware often maintains a persistent network connection back to a command-and-control server. netstat shows you every active connection â€” including the ones that should not be there.",
+      "concept": "NETSTAT â€” SEE EVERY NETWORK CONNECTION ON YOUR MACHINE",
+      "summary": "netstat â€” Network Statistics â€” displays active TCP connections, open ports, and network interface statistics. It is a critical security diagnostic tool."
+    },
+    {
+      "hook": "A user's Windows machine is crashing randomly and some programs will not open. Before you reinstall Windows, run two commands. They take 30 minutes and might save you two hours.",
+      "concept": "SFC AND CHKDSK â€” HOW TO FIX WINDOWS WITHOUT REINSTALLING",
+      "summary": "Two commands fix different types of corruption. SFC â€” System File Checker â€” scans and repairs protected Windows system files."
+    },
+    {
+      "hook": "ping tells you whether a destination is reachable. tracert tells you exactly where the connection breaks if it is not.",
+      "concept": "TRACERT vs PATHPING â€” FINDING WHERE THE NETWORK BREAKS",
+      "summary": "tracert â€” trace route â€” sends packets to a destination and maps every router hop along the way. Each line of output represents one router between your machine and the destination, showing three round-trip times and the router's IP or hostname."
+    },
+    {
+      "hook": "A company with 200 employees cannot manage every user account on every machine individually. That is why domains exist â€” and why workgroups do not scale.",
+      "concept": "DOMAIN vs WORKGROUP â€” WHY IT MATTERS FOR EVERY BUSINESS NETWORK",
+      "summary": "There are two network models for Windows environments. A workgroup is a peer-to-peer model."
+    },
+    {
+      "hook": "Every Windows client needs four pieces of IP configuration to function on a network: an IP address, a subnet mask, a default gateway, and DNS server a",
+      "concept": "Network Configuration Fundamentals",
+      "summary": "Every Windows client needs four pieces of IP configuration to function on a network: an IP address, a subnet mask, a default gateway, and DNS server addresses. The IP address identifies the machine on the network. IPv4 addresses are 32-bit numbers written in dotted decimal â€” like 192.168.1.100."
+    },
+    {
+      "hook": "Two network models exist for Windows environments.",
+      "concept": "Domain Vs Workgroup",
+      "summary": "Two network models exist for Windows environments. A workgroup is a peer-to-peer model. Each computer maintains its own local user account database."
+    },
+    {
+      "hook": "These are the commands that appear on the exam and that you will use on day one of any IT job.",
+      "concept": "Network Command Line Tools",
+      "summary": "These are the commands that appear on the exam and that you will use on day one of any IT job. ipconfig: displays TCP/IP configuration. ipconfig shows basic IP, mask, and gateway."
+    },
+    {
+      "hook": "sfc â€” System File Checker.",
+      "concept": "System Management Commands",
+      "summary": "sfc â€” System File Checker. Scans all protected Windows system files and replaces corrupted or modified ones from a cached copy. Run as administrator: sfc /scannow."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "Which command displays all IP configuration details including MAC address and DNS servers?",
+      "options": [
+        "ipconfig",
+        "ipconfig /all",
+        "netstat",
+        "ping"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What command terminates all instances of a process by name in Windows?",
+      "options": [
+        "tasklist",
+        "net stop [service]",
+        "taskkill /IM [processname] /F",
+        "shutdown /a"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What command maps a network drive to the letter Z: in Windows Command Prompt?",
+      "options": [
+        "net use Z: \\\\server\\share /persistent:yes",
+        "ipconfig /release",
+        "netsh winsock reset",
+        "net share Z=C:\\folder"
+      ],
+      "answer": 0,
+      "explanation": "The 'net use Z: \\\\server\\share' command maps a network share to drive letter Z:. Adding /persistent:yes causes the mapping to survive reboots. This is a common A+ scenario for providing users with shared drive access."
+    },
+    {
+      "q": "Which Windows command-line tool is recommended for robustly copying entire directory trees including empty folders, with built-in retry support?",
+      "options": [
+        "copy",
+        "xcopy /e /i",
+        "robocopy /e",
+        "move"
+      ],
+      "answer": 2,
+      "explanation": "robocopy (Robust File Copy) with the /e flag copies all subdirectories including empty ones. Unlike xcopy, robocopy has built-in retry logic, mirroring, and logging capabilities, making it the preferred tool for enterprise file transfers and migrations."
+    },
+    {
+      "q": "Which command displays the current routing table on a Windows system?",
+      "options": [
+        "ipconfig /all",
+        "route print",
+        "arp -a",
+        "netstat -an"
+      ],
+      "answer": 1,
+      "explanation": "'route print' displays the IP routing table including network destinations, netmasks, gateways, and interfaces. 'netstat -r' is an alternative. Neither ipconfig, arp, nor netstat -an display the full routing table."
+    },
+    {
+      "q": "Which command checks a hard drive for file system errors and attempts to recover readable information from bad sectors on Windows?",
+      "options": [
+        "diskpart",
+        "sfc /scannow",
+        "chkdsk /r",
+        "defrag"
+      ],
+      "answer": 2,
+      "explanation": "chkdsk /r scans the disk for bad sectors and attempts to recover data from them, in addition to fixing file system errors. sfc /scannow checks system file integrity. diskpart manages partitions. defrag optimizes disk fragmentation."
+    },
+    {
+      "q": "A Windows PC needs a static IP address. Where is this configured?",
+      "options": [
+        "Task Manager",
+        "Windows Firewall settings",
+        "Device Manager",
+        "Network adapter properties > Internet Protocol Version 4 (TCP/IPv4) properties"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What Windows feature allows sharing files and printers on a local network?",
+      "options": [
+        "Network discovery and file and printer sharing",
+        "Remote Desktop",
+        "Windows Firewall",
+        "HomeGroup (deprecated in Windows 10 1803+)"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A technician needs to join a Windows 10 workstation to a corporate domain. Which GUI path accomplishes this?",
+      "options": [
+        "Device Manager > Properties",
+        "System Properties > Computer Name tab > Change button",
+        "Windows Update Settings > Advanced",
+        "Network and Sharing Center > Adapter Settings"
+      ],
+      "answer": 1,
+      "explanation": "System Properties > Computer Name tab > Change button is the standard GUI method to join a domain in Windows. The technician enters the domain name and credentials of an account with rights to join machines to the domain. This is a core A+ objective."
+    },
+    {
+      "q": "Which Windows feature automatically assigns an IP address if no DHCP server responds?",
+      "options": [
+        "Static IP",
+        "IPv6 link-local",
+        "APIPA (Automatic Private IP Addressing) â€” 169.254.x.x range",
+        "Loopback"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What Windows setting determines whether a network connection is classified as Private, Public, or Domain profile, which in turn controls firewall behavior?",
+      "options": [
+        "Network type setting in Network and Sharing Center (or network flyout in Windows 10/11)",
+        "Windows Firewall profile",
+        "IP address class",
+        "DHCP scope option 3 (default gateway)"
+      ],
+      "answer": 0,
+      "explanation": "The network profile (Private, Public, or Domain) is set via the Network and Sharing Center or the network flyout. This profile controls Windows Firewall rules: Public is most restrictive, Private allows discovery, Domain trusts the corporate network."
+    },
+    {
+      "q": "A user cannot connect to a shared network folder. They receive \"Access Denied.\" What is the MOST likely cause?",
+      "options": [
+        "Insufficient share or NTFS permissions for that user account",
+        "Wrong IP address",
+        "Network cable issue",
+        "DNS failure"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A user on a Windows 10 workstation cannot access a shared folder on another computer in the same workgroup. Both machines can ping each other successfully. Which setting should the technician check NEXT?",
+      "options": [
+        "Verify both machines have the same static IP address",
+        "Enable Network Discovery and File and Printer Sharing on both machines",
+        "Join both machines to an Active Directory domain",
+        "Install a VPN client on the machine that cannot access the share"
+      ],
+      "answer": 1,
+      "explanation": "Network Discovery and File and Printer Sharing must be enabled in the Network and Sharing Center for workgroup file sharing to work. Successful ping confirms IP connectivity, but these sharing features can be disabled independently of basic IP communication."
+    },
+    {
+      "q": "A remote employee needs to securely connect to internal company network resources over the internet. Which Windows networking feature is designed for this purpose?",
+      "options": [
+        "HomeGroup",
+        "Network Bridge",
+        "VPN client",
+        "APIPA configuration"
+      ],
+      "answer": 2,
+      "explanation": "A VPN client creates an encrypted tunnel over the internet, allowing remote users to securely access internal resources as if on-site. HomeGroup is a deprecated local sharing feature. A Network Bridge connects different network segments on the same local network. APIPA is a self-assigned addressing "
+    },
+    {
+      "q": "A Windows laptop connects to a new Wi-Fi network at a coffee shop. The user wants to ensure the computer is not discoverable to other devices on that public network. Which network location type should be selected?",
+      "options": [
+        "Private",
+        "Home",
+        "Domain",
+        "Public"
+      ],
+      "answer": 3,
+      "explanation": "The Public network profile disables Network Discovery and reduces machine visibility on the network â€” appropriate for untrusted networks like coffee shops. The Private (or Home) profile enables more permissive sharing settings for trusted environments. Domain profile is applied automatically when jo"
+    },
+    {
+      "q": "What command displays all active TCP and UDP network connections and listening ports on a Windows system?",
+      "options": [
+        "ipconfig /all",
+        "netstat -an (shows all connections and ports in numeric form)",
+        "nslookup -ports",
+        "arp -a"
+      ],
+      "answer": 1,
+      "explanation": "'netstat -an' displays all current TCP and UDP connections (including states: ESTABLISHED, LISTENING, TIME_WAIT) and open ports. The -a flag shows all connections including listening ports; -n uses numeric addresses instead of resolving hostnames, making it faster and more useful for security troubleshooting."
+    },
+    {
+      "q": "What command queries a DNS server to resolve a hostname to an IP address on a Windows system?",
+      "options": [
+        "ipconfig /resolve hostname",
+        "nslookup hostname",
+        "ping hostname (performs DNS resolution but primarily a connectivity test)",
+        "tracert hostname"
+      ],
+      "answer": 1,
+      "explanation": "nslookup queries the configured DNS server to resolve a hostname to an IP address (or reverse-resolve an IP to hostname). It can also specify an alternate DNS server and query specific record types (MX, TXT, AAAA) — making it the primary DNS troubleshooting command."
+    },
+    {
+      "q": "What Windows commands release and renew a DHCP-assigned IP address?",
+      "options": [
+        "ipconfig /flush then ipconfig /reload",
+        "ipconfig /release to release the current lease, then ipconfig /renew to request a new one from the DHCP server",
+        "ipconfig /reset clears and renews in one step",
+        "netsh int ip reset performs DHCP release and renewal"
+      ],
+      "answer": 1,
+      "explanation": "'ipconfig /release' sends a DHCP Release message to surrender the current IP address lease. 'ipconfig /renew' then sends a DHCP Discover/Request to obtain a fresh lease. This is useful for troubleshooting DHCP issues or forcing a device to get a new IP after network configuration changes."
+    },
+    {
+      "q": "A technician wants to test if a Windows Firewall is blocking ICMP (ping) traffic to a remote server. Which command is used?",
+      "options": [
+        "tracert — traces the path and reveals firewall drops",
+        "ping — sends ICMP echo requests; no reply or 'Request timed out' may indicate blocked ICMP or unreachable host",
+        "nslookup — verifies DNS connectivity which indicates firewall is open",
+        "netstat — checks if the server's port is open"
+      ],
+      "answer": 1,
+      "explanation": "ping sends ICMP Echo Request packets. If Windows Firewall or a network firewall blocks ICMP, responses will show 'Request timed out' or 'Destination host unreachable.' However, some servers intentionally block ICMP while still being reachable on other protocols — ping alone isn't definitive."
+    },
+    {
+      "q": "What command lists all currently shared network resources (folders, printers) on a Windows computer, including administrative shares?",
+      "options": [
+        "net view — shows shares on remote computers",
+        "net share — displays all shares on the local machine including hidden administrative shares (C$, ADMIN$, IPC$)",
+        "ipconfig /shares — lists all active network shares",
+        "dir /shares — shows shared resources in the current directory"
+      ],
+      "answer": 1,
+      "explanation": "'net share' lists all shared resources on the local machine including explicit shares and built-in administrative shares like C$ (root of C drive) and ADMIN$ (Windows directory). Running 'net share ShareName' displays details about a specific share including path and permissions."
+    }
+  ]
+}

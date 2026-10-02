@@ -1,0 +1,314 @@
+{
+  "core": 1,
+  "chapter": 11,
+  "title": "Printers: Config, Security & Maintenance",
+  "exam_objectives": [
+    "3.7",
+    "3.8"
+  ],
+  "coverage": "COVERED",
+  "domain": "hardware",
+  "domain_label": "Hardware",
+  "sections": [
+    {
+      "title": "Printer Properties And Printing Preferences",
+      "content": "Two distinct configuration layers exist for printers in Windows.\nPRINTER PROPERTIES is the device-level configuration â€” access requires administrative rights. From Printer Properties, you manage:\n- Driver updates and port configuration\n- Sharing settings â€” whether and how the printer is shared on the network\n- Permissions â€” which user groups have Print, Manage Documents, or Manage Printers rights\n- Installation of optional hardware units â€” duplex unit, additional paper trays, finisher\n- Advanced settings like scheduling and print priority\nPRINTING PREFERENCES controls the default job settings â€” what applies when a user does not explicitly select options. Default preferences include: paper size and type, orientation (portrait or landscape), color or grayscale, duplex mode, and pages per sheet. Preferences can be changed per print job and can be set differently for each user on a shared printer.\nPRINTER SHARING.\nA printer can be shared from a host computer â€” the computer with the printer connected becomes a software print server. Alternatively, network printers with built-in print server capability connect directly to the network.\nWhen sharing through a host computer, the host must have drivers for each client operating system and architecture that will connect. If a 64-bit Windows server hosts a printer, and a 32-bit Windows client needs to connect, a 32-bit driver must also be available on the server.\nPermissions on a shared printer:\n- Print: submit print jobs\n- Manage Documents: pause, restart, cancel others' jobs in the queue\n- Manage Printers: full administrative control â€” add and remove printers, share, modify permissions\n---",
+      "exam_tips": [
+        "Printer Properties requires admin rights. Printing Preferences can be set by users."
+      ]
+    },
+    {
+      "title": "Printer Security",
+      "content": "Network printers are networked computing devices with their own processors, memory, storage, and web management interfaces. They are frequently undersecured and represent real attack surface in enterprise environments.\nEXPOSURE RISKS.\nPrint jobs contain the data being printed. Sensitive documents sent to a printer's queue are stored in memory and potentially on an internal hard drive. If a printer is not properly secured or decommissioned, this stored data is accessible.\nDefault administrator credentials on network printers are rarely changed during setup. Vendor-default usernames and passwords for printer web interfaces are publicly documented. Any attacker on the network â€” or in some cases via an exposed management interface â€” can access the printer's configuration, print logs, and stored jobs.\nFirmware vulnerabilities exist in printer firmware just as in any networked device. Unpatched firmware can be exploited for unauthorized access. Keep printer firmware updated.\nSECURED PRINT (PULL PRINTING).\nSecured print â€” also called pull printing or follow-me printing â€” addresses the physical security problem of documents left in the output tray. A user sends a job to the printer, but the job does not print immediately. Instead, it is held in a secured queue until the user walks to the printer and authenticates using a PIN, badge, or username and password. The job releases only after successful authentication.\nThis ensures the user is present when documents print. Documents are never left unattended in the output tray, which is critical for confidential documents â€” HR records, legal documents, financial reports.\nAUDIT LOGGING.\nPrinter audit logs record who printed what, when, and how many pages. This data serves compliance requirements in regulated industries â€” healthcare, finance, legal â€” and enables investigation when sensitive information potentially leaves the organization via printed documents. Audit logs can be stored on the printer or forwarded to a centralized logging system.\nNETWORK SECURITY.\nChange all default credentials immediately on any new printer installation. Disable unused protocols â€” LPD, FTP, telnet â€” on the printer's web management interface. Place printers on a dedicated VLAN to limit their network exposure. Enable HTTPS for the printer's web management interface.\n---",
+      "exam_tips": [
+        "Networked printers are attack surfaces. Change defaults. Keep firmware updated."
+      ]
+    },
+    {
+      "title": "Maintenance Procedures By Printer Type",
+      "content": "LASER PRINTER MAINTENANCE.\nPower off and allow to cool before any maintenance. The fuser assembly operates at high temperatures and remains hot for several minutes after power-down. Contact with a hot fuser causes burns.\nNever use compressed air inside a laser printer. Toner is an extremely fine particulate. Compressed air will spread toner dust throughout the printer and into the room air. Use only toner vacuums and toner-safe cleaning materials.\nCONSUMABLES AND COMPONENTS:\nToner cartridges are replaced when exhausted. When a low-toner warning appears, gently rocking the cartridge end-to-end can temporarily redistribute toner.\nImaging drums â€” when separate from the toner cartridge â€” have a rated page count and are replaced at the specified interval. A scratched or worn drum causes vertical streaks and quality degradation.\nPickup rollers pull paper from the tray. Worn rollers cause misfeeds, multiple-sheet feeds, and jams. Replacement is typically part of a maintenance kit.\nThe transfer roller transfers toner from drum to paper. Worn transfer rollers cause light, uneven, or patchy prints.\nThe fuser unit bonds toner to paper. When the fuser fails, toner smears off the page. Fusers are replaced on a scheduled page-count basis.\nMaintenance kits contain the high-wear components â€” pickup rollers, transfer roller, sometimes the fuser â€” bundled for scheduled replacement at the manufacturer-specified page count. Using maintenance kits proactively prevents unplanned failures.\nCalibration is run after component replacement or when print density or color balance drifts from specification.\nINKJET MAINTENANCE.\nReplace ink cartridges as indicated. Run the built-in print head cleaning cycle when print quality degrades â€” missing lines, streaking, or color shifts. Align print heads after cartridge replacement using the printer's alignment function. Use inkjet-appropriate paper to prevent smearing and feathering. Print regularly â€” extended periods without printing cause ink to dry in the nozzles, requiring extended cleaning cycles.\nTHERMAL PRINTER MAINTENANCE.\nClean the print head with manufacturer-approved cleaning cards or cleaning pens on a regular schedule. Remove adhesive residue buildup in label printers â€” adhesive from label backing accumulates on the platen and guides. Replace platens when worn â€” platen wear causes print quality degradation.\nIMPACT PRINTER MAINTENANCE.\nReplace ribbons when print fades. Replace print head pins when individual pins fail. Clean the platen and paper guides. Adjust tractor-feed alignment for continuous-form paper.\n---",
+      "exam_tips": [
+        "Secured print = pull printing = follow-me printing. All the same concept. Job holds until user authenticates."
+      ]
+    },
+    {
+      "title": "Print Quality Defect Diagnosis",
+      "content": "LASER PRINTER DEFECTS.\nFaded or light output: Low toner is the most common cause. Try rocking the cartridge to redistribute. If fading continues, replace the cartridge. A worn imaging drum also causes fading.\nSmearing or smudging (toner rubs off): The fuser is not bonding toner correctly. The fuser may not be reaching operating temperature or may have worn pressure rollers. Fuser replacement is typically needed.\nVertical lines or streaks on every page: Dirty or scratched drum surface. Clean or replace the drum. A dirty developer roller can also cause streaks.\nRepetitive defects at consistent intervals: A drum defect. The defect repeats each time that location on the drum contacts the paper. Calculate the drum circumference to identify the repeating interval. Replace the drum.\nGhost images (faint duplicate image): The cleaning blade is not fully removing toner from the drum, leaving residual toner to transfer on the next cycle. Replace the drum and cleaning components.\nSingle-color missing in color output: The corresponding toner cartridge is empty or improperly seated. Reseat or replace.\nINKJET PRINTER DEFECTS.\nMissing lines (horizontal white gaps): Clogged print head nozzles. Run the cleaning cycle. Multiple cleaning cycles may be required. If cleaning does not resolve the issue, cartridge replacement may be needed.\nSmearing or bleeding ink: Wrong paper type. Inkjet ink requires absorbent paper. Using glossy or non-inkjet paper causes ink to bead and smear.\nStreaking across print: Low ink or dirty print head. Replace low cartridges, run cleaning cycle.\nColor fringing or misaligned colors: Print head misalignment. Run the print head alignment calibration from the driver or control panel.\n---",
+      "exam_tips": [
+        "Compressed air in a laser printer spreads toner. This is wrong regardless of context."
+      ]
+    },
+    {
+      "title": "Print Queue And Spooler Issues",
+      "content": "A stuck print job in the queue blocks all subsequent jobs. Users see no output and assume the printer has failed.\nStep one: Open the print queue from the printer icon in Windows and attempt to cancel or delete the stuck job. For some stuck jobs, this is sufficient.\nStep two: If the job cannot be cancelled normally, stop the Windows Print Spooler service. Open Services (via services.msc, Task Manager Services tab, or the Control Panel Administrative Tools). Locate Print Spooler, right-click, and select Stop.\nStep three: Navigate to C:\\Windows\\System32\\spool\\PRINTERS and delete all files in that directory. Do not delete the directory itself â€” only the files within it. These files are the cached spooled print jobs.\nStep four: Restart the Print Spooler service from Services.\nThe print queue is now cleared. Caution: this procedure deletes all pending print jobs across all users. Notify users before executing in an environment with multiple queued jobs.\nGARBLED OUTPUT.\nIf a printer produces pages of random characters, symbols, or binary data, the printer has received data it cannot interpret. This is almost always a driver mismatch or a PDL configuration mismatch. Reinstall the printer with the correct driver for the OS and architecture. Verify the PDL setting in the driver matches the printer's configured PDL.\nSCANNER CONFIGURATION.\nMultifunction printers include scanning capabilities. Flatbed scanners handle single items â€” books, photographs, cards. ADF â€” Automatic Document Feeders â€” handle multi-page document scanning. Scan destinations include email via SMTP, network file shares via SMB, cloud storage services, and local USB drives. Scan-to-email requires SMTP server configuration including authentication.\nOCR â€” Optical Character Recognition â€” converts a scanned image into searchable, editable text. The quality of OCR output depends on the scan resolution and the legibility of the original document.\n---",
+      "exam_tips": [
+        "Smearing = fuser. Repeating marks at consistent interval = drum defect. Ghost image = cleaning failure. These three are the highest-frequency exam questions.",
+        "Print Spooler service. C:\\Windows\\System32\\spool\\PRINTERS. Both are tested directly."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "Network printers store print jobs in memory, sometimes on an internal hard drive, and are accessible to anyone on the network. Most organizations treat them as low-priority security assets. They are not.",
+      "concept": "PRINTER SECURITY & ACCESS CONTROL",
+      "summary": "Network printers are frequently overlooked attack surfaces in enterprise security. A networked printer is a networked device with its own processor, memory, often an internal hard drive, and a web management interface â€” usually with default credentials that are never changed."
+    },
+    {
+      "hook": "Using compressed air inside a laser printer does not clean it â€” it spreads fine toner dust into every corner of the device and into the air around you. Toner is not a substance you want to breathe.",
+      "concept": "LASER PRINTER MAINTENANCE",
+      "summary": "Laser printer maintenance involves a specific set of consumables and procedures. NEVER use compressed air inside a laser printer."
+    },
+    {
+      "hook": "Every print defect has a specific physical cause. Faded output, smearing, ghosting, and lines all point to different components. Diagnosing by symptom, not by replacing everything, is how professional technicians work.",
+      "concept": "PRINT QUALITY TROUBLESHOOTING",
+      "summary": "LASER PRINT QUALITY DEFECTS: Faded or light output usually indicates low toner. Try rocking the toner cartridge gently to redistribute toner."
+    },
+    {
+      "hook": "A stuck print job in the queue can block all subsequent jobs from printing â€” and users assume the printer is broken. The fix takes under a minute once you know where to look.",
+      "concept": "PRINT QUEUE & SPOOLER TROUBLESHOOTING",
+      "summary": "Print queue problems are one of the most common printer support issues in Windows environments. When a print job gets stuck in the queue, subsequent jobs cannot print regardless of printer status."
+    },
+    {
+      "hook": "Two distinct configuration layers exist for printers in Windows.",
+      "concept": "Printer Properties And Printing Preferences",
+      "summary": "Two distinct configuration layers exist for printers in Windows. PRINTER PROPERTIES is the device-level configuration â€” access requires administrative rights. From Printer Properties, you manage: - Driver updates and port configuration - Sharing settings â€” whether and how the printer is shared on the network - Permissions â€” which user groups have Print, Manage Documents, or Manage Printers rights - Installation of optional hardware units â€” duplex unit, additional paper trays, finisher - Advanced settings like scheduling and print priority PRINTING PREFERENCES controls the default job settings â€” what applies when a user does not explicitly select options."
+    },
+    {
+      "hook": "Network printers are networked computing devices with their own processors, memory, storage, and web management interfaces.",
+      "concept": "Printer Security",
+      "summary": "Network printers are networked computing devices with their own processors, memory, storage, and web management interfaces. They are frequently undersecured and represent real attack surface in enterprise environments. EXPOSURE RISKS."
+    },
+    {
+      "hook": "LASER PRINTER MAINTENANCE.",
+      "concept": "Maintenance Procedures By Printer Type",
+      "summary": "LASER PRINTER MAINTENANCE. Power off and allow to cool before any maintenance. The fuser assembly operates at high temperatures and remains hot for several minutes after power-down."
+    },
+    {
+      "hook": "LASER PRINTER DEFECTS.",
+      "concept": "Print Quality Defect Diagnosis",
+      "summary": "LASER PRINTER DEFECTS. Faded or light output: Low toner is the most common cause. Try rocking the cartridge to redistribute."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "Which laser printer component transfers the toner image from the drum to the paper?",
+      "options": [
+        "Fuser",
+        "Transfer belt or transfer roller",
+        "Developer",
+        "Corona wire"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A laser printer consistently prints a vertical black line down every page. The MOST likely cause is:",
+      "options": [
+        "Low toner",
+        "Fuser failure",
+        "Paper jam residue",
+        "Scratch or damage on the drum surface"
+      ],
+      "answer": 3,
+      "explanation": "A scratch or gouge on the photosensitive drum holds toner in that spot every rotation, producing a consistent vertical black line. Distinguish from: a contaminated primary corona wire (also causes a black line â€” clean the wire first, cheaper fix), or a defective cleaning blade (causes smearing/strea"
+    },
+    {
+      "q": "What protocol allows Windows to automatically discover and install a network printer?",
+      "options": [
+        "WSD (Web Services for Devices) or Bonjour",
+        "FTP",
+        "Telnet",
+        "SNMP"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of a DHCP reservation for a network printer?",
+      "options": [
+        "Faster printing speed",
+        "Adds print queue management",
+        "Ensures the printer always receives the same IP address for consistent network access",
+        "Provides wireless encryption for print jobs"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A network printer shows \"offline\" in Windows despite being powered on. The FIRST thing to check is:",
+      "options": [
+        "Reinstall Windows",
+        "Update system BIOS",
+        "Replace toner cartridge",
+        "Verify the printer IP address has not changed and the correct port is configured"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What allows printing from any device to a compatible printer over the internet without local drivers?",
+      "options": [
+        "Cloud printing services such as Google Cloud Print or vendor equivalents",
+        "Direct IP printing only",
+        "FTP print server",
+        "Bluetooth printing"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A print job is stuck in the queue and the printer will not print any subsequent jobs. What Windows service should the technician restart to clear the stuck print queue?",
+      "options": [
+        "Windows Update Service",
+        "Print Spooler service",
+        "Remote Desktop Services",
+        "Background Intelligent Transfer Service (BITS)"
+      ],
+      "answer": 1,
+      "explanation": "The Print Spooler service manages print jobs queued to print devices. Stopping the spooler, deleting files in C:\\Windows\\System32\\spool\\PRINTERS, and restarting the service clears a stuck print queue without rebooting the system."
+    },
+    {
+      "q": "Which laser printer consumable is replaced most frequently?",
+      "options": [
+        "Fuser assembly",
+        "Drum unit",
+        "Toner cartridge",
+        "Transfer belt"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A laser printer produces faded output even after installing a new toner cartridge. The MOST likely cause is:",
+      "options": [
+        "Toner not properly distributed in the cartridge or wrong cartridge model installed",
+        "Wrong paper type",
+        "Print driver issue",
+        "Network connection problem"
+      ],
+      "answer": 0,
+      "explanation": "Triage in order: (1) Confirm the protective sealing/shipping tape was fully removed from the new cartridge â€” this is the most common cause of faded output after installation. (2) Shake the cartridge gently side to side to redistribute toner. (3) Verify the cartridge part number matches the printer m"
+    },
+    {
+      "q": "What maintenance tasks should be performed after replacing inkjet ink cartridges?",
+      "options": [
+        "Clean the drum unit",
+        "Replace the fuser assembly",
+        "Calibrate the printer and run a printhead cleaning cycle",
+        "Reset the NVRAM"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A thermal receipt printer produces completely blank receipts. The MOST likely cause is:",
+      "options": [
+        "Empty ink cartridge",
+        "Printhead clogged",
+        "Driver not installed",
+        "Paper loaded backward with the non-coated side facing the printhead"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What protective equipment should be worn when replacing laser printer toner?",
+      "options": [
+        "Latex or nitrile gloves and a dust mask",
+        "Safety glasses only",
+        "Face shield",
+        "No protection is needed"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "How should used toner cartridges be disposed of properly?",
+      "options": [
+        "Regular trash bin",
+        "Through manufacturer recycling programs or designated electronics recycling centers",
+        "Incineration",
+        "Rinse with water and discard"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A laser printer produces pages where the toner smears or wipes off when touched. Which component requires replacement?",
+      "options": [
+        "Toner cartridge",
+        "Transfer belt",
+        "Fuser assembly",
+        "Pickup rollers"
+      ],
+      "answer": 2,
+      "explanation": "The fuser assembly applies heat and pressure to permanently bond toner to paper. If toner smears or rubs off after printing, the fuser is not reaching proper temperature or the pressure rollers are worn, indicating it needs replacement."
+    },
+    {
+      "q": "After an inkjet printer has been unused for several weeks, print quality shows streaks and missing colors. What is the FIRST action a technician should take?",
+      "options": [
+        "Replace all ink cartridges immediately",
+        "Replace the printer",
+        "Disassemble the printer and manually clean with water",
+        "Run the printer's built-in printhead cleaning utility"
+      ],
+      "answer": 3,
+      "explanation": "Inkjet printheads can clog from dried ink during disuse. Most inkjet printers include a maintenance utility (accessible from printer software or control panel) that purges and primes the nozzles. This should be tried before replacing cartridges."
+    },
+    {
+      "q": "A Windows workstation needs to print to a network printer at IP 192.168.1.100 using port 9100 (JetDirect). What type of port is configured in Windows printer settings?",
+      "options": [
+        "LPT1 parallel port",
+        "Standard TCP/IP port configured with the printer's IP address and port 9100",
+        "WSD (Web Services for Devices) auto-discovered port",
+        "Bluetooth virtual port"
+      ],
+      "answer": 1,
+      "explanation": "HP JetDirect printing uses TCP port 9100 (RAW printing). In Windows, this is configured as a Standard TCP/IP Port by specifying the printer's IP address and port number. This is one of the most common methods for connecting to network printers manually."
+    },
+    {
+      "q": "What is included in a laser printer maintenance kit, and when should it be replaced?",
+      "options": [
+        "A new toner cartridge and drum unit, replaced after every 10,000 pages",
+        "High-wear consumables including the fuser assembly, transfer roller, and paper pickup/separation rollers, replaced at the manufacturer-specified page count interval",
+        "A cleaning kit including compressed air and isopropyl alcohol wipes",
+        "Replacement memory modules and hard drive for the printer"
+      ],
+      "answer": 1,
+      "explanation": "Maintenance kits replace the components most likely to fail with age: the fuser assembly (high heat/pressure wear), transfer roller, and pickup/separation rollers (which feed paper). Following the manufacturer's recommended interval prevents failures and maintains print quality."
+    },
+    {
+      "q": "A laser printer is picking up multiple sheets of paper at once, causing paper jams. What component is MOST likely worn?",
+      "options": [
+        "The fuser assembly",
+        "The pickup roller or separation pad — worn rubber loses grip and fails to separate sheets",
+        "The laser assembly",
+        "The toner cartridge"
+      ],
+      "answer": 1,
+      "explanation": "The pickup roller grabs paper from the tray, while the separation pad or roller prevents multiple sheets from feeding simultaneously. When the rubber wears smooth, it loses the friction needed to separate sheets, resulting in multi-feed jams. These are included in laser printer maintenance kits."
+    },
+    {
+      "q": "A company wants all employees at a print device to authenticate before their print jobs release. Which technology enables this?",
+      "options": [
+        "IPP (Internet Printing Protocol)",
+        "Pull printing with badge/PIN authentication at the MFP",
+        "Standard TCP/IP raw port printing",
+        "SNMP printer monitoring"
+      ],
+      "answer": 1,
+      "explanation": "Pull printing (also called follow-me printing or secure release printing) holds jobs in a server queue until the user authenticates at any printer — using badge swipe, PIN, or biometrics. This prevents confidential documents from being left in output trays and reduces wasted print jobs."
+    },
+    {
+      "q": "What printer configuration should be enabled to automatically print on both sides of each sheet of paper without manual intervention?",
+      "options": [
+        "Manual feed mode",
+        "Duplex printing (automatic two-sided printing)",
+        "N-up (multiple pages per sheet)",
+        "Poster mode"
+      ],
+      "answer": 1,
+      "explanation": "Enabling duplex printing (automatic two-sided printing) in the printer driver settings tells the printer to automatically flip and re-feed each sheet. Printers with a built-in duplex unit handle this mechanically; without one, the driver may prompt for manual re-feed."
+    }
+  ]
+}

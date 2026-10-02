@@ -1,0 +1,300 @@
+{
+  "core": 2,
+  "chapter": 15,
+  "title": "Windows OS Troubleshooting",
+  "exam_objectives": [
+    "3.1"
+  ],
+  "coverage": "COVERED",
+  "domain": "troubleshooting",
+  "domain_label": "Troubleshooting",
+  "sections": [
+    {
+      "title": "Blue Screen Of Death",
+      "content": "The BSOD â€” Blue Screen of Death â€” is a stop error. Windows halts completely to prevent further damage when a critical failure occurs in kernel mode or in a device driver.\nReading the stop code: the BSOD screen displays a stop code â€” a text string identifying the failure category. Examples: PAGE_FAULT_IN_NONPAGED_AREA indicates a driver or hardware component attempted to access memory it should not have. IRQL_NOT_LESS_OR_EQUAL indicates a driver is accessing hardware at an inappropriate priority level. DRIVER_IRQL_NOT_LESS_OR_EQUAL narrows it to a specific driver. The stop code is the primary diagnostic clue â€” always record it before the system reboots.\nCommon BSOD causes and how to identify them. Driver issues: most BSODs in stable hardware are caused by a driver â€” either a newly installed driver, an outdated driver, or a corrupt driver. If the BSOD started after a driver or hardware installation, that is the first suspect. Hardware failure: RAM, hard drives, and overheating hardware cause BSODs. A BSOD with MEMORY_MANAGEMENT or BAD_POOL_HEADER suggests RAM problems. Corrupt system files: damaged Windows files can trigger BSODs â€” resolved with SFC and DISM.\nTroubleshooting sequence. Step one: note the stop code. If the system rebooted before you could read it, Event Viewer â€” eventvwr.msc â€” records crash events in Windows Logs > System as Critical level events. The event detail includes the bug check code and often the failing driver filename.\nStep two: boot to Safe Mode. Press F8 during startup, or from msconfig â€” boot tab â€” check Safe Boot. Safe Mode loads only the core Windows drivers and services. If the system is stable in Safe Mode but crashes normally, a third-party driver or startup application is responsible.\nStep three: run sfc /scannow from an elevated command prompt to check for and repair corrupt system files.\nStep four: update or roll back the suspect driver. Device Manager > right-click the device > Properties > Driver tab > Roll Back Driver reverts to the previous driver version. Update Driver installs a newer version.\n---",
+      "exam_tips": [
+        "The stop code identifies the failure type. Event Viewer > Windows Logs > System records crash events including the bug check code and failing driver. If BSOD started after a driver update, roll back the driver. Safe Mode loads minimum drivers â€” if stable there, the problem is a third-party driver or service."
+      ]
+    },
+    {
+      "title": "Boot Failures",
+      "content": "Boot failures prevent Windows from starting. They range from misconfigurations â€” wrong boot order in BIOS â€” to physical drive failures to corrupt boot configuration data.\nBOOTMGR errors: \"BOOTMGR is missing\" means Windows cannot find the boot manager file â€” the initial file loaded by the BIOS to begin the Windows boot process. Causes: corrupt or missing BOOTMGR file, MBR corruption, incorrect boot order in BIOS, or a failed drive.\nNo OS found: the system BIOS cannot locate a bootable device. Causes: wrong boot order â€” the system is attempting to boot from a device with no OS â€” physical drive connection failure, or a failed drive.\nBoot Configuration Data errors: the BCD is the database that tells Windows bootloader where the Windows installation is located and what boot options are configured. BCD corruption causes boot failures similar to BOOTMGR errors.\nRepair tools â€” accessed from WinRE â€” Windows Recovery Environment. Boot from Windows installation media. Select \"Repair your computer.\" Open Command Prompt.\nbootrec /fixmbr: writes a new Master Boot Record. The MBR is the code at the very beginning of the disk that the BIOS executes to begin the boot process. Use when the MBR is corrupt â€” caused by a boot sector virus, a failed disk operation, or improper disk modification.\nbootrec /fixboot: writes a new boot sector to the active system partition. The boot sector is the code at the beginning of the Windows partition that hands control to the Windows bootloader. Use after /fixmbr when the \"BOOTMGR is missing\" error persists.\nbootrec /rebuildbcd: scans all connected disks for Windows installations and rebuilds the Boot Configuration Data store. If Windows exists but is not in the BCD, this command finds it and adds it. Use when Windows installations are present but the boot menu does not show them, or when BCD data is corrupt.\nRun the three commands in sequence â€” /fixmbr, /fixboot, /rebuildbcd â€” then reboot. Also verify boot order in BIOS/UEFI â€” the drive containing Windows must be listed first.\nStartup Repair: an automated tool in WinRE that attempts to diagnose and fix boot problems automatically. Try Startup Repair first before manual bootrec commands â€” it covers many common scenarios automatically.\n---",
+      "exam_tips": [
+        "All bootrec commands run from WinRE Command Prompt â€” boot from Windows installation media first. Run all three in sequence for a non-booting system. Also verify boot order in BIOS/UEFI â€” system drive must be first."
+      ]
+    },
+    {
+      "title": "Performance Issues",
+      "content": "Degraded performance â€” slow system response, high resource utilization â€” is one of the most common technician calls.\nDiagnosing performance: Task Manager is the primary tool. Open with Ctrl+Shift+Esc or by right-clicking the taskbar. The Performance tab shows real-time CPU, memory, disk, and network utilization. The Processes tab shows per-process resource consumption â€” sort by CPU, Memory, or Disk to identify the top consumers. The Startup tab shows applications configured to launch at Windows startup.\nCommon causes and resolutions. Startup bloat: too many applications launching at startup slow boot time and consume background resources. Disable unnecessary startup programs: Task Manager > Startup tab > right-click > Disable. Malware: certain malware types generate high CPU and disk activity â€” particularly cryptominers. Scan with updated anti-malware tools. Disk fragmentation: applies to HDDs only â€” never defragment SSDs. Fragmentation causes HDDs to perform additional seek operations. Defragment through Optimize Drives â€” accessible from the disk's Properties > Tools tab. Low storage space: Windows requires free space for virtual memory paging, temporary files, and system operations. Low disk space degrades performance significantly. Use Disk Cleanup to free space. Hardware limitations: if the system genuinely lacks sufficient RAM or processing power for its workload, a hardware upgrade is the resolution.\nLow memory warnings: when physical RAM is insufficient, Windows uses virtual memory â€” the pagefile on disk â€” to compensate. Disk-based virtual memory is significantly slower than RAM. Symptoms: low memory warning dialogs, high disk activity visible in Task Manager's Performance > Disk view. Resolution options: close unused applications and browser tabs, increase the pagefile size through System Properties > Advanced > Performance Settings > Advanced > Virtual Memory, or add more physical RAM.\nUSB controller resource warnings: occur when too many USB devices are drawing power from the same controller. Disconnect unnecessary USB devices, update USB controller drivers through Device Manager, or use a powered USB hub that provides its own power to connected devices rather than drawing from the system.\n---",
+      "exam_tips": [
+        "SFC runs first â€” repairs most file corruption from local cache. DISM runs when SFC cannot fix all errors â€” it repairs the component store using Windows Update as source. After DISM, always run SFC again. Both require elevated Command Prompt."
+      ]
+    },
+    {
+      "title": "System Instability And File Repair",
+      "content": "System instability â€” random crashes, freezes, unexpected errors â€” requires a systematic repair approach.\nsfc /scannow: System File Checker. Run from an elevated command prompt. Scans all protected Windows system files and replaces corrupt or missing files with correct versions from a local cache. This is the first tool to use for suspected system file corruption. Results are logged to C:\\Windows\\Logs\\CBS\\CBS.log.\nDISM â€” Deployment Image Servicing and Management: repairs the Windows component store â€” the repository of system files that SFC draws from. If the component store itself is corrupted, SFC cannot get clean replacement files. DISM uses Windows Update as its source for clean files. Command: DISM /Online /Cleanup-Image /RestoreHealth. Requires internet access. After DISM completes, run sfc /scannow again with the now-repaired component store.\nCorrect sequence: sfc /scannow first. If it reports that it found corrupt files it could not fix, run DISM, then run sfc /scannow again.\nApplication crashes: check for application updates â€” outdated applications may have compatibility bugs fixed in newer versions. Check Event Viewer > Windows Logs > Application for error events at the time of the crash â€” they often identify the failing component by name. Try compatibility mode for older applications: right-click the application > Properties > Compatibility tab > run in compatibility mode for an older Windows version. Uninstall and reinstall as a last resort.\nServices not starting: access Services through services.msc. Check the startup type â€” Automatic, Manual, or Disabled. Check the service's dependencies â€” if a required dependent service is not running, the target service cannot start. Attempt a manual restart. Review Event Viewer > Windows Logs > System for service failure events.\nSlow profile load: slow user profile loading at login is typically caused by a corrupt profile, excessively large profile data, or roaming profile sync issues in domain environments. Create a new user profile and migrate data from the old profile. Clear temporary profile data in %APPDATA%\\Temp. In domain environments, check network connectivity and roaming profile server accessibility.\nTime drift: the system clock gradually becomes inaccurate. Causes: failing CMOS battery â€” the battery on the motherboard that maintains BIOS settings and the real-time clock. Replace the CMOS battery if the time is consistently wrong after reboot. Also check NTP â€” Network Time Protocol â€” configuration. Force a resync: w32tm /resync from the command line. Configure automatic time synchronization in Settings > Date and Time.\n---",
+      "exam_tips": [
+        "Defragmenting SSDs does NOT help and causes unnecessary wear â€” only defragment HDDs. Startup bloat = Task Manager > Startup tab > Disable. High CPU with no visible process = check for cryptominer malware. Time drift = check CMOS battery."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "A BSOD is not random. It is Windows telling you exactly what failed â€” if you know how to read it. The error code and the stop message are the diagnosis.",
+      "concept": "BSOD TROUBLESHOOTING â€” READ THE STOP CODE, FIND THE CAUSE",
+      "summary": "The Blue Screen of Death â€” BSOD â€” is a stop error. Windows halts to prevent further damage when a critical system failure occurs."
+    },
+    {
+      "hook": "BOOTMGR is missing.\" \"No operating system found.\" These errors mean Windows cannot start. Three commands in the Windows Recovery Environment fix the most common boot failures â€” and the exam tests which command does what.",
+      "concept": "BOOTREC COMMANDS â€” FIXING WINDOWS BOOT FAILURES",
+      "summary": "Windows boot failures require the Windows Recovery Environment â€” WinRE. Boot from the Windows installation media and open the Command Prompt from the Repair options."
+    },
+    {
+      "hook": "Windows system files get corrupted. Applications crash. The system is unstable. Two commands fix this â€” and you need to know which to run first and why.",
+      "concept": "SFC AND DISM â€” REPAIRING CORRUPT WINDOWS FILES",
+      "summary": "Two command-line tools repair Windows system file corruption. SFC â€” System File Checker."
+    },
+    {
+      "hook": "The BSOD â€” Blue Screen of Death â€” is a stop error.",
+      "concept": "Blue Screen Of Death",
+      "summary": "The BSOD â€” Blue Screen of Death â€” is a stop error. Windows halts completely to prevent further damage when a critical failure occurs in kernel mode or in a device driver. Reading the stop code: the BSOD screen displays a stop code â€” a text string identifying the failure category."
+    },
+    {
+      "hook": "Boot failures prevent Windows from starting.",
+      "concept": "Boot Failures",
+      "summary": "Boot failures prevent Windows from starting. They range from misconfigurations â€” wrong boot order in BIOS â€” to physical drive failures to corrupt boot configuration data. BOOTMGR errors: \"BOOTMGR is missing\" means Windows cannot find the boot manager file â€” the initial file loaded by the BIOS to begin the Windows boot process."
+    },
+    {
+      "hook": "Degraded performance â€” slow system response, high resource utilization â€” is one of the most common technician calls.",
+      "concept": "Performance Issues",
+      "summary": "Degraded performance â€” slow system response, high resource utilization â€” is one of the most common technician calls. Diagnosing performance: Task Manager is the primary tool. Open with Ctrl+Shift+Esc or by right-clicking the taskbar."
+    },
+    {
+      "hook": "System instability â€” random crashes, freezes, unexpected errors â€” requires a systematic repair approach.",
+      "concept": "System Instability And File Repair",
+      "summary": "System instability â€” random crashes, freezes, unexpected errors â€” requires a systematic repair approach. sfc /scannow: System File Checker. Run from an elevated command prompt."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "A Windows PC shows a blue screen with a stop code and reboots immediately. What is the FIRST step?",
+      "options": [
+        "Reinstall Windows",
+        "Note the stop code and research it â€” check for recently installed drivers or hardware changes",
+        "Replace the RAM",
+        "Replace the hard drive"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A user reports their PC is extremely slow. After checking Task Manager, CPU usage is at 100% from an unknown process. What should the technician do?",
+      "options": [
+        "Add more RAM",
+        "Reinstall Windows",
+        "Identify the process, check if it is malware or a runaway service, and terminate or address it",
+        "Increase the page file size"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A Windows PC gets stuck in a boot loop after a failed update. What should be tried FIRST?",
+      "options": [
+        "Reinstall Windows immediately",
+        "Reflash the BIOS",
+        "Replace the hard drive",
+        "Boot into Windows Recovery Environment (WinRE) and uninstall the update or use Startup Repair"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What Windows recovery option resets Windows to factory defaults while keeping personal files?",
+      "options": [
+        "Reset this PC â€” Keep my files",
+        "Startup Repair",
+        "Safe Mode",
+        "System Restore"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A user cannot log in because they forgot their local password. What is a recovery option for a Windows 10/11 local account?",
+      "options": [
+        "Use Microsoft account recovery",
+        "Use another administrator account on the machine to reset the password",
+        "Reinstall Windows â€” no other option",
+        "Contact Microsoft support"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A Windows PC frequently displays \"Low disk space\" warnings. What is the BEST solution?",
+      "options": [
+        "Add more RAM",
+        "Increase page file size",
+        "Run Disk Cleanup to remove temp files, or expand/replace the storage drive",
+        "Defragment the drive"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What Windows command rebuilds the Boot Configuration Data (BCD) store?",
+      "options": [
+        "chkdsk /r",
+        "diskpart clean",
+        "sfc /scannow",
+        "bootrec /rebuildbcd"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A user installs a new video driver and the screen goes black on next boot. How can they recover?",
+      "options": [
+        "Boot into Safe Mode and uninstall the problematic driver, or use System Restore",
+        "Only option is reinstalling Windows",
+        "Replace the monitor",
+        "Replace the GPU"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A technician runs sfc /scannow on a Windows system and receives the message that it found corrupt files it could not fix. What is the correct next step?",
+      "options": [
+        "Run chkdsk /r to repair the disk",
+        "Run DISM /Online /Cleanup-Image /RestoreHealth to repair the component store, then run sfc /scannow again",
+        "Reinstall Windows immediately",
+        "Run bootrec /rebuildbcd and restart"
+      ],
+      "answer": 1,
+      "explanation": "When SFC cannot repair files, it means the component store it draws from is also corrupt. DISM repairs the component store by downloading clean files from Windows Update. After DISM completes, running SFC again allows it to successfully replace the previously unfixable files."
+    },
+    {
+      "q": "A technician needs to repair a corrupt Master Boot Record on a non-booting Windows system. Which command and environment are required?",
+      "options": [
+        "sfc /scannow, run from an elevated command prompt in Windows",
+        "diskpart clean, run from Windows Task Manager",
+        "bootrec /fixmbr, run from the WinRE Command Prompt after booting from installation media",
+        "chkdsk /f, run from Safe Mode"
+      ],
+      "answer": 2,
+      "explanation": "bootrec /fixmbr writes a new Master Boot Record to fix MBR corruption. It must be run from the Windows Recovery Environment Command Prompt, accessed by booting from Windows installation media and choosing Repair your computer."
+    },
+    {
+      "q": "A Windows PC boots normally but becomes unstable and crashes several hours into use. The technician finds the system is completely stable when booted into Safe Mode. What does this indicate?",
+      "options": [
+        "The hard drive is failing and needs replacement",
+        "The problem is caused by a third-party driver or startup application, not the core Windows files",
+        "Windows system files are corrupt and need repair with SFC",
+        "The CPU is overheating and throttling under load"
+      ],
+      "answer": 1,
+      "explanation": "Safe Mode loads only the minimum Windows drivers and services. Stability in Safe Mode but instability in normal mode confirms that a third-party driver, startup service, or application loaded in normal mode is responsible for the crashes."
+    },
+    {
+      "q": "A user reports that their system clock is consistently wrong after every reboot, even after manually correcting the time. What is the most likely cause?",
+      "options": [
+        "Windows Update is resetting the time zone setting",
+        "The NTP server is offline and cannot sync time",
+        "The CMOS battery on the motherboard is failing and can no longer maintain the real-time clock",
+        "The system drive has bad sectors in the boot sector"
+      ],
+      "answer": 2,
+      "explanation": "The CMOS battery powers the real-time clock chip on the motherboard when the system is off. A failing CMOS battery causes the clock to reset to a default value on every reboot. Replacing the CMOS battery resolves the issue."
+    },
+    {
+      "q": "A technician needs to disable programs that are slowing down Windows startup. Which built-in tool and tab provide access to startup program management?",
+      "options": [
+        "Services.msc, General tab",
+        "Task Manager, Startup tab",
+        "msconfig, Services tab",
+        "Device Manager, View menu"
+      ],
+      "answer": 1,
+      "explanation": "Task Manager's Startup tab lists all applications configured to launch at Windows startup and shows their startup impact. Right-clicking an entry and selecting Disable prevents it from launching at startup without uninstalling the application."
+    },
+    {
+      "q": "A technician is troubleshooting a BSOD but the system rebooted before the stop code could be recorded. Where can the bug check code and failing driver information be found after the fact?",
+      "options": [
+        "Task Manager, Performance tab",
+        "Device Manager, under the suspected driver",
+        "Event Viewer, Windows Logs, System, filtered for Critical level events",
+        "msconfig, Boot tab, Advanced options"
+      ],
+      "answer": 2,
+      "explanation": "Windows logs BSOD events as Critical level entries in Event Viewer under Windows Logs > System. The event detail includes the bug check code and often identifies the failing driver by filename, allowing diagnosis even after an automatic reboot."
+    },
+    {
+      "q": "A Windows system experiences intermittent crashes with MEMORY_MANAGEMENT and BAD_POOL_HEADER BSOD stop codes. Which hardware component do these stop codes most strongly suggest is failing?",
+      "options": [
+        "The graphics card",
+        "The hard drive",
+        "The RAM",
+        "The CPU"
+      ],
+      "answer": 2,
+      "explanation": "MEMORY_MANAGEMENT and BAD_POOL_HEADER are BSOD stop codes associated with RAM problems. These errors indicate that Windows encountered invalid memory operations, which are characteristic symptoms of faulty or improperly seated RAM modules."
+    },
+    {
+      "q": "A technician runs sfc /scannow and the tool reports it cannot repair corrupted files because the component store itself is damaged. Which command can repair the component store?",
+      "options": [
+        "chkdsk /r — scans and repairs file system errors including component store corruption",
+        "DISM /Online /Cleanup-Image /RestoreHealth — repairs the Windows component store using Windows Update or a mounted Windows image as the source",
+        "bootrec /rebuildbcd — rebuilds the boot configuration which clears component store corruption",
+        "msconfig /repair — restores Windows system files from the recovery partition"
+      ],
+      "answer": 1,
+      "explanation": "DISM (Deployment Image Servicing and Management) with /RestoreHealth connects to Windows Update to replace corrupted component store files that sfc cannot repair on its own. After DISM completes, running sfc /scannow again usually succeeds. This two-step process is the standard CompTIA A+ repair workflow."
+    },
+    {
+      "q": "A Windows system boots to 'Inaccessible Boot Device' BSOD. What is the MOST likely cause and first diagnostic step?",
+      "options": [
+        "The monitor cable is loose — the error occurs because the display cannot load properly",
+        "The OS cannot access its boot drive — check if the drive appears in BIOS/UEFI, verify SATA/NVMe connections, and use WinRE to attempt Startup Repair or load missing storage drivers",
+        "A Windows Update was not fully installed — delete pending updates using the recovery console",
+        "The hard drive letter changed — use diskpart in recovery to reassign the correct drive letter"
+      ],
+      "answer": 1,
+      "explanation": "'Inaccessible Boot Device' means Windows cannot read from its installation partition. Common causes: drive not detected in BIOS (loose cable, failed drive), missing NVMe/SATA driver (after hardware change), file system corruption, or BIOS SATA mode change (AHCI to IDE). Boot into WinRE to run Startup Repair or manually load storage drivers."
+    },
+    {
+      "q": "Windows Event Viewer shows repeated Disk errors (Event ID 7 and 11) in the System log preceding system crashes. What action should be taken?",
+      "options": [
+        "Clear the event log — repeated identical events cause Windows to slow down and crash",
+        "The drive is generating I/O errors indicating hardware failure — run chkdsk /r, check S.M.A.R.T. data, back up all data immediately, and plan for drive replacement",
+        "Disable disk write caching to prevent the error from recurring",
+        "Reinstall the storage controller driver — Event ID 7 indicates a driver conflict"
+      ],
+      "answer": 1,
+      "explanation": "Event ID 7 ('Device has a bad block') and Event ID 11 ('Driver detected a controller error') are disk-level I/O errors indicating the drive is failing or has developed bad sectors. These must be taken seriously — back up data immediately, check S.M.A.R.T. health statistics, run chkdsk /r, and replace the drive before total failure."
+    },
+    {
+      "q": "A Windows 10 PC is stuck in a BSOD reboot loop. What is the RECOMMENDED way to break out of the loop and access repair options?",
+      "options": [
+        "Hard power off the PC three times in a row to trigger automatic repair mode, or boot from Windows installation media to access WinRE",
+        "Press F1 during BSOD — Windows will pause the crash and display advanced repair options",
+        "Unplug all USB devices and RAM — the PC will boot to a safe minimal mode automatically",
+        "Wait 30 minutes — Windows will automatically detect the loop and revert to the previous restore point"
+      ],
+      "answer": 0,
+      "explanation": "Interrupting the Windows boot process three times (hard power off at the Windows logo) triggers Automatic Repair mode, which provides access to Advanced options including Startup Settings (safe mode), System Restore, Startup Repair, and Command Prompt. Alternatively, booting from Windows installation media gives direct access to WinRE."
+    },
+    {
+      "q": "A user logs into Windows and finds their profile has been replaced with a temporary profile. Files from their previous session are missing. What is the FIRST step?",
+      "options": [
+        "Delete the temporary profile and create a new user account to replace the corrupted one",
+        "Tell the user to log off immediately without saving anything to the temporary profile, then investigate the corrupted profile in regedit under HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList",
+        "Run sfc /scannow — system file corruption caused the profile issue and this will restore it",
+        "Restore the user's files from backup — profile corruption always results in permanent data loss"
+      ],
+      "answer": 1,
+      "explanation": "Logging off preserves any existing files in the original profile directory (which still exists on disk). The temporary profile is caused by a corrupt ProfileList registry entry. The technician can edit the registry to point back to the correct profile folder and resolve the .bak extension issue, restoring access to the original profile."
+    }
+  ]
+}

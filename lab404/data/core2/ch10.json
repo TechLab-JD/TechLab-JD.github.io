@@ -1,0 +1,286 @@
+{
+  "core": 2,
+  "chapter": 10,
+  "title": "Malware Detection & Removal",
+  "exam_objectives": [
+    "2.4",
+    "2.6"
+  ],
+  "coverage": "COVERED",
+  "domain": "security",
+  "domain_label": "Security",
+  "sections": [
+    {
+      "title": "Malware Types",
+      "content": "Understanding malware types for the exam requires knowing the defining characteristic of each \u00e2\u20ac\u201d not just the name.\nVirus: self-replicating malicious code that requires a host file to spread. A virus attaches to a legitimate executable or document. When the infected file is opened or executed, the virus runs and copies itself to other files. The key characteristic is self-replication and the requirement for a host. A boot sector virus specifically targets the Master Boot Record of a drive \u00e2\u20ac\u201d it loads before the operating system during startup, making it particularly difficult to detect with tools running inside Windows.\nTrojan \u00e2\u20ac\u201d short for Trojan horse: malicious software disguised as legitimate, useful software. The user installs it willingly \u00e2\u20ac\u201d a game, a free utility, a codec, a cracked application. Once installed, the Trojan executes its payload \u00e2\u20ac\u201d which may be a backdoor, a keylogger, a downloader, or any other malicious function. The critical distinction from a virus: Trojans do not self-replicate. They rely entirely on social engineering \u00e2\u20ac\u201d getting the user to install them.\nRansomware: encrypts the victim's files using strong cryptography and displays a demand for payment \u00e2\u20ac\u201d typically cryptocurrency \u00e2\u20ac\u201d in exchange for the decryption key. Files are inaccessible without the key. If the victim pays, there is no guarantee the attacker provides a working key. If the victim does not pay, the data may be permanently lost unless clean backups exist. The 3-2-1 backup rule is the primary defense against ransomware: three copies of data, on two different media types, with one copy stored offsite or offline.\nRootkit: designed to conceal itself and other malware from the operating system, security tools, and the user. Rootkits operate at the kernel level \u00e2\u20ac\u201d below the OS layer \u00e2\u20ac\u201d which means antivirus software running inside Windows cannot reliably see or remove them. The OS itself is compromised and cannot be trusted to report accurate information. Detection requires booting from external media \u00e2\u20ac\u201d a WinPE environment or a bootable antivirus tool \u00e2\u20ac\u201d so the scanner runs outside the compromised OS. Removal often requires a full OS reinstall because the integrity of the system cannot be verified.\nSpyware: software that monitors user activity and transmits collected data to a remote attacker without the user's knowledge or consent. Spyware may capture browsing habits, installed software, location, or personal information.\nKeylogger: a specific type of spyware that records every keystroke. The captured data includes passwords, credit card numbers, private messages, and any other information typed on the device. Keyloggers can be implemented in software or \u00e2\u20ac\u201d in specialized attacks \u00e2\u20ac\u201d as physical hardware devices inserted between the keyboard and computer.\nAdware: software that displays unwanted advertisements \u00e2\u20ac\u201d typically in browsers \u00e2\u20ac\u201d often bundled with free software installations. Adware itself is usually not destructive but degrades system performance and user experience. It may also redirect browser searches and track browsing behavior for advertising targeting. Often categorized as a Potentially Unwanted Program \u00e2\u20ac\u201d PUP.\nPUP \u00e2\u20ac\u201d Potentially Unwanted Program: software installed without clear disclosure or alongside other software without proper consent. Not necessarily malicious, but unwanted and potentially intrusive. Toolbars, browser extensions, and \"optimizer\" applications are common examples.\nCryptominer: uses the victim's computing resources \u00e2\u20ac\u201d CPU and GPU \u00e2\u20ac\u201d to mine cryptocurrency for the attacker. Symptoms are high CPU and GPU utilization, elevated system temperature, degraded performance, and increased power consumption. Often delivered through browser scripts or bundled with software downloads.\nStalkerware: software installed on a device \u00e2\u20ac\u201d typically a smartphone \u00e2\u20ac\u201d to covertly monitor the owner's location, communications, and activity. Often installed by an intimate partner or family member who has physical access to the device. Raises legal and ethical concerns beyond the technical security domain.\nFileless malware: does not write a traditional executable file to disk. Instead, it lives in system memory \u00e2\u20ac\u201d RAM \u00e2\u20ac\u201d and uses legitimate, built-in system tools to execute its payload. PowerShell scripts, Windows Management Instrumentation \u00e2\u20ac\u201d WMI \u00e2\u20ac\u201d and other administrative tools are commonly abused. Because no malicious file exists on disk, traditional file-based antivirus scanners cannot detect it. Detection requires behavioral analysis tools \u00e2\u20ac\u201d EDR platforms that monitor process behavior and memory.\n---",
+      "exam_tips": [
+        "Only viruses self-replicate. Trojans require user installation. Rootkits require offline scanning. Fileless malware requires behavioral detection \u00e2\u20ac\u201d no file exists on disk."
+      ]
+    },
+    {
+      "title": "Detection Tools",
+      "content": "The detection tool landscape has evolved significantly beyond simple antivirus. The A+ exam tests the distinctions between these categories.\nTraditional antivirus \u00e2\u20ac\u201d AV: compares files against a database of known malware signatures \u00e2\u20ac\u201d hashes, byte patterns, and behavioral rules associated with known threats. Highly effective against known malware. Fast to scan. Very low false positive rate for known threats. Blind to zero-day threats and fileless malware because no signature exists to match. Requires continuous definition updates to remain effective against new threats.\nEndpoint Detection and Response \u00e2\u20ac\u201d EDR: behavioral monitoring deployed on individual endpoints \u00e2\u20ac\u201d workstations, laptops, servers. Rather than matching signatures, EDR monitors running processes, network connections, file system changes, and system API calls for anomalous behavior. Can detect fileless malware and zero-day exploits because it watches what software does rather than what it looks like. Generates telemetry for investigation and provides response capabilities \u00e2\u20ac\u201d isolating a system, terminating a process, rolling back changes.\nManaged Detection and Response \u00e2\u20ac\u201d MDR: a service where a third-party security operations center monitors endpoint telemetry and alerts on behalf of the organization. Combines EDR technology with 24/7 human analyst oversight. Organizations that lack internal security staff or cannot maintain round-the-clock monitoring use MDR to extend their detection and response capabilities. The managed nature means external experts are handling alert triage and initial response.\nExtended Detection and Response \u00e2\u20ac\u201d XDR: aggregates and correlates telemetry across multiple security layers simultaneously \u00e2\u20ac\u201d endpoints, network traffic, email, cloud applications, and identity providers. Where EDR sees one endpoint's activity, XDR sees the full attack chain across the entire environment. A file downloaded in an email, executed on an endpoint, and making a network connection to a C2 server is visible as a connected sequence in XDR rather than isolated alerts in separate tools.\nEmail security gateway: inspects all inbound and outbound email messages. Filters spam and phishing attempts. Analyzes attachments and URLs for malicious content. Uses sandboxing \u00e2\u20ac\u201d executing suspicious files in an isolated virtual environment and observing behavior before delivering the message to the recipient's mailbox. Can block or quarantine messages that contain threats.\nSoftware firewall: the host-based firewall running on the endpoint. Windows Defender Firewall is the built-in example. Controls which applications can send and receive network traffic. Can block malware command-and-control communications and prevent unauthorized inbound connections. A component of defense-in-depth rather than a standalone detection tool.\n---",
+      "exam_tips": [
+        "3-2-1 backup rule is the defense against ransomware. If all copies are network-accessible, ransomware can encrypt them all. The offsite/offline copy must be disconnected from the infected environment."
+      ]
+    },
+    {
+      "title": "Malware Removal Procedure",
+      "content": "The CompTIA A+ exam has a specific 10-step malware removal procedure. The steps must be performed in order \u00e2\u20ac\u201d and the exam tests that order. Memorize this sequence.\nStep 1 \u00e2\u20ac\u201d Investigate and verify malware symptoms. Before taking action, confirm the machine is actually infected. Common symptoms: slow system performance, unexpected pop-ups and advertisements, browser redirects, programs crashing unexpectedly, unusual network activity visible in Task Manager or netstat, missing or modified files, disabled antivirus software. Document what you observe. Rule out hardware failures and legitimate software issues.\nStep 2 \u00e2\u20ac\u201d Quarantine the infected system. Isolate the machine from the network immediately. Unplug the Ethernet cable. Disable the wireless adapter. This prevents the malware from spreading to other machines on the network, communicating with command and control servers, downloading additional payloads, or exfiltrating data. Do not power off the system \u00e2\u20ac\u201d volatile evidence in RAM may be needed for investigation, and some malware is designed to trigger destructive actions on shutdown.\nStep 3 \u00e2\u20ac\u201d Disable System Restore in Windows. System Restore saves snapshots \u00e2\u20ac\u201d restore points \u00e2\u20ac\u201d of the system state at regular intervals. If malware is present when a restore point is created, that restore point contains the malware. If you attempt to restore the system after cleaning, the malware returns from the restore point. Disabling System Restore deletes all existing restore points. This step must happen before scanning and remediation. System Restore will be re-enabled in Step 9.\nStep 4 \u00e2\u20ac\u201d Remediate the infected system. Begin the active removal process. If internet access is available on a clean system, download updated definitions on that machine and transfer them via USB. Run an initial scan with whatever tools are available.\nStep 5 \u00e2\u20ac\u201d Update anti-malware software. Ensure the scanner has the most current virus definitions before running the full scan. New malware appears daily. An outdated scanner may miss the specific variant responsible for the infection.\nStep 6 \u00e2\u20ac\u201d Scan and remove. Run a thorough scan. Use Safe Mode \u00e2\u20ac\u201d boot Windows with minimal drivers and services \u00e2\u20ac\u201d to prevent malware from loading at startup and interfering with the scan. Safe Mode options are accessed via F8 during boot or through msconfig: F4 for Safe Mode minimal, F5 for Safe Mode with Networking, F6 for Safe Mode with Command Prompt. If Safe Mode is insufficient \u00e2\u20ac\u201d particularly for rootkits \u00e2\u20ac\u201d boot from a WinPE environment on external media to scan the drive from outside the potentially compromised OS.\nStep 7 \u00e2\u20ac\u201d Reimage or reinstall if removal fails. If the malware cannot be fully removed through scanning, or if system files are too corrupted, or if a rootkit is too deeply embedded, perform a complete OS reinstall. Back up user data first \u00e2\u20ac\u201d scan those backups separately before restoring them. Reinstall all applications from trusted sources. This is the nuclear option \u00e2\u20ac\u201d guaranteed clean, but the most time-consuming.\nStep 8 \u00e2\u20ac\u201d Schedule scans and run updates. Once the system is confirmed clean, apply all available Windows updates and application patches. Enable automatic definition updates. Configure scheduled scans. Patch the vulnerability that allowed the initial infection.\nStep 9 \u00e2\u20ac\u201d Enable System Restore and create a new restore point. Now that the system is confirmed clean, re-enable System Restore. Immediately create a new restore point so a known-clean baseline exists for future recovery.\nStep 10 \u00e2\u20ac\u201d Educate the end user. Explain how the infection occurred \u00e2\u20ac\u201d what the user clicked, downloaded, or installed that led to the infection. Teach safe browsing practices. Reinforce awareness of phishing emails and suspicious downloads. Users are the first line of defense and the most common point of failure.\n---",
+      "exam_tips": [
+        "AV = known threats only (signatures). EDR = behavioral, catches zero-days and fileless. XDR = combines everything across multiple security layers. MDR = XDR/EDR technology with outsourced human analysts.",
+        "The exam tests both the steps and the ORDER. Disable System Restore is Step 3 \u00e2\u20ac\u201d before scanning. Re-enable System Restore is Step 9 \u00e2\u20ac\u201d after cleaning. Educate user is always Step 10.",
+        "WinPE boots from external media \u00e2\u20ac\u201d the hard drive OS is offline. Rootkit detection requires WinPE or equivalent because the compromised OS cannot be trusted to accurately report system state."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "Not all malware works the same way. The A+ exam tests the specific characteristics of each type \u00e2\u20ac\u201d and the wrong answer usually sounds right if you blur the definitions.",
+      "concept": "TROJAN, ROOTKIT, RANSOMWARE \u00e2\u20ac\u201d MALWARE TYPES YOU MUST KNOW",
+      "summary": "Virus: self-replicating malicious code that requires a host file to attach to and spread. A virus cannot spread by itself \u00e2\u20ac\u201d it needs to be executed, typically when the user opens an infected file."
+    },
+    {
+      "hook": "Traditional antivirus is not dead \u00e2\u20ac\u201d but it is no longer sufficient on its own. The A+ exam covers the full spectrum of detection tools from signature-based antivirus to XDR platforms.",
+      "concept": "AV vs EDR vs XDR \u00e2\u20ac\u201d DETECTION TOOLS COMPARED",
+      "summary": "Traditional antivirus \u00e2\u20ac\u201d AV: signature-based detection. The tool compares files against a database of known malware signatures."
+    },
+    {
+      "hook": "The CompTIA A+ exam has a specific 10-step malware removal procedure \u00e2\u20ac\u201d and it tests the steps in order. Get the sequence wrong and you get the question wrong.",
+      "concept": "10-STEP MALWARE REMOVAL \u00e2\u20ac\u201d IN ORDER",
+      "summary": "The 10-step malware removal process, in order: Step 1: Investigate and verify malware symptoms. Identify signs of infection \u00e2\u20ac\u201d slow performance, browser redirects, disabled antivirus, unusual network activity."
+    },
+    {
+      "hook": "Understanding malware types for the exam requires knowing the defining characteristic of each \u00e2\u20ac\u201d not just the name.",
+      "concept": "Malware Types",
+      "summary": "Understanding malware types for the exam requires knowing the defining characteristic of each \u00e2\u20ac\u201d not just the name. Virus: self-replicating malicious code that requires a host file to spread. A virus attaches to a legitimate executable or document."
+    },
+    {
+      "hook": "The CompTIA A+ exam has a specific 10-step malware removal procedure.",
+      "concept": "Malware Removal Procedure",
+      "summary": "The CompTIA A+ exam has a specific 10-step malware removal procedure. The steps must be performed in order \u00e2\u20ac\u201d and the exam tests that order. Memorize this sequence."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "What type of malware disguises itself as legitimate software to trick users into installing it?",
+      "options": [
+        "Worm",
+        "Ransomware",
+        "Rootkit",
+        "Trojan horse"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "Which type of malware encrypts user files and demands payment for the decryption key?",
+      "options": [
+        "Ransomware",
+        "Adware",
+        "Spyware",
+        "Rootkit"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What type of malware hides itself deeply in the OS, often at the kernel level, to avoid detection?",
+      "options": [
+        "Trojan",
+        "Rootkit",
+        "Worm",
+        "Adware"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What is a botnet?",
+      "options": [
+        "A network of printers",
+        "A type of encryption",
+        "A collection of compromised computers controlled remotely by an attacker",
+        "A network monitoring tool"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "Which Windows tool provides built-in real-time antivirus and anti-malware protection?",
+      "options": [
+        "Windows Firewall",
+        "UAC",
+        "BitLocker",
+        "Windows Defender Antivirus (Microsoft Defender)"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What should be done FIRST when malware is discovered on a workstation?",
+      "options": [
+        "Disconnect from the network to prevent further spread",
+        "Delete all user files",
+        "Reinstall Windows immediately",
+        "Run Windows Update"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of keeping antivirus definitions up to date?",
+      "options": [
+        "Improve PC performance",
+        "Ensure the antivirus can detect the latest known malware signatures",
+        "Fix Windows bugs",
+        "Update hardware drivers"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Which malware type spreads by attaching itself to legitimate executable files?",
+      "options": [
+        "Worm",
+        "Trojan",
+        "Virus",
+        "Rootkit"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What does a keylogger do?",
+      "options": [
+        "Encrypts keystrokes for security",
+        "Manages keyboard shortcuts",
+        "Blocks unauthorized keyboard access",
+        "Records all keystrokes to capture passwords and sensitive information"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What Windows security feature pops up when a program attempts to make system-level changes?",
+      "options": [
+        "Windows Defender",
+        "Windows Firewall alert",
+        "UAC (User Account Control) prompt",
+        "Secure Boot"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What Windows tool allows configuring password policies and account lockout policies locally?",
+      "options": [
+        "Device Manager",
+        "Task Manager",
+        "Windows Defender",
+        "Local Security Policy (secpol.msc)"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What does an account lockout policy do?",
+      "options": [
+        "Locks the account after a specified number of failed login attempts",
+        "Locks the screen after idle time",
+        "Requires password complexity",
+        "Disables the guest account"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Where in Windows 10/11 do you configure Windows Defender Antivirus exclusions?",
+      "options": [
+        "Control Panel > Security",
+        "Windows Security > Virus and Threat Protection > Manage Settings > Exclusions",
+        "Task Manager > Exclusions",
+        "Device Manager"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What Windows feature encrypts a specific file or folder rather than an entire drive?",
+      "options": [
+        "BitLocker",
+        "Secure Boot",
+        "EFS (Encrypting File System)",
+        "TPM"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "Which permission takes precedence when NTFS permissions and share permissions conflict?",
+      "options": [
+        "NTFS always wins",
+        "Share permissions always win",
+        "The more permissive of the two applies",
+        "The more restrictive of the two permissions applies"
+      ],
+      "answer": 3,
+      "explanation": "NTFS and share permissions are evaluated independently, then combined. Windows grants the most restrictive result. Critical rule: share permissions only apply when accessing a resource over the network. A user logged in locally bypasses share permissions entirely and is subject only to NTFS permissi"
+    },
+    {
+      "q": "What is the purpose of auditing in Windows security?",
+      "options": [
+        "Track and log specific user or system activities such as logon events and file access",
+        "Improve system performance",
+        "Block malware automatically",
+        "Manage application installations"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A technician suspects a Windows workstation is infected with malware. As part of the standard malware removal process, which action should be performed BEFORE running a full anti-malware scan?",
+      "options": [
+        "Reinstall the operating system immediately",
+        "Disable System Restore and boot into Safe Mode",
+        "Enable AutoRun on all removable drives to test infection vectors",
+        "Connect the machine to a different network segment and ignore the scan"
+      ],
+      "answer": 1,
+      "explanation": "Disabling System Restore prevents malware from hiding in restore points. Booting into Safe Mode prevents many malware processes from loading, allowing the scanner to detect and remove them more effectively."
+    },
+    {
+      "q": "After removing malware from a workstation, which two actions are MOST important before returning the machine to the user?",
+      "options": [
+        "Disable Windows Update and remove the antivirus to improve performance",
+        "Re-enable System Restore and lower the UAC level to reduce prompts",
+        "Update anti-malware definitions and apply all outstanding OS patches",
+        "Schedule a scan for six months in the future and clear the event logs"
+      ],
+      "answer": 2,
+      "explanation": "Updating anti-malware definitions ensures protection against the latest threats, and applying OS patches closes vulnerabilities the malware may have exploited. These are core steps in the remediation and prevention phase."
+    },
+    {
+      "q": "A user's workstation shows signs of infection: changed browser homepage, constant pop-ups, and degraded performance. The technician quarantines the machine. What does quarantining accomplish?",
+      "options": [
+        "It permanently deletes all infected files from the hard drive",
+        "It encrypts infected files using BitLocker to prevent further spread",
+        "It re-images the workstation from a known-good baseline",
+        "It isolates suspected malware files so they cannot execute while preserving them for analysis"
+      ],
+      "answer": 3,
+      "explanation": "Quarantine moves suspected malware to an isolated location where it cannot execute or spread, while preserving it for analysis or vendor submission. Deletion is irreversible and may be premature before confirmation."
+    },
+    {
+      "q": "What is a \"false positive\" in antivirus scanning?",
+      "options": [
+        "Malware that is not detected",
+        "An outdated malware definition",
+        "A scan that finds no threats",
+        "Legitimate software incorrectly identified as malware"
+      ],
+      "answer": 3,
+      "explanation": ""
+    }
+  ]
+}

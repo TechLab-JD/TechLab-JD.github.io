@@ -1,0 +1,290 @@
+{
+  "core": 2,
+  "chapter": 8,
+  "title": "Physical Security & Access Controls",
+  "exam_objectives": [
+    "2.1"
+  ],
+  "coverage": "COVERED",
+  "domain": "security",
+  "domain_label": "Security",
+  "sections": [
+    {
+      "title": "Physical Security",
+      "content": "Physical security exists in layers â€” you work from the outside perimeter toward the most critical assets.\nPerimeter layer: bollards are heavy reinforced posts â€” concrete or steel â€” positioned to prevent vehicle-borne attacks on building entrances. They stop a vehicle from ramming through a wall or door. Fences define the boundary of secured property. The height and construction of a fence signals the required security level â€” a chain-link fence is deterrent, a solid masonry wall is a significant barrier. Exterior lighting improves surveillance camera effectiveness and deters opportunistic intruders.\nAccess control layer: the access control vestibule â€” historically called a mantrap â€” is a double-door entry system. The first door must fully close and lock before the second door can open. This eliminates tailgating, where an unauthorized person follows an authorized person through a secured entry before the door closes. Badge readers at access points use RFID proximity cards or magnetic stripe cards to verify identity before granting entry. Security guards provide human judgment â€” they can verify identity visually, challenge unusual behavior, and respond to incidents.\nSurveillance layer: CCTV â€” Closed Circuit Television â€” cameras record activity at entrances, corridors, and sensitive areas for both deterrence and post-incident review. Motion sensors detect movement in restricted zones and can trigger alerts or alarms. Alarm systems notify security personnel of unauthorized access events. Magnetometers â€” metal detectors â€” screen individuals entering sensitive areas for metallic objects.\nEquipment security: cipher locks on doors use numeric keypad codes instead of physical keys, making key duplication impossible and allowing codes to be changed remotely. Cable locks â€” often called Kensington locks after the standard they implement â€” secure laptops and monitors to fixed surfaces using a steel cable and anchor point. Server rack locks secure the physical enclosures that house servers and networking equipment.\nAccess credentials: key fobs are small electronic devices that transmit a wireless authentication signal â€” often using RFID â€” to a reader. Smart cards have an embedded microprocessor chip that stores encrypted credentials; they must be inserted into or tapped against a compatible reader. Mobile digital keys use Bluetooth or NFC on a smartphone to authenticate without a physical card. Traditional mechanical keys are still widely used for lower-security applications.\nBiometric authentication methods: fingerprint scanners are the most common biometric method â€” found on laptops, phones, and door access systems. They read the unique ridge patterns on a fingertip. Retina scanners analyze the blood vessel pattern on the back of the eye â€” extremely accurate but considered invasive because users must place their eye close to the scanner. Facial recognition technology maps facial features using cameras â€” increasingly common for device unlock. Voice recognition analyzes speech patterns and vocal characteristics. Palm print scanners read the unique pattern of the entire palm surface, offering a larger scan area than fingerprint.\n---",
+      "exam_tips": [
+        "Mantrap = access control vestibule â€” prevents tailgating by requiring first door to close before second opens"
+      ]
+    },
+    {
+      "title": "Logical Access Controls",
+      "content": "Access Control Lists â€” ACLs â€” define which users or groups can access specific resources and what operations they can perform: read, write, execute, delete, or modify. ACLs are applied to files and folders on NTFS volumes, to network devices like routers and firewalls, and to application resources. On NTFS, both share permissions and NTFS permissions apply when accessing a shared folder â€” the most restrictive combination applies.\nLeast Privilege: users and service accounts should have the minimum access required to perform their function. A standard user should not have local administrator rights unless their role requires it. A web server service account should not have access to the database unless the application requires it. Least privilege limits the damage that can be done if an account is compromised or misused.\nZero Trust is a security model that rejects the traditional assumption that everything inside the corporate network perimeter is trusted. Zero Trust assumes that a breach has occurred or will occur, and therefore requires that every access request be authenticated, authorized, and encrypted â€” regardless of whether it comes from inside or outside the network. \"Never trust, always verify\" is the core principle.\nMultifactor Authentication â€” MFA â€” requires proof of identity from at least two separate categories.\nSomething you know: a password, PIN, or security question.\nSomething you have: a hardware token that generates TOTP â€” Time-based One-Time Passwords â€” synchronized codes that refresh every 30 to 60 seconds. Authenticator applications like Microsoft Authenticator and Google Authenticator are software implementations of the same concept. SMS codes delivered to a registered phone number. Email verification codes.\nSomething you are: biometric data â€” fingerprint, facial recognition, retina pattern, voice characteristics.\nThe critical distinction: two factors from the same category is not genuine MFA. A password plus a PIN is two things you know â€” one category. Genuine MFA requires factors from two or more different categories.\nTOTP â€” Time-based One-Time Password: a code generated by an algorithm that uses the current time and a shared secret. The code is valid for a short window â€” typically 30 seconds. The server and the authenticator app are synchronized to the same time source, so they generate the same code at the same moment.\nOTP â€” One-Time Password: a code that is valid for a single authentication session only. Once used, it cannot be reused. Different from TOTP in that OTPs are often single-use codes delivered via email or SMS rather than generated continuously.\nSAML â€” Security Assertions Markup Language: an XML-based standard for exchanging authentication and authorization data. Used to implement Single Sign-On â€” SSO â€” across different domains and systems. Three components: the Principal (the user), the Identity Provider (the system that authenticates the user â€” like Azure AD), and the Service Provider (the system the user wants to access â€” like Salesforce or a cloud application). SAML allows a user to authenticate once with the Identity Provider and access multiple Service Providers without re-authenticating.\nSingle Sign-On â€” SSO: the user authenticates once and receives access to multiple systems. Reduces password fatigue, reduces password reuse across systems, and centralizes authentication management and audit logging.\n---",
+      "exam_tips": [
+        "TOTP refreshes every 30-60 sec (time-based). OTP = one-time use only. Both = \"something you have\""
+      ]
+    },
+    {
+      "title": "Enterprise Security Management",
+      "content": "Mobile Device Management â€” MDM: centralized management of smartphones, tablets, and other mobile devices. MDM enforces security policies â€” requiring screen lock PINs, enabling encryption, restricting which applications can be installed. It can remotely wipe a lost or stolen device. It separates corporate data from personal data on BYOD devices using containerization. Deploy applications and configuration profiles to managed devices remotely.\nData Loss Prevention â€” DLP: monitors and controls data movement to prevent unauthorized disclosure of sensitive information. DLP policies scan outbound emails for credit card numbers, Social Security numbers, or proprietary content. They can block file uploads to non-approved cloud services. They can encrypt or quarantine files that violate policy. DLP protects personally identifiable information â€” PII â€” intellectual property, and regulated data.\nIdentity and Access Management â€” IAM: the comprehensive framework for managing digital identities throughout their lifecycle. IAM covers user provisioning when a new employee is hired, authentication when the user logs in, authorization when the user requests access to a resource, and deprovisioning when the user leaves the organization. IAM includes password management, MFA enforcement, SSO, and access reviews.\nPrivileged Access Management â€” PAM with Just-in-Time Access: grants elevated permissions only when they are needed and only for the duration they are needed. Rather than having permanent administrator accounts, users request elevated access for a specific task. The elevated access is granted for a limited time window and automatically revoked when the window expires or the task is complete. This reduces the risk of standing privileged accounts being compromised.\nDirectory Services: centralized databases that store user accounts, groups, computers, and resource information. Active Directory is the primary example for Windows environments. It provides authentication and authorization for domain-joined machines and services. LDAP â€” Lightweight Directory Access Protocol â€” is the protocol used to query and manage directory services. Azure AD is Microsoft's cloud-based directory service.\n---",
+      "exam_tips": [
+        "Zero Trust = even internal users and devices must continuously authenticate â€” no implicit trust based on being \"inside the network\"",
+        "Retina = most accurate but invasive. Fingerprint = most common.",
+        "PAM with just-in-time = no standing admin accounts. Elevated access is requested and expires automatically."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "A strong password alone is not enough. If that password is stolen, the account is compromised. MFA ensures that one stolen credential is not enough to break in.",
+      "concept": "MFA â€” THE 3 FACTORS AND HOW EACH WORKS",
+      "summary": "Multifactor Authentication requires two or more verification methods from different categories. The three categories are things you know, things you have, and things you are."
+    },
+    {
+      "hook": "All the software security in the world means nothing if someone walks into your server room. Physical security is the first line of defense â€” and the exam tests it in detail.",
+      "concept": "PHYSICAL SECURITY â€” THE LAYER THAT PEOPLE FORGET",
+      "summary": "Physical security controls fall into four categories: perimeter barriers, controlled entry, surveillance, and locking mechanisms. Perimeter barriers: bollards are heavy concrete or steel posts that prevent vehicles from ramming into buildings or restricted areas."
+    },
+    {
+      "hook": "A compromised admin account is catastrophic. A compromised standard user account is a problem. The difference is the principle of least privilege â€” and the exam expects you to apply it.",
+      "concept": "LEAST PRIVILEGE & ZERO TRUST â€” THE PRINCIPLES BEHIND EVERY ACCESS DECISION",
+      "summary": "Two foundational security principles govern access control in modern environments. Least Privilege: every user, application, and service account should have only the minimum level of access required to perform its function â€” nothing more."
+    },
+    {
+      "hook": "Physical security exists in layers â€” you work from the outside perimeter toward the most critical assets.",
+      "concept": "Physical Security",
+      "summary": "Physical security exists in layers â€” you work from the outside perimeter toward the most critical assets. Perimeter layer: bollards are heavy reinforced posts â€” concrete or steel â€” positioned to prevent vehicle-borne attacks on building entrances. They stop a vehicle from ramming through a wall or door."
+    },
+    {
+      "hook": "Access Control Lists â€” ACLs â€” define which users or groups can access specific resources and what operations they can perform: read, write, execute, d",
+      "concept": "Logical Access Controls",
+      "summary": "Access Control Lists â€” ACLs â€” define which users or groups can access specific resources and what operations they can perform: read, write, execute, delete, or modify. ACLs are applied to files and folders on NTFS volumes, to network devices like routers and firewalls, and to application resources. On NTFS, both share permissions and NTFS permissions apply when accessing a shared folder â€” the most restrictive combination applies."
+    },
+    {
+      "hook": "Mobile Device Management â€” MDM: centralized management of smartphones, tablets, and other mobile devices.",
+      "concept": "Enterprise Security Management",
+      "summary": "Mobile Device Management â€” MDM: centralized management of smartphones, tablets, and other mobile devices. MDM enforces security policies â€” requiring screen lock PINs, enabling encryption, restricting which applications can be installed. It can remotely wipe a lost or stolen device."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "What security concept grants users only the permissions needed to perform their job and nothing more?",
+      "options": [
+        "Principle of least privilege",
+        "Defense in depth",
+        "Zero trust",
+        "Need to know"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What is an access control vestibule (also called a mantrap or airlock) used for in physical security?",
+      "options": [
+        "Trap software vulnerabilities",
+        "An entry system with two locked doors that prevents tailgating by allowing only one person through at a time",
+        "Monitor network traffic",
+        "Control access to cloud resources"
+      ],
+      "answer": 1,
+      "explanation": "An access control vestibule (the current CompTIA 220-1202 term; previously called a mantrap or airlock) uses two interlocked doors so only one can open at a time. This prevents tailgating by ensuring each person must authenticate before the inner door unlocks."
+    },
+    {
+      "q": "[BONUS â€” Beyond A+ Scope] Which security principle requires that sensitive tasks require two or more authorized users?",
+      "options": [
+        "Least privilege",
+        "Zero trust",
+        "Separation of duties",
+        "Defense in depth"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of a security badge or smart card in a corporate environment?",
+      "options": [
+        "Log user activity on their computer",
+        "Provide VPN access",
+        "Encrypt network traffic",
+        "Control physical access to secure areas by authenticating users at entry points"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What type of security camera system records footage for later review?",
+      "options": [
+        "CCTV or IP camera system with DVR/NVR recording",
+        "Access control system",
+        "Motion sensor only",
+        "Biometric scanner"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What are the three authentication factor categories?",
+      "options": [
+        "User, group, and role",
+        "Something you know, something you have, something you are",
+        "Password, PIN, and biometric only",
+        "Local, network, and cloud"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "[BONUS â€” Beyond A+ Scope] What is the purpose of an intrusion detection system (IDS)?",
+      "options": [
+        "Block malicious traffic automatically",
+        "Encrypt data in transit",
+        "Monitor network or host activity and alert on suspicious or malicious behavior",
+        "Manage user access rights"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "[BONUS â€” Beyond A+ Scope] True or False: An IPS (Intrusion Prevention System) can actively block malicious traffic, whereas an IDS only monitors and alerts.",
+      "options": [
+        "Detective",
+        "Corrective",
+        "Deterrent",
+        "Preventive"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What is the difference between authentication and authorization?",
+      "options": [
+        "They are the same thing",
+        "Authentication verifies who you are; authorization determines what you are allowed to do",
+        "Authorization verifies identity; authentication grants access",
+        "Authentication is for people; authorization is for devices"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What command in Windows shows all the DNS entries currently cached on the local machine?",
+      "options": [
+        "ipconfig /displaydns",
+        "nslookup /cache",
+        "netstat -dns",
+        "dns /show"
+      ],
+      "answer": 0,
+      "explanation": "'ipconfig /displaydns' displays all DNS resolver cache entries stored locally, showing recently resolved hostnames and their IP addresses. This is useful for troubleshooting DNS issues. 'ipconfig /flushdns' clears the cache; 'ipconfig /displaydns' only shows it."
+    },
+    {
+      "q": "What is the primary risk of not revoking access for a terminated employee immediately?",
+      "options": [
+        "Compliance violation only",
+        "No significant risk if they were a good employee",
+        "IT department loses efficiency",
+        "The former employee retains access and could misuse or steal company data"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What does HTTPS Everywhere (or HSTS) enforce?",
+      "options": [
+        "That browsers always use encrypted HTTPS connections to supported websites",
+        "That all websites use HTTP",
+        "That all downloads are virus-scanned",
+        "That users cannot browse without a VPN"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A user logs in with a password and then receives a six-digit code on their authenticator app that expires every 30 seconds. Which MFA factor category does the authenticator app code represent?",
+      "options": [
+        "Something you know",
+        "Something you are",
+        "Something you have",
+        "Something you do"
+      ],
+      "answer": 2,
+      "explanation": "Authenticator app codes are TOTP (Time-based One-Time Passwords) — a software implementation of 'something you have.' The device running the authenticator app is the possession factor. The password is 'something you know.' Together they form genuine MFA from two different factor categories."
+    },
+    {
+      "q": "An organization implements a policy where elevated administrator access is granted only when requested for a specific task and automatically revoked when the task window expires. Which security concept does this describe?",
+      "options": [
+        "Zero Trust network access",
+        "Role-based access control (RBAC)",
+        "Privileged Access Management with Just-in-Time access",
+        "Single Sign-On (SSO)"
+      ],
+      "answer": 2,
+      "explanation": "Privileged Access Management (PAM) with Just-in-Time access grants elevated permissions only when needed and only for the duration required. Rather than maintaining permanent standing admin accounts, users request elevated access for a specific task, it is granted for a limited window, and then automatically revoked. This reduces the risk of standing privileged accounts being compromised."
+    },
+    {
+      "q": "Heavy concrete or steel posts installed at a building entrance to prevent a vehicle from ramming through the door are called what?",
+      "options": [
+        "Bollards",
+        "Cable barriers",
+        "Turnstiles",
+        "Jersey walls"
+      ],
+      "answer": 0,
+      "explanation": "Bollards are heavy reinforced posts — concrete or steel — positioned to prevent vehicle-borne attacks on building entrances. They are a perimeter-layer physical security control that stops a vehicle from ramming through a wall or secured entry point."
+    },
+    {
+      "q": "What is the purpose of a key fob in physical access control?",
+      "options": [
+        "Stores an encrypted backup of the user's password for emergency building access",
+        "A small RFID or NFC device that authenticates a user at controlled entry points (doors, gates, parking barriers) when held near a compatible reader",
+        "Provides a one-time passcode (OTP) for remote VPN authentication",
+        "Acts as a hardware token that generates TOTP codes for multi-factor authentication"
+      ],
+      "answer": 1,
+      "explanation": "Key fobs use RFID or NFC to transmit a unique identifier to a card reader at controlled access points. They are a 'something you have' authentication factor. Access logs capture each entry event, providing an audit trail of physical access."
+    },
+    {
+      "q": "What is biometric authentication, and what authentication factor category does it represent?",
+      "options": [
+        "Something you know — biometrics are memorized patterns",
+        "Something you are — uses unique physiological or behavioral characteristics (fingerprints, retina, facial recognition, voice) to verify identity",
+        "Something you have — biometric data is stored on a card",
+        "Somewhere you are — location is used as the authentication factor"
+      ],
+      "answer": 1,
+      "explanation": "Biometric authentication falls in the 'something you are' category, using physiological characteristics unique to each individual. It cannot be forgotten like passwords or lost like tokens, but requires careful handling of biometric data since it cannot be changed if compromised."
+    },
+    {
+      "q": "What is the purpose of cable locks (such as Kensington locks) in a corporate environment?",
+      "options": [
+        "Lock network cables into ports to prevent accidental disconnection",
+        "Physically secure laptops and portable equipment to furniture, deterring opportunistic theft in shared spaces",
+        "Prevent unauthorized USB devices from being connected to the laptop",
+        "Encrypt the laptop storage when the cable lock is engaged"
+      ],
+      "answer": 1,
+      "explanation": "Kensington (K-slot) cable locks loop a steel cable through an anchor and lock into the security slot found on most laptops. They are a deterrent against opportunistic theft in offices, conference rooms, and public spaces — not a high-security solution, but effective against casual theft."
+    },
+    {
+      "q": "A data center uses a policy requiring two authorized personnel to be present whenever access to production server racks is granted. What security principle does this implement?",
+      "options": [
+        "Principle of least privilege",
+        "Two-person integrity (dual control) — prevents a single insider from taking unauthorized action without a second authorized person witnessing or participating",
+        "Separation of duties (requiring different people for initiation and approval)",
+        "Defense in depth — multiple overlapping security controls"
+      ],
+      "answer": 1,
+      "explanation": "Two-person integrity (TPI) requires two authorized individuals present for sensitive operations. This prevents insider threats and accidental actions — neither person can act alone. It is used in government/military facilities, data centers, and financial institutions handling critical assets."
+    },
+    {
+      "q": "After a security incident, an investigator needs to determine who accessed a secure room on a specific date. What physical security control provides this information?",
+      "options": [
+        "Security guard post log maintained manually by the guard on duty",
+        "Badge/key fob access logs or CCTV audit trail — electronic access control systems record each entry event with user ID, date, and time",
+        "Biometric enrollment records showing who has registered biometric data",
+        "Motion sensor logs showing when the room detected occupancy"
+      ],
+      "answer": 1,
+      "explanation": "Electronic access control systems log every badge/fob scan with the user identifier, timestamp, and door/zone accessed. CCTV provides visual verification. These logs are essential for incident investigation, compliance audits, and establishing timelines of who entered restricted areas."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab404 Study Zone</title>
+  <meta name="description" content="CompTIA A+ chapter study page — concept cards, exam tips, and practice questions.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none';">
+  <link id="theme-stylesheet" rel="stylesheet" href="css/dark.css">
+  <link rel="stylesheet" href="css/base.css">
+  <script src="js/theme-init.js"></script>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand"><span class="brand-accent">Lab404</span>&nbsp;A+ Study Hub</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="core1.html" id="navCore1">Core 1</a>
+      <a href="core2.html" id="navCore2">Core 2</a>
+      <a href="practice.html">Practice</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-icon-light">&#9788;</span>
+        <span class="theme-icon-dark" style="display:none">&#9789;</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main class="page-content" id="chapter-root">
+  <!-- Populated by chapter-loader.js -->
+  <div class="loading-state">
+    <div class="spinner" aria-label="Loading chapter content"></div>
+    <p>Loading chapter content...</p>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand"><span style="color:var(--accent);">Lab404</span> A+ Study Hub</div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="core1.html">Core 1</a>
+        <a href="core2.html">Core 2</a>
+        <a href="practice.html">Practice</a>
+        <a href="review.html">Review</a>
+      </nav>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-icon-light">&#9788;</span>
+        <span class="theme-icon-dark" style="display:none">&#9789;</span>
+      </button>
+    </div>
+  </div>
+<div class="lab404-disclaimer" style="max-width:900px;margin:18px auto 8px;padding:0 20px;font-size:12px;line-height:1.5;color:var(--text-muted,#9090bb);text-align:center">Free, independent study material from the Lab404 series by <a href="https://techlab-jd.github.io" style="color:inherit">Jordan Dorman</a>. All practice questions are original and written for study; they are not real exam questions. Not affiliated with or endorsed by CompTIA. CompTIA and A+ are trademarks of CompTIA, Inc.</div>
+</footer>
+
+<script src="js/utils.js?v=2"></script>
+<script src="js/theme.js?v=2"></script>
+<script src="js/accordion.js?v=2"></script>
+<script src="js/chapter-loader.js?v=2"></script>
+<script src="js/nav.js?v=2"></script>
+<script>
+/* Highlight active nav link based on core param */
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var core = params.get("core");
+  var c1 = document.getElementById("navCore1");
+  var c2 = document.getElementById("navCore2");
+  if (c1 && c2) {
+    if (core === "1") c1.classList.add("active");
+    else if (core === "2") c2.classList.add("active");
+  }
+})();
+</script>
+</body>
+</html>

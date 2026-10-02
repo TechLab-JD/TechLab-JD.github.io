@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <!-- Cloud shape -->
+  <path d="M34 32 H16 C11.6 32 8 28.4 8 24 C8 19.9 11.1 16.6 15.1 16.1 C15.9 12.1 19.6 9 24 9 C29 9 33 13 33 18 C33 18.2 33 18.3 33 18.5 C36.3 19.3 39 22.2 39 26 C39 29.3 36.9 32 34 32 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Server racks below cloud -->
+  <rect x="16" y="36" width="16" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/>
+  <circle cx="19" cy="38" r="1" fill="currentColor"/>
+  <line x1="22" y1="38" x2="30" y2="38" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+  <!-- Cloud to server lines -->
+  <line x1="20" y1="32" x2="20" y2="36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/>
+  <line x1="28" y1="32" x2="28" y2="36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/>
+</svg>

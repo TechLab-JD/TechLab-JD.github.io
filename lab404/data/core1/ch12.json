@@ -1,0 +1,313 @@
+{
+  "core": 1,
+  "chapter": 12,
+  "title": "TCP/IP Model & Core Protocols",
+  "exam_objectives": [
+    "2.1",
+    "2.2"
+  ],
+  "coverage": "COVERED",
+  "domain": "networking",
+  "domain_label": "Networking",
+  "sections": [
+    {
+      "title": "The Tcp/Ip Model",
+      "content": "The TCP/IP model â€” also called the Internet model or Department of Defense model â€” is the framework that describes how network communication is organized. It defines four layers, each responsible for a specific set of functions.\nUnderstanding the model means understanding why networking failures occur at specific layers, and which protocols and tools apply at each layer.\nTHE LINK LAYER.\nThe Link layer handles the physical transmission of data on the local network segment. It combines what the OSI model separates into the Physical layer and Data Link layer. At the Link layer, devices are addressed by MAC addresses â€” 48-bit hardware addresses that are unique to each network interface. Ethernet frames and Wi-Fi frames operate at this layer.\nThe Link layer is responsible for delivering frames between directly connected devices on the same network segment. A switch operates at the Link layer, making forwarding decisions based on MAC addresses.\nTHE INTERNET LAYER.\nThe Internet layer handles logical addressing and packet routing. IP â€” Internet Protocol â€” operates at this layer. Every packet at the Internet layer carries a source IP address and a destination IP address.\nRouters operate at the Internet layer, examining destination IP addresses and making forwarding decisions based on routing tables to move packets toward their destination â€” possibly through multiple intermediate networks.\nThe Internet layer is connectionless and provides best-effort delivery. IP itself does not guarantee that packets arrive, arrive in order, or arrive at all. Reliability is provided by the Transport layer if needed.\nTHE TRANSPORT LAYER.\nThe Transport layer provides end-to-end communication services between hosts. Two protocols operate here. TCP provides reliable, connection-oriented transmission. UDP provides fast, connectionless transmission.\nPort numbers at the Transport layer identify which application service is the target of the communication. An IP address gets a packet to the right host. A port number gets it to the right application on that host.\nTHE APPLICATION LAYER.\nThe Application layer encompasses all the high-level protocols that applications use to communicate. HTTP, HTTPS, DNS, SMTP, POP3, IMAP, SSH, FTP, SMB, DHCP, RDP â€” all operate at the Application layer.\nNote: the TCP/IP Application layer corresponds to the OSI model's Session, Presentation, and Application layers (layers 5, 6, and 7). The TCP/IP model consolidates these three into one.\nENCAPSULATION.\nData travels down the stack for transmission â€” each layer adds its own header (and sometimes trailer) to the data from the layer above. This is encapsulation. On reception, data travels up the stack â€” each layer strips its header and passes the payload to the layer above. This is decapsulation.\n---",
+      "exam_tips": [
+        "Know what operates at each layer. Switch = Link layer. Router = Internet layer. TCP/UDP = Transport layer."
+      ]
+    },
+    {
+      "title": "Tcp â€” Transmission Control Protocol",
+      "content": "TCP is the reliable transport protocol. When an application requires that all data arrives completely and in the correct order, TCP is the correct choice.\nTHE THREE-WAY HANDSHAKE.\nTCP establishes a connection before transmitting data using a three-step process.\nStep 1: The client sends a SYN segment to the server. SYN means \"synchronize\" â€” the client is requesting to establish a connection and is providing its initial sequence number.\nStep 2: The server responds with a SYN-ACK segment. The server acknowledges the client's SYN and sends its own SYN â€” it is establishing its side of the connection simultaneously.\nStep 3: The client sends an ACK â€” acknowledging the server's SYN. The connection is now established.\nAt this point, application data begins flowing.\nRELIABILITY FEATURES.\nSequencing: TCP assigns sequence numbers to each segment. The receiver uses these to reassemble data in the correct order even if segments arrive out of sequence.\nAcknowledgments: The receiver sends ACK segments confirming receipt of data. The sender tracks which data has been acknowledged.\nRetransmission: If a sender does not receive an acknowledgment for a segment within a timeout period, it retransmits that segment. Lost data is automatically resent.\nFlow control: TCP adjusts the rate of transmission based on the receiver's capacity â€” preventing a fast sender from overwhelming a slow receiver.\nTCP USE CASES.\nTCP is used when data integrity is required: HTTPS (web browsing), SSH (remote access), FTP (file transfer), SMTP (email sending), IMAP/POP3 (email retrieval), SMB (file sharing).\n---",
+      "exam_tips": [
+        "Three-way handshake = SYN â†’ SYN-ACK â†’ ACK. This exact sequence is tested."
+      ]
+    },
+    {
+      "title": "Udp â€” User Datagram Protocol",
+      "content": "UDP is the connectionless transport protocol. No handshake. No acknowledgment. No retransmission. Data is sent and the sender continues without waiting.\nThis makes UDP faster and lower overhead than TCP. For certain applications, this trade-off is exactly correct.\nWHEN UDP IS CORRECT.\nVoIP â€” Voice over IP â€” uses UDP. A single dropped packet in a voice call causes a brief audio artifact. If TCP were used, the dropped packet would trigger retransmission and a delay â€” which is far more disruptive to a real-time voice conversation than a momentary glitch.\nVideo streaming uses UDP. Similarly, a dropped frame is less disruptive than a buffering stall caused by retransmission delays.\nOnline gaming: latency matters far more than perfect delivery. A game state update that arrives late is useless â€” sending the next update is more valuable than retransmitting an old one.\nDNS queries use UDP. A query is a single small packet. If it is lost, the application simply sends another query â€” the overhead of a TCP connection for a DNS lookup is unnecessary.\nDHCP uses UDP. The DHCP process begins before a client has an IP address, making TCP connection establishment impossible.\nTFTP â€” Trivial File Transfer Protocol â€” uses UDP with its own basic acknowledgment mechanism built into the application layer.\n---",
+      "exam_tips": [
+        "UDP = no session. DHCP and DNS use UDP. VoIP uses UDP. Missing one of these on the exam is a common mistake."
+      ]
+    },
+    {
+      "title": "Port Numbers",
+      "content": "Port numbers are 16-bit values ranging from 0 to 65535. They identify which application service on a host is the source or destination of network communication.\nThree ranges:\n- Well-known ports: 0 to 1023 â€” reserved for standard services, require administrative privilege to bind\n- Registered ports: 1024 to 49151 â€” for user applications and specific services\n- Dynamic/Private ports: 49152 to 65535 â€” ephemeral ports used by clients for outbound connections\nESSENTIAL PORT NUMBERS FOR THE EXAM:\n20 and 21: FTP â€” File Transfer Protocol. Port 21 is the control channel (commands), port 20 is the data channel (file transfer).\n22: SSH â€” Secure Shell. Encrypted remote access and tunneling.\n23: Telnet â€” Legacy remote access. Transmits in plaintext including credentials. Do not use.\n25: SMTP â€” Simple Mail Transfer Protocol. Outgoing email transmission between servers.\n53: DNS â€” Domain Name System. Resolves names to IP addresses.\n67: DHCP Server. The server listens on this port.\n68: DHCP Client. The client sends requests from this port.\n80: HTTP â€” Hypertext Transfer Protocol. Unencrypted web traffic.\n110: POP3 â€” Post Office Protocol version 3. Retrieves email from server to client, typically deleting from server.\n143: IMAP â€” Internet Message Access Protocol. Accesses email on server, typically retaining it server-side.\n443: HTTPS â€” HTTP Secure. Encrypted web traffic using TLS.\n445: SMB â€” Server Message Block. Windows file and printer sharing.\n3389: RDP â€” Remote Desktop Protocol. Windows remote desktop access.\n---",
+      "exam_tips": [
+        "Know all twelve. Protocol â†’ port AND port â†’ protocol. Both question formats appear on the exam."
+      ]
+    },
+    {
+      "title": "Arp â€” Address Resolution Protocol",
+      "content": "ARP operates at the boundary between the Internet layer and the Link layer. Its function is to resolve a known IP address to the corresponding MAC address needed to construct the local Ethernet frame.\nTHE ARP PROCESS.\nA device on a local network wants to send data to IP address 192.168.1.10. It checks its ARP cache â€” a table of IP-to-MAC mappings maintained in memory. If the mapping is present and current, it constructs the frame directly.\nIf not, it broadcasts an ARP Request to the local segment: \"Who has 192.168.1.10? Tell 192.168.1.1 your MAC.\" Every device on the segment receives the broadcast. The device with IP 192.168.1.10 responds directly with an ARP Reply containing its MAC address.\nThe requesting device adds the new IP-to-MAC mapping to its ARP cache with a time-to-live value. Subsequent packets to that IP use the cached MAC without repeating the ARP process until the cache entry expires.\nARP CACHE.\nThe ARP cache is viewable with `arp -a` on both Windows and Linux systems. This is useful for troubleshooting â€” a missing or incorrect ARP entry can explain connectivity failures on a local network.\nARP POISONING.\nARP has no authentication mechanism. A malicious device can send unsolicited ARP replies claiming that its MAC address corresponds to a legitimate device's IP address. Devices receiving these replies update their ARP caches accordingly, redirecting traffic to the attacker â€” a man-in-the-middle position. Dynamic ARP Inspection on managed switches prevents this by validating ARP packets against a trusted binding table.\n---",
+      "exam_tips": [
+        "ARP poisoning = ARP spoofing. Man-in-the-middle. Dynamic ARP Inspection is the mitigation."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "Every piece of data you send across a network passes through four distinct layers of processing. Understanding what happens at each layer is what transforms networking from magic into engineering.",
+      "concept": "THE TCP/IP MODEL â€” FOUR LAYERS EXPLAINED",
+      "summary": "The TCP/IP model â€” also called the Internet model â€” describes how networking is organized into functional layers. Four layers, each with a specific responsibility."
+    },
+    {
+      "hook": "TCP and UDP are both transport layer protocols â€” but they make opposite trade-offs. Choosing the wrong one for an application costs either reliability or performance, and you cannot have both.",
+      "concept": "TCP VS UDP",
+      "summary": "At the Transport layer, two protocols move data between hosts. TCP â€” Transmission Control Protocol â€” is connection-oriented and reliable."
+    },
+    {
+      "hook": "Port numbers are how an operating system routes incoming network traffic to the correct application. The A+ exam will give you a port number and expect you to name the protocol, or name the protocol and expect the port. Both directions.",
+      "concept": "PORT NUMBERS â€” THE COMPLETE REFERENCE",
+      "summary": "Port numbers are 16-bit values from 0 to 65535 that identify specific services on a networked host. Well-known ports are 0 through 1023 â€” reserved for standard services and require administrative privilege to bind."
+    },
+    {
+      "hook": "IP addresses route traffic across networks. MAC addresses deliver frames within a single network segment. ARP is the mechanism that bridges the two â€” without it, local network communication would not work.",
+      "concept": "ARP â€” ADDRESS RESOLUTION PROTOCOL",
+      "summary": "ARP â€” Address Resolution Protocol â€” operates at the boundary between the Internet layer and the Link layer. Its purpose is to resolve a known IP address into the corresponding MAC address needed for local frame delivery."
+    },
+    {
+      "hook": "The TCP/IP model â€” also called the Internet model or Department of Defense model â€” is the framework that describes how network communication is organi",
+      "concept": "The Tcp/Ip Model",
+      "summary": "The TCP/IP model â€” also called the Internet model or Department of Defense model â€” is the framework that describes how network communication is organized. It defines four layers, each responsible for a specific set of functions. Understanding the model means understanding why networking failures occur at specific layers, and which protocols and tools apply at each layer."
+    },
+    {
+      "hook": "TCP is the reliable transport protocol.",
+      "concept": "Tcp â€” Transmission Control Protocol",
+      "summary": "TCP is the reliable transport protocol. When an application requires that all data arrives completely and in the correct order, TCP is the correct choice. THE THREE-WAY HANDSHAKE."
+    },
+    {
+      "hook": "UDP is the connectionless transport protocol.",
+      "concept": "Udp â€” User Datagram Protocol",
+      "summary": "UDP is the connectionless transport protocol. No handshake. No acknowledgment."
+    },
+    {
+      "hook": "Port numbers are 16-bit values ranging from 0 to 65535.",
+      "concept": "Port Numbers",
+      "summary": "Port numbers are 16-bit values ranging from 0 to 65535. They identify which application service on a host is the source or destination of network communication. Three ranges: - Well-known ports: 0 to 1023 â€” reserved for standard services, require administrative privilege to bind - Registered ports: 1024 to 49151 â€” for user applications and specific services - Dynamic/Private ports: 49152 to 65535 â€” ephemeral ports used by clients for outbound connections ESSENTIAL PORT NUMBERS FOR THE EXAM: 20 and 21: FTP â€” File Transfer Protocol."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "Which protocol is connection-oriented and guarantees delivery of packets?",
+      "options": [
+        "UDP",
+        "ARP",
+        "ICMP",
+        "TCP"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "Which protocol uses port 443?",
+      "options": [
+        "HTTP",
+        "HTTPS",
+        "FTP",
+        "SSH"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A technician needs to securely transfer files to a remote server. Which protocol should be used instead of FTP?",
+      "options": [
+        "TFTP",
+        "HTTP",
+        "SFTP or FTPS",
+        "Telnet"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "POP3 uses port ___ to retrieve email from a server.",
+      "options": [
+        "IMAP",
+        "SMTP",
+        "POP3",
+        "HTTP"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What port does RDP (Remote Desktop Protocol) use?",
+      "options": [
+        "TCP",
+        "UDP",
+        "ICMP",
+        "ARP"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "Which Wi-Fi standard operates exclusively on the 5 GHz band and supports speeds up to approximately 3.5 Gbps theoretically?",
+      "options": [
+        "802.11ac (Wi-Fi 5)",
+        "802.11g",
+        "802.11b",
+        "802.11n"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Which 802.11 standard is also known as Wi-Fi 6?",
+      "options": [
+        "802.11ax",
+        "802.11ac",
+        "802.11n",
+        "802.11ad"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Which wireless standard is designed for short-range, high-bandwidth applications near 60 GHz?",
+      "options": [
+        "802.11ac",
+        "802.11ax",
+        "802.11n",
+        "802.11ad (WiGig)"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "At which layer of the TCP/IP model do switches operate, and what addressing scheme do they use?",
+      "options": [
+        "Internet layer, using IP addresses",
+        "Transport layer, using port numbers",
+        "Link layer, using MAC addresses",
+        "Application layer, using DNS names"
+      ],
+      "answer": 2,
+      "explanation": "Switches operate at the Link layer and forward frames based on destination MAC addresses — 48-bit hardware addresses unique to each network interface."
+    },
+    {
+      "q": "What is the correct order of segments in a TCP three-way handshake?",
+      "options": [
+        "SYN, ACK, SYN-ACK",
+        "ACK, SYN, SYN-ACK",
+        "SYN, SYN-ACK, ACK",
+        "SYN-ACK, SYN, ACK"
+      ],
+      "answer": 2,
+      "explanation": "The three-way handshake: client sends SYN, server responds with SYN-ACK, client completes with ACK. Data transmission begins after this."
+    },
+    {
+      "q": "Why does DHCP use UDP rather than TCP for the DORA discovery process?",
+      "options": [
+        "UDP is faster and DHCP requires speed over reliability",
+        "The DHCP client has no IP address yet, making a TCP handshake impossible",
+        "UDP supports broadcast addressing; TCP does not",
+        "DHCP uses UDP because TCP is reserved for web traffic"
+      ],
+      "answer": 1,
+      "explanation": "DHCP uses UDP because the DORA process starts before the client has an IP address. TCP requires a handshake with a source IP, which the client cannot provide."
+    },
+    {
+      "q": "Which port number is used by SMB for Windows file and printer sharing?",
+      "options": [
+        "389",
+        "3389",
+        "445",
+        "143"
+      ],
+      "answer": 2,
+      "explanation": "SMB (Server Message Block) uses port 445 for Windows file and printer sharing. SMB3 is the current version and supports encryption."
+    },
+    {
+      "q": "Which TCP/IP model layer consolidates the OSI Session, Presentation, and Application layers?",
+      "options": [
+        "Transport layer",
+        "Internet layer",
+        "Link layer",
+        "Application layer"
+      ],
+      "answer": 3,
+      "explanation": "The TCP/IP Application layer consolidates OSI layers 5, 6, and 7. All high-level protocols (HTTP, DNS, SMTP, SSH) operate here."
+    },
+    {
+      "q": "Which protocol uses port 22 and provides encrypted remote terminal access to replace Telnet?",
+      "options": [
+        "RDP on port 3389",
+        "SSH on port 22",
+        "SFTP on port 21",
+        "HTTPS on port 443"
+      ],
+      "answer": 1,
+      "explanation": "SSH (Secure Shell) uses port 22 and provides encrypted remote terminal access. It replaces Telnet (port 23), which transmits credentials in plaintext."
+    },
+    {
+      "q": "A device sends unsolicited ARP replies to redirect traffic to itself. What is this attack and what switch feature mitigates it?",
+      "options": [
+        "DNS poisoning; mitigated by DNSSEC",
+        "ARP poisoning; mitigated by Dynamic ARP Inspection on managed switches",
+        "MAC flooding; mitigated by port security",
+        "IP spoofing; mitigated by ingress filtering"
+      ],
+      "answer": 1,
+      "explanation": "ARP poisoning sends unsolicited ARP replies to corrupt ARP caches and redirect traffic to an attacker. Dynamic ARP Inspection validates ARP packets against a trusted binding table."
+    },
+    {
+      "q": "What protocol allows network devices to report status, errors, and performance statistics to a central monitoring server?",
+      "options": [
+        "FTP (File Transfer Protocol)",
+        "SNMP (Simple Network Management Protocol) using UDP ports 161 and 162",
+        "TFTP (Trivial File Transfer Protocol)",
+        "Syslog over TCP/UDP port 514"
+      ],
+      "answer": 1,
+      "explanation": "SNMP (Simple Network Management Protocol) allows network devices (switches, routers, printers, servers) to be queried (port 161) and to send alerts/traps (port 162) to an NMS (Network Management System). It is the standard protocol for centralized network health monitoring."
+    },
+    {
+      "q": "What is the primary security difference between HTTP and HTTPS?",
+      "options": [
+        "HTTPS requires a newer web browser; HTTP works with any browser",
+        "HTTPS encrypts traffic using TLS providing confidentiality and integrity; HTTP transmits all data including credentials in plaintext",
+        "HTTP uses port 443; HTTPS uses port 80",
+        "HTTPS only encrypts the username/password; all other data is transmitted in plaintext"
+      ],
+      "answer": 1,
+      "explanation": "HTTPS wraps HTTP traffic in TLS (Transport Layer Security), encrypting all data in transit between client and server. This protects against eavesdropping and man-in-the-middle attacks. HTTP sends everything including login credentials in plaintext, visible to anyone capturing network traffic."
+    },
+    {
+      "q": "What is Telnet, why was it widely used, and why is it no longer recommended for production environments?",
+      "options": [
+        "Telnet is a file transfer protocol replaced by FTP; deprecated due to slow speeds",
+        "Telnet provides unencrypted remote command-line access on port 23; it is no longer recommended because all data including passwords are transmitted in plaintext — SSH replaced it",
+        "Telnet is a DNS query tool replaced by nslookup for security reasons",
+        "Telnet is a VPN protocol deprecated in favor of IPsec"
+      ],
+      "answer": 1,
+      "explanation": "Telnet (port 23) was the original remote terminal protocol. Since it transmits everything in plaintext, any user capturing network traffic can read usernames, passwords, and commands. SSH (Secure Shell, port 22) replaced Telnet by providing encrypted remote access."
+    },
+    {
+      "q": "Which TCP/IP model layer handles IP addressing, routing decisions, and forwarding packets between different networks?",
+      "options": [
+        "Network Access layer",
+        "Internet layer (equivalent to OSI Network layer)",
+        "Transport layer",
+        "Application layer"
+      ],
+      "answer": 1,
+      "explanation": "The Internet layer of the TCP/IP model (corresponding to OSI Layer 3 — Network) handles IP addressing and routing. Routers operate at this layer, making forwarding decisions based on IP destination addresses. Protocols at this layer include IP, ICMP, and ARP."
+    },
+    {
+      "q": "What port does IMAP use by default for receiving email, and what is its advantage over POP3?",
+      "options": [
+        "Port 993; IMAP is faster than POP3 for downloading large attachments",
+        "Port 143 (or 993 for IMAP over SSL); IMAP keeps messages on the server and syncs across multiple devices, unlike POP3 which downloads and typically deletes server copies",
+        "Port 110; IMAP and POP3 use the same port",
+        "Port 25; IMAP can both send and receive email unlike POP3"
+      ],
+      "answer": 1,
+      "explanation": "IMAP uses port 143 (or 993 for IMAP over SSL/TLS). Its key advantage over POP3 is server-side storage and multi-device synchronization — emails stay on the server and changes (read/delete/folder) sync across all devices. POP3 (port 110) downloads and removes messages, making it unsuitable for multi-device access."
+    }
+  ]
+}

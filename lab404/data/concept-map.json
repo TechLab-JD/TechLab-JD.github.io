@@ -1,0 +1,384 @@
+{
+  "core1": {
+    "nodes": [
+      { "id": "d1", "type": "domain", "label": "Mobile Devices", "domain": "mobile", "weight": 13, "color": "#00c8ff" },
+      { "id": "d2", "type": "domain", "label": "Networking", "domain": "networking", "weight": 20, "color": "#00ffcc" },
+      { "id": "d3", "type": "domain", "label": "Hardware", "domain": "hardware", "weight": 27, "color": "#ff2d55" },
+      { "id": "d4", "type": "domain", "label": "Cloud & Virt.", "domain": "cloud", "weight": 11, "color": "#64dc64" },
+      { "id": "d5", "type": "domain", "label": "Troubleshooting", "domain": "troubleshooting", "weight": 29, "color": "#ff8c00" },
+
+      { "id": "1.1", "type": "objective", "label": "1.1", "domain": "mobile", "parent": "d1",
+        "title": "Laptop hardware components",
+        "description": "Install and configure RAM, storage, wireless cards, ZIF connectors, battery, display, and CPU thermal components in laptop systems.",
+        "chapters": [{"num": 19, "title": "Laptop Hardware & Upgrades", "coverage": "COVERED"}] },
+      { "id": "1.2", "type": "objective", "label": "1.2", "domain": "mobile", "parent": "d1",
+        "title": "Mobile device display components",
+        "description": "Compare and contrast display components, mobile connectivity types (Bluetooth, NFC, Wi-Fi), and mobile device synchronization methods.",
+        "chapters": [
+          {"num": 19, "title": "Laptop Hardware & Upgrades", "coverage": "COVERED"},
+          {"num": 20, "title": "Mobile Devices: Connectivity & Apps", "coverage": "COVERED"}
+        ] },
+      { "id": "1.3", "type": "objective", "label": "1.3", "domain": "mobile", "parent": "d1",
+        "title": "Configure mobile device accessories",
+        "description": "Set up and configure accessories, ports, and features of mobile devices including enterprise mobility management tools.",
+        "chapters": [
+          {"num": 20, "title": "Mobile Devices: Connectivity & Apps", "coverage": "COVERED"},
+          {"num": 21, "title": "Enterprise Mobility & Mobile Troubleshooting", "coverage": "COVERED"}
+        ] },
+
+      { "id": "2.1", "type": "objective", "label": "2.1", "domain": "networking", "parent": "d2",
+        "title": "TCP/UDP ports and protocols",
+        "description": "Compare and contrast TCP vs UDP, common port numbers (HTTP 80, HTTPS 443, SSH 22, FTP 21, DNS 53), and their application purposes.",
+        "chapters": [
+          {"num": 12, "title": "TCP/IP Model & Core Protocols", "coverage": "COVERED"},
+          {"num": 13, "title": "IP Addressing: IPv4, IPv6 & Subnetting", "coverage": "COVERED"},
+          {"num": 14, "title": "DHCP, DNS & Network Services", "coverage": "COVERED"}
+        ] },
+      { "id": "2.2", "type": "objective", "label": "2.2", "domain": "networking", "parent": "d2",
+        "title": "Common networking hardware",
+        "description": "Compare and contrast routers, switches, access points, firewalls, patch panels, PoE injectors, and their roles in network infrastructure.",
+        "chapters": [
+          {"num": 12, "title": "TCP/IP Model & Core Protocols", "coverage": "COVERED"},
+          {"num": 15, "title": "Network Hardware & Types", "coverage": "COVERED"}
+        ] },
+      { "id": "2.3", "type": "objective", "label": "2.3", "domain": "networking", "parent": "d2",
+        "title": "Wireless networking protocols",
+        "description": "Compare 802.11 standards (a/b/g/n/ac/ax), 2.4 GHz vs 5 GHz frequency bands, encryption types, and channel configuration.",
+        "chapters": [
+          {"num": 13, "title": "IP Addressing: IPv4, IPv6 & Subnetting", "coverage": "COVERED"},
+          {"num": 16, "title": "Wireless Networking", "coverage": "COVERED"}
+        ] },
+      { "id": "2.4", "type": "objective", "label": "2.4", "domain": "networking", "parent": "d2",
+        "title": "Networked host services",
+        "description": "Summarize services provided by networked hosts: DHCP, DNS, HTTP/HTTPS, file servers, print servers, and authentication services.",
+        "chapters": [
+          {"num": 14, "title": "DHCP, DNS & Network Services", "coverage": "COVERED"},
+          {"num": 16, "title": "Wireless Networking", "coverage": "COVERED"}
+        ] },
+      { "id": "2.5", "type": "objective", "label": "2.5", "domain": "networking", "parent": "d2",
+        "title": "SOHO network configuration",
+        "description": "Install and configure a basic wired/wireless SOHO network with proper IP addressing, NAT, DHCP, and firewall rules.",
+        "chapters": [
+          {"num": 15, "title": "Network Hardware & Types", "coverage": "COVERED"}
+        ] },
+      { "id": "2.6", "type": "objective", "label": "2.6", "domain": "networking", "parent": "d2",
+        "title": "Internet connection types",
+        "description": "Compare and contrast DSL, cable, fiber, cellular (4G/5G), satellite, and WiMAX internet connection types and their characteristics.",
+        "chapters": [
+          {"num": 17, "title": "Internet Connections & IoT", "coverage": "COVERED"}
+        ] },
+      { "id": "2.7", "type": "objective", "label": "2.7", "domain": "networking", "parent": "d2",
+        "title": "Network types and features",
+        "description": "Compare and contrast LAN, WAN, MAN, PAN, WLAN, and their topology characteristics and use cases.",
+        "chapters": [
+          {"num": 17, "title": "Internet Connections & IoT", "coverage": "COVERED"}
+        ] },
+
+      { "id": "3.1", "type": "objective", "label": "3.1", "domain": "hardware", "parent": "d3",
+        "title": "Cable types and connectors",
+        "description": "Identify and explain cable types (USB, HDMI, DisplayPort, Ethernet, SATA, Thunderbolt) and the purpose of each connector type.",
+        "chapters": [
+          {"num": 2, "title": "PC Fundamentals & Components", "coverage": "COVERED"},
+          {"num": 9, "title": "Cables, Connectors & USB", "coverage": "COVERED"}
+        ] },
+      { "id": "3.2", "type": "objective", "label": "3.2", "domain": "hardware", "parent": "d3",
+        "title": "Connector and port types",
+        "description": "Compare USB generations (USB-A, USB-C, USB 3.x), video connectors (VGA, DVI, HDMI, DP), and storage interface types.",
+        "chapters": [
+          {"num": 9, "title": "Cables, Connectors & USB", "coverage": "COVERED"}
+        ] },
+      { "id": "3.3", "type": "objective", "label": "3.3", "domain": "hardware", "parent": "d3",
+        "title": "RAM installation",
+        "description": "Install the appropriate RAM type (DDR4/DDR5), form factor (DIMM/SO-DIMM), capacity, and configure dual-channel memory.",
+        "chapters": [
+          {"num": 4, "title": "RAM & Memory", "coverage": "COVERED"}
+        ] },
+      { "id": "3.4", "type": "objective", "label": "3.4", "domain": "hardware", "parent": "d3",
+        "title": "Motherboards, CPUs, and add-on cards",
+        "description": "Install and configure motherboards, CPUs (socket types, cooling), and expansion cards (GPU, NIC, sound card) in desktop systems.",
+        "chapters": [
+          {"num": 3, "title": "CPUs: Architecture & Installation", "coverage": "COVERED"},
+          {"num": 4, "title": "RAM & Memory", "coverage": "COVERED"},
+          {"num": 5, "title": "Motherboards & Expansion Cards", "coverage": "COVERED"},
+          {"num": 6, "title": "Storage Devices: HDD, SSD & RAID", "coverage": "COVERED"},
+          {"num": 7, "title": "Power Supplies & Cooling", "coverage": "COVERED"}
+        ] },
+      { "id": "3.5", "type": "objective", "label": "3.5", "domain": "hardware", "parent": "d3",
+        "title": "CPU and motherboard features",
+        "description": "Configure BIOS/UEFI settings, understand CPU socket compatibility, PCIe slots, and form factors (ATX, Micro-ATX, ITX).",
+        "chapters": [
+          {"num": 3, "title": "CPUs: Architecture & Installation", "coverage": "COVERED"},
+          {"num": 5, "title": "Motherboards & Expansion Cards", "coverage": "COVERED"}
+        ] },
+      { "id": "3.6", "type": "objective", "label": "3.6", "domain": "hardware", "parent": "d3",
+        "title": "Storage device installation",
+        "description": "Select and install HDDs, SSDs (SATA/NVMe/M.2), optical drives, and configure RAID levels (0, 1, 5, 10) for appropriate use cases.",
+        "chapters": [
+          {"num": 6, "title": "Storage Devices: HDD, SSD & RAID", "coverage": "COVERED"}
+        ] },
+      { "id": "3.7", "type": "objective", "label": "3.7", "domain": "hardware", "parent": "d3",
+        "title": "Power supply installation",
+        "description": "Install and replace power supplies with proper wattage, connector types (24-pin, EPS, PCIe), and 80 Plus efficiency ratings.",
+        "chapters": [
+          {"num": 7, "title": "Power Supplies & Cooling", "coverage": "COVERED"}
+        ] },
+      { "id": "3.8", "type": "objective", "label": "3.8", "domain": "hardware", "parent": "d3",
+        "title": "Display installation and configuration",
+        "description": "Configure displays with appropriate resolution, refresh rate, panel type (IPS/VA/TN), and connector (HDMI, DisplayPort, VGA, DVI).",
+        "chapters": [
+          {"num": 8, "title": "Display Technologies & Interfaces", "coverage": "COVERED"}
+        ] },
+      { "id": "3.9", "type": "objective", "label": "3.9", "domain": "hardware", "parent": "d3",
+        "title": "Printer deployment and configuration",
+        "description": "Deploy and configure multifunction devices including laser, inkjet, and thermal printers with network connectivity and print queue setup.",
+        "chapters": [
+          {"num": 10, "title": "Printers: Technologies & Setup", "coverage": "COVERED"},
+          {"num": 11, "title": "Printers: Config, Security & Maintenance", "coverage": "COVERED"}
+        ] },
+      { "id": "3.10", "type": "objective", "label": "3.10", "domain": "hardware", "parent": "d3",
+        "title": "Printer consumables replacement",
+        "description": "Install and replace printer consumables: ink cartridges, toner cartridges, fuser assemblies, drum units, and maintenance kits.",
+        "chapters": [
+          {"num": 10, "title": "Printers: Technologies & Setup", "coverage": "COVERED"},
+          {"num": 11, "title": "Printers: Config, Security & Maintenance", "coverage": "COVERED"}
+        ] },
+
+      { "id": "4.1", "type": "objective", "label": "4.1", "domain": "cloud", "parent": "d4",
+        "title": "Cloud computing concepts",
+        "description": "Summarize cloud service models (IaaS, PaaS, SaaS), deployment types (public, private, hybrid, community), and cloud characteristics.",
+        "chapters": [
+          {"num": 22, "title": "Cloud Computing Fundamentals", "coverage": "COVERED"},
+          {"num": 23, "title": "Virtualization Deep Dive", "coverage": "COVERED"}
+        ] },
+      { "id": "4.2", "type": "objective", "label": "4.2", "domain": "cloud", "parent": "d4",
+        "title": "Client-side virtualization",
+        "description": "Summarize hypervisor types (Type 1 bare-metal, Type 2 hosted), VM resource requirements, snapshots, and virtual network configurations.",
+        "chapters": [
+          {"num": 23, "title": "Virtualization Deep Dive", "coverage": "COVERED"}
+        ] },
+
+      { "id": "5.1", "type": "objective", "label": "5.1", "domain": "troubleshooting", "parent": "d5",
+        "title": "Troubleshooting methodology",
+        "description": "Apply the CompTIA 7-step troubleshooting process: identify the problem, establish a theory, test the theory, plan a solution, implement it, verify, and document.",
+        "chapters": [
+          {"num": 1, "title": "IT Foundations & Troubleshooting Methodology", "coverage": "COVERED"}
+        ] },
+      { "id": "5.2", "type": "objective", "label": "5.2", "domain": "troubleshooting", "parent": "d5",
+        "title": "IT foundations and support",
+        "description": "Understand the IT technician role, safety procedures, basic computer components, and professional communication with customers.",
+        "chapters": [
+          {"num": 1, "title": "IT Foundations & Troubleshooting Methodology", "coverage": "COVERED"}
+        ] },
+      { "id": "5.3", "type": "objective", "label": "5.3", "domain": "troubleshooting", "parent": "d5",
+        "title": "Storage drive troubleshooting",
+        "description": "Diagnose and resolve issues with HDDs (clicking, bad sectors), SSDs, RAID array degradation, and boot drive failures.",
+        "chapters": [
+          {"num": 24, "title": "Hardware Troubleshooting", "coverage": "COVERED"}
+        ] },
+      { "id": "5.4", "type": "objective", "label": "5.4", "domain": "troubleshooting", "parent": "d5",
+        "title": "Display and video troubleshooting",
+        "description": "Troubleshoot no signal, dead pixels, incorrect resolution, screen flickering, projector problems, and GPU-related display issues.",
+        "chapters": [
+          {"num": 21, "title": "Enterprise Mobility & Mobile Troubleshooting", "coverage": "COVERED"},
+          {"num": 24, "title": "Hardware Troubleshooting", "coverage": "COVERED"},
+          {"num": 25, "title": "Display & Printer Troubleshooting", "coverage": "COVERED"}
+        ] },
+      { "id": "5.5", "type": "objective", "label": "5.5", "domain": "troubleshooting", "parent": "d5",
+        "title": "Hardware component troubleshooting",
+        "description": "Diagnose POST errors, beep codes, RAM failures, CPU overheating, and power supply issues in desktop and laptop systems.",
+        "chapters": [
+          {"num": 24, "title": "Hardware Troubleshooting", "coverage": "COVERED"},
+          {"num": 25, "title": "Display & Printer Troubleshooting", "coverage": "COVERED"}
+        ] },
+      { "id": "5.6", "type": "objective", "label": "5.6", "domain": "troubleshooting", "parent": "d5",
+        "title": "Network troubleshooting",
+        "description": "Diagnose no connectivity, limited connectivity, intermittent issues, and slow network speeds using ping, ipconfig, tracert, and nslookup.",
+        "chapters": [
+          {"num": 18, "title": "Network Monitoring & Troubleshooting", "coverage": "COVERED"}
+        ] },
+      { "id": "5.7", "type": "objective", "label": "5.7", "domain": "troubleshooting", "parent": "d5",
+        "title": "Wireless network troubleshooting",
+        "description": "Troubleshoot wired and wireless network issues including APIPA addresses, DNS failures, authentication errors, and signal interference.",
+        "chapters": [
+          {"num": 18, "title": "Network Monitoring & Troubleshooting", "coverage": "COVERED"}
+        ] }
+    ],
+    "edges": [
+      {"source": "d1", "target": "1.1"}, {"source": "d1", "target": "1.2"}, {"source": "d1", "target": "1.3"},
+      {"source": "d2", "target": "2.1"}, {"source": "d2", "target": "2.2"}, {"source": "d2", "target": "2.3"},
+      {"source": "d2", "target": "2.4"}, {"source": "d2", "target": "2.5"}, {"source": "d2", "target": "2.6"},
+      {"source": "d2", "target": "2.7"},
+      {"source": "d3", "target": "3.1"}, {"source": "d3", "target": "3.2"}, {"source": "d3", "target": "3.3"},
+      {"source": "d3", "target": "3.4"}, {"source": "d3", "target": "3.5"}, {"source": "d3", "target": "3.6"},
+      {"source": "d3", "target": "3.7"}, {"source": "d3", "target": "3.8"}, {"source": "d3", "target": "3.9"},
+      {"source": "d3", "target": "3.10"},
+      {"source": "d4", "target": "4.1"}, {"source": "d4", "target": "4.2"},
+      {"source": "d5", "target": "5.1"}, {"source": "d5", "target": "5.2"}, {"source": "d5", "target": "5.3"},
+      {"source": "d5", "target": "5.4"}, {"source": "d5", "target": "5.5"}, {"source": "d5", "target": "5.6"},
+      {"source": "d5", "target": "5.7"}
+    ]
+  },
+
+  "core2": {
+    "nodes": [
+      { "id": "d1", "type": "domain", "label": "Operating Systems", "domain": "os", "weight": 28, "color": "#7b2fff" },
+      { "id": "d2", "type": "domain", "label": "Security", "domain": "security", "weight": 27, "color": "#00ffcc" },
+      { "id": "d3", "type": "domain", "label": "Troubleshooting", "domain": "troubleshooting", "weight": 26, "color": "#ff8c00" },
+      { "id": "d4", "type": "domain", "label": "Operational Proc.", "domain": "operational", "weight": 19, "color": "#64dc64" },
+
+      { "id": "1.1", "type": "objective", "label": "1.1", "domain": "os", "parent": "d1",
+        "title": "Windows editions",
+        "description": "Identify Windows 10/11 Home, Pro, Enterprise, and Education editions, their feature differences, upgrade paths, and licensing requirements.",
+        "chapters": [{"num": 1, "title": "Windows Editions & OS Overview", "coverage": "COVERED"}] },
+      { "id": "1.2", "type": "objective", "label": "1.2", "domain": "os", "parent": "d1",
+        "title": "OS installation and upgrades",
+        "description": "Perform Windows OS installations, in-place upgrades, and clean installs while managing partition types, file systems, and boot options.",
+        "chapters": [{"num": 2, "title": "OS Installation & Upgrades", "coverage": "COVERED"}] },
+      { "id": "1.3", "type": "objective", "label": "1.3", "domain": "os", "parent": "d1",
+        "title": "Windows command-line tools",
+        "description": "Use Microsoft command-line tools: ipconfig, ping, tracert, netstat, nslookup, sfc, chkdsk, DISM, and PowerShell commands.",
+        "chapters": [{"num": 2, "title": "OS Installation & Upgrades", "coverage": "COVERED"}] },
+      { "id": "1.4", "type": "objective", "label": "1.4", "domain": "os", "parent": "d1",
+        "title": "Windows features and tools",
+        "description": "Use Windows OS features including Task Manager, Device Manager, Registry Editor, System Restore, and MMC snap-ins.",
+        "chapters": [{"num": 3, "title": "Windows Features & Settings", "coverage": "COVERED"}] },
+      { "id": "1.5", "type": "objective", "label": "1.5", "domain": "os", "parent": "d1",
+        "title": "Windows settings",
+        "description": "Configure Windows settings for display, power, updates, accessibility, and system properties using both Settings app and Control Panel.",
+        "chapters": [{"num": 3, "title": "Windows Features & Settings", "coverage": "COVERED"}] },
+      { "id": "1.6", "type": "objective", "label": "1.6", "domain": "os", "parent": "d1",
+        "title": "Windows networking and command line",
+        "description": "Configure Windows network adapters, wireless profiles, VPN connections, and use command-line networking tools for diagnostics.",
+        "chapters": [{"num": 4, "title": "Windows Networking & Command Line", "coverage": "COVERED"}] },
+      { "id": "1.7", "type": "objective", "label": "1.7", "domain": "os", "parent": "d1",
+        "title": "Application installation and management",
+        "description": "Install, configure, and manage applications including compatibility settings, virtual app delivery, and application troubleshooting.",
+        "chapters": [{"num": 5, "title": "Installing Applications", "coverage": "COVERED"}] },
+      { "id": "1.8", "type": "objective", "label": "1.8", "domain": "os", "parent": "d1",
+        "title": "macOS features and tools",
+        "description": "Identify common macOS features (Finder, iCloud, Time Machine, Spotlight) and basic shell commands in Terminal.",
+        "chapters": [{"num": 6, "title": "macOS & Linux Fundamentals", "coverage": "COVERED"}] },
+      { "id": "1.9", "type": "objective", "label": "1.9", "domain": "os", "parent": "d1",
+        "title": "Linux client OS tools",
+        "description": "Use basic Linux commands (ls, pwd, grep, chmod, sudo), understand distributions, package managers (apt/yum), and file permissions.",
+        "chapters": [{"num": 6, "title": "macOS & Linux Fundamentals", "coverage": "COVERED"}] },
+      { "id": "1.10", "type": "objective", "label": "1.10", "domain": "os", "parent": "d1",
+        "title": "Cloud-based productivity tools",
+        "description": "Identify and configure cloud-based productivity platforms (Microsoft 365, Google Workspace) and collaboration features.",
+        "chapters": [{"num": 7, "title": "Cloud-Based Productivity", "coverage": "COVERED"}] },
+
+      { "id": "2.1", "type": "objective", "label": "2.1", "domain": "security", "parent": "d2",
+        "title": "Physical and logical security measures",
+        "description": "Summarize physical security controls (door locks, cameras, badge readers) and logical controls (ACLs, MFA, principle of least privilege).",
+        "chapters": [{"num": 8, "title": "Physical Security & Access Controls", "coverage": "COVERED"}] },
+      { "id": "2.2", "type": "objective", "label": "2.2", "domain": "security", "parent": "d2",
+        "title": "Wireless security protocols",
+        "description": "Compare WPA2 (TKIP/AES) and WPA3, enterprise vs personal authentication, RADIUS, and wireless security best practices.",
+        "chapters": [{"num": 8, "title": "Physical Security & Access Controls", "coverage": "COVERED"}] },
+      { "id": "2.3", "type": "objective", "label": "2.3", "domain": "security", "parent": "d2",
+        "title": "Social engineering attacks",
+        "description": "Explain phishing, vishing, smishing, tailgating, shoulder surfing, dumpster diving, and impersonation attacks and prevention strategies.",
+        "chapters": [{"num": 9, "title": "Social Engineering & Threats", "coverage": "COVERED"}] },
+      { "id": "2.4", "type": "objective", "label": "2.4", "domain": "security", "parent": "d2",
+        "title": "Malware types and threats",
+        "description": "Identify malware types (virus, worm, Trojan, ransomware, spyware, keylogger, rootkit) and common attack vectors.",
+        "chapters": [
+          {"num": 9, "title": "Social Engineering & Threats", "coverage": "COVERED"},
+          {"num": 10, "title": "Malware Detection & Removal", "coverage": "COVERED"}
+        ] },
+      { "id": "2.5", "type": "objective", "label": "2.5", "domain": "security", "parent": "d2",
+        "title": "Malware detection and removal",
+        "description": "Detect, remove, and prevent malware using anti-malware tools, scanning techniques, quarantine, and safe mode removal procedures.",
+        "chapters": [{"num": 10, "title": "Malware Detection & Removal", "coverage": "COVERED"}] },
+      { "id": "2.6", "type": "objective", "label": "2.6", "domain": "security", "parent": "d2",
+        "title": "SOHO network security",
+        "description": "Configure SOHO network security: change default credentials, enable WPA3, set up DMZ, configure firewall rules, and guest networks.",
+        "chapters": [{"num": 11, "title": "SOHO & Wireless Network Security", "coverage": "COVERED"}] },
+      { "id": "2.7", "type": "objective", "label": "2.7", "domain": "security", "parent": "d2",
+        "title": "Windows security configuration",
+        "description": "Configure Windows Defender Firewall, BitLocker encryption, UAC, security policies, and browser security settings.",
+        "chapters": [
+          {"num": 11, "title": "SOHO & Wireless Network Security", "coverage": "COVERED"},
+          {"num": 12, "title": "Windows Security & Browser Security", "coverage": "COVERED"}
+        ] },
+      { "id": "2.8", "type": "objective", "label": "2.8", "domain": "security", "parent": "d2",
+        "title": "Workstation security hardening",
+        "description": "Apply workstation security best practices: strong passwords, screen locks, patch management, least privilege, and disable unused ports/services.",
+        "chapters": [
+          {"num": 12, "title": "Windows Security & Browser Security", "coverage": "COVERED"},
+          {"num": 13, "title": "Workstation Hardening & Mobile Security", "coverage": "COVERED"}
+        ] },
+      { "id": "2.9", "type": "objective", "label": "2.9", "domain": "security", "parent": "d2",
+        "title": "Mobile and data security",
+        "description": "Secure mobile and embedded devices with screen locks, remote wipe, MDM enrollment, full-device encryption, and proper data disposal methods.",
+        "chapters": [
+          {"num": 13, "title": "Workstation Hardening & Mobile Security", "coverage": "COVERED"},
+          {"num": 14, "title": "Data Destruction & Disposal", "coverage": "COVERED"}
+        ] },
+
+      { "id": "3.1", "type": "objective", "label": "3.1", "domain": "troubleshooting", "parent": "d3",
+        "title": "Windows OS troubleshooting",
+        "description": "Troubleshoot Blue Screen of Death (BSoD), slow startup, application crashes, update failures, and use Windows Recovery Environment tools.",
+        "chapters": [{"num": 15, "title": "Windows OS Troubleshooting", "coverage": "COVERED"}] },
+      { "id": "3.2", "type": "objective", "label": "3.2", "domain": "troubleshooting", "parent": "d3",
+        "title": "PC security issue troubleshooting",
+        "description": "Diagnose malware infection symptoms, account lockouts, unauthorized access attempts, browser redirects, and suspicious network activity.",
+        "chapters": [{"num": 16, "title": "PC Security & Mobile OS Issues", "coverage": "COVERED"}] },
+      { "id": "3.3", "type": "objective", "label": "3.3", "domain": "troubleshooting", "parent": "d3",
+        "title": "Mobile OS and application issues",
+        "description": "Troubleshoot mobile OS problems including app crashes, slow performance, battery drain, connectivity issues, and screen problems.",
+        "chapters": [{"num": 16, "title": "PC Security & Mobile OS Issues", "coverage": "COVERED"}] },
+
+      { "id": "4.1", "type": "objective", "label": "4.1", "domain": "operational", "parent": "d4",
+        "title": "Documentation best practices",
+        "description": "Create and maintain IT documentation: network diagrams, knowledge bases, SOP manuals, asset inventory, and incident reports.",
+        "chapters": [
+          {"num": 7, "title": "Cloud-Based Productivity", "coverage": "COVERED"},
+          {"num": 18, "title": "Documentation & Change Management", "coverage": "COVERED"}
+        ] },
+      { "id": "4.2", "type": "objective", "label": "4.2", "domain": "operational", "parent": "d4",
+        "title": "Change management practices",
+        "description": "Implement change management: submit requests, obtain approvals, create rollback plans, update documentation, and communicate changes.",
+        "chapters": [
+          {"num": 18, "title": "Documentation & Change Management", "coverage": "COVERED"},
+          {"num": 20, "title": "Backup, Recovery & Operational Wrap-Up", "coverage": "COVERED"}
+        ] },
+      { "id": "4.3", "type": "objective", "label": "4.3", "domain": "operational", "parent": "d4",
+        "title": "Backup and recovery methods",
+        "description": "Implement workstation backup strategies: full, incremental, differential backups; 3-2-1 backup rule; and test recovery procedures.",
+        "chapters": [{"num": 20, "title": "Backup, Recovery & Operational Wrap-Up", "coverage": "COVERED"}] },
+      { "id": "4.4", "type": "objective", "label": "4.4", "domain": "operational", "parent": "d4",
+        "title": "Safety procedures",
+        "description": "Use common IT safety procedures: ESD prevention (anti-static straps), electrical safety, proper lifting, and fire suppression systems.",
+        "chapters": [{"num": 17, "title": "Safety Procedures", "coverage": "COVERED"}] },
+      { "id": "4.5", "type": "objective", "label": "4.5", "domain": "operational", "parent": "d4",
+        "title": "Environmental impacts and controls",
+        "description": "Summarize environmental controls: temperature, humidity, power protection (UPS, surge protectors), and proper equipment disposal regulations.",
+        "chapters": [
+          {"num": 14, "title": "Data Destruction & Disposal", "coverage": "COVERED"},
+          {"num": 19, "title": "Privacy, Licensing & Environmental Impact", "coverage": "COVERED"}
+        ] },
+      { "id": "4.6", "type": "objective", "label": "4.6", "domain": "operational", "parent": "d4",
+        "title": "Privacy, licensing, and policy",
+        "description": "Explain PII protection requirements, software licensing (EULA, open-source, commercial), data retention policies, and regulatory compliance.",
+        "chapters": [{"num": 19, "title": "Privacy, Licensing & Environmental Impact", "coverage": "COVERED"}] },
+      { "id": "4.7", "type": "objective", "label": "4.7", "domain": "operational", "parent": "d4",
+        "title": "Communication and professionalism",
+        "description": "Apply professional communication skills: set expectations, avoid jargon, follow up with customers, and document completed work properly.",
+        "chapters": [{"num": 4, "title": "Windows Networking & Command Line", "coverage": "COVERED"}] }
+    ],
+    "edges": [
+      {"source": "d1", "target": "1.1"}, {"source": "d1", "target": "1.2"}, {"source": "d1", "target": "1.3"},
+      {"source": "d1", "target": "1.4"}, {"source": "d1", "target": "1.5"}, {"source": "d1", "target": "1.6"},
+      {"source": "d1", "target": "1.7"}, {"source": "d1", "target": "1.8"}, {"source": "d1", "target": "1.9"},
+      {"source": "d1", "target": "1.10"},
+      {"source": "d2", "target": "2.1"}, {"source": "d2", "target": "2.2"}, {"source": "d2", "target": "2.3"},
+      {"source": "d2", "target": "2.4"}, {"source": "d2", "target": "2.5"}, {"source": "d2", "target": "2.6"},
+      {"source": "d2", "target": "2.7"}, {"source": "d2", "target": "2.8"}, {"source": "d2", "target": "2.9"},
+      {"source": "d3", "target": "3.1"}, {"source": "d3", "target": "3.2"}, {"source": "d3", "target": "3.3"},
+      {"source": "d4", "target": "4.1"}, {"source": "d4", "target": "4.2"}, {"source": "d4", "target": "4.3"},
+      {"source": "d4", "target": "4.4"}, {"source": "d4", "target": "4.5"}, {"source": "d4", "target": "4.6"},
+      {"source": "d4", "target": "4.7"}
+    ]
+  }
+}

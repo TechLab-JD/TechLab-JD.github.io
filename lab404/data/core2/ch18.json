@@ -1,0 +1,286 @@
+{
+  "core": 2,
+  "chapter": 18,
+  "title": "Documentation & Change Management",
+  "exam_objectives": [
+    "4.1",
+    "4.2"
+  ],
+  "coverage": "COVERED",
+  "domain": "operational",
+  "domain_label": "Operational Procedures",
+  "sections": [
+    {
+      "title": "Ticketing Systems",
+      "content": "A ticketing system is the operational record of IT support activity. Every issue, every request, every incident should be tracked in a ticket.\nRequired ticket components: user information â€” name, contact details, department, physical location. Device information â€” hostname, IP address, asset tag, operating system, hardware specifications. Issue description â€” a factual account of what happened, when it started, which functions are affected, any error messages, and the steps to reproduce the issue. Category â€” hardware, software, network, security, user account â€” determines routing to the correct team.\nSeverity levels determine priority and response requirements. Critical: complete system failure, business operations halted, an entire department cannot work. The most severe level. High: major functionality is lost, significant productivity impact â€” users can still work but are significantly impaired. Medium: partial functionality loss, workarounds are available. Low: minor inconvenience, cosmetic issues, or feature requests. Severity drives the response timeline â€” a critical ticket gets immediate attention; a low ticket goes into a queue.\nEscalation tiers: Tier 1 â€” the help desk, handling basic troubleshooting, account resets, and simple issues. Tier 2 â€” advanced technicians with specialized knowledge who handle issues escalated from Tier 1. Tier 3 â€” engineers, senior developers, or vendor support for complex issues requiring deep expertise. Management escalation for critical issues requiring executive decision-making.\nDocumentation within a ticket has three distinct phases. The issue description documents the initial state â€” what was reported, when it started, what is affected. Progress notes document the troubleshooting process â€” what steps were taken, what tests were run, what was found. Each entry should be timestamped. The resolution documents the root cause identified, the solution applied, the verification steps confirming the fix, and any recommendations for preventing recurrence.\nClear written communication: use professional language. Avoid jargon when writing for non-technical stakeholders. Be specific and factual â€” avoid vague descriptions like \"it was acting weird.\" Spell out error messages verbatim. Document what you actually did, not what you planned to do.\n---",
+      "exam_tips": [
+        "Critical = business operations STOPPED. Not \"the user is frustrated\" â€” Critical means the business cannot function. Severity drives SLA response time. A critical ticket from one user may still be Critical if that user runs a business-critical function."
+      ]
+    },
+    {
+      "title": "Asset Management",
+      "content": "Asset management is the systematic tracking and management of IT equipment throughout its entire lifecycle â€” from procurement through retirement.\nInventory lists: a catalog of all IT assets. Hardware: computers, servers, printers, network equipment. Software: licensed applications, version numbers, installation dates. Peripherals: monitors, keyboards, docking stations. Mobile devices: phones, tablets, laptops. Each entry includes physical location â€” building, floor, room, desk assignment.\nCMDB â€” Configuration Management Database: a centralized repository that stores not just individual asset information but the relationships between assets. A server entry in the CMDB includes which applications run on it, which switches it connects to, which users depend on it, and the change history â€” what was modified, when, and by whom. The CMDB enables impact analysis â€” before making a change, the CMDB shows what else is affected. Without a CMDB, an organization may not know that changing a network switch affects twelve dependent systems.\nAsset tags and IDs: physical labels attached to equipment â€” often barcodes or QR codes â€” that provide a unique identifier linking the physical device to its database record. Asset tags enable accurate physical audits, prevent theft by establishing ownership, and enable quick lookups by scanning rather than searching manually.\nProcurement lifecycle: needs assessment, vendor selection, purchase approval, acquisition, deployment, maintenance, retirement. Tracking each asset through this lifecycle ensures equipment is properly accounted for from purchase to disposal.\nWarranty and license management: warranty tracking records expiration dates, coverage details, vendor contact, and claim procedures. A computer under warranty that needs a replacement drive should not cost anything â€” but without tracking, that warranty may be missed. Software license management tracks entitlements, seat counts, renewal dates, and compliance requirements. Running unlicensed software creates legal and audit exposure.\nAssigned users: every asset should have an assigned primary user. This enables accountability, facilitates equipment recovery during offboarding, and connects the asset to data security policies relevant to the user's role.\nIncident reports: formal documentation of unplanned events. An incident report captures the date and time, affected systems, users impacted, timeline of events, root cause analysis, response actions taken, and lessons learned. Used for trend analysis â€” if the same system generates repeated incidents, the incident report history makes that pattern visible. May be required for compliance or legal purposes.\nSOPs â€” Standard Operating Procedures: step-by-step instructions for routine operations. Examples: a custom software installation procedure for applications that require specific configuration during deployment. A new user onboarding checklist: account creation, email setup, software installation, hardware assignment, security training, access rights configuration. A user offboarding checklist: disable accounts, revoke access, retrieve equipment, backup data, remove from distribution lists. SOPs ensure consistency and reduce errors â€” when everyone follows the same procedure, the outcome is predictable.\nSLAs â€” Service-Level Agreements: formal contracts defining expected service standards. Internal SLAs exist between the IT department and business units within the same organization. External SLAs exist between the organization and outside vendors or service providers. An SLA specifies response time â€” how quickly a ticket must be acknowledged â€” resolution time â€” how quickly it must be resolved â€” availability targets â€” what uptime percentage is committed â€” and support hours. SLAs include penalties for non-compliance. Example: Critical tickets â€” respond within 1 hour, resolve within 4 hours.\nKnowledge base: a searchable repository of solutions, troubleshooting guides, how-to articles, and known issues. Enables self-service â€” users can search for a solution without opening a ticket. Reduces technician workload by documenting solutions once and making them available to all. Should be accessible to both technicians and end users. Updated regularly as new solutions are found.\n---",
+      "exam_tips": [
+        "Emergency change bypasses normal CAB approval but still requires documentation and retroactive CAB review â€” it is not an excuse to avoid documentation. Change freeze blocks Standard and Normal changes; Emergency changes may still be permitted with executive approval."
+      ]
+    },
+    {
+      "title": "Change Management",
+      "content": "Change management is the structured process for planning, approving, implementing, and reviewing changes to IT systems.\nThe purpose: minimize risk, reduce unplanned downtime, prevent unauthorized changes, and coordinate changes across teams. Without change management, a well-intentioned change can create an outage, a security vulnerability, or a compliance violation.\nChange request form: the formal documentation required to initiate the change process. Contains the purpose of the change â€” the business justification, what problem it solves or improvement it provides. The scope â€” which systems, applications, or components are included, what is explicitly excluded, how many users or devices are affected. Must be submitted before any work begins.\nChange types.\nStandard change: pre-approved, low-risk, routine procedure. Examples: password resets, toner replacement, routine patches. Follows an established procedure. No additional approval required beyond existing pre-approval. Still documented.\nNormal change: requires review and approval. Moderate risk or complexity. Goes through the full change management process â€” CAB review and approval. Most changes fall into this category. Examples: software upgrades, system configuration changes, network modifications.\nEmergency change: urgent situation requiring immediate action. Examples: critical security vulnerability being actively exploited, emergency repair to restore a down system. Abbreviated approval process â€” bypasses the normal CAB cycle. Still requires documentation. Reviewed by the CAB retroactively. Should not be used to avoid the normal process for non-urgent changes.\nCAB â€” Change Advisory Board: a cross-functional body that reviews and approves normal changes. Typically includes representatives from IT operations, IT security, business stakeholders, and management. Evaluates risk, impact on dependent systems and users, timing, and resource requirements. Approves, denies, or requests additional information. Meets on a regular schedule. Emergency CAB can be convened for urgent decisions.\nPlanning requirements.\nRollback plan: a documented procedure for reversing the change if it does not work as intended or causes problems. Created before implementation â€” not during or after. Specifies exactly how to undo the change, how long the rollback will take, and who performs it. The rollback plan should be tested in the sandbox environment.\nBackup plan: a data protection strategy implemented before the change. Includes system backups, configuration backups, and database backups as appropriate. The backup is verified â€” tested to confirm it is restorable â€” before the change proceeds. Stored separately from the production system.\nSandbox testing: the change is validated in an isolated environment that mirrors production before deployment. Identifies compatibility issues, unexpected behavior, and performance problems before they affect real users. Documents test results and any issues found.\nScheduling: changes are scheduled to minimize disruption.\nMaintenance windows: pre-approved time slots for system changes â€” typically nights, weekends, or holidays when user activity is lowest. Multiple changes can be batched into a single maintenance window.\nChange freeze: a designated period during which no changes are permitted. Protects high-stakes business periods â€” year-end financial processing, major product launches, peak retail seasons. Emergency changes may still proceed with executive approval during a change freeze, but the bar is high.\nPeer review: a technical review of the change plan by colleagues who were not involved in creating it. Validates the approach, identifies potential issues, and ensures best practices are followed. Conducted before approval.\nEnd-user acceptance: after implementation, users validate that the change meets requirements and that they can perform their work with the new state of the system. Provides final confirmation before the change is closed.\n---",
+      "exam_tips": [
+        "Rollback plan = how to reverse the change. Backup plan = data protection before the change. Both are created BEFORE implementation â€” not during or after. Sandbox testing validates the change before any of this is needed in production.",
+        "Maintenance window = WHEN you make changes (scheduled low-impact time). Change freeze = when you CANNOT make changes (critical business period). The two concepts have opposite meanings â€” know the distinction.",
+        "CMDB tracks relationships between configuration items â€” not just what exists but how systems depend on each other. Before making a change, use CMDB to identify all dependent systems (impact analysis). Inventory lists track WHAT you have; CMDB tracks HOW they connect."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "An undocumented ticket is a liability. If you cannot show what you did, when you did it, and why â€” the work might as well not have happened. The A+ exam tests the components of good IT documentation.",
+      "concept": "TICKETING SYSTEMS AND DOCUMENTATION â€” WHAT GOOD LOOKS LIKE",
+      "summary": "A ticketing system is the backbone of IT support operations. Every issue should generate a ticket, and every ticket should contain specific information."
+    },
+    {
+      "hook": "Someone pushed a configuration change to production on a Friday afternoon without approval. By Monday morning the call center was down. Change management exists to prevent exactly this. The A+ exam tests the process, the change types, and the approval structure.",
+      "concept": "CHANGE MANAGEMENT â€” THE PROCESS THAT PREVENTS OUTAGES",
+      "summary": "Change management is the structured process for making controlled changes to IT systems. The three change types."
+    },
+    {
+      "hook": "A ticketing system is the operational record of IT support activity.",
+      "concept": "Ticketing Systems",
+      "summary": "A ticketing system is the operational record of IT support activity. Every issue, every request, every incident should be tracked in a ticket. Required ticket components: user information â€” name, contact details, department, physical location."
+    },
+    {
+      "hook": "Asset management is the systematic tracking and management of IT equipment throughout its entire lifecycle â€” from procurement through retirement.",
+      "concept": "Asset Management",
+      "summary": "Asset management is the systematic tracking and management of IT equipment throughout its entire lifecycle â€” from procurement through retirement. Inventory lists: a catalog of all IT assets. Hardware: computers, servers, printers, network equipment."
+    },
+    {
+      "hook": "Change management is the structured process for planning, approving, implementing, and reviewing changes to IT systems.",
+      "concept": "Change Management",
+      "summary": "Change management is the structured process for planning, approving, implementing, and reviewing changes to IT systems. The purpose: minimize risk, reduce unplanned downtime, prevent unauthorized changes, and coordinate changes across teams. Without change management, a well-intentioned change can create an outage, a security vulnerability, or a compliance violation."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "[BONUS â€” Beyond A+ Scope] What document describes the steps to restore IT services after an outage or disaster?",
+      "options": [
+        "Disaster Recovery Plan (DRP) or Business Continuity Plan (BCP)",
+        "AUP (Acceptable Use Policy)",
+        "Change management form",
+        "Network diagram"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What type of documentation describes the make, model, configuration, and location of IT assets?",
+      "options": [
+        "Network topology diagram",
+        "Asset inventory or asset management documentation",
+        "Standard operating procedure",
+        "Incident report"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What document provides step-by-step instructions for performing a specific IT task?",
+      "options": [
+        "Network diagram",
+        "Asset inventory",
+        "Standard Operating Procedure (SOP)",
+        "AUP"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What documentation should be updated every time a change is made to the network or IT infrastructure?",
+      "options": [
+        "User manual",
+        "Vendor contracts",
+        "HR policy",
+        "Network documentation and change log"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of a knowledge base in IT support?",
+      "options": [
+        "Document known issues, solutions, and procedures for efficient problem resolution",
+        "Store sensitive user data",
+        "Track hardware inventory only",
+        "Manage vendor invoices"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of a change management process?",
+      "options": [
+        "Speed up all IT changes",
+        "Ensure changes are planned, documented, tested, approved, and reversible to minimize risk",
+        "Block all changes to production systems",
+        "Manage software licenses"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Who typically approves changes in a formal change management process?",
+      "options": [
+        "The technician making the change",
+        "The end user",
+        "A change advisory board (CAB) or management",
+        "The software vendor"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What is a \"change freeze\" in IT operations?",
+      "options": [
+        "Emergency change procedure",
+        "Rolling back all recent changes",
+        "Freezing hardware configurations permanently",
+        "A period where no changes are allowed, typically around critical business periods"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What document must be completed before a change is implemented in a formal change management process?",
+      "options": [
+        "Change request (CR) including scope, risk, and rollback plan",
+        "Post-implementation review",
+        "User acceptance sign-off only",
+        "Vendor approval letter"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Before upgrading firmware on a core network switch, a technician documents the current firmware version and tests the upgrade in a lab environment. Which change management practice does this represent?",
+      "options": [
+        "End-user acceptance testing",
+        "Sandbox testing and rollback planning",
+        "Change advisory board approval",
+        "Scope creep prevention"
+      ],
+      "answer": 1,
+      "explanation": "Testing changes in a sandbox before applying them to production prevents outages from untested updates. Documenting the current state supports the rollback plan, which allows reverting if the change causes problems."
+    },
+    {
+      "q": "A change request to upgrade a payroll server is evaluated by a cross-functional group including security, operations, and business stakeholders who collectively approve or deny it. What is this group called?",
+      "options": [
+        "Help desk tier 2",
+        "Project management office (PMO)",
+        "Change advisory board (CAB)",
+        "Incident response team"
+      ],
+      "answer": 2,
+      "explanation": "The Change Advisory Board (CAB) evaluates, approves, or rejects proposed IT changes, ensuring they are assessed for risk, business impact, and scheduling conflicts before implementation."
+    },
+    {
+      "q": "During a planned server migration, the technician migrates additional servers not included in the original approved change request without submitting an updated request. Which change management problem does this represent?",
+      "options": [
+        "Rollback failure",
+        "End-user rejection",
+        "Change freeze violation",
+        "Scope creep"
+      ],
+      "answer": 3,
+      "explanation": "Scope creep occurs when a change expands beyond what was originally approved without going through the formal change management process, bypassing risk assessment and approval controls."
+    },
+    {
+      "q": "After a software update is applied to production workstations, several critical business applications fail. The technician consults the change documentation and reverses the update successfully. Which change management artifact made the rollback possible?",
+      "options": [
+        "Rollback plan documented in the change request",
+        "Asset inventory",
+        "End-user acceptance test results",
+        "The acceptable use policy"
+      ],
+      "answer": 0,
+      "explanation": "A well-written change request includes a rollback plan specifying how to revert the change if it causes problems. Without this documentation, reverting a failed change is slower and riskier."
+    },
+    {
+      "q": "A technician applies a configuration change to a production firewall during approved maintenance hours. Which step should occur immediately after the change is implemented?",
+      "options": [
+        "Submit the change request for CAB approval",
+        "Perform verification testing and update the change log",
+        "Archive the old firewall and order a replacement",
+        "Notify the ISP of the configuration change"
+      ],
+      "answer": 1,
+      "explanation": "Post-implementation steps include verifying the change worked as expected, confirming no unintended side effects occurred, and updating the change log to maintain an accurate record of the production environment's configuration."
+    },
+    {
+      "q": "What is the purpose of a ticketing system in IT support?",
+      "options": [
+        "Document, track, prioritize, and manage support requests from creation to resolution",
+        "Track IT budget spending",
+        "Manage software licenses",
+        "Monitor network performance"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A network administrator creates a document showing the physical and logical layout of all switches, routers, firewalls, and servers and how they interconnect. Which type of documentation is this?",
+      "options": [
+        "Standard Operating Procedure (SOP)",
+        "Network diagram",
+        "Asset inventory",
+        "Knowledge base article"
+      ],
+      "answer": 1,
+      "explanation": "A network diagram is a visual representation of network topology showing devices and their interconnections. It is fundamental infrastructure documentation used for troubleshooting, planning, and audits."
+    },
+    {
+      "q": "After resolving a recurring printer issue, a technician writes step-by-step instructions documenting the exact diagnostic and resolution process so other technicians can reproduce the fix. This is best described as which document type?",
+      "options": [
+        "Change request",
+        "Acceptable use policy (AUP)",
+        "Knowledge base article",
+        "Incident report"
+      ],
+      "answer": 2,
+      "explanation": "A knowledge base article captures resolution steps for a known issue so other technicians can find and apply the same fix. It differs from an incident report (documents a specific event) and an SOP (defines routine processes)."
+    },
+    {
+      "q": "A company maintains a spreadsheet listing every device, its serial number, assigned user, purchase date, and warranty expiration. Which type of documentation is this?",
+      "options": [
+        "Network diagram",
+        "Change log",
+        "Standard operating procedure",
+        "Asset inventory"
+      ],
+      "answer": 3,
+      "explanation": "An asset inventory tracks hardware and software assets including identifying information, assignment, and lifecycle data. It supports auditing, warranty management, and security compliance."
+    },
+    {
+      "q": "An IT department must document the rules governing acceptable use of company computers, internet access, and email by employees. Which document type is designed for this purpose?",
+      "options": [
+        "Acceptable use policy (AUP)",
+        "Incident response plan",
+        "Knowledge base article",
+        "Standard operating procedure"
+      ],
+      "answer": 0,
+      "explanation": "An AUP defines rules and restrictions for using company technology resources. Employees typically sign it during onboarding; it sets expectations and provides a legal basis for enforcement."
+    },
+    {
+      "q": "What is a change management rollback plan, and why must it be prepared BEFORE implementing a change?",
+      "options": [
+        "A document notifying management if a change needs to be abandoned mid-implementation",
+        "A documented procedure to reverse a change and restore the prior state if it causes problems — essential because attempting to reverse an undocumented change under pressure during an outage leads to errors and extended downtime",
+        "A contingency plan for changes that are denied by the change approval board",
+        "A communication plan notifying users when a change is being rolled back"
+      ],
+      "answer": 1,
+      "explanation": "A rollback plan defines exactly how to undo a change if it fails — configuration backups to restore, services to restart, steps in order. Preparing it before implementation ensures the team knows what to do if something goes wrong, rather than improvising during a stressful incident with users impacted."
+    }
+  ]
+}

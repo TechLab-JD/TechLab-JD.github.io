@@ -1,0 +1,314 @@
+{
+  "core": 2,
+  "chapter": 3,
+  "title": "Windows Features & Settings",
+  "exam_objectives": [
+    "1.4",
+    "1.6"
+  ],
+  "coverage": "COVERED",
+  "domain": "os",
+  "domain_label": "Operating Systems",
+  "sections": [
+    {
+      "title": "Task Manager",
+      "content": "Task Manager is your first-response monitoring tool. Launch it with Ctrl+Shift+Esc, or right-click the taskbar, or press Ctrl+Alt+Delete and select Task Manager.\nThe Processes tab shows every running application and background process with real-time CPU, RAM, disk, network, and GPU usage. Right-click any process to end it, open its file location, or set its execution priority. This is the primary tool for diagnosing high CPU or RAM usage.\nThe Performance tab shows real-time graphs for all major resources â€” CPU utilization and speed, memory usage and available RAM, disk transfer rates, network throughput, and GPU. It also shows uptime. Use this tab to identify resource bottlenecks at a glance. From here, you can open Resource Monitor for more granular data.\nThe Startup tab is critical for boot performance. It shows every program configured to launch automatically at startup, rated High, Medium, or Low for startup impact. You can disable items here to speed up boot. Note: this tab controls user-level applications only â€” not Windows services.\nThe Users tab shows all currently logged-in users, their session status â€” Active or Disconnected â€” and their resource consumption. Administrators can disconnect or sign out other users from here.\nThe Services tab lists all Windows services with their current status. You can start, stop, or restart services from here, and clicking the Open Services link launches the full services.msc console.\n---",
+      "exam_tips": [
+        "Startup tab controls apps only â€” not Windows services"
+      ]
+    },
+    {
+      "title": "Microsoft Management Console And Key Snap-Ins",
+      "content": "The Microsoft Management Console â€” MMC â€” is a framework that hosts administrative tools called snap-ins. You launch the blank MMC with mmc.exe, then add snap-ins. Most of the tools you use daily are pre-built MMC snap-ins launched directly by their .msc file names.\nEvent Viewer â€” eventvwr.msc. This is the Windows logging system. It records events in four main categories: Application events from programs, Security events like logon/logoff and policy changes, System events from Windows components like driver failures and service issues, and Setup events from installations and updates.\nEach event is classified as Information â€” a successful operation â€” Warning â€” a potential future problem â€” Error â€” a significant problem â€” or Critical â€” a severe failure. Every event has a unique Event ID that you can search online to find the specific cause and resolution. When troubleshooting a crashed system or a boot failure, Event Viewer is your first stop.\nDisk Management â€” diskmgmt.msc. The graphical tool for storage configuration. You can initialize new drives, create and delete partitions, format volumes, assign drive letters, extend or shrink existing volumes, and convert between basic and dynamic disk types. Disk Management also shows the partition style â€” GPT or MBR â€” and volume health status. One limitation: Disk Management cannot recover deleted partitions. That requires third-party tools.\nDevice Manager â€” devmgmt.msc. Shows every hardware device in the system organized by category. Use it to update drivers, roll back a driver to a previous version, disable or enable devices, and scan for new hardware. The status icons matter: a yellow triangle with exclamation point indicates a driver problem or device conflict. A red X indicates a disabled device. No overlay icon means the device is functioning normally. When a device is not working, the troubleshooting sequence is: update driver, roll back driver, uninstall and reinstall, then check Windows Update.\nTask Scheduler â€” taskschd.msc. Automates the execution of scripts and programs based on triggers. Triggers can be time-based â€” run at 2:00 AM every day â€” or event-based â€” run when a specific user logs in, or when a system event occurs. Tasks can be configured to run whether the user is logged in or not, and can run with elevated privileges. Common uses include automated backups, maintenance scripts, and log rotation.\nLocal Users and Groups â€” lusrmgr.msc. Manages local user accounts and group memberships. Not available on Windows Home edition. You can create, modify, and delete accounts; set password policies; configure account expiration; and manage group memberships. Built-in groups include Administrators, Users, Guests, and Power Users. Group membership determines access privileges â€” this is the mechanism for implementing least privilege on a local machine.\nGroup Policy Editor â€” gpedit.msc. Configures system and user policies on Windows Pro and higher. It is divided into two sections: Computer Configuration â€” applies to all users of the machine â€” and User Configuration â€” applies to specific user accounts. Policy settings cover password requirements, account lockout, audit policies, software restrictions, Windows Update behavior, and much more. To apply Group Policy changes immediately: run gpupdate /force from a command prompt. Group Policy is not available on Windows Home.\nPerformance Monitor â€” perfmon.msc. Advanced monitoring with hundreds of configurable performance counters. Use it to establish baseline performance metrics when a system is healthy, then compare against those baselines during troubleshooting. Data Collector Sets allow scheduled data collection that can generate reports. More powerful than Task Manager for long-term analysis and capacity planning.\n---",
+      "exam_tips": [
+        "Each event has a unique Event ID â€” search it online for specific resolution steps"
+      ]
+    },
+    {
+      "title": "Additional Tools",
+      "content": "System Information â€” msinfo32.exe. A read-only reporting tool that provides a comprehensive snapshot of the system: OS version, processor, BIOS version, installed RAM, hardware components, installed drivers, running services, and environment variables. Cannot make changes â€” only reports. Essential for documentation and compatibility verification. Can be exported to a text file.\nResource Monitor â€” resmon.exe. More granular than Task Manager. It shows resource usage broken down by individual process with five tabs: Overview, CPU, Memory, Disk, and Network. The Network tab is particularly useful â€” it shows which processes have active TCP connections and to which remote addresses. Useful for identifying processes that should not be communicating over the network.\nSystem Configuration â€” msconfig.exe. Configures startup and boot options. The General tab lets you choose Normal, Diagnostic, or Selective startup. The Boot tab lets you configure Safe Boot modes, create a boot log in ntbtlog.txt, set a timeout for multi-OS selection, and configure the number of processors and maximum memory for diagnostic purposes. The Services tab lets you disable individual services â€” with a useful option to hide all Microsoft services so you only see third-party services. When troubleshooting a service conflict: use Diagnostic startup to confirm the problem disappears with only basic services, then systematically re-enable services to identify the culprit.\nRegistry Editor â€” regedit.exe. The Windows Registry is a hierarchical database of configuration settings. It has five root keys â€” called hives. HKEY_CLASSES_ROOT stores file associations and COM objects. HKEY_CURRENT_USER stores per-user settings for the current user. HKEY_LOCAL_MACHINE stores system-wide hardware and software configuration â€” this is the most important hive for administration. HKEY_USERS stores profile data for all user accounts. HKEY_CURRENT_CONFIG stores the current hardware profile.\nThe Registry uses three structural levels: Keys are the folders, Subkeys are nested folders, and Values are the individual settings. Value types include String (REG_SZ) for text, DWORD (REG_DWORD) for 32-bit numbers, and Binary (REG_BINARY) for raw binary data.\nCritical rule: always export the Registry key you plan to modify before making any change. An incorrect deletion can make Windows unbootable, and the only recovery is a system restore or reinstall.\n---",
+      "exam_tips": [
+        "Yellow triangle = update/roll back driver; Red X = right-click > Enable Device"
+      ]
+    },
+    {
+      "title": "Control Panel And Settings",
+      "content": "Two interfaces exist for configuring Windows: the modern Settings app and the legacy Control Panel. Microsoft has been migrating settings to the Settings app since Windows 10, but the Control Panel still contains options that have no equivalent in Settings.\nSettings app â€” launch with Windows Key + I or Start > Settings. Organized into categories: System, Devices, Network and Internet, Personalization, Apps, Accounts, Time and Language, Gaming, Ease of Access, Privacy, Update and Security.\nControl Panel â€” launch by searching \"control panel\" or running the control command. Still required for Internet Options, Indexing Options, Network and Sharing Center, Power Options, Programs and Features, the Mail applet, and Administrative Tools.\nFile Explorer Options â€” also called Folder Options â€” is in Control Panel but also accessible from the View ribbon in File Explorer. Two settings here are exam-critical.\nFirst: file extensions. The default is to hide extensions for known file types. This is a security risk because malware can disguise itself as a safe file type. A file named document.pdf.exe will appear as just \"document\" with a PDF icon if extensions are hidden. Disable the \"Hide extensions for known file types\" setting so all extensions are always visible.\nSecond: hidden files. By default Windows hides files and folders marked as hidden â€” including the AppData folder, the ProgramData folder, and OS configuration files. Enable \"Show hidden files, folders, and drives\" when troubleshooting so you can access these locations. Leave \"Hide protected operating system files\" enabled in normal use.\nPower Options: Three standard power plans exist. Balanced is the default â€” adjusts performance dynamically based on load. Power Saver reduces performance and screen brightness to extend battery life. High Performance runs the CPU at maximum speed at all times, consuming more power.\nSleep: keeps the session in RAM, powers down most hardware. Resume is nearly instant. Risk: power loss destroys the session since RAM is volatile.\nHibernate: writes the contents of RAM to a file on disk called hiberfil.sys, then powers off completely. Zero power consumption. Resume takes longer â€” 15 to 30 seconds. Session survives power loss. Requires disk space equal to installed RAM. Enable or disable with: powercfg /hibernate on or powercfg /hibernate off.\nHybrid Sleep: combines both. Writes RAM to disk but remains in Sleep for fast resume. Protects against power failure by recovering from disk if needed. Default on desktops.\nFast Startup: a hybrid shutdown feature enabled by default since Windows 8. When you shut down with Fast Startup enabled, Windows saves the kernel and driver state to hiberfil.sys. The next boot restores that state rather than doing a full initialization, making startup significantly faster. Downside: it is not a true cold boot. Can interfere with dual-boot setups and with installing low-level drivers. Disable it when troubleshooting boot issues.\n---",
+      "exam_tips": [
+        "ALWAYS export (back up) a key before editing â€” incorrect changes can make Windows unbootable",
+        "gpedit.msc does NOT exist on Windows Home â€” Pro and higher only",
+        "Hiding extensions allows malware to disguise as .pdf or .docx â€” always show extensions",
+        "Hibernate file size = amount of installed RAM; enable with: powercfg /hibernate on"
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "Task Manager has five tabs, and the exam tests all five. Most people only use one.",
+      "concept": "TASK MANAGER â€” 5 TABS, 5 PURPOSES",
+      "summary": "Open Task Manager with Ctrl+Shift+Esc. Here are the five tabs you need to know cold."
+    },
+    {
+      "hook": "One wrong deletion in the Windows Registry can make a system unbootable. This is the most dangerous tool in Windows â€” and the exam tests it directly.",
+      "concept": "THE WINDOWS REGISTRY â€” 5 HIVES EXPLAINED",
+      "summary": "The Windows Registry is a hierarchical database that stores every configuration setting for Windows and its applications. You access it with regedit.exe."
+    },
+    {
+      "hook": "If your laptop loses power while in Sleep mode, you lose everything that was open. Hibernate does not have that problem â€” and the exam tests the difference.",
+      "concept": "SLEEP vs HIBERNATE â€” NOT THE SAME THING",
+      "summary": "Sleep and Hibernate are both low-power states, but they work completely differently. Sleep keeps the session in RAM."
+    },
+    {
+      "hook": "A yellow triangle in Device Manager means something is wrong. A red X means something is off. If you mix these up on the job â€” or the exam â€” you will waste time troubleshooting the wrong problem.",
+      "concept": "DEVICE MANAGER ICONS â€” WHAT EACH ONE MEANS",
+      "summary": "Device Manager â€” launched with devmgmt.msc â€” uses icon overlays to communicate device status without you needing to open each device's properties. Yellow triangle with exclamation point: the device has a problem."
+    },
+    {
+      "hook": "A file named \"invoice.pdf.exe\" looks like a PDF when extensions are hidden. It is actually an executable â€” and likely malware. Windows hides extensions by default.",
+      "concept": "WHY YOU SHOULD ALWAYS SHOW FILE EXTENSIONS",
+      "summary": "Windows hides file extensions by default. That means a file called malware.exe can be disguised with a PDF icon and display as just \"document\" to the user."
+    },
+    {
+      "hook": "Task Manager is your first-response monitoring tool.",
+      "concept": "Task Manager",
+      "summary": "Task Manager is your first-response monitoring tool. Launch it with Ctrl+Shift+Esc, or right-click the taskbar, or press Ctrl+Alt+Delete and select Task Manager. The Processes tab shows every running application and background process with real-time CPU, RAM, disk, network, and GPU usage."
+    },
+    {
+      "hook": "The Microsoft Management Console â€” MMC â€” is a framework that hosts administrative tools called snap-ins.",
+      "concept": "Microsoft Management Console And Key Snap-Ins",
+      "summary": "The Microsoft Management Console â€” MMC â€” is a framework that hosts administrative tools called snap-ins. You launch the blank MMC with mmc.exe, then add snap-ins. Most of the tools you use daily are pre-built MMC snap-ins launched directly by their .msc file names."
+    },
+    {
+      "hook": "System Information â€” msinfo32.exe.",
+      "concept": "Additional Tools",
+      "summary": "System Information â€” msinfo32.exe. A read-only reporting tool that provides a comprehensive snapshot of the system: OS version, processor, BIOS version, installed RAM, hardware components, installed drivers, running services, and environment variables. Cannot make changes â€” only reports."
+    },
+    {
+      "hook": "Two interfaces exist for configuring Windows: the modern Settings app and the legacy Control Panel.",
+      "concept": "Control Panel And Settings",
+      "summary": "Two interfaces exist for configuring Windows: the modern Settings app and the legacy Control Panel. Microsoft has been migrating settings to the Settings app since Windows 10, but the Control Panel still contains options that have no equivalent in Settings. Settings app â€” launch with Windows Key + I or Start > Settings."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "What Windows utility manages startup programs, services, and performance monitoring?",
+      "options": [
+        "Computer Management",
+        "Control Panel",
+        "Device Manager",
+        "Task Manager"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "Where in Windows 10/11 can you create and manage local user accounts?",
+      "options": [
+        "Settings > Accounts or Computer Management > Local Users and Groups",
+        "Task Manager",
+        "Device Manager",
+        "Windows Update"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What Windows tool provides a centralized view of all event logs including Application, Security, and System?",
+      "options": [
+        "Task Manager",
+        "Event Viewer",
+        "Resource Monitor",
+        "Performance Monitor"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Which Windows tool shows real-time CPU, memory, disk, and network performance graphs?",
+      "options": [
+        "Event Viewer",
+        "Device Manager",
+        "Task Manager (Performance tab) or Resource Monitor",
+        "Disk Management"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What Windows utility allows creating, shrinking, extending, and formatting partitions?",
+      "options": [
+        "Device Manager",
+        "System Configuration (msconfig)",
+        "Task Manager",
+        "Disk Management"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What keyboard shortcut opens Task Manager directly in Windows?",
+      "options": [
+        "All of the above",
+        "Ctrl+Shift+Esc",
+        "Win+R then type taskmgr",
+        "Ctrl+Alt+Del then select Task Manager"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Which Windows feature allows viewing and restoring previous versions of files?",
+      "options": [
+        "Windows Defender",
+        "File History or Previous Versions (via Shadow Copy)",
+        "Windows Update",
+        "Disk Cleanup"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What Windows utility runs in the background and indexes files for fast search results?",
+      "options": [
+        "Task Scheduler",
+        "Disk Defragmenter",
+        "Windows Search (indexing service)",
+        "Windows Update"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A technician suspects a recently installed driver is causing system instability. Which Windows tool allows the technician to disable or roll back the driver?",
+      "options": [
+        "Task Manager",
+        "System Configuration (msconfig)",
+        "Registry Editor",
+        "Device Manager"
+      ],
+      "answer": 3,
+      "explanation": "Device Manager allows technicians to view all installed hardware, and update, roll back, disable, or uninstall drivers. Task Manager shows running processes and resource usage. msconfig controls startup and boot options. The Registry Editor modifies system settings directly and is not the appropriat"
+    },
+    {
+      "q": "Where in Windows 10/11 Settings do you configure display resolution and refresh rate?",
+      "options": [
+        "System > Display",
+        "System > Sound",
+        "Personalization > Themes",
+        "Update and Security"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What Windows Settings section allows you to add, configure, and manage printers?",
+      "options": [
+        "System > Notifications",
+        "Devices > Printers and Scanners (or Bluetooth and Devices in Windows 11)",
+        "Update and Security",
+        "Ease of Access"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Where do you configure Windows Firewall and add firewall rules in Windows Settings?",
+      "options": [
+        "Devices > Firewall",
+        "System > Security",
+        "Update and Security > Windows Security > Firewall and Network Protection",
+        "Network and Internet > Firewall"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What Windows Settings area allows configuring VPN connections?",
+      "options": [
+        "System > Display",
+        "Accounts > Sign-in Options",
+        "Devices > Bluetooth",
+        "Network and Internet > VPN"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "Which Windows setting increases the size of text and other on-screen elements without changing the monitor's native resolution?",
+      "options": [
+        "Narrator (screen reader)",
+        "System > Display > Scale (100%, 125%, 150%, etc.)",
+        "Ease of Access > Display > Change the size of text",
+        "Personalization > Theme > Text Size"
+      ],
+      "answer": 1,
+      "explanation": "System > Display > Scale (also called DPI scaling) enlarges all UI elements — text, icons, windows — proportionally without reducing the monitor's resolution. Setting scale to 125% or 150% improves readability on high-DPI screens. Ease of Access text size affects only text size, not all elements."
+    },
+    {
+      "q": "A user reports their laptop screen turns off after one minute of inactivity, disrupting presentations. Which Windows Settings section should the technician adjust?",
+      "options": [
+        "Privacy and Security",
+        "System > Power and Sleep",
+        "Accounts > Sign-in Options",
+        "Update and Security"
+      ],
+      "answer": 1,
+      "explanation": "Power and Sleep settings under System control when the screen turns off and when the PC sleeps. The technician can extend or disable the screen timeout here. Sign-in options control lock behavior after the screen turns off, not the initial timeout setting."
+    },
+    {
+      "q": "A technician configuring a shared workstation wants to prevent standard users from installing software without administrator approval. Which feature should be verified as enabled?",
+      "options": [
+        "Windows Defender Firewall",
+        "Windows Hello",
+        "User Account Control (UAC)",
+        "BitLocker"
+      ],
+      "answer": 2,
+      "explanation": "UAC prompts for administrator credentials before allowing system changes such as software installation. Windows Defender Firewall controls network traffic. Windows Hello manages biometric authentication. BitLocker provides drive encryption. None of the others restrict software installation by standa"
+    },
+    {
+      "q": "A user in a different country sees the wrong date and time even though automatic time sync is enabled. Which Settings option should the technician check FIRST?",
+      "options": [
+        "Display > Night Light schedule",
+        "System > About",
+        "Accounts > Family and Other Users",
+        "Time and Language > Date and Time > Time Zone"
+      ],
+      "answer": 3,
+      "explanation": "Even with automatic time sync enabled, the time displays incorrectly if the time zone is set wrong. Automatic time sync only synchronizes to internet time servers â€” it does not auto-detect or change the time zone. The technician should verify and correct the Time Zone setting."
+    },
+    {
+      "q": "A technician needs to configure Windows to prompt permission before any app accesses the device's camera. Where in Windows Settings should this be configured?",
+      "options": [
+        "Privacy and Security > Camera",
+        "System > Display",
+        "Bluetooth and Devices > Camera",
+        "Apps > Default Apps"
+      ],
+      "answer": 0,
+      "explanation": "Windows Settings > Privacy and Security > Camera controls which applications can access the camera. This can be toggled globally or per app. Bluetooth and Devices manages hardware configuration. Default Apps controls file associations, not hardware access permissions."
+    },
+    {
+      "q": "What Windows tool allows administrators to configure local security policies, startup behavior, and system-wide settings on a standalone (non-domain) machine?",
+      "options": [
+        "Registry Editor (regedit.exe)",
+        "Local Group Policy Editor (gpedit.msc) — available on Pro, Enterprise, and Education editions",
+        "System Configuration (msconfig.exe)",
+        "Computer Management (compmgmt.msc)"
+      ],
+      "answer": 1,
+      "explanation": "The Local Group Policy Editor (gpedit.msc) provides a GUI for configuring hundreds of system policies — password requirements, software restrictions, logon scripts, user rights, and more. It is not available on Windows Home. Changes take effect immediately or after gpupdate /force."
+    },
+    {
+      "q": "A technician needs to start, stop, and configure the startup type of Windows background services. Which built-in tool is MOST appropriate?",
+      "options": [
+        "Task Manager — Services tab (limited control only)",
+        "services.msc (Windows Services console) — provides full control to start, stop, pause, and configure all services and their startup type",
+        "msconfig — only controls startup programs, not services",
+        "regedit — service entries in the registry require manual editing"
+      ],
+      "answer": 1,
+      "explanation": "services.msc provides a dedicated interface for managing all Windows services: viewing status, starting/stopping, setting startup type (Automatic, Manual, Disabled, Automatic Delayed Start), and configuring service account credentials. Task Manager's Services tab provides quick start/stop but fewer options."
+    }
+  ]
+}

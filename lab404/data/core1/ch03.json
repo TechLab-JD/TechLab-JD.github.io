@@ -1,0 +1,310 @@
+{
+  "core": 1,
+  "chapter": 3,
+  "title": "CPUs: Architecture & Installation",
+  "exam_objectives": [
+    "3.4",
+    "3.5"
+  ],
+  "coverage": "COVERED",
+  "domain": "hardware",
+  "domain_label": "Hardware",
+  "sections": [
+    {
+      "title": "The Cpu Instruction Cycle",
+      "content": "The CPU performs one function: it executes instructions. Every other description of what a computer does is ultimately a consequence of this.\nThe instruction cycle has four stages.\nFETCH: The CPU retrieves an instruction from memory. The instruction tells the processor what to do next.\nDECODE: The CPU interprets the fetched instruction. It determines the operation to be performed and what data it needs to perform it.\nEXECUTE: The CPU carries out the operation. Mathematical and logical operations are handled by the ALU â€” the Arithmetic Logic Unit. Floating-point calculations, which involve decimal values, are handled by the FPU â€” the Floating Point Unit.\nWRITE-BACK: The result is stored. Either in a CPU register for immediate reuse, or written back to memory.\nThis cycle runs continuously, at a frequency measured in gigahertz â€” billions of cycles per second on a modern processor. Every performance optimization in CPU design is ultimately aimed at completing this cycle faster, more efficiently, or more times simultaneously.\n---",
+      "exam_tips": [
+        "All four steps in order. Fetch â†’ Decode â†’ Execute â†’ Write-back. This sequence is directly testable."
+      ]
+    },
+    {
+      "title": "Internal Components",
+      "content": "Several components inside the CPU support the instruction cycle.\nREGISTERS are the fastest storage in the system. They are built directly into the processor cores and hold the data being actively processed. There are a small number of registers per core, but they operate at the full CPU clock speed with zero latency.\nCACHE is on-chip memory that sits between the CPU and main RAM in the memory hierarchy. It is faster than RAM but slower than registers. Cache exists because main RAM cannot deliver data quickly enough to keep a fast CPU continuously fed.\nL1 cache is the smallest and fastest. It is private to each individual core and holds the instructions and data most immediately needed. L2 cache is larger but slightly slower. It may be per-core or shared depending on the architecture. L3 cache is the largest of the three â€” sometimes several megabytes â€” and is shared across all cores. Even L3 cache is dramatically faster than main RAM.\nTHE ALU â€” Arithmetic Logic Unit â€” handles integer arithmetic and logical operations: addition, subtraction, multiplication, comparison, bitwise operations. Almost every computation involves the ALU.\nTHE FPU â€” Floating Point Unit â€” handles decimal calculations. Critical for scientific computing, 3D rendering, signal processing, and engineering applications.\n---",
+      "exam_tips": [
+        "L1 is per-core. L3 is shared. More cache = fewer RAM access delays."
+      ]
+    },
+    {
+      "title": "Cpu Architectures â€” Cisc Vs Risc",
+      "content": "Two fundamentally different instruction set architectures exist in the computing landscape: CISC and RISC.\nCISC â€” Complex Instruction Set Computing â€” is the architecture behind x86 and x64 processors. Intel and AMD both produce CISC chips. CISC processors support a rich, complex instruction set â€” a single instruction can perform multiple low-level operations. This makes them powerful and maintains compatibility with a vast library of legacy software going back decades. The trade-off is higher power consumption and heat generation.\nRISC â€” Reduced Instruction Set Computing â€” takes the opposite approach. Each instruction is simpler, but the processor executes simple instructions with exceptional efficiency. ARM is the dominant RISC architecture. It powers virtually every smartphone, tablet, and embedded system. It also powers Apple's M-series chips and is expanding into server environments.\nThe practical distinction: CISC delivers raw computing power for general-purpose applications and maintains backward compatibility with the x86 software ecosystem. RISC delivers superior performance per watt â€” more computation per unit of energy â€” which is why it dominates battery-powered devices.\n64-BIT PROCESSORS.\nModern CPUs are 64-bit â€” they process data in 64-bit chunks. The x64 architecture â€” the 64-bit extension of x86 â€” can address more than 4 GB of RAM, run both 32-bit and 64-bit software, and provides better performance for modern applications. All current mainstream operating systems require a 64-bit CPU.\nFor the exam: x86/x64 = CISC = Intel and AMD = desktops and servers. ARM = RISC = mobile and low-power devices.\n---",
+      "exam_tips": [
+        "ARM = RISC = mobile. x86/x64 = CISC = desktops and servers."
+      ]
+    },
+    {
+      "title": "Cpu Socket Types",
+      "content": "The socket is the physical and electrical interface between the CPU and the motherboard. Socket type determines compatibility, and it is the first thing you verify before any CPU purchase or upgrade.\nINTEL LGA â€” Land Grid Array.\nIn Intel's LGA design, the pins are on the motherboard socket, not on the CPU. The processor has flat gold contact pads that rest against the socket pins. Because the pins are on the motherboard, a damaged pin means a damaged â€” and expensive â€” motherboard. Handle LGA sockets with care and always seat the CPU load plate before inserting.\nAMD PGA â€” Pin Grid Array.\nAMD's traditional design places the pins on the CPU itself. The pins insert into holes in the socket. With PGA, a bent pin means a damaged CPU rather than a damaged motherboard â€” but either is costly.\nAMD AM5.\nAMD's current platform â€” AM5 â€” has transitioned to LGA, aligning with Intel's design. The pins are now on the motherboard socket.\nCOMPATIBILITY NOTE.\nSocket type determines physical fit. But physical compatibility is not sufficient on its own. The motherboard chipset must also support the specific CPU model and generation. A socket may be physically unchanged across multiple CPU generations while chipset support changes. Always verify both socket type and chipset compatibility. Consult the motherboard manufacturer's CPU compatibility list before purchasing.\n---",
+      "exam_tips": [
+        "Intel = LGA. AMD historically = PGA. AMD AM5 = LGA. Socket AND chipset must both be compatible."
+      ]
+    },
+    {
+      "title": "Cpu Installation And Thermal Paste",
+      "content": "CPU installation follows a defined procedure. Every step prevents a specific failure mode.\nStep 1: Verify compatibility â€” socket type and chipset â€” before opening the CPU package.\nStep 2: Open the socket. For LGA sockets, this means releasing the load arm and lifting the load plate. Inspect the socket pins carefully for bends before proceeding.\nStep 3: Handle the CPU by its edges only. Do not touch the contact pads or the pins. Oil from skin can cause poor contact. Static discharge can damage the chip.\nStep 4: Locate the alignment triangle â€” a small mark on one corner of the CPU. This corresponds to a matching mark on the socket. Align them. The CPU will only seat correctly in one orientation. Do not force it.\nStep 5: Lower the CPU gently into place. For LGA, it simply rests on the socket pins. For PGA, the pins enter the socket holes. Secure the retention mechanism as specified.\nStep 6: Apply thermal paste. Thermal paste fills the microscopic surface imperfections between the CPU heat spreader and the heatsink base. A pea-sized dot in the center of the CPU is the standard method â€” the pressure of heatsink mounting spreads it evenly. Too much overflows and can cause shorts. Too little creates hot spots. If you are reseating a cooler that was previously installed, clean off the old paste and apply fresh paste.\nStep 7: Attach the cooler. Ensure it makes full contact with the CPU and is properly secured. A cooler that is not fully seated will cause immediate thermal throttling or shutdown.\nStep 8: Post-installation, monitor CPU temperatures. Under no-load conditions, temperatures should be well below the CPU's thermal maximum. Run a stress test and verify temperatures remain within safe operating range.\n---",
+      "exam_tips": [
+        "Always replace thermal paste when reseating a cooler. This is a direct best practice on the exam."
+      ]
+    },
+    {
+      "title": "Cpu Performance Specifications",
+      "content": "Six specifications together describe a CPU's performance profile.\nCLOCK SPEED â€” measured in gigahertz â€” represents the number of instruction cycles the processor completes per second. Higher is generally faster for single-threaded tasks, but clock speed alone does not determine overall performance.\nCORE COUNT â€” the number of independent processing units in the CPU. More cores enable true parallelism. Applications designed for multi-threaded workloads â€” video encoding, 3D rendering, virtual machines â€” scale with core count.\nTHREADS â€” the logical processors the CPU presents to the operating system. Hyperthreading (Intel) or SMT (AMD) allows each physical core to handle two threads simultaneously. A 4-core CPU with hyperthreading appears as 8 logical processors to the OS. This improves utilization but does not double performance.\nCACHE SIZE â€” the amount of on-chip cache memory across L1, L2, and L3 levels. Larger cache reduces trips out to slower main RAM, improving latency-sensitive workloads.\nTDP â€” Thermal Design Power â€” measured in watts. TDP indicates the maximum sustained heat output at full processor load. TDP determines the minimum cooling solution required. A 125W TDP processor needs a more capable cooler than a 65W TDP processor. Exceeding the cooler's capacity causes thermal throttling â€” the CPU automatically reduces its clock speed to prevent damage.\nINTEGRATED GRAPHICS â€” some CPUs include a GPU on the processor die. This allows display output without a dedicated graphics card. Integrated graphics are sufficient for basic productivity and video playback but are not designed for demanding 3D graphics workloads.\n---",
+      "exam_tips": [
+        "Hyperthreading/SMT does not double performance. It improves processor utilization efficiency."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "Your CPU runs this four-step cycle billions of times per second. Understanding it explains why everything else about processor performance matters.",
+      "concept": "THE CPU INSTRUCTION CYCLE",
+      "summary": "Every task a CPU performs â€” running an application, rendering a web page, playing back video â€” is the result of a four-step instruction cycle repeated at extreme speed. Step one: Fetch."
+    },
+    {
+      "hook": "The memory hierarchy inside a CPU is the reason why a chip with 32MB of cache outperforms one with 8MB at the same clock speed. Here's what those levels actually mean.",
+      "concept": "CPU INTERNAL COMPONENTS: CACHE, ALU & FPU",
+      "summary": "Inside every modern CPU, there are several distinct internal components beyond the processing cores themselves. Registers are the fastest storage in the entire system â€” they are built directly into the processor and hold the data the CPU is actively working with at any given moment."
+    },
+    {
+      "hook": "The CPU in your laptop and the CPU in your phone are built on fundamentally different instruction set architectures. Understanding why tells you a lot about why each one excels where it does.",
+      "concept": "CISC VS RISC: CPU ARCHITECTURE",
+      "summary": "All CPUs execute instructions, but the design of the instruction set â€” the vocabulary of commands the processor understands â€” varies significantly between architectures. CISC â€” Complex Instruction Set Computing â€” is the architecture behind the x86 and x64 processors used in desktops, laptops, and servers."
+    },
+    {
+      "hook": "Buying a CPU that does not fit your motherboard socket is an expensive mistake. Socket compatibility is not just about the socket type â€” it also involves the chipset.",
+      "concept": "CPU SOCKET TYPES: LGA VS PGA",
+      "summary": "The CPU socket is the physical interface between the processor and the motherboard. The socket type must match the CPU â€” there is no adapter."
+    },
+    {
+      "hook": "Improper CPU installation causes bent pins, thermal throttling, and dead systems. There is a correct procedure, and every step in it exists for a reason.",
+      "concept": "CPU INSTALLATION & THERMAL PASTE",
+      "summary": "CPU installation is a precise procedure. Follow it exactly."
+    },
+    {
+      "hook": "A faster clock speed does not always mean a faster CPU. Six performance specifications together determine how a processor actually behaves under load.",
+      "concept": "CPU PERFORMANCE SPECIFICATIONS",
+      "summary": "CPU performance is not a single number. Six key specifications together determine real-world capability."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "What RPM speed is typical for a standard performance desktop hard drive?",
+      "options": [
+        "7200 RPM",
+        "5400 RPM",
+        "4200 RPM",
+        "15,000 RPM"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of thermal paste when installing a CPU cooler?",
+      "options": [
+        "Adhesive to hold the cooler in place",
+        "Fills microscopic air gaps to improve heat transfer between CPU and cooler",
+        "Provides electrical insulation",
+        "Prevents corrosion on the CPU die"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What does the chipset on a motherboard control?",
+      "options": [
+        "CPU clock speed",
+        "RAM capacity only",
+        "GPU rendering calculations",
+        "Communication between the CPU, RAM, storage, and I/O devices"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of the CMOS battery on a motherboard?",
+      "options": [
+        "Provides backup power for RAM contents",
+        "Maintains BIOS/UEFI settings and the real-time clock when the system is powered off",
+        "Powers the CPU during startup",
+        "Charges the laptop battery"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Which specification describes how fast data moves between the CPU and RAM?",
+      "options": [
+        "PCI bus speed",
+        "USB transfer rate",
+        "Memory bus speed or FSB (Front Side Bus)",
+        "SATA throughput"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A PCIe x1 network card needs to be installed but the motherboard's only available slots are PCIe x16. Can the x1 card be placed in the x16 slot?",
+      "options": [
+        "No â€” PCIe x1 cards cannot physically fit in an x16 slot",
+        "Yes â€” a smaller PCIe card fits in any larger slot and operates at x1 bandwidth",
+        "Yes â€” but only if the BIOS is updated first to support cross-slot installation",
+        "No â€” the card would operate at x16 speed and cause electrical damage"
+      ],
+      "answer": 1,
+      "explanation": "PCIe is backward compatible. A PCIe x1 card physically fits in any larger slot (x4, x8, x16) and operates at x1 bandwidth. The slot width sets the maximum link width; the protocol negotiates the actual width automatically."
+    },
+    {
+      "q": "What does the ALU (Arithmetic Logic Unit) inside a CPU handle?",
+      "options": [
+        "Fetching instructions from memory",
+        "Integer arithmetic operations and logical comparisons",
+        "Floating-point math for scientific calculations",
+        "Managing cache memory allocation"
+      ],
+      "answer": 1,
+      "explanation": "The ALU handles integer arithmetic (addition, subtraction, multiplication, division) and logical operations (AND, OR, NOT, XOR, comparisons). Floating-point operations are handled by the FPU (Floating-Point Unit), which may be separate or integrated."
+    },
+    {
+      "q": "Which CPU architecture uses a reduced instruction set optimized for power efficiency, making it dominant in mobile devices?",
+      "options": [
+        "x86 (CISC)",
+        "RISC-V",
+        "ARM (RISC)",
+        "SPARC"
+      ],
+      "answer": 2,
+      "explanation": "ARM processors use a RISC (Reduced Instruction Set Computing) architecture. The simplified instruction set allows ARM chips to execute instructions in fewer clock cycles, consuming less power -- ideal for mobile devices, tablets, and embedded systems."
+    },
+    {
+      "q": "On Intel LGA CPU sockets, where are the electrical pins located?",
+      "options": [
+        "On the CPU itself",
+        "On the motherboard socket",
+        "On the CPU cooler mounting bracket",
+        "On the thermal interface material"
+      ],
+      "answer": 1,
+      "explanation": "LGA (Land Grid Array) sockets have the pins on the motherboard socket, not the CPU. The CPU has flat contact pads (lands) that mate with the socket pins. AMD uses PGA (Pin Grid Array) where pins are on the CPU."
+    },
+    {
+      "q": "What does CPU TDP (Thermal Design Power) specify?",
+      "options": [
+        "The maximum voltage the CPU can safely receive",
+        "The maximum sustained heat output the cooling solution must dissipate",
+        "The base clock speed under full load",
+        "The amount of RAM the CPU can address"
+      ],
+      "answer": 1,
+      "explanation": "TDP specifies the maximum sustained heat output (in watts) under realistic workloads that the cooling solution must be designed to dissipate. A CPU cooler rated for at least the CPU's TDP is required for stable operation."
+    },
+    {
+      "q": "What is the purpose of the alignment triangle or notch on a CPU?",
+      "options": [
+        "It marks the fastest core for performance tuning",
+        "It indicates correct orientation when seating the CPU in its socket",
+        "It shows where the thermal paste should be applied",
+        "It identifies the CPU generation"
+      ],
+      "answer": 1,
+      "explanation": "The triangle or notch on a CPU indicates the correct orientation for installation. Matching it to the triangle on the socket ensures the CPU is inserted in the correct direction to align all contacts."
+    },
+    {
+      "q": "What is CPU hyperthreading (Intel) or SMT (AMD Simultaneous Multi-Threading)?",
+      "options": [
+        "Running two physical cores at double the clock speed",
+        "Presenting two logical (virtual) threads per physical core to the operating system",
+        "Dynamically allocating cache between cores based on workload",
+        "Automatically overclocking idle cores when others are busy"
+      ],
+      "answer": 1,
+      "explanation": "Hyperthreading/SMT presents two logical threads per physical core to the OS. While one thread stalls waiting for data, the CPU's execution units can process the second thread, improving throughput on multi-threaded workloads."
+    },
+    {
+      "q": "What is the difference between L1 and L3 CPU cache?",
+      "options": [
+        "L1 is on the motherboard; L3 is inside the CPU die",
+        "L1 is the fastest, smallest, and private to each core; L3 is larger, shared across all cores, and slower than L1",
+        "L1 cache stores only instructions; L3 stores only data",
+        "L1 operates at memory speed; L3 operates at CPU speed"
+      ],
+      "answer": 1,
+      "explanation": "L1 cache is the fastest and smallest cache, private to each CPU core. L3 cache is larger, shared across all cores on the die, and slower than L1/L2 but much faster than main RAM."
+    },
+    {
+      "q": "The four steps of the CPU instruction cycle in correct order are:",
+      "options": [
+        "Execute, Fetch, Decode, Store",
+        "Fetch, Decode, Execute, Store (Write-back)",
+        "Decode, Fetch, Store, Execute",
+        "Fetch, Execute, Decode, Write-back"
+      ],
+      "answer": 1,
+      "explanation": "The CPU instruction cycle is: Fetch (retrieve instruction from memory), Decode (interpret what the instruction requires), Execute (perform the operation), Store/Write-back (write the result to a register or memory)."
+    },
+    {
+      "q": "Why must thermal paste be replaced when reseating a CPU cooler?",
+      "options": [
+        "Old thermal paste becomes electrically conductive and can short the CPU",
+        "Removing the cooler breaks the thermal seal; reusing disturbed paste creates air gaps that increase thermal resistance",
+        "Thermal paste expires and loses its chemical properties within 30 days",
+        "The CPU socket requires fresh paste to maintain the mounting pressure"
+      ],
+      "answer": 1,
+      "explanation": "When a cooler is removed, the thermal paste is disturbed and no longer forms a complete seal. Reseating without fresh paste leaves air gaps that are poor thermal conductors, increasing CPU temperatures and risking thermal throttling or damage."
+    },
+    {
+      "q": "What technology allows a CPU to automatically increase its clock speed above its rated base frequency when thermal and power headroom permits?",
+      "options": [
+        "Hyperthreading / SMT",
+        "Turbo Boost (Intel) / Precision Boost (AMD)",
+        "SpeedStep / Cool'n'Quiet power throttling",
+        "XMP (Extreme Memory Profile)"
+      ],
+      "answer": 1,
+      "explanation": "Turbo Boost (Intel) and Precision Boost (AMD) dynamically increase CPU clock speed beyond the base frequency when power, temperature, and current limits allow. This provides better burst performance for workloads that need it."
+    },
+    {
+      "q": "Before replacing a CPU, what is the MOST important compatibility factor to verify?",
+      "options": [
+        "The CPU brand must match the case manufacturer",
+        "The socket type must match between the CPU and motherboard",
+        "The CPU wattage must match the RAM speed",
+        "The CPU must be the same generation as the GPU"
+      ],
+      "answer": 1,
+      "explanation": "CPU socket type must match the motherboard socket exactly. Different sockets (e.g., Intel LGA1700 vs AM5) are physically incompatible. Even within the same socket family, BIOS updates may be required for newer CPUs."
+    },
+    {
+      "q": "Which Intel CPU feature enables hardware virtualization by allowing a hypervisor to manage guest OS access to physical hardware?",
+      "options": [
+        "Hyper-Threading Technology (HTT)",
+        "Intel VT-x (Virtualization Technology)",
+        "Intel TXT (Trusted Execution Technology)",
+        "Intel Optane Memory"
+      ],
+      "answer": 1,
+      "explanation": "Intel VT-x (and AMD-V for AMD processors) is hardware virtualization support that allows hypervisors to run guest operating systems efficiently. Without this feature enabled in BIOS, many hypervisors (VMware, Hyper-V, VirtualBox) cannot run 64-bit VMs."
+    },
+    {
+      "q": "What is the key difference between a CPU's base clock speed and its boost/turbo clock speed?",
+      "options": [
+        "Base clock applies only to efficiency cores; boost applies to performance cores",
+        "Base clock is the guaranteed sustained frequency; boost is a higher short-duration frequency achieved under favorable thermal/power conditions",
+        "Boost clock is the minimum frequency during low load; base clock is maximum frequency at full load",
+        "They are the same value marketed differently by Intel and AMD"
+      ],
+      "answer": 1,
+      "explanation": "The base clock is the sustained, guaranteed operating frequency that the CPU can maintain indefinitely. The boost/turbo clock is a higher frequency achieved briefly when thermal headroom and power limits allow — useful for bursty workloads."
+    },
+    {
+      "q": "What does the decode stage of the CPU instruction pipeline do?",
+      "options": [
+        "Retrieves the next instruction from memory or cache",
+        "Translates the fetched instruction into micro-operations the execution units can process",
+        "Executes arithmetic and logical operations",
+        "Writes results back to registers or memory"
+      ],
+      "answer": 1,
+      "explanation": "The decode stage translates raw instruction binary into micro-operations (micro-ops) that map to the CPU's internal execution units. Complex instructions (CISC) may decode into multiple micro-ops, while simpler RISC instructions decode to one or few."
+    }
+  ]
+}

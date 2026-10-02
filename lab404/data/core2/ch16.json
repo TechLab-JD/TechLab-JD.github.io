@@ -1,0 +1,291 @@
+{
+  "core": 2,
+  "chapter": 16,
+  "title": "PC Security & Mobile OS Issues",
+  "exam_objectives": [
+    "3.2",
+    "3.3",
+    "3.4"
+  ],
+  "coverage": "COVERED",
+  "domain": "troubleshooting",
+  "domain_label": "Troubleshooting",
+  "sections": [
+    {
+      "title": "Pc Security Symptoms",
+      "content": "A compromised PC produces recognizable symptoms. The A+ exam maps specific symptoms to specific causes.\nUnable to access the network: complete or partial network connectivity failure despite a working physical connection. Malware-related causes include: malware blocking network access to prevent anti-malware tools from updating or to prevent ransomware victims from accessing cloud backups. DNS poisoning â€” the DNS server addresses in the network adapter configuration have been changed to malicious servers that return incorrect IP addresses, redirecting web traffic. Malware-configured proxy settings that route traffic through an attacker-controlled server. Resolution: check Windows Defender Firewall settings for misconfigured rules. Verify DNS settings through ipconfig /all â€” the DNS server addresses should be the router's IP or the organization's DNS servers. Check proxy settings in Settings > Network and Internet > Proxy â€” should be \"No proxy\" for most users. Boot to Safe Mode with Networking and test connectivity. Run a malware scan.\nDesktop alerts and fake security warnings: unexpected pop-up notifications claiming infection, system risk, or technical issues. The critical distinction: legitimate antivirus notifications appear in the system tray â€” the notification area â€” from the installed security software. They do not appear as browser pop-ups. A pop-up window in a browser claiming \"Your PC is infected\" with a phone number to call is always fake. Scareware uses urgency and threat language to panic the user into calling a fraudulent tech support number or installing malware marketed as a repair tool.\nRogue security software: fake antivirus applications that present themselves as legitimate security tools. They report false infections, demand payment to remove them, and may disable the real antivirus. Common naming patterns: \"PC Defender,\" \"Security Suite,\" \"Antivirus 360\" â€” always use a name that sounds legitimate. Resolution: boot to Safe Mode â€” this prevents the rogue software from loading. Uninstall it through Programs and Features. Verify the real antivirus is present, enabled, and updated.\nAltered system or personal files: files missing, renamed, or inaccessible. File extensions changed to .locked, .crypto, or similar strings indicate ransomware encryption. A text file â€” README.txt or DECRYPT_INSTRUCTIONS.txt â€” appearing in file directories is a ransom note. All documents with the same new extension and inability to open them confirms ransomware. Response: do not pay the ransom â€” payment does not guarantee decryption and funds future attacks. Isolate the system from the network immediately. Restore from a clean backup. Report through appropriate channels.\nUnwanted notifications within the OS: unexpected notifications appearing in the Windows Action Center from unknown applications. Caused by adware, PUPs installed with legitimate software, or browser notification permissions granted to malicious sites. Resolution: Settings > Notifications and Actions â€” identify and disable unknown app notifications. Uninstall suspect programs through Programs and Features. Clear browser notification permissions.\nOS update failures: Windows Update fails to download or install patches. Malware actively blocks update services to avoid detection â€” security patches often include definitions and behavioral rules that would detect the malware. The Windows Update service itself may be disabled by malware. Check the Windows Update service in services.msc. Run the Windows Update Troubleshooter. Boot to Safe Mode and attempt update. Scan for malware before retrying.\nBrowser symptoms. Random and frequent pop-ups: adware infection or malicious browser extensions. Pop-ups appearing when the browser is closed â€” as opposed to within the browser â€” indicate system-level adware running as a background process, not a browser extension. Resolution: remove suspicious browser extensions, reset browser settings to default, run an anti-adware scan, check installed programs for recently added adware.\nCertificate warnings: \"Your connection is not private\" or \"Certificate not trusted\" in the browser. Possible causes beyond a legitimately expired certificate: a man-in-the-middle attack where the attacker's certificate does not match the expected domain, a malware-installed root certificate that allows the attacker to intercept encrypted traffic without triggering warnings, or time drift where the system clock is wrong and certificates appear expired. Check the system date and time. Verify the URL. Do not proceed past a certificate warning on banking, healthcare, or any site handling sensitive data.\nBrowser redirection: the browser is sent to unintended sites when typing URLs or searching. Browser hijacker malware changes the default search engine and homepage. DNS hijacking changes the DNS server responses. The hosts file at C:\\Windows\\System32\\drivers\\etc\\hosts may have been modified to redirect specific domain names to malicious IP addresses. A configured proxy server routes all traffic through an attacker-controlled server. Resolution: check and reset browser homepage and search engine settings, verify DNS settings, review the hosts file for unauthorized entries â€” it should only contain localhost entries, check proxy settings.\nDegraded browser performance from crypto mining: high CPU utilization during browsing that drops when the browser is closed. Websites may run JavaScript-based cryptocurrency mining code in the background. Use the browser's built-in task manager â€” Shift+Esc in Chrome â€” to identify which tabs or extensions are consuming CPU. Install a script blocker to prevent mining scripts.\n---",
+      "exam_tips": [
+        "Pop-ups inside the browser = browser extension or site. Pop-ups when browser is CLOSED = system-level adware. Fake security warnings with phone numbers are ALWAYS scareware. Legitimate antivirus notifications come from the system tray, not browser windows."
+      ]
+    },
+    {
+      "title": "Mobile App Troubleshooting",
+      "content": "Mobile app issues follow a consistent troubleshooting sequence. Start with the least invasive option and escalate.\nApplication fails to launch: force stop the application â€” this is the first step. On Android: Settings > Apps > select app > Force Stop. On iOS: swipe up from the home indicator and swipe the app card off the top of the screen. After force stopping, clear the app cache. On Android this is done through Settings > Apps > Storage > Clear Cache. Clearing cache removes temporary files without deleting user data or settings. If cache clearing does not resolve the issue, clear app data â€” this resets the app completely, requiring re-login. If the issue persists, update the app through the official store. If no update resolves it, uninstall and reinstall. Finally, check OS compatibility â€” the app may require a newer OS version.\nApplication crashes during use: same sequence. Force stop, clear cache, check for updates, update the OS if the app requires a newer API version, restart the device to clear system memory, reinstall.\nApplication fails to update: common causes are insufficient storage space, a poor internet connection, or app store account issues. Free up storage by removing unused apps and media. Switch to Wi-Fi for the update if on cellular. Sign out and back in to the app store account. Clear the app store app's own cache.\nApplication fails to install: insufficient storage is the most common cause â€” mobile OS updates and app installations require free space. OS version incompatibility â€” the app requires a newer OS than the device runs. Geographic restrictions â€” some apps are not available in all regions. On Android, sideloaded apps require \"Install from Unknown Sources\" to be enabled, but this should only be done deliberately and with understood risk.\nSlow to respond: close background apps, restart the device to clear RAM and temporary files, verify adequate free storage â€” devices need a minimum of ten to fifteen percent free storage to function well, scan for malware, and factory reset as a last resort after backing up data.\nOS update failures on mobile: mobile OS updates have specific requirements. The battery must be above fifty percent charged, or the device must be plugged in â€” this is a hard requirement, not a recommendation. The OS update requires several gigabytes of free storage. The connection must be stable â€” large updates should be performed over Wi-Fi. Devices that are too old may no longer receive updates from the manufacturer â€” this is an EOL situation requiring hardware replacement.\nBattery life issues: check battery health in settings â€” both iOS and Android show battery health percentage. Degrade over time is normal. Main power consumers: screen brightness, location services, background app refresh. Enable battery saver mode. Check which apps show high battery usage in Settings > Battery.\nRandom reboots: caused by failing battery voltage drops, overheating, corrupt OS files, or a problematic recently installed app. Boot to Safe Mode on Android to test without third-party apps loading. If stable in Safe Mode, a recently installed third-party app is causing the reboots â€” uninstall recent installs and test.\nConnectivity: Bluetooth â€” unpair and re-pair. Wi-Fi â€” forget the network and reconnect. NFC proximity â€” NFC operates within four centimeters, and a thick phone case can block the signal. Screen autorotation â€” check that rotation lock is not enabled in Control Center/Quick Settings before assuming a sensor calibration issue.\n---",
+      "exam_tips": [
+        "Browser hijacker diagnosis â€” check all four: DNS settings (ipconfig /all), proxy settings (Settings > Network > Proxy), hosts file (C:\\Windows\\System32\\drivers\\etc\\hosts), and installed browser extensions. Fix all four vectors, not just one."
+      ]
+    },
+    {
+      "title": "Mobile Security Issues",
+      "content": "Rooting and jailbreaking fundamentally alter the security model of a mobile device.\nRooting â€” Android: gaining superuser access to the Android OS. Apps on a rooted device can access any part of the OS without restriction. The Android permission model, which limits what each app can access, is bypassed. Security updates may not apply correctly to a rooted device because the manufacturer's trusted OS state no longer exists. MDM solutions detect rooted devices and may prevent enrollment or block access to corporate resources.\nJailbreaking â€” iOS: using an exploit to remove Apple's software restrictions. Allows installation of apps outside the App Store. The iOS security model â€” app sandboxing, permission controls, signed code â€” is bypassed. Apple does not provide security updates for jailbroken device configurations. Jailbreaking voids the device warranty.\nSideloading: installing applications outside the official app stores. On Android, enabling \"Install from Unknown Sources\" or \"Allow from this source\" permits APK file installation. These files are not vetted by Google's Play Protect. On iOS, sideloading was historically restricted to enterprise-enrolled devices or developer accounts â€” third-party app store installation outside Apple's ecosystem requires a jailbreak. Sideloaded apps may be trojans, spyware, or adware.\nDeveloper Mode: both Android and iOS provide a developer mode for application testing. Developer Mode on Android enables USB debugging â€” which allows a connected computer to execute commands on the device over USB without a screen unlock. This is a significant security risk if the device is lost or left unattended. Developer Mode should be disabled when not actively needed.\nApplication spoofing: fake apps using names, icons, and descriptions that closely mimic legitimate apps â€” \"WhatsApp Pro,\" \"Netflix Plus,\" \"PayPal Security.\" These apps appear in unofficial stores and occasionally slip through official store vetting. Verification: check the developer name â€” real apps show the official organization. Check download count â€” a legitimate major app has millions or tens of millions of downloads. Check reviews for suspicious patterns.\nSecurity symptoms on mobile. High network traffic while the device is idle: check Settings > Data Usage to identify which app is generating traffic. Malware communicating with command and control servers, spyware exfiltrating data, and crypto miners communicating with mining pools all generate anomalous background network traffic.\nUnexpected data usage: reaching the data cap earlier than normal. Same cause â€” background malware activity. Check app-level data usage statistics.\nExcessive ads: ads appearing on the home screen, in the notification bar, or outside of apps indicate adware infection. Installed via bundled free apps or sideloaded applications.\nFake security warnings on mobile: pop-up warnings claiming \"Your device is infected\" or displaying a specific virus count. Legitimate mobile security notifications appear in Settings and the system notification drawer from installed security software. Browser-based pop-ups claiming infection are scareware.\nUnexpected app behavior and data leakage: apps accessing device functions they have no legitimate reason to access â€” a flashlight app requesting contacts, a simple game requesting location. Review and revoke unnecessary permissions through Settings > Apps > Permissions.\n---",
+      "exam_tips": [
+        "Clear app CACHE before clearing app DATA. Cache = temporary files, safe to remove. Data = app settings and stored information, removing resets the app. OS updates require battery above 50% charged OR plugged in â€” this is a hard requirement.",
+        "Rooting (Android) = jailbreaking (iOS) â€” same concept, platform-specific name. Both remove the OS security model. MDM solutions detect and block rooted/jailbroken devices. Developer Mode + USB debugging = physical USB access = remote code execution risk."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "A compromised PC tells you it is compromised â€” if you know what to look for. These symptoms appear on the A+ exam and in real-world incident response.",
+      "concept": "PC SECURITY SYMPTOMS â€” HOW TO RECOGNIZE A COMPROMISED SYSTEM",
+      "summary": "PC security issues produce recognizable symptoms. Knowing the symptom-to-cause mapping is what the exam tests."
+    },
+    {
+      "hook": "A mobile app is crashing, freezing, or refusing to open. Before uninstalling, there is a sequence of steps the exam expects you to follow â€” in order.",
+      "concept": "MOBILE APP TROUBLESHOOTING â€” THE STEP-BY-STEP SEQUENCE",
+      "summary": "Mobile app troubleshooting follows a progression from least invasive to most invasive. First: force stop the application."
+    },
+    {
+      "hook": "Users root and jailbreak their phones for customization. What they are actually doing is removing the security controls that keep malware confined. The A+ exam tests what each of these actions does and why it is risky.",
+      "concept": "ROOTING, JAILBREAKING, AND SIDELOADING â€” MOBILE SECURITY RISKS",
+      "summary": "Mobile devices run in a constrained environment by design. These actions remove those constraints."
+    },
+    {
+      "hook": "A compromised PC produces recognizable symptoms.",
+      "concept": "Pc Security Symptoms",
+      "summary": "A compromised PC produces recognizable symptoms. The A+ exam maps specific symptoms to specific causes. Unable to access the network: complete or partial network connectivity failure despite a working physical connection."
+    },
+    {
+      "hook": "Mobile app issues follow a consistent troubleshooting sequence.",
+      "concept": "Mobile App Troubleshooting",
+      "summary": "Mobile app issues follow a consistent troubleshooting sequence. Start with the least invasive option and escalate. Application fails to launch: force stop the application â€” this is the first step."
+    },
+    {
+      "hook": "Rooting and jailbreaking fundamentally alter the security model of a mobile device.",
+      "concept": "Mobile Security Issues",
+      "summary": "Rooting and jailbreaking fundamentally alter the security model of a mobile device. Rooting â€” Android: gaining superuser access to the Android OS. Apps on a rooted device can access any part of the OS without restriction."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "A user reports their browser homepage changed without their knowledge and shows ads constantly. What type of infection is likely?",
+      "options": [
+        "Ransomware",
+        "Browser hijacker or adware",
+        "Rootkit",
+        "Keylogger"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A user cannot access their files and sees a message demanding cryptocurrency payment to unlock them. What type of malware is this?",
+      "options": [
+        "Spyware",
+        "Adware",
+        "Ransomware",
+        "Worm"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A technician notices a PC is sending massive amounts of outbound traffic at night when no one is using it. What is MOST likely?",
+      "options": [
+        "Windows Update running",
+        "Defragmentation running",
+        "Backup software running",
+        "The PC is part of a botnet and being used for malicious activity"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A user reports receiving an email claiming to be from their bank asking them to verify account information via a link. What type of attack is this?",
+      "options": [
+        "Phishing",
+        "Vishing",
+        "Smishing",
+        "Whaling"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What security tool monitors the network for unusual patterns that may indicate an intrusion?",
+      "options": [
+        "Antivirus",
+        "IDS/IPS",
+        "Firewall",
+        "VPN"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A Windows PC has CPU usage consistently at 90-100% even when idle. After ruling out legitimate processes, what should be suspected?",
+      "options": [
+        "Hard drive failure",
+        "RAM failure",
+        "Cryptomining malware running in the background",
+        "Overclocking issue"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What is the FIRST step if you suspect a system is infected with malware?",
+      "options": [
+        "Delete all user files",
+        "Run a scan while connected to the internet",
+        "Reinstall Windows immediately",
+        "Isolate the system from the network to prevent spreading"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A user reports that every time they open their browser, the homepage is set to an unfamiliar search engine and search results redirect to advertisement sites. Which is the most likely cause?",
+      "options": [
+        "A browser hijacker or adware has been installed",
+        "The browser cache needs to be cleared",
+        "The DNS server address is incorrect",
+        "The user's ISP is intercepting search traffic"
+      ],
+      "answer": 0,
+      "explanation": "Browser hijackers modify homepage settings, default search engines, and redirect traffic to attacker-controlled sites. Cache clearing will not fix the underlying infection; the malware must be removed and browser settings reset."
+    },
+    {
+      "q": "A technician discovers that files have been renamed with a .locked extension and a text file demands payment for a decryption key. Which type of malware is responsible?",
+      "options": [
+        "Spyware",
+        "Ransomware",
+        "Rootkit",
+        "Adware"
+      ],
+      "answer": 1,
+      "explanation": "Ransomware encrypts or renames files to render them inaccessible, then demands payment for the decryption key. The correct response is isolation, incident reporting, and restoration from clean backups â€” not payment."
+    },
+    {
+      "q": "A user is locked out of their Windows account after several failed login attempts, even though they are certain they used the correct password. IT confirms no administrator changed the account. Which condition most likely explains this?",
+      "options": [
+        "The account's password has expired",
+        "Windows Update changed the password policy automatically",
+        "An attacker used a brute-force or credential-stuffing attack that triggered the account lockout policy",
+        "The user's keyboard is entering incorrect characters"
+      ],
+      "answer": 2,
+      "explanation": "Account lockout policies trigger after a defined number of failed authentication attempts â€” the intended defense against brute-force attacks. Being locked out without personally entering a wrong password suggests an attacker was attempting to authenticate."
+    },
+    {
+      "q": "What is the CompTIA recommended FIRST step in the malware removal process?",
+      "options": [
+        "Update antivirus",
+        "Wipe and reinstall OS",
+        "Isolate infected systems",
+        "Identify and research malware symptoms"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "According to the CompTIA malware removal procedure, what is a critical step to perform BEFORE beginning active remediation to prevent malware from hiding in recovery data?",
+      "options": [
+        "Disable System Restore to prevent malware from using restore points to survive removal",
+        "Enable Windows Defender real-time protection at maximum sensitivity",
+        "Delete all temporary files and browser cache",
+        "Run Windows Update to patch the system before removing malware"
+      ],
+      "answer": 0,
+      "explanation": "Disabling System Restore before malware removal is a key CompTIA A+ step. Malware can embed itself in restore points — if System Restore is active during removal, the malware can reinfect the system when a restore point is used. After successful remediation, System Restore is re-enabled and a clean restore point is created."
+    },
+    {
+      "q": "After removing malware, what is an important step to prevent reinfection?",
+      "options": [
+        "Reinstall all applications",
+        "Identify and remediate the infection vector â€” patch vulnerabilities, change passwords, update software",
+        "Delete all user accounts",
+        "Disable Windows Update"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of restoring from a known-good backup after malware removal?",
+      "options": [
+        "Saves time",
+        "Required by company policy",
+        "Ensures the system is completely clean if complete removal is uncertain",
+        "Improves system performance"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What is the final step after completing malware removal?",
+      "options": [
+        "Change the computer name",
+        "Replace the hard drive",
+        "Reinstall Windows",
+        "Educate the user on how the infection occurred and document everything"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What does \"quarantine\" mean in antivirus software?",
+      "options": [
+        "Isolate the suspected malicious file so it cannot execute while allowing later review or removal",
+        "Delete the infected file permanently",
+        "Back up the infected file",
+        "Repair the infected file automatically"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A malware scan completes but the malware symptoms return after reboot. What does this suggest?",
+      "options": [
+        "The antivirus is broken",
+        "Malware has a persistence mechanism (startup entry, rootkit component) that was not fully removed",
+        "More RAM is needed",
+        "Windows Update is interfering"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A mobile app keeps crashing immediately after opening. The FIRST step is:",
+      "options": [
+        "Factory reset the device",
+        "Uninstall the OS",
+        "Force stop the app, clear its cache, and relaunch",
+        "Call the app developer"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A smartphone OS update fails repeatedly. What should be checked?",
+      "options": [
+        "Replace the phone",
+        "Contact carrier",
+        "Replace the battery",
+        "Available storage space â€” insufficient storage prevents OS updates from downloading or applying"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What does enabling developer options on Android allow?",
+      "options": [
+        "Access to advanced features like USB debugging, mock locations, and animation speed controls",
+        "Removes system app restrictions permanently",
+        "Unlocks the bootloader automatically",
+        "Disables all security features"
+      ],
+      "answer": 0,
+      "explanation": ""
+    }
+  ]
+}

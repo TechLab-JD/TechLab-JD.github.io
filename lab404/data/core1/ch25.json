@@ -1,0 +1,294 @@
+{
+  "core": 1,
+  "chapter": 25,
+  "title": "Display & Printer Troubleshooting",
+  "exam_objectives": [
+    "5.3",
+    "5.6"
+  ],
+  "coverage": "COVERED",
+  "domain": "troubleshooting",
+  "domain_label": "Troubleshooting",
+  "sections": [
+    {
+      "title": "Display Troubleshooting",
+      "content": "NO VIDEO \u00e2\u20ac\u201d DIAGNOSTIC SEQUENCE.\nA system with no video output requires a structured approach. The problem may be in the display, the cable, the GPU, or the driver. Start from the simplest cause.\nStep 1: Verify the display has power. Check the power LED. If no LED is lit, check the power cable connection.\nStep 2: Check the input source selection. Most displays have multiple inputs \u00e2\u20ac\u201d HDMI 1, HDMI 2, DisplayPort, VGA. If the wrong input is selected, the display shows no signal even when the PC is outputting correctly. Change input sources manually on the monitor.\nStep 3: Inspect the video cable for physical damage. Bent pins, frayed connectors, and damaged shielding cause intermittent or total signal loss. Test with a known-good replacement cable.\nStep 4: Test with known-good hardware. Connect the display to a different PC \u00e2\u20ac\u201d if it displays correctly, the problem is the PC, not the monitor. Connect the PC to a different display \u00e2\u20ac\u201d if the second display works, the original monitor is at fault.\nStep 5: Verify GPU power connectors. Discrete GPUs require 6-pin or 8-pin PCIe power connectors. An unsupported GPU may produce no video output if power connectors are not seated.\nStep 6: Check and update video drivers. A corrupt or incompatible video driver can prevent display output. Boot to safe mode \u00e2\u20ac\u201d which uses the generic Microsoft display driver \u00e2\u20ac\u201d to verify whether the issue is driver-related.\nIf POST completes with beep codes but no video appears: the video card is likely not properly seated in the PCIe slot. Reseat it.\nDIM IMAGE \u00e2\u20ac\u201d BACKLIGHT FAILURE.\nA display that shows a very dim image \u00e2\u20ac\u201d barely visible when viewed in a dark room or with a flashlight held against the screen \u00e2\u20ac\u201d has a functioning panel but a failed backlight. The image is being generated correctly but the backlight that illuminates it is not working.\nOn older laptops with CCFL \u00e2\u20ac\u201d Cold Cathode Fluorescent Lamp \u00e2\u20ac\u201d backlights: CCFL failure or inverter board failure produces this symptom. CCFL backlights require a high-voltage inverter to operate.\nOn modern LED-backlit displays: an LED driver failure or failed LED strip produces the same symptom.\nBacklight failure on a laptop typically requires display assembly service or replacement.\nFUZZY OR BLURRY IMAGE.\nLCD displays have a fixed native resolution \u00e2\u20ac\u201d the exact number of pixels in the panel. When configured to run at a resolution other than native \u00e2\u20ac\u201d for example, 1080p on a 1440p panel \u00e2\u20ac\u201d the display must scale the image, producing a soft or blurry appearance. Set the resolution to the display's native resolution for a sharp image.\nFLICKERING.\nFlickering display: check all cable connections \u00e2\u20ac\u201d even slight looseness causes signal interruptions that appear as flicker. Try a different cable. Check the refresh rate setting \u00e2\u20ac\u201d some displays do not handle non-standard refresh rates. Persistent flickering with cables confirmed good may indicate a failing GPU or display panel.\nDEAD AND STUCK PIXELS.\nA dead pixel is a pixel that no longer lights up \u00e2\u20ac\u201d appears permanently black. A stuck pixel displays one color permanently regardless of what the image shows \u00e2\u20ac\u201d commonly red, green, or blue.\nDead pixels are panel manufacturing defects. Some manufacturers have a warranty threshold \u00e2\u20ac\u201d a certain number or pattern of dead pixels must be present before a warranty replacement is provided. Stuck pixels occasionally respond to pixel-exerciser software that rapidly cycles colors.\nBURN-IN.\nBurn-in is the permanent retention of a static image into the display panel. It is most common on OLED panels and plasma displays because the emissive elements degrade at different rates depending on usage. An image \u00e2\u20ac\u201d for example, a taskbar or a static logo \u00e2\u20ac\u201d displayed continuously over many hours causes the corresponding area of the panel to degrade faster than surrounding areas.\nPrevention: use screen savers, rotate content displayed, reduce brightness. Once burn-in has occurred it is generally permanent.\nCOLOR DISTORTION.\nIncorrect or shifted colors: check cable connections \u00e2\u20ac\u201d damaged cable pins can drop color channels. Verify color calibration settings on the monitor and in the OS. Color distortion may also indicate a failing GPU or display panel.\nPROJECTOR-SPECIFIC ISSUES.\nProjectors use lamps (older models) or LED/laser light sources (modern). Lamp failure in older projectors produces sudden loss of image or a dim purple-tinted image as the lamp degrades. Check bulb hours in the projector's status menu \u00e2\u20ac\u201d replace before the rated lifespan is exceeded.\nProjector overheating shutdowns: blocked ventilation is the most common cause. Keep intake and exhaust vents clear. Allow adequate cool-down time before restarting after a thermal shutdown.\nLoose cables produce loss of signal or intermittent signal on projectors just as on direct-connect displays.\n---",
+      "exam_tips": [
+        "If you can faintly see an image on an otherwise black display when holding a flashlight to it, the backlight has failed \u00e2\u20ac\u201d not the panel. The panel is generating an image but the backlight is not illuminating it."
+      ]
+    },
+    {
+      "title": "Printer Troubleshooting",
+      "content": "LASER PRINTER DEFECTS.\nEach laser print quality problem maps to a specific component or stage in the laser imaging process. Memorize these mappings \u00e2\u20ac\u201d they appear on the A+ exam as direct scenario questions.\nFaded or light print: low toner is the first suspect. Remove the toner cartridge and gently agitate it to redistribute remaining toner \u00e2\u20ac\u201d this may temporarily restore output. A worn drum also produces faded output. Replace toner, then drum if toner replacement does not resolve it. Low print density settings in the driver can produce fading without a hardware cause.\nVertical lines or streaks down the page: a scratched or damaged drum surface. The scratch produces a consistent mark at the same horizontal position on every page, appearing as a continuous vertical line. Replace the drum or drum cartridge.\nSpeckling \u00e2\u20ac\u201d random spots or dots across the page: toner contamination inside the printer. A toner cartridge that is leaking or a drum assembly that is not cleaning properly distributes loose toner onto the page.\nGhosting \u00e2\u20ac\u201d double or echo images: a faint secondary image of the previous page content appears on the current page. The drum is not fully discharging between pages, leaving residual charge patterns. This indicates the drum is at or near end of life. Replace the drum.\nSmearing or smudging \u00e2\u20ac\u201d toner that does not fully adhere and rubs off the page: the fuser is not reaching operating temperature and is not permanently bonding the toner to the paper. The fuser assembly requires replacement.\nRepetitive marks at consistent intervals: measure the distance between the defect occurrences. If the interval matches the drum's circumference, the defect is on the drum surface. If the interval matches the fuser roller's circumference, the issue is on the fuser roller.\nINKJET PRINTER DEFECTS.\nMissing lines, horizontal streaks, or incomplete characters: clogged print head nozzles. Dried ink in unused nozzles blocks ink flow. Run the print head cleaning cycle from the printer utility \u00e2\u20ac\u201d multiple cleaning cycles may be required for severely clogged nozzles. Each cleaning cycle consumes ink.\nWrong colors or color shift: an empty or low cartridge for one color will shift all colors. A clogged nozzle for one color has the same effect. Replace the suspect cartridge or run the cleaning cycle.\nInk smearing on the page: the paper type does not match the ink type. Glossy photo ink on plain paper, or vice versa, produces smearing and poor drying. Verify the paper type setting in the driver matches the actual paper loaded.\nPAPER HANDLING FAILURES.\nPaper jams: overfilled paper tray \u00e2\u20ac\u201d reduce paper load. Wrong paper weight or size \u00e2\u20ac\u201d verify media specifications match the printer's supported types. Worn pickup rollers \u00e2\u20ac\u201d the rubber rollers that pull paper from the tray wear over time and lose grip. Paper not properly fanned before loading \u00e2\u20ac\u201d sheets stick together. Humid or damp paper \u00e2\u20ac\u201d store paper in a dry environment.\nPaper not feeding: worn pickup rollers are the primary cause. Check that the paper tray is fully seated and paper guides are adjusted correctly \u00e2\u20ac\u201d too loose allows skewing, too tight prevents pickup.\nMultiple sheets feeding simultaneously: worn separator pad, static buildup on the paper stack, or multiple sheets stuck together. Fan the paper and check the separator pad.\nTray not recognized: verify the tray is fully seated. Check for debris on the tray sensor. Verify the paper size configured in the tray settings matches the actual paper loaded.\nPRINT QUEUE AND DRIVER ISSUES.\nPrint queue frozen: a corrupt print job prevents subsequent jobs from printing. The entire queue appears stuck. Resolution:\n1. Stop the Print Spooler service \u00e2\u20ac\u201d Services.msc or net stop spooler.\n2. Navigate to C:\\Windows\\System32\\spool\\PRINTERS and delete all files in this folder.\n3. Restart the Print Spooler service \u00e2\u20ac\u201d net start spooler.\nGarbled output \u00e2\u20ac\u201d random characters, symbols, or meaningless text printed instead of the expected document: wrong driver installed. A PCL driver sending jobs to a PostScript printer, or vice versa, produces this symptom. Reinstall the correct driver for the exact printer model and OS version.\nIncorrect page orientation \u00e2\u20ac\u201d portrait job printed in landscape or vice versa: check both the application's print settings and the printer driver's orientation setting. The application setting usually overrides the driver setting.\nPRINTER CONNECTIVITY.\nUSB connectivity: verify the cable is connected at both ends and to the correct USB port. Verify the driver is installed. Test with a different cable.\nNetwork printer connectivity: if the printer's IP address changed \u00e2\u20ac\u201d from a DHCP lease renewal \u00e2\u20ac\u201d the configured port on the workstations points to the old address. The fix is to assign the printer a static IP address. Alternatively, configure workstations using the printer's DNS hostname rather than IP address \u00e2\u20ac\u201d the hostname resolves correctly even if the IP changes.\nIf the printer shows offline: verify the printer is powered on and network-connected. Check the workstation's printer configuration \u00e2\u20ac\u201d it may be manually set to offline. Verify no firewall rule is blocking the printing port.\n---",
+      "exam_tips": [
+        "Smearing = fuser. Ghosting = drum. Lines = drum scratch. Faded = toner. These four mappings appear directly on the A+ exam as scenario-based questions."
+      ]
+    },
+    {
+      "title": "Series Close",
+      "content": "SERIES CLOSE:\n\"That's Chapter 25 \u00e2\u20ac\u201d and that is the Lab404 CompTIA A+ Core 1 series.\"\n\"We covered: IT fundamentals, PC hardware \u00e2\u20ac\u201d CPU, RAM, storage, motherboards, PSUs, displays, cables, and printers \u00e2\u20ac\u201d full networking from TCP/IP through DHCP, DNS, Wi-Fi, and troubleshooting \u00e2\u20ac\u201d mobile devices and enterprise mobility \u00e2\u20ac\u201d cloud computing and virtualization \u00e2\u20ac\u201d and hardware and peripheral troubleshooting.\"\n\"If you are preparing for the 220-1201 exam: work through these videos, use the shorts for rapid concept review, and put hands on hardware whenever you can. The exam tests what you understand, not what you memorized.\"\n\"Subscribe for the Core 2 series when it drops. This is Lab404 \u00e2\u20ac\u201d signing out.\"",
+      "exam_tips": [
+        "Garbled or nonsense output from a printer almost always indicates a driver mismatch \u00e2\u20ac\u201d the wrong driver is installed, or there is a PostScript vs PCL mismatch. Reinstall the correct driver for the specific printer model."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "No video on screen doesn't mean the GPU is dead. Work through the sequence \u00e2\u20ac\u201d the fix is usually the cable, the input source, or the driver.",
+      "concept": "NO VIDEO, DIM DISPLAY & RESOLUTION ISSUES",
+      "summary": "No video troubleshooting sequence. Work through these steps in order before assuming hardware failure."
+    },
+    {
+      "hook": "A dead pixel and a stuck pixel are not the same thing. One is permanent. One sometimes responds to treatment. Knowing the difference affects what you tell the customer.",
+      "concept": "DEAD PIXELS, BURN-IN & HDMI AUDIO",
+      "summary": "Dead pixels: a pixel that no longer receives a signal and appears permanently black. Dead pixels are a panel manufacturing defect."
+    },
+    {
+      "hook": "Every laser printer defect maps to a specific component. The defect tells you what to replace before you even open the machine.",
+      "concept": "LASER PRINTER DEFECT MAP",
+      "summary": "Laser printer defects follow the imaging process directly \u00e2\u20ac\u201d each step has a signature failure mode. Faded or light print: insufficient toner on the page."
+    },
+    {
+      "hook": "A frozen print queue that won't clear \u00e2\u20ac\u201d even after canceling jobs \u00e2\u20ac\u201d is a Print Spooler service problem. Restarting the service and clearing the spool folder fixes it every time.",
+      "concept": "PAPER JAMS, PRINT QUEUE, INKJET & GARBLED OUTPUT",
+      "summary": "Paper jams: most jams are caused by an overfilled tray, incorrect paper weight or type, or worn pickup rollers. Load paper to the tray's fill line, not above it."
+    },
+    {
+      "hook": "NO VIDEO \u00e2\u20ac\u201d DIAGNOSTIC SEQUENCE.",
+      "concept": "Display Troubleshooting",
+      "summary": "NO VIDEO \u00e2\u20ac\u201d DIAGNOSTIC SEQUENCE. A system with no video output requires a structured approach. The problem may be in the display, the cable, the GPU, or the driver."
+    },
+    {
+      "hook": "LASER PRINTER DEFECTS.",
+      "concept": "Printer Troubleshooting",
+      "summary": "LASER PRINTER DEFECTS. Each laser print quality problem maps to a specific component or stage in the laser imaging process. Memorize these mappings \u00e2\u20ac\u201d they appear on the A+ exam as direct scenario questions."
+    },
+    {
+      "hook": "SERIES CLOSE: \"That's Chapter 25 \u00e2\u20ac\u201d and that is the Lab404 CompTIA A+ Core 1 series.\" \"We covered: IT fundamentals, PC hardware \u00e2\u20ac\u201d CPU, RAM, storage, mo",
+      "concept": "Series Close",
+      "summary": "SERIES CLOSE: \"That's Chapter 25 \u00e2\u20ac\u201d and that is the Lab404 CompTIA A+ Core 1 series.\" \"We covered: IT fundamentals, PC hardware \u00e2\u20ac\u201d CPU, RAM, storage, motherboards, PSUs, displays, cables, and printers \u00e2\u20ac\u201d full networking from TCP/IP through DHCP, DNS, Wi-Fi, and troubleshooting \u00e2\u20ac\u201d mobile devices and enterprise mobility \u00e2\u20ac\u201d cloud computing and virtualization \u00e2\u20ac\u201d and hardware and peripheral troubleshooting.\" \"If you are preparing for the 220-1201 exam: work through these videos, use the shorts for rapid concept review, and put hands on hardware whenever you can. The exam tests what you understand, not what you memorized.\" \"Subscribe for the Core 2 series when it drops. This is Lab404 \u00e2\u20ac\u201d signing out.\""
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "A monitor displays \"No Signal.\" The PC is powered on and the cable is confirmed secure. What should be checked NEXT?",
+      "options": [
+        "Replace the monitor",
+        "Confirm the correct input source is selected on the monitor",
+        "Update GPU drivers remotely",
+        "Check RAM seating"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A display shows a flickering image. After replacing the video cable with no improvement, what is the NEXT component to suspect?",
+      "options": [
+        "RAM",
+        "Motherboard",
+        "The monitor panel itself or the GPU",
+        "Power supply"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What is \"pixel pitch\" in a display specification?",
+      "options": [
+        "Number of pixels per inch",
+        "Monitor diagonal size in inches",
+        "The color bit depth setting",
+        "The distance between centers of adjacent pixels \u00e2\u20ac\u201d smaller pitch means a sharper image"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A laptop screen is black but an external monitor connected via HDMI works fine. What should be checked?",
+      "options": [
+        "Laptop display cable, backlight, or LCD panel",
+        "GPU replacement",
+        "RAM modules",
+        "OS reinstallation"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What does \"dead pixel\" mean on a display?",
+      "options": [
+        "A pixel stuck on a bright color permanently",
+        "A pixel that never illuminates and remains black regardless of the displayed content",
+        "A burnt-in image on the screen",
+        "A cluster of bright pixels from overheating"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A user second monitor shows only a portion of the desktop with the image cut off at edges. What resolves this?",
+      "options": [
+        "Color profile adjustment",
+        "Color calibration reset",
+        "Overscan or underscan setting adjustment, or correcting the display resolution",
+        "Changing brightness setting"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What is the FIRST thing to check when a projector displays \"no signal\"?",
+      "options": [
+        "Replace the projector lamp",
+        "Clean the projector lens",
+        "Adjust keystone correction",
+        "Confirm the correct input source is selected and the cable is connected"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A monitor displays in portrait orientation when it should be landscape. What is the fix?",
+      "options": [
+        "Adjust display orientation in Windows display settings",
+        "Replace the monitor",
+        "Reinstall GPU drivers",
+        "Use a different cable type"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What GPU temperature range is generally considered acceptable under full load for most consumer graphics cards?",
+      "options": [
+        "30-50 degrees C",
+        "70-85 degrees C (above 95 degrees is a concern for most cards)",
+        "50-65 degrees C",
+        "Over 100 degrees C"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A projector image appears trapezoidal rather than rectangular. What adjustment corrects this?",
+      "options": [
+        "Zoom control",
+        "Focus ring adjustment",
+        "Keystone correction",
+        "Aspect ratio setting"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What is the MOST common reason an HDMI monitor connected to a laptop shows no signal even with a good cable?",
+      "options": [
+        "Laptop GPU failure",
+        "Wrong HDMI version cable",
+        "HDMI port is physically damaged",
+        "Display output mode not configured \u00e2\u20ac\u201d use Win+P to select the correct display mode"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What does refresh rate measure in a display?",
+      "options": [
+        "Make the image appear blurry or stretched due to upscaling interpolation",
+        "Make the image sharper due to larger pixels",
+        "Significantly increase GPU performance",
+        "Not affect image quality at all"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A GPU shows artifacting on screen with normal temperatures. After testing with a different monitor and same result, what is MOST likely?",
+      "options": [
+        "Bad monitor only",
+        "Driver corruption or failing GPU VRAM",
+        "RAM issue on the motherboard",
+        "CPU overheating"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A laser printer produces pages where the toner smears or rubs off easily. The MOST likely failing component is:",
+      "options": [
+        "Drum unit",
+        "Toner cartridge",
+        "Transfer roller",
+        "Fuser assembly"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A printer produces a blank page every time it prints. The FIRST thing to check is:",
+      "options": [
+        "Toner or ink level, and whether protective tape was removed from a new cartridge",
+        "Network connection",
+        "Print driver version",
+        "USB cable condition"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What does the Windows print spooler service do?",
+      "options": [
+        "Physically routes cables to the printer",
+        "Manages and queues print jobs between applications and the printer",
+        "Controls installation of printer drivers",
+        "Monitors ink or toner levels"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A laser printer produces a repeating smudge or mark at regular intervals on every page. The MOST likely cause is:",
+      "options": [
+        "Low toner level",
+        "Wrong paper size setting",
+        "Contamination or damage on the drum or rollers at the interval matching the drum circumference",
+        "Network connectivity issue"
+      ],
+      "answer": 2,
+      "explanation": "Repeating defects at regular intervals are caused by a contaminated or damaged component that repeats on every rotation. The interval distance equals the circumference of the offending part. Drum circumference (~94 mm for a typical cartridge) repeats every ~3.7 inches. If the interval is shorter, su"
+    },
+    {
+      "q": "What does \"toner scatter\" appearing as speckles around text on laser-printed pages typically indicate?",
+      "options": [
+        "Low toner level",
+        "Incorrect printer driver",
+        "Fuser assembly failure",
+        "Damaged drum, high humidity, or incorrect paper type"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A network printer worked yesterday but shows offline today with no known changes. The FIRST thing to check is:",
+      "options": [
+        "Verify the printer IP address has not changed due to DHCP lease expiration",
+        "Reinstall the printer driver",
+        "Replace the network cable",
+        "Update printer firmware"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What causes \"ghosting\" on a laser-printed page \u00e2\u20ac\u201d a faint duplicate image offset from the main image?",
+      "options": [
+        "Low toner level",
+        "Worn drum unit that is not fully discharging residual charge after the transfer step",
+        "Fuser assembly failure",
+        "Paper curling"
+      ],
+      "answer": 1,
+      "explanation": "Drum ghosting: a worn drum retains residual charge from a prior print cycle, attracting toner in that same pattern on subsequent pages, creating a faint ghost of an earlier image. Fuser ghosting is a distinct failure mode: an underheated fuser partially bonds toner, which remelts further down the sa"
+    }
+  ]
+}

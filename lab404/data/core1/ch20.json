@@ -1,0 +1,275 @@
+{
+  "core": 1,
+  "chapter": 20,
+  "title": "Mobile Devices: Connectivity & Apps",
+  "exam_objectives": [
+    "1.2",
+    "1.3"
+  ],
+  "coverage": "PARTIAL",
+  "domain": "mobile",
+  "domain_label": "Mobile Devices",
+  "sections": [
+    {
+      "title": "Mobile Wireless Connectivity",
+      "content": "WI-FI.\nMobile devices connect to Wi-Fi using the same 802.11 standards as laptops. Wi-Fi is the preferred connection for speed, stability, and to avoid cellular data consumption. When a known Wi-Fi network is in range, devices connect automatically.\nFor hidden SSIDs â€” networks not broadcasting their name â€” the user must manually enter the SSID and security settings. This information is not discoverable through the standard Wi-Fi scan.\nCELLULAR â€” SIM AND ESIM.\nCellular connectivity uses 4G LTE or 5G networks. The SIM card â€” Subscriber Identity Module â€” is the physical card that identifies the device to the carrier. SIM cards are removable: transferring the SIM card from one device to another moves the cellular subscription.\nThe eSIM â€” Embedded SIM â€” is a chip soldered into the device. No physical card is required. Carrier activation is digital. eSIM supports multiple carrier profiles on a single device â€” useful for international travel or maintaining both a personal and work number. Switching carriers on eSIM requires no physical swap.\nBLUETOOTH.\nBluetooth provides short-range wireless connectivity for the Personal Area Network â€” PAN. Common uses: wireless headsets, speakers, keyboards, mice, fitness trackers, and health monitors.\nBluetooth pairing process:\n1. Enable discoverable mode on the device to be paired.\n2. Initiate a scan from the pairing device.\n3. Select the target device from the scan results.\n4. Confirm the pairing code if prompted.\nAfter successful pairing, devices reconnect automatically when within range. Unpair devices that are no longer in use â€” especially on shared or enterprise devices â€” to prevent unauthorized connections.\nNFC â€” NEAR FIELD COMMUNICATION.\nNFC operates at a range of a few centimeters. Uses:\nContactless payments â€” Apple Pay, Google Pay. The phone must be held very close to the payment terminal. NFC payment uses tokenization: the actual card number is never transmitted; a single-use token is used instead. This makes NFC payments more secure than traditional card swipes.\nQuick Bluetooth pairing â€” tapping an NFC-enabled accessory to a phone initiates the Bluetooth pairing sequence automatically.\nTap-to-share data transfer â€” sharing contact cards, small files, or URLs between NFC-equipped devices by tapping them together.\nTETHERING.\nTethering shares the phone's cellular data connection with other devices.\nUSB tethering: connect the phone to a computer via cable. The computer sees the phone as a network adapter and routes its internet through the phone's cellular connection. Most reliable method.\nBluetooth tethering: shares cellular via Bluetooth. Lower throughput than USB but cable-free.\nWi-Fi hotspot: the phone creates a wireless access point. Other devices connect using an SSID and passphrase. Supports multiple simultaneous connections. Drains the battery faster than other tethering methods.\nAIRPLANE MODE.\nAirplane mode simultaneously disables all RF transmitters: cellular, Wi-Fi, Bluetooth, GPS, and NFC. Required by regulations during flight. After enabling airplane mode, specific radios â€” typically Wi-Fi and Bluetooth â€” can be re-enabled manually. Airlines increasingly permit in-flight Wi-Fi over Wi-Fi while maintaining cellular off.\n---",
+      "exam_tips": [
+        "eSIM supports multiple carrier profiles on one device â€” useful for travel or dual-number configurations. No physical swap required."
+      ]
+    },
+    {
+      "title": "Mobile Apps And Data Management",
+      "content": "iOS vs ANDROID ECOSYSTEMS.\nMobile apps are platform-specific. iOS apps run exclusively on iPhone and iPad. Android apps run exclusively on Android devices. The underlying programming languages, APIs, and runtime environments are entirely different.\niOS: Apple's controlled ecosystem. All apps are distributed through the App Store. Apple reviews apps before publication. Sideloading â€” installing apps outside the App Store â€” requires developer tools or enterprise deployment. iOS apps run in a tightly sandboxed environment.\nAndroid: Google's more open ecosystem. Google Play is the primary distribution channel. Android permits sideloading of APK files from third-party sources. This flexibility increases the risk of malware â€” a malicious app distributed outside the Play Store has no vetting process.\nAPP SANDBOXING AND PERMISSIONS.\nAll mobile apps run in sandboxes â€” isolated environments that prevent access to other apps' data and most system resources by default. Apps must request permissions to access restricted resources.\nCommon permissions: camera, microphone, location services, contacts, calendar, storage. Users grant or deny permissions when the app first requests them. Permissions can be reviewed and revoked at any time in the device's settings.\nReviewing app permissions is a standard security maintenance task. Apps with camera or microphone access that have no legitimate reason for it represent a privacy risk.\nACCOUNT MANAGEMENT.\nMobile devices are tied to a primary account:\nApple ID: required for iOS and iPadOS. Manages App Store purchases, iCloud services, Find My device, and account recovery. The Apple ID password is required to unlock Activation Lock â€” a theft deterrent that binds the device to the account.\nGoogle Account: required for Android. Manages Google Play, Google Drive, Google Photos, Find My Device, and account-based services.\nThese accounts are critical for device provisioning and recovery. If a device is reset without disabling the account, Activation Lock or FRP â€” Factory Reset Protection â€” will require the original account credentials before the device can be used.\nDATA SYNCHRONIZATION.\nCloud sync keeps data consistent across devices: contacts, calendars, email, photos, notes, documents, and passwords. Sync runs continuously on Wi-Fi and conditionally on cellular depending on settings.\nLarge syncs â€” photo libraries, app backups â€” should be scheduled over Wi-Fi to avoid cellular data consumption.\nUSB sync provides local synchronization between the device and a computer â€” using iTunes for iOS or file manager / Android File Transfer for Android. Useful when cloud sync is unavailable or when creating a full local backup.\nAndroid Auto and Apple CarPlay integrate the phone with compatible vehicle infotainment systems, projecting navigation, music, and calls onto the vehicle display.\nEMAIL CONFIGURATION.\nAutodiscover configures email automatically. The user enters the email address and password; the client app queries DNS for autodiscover records and retrieves server settings. Most modern enterprise email systems support autodiscover.\nManual configuration is required when autodiscover fails or is not available. Required information: incoming mail server hostname (IMAP or POP3), outgoing mail server hostname (SMTP), port numbers for each, and TLS/SSL setting.\nProtocol selection:\nIMAP: messages remain on the server. Folder sync across all devices. Read state, flags, and deletions propagate to all connected clients. The correct choice for multi-device access â€” which includes any mobile deployment.\nPOP3: downloads messages to the local device, typically removing them from the server. No folder sync. Appropriate only for single-device access scenarios.\nExchange / ActiveSync: Microsoft's proprietary push email protocol. Delivers email, calendar events, and contacts from Exchange Server or Exchange Online (Microsoft 365) to mobile devices with immediate delivery â€” no polling required.\nMOBILE DEVICE SYNCHRONIZATION — DETAILED.\nCALENDAR SYNC.\nCalendar sync connects the device calendar app to a server-hosted calendar database. On iOS, iCloud Calendar syncs using CalDAV, propagating events across all Apple devices and iCloud.com. Google Calendar syncs over the Google account API. Exchange ActiveSync delivers calendar events to corporate devices alongside email and contacts — events created or modified on any synced device propagate to all connected clients instantly. Calendar sync is configured per-account in Settings > Mail/Calendar. When a corporate Exchange account is added to a device, calendar sync is included automatically as part of the ActiveSync connection.\nCONTACTS SYNC.\nContacts sync maintains a consistent address book across devices. iCloud Contacts uses CardDAV for sync. Google Contacts syncs through the Google account. Exchange ActiveSync includes contacts as a core sync category alongside email and calendar. In enterprise environments, the Exchange Global Address List — the organization-wide directory — is available to mobile devices through the Exchange account without manually importing individual contacts. When a device is configured with multiple accounts (personal iCloud + corporate Exchange, for example), contacts from each source appear in the device address book, though they are stored and managed separately per account.\nRECOGNIZING DATA CAPS.\nCellular data plans have monthly usage limits — data caps. Exceeding the cap results in overage charges or throttled speeds depending on the carrier plan. Synchronization is a major cellular data consumer: large photo library syncs, video backups, app updates, and email with large attachments can exhaust a data cap without the user realizing it. A technician troubleshooting unexpectedly high cellular data bills should review sync settings as the first step — automatic photo backups and app update settings are the most common causes. Data cap management: configure photo and video backup to run on Wi-Fi only; restrict app updates to Wi-Fi; enable data usage warnings in Settings > Cellular; audit per-app cellular data consumption and disable cellular access for apps that do not require it.\n---",
+      "exam_tips": [
+        "NFC payment uses tokenization â€” the actual card number is never transmitted. This makes NFC payments more secure than traditional card-swipe transactions."
+      ]
+    },
+    {
+      "title": "Mobile Peripherals And Ports",
+      "content": "MOBILE CONNECTORS.\nUSB-C is the modern universal standard for smartphones, tablets, and laptops. Reversible connector. Supports data transfer, DisplayPort video output, and USB Power Delivery charging. Apple adopted USB-C for iPhone 15 and all current iPad models.\nLightning is Apple's older proprietary connector, used on iPhones through iPhone 14 and some older iPads. Not reversible.\nMicro-USB is the legacy Android standard. Still found on older devices and budget peripherals.\nLAPTOP PORTS.\nA standard laptop provides: HDMI or DisplayPort video output, USB Type-A ports, USB-C port, RJ-45 Ethernet (on most models), 3.5 mm audio jack, and SD or microSD card reader. Thin and ultraportable laptops may omit Ethernet and SD slots to reduce thickness.\nPORT REPLICATORS AND DOCKING STATIONS.\nA port replicator connects to the laptop via a single USB or Thunderbolt cable and expands available connections. Typical additions: additional USB ports, HDMI or DisplayPort outputs, Ethernet, and audio.\nA docking station is a more permanent workstation solution. In addition to port expansion, docking stations may include: storage drive bays, PCIe expansion card slots, integrated power delivery, and in proprietary models, a direct bottom-connector attachment to the laptop chassis.\nUSB-C and Thunderbolt docking stations are cross-platform â€” compatible with any laptop supporting the relevant connector. Proprietary docks are designed for specific laptop models.\nMobile docks allow smartphones and tablets to connect to external monitors, keyboards, and mice, enabling desktop-like productivity.\nINPUT DEVICES â€” TOUCHPAD AND STYLUS.\nThe laptop touchpad is a multitouch input device. Modern touchpads support gestures: two-finger scroll, pinch-to-zoom, three-finger swipe for virtual desktops, and four-finger gestures for system navigation.\nThe Track Point is a pressure-sensitive pointing device embedded in the keyboard â€” typically found on IBM and Lenovo ThinkPad systems. The cursor speed and direction respond to the amount and direction of pressure applied.\nA stylus â€” also called a digital pen â€” provides precise input on touchscreen devices. Professional styluses support pressure sensitivity â€” the harder the press, the thicker the line â€” and interchangeable nibs for different input types.\n---",
+      "exam_tips": [
+        "Android's ability to sideload APK files from outside the Play Store increases the risk of malicious app installation. iOS prevents this for standard users.",
+        "IMAP is always the correct choice for mobile email â€” messages stay on the server and sync across all devices. POP3 is single-device and removes messages from the server."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "Airplane mode does not just turn off cellular â€” it kills every radio on the device. Wi-Fi, Bluetooth, GPS, NFC â€” all disabled. And on some flights, you can turn selected ones back on manually.",
+      "concept": "MOBILE CONNECTIVITY",
+      "summary": "Mobile devices connect using multiple simultaneous radio technologies. Wi-Fi provides the fastest and most cost-effective connection when available."
+    },
+    {
+      "hook": "iOS apps and Android apps are not interchangeable. They run in different sandboxes, distributed through different stores, with different permission models and different account dependencies. Know both platforms.",
+      "concept": "MOBILE APPS AND DATA SYNC",
+      "summary": "Mobile apps are platform-specific. iOS apps run on iOS and iPadOS only."
+    },
+    {
+      "hook": "A docking station is not a hub â€” it is a workspace transformation. Connect one cable from a laptop to a dock and get a full monitor, keyboard, mouse, Ethernet, and power. That single cable is the entire workstation.",
+      "concept": "MOBILE PERIPHERALS AND PORTS",
+      "summary": "Mobile device connectors have evolved toward a single universal standard. USB-C is the modern standard: reversible, supports data transfer, video output, and Power Delivery charging in a single connector."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "What is the function of a digitizer in a touchscreen laptop?",
+      "options": [
+        "Converts touch input to digital coordinates",
+        "Improves color accuracy",
+        "Provides backlighting",
+        "Manages display resolution"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Which display panel type is known for the fastest response times and is popular for gaming?",
+      "options": [
+        "IPS",
+        "TN",
+        "VA",
+        "OLED"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A technician replaces a laptop LCD but the replacement is slightly dimmer. The MOST likely reason is:",
+      "options": [
+        "Wrong resolution panel",
+        "Corrupt GPU driver",
+        "Wrong backlight voltage or incompatible panel model",
+        "Incorrect aspect ratio"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "Which mobile display type uses a separate backlight and cannot achieve true black?",
+      "options": [
+        "OLED",
+        "AMOLED",
+        "MicroLED",
+        "LCD"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A user reports their laptop screen flickers randomly. Testing with an external monitor shows no flicker. The MOST likely component at fault is:",
+      "options": [
+        "Laptop display cable or LCD panel",
+        "RAM",
+        "GPU",
+        "Motherboard"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What does \"glossy\" vs \"matte\" refer to in laptop screens?",
+      "options": [
+        "Color gamut",
+        "Screen coating that affects glare and reflection",
+        "Panel backlight type",
+        "Resolution standard"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Which technology allows a stylus to be used on a tablet display by detecting electromagnetic signals from the pen?",
+      "options": [
+        "Capacitive touch",
+        "Resistive touch",
+        "Active digitizer (EMR)",
+        "Optical touch"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A mobile device screen responds to touches in the wrong location. This is MOST likely a:",
+      "options": [
+        "GPU failure",
+        "Software bug only",
+        "LCD failure",
+        "Touchscreen calibration or digitizer issue"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What is the typical first step when replacing a laptop display assembly?",
+      "options": [
+        "Disconnect power and remove the battery",
+        "Detach the display cable from the motherboard",
+        "Pry open the display bezel",
+        "Remove the battery"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Which display specification describes the number of pixels per inch?",
+      "options": [
+        "Resolution",
+        "PPI (Pixels Per Inch)",
+        "Refresh rate",
+        "Contrast ratio"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A laptop screen shows vertical colored lines but an external display works fine. What is the MOST likely cause?",
+      "options": [
+        "Bad GPU",
+        "Driver corruption",
+        "Damaged LCD panel or loose video cable",
+        "Overheating CPU"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A user wants to connect their laptop to a wired network using a USB-C port only. What device do they need?",
+      "options": [
+        "USB-C to VGA adapter",
+        "Wireless bridge",
+        "Thunderbolt dock without Ethernet",
+        "USB-C hub with Ethernet port"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "Which mobile port standard supports both data transfer and video output up to 40 Gbps?",
+      "options": [
+        "Thunderbolt 3 or 4",
+        "USB 2.0",
+        "USB 3.0 Type-A",
+        "HDMI 1.4"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A user connects a smartphone to a laptop via USB and wants to transfer files. The phone shows \"Charging only.\" What setting must be changed on the phone?",
+      "options": [
+        "USB tethering",
+        "MTP (Media Transfer Protocol) or file transfer mode",
+        "USB debug mode",
+        "USB OTG"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What does USB OTG (On-The-Go) allow a mobile device to do?",
+      "options": [
+        "Charge faster",
+        "Enable wireless syncing",
+        "Act as a USB host to connect peripherals such as drives and keyboards",
+        "Mirror the display"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A laptop only has modern ports (USB-C, HDMI). A user needs to connect a legacy VGA projector. What is needed?",
+      "options": [
+        "Direct connection is possible",
+        "USB-A to VGA active adapter",
+        "DisplayPort to DVI passive adapter",
+        "HDMI to VGA active adapter"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A user enables 'Wi-Fi Calling' on their smartphone. What does this feature do?",
+      "options": [
+        "Increases Wi-Fi signal strength for faster data speeds",
+        "Routes voice calls over a Wi-Fi connection instead of the cellular network, useful in areas with poor cellular signal",
+        "Converts the phone into a Wi-Fi hotspot for other devices",
+        "Allows the phone to call other Wi-Fi-connected devices for free only"
+      ],
+      "answer": 1,
+      "explanation": "Wi-Fi Calling uses a Wi-Fi network to carry voice calls when cellular coverage is weak or unavailable. The carrier handles call routing transparently — the user dials normally but the call travels over Wi-Fi. It requires carrier support and is enabled in phone settings."
+    },
+    {
+      "q": "A tablet enrolled in a company MDM system receives a pushed Wi-Fi profile. What does this accomplish without user interaction?",
+      "options": [
+        "Remotely locks the device with a new PIN",
+        "Automatically configures the corporate Wi-Fi SSID, security type, and credentials on the device",
+        "Forces the device to connect only to 5 GHz networks",
+        "Disables all Wi-Fi and forces cellular data use"
+      ],
+      "answer": 1,
+      "explanation": "MDM can push configuration profiles that automatically set up Wi-Fi networks, VPN, email, and other settings on enrolled devices. This eliminates the need for users to manually enter corporate Wi-Fi passwords and ensures correct security settings across all managed devices."
+    },
+    {
+      "q": "A user wants to share their smartphone's cellular data connection with a laptop. Which feature enables this?",
+      "options": [
+        "Bluetooth tethering is the only approved method",
+        "Mobile hotspot (tethering) — shares the phone's cellular data connection as a Wi-Fi, USB, or Bluetooth access point",
+        "USB OTG in reverse mode",
+        "Wi-Fi Direct pairing without hotspot activation"
+      ],
+      "answer": 1,
+      "explanation": "Mobile hotspot (personal hotspot on iOS) creates a Wi-Fi access point, USB tether, or Bluetooth connection that shares the phone's cellular data. Note that this uses the phone's data plan — carriers may charge extra or throttle hotspot usage depending on the plan."
+    },
+    {
+      "q": "A smartphone's GPS icon is constantly active in the notification bar and battery life has dramatically decreased. What is the MOST likely cause and solution?",
+      "options": [
+        "The GPS antenna is defective and needs hardware replacement",
+        "A background app has continuous location access permission; review and restrict app location permissions to 'Only while in use' or 'Deny'",
+        "Location services must be disabled entirely to fix battery drain — there is no per-app control",
+        "The cellular signal is too weak, causing the GPS to work harder to triangulate position"
+      ],
+      "answer": 1,
+      "explanation": "Continuous GPS usage by background apps is a common cause of accelerated battery drain. Modern mobile OSes allow per-app location permission control (Always/While in Use/Deny). Changing background apps from 'Always' to 'While in Use' or denying location access eliminates unnecessary GPS polling."
+    }
+  ]
+}

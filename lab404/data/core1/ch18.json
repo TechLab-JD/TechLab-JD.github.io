@@ -1,0 +1,286 @@
+{
+  "core": 1,
+  "chapter": 18,
+  "title": "Network Monitoring & Troubleshooting",
+  "exam_objectives": [
+    "2.3",
+    "2.8",
+    "5.5"
+  ],
+  "coverage": "COVERED",
+  "domain": "troubleshooting",
+  "domain_label": "Troubleshooting",
+  "sections": [
+    {
+      "title": "Network Monitoring",
+      "content": "SNMP â€” SIMPLE NETWORK MANAGEMENT PROTOCOL.\nSNMP is the standard protocol for monitoring and managing network devices. Routers, switches, firewalls, servers, and printers can all run SNMP agents.\nComponents of SNMP:\nThe agent runs on each managed device. It collects performance data â€” CPU utilization, interface throughput, error counts, uptime â€” and makes this data available for query.\nThe management system â€” also called the NMS, Network Management System â€” queries agents on a scheduled basis and displays device status centrally. It receives traps when agents report threshold violations or faults.\nThe MIB â€” Management Information Base â€” is a structured database that defines what variables each device exposes through SNMP. The MIB translates numeric OIDs â€” Object Identifiers â€” into human-readable names.\nSNMP ports:\nUDP 161 â€” used for queries and responses. The management system polls agents on port 161.\nUDP 162 â€” used for traps. Agents send unsolicited notifications to the management system on port 162 when specific conditions occur.\nSNMP versions:\nSNMPv1 and SNMPv2 use community strings for authentication â€” a read community string and a write community string. These strings are transmitted in plaintext. The default community strings â€” \"public\" for read and \"private\" for write â€” are widely known and should always be changed. Even with changed community strings, v1 and v2 lack encryption.\nSNMPv3 adds authentication using HMAC-MD5 or HMAC-SHA, encryption of SNMP messages, and message integrity verification. SNMPv3 is the required version for any security-conscious deployment.\nSYSLOG.\nSyslog is a protocol for centralized log collection. Devices send log messages to a syslog server where they are aggregated, timestamped, stored, and analyzed.\nSyslog uses UDP port 514 by default. Syslog over TLS â€” port 6514 â€” provides encrypted transport.\nEach syslog message includes:\n- A severity level (0-7)\n- A facility code indicating the source category\n- A timestamp\n- The message content\nSyslog severity levels, from most to least severe:\n0 â€” Emergency: system is unusable\n1 â€” Alert: action must be taken immediately\n2 â€” Critical: critical conditions\n3 â€” Error: error conditions\n4 â€” Warning: warning conditions\n5 â€” Notice: normal but significant event\n6 â€” Informational: informational messages\n7 â€” Debug: detailed debug information\nOperational monitoring typically filters to levels 0-4. Level 7 debug messages are used during active troubleshooting only.\nPROXY SERVER.\nA proxy server intercepts client web requests and forwards them on the client's behalf. The server on the internet sees the proxy's address, not the client's.\nFunctions: content filtering â€” blocking access to specified categories of websites; caching â€” storing frequently accessed content to reduce bandwidth; access control â€” restricting which sites or services clients can reach; and anonymization â€” masking the client's IP address from the destination.\nProxy port: 8080 is the common alternative HTTP port used for proxy configuration.\nUTM â€” UNIFIED THREAT MANAGEMENT.\nUTM devices combine multiple security functions in a single appliance: firewall, IDS/IPS, antivirus and antimalware scanning, web content filtering, data loss prevention, and VPN gateway. UTM centralizes security management at the network boundary.\nLOAD BALANCER.\nA load balancer distributes incoming client requests across multiple backend servers. The load balancer presents a single virtual IP address to clients. It monitors server health and stops sending requests to servers that fail health checks. Load balancing improves both performance â€” distributing workload â€” and availability â€” traffic continues if a single server fails.\n---",
+      "exam_tips": [
+        "UDP 161 = SNMP queries. UDP 162 = SNMP traps. SNMPv3 = secure. v1/v2 community strings are plaintext â€” always use v3 in production."
+      ]
+    },
+    {
+      "title": "Command-Line Network Troubleshooting Tools",
+      "content": "IPCONFIG.\nipconfig is the Windows command for displaying and managing IP configuration.\nipconfig â€” displays IP address, subnet mask, and default gateway for each adapter.\nipconfig /all â€” adds MAC address, DHCP server, DNS server addresses, and DHCP lease information.\nipconfig /release â€” releases the current DHCP lease.\nipconfig /renew â€” requests a new DHCP lease.\nipconfig /flushdns â€” clears the local DNS resolver cache.\nLinux and macOS equivalents: ifconfig or the newer ip addr command.\nPING.\nping tests network connectivity between two hosts using ICMP echo request and echo reply packets. A successful ping with responses confirms the network path between the two addresses is functional.\nping 127.0.0.1 â€” tests the local loopback. If this fails, the network stack on the local system has a problem.\nping [default gateway] â€” tests connectivity to the router. If this fails, the issue is within the local network.\nping [external IP] â€” tests internet connectivity without involving DNS.\nping [hostname] â€” tests both connectivity and DNS resolution.\nIf pinging an IP address works but pinging a hostname does not â€” the connectivity is fine but DNS is failing.\nTRACERT / TRACEROUTE.\ntracert â€” Windows â€” traces the path from source to destination, displaying each intermediate router hop and the round-trip time for each. Useful for identifying where in the path a failure or latency spike occurs.\ntraceroute is the Linux and macOS equivalent.\nInterpreting output: timeouts (shown as * * *) at a specific hop indicate a router is not responding to ICMP. If all subsequent hops also time out, the issue likely originates at that point.\nNSLOOKUP.\nnslookup queries DNS servers. It resolves a hostname to an IP address or performs a reverse lookup from IP to hostname. Used to verify DNS is responding and resolving correctly.\ndig is the Linux alternative with more detailed output, including query times and the responding server's identity.\nNETSTAT.\nnetstat displays active network connections, ports in the LISTENING state, and connection statistics. Used to identify which services are listening on which ports and to detect unexpected or unauthorized outbound connections.\nARP.\narp -a displays the current ARP cache â€” the table mapping IP addresses to MAC addresses on the local segment. Used to verify Layer 2 address resolution and to identify duplicate IP or ARP spoofing issues.\n---",
+      "exam_tips": [
+        "Memorize the order: Emergency, Alert, Critical, Error, Warning, Notice, Informational, Debug. 0=most severe, 7=least severe."
+      ]
+    },
+    {
+      "title": "Common Network Problems And Patterns",
+      "content": "APIPA â€” DHCP FAILURE.\nA device showing a 169.254.x.x address has failed to obtain a DHCP lease. The device self-assigned an APIPA address. Possible causes: DHCP server is down, the device cannot reach the DHCP server â€” wrong VLAN, network path failure â€” or the DHCP scope is exhausted.\nDiagnosis: check DHCP server status, verify the switch port and VLAN assignment, use ipconfig /release and /renew to force a new request, and check the DHCP server's event log.\nNO INTERNET â€” LIMITED CONNECTIVITY.\nThe device has an IP address but reports no internet access. Diagnose in sequence:\n1. Can you ping the default gateway? If no â€” local network problem.\n2. Can you ping a public IP such as 8.8.8.8? If no â€” routing problem or ISP outage.\n3. Can you reach a website by IP but not by name? DNS failure â€” check DNS server configuration.\nDNS failure is frequently misdiagnosed as \"internet down.\" The distinction matters because the fix is different.\nDUPLEX AND SPEED MISMATCH.\nA duplex mismatch occurs when one end of a connection is full-duplex and the other is half-duplex. The result is degraded throughput and high error rates â€” not a complete connection failure. This is more common when autonegotiation is disabled or fails.\nSpeed mismatch occurs when the two sides negotiate different link speeds. Both should be verified in NIC driver settings and switch port configuration.\nPORT FLAPPING.\nPort flapping describes a switch port repeatedly transitioning between up and down states. Causes: damaged cable, faulty NIC, failing switch port hardware, or intermittent electrical interference. Swap the cable first â€” it is the most common cause and the easiest to replace.\nWIRELESS TROUBLESHOOTING.\nSlow or intermittent wireless: check RSSI in dBm. Below -70 is marginal; below -80 is poor. The client is too far from the AP or experiencing obstruction. Move the client closer or reposition the AP.\nChannel interference: use a Wi-Fi analyzer to identify if the AP and neighboring networks are on overlapping channels. Reassign to a non-overlapping channel.\nAuthentication failure: verify the client's SSID, security protocol, and passphrase match the AP configuration exactly.\nVOIP QUALITY.\nVoIP is sensitive to latency and jitter. Latency above 150 milliseconds one-way makes conversation noticeably degraded. Jitter â€” variation in packet arrival timing â€” above 30 milliseconds produces choppy audio.\nQoS â€” Quality of Service â€” must prioritize voice traffic on the network. Without QoS configuration on the router and switches, VoIP packets compete with bulk file transfers and degrade under load.\n---",
+      "exam_tips": [
+        "ping a public IP (8.8.8.8) first â€” if that works but hostname fails, the problem is DNS, not connectivity. This eliminates a common misdiagnosis.",
+        "Always test in sequence: gateway â†’ public IP â†’ DNS. Do not jump straight to DNS â€” confirm routing first."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "A router crashing at 2 AM is not an incident â€” it is a logged event that started failing six hours earlier. Monitoring and logging are how you find the problem before the user calls.",
+      "concept": "SNMP AND SYSLOG",
+      "summary": "SNMP â€” Simple Network Management Protocol â€” is the standard protocol for monitoring and managing network devices. Routers, switches, firewalls, and servers can all run SNMP agents that respond to queries from a central management system."
+    },
+    {
+      "hook": "Six commands solve the majority of network problems. You do not need to remember all their flags â€” you need to know what each one tells you and when to use it.",
+      "concept": "NETWORK TROUBLESHOOTING COMMANDS",
+      "summary": "ipconfig â€” Windows â€” displays the IP configuration of every network adapter on the system: IP address, subnet mask, and default gateway. ipconfig /all adds MAC address, DHCP server, DNS servers, and lease information."
+    },
+    {
+      "hook": "A device that can ping its default gateway but cannot reach the internet is not a hardware problem â€” it is a DNS problem, or a routing problem, or an ISP problem. The symptom tells you where to look.",
+      "concept": "COMMON NETWORK PROBLEMS",
+      "summary": "169.254.x.x â€” APIPA. When a Windows device cannot contact a DHCP server, it self-assigns an address in the 169.254.1.0 through 169.254.254.255 range."
+    },
+    {
+      "hook": "SNMP â€” SIMPLE NETWORK MANAGEMENT PROTOCOL.",
+      "concept": "Network Monitoring",
+      "summary": "SNMP â€” SIMPLE NETWORK MANAGEMENT PROTOCOL. SNMP is the standard protocol for monitoring and managing network devices. Routers, switches, firewalls, servers, and printers can all run SNMP agents."
+    },
+    {
+      "hook": "IPCONFIG.",
+      "concept": "Command-Line Network Troubleshooting Tools",
+      "summary": "IPCONFIG. ipconfig is the Windows command for displaying and managing IP configuration. ipconfig â€” displays IP address, subnet mask, and default gateway for each adapter."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "A DNS server resolves:",
+      "options": [
+        "Hostnames to IP addresses",
+        "IP addresses to MAC addresses",
+        "IP addresses to physical locations",
+        "MAC addresses to hostnames"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What service allows users to send and receive email across a network?",
+      "options": [
+        "DNS",
+        "Mail server using SMTP, IMAP, and POP3",
+        "DHCP",
+        "FTP server"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What does a proxy server do?",
+      "options": [
+        "Assigns IP addresses automatically",
+        "Encrypts all network traffic",
+        "Converts domain names to IP addresses",
+        "Acts as an intermediary between clients and the internet, providing caching and filtering"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "Which service manages and authenticates users in a Windows domain environment?",
+      "options": [
+        "Active Directory using LDAP",
+        "DNS",
+        "DHCP",
+        "FTP"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What protocol is used to synchronize clocks on network devices?",
+      "options": [
+        "DNS",
+        "SNMP",
+        "NTP (Network Time Protocol)",
+        "TFTP"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A TFTP server is commonly used for:",
+      "options": [
+        "Secure file transfers",
+        "Web hosting",
+        "Email routing",
+        "Network device firmware updates and booting diskless workstations"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A technician needs to attach an RJ-45 connector to the end of a Cat6 cable. Which tool is required?",
+      "options": [
+        "Punchdown tool",
+        "Crimper",
+        "Cable tester",
+        "Toner probe"
+      ],
+      "answer": 1,
+      "explanation": "A crimper (RJ-45 crimping tool) is used to physically attach an RJ-45 connector to the cable end, locking the conductors in place. It is used when making patch cables or field-terminating cable runs with plugs."
+    },
+    {
+      "q": "A technician is terminating Cat6 cable into a keystone jack in a wall plate. Which tool is used to seat each conductor into the jack?",
+      "options": [
+        "Crimper",
+        "Wire stripper",
+        "Punchdown tool",
+        "Loopback plug"
+      ],
+      "answer": 2,
+      "explanation": "A punchdown tool (impact tool) pushes individual conductors into the IDC (insulation displacement contact) slots of a keystone jack or patch panel (110-block standard). The blade cuts excess wire flush during the punch."
+    },
+    {
+      "q": "After terminating a patch cable, a technician wants to verify that all eight conductors are connected in the correct order and there are no open pairs. Which tool performs this test?",
+      "options": [
+        "Toner probe",
+        "Wi-Fi analyzer",
+        "Loopback plug",
+        "Cable tester"
+      ],
+      "answer": 3,
+      "explanation": "A cable tester (continuity tester) verifies that each pin on one end maps correctly to the matching pin on the other end. It detects opens (broken conductors), shorts (conductors touching), reversed pairs, and miswires. It does not measure signal quality or bandwidth."
+    },
+    {
+      "q": "A technician cannot locate which port in the patch panel corresponds to the wall jack in room 204. Which tool pair is used to identify the cable?",
+      "options": [
+        "Toner probe (tone generator + inductive amplifier)",
+        "Cable tester",
+        "Wi-Fi analyzer",
+        "Network tap"
+      ],
+      "answer": 0,
+      "explanation": "A toner probe has two parts: a tone generator attached to one end of the cable injects an audio signal, and the inductive amplifier (probe) detects the signal by proximity â€” no electrical contact required. This allows tracing cables through walls, ceilings, and patch panels without cutting into anyt"
+    },
+    {
+      "q": "A technician suspects a NIC or switch port is faulty but the network cable and switch appear functional. Which tool tests the port in isolation?",
+      "options": [
+        "Cable tester",
+        "Loopback plug",
+        "Toner probe",
+        "Punchdown tool"
+      ],
+      "answer": 1,
+      "explanation": "A loopback plug connects the transmit (TX) pair to the receive (RX) pair on the same port. When the NIC or switch port sends a signal, it receives its own signal back. Diagnostic software confirms whether the port hardware is functioning. This test isolates the port from all external cable and netwo"
+    },
+    {
+      "q": "A user reports intermittent Wi-Fi drops. The technician suspects channel interference from neighboring networks. Which tool identifies overlapping channels and signal strength?",
+      "options": [
+        "Cable tester",
+        "Network tap",
+        "Wi-Fi analyzer",
+        "Toner probe"
+      ],
+      "answer": 2,
+      "explanation": "A Wi-Fi analyzer (software or dedicated hardware) displays all visible SSIDs, their broadcast channels, signal strength (dBm), and security type. It identifies channel overlap â€” a common cause of interference on the 2.4 GHz band where only channels 1, 6, and 11 are non-overlapping."
+    },
+    {
+      "q": "A network administrator needs to capture all traffic passing between a firewall and a core switch without disrupting active connections. Which device accomplishes this passively?",
+      "options": [
+        "Loopback plug",
+        "Cable tester",
+        "Wi-Fi analyzer",
+        "Network tap"
+      ],
+      "answer": 3,
+      "explanation": "A network tap (test access point) is an inline passive device that copies all traffic to a monitoring port without affecting the live data flow. Unlike a SPAN port on a switch, a tap cannot drop packets due to oversubscription and does not require switch configuration."
+    },
+    {
+      "q": "Which networking tool is specifically designed to remove the outer jacket of a UTP cable without cutting through the inner conductor insulation?",
+      "options": [
+        "Wire stripper / cable stripper",
+        "Crimper",
+        "Punchdown tool",
+        "Scissors"
+      ],
+      "answer": 0,
+      "explanation": "A cable stripper (jacket stripper) uses an adjustable blade depth that scores and removes only the outer PVC jacket. Cutting too deep damages the insulation on individual conductors, which can cause intermittent faults. A standard wire stripper for solid wire can cut too deep on twisted pair â€” use t"
+    },
+    {
+      "q": "Which tool would a technician use to verify that a newly installed structured cabling run meets Cat6 performance specifications (attenuation, NEXT, return loss)?",
+      "options": [
+        "Cable tester (continuity tester)",
+        "Cable certifier",
+        "Toner probe",
+        "Wi-Fi analyzer"
+      ],
+      "answer": 1,
+      "explanation": "A cable certifier (e.g., Fluke DSX series) performs full electrical characterization: insertion loss, near-end crosstalk (NEXT), return loss, and propagation delay. It certifies compliance with TIA/EIA standards. A basic continuity tester only checks wiring order â€” it cannot certify performance spec"
+    },
+    {
+      "q": "A technician needs to identify which wall port connects to a specific patch panel port in a wiring closet without labeled cables. Which tool should they use?",
+      "options": [
+        "Cable certifier",
+        "Wi-Fi analyzer",
+        "Toner probe (tone generator and probe)",
+        "Multimeter"
+      ],
+      "answer": 2,
+      "explanation": "A toner probe sends a tone signal down the cable; the inductive amplifier probe detects it at the other end, allowing the technician to identify cable runs. A cable certifier tests electrical performance specifications, not cable tracing."
+    },
+    {
+      "q": "A user can access all local network resources but cannot reach the internet. What is MOST likely misconfigured?",
+      "options": [
+        "Default gateway",
+        "IP address",
+        "Subnet mask",
+        "DNS server"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Which command-line tool tests basic network connectivity and measures round-trip latency to a remote host using ICMP echo requests?",
+      "options": [
+        "tracert",
+        "ping",
+        "nslookup",
+        "netstat"
+      ],
+      "answer": 1,
+      "explanation": "The ping command sends ICMP Echo Request packets to a destination and measures the response time (round-trip latency). It is the most fundamental network connectivity test — a successful ping confirms IP-level reachability. No response may indicate a blocked ICMP, unreachable host, or routing issue."
+    },
+    {
+      "q": "Which tool traces the path packets take across a network, displaying each router hop and its latency?",
+      "options": [
+        "ping — shows latency to the final destination only",
+        "tracert (Windows) or traceroute (Linux/macOS) — displays each intermediate hop and its round-trip time",
+        "netstat — shows active connections and routing state",
+        "ipconfig — shows local interface configuration"
+      ],
+      "answer": 1,
+      "explanation": "tracert/traceroute uses incrementing TTL values to elicit ICMP Time Exceeded responses from each router along the path. This reveals the network route, identifies slow or failing hops, and helps localize where a connectivity problem occurs between source and destination."
+    },
+    {
+      "q": "A technician runs 'netstat -an' on a Windows PC. What information does this command display?",
+      "options": [
+        "All DNS cache entries including TTL values",
+        "All active TCP and UDP connections and listening ports, showing local and remote addresses, port numbers, and connection state in numeric form",
+        "All ARP table entries mapping IP addresses to MAC addresses",
+        "Network adapter statistics including packet loss and error counts"
+      ],
+      "answer": 1,
+      "explanation": "'netstat -an' displays all active TCP connections (with states like ESTABLISHED, LISTEN, CLOSE_WAIT) and UDP listeners. The -a flag shows all connections including listening ports; -n shows addresses and ports numerically instead of resolving hostnames, which is faster and more useful for troubleshooting."
+    }
+  ]
+}

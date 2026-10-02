@@ -1,0 +1,280 @@
+{
+  "core": 1,
+  "chapter": 21,
+  "title": "Enterprise Mobility & Mobile Troubleshooting",
+  "exam_objectives": [
+    "1.3",
+    "5.4"
+  ],
+  "coverage": "COVERED",
+  "domain": "mobile",
+  "domain_label": "Mobile Devices",
+  "sections": [
+    {
+      "title": "Enterprise Mobility Management",
+      "content": "MDM â€” MOBILE DEVICE MANAGEMENT.\nMDM provides control at the device level. The MDM solution â€” installed as an agent or profile on the device â€” enforces corporate policies including:\nPassword and screen lock requirements: minimum PIN length, complexity, and lock timeout.\nDevice encryption: requires the device storage to be encrypted before permitting corporate email or data access.\nApp installation restrictions: prevents installation of unapproved apps or requires apps from an approved list.\nRemote wipe: the MDM administrator can issue a wipe command that returns the device to factory settings â€” critical when a device is lost or an employee departs.\nLocation tracking: tracks device location for asset management and geofencing purposes.\nMDM is most appropriate for corporate-owned devices. The organization owns the hardware and has full authority to enforce policies. Employees on corporate-owned devices have reduced privacy expectations.\nMAM â€” MOBILE APPLICATION MANAGEMENT.\nMAM controls only the corporate applications and data â€” not the device as a whole. MAM implements a managed container â€” a work profile â€” that isolates corporate apps and data from personal apps and data on the same device.\nWithin the managed container: corporate email, documents, and apps are subject to policy. Copy-paste between the container and personal apps can be restricted. Corporate data can be encrypted within the container.\nRemote wipe under MAM removes only the corporate container â€” the employee's personal photos, messages, and apps are not affected. This distinction is critical for BYOD acceptability.\nMAM is most appropriate for BYOD scenarios where the employee uses a personal device for both work and personal purposes.\nEMM â€” ENTERPRISE MOBILITY MANAGEMENT.\nEMM is the umbrella term for comprehensive mobile management, combining MDM and MAM capabilities with identity management â€” integrating with Active Directory or LDAP for authentication â€” and content management for controlled document distribution.\nDEPLOYMENT MODELS.\nBYOD â€” Bring Your Own Device:\nThe employee uses their personal smartphone or tablet to access corporate resources. The organization saves on hardware costs. Employees bring devices they already know and prefer.\nPrivacy concerns are significant on the employee side: full MDM on a personal device means the employer can see location history, potentially wipe personal data, and monitor app usage. For this reason, MAM with a work container â€” not full MDM â€” is the standard approach for BYOD programs.\nBYOD programs require a written acceptable use policy that defines what corporate access the personal device can have, what monitoring the organization performs, and the employee's responsibilities.\nCorporate-Owned Devices:\nThe organization provides the device. Full MDM enrollment is appropriate â€” the organization owns the hardware and can enforce any policy. Hardware and software are standardized, simplifying support. Corporate-owned devices are easier to audit, harder for employees to misconfigure, and simpler to recover when an employee leaves.\n---",
+      "exam_tips": [
+        "MDM = full device control, corporate-owned. MAM = corporate app/data only, BYOD. Remote wipe under MAM removes only the work container â€” not personal photos or apps."
+      ]
+    },
+    {
+      "title": "Location Services And Gps",
+      "content": "GPS â€” Global Positioning System.\nGPS uses satellite signals to determine the device's geographic position. Accurate to within a few meters outdoors when the device has an unobstructed view of the sky. GPS is used for navigation, location-based services, and geofencing.\nGeofencing applies security policies or triggers automation based on the device's location. Example: a device that enters a high-security zone automatically disables its camera. An MDM can enforce geofencing rules.\nIndoor Positioning.\nGPS does not function reliably indoors. Indoor positioning uses alternative signals: Wi-Fi signal strength â€” the device's distance from known access points gives approximate location. Cellular tower triangulation â€” the signal strength from multiple towers approximates location. Bluetooth beacons â€” known fixed Bluetooth transmitters provide fine-grained indoor location.\nMagnetometer.\nThe magnetometer is the device's built-in compass. It measures the Earth's magnetic field and provides orientation information. Navigation apps use the magnetometer to indicate the direction the user is facing, improving the accuracy of turn-by-turn navigation.\nLocation Permission Requirements.\nAll location access requires explicit user permission. Apps request location access when first launched. The permission options are: always â€” background access even when the app is not open; while using the app â€” access only when the app is in the foreground; and never.\nUsers can review and change location permissions at any time in device settings. Privacy-conscious users should restrict location access to while using the app for any app that does not require background location.\n---",
+      "exam_tips": [
+        "GPS requires clear sky view. Indoor positioning uses Wi-Fi signal strength, cellular tower signals, or Bluetooth beacons. Know all three indoor alternatives."
+      ]
+    },
+    {
+      "title": "Mobile Device Troubleshooting",
+      "content": "POWER AND CHARGING ISSUES.\nWhen a device will not charge or powers off unexpectedly, diagnose in order:\nTest the outlet with a known-good device first â€” confirm power is present.\nVerify the AC adapter wattage matches the device's requirement. An underpowered adapter charges slowly or not at all.\nInspect the charging cable for physical damage â€” frayed insulation, bent connector.\nInspect the charging port on the device for debris â€” lint, dust, and pocket debris pack into USB-C and Lightning ports and prevent good contact. Use a wooden or plastic pick â€” not metal â€” to clear the port.\nTry a different cable and adapter from a known-good source.\nIf all external factors are ruled out, the battery or charging IC on the device may be the cause.\nSWOLLEN BATTERY.\nA swollen battery is a thermal safety concern. Signs: visible bulging of the battery or back panel, the device case separating, the screen lifting or pushing away from the frame.\nDo not puncture, bend, or compress a swollen battery. If the device can be safely opened, remove the battery. A swollen battery should not be placed in household trash. Dispose at a battery recycling facility or electronics retailer with take-back programs.\nOVERHEATING.\nA mobile device running abnormally hot without heavy use should be investigated. Causes: blocked vents or intake areas â€” the device is being used on a soft surface; a resource-intensive app running continuously â€” check active processes; high ambient temperature â€” the device is in direct sunlight or a hot environment; a failing battery generating heat as it degrades; malware running background processes.\nMalware-caused overheating is accompanied by other indicators: battery drain, unfamiliar apps, increased data usage. Monitor the device's battery usage screen â€” if a background process is consuming a disproportionate amount of power, investigate it.\nDAMAGED PORTS.\nPort damage on mobile devices is typically caused by improper cable removal â€” pulling the cable at an angle puts stress on the connector housing â€” forcing cables in incorrectly, or debris in the port. Symptoms: loose connection, intermittent charging, the device not recognizing the accessory. Port replacement typically requires professional service or a mail-in repair.\nDIGITIZER FAILURE.\nThe digitizer is the touch-sensing component of the display assembly. It converts physical touch into electrical signals the device processes. Digitizer failure symptoms:\nGhost touches â€” input registering on the screen with no physical touch. The screen appears to tap itself.\nInaccurate touch input â€” touches register in a different location than where the user touched.\nUnresponsive areas â€” a portion of the screen does not respond to touch at all.\nCursor drift on a touchpad or touch input.\nDigitizer failure is most commonly caused by physical damage â€” dropping the device â€” or moisture infiltration. Repair requires replacing the screen assembly.\nSTYLUS DOES NOT WORK.\nTroubleshoot a non-functional stylus by identifying which type is in use â€” active or passive â€” because the failure modes differ.\nActive stylus: an active stylus contains an internal battery and electronics that communicate directly with the device's digitizer. If the active stylus does not respond: first verify it is charged â€” most active styluses use USB-C or a proprietary charging connector, and a depleted battery causes complete unresponsiveness. Some active styluses also require Bluetooth pairing before first use â€” check the device's Bluetooth settings and pair the stylus if prompted. Verify compatibility: active stylus technology is specific to the device's digitizer hardware â€” not all active styluses work with all devices, and using an unsupported stylus produces no response regardless of battery state.\nPassive stylus: a passive stylus has no electronics. It is a capacitive tip that simulates a fingertip press on a capacitive display. If a passive stylus does not work: clean the screen surface â€” fingerprints, smudges, and moisture interfere with capacitive detection. Test with a different passive stylus to isolate whether the issue is the stylus tip or the screen. Check for a screen protector that is too thick or not stylus-compatible â€” some thick tempered glass protectors block the capacitive signal.\nIf the touch screen is also unresponsive to bare finger input: the issue is not the stylus â€” the digitizer has failed. Screen assembly replacement is required.\nUNABLE TO INSTALL APPLICATIONS.\nWhen a user cannot install an app on a mobile device, the cause is almost always one of four things: platform restriction, MDM policy, insufficient storage, or OS version incompatibility.\niOS: app installation outside the App Store is blocked by design. Unless the device is jailbroken or enrolled in an enterprise MDM that distributes apps via enterprise distribution certificates, only App Store apps can be installed. If App Store installation fails: verify the Apple ID signed into the device is valid and has accepted current terms of service. Check that the app is compatible with the device model and iOS version â€” older devices cannot run apps that require newer hardware features.\nAndroid: installing apps from outside the Google Play Store requires enabling \"Install unknown apps\" for the specific source â€” in Settings > Security or Settings > Apps on modern Android, this is a per-source permission, not a global toggle. The older setting named \"Unknown sources\" operated as a global switch on earlier Android versions. Google Play installation failures are often due to account configuration, insufficient storage, or incompatible OS version.\nMDM restrictions: in enterprise environments, the MDM policy profile installed on the device controls which apps are permitted and from which sources. A blocked installation may produce no clear error message â€” just a failure or greyed-out install button. Contact IT to determine what the MDM policy allows. MDM-managed work profiles on Android can restrict app installation independently for the work profile.\nStorage space: app installations fail silently when device storage is full. Navigate to Settings > General > iPhone Storage (iOS) or Settings > Storage (Android) to check available space. Free space by removing unused apps, clearing cache, or transferring media to cloud storage or a computer.\nOS version: every app specifies a minimum OS version in its store listing. If the device's OS version is too old and the device model cannot update further â€” manufacturer support ended â€” the app cannot be installed. Verify the device meets the app's stated requirements before spending time on other troubleshooting steps.\nMOBILE MALWARE.\nMobile malware indicators:\nExcessive battery drain â€” the battery depletes much faster than normal with no change in usage patterns.\nUnexpected pop-up advertisements â€” appearing in unusual places, including the home screen.\nUnauthorized app installs â€” apps appearing that the user did not install.\nIncreased cellular data usage â€” a spike in data consumption without new apps or usage patterns.\nDevice running hot at rest â€” a background process consuming CPU resources.\nSluggish performance â€” the device responds slowly to input.\nUnexpected premium SMS charges on the phone bill â€” SMS-based malware sends messages to premium numbers.\nMalware remediation:\n1. Update the device OS to the current version â€” patches may close the vulnerability.\n2. Identify and remove suspicious apps.\n3. Run a mobile security scan using a reputable security app.\n4. Review all app permissions â€” revoke anything inappropriate.\n5. If the infection persists, perform a factory reset.\n6. Restore data from a clean backup made before the infection.\n---",
+      "exam_tips": [
+        "A swollen battery is a thermal runaway risk. It must be removed safely and disposed of at a battery recycling facility â€” not discarded in regular trash.",
+        "Ghost touches and unresponsive screen areas indicate digitizer failure â€” a hardware problem, not a software one. Mobile malware looks like hardware failure but is diagnosed by reviewing running processes and installed apps."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "BYOD policies save companies money on hardware â€” and create security headaches when an employee's personal phone with corporate email is lost. MDM and MAM exist to manage that tradeoff.",
+      "concept": "MDM, MAM, AND BYOD",
+      "summary": "Enterprise mobile management covers how organizations control and secure the mobile devices used to access corporate resources. MDM â€” Mobile Device Management â€” provides control at the device level."
+    },
+    {
+      "hook": "A phone that drains its battery in two hours, runs hot, and has apps you did not install is not malfunctioning â€” it is infected. Malware on mobile devices looks exactly like hardware failure until you look at the installed apps.",
+      "concept": "MOBILE DEVICE TROUBLESHOOTING",
+      "summary": "Power and charging issues: before assuming the battery has failed, test the outlet with a known-good device. Verify the adapter wattage matches the device requirement."
+    },
+    {
+      "hook": "MDM â€” MOBILE DEVICE MANAGEMENT.",
+      "concept": "Enterprise Mobility Management",
+      "summary": "MDM â€” MOBILE DEVICE MANAGEMENT. MDM provides control at the device level. The MDM solution â€” installed as an agent or profile on the device â€” enforces corporate policies including: Password and screen lock requirements: minimum PIN length, complexity, and lock timeout."
+    },
+    {
+      "hook": "GPS â€” Global Positioning System.",
+      "concept": "Location Services And Gps",
+      "summary": "GPS â€” Global Positioning System. GPS uses satellite signals to determine the device's geographic position. Accurate to within a few meters outdoors when the device has an unobstructed view of the sky."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "A user wants to use Bluetooth headphones with their laptop. Bluetooth is turned off and grayed out in settings. The MOST likely cause is:",
+      "options": [
+        "Physical or software wireless disable switch is engaged",
+        "Headphones are incompatible",
+        "Driver needs updating",
+        "Bluetooth is not available on this laptop"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What is the approximate maximum range for standard Bluetooth Class 2 communication?",
+      "options": [
+        "1 meter",
+        "10 meters",
+        "100 meters",
+        "300 meters"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A user plugs a USB device into a laptop port and gets \"USB device not recognized.\" The FIRST step to troubleshoot is:",
+      "options": [
+        "Replace the USB device",
+        "Reinstall the OS",
+        "Try a different USB port on the laptop",
+        "Update BIOS"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "Which mobile accessory uses NFC for contactless payment?",
+      "options": [
+        "Bluetooth keyboard",
+        "Wireless charging pad",
+        "USB-C charger",
+        "Digital wallet (e.g., Apple Pay, Google Pay)"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What connector type is used by most modern Android phones for charging and data?",
+      "options": [
+        "USB-C",
+        "Micro-USB",
+        "Lightning",
+        "USB-B"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A user wants to charge their laptop and connect two 4K monitors using a single cable. Which technology supports this?",
+      "options": [
+        "USB 3.0 hub",
+        "Thunderbolt 4 dock",
+        "HDMI 1.4 splitter",
+        "USB-A to DisplayPort"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of a port replicator?",
+      "options": [
+        "Boost wireless signal",
+        "Convert analog ports to digital",
+        "Provide additional ports to a laptop without a full docking station",
+        "Back up data automatically"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A mobile device can send files to nearby devices without pairing. What technology is being used?",
+      "options": [
+        "Bluetooth classic",
+        "NFC",
+        "Infrared",
+        "AirDrop or Nearby Share (using Wi-Fi Direct and Bluetooth)"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "Which USB specification introduced the reversible connector design?",
+      "options": [
+        "USB-C (USB 3.1 Gen 2 and later)",
+        "USB 3.0",
+        "USB 2.0",
+        "USB 1.1"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A laptop does not recognize an SD card. The card works fine in another device. What should the technician check?",
+      "options": [
+        "Replace the card",
+        "Card format compatibility and SD card reader driver",
+        "Reinstall OS",
+        "Check BIOS for SD support"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What is the primary purpose of enabling developer mode on a mobile device?",
+      "options": [
+        "Unlock faster charging",
+        "Increase screen brightness",
+        "Access advanced debugging and USB debugging features",
+        "Remove carrier restrictions"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A smartphone will not charge. After trying different cables and chargers with no improvement, what should be inspected?",
+      "options": [
+        "Replace the battery immediately",
+        "SIM card slot condition",
+        "The charging port for debris, lint, or physical damage",
+        "Screen digitizer"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A mobile device battery drains faster than normal after a software update. The FIRST step is:",
+      "options": [
+        "Replace the battery immediately",
+        "Contact the manufacturer",
+        "Perform a factory reset immediately",
+        "Check for apps using excessive battery, restart the device, or consider rolling back the update"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A tablet touchscreen is unresponsive in one corner. What should be tried FIRST?",
+      "options": [
+        "Restart the device and attempt touchscreen recalibration",
+        "Replace the screen assembly",
+        "Factory reset the device",
+        "Update the firmware"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A smartphone camera produces blurry photos regardless of lighting or distance. The MOST likely cause is:",
+      "options": [
+        "Storage is nearly full",
+        "Camera lens is smudged or the optical image stabilization module is faulty",
+        "Camera app needs updating",
+        "Wrong camera mode selected"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What is the difference between BYOD and COPE mobile device deployment policies?",
+      "options": [
+        "BYOD is for iOS only; COPE is for Android only",
+        "BYOD (Bring Your Own Device): employees use personal devices for work with partial management; COPE (Corporate-Owned, Personally Enabled): company owns the device but permits personal use — giving IT more control",
+        "BYOD requires MDM enrollment; COPE prohibits MDM on personal devices",
+        "They are equivalent policies — the terms are interchangeable"
+      ],
+      "answer": 1,
+      "explanation": "BYOD lets employees use personal devices — the organization has limited control and liability. COPE provides company-owned devices configured for both work and personal use, giving IT full management authority over the hardware while still allowing personal use for employee satisfaction."
+    },
+    {
+      "q": "What MDM capability allows an IT administrator to erase all data on a lost or stolen mobile device remotely?",
+      "options": [
+        "Application containerization",
+        "Remote wipe — erases all device data when triggered by the MDM console",
+        "GPS geofencing lock",
+        "Remote screen recording for audit"
+      ],
+      "answer": 1,
+      "explanation": "Remote wipe (sometimes called 'factory reset' or 'full device wipe') erases all data on the device when the MDM console sends the command over the network. This protects sensitive corporate data on lost or stolen devices. Some MDMs also support selective wipe (removing only corporate data)."
+    },
+    {
+      "q": "An employee removes the MDM profile from their BYOD phone. What is the MOST likely immediate consequence?",
+      "options": [
+        "The phone is permanently bricked and must be factory reset",
+        "The device loses access to corporate email, VPN, and apps that require MDM enrollment compliance",
+        "The IT department is notified but no access changes occur",
+        "Only the Wi-Fi profile is removed — all other access remains"
+      ],
+      "answer": 1,
+      "explanation": "MDM enrollment is typically a prerequisite for accessing corporate resources (email, VPN, app store, internal apps). Removing the MDM profile triggers compliance policies that immediately revoke access to those resources until the device re-enrolls and meets compliance requirements."
+    },
+    {
+      "q": "What security risk does sideloading (installing apps outside the official app store) create on a mobile device?",
+      "options": [
+        "The device's warranty is voided, creating a financial risk only",
+        "Apps from unofficial sources bypass the app store vetting process and may contain malware, spyware, or exploits",
+        "Sideloaded apps consume more battery than store apps",
+        "The phone's GPS is disabled when sideloaded apps are installed"
+      ],
+      "answer": 1,
+      "explanation": "App stores scan apps for malware and policy violations before distribution. Sideloaded APKs (Android) or unsigned iOS apps bypass this security layer and could contain malicious code, unauthorized data collection, or remote access tools. Enterprise MDM policies often prohibit or restrict sideloading."
+    },
+    {
+      "q": "A corporate iPad is reported stolen. The MDM administrator sends a remote lock command. What does this immediately do?",
+      "options": [
+        "Permanently disables the device, rendering it unusable by anyone",
+        "Locks the device with a passcode set by the administrator, preventing access to data without the passcode",
+        "Encrypts only new data written to the device — existing data remains accessible",
+        "Notifies the nearest Apple Store to flag the device as stolen"
+      ],
+      "answer": 1,
+      "explanation": "A remote lock command immediately activates the device passcode lock screen. The device cannot be used without entering the correct passcode. For iOS devices with Activation Lock, the Apple ID credential is also required. This is the first response when a device is reported missing — followed by remote wipe if recovery is unlikely."
+    }
+  ]
+}

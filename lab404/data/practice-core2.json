@@ -1,0 +1,4972 @@
+[
+  {
+    "q": "Which Windows 10/11 edition is required to join a domain and supports BitLocker?",
+    "options": [
+      "Pro",
+      "Home",
+      "S Mode",
+      "SE"
+    ],
+    "answer": 0,
+    "explanation": "Pro (and higher: Enterprise, Education) can join an Active Directory domain and includes BitLocker full-disk encryption. Home is limited to workgroup networking only and lacks both features.",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which Windows edition is designed for educational institutions and is available only through academic channels?",
+    "options": [
+      "Windows Pro",
+      "Windows Education",
+      "Windows Enterprise",
+      "Windows Home"
+    ],
+    "answer": 1,
+    "explanation": "Windows Education is licensed exclusively through Microsoft's academic volume programs. It includes all Pro and most Enterprise features and is designed for K-12 and higher-ed deployments.",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the maximum RAM supported by Windows 10/11 Home?",
+    "options": [
+      "4 GB",
+      "16 GB",
+      "128 GB",
+      "2 TB"
+    ],
+    "answer": 2,
+    "explanation": "Windows 10/11 Home supports up to 128 GB RAM. Pro supports up to 2 TB. This distinction matters on the exam: Home is capped for consumer use, while Pro is suitable for memory-intensive workstation workloads.",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which Windows feature allows an organization to deploy a standardized OS image across many machines?",
+    "options": [
+      "Cortana",
+      "Hyper-V",
+      "Windows Update",
+      "Windows Deployment Services (WDS)"
+    ],
+    "answer": 3,
+    "explanation": "WDS is a server role that enables network-based (PXE boot) deployment of Windows images (.wim files) to multiple machines simultaneously. It replaces the older Remote Installation Services (RIS).",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows edition is a cloud-focused version designed for low-cost devices that runs only Microsoft Store apps and the Edge browser?",
+    "options": [
+      "Windows 10 S Mode",
+      "Windows 10 Pro",
+      "Windows 10 Enterprise",
+      "Windows 10 LTSC"
+    ],
+    "answer": 0,
+    "explanation": "S Mode blocks traditional Win32 (.exe) application installation and restricts browsing to Edge. It improves performance and security on low-end hardware. Users can switch out of S Mode for free (one-way, cannot switch back).",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which Windows 10/11 edition supports Windows Sandbox for running untrusted applications?",
+    "options": [
+      "Home",
+      "Pro and higher",
+      "S Mode",
+      "Education only"
+    ],
+    "answer": 1,
+    "explanation": "Windows Sandbox creates a disposable, isolated virtual desktop. When closed, all changes are discarded — no trace left on the host. Requires Pro, Enterprise, or Education; not available in Home.",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What does LTSC stand for in Windows LTSC editions?",
+    "options": [
+      "Home",
+      "All editions",
+      "Pro and higher",
+      "Enterprise only"
+    ],
+    "answer": 2,
+    "explanation": "All editions can use Remote Desktop as a client (connect out). Only Pro and higher can act as an RDP host (accept incoming connections). Home blocks inbound RDP — a common exam scenario where a tech cannot remotely connect to a Home machine.",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What feature available only in Pro and Enterprise allows applying group policies centrally to all domain-joined computers?",
+    "options": [
+      "Windows Update",
+      "Cortana",
+      "Windows Defender",
+      "Group Policy (via GPO and Active Directory)"
+    ],
+    "answer": 3,
+    "explanation": "Group Policy Objects (GPOs) are delivered by Active Directory domain controllers to domain-joined machines. Home cannot join a domain and therefore cannot receive GPOs. Local Group Policy (gpedit.msc) exists on Pro but applies only to the local machine.",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A small business owner wants to join company laptops to an Active Directory domain and enforce security policies using Group Policy. Which Windows edition is the MINIMUM requirement to support these features?",
+    "options": [
+      "Windows 11 Pro",
+      "Windows 11 SE",
+      "Windows 11 Home",
+      "Windows 11 Home Single Language"
+    ],
+    "answer": 0,
+    "explanation": "Windows 11 Pro and higher editions support domain join and Group Policy management. Windows 11 Home does not support joining an Active Directory domain. Windows 11 SE is an education-restricted edition without domain join capability.",
+    "objective": "1.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which command displays all IP configuration details including MAC address and DNS servers?",
+    "options": [
+      "ipconfig",
+      "ipconfig /all",
+      "netstat",
+      "ping"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What command terminates all instances of a process by name in Windows?",
+    "options": [
+      "tasklist",
+      "net stop [service]",
+      "taskkill /IM [processname] /F",
+      "shutdown /a"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What command maps a network drive to the letter Z in Windows Command Prompt?",
+    "options": [
+      "nslookup /flush",
+      "ipconfig /release",
+      "netsh winsock reset",
+      "ipconfig /flushdns"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What command copies files and directory trees including empty directories?",
+    "options": [
+      "Both B and C are valid",
+      "xcopy",
+      "robocopy",
+      "copy"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which command displays the current routing table on a Windows system?",
+    "options": [
+      "route print",
+      "Both A and C",
+      "netstat -r",
+      "ipconfig /all"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which command is used to check a hard drive for errors and mark bad sectors on Windows?",
+    "options": [
+      "ipconfig /all",
+      "netstat -an",
+      "nslookup",
+      "tracert"
+    ],
+    "answer": 2,
+    "explanation": "nslookup queries DNS servers to resolve hostnames to IP addresses and can verify DNS records and server responses. ipconfig /all displays local adapter configuration but does not test DNS resolution. netstat shows active connections. tracert traces the route to a destination but is not specifically ",
+    "objective": "1.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows utility manages startup programs, services, and performance monitoring?",
+    "options": [
+      "Computer Management",
+      "Control Panel",
+      "Device Manager",
+      "Task Manager"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Where in Windows 10/11 can you create and manage local user accounts?",
+    "options": [
+      "Settings > Accounts or Computer Management > Local Users and Groups",
+      "Task Manager",
+      "Device Manager",
+      "Windows Update"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows tool provides a centralized view of all event logs including Application, Security, and System?",
+    "options": [
+      "Task Manager",
+      "Event Viewer",
+      "Resource Monitor",
+      "Performance Monitor"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which Windows tool shows real-time CPU, memory, disk, and network performance graphs?",
+    "options": [
+      "Event Viewer",
+      "Device Manager",
+      "Task Manager (Performance tab) or Resource Monitor",
+      "Disk Management"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows utility allows creating, shrinking, extending, and formatting partitions?",
+    "options": [
+      "Device Manager",
+      "System Configuration (msconfig)",
+      "Task Manager",
+      "Disk Management"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What keyboard shortcut opens Task Manager directly in Windows?",
+    "options": [
+      "All of the above",
+      "Ctrl+Shift+Esc",
+      "Win+R then type taskmgr",
+      "Ctrl+Alt+Del then select Task Manager"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which Windows feature allows viewing and restoring previous versions of files?",
+    "options": [
+      "Windows Defender",
+      "File History or Previous Versions (via Shadow Copy)",
+      "Windows Update",
+      "Disk Cleanup"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows utility runs in the background and indexes files for fast search results?",
+    "options": [
+      "Task Scheduler",
+      "Disk Defragmenter",
+      "Windows Search (indexing service)",
+      "Windows Update"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician suspects a recently installed driver is causing system instability. Which Windows tool allows the technician to disable or roll back the driver?",
+    "options": [
+      "Task Manager",
+      "System Configuration (msconfig)",
+      "Registry Editor",
+      "Device Manager"
+    ],
+    "answer": 3,
+    "explanation": "Device Manager allows technicians to view all installed hardware, and update, roll back, disable, or uninstall drivers. Task Manager shows running processes and resource usage. msconfig controls startup and boot options. The Registry Editor modifies system settings directly and is not the appropriat",
+    "objective": "1.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Where in Windows 10/11 Settings do you configure display resolution and refresh rate?",
+    "options": [
+      "System > Display",
+      "System > Sound",
+      "Personalization > Themes",
+      "Update and Security"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows Settings section allows you to add, configure, and manage printers?",
+    "options": [
+      "System > Notifications",
+      "Devices > Printers and Scanners (or Bluetooth and Devices in Windows 11)",
+      "Update and Security",
+      "Ease of Access"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Where do you configure Windows Firewall and add firewall rules in Windows Settings?",
+    "options": [
+      "Devices > Firewall",
+      "System > Security",
+      "Update and Security > Windows Security > Firewall and Network Protection",
+      "Network and Internet > Firewall"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows Settings area allows configuring VPN connections?",
+    "options": [
+      "System > Display",
+      "Accounts > Sign-in Options",
+      "Devices > Bluetooth",
+      "Network and Internet > VPN"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which Windows accessibility feature increases text size and other visual elements without changing resolution?",
+    "options": [
+      "Both A and B adjust scaling",
+      "System > Display > Scale",
+      "Ease of Access > Display > Change the size of text",
+      "Personalization only"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user reports their laptop screen turns off after one minute of inactivity, disrupting presentations. Which Windows Settings section should the technician adjust?",
+    "options": [
+      "Privacy and Security",
+      "System > Power and Sleep",
+      "Accounts > Sign-in Options",
+      "Update and Security"
+    ],
+    "answer": 1,
+    "explanation": "Power and Sleep settings under System control when the screen turns off and when the PC sleeps. The technician can extend or disable the screen timeout here. Sign-in options control lock behavior after the screen turns off, not the initial timeout setting.",
+    "objective": "1.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician configuring a shared workstation wants to prevent standard users from installing software without administrator approval. Which feature should be verified as enabled?",
+    "options": [
+      "Windows Defender Firewall",
+      "Windows Hello",
+      "User Account Control (UAC)",
+      "BitLocker"
+    ],
+    "answer": 2,
+    "explanation": "UAC prompts for administrator credentials before allowing system changes such as software installation. Windows Defender Firewall controls network traffic. Windows Hello manages biometric authentication. BitLocker provides drive encryption. None of the others restrict software installation by standa",
+    "objective": "1.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user in a different country sees the wrong date and time even though automatic time sync is enabled. Which Settings option should the technician check FIRST?",
+    "options": [
+      "Display > Night Light schedule",
+      "System > About",
+      "Accounts > Family and Other Users",
+      "Time and Language > Date and Time > Time Zone"
+    ],
+    "answer": 3,
+    "explanation": "Even with automatic time sync enabled, the time displays incorrectly if the time zone is set wrong. Automatic time sync only synchronizes to internet time servers — it does not auto-detect or change the time zone. The technician should verify and correct the Time Zone setting.",
+    "objective": "1.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician needs to configure Windows to prompt permission before any app accesses the device's camera. Where in Windows Settings should this be configured?",
+    "options": [
+      "Privacy and Security > Camera",
+      "System > Display",
+      "Bluetooth and Devices > Camera",
+      "Apps > Default Apps"
+    ],
+    "answer": 0,
+    "explanation": "Windows Settings > Privacy and Security > Camera controls which applications can access the camera. This can be toggled globally or per app. Bluetooth and Devices manages hardware configuration. Default Apps controls file associations, not hardware access permissions.",
+    "objective": "1.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows security feature monitors and controls which applications can make changes to the system?",
+    "options": [
+      "Windows Defender Antivirus",
+      "UAC (User Account Control)",
+      "Windows Firewall",
+      "BitLocker"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows tool provides encryption for the entire OS drive?",
+    "options": [
+      "EFS (Encrypting File System)",
+      "Windows Defender",
+      "BitLocker",
+      "Secure Boot"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which type of user account has full system access and can make system-wide changes?",
+    "options": [
+      "Standard user",
+      "Guest",
+      "Power user",
+      "Administrator"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows feature encrypts individual files and folders rather than the entire drive?",
+    "options": [
+      "EFS (Encrypting File System)",
+      "BitLocker",
+      "Windows Defender",
+      "Secure Boot"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician notices UAC prompts are completely disabled on a workstation. What security risk does this create?",
+    "options": [
+      "Users cannot install printers",
+      "Malware can make system-level changes without any user authorization prompts",
+      "Windows Update stops working",
+      "Network drives are inaccessible"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows security setting requires users to enter a complex password meeting minimum length and character requirements?",
+    "options": [
+      "UAC settings",
+      "Windows Defender settings",
+      "Password policy in Local Security Policy or Group Policy",
+      "BitLocker settings"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which Windows feature logs all successful and failed login attempts for auditing?",
+    "options": [
+      "Windows Defender log",
+      "Windows Update history",
+      "Task Manager",
+      "Security event log in Event Viewer"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician needs to ensure that files stored on a user's laptop are encrypted at the folder level, tied to that user's login credentials, and transparent to the user during normal access. Which Windows feature best meets these requirements?",
+    "options": [
+      "Encrypting File System (EFS)",
+      "BitLocker Drive Encryption",
+      "Windows Defender Credential Guard",
+      "NTFS compression"
+    ],
+    "answer": 0,
+    "explanation": "EFS encrypts individual files and folders using the user's credentials, making decryption transparent when logged in as that user. BitLocker encrypts the entire volume and is not tied to individual user credentials for per-file access.",
+    "objective": "2.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user reports that every time they attempt to install software, a dialog box appears asking whether to allow the program to make changes to the device. Which Windows feature generates this prompt, and what is the security risk of disabling it?",
+    "options": [
+      "Windows Firewall inbound rules; disabling exposes open ports to the network",
+      "User Account Control (UAC); disabling it allows any process to gain elevated privileges silently",
+      "Audit Policy logging; disabling it stops recording security events",
+      "BitLocker pre-boot PIN; disabling it skips pre-boot authentication"
+    ],
+    "answer": 1,
+    "explanation": "UAC generates the elevation prompt. Disabling UAC means malware or unauthorized software can request and receive administrative privileges without any user interaction, significantly increasing attack surface.",
+    "objective": "2.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A security administrator wants to configure Windows so that accounts are automatically locked after five consecutive failed login attempts. Where is this setting configured?",
+    "options": [
+      "Windows Defender Firewall > Advanced Settings > Inbound Rules",
+      "Task Scheduler > Security Tasks > Lockout Trigger",
+      "Local Security Policy > Account Policies > Account Lockout Policy",
+      "Registry Editor > HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer"
+    ],
+    "answer": 2,
+    "explanation": "Account lockout thresholds are managed under Local Security Policy (secpol.msc) at Account Policies > Account Lockout Policy. The administrator sets the lockout threshold, lockout duration, and observation window there.",
+    "objective": "2.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A Windows PC needs a static IP address. Where is this configured?",
+    "options": [
+      "Task Manager",
+      "Windows Firewall settings",
+      "Device Manager",
+      "Network adapter properties > Internet Protocol Version 4 (TCP/IPv4) properties"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows feature allows sharing files and printers on a local network?",
+    "options": [
+      "Network discovery and file and printer sharing",
+      "Remote Desktop",
+      "Windows Firewall",
+      "HomeGroup (deprecated in Windows 10 1803+)"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which Windows command joins a computer to a domain?",
+    "options": [
+      "Monitor RAM usage",
+      "View network status, manage connections, and configure sharing settings",
+      "Update network drivers",
+      "Check disk health"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which Windows feature automatically assigns an IP address if no DHCP server responds?",
+    "options": [
+      "Static IP",
+      "IPv6 link-local",
+      "APIPA (Automatic Private IP Addressing) — 169.254.x.x range",
+      "Loopback"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows setting determines whether the network is classified as Private, Public, or Domain?",
+    "options": [
+      "Network type setting in Network and Sharing Center",
+      "Windows Firewall profile",
+      "IP address class",
+      "Both determine network profile and affect firewall rules"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user cannot connect to a shared network folder. They receive \"Access Denied.\" What is the MOST likely cause?",
+    "options": [
+      "Insufficient share or NTFS permissions for that user account",
+      "Wrong IP address",
+      "Network cable issue",
+      "DNS failure"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user on a Windows 10 workstation cannot access a shared folder on another computer in the same workgroup. Both machines can ping each other successfully. Which setting should the technician check NEXT?",
+    "options": [
+      "Verify both machines have the same static IP address",
+      "Enable Network Discovery and File and Printer Sharing on both machines",
+      "Join both machines to an Active Directory domain",
+      "Install a VPN client on the machine that cannot access the share"
+    ],
+    "answer": 1,
+    "explanation": "Network Discovery and File and Printer Sharing must be enabled in the Network and Sharing Center for workgroup file sharing to work. Successful ping confirms IP connectivity, but these sharing features can be disabled independently of basic IP communication.",
+    "objective": "1.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A remote employee needs to securely connect to internal company network resources over the internet. Which Windows networking feature is designed for this purpose?",
+    "options": [
+      "HomeGroup",
+      "Network Bridge",
+      "VPN client",
+      "APIPA configuration"
+    ],
+    "answer": 2,
+    "explanation": "A VPN client creates an encrypted tunnel over the internet, allowing remote users to securely access internal resources as if on-site. HomeGroup is a deprecated local sharing feature. A Network Bridge connects different network segments on the same local network. APIPA is a self-assigned addressing ",
+    "objective": "1.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A Windows laptop connects to a new Wi-Fi network at a coffee shop. The user wants to ensure the computer is not discoverable to other devices on that public network. Which network location type should be selected?",
+    "options": [
+      "Private",
+      "Home",
+      "Domain",
+      "Public"
+    ],
+    "answer": 3,
+    "explanation": "The Public network profile disables Network Discovery and reduces machine visibility on the network — appropriate for untrusted networks like coffee shops. The Private (or Home) profile enables more permissive sharing settings for trusted environments. Domain profile is applied automatically when jo",
+    "objective": "1.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What should be done BEFORE installing a new application on a production system?",
+    "options": [
+      "Create a system restore point and back up important data",
+      "Disable antivirus",
+      "Uninstall all other applications",
+      "Reinstall the OS"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Where are 32-bit applications typically installed on a 64-bit Windows system?",
+    "options": [
+      "C:\\Program Files",
+      "C:\\Program Files (x86)",
+      "C:\\Windows\\System32",
+      "C:\\Users\\AppData"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What file extension is used for Windows application installers created with the Windows Installer technology?",
+    "options": [
+      ".exe",
+      ".bat",
+      ".msi",
+      ".cmd"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of the Windows App Store (Microsoft Store)?",
+    "options": [
+      "Replace all traditional software installation",
+      "Manage drivers and firmware updates",
+      "Only distribute Microsoft first-party apps",
+      "Provide a centralized, curated platform for downloading and updating apps"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A newly installed application causes system instability. What is the BEST first recovery step?",
+    "options": [
+      "Use Programs and Features to uninstall the application, or use System Restore to revert",
+      "Reinstall Windows",
+      "Delete system32 folder",
+      "Run chkdsk"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Where in Windows do you uninstall applications?",
+    "options": [
+      "Task Manager",
+      "Settings > Apps > Installed Apps, or Control Panel > Programs and Features",
+      "Device Manager",
+      "Disk Management"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of a software license key?",
+    "options": [
+      "Encrypts the installation files",
+      "Verifies that the software copy is legitimate and activated for use",
+      "Both B and C depending on the software",
+      "Controls which features are available after installation"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A 64-bit application's .exe installer works on a Windows 10 64-bit computer. Will the same installer work on a friend's computer running Windows 10 32-bit?",
+    "options": [
+      "Yes — a 64-bit .exe can run on a 32-bit OS with no issues",
+      "Yes — .exe files are architecture-independent",
+      "The installer runs but prompts to install a 32-bit version automatically",
+      "No — a 64-bit .exe installer will not run on a 32-bit OS"
+    ],
+    "answer": 3,
+    "explanation": "A 64-bit executable requires a 64-bit processor and OS and cannot run on a 32-bit OS. A 32-bit application can typically run on 64-bit Windows through the WOW64 compatibility layer, but not the reverse.",
+    "objective": "1.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user wants to install an Android application downloaded from a developer's website that is not available in the Google Play Store. Which setting must be enabled on the Android device?",
+    "options": [
+      "Install Unknown Apps (or Unknown Sources)",
+      "Developer Mode",
+      "USB Debugging",
+      "Safe Mode"
+    ],
+    "answer": 0,
+    "explanation": "Sideloading Android apps from outside the Play Store requires enabling \"Install Unknown Apps\" (Android 8+) or \"Unknown Sources\" in Security settings. USB Debugging enables ADB communication. Developer Mode unlocks developer options but is not specifically required for sideloading. Safe Mode disables",
+    "objective": "1.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Before installing a new application on a Windows workstation, which step should the technician perform FIRST to ensure compatibility?",
+    "options": [
+      "Check the application's icon file format",
+      "Verify the system meets the application's minimum hardware and OS requirements",
+      "Confirm the application supports dark mode",
+      "Check if the application is digitally signed by a government authority"
+    ],
+    "answer": 1,
+    "explanation": "Verifying that the system meets minimum hardware requirements (RAM, CPU speed, disk space) and the correct OS version is the essential first step before installation to prevent compatibility failures. CompTIA A+ emphasizes checking system requirements as part of the installation planning process.",
+    "objective": "1.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the primary difference between a workstation OS and a server OS?",
+    "options": [
+      "Workstation OS requires more RAM",
+      "Server OS cannot run desktop applications",
+      "Server OS is optimized for concurrent network services and multiple simultaneous connections",
+      "Workstation OS is always free"
+    ],
+    "answer": 2,
+    "explanation": "A server OS (Windows Server, Linux server distributions) is tuned for high throughput, many simultaneous connections, and background services. A workstation OS (Windows 10/11, macOS, desktop Linux) is tuned for single-user interactive use and lower latency on foreground tasks.",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which mobile OS is proprietary to Apple and runs exclusively on Apple hardware?",
+    "options": [
+      "Android",
+      "HarmonyOS",
+      "Windows Mobile",
+      "iOS"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "[BONUS — Beyond A+ Scope] What type of OS runs on embedded devices such as routers, smart TVs, and medical equipment?",
+    "options": [
+      "Embedded or real-time OS (RTOS)",
+      "Desktop OS",
+      "Server OS",
+      "Mobile OS only"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the main advantage of an open-source OS like Linux for businesses?",
+    "options": [
+      "More expensive than Windows",
+      "Free to use, modify, and distribute with community support",
+      "Requires proprietary hardware",
+      "Less secure than Windows"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which OS is commonly used on Apple desktop and laptop computers?",
+    "options": [
+      "iOS",
+      "Android",
+      "macOS",
+      "Windows"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "[BONUS — Beyond A+ Scope] True or False: A real-time operating system (RTOS) prioritizes deterministic response times for time-critical operations.",
+    "options": [
+      "iOS supports sideloading apps by default; Android does not",
+      "Android requires all apps to be downloaded from the Apple App Store",
+      "Android apps cannot run on 64-bit processors",
+      "iOS restricts app installation to the Apple App Store by default; Android allows third-party sources"
+    ],
+    "answer": 3,
+    "explanation": "iOS locks users to the App Store by default and does not allow sideloading without jailbreaking. Android allows installation from third-party sources when \"Unknown sources\" or \"Install unknown apps\" is enabled.",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which of the following operating systems is BEST described as open-source and freely distributable?",
+    "options": [
+      "Ubuntu 22.04 LTS",
+      "Windows 11 Pro",
+      "iOS 17",
+      "macOS Ventura"
+    ],
+    "answer": 0,
+    "explanation": "Ubuntu is a Linux distribution released under open-source licenses, allowing free download, modification, and redistribution. macOS, Windows, and iOS are proprietary operating systems tied to a license or specific hardware.",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user wants to install a 64-bit application on a computer running a 32-bit operating system. What will happen?",
+    "options": [
+      "The application will install but run at reduced speed",
+      "The application will not install because 64-bit apps require a 64-bit OS",
+      "The OS will automatically convert the application to 32-bit",
+      "The application will install normally with no issues"
+    ],
+    "answer": 1,
+    "explanation": "A 64-bit application requires a 64-bit OS and processor. A 32-bit OS cannot run 64-bit applications. The reverse is possible: a 64-bit OS can run most 32-bit apps through the WOW64 compatibility layer on Windows.",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which of the following BEST describes a key characteristic of macOS compared to Windows?",
+    "options": [
+      "macOS is open source and can be installed on any x86 hardware",
+      "macOS uses the Windows Registry to store system configuration",
+      "macOS is a proprietary OS designed primarily for Apple hardware",
+      "macOS does not support command-line interfaces"
+    ],
+    "answer": 2,
+    "explanation": "macOS is proprietary software developed by Apple and officially licensed only for Apple hardware. It is not open source, uses configuration files and property lists (not a Windows Registry), and includes a full Terminal application.",
+    "objective": "1.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the FIRST step before performing a Windows OS upgrade?",
+    "options": [
+      "Disable antivirus",
+      "Format the hard drive",
+      "Delete all user profiles",
+      "Back up all user data and verify hardware compatibility"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows installation method allows deploying the OS to multiple machines simultaneously using a network share?",
+    "options": [
+      "Network (PXE) boot installation",
+      "USB installation",
+      "DVD installation",
+      "Manual local installation only"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which Windows setup method preserves user data and installed applications while upgrading the OS version?",
+    "options": [
+      "Clean installation",
+      "In-place upgrade",
+      "Refresh installation",
+      "Network deployment"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What partitioning scheme is required for UEFI-based Windows installations?",
+    "options": [
+      "MBR (Master Boot Record)",
+      "FAT32",
+      "GPT (GUID Partition Table)",
+      "Dynamic disk"
+    ],
+    "answer": 2,
+    "explanation": "Native UEFI boot requires GPT. However, UEFI firmware with Compatibility Support Module (CSM) enabled can still boot MBR disks in legacy BIOS mode. The exam tests the native UEFI requirement: GPT is required when Secure Boot is active and CSM is disabled.",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the minimum disk space required for a Windows 11 installation?",
+    "options": [
+      "Windows Update Assistant",
+      "Disk Management",
+      "Device Manager",
+      "PC Health Check app (for Windows 11) or Windows Compatibility Advisor"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "After a Windows update causes boot failure, what is the FIRST recovery option to try?",
+    "options": [
+      "Boot to Windows Recovery Environment (WinRE) and use Startup Repair or roll back the update",
+      "Reinstall Windows",
+      "Replace the hard drive",
+      "Reflash BIOS"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician is performing a clean installation of Windows 11 on a new NVMe SSD. During setup, the installer cannot detect the drive. Which of the following is the MOST likely cause?",
+    "options": [
+      "The SSD is formatted with FAT32 instead of NTFS",
+      "A third-party driver for the storage controller needs to be loaded during setup",
+      "Windows 11 does not support NVMe SSD installation",
+      "The partition style must be MBR for Windows 11"
+    ],
+    "answer": 1,
+    "explanation": "Windows setup does not always include drivers for NVMe or proprietary RAID controllers. The technician must load the appropriate storage driver via USB using the \"Load driver\" option. Windows 11 requires UEFI and GPT — not MBR — making option D incorrect.",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "An organization needs to deploy Windows 11 to 200 workstations with identical hardware and specific settings applied automatically. Which installation method is MOST appropriate?",
+    "options": [
+      "Interactive clean install from USB on each machine individually",
+      "In-place upgrade from the Microsoft website on each machine",
+      "Unattended installation using an answer file (autounattend.xml)",
+      "Manual upgrade through Windows Update on each machine"
+    ],
+    "answer": 2,
+    "explanation": "An unattended installation uses an answer file (autounattend.xml) to supply all configuration options automatically, enabling mass deployment without user interaction. Interactive or manual installs on 200 machines would be impractical.",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician is upgrading a computer from Windows 10 Home to Windows 11 Home. Which of the following BEST describes this process?",
+    "options": [
+      "The technician must perform a clean install; in-place upgrades between Home editions are not supported",
+      "The upgrade requires purchasing a separate Windows 11 retail license",
+      "The technician must first upgrade to Windows 10 Pro before upgrading to Windows 11 Home",
+      "The technician can perform an in-place upgrade, which preserves files and settings"
+    ],
+    "answer": 3,
+    "explanation": "An in-place upgrade from Windows 10 Home to Windows 11 Home preserves user files, applications, and settings. Same-tier edition upgrades are a valid in-place upgrade path; a clean install is not required.",
+    "objective": "1.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the name of the macOS desktop background area and taskbar equivalent?",
+    "options": [
+      "Finder and Dock",
+      "Start menu",
+      "Taskbar and Desktop",
+      "Spotlight and Launchpad"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What macOS utility is equivalent to Windows Device Manager and Control Panel for system preferences?",
+    "options": [
+      "Finder",
+      "System Preferences (System Settings in macOS Ventura and later)",
+      "Terminal",
+      "Activity Monitor"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which macOS application is equivalent to Windows Task Manager for viewing running processes and resource usage?",
+    "options": [
+      "Finder",
+      "Disk Utility",
+      "Activity Monitor",
+      "Terminal"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What macOS tool is used for disk partitioning, formatting, and repair?",
+    "options": [
+      "Finder",
+      "System Preferences",
+      "Terminal",
+      "Disk Utility"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Where are macOS applications typically installed?",
+    "options": [
+      "Time Machine",
+      "Migration Assistant",
+      "macOS Recovery",
+      "FileVault"
+    ],
+    "answer": 0,
+    "explanation": "Time Machine performs automated incremental backups to an external drive and lets you browse and restore files or full system states from those backups. Note: Time Machine is a backup tool, not a snapshot feature — it requires external storage. macOS Recovery is used for OS reinstallation, not file-",
+    "objective": "1.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What does FileVault do on macOS?",
+    "options": [
+      "Mission Control",
+      "Spotlight",
+      "Finder",
+      "Time Machine"
+    ],
+    "answer": 1,
+    "explanation": "Spotlight (Command + Space) is macOS's universal search interface for finding files, launching apps, performing calculations, and searching the web. Mission Control displays open windows and desktops. Finder is the file manager. Time Machine is the backup utility.",
+    "objective": "1.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A macOS user wants to restore a file deleted three days ago. Which built-in macOS feature allows them to browse and restore previous file versions?",
+    "options": [
+      "FileVault",
+      "Homebrew",
+      "Time Machine",
+      "Disk Utility"
+    ],
+    "answer": 2,
+    "explanation": "Time Machine is macOS's built-in backup and restore utility that backs up files to an external drive and allows browsing and restoring individual files from past snapshots. FileVault provides full-disk encryption. Homebrew is a third-party package manager. Disk Utility manages partitions and disk he",
+    "objective": "1.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A macOS user downloads an application from a developer's website as a .dmg file. What is the correct installation procedure?",
+    "options": [
+      "Extract the .dmg contents using Disk Utility before running the installer",
+      "Right-click the .dmg and select \"Run as administrator\" to install",
+      "Open Terminal and run chmod +x on the .dmg file, then execute it",
+      "Double-click the .dmg to mount it, then drag the application to the Applications folder"
+    ],
+    "answer": 3,
+    "explanation": "A .dmg file mounts as a virtual disk when double-clicked. The user drags the application icon to the Applications folder shortcut inside the mounted image to install. \"Run as administrator\" is a Windows concept. chmod is not needed for .dmg installation. Disk Utility is not used to extract .dmg file",
+    "objective": "1.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the command to list files and directories in Linux?",
+    "options": [
+      "ls",
+      "dir",
+      "list",
+      "show"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Linux command installs packages on Debian-based distributions such as Ubuntu?",
+    "options": [
+      "yum install",
+      "apt install or apt-get install",
+      "rpm -i",
+      "dnf install"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which Linux file system is most commonly used for Linux root partitions?",
+    "options": [
+      "FAT32",
+      "NTFS",
+      "ext4",
+      "exFAT"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Linux command changes file permissions?",
+    "options": [
+      "chown",
+      "su",
+      "chgrp",
+      "chmod"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "1.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the Linux equivalent of Windows Event Viewer for viewing system logs?",
+    "options": [
+      "/var/log/ directory and journalctl command",
+      "syslog GUI",
+      "dmesg only",
+      "/etc/logs"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "1.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What command in Linux displays the current running processes?",
+    "options": [
+      "tasklist",
+      "ps aux or top",
+      "proc show",
+      "list processes"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "1.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "[BONUS — Beyond A+ Scope] Which desktop environment is default on Ubuntu Linux?",
+    "options": [
+      "KDE Plasma",
+      "XFCE",
+      "GNOME",
+      "LXDE"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "1.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A Linux technician wants to list all files in the current directory, including hidden files, with detailed permission, owner, size, and modification date information. Which command accomplishes this?",
+    "options": [
+      "ls -d",
+      "ls -r",
+      "dir /a",
+      "ls -la"
+    ],
+    "answer": 3,
+    "explanation": "ls -la combines -l (long format showing permissions, owner, size, date) with -a (show all files including hidden dot-files). dir /a is Windows syntax. ls -d lists directories themselves rather than their contents. ls -r lists files in reverse order only.",
+    "objective": "1.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A Linux technician needs to install a software package on an Ubuntu workstation from the command line. Which package manager and command syntax is correct?",
+    "options": [
+      "apt install packagename",
+      "rpm -i packagename.rpm",
+      "yum install packagename",
+      "brew install packagename"
+    ],
+    "answer": 0,
+    "explanation": "Ubuntu uses the APT (Advanced Package Tool) package manager; the correct command is sudo apt install packagename. yum and rpm are used on Red Hat-based distributions (RHEL, CentOS, Fedora). brew (Homebrew) is a macOS package manager.",
+    "objective": "1.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician needs to set file permissions on report.txt so the owner has full access (read, write, execute) while group and others have no permissions. Which chmod command is correct?",
+    "options": [
+      "chmod 777 report.txt",
+      "chmod 700 report.txt",
+      "chmod 644 report.txt",
+      "chmod 755 report.txt"
+    ],
+    "answer": 1,
+    "explanation": "chmod 700 sets rwx (7) for the owner and --- (0) for both group and others. chmod 777 grants all permissions to everyone. chmod 644 gives the owner read/write and group/others read-only. chmod 755 gives the owner full permissions and group/others read and execute.",
+    "objective": "1.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A company wants all employees to use a hosted email, calendar, and Teams-based collaboration solution managed by Microsoft. Which product suite provides this?",
+    "options": [
+      "Google Workspace",
+      "iCloud",
+      "Microsoft 365 (formerly Office 365)",
+      "Dropbox Business"
+    ],
+    "answer": 2,
+    "explanation": "Microsoft 365 includes Exchange Online (hosted email), SharePoint, OneDrive, and Teams. It is the primary Microsoft cloud productivity suite tested on the 220-1202 exam. Google Workspace is the equivalent Google offering (Gmail, Drive, Meet, Docs).",
+    "objective": "1.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "An email client is being configured to access a Microsoft 365 mailbox with full calendar and contact synchronization, out-of-office rules, and delegate access. Which protocol provides the richest feature set for this configuration?",
+    "options": [
+      "POP3",
+      "IMAP",
+      "SMTP",
+      "MAPI (via Exchange ActiveSync or Outlook)"
+    ],
+    "answer": 3,
+    "explanation": "MAPI (Messaging Application Programming Interface) is the native Microsoft Exchange protocol used by Outlook. It provides full two-way synchronization of email, calendar, contacts, tasks, and delegate permissions. IMAP synchronizes email folders only. POP3 downloads and removes messages from the ser",
+    "objective": "1.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user wants to access their OneDrive files in File Explorer without downloading everything to their local disk. Which OneDrive feature accomplishes this?",
+    "options": [
+      "OneDrive Files On-Demand",
+      "OneDrive Sync",
+      "OneDrive Selective Sync",
+      "OneDrive Personal Vault"
+    ],
+    "answer": 0,
+    "explanation": "Files On-Demand displays all OneDrive files in File Explorer as placeholders without consuming local disk space. Files are downloaded only when opened. Selective Sync chooses which folders to sync locally. Personal Vault is a PIN-protected subfolder for sensitive documents.",
+    "objective": "1.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A company needs to synchronize on-premises Active Directory users, passwords, and groups to Microsoft Entra ID (Azure AD) so employees can use the same credentials for both local and Microsoft 365 resources. Which tool performs this synchronization?",
+    "options": [
+      "Azure Site Recovery",
+      "Microsoft Entra Connect (formerly Azure AD Connect)",
+      "Active Directory Federation Services (ADFS) only",
+      "Group Policy Management Console"
+    ],
+    "answer": 1,
+    "explanation": "Microsoft Entra Connect (Azure AD Connect) is the identity synchronization tool that replicates on-premises AD accounts to Entra ID, enabling single sign-on (SSO) across on-premises and cloud resources. Password Hash Sync, Pass-Through Authentication, and Federation are its three authentication opti",
+    "objective": "1.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A remote employee needs to participate in a video meeting with screen sharing. The company uses Google Workspace. Which tool is appropriate?",
+    "options": [
+      "Microsoft Teams",
+      "Zoom",
+      "Google Meet",
+      "Skype for Business"
+    ],
+    "answer": 2,
+    "explanation": "Google Meet is the video conferencing tool integrated into Google Workspace. It is accessible directly from Gmail and Google Calendar. Teams is the Microsoft 365 equivalent. Both are tested as representative cloud collaboration tools on the 220-1202 exam.",
+    "objective": "1.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician is setting up a shared team document space where multiple employees can co-edit files and share announcements. Which Microsoft 365 tool is designed for team document libraries and intranet sites?",
+    "options": [
+      "OneDrive",
+      "Exchange Online",
+      "OneNote",
+      "SharePoint"
+    ],
+    "answer": 3,
+    "explanation": "SharePoint is the Microsoft 365 team site and document library platform. Teams channels are backed by SharePoint document libraries. OneDrive is personal cloud storage per user. SharePoint is appropriate for shared team resources and org-wide intranet content.",
+    "objective": "1.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A company wants employees to collaborate on the same Word document simultaneously from different locations without emailing file attachments. Which Microsoft 365 feature BEST enables real-time co-editing?",
+    "options": [
+      "Co-authoring via Word Online with OneDrive or SharePoint storage",
+      "Microsoft Outlook calendar sharing",
+      "Windows Remote Desktop Protocol (RDP)",
+      "Microsoft Access shared databases"
+    ],
+    "answer": 0,
+    "explanation": "Microsoft 365 supports real-time co-authoring when documents are stored on OneDrive or SharePoint; multiple users see each other's changes live. Remote Desktop shares screen access but not collaborative document editing. Outlook and Access do not provide simultaneous document co-editing.",
+    "objective": "1.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "An employee uses a desktop at work, a laptop at home, and a tablet on the go and needs files to always be the latest version on every device. Which cloud feature provides this automatically?",
+    "options": [
+      "Incremental backup",
+      "File synchronization",
+      "Disk imaging",
+      "RAID mirroring"
+    ],
+    "answer": 1,
+    "explanation": "File synchronization (OneDrive, Google Drive, Dropbox) automatically updates files across all connected devices when a change is saved anywhere. Incremental backup stores changed files periodically but is not designed for real-time cross-device file access. Disk imaging and RAID are local storage re",
+    "objective": "1.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which of the following is a PRIMARY advantage of a web-based application such as Google Docs compared to a locally installed application?",
+    "options": [
+      "Web-based applications always have more features than installed counterparts",
+      "Web-based applications work without an internet connection",
+      "Web-based applications can be accessed from any device with a browser without local installation",
+      "Web-based applications store data exclusively on the local machine"
+    ],
+    "answer": 2,
+    "explanation": "Web-based applications run in a browser and require no local installation, making them accessible from virtually any internet-connected device. They typically require internet connectivity to function, may have fewer advanced features than desktop equivalents, and store data in the cloud.",
+    "objective": "1.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "An organization migrating from locally installed Office 2019 to Microsoft 365 asks about the licensing difference. Which of the following BEST describes Microsoft 365 licensing?",
+    "options": [
+      "A one-time purchase license that includes all future versions permanently",
+      "A perpetual license that must be repurchased with each major Windows version",
+      "A freeware license with unlimited users at no cost",
+      "A subscription-based license paid monthly or annually that includes ongoing updates and cloud services"
+    ],
+    "answer": 3,
+    "explanation": "Microsoft 365 uses a subscription model. Subscribers receive continuous application updates, cloud storage (OneDrive), and the latest feature versions as long as the subscription is active. This differs from perpetual Office licenses (e.g., Office 2021), which are one-time purchases that do not incl",
+    "objective": "1.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What security concept grants users only the permissions needed to perform their job and nothing more?",
+    "options": [
+      "Principle of least privilege",
+      "Defense in depth",
+      "Zero trust",
+      "Need to know"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is an access control vestibule (also called a mantrap or airlock) used for in physical security?",
+    "options": [
+      "Trap software vulnerabilities",
+      "An entry system with two locked doors that prevents tailgating by allowing only one person through at a time",
+      "Monitor network traffic",
+      "Control access to cloud resources"
+    ],
+    "answer": 1,
+    "explanation": "An access control vestibule (the current CompTIA 220-1202 term; previously called a mantrap or airlock) uses two interlocked doors so only one can open at a time. This prevents tailgating by ensuring each person must authenticate before the inner door unlocks.",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "[BONUS — Beyond A+ Scope] Which security principle requires that sensitive tasks require two or more authorized users?",
+    "options": [
+      "Least privilege",
+      "Zero trust",
+      "Separation of duties",
+      "Defense in depth"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of a security badge or smart card in a corporate environment?",
+    "options": [
+      "Log user activity on their computer",
+      "Provide VPN access",
+      "Encrypt network traffic",
+      "Control physical access to secure areas by authenticating users at entry points"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What type of security camera system records footage for later review?",
+    "options": [
+      "CCTV or IP camera system with DVR/NVR recording",
+      "Access control system",
+      "Motion sensor only",
+      "Biometric scanner"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What are the three authentication factor categories?",
+    "options": [
+      "User, group, and role",
+      "Something you know, something you have, something you are",
+      "Password, PIN, and biometric only",
+      "Local, network, and cloud"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "[BONUS — Beyond A+ Scope] What is the purpose of an intrusion detection system (IDS)?",
+    "options": [
+      "Block malicious traffic automatically",
+      "Encrypt data in transit",
+      "Monitor network or host activity and alert on suspicious or malicious behavior",
+      "Manage user access rights"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "[BONUS — Beyond A+ Scope] True or False: An IPS (Intrusion Prevention System) can actively block malicious traffic, whereas an IDS only monitors and alerts.",
+    "options": [
+      "Detective",
+      "Corrective",
+      "Deterrent",
+      "Preventive"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which wireless security protocol uses a 64-bit or 128-bit key and is considered broken and insecure?",
+    "options": [
+      "WEP",
+      "WPA2",
+      "WPA3",
+      "WPA"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What wireless authentication method uses a RADIUS server to authenticate users with individual credentials?",
+    "options": [
+      "WPA2-Personal (PSK)",
+      "WPA2-Enterprise (802.1X)",
+      "WEP",
+      "Open authentication"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which encryption protocol replaced TKIP in WPA2?",
+    "options": [
+      "DES",
+      "RC4",
+      "AES (CCMP)",
+      "3DES"
+    ],
+    "answer": 2,
+    "explanation": "WPA2's mandatory cipher is AES-CCMP (Counter Mode CBC-MAC Protocol). TKIP (originally from WPA) is still supported in WPA2 mixed-mode for backward compatibility with older hardware, but it is not the replacement — AES-CCMP is. WPA3 drops TKIP entirely.",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What does 802.1X provide in a wireless or wired network?",
+    "options": [
+      "Wireless encryption",
+      "QoS prioritization",
+      "VLAN configuration",
+      "Port-based Network Access Control (PNAC) with authentication before network access is granted"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is a RADIUS server used for in enterprise wireless networks?",
+    "options": [
+      "Centralized authentication, authorization, and accounting for wireless clients",
+      "Assigning IP addresses to wireless clients",
+      "Encrypting all wireless traffic",
+      "Managing access point firmware"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A company wants employees to authenticate to Wi-Fi using their Active Directory credentials. Which method should be used?",
+    "options": [
+      "WPA2-Personal",
+      "WPA2-Enterprise with 802.1X and RADIUS",
+      "WEP",
+      "MAC filtering"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of a captive portal in a wireless network?",
+    "options": [
+      "Block all wireless traffic",
+      "Encrypt wireless traffic",
+      "Redirect new users to a login or acceptance page before granting network access",
+      "Manage SSID broadcast"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What type of malware disguises itself as legitimate software to trick users into installing it?",
+    "options": [
+      "Worm",
+      "Ransomware",
+      "Rootkit",
+      "Trojan horse"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which type of malware encrypts user files and demands payment for the decryption key?",
+    "options": [
+      "Ransomware",
+      "Adware",
+      "Spyware",
+      "Rootkit"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What type of malware hides itself deeply in the OS, often at the kernel level, to avoid detection?",
+    "options": [
+      "Trojan",
+      "Rootkit",
+      "Worm",
+      "Adware"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is a botnet?",
+    "options": [
+      "A network of printers",
+      "A type of encryption",
+      "A collection of compromised computers controlled remotely by an attacker",
+      "A network monitoring tool"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which Windows tool provides built-in real-time antivirus and anti-malware protection?",
+    "options": [
+      "Windows Firewall",
+      "UAC",
+      "BitLocker",
+      "Windows Defender Antivirus (Microsoft Defender)"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What should be done FIRST when malware is discovered on a workstation?",
+    "options": [
+      "Disconnect from the network to prevent further spread",
+      "Delete all user files",
+      "Reinstall Windows immediately",
+      "Run Windows Update"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of keeping antivirus definitions up to date?",
+    "options": [
+      "Improve PC performance",
+      "Ensure the antivirus can detect the latest known malware signatures",
+      "Fix Windows bugs",
+      "Update hardware drivers"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which malware type spreads by attaching itself to legitimate executable files?",
+    "options": [
+      "Worm",
+      "Trojan",
+      "Virus",
+      "Rootkit"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What does a keylogger do?",
+    "options": [
+      "Encrypts keystrokes for security",
+      "Manages keyboard shortcuts",
+      "Blocks unauthorized keyboard access",
+      "Records all keystrokes to capture passwords and sensitive information"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What social engineering attack sends fraudulent emails appearing to come from a trusted source to steal credentials?",
+    "options": [
+      "Phishing",
+      "Smishing",
+      "Vishing",
+      "Tailgating"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is \"smishing\"?",
+    "options": [
+      "Phishing via social media",
+      "Phishing via SMS text messages",
+      "Phishing via email attachments",
+      "Physical phishing at a location"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What physical social engineering technique involves following an authorized person through a secure door without authentication?",
+    "options": [
+      "Shoulder surfing",
+      "Dumpster diving",
+      "Tailgating (piggybacking)",
+      "Whaling"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is a \"whaling\" attack?",
+    "options": [
+      "Phishing targeting a large number of random users",
+      "DDoS attack on a large organization",
+      "Phishing via whale-watching websites",
+      "Targeted phishing against high-value targets such as executives (CEOs, CFOs)"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What does \"shoulder surfing\" mean in security?",
+    "options": [
+      "Browsing over someone shoulder to observe their screen or keyboard input",
+      "Using shoulder pads to carry stolen equipment",
+      "An attack on surfing websites",
+      "Monitoring network traffic on the same network segment"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "[BONUS — Beyond A+ Scope] What is a \"watering hole\" attack?",
+    "options": [
+      "Sending malware via email attachments",
+      "Infecting websites frequently visited by the target group to compromise their machines",
+      "Intercepting network traffic at a coffee shop",
+      "Flooding a server with requests"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the BEST defense against social engineering attacks?",
+    "options": [
+      "Better antivirus software",
+      "Stronger passwords",
+      "Security awareness training for all employees",
+      "Network firewall upgrades"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "An attacker calls an employee, claims to be from the IT help desk, and says there is an urgent security breach requiring the employee's password to remediate immediately. The employee complies. Which social engineering technique is being used?",
+    "options": [
+      "Tailgating",
+      "Shoulder surfing",
+      "Dumpster diving",
+      "Pretexting"
+    ],
+    "answer": 3,
+    "explanation": "Pretexting involves fabricating a scenario to manipulate a target into divulging information. The attacker invented an urgent help-desk situation to justify requesting the password. Tailgating is physical unauthorized entry; shoulder surfing is visually observing credentials.",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A financial analyst receives a highly personalized email referencing her name, her manager's name, and a recent project, asking her to wire funds to an external account. This attack is specifically crafted for a single high-value individual rather than a mass audience. What is this called?",
+    "options": [
+      "Spear phishing",
+      "Whaling",
+      "Vishing",
+      "Smishing"
+    ],
+    "answer": 0,
+    "explanation": "Spear phishing is a targeted phishing attack tailored with personal details about a specific individual. Whaling specifically targets executives. Vishing uses voice calls; smishing uses SMS text messages.",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "An attacker waits near a secured building entrance and follows an authorized employee through the door before it closes, gaining physical access without any credentials. Which term describes this technique?",
+    "options": [
+      "Impersonation",
+      "Tailgating",
+      "Watering hole attack",
+      "Pretexting"
+    ],
+    "answer": 1,
+    "explanation": "Tailgating (piggybacking) is the act of following an authorized person through a secured entry without independently authenticating. It is countered with mantraps, turnstiles, and security awareness training.",
+    "objective": "2.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows security feature pops up when a program attempts to make system-level changes?",
+    "options": [
+      "Windows Defender",
+      "Windows Firewall alert",
+      "UAC (User Account Control) prompt",
+      "Secure Boot"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows tool allows configuring password policies and account lockout policies locally?",
+    "options": [
+      "Device Manager",
+      "Task Manager",
+      "Windows Defender",
+      "Local Security Policy (secpol.msc)"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What does an account lockout policy do?",
+    "options": [
+      "Locks the account after a specified number of failed login attempts",
+      "Locks the screen after idle time",
+      "Requires password complexity",
+      "Disables the guest account"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Where in Windows 10/11 do you configure Windows Defender Antivirus exclusions?",
+    "options": [
+      "Control Panel > Security",
+      "Windows Security > Virus and Threat Protection > Manage Settings > Exclusions",
+      "Task Manager > Exclusions",
+      "Device Manager"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows feature encrypts a specific file or folder rather than an entire drive?",
+    "options": [
+      "BitLocker",
+      "Secure Boot",
+      "EFS (Encrypting File System)",
+      "TPM"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which permission takes precedence when NTFS permissions and share permissions conflict?",
+    "options": [
+      "NTFS always wins",
+      "Share permissions always win",
+      "The more permissive of the two applies",
+      "The more restrictive of the two permissions applies"
+    ],
+    "answer": 3,
+    "explanation": "NTFS and share permissions are evaluated independently, then combined. Windows grants the most restrictive result. Critical rule: share permissions only apply when accessing a resource over the network. A user logged in locally bypasses share permissions entirely and is subject only to NTFS permissi",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of auditing in Windows security?",
+    "options": [
+      "Track and log specific user or system activities such as logon events and file access",
+      "Improve system performance",
+      "Block malware automatically",
+      "Manage application installations"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician suspects a Windows workstation is infected with malware. As part of the standard malware removal process, which action should be performed BEFORE running a full anti-malware scan?",
+    "options": [
+      "Reinstall the operating system immediately",
+      "Disable System Restore and boot into Safe Mode",
+      "Enable AutoRun on all removable drives to test infection vectors",
+      "Connect the machine to a different network segment and ignore the scan"
+    ],
+    "answer": 1,
+    "explanation": "Disabling System Restore prevents malware from hiding in restore points. Booting into Safe Mode prevents many malware processes from loading, allowing the scanner to detect and remove them more effectively.",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "After removing malware from a workstation, which two actions are MOST important before returning the machine to the user?",
+    "options": [
+      "Disable Windows Update and remove the antivirus to improve performance",
+      "Re-enable System Restore and lower the UAC level to reduce prompts",
+      "Update anti-malware definitions and apply all outstanding OS patches",
+      "Schedule a scan for six months in the future and clear the event logs"
+    ],
+    "answer": 2,
+    "explanation": "Updating anti-malware definitions ensures protection against the latest threats, and applying OS patches closes vulnerabilities the malware may have exploited. These are core steps in the remediation and prevention phase.",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user's workstation shows signs of infection: changed browser homepage, constant pop-ups, and degraded performance. The technician quarantines the machine. What does quarantining accomplish?",
+    "options": [
+      "It permanently deletes all infected files from the hard drive",
+      "It encrypts infected files using BitLocker to prevent further spread",
+      "It re-images the workstation from a known-good baseline",
+      "It isolates suspected malware files so they cannot execute while preserving them for analysis"
+    ],
+    "answer": 3,
+    "explanation": "Quarantine moves suspected malware to an isolated location where it cannot execute or spread, while preserving it for analysis or vendor submission. Deletion is irreversible and may be premature before confirmation.",
+    "objective": "2.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the FIRST security action to take when setting up a new workstation?",
+    "options": [
+      "Change all default passwords and update the OS with all patches",
+      "Install all applications",
+      "Create a guest account",
+      "Disable Windows Defender"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What type of software should be kept updated to ensure it can detect the latest malware?",
+    "options": [
+      "Office productivity applications",
+      "Antivirus and anti-malware software (definitions and engine)",
+      "Screen savers",
+      "Printer drivers"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of a host-based firewall such as Windows Firewall?",
+    "options": [
+      "Replace network firewalls",
+      "Monitor internet speed",
+      "Filter incoming and outgoing traffic on the individual computer",
+      "Provide VPN access"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What security principle means \"never trust, always verify\" — requiring authentication and authorization for every access request regardless of location?",
+    "options": [
+      "Defense in depth",
+      "Separation of duties",
+      "Least privilege",
+      "Zero trust"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician is setting up a standard user account for a new employee. Why is a standard account preferred over an administrator account for daily use?",
+    "options": [
+      "Limits the damage malware can do if the account is compromised",
+      "Standard accounts are faster",
+      "Standard accounts cannot be hacked",
+      "Required by law"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What should be done with user accounts when an employee leaves the organization?",
+    "options": [
+      "Leave them active for IT use",
+      "Disable or delete the account immediately",
+      "Change the password and share it with the team",
+      "Convert to a guest account"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the best practice for handling autorun when inserting USB drives?",
+    "options": [
+      "Always allow autorun for convenience",
+      "Only allow autorun for trusted brands",
+      "Disable autorun/autoplay to prevent automatic execution of potentially malicious code",
+      "Format the drive first"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A company policy requires workstations to automatically lock after inactivity and require re-authentication. Which Windows feature enforces this?",
+    "options": [
+      "BitLocker automatic unlock",
+      "Remote Desktop idle session timeout",
+      "Windows Defender Application Control",
+      "Screen saver with password-on-resume enabled"
+    ],
+    "answer": 3,
+    "explanation": "The screen saver timeout combined with \"On resume, display logon screen\" (enforced via Group Policy) is the standard Windows mechanism for automatic workstation locking after inactivity.",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician is hardening a new Windows workstation. Which action BEST demonstrates applying the principle of least privilege?",
+    "options": [
+      "Creating a separate administrator account for administrative tasks and using a standard account for daily use",
+      "Granting the standard user account local administrator rights to simplify software installs",
+      "Disabling Windows Defender to allow all applications to run without restrictions",
+      "Configuring the firewall to allow all outbound traffic by default"
+    ],
+    "answer": 0,
+    "explanation": "Using a standard account for daily tasks and a separate administrator account only when needed limits the damage any malware or mistake can cause, implementing least privilege at the user level.",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician wants to prevent users from running unauthorized applications on company workstations without blocking the entire OS. Which Windows Enterprise feature allows application whitelisting?",
+    "options": [
+      "Windows Defender Firewall inbound rules",
+      "AppLocker",
+      "BitLocker Network Unlock",
+      "Credential Guard"
+    ],
+    "answer": 1,
+    "explanation": "AppLocker allows administrators to define rules permitting or denying specific applications, scripts, and installer files based on file path, publisher signature, or hash. It is the primary application whitelisting tool in Windows Enterprise and Education editions.",
+    "objective": "2.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What mobile security feature wipes the device after a specified number of failed unlock attempts?",
+    "options": [
+      "Remote lock",
+      "Screen lock timeout",
+      "Failed login wipe or remote wipe after threshold",
+      "MDM enrollment"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What MDM capability allows an IT admin to lock or wipe a lost corporate mobile device remotely?",
+    "options": [
+      "Remote desktop",
+      "Biometric enrollment",
+      "App whitelisting",
+      "Remote lock and remote wipe"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is \"BYOD\" and what is the primary security concern?",
+    "options": [
+      "Bring Your Own Device — concern is mixing personal and corporate data on unmanaged devices",
+      "Buy Your Own Device — concern is cost",
+      "Build Your Own Device — concern is compatibility",
+      "Backup Your Own Data — concern is compliance"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What type of screen lock is considered the most secure on mobile devices?",
+    "options": [
+      "Swipe pattern",
+      "Strong alphanumeric passcode or biometric with backup passcode",
+      "4-digit PIN",
+      "Face recognition only"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What security feature on mobile devices verifies each app is from a trusted source before installation?",
+    "options": [
+      "VPN",
+      "Screen lock",
+      "App signing and app store vetting (e.g., Play Protect, App Store review)",
+      "Remote wipe"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A company issues smartphones to employees and requires that all corporate data be erasable from any device reported lost or stolen. Which mobile device management capability satisfies this?",
+    "options": [
+      "GPS location tagging",
+      "SIM lock",
+      "Application sandboxing",
+      "Remote wipe"
+    ],
+    "answer": 3,
+    "explanation": "Remote wipe allows an administrator via MDM to send a command that erases all data on the device over the network. GPS helps locate a device but does not protect data on it.",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "An employee enrolls their personal smartphone in the company MDM solution for BYOD access to corporate resources. Which security concern does MDM enrollment PRIMARILY address?",
+    "options": [
+      "Enforcing security policies such as screen lock, encryption, and remote wipe on the personal device",
+      "Preventing the employee from making personal calls during work hours",
+      "Blocking all personal app installations on the employee's device",
+      "Automatically upgrading device hardware to meet corporate standards"
+    ],
+    "answer": 0,
+    "explanation": "MDM enrollment allows IT to enforce baseline security policies on personal devices accessing corporate resources, balancing employee privacy with corporate data protection requirements.",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "The IT department wants to ensure that if the physical storage chip is removed from a corporate smartphone, stored data cannot be read by an attacker. Which feature provides this protection?",
+    "options": [
+      "Remote wipe",
+      "Full device encryption",
+      "SIM lock",
+      "Biometric authentication"
+    ],
+    "answer": 1,
+    "explanation": "Full device encryption encrypts all data on internal storage using a key derived from the user's PIN or password. Without the decryption key, data removed on physical media is unreadable.",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A mobile device requires a fingerprint scan to unlock. If the fingerprint reader fails, it falls back to a numeric PIN. Which security concept does this configuration illustrate?",
+    "options": [
+      "Application sandboxing with PIN enforcement",
+      "SIM lock with biometric override",
+      "Multi-factor authentication with a fallback method",
+      "Remote wipe triggered by failed biometric attempts"
+    ],
+    "answer": 2,
+    "explanation": "The fingerprint (something you are) and PIN (something you know) represent two authentication factors. The fallback ensures usability when biometrics fail, though the fallback alone is single-factor.",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "An organization's mobile device policy requires all apps on corporate devices to be vetted before installation. Which MDM mechanism enforces this on managed devices?",
+    "options": [
+      "GPS location services",
+      "Automatic OS updates",
+      "SIM lock",
+      "Corporate app catalog / MDM application whitelist"
+    ],
+    "answer": 3,
+    "explanation": "MDM solutions can restrict app installation to an approved corporate catalog, blocking public app stores or sideloaded packages, ensuring all applications have been reviewed for security and compliance.",
+    "objective": "2.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What data sanitization method overwrites all data on a drive multiple times with random patterns?",
+    "options": [
+      "Data wiping (overwrite)",
+      "Degaussing",
+      "Physical destruction",
+      "Quick format"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What method destroys magnetic media data by exposing it to a powerful magnetic field?",
+    "options": [
+      "Shredding",
+      "Degaussing",
+      "Formatting",
+      "Overwriting"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which disposal method is the MOST secure for ensuring data on a hard drive is unrecoverable?",
+    "options": [
+      "Standard format",
+      "Delete all files",
+      "Physical destruction (shredding, drilling, incineration)",
+      "Single-pass overwrite"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which regulatory standard governs the secure disposal of healthcare patient data in the United States?",
+    "options": [
+      "PCI DSS",
+      "SOX",
+      "GDPR",
+      "HIPAA"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A government contractor must dispose of hard drives containing classified data and provide a written record of destruction. Which combination satisfies BOTH requirements?",
+    "options": [
+      "Physical shredding or incineration plus a certificate of destruction",
+      "Standard format and delete, with a deletion log saved to a network share",
+      "Overwriting once with zeros and recycling the drives",
+      "Removing the drives and storing them in a locked cabinet"
+    ],
+    "answer": 0,
+    "explanation": "Physical destruction ensures data is unrecoverable by eliminating the storage medium entirely. A certificate of destruction is an auditable document confirming the method and date, satisfying documentation requirements for regulated environments.",
+    "objective": "2.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician must sanitize spinning hard drives being donated to a school so data is removed but drives remain functional. Which method is MOST appropriate?",
+    "options": [
+      "Physical shredding",
+      "Multi-pass overwrite using a DoD 5220.22-M compliant tool",
+      "Degaussing followed by re-certification",
+      "Deleting all files and emptying the Recycle Bin"
+    ],
+    "answer": 1,
+    "explanation": "A multi-pass overwrite (e.g., DoD 5220.22-M) renders data unrecoverable on spinning magnetic drives while leaving the drive functional for reuse. Shredding destroys the drive; deleting files does not sanitize the disk.",
+    "objective": "2.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which data sanitization method exposes magnetic storage media to a powerful magnetic field, randomizing all stored data and rendering the drive inoperable?",
+    "options": [
+      "Low-level format",
+      "Overwriting with random data",
+      "Degaussing",
+      "File system format"
+    ],
+    "answer": 2,
+    "explanation": "Degaussing uses a strong magnetic field to randomize the magnetic domains on a drive or tape, destroying all data. Because it damages servo tracks and firmware, the drive is non-functional afterward and cannot be reused.",
+    "objective": "2.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "According to NIST SP 800-88, which sanitization category describes making data unrecoverable by any known technique, typically through physical destruction?",
+    "options": [
+      "Clearing",
+      "Purging",
+      "Sanitization",
+      "Destroying"
+    ],
+    "answer": 3,
+    "explanation": "NIST 800-88 defines Clear (overwriting for lower-sensitivity reuse), Purge (degaussing or cryptographic erase for sensitive data), and Destroy (physical destruction — shredding, incineration, disintegration — for the highest assurance of unrecoverability).",
+    "objective": "2.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician needs to dispose of an SSD that contained sensitive data. Why is a standard multi-pass overwrite LESS reliable for SSDs than for spinning hard drives?",
+    "options": [
+      "SSDs use wear-leveling that may leave data copies in cells not addressed by a software overwrite",
+      "SSDs do not support the ATA Secure Erase command",
+      "SSDs store data optically, making magnetic overwriting incompatible",
+      "SSDs encrypt data by default, so overwriting is redundant"
+    ],
+    "answer": 0,
+    "explanation": "SSD wear-leveling distributes writes across flash cells, so a logical overwrite may not reach all physical cells that previously held data. The manufacturer's Secure Erase command or physical destruction is recommended for reliable SSD sanitization.",
+    "objective": "2.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the FIRST security step when setting up a new SOHO router?",
+    "options": [
+      "Enable guest network",
+      "Change the default admin username and password",
+      "Configure port forwarding",
+      "Enable QoS"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What SOHO router setting should be disabled to reduce the attack surface?",
+    "options": [
+      "DHCP",
+      "DNS forwarding",
+      "WPS (Wi-Fi Protected Setup)",
+      "NAT"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of a DMZ (Demilitarized Zone) in a network?",
+    "options": [
+      "Block all internet traffic",
+      "Manage wireless channels",
+      "Provide faster internet speeds",
+      "Place publicly accessible servers in a network segment isolated from the internal LAN"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A home router default SSID is \"Linksys_1234.\" Why should this be changed?",
+    "options": [
+      "Default SSIDs reveal the router manufacturer, helping attackers choose known exploits",
+      "Default SSIDs are too short",
+      "Default SSIDs cannot support WPA3",
+      "Default SSIDs broadcast on wrong frequency"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What firewall feature blocks access to specific websites or categories of websites?",
+    "options": [
+      "NAT",
+      "Content filtering or URL filtering",
+      "Port forwarding",
+      "QoS"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What type of attack sends more traffic to a target than it can handle, making it unavailable?",
+    "options": [
+      "Man-in-the-middle",
+      "Phishing",
+      "DDoS (Distributed Denial of Service)",
+      "Ransomware"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A small business owner sets up a new wireless router and wants the strongest available encryption. The router supports WEP, WPA, WPA2, and WPA3. Which should the technician select?",
+    "options": [
+      "WEP, because it is the most universally compatible standard",
+      "WPA with TKIP, because TKIP is more secure than AES",
+      "WPA2 with TKIP, because TKIP replaced the weaker AES",
+      "WPA3, because it provides the strongest current encryption standard"
+    ],
+    "answer": 3,
+    "explanation": "WPA3 is the current Wi-Fi security standard offering stronger encryption (SAE handshake), protection against offline dictionary attacks, and forward secrecy. WEP is broken; WPA with TKIP has known vulnerabilities; WPA2 with AES is acceptable but WPA3 is preferred when supported.",
+    "objective": "2.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A SOHO router arrives with the SSID set to the ISP's brand name and the admin password set to \"admin.\" Which TWO changes are MOST critical for basic security?",
+    "options": [
+      "Change the default SSID and change the default administrator password",
+      "Enable WPS and assign static IPs to all wireless clients",
+      "Enable TKIP encryption and disable the DHCP server",
+      "Set the wireless channel to auto and enable remote management"
+    ],
+    "answer": 0,
+    "explanation": "Default SSIDs reveal the router model (aiding attackers in finding known vulnerabilities) and default admin credentials are publicly known. Changing both is the highest-priority first step. WPS should be disabled, not enabled; remote management should also be disabled.",
+    "objective": "2.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician configures a SOHO router and wants a separate Wi-Fi network for guests that prevents them from accessing internal file shares and printers. Which feature accomplishes this?",
+    "options": [
+      "MAC address filtering on the primary SSID",
+      "Guest network with client isolation enabled",
+      "Disabling SSID broadcast on the primary network",
+      "Increasing wireless transmit power for guest coverage"
+    ],
+    "answer": 1,
+    "explanation": "A guest network with client isolation assigns guest devices to a separate network segment and blocks traffic between guest clients and the main LAN. MAC filtering and hidden SSIDs do not create network isolation.",
+    "objective": "2.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician recommends disabling Wi-Fi Protected Setup (WPS) on a SOHO router. What is the PRIMARY security reason?",
+    "options": [
+      "WPS prevents dual-band operation on 2.4 GHz and 5 GHz simultaneously",
+      "WPS is incompatible with WPA3 and causes connection drops",
+      "WPS uses a PIN vulnerable to brute-force attacks due to its split-validation design",
+      "WPS broadcasts the network password in plaintext to nearby devices"
+    ],
+    "answer": 2,
+    "explanation": "The WPS PIN is validated in two halves, reducing the effective keyspace to ~11,000 combinations. Tools like Reaver can brute-force the PIN and derive the WPA passphrase. Disabling WPS eliminates this attack vector.",
+    "objective": "2.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What browser security feature warns users before visiting sites with invalid or expired SSL certificates?",
+    "options": [
+      "Pop-up blocker",
+      "Ad blocker",
+      "Private browsing mode",
+      "SSL/TLS certificate validation and HTTPS warnings"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What browser setting prevents websites from opening unwanted new windows or tabs?",
+    "options": [
+      "Pop-up blocker",
+      "JavaScript disabling",
+      "Cookie settings",
+      "Incognito mode"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What does clearing browser cache and cookies accomplish?",
+    "options": [
+      "Deletes all saved passwords permanently",
+      "Removes stored web content and session data, which can fix page loading issues and improve privacy",
+      "Blocks all future cookies",
+      "Uninstalls browser extensions"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of HTTPS (HTTP Secure)?",
+    "options": [
+      "Makes websites load faster",
+      "Verifies the website content is appropriate",
+      "Encrypts communication between the browser and the web server using TLS",
+      "Blocks malicious downloads automatically"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What browser security feature prevents websites from being framed in other sites (clickjacking protection)?",
+    "options": [
+      "Content Security Policy (CSP)",
+      "X-Frame-Options header",
+      "HTTPS only",
+      "Both A and B can provide clickjacking protection"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user notices websites are tracking browsing habits even after clearing browser history. Which files store session and tracking data in the browser, and what is the correct remediation?",
+    "options": [
+      "Cookies; clear cookies and site data in the browser privacy settings",
+      "Cache files; clear the DNS resolver cache using ipconfig /flushdns",
+      "Temporary internet files; disable JavaScript in the browser",
+      "Prefetch files; disable hardware acceleration"
+    ],
+    "answer": 0,
+    "explanation": "Cookies are small text files storing session state and tracking identifiers. Clearing cookies and site data removes tracking information. Browser history and cache are separate; clearing history alone does not remove cookies.",
+    "objective": "2.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user visits a website and the browser shows \"Your connection is not private\" with error NET::ERR_CERT_AUTHORITY_INVALID. What does this indicate, and what should the user do?",
+    "options": [
+      "The site uses HTTP; the user should type \"https://\" manually",
+      "The site's SSL/TLS certificate is not trusted by the browser; the user should avoid proceeding unless they can verify the site's legitimacy",
+      "The user's connection is too slow to load the certificate; refresh the page",
+      "The browser's CRL is outdated; clear cache and retry"
+    ],
+    "answer": 1,
+    "explanation": "This error means the browser cannot verify the certificate's chain of trust — the certificate may be self-signed, expired, or issued by an untrusted CA. Users should not proceed, as the connection may be intercepted.",
+    "objective": "2.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A company wants to prevent employees from using browsers to visit malicious websites and block inappropriate content categories during work hours. Which solution is MOST appropriate?",
+    "options": [
+      "Private browsing mode",
+      "Pop-up blocker",
+      "Content filtering / DNS filtering",
+      "Browser extension auto-update"
+    ],
+    "answer": 2,
+    "explanation": "Content filtering (via browser policy, proxy, or DNS filtering) blocks access to URLs or domains based on policy rules. DNS filtering prevents resolution of malicious or policy-violating domains before a connection is established.",
+    "objective": "2.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user installs a free browser extension claiming to show coupon codes. Shortly after, new toolbars appear, the search engine changes, and ads appear on previously clean pages. What is the MOST likely explanation?",
+    "options": [
+      "The browser needs updating to support the extension",
+      "Windows Defender is blocking legitimate browser functionality",
+      "The DNS settings were changed by the ISP to show regional ads",
+      "The extension is adware or a potentially unwanted program (PUP) that modified browser settings and injects ads"
+    ],
+    "answer": 3,
+    "explanation": "Browser extensions with broad permissions can modify search engines, inject scripts, and redirect traffic. Free extensions with vague permissions are a common adware delivery vehicle. The extension should be removed and browser settings reset to defaults.",
+    "objective": "2.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which statement MOST accurately describes what private/incognito browsing mode does and does NOT do?",
+    "options": [
+      "Incognito mode prevents the browser from saving local history, cookies, and form data, but does not hide activity from the network, ISP, or websites visited",
+      "Incognito mode encrypts all web traffic, preventing ISP monitoring",
+      "Incognito mode blocks all cookies and trackers permanently, even after the session ends",
+      "Incognito mode routes traffic through a VPN automatically, masking the user's IP address"
+    ],
+    "answer": 0,
+    "explanation": "Private/incognito mode creates a temporary session discarded when the window closes — no local history, cookies, or form data are saved on the device. However, the user's IP address, DNS queries, and traffic remain visible to the network administrator, ISP, and websites visited.",
+    "objective": "2.11",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A Windows PC shows a blue screen with a stop code and reboots immediately. What is the FIRST step?",
+    "options": [
+      "Reinstall Windows",
+      "Note the stop code and research it — check for recently installed drivers or hardware changes",
+      "Replace the RAM",
+      "Replace the hard drive"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user reports their PC is extremely slow. After checking Task Manager, CPU usage is at 100% from an unknown process. What should the technician do?",
+    "options": [
+      "Add more RAM",
+      "Reinstall Windows",
+      "Identify the process, check if it is malware or a runaway service, and terminate or address it",
+      "Increase the page file size"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A Windows PC gets stuck in a boot loop after a failed update. What should be tried FIRST?",
+    "options": [
+      "Reinstall Windows immediately",
+      "Reflash the BIOS",
+      "Replace the hard drive",
+      "Boot into Windows Recovery Environment (WinRE) and uninstall the update or use Startup Repair"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows recovery option resets Windows to factory defaults while keeping personal files?",
+    "options": [
+      "Reset this PC — Keep my files",
+      "Startup Repair",
+      "Safe Mode",
+      "System Restore"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user cannot log in because they forgot their local password. What is a recovery option for a Windows 10/11 local account?",
+    "options": [
+      "Use Microsoft account recovery",
+      "Use another administrator account on the machine to reset the password",
+      "Reinstall Windows — no other option",
+      "Contact Microsoft support"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A Windows PC frequently displays \"Low disk space\" warnings. What is the BEST solution?",
+    "options": [
+      "Add more RAM",
+      "Increase page file size",
+      "Run Disk Cleanup to remove temp files, or expand/replace the storage drive",
+      "Defragment the drive"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows command rebuilds the Boot Configuration Data (BCD) store?",
+    "options": [
+      "chkdsk /r",
+      "diskpart clean",
+      "sfc /scannow",
+      "bootrec /rebuildbcd"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user installs a new video driver and the screen goes black on next boot. How can they recover?",
+    "options": [
+      "Boot into Safe Mode and uninstall the problematic driver, or use System Restore",
+      "Only option is reinstalling Windows",
+      "Replace the monitor",
+      "Replace the GPU"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user reports their browser homepage changed without their knowledge and shows ads constantly. What type of infection is likely?",
+    "options": [
+      "Ransomware",
+      "Browser hijacker or adware",
+      "Rootkit",
+      "Keylogger"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user cannot access their files and sees a message demanding cryptocurrency payment to unlock them. What type of malware is this?",
+    "options": [
+      "Spyware",
+      "Adware",
+      "Ransomware",
+      "Worm"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician notices a PC is sending massive amounts of outbound traffic at night when no one is using it. What is MOST likely?",
+    "options": [
+      "Windows Update running",
+      "Defragmentation running",
+      "Backup software running",
+      "The PC is part of a botnet and being used for malicious activity"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user reports receiving an email claiming to be from their bank asking them to verify account information via a link. What type of attack is this?",
+    "options": [
+      "Phishing",
+      "Vishing",
+      "Smishing",
+      "Whaling"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What security tool monitors the network for unusual patterns that may indicate an intrusion?",
+    "options": [
+      "Antivirus",
+      "IDS/IPS",
+      "Firewall",
+      "VPN"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A Windows PC has CPU usage consistently at 90-100% even when idle. After ruling out legitimate processes, what should be suspected?",
+    "options": [
+      "Hard drive failure",
+      "RAM failure",
+      "Cryptomining malware running in the background",
+      "Overclocking issue"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the FIRST step if you suspect a system is infected with malware?",
+    "options": [
+      "Delete all user files",
+      "Run a scan while connected to the internet",
+      "Reinstall Windows immediately",
+      "Isolate the system from the network to prevent spreading"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user reports that every time they open their browser, the homepage is set to an unfamiliar search engine and search results redirect to advertisement sites. Which is the most likely cause?",
+    "options": [
+      "A browser hijacker or adware has been installed",
+      "The browser cache needs to be cleared",
+      "The DNS server address is incorrect",
+      "The user's ISP is intercepting search traffic"
+    ],
+    "answer": 0,
+    "explanation": "Browser hijackers modify homepage settings, default search engines, and redirect traffic to attacker-controlled sites. Cache clearing will not fix the underlying infection; the malware must be removed and browser settings reset.",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician discovers that files have been renamed with a .locked extension and a text file demands payment for a decryption key. Which type of malware is responsible?",
+    "options": [
+      "Spyware",
+      "Ransomware",
+      "Rootkit",
+      "Adware"
+    ],
+    "answer": 1,
+    "explanation": "Ransomware encrypts or renames files to render them inaccessible, then demands payment for the decryption key. The correct response is isolation, incident reporting, and restoration from clean backups — not payment.",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user is locked out of their Windows account after several failed login attempts, even though they are certain they used the correct password. IT confirms no administrator changed the account. Which condition most likely explains this?",
+    "options": [
+      "The account's password has expired",
+      "Windows Update changed the password policy automatically",
+      "An attacker used a brute-force or credential-stuffing attack that triggered the account lockout policy",
+      "The user's keyboard is entering incorrect characters"
+    ],
+    "answer": 2,
+    "explanation": "Account lockout policies trigger after a defined number of failed authentication attempts — the intended defense against brute-force attacks. Being locked out without personally entering a wrong password suggests an attacker was attempting to authenticate.",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the CompTIA recommended FIRST step in the malware removal process?",
+    "options": [
+      "Update antivirus",
+      "Wipe and reinstall OS",
+      "Isolate infected systems",
+      "Identify and research malware symptoms"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What should be done BEFORE attempting malware removal to preserve the system state?",
+    "options": [
+      "Both B and C — disable System Restore and back up data if possible",
+      "Disable System Restore to prevent malware from hiding in restore points",
+      "Back up user data (if possible without spreading malware)",
+      "Delete all browser history"
+    ],
+    "answer": 0,
+    "explanation": "The CompTIA malware removal process lists these as two distinct steps: Step 2 is \"Back up uninfected data\" and Step 3 is \"Disable System Restore.\" Disabling System Restore prevents malware from using restore points to reinfect after removal. Both must be completed before running removal tools.",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "After removing malware, what is an important step to prevent reinfection?",
+    "options": [
+      "Reinstall all applications",
+      "Identify and remediate the infection vector — patch vulnerabilities, change passwords, update software",
+      "Delete all user accounts",
+      "Disable Windows Update"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of restoring from a known-good backup after malware removal?",
+    "options": [
+      "Saves time",
+      "Required by company policy",
+      "Ensures the system is completely clean if complete removal is uncertain",
+      "Improves system performance"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the final step after completing malware removal?",
+    "options": [
+      "Change the computer name",
+      "Replace the hard drive",
+      "Reinstall Windows",
+      "Educate the user on how the infection occurred and document everything"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What does \"quarantine\" mean in antivirus software?",
+    "options": [
+      "Isolate the suspected malicious file so it cannot execute while allowing later review or removal",
+      "Delete the infected file permanently",
+      "Back up the infected file",
+      "Repair the infected file automatically"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A malware scan completes but the malware symptoms return after reboot. What does this suggest?",
+    "options": [
+      "The antivirus is broken",
+      "Malware has a persistence mechanism (startup entry, rootkit component) that was not fully removed",
+      "More RAM is needed",
+      "Windows Update is interfering"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A mobile app keeps crashing immediately after opening. The FIRST step is:",
+    "options": [
+      "Factory reset the device",
+      "Uninstall the OS",
+      "Force stop the app, clear its cache, and relaunch",
+      "Call the app developer"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A smartphone OS update fails repeatedly. What should be checked?",
+    "options": [
+      "Replace the phone",
+      "Contact carrier",
+      "Replace the battery",
+      "Available storage space — insufficient storage prevents OS updates from downloading or applying"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What does enabling developer options on Android allow?",
+    "options": [
+      "Access to advanced features like USB debugging, mock locations, and animation speed controls",
+      "Removes system app restrictions permanently",
+      "Unlocks the bootloader automatically",
+      "Disables all security features"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user reports that after updating an app, it no longer functions correctly. What is the BEST first fix?",
+    "options": [
+      "Factory reset",
+      "Uninstall the update or clear the app data and cache, or reinstall the previous version",
+      "Replace the phone",
+      "Disable Wi-Fi"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What happens when mobile device storage is nearly full?",
+    "options": [
+      "Battery drains faster",
+      "Screen brightness decreases",
+      "Performance degrades, apps may crash, and OS updates may fail",
+      "Cellular signal weakens"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user cannot receive push notifications from an app. After confirming the app has notification permission, what else should be checked?",
+    "options": [
+      "Reinstall the OS",
+      "Disable airplane mode (if already off)",
+      "Replace the phone",
+      "Battery optimization settings — OS may be restricting background processes for battery saving"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What does \"airplane mode\" disable on a mobile device?",
+    "options": [
+      "All transmitting wireless radios — cellular, Wi-Fi, and Bluetooth",
+      "Screen display only",
+      "Only cellular voice calls",
+      "Only Wi-Fi"
+    ],
+    "answer": 0,
+    "explanation": "Airplane mode disables all transmitting wireless radios: cellular, Wi-Fi, and Bluetooth. GPS is NOT disabled — GPS is receive-only (it only listens to satellite signals and transmits nothing), so it does not interfere with aircraft systems and is not affected by airplane mode. On most devices, Wi-Fi",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user reports that their Android smartphone apps frequently crash shortly after opening. The device has only 200 MB of internal storage remaining. Which action is most likely to resolve the issue?",
+    "options": [
+      "Perform a factory reset immediately",
+      "Free up storage space by removing unused apps and cached data",
+      "Disable automatic app updates in the Play Store",
+      "Replace the device battery"
+    ],
+    "answer": 1,
+    "explanation": "Insufficient storage causes apps to crash because they cannot write temporary files or cache data. Clearing cached data and uninstalling unused apps frees space and typically resolves the crashing behavior without data loss.",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user's iPhone can connect to cellular data but cannot connect to any Wi-Fi networks, even ones it previously used. Other devices connect to those same networks without issue. Which troubleshooting step should be tried first?",
+    "options": [
+      "Replace the iPhone's SIM card",
+      "Update the Wi-Fi router firmware",
+      "Reset Network Settings on the iPhone",
+      "Disable Bluetooth on the iPhone"
+    ],
+    "answer": 2,
+    "explanation": "Resetting Network Settings clears saved Wi-Fi passwords, VPN configurations, and cellular settings, resolving many Wi-Fi connectivity problems caused by corrupted network configuration. This is the correct first step when only one device is affected.",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user's Android phone battery drains completely within three hours of a full charge with minimal use. The phone is two years old and battery life recently degraded sharply. Which is the most likely cause?",
+    "options": [
+      "Too many apps are installed",
+      "Screen resolution is set too high",
+      "Background app refresh is enabled",
+      "The battery has chemically degraded and needs replacement"
+    ],
+    "answer": 3,
+    "explanation": "Lithium-ion batteries degrade over charge cycles and typically show significant capacity loss after 18–24 months of heavy use. A sudden dramatic reduction in battery life in an older device most often indicates a worn battery requiring replacement.",
+    "objective": "3.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user reports that their phone battery drains very quickly and the device is warm even when idle. What could this indicate?",
+    "options": [
+      "Malware or a rogue app running in the background consuming resources",
+      "Normal behavior",
+      "Too many photos stored",
+      "Screen protector blocking heat dissipation"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A mobile device is missing from a user desk. What MDM action should be taken immediately?",
+    "options": [
+      "File an insurance claim",
+      "Remotely lock and potentially wipe the device using MDM software",
+      "Wait 24 hours before acting",
+      "Order a replacement first"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "3.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What security risk does an unpatched mobile OS pose?",
+    "options": [
+      "Slower app loading times only",
+      "Reduced storage capacity",
+      "Known vulnerabilities remain exploitable by attackers",
+      "Screen brightness issues"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "3.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What should a user do if they receive an unsolicited MFA (multi-factor authentication) request they did not initiate?",
+    "options": [
+      "Approve it since it might be a glitch",
+      "Call the app support line listed in the MFA message",
+      "Ignore it",
+      "Deny it and immediately change the account password — credentials may be compromised"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "3.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user accidentally installs an app that now shows fake virus warnings and demands they call a number. What type of attack is this?",
+    "options": [
+      "Isolate each app so it cannot access data or resources of other apps without permission",
+      "Speed up app launch times",
+      "Prevent apps from using the internet",
+      "Compress app storage"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "3.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A phone starts sending text messages to contacts without user knowledge. What does this indicate?",
+    "options": [
+      "The phone's OS performed an automatic update that installed system apps",
+      "The phone has been rooted and malicious apps were sideloaded or installed via exploit",
+      "The Google Play Store pushed mandatory enterprise apps",
+      "The SIM card was replaced with a different carrier's card"
+    ],
+    "answer": 1,
+    "explanation": "Rooting removes the security sandbox that prevents unauthorized software installation. Attackers who gain root access or users who sideload APKs from untrusted sources can install malware requesting sensitive permissions without the user's knowledge.",
+    "objective": "3.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "An employee's corporate email account was accessed from a foreign country while they were at home. IT confirms no authorized remote session was active. Which is the most appropriate immediate response?",
+    "options": [
+      "Wipe the employee's mobile device remotely",
+      "Block all international traffic at the firewall",
+      "Revoke and reset the employee's credentials and enable multi-factor authentication",
+      "Reinstall the mobile email application"
+    ],
+    "answer": 2,
+    "explanation": "Unauthorized account access from an unknown location strongly indicates credential theft. Immediately revoking and resetting credentials stops the intrusion, and enabling MFA prevents reuse of the stolen password. Remote wipe may be warranted later but does not address the compromised credentials.",
+    "objective": "3.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user's mobile data usage is three times higher than normal this month despite no change in habits. The phone has no new recognizable apps. Which security concern does this most likely indicate?",
+    "options": [
+      "The carrier is double-billing for data",
+      "Automatic OS updates consumed the extra data",
+      "Syncing contacts to the cloud caused the spike",
+      "Malware is transmitting data in the background"
+    ],
+    "answer": 3,
+    "explanation": "Unexpected sustained spikes in mobile data with no obvious user-initiated cause are a classic indicator of malware silently exfiltrating data, receiving commands, or participating in a botnet. The device should be scanned, suspicious apps removed, and credentials changed.",
+    "objective": "3.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "[BONUS — Beyond A+ Scope] What document describes the steps to restore IT services after an outage or disaster?",
+    "options": [
+      "Disaster Recovery Plan (DRP) or Business Continuity Plan (BCP)",
+      "AUP (Acceptable Use Policy)",
+      "Change management form",
+      "Network diagram"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What type of documentation describes the make, model, configuration, and location of IT assets?",
+    "options": [
+      "Network topology diagram",
+      "Asset inventory or asset management documentation",
+      "Standard operating procedure",
+      "Incident report"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What document provides step-by-step instructions for performing a specific IT task?",
+    "options": [
+      "Network diagram",
+      "Asset inventory",
+      "Standard Operating Procedure (SOP)",
+      "AUP"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What documentation should be updated every time a change is made to the network or IT infrastructure?",
+    "options": [
+      "User manual",
+      "Vendor contracts",
+      "HR policy",
+      "Network documentation and change log"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of a knowledge base in IT support?",
+    "options": [
+      "Document known issues, solutions, and procedures for efficient problem resolution",
+      "Store sensitive user data",
+      "Track hardware inventory only",
+      "Manage vendor invoices"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of a change management process?",
+    "options": [
+      "Speed up all IT changes",
+      "Ensure changes are planned, documented, tested, approved, and reversible to minimize risk",
+      "Block all changes to production systems",
+      "Manage software licenses"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Who typically approves changes in a formal change management process?",
+    "options": [
+      "The technician making the change",
+      "The end user",
+      "A change advisory board (CAB) or management",
+      "The software vendor"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is a \"change freeze\" in IT operations?",
+    "options": [
+      "Emergency change procedure",
+      "Rolling back all recent changes",
+      "Freezing hardware configurations permanently",
+      "A period where no changes are allowed, typically around critical business periods"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What document must be completed before a change is implemented in a formal change management process?",
+    "options": [
+      "Change request (CR) including scope, risk, and rollback plan",
+      "Post-implementation review",
+      "User acceptance sign-off only",
+      "Vendor approval letter"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Before upgrading firmware on a core network switch, a technician documents the current firmware version and tests the upgrade in a lab environment. Which change management practice does this represent?",
+    "options": [
+      "End-user acceptance testing",
+      "Sandbox testing and rollback planning",
+      "Change advisory board approval",
+      "Scope creep prevention"
+    ],
+    "answer": 1,
+    "explanation": "Testing changes in a sandbox before applying them to production prevents outages from untested updates. Documenting the current state supports the rollback plan, which allows reverting if the change causes problems.",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A change request to upgrade a payroll server is evaluated by a cross-functional group including security, operations, and business stakeholders who collectively approve or deny it. What is this group called?",
+    "options": [
+      "Help desk tier 2",
+      "Project management office (PMO)",
+      "Change advisory board (CAB)",
+      "Incident response team"
+    ],
+    "answer": 2,
+    "explanation": "The Change Advisory Board (CAB) evaluates, approves, or rejects proposed IT changes, ensuring they are assessed for risk, business impact, and scheduling conflicts before implementation.",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "During a planned server migration, the technician migrates additional servers not included in the original approved change request without submitting an updated request. Which change management problem does this represent?",
+    "options": [
+      "Rollback failure",
+      "End-user rejection",
+      "Change freeze violation",
+      "Scope creep"
+    ],
+    "answer": 3,
+    "explanation": "Scope creep occurs when a change expands beyond what was originally approved without going through the formal change management process, bypassing risk assessment and approval controls.",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "After a software update is applied to production workstations, several critical business applications fail. The technician consults the change documentation and reverses the update successfully. Which change management artifact made the rollback possible?",
+    "options": [
+      "Rollback plan documented in the change request",
+      "Asset inventory",
+      "End-user acceptance test results",
+      "The acceptable use policy"
+    ],
+    "answer": 0,
+    "explanation": "A well-written change request includes a rollback plan specifying how to revert the change if it causes problems. Without this documentation, reverting a failed change is slower and riskier.",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician applies a configuration change to a production firewall during approved maintenance hours. Which step should occur immediately after the change is implemented?",
+    "options": [
+      "Submit the change request for CAB approval",
+      "Perform verification testing and update the change log",
+      "Archive the old firewall and order a replacement",
+      "Notify the ISP of the configuration change"
+    ],
+    "answer": 1,
+    "explanation": "Post-implementation steps include verifying the change worked as expected, confirming no unintended side effects occurred, and updating the change log to maintain an accurate record of the production environment's configuration.",
+    "objective": "4.2",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the 3-2-1 backup rule?",
+    "options": [
+      "3 backups on 2 drives in 1 location",
+      "Back up 3 times per day, 2 days per week, 1 time per month",
+      "3 copies of data, on 2 different media types, with 1 copy stored off-site",
+      "3 full, 2 incremental, 1 differential backup"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which backup type only copies data that has changed since the last FULL backup?",
+    "options": [
+      "Incremental",
+      "Mirror",
+      "Synthetic full",
+      "Differential"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which backup type only copies data changed since the last backup of ANY type?",
+    "options": [
+      "Incremental",
+      "Full",
+      "Differential",
+      "Mirror"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows built-in tool creates a complete system image including OS, settings, and files?",
+    "options": [
+      "Windows Backup and Restore (Windows 7)",
+      "Both A and B are valid",
+      "System Image Backup in Windows 10/11",
+      "Neither — Windows has no built-in image backup"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows feature creates restore points automatically before major changes?",
+    "options": [
+      "File History",
+      "Windows Backup",
+      "System Protection (System Restore)",
+      "OneDrive sync"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user accidentally deleted an important file. What should be checked FIRST?",
+    "options": [
+      "Restore from tape backup",
+      "Restore from last night backup",
+      "Run file recovery software",
+      "Recycle Bin — the file may still be there"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the FIRST step before working inside any computer or electronic device?",
+    "options": [
+      "Disconnect from power and discharge static",
+      "Remove the hard drive",
+      "Update the BIOS",
+      "Back up all data"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What does ESD stand for in the context of electronics repair?",
+    "options": [
+      "Paper fires",
+      "Electrical equipment fires — Class C is for energized electrical fires",
+      "Chemical fires",
+      "Grease fires"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What safety concern is associated with CRT monitors that are no longer in use?",
+    "options": [
+      "High power consumption",
+      "Lead solder only",
+      "High-voltage capacitors that can retain dangerous charge even when unplugged",
+      "Magnetic field emissions"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of a lockout/tagout (LOTO) procedure?",
+    "options": [
+      "Password management for shared accounts",
+      "Lock server rack doors",
+      "Tag network cables for identification",
+      "Ensure equipment cannot be energized while maintenance is being performed"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What type of fire suppression system uses an inert gas that does not damage electronic equipment?",
+    "options": [
+      "Clean agent suppression (e.g., FM-200, Halon replacement)",
+      "Sprinkler system",
+      "Foam suppression",
+      "Water mist system"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician is about to service a rack-mounted UPS. What precaution is most important?",
+    "options": [
+      "Turn off the lights",
+      "Treat it as energized — UPS units contain large batteries that can deliver dangerous current",
+      "Remove all servers first",
+      "Wear a dust mask"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician is about to replace RAM inside a desktop computer. Which precaution is most important to prevent electrostatic discharge (ESD) damage?",
+    "options": [
+      "Work in a room with high humidity to dissipate static",
+      "Use rubber-soled shoes and avoid touching metal surfaces",
+      "Wear an anti-static wrist strap connected to the chassis ground",
+      "Blow compressed air on the RAM slots before installing"
+    ],
+    "answer": 2,
+    "explanation": "An anti-static wrist strap continuously drains static charge from the technician to ground, preventing ESD damage to sensitive components. This is the primary and most reliable ESD precaution when handling computer hardware.",
+    "objective": "4.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician needs to safely dispose of a cleaning chemical used during server maintenance. Which document provides safe handling, storage, disposal, and hazard information?",
+    "options": [
+      "The equipment service manual",
+      "The acceptable use policy",
+      "The network diagram",
+      "Safety Data Sheet (SDS)"
+    ],
+    "answer": 3,
+    "explanation": "Safety Data Sheets (SDS), formerly called MSDS, are standardized documents required by OSHA that provide hazard information, exposure limits, first aid measures, and proper disposal procedures for chemicals.",
+    "objective": "4.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A fire breaks out near a rack of live server equipment. Which type of fire suppression is appropriate?",
+    "options": [
+      "CO2 or clean agent (halon substitute) suppression system",
+      "Water-based sprinkler system",
+      "Foam-based suppression system",
+      "Dry powder extinguisher applied directly to the equipment"
+    ],
+    "answer": 0,
+    "explanation": "Water conducts electricity and causes additional damage or electrocution risk on live equipment. CO2 and clean agent systems suppress fires without residue and without conducting electricity, making them correct for data center environments.",
+    "objective": "4.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the recommended temperature range for most data centers and server rooms?",
+    "options": [
+      "15-18 degrees C (60-65 degrees F)",
+      "18-27 degrees C (64-81 degrees F) — ASHRAE guidelines",
+      "30-35 degrees C (86-95 degrees F)",
+      "10-15 degrees C (50-59 degrees F)"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What device is specifically designed to protect equipment from power surges and voltage spikes, but does NOT provide battery backup?",
+    "options": [
+      "UPS (Uninterruptible Power Supply)",
+      "Line conditioner",
+      "Surge protector",
+      "PDU (Power Distribution Unit)"
+    ],
+    "answer": 2,
+    "explanation": "A surge protector is specifically designed to absorb excess voltage from spikes and surges. A UPS also provides surge protection but its primary function is battery backup for outages. A line conditioner filters power quality issues (noise, sags). When the exam asks specifically about surge/spike pr",
+    "objective": "4.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What does a UPS (Uninterruptible Power Supply) provide?",
+    "options": [
+      "Surge protection only",
+      "Network protection",
+      "Cooling for servers",
+      "Battery backup power to allow proper shutdown during outages plus power conditioning"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What causes a \"brownout\" in electrical power?",
+    "options": [
+      "Temporary reduction in voltage below normal levels",
+      "Complete power failure",
+      "Brief power spike above normal voltage",
+      "Power noise on the line"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of hot aisle/cold aisle containment in a data center?",
+    "options": [
+      "Fire suppression organization",
+      "Improve cooling efficiency by directing cold air intake and hot air exhaust separately",
+      "Organize cable management",
+      "Reduce network latency"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A company wants to reduce energy consumption from desktop workstations left running overnight. Which power management configuration is most effective?",
+    "options": [
+      "Enable screen savers with high-resolution graphics",
+      "Increase RAM so workstations run more efficiently",
+      "Set workstations to hibernate or power off after a defined idle period",
+      "Upgrade all hard drives to SSDs"
+    ],
+    "answer": 2,
+    "explanation": "Configuring workstations to hibernate or power off after idle periods dramatically reduces power consumption during unattended hours. Screen savers do not reduce power draw and may increase GPU load.",
+    "objective": "4.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "An organization is replacing 50 older laptops and wants to dispose of them responsibly. Which is the correct method?",
+    "options": [
+      "Place them in general office waste recycling bins",
+      "Store them indefinitely in a storage room",
+      "Disassemble them and dispose of components in separate trash bags",
+      "Send them to a certified e-waste recycler or follow local electronic disposal regulations"
+    ],
+    "answer": 3,
+    "explanation": "Electronic devices contain hazardous materials including lead, mercury, and cadmium that cannot go in standard waste streams. Certified e-waste recyclers handle these materials in compliance with environmental regulations such as RCRA.",
+    "objective": "4.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A server room experiences intermittent hardware failures. Temperature monitoring shows 85°F (29°C) during peak hours. What environmental control should be implemented?",
+    "options": [
+      "Increase airflow and cooling capacity through the HVAC system",
+      "Install additional UPS units to stabilize power",
+      "Replace all spinning drives with SSDs",
+      "Add more RAM to reduce processing load"
+    ],
+    "answer": 0,
+    "explanation": "Servers are designed to operate at 64–80°F (18–27°C). Sustained temperatures above this range cause thermal throttling, component degradation, and hardware failures. Improving HVAC capacity directly addresses the root cause.",
+    "objective": "4.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A used printer toner cartridge needs to be disposed of. Which method is correct?",
+    "options": [
+      "Empty the toner into a trash can and recycle the shell",
+      "Return the cartridge through a manufacturer recycling program or certified toner recycler",
+      "Rinse the cartridge with water and place it in plastic recycling",
+      "Dispose of the cartridge in general office waste"
+    ],
+    "answer": 1,
+    "explanation": "Toner is a chemically complex powder that should not be released into general waste or the environment. Manufacturer take-back programs and certified recyclers handle toner cartridges safely.",
+    "objective": "4.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which program certifies that computer equipment meets specific energy efficiency standards set by the U.S. Environmental Protection Agency?",
+    "options": [
+      "RoHS",
+      "WEEE",
+      "ENERGY STAR",
+      "ISO 14001"
+    ],
+    "answer": 2,
+    "explanation": "ENERGY STAR is the EPA's voluntary certification program for computers, monitors, and other devices meeting defined energy efficiency benchmarks. RoHS restricts hazardous substances; WEEE governs e-waste in Europe; ISO 14001 is an environmental management standard.",
+    "objective": "4.5",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What type of software license allows a single user to install the software on one computer?",
+    "options": [
+      "Volume license",
+      "Open-source license",
+      "Site license",
+      "Per-seat (single-user) license"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What does EULA stand for?",
+    "options": [
+      "Open-source provides the source code; freeware is free to use but source code may not be available",
+      "Freeware provides source code; open-source does not",
+      "They are identical",
+      "Open-source is always free; freeware requires payment"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is PII (Personally Identifiable Information)?",
+    "options": [
+      "Any information about company products",
+      "Information that can identify a specific individual such as name, SSN, or address",
+      "Public company financial information",
+      "Server configuration data"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What regulation protects the privacy of EU citizens data and imposes requirements on organizations handling that data?",
+    "options": [
+      "HIPAA",
+      "PCI DSS",
+      "GDPR (General Data Protection Regulation)",
+      "SOX"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "During a PC cleanup, a technician discovers a folder containing what appears to be medical records for individuals not employed at the company. What should the technician do?",
+    "options": [
+      "Delete the files immediately to protect privacy",
+      "No action is required as it is likely a backup",
+      "Encrypt the folder as a precaution",
+      "Stop work and report the discovery through the incident response process to a supervisor"
+    ],
+    "answer": 3,
+    "explanation": "Medical records are Protected Health Information (PHI), a sensitive data category. Discovering sensitive data outside its authorized location is a potential breach that must be reported immediately rather than handled unilaterally.",
+    "objective": "4.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user asks a technician to install a single-license application on five workstations because the company purchased only one license. Which issue does this create?",
+    "options": [
+      "A software licensing violation constituting software piracy",
+      "A hardware compatibility problem",
+      "A network bandwidth issue",
+      "A data privacy concern under GDPR"
+    ],
+    "answer": 0,
+    "explanation": "Installing software on more machines than permitted by the license is piracy, violating the EULA and copyright law. Organizations face significant legal and financial penalties for unlicensed software use.",
+    "objective": "4.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A company receives software at no cost with permission to use, modify, and redistribute the source code under specific terms. Which license type applies?",
+    "options": [
+      "OEM license",
+      "Open source license",
+      "Volume license",
+      "Retail (boxed) license"
+    ],
+    "answer": 1,
+    "explanation": "Open source licenses (GPL, MIT, Apache) grant users the right to use, view, modify, and redistribute source code under specific conditions. OEM licenses are tied to hardware; volume licenses cover multiple installations; retail licenses are single-user commercial licenses.",
+    "objective": "4.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "An employee uses a company laptop and network storage to run a personal side business during work hours. Which policy does this most directly violate?",
+    "options": [
+      "Change management policy",
+      "Data retention policy",
+      "Acceptable use policy (AUP)",
+      "Backup policy"
+    ],
+    "answer": 2,
+    "explanation": "An AUP defines what company resources may be used for. Running a personal business on company equipment and storage is a typical AUP violation, using company resources for unauthorized personal gain.",
+    "objective": "4.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A company doing business with EU customers must comply with regulations governing personal data collection, storage, and the right to erasure. Which regulation primarily governs these requirements?",
+    "options": [
+      "HIPAA",
+      "SOX",
+      "PCI DSS",
+      "GDPR"
+    ],
+    "answer": 3,
+    "explanation": "The General Data Protection Regulation (GDPR) is the EU's comprehensive data privacy law granting EU residents rights over their personal data, including access, correction, and deletion. Organizations handling EU residents' data must comply regardless of where they are based.",
+    "objective": "4.6",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A customer is frustrated and speaking loudly. What is the BEST approach?",
+    "options": [
+      "Remain calm, listen actively, and empathize with their frustration",
+      "Match their energy and speak louder",
+      "End the conversation immediately",
+      "Escalate to a manager without speaking to the customer"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the appropriate response when you cannot resolve a customer issue yourself?",
+    "options": [
+      "Tell them to figure it out",
+      "Explain what has been tried and escalate to the appropriate person or department",
+      "Pretend the issue is resolved",
+      "Tell them to call the manufacturer"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A customer gives you negative feedback about your service. The BEST professional response is:",
+    "options": [
+      "Defend yourself and explain why the customer is wrong",
+      "Ignore the feedback",
+      "Listen, thank them for the feedback, and use it to improve",
+      "Ask them to submit the feedback in writing only"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What does it mean to set realistic expectations with a customer?",
+    "options": [
+      "Promise the fastest possible resolution to make them happy",
+      "Never commit to any timeframe",
+      "Always underpromise",
+      "Provide an honest assessment of what can be accomplished and by when"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the appropriate action if you discover personal photos or documents on a customer device while working on it?",
+    "options": [
+      "Disregard them and maintain the customer privacy — only access what is necessary for the repair",
+      "View them for context",
+      "Copy them for documentation",
+      "Delete them as they may contain malware"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician is resolving an issue for a user when their personal cell phone rings. What is the most professional response?",
+    "options": [
+      "Answer briefly and tell the caller you'll call back",
+      "Let the call go to voicemail and continue giving the user full attention",
+      "Ask the user to pause while you take the call",
+      "Check the caller ID and decide whether to answer"
+    ],
+    "answer": 1,
+    "explanation": "Letting calls go to voicemail while with a customer demonstrates respect and ensures the user feels heard. Interrupting a customer's explanation for a personal call is unprofessional and undermines trust.",
+    "objective": "4.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A customer is extremely frustrated and begins raising their voice while describing a recurring problem. Which is the most appropriate technician response?",
+    "options": [
+      "Match the customer's tone to demonstrate urgency",
+      "Inform the customer you will not help them until they calm down",
+      "Remain calm, acknowledge the frustration, and focus on resolving the issue",
+      "Transfer the customer to a supervisor immediately"
+    ],
+    "answer": 2,
+    "explanation": "Staying calm and showing empathy de-escalates tense situations. Acknowledging frustration validates the customer's experience without becoming defensive, which is the foundation of professional customer service.",
+    "objective": "4.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "After resolving a workstation issue, which action should the technician take before closing the ticket?",
+    "options": [
+      "Reimage the workstation as a precaution",
+      "Back up the workstation immediately",
+      "Submit a change request for the work performed",
+      "Follow up with the user to confirm the issue is resolved and they are satisfied"
+    ],
+    "answer": 3,
+    "explanation": "Following up confirms the fix worked from the user's perspective and demonstrates professional closure. It also provides an opportunity to catch any related issues the user may not have initially reported.",
+    "objective": "4.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician is explaining a two-day laptop repair timeline to a user who asks technical questions about the diagnostic process. Which communication approach is most appropriate?",
+    "options": [
+      "Use plain language and avoid excessive jargon so the user understands the situation",
+      "Avoid answering technical questions to save time",
+      "Use precise technical terminology to demonstrate expertise",
+      "Redirect all technical questions to the help desk manager"
+    ],
+    "answer": 0,
+    "explanation": "Avoiding jargon ensures the customer understands what is happening with their equipment and the timeline, building confidence and reducing anxiety. Technicians should adapt their communication style to the audience's technical level.",
+    "objective": "4.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user mentions during a support call that they are experiencing personal problems affecting their work. Which is the most appropriate response?",
+    "options": [
+      "Offer personal advice and spend time discussing their situation",
+      "Express brief, genuine sympathy and redirect the conversation to the technical issue",
+      "Ignore the comment and continue troubleshooting",
+      "Document the personal information in the support ticket"
+    ],
+    "answer": 1,
+    "explanation": "A brief empathetic acknowledgment is appropriate and human, but the technician should redirect to the technical issue to maintain professionalism and productivity. Personal discussions in support contexts and documenting personal matters in tickets are inappropriate.",
+    "objective": "4.7",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What file extension is used for Windows batch script files?",
+    "options": [
+      ".ps1",
+      ".sh",
+      ".bat or .cmd",
+      ".py"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which scripting language is commonly used for automating tasks across Windows, macOS, and Linux?",
+    "options": [
+      "Batch scripting",
+      "AppleScript",
+      "VBScript",
+      "Python"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of a script in IT operations?",
+    "options": [
+      "Automate repetitive tasks, reduce human error, and save time",
+      "Replace human IT staff",
+      "Only for programming applications",
+      "Replace documentation"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What does the following PowerShell command do: Get-Process?",
+    "options": [
+      "Python",
+      "Bash shell script",
+      "PowerShell",
+      "VBScript"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What protocol is used by Windows Remote Desktop Connection?",
+    "options": [
+      "VNC",
+      "SSH",
+      "RDP (Remote Desktop Protocol) on port 3389",
+      "Telnet"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What remote access technology provides a secure command-line connection to manage remote servers?",
+    "options": [
+      "RDP",
+      "VNC",
+      "Telnet",
+      "SSH"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the difference between RDP and VNC?",
+    "options": [
+      "RDP creates a new session; VNC mirrors the existing active display session",
+      "RDP is Linux-only; VNC is Windows-only",
+      "VNC is faster than RDP in all cases",
+      "They are identical in function"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What remote support tool allows a technician to view and control a user desktop with the user permission?",
+    "options": [
+      "VPN",
+      "Remote assistance tools (e.g., Quick Assist, TeamViewer, Remote Desktop with consent)",
+      "SSH",
+      "FTP"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of a jump server (or bastion host) in network security?",
+    "options": [
+      "Provide internet access to all users",
+      "Distribute IP addresses to remote users",
+      "Act as a secure intermediary for administrators to access systems in a protected network segment",
+      "Store backup data"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which remote desktop configuration must be enabled on the target Windows PC before RDP connections can be made?",
+    "options": [
+      "Windows Firewall exception only",
+      "Administrator password must be blank",
+      "VPN must be installed",
+      "Remote Desktop must be enabled in System > Remote Desktop settings, and the user must have permission"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "4.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What cloud-based remote access tool built into Windows 11 allows a user to share their screen with another person using a code?",
+    "options": [
+      "Quick Assist",
+      "Remote Desktop",
+      "VNC",
+      "TeamViewer"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows tool allows an administrator to manage a remote computer through a graphical snap-in console?",
+    "options": [
+      "Task Manager",
+      "MMC (Microsoft Management Console) with remote computer connection",
+      "Command Prompt only",
+      "Notepad"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What security best practice should be implemented when enabling RDP on a workstation or server?",
+    "options": [
+      "Use default port 3389 for easy access",
+      "Disable Windows Firewall to allow connections",
+      "Restrict access by IP address, use strong passwords, enable NLA, and change the default port",
+      "Use a blank administrator password for convenience"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "4.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician needs to provide unattended remote support to a branch office server after hours. Which protocol and default port number should be used for native Windows remote desktop access?",
+    "options": [
+      "VNC on port 5900",
+      "SSH on port 22",
+      "HTTPS on port 443",
+      "RDP on port 3389"
+    ],
+    "answer": 3,
+    "explanation": "Remote Desktop Protocol (RDP) is the native Windows remote access protocol listening on TCP port 3389 by default. It provides full graphical desktop access to Windows systems and is commonly used for unattended remote server administration.",
+    "objective": "4.9",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of a ticketing system in IT support?",
+    "options": [
+      "Document, track, prioritize, and manage support requests from creation to resolution",
+      "Track IT budget spending",
+      "Manage software licenses",
+      "Monitor network performance"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A network administrator creates a document showing the physical and logical layout of all switches, routers, firewalls, and servers and how they interconnect. Which type of documentation is this?",
+    "options": [
+      "Standard Operating Procedure (SOP)",
+      "Network diagram",
+      "Asset inventory",
+      "Knowledge base article"
+    ],
+    "answer": 1,
+    "explanation": "A network diagram is a visual representation of network topology showing devices and their interconnections. It is fundamental infrastructure documentation used for troubleshooting, planning, and audits.",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "After resolving a recurring printer issue, a technician writes step-by-step instructions documenting the exact diagnostic and resolution process so other technicians can reproduce the fix. This is best described as which document type?",
+    "options": [
+      "Change request",
+      "Acceptable use policy (AUP)",
+      "Knowledge base article",
+      "Incident report"
+    ],
+    "answer": 2,
+    "explanation": "A knowledge base article captures resolution steps for a known issue so other technicians can find and apply the same fix. It differs from an incident report (documents a specific event) and an SOP (defines routine processes).",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A company maintains a spreadsheet listing every device, its serial number, assigned user, purchase date, and warranty expiration. Which type of documentation is this?",
+    "options": [
+      "Network diagram",
+      "Change log",
+      "Standard operating procedure",
+      "Asset inventory"
+    ],
+    "answer": 3,
+    "explanation": "An asset inventory tracks hardware and software assets including identifying information, assignment, and lifecycle data. It supports auditing, warranty management, and security compliance.",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "An IT department must document the rules governing acceptable use of company computers, internet access, and email by employees. Which document type is designed for this purpose?",
+    "options": [
+      "Acceptable use policy (AUP)",
+      "Incident response plan",
+      "Knowledge base article",
+      "Standard operating procedure"
+    ],
+    "answer": 0,
+    "explanation": "An AUP defines rules and restrictions for using company technology resources. Employees typically sign it during onboarding; it sets expectations and provides a legal basis for enforcement.",
+    "objective": "4.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What does a SOHO router NAT table track?",
+    "options": [
+      "DNS hostnames",
+      "The mapping between internal private IP/port combinations and the external public IP/port for active connections",
+      "MAC addresses only",
+      "Wireless client connections"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which Windows command shows all current TCP/IP connections and their states?",
+    "options": [
+      "ipconfig /all",
+      "ping localhost",
+      "netstat -an",
+      "tracert 8.8.8.8"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is an evil twin attack?",
+    "options": [
+      "Installing malware that creates a copy of OS",
+      "Duplicating DNS entries",
+      "Creating two administrator accounts",
+      "Setting up a fraudulent Wi-Fi access point with the same SSID as a legitimate network to intercept traffic"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows feature limits the time a user can be logged in each day?",
+    "options": [
+      "Logon hours in Local Users and Groups or Group Policy",
+      "Account lockout policy",
+      "UAC settings",
+      "Windows Firewall rules"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of Group Policy in a Windows domain?",
+    "options": [
+      "Manage hardware drivers centrally",
+      "Centrally configure and enforce security settings, software restrictions, and desktop configurations across all domain computers",
+      "Monitor network traffic",
+      "Manage user files"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is a supply chain attack?",
+    "options": [
+      "Attacking a retailer directly",
+      "Intercepting product shipments",
+      "Compromising a trusted supplier or vendor to insert malware into software or hardware before it reaches the target organization",
+      "Stealing hardware from a warehouse"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "[BONUS — Beyond A+ Scope] What is the primary purpose of a network vulnerability scanner?",
+    "options": [
+      "Block all incoming connections",
+      "Manage firewall rules",
+      "Monitor bandwidth usage",
+      "Identify open ports, services, and known vulnerabilities on network devices"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which type of backup restores the fastest if only the most recent full backup and one other backup set are needed?",
+    "options": [
+      "Differential",
+      "Incremental",
+      "Mirror",
+      "Synthetic full"
+    ],
+    "answer": 0,
+    "explanation": "Differential only requires the last full backup plus the latest differential.",
+    "objective": "4.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What does \"hot spare\" mean in the context of storage or servers?",
+    "options": [
+      "A backup kept in a hot climate",
+      "A ready-to-use replacement drive or server waiting to take over immediately on failure",
+      "An overclocked spare component",
+      "A drive kept in high-temperature storage"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "4.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A company follows the 3-2-1 backup rule. Which configuration correctly implements this rule?",
+    "options": [
+      "Three full backups stored on the same NAS device",
+      "One daily backup and one weekly backup stored on separate USB drives at the office",
+      "Two backup copies stored on an external drive and one copy stored offsite in the cloud",
+      "Three daily backups stored on the local workstation"
+    ],
+    "answer": 2,
+    "explanation": "The 3-2-1 rule requires three total copies, stored on two different media types, with one copy kept offsite. External drive (local) plus cloud (offsite) on different media satisfies all three conditions.",
+    "objective": "4.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is a \"false positive\" in antivirus scanning?",
+    "options": [
+      "Malware that is not detected",
+      "An outdated malware definition",
+      "A scan that finds no threats",
+      "Legitimate software incorrectly identified as malware"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which Windows command lets you view scheduled tasks from the command line?",
+    "options": [
+      "Set-ExecutionPolicy RemoteSigned",
+      "Set-ExecutionPolicy Unrestricted",
+      "Set-ExecutionPolicy Bypass",
+      "Set-ExecutionPolicy AllSigned"
+    ],
+    "answer": 0,
+    "explanation": "RemoteSigned requires that scripts downloaded from the internet be digitally signed by a trusted publisher, while locally written scripts can run without a signature. Unrestricted and Bypass remove all protection; AllSigned requires signatures on all scripts, which is more restrictive than necessary",
+    "objective": "4.8",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What type of social engineering attack involves leaving a USB drive loaded with malware in a public area hoping someone will plug it in?",
+    "options": [
+      "Phishing",
+      "Baiting",
+      "Tailgating",
+      "Vishing"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.3",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which antivirus scanning method detects malware by comparing file characteristics to known malware patterns?",
+    "options": [
+      "Heuristic analysis",
+      "Behavioral analysis",
+      "Signature-based detection",
+      "Sandboxing"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of a security audit?",
+    "options": [
+      "Test network speeds",
+      "Create user accounts",
+      "Install software updates",
+      "Systematically evaluate an organization security posture, policies, and controls for gaps and compliance"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What Windows command-line tool can be used to encrypt a file?",
+    "options": [
+      "cipher /e [filename]",
+      "encrypt [filename]",
+      "bitlocker /e [filename]",
+      "sfc /encrypt [filename]"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What attack exploits a vulnerability in a web application that allows an attacker to inject malicious SQL queries?",
+    "options": [
+      "XSS",
+      "SQL injection",
+      "CSRF",
+      "Buffer overflow"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of a web application firewall (WAF)?",
+    "options": [
+      "Filter physical cable connections",
+      "Manage SSL certificates",
+      "Inspect and filter HTTP/HTTPS traffic to protect web applications from attacks like SQL injection and XSS",
+      "Provide load balancing only"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the purpose of a digital signature on a document or file?",
+    "options": [
+      "Encrypt the document contents",
+      "Password protect the document",
+      "Compress the document",
+      "Verify the identity of the signer and confirm the document has not been altered"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What type of malware is specifically designed to extort money from victims?",
+    "options": [
+      "Ransomware",
+      "Spyware",
+      "Adware",
+      "Rootkit"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.4",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the difference between authentication and authorization?",
+    "options": [
+      "They are the same thing",
+      "Authentication verifies who you are; authorization determines what you are allowed to do",
+      "Authorization verifies identity; authentication grants access",
+      "Authentication is for people; authorization is for devices"
+    ],
+    "answer": 1,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What command in Windows shows all the DNS entries currently cached on the local machine?",
+    "options": [
+      "Prevent natural disasters from damaging hardware",
+      "Backup data automatically",
+      "Prevent sensitive data from being transferred outside the organization through monitoring and policy enforcement",
+      "Encrypt all stored data"
+    ],
+    "answer": 2,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What is the primary risk of not revoking access for a terminated employee immediately?",
+    "options": [
+      "Compliance violation only",
+      "No significant risk if they were a good employee",
+      "IT department loses efficiency",
+      "The former employee retains access and could misuse or steal company data"
+    ],
+    "answer": 3,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "What does HTTPS Everywhere (or HSTS) enforce?",
+    "options": [
+      "That browsers always use encrypted HTTPS connections to supported websites",
+      "That all websites use HTTP",
+      "That all downloads are virus-scanned",
+      "That users cannot browse without a VPN"
+    ],
+    "answer": 0,
+    "explanation": "",
+    "objective": "2.1",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "An AI assistant confidently states a specific statistic in a report, but when the user verifies the source, the statistic does not exist. What AI phenomenon describes this behavior?",
+    "options": [
+      "AI bias",
+      "Hallucination",
+      "Overfitting",
+      "Token limit error"
+    ],
+    "answer": 1,
+    "explanation": "Hallucination is when an AI generates plausible-sounding but factually incorrect or fabricated information, often presented with high confidence. AI-generated content must always be verified against authoritative sources before use in professional or technical contexts.",
+    "objective": "4.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A company's AI-powered resume screening tool consistently ranks candidates from certain zip codes lower than equally qualified candidates from other areas. What is the MOST likely cause?",
+    "options": [
+      "The AI's processing speed is too slow",
+      "The AI is using the wrong language model",
+      "AI bias from training data that reflects historical hiring discrimination",
+      "The screening criteria are too narrow"
+    ],
+    "answer": 2,
+    "explanation": "AI bias occurs when the model's training data reflects historical human biases — such as discriminatory hiring patterns — and the model learns to replicate those patterns. The AI does not intentionally discriminate; it produces outputs that mirror patterns in its training data.",
+    "objective": "4.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician is documenting a network diagram for a client. They ask an AI chatbot to generate the diagram specifications and use the output directly in client-facing documentation without review. What is the PRIMARY risk?",
+    "options": [
+      "The AI will use too many technical terms",
+      "The AI will format the output incorrectly",
+      "The documentation will be too long",
+      "The AI may hallucinate details (incorrect IP ranges, device types, or topology) that could lead to network misconfiguration"
+    ],
+    "answer": 3,
+    "explanation": "AI accuracy limitations mean output must always be verified against authoritative sources — especially for technical specifications. AI tools do not \"know\" a client's actual network; they generate plausible-sounding content that may be completely wrong for the specific environment.",
+    "objective": "4.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A company allows employees to use a public AI chatbot to assist with support ticket responses. A technician pastes a customer record including name, account number, and support history into the chatbot prompt. What is the PRIMARY security concern?",
+    "options": [
+      "PII/sensitive customer data may be retained by the AI vendor and used for model training or be accessible in a data breach",
+      "The AI response will be too slow",
+      "The AI may not understand the ticket correctly",
+      "The response will not be professional enough"
+    ],
+    "answer": 0,
+    "explanation": "Public AI tools (ChatGPT, Copilot, Gemini, etc.) may retain prompt data for model training or improvement unless the organization has an enterprise agreement with explicit data privacy terms. Inputting PII, PHI, or PCI data into a public AI violates privacy regulations (HIPAA, GDPR, PCI DSS) and the",
+    "objective": "4.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which deployment model keeps all AI processing within the organization's own infrastructure, preventing any data from leaving the corporate network?",
+    "options": [
+      "Public AI (SaaS model)",
+      "Private AI (on-premises or private cloud)",
+      "Hybrid AI",
+      "Federated AI"
+    ],
+    "answer": 1,
+    "explanation": "Private AI runs entirely within the organization's controlled environment — on-premises servers or a dedicated private cloud. No data is transmitted to third-party vendor systems. This is required for highly sensitive workloads (classified, healthcare, legal) where data cannot leave the security bou",
+    "objective": "4.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician asks an AI assistant to troubleshoot a network issue and receives a specific command to run. The command appears correct but the technician is unfamiliar with it. What should they do BEFORE executing the command?",
+    "options": [
+      "Run it immediately — AI output is always accurate",
+      "Ask the AI to run the command directly",
+      "Verify the command against official documentation or a trusted reference source before executing",
+      "Copy it to another AI tool and ask it to confirm"
+    ],
+    "answer": 2,
+    "explanation": "AI accuracy limitations require verification against authoritative sources (vendor documentation, RFC specifications, known-good references). AI can generate syntactically valid but functionally wrong commands, especially for specific OS versions or vendor implementations. Unverified commands execut",
+    "objective": "4.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A Windows 10 workstation will not boot after a failed driver update. No bootable external media is available, but the system partition is intact. Which built-in Windows feature should be used to attempt recovery?",
+    "options": [
+      "System Restore from within normal Windows",
+      "Format the drive and reinstall Windows from the internet",
+      "Reset This PC from the Microsoft Store",
+      "Windows Recovery Environment (WinRE) accessed from the boot menu"
+    ],
+    "answer": 3,
+    "explanation": "WinRE is a recovery partition accessible by interrupting the boot process or from Advanced Startup Options. It provides Startup Repair, System Restore, and command prompt access that work even when Windows itself cannot start.",
+    "objective": "4.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A user needs to recover a file accidentally deleted three days ago. The file is not in the Recycle Bin. Which Windows feature is most likely to recover it without additional software?",
+    "options": [
+      "Previous Versions (Volume Shadow Copy Service)",
+      "System Restore",
+      "Windows Defender scan",
+      "Check Disk (chkdsk)"
+    ],
+    "answer": 0,
+    "explanation": "Volume Shadow Copy Service (VSS) creates file snapshots accessible through the Previous Versions tab in file properties, allowing recovery of earlier versions or deleted files, provided shadow copies were enabled and not purged.",
+    "objective": "4.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "A technician configures one workstation with required software and settings, then captures the drive state for deployment to 30 identical machines. Which backup and deployment method is being used?",
+    "options": [
+      "Differential backup",
+      "System image (bare-metal backup)",
+      "Incremental backup",
+      "File-level backup"
+    ],
+    "answer": 1,
+    "explanation": "A system image captures the complete drive state including OS, applications, drivers, and settings as a single deployable file, ideal for mass workstation deployment to identical hardware.",
+    "objective": "4.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  },
+  {
+    "q": "Which statement correctly describes the difference between a full backup and a differential backup?",
+    "options": [
+      "A full backup copies only changed files; a differential copies all files",
+      "A full backup is performed weekly; a differential daily by definition",
+      "A full backup copies all selected data; a differential copies all data changed since the last full backup",
+      "A differential backup requires no baseline and is independent of other backups"
+    ],
+    "answer": 2,
+    "explanation": "A full backup copies all selected data regardless of changes. A differential backup copies all data changed since the last full backup, growing larger each day until the next full backup. This differs from incremental backups, which only copy data changed since the last backup of any type.",
+    "objective": "4.10",
+    "chapter": 1,
+    "chapter_title": "Windows Editions & OS Overview"
+  }
+]

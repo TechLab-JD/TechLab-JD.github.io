@@ -1,0 +1,287 @@
+{
+  "core": 1,
+  "chapter": 14,
+  "title": "DHCP, DNS & Network Services",
+  "exam_objectives": [
+    "2.1",
+    "2.4"
+  ],
+  "coverage": "COVERED",
+  "domain": "networking",
+  "domain_label": "Networking",
+  "sections": [
+    {
+      "title": "Dhcp â€” Dynamic Host Configuration Protocol",
+      "content": "DHCP is the service that automatically assigns IP addresses and network configuration to client devices. Without DHCP, every device on a network would require manual IP, subnet, gateway, and DNS configuration.\nSTATIC VS DYNAMIC CONFIGURATION.\nSome devices â€” servers, network infrastructure, printers â€” benefit from static IP configuration: a manually assigned address that never changes. Static assignment requires careful documentation to prevent conflicts.\nClient workstations, laptops, phones, and temporary devices use dynamic DHCP assignment â€” the server manages address assignment automatically. DHCP reduces administrative overhead and prevents the human errors that come with manual address management.\nTHE DHCP DORA PROCESS.\nDHCP address assignment follows a four-step sequence. DORA: Discover, Offer, Request, Acknowledge.\nDISCOVER: The client has no IP address and needs one. It broadcasts a DHCPDISCOVER message to the local network â€” because it cannot address a specific server without an IP, the broadcast goes to all devices on the segment.\nOFFER: One or more DHCP servers respond with a DHCPOFFER, proposing a specific IP address, lease duration, subnet mask, default gateway, and DNS server addresses.\nREQUEST: The client accepts one offer and broadcasts a DHCPREQUEST â€” formally claiming the offered address. Broadcasting rather than unicasting notifies other DHCP servers that their offers were not selected.\nACKNOWLEDGE: The DHCP server confirms the lease with a DHCPACK. The client now has an IP address for the duration specified in the lease.\nDHCP USES UDP ON PORTS 67 (SERVER) AND 68 (CLIENT). UDP is required because the DORA process begins before the client has an IP address â€” TCP connection establishment is impossible without a source address.\nLEASE RENEWAL: Before a lease expires, the client attempts renewal by contacting the same DHCP server. If the server is unavailable, the client attempts to contact any DHCP server. If renewal fails, the client releases the address after the lease expires and starts the DORA process again.\nDHCP SCOPE.\nA DHCP scope defines the configuration the server delivers to clients on a subnet. The scope includes: the address range (the pool of available IPs), subnet mask, default gateway, DNS server addresses, and lease duration. Exclusions within the scope reserve certain addresses for static assignment â€” preventing the DHCP server from assigning an address that is already manually assigned.\nDHCP RESERVATIONS.\nA reservation maps a specific MAC address to a specific IP address. When the device with that MAC addresses sends a DISCOVER, the server always offers the reserved IP. The device always gets the same address â€” the convenience of DHCP without the unpredictability. Used for printers, servers, and networked devices that require consistent addressing.\nROGUE DHCP SERVERS.\nAn unauthorized DHCP server on the network can distribute incorrect configuration to clients â€” wrong gateway, wrong DNS, potentially redirecting traffic. DHCP snooping on managed switches prevents unauthorized DHCP servers from responding to client requests.\n---",
+      "exam_tips": [
+        "DORA sequence is tested in order. DISCOVER is a broadcast because the client has no IP yet.",
+        "DHCP ports: 67 server, 68 client. UDP. This appears directly on the exam."
+      ]
+    },
+    {
+      "title": "Dns â€” Domain Name System",
+      "content": "DNS translates human-readable names into IP addresses. The name \"www.example.com\" resolves to an IP address through a hierarchical query process. DNS uses port 53.\nDNS HIERARCHY.\nDNS is a distributed, hierarchical database. The root domain is the top. Top-level domains â€” .com, .org, .net, .gov, .uk â€” sit beneath the root. Second-level domains â€” example.com â€” are registered by organizations. Subdomains â€” www.example.com â€” are created by the organization within their domain.\nA Fully Qualified Domain Name â€” FQDN â€” includes all levels from the host to the root. www.example.com is an FQDN.\nDNS RESOLUTION PROCESS.\nA client queries its configured DNS server (a recursive resolver). If the resolver does not have the answer cached, it queries authoritative DNS servers up the hierarchy â€” root servers, TLD servers, authoritative servers for the domain â€” until it retrieves the answer. The result is cached for the duration of the record's TTL (Time to Live) value.\nDNS RECORD TYPES.\nA: Maps a hostname to an IPv4 address. The most common DNS record.\nAAAA: Maps a hostname to an IPv6 address.\nCNAME â€” Canonical Name: Creates an alias that points to another hostname. \"mail.example.com\" might be a CNAME pointing to the A record for \"mailserver01.example.com.\"\nMX â€” Mail Exchanger: Identifies the mail server for the domain. Includes a priority value â€” a lower number means higher priority. Multiple MX records provide redundancy.\nPTR â€” Pointer: Reverse DNS lookup â€” maps an IP address to a hostname. Used in spam filtering (verifying the sending server's identity) and system logging.\nTXT â€” Text: Stores arbitrary text. Used for domain verification, and critically for email authentication records.\nNS â€” Name Server: Identifies the authoritative name servers for the domain.\nSOA â€” Start of Authority: Contains administrative information about the domain â€” primary server, responsible party, serial number, and zone transfer parameters.\nEMAIL SECURITY DNS RECORDS.\nThree email authentication mechanisms are implemented as DNS TXT records.\nSPF â€” Sender Policy Framework: A TXT record listing IP addresses and mail servers authorized to send email on behalf of the domain. Receiving mail servers check SPF to verify the sending server is authorized.\nDKIM â€” DomainKeys Identified Mail: Allows outgoing email to be cryptographically signed. The private key signs each message; the public key is published in DNS as a TXT record. Receiving servers verify the signature, confirming the email has not been tampered with and was sent by an authorized source.\nDMARC â€” Domain-based Message Authentication, Reporting, and Conformance: Builds on SPF and DKIM by defining what to do when an email fails authentication â€” reject it, quarantine it, or allow it â€” and where to send failure reports.\n---",
+      "exam_tips": [
+        "A=IPv4, AAAA=IPv6, MX=mail (with priority), CNAME=alias, PTR=reverse. All five are directly tested.",
+        "Disable SMB1. Use SFTP or FTPS instead of plain FTP. SFTP runs on port 22, not 21."
+      ]
+    },
+    {
+      "title": "Network Services And Their Protocols",
+      "content": "FILE SHARING SERVICES.\nSMB â€” SERVER MESSAGE BLOCK.\nSMB is the Windows-native protocol for file and printer sharing. Port 445. SMB3 is the current version with encryption support. SMB1 has known critical vulnerabilities â€” including exploitation by the WannaCry ransomware â€” and should be disabled on all modern systems. Samba implements SMB on Linux systems for cross-platform file sharing.\nFTP â€” FILE TRANSFER PROTOCOL.\nFTP transfers files using port 21 for control commands and port 20 for active data transfer. Plain FTP transmits all data including credentials in unencrypted plaintext. Use encrypted alternatives: FTPS adds TLS to FTP connections. SFTP implements file transfer over SSH on port 22 â€” this is entirely separate from FTP despite the similar name.\nWEB SERVICES.\nHTTP â€” port 80: Unencrypted web traffic. All data including form submissions and cookies travels in plaintext.\nHTTPS â€” port 443: HTTP over TLS. Encrypted and authenticated. Requires a valid digital certificate. Modern browsers flag HTTP sites as insecure. All web applications handling authentication or sensitive data must use HTTPS.\nEMAIL SERVICES.\nSMTP â€” SIMPLE MAIL TRANSFER PROTOCOL.\nSMTP transfers email between servers and from email clients to servers. Port 25 is used for server-to-server relay. Port 587 is used by email clients for authenticated message submission. SMTP with STARTTLS or SMTP over TLS secures the transmission.\nPOP3 â€” POST OFFICE PROTOCOL VERSION 3.\nPOP3 retrieves email from a server to the local device. Port 110 (unencrypted), port 995 (TLS). By default, retrieved messages are deleted from the server. POP3 is a single-device protocol â€” email downloaded to one device is not accessible from another.\nIMAP â€” INTERNET MESSAGE ACCESS PROTOCOL.\nIMAP accesses email stored on the server. Port 143 (unencrypted), port 993 (TLS). Email remains on the server â€” accessible from any device simultaneously. IMAP supports folder management and partial message download. IMAP is the correct choice for multi-device email access.\nREMOTE ACCESS SERVICES.\nTELNET â€” PORT 23.\nLegacy remote terminal protocol. Transmits all data including usernames and passwords in plaintext. Completely insecure. Replace with SSH.\nSSH â€” SECURE SHELL â€” PORT 22.\nEncrypted remote terminal access. Also provides secure file transfer (SFTP) and port forwarding. SSH is the standard for managing network devices and Linux/Unix servers securely.\nRDP â€” REMOTE DESKTOP PROTOCOL â€” PORT 3389.\nProvides graphical remote desktop access to Windows systems. RDP should not be exposed directly to the internet â€” limit access via VPN, and restrict which source IPs can connect. Brute-force attacks against exposed RDP ports are a common threat vector.\nDIRECTORY SERVICES.\nLDAP â€” LIGHTWEIGHT DIRECTORY ACCESS PROTOCOL.\nLDAP provides access to directory services â€” databases of users, groups, computers, and other objects. Port 389 (unencrypted), port 636 (LDAPS â€” LDAP over TLS). Active Directory uses LDAP as its query protocol.\nTIME SYNCHRONIZATION.\nNTP â€” NETWORK TIME PROTOCOL â€” UDP PORT 123.\nNTP synchronizes clocks across networked devices. Accurate time is critical for: log correlation across systems (events must have consistent timestamps to be useful), Kerberos authentication (which fails if clocks are more than 5 minutes apart), and digital certificate validation (certificates have validity periods that require accurate time). Configure all network devices and servers with NTP.\n---",
+      "exam_tips": [
+        "POP3 downloads and removes. IMAP keeps on server. Choose IMAP for multi-device access.",
+        "Telnet 23 = insecure. SSH 22 = secure replacement. RDP 3389. NTP UDP 123. All four are tested."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "DHCP is why you do not have to configure an IP address on every device you connect to a network. Understanding the four-step DORA process tells you exactly what to troubleshoot when automatic addressing fails.",
+      "concept": "DHCP & THE DORA PROCESS",
+      "summary": "DHCP â€” Dynamic Host Configuration Protocol â€” automates IP address assignment. A DHCP server manages a pool of available addresses and assigns one to each client along with subnet mask, default gateway, and DNS server information."
+    },
+    {
+      "hook": "Without DNS, you would type IP addresses into your browser. DNS is the reason the internet is usable by humans â€” and it is also one of the most frequently misconfigured network services in small business environments.",
+      "concept": "DNS RECORDS & NAME RESOLUTION",
+      "summary": "DNS â€” Domain Name System â€” translates human-readable hostnames into IP addresses. When you type a website name, a DNS query resolves it to the IP address your browser actually connects to."
+    },
+    {
+      "hook": "Plain FTP transmits usernames, passwords, and file contents in unencrypted plaintext â€” visible to anyone on the network who can capture traffic. Every organization still running plain FTP has a security problem.",
+      "concept": "NETWORK SERVICES & THEIR PORTS",
+      "summary": "Network services are categorized by function. The exam tests both the protocol name and its port number."
+    },
+    {
+      "hook": "DHCP is the service that automatically assigns IP addresses and network configuration to client devices.",
+      "concept": "Dhcp â€” Dynamic Host Configuration Protocol",
+      "summary": "DHCP is the service that automatically assigns IP addresses and network configuration to client devices. Without DHCP, every device on a network would require manual IP, subnet, gateway, and DNS configuration. STATIC VS DYNAMIC CONFIGURATION."
+    },
+    {
+      "hook": "DNS translates human-readable names into IP addresses.",
+      "concept": "Dns â€” Domain Name System",
+      "summary": "DNS translates human-readable names into IP addresses. The name \"www.example.com\" resolves to an IP address through a hierarchical query process. DNS uses port 53."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "Which protocol uses ports 137-139 and 445 for Windows file sharing?",
+      "options": [
+        "FTP",
+        "SMB",
+        "NFS",
+        "SSH"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What is the default gateway used for on a network?",
+      "options": [
+        "Assigns IP addresses to devices",
+        "Provides wireless connectivity",
+        "Resolves hostnames to IPs",
+        "Routes traffic from the local network to external networks"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A device has IP 192.168.1.50 with subnet mask 255.255.255.0. What is the network address?",
+      "options": [
+        "Class A",
+        "Class B",
+        "Class C",
+        "Class D"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What does a subnet mask of /24 (255.255.255.0) indicate?",
+      "options": [
+        "8 host bits available",
+        "24 bits for network, 8 bits for hosts, allowing 254 usable host addresses",
+        "24 maximum hosts",
+        "Class B network only"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Which DNS record type maps a hostname to an IPv4 address?",
+      "options": [
+        "AAAA",
+        "MX",
+        "A",
+        "CNAME"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What is DNS cache poisoning?",
+      "options": [
+        "Flooding DNS servers with requests",
+        "Blocking DNS port 53",
+        "Intercepting DNS queries in transit",
+        "Corrupting DNS cache entries to redirect users to malicious sites"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What is the correct order of steps in the DHCP DORA process?",
+      "options": [
+        "Offer, Discover, Request, Acknowledge",
+        "Discover, Offer, Request, Acknowledge",
+        "Discover, Request, Offer, Acknowledge",
+        "Request, Discover, Acknowledge, Offer"
+      ],
+      "answer": 1,
+      "explanation": "DORA: Discover (client broadcasts), Offer (server responds), Request (client claims the offered address), Acknowledge (server confirms)."
+    },
+    {
+      "q": "A DHCP reservation maps a specific MAC address to a specific IP. What is the key benefit?",
+      "options": [
+        "It prevents the device from needing a subnet mask",
+        "The device always receives the same IP via DHCP without manual static configuration on the device itself",
+        "It bypasses the DORA process and assigns IP at Layer 2",
+        "It allows the device to operate without a default gateway"
+      ],
+      "answer": 1,
+      "explanation": "A DHCP reservation associates a MAC address with an IP on the server. The device always receives that IP through normal DORA without manual static configuration."
+    },
+    {
+      "q": "Which DNS record type maps a hostname to an IPv6 address?",
+      "options": [
+        "A",
+        "CNAME",
+        "AAAA",
+        "PTR"
+      ],
+      "answer": 2,
+      "explanation": "The AAAA record maps a hostname to an IPv6 address. The A record maps to IPv4. Both serve the same function for their respective IP versions."
+    },
+    {
+      "q": "A PTR DNS record performs what function?",
+      "options": [
+        "Maps a hostname to an IPv4 address",
+        "Identifies the mail server for a domain",
+        "Maps an IP address back to a hostname (reverse DNS lookup)",
+        "Creates an alias pointing one hostname to another"
+      ],
+      "answer": 2,
+      "explanation": "A PTR record performs reverse DNS lookup, mapping an IP address to its hostname. Used in spam filtering and system logging to verify sender identity."
+    },
+    {
+      "q": "Which email retrieval protocol leaves messages on the server and enables access from multiple devices?",
+      "options": [
+        "POP3 — downloads to one device",
+        "SMTP — sends outbound mail only",
+        "IMAP — accesses email on the server while leaving it there",
+        "LDAP — provides directory-based mail access"
+      ],
+      "answer": 2,
+      "explanation": "IMAP accesses email stored on the server and leaves it there, accessible from any device. POP3 downloads and typically removes messages, limiting access to one device."
+    },
+    {
+      "q": "What DNS TXT record mechanism lets a domain publish authorized email-sending servers?",
+      "options": [
+        "DKIM — signs each message with a private key",
+        "DMARC — defines policy when authentication fails",
+        "SPF — lists authorized sending servers for the domain",
+        "MX — identifies the receiving mail server"
+      ],
+      "answer": 2,
+      "explanation": "SPF (Sender Policy Framework) is a DNS TXT record listing IP addresses authorized to send email for a domain. Receiving servers check SPF to verify sender authorization."
+    },
+    {
+      "q": "What is the purpose of DHCP snooping on a managed switch?",
+      "options": [
+        "Monitors DHCP pool exhaustion",
+        "Prevents unauthorized DHCP servers from responding to client requests",
+        "Encrypts DHCP traffic between clients and servers",
+        "Automatically renews leases before expiration"
+      ],
+      "answer": 1,
+      "explanation": "DHCP snooping prevents rogue DHCP servers from answering client DISCOVER messages. Only traffic from trusted switch ports is allowed to carry DHCP server responses."
+    },
+    {
+      "q": "NTP uses which transport protocol and port number?",
+      "options": [
+        "TCP port 443",
+        "TCP port 123",
+        "UDP port 123",
+        "UDP port 53"
+      ],
+      "answer": 2,
+      "explanation": "NTP (Network Time Protocol) uses UDP port 123. Accurate time sync is critical for log correlation, Kerberos authentication, and certificate validation."
+    },
+    {
+      "q": "LDAP uses port 389. What port does LDAPS use, and what does it add?",
+      "options": [
+        "Port 636 — adds TLS encryption to LDAP directory queries",
+        "Port 993 — adds authentication tokens to directory lookups",
+        "Port 445 — routes LDAP over SMB for Windows integration",
+        "Port 3389 — provides graphical Active Directory access"
+      ],
+      "answer": 0,
+      "explanation": "LDAPS (LDAP over TLS) uses port 636 and adds TLS encryption, protecting credential queries and directory data in transit. Standard LDAP on port 389 is unencrypted."
+    },
+    {
+      "q": "What is the purpose of a DNS MX record?",
+      "options": [
+        "Maps a hostname to an IPv6 address",
+        "Specifies the mail server responsible for accepting inbound email for the domain",
+        "Provides the canonical (true) name for an alias hostname",
+        "Lists authorized IP addresses for sending email on behalf of the domain"
+      ],
+      "answer": 1,
+      "explanation": "A DNS MX (Mail Exchanger) record points to the mail server that accepts email for the domain. When an email is sent to user@example.com, the sending server queries the MX record for example.com to find the correct mail server destination. Multiple MX records can specify priority-ordered failover servers."
+    },
+    {
+      "q": "What happens when a DHCP lease expires and the client cannot contact the DHCP server to renew it?",
+      "options": [
+        "The client keeps the expired lease indefinitely until a renewal succeeds",
+        "The client retains its last IP address for 24 additional hours as a grace period",
+        "The client immediately releases its IP address and falls back to an APIPA address (169.254.x.x) after exhausting renewal attempts",
+        "The client switches to using the gateway's IP address temporarily"
+      ],
+      "answer": 2,
+      "explanation": "When a DHCP lease expires without successful renewal, the client releases the IP address and attempts to get a new lease. If no DHCP server responds, Windows configures APIPA (169.254.x.x with /16 mask) to allow local segment communication — though internet and most network access is lost."
+    },
+    {
+      "q": "What is a DHCP scope?",
+      "options": [
+        "The maximum number of simultaneous DHCP connections allowed by the server",
+        "The defined range of IP addresses a DHCP server can assign to clients on a specific subnet, along with associated options (gateway, DNS, lease time)",
+        "A list of MAC addresses authorized to receive DHCP leases",
+        "The time interval between DHCP server health checks"
+      ],
+      "answer": 1,
+      "explanation": "A DHCP scope defines the pool of IP addresses available for assignment on a subnet, along with the subnet mask, default gateway, DNS servers, and lease duration. A separate scope is configured for each subnet the DHCP server serves."
+    },
+    {
+      "q": "What is a DNS CNAME record used for?",
+      "options": [
+        "Maps a hostname to its canonical (primary) IP address",
+        "Creates an alias pointing one hostname to another hostname (e.g., www.example.com pointing to example.com)",
+        "Specifies the TTL (Time to Live) for a DNS zone",
+        "Lists the authoritative nameservers for the domain"
+      ],
+      "answer": 1,
+      "explanation": "A CNAME (Canonical Name) record creates an alias from one hostname to another. For example, www.example.com can be a CNAME pointing to example.com. When a client resolves www.example.com, the DNS follows the CNAME to the target and returns that A record's IP address."
+    },
+    {
+      "q": "When a client sends a DNS query to a recursive resolver that doesn't have the answer cached, what process does the resolver use to find the answer?",
+      "options": [
+        "It sends the query directly to the querying client's ISP DNS server",
+        "It broadcasts the query to all DNS servers on the internet simultaneously",
+        "It iteratively queries root servers, then TLD servers, then the authoritative nameserver on behalf of the client — recursive resolution",
+        "It uses DNSSEC to sign the query and receives a verified response from any available server"
+      ],
+      "answer": 2,
+      "explanation": "In recursive resolution, the resolver first queries root nameservers (who knows the .com TLD servers), then the TLD server (who knows example.com's authoritative server), then the authoritative server (who returns the actual record). The resolver caches the result and returns it to the original client."
+    }
+  ]
+}

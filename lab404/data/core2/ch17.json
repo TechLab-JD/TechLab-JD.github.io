@@ -1,0 +1,307 @@
+{
+  "core": 2,
+  "chapter": 17,
+  "title": "Safety Procedures",
+  "exam_objectives": [
+    "4.4"
+  ],
+  "coverage": "COVERED",
+  "domain": "operational",
+  "domain_label": "Operational Procedures",
+  "sections": [
+    {
+      "title": "Esd Protection",
+      "content": "Electrostatic discharge is invisible, instant, and cumulative. A static discharge that a technician cannot feel can generate thousands of volts â€” well above the threshold that damages integrated circuits. CMOS chips, RAM modules, and CPUs can fail immediately from ESD, or they can be degraded â€” still functional but with reduced reliability â€” and fail later with no obvious cause.\nThe three-tool ESD protection system.\nESD wrist strap: a conductive strap worn around the wrist with a coiled cord that terminates in an alligator clip. The clip connects to an unpainted metal surface on the PC case or an ESD mat. This provides a continuous, high-resistance path from the technician's body to ground â€” any static charge that accumulates bleeds off slowly through the strap before it can arc across a sensitive component. The strap must be connected to be effective. A disconnected strap provides no protection. Some straps include a resistor in the path â€” this prevents current from flowing through the technician in the event of a live circuit contact.\nESD mat: a grounded work surface placed on the bench where disassembly and assembly occur. Any component placed on the mat is protected by the mat's grounding connection. Used alongside the wrist strap â€” together they ensure both the technician and the components are at the same potential as ground, eliminating the potential difference that causes discharge.\nAntistatic bags: components arrive from manufacturers in antistatic packaging. Silver bags create a Faraday cage effect â€” the metallic outer layer blocks external electric fields from reaching the component inside. Pink bags are made from a material that slowly dissipates static charge. Both protect components from ESD during shipping and storage. Keep components in their original antistatic bags until the moment of installation. Never place a component on a non-grounded surface â€” on foam, carpet, fabric, or an ungrounded work surface.\nComponent handling technique: hold components by their edges. Never touch connector pins, gold contacts on RAM or expansion cards, chip surfaces, or circuit traces. Even the oils from skin can contaminate contacts. When inserting components, orient them correctly before applying any pressure â€” forcing a component into an incorrect orientation can damage both the component and the connector.\n---",
+      "exam_tips": [
+        "ESD wrist strap must be CONNECTED to ground to work â€” wearing a disconnected strap provides zero protection. Silver antistatic bags create a Faraday cage. Pink bags dissipate charge. Both protect during storage and transport. Always handle by edges."
+      ]
+    },
+    {
+      "title": "Electrical Safety",
+      "content": "Disconnect power before working: the first step in any PC repair procedure is disconnecting power. This means removing the power cable from the wall outlet â€” not just pressing the power button. Modern ATX power supplies maintain standby voltage to the motherboard even when the system is powered off. Always disconnect from the wall first.\nPower supply unit hazards: the PSU contains large electrolytic capacitors that store electrical charge. These capacitors can hold a dangerous charge for days â€” or longer â€” after the PSU is unplugged. The stored energy can be discharged instantaneously through contact and can deliver a lethal shock. Do not open a power supply unit. Do not attempt to repair a power supply unit. If a PSU fails, it is replaced. This is not a matter of skill level â€” no IT technician should open a PSU. If high-voltage electronic repair is required, it is performed by qualified electricians or electronics repair specialists, not IT technicians.\nEquipment grounding: use three-prong grounded plugs in properly grounded three-prong outlets. The third prong â€” the ground â€” provides a safe path for fault current if a device's chassis becomes energized due to an internal wiring fault. The fault current flows to ground rather than through a person. Never use three-to-two prong adapters that defeat the ground connection in IT environments.\nSurge protection and UPS: power strips provide basic surge protection. Uninterruptible Power Supply â€” UPS â€” devices provide battery backup and conditioning. For servers and critical workstations, UPS devices provide runtime to properly shut down the system during a power failure.\n---",
+      "exam_tips": [
+        "\"What is the first step before repairing a PC?\" = Disconnect power. Power supply capacitors can hold dangerous charge for days after unplugging â€” this is why PSUs are replaced, not repaired. Three-prong grounding is mandatory â€” no adapter that defeats the ground."
+      ]
+    },
+    {
+      "title": "Fire Safety And Ppe",
+      "content": "Fire safety: electrical fires are Class C fires â€” fires involving energized electrical equipment. The classification system matters because different extinguishing agents work differently on different fire types.\nClass A: ordinary combustibles â€” wood, paper, cloth. Water and dry chemical extinguishers.\nClass B: flammable liquids â€” gasoline, oil. CO2 and dry chemical extinguishers.\nClass C: electrical â€” energized equipment. CO2 and dry chemical extinguishers. The key characteristic of a Class C agent is that it is non-conductive â€” it will not carry current back to the operator.\nNever use water on an electrical fire. Water conducts electricity. Applying water to an energized electrical fire creates a path for current to flow from the fire source through the water stream to the person holding the extinguisher.\nKnow the location of fire extinguishers in any workspace before you begin work. Verify the extinguisher type â€” CO2 or ABC-rated dry chemical â€” is appropriate for electrical equipment.\nPersonal Protective Equipment â€” PPE. Safety goggles: required when working inside laser printers â€” laser printers use toner, a fine powder that can irritate eyes â€” and when working with any chemical compounds. Required when using compressed air to clean components, as dust and debris can be ejected forcefully. Air filter mask: required when cleaning dusty systems, particularly when using compressed air that aerosolizes accumulated dust. Required when handling toner spills â€” toner particles are very fine and respiratory exposure should be avoided. Required in dusty or poorly ventilated environments.\n---",
+      "exam_tips": [
+        "Class C = electrical fires. Use CO2 or dry chemical extinguisher â€” both are non-conductive. NEVER use water â€” it conducts electricity back to the operator. Memorize: C = Conductive hazard = non-Conductive extinguisher."
+      ]
+    },
+    {
+      "title": "Physical Safety And Cable Management",
+      "content": "Personal lifting safety: servers, laser printers, UPS units, and large monitors are heavy. Improper lifting technique causes back injuries â€” a significant occupational hazard for IT technicians who regularly handle heavy equipment.\nCorrect lifting technique: position feet shoulder-width apart. Bend at the knees â€” not the waist. Keep the back straight and the load close to the body. Lift using leg muscles, not back muscles. Do not twist while carrying a load. For extremely heavy equipment, use a second person or mechanical assistance â€” a hand truck or lift.\nKnowing limits: laser printers can weigh 50 to 100 pounds. Rack-mount servers can exceed 100 pounds. Tower UPS units can be extremely heavy. Get help when needed. There is no situation in IT where the schedule is more important than preventing a back injury.\nCable management: organized cables serve both safety and functional purposes.\nAirflow: poor cable management obstructs airflow inside PC cases and in data center racks. Restricted airflow causes components to run hotter, degrading performance and reducing lifespan. Bundle and route cables away from fan paths and heatsinks. In rack cabinets, use cable management arms and vertical cable managers to maintain clear airflow channels.\nEMI prevention: running power cables alongside data cables causes electromagnetic interference â€” EMI. Power cables generate electromagnetic fields that can induce noise in nearby data cables, causing data errors or intermittent connectivity issues. Separate power and data cables, or cross them at right angles rather than running them in parallel.\nTrip hazards: cables on floors and walkways are a physical hazard. Use cable raceways, cable ties, or floor mounts to route cables along walls, under floors, or overhead. Label cables with their source and destination to simplify troubleshooting and maintenance.\n---",
+      "exam_tips": [
+        "Goggles specifically required when working INSIDE laser printers â€” toner is a fine powder that irritates eyes. Mask required for toner spills and dusty cleaning (compressed air). Lifting: legs not back â€” get help for heavy equipment (laser printers and servers can exceed 50-100 lbs)."
+      ]
+    },
+    {
+      "title": "Regulatory Compliance",
+      "content": "OSHA â€” Occupational Safety and Health Administration: the federal agency that sets and enforces workplace safety standards. OSHA regulations apply to IT workplaces and require safe working conditions, hazard communication, and proper training. Violations can result in significant fines. Know that OSHA exists and governs workplace safety â€” the A+ exam may reference it in the context of safety compliance.\nLocal building and electrical codes: data centers and server rooms have specific electrical and structural requirements. These are governed by local building codes, the National Electrical Code, and fire codes. As a technician, you may not be responsible for code compliance at the construction level, but awareness of the regulatory environment is part of the operational procedures domain.\n---",
+      "exam_tips": [
+        "Poor cable management causes three problems: overheating (blocked airflow), data errors (EMI from power near data cables), and injury (trip hazards). Separate power and data cables. Cross at right angles â€” do not run parallel. Labeling reduces troubleshooting time."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "You cannot feel 3,000 volts of static electricity â€” but a RAM module can be destroyed by as little as 100 volts. ESD protection is not optional. The exam tests both the tools and the techniques.",
+      "concept": "ESD PROTECTION â€” THE INVISIBLE THREAT TO COMPONENTS",
+      "summary": "ESD â€” Electrostatic Discharge â€” occurs when static charge built up on a person or surface transfers to a sensitive electronic component. The discharge can permanently damage or degrade integrated circuits without visible evidence or immediate failure."
+    },
+    {
+      "hook": "A power supply that is unplugged can still kill you. Capacitors inside retain lethal charge for days. The A+ exam tests the specific safety rules every technician must know before opening a computer.",
+      "concept": "ELECTRICAL SAFETY â€” THE RULES THAT KEEP TECHNICIANS ALIVE",
+      "summary": "Electrical safety in IT is not about being overly cautious â€” it is about understanding what is actually dangerous. First rule: always disconnect power before repairing a PC."
+    },
+    {
+      "hook": "Electrostatic discharge is invisible, instant, and cumulative.",
+      "concept": "Esd Protection",
+      "summary": "Electrostatic discharge is invisible, instant, and cumulative. A static discharge that a technician cannot feel can generate thousands of volts â€” well above the threshold that damages integrated circuits. CMOS chips, RAM modules, and CPUs can fail immediately from ESD, or they can be degraded â€” still functional but with reduced reliability â€” and fail later with no obvious cause."
+    },
+    {
+      "hook": "Disconnect power before working: the first step in any PC repair procedure is disconnecting power.",
+      "concept": "Electrical Safety",
+      "summary": "Disconnect power before working: the first step in any PC repair procedure is disconnecting power. This means removing the power cable from the wall outlet â€” not just pressing the power button. Modern ATX power supplies maintain standby voltage to the motherboard even when the system is powered off."
+    },
+    {
+      "hook": "Fire safety: electrical fires are Class C fires â€” fires involving energized electrical equipment.",
+      "concept": "Fire Safety And Ppe",
+      "summary": "Fire safety: electrical fires are Class C fires â€” fires involving energized electrical equipment. The classification system matters because different extinguishing agents work differently on different fire types. Class A: ordinary combustibles â€” wood, paper, cloth."
+    },
+    {
+      "hook": "Personal lifting safety: servers, laser printers, UPS units, and large monitors are heavy.",
+      "concept": "Physical Safety And Cable Management",
+      "summary": "Personal lifting safety: servers, laser printers, UPS units, and large monitors are heavy. Improper lifting technique causes back injuries â€” a significant occupational hazard for IT technicians who regularly handle heavy equipment. Correct lifting technique: position feet shoulder-width apart."
+    },
+    {
+      "hook": "OSHA â€” Occupational Safety and Health Administration: the federal agency that sets and enforces workplace safety standards.",
+      "concept": "Regulatory Compliance",
+      "summary": "OSHA â€” Occupational Safety and Health Administration: the federal agency that sets and enforces workplace safety standards. OSHA regulations apply to IT workplaces and require safe working conditions, hazard communication, and proper training. Violations can result in significant fines."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "What is the FIRST step before working inside any computer or electronic device?",
+      "options": [
+        "Disconnect from power and discharge static",
+        "Remove the hard drive",
+        "Update the BIOS",
+        "Back up all data"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What does ESD stand for in the context of electronics repair?",
+      "options": [
+        "Paper fires",
+        "Electrical equipment fires â€” Class C is for energized electrical fires",
+        "Chemical fires",
+        "Grease fires"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What safety concern is associated with CRT monitors that are no longer in use?",
+      "options": [
+        "High power consumption",
+        "Lead solder only",
+        "High-voltage capacitors that can retain dangerous charge even when unplugged",
+        "Magnetic field emissions"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of a lockout/tagout (LOTO) procedure?",
+      "options": [
+        "Password management for shared accounts",
+        "Lock server rack doors",
+        "Tag network cables for identification",
+        "Ensure equipment cannot be energized while maintenance is being performed"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What type of fire suppression system uses an inert gas that does not damage electronic equipment?",
+      "options": [
+        "Clean agent suppression (e.g., FM-200, Halon replacement)",
+        "Sprinkler system",
+        "Foam suppression",
+        "Water mist system"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A technician is about to service a rack-mounted UPS. What precaution is most important?",
+      "options": [
+        "Turn off the lights",
+        "Treat it as energized â€” UPS units contain large batteries that can deliver dangerous current",
+        "Remove all servers first",
+        "Wear a dust mask"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A technician is about to replace RAM inside a desktop computer. Which precaution is most important to prevent electrostatic discharge (ESD) damage?",
+      "options": [
+        "Work in a room with high humidity to dissipate static",
+        "Use rubber-soled shoes and avoid touching metal surfaces",
+        "Wear an anti-static wrist strap connected to the chassis ground",
+        "Blow compressed air on the RAM slots before installing"
+      ],
+      "answer": 2,
+      "explanation": "An anti-static wrist strap continuously drains static charge from the technician to ground, preventing ESD damage to sensitive components. This is the primary and most reliable ESD precaution when handling computer hardware."
+    },
+    {
+      "q": "A technician needs to safely dispose of a cleaning chemical used during server maintenance. Which document provides safe handling, storage, disposal, and hazard information?",
+      "options": [
+        "The equipment service manual",
+        "The acceptable use policy",
+        "The network diagram",
+        "Safety Data Sheet (SDS)"
+      ],
+      "answer": 3,
+      "explanation": "Safety Data Sheets (SDS), formerly called MSDS, are standardized documents required by OSHA that provide hazard information, exposure limits, first aid measures, and proper disposal procedures for chemicals."
+    },
+    {
+      "q": "A fire breaks out near a rack of live server equipment. Which type of fire suppression is appropriate?",
+      "options": [
+        "CO2 or clean agent (halon substitute) suppression system",
+        "Water-based sprinkler system",
+        "Foam-based suppression system",
+        "Dry powder extinguisher applied directly to the equipment"
+      ],
+      "answer": 0,
+      "explanation": "Water conducts electricity and causes additional damage or electrocution risk on live equipment. CO2 and clean agent systems suppress fires without residue and without conducting electricity, making them correct for data center environments."
+    },
+    {
+      "q": "A technician is wearing an ESD wrist strap but has not connected the alligator clip to the chassis. How effective is the strap at preventing ESD damage?",
+      "options": [
+        "Fully effective — wearing the strap alone provides complete protection",
+        "Partially effective — it reduces static buildup by about half",
+        "Completely ineffective — a disconnected strap provides zero ESD protection",
+        "Effective only if the technician is also standing on an ESD mat"
+      ],
+      "answer": 2,
+      "explanation": "The ESD wrist strap works by providing a continuous conductive path from the technician's body to ground. If the alligator clip is not connected to a grounded surface, there is no discharge path and static charge accumulates normally. The strap must be connected to provide any protection."
+    },
+    {
+      "q": "A technician is called to service a server rack and notices a fire starting in the energized electrical equipment. Which fire extinguisher class is appropriate for this situation?",
+      "options": [
+        "Class A — ordinary combustibles",
+        "Class B — flammable liquids",
+        "Class C — electrical fires",
+        "Class D — combustible metals"
+      ],
+      "answer": 2,
+      "explanation": "Class C extinguishers use non-conductive agents (CO2 or dry chemical) suitable for fires involving energized electrical equipment. Using a Class A water-based extinguisher on an electrical fire creates a path for current to flow through the water stream to the operator."
+    },
+    {
+      "q": "A new component arrives from the manufacturer sealed in a silver metallic bag. What is the purpose of this specific type of packaging?",
+      "options": [
+        "The silver material is antimicrobial and prevents contamination during shipping",
+        "The metallic outer layer creates a Faraday cage effect that blocks external electric fields from reaching the component",
+        "The silver bag indicates the component is certified for Class C environments",
+        "The metallic layer reflects heat to prevent thermal damage during transit"
+      ],
+      "answer": 1,
+      "explanation": "Silver antistatic bags create a Faraday cage. The metallic outer layer distributes external electric fields around the outside of the bag rather than allowing them to pass through to the component inside, providing shielding during shipping and storage."
+    },
+    {
+      "q": "Why should an IT technician never open or attempt to repair a failed power supply unit?",
+      "options": [
+        "PSU repair requires a manufacturer firmware key that is not available to technicians",
+        "PSU internal components are proprietary and cannot be sourced individually",
+        "PSUs contain large capacitors that can retain a lethal charge for days after being unplugged",
+        "Opening a PSU voids the motherboard warranty under ATX specifications"
+      ],
+      "answer": 2,
+      "explanation": "Power supply units contain large electrolytic capacitors that store electrical charge. These capacitors can maintain a dangerous, potentially lethal voltage for days after the PSU is disconnected from power. PSUs are always replaced, never repaired, by IT technicians."
+    },
+    {
+      "q": "A technician is setting up a workbench for PC repair. Which combination of ESD protection tools provides the most complete protection for both the technician and the components being handled?",
+      "options": [
+        "ESD wrist strap connected to ground, plus an ESD mat on the work surface",
+        "ESD wrist strap and rubber-soled shoes",
+        "ESD mat and antistatic bags stored nearby",
+        "Antistatic bags and low-humidity work environment"
+      ],
+      "answer": 0,
+      "explanation": "The wrist strap grounds the technician, draining static charge from the body. The ESD mat grounds components placed on the work surface. Together they ensure both the technician and the components are at the same electrical potential as ground, eliminating the potential difference that causes discharge."
+    },
+    {
+      "q": "A data center technician notices that power cables and Ethernet data cables are bundled together and running in parallel along a cable tray. What problem does this configuration cause?",
+      "options": [
+        "The combined weight may exceed the cable tray's load rating",
+        "Power cables generate electromagnetic fields that induce noise in nearby data cables, causing data errors or intermittent connectivity",
+        "Bundling cables together increases fire risk due to heat accumulation",
+        "Parallel cabling causes signal reflection that degrades bandwidth"
+      ],
+      "answer": 1,
+      "explanation": "Power cables generate electromagnetic interference (EMI) that can induce noise in adjacent data cables when they run in parallel. Best practice is to route power and data cables separately, or to cross them at right angles rather than running them side by side."
+    },
+    {
+      "q": "When must a technician consult a Safety Data Sheet (SDS/MSDS), and what information does it provide?",
+      "options": [
+        "Only when working with liquids — SDS sheets are not required for solid materials like toner",
+        "Before handling any hazardous substance — SDS documents hazard classifications, safe handling procedures, required PPE, first aid measures, and proper disposal methods",
+        "Only when transporting chemicals off-site — no SDS review is needed for on-site use",
+        "SDS sheets are only required for chemicals stored in quantities exceeding 5 gallons"
+      ],
+      "answer": 1,
+      "explanation": "Safety Data Sheets (formerly MSDS) provide critical safety information for hazardous materials. IT technicians encounter hazardous substances including printer toner, cleaning solvents, isopropyl alcohol, and battery chemicals. Consulting the SDS before handling ensures proper PPE and disposal procedures are followed, as required by OSHA's Hazard Communication Standard."
+    },
+    {
+      "q": "What is the proper body mechanics technique for lifting heavy server equipment to prevent injury?",
+      "options": [
+        "Bend at the waist, keep legs straight, and hold the load at arm's length for maximum leverage",
+        "Bend at the knees with a straight back, hold the load close to the body, and use two people or a mechanical lift for items over approximately 50 pounds",
+        "Twist the torso while lifting to distribute the load between back and leg muscles",
+        "Lift quickly with leg momentum to minimize the time the back bears the load"
+      ],
+      "answer": 1,
+      "explanation": "Proper lifting technique requires: feet shoulder-width apart, bend at the knees (not waist), keep back straight, hold the load close to the body, and avoid twisting while lifting. For heavy server equipment (rack servers can weigh 30-80 lbs), use a second person, server rack rails, or a mechanical lift to prevent back injury."
+    },
+    {
+      "q": "A technician is replacing the fuser unit in a laser printer that was recently used. What safety concern is specific to this component?",
+      "options": [
+        "The fuser contains toner that is toxic if inhaled during removal",
+        "The fuser operates at very high temperatures (150-230 degrees C / 302-446 degrees F) and must be allowed to fully cool before handling to prevent serious burn injuries",
+        "The fuser carries dangerous high-voltage electricity that can cause shock even when the printer is off",
+        "The fuser contains a small amount of mercury that requires special disposal procedures"
+      ],
+      "answer": 1,
+      "explanation": "The fuser assembly uses heat and pressure to bond toner to paper, reaching temperatures of 150-230°C depending on the printer. Touching the fuser immediately after printing causes severe burns. Always allow adequate cooling time (typically 10-30 minutes depending on the model) before opening the fuser access area or handling the fuser unit."
+    },
+    {
+      "q": "Why must lithium-ion batteries NOT be disposed of in regular trash?",
+      "options": [
+        "They contain cadmium and lead which are classified as industrial waste only",
+        "Lithium-ion batteries contain toxic and flammable materials — improper disposal risks fire, explosion, environmental contamination, and violations of local environmental regulations",
+        "They must be returned to the original manufacturer — all other disposal methods are prohibited by law",
+        "Lithium-ion batteries contain data that could be recovered from discarded batteries"
+      ],
+      "answer": 1,
+      "explanation": "Li-ion batteries contain lithium, cobalt oxide, and flammable electrolyte. Crushed or punctured batteries can enter thermal runaway — catching fire and releasing toxic gases. Regulations (RCRA, local e-waste laws) prohibit their disposal in regular trash. They must be recycled at designated drop-off points or sent to certified recyclers."
+    },
+    {
+      "q": "A data center technician notices that power cables and Ethernet data cables are bundled together running along the same cable tray. What issue does this create?",
+      "options": [
+        "Bundled cables create a physical trip hazard — this is the primary safety concern",
+        "Electrical interference (EMI) from power cables can induce noise in nearby data cables, causing network errors, packet loss, and reduced cable performance",
+        "Bundled cables violate fire code because they prevent proper airflow in the cable tray",
+        "Data cables and power cables must be separated to prevent the Ethernet cable from drawing power from the power cables"
+      ],
+      "answer": 1,
+      "explanation": "Power cables generate electromagnetic fields (EMI) that can induce noise in adjacent data cables, degrading signal quality and causing errors. Standards (TIA-569) specify minimum separation distances between power and data cables. In structured cabling installations, power and data cable trays are run separately or separated by metallic dividers."
+    }
+  ]
+}

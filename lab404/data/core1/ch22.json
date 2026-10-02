@@ -1,0 +1,267 @@
+{
+  "core": 1,
+  "chapter": 22,
+  "title": "Cloud Computing Fundamentals",
+  "exam_objectives": [
+    "4.2"
+  ],
+  "coverage": "COVERED",
+  "domain": "cloud",
+  "domain_label": "Cloud & Virtualization",
+  "sections": [
+    {
+      "title": "Cloud Computing Fundamentals",
+      "content": "DEFINING CHARACTERISTICS.\nCloud computing is not simply \"someone else's server.\" The NIST definition identifies five essential characteristics:\nOn-demand self-service: resources can be provisioned without requiring human interaction from the service provider. A user creates a virtual machine in minutes through a web console.\nBroad network access: services are available over the network from any device â€” laptop, phone, thin client.\nResource pooling: physical infrastructure is shared among multiple customers using virtualization. The underlying hardware serves many tenants simultaneously. This is multitenancy.\nRapid elasticity: resources scale up and down automatically and quickly in response to demand. A web application can scale from 2 servers to 200 during a traffic spike and back down within minutes.\nMeasured service: resource usage is monitored and reported. Billing is based on consumption â€” compute hours, storage gigabytes, network egress â€” rather than fixed licensing.\nCLOUD BENEFITS.\nHigh availability â€” cloud providers design for 99.9% to 99.999% â€” \"five nines\" â€” uptime through geographic redundancy. Single points of failure are engineered out.\nScalability â€” two forms:\nVertical scaling â€” adding resources to an existing instance: more CPU, more RAM. Has a hardware ceiling.\nHorizontal scaling â€” adding more instances to a pool. Scales without a ceiling by distributing load across more nodes.\nRapid elasticity â€” resources scale automatically based on demand without manual intervention. Autoscaling groups add or remove virtual machines based on load metrics.\nResource pooling â€” shared infrastructure reduces cost through utilization. Physical servers run at high utilization serving multiple customers rather than idling at 5% for a single tenant.\nDEPLOYMENT MODELS.\nPUBLIC CLOUD.\nPublic cloud infrastructure is owned and operated by a provider â€” Amazon Web Services, Microsoft Azure, Google Cloud Platform â€” and made available to multiple unrelated customers. Resources are shared through virtualization.\nPublic cloud is the most cost-effective option for most workloads. The provider bears the cost of hardware, power, cooling, and facilities. The customer pays only for consumption.\nLimitations: less control over physical infrastructure, shared hardware with other tenants, potential data sovereignty concerns.\nMulticloud refers to using services from multiple public cloud providers simultaneously â€” for redundancy, cost optimization, or capability access.\nPRIVATE CLOUD.\nPrivate cloud provides cloud-like characteristics â€” self-service provisioning, rapid elasticity, metered usage â€” on dedicated infrastructure for a single organization. The infrastructure may be on-premises in the organization's own data center or hosted by a provider but dedicated exclusively to that organization.\nPrivate cloud offers greater control, stronger isolation, and better support for compliance requirements in regulated industries â€” healthcare, finance, government. Cost is significantly higher than public cloud because infrastructure is not shared.\nCOMMUNITY CLOUD.\nCommunity cloud is shared infrastructure for a group of organizations with common requirements â€” a group of hospitals sharing a HIPAA-compliant infrastructure, or multiple government agencies sharing a compliance-certified environment. Costs are shared among the community members. More control than public cloud, lower cost than each member building a private cloud.\nHYBRID CLOUD.\nHybrid cloud combines private and public cloud resources, allowing workloads to be placed in the most appropriate environment. Sensitive or regulated data stays on the private side. Scalable, non-sensitive workloads can burst to the public cloud during peak demand. Hybrid cloud requires connectivity and orchestration between the private and public environments.\n---",
+      "exam_tips": [
+        "The five NIST cloud characteristics are directly testable. Memorize: on-demand, broad access, resource pooling, rapid elasticity, measured service."
+      ]
+    },
+    {
+      "title": "Cloud Service Models",
+      "content": "Three primary service models define the relationship between provider and customer responsibility.\nIAAS â€” INFRASTRUCTURE AS A SERVICE.\nThe provider delivers virtualized hardware: virtual machines, storage volumes, virtual networking, and load balancers. The customer provisions and manages everything above the hardware layer.\nCustomer responsibilities: operating system selection and licensing, OS patching and updates, security configuration, application installation and management, data management and backup.\nProvider responsibilities: physical hardware, hypervisor, physical network, physical data center.\nIaaS gives the customer the most flexibility and the most responsibility. It is appropriate when the team needs control over the operating system and application stack â€” for example, a custom Linux configuration that is not available as a managed service.\nPAAS â€” PLATFORM AS A SERVICE.\nThe provider manages the infrastructure and the runtime environment. The customer deploys and manages applications only â€” the provider handles OS patching, scaling, load balancing, and availability.\nPaaS is used for application development when the development team wants to write and deploy code without managing infrastructure. The development team pushes code to the platform; the platform handles execution, scaling, and uptime.\nCustomer responsibilities: application code, application configuration, data.\nProvider responsibilities: infrastructure, OS, runtime, scaling.\nSAAS â€” SOFTWARE AS A SERVICE.\nThe provider delivers a complete, fully functional application accessible through a web browser or native client. The customer uses the application and manages their own data and user access. No server management, no OS updates, no application patching â€” all of that is the provider's responsibility.\nSaaS is the most familiar cloud model for most users. Email, productivity suites, CRM, HR platforms, and collaboration tools are typically SaaS. Microsoft 365, Google Workspace, Salesforce, and Zoom are SaaS examples.\nCustomer responsibilities: user accounts and access control, data classification, acceptable use.\nProvider responsibilities: application, runtime, OS, infrastructure, security.\nDAAS â€” DESKTOP AS A SERVICE.\nDaaS delivers virtual desktops from the cloud. Users connect from thin clients, repurposed hardware, or any supported device to a full desktop environment hosted by the provider. The provider manages the underlying infrastructure and the desktop image. This is Virtual Desktop Infrastructure â€” VDI â€” delivered without the organization managing the host servers or hypervisor.\nDaaS is used when organizations want centralized desktop management without the capital and operational expense of a private VDI deployment.\nCLOUD FILE STORAGE.\nCloud file storage is a category of SaaS that synchronizes files across devices and provides collaboration features. Files are stored in provider data centers and replicated for redundancy. Pricing scales with storage capacity and replication requirements. Examples: OneDrive, Google Drive, Dropbox.\nCDN â€” CONTENT DELIVERY NETWORK.\nA CDN distributes content from servers geographically close to the end user. When a user in Tokyo requests a video hosted by a company in New York, the CDN serves it from a server in Tokyo instead. This reduces latency, improves throughput, and reduces load on the origin server. CDNs also improve fault tolerance â€” if one point of presence fails, traffic routes to the next nearest location.\nSHARED RESPONSIBILITY MODEL.\nEvery cloud service model involves a shared division of security responsibility between the provider and the customer. The division shifts based on the service model, but responsibility never fully transfers:\nIn IaaS: the customer manages security from the operating system upward. The provider secures the physical infrastructure.\nIn PaaS: the customer manages application security and data. The provider secures the platform and infrastructure.\nIn SaaS: the customer manages user access and data classification. The provider secures the application, platform, and infrastructure.\nSecurity is always a shared obligation. Data breaches in SaaS environments are frequently caused by customer-side misconfiguration â€” overly permissive sharing settings, weak credentials â€” not by provider failures.\n---",
+      "exam_tips": [
+        "Hybrid cloud allows sensitive workloads to stay private while scalable workloads burst to the public cloud. It is not simply \"two clouds\" â€” it requires connectivity and orchestration between them.",
+        "The higher up the service model stack, the less the customer manages â€” and the less control they have. IaaS = most control, most responsibility. SaaS = least control, least responsibility."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "Public cloud is not less secure by definition â€” it is less controlled. Private cloud is not more secure by default â€” it is more isolated. The correct model depends on what the data requires and what the budget allows.",
+      "concept": "CLOUD DEPLOYMENT MODELS",
+      "summary": "Cloud computing provides on-demand access to computing resources over a network â€” servers, storage, networking â€” with metered usage. You consume what you need, pay for what you use, and scale up or down without deploying physical hardware."
+    },
+    {
+      "hook": "IaaS, PaaS, SaaS â€” three models, one question: how much do you want to manage yourself? IaaS gives you the most control and the most responsibility. SaaS gives you the least of both.",
+      "concept": "CLOUD SERVICE MODELS",
+      "summary": "Cloud services are delivered in three primary models, differentiated by how much the provider manages versus how much the customer manages. IaaS â€” Infrastructure as a Service."
+    },
+    {
+      "hook": "DEFINING CHARACTERISTICS.",
+      "concept": "Cloud Computing Fundamentals",
+      "summary": "DEFINING CHARACTERISTICS. Cloud computing is not simply \"someone else's server.\" The NIST definition identifies five essential characteristics: On-demand self-service: resources can be provisioned without requiring human interaction from the service provider. A user creates a virtual machine in minutes through a web console."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "Which cloud service model provides virtualized computing resources such as VMs over the internet?",
+      "options": [
+        "SaaS",
+        "PaaS",
+        "DaaS",
+        "IaaS"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A company uses both on-premises infrastructure and a public cloud provider simultaneously. This is called a:",
+      "options": [
+        "Private cloud",
+        "Hybrid cloud",
+        "Community cloud",
+        "Multi-cloud"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Which cloud characteristic allows users to provision services without human interaction from the provider?",
+      "options": [
+        "Resource pooling",
+        "Rapid elasticity",
+        "Measured service",
+        "On-demand self-service"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "Which cloud service model provides a development platform including OS, middleware, and runtime environment?",
+      "options": [
+        "IaaS",
+        "PaaS",
+        "SaaS",
+        "FaaS"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Which cloud characteristic ensures services are accessible from any device and location over the network?",
+      "options": [
+        "Elasticity",
+        "On-demand self-service",
+        "Metered service",
+        "Broad network access"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "Which cloud characteristic tracks resource usage for billing and audit purposes?",
+      "options": [
+        "Measured service",
+        "Resource pooling",
+        "Rapid elasticity",
+        "On-demand self-service"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A company migrates its email server to Microsoft 365. Which cloud model does this represent?",
+      "options": [
+        "IaaS",
+        "SaaS",
+        "PaaS",
+        "Private cloud"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What is DaaS (Desktop as a Service)?",
+      "options": [
+        "Virtual desktop environments hosted in the cloud and accessed remotely by users",
+        "Data backup delivered as a service",
+        "Database management service",
+        "DNS delivered as a service"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Which NIST cloud characteristic describes the sharing of physical infrastructure across multiple customers using virtualization?",
+      "options": [
+        "Rapid elasticity",
+        "On-demand self-service",
+        "Resource pooling",
+        "Measured service"
+      ],
+      "answer": 2,
+      "explanation": "Resource pooling means the provider's physical infrastructure serves many tenants simultaneously through virtualization. This multi-tenancy model allows cost-effective sharing of hardware while keeping customer workloads isolated from one another."
+    },
+    {
+      "q": "A healthcare network of hospitals shares a single cloud infrastructure built to meet HIPAA requirements, splitting costs among member organizations. Which cloud deployment model does this describe?",
+      "options": [
+        "Public cloud",
+        "Private cloud",
+        "Hybrid cloud",
+        "Community cloud"
+      ],
+      "answer": 3,
+      "explanation": "Community cloud is shared infrastructure for a group of organizations with common requirements — such as a group of hospitals sharing HIPAA-compliant infrastructure. Costs are shared among members, providing more control than public cloud at lower cost than each building a private cloud."
+    },
+    {
+      "q": "A development team wants to deploy application code without managing operating system patches, scaling, or load balancers. Which cloud service model best fits this need?",
+      "options": [
+        "IaaS",
+        "SaaS",
+        "PaaS",
+        "DaaS"
+      ],
+      "answer": 2,
+      "explanation": "PaaS (Platform as a Service) manages the infrastructure and runtime environment so the development team only writes and deploys code. The provider handles OS patching, scaling, load balancing, and availability — the customer is responsible only for application code and data."
+    },
+    {
+      "q": "Adding more RAM and CPU cores to an existing cloud virtual machine to handle increased workload is an example of which type of scaling?",
+      "options": [
+        "Horizontal scaling",
+        "Elastic scaling",
+        "Vertical scaling",
+        "Autoscaling"
+      ],
+      "answer": 2,
+      "explanation": "Vertical scaling adds more resources (CPU, RAM) to an existing instance. It has a hardware ceiling because a single VM can only be so large. Horizontal scaling, by contrast, adds more instances to distribute load."
+    },
+    {
+      "q": "Under the shared responsibility model for SaaS, which security area remains the customer's responsibility?",
+      "options": [
+        "Physical data center security",
+        "Application patching and updates",
+        "User access management and data classification",
+        "Runtime and OS hardening"
+      ],
+      "answer": 2,
+      "explanation": "In SaaS, the provider handles the application, runtime, OS, and physical infrastructure. The customer retains responsibility for user accounts and access control and for classifying and protecting their own data. Many SaaS breaches stem from customer-side misconfiguration, not provider failures."
+    },
+    {
+      "q": "A web application automatically adds virtual machines during a traffic spike and removes them when traffic returns to normal, without administrator intervention. Which cloud characteristic does this demonstrate?",
+      "options": [
+        "Measured service",
+        "Rapid elasticity",
+        "Broad network access",
+        "On-demand self-service"
+      ],
+      "answer": 1,
+      "explanation": "Rapid elasticity allows resources to scale up and down automatically and quickly in response to demand. Autoscaling groups that add or remove VMs based on load metrics are a direct implementation of this NIST characteristic."
+    },
+    {
+      "q": "A company hosts a virtual desktop environment in the cloud so users can connect from any thin client without the organization managing hypervisor hardware. Which service model is this?",
+      "options": [
+        "IaaS",
+        "PaaS",
+        "SaaS",
+        "DaaS"
+      ],
+      "answer": 3,
+      "explanation": "DaaS (Desktop as a Service) delivers full virtual desktop environments from the cloud. The provider manages the underlying infrastructure and the desktop image. Users connect from thin clients or any supported device. This is VDI without the organization managing host servers or the hypervisor."
+    },
+    {
+      "q": "What is 'lift and shift' in the context of cloud migration?",
+      "options": [
+        "A physical data center relocation service",
+        "Moving workloads to the cloud without modification — rehosting existing applications on cloud VMs exactly as they ran on-premises",
+        "Gradually migrating users to cloud apps while maintaining on-premises systems in parallel",
+        "Converting monolithic apps to microservices before moving to the cloud"
+      ],
+      "answer": 1,
+      "explanation": "Lift and shift (rehost) moves applications to cloud VMs without code changes — the quickest migration path. It trades on-premises hardware costs for cloud compute costs but doesn't leverage cloud-native features like auto-scaling. It is common as a first step before re-architecting for the cloud."
+    },
+    {
+      "q": "What does 'data sovereignty' mean in cloud computing?",
+      "options": [
+        "The cloud provider owns all data stored on its infrastructure",
+        "Data is subject to the laws and regulations of the country where it physically resides; organizations must ensure cloud provider data centers comply with applicable local data protection laws",
+        "Data can only be accessed by users in the same country as the data center",
+        "Encrypted data has sovereignty protection from government access in any jurisdiction"
+      ],
+      "answer": 1,
+      "explanation": "Data sovereignty means that data stored in a particular country is subject to that country's laws (e.g., GDPR in the EU). Organizations using cloud services must understand which country their data resides in and whether the provider's data center locations comply with their regulatory requirements."
+    },
+    {
+      "q": "What is Infrastructure as Code (IaC), and what is its main benefit?",
+      "options": [
+        "Writing application code that runs directly on physical server hardware without an OS",
+        "Managing and provisioning infrastructure (servers, networks, storage) through machine-readable scripts or configuration files rather than manual processes — enabling repeatable, version-controlled deployments",
+        "A programming language designed for writing device driver code",
+        "Compiling low-level code for firmware deployment to network switches"
+      ],
+      "answer": 1,
+      "explanation": "IaC tools (Terraform, CloudFormation, Ansible) define infrastructure in code files that can be version-controlled, reviewed, and reused. Instead of clicking through a cloud console, engineers write scripts that provision identical environments every time — eliminating manual configuration drift."
+    },
+    {
+      "q": "What is a cloud SLA (Service Level Agreement), and what happens if the provider misses its targets?",
+      "options": [
+        "A security agreement defining who is responsible for encrypting cloud data",
+        "A contract specifying guaranteed uptime percentages, support response times, and the remedies (typically service credits) the provider gives customers if targets are not met",
+        "A physical agreement preventing the cloud provider from accessing customer data",
+        "A document listing the physical location of all data centers used by the provider"
+      ],
+      "answer": 1,
+      "explanation": "A cloud SLA defines the provider's commitments — typically expressed as an uptime percentage (e.g., 99.9% = ~8.7 hours downtime/year). If the provider fails to meet these targets, the SLA specifies remedies such as service credits. Customers should review SLAs carefully when selecting cloud providers."
+    },
+    {
+      "q": "What is a multi-cloud strategy, and what is its PRIMARY benefit?",
+      "options": [
+        "Running multiple virtual machines within a single cloud provider's region",
+        "Using two or more cloud providers simultaneously — avoiding vendor lock-in and enabling organizations to choose the best services from each provider",
+        "Backing up data from one cloud provider to another for disaster recovery only",
+        "A network configuration where cloud VMs communicate across multiple availability zones"
+      ],
+      "answer": 1,
+      "explanation": "A multi-cloud strategy uses services from multiple providers (e.g., AWS for compute, Azure for identity, Google Cloud for AI/ML). Primary benefits include avoiding vendor lock-in, leveraging each provider's strengths, geographic redundancy, and negotiating leverage. The complexity of managing multiple clouds is the main trade-off."
+    }
+  ]
+}

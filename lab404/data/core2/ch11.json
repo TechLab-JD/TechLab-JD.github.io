@@ -1,0 +1,291 @@
+{
+  "core": 2,
+  "chapter": 11,
+  "title": "SOHO & Wireless Network Security",
+  "exam_objectives": [
+    "2.3",
+    "2.10"
+  ],
+  "coverage": "COVERED",
+  "domain": "security",
+  "domain_label": "Security",
+  "sections": [
+    {
+      "title": "Wireless Encryption Standards",
+      "content": "Wireless security has evolved through three generations. The A+ exam tests all three and expects you to know which to use and which to avoid.\nWEP \u00e2\u20ac\u201d Wired Equivalent Privacy: the original wireless security protocol. Cryptographically broken. The RC4 implementation in WEP has fundamental weaknesses that allow an attacker to crack the encryption key by capturing a sufficient quantity of packets \u00e2\u20ac\u201d achievable in minutes with modern tools. WEP is never acceptable for any deployment. If a question offers WEP as an option, it is always the wrong choice.\nWPA \u00e2\u20ac\u201d Wi-Fi Protected Access: introduced as an interim fix for WEP using TKIP encryption. TKIP \u00e2\u20ac\u201d Temporal Key Integrity Protocol \u00e2\u20ac\u201d uses per-packet key mixing to address WEP's key reuse problem. WPA and TKIP are deprecated. They have known vulnerabilities and should not be used for new deployments.\nWPA2 \u00e2\u20ac\u201d Wi-Fi Protected Access 2: the current widely deployed standard since 2004. WPA2 supports two cipher options.\nAES in CCMP mode \u00e2\u20ac\u201d Advanced Encryption Standard in Counter Mode with CBC-MAC Protocol: the strong option. AES uses 128, 192, or 256-bit key lengths. No practical attack against properly implemented AES. This is the cipher to use.\nTKIP in WPA2: retained only for backward compatibility with legacy devices that cannot support AES. Has known vulnerabilities. Deprecated. Use only if a legacy device absolutely requires it, and understand that doing so degrades the security of the entire network segment.\nWPA2 authentication modes.\nWPA2-Personal \u00e2\u20ac\u201d also called WPA2-PSK (Pre-Shared Key): a single password shared by all users on the network. The password is used to derive the encryption keys. Suitable for home and SOHO environments. The weakness: if the PSK is compromised, every user's traffic can potentially be decrypted. A minimum passphrase length of 8 characters is required; longer passphrases significantly increase resistance to brute-force.\nWPA2-Enterprise: uses 802.1X port-based authentication with a RADIUS server. Each user authenticates with individual credentials \u00e2\u20ac\u201d username and password, certificate, or smart card. The access point acts as an authenticator, forwarding credentials to the RADIUS server. The RADIUS server validates the credentials and issues an Accept or Reject. Each user receives unique encryption keys derived from their individual session. If one user's credentials are compromised, other users' sessions are not affected. Required in corporate environments where individual accountability is needed and credential revocation must be possible.\nWPA3: the latest standard, introduced in 2018. Four improvements over WPA2.\nSAE \u00e2\u20ac\u201d Simultaneous Authentication of Equals: replaces the WPA2 PSK four-way handshake. In WPA2-PSK, an attacker can capture the handshake and perform an offline brute-force or dictionary attack against it. SAE requires the attacker to interact with the access point for each guess \u00e2\u20ac\u201d rate limiting is possible \u00e2\u20ac\u201d making offline attacks infeasible.\nIndividualized data encryption: in WPA2-Personal, all devices sharing the PSK use related encryption keys, and with sufficient traffic, one user could potentially decrypt another user's data. WPA3 uses OWE \u00e2\u20ac\u201d Opportunistic Wireless Encryption \u00e2\u20ac\u201d to give each device a unique encryption key even on open networks.\nForward secrecy: session keys are not compromised even if the password is discovered later. Historical traffic cannot be decrypted retroactively.\nBrute-force protection: because SAE requires active interaction with the AP for each authentication attempt, rate limiting is effective against password guessing.\nWPA3-Personal uses SAE instead of PSK. WPA3-Enterprise adds 192-bit encryption mode for high-security deployments.\n---",
+      "exam_tips": [
+        "WEP is always wrong on the exam. WPA2 with TKIP is deprecated. WPA2 with AES is the minimum acceptable. WPA3 is preferred. If given a choice, always select the strongest available option."
+      ]
+    },
+    {
+      "title": "Authentication Protocols",
+      "content": "Enterprise wireless deployments require centralized authentication. Three protocols appear on the A+ exam.\nRADIUS \u00e2\u20ac\u201d Remote Authentication Dial-In User Service: the industry-standard AAA protocol \u00e2\u20ac\u201d Authentication, Authorization, and Accounting. Used in WPA2 and WPA3 Enterprise mode for wireless authentication. Also used for VPN authentication and 802.1X switch port authentication.\nOperation: when a user attempts to connect, the wireless access point \u00e2\u20ac\u201d acting as the RADIUS client \u00e2\u20ac\u201d forwards the user's credentials to the RADIUS server. The RADIUS server validates the credentials against a user database \u00e2\u20ac\u201d Active Directory, LDAP, or a local database. The server responds with Access-Accept, Access-Reject, or Access-Challenge (requesting additional authentication factors). The AP grants or denies access based on the server response.\nRADIUS characteristics: uses UDP ports 1812 for authentication and 1813 for accounting. Combines authentication and authorization in a single processing step. Encrypts only the password field in the packet \u00e2\u20ac\u201d the rest of the packet is unencrypted. Industry-standard and vendor-neutral.\nTACACS+ \u00e2\u20ac\u201d Terminal Access Controller Access-Control System Plus: a Cisco-developed AAA protocol. Used primarily for network device management \u00e2\u20ac\u201d authenticating administrators who log into routers, switches, and firewalls \u00e2\u20ac\u201d rather than for wireless client authentication.\nTACACS+ key differences from RADIUS. First: separation of AAA functions. TACACS+ processes authentication, authorization, and accounting as independent steps. Each function can use a different server. This allows more granular control. Second: transport protocol. TACACS+ uses TCP port 49 \u00e2\u20ac\u201d reliable, connection-oriented. RADIUS uses UDP \u00e2\u20ac\u201d less reliable, but faster for high-volume authentication. Third: encryption. TACACS+ encrypts the entire packet payload. RADIUS encrypts only the password. Fourth: command authorization. TACACS+ supports granular command-level authorization \u00e2\u20ac\u201d a specific user can be permitted to run \"show\" commands but not \"configure\" commands on a network device. RADIUS cannot do this. TACACS+ is the preferred choice for network device management in environments using Cisco infrastructure.\nKerberos: the ticket-based authentication protocol. Default authentication mechanism for Windows Active Directory domain environments. When a domain user logs in, they authenticate to the Key Distribution Center \u00e2\u20ac\u201d KDC \u00e2\u20ac\u201d which issues a Ticket Granting Ticket \u00e2\u20ac\u201d TGT. The TGT is used to request service tickets for specific resources. Service tickets grant access without transmitting the password to each service. Kerberos requires synchronized clocks across all systems \u00e2\u20ac\u201d a time difference of more than five minutes causes authentication failures. Port 88 TCP/UDP.\n---",
+      "exam_tips": [
+        "WPA2-Personal = one shared PSK = if compromised, entire network at risk. WPA2-Enterprise = 802.1X + RADIUS = individual credentials = per-user revocation. Enterprise mode requires a RADIUS server infrastructure."
+      ]
+    },
+    {
+      "title": "Soho Network Security Configuration",
+      "content": "Securing a SOHO network requires configuring the router and wireless access point with a specific set of controls. The exam tests the correct order and the correct settings.\nThe first action when setting up or taking over a SOHO router: change all default passwords. Default credentials for every consumer and business router model are documented publicly \u00e2\u20ac\u201d anyone can look them up. The admin interface password, the Wi-Fi passphrase, and any other default credentials must all be changed immediately. This is always the first step.\nFirmware updates: router firmware contains security patches for known vulnerabilities. Unpatched router firmware is a common attack target. Check the manufacturer's site for available updates. Enable automatic firmware updates if the router supports them.\nDisable UPnP \u00e2\u20ac\u201d Universal Plug and Play: UPnP allows devices on the network to automatically configure port forwarding rules on the router without user interaction. This is convenient for applications like gaming consoles but creates a security vulnerability \u00e2\u20ac\u201d any device on the network, including malware on a compromised computer, can open external ports on the router automatically without user knowledge or approval. Disable UPnP. Configure port forwarding manually and only for specific ports and internal addresses that require it.\nScreened subnet \u00e2\u20ac\u201d DMZ: creates a network segment between the external internet and the internal private network. Public-facing servers \u00e2\u20ac\u201d web servers, mail servers, FTP servers \u00e2\u20ac\u201d are placed in the DMZ. If a DMZ server is compromised, the attacker has access to the DMZ segment but the internal network remains separated. The router enforces access rules between all three zones: external, DMZ, and internal. Implement using HTTPS and SSH for management access to DMZ systems \u00e2\u20ac\u201d never unencrypted protocols.\nGuest network isolation: create a separate SSID for guest access, placed on a separate VLAN. Guest devices receive internet access but cannot communicate with devices on the internal network \u00e2\u20ac\u201d printers, file shares, other computers. Use a different password from the main network. Consider time-based access restrictions for guest accounts if the router supports it.\nFirewall configuration: the router's firewall should implement a default-deny policy \u00e2\u20ac\u201d block all traffic not explicitly permitted. Disable access on unused ports. Review open port rules regularly. Port forwarding rules should be documented and minimized \u00e2\u20ac\u201d each forwarding rule creates a path from the external network to a specific internal device.\nSSID broadcast: disabling SSID broadcast hides the network from casual wireless scans. It is not a real security control \u00e2\u20ac\u201d wireless analysis tools can detect hidden SSIDs by capturing the probe requests from devices that are connected to the network. Security through obscurity. Useful as a supplemental layer but not a substitute for strong encryption.\nIP filtering: whitelist allows only specific approved IP or MAC addresses to connect. Blacklist blocks specific addresses. MAC filtering is similarly limited \u00e2\u20ac\u201d MAC addresses can be spoofed \u00e2\u20ac\u201d but adds a layer of friction.\nPhysical security: the router itself should be physically secured \u00e2\u20ac\u201d in a locked room or closet \u00e2\u20ac\u201d to prevent unauthorized access to the reset button, which restores factory defaults.\n---",
+      "exam_tips": [
+        "WPA3's most important feature is SAE \u00e2\u20ac\u201d it eliminates the offline dictionary attack that targets WPA2-PSK handshakes. Forward secrecy means capturing traffic today is useless even if the password is discovered in the future.",
+        "RADIUS = UDP, encrypts password only, used for wireless/VPN. TACACS+ = TCP 49, encrypts full packet, separates AAA, granular command auth, used for managing network devices in Cisco environments.",
+        "The exam frequently asks \"what is the FIRST step when configuring a new router?\" \u00e2\u20ac\u201d the answer is always: change the default password. UPnP should be disabled because malware can use it to open firewall ports without user interaction."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "WEP is broken. TKIP is deprecated. The exam tests which encryption standard you should use \u00e2\u20ac\u201d and why WPA3 is more secure than WPA2.",
+      "concept": "WPA2 vs WPA3 \u00e2\u20ac\u201d WIRELESS ENCRYPTION STANDARDS COMPARED",
+      "summary": "Wireless encryption has three generations you need to know. WEP \u00e2\u20ac\u201d Wired Equivalent Privacy: the original wireless security standard."
+    },
+    {
+      "hook": "Enterprise wireless authentication does not use a shared password. It uses a RADIUS server \u00e2\u20ac\u201d and knowing the difference between RADIUS and TACACS+ is a testable distinction on the A+ exam.",
+      "concept": "RADIUS vs TACACS+ \u00e2\u20ac\u201d AUTHENTICATION PROTOCOLS COMPARED",
+      "summary": "Both RADIUS and TACACS+ are AAA protocols \u00e2\u20ac\u201d Authentication, Authorization, and Accounting. But they differ in implementation, transport, and use cases."
+    },
+    {
+      "hook": "A brand-new router with default settings is one of the easiest devices to compromise. The A+ exam tests the correct hardening steps \u00e2\u20ac\u201d in priority order.",
+      "concept": "SOHO ROUTER SECURITY \u00e2\u20ac\u201d WHAT TO DO FIRST (AND WHAT TO DISABLE)",
+      "summary": "When deploying or securing a SOHO router, these are the required actions. First: change all default passwords."
+    },
+    {
+      "hook": "Wireless security has evolved through three generations.",
+      "concept": "Wireless Encryption Standards",
+      "summary": "Wireless security has evolved through three generations. The A+ exam tests all three and expects you to know which to use and which to avoid. WEP \u00e2\u20ac\u201d Wired Equivalent Privacy: the original wireless security protocol."
+    },
+    {
+      "hook": "Enterprise wireless deployments require centralized authentication.",
+      "concept": "Authentication Protocols",
+      "summary": "Enterprise wireless deployments require centralized authentication. Three protocols appear on the A+ exam. RADIUS \u00e2\u20ac\u201d Remote Authentication Dial-In User Service: the industry-standard AAA protocol \u00e2\u20ac\u201d Authentication, Authorization, and Accounting."
+    },
+    {
+      "hook": "Securing a SOHO network requires configuring the router and wireless access point with a specific set of controls.",
+      "concept": "Soho Network Security Configuration",
+      "summary": "Securing a SOHO network requires configuring the router and wireless access point with a specific set of controls. The exam tests the correct order and the correct settings. The first action when setting up or taking over a SOHO router: change all default passwords."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "Which wireless security protocol uses a 64-bit or 128-bit key and is considered broken and insecure?",
+      "options": [
+        "WEP",
+        "WPA2",
+        "WPA3",
+        "WPA"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What wireless authentication method uses a RADIUS server to authenticate users with individual credentials?",
+      "options": [
+        "WPA2-Personal (PSK)",
+        "WPA2-Enterprise (802.1X)",
+        "WEP",
+        "Open authentication"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Which encryption protocol replaced TKIP in WPA2?",
+      "options": [
+        "DES",
+        "RC4",
+        "AES (CCMP)",
+        "3DES"
+      ],
+      "answer": 2,
+      "explanation": "WPA2's mandatory cipher is AES-CCMP (Counter Mode CBC-MAC Protocol). TKIP (originally from WPA) is still supported in WPA2 mixed-mode for backward compatibility with older hardware, but it is not the replacement \u00e2\u20ac\u201d AES-CCMP is. WPA3 drops TKIP entirely."
+    },
+    {
+      "q": "What does 802.1X provide in a wireless or wired network?",
+      "options": [
+        "Wireless encryption",
+        "QoS prioritization",
+        "VLAN configuration",
+        "Port-based Network Access Control (PNAC) with authentication before network access is granted"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What is a RADIUS server used for in enterprise wireless networks?",
+      "options": [
+        "Centralized authentication, authorization, and accounting for wireless clients",
+        "Assigning IP addresses to wireless clients",
+        "Encrypting all wireless traffic",
+        "Managing access point firmware"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "A company wants employees to authenticate to Wi-Fi using their Active Directory credentials. Which method should be used?",
+      "options": [
+        "WPA2-Personal",
+        "WPA2-Enterprise with 802.1X and RADIUS",
+        "WEP",
+        "MAC filtering"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of a captive portal in a wireless network?",
+      "options": [
+        "Block all wireless traffic",
+        "Encrypt wireless traffic",
+        "Redirect new users to a login or acceptance page before granting network access",
+        "Manage SSID broadcast"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What is the FIRST security step when setting up a new SOHO router?",
+      "options": [
+        "Enable guest network",
+        "Change the default admin username and password",
+        "Configure port forwarding",
+        "Enable QoS"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What SOHO router setting should be disabled to reduce the attack surface?",
+      "options": [
+        "DHCP",
+        "DNS forwarding",
+        "WPS (Wi-Fi Protected Setup)",
+        "NAT"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of a DMZ (Demilitarized Zone) in a network?",
+      "options": [
+        "Block all internet traffic",
+        "Manage wireless channels",
+        "Provide faster internet speeds",
+        "Place publicly accessible servers in a network segment isolated from the internal LAN"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A home router default SSID is \"Linksys_1234.\" Why should this be changed?",
+      "options": [
+        "Default SSIDs reveal the router manufacturer, helping attackers choose known exploits",
+        "Default SSIDs are too short",
+        "Default SSIDs cannot support WPA3",
+        "Default SSIDs broadcast on wrong frequency"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What firewall feature blocks access to specific websites or categories of websites?",
+      "options": [
+        "NAT",
+        "Content filtering or URL filtering",
+        "Port forwarding",
+        "QoS"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What type of attack sends more traffic to a target than it can handle, making it unavailable?",
+      "options": [
+        "Man-in-the-middle",
+        "Phishing",
+        "DDoS (Distributed Denial of Service)",
+        "Ransomware"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A small business owner sets up a new wireless router and wants the strongest available encryption. The router supports WEP, WPA, WPA2, and WPA3. Which should the technician select?",
+      "options": [
+        "WEP, because it is the most universally compatible standard",
+        "WPA with TKIP, because TKIP is more secure than AES",
+        "WPA2 with TKIP, because TKIP replaced the weaker AES",
+        "WPA3, because it provides the strongest current encryption standard"
+      ],
+      "answer": 3,
+      "explanation": "WPA3 is the current Wi-Fi security standard offering stronger encryption (SAE handshake), protection against offline dictionary attacks, and forward secrecy. WEP is broken; WPA with TKIP has known vulnerabilities; WPA2 with AES is acceptable but WPA3 is preferred when supported."
+    },
+    {
+      "q": "A SOHO router arrives with the SSID set to the ISP's brand name and the admin password set to \"admin.\" Which TWO changes are MOST critical for basic security?",
+      "options": [
+        "Change the default SSID and change the default administrator password",
+        "Enable WPS and assign static IPs to all wireless clients",
+        "Enable TKIP encryption and disable the DHCP server",
+        "Set the wireless channel to auto and enable remote management"
+      ],
+      "answer": 0,
+      "explanation": "Default SSIDs reveal the router model (aiding attackers in finding known vulnerabilities) and default admin credentials are publicly known. Changing both is the highest-priority first step. WPS should be disabled, not enabled; remote management should also be disabled."
+    },
+    {
+      "q": "A technician configures a SOHO router and wants a separate Wi-Fi network for guests that prevents them from accessing internal file shares and printers. Which feature accomplishes this?",
+      "options": [
+        "MAC address filtering on the primary SSID",
+        "Guest network with client isolation enabled",
+        "Disabling SSID broadcast on the primary network",
+        "Increasing wireless transmit power for guest coverage"
+      ],
+      "answer": 1,
+      "explanation": "A guest network with client isolation assigns guest devices to a separate network segment and blocks traffic between guest clients and the main LAN. MAC filtering and hidden SSIDs do not create network isolation."
+    },
+    {
+      "q": "A technician recommends disabling Wi-Fi Protected Setup (WPS) on a SOHO router. What is the PRIMARY security reason?",
+      "options": [
+        "WPS prevents dual-band operation on 2.4 GHz and 5 GHz simultaneously",
+        "WPS is incompatible with WPA3 and causes connection drops",
+        "WPS uses a PIN vulnerable to brute-force attacks due to its split-validation design",
+        "WPS broadcasts the network password in plaintext to nearby devices"
+      ],
+      "answer": 2,
+      "explanation": "The WPS PIN is validated in two halves, reducing the effective keyspace to ~11,000 combinations. Tools like Reaver can brute-force the PIN and derive the WPA passphrase. Disabling WPS eliminates this attack vector."
+    },
+    {
+      "q": "What does a SOHO router NAT table track?",
+      "options": [
+        "DNS hostnames",
+        "The mapping between internal private IP/port combinations and the external public IP/port for active connections",
+        "MAC addresses only",
+        "Wireless client connections"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Which Windows command shows all current TCP/IP connections and their states?",
+      "options": [
+        "ipconfig /all",
+        "ping localhost",
+        "netstat -an",
+        "tracert 8.8.8.8"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What is an evil twin attack?",
+      "options": [
+        "Installing malware that creates a copy of OS",
+        "Duplicating DNS entries",
+        "Creating two administrator accounts",
+        "Setting up a fraudulent Wi-Fi access point with the same SSID as a legitimate network to intercept traffic"
+      ],
+      "answer": 3,
+      "explanation": ""
+    }
+  ]
+}

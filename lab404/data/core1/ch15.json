@@ -1,0 +1,317 @@
+{
+  "core": 1,
+  "chapter": 15,
+  "title": "Network Hardware & Types",
+  "exam_objectives": [
+    "2.2",
+    "2.5",
+    "2.7",
+    "2.8"
+  ],
+  "coverage": "COVERED",
+  "domain": "networking",
+  "domain_label": "Networking",
+  "sections": [
+    {
+      "title": "Network Devices",
+      "content": "MODEM AND ONT.\nThe modem is the device that connects the local network to the ISP's infrastructure. The type of modem depends on the connection technology.\nDSL modems connect to the telephone network using an RJ-11 jack. Cable modems connect to the coaxial cable infrastructure using an F-type connector. Fiber internet connections use an ONT â€” Optical Network Terminal â€” installed by the ISP at the premises. The ONT converts the fiber optic signal to an electrical Ethernet handoff that the router can use.\nIn home and small business environments, the ISP often provides a combined device that integrates the modem, router, switch, and wireless access point in one unit. These are referred to as SOHO â€” Small Office/Home Office â€” gateway devices.\nROUTER.\nThe router connects two or more networks and makes forwarding decisions based on IP addresses. Routers operate at the Internet layer â€” Layer 3 in the TCP/IP model.\nThe router maintains a routing table that maps network destinations to the appropriate outbound interface or next-hop address. When no specific route exists, the router uses the default route â€” typically pointing toward the ISP's network.\nAt home and in small offices, the router also performs NAT â€” Network Address Translation â€” converting private internal IP addresses to the single public IP address provided by the ISP. The router's internal IP address is configured as the default gateway on every device in the local network.\nFIREWALL.\nThe firewall controls which traffic is permitted to enter and exit the network. Firewalls apply rules â€” called Access Control Lists â€” that evaluate traffic based on source IP, destination IP, port number, and protocol.\nA network firewall is a dedicated appliance placed between the internal network and the internet. A software firewall runs on an individual host and protects only that system. Modern next-generation firewalls combine traditional ACL-based filtering with deep packet inspection â€” examining the payload of packets rather than only the headers.\nFirewalls are stateful: they track connection state and allow return traffic for established sessions without requiring explicit rules for inbound return packets.\nSWITCH.\nThe switch connects multiple devices within a local area network and forwards frames based on MAC addresses. Switches operate at Layer 2 â€” the Link layer.\nWhen a frame arrives at a switch port, the switch reads the source MAC address and records the port it came from in the MAC address table. When a frame arrives destined for a known MAC address, the switch forwards it only to the port associated with that address. If the destination MAC is unknown, the switch floods the frame to all ports â€” except the one it arrived on â€” until it learns the location.\nBecause each switch port is an isolated collision domain, devices can transmit simultaneously without interfering with each other. Switches operate full-duplex â€” the transmit and receive paths are separate, allowing simultaneous bidirectional communication.\nHUB.\nThe hub is the predecessor to the switch. Hubs are Layer 1 devices â€” they have no MAC address awareness. When a frame arrives on any hub port, the hub broadcasts it to all other ports. All devices share a single collision domain. Hubs operate half-duplex â€” only one device can transmit at a time. Hubs are obsolete in modern deployments but remain testable on the A+ exam as a contrast to switches.\nACCESS POINT.\nThe wireless access point provides wireless network connectivity by bridging wireless clients onto the wired LAN. The access point handles radio communication with Wi-Fi devices and forwards their traffic onto the Ethernet network.\nIn enterprise environments, access points are managed centrally through a wireless LAN controller or cloud management platform. In home environments, the access point function is integrated into the router/gateway device.\nNIC.\nThe Network Interface Card is the hardware component in an end device that connects it to the network. NICs are integrated into virtually all modern desktop and laptop motherboards. Add-in NIC cards â€” installed in PCIe slots â€” provide additional interfaces or replace failed integrated NICs.\nNICs operate at standard speeds: 100 Mbps Fast Ethernet, 1 Gbps Gigabit Ethernet, and 10 Gbps for high-performance applications. The actual operating speed is negotiated between the NIC and the switch port using autonegotiation.\nPATCH PANEL.\nA patch panel is a passive cabling termination point. Horizontal cables from wall jacks throughout the building terminate at the patch panel in the network closet. Short patch cables connect the patch panel ports to switch ports. This arrangement allows network port assignments to be changed by moving patch cables rather than re-running in-wall cabling. Patch panels also protect switch ports from the wear of repeated connection cycles.\n---",
+      "exam_tips": [
+        "Firewalls use ACLs â€” Access Control Lists â€” to control traffic. Stateful means the firewall tracks connection state and permits return traffic automatically."
+      ]
+    },
+    {
+      "title": "Switches Vs Hubs â€” Deeper Dive",
+      "content": "The distinction between switches and hubs is one of the most testable concepts in the A+ networking section. Understanding the mechanism â€” not just the conclusion â€” is what produces correct answers on scenario questions.\nMAC ADDRESS TABLE.\nEvery managed switch maintains a MAC address table â€” also called a CAM table. This table maps each known MAC address to the switch port it was last seen on. The table is built dynamically as frames pass through the switch. Entries age out after an inactivity period.\nWhen a switch receives a unicast frame, it checks the destination MAC against the table. A match sends the frame to the specific port. No match floods the frame to all ports.\nBROADCAST AND MULTICAST.\nBroadcast frames â€” destination MAC FF:FF:FF:FF:FF:FF â€” are sent to all ports on the switch, by design. All devices in the same broadcast domain receive broadcast frames. VLANs are the mechanism for limiting broadcast domain size on a managed switch.\nVLANS.\nVLANs â€” Virtual Local Area Networks â€” logically segment a physical switch into multiple isolated broadcast domains. Ports are assigned to VLANs. Devices in VLAN 10 cannot communicate directly with devices in VLAN 20 without routing. The router or Layer 3 switch provides inter-VLAN routing. VLANs allow a single physical switch to serve multiple departments or security zones without requiring separate physical hardware.\nMANAGED VS UNMANAGED SWITCHES.\nAn unmanaged switch has no configuration interface. It provides basic plug-and-play Layer 2 forwarding with no VLAN support and no administrative access.\nA managed switch provides a web interface, command line, or SNMP management. Managed switches support VLAN configuration, port security â€” limiting which MAC addresses can connect to a port â€” Quality of Service priority settings, and port mirroring for traffic analysis.\nPOE â€” POWER OVER ETHERNET.\nPoE delivers electrical power over standard Ethernet cabling alongside data. This eliminates the need for separate power supplies for devices like wireless access points, IP cameras, VoIP phones, and IoT sensors. The power source equipment â€” PSE â€” is typically a PoE-capable switch or a PoE injector. The powered device â€” PD â€” is the device receiving power over the cable.\nThree IEEE PoE standards appear on the A+ exam:\nIEEE 802.3af â€” PoE: delivers up to 15.4 watts of power per port. Sufficient for basic devices â€” VoIP phones, low-power access points, simple IP cameras. This is the original PoE standard.\nIEEE 802.3at â€” PoE+: delivers up to 30 watts of power per port. Supports more power-intensive devices â€” dual-radio access points, PTZ cameras, video phones. Backward-compatible with 802.3af devices.\nIEEE 802.3bt â€” PoE++ (also called 4PPoE): delivers up to 90 watts of power per port using all four pairs in the cable. Supports high-demand devices â€” large access points, displays, thin clients, building automation controllers.\nA PoE injector is a standalone device that adds PoE capability to a non-PoE switch port. The injector sits between the switch and the powered device â€” data flows in from the switch, power is injected into the cable, and the combined power-and-data cable connects to the powered device.\nA PoE switch has PoE capability built into its ports â€” no injector needed. Managed PoE switches allow per-port power budgeting and monitoring.\n---",
+      "exam_tips": [
+        "Switch = Layer 2, MAC-based forwarding, full-duplex. Hub = Layer 1, broadcast, half-duplex, obsolete."
+      ]
+    },
+    {
+      "title": "Network Types By Scope",
+      "content": "Networks are classified by the geographic area they cover and the technology they use. Six network type definitions are testable on the A+ exam.\nPAN â€” PERSONAL AREA NETWORK.\nThe smallest network scope. A PAN connects devices within personal reach â€” typically within a few meters. Bluetooth headsets, wireless keyboards, wearable devices, and NFC communication operate at PAN scale. PANs are typically ad-hoc and user-managed.\nLAN â€” LOCAL AREA NETWORK.\nA LAN connects devices within a single building or small campus. Ethernet and Wi-Fi are the defining technologies. A LAN is privately owned and managed. A home network, office network, or single-building campus network is a LAN.\nWLAN â€” WIRELESS LAN.\nA WLAN is a LAN implemented using wireless technology. It is not a different scope than a LAN â€” it is the wireless form of a LAN. WLAN is governed by IEEE 802.11 standards. In most modern environments, a WLAN coexists with a wired LAN in the same physical space, with an access point bridging the two.\nMAN â€” METROPOLITAN AREA NETWORK.\nA MAN covers a city or metropolitan region. It connects multiple LANs across a geographic area that exceeds a single building but remains within a city or region. Organizations with multiple locations in the same metropolitan area may use a MAN to interconnect them.\nWAN â€” WIDE AREA NETWORK.\nA WAN spans large geographic distances â€” across states, countries, or globally. The internet is the largest WAN. WANs typically use carrier-provided infrastructure: fiber, MPLS circuits, or leased lines. Branch offices connect to headquarters over WAN links.\nSAN â€” STORAGE AREA NETWORK.\nA SAN is a specialized high-speed network dedicated to storage access. SANs connect servers to storage arrays using block-level protocols. Fibre Channel is the primary SAN protocol. From the perspective of the server, SAN storage appears as locally attached storage even though it is accessed over a dedicated network. SANs are used in data centers where multiple servers share a centralized storage pool.\n---",
+      "exam_tips": [
+        "SAN is not defined by geographic size â€” it is defined by purpose: block-level storage access over a dedicated high-speed network. Fibre Channel is the key protocol."
+      ]
+    },
+    {
+      "title": "Network Installation And Diagnostic Tools",
+      "content": "CRIMPER.\nThe crimper terminates RJ-45 or RJ-11 connectors onto the end of a cable. Used when fabricating custom-length patch cables. The wire stripper removes the outer jacket before crimping. The conductors are arranged in the correct pinout order â€” T568A or T568B â€” before the connector is seated and crimped.\nPUNCHDOWN TOOL.\nThe punchdown tool seats individual wire conductors into IDC â€” Insulation Displacement Contact â€” terminals on keystone jacks and patch panels. The tool drives each conductor into the terminal, which pierces the wire insulation and makes contact, and simultaneously trims the excess wire. Using a punchdown tool correctly requires using the blade edge â€” not the blunt side â€” to trim, and selecting the correct blade for 110-type or 66-type blocks.\nCABLE TESTER.\nThe cable tester verifies correct wiring and continuity for completed cables. It connects to both ends of a cable and checks each conductor. A basic tester indicates pass or fail per pin. Advanced testers measure cable length, attenuation, near-end crosstalk, and return loss â€” parameters needed for certifying cable installations.\nTONER PROBE.\nThe toner probe â€” tone generator and probe â€” traces cables through walls, ceilings, and patch panels without requiring physical access. The tone generator clips onto one end of the cable and injects an audible tone signal. The probe, held near the cable anywhere along its route, detects the tone and produces an audible chirp, narrowing down to the specific cable among a bundle.\nLOOPBACK PLUG.\nThe loopback plug is inserted into a network port to test the transmit and receive circuits. On a standard Ethernet loopback plug, the transmit pins are jumpered to the receive pins on the same connector. A port that passes a loopback test has functional hardware. A failed loopback test indicates a NIC or interface hardware problem.\nWI-FI ANALYZER.\nA Wi-Fi analyzer scans the local wireless environment. It displays all visible SSIDs, their signal strength, operating channels, and frequency bands. Used to identify channel conflicts between neighboring access points, evaluate signal coverage, and diagnose interference sources.\nNETWORK TAP.\nA network tap is inserted inline in a network link â€” between two devices. It passively copies traffic passing through the link to a monitor port without altering or interrupting the live connection. Used for packet capture and network analysis in environments where span ports on a switch are not available or not appropriate.\nVPN.\nA VPN â€” Virtual Private Network â€” creates an encrypted tunnel over the public internet. Client-to-site VPN allows remote workers to access internal resources securely over any internet connection. Site-to-site VPN permanently connects two physical locations over the internet as if they shared a private WAN link. VPN encryption protects traffic from interception in transit.\n---",
+      "exam_tips": [
+        "Toner probe = tracing cables. Loopback plug = testing the port itself. Cable tester = verifying completed cable wiring."
+      ]
+    },
+    {
+      "title": "Server Roles",
+      "content": "A server is not a hardware specification â€” it is a role. The same machine can run a web server, a database server, or a file server depending on what software is installed. The A+ exam names these roles. Know what each one does.\nWEB SERVER.\nHosts websites and web applications. Listens on port 80 for HTTP and port 443 for HTTPS. Responds to browser requests by serving HTML, images, and web content. Common software: IIS on Windows, Apache and Nginx on Linux. Any machine running web server software is a web server.\nDATABASE SERVER.\nStores and retrieves structured data. Applications submit queries using SQL â€” Structured Query Language â€” and the database server returns results. The database server handles data; the application server handles business logic. Common software: Microsoft SQL Server, MySQL, Oracle Database. Database servers are typically isolated from direct user access for security.\nMAIL SERVER.\nHandles sending, receiving, and storing email. Uses SMTP â€” port 25 â€” to transfer email between servers and from clients to servers. Clients retrieve stored mail using POP3 â€” port 110 â€” which downloads and typically removes mail from the server, or IMAP â€” port 143 â€” which syncs mail to the server and keeps it accessible from multiple devices.\nFILE SERVER.\nProvides centralized file storage accessible over the network. Windows file servers use SMB â€” Server Message Block â€” also called CIFS. Users map a drive letter to a network share hosted on the file server. Access is controlled by a combination of NTFS permissions on the files and share permissions on the share. File servers allow centralized management, backup, and access control for organizational data.\nPRINT SERVER.\nManages printers shared across the network. Accepts print jobs from client workstations, queues them, and routes them to the correct printer. Reduces the need for direct connections from each workstation to each printer. Windows print servers use the Print Spooler service.\nAAA SERVER / RADIUS SERVER.\nHandles Authentication, Authorization, and Accounting. The AAA model: Authentication confirms identity, Authorization determines what the authenticated identity is allowed to do, Accounting logs what they did and for how long. RADIUS â€” Remote Authentication Dial-In User Service â€” is the protocol used for AAA in most enterprise network environments. Used with IEEE 802.1X for port-based network access control â€” a client device must authenticate via RADIUS before being granted access to the wired or wireless network. TACACS+ is an alternative to RADIUS used primarily for authenticating network device administrators â€” it runs over TCP and encrypts the entire payload, not just the password.\nPROXY SERVER.\nSits between clients and the internet. Clients send web requests to the proxy; the proxy forwards the requests, receives the responses, and returns them to the client. A forward proxy filters outbound web traffic â€” used in corporate environments to enforce acceptable use policies and block malicious sites. A reverse proxy sits in front of web servers and distributes incoming requests â€” used for load balancing and protecting backend servers from direct exposure.\n---",
+      "exam_tips": [
+        "Web server = HTTP port 80 or HTTPS port 443. Database server = SQL queries from application server. These two roles often appear together in multi-tier application architectures but are distinct exam items.",
+        "SMTP = sending. POP3 = downloading (removes from server). IMAP = syncing (leaves on server, multi-device friendly). All three ports are testable individually.",
+        "RADIUS is the AAA protocol for network access (802.1X). TACACS+ is used for authenticating network device administrators â€” it encrypts the full packet, RADIUS only encrypts the password. Both are testable A+ items."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "Every device on a network passes through at least one of five hardware categories. Knowing which device does what â€” and why â€” is the foundation of network troubleshooting.",
+      "concept": "NETWORK DEVICES OVERVIEW",
+      "summary": "The modem connects the local network to the ISP. DSL modems use an RJ-11 telephone jack."
+    },
+    {
+      "hook": "A hub sends every frame to every port. A switch sends each frame only to the port the destination MAC address is on. That single difference defines modern networking.",
+      "concept": "SWITCHES VS HUBS",
+      "summary": "A hub is a Layer 1 device. When a frame arrives on any port, the hub copies it to all other ports simultaneously."
+    },
+    {
+      "hook": "Every network has a scope â€” a geographic and functional boundary. The exam tests six of them. Each one has a specific definition and a specific use case.",
+      "concept": "NETWORK TYPES BY SCOPE",
+      "summary": "PAN â€” Personal Area Network. The smallest network scope."
+    },
+    {
+      "hook": "Every network problem has a tool that matches it. Knowing which tool to reach for â€” and what it actually does â€” is what separates guessing from diagnosing.",
+      "concept": "NETWORK TOOLS",
+      "summary": "The crimper attaches RJ-45 or RJ-11 connectors to the end of a cable. Used when making custom-length patch cables."
+    },
+    {
+      "hook": "A server is not a job title â€” it is a role. The same hardware can run a web server, a database server, or a file server depending on what software is installed. The exam names these roles. Know what each one does.",
+      "concept": "SERVER ROLES â€” WEB, DATABASE, MAIL, FILE, AAA",
+      "summary": "Server roles define what service a machine provides to the network. The A+ exam expects you to recognize each named role."
+    },
+    {
+      "hook": "The distinction between switches and hubs is one of the most testable concepts in the A+ networking section.",
+      "concept": "Switches Vs Hubs â€” Deeper Dive",
+      "summary": "The distinction between switches and hubs is one of the most testable concepts in the A+ networking section. Understanding the mechanism â€” not just the conclusion â€” is what produces correct answers on scenario questions. MAC ADDRESS TABLE."
+    },
+    {
+      "hook": "CRIMPER.",
+      "concept": "Network Installation And Diagnostic Tools",
+      "summary": "CRIMPER. The crimper terminates RJ-45 or RJ-11 connectors onto the end of a cable. Used when fabricating custom-length patch cables."
+    },
+    {
+      "hook": "A server is not a hardware specification â€” it is a role.",
+      "concept": "Server Roles",
+      "summary": "A server is not a hardware specification â€” it is a role. The same machine can run a web server, a database server, or a file server depending on what software is installed. The A+ exam names these roles."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "What is the primary advantage of a managed switch over an unmanaged switch?",
+      "options": [
+        "Managed switches are always faster",
+        "Managed switches use wireless instead of wired",
+        "Managed switches require no configuration",
+        "Managed switches allow configuration of VLANs, QoS, and port monitoring"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A device that operates at OSI Layer 3 and routes traffic between different networks is a:",
+      "options": [
+        "Router",
+        "Switch",
+        "Hub",
+        "Bridge"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What device connects network segments and forwards traffic based on MAC addresses?",
+      "options": [
+        "Router",
+        "Switch",
+        "Hub",
+        "Modem"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "A PoE switch provides what key benefit?",
+      "options": [
+        "Wireless connectivity to all connected devices",
+        "Automatic IP address assignment",
+        "Power delivery over Ethernet cable to connected devices such as IP cameras",
+        "VPN termination"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of a patch panel in a network rack?",
+      "options": [
+        "Amplifies network signals",
+        "Monitors network traffic",
+        "Routes traffic between VLANs",
+        "Provides centralized termination points for structured cabling"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What networking device extends the range of a wireless network by receiving and retransmitting the signal?",
+      "options": [
+        "Wireless repeater or extender",
+        "Access point",
+        "Switch",
+        "Firewall"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Which device is used to physically connect a computer to a telephone line for DSL access?",
+      "options": [
+        "Cable modem",
+        "DSL modem",
+        "Ethernet switch",
+        "Wireless router"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What is the maximum number of devices that can be directly connected to a standard 24-port switch?",
+      "options": [
+        "Switch",
+        "Hub",
+        "Router",
+        "Access point"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A NIC (Network Interface Card) operates at which OSI layer?",
+      "options": [
+        "Layer 1",
+        "Layer 4",
+        "Layer 3",
+        "Layer 2"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What does SSID stand for?",
+      "options": [
+        "Secure Signal Identification Data",
+        "Subnet Segment Identification Domain",
+        "Service Set Identifier",
+        "System Session ID"
+      ],
+      "answer": 2,
+      "explanation": "SSID stands for Service Set Identifier — the human-readable name broadcasted by a wireless access point to identify a wireless network. Clients use the SSID to select and associate with the correct network."
+    },
+    {
+      "q": "Which internet connection type uses telephone infrastructure and requires a filter to separate voice and data signals?",
+      "options": [
+        "DSL",
+        "Cable",
+        "Fiber",
+        "Satellite"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What type of network spans a single building or campus?",
+      "options": [
+        "WAN",
+        "LAN",
+        "MAN",
+        "PAN"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "Internet access using cell towers is called:",
+      "options": [
+        "DSL",
+        "Satellite",
+        "Cellular (4G or 5G)",
+        "Cable"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "Which IEEE PoE standard delivers up to 90 watts per port using all four cable pairs?",
+      "options": [
+        "IEEE 802.3af (PoE) -- up to 15.4 watts",
+        "IEEE 802.3at (PoE+) -- up to 30 watts",
+        "IEEE 802.3bt (PoE++) -- up to 90 watts",
+        "IEEE 802.3ac -- up to 60 watts"
+      ],
+      "answer": 2,
+      "explanation": "IEEE 802.3bt (PoE++ or 4PPoE) delivers up to 90W per port using all four wire pairs. 802.3af delivers 15.4W and 802.3at delivers 30W."
+    },
+    {
+      "q": "In an 802.1X deployment with a RADIUS server, what does RADIUS provide before network access is granted?",
+      "options": [
+        "It assigns IP addresses to devices after connection",
+        "It performs Authentication, Authorization, and Accounting, validating credentials before granting port access",
+        "It encrypts all traffic between client and switch",
+        "It provides DNS resolution for connecting devices"
+      ],
+      "answer": 1,
+      "explanation": "In 802.1X, RADIUS provides AAA: validates credentials (Authentication), determines access rights (Authorization), and logs the session (Accounting). No port access is granted until RADIUS approves."
+    },
+    {
+      "q": "What is the key difference between a hub and a switch in terms of how they handle network traffic?",
+      "options": [
+        "A hub uses MAC address tables; a switch broadcasts everything to all ports",
+        "A hub broadcasts all received traffic to every port (single collision domain); a switch forwards frames only to the port associated with the destination MAC address",
+        "A hub operates at Layer 3; a switch operates at Layer 2",
+        "There is no functional difference — hub and switch are interchangeable terms"
+      ],
+      "answer": 1,
+      "explanation": "A hub (Layer 1) blindly repeats all traffic to every port, creating one large collision domain. A switch (Layer 2) builds a MAC address table and forwards frames only to the correct destination port, dramatically reducing collisions and improving network efficiency."
+    },
+    {
+      "q": "What is the primary function of a network firewall?",
+      "options": [
+        "Assigns IP addresses to devices on the network",
+        "Filters and controls network traffic between segments based on rules, permitting authorized traffic and blocking unauthorized connections",
+        "Translates private IP addresses to public addresses",
+        "Amplifies network signals to extend cable run distances"
+      ],
+      "answer": 1,
+      "explanation": "A firewall inspects network traffic and enforces access control rules (ACLs) to permit or deny traffic based on source/destination IP, port, protocol, and state. It acts as a barrier between trusted internal networks and untrusted external networks (internet)."
+    },
+    {
+      "q": "What is the purpose of a DMZ (demilitarized zone) in a network architecture?",
+      "options": [
+        "A physical area in the data center isolated from power fluctuations",
+        "A network segment hosting publicly accessible servers (web, email, DNS) that is isolated from the internal corporate LAN — limiting damage if those servers are compromised",
+        "A broadcast domain separate from the default VLAN for guest users",
+        "The area between the ISP's equipment and the organization's router"
+      ],
+      "answer": 1,
+      "explanation": "A DMZ places internet-facing servers (web, mail, DNS) in a segment between two firewalls or behind a dual-homed firewall. External users access DMZ resources, but if a DMZ server is compromised, the attacker still faces another firewall to reach the internal network."
+    },
+    {
+      "q": "A company wants to securely connect two geographically separate office LANs over the public internet without leasing a private WAN circuit. What technology provides this?",
+      "options": [
+        "VLAN trunking between the two offices",
+        "A site-to-site VPN gateway at each location, creating an encrypted tunnel over the internet",
+        "Installing a fiber media converter at each end to extend the LAN",
+        "Configuring OSPF routing between the two buildings"
+      ],
+      "answer": 1,
+      "explanation": "A site-to-site VPN creates an encrypted tunnel between two VPN gateways over the public internet, making the two separate LANs appear as one private network. This is cost-effective compared to dedicated MPLS or private WAN circuits."
+    },
+    {
+      "q": "What device aggregates multiple low-bandwidth internet connections to provide higher total throughput or failover redundancy?",
+      "options": [
+        "A wireless access point in bridge mode",
+        "A dual-WAN router or load balancer with WAN bonding/failover capability",
+        "An unmanaged switch with spanning tree protocol enabled",
+        "A patch panel with multiple upstream connections"
+      ],
+      "answer": 1,
+      "explanation": "A dual-WAN router or WAN load balancer can use multiple ISP connections simultaneously — distributing traffic across them for higher total bandwidth (bonding) or failing over to a secondary connection if the primary goes down. Common in small businesses for redundancy."
+    }
+  ]
+}

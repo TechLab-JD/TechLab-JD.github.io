@@ -1,0 +1,274 @@
+{
+  "core": 1,
+  "chapter": 17,
+  "title": "Internet Connections & IoT",
+  "exam_objectives": [
+    "2.3",
+    "2.7"
+  ],
+  "coverage": "COVERED",
+  "domain": "networking",
+  "domain_label": "Networking",
+  "sections": [
+    {
+      "title": "Internet Connection Types",
+      "content": "The internet is a global network of interconnected networks. Backbone infrastructure uses high-speed fiber links connecting Internet Exchange Points â€” IXPs â€” where ISPs peer and exchange traffic. End users connect to the internet through their ISP's local infrastructure â€” the \"last mile\" connection that reaches the premises.\nDSL â€” DIGITAL SUBSCRIBER LINE.\nDSL carries internet over existing copper telephone wiring. The infrastructure is already in place wherever telephone service exists. DSL does not interfere with voice service â€” filters separate the frequency ranges.\nADSL â€” Asymmetric DSL â€” is the most common type. Download speeds are higher than upload speeds â€” typical of residential internet usage patterns. VDSL â€” Very High-Speed DSL â€” delivers higher speeds but only over short distances from the telephone company's equipment.\nDSL speed degrades with distance. Users located far from the central office or remote terminal receive significantly lower speeds than users close to the equipment. DSL modems connect to the phone network using an RJ-11 jack.\nCABLE INTERNET.\nCable internet uses the hybrid fiber-coaxial â€” HFC â€” infrastructure originally built for cable television. Fiber runs from the cable company's headend to neighborhood distribution points; coaxial cable carries the signal for the final segment to the premises.\nThe DOCSIS standard â€” Data Over Cable Service Interface Specification â€” governs how data is transmitted over cable infrastructure. Modern DOCSIS 3.1 supports multi-gigabit speeds.\nCable bandwidth is shared among users in the same neighborhood segment. During peak usage hours â€” typically evenings â€” available bandwidth decreases as more users are simultaneously active. Cable modems connect via an F-type coaxial connector.\nFIBER INTERNET.\nFiber internet delivers the highest speeds and lowest latency of any wired connection type. Signal travels as light through glass fiber â€” no electrical interference, no signal degradation over distance.\nFTTP â€” Fiber to the Premises â€” runs fiber directly to the building. An ONT â€” Optical Network Terminal â€” installed at the premises converts the optical signal to an electrical Ethernet output that the router connects to. FTTP supports symmetric speeds â€” upload equals download â€” and multi-gigabit throughput.\nFTTC â€” Fiber to the Cabinet â€” runs fiber to a neighborhood cabinet. Copper carries the signal for the final segment to the building. This is a hybrid approach that does not achieve the full performance of FTTP.\nSATELLITE INTERNET.\nGeostationary satellite: the satellite orbits at approximately 35,786 kilometers altitude â€” high enough to maintain position relative to the Earth's surface. This means the signal must travel that distance in each direction. Round-trip latency of 600 to 800 milliseconds is the result. This latency makes real-time applications â€” voice calls, video conferencing, online gaming â€” problematic. Satellite provides coverage in areas where no ground-based infrastructure exists.\nLEO satellite â€” Low Earth Orbit: satellites orbit at 550 to 1200 kilometers altitude, far lower than geostationary. At this altitude, a single satellite only covers a small area, so LEO internet requires a large constellation of satellites providing continuous coverage. Latency drops to approximately 25 to 60 milliseconds â€” far more functional for real-time applications. Starlink is the prominent commercial example. A small dish antenna tracks the satellites automatically.\nFIXED WIRELESS â€” WISP.\nFixed wireless internet â€” provided by a Wireless Internet Service Provider â€” uses microwave radio links from a tower or access point to an antenna installed at the customer premises. Line of sight is required. Fixed wireless provides lower latency than satellite and is common in rural areas where cable or fiber infrastructure does not reach.\nCELLULAR INTERNET.\nCellular internet uses the same 4G/LTE and 5G mobile networks as smartphones. 4G/LTE is the current widespread standard. 5G is the newest generation, offering significantly higher throughput and lower latency.\nCellular internet can be used for mobile devices or as fixed broadband â€” a home router using a cellular connection as the WAN link. Data caps commonly apply to cellular plans. Coverage depends on proximity to cell towers.\n---",
+      "exam_tips": [
+        "Geostationary satellite = high latency (600-800ms) due to orbital distance. LEO satellite = lower latency (25-60ms). The type of satellite determines the latency characteristic."
+      ]
+    },
+    {
+      "title": "Embedded Systems, Ics, And Scada",
+      "content": "EMBEDDED SYSTEMS.\nAn embedded system is a purpose-built computer integrated into a larger device to perform a specific function. Embedded systems differ from general-purpose computers in that they are not intended to run arbitrary software â€” they execute one task or a narrow set of tasks continuously.\nEmbedded systems typically run specialized firmware rather than a full operating system. They often have limited or no user interface. Examples: routers, network switches, industrial controllers, medical devices, smart TVs, printers, and automotive control units.\nSecurity characteristics of embedded systems: firmware updates may be infrequent or unavailable. Remote management interfaces may be exposed with default credentials. Many embedded devices remain in service well past their manufacturer's support lifecycle.\nINDUSTRIAL CONTROL SYSTEMS â€” ICS.\nICS is the category of embedded systems used to control physical industrial processes. Components:\nPLC â€” Programmable Logic Controller: the core processing unit of an ICS. Executes control logic and issues commands to actuators based on sensor inputs.\nSensors: measure physical conditions â€” temperature, pressure, flow rate, position, or electrical values â€” and report readings to the PLC.\nActuators: perform physical actions in response to PLC commands â€” opening valves, starting motors, activating switches.\nHMI â€” Human-Machine Interface: the interface through which operators interact with the ICS. Displays process status and allows operator input.\nICS systems are used in manufacturing plants, power generation, water treatment, oil and gas processing, and transportation systems.\nSCADA â€” SUPERVISORY CONTROL AND DATA ACQUISITION.\nSCADA systems manage geographically distributed ICS installations. Where a single ICS might control one production line, SCADA collects data from multiple remote sites â€” substations, pumping stations, pipeline segments â€” across wide geographic areas.\nSCADA uses WAN links for remote communications: cellular connections, satellite links, or dedicated circuits. The central SCADA system provides monitoring, alerting, and control across all connected sites.\nSCADA governs critical infrastructure. Power grids, water treatment systems, natural gas pipelines, and rail systems all use SCADA. Because of their critical nature and exposure to network connectivity, ICS and SCADA systems are high-value targets for cyberattacks.\nSecurity measures for ICS and SCADA: strict network segmentation â€” these systems should not share a network with general enterprise IT. Dedicated VLANs or air-gapped networks for critical control systems. Access control and monitoring at all network boundaries.\n---",
+      "exam_tips": [
+        "SCADA = distributed ICS management over WAN. ICS = local process control. SCADA oversees multiple ICS installations across geographic distances."
+      ]
+    },
+    {
+      "title": "Internet Of Things",
+      "content": "IoT â€” Internet of Things â€” refers to the broad category of everyday devices that are network-connected and capable of exchanging data. Smart thermostats, security cameras, door locks, lighting systems, appliances, wearables, and industrial sensors are all IoT devices.\nIoT ARCHITECTURE.\nIoT deployments include a hub or control system â€” a central device that coordinates communication between IoT devices and the internet or local network. Smart devices report data to the hub and receive commands from it.\nIoT COMMUNICATION PROTOCOLS.\nIoT devices use several wireless protocols depending on power and bandwidth requirements.\nZigbee: a low-power, low-data-rate mesh networking protocol. Devices can relay signals through each other, extending range. Widely used in smart home applications.\nZ-Wave: another low-power mesh protocol similar to Zigbee but operating at a different frequency â€” less prone to Wi-Fi interference. Common in home automation.\nWi-Fi: for IoT devices that require higher bandwidth â€” cameras, displays. Standard 802.11 connectivity to the local network.\nBluetooth: short-range, commonly used for personal IoT devices â€” wearables, wireless sensors, proximity-based devices.\nIoT SECURITY RISKS.\nIoT devices present a distinct category of security risk:\nLimited patching: many IoT devices ship with firmware that is never updated â€” either because updates are not available, not pushed automatically, or users are unaware. Known vulnerabilities remain unpatched indefinitely.\nDefault credentials: IoT devices ship with factory-set usernames and passwords that are widely known or easily guessed. Users often do not change them. Default credentials are the leading cause of IoT compromises.\nMinimal operating systems: IoT devices run stripped-down firmware with limited security features. Traditional endpoint security tools cannot be installed on them.\nLong operational lifetimes: IoT devices remain in service for years or decades, well past the manufacturer's support window.\nLarge attack surface: a network with hundreds of IoT devices has hundreds of potential entry points.\nIoT SECURITY MEASURES.\nSegment IoT devices onto a dedicated VLAN or separate network, isolated from core enterprise systems. A compromised IoT device should not have access to servers, workstations, or sensitive data.\nChange default credentials on every IoT device at deployment.\nApply firmware updates whenever they are available.\nDisable unused features and services on IoT devices.\nMonitor IoT network traffic for anomalies â€” unusual traffic patterns may indicate compromise.\nConsider a dedicated IoT security gateway that inspects and controls IoT traffic.\n---",
+      "exam_tips": [
+        "IoT security on the exam focuses on default credentials, lack of patching, and VLAN segmentation as the primary risk and mitigation concepts."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "DSL uses the telephone wire. Cable uses the coax. Fiber uses light. The connection type determines the speed ceiling, the latency floor, and the infrastructure required. Know all six for the exam.",
+      "concept": "INTERNET CONNECTION TYPES",
+      "summary": "DSL â€” Digital Subscriber Line â€” carries internet over existing copper telephone wiring. The most common type is ADSL â€” Asymmetric DSL â€” which provides faster download than upload."
+    },
+    {
+      "hook": "An IoT camera with default credentials and no firmware update history is not a smart device â€” it is an open port on your network with a lens attached. IoT security is network security.",
+      "concept": "EMBEDDED SYSTEMS AND IoT",
+      "summary": "Embedded systems are purpose-built computers designed for a specific function. They run specialized firmware, have limited or no user interface, and are not general-purpose computing platforms."
+    },
+    {
+      "hook": "IoT â€” Internet of Things â€” refers to the broad category of everyday devices that are network-connected and capable of exchanging data.",
+      "concept": "Internet Of Things",
+      "summary": "IoT â€” Internet of Things â€” refers to the broad category of everyday devices that are network-connected and capable of exchanging data. Smart thermostats, security cameras, door locks, lighting systems, appliances, wearables, and industrial sensors are all IoT devices. IoT ARCHITECTURE."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "A file server provides what primary function?",
+      "options": [
+        "Routes network traffic",
+        "Manages email delivery",
+        "Centralized storage and access to files over the network",
+        "Provides internet access"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of a syslog server?",
+      "options": [
+        "Synchronize clocks across network devices",
+        "Collect and store log messages from network devices",
+        "Manage IP address allocation",
+        "Provide NTP services"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What is the purpose of a UTM (Unified Threat Management) appliance?",
+      "options": [
+        "Combine firewall, IDS/IPS, antivirus, and other security functions in one device",
+        "Manage multiple switches from one interface",
+        "Distribute traffic across servers",
+        "Provide DNS and DHCP services"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What is the main advantage of cable internet over DSL?",
+      "options": [
+        "Lower cost",
+        "More widely available in rural areas than DSL",
+        "Dedicated non-shared bandwidth",
+        "Higher speeds using shared coaxial cable infrastructure"
+      ],
+      "answer": 3,
+      "explanation": "Cable internet typically delivers higher speeds than DSL. Cable runs over coaxial TV infrastructure (shared); DSL runs over telephone lines (dedicated per user). DSL is generally more widely available in rural areas because telephone infrastructure is more ubiquitous than cable TV infrastructure."
+    },
+    {
+      "q": "A WAN connects:",
+      "options": [
+        "Multiple LANs across large geographic distances",
+        "Devices within a single room",
+        "Wireless devices in a personal area",
+        "Floors within one building only"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "Which technology uses power lines to transmit network data in homes?",
+      "options": [
+        "ISDN",
+        "PLC (Powerline Communication / HomePlug)",
+        "Cable modem",
+        "DSL"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What type of network covers a city or large campus â€” larger than a LAN but smaller than a WAN?",
+      "options": [
+        "LAN",
+        "PAN",
+        "MAN (Metropolitan Area Network)",
+        "SAN"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "Which internet connection type is shared among neighborhood users, meaning speeds can decrease during peak hours?",
+      "options": [
+        "DSL",
+        "Dedicated fiber",
+        "T1 line",
+        "Cable"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "What does \"last mile\" refer to in telecommunications?",
+      "options": [
+        "Satellite",
+        "ISDN",
+        "DSL",
+        "Fixed wireless"
+      ],
+      "answer": 0,
+      "explanation": "Satellite internet uses dish antennas pointed at geostationary satellites (~22,000 miles up) and is the primary broadband option in rural areas lacking cable/fiber. High latency (500â€“800ms round-trip) is a key characteristic due to signal travel distance."
+    },
+    {
+      "q": "A rural user wants broadband with no cable or fiber infrastructure. Which option covers any location with a clear sky, despite high latency?",
+      "options": [
+        "DSL -- telephone lines reach rural areas",
+        "Geostationary satellite -- covers anywhere with a clear sky view but has 600-800ms round-trip latency",
+        "Fixed wireless -- requires only a nearby cell tower",
+        "Cable internet using HFC infrastructure"
+      ],
+      "answer": 1,
+      "explanation": "Geostationary satellite covers any location with an unobstructed sky. However, the ~35,786 km orbital altitude results in 600-800ms latency, degrading real-time applications."
+    },
+    {
+      "q": "What is the key difference between LEO satellite internet (like Starlink) and geostationary satellite?",
+      "options": [
+        "LEO satellites orbit at lower altitude resulting in much lower latency (25-60ms) vs geostationary (600-800ms)",
+        "LEO satellites use fiber-optic inter-satellite links eliminating radio interference",
+        "LEO satellites are stationary and require fixed dish alignment",
+        "LEO provides symmetric speeds unlike geostationary systems"
+      ],
+      "answer": 0,
+      "explanation": "LEO satellites orbit at 550-1200 km vs 35,786 km for geostationary. This results in 25-60ms latency vs 600-800ms, making LEO suitable for real-time applications like VoIP and gaming."
+    },
+    {
+      "q": "What ICS component executes control logic and issues commands to actuators based on sensor inputs?",
+      "options": [
+        "HMI (Human-Machine Interface)",
+        "SCADA server",
+        "PLC (Programmable Logic Controller)",
+        "Actuator"
+      ],
+      "answer": 2,
+      "explanation": "The PLC reads sensor inputs, executes programmed control logic, and commands actuators to perform physical actions like opening valves or starting motors."
+    },
+    {
+      "q": "What is the primary security risk IoT devices pose that VLAN segmentation addresses?",
+      "options": [
+        "IoT devices consume excessive bandwidth requiring QoS isolation",
+        "IoT devices cannot support modern encryption and must be isolated",
+        "Compromised IoT devices could access internal servers if not isolated; VLAN limits the blast radius",
+        "IoT devices broadcast SSID information exposing the corporate Wi-Fi passphrase"
+      ],
+      "answer": 2,
+      "explanation": "IoT devices often have limited security and no patching cycle. If compromised, an IoT device on the main network could attack internal systems. A dedicated VLAN isolates them so a compromise cannot reach core resources."
+    },
+    {
+      "q": "What distinguishes SCADA from a single-site ICS installation?",
+      "options": [
+        "SCADA uses different PLC hardware than standard ICS",
+        "SCADA manages geographically distributed ICS installations across multiple remote sites over WAN links; a single ICS controls one local process",
+        "SCADA operates air-gapped with no network connectivity unlike ICS",
+        "SCADA is used only in manufacturing; ICS is used in power and utilities"
+      ],
+      "answer": 1,
+      "explanation": "SCADA collects data from and controls multiple geographically distributed ICS installations across wide areas via WAN links. A single ICS controls one local industrial process."
+    },
+    {
+      "q": "Cable internet uses DOCSIS over HFC infrastructure. Why does bandwidth vary during peak hours?",
+      "options": [
+        "HFC coaxial attenuates at different rates based on temperature",
+        "HFC (Hybrid Fiber-Coaxial) bandwidth is shared among users in the same neighborhood segment, so speeds decrease as more users are simultaneously active",
+        "DOCSIS limits speeds during congestion regardless of infrastructure",
+        "The fiber portion limits total available bandwidth during peak hours"
+      ],
+      "answer": 1,
+      "explanation": "HFC uses fiber to neighborhood distribution points and coaxial for the last segment. That coaxial segment is shared among nearby users, so bandwidth decreases when many users are active simultaneously."
+    },
+    {
+      "q": "What is FTTH (Fiber to the Home), and what is its primary advantage over cable and DSL?",
+      "options": [
+        "FTTH uses thin fiber optic cables stapled along the outside of buildings — the advantage is that cables are weatherproof",
+        "FTTH runs fiber optic cable directly to the home, providing symmetrical upload and download speeds, much higher bandwidth potential, and lower latency than copper-based cable or DSL",
+        "FTTH is a marketing term for any ISP providing speeds above 100 Mbps over any medium",
+        "FTTH requires a fiber NIC in the PC — the main advantage is eliminating the need for a modem"
+      ],
+      "answer": 1,
+      "explanation": "FTTH (Fiber to the Home) / FTTP (Fiber to the Premises) eliminates copper in the final connection, providing symmetrical multi-gigabit speeds, extremely low latency, and immunity to the distance-related degradation that limits DSL. It is the highest-performance residential internet connection type."
+    },
+    {
+      "q": "What does ADSL stand for, and why is its bandwidth 'asymmetric'?",
+      "options": [
+        "Analog DSL — asymmetric because analog signals are inherently one-directional",
+        "Asymmetric Digital Subscriber Line — download speeds are faster than upload speeds because residential users typically consume far more data than they upload",
+        "Advanced Digital Subscriber Line — asymmetric because it alternates between channels during off-peak hours",
+        "Adaptive DSL — dynamically adjusts upload/download ratio based on current demand"
+      ],
+      "answer": 1,
+      "explanation": "ADSL is asymmetric because it allocates more bandwidth to downstream (download) than upstream (upload), matching typical home user behavior. A common ADSL configuration provides 8–24 Mbps download but only 512 Kbps–3 Mbps upload. VDSL and fiber offer more symmetric options."
+    },
+    {
+      "q": "What is MPLS (Multiprotocol Label Switching), and why do enterprises use it for WAN connectivity?",
+      "options": [
+        "A VPN technology that encrypts all WAN traffic between branch offices",
+        "A carrier network technology that routes traffic using short labels rather than IP addresses, enabling QoS guarantees, predictable performance, and private connectivity across a provider's network",
+        "A protocol that aggregates multiple internet connections for failover at branch offices",
+        "A wireless WAN protocol used for mobile enterprise connectivity"
+      ],
+      "answer": 1,
+      "explanation": "MPLS forwards packets based on pre-determined labels (not full IP lookups at each hop), allowing carriers to provide QoS guarantees for latency-sensitive traffic (VoIP, video). Enterprises use it for private, reliable site-to-site WAN connectivity with SLA-backed performance — though increasingly replaced by SD-WAN."
+    },
+    {
+      "q": "An organization wants to replace its expensive MPLS WAN links with a solution that dynamically routes traffic across multiple internet connections (broadband, LTE, fiber) based on performance policies. What technology provides this?",
+      "options": [
+        "VPN concentrator with failover routing",
+        "SD-WAN (Software-Defined Wide Area Network)",
+        "OSPF dynamic routing over the public internet",
+        "ISDN BRI aggregation"
+      ],
+      "answer": 1,
+      "explanation": "SD-WAN uses software-defined policies to intelligently route traffic across any available WAN connection (broadband, LTE, MPLS), selecting the best path based on latency, jitter, or packet loss. It centralizes WAN management and significantly reduces costs compared to dedicated MPLS circuits."
+    },
+    {
+      "q": "What does 'last mile' refer to in telecommunications, and why is it significant?",
+      "options": [
+        "The final testing phase before a network goes live in production",
+        "The final leg of a telecommunications circuit connecting the provider's distribution point to the end customer's premises — often the bandwidth bottleneck",
+        "A 1-mile minimum cable run required by ISPs before deploying DSL service",
+        "The physical distance limit for fiber optic cable before a repeater is needed"
+      ],
+      "answer": 1,
+      "explanation": "The 'last mile' is the final connection between an ISP's infrastructure and the customer. Historically this was the biggest bottleneck — copper telephone lines limited DSL speeds. Modern last-mile solutions include fiber, coaxial cable (HFC), and fixed wireless, each with different speed and latency characteristics."
+    }
+  ]
+}

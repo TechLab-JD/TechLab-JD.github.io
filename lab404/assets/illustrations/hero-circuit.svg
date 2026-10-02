@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" fill="none" aria-hidden="true">
+  <!-- Background grid lines -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="500" fill="url(#grid)" opacity="0.4"/>
+
+  <!-- Main PCB outline -->
+  <rect x="80" y="60" width="440" height="380" rx="12" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- CPU die (center) -->
+  <rect x="220" y="170" width="160" height="160" rx="8" stroke="currentColor" stroke-width="2" opacity="0.9"/>
+  <rect x="240" y="190" width="120" height="120" rx="4" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="300" cy="250" r="30" stroke="currentColor" stroke-width="2" opacity="0.8"/>
+  <text x="300" y="255" text-anchor="middle" font-size="10" fill="currentColor" font-family="monospace" opacity="0.9">CPU</text>
+
+  <!-- CPU pins top -->
+  <line x1="250" y1="170" x2="250" y2="140" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="270" y1="170" x2="270" y2="140" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="290" y1="170" x2="290" y2="140" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="310" y1="170" x2="310" y2="140" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="330" y1="170" x2="330" y2="140" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="350" y1="170" x2="350" y2="140" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+
+  <!-- CPU pins bottom -->
+  <line x1="250" y1="330" x2="250" y2="360" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="270" y1="330" x2="270" y2="360" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="290" y1="330" x2="290" y2="360" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="310" y1="330" x2="310" y2="360" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="330" y1="330" x2="330" y2="360" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="350" y1="330" x2="350" y2="360" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+
+  <!-- CPU pins left -->
+  <line x1="220" y1="195" x2="180" y2="195" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="220" y1="215" x2="180" y2="215" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="220" y1="235" x2="180" y2="235" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="220" y1="255" x2="180" y2="255" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="220" y1="275" x2="180" y2="275" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="220" y1="295" x2="180" y2="295" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="220" y1="315" x2="180" y2="315" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+
+  <!-- CPU pins right -->
+  <line x1="380" y1="195" x2="420" y2="195" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="380" y1="215" x2="420" y2="215" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="380" y1="235" x2="420" y2="235" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="380" y1="255" x2="420" y2="255" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="380" y1="275" x2="420" y2="275" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="380" y1="295" x2="420" y2="295" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+  <line x1="380" y1="315" x2="420" y2="315" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+
+  <!-- RAM slots (top) -->
+  <rect x="130" y="80" width="80" height="20" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+  <rect x="220" y="80" width="80" height="20" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+  <rect x="310" y="80" width="80" height="20" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+  <rect x="400" y="80" width="80" height="20" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- RAM traces to CPU -->
+  <line x1="170" y1="100" x2="250" y2="140" stroke="currentColor" stroke-width="1" stroke-dasharray="4 2" opacity="0.5"/>
+  <line x1="260" y1="100" x2="270" y2="140" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+  <line x1="350" y1="100" x2="330" y2="140" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+  <line x1="440" y1="100" x2="350" y2="140" stroke="currentColor" stroke-width="1" stroke-dasharray="4 2" opacity="0.5"/>
+
+  <!-- PCIe slots (left side) -->
+  <rect x="90" y="180" width="60" height="12" rx="2" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+  <rect x="90" y="210" width="60" height="12" rx="2" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+  <rect x="90" y="240" width="60" height="12" rx="2" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+
+  <!-- PCIe traces -->
+  <line x1="150" y1="186" x2="180" y2="195" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+  <line x1="150" y1="216" x2="180" y2="215" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+  <line x1="150" y1="246" x2="180" y2="235" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+
+  <!-- Storage connectors (bottom) -->
+  <rect x="130" y="390" width="60" height="14" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+  <rect x="210" y="390" width="60" height="14" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+  <rect x="290" y="390" width="60" height="14" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+  <text x="160" y="402" text-anchor="middle" font-size="7" fill="currentColor" font-family="monospace" opacity="0.7">SATA</text>
+  <text x="240" y="402" text-anchor="middle" font-size="7" fill="currentColor" font-family="monospace" opacity="0.7">M.2</text>
+  <text x="320" y="402" text-anchor="middle" font-size="7" fill="currentColor" font-family="monospace" opacity="0.7">USB</text>
+
+  <!-- Storage traces to CPU area -->
+  <line x1="160" y1="390" x2="270" y2="360" stroke="currentColor" stroke-width="1" stroke-dasharray="3 2" opacity="0.4"/>
+  <line x1="240" y1="390" x2="290" y2="360" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+  <line x1="320" y1="390" x2="310" y2="360" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+
+  <!-- Corner capacitors -->
+  <circle cx="110" cy="140" r="5" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="110" cy="340" r="5" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="490" cy="140" r="5" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="490" cy="340" r="5" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- I/O shield (right) -->
+  <rect x="460" y="130" width="48" height="200" rx="4" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+  <text x="484" y="235" text-anchor="middle" font-size="8" fill="currentColor" font-family="monospace" opacity="0.6" transform="rotate(-90 484 235)">I/O PANEL</text>
+</svg>

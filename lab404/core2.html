@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab404 Study Zone</title>
+  <meta name="description" content="CompTIA A+ Core 2 (220-1202) — All 20 chapters. Browse by domain or search by topic.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none';">
+  <link id="theme-stylesheet" rel="stylesheet" href="css/dark.css">
+  <link rel="stylesheet" href="css/base.css">
+  <script src="js/theme-init.js"></script>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand"><span class="brand-accent">Lab404</span>&nbsp;A+ Study Hub</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="core1.html">Core 1</a>
+      <a href="core2.html" class="active">Core 2</a>
+      <a href="practice.html">Practice</a>
+    </div>
+    <div class="nav-actions">
+      <a href="practice.html?core=2" class="btn btn-primary btn-sm">Practice Test</a>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-icon-light">&#9788;</span>
+        <span class="theme-icon-dark" style="display:none">&#9789;</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main class="page-content">
+  <div class="container" style="padding-top:2.5rem;">
+
+    <div class="section-header">
+      <a href="index.html" class="breadcrumb">
+        <span>Home</span>
+        <span class="breadcrumb-sep">›</span>
+        <span>Core 2</span>
+      </a>
+      <span class="section-label">220-1202</span>
+      <h1 class="section-title" style="font-size:clamp(1.75rem,4vw,2.5rem);">Core 2 — All 20 Chapters</h1>
+      <p class="section-desc">Operating Systems 28% &bull; Security 27% &bull; Troubleshooting 26% &bull; Operational Procedures 19%</p>
+    </div>
+
+    <div style="margin-bottom:1.5rem;">
+      <div class="search-bar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input class="search-input" type="search" id="chapterSearch" placeholder="Search chapters..." aria-label="Search chapters">
+      </div>
+      <div class="filter-bar" role="group" aria-label="Filter by domain">
+        <button class="filter-btn active" data-domain="all">All</button>
+        <button class="filter-btn" data-domain="os">OS</button>
+        <button class="filter-btn" data-domain="security">Security</button>
+        <button class="filter-btn" data-domain="troubleshooting">Troubleshooting</button>
+        <button class="filter-btn" data-domain="operational">Operational</button>
+      </div>
+    </div>
+
+    <div class="chapter-grid" id="chapterGrid" aria-live="polite"></div>
+    <p id="noResults" class="hidden" style="color:var(--text-muted);padding:2rem 0;text-align:center;">No chapters match your search.</p>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand"><span style="color:var(--accent);">Lab404</span> A+ Study Hub</div>
+      <nav class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="core1.html">Core 1</a>
+        <a href="practice.html">Practice</a>
+        <a href="review.html">Review</a>
+      </nav>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-icon-light">&#9788;</span>
+        <span class="theme-icon-dark" style="display:none">&#9789;</span>
+      </button>
+    </div>
+  </div>
+<div class="lab404-disclaimer" style="max-width:900px;margin:18px auto 8px;padding:0 20px;font-size:12px;line-height:1.5;color:var(--text-muted,#9090bb);text-align:center">Free, independent study material from the Lab404 series by <a href="https://techlab-jd.github.io" style="color:inherit">Jordan Dorman</a>. All practice questions are original and written for study; they are not real exam questions. Not affiliated with or endorsed by CompTIA. CompTIA and A+ are trademarks of CompTIA, Inc.</div>
+</footer>
+
+<script src="js/chapters-data.js"></script>
+<script>
+var CHAPTERS = window.CHAPTERS_CORE2;
+var DOMAIN_LABELS = window.DOMAIN_LABELS_CORE2;
+var DOMAIN_COLORS = {
+  os: {bg:"var(--accent3-dim)", color:"var(--accent3)"},
+  security: {bg:"rgba(255,200,0,0.12)", color:"var(--warning)"},
+  troubleshooting: {bg:"rgba(255,140,0,0.12)", color:"#ff8c00"},
+  operational: {bg:"var(--accent2-dim)", color:"var(--accent2)"}
+};
+
+function renderChapters(chapters) {
+  var grid = document.getElementById("chapterGrid");
+  var noResults = document.getElementById("noResults");
+  grid.innerHTML = "";
+  if (chapters.length === 0) {
+    noResults.classList.remove("hidden");
+    return;
+  }
+  noResults.classList.add("hidden");
+  chapters.forEach(function(ch) {
+    var dc = DOMAIN_COLORS[ch.domain] || {bg:"var(--accent-dim)",color:"var(--accent)"};
+    var covBadge = ch.coverage === "COVERED"
+      ? '<span class="badge badge-covered">Covered</span>'
+      : '<span class="badge badge-partial">Partial</span>';
+    var objBadges = ch.objectives.map(function(o) {
+      return '<span class="badge badge-objective">' + o + '</span>';
+    }).join(" ");
+    var domBadge = '<span class="badge" style="background:' + dc.bg + ';color:' + dc.color + ';border:1px solid ' + dc.color.replace('var(','').replace(')','') + '22">' + (DOMAIN_LABELS[ch.domain] || ch.domain) + '</span>';
+    var card = document.createElement("a");
+    card.className = "chapter-card";
+    card.href = "chapter.html?core=2&ch=" + ch.num;
+    card.setAttribute("aria-label", "Chapter " + ch.num + ": " + ch.title);
+    card.style.setProperty("--accent", dc.color.replace("var(--","").replace(")","") === dc.color ? dc.color : "");
+    card.innerHTML =
+      '<div class="chapter-num">Ch ' + String(ch.num).padStart(2, "0") + ' &bull; ' + (DOMAIN_LABELS[ch.domain] || ch.domain) + '</div>' +
+      '<div class="chapter-title">' + ch.title + '</div>' +
+      '<div class="chapter-meta">' + covBadge + objBadges + '</div>';
+    grid.appendChild(card);
+  });
+}
+
+function filterAndSearch() {
+  var query = document.getElementById("chapterSearch").value.trim().toLowerCase();
+  var activeDomain = document.querySelector(".filter-btn.active").dataset.domain;
+  var filtered = CHAPTERS.filter(function(ch) {
+    var domainOk = activeDomain === "all" || ch.domain === activeDomain;
+    var searchOk = !query || ch.title.toLowerCase().includes(query) ||
+      ch.objectives.some(function(o) { return o.includes(query); }) ||
+      ch.domain.includes(query);
+    return domainOk && searchOk;
+  });
+  renderChapters(filtered);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  renderChapters(CHAPTERS);
+  document.getElementById("chapterSearch").addEventListener("input", filterAndSearch);
+  document.querySelectorAll(".filter-btn").forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      document.querySelectorAll(".filter-btn").forEach(function(b) { b.classList.remove("active"); });
+      this.classList.add("active");
+      filterAndSearch();
+    });
+  });
+});
+</script>
+<script src="js/utils.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/theme.js"></script>
+</body>
+</html>

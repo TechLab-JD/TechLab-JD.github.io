@@ -1,0 +1,302 @@
+{
+  "core": 1,
+  "chapter": 1,
+  "title": "IT Foundations & Troubleshooting Methodology",
+  "exam_objectives": [
+    "5.1",
+    "5.2"
+  ],
+  "coverage": "COVERED",
+  "domain": "troubleshooting",
+  "domain_label": "Troubleshooting",
+  "sections": [
+    {
+      "title": "What It Support Actually Is",
+      "content": "Let's start with the job itself, because there is a significant gap between what people expect IT support to be and what it actually is.\nAt the entry level, you will see titles like IT Support Specialist, Help Desk Technician, or Tier-One Support. These are your first-line troubleshooters. The job covers hardware problems, software installations, network connectivity issues, user account management, and basic security incidents â€” often in the same shift.\nYou are not just fixing problems. You are training users. You are documenting solutions. You are assessing when a problem exceeds your scope and escalating it appropriately. You are the bridge between end users and the rest of the IT organization.\nTier-One support gets a bad reputation in some circles, but it is where technical knowledge meets real-world pressure, and where the habits that define a long IT career get established. The technicians who treat it seriously build skills that compound over time. The ones who coast through it hit a ceiling early.\nThe A+ certification is the industry standard validation for this role. CompTIA designed it to cover what a first-year technician actually needs to know â€” hardware, software, networking, security, troubleshooting. That is what this series covers.\n---",
+      "exam_tips": [
+        "Tier-One is the first point of contact; escalation to higher tiers is a defined step in the troubleshooting process."
+      ]
+    },
+    {
+      "title": "The Four Core Skills",
+      "content": "CompTIA and the broader IT industry agree on four core skills for IT support. These are not soft suggestions â€” they are what separates technicians who advance from those who stagnate.\nPROBLEM-SOLVING.\nThis is the most critical skill in IT. Problem-solving is not random trial and error. It is systematic: identify the issue, gather information, form a hypothesis, test it, revise if wrong, and document what worked. We will build this skill explicitly in the troubleshooting methodology section.\nCOMMUNICATION.\nYou will explain technical problems to non-technical people every single day. You will also communicate with engineers, vendors, and management. The ability to adjust your language to your audience â€” to be precise when precision is needed and plain when clarity is needed â€” is what makes information actually land.\nClear communication also prevents repeat problems. If a user understands why their account locked, they are less likely to trigger it again. If they do not, you are getting the same ticket next week.\nORGANIZATION.\nA disorganized technician loses track of open tickets, misplaces tools, forgets follow-ups, and fails to document fixes. All of that costs time â€” yours and the organization's. Organized technicians close more tickets, make fewer mistakes, and have a knowledge base to reference when a problem recurrs.\nTECHNICAL KNOWLEDGE.\nThis is what the A+ exam measures. Hardware, software, networking, security. Every chapter in this series builds your technical knowledge for the Core 1 exam. But technical knowledge alone does not make a good technician. It is the foundation. The other three skills are what you build on top of it.\n---",
+      "exam_tips": [
+        "CompTIA tests the ORDER of these steps. Memorize the sequence exactly."
+      ]
+    },
+    {
+      "title": "The Comptia Seven-Step Troubleshooting Methodology",
+      "content": "This is the most exam-critical section in this entire chapter. CompTIA will test you on the troubleshooting process â€” specifically the order of these steps and what each one requires. Memorize the sequence.\nSTEP 1: IDENTIFY THE PROBLEM.\nBefore you touch anything, gather information. Talk to the user. Find out what is happening, what changed recently, what the scope of the impact is. If multiple users are affected, that narrows your focus immediately.\nAsk specific questions: When did this start? Did anything change before it happened? Is anyone else experiencing this? Has it happened before? These questions are not small talk. They are diagnostic data.\nIf data is at risk â€” if you are dealing with a storage issue, a failing drive, or any situation where user data could be lost â€” perform a backup before you take any action. This is explicitly part of step one and the exam tests it.\nSTEP 2: ESTABLISH A THEORY OF PROBABLE CAUSE.\nNow you form your hypothesis. Start with the simplest, most obvious explanation. Resist complexity. The majority of IT problems have straightforward causes â€” loose cables, wrong passwords, software that needs updating, settings that were changed.\nThe phrase \"question the obvious\" is CompTIA's way of saying: check the easy things first. Is it plugged in? Is the service running? Is the correct input selected? These sound basic, but skipping them wastes time.\nResearch is part of this step. Look up error messages, consult vendor documentation, check internal knowledge bases. You are not expected to know everything â€” you are expected to know how to find answers.\nSTEP 3: TEST THE THEORY.\nNow you validate or eliminate your hypothesis. Run diagnostics. Make a targeted change and observe the result.\nIf your theory is confirmed â€” you found the cause â€” move to step four. If the theory is eliminated, return to step two and form a new hypothesis. You may cycle through steps two and three multiple times before identifying the root cause. That is normal and expected.\nSTEP 4: ESTABLISH A PLAN OF ACTION.\nOnce you know what is wrong, you plan the fix before implementing it. This step involves assessing the impact of your solution. Will the fix require downtime? Will it affect other users or systems? Will it cost money?\nIf the problem is beyond your expertise or your authorization, escalate here. Escalation is not failure â€” it is correct use of the organization's resources. Escalating at step four is far better than implementing a wrong fix at step five.\nIf company policy requires approval before changes are made â€” and in many organizations it does â€” you get that authorization in this step.\nSTEP 5: IMPLEMENT THE SOLUTION OR ESCALATE.\nNow you act. Repair, replace, or apply a workaround. Work systematically â€” one change at a time when possible, so you know what worked. Shotgun troubleshooting, where you change multiple things simultaneously, makes it impossible to identify the actual cause.\nIf escalation is necessary, hand off clearly. Provide all gathered information, the theories you tested, the steps you already took, and the results. Do not make the next technician start from zero.\nSTEP 6: VERIFY FULL FUNCTIONALITY.\nDo not stop at confirming the original symptom is gone. Test the entire system. Confirm that your fix did not introduce a new problem. Have the user verify that everything they need is working.\nThis step is often skipped under time pressure, and it is the reason so many tickets get reopened. Full verification is the difference between a closed ticket and a resolved problem.\nSTEP 7: DOCUMENT FINDINGS AND PREVENTIVE MEASURES.\nLog the problem, the cause, the solution, and any preventive measures taken or recommended. This documentation serves multiple purposes.\nIt creates a knowledge base for future incidents. It protects you professionally â€” if a question arises about what was done, you have a record. It also enables pattern detection. If the same issue is recurring across multiple tickets, documentation makes that visible.\nImplement preventive measures where possible. If the problem was caused by outdated firmware, schedule regular firmware reviews. If it was caused by user error, schedule training. Prevention is always cheaper than repair.\n---",
+      "exam_tips": [
+        "Performing a backup is explicitly part of Step 1, not an afterthought."
+      ]
+    },
+    {
+      "title": "Problem Categories",
+      "content": "One practical skill that accelerates step two â€” establishing a theory â€” is correctly categorizing the problem before you start investigating.\nHARDWARE problems involve physical components. Something failed, overheated, was damaged, or was not properly seated. Symptoms often include system instability, POST errors, or devices not being recognized. The diagnosis involves physical inspection and hardware diagnostics. The fix often involves replacement.\nSOFTWARE problems involve the operating system, applications, drivers, or configurations. These typically produce error messages and logs. They often affect specific applications rather than the entire system. Updates, reinstallation, configuration changes, and driver rollbacks are common remedies.\nNETWORK problems affect connectivity â€” either to the local network, to the internet, or to specific services. Isolation is the key diagnostic technique: is the problem at the device, the local network, the router, or upstream? Tools like ping and traceroute help localize the fault.\nUSER ERROR is more common than most organizations publicly acknowledge. Misconfigured settings, forgotten passwords, misuse of software. The fix often involves education rather than technical repair â€” and that education needs to be delivered without condescension.\nCorrect categorization tells you what diagnostic tools to reach for, what logs to examine, and what expertise you need. It is the fastest path from symptom to root cause.\n---",
+      "exam_tips": [
+        "Escalation happens at Step 4, after testing the theory, not before.",
+        "Correctly categorizing a problem before theorizing saves diagnostic time and is implicitly tested through scenario questions."
+      ]
+    }
+  ],
+  "concept_cards": [
+    {
+      "hook": "Most people think IT is just fixing printers. The actual job description covers everything from hardware failures to security incidents to training end users â€” often in the same afternoon.",
+      "concept": "THE ROLE OF AN IT SPECIALIST",
+      "summary": "IT support specialists are the first line of defense when technology breaks down in an organization. The role is broader than most people expect."
+    },
+    {
+      "hook": "Random troubleshooting wastes time and breaks things. CompTIA has a seven-step model that turns chaos into a repeatable process â€” and it shows up directly on the exam.",
+      "concept": "THE COMPTIA TROUBLESHOOTING METHODOLOGY",
+      "summary": "The CompTIA troubleshooting methodology is a structured, seven-step process. Every A+ technician needs to know these steps in order."
+    },
+    {
+      "hook": "Before you can solve a problem, you need to know what kind of problem you are dealing with. Misclassifying the category wastes time and takes you down the wrong path.",
+      "concept": "CATEGORIZING PROBLEMS IN IT TROUBLESHOOTING",
+      "summary": "Every IT problem falls into one of four categories: hardware, software, network, or user error. Hardware problems involve physical components."
+    },
+    {
+      "hook": "A technician who can solve any problem but cannot explain the fix is only half as effective as one who can do both.",
+      "concept": "SOFT SKILLS IN IT SUPPORT",
+      "summary": "Technical knowledge gets you hired. Soft skills determine whether you stay."
+    },
+    {
+      "hook": "Let's start with the job itself, because there is a significant gap between what people expect IT support to be and what it actually is.",
+      "concept": "What It Support Actually Is",
+      "summary": "Let's start with the job itself, because there is a significant gap between what people expect IT support to be and what it actually is. At the entry level, you will see titles like IT Support Specialist, Help Desk Technician, or Tier-One Support. These are your first-line troubleshooters."
+    },
+    {
+      "hook": "CompTIA and the broader IT industry agree on four core skills for IT support.",
+      "concept": "The Four Core Skills",
+      "summary": "CompTIA and the broader IT industry agree on four core skills for IT support. These are not soft suggestions â€” they are what separates technicians who advance from those who stagnate. PROBLEM-SOLVING."
+    },
+    {
+      "hook": "One practical skill that accelerates step two â€” establishing a theory â€” is correctly categorizing the problem before you start investigating.",
+      "concept": "Problem Categories",
+      "summary": "One practical skill that accelerates step two â€” establishing a theory â€” is correctly categorizing the problem before you start investigating. HARDWARE problems involve physical components. Something failed, overheated, was damaged, or was not properly seated."
+    }
+  ],
+  "practice_questions": [
+    {
+      "q": "A PC randomly freezes and throws BSODs. Running Memtest86+ shows errors. What component should be replaced?",
+      "options": [
+        "The hard drive — run chkdsk /r to confirm before replacing",
+        "The RAM (memory modules) — Memtest86 errors directly indicate faulty memory",
+        "The CPU — Memtest86 errors indicate processor arithmetic failures",
+        "The power supply — voltage irregularities cause Memtest86 to report errors"
+      ],
+      "answer": 1,
+      "explanation": "Memtest86 tests RAM by writing and reading patterns across all memory addresses. Errors confirm defective RAM modules. The fix is to replace the faulty stick(s), identified by testing one module at a time in different slots."
+    },
+    {
+      "q": "What diagnostic device displays POST codes on a small LED panel and is installed in a PCI or PCIe slot?",
+      "options": [
+        "Multimeter",
+        "USB diagnostic dongle",
+        "BIOS display screen",
+        "POST diagnostic card"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "After a BIOS update fails and the system will not POST, what recovery option do some motherboards provide?",
+      "options": [
+        "Restore from Windows Recovery Environment",
+        "Dual BIOS or BIOS recovery using a USB flash drive with the correct firmware file",
+        "Replace the CPU",
+        "Clear RAM slots and restart"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What Windows tool tests RAM for errors and can be launched from the Start menu?",
+      "options": [
+        "chkdsk",
+        "sfc /scannow",
+        "Windows Memory Diagnostic (mdsched.exe)",
+        "Device Manager"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "What does a BSOD stop code help a technician identify?",
+      "options": [
+        "Hard drive serial number",
+        "Network configuration details",
+        "Windows license key information",
+        "The specific error type and often the failed driver or component causing the crash"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A user gets \"No bootable device\" at startup. The FIRST things to check are:",
+      "options": [
+        "RAM seating",
+        "Boot order in BIOS and whether the boot drive is detected",
+        "GPU installation",
+        "Network cable connection"
+      ],
+      "answer": 1,
+      "explanation": ""
+    },
+    {
+      "q": "What Windows utility checks and attempts to repair hard drive file system errors and bad sectors?",
+      "options": [
+        "sfc",
+        "defrag",
+        "diskpart",
+        "chkdsk"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "Which RAID level can survive the simultaneous failure of two drives?",
+      "options": [
+        "RAID 6",
+        "RAID 5",
+        "RAID 1",
+        "RAID 10"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "What diagnostic feature monitors hard drive health using internal drive statistics such as reallocated sectors?",
+      "options": [
+        "Device Manager errors",
+        "chkdsk /r only",
+        "S.M.A.R.T. (Self-Monitoring, Analysis and Reporting Technology) via tools like CrystalDiskInfo",
+        "Windows Defender scan"
+      ],
+      "answer": 2,
+      "explanation": ""
+    },
+    {
+      "q": "A newly installed NVMe SSD is not detected in BIOS. What should be checked?",
+      "options": [
+        "OS version compatibility",
+        "Antivirus software blocking detection",
+        "Windows Disk Management only",
+        "Physical seating in the M.2 slot, BIOS M.2 slot enablement, and correct slot type for NVMe vs SATA"
+      ],
+      "answer": 3,
+      "explanation": ""
+    },
+    {
+      "q": "A user wants to clone their current HDD to a new SSD. What type of tool is used?",
+      "options": [
+        "Disk cloning software such as Clonezilla or Macrium Reflect",
+        "diskpart command only",
+        "Windows Backup and Restore only",
+        "chkdsk utility"
+      ],
+      "answer": 0,
+      "explanation": ""
+    },
+    {
+      "q": "According to the CompTIA troubleshooting methodology, at which step should escalation occur if a problem exceeds a technician's expertise?",
+      "options": [
+        "Step 2 - Establish a Theory of Probable Cause",
+        "Step 3 - Test the Theory",
+        "Step 4 - Establish a Plan of Action",
+        "Step 6 - Verify Full Functionality"
+      ],
+      "answer": 2,
+      "explanation": "Escalation occurs at Step 4 - Establish a Plan of Action. By this point the technician has gathered data and tested a theory. If the fix is beyond their authorization or expertise, they escalate here before attempting an implementation that could cause further damage."
+    },
+    {
+      "q": "During Step 1 of the CompTIA troubleshooting methodology, when must a backup be performed?",
+      "options": [
+        "Always, before touching any system",
+        "Only after identifying the root cause",
+        "When data is at risk due to a storage issue or situation where data could be lost",
+        "Only on servers, not workstations"
+      ],
+      "answer": 2,
+      "explanation": "The backup requirement in Step 1 is specifically triggered when data is at risk - for example, a failing drive or storage-related issue. The exam tests that this backup step is part of Identify the Problem, not a separate pre-step."
+    },
+    {
+      "q": "A user reports that their application crashes every time they open a specific file. No other users are affected. Which problem category BEST describes this issue?",
+      "options": [
+        "Hardware - the storage drive is failing",
+        "Network - the file is on a network share",
+        "Software - the issue is isolated to an application or configuration",
+        "User error - the user is opening the wrong file"
+      ],
+      "answer": 2,
+      "explanation": "When a problem is isolated to a specific application and does not affect other users or the full system, it falls in the software category. Software problems typically affect specific applications rather than the entire system and usually produce error messages and logs."
+    },
+    {
+      "q": "What is the FINAL step of the CompTIA seven-step troubleshooting methodology?",
+      "options": [
+        "Verify Full System Functionality",
+        "Implement the Solution",
+        "Document Findings, Actions, and Outcomes and Implement Preventive Measures",
+        "Escalate to the Next Tier"
+      ],
+      "answer": 2,
+      "explanation": "Step 7 is Document Findings, Actions, Outcomes, and Implement Preventive Measures. Documentation creates a knowledge base for future incidents, protects the technician professionally, and enables pattern detection across multiple tickets."
+    },
+    {
+      "q": "At which step in the CompTIA troubleshooting methodology should you escalate the problem if you cannot resolve it?",
+      "options": [
+        "Step 2 — Establish a theory of probable cause",
+        "Step 4 — Establish a plan of action and implement the solution",
+        "Step 5 — Verify full system functionality",
+        "Step 6 — Document findings, actions, and outcomes"
+      ],
+      "answer": 1,
+      "explanation": "Escalation occurs at Step 4 when the technician determines a solution is beyond their authorization or skill level. After establishing a plan, if implementation is not feasible, the problem is escalated to the next tier."
+    },
+    {
+      "q": "A user reports that an application crashes only when they are logged in, but works fine for other users on the same machine. Which problem category does this most likely indicate?",
+      "options": [
+        "Hardware failure",
+        "Network configuration error",
+        "User profile or software configuration issue",
+        "Operating system kernel failure"
+      ],
+      "answer": 2,
+      "explanation": "A problem that is specific to one user account but not others on the same machine points to the user profile or per-user software configuration rather than hardware or OS-level issues."
+    },
+    {
+      "q": "Why should a technician always ask the customer 'What has changed recently?' early in the troubleshooting process?",
+      "options": [
+        "To determine the customer's technical skill level",
+        "Because recent changes are the most common cause of newly introduced problems",
+        "To decide whether to escalate immediately",
+        "To document the warranty status of the device"
+      ],
+      "answer": 1,
+      "explanation": "Recent changes (software installs, updates, configuration changes, new hardware) are among the most common root causes of newly appearing problems. Identifying recent changes often points directly to the cause."
+    },
+    {
+      "q": "Which step in the CompTIA troubleshooting methodology involves verifying that the fix worked and that no new problems were introduced?",
+      "options": [
+        "Step 3 — Test the theory to determine cause",
+        "Step 4 — Establish a plan of action",
+        "Step 5 — Verify full system functionality and implement preventive measures",
+        "Step 6 — Document findings"
+      ],
+      "answer": 2,
+      "explanation": "Step 5 is Verify Full System Functionality. After implementing the solution, the technician confirms the original problem is resolved and checks that no new issues were introduced by the fix."
+    },
+    {
+      "q": "Which step in the CompTIA troubleshooting methodology requires documenting findings, actions taken, and outcomes after a repair is complete?",
+      "options": [
+        "Step 3 — Test the theory to determine the cause",
+        "Step 5 — Implement the solution or escalate",
+        "Step 6 — Verify full system functionality and implement preventive measures",
+        "Step 7 — Document findings, actions, and outcomes"
+      ],
+      "answer": 3,
+      "explanation": "Step 7 of the CompTIA methodology is to document findings, actions, and outcomes. This creates a knowledge base for future reference, tracks recurring issues, and fulfills any organizational or compliance requirements."
+    }
+  ]
+}
