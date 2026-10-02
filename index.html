@@ -124,8 +124,8 @@ section .sub{color:var(--faint);margin-bottom:30px;font-size:15px}
 .vmark b{font:800 20px 'Space Grotesk',sans-serif;color:#F4F1E6;letter-spacing:.02em}
 .vmark b span{color:#00d4a8}
 .live{margin-left:auto;font:600 12px 'JetBrains Mono',monospace;color:#00d4a8;letter-spacing:.08em;display:flex;align-items:center;gap:8px}
-.live::before{content:'';width:8px;height:8px;border-radius:50%;background:#00d4a8;box-shadow:0 0 10px #00d4a8;animation:blink 2s infinite}
-@keyframes blink{50%{opacity:.35}}
+.live::before{content:'';width:8px;height:8px;border-radius:50%;background:#00d4a8;box-shadow:0 0 10px #00d4a8;animation:livepulse 2s infinite}
+@keyframes livepulse{50%{opacity:.35}}
 .venture h3{font-size:clamp(28px,4vw,40px);color:#F4F1E6;margin:22px 0 8px;letter-spacing:-.02em}
 .venture h3 em{font-style:normal;color:#00d4a8}
 .venture .vsub{color:var(--dim);max-width:640px;font-size:15.5px}
@@ -209,10 +209,10 @@ details.more[open] summary::before{content:'\2212 '}
      practical tools — including <b>Vectoral Labs</b>, my DFW tech &amp; automation service, and <b>Steady Systems</b>,
      a growing line of productivity and study templates.</p>
   <div class="btnrow">
-    <a class="btn primary" href="#shop">Browse Steady Systems</a>
-    <a class="btn teal" href="#vectoral">Explore Vectoral Labs</a>
-    <a class="btn ghost" href="assets/Jordan-Dorman-Resume.pdf" target="_blank" rel="noopener">Download résumé</a>
+    <a class="btn primary" href="assets/Jordan-Dorman-Resume.pdf" target="_blank" rel="noopener">Download résumé</a>
     <a class="btn ghost" href="#contact">Get in touch</a>
+    <a class="btn teal" href="#vectoral">Explore Vectoral Labs</a>
+    <a class="btn ghost" href="#shop">Browse Steady Systems</a>
   </div>
 </div></header>
 
