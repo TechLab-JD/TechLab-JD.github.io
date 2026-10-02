@@ -1,0 +1,167 @@
+{
+ "core": 3,
+ "chapter": 4,
+ "title": "Identity & Access Management",
+ "exam_objectives": [
+  "4.6"
+ ],
+ "coverage": "COVERED",
+ "domain": "d4",
+ "domain_label": "Security Operations",
+ "sections": [
+  {
+   "title": "Authentication",
+   "content": "AUTHENTICATION DESIGN\nAuthentication — verifying that only the account holder can use the account (vs. identity proofing, which verifies who they are at account creation).\nDesign must balance:\nCIA Property | What It Means for Authentication\nConfidentiality | Leaked credentials let a threat actor impersonate the account holder\nIntegrity | Mechanism must resist bypass/counterfeit credentials\nAvailability | Authentication must not impede workflow or be too hard to use\nSOMETHING YOU KNOW (KNOWLEDGE FACTOR)\n• Password — secret known only to account holder\n• Passphrase — longer, multi-word password; more secure and easier to remember\n• PIN — numeric or any-character code, valid for a single device only\nPASSWORD POLICY CONTROLS\nPolicy | Purpose\nPassword Length | Minimum (sometimes maximum) character count\nPassword Complexity | Requires mixed case/numeric/non-alphanumeric, no username in password\nPassword Age | Forces new password after N days\nPassword Reuse/History | Blocks reselecting recent passwords; minimum age stops rapid cycling back to a preferred password\nAging vs. Expiration — aging: old password still works briefly but forces an immediate change; expiration: old password stops working, account disabled until reset.\nNIST SP 800-63B now deprecates complexity rules, forced aging, and password hints as best practice.\nPassword Managers — mitigate password reuse across sites:\n• User picks a manager (Windows Credential Manager, iCloud Keychain, or third-party plug-in)\n• Vault secured with a master password (often cloud-synced)\n• Manager generates random passwords per site's policy\n• Manager validates site identity via certificate before autofilling\nRisks: weak master password, vendor cloud compromise, spoofed-site autofill tricks.\nMULTIFACTOR AUTHENTICATION (MFA) FACTORS\nFactor | Description\nSomething You Have (ownership) | Smart card, key fob, smartphone generating/receiving a token\nSomething You Are (biometric/inherence) | Physiological (fingerprint, face) or behavioral (gait) identifiers\nSomewhere You Are (location) | Geographic/IP/VLAN/port-based; used for continuous auth or access control, not primary auth\n2FA = exactly two distinct factor types (e.g., password + smart card). Two knowledge factors (PIN + DOB) is not MFA.\nBIOMETRIC AUTHENTICATION\nEnrollment: sensor acquires sample → feature extraction module builds a template (mathematical representation) → later scans compared against it.\nMetric | Meaning\nFRR (False Rejection Rate / Type I / FNMR) | Legitimate user wrongly rejected\nFAR (False Acceptance Rate / Type II / FMR) | Impostor wrongly accepted — usually the more serious error\nCER (Crossover Error Rate) | Point where FRR = FAR; lower CER = more efficient/reliable system\nThroughput | Time to enroll + time to authenticate; critical for high-traffic sites\nFER (Failure to Enroll Rate) | Template could not be created for a user\nCost/Implementation | Scanner cost, mobile feasibility, privacy intrusiveness, accessibility for disabled users\nFingerprint — cheapest, most common, nonintrusive; degraded by moisture/dirt. Facial recognition — measures facial geometry; optical + infrared to defeat photo spoofing.\nHARD AUTHENTICATION TOKENS\nGenerated within a secure cryptoprocessor; token itself is never transmitted.\nType | How It Works\nCertificate-Based Authentication | Supplicant holds private key, signs a unique token; verified via public key; needs PKI\nOTP (One-Time Password) | Hash of shared secret + sync seed (timestamp = TOTP, counter/HMAC = HOTP); single-use\nFIDO U2F | Public/private key pair per account; no shared secret, no PKI needed\nDevice forms: smart cards (cert + private key + PIN, contact/NFC), OTP fobs (standalone, no computer interface), security keys (portable HSM, USB/NFC, may need PIN or fingerprint backup).\nSimple static-code fobs/cards (e.g., building entry cards) are vulnerable to cloning and replay attacks.\nSOFT AUTHENTICATION TOKENS\n• SMS/email OTP — really \"two-step verification,\" not true MFA (not an ownership factor); vulnerable to interception\n• Authenticator app — registered via QR code/shared secret; unlocked by device credential; lower interception risk but shared-device malware risk remains\nPASSWORDLESS AUTHENTICATION (FIDO2/WEBAUTHN)\n• User picks a roaming authenticator (security key) or platform authenticator (Windows Hello, Face ID/Touch ID)\n• Local gesture (fingerprint/face/PIN) confirms presence — validated only locally\n• User registers with a relying party; authenticator generates a public/private key pair per relying party\n• Challenge → private key signs confirmation → sent to relying party\n• Relying party verifies with the public key\nAttestation — mechanism (FIDO key, TPM) proves it's a genuine root of trust; identifies brand/model only, never a unique individual (privacy protection).",
+   "exam_tips": []
+  },
+  {
+   "title": "Authorization",
+   "content": "DISCRETIONARY VS. MANDATORY ACCESS CONTROL\nModel | Basis | Notes\nDAC (Discretionary) | Resource owner controls the ACL | Most flexible, most common (default in UNIX/Linux/Windows) — also weakest, hardest to centrally enforce, vulnerable to insider threats\nMAC (Mandatory) | Security clearance labels/classifications | Nondiscretionary — rules can't be changed by any subject; often adds compartments (e.g., Secret + HR); enforces \"write up, read down\" (can't republish at a lower clearance)\nROLE- AND ATTRIBUTE-BASED ACCESS CONTROL\nModel | Basis\nRBAC (Role-Based) | Permissions tied to job-function roles; principals gain rights implicitly via role assignment, not explicit grants\nSecurity Groups | Discretionary approximation of RBAC — admin-assigned group membership, not system-determined\nABAC (Attribute-Based) | Most fine-grained — combines subject/object/context attributes (OS, IP, patch status, time, location); supports M-of-N control, separation of duties\nRule-Based Access Control | Any model enforced by system rules rather than users (RBAC, ABAC, MAC all qualify); e.g., conditional access (UAC, sudo)\nLEAST PRIVILEGE\nPrinciple of Least Privilege (PoLP) — minimum sufficient rights for the task. Design phase analyzes workflows to set roles/permissions.\n• Too restrictive → support burden, lost productivity\n• Too permissive → malware/breach risk\n• Authorization creep — rights accumulate over time (direct grants or group additions) without being revoked; controlled via ongoing auditing\nUSER ACCOUNT PROVISIONING\nStep | Purpose\nIdentity Proofing | Verify identity via documents/records; may include background check\nIssuing Credentials | User selects password / enrolls biometric or token\nIssuing Hardware/Software | Prevents shadow IT from inadequate resourcing\nTeaching Policy Awareness | Security training, personal-use policy\nCreating Permissions Assignment | Map work role to RBAC/MAC/ABAC rights; flag privileged accounts for monitoring\nDeprovisioning — remove roles/groups on termination/project end; disable then delete, or delete immediately.\nAccount = unique SID + name + credential + profile (attributes, home folder, app settings). Windows access policies configured via GPOs, linked to sites/domains/OUs.\nACCOUNT RESTRICTIONS\nLocation-Based:\n• IP address / subnet / VLAN / OU restricts logical location\n• Geolocation: IP-to-map lookup (via ISP registrant data, e.g. GeoIP) or location services (GPS/cell/Wi-Fi/Bluetooth triangulation)\nTime-Based:\nPolicy | Effect\nTime-of-day restrictions | Authorized login hours only\nDuration-based login | Max session length\nImpossible travel time / risky login | Flags logins geographically infeasible within the elapsed time\nTemporary permissions | Auto-removes role/group membership after a set period\nPRIVILEGED ACCESS MANAGEMENT (PAM)\nPrivileged account — can reconfigure hosts, disable security controls, manage infrastructure/apps/databases.\n• Restrict number of admin accounts (fewer = smaller attack surface); never share/use default accounts (kills accountability)\n• SAW (Secure Administrative Workstation) — minimal-app, low-attack-surface machine for privileged sign-in\nJust-in-Time (JIT) / Zero Standing Privileges (ZSP) models — elevated rights not standing, granted only on request:\nModel | Mechanism\nTemporary Elevation | UAC / sudo — time-limited elevation\nPassword Vaulting/Brokering | Credential \"checked out\" from a repository with logged justification; supports M-of-N approval\nEphemeral Credentials | Account generated/enabled for the task, then destroyed/disabled\nApplies to human admins and service accounts.",
+   "exam_tips": []
+  },
+  {
+   "title": "Identity Management",
+   "content": "LOCAL AUTHENTICATION\nPasswords stored as cryptographic hashes, never plaintext, to limit compromise risk.\nOS | Mechanism\nWindows local sign-in | LSASS compares hash to SAM database (registry) — \"interactive logon\"\nWindows network sign-in | LSASS → AD domain controller, via Kerberos (preferred) or legacy NTLM\nWindows remote sign-in | Via VPN, enterprise Wi-Fi, or web portal\nLinux local | Account names in /etc/passwd, password hash in /etc/shadow\nLinux network | SSH, optionally using cryptographic keys instead of password\nPAM (Pluggable Authentication Module) | Linux framework enabling alternate providers (smart card, network directory)\nDIRECTORY SERVICES\nDirectory service — stores users/computers/groups/services as objects with attributes defined by a schema; most based on LDAP (from X.500 standard).\nDistinguished Name (DN) — unique identifier built from attribute-value pairs, most-specific first (the relative distinguished name).\nAttribute | Meaning\nCN | Common Name\nOU | Organizational Unit\nO | Organization\nC | Country\nDC | Domain Component\nExample: CN=WIDGETWEB, OU=Marketing, O=Widget, C=UK, DC=widget, DC=foo\nKERBEROS SSO\nSingle Sign-On (SSO) — authenticate once, get authorization across compatible servers without re-entering credentials.\nKerberos — SSO protocol built on a Key Distribution Center (KDC) with two services: Authentication Service (AS) and Ticket Granting Service (TGS). Users/services are collectively principals.\nAuthentication phase:\n• Principal requests a TGT (Ticket Granting Ticket) from the AS, encrypting timestamp with password hash\n• AS validates and responds with the TGT (encrypted with KDC's secret key) + a TGS session key (encrypted with user's password hash)\nAuthorization phase:\n• Principal sends TGS its TGT + target server name + an authenticator (time-stamped, encrypted with TGS session key)\n• TGS responds with a Service session key + a Service ticket (info about principal, encrypted with the app server's secret key)\n• Principal forwards the service ticket + a new authenticator to the application server\n• Server decrypts, validates, may echo back the timestamp (encrypted w/ service session key) for mutual authentication (defeats on-path attacks)\n• Server responds to requests per its ACL\nDrawback: KDC is a single point of failure — mitigated with multiple domain controllers.\nFEDERATION\nFederation — trusting accounts managed by a different (partner/external) network, avoiding the need to manage those accounts locally.\nClaims-based identity flow:\n• Principal accesses a Service Provider (SP) → redirected to an Identity Provider (IdP)\n• Principal authenticates with IdP, receives a signed claim (token)\n• Principal presents claim to SP; SP trusts IdP's signature\n• SP maps the authenticated principal to its own permissions/attributes\nProtocol | Key Facts\nSAML (Security Assertion Markup Language) | XML-based claims; transported via HTTP/HTTPS + SOAP; signed with XML signature spec; example: AWS as SAML service provider\nOAuth (Open Authorization) | For RESTful APIs; user (resource owner) grants an OAuth client limited access without sharing password; resource server hosts user data, authorization server issues tokens; client registers with an ID (public) + secret (confidential) + redirect URL; uses JWT (JSON Web Token, Base64-encoded, digitally signable) for claims",
+   "exam_tips": []
+  },
+  {
+   "title": "Key Takeaways",
+   "content": "• Assess CIA requirements for the authentication context (private network, public web, VPN gateway, physical site).\n• Determine whether MFA or passwordless authentication is required, and select ownership (smart card, OTP fob/key, authenticator app), biometric (evaluated by FAR/FRR/CER/speed/accessibility), or two-step verification (SMS/call/email/push) methods; consider password managers for stronger password-based auth.\n• Choose an access control model — discretionary, mandatory, role-based, or attribute-based — accounting for whether scope includes federated on-premises/cloud services.\n• Configure accounts/roles/resources using the principle of least privilege.\n• Configure account policies: credential policies (secure password selection, standard vs. privileged accounts) and conditional access based on location/time.\n• Establish secure provisioning procedures for issuing digital identities and credentials.\n• Establish deprovisioning procedures to remove access when employees/contractors leave.\n• Implement SAML or OAuth to enable SSO between on-premises networks and cloud services/applications.",
+   "exam_tips": []
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "An authentication mechanism that allows a user to present a smart card to operate an entry system.",
+   "concept": "access badge",
+   "summary": "Objective 4.6"
+  },
+  {
+   "hook": "Policy that prevents access to an account under certain conditions, such as excessive failed authentication attempts.",
+   "concept": "account lockout",
+   "summary": "Objective 4.6"
+  },
+  {
+   "hook": "Tracking authorized usage of a resource or use of rights by a subject and alerting when unauthorized use is detected or attempted.",
+   "concept": "accounting",
+   "summary": "Objective 4.6"
+  },
+  {
+   "hook": "Access control technique evaluating a set of attributes each subject possesses.",
+   "concept": "attribute-based access control",
+   "summary": "Objective 4.6"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "Creating accounts for a new employee with the access their role needs is called:",
+   "options": [
+    "Federation",
+    "Attestation",
+    "Provisioning",
+    "Deprovisioning"
+   ],
+   "answer": 2,
+   "explanation": "Provisioning sets up identities and access."
+  },
+  {
+   "q": "When an employee leaves, their accounts are disabled the same day. What is this?",
+   "options": [
+    "Single sign-on",
+    "Provisioning",
+    "Privilege escalation",
+    "Deprovisioning"
+   ],
+   "answer": 3,
+   "explanation": "Deprovisioning removes access promptly."
+  },
+  {
+   "q": "One login lets a user reach email, HR and file storage without signing in again. What is this?",
+   "options": [
+    "Single sign-on (SSO)",
+    "Multifactor authentication",
+    "Federation only",
+    "Password vaulting"
+   ],
+   "answer": 0,
+   "explanation": "SSO uses one authentication for many services."
+  },
+  {
+   "q": "A company lets a partner's employees log in to its portal using the partner's own identity system. What is this?",
+   "options": [
+    "Federation",
+    "Provisioning",
+    "Time-based access",
+    "Kerberos only"
+   ],
+   "answer": 0,
+   "explanation": "Federation trusts identities from another organization."
+  },
+  {
+   "q": "Which XML-based standard is commonly used for web SSO between an identity provider and a service provider?",
+   "options": [
+    "SAML",
+    "LDAP",
+    "SNMP",
+    "RADIUS"
+   ],
+   "answer": 0,
+   "explanation": "SAML exchanges authentication assertions."
+  },
+  {
+   "q": "An app asks permission to read a user's calendar from another service without getting the user's password. Which standard is this?",
+   "options": [
+    "SAML assertion only",
+    "Kerberos",
+    "TACACS+",
+    "OAuth"
+   ],
+   "answer": 3,
+   "explanation": "OAuth grants delegated authorization with tokens."
+  },
+  {
+   "q": "Access is granted based on job role, such as 'Nurse' or 'Accountant'. What model is this?",
+   "options": [
+    "Mandatory access control",
+    "Discretionary access control",
+    "Rule-based only",
+    "Role-based access control (RBAC)"
+   ],
+   "answer": 3,
+   "explanation": "RBAC assigns permissions to roles."
+  },
+  {
+   "q": "The owner of a file decides who else can access it. Which access model is this?",
+   "options": [
+    "Discretionary access control (DAC)",
+    "Attribute-based access control",
+    "Mandatory access control",
+    "Role-based access control"
+   ],
+   "answer": 0,
+   "explanation": "DAC lets owners set permissions."
+  },
+  {
+   "q": "Access is determined by security labels such as Secret and Top Secret, which users cannot change. Which model is this?",
+   "options": [
+    "Time-of-day access",
+    "Mandatory access control (MAC)",
+    "RBAC",
+    "DAC"
+   ],
+   "answer": 1,
+   "explanation": "MAC uses labels enforced by the system."
+  },
+  {
+   "q": "Access depends on several characteristics such as department, location and device type. Which model is this?",
+   "options": [
+    "Attribute-based access control (ABAC)",
+    "MAC",
+    "Implicit trust",
+    "DAC"
+   ],
+   "answer": 0,
+   "explanation": "ABAC evaluates many attributes."
+  }
+ ]
+}

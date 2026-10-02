@@ -1,0 +1,153 @@
+{
+ "core": 3,
+ "chapter": 1,
+ "title": "Security Foundations & Controls",
+ "exam_objectives": [
+  "1.2",
+  "1.1"
+ ],
+ "coverage": "COVERED",
+ "domain": "d1",
+ "domain_label": "General Security Concepts",
+ "sections": [
+  {
+   "title": "Security Concepts",
+   "content": "INFORMATION SECURITY (INFOSEC)\nInformation security (infosec) — protection of data resources from unauthorized access, attack, theft, or damage.\nCIA Triad (also called AIC, to avoid confusion with the Central Intelligence Agency):\nProperty | Meaning\nConfidentiality | Information can only be read by people explicitly authorized to access it\nIntegrity | Data is stored/transferred as intended; any modification is authorized\nAvailability | Information is readily accessible to those authorized to view/modify it\nNon-repudiation — a person cannot deny having done something (creating, modifying, sending a resource). Example: a witnessed legal document (a will) provides evidence it was correctly executed.\nCYBERSECURITY FRAMEWORK (NIST)\nCybersecurity = provisioning secure processing hardware/software (a subset of infosec). NIST's five functions:\nFunction | Description\nIdentify | Develop security policies/capabilities; evaluate risks, threats, vulnerabilities; recommend controls\nProtect | Procure/develop, install, operate, decommission IT assets with security embedded at every lifecycle stage\nDetect | Ongoing, proactive monitoring that controls remain effective against new threats\nRespond | Identify, analyze, contain, eradicate threats to systems/data\nRecover | Implement resilience to restore systems/data when other controls fail to prevent attacks\nNIST's is just one example of a cybersecurity framework (CSF) — there are many others.\nGAP ANALYSIS\n• Each security function has associated goals/outcomes, achieved via security controls.\n• Gap analysis — a process identifying how an organization's security systems deviate from those required/recommended by a framework.\n• Performed when first adopting a framework, when meeting new compliance requirements, or periodically to validate changes.\n• Output: overall score per framework section, list of missing/poorly configured controls, remediation recommendations.\n• Often involves third-party consultants (specialist knowledge, external oversight, awareness of new trends).\nACCESS CONTROL AND IAM\nAccess control — governs how subjects/principals (people, devices, software processes) interact with objects (resources: network, server, database, app, file).\nIdentity and Access Management (IAM) — four processes:\nProcess | Function\nIdentification | Creating an account/ID uniquely representing the user, device, or process\nAuthentication | Proving a subject is who/what it claims to be (via an authentication factor, e.g., password, digital certificate)\nAuthorization | Determining and enforcing what rights a subject has on a resource, per an authorization model (discretionary = object owner allocates rights; mandatory = rights are system-enforced, unchangeable by users)\nAccounting | Tracking authorized usage/rights use; alerting on unauthorized use\nCollectively the servers/protocols implementing these are called AAA (authentication, authorization, accounting). These processes apply to both people and systems (e.g., a server must also authenticate itself to clients).",
+   "exam_tips": []
+  },
+  {
+   "title": "Security Controls",
+   "content": "SECURITY CONTROL CATEGORIES\nA security control gives a system/data asset the properties of confidentiality, integrity, availability, and non-repudiation.\nCategory | Description | Examples\nManagerial | Gives oversight of the information system | Risk identification, tools for evaluating/selecting other controls\nOperational | Implemented primarily by people | Security guards, training programs\nTechnical | Implemented as hardware/software/firmware | Firewalls, antivirus, OS access control models\nPhysical | Deters/detects physical access to premises/hardware | Alarms, gateways, locks, lighting, cameras\nNIST uses a different classification scheme (SP 800-53) — be aware it exists but this course uses the four categories above.\nSECURITY CONTROL FUNCTIONAL TYPES\nType | When it Operates | Description | Example\nPreventive | Before an attack | Eliminates/reduces likelihood an attack succeeds | Firewall ACLs, antimalware blocking execution\nDetective | During an attack | Identifies/records an attempted or successful intrusion | Logs\nCorrective | After an attack | Eliminates/reduces impact of a policy violation | Backup restore, patch management\nDirective | N/A | Enforces a rule of behavior (policy, SOP, standard) | Employee contract disciplinary clauses, training/awareness programs\nDeterrent | N/A | Psychologically discourages an attacker (doesn't physically/logically prevent) | Warning signs of legal penalties\nCompensating | N/A | Substitute for a principal/recommended control, same or better protection via different method | Isolating an unsupported system instead of patching it\nSECURITY POLICY\nA security policy is a formalized statement of how security will be implemented within an organization, protecting the CIA triad. An organization with documented policies and framework-based controls has a strong security posture.\nINFORMATION SECURITY ROLES AND RESPONSIBILITIES\nRole | Responsibility\nCIO (Chief Information Officer) | Overall responsibility for IT function; may also own security\nCTO (Chief Technology Officer) | Effective use of new/emerging IT products to achieve business goals\nCSO / CISO (Chief Security/Information Security Officer) | Runs a dedicated security department in larger orgs\nManagers | Responsibility for a domain (e.g., building control, web services, accounting)\nTechnical/specialist staff (e.g., ISSO — Information Systems Security Officer) | Implement, maintain, monitor policy\nNontechnical staff | Comply with policy and relevant legislation\nDirectors/owners | External/legal responsibility (due care, liability)\nNIST's NICE (National Initiative for Cybersecurity Education) framework categorizes cybersecurity job tasks and roles.\nTypical information security competencies:\n• Participate in risk assessments and security testing\n• Specify, source, install, configure secure devices/software\n• Set up/maintain document access control and user privilege profiles\n• Monitor audit logs, review user privileges and access controls\n• Manage security incident response and reporting\n• Create/test business continuity and disaster recovery plans\n• Participate in security training/education\nINFORMATION SECURITY BUSINESS UNITS\nUnit | Function\nSOC (Security Operations Center) | Location where security professionals monitor/protect critical info assets across business functions; typically only feasible for larger orgs (cost/complexity to establish and maintain)\nDevSecOps | Extends DevOps (developer/operations collaboration culture) to embed security specialists at every stage of development/deployment — \"shift left\" (security considered during requirements/planning, not bolted on at the end)\nCIRT / CSIRT / CERT (Computer [Security] Incident Response Team / Computer Emergency Response Team) | Single point of contact for notification of security incidents; may sit under the SOC or stand alone",
+   "exam_tips": []
+  },
+  {
+   "title": "Key Takeaways",
+   "content": "• Create a security mission statement and supporting policies emphasizing the CIA triad (confidentiality, integrity, availability).\n• Assign roles so security tasks/responsibilities are clearly understood and impacts are assessed and mitigated across the organization.\n• Consider creating business units/departments/projects to support the security function (SOC, CIRT, DevSecOps).\n• Identify and assess laws and industry regulations that impose compliance requirements on the business.\n• Select a framework that meets the organization's compliance requirements and business needs.\n• Create a matrix of currently deployed security controls (by category and function); consider additional controls for unmatched capabilities.\n• Perform a gap analysis against framework requirements to identify goals for developing cybersecurity competencies and improving overall information security assurance.",
+   "exam_tips": []
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "Centralized platform verifying identity, assigning permissions, and logging actions for an audit trail.",
+   "concept": "authentication, authorization, and accounting (AAA)",
+   "summary": "Objective 1.2"
+  },
+  {
+   "hook": "In zero trust architecture, functions defining policy and access decisions.",
+   "concept": "control plane",
+   "summary": "Objective 1.2"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "An attacker modifies the amount on a wire transfer while it is in transit. Which part of the CIA triad was violated?",
+   "options": [
+    "Availability",
+    "Non-repudiation",
+    "Integrity",
+    "Confidentiality"
+   ],
+   "answer": 2,
+   "explanation": "Unauthorized modification of data is an integrity failure."
+  },
+  {
+   "q": "A company installs bollards in front of its data center entrance to stop vehicles from ramming the doors. Which control category does this represent?",
+   "options": [
+    "Technical",
+    "Physical",
+    "Operational",
+    "Managerial"
+   ],
+   "answer": 1,
+   "explanation": "Bollards are tangible barriers, so they are physical controls."
+  },
+  {
+   "q": "A sender digitally signs a contract so they cannot later deny having sent it. Which concept does this provide?",
+   "options": [
+    "Availability",
+    "Authorization",
+    "Non-repudiation",
+    "Obfuscation"
+   ],
+   "answer": 2,
+   "explanation": "A digital signature ties the message to the signer's private key, preventing denial."
+  },
+  {
+   "q": "An organization writes a policy requiring annual risk assessments for every business unit. Which control category is this?",
+   "options": [
+    "Technical",
+    "Physical",
+    "Managerial",
+    "Operational"
+   ],
+   "answer": 2,
+   "explanation": "Managerial controls are policies and oversight decisions that govern how security is run."
+  },
+  {
+   "q": "In the AAA framework, which step decides what a user is allowed to do after they log in?",
+   "options": [
+    "Authorization",
+    "Authentication",
+    "Identification",
+    "Accounting"
+   ],
+   "answer": 0,
+   "explanation": "Authorization grants permissions after identity is proven."
+  },
+  {
+   "q": "A security team reviews firewall logs every morning to spot unauthorized connection attempts after they happen. Which control type is this?",
+   "options": [
+    "Detective",
+    "Deterrent",
+    "Corrective",
+    "Preventive"
+   ],
+   "answer": 0,
+   "explanation": "Reviewing logs identifies events that already occurred, which is a detective function."
+  },
+  {
+   "q": "Which element of the AAA framework records what a user did during a session?",
+   "options": [
+    "Authorization",
+    "Attestation",
+    "Accounting",
+    "Authentication"
+   ],
+   "answer": 2,
+   "explanation": "Accounting tracks and logs user activity."
+  },
+  {
+   "q": "After ransomware encrypts a file server, the team restores the data from last night's backup. Which control type did the backup provide?",
+   "options": [
+    "Detective",
+    "Deterrent",
+    "Directive",
+    "Corrective"
+   ],
+   "answer": 3,
+   "explanation": "Corrective controls fix or restore systems after an incident."
+  },
+  {
+   "q": "In a Zero Trust architecture, which component makes the decision to allow or deny an access request?",
+   "options": [
+    "Subject",
+    "Implicit trust zone",
+    "Policy enforcement point",
+    "Policy engine"
+   ],
+   "answer": 3,
+   "explanation": "The policy engine (part of the control plane) decides; the enforcement point carries the decision out."
+  },
+  {
+   "q": "A legacy application cannot support multifactor authentication, so the team places it on an isolated VLAN with strict ACLs instead. What kind of control is the isolation?",
+   "options": [
+    "Preventive only",
+    "Directive",
+    "Deterrent",
+    "Compensating"
+   ],
+   "answer": 3,
+   "explanation": "A compensating control substitutes for a control that cannot be implemented directly."
+  }
+ ]
+}

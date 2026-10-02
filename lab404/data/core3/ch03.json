@@ -1,0 +1,167 @@
+{
+ "core": 3,
+ "chapter": 3,
+ "title": "Cryptography & PKI",
+ "exam_objectives": [
+  "1.4"
+ ],
+ "coverage": "COVERED",
+ "domain": "d1",
+ "domain_label": "General Security Concepts",
+ "sections": [
+  {
+   "title": "Cryptographic Algorithms",
+   "content": "CRYPTOGRAPHIC CONCEPTS\nCryptography (\"secret writing\") — the art of making information secure by encoding it. This is the opposite of security through obscurity (keeping something secret by hiding it — considered high-risk/impossible to rely on for computer systems). With cryptography, it doesn't matter if a third party knows the secret exists, because they can't understand it without the means to decode it.\nTerm | Definition\nPlaintext / cleartext | An unencrypted message\nCiphertext | An encrypted message\nAlgorithm | The process used to encrypt and decrypt a message\nCryptanalysis | The art of cracking cryptographic systems\nCast of characters used to discuss cryptographic attacks:\nCharacter | Role\nAlice | Sender of a genuine message\nBob | Intended recipient of the message\nMallory | Malicious attacker attempting to subvert the message\nThree main types of cryptographic algorithms support CIA + non-repudiation: hashing, symmetric encryption, and asymmetric encryption.\nSYMMETRIC ENCRYPTION\nSubstitution cipher — replaces characters/blocks in plaintext with different ciphertext (e.g., ROT13 rotates each letter 13 places). Transposition cipher — units stay the same, but their order changes (e.g., writing letters in columns, then concatenating rows). Modern algorithms combine both techniques in complex ways.\nSymmetric algorithm — the same secret key both encrypts and decrypts. Used for confidentiality. Process:\n• Alice and Bob agree on a cipher and secret key value in advance, keeping it known to only themselves.\n• Alice encrypts a file with the cipher/key.\n• Alice sends only the ciphertext to Bob.\n• Bob decrypts using his copy of the same key.\n• Very fast — used for bulk encryption of large data.\n• Main weakness: key distribution — how do Alice and Bob securely \"meet\" to exchange the key? If Mallory intercepts the key, security is broken.\n• Symmetric encryption cannot be used for authentication or integrity (Alice and Bob can both produce identical secrets since they share the same key).\nKEY LENGTH\n• Keyspace — the range of possible key values (e.g., ROT13's keyspace is 25: ROT1–ROT25; ROT0/ROT26+ are weak/equivalent keys).\n• Brute force cryptanalysis — trying every possible key value against the ciphertext to find a readable result.\n• Key length — number of bits in a pseudorandomly generated key.\n• AES (Advanced Encryption Standard) — most common symmetric cipher: AES-128 (2^128 keyspace) or AES-256 (2^256 — not \"twice as strong,\" but trillions of times larger and far more brute-force resistant).\n• Trade-off: larger keys require more memory/processor cycles to encrypt/decrypt.\nASYMMETRIC ENCRYPTION\nUses a key pair — related but different public and private keys. A message encrypted with the public key can only be decrypted by the paired private key (impossible to derive the private key from the public key).\nProcess:\n• Bob generates a key pair, keeps the private key secret.\n• Bob publishes his public key; Alice obtains a copy.\n• Alice encrypts her message with Bob's public key.\n• Alice sends the ciphertext to Bob.\n• Bob decrypts with his private key.\n• Mallory may intercept both the ciphertext and the public key, but cannot use the public key to decrypt.\n• Drawback: substantial computing overhead vs. symmetric — inefficient for bulk data. Typically used instead to encrypt a symmetric session key, not the bulk data itself.\nAlgorithm | Key Length for Acceptable Security\nRSA (Rivest, Shamir, Adelman) | 2,048-bit private key\nECC (Elliptic Curve Cryptography) | 256-bit private key ≈ 3,072-bit RSA key security\nHASHING\nA cryptographic hashing algorithm produces a fixed-length string (hash/message digest) from input of any length. Properties: one-way (plaintext cannot be recovered from the digest) and collision-resistant (different inputs unlikely to produce the same output). Hashing proves integrity.\nPassword verification example:\n• Bob stores a digest of Alice's password (not the plaintext).\n• Alice hashes her password at login and sends the digest.\n• Bob compares digests — a match confirms Alice typed the same password.\nFile integrity example:\n• Alice hashes setup.exe and publishes the digest alongside the download link.\n• Bob downloads the file and computes his own hash.\n• Matching hashes confirm the file wasn't tampered with — Mallory can substitute the file but cannot forge the reference hash to match.\nAlgorithm | Output Size | Notes\nSHA (Secure Hash Algorithm) | Varies (SHA256 = 256-bit) | Strongest, most popular variant is SHA256\nMD5 (Message Digest Algorithm #5) | 128-bit | Less safe than SHA256; retained for compatibility with some products\nDIGITAL SIGNATURES\nA single hash function or cipher is a cryptographic primitive; a complete system combining several is a cipher suite.\nCombining asymmetric encryption (authentication) + hashing (integrity) creates a digital signature:\n• Alice hashes a message (e.g., SHA256), then signs the digest with her private key.\n• Alice sends the message + signature to Bob.\n• Bob verifies the signature using Alice's public key, recovering the original hash.\n• Bob independently hashes the received message and compares it to Alice's hash.\n• Matching hashes confirm the data wasn't tampered with and Alice's identity is guaranteed (mismatch reveals tampering or a forged signature).\nStandard | Description\nPKCS#1 | Defines RSA's digital signature use\nDSA (Digital Signature Algorithm) | Uses the ElGamal cipher\nECDSA (Elliptic Curve DSA) | More widely used than DSA today; DSA/ECDSA developed under US government FIPS (Federal Information Processing Standards)",
+   "exam_tips": []
+  },
+  {
+   "title": "Public Key Infrastructure",
+   "content": "CERTIFICATE AUTHORITIES\nPublic Key Infrastructure (PKI) proves that public key owners are who they claim to be. The core problem it solves: a public key alone provides no guarantee of the holder's actual identity.\nA digital certificate — a public assertion of identity, validated by a certificate authority (CA).\nCA Type | Use Case\nPrivate CA | Internal organizational use only; certificates trusted only within the org\nThird-party CA | Public/B2B use, establishing trust between servers and clients (e.g., Comodo, DigiCert, GeoTrust, IdenTrust, Let's Encrypt)\nFunctions of a third-party public CA:\n• Provide certificate services to its user community\n• Validate applicant identity (registration) and ensure certificate validity\n• Establish trust with users, governments, regulators, enterprises\n• Manage repositories storing/administering certificates\n• Perform key/certificate lifecycle management, including revocation\nDIGITAL CERTIFICATES\nA digital certificate wraps a subject's public key plus subject/issuer information, digitally signed by the issuing CA. Based on the X.509 standard (ITU-approved, IETF-standardized); RSA also created PKCS (Public Key Cryptography Standards).\nROOT OF TRUST MODELS\nModel | Description\nRoot certificate | Self-signed certificate a CA issues to itself; RSA 2,048/4,096-bit or ECC equivalent\nSingle CA | One root CA issues certificates directly to users/computers; common on private networks; single point of failure\nHierarchical (third-party) model | Root CA issues certificates to intermediate CAs, which issue to leaf/end entities; supports certificate policies per intermediate CA; verified via certificate chaining / chain of trust to the root\nSelf-signed certificates | Certificate is not issued by a CA; browsers/OS mark as untrusted (user can override); used for consumer router admin interfaces, dev/test — should not protect critical hosts\nCERTIFICATE SIGNING REQUESTS (CSR)\n• Subject generates an asymmetric key pair (chosen cipher/length); keeps the private key protected.\n• Subject submits a CSR — a file with subject info + public key — to the CA.\n• CA reviews/validates the request (e.g., matching FQDN, WHOIS-verified domain admin) and signs the certificate.\nRegistration processes vary: Windows domains can auto-enroll via Active Directory authentication; third-party CAs perform their own identity checks.\nSUBJECT NAME ATTRIBUTES\nField | Description\nCN (Common Name) | Historically the FQDN; now deprecated for identity validation due to inconsistent use\nSAN (Subject Alternative Name) | Structured field for multiple identifier types (FQDNs, IP addresses); browsers should validate SAN over CN when present\nWildcard domain (*.comptia.org) | Certificate valid for all subdomains at a single level, avoiding the need for a new cert per subdomain\nO, OU, L, ST, C | Organization, Organizational Unit, Locality, State, Country — concatenated with CN to form a Distinguished Name (DN)\nOther certificate types: email certificates (SAN = RFC 822 email address), code-signing certificates (verifies software/script publisher; no SAN, but org/locale validated to prevent impersonation of a known company).\nCERTIFICATE REVOCATION\nState | Description\nRevoked | No longer valid; cannot be reinstated\nSuspended | Can be re-enabled (status code: Certificate Hold)\nRevocation reasons: Unspecified, Key Compromise, CA Compromise, Superseded, Cessation of Operation.\nMechanism | Description\nCRL (Certificate Revocation List) | List of revoked/suspended certificates maintained by the CA; includes Publish Period, Distribution Point(s), Validity Period, and a CA Signature. Risk: a certificate could be revoked but still accepted if an up-to-date CRL hasn't propagated\nOCSP (Online Certificate Status Protocol) | Real-time status check for a single certificate instead of downloading a whole CRL; some OCSP responders still depend on CRL publishing intervals\nKEY MANAGEMENT\nKey lifecycle stages:\nStage | Description\nKey Generation | Create an asymmetric pair or symmetric secret key of required strength\nStorage | Prevent unauthorized access, loss, or damage\nRevocation | Prevent use of a compromised key; re-encrypt affected data with a new key\nExpiration and Renewal | Certificates have a \"shelf-life\"; can renew with same or new key pair\nModel | Description\nDecentralized key management | Keys generated/managed on the device/account that uses them; easy to deploy, harder to detect compromise\nCentralized key management | Dedicated key management system/server; devices use KMIP (Key Management Interoperability Protocol) to communicate\nCRYPTOPROCESSORS AND SECURE ENCLAVES\nStoring keys in a general-purpose OS file system has drawbacks:\n• Entropy (disorder) is needed for strong key generation — computers are naturally low-entropy/deterministic. PRNG (pseudo-random number generator, software, still deterministic) vs. TRNG (true random number generator, hardware, uses real-world noise as a nondeterministic seed).\n• File-system keys are only as secure as any other file (vulnerable to credential compromise or physical theft) and hard to fully audit; ideally storage is tamper evident.\nCryptoprocessor Type | Description\nTPM (Trusted Platform Module) | Cryptoprocessor module within a computer/mobile CPU; versions 1.2 and 2.0 (not backward compatible)\nHSM (Hardware Security Module) | Removable/dedicated cryptoprocessor hardware — rack appliance, PCIe card, USB key, or virtual appliance\nVendors certify against FIPS 140-2 Level 2. Cryptoprocessors interact with apps via an API implementing PKCS#11 — key material never leaves the device.\nSecure enclave — mitigates the risk that decrypted data must sit in system RAM for apps to use it. A TEE (Trusted Execution Environment), such as Intel SGX, protects memory-resident data so even root/system-privileged processes can't read it without authorization; locked to specific digitally signed processes.\nKEY ESCROW\nIf a private/secret key is lost or damaged, ciphertext is unrecoverable without a backup — but copies increase compromise risk.\nTerm | Definition\nEscrow | Archiving a key (or key parts) independently with a third party\nM of N control | A quorum (M) of available persons (N) must agree to authorize an operation\nKRA (Key Recovery Agent) | An account with permission to access an escrowed key; requiring 2+ KRAs mitigates impersonation risk",
+   "exam_tips": []
+  },
+  {
+   "title": "Cryptographic Solutions",
+   "content": "ENCRYPTION SUPPORTING CONFIDENTIALITY\nData exists in three states, each needing consideration for cryptographic protection:\nState | Description\nData at rest | In persistent storage media\nData in transit / in motion | Being transmitted over a network\nData in use / in processing | Present in volatile memory (RAM, CPU registers/cache)\nBulk encryption (megabytes/gigabytes) uses a symmetric cipher (e.g., AES) for efficiency — asymmetric ciphers are too slow for large data. Typical hybrid scheme:\n• User generates an asymmetric key pair; the private key portion is encrypted (requires the user's credential) — called the Key Encryption Key (KEK).\n• System generates a symmetric secret key (e.g., AES256) — the Data/media/file Encryption Key (DEK) — to encrypt the target data.\n• The DEK is encrypted using the KEK's public key.\n• To access data: user authenticates → private key decrypts the DEK → DEK decrypts the data.\nDISK AND FILE ENCRYPTION\nLevel | Description\nFull-Disk Encryption (FDE) | Encrypts entire device contents including metadata and free space; protects against physical theft (disk must be unlocked by user credential to expose the decryption key)\nSelf-Encrypting Drive (SED) | Disk firmware performs encryption using an onboard cryptoprocessor, so keys aren't exposed to the mounting OS; can be HDD, SSD, or USB flash drive\nPartition encryption | Selective encryption of logical disk partitions with potentially different keys (e.g., leave boot/system partitions unencrypted, encrypt the data partition)\nVolume encryption | Software-based encryption of a storage resource with a single file system (e.g., BitLocker, FileVault) — may or may not encrypt free space/metadata\nFile encryption | Encrypts individual files/folders; may depend on file system support (e.g., Microsoft EFS requires NTFS)\nNote: metadata (file list, owner, dates) and free/unallocated space (deleted-but-not-erased data remnants) both need consideration in encryption scope. TPM/HSM-compatible products can lock disk/volume/file-system keys to that hardware.\nDATABASE ENCRYPTION\nStructured data (tables/columns/rows) is ultimately stored as files but mediated through a DBMS (e.g., via SQL). Encrypting the underlying disk/volume impacts performance, so encryption is more often DBMS- or plug-in-based.\nLevel | Description\nDatabase/page-level encryption (e.g., SQL Server's TDE — Transparent Data Encryption) | Encrypts/decrypts data as it transfers between disk and memory; protects data and logs on disk\nCell/column encryption | Applied to specific fields; less performance impact but requires identifying which fields need protection. SQL Server's Always Encrypted keeps data encrypted in memory too — decrypted only when the client supplies the key, so the DBA never has plaintext access (separation of duties)\nRecord-level encryption | Each record/row protected by a separate key pair (e.g., per-customer keys in a health insurer's database) — fine-grained access control for compliance\nTRANSPORT ENCRYPTION AND KEY EXCHANGE\nProtects data-in-motion:\nProtocol | Use Case\nWPA (Wi-Fi Protected Access) | Securing wireless network traffic\nIPsec | Securing traffic between two endpoints over a public/untrusted network — used for VPNs\nTLS (Transport Layer Security) | Securing application data (web, email) over a public/untrusted network\nKey exchange via digital envelope:\n• Alice obtains Bob's public key (typically via his digital certificate).\n• Alice encrypts her message with a symmetric session key (e.g., AES).\n• Alice encrypts the session key with Bob's public key.\n• Alice sends both the encrypted session key (\"digital envelope\") and the ciphertext to Bob.\n• Bob decrypts the session key with his private key.\n• Bob uses the session key to decrypt the message.\nIntegrity/authenticity of transport-encrypted messages is checked via HMAC (Hash-based Message Authentication Code — combines the exchanged secret key with a message hash) or an Authenticated Encryption (AE) cipher mode providing both confidentiality and integrity/authenticity together.\nPERFECT FORWARD SECRECY (PFS)\nIn basic digital-envelope key exchange, if a recorded session's server private key is later compromised, past traffic can be decrypted retroactively.\nPFS mitigates this using Diffie-Hellman (D-H) key agreement to create ephemeral session keys without relying on the server's private key — Alice and Bob derive the same shared secret from values exchanged publicly, but Mallory cannot derive the secret from what's exchanged. The server's values are authenticated via digital signature.\nTerm | Description\nDHE (Diffie-Hellman Ephemeral) | PFS via modular arithmetic\nECDHE (Elliptic Curve DHE) | More common modern implementation of PFS\nBenefit: compromising the server key does not expose past recorded sessions, and compromising one session's key doesn't expose other sessions — massively increasing the cryptanalysis effort needed to recover an entire \"conversation.\"\nSALTING AND KEY STRETCHING\nBoth address low entropy in user-generated key material (e.g., passwords, which are short/predictable).\nTechnique | Description\nSalting | Adds a unique, random value to a password before hashing: (salt + password) × SHA = hash. Prevents identical passwords from producing identical hashes and defeats precomputed hash tables. Salt is not secret — it must be known to verify the hash\nKey stretching | Repeatedly re-hashes a password+salt-derived key (thousands of rounds) to slow down brute-force/dictionary attacks — doesn't make the key stronger, just more expensive to attack. PBKDF2 (Password-Based Key Derivation Function 2) is widely used, notably in WPA\nBLOCKCHAIN\nBlockchain — an expanding list of transactional records (blocks) secured by cryptographic hashing, where each block's hash calculation includes the previous block's hash, cryptographically linking the entire chain (tamper-evident back to the first block). Stored in a decentralized, open public ledger distributed across a peer-to-peer network — no single point of failure/compromise, and all participants can view every transaction. Applications: financial transactions, legal contracts, IP protection, online voting, identity management, data storage.\nOBFUSCATION\nObfuscation — making a message/data difficult to find; a form of security through obscurity (normally deprecated), though it has legitimate niche uses:\nTechnique | Description\nSteganography | Embedding a hidden message within an unexpected container (covertext), e.g., a message hidden in a picture; can be combined with encryption for confidentiality, or used for integrity/non-repudiation\nData masking | Redacts all/part of a database field's contents (e.g., replacing with \"x\"); can be partial to preserve some metadata for analysis, and can preserve original format\nTokenization | Replaces all/part of a field's value with a randomly generated token; the original value is stored separately in a token server/vault and can be retrieved by an authorized query — reversible, unlike encryption, and useful because regulators often treat an encrypted field as equivalent to the original data\nData masking and tokenization support de-identification — obfuscating personal data so it can be shared without compromising privacy.",
+   "exam_tips": []
+  },
+  {
+   "title": "Key Takeaways",
+   "content": "• Create policies requiring strong ciphers and key lengths:\n• Asymmetric key pair for signing: RSA 2,048-bit or ECC 256-bit\n• Asymmetric key pair for key exchange: RSA 2,048-bit or ECDHE 256-bit\n• Secret key: AES-128 or AES-256\n• Hashing: SHA256 or SHA512 (MD5 allowed only for documented compatibility requirements)\n• Determine whether to use a private CA or third-party certificates; secure any private root CA used.\n• Determine certificate policies/types matching business needs (server/machine, email/user, code-signing); ensure correct attribute configuration, especially SAN listing all domains/subdomains/wildcards by which a server is accessed.\n• Create policies/procedures for CSR submission, plus identification/authentication/authorization processes ensuring certificates are only issued to valid subjects.\n• Set up procedures for key/certificate management, including revocation and backup/escrow of keys — ideally using dedicated hardware cryptoprocessors such as TPMs and HSMs.",
+   "exam_tips": []
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "High-performance symmetric encryption mode providing authenticated encryption with associated data (AEAD).",
+   "concept": "AES Galois Counter Mode Protocol (GCMP)",
+   "summary": "Objective 1.4"
+  },
+  {
+   "hook": "Operations that transform plaintext into ciphertext with cryptographic properties (a cipher). Symmetric, asymmetric, and hash types exist.",
+   "concept": "algorithm",
+   "summary": "Objective 1.4"
+  },
+  {
+   "hook": "Cipher using mathematically-linked public/private keys (RSA, ECC); private key not derivable from public key.",
+   "concept": "asymmetric algorithm",
+   "summary": "Objective 1.4"
+  },
+  {
+   "hook": "Capability of an authenticator/cryptographic module to prove it is a root of trust.",
+   "concept": "attestation",
+   "summary": "Objective 1.4"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "Two parties need to encrypt a large amount of data quickly. Which type of encryption is best suited for the bulk data?",
+   "options": [
+    "Hashing",
+    "Steganography",
+    "Asymmetric",
+    "Symmetric"
+   ],
+   "answer": 3,
+   "explanation": "Symmetric algorithms such as AES are fast, so they encrypt bulk data."
+  },
+  {
+   "q": "Alice wants to send Bob a message only Bob can read. Which key does she use to encrypt it?",
+   "options": [
+    "Bob's private key",
+    "Alice's public key",
+    "Alice's private key",
+    "Bob's public key"
+   ],
+   "answer": 3,
+   "explanation": "Data encrypted with Bob's public key can only be decrypted with Bob's private key."
+  },
+  {
+   "q": "Which key signs a digital signature?",
+   "options": [
+    "The recipient's public key",
+    "A shared symmetric key",
+    "The sender's public key",
+    "The sender's private key"
+   ],
+   "answer": 3,
+   "explanation": "Signing uses the sender's private key; anyone can verify with the matching public key."
+  },
+  {
+   "q": "Adding a random value to each password before hashing it defends against which attack?",
+   "options": [
+    "Rainbow table attacks",
+    "Replay attacks",
+    "Side-loading",
+    "On-path attacks"
+   ],
+   "answer": 0,
+   "explanation": "Salting makes precomputed hash tables useless because each hash is unique."
+  },
+  {
+   "q": "A certificate was compromised before its expiration date. How can clients check that it has been revoked?",
+   "options": [
+    "Key stretching",
+    "OCSP or a certificate revocation list",
+    "A wildcard certificate",
+    "A self-signed root"
+   ],
+   "answer": 1,
+   "explanation": "OCSP and CRLs publish the revocation status of certificates."
+  },
+  {
+   "q": "Which certificate type covers www.example.com, mail.example.com and shop.example.com with one certificate?",
+   "options": [
+    "Wildcard certificate",
+    "Root certificate",
+    "Code-signing certificate",
+    "Self-signed certificate"
+   ],
+   "answer": 0,
+   "explanation": "A wildcard (*.example.com) certificate covers all first-level subdomains."
+  },
+  {
+   "q": "Replacing a credit card number with a random value that maps back to the real number in a secure vault is called:",
+   "options": [
+    "Hashing",
+    "Tokenization",
+    "Key escrow",
+    "Salting"
+   ],
+   "answer": 1,
+   "explanation": "Tokenization swaps sensitive data for a non-sensitive token stored in a vault."
+  },
+  {
+   "q": "Which hardware component stores encryption keys on a laptop's motherboard and supports secure boot measurements?",
+   "options": [
+    "HSM",
+    "CASB",
+    "SED firmware only",
+    "TPM"
+   ],
+   "answer": 3,
+   "explanation": "A Trusted Platform Module is a chip on the device that protects keys and boot integrity."
+  },
+  {
+   "q": "A bank needs a dedicated, tamper-resistant appliance to generate and store keys for thousands of transactions. What should it use?",
+   "options": [
+    "USB flash drive",
+    "Hardware security module (HSM)",
+    "Secure enclave on a phone",
+    "Trusted Platform Module"
+   ],
+   "answer": 1,
+   "explanation": "HSMs are dedicated, high-performance devices for managing keys at scale."
+  },
+  {
+   "q": "A public ledger where each block includes the hash of the previous block, making tampering evident, describes:",
+   "options": [
+    "Obfuscation",
+    "Certificate signing request",
+    "Blockchain",
+    "Key escrow"
+   ],
+   "answer": 2,
+   "explanation": "Blockchain links blocks with hashes so changes to history are detectable."
+  }
+ ]
+}

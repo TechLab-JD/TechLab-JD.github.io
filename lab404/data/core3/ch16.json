@@ -1,0 +1,169 @@
+{
+ "core": 3,
+ "chapter": 16,
+ "title": "Data Protection, Compliance & People",
+ "exam_objectives": [
+  "3.3",
+  "5.4",
+  "5.6"
+ ],
+ "coverage": "COVERED",
+ "domain": "d3",
+ "domain_label": "Security Architecture",
+ "sections": [
+  {
+   "title": "Data Classification and Compliance",
+   "content": "Privacy — an individual's right to control the collection, use, and disclosure of their personal information. Data sensitivity — classification of data based on sensitivity/confidentiality/potential impact if compromised; determines applicable controls.\nDATA TYPES\nType | Description\nRegulated Data | Sensitive/PII protected by law (financial info, healthcare records, SSNs, credit cards) — e.g., HIPAA, PCI DSS\nTrade Secrets | Confidential info giving competitive advantage (formulas, processes, customer lists, pricing); protected via NDAs\nLegal Data | Contracts, court records, litigation, IP filings, regulatory filings\nFinancial Data | Financial statements, balance sheets, audit reports, tax records, transactional records\nHuman-Readable Data | Understandable without processing (documents, emails, web pages) — protected via DLP, content filtering, user awareness\nNon-Human-Readable Data | Requires specialized software to interpret (binary, encrypted, structured data) — protected via encryption, access controls, IDS/IPS\nDATA CLASSIFICATION SCHEMAS\nBy confidentiality level:\nClassification | Description\nPublic (unclassified) | No viewing restrictions; risk only if modified/unavailable, not if disclosed\nConfidential (secret) | Highly sensitive; approved persons only, possibly trusted third parties under NDA\nCritical (top secret) | Too valuable to risk capture; severely restricted viewing\nBy information type:\nType | Description\nProprietary | Company-owned IP (products/services); target for competitors, foreign governments, counterfeiters\nPrivate/Personal Data | PII — names, addresses, SSNs, financial info, health records, credentials, biometrics\nSensitive | Personal-privacy info that could harm the subject if public (GDPR: religious beliefs, political opinions, union membership, gender, sexual orientation, race/ethnicity, genetic data, health info)\nRestricted | Highly confidential; unauthorized disclosure could cause significant harm to individuals, org, or national security\nDATA SOVEREIGNTY AND GEOGRAPHY\nData sovereignty — a jurisdiction restricts data processing/storage to systems physically within its borders.\n• GDPR protections extend to EU/EEA citizens while within those borders; transfers outside require adequate safeguards or data-subject consent\n• US companies could self-certify adequacy under the (now-defunct) Privacy Shield scheme\n• Compliance approaches: data localization (in-region datacenters/cloud), and vendor contractual agreements restricting data location\nGeographic considerations:\n• Storage location selection to satisfy sovereignty requirements\n• Constraint-based access controls validating user geographic location before granting access\n• Geolocation restrictions affect data replication/dispersion practices and complicate incident investigation/forensics (jurisdiction-specific access/sharing rules)\nPRIVACY DATA VS. CONFIDENTIAL DATA\n| Privacy Data | Confidential Data\nScope | Personally identifiable/individual-focused | Any sensitive info, regardless of individual link\nExamples | Names, SSNs, medical records, financial transactions | Trade secrets, IP, financial statements, source code\nData subject rights | Yes — access, rectify, delete | No specific subject rights\nConsent required | Often (per privacy law) | Not necessarily\nGDPR applies extraterritorially to any organization processing EU residents' personal data, restricts transfers outside the EEA without adequate safeguards, and empowers national data protection authorities to investigate/fine.\nROLES: CONTROLLER VS. PROCESSOR\n• Data Controller — determines purposes/means of processing; holds direct legal obligations (consent, privacy notices, policies, subject requests)\n• Data Processor — processes data on the controller's behalf/instruction only; no independent decision-making; must secure data and keep processing records (e.g., a CSP or payroll company)\n• Data Subject — the individual whose data is processed; rights include:\n• Right of Access — request access/details of processing\n• Right to Rectification — correct inaccurate/incomplete data\n• Right to Erasure — request deletion under certain conditions\n• Right to Restriction of Processing — stop further processing while data remains stored\n• Right to Data Portability — receive data in a machine-readable format\n• Right to Object — object to processing on specific grounds (e.g., direct marketing)\n• Right to Withdraw Consent — revoke consent for consent-based processing\nRight to Be Forgotten (GDPR) — data subjects can request erasure of personal data; controller must comply promptly unless legitimate grounds for refusal exist (free expression, legal obligation, legal claims).\nOwnership — privacy data isn't \"owned\" via traditional property rights; organizations are custodians/stewards, and data subjects retain control/rights over their own information.\nDATA INVENTORIES AND RETENTION\nPrivacy laws (GDPR, CCPA) require organizations to maintain data inventories — documenting data types, purposes, legal basis, and recipients — to:\n• Support the lawful-basis requirement for processing\n• Enforce data minimization/purpose limitation\n• Determine appropriate retention periods and enable secure deletion/anonymization\n• Facilitate data subject rights requests\n• Identify security requirements for each data type\nBREACH TERMINOLOGY AND CONSEQUENCES\n• Data breach — unauthorized read/modify/delete of any data (corporate info, IP)\n• Privacy breach — unauthorized loss/disclosure specifically of personal/sensitive data\n• A breach can occur even without evidence of actual access — misconfigured permissions creating unauthorized access potential can itself be a notifiable breach\nOrganizational Consequences:\nConsequence | Description\nReputation Damage | Loss of customer trust following negative publicity\nIdentity Theft | Data subject may sue for damages if breached data enables identity theft\nFines | Regulator-imposed, fixed sum or percentage of turnover\nIP Theft | Lost revenue from stolen copyrighted/proprietary material\nNotification requirements (examples):\n• HIPAA — notify affected individuals, HHS Secretary, and (if 500+ affected) the media\n• GDPR — notify within 72 hours of becoming aware of a personal data breach\n• Disclosures typically include what was breached, point of contact, likely consequences, and mitigation steps\n• Breaches should be escalated to senior decision-makers, not quietly remediated by technical staff alone (legal jeopardy risk)\nCOMPLIANCE\nSecurity compliance — adherence to security standards, regulations, and best practices via policies, procedures, controls, and technical measures.\nImpacts of Noncompliance:\n• Legal sanctions (fines — sometimes into the billions), lawsuits/settlements\n• Reputational damage, loss of customer trust, lost contracts/partnerships\n• Increased regulatory scrutiny (audits, investigations, mandated remediation)\n• Software licensing noncompliance — license revocation, fines, business disruption\n• Contractual noncompliance — breach of contract, contract termination, indemnification/liability shifts, financial penalties\nDue diligence (data protection context) — comprehensive assessment/verification of an organization's data security controls, privacy policies, handling procedures, and legal/regulatory compliance.\nCOMPLIANCE MONITORING AND REPORTING\nType | Audience | Focus\nInternal Reporting | Risk managers, executives, analysts, privacy officers | Operational detail, internal decision-making\nExternal Reporting | Shareholders, customers, regulators, vendors, partners | Regulatory requirements, high-level summaries\n• Compliance monitoring can be internal (self-assessments, internal audits) or external (independent audits, regulatory inspections)\n• Attestation and acknowledgment — formal sign-off (signed agreements, policy acknowledgments, training completion) evidencing commitment to compliance\n• Automation (compliance management software) improves data collection, analysis, and reporting accuracy\nDATA STATES AND PROTECTION\nState | Description | Typical Protection\nData at Rest | Persistent storage (databases, archives, config files) | Whole disk/database/file-level encryption, ACLs\nData in Transit (in Motion) | Being transmitted over a network | Transport encryption (TLS, IPSec)\nData in Use (in Processing) | Present in volatile memory (RAM, cache/registers) | Trusted Execution Environment (TEE), e.g., Intel SGX\nNote: data at rest presents a greater key-management challenge than data in transit (long-lived keys vs. ephemeral session keys).\nDATA PROTECTION METHODS\nMethod | Description\nGeographic Restrictions | Limits data access/storage to approved regions (cloud/datacenter compliance)\nEncryption | Converts data to a coded format requiring a key to access\nHashing | Fixed-length string via algorithm; verifies integrity, stores passwords securely\nMasking | Replaces sensitive data with fictional/partial values, preserving format/length\nTokenization | Replaces sensitive data with a random token; original stored separately (e.g., payment card processing)\nObfuscation | Modifies data/code to resist reverse engineering without changing function\nSegmentation | Divides networks/data/apps into isolated components; limits breach impact and enforces least privilege (e.g., EHR access by role)\nPermission Restrictions | Access control based on user permissions — ACL, RBAC, Rule-BAC, MAC, ABAC\nDATA LOSS PREVENTION (DLP)\nAutomates discovery/classification of data and enforces rules against unauthorized viewing/transfer.\nComponents:\n• Policy Server — configures classification/confidentiality/privacy rules, logs incidents, compiles reports\n• Endpoint Agents — enforce policy on client machines, even offline\n• Network Agents — scan communications at network borders, interface with web/messaging servers\nDLP scans structured (databases) and unstructured (email, documents — via file cracking) content; extends to cloud storage via proxy or CSP API.\nDLP Remediation Actions:\nAction | Description\nAlert only | Copy allowed; incident logged/admin alerted\nBlock | Copy prevented; user retains file access; logged as incident\nQuarantine | Original file access denied (encrypted in place or moved to quarantine area)\nTombstone | Original file quarantined and replaced with a policy-violation notice explaining how to release it",
+   "exam_tips": []
+  },
+  {
+   "title": "Personnel Policies",
+   "content": "Personnel policies establish guidelines/expectations for employee conduct, supporting consistency, communication, conflict resolution, and risk management.\nCONDUCT POLICIES\nPolicy | Purpose\nAUP (Acceptable Use Policy) | Prohibits fraud/defamation/illegal material, unauthorized hardware/software, and unauthorized snooping; must be reasonable and not infringe on fundamental job duties/privacy\nCode of Conduct | Sets expected professional standards, including social media/file-sharing risk awareness; employee communications on org systems are typically stored, logged, and monitored (including personal social media analysis for policy infringement)\nClean Desk Policy | Work areas kept free of documents to prevent unauthorized viewing\nPersonally-owned device risks — smartphones, USB sticks, media players enable easy file copying; camera/voice recording adds exposure. Mitigated (imperfectly) by NAC, endpoint management, and DLP.\nShadow IT — unauthorized/unsanctioned personal software or hosted services (e.g., personal email/IM) create routes for data exfiltration, malware, and software license liability.\nUSER AND ROLE-BASED SECURITY AWARENESS TRAINING\nUntrained users are vulnerable to social engineering, malware, and careless data handling. Training should be delivered to all levels (end users, technical staff, executives) and covers:\n• Security policy overview and noncompliance penalties\n• Incident identification and reporting procedures\n• Site security procedures (safety drills, escorting guests, secure areas, personal device use)\n• Data handling (confidentiality, PII, backup, encryption)\n• Password/account management, device security features\n• Social engineering/malware awareness (phishing, exploits, spam)\n• Secure software use (browsers, email) and appropriate Internet/social media use\nTraining should be graded by job role (not job title) at beginner/intermediate/advanced levels. Reference: NIST NICE framework (KSAs by cybersecurity role); NIST SP 800-50 (security awareness program guidance).\nTRAINING TECHNIQUES\n• Diverse methods improve engagement: facilitated workshops, one-on-one mentoring, computer-based/online training, videos, books, newsletters\n• Computer-Based Training (CBT) — simulations (practicing configuration tasks) and branching scenarios (choosing options to resolve an incident)\n• Gamification — CTF-style competitive challenges, badges, level-ups to boost engagement\nCRITICAL SECURITY AWARENESS TRAINING ELEMENTS\nTopic | Focus\nPolicy/Handbooks | Familiarizes users with org policies on data security, acceptable use, confidentiality\nSituational Awareness | Recognizing/responding to threats, staying vigilant, reporting unusual activity\nInsider Threat | Recognizing/reporting suspicious insider behavior\nPassword Management | Strong/unique passwords, avoiding reuse, MFA\nRemovable Media and Cables | Risks of unauthorized USB devices and malicious charging cables\nSocial Engineering | Recognizing phishing, pretexting, baiting tactics\nOperational Security | Physical/workstation security, data classification, secure comms, incident reporting\nHybrid/Remote Work | Secure remote access, secure Wi-Fi, protecting physical workspace\nPHISHING CAMPAIGNS\nSimulated phishing exercises raise threat awareness, teach recognition of urgent requests/spoofed identities/enticing offers, and train appropriate response (report to IT/security, avoid clicking links, verify via alternate channels).\nBEHAVIOR RECOGNITION\nBehavior Type | Description\nAnomalous Behavior | Deviates significantly from expected patterns (unusual traffic, account activity anomalies, fraud); detected via IDS, UBA, log analysis, ML\nRisky Behavior | Unsafe practices — clicking suspicious links, weak passwords, credential sharing, ignoring updates\nUnexpected Behavior | Deviates from established security protocols/policy (unauthorized access, bypassing controls)\nUnintentional Behavior | Non-malicious but harmful — accidental breaches, mishandled confidential info, falling for social engineering\nSECURITY AWARENESS TRAINING LIFECYCLE\n• Assess organization's security needs and risks\n• Plan and Design training (objectives, topics, delivery methods)\n• Develop engaging/informative materials\n• Deliver training via identified methods\n• Evaluate and Gather Feedback on effectiveness\n• Reinforce via recurring training, refreshers, reminders, newsletters, campaigns\n• Monitor and Adapt based on emerging risks and changing requirements\nMEASURING EFFECTIVENESS\nMeasure | Type\nInitial Effectiveness | Immediate impact — pre/post-training assessments, quizzes, surveys\nRecurring Effectiveness | Long-term retention/application — sustained behavioral change over time\nIncident Reporting Trends | Tracks training's effect on incident detection/response\nPhishing Simulation Results | Click rates, capture rates, susceptibility trends\nObservations/Feedback | Manager/supervisor qualitative input on practical application\nMetrics/KPIs | Reported incidents, policy compliance, password hygiene changes\nTraining Completion Rates | Engagement/adherence indicator",
+   "exam_tips": []
+  },
+  {
+   "title": "Key Takeaways",
+   "content": "• Ensure confidential and personal data is classified and managed using an information lifecycle model\n• Assign roles (owner, controller, processor, custodian) to ensure proper management of data within its lifecycle\n• Develop classifications for confidential and personal information based on standard descriptors — public, private, sensitive, confidential, critical, proprietary, PII, health information, financial information, customer data\n• Use a content management system that enables classification tagging of files and records\n• Use encryption products to ensure data protection at rest, in transit, and in processing\n• Use training and education programs to help employees recognize attacks and suspicious behavior\n• Use policies and procedures that hinder social engineers from eliciting information or obtaining unauthorized access\n• Use training and education programs to help employees maintain the safety and security of the organization's data assets",
+   "exam_tips": []
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "Software detecting/preventing sensitive info from being stored/transmitted improperly.",
+   "concept": "data loss prevention (DLP)",
+   "summary": "Objective 3.3"
+  },
+  {
+   "hook": "An individual identified by privacy data.",
+   "concept": "data subject",
+   "summary": "Objective 5.4"
+  },
+  {
+   "hook": "Info security standard for orgs processing card payments.",
+   "concept": "Payment Card Industry Data Security Standard (PCI DSS)",
+   "summary": "Objective 5.4"
+  },
+  {
+   "hook": "Regulated privacy principle protecting a data subject's ability to request deletion.",
+   "concept": "right to be forgotten",
+   "summary": "Objective 5.4"
+  },
+  {
+   "hook": "2002 law dictating storage/retention of financial/business operation documents.",
+   "concept": "Sarbanes-Oxley Act (SOX)",
+   "summary": "Objective 5.4"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "Credit card numbers stored in a database are an example of data in which state?",
+   "options": [
+    "Data in use",
+    "Data in motion",
+    "Data in transit",
+    "Data at rest"
+   ],
+   "answer": 3,
+   "explanation": "Stored data is at rest."
+  },
+  {
+   "q": "A company that processes credit cards must follow which standard?",
+   "options": [
+    "SOX",
+    "HIPAA",
+    "PCI DSS",
+    "FERPA"
+   ],
+   "answer": 2,
+   "explanation": "PCI DSS governs cardholder data security."
+  },
+  {
+   "q": "The security team sends fake phishing emails to staff to see who clicks. What is this?",
+   "options": [
+    "Penetration test of servers",
+    "Phishing simulation",
+    "Tabletop exercise",
+    "Legal hold"
+   ],
+   "answer": 1,
+   "explanation": "Simulations measure and train phishing awareness."
+  },
+  {
+   "q": "Which data classification should apply to a company's unreleased merger plans?",
+   "options": [
+    "Confidential or restricted",
+    "Public",
+    "Marketing",
+    "Unclassified"
+   ],
+   "answer": 0,
+   "explanation": "Highly sensitive business information gets a restrictive classification."
+  },
+  {
+   "q": "A US hospital must protect patient health information under which law?",
+   "options": [
+    "HIPAA",
+    "PCI DSS",
+    "GLBA",
+    "FISMA"
+   ],
+   "answer": 0,
+   "explanation": "HIPAA protects health information."
+  },
+  {
+   "q": "An employee who clicks a phishing link should be encouraged to:",
+   "options": [
+    "Report it immediately to the security team",
+    "Delete their account",
+    "Hide it to avoid trouble",
+    "Forward it to coworkers"
+   ],
+   "answer": 0,
+   "explanation": "Fast reporting limits damage."
+  },
+  {
+   "q": "A law requires that citizens' personal data be stored only within that country. What concept is this?",
+   "options": [
+    "Data sovereignty",
+    "Tokenization",
+    "Data masking",
+    "Hashing"
+   ],
+   "answer": 0,
+   "explanation": "Data sovereignty means data is subject to the laws where it is stored."
+  },
+  {
+   "q": "A European citizen asks a company to delete all of their personal data. Which right are they using?",
+   "options": [
+    "Legal hold",
+    "Right to audit",
+    "Data sovereignty",
+    "Right to be forgotten"
+   ],
+   "answer": 3,
+   "explanation": "GDPR gives individuals the right to erasure."
+  },
+  {
+   "q": "Which training topic teaches staff to lock their screens and keep printed sensitive documents secured?",
+   "options": [
+    "Firewall configuration",
+    "Code review",
+    "Physical and clean-desk security",
+    "RAID design"
+   ],
+   "answer": 2,
+   "explanation": "Clean desk and screen locking protect information at the workstation."
+  },
+  {
+   "q": "Which method protects data while it is being processed in memory?",
+   "options": [
+    "Secure enclave or confidential computing",
+    "Tape backup",
+    "TLS",
+    "Full-disk encryption"
+   ],
+   "answer": 0,
+   "explanation": "Data in use needs protection during processing, such as an enclave."
+  }
+ ]
+}

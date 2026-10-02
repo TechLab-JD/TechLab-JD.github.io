@@ -1,0 +1,189 @@
+{
+ "core": 3,
+ "chapter": 15,
+ "title": "Risk, Vendors & Audits",
+ "exam_objectives": [
+  "5.2",
+  "5.3",
+  "5.5"
+ ],
+ "coverage": "COVERED",
+ "domain": "d5",
+ "domain_label": "Program Management & Oversight",
+ "sections": [
+  {
+   "title": "Risk Management Processes and Concepts",
+   "content": "Risk identification — recognizing risks (malware, phishing, insider threats, equipment failure, software vulnerabilities, inadequate policies/training) via vulnerability assessments, pen testing, security audits, threat intelligence.\nRisk assessment — evaluates identified risks to determine potential impact. Methodologies:\nMethod | When Used\nAd hoc | As needed, in response to a specific incident (e.g., new zero-day) or environmental change\nOne-time | Comprehensive, point-in-time evaluation (new system rollout, maturity assessment)\nRecurring | Scheduled intervals (annually/quarterly/monthly) — audits, compliance checks, scans\nContinuous | Constant evaluation via real-time tools (agent-based scanners, IDS)\nRisk analysis vs. risk assessment — analysis identifies/evaluates risks and their causes/consequences; assessment estimates risk levels/significance from that data, factoring likelihood and severity.\nQUANTITATIVE ANALYSIS\nAssigns concrete dollar values to risk.\nTerm | Formula | Meaning\nSLE (Single Loss Expectancy) | Asset Value x Exposure Factor (EF) | Loss from one occurrence\nEF (Exposure Factor) | — | % of asset value lost in the event\nARO (Annualized Rate of Occurrence) | — | Expected number of occurrences per year\nALE (Annualized Loss Expectancy) | SLE x ARO | Expected yearly loss\nExample: $200,000 building, 40% tornado damage (EF) → SLE = $80,000. If ARO = 2/year → ALE = $160,000.\nAsset value includes more than material cost — factor in downtime costs and intangible costs (reputation). Quantitative analysis produces justifiable dollar figures for controls but is complex, time-consuming, and often relies on subjective estimates without historical data.\nQUALITATIVE ANALYSIS\nUses subjective judgment/words rather than numbers. Simple, fast, good for intangible risks and quick prioritization — but subjective, bias-prone, and harder to communicate to numbers-oriented stakeholders.\nInherent risk — risk level before any mitigation. Goal isn't elimination but reducing risk to a tolerable level (risk posture).\nHeat Map (\"traffic light\") Matrix — red/yellow/green indicators per risk across columns (severity, likelihood, cost of controls) for quick visual prioritization.\nFIPS 199 Impact Categories:\nImpact | Description\nLow | Minor damage/loss; essential functions remain operational\nModerate | Significant damage/loss to assets or performance\nHigh | Major damage/loss or inability to perform essential functions\nRISK RESPONSE STRATEGIES (THE FOUR RESPONSES: AVOID, TRANSFER, ACCEPT, MITIGATE)\nResponse | Description\nMitigation/Remediation | Reduce exposure to or effects of a risk (deterrence = reduce likelihood; reduction = reduce likelihood and/or impact)\nAvoidance | Stop the risk-causing activity entirely (rarely a credible option)\nTransference/Sharing | Assign risk to a third party (e.g., cyber liability insurance) — reputational/legal risk often can't fully transfer\nAcceptance/Tolerance | No countermeasures deployed; risk level doesn't justify the cost\n• Risk exception — risk can't be mitigated via standard practice/timeframe (financial/technical/operational constraints); temporary, must be approved and periodically reviewed\n• Risk exemption — risk allowed to remain unmitigated by strategic business decision (cost of mitigation outweighs harm); also must be formally approved and reviewed\nResidual risk — likelihood/impact remaining after mitigation, transference, or acceptance is applied. Risk appetite — strategic, org/project-wide tolerance for residual risk (constrained by regulation/compliance). Risk tolerance — the specific variance from risk appetite an org accepts for measured risk levels; risks exceeding tolerance go into the risk register for management.\nTHE FIVE-PHASE RISK MANAGEMENT PROCESS\n• Identify Mission Essential Functions — focus effort on functions whose failure could sink the business\n• Identify Vulnerabilities — for each function/workflow, find weaknesses\n• Identify Threats — identify threat sources/actors that could exploit or trigger vulnerabilities\n• Analyze Business Impacts — assess likelihood x impact (quantitative or qualitative)\n• Identify Risk Response — determine countermeasures and cost of controls per risk\nLikelihood (qualitative: low/medium/high or 1-5 scale) vs. Probability (quantitative: 0-1 or %) vs. Impact (severity if realized, based on asset value/disruption cost).\nFrameworks: enterprise risk management (ERM) programs often follow NIST RMF or ISO 31K.\n• RCSA (Risk and Control Self-Assessment) — internal process; stakeholders assess risks/control effectiveness via questionnaires/workshops; feeds external audits\n• RCA (Risk and Control Assessment) — same process led by an external party\nRISK REGISTER\nDocument listing risks, severity, owner, and mitigation strategies — often visualized as a heat map or scatterplot (impact vs. likelihood axes). Shared with stakeholders (executives, managers, senior technicians).\n• Risk threshold — the acceptable risk boundary, set by regulatory requirements, objectives, stakeholder expectations, and risk appetite\n• KRIs (Key Risk Indicators) — predictive metrics that provide early warning of increasing risk exposure, feeding risk register updates\n• Risk owner — individual accountable for managing a specific risk (identify, assess, mitigate, monitor, correct); usually a leadership role with resource authority\nLEVELS OF RISK APPETITE\nLevel | Description\nExpansionary | Willing to take on high risk for high returns/aggressive growth\nConservative | Prioritizes risk avoidance — cash preservation, reputation, compliance\nNeutral | Balances the two; takes risks aligned with strategic objectives\nRisk reporting — communicates risk profile/program effectiveness; content tailored to audience (board = strategic risks/appetite; operational reports = technical detail for managers). Must convey recommended response (accept/mitigate/transfer/avoid).\nBUSINESS IMPACT ANALYSIS (BIA)\nIdentifies critical systems by inventorying assets:\n• People (employees, visitors, suppliers)\n• Tangible assets (buildings, equipment, ICT, data files, paper documents)\n• Intangible assets (ideas, reputation, brand)\n• Procedures (supply chains, critical/standard operating procedures)\nBusiness Process Analysis (BPA) identifies dependencies via: Inputs, Hardware, Staff/resources, Outputs, Process Flow.\nBIA quantifies the impact of unplanned disruptions (accidents, disasters) to justify recovery strategies/controls (e.g., is load balancing worth the cost given DDoS-related losses?).\nMEF vs. PBF:\n• MEF (Mission Essential Function) — cannot be deferred; must run continually; restored first after disruption\n• PBF (Primary Business Function) — supports the business/MEF but isn't itself critical\nRECOVERY METRICS\nMetric | Definition\nMTD (Maximum Tolerable Downtime) | Longest outage a function can sustain before irrecoverable business failure\nRTO (Recovery Time Objective) | Time an IT system may remain offline after a disaster before it's restored\nWRT (Work Recovery Time) | Additional time after system recovery to reintegrate systems, test, and brief users\nRPO (Recovery Point Objective) | Maximum tolerable data loss, measured in time (drives backup frequency/replication)\nRule: RTO + WRT must not exceed MTD.\nReliability Metric | Formula | Meaning\nMTBF (Mean Time Between Failures) | Total operational time / number of failures | Expected product lifetime; higher = more reliable\nMTTR (Mean Time to Repair) | Total unplanned maintenance hours / number of failure incidents | Speed of restoring full operation; lower = better; informs RTO feasibility",
+   "exam_tips": []
+  },
+  {
+   "title": "Vendor Management Concepts",
+   "content": "Third-party risk assessment covers vendor due diligence, risk identification/assessment, ongoing monitoring, and incident response planning.\nVendor selection evaluates financial stability, operational reliability, data security, regulatory compliance, and reputation — aligned to the org's risk tolerance.\nKey stats (Ponemon/Bomgar study): orgs average 89 vendors accessing their network weekly; 69% have suffered a vendor-caused breach; 65% find third-party risk hard to manage; 64% prioritize cost over security when outsourcing.\nCONFLICT OF INTEREST\nArises when a vendor's competing interests could compromise objectivity:\nType | Example\nFinancial Interests | Vendor pushes products for commissions/partnerships, not fit\nPersonal Relationships | Close ties to internal decision-makers bias selection\nCompetitive Relationships | Vendor favors its own partnerships over the client's interest\nInsider Information | Vendor exploits confidential info about competitors/strategy for advantage\nVENDOR ASSESSMENT METHODS\nMethod | Purpose\nDue Diligence | Systematic investigation of vendor suitability, reliability, integrity (financials, reputation, technical capability, security, compliance, past performance)\nPenetration Testing | Evaluates vendor's actual security posture/vulnerabilities\nRight-to-Audit Clause | Contractual right to audit vendor operations/systems/controls\nEvidence of Internal Audits | Confirms vendor has internal oversight/continuous improvement mechanisms\nIndependent Assessments | Unbiased third-party expert evaluation of vendor capabilities/security/compliance\nSupply Chain Analysis | Evaluates risk across all entities in the vendor's own supply chain\nSite Visits | Firsthand observation of physical facilities and operational practices\nVendor monitoring — continuous oversight (performance reviews, periodic assessments, real-time monitoring) to catch issues proactively.\nLEGAL AGREEMENTS — INITIAL\nAgreement | Description\nMOU (Memorandum of Understanding) | Nonbinding; outlines shared goals/intentions; precedes formal agreement\nNDA (Nondisclosure Agreement) | Binding; protects confidential info shared during the relationship\nMOA (Memorandum of Agreement) | Formal, legally binding; defines specific terms/roles/obligations\nBPA (Business Partnership Agreement) | Governs long-term strategic partnerships (finances, decision-making, IP, disputes)\nMSA (Master Service Agreement) | Overall terms/conditions for a specific contract type (scope, pricing, deliverables, IP rights)\nLEGAL AGREEMENTS — DETAILED\nAgreement | Description\nSLA (Service-Level Agreement) | Defines performance metrics, quality standards, service levels\nSOW/WO (Statement of Work / Work Order) | Details scope, deliverables, timelines, responsibilities for a specific engagement\nQuestionnaires — gather standardized vendor security/compliance data (policies, controls, regulatory compliance like GDPR/HIPAA/ISO 27001/PCI-DSS, training programs, breach history, insurance). Answers should be validated via supporting docs, site visits/audits, background checks, and reference checks.\nRULES OF ENGAGEMENT (ROE)\nDefines vendor relationship parameters:\n• Roles and Responsibilities — who identifies/assesses/mitigates which risks\n• Security Requirements — data protection, access control, encryption, incident response, assessments\n• Compliance Obligations — regulatory/legal requirements the vendor must meet\n• Reporting and Communication — incident reporting channels, frequency, detail level\n• Change Management — procedures for vendor-side changes affecting security\n• Contractual Provisions — indemnification, liability, insurance, termination rights",
+   "exam_tips": []
+  },
+  {
+   "title": "Audits and Assessments",
+   "content": "Attestation — independent, formal declaration by a qualified entity (auditor/assessor) confirming an organization's security controls comply with standards/regulations/best practices.\nAudits — systematically evaluate processes/controls/compliance against standards, identify gaps, recommend improvements. Assessments — evaluate effectiveness/efficiency of operations (cybersecurity, risk management, controls), identify vulnerabilities, and provide improvement insight.\nINTERNAL ASSESSMENTS\nApproach | Description\nCompliance Assessment | Verifies practices align with laws/regs/standards/policies; identifies noncompliance\nAudit Committee | Board members independent of management oversee financial reporting, controls, risk management, and the external audit process\nSelf-Assessment | Internal personnel evaluate their own performance/practices against set criteria\n(Internal assessments are mandated for government agencies under NIST RMF, PCI-DSS, and others.)\nEXTERNAL ASSESSMENTS\nApproach | Description\nRegulatory | Regulatory agencies verify compliance with mandatory laws/standards via inspections/audits\nExamination | Independent formal evaluation of financial statements, processes, or controls for accuracy/compliance\nAssessment | Broad external expert evaluation of overall performance, strategy, or specific focus areas\nIndependent Third-Party Audit | Objective, unbiased evaluation free of internal conflicts of interest; builds stakeholder confidence\nInternal audits enable continuous monitoring/early detection; external audits validate controls/compliance with an unbiased outside view — combining both gives the most complete risk picture and fosters transparency/knowledge sharing.\nPENETRATION TESTING\nA pen test (ethical hacking) uses authorized hacking techniques to find exploitable weaknesses — more intrusive than a passive vulnerability scan because it actively exploits findings.\nTypical pen test steps:\n• Verify a Threat Exists (surveillance, social engineering, scanners, vuln tools)\n• Bypass Security Controls (find the easiest attack path)\n• Actively Test Security Controls (probe for weak passwords/vulnerabilities)\n• Exploit Vulnerabilities (prove risk by gaining access/installing backdoors)\nRECONNAISSANCE TYPES\nType | Description | Techniques\nActive | Directly interacts with/probes target, generates traffic | Port scanning, service enumeration, OS fingerprinting, DNS enumeration, web app crawling\nPassive | Gathers info without direct interaction; lower detection risk | OSINT gathering, network traffic analysis, social engineering\nENVIRONMENT KNOWLEDGE LEVELS\nMethod | Tester Knowledge\nKnown Environment | Full detail — architecture, configs, vulnerabilities, users known in advance\nPartially Known Environment | Limited info; tester uses recon (scanning, fingerprinting, OSINT) to fill gaps\nUnknown Environment | Little/no prior knowledge; simulates a real external attacker; requires extensive recon\nEXERCISE TYPES\nType | Description\nOffensive (\"Red Team\") | Simulates real-world attacks to find exploitable vulnerabilities/attack vectors\nDefensive (\"Blue Team\") | Evaluates detection capabilities, incident response, and defensive resilience\nPhysical Penetration Testing | Tests physical security controls (access, surveillance, perimeter) via tailgating, lock picking, social engineering\nIntegrated Penetration Testing | Combines offensive + defensive (and other) methods for a comprehensive, realistic security picture\nContinuous Pentesting | Ongoing, automation-driven testing of technical vulnerabilities, common in CI/CD pipelines",
+   "exam_tips": []
+  },
+  {
+   "title": "Key Takeaways",
+   "content": "• Identify and assess risks on an ongoing basis to keep pace with changing business practices\n• Analyze risk using both qualitative and quantitative methods to prioritize remediation efforts and allocate resources\n• Create a risk register to manage and track risks, including the staff assigned to address them\n• Include vendor business practices in risk management and assessment\n• Identify and analyze the vendors included in the supply chain and ensure they maintain adequate security operations\n• Use multiple audit and assessment methods (internal and external) to measure the effectiveness of security controls and the organization's alignment to legal and regulatory compliance requirements",
+   "exam_tips": []
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "Total annual cost of a risk = SLE × ARO.",
+   "concept": "annualized loss expectancy (ALE)",
+   "summary": "Objective 5.2"
+  },
+  {
+   "hook": "Probability/likelihood of a risk expressed as times per year expected to occur.",
+   "concept": "annualized rate of occurrence (ARO)",
+   "summary": "Objective 5.2"
+  },
+  {
+   "hook": "Identifies organizational risks and their effect on mission-critical operations.",
+   "concept": "business impact analysis (BIA)",
+   "summary": "Objective 5.2"
+  },
+  {
+   "hook": "Risk management approach quantifying vulnerability data/degree of risk.",
+   "concept": "Common Vulnerability Scoring System (CVSS)",
+   "summary": "Objective 5.2"
+  },
+  {
+   "hook": "Agreement for two companies to work closely together (e.g., reseller/solution provider partnerships).",
+   "concept": "business partnership agreement (BPA)",
+   "summary": "Objective 5.3"
+  },
+  {
+   "hook": "Contract establishing precedence/guidelines for business documents between parties.",
+   "concept": "master service agreement (MSA)",
+   "summary": "Objective 5.3"
+  },
+  {
+   "hook": "Legal document forming cooperation basis without a formal contract.",
+   "concept": "Memorandum of Agreement (MoA)",
+   "summary": "Objective 5.3"
+  },
+  {
+   "hook": "Preliminary/exploratory, non-legally-binding intent-to-cooperate agreement.",
+   "concept": "memorandum of understanding (MoU)",
+   "summary": "Objective 5.3"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "Annualized loss expectancy (ALE) is calculated as:",
+   "options": [
+    "SLE + ARO",
+    "ARO / SLE",
+    "AV x EF",
+    "SLE x ARO"
+   ],
+   "answer": 3,
+   "explanation": "ALE equals single loss expectancy times annualized rate of occurrence."
+  },
+  {
+   "q": "Before signing with a new cloud vendor, the company reviews its security practices and certifications. What is this?",
+   "options": [
+    "Offboarding",
+    "Vendor due diligence",
+    "Risk acceptance",
+    "Penetration testing of the vendor without permission"
+   ],
+   "answer": 1,
+   "explanation": "Due diligence assesses a vendor before engagement."
+  },
+  {
+   "q": "An outside firm hired to review a company's controls and issue an opinion performs which type of audit?",
+   "options": [
+    "Bug bounty",
+    "External audit",
+    "Internal self-assessment",
+    "Tabletop exercise"
+   ],
+   "answer": 1,
+   "explanation": "External auditors are independent of the organization."
+  },
+  {
+   "q": "A server worth $20,000 would lose 50% of its value in a flood. What is the single loss expectancy?",
+   "options": [
+    "$5,000",
+    "$40,000",
+    "$10,000",
+    "$20,000"
+   ],
+   "answer": 2,
+   "explanation": "SLE = asset value x exposure factor = 20,000 x 0.5."
+  },
+  {
+   "q": "Which agreement defines measurable service levels, such as 99.9% uptime, and penalties if they are missed?",
+   "options": [
+    "Service level agreement (SLA)",
+    "BPA",
+    "NDA",
+    "MOU"
+   ],
+   "answer": 0,
+   "explanation": "SLAs define performance commitments."
+  },
+  {
+   "q": "A company's own audit committee reviews compliance with internal policies. What kind of assessment is this?",
+   "options": [
+    "Vendor questionnaire",
+    "Regulatory examination",
+    "Internal audit",
+    "Third-party penetration test"
+   ],
+   "answer": 2,
+   "explanation": "Internal audits are performed by the organization itself."
+  },
+  {
+   "q": "A flood is expected once every 10 years. What is the annualized rate of occurrence?",
+   "options": [
+    "0.1",
+    "0.01",
+    "1",
+    "10"
+   ],
+   "answer": 0,
+   "explanation": "ARO is how many times per year: 1/10 = 0.1."
+  },
+  {
+   "q": "Which agreement keeps a vendor from sharing confidential information it learns?",
+   "options": [
+    "Rules of engagement",
+    "Non-disclosure agreement (NDA)",
+    "MSA",
+    "SLA"
+   ],
+   "answer": 1,
+   "explanation": "NDAs protect confidential information."
+  },
+  {
+   "q": "A penetration tester is given no information about the target network beforehand. What kind of test is this?",
+   "options": [
+    "Partially known (gray box)",
+    "Tabletop exercise",
+    "Known environment (white box)",
+    "Unknown environment (black box)"
+   ],
+   "answer": 3,
+   "explanation": "Testers start with no inside knowledge."
+  },
+  {
+   "q": "A company buys cyber insurance to cover breach costs. Which risk response is this?",
+   "options": [
+    "Avoid",
+    "Transfer",
+    "Mitigate",
+    "Accept"
+   ],
+   "answer": 1,
+   "explanation": "Insurance shifts the financial impact to another party."
+  }
+ ]
+}

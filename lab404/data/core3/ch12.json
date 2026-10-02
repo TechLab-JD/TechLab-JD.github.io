@@ -1,0 +1,194 @@
+{
+ "core": 3,
+ "chapter": 12,
+ "title": "Incident Response, Forensics & Monitoring",
+ "exam_objectives": [
+  "4.8",
+  "4.9",
+  "4.4"
+ ],
+ "coverage": "COVERED",
+ "domain": "d4",
+ "domain_label": "Security Operations",
+ "sections": [
+  {
+   "title": "Incident Response",
+   "content": "WHAT IS AN INCIDENT?\nA cybersecurity incident is a successful or attempted violation of an asset's confidentiality, integrity, or availability. Incident response (IR) policy sets the resources, processes, and guidelines for handling incidents.\nCOMPTIA'S 7-STEP INCIDENT RESPONSE LIFECYCLE\nPhase | What Happens\n1. Preparation | Hardens systems, writes policies/procedures, sets up confidential comms, builds IR resources\n2. Detection | Discovers indicators via automated tools, threat hunting, or reports from employees/customers/law enforcement\n3. Analysis | Determines whether an incident occurred and triages severity\n4. Containment | Limits scope/magnitude; secures data while limiting customer/partner impact; notifies stakeholders\n5. Eradication | Removes the cause; restores affected systems to a secure state (patches, secure config)\n6. Recovery | Reintegrates the system into business operations; may involve restoring from backup; close monitoring for recurrence\n7. Lessons Learned | Analyzes the incident/response for improvement opportunities; documentation feeds back into Preparation\n• The response may iterate through detection → containment → eradication → recovery multiple times before full resolution\n• Major incidents posing existential/company-wide threats are handled by disaster recovery processes instead — though a cybersecurity incident can escalate into one\nCYBERSECURITY INFRASTRUCTURE (PREPARATION)\nHardware/software tools that support the lifecycle:\n• Incident detection tools — automate collection/analysis of network traffic, system state, and log data\n• Digital forensics tools — acquire and validate data from memory and file systems\n• Case management tools — database for logging incident details and coordinating response across the team\n• SIEM (Security Information and Event Management) and SOAR (Security Orchestration, Automation and Response) often combine all of this into one alerting/monitoring dashboard suite\nCYBER INCIDENT RESPONSE TEAM\nAlso called CIRT, CSIRT, or CERT — may be located wholly or partly within a security operations center (SOC).\n• Led by a senior executive decision-maker who can authorize action on the most serious incidents\n• Managers coordinate day-to-day operation and cross-department activity; analysts/technicians triage and mitigate minor incidents independently\n• Supporting departments:\n• Legal — evaluates compliance with laws/regulations, liaises with law enforcement\n• Human Resources (HR) — handles employee contract/employment-law effects, addresses underlying personnel issues\n• Public Relations — manages negative press/social media fallout\n• Some organizations outsource CIRT functions to a third-party incident response provider — external agents can deal more effectively with insider threats\nCOMMUNICATION & STAKEHOLDER MANAGEMENT\n• Establish clear reporting/notification lines in advance; keep essential contacts readily available\n• Prevent unintentional release of info beyond the authorized team — adversaries must not learn of containment/remediation plans in progress\n• Share status on a need-to-know basis via a trusted call list\n• Use an out-of-band communication method that can't be intercepted — corporate email risks interception by the threat actor\n• Consider reporting obligations to affected parties, regulators, or law enforcement, and the marketing/PR impact of the incident\nThe output of the preparation phase is a formal incident response plan (IRP) listing procedures, contacts, and resources for various incident categories.\nDETECTION\nCorrelates events from network/system data sources to determine if they indicate an incident. Channels include:\n• Matching events in logs, error messages, IDS/firewall alerts to known threat patterns\n• Deviations from baseline system metrics\n• Manual/physical inspection — proactively searching for intrusion signs is threat hunting\n• Notification by employee, customer, or supplier (offer a confidential reporting option so insider threats/fraud get reported)\n• Public reporting of new threats/vulnerabilities by vendors, regulators, or media\nThe CIRT member who takes charge of a detected event is the first responder. All staff must be trained to recognize and respond to suspected incidents.\nANALYSIS\nThe first responder investigates to confirm whether a genuine incident occurred (true positive) or dismiss it (false positive), often by correlating multiple indicators. Complex/high-impact events escalate to senior CIRT members.\nImpact factors used to prioritize a confirmed incident:\nFactor | Consideration\nData integrity | Often the most important — the value of data at risk\nDowntime | Degrade (reduced performance) vs. interrupt (complete stop)\nEconomic/publicity | Short-term (response cost, lost business) and long-term (reputation, market standing)\nScope | Number of systems affected — NOT a direct priority indicator; a wide but low-value infection can be a masking attack diverting attention from a single high-value target\nDetection time | Over half of breaches go undetected for weeks/months, though the actual breach often happens within minutes\nRecovery time | Complex remediation may require heightened alertness for continued/repeat attacks\nEffective analysis depends on threat intelligence — insight into adversary tactics, techniques, and procedures (TTPs). A common framework for the stages of an attack is the cyber kill chain (from Lockheed Martin's Intelligence-Driven Computer Network Defense).\nPlaybooks — a data-driven standard operating procedure (SOP) guiding analysts through analysis, containment, eradication, recovery, and lessons learned for a specific threat scenario (e.g., DDoS, virus outbreak, data exfiltration).\nCONTAINMENT\nNo single standard approach — CIRTs must weigh: damage already done vs. potential further damage, available countermeasures and their cost, risk of alerting the threat actor, and notification/reporting requirements.\nApproach | Description\nIsolation-based | Removes the affected component entirely — pulling the network plug/disabling a switch port (least stealthy, reduces analysis opportunity), sinkholing an infected VLAN, using firewalls to block communication, or disabling a user account/application service\nSegmentation-based | Uses VLANs/routing/firewall ACLs to wall off a host or group without full isolation — can be configured as a sinkhole or honeynet to feed the attacker filtered/modified output, enabling analysis of their TTPs and potential attribution\nERADICATION AND RECOVERY\nAfter containment, eradication applies mitigations to remove intrusion tools and unauthorized changes. Recovery then restores capabilities/services once malware, backdoors, and compromised accounts are eliminated.\nSteps:\n• Reconstitution of affected systems — remove malicious files/tools or restore from secure backups/images (verify the baseline template itself wasn't the vulnerability before reusing it)\n• Reaudit security controls — ensure they aren't vulnerable to the same or a related follow-up attack (targeted attacks often come in waves)\n• Notify affected parties so they can remediate their own systems (e.g., advise customers to change reused passwords)\nLESSONS LEARNED\nReviews severe incidents to determine root cause, avoidability, and future prevention.\n• Starts with a meeting including both involved staff and objective outside incident handlers — kept blame-free; disciplinary matters are handled separately by leadership\n• Produces a lessons learned report (LLR) or after-action report (AAR)\nRoot cause analysis models:\n• \"Five Whys\" — starts with a problem statement, asks successive \"Why\" questions to drill to root causes (can branch messily in multiple directions)\n• Who/Why/When/Where/How framework — Who was the adversary (insider/external)? Why (motive/targeted assets)? When did it occur/get detected/get contained? Where (hosts/segments)? How (TTPs — documented in ATT&CK or novel)? What controls would have helped?\n• Alternative: step through the incident timeline to review decisions made and better options available\nTESTING AND TRAINING\nValidates that preparation activity actually works; lessons learned may reveal a need for more of it.\nExercise Type | Description | Cost\nTabletop exercise | Facilitator presents a scenario via flash cards; responders explain (don't perform) their actions | Lowest\nWalkthrough | Facilitator presents the scenario; responders demonstrate actions (scans, sample file analysis) on sandboxed tools | Moderate\nSimulation | Team-based: red team attacks, blue team defends/recovers, white team moderates/evaluates | Highest — most realistic\nTraining should cover more than technical skill — incident response is stressful and can fracture working relationships, so training should build team resilience and communication too.\nTHREAT HUNTING\nProactive discovery of TTP evidence already present in the network, contrasted with reactive alert-triggered response.\n• Typically hypothesis-driven and resource-intensive — often triggered by vendor/researcher advisories and bulletins about new TTPs/vulnerabilities\n• Intelligence fusion — an analytics platform (e.g., SIEM + threat data feed) correlates threat indicators against on-premises network/log data, rather than relying on slow manual analysis\n• Maneuver — a military-doctrine term for gaining positional advantage; in threat hunting this means staying stealthy (passive discovery) so a capable adversary doesn't detect the hunt and accelerate/divert with countermeasures (e.g., a diversionary DoS)",
+   "exam_tips": []
+  },
+  {
+   "title": "Digital Forensics",
+   "content": "DUE PROCESS AND LEGAL HOLD\nDigital forensics collects evidence to a standard acceptable in court. Forensic investigations most often target insider threats (fraud, equipment misuse); prosecuting external actors is harder since they may be in another jurisdiction and disguise their identity.\n• Digital evidence is latent — like DNA or fingerprints, it can't be seen with the naked eye and must be interpreted using a tool/process. This requires formal collection/analysis steps to ensure admissibility\n• Due process — a fairness principle requiring procedural safeguards; technicians/managers must not do anything that compromises an investigation, since defense counsel will exploit any uncertainty about evidence integrity\n• Legal hold — information relevant to a court case must be preserved (per regulation, best practice, or litigation notice); an organization under legal hold must suspend routine record/log deletion\nACQUISITION\nAcquisition = obtaining a forensically clean copy of data from a seized device.\n• With BYOD, verify that search/seizure of the device is legally valid before proceeding — an invalid seizure can make evidence inadmissible\n• Some evidence is lost if a system is powered off; other evidence may only be obtainable after power-off — acquisition should proceed in order of volatility (from RFC 3227), most to least volatile:\n• CPU registers and cache memory (incl. disk controller/GPU caches)\n• Nonpersistent system memory (RAM) — routing table, ARP cache, process table, kernel stats\n• Persistent mass storage — partition/file system blocks, slack/free space, swap/hibernation files, browser cache, user/app/OS files\n• Remote logging and monitoring data\n• Physical configuration and network topology\n• Archival media and printed documents\nSystem memory acquisition — a memory dump captures running processes, temp file systems, registry data, network connections, and crypto keys (including data otherwise encrypted at rest). Requires a preinstalled kernel-mode driver tool (e.g., the Volatility framework on Linux).\nDisk image acquisition — covers nonvolatile storage (HDD/SSD/firmware/flash/optical). Three device states:\nState | Description | Trade-off\nLive acquisition | Copies data while host is running | Captures more evidence, reduces service impact, but data will have changed and may not be legally clean; risks alerting the attacker\nStatic — shutdown | Host is shut down normally first | Malware may detect shutdown and perform anti-forensics\nStatic — pull the plug | Power disconnected at the wall | Most forensically clean, but risks data corruption\n• Document every step with a timeline and video recording\n• Tools: GUI imaging utilities; on Linux, dd if=/dev/sda of=/mnt/usbstick/backup.img; dcfldd is a DoD fork of dd adding multiple outputs and hash verification\nPRESERVATION AND EVIDENCE INTEGRITY\n• Video record the acquisition process to establish provenance\n• Attach the target device to a forensics workstation/field device equipped with a write blocker — prevents any writes to the source disk/volume by filtering write commands at the driver/OS level\nIntegrity/non-repudiation process:\n• Hash the original disk media (MD5 or SHA)\n• Make a bit-by-bit image using an imaging utility\n• Hash the image — it must match the original hash\n• Make a working copy of the reference image, re-validated by checksum — analysis is performed only on the copy\nThis proves non-repudiation: if provenance is certain, the identified threat actor cannot deny their actions.\nCHAIN OF CUSTODY\nEvidence should be labeled, bagged, and sealed in tamper-evident, antistatic bags (protects against ESD damage). A chain of custody form documents where, when, and who collected/handled/stored each piece of evidence — protecting the organization against claims of tampering at trial. Store evidence in a secure, environmentally controlled facility.\nREPORTING AND ETHICS\nForensics reporting summarizes findings and conclusions. Ethical principles:\n• Analysis must be unbiased — conclusions drawn only from direct evidence\n• Methods must be repeatable by third parties given the same evidence\n• Evidence should ideally not be changed; if manipulation is required (e.g., disabling a phone lock), the reason and process must be documented\nE-discovery filters relevant evidence from a full forensic examination (which searches the whole drive, allocated and unallocated) into a trial-usable database:\n• Identify/de-duplicate — filters out standard/duplicate files to reduce analysis volume\n• Search — keyword and semantic search for files of interest\n• Tags — standardized labels for relevancy/confidentiality\n• Security — evidence must be shown to be stored/transmitted/analyzed without tampering\n• Disclosure — same evidence must be made available to both plaintiff and defendant (searchable ESI, not paper)",
+   "exam_tips": []
+  },
+  {
+   "title": "Data Sources",
+   "content": "DATA SOURCES FOR INVESTIGATION\nA data source is anything analyzed to discover indicators during IR or forensics:\n• System memory and file system data/metadata\n• Log files from network appliances (switches, routers, firewalls/UTMs)\n• Network traffic from sensors and IDS alertable conditions\n• Vulnerability scanner logs/alerts\n• OS logs from client/server hosts\n• Application and service logs\n• Endpoint security software logs/alerts (host-based IDS, vulnerability scanning, AV, firewall)\nThe diversity/volume of sources is a major challenge, commonly described via the \"V's\": volume, velocity, variety, veracity, value. A SIEM aggregates and correlates these sources into a single point for dashboards and automated reports.\nDASHBOARDS AND AUTOMATED REPORTS\nAn event dashboard provides a day-to-day working console tailored to its audience:\n• An incident handler's dashboard shows uncategorized events assigned to them, plus status visualizations\n• A manager's dashboard shows overall org-wide status (e.g., total unclassified events across all handlers)\nSIEM reporting types:\n• Alerts and alarms — detect threat indicators, start incident cases (a large part of an analyst's daily workload)\n• Status reports — communicate threat level/incident volume/control effectiveness for management or compliance\nReports/dashboards must be tailored to the audience — an overwhelming or irrelevant report prevents quick identification of remediation actions.\nLOG DATA\nEach event = message data (the notification/alert itself, e.g., \"Login failure\") + metadata (source and time — host/network address, process name, category/priority).\n• All hosts should be time-synchronized to the same time zone/format — ideally UTC — for accurate correlation\n• Windows Event Viewer format — each event has a header with source, level, user, timestamp, category, keywords, host name\n• Syslog — open format/protocol/server software used broadly (switches, routers, firewalls, UNIX/Linux hosts); a message = PRI code (facility + severity) + header (timestamp, host name, app name, process ID, message ID) + message (tag + content)\n• Logs can be analyzed per-host, but most orgs prefer SIEM aggregation (\"single pane of glass\") via agents or syslog forwarding\nHOST OPERATING SYSTEM LOGS\nSecurity logs record audit events, generally classed success/accept or fail/deny:\n• Authentication events — sign-in/out attempts, privilege elevation attempts\n• File system events — allowed/denied read or modify attempts (must be explicitly configured — otherwise generates excessive data)\nOS | Key Logs\nWindows | Application (app crashes/installs), Security (audit events — failed logins, denied file access), System (kernel/service events, shutdowns)\nLinux | /var/log/messages or /var/log/syslog (all events, some copied to individual files); /var/log/auth.log (Debian/Ubuntu) or /var/log/secure (RedHat/CentOS/Fedora) for auth/sudo use; faillog tracks failed logins; wtmp/utmp/btmp used by w/who/last; some distros use binary Journald, read via journalctl; package manager logs (apt/yum/dnf) track installs/updates\nmacOS | Unified logging via the Console app or log command (filters like com.apple.login, com.apple.install, com.apple.syspolicy.exec)\nAPPLICATION AND ENDPOINT LOGS\n• Application log — managed by the application itself rather than the OS (may use Event Viewer/syslog, or its own format/directory)\n• Endpoint log — events from host-based security software (host firewall, IDS, vulnerability scanner, AV/antimalware); suites integrating these are called EPP (Endpoint Protection Platform), EDR, or XDR, and can integrate with a SIEM via agents\n• Summarized endpoint data shows overall threat levels (malware detected, HIDS events, hosts with missing patches); detailed analysis aids actor attribution and TTP intelligence\n• Vulnerability scan logs — log each detected vulnerability (missing patches, baseline noncompliance) to the SIEM\nNETWORK DATA SOURCES\n• Network logs — from routers/firewalls/switches/APs; record appliance system status plus traffic/access behavior (e.g., a switch log revealing MAC address spoofing for an on-path attack, or an AP log showing disassociation events)\n• Firewall logs — record timestamp, interface, ingress/egress direction, and accept/drop decision, plus source/destination IP and port; a single packet can trigger multiple rule events; logging is typically limited to new/high-impact rules to avoid volume overload\n• IPS/IDS logs — record traffic pattern matches to a rule; can also log shuns/resets/redirects; summarized data supports threat-level dashboards and TTP attribution\n• Packet captures — frame-by-frame analysis (e.g., Wireshark) of data link/network/transport headers and application payload; typically limited to traffic that triggered a rule unless a retrospective network analysis (RNA) solution records everything. Can reveal protocol manipulation, data exfiltration, suspicious domain contact, and extract malware binaries for analysis\nMETADATA\nProperties of data as created, stored, or transmitted — useful for establishing incident timelines.\nType | What It Reveals\nFile | Created/accessed/modified timestamps, security attributes (read-only/hidden/system), ACL permissions, extended attributes (author, copyright, tags)\nWeb | Response/request headers, including cookies carrying authorization info\nEmail | Internet header shows the path: MUA (mail user agent, creates initial header) → MDA (mail delivery agent, checks sender authorization) → one or more MTAs (message transfer agents, e.g., ISP SMTP servers/security gateways) → recipient; each hop adds header info, useful for spotting spoofing/typosquatting",
+   "exam_tips": []
+  },
+  {
+   "title": "Alerting and Monitoring Tools",
+   "content": "SECURITY INFORMATION AND EVENT MANAGEMENT (SIEM)\nA SIEM collects and correlates data from network sensors and appliance/host/application logs — switches, routers, firewalls, IDS sensors, packet sniffers, vulnerability scanners, malware scanners, and DLP systems.\nCOLLECTION METHODS\nMethod | How It Works | Typical Use\nAgent-based | An agent service on the host filters/aggregates/normalizes data locally, then sends it to the SIEM (uses ~50–500MB RAM) | Windows/Linux/macOS computers\nListener/collector | The management server parses/normalizes logs pushed from the host | Switches, routers, firewalls (rarely support agents), often via a syslog variant\nSensor | Captures packet captures and traffic flow data via a switch mirror port or network tap | Network-wide traffic visibility\nLOG AGGREGATION\nDistinct from collection — normalizes data from different sources into a consistent, searchable format. SIEM connectors/plug-ins parse vendor-specific data into standard fields; also normalizes date/timezone differences to a single timeline.\nALERTING\n• Correlation — interprets relationships between individual data points to flag events worth investigating. A correlation rule uses logical operators (AND/OR) and comparisons (==, <, >, in) — e.g., Error.LoginFailure > 3 AND LoginFailure.User AND Duration < 1 hour\n• SIEMs are typically fed a threat intelligence feed to correlate observed data points against known threat actor indicators (IPs, domains)\n• Validation — the analyst determines whether an alert is a true positive (real threat) or false positive (no actual threat)\n• Quarantine — isolating the indicator source (network address, host, or file)\n• A playbook typically guides the analyst through the full IR process for the alert; SOAR can fully or partially automate validation/remediation (e.g., one-click quarantine via firewall/EPP integration)\nREPORTING\nA managerial control providing insight into overall security status, tailored by audience:\nReport Type | Audience | Purpose\nExecutive | Decision-makers | High-level summary guiding planning/investment\nManager | Cybersecurity/department leaders | Detailed info guiding day-to-day decisions\nCompliance | Regulators | Whatever information is required by regulation\nCommon reporting metrics: authentication data (failed logins, critical file audits), hosts with missing patches/config vulnerabilities, privileged account anomalies (out-of-hours use, excessive elevation requests), incident case stats (volume, open cases, time to resolve), and trend reporting over time.\nARCHIVING\nA SIEM enacts a retention policy to keep historical log/traffic data for a defined period — supports retrospective incident/threat hunting and compliance requirements. Excessive live data degrades SIEM performance, so log rotation moves outdated data to archive storage.\nALERT TUNING\nCriticality Level | Behavior\nLog only | Event recorded to the database, auto-classified, no human review\nAlert | Listed on a dashboard for an agent to assess — dismissed to log or escalated to an incident case\nAlarm | Auto-classified critical; triggers priority notification (email/text to an incident handler)\n• Alert fatigue — analysts overwhelmed dismissing low-priority alerts may miss the one high-impact alert that could have prevented a breach; analysts can become preoccupied with dismissing alerts quickly rather than evaluating them properly\n• False negative — the system fails to alert on indicators that ARE present — a serious weakness; threat hunting helps surface these\n• True negative — a measure of events properly allowed (used to assess alerting system performance)\nTuning techniques:\n• Refine detection rules / mute noisy rules (add correlation factors, or reduce to one notification per N events)\n• Redirect confirmed false-positive alert \"floods\" to a dedicated group instead of spamming every analyst\n• Redirect infrastructure-related alerts (e.g., baseline deviation) to the infrastructure team, not incident response\n• Continuously monitor alert volume and incorporate analyst feedback\n• Deploy machine learning to analyze SIEM data sets and auto-tune rules, reducing false negatives without increasing false positives\nMONITORING INFRASTRUCTURE\n• Network monitor — collects appliance data (CPU/memory, state tables, disk capacity, fan speed/temperature, link utilization/errors) plus a heartbeat for availability; often via SNMP traps (port failure, overheating, power failure, excessive CPU)\n• NetFlow / IPFIX — a flow collector records traffic metadata/statistics rather than full frames, sourced from switches/routers/firewalls/proxies. A flow label is defined by shared packet characteristics (a 5-tuple: source/dest IP + protocol type, or a 7-tuple adding input interface + IP type of service); matching traffic forms a flow record. Reveals traffic trends, anomalies, rogue behavior, malware in transit, tunneling, and C2 contact attempts\n• System monitor — host equivalent of a network monitor (SNMP traps for health status); logs tie actions to specific users, which is why shared logins undermine accountability\n• Application/cloud monitors — heartbeat tests plus session/request counts, bandwidth, CPU/memory, and error/security alert conditions; cloud monitors also track VM status and network bandwidth\n• Vulnerability scanners — report total unmitigated vulnerabilities per host; consolidated results highlight network-wide patch/config issues\n• Antivirus / EPP — signature-based detection regardless of malware type; modern suites integrate UEBA and AI-backed analysis to catch behavior that evades signatures; can auto-block plus alert/log via SIEM integration\n• DLP — monitors/restricts copying of tagged sensitive data; violation trend statistics reveal policy gaps\nBENCHMARKS AND COMPLIANCE SCANNING\nVulnerability scans also assess configuration against established benchmarks — identifying missing controls or misconfigurations (e.g., outdated AV, default passwords) against a best-practice template.\nSecurity Content Automation Protocol (SCAP) lets compatible scanners check a computer against a configuration baseline:\nComponent | Function\nOVAL (Open Vulnerability and Assessment Language) | XML schema describing system security state and vulnerability reports/queries\nXCCDF (Extensible Configuration Checklist Description Format) | XML schema for machine-readable best-practice configuration checklists (replacing older prose-based guides)\nA compliance scan measures systems/config against a best-practice framework (e.g., NIST 800-53) for regulatory or voluntary conformance.",
+   "exam_tips": []
+  },
+  {
+   "title": "Key Takeaways",
+   "content": "• Identify goals for implementing structured incident response, following the preparation, detection, analysis, containment, eradication, recovery, and lessons learned processes\n• Prepare for effective incident response by creating a CIRT/CERT/CSIRT with suitable policies and communications plus incident handling tools\n• Develop an incident classification system and prepare IRPs and playbooks for distinct incident scenarios\n• Use tabletop exercises and simulations to test incident response plans\n• Configure SIEM to aggregate appropriate data sources and develop correlation rules to display alerts, status indicators, and trend analysis via dashboards, including host log data (network, system, security, vulnerability scan output), application log data (DNS, web, VoIP), network packet/intrusion detection data, and network traffic/protocol flow statistics\n• Integrate incident response containment, eradication, and recovery processes with procedures for quarantining, forensic evidence collection, root cause analysis, benchmark/SCAP-based vulnerability scanning, and threat hunting\n• Identify standard strategies for containment via isolation and segmentation\n• Develop or adopt a consistent process for incident responders to acquire and preserve forensic and e-discovery data, considering the order of volatility and potential loss of evidence if a host is shut down or powered off\n• Record evidence collection using video and interview witnesses to gather statements\n• Deploy forensic tools that can capture and validate evidence from persistent and nonpersistent media\n• Document storage and handling of evidence using a chain of custody\n• Identify available data sources to support investigations, including log events and metadata from firewalls, applications, endpoint antivirus and DLP, OS-specific security events, IDS/IPS, network appliances, SNMP, and vulnerability scans, plus output from packet captures and NetFlow traffic monitoring\n• Consider deploying SIEM to aggregate and correlate data sources to drive event alerting and monitoring dashboards and automated reports; use alert tuning to reduce false positives without increasing false negatives",
+   "exam_tips": []
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "Record of evidence handling from collection through court to disposal.",
+   "concept": "chain of custody",
+   "summary": "Objective 4.8"
+  },
+  {
+   "hook": "Team with incident response responsibility spanning IT, HR, legal, marketing.",
+   "concept": "computer incident response team (CIRT)",
+   "summary": "Objective 4.8"
+  },
+  {
+   "hook": "Incident response process constraining scope of affected systems via isolation/segmentation/quarantine.",
+   "concept": "containment",
+   "summary": "Objective 4.8"
+  },
+  {
+   "hook": "Method/tools to create a forensically sound copy of data from a source device.",
+   "concept": "data acquisition (forensics)",
+   "summary": "Objective 4.8"
+  },
+  {
+   "hook": "Protocol/format transmitting logs/event records to a central server (UDP 514).",
+   "concept": "syslog",
+   "summary": "Objective 4.9"
+  },
+  {
+   "hook": "Adjusting detection/correlation rules to reduce false positives and low-priority alerts.",
+   "concept": "alert tuning",
+   "summary": "Objective 4.4"
+  },
+  {
+   "hook": "Removing duplicate copies of repeated data (also in SIEM, removing redundant monitoring info).",
+   "concept": "deduplication",
+   "summary": "Objective 4.4"
+  },
+  {
+   "hook": "Standards-based version of the NetFlow framework.",
+   "concept": "IP Flow Information Export (IPFIX)",
+   "summary": "Objective 4.4"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "What is the correct order of the incident response process?",
+   "options": [
+    "Preparation, detection, analysis, containment, eradication, recovery, lessons learned",
+    "Eradication, detection, preparation, recovery",
+    "Containment, preparation, lessons learned, detection",
+    "Recovery, preparation, detection, containment"
+   ],
+   "answer": 0,
+   "explanation": "This is the standard incident response lifecycle."
+  },
+  {
+   "q": "Which data source shows every website a user's browser contacted through the company gateway?",
+   "options": [
+    "Badge reader logs",
+    "UPS logs",
+    "Proxy or web filter logs",
+    "Printer logs"
+   ],
+   "answer": 2,
+   "explanation": "Proxy logs record web requests."
+  },
+  {
+   "q": "Which system collects logs from many sources, correlates them and raises alerts?",
+   "options": [
+    "NAC",
+    "UPS",
+    "DLP",
+    "SIEM"
+   ],
+   "answer": 3,
+   "explanation": "A security information and event management system centralizes and correlates logs."
+  },
+  {
+   "q": "An infected server is disconnected from the network to stop the malware spreading. Which phase is this?",
+   "options": [
+    "Containment",
+    "Preparation",
+    "Eradication",
+    "Recovery"
+   ],
+   "answer": 0,
+   "explanation": "Containment limits the damage."
+  },
+  {
+   "q": "Which log would show that a user account was added to the Domain Admins group?",
+   "options": [
+    "Operating system security logs on the domain controller",
+    "Firewall NAT table",
+    "Email gateway logs",
+    "Switch MAC table"
+   ],
+   "answer": 0,
+   "explanation": "Directory changes are logged in the OS security log."
+  },
+  {
+   "q": "Collecting logs from firewalls, servers and endpoints into one place is called:",
+   "options": [
+    "Log deletion",
+    "Load balancing",
+    "Tokenization",
+    "Log aggregation"
+   ],
+   "answer": 3,
+   "explanation": "Aggregation brings logs together for analysis."
+  },
+  {
+   "q": "Malware is removed and the vulnerability it used is patched. Which phase is this?",
+   "options": [
+    "Containment",
+    "Detection",
+    "Lessons learned",
+    "Eradication"
+   ],
+   "answer": 3,
+   "explanation": "Eradication removes the cause of the incident."
+  },
+  {
+   "q": "Which data source helps confirm whether a host contacted a known malicious domain?",
+   "options": [
+    "Disk SMART data",
+    "Battery report",
+    "Printer queue",
+    "DNS logs"
+   ],
+   "answer": 3,
+   "explanation": "DNS logs show which names were resolved."
+  },
+  {
+   "q": "A SIEM generates hundreds of alerts for normal backup traffic every night. What should the team do?",
+   "options": [
+    "Disable the SIEM",
+    "Delete the backup logs",
+    "Tune the alert rules to reduce false positives",
+    "Ignore all alerts"
+   ],
+   "answer": 2,
+   "explanation": "Tuning keeps alerts meaningful."
+  },
+  {
+   "q": "Systems are restored from clean backups and returned to normal operation while monitored. Which phase is this?",
+   "options": [
+    "Eradication",
+    "Recovery",
+    "Analysis",
+    "Preparation"
+   ],
+   "answer": 1,
+   "explanation": "Recovery returns systems to service."
+  }
+ ]
+}

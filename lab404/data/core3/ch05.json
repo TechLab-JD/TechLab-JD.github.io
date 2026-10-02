@@ -1,0 +1,188 @@
+{
+ "core": 3,
+ "chapter": 5,
+ "title": "Enterprise Network Security",
+ "exam_objectives": [
+  "3.1",
+  "3.2"
+ ],
+ "coverage": "COVERED",
+ "domain": "d3",
+ "domain_label": "Security Architecture",
+ "sections": [
+  {
+   "title": "Enterprise Network Architecture",
+   "content": "ARCHITECTURE AND INFRASTRUCTURE CONCEPTS\n• Network infrastructure — media, appliances, addressing/forwarding protocols supporting connectivity\n• Network applications — services running on infrastructure for business activity\n• Data assets — information created/stored/transferred by business activity\nExample: email requires access control at the client, a mailbox server (confidentiality + availability), and a mail transfer server (mediates untrusted Internet traffic) — placing all three in one segment introduces avoidable vulnerabilities.\nNETWORK INFRASTRUCTURE LAYER MODEL (OSI)\nLayer | Function | Appliance/Protocol\n1 (PHY) | Physical signal transmission | Cabling, radio\n2 | MAC-address forwarding within a broadcast domain | Switches, wireless access points\n3 | IP-address forwarding between networks | Routers\n4 | Port-based session transport | TCP (reliable), UDP (connectionless)\n7 (App) | Client/server user-level services | HTTP, email, file transfer, DNS\n• Host node — initiates transfers (server/client); intermediary node — forwards traffic\n• LAN — single-site scope; WAN — metro/country/global scope\n• MAC address — 48-bit hex value (e.g. 00-15-5D-01-CA-4A), local-segment only\n• ARP (IPv4) / ND (IPv6) — map IP address to MAC address\nSWITCHING INFRASTRUCTURE\nStructured cabling — wall port → patch panel → switch port, forming a star topology. All hosts on a switch share one broadcast domain — flat and insecure at scale (any host can freely try to reach any other).\nHierarchical design — access switches serve blocks of hosts; routers interconnect blocks, creating separate broadcast domains and enabling a zone-based security model. A layer 3 switch combines routing + switching for the core layer.\nROUTING INFRASTRUCTURE (LAYER 3)\nConcept | Detail\nIPv4 | 32-bit, dotted decimal; /24 prefix or 255.255.255.0 mask splits network ID / host ID\nIPv6 | 128-bit hex; last 64 bits = interface ID, first 64 bits = hierarchical network info\nSubnet | A layer-3 broadcast domain within a larger network\nVLAN | Switch-level segmentation feature; ID range 2–4,094; maps a physical switch port to a logical broadcast domain regardless of physical location; traffic between VLANs must be routed\nSECURITY ZONES\nUntrusted public Internet zone outside the perimeter; internal zones vary by trust/access needs:\nAsset Type | Priority\nDatabases/file systems | Confidentiality + integrity — split across zones to limit breach impact\nClient devices | Integrity + availability (lower confidentiality need — shouldn't store data)\nPublic-facing app servers | Integrity + availability — never fully trusted, shouldn't hold sensitive data\nInfrastructure servers (auth, directory, monitoring) | High CIA across the board — compromise = catastrophic\nTraffic between zones is controlled by a firewall, applying least privilege. A zone needs a known, single entry/exit point.\nExample privilege-based access rules:\n• Low-privilege zone (e.g. printers) — can accept, cannot initiate\n• Enterprise LAN clients — can initiate outbound, cannot accept new inbound\n• Guest zone — Internet only, no enterprise LAN access\n• Public-facing servers — accept from Internet only, cannot initiate to LAN or Internet\n• VLAN-level rules within a zone (e.g. app servers can query databases, not vice versa)\nATTACK SURFACE & WEAKNESSES\nLayer-based attack surface: L1/2 (rogue physical/wireless connections), L3 (address spoofing across zones), L4/7 (unauthorized port/protocol access). Defense in depth = layered control categories/functions across all layers.\nWeakness | Risk\nSingle points of failure | One appliance/link outage stops everything\nComplex dependencies | One service failure cascades\nAvailability over confidentiality/integrity | \"Quick fix\" shortcuts create long-term risk\nLack of documentation/change control | Shadow IT, invisible drift\nOverdependence on perimeter security | Flat internal network = free lateral movement post-breach\nPORT SECURITY\nPhysical switch access should be restricted (locked rooms/cabinets); disabling unused ports or removing patch cables has overhead and can be bypassed.\nMethod | Description\nMAC Filtering/Limiting | Port allows only a list or a capped number of MAC addresses\n802.1X (PNAC) | Requires authentication before granting full port access\n802.1X AAA roles:\nRole | Function\nSupplicant | Device requesting access\nAuthenticator | Switch/access point — conduit only, doesn't validate\nAuthentication Server | Validates credentials, issues authorizations, does accounting\n• EAP (Extensible Authentication Protocol) — framework for pluggable auth methods, often paired with certs\n• RADIUS — carries auth/authz decisions between authenticator (RADIUS client) and authentication server (RADIUS server)\n• Port opens only for EAPoL until authenticated; full access granted after RADIUS confirms\nPHYSICAL ISOLATION\nAir-gapped host/network — no physical or wireless connection to any other network (e.g., root CA, malware analysis box, military/government/industrial sites). Improves security but complicates administration (local terminal only; USB/optical media updates — itself an attack vector requiring scanning).\nARCHITECTURE CONSIDERATIONS\nFactor | Consideration\nCost | Capital outlay + ongoing maintenance vs. reduced incident losses\nCompute/Responsiveness | CPU/memory/storage/bandwidth sized to workload\nScalability/Ease of Deployment | Ability to add/remove capacity without excess cost\nAvailability | Minimize downtime (planned + unplanned)\nResilience/Ease of Recovery | Time and manual effort to recover from failure\nPower | Facility capacity to meet device/workload energy demands\nPatch Availability | Ability to patch — limited when relying on a third party or EOL products\nRisk Transference | Contracting a third party under an SLA with penalties for missed metrics\nOn-premises networks: high capital cost, low scalability, complex large-scale disaster recovery — lower availability/resilience than cloud alternatives.",
+   "exam_tips": []
+  },
+  {
+   "title": "Network Security Appliances",
+   "content": "DEVICE PLACEMENT — DEFENSE IN DEPTH\nControl Type | Typical Placement\nPreventive | Segment/zone border (firewalls); load balancers ensure availability\nDetective | Within the perimeter, monitoring internal traffic that evaded border controls\nPreventive + Detective + Corrective | Host-level endpoint protection (firewall, A-V, IDS, DLP)\nDEVICE ATTRIBUTES\nAttribute Pair | Meaning\nActive vs. Passive | Passive: no client/agent config, undetectable, e.g. traffic copied to a sensor. Active: requires credentials/config/agent, e.g. a scanning tool or a gateway filter\nInline vs. Tap/Monitor | Inline: part of the cable path, no IP/MAC needed on the device. SPAN/mirror port: switch copies frames to a sensor (can drop errored/overloaded frames). TAP: physical inductor/optical splitter copies every frame regardless of load — more reliable\nFail-Open vs. Fail-Closed | Fail-open: preserves access, favors availability, risks engineered failure abuse. Fail-closed: blocks access, favors confidentiality/integrity, risks downtime\nFailure causes: power/hardware fault, software bug/vulnerability, config error (human factors), natural disaster.\nFIREWALLS\nPacket filtering — rules (ACL) match packet headers:\nFilter Type | Basis\nIP filtering | Source/destination IP (or MAC)\nProtocol ID/type | TCP, UDP, ICMP, routing protocols\nPort filtering | Source/destination TCP/UDP port\nAction | Result\nAccept/Permit | Packet passes\nDrop/Deny | Silently discarded\nReject | Blocked + ICMP error sent to sender\nSeparate ACLs for inbound/outbound; outbound filtering blocks unauthorized apps and malware (e.g. backdoors).\nAppliance firewall deployment modes:\nMode | Layer | Addressing\nRouted | 3 | Each interface has IP + MAC, forwards between subnets\nBridged | 2 | MAC only, bridges two nodes (e.g. router + switch) — \"transparent\"\nInline | 1 | No MAC/IP at all — \"virtual wire\"/\"bump-in-the-wire\" — \"transparent\"\nTransparent modes avoid re-addressing existing infrastructure but need a separate management interface. A router firewall bundles filtering into router firmware (routing is primary; SOHO routers are the classic example).\nStateless vs. Stateful:\n• Stateless — evaluates each packet independently; least processing but weak against multi-packet attacks, awkward with load balancing/dynamic ports\n• Stateful inspection — tracks sessions in a state table; new connections get full rule evaluation, established ones pass with less overhead\nLayer 4 Firewall | Layer 7 Firewall\nExamines TCP handshake (SYN/SYN-ACK/ACK), sequence numbers; flags anomalies as flooding/hijacking; can track UDP (harder) and ICMP anomalies | Inspects headers + payload; verifies protocol matches port (blocks malware disguising traffic as port 80); AKA application layer gateway, stateful multilayer inspection, deep packet inspection\nPROXY SERVERS\nStore-and-forward model: deconstruct → analyze → rebuild → forward.\nType | Direction | Notes\nForward Proxy | Outbound | Client → Internet (e.g. web proxy on TCP 80/443); provides caching + traffic control\nReverse Proxy | Inbound | Internet client → internal app server, typically at the network edge into a screened subnet\nProxy Mode | Client Awareness\nNon-transparent | Client configured with proxy address/port (conventionally TCP/8080)\nTransparent (forced/intercepting) | Intercepts without client reconfiguration; implemented as router or inline appliance\nPAC (Proxy Auto-Configuration) script + WPAD (Web Proxy Auto-discovery) — automate client proxy configuration.\nINTRUSION DETECTION / PREVENTION\nSystem | Behavior\nIDS | Passive — sensor (SPAN/TAP) feeds an analysis engine (Snort, Suricata, Zeek/Bro); alerts/logs on signature match, does not block; undetectable, no latency added\nIPS | Active — can shun (block source, temp/permanent), reset the connection, or redirect to a honeypot/honeynet\nNEXT-GENERATION FIREWALLS (NGFW) & UTM\nNGFW (2010, Palo Alto) typically adds: L7 app-aware filtering (incl. TLS inspection), directory integration for per-user/role/time policies, IPS functionality, cloud integration.\nUTM (Unified Threat Management) — centralizes firewall, antimalware, IPS, spam/content filtering, DLP, VPN, cloud access gateway, endpoint scanning into one appliance/console.\n| NGFW | UTM\nFocus | Fewer features, better performance | \"Do everything\" turnkey\nBest fit | Enterprise | Small/medium business, limited IT resources\nRisk | — | Single point of failure; possible latency under load\nLOAD BALANCERS\nDistributes requests across a server farm/pool for scalability, DoS mitigation, and fault tolerance.\nType | Basis\nLayer 4 | IP + TCP/UDP port\nLayer 7 (content switch) | Application data — URL, content type (video/audio)\n• Scheduling — round robin (simplest), fewest connections, best response time; can be weighted; verified via heartbeat/health checks\n• Source IP affinity — layer 4, client \"stuck\" to the node that accepted the first request\n• Session persistence — layer 7, uses a cookie (set by node or injected by balancer) — more reliable but requires cookie support\nWEB APPLICATION FIREWALLS (WAF)\nProtects web servers/back-end databases from code injection and DoS; uses signatures/pattern matching on app-layer traffic; deployed as an appliance or a web-server plug-in; findings go to a log.",
+   "exam_tips": []
+  },
+  {
+   "title": "Secure Communications",
+   "content": "REMOTE ACCESS ARCHITECTURE\nVPN Topology | Use Case\nClient-to-site (remote access) | \"Telecommuter\" model — client-initiated connection to a VPN gateway\nSite-to-site | Automatic, gateway-to-gateway trust relationship; hosts unaware of the VPN\nHost-to-host | Secures traffic between two computers over an untrusted network\nLegacy PPTP is deprecated (inadequate security). Preferred: TLS and IPsec.\nTLS VPN\nClient connects via digital certificate (server cert always; client cert optional for mutual authentication). Creates an encrypted tunnel for credential submission (often via RADIUS). Can run over TCP or UDP (DTLS = TLS over UDP, better for latency-sensitive voice/video). Use TLS 1.3 (1.2 still acceptable); earlier versions deprecated.\nIPSEC VPN\nProtocol | Function\nAH (Authentication Header) | Hashes whole packet + shared secret → ICV; integrity only, no encryption\nESP (Encapsulating Security Payload) | Encrypts payload; adds header, trailer, ICV; excludes IP header from the ICV calc\nMode | Use Case | Behavior\nTransport | Host-to-host on a private network | Only payload encrypted (with ESP); AH can protect the IP header's integrity\nTunnel | Site-to-site over an untrusted network | Whole original packet encrypted + encapsulated with a new IP header (ESP); AH has no real tunnel-mode use case\nIKE (Internet Key Exchange) — negotiates the security association (SA): authentication method, mutually supported ciphers, key exchange.\nIKE Phase | Task\nPhase I | Diffie-Hellman key agreement + peer identity, via digital certificates or a pre-shared key\nPhase II | Negotiates ciphers/key sizes for AH/ESP within the Phase I secure channel\nIKEv2 advantages over v1: supports EAP (e.g. RADIUS user auth), simpler low-bandwidth setup mode, NAT traversal, and MOBIKE multihoming (keeps tunnel alive across Wi-Fi/cellular switches).\nREMOTE DESKTOP\nGraphical remote access sends screen/audio to client, keyboard/mouse back to host.\nTool | Notes\nRDP (Remote Desktop Protocol) | Microsoft, encrypted by default, one-to-one machine access; remote desktop gateway for virtual desktops/apps\nTeamViewer / VNC | Cross-platform alternatives\nHTML5 VPN / clientless remote desktop gateway | Browser-only via canvas element + WebSocket (e.g. Apache Guacamole)\nSECURE SHELL (SSH)\nPrimary secure CLI remote access + secure file transfer (SFTP); most common implementation is OpenSSH. Server identified by a public/private host key (must be rotated if host compromise is suspected — an attacker with the private key can spoof the server).\nClient authentication methods (configured in /etc/ssh/sshd_config):\nMethod | Mechanism\nUsername/password | Verified locally or via RADIUS\nPublic key authentication | Client's public key added to server's authorized list\nKerberos | Client submits TGT via GSSAPI; server validates against the Ticket Granting Service\nCommon commands: `` ssh bobby@10.1.0.10 ssh-keygen -t rsa ssh-copy-id bobby@10.1.0.10 scp bobby@10.1.0.10:/logs/audit.log audit.log `` Delete a user's public key from the server immediately if their private key is compromised or access is revoked.\nOUT-OF-BAND MANAGEMENT & JUMP SERVERS\nConcept | Description\nIn-band management | Shares the production network; must use TLS/IPsec/RDP/SSH encryption\nOut-of-band (OOB) management | Serial console/modem port, or a physically/VLAN-separated management network — costlier but preserves access during production outages, more secure\nJump Server | Single hardened admin server in a secure zone running only necessary admin protocols (SSH/RDP); target servers' ACLs allow only the jump server, reducing attack surface for managing many hosts\nSAW (Secure Administrative Workstation) — locked-down client for admin channels only; minimal software, restricted/no Internet access, strict auditing.",
+   "exam_tips": []
+  },
+  {
+   "title": "Key Takeaways",
+   "content": "• Identify business workflows and their servers/clients/protocols/data assets; design segmented zones/blocks using VLANs, subnets, and firewall policies.\n• Deploy switching and routing to support each block, applying port security or 802.1X NAC.\n• Analyze the attack surface and select effective controls:\n• Port security or 802.1X NAC against rogue device attachment.\n• Routing firewalls for zone-perimeter access control and intrusion prevention (layer 4 or 7).\n• Transparent firewalls to protect hosts/segments without re-addressing.\n• IDS sensors behind firewalls or on mirrored ports to monitor intra-zone traffic.\n• Proxy servers, NGFW, and WAF for advanced application/user-aware filtering.\n• UTM where consolidated security capability alongside firewall/IPS is needed.\n• Design load-balanced services for high availability and fault tolerance.\n• Accommodate client-to-site, site-to-site, and host-to-host remote access with TLS and IPsec VPN protocols.\n• Implement RDP and SSH for secure desktop/shell remote access; use a jump server to consolidate management of servers in a protected zone.",
+   "exam_tips": []
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "Classifying cloud ownership/management: public, private, community, hybrid.",
+   "concept": "cloud deployment model",
+   "summary": "Objective 3.1"
+  },
+  {
+   "hook": "Classifying cloud service provision and CSP responsibility limits (SaaS/PaaS/IaaS, etc.).",
+   "concept": "cloud service model",
+   "summary": "Objective 3.1"
+  },
+  {
+   "hook": "Cloud deployed for shared use by cooperating tenants.",
+   "concept": "community cloud",
+   "summary": "Objective 3.1"
+  },
+  {
+   "hook": "OS virtualization deployment containing everything to run a service/app/microservice.",
+   "concept": "containerization",
+   "summary": "Objective 3.1"
+  },
+  {
+   "hook": "A standalone hardware device performing only firewall functions.",
+   "concept": "appliance firewall",
+   "summary": "Objective 3.2"
+  },
+  {
+   "hook": "A PNAC switch/router activating EAPoL and passing supplicant auth data to an authenticating server (e.g., RADIUS).",
+   "concept": "authenticator",
+   "summary": "Objective 3.2"
+  },
+  {
+   "hook": "IDS monitoring a computer system for unexpected behavior/state changes.",
+   "concept": "host-based intrusion detection system (HIDS)",
+   "summary": "Objective 3.2"
+  },
+  {
+   "hook": "Clientless remote desktop/VPN via browser software.",
+   "concept": "HTML5 VPN",
+   "summary": "Objective 3.2"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "In an IaaS cloud model, who is responsible for patching the guest operating system?",
+   "options": [
+    "The customer",
+    "The hardware manufacturer",
+    "Nobody; it is automatic",
+    "The cloud provider"
+   ],
+   "answer": 0,
+   "explanation": "Under the shared responsibility model, IaaS customers manage the OS and above."
+  },
+  {
+   "q": "Which device sits between a trusted internal network and the internet and filters traffic based on rules?",
+   "options": [
+    "Switch",
+    "Access point",
+    "Hub",
+    "Firewall"
+   ],
+   "answer": 3,
+   "explanation": "Firewalls enforce traffic rules at network boundaries."
+  },
+  {
+   "q": "A company uses a SaaS email platform. Who is mainly responsible for securing the application code?",
+   "options": [
+    "The customer's ISP",
+    "The end user",
+    "The customer",
+    "The SaaS provider"
+   ],
+   "answer": 3,
+   "explanation": "In SaaS the provider manages the application; the customer manages its data and access."
+  },
+  {
+   "q": "Public web servers are placed in a separate zone between the internet and the internal LAN. What is this zone called?",
+   "options": [
+    "VLAN trunk",
+    "Air gap",
+    "Screened subnet (DMZ)",
+    "Honeynet"
+   ],
+   "answer": 2,
+   "explanation": "A screened subnet isolates public-facing servers."
+  },
+  {
+   "q": "Defining servers, networks and firewall rules in code files that can be versioned and redeployed is called:",
+   "options": [
+    "Air gapping",
+    "Infrastructure as code",
+    "Serverless",
+    "Microservices"
+   ],
+   "answer": 1,
+   "explanation": "IaC manages infrastructure through code for consistency."
+  },
+  {
+   "q": "An administrator connects to a hardened server first, and only from there reaches sensitive internal servers. What is that first server called?",
+   "options": [
+    "Proxy server",
+    "Honeypot",
+    "Load balancer",
+    "Jump server"
+   ],
+   "answer": 3,
+   "explanation": "A jump server is a controlled gateway for administrative access."
+  },
+  {
+   "q": "Which architecture runs code only when an event triggers it, with the provider managing the servers?",
+   "options": [
+    "On-premises",
+    "Air-gapped",
+    "Monolithic",
+    "Serverless"
+   ],
+   "answer": 3,
+   "explanation": "Serverless functions run on demand without customers managing servers."
+  },
+  {
+   "q": "Which device inspects traffic and actively blocks attacks it detects, sitting inline?",
+   "options": [
+    "Hub",
+    "Intrusion detection system only",
+    "Network tap",
+    "Intrusion prevention system (IPS)"
+   ],
+   "answer": 3,
+   "explanation": "An IPS is inline and can block; an IDS only alerts."
+  },
+  {
+   "q": "An application split into many small, independent services that communicate through APIs is called:",
+   "options": [
+    "Microservices",
+    "Embedded",
+    "Air-gapped",
+    "Monolithic"
+   ],
+   "answer": 0,
+   "explanation": "Microservices break an app into independently deployable parts."
+  },
+  {
+   "q": "A device that spreads incoming web traffic across several servers improves which property?",
+   "options": [
+    "Confidentiality",
+    "Non-repudiation",
+    "Availability",
+    "Integrity only"
+   ],
+   "answer": 2,
+   "explanation": "Load balancers keep services available under load or when one server fails."
+  }
+ ]
+}

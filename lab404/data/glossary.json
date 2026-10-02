@@ -5164,5 +5164,5731 @@
   "domain": "mobile",
   "core": 1,
   "objective": "1.1"
+ },
+ {
+  "term": "acceptable use policy (AUP)",
+  "definition": "A policy that governs employees' use of company equipment and Internet services. ISPs may also apply AUPs to their customers.",
+  "core": 3,
+  "objective": "5.1",
+  "domain": "d5"
+ },
+ {
+  "term": "access badge",
+  "definition": "An authentication mechanism that allows a user to present a smart card to operate an entry system.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "access control list (ACL)",
+  "definition": "The collection of access control entries (ACEs) that determines which subjects (user accounts, host IP addresses, etc.) are allowed or denied access to the object and the privileges given.",
+  "core": 3,
+  "objective": "2.5",
+  "domain": "d2"
+ },
+ {
+  "term": "access control vestibule",
+  "definition": "A secure entry system with two gateways, only one of which is open at any one time.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "access point (AP)",
+  "definition": "A device that provides a connection between wireless devices and can connect to wired networks, implementing an infrastructure mode WLAN.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "account lockout",
+  "definition": "Policy that prevents access to an account under certain conditions, such as excessive failed authentication attempts.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "account policies",
+  "definition": "A set of rules governing user security information, such as password expiration and uniqueness, set globally.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "accounting",
+  "definition": "Tracking authorized usage of a resource or use of rights by a subject and alerting when unauthorized use is detected or attempted.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "acquisition/procurement",
+  "definition": "Policies and processes that ensure asset and service purchases/contracts are fully managed, secure, use authorized suppliers/vendors, and meet business goals.",
+  "core": 3,
+  "objective": "4.2",
+  "domain": "d4"
+ },
+ {
+  "term": "active reconnaissance",
+  "definition": "Penetration testing techniques that interact with target systems directly.",
+  "core": 3,
+  "objective": "5.5",
+  "domain": "d5"
+ },
+ {
+  "term": "active security control",
+  "definition": "Detective/preventive controls that use an agent or network configuration to monitor hosts, allowing accurate credentialed scanning but consuming host resources and detectable by threat actors.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "ad hoc network",
+  "definition": "A wireless network where connected devices communicate directly with each other instead of over an established medium.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "address resolution protocol (ARP)",
+  "definition": "Broadcast mechanism matching a hardware MAC address to an IP address on a local network segment.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "advanced persistent threat (APT)",
+  "definition": "An attacker's ability to obtain, maintain, and diversify access to network systems using exploits and malware.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "adware",
+  "definition": "Software that records information about a PC and its user, typically with acknowledged consent.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "AES Galois Counter Mode Protocol (GCMP)",
+  "definition": "High-performance symmetric encryption mode providing authenticated encryption with associated data (AEAD).",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "air-gapped",
+  "definition": "A type of network isolation that physically separates a host from other hosts or a network from all other networks.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "alert tuning",
+  "definition": "Adjusting detection/correlation rules to reduce false positives and low-priority alerts.",
+  "core": 3,
+  "objective": "4.4",
+  "domain": "d4"
+ },
+ {
+  "term": "algorithm",
+  "definition": "Operations that transform plaintext into ciphertext with cryptographic properties (a cipher). Symmetric, asymmetric, and hash types exist.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "allow listing",
+  "definition": "A security config where access is denied to any entity unless it appears on an allow list.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "amplification attack",
+  "definition": "Network-based attack where the attacker dramatically increases bandwidth sent to a victim during a DDoS attack via an amplification factor.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "analysis",
+  "definition": "Incident response process assessing indicators to determine validity, impact, and category.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "annualized loss expectancy (ALE)",
+  "definition": "Total annual cost of a risk = SLE × ARO.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "annualized rate of occurrence (ARO)",
+  "definition": "Probability/likelihood of a risk expressed as times per year expected to occur.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "anomalous behavior recognition",
+  "definition": "Systems that detect users/hosts/services deviating from expectations, or training encouraging employee reporting of such deviations.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "antivirus",
+  "definition": "Inspecting traffic to locate and block viruses.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "antivirus scan (A-V)",
+  "definition": "Software detecting/removing viruses and other malware (worms, Trojans, rootkits, adware, spyware, password crackers, network mappers, DoS tools, etc.).",
+  "core": 3,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "anything as a service",
+  "definition": "Concept that most IT requirements can be deployed as a cloud service model.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "appliance firewall",
+  "definition": "A standalone hardware device performing only firewall functions.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "application programming interface (API)",
+  "definition": "Methods exposed by a script/program allowing other programs to use it.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "application virtualization",
+  "definition": "Software delivery model where code runs on a server and is streamed to a client.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "arbitrary code execution",
+  "definition": "Vulnerability allowing an attacker to run their own code or exploit module.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "ARP poisoning",
+  "definition": "Network attack redirecting an IP address to the MAC address of an unintended host; enables DoS, spoofing, on-path attacks.",
+  "core": 3,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "artificial intelligence",
+  "definition": "Science of creating machines with problem-solving/analysis capability without significant human direction.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "asset",
+  "definition": "A thing of economic value; classified as tangible/intangible or short/long term.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "asymmetric algorithm",
+  "definition": "Cipher using mathematically-linked public/private keys (RSA, ECC); private key not derivable from public key.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "attack surface",
+  "definition": "Points where a network/application receives external connections or I/O that could be exploited.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "attack vector",
+  "definition": "A specific path by which a threat actor gains unauthorized access to a system.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "attestation",
+  "definition": "Capability of an authenticator/cryptographic module to prove it is a root of trust.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "attribute-based access control",
+  "definition": "Access control technique evaluating a set of attributes each subject possesses.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "authentication",
+  "definition": "Method of validating a particular entity's/individual's unique credentials.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "authentication, authorization, and accounting (AAA)",
+  "definition": "Centralized platform verifying identity, assigning permissions, and logging actions for an audit trail.",
+  "core": 3,
+  "objective": "1.2",
+  "domain": "d1"
+ },
+ {
+  "term": "authentication header",
+  "definition": "IPSec protocol providing authentication, integrity, and replay protection for transmitted data.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "authenticator",
+  "definition": "A PNAC switch/router activating EAPoL and passing supplicant auth data to an authenticating server (e.g., RADIUS).",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "authorized",
+  "definition": "A hacker engaged in authorized penetration testing or security consultancy.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "authorization",
+  "definition": "Process of determining what rights/privileges an entity has.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "availability",
+  "definition": "Security goal ensuring systems operate continuously and authorized persons can access needed data.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "backdoor",
+  "definition": "Mechanism for gaining computer access that bypasses normal authentication.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "backup",
+  "definition": "Security copy of production data made to removable media on a schedule (full, incremental, differential).",
+  "core": 3,
+  "objective": "3.4",
+  "domain": "d3"
+ },
+ {
+  "term": "backup power generator",
+  "definition": "Standby power supply (diesel/propane) providing power after a UPS bridges the initial gap.",
+  "core": 3,
+  "objective": "3.4",
+  "domain": "d3"
+ },
+ {
+  "term": "baseline configuration",
+  "definition": "Security/config settings applied to a particular system/network.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "behavior-based detection",
+  "definition": "Network monitoring detecting changes in normal operating sequences and identifying abnormal sequences.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "biometric authentication",
+  "definition": "Authentication using biometric scans (facial, iris, retina, fingerprint, signature).",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "birthday attack",
+  "definition": "Password attack exploiting encryption algorithm weaknesses via probability of collision.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "blackmail",
+  "definition": "Demanding payment to prevent release of information.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "block list",
+  "definition": "Security config permitting access generally except explicitly prohibited entities.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "blockchain",
+  "definition": "Expanding list of transactional records in a public ledger secured via cryptography.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "blocked content",
+  "definition": "Indicator of malicious activity: audit logs show unauthorized attempts to read/copy data.",
+  "core": 3,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "bluejacking",
+  "definition": "Sending unsolicited messages/pictures via Bluetooth.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "bluesnarfing",
+  "definition": "Wireless attack gaining unauthorized access to device info via Bluetooth.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "bollards",
+  "definition": "Sturdy vertical posts controlling road traffic or preventing ram-raiding/vehicle-ramming.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "botnet",
+  "definition": "Group of hosts/devices infected by a bot control program, enabling attackers to mount attacks.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "bring your own device (BYOD)",
+  "definition": "Framework/tools facilitating personally owned device use for corporate access.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "brute force attack",
+  "definition": "Password attack exhaustively trying every combination.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "buffer overflow",
+  "definition": "Attack where data exceeds destination buffer boundary, corrupting memory; can crash system or execute arbitrary code.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "bug bounty",
+  "definition": "Reward scheme for reporting vulnerabilities.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "business continuity (BC)",
+  "definition": "Processes enabling normal operations during adverse events.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "business email compromise (BEC)",
+  "definition": "Impersonation attack using a compromised employee account to convince others to commit fraud.",
+  "core": 3,
+  "objective": "2.2",
+  "domain": "d2"
+ },
+ {
+  "term": "business impact analysis (BIA)",
+  "definition": "Identifies organizational risks and their effect on mission-critical operations.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "business partnership agreement (BPA)",
+  "definition": "Agreement for two companies to work closely together (e.g., reseller/solution provider partnerships).",
+  "core": 3,
+  "objective": "5.3",
+  "domain": "d5"
+ },
+ {
+  "term": "cable lock",
+  "definition": "Physical theft protection using cable ties/padlocks; may include lockable faceplates.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "caching engine",
+  "definition": "Proxy server feature retaining copies of frequently requested web pages.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "call list",
+  "definition": "Document of authorized contacts for incident notification/collaboration.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "canonicalization attack",
+  "definition": "Encoding input characters to evade input validation.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "capacity planning",
+  "definition": "Estimating personnel/storage/hardware/software/connectivity resources needed over time.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "card cloning",
+  "definition": "Making a copy of a contactless access card.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "cellular",
+  "definition": "Data access standards over cellular networks (2G/3G GSM/CDMA; 4G/5G under LTE).",
+  "core": 3,
+  "objective": "4.1",
+  "domain": "d4"
+ },
+ {
+  "term": "centralized computing architecture",
+  "definition": "Model where all data processing/storage occurs in a single location.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "certificate chaining (chain of trust)",
+  "definition": "Validating a certificate by tracing signing CAs up to the root CA.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "certificate revocation list (CRL)",
+  "definition": "List of certificates revoked before expiration.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "certificate signing request (CSR)",
+  "definition": "Base64 ASCII file a subject sends to a CA to obtain a certificate.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "certification (disposal)",
+  "definition": "Third-party asset disposal technique using sanitization/destruction, with documentary evidence.",
+  "core": 3,
+  "objective": "4.2",
+  "domain": "d4"
+ },
+ {
+  "term": "chain of custody",
+  "definition": "Record of evidence handling from collection through court to disposal.",
+  "core": 3,
+  "objective": "4.8",
+  "domain": "d4"
+ },
+ {
+  "term": "change control",
+  "definition": "Process by which the need for change is recorded/approved.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "change management",
+  "definition": "Process implementing configuration changes as part of overall config management.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "chief information officer (CIO)",
+  "definition": "Officer with primary responsibility for IT assets/procedures.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "chief security officer (CSO)/CISO",
+  "definition": "Person with overall responsibility for info assurance/systems security.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "chief technology officer (CTO)",
+  "definition": "Officer responsible for effective use of new computing platforms/innovations.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "chmod command",
+  "definition": "Linux command for managing file permissions.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "choose your own device (CYOD)",
+  "definition": "Provisioning model where employees select from corporate device options.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "CIA triad",
+  "definition": "Confidentiality, Integrity, Availability — three principles of security control/management (also AIC).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "cipher suite",
+  "definition": "Lists of cryptographic algorithms a server/client can use to negotiate a secure connection.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "ciphertext",
+  "definition": "Enciphered data unreadable without the cipher key.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "clean desk policy",
+  "definition": "Policy mandating work areas free of sensitive documents.",
+  "core": 3,
+  "objective": "5.1",
+  "domain": "d5"
+ },
+ {
+  "term": "cloning (VM)",
+  "definition": "Quickly duplicating a VM's configuration for identical machine deployment.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "closed/proprietary",
+  "definition": "Software code/research remaining owned by the developer, used only under license.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "cloud computing",
+  "definition": "On-demand architecture with high availability/scalability/elasticity, billed by metered usage.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "cloud deployment model",
+  "definition": "Classifying cloud ownership/management: public, private, community, hybrid.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "cloud service model",
+  "definition": "Classifying cloud service provision and CSP responsibility limits (SaaS/PaaS/IaaS, etc.).",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "cloud service provider (CSP)",
+  "definition": "Org providing infrastructure/application/storage \"as a service.\"",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "clustering",
+  "definition": "Load balancing technique where servers work together as a unit.",
+  "core": 3,
+  "objective": "3.4",
+  "domain": "d3"
+ },
+ {
+  "term": "code of conduct",
+  "definition": "Professional behavior standards based on ethics (honesty, fairness).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "code signing",
+  "definition": "Using a digital signature to ensure source/integrity of programming code.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "cold site",
+  "definition": "Predetermined alternate location for rebuilding a network after disaster.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "collision (crypto)",
+  "definition": "Two different plaintext inputs producing the same ciphertext output.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "command and control (C2)",
+  "definition": "Infrastructure attackers use to direct/distribute/control malware over botnets.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "command injection",
+  "definition": "Threat actor executes arbitrary shell commands on a host via a vulnerable web app.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "common name (CN)",
+  "definition": "X500 attribute expressing a host/username; used as subject identifier in a digital cert.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Common Vulnerabilities and Exposures (CVE)",
+  "definition": "Vulnerability identification scheme by MITRE, adopted by NIST.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Common Vulnerability Scoring System (CVSS)",
+  "definition": "Risk management approach quantifying vulnerability data/degree of risk.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "community cloud",
+  "definition": "Cloud deployed for shared use by cooperating tenants.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "compensating control",
+  "definition": "Security measure taking on risk mitigation when a primary control fails.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "compute",
+  "definition": "Processing, memory, storage, networking resources for handling a workload.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "computer incident response team (CIRT)",
+  "definition": "Team with incident response responsibility spanning IT, HR, legal, marketing.",
+  "core": 3,
+  "objective": "4.8",
+  "domain": "d4"
+ },
+ {
+  "term": "computer-based training (CBT)",
+  "definition": "Training/education delivered via computer/e-learning models.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "concurrent session usage",
+  "definition": "Indicator of malicious activity: account with multiple simultaneous sessions.",
+  "core": 3,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "confidentiality",
+  "definition": "Security goal of keeping info/communications private and protected from unauthorized access.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "configuration baseline",
+  "definition": "Settings for a service/network appliance/server role.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "configuration management",
+  "definition": "Process keeping information systems in a controlled state per requirements.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "conflict of interest",
+  "definition": "When investments/obligations compromise ability to act objectively/impartially.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "containerization",
+  "definition": "OS virtualization deployment containing everything to run a service/app/microservice.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "containment",
+  "definition": "Incident response process constraining scope of affected systems via isolation/segmentation/quarantine.",
+  "core": 3,
+  "objective": "4.8",
+  "domain": "d4"
+ },
+ {
+  "term": "continuity of operations plan (COOP)",
+  "definition": "Identifies how business processes handle minor/disaster-level disruption via processing redundancy.",
+  "core": 3,
+  "objective": "3.4",
+  "domain": "d3"
+ },
+ {
+  "term": "control plane",
+  "definition": "In zero trust architecture, functions defining policy and access decisions.",
+  "core": 3,
+  "objective": "1.2",
+  "domain": "d1"
+ },
+ {
+  "term": "cookie",
+  "definition": "Text file storing info about a user visiting a website; supports sessions.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "corporate owned, business only (COBO)",
+  "definition": "Mobile provisioning model: org-owned, personal use prohibited.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "corporate owned, personally enabled (COPE)",
+  "definition": "Mobile provisioning model: org-owned, limited personal use permitted.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "corrective control",
+  "definition": "Security control acting after an incident to eliminate/minimize impact.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "correlation",
+  "definition": "Log analysis linking log/state data to identify a loggable/alertable pattern.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "covert channel",
+  "definition": "Attack subverting network security systems/policies to transfer data undetected.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "credential harvesting",
+  "definition": "Social engineering to gather valid credentials for unauthorized access.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "credential replay",
+  "definition": "Using a captured auth token to start a session without needing the plaintext password.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "credentialed scan",
+  "definition": "Vulnerability scan using credentials for a deeper audit.",
+  "core": 3,
+  "objective": "4.3",
+  "domain": "d4"
+ },
+ {
+  "term": "crossover error rate",
+  "definition": "Biometric metric expressing where FAR and FRR meet (lower = better).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "cross-site request forgery (CSRF)",
+  "definition": "Malicious script on attacker's site exploiting a session on another site in same browser.",
+  "core": 3,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "cross-site scripting (XSS)",
+  "definition": "Malicious script compromising clients via a trusted site, circumventing trusted-zone security.",
+  "core": 3,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "cryptanalysis",
+  "definition": "Science/art/practice of breaking codes and ciphers.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "cryptographic primitive",
+  "definition": "A single hash function, symmetric cipher, or asymmetric cipher.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "cryptography",
+  "definition": "Science/practice of altering data to make it unintelligible to unauthorized parties.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "cryptominer",
+  "definition": "Malware hijacking resources to create cryptocurrency.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "cyber threat intelligence (CTI)",
+  "definition": "Investigating/collecting/analyzing/disseminating info on emerging threats/sources.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "cybersecurity framework (CSF)",
+  "definition": "Standards/best practices/guidelines for security risk management.",
+  "core": 3,
+  "objective": "5.1",
+  "domain": "d5"
+ },
+ {
+  "term": "dark web",
+  "definition": "Internet resources distributed between anonymized nodes, protected by layered encryption/routing.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "dashboard",
+  "definition": "Console presenting selected information in an easily digestible format/visualization.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "data acquisition (forensics)",
+  "definition": "Method/tools to create a forensically sound copy of data from a source device.",
+  "core": 3,
+  "objective": "4.8",
+  "domain": "d4"
+ },
+ {
+  "term": "data at rest",
+  "definition": "Information primarily stored on specific media rather than moving.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "data breach",
+  "definition": "Confidential/private data read, copied, or changed without authorization; may trigger notification/reporting requirements.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "data classification",
+  "definition": "Process of applying confidentiality/privacy labels to information.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "data controller",
+  "definition": "Entity determining why/how personal data is collected, stored, used.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "data custodian",
+  "definition": "Individual responsible for managing the storage system, enforcing access control/encryption/backup.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "data exfiltration",
+  "definition": "Attacker moving data from a private network to an external network.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "data exposure",
+  "definition": "Vulnerability allowing circumvention of access controls to retrieve confidential/sensitive data.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "data historian",
+  "definition": "Software aggregating/cataloging data from multiple sources within an ICS.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "data in transit",
+  "definition": "Information being transmitted between two hosts.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "data in use",
+  "definition": "Information present in a host's volatile memory (RAM/cache).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "data inventory",
+  "definition": "List of classified data/information stored or processed by a system.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "data loss prevention (DLP)",
+  "definition": "Software detecting/preventing sensitive info from being stored/transmitted improperly.",
+  "core": 3,
+  "objective": "3.3",
+  "domain": "d3"
+ },
+ {
+  "term": "data masking",
+  "definition": "De-identification substituting generic/placeholder labels while preserving structure/format.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "data owner",
+  "definition": "Senior/executive role with ultimate CIA responsibility for an information asset.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "data plane",
+  "definition": "Functions enforcing control-plane policy decisions, facilitating data transfers.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "data processor",
+  "definition": "Entity trusted with a copy of personal data for storage/analysis on behalf of the collector.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "data retention",
+  "definition": "Process maintaining existence/control of data per policy/legal requirements.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "data subject",
+  "definition": "An individual identified by privacy data.",
+  "core": 3,
+  "objective": "5.4",
+  "domain": "d5"
+ },
+ {
+  "term": "database encryption",
+  "definition": "Encryption at table/field/record level via a DBMS.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "dd command",
+  "definition": "Linux bit-by-bit copy command, typically for disk imaging.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "decentralized computing architecture",
+  "definition": "Data processing/storage distributed across multiple locations/devices.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "deception and disruption",
+  "definition": "Resilience tools/techniques increasing attack-planning cost for threat actors.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "deduplication",
+  "definition": "Removing duplicate copies of repeated data (also in SIEM, removing redundant monitoring info).",
+  "core": 3,
+  "objective": "4.4",
+  "domain": "d4"
+ },
+ {
+  "term": "defense in depth",
+  "definition": "Strategy layering diverse security control categories rather than relying on perimeter controls alone.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "defensive penetration testing",
+  "definition": "Defensive team in a pen test/incident response exercise.",
+  "core": 3,
+  "objective": "5.5",
+  "domain": "d5"
+ },
+ {
+  "term": "denial of service attack (DoS)",
+  "definition": "Physical/app/network attack affecting resource availability.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "dependencies",
+  "definition": "Resources/services that must be running for a service to start.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "deprovisioning",
+  "definition": "Removing an account/host/app from production, revoking privileged access.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "destruction (disposal)",
+  "definition": "Asset disposal ensuring physically inaccessible/irrevocable data remnants (degaussing, shredding, incineration).",
+  "core": 3,
+  "objective": "4.2",
+  "domain": "d4"
+ },
+ {
+  "term": "detectability",
+  "definition": "Risk evaluation parameter: likelihood of detecting a risk occurrence before impact.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "detection (IR)",
+  "definition": "Incident response process correlating event data to determine incident indicators.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "detective control",
+  "definition": "Control acting during an incident to identify/record it happening.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "device placement",
+  "definition": "Positioning security controls to protect zones/hosts per defense-in-depth strategy.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "DevSecOps",
+  "definition": "Combining software development, security ops, and systems ops into integrated practice.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "dictionary attack",
+  "definition": "Password attack comparing encrypted passwords against a predetermined list.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Diffie-Hellman (DH)",
+  "definition": "Cryptographic technique for secure key exchange.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "digital certificate",
+  "definition": "X.509-format identification/auth info issued by a CA, guaranteeing a key pair's validity for a subject.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "digital signature",
+  "definition": "Message digest encrypted with sender's private key, authenticating sender and proving integrity.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "directive control",
+  "definition": "Control enforcing behavior through policy or contract.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "directory service",
+  "definition": "Network service storing identity info about all objects in a network.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "directory traversal",
+  "definition": "App attack allowing access to files/directories beyond the web document root.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "disassociation attack",
+  "definition": "Spoofing frames to disconnect a wireless station to obtain crackable auth data.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "disaster recovery (DR)",
+  "definition": "Documented plan of actions/responsibilities for critical incident response.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "discretionary access control (DAC)",
+  "definition": "Access model where each resource's ACL is managed by its owner.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "disinformation",
+  "definition": "Attack falsifying a normally trusted information resource.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "disposal/decommissioning",
+  "definition": "Policies governing device/software removal from production and subsequent disposal.",
+  "core": 3,
+  "objective": "4.2",
+  "domain": "d4"
+ },
+ {
+  "term": "distinguished name (DN)",
+  "definition": "Attributes defining a unique identifier for a resource in an X.500-like directory.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "distributed denial-of-service (DDoS)",
+  "definition": "Attack using infected Internet-connected devices to overwhelm a target with traffic.",
+  "core": 3,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "distributed reflected DoS (DRDoS)",
+  "definition": "Malicious request sent as a link so a server-side flaw runs malicious code on the target's browser.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "DNS poisoning",
+  "definition": "Injecting false resource records to redirect a domain name to an attacker-chosen IP.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "DNS sinkhole",
+  "definition": "Temporary DNS record redirecting malicious traffic to a controlled IP.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Document Object Model (DOM)",
+  "definition": "Client-side JavaScript exploitation executing an attack solely on the client.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Domain Name System Security Extensions (DNSSEC)",
+  "definition": "Protocol authenticating DNS data/upholding integrity.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Domain-based Message Authentication, Reporting, and Conformance (DMARC)",
+  "definition": "Framework ensuring proper SPF/DKIM application via DNS policy.",
+  "core": 3,
+  "objective": "4.5",
+  "domain": "d4"
+ },
+ {
+  "term": "DomainKeys Identified Mail (DKIM)",
+  "definition": "Cryptographic mail authentication using a DNS-published public key.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "downgrade attack",
+  "definition": "Cryptographic attack exploiting backward compatibility to force plaintext instead of encrypted messages.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "due diligence",
+  "definition": "Legal principle: best practice/reasonable care used when setting up/configuring/maintaining a system.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "due process",
+  "definition": "US/UK common law requirement of fair application of laws before conviction.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "dump file",
+  "definition": "File containing data captured from system memory.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "dynamic analysis",
+  "definition": "Software testing examining code behavior during runtime.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "e-discovery",
+  "definition": "Procedures/tools to collect, preserve, analyze digital evidence.",
+  "core": 3,
+  "objective": "4.8",
+  "domain": "d4"
+ },
+ {
+  "term": "embedded system",
+  "definition": "Electronic system designed for a specific dedicated function.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Encapsulating Security Payload (ESP)",
+  "definition": "IPSec sub-protocol enabling encryption/authentication of packet header+payload.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "encryption",
+  "definition": "Scrambling message characters so it's unreadable unless deciphered; uses ciphers and keys.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "encryption level",
+  "definition": "Data-at-rest encryption target granularity (file/row/record vs. volume/disk/database).",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "endpoint detection and response (EDR)",
+  "definition": "Software agent collecting system data/logs for monitoring analysis.",
+  "core": 3,
+  "objective": "4.5",
+  "domain": "d4"
+ },
+ {
+  "term": "endpoint log",
+  "definition": "Target for security events from host-based malware/intrusion detection agents.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "enterprise authentication",
+  "definition": "Wireless auth mode where the AP passes credentials through to an AAA server.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "enterprise risk management (ERM)",
+  "definition": "Comprehensive process evaluating/measuring/mitigating organizational risks.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "environmental attack",
+  "definition": "Physical threat against power/cooling/fire suppression systems.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "environmental variables (risk)",
+  "definition": "Local network/host config factors increasing/decreasing base risk level.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "ephemeral (crypto)",
+  "definition": "A key used only within a single session.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "eradication",
+  "definition": "Incident response process removing malicious tools/configs from hosts/networks.",
+  "core": 3,
+  "objective": "4.8",
+  "domain": "d4"
+ },
+ {
+  "term": "escalation",
+  "definition": "Involving expert/senior staff in problem management (support, IR, breach reporting).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "escrow (key)",
+  "definition": "Storage of a backup key with a third party.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Event Viewer",
+  "definition": "Windows console for viewing/exporting events.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "evil twin",
+  "definition": "Wireless AP deceiving users into thinking it's legitimate.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "exception handling",
+  "definition": "App vulnerability based on how it responds to unexpected errors.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "exposure factor (EF)",
+  "definition": "Percentage of asset value lost during a security incident/disaster.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Extensible Authentication Protocol (EAP)",
+  "definition": "Framework negotiating auth methods enabling hardware-based identifiers and secure tunnels.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "Extensible Authentication Protocol over LAN (EAPoL)",
+  "definition": "PNAC mechanism enabling EAP auth on Ethernet connection.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "eXtensible Markup Language (XML)",
+  "definition": "System structuring documents to be human/machine readable via tags.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "extortion",
+  "definition": "Demanding payment to prevent/halt an attack.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "factors (auth)",
+  "definition": "Something you know/have/are — knowledge, ownership/token, biometric/inherence.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "fail-closed",
+  "definition": "Security control config blocking access on failure.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "fail-open",
+  "definition": "Security control config ensuring continued access on failure.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "failover",
+  "definition": "Technique ensuring a redundant component quickly takes over for a failed asset.",
+  "core": 3,
+  "objective": "3.4",
+  "domain": "d3"
+ },
+ {
+  "term": "fake telemetry",
+  "definition": "Deception strategy returning spoofed data in response to network probes.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "false acceptance rate (FAR)",
+  "definition": "Biometric metric: unauthorized users mistakenly allowed access.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "false negative",
+  "definition": "Security scanning: a case not reported when it should be.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "false positive",
+  "definition": "Security scanning: a case reported when it should not be.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "false rejection rate (FRR)",
+  "definition": "Biometric metric: valid subjects denied access.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "fault tolerance",
+  "definition": "Protection via redundant capacity; eliminates single points of failure.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "federation",
+  "definition": "Shared login capability across multiple systems/enterprises.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "fencing",
+  "definition": "Security barrier preventing unauthorized site perimeter access.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "file integrity monitoring (FIM)",
+  "definition": "Software reviewing system files to detect tampering.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "File Transfer Protocol (FTP)",
+  "definition": "File transfer app protocol (ports 20/21); variants: SFTP, FTPS/FTPES, TFTP.",
+  "core": 3,
+  "objective": "4.5",
+  "domain": "d4"
+ },
+ {
+  "term": "financial data",
+  "definition": "Data on bank/investment accounts, payroll, tax returns.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "firewall log",
+  "definition": "Target for event data on configured logging access rules.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "first responder",
+  "definition": "First experienced person/team to arrive at an incident scene.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "forensics",
+  "definition": "Gathering/submitting computer evidence for trial; digital evidence is latent and must be carefully proven untampered.",
+  "core": 3,
+  "objective": "4.8",
+  "domain": "d4"
+ },
+ {
+  "term": "forgery attack",
+  "definition": "Attack exploiting weak authentication to perform a request via a hijacked session.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "fraud",
+  "definition": "Falsifying records, e.g., internal account tampering.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "FTPS",
+  "definition": "FTP using TLS for confidentiality.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "full disk encryption (FDE)",
+  "definition": "Encryption of all disk data (system files, temp, pagefile) via OS/third-party/controller.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "gap analysis",
+  "definition": "Measures difference between current/desired states to assess project scope.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "geofencing",
+  "definition": "Security control enforcing a virtual boundary based on real-world geography.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "geographic dispersion",
+  "definition": "Resiliency mechanism replicating processing/storage between distant sites.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "geolocation",
+  "definition": "Identifying/estimating physical location of an object/device.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Global Positioning System (GPS)",
+  "definition": "Determines receiver position via orbital satellites.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "governance",
+  "definition": "Creating/monitoring policies/procedures to manage assets and ensure regulatory compliance.",
+  "core": 3,
+  "objective": "5.1",
+  "domain": "d5"
+ },
+ {
+  "term": "governance board",
+  "definition": "Senior execs/external stakeholders setting strategy, ensuring compliance.",
+  "core": 3,
+  "objective": "5.1",
+  "domain": "d5"
+ },
+ {
+  "term": "governance committee",
+  "definition": "Leaders/SMEs defining policies/procedures/standards within a domain.",
+  "core": 3,
+  "objective": "5.1",
+  "domain": "d5"
+ },
+ {
+  "term": "group account",
+  "definition": "Collection of user accounts for shared file permissions/rights.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "group policy object (GPO)",
+  "definition": "Windows domain mechanism deploying per-user/per-computer settings.",
+  "core": 3,
+  "objective": "4.5",
+  "domain": "d4"
+ },
+ {
+  "term": "guidelines",
+  "definition": "Best-practice recommendations where strict policies/standards are impractical.",
+  "core": 3,
+  "objective": "5.1",
+  "domain": "d5"
+ },
+ {
+  "term": "hacker",
+  "definition": "Someone who breaks into systems/spreads viruses; ethical hackers view themselves as security experts.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "hacktivist",
+  "definition": "Threat actor motivated by a social/political cause.",
+  "core": 3,
+  "objective": "2.1",
+  "domain": "d2"
+ },
+ {
+  "term": "hard authentication token",
+  "definition": "Token generated by a dedicated hardware cryptoprocessor (ownership factor).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "hardening",
+  "definition": "Making a host/app secure by reducing attack surface, monitoring, and patching.",
+  "core": 3,
+  "objective": "2.5",
+  "domain": "d2"
+ },
+ {
+  "term": "hash-based message authentication code (HMAC)",
+  "definition": "Verifies message integrity/authenticity via hash + secret key.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "hashing",
+  "definition": "Converts arbitrary-length input to fixed-length output, minimizing collision chance.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Health Insurance Portability and Accountability Act (HIPAA)",
+  "definition": "US law protecting storage/transmission of personal healthcare data.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "heat map (Wi-Fi)",
+  "definition": "Diagram showing signal strength/channel utilization by location.",
+  "core": 3,
+  "objective": "4.1",
+  "domain": "d4"
+ },
+ {
+  "term": "heat map risk matrix",
+  "definition": "Graphical table of risk likelihood/impact for stakeholder reference.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "heuristic",
+  "definition": "Method using feature comparisons/likenesses rather than signature matching to identify malicious activity.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "high availability (HA)",
+  "definition": "Metric defining how closely a system approaches 100% data availability with high performance.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "honeypot",
+  "definition": "Host/network/file/credential set up to lure attackers away from real assets and reveal attack strategies.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "horizontal privilege escalation",
+  "definition": "Accessing/modifying resources not entitled to at the same privilege level.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "host-based firewall",
+  "definition": "Software protecting only the single host it runs on.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "host-based intrusion detection system (HIDS)",
+  "definition": "IDS monitoring a computer system for unexpected behavior/state changes.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "host-based intrusion prevention system (HIPS)",
+  "definition": "Endpoint protection detecting/preventing via signature/heuristic matching.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "hot site",
+  "definition": "Fully configured alternate site brought online instantly/quickly after disaster.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "HTML5 VPN",
+  "definition": "Clientless remote desktop/VPN via browser software.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "human-machine interface (HMI)",
+  "definition": "I/O controls on a PLC for configuring/monitoring an ICS.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "human-readable data",
+  "definition": "Info accessible/understandable via basic viewer software.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "hybrid cloud",
+  "definition": "Cloud deployment using both private and public elements.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "hybrid password attack",
+  "definition": "Attack combining dictionary, rainbow table, and brute force methods.",
+  "core": 3,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "identification",
+  "definition": "Process by which a user account/credentials are issued to the correct person (enrollment).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "identity and access management (IAM)",
+  "definition": "Security process providing identification/authentication/authorization for entities.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "identity provider",
+  "definition": "In a federated network, the service holding the user account and performing authentication.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "IDS/IPS log",
+  "definition": "Target for event data on configured detection/prevention rules.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "IEEE 802.1X",
+  "definition": "Standard for encapsulating EAP over LAN/WLAN to implement port-based authentication.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "impact (risk)",
+  "definition": "Severity of risk if realized, per scope/asset value/financial impact.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "impersonation",
+  "definition": "Social engineering attack pretending to be someone else.",
+  "core": 3,
+  "objective": "2.2",
+  "domain": "d2"
+ },
+ {
+  "term": "implicit deny",
+  "definition": "Security principle: unless explicitly granted, access is denied.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "impossible travel",
+  "definition": "Indicator of malicious activity: auth attempts from different geographic locations in a short timeframe.",
+  "core": 3,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "incident",
+  "definition": "Event interrupting standard operations or compromising security policy.",
+  "core": 3,
+  "objective": "5.1",
+  "domain": "d5"
+ },
+ {
+  "term": "incident response lifecycle",
+  "definition": "Procedures/guidelines for priorities/actions/responsibilities: preparation, detection, analysis, containment, eradication/recovery, lessons learned.",
+  "core": 3,
+  "objective": "4.8",
+  "domain": "d4"
+ },
+ {
+  "term": "incident response plan (IRP)",
+  "definition": "Specific procedures performed when a certain event is detected/reported.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "indicator of compromise (IoC)",
+  "definition": "Sign that an asset/network has been or is being attacked.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "indoor positioning system (IPS)",
+  "definition": "Deriving a device's indoor location via proximity to radio sources.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "industrial camouflage",
+  "definition": "Disguising the nature/purpose of buildings or building parts.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "industrial control system (ICS)",
+  "definition": "Network managing embedded devices for dedicated functions.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "information security policies",
+  "definition": "Senior-management-backed documents detailing requirements for protecting tech/info assets.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Information Sharing and Analysis Center (ISAC)",
+  "definition": "Not-for-profit group sharing sector-specific threat intel/best practices.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "information-sharing organization",
+  "definition": "Collaborative groups exchanging emerging threat/vulnerability data.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "infrastructure as a service (IaaS)",
+  "definition": "Cloud model provisioning VMs and network infrastructure.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "infrastructure as code (IaC)",
+  "definition": "Provisioning via scripted automation/orchestration.",
+  "core": 3,
+  "objective": "4.7",
+  "domain": "d4"
+ },
+ {
+  "term": "inherent risk",
+  "definition": "Risk posed if no controls are in place.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "injection attack",
+  "definition": "Attack exploiting weak request handling/input validation to run arbitrary code.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "inline",
+  "definition": "Placement of a network security control so it's part of the cable path.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "input validation",
+  "definition": "Technique ensuring data entered into a field/variable is handled appropriately.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "integrated penetration testing",
+  "definition": "Holistic approach combining different pen testing methodologies.",
+  "core": 3,
+  "objective": "5.5",
+  "domain": "d5"
+ },
+ {
+  "term": "integrity",
+  "definition": "Security goal keeping information accurate, error-free, unmodified without authorization.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "intelligence fusion",
+  "definition": "Using threat intel data sources to automate detection of adversary IoCs/TTPs.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "intentional threat",
+  "definition": "Threat actor with malicious purpose.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "internal threat",
+  "definition": "Threat actor with system privileges causing intentional/unintentional incidents.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "internal/external (threat actor)",
+  "definition": "Degree of pre-existing access a threat actor possesses.",
+  "core": 3,
+  "objective": "2.1",
+  "domain": "d2"
+ },
+ {
+  "term": "Internet header",
+  "definition": "Record of email servers involved in transferring a message.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Internet Key Exchange (IKE)",
+  "definition": "Framework creating a security association (SA) used with IPSec.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Internet Message Access Protocol (IMAP)",
+  "definition": "Protocol for accessing/managing mailbox messages (port 143; IMAPS 993).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "internet of things (IoT)",
+  "definition": "Devices reporting state/config data, remotely managed over IP networks.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "Internet Protocol (IP)",
+  "definition": "Network layer protocol providing packet addressing/routing.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Internet Protocol Security (IPSec)",
+  "definition": "Protocol suite securing data via authentication/encryption across networks.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "internet relay chat (IRC)",
+  "definition": "Group communications protocol for chat/private messages/file sharing.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "intrusion detection system (IDS)",
+  "definition": "Appliance/software analyzing packet sniffer data to identify policy-violating traffic.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "intrusion prevention system (IPS)",
+  "definition": "Combines detection with active attack-blocking functions.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "IP Flow Information Export (IPFIX)",
+  "definition": "Standards-based version of the NetFlow framework.",
+  "core": 3,
+  "objective": "4.4",
+  "domain": "d4"
+ },
+ {
+  "term": "isolation (security)",
+  "definition": "Removing/restricting communications paths to a device/system.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "IT Infrastructure Library (ITIL)",
+  "definition": "IT best practice framework aligning ITSM with business needs.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "jailbreaking",
+  "definition": "Removing protective seal/OS restrictions to give greater device control.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "JavaScript Object Notation (JSON)",
+  "definition": "File format using attribute-value pairs, human/machine readable.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "journaling",
+  "definition": "File system method recording pending changes in a journal object.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "jump server",
+  "definition": "Hardened server providing access to other hosts.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Kerberos",
+  "definition": "Single sign-on auth/authorization service based on time-sensitive ticket-granting.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "key distribution center (KDC)",
+  "definition": "Kerberos component authenticating users and issuing tickets.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "key encryption key (KEK)",
+  "definition": "Private key encrypting the symmetric bulk media encryption key (MEK).",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "key exchange",
+  "definition": "Method by which cryptographic keys are transferred among users.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "key length",
+  "definition": "Size of a cryptographic key in bits.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "key management system",
+  "definition": "PKI procedures/tools centralizing key generation/storage.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "key risk indicator (KRI)",
+  "definition": "Method identifying/analyzing emerging risks to proactively avoid issues.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "key stretching",
+  "definition": "Strengthening weak crypto key input (e.g., passwords) against brute force.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "keylogger",
+  "definition": "Malicious software/hardware recording keystrokes.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "kill chain",
+  "definition": "Lockheed Martin model describing stages of a threat actor's progress to intrusion.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "lateral movement",
+  "definition": "Process by which an attacker moves from one part of an environment to another.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "layer 4 firewall",
+  "definition": "Stateful inspection firewall monitoring TCP sessions/UDP traffic.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "layer 7 firewall",
+  "definition": "Stateful inspection firewall filtering by application protocol headers/data.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "least privilege",
+  "definition": "Principle: allocate minimum necessary rights/privileges/info to perform a role.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "legal data",
+  "definition": "Documents/records relating to matters of law (contracts, property, court cases, regulatory filings).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "legal hold",
+  "definition": "Process preserving relevant info when litigation is reasonably expected.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "lessons learned report (LLR)",
+  "definition": "Analysis providing insight into improving future response/support processes.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "level of sophistication/capability",
+  "definition": "Formal classification of a threat actor's resources/expertise.",
+  "core": 3,
+  "objective": "2.1",
+  "domain": "d2"
+ },
+ {
+  "term": "lighting",
+  "definition": "Physical security ensuring illumination for safety and camera surveillance.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Lightweight Directory Access Protocol (LDAP)",
+  "definition": "Protocol for accessing network directory databases.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "LDAP Secure",
+  "definition": "LDAP implemented using SSL/TLS encryption.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "likelihood",
+  "definition": "Qualitative risk analysis expression of event chance (e.g., high/low).",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "listener/collector",
+  "definition": "Network appliance gathering/receiving log/state data.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "load balancer",
+  "definition": "Switch/router/software distributing client requests across resources.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "log aggregation",
+  "definition": "Parsing multiple log/security data sources into a consistent searchable format.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "log data",
+  "definition": "Automatically logged OS/application events providing troubleshooting/audit info.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "logic bomb",
+  "definition": "Malicious program/script set to run under specific circumstances/events.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "logical segmentation",
+  "definition": "Network topology restricting communication between segments via switch/router/firewall config.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "lure",
+  "definition": "Attack enticing a victim to open a removable device/document/image concealing malware.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "machine learning (ML)",
+  "definition": "AI component developing task-solving strategies from labeled datasets.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "malicious process",
+  "definition": "Process executed without proper authorization to damage/compromise a system.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "malicious update",
+  "definition": "Software repository/supply chain vulnerability adding malicious code to a package.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "malware",
+  "definition": "Software serving a malicious purpose, typically installed without consent/knowledge.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Mandatory Access Control (MAC)",
+  "definition": "Access model with inflexible system-defined rules and clearance levels.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "maneuver (threat hunting)",
+  "definition": "Threat actor/defender using deception/counterattack strategies for positional advantage.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "master service agreement (MSA)",
+  "definition": "Contract establishing precedence/guidelines for business documents between parties.",
+  "core": 3,
+  "objective": "5.3",
+  "domain": "d5"
+ },
+ {
+  "term": "maximum tolerable downtime (MTD)",
+  "definition": "Longest period a process can be inoperable without irrevocable failure.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "mean time between failures (MTBF)",
+  "definition": "Metric predicting expected time between device/component failures.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "mean time to repair/replace/recover (MTTR)",
+  "definition": "Average time to repair/replace/recover from a failure.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Media Access Control filtering (MAC filtering)",
+  "definition": "ACL applied so only approved MAC addresses connect.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Memorandum of Agreement (MoA)",
+  "definition": "Legal document forming cooperation basis without a formal contract.",
+  "core": 3,
+  "objective": "5.3",
+  "domain": "d5"
+ },
+ {
+  "term": "memorandum of understanding (MoU)",
+  "definition": "Preliminary/exploratory, non-legally-binding intent-to-cooperate agreement.",
+  "core": 3,
+  "objective": "5.3",
+  "domain": "d5"
+ },
+ {
+  "term": "memory injection",
+  "definition": "Vulnerability running malicious code at the same privilege level as the vulnerable process.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Message Digest Algorithm v5 (MD5)",
+  "definition": "Cryptographic hash function producing 128-bit output.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "metadata",
+  "definition": "Info stored/recorded as a property of an object/system state/transaction.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "microservice",
+  "definition": "Independent single-function module with lightweight interfaces.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "missing logs",
+  "definition": "Indicator of malicious activity: deleted/tampered events or log files.",
+  "core": 3,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "mission essential function (MEF)",
+  "definition": "Activity too critical to defer for more than a few hours.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "mobile device management (MDM)",
+  "definition": "Process/technologies for tracking/controlling/securing mobile infrastructure.",
+  "core": 3,
+  "objective": "4.1",
+  "domain": "d4"
+ },
+ {
+  "term": "monitoring/asset tracking",
+  "definition": "Enumeration/inventory ensuring assets comply with baselines and haven't been tampered with.",
+  "core": 3,
+  "objective": "4.2",
+  "domain": "d4"
+ },
+ {
+  "term": "multi-cloud",
+  "definition": "Deployment model using multiple public cloud services.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "multifactor authentication (MFA)",
+  "definition": "Requires at least two different credential factors (2FA = two factors).",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "nation state actor",
+  "definition": "Threat actor supported by a host country's military/security services.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "National Institute of Standards and Technology (NIST)",
+  "definition": "Develops US federal computer security standards/best practices.",
+  "core": 3,
+  "objective": "5.1",
+  "domain": "d5"
+ },
+ {
+  "term": "near-field communication (NFC)",
+  "definition": "Two-way short-range radio comm standard (contactless payment), based on RFID.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "NetFlow",
+  "definition": "Cisco-developed reporting of network flow info to a structured database.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "network access control (NAC)",
+  "definition": "Collected protocols/policies/hardware authenticating/authorizing network device access.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "network attack",
+  "definition": "Attack against cabled/wireless infrastructure (recon, DoS, credential harvesting, on-path, privilege escalation, exfiltration).",
+  "core": 3,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "network behavior anomaly detection (NBAD)",
+  "definition": "Monitors packets for anomalous behavior based on known signatures.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "network functions virtualization (NFV)",
+  "definition": "Provisioning virtual network appliances via VMs/containers.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "network log",
+  "definition": "Target for events generated by a network appliance.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "network monitoring",
+  "definition": "Auditing software collecting status/config info from network devices (often SNMP-based).",
+  "core": 3,
+  "objective": "4.4",
+  "domain": "d4"
+ },
+ {
+  "term": "next-generation firewall (NGFW)",
+  "definition": "Firewall advances: app awareness, user-based filtering, intrusion prevention, cloud inspection.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "non-credentialed scan",
+  "definition": "Scan with fewer permissions, often finding only missing patches/updates.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "nondisclosure agreement (NDA)",
+  "definition": "Agreement not to share confidential info/materials with unauthorized parties.",
+  "core": 3,
+  "objective": "5.3",
+  "domain": "d5"
+ },
+ {
+  "term": "non-human-readable data",
+  "definition": "Info in a file requiring a specialized processor to decode.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "non-repudiation",
+  "definition": "Ensuring the sender/creator of data remains associated with it and can't deny it.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "non-transparent proxy",
+  "definition": "Server redirecting requests/responses for explicitly configured clients.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "NT LAN Manager authentication (NTLM)",
+  "definition": "Microsoft challenge-response authentication protocol.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "obfuscation",
+  "definition": "Hiding/camouflaging code or information to make it harder to read.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "objective probability",
+  "definition": "Mathematical measure of the possibility of a risk occurring.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "offboarding",
+  "definition": "Process ensuring HR/other requirements are covered when an employee leaves.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "offensive penetration testing",
+  "definition": "The \"hostile\"/attacking team in a pen test/IR exercise.",
+  "core": 3,
+  "objective": "5.5",
+  "domain": "d5"
+ },
+ {
+  "term": "off-site backup",
+  "definition": "Backup writing to media stored at a separate physical location.",
+  "core": 3,
+  "objective": "3.4",
+  "domain": "d3"
+ },
+ {
+  "term": "onboarding",
+  "definition": "Process of bringing in a new employee/contractor/supplier.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "one-time password (OTP)",
+  "definition": "Password generated for one session, invalid afterward.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "online certificate status protocol (OCSP)",
+  "definition": "Allows clients to request the revocation status of a certificate.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "on-path attack",
+  "definition": "Attacker makes an independent connection between two victims, reading/modifying traffic.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "on-premises",
+  "definition": "Software/services installed/managed on a customer's own infrastructure.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "on-premises network",
+  "definition": "Private network facility owned/operated for employee use only.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "on-site backup",
+  "definition": "Backup writing to media stored at the same physical location as production.",
+  "core": 3,
+  "objective": "3.4",
+  "domain": "d3"
+ },
+ {
+  "term": "Opal",
+  "definition": "Standards for implementing device encryption on storage devices.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "open authorization (OAuth)",
+  "definition": "Federated identity standard allowing resource servers to work with a separate identity provider.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "open public ledger",
+  "definition": "Distributed public record of transactions underpinning blockchain integrity.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "open-source intelligence (OSINT)",
+  "definition": "Publicly available info plus tools to aggregate/search it.",
+  "core": 3,
+  "objective": "4.3",
+  "domain": "d4"
+ },
+ {
+  "term": "order of volatility",
+  "definition": "Order in which volatile data should be recovered after an incident.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "organized crime",
+  "definition": "Threat actor using hacking/computer fraud for commercial gain.",
+  "core": 3,
+  "objective": "2.1",
+  "domain": "d2"
+ },
+ {
+  "term": "out of band management (OOB)",
+  "definition": "Accessing an appliance's admin interface via a separate network from the usual data path.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "out-of-cycle logging",
+  "definition": "Indicator of malicious activity: inconsistent event dates/timestamps.",
+  "core": 3,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "package monitoring",
+  "definition": "Techniques mitigating risks from application vulnerabilities in third-party code.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "packet analysis",
+  "definition": "Analysis of header/payload data in captured frames.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "packet filtering firewall",
+  "definition": "Layer 3 firewall comparing packet headers against ACLs.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "parallel processing tests",
+  "definition": "Running primary/backup systems simultaneously to validate backup functionality.",
+  "core": 3,
+  "objective": "3.4",
+  "domain": "d3"
+ },
+ {
+  "term": "passive reconnaissance",
+  "definition": "Pen testing techniques not directly interacting with target systems.",
+  "core": 3,
+  "objective": "5.5",
+  "domain": "d5"
+ },
+ {
+  "term": "passive security control",
+  "definition": "Scan analyzing only intercepted traffic rather than sending probes.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "password attack",
+  "definition": "Any attack trying to gain unauthorized access to/use of passwords.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "password best practices",
+  "definition": "Rules for secure password selection/maintenance (length, complexity, age, reuse).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "password manager",
+  "definition": "Software suggesting/storing passwords to reduce risky user behavior.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "password spraying",
+  "definition": "Brute force testing multiple accounts against a dictionary of common passwords.",
+  "core": 3,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "passwordless",
+  "definition": "MFA scheme using ownership/biometric factors but not knowledge factors.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "patch",
+  "definition": "Supplemental code addressing a security problem or functionality flaw.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "patch management",
+  "definition": "Identifying, testing, deploying OS/app updates (critical/security-critical/recommended/optional).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Payment Card Industry Data Security Standard (PCI DSS)",
+  "definition": "Info security standard for orgs processing card payments.",
+  "core": 3,
+  "objective": "5.4",
+  "domain": "d5"
+ },
+ {
+  "term": "penetration testing",
+  "definition": "Simulated attack test that verifies, tests, bypasses, and exploits security controls.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "percent encoding",
+  "definition": "Encoding characters as hexadecimal values delimited by the percent sign.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "perfect forward secrecy (PFS)",
+  "definition": "Ensures a compromised key affects only a single session, not other sessions' data.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "permissions",
+  "definition": "Security settings controlling access to objects (files, network resources).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "persistence (load balancing/sticky sessions)",
+  "definition": "Config enabling a client to maintain connection with the same load-balanced server.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "personal area network (PAN)",
+  "definition": "Close-range wireless comm between personal devices (Bluetooth/NFC-based).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "personal identification number (PIN)",
+  "definition": "Number used with authentication devices such as smart cards.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "pharming",
+  "definition": "Impersonation attack redirecting a website request to a similar-looking fake site.",
+  "core": 3,
+  "objective": "2.2",
+  "domain": "d2"
+ },
+ {
+  "term": "phishing",
+  "definition": "Email-based social engineering attack from a supposedly reputable source.",
+  "core": 3,
+  "objective": "2.2",
+  "domain": "d2"
+ },
+ {
+  "term": "physical attack",
+  "definition": "Attack against cabling/hardware/environment of network-hosting facilities.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "physical penetration testing",
+  "definition": "Assessment techniques extending to site/physical security systems.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "pivoting",
+  "definition": "Using a compromised host as a platform to spread an attack.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "platform as a service (PaaS)",
+  "definition": "Cloud model provisioning app/database services as a dev platform.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "playbook",
+  "definition": "Checklist of actions to detect/respond to a specific incident type.",
+  "core": 3,
+  "objective": "4.8",
+  "domain": "d4"
+ },
+ {
+  "term": "pluggable authentication module (PAM)",
+  "definition": "Framework implementing Linux authentication providers.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "Point-to-Point Tunneling Protocol (PPTP)",
+  "definition": "VPN protocol over PPP/TCP-IP; obsolete/vulnerable to password cracking.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "policy",
+  "definition": "Strictly enforceable ruleset determining how a task should be completed.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "port mirroring (SPAN)",
+  "definition": "Copying switch port traffic to another port for monitoring.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Post Office Protocol (POP)",
+  "definition": "Protocol enabling email download from server mailbox (TCP 110/995).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "potentially unwanted program (PUP)",
+  "definition": "Software not definitively malicious but unwanted/unchosen.",
+  "core": 3,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "power distribution unit (PDU)",
+  "definition": "Advanced strip socket providing filtered voltage, remote-managed.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "power failure",
+  "definition": "Complete loss of building power.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "preparation (IR)",
+  "definition": "Incident response process hardening systems, defining policies, establishing communication/resources.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "pre-shared key (PSK)",
+  "definition": "Wireless auth mode using a passphrase to derive an encryption key.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "pretexting",
+  "definition": "Social engineering: communicating a lie/half-truth to induce belief in a falsehood.",
+  "core": 3,
+  "objective": "2.2",
+  "domain": "d2"
+ },
+ {
+  "term": "preventive control",
+  "definition": "Control acting before an incident to eliminate/reduce attack likelihood.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "private cloud",
+  "definition": "Cloud deployed for use by a single entity.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "private key",
+  "definition": "Asymmetric key known only to the holder, linked to but not derivable from the public key.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "privilege escalation",
+  "definition": "Exploiting flaws to gain greater access than intended.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "privileged access management (PAM)",
+  "definition": "Policies/procedures/software managing admin accounts/credentials.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "probability (quantitative risk)",
+  "definition": "Chance of an event expressed as a percentage.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "procedure",
+  "definition": "Detailed instructions for completing a task per policies/standards.",
+  "core": 3,
+  "objective": "5.1",
+  "domain": "d5"
+ },
+ {
+  "term": "project stakeholder",
+  "definition": "Person with business interest in or active involvement in a project.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "proprietary information",
+  "definition": "Information created by an org, typically about its products/services.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Protected Extensible Authentication Protocol (PEAP)",
+  "definition": "EAP method wrapping auth in a TLS tunnel for encrypted credential exchange; the standard pairing with RADIUS (not PAP, which sends credentials in cleartext).",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "provenance",
+  "definition": "Digital forensics: tracing evidence source and showing it hasn't been tampered with.",
+  "core": 3,
+  "objective": "4.8",
+  "domain": "d4"
+ },
+ {
+  "term": "provisioning",
+  "definition": "Deploying an account/host/app to a target production environment.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "proximity reader",
+  "definition": "Scanner reading RFID/NFC tag data when in range.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "proxy server",
+  "definition": "Server mediating client-server communications; can filter/modify/cache.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "public cloud",
+  "definition": "Cloud deployed for shared use by multiple independent tenants.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "public key",
+  "definition": "Asymmetric key freely distributed, performing the reverse operation of the linked private key.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "public key cryptography standards (PKCS)",
+  "definition": "Standards defining CA/digital certificate use.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "public key infrastructure (PKI)",
+  "definition": "Framework of CAs, certificates, software/services for validating subject identities.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "qualitative risk analysis",
+  "definition": "Determining probability/impact of risks via logical reasoning without numeric data.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "quantitative risk analysis",
+  "definition": "Numerical assessment of risk probability/impact/measured impact.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "questionnaires (vendor mgmt)",
+  "definition": "Structured means of obtaining consistent info for risk analysis/comparison.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "race condition",
+  "definition": "Vulnerability where outcome depends on event timing/order not executing as intended.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "radio-frequency ID (RFID)",
+  "definition": "Encoding info into passive tags energized/read by radio waves.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "ransomware",
+  "definition": "Malware extorting money by blocking operation and/or encrypting files.",
+  "core": 3,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "reaction time",
+  "definition": "Elapsed time between an incident occurring and response implementation.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "real-time operating system (RTOS)",
+  "definition": "OS prioritizing deterministic execution for time-critical tasks.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "reconnaissance",
+  "definition": "Gathering info about a target's systems/software/accounts/network config.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "recovery (IR)",
+  "definition": "Incident response process restoring hosts/networks/systems to a secure baseline.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "recovery point objective (RPO)",
+  "definition": "Longest period of tolerable unrecoverable data loss.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "recovery time objective (RTO)",
+  "definition": "Maximum time allowed to restore a system after failure.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "redundancy",
+  "definition": "Overprovisioning resources for failover in case of problems.",
+  "core": 3,
+  "objective": "3.4",
+  "domain": "d3"
+ },
+ {
+  "term": "regulated data",
+  "definition": "Info with storage/handling compliance requirements per legislation/industry regulation.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "remote access",
+  "definition": "Infrastructure/protocols/software allowing joining a local network remotely.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "remote access Trojan (RAT)",
+  "definition": "Malware creating a backdoor remote admin channel.",
+  "core": 3,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "Remote Authentication Dial-in User Service (RADIUS)",
+  "definition": "AAA protocol managing remote/wireless auth.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "remote code execution (RCE)",
+  "definition": "Vulnerability allowing code transmission from a remote host for execution on a target.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Remote Desktop Protocol (RDP)",
+  "definition": "App protocol for graphical remote connections (TCP 3389).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "replay attack",
+  "definition": "Attacker intercepts and reuses auth data to reestablish a session.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "replication",
+  "definition": "Copying data between processing systems (synchronous/asynchronous).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "reporting (forensics)",
+  "definition": "Summarizing significant digital data contents using open/repeatable/unbiased methods.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "representational state transfer (REST)",
+  "definition": "Standardized stateless architectural style for web app communication.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "reputational threat intelligence",
+  "definition": "Blocklists of known threat sources (malware signatures, IP ranges, DNS domains).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "residual risk",
+  "definition": "Risk remaining after controls are put in place.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "resilience",
+  "definition": "Ability of a system/network to recover quickly from failure with minimal manual intervention.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "resource consumption",
+  "definition": "Indicator of malicious activity: CPU/memory/storage/network usage deviating from norms.",
+  "core": 3,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "resource inaccessibility",
+  "definition": "Indicator of malicious activity: an available file/service becomes inaccessible.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "resources/funding (threat actor)",
+  "definition": "Ability to draw on funding to acquire personnel/tools/develop novel attacks.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "responsibility matrix",
+  "definition": "Identifies shared security implementation responsibility between customer and CSP.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "responsible disclosure program",
+  "definition": "Process allowing safe vulnerability disclosure to a software developer.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "responsiveness",
+  "definition": "Ability to process a task/workload within an acceptable time.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "reverse proxy",
+  "definition": "Proxy protecting servers from direct contact with client requests.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "right to be forgotten",
+  "definition": "Regulated privacy principle protecting a data subject's ability to request deletion.",
+  "core": 3,
+  "objective": "5.4",
+  "domain": "d5"
+ },
+ {
+  "term": "risk",
+  "definition": "Likelihood and impact of a threat actor exercising a vulnerability.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "risk acceptance",
+  "definition": "Determining a risk is within appetite; no additional countermeasures needed.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "risk analysis",
+  "definition": "Process for qualifying/quantifying likelihood/impact of a factor.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "risk appetite",
+  "definition": "Strategic assessment of acceptable residual risk level.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "risk assessment",
+  "definition": "Process identifying/analyzing risks, developing response strategy, mitigating future impact.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "risk avoidance",
+  "definition": "Ceasing a risk-presenting activity.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "risk deterrence",
+  "definition": "Deploying controls to reduce likelihood/impact of a threat scenario.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "risk exception",
+  "definition": "Using alternate mitigating controls to control an accepted risk factor.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "risk exemption",
+  "definition": "Accepting an unmitigated risk factor.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "risk identification",
+  "definition": "Listing sources of risk due to threats/vulnerabilities.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "risk management",
+  "definition": "Cyclical process of identifying/assessing/analyzing/responding to risks.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "risk mitigation",
+  "definition": "Reducing risk to fit organizational risk tolerance.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "risk owner",
+  "definition": "Individual accountable for developing/implementing a risk response strategy.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "risk register",
+  "definition": "Document highlighting risk assessment results (e.g., traffic-light grid).",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "risk reporting",
+  "definition": "Periodic summary of a project's current/realized risks and impact.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "risk threshold",
+  "definition": "Boundary for acceptable risk types/levels.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "risk tolerance",
+  "definition": "Thresholds separating different levels of risk.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "risk transference",
+  "definition": "Moving/sharing risk responsibility (e.g., cybersecurity insurance).",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "role-based access control (RBAC)",
+  "definition": "Access model with ACLs providing permissions based on job function.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "root cause analysis",
+  "definition": "Technique determining a problem's true cause to prevent recurrence.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "root certificate authority",
+  "definition": "CA issuing certificates to intermediate CAs in a hierarchy.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "rooting",
+  "definition": "Gaining superuser-level access on an Android device.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "router firewall",
+  "definition": "Router hardware with embedded firewall firmware functionality.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "rule-based access control",
+  "definition": "Nondiscretionary access control using operational rules/restrictions for least privilege.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "rules of engagement (ROE)",
+  "definition": "Definition of how a pen test will be executed and its constraints.",
+  "core": 3,
+  "objective": "5.5",
+  "domain": "d5"
+ },
+ {
+  "term": "salt",
+  "definition": "Countermeasure mitigating precomputed hash table attacks via a random value added to plaintext input.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "sandbox",
+  "definition": "Isolated computing environment guaranteeing controlled/secure operation for analyzing malware/faulty software.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "sanitization",
+  "definition": "Thoroughly/completely removing data so remnants can't be recovered.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Sarbanes-Oxley Act (SOX)",
+  "definition": "2002 law dictating storage/retention of financial/business operation documents.",
+  "core": 3,
+  "objective": "5.4",
+  "domain": "d5"
+ },
+ {
+  "term": "scalability",
+  "definition": "Property allowing a computing environment to gracefully fulfill increasing resource needs.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "screened subnet",
+  "definition": "Segment isolated by firewall(s) accepting designated-port Internet connections.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "Secure Access Service Edge (SASE)",
+  "definition": "Networking/security architecture combining firewalls, IAM, secure web gateway with SD-WAN.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "secure baseline",
+  "definition": "Configuration guides/benchmarks/best practices for a secure network device/server state.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "secure enclave",
+  "definition": "CPU extensions protecting memory-stored data from untrusted processes.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Secure File Transfer Protocol (SFTP)",
+  "definition": "Secure FTP using an SSH tunnel.",
+  "core": 3,
+  "objective": "4.5",
+  "domain": "d4"
+ },
+ {
+  "term": "secure hash algorithm (SHA)",
+  "definition": "Cryptographic hashing algorithm addressing MD5 weaknesses (current: SHA-2).",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "Secure Shell (SSH)",
+  "definition": "App protocol for secure tunneling/remote terminal emulation/file copy (TCP 22).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "security assertion markup language (SAML)",
+  "definition": "XML-based format for exchanging auth info between client/service.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Security Content Automation Protocol (SCAP)",
+  "definition": "NIST framework outlining automated vulnerability scanning practices.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "security control",
+  "definition": "Technology/procedure mitigating vulnerabilities/risk and ensuring CIA of information.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "security identifier (SID)",
+  "definition": "Windows-assigned account identification value.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "security information and event management (SIEM)",
+  "definition": "Real-/near-real-time security alert analysis solution.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "security key",
+  "definition": "Portable HSM (USB/NFC) used for MFA.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "security log",
+  "definition": "Target for access control event data (auth, privilege use).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "security zone",
+  "definition": "Network area with consistent security config; physically, area with controlled entry/exit.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Security-Enhanced Linux (SELinux)",
+  "definition": "Default context-based permissions scheme in CentOS/RHEL.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "selection of effective controls",
+  "definition": "Choosing control type/placement per CIA goals/framework compliance.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "self-encrypting drive (SED)",
+  "definition": "Disk drive controller automatically encrypting written data.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "self-signed certificate",
+  "definition": "Digital certificate signed by its own issuer rather than a CA.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "Sender Policy Framework (SPF)",
+  "definition": "DNS record identifying hosts authorized to send mail for a domain.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "sensor",
+  "definition": "Monitor recording/\"sniffing\" frame data via mirror port/TAP.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "sensor (alarms)",
+  "definition": "Alarm component identifying unauthorized entry via IR/ultrasonic/microwave/pressure detection.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "serverless",
+  "definition": "Software architecture running functions in virtualized cloud runtime containers.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "serverless computing",
+  "definition": "Server capabilities without needing to perform admin tasks (CSP-managed infrastructure).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "server-side",
+  "definition": "In web apps, input data executed/validated as part of a server-running script/process.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "server-side request forgery (SSRF)",
+  "definition": "Attack exploiting trust between a server and the resources it can access.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "service disruption",
+  "definition": "Attack compromising availability of an asset/business process.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "service level agreement (SLA)",
+  "definition": "Agreement setting service requirements/expectations between consumer and provider.",
+  "core": 3,
+  "objective": "5.3",
+  "domain": "d5"
+ },
+ {
+  "term": "service set identifier (SSID)",
+  "definition": "Character string identifying a particular WLAN.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "session affinity",
+  "definition": "Load balancer scheduling routing traffic to already-connected devices.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "shadow IT",
+  "definition": "Hardware/software/services used without system-owner authorization.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "shellcode",
+  "definition": "Lightweight malicious code block exploiting a vulnerability for initial victim access.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "sideloading",
+  "definition": "Installing an app to a mobile device without using an app store.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "signature-based detection",
+  "definition": "Monitoring using predefined vendor/personnel rules to identify unacceptable events.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Simple Mail Transfer Protocol (SMTP)",
+  "definition": "Protocol sending mail between hosts (port 25; submission 587).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Simple Network Management Protocol (SNMP)",
+  "definition": "Protocol for monitoring/managing network devices (UDP 161/162).",
+  "core": 3,
+  "objective": "4.4",
+  "domain": "d4"
+ },
+ {
+  "term": "Simple Object Access Protocol (SOAP)",
+  "definition": "XML-based web services message-exchange protocol.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "simulation (testing)",
+  "definition": "Testing replicating real-world disaster/incident conditions.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Simultaneous Authentication of Equals (SAE)",
+  "definition": "WPA3 personal auth mechanism addressing WPA-PSK vulnerabilities.",
+  "core": 3,
+  "objective": "4.1",
+  "domain": "d4"
+ },
+ {
+  "term": "single loss expectancy (SLE)",
+  "definition": "Amount lost in a single occurrence of a particular risk factor.",
+  "core": 3,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "single point of failure (SPoF)",
+  "definition": "Component/system whose failure causes complete service interruption.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "single sign-on (SSO)",
+  "definition": "Auth technology allowing one login for multiple service authorizations.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "sinkhole",
+  "definition": "DoS mitigation directing flooding traffic to a different network for analysis.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "site survey",
+  "definition": "Documentation for building ideal wireless infrastructure (antenna/AP placement, interference sources).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "skimming",
+  "definition": "Duplicating a contactless access card by copying its token onto a new card.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "smart card",
+  "definition": "Device storing auth info (e.g., private key) on an embedded cryptoprocessor.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "SMiShing",
+  "definition": "Phishing using SMS text messages.",
+  "core": 3,
+  "objective": "2.2",
+  "domain": "d2"
+ },
+ {
+  "term": "snapshot (backup)",
+  "definition": "Full copy of an app/disk/system instance for a specific point-in-time restore.",
+  "core": 3,
+  "objective": "3.4",
+  "domain": "d3"
+ },
+ {
+  "term": "Snort",
+  "definition": "Open-source NIDS requiring subscription (\"oinkcode\") for up-to-date rulesets (community rulesets also available).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "social engineering",
+  "definition": "Using deception/trickery to get users to provide sensitive data or violate security guidelines.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "soft authentication token",
+  "definition": "OTP sent to a registered number/email or generated via authenticator app.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "software as a service (SaaS)",
+  "definition": "Cloud model provisioning fully developed application services.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "software bill of materials (SBOM)",
+  "definition": "Inventory of third-party/open-source code components used.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "software composition analysis (SCA)",
+  "definition": "Tools identifying third-party/open-source code during dev/deployment.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "software defined WAN (SD-WAN)",
+  "definition": "Software-defined mechanisms/routing implementing virtual tunnels/overlay networks.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "software development life cycle (SDLC)",
+  "definition": "Processes of planning/analysis/design/implementation/maintenance.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "software-defined networking (SDN)",
+  "definition": "APIs/appliances allowing programmable network systems.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "spyware",
+  "definition": "Software recording PC/user info, often without consent.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "standard configurations (IaC)",
+  "definition": "Property that automation always produces the same result regardless of prior state.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "standards",
+  "definition": "Expected outcome/state per policies/procedures, internal or externally measured.",
+  "core": 3,
+  "objective": "5.1",
+  "domain": "d5"
+ },
+ {
+  "term": "state table",
+  "definition": "Session info between hosts gathered by a stateful firewall.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "stateful inspection",
+  "definition": "Analyzing packets to the application layer rather than only header info.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "statement of work (SOW)",
+  "definition": "Document defining expectations for a specific business arrangement.",
+  "core": 3,
+  "objective": "5.3",
+  "domain": "d5"
+ },
+ {
+  "term": "static analysis",
+  "definition": "Reviewing uncompiled source code manually or via automated tools.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "steganography",
+  "definition": "Obscuring the presence of a message, often by embedding within a file.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "structured exception handler (SEH)",
+  "definition": "Mechanism handling unexpected code-execution error conditions.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Structured Query Language injection (SQL injection)",
+  "definition": "Injecting a database query into input data via a client.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "subject alternative name (SAN)",
+  "definition": "Cert field allowing multiple host names/subdomains.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "supervisory control and data acquisition (SCADA)",
+  "definition": "ICS type managing large-scale multi-site devices from a host computer.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "supplicant",
+  "definition": "In EAP architecture, the device requesting network access.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "supply chain",
+  "definition": "End-to-end process of supplying/manufacturing/distributing/releasing goods/services.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "SYN flood",
+  "definition": "DoS attack sending numerous SYN requests to consume resources.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "syslog",
+  "definition": "Protocol/format transmitting logs/event records to a central server (UDP 514).",
+  "core": 3,
+  "objective": "4.9",
+  "domain": "d4"
+ },
+ {
+  "term": "System Monitor",
+  "definition": "Software tracking subsystem health via hardware/sensor metrics.",
+  "core": 3,
+  "objective": "4.4",
+  "domain": "d4"
+ },
+ {
+  "term": "system/process audit",
+  "definition": "Wide-scope audit including supply chain, config, support, monitoring, cybersecurity factors.",
+  "core": 3,
+  "objective": "5.5",
+  "domain": "d5"
+ },
+ {
+  "term": "tabletop exercise",
+  "definition": "Discussion of simulated emergency situations/security incidents.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "tactics, techniques, and procedures (TTP)",
+  "definition": "Analysis of historical cyberattacks/adversary actions.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "technical debt",
+  "definition": "Costs accrued from keeping an ineffective system/product instead of replacing it.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Temporal Key Integrity Protocol (TKIP)",
+  "definition": "First-version WPA mechanism improving on flawed WEP.",
+  "core": 3,
+  "objective": "4.1",
+  "domain": "d4"
+ },
+ {
+  "term": "test access point (TAP)",
+  "definition": "Hardware device inserted into a cable run to copy frames for analysis.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "tethering",
+  "definition": "Using a mobile device's cellular plan to provide Internet to a laptop/PC.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "third party CA",
+  "definition": "Public CA issuing certs for multiple domains, widely trusted by OSes/browsers.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "third-party risks",
+  "definition": "Vulnerabilities from dependencies in supplier/customer business relationships.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "threat",
+  "definition": "Potential for an entity to exercise a vulnerability.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "threat actor",
+  "definition": "Person/entity responsible for a security incident/risk.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "threat feed",
+  "definition": "Signatures/pattern-matching rules supplied as an automated feed.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "threat hunting",
+  "definition": "Technique detecting threats not found by normal security monitoring.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "ticket granting ticket (TGT)",
+  "definition": "Kerberos token allowing access to authorized application servers.",
+  "core": 3,
+  "objective": "4.6",
+  "domain": "d4"
+ },
+ {
+  "term": "timeline (forensics)",
+  "definition": "Tool showing sequence of file system events within a source image.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "time-of-check to time-of-use (TOCTOU)",
+  "definition": "Vulnerability from a resource change between check and use.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "time-of-day restrictions",
+  "definition": "Policies limiting user access to resources by time.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "tokenization",
+  "definition": "De-identification substituting a unique token for real data.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "trade secrets",
+  "definition": "IP giving competitive advantage but not registered via copyright/trademark/patent.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "transparent proxy",
+  "definition": "Server redirecting requests without explicit client configuration.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Transport Layer Security (TLS)",
+  "definition": "Protocol using certificates for auth/encryption of web/app communications.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "TLS VPN",
+  "definition": "VPN solution using digital certificates for secure tunnels.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "transport/communication encryption",
+  "definition": "Encryption applied to data-in-motion (WPA, IPSec, TLS).",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "trend analysis",
+  "definition": "Detecting dataset patterns over time to predict/understand events.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Trojan",
+  "definition": "Malicious program hidden within innocuous-seeming software.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "trusted platform module (TPM)",
+  "definition": "Hardware-based secure storage for encryption keys/hashed passwords.",
+  "core": 3,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "tunneling",
+  "definition": "Encapsulating one protocol's data for safe transfer over another network.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "type-safe programming language",
+  "definition": "Enforces strict type-checking, preventing memory/injection vulnerabilities.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "typosquatting",
+  "definition": "Registering a domain with a common misspelling to catch mistyped URLs.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "under-voltage event",
+  "definition": "Insufficient power supply (long sags) from grid/circuit issues.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "unified threat management (UTM)",
+  "definition": "All-in-one appliance combining firewall, AV, IDS, vulnerability scanning, DLP, content filtering.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "uniform resource locator (URL)",
+  "definition": "Application-level TCP/IP addressing scheme (protocol://server/file).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "unintentional insider threat",
+  "definition": "Threat actor exposing a vulnerability/attack vector without malicious intent.",
+  "core": 3,
+  "objective": "2.1",
+  "domain": "d2"
+ },
+ {
+  "term": "uninterruptible power supply (UPS)",
+  "definition": "Battery-powered device supplying AC power during outages.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "unsecure network",
+  "definition": "Config exposing large attack surface (open ports, weak/no auth, default creds, no encryption).",
+  "core": 3,
+  "objective": "2.2",
+  "domain": "d2"
+ },
+ {
+  "term": "user and entity behavior analytics (UEBA)",
+  "definition": "Automated suspicious-activity identification for accounts/hosts.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "version control",
+  "definition": "Practice ensuring project assets are closely managed through changes.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "vertical privilege escalation",
+  "definition": "Performing functions normally assigned to higher-role users.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "video surveillance",
+  "definition": "Physical control using cameras/recording to monitor activity.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "virtual local area network (VLAN)",
+  "definition": "Logical broadcast domain via managed switch VLAN IDs.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "Virtual Network Computing (VNC)",
+  "definition": "Remote access tool/protocol (basis of macOS screen sharing).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "virtual private cloud (VPC)",
+  "definition": "Private network segment for a single consumer on a public cloud.",
+  "core": 3,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "virtual private network (VPN)",
+  "definition": "Secure tunnel between two endpoints over an unsecure transport network.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "virtualization",
+  "definition": "Computing environment running multiple independent OSes on one hardware platform.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "virus",
+  "definition": "Malicious code inserted into an executable, executed when run, delivering a payload.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "vishing",
+  "definition": "Social engineering extracting info via phone/VoIP.",
+  "core": 3,
+  "objective": "2.2",
+  "domain": "d2"
+ },
+ {
+  "term": "visualization",
+  "definition": "Widget showing records/metrics visually (graph/table).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "vulnerability",
+  "definition": "A weakness triggerable/exploitable to cause a security breach.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "vulnerability feed",
+  "definition": "Synchronizable list of vulnerability-checking data/scripts (plug-ins/NVTs).",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "vulnerability scanner",
+  "definition": "Hardware/software scanning for known weaknesses/exploits.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "warm site",
+  "definition": "Alternate site, dormant/noncritical normally, rapidly convertible if needed.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "watering hole attack",
+  "definition": "Injecting malicious code into websites frequented by a targeted group.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "web application firewall (WAF)",
+  "definition": "Firewall protecting web server software/back-end databases from injection/DoS.",
+  "core": 3,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "web filter",
+  "definition": "App/gateway filtering client requests for Internet content types.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Wi-Fi Protected Access (WPA)",
+  "definition": "Standards for authenticating/encrypting Wi-Fi access.",
+  "core": 3,
+  "objective": "4.1",
+  "domain": "d4"
+ },
+ {
+  "term": "Wi-Fi Protected Setup (WPS)",
+  "definition": "WPA/WPA2 feature enrolling via an eight-digit PIN.",
+  "core": 3,
+  "objective": "4.1",
+  "domain": "d4"
+ },
+ {
+  "term": "wildcard domain",
+  "definition": "Cert matching multiple subdomains of a parent domain.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "Wired Equivalent Privacy (WEP)",
+  "definition": "Legacy (weak) wireless encryption mechanism.",
+  "core": 3,
+  "objective": "4.1",
+  "domain": "d4"
+ },
+ {
+  "term": "work recovery time (WRT)",
+  "definition": "DR time beyond RTO for reintegration/testing of a restored system.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "workforce multiplier",
+  "definition": "Tool/automation increasing employee productivity/output per unit time.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "worm",
+  "definition": "Malware replicating between processes/systems, spreading over network connections.",
+  "core": 3,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "write blocker",
+  "definition": "Forensic tool preventing an analysis device from changing data on a target disk.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "zero trust",
+  "definition": "Security paradigm requiring authentication of any request before allowing it.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "zero-day",
+  "definition": "An unpatched software vulnerability, or an attack exploiting one.",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "CIA",
+  "definition": "Confidentiality, Integrity, Availability",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "AAA",
+  "definition": "Authentication, Authorization, Accounting",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "DDoS",
+  "definition": "Distributed Denial of Service",
+  "core": 3,
+  "objective": "",
+  "domain": "d2"
+ },
+ {
+  "term": "PKI",
+  "definition": "Public Key Infrastructure",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "SIEM",
+  "definition": "Security Information and Event Management",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "RTO",
+  "definition": "Recovery Time Objective",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "GDPR",
+  "definition": "General Data Protection Regulation",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "SQLi",
+  "definition": "SQL Injection",
+  "core": 3,
+  "objective": "",
+  "domain": "d2"
+ },
+ {
+  "term": "IDS",
+  "definition": "Intrusion Detection System",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "IPS",
+  "definition": "Intrusion Prevention System",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "EAP",
+  "definition": "Extensible Authentication Protocol",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "WAF",
+  "definition": "Web Application Firewall",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "UTM",
+  "definition": "Unified Threat Management",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "NGFW",
+  "definition": "Next Generation Firewall",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "VPN",
+  "definition": "Virtual Private Network",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "TLS",
+  "definition": "Transport Layer Security",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "IPSec",
+  "definition": "Internet Protocol Security",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "SD-WAN",
+  "definition": "Software-defined Wide Area Network",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "SASE",
+  "definition": "Secure Network Service Edge",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "ICS",
+  "definition": "Industrial Control System",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "SCADA",
+  "definition": "Supervisory Control and Data Acquisition",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "TLS/SSL",
+  "definition": "Transport Layer Security/Secure Socket Layers",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "CVE",
+  "definition": "Common Vulnerabilities and Exposures",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "SCAP",
+  "definition": "Security Content Automation Protocol",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "CVSS",
+  "definition": "Common Vulnerability Scoring System",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "SOAR",
+  "definition": "Security Orchestration, Automation and Response",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "API",
+  "definition": "Application Programming Interface",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "MOU",
+  "definition": "Memorandum of Understanding",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "SDLC",
+  "definition": "Software Development Lifecycle",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "PCI DSS",
+  "definition": "Payment Card Industry Data Security Standard",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "ISO",
+  "definition": "International Standards Organization",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "CIRT",
+  "definition": "Critical Incident Response Team",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "CMS",
+  "definition": "Content Management Systems",
+  "core": 3,
+  "objective": "",
+  "domain": ""
+ },
+ {
+  "term": "COOP",
+  "definition": "Continuity of Operation Planning",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "COPE",
+  "definition": "Corporate Owned, Personally Enabled",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "CP",
+  "definition": "Contingency Planning",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "CRC",
+  "definition": "Cyclical Redundancy Checks",
+  "core": 3,
+  "objective": "",
+  "domain": "d2"
+ },
+ {
+  "term": "ARO",
+  "definition": "Annualized Rate of Occurance",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "DLP",
+  "definition": "Data Loss Prevention",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "CAPTCHA",
+  "definition": "Completely Automated Public Turing Test To Tell Computers and Humans Apart",
+  "core": 3,
+  "objective": "",
+  "domain": "d2"
+ },
+ {
+  "term": "ACL",
+  "definition": "Access Control List",
+  "core": 3,
+  "objective": "",
+  "domain": "d2"
+ },
+ {
+  "term": "AES",
+  "definition": "Advanced Encryption Standard",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "AES-256",
+  "definition": "Advanced Encryption Standards 256-bit",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "AH",
+  "definition": "Authentication Header",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "AI",
+  "definition": "Artificial Intelligence",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "AIS",
+  "definition": "Automated Indicator Sharing",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "ALE",
+  "definition": "Annualized Loss Expectancy",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "AP",
+  "definition": "Access Point",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "APT",
+  "definition": "Advanced Persistent Threat",
+  "core": 3,
+  "objective": "",
+  "domain": "d2"
+ },
+ {
+  "term": "ARP",
+  "definition": "Address Resolution Protocol",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "ASLR",
+  "definition": "Address Space Layout Randomization",
+  "core": 3,
+  "objective": "",
+  "domain": "d2"
+ },
+ {
+  "term": "ATT&CK",
+  "definition": "Adversarial Tactics, Techniques, and Common Knowledge",
+  "core": 3,
+  "objective": "",
+  "domain": "d2"
+ },
+ {
+  "term": "AUP",
+  "definition": "Acceptable Use Policy",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "AV",
+  "definition": "Antivirus",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "BASH",
+  "definition": "Bourne Again Shell",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "BCP",
+  "definition": "Business Continuity Planning",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "BGP",
+  "definition": "Border Gateway Protocol",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "BIA",
+  "definition": "Business Impact Analysis",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "BIOS",
+  "definition": "Basic Input/Output System",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "BPA",
+  "definition": "Business Partners Agreement",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "BYOD",
+  "definition": "Bring Your Own Device",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "CA",
+  "definition": "Certificate Authority",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "CASB",
+  "definition": "Cloud Access Security Broker",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "CHAP",
+  "definition": "Challenge Handshake Authentication Protocol",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "CSR",
+  "definition": "Certificate Signing Request",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "CSRF",
+  "definition": "Cross-site Request Forgery",
+  "core": 3,
+  "objective": "",
+  "domain": "d2"
+ },
+ {
+  "term": "DAC",
+  "definition": "Discretionary Access Control",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "DHCP",
+  "definition": "Dynamic Host Configuration Protocol",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "DKIM",
+  "definition": "DomainKeys Identified Mail",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "DMARC",
+  "definition": "Domain Message Authentication Reporting and Conformance",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "DNS",
+  "definition": "Domain Name System",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "EDR",
+  "definition": "Endpoint Detection and Response",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "FDE",
+  "definition": "Full Disk Encryption",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "HSM",
+  "definition": "Hardware Security Module",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "IAM",
+  "definition": "Identity and Access Management",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "IoT",
+  "definition": "Internet of Things",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "LDAP",
+  "definition": "Lightweight Directory Access Protocol",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "MFA",
+  "definition": "Multifactor Authentication",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "NAC",
+  "definition": "Network Access Control",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "RADIUS",
+  "definition": "Remote Authentication Dial-in User Service",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "BPDU",
+  "definition": "Bridge Protocol Data Unit",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "CRL",
+  "definition": "Certificate Revocation List",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "CSP",
+  "definition": "Cloud Service Provider",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "CYOD",
+  "definition": "Choose Your Own Device",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "DES",
+  "definition": "Digital Encryption Standard",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "DoS",
+  "definition": "Denial of Service",
+  "core": 3,
+  "objective": "",
+  "domain": "d2"
+ },
+ {
+  "term": "DRP",
+  "definition": "Disaster Recovery Plan",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "ECC",
+  "definition": "Elliptic Curve Cryptography",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "FTP",
+  "definition": "File Transfer Protocol",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "HIDS",
+  "definition": "Host-based Intrusion Detection System",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "HIPS",
+  "definition": "Host-based Intrusion Prevention System",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "HOTP",
+  "definition": "HMAC-based One-time Password",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "HTTP",
+  "definition": "Hypertext Transfer Protocol",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "HTTPS",
+  "definition": "Hypertext Transfer Protocol Secure",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "ICMP",
+  "definition": "Internet Control Message Protocol",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "MDM",
+  "definition": "Mobile Device Management",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "MTBF",
+  "definition": "Mean Time Between Failures",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "MTTR",
+  "definition": "Mean Time to Recover",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "NDA",
+  "definition": "Non-disclosure Agreement",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "NIST",
+  "definition": "National Institute of Standards & Technology",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "OAUTH",
+  "definition": "Open Authorization",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "OCSP",
+  "definition": "Online Certificate Status Protocol",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "OSINT",
+  "definition": "Open-source Intelligence",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "PAM",
+  "definition": "Privileged Access Management",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "PHI",
+  "definition": "Personal Health Information",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "PII",
+  "definition": "Personally Identifiable Information",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "RBAC",
+  "definition": "Role-based Access Control",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "RPO",
+  "definition": "Recovery Point Objective",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "RSA",
+  "definition": "Rivest, Shamir, & Adleman",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "SAML",
+  "definition": "Security Assertions Markup Language",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "SLA",
+  "definition": "Service-level Agreement",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "SLE",
+  "definition": "Single Loss Expectancy",
+  "core": 3,
+  "objective": "",
+  "domain": "d5"
+ },
+ {
+  "term": "SNMP",
+  "definition": "Simple Network Management Protocol",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "SOC",
+  "definition": "Security Operations Center",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "SPF",
+  "definition": "Sender Policy Framework",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "SSH",
+  "definition": "Secure Shell",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "SSO",
+  "definition": "Single Sign-on",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "TOTP",
+  "definition": "Time-based One-time Password",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "TPM",
+  "definition": "Trusted Platform Module",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "XDR",
+  "definition": "Extended Detection and Response",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "NAT",
+  "definition": "Network Address Translation",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "NFC",
+  "definition": "Near-field Communication",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "OT",
+  "definition": "Operational Technology",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "PAP",
+  "definition": "Password Authentication Protocol",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "PEM",
+  "definition": "Privacy Enhanced Mail",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "PGP",
+  "definition": "Pretty Good Privacy",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "PKCS",
+  "definition": "Public Key Cryptography Standards",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "RA",
+  "definition": "Registration Authority",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "RDP",
+  "definition": "Remote Desktop Protocol",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "RFID",
+  "definition": "Radio Frequency Identification",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "STIX",
+  "definition": "Structured Threat Information eXpression",
+  "core": 3,
+  "objective": "",
+  "domain": "d4"
+ },
+ {
+  "term": "TTP",
+  "definition": "Tactics, Techniques, and Procedures",
+  "core": 3,
+  "objective": "",
+  "domain": "d2"
+ },
+ {
+  "term": "UEFI",
+  "definition": "Unified Extensible Firmware Interface",
+  "core": 3,
+  "objective": "",
+  "domain": "d1"
+ },
+ {
+  "term": "VLAN",
+  "definition": "Virtual Local Area Network",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "VM",
+  "definition": "Virtual Machine",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "VoIP",
+  "definition": "Voice over Internet Protocol",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "WPA",
+  "definition": "Wi-Fi Protected Access",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "WPS",
+  "definition": "Wi-Fi Protected Setup",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
+ },
+ {
+  "term": "XSS",
+  "definition": "Cross-site Scripting",
+  "core": 3,
+  "objective": "",
+  "domain": "d2"
+ },
+ {
+  "term": "ZTNA",
+  "definition": "Zero Trust Network Access",
+  "core": 3,
+  "objective": "",
+  "domain": "d3"
  }
 ]

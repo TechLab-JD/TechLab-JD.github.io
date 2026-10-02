@@ -1,0 +1,184 @@
+{
+ "core": 3,
+ "chapter": 10,
+ "title": "Endpoint & Mobile Security",
+ "exam_objectives": [
+  "2.5",
+  "4.1",
+  "4.5"
+ ],
+ "coverage": "COVERED",
+ "domain": "d2",
+ "domain_label": "Threats, Vulnerabilities & Mitigations",
+ "sections": [
+  {
+   "title": "Implement Endpoint Security",
+   "content": "CORE CONCEPT: DEVICE HARDENING\nHardening = changing configurations to secure systems by reducing vulnerabilities from default configs. Must be balanced against usability/functionality.\nPrinciple of Least Functionality — a system should run only the protocols/services required by legitimate users, nothing more.\nENDPOINT HARDENING BASICS\n• Interfaces — disable unused wired/wireless/modem/management interfaces explicitly (don't just leave unused)\n• Services — disable unused services (local + remote-supporting)\n• Application service ports — disable/block at firewall if not needed; watch for nonstandard ports (e.g., HTTP on 8080)\n• Persistent storage — encrypt (disk encryption / self-encrypting drives)\nBASELINE CONFIGURATION\n• Configuration baseline — standard guideline/checklist for secure device config, often applied via template\n• Baseline deviation reporting — testing actual config against the baseline template\n• MBSA (Microsoft Baseline Security Analyzer) — legacy tool, replaced by Security Compliance Toolkit\n• Windows: config stored in registry; GPOs (Group Policy Objects) push settings to registry at boot\nENDPOINT PROTECTION CONCEPTS\nTerm | Definition\nSegmentation | Dividing network into subnets/segments with distinct controls, limiting lateral spread\nIsolation | Restricting an individual device's network interaction to prevent lateral threat spread\nAntivirus (A-V) | Signature-based detection; modern versions cover viruses, worms, Trojans, spyware, PUPs, cryptojackers\nFull Disk Encryption (FDE) | Encrypts entire drive contents; key usually stored in TPM (Trusted Platform Module); e.g., BitLocker\nSelf-Encrypting Drive (SED) | Drive controller performs crypto ops (not OS); uses DEK/MEK encrypted by an Authentication Key (AK)/Key Encryption Key (KEK); follows Opal Storage Specification\nPATCH MANAGEMENT\n• Vulnerability scanners find missing patches\n• Auto-update: Windows Update; Linux via yum-cron or apt unattended-upgrades\n• Enterprise: use patch management suites (e.g., SCCM/Endpoint Manager)\n• Test patches before production deployment\n• SolarWinds hack — example of a compromised update repository spreading malware\nADVANCED ENDPOINT PROTECTION\nAcronym | Meaning\nEDR | Endpoint Detection and Response — real-time/historical visibility, contains malware on a host, aids remediation\nXDR | Extended Detection and Response — expands EDR scope to network, cloud, email, firewall data\nMDR | Managed Detection and Response — hosted/outsourced security service class\nHIDS | Host-based Intrusion Detection System — detects and alerts on suspicious activity\nHIPS | Host-based Intrusion Prevention System — detects and actively blocks/mitigates threats\nFIM | File Integrity Monitoring — verifies system files match authorized versions (e.g., Windows SFC, Tripwire, OSSEC)\nUBA/UEBA | User (and Entity) Behavior Analytics — baselines normal behavior, alerts on anomalies (insider threats, compromised accounts)\nENDPOINT BREACH MITIGATION VECTORS\nWhen endpoint security is breached, consider:\n• Social Engineering — user-executed malware → security awareness training, review privilege level\n• Vulnerabilities — software fault exploited → patch or isolate\n• Lack of Security Controls — missing A-V/firewall/DLP/MDM → deploy or isolate\n• Configuration Drift — undocumented changes (shadow IT) → reapply baseline\n• Weak Configuration — baseline applied but insufficient → revise template\nACCESS CONTROL\n• Access Control (general) — regulating permissions for users/software/systems to resources\n• Principle of Least Privilege (PoLP) — minimum permissions necessary, nothing more; supported by:\n• Auditing user roles/privileges\n• Removing unused accounts\n• Temporary/just-in-time privileges\n• RBAC (Role-Based Access Control) — permissions tied to predefined roles\n• ACL (Access Control List) — rules specifying allow/deny for users/groups on resources (routers, firewalls, file systems)\n• ACE (Access Control Entry) — individual entry within an ACL (user/group + permissions)\nLinux File Permissions:\n• r (read) = 4, w (write) = 2, x (execute) = 1\n• Contexts: owner (u), group (g), others (o)\n• Example: chmod 755 home = owner rwx, group r-x, others r-x\n• Symbolic mode example: chmod g+w,o-x home\nEXECUTION CONTROL\n• Allow list (approved list) — denies execution unless explicitly authorized\n• Block list (deny list) — allows execution except explicitly prohibited items\nMONITORING & CONFIGURATION ENFORCEMENT\n• Monitoring detects drift from hardened baseline (e.g., a disabled port reopened)\n• Configuration Enforcement relies on:\n• Standardized Configuration Baselines (NIST, CIS, org-defined)\n• Automated Configuration Management Tools\n• Continuous Monitoring & Compliance Checks\n• Change Management processes\n• Group Policy — Windows/AD centralized config management, linked to OUs (Organizational Units)\n• SELinux — Linux kernel security module enforcing MAC (Mandatory Access Control); Android equivalent = SEAndroid\nHARDENING TECHNIQUES\nPhysical Ports:\n• Disable unnecessary USB/HDMI/serial ports\n• Port control software (allow only approved devices)\n• UEFI/BIOS password for boot-from-USB\n• BadUSB — malicious firmware makes a USB device impersonate another class (e.g., keyboard/keylogger)\n• O.MG cable — malicious USB-Lightning cable with built-in access point/keylogger\n• Disable autorun for USB devices; use a sheep dip (sandboxed system) to test suspicious devices\nLogical Ports: controlled via firewalls (port/IP/protocol filtering) and service hardening (updates, disabling unused services)\nEncryption Techniques:\n• FDE (BitLocker/FileVault)\n• Removable Media Encryption\n• VPN — secure tunnel against eavesdropping/on-path attacks\n• Email Encryption — PGP, S/MIME\nHost-Based Firewalls/IPS:\n• Default-deny policy\n• Traffic filtering by IP/protocol/service\n• Integrates with SIEM (Security Information and Event Management)\nINSTALLING ENDPOINT PROTECTION (DEPLOYMENT BEST PRACTICES)\n• Create a Deployment Plan (order, timing, staging)\n• Standardize Configurations\n• Automate Deployments (SCCM, Group Policy)\n• Apply Updates and Patches\n• Monitor agents\n• Centralize Management\nCHANGING DEFAULTS & REMOVING UNNECESSARY SOFTWARE\n• Change default passwords immediately (common vuln in multifunction printers, IoT)\n• Remove unnecessary software/features to reduce attack surface\n• Disable unneeded features (e.g., printer cloud printing, email, web server interfaces)\n• Prefer encrypted protocols: HTTPS, SNMPv3\nDECOMMISSIONING\n• Data sanitization — securely erase/overwrite all data\n• Factory reset device\n• Physical destruction of storage (HDD/SSD/M.2) if sensitive data present\n• Update inventory records / documentation\nHARDENING SPECIALIZED DEVICES\n• Applies to ICS (Industrial Control Systems), SCADA (Supervisory Control and Data Acquisition), embedded systems, RTOS (Real-Time Operating Systems), IoT\n• General controls: regular updates, disable unnecessary services, limit network access, secure credentials, RBAC\n• Network-level: firewalls, IDS/IPS, TLS/SSH encryption, audits, pen tests\nICS/SCADA specific:\n• Strict network segmentation\n• Strong authentication/authorization\n• Unidirectional gateways (data diodes) — data flows outward only, blocking inbound attacks\nEmbedded/RTOS specific:\n• Security designed in from the start: secure coding, minimal design, secure boot, tamper-proofing\n• Standards: Common Criteria (ISO/IEC 15408), IEC 62443, MISRA-C, CERT Secure Coding Standards\n• Certifications: ISO 27001, IEC 61508",
+   "exam_tips": []
+  },
+  {
+   "title": "Mobile Device Hardening",
+   "content": "EXAM OBJECTIVE COVERED\n• 4.1 Given a scenario, apply common security techniques to computing resources\nSIMILARITIES/DIFFERENCES VS. TRADITIONAL ENDPOINTS\nSimilar: OS patches, strong passwords, endpoint protection, least privilege. Different: higher physical loss/theft risk → remote wipe, encryption, secure lock screens matter more. Also GPS/Bluetooth/NFC create extra attack surface.\nDEPLOYMENT MODELS\nModel | Description\nBYOD (Bring Your Own Device) | Employee-owned; must meet org requirements; employee consents to audits/corporate app installs\nCOBO (Corporate Owned, Business Only) | Org-owned, business use only\nCOPE (Corporate Owned, Personally Enabled) | Org-owned/chosen, but allows personal use\nCYOD (Choose Your Own Device) | Like COPE, but employee picks from a pre-approved device list\nMOBILE DEVICE MANAGEMENT (MDM)\nCentralized IT strategy to manage/secure/enforce policy on mobile endpoints.\n• Maintains device inventory, authorized-device enforcement\n• Enforces encryption, screen locks\n• Remote lock/wipe\n• Manages app allow/block lists, updates/patches, geofencing, geo-tracking\n• Platforms: Apple MDM (built-in), Android Enterprise, and platform-agnostic tools like Microsoft Intune, VMware AirWatch, IBM MaaS360\nFULL DEVICE ENCRYPTION\n• iOS: all data always encrypted (key on device, used for wipe); \"Data Protection\" adds a second layer tied to user credential (email, some apps) — auto-enabled with passcode lock\n• Android: no full-disk encryption as of Android 10 (performance cost); file-level encryption by default\n• MicroSD HSM — small hardware security module for secure key storage, portable across devices\nLOCATION SERVICES\n• GPS (Global Positioning System) — satellite-based lat/long\n• IPS (Indoor Positioning System) — triangulates via cell towers/Wi-Fi/Bluetooth\n• A-GPS (Assisted GPS) — uses cell tower data to speed up positioning; can be jammed/spoofed\n• Geofencing — virtual boundary triggering policy (e.g., reauthentication, disabling camera/mic)\n• GPS tagging — geotag metadata embedded in media (privacy/OPSEC risk; e.g., Russian soldier selfie incident)\nCONNECTION METHODS & RISKS\nCellular: bypasses enterprise network protections — mitigate via VPN, MDM, mobile threat defense, DLP, user training\nWi-Fi:\n• Use WPA3 for corporate connections\n• Risks: open/rogue APs, DNS spoofing\nPAN (Personal Area Network):\n• Ad hoc network — peer-to-peer, no fixed AP\n• Wi-Fi Direct — one device acts as soft AP; relies on WPS (Wi-Fi Protected Setup, vulnerable)\n• Tethering — sharing connection via USB/Bluetooth to one device\n• Hotspot — sharing connection via Wi-Fi to multiple devices\n• Should be disabled on enterprise networks (bypasses DLP/content filtering)\nBluetooth:\n• Device Discovery — discoverable devices connect to any nearby Bluetooth device (even \"hidden\" devices can be detected)\n• Bluejacking — unsolicited spam messages/vCards sent via Bluetooth\n• Bluesnarfing — stealing data from a device by exploiting Bluetooth auth\n• BlueBorne — Bluetooth exploit requiring no user interaction, no discovery needed\n• Change default PINs (never \"0000\"); regularly audit pairing list\n• BSC (Bluetooth Secure Connections, v4.0+) — improved resistance to eavesdropping/on-path attacks\n• BLE (Bluetooth Low Energy) Privacy — randomized addresses to prevent tracking\nNFC (Near-Field Communication):\n• Based on RFID; used for \"bump\" transactions, smart posters, mobile payments\n• No native encryption — vulnerable to eavesdropping/on-path attacks\n• Mobile wallets (Apple Pay, Google Pay, Samsung Pay) use one-time tokens, not raw card data\n• Vulnerable to skimming (long card # + expiration) and RF flooding (DoS-like disruption)",
+   "exam_tips": []
+  },
+  {
+   "title": "Key Takeaways",
+   "content": "• Establish configuration baselines per host type; monitor for compliance\n• Configure full disk encryption\n• Deploy endpoint protection covering antimalware, firewall, IDS, EDR, DLP\n• Establish patch management/testing procedures for OS + third-party software\n• Create a management plan for IoT devices\n• For ICS/SCADA: secure procurement, cryptographic controls (auth/integrity/resiliency), access control/segmentation for OT networks, vendor patch support",
+   "exam_tips": []
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "The collection of access control entries (ACEs) that determines which subjects (user accounts, host IP addresses, etc.) are allowed or denied access to the object and the privileges given.",
+   "concept": "access control list (ACL)",
+   "summary": "Objective 2.5"
+  },
+  {
+   "hook": "Making a host/app secure by reducing attack surface, monitoring, and patching.",
+   "concept": "hardening",
+   "summary": "Objective 2.5"
+  },
+  {
+   "hook": "Data access standards over cellular networks (2G/3G GSM/CDMA; 4G/5G under LTE).",
+   "concept": "cellular",
+   "summary": "Objective 4.1"
+  },
+  {
+   "hook": "Diagram showing signal strength/channel utilization by location.",
+   "concept": "heat map (Wi-Fi)",
+   "summary": "Objective 4.1"
+  },
+  {
+   "hook": "Process/technologies for tracking/controlling/securing mobile infrastructure.",
+   "concept": "mobile device management (MDM)",
+   "summary": "Objective 4.1"
+  },
+  {
+   "hook": "WPA3 personal auth mechanism addressing WPA-PSK vulnerabilities.",
+   "concept": "Simultaneous Authentication of Equals (SAE)",
+   "summary": "Objective 4.1"
+  },
+  {
+   "hook": "Framework ensuring proper SPF/DKIM application via DNS policy.",
+   "concept": "Domain-based Message Authentication, Reporting, and Conformance (DMARC)",
+   "summary": "Objective 4.5"
+  },
+  {
+   "hook": "Software agent collecting system data/logs for monitoring analysis.",
+   "concept": "endpoint detection and response (EDR)",
+   "summary": "Objective 4.5"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "Placing payment systems on a separate network segment from guest Wi-Fi is an example of:",
+   "options": [
+    "Patching",
+    "Encryption",
+    "Segmentation",
+    "Decommissioning"
+   ],
+   "answer": 2,
+   "explanation": "Segmentation limits how far an attacker can move."
+  },
+  {
+   "q": "A documented set of approved, secure settings applied to every new server is called a:",
+   "options": [
+    "Business impact analysis",
+    "Change request",
+    "Security baseline",
+    "Risk register"
+   ],
+   "answer": 2,
+   "explanation": "Baselines define the secure starting configuration."
+  },
+  {
+   "q": "A firewall rule allows SSH from anywhere. The team changes it to allow SSH only from the admin subnet. What capability is being modified?",
+   "options": [
+    "Firewall rules and access lists",
+    "DNS filtering",
+    "Email filtering",
+    "Group Policy"
+   ],
+   "answer": 0,
+   "explanation": "Tightening rules reduces exposure."
+  },
+  {
+   "q": "Which mitigation lets only approved applications run on a workstation?",
+   "options": [
+    "Data masking",
+    "Deny list of known malware only",
+    "Load balancing",
+    "Application allow list"
+   ],
+   "answer": 3,
+   "explanation": "An allow list blocks anything not explicitly approved."
+  },
+  {
+   "q": "Which wireless setup gives each user individual credentials checked against a RADIUS server?",
+   "options": [
+    "Open network",
+    "WPA3-Enterprise with 802.1X",
+    "WPA3-Personal with one shared passphrase",
+    "WEP"
+   ],
+   "answer": 1,
+   "explanation": "Enterprise mode authenticates each user individually."
+  },
+  {
+   "q": "Which email security record lists the mail servers allowed to send mail for a domain?",
+   "options": [
+    "SPF",
+    "DKIM",
+    "DMARC",
+    "MX only"
+   ],
+   "answer": 0,
+   "explanation": "Sender Policy Framework lists authorized senders."
+  },
+  {
+   "q": "Disabling unused services, closing unused ports and removing default accounts are all part of:",
+   "options": [
+    "Hardening",
+    "Offboarding",
+    "Monitoring",
+    "Tokenization"
+   ],
+   "answer": 0,
+   "explanation": "Hardening reduces the attack surface."
+  },
+  {
+   "q": "A company lets employees use personal phones for work but manages a separate work container on them. What deployment model is this?",
+   "options": [
+    "CYOD",
+    "BYOD",
+    "COPE",
+    "Kiosk mode"
+   ],
+   "answer": 1,
+   "explanation": "Bring your own device uses personally owned phones."
+  },
+  {
+   "q": "Which email technology adds a digital signature to messages so receivers can verify they were not altered?",
+   "options": [
+    "DMARC",
+    "SPF",
+    "SMTP",
+    "DKIM"
+   ],
+   "answer": 3,
+   "explanation": "DomainKeys Identified Mail signs outgoing mail."
+  },
+  {
+   "q": "A retired server's drives are wiped and destroyed with a certificate of destruction. Which mitigation is this?",
+   "options": [
+    "Isolation",
+    "Segmentation",
+    "Decommissioning",
+    "Least privilege"
+   ],
+   "answer": 2,
+   "explanation": "Proper decommissioning prevents data from leaking when assets are retired."
+  }
+ ]
+}

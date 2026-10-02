@@ -1,0 +1,188 @@
+{
+ "core": 3,
+ "chapter": 2,
+ "title": "Threat Actors & Attack Vectors",
+ "exam_objectives": [
+  "2.1",
+  "2.2"
+ ],
+ "coverage": "COVERED",
+ "domain": "d2",
+ "domain_label": "Threats, Vulnerabilities & Mitigations",
+ "sections": [
+  {
+   "title": "Threat Actors",
+   "content": "VULNERABILITY, THREAT, AND RISK\nTerm | Definition\nVulnerability | A weakness that could be triggered accidentally or exploited intentionally to cause a breach (e.g., misconfigured hardware/software, unpatched systems, poor network design, weak physical security, insecure passwords, software design flaws)\nThreat | The potential for someone/something to exploit a vulnerability and breach security; can be intentional or unintentional. The actor is a threat actor/agent; their path/tool is a threat vector\nRisk | The level of hazard posed by vulnerabilities and threats — likelihood of exploitation × impact of a successful exploit\nATTRIBUTES OF THREAT ACTORS\nModern threat analysis profiles actor location, capability, resources/funding, and motivation (rather than relying solely on static signature-based detection).\nAttribute | Description\nInternal/External | External = no account/authorized access before attacking (must infiltrate). Internal/insider = has been granted permissions (employee, contractor, business partner)\nLevel of Sophistication/Capability | Ranges from commodity attack tools (least capable) to crafting novel exploits, up to non-cyber tools (political/military assets)\nResources/Funding | High capability requires resources — customized tools, skilled strategists/coders/social engineers. Best-funded: nation-states and organized crime\nMOTIVATIONS AND STRATEGIES\nThreat actor strategies map to the CIA triad:\nStrategy | Effect on CIA Triad | Description\nData exfiltration | Compromises Confidentiality | Unauthorized transfer of valuable information\nDisinformation | Attacks Integrity | Falsifying a trusted resource (website content, search results, social media bots)\nService disruption | Targets Availability | Prevents normal organizational operation (website/malware attacks)\nThreats can be structured/targeted (e.g., criminal gang targeting a specific database) or unstructured/opportunistic (e.g., unskilled hacker using a mass-mailed worm). Contrast with accidental/unintentional threat actors (mistakes, oversights).\nMotivation categories:\nMotivation | Notes\nChaotic | Vandalism/defacement for its own sake, or revenge (by employees, ex-employees, or external parties with a grievance)\nFinancial | Blackmail (payment to prevent release of info), Extortion (payment to stop/prevent an attack, e.g. ransomware), Fraud (falsifying records — embezzlement, fake customer details, disinformation to affect stock price)\nPolitical | Whistleblowing, campaign group disruption, nation-state action in pursuit of war aims; includes espionage (data exfiltration to learn secrets, not sell them) and commercial espionage (stealing a competitor's secrets)\nTHREAT ACTOR TYPES\nType | Key Traits\nHacker | Has skills to gain unauthorized system access. Unauthorized (formerly \"black hat\") vs. authorized (formerly \"white hat,\" always seeks authorization for pen testing)\nUnskilled attacker | Uses hacker tools without understanding them or crafting new attacks; often no specific target, seeking attention\nHacker teams / Hacktivists | Groups (not lone actors) developing sophisticated tools; hacktivists (e.g., Anonymous, WikiLeaks, LulzSec) use cyber weapons to promote a political agenda — target political/media/financial orgs, sometimes environmental/animal-advocacy causes\nNation-state actors | Cyber weapons for military/commercial goals; coined term APT (Advanced Persistent Threat) — ongoing compromise (obtain and maintain access) via varied tools/techniques, not a single infection event. Primarily disinformation/espionage, but some (e.g., North Korea) also pursue financial gain. Operate at \"arm's length\" for plausible deniability, may pose as hacktivists or stage false-flag campaigns\nOrganized crime / Competitors | Cybercrime has overtaken physical crime in many countries; cross-jurisdictional. Typical: financial fraud, blackmail/extortion. Competitor espionage possible, sometimes via employees who switch companies\nInternal/insider threats | Actor granted access by the org — distinguish permanent (employees) vs. temporary (contractors/guests) privileges. Former insiders are a blurred case (ex-employees with residual knowledge/access). Main motivators: revenge, financial gain. Can be structured or opportunistic\nWhistleblower | Ethical motivation for releasing confidential info; protected disclosures through authorized channels must not be treated as retaliation-worthy\nUnintentional insider threat | Caused by carelessness/lack of awareness (e.g., poor password management) or shadow IT — unsanctioned hardware/software introduced without going through procurement/security review, creating unmonitored attack surface",
+   "exam_tips": []
+  },
+  {
+   "title": "Attack Surfaces",
+   "content": "ATTACK SURFACE AND THREAT VECTORS\nAttack surface — all the points at which a threat actor could try to exploit a vulnerability (any network port, app, computer, or user). Can be assessed at the organizational level or a narrower scope (single server, web app, identities).\nThreat vector — the path a threat actor uses to execute an attack (data exfiltration, service disruption, disinformation). Sophisticated actors use multiple vectors across a multistage campaign. Note: \"threat vector\" and \"attack vector\" are sometimes used interchangeably; some sources reserve \"attack vector\" for an exploit that has already been successfully executed.\nVULNERABLE SOFTWARE VECTORS\n• Vulnerable software — a flaw in code/design exploitable to bypass access control or crash a process. Nearly all software has some vulnerabilities due to complexity and release speed.\n• Attack surface grows with the number of different OS/app products deployed; reduce it by consolidating products and standardizing versions.\n• Unsupported systems/applications — vendor no longer issues patches. Mitigate via isolation (a compensating control) when the app can't be replaced or self-patched.\n• Client-based vs. agentless scanning — client-based agents run on each host and report to a management server; agentless scans a host with no installation required (favored by threat actors doing reconnaissance).\nNETWORK VECTORS\nExploit techniques classed by execution requirement:\nType | Description\nRemote | Exploited by sending code over a network; no authenticated session required\nLocal | Exploit code must run from an authenticated session (still possibly over a network, using valid/hijacked credentials)\nAn unsecure network lacks CIA properties:\nCIA Property Lost | Attack Type\nConfidentiality | Eavesdropping — snooping on traffic to recover passwords/sensitive data\nIntegrity | On-path attacks — unauthorized devices intercept/modify traffic or run spoofed services\nAvailability | DoS (Denial of Service) — service disruption attacks\nSpecific unsecure-network threat vectors:\nVector | Description\nDirect access | Physical access to site (unlocked workstation, boot disk, physical theft)\nWired network | Unauthorized device attached to a physical network port\nRemote and wireless network | Cracked/stolen credentials for remote access or Wi-Fi; spoofed access points for credential harvesting\nCloud access | Weak credentials on one account/service/host, or attacking the CSP directly\nBluetooth network | Exploiting a vulnerability/misconfiguration to transmit a malicious file over Bluetooth\nDefault credentials | Device/app left with a published, easily discoverable default password\nOpen service port | Unauthenticated connection to a TCP/UDP port running vulnerable/exploitable software\nLURE-BASED VECTORS\nA lure conceals a malicious payload (\"hook\") behind something superficially attractive (\"bait\"):\nLure | Description\nRemovable device | Malware on USB/memory card; a drop attack leaves infected drives in parking lots/lobbies hoping an employee plugs one in\nExecutable file | Exploit code disguised as a useful/fun program — e.g., a Trojan Horse, which creates backdoor access\nDocument files | Malicious code embedded in word processing/PDF files (via scripting features or viewer/editor vulnerabilities)\nImage files | Exploit code concealed in an image targeting browser/document editor vulnerabilities\nMESSAGE-BASED VECTORS\nVector | Notes\nEmail | Malicious attachment; requires social engineering to get the target to open it\nSMS | Uses phone firmware + SS7 protocol; numerous vulnerabilities; typically no organizational monitoring capability\nInstant Messaging (IM) | Voice/video/file attachments; usually encrypted (more secure than SMS, but encryption also blocks org scanning)\nWeb and Social Media | Malware in posts/downloads; drive-by download (compromised site auto-infects vulnerable browsers); fake \"must-have\" apps that are actually Trojans\nA zero-click exploit triggers just by receiving/viewing content — no user action (opening a file) required.\nSUPPLY CHAIN ATTACK SURFACE\nA supply chain = end-to-end process of designing, manufacturing, and distributing goods/services. Rather than attack a target directly, threat actors infiltrate via a supply chain partner (e.g., the Target breach, via a building-systems vendor's credentials).\nRelationship | Description\nSupplier | Sells in bulk to other businesses directly from a manufacturer (B2B)\nVendor | Sells to retail businesses (B2B) or directly to customers (B2C); may add customization/support\nBusiness partner | Closer relationship, aligned goals/marketing\n• Trust must extend through the whole chain: component manufacturer, firmware developer, OEM reseller, courier, provisioning staff.\n• Most businesses rely on reputable vendors as best practical effort; governments/military/large enterprises apply greater scrutiny (especially for secondhand equipment).\n• MSP (Managed Services Provider) — outsourced IT resource provisioning/support. Harder to monitor; MSP employees are a potential insider-threat source.",
+   "exam_tips": []
+  },
+  {
+   "title": "Social Engineering",
+   "content": "HUMAN VECTORS\nSocial engineering (\"hacking the human\") — eliciting information or actions from a person for the threat actor's benefit; used for reconnaissance or to directly obtain credentials/trigger malware execution.\nIMPERSONATION AND PRETEXTING\nImpersonation — pretending to be someone else; effective when the target can't easily verify identity (phone, email). Two typical approaches:\nApproach | Description\nPersuasive/consensus/liking | Convince the target the request is natural; refusing would seem impolite/odd\nCoercion/threat/urgency | Intimidate with bogus authority or penalty (e.g., threat of being fired)\nPretexting — a carefully crafted, convincing/intimidating story used to support impersonation; more effective with privileged information about the organization (employee lists, job titles, phone numbers, invoices, etc.), which is often easy to obtain because most companies optimize for customer service, not security.\nPHISHING AND PHARMING\nTerm | Description\nPhishing | Social engineering + spoofing, traditionally via email; tricks target into interacting with a malicious resource disguised as trusted\nVishing | Phishing via voice channel (phone/VoIP)\nSMiShing | Phishing via SMS text\nPharming | Redirects users from a legitimate site to a malicious one by corrupting Internet name resolution (DNS), rather than tricking the user directly\nTYPOSQUATTING\nTyposquatting — registering a domain name nearly identical to a real one (e.g., \"exannple.com\") hoping users won't notice; also called cousin/lookalike/doppelganger domains. Related technique: registering a hijacked subdomain off a trusted cloud provider domain (e.g., example.onmicrosoft.com).\nBUSINESS EMAIL COMPROMISE (BEC) AND RELATED TARGETED ATTACKS\nBusiness email compromise — a sophisticated, highly targeted campaign against a specific individual (often an executive), posing as a colleague/partner/vendor, usually preceded by reconnaissance; avoids obvious mass-phishing tells (spoofed links, attachments). Some sources restrict the term to attacks aimed at authorizing a fraudulent payment/wire transfer.\nRelated Term | Description\nSpear phishing | Targeted phishing at a specific individual/group\nWhaling | Targeting senior executives\nCEO fraud | Impersonating the CEO specifically\nAngler phishing | Using social media as the vector\nBRAND IMPERSONATION AND DISINFORMATION\nBrand impersonation — duplicating a company's logos, formatting, tone, and style to make a phishing message or pharming site convincing; may include boosting search ranking with fake referrer sites.\nTerm | Definition\nDisinformation | Purposeful intent to deceive\nMisinformation | Repeating false claims/rumors without intent to deceive (often the downstream effect of a disinformation campaign)\nWATERING HOLE ATTACK\nA watering hole attack compromises a legitimate but unsecure third-party website that a group of targets is known to use (e.g., a local vendor's site), running exploit code against visitors to infect the real target's employees.",
+   "exam_tips": []
+  },
+  {
+   "title": "Key Takeaways",
+   "content": "• Create a profile of threat actor types most likely to target your business — remember you may be targeted as a supplier to a larger enterprise.\n• Use analysis of business workflows and asset inventories to identify the organization's attack surface.\n• Use research to extend attack-surface understanding into specific threat vectors: vulnerable software, unsecure networks, supply chain, and message-based attacks/lures targeting the human vector.",
+   "exam_tips": []
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "Threat actor motivated by a social/political cause.",
+   "concept": "hacktivist",
+   "summary": "Objective 2.1"
+  },
+  {
+   "hook": "Degree of pre-existing access a threat actor possesses.",
+   "concept": "internal/external (threat actor)",
+   "summary": "Objective 2.1"
+  },
+  {
+   "hook": "Formal classification of a threat actor's resources/expertise.",
+   "concept": "level of sophistication/capability",
+   "summary": "Objective 2.1"
+  },
+  {
+   "hook": "Threat actor using hacking/computer fraud for commercial gain.",
+   "concept": "organized crime",
+   "summary": "Objective 2.1"
+  },
+  {
+   "hook": "Impersonation attack using a compromised employee account to convince others to commit fraud.",
+   "concept": "business email compromise (BEC)",
+   "summary": "Objective 2.2"
+  },
+  {
+   "hook": "Social engineering attack pretending to be someone else.",
+   "concept": "impersonation",
+   "summary": "Objective 2.2"
+  },
+  {
+   "hook": "Impersonation attack redirecting a website request to a similar-looking fake site.",
+   "concept": "pharming",
+   "summary": "Objective 2.2"
+  },
+  {
+   "hook": "Email-based social engineering attack from a supposedly reputable source.",
+   "concept": "phishing",
+   "summary": "Objective 2.2"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "A group backed by a foreign government spends months quietly inside a defense contractor's network stealing designs. Which threat actor best fits?",
+   "options": [
+    "Hacktivist",
+    "Insider threat",
+    "Nation-state",
+    "Unskilled attacker"
+   ],
+   "answer": 2,
+   "explanation": "Long-term, well-funded espionage is typical of nation-state actors."
+  },
+  {
+   "q": "An attacker sends text messages pretending to be a bank and asks victims to click a link. What is this?",
+   "options": [
+    "Vishing",
+    "Whaling",
+    "Smishing",
+    "Typosquatting"
+   ],
+   "answer": 2,
+   "explanation": "Smishing is phishing over SMS."
+  },
+  {
+   "q": "An attacker defaces a company website with political slogans after the company announces a controversial policy. What motivation fits best?",
+   "options": [
+    "Espionage",
+    "Philosophical or political beliefs",
+    "Blackmail",
+    "Financial gain"
+   ],
+   "answer": 1,
+   "explanation": "Hacktivists act on political or philosophical beliefs."
+  },
+  {
+   "q": "A caller pretends to be from IT support and asks an employee to read out a one-time code. What attack is this?",
+   "options": [
+    "Watering hole",
+    "Vishing",
+    "Smishing",
+    "Pharming"
+   ],
+   "answer": 1,
+   "explanation": "Vishing is voice phishing over the phone."
+  },
+  {
+   "q": "A teenager downloads a ready-made attack tool and runs it against random websites without understanding how it works. Which actor is this?",
+   "options": [
+    "Unskilled attacker",
+    "Organized crime",
+    "Nation-state",
+    "Shadow IT"
+   ],
+   "answer": 0,
+   "explanation": "Unskilled attackers use tools written by others and have limited resources."
+  },
+  {
+   "q": "Attackers compromise a website that a target industry visits often, hoping to infect those visitors. What is this?",
+   "options": [
+    "Typosquatting",
+    "Watering hole attack",
+    "Brand impersonation",
+    "Business email compromise"
+   ],
+   "answer": 1,
+   "explanation": "A watering hole infects a site the targets are known to visit."
+  },
+  {
+   "q": "An employee installs an unapproved file-sharing app to get work done faster, creating risk without meaning harm. What is this called?",
+   "options": [
+    "Shadow IT",
+    "Organized crime",
+    "Hacktivism",
+    "Nation-state activity"
+   ],
+   "answer": 0,
+   "explanation": "Shadow IT is unsanctioned technology used by staff, usually without malicious intent."
+  },
+  {
+   "q": "An attacker registers 'micros0ft-support.com' to catch users who mistype the real address. What is this?",
+   "options": [
+    "Pretexting",
+    "Typosquatting",
+    "Tailgating",
+    "Vishing"
+   ],
+   "answer": 1,
+   "explanation": "Typosquatting uses look-alike domains for common typos."
+  },
+  {
+   "q": "A ransomware gang runs a help desk for victims and splits profits with affiliates. Which actor and motivation fit?",
+   "options": [
+    "Insider seeking revenge",
+    "Organized crime seeking financial gain",
+    "Hacktivist seeking attention",
+    "Nation-state seeking espionage"
+   ],
+   "answer": 1,
+   "explanation": "Organized crime groups run attacks as a profit-driven business."
+  },
+  {
+   "q": "USB drives labeled 'Payroll 2026' are left in a company parking lot. What threat vector is this?",
+   "options": [
+    "Vishing",
+    "Wireless",
+    "Supply chain via MSP",
+    "Removable media"
+   ],
+   "answer": 3,
+   "explanation": "Dropped USB drives rely on curiosity to deliver malware through removable media."
+  }
+ ]
+}

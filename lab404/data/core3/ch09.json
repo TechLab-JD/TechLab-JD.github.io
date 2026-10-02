@@ -1,0 +1,183 @@
+{
+ "core": 3,
+ "chapter": 9,
+ "title": "Network Security Operations",
+ "exam_objectives": [
+  "4.1",
+  "4.5"
+ ],
+ "coverage": "COVERED",
+ "domain": "d4",
+ "domain_label": "Security Operations",
+ "sections": [
+  {
+   "title": "Network Security Baselines",
+   "content": "SECURE BASELINES AND BENCHMARKS\nSecure baseline — collection of standard configs/settings for network devices, software, patching, access controls, logging, monitoring, password policies, encryption, endpoint protection, etc. Improves manageability and operational consistency.\nResource | Description\nCIS Benchmarks | Center for Internet Security best-practice guides; cover networks, OSes, applications; product-focused (Windows, macOS, Linux, Cisco, browsers, VMware ESXi) and framework-focused (PCI DSS, NIST 800-53, SOX, ISO 27000)\nSTIGs (Security Technical Implementation Guides) | DISA-developed baselines for US DoD IT infrastructure\nBaseline management/compliance tools:\nTool | Purpose\nPuppet, Chef, Ansible, Group Policy | Automate deployment of secure baseline configs, enforce consistency, detect/correct deviations\nSCAP-compliant tools (OpenSCAP) | Assess/verify system adherence to baseline\nCIS-CAT Pro | Assesses configs against CIS benchmarks\nSCAP Compliance Checker (SCC) | DISA tool measuring STIG compliance\nHARDENING CONCEPTS\nDefault configs balance ease of use with security — well-documented credentials, simple passwords, and insecure protocols make defaults an attractive attack target. Hardening = changing defaults, often per published secure baselines.\nSwitch/Router hardening:\nAction | Purpose\nChange default credentials | Removes well-documented default access\nDisable unnecessary services/interfaces | Reduces attack surface (avoid HTTP/Telnet)\nUse secure management protocols | SSH instead of Telnet, HTTPS instead of HTTP\nImplement ACLs | Restrict access to required devices/networks\nEnable logging/monitoring | Detect login failures, config changes\nConfigure port security | Limits which devices can connect to a switch port\nStrong password policies | Reduces password attack risk\nPhysically secure equipment | Locked rooms prevent physical tampering\nServer hardening (adds to the above):\nAction | Purpose\nApply patches/updates regularly | Fixes known vulnerabilities; automate for consistency\nLeast privilege principle | Limits impact of a compromised account\nFirewalls and IDS | Block/alert on malicious activity\nSecure configuration baselines | CIS or STIGs\nStrong access controls | Password policy, MFA, PAM\nAntivirus/antimalware | Detect and quarantine malware\nPhysical security | Racks, server rooms, datacenters\nWIRELESS NETWORK INSTALLATION\nConcept | Definition\nBSSID | WAP's MAC address (identifies the access point)\nSSID | Wireless network's name\nSite Survey | Measures signal strength/channel usage across a site using architectural map + interference sources (walls, motors, microwaves)\nHeat Map | Visual output of a site survey — shows signal strength (red=strong) and channel overlap\n• 5 GHz band has more room for nonoverlapping channels than 2.4 GHz\n• Bonded channels improve bandwidth but raise interference risk\n• Heat map data drives adjustments: transmit power, channel changes, new/relocated WAPs\n• Patchy coverage increases vulnerability to rogue APs and evil twin attacks\nWIRELESS ENCRYPTION STANDARDS\nStandard | Cipher | Key Notes\nWEP | RC4 | Legacy, insecure\nWPA v1 | RC4 + TKIP | Fixed some WEP flaws, still weak\nWPA2 | AES + CCMP | CCMP provides authenticated encryption, replaces TKIP\nWPA3 | AES + GCMP | Current standard; Enterprise mode requires 192-bit AES\nWPA3 key features:\n• SAE (Simultaneous Authentication of Equals) — replaces PSK exchange, resists offline password capture\n• Enhanced Open — encrypts traffic on open networks even without a password\n• AES-GCMP — replaces AES-CCMP\n• Wi-Fi Easy Connect — QR code-based device onboarding\nWi-Fi generation naming: 802.11ax = Wi-Fi 6, 802.11ac = Wi-Fi 5, 802.11n = Wi-Fi 4.\nWPS AND EASY CONNECT\nMethod | Risk/Benefit\nWPS (Wi-Fi Protected Setup) | Push-button/PIN pairing; PIN splits into two brute-forceable halves (hours to crack); some devices can't fully disable it\nEasy Connect (DPP) | WPA3-era replacement using QR codes/NFC + public/private key pairs; good for headless IoT provisioning\nWI-FI AUTHENTICATION METHODS\nMode | Mechanism\nWPA2-PSK (Personal) | Passphrase (8–63 ASCII chars) → PBKDF2 → 256-bit Pairwise Master Key (PMK); used in WPA2's 4-way handshake; min. 14-char passphrase recommended\nWPA3-SAE (Personal) | Password-Authenticated Key Exchange (PAKE) using the Dragonfly handshake (Diffie-Hellman over elliptic curves + MAC-derived hash); resists offline dictionary/brute force; provides forward secrecy\nWPA2/WPA3-Enterprise | 802.1x port-based access control + RADIUS server; unique per-user credentials instead of shared passphrase; supports EAP-TLS (mutual cert auth), EAP-TTLS/PEAP (server-cert tunnel)\nNote: WPA3-Personal Transition mode (legacy WPA2 support) has been shown vulnerable to downgrade attacks.\nRADIUS AUTHENTICATION WORKFLOW\n• Supplicant (user device) connects to the NAS (access point/switch/VPN gateway)\n• NAS prompts for credentials (RADIUS supports PAP, CHAP, EAP — EAP is standard now)\n• Supplicant sends EAPoL data; RADIUS client builds an encrypted Access-Request packet (UDP port 1812)\n• AAA server decrypts using the shared secret (no response if it fails)\n• Access-Challenge/Access-Request exchange occurs for EAP setup\n• Server responds Access-Accept or Access-Reject\nAccounting (logging) uses UDP port 1813 and can run on a separate server.\nNETWORK ACCESS CONTROL (NAC)\nAuthenticates users/devices AND checks/enforces security policy compliance (OS version, patch level, AV status) before granting network access.\n• Dynamic VLAN assignment — NAC assigns a VLAN based on identity, device type, location, or health check results (e.g., vendor → Internet-only VLAN)\n• Quarantine VLAN — noncompliant devices (e.g., outdated AV) automatically isolated\nNAC Approach | Description\nAgent-Based | Software agent on the device reports status/compliance; enables automatic remediation\nAgentless | Port-based NAC or network scans (e.g., DHCP fingerprinting); works with any device, less detailed info\n• Persistent agent — installed as a software application\n• Nonpersistent/dissolvable agent — loaded into memory during posture assessment only, not installed",
+   "exam_tips": []
+  },
+  {
+   "title": "Network Security Capability Enhancement",
+   "content": "ACCESS CONTROL LISTS VS. FIREWALL RULES\nConcept | Scope\nACL | Rules on routers/switches controlling traffic at the interface level (source/dest IP, port, protocol)\nFirewall Rule | Governs inbound/outbound traffic for IPs/ranges/interfaces; network + application-level control\n• Rules process top-to-bottom; most specific rules go first\n• Implicit deny — default rule blocking anything unmatched (add explicit deny-all if not automatic)\n• Each rule specifies tuples: protocol, source address/port, destination address/port\nFirewall configuration principles:\n• Block incoming requests from spoofed internal/private IPs\n• Block incoming local-only protocol traffic (ICMP, DHCP, routing protocols) at the perimeter\n• Use pen testing to confirm configuration; log and monitor access attempts\n• Secure the firewall hardware and its management interface\n• Can restrict outbound traffic too (e.g., block outbound port 25/SMTP to stop spam from a compromised host)\nSCREENED SUBNET (PERIMETER NETWORK / DMZ)\nCreates a neutral zone separating public-facing servers (web, email, DNS, FTP) from the internal network.\n• First firewall (Internet ↔ screened subnet) — allows traffic to hosted services\n• Second firewall (screened subnet ↔ internal network) — blocks nearly all traffic inbound to internal network\n• A core example of network segmentation as a security control\nIDS AND IPS\nSystem | Behavior\nIDS (Intrusion Detection System) | Passive — monitors, alerts administrators; does not block traffic\nIPS (Intrusion Prevention System) | Active — detects AND blocks/mitigates (drop packets, reset connections, block source)\nDeployment | Strength | Limitation\nHIDS/HIPS (host-based) | Insider threats, file integrity, non-network events (local logins) | Confined to the host it's installed on\nNIDS/NIPS (network-based) | Cross-system threats (DDoS, network scanning) | No host-specific visibility\nNotable tools:\nTool | Role\nSnort | Rule-driven IDS; combines signature, protocol, anomaly-based inspection; large community ruleset\nSuricata | High-performance IDS/IPS/NSM; Snort-rule compatible; can run as IDS or IPS\nSecurity Onion | Linux distro bundling Snort, Suricata, and other network security monitoring tools\nOSSEC | Open-source HIDS — log analysis, integrity checking, registry monitoring, rootkit detection\nDETECTION METHODS\nMethod | Mechanism\nSignature-Based | Matches traffic against a database of known attack patterns; requires regular signature/plug-in/feed updates\nBehavioral/Anomaly-Based | Trained on baseline \"normal\" traffic; flags deviations; can catch zero-days and insider threats, but generates false positives/negatives while learning\nMachine-learning behavior-detection classes (per Gartner):\nClass | Scope\nUEBA (User and Entity Behavior Analytics) | Scans multiple IDS/log sources; often integrated with SIEM\nNTA (Network Traffic Analysis) | Applies analysis only to network streams, similar to NBAD\n• Anomaly-based detection can also mean strict RFC/protocol-compliance checking, not just behavioral learning\n• Trend analysis — tracking events/alerts over time to spot growing threats, tune out false positives, and guide security investment\nWEB FILTERING\nDeployment Model | Description\nAgent-Based | Software agent on each device enforces policy via cloud management server; works off-network (remote/travel); detailed per-device reporting\nCentralized Proxy | Intermediary between users and Internet; controls/monitors all web traffic; supports caching and anonymizing requests\nCentralized proxy filtering techniques:\nTechnique | Function\nURL Scanning | Blocks specific known-malicious/inappropriate URLs\nContent Categorization | Classifies sites (social media, gambling, adult, webmail) for policy-based blocking\nBlock Rules | Blocks by URL/domain/IP/category/keyword (e.g., all .exe downloads)\nReputation-Based Filtering | Scores sites by observed behavior/history; auto-blocks poor-reputation sites\nWeb filtering issues:\n• Overblocking — too restrictive, blocks legitimate sites, hurts productivity\n• Underblocking — too permissive, allows harmful content through\n• Encrypted traffic (HTTPS) — filters may be unable to inspect without proper config; decrypting/inspecting HTTPS raises employee privacy concerns",
+   "exam_tips": []
+  },
+  {
+   "title": "Key Takeaways",
+   "content": "• Select a secure baseline based on careful analysis of the organization's risk profile\n• Automate the rollout and management of secure baselines using tools such as Active Directory Group Policy, Ansible, Puppet, or Chef\n• Continuously audit wireless networks to ensure proper configuration and validate access points\n• Implement enterprise network authentication methods to enrich logging, improve data protection, and provide granular control\n• Enforce network security requirements through the implementation of NAC \"gate-keepers\"\n• Use firewalls, IDS/IPS, and web filtering to monitor and control network traffic and block access to malicious or inappropriate content",
+   "exam_tips": []
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "Data access standards over cellular networks (2G/3G GSM/CDMA; 4G/5G under LTE).",
+   "concept": "cellular",
+   "summary": "Objective 4.1"
+  },
+  {
+   "hook": "Diagram showing signal strength/channel utilization by location.",
+   "concept": "heat map (Wi-Fi)",
+   "summary": "Objective 4.1"
+  },
+  {
+   "hook": "Process/technologies for tracking/controlling/securing mobile infrastructure.",
+   "concept": "mobile device management (MDM)",
+   "summary": "Objective 4.1"
+  },
+  {
+   "hook": "WPA3 personal auth mechanism addressing WPA-PSK vulnerabilities.",
+   "concept": "Simultaneous Authentication of Equals (SAE)",
+   "summary": "Objective 4.1"
+  },
+  {
+   "hook": "Framework ensuring proper SPF/DKIM application via DNS policy.",
+   "concept": "Domain-based Message Authentication, Reporting, and Conformance (DMARC)",
+   "summary": "Objective 4.5"
+  },
+  {
+   "hook": "Software agent collecting system data/logs for monitoring analysis.",
+   "concept": "endpoint detection and response (EDR)",
+   "summary": "Objective 4.5"
+  },
+  {
+   "hook": "File transfer app protocol (ports 20/21); variants: SFTP, FTPS/FTPES, TFTP.",
+   "concept": "File Transfer Protocol (FTP)",
+   "summary": "Objective 4.5"
+  },
+  {
+   "hook": "Windows domain mechanism deploying per-user/per-computer settings.",
+   "concept": "group policy object (GPO)",
+   "summary": "Objective 4.5"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "A documented set of approved, secure settings applied to every new server is called a:",
+   "options": [
+    "Business impact analysis",
+    "Change request",
+    "Security baseline",
+    "Risk register"
+   ],
+   "answer": 2,
+   "explanation": "Baselines define the secure starting configuration."
+  },
+  {
+   "q": "A firewall rule allows SSH from anywhere. The team changes it to allow SSH only from the admin subnet. What capability is being modified?",
+   "options": [
+    "Firewall rules and access lists",
+    "DNS filtering",
+    "Email filtering",
+    "Group Policy"
+   ],
+   "answer": 0,
+   "explanation": "Tightening rules reduces exposure."
+  },
+  {
+   "q": "Which wireless setup gives each user individual credentials checked against a RADIUS server?",
+   "options": [
+    "Open network",
+    "WPA3-Enterprise with 802.1X",
+    "WPA3-Personal with one shared passphrase",
+    "WEP"
+   ],
+   "answer": 1,
+   "explanation": "Enterprise mode authenticates each user individually."
+  },
+  {
+   "q": "Which email security record lists the mail servers allowed to send mail for a domain?",
+   "options": [
+    "SPF",
+    "DKIM",
+    "DMARC",
+    "MX only"
+   ],
+   "answer": 0,
+   "explanation": "Sender Policy Framework lists authorized senders."
+  },
+  {
+   "q": "A company lets employees use personal phones for work but manages a separate work container on them. What deployment model is this?",
+   "options": [
+    "CYOD",
+    "BYOD",
+    "COPE",
+    "Kiosk mode"
+   ],
+   "answer": 1,
+   "explanation": "Bring your own device uses personally owned phones."
+  },
+  {
+   "q": "Which email technology adds a digital signature to messages so receivers can verify they were not altered?",
+   "options": [
+    "DMARC",
+    "SPF",
+    "SMTP",
+    "DKIM"
+   ],
+   "answer": 3,
+   "explanation": "DomainKeys Identified Mail signs outgoing mail."
+  },
+  {
+   "q": "The company buys phones, owns them, but lets employees use them personally too. What model is this?",
+   "options": [
+    "CYOD",
+    "VDI",
+    "COPE",
+    "BYOD"
+   ],
+   "answer": 2,
+   "explanation": "Corporate-owned, personally enabled."
+  },
+  {
+   "q": "Which email record tells receiving servers what to do with mail that fails SPF or DKIM checks?",
+   "options": [
+    "DKIM",
+    "DMARC",
+    "PTR",
+    "SPF"
+   ],
+   "answer": 1,
+   "explanation": "DMARC sets the policy (none, quarantine, reject) and reporting."
+  },
+  {
+   "q": "Which tool lets IT push policies, require a PIN and remotely wipe lost company phones?",
+   "options": [
+    "Mobile device management (MDM)",
+    "DLP only",
+    "WAF",
+    "SIEM"
+   ],
+   "answer": 0,
+   "explanation": "MDM manages and secures mobile devices."
+  },
+  {
+   "q": "The company blocks access to known malicious domains by refusing to resolve them. What is this?",
+   "options": [
+    "Port security",
+    "DNS filtering",
+    "Load balancing",
+    "Disk encryption"
+   ],
+   "answer": 1,
+   "explanation": "DNS filtering stops lookups of bad domains."
+  }
+ ]
+}

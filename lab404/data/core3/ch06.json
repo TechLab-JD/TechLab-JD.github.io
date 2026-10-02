@@ -1,0 +1,173 @@
+{
+ "core": 3,
+ "chapter": 6,
+ "title": "Cloud, Embedded & Zero Trust",
+ "exam_objectives": [
+  "1.2",
+  "3.1"
+ ],
+ "coverage": "COVERED",
+ "domain": "d1",
+ "domain_label": "General Security Concepts",
+ "sections": [
+  {
+   "title": "Cloud Infrastructure",
+   "content": "CLOUD DEPLOYMENT MODELS\nModel | Description\nPublic (multi-tenant) | Offered over the Internet by a CSP; subscription or pay-as-you-go; shared-resource performance/security risk\nHosted Private | Third-party hosted, exclusive to one org; more secure/performant, more expensive\nPrivate | Fully owned/operated by the org; on-site or off-site; greatest control (banking, government)\nCommunity | Several orgs share a hosted-private or private cloud to pool costs/policy (e.g. shared standardization)\nHybrid | Combination of the above, e.g. private cloud most of the year, bursting to public cloud at peak demand\nMulti-cloud = using multiple CSPs (not the same as hybrid, which mixes ownership models).\nSECURITY CONSIDERATIONS BY ARCHITECTURE\nArchitecture | Security Profile\nSingle-tenant | Dedicated infrastructure — highest security, customer manages/secures it, most expensive\nMulti-tenant | Shared infrastructure, logically separated data — cost-effective, higher risk of leakage/unauthorized access if misconfigured\nHybrid | Sensitive data on private, less-sensitive workloads on public — flexible but needs careful integration/security management\nServerless | Provider manages/secures infrastructure and auto-scales — customer still must secure app access/data\nHYBRID CLOUD CHALLENGES\n• Managing multiple environments + enforcing consistent policy across them\n• Confusion over the on-premises/public-cloud boundary → unauthorized access\n• Multiple providers make uniform policy enforcement harder\n• Data replication aids redundancy but risks synchronization/consistency issues\n• Legal compliance must hold across both on-prem and cloud components\n• SLA enforcement is harder across mixed environments; added latency from large data transfers; monitoring requires specialized tools/expertise\nCLOUD SERVICE MODELS (XAAS)\nModel | What's Provided | Who Secures the App | Examples\nSaaS | Full software application, pay-as-you-go | Provider (customer just uses it) | Microsoft 365, Salesforce, Google Workspace\nPaaS | Servers/storage/network + a multi-tier app/database platform | Provider secures the platform; customer secures what they build on it | Oracle Database, Azure SQL Database, Google App Engine\nIaaS | Raw servers, load balancers, SAN components | Provider secures physical infra; customer secures nearly everything above it | AWS EC2, Azure VMs, Oracle Cloud, OpenStack\nTHIRD-PARTY VENDOR MANAGEMENT\n• SLA (Service-Level Agreement) — defines uptime/performance/support metrics + penalties/remedies\n• Assess vendor security practices: encryption, access controls, vulnerability management, incident response, regulatory compliance\n• Vendor lock-in — mitigated via data portability, interoperability, standardization, and multi-cloud/hybrid strategies\nSHARED RESPONSIBILITY MODEL\nSecurity is shared, not transferred, between CSP and customer. Split shifts with service model (e.g., OS config is fully CSP-owned under SaaS, shared under IaaS).\nCloud Service Provider | Cloud Service Customer\nPhysical security of infrastructure | User identity management\nSecuring compute/storage/network equipment | Data storage geographic location config\nFoundational network security (e.g. DDoS protection) | User/service access controls to cloud resources\nCloud storage backup and recovery | Data and application security configuration\nResource isolation among tenants | Protection of OS, when deployed\nTenant identity and access control | Encryption use/configuration, especially key protection\nInfrastructure monitoring/incident response |\nManaging multi-region datacenters |\nCENTRALIZED VS. DECENTRALIZED COMPUTING\nModel | Description | Fit\nCentralized | All processing/storage at one central server (mainframe, client-server) | Large orgs needing strict control\nDecentralized | Processing/storage spread across many locations/devices | Resilience/flexibility over central control\nDecentralized examples: blockchain, P2P networks, CDNs, IoT device meshes, distributed databases, TOR.\nRESILIENT ARCHITECTURE & REPLICATION\n• High Availability (HA) — storage guaranteed ≥99.99% uptime via redundant controllers/pools\n• Hot vs. cold storage — hot = faster retrieval, higher cost; cold = slower, cheaper\n• Databases need low-latency synchronous replication; backup files tolerate more latency\nRegions and Availability Zones — CSPs divide the globe into independent regions, subdivided into availability zones with independent power/cooling/network.\nReplication Tier | Scope\nLocal replication | Within a single datacenter, separate fault/upgrade domains\nRegional replication (zone-redundant) | Across multiple datacenters in 1–2 regions\nGeo-redundant storage (GRS) | Replicated to a distant secondary region — survives a regional outage\nVIRTUALIZATION FUNDAMENTALS\n• Hypervisor — software layer that creates and manages virtual machines (VMs), each with virtualized CPU/memory/storage/network\n• Type I (bare-metal) — runs directly on hardware (e.g., VMware ESXi, Hyper-V) — used in datacenters/cloud for performance and isolation\n• Type II (hosted) — runs as an application atop a host OS (e.g., VMware Workstation, VirtualBox) — used for desktop/test environments\n• VDI (Virtual Desktop Infrastructure) — hosts full desktop OS instances centrally; users access them remotely\nAPPLICATION VIRTUALIZATION & CONTAINERIZATION\nType | How It Works\nApplication Virtualization | A limited form of VDI — client accesses or streams a single hosted app rather than a whole desktop (Citrix XenApp, Microsoft App-V, VMware ThinApp); often paired with clientless HTML5 delivery\nContainerization | No hypervisor — OS-level resource separation into isolated \"cells,\" each with allocated CPU/memory but sharing the native kernel; containers can vary distro but not guest OS family (no Windows container on a Linux kernel); best known: Docker\nContainerization underpins microservices and serverless architecture and is widely used for mobile corporate workspaces.\nSERVERLESS COMPUTING & MICROSERVICES\nServerless — provider manages infrastructure, auto-allocates resources, bills by execution time (not hourly). Apps are built as functions/microservices rather than deployed to VM instances. Examples: AWS Lambda, Google Cloud Functions, Azure Functions.\n• Eliminates server patch/admin/file-system management burden\n• Heavily event-driven — connection triggers auth, session creation, authorization lookup, app logic, DB read/write, logging\n• Network security focus shifts to ensuring the client hasn't been compromised\nMicroservices — application built as small, modular, independently deployable services, each with one responsibility. Enables independent team scaling/updates but risks integration issues once combined. Often implemented via Infrastructure as Code (IaC) for consistent, automated provisioning.\nCLOUD AUTOMATION TECHNOLOGIES\nInfrastructure as Code (IaC) — manages infrastructure via machine-readable definition files (YAML, JSON, HCL — HashiCorp Configuration Language, used by Terraform/Consul). Version-controlled like any code; ensures consistent, repeatable, low-error deployment across dev/staging/production.\nResponsiveness mechanisms:\nMechanism | Function\nLoad Balancing | Distributes traffic across VMs/containers via proxy intermediaries\nEdge Computing | Moves processing closer to data source to cut latency (IoT, CDNs, real-time apps)\nAuto-Scaling | Automatically provisions/releases resources to match real-time demand\nSoftware Defined Networking (SDN) — abstracts network functions into three planes:\nPlane | Role\nControl | Decides prioritization, security, switching of traffic\nData | Executes switching/routing and access control\nManagement | Monitors traffic conditions and network status\nSDN application defines policy on the control plane → northbound API to the SDN controller → southbound API to network devices. NFV (Network Functions Virtualization) — rapid deployment of virtual networking via general-purpose VMs/containers.\nCLOUD ARCHITECTURE CONSIDERATIONS\nFactor | Notes\nCost | Shift from CapEx (up-front hardware/license/setup) to OpEx (pay-as-you-go); unoptimized workloads can erode savings\nScalability | Scale-up (vertical — more CPU/RAM/storage on existing resource) vs. scale-out (horizontal — more instances in parallel)\nResilience | Redundant hardware, clustering, cross-datacenter replication\nEase of Deployment | Automation, standardized templates/images, portability (avoids lock-in)\nEase of Recovery | Automated backup/restore, multi-datacenter failover, geographic disaster recovery replication\nSLA / ISA | SLA = performance/availability/support commitments. ISA (Interconnection Security Agreement) = security requirements/responsibilities (encryption, access control, vulnerability mgmt, data segregation, ownership, audit rights, subcontractor handling); must map to regulations (GDPR, HIPAA, PCI DSS)\nPower | Efficient hardware/cooling, redundant power (multiple feeds, generators, UPS); PUE (Power Usage Effectiveness) — lower is more efficient\nCompute | Elasticity, resource pooling, orchestration, automation, serverless — combine for scalable cost-effective compute\nCLOUD SECURITY CONSIDERATIONS\n• Data protection — data lives outside org-managed infrastructure; misconfiguration risk is high; access controls + encryption + disaster recovery planning are essential\n• Patching — depends on CSP's patch policy/response speed; complexity and lack of customer control over underlying infrastructure can make timeline/regulatory compliance difficult\nSECURE COMMUNICATION AND ACCESS\nTechnology | Function\nSD-WAN (Software-Defined WAN) | Connects branch offices/datacenters/cloud over a WAN; encrypts traffic, prioritizes/segments by application, integrates with firewalls, centralizes policy management\nSASE (Secure Access Service Edge) | Combines WAN tech + cloud-delivered security under a zero trust model; incorporates IAM (assume untrusted until authenticated/authorized); provides IPS, malware protection, content filtering",
+   "exam_tips": []
+  },
+  {
+   "title": "Embedded Systems and Zero Trust Architecture",
+   "content": "EMBEDDED SYSTEMS\nPurpose-built computing embedded in a larger device: home appliances, smartphones/tablets, automotive (engine control, airbags), industrial automation (robots, sensors), medical devices (pacemakers, insulin pumps), aerospace/defense (navigation, control).\nREAL-TIME OPERATING SYSTEMS (RTOS)\nPurpose-specific OS designed for stability + processing speed in time-critical applications.\nExample | Domain\nVxWorks | Aerospace/defense — aircraft control, missile guidance\nFreeRTOS | Open-source — robotics, industrial automation, consumer electronics\nAUTOSAR | Automotive standard framework using RTOS for engine/transmission/safety systems\nSiemens SIMATIC WinCC | Industrial process control/factory automation\nRisks — complex, hard-to-secure code; a system-level breach can disrupt critical processes and cause physical harm (medical devices, ICS).\nINDUSTRIAL CONTROL SYSTEMS (ICS)\nTerm | Meaning\nICS | Systems that control machinery in critical infrastructure (power, water, health, telecom, national security)\nDCS (Distributed Control System) | ICS managing process automation within a single site\nPLC | Embedded controller linked via OT fieldbus/industrial Ethernet to actuators (valves, motors, breakers) and sensors\nHMI (Human-Machine Interface) | Local panel or software for PLC output/configuration\nData Historian | Database logging all control-loop data\nSCADA | Supervisory system replacing a control server across large, multi-site ICS; uses WAN links (cellular/satellite) to reach field devices\nICS/SCADA sectors: energy/utilities, industrial (mining/refining), fabrication/manufacturing, logistics, facilities (HVAC/lighting/security).\nHistorically built without IT security in mind. Stuxnet — famous worm that attacked SCADA software controlling Iranian nuclear centrifuges. NIST SP 800-82 covers ICS/SCADA security recommendations.\nIndustrial systems prioritize safety first, then reverse the CIA triad to AIC (Availability, Integrity over Confidentiality) because hazardous electromechanical processes must keep running safely.\nINTERNET OF THINGS (IOT)\nNetwork of physical devices/sensors/actuators exchanging data, usually via cloud back-ends for analytics.\nComponent | Role\nSensor | Detects environmental changes (temp, humidity, motion)\nActuator | Performs an action based on sensor data (turns on a light, adjusts thermostat)\nExamples: smart homes, smart cities (traffic, air quality), healthcare wearables/implants, agriculture (soil/weather/crop monitoring).\nAdoption drivers: falling sensor costs, better connectivity (5G, low-power wireless), an explosion of data enabling ML/AI analytics, and (per the text) pandemic-driven remote monitoring/telemedicine growth.\nSecurity risks:\n• Limited processing/memory power → weak built-in security controls\n• Lack of standardization → integration and mismatched security requirements across devices\n• High data volume → harder to secure, bigger breach surface\n• Design bias toward functionality/low cost over security; rushed to market without security testing\n• Low user/organizational awareness (default passwords unchanged, firmware not updated)\nNotable incidents: Mirai botnet (mass IoT-device DDoS), casino hacked via a smart fish-tank thermometer, compromised baby monitors/home security cameras.\nBest practice frameworks: IoT Security Foundation (IoTSF), Industrial Internet Consortium (IIC) Security Framework, Cloud Security Alliance (CSA) IoT Security Controls Framework, ETSI IoT Security Standards.\nDEPERIMETERIZATION AND ZERO TRUST\nDeperimeterization — shifts security focus from network boundaries to protecting individual resources/data directly (robust authentication, encryption, access control, continuous monitoring), because cloud + remote work + mobile have eroded the traditional \"inside vs. outside\" boundary.\nDrivers: cloud (spread infrastructure), remote work (expanded footprint, insecure home networks), mobile devices (unpatched, lost/stolen), outsourcing/contracting (external network as an entry point), unsecured/well-known Wi-Fi keys.\nNIST SP 800-207 defines Zero Trust as moving defenses from static network perimeters to focus on users, assets, and resources — \"never trust, always verify.\"\nZero Trust benefits:\nBenefit | Description\nGreater security | All users/devices/apps authenticated + verified before access\nBetter access controls | Stringent limits on who/what/where\nImproved governance/compliance | Limited data access, better activity visibility\nIncreased granularity | Access to only what's needed, when needed\nEssential ZTA components: network/endpoint security, IAM, policy-based enforcement, cloud security, network visibility, network segmentation, data protection, threat detection/prevention.\nCore Zero Trust concepts:\nConcept | Meaning\nAdaptive identity | Identity verification is continuous, based on current context, not a one-time event\nThreat scope reduction | Need-to-know access only — shrinks attack surface and blast radius\nPolicy-driven access control | Enforced by identity + device posture (security config, patch level, software version) + network context\nCONTROL PLANE AND DATA PLANE IN ZERO TRUST\nPlane | Component | Role\nControl Plane | Policy Decision Point | Defines/updates access policy, monitors for suspicious activity\n| — Policy Engine | Evaluates identities, credentials, policies, threat intel, behavioral analytics to make per-request auth decisions\n| — Policy Administrator | Issues access tokens, establishes/tears down sessions; sole interface to the data plane\nData Plane | Policy Enforcement Point | Mediates each resource request between subject/system and the resource, communicating with the policy administrator\nThe session established after approval is an implicit trust zone (e.g., an IPsec tunnel between signed agent, gateway, and resource) — kept as small and transient as possible (ideally per-transaction), unlike perimeter models where trust persists after one login. Even an authenticated session can be terminated if behavioral analytics flags anomalies.\nReal-world ZTA examples: Google BeyondCorp, DoD JEDI cloud, Cisco Zero Trust Architecture, Palo Alto Networks Prisma Access.",
+   "exam_tips": []
+  },
+  {
+   "title": "Key Takeaways",
+   "content": "• Assess availability/confidentiality requirements to select the cloud deployment model (public, hosted private, private, community, or hybrid).\n• Identify the service provisioning model (software, platform, or infrastructure) that best fits development resources and customization needs.\n• Consider advanced concepts where they better fit business needs — microservices, serverless, and orchestration focus on workflow rather than server administration; evaluate SDN benefits/scenarios.\n• If using a CSP, create an SLA and security responsibility matrix identifying who performs which security-critical tasks; integrate cloud security reporting/monitoring with on-premises incident response.\n• Evaluate the security features of embedded devices and isolate them from other network devices.\n• Implement zero trust architecture concepts to validate connections and devices continuously, rather than relying on \"inside\" and \"outside\" boundary assumptions.",
+   "exam_tips": []
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "Centralized platform verifying identity, assigning permissions, and logging actions for an audit trail.",
+   "concept": "authentication, authorization, and accounting (AAA)",
+   "summary": "Objective 1.2"
+  },
+  {
+   "hook": "In zero trust architecture, functions defining policy and access decisions.",
+   "concept": "control plane",
+   "summary": "Objective 1.2"
+  },
+  {
+   "hook": "Classifying cloud ownership/management: public, private, community, hybrid.",
+   "concept": "cloud deployment model",
+   "summary": "Objective 3.1"
+  },
+  {
+   "hook": "Classifying cloud service provision and CSP responsibility limits (SaaS/PaaS/IaaS, etc.).",
+   "concept": "cloud service model",
+   "summary": "Objective 3.1"
+  },
+  {
+   "hook": "Cloud deployed for shared use by cooperating tenants.",
+   "concept": "community cloud",
+   "summary": "Objective 3.1"
+  },
+  {
+   "hook": "OS virtualization deployment containing everything to run a service/app/microservice.",
+   "concept": "containerization",
+   "summary": "Objective 3.1"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "An attacker modifies the amount on a wire transfer while it is in transit. Which part of the CIA triad was violated?",
+   "options": [
+    "Availability",
+    "Non-repudiation",
+    "Integrity",
+    "Confidentiality"
+   ],
+   "answer": 2,
+   "explanation": "Unauthorized modification of data is an integrity failure."
+  },
+  {
+   "q": "In an IaaS cloud model, who is responsible for patching the guest operating system?",
+   "options": [
+    "The customer",
+    "The hardware manufacturer",
+    "Nobody; it is automatic",
+    "The cloud provider"
+   ],
+   "answer": 0,
+   "explanation": "Under the shared responsibility model, IaaS customers manage the OS and above."
+  },
+  {
+   "q": "A sender digitally signs a contract so they cannot later deny having sent it. Which concept does this provide?",
+   "options": [
+    "Availability",
+    "Authorization",
+    "Non-repudiation",
+    "Obfuscation"
+   ],
+   "answer": 2,
+   "explanation": "A digital signature ties the message to the signer's private key, preventing denial."
+  },
+  {
+   "q": "A company uses a SaaS email platform. Who is mainly responsible for securing the application code?",
+   "options": [
+    "The customer's ISP",
+    "The end user",
+    "The customer",
+    "The SaaS provider"
+   ],
+   "answer": 3,
+   "explanation": "In SaaS the provider manages the application; the customer manages its data and access."
+  },
+  {
+   "q": "In the AAA framework, which step decides what a user is allowed to do after they log in?",
+   "options": [
+    "Authorization",
+    "Authentication",
+    "Identification",
+    "Accounting"
+   ],
+   "answer": 0,
+   "explanation": "Authorization grants permissions after identity is proven."
+  },
+  {
+   "q": "Defining servers, networks and firewall rules in code files that can be versioned and redeployed is called:",
+   "options": [
+    "Air gapping",
+    "Infrastructure as code",
+    "Serverless",
+    "Microservices"
+   ],
+   "answer": 1,
+   "explanation": "IaC manages infrastructure through code for consistency."
+  },
+  {
+   "q": "Which element of the AAA framework records what a user did during a session?",
+   "options": [
+    "Authorization",
+    "Attestation",
+    "Accounting",
+    "Authentication"
+   ],
+   "answer": 2,
+   "explanation": "Accounting tracks and logs user activity."
+  },
+  {
+   "q": "Which architecture runs code only when an event triggers it, with the provider managing the servers?",
+   "options": [
+    "On-premises",
+    "Air-gapped",
+    "Monolithic",
+    "Serverless"
+   ],
+   "answer": 3,
+   "explanation": "Serverless functions run on demand without customers managing servers."
+  },
+  {
+   "q": "In a Zero Trust architecture, which component makes the decision to allow or deny an access request?",
+   "options": [
+    "Subject",
+    "Implicit trust zone",
+    "Policy enforcement point",
+    "Policy engine"
+   ],
+   "answer": 3,
+   "explanation": "The policy engine (part of the control plane) decides; the enforcement point carries the decision out."
+  },
+  {
+   "q": "An application split into many small, independent services that communicate through APIs is called:",
+   "options": [
+    "Microservices",
+    "Embedded",
+    "Air-gapped",
+    "Monolithic"
+   ],
+   "answer": 0,
+   "explanation": "Microservices break an app into independently deployable parts."
+  }
+ ]
+}

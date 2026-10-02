@@ -1,0 +1,163 @@
+{
+ "core": 3,
+ "chapter": 8,
+ "title": "Vulnerabilities & Vulnerability Management",
+ "exam_objectives": [
+  "2.3",
+  "4.3"
+ ],
+ "coverage": "COVERED",
+ "domain": "d2",
+ "domain_label": "Threats, Vulnerabilities & Mitigations",
+ "sections": [
+  {
+   "title": "Device and OS Vulnerabilities",
+   "content": "OPERATING SYSTEM VULNERABILITY OVERVIEW\nOS | Common Vulnerability Sources\nWindows | Buffer overflows, input validation problems, privilege flaws; largest install base = biggest target\nmacOS | UNIX-based architecture; weaknesses in access controls, secure boot, third-party software; perceived \"safer\" → complacency risk\nLinux | Kernel vulnerabilities, misconfigurations, unpatched systems; rapid open-source patching, but widespread cloud/server use raises stakes\nAndroid | Open source like Linux; fragmented across manufacturers/versions → inconsistent patching\niOS | Not open source, but still hit by significant vulnerabilities\nNOTABLE EXAMPLE OS VULNERABILITIES\nVulnerability | OS | Description\nMS08-067 | Windows | Windows Server Service RCE flaw; exploited by the Conficker worm (2008)\nMS17-010 / EternalBlue | Windows | SMB protocol flaw enabling RCE; used in the WannaCry ransomware attack (May 2017)\nShellshock | macOS (Unix-based) | 2014 Bash shell flaw allowing system control\nStagefright | Android | 2015 flaw executing code via crafted MMS message (media library)\nProject Zero iOS exploits | iOS | 2019 \"watering hole\" attacks via malicious websites, used by nation-states\nHeartbleed | Linux (OpenSSL) | 2014 flaw allowing attackers to read system memory, exposing secret keys\nLEGACY AND END-OF-LIFE (EOL) SYSTEMS\nTerm | Definition\nEOL System | Product/version publicly declared no longer supported by vendor; no more updates/patches\nLegacy System | Outdated tech still in use; not necessarily unsupported, but incompatible with newer architectures\n• EOL and legacy overlap but aren't identical — an EOL system may still be a legacy system, and vice versa\n• Example: Windows 7 / Server 2008 — stopped receiving updates January 2020, still widely used\n• Secondhand/recertified/renewed devices often carry known unremediated firmware/driver flaws\n• Replacement decisions must weigh: vendor support, warranty, marketplace reputation, transition/licensing/hardware costs, compatibility, data migration\nFIRMWARE AND VIRTUALIZATION VULNERABILITIES\nVulnerability | Description\nMeltdown / Spectre (2018) | Processor-level flaws allowing malicious programs to steal data mid-processing\nLoJax (2018) | UEFI firmware flaw allowing persistence even after HDD replacement/OS reinstall\nVM Escape | Attacker breaks out of a VM's isolated environment into the host or other VMs\nCloudburst (CVE-2009-1244) | VMware ESX Server flaw in VM display function allowing guest OS to execute code on host\nResource Reuse | Sensitive data leaks between VMs when disk/memory isn't sanitized between deployments\nHypervisor risk: management interfaces are attack vectors if insecure (weak auth, no encryption, protocol flaws). Mitigations for resource reuse: data sanitization, encryption throughout lifecycle, key management, resource segregation by security level.\nZERO-DAY VULNERABILITIES\nPreviously unknown flaws exploitable before vendors are aware/can patch. Traditional signature-based tools (AV, firewalls) are often ineffective against them.\n• Favored by advanced threat actors (organized crime, nation-states) for high-value targeted attacks\n• Responsible disclosure — researchers privately inform vendor before public disclosure\n• High financial value (a mobile OS zero-day can be worth millions); state agencies stockpile them\nMISCONFIGURATION VULNERABILITIES\nCommon causes: unnecessary services enabled, default/guessable credentials, overly permissive settings, publicly-accessible cloud storage/compute by default.\n• Support/troubleshooting activity can inadvertently leave security features disabled or access controls loosened\n• Urgent outage response often bypasses change management (no documentation/testing/approval) → misconfiguration risk\nCRYPTOGRAPHIC VULNERABILITIES\nExample | Issue\nMD5 / SHA-1 | Now insecure — vulnerable to collision attacks\nHeartbleed | OpenSSL library flaw allowing attackers to read secure communications\nKRACK | Key Reinstallation Attack against WPA2, intercepts/decrypts Wi-Fi traffic\nDES | 56-bit key, vulnerable to brute force; replaced by 3DES then AES\nSweet32 (CVE-2016-2183) | Birthday attack against 3DES (2016); NIST deprecated 3DES in 2017\nBEAST / POODLE | Attacks exploiting SSL/early TLS cipher suite implementation flaws\n• RSA vulnerable if small key sizes or weak random number generation used; reused key pairs increase compromise risk over time\n• Kerckhoffs's principle — a cryptosystem should stay secure even if everything except the key is public knowledge\n• Key protection practices: HSMs, key management systems (KMS), access controls/authentication, monitoring/auditing key usage, periodic key rotation\nMOBILE DEVICE VULNERABILITIES: ROOTING, JAILBREAKING, SIDELOADING\nTerm | Platform | Description\nRooting | Android | Gaining root/admin access to modify system files, install custom ROMs\nJailbreaking | iOS | Removing Apple's restrictions to install unauthorized apps, access system files\nSideloading | Mostly Android (APK files) | Installing apps outside the official app store; on Apple devices, voids warranty and violates ToS\n• Sideloaded/unofficial apps skip official vetting — higher malware/data theft/privacy risk\n• Excessive app permissions increase attack surface beyond the app's legitimate purpose\n• Regulated industries (healthcare, finance) should strictly prohibit rooting/jailbreaking/sideloading\n• MDM platforms can detect and restrict these behaviors; combine with employee awareness training",
+   "exam_tips": []
+  },
+  {
+   "title": "Application and Cloud Vulnerabilities",
+   "content": "RACE CONDITIONS AND TOCTOU\nRace condition — software flaw where operations that must execute in a specific order can be manipulated, causing unpredictable outcomes.\n• TOCTOU (Time-Of-Check to Time-Of-Use) — system state changes between the check (verification) and use (execution) steps\n• Mitigated via atomic operations (check + execute as a single indivisible step), locks, semaphores, monitors\nExample CVE | Description\nDirty COW (CVE-2016-5195) | Linux kernel race condition allowing local privilege escalation\nCVE-2020-0796 | Windows SMBv3 (SMBGhost) race condition allowing arbitrary code execution\nMEMORY INJECTION AND BUFFER OVERFLOW\nMemory injection — attacker introduces malicious code into a running process's memory, running with that process's privilege level. Common forms: buffer overflow, format string vulnerabilities, code injection.\nBuffer overflow — attacker overfills a reserved memory buffer; a stack overflow can overwrite the return address to redirect execution to attacker code.\n• Mitigations: ASLR (Address Space Layout Randomization), DEP (Data Execution Prevention), type-safe languages, secure coding practices\nMALICIOUS UPDATES\nUpdate that appears legitimate but carries harmful code — exploits user trust in the update process.\nExample | Description\nCCleaner (2017) | Legitimate software compromised with an unauthorized malicious update\nSolarWinds (2020) | Orion platform update distributed a backdoor to government/corporate networks\nMitigations: secure software supply chain management, digital signature verification.\nEVALUATION SCOPE / TARGET OF EVALUATION (TOE)\nTOE Practice | Description\nSecurity Testing | Vulnerability assessments and pen testing\nDocumentation Review | Design specs, architecture diagrams, security policies\nSource Code Analysis | Identifies vulnerabilities/coding errors, input validation issues\nConfiguration Assessment | Access controls, encryption settings, authentication mechanisms\nCryptographic Analysis | Encryption algorithms, key management, secure key storage\nCompliance Verification | Verifies adherence to regulations/frameworks/certifications\nSecurity Architecture Review | Identifies gaps like insufficient segregation of duties, missing audit trails\n• For a penetration tester, scope = authorized boundaries for testing\n• For an attacker, scope = the intended target\nWEB APPLICATION ATTACKS\nHTTP is stateless — apps must manage sessions via cookies/session IDs. Improper session management (predictable IDs, session fixation/hijacking) enables CSRF and XSS.\nCross-Site Scripting (XSS) types:\nType | Mechanism\nReflected/Nonpersistent | Malicious script delivered via a crafted URL/link; executes once when clicked\nStored/Persistent | Malicious script inserted into a back-end database/CMS; executes for every viewer\nDOM-based | Exploits client-side scripts manipulating the Document Object Model directly\nSQL Injection (SQLi) — attacker modifies SQL statements (SELECT/INSERT/DELETE/UPDATE) via unsanitized input to extract/insert data or execute code with the database app's privileges.\n• Classic example: entering ' or 1=1# into a username field turns a query into an always-true statement, dumping all records\nCLOUD-BASED APPLICATION ATTACKS\n• Shared responsibility model confusion can leave security gaps\n• Side-channel attacks — attacker on the same physical server as the victim extracts info via shared resources\n• Misconfigured storage buckets → unauthorized data access\n• Cryptojacking — using cloud processing power to mine cryptocurrency without consent, driving up costs/degrading performance\n• Cloud can also be used as an attack platform — fraudulent sites, malicious file hosting for phishing distribution\nCLOUD ACCESS SECURITY BROKER (CASB)\nEnterprise software mediating access to cloud services across devices.\nCASB functions: SSO/access control enforcement, malware/rogue device scanning, user/resource activity monitoring, data exfiltration mitigation.\nCASB Deployment Mode | Description\nForward Proxy | At client network edge; inspects traffic in real time; risk of bypass, potential bottleneck\nReverse Proxy | At cloud network edge; no client device config needed; requires cloud app proxy support\nAPI-based | Brokers connections via cloud service API (e.g., propagates account disablement to the cloud); depends on API feature support\nSOFTWARE SUPPLY CHAIN\nSupply Chain Component | Risk\nService Providers | Cloud services/dev agencies — risk from inadequate security or insecure communications\nHardware Suppliers | Preinstalled vulnerable firmware, physical tampering, unreliable/outdated drivers\nSoftware Providers | Vulnerable or outdated third-party libraries/frameworks/components\nSoftware Bill of Materials (SBOM) — comprehensive inventory of all components in a software product (names, versions, suppliers). Enables:\n• Identifying vulnerable third-party components before exploitation\n• Verifying component origin/trust\n• Rapid response after a vulnerability disclosure\nSBOM/dependency tools:\nTool/Standard | Purpose\nOWASP Dependency-Check | Software Composition Analysis (SCA) — identifies dependencies and known vulnerabilities\nOWASP Dependency-Track | Consumes Dependency-Check output for fuller SBOM management\nSPDX | Open standard for SBOM data (component ID, licensing, security references)\nCycloneDX | Lightweight SBOM specification",
+   "exam_tips": []
+  },
+  {
+   "title": "Vulnerability Identification Methods",
+   "content": "VULNERABILITY SCANNING BASICS\nSystematic probing of systems/networks with specialized tools, run internally and externally, to detect known vulnerabilities (missing patches, misconfigurations, outdated software).\nTool | Focus\nNessus / OpenVAS | Network vulnerability scanning — hosts, mobile devices, servers, routers, switches\nApplication scanners | Static analysis (code, not executing) and dynamic analysis (running app) — finds unvalidated input, broken access controls, SQLi\nCREDENTIALED VS. NON-CREDENTIALED SCANS\nScan Type | Access Level | Use Case\nNon-Credentialed | No OS/app login; sees what an unprivileged network user sees | External perimeter assessment, web app scanning\nCredentialed | Login rights + relevant permissions | Deeper analysis, detects misconfigurations, simulates insider/compromised-account attack; more intrusive\nPACKAGE MONITORING\nTracks security of third-party packages/libraries/dependencies, tied to SBOM and software supply chain risk management. SCA tools compare inventory against vulnerability databases (e.g., NVD) continuously; often paired with governance policies (audits, approval processes for new packages).\nTHREAT FEEDS AND INTELLIGENCE\nConcept | Description\nThreat Feed | Real-time, continuously updated info on threats/vulnerabilities from multiple sources\nOpen-Source Feeds | Cyber Threat Alliance, MISP — free, less depth than proprietary\nProprietary Feeds | IBM X-Force Exchange, Mandiant FireEye, Recorded Future — deeper analysis, paid\nInformation-Sharing Orgs | Cyber Threat Alliance, ISACs (industry-specific) — collaborative threat data exchange\nThreat intelligence output forms:\n• Behavioral Threat Research — narrative commentary on attacks/TTPs\n• Reputational Threat Intelligence — malicious IP/domain lists, malware signatures\n• Threat Data — machine-correlatable data matching customer logs to known TTPs/indicators\nOSINT (Open-Source Intelligence) — collecting/analyzing publicly available info for decision-making.\nOSINT Tool | Purpose\nShodan | Investigating Internet-connected devices\nMaltego | Visualizing complex information networks\nRecon-ng | Web-based reconnaissance\ntheHarvester | Gathering emails/subdomains/hosts/employee names\nDEEP WEB AND DARK WEB\nTerm | Definition\nDeep Web | Any part of the web not indexed by search engines (registration-gated, unlinked, nonstandard DNS)\nDark Net | Anonymizing overlay network (Tor, Freenet, I2P) hiding network existence/activity\nDark Web | Sites/content/services accessible only via a dark net\nLegitimate dark web uses: privacy/anonymity for whistleblowers/journalists/activists, bypassing censorship, research into criminal TTPs.\nPENETRATION TESTING\nTest Environment Knowledge | Formerly Called | Description\nUnknown Environment | Black Box | No privileged info; extensive recon needed; simulates external threat\nKnown Environment | White Box | Complete network access/info; simulates privileged insider threat\nPartially Known Environment | Gray Box | Some info; partial recon needed\n• Penetration testing excels at chained vulnerabilities, authentication bypass, and design/logic flaws automated scanners miss\n• Bug bounty programs — crowdsourced testing via rewards to external researchers; broader/more diverse coverage than a hired pen test team, but less predictable in cost/timeline\n• Responsible disclosure programs — guidelines/procedures + rewards for reporting vulnerabilities before malicious exploitation\nAUDITING\n• Product audits — focus on specific features (e.g., application code)\n• System/process audits — wider scope (supply chain, config, support, monitoring, cybersecurity)\nAudit Type | Focus\nCompliance Audit | Adherence to regulations (GDPR, HIPAA)\nRisk-Based Audit | Potential threats/vulnerabilities in systems/processes\nTechnical Audit | IT infrastructure specifics — network security, access controls, data protection\nPenetration testing is a critical component of technical audits; some regulations (e.g., PCI DSS) mandate annual/proactive pen testing.",
+   "exam_tips": []
+  },
+  {
+   "title": "Vulnerability Analysis and Remediation",
+   "content": "CVE, CVSS, AND THE NVD\nSystem | Role\nCVE (Common Vulnerabilities and Exposures) | Dictionary of known vulnerabilities; format CVE-YYYY-#### + description, references, creation date\nNVD (National Vulnerability Database) | NIST repository built on CVE; adds analysis, criticality metric, fix info\nCVSS (Common Vulnerability Scoring System) | Maintained by FIRST; scores 0–10 based on exploitability/impact factors\nSCAP (Security Content Automation Protocol) | Delivers vulnerability feed updates; compares config against secure baseline\nCVSS Score Bands:\nScore | Description\n0.1+ | Low\n4.0+ | Medium\n7.0+ | High\n9.0+ | Critical\n• Nessus calls its feeds \"plug-ins\"; OpenVAS calls them \"network vulnerability tests (NVTs)\"\nFALSE POSITIVES, FALSE NEGATIVES, AND VALIDATION\nTerm | Meaning\nFalse Positive | Scanner incorrectly flags something as a vulnerability\nFalse Negative | An actual vulnerability goes undetected\n• Excessive false positives risk causing scans to be disregarded entirely\n• Mitigate false negatives via repeat scans and multiple scanner vendors\n• Log review helps validate whether a flagged vulnerability is genuine (e.g., matching event log crash entries to a scanner-flagged unstable process)\nVULNERABILITY ANALYSIS FACTORS\nFactor | Description\nPrioritization | Based on severity, ease of exploitation, potential impact\nClassification | Categorize by affected system/app type, nature, potential impact\nExposure Factor (EF) | Extent an asset is susceptible to a specific vulnerability being exploited\nImpacts | Financial loss, reputational damage, operational disruption, regulatory penalties\nEnvironmental Variables | IT infrastructure diversity/age, external threat landscape, regulatory environment, operational practices\nRisk Tolerance | Org's acceptable risk level — must align vulnerability response with overall risk strategy\nREMEDIATION PRACTICES\nPractice | Description\nPatching | Applying updates/patches to fix known vulnerabilities; needs centralized patch management\nCybersecurity Insurance | Doesn't fix vulnerabilities, but provides financial protection/risk transfer for breaches\nSegmentation | Divides network into segments to contain breaches, limits lateral movement\nCompensating Controls | Alternative mitigations when direct remediation isn't possible (extra monitoring, secondary auth, enhanced encryption)\nExceptions/Exemptions | Risk accepted by leadership when remediation isn't feasible (business/technical/cost constraints); documented with reassessment timeline\nVALIDATION METHODS\nMethod | Purpose\nRe-scanning | Additional scan post-remediation to confirm the vulnerability is gone\nAudit | In-depth review of remediation steps against policy/best practices, confirms documentation updated\nVerification | Confirms remediation results via manual checks, automated testing, or log review\nVULNERABILITY REPORTING\nComprehensive reports rank vulnerabilities by severity/impact (using CVSS for standardized comparison), describe possible exploitation outcomes, and recommend specific remediation actions. Timely, clear reporting (for both technical and nontechnical stakeholders) reduces the attacker's window of opportunity.",
+   "exam_tips": []
+  },
+  {
+   "title": "Key Takeaways",
+   "content": "• Identify procedures/tools required to scan for vulnerabilities — passive network scanners, active remote/agent-based scanners, application/web application scanners\n• Develop a configuration and maintenance plan to keep vulnerability and threat feeds updated\n• Run scans regularly; review results for false positives/negatives, using log review and CVE data to validate findings\n• Schedule configuration reviews and remediation plans, using CVSS criticality to prioritize actions\n• Implement threat analysis platforms; monitor advisories and bulletins for new threat sources\n• Implement penetration testing exercises with a clearly defined project scope",
+   "exam_tips": []
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "Vulnerability scan using credentials for a deeper audit.",
+   "concept": "credentialed scan",
+   "summary": "Objective 4.3"
+  },
+  {
+   "hook": "Publicly available info plus tools to aggregate/search it.",
+   "concept": "open-source intelligence (OSINT)",
+   "summary": "Objective 4.3"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "A web form lets users enter text that ends up in a database query, and an attacker enters ' OR 1=1 --. What vulnerability is this?",
+   "options": [
+    "Buffer overflow",
+    "SQL injection",
+    "Cross-site scripting",
+    "Race condition"
+   ],
+   "answer": 1,
+   "explanation": "Unsanitized input inserted into SQL queries allows injection."
+  },
+  {
+   "q": "A tool scans servers and reports missing patches and known vulnerabilities. What is it?",
+   "options": [
+    "Vulnerability scanner",
+    "SIEM",
+    "Load balancer",
+    "Protocol analyzer"
+   ],
+   "answer": 0,
+   "explanation": "Vulnerability scanners identify known weaknesses."
+  },
+  {
+   "q": "A comment field lets an attacker store JavaScript that runs in other users' browsers. What vulnerability is this?",
+   "options": [
+    "Cross-site scripting (XSS)",
+    "VM escape",
+    "SQL injection",
+    "Directory traversal"
+   ],
+   "answer": 0,
+   "explanation": "XSS injects script that runs in victims' browsers."
+  },
+  {
+   "q": "A scan uses administrator credentials to log in and check installed software in detail. What scan type is this?",
+   "options": [
+    "Credentialed scan",
+    "Non-credentialed scan",
+    "Port knock",
+    "Passive scan only"
+   ],
+   "answer": 0,
+   "explanation": "Credentialed scans see more than external scans."
+  },
+  {
+   "q": "A program writes more data into a memory buffer than it can hold, overwriting nearby memory. What is this?",
+   "options": [
+    "Privilege escalation via social engineering",
+    "Race condition",
+    "Memory leak only",
+    "Buffer overflow"
+   ],
+   "answer": 3,
+   "explanation": "Overflowing a buffer can let an attacker overwrite memory and run code."
+  },
+  {
+   "q": "A scanner reports a vulnerability that does not actually exist on the system. What is this?",
+   "options": [
+    "True negative",
+    "True positive",
+    "False positive",
+    "False negative"
+   ],
+   "answer": 2,
+   "explanation": "A false positive is an alert for something that is not there."
+  },
+  {
+   "q": "A program checks a file's permissions, then opens it a moment later; an attacker swaps the file in between. What vulnerability is this?",
+   "options": [
+    "Zero-day",
+    "Time-of-check to time-of-use (race condition)",
+    "Cross-site request forgery",
+    "SQL injection"
+   ],
+   "answer": 1,
+   "explanation": "TOCTOU exploits the gap between checking and using a resource."
+  },
+  {
+   "q": "A real vulnerability exists, but the scanner fails to report it. What is this?",
+   "options": [
+    "False positive",
+    "Exception",
+    "True positive",
+    "False negative"
+   ],
+   "answer": 3,
+   "explanation": "False negatives are missed real issues."
+  },
+  {
+   "q": "A vulnerability is being exploited before the vendor knows about it or has a patch. What is it called?",
+   "options": [
+    "Legacy",
+    "End-of-life",
+    "Misconfiguration",
+    "Zero-day"
+   ],
+   "answer": 3,
+   "explanation": "Zero-days have no available fix when exploited."
+  },
+  {
+   "q": "Which scoring system rates vulnerability severity from 0 to 10?",
+   "options": [
+    "OVAL",
+    "CVSS",
+    "CVE",
+    "SCAP only"
+   ],
+   "answer": 1,
+   "explanation": "CVSS scores severity; CVE identifies the vulnerability."
+  }
+ ]
+}

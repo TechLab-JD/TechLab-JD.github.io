@@ -1,0 +1,174 @@
+{
+ "core": 3,
+ "chapter": 14,
+ "title": "Governance, Change & Automation",
+ "exam_objectives": [
+  "5.1",
+  "1.3",
+  "4.7"
+ ],
+ "coverage": "COVERED",
+ "domain": "d5",
+ "domain_label": "Program Management & Oversight",
+ "sections": [
+  {
+   "title": "Policies, Standards, and Procedures",
+   "content": "Policies — high-level, authoritative documents defining an org's security commitment (business practices) Standards — more specific than policies; define the methods used to implement technical/procedural requirements (implementation focus) Procedures — detailed, step-by-step instructions describing how to complete specific tasks, aligned to standards Guidelines — flexible recommendations, allow discretion; not mandatory (unlike policies)\nCOMMON ORGANIZATIONAL POLICIES\nPolicy | Purpose\nAUP (Acceptable Use Policy) | Defines acceptable use of network/computer systems (browsing, content, downloads, sensitive info); requires signed acknowledgment\nInformation Security Policies | Rules/guidelines for securing information across the org\nBusiness Continuity & COOP (Continuity of Operations Plan) | Keeps critical processes operational during/after a disruption\nDisaster Recovery | Steps to recover from catastrophic events (natural disaster, hardware failure, breach)\nIncident Response | Process for identifying, investigating, controlling, mitigating, and communicating a security incident\nSDLC (Software Development Life Cycle) | Governs structured software development from requirements through maintenance\nChange Management | Governs how IT/software changes are requested, reviewed, approved, implemented, documented\nPERSONNEL MANAGEMENT LIFECYCLE\nIAM (Identity and Access Management) spans both IT/security procedures and HR policy, across three phases:\n• Recruitment (hiring) — screening candidates, background checks\n• Operation (working) — HR communicates policy/training; ongoing security awareness\n• Termination or Separation (firing/retiring) — numerous security implications regardless of voluntary/involuntary\nBackground Checks — verify identity, screen for criminal activity/bankruptcy/risky connections; mandatory for some roles (e.g., federal security clearance); internal or third-party.\nOnboarding tasks:\n• Secure Transmission of Credentials — initial password/smart card issued securely, protected against rogue admin staff\n• Asset Allocation — provisioning devices or approving BYOD\n• Training/Policies — scheduling security awareness and role-relevant training\n• IAM automation streamlines provisioning, role-based access assignment, and HR system sync\nPlaybooks — central repository of standardized strategies/tactics; support consistency, knowledge continuity, quality assurance, and are especially critical for incident response/crisis management. Reference frameworks: MITRE ATT&CK, NIST SP 800-61, OSSA.\nOffboarding tasks:\n• Account Management — disable accounts/privileges; preserve access to company-owned assets (encryption keys, protected files)\n• Company Assets — retrieve devices, keys, smart cards, USB media; confirm no retained copies\n• Personal Assets — wipe corporate data from employee-owned devices\n• Departures of employees with deep security knowledge or shared/generic credential access should trigger immediate credential changes\nSTANDARDS\nStandards define the expected outcome of a task (e.g., a config state or performance baseline). Adoption is driven by regulatory requirements, business-specific needs, risk management strategy, industry practice, and stakeholder expectations.\nIndustry Standards:\nStandard | Focus\nISO/IEC 27001 | ISMS (Information Security Management System) framework\nISO/IEC 27002 | Companion to 27001; detailed control guidance\nISO/IEC 27017 | Extension to 27001 for cloud services\nISO/IEC 27018 | Extension to 27001 for PII in public clouds\nNIST SP 800-63 | US digital identity guidelines (password/access control)\nPCI DSS | Protects cardholder data environment (CDE)\nFIPS | NIST cryptography standards for US federal systems\nInternal Standards (implementation-focused, vs. policies' business-practice focus):\n• Password Standards — hashing algorithms, salting, secure transmission, reset verification, password managers\n• Access Control Standards — access models (RBAC/DAC/MAC), identity verification methods, privilege management, authentication protocols (Kerberos/OAuth/SAML), session management, audit trails\n• Physical Security Standards — building security, workstation security, datacenter/server room security, equipment disposal, visitor management\n• Encryption Standards — allowable algorithms (AES/ECC), minimum key length, key management (generation/distribution/storage/rotation/revocation)\nLEGAL ENVIRONMENT\nGovernance committees translate legal requirements (regulatory compliance, contractual obligations, disclosure laws, breach liability, privacy, IP, licensing) into operational controls.\nDue diligence — legal term meaning responsible persons have not been negligent in their duties; negligence can create criminal/civil liability.\nUS Laws:\n• SOX (Sarbanes-Oxley Act) — mandates risk assessments, internal controls, audit procedures\n• Computer Security Act (1987) — requires federal agencies to develop security policies for systems processing confidential info\n• FISMA (Federal Information Security Management/Modernization Act, 2002) — governs security of federal agency data\nGlobal/Privacy Law:\nLaw | Region | Key Point\nGDPR (General Data Protection Regulation) | EU | Requires informed consent for personal data collection/processing; grants rights to withdraw consent, inspect, amend, erase data\nCCPA (California Consumer Privacy Act) | California, US | Right to know/delete/opt-out of sale of personal info; applies based on revenue/data-volume thresholds regardless of org location\nData Protection Act 2018 / NIS Regulations 2018 | UK | National cybersecurity/data protection law\nPIPEDA | Canada | Personal Information Protection and Electronic Documents Act\nIT Act 2000 | India | IT industry regulation\nPrivacy Act 1988 | Australia | National privacy law\nIndustry-Specific Laws (examples):\nSector | Law(s)\nHealthcare | HIPAA (US), GDPR (EU)\nFinancial Services | GLBA (US), PCI DSS (contractual)\nTelecommunications | CALEA (US)\nEnergy | NERC (US/Canada)\nEducation & Children | FERPA, CIPA, COPPA (US)\nGovernment | FISMA (US), CJIS (US), GSC (UK)\nGOVERNANCE STRUCTURE\nModel | Description\nCentralized | Single core group/department controls policy, budget, personnel — promotes consistency\nDecentralized | Decision-making distributed to departments — allows localized adaptability\nHybrid | Combines both — some processes centralized, others delegated\n• Governance Boards — high-level executives + external stakeholders; set strategic objectives, oversee implementation, evaluate program effectiveness\n• Governance Committees — subject matter experts/operational leaders; provide analysis and recommendations to the board\nGovernment Entities:\nAgency Type | Role\nRegulatory Agencies | Establish/enforce sector-specific standards (finance, healthcare, telecom, energy)\nIntelligence Agencies | Gather/analyze threat information for national policy\nLaw Enforcement Agencies | Investigate/prosecute cybercrime\nDefense and Military Organizations | National security, defense-related cybersecurity\nData Protection Authorities | Enforce data protection regulations\nNational Cybersecurity Agencies | Protect critical infrastructure/government networks, coordinate incident response\nDATA GOVERNANCE ROLES\nRole | Responsibility\nOwner | High-ranking employee; ultimately responsible for classification, access decisions, security level\nController | Identifies purposes/conditions/means of processing personal data (GDPR concept); ensures legal compliance\nProcessor | Processes data on behalf of the controller (often a CSP); maintains processing records\nCustodian | Data steward; handles safe custody/transport/storage, enforces controls set by owner/controller, reports incidents",
+   "exam_tips": []
+  },
+  {
+   "title": "Change Management",
+   "content": "Change management — systematic approach to managing all changes to IT infrastructure/products; goal is minimizing risk/disruption while maximizing value. Requires planning, testing, approval, implementation, and rollback plans.\nTypical managed changes: software deployments, system updates, patching, hardware replacement/upgrades, network modifications, configuration changes, new product/software integrations, support environment refreshes.\nApproval Process:\n• RFC (Request for Change) submitted — purpose, scope, potential impact\n• Change manager/committee reviews feasibility, risk, policy alignment\n• Formal approval by stakeholders (management, IT, impacted departments)\n• Documentation/communication tracked throughout\nCHANGE MANAGEMENT CONCEPTS\nConcept | Description\nImpact Analysis | Identifying/assessing implications for users, processes, interconnected systems\nTest Results | Evaluation in a test environment before implementation\nBackout Plans | Contingency plan to reverse a failed change and restore original state\nMaintenance Windows | Predefined recurring time frame for changes, scheduled during low activity\nSOPs (Standard Operating Procedures) | Written instructions ensuring consistent, effective change implementation\nStakeholders vs. Owners:\n• Owners — individuals/groups primarily responsible for implementing a specific change (project managers, team leads); accountable for execution, risk management, communication/training\n• Stakeholders — individuals/groups impacted or interested (employees, managers, Change Advisory Board (CAB), customers, vendors, partners)\nALLOW LISTS AND DENY LISTS (CHANGE MANAGEMENT CONTEXT)\n• Allow list — approved software/hardware/change types (routine, low-risk) exempt from full CM process; may include pre-authorized approvers\n• Deny list — explicitly blocked software/hardware/change types (known issues, high-risk changes requiring full review, unauthorized approvers)\n• Caution: hash-based software allow lists can break after patching — patched executables get new hash values and may be blocked, making fully-patched systems unusable. Must be factored into testing plans.\nRESTARTS, DEPENDENCIES, AND DOWNTIME\nChange Type | Typically Requires Restart\nSoftware Upgrades and Patches | Yes — to apply and activate the update\nConfiguration Changes | Yes — server/network/database settings\nInfrastructure Changes | Yes — switches, routers, firewalls, load balancers\nSecurity Changes | Yes — encryption protocol updates, feature toggles, access control changes\n• Scheduled downtime — planned maintenance window; Unscheduled downtime — unavailability from an unplanned outage\n• Dependencies — services relying on each other complicate restarts (e.g., restarting a database can affect all dependent apps); dependency mapping is critical to avoid unintended outages and extends both implementation and backout plan timing\nLegacy Systems — outdated tech creates compatibility issues with new updates; may require virtualization, emulation, interpreters, or custom \"fit-gap\" solutions. Often lack documentation and vendor support, compounding risk.\nDOCUMENTATION AND VERSION CONTROL\nVersion control — tracking/controlling changes to documents, code, or data; maintains historical record, ensures only approved changes are live, allows reverting.\nDocumentation types impacted by change:\nItem | Update Trigger\nChange Requests | Reflect current status/approvals\nPolicies and Procedures | Align with new processes/controls\nSystem or Process Documentation | Architecture diagrams, process flows, SOPs, user manuals\nConfiguration Management Documentation | Tracks configuration item changes (servers, networks, databases)\nTraining Materials | Presentations, manuals, CBT modules\nIncident Response and Recovery Plans | Account for new configurations/dependencies",
+   "exam_tips": []
+  },
+  {
+   "title": "Automation and Orchestration",
+   "content": "Automation — software performing repetitive, rule-based tasks (monitoring, patching, baseline maintenance, incident response) to improve efficiency and reduce human error. Orchestration — coordinates/streamlines interactions between automated processes and systems, especially across many tools in complex environments.\nAUTOMATION CAPABILITIES\nCapability | Description\nProvisioning | Creating/modifying/deleting user accounts and access rights (user provisioning); allocating servers/storage/networks (resource provisioning)\nGuardrails and Security Groups | Automated policy enforcement; security groups define resource access, managed via automation to reduce excess permissions\nTicketing | Auto-generates tickets from monitoring alerts, routes by criteria, escalates critical/SLA-risk issues\nService Management | Automates enabling/disabling services, modifying access, managing IT resource lifecycle\nContinuous Integration and Testing | Automated testing on every code merge; improves quality, speeds development\nAPIs | Enable system-to-system communication; automation orchestrates these into workflows (e.g., SOAR — Security Orchestration, Automation, and Response)\nBENEFITS AND OPERATOR FATIGUE\nOperator fatigue — mental exhaustion from continuous, high-intensity monitoring/alert volume (including false positives); causes decreased alertness, missed critical alerts, slower response, more errors.\nAutomation/orchestration combat fatigue by:\n• Handling routine tasks (vulnerability scanning, patching, monitoring) — a workforce multiplier\n• Freeing security personnel for complex/strategic work\n• Reducing detection and reaction time via coordinated response (e.g., auto-isolate a subnet, analyze, notify, ticket, and document a threat without human intervention)\n• Enforcing standardized baselines automatically, overriding unauthorized endpoint changes\n• Supporting staff retention/job satisfaction\nIMPORTANT CONSIDERATIONS (CHALLENGES)\n• Complexity — requires deep understanding of systems/processes/interdependencies; poorly planned automation adds complexity\n• Cost — high initial cost (tooling, integration, training); ongoing maintenance/upgrade costs\n• Single Point of Failure — a critical automated system failing can impact multiple areas at once\n• Technical Debt — hasty implementation → poorly documented code, brittle integrations, instability over time\n• Ongoing Support — requires continuous updates, process review, and staff education to stay effective/secure\nINFRASTRUCTURE AUTOMATION BENEFITS\n• Consistency/accuracy via standardized configurations\n• Time/resource savings, faster deployment, better scalability\n• Improved standardization, compliance, and change tracking; controls configuration drift\n• Strengthened security/governance via consistent patching and enforced controls",
+   "exam_tips": []
+  },
+  {
+   "title": "Key Takeaways",
+   "content": "• Implement a governance structure (centralized, decentralized, or hybrid) that best supports the organization's objectives\n• Leverage expertise through governance committees to support board-level decision-making\n• Establish a comprehensive list of policies, processes, standards, and guidelines, and assign clear data governance roles (owner, controller, processor, custodian)\n• Implement change management programs — RFC/approval workflow, impact analysis, testing, backout plans, maintenance windows, and documentation/version control — to maintain control and promote transparency\n• Use automation and orchestration tools (provisioning, guardrails, ticketing, SOAR) to improve consistency, reduce response times, combat operator fatigue, and support compliance",
+   "exam_tips": []
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "A policy that governs employees' use of company equipment and Internet services. ISPs may also apply AUPs to their customers.",
+   "concept": "acceptable use policy (AUP)",
+   "summary": "Objective 5.1"
+  },
+  {
+   "hook": "Policy mandating work areas free of sensitive documents.",
+   "concept": "clean desk policy",
+   "summary": "Objective 5.1"
+  },
+  {
+   "hook": "Standards/best practices/guidelines for security risk management.",
+   "concept": "cybersecurity framework (CSF)",
+   "summary": "Objective 5.1"
+  },
+  {
+   "hook": "Creating/monitoring policies/procedures to manage assets and ensure regulatory compliance.",
+   "concept": "governance",
+   "summary": "Objective 5.1"
+  },
+  {
+   "hook": "Provisioning via scripted automation/orchestration.",
+   "concept": "infrastructure as code (IaC)",
+   "summary": "Objective 4.7"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "Which document states, at a high level, management's intent for how security is handled across the organization?",
+   "options": [
+    "Information security policy",
+    "Guideline",
+    "Runbook",
+    "Procedure"
+   ],
+   "answer": 0,
+   "explanation": "Policies set high-level direction; procedures give the steps."
+  },
+  {
+   "q": "Before a firewall rule change is applied in production, who typically approves it?",
+   "options": [
+    "Any administrator on call",
+    "A change advisory board",
+    "The vendor's support desk",
+    "The user who requested it"
+   ],
+   "answer": 1,
+   "explanation": "Change management routes significant changes to an approval authority such as a CAB."
+  },
+  {
+   "q": "A script automatically creates accounts in five systems when HR adds a new hire. What benefit does this provide?",
+   "options": [
+    "Faster, consistent provisioning with fewer errors",
+    "Removes all security risk",
+    "Eliminates the need for access reviews",
+    "Replaces the HR department"
+   ],
+   "answer": 0,
+   "explanation": "Automation makes repetitive tasks consistent and fast."
+  },
+  {
+   "q": "A document says, step by step, how to onboard a new employee's accounts. What is it?",
+   "options": [
+    "Standard",
+    "Procedure",
+    "Policy",
+    "Guideline"
+   ],
+   "answer": 1,
+   "explanation": "Procedures are detailed, step-by-step instructions."
+  },
+  {
+   "q": "Why does a change request include a backout plan?",
+   "options": [
+    "To document the change after it is done",
+    "To list who will pay for the change",
+    "To return systems to their prior state if the change fails",
+    "To bypass testing for urgent changes"
+   ],
+   "answer": 2,
+   "explanation": "A backout plan defines how to undo a failed change."
+  },
+  {
+   "q": "A platform runs playbooks that automatically enrich alerts, block IPs and open tickets. What is it?",
+   "options": [
+    "SIEM only",
+    "SASE",
+    "SAML",
+    "SOAR"
+   ],
+   "answer": 3,
+   "explanation": "Security orchestration, automation and response executes playbooks."
+  },
+  {
+   "q": "A rule that all laptops must use AES-256 encryption is an example of a:",
+   "options": [
+    "Playbook",
+    "Standard",
+    "Guideline",
+    "Policy statement only"
+   ],
+   "answer": 1,
+   "explanation": "Standards specify mandatory technical requirements."
+  },
+  {
+   "q": "An approved patch will reboot critical servers. When should it normally be applied?",
+   "options": [
+    "During an agreed maintenance window",
+    "Whenever the vendor releases it",
+    "Immediately during business hours",
+    "Only after a security incident"
+   ],
+   "answer": 0,
+   "explanation": "Maintenance windows reduce the business impact of downtime."
+  },
+  {
+   "q": "An automation script has a bug that disables every user account. Which automation risk does this show?",
+   "options": [
+    "A single error can cause widespread impact",
+    "Automation removes logging",
+    "Scripts cannot be tested",
+    "Automation is always too slow"
+   ],
+   "answer": 0,
+   "explanation": "Automation magnifies mistakes, so scripts need testing."
+  },
+  {
+   "q": "Recommended, but not required, best practices are called:",
+   "options": [
+    "Regulations",
+    "Standards",
+    "Policies",
+    "Guidelines"
+   ],
+   "answer": 3,
+   "explanation": "Guidelines are advisory."
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "core": 3,
+ "chapter": 7,
+ "title": "Resilience, Assets & Physical Security",
+ "exam_objectives": [
+  "3.4",
+  "4.2",
+  "1.2"
+ ],
+ "coverage": "COVERED",
+ "domain": "d3",
+ "domain_label": "Security Architecture",
+ "sections": [
+  {
+   "title": "Asset Management",
+   "content": "ASSET TRACKING BASICS\nAsset management — identifying, classifying, and inventorying an organization's IT assets (hardware, software, data, personnel). Supports patching, incident response, and monitoring for unauthorized activity.\n• Asset ownership assignment — designating individuals/teams responsible for specific assets (chain of accountability)\n• Asset classification — organizing assets by value/sensitivity/criticality, drives consistent control application and budget priority\n• Typical inventory data: type, model, serial number, asset ID, location, user(s), value, service info\nASSET ENUMERATION METHODS\nMethod | Description\nManual Inventory | Physical inspection, best for small orgs/specific asset types\nNetwork Scanning | Nmap, Nessus, OpenVAS — auto-discover networked devices, open ports, services\nAsset Management Software | Lansweeper, ManageEngine, SolarWinds — centralized dashboard, tracking, reporting\nCMDB (Configuration Management Database) | Centralized repo of IT infrastructure/configs/relationships (ServiceNow, BMC Remedy)\nMDM Solutions | Microsoft Intune, VMware Workspace ONE, MobileIron — enumerate/manage mobile assets\nCloud Asset Discovery | AWS Config, Azure Resource Graph, CloudAware, CloudCheckr\nASSET ACQUISITION/PROCUREMENT\n• Prioritize vendors/products with strong built-in security (encryption, secure boot, patch support)\n• Consider integration with existing security infrastructure (firewalls, IDS, SIEM)\n• Assess Total Cost of Ownership (TCO) — purchase price + maintenance + incident risk\nASSET IDENTIFICATION & NAMING\n• Tangible assets: barcode label or RFID tag (chip + scanner, also aids theft prevention)\n• Standard naming convention — consistent identification of type/function across CMDB/DNS; should follow host/DNS naming rules\nITIL CONFIGURATION MANAGEMENT ELEMENTS\nTerm | Definition\nService Assets | Things/processes/people that contribute to delivering an IT service\nConfiguration Item (CI) | An asset requiring specific management procedures; labeled via naming convention, tracked in CMDB\nBaseline Configuration | List of required settings for an asset (server/app); security baselines = minimum protection settings\nConfiguration Management System (CMS) | Tools/databases used to collect, store, manage CI info (spreadsheets for small nets, dedicated apps for enterprise)\n• Configuration management — ensures configurable elements haven't diverged from approved config\n• Change control/change management — reduces risk that changes cause operational interruption\n• Diagrams best capture complex relationships: CI business workflows, logical/physical topology, rack layouts\nDATA BACKUPS\nEnterprise backup critical capabilities:\n• Supports virtual/physical/cloud environments\n• Data deduplication and compression\n• Instant recovery and replication\n• Ransomware protection and encryption\n• Granular restore (files/folders/apps)\n• Reporting/monitoring/alerting\n• Integration with virtualization/cloud/storage platforms\nData Deduplication — compression technique identifying/eliminating redundant data blocks, stores one copy + references. Can be file-level, block-level, or byte-level.\nBackup Location Type | Description\nOn-site | Local storage (HDD/tape), rapid access/recovery\nOff-site | Remote location, protects against disasters/theft/ransomware\nAir-gapped | Physically disconnected from network — prevents ransomware from reaching backups\nRECOVERY VALIDATION\n• Full recovery test — restore entire system to separate environment, verify functionality\n• Partial recovery test — restore selected files/folders/databases to validate integrity\n• Backup audits — check logs, schedules, configs\n• Backups can report \"100% success\" but still fail on actual recovery — validation catches this\n• Recovery times are often longer than assumed\nADVANCED DATA PROTECTION\nSnapshot Type | Captures\nVM Snapshot (VMware vSphere, Hyper-V) | Memory, storage, config settings of a VM; enables rollback\nFilesystem Snapshot (ZFS, Btrfs) | State of filesystem at a moment; recovers deleted/corrupted files\nSAN Snapshot (NetApp, Dell EMC) | Block-level storage volume state; rapid recovery of large datasets\nMicrosoft calls VM snapshots checkpoints.\nReplication — creates/maintains exact copies of data on different systems/locations (e.g., database mirroring: primary + secondary mirrored DB).\nJournaling — records changes to data in a separate log; enables undo of incomplete transactions or replay after backup. Example: JFS, NTFS journaling.\n• Remote journaling — journal maintained at a separate remote location\n• SAN replication — duplicates data SAN-to-SAN; synchronous (consistent) vs asynchronous (cheaper, less strict)\n• VM replication — up-to-date copy of a VM on a separate host for failover\nEncrypting backups — protects against unauthorized access/theft; meets regulatory requirements for sensitive data in backup sets.\nSECURE DATA DESTRUCTION & ASSET DISPOSAL\nReasons for data destruction: end of retention period, legal/regulatory compliance (GDPR, HIPAA), decommissioning storage devices.\nConcept | Definition\nSanitization | Removing sensitive info from media via wiping, degaussing, or encryption so it becomes irretrievable\nDestruction | Physical (shredding, crushing, incinerating) or electronic (overwriting, degaussing) elimination of data\nCertification | Documentation/verification of sanitization or destruction, ideally via impartial third party\nOverwriting (HDD sanitization):\n• Deleted files: sectors marked available, data remains until overwritten\n• Zero filling — sets each bit to zero (single pass can leave recoverable patterns)\n• More secure: pass of zeros, pass of ones, pass of pseudorandom pattern (some federal agencies require more than 3 passes)",
+   "exam_tips": []
+  },
+  {
+   "title": "Redundancy Strategies",
+   "content": "CONTINUITY OF OPERATIONS (COOP)\nCOOP — ensuring an organization can maintain/quickly resume critical functions during a disruption. Key elements: identify critical functions, establish priorities, determine needed resources.\n• Strategies: off-site backups, failover systems, disaster recovery solutions, remote work/co-location arrangements\n• Testing: tabletop exercises, isolated functional tests, full-scale drills\nCOOP VS. BUSINESS CONTINUITY (BC)\nConcept | Scope\nCOOP | Immediate response/restoration of critical functions; shorter time frame\nBusiness Continuity (BC) | Broader — overall resilience/recovery of entire org (supply chain, employee safety, legal compliance, reputation)\nCOOP is a component of the broader BC concept.\nCAPACITY PLANNING\nAssessing current/future resource needs (people, technology, infrastructure) to meet business objectives. Methods: trend analysis, simulation modeling, benchmarking.\nPeople risk mitigations:\nStrategy | Purpose\nCross-Training | Reduces dependency on single individuals/teams\nRemote Work Plans | Defines comms/tech/expectations for remote operations\nAlternative Reporting Structures | Backup/temporary reporting relationships, reduces single point of failure in decision-making\nRemote work tech: VPN, remote desktop software, cloud-based tools (M365, Google Workspace), video conferencing, IM/chat, virtual phone systems, project management tools.\nLayoff risks: disgruntled employees (unauthorized access/misuse), lost institutional knowledge, improper access revocation, theft/sabotage.\nPoor capacity planning risks:\n• Under-provisioning: crashes, DoS susceptibility, neglected security updates, insufficient physical security investment, overheating/power failure\n• Over-provisioning: wasted cost, low utilization/poor ROI, increased complexity, opportunity cost\nHIGH AVAILABILITY (HA)\nEnsures systems stay operational/accessible with minimal downtime via redundant hardware, clustering, redundant networking, redundant datacenter power/cooling.\n\"Nines\" availability table:\nNines | Availability | Annual Downtime\nSix | 99.9999% | 00:00:32\nFive | 99.999% | 00:05:15\nFour | 99.99% | 00:52:34\nThree | 99.9% | 08:45:36\nTwo | 99% | 87:36:00\nMTD (Maximum Tolerable Downtime) — expresses availability requirement for a business function.\nSCALABILITY, ELASTICITY, FAULT TOLERANCE\nTerm | Definition\nScalability | Capacity to increase resources to meet demand within similar cost ratios\nScale Out | Add more resources in parallel\nScale Up | Increase power of existing resources\nElasticity | System's ability to handle demand changes on demand, in real time\nFault Tolerance | System continues providing (nearly) same service level despite failures\nRedundant Component | Non-essential to normal function, but enables recovery from another component's failure\nSITE RESILIENCY\nSite Type | Description\nHot Site | Failover almost immediately; org-owned, operational equipment, live data set\nWarm Site | Similar to hot, but latest data set must be loaded\nCold Site | Longer setup; may be empty building with lease agreement\n• Failover — technique ensuring a redundant component/device/site quickly takes over from a failed asset (e.g., load balancers redirecting traffic)\n• Geographic dispersion — spreading recovery sites across locations to limit regional-disaster impact\nCloud as DR — cost efficiency (economies of scale), scalability without over-provisioning, geographic diversity, faster deployment, simplified management, improved security/compliance.\nTESTING HA/REDUNDANCY\nTest Type | Purpose\nLoad Testing | Validates performance under expected/peak loads\nFailover Testing | Validates seamless primary→secondary transition\nTesting Monitoring Systems | Validates detection/response to failures\nCLUSTERING\nClustering (redundant nodes sharing data, appear as one server to clients) vs. Load Balancing (distributes traffic across independent nodes, manages web traffic).\n• Virtual IP (shared/floating address) — public IP shared between clustered appliances; redundancy protocol (e.g., CARP) manages active node ownership + heartbeat for failover\nClustering Mode | Trade-off\nActive/Passive (A/P) | No performance hit during failover; higher cost from unused capacity\nActive/Active (A/A) | Uses full hardware capacity; performance degrades on failover as load shifts\n• N+1 / N+M configurations — fewer passive nodes than active, reduces cost\n• Application clustering — servers share session state so users can continue on another instance after a fault\nPOWER REDUNDANCY\nComponent | Role\nDual PSUs | Redundant power supply units; hot plug PSU replaceable without powering down\nManaged PDU | Cleans power signal, protects against spikes/surges, remote monitoring/switching\nUPS (Uninterruptible Power Supply) | Bank of batteries + inverter; bridges gap until generator/proper shutdown\nGenerator | Powers whole building for days; diesel/propane/natural gas or renewables (solar, wind, geothermal, hydrogen, hydro)\nA UPS is always required — a generator cannot come online fast enough to prevent an interruption on its own. Generator power introduced via transfer switches (manual or automatic).\nDIVERSITY AND DEFENSE IN DEPTH\n• Platform diversity — using multiple OSes/technologies so a single vulnerability doesn't compromise everything\n• Defense in depth — multiple layers of protection (perimeter firewalls/IDS, network segmentation, endpoint security, patch management, MFA, awareness training, incident response)\n• Vendor diversity — reduces single point of failure risk; benefits: cybersecurity, business resilience, innovation, competition, customization/flexibility, risk management, compliance\n• Multi-cloud strategy — diversifies risk across providers, promotes vendor independence, optimizes workload placement (e.g., primary app on one cloud, DR/backup on another)\nDECEPTION & DISRUPTION TECHNOLOGIES\nTool | Purpose\nHoneypot | Decoy system mimicking real systems/apps\nHoneynet | Network of interconnected honeypots simulating a whole network\nHoneyfile | Fake file appearing to hold sensitive info, detects access attempts\nHoneytoken | False credentials/data used to distract attackers and trigger alerts\nDisruption strategies: bogus DNS entries, decoy directories/dynamic pages to slow scanning, port triggering/spoofing to return fake telemetry, DNS sinkhole routing suspect traffic to a honeynet.\nTESTING RESILIENCY\nTest Type | Description\nTabletop Exercises | Teams discuss/work through hypothetical scenarios\nFailover Tests | Intentional failure of primary to verify automatic transfer\nSimulations | Controlled experiments replicating real-world scenarios\nParallel Processing Tests | Run primary + backup simultaneously to validate backup capacity\nDocumentation: test plans (objectives/scope/methods/roles), test scripts (step-by-step), test results (strengths/weaknesses). Third-party assessments/certifications (ISO 22301, PCI DSS, SOC 2) offer objective evaluation.",
+   "exam_tips": []
+  },
+  {
+   "title": "Physical Security",
+   "content": "PHYSICAL ACCESS CONTROL FUNDAMENTALS\nSame AAA fundamentals as technical security:\n• Authentication — access lists, mechanisms to allow approved persons through barriers\n• Authorization — barriers around a resource, controlled entry/exit points\n• Accounting — records entry/exit use, detects breaches\nPhysical security is implemented in zones — each separated by barriers, progression should be increasingly restrictive.\nSITE LAYOUT, FENCING, LIGHTING\nControl | Notes\nBarricades | Channel people through defined entry/exit points; not fully effective alone\nBollards | Short posts (steel/concrete); block vehicle access, protect pedestrians; can be fixed/retractable\nFencing | Should be transparent, robust, climb-resistant (height + razor wire); intimidating appearance trade-off\nLighting | Deters intrusion, aids surveillance/facial recognition; must avoid shadow/glare\nExisting structure design principles:\n• Locate secure zones deep within building, away from external walls/doors/windows\n• Use DMZ-style layout — public areas away from secure zones\n• Visible signage/warnings for deterrence; discreet entry points to secure zones\n• Minimize cross-zone traffic; use one-way glass in secure zones\nGATEWAYS AND LOCKS\nLock Type | Description\nPhysical | Conventional key locks; resistance to picking varies by cost\nElectronic | PIN/cipher/combination/keyless; smart lock via magnetic swipe or proximity reader\nBiometric | Integrated with a biometric scanner\n• Access control vestibule (mantrap) — two interlocking doors, only one door opens at a time, prevents tailgating; used in datacenters/gov buildings/financial institutions\n• Cable locks — secure device chassis to rack/desk (e.g., Kensington slot), prevent case opening\nACCESS BADGES & PACS\nAccess badges — magnetic strip/RFID/NFC cards replacing physical keys; requires magnetic locks + card readers (needs power + network).\nPhysical Access Control System (PACS) — hardware + software (badges, readers, control panels, centralized network) managing facility access; logs badge activity (time, location, identity) for audits/investigations/evacuation planning.\nSECURITY GUARDS AND CAMERAS\nMethod | Trade-off\nSecurity Guards | Effective deterrent, intuition-based response; expensive; can't access all security-clearance zones\nVideo Surveillance (CCTV) | Cheaper than guards; records movement; slower response time, needs sufficient monitoring staff\nAI/ML camera capabilities:\n• Motion Recognition — gait identification, alerts on unrecognized movement patterns\n• Object Detection — flags environmental changes (missing server, unknown device)\n• Drones/UAV — cover wider areas than ground patrols\nALARM SYSTEMS\nAlarm Type | Trigger\nCircuit | Circuit opened/closed (door/window/fence); closed-circuit more secure than open-circuit\nMotion Detection | Microwave radio reflection or passive infrared (PIR)\nNoise Detection | Microphone-triggered; AI reduces false positives\nProximity | RFID tags/readers track tagged object movement\nDuress | Manually triggered by staff under threat (pendant, hidden trigger, duress PIN)\nA silent alarm alerts security personnel rather than sounding audibly.\nSENSOR TYPES\nSensor | Detection Method | Common Use\nInfrared | Heat pattern changes | Motion detection systems\nPressure | Weight activation | Floor/mat sensors, high-security or retail foot traffic\nMicrowave | Reflection off moving objects | Combined with IR (dual-tech), reduces false alarms; outdoor areas\nUltrasonic | Sound wave return time | Automated lighting systems",
+   "exam_tips": []
+  },
+  {
+   "title": "Key Takeaways",
+   "content": "• Perform asset identification and catalog all physical/intangible assets (type, location, value, ownership)\n• Implement asset lifecycle management (procurement, maintenance, depreciation, retirement)\n• Perform asset tracking, especially for mobile/theft-prone assets\n• Understand regulatory compliance requirements for specific asset categories\n• Perform disaster recovery/business continuity planning to restore critical assets\n• Use legally compliant, secure asset disposal (data destruction) methods\n• Ensure adequate capacity planning for people, technology, and infrastructure\n• Implement high availability strategies: scalability/elasticity, fault tolerance/redundancy, clustering, site resiliency\n• Use risk assessments to identify high-availability-requirement assets and provision redundancy:\n• Hot/warm/cold site resources for disaster recovery\n• Dual power supply, PDUs, PSUs, and generators for power resilience\n• NIC teaming, multiple paths, and load balancing for network resilience\n• RAID and multipath I/O for storage resilience\n• Implement diversity in technologies and controls\n• Perform comprehensive testing of resiliency capabilities\n• Design sites as zones for maximum access control/surveillance; use industrial camouflage, perimeter networks, air gaps, vaults/safes where applicable\n• Secure the site perimeter with fencing, barricades/bollards, and locks (physical, electronic, biometric); use clone/skim-resistant smart cards\n• Monitor with security guards, CCTV, and drones/UAV; use effective lighting to maximize surveillance\n• Deploy alarm systems (circuit, motion, proximity, duress) to detect intrusion\n• Use ID badges to authorize access",
+   "exam_tips": []
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "Security copy of production data made to removable media on a schedule (full, incremental, differential).",
+   "concept": "backup",
+   "summary": "Objective 3.4"
+  },
+  {
+   "hook": "Standby power supply (diesel/propane) providing power after a UPS bridges the initial gap.",
+   "concept": "backup power generator",
+   "summary": "Objective 3.4"
+  },
+  {
+   "hook": "Load balancing technique where servers work together as a unit.",
+   "concept": "clustering",
+   "summary": "Objective 3.4"
+  },
+  {
+   "hook": "Identifies how business processes handle minor/disaster-level disruption via processing redundancy.",
+   "concept": "continuity of operations plan (COOP)",
+   "summary": "Objective 3.4"
+  },
+  {
+   "hook": "Policies and processes that ensure asset and service purchases/contracts are fully managed, secure, use authorized suppliers/vendors, and meet business goals.",
+   "concept": "acquisition/procurement",
+   "summary": "Objective 4.2"
+  },
+  {
+   "hook": "Third-party asset disposal technique using sanitization/destruction, with documentary evidence.",
+   "concept": "certification (disposal)",
+   "summary": "Objective 4.2"
+  },
+  {
+   "hook": "Asset disposal ensuring physically inaccessible/irrevocable data remnants (degaussing, shredding, incineration).",
+   "concept": "destruction (disposal)",
+   "summary": "Objective 4.2"
+  },
+  {
+   "hook": "Policies governing device/software removal from production and subsequent disposal.",
+   "concept": "disposal/decommissioning",
+   "summary": "Objective 4.2"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "A web application runs on two servers; if one fails, the other takes over automatically. What is this?",
+   "options": [
+    "Tape rotation",
+    "Journaling",
+    "High availability with failover",
+    "Cold site"
+   ],
+   "answer": 2,
+   "explanation": "Failover keeps a service running when a component fails."
+  },
+  {
+   "q": "A company keeps a list of every laptop, its owner, location and serial number. What process is this?",
+   "options": [
+    "Risk transfer",
+    "Penetration testing",
+    "Tokenization",
+    "Asset inventory"
+   ],
+   "answer": 3,
+   "explanation": "Inventory tracks what the organization owns."
+  },
+  {
+   "q": "An attacker modifies the amount on a wire transfer while it is in transit. Which part of the CIA triad was violated?",
+   "options": [
+    "Availability",
+    "Non-repudiation",
+    "Integrity",
+    "Confidentiality"
+   ],
+   "answer": 2,
+   "explanation": "Unauthorized modification of data is an integrity failure."
+  },
+  {
+   "q": "A backup site with power and network but no installed equipment, which takes weeks to bring online, is a:",
+   "options": [
+    "Warm site",
+    "Cold site",
+    "Mirror site",
+    "Hot site"
+   ],
+   "answer": 1,
+   "explanation": "Cold sites are cheap but slow to activate."
+  },
+  {
+   "q": "Before a hard drive is reused by another department, data must be removed so it cannot be recovered. What is this called?",
+   "options": [
+    "Enumeration",
+    "Journaling",
+    "Sanitization",
+    "Classification"
+   ],
+   "answer": 2,
+   "explanation": "Sanitization makes data unrecoverable before reuse."
+  },
+  {
+   "q": "A sender digitally signs a contract so they cannot later deny having sent it. Which concept does this provide?",
+   "options": [
+    "Availability",
+    "Authorization",
+    "Non-repudiation",
+    "Obfuscation"
+   ],
+   "answer": 2,
+   "explanation": "A digital signature ties the message to the signer's private key, preventing denial."
+  },
+  {
+   "q": "A fully equipped site with live data replication that can take over within minutes is a:",
+   "options": [
+    "Warm site",
+    "Cold site",
+    "Hot site",
+    "Mobile site"
+   ],
+   "answer": 2,
+   "explanation": "Hot sites are ready almost immediately but are expensive."
+  },
+  {
+   "q": "Drives are shredded and a vendor provides a document proving it. What is that document called?",
+   "options": [
+    "Certificate of destruction",
+    "Bill of materials",
+    "Service level agreement",
+    "Chain of custody form only"
+   ],
+   "answer": 0,
+   "explanation": "It proves media was destroyed."
+  },
+  {
+   "q": "In the AAA framework, which step decides what a user is allowed to do after they log in?",
+   "options": [
+    "Authorization",
+    "Authentication",
+    "Identification",
+    "Accounting"
+   ],
+   "answer": 0,
+   "explanation": "Authorization grants permissions after identity is proven."
+  },
+  {
+   "q": "What does recovery time objective (RTO) measure?",
+   "options": [
+    "The maximum acceptable time to restore a service",
+    "The time to detect an incident",
+    "The maximum acceptable data loss",
+    "The average time between failures"
+   ],
+   "answer": 0,
+   "explanation": "RTO is how long the business can tolerate downtime."
+  }
+ ]
+}

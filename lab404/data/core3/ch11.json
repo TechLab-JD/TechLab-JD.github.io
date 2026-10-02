@@ -1,0 +1,183 @@
+{
+ "core": 3,
+ "chapter": 11,
+ "title": "Application & Web Security",
+ "exam_objectives": [
+  "4.5",
+  "4.1"
+ ],
+ "coverage": "COVERED",
+ "domain": "d4",
+ "domain_label": "Security Operations",
+ "sections": [
+  {
+   "title": "Application Protocol Security Baselines",
+   "content": "SECURE VS. INSECURE PROTOCOLS\nInsecure protocols (HTTP, Telnet) transmit data in clear text — anyone intercepting packets can read the data. Secure protocols (HTTPS, SSH) use encryption to protect transmitted data.\n• Secure protocols are harder to implement/manage (certificates, key handling, harder troubleshooting since packet content can't be easily inspected)\n• Despite the complexity, security benefits outweigh the challenges — protocols should be secure unless a specific justification exists for using an insecure one\nSELECTING & IMPLEMENTING SECURE PROTOCOLS\nOrganizations follow a formal process: assess risk → review policy → evaluate protocol security features → consult experts → document outcome (feeds into baselines/config management).\nKey selection factors:\n• Data sensitivity — sensitive/private data should use HTTPS, SSH, SFTP/FTPS\n• Port assignment — standard ports tied to protocols (HTTP 80, HTTPS 443); can be changed to obscure service, but complicates config\n• Transport method — TCP (connection-oriented, reliable/ordered) vs UDP (connectionless, faster, tolerates loss — good for streaming/VoIP/gaming)\n• Overall: balance security, maintainability, performance, and cost\nTRANSPORT LAYER SECURITY (TLS)\n• SSL (Secure Sockets Layer) — developed by Netscape in the 1990s; superseded by TLS\n• Server presents a CA-signed digital certificate to prove identity and validate its public/private key pair; server + client negotiate ciphers and establish an encrypted session\n• HTTPS = HTTP + TLS, port 443 by default; indicated by https:// and a padlock icon\n• Mutual authentication (client also presents a cert) is common in VPNs/enterprise networks, rare on the public web\nSSL/TLS Versions:\n• Only TLS versions are safe to use today; legacy SSL should be disabled\n• Downgrade attack — an on-path attacker forces negotiation of a weaker cipher suite/protocol version\n• TLS 1.3 (2018) removes the ability to downgrade to unsecure legacy algorithms and streamlines the handshake (fewer messages, faster connections)\nCipher Suites:\nVersion | Example | Notes\nPre-TLS 1.3 | ECDHE-RSA-AES128-GCM-SHA256 | Lists key exchange (ECDHE), signature (RSA), bulk cipher (AES128-GCM), and hash (SHA256) separately\nTLS 1.3 | TLS_AES_256_GCM_SHA384 | Only ephemeral key agreement supported; signature type comes from the cert; suite lists only bulk cipher + hash (via HKDF)\nSECURE DIRECTORY SERVICES (LDAP)\nA network directory lists subjects (users/computers/services) and objects (files/directories) plus permissions — supports authentication/authorization. Most directories run LDAP (port 389, plaintext by default — vulnerable to sniffing/on-path attacks).\nLDAP Authentication (\"binding\") Methods:\nMethod | Description\nNo Authentication | Anonymous access granted\nSimple Bind | Client sends distinguished name (DN) + password in plaintext\nSASL | Client/server negotiate an auth mechanism (e.g., Kerberos); STARTTLS adds encryption/integrity — preferred for Microsoft AD\nLDAPS | Server presents a digital cert to set up a secure tunnel for credential exchange; port 636\n• Disable anonymous/simple auth if secure access is required\n• LDAP server should only be reachable from the private network (block the port at the firewall from public interfaces)\nSNMP SECURITY\nSNMP (Simple Network Management Protocol) = framework for network device management/monitoring.\n• Agent — software/firmware on a managed device; maintains a MIB (Management Information Base) of stats; can send a trap to alert on notable events\n• SNMP monitor — polls agents at intervals, displays data + trap alerts\n• Ports: device queries = 161/UDP; traps = 162/UDP\nSNMP Guidelines:\n• Disable SNMP if unused\n• Community names are sent in plaintext — never leave blank/default, never transmit over untrusted networks\n• Use ACLs to restrict management operations to known hosts\n• Use SNMPv3 (supports encryption + strong user-based authentication via signed hashes); disable older versions\nFILE TRANSFER SERVICES\nProtocol | Security | Port(s)\nFTP | None — plaintext auth and data | 21\nSFTP (SSH FTP) | Full session tunneled over SSH | 22\nFTPES (Explicit FTPS) | AUTH TLS upgrades unsecure connection; control conn can be encrypted, data via PROT command | 21 (upgraded)\nFTPS (Implicit FTPS) | Negotiates SSL/TLS before any FTP commands | 990\n• FTP remains popular for efficiency/cross-platform support but has no security mechanisms\n• FTPS is tricky through firewalls, so FTPES is usually preferred\n• Watch for rogue/unauthorized FTP servers installed on user PCs (e.g., bundled with IIS)\nEMAIL SERVICES\nDelivery vs. mailbox protocols: SMTP sends mail between systems (discovers recipient server via DNS MX record); a mailbox protocol (POP3/IMAP) stores and retrieves mail for the end user.\nProtocol | Secure Version | Port(s) | Notes\nSMTP | SMTPS / STARTTLS | 25 (relay/MTA-MTA), 587 (submission/MSA, STARTTLS + auth required), 465 (implicit TLS, deprecated) | STARTTLS = explicit/opportunistic TLS; SMTPS = implicit TLS (secure before any commands)\nPOP3 | POP3S | 110 → 995 | Downloads mail to local client\nIMAP | IMAPS | 143 → 993 | Supports permanent connections, multiple simultaneous clients, server-side folder management\nEMAIL AUTHENTICATION & ANTI-PHISHING\nProtocol | Function\nSPF (Sender Policy Framework) | Verifies sender IP against authorized sending IPs published in the domain's DNS TXT record\nDKIM (DomainKeys Identified Mail) | Sender signs emails with a digital signature; receiver verifies via a DKIM DNS record to confirm integrity\nDMARC (Domain-based Message Authentication, Reporting & Conformance) | Uses SPF + DKIM results to define handling rules (quarantine/reject/tag) and provides reporting on who is sending as the domain\n• Email Gateway — control point for all inbound/outbound mail; runs anti-spam/AV/threat detection, enforces SPF/DKIM/DMARC, and applies content/attachment policy (DLP)\n• S/MIME (Secure/Multipurpose Internet Mail Extensions) — encrypts email body + adds digital signatures using public key crypto; powerful but often misconfigured\n• Email DLP — scans emails/attachments for sensitive data (credit card #s, SSNs, proprietary info) per policy; can block, alert, or auto-encrypt. Critical for GDPR/HIPAA/PCI DSS compliance and insider-threat mitigation\nDNS FILTERING\nBlocks/allows site access by controlling domain-name-to-IP resolution; checks each resolution request against a domain database.\nBenefits: proactive block of phishing/malware sites; enforces AUPs; protects all connected devices (including IoT); simple, low-risk, cost-effective — but must be combined with other controls.\nImplementation methods:\n• DNS filtering services — Cisco OpenDNS, Quad9, CleanBrowsing (redirect DNS requests to their servers)\n• Self-managed DNS servers (Microsoft DNS, BIND) — full control, supports block lists / RPZ (Response Policy Zone) feeds\n• DNS firewalls — intercept queries at the network level\n• Endpoint-level filtering — built into some AV/endpoint suites, useful for roaming laptops\n• Open source local resolvers — Pi-hole, ADGuard Home (often run on Raspberry Pi)\n• Keep filter lists updated to keep pace with evolving threats\nDNS SECURITY\n• Local DNS servers should only accept recursive queries from local, authenticated hosts — not the Internet\n• Apply access control to prevent unauthorized manual record changes; restrict clients to authorized resolvers\n• Patch DNS server software (e.g., BIND) against known vulnerabilities\n• DNS footprinting — attacker obtains info about a private network via a zone transfer to a rogue DNS server, or by querying with nslookup/dig. Mitigate with an ACL blocking zone transfers to unauthorized hosts\n• DNSSEC (DNS Security Extensions) — mitigates spoofing/poisoning by validating DNS responses:\n• Authoritative server signs a package of resource records (RRset) with a private Zone Signing Key (ZSK)\n• The public ZSK is itself signed by a separate Key Signing Key (KSK) — using separate keys means a compromised ZSK can be revoked/reissued without disrupting the KSK\n• KSK is validated by the parent domain/ISP; top-level domain trust validated by Regional Internet Registries; root servers are self-validated (M-of-N control group signing) — forming a chain of trust from root down to any subdomain",
+   "exam_tips": []
+  },
+  {
+   "title": "Cloud and Web Application Security Concepts",
+   "content": "SECURE CODING FRAMEWORKS\nModern development runs a security development lifecycle (SDL) in parallel with functionality/usability work, rather than treating security as an afterthought. Examples: Microsoft's SDL, OWASP's SAMM (Software Assurance Maturity Model), OWASP Security Knowledge Framework, and the OWASP Top 10 (catalog of common vulnerabilities/exploits/mitigations).\nINPUT VALIDATION\nInput validation protects against untrusted input — specially crafted data used to manipulate application behavior via injection attacks (SQL injection, code injection, XSS, etc.).\nValidation Method | Description\nAllowlisting | Only permits inputs matching a predetermined, approved set of values/patterns\nBlocklisting | Explicitly blocks known-harmful inputs (special characters/patterns common in attacks)\nData Type Checks | Confirms input matches expected type (string, integer, date)\nRange Checks | Validates numeric inputs fall within expected bounds\nRegular Expressions | Matches input against expected patterns or attack signatures\nEncoding | Prevents special characters from being interpreted as executable commands/scripts\nSECURE COOKIES\nCookies maintain session state, preferences, and behavior tracking — if unsecured, they enable session hijacking or XSS.\nAttribute | Purpose\nSecure | Cookie only sent over HTTPS (protects against eavesdropping)\nHttpOnly | Blocks client-side script access to the cookie (mitigates XSS)\nSameSite | Limits when cookies are sent cross-site (mitigates CSRF)\nExpiration | Restricts the cookie's usable lifetime\nSTATIC CODE ANALYSIS\nScrutinizes source code (in a \"static\" pre-execution state) to catch vulnerabilities, errors, and non-compliant practices early.\n• Tools: SonarQube, Coverity, Fortify, and others — automate rule-based checks and flag issues for developer review\n• Benefits: early bug/vulnerability detection, improved code quality/maintainability via enforced standards, and developer education on common security mistakes\n• Application security also depends on SAST/DAST (static + dynamic testing) and ongoing patch/update discipline\nCODE SIGNING\nUses digital signatures to verify integrity (code unmodified since signing) and authenticity (publisher identity), via a CA-issued certificate and the signer's private key encrypting a hash/digest of the code.\n• Helps block untrusted software and lets publishers prove authenticity\n• Does NOT guarantee the code is safe or bug-free — it only certifies source and integrity; signed code can still contain bugs, vulnerabilities, or malicious content inserted by the original author\nAPPLICATION PROTECTIONS\nData Exposure — a fault allowing privileged data (tokens, passwords, PII) to be read without proper access controls. Applications must transmit such data only between authenticated hosts using proven, industry-standard encryption libraries (never home-grown crypto).\nError Handling — a well-written app handles errors/exceptions gracefully via a structured exception handler (SEH), including a catchall handler for the unexpected. Goal: never fail in a way that lets an attacker execute code or perform injection.\n• Default interpreter error messages can leak platform/internal info to attackers — use custom error handlers to control what's disclosed\n• Example failure: the Apple \"goto fail\" bug (poorly written SSL exception handling)\n• Technically: an error is unrecoverable (e.g., out of memory); an exception is a handleable error condition\nMemory Management — many arbitrary code attacks exploit faulty memory handling, letting an attacker execute code in the target app's memory space. Requires checks on untrusted input (e.g., strings) to prevent memory overwrites.\nClient-Side vs. Server-Side Validation\n• Client-side (e.g., DOM scripting) is faster/more responsive but vulnerable to local malware tampering\n• Server-side is authoritative but slower (more transactions)\n• Best practice: client-side validation for UX (early feedback), but all input must still be validated server-side before acceptance — relying on client-side validation alone is poor practice\nAPPLICATION SECURITY IN THE CLOUD\nCloud hardening and application security are complementary under the shared responsibility model (CSP secures infrastructure; customer secures data/apps).\n• Cloud hardening: least-privilege access policies, encryption of data in transit/at rest, regular audits/continuous monitoring, vulnerability assessments and pen testing\nMONITORING CAPABILITIES (SECURE CODING FOR LOGGING/ALERTING)\nSecure coding practices extend beyond vulnerability prevention to logging and monitoring:\n• Applications should generate comprehensive, structured logs capturing important events for audits, incident response, and troubleshooting\n• Error handling should mask/hide sensitive debugging info to avoid helping attackers\n• Real-time alerting built into app code (e.g., alerting on repeated failed logins or unusual data transfers) significantly improves threat detection and supports incident response\nSOFTWARE SANDBOXING\nSandboxing isolates running processes from each other/the host system, restricting a program to highly limited access — reduces blast radius of malicious or malfunctioning software.\nExamples of sandboxing in practice:\n• Browsers (e.g., Chrome) — isolate each tab/extension into its own process; a compromised tab can't affect the whole browser, and a crashed tab doesn't crash the browser\n• Mobile OSes (iOS/Android) — each app sandboxed to its own data/resources; cannot touch other apps' data without explicit permission\n• VMs and containers (Docker) — isolate at a larger scale; a breach in one VM/container doesn't affect others\nSandboxing in Security Operations — used to safely \"detonate\" and analyze suspected malware without risking the production environment:\n• Cuckoo Sandbox — open source; runs files in isolation, logs system calls and network traffic\n• Joe Sandbox — web-accessible, no install required; uses multiple analysis techniques including machine learning",
+   "exam_tips": []
+  },
+  {
+   "title": "Key Takeaways",
+   "content": "• Assess the requirements for securing application protocols, including the need for certificates/keys for authentication and TCP/UDP port usage\n• Deploy certificates to web servers to use with HTTPS\n• Deploy certificates to email servers to use with secure SMTP, POP3, and IMAP\n• Deploy certificates or host keys to file servers to use with FTPS or SFTP\n• Deploy certificates to email clients to use with S/MIME\n• Train developers on secure coding techniques to provide specific mitigation against attacks\n• Understand different categories of web application attacks that exploit vulnerable code\n• Identify injection attacks (XSS, SQL, XML, LDAP) that exploit lack of input validation\n• Identify replay and request forgery attacks that exploit lack of secure session management mechanisms\n• Review and test code using static and dynamic analysis, paying particular attention to input validation, output encoding, error handling, and data exposure",
+   "exam_tips": []
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "Framework ensuring proper SPF/DKIM application via DNS policy.",
+   "concept": "Domain-based Message Authentication, Reporting, and Conformance (DMARC)",
+   "summary": "Objective 4.5"
+  },
+  {
+   "hook": "Software agent collecting system data/logs for monitoring analysis.",
+   "concept": "endpoint detection and response (EDR)",
+   "summary": "Objective 4.5"
+  },
+  {
+   "hook": "File transfer app protocol (ports 20/21); variants: SFTP, FTPS/FTPES, TFTP.",
+   "concept": "File Transfer Protocol (FTP)",
+   "summary": "Objective 4.5"
+  },
+  {
+   "hook": "Windows domain mechanism deploying per-user/per-computer settings.",
+   "concept": "group policy object (GPO)",
+   "summary": "Objective 4.5"
+  },
+  {
+   "hook": "Data access standards over cellular networks (2G/3G GSM/CDMA; 4G/5G under LTE).",
+   "concept": "cellular",
+   "summary": "Objective 4.1"
+  },
+  {
+   "hook": "Diagram showing signal strength/channel utilization by location.",
+   "concept": "heat map (Wi-Fi)",
+   "summary": "Objective 4.1"
+  },
+  {
+   "hook": "Process/technologies for tracking/controlling/securing mobile infrastructure.",
+   "concept": "mobile device management (MDM)",
+   "summary": "Objective 4.1"
+  },
+  {
+   "hook": "WPA3 personal auth mechanism addressing WPA-PSK vulnerabilities.",
+   "concept": "Simultaneous Authentication of Equals (SAE)",
+   "summary": "Objective 4.1"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "A firewall rule allows SSH from anywhere. The team changes it to allow SSH only from the admin subnet. What capability is being modified?",
+   "options": [
+    "Firewall rules and access lists",
+    "DNS filtering",
+    "Email filtering",
+    "Group Policy"
+   ],
+   "answer": 0,
+   "explanation": "Tightening rules reduces exposure."
+  },
+  {
+   "q": "A documented set of approved, secure settings applied to every new server is called a:",
+   "options": [
+    "Business impact analysis",
+    "Change request",
+    "Security baseline",
+    "Risk register"
+   ],
+   "answer": 2,
+   "explanation": "Baselines define the secure starting configuration."
+  },
+  {
+   "q": "Which email security record lists the mail servers allowed to send mail for a domain?",
+   "options": [
+    "SPF",
+    "DKIM",
+    "DMARC",
+    "MX only"
+   ],
+   "answer": 0,
+   "explanation": "Sender Policy Framework lists authorized senders."
+  },
+  {
+   "q": "Which wireless setup gives each user individual credentials checked against a RADIUS server?",
+   "options": [
+    "Open network",
+    "WPA3-Enterprise with 802.1X",
+    "WPA3-Personal with one shared passphrase",
+    "WEP"
+   ],
+   "answer": 1,
+   "explanation": "Enterprise mode authenticates each user individually."
+  },
+  {
+   "q": "Which email technology adds a digital signature to messages so receivers can verify they were not altered?",
+   "options": [
+    "DMARC",
+    "SPF",
+    "SMTP",
+    "DKIM"
+   ],
+   "answer": 3,
+   "explanation": "DomainKeys Identified Mail signs outgoing mail."
+  },
+  {
+   "q": "A company lets employees use personal phones for work but manages a separate work container on them. What deployment model is this?",
+   "options": [
+    "CYOD",
+    "BYOD",
+    "COPE",
+    "Kiosk mode"
+   ],
+   "answer": 1,
+   "explanation": "Bring your own device uses personally owned phones."
+  },
+  {
+   "q": "Which email record tells receiving servers what to do with mail that fails SPF or DKIM checks?",
+   "options": [
+    "DKIM",
+    "DMARC",
+    "PTR",
+    "SPF"
+   ],
+   "answer": 1,
+   "explanation": "DMARC sets the policy (none, quarantine, reject) and reporting."
+  },
+  {
+   "q": "The company buys phones, owns them, but lets employees use them personally too. What model is this?",
+   "options": [
+    "CYOD",
+    "VDI",
+    "COPE",
+    "BYOD"
+   ],
+   "answer": 2,
+   "explanation": "Corporate-owned, personally enabled."
+  },
+  {
+   "q": "The company blocks access to known malicious domains by refusing to resolve them. What is this?",
+   "options": [
+    "Port security",
+    "DNS filtering",
+    "Load balancing",
+    "Disk encryption"
+   ],
+   "answer": 1,
+   "explanation": "DNS filtering stops lookups of bad domains."
+  },
+  {
+   "q": "Which tool lets IT push policies, require a PIN and remotely wipe lost company phones?",
+   "options": [
+    "Mobile device management (MDM)",
+    "DLP only",
+    "WAF",
+    "SIEM"
+   ],
+   "answer": 0,
+   "explanation": "MDM manages and secures mobile devices."
+  }
+ ]
+}

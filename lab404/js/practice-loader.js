@@ -92,6 +92,17 @@
             (isSec() ? '<p class="text-xs text-muted" style="margin-top:0.5rem;">Includes select-two/select-three questions. Passing is about 83% (750 of 900).</p>' : '') +
           '</div>' +
 
+          (isSec()
+            ? '<div>' +
+                '<label class="text-sm" style="font-weight:600;display:block;margin-bottom:0.5rem;">Question Set</label>' +
+                '<div style="display:flex;gap:0.5rem;flex-wrap:wrap;">' +
+                  '<button class="btn btn-secondary qset-btn" data-set="all">All</button>' +
+                  '<button class="btn btn-secondary qset-btn" data-set="original">Lab404 originals</button>' +
+                  '<button class="btn btn-secondary qset-btn" data-set="combined">Combined objectives (harder)</button>' +
+                '</div>'
+            : '<div style="display:none;">') +
+          '</div>' +
+
           '<div>' +
             '<label class="text-sm" style="font-weight:600;display:block;margin-bottom:0.5rem;">Question Count</label>' +
             '<div style="display:flex;gap:0.5rem;flex-wrap:wrap;">' +
@@ -122,6 +133,16 @@
     var selectedCore = state.core;
     var selectedCount = 25;
     var selectedMins = 0;
+    var selectedSet = "all";
+
+    function selectSet(s) {
+      selectedSet = s;
+      container.querySelectorAll(".qset-btn").forEach(function(b) {
+        var match = b.dataset.set === s;
+        b.classList.toggle("btn-primary", match);
+        b.classList.toggle("btn-secondary", !match);
+      });
+    }
 
     function selectCore(core) {
       selectedCore = core;
@@ -152,6 +173,10 @@
     selectCore(selectedCore);
     selectCount(selectedCount);
     selectTime(selectedMins);
+    selectSet(selectedSet);
+    container.querySelectorAll(".qset-btn").forEach(function(b) {
+      b.addEventListener("click", function() { selectSet(this.dataset.set); });
+    });
 
     container.querySelectorAll(".core-select-btn").forEach(function(b) {
       b.addEventListener("click", function() { selectCore(parseInt(this.dataset.core)); });
@@ -165,6 +190,7 @@
 
     container.querySelector("#startBtn").addEventListener("click", function() {
       state.core = selectedCore;
+      state.qset = selectedSet;
       loadAndStart(container, selectedCount, selectedMins);
     });
   }
@@ -178,6 +204,11 @@
         return res.json();
       })
       .then(function(questions) {
+        if (isSec() && state.qset === "original") {
+          questions = questions.filter(function(q) { return q.original; });
+        } else if (isSec() && state.qset === "combined") {
+          questions = questions.filter(function(q) { return q.combined; });
+        }
         state.allQuestions = questions;
         var shuffled = shuffleArray(questions);
         state.queue = count >= 999 ? shuffled : shuffled.slice(0, Math.min(count, shuffled.length));
@@ -238,7 +269,8 @@
       '</button>';
     }).join("");
 
-    var objHtml = q.objective ? '<span class="badge badge-objective" style="font-size:0.7rem;">Obj ' + escHtml(q.objective) + '</span>' : "";
+    var objList = (q.objectives && q.objectives.length) ? q.objectives : (q.objective ? [q.objective] : []);
+    var objHtml = objList.length ? '<span class="badge badge-objective" style="font-size:0.7rem;">Obj ' + escHtml(objList.join(" + ")) + '</span>' : "";
     var chHtml = q.chapter ? '<span class="text-xs text-muted">Ch ' + q.chapter + '</span>' : "";
 
     container.innerHTML =
