@@ -2,7 +2,8 @@
 (function () {
   "use strict";
 
-  var TOTAL_CHAPTERS = { 1: 25, 2: 20 };
+  /* "core" 3 = Security+ (one exam, no cores; the number is only an internal slot) */
+  var TOTAL_CHAPTERS = { 1: 25, 2: 20, 3: 16 };
 
   var DOMAIN_LABELS = {
     hardware: "Hardware",
@@ -13,16 +14,24 @@
     os: "Operating Systems",
     security: "Security",
     operational: "Operational Procedures",
+    /* Security+ SY0-701 domains */
+    d1: "General Security Concepts",
+    d2: "Threats, Vulnerabilities & Mitigations",
+    d3: "Security Architecture",
+    d4: "Security Operations",
+    d5: "Security Program Management & Oversight",
   };
 
   var DOMAIN_WEIGHTS = {
     hardware: "27%", networking: "20%", mobile: "13%", cloud: "11%",
     troubleshooting: "29%", os: "28%", security: "27%", operational: "19%",
+    d1: "12%", d2: "22%", d3: "18%", d4: "28%", d5: "20%",
   };
 
   var state = {
     tab: "chapters",   // "chapters" | "terms" | "glossary" | "flashcards"
     core: 1,
+    locked: false,     // true when opened from the Security+ folder: no core tabs
     chapters: [],
     glossaryTerms: [],
     collapsed: {},
@@ -53,6 +62,13 @@
     return String(str)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+  }
+
+  function isSec() { return state.core === 3; }
+
+  /* Flashcard "Both" (0) = A+ Core 1 + Core 2 only; Security+ never mixes with A+. */
+  function fcInScope(c) {
+    return state.fc.core === 0 ? (c === 1 || c === 2) : c === state.fc.core;
   }
 
   function fcDomainLabel(d) {
@@ -201,11 +217,10 @@
 
   function fcBuildMissedCards() {
     var raw = JSON.parse(localStorage.getItem("aplus-wrong") || "[]");
-    if (state.fc.core !== 0) {
-      raw = raw.filter(function(q) { return q.core === state.fc.core; });
-    }
+    raw = raw.filter(function(q) { return fcInScope(q.core); });
     return raw.map(function(q) {
-      var correctText = q.options && q.options[q.answer] ? q.options[q.answer] : "";
+      var idxs = q.answers && q.answers.length ? q.answers : [q.answer];
+      var correctText = idxs.map(function(i) { return q.options && q.options[i] ? q.options[i] : ""; }).join("  +  ");
       return {
         front: escHtml(q.q || ""),
         frontSub: "",
@@ -221,7 +236,7 @@
   function fcBuildTermCards(terms) {
     return terms
       .filter(function(t) {
-        if (state.fc.core !== 0 && t.core !== state.fc.core) return false;
+        if (!fcInScope(t.core)) return false;
         if (state.fc.domain !== "all" && t.domain !== state.fc.domain) return false;
         return true;
       })
@@ -241,7 +256,7 @@
   function fcBuildAcronymCards(terms) {
     return terms
       .filter(function(t) {
-        if (state.fc.core !== 0 && t.core !== state.fc.core) return false;
+        if (!fcInScope(t.core)) return false;
         return fcIsAcronym(t.term);
       })
       .map(function(t) {
@@ -312,7 +327,9 @@
 
   /* ── Render shell ── */
 
-  var DOMAINS_LIST = ["hardware","networking","mobile","cloud","troubleshooting","os","security","operational"];
+  var APLUS_DOMAINS_LIST = ["hardware","networking","mobile","cloud","troubleshooting","os","security","operational"];
+  var SEC_DOMAINS_LIST = ["d1","d2","d3","d4","d5"];
+  function domainsList() { return isSec() ? SEC_DOMAINS_LIST : APLUS_DOMAINS_LIST; }
 
   function renderRoot(container) {
     var isGlossary = state.tab === "glossary";
@@ -330,7 +347,7 @@
             '<a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Review</span>' +
           '</nav>' +
           '<span class="section-label">Study Tool</span>' +
-          '<h1 style="font-size:clamp(1.5rem,3.5vw,2.25rem);margin-bottom:0.5rem;">Review &amp; Study</h1>' +
+          '<h1 style="font-size:clamp(1.5rem,3.5vw,2.25rem);margin-bottom:0.5rem;">' + (isSec() ? "Security+ Review &amp; Study" : "Review &amp; Study") + '</h1>' +
           '<p class="text-muted text-sm">Mark sections as Got It or Focus, study with flashcards, and export a targeted PDF study guide.</p>' +
         '</div>' +
 
@@ -338,7 +355,9 @@
         '<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1rem;">' +
           '<div style="display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;">' +
             /* Core tabs — show Both only for flashcards */
-            (isFlashcards
+            (state.locked
+              ? '<div class="core-tab-bar" style="margin:0;" id="coreTabs"><span class="core-tab active" style="cursor:default;">Security+ (SY0-701)</span></div>'
+              : isFlashcards
               ? '<div class="core-tab-bar" style="margin:0;" id="coreTabs">' +
                   '<button class="core-tab' + (state.fc.core === 1 ? " active" : "") + '" data-fccore="1">Core 1</button>' +
                   '<button class="core-tab' + (state.fc.core === 2 ? " active" : "") + '" data-fccore="2">Core 2</button>' +
@@ -409,7 +428,7 @@
     if (clearBtn) {
       clearBtn.addEventListener("click", function() {
         var label = state.tab === "terms" ? "Key Terms" : "Chapters";
-        if (confirm("Clear all Got It and Focus marks for " + label + " (Core " + state.core + ")?")) {
+        if (confirm("Clear all Got It and Focus marks for " + label + " (" + (isSec() ? "Security+" : "Core " + state.core) + ")?")) {
           clearAll();
           if (state.tab === "chapters") { renderChecklist(container); }
           else { renderTermsChecklist(container); }
@@ -640,7 +659,7 @@
         '</div>' +
         '<div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.6rem;" id="gDomainChips">' +
           '<button class="filter-btn' + (domFilt === "all" ? " active" : "") + '" data-gdom="all">All</button>' +
-          DOMAINS_LIST.map(function(d) {
+          domainsList().map(function(d) {
             return '<button class="filter-btn' + (domFilt === d ? " active" : "") + '" data-gdom="' + d + '">' + (DOMAIN_LABELS[d] || d) + '</button>';
           }).join("") +
         '</div>' +
@@ -713,7 +732,7 @@
       /* Domain filter (terms/acronyms only) */
       '<div id="fcDomainRow" style="display:' + (fc.mode === "terms" || fc.mode === "acronyms" ? "flex" : "none") + ';flex-wrap:wrap;gap:.35rem;margin-bottom:1rem;">' +
         '<button class="filter-btn' + (fc.domain === "all" ? " active" : "") + '" data-fcdom="all">All Domains</button>' +
-        DOMAINS_LIST.map(function(d) {
+        domainsList().map(function(d) {
           return '<button class="filter-btn' + (fc.domain === d ? " active" : "") + '" data-fcdom="' + d + '">' + (DOMAIN_LABELS[d] || d) + '</button>';
         }).join("") +
       '</div>' +
@@ -898,7 +917,7 @@
 
     Promise.all([p1, p2]).then(function() {
       var date = new Date().toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
-      var coreLabel = "Core " + state.core;
+      var coreLabel = isSec() ? "Security+ (SY0-701)" : "Core " + state.core;
       var html = '<h1>' + escHtml(coreLabel + " — Complete Study Pack") + '</h1>';
       html += '<p class="print-date">Generated: ' + escHtml(date) + ' &nbsp;|&nbsp; Lab404 A+ Study Hub</p>';
       html += '<hr style="border:1pt solid #ccc;margin:1em 0;">';
@@ -1032,9 +1051,20 @@
 
   /* ── Init ── */
 
-  function init(rootEl) {
+  function init(rootEl, opts) {
     var container = rootEl || document.getElementById("review-root");
     if (!container) return;
+    var wasSec = isSec();
+    if (opts && opts.core === 3) {
+      state.core = 3; state.fc.core = 3; state.locked = true;
+    } else {
+      state.locked = false;
+      if (wasSec) { state.core = 1; state.fc.core = 1; }
+    }
+    if (isSec() !== wasSec) {
+      state.chapters = []; state.glossaryDomain = "all"; state.fc.domain = "all";
+      state.fc.cards = []; state.fc.queue = [];
+    }
     renderRoot(container);
   }
 

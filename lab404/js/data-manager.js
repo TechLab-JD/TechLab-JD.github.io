@@ -8,6 +8,9 @@
     "aplus-checklist-c2",
     "aplus-checklist-terms-c1",
     "aplus-checklist-terms-c2",
+    /* Security+ study data (internal slot 3; Security+ has no cores) */
+    "aplus-checklist-c3",
+    "aplus-checklist-terms-c3",
     "aplus-wrong",
     "aplus-theme",
     /* General notepad (no cert context) */

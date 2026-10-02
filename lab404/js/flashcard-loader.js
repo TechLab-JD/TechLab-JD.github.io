@@ -2,11 +2,12 @@
 (function () {
   "use strict";
 
-  var TOTAL_CHAPTERS = { 1: 25, 2: 20 };
+  var TOTAL_CHAPTERS = { 1: 25, 2: 20, 3: 16 };
 
   var state = {
     mode: "concept",   // "concept" | "missed" | "terms" | "acronyms"
-    core: 1,           // 1 | 2 | 0 (both)
+    core: 1,           // 1 | 2 | 0 (both A+ cores) | 3 (Security+, no cores)
+    locked: false,     // true when opened from a cert folder: no core switching
     domain: "all",
     cards: [],
     queue: [],
@@ -95,11 +96,10 @@
 
   function buildMissedCards() {
     var raw = JSON.parse(localStorage.getItem("aplus-wrong") || "[]");
-    if (state.core !== 0) {
-      raw = raw.filter(function(q) { return q.core === state.core; });
-    }
+    raw = raw.filter(function(q) { return inScope(q.core); });
     return raw.map(function(q) {
-      var correctText = q.options && q.options[q.answer] ? q.options[q.answer] : "";
+      var idxs = q.answers && q.answers.length ? q.answers : [q.answer];
+      var correctText = idxs.map(function(i) { return q.options && q.options[i] ? q.options[i] : ""; }).join("  +  ");
       return {
         front: escHtml(q.q || ""),
         frontSub: "",
@@ -113,10 +113,7 @@
   }
 
   function buildTermCards(terms) {
-    var filtered = terms;
-    if (state.core !== 0) {
-      filtered = filtered.filter(function(t) { return t.core === state.core; });
-    }
+    var filtered = terms.filter(function(t) { return inScope(t.core); });
     if (state.domain !== "all") {
       filtered = filtered.filter(function(t) { return t.domain === state.domain; });
     }
@@ -142,7 +139,7 @@
 
   function buildAcronymCards(terms) {
     var filtered = terms.filter(function(t) {
-      if (state.core !== 0 && t.core !== state.core) return false;
+      if (!inScope(t.core)) return false;
       return isAcronym(t.term);
     });
     return filtered.map(function(t) {
@@ -158,7 +155,33 @@
     });
   }
 
+  function isSec() { return state.core === 3; }
+
+  /* A+ "Both" (0) = Core 1 + Core 2 only; Security+ never mixes with A+. */
+  function inScope(c) {
+    return state.core === 0 ? (c === 1 || c === 2) : c === state.core;
+  }
+
+  function secDomains() {
+    return (window.AplusUtils && window.AplusUtils.SECPLUS_DOMAINS) || {};
+  }
+
+  var APLUS_DOMAIN_BTNS = [
+    ["hardware", "Hardware"], ["networking", "Networking"], ["mobile", "Mobile"], ["security", "Security"],
+    ["os", "OS"], ["cloud", "Cloud"], ["troubleshooting", "Troubleshooting"], ["operational", "Operational"],
+  ];
+
+  function domainButtons() {
+    var list = isSec()
+      ? Object.keys(secDomains()).map(function(k) { return [k, secDomains()[k]]; })
+      : APLUS_DOMAIN_BTNS;
+    return list.map(function(p) {
+      return '<button class="filter-btn' + (state.domain === p[0] ? " active" : "") + '" data-domain="' + p[0] + '">' + p[1] + '</button>';
+    }).join("");
+  }
+
   function domainLabel(d) {
+    if (isSec()) return secDomains()[d] || d;
     var map = {
       hardware: "Hardware", networking: "Networking", mobile: "Mobile Devices",
       cloud: "Cloud & Virt", troubleshooting: "Troubleshooting",
@@ -180,7 +203,7 @@
             '<span>Flashcards</span>' +
           '</nav>' +
           '<span class="section-label">Study Tool</span>' +
-          '<h1 style="font-size:clamp(1.5rem,3.5vw,2.25rem);margin-bottom:0.5rem;">Flashcards</h1>' +
+          '<h1 style="font-size:clamp(1.5rem,3.5vw,2.25rem);margin-bottom:0.5rem;">' + (isSec() ? "Security+ Flashcards" : "Flashcards") + '</h1>' +
         '</div>' +
 
         /* Mode tabs */
@@ -194,20 +217,15 @@
         /* Filter row */
         '<div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.5rem;align-items:center;" id="filterRow">' +
           '<div class="filter-bar" id="coreFilter" style="margin:0;">' +
-            '<button class="filter-btn' + (state.core === 1 ? " active" : "") + '" data-core="1">Core 1</button>' +
-            '<button class="filter-btn' + (state.core === 2 ? " active" : "") + '" data-core="2">Core 2</button>' +
-            '<button class="filter-btn' + (state.core === 0 ? " active" : "") + '" data-core="0">Both</button>' +
+            (state.locked && isSec()
+              ? '<span class="filter-btn active" style="cursor:default;">Security+ (SY0-701)</span>'
+              : '<button class="filter-btn' + (state.core === 1 ? " active" : "") + '" data-core="1">Core 1</button>' +
+                '<button class="filter-btn' + (state.core === 2 ? " active" : "") + '" data-core="2">Core 2</button>' +
+                '<button class="filter-btn' + (state.core === 0 ? " active" : "") + '" data-core="0">Both</button>') +
           '</div>' +
           '<div class="filter-bar" id="domainFilter" style="margin:0;' + (state.mode === "terms" ? "" : "display:none") + '">' +
             '<button class="filter-btn' + (state.domain === "all" ? " active" : "") + '" data-domain="all">All Domains</button>' +
-            '<button class="filter-btn' + (state.domain === "hardware" ? " active" : "") + '" data-domain="hardware">Hardware</button>' +
-            '<button class="filter-btn' + (state.domain === "networking" ? " active" : "") + '" data-domain="networking">Networking</button>' +
-            '<button class="filter-btn' + (state.domain === "mobile" ? " active" : "") + '" data-domain="mobile">Mobile</button>' +
-            '<button class="filter-btn' + (state.domain === "security" ? " active" : "") + '" data-domain="security">Security</button>' +
-            '<button class="filter-btn' + (state.domain === "os" ? " active" : "") + '" data-domain="os">OS</button>' +
-            '<button class="filter-btn' + (state.domain === "cloud" ? " active" : "") + '" data-domain="cloud">Cloud</button>' +
-            '<button class="filter-btn' + (state.domain === "troubleshooting" ? " active" : "") + '" data-domain="troubleshooting">Troubleshooting</button>' +
-            '<button class="filter-btn' + (state.domain === "operational" ? " active" : "") + '" data-domain="operational">Operational</button>' +
+            domainButtons() +
           '</div>' +
         '</div>' +
 
@@ -412,9 +430,13 @@
     });
   }
 
-  function init(rootEl) {
+  function init(rootEl, opts) {
     var container = rootEl || document.getElementById("flashcard-root");
     if (!container) return;
+    var wasSec = isSec();
+    if (opts && opts.core) { state.core = opts.core; state.locked = true; }
+    else { state.locked = false; if (wasSec) state.core = 1; }
+    if (isSec() !== wasSec) state.domain = "all";
     renderRoot(container);
   }
 

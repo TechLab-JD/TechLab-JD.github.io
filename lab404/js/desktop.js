@@ -29,6 +29,7 @@
     /* Apps */
     "chapters-1": { title: "Core 1 \u2014 Chapters", icon: "📚" },
     "chapters-2": { title: "Core 2 \u2014 Chapters", icon: "📗" },
+    "chapters-3": { title: "Security+ \u2014 Chapters", icon: "🛡️" },
     "practice":   { title: "Practice Test",           icon: "🎯" },
     "flashcards": { title: "Flashcards",               icon: "🃏" },
     "review":     { title: "Review Checklist",         icon: "📋" },
@@ -70,7 +71,25 @@
         { app: "data",       icon: "💾", label: "Data Manager" },
       ]
     },
+    /* Security+ is one exam (no cores). core: 3 is only the internal slot the loaders key on. */
+    "folder-secplus": {
+      desc: "CompTIA Security+ \u00b7 SY0-701",
+      certKey: "secplus",
+      core: 3,
+      apps: [
+        { app: "chapters-3", icon: "🛡️", label: "Chapters" },
+        { app: "practice",   icon: "🎯", label: "Practice Test" },
+        { app: "flashcards", icon: "🃏", label: "Flashcards" },
+        { app: "review",     icon: "📋", label: "Review List" },
+        { app: "glossary",   icon: "📖", label: "Glossary" },
+        { app: "notepad",    icon: "📝", label: "Notepad" },
+        { app: "data",       icon: "💾", label: "Data Manager" },
+      ]
+    },
   };
+
+  /* The public GitHub copy has no Security+ content yet: keep its folder "coming soon". */
+  if (window.LAB404_PUBLIC) delete FOLDER_CONTENTS["folder-secplus"];
 
   /* ── Window Manager ── */
   var Desktop = {
@@ -205,6 +224,11 @@
           var wKey = w.params.certKey || "general";
           var pKey = (params && params.certKey) || "general";
           if (wKey === pKey) return id;
+        } else if (["practice", "flashcards", "review", "glossary"].indexOf(app) >= 0) {
+          /* One window per cert: Sec+ practice must not reuse the A+ one */
+          var wc = (w.params && w.params.core) || 0;
+          var pc = (params && params.core) || 0;
+          if (wc === pc) return id;
         } else {
           return id;
         }
@@ -214,7 +238,10 @@
 
     _buildTitle: function (app, params, defaultTitle) {
       if (app === "chapter" && params) {
-        return "Core " + params.core + " \u2014 Ch " + String(params.ch).padStart(2, "0");
+        return (params.core === 3 ? "Security+" : "Core " + params.core) + " \u2014 Ch " + String(params.ch).padStart(2, "0");
+      }
+      if (params && params.core === 3 && ["practice", "flashcards", "review", "glossary"].indexOf(app) >= 0) {
+        return "Security+ \u2014 " + defaultTitle;
       }
       if (app === "notepad") {
         var ck = params && params.certKey;
@@ -516,6 +543,8 @@
         Desktop._renderChapterList(winId, 1);
       } else if (app === "chapters-2") {
         Desktop._renderChapterList(winId, 2);
+      } else if (app === "chapters-3") {
+        Desktop._renderChapterList(winId, 3);
       } else if (app === "practice") {
         if (window.PracticeLoader) {
           window.PracticeLoader.init(content, params || {});
@@ -524,19 +553,19 @@
         }
       } else if (app === "flashcards") {
         if (window.FlashcardLoader) {
-          window.FlashcardLoader.init(content);
+          window.FlashcardLoader.init(content, params || {});
         } else {
           content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Flashcard loader not available.</div>';
         }
       } else if (app === "review") {
         if (window.ReviewLoader) {
-          window.ReviewLoader.init(content);
+          window.ReviewLoader.init(content, params || {});
         } else {
           content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Review loader not available.</div>';
         }
       } else if (app === "glossary") {
         if (window.GlossaryLoader) {
-          window.GlossaryLoader.init(content);
+          window.GlossaryLoader.init(content, params || {});
         } else {
           content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Glossary loader not available.</div>';
         }
@@ -602,13 +631,13 @@
 
       content.querySelectorAll(".folder-app-icon[data-app]").forEach(function (icon) {
         icon.addEventListener("click", function () {
-          var childParams = folder.certKey ? { certKey: folder.certKey } : undefined;
+          var childParams = folder.certKey ? { certKey: folder.certKey, core: folder.core } : undefined;
           Desktop.openWindow(this.dataset.app, childParams);
         });
         icon.addEventListener("keydown", function (e) {
           if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
-            var childParams = folder.certKey ? { certKey: folder.certKey } : undefined;
+            var childParams = folder.certKey ? { certKey: folder.certKey, core: folder.core } : undefined;
             Desktop.openWindow(this.dataset.app, childParams);
           }
         });
@@ -619,8 +648,8 @@
       var content = document.getElementById(winId + "-content");
       if (!content) return;
 
-      var chapters = core === 1 ? window.CHAPTERS_CORE1 : window.CHAPTERS_CORE2;
-      var domainLabels = core === 1 ? window.DOMAIN_LABELS_CORE1 : window.DOMAIN_LABELS_CORE2;
+      var chapters = window["CHAPTERS_CORE" + core];
+      var domainLabels = window["DOMAIN_LABELS_CORE" + core];
       if (!chapters) {
         content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Chapter data not loaded.</div>';
         return;
@@ -640,7 +669,7 @@
 
       content.innerHTML =
         '<div class="win-chapter-header">' +
-          '<h2>Core ' + core + ' &mdash; ' + (core === 1 ? "25" : "20") + ' Chapters</h2>' +
+          '<h2>' + (core === 3 ? 'Security+ (SY0-701)' : 'Core ' + core) + ' &mdash; ' + chapters.length + ' Chapters</h2>' +
           '<div class="win-search-bar">' +
             '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>' +
             '<input type="search" id="' + winId + '-search" placeholder="Search chapters..." aria-label="Search chapters">' +
@@ -863,6 +892,8 @@
         "aplus-checklist-c2":       "A+ Core 2 Checklist",
         "aplus-checklist-terms-c1": "A+ Core 1 Term Checklist",
         "aplus-checklist-terms-c2": "A+ Core 2 Term Checklist",
+        "aplus-checklist-c3":       "Security+ Checklist",
+        "aplus-checklist-terms-c3": "Security+ Term Checklist",
         "aplus-wrong":              "A+ Missed Questions",
         "aplus-theme":              "Theme Preference",
         "aplus-notes":              "A+ Notes",

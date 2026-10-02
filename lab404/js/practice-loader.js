@@ -17,14 +17,27 @@
     finished: false,
   };
 
-  var TOTAL = { 1: 25, 2: 20 };
+  /* "core" 3 = Security+ (one exam, no cores; the number is only an internal slot) */
+  var TOTAL = { 1: 25, 2: 20, 3: 16 };
+
+  function isSec() { return state.core === 3; }
+
+  function passPct() { return isSec() ? 83 : 78; } /* ~750/900 for SY0-701, ~700/900 for A+ */
+
+  function examLabel() {
+    return isSec() ? "Security+ (SY0-701)" : "Core " + state.core + " (220-120" + state.core + ")";
+  }
+
+  function chaptersHref() {
+    return isSec() ? "index.html" : (state.core === 1 ? "core1.html" : "core2.html");
+  }
 
   function getParams() {
     var params = new URLSearchParams(window.location.search);
     var core = parseInt(params.get("core"), 10);
     var chRaw = params.get("ch");
     var ch = chRaw ? parseInt(chRaw, 10) : null;
-    var safeCore = [1, 2].includes(core) ? core : 1;
+    var safeCore = [1, 2, 3].includes(core) ? core : 1;
     var safeCh = (ch !== null && !isNaN(ch) && ch >= 1 && ch <= (TOTAL[safeCore] || 99)) ? ch : null;
     return { core: safeCore, ch: safeCh };
   }
@@ -71,9 +84,12 @@
           '<div>' +
             '<label class="text-sm" style="font-weight:600;display:block;margin-bottom:0.5rem;">Exam</label>' +
             '<div style="display:flex;gap:0.5rem;">' +
-              '<button class="btn btn-secondary core-select-btn" data-core="1" id="coreBtn1">Core 1 (220-1201)</button>' +
-              '<button class="btn btn-secondary core-select-btn" data-core="2" id="coreBtn2">Core 2 (220-1202)</button>' +
+              (isSec()
+                ? '<button class="btn btn-primary core-select-btn" data-core="3" id="coreBtn3">Security+ (SY0-701)</button>'
+                : '<button class="btn btn-secondary core-select-btn" data-core="1" id="coreBtn1">Core 1 (220-1201)</button>' +
+                  '<button class="btn btn-secondary core-select-btn" data-core="2" id="coreBtn2">Core 2 (220-1202)</button>') +
             '</div>' +
+            (isSec() ? '<p class="text-xs text-muted" style="margin-top:0.5rem;">Includes select-two/select-three questions. Passing is about 83% (750 of 900).</p>' : '') +
           '</div>' +
 
           '<div>' +
@@ -208,13 +224,15 @@
 
     var q = state.queue[state.currentIdx];
     var progress = state.queue.length > 0 ? (state.currentIdx / state.queue.length) * 100 : 0;
-    var coreLabel = "Core " + state.core + " (220-120" + state.core + ")";
+    var coreLabel = examLabel();
+    var answers = (q.answers && q.answers.length) ? q.answers : [q.answer];
+    var multi = !!q.multi && answers.length > 1;
 
     var timerHtml = state.timed ? '<span id="timerDisplay" style="font-size:0.875rem;color:var(--text-muted);font-variant-numeric:tabular-nums;">--:--</span>' : "";
 
     var optHtml = q.options.map(function(opt, oi) {
       var letter = String.fromCharCode(65 + oi);
-      return '<button class="option-btn" data-oi="' + oi + '" data-correct="' + q.answer + '">' +
+      return '<button class="option-btn" data-oi="' + oi + '" data-correct="' + answers[0] + '">' +
         '<span class="option-letter">' + letter + '</span>' +
         '<span>' + escHtml(opt) + '</span>' +
       '</button>';
@@ -248,7 +266,9 @@
             objHtml + chHtml +
           '</div>' +
           '<p class="question-text">' + escHtml(q.q) + '</p>' +
+          (multi ? '<p class="multi-hint">Select ' + answers.length + ' answers, then check.</p>' : '') +
           '<div class="question-options" role="group" aria-label="Answer options">' + optHtml + '</div>' +
+          (multi ? '<div style="margin-top:0.75rem;"><button id="checkBtn" class="btn btn-secondary btn-sm" disabled>Check answer</button></div>' : '') +
           '<div class="explanation-box" id="explanationBox" aria-live="polite">' + escHtml(q.explanation || "") + '</div>' +
         '</div>' +
 
@@ -261,33 +281,56 @@
 
       '</div>';
 
+    /* Grade a set of picked option indexes: right only if it matches the answer set exactly */
+    function grade(picked) {
+      var right = picked.length === answers.length && picked.every(function(p) { return answers.indexOf(p) >= 0; });
+      container.querySelectorAll(".option-btn").forEach(function(b) {
+        b.disabled = true;
+        b.classList.remove("picked");
+        var boi = parseInt(b.dataset.oi, 10);
+        var isAns = answers.indexOf(boi) >= 0;
+        var isPicked = picked.indexOf(boi) >= 0;
+        if (isAns) b.classList.add("correct");
+        if (isAns && !isPicked && multi) b.classList.add("missed");
+        if (!isAns && isPicked) b.classList.add("wrong");
+      });
+      var checkBtn = container.querySelector("#checkBtn");
+      if (checkBtn) checkBtn.disabled = true;
+
+      state.answered++;
+      if (right) {
+        state.correct++;
+      } else {
+        saveWrongAnswer(q);
+      }
+
+      var expEl = container.querySelector("#explanationBox");
+      if (expEl && q.explanation) expEl.classList.add("visible");
+
+      var nextWrap = container.querySelector("#nextWrap");
+      if (nextWrap) nextWrap.classList.remove("hidden");
+    }
+
     /* Wire options */
     container.querySelectorAll(".option-btn").forEach(function(btn) {
       btn.addEventListener("click", function() {
-        var correct = parseInt(this.dataset.correct, 10);
         var oi = parseInt(this.dataset.oi, 10);
-
-        /* Disable all */
-        container.querySelectorAll(".option-btn").forEach(function(b) {
-          b.disabled = true;
-          var boi = parseInt(b.dataset.oi, 10);
-          if (boi === correct) b.classList.add("correct");
-          else if (boi === oi) b.classList.add("wrong");
-        });
-
-        state.answered++;
-        if (oi === correct) {
-          state.correct++;
-        } else {
-          saveWrongAnswer(q);
+        if (!multi) { grade([oi]); return; }
+        this.classList.toggle("picked");
+        var n = container.querySelectorAll(".option-btn.picked").length;
+        var checkBtn = container.querySelector("#checkBtn");
+        if (checkBtn) {
+          checkBtn.disabled = n === 0;
+          checkBtn.classList.toggle("btn-primary", n === answers.length);
+          checkBtn.classList.toggle("btn-secondary", n !== answers.length);
         }
-
-        var expEl = container.querySelector("#explanationBox");
-        if (expEl && q.explanation) expEl.classList.add("visible");
-
-        var nextWrap = container.querySelector("#nextWrap");
-        if (nextWrap) nextWrap.classList.remove("hidden");
       });
+    });
+
+    container.querySelector("#checkBtn") && container.querySelector("#checkBtn").addEventListener("click", function() {
+      var picked = [];
+      container.querySelectorAll(".option-btn.picked").forEach(function(b) { picked.push(parseInt(b.dataset.oi, 10)); });
+      if (picked.length) grade(picked);
     });
 
     container.querySelector("#nextBtn") && container.querySelector("#nextBtn").addEventListener("click", function() {
@@ -308,7 +351,7 @@
     var total = state.queue.length;
     var correct = state.correct;
     var pct = total > 0 ? Math.round((correct / total) * 100) : 0;
-    var pass = pct >= 78; /* ~700/900 approximation */
+    var pass = pct >= passPct();
     var elapsed = Math.floor((Date.now() - state.startTime) / 1000);
     var mins = Math.floor(elapsed / 60);
     var secs = elapsed % 60;
@@ -329,10 +372,10 @@
         '<div style="margin-top:2rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">' +
           '<button class="btn btn-primary" id="retryBtn">Try Again</button>' +
           '<a href="practice.html" class="btn btn-secondary">New Setup</a>' +
-          '<a href="' + (state.core === 1 ? "core1.html" : "core2.html") + '" class="btn btn-secondary">Back to Chapters</a>' +
+          '<a href="' + chaptersHref() + '" class="btn btn-secondary">Back to Chapters</a>' +
         '</div>' +
 
-        (pct < 78 ? '<p style="margin-top:1.5rem;font-size:0.875rem;color:var(--text-muted);">Review the chapters covering topics you missed, then try again.</p>' : '') +
+        (pct < passPct() ? '<p style="margin-top:1.5rem;font-size:0.875rem;color:var(--text-muted);">Review the chapters covering topics you missed, then try again.</p>' : '') +
       '</div>';
 
     container.querySelector("#retryBtn") && container.querySelector("#retryBtn").addEventListener("click", function() {
@@ -348,6 +391,7 @@
       q: q.q,
       options: q.options,
       answer: q.answer,
+      answers: q.answers || [q.answer],
       explanation: q.explanation || "",
       objective: q.objective || "",
       chapter: q.chapter,

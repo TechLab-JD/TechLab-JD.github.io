@@ -608,6 +608,11 @@ p { max-width: 70ch; }
 .option-btn.wrong { background: var(--wrong-dim); border-color: var(--wrong); }
 .option-btn.wrong .option-letter { background: var(--wrong); color: #fff; border-color: var(--wrong); }
 .option-btn:disabled { cursor: default; }
+/* Multi-select questions (Security+): picked but not yet checked */
+.option-btn.picked { border-color: var(--accent3); background: var(--surface-hover); }
+.option-btn.picked .option-letter { background: var(--accent3); color: var(--bg); border-color: var(--accent3); }
+.option-btn.missed { border-color: var(--correct); border-style: dashed; }
+.multi-hint { font-size: 0.75rem; color: var(--text-muted); margin: -0.25rem 0 0.6rem; }
 .explanation-box {
   margin-top: 0.85rem;
   padding: 0.85rem 1rem;
