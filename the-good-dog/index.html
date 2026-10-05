@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Where the Good Dog Waits &mdash; a fiction series by Jordan Dorman</title>
+<meta name="description" content="Where the Good Dog Waits: a 52-book fiction series about the moment after a life ends, and the calm old dog who walks each soul down a hallway of their own memories to the door. In the spirit of Departures, Coco and Mushishi.">
+<meta property="og:title" content="Where the Good Dog Waits">
+<meta property="og:description" content="At the end of every life, a dog is waiting. A 52-book fiction series.">
+<meta property="og:image" content="covers/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#15110C; --bg2:#1C160F; --ink:#F0E8D7; --dim:#C6B9A1; --faint:#8E806A;
+  --gold:#D9A441; --gold-soft:#E9C67E; --paper:#F6EFE0; --paper-ink:#2A2218;
+  --line:rgba(217,164,65,.20); --line-soft:rgba(217,164,65,.10);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--ink);
+  font:19px/1.75 'EB Garamond',Georgia,serif;
+  background-image:
+    radial-gradient(1200px 600px at 50% -5%, rgba(217,164,65,.10), transparent 62%),
+    radial-gradient(800px 500px at 90% 110%, rgba(180,98,31,.08), transparent 60%);
+}
+h1,h2,h3,.disp{font-family:'Cormorant Garamond',Georgia,serif;line-height:1.08;font-weight:600}
+a{color:var(--gold-soft)}
+.wrap{max-width:860px;margin:0 auto;padding:0 26px}
+.lbl{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+::selection{background:rgba(217,164,65,.3)}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+nav{border-bottom:1px solid var(--line-soft)}
+nav .wrap{display:flex;align-items:center;height:56px;gap:18px}
+nav a{font-family:'Inter',sans-serif;font-size:13.5px;font-weight:500;color:var(--dim);text-decoration:none;letter-spacing:.02em}
+nav a:hover{color:var(--ink)}
+nav .home{margin-right:auto}
+
+.hero{padding:70px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center}
+.hero .tagline{font-size:15px;letter-spacing:.24em;text-transform:uppercase;font-family:'Inter',sans-serif;color:var(--gold);font-weight:600;margin-bottom:18px}
+.hero h1{font-size:clamp(44px,8vw,78px);color:#FAF4E6;letter-spacing:.005em}
+.hero .lede{font-size:21px;color:var(--dim);font-style:italic;margin:20px 0 26px;max-width:30ch}
+.rule{width:64px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin:22px 0}
+.meta{font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.plate{background:var(--paper);padding:12px;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.4),0 30px 70px -26px rgba(217,164,65,.4);transform:rotate(-1.2deg)}
+.plate img{display:block;width:100%;border-radius:2px}
+
+section{padding:52px 0;border-top:1px solid var(--line-soft)}
+.premise p{font-size:21px;color:var(--ink);margin-bottom:20px}
+.premise p:first-of-type{font-size:24px}
+.premise em{color:var(--gold-soft)}
+
+.excerpt{background:var(--bg2);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:4px;padding:34px 38px;margin:8px 0}
+.excerpt p{font-style:italic;font-size:21px;color:var(--ink);margin-bottom:14px}
+.excerpt .who{font-style:normal;font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:8px}
+
+.gallery h2{font-size:34px;color:#FAF4E6;margin-bottom:4px}
+.gsub{color:var(--faint);font-style:italic;margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.grid figure{background:var(--paper);padding:8px;border-radius:3px;box-shadow:0 2px 4px rgba(0,0,0,.35),0 16px 36px -18px rgba(0,0,0,.6);transition:transform .16s,box-shadow .16s}
+.grid figure:hover{transform:translateY(-5px) rotate(-.6deg);box-shadow:0 4px 8px rgba(0,0,0,.4),0 24px 48px -16px rgba(217,164,65,.35)}
+.grid img{display:block;width:100%;border-radius:2px}
+
+.band{text-align:center;padding:64px 0}
+.band .big{font-size:clamp(30px,5vw,46px);color:#FAF4E6;line-height:1.2}
+.band .big span{color:var(--gold-soft)}
+
+.cta{text-align:center}
+.cta h2{font-size:32px;color:#FAF4E6;margin-bottom:10px}
+.cta p{color:var(--dim);max-width:46ch;margin:0 auto 24px}
+.btn{display:inline-block;font-family:'Inter',sans-serif;font-weight:600;font-size:15px;text-decoration:none;padding:13px 28px;border-radius:999px;background:var(--gold);color:#1A1205;transition:background .14s,transform .14s}
+.btn:hover{background:var(--gold-soft);transform:translateY(-2px)}
+
+footer{border-top:1px solid var(--line-soft);padding:46px 0 72px;text-align:center}
+footer p{color:var(--faint);font-size:15px}
+footer a{color:var(--dim);text-decoration:none}
+footer a:hover{color:var(--gold-soft)}
+
+@media(max-width:720px){
+  .hero .wrap{grid-template-columns:1fr;gap:32px}
+  .plate{max-width:320px;margin:0 auto}
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="home" href="../">&larr; Jordan Dorman</a>
+  <a href="#story">The story</a>
+  <a href="#glimpses">Glimpses</a>
+  <a href="#follow">Follow</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <div class="tagline">A fiction series</div>
+    <h1>Where the<br>Good Dog Waits</h1>
+    <p class="lede">At the end of every life, a dog is waiting.</p>
+    <div class="rule"></div>
+    <div class="meta">Fifty-two books &middot; being written now</div>
+  </div>
+  <div class="plate"><img src="covers/hero.jpg" alt="Watercolor: an old woman and a calm black shepherd on a porch at golden hour" loading="eager"></div>
+</div></header>
+
+<section id="story" class="premise"><div class="wrap">
+  <p>When a life ends, the first thing you meet isn't a bright light or a tunnel. It's a <em>dog</em> &mdash; ancient,
+     calm, unhurried &mdash; sitting as though he has been waiting for you a very long time and has made his peace with it.</p>
+  <p>He is Death's companion, the chosen escort for the last walk. The room you wake in dissolves into a hallway built
+     from your own memory, and the two of you walk it together: past <em>windows</em> you can only watch, toward
+     <em>doors</em> you choose to open &mdash; while he asks the quiet questions that let you finally set down what you
+     were still carrying.</p>
+  <p>Fifty-two souls. Fifty-two hallways. One good dog who has walked them all. In the spirit of <em>Departures</em>,
+     <em>Coco</em> and <em>Mushishi</em> &mdash; gentle, unhurried, and quietly certain that no one should make the last
+     walk alone.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="lbl" style="margin-bottom:16px">From Book One</div>
+  <div class="excerpt">
+    <p>There was a dog near the door. Lying down, watching her with a stillness she recognized immediately &mdash; not
+       the stillness of waiting, but the stillness of something that had been patient for a very long time and had made
+       peace with it.</p>
+    <p>&ldquo;So there really is something like you,&rdquo; she said.</p>
+    <p>The dog lifted his head. &ldquo;You&rsquo;re not surprised.&rdquo;</p>
+    <p>&ldquo;I&rsquo;ve sat with enough people at the end to know something else was always in the room with us.&rdquo;</p>
+    <div class="who">&mdash; The Porch Swing</div>
+  </div>
+</div></section>
+
+<section id="glimpses" class="gallery"><div class="wrap">
+  <div class="lbl" style="margin-bottom:10px">Glimpses</div>
+  <h2>A look down the hallway</h2>
+  <p class="gsub">One watercolor for every soul &mdash; a few of the fifty-two.</p>
+  <div class="grid">
+    <figure><img src="covers/b08.jpg" alt="Cover illustration" loading="lazy"></figure>
+    <figure><img src="covers/b12.jpg" alt="Cover illustration" loading="lazy"></figure>
+    <figure><img src="covers/b36.jpg" alt="Cover illustration" loading="lazy"></figure>
+    <figure><img src="covers/b38.jpg" alt="Cover illustration" loading="lazy"></figure>
+    <figure><img src="covers/b31.jpg" alt="Cover illustration" loading="lazy"></figure>
+    <figure><img src="covers/b39.jpg" alt="Cover illustration" loading="lazy"></figure>
+    <figure><img src="covers/b47.jpg" alt="Cover illustration" loading="lazy"></figure>
+    <figure><img src="covers/b51.jpg" alt="Cover illustration" loading="lazy"></figure>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <p class="big disp">Fifty-two lives. Fifty-two doors.<br><span>One companion for the walk between.</span></p>
+</div></section>
+
+<section id="follow" class="cta"><div class="wrap">
+  <h2>The first books are written</h2>
+  <p>More arrive all the time. If you'd like to know when the series goes out into the world, reach me &mdash; I'll keep you posted.</p>
+  <a class="btn" href="../#contact">Get in touch</a>
+</div></section>
+
+<footer><div class="wrap">
+  <p><em>Where the Good Dog Waits</em> &mdash; a fiction series by <a href="../">Jordan Dorman</a>.
+     &copy; 2026 Jordan Dorman. All rights reserved.</p>
+</div></footer>
+
+</body>
+</html>
