@@ -436,10 +436,10 @@ const SKILLS = [
 const FEATURED = [
   {name:"CompTIA A+", issuer:"CompTIA", when:"Feb 2026 – Feb 2029", badge:"CERTIFIED", verify:"https://www.credly.com/badges/a3d1d2ae-84c8-4d07-af4f-1d22ec18a1ff/public_url"},
   {name:"Google IT Support Professional Certificate", issuer:"Google", when:"Jan 2026 · 6-course series", badge:"CERTIFIED", verify:"https://www.coursera.org/verify/professional-cert/3T6AB7UW7YB0"},
-  {name:"Welcome to ServiceNow (Micro-Certification)", issuer:"ServiceNow", when:"Feb 2026", badge:"CERTIFIED", verify:"https://www.linkedin.com/in/jordan-dorman/details/certifications/"},
+  {name:"Welcome to ServiceNow (Micro-Certification)", issuer:"ServiceNow", when:"Feb 2026", badge:"CERTIFIED", verify:"https://www.linkedin.com/in/jordan-dorman/"},
   {name:"Foundations of Cybersecurity", issuer:"Google", when:"Feb 2026", badge:"CERTIFICATE", verify:"https://www.coursera.org/verify/3KI11HF8690Z"},
   {name:"Endpoint Security", issuer:"Cisco", when:"Mar 2026", badge:"CERTIFICATE", verify:"https://www.credly.com/badges/3c731f5f-226c-4797-9099-1d93dbde0966/public_url"},
-  {name:"Career Essentials in GitHub", issuer:"GitHub", when:"Dec 2023 · Professional Certificate", badge:"CERTIFICATE", verify:"https://www.linkedin.com/in/jordan-dorman/details/certifications/"},
+  {name:"Career Essentials in GitHub", issuer:"GitHub", when:"Dec 2023 · Professional Certificate", badge:"CERTIFICATE", verify:"https://www.linkedin.com/in/jordan-dorman/"},
 ];
 
 // Every Trailhead badge, by month earned. Topics are assigned automatically by TRAIL_TOPICS below.
@@ -466,14 +466,15 @@ const TRAIL_TOPICS = [
   ["Leadership, Career & Consulting", /Manage|Leadership|Coaching|Feedback|Influence|Alignment|One-on-One|Engagement|Accountability|Storytelling|Resume|Interview|Career|Motivation|Productivity|Virtual|Working from Home|Emails|Design|Journey Mapping|Statement of Work|Consultant/],
 ];
 
+const LI = "https://www.linkedin.com/in/jordan-dorman/";  // catch-all: these certs are listed & verifiable on LinkedIn
 const CREDS = {
-  "CompTIA": [["CompTIA A+ (certified, valid to Feb 2029)","Feb 2026"],["Security+ (coursework in progress)","2026"]],
-  "Google": [["IT Support Professional Certificate","Jan 2026"],["Technical Support Fundamentals","Dec 2025"],["The Bits and Bytes of Computer Networking","Dec 2025"],["Operating Systems and You: Becoming a Power User","Dec 2025"],["System Administration and IT Infrastructure Services","Dec 2025"],["IT Security: Defense against the Digital Dark Arts","Jan 2026"],["Foundations of Cybersecurity","Feb 2026"],["Google AI Essentials","Feb 2026"],["Introduction to AI","Feb 2026"],["Discover the Art of Prompting","Feb 2026"],["Maximize Productivity With AI Tools","Feb 2026"],["Use AI Responsibly","Feb 2026"],["Stay Ahead of the AI Curve","Feb 2026"],["Accelerate Your Job Search with AI","Dec 2025"]],
-  "Cisco": [["Endpoint Security","Mar 2026"],["Introduction to IoT and Digital Transformation","Oct 2025"],["Introduction to Data Science & Analytics (NetAcad)","Oct 2025"],["Operating Systems & Hardware Fundamentals (NetAcad)","Sep 2025"]],
-  "ServiceNow": [["Micro-Certification: Welcome to ServiceNow","Feb 2026"]],
-  "Per Scholas": [["Computer Hardware Basics","Oct 2025"],["Operating Systems Basics","Oct 2025"],["Introduction to Data Science","Oct 2025"]],
-  "GitHub": [["Career Essentials in GitHub Professional Certificate","Dec 2023"],["Practical GitHub Actions","Nov 2023"],["Practical GitHub Copilot","Nov 2023"],["Practical GitHub Code Search","Dec 2023"],["Practical GitHub Project Management & Collaboration","Nov 2023"]],
-  "LinkedIn Learning": [["Introduction to Artificial Intelligence","May 2026"],["Project Management Skills for Leaders","May 2026"],["Statistics Foundations 1: The Basics","May 2026"],["Daily Habits for Effective People Management","May 2026"],["Critical Roles Consultants Play","May 2026"],["Managing Your Personal Finances","May 2026"],["Google Sheets: Advanced Formulas and Functions","Dec 2023"],["Excel Essential Training (Microsoft 365)","Nov 2023"],["Problem-Solving Techniques","Oct 2023"],["Decision-Making Strategies","Oct 2023"],["Learning Design Thinking","Oct 2023"],["Mastering Communications as a Leader","Oct 2023"],["Giving and Receiving Feedback","Oct 2023"],["How to Sell on Value, Not Price","Oct 2023"],["Learning Agility","Oct 2023"],["+ 9 more on time management, adaptability and professional growth","2023"]],
+  "CompTIA": [["CompTIA A+ (certified, valid to Feb 2029)","Feb 2026","https://www.credly.com/badges/a3d1d2ae-84c8-4d07-af4f-1d22ec18a1ff/public_url"],["Security+ (coursework in progress)","2026"]],
+  "Google": [["IT Support Professional Certificate","Jan 2026","https://www.coursera.org/verify/professional-cert/3T6AB7UW7YB0"],["Technical Support Fundamentals","Dec 2025","https://www.coursera.org/verify/NECJU8INL9V7"],["The Bits and Bytes of Computer Networking","Dec 2025","https://www.coursera.org/verify/9B7804Z8FFS6"],["Operating Systems and You: Becoming a Power User","Dec 2025","https://www.coursera.org/verify/J6NJZEJBDA2Y"],["System Administration and IT Infrastructure Services","Dec 2025","https://www.coursera.org/verify/K6QJ7RLNFFX4"],["IT Security: Defense against the Digital Dark Arts","Jan 2026","https://www.coursera.org/verify/WNGW8O1PNYNC"],["Foundations of Cybersecurity","Feb 2026","https://www.coursera.org/verify/3KI11HF8690Z"],["Google AI Essentials","Feb 2026","https://www.coursera.org/verify/specialization/PR5Q1IBCBBLZ"],["Introduction to AI","Feb 2026","https://www.coursera.org/verify/O7A04GACVXCF"],["Discover the Art of Prompting","Feb 2026","https://www.coursera.org/verify/LRIZQ1HSAH8B"],["Maximize Productivity With AI Tools","Feb 2026","https://www.coursera.org/verify/HGZYJLEE2ZPT"],["Use AI Responsibly","Feb 2026","https://www.coursera.org/verify/GRXZ23HHLZ4M"],["Stay Ahead of the AI Curve","Feb 2026","https://www.coursera.org/verify/DGQ9ZO772KRV"],["Accelerate Your Job Search with AI","Dec 2025","https://www.coursera.org/verify/WSSVSXRX5OWU"]],
+  "Cisco": [["Endpoint Security","Mar 2026","https://www.credly.com/badges/3c731f5f-226c-4797-9099-1d93dbde0966/public_url"],["Introduction to IoT and Digital Transformation","Oct 2025","https://www.credly.com/badges/3e4070f6-a854-4f8a-968c-31035c92ef82/public_url"],["Introduction to Data Science & Analytics (NetAcad)","Oct 2025","https://www.credly.com/badges/a4f514d5-0b6f-4c6c-8c36-59cf0d1b9f2e/public_url"],["Operating Systems & Hardware Fundamentals (NetAcad)","Sep 2025","https://www.credly.com/users/jordan-dorman"]],
+  "ServiceNow": [["Micro-Certification: Welcome to ServiceNow","Feb 2026",LI]],
+  "Per Scholas": [["Computer Hardware Basics","Oct 2025","https://www.credly.com/badges/4fca1bba-e119-4267-9e09-82fd5a13d70b/public_url"],["Operating Systems Basics","Oct 2025","https://www.credly.com/badges/1df226c1-c45b-4deb-a6cf-271d8dfc29e1/public_url"],["Introduction to Data Science","Oct 2025","https://www.credly.com/badges/a4f514d5-0b6f-4c6c-8c36-59cf0d1b9f2e/public_url"]],
+  "GitHub": [["Career Essentials in GitHub Professional Certificate","Dec 2023",LI],["Practical GitHub Actions","Nov 2023",LI],["Practical GitHub Copilot","Nov 2023",LI],["Practical GitHub Code Search","Dec 2023",LI],["Practical GitHub Project Management & Collaboration","Nov 2023",LI]],
+  "LinkedIn Learning": [["Introduction to Artificial Intelligence","May 2026",LI],["Project Management Skills for Leaders","May 2026",LI],["Statistics Foundations 1: The Basics","May 2026",LI],["Daily Habits for Effective People Management","May 2026",LI],["Critical Roles Consultants Play","May 2026",LI],["Managing Your Personal Finances","May 2026",LI],["Google Sheets: Advanced Formulas and Functions","Dec 2023",LI],["Excel Essential Training (Microsoft 365)","Nov 2023",LI],["Problem-Solving Techniques","Oct 2023",LI],["Decision-Making Strategies","Oct 2023",LI],["Learning Design Thinking","Oct 2023",LI],["Mastering Communications as a Leader","Oct 2023",LI],["Giving and Receiving Feedback","Oct 2023",LI],["How to Sell on Value, Not Price","Oct 2023",LI],["Learning Agility","Oct 2023",LI],["+ 9 more on time management, adaptability and professional growth","2023"]],
 };
 
 /* ===== rendering (no need to edit below) ===== */
@@ -511,9 +512,10 @@ const CREDS = {
 
   document.getElementById("credcount").textContent =
     `CompTIA A+ certified · Google IT Support certified · Security+ in progress · 50+ credentials, plus Salesforce Trailhead Ranger (157 badges, 48 trails)`;
+  const vlink = u => u ? ` <a href="${esc(u)}" target="_blank" rel="noopener" style="color:var(--amber);font-size:11px;white-space:nowrap">verify ↗</a>` : "";
   document.getElementById("credall").innerHTML = Object.entries(CREDS).map(([issuer, list]) =>
     `<details class="issuerbox"><summary>${esc(issuer)}<span class="n">${list.length} ▾</span></summary>
-     <ul>${list.map(([n, d]) => `<li><span>${esc(n)}</span><span>${esc(d)}</span></li>`).join("")}</ul></details>`).join("") + trail;
+     <ul>${list.map(([n, d, u]) => `<li><span>${esc(n)}${vlink(u)}</span><span>${esc(d)}</span></li>`).join("")}</ul></details>`).join("") + trail;
 })();
 </script>
 </body>
