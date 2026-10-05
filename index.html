@@ -281,7 +281,7 @@ details.more[open] summary::before{content:'\2212 '}
     scheduling and KPIs.</p></div>
   <div class="xp"><h3>Per Scholas — IT Support Specialist Track</h3><div class="meta">2025 – 2026 · 15-WEEK FULL-TIME PROGRAM</div>
     <p>Earned <b style="color:var(--text)">CompTIA A+ certification</b> and the Google IT Support Professional
-    Certificate; now in Security+ coursework. Also holds ServiceNow, Cisco and GitHub credentials, plus 41 Salesforce Trailhead trails (149 badges).</p></div>
+    Certificate; now in Security+ coursework. Also holds ServiceNow, Cisco and GitHub credentials, plus 48 Salesforce Trailhead trails (157 badges, Ranger rank).</p></div>
 </div></section>
 
 <section id="projects"><div class="wrap">
@@ -434,12 +434,12 @@ const SKILLS = [
 
 // badge: "CERTIFIED" for real certifications, "CERTIFICATE" for course/program certificates
 const FEATURED = [
-  {name:"CompTIA A+", issuer:"CompTIA", when:"Feb 2026 – Feb 2029", badge:"CERTIFIED"},
-  {name:"Google IT Support Professional Certificate", issuer:"Google", when:"Jan 2026 · 6-course series", badge:"CERTIFIED"},
-  {name:"Welcome to ServiceNow (Micro-Certification)", issuer:"ServiceNow", when:"Feb 2026", badge:"CERTIFIED"},
-  {name:"Foundations of Cybersecurity", issuer:"Google", when:"Feb 2026", badge:"CERTIFICATE"},
-  {name:"Endpoint Security", issuer:"Cisco", when:"Mar 2026", badge:"CERTIFICATE"},
-  {name:"Career Essentials in GitHub", issuer:"GitHub", when:"Dec 2023 · Professional Certificate", badge:"CERTIFICATE"},
+  {name:"CompTIA A+", issuer:"CompTIA", when:"Feb 2026 – Feb 2029", badge:"CERTIFIED", verify:"https://www.credly.com/badges/a3d1d2ae-84c8-4d07-af4f-1d22ec18a1ff/public_url"},
+  {name:"Google IT Support Professional Certificate", issuer:"Google", when:"Jan 2026 · 6-course series", badge:"CERTIFIED", verify:"https://www.coursera.org/verify/professional-cert/3T6AB7UW7YB0"},
+  {name:"Welcome to ServiceNow (Micro-Certification)", issuer:"ServiceNow", when:"Feb 2026", badge:"CERTIFIED", verify:"https://www.linkedin.com/in/jordan-dorman/details/certifications/"},
+  {name:"Foundations of Cybersecurity", issuer:"Google", when:"Feb 2026", badge:"CERTIFICATE", verify:"https://www.coursera.org/verify/3KI11HF8690Z"},
+  {name:"Endpoint Security", issuer:"Cisco", when:"Mar 2026", badge:"CERTIFICATE", verify:"https://www.credly.com/badges/3c731f5f-226c-4797-9099-1d93dbde0966/public_url"},
+  {name:"Career Essentials in GitHub", issuer:"GitHub", when:"Dec 2023 · Professional Certificate", badge:"CERTIFICATE", verify:"https://www.linkedin.com/in/jordan-dorman/details/certifications/"},
 ];
 
 // Every Trailhead badge, by month earned. Topics are assigned automatically by TRAIL_TOPICS below.
@@ -485,7 +485,8 @@ const CREDS = {
      <details class="more"><summary>show all ${s.top.length + s.more.length}</summary><div class="chips">${chips(s.more)}</div></details></div>`).join("");
   document.getElementById("credfeatured").innerHTML = FEATURED.map(c =>
     `<div class="card feat">${c.badge ? `<span class="badge">${c.badge}</span>` : ""}<div class="issuer">${esc(c.issuer)}</div>
-     <h3 style="margin-top:6px">${esc(c.name)}</h3><div class="when">${esc(c.when)}</div></div>`).join("");
+     <h3 style="margin-top:6px">${esc(c.name)}</h3><div class="when">${esc(c.when)}</div>
+     ${c.verify ? `<p style="margin-top:10px"><a href="${esc(c.verify)}" target="_blank" rel="noopener" style="color:var(--amber);font:600 13px 'JetBrains Mono',monospace">Verify ↗</a></p>` : ""}</div>`).join("");
   // Trailhead: sort every badge into a topic, newest first inside each topic
   const topics = {};
   let badges = 0;
@@ -499,15 +500,17 @@ const CREDS = {
   }
   const order = [...TRAIL_TOPICS.map(t => t[0]), "Other"].filter(t => topics[t]);
   const trailList = Object.entries(TRAILS).flatMap(([m, names]) => names.map(n => [n, m]));
-  const trail = `<details class="issuerbox"><summary>Salesforce Trailhead<span class="n">${trailList.length} trails · ${badges} badges ▾</span></summary>
-     <div class="cats"><details class="cat" open><summary>Completed trails (full learning paths)<span>${trailList.length}</span></summary>
+  const TH_PROFILE = "https://www.salesforce.com/trailblazer/iphvq6q6098inkrl43";
+  const trail = `<details class="issuerbox"><summary>Salesforce Trailhead<span class="n">Ranger · 157 badges · 48 trails ▾</span></summary>
+     <div class="cats"><p style="font:500 12px 'JetBrains Mono',monospace;color:var(--faint);margin:2px 2px 12px">Ranger rank · 157 badges · 48 trails · <a href="${TH_PROFILE}" target="_blank" rel="noopener" style="color:var(--amber)">view live profile ↗</a> &nbsp;—&nbsp; selected breakdown below</p>
+     <details class="cat" open><summary>Completed trails (full learning paths)<span>${trailList.length}</span></summary>
        <ul>${trailList.map(([n, d]) => `<li><span>${esc(n)}</span><span>${esc(d)}</span></li>`).join("")}</ul></details>
      <p style="font:500 12px 'JetBrains Mono',monospace;color:var(--faint);margin:14px 2px 2px">BADGES BY TOPIC</p>
      ${order.map(t => `<details class="cat"><summary>${esc(t)}<span>${topics[t].length}</span></summary>
        <ul>${topics[t].map(([n, d]) => `<li><span>${esc(n)}</span><span>${esc(d)}</span></li>`).join("")}</ul></details>`).join("")}</div></details>`;
 
   document.getElementById("credcount").textContent =
-    `CompTIA A+ certified · Google IT Support certified · Security+ in progress · 50+ credentials, plus ${trailList.length} Trailhead trails (${badges} badges)`;
+    `CompTIA A+ certified · Google IT Support certified · Security+ in progress · 50+ credentials, plus Salesforce Trailhead Ranger (157 badges, 48 trails)`;
   document.getElementById("credall").innerHTML = Object.entries(CREDS).map(([issuer, list]) =>
     `<details class="issuerbox"><summary>${esc(issuer)}<span class="n">${list.length} ▾</span></summary>
      <ul>${list.map(([n, d]) => `<li><span>${esc(n)}</span><span>${esc(d)}</span></li>`).join("")}</ul></details>`).join("") + trail;
