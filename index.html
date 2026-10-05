@@ -434,11 +434,11 @@ const SKILLS = [
 
 // badge: "CERTIFIED" for real certifications, "CERTIFICATE" for course/program certificates
 const FEATURED = [
-  {name:"CompTIA A+", issuer:"CompTIA", when:"Feb 2026 – Feb 2029", badge:"CERTIFIED", img:"assets/img/badge_aplus.png", verify:"https://www.credly.com/badges/a3d1d2ae-84c8-4d07-af4f-1d22ec18a1ff/public_url"},
+  {name:"CompTIA A+", issuer:"CompTIA", when:"Feb 2026 – Feb 2029", badge:"CERTIFIED", verify:"https://www.credly.com/badges/a3d1d2ae-84c8-4d07-af4f-1d22ec18a1ff/public_url"},
   {name:"Google IT Support Professional Certificate", issuer:"Google", when:"Jan 2026 · 6-course series", badge:"CERTIFIED", verify:"https://www.coursera.org/verify/professional-cert/3T6AB7UW7YB0"},
   {name:"Welcome to ServiceNow (Micro-Certification)", issuer:"ServiceNow", when:"Feb 2026", badge:"CERTIFIED", verify:"https://www.linkedin.com/in/jordan-dorman/"},
   {name:"Foundations of Cybersecurity", issuer:"Google", when:"Feb 2026", badge:"CERTIFICATE", verify:"https://www.coursera.org/verify/3KI11HF8690Z"},
-  {name:"Endpoint Security", issuer:"Cisco", when:"Mar 2026", badge:"CERTIFICATE", img:"assets/img/badge_endpoint.png", verify:"https://www.credly.com/badges/3c731f5f-226c-4797-9099-1d93dbde0966/public_url"},
+  {name:"Endpoint Security", issuer:"Cisco", when:"Mar 2026", badge:"CERTIFICATE", verify:"https://www.credly.com/badges/3c731f5f-226c-4797-9099-1d93dbde0966/public_url"},
   {name:"Career Essentials in GitHub", issuer:"GitHub", when:"Dec 2023 · Professional Certificate", badge:"CERTIFICATE", verify:"https://www.linkedin.com/in/jordan-dorman/"},
 ];
 
@@ -485,7 +485,7 @@ const CREDS = {
     `<div class="card"><h3>${esc(s.area)}</h3><div class="chips">${chips(s.top)}</div>
      <details class="more"><summary>show all ${s.top.length + s.more.length}</summary><div class="chips">${chips(s.more)}</div></details></div>`).join("");
   document.getElementById("credfeatured").innerHTML = FEATURED.map(c =>
-    `<div class="card feat">${c.badge ? `<span class="badge">${c.badge}</span>` : ""}${c.img ? `<img src="${esc(c.img)}" alt="${esc(c.name)} badge" width="56" height="56" loading="lazy" style="display:block;width:56px;height:56px;margin-bottom:10px">` : ""}<div class="issuer">${esc(c.issuer)}</div>
+    `<div class="card feat">${c.badge ? `<span class="badge">${c.badge}</span>` : ""}<div class="issuer">${esc(c.issuer)}</div>
      <h3 style="margin-top:6px">${esc(c.name)}</h3><div class="when">${esc(c.when)}</div>
      ${c.verify ? `<p style="margin-top:10px"><a href="${esc(c.verify)}" target="_blank" rel="noopener" style="color:var(--amber);font:600 13px 'JetBrains Mono',monospace">Verify ↗</a></p>` : ""}</div>`).join("");
   // Trailhead: sort every badge into a topic, newest first inside each topic
