@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Steady Systems &mdash; Templates &amp; Tools</title>
+<meta name="description" content="Steady Systems by Jordan Dorman: practical, original templates and tools for studying, job hunting, money and getting organized. Instant download on Gumroad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0F1524; --bg2:#121A2E; --surface:#17203A; --line:#243150; --line-soft:#1D2A49;
+  --text:#E9E4D6; --dim:#A9AFC4; --faint:#6C748F;
+  --amber:#E8A33C; --amber-deep:#C9801F; --ember:#B4621F;
+  --paper:#F6F2E6; --paper-ink:#22344D; --paper-dim:#4A5568;
+  --steady:#4FC08D; --glow:0 0 32px rgba(232,163,60,.14);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:16px/1.7 Inter,system-ui,sans-serif;
+  background-image:radial-gradient(900px 480px at 85% -10%,rgba(232,163,60,.09),transparent 60%),
+  linear-gradient(rgba(36,49,80,.22) 1px,transparent 1px),linear-gradient(90deg,rgba(36,49,80,.22) 1px,transparent 1px);
+  background-size:auto,44px 44px,44px 44px}
+h1,h2,h3{font-family:'Space Grotesk',Inter,sans-serif;line-height:1.14}
+a{color:var(--amber)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+::selection{background:rgba(232,163,60,.35)}
+a:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+
+nav{position:sticky;top:0;background:rgba(15,21,36,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft);z-index:10}
+nav .wrap{display:flex;align-items:center;gap:18px;height:58px}
+nav .brand{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:15px;margin-right:auto;color:var(--text);text-decoration:none}
+nav .brand span{color:var(--amber)}
+nav a{color:var(--dim);text-decoration:none;font-size:14px;font-weight:500}
+nav a:hover{color:var(--text)}
+nav a.store{background:var(--amber);color:#1A1205;padding:7px 15px;border-radius:999px;font-weight:600}
+
+header{padding:64px 0 36px}
+header .eyebrow{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--amber);letter-spacing:.12em;margin-bottom:12px}
+header h1{font-size:clamp(34px,6vw,54px);font-weight:700;color:#F4F1E6;letter-spacing:-.01em}
+header p{max-width:650px;font-size:18px;color:var(--dim);margin-top:14px}
+.meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.tag{font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:.05em;border:1px solid var(--line);border-radius:999px;padding:6px 14px;color:var(--dim);background:rgba(23,32,58,.6)}
+.tag b{color:var(--steady)}
+
+section{padding:44px 0;border-top:1px solid var(--line-soft)}
+.kicker{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--amber);letter-spacing:.1em;margin-bottom:8px}
+section h2{font-size:27px;color:#F4F1E6;margin-bottom:4px}
+section .sub{color:var(--faint);margin-bottom:26px;font-size:15px}
+.subhead{font-size:16px;color:var(--amber-deep);margin:26px 0 14px;font-family:'Space Grotesk';display:flex;align-items:center;gap:10px}
+.subhead span{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--faint);border:1px solid var(--line);border-radius:999px;padding:1px 9px}
+
+.shopgrid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(258px,1fr))}
+.paper{background:var(--paper);color:var(--paper-ink);border-radius:14px;display:flex;flex-direction:column;
+  border-top:4px solid var(--amber-deep);overflow:hidden;
+  box-shadow:0 2px 4px rgba(0,0,0,.35),0 18px 44px -18px rgba(0,0,0,.5);transition:transform .14s,box-shadow .14s}
+.paper:hover{transform:translateY(-4px);box-shadow:0 4px 8px rgba(0,0,0,.4),0 26px 54px -18px rgba(232,163,60,.28)}
+.shotlink{display:block}
+.shot{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:left top;background:#ECE6D4;border-bottom:1px solid #E3DDC9}
+.paper .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:16px 20px 0}
+.paper h3{font-size:16.5px;color:var(--paper-ink)}
+.paper .price{font-family:'Space Grotesk';font-weight:700;font-size:20px;color:var(--ember)}
+.paper p{font-size:13.8px;color:var(--paper-dim);padding:8px 20px 0;flex:0 0 auto}
+.paper .chips{display:flex;flex-wrap:wrap;gap:6px;padding:12px 20px 0}
+.chip{font-family:'JetBrains Mono',monospace;font-size:11px;color:#8a5a12;border:1px solid #d9b979;background:#f3e8cd;border-radius:7px;padding:2px 8px}
+.paper .go{margin-top:auto;padding:16px 20px;font-weight:600;font-size:14px;color:var(--ember);text-decoration:none}
+.paper .go:hover{color:var(--paper-ink)}
+
+footer{padding:52px 0 72px;border-top:1px solid var(--line-soft);background:#0B101D;margin-top:20px}
+footer .wrap{color:var(--dim)}
+footer a{color:var(--amber)}
+.fine{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--faint);margin-top:18px;line-height:1.9}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="../">jordan<span>@</span>steady<span>:~$</span></a>
+  <a href="../">&larr; Back to portfolio</a>
+  <a class="store" href="https://syssteady.gumroad.com" target="_blank" rel="noopener">Gumroad store</a>
+</div></nav>
+
+<header><div class="wrap">
+  <div class="eyebrow">STEADY SYSTEMS</div>
+  <h1>Templates &amp; tools, built because I needed them.</h1>
+  <p>Practical, original systems for studying, job-hunting, money and getting organized &mdash; in the formats you
+     already use (Excel, Word, PDF, Obsidian/Notion). Every one is a clean instant download.</p>
+  <div class="meta">
+    <span class="tag"><b>39</b> products</span>
+    <span class="tag">Instant download</span>
+    <span class="tag">Personal-use license</span>
+    <span class="tag">Made in Dallas, TX</span>
+  </div>
+</div></header>
+
+<main class="wrap">
+    <section>
+      <div class="kicker">BUNDLES &middot; BEST VALUE</div>
+      <h2>Bundles</h2>
+      <p class="sub">The full systems together, at a discount.</p>
+      <div class="shopgrid">
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/steady-start-bundle" target="_blank" rel="noopener">
+          <img class="shot" src="covers/steady-start-bundle.png" alt="Steady Start Bundle cover" loading="lazy"></a>
+        <div class="top"><h3>Steady Start Bundle</h3><span class="price">$20</span></div>
+        <p>The full get-back-on-your-feet kit: Cornell Notes System, Job-Search Tracker and 90-Day Reset Planner together.</p>
+        <div class="chips"><span class="chip">PDF</span><span class="chip">Word</span><span class="chip">Obsidian</span><span class="chip">Excel</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/steady-start-bundle" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/job-hunt-kit" target="_blank" rel="noopener">
+          <img class="shot" src="covers/job-hunt-kit.png" alt="Job Hunt Kit cover" loading="lazy"></a>
+        <div class="top"><h3>Job Hunt Kit</h3><span class="price">$15</span></div>
+        <p>Everything the application grind needs: the Job-Search Tracker plus the ATS-clean resume and cover letter pack — $15 instead of $20 apart.</p>
+        <div class="chips"><span class="chip">Excel</span><span class="chip">PDF</span><span class="chip">Obsidian</span><span class="chip">Word</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/job-hunt-kit" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/everything-bundle" target="_blank" rel="noopener">
+          <img class="shot" src="covers/everything-bundle.png" alt="Steady Systems cover" loading="lazy"></a>
+        <div class="top"><h3>Steady Systems</h3><span class="price">$40</span></div>
+        <p>All six Steady Systems templates in one download: study, job hunt, planning and budgeting.</p>
+        <div class="chips"><span class="chip">PDF</span><span class="chip">Word</span><span class="chip">Obsidian</span><span class="chip">Excel</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/everything-bundle" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+    </div>
+    </section>
+    <section>
+      <div class="kicker">FLAGSHIP SYSTEMS</div>
+      <h2>Template Systems</h2>
+      <p class="sub">Multi-format systems (Excel, Word, PDF, Obsidian/Notion) for studying, job-hunting, money and work.</p>
+      <div class="shopgrid">
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/cornell-notes-system" target="_blank" rel="noopener">
+          <img class="shot" src="covers/cornell-notes-system.png" alt="Cornell Notes System cover" loading="lazy"></a>
+        <div class="top"><h3>Cornell Notes System</h3><span class="price">$10</span></div>
+        <p>The complete Cornell note-taking method in every format: a printable PDF pack, an editable Word template, an Obsidian starter vault, and a guide to the method itself.</p>
+        <div class="chips"><span class="chip">PDF</span><span class="chip">Word</span><span class="chip">Obsidian</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/cornell-notes-system" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/job-search-tracker" target="_blank" rel="noopener">
+          <img class="shot" src="covers/job-search-tracker.png" alt="Job-Search Tracker cover" loading="lazy"></a>
+        <div class="top"><h3>Job-Search Tracker</h3><span class="price">$10</span></div>
+        <p>Track every application, follow-up and interview in one dashboard — built from a real 250-application job hunt.</p>
+        <div class="chips"><span class="chip">Excel</span><span class="chip">PDF</span><span class="chip">Obsidian</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/job-search-tracker" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/90-day-reset-planner" target="_blank" rel="noopener">
+          <img class="shot" src="covers/90-day-reset-planner.png" alt="90-Day Reset Planner cover" loading="lazy"></a>
+        <div class="top"><h3>90-Day Reset Planner</h3><span class="price">$10</span></div>
+        <p>A 90-day day-by-day planner across five life categories — housing, health, education, work, money — with weekly recaps.</p>
+        <div class="chips"><span class="chip">PDF</span><span class="chip">Excel</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/90-day-reset-planner" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/resume-template-pack" target="_blank" rel="noopener">
+          <img class="shot" src="covers/resume-template-pack.png" alt="ATS-Clean Resume + Cover Letter Pack cover" loading="lazy"></a>
+        <div class="top"><h3>ATS-Clean Resume + Cover Letter Pack</h3><span class="price">$10</span></div>
+        <p>ATS-safe Word resume and cover-letter templates plus a tailoring guide — built from a workflow that produced hundreds of tailored applications.</p>
+        <div class="chips"><span class="chip">Word</span><span class="chip">PDF</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/resume-template-pack" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/study-app-template" target="_blank" rel="noopener">
+          <img class="shot" src="covers/study-app-template.png" alt="Flashcard Study App cover" loading="lazy"></a>
+        <div class="top"><h3>Flashcard Study App</h3><span class="price">$15</span></div>
+        <p>A self-contained HTML flashcard + quiz app you fill with your own material — no accounts, no installs, works offline.</p>
+        <div class="chips"><span class="chip">HTML App</span><span class="chip">Guide</span><span class="chip">PDF</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/study-app-template" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/budget-bills-tracker" target="_blank" rel="noopener">
+          <img class="shot" src="covers/budget-bills-tracker.png" alt="Budget, Bills &amp; Subscriptions Tracker cover" loading="lazy"></a>
+        <div class="top"><h3>Budget, Bills &amp; Subscriptions Tracker</h3><span class="price">$10</span></div>
+        <p>One spreadsheet for income, bills, subscriptions and debt payoff — see every dollar&#x27;s job a month ahead.</p>
+        <div class="chips"><span class="chip">Excel</span><span class="chip">PDF</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/budget-bills-tracker" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/security-plus-study-kit" target="_blank" rel="noopener">
+          <img class="shot" src="covers/security-plus-study-kit.png" alt="Security+ Study Kit cover" loading="lazy"></a>
+        <div class="top"><h3>Security+ Study Kit</h3><span class="price">$25</span></div>
+        <p>Original objective-by-objective study notes, acronym deck and practice prompts for the CompTIA Security+ SY0-701 exam.</p>
+        <div class="chips"><span class="chip">PDF</span><span class="chip">CSV</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/security-plus-study-kit" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/aplus-study-kit" target="_blank" rel="noopener">
+          <img class="shot" src="covers/aplus-study-kit.png" alt="A+ Study Kit cover" loading="lazy"></a>
+        <div class="top"><h3>A+ Study Kit</h3><span class="price">$25</span></div>
+        <p>Original objective-by-objective study notes, a 187-card acronym deck and 36 explained practice prompts covering both CompTIA A+ exams.</p>
+        <div class="chips"><span class="chip">PDF</span><span class="chip">CSV</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/aplus-study-kit" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/second-brain-vault" target="_blank" rel="noopener">
+          <img class="shot" src="covers/second-brain-vault.png" alt="Second Brain Starter Vault cover" loading="lazy"></a>
+        <div class="top"><h3>Second Brain Starter Vault</h3><span class="price">$15</span></div>
+        <p>A ready-to-use Obsidian vault and Notion template to organize notes, tasks and ideas in one calm system.</p>
+        <div class="chips"><span class="chip">Obsidian</span><span class="chip">PDF</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/second-brain-vault" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/exam-study-planner" target="_blank" rel="noopener">
+          <img class="shot" src="covers/exam-study-planner.png" alt="Exam &amp; Study Planner System cover" loading="lazy"></a>
+        <div class="top"><h3>Exam &amp; Study Planner System</h3><span class="price">$10</span></div>
+        <p>Plan any exam with a countdown, spaced-repetition review tracker and a topic-mastery grid. Works for any test.</p>
+        <div class="chips"><span class="chip">Excel</span><span class="chip">PDF</span><span class="chip">Obsidian</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/exam-study-planner" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/interview-prep-kit" target="_blank" rel="noopener">
+          <img class="shot" src="covers/interview-prep-kit.png" alt="Interview Prep Kit cover" loading="lazy"></a>
+        <div class="top"><h3>Interview Prep Kit</h3><span class="price">$10</span></div>
+        <p>Build strong STAR answers, research the company, and send follow-ups that land — in one prep kit.</p>
+        <div class="chips"><span class="chip">Word</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/interview-prep-kit" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/freelancer-business-kit" target="_blank" rel="noopener">
+          <img class="shot" src="covers/freelancer-business-kit.png" alt="Freelancer Business-in-a-Box cover" loading="lazy"></a>
+        <div class="top"><h3>Freelancer Business-in-a-Box</h3><span class="price">$15</span></div>
+        <p>The admin backbone for a solo business: invoice, client tracker, project tracker and income/expense log.</p>
+        <div class="chips"><span class="chip">Word</span><span class="chip">Excel</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/freelancer-business-kit" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/focus-routine-planner" target="_blank" rel="noopener">
+          <img class="shot" src="covers/focus-routine-planner.png" alt="Focus &amp; Routine Planner cover" loading="lazy"></a>
+        <div class="top"><h3>Focus &amp; Routine Planner</h3><span class="price">$10</span></div>
+        <p>A calm, low-friction daily and weekly planner built for ADHD and busy brains. Few decisions, high contrast.</p>
+        <div class="chips"><span class="chip">PDF</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/focus-routine-planner" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/debt-payoff-savings" target="_blank" rel="noopener">
+          <img class="shot" src="covers/debt-payoff-savings.png" alt="Debt Payoff &amp; Savings System cover" loading="lazy"></a>
+        <div class="top"><h3>Debt Payoff &amp; Savings System</h3><span class="price">$10</span></div>
+        <p>Pay off debt and build a cushion: snowball/avalanche calculators, sinking funds and a net-worth tracker.</p>
+        <div class="chips"><span class="chip">Excel</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/debt-payoff-savings" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/meal-plan-grocery" target="_blank" rel="noopener">
+          <img class="shot" src="covers/meal-plan-grocery.png" alt="Meal Plan &amp; Grocery System cover" loading="lazy"></a>
+        <div class="top"><h3>Meal Plan &amp; Grocery System</h3><span class="price">$10</span></div>
+        <p>Plan the week&#x27;s meals, build a grocery list sorted by aisle, and track your pantry. Less waste, fewer trips.</p>
+        <div class="chips"><span class="chip">Excel</span><span class="chip">PDF</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/meal-plan-grocery" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/habit-goal-tracker" target="_blank" rel="noopener">
+          <img class="shot" src="covers/habit-goal-tracker.png" alt="Habit &amp; Goal Tracker System cover" loading="lazy"></a>
+        <div class="top"><h3>Habit &amp; Goal Tracker System</h3><span class="price">$10</span></div>
+        <p>A goal cascade that connects: yearly goals break into quarterly focuses into weekly habits, with streak grids.</p>
+        <div class="chips"><span class="chip">Excel</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/habit-goal-tracker" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/content-calendar-kit" target="_blank" rel="noopener">
+          <img class="shot" src="covers/content-calendar-kit.png" alt="Content Calendar &amp; Creator Kit cover" loading="lazy"></a>
+        <div class="top"><h3>Content Calendar &amp; Creator Kit</h3><span class="price">$15</span></div>
+        <p>Plan and keep up with content: a calendar, an idea bank, an analytics tracker and a repurpose planner.</p>
+        <div class="chips"><span class="chip">Excel</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/content-calendar-kit" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/bookkeeping-starter" target="_blank" rel="noopener">
+          <img class="shot" src="covers/bookkeeping-starter.png" alt="Small-Business Bookkeeping Starter cover" loading="lazy"></a>
+        <div class="top"><h3>Small-Business Bookkeeping Starter</h3><span class="price">$15</span></div>
+        <p>Simple books without software: income/expense ledger, mileage log, invoice and an automatic profit-and-loss.</p>
+        <div class="chips"><span class="chip">Excel</span><span class="chip">Word</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/bookkeeping-starter" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+    </div>
+    </section>
+    <section>
+      <div class="kicker">$5 MINI-PACKS</div>
+      <h2>Quick Mini-Packs</h2>
+      <p class="sub">Focused 2&ndash;3 file packs for one job each &mdash; the price of a coffee.</p>
+      <h3 class="subhead">Student essentials <span>8</span></h3>
+      <div class="shopgrid">
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/assignment-tracker" target="_blank" rel="noopener">
+          <img class="shot" src="covers/assignment-tracker.png" alt="Assignment Tracker cover" loading="lazy"></a>
+        <div class="top"><h3>Assignment Tracker</h3><span class="price">$5</span></div>
+        <p>Track every assignment and due date with automatic days-left and overdue colors, plus a printable weekly planner.</p>
+        <div class="chips"><span class="chip">Excel</span><span class="chip">PDF</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/assignment-tracker" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/class-schedule-printable" target="_blank" rel="noopener">
+          <img class="shot" src="covers/class-schedule-printable.png" alt="Class Schedule + Course Info Sheet (Printable) cover" loading="lazy"></a>
+        <div class="top"><h3>Class Schedule + Course Info Sheet (Printable)</h3><span class="price">$5</span></div>
+        <p>A printable weekly class schedule (7 AM to 9 PM, Mon to Sat) and a course info sheet for instructors, office hours and key dates.</p>
+        <div class="chips"><span class="chip">PDF</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/class-schedule-printable" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/grade-gpa-calculator" target="_blank" rel="noopener">
+          <img class="shot" src="covers/grade-gpa-calculator.png" alt="Grade &amp; GPA Calculator cover" loading="lazy"></a>
+        <div class="top"><h3>Grade &amp; GPA Calculator</h3><span class="price">$5</span></div>
+        <p>Weighted course-grade calculator, what-do-I-need-on-the-final calculator, and a 4.0-scale GPA calculator.</p>
+        <div class="chips"><span class="chip">PDF</span><span class="chip">Excel</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/grade-gpa-calculator" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/semester-calendar" target="_blank" rel="noopener">
+          <img class="shot" src="covers/semester-calendar.png" alt="Semester Calendar cover" loading="lazy"></a>
+        <div class="top"><h3>Semester Calendar</h3><span class="price">$5</span></div>
+        <p>An 18-week semester-at-a-glance page, five undated month pages, and a semester setup checklist.</p>
+        <div class="chips"><span class="chip">PDF</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/semester-calendar" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/reading-log-chapter-notes" target="_blank" rel="noopener">
+          <img class="shot" src="covers/reading-log-chapter-notes.png" alt="Reading Log + Chapter Notes Pages (Printable) cover" loading="lazy"></a>
+        <div class="top"><h3>Reading Log + Chapter Notes Pages (Printable)</h3><span class="price">$5</span></div>
+        <p>A printable reading log for assigned readings and books, plus chapter notes pages for main ideas, key points and questions.</p>
+        <div class="chips"><span class="chip">PDF</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/reading-log-chapter-notes" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/group-project-planner" target="_blank" rel="noopener">
+          <img class="shot" src="covers/group-project-planner.png" alt="Group Project Planner cover" loading="lazy"></a>
+        <div class="top"><h3>Group Project Planner</h3><span class="price">$5</span></div>
+        <p>A 3-page printable planner for group projects: team roles, task board, ground rules, meeting notes and a milestone timeline.</p>
+        <div class="chips"><span class="chip">PDF</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/group-project-planner" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/exam-countdown-planner" target="_blank" rel="noopener">
+          <img class="shot" src="covers/exam-countdown-planner.png" alt="Exam Countdown Planner cover" loading="lazy"></a>
+        <div class="top"><h3>Exam Countdown Planner</h3><span class="price">$5</span></div>
+        <p>A 14-day exam countdown, a topic confidence checklist, a practice-test log and a night-before checklist.</p>
+        <div class="chips"><span class="chip">PDF</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/exam-countdown-planner" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/scholarship-tracker" target="_blank" rel="noopener">
+          <img class="shot" src="covers/scholarship-tracker.png" alt="Scholarship Application Tracker cover" loading="lazy"></a>
+        <div class="top"><h3>Scholarship Application Tracker</h3><span class="price">$5</span></div>
+        <p>Track scholarships, deadlines, requirements and results in Excel, and plan each essay on a printable page.</p>
+        <div class="chips"><span class="chip">PDF</span><span class="chip">Excel</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/scholarship-tracker" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+    </div>
+      <h3 class="subhead">Job-hunt micro-tools <span>5</span></h3>
+      <div class="shopgrid">
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/salary-offer-kit" target="_blank" rel="noopener">
+          <img class="shot" src="covers/salary-offer-kit.png" alt="Salary &amp; Offer Kit cover" loading="lazy"></a>
+        <div class="top"><h3>Salary &amp; Offer Kit</h3><span class="price">$5</span></div>
+        <p>Research your market rate, then compare job offers side by side on pay and on fit. Two Excel tools.</p>
+        <div class="chips"><span class="chip">Excel</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/salary-offer-kit" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/networking-references-kit" target="_blank" rel="noopener">
+          <img class="shot" src="covers/networking-references-kit.png" alt="Networking &amp; References Kit cover" loading="lazy"></a>
+        <div class="top"><h3>Networking &amp; References Kit</h3><span class="price">$5</span></div>
+        <p>Keep your job-search network warm and your references ready: an Excel contacts log and a fill-in references sheet.</p>
+        <div class="chips"><span class="chip">Excel</span><span class="chip">Word</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/networking-references-kit" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/interview-day-pack" target="_blank" rel="noopener">
+          <img class="shot" src="covers/interview-day-pack.png" alt="Interview Day Pack cover" loading="lazy"></a>
+        <div class="top"><h3>Interview Day Pack</h3><span class="price">$5</span></div>
+        <p>Walk in prepared and follow up right: a one-page interview prep worksheet and three editable thank-you notes.</p>
+        <div class="chips"><span class="chip">PDF</span><span class="chip">Word</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/interview-day-pack" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/career-pivot-pack" target="_blank" rel="noopener">
+          <img class="shot" src="covers/career-pivot-pack.png" alt="Career Pivot Pack cover" loading="lazy"></a>
+        <div class="top"><h3>Career Pivot Pack</h3><span class="price">$5</span></div>
+        <p>Thinking about a career change? Take stock of your skills and plan the move with two clear printable worksheets.</p>
+        <div class="chips"><span class="chip">PDF</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/career-pivot-pack" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/new-job-launch-pack" target="_blank" rel="noopener">
+          <img class="shot" src="covers/new-job-launch-pack.png" alt="New Job Launch Pack cover" loading="lazy"></a>
+        <div class="top"><h3>New Job Launch Pack</h3><span class="price">$5</span></div>
+        <p>Start a new job strong: an editable 30-60-90 day plan and a first-week checklist so nothing slips.</p>
+        <div class="chips"><span class="chip">Word</span><span class="chip">PDF</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/new-job-launch-pack" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+    </div>
+      <h3 class="subhead">Home &amp; life admin <span>5</span></h3>
+      <div class="shopgrid">
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/home-maintenance-pack" target="_blank" rel="noopener">
+          <img class="shot" src="covers/home-maintenance-pack.png" alt="Home Maintenance Pack cover" loading="lazy"></a>
+        <div class="top"><h3>Home Maintenance Pack</h3><span class="price">$5</span></div>
+        <p>Keep your house in good shape and build a full home-service history: an Excel maintenance log plus a seasonal checklist.</p>
+        <div class="chips"><span class="chip">Excel</span><span class="chip">PDF</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/home-maintenance-pack" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/car-maintenance-pack" target="_blank" rel="noopener">
+          <img class="shot" src="covers/car-maintenance-pack.png" alt="Car Maintenance Pack cover" loading="lazy"></a>
+        <div class="top"><h3>Car Maintenance Pack</h3><span class="price">$5</span></div>
+        <p>Track service, fuel economy and vehicle info in Excel, with a printable care schedule and glovebox card.</p>
+        <div class="chips"><span class="chip">PDF</span><span class="chip">Excel</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/car-maintenance-pack" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/emergency-documents-pack" target="_blank" rel="noopener">
+          <img class="shot" src="covers/emergency-documents-pack.png" alt="Household Emergency &amp; Documents Pack cover" loading="lazy"></a>
+        <div class="top"><h3>Household Emergency &amp; Documents Pack</h3><span class="price">$5</span></div>
+        <p>Know where every important document is and have an emergency info sheet ready: an Excel index plus a printable, fillable sheet.</p>
+        <div class="chips"><span class="chip">PDF</span><span class="chip">Excel</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/emergency-documents-pack" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/home-cleaning-pack" target="_blank" rel="noopener">
+          <img class="shot" src="covers/home-cleaning-pack.png" alt="Home Cleaning Pack cover" loading="lazy"></a>
+        <div class="top"><h3>Home Cleaning Pack</h3><span class="price">$5</span></div>
+        <p>Three printables that keep a home clean without the all-day scramble: a weekly schedule, a family chore chart, and a monthly deep-clean rotation.</p>
+        <div class="chips"><span class="chip">PDF</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/home-cleaning-pack" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+      <article class="paper">
+        <a class="shotlink" href="https://syssteady.gumroad.com/l/fresh-start-pack" target="_blank" rel="noopener">
+          <img class="shot" src="covers/fresh-start-pack.png" alt="Fresh-Start Pack cover" loading="lazy"></a>
+        <div class="top"><h3>Fresh-Start Pack</h3><span class="price">$5</span></div>
+        <p>Two printables for a clean reset: an 8-week moving checklist and a 30-day, one-area-a-day declutter plan.</p>
+        <div class="chips"><span class="chip">PDF</span></div>
+        <a class="go" href="https://syssteady.gumroad.com/l/fresh-start-pack" target="_blank" rel="noopener">Get it on Gumroad &rarr;</a>
+      </article>
+    </div>
+    </section>
+</main>
+
+<footer><div class="wrap">
+  <p>Prices, previews and checkout are on Gumroad &mdash; every button opens that product's page.
+     Questions? <a href="../#contact">Get in touch</a>.</p>
+  <p class="fine">
+    &copy; 2026 Jordan Dorman &middot; Steady Systems &middot; <a href="https://syssteady.gumroad.com">syssteady.gumroad.com</a><br>
+    All products are original works. Study kits are independent study aids and are not affiliated with or endorsed by
+    CompTIA; CompTIA, A+ and Security+ are trademarks of CompTIA, Inc.
+  </p>
+</div></footer>
+
+</body>
+</html>
