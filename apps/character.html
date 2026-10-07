@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steady Character</title>
+<meta name="description" content="Your Steady character — level up and earn coins by using your Steady apps, then customize your look in the shop. Private; data stays on your device.">
+<link rel="stylesheet" href="shared.css">
+<style>:root{--accent:#8168f2;--accent-2:#9d8bff;--accent-dark:#6a50e0}
+  .cflex{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+  .bigav{flex:none;width:184px;height:184px;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid var(--line)}
+  .bigav svg{width:100%;height:100%}
+  .cinfo{flex:1;min-width:220px}
+  .nameinp{font:800 20px var(--display);padding:6px 10px;margin-bottom:10px;background:var(--card-2)}
+  .clvl{font:800 17px var(--display);margin-bottom:7px}
+  .coinbal{font:800 22px var(--display);color:var(--accent);margin-top:12px;display:flex;align-items:baseline;gap:6px}
+  .coinbal span{font-size:12px;font-weight:600;color:var(--muted)}
+  .chint{font-size:12px;color:var(--muted);margin-top:8px;max-width:360px}
+  .catrow{display:flex;gap:7px;flex-wrap:wrap;margin:4px 0 16px}
+  .catpill{background:var(--card-2);border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:7px 13px;font:600 12.5px var(--sans);cursor:pointer;transition:.13s}
+  .catpill:hover{color:var(--ink)}
+  .catpill.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  .itemgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:12px}
+  .item{border:1px solid var(--line);border-radius:var(--radius-sm);padding:11px 10px 12px;text-align:center;background:var(--card-2);transition:.15s}
+  .item.equipped{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 30%,transparent)}
+  .item .prev{width:76px;height:76px;margin:0 auto 7px;border-radius:12px;overflow:hidden}
+  .item .iname{font:700 12.5px var(--display);margin-bottom:7px}
+  .ieq{font:700 11.5px var(--display);color:var(--accent)}
+  .ilock{font:700 12px var(--display);color:var(--muted);opacity:.7}
+  .coinchip{background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent);border-radius:999px;padding:6px 12px;font:800 13px var(--display);display:inline-flex;gap:5px;align-items:center}
+  .btn.sm,.btn.ghost.sm{padding:6px 11px;font-size:12px}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Character</b></a>
+  <div class="top-actions"><a class="hublink" href="overview.html">Overview</a><a class="hublink" href="index.html">All apps</a><button class="icon-btn" data-steady="theme" title="Theme">◐</button></div>
+</div></header>
+<main class="wrap main">
+  <div class="card" id="charhero"></div>
+  <div class="card">
+    <div class="seg" id="mode" style="max-width:300px;margin-bottom:14px"><button class="on" data-m="customize">Customize</button><button data-m="shop">🛍️ Shop</button></div>
+    <div class="catrow" id="cats"></div>
+    <div class="itemgrid" id="items"></div>
+    <p class="setnote" id="shopnote" style="display:none">Coins come from using your Steady apps — track habits, log work, study, keep the home steady. The more you do, the more you can unlock.</p>
+  </div>
+  <div class="card" style="text-align:center;color:var(--muted);font-size:13px">
+    Your character and everything you own are saved on this device only — nothing is uploaded.
+    <div style="margin-top:10px"><a class="btn ghost sm" href="index.html">← Back to all apps</a></div>
+  </div>
+</main>
+<footer class="ft">Steady Character · a Steady Systems app · your data stays on this device</footer>
+<div id="toasts"></div>
+<script src="shared.js"></script>
+<script>
+var S=Steady;S.initShell();
+var prof=S.loadProfile();
+var mode="customize",cat="Hair";
+var CATS=["Skin","Hair","Hair color","Outfit","Outfit color","Hat","Glasses","Background"];
+function stats(){return S.suiteStats();}
+function coins(){return Math.max(0,stats().coinsEarned-prof.spent);}
+function itemById(id){for(var i=0;i<S.AVATAR_ITEMS.length;i++)if(S.AVATAR_ITEMS[i].id===id)return S.AVATAR_ITEMS[i];return null;}
+function renderHero(){
+  var st=stats();
+  S.el("charhero").innerHTML='<div class="cflex">'+
+    '<div class="bigav">'+S.avatarSVG(prof.equip,184)+'</div>'+
+    '<div class="cinfo">'+
+      '<input id="cname" class="nameinp" placeholder="Name your character" value="'+(prof.name||"").replace(/"/g,"&quot;")+'">'+
+      '<div class="clvl">Level '+st.level+' · '+st.title+'</div>'+
+      '<div class="lvlbar"><span style="width:'+Math.round(st.pct*100)+'%"></span></div>'+
+      '<div class="lvlsub">'+st.into+' / '+st.span+' XP · '+(st.span-st.into)+' to level '+(st.level+1)+'</div>'+
+      '<div class="coinbal">🪙 '+coins().toLocaleString()+' <span>coins to spend</span></div>'+
+      '<div class="chint">Level up and earn coins by using your Steady apps. Spend coins in the Shop on new looks.</div>'+
+    '</div></div>';
+  S.el("cname").onchange=function(){prof.name=this.value.trim();S.saveProfile(prof);};
+}
+function renderCats(){
+  S.el("cats").innerHTML=CATS.map(function(c){return '<button class="catpill'+(c===cat?" on":"")+'" data-c="'+c+'">'+c+'</button>';}).join("");
+  document.querySelectorAll("#cats .catpill").forEach(function(b){b.onclick=function(){cat=b.dataset.c;renderCats();renderItems();};});
+}
+function renderItems(){
+  var list=S.AVATAR_ITEMS.filter(function(i){return i.cat===cat;});
+  if(mode==="customize")list=list.filter(function(i){return prof.owned.indexOf(i.id)>=0;});
+  S.el("shopnote").style.display=mode==="shop"?"block":"none";
+  var bal=coins();
+  if(!list.length){S.el("items").innerHTML='<div class="empty">Nothing here yet — check the Shop.</div>';return;}
+  S.el("items").innerHTML=list.map(function(i){
+    var owned=prof.owned.indexOf(i.id)>=0,equipped=prof.equip[i.field]===i.val;
+    var prev={};for(var k in prof.equip)prev[k]=prof.equip[k];prev[i.field]=i.val;
+    var act=equipped?'<span class="ieq">✓ Equipped</span>':owned?'<button class="btn ghost sm" data-eq="'+i.id+'">Equip</button>':(bal>=i.cost?'<button class="btn sm" data-buy="'+i.id+'">🪙 '+i.cost+'</button>':'<span class="ilock">🔒 '+i.cost+'</span>');
+    return '<div class="item'+(equipped?" equipped":"")+'"><div class="prev">'+S.avatarSVG(prev,76)+'</div><div class="iname">'+i.name+'</div><div class="iact">'+act+'</div></div>';
+  }).join("");
+  document.querySelectorAll("#items [data-eq]").forEach(function(b){b.onclick=function(){equip(b.dataset.eq);};});
+  document.querySelectorAll("#items [data-buy]").forEach(function(b){b.onclick=function(){buy(b.dataset.buy);};});
+}
+function equip(id){var i=itemById(id);if(!i)return;prof.equip[i.field]=i.val;S.saveProfile(prof);renderHero();renderItems();S.toast("Equipped "+i.name,1);}
+function buy(id){var i=itemById(id);if(!i)return;if(coins()<i.cost){S.toast("Not enough coins yet");return;}prof.spent+=i.cost;prof.owned.push(id);prof.equip[i.field]=i.val;S.saveProfile(prof);S.confetti();renderHero();renderItems();S.toast("Unlocked "+i.name+"! 🎉",1);}
+document.querySelectorAll("#mode button").forEach(function(b){b.onclick=function(){document.querySelectorAll("#mode button").forEach(function(x){x.classList.remove("on");});b.classList.add("on");mode=b.dataset.m;renderItems();};});
+renderHero();renderCats();renderItems();
+</script>
+</body>
+</html>

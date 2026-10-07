@@ -149,6 +149,12 @@ footer.ft{text-align:center;color:var(--faint);font-size:11.5px;padding:22px 0}
 .quest.done .qn{color:var(--muted);text-decoration:line-through}
 .quest .qx{font:800 12px var(--display);color:var(--accent)}
 .questall{text-align:center;font:700 13px var(--display);color:var(--accent);padding:8px 0 2px}
+.charrow{display:flex;align-items:center;gap:12px;margin-top:13px;padding-top:13px;border-top:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.charav{flex:none;width:46px;height:46px;border-radius:11px;overflow:hidden;border:1px solid var(--line)}
+.charav svg{width:100%;height:100%;display:block}
+.charmeta{flex:1} .charmeta b{display:block;font:700 13.5px var(--display)} .charmeta small{color:var(--muted);font-size:12px}
+.charchev{color:var(--accent);font-weight:800}
+.charrow:hover .charmeta b{color:var(--accent)}
 /* ---- premium gating ---- */
 .locked{position:relative}
 .lockveil{position:absolute;inset:0;background:color-mix(in srgb,var(--card) 80%,transparent);backdrop-filter:blur(4px);border-radius:var(--radius);display:grid;place-items:center;text-align:center;padding:24px;z-index:5;animation:rise .3s}
