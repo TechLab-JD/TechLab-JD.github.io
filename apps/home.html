@@ -96,6 +96,8 @@
   <section class="panel" id="panel-rewards">
     <div class="hero"><div class="lbl">On top of it</div><div class="big" id="rw-ontrack">0</div><div class="meta">cleaning tasks up to date</div>
       <div class="mini"><div>Badges<b id="rw-count">0</b></div></div></div>
+    <div class="card"><h2>Your level</h2><p class="sub">Keeping on top of the home earns XP and levels you up.</p><div id="xp-card"></div></div>
+    <div class="card"><h2>Today's goals</h2><p class="sub">A calm, caught-up home.</p><div id="quests"></div></div>
     <div class="card"><h2>Achievements</h2><p class="sub">Milestones unlock as you keep the home steady.</p><div class="badgegrid" id="rw-badges"></div></div>
   </section>
 </main>
@@ -186,7 +188,16 @@ function renderRewards(){
     due:db.cleaning.filter(cleanDue).length,maint:db.maintenance.length,
     meals:DAYS.filter(d=>db.meals.week[d]).length,grocery:db.meals.grocery.length,
     docs:db.documents.length,expired:db.documents.filter(x=>x.expiry&&daysTo(x.expiry)<0).length};
-  S.el("rw-count").textContent=S.renderBadges(S.el("rw-badges"),BADGES,ctx);
+  var earned=S.renderBadges(S.el("rw-badges"),BADGES,ctx);
+  S.el("rw-count").textContent=earned;
+  var xp=earned*40+db.cleaning.length*3+db.maintenance.length*3+db.documents.length*2+(db.inventory||[]).length*2+ctx.meals*2+db.meals.grocery.length;
+  S.gamify({xp:xp,badges:earned,container:S.el("xp-card")});
+  var td=DAYS[(new Date().getDay()+6)%7];
+  S.renderQuests(S.el("quests"),[
+    {label:"No cleaning tasks overdue",xp:10,done:ctx.clean>0&&ctx.due===0},
+    {label:"No expired documents",xp:10,done:ctx.docs>0&&ctx.expired===0},
+    {label:"Plan today's dinner",xp:10,done:!!db.meals.week[td]}
+  ]);
 }
 
 /* inventory */

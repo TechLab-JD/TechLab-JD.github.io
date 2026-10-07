@@ -114,6 +114,8 @@
   <section class="panel" id="panel-rewards">
     <div class="hero"><div class="lbl">Progress</div><div class="big" id="rw-done">0</div><div class="meta">assignments completed</div>
       <div class="mini"><div>GPA<b id="rw-gpa">—</b></div><div>Badges<b id="rw-count">0</b></div></div></div>
+    <div class="card"><h2>Your level</h2><p class="sub">Studying, logging sessions and finishing work all earn XP.</p><div id="xp-card"></div></div>
+    <div class="card"><h2>Today's goals</h2><p class="sub">Small daily wins that keep you ahead.</p><div id="quests"></div></div>
     <div class="card"><h2>Achievements</h2><p class="sub">Milestones unlock as you stay on top of school.</p><div class="badgegrid" id="rw-badges"></div></div>
   </section>
 </main>
@@ -286,7 +288,17 @@ function renderRewards(){
   var g=gpa();S.el("rw-gpa").textContent=g.gpa!==null?g.gpa.toFixed(2):"—";
   var ctx={items:db.assign.length||db.courses.length,assigns:db.assign.length,done:done,gpa:g.gpa||0,hasEx:db.exams.length>0,
     overdue:db.assign.filter(a=>!a.done&&a.due&&daysTo(a.due)<0).length,sched:db.sched.length};
-  S.el("rw-count").textContent=S.renderBadges(S.el("rw-badges"),BADGES,ctx);
+  var earned=S.renderBadges(S.el("rw-badges"),BADGES,ctx);
+  S.el("rw-count").textContent=earned;
+  var cards=(db.decks||[]).reduce(function(a,d){return a+d.cards.length;},0);
+  var xp=earned*40+done*10+(db.sessions||[]).length*5+cards*2+db.exams.length*4+db.courses.length*4+db.sched.length*2;
+  S.gamify({xp:xp,badges:earned,container:S.el("xp-card")});
+  var t=S.todayISO();
+  S.renderQuests(S.el("quests"),[
+    {label:"Log a study session today",xp:10,done:(db.sessions||[]).some(function(x){return x.date===t;})},
+    {label:"Keep zero overdue assignments",xp:10,done:db.assign.length>0&&ctx.overdue===0},
+    {label:"Review your flashcards",xp:10,done:cards>0}
+  ]);
 }
 function SAMPLE(){var t=new Date();function d(off){var x=new Date(t.getFullYear(),t.getMonth(),t.getDate()+off);return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0");}
   return {assign:[{id:S.uid(),title:"Essay draft",course:"English",due:d(2),done:false},{id:S.uid(),title:"Problem set 4",course:"Calculus",due:d(-1),done:false},{id:S.uid(),title:"Lab report",course:"Biology",due:d(5),done:false},{id:S.uid(),title:"Reading response",course:"History",due:d(-3),done:true},{id:S.uid(),title:"Quiz prep",course:"Calculus",due:d(1),done:true}],

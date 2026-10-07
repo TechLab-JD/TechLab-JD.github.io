@@ -174,6 +174,8 @@
   <section class="panel" id="panel-rewards">
     <div class="hero"><div class="lbl">All-time</div><div class="big" id="rw-total">$0</div><div class="meta">total earned, logged in Steady Work</div>
       <div class="mini"><div>Clients<b id="rw-clients">0</b></div><div>Badges<b id="rw-count">0</b></div></div></div>
+    <div class="card"><h2>Your level</h2><p class="sub">Every invoice, payment and logged hour builds your XP.</p><div id="xp-card"></div></div>
+    <div class="card"><h2>Today's goals</h2><p class="sub">Keep the business moving.</p><div id="quests"></div></div>
     <div class="card"><h2>Achievements</h2><p class="sub">Milestones unlock as your freelance work grows.</p><div class="badgegrid" id="rw-badges"></div></div>
   </section>
 </main>
@@ -423,7 +425,17 @@ function renderRewards(){
   var g=num(db.income.goal),e=monthEarned();
   var ctx={total:total,entries:db.income.entries.length,clients:db.clients.length,time:db.time.length,
     invoice:(db.invoice.items||[]).some(it=>it.desc||it.qty),goalHit:g>0&&e>=g};
-  S.el("rw-count").textContent=S.renderBadges(S.el("rw-badges"),BADGES,ctx);
+  var earned=S.renderBadges(S.el("rw-badges"),BADGES,ctx);
+  S.el("rw-count").textContent=earned;
+  var inv=db.invoices||[],paidN=inv.filter(function(x){return x.paid;}).length;
+  var xp=earned*40+db.income.entries.length*6+inv.length*8+paidN*10+db.time.length*4+db.projects.length*5+db.expenses.length*3+db.clients.length*4;
+  S.gamify({xp:xp,badges:earned,container:S.el("xp-card")});
+  var t=S.todayISO();
+  S.renderQuests(S.el("quests"),[
+    {label:"Log income or billable hours today",xp:10,done:db.income.entries.some(function(x){return x.date===t;})||db.time.some(function(x){return x.date===t;})},
+    {label:"Save an invoice to your history",xp:10,done:inv.length>0},
+    {label:"Hit your monthly income goal",xp:15,done:ctx.goalHit}
+  ]);
 }
 function SAMPLE(){var m=tm();function d(day){return m+"-"+String(Math.min(28,Math.max(1,day))).padStart(2,"0");}var dd=new Date().getDate();
   return {invoice:{from:"Jordan D. — Vectoral Labs",to:"Acme Co.",num:"014",date:S.todayISO(),due:"",tax:0,notes:"Due in 14 days · Zelle / Venmo",items:[{desc:"Website updates",qty:"6",rate:"45"},{desc:"Logo tweaks",qty:"2",rate:"50"}]},

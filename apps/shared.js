@@ -84,6 +84,49 @@ window.Steady = (function(){
     if(opts.sample)el("wc-s").onclick=function(){setDb(opts.sample());S.db.__onboarded=true;save();m.remove();if(opts.render)opts.render();};
     el("wc-f").onclick=function(){S.db.__onboarded=true;save();m.remove();toast("You're all set",1);};
   }
+  /* ---- gamification: XP, levels, quests, celebrations ---- */
+  var TITLES=["Getting Started","Finding Your Rhythm","On a Roll","Steady","Dialed In","Committed","In the Zone","Relentless","Powerhouse","Legend"];
+  function levelTitle(l){return TITLES[Math.min(Math.max(1,l)-1,TITLES.length-1)];}
+  function levelInfo(xp){xp=Math.max(0,Math.floor(xp||0));var lvl=1,acc=0,need=100;
+    while(xp>=acc+need){acc+=need;lvl++;need=lvl*100;}
+    return{level:lvl,xp:xp,into:xp-acc,span:need,pct:Math.min(1,(xp-acc)/need),title:levelTitle(lvl)};}
+  function reduceMotion(){try{return window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;}catch(e){return false;}}
+  function confetti(){
+    if(reduceMotion())return;
+    var c=document.createElement("canvas");c.style.cssText="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:9999";
+    c.width=window.innerWidth;c.height=window.innerHeight;document.body.appendChild(c);var ctx=c.getContext("2d");
+    var cols=["#17b3a0","#39e3c8","#eca13a","#ec5f5a","#8168f2","#4a90e2","#2fae5f"],P=[];
+    for(var i=0;i<140;i++)P.push({x:c.width/2+(Math.random()-0.5)*120,y:c.height*0.28,vx:(Math.random()-0.5)*13,vy:Math.random()*-13-3,g:0.34,r:Math.random()*6+3,c:cols[i%cols.length],rot:Math.random()*6,vr:(Math.random()-0.5)*0.4});
+    var t0=Date.now();
+    (function frame(){var el=Date.now()-t0,a=Math.max(0,1-el/1500);ctx.clearRect(0,0,c.width,c.height);
+      for(var i=0;i<P.length;i++){var p=P[i];p.vy+=p.g;p.x+=p.vx;p.y+=p.vy;p.rot+=p.vr;
+        ctx.save();ctx.globalAlpha=a;ctx.translate(p.x,p.y);ctx.rotate(p.rot);ctx.fillStyle=p.c;ctx.fillRect(-p.r/2,-p.r/2,p.r,p.r*0.65);ctx.restore();}
+      if(el<1500)requestAnimationFrame(frame);else c.remove();})();
+  }
+  function levelCardHTML(info){
+    return '<div class="lvlcard"><div class="lvlbadge"><small>LVL</small>'+info.level+'</div>'+
+      '<div class="lvlmeta"><div class="lvltitle">'+info.title+'</div>'+
+      '<div class="lvlbar"><span style="width:'+Math.round(info.pct*100)+'%"></span></div>'+
+      '<div class="lvlsub">'+info.into+' / '+info.span+' XP · '+(info.span-info.into)+' to level '+(info.level+1)+'</div></div></div>';
+  }
+  function gamify(opts){opts=opts||{};var info=levelInfo(opts.xp||0);
+    S.db.__xp=info.xp;
+    if(S.db.__level==null){S.db.__level=info.level;}
+    else if(info.level>S.db.__level){S.db.__level=info.level;setTimeout(function(){confetti();toast("Level "+info.level+" — "+info.title+"! 🎉",1);},140);}
+    else{S.db.__level=info.level;}
+    if(opts.badges!=null){if(S.db.__badges==null){S.db.__badges=opts.badges;}
+      else if(opts.badges>S.db.__badges){var g=opts.badges-S.db.__badges;S.db.__badges=opts.badges;setTimeout(function(){toast(g===1?"Badge unlocked! 🏅":g+" badges unlocked! 🏅",1);},160);}
+      else{S.db.__badges=opts.badges;}}
+    save();
+    if(opts.container)opts.container.innerHTML=levelCardHTML(info);
+    return info;
+  }
+  function renderQuests(container,quests){if(!container)return 0;quests=quests||[];
+    var done=quests.filter(function(q){return q.done;}).length;
+    container.innerHTML=quests.map(function(q){return '<div class="quest'+(q.done?" done":"")+'"><span class="qc">'+(q.done?"✓":"○")+'</span><span class="qn">'+q.label+'</span><span class="qx">+'+(q.xp||10)+'</span></div>';}).join("")+
+      (quests.length&&done===quests.length?'<div class="questall">🎉 All of today\'s goals done — come back tomorrow!</div>':'');
+    return done;
+  }
   /* ---- premium gating ---- */
   var premOpts={};
   function isPremium(){return !!S.db.premium;}
@@ -128,6 +171,7 @@ window.Steady = (function(){
   var S={load:load,save:save,uid:uid,num:num,money:money,money0:money0,el:el,val:val,clr:clr,toast:toast,
     todayISO:todayISO,tm:tm,initShell:initShell,go:go,toggleTheme:toggleTheme,donut:donut,ring:ring,bars:bars,area:area,
     dkey:dkey,last7:last7,streak:streak,renderBadges:renderBadges,setDb:setDb,initAccount:initAccount,onboard:onboard,
-    initPremium:initPremium,applyPremium:applyPremium,isPremium:isPremium,openPrem:openPrem,onTab:null,db:db};
+    initPremium:initPremium,applyPremium:applyPremium,isPremium:isPremium,openPrem:openPrem,
+    levelInfo:levelInfo,levelTitle:levelTitle,confetti:confetti,gamify:gamify,renderQuests:renderQuests,onTab:null,db:db};
   return S;
 })();

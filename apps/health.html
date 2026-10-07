@@ -138,6 +138,8 @@
   <section class="panel" id="panel-rewards">
     <div class="hero"><div class="lbl">🔥 Active streak</div><div class="big" id="rw-streak">0 days</div><div class="meta">consecutive days you tracked something</div>
       <div class="mini"><div>Best streak<b id="rw-best">0 days</b></div><div>Badges<b id="rw-count">0</b></div></div></div>
+    <div class="card"><h2>Your level</h2><p class="sub">Everything you track earns XP. Keep going to level up.</p><div id="xp-card"></div></div>
+    <div class="card"><h2>Today's goals</h2><p class="sub">Three quick wins to keep your streak alive.</p><div id="quests"></div></div>
     <div class="card"><h2>Achievements</h2><p class="sub">Milestones unlock automatically as you build healthy habits.</p><div class="badgegrid" id="rw-badges"></div></div>
   </section>
 </main>
@@ -347,7 +349,17 @@ function renderRewards(){
   var ctx={any:db.habits.length||db.workouts.length||db.mood.length||db.sleep.length||Object.keys(db.water.log).length>0,
     waterHit:(db.water.log[S.todayISO()]||0)>=(db.water.goal||8),habits:db.habits.length,best:db.bestStreak||0,
     work7:db.workouts.filter(x=>keys.indexOf(x.date)>=0).length,sleep:db.sleep.length,moods:db.mood.length};
-  S.el("rw-count").textContent=S.renderBadges(S.el("rw-badges"),BADGES,ctx);
+  var earned=S.renderBadges(S.el("rw-badges"),BADGES,ctx);
+  S.el("rw-count").textContent=earned;
+  var waterDays=Object.keys(db.water.log).filter(function(k){return db.water.log[k]>0;}).length;
+  var xp=earned*40+db.workouts.length*8+db.mood.length*4+db.sleep.length*4+waterDays*3+db.weight.length*3+db.habits.length*5+(db.bestStreak||0)*5;
+  S.gamify({xp:xp,badges:earned,container:S.el("xp-card")});
+  var t=S.todayISO(),gl=db.water.goal||8,wt=db.water.log[t]||0;
+  S.renderQuests(S.el("quests"),[
+    {label:"Drink a glass of water",xp:10,done:wt>0},
+    {label:"Log your mood or sleep",xp:10,done:db.mood.some(function(x){return x.date===t;})||db.sleep.some(function(x){return x.date===t;})},
+    {label:"Hit your water goal ("+gl+" glasses)",xp:15,done:wt>=gl}
+  ]);
 }
 function SAMPLE(){var k=last7();var wv=[4,8,6,8,7,8,5],wl={};k.forEach((d,i)=>wl[d.key]=wv[i]);
   return {habits:[{id:S.uid(),name:"Walk 20 min",days:[1,1,0,1,1,0,0]},{id:S.uid(),name:"No phone in bed",days:[1,1,1,0,1,1,0]},{id:S.uid(),name:"Read",days:[0,1,1,1,0,0,1]}],
