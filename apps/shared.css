@@ -97,4 +97,20 @@ footer.ft{text-align:center;color:var(--faint);font-size:11.5px;padding:22px 0}
 .appcard h3{font:700 18px var(--display);margin:0 0 5px} .appcard p{color:var(--muted);font-size:13px;margin:0}
 .appcard .tag{display:inline-block;margin-top:12px;font:600 11px var(--sans);color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);padding:3px 9px;border-radius:20px}
 .appcard.soon{opacity:.6} .appcard.soon:hover{transform:none}
+/* modal / settings / badges / onboarding (shared) */
+.modal{position:fixed;inset:0;background:rgba(8,16,24,.6);display:none;place-items:center;z-index:60;padding:16px}
+.modal.open{display:grid;animation:fadein .2s} @keyframes fadein{from{opacity:0}to{opacity:1}}
+.modal .box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;max-width:430px;width:100%;box-shadow:var(--shadow-lg);max-height:92vh;overflow:auto;animation:pop .25s cubic-bezier(.22,1,.36,1)}
+@keyframes pop{from{opacity:0;transform:scale(.95) translateY(8px)}to{opacity:1;transform:none}}
+.modal h2{font:700 17px var(--display);margin:0 0 14px} .modal .close{float:right;cursor:pointer;color:var(--muted);font-size:21px;border:0;background:none}
+.setrow{display:flex;gap:8px;flex-wrap:wrap} .setnote{font-size:12px;color:var(--muted);margin-top:14px}
+.badgegrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:12px;margin-top:4px}
+.badge-c{border:1px solid var(--line);border-radius:var(--radius-sm);padding:16px;text-align:center;background:var(--card-2);transition:.15s}
+.badge-c.on{border-color:var(--accent);box-shadow:var(--shadow)} .badge-c.off{opacity:.5;filter:grayscale(.6)}
+.badge-c .ic{font-size:28px;line-height:1} .badge-c b{display:block;font:700 13px var(--display);margin-top:7px} .badge-c small{display:block;font-size:11px;color:var(--muted);margin-top:3px}
+.welcome-hero{text-align:center;padding:2px 0 8px} .welcome-hero .logo{margin:0 auto 12px;width:52px;height:52px;font-size:28px}
+.welcome-hero h2{font:800 20px var(--display);margin:0 0 6px} .welcome-hero p{color:var(--muted);font-size:13.5px;margin:0 0 14px}
+.feat{display:flex;gap:11px;padding:9px 0;align-items:flex-start}
+.feat .fi{width:30px;height:30px;border-radius:9px;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent);display:grid;place-items:center;flex:none;font-size:15px}
+.feat b{font-size:13.5px} .feat p{margin:1px 0 0;font-size:12px;color:var(--muted)}
 @media(max-width:640px){.grid2,.grid3{grid-template-columns:1fr}.hero .big{font-size:30px}}

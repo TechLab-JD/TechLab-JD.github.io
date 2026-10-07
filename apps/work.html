@@ -20,7 +20,7 @@
 <body>
 <header class="top"><div class="wrap">
   <a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Work</b></a>
-  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="icon-btn" data-steady="theme">◐</button></div>
+  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
 </div></header>
 <nav class="appnav"><div class="wrap">
   <button class="stab active" data-panel="home">Overview</button>
@@ -28,6 +28,7 @@
   <button class="stab" data-panel="time">Time</button>
   <button class="stab" data-panel="income">Income</button>
   <button class="stab" data-panel="clients">Clients</button>
+  <button class="stab" data-panel="rewards">🏆 Rewards</button>
 </div></nav>
 <main class="wrap main">
   <section class="panel active" id="panel-home">
@@ -90,6 +91,12 @@
       <div class="field" style="margin-top:9px"><input id="c-notes" placeholder="Notes (what they need, rate, etc.)"></div>
       <div id="c-list" style="margin-top:12px"></div>
     </div>
+  </section>
+
+  <section class="panel" id="panel-rewards">
+    <div class="hero"><div class="lbl">All-time</div><div class="big" id="rw-total">$0</div><div class="meta">total earned, logged in Steady Work</div>
+      <div class="mini"><div>Clients<b id="rw-clients">0</b></div><div>Badges<b id="rw-count">0</b></div></div></div>
+    <div class="card"><h2>Achievements</h2><p class="sub">Milestones unlock as your freelance work grows.</p><div class="badgegrid" id="rw-badges"></div></div>
   </section>
 </main>
 <footer class="ft">Steady Work · a Steady Systems app · your data stays on this device</footer>
@@ -182,9 +189,36 @@ function renderHome(){
   S.el("home-income").innerHTML=list.length?list.map(x=>'<div class="row"><span class="nm">'+(x.client||"Income")+'<div class="meta">'+new Date(x.date+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'</div></span><span class="amt pos">'+S.money(num(x.amount))+'</span></div>').join(""):'<div class="empty">Log income to see it here.</div>';
 }
 
-function renderAll(){renderInvoice();renderTime();renderIncome();renderClients();renderHome();}
+/* rewards */
+var BADGES=[
+ {id:"invoice",ic:"🧾",title:"First Invoice",desc:"Built an invoice",cond:c=>c.invoice},
+ {id:"paid",ic:"💵",title:"First Dollar",desc:"Logged income",cond:c=>c.entries>0},
+ {id:"tracker",ic:"⏱️",title:"Time Keeper",desc:"10 time entries",cond:c=>c.time>=10},
+ {id:"clients3",ic:"🤝",title:"Booked Up",desc:"3 clients",cond:c=>c.clients>=3},
+ {id:"grand",ic:"🏅",title:"First $1K",desc:"$1,000 earned",cond:c=>c.total>=1000},
+ {id:"fivek",ic:"🏆",title:"$5K Club",desc:"$5,000 earned",cond:c=>c.total>=5000},
+ {id:"goal",ic:"🎯",title:"Goal Hit",desc:"Hit a monthly goal",cond:c=>c.goalHit},
+ {id:"organized",ic:"📂",title:"Dialed In",desc:"Invoice + clients + time",cond:c=>c.invoice&&c.clients>0&&c.time>0}
+];
+function renderRewards(){
+  var total=db.income.entries.reduce((a,b)=>a+num(b.amount),0);
+  S.el("rw-total").textContent=S.money(total);S.el("rw-clients").textContent=db.clients.length;
+  var g=num(db.income.goal),e=monthEarned();
+  var ctx={total:total,entries:db.income.entries.length,clients:db.clients.length,time:db.time.length,
+    invoice:(db.invoice.items||[]).some(it=>it.desc||it.qty),goalHit:g>0&&e>=g};
+  S.el("rw-count").textContent=S.renderBadges(S.el("rw-badges"),BADGES,ctx);
+}
+function SAMPLE(){var m=tm();function d(day){return m+"-"+String(Math.max(1,day)).padStart(2,"0");}var dd=new Date().getDate();
+  return {invoice:{from:"Jordan D. — Vectoral Labs",to:"Acme Co.",num:"014",date:S.todayISO(),due:"",tax:0,notes:"Due in 14 days · Zelle / Venmo",items:[{desc:"Website updates",qty:"6",rate:"45"},{desc:"Logo tweaks",qty:"2",rate:"50"}]},
+    time:[{id:S.uid(),date:d(dd-1),task:"Acme — site build",hrs:"3",rate:"45"},{id:S.uid(),date:d(dd-2),task:"Acme — revisions",hrs:"2",rate:"45"},{id:S.uid(),date:d(dd-4),task:"Bloom — branding",hrs:"4",rate:"50"}],
+    income:{goal:1500,entries:[{id:S.uid(),date:d(dd-3),client:"Acme Co.",amount:"320"},{id:S.uid(),date:d(dd-8),client:"Bloom Studio",amount:"450"},{id:S.uid(),date:d(dd-14),client:"Acme Co.",amount:"600"}]},
+    clients:[{id:S.uid(),name:"Acme Co.",contact:"jane@acme.com",notes:"Monthly site support"},{id:S.uid(),name:"Bloom Studio",contact:"555-0144",notes:"Branding project"}]};}
+function renderAll(){renderInvoice();renderTime();renderIncome();renderClients();renderHome();renderRewards();}
 ["iv-date","t-date","in-date"].forEach(id=>{if(!S.el(id).value)S.el(id).value=S.todayISO();});
-S.initShell();renderAll();
+S.initShell();
+S.initAccount({name:"steady-work",defaults:DEF,sample:SAMPLE,render:renderAll});
+renderAll();
+S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Work</h2><p>Invoices, billable time, income goals and clients — private, and saved on your device.</p></div><div class="feat"><div class="fi">🧾</div><div><b>Look professional</b><p>Build invoices and print or save them as PDF.</p></div></div><div class="feat"><div class="fi">🎯</div><div><b>Hit your number</b><p>Track income against a monthly goal.</p></div></div>',sample:SAMPLE,render:renderAll});
 </script>
 </body>
 </html>

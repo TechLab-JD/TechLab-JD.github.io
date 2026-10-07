@@ -11,7 +11,7 @@
 <body>
 <header class="top"><div class="wrap">
   <a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Health</b></a>
-  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="icon-btn" data-steady="theme">◐</button></div>
+  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
 </div></header>
 <nav class="appnav"><div class="wrap">
   <button class="stab active" data-panel="home">Overview</button>
@@ -20,6 +20,7 @@
   <button class="stab" data-panel="sleep">Sleep</button>
   <button class="stab" data-panel="mood">Mood</button>
   <button class="stab" data-panel="workouts">Workouts</button>
+  <button class="stab" data-panel="rewards">🏆 Rewards</button>
 </div></nav>
 <main class="wrap main">
   <section class="panel active" id="panel-home">
@@ -81,12 +82,18 @@
     </div>
     <div class="card"><h2>History</h2><div id="w-list"></div></div>
   </section>
+
+  <section class="panel" id="panel-rewards">
+    <div class="hero"><div class="lbl">🔥 Active streak</div><div class="big" id="rw-streak">0 days</div><div class="meta">consecutive days you tracked something</div>
+      <div class="mini"><div>Best streak<b id="rw-best">0 days</b></div><div>Badges<b id="rw-count">0</b></div></div></div>
+    <div class="card"><h2>Achievements</h2><p class="sub">Milestones unlock automatically as you build healthy habits.</p><div class="badgegrid" id="rw-badges"></div></div>
+  </section>
 </main>
 <footer class="ft">Steady Health · a Steady Systems app · your data stays on this device</footer>
 <div id="toasts"></div>
 <script src="shared.js"></script>
 <script>
-var DEF={habits:[],water:{goal:8,log:{}},sleep:[],mood:[],workouts:[],moodPick:3};
+var DEF={habits:[],water:{goal:8,log:{}},sleep:[],mood:[],workouts:[],moodPick:3,bestStreak:0};
 var db=Steady.load("health",DEF);
 var DOW=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
 function todayIdx(){return (new Date().getDay()+6)%7;}
@@ -178,10 +185,42 @@ function renderHome(){
   else hh.innerHTML=db.habits.map(function(h){var done=(h.days||[]).filter(Boolean).length;return '<div class="row"><span class="nm">'+h.name+'<div class="bar" style="max-width:220px"><span style="width:'+(done/7*100)+'%"></span></div></span><span class="amt">'+done+'/7</span></div>';}).join("");
 }
 
-function renderAll(){renderHabits();renderWater();renderSleep();renderMood();renderWorkouts();renderHome();}
+/* rewards */
+function activeDay(k){return (db.water.log[k]||0)>0||db.workouts.some(x=>x.date===k)||db.mood.some(x=>x.date===k)||db.sleep.some(x=>x.date===k);}
+var BADGES=[
+ {id:"first",ic:"🌱",title:"Day One",desc:"Tracked your first thing",cond:c=>c.any},
+ {id:"hydrated",ic:"💧",title:"Hydrated",desc:"Hit your water goal",cond:c=>c.waterHit},
+ {id:"habit3",ic:"✅",title:"Habit Starter",desc:"3 habits going",cond:c=>c.habits>=3},
+ {id:"week",ic:"🔥",title:"7-Day Streak",desc:"7 days running",cond:c=>c.best>=7},
+ {id:"month",ic:"🏆",title:"30-Day Streak",desc:"A full month",cond:c=>c.best>=30},
+ {id:"mover",ic:"🏃",title:"Mover",desc:"3 workouts in a week",cond:c=>c.work7>=3},
+ {id:"restful",ic:"😴",title:"Rested",desc:"Logged 7 nights",cond:c=>c.sleep>=7},
+ {id:"mindful",ic:"🧠",title:"Mindful",desc:"10 mood check-ins",cond:c=>c.moods>=10}
+];
+function renderRewards(){
+  if(!db.bestStreak)db.bestStreak=0;
+  var st=S.streak(activeDay);if(st>db.bestStreak){db.bestStreak=st;S.save();}
+  S.el("rw-streak").textContent=st+(st===1?" day":" days");S.el("rw-best").textContent=(db.bestStreak||0)+" days";
+  var keys=last7().map(d=>d.key);
+  var ctx={any:db.habits.length||db.workouts.length||db.mood.length||db.sleep.length||Object.keys(db.water.log).length>0,
+    waterHit:(db.water.log[S.todayISO()]||0)>=(db.water.goal||8),habits:db.habits.length,best:db.bestStreak||0,
+    work7:db.workouts.filter(x=>keys.indexOf(x.date)>=0).length,sleep:db.sleep.length,moods:db.mood.length};
+  S.el("rw-count").textContent=S.renderBadges(S.el("rw-badges"),BADGES,ctx);
+}
+function SAMPLE(){var k=last7();var wv=[4,8,6,8,7,8,5],wl={};k.forEach((d,i)=>wl[d.key]=wv[i]);
+  return {habits:[{id:S.uid(),name:"Walk 20 min",days:[1,1,0,1,1,0,0]},{id:S.uid(),name:"No phone in bed",days:[1,1,1,0,1,1,0]},{id:S.uid(),name:"Read",days:[0,1,1,1,0,0,1]}],
+    water:{goal:8,log:wl},
+    sleep:[{id:S.uid(),date:k[6].key,hours:7.5,q:4},{id:S.uid(),date:k[5].key,hours:6.5,q:3},{id:S.uid(),date:k[4].key,hours:8,q:5},{id:S.uid(),date:k[3].key,hours:7,q:4},{id:S.uid(),date:k[2].key,hours:6,q:2}],
+    mood:[{id:S.uid(),date:k[6].key,m:4,note:"Good day"},{id:S.uid(),date:k[5].key,m:3,note:""},{id:S.uid(),date:k[4].key,m:5,note:"Great workout"},{id:S.uid(),date:k[3].key,m:4,note:""},{id:S.uid(),date:k[1].key,m:3,note:""}],
+    workouts:[{id:S.uid(),date:k[6].key,type:"Walk",min:25},{id:S.uid(),date:k[4].key,type:"Gym",min:45},{id:S.uid(),date:k[2].key,type:"Yoga",min:30}],
+    moodPick:3,bestStreak:0};}
+function renderAll(){renderHabits();renderWater();renderSleep();renderMood();renderWorkouts();renderHome();renderRewards();}
 S.el("sl-date").value=S.todayISO();S.el("w-date").value=S.todayISO();
 if(db.moodPick){document.querySelectorAll("#mood-pick button").forEach(b=>b.classList.toggle("on",Number(b.dataset.m)===db.moodPick));}
-S.initShell();renderAll();
+S.initShell();
+S.initAccount({name:"steady-health",defaults:DEF,sample:SAMPLE,render:renderAll});
+renderAll();
+S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Health</h2><p>Habits, water, sleep, mood and workouts — private, and saved only on your device.</p></div><div class="feat"><div class="fi">🔥</div><div><b>Build streaks</b><p>Track daily and keep the chain going.</p></div></div><div class="feat"><div class="fi">🏆</div><div><b>Earn badges</b><p>Milestones unlock as you go.</p></div></div>',sample:SAMPLE,render:renderAll});
 </script>
 </body>
 </html>

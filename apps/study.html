@@ -11,7 +11,7 @@
 <body>
 <header class="top"><div class="wrap">
   <a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Study</b></a>
-  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="icon-btn" data-steady="theme">◐</button></div>
+  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
 </div></header>
 <nav class="appnav"><div class="wrap">
   <button class="stab active" data-panel="home">Overview</button>
@@ -19,6 +19,7 @@
   <button class="stab" data-panel="gpa">GPA</button>
   <button class="stab" data-panel="exams">Exams</button>
   <button class="stab" data-panel="sched">Schedule</button>
+  <button class="stab" data-panel="rewards">🏆 Rewards</button>
 </div></nav>
 <main class="wrap main">
   <section class="panel active" id="panel-home">
@@ -60,6 +61,12 @@
       <div class="addform" style="grid-template-columns:120px 110px 1fr 110px auto"><div class="field"><label>Day</label><select id="s-day"><option>Mon</option><option>Tue</option><option>Wed</option><option>Thu</option><option>Fri</option><option>Sat</option><option>Sun</option></select></div><div class="field"><label>Time</label><input id="s-time" placeholder="9:00 AM"></div><div class="field"><label>Class</label><input id="s-course" placeholder="Course"></div><div class="field"><label>Room</label><input id="s-room" placeholder="Room"></div><button class="btn" id="s-add">Add</button></div>
       <div id="s-list" style="margin-top:12px"></div>
     </div>
+  </section>
+
+  <section class="panel" id="panel-rewards">
+    <div class="hero"><div class="lbl">Progress</div><div class="big" id="rw-done">0</div><div class="meta">assignments completed</div>
+      <div class="mini"><div>GPA<b id="rw-gpa">—</b></div><div>Badges<b id="rw-count">0</b></div></div></div>
+    <div class="card"><h2>Achievements</h2><p class="sub">Milestones unlock as you stay on top of school.</p><div class="badgegrid" id="rw-badges"></div></div>
   </section>
 </main>
 <footer class="ft">Steady Study · a Steady Systems app · your data stays on this device</footer>
@@ -129,9 +136,35 @@ function renderHome(){
   he.innerHTML=ex.length?ex.slice(0,5).map(function(x){var dd=daysTo(x.date);return '<div class="row"><span class="nm">'+x.name+'</span><span class="pill '+(dd<=7?"warn":"good")+'">'+(dd===0?"today":dd+" days")+'</span></div>';}).join(""):'<div class="empty">No exams added.</div>';
 }
 
-function renderAll(){renderAssign();renderGPA();renderExams();renderSched();renderHome();}
+/* rewards */
+var BADGES=[
+ {id:"first",ic:"📘",title:"Getting Started",desc:"Added your first item",cond:c=>c.items>0},
+ {id:"org",ic:"🗂️",title:"Organized",desc:"3+ assignments tracked",cond:c=>c.assigns>=3},
+ {id:"done10",ic:"✅",title:"Finisher",desc:"Completed 10 assignments",cond:c=>c.done>=10},
+ {id:"ontop",ic:"🎯",title:"On Top of It",desc:"Zero overdue",cond:c=>c.assigns>0&&c.overdue===0},
+ {id:"gpa3",ic:"🎓",title:"Honor Roll",desc:"GPA 3.0+",cond:c=>c.gpa>=3},
+ {id:"gpa35",ic:"🌟",title:"Dean's List",desc:"GPA 3.5+",cond:c=>c.gpa>=3.5},
+ {id:"exams",ic:"📅",title:"Exam Ready",desc:"Tracking exams",cond:c=>c.hasEx},
+ {id:"sched",ic:"🕐",title:"Scheduled",desc:"Added your classes",cond:c=>c.sched>0}
+];
+function renderRewards(){
+  var done=db.assign.filter(a=>a.done).length;S.el("rw-done").textContent=done;
+  var g=gpa();S.el("rw-gpa").textContent=g.gpa!==null?g.gpa.toFixed(2):"—";
+  var ctx={items:db.assign.length||db.courses.length,assigns:db.assign.length,done:done,gpa:g.gpa||0,hasEx:db.exams.length>0,
+    overdue:db.assign.filter(a=>!a.done&&a.due&&daysTo(a.due)<0).length,sched:db.sched.length};
+  S.el("rw-count").textContent=S.renderBadges(S.el("rw-badges"),BADGES,ctx);
+}
+function SAMPLE(){var t=new Date();function d(off){var x=new Date(t.getFullYear(),t.getMonth(),t.getDate()+off);return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0");}
+  return {assign:[{id:S.uid(),title:"Essay draft",course:"English",due:d(2),done:false},{id:S.uid(),title:"Problem set 4",course:"Calculus",due:d(-1),done:false},{id:S.uid(),title:"Lab report",course:"Biology",due:d(5),done:false},{id:S.uid(),title:"Reading response",course:"History",due:d(-3),done:true},{id:S.uid(),title:"Quiz prep",course:"Calculus",due:d(1),done:true}],
+    courses:[{id:S.uid(),name:"Calculus I",grade:"A-",credits:4},{id:S.uid(),name:"English Comp",grade:"B+",credits:3},{id:S.uid(),name:"Biology",grade:"A",credits:4},{id:S.uid(),name:"History",grade:"B",credits:3}],
+    exams:[{id:S.uid(),name:"Calculus Midterm",date:d(9)},{id:S.uid(),name:"Biology Quiz",date:d(4)}],
+    sched:[{id:S.uid(),day:"Mon",time:"9:00 AM",course:"Calculus I",room:"Bldg A 210"},{id:S.uid(),day:"Mon",time:"11:00 AM",course:"English Comp",room:"Bldg B 105"},{id:S.uid(),day:"Wed",time:"9:00 AM",course:"Calculus I",room:"Bldg A 210"},{id:S.uid(),day:"Tue",time:"1:00 PM",course:"Biology",room:"Sci 300"}]};}
+function renderAll(){renderAssign();renderGPA();renderExams();renderSched();renderHome();renderRewards();}
 S.el("a-due").value=S.todayISO();
-S.initShell();renderAll();
+S.initShell();
+S.initAccount({name:"steady-study",defaults:DEF,sample:SAMPLE,render:renderAll});
+renderAll();
+S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Study</h2><p>Assignments, GPA, exam countdowns and your class schedule — private, on your device.</p></div><div class="feat"><div class="fi">🎯</div><div><b>Stay ahead</b><p>Due-date flags and exam countdowns keep you on track.</p></div></div><div class="feat"><div class="fi">🎓</div><div><b>Watch your GPA</b><p>Add courses and see it update live.</p></div></div>',sample:SAMPLE,render:renderAll});
 </script>
 </body>
 </html>
