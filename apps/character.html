@@ -49,21 +49,24 @@
     <div style="margin-top:10px"><a class="btn ghost sm" href="index.html">← Back to all apps</a></div>
   </div>
 </main>
-<footer class="ft">Steady Character · a Steady Systems app · your data stays on this device</footer>
+<footer class="ft">Steady Character · a Steady Systems app · your data stays on this device<br>Character art from the <a href="https://github.com/sanderfrenken/Universal-LPC-Spritesheet-Character-Generator" style="color:var(--muted)">LPC spritesheet project</a> (CC-BY-SA 3.0 / GPL 3.0) · <a href="AVATAR-CREDITS.md" style="color:var(--muted)">credits</a></footer>
 <div id="toasts"></div>
+<script src="avatar-assets.js"></script>
 <script src="shared.js"></script>
 <script>
 var S=Steady;S.initShell();
 var prof=S.loadProfile();
 var mode="customize",cat="Hair";
-var CATS=["Body","Skin","Hair","Hair color","Outfit","Outfit color","Hat","Glasses","Background"];
+var CATS=["Body","Skin","Hair","Hair color","Shirt","Shirt color","Pants","Shoes","Background"];
 function stats(){return S.suiteStats();}
 function coins(){return Math.max(0,stats().coinsEarned-prof.spent);}
 function itemById(id){for(var i=0;i<S.AVATAR_ITEMS.length;i++)if(S.AVATAR_ITEMS[i].id===id)return S.AVATAR_ITEMS[i];return null;}
+function imgTag(equip,size){return '<img src="'+S.composeSync(equip)+'" width="'+size+'" height="'+size+'" style="display:block;width:'+size+'px;height:'+size+'px;image-rendering:pixelated">';}
+function cacheAvatar(){prof.img=S.composeSync(prof.equip);S.saveProfile(prof);}
 function renderHero(){
   var st=stats();
   S.el("charhero").innerHTML='<div class="cflex">'+
-    '<div class="bigav">'+S.avatarSlot(prof.equip,184)+'</div>'+
+    '<div class="bigav">'+imgTag(prof.equip,184)+'</div>'+
     '<div class="cinfo">'+
       '<input id="cname" class="nameinp" placeholder="Name your character" value="'+(prof.name||"").replace(/"/g,"&quot;")+'">'+
       '<div class="clvl">Level '+st.level+' · '+st.title+'</div>'+
@@ -73,7 +76,6 @@ function renderHero(){
       '<div class="chint">Level up and earn coins by using your Steady apps. Spend coins in the Shop on new looks.</div>'+
     '</div></div>';
   S.el("cname").onchange=function(){prof.name=this.value.trim();S.saveProfile(prof);};
-  S.hydrateAvatars(S.el("charhero"));
 }
 function renderCats(){
   S.el("cats").innerHTML=CATS.map(function(c){return '<button class="catpill'+(c===cat?" on":"")+'" data-c="'+c+'">'+c+'</button>';}).join("");
@@ -89,16 +91,15 @@ function renderItems(){
     var owned=prof.owned.indexOf(i.id)>=0,equipped=prof.equip[i.field]===i.val;
     var prev={};for(var k in prof.equip)prev[k]=prof.equip[k];prev[i.field]=i.val;
     var act=equipped?'<span class="ieq">✓ Equipped</span>':owned?'<button class="btn ghost sm" data-eq="'+i.id+'">Equip</button>':(bal>=i.cost?'<button class="btn sm" data-buy="'+i.id+'">🪙 '+i.cost+'</button>':'<span class="ilock">🔒 '+i.cost+'</span>');
-    return '<div class="item'+(equipped?" equipped":"")+'"><div class="prev">'+S.avatarSlot(prev,76)+'</div><div class="iname">'+i.name+'</div><div class="iact">'+act+'</div></div>';
+    return '<div class="item'+(equipped?" equipped":"")+'"><div class="prev">'+imgTag(prev,76)+'</div><div class="iname">'+i.name+'</div><div class="iact">'+act+'</div></div>';
   }).join("");
-  S.hydrateAvatars(S.el("items"));
   document.querySelectorAll("#items [data-eq]").forEach(function(b){b.onclick=function(){equip(b.dataset.eq);};});
   document.querySelectorAll("#items [data-buy]").forEach(function(b){b.onclick=function(){buy(b.dataset.buy);};});
 }
-function equip(id){var i=itemById(id);if(!i)return;prof.equip[i.field]=i.val;S.saveProfile(prof);renderHero();renderItems();S.toast("Equipped "+i.name,1);}
-function buy(id){var i=itemById(id);if(!i)return;if(coins()<i.cost){S.toast("Not enough coins yet");return;}prof.spent+=i.cost;prof.owned.push(id);prof.equip[i.field]=i.val;S.saveProfile(prof);S.confetti();renderHero();renderItems();S.toast("Unlocked "+i.name+"! 🎉",1);}
+function equip(id){var i=itemById(id);if(!i)return;prof.equip[i.field]=i.val;cacheAvatar();renderHero();renderItems();S.toast("Equipped "+i.name,1);}
+function buy(id){var i=itemById(id);if(!i)return;if(coins()<i.cost){S.toast("Not enough coins yet");return;}prof.spent+=i.cost;prof.owned.push(id);prof.equip[i.field]=i.val;cacheAvatar();S.confetti();renderHero();renderItems();S.toast("Unlocked "+i.name+"! 🎉",1);}
 document.querySelectorAll("#mode button").forEach(function(b){b.onclick=function(){document.querySelectorAll("#mode button").forEach(function(x){x.classList.remove("on");});b.classList.add("on");mode=b.dataset.m;renderItems();};});
-renderHero();renderCats();renderItems();
+S.preloadFrames(function(){cacheAvatar();renderHero();renderCats();renderItems();});
 </script>
 </body>
 </html>
