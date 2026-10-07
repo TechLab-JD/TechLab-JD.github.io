@@ -4,56 +4,173 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Steady Apps — Steady Systems</title>
-<meta name="description" content="Steady Apps — a suite of free, private tools for money, health, study and freelance work. Your data stays on your device.">
-<link rel="stylesheet" href="shared.css">
+<meta name="description" content="Steady Apps — a suite of free, private, local-first tools for money, health, study and freelance work. No login, nothing uploaded; your data stays on your device.">
+<link rel="canonical" href="https://techlab-jd.github.io/apps/">
+<meta property="og:title" content="Steady Apps — free, private tools by Steady Systems">
+<meta property="og:description" content="Money, health, study and freelance tools that run in your browser. No login, nothing uploaded.">
+<meta property="og:url" content="https://techlab-jd.github.io/apps/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0F1524; --bg2:#121A2E; --surface:#17203A; --surface2:#1C2745; --line:#243150; --line-soft:#1D2A49;
+  --text:#E9E4D6; --dim:#A9AFC4; --faint:#6C748F;
+  --amber:#E8A33C; --amber-deep:#C9801F; --steady:#4FC08D;
+  --glow:0 0 32px rgba(232,163,60,.14);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text);font:16px/1.7 Inter,system-ui,sans-serif;min-height:100vh;
+  background-image:
+    radial-gradient(900px 480px at 85% -10%, rgba(232,163,60,.09), transparent 60%),
+    radial-gradient(700px 420px at 5% 108%, rgba(79,192,141,.07), transparent 60%),
+    linear-gradient(rgba(36,49,80,.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(36,49,80,.22) 1px, transparent 1px);
+  background-size:auto, auto, 44px 44px, 44px 44px;
+}
+h1,h2,h3{font-family:'Space Grotesk',Inter,sans-serif;line-height:1.1}
+a{color:var(--amber);text-decoration:none}
+.mono{font-family:'JetBrains Mono',monospace}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+::selection{background:rgba(232,163,60,.35)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+
+nav{position:sticky;top:0;background:rgba(15,21,36,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft);z-index:10}
+nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+nav .brand{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:15px;margin-right:auto;color:var(--text)}
+nav .brand span{color:var(--amber)}
+nav a:not(.brand){color:var(--dim);font-size:14.5px;font-weight:500}
+nav a:not(.brand):hover{color:var(--text)}
+nav a.cta{background:var(--amber);color:#1A1205;padding:7px 15px;border-radius:999px;font-weight:600}
+nav a.cta:hover{background:#F4B860}
+@media(max-width:620px){nav a.plain{display:none}}
+
+header{padding:76px 0 40px;position:relative}
+.prompt{font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--faint);margin-bottom:12px}
+.prompt b{color:var(--amber);font-weight:500}
+header h1{font-size:clamp(40px,8vw,68px);font-weight:700;letter-spacing:-.01em;color:#F4F1E6}
+header h1::after{content:'▍';color:var(--amber);animation:blink 1.1s steps(1) infinite;font-size:.8em;margin-left:6px}
+@keyframes blink{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){header h1::after{animation:none}}
+.statusrow{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 24px}
+.status{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.06em;border:1px solid var(--line);border-radius:999px;padding:6px 13px;color:var(--dim);background:rgba(23,32,58,.6)}
+.status .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px;vertical-align:1px;background:var(--steady);box-shadow:0 0 10px rgba(79,192,141,.7)}
+header p.lede{max-width:640px;font-size:18px;color:var(--dim)}
+header p.lede b{color:var(--text)}
+.btnrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:12px 22px;border-radius:12px;font-weight:600;font-size:15px;transition:transform .12s,box-shadow .12s,background .12s,border-color .12s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--amber);color:#1A1205;box-shadow:var(--glow)}
+.btn.primary:hover{background:#F4B860}
+.btn.ghost{border:1.5px solid var(--line);color:var(--text)}
+.btn.ghost:hover{border-color:var(--amber);color:var(--amber)}
+
+main{padding:10px 0 20px}
+.sectlabel{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--amber);letter-spacing:.1em;margin:18px 0 16px}
+.appgrid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+.appcard{position:relative;display:block;background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--c,var(--amber));border-radius:16px;padding:24px;color:var(--text);overflow:hidden;transition:transform .15s,border-color .15s,box-shadow .15s}
+.appcard::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .2s;background:radial-gradient(420px 220px at 90% -20%, color-mix(in srgb,var(--c,var(--amber)) 18%,transparent), transparent 70%)}
+.appcard:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--c,var(--amber)) 55%,var(--line));box-shadow:0 18px 44px -20px rgba(0,0,0,.6)}
+.appcard:hover::after{opacity:1}
+.appcard .ic{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;font-size:25px;margin-bottom:14px;background:color-mix(in srgb,var(--c,var(--amber)) 16%,transparent);border:1px solid color-mix(in srgb,var(--c,var(--amber)) 40%,transparent)}
+.appcard h3{font-size:19px;color:#F4F1E6;margin-bottom:7px}
+.appcard p{font-size:14px;color:var(--dim);line-height:1.6}
+.appcard .foot{display:flex;align-items:center;justify-content:space-between;margin-top:16px}
+.appcard .tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--c,var(--amber));border:1px solid color-mix(in srgb,var(--c,var(--amber)) 40%,transparent);border-radius:7px;padding:3px 9px;background:color-mix(in srgb,var(--c,var(--amber)) 8%,transparent)}
+.appcard .open{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--c,var(--amber));font-weight:500;opacity:0;transform:translateX(-4px);transition:.2s}
+.appcard:hover .open{opacity:1;transform:none}
+.appcard.soon{opacity:.55} .appcard.soon:hover{transform:none;box-shadow:none}
+.appcard.soon:hover::after{opacity:0}
+
+.howrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:34px 0 10px}
+.how{background:rgba(23,32,58,.5);border:1px solid var(--line-soft);border-radius:14px;padding:18px}
+.how .k{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--amber);letter-spacing:.08em}
+.how p{font-size:13.5px;color:var(--dim);margin-top:8px;line-height:1.55}
+
+footer{border-top:1px solid var(--line-soft);background:#0B101D;margin-top:46px;padding:34px 0 50px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+footer .note{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--faint)}
+footer .note .dot{color:var(--steady)}
+footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
+footer .flinks a:hover{color:var(--amber)}
+</style>
 </head>
 <body>
-<header class="top"><div class="wrap">
-  <a class="brand" href="index.html"><span class="logo">S</span> Steady <span class="sub">Apps</span></a>
-  <div class="top-actions"><a class="hublink" href="../steady/">Template Shop</a><button class="icon-btn" data-steady="theme">◐</button></div>
+
+<nav><div class="wrap">
+  <a class="brand" href="../">jordan<span>@</span>steady<span>:~/</span>apps<span>$</span></a>
+  <a class="plain" href="../">← Portfolio</a>
+  <a class="plain" href="https://vectoral-labs.com">Vectoral Labs</a>
+  <a class="cta" href="../steady/">Template Shop</a>
+</div></nav>
+
+<header><div class="wrap">
+  <div class="prompt mono">$ ls ~/steady/apps <b>· free · private · local-first</b></div>
+  <h1>Steady Apps</h1>
+  <div class="statusrow">
+    <span class="status"><span class="dot"></span>LOCAL-FIRST</span>
+    <span class="status"><span class="dot"></span>NO LOGIN</span>
+    <span class="status"><span class="dot"></span>FREE TO USE</span>
+    <span class="status"><span class="dot"></span>YOUR DATA STAYS PUT</span>
+  </div>
+  <p class="lede">A small suite of tools for the stuff that keeps life steady — money, health, study and freelance work.
+     They run <b>entirely in your browser</b>: no account, nothing uploaded, every byte saved on your own device.
+     Built on one shared engine, so they all feel like the same calm app.</p>
+  <div class="btnrow">
+    <a class="btn primary" href="money/index.html">Open Steady Money</a>
+    <a class="btn ghost" href="../steady/">Browse the Template Shop →</a>
+  </div>
 </div></header>
 
-<div class="hubhead">
-  <h1>Steady Apps</h1>
-  <p>A suite of simple, private tools for the stuff that keeps life steady — money, health, study and work. No login, nothing uploaded. Your data stays on your device.</p>
-  <div style="margin-top:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-    <a class="btn ghost" href="../steady/">🛍 Browse the Template Shop →</a>
-  </div>
-</div>
-
-<main class="wrap" style="padding-bottom:40px">
-  <div class="hubgrid">
-    <a class="appcard" href="money/index.html">
-      <div class="ic" style="background:linear-gradient(135deg,#17b3a0,#109a89)">💰</div>
-      <h3>Steady Money</h3><p>Budget, bills, debt payoff, savings goals, net worth and spending trends.</p>
-      <span class="tag">Live</span>
+<main><div class="wrap">
+  <div class="sectlabel mono">// THE SUITE</div>
+  <div class="appgrid">
+    <a class="appcard" href="money/index.html" style="--c:#19c3ad">
+      <div class="ic">💰</div>
+      <h3>Steady Money</h3>
+      <p>Budget, bills, debt payoff, savings goals, net worth and spending trends — the full money dashboard.</p>
+      <div class="foot"><span class="tag">LIVE</span><span class="open">open →</span></div>
     </a>
-    <a class="appcard" href="health.html">
-      <div class="ic" style="background:linear-gradient(135deg,#2fae5f,#1f8a49)">🏃</div>
-      <h3>Steady Health</h3><p>Habits, water, sleep, mood and workouts — with streaks and a wellness dashboard.</p>
-      <span class="tag">Live</span>
+    <a class="appcard" href="health.html" style="--c:#2fae5f">
+      <div class="ic">🏃</div>
+      <h3>Steady Health</h3>
+      <p>Habits with streaks, water, sleep, mood and workouts — a calm wellness tracker with a daily overview.</p>
+      <div class="foot"><span class="tag">LIVE</span><span class="open">open →</span></div>
     </a>
-    <a class="appcard" href="study.html">
-      <div class="ic" style="background:linear-gradient(135deg,#4a90e2,#2f6fbf)">🎓</div>
-      <h3>Steady Study</h3><p>Assignments, GPA calculator, exam countdown and a weekly class schedule.</p>
-      <span class="tag">Live</span>
+    <a class="appcard" href="study.html" style="--c:#4a90e2">
+      <div class="ic">🎓</div>
+      <h3>Steady Study</h3>
+      <p>Assignments with due-date flags, a GPA calculator, exam countdowns and a weekly class schedule.</p>
+      <div class="foot"><span class="tag">LIVE</span><span class="open">open →</span></div>
     </a>
-    <a class="appcard" href="work.html">
-      <div class="ic" style="background:linear-gradient(135deg,#8168f2,#6a4fe0)">🧰</div>
-      <h3>Steady Work</h3><p>Invoice generator, billable-hours tracker, income goals and a client list.</p>
-      <span class="tag">Live</span>
+    <a class="appcard" href="work.html" style="--c:#8168f2">
+      <div class="ic">🧰</div>
+      <h3>Steady Work</h3>
+      <p>An invoice generator (print / save PDF), billable-hours tracker, income goals and a client list.</p>
+      <div class="foot"><span class="tag">LIVE</span><span class="open">open →</span></div>
     </a>
-    <div class="appcard soon">
-      <div class="ic" style="background:linear-gradient(135deg,#e09a37,#c47f1f)">🏠</div>
-      <h3>Steady Home</h3><p>Cleaning schedules, maintenance logs, meal planning and documents.</p>
-      <span class="tag">Coming soon</span>
+    <div class="appcard soon" style="--c:#E8A33C">
+      <div class="ic">🏠</div>
+      <h3>Steady Home</h3>
+      <p>Cleaning schedules, maintenance logs, meal planning and a documents index — on the workbench now.</p>
+      <div class="foot"><span class="tag">COMING SOON</span></div>
     </div>
   </div>
-</main>
 
-<footer class="ft">© 2026 Jordan Dorman · Steady Apps · a Steady Systems project · everything saves on your device · all rights reserved</footer>
-<div id="toasts"></div>
-<script src="shared.js"></script>
-<script>Steady.initShell();</script>
+  <div class="sectlabel mono" style="margin-top:36px">// HOW THEY WORK</div>
+  <div class="howrow">
+    <div class="how"><div class="k mono">01 · PRIVATE</div><p>No sign-up, no server, no tracking. Everything you type stays in your browser's local storage — not on anyone's cloud.</p></div>
+    <div class="how"><div class="k mono">02 · OFFLINE-OK</div><p>Once loaded they keep working without internet. Open a tab, bookmark it, use it on the bus.</p></div>
+    <div class="how"><div class="k mono">03 · ONE ENGINE</div><p>Shared design + code across the suite, so they're consistent and quick to improve. More apps and features on the way.</p></div>
+  </div>
+</div></main>
+
+<footer><div class="wrap">
+  <span class="note mono"><span class="dot">●</span> systems: steady &nbsp;·&nbsp; © 2026 Jordan Dorman &nbsp;·&nbsp; all rights reserved</span>
+  <span class="flinks"><a href="../">Portfolio</a><a href="../steady/">Shop</a><a href="https://vectoral-labs.com">Vectoral Labs</a><a href="https://github.com/TechLab-JD">GitHub</a></span>
+</div></div></footer>
+
 </body>
 </html>
