@@ -10,22 +10,34 @@
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Study</b></a>
+  <div style="display:flex;align-items:center;gap:10px"><button class="icon-btn hamb" id="hambBtn" title="Menu">☰</button><a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Study</b></a></div>
   <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="premhdr" data-steady="premium">⭐ Premium</button><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
 </div></header>
-<nav class="appnav"><div class="wrap">
-  <button class="stab active" data-panel="home">Overview</button>
-  <button class="stab" data-panel="work">Assignments</button>
-  <button class="stab" data-panel="gpa">GPA</button>
-  <button class="stab" data-panel="exams">Exams</button>
-  <button class="stab" data-panel="sched">Schedule</button>
-  <button class="stab" data-panel="studylog">Study Log</button>
-  <button class="stab" data-panel="flash">Flashcards</button>
-  <button class="stab" data-panel="planner">Planner <span class="lk">🔒</span></button>
-  <button class="stab" data-panel="trends">Trends <span class="lk">🔒</span></button>
-  <button class="stab" data-panel="rewards">🏆 Rewards</button>
-</div></nav>
-<main class="wrap main">
+<div class="shell">
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side">
+  <div class="navgroup"><div class="navhead">Dashboard</div>
+    <button class="snav active" data-panel="home">📊 Overview</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Coursework</div>
+    <button class="snav" data-panel="work">📄 Assignments</button>
+    <button class="snav" data-panel="gpa">🎓 GPA</button>
+    <button class="snav" data-panel="exams">📝 Exams</button>
+    <button class="snav" data-panel="sched">🕐 Schedule</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Study</div>
+    <button class="snav" data-panel="studylog">📚 Study Log</button>
+    <button class="snav" data-panel="flash">🃏 Flashcards</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Premium</div>
+    <button class="snav" data-panel="planner">🗓️ Planner<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="trends">📈 Trends<span class="lk">🔒</span></button>
+  </div>
+  <div class="navgroup"><div class="navhead">You</div>
+    <button class="snav" data-panel="rewards">🏆 Rewards</button>
+  </div>
+</aside>
+<main class="main">
   <section class="panel active" id="panel-home">
     <div class="hero"><div class="lbl">This term</div><div class="big" id="h-gpa">—</div><div class="meta">current GPA</div>
       <div class="mini"><div>Due this week<b id="h-due">0</b></div><div>Overdue<b id="h-over">0</b></div><div>Next exam<b id="h-exam">—</b></div><div>Credits<b id="h-cred">0</b></div></div></div>
@@ -119,6 +131,7 @@
     <div class="card"><h2>Achievements</h2><p class="sub">Milestones unlock as you stay on top of school.</p><div class="badgegrid" id="rw-badges"></div></div>
   </section>
 </main>
+</div>
 <footer class="ft">Steady Study · a Steady Systems app · your data stays on this device</footer>
 <div id="toasts"></div>
 <script src="shared.js"></script>

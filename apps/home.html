@@ -15,20 +15,32 @@
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Home</b></a>
+  <div style="display:flex;align-items:center;gap:10px"><button class="icon-btn hamb" id="hambBtn" title="Menu">☰</button><a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Home</b></a></div>
   <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="premhdr" data-steady="premium">⭐ Premium</button><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
 </div></header>
-<nav class="appnav"><div class="wrap">
-  <button class="stab active" data-panel="home">Overview</button>
-  <button class="stab" data-panel="cleaning">Cleaning</button>
-  <button class="stab" data-panel="maint">Maintenance</button>
-  <button class="stab" data-panel="meals">Meals</button>
-  <button class="stab" data-panel="docs">Documents</button>
-  <button class="stab" data-panel="inv">Inventory</button>
-  <button class="stab" data-panel="binder">Binder <span class="lk">🔒</span></button>
-  <button class="stab" data-panel="rewards">🏆 Rewards</button>
-</div></nav>
-<main class="wrap main">
+<div class="shell">
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side">
+  <div class="navgroup"><div class="navhead">Dashboard</div>
+    <button class="snav active" data-panel="home">📊 Overview</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Upkeep</div>
+    <button class="snav" data-panel="cleaning">🧹 Cleaning</button>
+    <button class="snav" data-panel="maint">🔧 Maintenance</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Household</div>
+    <button class="snav" data-panel="meals">🍽️ Meals</button>
+    <button class="snav" data-panel="docs">🗄️ Documents</button>
+    <button class="snav" data-panel="inv">📦 Inventory</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Premium</div>
+    <button class="snav" data-panel="binder">📘 Binder<span class="lk">🔒</span></button>
+  </div>
+  <div class="navgroup"><div class="navhead">You</div>
+    <button class="snav" data-panel="rewards">🏆 Rewards</button>
+  </div>
+</aside>
+<main class="main">
   <section class="panel active" id="panel-home">
     <div class="hero"><div class="lbl" id="h-date">Home base</div><div class="big" id="h-due">0</div><div class="meta">things that need attention</div>
       <div class="mini"><div>Cleaning due<b id="h-clean">0</b></div><div>Maintenance due<b id="h-maint">0</b></div><div>Meals planned<b id="h-meals">0/7</b></div><div>Docs<b id="h-docs">0</b></div></div></div>
@@ -101,6 +113,7 @@
     <div class="card"><h2>Achievements</h2><p class="sub">Milestones unlock as you keep the home steady.</p><div class="badgegrid" id="rw-badges"></div></div>
   </section>
 </main>
+</div>
 <footer class="ft">Steady Home · a Steady Systems app · your data stays on this device</footer>
 <div id="toasts"></div>
 <div id="home-print"></div>

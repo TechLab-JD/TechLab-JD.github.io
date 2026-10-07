@@ -26,14 +26,18 @@ window.Steady = (function(){
   function initShell(){
     applyTheme();
     document.querySelectorAll('[data-steady="theme"]').forEach(function(b){b.onclick=toggleTheme;});
-    document.querySelectorAll(".stab").forEach(function(t){t.onclick=function(){
-      document.querySelectorAll(".stab").forEach(x=>x.classList.remove("active"));
+    var side=el("side"),scrim=el("scrim"),hamb=el("hambBtn");
+    function closeSide(){if(side)side.classList.remove("open");if(scrim)scrim.classList.remove("open");}
+    if(hamb)hamb.onclick=function(){var open=side&&side.classList.toggle("open");if(scrim)scrim.classList.toggle("open",!!open);};
+    if(scrim)scrim.onclick=closeSide;
+    document.querySelectorAll(".stab,.snav").forEach(function(t){t.onclick=function(){
+      document.querySelectorAll(".stab,.snav").forEach(x=>x.classList.remove("active"));
       document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));
       t.classList.add("active");var p=el("panel-"+t.dataset.panel);if(p)p.classList.add("active");
-      window.scrollTo(0,0); if(typeof S.onTab==="function")S.onTab(t.dataset.panel);
+      window.scrollTo(0,0);closeSide(); if(typeof S.onTab==="function")S.onTab(t.dataset.panel);
     };});
   }
-  function go(panel){var b=document.querySelector('.stab[data-panel="'+panel+'"]');if(b)b.click();}
+  function go(panel){var b=document.querySelector('[data-panel="'+panel+'"]');if(b)b.click();}
   /* ---- SVG charts ---- */
   function donut(data,size){var total=data.reduce((a,b)=>a+b.value,0);if(total<=0)return "";
     var r=size/2,rad=r-size*0.11,stroke=size*0.15,circ=2*Math.PI*rad,off=0,segs="";
@@ -141,7 +145,7 @@ window.Steady = (function(){
       else if(!veil){var v=document.createElement("div");v.className="lockveil";
         v.innerHTML='<div class="in"><div style="font-size:30px">🔒</div><h3>A Premium feature</h3><p>'+(premOpts.veil||"Unlock the advanced tools with Premium.")+'</p><button class="btn" data-steady="premium">Unlock Premium</button></div>';
         p.appendChild(v);}});
-    document.querySelectorAll(".stab .lk").forEach(function(x){x.textContent=on?"✓":"🔒";});
+    document.querySelectorAll(".snav .lk, .stab .lk").forEach(function(x){x.textContent=on?"✓":"🔒";});
     document.querySelectorAll(".premhdr").forEach(function(b){b.textContent=on?"✓ Premium":"⭐ Premium";});
     document.querySelectorAll('[data-steady="premium"]').forEach(function(b){b.onclick=openPrem;});
     var pt=el("sp-title"),pd=el("sp-desc"),pg=el("sp-get");

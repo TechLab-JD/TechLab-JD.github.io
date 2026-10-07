@@ -19,24 +19,38 @@
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Work</b></a>
+  <div style="display:flex;align-items:center;gap:10px"><button class="icon-btn hamb" id="hambBtn" title="Menu">☰</button><a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Work</b></a></div>
   <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="premhdr" data-steady="premium">⭐ Premium</button><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
 </div></header>
-<nav class="appnav"><div class="wrap">
-  <button class="stab active" data-panel="home">Overview</button>
-  <button class="stab" data-panel="invoice">Invoice</button>
-  <button class="stab" data-panel="history">History</button>
-  <button class="stab" data-panel="projects">Projects</button>
-  <button class="stab" data-panel="time">Time</button>
-  <button class="stab" data-panel="income">Income</button>
-  <button class="stab" data-panel="expenses">Expenses</button>
-  <button class="stab" data-panel="taxes">Taxes</button>
-  <button class="stab" data-panel="clients">Clients</button>
-  <button class="stab" data-panel="reports">Reports <span class="lk">🔒</span></button>
-  <button class="stab" data-panel="trends">Trends <span class="lk">🔒</span></button>
-  <button class="stab" data-panel="rewards">🏆 Rewards</button>
-</div></nav>
-<main class="wrap main">
+<div class="shell">
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side">
+  <div class="navgroup"><div class="navhead">Dashboard</div>
+    <button class="snav active" data-panel="home">📊 Overview</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Money in</div>
+    <button class="snav" data-panel="invoice">🧾 Invoice</button>
+    <button class="snav" data-panel="history">📂 History</button>
+    <button class="snav" data-panel="income">💵 Income</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Work</div>
+    <button class="snav" data-panel="projects">📁 Projects</button>
+    <button class="snav" data-panel="time">⏱️ Time</button>
+    <button class="snav" data-panel="clients">👤 Clients</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Money out</div>
+    <button class="snav" data-panel="expenses">💳 Expenses</button>
+    <button class="snav" data-panel="taxes">🏦 Taxes</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Premium</div>
+    <button class="snav" data-panel="reports">📊 Reports<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="trends">📈 Trends<span class="lk">🔒</span></button>
+  </div>
+  <div class="navgroup"><div class="navhead">You</div>
+    <button class="snav" data-panel="rewards">🏆 Rewards</button>
+  </div>
+</aside>
+<main class="main">
   <section class="panel active" id="panel-home">
     <div class="hero"><div class="lbl" id="h-month"></div><div class="big" id="h-earned">$0</div><div class="meta" id="h-sub">earned this month</div>
       <div class="mini"><div>Goal<b id="h-goal">$0</b></div><div>Billable logged<b id="h-bill">$0</b></div><div>Clients<b id="h-clients">0</b></div><div>Invoice total<b id="h-inv">$0</b></div></div></div>
@@ -179,6 +193,7 @@
     <div class="card"><h2>Achievements</h2><p class="sub">Milestones unlock as your freelance work grows.</p><div class="badgegrid" id="rw-badges"></div></div>
   </section>
 </main>
+</div>
 <footer class="ft">Steady Work · a Steady Systems app · your data stays on this device</footer>
 <div id="toasts"></div>
 <div id="invoice-print"></div>
