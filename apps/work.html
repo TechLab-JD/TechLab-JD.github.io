@@ -25,9 +25,13 @@
 <nav class="appnav"><div class="wrap">
   <button class="stab active" data-panel="home">Overview</button>
   <button class="stab" data-panel="invoice">Invoice</button>
+  <button class="stab" data-panel="projects">Projects</button>
   <button class="stab" data-panel="time">Time</button>
   <button class="stab" data-panel="income">Income</button>
+  <button class="stab" data-panel="expenses">Expenses</button>
+  <button class="stab" data-panel="taxes">Taxes</button>
   <button class="stab" data-panel="clients">Clients</button>
+  <button class="stab" data-panel="trends">Trends</button>
   <button class="stab" data-panel="rewards">🏆 Rewards</button>
 </div></nav>
 <main class="wrap main">
@@ -93,6 +97,49 @@
     </div>
   </section>
 
+  <section class="panel" id="panel-projects">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Pipeline value</div><div class="val" id="pr-pipe">$0</div></div>
+      <div class="stat"><div class="label">Active</div><div class="val" id="pr-active">0</div></div>
+      <div class="stat"><div class="label">Won (paid)</div><div class="val pos" id="pr-won">$0</div></div>
+    </div>
+    <div class="card"><h2>Projects</h2><p class="sub">Track each job from lead to paid. Tap the status pill to advance it.</p>
+      <div class="addform" style="grid-template-columns:1fr 1fr 100px 120px auto"><div class="field"><label>Project</label><input id="pr-title" placeholder="Website redesign"></div><div class="field"><label>Client</label><input id="pr-client" placeholder="Client"></div><div class="field"><label>Value $</label><input id="pr-value" type="number" inputmode="decimal"></div><div class="field"><label>Status</label><select id="pr-status"><option>Lead</option><option>Active</option><option>Done</option><option>Paid</option></select></div><button class="btn" id="pr-add">Add</button></div>
+      <div class="field" style="margin-top:9px"><label>Deadline (optional)</label><input id="pr-due" type="date"></div>
+      <div id="pr-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-expenses">
+    <div class="grid2" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Expenses this year</div><div class="val neg" id="ex-year">$0</div></div>
+      <div class="stat"><div class="label">This month</div><div class="val" id="ex-mo">$0</div></div>
+    </div>
+    <div class="card"><h2>Business expenses</h2><p class="sub">Track deductible costs — they lower what you owe at tax time.</p>
+      <div class="addform" style="grid-template-columns:120px 140px 1fr 100px auto"><div class="field"><label>Date</label><input id="ex-date" type="date"></div><div class="field"><label>Category</label><select id="ex-cat"><option>Software</option><option>Equipment</option><option>Travel</option><option>Marketing</option><option>Fees</option><option>Supplies</option><option>Other</option></select></div><div class="field"><label>What for</label><input id="ex-desc" placeholder="Note"></div><div class="field"><label>Amount $</label><input id="ex-amt" type="number" inputmode="decimal"></div><button class="btn" id="ex-add">Add</button></div>
+      <div id="ex-list" style="margin-top:12px"></div>
+    </div>
+    <div class="card"><h2>By category (this year)</h2><div id="ex-cats"></div></div>
+  </section>
+
+  <section class="panel" id="panel-taxes">
+    <div class="card"><h2>Tax set-aside</h2><p class="sub">Self-employed? Bank a share of income each quarter so tax time isn't a shock. Planning tool, <b>not tax advice</b> — confirm your rate with a pro.</p>
+      <div class="addform" style="grid-template-columns:1fr auto;max-width:300px"><div class="field"><label>Set-aside %</label><input id="tx-pct" type="number" inputmode="decimal"></div><button class="btn sm" id="tx-save" style="align-self:end">Set</button></div>
+      <div id="tx-table" style="margin-top:14px"></div>
+      <div class="grid3" style="margin-top:14px"><div class="stat"><div class="label">Income (year)</div><div class="val" id="tx-inc">$0</div></div><div class="stat"><div class="label">Expenses (year)</div><div class="val neg" id="tx-exp">$0</div></div><div class="stat"><div class="label">Set aside (est.)</div><div class="val" id="tx-set">$0</div></div></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-trends">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Avg monthly income</div><div class="val" id="tr-avg">$0</div></div>
+      <div class="stat"><div class="label">Profit this month</div><div class="val pos" id="tr-profit">$0</div></div>
+      <div class="stat"><div class="label">Effective $/hr</div><div class="val" id="tr-hr">$0</div></div>
+    </div>
+    <div class="card"><h2>Income — last 6 months</h2><div id="tr-income"></div></div>
+    <div class="card"><h2>Income by client</h2><p class="sub">Who pays the bills</p><div id="tr-client"></div></div>
+  </section>
+
   <section class="panel" id="panel-rewards">
     <div class="hero"><div class="lbl">All-time</div><div class="big" id="rw-total">$0</div><div class="meta">total earned, logged in Steady Work</div>
       <div class="mini"><div>Clients<b id="rw-clients">0</b></div><div>Badges<b id="rw-count">0</b></div></div></div>
@@ -104,7 +151,7 @@
 <div id="invoice-print"></div>
 <script src="shared.js"></script>
 <script>
-var DEF={invoice:{from:"",to:"",num:"",date:"",due:"",tax:0,notes:"",items:[{desc:"",qty:"",rate:""}]},time:[],income:{goal:0,entries:[]},clients:[]};
+var DEF={invoice:{from:"",to:"",num:"",date:"",due:"",tax:0,notes:"",items:[{desc:"",qty:"",rate:""}]},time:[],income:{goal:0,entries:[]},clients:[],projects:[],expenses:[],taxPct:25};
 var db=Steady.load("work",DEF);var S=Steady;
 function num(v){var n=parseFloat(String(v).replace(/[^0-9.\-]/g,""));return isNaN(n)?0:n;}
 function monthName(){return new Date().toLocaleDateString("en-US",{month:"long",year:"numeric"});}
@@ -189,6 +236,72 @@ function renderHome(){
   S.el("home-income").innerHTML=list.length?list.map(x=>'<div class="row"><span class="nm">'+(x.client||"Income")+'<div class="meta">'+new Date(x.date+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'</div></span><span class="amt pos">'+S.money(num(x.amount))+'</span></div>').join(""):'<div class="empty">Log income to see it here.</div>';
 }
 
+/* projects */
+function renderProjects(){
+  var l=S.el("pr-list");l.innerHTML=db.projects.length?"":'<div class="empty">No projects yet.</div>';
+  var order={Lead:0,Active:1,Done:2,Paid:3};
+  db.projects.slice().sort((a,b)=>(order[a.status]-order[b.status])||((a.due||"9").localeCompare(b.due||"9"))).forEach(function(p){
+    var cls=p.status==="Paid"?"good":p.status==="Active"?"warn":p.status==="Done"?"good":"";
+    var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+p.title+'<div class="meta">'+(p.client||"")+(p.due?" · due "+new Date(p.due+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"}):"")+'</div></div>';
+    var pill=document.createElement("span");pill.className="pill "+cls;pill.textContent=p.status;pill.style.cursor="pointer";pill.title="tap to advance";
+    pill.onclick=function(){var st=["Lead","Active","Done","Paid"];p.status=st[(st.indexOf(p.status)+1)%4];S.save();renderProjects();renderHome();};
+    var amt=document.createElement("span");amt.className="amt";amt.textContent=S.money(num(p.value));
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.projects=db.projects.filter(x=>x.id!==p.id);S.save();renderProjects();renderHome();};
+    r.appendChild(left);r.appendChild(pill);r.appendChild(amt);r.appendChild(del);l.appendChild(r);});
+  S.el("pr-pipe").textContent=S.money(db.projects.filter(p=>p.status==="Lead"||p.status==="Active").reduce((a,b)=>a+num(b.value),0));
+  S.el("pr-active").textContent=db.projects.filter(p=>p.status==="Active").length;
+  S.el("pr-won").textContent=S.money(db.projects.filter(p=>p.status==="Paid").reduce((a,b)=>a+num(b.value),0));
+}
+S.el("pr-add").onclick=function(){var t=S.val("pr-title");if(!t)return;db.projects.push({id:S.uid(),title:t,client:S.val("pr-client"),value:S.val("pr-value"),status:S.val("pr-status"),due:S.val("pr-due")});S.save();S.clr("pr-title","pr-client","pr-value","pr-due");renderProjects();renderHome();S.toast("Project added",1);};
+
+/* expenses */
+function renderExpenses(){
+  var ex=db.expenses.slice().sort((a,b)=>b.date.localeCompare(a.date));
+  var l=S.el("ex-list");l.innerHTML=ex.length?"":'<div class="empty">No expenses logged.</div>';
+  ex.forEach(function(e){var r=document.createElement("div");r.className="row";r.innerHTML='<span class="nm">'+e.cat+' <span class="meta">'+(e.desc||"")+' · '+new Date(e.date+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'</span></span><span class="amt neg">-'+S.money(num(e.amount))+'</span>';var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.expenses=db.expenses.filter(x=>x.id!==e.id);S.save();renderExpenses();renderTaxes();renderTrends();};r.appendChild(del);l.appendChild(r);});
+  var yr=String(new Date().getFullYear()),yrEx=db.expenses.filter(e=>e.date.slice(0,4)===yr);
+  S.el("ex-year").textContent=S.money(yrEx.reduce((a,b)=>a+num(b.amount),0));
+  S.el("ex-mo").textContent=S.money(db.expenses.filter(e=>e.date.slice(0,7)===tm()).reduce((a,b)=>a+num(b.amount),0));
+  var cats={};yrEx.forEach(e=>cats[e.cat]=(cats[e.cat]||0)+num(e.amount));
+  var arr=Object.keys(cats).map(k=>({k:k,v:cats[k]})).sort((a,b)=>b.v-a.v);
+  S.el("ex-cats").innerHTML=arr.length?arr.map(c=>'<div class="row"><span class="nm">'+c.k+'</span><span class="amt">'+S.money(c.v)+'</span></div>').join(""):'<div class="empty">No expenses this year.</div>';
+}
+S.el("ex-add").onclick=function(){var d=S.val("ex-date"),a=S.val("ex-amt");if(!d||!a)return;db.expenses.push({id:S.uid(),date:d,cat:S.val("ex-cat"),desc:S.val("ex-desc"),amount:a});S.save();S.clr("ex-desc","ex-amt");renderExpenses();renderTaxes();renderTrends();S.toast("Expense added",1);};
+
+/* taxes */
+function renderTaxes(){
+  S.el("tx-pct").value=db.taxPct||25;
+  var yr=String(new Date().getFullYear()),pct=num(db.taxPct)/100,ql=["Q1 Jan–Mar","Q2 Apr–Jun","Q3 Jul–Sep","Q4 Oct–Dec"];
+  function q(m){return Math.floor((m-1)/3);}
+  var qi=[0,0,0,0],qe=[0,0,0,0];
+  db.income.entries.forEach(function(e){if(e.date.slice(0,4)===yr)qi[q(parseInt(e.date.slice(5,7),10))]+=num(e.amount);});
+  db.expenses.forEach(function(e){if(e.date.slice(0,4)===yr)qe[q(parseInt(e.date.slice(5,7),10))]+=num(e.amount);});
+  var rows='<table style="width:100%;border-collapse:collapse;font-size:13px"><tr style="color:var(--muted);font-size:10.5px;text-transform:uppercase"><th style="text-align:left;padding:6px 4px">Quarter</th><th style="text-align:right;padding:6px 4px">Income</th><th style="text-align:right;padding:6px 4px">Expenses</th><th style="text-align:right;padding:6px 4px">Set aside</th></tr>';
+  for(var i=0;i<4;i++){var net=Math.max(0,qi[i]-qe[i]);rows+='<tr style="border-top:1px solid var(--line)"><td style="padding:7px 4px">'+ql[i]+'</td><td style="text-align:right;padding:7px 4px">'+S.money(qi[i])+'</td><td style="text-align:right;padding:7px 4px;color:var(--bad)">'+S.money(qe[i])+'</td><td style="text-align:right;padding:7px 4px;font-weight:700">'+S.money(net*pct)+'</td></tr>';}
+  S.el("tx-table").innerHTML=rows+'</table>';
+  var ti=qi.reduce((a,b)=>a+b,0),te=qe.reduce((a,b)=>a+b,0);
+  S.el("tx-inc").textContent=S.money(ti);S.el("tx-exp").textContent=S.money(te);S.el("tx-set").textContent=S.money(Math.max(0,ti-te)*pct);
+}
+S.el("tx-save").onclick=function(){db.taxPct=num(S.val("tx-pct"))||25;S.save();renderTaxes();S.toast("Set",1);};
+
+/* trends */
+function renderTrends(){
+  var d=new Date(),ms=[];for(var i=5;i>=0;i--){var x=new Date(d.getFullYear(),d.getMonth()-i,1);ms.push({key:x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0"),lbl:x.toLocaleDateString("en-US",{month:"short"})});}
+  var inc=ms.map(m=>db.income.entries.filter(e=>e.date.slice(0,7)===m.key).reduce((a,b)=>a+num(b.amount),0));
+  S.el("tr-income").innerHTML=S.bars(ms.map(m=>m.lbl),inc,520,130,"#8168f2");
+  var nz=inc.filter(v=>v>0);S.el("tr-avg").textContent=S.money(nz.length?nz.reduce((a,b)=>a+b,0)/nz.length:0);
+  var mi=monthEarned(),me=db.expenses.filter(e=>e.date.slice(0,7)===tm()).reduce((a,b)=>a+num(b.amount),0);
+  var pr=S.el("tr-profit");pr.textContent=S.money(mi-me);pr.className="val "+(mi-me>=0?"pos":"neg");
+  var hrs=db.time.reduce((a,b)=>a+num(b.hrs),0),bill=db.time.reduce((a,b)=>a+num(b.hrs)*num(b.rate),0);
+  S.el("tr-hr").textContent=hrs>0?S.money(bill/hrs):"$0";
+  var byc={};db.income.entries.forEach(e=>{var c=e.client||"Other";byc[c]=(byc[c]||0)+num(e.amount);});
+  var COL=["#8168f2","#19c3ad","#4a90e2","#2fae5f","#eca13a","#ec5f5a","#d169b8","#5bbfd6"];
+  var arr=Object.keys(byc).map((k,i)=>({label:k,value:byc[k],color:COL[i%COL.length]})).sort((a,b)=>b.value-a.value);
+  var tc=S.el("tr-client");
+  tc.innerHTML=arr.length?('<div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">'+S.donut(arr,150)+'<div style="flex:1;min-width:150px">'+arr.map(a=>'<div class="row"><span class="dot" style="background:'+a.color+'"></span><span class="nm">'+a.label+'</span><span class="amt">'+S.money(a.value)+'</span></div>').join("")+'</div></div>'):'<div class="empty">Log income (with client names) to see this.</div>';
+}
+
 /* rewards */
 var BADGES=[
  {id:"invoice",ic:"🧾",title:"First Invoice",desc:"Built an invoice",cond:c=>c.invoice},
@@ -208,12 +321,15 @@ function renderRewards(){
     invoice:(db.invoice.items||[]).some(it=>it.desc||it.qty),goalHit:g>0&&e>=g};
   S.el("rw-count").textContent=S.renderBadges(S.el("rw-badges"),BADGES,ctx);
 }
-function SAMPLE(){var m=tm();function d(day){return m+"-"+String(Math.max(1,day)).padStart(2,"0");}var dd=new Date().getDate();
+function SAMPLE(){var m=tm();function d(day){return m+"-"+String(Math.min(28,Math.max(1,day))).padStart(2,"0");}var dd=new Date().getDate();
   return {invoice:{from:"Jordan D. — Vectoral Labs",to:"Acme Co.",num:"014",date:S.todayISO(),due:"",tax:0,notes:"Due in 14 days · Zelle / Venmo",items:[{desc:"Website updates",qty:"6",rate:"45"},{desc:"Logo tweaks",qty:"2",rate:"50"}]},
     time:[{id:S.uid(),date:d(dd-1),task:"Acme — site build",hrs:"3",rate:"45"},{id:S.uid(),date:d(dd-2),task:"Acme — revisions",hrs:"2",rate:"45"},{id:S.uid(),date:d(dd-4),task:"Bloom — branding",hrs:"4",rate:"50"}],
     income:{goal:1500,entries:[{id:S.uid(),date:d(dd-3),client:"Acme Co.",amount:"320"},{id:S.uid(),date:d(dd-8),client:"Bloom Studio",amount:"450"},{id:S.uid(),date:d(dd-14),client:"Acme Co.",amount:"600"}]},
-    clients:[{id:S.uid(),name:"Acme Co.",contact:"jane@acme.com",notes:"Monthly site support"},{id:S.uid(),name:"Bloom Studio",contact:"555-0144",notes:"Branding project"}]};}
-function renderAll(){renderInvoice();renderTime();renderIncome();renderClients();renderHome();renderRewards();}
+    clients:[{id:S.uid(),name:"Acme Co.",contact:"jane@acme.com",notes:"Monthly site support"},{id:S.uid(),name:"Bloom Studio",contact:"555-0144",notes:"Branding project"}],
+    projects:[{id:S.uid(),title:"Acme website refresh",client:"Acme Co.",value:"1200",status:"Active",due:d(dd+8)},{id:S.uid(),title:"Bloom brand kit",client:"Bloom Studio",value:"800",status:"Paid",due:d(dd-5)},{id:S.uid(),title:"Portfolio site",client:"New lead",value:"600",status:"Lead",due:""}],
+    expenses:[{id:S.uid(),date:d(dd-5),cat:"Software",desc:"Design app",amount:"29"},{id:S.uid(),date:d(dd-12),cat:"Fees",desc:"Payment processor",amount:"18"},{id:S.uid(),date:d(dd-20),cat:"Equipment",desc:"Webcam",amount:"85"}],
+    taxPct:25};}
+function renderAll(){renderInvoice();renderProjects();renderTime();renderIncome();renderExpenses();renderTaxes();renderClients();renderTrends();renderHome();renderRewards();}
 ["iv-date","t-date","in-date"].forEach(id=>{if(!S.el(id).value)S.el(id).value=S.todayISO();});
 S.initShell();
 S.initAccount({name:"steady-work",defaults:DEF,sample:SAMPLE,render:renderAll});
