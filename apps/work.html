@@ -25,6 +25,7 @@
 <nav class="appnav"><div class="wrap">
   <button class="stab active" data-panel="home">Overview</button>
   <button class="stab" data-panel="invoice">Invoice</button>
+  <button class="stab" data-panel="history">History</button>
   <button class="stab" data-panel="projects">Projects</button>
   <button class="stab" data-panel="time">Time</button>
   <button class="stab" data-panel="income">Income</button>
@@ -63,7 +64,18 @@
         <div class="inv-tot big"><span>Total due</span><span id="iv-total">$0</span></div>
       </div>
       <div class="field" style="margin-top:14px"><label>Notes / payment terms</label><input id="iv-notes" placeholder="e.g. Due in 14 days · Zelle / Venmo @…"></div>
-      <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap"><button class="btn" id="iv-print">🖨 Print / Save as PDF</button><button class="btn ghost sm" id="iv-clear">Clear</button></div>
+      <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap"><button class="btn" id="iv-print">🖨 Print / Save as PDF</button><button class="btn ghost sm" id="iv-save">💾 Save to history</button><button class="btn ghost sm" id="iv-clear">Clear</button></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-history">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Invoices</div><div class="val" id="ih-count">0</div></div>
+      <div class="stat"><div class="label">Outstanding</div><div class="val" id="ih-out">$0</div></div>
+      <div class="stat"><div class="label">Paid</div><div class="val pos" id="ih-paid">$0</div></div>
+    </div>
+    <div class="card"><h2>Invoice history</h2><p class="sub">Every invoice you save lands here. Mark them paid, reload one into the generator, or reprint.</p>
+      <div id="ih-list"></div>
     </div>
   </section>
 
@@ -151,7 +163,7 @@
 <div id="invoice-print"></div>
 <script src="shared.js"></script>
 <script>
-var DEF={invoice:{from:"",to:"",num:"",date:"",due:"",tax:0,notes:"",items:[{desc:"",qty:"",rate:""}]},time:[],income:{goal:0,entries:[]},clients:[],projects:[],expenses:[],taxPct:25};
+var DEF={invoice:{from:"",to:"",num:"",date:"",due:"",tax:0,notes:"",items:[{desc:"",qty:"",rate:""}]},invoices:[],time:[],income:{goal:0,entries:[]},clients:[],projects:[],expenses:[],taxPct:25};
 var db=Steady.load("work",DEF);var S=Steady;
 function num(v){var n=parseFloat(String(v).replace(/[^0-9.\-]/g,""));return isNaN(n)?0:n;}
 function monthName(){return new Date().toLocaleDateString("en-US",{month:"long",year:"numeric"});}
@@ -191,6 +203,42 @@ function buildInvoiceHTML(){
 }
 S.el("iv-print").onclick=function(){S.el("invoice-print").innerHTML=buildInvoiceHTML();document.body.classList.add("printing");window.print();};
 window.onafterprint=function(){document.body.classList.remove("printing");};
+
+/* invoice history */
+S.el("iv-save").onclick=function(){
+  var iv=db.invoice,t=invTotals();
+  if(t.total<=0&&!iv.to){S.toast("Add a client and line items first");return;}
+  if(!db.invoices)db.invoices=[];
+  var snap=JSON.parse(JSON.stringify(iv));
+  db.invoices.unshift({id:S.uid(),saved:S.todayISO(),to:iv.to||"(no client)",num:iv.num||"",date:iv.date||"",due:iv.due||"",total:t.total,paid:false,data:snap});
+  S.save();renderHistory();renderHome();S.toast("Saved to history",1);
+};
+function renderHistory(){
+  if(!db.invoices)db.invoices=[];
+  var inv=db.invoices;
+  var out=inv.filter(x=>!x.paid).reduce((a,b)=>a+(Number(b.total)||0),0);
+  var paid=inv.filter(x=>x.paid).reduce((a,b)=>a+(Number(b.total)||0),0);
+  S.el("ih-count").textContent=inv.length;
+  S.el("ih-out").textContent=S.money(out);
+  S.el("ih-paid").textContent=S.money(paid);
+  var l=S.el("ih-list");
+  l.innerHTML=inv.length?"":'<div class="empty">No saved invoices yet. Build one on the Invoice tab and hit "Save to history".</div>';
+  inv.forEach(function(x){
+    var r=document.createElement("div");r.className="row";
+    r.innerHTML='<span class="nm">'+(x.num?("#"+x.num+" · "):"")+x.to+' <span class="meta">'+S.money(x.total)+(x.date?(" · "+x.date):"")+'</span></span>'+
+      '<span class="pill '+(x.paid?"good":"warn")+'">'+(x.paid?"Paid":"Unpaid")+'</span>';
+    var wrap=document.createElement("span");wrap.style.cssText="display:flex;gap:6px;align-items:center;margin-left:8px";
+    var pb=document.createElement("button");pb.className="btn ghost sm";pb.textContent=x.paid?"Mark unpaid":"Mark paid";
+    pb.onclick=function(){x.paid=!x.paid;S.save();renderHistory();renderHome();renderTrends&&renderTrends();};
+    var lb=document.createElement("button");lb.className="btn ghost sm";lb.textContent="Load";
+    lb.onclick=function(){db.invoice=JSON.parse(JSON.stringify(x.data));S.save();renderInvoice();renderHome();S.go("invoice");S.toast("Loaded into generator",1);};
+    var rp=document.createElement("button");rp.className="btn ghost sm";rp.textContent="Reprint";
+    rp.onclick=function(){var keep=db.invoice;db.invoice=x.data;S.el("invoice-print").innerHTML=buildInvoiceHTML();db.invoice=keep;document.body.classList.add("printing");window.print();};
+    var del=document.createElement("button");del.className="del";del.textContent="×";
+    del.onclick=function(){db.invoices=db.invoices.filter(y=>y.id!==x.id);S.save();renderHistory();renderHome();};
+    wrap.appendChild(pb);wrap.appendChild(lb);wrap.appendChild(rp);wrap.appendChild(del);r.appendChild(wrap);l.appendChild(r);
+  });
+}
 
 /* time */
 function renderTime(){
@@ -328,8 +376,9 @@ function SAMPLE(){var m=tm();function d(day){return m+"-"+String(Math.min(28,Mat
     clients:[{id:S.uid(),name:"Acme Co.",contact:"jane@acme.com",notes:"Monthly site support"},{id:S.uid(),name:"Bloom Studio",contact:"555-0144",notes:"Branding project"}],
     projects:[{id:S.uid(),title:"Acme website refresh",client:"Acme Co.",value:"1200",status:"Active",due:d(dd+8)},{id:S.uid(),title:"Bloom brand kit",client:"Bloom Studio",value:"800",status:"Paid",due:d(dd-5)},{id:S.uid(),title:"Portfolio site",client:"New lead",value:"600",status:"Lead",due:""}],
     expenses:[{id:S.uid(),date:d(dd-5),cat:"Software",desc:"Design app",amount:"29"},{id:S.uid(),date:d(dd-12),cat:"Fees",desc:"Payment processor",amount:"18"},{id:S.uid(),date:d(dd-20),cat:"Equipment",desc:"Webcam",amount:"85"}],
+    invoices:[{id:S.uid(),saved:d(dd-3),to:"Acme Co.",num:"013",date:d(dd-10),due:d(dd+4),total:600,paid:false,data:{from:"Jordan D. — Vectoral Labs",to:"Acme Co.",num:"013",date:d(dd-10),due:d(dd+4),tax:0,notes:"Due in 14 days",items:[{desc:"Website updates",qty:"10",rate:"45"},{desc:"Hosting setup",qty:"3",rate:"50"}]}},{id:S.uid(),saved:d(dd-16),to:"Bloom Studio",num:"012",date:d(dd-20),due:d(dd-6),total:450,paid:true,data:{from:"Jordan D. — Vectoral Labs",to:"Bloom Studio",num:"012",date:d(dd-20),due:d(dd-6),tax:0,notes:"Paid — thank you!",items:[{desc:"Branding package",qty:"9",rate:"50"}]}}],
     taxPct:25};}
-function renderAll(){renderInvoice();renderProjects();renderTime();renderIncome();renderExpenses();renderTaxes();renderClients();renderTrends();renderHome();renderRewards();}
+function renderAll(){renderInvoice();renderHistory();renderProjects();renderTime();renderIncome();renderExpenses();renderTaxes();renderClients();renderTrends();renderHome();renderRewards();}
 ["iv-date","t-date","in-date"].forEach(id=>{if(!S.el(id).value)S.el(id).value=S.todayISO();});
 S.initShell();
 S.initAccount({name:"steady-work",defaults:DEF,sample:SAMPLE,render:renderAll});

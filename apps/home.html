@@ -22,6 +22,7 @@
   <button class="stab" data-panel="maint">Maintenance</button>
   <button class="stab" data-panel="meals">Meals</button>
   <button class="stab" data-panel="docs">Documents</button>
+  <button class="stab" data-panel="inv">Inventory</button>
   <button class="stab" data-panel="rewards">🏆 Rewards</button>
 </div></nav>
 <main class="wrap main">
@@ -65,6 +66,18 @@
     </div>
   </section>
 
+  <section class="panel" id="panel-inv">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Items</div><div class="val" id="iv-count">0</div></div>
+      <div class="stat"><div class="label">Est. value</div><div class="val" id="iv-value">$0</div></div>
+      <div class="stat"><div class="label">Warranties active</div><div class="val" id="iv-warr">0</div></div>
+    </div>
+    <div class="card"><h2>Home inventory</h2><p class="sub">Track what you own, where it is, and when the warranty runs out. Handy for renters' insurance, moves, and claims.</p>
+      <div class="addform" style="grid-template-columns:1fr 110px 110px 130px auto"><div class="field"><label>Item</label><input id="iv-name" placeholder="TV, laptop, couch…"></div><div class="field"><label>Where</label><input id="iv-loc" placeholder="Living room"></div><div class="field"><label>Value $</label><input id="iv-val" type="number" inputmode="decimal" placeholder="0"></div><div class="field"><label>Warranty until</label><input id="iv-exp" type="date"></div><button class="btn" id="iv-add">Add</button></div>
+      <div id="iv-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
   <section class="panel" id="panel-rewards">
     <div class="hero"><div class="lbl">On top of it</div><div class="big" id="rw-ontrack">0</div><div class="meta">cleaning tasks up to date</div>
       <div class="mini"><div>Badges<b id="rw-count">0</b></div></div></div>
@@ -75,7 +88,7 @@
 <div id="toasts"></div>
 <script src="shared.js"></script>
 <script>
-var DEF={cleaning:[],maintenance:[],meals:{week:{Mon:"",Tue:"",Wed:"",Thu:"",Fri:"",Sat:"",Sun:""},grocery:[]},documents:[]};
+var DEF={cleaning:[],maintenance:[],meals:{week:{Mon:"",Tue:"",Wed:"",Thu:"",Fri:"",Sat:"",Sun:""},grocery:[]},documents:[],inventory:[]};
 var db=Steady.load("home",DEF);var S=Steady;
 var DAYS=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
 function daysSince(d){if(!d)return 1e9;return (Date.now()-new Date(d+"T00:00:00"))/86400000;}
@@ -160,6 +173,29 @@ function renderRewards(){
   S.el("rw-count").textContent=S.renderBadges(S.el("rw-badges"),BADGES,ctx);
 }
 
+/* inventory */
+function renderInventory(){
+  if(!db.inventory)db.inventory=[];
+  var inv=db.inventory;
+  var val=inv.reduce((a,b)=>a+(Number(b.val)||0),0);
+  var warr=inv.filter(x=>x.exp&&daysTo(x.exp)>=0).length;
+  S.el("iv-count").textContent=inv.length;
+  S.el("iv-value").textContent=S.money(val);
+  S.el("iv-warr").textContent=warr;
+  var l=S.el("iv-list");
+  l.innerHTML=inv.length?"":'<div class="empty">Nothing logged yet. Add the big stuff first — electronics, furniture, appliances.</div>';
+  inv.slice().sort((a,b)=>(Number(b.val)||0)-(Number(a.val)||0)).forEach(function(x){
+    var r=document.createElement("div");r.className="row";
+    var tag="";
+    if(x.exp){var dd=daysTo(x.exp);tag=dd<0?'<span class="pill warn">warranty ended</span>':'<span class="pill good">warranty '+(dd<=30?dd+"d left":"active")+'</span>';}
+    r.innerHTML='<span class="nm">'+x.name+' <span class="meta">'+(x.loc?x.loc+" · ":"")+S.money(Number(x.val)||0)+'</span></span>'+tag;
+    var del=document.createElement("button");del.className="del";del.textContent="×";
+    del.onclick=function(){db.inventory=db.inventory.filter(y=>y.id!==x.id);S.save();renderInventory();};
+    r.appendChild(del);l.appendChild(r);
+  });
+}
+S.el("iv-add").onclick=function(){var n=S.val("iv-name");if(!n)return;if(!db.inventory)db.inventory=[];db.inventory.push({id:S.uid(),name:n,loc:S.val("iv-loc"),val:S.val("iv-val"),exp:S.val("iv-exp")});S.save();S.clr("iv-name","iv-loc","iv-val","iv-exp");renderInventory();S.toast("Added",1);};
+
 /* overview */
 function renderHome(){
   S.el("h-date").textContent=new Date().toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"});
@@ -178,12 +214,13 @@ function renderHome(){
   gr.innerHTML=db.meals.grocery.length?(need.length?need.slice(0,8).map(g=>'<div class="row"><span class="nm">'+g.item+'</span></div>').join(""):'<div class="empty">Everything checked off. 🛒</div>'):'<div class="empty">Add meals &amp; a grocery list on the Meals tab.</div>';
 }
 
-function renderAll(){renderCleaning();renderMaint();renderMeals();renderDocs();renderRewards();renderHome();}
+function renderAll(){renderCleaning();renderMaint();renderMeals();renderDocs();renderInventory();renderRewards();renderHome();}
 function SAMPLE(){var t=new Date();function iso(off){var x=new Date(t.getFullYear(),t.getMonth(),t.getDate()+off);return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0");}
   return {cleaning:[{id:S.uid(),task:"Vacuum & floors",freq:"Weekly",lastDone:iso(-9)},{id:S.uid(),task:"Kitchen deep clean",freq:"Weekly",lastDone:iso(-2)},{id:S.uid(),task:"Make the bed",freq:"Daily",lastDone:iso(-1)},{id:S.uid(),task:"Bathrooms",freq:"Weekly",lastDone:iso(-3)},{id:S.uid(),task:"Change sheets",freq:"Monthly",lastDone:iso(-40)}],
     maintenance:[{id:S.uid(),task:"HVAC filter",lastDone:iso(-80),intervalMo:3},{id:S.uid(),task:"Car oil change",lastDone:iso(-150),intervalMo:6},{id:S.uid(),task:"Smoke detector batteries",lastDone:iso(-200),intervalMo:12}],
     meals:{week:{Mon:"Pasta & salad",Tue:"Tacos",Wed:"Stir fry",Thu:"Leftovers",Fri:"Pizza night",Sat:"Grill out",Sun:"Soup & bread"},grocery:[{id:S.uid(),item:"Chicken",done:false},{id:S.uid(),item:"Rice",done:true},{id:S.uid(),item:"Veggies",done:false},{id:S.uid(),item:"Tortillas",done:false}]},
-    documents:[{id:S.uid(),name:"Lease",location:"Desktop folder / Documents",expiry:iso(220)},{id:S.uid(),name:"Car insurance",location:"Glovebox + email",expiry:iso(40)},{id:S.uid(),name:"ID / License",location:"Wallet",expiry:iso(600)},{id:S.uid(),name:"Passport",location:"Safe",expiry:iso(1200)},{id:S.uid(),name:"Birth certificate",location:"Safe",expiry:""}]};}
+    documents:[{id:S.uid(),name:"Lease",location:"Desktop folder / Documents",expiry:iso(220)},{id:S.uid(),name:"Car insurance",location:"Glovebox + email",expiry:iso(40)},{id:S.uid(),name:"ID / License",location:"Wallet",expiry:iso(600)},{id:S.uid(),name:"Passport",location:"Safe",expiry:iso(1200)},{id:S.uid(),name:"Birth certificate",location:"Safe",expiry:""}],
+    inventory:[{id:S.uid(),name:"Laptop",loc:"Backpack",val:"900",exp:iso(300)},{id:S.uid(),name:'TV 55"',loc:"Living room",val:"450",exp:iso(-20)},{id:S.uid(),name:"Couch",loc:"Living room",val:"600",exp:""},{id:S.uid(),name:"Microwave",loc:"Kitchen",val:"80",exp:iso(120)},{id:S.uid(),name:"Bike",loc:"Storage",val:"320",exp:""}]};}
 S.el("mt-date").value=S.todayISO();
 S.initShell();
 S.initAccount({name:"steady-home",defaults:DEF,sample:SAMPLE,render:renderAll});

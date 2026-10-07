@@ -20,6 +20,7 @@
   <button class="stab" data-panel="exams">Exams</button>
   <button class="stab" data-panel="sched">Schedule</button>
   <button class="stab" data-panel="studylog">Study Log</button>
+  <button class="stab" data-panel="flash">Flashcards</button>
   <button class="stab" data-panel="trends">Trends</button>
   <button class="stab" data-panel="rewards">🏆 Rewards</button>
 </div></nav>
@@ -77,6 +78,17 @@
     <div class="card"><h2>Recent</h2><div id="slg-list"></div></div>
   </section>
 
+  <section class="panel" id="panel-flash">
+    <div class="card"><h2>Flashcards</h2><p class="sub">Build decks and quiz yourself. Tap a card to flip it.</p>
+      <div class="addform" style="grid-template-columns:1fr auto auto"><select id="fc-deck"></select><button class="btn ghost sm" id="fc-newdeck">+ New deck</button><button class="btn ghost sm" id="fc-deldeck" style="border-color:var(--bad);color:var(--bad)">Delete deck</button></div>
+      <div id="fc-study" style="margin-top:14px"></div>
+    </div>
+    <div class="card"><h2>Add a card</h2>
+      <div class="addform" style="grid-template-columns:1fr 1fr auto"><input id="fc-front" placeholder="Front (question / term)"><input id="fc-back" placeholder="Back (answer / definition)"><button class="btn" id="fc-add">Add</button></div>
+      <div id="fc-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
   <section class="panel" id="panel-trends">
     <div class="grid3" style="margin-bottom:16px">
       <div class="stat"><div class="label">Completed</div><div class="val" id="ts-done">0</div></div>
@@ -98,7 +110,7 @@
 <div id="toasts"></div>
 <script src="shared.js"></script>
 <script>
-var DEF={assign:[],courses:[],exams:[],sched:[],sessions:[]};
+var DEF={assign:[],courses:[],exams:[],sched:[],sessions:[],decks:[]};
 var db=Steady.load("study",DEF);var S=Steady;
 var GP={"A":4.0,"A-":3.7,"B+":3.3,"B":3.0,"B-":2.7,"C+":2.3,"C":2.0,"C-":1.7,"D+":1.3,"D":1.0,"F":0.0};
 function daysTo(d){var t=new Date();t.setHours(0,0,0,0);var x=new Date(d+"T00:00:00");return Math.round((x-t)/86400000);}
@@ -173,6 +185,37 @@ function renderStudyLog(){
 }
 S.el("ss-add").onclick=function(){var d=S.val("ss-date"),s=S.val("ss-subj");if(!d||!s)return;db.sessions.push({id:S.uid(),date:d,subj:s,min:S.val("ss-min")});S.save();S.clr("ss-subj","ss-min");renderStudyLog();renderTrends();S.toast("Logged",1);};
 
+/* flashcards */
+var fcDeck=null,fcIdx=0,fcFlip=false;
+function fcCur(){if(!db.decks)db.decks=[];return db.decks.find(d=>d.id===fcDeck)||db.decks[0]||null;}
+function renderFlash(){
+  if(!db.decks)db.decks=[];
+  var sel=S.el("fc-deck");
+  sel.innerHTML=db.decks.length?db.decks.map(d=>'<option value="'+d.id+'">'+d.name+' ('+d.cards.length+')</option>').join(""):'<option value="">No decks yet</option>';
+  if((!fcDeck||!db.decks.some(d=>d.id===fcDeck))&&db.decks.length)fcDeck=db.decks[0].id;
+  if(fcDeck)sel.value=fcDeck;
+  var d=fcCur(),st=S.el("fc-study");
+  if(!d||!d.cards.length){st.innerHTML='<div class="empty">'+(d?"No cards in this deck yet — add some below.":"Create a deck to get started.")+'</div>';}
+  else{
+    if(fcIdx>=d.cards.length)fcIdx=0;var c=d.cards[fcIdx];
+    st.innerHTML='<div id="fc-card" style="background:var(--card-2,#0e1a2b);border:1px solid var(--line);border-radius:14px;padding:38px 18px;text-align:center;cursor:pointer;min-height:110px;display:flex;align-items:center;justify-content:center;font:600 18px var(--sans)">'+(fcFlip?c.back:c.front)+'</div>'+
+      '<div style="text-align:center;color:var(--muted);font-size:12px;margin-top:8px">'+(fcFlip?"answer — tap to flip back":"question — tap to flip")+' · '+(fcIdx+1)+' / '+d.cards.length+'</div>'+
+      '<div style="display:flex;gap:8px;justify-content:center;margin-top:12px"><button class="btn ghost sm" id="fc-prev">← Prev</button><button class="btn ghost sm" id="fc-shuf">🔀 Shuffle</button><button class="btn sm" id="fc-next">Next →</button></div>';
+    S.el("fc-card").onclick=function(){fcFlip=!fcFlip;renderFlash();};
+    S.el("fc-prev").onclick=function(){fcIdx=(fcIdx-1+d.cards.length)%d.cards.length;fcFlip=false;renderFlash();};
+    S.el("fc-next").onclick=function(){fcIdx=(fcIdx+1)%d.cards.length;fcFlip=false;renderFlash();};
+    S.el("fc-shuf").onclick=function(){for(var i=d.cards.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=d.cards[i];d.cards[i]=d.cards[j];d.cards[j]=t;}fcIdx=0;fcFlip=false;S.save();renderFlash();};
+  }
+  var l=S.el("fc-list");
+  if(!d){l.innerHTML="";}
+  else{l.innerHTML=d.cards.length?"":'<div class="empty">No cards yet.</div>';
+    d.cards.forEach(function(c){var r=document.createElement("div");r.className="row";r.innerHTML='<span class="nm">'+c.front+' <span class="meta">— '+c.back+'</span></span>';var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){d.cards=d.cards.filter(x=>x.id!==c.id);S.save();renderFlash();};r.appendChild(del);l.appendChild(r);});}
+}
+S.el("fc-deck").onchange=function(){fcDeck=this.value;fcIdx=0;fcFlip=false;renderFlash();};
+S.el("fc-newdeck").onclick=function(){var n=prompt("Deck name?");if(!n)return;if(!db.decks)db.decks=[];var id=S.uid();db.decks.push({id:id,name:n,cards:[]});fcDeck=id;fcIdx=0;fcFlip=false;S.save();renderFlash();S.toast("Deck created",1);};
+S.el("fc-deldeck").onclick=function(){var d=fcCur();if(!d)return;if(confirm('Delete deck "'+d.name+'" and its cards?')){db.decks=db.decks.filter(x=>x.id!==d.id);fcDeck=db.decks[0]?db.decks[0].id:null;fcIdx=0;fcFlip=false;S.save();renderFlash();}};
+S.el("fc-add").onclick=function(){var d=fcCur();if(!d){S.toast("Make a deck first");return;}var f=S.val("fc-front"),b=S.val("fc-back");if(!f||!b)return;d.cards.push({id:S.uid(),front:f,back:b});S.save();S.clr("fc-front","fc-back");renderFlash();S.toast("Card added",1);};
+
 /* trends */
 function renderTrends(){
   var g=gpa();S.el("ts-gpa").textContent=g.gpa!==null?g.gpa.toFixed(2):"—";
@@ -210,8 +253,9 @@ function SAMPLE(){var t=new Date();function d(off){var x=new Date(t.getFullYear(
     courses:[{id:S.uid(),name:"Calculus I",grade:"A-",credits:4},{id:S.uid(),name:"English Comp",grade:"B+",credits:3},{id:S.uid(),name:"Biology",grade:"A",credits:4},{id:S.uid(),name:"History",grade:"B",credits:3}],
     exams:[{id:S.uid(),name:"Calculus Midterm",date:d(9)},{id:S.uid(),name:"Biology Quiz",date:d(4)}],
     sched:[{id:S.uid(),day:"Mon",time:"9:00 AM",course:"Calculus I",room:"Bldg A 210"},{id:S.uid(),day:"Mon",time:"11:00 AM",course:"English Comp",room:"Bldg B 105"},{id:S.uid(),day:"Wed",time:"9:00 AM",course:"Calculus I",room:"Bldg A 210"},{id:S.uid(),day:"Tue",time:"1:00 PM",course:"Biology",room:"Sci 300"}],
-    sessions:(function(){var a=[],k=S.last7(),v=[45,0,60,30,0,75,50],sb=["Calculus","","Biology","English","","History","Calculus"];k.forEach(function(d,i){if(v[i])a.push({id:S.uid(),date:d.key,subj:sb[i],min:v[i]});});return a;})()};}
-function renderAll(){renderAssign();renderGPA();renderExams();renderSched();renderStudyLog();renderTrends();renderHome();renderRewards();}
+    sessions:(function(){var a=[],k=S.last7(),v=[45,0,60,30,0,75,50],sb=["Calculus","","Biology","English","","History","Calculus"];k.forEach(function(d,i){if(v[i])a.push({id:S.uid(),date:d.key,subj:sb[i],min:v[i]});});return a;})(),
+    decks:[{id:S.uid(),name:"Calculus terms",cards:[{id:S.uid(),front:"Derivative",back:"Instantaneous rate of change of a function"},{id:S.uid(),front:"Integral",back:"Area under a curve; the antiderivative"},{id:S.uid(),front:"Limit",back:"Value a function approaches as input approaches a point"},{id:S.uid(),front:"Chain rule",back:"d/dx f(g(x)) = f'(g(x))·g'(x)"}]},{id:S.uid(),name:"Biology",cards:[{id:S.uid(),front:"Mitochondria",back:"Powerhouse of the cell — makes ATP"},{id:S.uid(),front:"Osmosis",back:"Diffusion of water across a semipermeable membrane"}]}]};}
+function renderAll(){renderAssign();renderGPA();renderExams();renderSched();renderStudyLog();renderFlash();renderTrends();renderHome();renderRewards();}
 S.el("a-due").value=S.todayISO();S.el("ss-date").value=S.todayISO();
 S.initShell();
 S.initAccount({name:"steady-study",defaults:DEF,sample:SAMPLE,render:renderAll});

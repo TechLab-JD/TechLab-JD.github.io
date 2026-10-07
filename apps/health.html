@@ -21,6 +21,7 @@
   <button class="stab" data-panel="mood">Mood</button>
   <button class="stab" data-panel="workouts">Workouts</button>
   <button class="stab" data-panel="weight">Weight</button>
+  <button class="stab" data-panel="goals">Goals</button>
   <button class="stab" data-panel="trends">Trends</button>
   <button class="stab" data-panel="rewards">🏆 Rewards</button>
 </div></nav>
@@ -97,6 +98,19 @@
     <div class="card"><h2>History</h2><div id="wt-list"></div></div>
   </section>
 
+  <section class="panel" id="panel-goals">
+    <div class="card"><h2>Your targets</h2><p class="sub">Set goals — your progress shows below and your water goal syncs to the Water tab.</p>
+      <div class="grid2">
+        <div class="field"><label>Goal weight (lbs)</label><input id="hg-weight" type="number" inputmode="decimal"></div>
+        <div class="field"><label>Workouts per week</label><input id="hg-work" type="number" inputmode="numeric"></div>
+        <div class="field"><label>Sleep per night (hrs)</label><input id="hg-sleep" type="number" inputmode="decimal"></div>
+        <div class="field"><label>Water per day (glasses)</label><input id="hg-water" type="number" inputmode="numeric"></div>
+      </div>
+      <button class="btn block" id="hg-save" style="margin-top:12px">Save goals</button>
+    </div>
+    <div class="card"><h2>Progress</h2><div id="hg-prog" style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;padding:6px 0"></div></div>
+  </section>
+
   <section class="panel" id="panel-trends">
     <div class="grid3" style="margin-bottom:16px">
       <div class="stat"><div class="label">Avg sleep (7d)</div><div class="val" id="th-sleep">—</div></div>
@@ -119,7 +133,7 @@
 <div id="toasts"></div>
 <script src="shared.js"></script>
 <script>
-var DEF={habits:[],water:{goal:8,log:{}},sleep:[],mood:[],workouts:[],weight:[],moodPick:3,bestStreak:0};
+var DEF={habits:[],water:{goal:8,log:{}},sleep:[],mood:[],workouts:[],weight:[],hgoals:{weight:"",workouts:3,sleep:8,water:8},moodPick:3,bestStreak:0};
 var db=Steady.load("health",DEF);
 var DOW=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
 function todayIdx(){return (new Date().getDay()+6)%7;}
@@ -211,6 +225,24 @@ function renderHome(){
   else hh.innerHTML=db.habits.map(function(h){var done=(h.days||[]).filter(Boolean).length;return '<div class="row"><span class="nm">'+h.name+'<div class="bar" style="max-width:220px"><span style="width:'+(done/7*100)+'%"></span></div></span><span class="amt">'+done+'/7</span></div>';}).join("");
 }
 
+/* goals */
+function renderGoals(){
+  if(!db.hgoals)db.hgoals={weight:"",workouts:3,sleep:8,water:8};var g=db.hgoals;
+  S.el("hg-weight").value=g.weight||"";S.el("hg-work").value=g.workouts||"";S.el("hg-sleep").value=g.sleep||"";S.el("hg-water").value=g.water||db.water.goal||8;
+  var keys=last7().map(d=>d.key);
+  var w7=db.workouts.filter(x=>keys.indexOf(x.date)>=0).length,wt=Number(g.workouts)||0;
+  var slr=db.sleep.slice().sort((a,b)=>b.date.localeCompare(a.date)).slice(0,7).map(x=>Number(x.hours)||0),slavg=slr.length?slr.reduce((a,b)=>a+b,0)/slr.length:0,slt=Number(g.sleep)||0;
+  var wat=db.water.log[S.todayISO()]||0,watt=Number(g.water)||db.water.goal||8;
+  var cur=db.weight&&db.weight.length?Number(db.weight.slice().sort((a,b)=>a.date.localeCompare(b.date)).slice(-1)[0].lbs):null;
+  var html="";
+  html+='<div style="text-align:center">'+S.ring(wt>0?w7/wt:0,96,w7+"/"+wt,"")+'<div class="meta" style="margin-top:4px">workouts / wk</div></div>';
+  html+='<div style="text-align:center">'+S.ring(slt>0?slavg/slt:0,96,slavg?slavg.toFixed(1):"—","")+'<div class="meta" style="margin-top:4px">avg sleep / '+slt+'h</div></div>';
+  html+='<div style="text-align:center">'+S.ring(watt>0?wat/watt:0,96,wat+"/"+watt,"")+'<div class="meta" style="margin-top:4px">water today</div></div>';
+  if(cur!==null&&g.weight){var diff=cur-Number(g.weight);html+='<div style="text-align:center;align-self:center"><div style="font:800 30px var(--display);color:var(--accent)">'+cur+'</div><div class="meta">'+(Math.abs(diff)<0.5?"at goal 🎉":diff>0?diff.toFixed(1)+" lbs to goal":Math.abs(diff).toFixed(1)+" under goal")+'</div></div>';}
+  S.el("hg-prog").innerHTML=html;
+}
+S.el("hg-save").onclick=function(){db.hgoals={weight:S.val("hg-weight"),workouts:S.val("hg-work"),sleep:S.val("hg-sleep"),water:S.val("hg-water")};if(S.val("hg-water"))db.water.goal=Number(S.val("hg-water"))||db.water.goal;S.save();renderGoals();renderWater();renderHome();S.toast("Goals saved",1);};
+
 /* weight */
 function renderWeight(){
   if(!db.weight)db.weight=[];
@@ -273,8 +305,8 @@ function SAMPLE(){var k=last7();var wv=[4,8,6,8,7,8,5],wl={};k.forEach((d,i)=>wl
     mood:[{id:S.uid(),date:k[6].key,m:4,note:"Good day"},{id:S.uid(),date:k[5].key,m:3,note:""},{id:S.uid(),date:k[4].key,m:5,note:"Great workout"},{id:S.uid(),date:k[3].key,m:4,note:""},{id:S.uid(),date:k[1].key,m:3,note:""}],
     workouts:[{id:S.uid(),date:k[6].key,type:"Walk",min:25},{id:S.uid(),date:k[4].key,type:"Gym",min:45},{id:S.uid(),date:k[2].key,type:"Yoga",min:30}],
     weight:(function(){var a=[],base=185;for(var i=0;i<8;i++){var x=new Date();x.setDate(x.getDate()-i*4);a.push({id:S.uid(),date:x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0"),lbs:(base+i*0.8).toFixed(1)});}return a;})(),
-    moodPick:3,bestStreak:0};}
-function renderAll(){renderHabits();renderWater();renderSleep();renderMood();renderWorkouts();renderWeight();renderTrends();renderHome();renderRewards();}
+    hgoals:{weight:"178",workouts:4,sleep:8,water:8},moodPick:3,bestStreak:0};}
+function renderAll(){renderHabits();renderWater();renderSleep();renderMood();renderWorkouts();renderWeight();renderGoals();renderTrends();renderHome();renderRewards();}
 S.el("sl-date").value=S.todayISO();S.el("w-date").value=S.todayISO();S.el("wt-date").value=S.todayISO();
 if(db.moodPick){document.querySelectorAll("#mood-pick button").forEach(b=>b.classList.toggle("on",Number(b.dataset.m)===db.moodPick));}
 S.initShell();
