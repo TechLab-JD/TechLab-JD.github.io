@@ -45,6 +45,7 @@
   <div class="navgroup"><div class="navhead">Premium</div>
     <button class="snav" data-panel="reports">📊 Reports<span class="lk">🔒</span></button>
     <button class="snav" data-panel="trends">📈 Trends<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="wgoals">🎯 Goals<span class="lk">🔒</span></button>
   </div>
   <div class="navgroup"><div class="navhead">You</div>
     <button class="snav" data-panel="rewards">🏆 Rewards</button>
@@ -185,6 +186,19 @@
     <div class="card"><h2>Income by client</h2><p class="sub">Who pays the bills</p><div id="tr-client"></div></div>
   </section>
 
+  <section class="panel locked" id="panel-wgoals">
+    <div class="card"><h2>Income planner</h2><p class="sub">Set a monthly target and your rate — Steady works out the hours and tracks your pace.</p>
+      <div class="addform" style="grid-template-columns:1fr 1fr auto"><div class="field"><label>Monthly target $</label><input id="wg-target" type="number" inputmode="decimal"></div><div class="field"><label>Your rate $/hr</label><input id="wg-rate" type="number" inputmode="decimal"></div><button class="btn sm" id="wg-save" style="align-self:end">Save</button></div>
+    </div>
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Earned this month</div><div class="val pos" id="wg-earned">$0</div></div>
+      <div class="stat"><div class="label">Left to target</div><div class="val" id="wg-left">$0</div></div>
+      <div class="stat"><div class="label">Hours to go</div><div class="val" id="wg-hours">—</div></div>
+    </div>
+    <div class="card"><h2>Pace this month</h2><div class="lvlbar"><span id="wg-bar" style="width:0%"></span></div><p class="sub" id="wg-pace" style="margin-top:9px"></p></div>
+    <div class="card"><h2>Forecast</h2><p class="sub">Based on your last 3 months of logged income.</p><div id="wg-forecast"></div></div>
+  </section>
+
   <section class="panel" id="panel-rewards">
     <div class="hero"><div class="lbl">All-time</div><div class="big" id="rw-total">$0</div><div class="meta">total earned, logged in Steady Work</div>
       <div class="mini"><div>Clients<b id="rw-clients">0</b></div><div>Badges<b id="rw-count">0</b></div></div></div>
@@ -199,7 +213,7 @@
 <div id="invoice-print"></div>
 <script src="shared.js"></script>
 <script>
-var DEF={invoice:{from:"",to:"",num:"",date:"",due:"",tax:0,notes:"",items:[{desc:"",qty:"",rate:""}]},invoices:[],time:[],income:{goal:0,entries:[]},clients:[],projects:[],expenses:[],taxPct:25};
+var DEF={invoice:{from:"",to:"",num:"",date:"",due:"",tax:0,notes:"",items:[{desc:"",qty:"",rate:""}]},invoices:[],time:[],income:{goal:0,entries:[]},clients:[],projects:[],expenses:[],taxPct:25,wgoal:{rate:""}};
 var db=Steady.load("work",DEF);var S=Steady;
 function num(v){var n=parseFloat(String(v).replace(/[^0-9.\-]/g,""));return isNaN(n)?0:n;}
 function monthName(){return new Date().toLocaleDateString("en-US",{month:"long",year:"numeric"});}
@@ -461,14 +475,39 @@ function SAMPLE(){var m=tm();function d(day){return m+"-"+String(Math.min(28,Mat
     expenses:[{id:S.uid(),date:d(dd-5),cat:"Software",desc:"Design app",amount:"29"},{id:S.uid(),date:d(dd-12),cat:"Fees",desc:"Payment processor",amount:"18"},{id:S.uid(),date:d(dd-20),cat:"Equipment",desc:"Webcam",amount:"85"}],
     invoices:[{id:S.uid(),saved:d(dd-3),to:"Acme Co.",num:"013",date:d(dd-10),due:d(dd+4),total:600,paid:false,data:{from:"Jordan D. — Vectoral Labs",to:"Acme Co.",num:"013",date:d(dd-10),due:d(dd+4),tax:0,notes:"Due in 14 days",items:[{desc:"Website updates",qty:"10",rate:"45"},{desc:"Hosting setup",qty:"3",rate:"50"}]}},{id:S.uid(),saved:d(dd-16),to:"Bloom Studio",num:"012",date:d(dd-20),due:d(dd-6),total:450,paid:true,data:{from:"Jordan D. — Vectoral Labs",to:"Bloom Studio",num:"012",date:d(dd-20),due:d(dd-6),tax:0,notes:"Paid — thank you!",items:[{desc:"Branding package",qty:"9",rate:"50"}]}}],
     taxPct:25};}
-function renderAll(){renderInvoice();renderHistory();renderProjects();renderTime();renderIncome();renderExpenses();renderTaxes();renderClients();renderReports();renderTrends();renderHome();renderRewards();S.applyPremium();}
+/* income planner (premium) */
+function renderWGoals(){
+  if(!db.wgoal)db.wgoal={rate:""};
+  if(document.activeElement!==S.el("wg-target"))S.el("wg-target").value=db.income.goal||"";
+  if(document.activeElement!==S.el("wg-rate"))S.el("wg-rate").value=db.wgoal.rate||"";
+  var target=num(db.income.goal),rate=num(db.wgoal.rate),earned=monthEarned(),left=Math.max(0,target-earned);
+  S.el("wg-earned").textContent=S.money(earned);
+  S.el("wg-left").textContent=S.money(left);
+  S.el("wg-hours").textContent=rate>0?Math.ceil(left/rate)+" hr":"—";
+  var pct=target>0?Math.min(100,Math.round(earned/target*100)):0;
+  S.el("wg-bar").style.width=pct+"%";
+  var now=new Date(),dim=new Date(now.getFullYear(),now.getMonth()+1,0).getDate(),dom=now.getDate(),expected=target*(dom/dim);
+  var msg;
+  if(target<=0)msg="Set a monthly target to see your pace.";
+  else if(earned>=target)msg="🎉 Target hit — "+S.money(earned-target)+" over, with "+(dim-dom)+" days to spare.";
+  else if(earned>=expected)msg="On track — "+pct+"% of target, "+(dim-dom)+" days left.";
+  else msg="Behind pace — about "+S.money(expected-earned)+" behind where you'd want to be, "+(dim-dom)+" days left.";
+  S.el("wg-pace").textContent=msg;
+  var ms=[];for(var i=1;i<=3;i++){var x=new Date(now.getFullYear(),now.getMonth()-i,1);ms.push(x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0"));}
+  var vals=ms.map(function(m){return db.income.entries.filter(function(e){return (e.date||"").slice(0,7)===m;}).reduce(function(a,b){return a+num(b.amount);},0);});
+  var nz=vals.filter(function(v){return v>0;}),avg=nz.length?nz.reduce(function(a,b){return a+b;},0)/nz.length:0;
+  S.el("wg-forecast").innerHTML=avg>0?('<div class="row"><span class="nm">Avg monthly (last 3 mo)</span><span class="amt">'+S.money(avg)+'</span></div><div class="row"><span class="nm">Projected year</span><span class="amt">'+S.money(avg*12)+'</span></div>'+(rate>0?'<div class="row"><span class="nm">That\'s about</span><span class="amt">'+Math.round(avg/rate)+' hr/mo</span></div>':'')):'<div class="empty">Log a few months of income to see a forecast.</div>';
+}
+S.el("wg-save").onclick=function(){db.income.goal=S.val("wg-target");if(!db.wgoal)db.wgoal={};db.wgoal.rate=S.val("wg-rate");S.save();renderWGoals();renderIncome();S.toast("Saved",1);};
+
+function renderAll(){renderInvoice();renderHistory();renderProjects();renderTime();renderIncome();renderExpenses();renderTaxes();renderClients();renderReports();renderTrends();renderWGoals();renderHome();renderRewards();S.applyPremium();}
 ["iv-date","t-date","in-date"].forEach(id=>{if(!S.el(id).value)S.el(id).value=S.todayISO();});
 if(!S.el("rp-month").value)S.el("rp-month").value=tm();
 S.el("rp-month").onchange=renderReports;
 S.initShell();
 S.initAccount({name:"steady-work",defaults:DEF,sample:SAMPLE,render:renderAll});
 S.initPremium({title:"Steady Work Premium",desc:"The business-owner tools: reports and trends.",veil:"Unlock printable monthly reports and your 6-month income trends.",
-  features:["Monthly business report — P&L, margin & effective rate","Print or save any month's report as PDF","Trends — 6-month income & income-by-client","Priority on new freelancer tools"],render:renderAll});
+  features:["Monthly business report — P&L, margin & effective rate","Print or save any month's report as PDF","Trends — 6-month income & income-by-client","Income planner — target, hours-to-go, pace & forecast","Priority on new freelancer tools"],render:renderAll});
 renderAll();
 S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Work</h2><p>Invoices, billable time, income goals and clients — private, and saved on your device.</p></div><div class="feat"><div class="fi">🧾</div><div><b>Look professional</b><p>Build invoices and print or save them as PDF.</p></div></div><div class="feat"><div class="fi">🎯</div><div><b>Hit your number</b><p>Track income against a monthly goal.</p></div></div>',sample:SAMPLE,render:renderAll});
 </script>

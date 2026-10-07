@@ -32,6 +32,7 @@
   <div class="navgroup"><div class="navhead">Premium</div>
     <button class="snav" data-panel="planner">🗓️ Planner<span class="lk">🔒</span></button>
     <button class="snav" data-panel="trends">📈 Trends<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="focus">⏳ Focus<span class="lk">🔒</span></button>
   </div>
   <div class="navgroup"><div class="navhead">You</div>
     <button class="snav" data-panel="rewards">🏆 Rewards</button>
@@ -121,6 +122,18 @@
     <div class="card"><h2>Study time — last 7 days</h2><div id="ts-studychart"></div></div>
     <div class="card"><h2>Grade distribution</h2><p class="sub">Your course grades</p><div id="ts-grades"></div></div>
     <div class="card"><h2>Upcoming workload</h2><p class="sub">Assignments due in the next 2 weeks</p><div id="ts-workload"></div></div>
+  </section>
+
+  <section class="panel locked" id="panel-focus">
+    <div class="card"><h2>Focus timer</h2><p class="sub">A Pomodoro-style timer. Pick a subject and focus — each finished session logs straight to your Study Log.</p>
+      <div class="addform" style="grid-template-columns:1fr 120px"><input id="fo-subj" placeholder="What are you studying?"><select id="fo-len"><option value="25">25 min</option><option value="15">15 min</option><option value="45">45 min</option><option value="50">50 min</option></select></div>
+      <div id="fo-clock" style="font:800 64px var(--display);text-align:center;margin:18px 0 8px;letter-spacing:2px">25:00</div>
+      <div style="display:flex;gap:9px;justify-content:center"><button class="btn" id="fo-start">▶ Start</button><button class="btn ghost" id="fo-reset">Reset</button></div>
+    </div>
+    <div class="grid2">
+      <div class="stat"><div class="label">Focus sessions today</div><div class="val" id="fo-today">0</div></div>
+      <div class="stat"><div class="label">Focus minutes today</div><div class="val" id="fo-min">0 min</div></div>
+    </div>
   </section>
 
   <section class="panel" id="panel-rewards">
@@ -320,12 +333,31 @@ function SAMPLE(){var t=new Date();function d(off){var x=new Date(t.getFullYear(
     sched:[{id:S.uid(),day:"Mon",time:"9:00 AM",course:"Calculus I",room:"Bldg A 210"},{id:S.uid(),day:"Mon",time:"11:00 AM",course:"English Comp",room:"Bldg B 105"},{id:S.uid(),day:"Wed",time:"9:00 AM",course:"Calculus I",room:"Bldg A 210"},{id:S.uid(),day:"Tue",time:"1:00 PM",course:"Biology",room:"Sci 300"}],
     sessions:(function(){var a=[],k=S.last7(),v=[45,0,60,30,0,75,50],sb=["Calculus","","Biology","English","","History","Calculus"];k.forEach(function(d,i){if(v[i])a.push({id:S.uid(),date:d.key,subj:sb[i],min:v[i]});});return a;})(),
     decks:[{id:S.uid(),name:"Calculus terms",cards:[{id:S.uid(),front:"Derivative",back:"Instantaneous rate of change of a function"},{id:S.uid(),front:"Integral",back:"Area under a curve; the antiderivative"},{id:S.uid(),front:"Limit",back:"Value a function approaches as input approaches a point"},{id:S.uid(),front:"Chain rule",back:"d/dx f(g(x)) = f'(g(x))·g'(x)"}]},{id:S.uid(),name:"Biology",cards:[{id:S.uid(),front:"Mitochondria",back:"Powerhouse of the cell — makes ATP"},{id:S.uid(),front:"Osmosis",back:"Diffusion of water across a semipermeable membrane"}]}]};}
-function renderAll(){renderAssign();renderGPA();renderExams();renderSched();renderStudyLog();renderFlash();renderPlanner();renderTrends();renderHome();renderRewards();S.applyPremium();}
+/* focus timer (premium) */
+var foT=null,foRemain=25*60,foRunning=false,foLen=25;
+function foFmt(s){s=Math.max(0,s);var m=Math.floor(s/60),ss=s%60;return (m<10?"0":"")+m+":"+(ss<10?"0":"")+ss;}
+function foPaint(){S.el("fo-clock").textContent=foFmt(foRemain);S.el("fo-start").innerHTML=foRunning?"⏸ Pause":"▶ Start";}
+function foComplete(){clearInterval(foT);foT=null;foRunning=false;
+  var subj=S.val("fo-subj")||"Focus";db.sessions.push({id:S.uid(),date:S.todayISO(),subj:subj,min:String(foLen)});S.save();
+  foRemain=foLen*60;renderFocus();renderStudyLog();renderTrends();S.confetti();S.toast("Focus done — "+foLen+" min logged! 🎉",1);}
+function renderFocus(){
+  var t=S.todayISO(),ts=(db.sessions||[]).filter(function(x){return x.date===t;});
+  S.el("fo-today").textContent=ts.length;
+  S.el("fo-min").textContent=ts.reduce(function(a,b){return a+(Number(b.min)||0);},0)+" min";
+  foPaint();
+}
+S.el("fo-len").onchange=function(){foLen=Number(this.value)||25;if(!foRunning){foRemain=foLen*60;foPaint();}};
+S.el("fo-start").onclick=function(){
+  if(foRunning){clearInterval(foT);foT=null;foRunning=false;foPaint();return;}
+  foRunning=true;foPaint();foT=setInterval(function(){foRemain--;if(foRemain<=0){foComplete();}else{foPaint();}},1000);};
+S.el("fo-reset").onclick=function(){clearInterval(foT);foT=null;foRunning=false;foRemain=foLen*60;foPaint();};
+
+function renderAll(){renderAssign();renderGPA();renderExams();renderSched();renderStudyLog();renderFlash();renderPlanner();renderTrends();renderFocus();renderHome();renderRewards();S.applyPremium();}
 S.el("a-due").value=S.todayISO();S.el("ss-date").value=S.todayISO();
 S.initShell();
 S.initAccount({name:"steady-study",defaults:DEF,sample:SAMPLE,render:renderAll});
 S.initPremium({title:"Steady Study Premium",desc:"Plan smarter and see your trends.",veil:"Unlock the auto-built study planner and your performance trends.",
-  features:["Smart Planner — a 7-day study plan from your deadlines","Priorities ranked by urgency + suggested daily minutes","Trends — study time, grade distribution & workload","Priority on new study tools"],render:renderAll});
+  features:["Smart Planner — a 7-day study plan from your deadlines","Priorities ranked by urgency + suggested daily minutes","Trends — study time, grade distribution & workload","Focus timer — Pomodoro that auto-logs your sessions","Priority on new study tools"],render:renderAll});
 renderAll();
 S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Study</h2><p>Assignments, GPA, exam countdowns and your class schedule — private, on your device.</p></div><div class="feat"><div class="fi">🎯</div><div><b>Stay ahead</b><p>Due-date flags and exam countdowns keep you on track.</p></div></div><div class="feat"><div class="fi">🎓</div><div><b>Watch your GPA</b><p>Add courses and see it update live.</p></div></div>',sample:SAMPLE,render:renderAll});
 </script>

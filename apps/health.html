@@ -6,7 +6,10 @@
 <title>Steady Health</title>
 <meta name="description" content="Steady Health — a private tracker for habits, water, sleep, mood and workouts. Your data stays on your device.">
 <link rel="stylesheet" href="shared.css">
-<style>:root{--accent:#2fae5f;--accent-2:#4fd07f;--accent-dark:#1f8a49}</style>
+<style>:root{--accent:#2fae5f;--accent-2:#4fd07f;--accent-dark:#1f8a49}
+  #health-print{display:none}
+  @media print{body.printing>*:not(#health-print){display:none!important}body.printing #health-print{display:block!important}@page{margin:16mm}}
+</style>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -33,6 +36,7 @@
   <div class="navgroup"><div class="navhead">Premium</div>
     <button class="snav" data-panel="trends">📈 Trends<span class="lk">🔒</span></button>
     <button class="snav" data-panel="insights">💡 Insights<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="hreport">📄 Report<span class="lk">🔒</span></button>
   </div>
   <div class="navgroup"><div class="navhead">You</div>
     <button class="snav" data-panel="rewards">🏆 Rewards</button>
@@ -147,6 +151,18 @@
     <div class="card"><h2>30-day weight trend</h2><div id="in-weight"></div></div>
   </section>
 
+  <section class="panel locked" id="panel-hreport">
+    <div class="card"><h2>Weekly health report</h2><p class="sub">A clean one-page summary of your last 7 days — print it or save as PDF for a doctor, coach, or your own records.</p>
+      <button class="btn" id="hr-print">🖨 Print / Save as PDF</button>
+    </div>
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Habits done</div><div class="val" id="hr-habits">0%</div></div>
+      <div class="stat"><div class="label">Avg sleep</div><div class="val" id="hr-sleep">—</div></div>
+      <div class="stat"><div class="label">Workouts</div><div class="val" id="hr-work">0</div></div>
+    </div>
+    <div class="card"><h2>Preview</h2><div id="hr-prev"></div></div>
+  </section>
+
   <section class="panel" id="panel-rewards">
     <div class="hero"><div class="lbl">🔥 Active streak</div><div class="big" id="rw-streak">0 days</div><div class="meta">consecutive days you tracked something</div>
       <div class="mini"><div>Best streak<b id="rw-best">0 days</b></div><div>Badges<b id="rw-count">0</b></div></div></div>
@@ -158,6 +174,7 @@
 </div>
 <footer class="ft">Steady Health · a Steady Systems app · your data stays on this device</footer>
 <div id="toasts"></div>
+<div id="health-print"></div>
 <script src="shared.js"></script>
 <script>
 var DEF={habits:[],water:{goal:8,log:{}},sleep:[],mood:[],workouts:[],weight:[],hgoals:{weight:"",workouts:3,sleep:8,water:8},moodPick:3,bestStreak:0};
@@ -382,13 +399,56 @@ function SAMPLE(){var k=last7();var wv=[4,8,6,8,7,8,5],wl={};k.forEach((d,i)=>wl
     workouts:[{id:S.uid(),date:k[6].key,type:"Walk",min:25},{id:S.uid(),date:k[4].key,type:"Gym",min:45},{id:S.uid(),date:k[2].key,type:"Yoga",min:30}],
     weight:(function(){var a=[],base=185;for(var i=0;i<8;i++){var x=new Date();x.setDate(x.getDate()-i*4);a.push({id:S.uid(),date:x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0"),lbs:(base+i*0.8).toFixed(1)});}return a;})(),
     hgoals:{weight:"178",workouts:4,sleep:8,water:8},moodPick:3,bestStreak:0};}
-function renderAll(){renderHabits();renderWater();renderSleep();renderMood();renderWorkouts();renderWeight();renderGoals();renderTrends();renderInsights();renderHome();renderRewards();S.applyPremium();}
+/* weekly report (premium) */
+function healthReportData(){
+  var days=last7(),keys=days.map(function(d){return d.key;});
+  var habitCells=db.habits.reduce(function(a,h){return a+(h.days||[]).filter(function(x){return x;}).length;},0);
+  var habitPct=db.habits.length?Math.round(habitCells/(db.habits.length*7)*100):0;
+  var sl=db.sleep.filter(function(x){return keys.indexOf(x.date)>=0;}).map(function(x){return Number(x.hours)||0;});
+  var slAvg=sl.length?(sl.reduce(function(a,b){return a+b;},0)/sl.length):0;
+  var wk=db.workouts.filter(function(x){return keys.indexOf(x.date)>=0;});
+  var wkMin=wk.reduce(function(a,b){return a+(Number(b.min)||0);},0);
+  var md=db.mood.filter(function(x){return keys.indexOf(x.date)>=0;}).map(function(x){return Number(x.m)||0;});
+  var mdAvg=md.length?(md.reduce(function(a,b){return a+b;},0)/md.length):0;
+  var gl=db.water.goal||8,waterHit=keys.filter(function(k){return (db.water.log[k]||0)>=gl;}).length;
+  var waterTot=keys.reduce(function(a,k){return a+(db.water.log[k]||0);},0);
+  var wsort=db.weight.slice().sort(function(a,b){return a.date.localeCompare(b.date);});
+  var wLatest=null,wChange=null;
+  if(wsort.length){wLatest=Number(wsort[wsort.length-1].lbs);var first=wsort.filter(function(x){return keys.indexOf(x.date)>=0;})[0];if(first)wChange=wLatest-Number(first.lbs);}
+  return {habitPct:habitPct,slAvg:slAvg,wkCount:wk.length,wkMin:wkMin,mdAvg:mdAvg,waterHit:waterHit,waterTot:waterTot,wLatest:wLatest,wChange:wChange,days:days};
+}
+function buildHealthReport(){
+  var f=healthReportData(),faces=["—","😞","😕","😐","🙂","😄"];
+  function line(k,v){return '<div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #eee;font-size:13px"><span>'+k+'</span><span style="color:#333">'+v+'</span></div>';}
+  function d(k){return new Date(k+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"});}
+  return '<div style="font-family:Arial,sans-serif;color:#111;max-width:640px;margin:0 auto;padding:20px">'+
+    '<h1 style="font-size:23px;color:#1f8a49;margin:0 0 2px">Weekly Health Report</h1>'+
+    '<div style="color:#555;font-size:12px;margin-bottom:16px">'+d(f.days[0].key)+' – '+d(f.days[6].key)+'</div>'+
+    line("Habits completed",f.habitPct+"% ("+db.habits.length+" tracked)")+
+    line("Average sleep",f.slAvg?f.slAvg.toFixed(1)+" hrs/night":"—")+
+    line("Workouts",f.wkCount+" session"+(f.wkCount===1?"":"s")+" · "+f.wkMin+" min")+
+    line("Average mood",f.mdAvg?faces[Math.round(f.mdAvg)]+" "+f.mdAvg.toFixed(1)+"/5":"—")+
+    line("Water goal hit",f.waterHit+" of 7 days · "+f.waterTot+" glasses")+
+    (f.wLatest!==null?line("Current weight",f.wLatest+" lbs"+(f.wChange!==null?" ("+(f.wChange>0?"+":"")+f.wChange.toFixed(1)+" this week)":"")):"")+
+    '<p style="font-size:10px;color:#999;margin-top:24px">Made with Steady Health · techlab-jd.github.io/apps</p></div>';
+}
+function renderHReport(){
+  var f=healthReportData();
+  S.el("hr-habits").textContent=f.habitPct+"%";
+  S.el("hr-sleep").textContent=f.slAvg?f.slAvg.toFixed(1)+" hr":"—";
+  S.el("hr-work").textContent=f.wkCount;
+  S.el("hr-prev").innerHTML='<div style="background:#fff;border-radius:10px;overflow:auto">'+buildHealthReport()+'</div>';
+}
+S.el("hr-print").onclick=function(){S.el("health-print").innerHTML=buildHealthReport();document.body.classList.add("printing");window.print();};
+window.onafterprint=function(){document.body.classList.remove("printing");};
+
+function renderAll(){renderHabits();renderWater();renderSleep();renderMood();renderWorkouts();renderWeight();renderGoals();renderTrends();renderInsights();renderHReport();renderHome();renderRewards();S.applyPremium();}
 S.el("sl-date").value=S.todayISO();S.el("w-date").value=S.todayISO();S.el("wt-date").value=S.todayISO();
 if(db.moodPick){document.querySelectorAll("#mood-pick button").forEach(b=>b.classList.toggle("on",Number(b.dataset.m)===db.moodPick));}
 S.initShell();
 S.initAccount({name:"steady-health",defaults:DEF,sample:SAMPLE,render:renderAll});
 S.initPremium({title:"Steady Health Premium",desc:"Deeper analytics that turn your logs into real insight.",veil:"See 30-day trends and what's actually moving your mood, sleep and weight.",
-  features:["30-day Trends — sleep, mood & water charts","Insights — mood vs. sleep & workout correlations","30-day weight trend with net change","Priority on new tools as they ship"],render:renderAll});
+  features:["30-day Trends — sleep, mood & water charts","Insights — mood vs. sleep & workout correlations","Printable weekly health report (PDF)","30-day weight trend with net change","Priority on new tools as they ship"],render:renderAll});
 renderAll();
 S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Health</h2><p>Habits, water, sleep, mood and workouts — private, and saved only on your device.</p></div><div class="feat"><div class="fi">🔥</div><div><b>Build streaks</b><p>Track daily and keep the chain going.</p></div></div><div class="feat"><div class="fi">🏆</div><div><b>Earn badges</b><p>Milestones unlock as you go.</p></div></div>',sample:SAMPLE,render:renderAll});
 </script>

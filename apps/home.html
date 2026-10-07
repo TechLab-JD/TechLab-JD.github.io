@@ -35,6 +35,7 @@
   </div>
   <div class="navgroup"><div class="navhead">Premium</div>
     <button class="snav" data-panel="binder">📘 Binder<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="hprojects">🛠️ Projects<span class="lk">🔒</span></button>
   </div>
   <div class="navgroup"><div class="navhead">You</div>
     <button class="snav" data-panel="rewards">🏆 Rewards</button>
@@ -105,6 +106,18 @@
     <div class="card"><h2>Preview</h2><div id="bn-prev"></div></div>
   </section>
 
+  <section class="panel locked" id="panel-hprojects">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Projects</div><div class="val" id="hp-count">0</div></div>
+      <div class="stat"><div class="label">In progress</div><div class="val" id="hp-active">0</div></div>
+      <div class="stat"><div class="label">Total budget</div><div class="val" id="hp-budget">$0</div></div>
+    </div>
+    <div class="card"><h2>Home projects</h2><p class="sub">Plan repairs and improvements — set a budget and track each from idea to done. Tap the status to advance it.</p>
+      <div class="addform" style="grid-template-columns:1fr 110px 130px auto"><div class="field"><label>Project</label><input id="hp-name" placeholder="Paint the bedroom"></div><div class="field"><label>Budget $</label><input id="hp-budget-in" type="number" inputmode="decimal"></div><div class="field"><label>Status</label><select id="hp-status"><option>Idea</option><option>Planned</option><option>In progress</option><option>Done</option></select></div><button class="btn" id="hp-add">Add</button></div>
+      <div id="hp-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
   <section class="panel" id="panel-rewards">
     <div class="hero"><div class="lbl">On top of it</div><div class="big" id="rw-ontrack">0</div><div class="meta">cleaning tasks up to date</div>
       <div class="mini"><div>Badges<b id="rw-count">0</b></div></div></div>
@@ -119,7 +132,7 @@
 <div id="home-print"></div>
 <script src="shared.js"></script>
 <script>
-var DEF={cleaning:[],maintenance:[],meals:{week:{Mon:"",Tue:"",Wed:"",Thu:"",Fri:"",Sat:"",Sun:""},grocery:[]},documents:[],inventory:[]};
+var DEF={cleaning:[],maintenance:[],meals:{week:{Mon:"",Tue:"",Wed:"",Thu:"",Fri:"",Sat:"",Sun:""},grocery:[]},documents:[],inventory:[],hprojects:[]};
 var db=Steady.load("home",DEF);var S=Steady;
 var DAYS=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
 function daysSince(d){if(!d)return 1e9;return (Date.now()-new Date(d+"T00:00:00"))/86400000;}
@@ -283,18 +296,38 @@ function renderHome(){
   gr.innerHTML=db.meals.grocery.length?(need.length?need.slice(0,8).map(g=>'<div class="row"><span class="nm">'+g.item+'</span></div>').join(""):'<div class="empty">Everything checked off. 🛒</div>'):'<div class="empty">Add meals &amp; a grocery list on the Meals tab.</div>';
 }
 
-function renderAll(){renderCleaning();renderMaint();renderMeals();renderDocs();renderInventory();renderBinder();renderRewards();renderHome();S.applyPremium();}
+/* home projects (premium) */
+var HPST=["Idea","Planned","In progress","Done"];
+function renderHProjects(){
+  if(!db.hprojects)db.hprojects=[];
+  var p=db.hprojects,cls={"Idea":"","Planned":"","In progress":"warn","Done":"good"};
+  S.el("hp-count").textContent=p.length;
+  S.el("hp-active").textContent=p.filter(function(x){return x.status==="In progress";}).length;
+  S.el("hp-budget").textContent=S.money(p.reduce(function(a,b){return a+(Number(b.budget)||0);},0));
+  var l=S.el("hp-list");
+  l.innerHTML=p.length?"":'<div class="empty">No projects yet — add your first home project above.</div>';
+  p.forEach(function(x){var r=document.createElement("div");r.className="row";
+    r.innerHTML='<span class="nm">'+x.name+' <span class="meta">'+S.money(Number(x.budget)||0)+'</span></span>';
+    var st=document.createElement("button");st.className="pill "+(cls[x.status]||"");st.style.cssText="cursor:pointer;border:0";st.textContent=x.status;
+    st.onclick=function(){x.status=HPST[(HPST.indexOf(x.status)+1)%HPST.length];S.save();renderHProjects();};
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.hprojects=db.hprojects.filter(function(y){return y.id!==x.id;});S.save();renderHProjects();};
+    r.appendChild(st);r.appendChild(del);l.appendChild(r);});
+}
+S.el("hp-add").onclick=function(){var n=S.val("hp-name");if(!n)return;if(!db.hprojects)db.hprojects=[];db.hprojects.push({id:S.uid(),name:n,budget:S.val("hp-budget-in"),status:S.el("hp-status").value});S.save();S.clr("hp-name","hp-budget-in");renderHProjects();S.toast("Added",1);};
+
+function renderAll(){renderCleaning();renderMaint();renderMeals();renderDocs();renderInventory();renderBinder();renderHProjects();renderRewards();renderHome();S.applyPremium();}
 function SAMPLE(){var t=new Date();function iso(off){var x=new Date(t.getFullYear(),t.getMonth(),t.getDate()+off);return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0");}
   return {cleaning:[{id:S.uid(),task:"Vacuum & floors",freq:"Weekly",lastDone:iso(-9)},{id:S.uid(),task:"Kitchen deep clean",freq:"Weekly",lastDone:iso(-2)},{id:S.uid(),task:"Make the bed",freq:"Daily",lastDone:iso(-1)},{id:S.uid(),task:"Bathrooms",freq:"Weekly",lastDone:iso(-3)},{id:S.uid(),task:"Change sheets",freq:"Monthly",lastDone:iso(-40)}],
     maintenance:[{id:S.uid(),task:"HVAC filter",lastDone:iso(-80),intervalMo:3},{id:S.uid(),task:"Car oil change",lastDone:iso(-150),intervalMo:6},{id:S.uid(),task:"Smoke detector batteries",lastDone:iso(-200),intervalMo:12}],
     meals:{week:{Mon:"Pasta & salad",Tue:"Tacos",Wed:"Stir fry",Thu:"Leftovers",Fri:"Pizza night",Sat:"Grill out",Sun:"Soup & bread"},grocery:[{id:S.uid(),item:"Chicken",done:false},{id:S.uid(),item:"Rice",done:true},{id:S.uid(),item:"Veggies",done:false},{id:S.uid(),item:"Tortillas",done:false}]},
     documents:[{id:S.uid(),name:"Lease",location:"Desktop folder / Documents",expiry:iso(220)},{id:S.uid(),name:"Car insurance",location:"Glovebox + email",expiry:iso(40)},{id:S.uid(),name:"ID / License",location:"Wallet",expiry:iso(600)},{id:S.uid(),name:"Passport",location:"Safe",expiry:iso(1200)},{id:S.uid(),name:"Birth certificate",location:"Safe",expiry:""}],
-    inventory:[{id:S.uid(),name:"Laptop",loc:"Backpack",val:"900",exp:iso(300)},{id:S.uid(),name:'TV 55"',loc:"Living room",val:"450",exp:iso(-20)},{id:S.uid(),name:"Couch",loc:"Living room",val:"600",exp:""},{id:S.uid(),name:"Microwave",loc:"Kitchen",val:"80",exp:iso(120)},{id:S.uid(),name:"Bike",loc:"Storage",val:"320",exp:""}]};}
+    inventory:[{id:S.uid(),name:"Laptop",loc:"Backpack",val:"900",exp:iso(300)},{id:S.uid(),name:'TV 55"',loc:"Living room",val:"450",exp:iso(-20)},{id:S.uid(),name:"Couch",loc:"Living room",val:"600",exp:""},{id:S.uid(),name:"Microwave",loc:"Kitchen",val:"80",exp:iso(120)},{id:S.uid(),name:"Bike",loc:"Storage",val:"320",exp:""}],
+    hprojects:[{id:S.uid(),name:"Paint the bedroom",budget:"120",status:"In progress"},{id:S.uid(),name:"Fix leaky faucet",budget:"40",status:"Planned"},{id:S.uid(),name:"Build a bookshelf",budget:"90",status:"Idea"}]};}
 S.el("mt-date").value=S.todayISO();
 S.initShell();
 S.initAccount({name:"steady-home",defaults:DEF,sample:SAMPLE,render:renderAll});
 S.initPremium({title:"Steady Home Premium",desc:"Your whole home on one printable sheet.",veil:"Unlock the printable Home Binder — documents, inventory & maintenance in one PDF.",
-  features:["Home Binder — one printable sheet of everything","Document locations & expiry dates","Full inventory with values — ready for insurance","Maintenance & cleaning schedules included"],render:renderAll});
+  features:["Home Binder — one printable sheet of everything","Document locations & expiry dates","Full inventory with values — ready for insurance","Home Projects — track repairs & improvements with budgets","Maintenance & cleaning schedules included"],render:renderAll});
 renderAll();
 S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Home</h2><p>Cleaning, maintenance, meals and important documents — one calm place to run your home.</p></div><div class="feat"><div class="fi">🧹</div><div><b>Nothing slips</b><p>Tasks reset on their own schedule and tell you what\'s due.</p></div></div><div class="feat"><div class="fi">🗄️</div><div><b>Always prepared</b><p>Know where every document is and when it expires.</p></div></div>',sample:SAMPLE,render:renderAll});
 </script>
