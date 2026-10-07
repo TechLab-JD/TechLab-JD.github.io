@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steady Health</title>
+<meta name="description" content="Steady Health — a private tracker for habits, water, sleep, mood and workouts. Your data stays on your device.">
+<link rel="stylesheet" href="shared.css">
+<style>:root{--accent:#2fae5f;--accent-2:#4fd07f;--accent-dark:#1f8a49}</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Health</b></a>
+  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="icon-btn" data-steady="theme">◐</button></div>
+</div></header>
+<nav class="appnav"><div class="wrap">
+  <button class="stab active" data-panel="home">Overview</button>
+  <button class="stab" data-panel="habits">Habits</button>
+  <button class="stab" data-panel="water">Water</button>
+  <button class="stab" data-panel="sleep">Sleep</button>
+  <button class="stab" data-panel="mood">Mood</button>
+  <button class="stab" data-panel="workouts">Workouts</button>
+</div></nav>
+<main class="wrap main">
+  <section class="panel active" id="panel-home">
+    <div class="hero"><div class="lbl">Today</div><div class="big" id="h-date"></div><div class="meta" id="h-sub"></div>
+      <div class="mini"><div>Habits today<b id="h-hab">0</b></div><div>Water<b id="h-water">0</b></div><div>Mood (7d)<b id="h-mood">—</b></div><div>Workouts (wk)<b id="h-work">0</b></div></div></div>
+    <div class="grid2">
+      <div class="card"><h2>Water today</h2><p class="sub">Tap the glasses on the Water tab to fill up</p><div id="home-water" style="display:flex;justify-content:center;padding:6px 0"></div></div>
+      <div class="card"><h2>This week's habits</h2><p class="sub">How your habit rows are filling</p><div id="home-habits"></div></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-habits">
+    <div class="card"><h2>Habit tracker</h2><p class="sub">Tap a day once you did the habit. A full row is a good week (Mon–Sun).</p>
+      <div id="hab-list"></div>
+      <div class="addform" style="grid-template-columns:1fr auto;margin-top:12px"><input id="hab-name" placeholder="New habit (e.g. Walk, Read, Water)"><button class="btn" id="hab-add">Add</button></div>
+      <button class="btn ghost sm" id="hab-reset" style="margin-top:10px">Start a new week</button>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-water">
+    <div class="card"><h2>Water today</h2><p class="sub">Each glass ≈ 8 oz. Set your daily goal and tap to track.</p>
+      <div style="display:flex;align-items:center;gap:22px;flex-wrap:wrap;justify-content:center;margin:8px 0">
+        <div id="water-ring"></div>
+        <div style="display:flex;gap:10px;align-items:center"><button class="btn ghost" id="water-minus" style="font-size:20px;width:46px">−</button><button class="btn" id="water-plus" style="font-size:20px;width:46px">+</button></div>
+      </div>
+      <div class="addform" style="grid-template-columns:1fr auto;max-width:300px;margin:4px auto 0"><div class="field"><label>Daily goal (glasses)</label><input id="water-goal" type="number" inputmode="numeric"></div><button class="btn sm" id="water-save" style="align-self:end">Set</button></div>
+    </div>
+    <div class="card"><h2>This week</h2><p class="sub">Glasses per day</p><div id="water-week"></div></div>
+  </section>
+
+  <section class="panel" id="panel-sleep">
+    <div class="card"><h2>Log sleep</h2><p class="sub">How long and how well you slept.</p>
+      <div class="addform" style="grid-template-columns:130px 100px 1fr auto"><div class="field"><label>Date</label><input id="sl-date" type="date"></div><div class="field"><label>Hours</label><input id="sl-hours" type="number" step="0.5" inputmode="decimal" placeholder="7.5"></div><div class="field"><label>Quality</label><select id="sl-q"><option value="5">Great</option><option value="4">Good</option><option value="3" selected>OK</option><option value="2">Poor</option><option value="1">Bad</option></select></div><button class="btn" id="sl-add">Add</button></div>
+    </div>
+    <div class="grid2">
+      <div class="stat"><div class="label">Avg hours (7 nights)</div><div class="val" id="sl-avg">—</div></div>
+      <div class="stat"><div class="label">Nights logged</div><div class="val" id="sl-count">0</div></div>
+    </div>
+    <div class="card"><h2>Last 7 nights</h2><div id="sl-chart"></div></div>
+    <div class="card"><h2>History</h2><div id="sl-list"></div></div>
+  </section>
+
+  <section class="panel" id="panel-mood">
+    <div class="card"><h2>How are you today?</h2><p class="sub">One tap a day. A note helps you spot patterns.</p>
+      <div class="seg" id="mood-pick" style="margin-bottom:10px"><button data-m="1">😞</button><button data-m="2">😕</button><button data-m="3" class="on">😐</button><button data-m="4">🙂</button><button data-m="5">😄</button></div>
+      <div class="addform" style="grid-template-columns:1fr auto"><input id="mood-note" placeholder="What's on your mind? (optional)"><button class="btn" id="mood-add">Log</button></div>
+    </div>
+    <div class="card"><h2>This week</h2><p class="sub">Your mood trend</p><div id="mood-week"></div></div>
+    <div class="card"><h2>Recent</h2><div id="mood-list"></div></div>
+  </section>
+
+  <section class="panel" id="panel-workouts">
+    <div class="card"><h2>Log a workout</h2><p class="sub">Anything counts — a walk, the gym, stretching.</p>
+      <div class="addform" style="grid-template-columns:130px 1fr 100px auto"><div class="field"><label>Date</label><input id="w-date" type="date"></div><div class="field"><label>Type</label><input id="w-type" placeholder="Walk, Gym, Yoga…"></div><div class="field"><label>Minutes</label><input id="w-min" type="number" inputmode="numeric" placeholder="30"></div><button class="btn" id="w-add">Add</button></div>
+    </div>
+    <div class="grid2">
+      <div class="stat"><div class="label">This week</div><div class="val" id="w-week">0 min</div></div>
+      <div class="stat"><div class="label">Workouts this week</div><div class="val" id="w-count">0</div></div>
+    </div>
+    <div class="card"><h2>History</h2><div id="w-list"></div></div>
+  </section>
+</main>
+<footer class="ft">Steady Health · a Steady Systems app · your data stays on this device</footer>
+<div id="toasts"></div>
+<script src="shared.js"></script>
+<script>
+var DEF={habits:[],water:{goal:8,log:{}},sleep:[],mood:[],workouts:[],moodPick:3};
+var db=Steady.load("health",DEF);
+var DOW=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+function todayIdx(){return (new Date().getDay()+6)%7;}
+function dkey(dt){return dt.getFullYear()+"-"+String(dt.getMonth()+1).padStart(2,"0")+"-"+String(dt.getDate()).padStart(2,"0");}
+function last7(){var a=[],d=new Date();for(var i=6;i>=0;i--){var x=new Date(d.getFullYear(),d.getMonth(),d.getDate()-i);a.push({key:dkey(x),lbl:DOW[(x.getDay()+6)%7]});}return a;}
+var S=Steady;
+
+/* habits */
+function renderHabits(){
+  var list=S.el("hab-list");list.innerHTML=db.habits.length?"":'<div class="empty">No habits yet. Add one below.</div>';
+  db.habits.forEach(function(h){if(!h.days||h.days.length!==7)h.days=[0,0,0,0,0,0,0];
+    var done=h.days.filter(Boolean).length;
+    var row=document.createElement("div");row.className="row";
+    var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+h.name+' <span class="meta">'+done+'/7</span></div>';
+    var grid=document.createElement("div");grid.className="boxgrid";grid.style.gridTemplateColumns="repeat(7,1fr)";grid.style.maxWidth="320px";grid.style.marginTop="6px";
+    h.days.forEach(function(on,i){var c=document.createElement("div");c.className="boxcell"+(on?" on":"");c.textContent=on?"✓":DOW[i][0];c.onclick=function(){h.days[i]=h.days[i]?0:1;S.save();renderHabits();renderHome();};grid.appendChild(c);});
+    left.appendChild(grid);
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.habits=db.habits.filter(x=>x.id!==h.id);S.save();renderHabits();renderHome();};
+    row.appendChild(left);row.appendChild(del);list.appendChild(row);});
+}
+S.el("hab-add").onclick=function(){var n=S.val("hab-name");if(!n)return;db.habits.push({id:S.uid(),name:n,days:[0,0,0,0,0,0,0]});S.save();S.clr("hab-name");renderHabits();renderHome();S.toast("Habit added",1);};
+S.el("hab-reset").onclick=function(){db.habits.forEach(h=>h.days=[0,0,0,0,0,0,0]);S.save();renderHabits();renderHome();S.toast("New week — rows cleared",1);};
+
+/* water */
+function waterToday(){return db.water.log[S.todayISO()]||0;}
+function renderWater(){
+  S.el("water-goal").value=db.water.goal||8;
+  var c=waterToday(),g=db.water.goal||8,pct=g>0?c/g:0;
+  S.el("water-ring").innerHTML=S.ring(pct,130,c+"/"+g,"glasses");
+  var days=last7();S.el("water-week").innerHTML=S.bars(days.map(d=>d.lbl),days.map(d=>db.water.log[d.key]||0),520,110,"#2fae5f");
+}
+S.el("water-plus").onclick=function(){db.water.log[S.todayISO()]=waterToday()+1;S.save();renderWater();renderHome();};
+S.el("water-minus").onclick=function(){db.water.log[S.todayISO()]=Math.max(0,waterToday()-1);S.save();renderWater();renderHome();};
+S.el("water-save").onclick=function(){db.water.goal=Math.max(1,Number(S.val("water-goal"))||8);S.save();renderWater();renderHome();S.toast("Goal set",1);};
+
+/* sleep */
+function renderSleep(){
+  var s=db.sleep.slice().sort((a,b)=>b.date.localeCompare(a.date));
+  var l=S.el("sl-list");l.innerHTML=s.length?"":'<div class="empty">No sleep logged yet.</div>';
+  s.slice(0,30).forEach(function(e){var r=document.createElement("div");r.className="row";r.innerHTML='<span class="nm">'+e.hours+' hrs <span class="meta">'+["","Bad","Poor","OK","Good","Great"][e.q||3]+'</span></span><span class="meta">'+new Date(e.date+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'</span>';var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.sleep=db.sleep.filter(x=>x.id!==e.id);S.save();renderSleep();renderHome();};r.appendChild(del);l.appendChild(r);});
+  var days=last7(),vals=days.map(function(d){var e=db.sleep.filter(x=>x.date===d.key);return e.length?Number(e[0].hours)||0:0;});
+  S.el("sl-chart").innerHTML=S.bars(days.map(d=>d.lbl),vals,520,110,"#2fae5f");
+  var recent=s.slice(0,7).map(e=>Number(e.hours)||0);
+  S.el("sl-avg").textContent=recent.length?(recent.reduce((a,b)=>a+b,0)/recent.length).toFixed(1)+" hrs":"—";
+  S.el("sl-count").textContent=db.sleep.length;
+}
+S.el("sl-add").onclick=function(){var d=S.val("sl-date"),h=S.val("sl-hours");if(!d||!h)return;db.sleep.push({id:S.uid(),date:d,hours:Number(h)||0,q:Number(S.val("sl-q"))||3});S.save();S.clr("sl-hours");renderSleep();renderHome();S.toast("Sleep logged",1);};
+
+/* mood */
+document.querySelectorAll("#mood-pick button").forEach(function(b){b.onclick=function(){document.querySelectorAll("#mood-pick button").forEach(x=>x.classList.remove("on"));b.classList.add("on");db.moodPick=Number(b.dataset.m);};});
+function renderMood(){
+  var m=db.mood.slice().sort((a,b)=>b.date.localeCompare(a.date)||b.id.localeCompare(a.id));
+  var l=S.el("mood-list");l.innerHTML=m.length?"":'<div class="empty">No mood logged yet.</div>';
+  var faces=["","😞","😕","😐","🙂","😄"];
+  m.slice(0,30).forEach(function(e){var r=document.createElement("div");r.className="row";r.innerHTML='<span class="nm" style="font-size:18px">'+faces[e.m]+' <span class="meta" style="font-size:13px">'+(e.note||"")+'</span></span><span class="meta">'+new Date(e.date+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'</span>';var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.mood=db.mood.filter(x=>x.id!==e.id);S.save();renderMood();renderHome();};r.appendChild(del);l.appendChild(r);});
+  var days=last7(),vals=days.map(function(d){var e=db.mood.filter(x=>x.date===d.key);return e.length?Number(e[0].m)||0:0;});
+  S.el("mood-week").innerHTML=S.bars(days.map(d=>d.lbl),vals,520,110,"#2fae5f");
+}
+S.el("mood-add").onclick=function(){db.mood.push({id:S.uid(),date:S.todayISO(),m:db.moodPick||3,note:S.val("mood-note")});S.save();S.clr("mood-note");renderMood();renderHome();S.toast("Mood logged",1);};
+
+/* workouts */
+function thisWeekKeys(){return last7().map(d=>d.key);}
+function renderWorkouts(){
+  var w=db.workouts.slice().sort((a,b)=>b.date.localeCompare(a.date));
+  var l=S.el("w-list");l.innerHTML=w.length?"":'<div class="empty">No workouts logged yet.</div>';
+  w.slice(0,30).forEach(function(e){var r=document.createElement("div");r.className="row";r.innerHTML='<span class="nm">'+e.type+' <span class="meta">'+e.min+' min</span></span><span class="meta">'+new Date(e.date+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'</span>';var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.workouts=db.workouts.filter(x=>x.id!==e.id);S.save();renderWorkouts();renderHome();};r.appendChild(del);l.appendChild(r);});
+  var keys=thisWeekKeys(),wk=db.workouts.filter(e=>keys.indexOf(e.date)>=0);
+  S.el("w-week").textContent=wk.reduce((a,b)=>a+(Number(b.min)||0),0)+" min";
+  S.el("w-count").textContent=wk.length;
+}
+S.el("w-add").onclick=function(){var d=S.val("w-date"),t=S.val("w-type"),m=S.val("w-min");if(!d||!t)return;db.workouts.push({id:S.uid(),date:d,type:t,min:Number(m)||0});S.save();S.clr("w-type","w-min");renderWorkouts();renderHome();S.toast("Workout logged",1);};
+
+/* overview */
+function renderHome(){
+  S.el("h-date").textContent=new Date().toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"});
+  var ti=todayIdx(),habToday=db.habits.filter(h=>h.days&&h.days[ti]).length;
+  S.el("h-hab").textContent=habToday+"/"+db.habits.length;
+  S.el("h-water").textContent=waterToday()+"/"+(db.water.goal||8);
+  var keys=thisWeekKeys();
+  var mood7=db.mood.filter(e=>keys.indexOf(e.date)>=0).map(e=>Number(e.m)||0);
+  var faces=["—","😞","😕","😐","🙂","😄"];
+  S.el("h-mood").textContent=mood7.length?faces[Math.round(mood7.reduce((a,b)=>a+b,0)/mood7.length)]:"—";
+  S.el("h-work").textContent=db.workouts.filter(e=>keys.indexOf(e.date)>=0).length;
+  S.el("h-sub").textContent=habToday||waterToday()?"nice start — keep it going":"log something to get rolling";
+  var g=db.water.goal||8;S.el("home-water").innerHTML=S.ring(g>0?waterToday()/g:0,120,waterToday()+"/"+g,"glasses");
+  var hh=S.el("home-habits");
+  if(!db.habits.length)hh.innerHTML='<div class="empty">Add a habit on the Habits tab.</div>';
+  else hh.innerHTML=db.habits.map(function(h){var done=(h.days||[]).filter(Boolean).length;return '<div class="row"><span class="nm">'+h.name+'<div class="bar" style="max-width:220px"><span style="width:'+(done/7*100)+'%"></span></div></span><span class="amt">'+done+'/7</span></div>';}).join("");
+}
+
+function renderAll(){renderHabits();renderWater();renderSleep();renderMood();renderWorkouts();renderHome();}
+S.el("sl-date").value=S.todayISO();S.el("w-date").value=S.todayISO();
+if(db.moodPick){document.querySelectorAll("#mood-pick button").forEach(b=>b.classList.toggle("on",Number(b.dataset.m)===db.moodPick));}
+S.initShell();renderAll();
+</script>
+</body>
+</html>

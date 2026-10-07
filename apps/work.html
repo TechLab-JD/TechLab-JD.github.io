@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steady Work</title>
+<meta name="description" content="Steady Work — a free invoice generator, billable-hours tracker, income goals and client list for freelancers. Private; data stays on your device.">
+<link rel="stylesheet" href="shared.css">
+<style>
+  :root{--accent:#8168f2;--accent-2:#9d87f7;--accent-dark:#6a4fe0}
+  .inv-items .ir{display:grid;grid-template-columns:1fr 70px 90px 90px 30px;gap:8px;align-items:center;margin-bottom:7px}
+  .inv-items .ir .amt{font:700 14px var(--display);text-align:right}
+  .inv-tot{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+  .inv-tot.big{font:700 16px var(--display);border-bottom:0}
+  #invoice-print{display:none}
+  @media print{body.printing>*:not(#invoice-print){display:none!important}body.printing #invoice-print{display:block!important}@page{margin:16mm}}
+  @media(max-width:600px){.inv-items .ir{grid-template-columns:1fr 50px 70px 70px 26px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Work</b></a>
+  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="icon-btn" data-steady="theme">◐</button></div>
+</div></header>
+<nav class="appnav"><div class="wrap">
+  <button class="stab active" data-panel="home">Overview</button>
+  <button class="stab" data-panel="invoice">Invoice</button>
+  <button class="stab" data-panel="time">Time</button>
+  <button class="stab" data-panel="income">Income</button>
+  <button class="stab" data-panel="clients">Clients</button>
+</div></nav>
+<main class="wrap main">
+  <section class="panel active" id="panel-home">
+    <div class="hero"><div class="lbl" id="h-month"></div><div class="big" id="h-earned">$0</div><div class="meta" id="h-sub">earned this month</div>
+      <div class="mini"><div>Goal<b id="h-goal">$0</b></div><div>Billable logged<b id="h-bill">$0</b></div><div>Clients<b id="h-clients">0</b></div><div>Invoice total<b id="h-inv">$0</b></div></div></div>
+    <div class="grid2">
+      <div class="card"><h2>Income goal</h2><p class="sub">This month's progress</p><div id="home-ring" style="display:flex;justify-content:center;padding:6px 0"></div></div>
+      <div class="card"><h2>Recent income</h2><p class="sub">Latest payments logged</p><div id="home-income"></div></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-invoice">
+    <div class="card"><h2>Invoice generator</h2><p class="sub">Fill it in — totals calculate automatically. Then Print / Save as PDF to send.</p>
+      <div class="grid2">
+        <div class="field"><label>From (you)</label><input id="iv-from" placeholder="Your name / business"></div>
+        <div class="field"><label>Bill to (client)</label><input id="iv-to" placeholder="Client name"></div>
+        <div class="field"><label>Invoice #</label><input id="iv-num" placeholder="001"></div>
+        <div class="field"><label>Date</label><input id="iv-date" type="date"></div>
+        <div class="field"><label>Due date</label><input id="iv-due" type="date"></div>
+        <div class="field"><label>Tax %</label><input id="iv-tax" type="number" inputmode="decimal" placeholder="0"></div>
+      </div>
+      <div style="font:600 11px var(--sans);color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin:16px 0 8px">Line items</div>
+      <div class="inv-items" id="iv-items"></div>
+      <button class="btn ghost sm" id="iv-addline">+ Add line</button>
+      <div style="max-width:300px;margin-left:auto;margin-top:14px">
+        <div class="inv-tot"><span>Subtotal</span><span id="iv-sub">$0</span></div>
+        <div class="inv-tot"><span>Tax</span><span id="iv-taxamt">$0</span></div>
+        <div class="inv-tot big"><span>Total due</span><span id="iv-total">$0</span></div>
+      </div>
+      <div class="field" style="margin-top:14px"><label>Notes / payment terms</label><input id="iv-notes" placeholder="e.g. Due in 14 days · Zelle / Venmo @…"></div>
+      <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap"><button class="btn" id="iv-print">🖨 Print / Save as PDF</button><button class="btn ghost sm" id="iv-clear">Clear</button></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-time">
+    <div class="card"><h2>Billable hours</h2><p class="sub">Log work sessions — hours × rate fills the billable amount.</p>
+      <div class="addform" style="grid-template-columns:120px 1fr 80px 80px auto"><div class="field"><label>Date</label><input id="t-date" type="date"></div><div class="field"><label>Client / task</label><input id="t-task" placeholder="Client — what you did"></div><div class="field"><label>Hours</label><input id="t-hrs" type="number" step="0.25" inputmode="decimal" placeholder="2"></div><div class="field"><label>Rate $</label><input id="t-rate" type="number" inputmode="decimal" placeholder="40"></div><button class="btn" id="t-add">Add</button></div>
+    </div>
+    <div class="grid2">
+      <div class="stat"><div class="label">Total hours</div><div class="val" id="t-th">0</div></div>
+      <div class="stat"><div class="label">Total billable</div><div class="val pos" id="t-tb">$0</div></div>
+    </div>
+    <div class="card"><h2>Log</h2><div id="t-list"></div></div>
+  </section>
+
+  <section class="panel" id="panel-income">
+    <div class="card"><h2>Monthly income goal</h2><p class="sub">Set a target and log income as it lands.</p>
+      <div class="addform" style="grid-template-columns:1fr auto;max-width:320px"><div class="field"><label>This month's target $</label><input id="in-goal" type="number" inputmode="decimal"></div><button class="btn sm" id="in-savegoal" style="align-self:end">Set</button></div>
+      <div class="grid3" style="margin-top:14px"><div class="stat"><div class="label">Earned</div><div class="val pos" id="in-earned">$0</div></div><div class="stat"><div class="label">Left to goal</div><div class="val" id="in-left">$0</div></div><div class="stat"><div class="label">% of goal</div><div class="val" id="in-pct">0%</div></div></div>
+    </div>
+    <div class="card"><h2>Log income</h2>
+      <div class="addform" style="grid-template-columns:120px 1fr 100px auto"><div class="field"><label>Date</label><input id="in-date" type="date"></div><div class="field"><label>From (client)</label><input id="in-client" placeholder="Client"></div><div class="field"><label>Amount $</label><input id="in-amt" type="number" inputmode="decimal"></div><button class="btn" id="in-add">Add</button></div>
+      <div id="in-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-clients">
+    <div class="card"><h2>Clients</h2><p class="sub">A simple list so you never lose a contact.</p>
+      <div class="addform" style="grid-template-columns:1fr 1fr auto"><div class="field"><label>Name</label><input id="c-name" placeholder="Client / business"></div><div class="field"><label>Contact</label><input id="c-contact" placeholder="Email / phone"></div><button class="btn" id="c-add">Add</button></div>
+      <div class="field" style="margin-top:9px"><input id="c-notes" placeholder="Notes (what they need, rate, etc.)"></div>
+      <div id="c-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+</main>
+<footer class="ft">Steady Work · a Steady Systems app · your data stays on this device</footer>
+<div id="toasts"></div>
+<div id="invoice-print"></div>
+<script src="shared.js"></script>
+<script>
+var DEF={invoice:{from:"",to:"",num:"",date:"",due:"",tax:0,notes:"",items:[{desc:"",qty:"",rate:""}]},time:[],income:{goal:0,entries:[]},clients:[]};
+var db=Steady.load("work",DEF);var S=Steady;
+function num(v){var n=parseFloat(String(v).replace(/[^0-9.\-]/g,""));return isNaN(n)?0:n;}
+function monthName(){return new Date().toLocaleDateString("en-US",{month:"long",year:"numeric"});}
+function tm(){return S.tm();}
+
+/* invoice */
+function invTotals(){var sub=db.invoice.items.reduce((a,it)=>a+num(it.qty)*num(it.rate),0);var tax=sub*num(db.invoice.tax)/100;return {sub:sub,tax:tax,total:sub+tax};}
+function renderInvoice(){
+  var iv=db.invoice;
+  S.el("iv-from").value=iv.from||"";S.el("iv-to").value=iv.to||"";S.el("iv-num").value=iv.num||"";
+  S.el("iv-date").value=iv.date||"";S.el("iv-due").value=iv.due||"";S.el("iv-tax").value=iv.tax||"";S.el("iv-notes").value=iv.notes||"";
+  var box=S.el("iv-items");box.innerHTML="";
+  iv.items.forEach(function(it,i){var row=document.createElement("div");row.className="ir";
+    row.innerHTML='<input placeholder="Description" value="'+(it.desc||"").replace(/"/g,"&quot;")+'"><input type="number" inputmode="decimal" placeholder="Qty" value="'+(it.qty||"")+'"><input type="number" inputmode="decimal" placeholder="Rate" value="'+(it.rate||"")+'"><span class="amt">'+S.money(num(it.qty)*num(it.rate))+'</span><button class="del">×</button>';
+    var ins=row.querySelectorAll("input");
+    ins[0].oninput=function(){it.desc=this.value;S.save();};
+    ins[1].oninput=function(){it.qty=this.value;row.querySelector(".amt").textContent=S.money(num(it.qty)*num(it.rate));S.save();invTot();renderHome();};
+    ins[2].oninput=function(){it.rate=this.value;row.querySelector(".amt").textContent=S.money(num(it.qty)*num(it.rate));S.save();invTot();renderHome();};
+    row.querySelector(".del").onclick=function(){iv.items.splice(i,1);if(!iv.items.length)iv.items.push({desc:"",qty:"",rate:""});S.save();renderInvoice();renderHome();};
+    box.appendChild(row);});
+  invTot();
+}
+function invTot(){var t=invTotals();S.el("iv-sub").textContent=S.money(t.sub);S.el("iv-taxamt").textContent=S.money(t.tax);S.el("iv-total").textContent=S.money(t.total);}
+["iv-from","iv-to","iv-num","iv-date","iv-due","iv-tax","iv-notes"].forEach(function(id){S.el(id).oninput=function(){db.invoice[id.slice(3)]=this.value;S.save();if(id==="iv-tax"){invTot();renderHome();}};});
+S.el("iv-addline").onclick=function(){db.invoice.items.push({desc:"",qty:"",rate:""});S.save();renderInvoice();};
+S.el("iv-clear").onclick=function(){if(confirm("Clear this invoice?")){db.invoice={from:db.invoice.from,to:"",num:"",date:"",due:"",tax:0,notes:db.invoice.notes,items:[{desc:"",qty:"",rate:""}]};S.save();renderInvoice();renderHome();}};
+function buildInvoiceHTML(){
+  var iv=db.invoice,t=invTotals();
+  function row(it){return '<tr><td style="padding:6px;border-bottom:1px solid #eee">'+(it.desc||"")+'</td><td style="padding:6px;border-bottom:1px solid #eee;text-align:right">'+(it.qty||"")+'</td><td style="padding:6px;border-bottom:1px solid #eee;text-align:right">'+S.money(num(it.rate))+'</td><td style="padding:6px;border-bottom:1px solid #eee;text-align:right">'+S.money(num(it.qty)*num(it.rate))+'</td></tr>';}
+  return '<div style="font-family:Arial,sans-serif;color:#111;max-width:720px;margin:0 auto;padding:20px">'+
+    '<div style="display:flex;justify-content:space-between;align-items:flex-start"><h1 style="font-size:26px;color:#132536;margin:0">INVOICE</h1><div style="text-align:right;font-size:13px;color:#555">'+(iv.num?("#"+iv.num+"<br>"):"")+(iv.date?("Date: "+iv.date+"<br>"):"")+(iv.due?("Due: "+iv.due):"")+'</div></div>'+
+    '<div style="display:flex;justify-content:space-between;margin:18px 0;font-size:13px"><div><b>From</b><br>'+(iv.from||"").replace(/\n/g,"<br>")+'</div><div><b>Bill to</b><br>'+(iv.to||"").replace(/\n/g,"<br>")+'</div></div>'+
+    '<table style="width:100%;border-collapse:collapse;font-size:13px"><tr style="background:#132536;color:#fff"><th style="padding:7px;text-align:left">Description</th><th style="padding:7px;text-align:right">Qty</th><th style="padding:7px;text-align:right">Rate</th><th style="padding:7px;text-align:right">Amount</th></tr>'+iv.items.filter(it=>it.desc||it.qty||it.rate).map(row).join("")+'</table>'+
+    '<div style="margin-left:auto;width:260px;margin-top:14px;font-size:13px"><div style="display:flex;justify-content:space-between;padding:4px 0"><span>Subtotal</span><b>'+S.money(t.sub)+'</b></div><div style="display:flex;justify-content:space-between;padding:4px 0"><span>Tax</span><b>'+S.money(t.tax)+'</b></div><div style="display:flex;justify-content:space-between;padding:8px 0;border-top:2px solid #132536;font-size:16px"><b>Total due</b><b>'+S.money(t.total)+'</b></div></div>'+
+    (iv.notes?'<p style="font-size:12px;color:#555;margin-top:18px">'+iv.notes+'</p>':"")+
+    '<p style="font-size:10px;color:#999;margin-top:26px">Made with Steady Work · syssteady.gumroad.com</p></div>';
+}
+S.el("iv-print").onclick=function(){S.el("invoice-print").innerHTML=buildInvoiceHTML();document.body.classList.add("printing");window.print();};
+window.onafterprint=function(){document.body.classList.remove("printing");};
+
+/* time */
+function renderTime(){
+  var t=db.time.slice().sort((a,b)=>b.date.localeCompare(a.date));
+  var l=S.el("t-list");l.innerHTML=t.length?"":'<div class="empty">No time logged yet.</div>';
+  t.forEach(function(e){var bill=num(e.hrs)*num(e.rate);var r=document.createElement("div");r.className="row";r.innerHTML='<span class="nm">'+e.task+'<div class="meta">'+e.hrs+' hrs × '+S.money(num(e.rate))+' · '+new Date(e.date+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'</div></span><span class="amt">'+S.money(bill)+'</span>';var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.time=db.time.filter(x=>x.id!==e.id);S.save();renderTime();renderHome();};r.appendChild(del);l.appendChild(r);});
+  var th=db.time.reduce((a,b)=>a+num(b.hrs),0),tb=db.time.reduce((a,b)=>a+num(b.hrs)*num(b.rate),0);
+  S.el("t-th").textContent=th.toFixed(2).replace(/\.00$/,"");S.el("t-tb").textContent=S.money(tb);
+}
+S.el("t-add").onclick=function(){var d=S.val("t-date"),t=S.val("t-task");if(!d||!t)return;db.time.push({id:S.uid(),date:d,task:t,hrs:S.val("t-hrs"),rate:S.val("t-rate")});S.save();S.clr("t-task","t-hrs");renderTime();renderHome();S.toast("Logged",1);};
+
+/* income */
+function monthEarned(){var m=tm();return db.income.entries.filter(e=>e.date.slice(0,7)===m).reduce((a,b)=>a+num(b.amount),0);}
+function renderIncome(){
+  S.el("in-goal").value=db.income.goal||"";
+  var e=monthEarned(),g=num(db.income.goal);
+  S.el("in-earned").textContent=S.money(e);S.el("in-left").textContent=S.money(Math.max(0,g-e));
+  S.el("in-pct").textContent=(g>0?Math.round(e/g*100):0)+"%";
+  var list=db.income.entries.slice().sort((a,b)=>b.date.localeCompare(a.date));
+  var l=S.el("in-list");l.innerHTML=list.length?"":'<div class="empty">No income logged yet.</div>';
+  list.slice(0,30).forEach(function(x){var r=document.createElement("div");r.className="row";r.innerHTML='<span class="nm">'+(x.client||"Income")+'<div class="meta">'+new Date(x.date+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'</div></span><span class="amt pos">'+S.money(num(x.amount))+'</span>';var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.income.entries=db.income.entries.filter(y=>y.id!==x.id);S.save();renderIncome();renderHome();};r.appendChild(del);l.appendChild(r);});
+}
+S.el("in-savegoal").onclick=function(){db.income.goal=num(S.val("in-goal"));S.save();renderIncome();renderHome();S.toast("Goal set",1);};
+S.el("in-add").onclick=function(){var d=S.val("in-date"),a=S.val("in-amt");if(!d||!a)return;db.income.entries.push({id:S.uid(),date:d,client:S.val("in-client"),amount:a});S.save();S.clr("in-client","in-amt");renderIncome();renderHome();S.toast("Income logged",1);};
+
+/* clients */
+function renderClients(){
+  var l=S.el("c-list");l.innerHTML=db.clients.length?"":'<div class="empty">No clients yet.</div>';
+  db.clients.forEach(function(c){var r=document.createElement("div");r.className="row";r.innerHTML='<span class="nm">'+c.name+'<div class="meta">'+(c.contact||"")+(c.notes?" · "+c.notes:"")+'</div></span>';var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.clients=db.clients.filter(x=>x.id!==c.id);S.save();renderClients();renderHome();};r.appendChild(del);l.appendChild(r);});
+}
+S.el("c-add").onclick=function(){var n=S.val("c-name");if(!n)return;db.clients.push({id:S.uid(),name:n,contact:S.val("c-contact"),notes:S.val("c-notes")});S.save();S.clr("c-name","c-contact","c-notes");renderClients();renderHome();S.toast("Client added",1);};
+
+/* overview */
+function renderHome(){
+  S.el("h-month").textContent=monthName();
+  var e=monthEarned(),g=num(db.income.goal);
+  S.el("h-earned").textContent=S.money(e);S.el("h-goal").textContent=S.money(g);
+  S.el("h-bill").textContent=S.money(db.time.reduce((a,b)=>a+num(b.hrs)*num(b.rate),0));
+  S.el("h-clients").textContent=db.clients.length;
+  S.el("h-inv").textContent=S.money(invTotals().total);
+  S.el("home-ring").innerHTML=S.ring(g>0?e/g:0,120,(g>0?Math.round(e/g*100):0)+"%","of goal");
+  var list=db.income.entries.slice().sort((a,b)=>b.date.localeCompare(a.date)).slice(0,5);
+  S.el("home-income").innerHTML=list.length?list.map(x=>'<div class="row"><span class="nm">'+(x.client||"Income")+'<div class="meta">'+new Date(x.date+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'</div></span><span class="amt pos">'+S.money(num(x.amount))+'</span></div>').join(""):'<div class="empty">Log income to see it here.</div>';
+}
+
+function renderAll(){renderInvoice();renderTime();renderIncome();renderClients();renderHome();}
+["iv-date","t-date","in-date"].forEach(id=>{if(!S.el(id).value)S.el(id).value=S.todayISO();});
+S.initShell();renderAll();
+</script>
+</body>
+</html>

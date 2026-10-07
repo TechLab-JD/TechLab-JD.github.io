@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steady Study</title>
+<meta name="description" content="Steady Study — assignments, GPA calculator, exam countdown and class schedule. Private; your data stays on your device.">
+<link rel="stylesheet" href="shared.css">
+<style>:root{--accent:#4a90e2;--accent-2:#6fb0f5;--accent-dark:#2f6fbf}</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Study</b></a>
+  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="icon-btn" data-steady="theme">◐</button></div>
+</div></header>
+<nav class="appnav"><div class="wrap">
+  <button class="stab active" data-panel="home">Overview</button>
+  <button class="stab" data-panel="work">Assignments</button>
+  <button class="stab" data-panel="gpa">GPA</button>
+  <button class="stab" data-panel="exams">Exams</button>
+  <button class="stab" data-panel="sched">Schedule</button>
+</div></nav>
+<main class="wrap main">
+  <section class="panel active" id="panel-home">
+    <div class="hero"><div class="lbl">This term</div><div class="big" id="h-gpa">—</div><div class="meta">current GPA</div>
+      <div class="mini"><div>Due this week<b id="h-due">0</b></div><div>Overdue<b id="h-over">0</b></div><div>Next exam<b id="h-exam">—</b></div><div>Credits<b id="h-cred">0</b></div></div></div>
+    <div class="grid2">
+      <div class="card"><h2>Coming up</h2><p class="sub">Your next assignments</p><div id="home-assign"></div></div>
+      <div class="card"><h2>Exam countdown</h2><p class="sub">Soonest first</p><div id="home-exams"></div></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-work">
+    <div class="card"><h2>Assignments</h2><p class="sub">Add what's due, check it off when it's done. Overdue shows in red.</p>
+      <div class="addform" style="grid-template-columns:1fr 140px 150px auto"><div class="field"><label>Assignment</label><input id="a-title" placeholder="Essay draft, Problem set 3…"></div><div class="field"><label>Course</label><input id="a-course" placeholder="Course"></div><div class="field"><label>Due</label><input id="a-due" type="date"></div><button class="btn" id="a-add">Add</button></div>
+      <div id="a-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-gpa">
+    <div class="grid2" style="margin-bottom:16px">
+      <div class="stat"><div class="label">GPA</div><div class="val" id="g-gpa">—</div></div>
+      <div class="stat"><div class="label">Total credits</div><div class="val" id="g-cred">0</div></div>
+    </div>
+    <div class="card"><h2>GPA calculator</h2><p class="sub">Add each course with its grade and credit hours — GPA updates on a 4.0 scale.</p>
+      <div id="g-list"></div>
+      <div class="addform" style="grid-template-columns:1fr 110px 90px auto"><div class="field"><label>Course</label><input id="g-name" placeholder="Course name"></div><div class="field"><label>Grade</label><select id="g-grade"><option>A</option><option>A-</option><option>B+</option><option>B</option><option>B-</option><option>C+</option><option>C</option><option>C-</option><option>D+</option><option>D</option><option>F</option></select></div><div class="field"><label>Credits</label><input id="g-cr" type="number" step="0.5" inputmode="decimal" placeholder="3"></div><button class="btn" id="g-add">Add</button></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-exams">
+    <div class="card"><h2>Exam countdown</h2><p class="sub">Add your exams — the countdown keeps them from sneaking up on you.</p>
+      <div class="addform" style="grid-template-columns:1fr 150px auto"><div class="field"><label>Exam</label><input id="e-name" placeholder="Midterm — Biology"></div><div class="field"><label>Date</label><input id="e-date" type="date"></div><button class="btn" id="e-add">Add</button></div>
+      <div id="e-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-sched">
+    <div class="card"><h2>Weekly class schedule</h2><p class="sub">Add your classes — they group by day.</p>
+      <div class="addform" style="grid-template-columns:120px 110px 1fr 110px auto"><div class="field"><label>Day</label><select id="s-day"><option>Mon</option><option>Tue</option><option>Wed</option><option>Thu</option><option>Fri</option><option>Sat</option><option>Sun</option></select></div><div class="field"><label>Time</label><input id="s-time" placeholder="9:00 AM"></div><div class="field"><label>Class</label><input id="s-course" placeholder="Course"></div><div class="field"><label>Room</label><input id="s-room" placeholder="Room"></div><button class="btn" id="s-add">Add</button></div>
+      <div id="s-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+</main>
+<footer class="ft">Steady Study · a Steady Systems app · your data stays on this device</footer>
+<div id="toasts"></div>
+<script src="shared.js"></script>
+<script>
+var DEF={assign:[],courses:[],exams:[],sched:[]};
+var db=Steady.load("study",DEF);var S=Steady;
+var GP={"A":4.0,"A-":3.7,"B+":3.3,"B":3.0,"B-":2.7,"C+":2.3,"C":2.0,"C-":1.7,"D+":1.3,"D":1.0,"F":0.0};
+function daysTo(d){var t=new Date();t.setHours(0,0,0,0);var x=new Date(d+"T00:00:00");return Math.round((x-t)/86400000);}
+
+/* assignments */
+function renderAssign(){
+  var a=db.assign.slice().sort((x,y)=>(x.done-y.done)|| (x.due||"9").localeCompare(y.due||"9"));
+  var l=S.el("a-list");l.innerHTML=a.length?"":'<div class="empty">No assignments yet.</div>';
+  a.forEach(function(e){var dd=e.due?daysTo(e.due):null,over=!e.done&&dd!==null&&dd<0;
+    var r=document.createElement("div");r.className="row";
+    var box=document.createElement("div");box.className="boxcell";box.style.width="22px";box.style.height="22px";box.style.aspectRatio="auto";box.style.flex="none";if(e.done){box.classList.add("on");box.textContent="✓";}box.onclick=function(){e.done=!e.done;S.save();renderAssign();renderHome();};
+    var left=document.createElement("div");left.style.flex="1";
+    var meta=e.due?(over?"overdue by "+(-dd)+"d":dd===0?"due today":dd+"d left")+(e.course?" · "+e.course:""):(e.course||"");
+    left.innerHTML='<div class="nm" style="'+(e.done?"text-decoration:line-through;opacity:.6":"")+'">'+e.title+'</div><div class="meta" style="'+(over?"color:var(--bad);font-weight:600":"")+'">'+meta+'</div>';
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.assign=db.assign.filter(x=>x.id!==e.id);S.save();renderAssign();renderHome();};
+    r.appendChild(box);r.appendChild(left);r.appendChild(del);l.appendChild(r);});
+}
+S.el("a-add").onclick=function(){var t=S.val("a-title");if(!t)return;db.assign.push({id:S.uid(),title:t,course:S.val("a-course"),due:S.val("a-due"),done:false});S.save();S.clr("a-title","a-course","a-due");renderAssign();renderHome();S.toast("Added",1);};
+
+/* gpa */
+function gpa(){var pts=0,cr=0;db.courses.forEach(function(c){var p=GP[c.grade],cc=Number(c.credits)||0;if(p!==undefined){pts+=p*cc;cr+=cc;}});return {gpa:cr>0?pts/cr:null,cr:cr};}
+function renderGPA(){
+  var l=S.el("g-list");l.innerHTML=db.courses.length?"":'<div class="empty">Add your courses to calculate GPA.</div>';
+  db.courses.forEach(function(c){var r=document.createElement("div");r.className="row";r.innerHTML='<span class="nm">'+c.name+'</span><span class="pill good">'+c.grade+'</span><span class="meta">'+(c.credits||0)+' cr</span>';var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.courses=db.courses.filter(x=>x.id!==c.id);S.save();renderGPA();renderHome();};r.appendChild(del);l.appendChild(r);});
+  var g=gpa();S.el("g-gpa").textContent=g.gpa!==null?g.gpa.toFixed(2):"—";S.el("g-cred").textContent=g.cr;
+}
+S.el("g-add").onclick=function(){var n=S.val("g-name");if(!n)return;db.courses.push({id:S.uid(),name:n,grade:S.val("g-grade"),credits:Number(S.val("g-cr"))||0});S.save();S.clr("g-name","g-cr");renderGPA();renderHome();S.toast("Course added",1);};
+
+/* exams */
+function renderExams(){
+  var e=db.exams.slice().filter(x=>x.date).sort((a,b)=>a.date.localeCompare(b.date));
+  var l=S.el("e-list");l.innerHTML=e.length?"":'<div class="empty">No exams added.</div>';
+  e.forEach(function(x){var dd=daysTo(x.date),cls=dd<0?"bad":dd<=7?"warn":"good",txt=dd<0?"passed":dd===0?"today":dd+" days";
+    var r=document.createElement("div");r.className="row";r.innerHTML='<span class="nm">'+x.name+'<div class="meta">'+new Date(x.date+"T00:00:00").toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"})+'</div></span><span class="pill '+cls+'">'+txt+'</span>';var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.exams=db.exams.filter(y=>y.id!==x.id);S.save();renderExams();renderHome();};r.appendChild(del);l.appendChild(r);});
+}
+S.el("e-add").onclick=function(){var n=S.val("e-name"),d=S.val("e-date");if(!n||!d)return;db.exams.push({id:S.uid(),name:n,date:d});S.save();S.clr("e-name","e-date");renderExams();renderHome();S.toast("Exam added",1);};
+
+/* schedule */
+var DAYS=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+function renderSched(){
+  var l=S.el("s-list");l.innerHTML="";
+  var any=db.sched.length;if(!any){l.innerHTML='<div class="empty">No classes added yet.</div>';return;}
+  DAYS.forEach(function(day){var cls=db.sched.filter(c=>c.day===day);if(!cls.length)return;
+    var h=document.createElement("div");h.className="label-ish";h.style.cssText="font:700 13px var(--display);margin:10px 0 2px;color:var(--accent)";h.textContent=day;l.appendChild(h);
+    cls.forEach(function(c){var r=document.createElement("div");r.className="row";r.innerHTML='<span class="nm">'+c.course+'<div class="meta">'+c.time+(c.room?" · "+c.room:"")+'</div></span>';var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.sched=db.sched.filter(x=>x.id!==c.id);S.save();renderSched();};r.appendChild(del);l.appendChild(r);});});
+}
+S.el("s-add").onclick=function(){var c=S.val("s-course");if(!c)return;db.sched.push({id:S.uid(),day:S.val("s-day"),time:S.val("s-time"),course:c,room:S.val("s-room")});S.save();S.clr("s-course","s-time","s-room");renderSched();S.toast("Class added",1);};
+
+/* overview */
+function renderHome(){
+  var g=gpa();S.el("h-gpa").textContent=g.gpa!==null?g.gpa.toFixed(2):"—";S.el("h-cred").textContent=g.cr;
+  var open=db.assign.filter(e=>!e.done&&e.due);
+  S.el("h-due").textContent=open.filter(e=>{var d=daysTo(e.due);return d>=0&&d<=7;}).length;
+  S.el("h-over").textContent=open.filter(e=>daysTo(e.due)<0).length;
+  var ex=db.exams.filter(x=>x.date&&daysTo(x.date)>=0).sort((a,b)=>a.date.localeCompare(b.date));
+  S.el("h-exam").textContent=ex.length?daysTo(ex[0].date)+"d":"—";
+  var ha=S.el("home-assign"),up=open.sort((a,b)=>a.due.localeCompare(b.due)).slice(0,5);
+  ha.innerHTML=up.length?up.map(function(e){var dd=daysTo(e.due),cls=dd<0?"bad":dd<=3?"warn":"good",txt=dd<0?"overdue":dd===0?"today":dd+"d";return '<div class="row"><span class="nm">'+e.title+'<div class="meta">'+(e.course||"")+'</div></span><span class="pill '+cls+'">'+txt+'</span></div>';}).join(""):'<div class="empty">Nothing due — add assignments.</div>';
+  var he=S.el("home-exams");
+  he.innerHTML=ex.length?ex.slice(0,5).map(function(x){var dd=daysTo(x.date);return '<div class="row"><span class="nm">'+x.name+'</span><span class="pill '+(dd<=7?"warn":"good")+'">'+(dd===0?"today":dd+" days")+'</span></div>';}).join(""):'<div class="empty">No exams added.</div>';
+}
+
+function renderAll(){renderAssign();renderGPA();renderExams();renderSched();renderHome();}
+S.el("a-due").value=S.todayISO();
+S.initShell();renderAll();
+</script>
+</body>
+</html>
