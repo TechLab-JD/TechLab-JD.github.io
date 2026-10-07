@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steady Overview</title>
+<meta name="description" content="Steady Overview — one dashboard that pulls money, health, study and work together to show the whole picture and how it connects.">
+<link rel="stylesheet" href="shared.css">
+<style>
+  :root{--accent:#d98a2b;--accent-2:#e8a33c;--accent-dark:#b4701c}
+  .domcard{border-top:3px solid var(--c,var(--accent))}
+  .domcard .dh{display:flex;align-items:center;gap:9px;margin-bottom:10px}
+  .domcard .di{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:17px;background:color-mix(in srgb,var(--c,var(--accent)) 15%,transparent)}
+  .domcard h2{margin:0}
+  .domcard a.go{font:600 12.5px var(--sans);color:var(--c,var(--accent));text-decoration:none}
+  .wkgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:8px}
+  .wkd{background:var(--card-2);border:1px solid var(--line);border-radius:9px;padding:7px 4px;text-align:center;min-height:74px}
+  .wkd .dn{font:700 11px var(--display);color:var(--muted)} .wkd.today{border-color:var(--accent)}
+  .wkd .ev{font-size:10px;margin-top:3px;line-height:1.35}
+  .insight{display:flex;gap:9px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+  .insight:last-child{border-bottom:0} .insight .b{font-size:15px}
+  .balrow{display:flex;align-items:center;gap:10px;padding:7px 0}
+  .balrow .bl{width:70px;font-size:13px;font-weight:600} .balrow .bar{flex:1;max-width:none}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Overview</b></a>
+  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="icon-btn" data-steady="theme">◐</button></div>
+</div></header>
+<main class="wrap main">
+  <div class="hero">
+    <div class="lbl" id="ov-date">Your snapshot</div>
+    <div class="big" id="ov-head">—</div>
+    <div class="meta" id="ov-sub">everything from your Steady apps, in one place</div>
+    <div class="mini"><div>Net worth<b id="ov-nw">—</b></div><div>Earned this mo<b id="ov-earn">—</b></div><div>GPA<b id="ov-gpa">—</b></div><div>Habits today<b id="ov-hab">—</b></div></div>
+  </div>
+
+  <div class="card"><h2>This week, across everything</h2><p class="sub">What happened and what's coming, pulled from all four apps</p>
+    <div class="wkgrid" id="ov-week"></div>
+    <div class="grid3" style="margin-top:14px">
+      <div class="stat"><div class="label">Earned (7 days)</div><div class="val pos" id="w-earn">$0</div></div>
+      <div class="stat"><div class="label">Spent (7 days)</div><div class="val" id="w-spent">$0</div></div>
+      <div class="stat"><div class="label">Workouts (7 days)</div><div class="val" id="w-work">0</div></div>
+    </div>
+  </div>
+
+  <div class="sectlabel" style="font:700 12px var(--display);color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin:4px 2px 10px">By app</div>
+  <div class="grid2" id="ov-doms"></div>
+
+  <div class="grid2">
+    <div class="card"><h2>How active you are in each app</h2><p class="sub">Where your attention is going</p><div id="ov-balance"></div></div>
+    <div class="card"><h2>💡 How it connects</h2><p class="sub">Cross-app insights</p><div id="ov-insights"></div></div>
+  </div>
+
+  <div class="card" style="text-align:center;color:var(--muted);font-size:13px">
+    This page only reads what your Steady apps already saved on this device — nothing is uploaded.
+    <div style="margin-top:10px"><a class="btn ghost sm" href="index.html">← Back to all apps</a></div>
+  </div>
+</main>
+<footer class="ft">Steady Overview · a Steady Systems app · reads your apps' data locally, nothing uploaded</footer>
+<div id="toasts"></div>
+<script src="shared.js"></script>
+<script>
+var S=Steady;S.initShell();
+function read(k){try{var r=localStorage.getItem(k);return r?JSON.parse(r):null;}catch(e){return null;}}
+var M=read("steadyMoney.v1"),H=read("steady.health.v1"),ST=read("steady.study.v1"),W=read("steady.work.v1");
+function tm(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0");}
+function dkey(dt){return dt.getFullYear()+"-"+String(dt.getMonth()+1).padStart(2,"0")+"-"+String(dt.getDate()).padStart(2,"0");}
+function sum(a,f){return (a||[]).reduce((s,x)=>s+(Number(f(x))||0),0);}
+function n(v){var x=parseFloat(String(v).replace(/[^0-9.\-]/g,""));return isNaN(x)?0:x;}
+var DOW=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+function last7(){var a=[],d=new Date();for(var i=6;i>=0;i--){var x=new Date(d.getFullYear(),d.getMonth(),d.getDate()-i);a.push({key:dkey(x),lbl:DOW[(x.getDay()+6)%7],day:x.getDate(),today:i===0});}return a;}
+
+/* ---- money ---- */
+var money=null;
+if(M){var nw=sum(M.assets,a=>a.amount)-sum(M.debts,d=>d.balance);
+  money={nw:nw, incomePlan:sum(M.income,i=>i.amount), spendMo:sum((M.log||[]).filter(e=>e.date&&e.date.slice(0,7)===tm()),e=>e.amount),
+    savings:Math.max(sum(M.goals,g=>g.saved), 0), debt:sum(M.debts,d=>d.balance), bills:M.bills||[], log:M.log||[]};}
+
+/* ---- work ---- */
+var work=null;
+if(W){var ent=(W.income&&W.income.entries)||[];
+  work={earnMo:sum(ent.filter(e=>e.date&&e.date.slice(0,7)===tm()),e=>e.amount), entries:ent,
+    billable:sum(W.time,t=>n(t.hrs)*n(t.rate)), time:W.time||[], clients:(W.clients||[]).length, goal:n(W.income&&W.income.goal)};}
+
+/* ---- health ---- */
+var health=null;
+if(H){var ti=(new Date().getDay()+6)%7;
+  health={habToday:(H.habits||[]).filter(h=>h.days&&h.days[ti]).length, habCount:(H.habits||[]).length,
+    water:(H.water&&H.water.log&&H.water.log[S.todayISO()])||0, waterGoal:(H.water&&H.water.goal)||8,
+    workouts:H.workouts||[], mood:H.mood||[]};}
+
+/* ---- study ---- */
+var study=null;
+if(ST){var GP={"A":4,"A-":3.7,"B+":3.3,"B":3,"B-":2.7,"C+":2.3,"C":2,"C-":1.7,"D+":1.3,"D":1,"F":0};
+  var pts=0,cr=0;(ST.courses||[]).forEach(c=>{if(GP[c.grade]!==undefined){pts+=GP[c.grade]*(n(c.credits));cr+=n(c.credits);}});
+  function dTo(d){var t=new Date();t.setHours(0,0,0,0);return Math.round((new Date(d+"T00:00:00")-t)/86400000);}
+  var open=(ST.assign||[]).filter(a=>!a.done&&a.due);
+  var ex=(ST.exams||[]).filter(e=>e.date&&dTo(e.date)>=0).sort((a,b)=>a.date.localeCompare(b.date));
+  study={gpa:cr>0?pts/cr:null, dueWeek:open.filter(a=>{var d=dTo(a.due);return d>=0&&d<=7;}).length,
+    overdue:open.filter(a=>dTo(a.due)<0).length, nextExam:ex.length?dTo(ex[0].date):null, assign:ST.assign||[], exams:ST.exams||[], dTo:dTo};}
+
+/* ---- hero + headline ---- */
+function M0(v){return S.money0(v);}
+S.el("ov-date").textContent=new Date().toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"});
+S.el("ov-nw").textContent=money?M0(money.nw):"—";
+S.el("ov-earn").textContent=work?M0(work.earnMo):"—";
+S.el("ov-gpa").textContent=study&&study.gpa!==null?study.gpa.toFixed(2):"—";
+S.el("ov-hab").textContent=health?(health.habToday+"/"+health.habCount):"—";
+var any=money||work||health||study;
+if(!any){S.el("ov-head").textContent="Nothing yet";S.el("ov-sub").innerHTML='Open any app and your data shows up here. <a href="index.html">See the apps →</a>';}
+else{var headParts=[];if(money)headParts.push(M0(money.nw)+" net worth");if(work&&work.earnMo)headParts.push(M0(work.earnMo)+" earned");
+  S.el("ov-head").textContent=headParts.length?headParts.join(" · "):"You're set up";}
+
+/* ---- this week ---- */
+var days=last7();
+var wk=S.el("ov-week");wk.innerHTML="";
+var cm=tm();
+days.forEach(function(d){
+  var earned=work?sum(work.entries.filter(e=>e.date===d.key),e=>e.amount):0;
+  var wo=health?health.workouts.filter(x=>x.date===d.key).length:0;
+  var asn=study?study.assign.filter(a=>!a.done&&a.due===d.key).length:0;
+  var billDue=money?(money.bills.filter(b=>Number(b.dueDay)===d.day&&b.paidMonth!==cm)).length:0;
+  var ev="";
+  if(earned)ev+='<div class="ev" style="color:var(--good)">+'+M0(earned)+'</div>';
+  if(wo)ev+='<div class="ev">🏃 '+wo+'</div>';
+  if(asn)ev+='<div class="ev" style="color:#4a90e2">📚 '+asn+'</div>';
+  if(billDue)ev+='<div class="ev" style="color:var(--warn)">🧾 '+billDue+'</div>';
+  wk.innerHTML+='<div class="wkd'+(d.today?" today":"")+'"><div class="dn">'+d.lbl+'</div><div style="font-size:9px;color:var(--faint)">'+d.day+'</div>'+ev+'</div>';
+});
+var keys=days.map(d=>d.key);
+S.el("w-earn").textContent=M0(work?sum(work.entries.filter(e=>keys.indexOf(e.date)>=0),e=>e.amount):0);
+S.el("w-spent").textContent=M0(money?sum(money.log.filter(e=>keys.indexOf(e.date)>=0),e=>e.amount):0);
+S.el("w-work").textContent=health?health.workouts.filter(x=>keys.indexOf(x.date)>=0).length:0;
+
+/* ---- domain cards ---- */
+function stat(label,val){return '<div style="flex:1"><div style="font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:600">'+label+'</div><div style="font:800 18px var(--display);margin-top:2px">'+val+'</div></div>';}
+function domCard(c,ic,title,link,open,rows,empty){
+  return '<div class="card domcard" style="--c:'+c+'"><div class="dh"><div class="di">'+ic+'</div><h2>'+title+'</h2><a class="go" href="'+link+'" style="margin-left:auto">'+(open?"open →":"")+'</a></div>'+
+    (open?('<div style="display:flex;gap:14px;flex-wrap:wrap">'+rows+'</div>'):('<div class="empty">'+empty+' <a href="'+link+'">Open '+title+' →</a></div>'))+'</div>';
+}
+var doms="";
+doms+=domCard("#19c3ad","💰","Steady Money","money/index.html",!!money,
+  money?stat("Net worth",M0(money.nw))+stat("Budget income",M0(money.incomePlan))+stat("Spent this mo",M0(money.spendMo))+stat("Debt",M0(money.debt)):"","No money data yet.");
+doms+=domCard("#8168f2","🧰","Steady Work","work.html",!!work,
+  work?stat("Earned this mo",M0(work.earnMo))+stat("Billable logged",M0(work.billable))+stat("Clients",work.clients)+stat("Goal",M0(work.goal)):"","No work data yet.");
+doms+=domCard("#2fae5f","🏃","Steady Health","health.html",!!health,
+  health?stat("Habits today",health.habToday+"/"+health.habCount)+stat("Water",health.water+"/"+health.waterGoal)+stat("Workouts (7d)",health.workouts.filter(x=>keys.indexOf(x.date)>=0).length)+stat("Logged moods",health.mood.length):"","No health data yet.");
+doms+=domCard("#4a90e2","🎓","Steady Study","study.html",!!study,
+  study?stat("GPA",study.gpa!==null?study.gpa.toFixed(2):"—")+stat("Due this week",study.dueWeek)+stat("Overdue",study.overdue)+stat("Next exam",study.nextExam!==null?study.nextExam+"d":"—"):"","No study data yet.");
+S.el("ov-doms").innerHTML=doms;
+
+/* ---- balance ---- */
+function score(parts){return Math.round(parts.reduce((a,b)=>a+(b?1:0),0)/parts.length*100);}
+var bal=[
+  {bl:"Money",c:"#19c3ad",v:money?score([money.incomePlan>0,(M.categories||[]).length>0,(M.assets||[]).length||(M.debts||[]).length,money.log.length>0]):0},
+  {bl:"Work",c:"#8168f2",v:work?score([work.entries.length>0,work.time.length>0,work.clients>0]):0},
+  {bl:"Health",c:"#2fae5f",v:health?score([health.habCount>0,health.workouts.length>0,health.water>0,health.mood.length>0]):0},
+  {bl:"Study",c:"#4a90e2",v:study?score([(ST.courses||[]).length>0,study.assign.length>0,study.exams.length>0]):0}
+];
+S.el("ov-balance").innerHTML=bal.map(b=>'<div class="balrow"><span class="bl">'+b.bl+'</span><div class="bar"><span style="width:'+b.v+'%;background:'+b.c+'"></span></div><span style="font:700 13px var(--display);width:38px;text-align:right">'+b.v+'%</span></div>').join("");
+
+/* ---- insights ---- */
+var ins=[];
+if(work&&money&&work.earnMo>0)ins.push(["🔗","You've earned <b>"+M0(work.earnMo)+"</b> freelancing this month (Steady Work). Logging it in Steady Money keeps your net worth of <b>"+M0(money.nw)+"</b> accurate."]);
+if(work&&work.billable>0){var hrs=sum(work.time,t=>n(t.hrs));if(hrs>0)ins.push(["⏱️","Across all your logged time you've billed <b>"+M0(work.billable)+"</b> over "+hrs.toFixed(1)+" hours — about <b>"+M0(work.billable/hrs)+"/hr</b> effective."]);}
+if(health&&money){var w7=health.workouts.filter(x=>keys.indexOf(x.date)>=0).length,e7=work?sum(work.entries.filter(e=>keys.indexOf(e.date)>=0),e=>e.amount):0;ins.push(["⚖️","This week: <b>"+w7+"</b> workout"+(w7===1?"":"s")+" and <b>"+M0(e7)+"</b> earned. Steady weeks usually have both."]);}
+if(study&&study.overdue>0)ins.push(["⚠️","You have <b>"+study.overdue+"</b> overdue assignment"+(study.overdue===1?"":"s")+" in Steady Study — worth clearing before the next exam"+(study.nextExam!==null?" in "+study.nextExam+" days":"")+"."]);
+if(money&&money.debt>0&&work&&work.earnMo>0)ins.push(["📉","At this month's freelance pace ("+M0(work.earnMo)+"), even sending 20% to your "+M0(money.debt)+" debt is "+M0(work.earnMo*0.2)+"/mo toward debt-free."]);
+if(!ins.length)ins.push(["👋","Use a couple of the apps and real cross-app insights will show up here — how your income, spending, health and study weeks line up."]);
+S.el("ov-insights").innerHTML=ins.map(i=>'<div class="insight"><span class="b">'+i[0]+'</span><span>'+i[1]+'</span></div>').join("");
+</script>
+</body>
+</html>
