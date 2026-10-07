@@ -135,8 +135,8 @@ window.Steady = (function(){
     return done;
   }
   /* ---- avatar / RPG character ---- */
-  var DEFAULT_AVATAR="data:image/png;base64,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";
-  var DEFAULT_EQUIP={sex:"male",skin:"light",hairStyle:"plain",hairColor:"blonde",shirt:"tee",shirtColor:"blue",pants:"brown",shoes:"black",bg:"sky"};
+  var DEFAULT_AVATAR="data:image/png;base64,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";
+  var DEFAULT_EQUIP={sex:"male",skin:"light",hairStyle:"plain",hairColor:"blonde",shirt:"tee",shirtColor:"blue",pants:"brown",shoes:"black",hat:"none",bg:"sky"};
   var AV_BG={sky:["#7fc7ff","#c9ecff"],plain:["#2a3a52","#1c2838"],sunset:["#ff9a6b","#ffd9a0"],night:["#1b2a4a","#0d1526"],forest:["#4f9e6a","#bfe6c8"],space:["#3a2a6b","#120a26"],gold:["#e9c45a","#fff0c0"]};
   var AVATAR_ITEMS=[
     {id:"sex-male",cat:"Body",name:"Male",cost:0,field:"sex",val:"male"},
@@ -149,8 +149,16 @@ window.Steady = (function(){
     {id:"hair-bald",cat:"Hair",name:"Bald",cost:0,field:"hairStyle",val:"bald"},
     {id:"hair-plain",cat:"Hair",name:"Plain",cost:0,field:"hairStyle",val:"plain"},
     {id:"hair-bangs",cat:"Hair",name:"Bangs",cost:0,field:"hairStyle",val:"bangs"},
+    {id:"hair-pixie",cat:"Hair",name:"Pixie",cost:0,field:"hairStyle",val:"pixie"},
+    {id:"hair-swoop",cat:"Hair",name:"Swoop",cost:60,field:"hairStyle",val:"swoop"},
+    {id:"hair-curly",cat:"Hair",name:"Curly",cost:80,field:"hairStyle",val:"curly_long"},
     {id:"hair-long",cat:"Hair",name:"Long",cost:80,field:"hairStyle",val:"long"},
+    {id:"hair-longmessy",cat:"Hair",name:"Long messy",cost:90,field:"hairStyle",val:"long_messy"},
+    {id:"hair-highpony",cat:"Hair",name:"High ponytail",cost:100,field:"hairStyle",val:"high_ponytail"},
+    {id:"hair-bunches",cat:"Hair",name:"Bunches",cost:100,field:"hairStyle",val:"bunches"},
+    {id:"hair-braid",cat:"Hair",name:"Braid",cost:110,field:"hairStyle",val:"braid"},
     {id:"hair-afro",cat:"Hair",name:"Afro",cost:100,field:"hairStyle",val:"afro"},
+    {id:"hair-spiked",cat:"Hair",name:"Spiked",cost:120,field:"hairStyle",val:"spiked"},
     {id:"hc-black",cat:"Hair color",name:"Black",cost:0,field:"hairColor",val:"black"},
     {id:"hc-darkbrown",cat:"Hair color",name:"Dark brown",cost:0,field:"hairColor",val:"dark_brown"},
     {id:"hc-blonde",cat:"Hair color",name:"Blonde",cost:60,field:"hairColor",val:"blonde"},
@@ -158,6 +166,7 @@ window.Steady = (function(){
     {id:"hc-carrot",cat:"Hair color",name:"Ginger",cost:80,field:"hairColor",val:"carrot"},
     {id:"shirt-tee",cat:"Shirt",name:"T-shirt",cost:0,field:"shirt",val:"tee"},
     {id:"shirt-tank",cat:"Shirt",name:"Tank",cost:90,field:"shirt",val:"tank"},
+    {id:"shirt-long",cat:"Shirt",name:"Long sleeve",cost:120,field:"shirt",val:"long"},
     {id:"sc-white",cat:"Shirt color",name:"White",cost:0,field:"shirtColor",val:"white"},
     {id:"sc-blue",cat:"Shirt color",name:"Blue",cost:0,field:"shirtColor",val:"blue"},
     {id:"sc-navy",cat:"Shirt color",name:"Navy",cost:0,field:"shirtColor",val:"navy"},
@@ -171,6 +180,12 @@ window.Steady = (function(){
     {id:"pants-forest",cat:"Pants",name:"Forest",cost:70,field:"pants",val:"forest"},
     {id:"shoes-black",cat:"Shoes",name:"Black",cost:0,field:"shoes",val:"black"},
     {id:"shoes-brown",cat:"Shoes",name:"Brown",cost:0,field:"shoes",val:"brown"},
+    {id:"hat-none",cat:"Hat",name:"None",cost:0,field:"hat",val:"none"},
+    {id:"hat-bandana",cat:"Hat",name:"Bandana",cost:60,field:"hat",val:"bandana"},
+    {id:"hat-hood",cat:"Hat",name:"Hood",cost:90,field:"hat",val:"hood"},
+    {id:"hat-feathercap",cat:"Hat",name:"Feather cap",cost:110,field:"hat",val:"feathercap"},
+    {id:"hat-tophat",cat:"Hat",name:"Top hat",cost:120,field:"hat",val:"tophat"},
+    {id:"hat-crown",cat:"Hat",name:"Crown",cost:300,field:"hat",val:"crown"},
     {id:"bg-sky",cat:"Background",name:"Sky",cost:0,field:"bg",val:"sky"},
     {id:"bg-plain",cat:"Background",name:"Slate",cost:0,field:"bg",val:"plain"},
     {id:"bg-sunset",cat:"Background",name:"Sunset",cost:60,field:"bg",val:"sunset"},
@@ -182,6 +197,7 @@ window.Steady = (function(){
   function avFrameKeys(e){
     var ks=["body__"+e.sex+"__"+e.skin,"pants__"+e.sex+"__"+e.pants,"shoes__"+e.sex+"__"+e.shoes,"shirt__"+e.shirt+"__"+e.sex+"__"+e.shirtColor,"head__"+e.sex+"__"+e.skin];
     if(e.hairStyle&&e.hairStyle!=="bald")ks.push("hair__"+e.hairStyle+"__"+e.sex+"__"+e.hairColor);
+    if(e.hat&&e.hat!=="none")ks.push("hat__"+e.hat);
     return ks;
   }
   var _frameCache={},_framesReady=false;
@@ -192,19 +208,22 @@ window.Steady = (function(){
   }
   function composeSync(equip){
     var c=document.createElement("canvas");c.width=64;c.height=64;var x=c.getContext("2d");x.imageSmoothingEnabled=false;
-    var bg=AV_BG[equip.bg]||AV_BG.sky,g=x.createLinearGradient(0,0,0,64);g.addColorStop(0,bg[0]);g.addColorStop(1,bg[1]);x.fillStyle=g;x.fillRect(0,0,64,64);
     avFrameKeys(equip).forEach(function(k){var img=_frameCache[k];if(img&&img.complete&&img.naturalWidth)x.drawImage(img,0,0);});
     return c.toDataURL("image/png");
   }
-  function avatarImg(profile,size){var src=(profile&&profile.img)||DEFAULT_AVATAR;return '<img src="'+src+'" width="'+size+'" height="'+size+'" style="display:block;width:'+size+'px;height:'+size+'px;image-rendering:pixelated" alt="">';}
+  function bgCss(k){var g=AV_BG[k]||AV_BG.sky;return "linear-gradient(180deg,"+g[0]+","+g[1]+")";}
+  function avatarWrap(src,size,bgKey){
+    return '<span class="av-wrap" style="width:'+size+'px;height:'+size+'px;background:'+bgCss(bgKey)+'"><span class="av-shadow"></span><img class="av-sprite" src="'+src+'" style="width:'+size+'px;height:'+size+'px" alt=""></span>';
+  }
+  function avatarImg(profile,size){var e=(profile&&profile.equip)||{};return avatarWrap((profile&&profile.img)||DEFAULT_AVATAR,size,e.bg);}
   function loadProfile(){
     var free=AVATAR_ITEMS.filter(function(i){return i.cost===0;}).map(function(i){return i.id;});
     var p={spent:0,name:"",img:"",owned:free.slice(),equip:Object.assign({},DEFAULT_EQUIP)};
-    try{var r=localStorage.getItem("steady.profile.v3");if(r){var j=JSON.parse(r);p.spent=j.spent||0;p.name=j.name||"";p.img=j.img||"";if(j.owned)p.owned=j.owned;p.equip=Object.assign({},DEFAULT_EQUIP,j.equip||{});}}catch(e){}
+    try{var r=localStorage.getItem("steady.profile.v4");if(r){var j=JSON.parse(r);p.spent=j.spent||0;p.name=j.name||"";p.img=j.img||"";if(j.owned)p.owned=j.owned;p.equip=Object.assign({},DEFAULT_EQUIP,j.equip||{});}}catch(e){}
     free.forEach(function(id){if(p.owned.indexOf(id)<0)p.owned.push(id);});
     return p;
   }
-  function saveProfile(p){try{localStorage.setItem("steady.profile.v3",JSON.stringify(p));}catch(e){}}
+  function saveProfile(p){try{localStorage.setItem("steady.profile.v4",JSON.stringify(p));}catch(e){}}
   function suiteStats(){
     var ks=["steady.health.v1","steady.study.v1","steady.work.v1","steady.home.v1","steadyMoney.v1"],xp=0,badges=0;
     ks.forEach(function(k){try{var r=localStorage.getItem(k);if(r){var j=JSON.parse(r);xp+=Number(j.__xp)||0;badges+=Number(j.__badges)||0;}}catch(e){}});
@@ -257,6 +276,6 @@ window.Steady = (function(){
     dkey:dkey,last7:last7,streak:streak,renderBadges:renderBadges,setDb:setDb,initAccount:initAccount,onboard:onboard,
     initPremium:initPremium,applyPremium:applyPremium,isPremium:isPremium,openPrem:openPrem,
     levelInfo:levelInfo,levelTitle:levelTitle,confetti:confetti,gamify:gamify,renderQuests:renderQuests,
-    avatarImg:avatarImg,composeSync:composeSync,preloadFrames:preloadFrames,DEFAULT_EQUIP:DEFAULT_EQUIP,AVATAR_ITEMS:AVATAR_ITEMS,loadProfile:loadProfile,saveProfile:saveProfile,suiteStats:suiteStats,onTab:null,db:db};
+    avatarImg:avatarImg,avatarWrap:avatarWrap,composeSync:composeSync,preloadFrames:preloadFrames,DEFAULT_EQUIP:DEFAULT_EQUIP,AVATAR_ITEMS:AVATAR_ITEMS,loadProfile:loadProfile,saveProfile:saveProfile,suiteStats:suiteStats,onTab:null,db:db};
   return S;
 })();

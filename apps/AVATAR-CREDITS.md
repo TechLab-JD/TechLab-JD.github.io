@@ -16,7 +16,7 @@ must keep the same license and this attribution. See:
 - https://creativecommons.org/licenses/by-sa/3.0/
 - https://www.gnu.org/licenses/gpl-3.0.html
 
-## Artists (assets used: bodies, hair, shirts, pants, shoes)
+## Artists (assets used: bodies, heads, hair, shirts, pants, shoes, hats)
 
 Barbara Riviera · Benjamin K. Smith (BenCreating) · bluecarrot16 · Durrani ·
 Eliza Wyatt (ElizaWy) · Evert · JaidynReiman · Joe White · Johannes Sjölund (wulax) ·

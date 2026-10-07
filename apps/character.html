@@ -57,11 +57,11 @@
 var S=Steady;S.initShell();
 var prof=S.loadProfile();
 var mode="customize",cat="Hair";
-var CATS=["Body","Skin","Hair","Hair color","Shirt","Shirt color","Pants","Shoes","Background"];
+var CATS=["Body","Skin","Hair","Hair color","Shirt","Shirt color","Pants","Shoes","Hat","Background"];
 function stats(){return S.suiteStats();}
 function coins(){return Math.max(0,stats().coinsEarned-prof.spent);}
 function itemById(id){for(var i=0;i<S.AVATAR_ITEMS.length;i++)if(S.AVATAR_ITEMS[i].id===id)return S.AVATAR_ITEMS[i];return null;}
-function imgTag(equip,size){return '<img src="'+S.composeSync(equip)+'" width="'+size+'" height="'+size+'" style="display:block;width:'+size+'px;height:'+size+'px;image-rendering:pixelated">';}
+function imgTag(equip,size){return S.avatarWrap(S.composeSync(equip),size,equip.bg);}
 function cacheAvatar(){prof.img=S.composeSync(prof.equip);S.saveProfile(prof);}
 function renderHero(){
   var st=stats();

@@ -155,6 +155,13 @@ footer.ft{text-align:center;color:var(--faint);font-size:11.5px;padding:22px 0}
 .charmeta{flex:1} .charmeta b{display:block;font:700 13.5px var(--display)} .charmeta small{color:var(--muted);font-size:12px}
 .charchev{color:var(--accent);font-weight:800}
 .charrow:hover .charmeta b{color:var(--accent)}
+/* animated avatar + shadow */
+.av-wrap{position:relative;display:inline-block;overflow:hidden;border-radius:inherit}
+.av-sprite{display:block;image-rendering:pixelated;position:relative;z-index:1;transform-origin:50% 100%;animation:avbob 2s ease-in-out infinite}
+.av-shadow{position:absolute;left:50%;bottom:7%;width:44%;height:6%;transform:translateX(-50%);background:rgba(0,0,0,.34);border-radius:50%;filter:blur(1px);z-index:0;animation:avshd 2s ease-in-out infinite}
+@keyframes avbob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5.5%)}}
+@keyframes avshd{0%,100%{transform:translateX(-50%) scale(1);opacity:.34}50%{transform:translateX(-50%) scale(.8);opacity:.24}}
+@media(prefers-reduced-motion:reduce){.av-sprite,.av-shadow{animation:none}}
 /* ---- premium gating ---- */
 .locked{position:relative}
 .lockveil{position:absolute;inset:0;background:color-mix(in srgb,var(--card) 80%,transparent);backdrop-filter:blur(4px);border-radius:var(--radius);display:grid;place-items:center;text-align:center;padding:24px;z-index:5;animation:rise .3s}
