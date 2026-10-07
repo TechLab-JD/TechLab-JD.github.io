@@ -113,7 +113,7 @@ window.Steady = (function(){
       '<div class="lvlmeta"><div class="lvltitle">'+info.title+'</div>'+
       '<div class="lvlbar"><span style="width:'+Math.round(info.pct*100)+'%"></span></div>'+
       '<div class="lvlsub">'+info.into+' / '+info.span+' XP · '+(info.span-info.into)+' to level '+(info.level+1)+'</div></div></div>'+
-      '<a href="character.html" class="charrow"><span class="charav">'+avatarSVG(prof.equip,46)+'</span>'+
+      '<a href="character.html" class="charrow"><span class="charav">'+avatarSlot(prof.equip,46)+'</span>'+
       '<span class="charmeta"><b>Your character</b><small>🪙 '+coins.toLocaleString()+' coins · Customize →</small></span><span class="charchev">→</span></a>';
   }
   function gamify(opts){opts=opts||{};var info=levelInfo(opts.xp||0);
@@ -125,7 +125,7 @@ window.Steady = (function(){
       else if(opts.badges>S.db.__badges){var g=opts.badges-S.db.__badges;S.db.__badges=opts.badges;setTimeout(function(){toast(g===1?"Badge unlocked! 🏅":g+" badges unlocked! 🏅",1);},160);}
       else{S.db.__badges=opts.badges;}}
     save();
-    if(opts.container)opts.container.innerHTML=levelCardHTML(info);
+    if(opts.container){opts.container.innerHTML=levelCardHTML(info);hydrateAvatars(opts.container);}
     return info;
   }
   function renderQuests(container,quests){if(!container)return 0;quests=quests||[];
@@ -282,7 +282,27 @@ window.Steady = (function(){
     else if(hat==="crown"){P.push(PA("M30,20 L36,7 L43,16 L50,4 L57,16 L64,7 L70,20 C58,16 42,16 30,20 Z","#f2c200","#cf9f00",1));P.push(E(50,12,2.5,2.5,"#e8484b"));}
     else if(hat==="halo"){P.push(E(50,5,14,4,"none","#f2d04b",2.6));}
     else if(hat==="partyhat"){P.push(PA("M50,-5 L40,21 Q50,25 60,21 Z","#e86aa6","#c44d86",1.2));P.push(E(50,-5,3,3,"#fff0c0"));P.push(PA("M45,9 Q50,11 55,9",null,"#fff0c0",1.4));}
-    return '<svg viewBox="0 0 100 128" width="'+size+'" height="'+size+'" style="display:block">'+'<defs>'+defs+'</defs>'+bg+P.join("")+'</svg>';
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 128" width="'+size+'" height="'+size+'" style="display:block">'+'<defs>'+defs+'</defs>'+bg+P.join("")+'</svg>';
+  }
+  function avatarSlot(cfg,size){size=size||140;return '<span class="av-slot" data-av="'+encodeURIComponent(JSON.stringify(cfg||{}))+'" style="display:inline-block;width:'+size+'px;height:'+size+'px;line-height:0;vertical-align:top"></span>';}
+  function hydrateAvatars(root){
+    var LOW=50;
+    (root||document).querySelectorAll(".av-slot:not([data-done])").forEach(function(sl){
+      sl.setAttribute("data-done","1");
+      var cfg;try{cfg=JSON.parse(decodeURIComponent(sl.getAttribute("data-av")||"%7B%7D"));}catch(e){cfg={};}
+      var dsize=parseInt(sl.style.width)||sl.offsetWidth||120;
+      var svg=avatarSVG(cfg,240),img=new Image();
+      img.onload=function(){
+        var lc=document.createElement("canvas");lc.width=LOW;lc.height=LOW;
+        var lx=lc.getContext("2d");lx.imageSmoothingEnabled=true;lx.drawImage(img,0,0,LOW,LOW);
+        var dc=document.createElement("canvas");dc.width=dsize;dc.height=dsize;
+        dc.style.width="100%";dc.style.height="100%";dc.style.display="block";dc.style.imageRendering="pixelated";
+        var dx=dc.getContext("2d");dx.imageSmoothingEnabled=false;dx.drawImage(lc,0,0,dsize,dsize);
+        sl.innerHTML="";sl.appendChild(dc);
+      };
+      img.onerror=function(){sl.innerHTML=svg;};
+      img.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(svg);
+    });
   }
   function loadProfile(){
     var free=AVATAR_ITEMS.filter(function(i){return i.cost===0;}).map(function(i){return i.id;});
@@ -344,6 +364,6 @@ window.Steady = (function(){
     dkey:dkey,last7:last7,streak:streak,renderBadges:renderBadges,setDb:setDb,initAccount:initAccount,onboard:onboard,
     initPremium:initPremium,applyPremium:applyPremium,isPremium:isPremium,openPrem:openPrem,
     levelInfo:levelInfo,levelTitle:levelTitle,confetti:confetti,gamify:gamify,renderQuests:renderQuests,
-    avatarSVG:avatarSVG,AVATAR_ITEMS:AVATAR_ITEMS,loadProfile:loadProfile,saveProfile:saveProfile,suiteStats:suiteStats,onTab:null,db:db};
+    avatarSVG:avatarSVG,avatarSlot:avatarSlot,hydrateAvatars:hydrateAvatars,AVATAR_ITEMS:AVATAR_ITEMS,loadProfile:loadProfile,saveProfile:saveProfile,suiteStats:suiteStats,onTab:null,db:db};
   return S;
 })();

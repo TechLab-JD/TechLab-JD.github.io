@@ -63,7 +63,7 @@ function itemById(id){for(var i=0;i<S.AVATAR_ITEMS.length;i++)if(S.AVATAR_ITEMS[
 function renderHero(){
   var st=stats();
   S.el("charhero").innerHTML='<div class="cflex">'+
-    '<div class="bigav">'+S.avatarSVG(prof.equip,184)+'</div>'+
+    '<div class="bigav">'+S.avatarSlot(prof.equip,184)+'</div>'+
     '<div class="cinfo">'+
       '<input id="cname" class="nameinp" placeholder="Name your character" value="'+(prof.name||"").replace(/"/g,"&quot;")+'">'+
       '<div class="clvl">Level '+st.level+' · '+st.title+'</div>'+
@@ -73,6 +73,7 @@ function renderHero(){
       '<div class="chint">Level up and earn coins by using your Steady apps. Spend coins in the Shop on new looks.</div>'+
     '</div></div>';
   S.el("cname").onchange=function(){prof.name=this.value.trim();S.saveProfile(prof);};
+  S.hydrateAvatars(S.el("charhero"));
 }
 function renderCats(){
   S.el("cats").innerHTML=CATS.map(function(c){return '<button class="catpill'+(c===cat?" on":"")+'" data-c="'+c+'">'+c+'</button>';}).join("");
@@ -88,8 +89,9 @@ function renderItems(){
     var owned=prof.owned.indexOf(i.id)>=0,equipped=prof.equip[i.field]===i.val;
     var prev={};for(var k in prof.equip)prev[k]=prof.equip[k];prev[i.field]=i.val;
     var act=equipped?'<span class="ieq">✓ Equipped</span>':owned?'<button class="btn ghost sm" data-eq="'+i.id+'">Equip</button>':(bal>=i.cost?'<button class="btn sm" data-buy="'+i.id+'">🪙 '+i.cost+'</button>':'<span class="ilock">🔒 '+i.cost+'</span>');
-    return '<div class="item'+(equipped?" equipped":"")+'"><div class="prev">'+S.avatarSVG(prev,76)+'</div><div class="iname">'+i.name+'</div><div class="iact">'+act+'</div></div>';
+    return '<div class="item'+(equipped?" equipped":"")+'"><div class="prev">'+S.avatarSlot(prev,76)+'</div><div class="iname">'+i.name+'</div><div class="iact">'+act+'</div></div>';
   }).join("");
+  S.hydrateAvatars(S.el("items"));
   document.querySelectorAll("#items [data-eq]").forEach(function(b){b.onclick=function(){equip(b.dataset.eq);};});
   document.querySelectorAll("#items [data-buy]").forEach(function(b){b.onclick=function(){buy(b.dataset.buy);};});
 }
