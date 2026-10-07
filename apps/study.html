@@ -11,7 +11,7 @@
 <body>
 <header class="top"><div class="wrap">
   <a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Study</b></a>
-  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
+  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="premhdr" data-steady="premium">⭐ Premium</button><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
 </div></header>
 <nav class="appnav"><div class="wrap">
   <button class="stab active" data-panel="home">Overview</button>
@@ -21,7 +21,8 @@
   <button class="stab" data-panel="sched">Schedule</button>
   <button class="stab" data-panel="studylog">Study Log</button>
   <button class="stab" data-panel="flash">Flashcards</button>
-  <button class="stab" data-panel="trends">Trends</button>
+  <button class="stab" data-panel="planner">Planner <span class="lk">🔒</span></button>
+  <button class="stab" data-panel="trends">Trends <span class="lk">🔒</span></button>
   <button class="stab" data-panel="rewards">🏆 Rewards</button>
 </div></nav>
 <main class="wrap main">
@@ -89,7 +90,17 @@
     </div>
   </section>
 
-  <section class="panel" id="panel-trends">
+  <section class="panel locked" id="panel-planner">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Due (14d)</div><div class="val" id="pl-due">0</div></div>
+      <div class="stat"><div class="label">Exams (21d)</div><div class="val" id="pl-exams">0</div></div>
+      <div class="stat"><div class="label">Suggested today</div><div class="val" id="pl-min">0 min</div></div>
+    </div>
+    <div class="card"><h2>Priorities</h2><p class="sub">Your deadlines ranked by urgency — tackle the top first.</p><div id="pl-list"></div></div>
+    <div class="card"><h2>Your 7-day study plan</h2><p class="sub">Auto-built from your exams and open assignments. It rebuilds as dates change.</p><div id="pl-week"></div></div>
+  </section>
+
+  <section class="panel locked" id="panel-trends">
     <div class="grid3" style="margin-bottom:16px">
       <div class="stat"><div class="label">Completed</div><div class="val" id="ts-done">0</div></div>
       <div class="stat"><div class="label">GPA</div><div class="val" id="ts-gpa">—</div></div>
@@ -216,6 +227,35 @@ S.el("fc-newdeck").onclick=function(){var n=prompt("Deck name?");if(!n)return;if
 S.el("fc-deldeck").onclick=function(){var d=fcCur();if(!d)return;if(confirm('Delete deck "'+d.name+'" and its cards?')){db.decks=db.decks.filter(x=>x.id!==d.id);fcDeck=db.decks[0]?db.decks[0].id:null;fcIdx=0;fcFlip=false;S.save();renderFlash();}};
 S.el("fc-add").onclick=function(){var d=fcCur();if(!d){S.toast("Make a deck first");return;}var f=S.val("fc-front"),b=S.val("fc-back");if(!f||!b)return;d.cards.push({id:S.uid(),front:f,back:b});S.save();S.clr("fc-front","fc-back");renderFlash();S.toast("Card added",1);};
 
+/* planner (premium) */
+function renderPlanner(){
+  var today=new Date();today.setHours(0,0,0,0);
+  var items=[];
+  db.exams.forEach(function(e){if(e.date){var dt=daysTo(e.date);if(dt>=0&&dt<=21)items.push({type:"Exam",name:e.name,due:e.date,dt:dt,w:3});}});
+  db.assign.forEach(function(a){if(!a.done&&a.due){var dt=daysTo(a.due);if(dt>=0&&dt<=21)items.push({type:"Assignment",name:a.title,course:a.course,due:a.due,dt:dt,w:1});}});
+  items.sort(function(a,b){return a.dt-b.dt||b.w-a.w;});
+  var todayMin=0;items.forEach(function(it){var urg=it.dt<=1?1:it.dt<=3?0.7:it.dt<=7?0.4:0.2;todayMin+=Math.round(urg*it.w*20);});
+  todayMin=Math.min(todayMin,180);
+  S.el("pl-due").textContent=db.assign.filter(function(a){return !a.done&&a.due&&daysTo(a.due)>=0&&daysTo(a.due)<=14;}).length;
+  S.el("pl-exams").textContent=db.exams.filter(function(e){return e.date&&daysTo(e.date)>=0&&daysTo(e.date)<=21;}).length;
+  S.el("pl-min").textContent=todayMin+" min";
+  var pr=S.el("pl-list");
+  pr.innerHTML=items.length?"":'<div class="empty">No deadlines in the next 3 weeks. Add exams and assignments and your plan builds itself.</div>';
+  items.forEach(function(it){var r=document.createElement("div");r.className="row";
+    var tag=it.dt===0?"due today":it.dt+"d";var cls=it.dt<=2?"warn":it.dt<=5?"":"good";
+    r.innerHTML='<span class="nm">'+(it.type==="Exam"?"📝 ":"📄 ")+it.name+' <span class="meta">'+it.type+(it.course?" · "+it.course:"")+'</span></span><span class="pill '+cls+'">'+tag+'</span>';
+    pr.appendChild(r);});
+  var html="";
+  for(var i=0;i<7;i++){
+    var d=new Date(today.getFullYear(),today.getMonth(),today.getDate()+i);
+    var lbl=d.toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"});
+    var focus=items.filter(function(it){return it.dt>=i;}).slice(0,2);
+    var body=focus.length?focus.map(function(f){return '<div style="font-size:12.5px;color:var(--muted);margin-top:3px">• '+f.name+(f.dt-i<=0?' <b style="color:var(--warn)">(due!)</b>':" — "+(f.dt-i)+"d out")+'</div>';}).join(""):'<div style="font-size:12.5px;color:var(--muted);margin-top:3px">Free day — review flashcards or rest.</div>';
+    html+='<div class="card" style="margin-bottom:10px;padding:13px 15px"><b style="font:700 13px var(--display)">'+(i===0?"Today · ":"")+lbl+'</b>'+body+'</div>';
+  }
+  S.el("pl-week").innerHTML=html;
+}
+
 /* trends */
 function renderTrends(){
   var g=gpa();S.el("ts-gpa").textContent=g.gpa!==null?g.gpa.toFixed(2):"—";
@@ -255,10 +295,12 @@ function SAMPLE(){var t=new Date();function d(off){var x=new Date(t.getFullYear(
     sched:[{id:S.uid(),day:"Mon",time:"9:00 AM",course:"Calculus I",room:"Bldg A 210"},{id:S.uid(),day:"Mon",time:"11:00 AM",course:"English Comp",room:"Bldg B 105"},{id:S.uid(),day:"Wed",time:"9:00 AM",course:"Calculus I",room:"Bldg A 210"},{id:S.uid(),day:"Tue",time:"1:00 PM",course:"Biology",room:"Sci 300"}],
     sessions:(function(){var a=[],k=S.last7(),v=[45,0,60,30,0,75,50],sb=["Calculus","","Biology","English","","History","Calculus"];k.forEach(function(d,i){if(v[i])a.push({id:S.uid(),date:d.key,subj:sb[i],min:v[i]});});return a;})(),
     decks:[{id:S.uid(),name:"Calculus terms",cards:[{id:S.uid(),front:"Derivative",back:"Instantaneous rate of change of a function"},{id:S.uid(),front:"Integral",back:"Area under a curve; the antiderivative"},{id:S.uid(),front:"Limit",back:"Value a function approaches as input approaches a point"},{id:S.uid(),front:"Chain rule",back:"d/dx f(g(x)) = f'(g(x))·g'(x)"}]},{id:S.uid(),name:"Biology",cards:[{id:S.uid(),front:"Mitochondria",back:"Powerhouse of the cell — makes ATP"},{id:S.uid(),front:"Osmosis",back:"Diffusion of water across a semipermeable membrane"}]}]};}
-function renderAll(){renderAssign();renderGPA();renderExams();renderSched();renderStudyLog();renderFlash();renderTrends();renderHome();renderRewards();}
+function renderAll(){renderAssign();renderGPA();renderExams();renderSched();renderStudyLog();renderFlash();renderPlanner();renderTrends();renderHome();renderRewards();S.applyPremium();}
 S.el("a-due").value=S.todayISO();S.el("ss-date").value=S.todayISO();
 S.initShell();
 S.initAccount({name:"steady-study",defaults:DEF,sample:SAMPLE,render:renderAll});
+S.initPremium({title:"Steady Study Premium",desc:"Plan smarter and see your trends.",veil:"Unlock the auto-built study planner and your performance trends.",
+  features:["Smart Planner — a 7-day study plan from your deadlines","Priorities ranked by urgency + suggested daily minutes","Trends — study time, grade distribution & workload","Priority on new study tools"],render:renderAll});
 renderAll();
 S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Study</h2><p>Assignments, GPA, exam countdowns and your class schedule — private, on your device.</p></div><div class="feat"><div class="fi">🎯</div><div><b>Stay ahead</b><p>Due-date flags and exam countdowns keep you on track.</p></div></div><div class="feat"><div class="fi">🎓</div><div><b>Watch your GPA</b><p>Add courses and see it update live.</p></div></div>',sample:SAMPLE,render:renderAll});
 </script>

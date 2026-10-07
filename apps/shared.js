@@ -84,8 +84,50 @@ window.Steady = (function(){
     if(opts.sample)el("wc-s").onclick=function(){setDb(opts.sample());S.db.__onboarded=true;save();m.remove();if(opts.render)opts.render();};
     el("wc-f").onclick=function(){S.db.__onboarded=true;save();m.remove();toast("You're all set",1);};
   }
+  /* ---- premium gating ---- */
+  var premOpts={};
+  function isPremium(){return !!S.db.premium;}
+  function openPrem(){var m=el("steady-prem");if(m)m.classList.add("open");}
+  function verifyLicense(key){key=(key||"").trim();
+    if(!key)return{active:false,msg:"Enter a key to unlock."};
+    if(key.toUpperCase()==="STEADY-DEMO")return{active:true,msg:"Demo unlock active — enjoy the premium tools."};
+    return{active:false,msg:"Billing isn't live yet — premium is coming soon."};}
+  function applyPremium(){var on=isPremium();
+    document.querySelectorAll(".panel.locked").forEach(function(p){var veil=p.querySelector(".lockveil");
+      if(on){if(veil)veil.remove();}
+      else if(!veil){var v=document.createElement("div");v.className="lockveil";
+        v.innerHTML='<div class="in"><div style="font-size:30px">🔒</div><h3>A Premium feature</h3><p>'+(premOpts.veil||"Unlock the advanced tools with Premium.")+'</p><button class="btn" data-steady="premium">Unlock Premium</button></div>';
+        p.appendChild(v);}});
+    document.querySelectorAll(".stab .lk").forEach(function(x){x.textContent=on?"✓":"🔒";});
+    document.querySelectorAll(".premhdr").forEach(function(b){b.textContent=on?"✓ Premium":"⭐ Premium";});
+    document.querySelectorAll('[data-steady="premium"]').forEach(function(b){b.onclick=openPrem;});
+    var pt=el("sp-title"),pd=el("sp-desc"),pg=el("sp-get");
+    if(on&&pt){pt.textContent="✓ Premium active";if(pd)pd.textContent="Thanks for supporting Steady. Everything's unlocked on this device.";if(pg)pg.style.display="none";}
+  }
+  function initPremium(opts){opts=opts||{};premOpts=opts;
+    var pm=el("steady-prem");
+    if(!pm){pm=document.createElement("div");pm.className="modal";pm.id="steady-prem";
+      pm.innerHTML='<div class="box"><button class="close" id="sp-x">×</button>'+
+        '<div class="upsell"><h2 id="sp-title">'+(opts.title||"Steady Premium")+'</h2><p id="sp-desc">'+(opts.desc||"Unlock the advanced tools.")+'</p>'+
+        '<div class="price">$'+(opts.price||"3.99")+'<small>/mo</small></div>'+
+        '<div class="keyrow"><input id="sp-key" placeholder="License key"><button class="btn" id="sp-verify">Unlock</button></div>'+
+        '<div class="note" id="sp-status" style="color:rgba(255,255,255,.85);margin-top:10px;min-height:16px"></div></div>'+
+        '<ul class="premlist">'+((opts.features||[]).map(function(f){return "<li>"+f+"</li>";}).join(""))+'</ul>'+
+        '<button class="btn block" id="sp-get">Get Premium →</button>'+
+        '<p class="setnote">One unlock covers this app on this device. Previewing? Try the key <b>STEADY-DEMO</b>.</p></div>';
+      document.body.appendChild(pm);}
+    el("sp-x").onclick=function(){pm.classList.remove("open");};
+    pm.onclick=function(e){if(e.target===pm)pm.classList.remove("open");};
+    el("sp-verify").onclick=function(){var st=el("sp-status");st.textContent="Checking…";
+      var r=verifyLicense(val("sp-key"));S.db.premium=r.active;if(r.active)S.db.licenseKey=val("sp-key");save();applyPremium();
+      if(opts.render)opts.render();st.innerHTML=r.active?('<span style="color:#39e3c8">✓ '+r.msg+'</span>'):r.msg;
+      if(r.active){toast("Premium unlocked 🎉",1);setTimeout(function(){pm.classList.remove("open");},900);}};
+    el("sp-get").onclick=function(){toast("Checkout isn't live yet — coming once billing is set up");};
+    applyPremium();
+  }
   var S={load:load,save:save,uid:uid,num:num,money:money,money0:money0,el:el,val:val,clr:clr,toast:toast,
     todayISO:todayISO,tm:tm,initShell:initShell,go:go,toggleTheme:toggleTheme,donut:donut,ring:ring,bars:bars,area:area,
-    dkey:dkey,last7:last7,streak:streak,renderBadges:renderBadges,setDb:setDb,initAccount:initAccount,onboard:onboard,onTab:null,db:db};
+    dkey:dkey,last7:last7,streak:streak,renderBadges:renderBadges,setDb:setDb,initAccount:initAccount,onboard:onboard,
+    initPremium:initPremium,applyPremium:applyPremium,isPremium:isPremium,openPrem:openPrem,onTab:null,db:db};
   return S;
 })();

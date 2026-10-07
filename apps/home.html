@@ -9,12 +9,14 @@
 <style>:root{--accent:#d9872b;--accent-2:#e8a33c;--accent-dark:#b4701c}
   .mealgrid{display:grid;grid-template-columns:70px 1fr;gap:8px;align-items:center}
   .mealgrid .d{font:700 13px var(--display);color:var(--muted)}
+  #home-print{display:none}
+  @media print{body.printing>*:not(#home-print){display:none!important}body.printing #home-print{display:block!important}@page{margin:16mm}}
 </style>
 </head>
 <body>
 <header class="top"><div class="wrap">
   <a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Home</b></a>
-  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
+  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="premhdr" data-steady="premium">⭐ Premium</button><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
 </div></header>
 <nav class="appnav"><div class="wrap">
   <button class="stab active" data-panel="home">Overview</button>
@@ -23,6 +25,7 @@
   <button class="stab" data-panel="meals">Meals</button>
   <button class="stab" data-panel="docs">Documents</button>
   <button class="stab" data-panel="inv">Inventory</button>
+  <button class="stab" data-panel="binder">Binder <span class="lk">🔒</span></button>
   <button class="stab" data-panel="rewards">🏆 Rewards</button>
 </div></nav>
 <main class="wrap main">
@@ -78,6 +81,18 @@
     </div>
   </section>
 
+  <section class="panel locked" id="panel-binder">
+    <div class="card"><h2>Home binder</h2><p class="sub">One printable sheet with everything that matters — document locations, your inventory for insurance, and the maintenance schedule. Print it for a go-bag or share it with family.</p>
+      <button class="btn" id="bn-print">🖨 Print / Save as PDF</button>
+    </div>
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Documents</div><div class="val" id="bn-docs">0</div></div>
+      <div class="stat"><div class="label">Inventory value</div><div class="val" id="bn-val">$0</div></div>
+      <div class="stat"><div class="label">Maintenance items</div><div class="val" id="bn-mt">0</div></div>
+    </div>
+    <div class="card"><h2>Preview</h2><div id="bn-prev"></div></div>
+  </section>
+
   <section class="panel" id="panel-rewards">
     <div class="hero"><div class="lbl">On top of it</div><div class="big" id="rw-ontrack">0</div><div class="meta">cleaning tasks up to date</div>
       <div class="mini"><div>Badges<b id="rw-count">0</b></div></div></div>
@@ -86,6 +101,7 @@
 </main>
 <footer class="ft">Steady Home · a Steady Systems app · your data stays on this device</footer>
 <div id="toasts"></div>
+<div id="home-print"></div>
 <script src="shared.js"></script>
 <script>
 var DEF={cleaning:[],maintenance:[],meals:{week:{Mon:"",Tue:"",Wed:"",Thu:"",Fri:"",Sat:"",Sun:""},grocery:[]},documents:[],inventory:[]};
@@ -196,6 +212,35 @@ function renderInventory(){
 }
 S.el("iv-add").onclick=function(){var n=S.val("iv-name");if(!n)return;if(!db.inventory)db.inventory=[];db.inventory.push({id:S.uid(),name:n,loc:S.val("iv-loc"),val:S.val("iv-val"),exp:S.val("iv-exp")});S.save();S.clr("iv-name","iv-loc","iv-val","iv-exp");renderInventory();S.toast("Added",1);};
 
+/* binder (premium) */
+function fmtDate(d){return d?new Date(d+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}):"—";}
+function buildBinderHTML(){
+  function sec(t){return '<h2 style="font-size:15px;color:#132536;margin:18px 0 6px;border-bottom:2px solid #132536;padding-bottom:3px">'+t+'</h2>';}
+  function rowL(a,b){return '<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #eee;font-size:13px"><span>'+a+'</span><span style="color:#555;text-align:right">'+b+'</span></div>';}
+  var none='<div style="color:#777;font-size:13px">None logged.</div>';
+  var docs=db.documents.length?db.documents.map(function(d){return rowL(d.name,(d.location||"")+(d.expiry?(" · exp "+fmtDate(d.expiry)):""));}).join(""):none;
+  var inv=(db.inventory||[]).length?db.inventory.map(function(x){return rowL(x.name,(x.loc?x.loc+" · ":"")+S.money(Number(x.val)||0)+(x.exp?(" · warranty "+fmtDate(x.exp)):""));}).join(""):none;
+  var mt=db.maintenance.length?db.maintenance.map(function(m){var nd=mtDue(m);return rowL(m.task,"every "+m.intervalMo+" mo · next "+(nd?nd.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}):"—"));}).join(""):none;
+  var cl=db.cleaning.length?db.cleaning.map(function(c){return rowL(c.task,c.freq||"");}).join(""):none;
+  var total=(db.inventory||[]).reduce(function(a,b){return a+(Number(b.val)||0);},0);
+  return '<div style="font-family:Arial,sans-serif;color:#111;max-width:680px;margin:0 auto;padding:20px">'+
+    '<h1 style="font-size:24px;color:#132536;margin:0 0 2px">Home Binder</h1><div style="color:#555;font-size:12px;margin-bottom:6px">Generated '+new Date().toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"})+'</div>'+
+    sec("Important documents")+docs+
+    sec("Home inventory — est. value "+S.money(total))+inv+
+    sec("Maintenance schedule")+mt+
+    sec("Cleaning routine")+cl+
+    '<p style="font-size:10px;color:#999;margin-top:26px">Made with Steady Home · syssteady.gumroad.com</p></div>';
+}
+function renderBinder(){
+  if(!db.inventory)db.inventory=[];
+  S.el("bn-docs").textContent=db.documents.length;
+  S.el("bn-val").textContent=S.money(db.inventory.reduce(function(a,b){return a+(Number(b.val)||0);},0));
+  S.el("bn-mt").textContent=db.maintenance.length;
+  S.el("bn-prev").innerHTML='<div style="background:#fff;border-radius:10px;overflow:auto">'+buildBinderHTML()+'</div>';
+}
+S.el("bn-print").onclick=function(){S.el("home-print").innerHTML=buildBinderHTML();document.body.classList.add("printing");window.print();};
+window.onafterprint=function(){document.body.classList.remove("printing");};
+
 /* overview */
 function renderHome(){
   S.el("h-date").textContent=new Date().toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"});
@@ -214,7 +259,7 @@ function renderHome(){
   gr.innerHTML=db.meals.grocery.length?(need.length?need.slice(0,8).map(g=>'<div class="row"><span class="nm">'+g.item+'</span></div>').join(""):'<div class="empty">Everything checked off. 🛒</div>'):'<div class="empty">Add meals &amp; a grocery list on the Meals tab.</div>';
 }
 
-function renderAll(){renderCleaning();renderMaint();renderMeals();renderDocs();renderInventory();renderRewards();renderHome();}
+function renderAll(){renderCleaning();renderMaint();renderMeals();renderDocs();renderInventory();renderBinder();renderRewards();renderHome();S.applyPremium();}
 function SAMPLE(){var t=new Date();function iso(off){var x=new Date(t.getFullYear(),t.getMonth(),t.getDate()+off);return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0");}
   return {cleaning:[{id:S.uid(),task:"Vacuum & floors",freq:"Weekly",lastDone:iso(-9)},{id:S.uid(),task:"Kitchen deep clean",freq:"Weekly",lastDone:iso(-2)},{id:S.uid(),task:"Make the bed",freq:"Daily",lastDone:iso(-1)},{id:S.uid(),task:"Bathrooms",freq:"Weekly",lastDone:iso(-3)},{id:S.uid(),task:"Change sheets",freq:"Monthly",lastDone:iso(-40)}],
     maintenance:[{id:S.uid(),task:"HVAC filter",lastDone:iso(-80),intervalMo:3},{id:S.uid(),task:"Car oil change",lastDone:iso(-150),intervalMo:6},{id:S.uid(),task:"Smoke detector batteries",lastDone:iso(-200),intervalMo:12}],
@@ -224,6 +269,8 @@ function SAMPLE(){var t=new Date();function iso(off){var x=new Date(t.getFullYea
 S.el("mt-date").value=S.todayISO();
 S.initShell();
 S.initAccount({name:"steady-home",defaults:DEF,sample:SAMPLE,render:renderAll});
+S.initPremium({title:"Steady Home Premium",desc:"Your whole home on one printable sheet.",veil:"Unlock the printable Home Binder — documents, inventory & maintenance in one PDF.",
+  features:["Home Binder — one printable sheet of everything","Document locations & expiry dates","Full inventory with values — ready for insurance","Maintenance & cleaning schedules included"],render:renderAll});
 renderAll();
 S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Home</h2><p>Cleaning, maintenance, meals and important documents — one calm place to run your home.</p></div><div class="feat"><div class="fi">🧹</div><div><b>Nothing slips</b><p>Tasks reset on their own schedule and tell you what\'s due.</p></div></div><div class="feat"><div class="fi">🗄️</div><div><b>Always prepared</b><p>Know where every document is and when it expires.</p></div></div>',sample:SAMPLE,render:renderAll});
 </script>

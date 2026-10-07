@@ -113,4 +113,23 @@ footer.ft{text-align:center;color:var(--faint);font-size:11.5px;padding:22px 0}
 .feat{display:flex;gap:11px;padding:9px 0;align-items:flex-start}
 .feat .fi{width:30px;height:30px;border-radius:9px;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent);display:grid;place-items:center;flex:none;font-size:15px}
 .feat b{font-size:13.5px} .feat p{margin:1px 0 0;font-size:12px;color:var(--muted)}
+/* ---- premium gating ---- */
+.locked{position:relative}
+.lockveil{position:absolute;inset:0;background:color-mix(in srgb,var(--card) 80%,transparent);backdrop-filter:blur(4px);border-radius:var(--radius);display:grid;place-items:center;text-align:center;padding:24px;z-index:5;animation:rise .3s}
+.lockveil .in{max-width:340px}
+.lockveil h3{margin:0 0 6px;font-size:18px;font-family:var(--display)}
+.lockveil p{margin:0 0 14px;font-size:13px;color:var(--muted)}
+.stab .lk{font-size:10px;margin-left:3px;opacity:.9}
+.premhdr{background:linear-gradient(135deg,#f6c453,#e8a33c);border:0;color:#3a2a08;cursor:pointer;font:700 12.5px var(--sans);padding:6px 11px;border-radius:999px;display:inline-flex;align-items:center;gap:4px;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.premhdr:hover{filter:brightness(1.06)}
+.upsell{background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff;border-radius:var(--radius);padding:22px;text-align:center;margin-bottom:14px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.upsell h2{color:#fff;font-size:20px;margin:0 0 6px;font-family:var(--display)}
+.upsell p{opacity:.85;font-size:13px;margin:0 auto 10px;max-width:470px}
+.upsell .price{font:800 30px var(--display)} .upsell .price small{font-size:14px;font-weight:600;opacity:.8}
+.keyrow{display:flex;gap:8px;max-width:420px;margin:14px auto 0}
+.keyrow input{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22);color:#fff}
+.keyrow input::placeholder{color:rgba(255,255,255,.55)}
+.premlist{list-style:none;padding:0;margin:0 0 14px;display:grid;gap:7px}
+.premlist li{position:relative;padding-left:24px;font-size:13px;color:var(--ink)}
+.premlist li:before{content:"✓";position:absolute;left:0;top:0;color:var(--accent);font-weight:800}
 @media(max-width:640px){.grid2,.grid3{grid-template-columns:1fr}.hero .big{font-size:30px}}

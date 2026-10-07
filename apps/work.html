@@ -20,7 +20,7 @@
 <body>
 <header class="top"><div class="wrap">
   <a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Work</b></a>
-  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
+  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="premhdr" data-steady="premium">⭐ Premium</button><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
 </div></header>
 <nav class="appnav"><div class="wrap">
   <button class="stab active" data-panel="home">Overview</button>
@@ -32,7 +32,8 @@
   <button class="stab" data-panel="expenses">Expenses</button>
   <button class="stab" data-panel="taxes">Taxes</button>
   <button class="stab" data-panel="clients">Clients</button>
-  <button class="stab" data-panel="trends">Trends</button>
+  <button class="stab" data-panel="reports">Reports <span class="lk">🔒</span></button>
+  <button class="stab" data-panel="trends">Trends <span class="lk">🔒</span></button>
   <button class="stab" data-panel="rewards">🏆 Rewards</button>
 </div></nav>
 <main class="wrap main">
@@ -142,7 +143,25 @@
     </div>
   </section>
 
-  <section class="panel" id="panel-trends">
+  <section class="panel locked" id="panel-reports">
+    <div class="card"><h2>Monthly business report</h2><p class="sub">A clean profit-and-loss summary for any month — print it or save it as PDF for your records or an accountant.</p>
+      <div class="addform" style="grid-template-columns:200px auto"><div class="field"><label>Month</label><input id="rp-month" type="month"></div><button class="btn sm" id="rp-print" style="align-self:end">🖨 Print / Save as PDF</button></div>
+    </div>
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Income</div><div class="val pos" id="rp-inc">$0</div></div>
+      <div class="stat"><div class="label">Expenses</div><div class="val neg" id="rp-exp">$0</div></div>
+      <div class="stat"><div class="label">Net profit</div><div class="val" id="rp-profit">$0</div></div>
+    </div>
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Profit margin</div><div class="val" id="rp-margin">0%</div></div>
+      <div class="stat"><div class="label">Billable hours</div><div class="val" id="rp-hrs">0</div></div>
+      <div class="stat"><div class="label">Effective rate</div><div class="val" id="rp-rate">$0/hr</div></div>
+    </div>
+    <div class="card"><h2>Income by client</h2><div id="rp-clients"></div></div>
+    <div class="card"><h2>Outstanding invoices</h2><p class="sub">Unpaid invoices in your history (all time)</p><div class="row"><span class="nm">Total awaiting payment</span><span class="amt" id="rp-out">$0</span></div></div>
+  </section>
+
+  <section class="panel locked" id="panel-trends">
     <div class="grid3" style="margin-bottom:16px">
       <div class="stat"><div class="label">Avg monthly income</div><div class="val" id="tr-avg">$0</div></div>
       <div class="stat"><div class="label">Profit this month</div><div class="val pos" id="tr-profit">$0</div></div>
@@ -350,6 +369,43 @@ function renderTrends(){
   tc.innerHTML=arr.length?('<div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">'+S.donut(arr,150)+'<div style="flex:1;min-width:150px">'+arr.map(a=>'<div class="row"><span class="dot" style="background:'+a.color+'"></span><span class="nm">'+a.label+'</span><span class="amt">'+S.money(a.value)+'</span></div>').join("")+'</div></div>'):'<div class="empty">Log income (with client names) to see this.</div>';
 }
 
+/* reports (premium) */
+function reportFigures(m){
+  var inc=db.income.entries.filter(e=>(e.date||"").slice(0,7)===m).reduce((a,b)=>a+num(b.amount),0);
+  var exp=db.expenses.filter(e=>(e.date||"").slice(0,7)===m).reduce((a,b)=>a+num(b.amount),0);
+  var hrs=db.time.filter(t=>(t.date||"").slice(0,7)===m).reduce((a,b)=>a+num(b.hrs),0);
+  var byC={};db.income.entries.filter(e=>(e.date||"").slice(0,7)===m).forEach(e=>{var c=e.client||"—";byC[c]=(byC[c]||0)+num(e.amount);});
+  var clients=Object.keys(byC).map(k=>[k,byC[k]]).sort((a,b)=>b[1]-a[1]);
+  var out=(db.invoices||[]).filter(x=>!x.paid).reduce((a,b)=>a+(Number(b.total)||0),0);
+  return {inc:inc,exp:exp,profit:inc-exp,margin:inc>0?Math.round((inc-exp)/inc*100):0,hrs:hrs,rate:hrs>0?inc/hrs:0,clients:clients,out:out};
+}
+function renderReports(){
+  var m=S.val("rp-month")||tm();var f=reportFigures(m);
+  S.el("rp-inc").textContent=S.money(f.inc);
+  S.el("rp-exp").textContent=S.money(f.exp);
+  var p=S.el("rp-profit");p.textContent=S.money(f.profit);p.className="val "+(f.profit>=0?"pos":"neg");
+  S.el("rp-margin").textContent=f.margin+"%";
+  S.el("rp-hrs").textContent=f.hrs.toFixed(1);
+  S.el("rp-rate").textContent=S.money(f.rate)+"/hr";
+  S.el("rp-out").textContent=S.money(f.out);
+  var cl=S.el("rp-clients");
+  cl.innerHTML=f.clients.length?f.clients.map(x=>'<div class="row"><span class="nm">'+x[0]+'</span><div class="bar" style="max-width:200px"><span style="width:'+(f.inc>0?x[1]/f.inc*100:0)+'%;background:#8168f2"></span></div><span class="amt">'+S.money(x[1])+'</span></div>').join(""):'<div class="empty">No income logged for this month.</div>';
+}
+function buildReportHTML(){
+  var m=S.val("rp-month")||tm();var f=reportFigures(m);
+  var mn=new Date(m+"-01T00:00:00").toLocaleDateString("en-US",{month:"long",year:"numeric"});
+  function line(k,v,b){return '<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #eee;'+(b?"font-weight:700;font-size:15px;border-bottom:0":"")+'"><span>'+k+'</span><span>'+v+'</span></div>';}
+  return '<div style="font-family:Arial,sans-serif;color:#111;max-width:640px;margin:0 auto;padding:20px">'+
+    '<h1 style="font-size:24px;color:#132536;margin:0 0 2px">Business Report</h1><div style="color:#555;font-size:13px;margin-bottom:18px">'+mn+'</div>'+
+    line("Income",S.money(f.inc))+line("Expenses",S.money(f.exp))+line("Net profit",S.money(f.profit),true)+
+    '<div style="height:14px"></div>'+
+    line("Profit margin",f.margin+"%")+line("Billable hours",f.hrs.toFixed(1))+line("Effective rate",S.money(f.rate)+"/hr")+line("Outstanding invoices",S.money(f.out))+
+    '<h2 style="font-size:15px;color:#132536;margin:20px 0 6px">Income by client</h2>'+
+    (f.clients.length?f.clients.map(x=>line(x[0],S.money(x[1]))).join(""):'<div style="color:#777;font-size:13px">No income this month.</div>')+
+    '<p style="font-size:10px;color:#999;margin-top:26px">Made with Steady Work · syssteady.gumroad.com</p></div>';
+}
+S.el("rp-print").onclick=function(){S.el("invoice-print").innerHTML=buildReportHTML();document.body.classList.add("printing");window.print();};
+
 /* rewards */
 var BADGES=[
  {id:"invoice",ic:"🧾",title:"First Invoice",desc:"Built an invoice",cond:c=>c.invoice},
@@ -378,10 +434,14 @@ function SAMPLE(){var m=tm();function d(day){return m+"-"+String(Math.min(28,Mat
     expenses:[{id:S.uid(),date:d(dd-5),cat:"Software",desc:"Design app",amount:"29"},{id:S.uid(),date:d(dd-12),cat:"Fees",desc:"Payment processor",amount:"18"},{id:S.uid(),date:d(dd-20),cat:"Equipment",desc:"Webcam",amount:"85"}],
     invoices:[{id:S.uid(),saved:d(dd-3),to:"Acme Co.",num:"013",date:d(dd-10),due:d(dd+4),total:600,paid:false,data:{from:"Jordan D. — Vectoral Labs",to:"Acme Co.",num:"013",date:d(dd-10),due:d(dd+4),tax:0,notes:"Due in 14 days",items:[{desc:"Website updates",qty:"10",rate:"45"},{desc:"Hosting setup",qty:"3",rate:"50"}]}},{id:S.uid(),saved:d(dd-16),to:"Bloom Studio",num:"012",date:d(dd-20),due:d(dd-6),total:450,paid:true,data:{from:"Jordan D. — Vectoral Labs",to:"Bloom Studio",num:"012",date:d(dd-20),due:d(dd-6),tax:0,notes:"Paid — thank you!",items:[{desc:"Branding package",qty:"9",rate:"50"}]}}],
     taxPct:25};}
-function renderAll(){renderInvoice();renderHistory();renderProjects();renderTime();renderIncome();renderExpenses();renderTaxes();renderClients();renderTrends();renderHome();renderRewards();}
+function renderAll(){renderInvoice();renderHistory();renderProjects();renderTime();renderIncome();renderExpenses();renderTaxes();renderClients();renderReports();renderTrends();renderHome();renderRewards();S.applyPremium();}
 ["iv-date","t-date","in-date"].forEach(id=>{if(!S.el(id).value)S.el(id).value=S.todayISO();});
+if(!S.el("rp-month").value)S.el("rp-month").value=tm();
+S.el("rp-month").onchange=renderReports;
 S.initShell();
 S.initAccount({name:"steady-work",defaults:DEF,sample:SAMPLE,render:renderAll});
+S.initPremium({title:"Steady Work Premium",desc:"The business-owner tools: reports and trends.",veil:"Unlock printable monthly reports and your 6-month income trends.",
+  features:["Monthly business report — P&L, margin & effective rate","Print or save any month's report as PDF","Trends — 6-month income & income-by-client","Priority on new freelancer tools"],render:renderAll});
 renderAll();
 S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Work</h2><p>Invoices, billable time, income goals and clients — private, and saved on your device.</p></div><div class="feat"><div class="fi">🧾</div><div><b>Look professional</b><p>Build invoices and print or save them as PDF.</p></div></div><div class="feat"><div class="fi">🎯</div><div><b>Hit your number</b><p>Track income against a monthly goal.</p></div></div>',sample:SAMPLE,render:renderAll});
 </script>
