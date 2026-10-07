@@ -55,7 +55,7 @@
 
   <div class="card" style="text-align:center;color:var(--muted);font-size:13px">
     This page only reads what your Steady apps already saved on this device — nothing is uploaded.
-    <div style="margin-top:10px"><a class="btn ghost sm" href="index.html">← Back to all apps</a></div>
+    <div style="margin-top:12px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap"><button class="btn sm" id="seed-btn">✨ Load demo data for all apps</button><a class="btn ghost sm" href="index.html">← Back to all apps</a></div>
   </div>
 </main>
 <footer class="ft">Steady Overview · a Steady Systems app · reads your apps' data locally, nothing uploaded</footer>
@@ -64,7 +64,7 @@
 <script>
 var S=Steady;S.initShell();
 function read(k){try{var r=localStorage.getItem(k);return r?JSON.parse(r):null;}catch(e){return null;}}
-var M=read("steadyMoney.v1"),H=read("steady.health.v1"),ST=read("steady.study.v1"),W=read("steady.work.v1");
+var M=read("steadyMoney.v1"),H=read("steady.health.v1"),ST=read("steady.study.v1"),W=read("steady.work.v1"),HM=read("steady.home.v1");
 function tm(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0");}
 function dkey(dt){return dt.getFullYear()+"-"+String(dt.getMonth()+1).padStart(2,"0")+"-"+String(dt.getDate()).padStart(2,"0");}
 function sum(a,f){return (a||[]).reduce((s,x)=>s+(Number(f(x))||0),0);}
@@ -100,6 +100,16 @@ if(ST){var GP={"A":4,"A-":3.7,"B+":3.3,"B":3,"B-":2.7,"C+":2.3,"C":2,"C-":1.7,"D
   var ex=(ST.exams||[]).filter(e=>e.date&&dTo(e.date)>=0).sort((a,b)=>a.date.localeCompare(b.date));
   study={gpa:cr>0?pts/cr:null, dueWeek:open.filter(a=>{var d=dTo(a.due);return d>=0&&d<=7;}).length,
     overdue:open.filter(a=>dTo(a.due)<0).length, nextExam:ex.length?dTo(ex[0].date):null, assign:ST.assign||[], exams:ST.exams||[], dTo:dTo};}
+
+/* ---- home ---- */
+var home=null;
+if(HM){var DAYS2=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+  function clDue(c){var th=c.freq==="Daily"?1:c.freq==="Weekly"?7:30;return (!c.lastDone)||((Date.now()-new Date(c.lastDone+"T00:00:00"))/86400000)>=th;}
+  function mtOver(m){if(!m.lastDone||!m.intervalMo)return false;var x=new Date(m.lastDone+"T00:00:00");x.setMonth(x.getMonth()+Number(m.intervalMo));return x<=new Date();}
+  home={cleanDue:(HM.cleaning||[]).filter(clDue).length,cleanTotal:(HM.cleaning||[]).length,
+    maintDue:(HM.maintenance||[]).filter(mtOver).length,maint:(HM.maintenance||[]).length,
+    meals:DAYS2.filter(d=>HM.meals&&HM.meals.week&&HM.meals.week[d]).length,
+    docs:(HM.documents||[]).length,docsExp:(HM.documents||[]).filter(x=>x.expiry&&((new Date(x.expiry+"T00:00:00")-new Date().setHours(0,0,0,0))/86400000)<0).length};}
 
 /* ---- hero + headline ---- */
 function M0(v){return S.money0(v);}
@@ -149,6 +159,8 @@ doms+=domCard("#2fae5f","🏃","Steady Health","health.html",!!health,
   health?stat("Habits today",health.habToday+"/"+health.habCount)+stat("Water",health.water+"/"+health.waterGoal)+stat("Workouts (7d)",health.workouts.filter(x=>keys.indexOf(x.date)>=0).length)+stat("Logged moods",health.mood.length):"","No health data yet.");
 doms+=domCard("#4a90e2","🎓","Steady Study","study.html",!!study,
   study?stat("GPA",study.gpa!==null?study.gpa.toFixed(2):"—")+stat("Due this week",study.dueWeek)+stat("Overdue",study.overdue)+stat("Next exam",study.nextExam!==null?study.nextExam+"d":"—"):"","No study data yet.");
+doms+=domCard("#E8A33C","🏠","Steady Home","home.html",!!home,
+  home?stat("Cleaning due",home.cleanDue+"/"+home.cleanTotal)+stat("Maintenance due",home.maintDue)+stat("Meals planned",home.meals+"/7")+stat("Documents",home.docs):"","No home data yet.");
 S.el("ov-doms").innerHTML=doms;
 
 /* ---- balance ---- */
@@ -157,7 +169,8 @@ var bal=[
   {bl:"Money",c:"#19c3ad",v:money?score([money.incomePlan>0,(M.categories||[]).length>0,(M.assets||[]).length||(M.debts||[]).length,money.log.length>0]):0},
   {bl:"Work",c:"#8168f2",v:work?score([work.entries.length>0,work.time.length>0,work.clients>0]):0},
   {bl:"Health",c:"#2fae5f",v:health?score([health.habCount>0,health.workouts.length>0,health.water>0,health.mood.length>0]):0},
-  {bl:"Study",c:"#4a90e2",v:study?score([(ST.courses||[]).length>0,study.assign.length>0,study.exams.length>0]):0}
+  {bl:"Study",c:"#4a90e2",v:study?score([(ST.courses||[]).length>0,study.assign.length>0,study.exams.length>0]):0},
+  {bl:"Home",c:"#E8A33C",v:home?score([home.cleanTotal>0,home.maint>0,home.meals>0,home.docs>0]):0}
 ];
 S.el("ov-balance").innerHTML=bal.map(b=>'<div class="balrow"><span class="bl">'+b.bl+'</span><div class="bar"><span style="width:'+b.v+'%;background:'+b.c+'"></span></div><span style="font:700 13px var(--display);width:38px;text-align:right">'+b.v+'%</span></div>').join("");
 
@@ -168,8 +181,25 @@ if(work&&work.billable>0){var hrs=sum(work.time,t=>n(t.hrs));if(hrs>0)ins.push([
 if(health&&money){var w7=health.workouts.filter(x=>keys.indexOf(x.date)>=0).length,e7=work?sum(work.entries.filter(e=>keys.indexOf(e.date)>=0),e=>e.amount):0;ins.push(["⚖️","This week: <b>"+w7+"</b> workout"+(w7===1?"":"s")+" and <b>"+M0(e7)+"</b> earned. Steady weeks usually have both."]);}
 if(study&&study.overdue>0)ins.push(["⚠️","You have <b>"+study.overdue+"</b> overdue assignment"+(study.overdue===1?"":"s")+" in Steady Study — worth clearing before the next exam"+(study.nextExam!==null?" in "+study.nextExam+" days":"")+"."]);
 if(money&&money.debt>0&&work&&work.earnMo>0)ins.push(["📉","At this month's freelance pace ("+M0(work.earnMo)+"), even sending 20% to your "+M0(money.debt)+" debt is "+M0(work.earnMo*0.2)+"/mo toward debt-free."]);
-if(!ins.length)ins.push(["👋","Use a couple of the apps and real cross-app insights will show up here — how your income, spending, health and study weeks line up."]);
+if(home&&(home.cleanDue+home.maintDue+home.docsExp)>0)ins.push(["🏠","Home needs attention: <b>"+home.cleanDue+"</b> cleaning, <b>"+home.maintDue+"</b> maintenance"+(home.docsExp?", <b>"+home.docsExp+"</b> expired doc"+(home.docsExp===1?"":"s"):"")+"."]);
+if(!ins.length)ins.push(["👋","Use a couple of the apps and real cross-app insights will show up here — or hit <b>Load demo data</b> below to see the whole thing filled in."]);
 S.el("ov-insights").innerHTML=ins.map(i=>'<div class="insight"><span class="b">'+i[0]+'</span><span>'+i[1]+'</span></div>').join("");
+
+/* ---- demo: seed all five apps so the overview fills in ---- */
+function seedAll(){
+  var uid=function(){return Date.now().toString(36)+Math.random().toString(36).slice(2,6);};
+  function dk(off){var x=new Date();x.setDate(x.getDate()+off);return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0");}
+  var cmm=tm();function cd(day){return cmm+"-"+String(Math.min(28,Math.max(1,day))).padStart(2,"0");}var dd=new Date().getDate();
+  try{
+  localStorage.setItem("steadyMoney.v1",JSON.stringify({income:[{id:uid(),name:"Paycheck",amount:2400},{id:uid(),name:"Side work",amount:350}],categories:[{id:uid(),name:"Food",planned:450},{id:uid(),name:"Transport",planned:160},{id:uid(),name:"Fun",planned:120}],bills:[{id:uid(),name:"Rent",amount:1150,dueDay:1,paidMonth:cmm},{id:uid(),name:"Phone",amount:55,dueDay:12,paidMonth:""}],log:[{id:uid(),date:cd(dd-1),category:"Food",amount:38,note:"Groceries",nw:"need"},{id:uid(),date:cd(dd-3),category:"Fun",amount:42,note:"Movie",nw:"want"},{id:uid(),date:cd(dd-5),category:"Transport",amount:28,note:"Bus",nw:"need"}],debts:[{id:uid(),name:"Credit card",balance:2400,apr:24.9,minPayment:70}],assets:[{id:uid(),name:"Checking",amount:840},{id:uid(),name:"Savings",amount:670}],goals:[{id:uid(),name:"Emergency fund",target:1000,saved:250,targetDate:dk(150)}],subs:[],nwHistory:{},debtMethod:"snowball",extraDebt:150,premium:false,theme:"",onboarded:true}));
+  localStorage.setItem("steady.health.v1",JSON.stringify({habits:[{id:uid(),name:"Walk",days:[1,1,0,1,1,0,0]},{id:uid(),name:"Read",days:[0,1,1,1,0,0,1]},{id:uid(),name:"Stretch",days:[1,0,1,0,1,0,0]}],water:{goal:8,log:(function(){var o={};for(var i=0;i<7;i++)o[dk(-i)]=[8,6,8,7,5,8,4][i];return o;})()},sleep:[{id:uid(),date:dk(0),hours:7.5,q:4},{id:uid(),date:dk(-1),hours:6.5,q:3},{id:uid(),date:dk(-2),hours:8,q:5}],mood:[{id:uid(),date:dk(0),m:4,note:"Good"},{id:uid(),date:dk(-1),m:3,note:""},{id:uid(),date:dk(-2),m:5,note:""}],workouts:[{id:uid(),date:dk(0),type:"Walk",min:25},{id:uid(),date:dk(-2),type:"Gym",min:45}],weight:[{id:uid(),date:dk(-28),lbs:"190"},{id:uid(),date:dk(-14),lbs:"187"},{id:uid(),date:dk(0),lbs:"185"}],moodPick:3,bestStreak:0,__onboarded:true}));
+  localStorage.setItem("steady.study.v1",JSON.stringify({assign:[{id:uid(),title:"Essay draft",course:"English",due:dk(2),done:false},{id:uid(),title:"Problem set",course:"Calculus",due:dk(-1),done:false},{id:uid(),title:"Reading",course:"History",due:dk(-3),done:true}],courses:[{id:uid(),name:"Calculus I",grade:"A-",credits:4},{id:uid(),name:"English",grade:"B+",credits:3},{id:uid(),name:"Biology",grade:"A",credits:4}],exams:[{id:uid(),name:"Calc Midterm",date:dk(9)}],sched:[{id:uid(),day:"Mon",time:"9:00 AM",course:"Calculus I",room:"A210"}],sessions:[{id:uid(),date:dk(0),subj:"Calculus",min:45},{id:uid(),date:dk(-2),subj:"Biology",min:60}],__onboarded:true}));
+  localStorage.setItem("steady.work.v1",JSON.stringify({invoice:{from:"Jordan D.",to:"Acme Co.",num:"014",date:dk(0),due:"",tax:0,notes:"Due in 14 days",items:[{desc:"Website updates",qty:"6",rate:"45"}]},time:[{id:uid(),date:cd(dd-1),task:"Acme — build",hrs:"3",rate:"45"},{id:uid(),date:cd(dd-2),task:"Bloom — brand",hrs:"4",rate:"50"}],income:{goal:1500,entries:[{id:uid(),date:cd(dd-3),client:"Acme Co.",amount:"320"},{id:uid(),date:cd(dd-8),client:"Bloom Studio",amount:"450"}]},clients:[{id:uid(),name:"Acme Co.",contact:"jane@acme.com",notes:""},{id:uid(),name:"Bloom Studio",contact:"",notes:""}],projects:[{id:uid(),title:"Acme refresh",client:"Acme Co.",value:"1200",status:"Active",due:""},{id:uid(),title:"Bloom kit",client:"Bloom Studio",value:"800",status:"Paid",due:""}],expenses:[{id:uid(),date:cd(dd-5),cat:"Software",desc:"Design app",amount:"29"}],taxPct:25,__onboarded:true}));
+  localStorage.setItem("steady.home.v1",JSON.stringify({cleaning:[{id:uid(),task:"Vacuum",freq:"Weekly",lastDone:dk(-9)},{id:uid(),task:"Make bed",freq:"Daily",lastDone:dk(-1)},{id:uid(),task:"Bathrooms",freq:"Weekly",lastDone:dk(-3)}],maintenance:[{id:uid(),task:"HVAC filter",lastDone:dk(-80),intervalMo:3},{id:uid(),task:"Oil change",lastDone:dk(-150),intervalMo:6}],meals:{week:{Mon:"Pasta",Tue:"Tacos",Wed:"Stir fry",Thu:"Leftovers",Fri:"Pizza",Sat:"Grill",Sun:"Soup"},grocery:[{id:uid(),item:"Chicken",done:false},{id:uid(),item:"Rice",done:true}]},documents:[{id:uid(),name:"Lease",location:"Documents folder",expiry:dk(220)},{id:uid(),name:"Car insurance",location:"Glovebox",expiry:dk(40)}],__onboarded:true}));
+  }catch(e){}
+  location.reload();
+}
+S.el("seed-btn").onclick=function(){if(confirm("This loads demo data into all five apps (replacing anything already there). Continue?"))seedAll();};
 </script>
 </body>
 </html>

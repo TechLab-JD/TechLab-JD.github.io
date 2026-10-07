@@ -20,6 +20,8 @@
   <button class="stab" data-panel="sleep">Sleep</button>
   <button class="stab" data-panel="mood">Mood</button>
   <button class="stab" data-panel="workouts">Workouts</button>
+  <button class="stab" data-panel="weight">Weight</button>
+  <button class="stab" data-panel="trends">Trends</button>
   <button class="stab" data-panel="rewards">🏆 Rewards</button>
 </div></nav>
 <main class="wrap main">
@@ -83,6 +85,30 @@
     <div class="card"><h2>History</h2><div id="w-list"></div></div>
   </section>
 
+  <section class="panel" id="panel-weight">
+    <div class="grid2" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Current</div><div class="val" id="wt-cur">—</div></div>
+      <div class="stat"><div class="label">Change (~30d)</div><div class="val" id="wt-chg">—</div></div>
+    </div>
+    <div class="card"><h2>Log weight</h2><p class="sub">Track the trend, not the day-to-day noise.</p>
+      <div class="addform" style="grid-template-columns:140px 130px auto"><div class="field"><label>Date</label><input id="wt-date" type="date"></div><div class="field"><label>Weight (lbs)</label><input id="wt-lbs" type="number" step="0.1" inputmode="decimal"></div><button class="btn" id="wt-add">Add</button></div>
+    </div>
+    <div class="card"><h2>Trend</h2><div id="wt-chart"></div></div>
+    <div class="card"><h2>History</h2><div id="wt-list"></div></div>
+  </section>
+
+  <section class="panel" id="panel-trends">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Avg sleep (7d)</div><div class="val" id="th-sleep">—</div></div>
+      <div class="stat"><div class="label">Workout min (7d)</div><div class="val" id="th-work">0 min</div></div>
+      <div class="stat"><div class="label">Avg mood (7d)</div><div class="val" id="th-mood">—</div></div>
+    </div>
+    <div class="card"><h2>Sleep — last 7 nights</h2><div id="th-sleepchart"></div></div>
+    <div class="card"><h2>Mood — last 7 days</h2><div id="th-moodchart"></div></div>
+    <div class="card"><h2>Water — last 7 days</h2><p class="sub">Glasses per day</p><div id="th-water"></div></div>
+    <div class="card" id="th-insbox" style="display:none"><h2>💡 Insights</h2><div id="th-ins"></div></div>
+  </section>
+
   <section class="panel" id="panel-rewards">
     <div class="hero"><div class="lbl">🔥 Active streak</div><div class="big" id="rw-streak">0 days</div><div class="meta">consecutive days you tracked something</div>
       <div class="mini"><div>Best streak<b id="rw-best">0 days</b></div><div>Badges<b id="rw-count">0</b></div></div></div>
@@ -93,7 +119,7 @@
 <div id="toasts"></div>
 <script src="shared.js"></script>
 <script>
-var DEF={habits:[],water:{goal:8,log:{}},sleep:[],mood:[],workouts:[],moodPick:3,bestStreak:0};
+var DEF={habits:[],water:{goal:8,log:{}},sleep:[],mood:[],workouts:[],weight:[],moodPick:3,bestStreak:0};
 var db=Steady.load("health",DEF);
 var DOW=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
 function todayIdx(){return (new Date().getDay()+6)%7;}
@@ -185,6 +211,39 @@ function renderHome(){
   else hh.innerHTML=db.habits.map(function(h){var done=(h.days||[]).filter(Boolean).length;return '<div class="row"><span class="nm">'+h.name+'<div class="bar" style="max-width:220px"><span style="width:'+(done/7*100)+'%"></span></div></span><span class="amt">'+done+'/7</span></div>';}).join("");
 }
 
+/* weight */
+function renderWeight(){
+  if(!db.weight)db.weight=[];
+  var w=db.weight.slice().sort((a,b)=>a.date.localeCompare(b.date));
+  S.el("wt-cur").textContent=w.length?w[w.length-1].lbs+" lbs":"—";
+  var cur=w.length?Number(w[w.length-1].lbs):null,past=null;
+  for(var i=w.length-1;i>=0;i--){if((Date.now()-new Date(w[i].date+"T00:00:00"))/86400000>=25){past=Number(w[i].lbs);break;}}
+  var chg=S.el("wt-chg");
+  if(cur!==null&&past!==null){var dv=cur-past;chg.textContent=(dv>0?"+":"")+dv.toFixed(1)+" lbs";chg.className="val "+(dv<=0?"pos":"neg");}else chg.textContent="—";
+  S.el("wt-chart").innerHTML=S.area(w.slice(-14).map(x=>Number(x.lbs)),520,120,"#2fae5f");
+  var l=S.el("wt-list"),ws=db.weight.slice().sort((a,b)=>b.date.localeCompare(a.date));l.innerHTML=ws.length?"":'<div class="empty">No weigh-ins yet.</div>';
+  ws.slice(0,20).forEach(function(x){var r=document.createElement("div");r.className="row";r.innerHTML='<span class="nm">'+x.lbs+' lbs</span><span class="meta">'+new Date(x.date+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'</span>';var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.weight=db.weight.filter(y=>y.id!==x.id);S.save();renderWeight();};r.appendChild(del);l.appendChild(r);});
+}
+S.el("wt-add").onclick=function(){var d=S.val("wt-date"),v=S.val("wt-lbs");if(!d||!v)return;db.weight.push({id:S.uid(),date:d,lbs:v});S.save();S.clr("wt-lbs");renderWeight();S.toast("Logged",1);};
+
+/* trends */
+function renderTrends(){
+  var days=last7(),keys=days.map(d=>d.key);
+  var sl=days.map(d=>{var e=db.sleep.filter(x=>x.date===d.key);return e.length?Number(e[0].hours)||0:0;});
+  S.el("th-sleepchart").innerHTML=S.bars(days.map(d=>d.lbl),sl,520,110,"#2fae5f");
+  var md=days.map(d=>{var e=db.mood.filter(x=>x.date===d.key);return e.length?Number(e[0].m)||0:0;});
+  S.el("th-moodchart").innerHTML=S.bars(days.map(d=>d.lbl),md,520,110,"#2fae5f");
+  S.el("th-water").innerHTML=S.bars(days.map(d=>d.lbl),days.map(d=>db.water.log[d.key]||0),520,110,"#2fae5f");
+  var slnz=sl.filter(v=>v>0);S.el("th-sleep").textContent=slnz.length?(slnz.reduce((a,b)=>a+b,0)/slnz.length).toFixed(1)+" hr":"—";
+  S.el("th-work").textContent=db.workouts.filter(x=>keys.indexOf(x.date)>=0).reduce((a,b)=>a+(Number(b.min)||0),0)+" min";
+  var mdnz=md.filter(v=>v>0),faces=["—","😞","😕","😐","🙂","😄"];S.el("th-mood").textContent=mdnz.length?faces[Math.round(mdnz.reduce((a,b)=>a+b,0)/mdnz.length)]:"—";
+  var ins=[],wh=keys.filter(k=>(db.water.log[k]||0)>=(db.water.goal||8)).length;
+  if(Object.keys(db.water.log).length)ins.push("You hit your water goal <b>"+wh+"</b> of the last 7 days.");
+  if(slnz.length){var av=slnz.reduce((a,b)=>a+b,0)/slnz.length;ins.push(av<7?"Averaging <b>"+av.toFixed(1)+"h</b> of sleep — a bit under the 7–9h range.":"Solid sleep: averaging <b>"+av.toFixed(1)+"h</b> a night.");}
+  var w7=db.workouts.filter(x=>keys.indexOf(x.date)>=0).length;if(w7)ins.push("<b>"+w7+"</b> workout"+(w7===1?"":"s")+" this week — keep the body moving.");
+  var box=S.el("th-insbox");if(ins.length){box.style.display="block";S.el("th-ins").innerHTML=ins.map(t=>'<div class="row"><span class="nm" style="font-weight:400;font-size:13.5px">💡 '+t+'</span></div>').join("");}else box.style.display="none";
+}
+
 /* rewards */
 function activeDay(k){return (db.water.log[k]||0)>0||db.workouts.some(x=>x.date===k)||db.mood.some(x=>x.date===k)||db.sleep.some(x=>x.date===k);}
 var BADGES=[
@@ -213,9 +272,10 @@ function SAMPLE(){var k=last7();var wv=[4,8,6,8,7,8,5],wl={};k.forEach((d,i)=>wl
     sleep:[{id:S.uid(),date:k[6].key,hours:7.5,q:4},{id:S.uid(),date:k[5].key,hours:6.5,q:3},{id:S.uid(),date:k[4].key,hours:8,q:5},{id:S.uid(),date:k[3].key,hours:7,q:4},{id:S.uid(),date:k[2].key,hours:6,q:2}],
     mood:[{id:S.uid(),date:k[6].key,m:4,note:"Good day"},{id:S.uid(),date:k[5].key,m:3,note:""},{id:S.uid(),date:k[4].key,m:5,note:"Great workout"},{id:S.uid(),date:k[3].key,m:4,note:""},{id:S.uid(),date:k[1].key,m:3,note:""}],
     workouts:[{id:S.uid(),date:k[6].key,type:"Walk",min:25},{id:S.uid(),date:k[4].key,type:"Gym",min:45},{id:S.uid(),date:k[2].key,type:"Yoga",min:30}],
+    weight:(function(){var a=[],base=185;for(var i=0;i<8;i++){var x=new Date();x.setDate(x.getDate()-i*4);a.push({id:S.uid(),date:x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0"),lbs:(base+i*0.8).toFixed(1)});}return a;})(),
     moodPick:3,bestStreak:0};}
-function renderAll(){renderHabits();renderWater();renderSleep();renderMood();renderWorkouts();renderHome();renderRewards();}
-S.el("sl-date").value=S.todayISO();S.el("w-date").value=S.todayISO();
+function renderAll(){renderHabits();renderWater();renderSleep();renderMood();renderWorkouts();renderWeight();renderTrends();renderHome();renderRewards();}
+S.el("sl-date").value=S.todayISO();S.el("w-date").value=S.todayISO();S.el("wt-date").value=S.todayISO();
 if(db.moodPick){document.querySelectorAll("#mood-pick button").forEach(b=>b.classList.toggle("on",Number(b.dataset.m)===db.moodPick));}
 S.initShell();
 S.initAccount({name:"steady-health",defaults:DEF,sample:SAMPLE,render:renderAll});

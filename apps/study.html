@@ -19,6 +19,8 @@
   <button class="stab" data-panel="gpa">GPA</button>
   <button class="stab" data-panel="exams">Exams</button>
   <button class="stab" data-panel="sched">Schedule</button>
+  <button class="stab" data-panel="studylog">Study Log</button>
+  <button class="stab" data-panel="trends">Trends</button>
   <button class="stab" data-panel="rewards">🏆 Rewards</button>
 </div></nav>
 <main class="wrap main">
@@ -63,6 +65,29 @@
     </div>
   </section>
 
+  <section class="panel" id="panel-studylog">
+    <div class="grid2" style="margin-bottom:16px">
+      <div class="stat"><div class="label">This week</div><div class="val" id="slg-week">0 min</div></div>
+      <div class="stat"><div class="label">Sessions</div><div class="val" id="slg-count">0</div></div>
+    </div>
+    <div class="card"><h2>Log a study session</h2><p class="sub">What you studied and for how long — seeing the hours adds up is motivating.</p>
+      <div class="addform" style="grid-template-columns:120px 1fr 90px auto"><div class="field"><label>Date</label><input id="ss-date" type="date"></div><div class="field"><label>Subject</label><input id="ss-subj" placeholder="Calculus, reading…"></div><div class="field"><label>Minutes</label><input id="ss-min" type="number" inputmode="numeric" placeholder="45"></div><button class="btn" id="ss-add">Add</button></div>
+    </div>
+    <div class="card"><h2>This week</h2><div id="slg-chart"></div></div>
+    <div class="card"><h2>Recent</h2><div id="slg-list"></div></div>
+  </section>
+
+  <section class="panel" id="panel-trends">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Completed</div><div class="val" id="ts-done">0</div></div>
+      <div class="stat"><div class="label">GPA</div><div class="val" id="ts-gpa">—</div></div>
+      <div class="stat"><div class="label">Study (7d)</div><div class="val" id="ts-study">0 min</div></div>
+    </div>
+    <div class="card"><h2>Study time — last 7 days</h2><div id="ts-studychart"></div></div>
+    <div class="card"><h2>Grade distribution</h2><p class="sub">Your course grades</p><div id="ts-grades"></div></div>
+    <div class="card"><h2>Upcoming workload</h2><p class="sub">Assignments due in the next 2 weeks</p><div id="ts-workload"></div></div>
+  </section>
+
   <section class="panel" id="panel-rewards">
     <div class="hero"><div class="lbl">Progress</div><div class="big" id="rw-done">0</div><div class="meta">assignments completed</div>
       <div class="mini"><div>GPA<b id="rw-gpa">—</b></div><div>Badges<b id="rw-count">0</b></div></div></div>
@@ -73,7 +98,7 @@
 <div id="toasts"></div>
 <script src="shared.js"></script>
 <script>
-var DEF={assign:[],courses:[],exams:[],sched:[]};
+var DEF={assign:[],courses:[],exams:[],sched:[],sessions:[]};
 var db=Steady.load("study",DEF);var S=Steady;
 var GP={"A":4.0,"A-":3.7,"B+":3.3,"B":3.0,"B-":2.7,"C+":2.3,"C":2.0,"C-":1.7,"D+":1.3,"D":1.0,"F":0.0};
 function daysTo(d){var t=new Date();t.setHours(0,0,0,0);var x=new Date(d+"T00:00:00");return Math.round((x-t)/86400000);}
@@ -136,6 +161,32 @@ function renderHome(){
   he.innerHTML=ex.length?ex.slice(0,5).map(function(x){var dd=daysTo(x.date);return '<div class="row"><span class="nm">'+x.name+'</span><span class="pill '+(dd<=7?"warn":"good")+'">'+(dd===0?"today":dd+" days")+'</span></div>';}).join(""):'<div class="empty">No exams added.</div>';
 }
 
+/* study log */
+function renderStudyLog(){
+  if(!db.sessions)db.sessions=[];
+  var days=S.last7(),keys=days.map(d=>d.key),wk=db.sessions.filter(e=>keys.indexOf(e.date)>=0);
+  S.el("slg-week").textContent=wk.reduce((a,b)=>a+(Number(b.min)||0),0)+" min";
+  S.el("slg-count").textContent=db.sessions.length;
+  S.el("slg-chart").innerHTML=S.bars(days.map(d=>d.lbl),days.map(d=>db.sessions.filter(e=>e.date===d.key).reduce((a,b)=>a+(Number(b.min)||0),0)),520,110,"#4a90e2");
+  var s=db.sessions.slice().sort((a,b)=>b.date.localeCompare(a.date)),l=S.el("slg-list");l.innerHTML=s.length?"":'<div class="empty">No sessions logged.</div>';
+  s.slice(0,20).forEach(function(e){var r=document.createElement("div");r.className="row";r.innerHTML='<span class="nm">'+e.subj+' <span class="meta">'+e.min+' min · '+new Date(e.date+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'</span></span>';var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.sessions=db.sessions.filter(x=>x.id!==e.id);S.save();renderStudyLog();renderTrends();};r.appendChild(del);l.appendChild(r);});
+}
+S.el("ss-add").onclick=function(){var d=S.val("ss-date"),s=S.val("ss-subj");if(!d||!s)return;db.sessions.push({id:S.uid(),date:d,subj:s,min:S.val("ss-min")});S.save();S.clr("ss-subj","ss-min");renderStudyLog();renderTrends();S.toast("Logged",1);};
+
+/* trends */
+function renderTrends(){
+  var g=gpa();S.el("ts-gpa").textContent=g.gpa!==null?g.gpa.toFixed(2):"—";
+  S.el("ts-done").textContent=db.assign.filter(a=>a.done).length;
+  var days=S.last7(),keys=days.map(d=>d.key),sess=db.sessions||[];
+  S.el("ts-study").textContent=sess.filter(e=>keys.indexOf(e.date)>=0).reduce((a,b)=>a+(Number(b.min)||0),0)+" min";
+  S.el("ts-studychart").innerHTML=S.bars(days.map(d=>d.lbl),days.map(d=>sess.filter(e=>e.date===d.key).reduce((a,b)=>a+(Number(b.min)||0),0)),520,110,"#4a90e2");
+  var gc={};db.courses.forEach(c=>{if(c.grade)gc[c.grade]=(gc[c.grade]||0)+1;});
+  var gorder=["A","A-","B+","B","B-","C+","C","C-","D+","D","F"],gd=S.el("ts-grades");
+  gd.innerHTML=Object.keys(gc).length?gorder.filter(x=>gc[x]).map(x=>'<div class="row"><span class="nm">'+x+'</span><div class="bar" style="max-width:200px"><span style="width:'+(gc[x]/db.courses.length*100)+'%;background:#4a90e2"></span></div><span class="amt">'+gc[x]+'</span></div>').join(""):'<div class="empty">Add courses on the GPA tab.</div>';
+  var up=db.assign.filter(a=>!a.done&&a.due&&daysTo(a.due)>=0&&daysTo(a.due)<=14).sort((a,b)=>a.due.localeCompare(b.due)),wl=S.el("ts-workload");
+  wl.innerHTML=up.length?up.map(function(a){var dd=daysTo(a.due);return '<div class="row"><span class="nm">'+a.title+'<div class="meta">'+(a.course||"")+'</div></span><span class="pill '+(dd<=3?"warn":"good")+'">'+(dd===0?"today":dd+"d")+'</span></div>';}).join(""):'<div class="empty">Nothing due in the next two weeks. 🎉</div>';
+}
+
 /* rewards */
 var BADGES=[
  {id:"first",ic:"📘",title:"Getting Started",desc:"Added your first item",cond:c=>c.items>0},
@@ -158,9 +209,10 @@ function SAMPLE(){var t=new Date();function d(off){var x=new Date(t.getFullYear(
   return {assign:[{id:S.uid(),title:"Essay draft",course:"English",due:d(2),done:false},{id:S.uid(),title:"Problem set 4",course:"Calculus",due:d(-1),done:false},{id:S.uid(),title:"Lab report",course:"Biology",due:d(5),done:false},{id:S.uid(),title:"Reading response",course:"History",due:d(-3),done:true},{id:S.uid(),title:"Quiz prep",course:"Calculus",due:d(1),done:true}],
     courses:[{id:S.uid(),name:"Calculus I",grade:"A-",credits:4},{id:S.uid(),name:"English Comp",grade:"B+",credits:3},{id:S.uid(),name:"Biology",grade:"A",credits:4},{id:S.uid(),name:"History",grade:"B",credits:3}],
     exams:[{id:S.uid(),name:"Calculus Midterm",date:d(9)},{id:S.uid(),name:"Biology Quiz",date:d(4)}],
-    sched:[{id:S.uid(),day:"Mon",time:"9:00 AM",course:"Calculus I",room:"Bldg A 210"},{id:S.uid(),day:"Mon",time:"11:00 AM",course:"English Comp",room:"Bldg B 105"},{id:S.uid(),day:"Wed",time:"9:00 AM",course:"Calculus I",room:"Bldg A 210"},{id:S.uid(),day:"Tue",time:"1:00 PM",course:"Biology",room:"Sci 300"}]};}
-function renderAll(){renderAssign();renderGPA();renderExams();renderSched();renderHome();renderRewards();}
-S.el("a-due").value=S.todayISO();
+    sched:[{id:S.uid(),day:"Mon",time:"9:00 AM",course:"Calculus I",room:"Bldg A 210"},{id:S.uid(),day:"Mon",time:"11:00 AM",course:"English Comp",room:"Bldg B 105"},{id:S.uid(),day:"Wed",time:"9:00 AM",course:"Calculus I",room:"Bldg A 210"},{id:S.uid(),day:"Tue",time:"1:00 PM",course:"Biology",room:"Sci 300"}],
+    sessions:(function(){var a=[],k=S.last7(),v=[45,0,60,30,0,75,50],sb=["Calculus","","Biology","English","","History","Calculus"];k.forEach(function(d,i){if(v[i])a.push({id:S.uid(),date:d.key,subj:sb[i],min:v[i]});});return a;})()};}
+function renderAll(){renderAssign();renderGPA();renderExams();renderSched();renderStudyLog();renderTrends();renderHome();renderRewards();}
+S.el("a-due").value=S.todayISO();S.el("ss-date").value=S.todayISO();
 S.initShell();
 S.initAccount({name:"steady-study",defaults:DEF,sample:SAMPLE,render:renderAll});
 renderAll();

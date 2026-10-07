@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steady Home</title>
+<meta name="description" content="Steady Home — cleaning schedules, home & car maintenance, meal planning and an important-documents index. Private; your data stays on your device.">
+<link rel="stylesheet" href="shared.css">
+<style>:root{--accent:#d9872b;--accent-2:#e8a33c;--accent-dark:#b4701c}
+  .mealgrid{display:grid;grid-template-columns:70px 1fr;gap:8px;align-items:center}
+  .mealgrid .d{font:700 13px var(--display);color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Home</b></a>
+  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
+</div></header>
+<nav class="appnav"><div class="wrap">
+  <button class="stab active" data-panel="home">Overview</button>
+  <button class="stab" data-panel="cleaning">Cleaning</button>
+  <button class="stab" data-panel="maint">Maintenance</button>
+  <button class="stab" data-panel="meals">Meals</button>
+  <button class="stab" data-panel="docs">Documents</button>
+  <button class="stab" data-panel="rewards">🏆 Rewards</button>
+</div></nav>
+<main class="wrap main">
+  <section class="panel active" id="panel-home">
+    <div class="hero"><div class="lbl" id="h-date">Home base</div><div class="big" id="h-due">0</div><div class="meta">things that need attention</div>
+      <div class="mini"><div>Cleaning due<b id="h-clean">0</b></div><div>Maintenance due<b id="h-maint">0</b></div><div>Meals planned<b id="h-meals">0/7</b></div><div>Docs<b id="h-docs">0</b></div></div></div>
+    <div class="grid2">
+      <div class="card"><h2>Needs attention</h2><p class="sub">Cleaning and maintenance that's due now</p><div id="home-attn"></div></div>
+      <div class="card"><h2>Grocery list</h2><p class="sub">From your meal plan</p><div id="home-grocery"></div></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-cleaning">
+    <div class="card"><h2>Cleaning schedule</h2><p class="sub">Set it and forget it — tap "Done" and the task resets on its own schedule.</p>
+      <div id="cl-list"></div>
+      <div class="addform" style="grid-template-columns:1fr 130px auto;margin-top:12px"><div class="field"><label>Task</label><input id="cl-task" placeholder="Vacuum, laundry, bathrooms…"></div><div class="field"><label>How often</label><select id="cl-freq"><option>Daily</option><option selected>Weekly</option><option>Monthly</option></select></div><button class="btn" id="cl-add">Add</button></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-maint">
+    <div class="card"><h2>Home &amp; car maintenance</h2><p class="sub">Log the big stuff so you don't forget — it tells you when each is due again.</p>
+      <div id="mt-list"></div>
+      <div class="addform" style="grid-template-columns:1fr 130px 90px auto;margin-top:12px"><div class="field"><label>Item / task</label><input id="mt-task" placeholder="HVAC filter, oil change…"></div><div class="field"><label>Last done</label><input id="mt-date" type="date"></div><div class="field"><label>Every (months)</label><input id="mt-int" type="number" inputmode="numeric" placeholder="3"></div><button class="btn" id="mt-add">Add</button></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-meals">
+    <div class="card"><h2>This week's meals</h2><p class="sub">Plan dinners — then build the grocery list below.</p>
+      <div class="mealgrid" id="ml-week"></div>
+    </div>
+    <div class="card"><h2>Grocery list</h2><p class="sub">Tap to check off as you shop.</p>
+      <div class="addform" style="grid-template-columns:1fr auto"><input id="gr-item" placeholder="Add an item"><button class="btn" id="gr-add">Add</button></div>
+      <div id="gr-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-docs">
+    <div class="card"><h2>Important documents</h2><p class="sub">Where things are and when they expire — never scramble again. (Store the <b>location</b>, not the document itself.)</p>
+      <div class="addform" style="grid-template-columns:1fr 1fr 140px auto"><div class="field"><label>Document</label><input id="dc-name" placeholder="Passport, lease, insurance…"></div><div class="field"><label>Where it is</label><input id="dc-loc" placeholder="Folder, drawer, app…"></div><div class="field"><label>Expires (optional)</label><input id="dc-exp" type="date"></div><button class="btn" id="dc-add">Add</button></div>
+      <div id="dc-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-rewards">
+    <div class="hero"><div class="lbl">On top of it</div><div class="big" id="rw-ontrack">0</div><div class="meta">cleaning tasks up to date</div>
+      <div class="mini"><div>Badges<b id="rw-count">0</b></div></div></div>
+    <div class="card"><h2>Achievements</h2><p class="sub">Milestones unlock as you keep the home steady.</p><div class="badgegrid" id="rw-badges"></div></div>
+  </section>
+</main>
+<footer class="ft">Steady Home · a Steady Systems app · your data stays on this device</footer>
+<div id="toasts"></div>
+<script src="shared.js"></script>
+<script>
+var DEF={cleaning:[],maintenance:[],meals:{week:{Mon:"",Tue:"",Wed:"",Thu:"",Fri:"",Sat:"",Sun:""},grocery:[]},documents:[]};
+var db=Steady.load("home",DEF);var S=Steady;
+var DAYS=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+function daysSince(d){if(!d)return 1e9;return (Date.now()-new Date(d+"T00:00:00"))/86400000;}
+function daysTo(d){var t=new Date();t.setHours(0,0,0,0);return Math.round((new Date(d+"T00:00:00")-t)/86400000);}
+function addMonths(d,m){var x=new Date(d+"T00:00:00");x.setMonth(x.getMonth()+m);return x;}
+
+/* cleaning */
+function cleanDue(c){var th=c.freq==="Daily"?1:c.freq==="Weekly"?7:30;return daysSince(c.lastDone)>=th;}
+function renderCleaning(){
+  var l=S.el("cl-list");l.innerHTML=db.cleaning.length?"":'<div class="empty">No cleaning tasks yet.</div>';
+  db.cleaning.forEach(function(c){var due=cleanDue(c);var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+c.task+'<div class="meta">'+c.freq+(c.lastDone?" · last "+new Date(c.lastDone+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"}):" · never")+'</div></div>';
+    var pill=document.createElement("span");pill.className="pill "+(due?"warn":"good");pill.textContent=due?"due":"done";
+    var btn=document.createElement("button");btn.className="btn sm"+(due?"":" ghost");btn.textContent="Done";btn.style.marginLeft="6px";btn.onclick=function(){c.lastDone=S.todayISO();S.save();renderCleaning();renderHome();renderRewards();S.toast("Nice — "+c.task+" done",1);};
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.cleaning=db.cleaning.filter(x=>x.id!==c.id);S.save();renderCleaning();renderHome();renderRewards();};
+    r.appendChild(left);r.appendChild(pill);r.appendChild(btn);r.appendChild(del);l.appendChild(r);});
+}
+S.el("cl-add").onclick=function(){var t=S.val("cl-task");if(!t)return;db.cleaning.push({id:S.uid(),task:t,freq:S.val("cl-freq"),lastDone:""});S.save();S.clr("cl-task");renderCleaning();renderHome();renderRewards();S.toast("Added",1);};
+
+/* maintenance */
+function mtDue(m){if(!m.lastDone||!m.intervalMo)return null;return addMonths(m.lastDone,Number(m.intervalMo));}
+function renderMaint(){
+  var l=S.el("mt-list");l.innerHTML=db.maintenance.length?"":'<div class="empty">No maintenance items yet.</div>';
+  db.maintenance.slice().sort(function(a,b){var da=mtDue(a),dbb=mtDue(b);return (da?da:0)-(dbb?dbb:0);}).forEach(function(m){
+    var nd=mtDue(m),dd=nd?Math.round((nd-new Date().setHours(0,0,0,0))/86400000):null;
+    var cls=dd===null?"":dd<0?"bad":dd<=14?"warn":"good",txt=dd===null?"set a date":dd<0?"overdue":dd===0?"today":"in "+dd+"d";
+    var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+m.task+'<div class="meta">every '+m.intervalMo+' mo'+(nd?" · next "+nd.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}):"")+'</div></div>';
+    var pill=document.createElement("span");pill.className="pill "+cls;pill.textContent=txt;
+    var btn=document.createElement("button");btn.className="btn sm ghost";btn.textContent="Done today";btn.style.marginLeft="6px";btn.onclick=function(){m.lastDone=S.todayISO();S.save();renderMaint();renderHome();S.toast("Logged",1);};
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.maintenance=db.maintenance.filter(x=>x.id!==m.id);S.save();renderMaint();renderHome();};
+    r.appendChild(left);r.appendChild(pill);r.appendChild(btn);r.appendChild(del);l.appendChild(r);});
+}
+S.el("mt-add").onclick=function(){var t=S.val("mt-task");if(!t)return;db.maintenance.push({id:S.uid(),task:t,lastDone:S.val("mt-date"),intervalMo:S.val("mt-int")||3});S.save();S.clr("mt-task","mt-date","mt-int");renderMaint();renderHome();S.toast("Added",1);};
+
+/* meals */
+function renderMeals(){
+  var g=S.el("ml-week");g.innerHTML="";
+  DAYS.forEach(function(d){var wrap=document.createElement("div");wrap.style.display="contents";
+    var lbl=document.createElement("div");lbl.className="d";lbl.textContent=d;
+    var inp=document.createElement("input");inp.value=db.meals.week[d]||"";inp.placeholder="Dinner…";inp.oninput=function(){db.meals.week[d]=this.value;S.save();renderHome();};
+    g.appendChild(lbl);g.appendChild(inp);});
+  var gl=S.el("gr-list");gl.innerHTML=db.meals.grocery.length?"":'<div class="empty">No grocery items yet.</div>';
+  db.meals.grocery.forEach(function(it){var r=document.createElement("div");r.className="row";
+    var box=document.createElement("div");box.className="boxcell";box.style.cssText="width:22px;height:22px;aspect-ratio:auto;flex:none";if(it.done){box.classList.add("on");box.textContent="✓";}box.onclick=function(){it.done=!it.done;S.save();renderMeals();};
+    var nm=document.createElement("span");nm.className="nm";nm.textContent=it.item;nm.style.cssText=it.done?"text-decoration:line-through;opacity:.6":"";
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.meals.grocery=db.meals.grocery.filter(x=>x.id!==it.id);S.save();renderMeals();renderHome();};
+    r.appendChild(box);r.appendChild(nm);r.appendChild(del);gl.appendChild(r);});
+}
+S.el("gr-add").onclick=function(){var i=S.val("gr-item");if(!i)return;db.meals.grocery.push({id:S.uid(),item:i,done:false});S.save();S.clr("gr-item");renderMeals();renderHome();S.toast("Added",1);};
+
+/* documents */
+function renderDocs(){
+  var l=S.el("dc-list");var d=db.documents.slice().sort((a,b)=>(a.expiry||"9").localeCompare(b.expiry||"9"));
+  l.innerHTML=d.length?"":'<div class="empty">No documents yet.</div>';
+  d.forEach(function(x){var dd=x.expiry?daysTo(x.expiry):null,cls=dd===null?"":dd<0?"bad":dd<=60?"warn":"good",txt=dd===null?"":dd<0?"expired":dd<=60?"expires in "+dd+"d":"valid";
+    var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+x.name+'<div class="meta">'+(x.location||"")+(x.expiry?" · expires "+new Date(x.expiry+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}):"")+'</div></div>';
+    if(txt){var pill=document.createElement("span");pill.className="pill "+cls;pill.textContent=txt;r.appendChild(left);r.appendChild(pill);}else r.appendChild(left);
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.documents=db.documents.filter(y=>y.id!==x.id);S.save();renderDocs();renderHome();};
+    r.appendChild(del);l.appendChild(r);});
+}
+S.el("dc-add").onclick=function(){var n=S.val("dc-name");if(!n)return;db.documents.push({id:S.uid(),name:n,location:S.val("dc-loc"),expiry:S.val("dc-exp")});S.save();S.clr("dc-name","dc-loc","dc-exp");renderDocs();renderHome();S.toast("Added",1);};
+
+/* rewards */
+var BADGES=[
+ {id:"first",ic:"🏠",title:"Settled In",desc:"Added your first task",cond:c=>c.items>0},
+ {id:"sched",ic:"🧹",title:"On a Schedule",desc:"3+ cleaning tasks",cond:c=>c.clean>=3},
+ {id:"spotless",ic:"✨",title:"Spotless",desc:"Everything up to date",cond:c=>c.clean>0&&c.due===0},
+ {id:"handy",ic:"🔧",title:"Handy",desc:"Tracking maintenance",cond:c=>c.maint>0},
+ {id:"chef",ic:"🍽️",title:"Meal Planner",desc:"Planned a full week",cond:c=>c.meals>=7},
+ {id:"stocked",ic:"🛒",title:"Stocked Up",desc:"Built a grocery list",cond:c=>c.grocery>0},
+ {id:"filed",ic:"🗄️",title:"Organized",desc:"Logged 5 documents",cond:c=>c.docs>=5},
+ {id:"ready",ic:"🛡️",title:"Prepared",desc:"No expired documents",cond:c=>c.docs>0&&c.expired===0}
+];
+function renderRewards(){
+  var onTrack=db.cleaning.filter(c=>!cleanDue(c)).length;S.el("rw-ontrack").textContent=onTrack;
+  var ctx={items:db.cleaning.length||db.maintenance.length||db.documents.length,clean:db.cleaning.length,
+    due:db.cleaning.filter(cleanDue).length,maint:db.maintenance.length,
+    meals:DAYS.filter(d=>db.meals.week[d]).length,grocery:db.meals.grocery.length,
+    docs:db.documents.length,expired:db.documents.filter(x=>x.expiry&&daysTo(x.expiry)<0).length};
+  S.el("rw-count").textContent=S.renderBadges(S.el("rw-badges"),BADGES,ctx);
+}
+
+/* overview */
+function renderHome(){
+  S.el("h-date").textContent=new Date().toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"});
+  var clDue=db.cleaning.filter(cleanDue).length;
+  var mtDueN=db.maintenance.filter(m=>{var nd=mtDue(m);return nd&&nd<=new Date();}).length;
+  var docsExp=db.documents.filter(x=>x.expiry&&daysTo(x.expiry)<0).length;
+  S.el("h-due").textContent=clDue+mtDueN+docsExp;
+  S.el("h-clean").textContent=clDue;S.el("h-maint").textContent=mtDueN;
+  S.el("h-meals").textContent=DAYS.filter(d=>db.meals.week[d]).length+"/7";S.el("h-docs").textContent=db.documents.length;
+  var attn=S.el("home-attn"),items=[];
+  db.cleaning.filter(cleanDue).forEach(c=>items.push(["🧹",c.task,c.freq]));
+  db.maintenance.forEach(function(m){var nd=mtDue(m);if(nd&&nd<=new Date())items.push(["🔧",m.task,"maintenance due"]);});
+  db.documents.filter(x=>x.expiry&&daysTo(x.expiry)<0).forEach(x=>items.push(["📄",x.name,"expired"]));
+  attn.innerHTML=items.length?items.slice(0,8).map(i=>'<div class="row"><span class="nm">'+i[0]+' '+i[1]+'</span><span class="pill warn">'+i[2]+'</span></div>').join(""):'<div class="empty">All caught up — nice. ✨</div>';
+  var gr=S.el("home-grocery"),need=db.meals.grocery.filter(g=>!g.done);
+  gr.innerHTML=db.meals.grocery.length?(need.length?need.slice(0,8).map(g=>'<div class="row"><span class="nm">'+g.item+'</span></div>').join(""):'<div class="empty">Everything checked off. 🛒</div>'):'<div class="empty">Add meals &amp; a grocery list on the Meals tab.</div>';
+}
+
+function renderAll(){renderCleaning();renderMaint();renderMeals();renderDocs();renderRewards();renderHome();}
+function SAMPLE(){var t=new Date();function iso(off){var x=new Date(t.getFullYear(),t.getMonth(),t.getDate()+off);return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0");}
+  return {cleaning:[{id:S.uid(),task:"Vacuum & floors",freq:"Weekly",lastDone:iso(-9)},{id:S.uid(),task:"Kitchen deep clean",freq:"Weekly",lastDone:iso(-2)},{id:S.uid(),task:"Make the bed",freq:"Daily",lastDone:iso(-1)},{id:S.uid(),task:"Bathrooms",freq:"Weekly",lastDone:iso(-3)},{id:S.uid(),task:"Change sheets",freq:"Monthly",lastDone:iso(-40)}],
+    maintenance:[{id:S.uid(),task:"HVAC filter",lastDone:iso(-80),intervalMo:3},{id:S.uid(),task:"Car oil change",lastDone:iso(-150),intervalMo:6},{id:S.uid(),task:"Smoke detector batteries",lastDone:iso(-200),intervalMo:12}],
+    meals:{week:{Mon:"Pasta & salad",Tue:"Tacos",Wed:"Stir fry",Thu:"Leftovers",Fri:"Pizza night",Sat:"Grill out",Sun:"Soup & bread"},grocery:[{id:S.uid(),item:"Chicken",done:false},{id:S.uid(),item:"Rice",done:true},{id:S.uid(),item:"Veggies",done:false},{id:S.uid(),item:"Tortillas",done:false}]},
+    documents:[{id:S.uid(),name:"Lease",location:"Desktop folder / Documents",expiry:iso(220)},{id:S.uid(),name:"Car insurance",location:"Glovebox + email",expiry:iso(40)},{id:S.uid(),name:"ID / License",location:"Wallet",expiry:iso(600)},{id:S.uid(),name:"Passport",location:"Safe",expiry:iso(1200)},{id:S.uid(),name:"Birth certificate",location:"Safe",expiry:""}]};}
+S.el("mt-date").value=S.todayISO();
+S.initShell();
+S.initAccount({name:"steady-home",defaults:DEF,sample:SAMPLE,render:renderAll});
+renderAll();
+S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Home</h2><p>Cleaning, maintenance, meals and important documents — one calm place to run your home.</p></div><div class="feat"><div class="fi">🧹</div><div><b>Nothing slips</b><p>Tasks reset on their own schedule and tell you what\'s due.</p></div></div><div class="feat"><div class="fi">🗄️</div><div><b>Always prepared</b><p>Know where every document is and when it expires.</p></div></div>',sample:SAMPLE,render:renderAll});
+</script>
+</body>
+</html>
