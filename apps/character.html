@@ -56,7 +56,7 @@
 var S=Steady;S.initShell();
 var prof=S.loadProfile();
 var mode="customize",cat="Hair";
-var CATS=["Skin","Hair","Hair color","Outfit","Outfit color","Hat","Glasses","Background"];
+var CATS=["Body","Skin","Hair","Hair color","Outfit","Outfit color","Hat","Glasses","Background"];
 function stats(){return S.suiteStats();}
 function coins(){return Math.max(0,stats().coinsEarned-prof.spent);}
 function itemById(id){for(var i=0;i<S.AVATAR_ITEMS.length;i++)if(S.AVATAR_ITEMS[i].id===id)return S.AVATAR_ITEMS[i];return null;}
