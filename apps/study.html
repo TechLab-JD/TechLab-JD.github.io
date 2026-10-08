@@ -416,7 +416,7 @@ function renderAll(){renderAssign();renderGPA();renderExams();renderSched();rend
 S.el("a-due").value=S.todayISO();S.el("ss-date").value=S.todayISO();
 S.initShell();
 S.initAccount({name:"steady-study",defaults:DEF,sample:SAMPLE,render:renderAll});
-S.initPremium({title:"Steady Study Premium",price:"1",desc:"Just $1/mo for this section — smarter study tools.",veil:"Unlock the auto-built study planner and your performance trends.",
+S.initPremium({title:"Steady Study Premium",price:"1.25",desc:"Just $1.25/mo for this section — smarter study tools.",veil:"Unlock the auto-built study planner and your performance trends.",
   features:["🎯 Grade Planner — what you need on the final","🧠 Quiz mode — test yourself on any deck, scored","⏳ Focus timer — Pomodoro that auto-logs sessions","🗓️ Smart Planner — a 7-day plan from your deadlines","📈 Trends — study time, grades & workload"],render:renderAll});
 renderAll();
 S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Study</h2><p>Assignments, GPA, exam countdowns and your class schedule — private, on your device.</p></div><div class="feat"><div class="fi">🎯</div><div><b>Stay ahead</b><p>Due-date flags and exam countdowns keep you on track.</p></div></div><div class="feat"><div class="fi">🎓</div><div><b>Watch your GPA</b><p>Add courses and see it update live.</p></div></div>',sample:SAMPLE,render:renderAll});

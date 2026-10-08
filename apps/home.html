@@ -371,7 +371,7 @@ function SAMPLE(){var t=new Date();function iso(off){var x=new Date(t.getFullYea
 S.el("mt-date").value=S.todayISO();
 S.initShell();
 S.initAccount({name:"steady-home",defaults:DEF,sample:SAMPLE,render:renderAll});
-S.initPremium({title:"Steady Home Premium",price:"1",desc:"Just $1/mo for this section — tools to run your home.",veil:"Unlock the printable Home Binder — documents, inventory & maintenance in one PDF.",
+S.initPremium({title:"Steady Home Premium",price:"1.25",desc:"Just $1.25/mo for this section — tools to run your home.",veil:"Unlock the printable Home Binder — documents, inventory & maintenance in one PDF.",
   features:["📇 Contacts — plumber, landlord & emergency numbers (one-tap call)","🍂 Seasonal checklists — stay ahead of home upkeep","🛠️ Home Projects — track repairs with budgets","📘 Home Binder — one printable sheet of everything","📦 Inventory ready for insurance"],render:renderAll});
 renderAll();
 S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Home</h2><p>Cleaning, maintenance, meals and important documents — one calm place to run your home.</p></div><div class="feat"><div class="fi">🧹</div><div><b>Nothing slips</b><p>Tasks reset on their own schedule and tell you what\'s due.</p></div></div><div class="feat"><div class="fi">🗄️</div><div><b>Always prepared</b><p>Know where every document is and when it expires.</p></div></div>',sample:SAMPLE,render:renderAll});

@@ -580,7 +580,7 @@
   <div class="upsell" style="padding:20px;margin-bottom:16px">
     <h2 style="font-size:18px" id="prem-title">Steady Money Premium</h2>
     <p style="margin-bottom:8px" id="prem-desc">Unlock Debt Payoff, Savings Goals, Net Worth, Subscriptions, trends & backup.</p>
-    <div class="price" style="font-size:26px">$1<small>/month</small></div>
+    <div class="price" style="font-size:26px">$1.25<small>/month</small></div>
     <div class="keyrow"><input id="lic-key" placeholder="License key"><button class="btn" id="lic-verify">Unlock</button></div>
     <div class="note" id="lic-status" style="color:rgba(255,255,255,.8)"></div>
     <button class="btn ghost block" id="get-premium" style="margin-top:12px;border-color:rgba(255,255,255,.4);color:#fff">Get Premium →</button>
@@ -1140,7 +1140,7 @@ document.getElementById("csv-file").onchange=function(e){var f=e.target.files[0]
 //   active = success && !purchase.subscription_cancelled_at && !purchase.subscription_ended_at
 async function verifyLicense(key){key=(key||"").trim();if(!key)return{active:false,msg:"Enter a key to unlock."};if(key.toUpperCase()==="STEADY-DEMO")return{active:true,msg:"Demo unlock active — try the premium tabs."};return{active:false,msg:"Billing isn't live yet. Premium is coming soon."};}
 function applyPremium(){
-  document.querySelectorAll(".panel.locked").forEach(function(p){var veil=p.querySelector(".lockveil");if(db.premium){if(veil)veil.remove();}else if(!veil){var v=document.createElement("div");v.className="lockveil";v.innerHTML='<div class="in"><div style="font-size:30px">🔒</div><h3>A Premium feature</h3><p>Unlock Debt Payoff, Savings, Net Worth, Subscriptions, trends &amp; backup for $1/mo.</p><button class="btn" onclick="openAcct()">Unlock Premium</button></div>';p.appendChild(v);}});
+  document.querySelectorAll(".panel.locked").forEach(function(p){var veil=p.querySelector(".lockveil");if(db.premium){if(veil)veil.remove();}else if(!veil){var v=document.createElement("div");v.className="lockveil";v.innerHTML='<div class="in"><div style="font-size:30px">🔒</div><h3>A Premium feature</h3><p>Unlock Debt Payoff, Savings, Net Worth, Subscriptions, trends &amp; backup for $1.25/mo.</p><button class="btn" onclick="openAcct()">Unlock Premium</button></div>';p.appendChild(v);}});
   document.querySelectorAll('.snav .lk').forEach(el=>el.textContent=db.premium?"✓":"🔒");
   var pt=document.getElementById("prem-title"),pd=document.getElementById("prem-desc");if(db.premium){pt.textContent="✓ Premium active";pd.textContent="Thanks for supporting Steady Money. Everything's unlocked.";}
 }
