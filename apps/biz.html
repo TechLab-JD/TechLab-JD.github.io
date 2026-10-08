@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steady Biz</title>
+<meta name="description" content="Steady Biz — a free small-business tracker: products &amp; services, sales, inventory with low-stock alerts, expenses and customers. Private; data stays on your device.">
+<link rel="stylesheet" href="shared.css">
+<style>
+  :root{--accent:#e5674e;--accent-2:#ef8168;--accent-dark:#cf4e37}
+  .ptable{width:100%;border-collapse:collapse;font-size:13px}
+  .ptable th{color:var(--muted);font-size:10.5px;text-transform:uppercase;letter-spacing:.4px;text-align:left;padding:6px 4px}
+  .ptable td{padding:7px 4px;border-top:1px solid var(--line)}
+  .ptable td.r,.ptable th.r{text-align:right}
+  #report-print{display:none}
+  @media print{body.printing>*:not(#report-print){display:none!important}body.printing #report-print{display:block!important}@page{margin:16mm}}
+  @media(max-width:600px){.ptable th.hideSm,.ptable td.hideSm{display:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div style="display:flex;align-items:center;gap:10px"><button class="icon-btn hamb" id="hambBtn" title="Menu">☰</button><a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Biz</b></a></div>
+  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="premhdr" data-steady="premium">⭐ Premium</button><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
+</div></header>
+<div class="shell">
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side">
+  <div class="navgroup"><div class="navhead">Dashboard</div>
+    <button class="snav active" data-panel="home">📊 Overview</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Sell</div>
+    <button class="snav" data-panel="catalog">🏷️ Products &amp; services</button>
+    <button class="snav" data-panel="sales">🧾 Sales</button>
+    <button class="snav" data-panel="inventory">📦 Inventory</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Run it</div>
+    <button class="snav" data-panel="expenses">💳 Expenses</button>
+    <button class="snav" data-panel="customers">👥 Customers</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Premium</div>
+    <button class="snav" data-panel="pricing">🧮 Pricing Lab<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="reorder">🔁 Reorder Planner<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="report">📑 Sales Report<span class="lk">🔒</span></button>
+  </div>
+  <div class="navgroup"><div class="navhead">You</div>
+    <button class="snav" data-panel="rewards">🏆 Rewards</button>
+  </div>
+</aside>
+<main class="main">
+  <section class="panel active" id="panel-home">
+    <div class="hero"><div class="lbl" id="h-month"></div><div class="big" id="h-rev">$0</div><div class="meta">revenue this month</div>
+      <div class="mini"><div>Gross profit<b id="h-profit">$0</b></div><div>Orders<b id="h-orders">0</b></div><div>Low stock<b id="h-low">0</b></div><div>Catalog<b id="h-prods">0</b></div></div></div>
+    <div class="grid2">
+      <div class="card"><h2>This month's margin</h2><p class="sub">Gross profit as a share of revenue</p><div id="home-ring" style="display:flex;justify-content:center;padding:6px 0"></div></div>
+      <div class="card"><h2>Recent sales</h2><p class="sub">Your latest orders</p><div id="home-sales"></div></div>
+    </div>
+    <div class="card"><h2>Needs restocking</h2><p class="sub">Products at or below their reorder point</p><div id="home-low"></div></div>
+  </section>
+
+  <section class="panel" id="panel-catalog">
+    <div class="card"><h2>Products &amp; services</h2><p class="sub">Add what you sell. Set a price and your cost — Steady works out the margin. Services skip stock.</p>
+      <div class="addform" style="grid-template-columns:1fr 120px 90px 90px auto"><div class="field"><label>Name</label><input id="p-name" placeholder="Coffee mug"></div><div class="field"><label>Type</label><select id="p-type"><option>Product</option><option>Service</option></select></div><div class="field"><label>Price $</label><input id="p-price" type="number" inputmode="decimal"></div><div class="field"><label>Cost $</label><input id="p-cost" type="number" inputmode="decimal"></div><button class="btn" id="p-add">Add</button></div>
+      <div class="addform" style="grid-template-columns:140px 140px;margin-top:9px"><div class="field"><label>Stock on hand</label><input id="p-stock" type="number" inputmode="numeric" placeholder="0"></div><div class="field"><label>Reorder at</label><input id="p-reorder" type="number" inputmode="numeric" placeholder="5"></div></div>
+      <div id="p-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-sales">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Revenue today</div><div class="val pos" id="s-today">$0</div></div>
+      <div class="stat"><div class="label">Revenue this month</div><div class="val pos" id="s-month">$0</div></div>
+      <div class="stat"><div class="label">Orders this month</div><div class="val" id="s-count">0</div></div>
+    </div>
+    <div class="card"><h2>Log a sale</h2><p class="sub">Pick what sold — price and cost fill in from your catalog, and product stock drops automatically.</p>
+      <div class="addform" style="grid-template-columns:120px 1fr 80px 1fr auto"><div class="field"><label>Date</label><input id="sl-date" type="date"></div><div class="field"><label>Item</label><select id="sl-prod"></select></div><div class="field"><label>Qty</label><input id="sl-qty" type="number" inputmode="numeric" value="1"></div><div class="field"><label>Customer (optional)</label><input id="sl-cust" placeholder="Name"></div><button class="btn" id="sl-add">Add</button></div>
+      <div id="sl-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-inventory">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Units in stock</div><div class="val" id="iv-units">0</div></div>
+      <div class="stat"><div class="label">Stock value (at cost)</div><div class="val" id="iv-value">$0</div></div>
+      <div class="stat"><div class="label">Low / out of stock</div><div class="val" id="iv-low">0</div></div>
+    </div>
+    <div class="card"><h2>Restock</h2><p class="sub">Received new inventory? Add it here.</p>
+      <div class="addform" style="grid-template-columns:1fr 100px auto"><div class="field"><label>Product</label><select id="rs-prod"></select></div><div class="field"><label>Add units</label><input id="rs-qty" type="number" inputmode="numeric" placeholder="10"></div><button class="btn" id="rs-add">Add stock</button></div>
+    </div>
+    <div class="card"><h2>On hand</h2><div id="iv-list"></div></div>
+  </section>
+
+  <section class="panel" id="panel-expenses">
+    <div class="grid2" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Expenses this month</div><div class="val neg" id="ex-mo">$0</div></div>
+      <div class="stat"><div class="label">This year</div><div class="val" id="ex-year">$0</div></div>
+    </div>
+    <div class="card"><h2>Business expenses</h2><p class="sub">Overhead and costs of running the shop — rent, supplies, ads, fees.</p>
+      <div class="addform" style="grid-template-columns:120px 140px 1fr 100px auto"><div class="field"><label>Date</label><input id="ex-date" type="date"></div><div class="field"><label>Category</label><select id="ex-cat"><option>Rent</option><option>Supplies</option><option>Inventory</option><option>Marketing</option><option>Fees</option><option>Utilities</option><option>Other</option></select></div><div class="field"><label>What for</label><input id="ex-desc" placeholder="Note"></div><div class="field"><label>Amount $</label><input id="ex-amt" type="number" inputmode="decimal"></div><button class="btn" id="ex-add">Add</button></div>
+      <div id="ex-list" style="margin-top:12px"></div>
+    </div>
+    <div class="card"><h2>By category (this year)</h2><div id="ex-cats"></div></div>
+  </section>
+
+  <section class="panel" id="panel-customers">
+    <div class="card"><h2>Customers</h2><p class="sub">Keep your regulars and their details. Steady totals what each one has spent.</p>
+      <div class="addform" style="grid-template-columns:1fr 1fr auto"><div class="field"><label>Name</label><input id="c-name" placeholder="Customer / business"></div><div class="field"><label>Contact</label><input id="c-contact" placeholder="Email / phone"></div><button class="btn" id="c-add">Add</button></div>
+      <div class="field" style="margin-top:9px"><input id="c-notes" placeholder="Notes (what they buy, preferences…)"></div>
+      <div id="c-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-pricing">
+    <div class="card"><h2>Pricing Lab</h2><p class="sub">Work backwards from the margin you want — Steady sets the price, your profit per unit, and how many you must sell to break even.</p>
+      <div class="grid2">
+        <div class="field"><label>Cost per unit $ (materials, etc.)</label><input id="pl-var" type="number" inputmode="decimal"></div>
+        <div class="field"><label>Target margin %</label><input id="pl-margin" type="number" inputmode="decimal" placeholder="60"></div>
+        <div class="field"><label>Monthly fixed costs $ (rent, tools…)</label><input id="pl-fixed" type="number" inputmode="decimal"></div>
+        <div class="field"><label>Units you expect to sell / month</label><input id="pl-units" type="number" inputmode="numeric"></div>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:14px"><button class="btn" id="pl-calc">Calculate</button></div>
+    </div>
+    <div class="card" id="pl-box" style="display:none"><h2>Suggested pricing</h2><div id="pl-res"></div></div>
+  </section>
+
+  <section class="panel locked" id="panel-reorder">
+    <div class="card"><h2>Reorder Planner</h2><p class="sub">From your last 30 days of sales, Steady estimates how fast each product sells, how long your stock lasts, and how much to reorder to cover the next month.</p>
+      <div id="ro-list"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-report">
+    <div class="card"><h2>Monthly sales report</h2><p class="sub">A clean profit-and-loss for any month — print it or save it as PDF for your records or an accountant.</p>
+      <div class="addform" style="grid-template-columns:200px auto"><div class="field"><label>Month</label><input id="rp-month" type="month"></div><button class="btn sm" id="rp-print" style="align-self:end">🖨 Print / Save as PDF</button></div>
+    </div>
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Revenue</div><div class="val pos" id="rp-rev">$0</div></div>
+      <div class="stat"><div class="label">Cost of goods</div><div class="val neg" id="rp-cogs">$0</div></div>
+      <div class="stat"><div class="label">Gross profit</div><div class="val" id="rp-gross">$0</div></div>
+    </div>
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Expenses</div><div class="val neg" id="rp-exp">$0</div></div>
+      <div class="stat"><div class="label">Net profit</div><div class="val" id="rp-net">$0</div></div>
+      <div class="stat"><div class="label">Net margin</div><div class="val" id="rp-margin">0%</div></div>
+    </div>
+    <div class="card"><h2>Profit by product</h2><div id="rp-prods"></div></div>
+  </section>
+
+  <section class="panel" id="panel-rewards">
+    <div class="hero"><div class="lbl">All-time</div><div class="big" id="rw-rev">$0</div><div class="meta">total revenue, logged in Steady Biz</div>
+      <div class="mini"><div>Orders<b id="rw-orders">0</b></div><div>Customers<b id="rw-cust">0</b></div><div>Badges<b id="rw-count">0</b></div></div></div>
+    <div class="card"><h2>Your level</h2><p class="sub">Every product, sale and customer builds your XP.</p><div id="xp-card"></div></div>
+    <div class="card"><h2>Today's goals</h2><p class="sub">Keep the business moving.</p><div id="quests"></div></div>
+    <div class="card"><h2>Achievements</h2><p class="sub">Milestones unlock as your shop grows.</p><div class="badgegrid" id="rw-badges"></div></div>
+  </section>
+</main>
+</div>
+<footer class="ft">Steady Biz · a Steady Systems app · your data stays on this device</footer>
+<div id="toasts"></div>
+<div id="report-print"></div>
+<script src="shared.js"></script>
+<script>
+var DEF={biz:{name:""},products:[],sales:[],expenses:[],customers:[],pricing:{var:"",margin:"",fixed:"",units:""}};
+var db=Steady.load("biz",DEF);var S=Steady;
+function num(v){var n=parseFloat(String(v).replace(/[^0-9.\-]/g,""));return isNaN(n)?0:n;}
+function monthName(){return new Date().toLocaleDateString("en-US",{month:"long",year:"numeric"});}
+function tm(){return S.tm();}
+function prodById(id){return db.products.filter(function(p){return p.id===id;})[0];}
+function saleRev(s){return num(s.qty)*num(s.price);}
+function saleCogs(s){return num(s.qty)*num(s.cost);}
+function saleProfit(s){return saleRev(s)-saleCogs(s);}
+function isProduct(p){return (p.type||"Product")==="Product";}
+
+/* catalog */
+function renderCatalog(){
+  var l=S.el("p-list");l.innerHTML=db.products.length?"":'<div class="empty">Nothing in your catalog yet. Add your first product or service above.</div>';
+  db.products.forEach(function(p){
+    var price=num(p.price),cost=num(p.cost),marg=price>0?Math.round((price-cost)/price*100):0;
+    var r=document.createElement("div");r.className="row";
+    var meta=(p.type||"Product")+" · "+marg+"% margin"+(isProduct(p)?(" · "+num(p.stock)+" in stock"):"");
+    r.innerHTML='<span class="nm">'+p.name+'<div class="meta">'+meta+'</div></span><span class="amt">'+S.money(price)+'</span>';
+    var del=document.createElement("button");del.className="del";del.textContent="×";
+    del.onclick=function(){db.products=db.products.filter(function(x){return x.id!==p.id;});S.save();renderAll();};
+    r.appendChild(del);l.appendChild(r);
+  });
+}
+S.el("p-add").onclick=function(){
+  var n=S.val("p-name");if(!n)return;
+  db.products.push({id:S.uid(),name:n,type:S.val("p-type"),price:S.val("p-price"),cost:S.val("p-cost"),stock:S.val("p-stock")||"0",reorder:S.val("p-reorder")||"5"});
+  S.save();S.clr("p-name","p-price","p-cost","p-stock","p-reorder");renderAll();S.toast("Added to catalog",1);
+};
+
+/* product dropdowns */
+function fillProdSelect(sel,productsOnly){
+  var cur=sel.value;
+  var list=db.products.filter(function(p){return productsOnly?isProduct(p):true;});
+  sel.innerHTML=list.length?list.map(function(p){return '<option value="'+p.id+'">'+p.name+(isProduct(p)?(" ("+num(p.stock)+")"):"")+'</option>';}).join(""):'<option value="">— add items first —</option>';
+  if(cur&&list.some(function(p){return p.id===cur;}))sel.value=cur;
+}
+
+/* sales */
+function renderSales(){
+  fillProdSelect(S.el("sl-prod"),false);
+  var today=S.todayISO(),m=tm();
+  var revToday=db.sales.filter(function(s){return s.date===today;}).reduce(function(a,b){return a+saleRev(b);},0);
+  var ms=db.sales.filter(function(s){return (s.date||"").slice(0,7)===m;});
+  S.el("s-today").textContent=S.money(revToday);
+  S.el("s-month").textContent=S.money(ms.reduce(function(a,b){return a+saleRev(b);},0));
+  S.el("s-count").textContent=ms.length;
+  var list=db.sales.slice().sort(function(a,b){return (b.date||"").localeCompare(a.date||"");}).slice(0,30);
+  var l=S.el("sl-list");l.innerHTML=list.length?"":'<div class="empty">No sales logged yet.</div>';
+  list.forEach(function(s){
+    var r=document.createElement("div");r.className="row";
+    var meta=new Date(s.date+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+(s.customer?" · "+s.customer:"")+" · +"+S.money(saleProfit(s))+" profit";
+    r.innerHTML='<span class="nm">'+s.name+' ×'+num(s.qty)+'<div class="meta">'+meta+'</div></span><span class="amt pos">'+S.money(saleRev(s))+'</span>';
+    var del=document.createElement("button");del.className="del";del.textContent="×";
+    del.onclick=function(){
+      var p=prodById(s.productId);if(p&&isProduct(p)){p.stock=String(num(p.stock)+num(s.qty));}
+      db.sales=db.sales.filter(function(x){return x.id!==s.id;});S.save();renderAll();
+    };
+    r.appendChild(del);l.appendChild(r);
+  });
+}
+S.el("sl-add").onclick=function(){
+  var pid=S.val("sl-prod"),qty=num(S.val("sl-qty"))||1;
+  var p=prodById(pid);if(!p){S.toast("Add an item to your catalog first");return;}
+  var d=S.val("sl-date")||S.todayISO();
+  db.sales.push({id:S.uid(),date:d,productId:p.id,name:p.name,qty:String(qty),price:p.price,cost:p.cost,customer:S.val("sl-cust")});
+  if(isProduct(p))p.stock=String(num(p.stock)-qty);
+  S.save();S.clr("sl-cust");S.el("sl-qty").value="1";renderAll();S.toast("Sale logged",1);
+};
+
+/* inventory */
+function renderInventory(){
+  fillProdSelect(S.el("rs-prod"),true);
+  var prods=db.products.filter(isProduct);
+  var units=prods.reduce(function(a,b){return a+num(b.stock);},0);
+  var value=prods.reduce(function(a,b){return a+num(b.stock)*num(b.cost);},0);
+  var low=prods.filter(function(p){return num(p.stock)<=num(p.reorder);}).length;
+  S.el("iv-units").textContent=Math.round(units);
+  S.el("iv-value").textContent=S.money(value);
+  S.el("iv-low").textContent=low;
+  var l=S.el("iv-list");l.innerHTML=prods.length?"":'<div class="empty">No stocked products yet. Add a Product in the catalog.</div>';
+  prods.slice().sort(function(a,b){return (num(a.stock)-num(a.reorder))-(num(b.stock)-num(b.reorder));}).forEach(function(p){
+    var st=num(p.stock),ro=num(p.reorder),cls=st<=0?"warn":st<=ro?"":"good",lab=st<=0?"Out":st<=ro?"Low":"OK";
+    var r=document.createElement("div");r.className="row";
+    r.innerHTML='<span class="nm">'+p.name+'<div class="meta">'+st+' in stock · reorder at '+ro+'</div></span><span class="pill '+cls+'">'+lab+'</span>';
+    l.appendChild(r);
+  });
+}
+S.el("rs-add").onclick=function(){
+  var p=prodById(S.val("rs-prod")),q=num(S.val("rs-qty"));
+  if(!p||!q){S.toast("Pick a product and a quantity");return;}
+  p.stock=String(num(p.stock)+q);S.save();S.clr("rs-qty");renderInventory();renderHome();S.toast("Stock added",1);
+};
+
+/* expenses */
+function renderExpenses(){
+  var ex=db.expenses.slice().sort(function(a,b){return (b.date||"").localeCompare(a.date||"");});
+  var l=S.el("ex-list");l.innerHTML=ex.length?"":'<div class="empty">No expenses logged.</div>';
+  ex.forEach(function(e){var r=document.createElement("div");r.className="row";r.innerHTML='<span class="nm">'+e.cat+' <span class="meta">'+(e.desc||"")+' · '+new Date(e.date+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'</span></span><span class="amt neg">-'+S.money(num(e.amount))+'</span>';var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.expenses=db.expenses.filter(function(x){return x.id!==e.id;});S.save();renderExpenses();renderHome();renderReport();};r.appendChild(del);l.appendChild(r);});
+  var yr=String(new Date().getFullYear()),yrEx=db.expenses.filter(function(e){return (e.date||"").slice(0,4)===yr;});
+  S.el("ex-year").textContent=S.money(yrEx.reduce(function(a,b){return a+num(b.amount);},0));
+  S.el("ex-mo").textContent=S.money(db.expenses.filter(function(e){return (e.date||"").slice(0,7)===tm();}).reduce(function(a,b){return a+num(b.amount);},0));
+  var cats={};yrEx.forEach(function(e){cats[e.cat]=(cats[e.cat]||0)+num(e.amount);});
+  var arr=Object.keys(cats).map(function(k){return {k:k,v:cats[k]};}).sort(function(a,b){return b.v-a.v;});
+  S.el("ex-cats").innerHTML=arr.length?arr.map(function(c){return '<div class="row"><span class="nm">'+c.k+'</span><span class="amt">'+S.money(c.v)+'</span></div>';}).join(""):'<div class="empty">No expenses this year.</div>';
+}
+S.el("ex-add").onclick=function(){var d=S.val("ex-date"),a=S.val("ex-amt");if(!d||!a)return;db.expenses.push({id:S.uid(),date:d,cat:S.val("ex-cat"),desc:S.val("ex-desc"),amount:a});S.save();S.clr("ex-desc","ex-amt");renderExpenses();renderHome();renderReport();S.toast("Expense added",1);};
+
+/* customers */
+function custSpent(name){return db.sales.filter(function(s){return (s.customer||"")===name;}).reduce(function(a,b){return a+saleRev(b);},0);}
+function renderCustomers(){
+  var l=S.el("c-list");l.innerHTML=db.customers.length?"":'<div class="empty">No customers yet.</div>';
+  db.customers.slice().sort(function(a,b){return custSpent(b.name)-custSpent(a.name);}).forEach(function(c){
+    var r=document.createElement("div");r.className="row";var sp=custSpent(c.name);
+    r.innerHTML='<span class="nm">'+c.name+'<div class="meta">'+(c.contact||"")+(c.notes?" · "+c.notes:"")+'</div></span><span class="amt">'+(sp>0?S.money(sp):"")+'</span>';
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.customers=db.customers.filter(function(x){return x.id!==c.id;});S.save();renderCustomers();renderHome();renderRewards();};
+    r.appendChild(del);l.appendChild(r);
+  });
+}
+S.el("c-add").onclick=function(){var n=S.val("c-name");if(!n)return;db.customers.push({id:S.uid(),name:n,contact:S.val("c-contact"),notes:S.val("c-notes")});S.save();S.clr("c-name","c-contact","c-notes");renderCustomers();renderRewards();S.toast("Customer added",1);};
+
+/* overview */
+function monthFig(m){
+  var ms=db.sales.filter(function(s){return (s.date||"").slice(0,7)===m;});
+  var rev=ms.reduce(function(a,b){return a+saleRev(b);},0);
+  var cogs=ms.reduce(function(a,b){return a+saleCogs(b);},0);
+  var exp=db.expenses.filter(function(e){return (e.date||"").slice(0,7)===m;}).reduce(function(a,b){return a+num(b.amount);},0);
+  return {orders:ms.length,rev:rev,cogs:cogs,gross:rev-cogs,exp:exp,net:rev-cogs-exp};
+}
+function renderHome(){
+  S.el("h-month").textContent=monthName();
+  var f=monthFig(tm());
+  S.el("h-rev").textContent=S.money(f.rev);
+  S.el("h-profit").textContent=S.money(f.gross);
+  S.el("h-orders").textContent=f.orders;
+  var lowProds=db.products.filter(function(p){return isProduct(p)&&num(p.stock)<=num(p.reorder);});
+  S.el("h-low").textContent=lowProds.length;
+  S.el("h-prods").textContent=db.products.length;
+  S.el("home-ring").innerHTML=S.ring(f.rev>0?f.gross/f.rev:0,120,(f.rev>0?Math.round(f.gross/f.rev*100):0)+"%","margin");
+  var recent=db.sales.slice().sort(function(a,b){return (b.date||"").localeCompare(a.date||"");}).slice(0,5);
+  S.el("home-sales").innerHTML=recent.length?recent.map(function(s){return '<div class="row"><span class="nm">'+s.name+' ×'+num(s.qty)+'<div class="meta">'+new Date(s.date+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'</div></span><span class="amt pos">'+S.money(saleRev(s))+'</span></div>';}).join(""):'<div class="empty">Log a sale to see it here.</div>';
+  S.el("home-low").innerHTML=lowProds.length?lowProds.map(function(p){return '<div class="row"><span class="nm">'+p.name+'<div class="meta">'+num(p.stock)+' left · reorder at '+num(p.reorder)+'</div></span><span class="pill '+(num(p.stock)<=0?"warn":"")+'">'+(num(p.stock)<=0?"Out":"Low")+'</span></div>';}).join(""):'<div class="empty">Everything\'s stocked above its reorder point. 👍</div>';
+}
+
+/* pricing lab (premium) */
+function renderPricing(){
+  if(!db.pricing)db.pricing={};
+  if(document.activeElement!==S.el("pl-var"))S.el("pl-var").value=db.pricing.var||"";
+  if(document.activeElement!==S.el("pl-margin"))S.el("pl-margin").value=db.pricing.margin||"";
+  if(document.activeElement!==S.el("pl-fixed"))S.el("pl-fixed").value=db.pricing.fixed||"";
+  if(document.activeElement!==S.el("pl-units"))S.el("pl-units").value=db.pricing.units||"";
+}
+S.el("pl-calc").onclick=function(){
+  db.pricing={var:S.val("pl-var"),margin:S.val("pl-margin"),fixed:S.val("pl-fixed"),units:S.val("pl-units")};S.save();
+  var vc=num(db.pricing.var),mg=num(db.pricing.margin),fx=num(db.pricing.fixed),un=num(db.pricing.units);
+  var box=S.el("pl-box");box.style.display="block";
+  if(mg>=100){S.el("pl-res").innerHTML='<div class="empty">Margin has to be under 100%. A 100% margin would need an infinite price.</div>';return;}
+  var price=vc/(1-mg/100),profit=price-vc;
+  function line(k,v,big){return '<div class="row"'+(big?' style="border-top:2px solid var(--line);margin-top:4px;padding-top:8px"':'')+'><span class="nm"'+(big?' style="font-weight:800"':'')+'>'+k+'</span><span class="amt"'+(big?' style="font-size:16px"':'')+'>'+v+'</span></div>';}
+  var html=line("Suggested price",S.money(price),true)+line("Profit per unit",S.money(profit))+line("Margin",mg+"%");
+  if(fx>0&&profit>0){var be=Math.ceil(fx/profit);html+=line("Break-even (units / month)",be+" units");}
+  if(un>0&&profit>0){var mp=un*profit-fx;html+=line("Profit at "+un+" units / month",S.money(mp));}
+  if(profit<=0)html+='<div class="empty" style="margin-top:8px">At this cost and margin there\'s no profit per unit — raise the price or margin.</div>';
+  S.el("pl-res").innerHTML=html;
+};
+
+/* reorder planner (premium) */
+function velocity(pid){
+  var cut=Date.now()-30*86400000;
+  var sold=db.sales.filter(function(s){return s.productId===pid&&new Date(s.date+"T00:00:00").getTime()>=cut;}).reduce(function(a,b){return a+num(b.qty);},0);
+  return sold/30;
+}
+function renderReorder(){
+  var prods=db.products.filter(isProduct);
+  var rows=prods.map(function(p){
+    var vel=velocity(p.id),stock=num(p.stock),daysLeft=vel>0?stock/vel:Infinity,ro=Math.max(0,Math.ceil(vel*30-stock));
+    return {p:p,vel:vel,stock:stock,daysLeft:daysLeft,ro:ro};
+  }).sort(function(a,b){return a.daysLeft-b.daysLeft;});
+  var l=S.el("ro-list");
+  if(!rows.length){l.innerHTML='<div class="empty">Add stocked products and log a few sales — the planner needs sales history to estimate how fast things move.</div>';return;}
+  var body=rows.map(function(x){
+    var urgent=x.daysLeft<=14||x.stock<=num(x.p.reorder);
+    var dl=isFinite(x.daysLeft)?(Math.round(x.daysLeft)+"d"):"—";
+    var perwk=x.vel>0?(x.vel*7).toFixed(1):"0";
+    return '<tr><td>'+x.p.name+'</td><td class="r hideSm">'+perwk+'</td><td class="r">'+x.stock+'</td><td class="r"><span class="'+(urgent?"neg":"")+'">'+dl+'</span></td><td class="r">'+(x.ro>0?('<b>'+x.ro+'</b>'):'<span style="color:var(--muted)">—</span>')+'</td></tr>';
+  }).join("");
+  l.innerHTML='<table class="ptable"><tr><th>Product</th><th class="r hideSm">Sold / wk</th><th class="r">In stock</th><th class="r">Lasts</th><th class="r">Reorder</th></tr>'+body+'</table><p class="sub" style="margin-top:10px">“Lasts” and “Reorder” are based on the last 30 days of sales; “Reorder” is enough to cover the next 30 days.</p>';
+}
+
+/* sales report (premium) */
+function reportFig(m){
+  var f=monthFig(m);
+  var ms=db.sales.filter(function(s){return (s.date||"").slice(0,7)===m;});
+  var byP={};ms.forEach(function(s){var k=s.name||"—";if(!byP[k])byP[k]={rev:0,profit:0};byP[k].rev+=saleRev(s);byP[k].profit+=saleProfit(s);});
+  var prods=Object.keys(byP).map(function(k){return {name:k,rev:byP[k].rev,profit:byP[k].profit};}).sort(function(a,b){return b.profit-a.profit;});
+  f.margin=f.rev>0?Math.round(f.net/f.rev*100):0;f.prods=prods;return f;
+}
+function renderReport(){
+  var m=S.val("rp-month")||tm();var f=reportFig(m);
+  S.el("rp-rev").textContent=S.money(f.rev);
+  S.el("rp-cogs").textContent=S.money(f.cogs);
+  var g=S.el("rp-gross");g.textContent=S.money(f.gross);g.className="val "+(f.gross>=0?"pos":"neg");
+  S.el("rp-exp").textContent=S.money(f.exp);
+  var n=S.el("rp-net");n.textContent=S.money(f.net);n.className="val "+(f.net>=0?"pos":"neg");
+  S.el("rp-margin").textContent=f.margin+"%";
+  var pl=S.el("rp-prods");
+  pl.innerHTML=f.prods.length?f.prods.map(function(x){return '<div class="row"><span class="nm">'+x.name+'<div class="meta">'+S.money(x.rev)+' revenue</div></span><span class="amt '+(x.profit>=0?"pos":"neg")+'">'+S.money(x.profit)+'</span></div>';}).join(""):'<div class="empty">No sales in this month.</div>';
+}
+function buildReportHTML(){
+  var m=S.val("rp-month")||tm();var f=reportFig(m);
+  var mn=new Date(m+"-01T00:00:00").toLocaleDateString("en-US",{month:"long",year:"numeric"});
+  function line(k,v,b){return '<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #eee;'+(b?"font-weight:700;font-size:15px;border-bottom:0":"")+'"><span>'+k+'</span><span>'+v+'</span></div>';}
+  return '<div style="font-family:Arial,sans-serif;color:#111;max-width:640px;margin:0 auto;padding:20px">'+
+    '<h1 style="font-size:24px;color:#132536;margin:0 0 2px">Sales Report</h1><div style="color:#555;font-size:13px;margin-bottom:18px">'+(db.biz&&db.biz.name?db.biz.name+" · ":"")+mn+'</div>'+
+    line("Revenue",S.money(f.rev))+line("Cost of goods",S.money(f.cogs))+line("Gross profit",S.money(f.gross),true)+
+    '<div style="height:10px"></div>'+
+    line("Expenses",S.money(f.exp))+line("Net profit",S.money(f.net),true)+line("Net margin",f.margin+"%")+
+    '<h2 style="font-size:15px;color:#132536;margin:20px 0 6px">Profit by product</h2>'+
+    (f.prods.length?f.prods.map(function(x){return line(x.name,S.money(x.profit));}).join(""):'<div style="color:#777;font-size:13px">No sales this month.</div>')+
+    '<p style="font-size:10px;color:#999;margin-top:26px">Made with Steady Biz · syssteady.gumroad.com</p></div>';
+}
+S.el("rp-print").onclick=function(){S.el("report-print").innerHTML=buildReportHTML();document.body.classList.add("printing");window.print();};
+window.onafterprint=function(){document.body.classList.remove("printing");};
+
+/* rewards */
+var BADGES=[
+ {id:"firstprod",ic:"🏷️",title:"Open for Business",desc:"Added your first item",cond:function(c){return c.products>0;}},
+ {id:"firstsale",ic:"🧾",title:"First Sale",desc:"Logged a sale",cond:function(c){return c.sales>0;}},
+ {id:"ten",ic:"📈",title:"Picking Up",desc:"10 sales logged",cond:function(c){return c.sales>=10;}},
+ {id:"grand",ic:"💵",title:"First $1K",desc:"$1,000 in revenue",cond:function(c){return c.rev>=1000;}},
+ {id:"fivek",ic:"🏆",title:"$5K Club",desc:"$5,000 in revenue",cond:function(c){return c.rev>=5000;}},
+ {id:"regulars",ic:"🤝",title:"Regulars",desc:"5 customers",cond:function(c){return c.cust>=5;}},
+ {id:"profit",ic:"🟢",title:"In the Black",desc:"A profitable month",cond:function(c){return c.profitMonth;}},
+ {id:"stocked",ic:"📦",title:"Fully Stocked",desc:"Catalog + sale + customer",cond:function(c){return c.products>0&&c.sales>0&&c.cust>0;}}
+];
+function renderRewards(){
+  var rev=db.sales.reduce(function(a,b){return a+saleRev(b);},0);
+  S.el("rw-rev").textContent=S.money(rev);
+  S.el("rw-orders").textContent=db.sales.length;
+  S.el("rw-cust").textContent=db.customers.length;
+  var ctx={products:db.products.length,sales:db.sales.length,rev:rev,cust:db.customers.length,profitMonth:monthFig(tm()).net>0};
+  var earned=S.renderBadges(S.el("rw-badges"),BADGES,ctx);
+  S.el("rw-count").textContent=earned;
+  var xp=earned*40+db.sales.length*6+db.products.length*5+db.customers.length*4+db.expenses.length*3;
+  S.gamify({xp:xp,badges:earned,container:S.el("xp-card")});
+  var t=S.todayISO();
+  S.renderQuests(S.el("quests"),[
+    {label:"Log a sale today",xp:10,done:db.sales.some(function(x){return x.date===t;})},
+    {label:"Have at least 3 items in your catalog",xp:10,done:db.products.length>=3},
+    {label:"Finish this month in the black",xp:15,done:monthFig(tm()).net>0}
+  ]);
+}
+
+function SAMPLE(){
+  var m=tm();function d(day){return m+"-"+String(Math.min(28,Math.max(1,day))).padStart(2,"0");}var dd=new Date().getDate();
+  var mug=S.uid(),stk=S.uid(),logo=S.uid(),tote=S.uid();
+  return {
+    biz:{name:"Corner Goods"},
+    products:[
+      {id:mug,name:"Ceramic mug",type:"Product",price:"18",cost:"6",stock:"22",reorder:"10"},
+      {id:stk,name:"Sticker pack",type:"Product",price:"6",cost:"1.5",stock:"8",reorder:"20"},
+      {id:tote,name:"Canvas tote",type:"Product",price:"24",cost:"9",stock:"4",reorder:"6"},
+      {id:logo,name:"Logo design",type:"Service",price:"150",cost:"0",stock:"0",reorder:"0"}
+    ],
+    sales:[
+      {id:S.uid(),date:d(dd-1),productId:mug,name:"Ceramic mug",qty:"3",price:"18",cost:"6",customer:"Maya R."},
+      {id:S.uid(),date:d(dd-2),productId:stk,name:"Sticker pack",qty:"6",price:"6",cost:"1.5",customer:""},
+      {id:S.uid(),date:d(dd-3),productId:tote,name:"Canvas tote",qty:"2",price:"24",cost:"9",customer:"Dev K."},
+      {id:S.uid(),date:d(dd-6),productId:mug,name:"Ceramic mug",qty:"4",price:"18",cost:"6",customer:""},
+      {id:S.uid(),date:d(dd-9),productId:logo,name:"Logo design",qty:"1",price:"150",cost:"0",customer:"Maya R."},
+      {id:S.uid(),date:d(dd-12),productId:stk,name:"Sticker pack",qty:"10",price:"6",cost:"1.5",customer:"Dev K."}
+    ],
+    expenses:[
+      {id:S.uid(),date:d(dd-4),cat:"Marketing",desc:"Instagram ads",amount:"25"},
+      {id:S.uid(),date:d(dd-10),cat:"Supplies",desc:"Packaging",amount:"32"},
+      {id:S.uid(),date:d(dd-18),cat:"Fees",desc:"Market stall",amount:"40"}
+    ],
+    customers:[
+      {id:S.uid(),name:"Maya R.",contact:"maya@email.com",notes:"Repeat — mugs & branding"},
+      {id:S.uid(),name:"Dev K.",contact:"555-0171",notes:"Wholesale totes"}
+    ],
+    pricing:{var:"6",margin:"65",fixed:"200",units:"40"}
+  };
+}
+
+function renderAll(){renderCatalog();renderSales();renderInventory();renderExpenses();renderCustomers();renderPricing();renderReorder();renderReport();renderHome();renderRewards();S.applyPremium();}
+["sl-date","ex-date"].forEach(function(id){if(!S.el(id).value)S.el(id).value=S.todayISO();});
+if(!S.el("rp-month").value)S.el("rp-month").value=tm();
+S.el("rp-month").onchange=renderReport;
+S.initShell();
+S.initAccount({name:"steady-biz",defaults:DEF,sample:SAMPLE,render:renderAll});
+S.initPremium({title:"Steady Biz Premium",price:"1.25",desc:"Just $1.25/mo for this section — tools to price and restock smarter.",veil:"Unlock the Pricing Lab, Reorder Planner and printable monthly sales report.",
+  features:["🧮 Pricing Lab — set price from your target margin & break-even","🔁 Reorder Planner — sales velocity → when & how much to reorder","📑 Monthly sales report (P&L) — print or save as PDF","📊 Profit by product — see what actually makes money"],render:renderAll});
+renderAll();
+S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Biz</h2><p>Run your small business from one calm screen — products, sales, inventory, expenses and customers. Private, and saved on your device.</p></div><div class="feat"><div class="fi">🧾</div><div><b>Log every sale</b><p>Pick an item — revenue, profit and stock update themselves.</p></div></div><div class="feat"><div class="fi">📦</div><div><b>Never run out</b><p>Low-stock alerts and a reorder planner keep shelves full.</p></div></div>',sample:SAMPLE,render:renderAll});
+</script>
+</body>
+</html>

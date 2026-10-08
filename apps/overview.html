@@ -101,11 +101,11 @@
 <script>
 var S=Steady;S.initShell();
 function read(k){try{var r=localStorage.getItem(k);return r?JSON.parse(r):null;}catch(e){return null;}}
-var M=read("steadyMoney.v1"),H=read("steady.health.v1"),ST=read("steady.study.v1"),W=read("steady.work.v1"),HM=read("steady.home.v1");
+var M=read("steadyMoney.v1"),H=read("steady.health.v1"),ST=read("steady.study.v1"),W=read("steady.work.v1"),HM=read("steady.home.v1"),BZ=read("steady.biz.v1");
 function tm(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0");}
 function dkey(dt){return dt.getFullYear()+"-"+String(dt.getMonth()+1).padStart(2,"0")+"-"+String(dt.getDate()).padStart(2,"0");}
 (function(){
-  var apps=[["Health",H],["Study",ST],["Work",W],["Home",HM]];
+  var apps=[["Health",H],["Study",ST],["Work",W],["Home",HM],["Biz",BZ]];
   var st=S.suiteStats(),info={level:st.level,title:st.title,pct:st.pct,into:st.into,span:st.span};
   var prof=S.loadProfile(),coins=Math.max(0,st.coinsEarned-prof.spent);
   var perApp=apps.map(function(p){var lv=S.levelInfo((p[1]&&p[1].__xp)||0);return '<span style="font-size:11.5px;color:var(--muted)">'+p[0]+' <b style="color:var(--ink)">L'+lv.level+'</b></span>';}).join('<span style="color:var(--line)">·</span> ');
@@ -161,6 +161,14 @@ if(HM){var DAYS2=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
     meals:DAYS2.filter(d=>HM.meals&&HM.meals.week&&HM.meals.week[d]).length,
     docs:(HM.documents||[]).length,docsExp:(HM.documents||[]).filter(x=>x.expiry&&((new Date(x.expiry+"T00:00:00")-new Date().setHours(0,0,0,0))/86400000)<0).length};}
 
+/* ---- biz ---- */
+var biz=null;
+if(BZ){var bz=(BZ.sales||[]).filter(function(s){return s.date&&s.date.slice(0,7)===tm();});
+  var brev=sum(bz,function(s){return n(s.qty)*n(s.price);});
+  var bcogs=sum(bz,function(s){return n(s.qty)*n(s.cost);});
+  var blow=(BZ.products||[]).filter(function(p){return (p.type||"Product")==="Product"&&n(p.stock)<=n(p.reorder);}).length;
+  biz={rev:brev,profit:brev-bcogs,orders:bz.length,low:blow,products:(BZ.products||[]).length,sales:(BZ.sales||[]).length,customers:(BZ.customers||[]).length};}
+
 /* ---- hero + headline ---- */
 function M0(v){return S.money0(v);}
 S.el("ov-date").textContent=new Date().toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"});
@@ -168,7 +176,7 @@ S.el("ov-nw").textContent=money?M0(money.nw):"—";
 S.el("ov-earn").textContent=work?M0(work.earnMo):"—";
 S.el("ov-gpa").textContent=study&&study.gpa!==null?study.gpa.toFixed(2):"—";
 S.el("ov-hab").textContent=health?(health.habToday+"/"+health.habCount):"—";
-var any=money||work||health||study;
+var any=money||work||health||study||biz;
 if(!any){S.el("ov-head").textContent="Nothing yet";S.el("ov-sub").innerHTML='Open any app and your data shows up here. <a href="index.html">See the apps →</a>';}
 else{var headParts=[];if(money)headParts.push(M0(money.nw)+" net worth");if(work&&work.earnMo)headParts.push(M0(work.earnMo)+" earned");
   S.el("ov-head").textContent=headParts.length?headParts.join(" · "):"You're set up";}
@@ -211,6 +219,8 @@ doms+=domCard("#4a90e2","🎓","Steady Study","study.html",!!study,
   study?stat("GPA",study.gpa!==null?study.gpa.toFixed(2):"—")+stat("Due this week",study.dueWeek)+stat("Overdue",study.overdue)+stat("Next exam",study.nextExam!==null?study.nextExam+"d":"—"):"","No study data yet.");
 doms+=domCard("#E8A33C","🏠","Steady Home","home.html",!!home,
   home?stat("Cleaning due",home.cleanDue+"/"+home.cleanTotal)+stat("Maintenance due",home.maintDue)+stat("Meals planned",home.meals+"/7")+stat("Documents",home.docs):"","No home data yet.");
+doms+=domCard("#e5674e","🏪","Steady Biz","biz.html",!!biz,
+  biz?stat("Revenue this mo",M0(biz.rev))+stat("Gross profit",M0(biz.profit))+stat("Orders this mo",biz.orders)+stat("Low stock",biz.low):"","No business data yet.");
 S.el("ov-doms").innerHTML=doms;
 
 /* ---- balance ---- */
@@ -220,7 +230,8 @@ var bal=[
   {bl:"Work",c:"#8168f2",v:work?score([work.entries.length>0,work.time.length>0,work.clients>0]):0},
   {bl:"Health",c:"#2fae5f",v:health?score([health.habCount>0,health.workouts.length>0,health.water>0,health.mood.length>0]):0},
   {bl:"Study",c:"#4a90e2",v:study?score([(ST.courses||[]).length>0,study.assign.length>0,study.exams.length>0]):0},
-  {bl:"Home",c:"#E8A33C",v:home?score([home.cleanTotal>0,home.maint>0,home.meals>0,home.docs>0]):0}
+  {bl:"Home",c:"#E8A33C",v:home?score([home.cleanTotal>0,home.maint>0,home.meals>0,home.docs>0]):0},
+  {bl:"Biz",c:"#e5674e",v:biz?score([biz.products>0,biz.sales>0,biz.customers>0]):0}
 ];
 S.el("ov-balance").innerHTML=bal.map(b=>'<div class="balrow"><span class="bl">'+b.bl+'</span><div class="bar"><span style="width:'+b.v+'%;background:'+b.c+'"></span></div><span style="font:700 13px var(--display);width:38px;text-align:right">'+b.v+'%</span></div>').join("");
 
@@ -232,6 +243,8 @@ if(health&&money){var w7=health.workouts.filter(x=>keys.indexOf(x.date)>=0).leng
 if(study&&study.overdue>0)ins.push(["⚠️","You have <b>"+study.overdue+"</b> overdue assignment"+(study.overdue===1?"":"s")+" in Steady Study — worth clearing before the next exam"+(study.nextExam!==null?" in "+study.nextExam+" days":"")+"."]);
 if(money&&money.debt>0&&work&&work.earnMo>0)ins.push(["📉","At this month's freelance pace ("+M0(work.earnMo)+"), even sending 20% to your "+M0(money.debt)+" debt is "+M0(work.earnMo*0.2)+"/mo toward debt-free."]);
 if(home&&(home.cleanDue+home.maintDue+home.docsExp)>0)ins.push(["🏠","Home needs attention: <b>"+home.cleanDue+"</b> cleaning, <b>"+home.maintDue+"</b> maintenance"+(home.docsExp?", <b>"+home.docsExp+"</b> expired doc"+(home.docsExp===1?"":"s"):"")+"."]);
+if(biz&&biz.low>0)ins.push(["📦","<b>"+biz.low+"</b> product"+(biz.low===1?" is":"s are")+" at or below the reorder point in Steady Biz — the Reorder Planner can tell you how much to restock."]);
+if(biz&&biz.rev>0)ins.push(["🏪","You've booked <b>"+M0(biz.rev)+"</b> in sales this month (Steady Biz), about <b>"+M0(biz.profit)+"</b> gross profit after cost of goods."]);
 if(!ins.length)ins.push(["👋","Use a couple of the apps and real cross-app insights will show up here — or hit <b>Load demo data</b> below to see the whole thing filled in."]);
 S.el("ov-insights").innerHTML=ins.map(i=>'<div class="insight"><span class="b">'+i[0]+'</span><span>'+i[1]+'</span></div>').join("");
 
@@ -246,10 +259,12 @@ function seedAll(){
   localStorage.setItem("steady.study.v1",JSON.stringify({assign:[{id:uid(),title:"Essay draft",course:"English",due:dk(2),done:false},{id:uid(),title:"Problem set",course:"Calculus",due:dk(-1),done:false},{id:uid(),title:"Reading",course:"History",due:dk(-3),done:true}],courses:[{id:uid(),name:"Calculus I",grade:"A-",credits:4},{id:uid(),name:"English",grade:"B+",credits:3},{id:uid(),name:"Biology",grade:"A",credits:4}],exams:[{id:uid(),name:"Calc Midterm",date:dk(9)}],sched:[{id:uid(),day:"Mon",time:"9:00 AM",course:"Calculus I",room:"A210"}],sessions:[{id:uid(),date:dk(0),subj:"Calculus",min:45},{id:uid(),date:dk(-2),subj:"Biology",min:60}],__onboarded:true}));
   localStorage.setItem("steady.work.v1",JSON.stringify({invoice:{from:"Jordan D.",to:"Acme Co.",num:"014",date:dk(0),due:"",tax:0,notes:"Due in 14 days",items:[{desc:"Website updates",qty:"6",rate:"45"}]},time:[{id:uid(),date:cd(dd-1),task:"Acme — build",hrs:"3",rate:"45"},{id:uid(),date:cd(dd-2),task:"Bloom — brand",hrs:"4",rate:"50"}],income:{goal:1500,entries:[{id:uid(),date:cd(dd-3),client:"Acme Co.",amount:"320"},{id:uid(),date:cd(dd-8),client:"Bloom Studio",amount:"450"}]},clients:[{id:uid(),name:"Acme Co.",contact:"jane@acme.com",notes:""},{id:uid(),name:"Bloom Studio",contact:"",notes:""}],projects:[{id:uid(),title:"Acme refresh",client:"Acme Co.",value:"1200",status:"Active",due:""},{id:uid(),title:"Bloom kit",client:"Bloom Studio",value:"800",status:"Paid",due:""}],expenses:[{id:uid(),date:cd(dd-5),cat:"Software",desc:"Design app",amount:"29"}],taxPct:25,__onboarded:true}));
   localStorage.setItem("steady.home.v1",JSON.stringify({cleaning:[{id:uid(),task:"Vacuum",freq:"Weekly",lastDone:dk(-9)},{id:uid(),task:"Make bed",freq:"Daily",lastDone:dk(-1)},{id:uid(),task:"Bathrooms",freq:"Weekly",lastDone:dk(-3)}],maintenance:[{id:uid(),task:"HVAC filter",lastDone:dk(-80),intervalMo:3},{id:uid(),task:"Oil change",lastDone:dk(-150),intervalMo:6}],meals:{week:{Mon:"Pasta",Tue:"Tacos",Wed:"Stir fry",Thu:"Leftovers",Fri:"Pizza",Sat:"Grill",Sun:"Soup"},grocery:[{id:uid(),item:"Chicken",done:false},{id:uid(),item:"Rice",done:true}]},documents:[{id:uid(),name:"Lease",location:"Documents folder",expiry:dk(220)},{id:uid(),name:"Car insurance",location:"Glovebox",expiry:dk(40)}],__onboarded:true}));
+  var mug=uid(),stk=uid(),tote=uid(),logo=uid();
+  localStorage.setItem("steady.biz.v1",JSON.stringify({biz:{name:"Corner Goods"},products:[{id:mug,name:"Ceramic mug",type:"Product",price:"18",cost:"6",stock:"22",reorder:"10"},{id:stk,name:"Sticker pack",type:"Product",price:"6",cost:"1.5",stock:"8",reorder:"20"},{id:tote,name:"Canvas tote",type:"Product",price:"24",cost:"9",stock:"4",reorder:"6"},{id:logo,name:"Logo design",type:"Service",price:"150",cost:"0",stock:"0",reorder:"0"}],sales:[{id:uid(),date:cd(dd-1),productId:mug,name:"Ceramic mug",qty:"3",price:"18",cost:"6",customer:"Maya R."},{id:uid(),date:cd(dd-3),productId:tote,name:"Canvas tote",qty:"2",price:"24",cost:"9",customer:"Dev K."},{id:uid(),date:cd(dd-6),productId:mug,name:"Ceramic mug",qty:"4",price:"18",cost:"6",customer:""},{id:uid(),date:cd(dd-9),productId:logo,name:"Logo design",qty:"1",price:"150",cost:"0",customer:"Maya R."},{id:uid(),date:cd(dd-12),productId:stk,name:"Sticker pack",qty:"10",price:"6",cost:"1.5",customer:"Dev K."}],expenses:[{id:uid(),date:cd(dd-4),cat:"Marketing",desc:"Instagram ads",amount:"25"},{id:uid(),date:cd(dd-10),cat:"Supplies",desc:"Packaging",amount:"32"}],customers:[{id:uid(),name:"Maya R.",contact:"maya@email.com",notes:"Repeat"},{id:uid(),name:"Dev K.",contact:"555-0171",notes:"Wholesale totes"}],pricing:{var:"6",margin:"65",fixed:"200",units:"40"},__onboarded:true}));
   }catch(e){}
   location.reload();
 }
-S.el("seed-btn").onclick=function(){if(confirm("This loads demo data into all five apps (replacing anything already there). Continue?"))seedAll();};
+S.el("seed-btn").onclick=function(){if(confirm("This loads demo data into all six apps (replacing anything already there). Continue?"))seedAll();};
 
 /* ---- month calendar ---- */
 (function(){
