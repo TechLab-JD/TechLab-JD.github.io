@@ -503,7 +503,7 @@ S.el("sl-date").value=S.todayISO();S.el("w-date").value=S.todayISO();S.el("wt-da
 if(db.moodPick){document.querySelectorAll("#mood-pick button").forEach(b=>b.classList.toggle("on",Number(b.dataset.m)===db.moodPick));}
 S.initShell();
 S.initAccount({name:"steady-health",defaults:DEF,sample:SAMPLE,render:renderAll});
-S.initPremium({title:"Steady Health Premium",desc:"Deeper analytics that turn your logs into real insight.",veil:"See 30-day trends and what's actually moving your mood, sleep and weight.",
+S.initPremium({title:"Steady Health Premium",price:"1",desc:"Just $1/mo for this section — deeper tools for your health.",veil:"See 30-day trends and what's actually moving your mood, sleep and weight.",
   features:["🍎 Nutrition — log meals & track daily calories","💪 Routines — build workouts & log in one tap","📄 Printable weekly health report (PDF)","📈 30-day Trends — sleep, mood & water","💡 Insights — what moves your mood, sleep & weight"],render:renderAll});
 renderAll();
 S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Health</h2><p>Habits, water, sleep, mood and workouts — private, and saved only on your device.</p></div><div class="feat"><div class="fi">🔥</div><div><b>Build streaks</b><p>Track daily and keep the chain going.</p></div></div><div class="feat"><div class="fi">🏆</div><div><b>Earn badges</b><p>Milestones unlock as you go.</p></div></div>',sample:SAMPLE,render:renderAll});

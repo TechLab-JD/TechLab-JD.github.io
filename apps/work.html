@@ -560,7 +560,7 @@ if(!S.el("rp-month").value)S.el("rp-month").value=tm();
 S.el("rp-month").onchange=renderReports;
 S.initShell();
 S.initAccount({name:"steady-work",defaults:DEF,sample:SAMPLE,render:renderAll});
-S.initPremium({title:"Steady Work Premium",desc:"The business-owner tools: reports and trends.",veil:"Unlock printable monthly reports and your 6-month income trends.",
+S.initPremium({title:"Steady Work Premium",price:"1",desc:"Just $1/mo for this section — the business-owner tools.",veil:"Unlock printable monthly reports and your 6-month income trends.",
   features:["📝 Estimates — price a job & print a clean quote","📇 Follow-ups — never drop a lead","🎯 Income planner — target, hours-to-go & forecast","📊 Monthly business report (P&L) — print as PDF","📈 Trends — 6-month income & by-client"],render:renderAll});
 renderAll();
 S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Work</h2><p>Invoices, billable time, income goals and clients — private, and saved on your device.</p></div><div class="feat"><div class="fi">🧾</div><div><b>Look professional</b><p>Build invoices and print or save them as PDF.</p></div></div><div class="feat"><div class="fi">🎯</div><div><b>Hit your number</b><p>Track income against a monthly goal.</p></div></div>',sample:SAMPLE,render:renderAll});
