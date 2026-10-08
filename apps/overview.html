@@ -35,6 +35,7 @@
   .cmore{font-size:9px;color:var(--muted);margin-top:1px}
   .calev{display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid var(--line);font-size:13px}
   .calev:last-child{border-bottom:0}
+  .calrow{transition:.12s} .calrow:hover{color:var(--accent)}
   @media(max-width:600px){.calcell{min-height:44px;padding:3px}.calcell .cdn{font-size:11px}}
 </style>
 </head>
@@ -74,7 +75,8 @@
         <button class="btn ghost sm" id="cal-today">Today</button>
       </div>
     </div>
-    <p class="sub">Bills, deadlines, exams, invoices, maintenance and workouts from every app — on one calendar.</p>
+    <p class="sub">Bills, deadlines, exams, invoices, maintenance and workouts from every app — on one calendar. Tap an item to jump to its app.</p>
+    <div id="cal-up" style="margin:2px 0 14px"></div>
     <div class="calgrid" id="cal-grid"></div>
     <div id="cal-day" style="margin-top:14px"></div>
     <div id="cal-legend" style="margin-top:12px;display:flex;flex-wrap:wrap;gap:10px 16px;font-size:11.5px;color:var(--muted)"></div>
@@ -252,6 +254,11 @@ S.el("seed-btn").onclick=function(){if(confirm("This loads demo data into all fi
 /* ---- month calendar ---- */
 (function(){
   var APPC={money:"#19c3ad",study:"#4a90e2",work:"#8168f2",home:"#e0a93c",health:"#2fae5f"};
+  var APPURL={money:"money/index.html",study:"study.html",work:"work.html",home:"home.html",health:"health.html"};
+  function evRow(e,k,showDate){
+    var date=showDate?'<span style="color:var(--muted);font-size:12px;min-width:50px;flex:none">'+new Date(k+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'</span>':"";
+    return '<a href="'+(APPURL[e.app]||"#")+'" class="calev calrow" style="text-decoration:none;color:var(--ink)"><span class="cdot" style="background:'+(APPC[e.app]||"#888")+'"></span>'+date+'<span>'+e.icon+' '+e.label+'</span><span style="margin-left:auto;color:var(--muted);font-size:12px">›</span></a>';
+  }
   var cur=new Date();cur=new Date(cur.getFullYear(),cur.getMonth(),1);
   var selKey=dkey(new Date());
   function pad(n){return (n<10?"0":"")+n;}
@@ -286,10 +293,14 @@ S.el("seed-btn").onclick=function(){if(confirm("This loads demo data into all fi
     }
     S.el("cal-grid").innerHTML=html;
     document.querySelectorAll("#cal-grid .calcell[data-k]").forEach(function(c){c.onclick=function(){selKey=c.getAttribute("data-k");render();};});
+    var now=new Date(),isCur=(now.getFullYear()===y&&now.getMonth()===mo),fromD=isCur?now.getDate():1,up=[];
+    Object.keys(ev).map(Number).filter(function(d){return d>=fromD;}).sort(function(a,b){return a-b;}).forEach(function(d){ev[d].forEach(function(e){up.push({d:d,e:e});});});
+    var ue=S.el("cal-up");
+    ue.innerHTML=up.length?'<div style="font:700 11px var(--display);color:var(--faint);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px">'+(isCur?"Upcoming this month":"This month")+'</div>'+up.slice(0,5).map(function(u){return evRow(u.e,key(y,mo,u.d),true);}).join(""):"";
     var selD=dayOf(selKey),dd=S.el("cal-day");
     if(selD&&ev[selD]&&ev[selD].length){
-      dd.innerHTML='<div style="font:700 13px var(--display);margin-bottom:6px">'+new Date(selKey+"T00:00:00").toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"})+'</div>'+
-        ev[selD].map(function(e){return '<div class="calev"><span class="cdot" style="background:'+(APPC[e.app]||"#888")+'"></span><span>'+e.icon+' '+e.label+'</span></div>';}).join("");
+      dd.innerHTML='<div style="font:700 13px var(--display);margin-bottom:4px">'+new Date(selKey+"T00:00:00").toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"})+'</div>'+
+        ev[selD].map(function(e){return evRow(e,selKey,false);}).join("");
     } else if(selD){dd.innerHTML='<div class="empty">Nothing on '+new Date(selKey+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'.</div>';}
     else{dd.innerHTML="";}
     S.el("cal-legend").innerHTML=[["money","💳 Money"],["work","🧾 Work"],["study","📝 Study"],["home","🔧 Home"],["health","🏃 Health"]].map(function(x){return '<span style="display:inline-flex;align-items:center;gap:5px"><span class="cdot" style="background:'+APPC[x[0]]+'"></span>'+x[1]+'</span>';}).join("");
