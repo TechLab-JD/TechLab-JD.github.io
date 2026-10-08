@@ -21,6 +21,21 @@
   .insight:last-child{border-bottom:0} .insight .b{font-size:15px}
   .balrow{display:flex;align-items:center;gap:10px;padding:7px 0}
   .balrow .bl{width:70px;font-size:13px;font-weight:600} .balrow .bar{flex:1;max-width:none}
+  .calgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+  .cdow{text-align:center;font:700 10px var(--display);color:var(--faint);text-transform:uppercase;letter-spacing:.5px;padding:3px 0}
+  .calcell{min-height:60px;border:1px solid var(--line);border-radius:9px;padding:4px 5px;background:var(--card-2);cursor:pointer;transition:.12s;overflow:hidden}
+  .calcell:hover{border-color:var(--accent)}
+  .calcell.out{opacity:.32;cursor:default}
+  .calcell.today .cdn{color:var(--accent)}
+  .calcell.today{box-shadow:0 0 0 1px var(--accent) inset}
+  .calcell.sel{box-shadow:0 0 0 2px var(--accent) inset;border-color:var(--accent)}
+  .calcell .cdn{font:700 12px var(--display);color:var(--ink)}
+  .cdots{display:flex;flex-wrap:wrap;gap:2px;margin-top:3px}
+  .cdot{width:7px;height:7px;border-radius:50%}
+  .cmore{font-size:9px;color:var(--muted);margin-top:1px}
+  .calev{display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid var(--line);font-size:13px}
+  .calev:last-child{border-bottom:0}
+  @media(max-width:600px){.calcell{min-height:44px;padding:3px}.calcell .cdn{font-size:11px}}
 </style>
 </head>
 <body>
@@ -47,6 +62,22 @@
       <div class="stat"><div class="label">Spent (7 days)</div><div class="val" id="w-spent">$0</div></div>
       <div class="stat"><div class="label">Workouts (7 days)</div><div class="val" id="w-work">0</div></div>
     </div>
+  </div>
+
+  <div class="card">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
+      <h2 style="margin:0">📅 Month at a glance</h2>
+      <div style="display:flex;align-items:center;gap:7px">
+        <button class="btn ghost sm" id="cal-prev" title="Previous month">‹</button>
+        <span id="cal-title" style="font:700 14px var(--display);min-width:128px;text-align:center"></span>
+        <button class="btn ghost sm" id="cal-next" title="Next month">›</button>
+        <button class="btn ghost sm" id="cal-today">Today</button>
+      </div>
+    </div>
+    <p class="sub">Bills, deadlines, exams, invoices, maintenance and workouts from every app — on one calendar.</p>
+    <div class="calgrid" id="cal-grid"></div>
+    <div id="cal-day" style="margin-top:14px"></div>
+    <div id="cal-legend" style="margin-top:12px;display:flex;flex-wrap:wrap;gap:10px 16px;font-size:11.5px;color:var(--muted)"></div>
   </div>
 
   <div class="sectlabel" style="font:700 12px var(--display);color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin:4px 2px 10px">By app</div>
@@ -217,6 +248,57 @@ function seedAll(){
   location.reload();
 }
 S.el("seed-btn").onclick=function(){if(confirm("This loads demo data into all five apps (replacing anything already there). Continue?"))seedAll();};
+
+/* ---- month calendar ---- */
+(function(){
+  var APPC={money:"#19c3ad",study:"#4a90e2",work:"#8168f2",home:"#e0a93c",health:"#2fae5f"};
+  var cur=new Date();cur=new Date(cur.getFullYear(),cur.getMonth(),1);
+  var selKey=dkey(new Date());
+  function pad(n){return (n<10?"0":"")+n;}
+  function key(y,m,d){return y+"-"+pad(m+1)+"-"+pad(d);}
+  function curMonth(){return key(cur.getFullYear(),cur.getMonth(),1).slice(0,7);}
+  function dayOf(s){return (s&&String(s).slice(0,7)===curMonth())?parseInt(String(s).slice(8,10),10):null;}
+  function monthEvents(){
+    var ev={},y=cur.getFullYear(),mo=cur.getMonth(),dim=new Date(y,mo+1,0).getDate(),mk=curMonth();
+    function add(d,icon,label,app){if(!d)return;(ev[d]=ev[d]||[]).push({icon:icon,label:label,app:app});}
+    if(M&&M.bills)M.bills.forEach(function(b){var d=Number(b.dueDay);if(d>=1&&d<=dim)add(d,"💳",(b.paidMonth===mk?"✓ ":"")+b.name+" bill — "+M0(b.amount),"money");});
+    if(W&&W.income&&W.income.entries)W.income.entries.forEach(function(e){add(dayOf(e.date),"💵","Income"+(e.client?" — "+e.client:"")+" "+M0(e.amount),"work");});
+    if(W&&W.invoices)W.invoices.forEach(function(x){add(dayOf(x.due),"🧾",(x.paid?"✓ ":"")+"Invoice"+(x.to?" — "+x.to:"")+" "+M0(x.total),"work");});
+    if(W&&W.projects)W.projects.forEach(function(p){add(dayOf(p.due),"📁","Project: "+p.title,"work");});
+    if(ST&&ST.assign)ST.assign.forEach(function(a){add(dayOf(a.due),(a.done?"✅":"📄"),(a.done?"Done: ":"Due: ")+a.title+(a.course?" ("+a.course+")":""),"study");});
+    if(ST&&ST.exams)ST.exams.forEach(function(x){add(dayOf(x.date),"📝","Exam: "+x.name,"study");});
+    if(HM&&HM.maintenance)HM.maintenance.forEach(function(m){if(!m.lastDone||!m.intervalMo)return;var nd=new Date(m.lastDone+"T00:00:00");nd.setMonth(nd.getMonth()+Number(m.intervalMo));add(dayOf(dkey(nd)),"🔧","Maintenance: "+m.task,"home");});
+    if(HM&&HM.documents)HM.documents.forEach(function(x){add(dayOf(x.expiry),"📄","Expires: "+x.name,"home");});
+    if(H&&H.workouts)H.workouts.forEach(function(w){add(dayOf(w.date),"🏃","Workout: "+(w.type||"session")+(w.min?" ("+w.min+"m)":""),"health");});
+    return ev;
+  }
+  function render(){
+    var y=cur.getFullYear(),mo=cur.getMonth(),ev=monthEvents();
+    S.el("cal-title").textContent=cur.toLocaleDateString("en-US",{month:"long",year:"numeric"});
+    var first=new Date(y,mo,1).getDay(),dim=new Date(y,mo+1,0).getDate(),todayK=dkey(new Date());
+    var dows=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],html=dows.map(function(d){return '<div class="cdow">'+d+'</div>';}).join("");
+    var i;for(i=0;i<first;i++)html+='<div class="calcell out"></div>';
+    for(var d=1;d<=dim;d++){
+      var k=key(y,mo,d),evs=ev[d]||[];
+      var dots=evs.slice(0,4).map(function(e){return '<span class="cdot" style="background:'+(APPC[e.app]||"#888")+'"></span>';}).join("");
+      var more=evs.length>4?'<div class="cmore">+'+(evs.length-4)+'</div>':"";
+      html+='<div class="calcell'+(k===todayK?" today":"")+(k===selKey?" sel":"")+'" data-k="'+k+'"><div class="cdn">'+d+'</div><div class="cdots">'+dots+'</div>'+more+'</div>';
+    }
+    S.el("cal-grid").innerHTML=html;
+    document.querySelectorAll("#cal-grid .calcell[data-k]").forEach(function(c){c.onclick=function(){selKey=c.getAttribute("data-k");render();};});
+    var selD=dayOf(selKey),dd=S.el("cal-day");
+    if(selD&&ev[selD]&&ev[selD].length){
+      dd.innerHTML='<div style="font:700 13px var(--display);margin-bottom:6px">'+new Date(selKey+"T00:00:00").toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"})+'</div>'+
+        ev[selD].map(function(e){return '<div class="calev"><span class="cdot" style="background:'+(APPC[e.app]||"#888")+'"></span><span>'+e.icon+' '+e.label+'</span></div>';}).join("");
+    } else if(selD){dd.innerHTML='<div class="empty">Nothing on '+new Date(selKey+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'.</div>';}
+    else{dd.innerHTML="";}
+    S.el("cal-legend").innerHTML=[["money","💳 Money"],["work","🧾 Work"],["study","📝 Study"],["home","🔧 Home"],["health","🏃 Health"]].map(function(x){return '<span style="display:inline-flex;align-items:center;gap:5px"><span class="cdot" style="background:'+APPC[x[0]]+'"></span>'+x[1]+'</span>';}).join("");
+  }
+  S.el("cal-prev").onclick=function(){cur.setMonth(cur.getMonth()-1);render();};
+  S.el("cal-next").onclick=function(){cur.setMonth(cur.getMonth()+1);render();};
+  S.el("cal-today").onclick=function(){var n=new Date();cur=new Date(n.getFullYear(),n.getMonth(),1);selKey=dkey(n);render();};
+  render();
+})();
 </script>
 </body>
 </html>
