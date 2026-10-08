@@ -71,7 +71,7 @@ nav a.cta:hover{background:#F4B860}
 .rnav__item svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .rnav__item svg.fill{fill:currentColor;stroke:none}
 .rnav.open .rnav__item{opacity:1;pointer-events:auto;transform:translate(var(--tx,0),var(--ty,0)) scale(1)}
-.rnav__item:hover,.rnav__item:focus-visible{background:var(--amber);color:#1A1205;border-color:var(--amber)}
+.rnav__item:hover,.rnav__item:focus-visible{background:var(--amber);color:#1A1205;border-color:var(--amber);z-index:5}
 .rnav__item .lbl{position:absolute;right:54px;white-space:nowrap;font-family:'JetBrains Mono',monospace;font-size:12px;background:rgba(15,21,36,.96);color:var(--text);border:1px solid var(--line);padding:4px 9px;border-radius:7px;opacity:0;transform:translateX(6px);pointer-events:none;transition:opacity .14s,transform .14s}
 .rnav__item:hover .lbl,.rnav__item:focus-visible .lbl{opacity:1;transform:translateX(0)}
 .rnav.open .rnav__item:nth-child(2){transition-delay:.02s}
