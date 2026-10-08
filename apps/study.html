@@ -33,6 +33,8 @@
     <button class="snav" data-panel="planner">🗓️ Planner<span class="lk">🔒</span></button>
     <button class="snav" data-panel="trends">📈 Trends<span class="lk">🔒</span></button>
     <button class="snav" data-panel="focus">⏳ Focus<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="gradeplan">🎯 Grade Planner<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="quiz">🧠 Quiz<span class="lk">🔒</span></button>
   </div>
   <div class="navgroup"><div class="navhead">You</div>
     <button class="snav" data-panel="rewards">🏆 Rewards</button>
@@ -133,6 +135,25 @@
     <div class="grid2">
       <div class="stat"><div class="label">Focus sessions today</div><div class="val" id="fo-today">0</div></div>
       <div class="stat"><div class="label">Focus minutes today</div><div class="val" id="fo-min">0 min</div></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-gradeplan">
+    <div class="card"><h2>Grade planner</h2><p class="sub">Work out exactly what you need on your final (or next big test) to land the grade you want.</p>
+      <div class="grid3">
+        <div class="field"><label>Current grade %</label><input id="gp-cur" type="number" inputmode="decimal" placeholder="88"></div>
+        <div class="field"><label>Final is worth %</label><input id="gp-w" type="number" inputmode="decimal" placeholder="30"></div>
+        <div class="field"><label>Grade you want %</label><input id="gp-want" type="number" inputmode="decimal" placeholder="90"></div>
+      </div>
+      <button class="btn block" id="gp-calc" style="margin-top:12px">Calculate</button>
+    </div>
+    <div class="card" id="gp-resbox" style="display:none"><h2>Result</h2><div id="gp-res"></div></div>
+  </section>
+
+  <section class="panel locked" id="panel-quiz">
+    <div class="card"><h2>Flashcard quiz</h2><p class="sub">Test yourself on a deck — flip each card, mark what you knew, and get a score.</p>
+      <div class="addform" style="grid-template-columns:1fr auto"><select id="qz-deck"></select><button class="btn" id="qz-start">Start quiz</button></div>
+      <div id="qz-area" style="margin-top:14px"></div>
     </div>
   </section>
 
@@ -352,12 +373,51 @@ S.el("fo-start").onclick=function(){
   foRunning=true;foPaint();foT=setInterval(function(){foRemain--;if(foRemain<=0){foComplete();}else{foPaint();}},1000);};
 S.el("fo-reset").onclick=function(){clearInterval(foT);foT=null;foRunning=false;foRemain=foLen*60;foPaint();};
 
-function renderAll(){renderAssign();renderGPA();renderExams();renderSched();renderStudyLog();renderFlash();renderPlanner();renderTrends();renderFocus();renderHome();renderRewards();S.applyPremium();}
+/* grade planner (premium) */
+S.el("gp-calc").onclick=function(){
+  var cur=Number(S.val("gp-cur")),w=Number(S.val("gp-w")),want=Number(S.val("gp-want"));
+  S.el("gp-resbox").style.display="block";var box=S.el("gp-res");
+  if(isNaN(cur)||isNaN(w)||isNaN(want)||w<=0||w>100){box.innerHTML='<div class="empty">Enter your current grade, the final\'s weight (1–100%), and your target.</div>';return;}
+  var need=(want-cur*(100-w)/100)/(w/100);
+  if(need<=0)box.innerHTML='<div class="row"><span class="nm">You\'ve basically got it 🎉</span></div><p class="sub">Even a 0 on the final leaves you at or above '+want+'%.</p>';
+  else if(need>100)box.innerHTML='<div class="row"><span class="nm">Need on final</span><span class="pill warn">'+need.toFixed(1)+'%</span></div><p class="sub">That\'s over 100% — '+want+'% isn\'t reachable from the final alone. Aim a little lower or chase extra credit.</p>';
+  else box.innerHTML='<div class="row"><span class="nm">You need</span><span class="pill '+(need>90?"warn":"good")+'" style="font-size:14px">'+need.toFixed(1)+'% on the final</span></div><p class="sub">to finish the course at '+want+'%.</p>';
+};
+/* flashcard quiz (premium) */
+var qzCards=[],qzIdx=0,qzFlip=false,qzGot=0,qzActive=false;
+function renderQuiz(){
+  if(!db.decks)db.decks=[];
+  var sel=S.el("qz-deck");
+  sel.innerHTML=db.decks.length?db.decks.map(function(d){return '<option value="'+d.id+'">'+d.name+' ('+d.cards.length+')</option>';}).join(""):'<option value="">No decks yet</option>';
+  if(!qzActive)S.el("qz-area").innerHTML=db.decks.length?'<div class="empty">Pick a deck and hit Start.</div>':'<div class="empty">Make a deck on the Flashcards tab first.</div>';
+}
+S.el("qz-start").onclick=function(){
+  var id=S.el("qz-deck").value,d=(db.decks||[]).filter(function(x){return x.id===id;})[0];
+  if(!d||!d.cards.length){S.toast("That deck has no cards");return;}
+  qzCards=d.cards.slice();for(var i=qzCards.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=qzCards[i];qzCards[i]=qzCards[j];qzCards[j]=t;}
+  qzIdx=0;qzFlip=false;qzGot=0;qzActive=true;paintQuiz();
+};
+function paintQuiz(){
+  var a=S.el("qz-area");
+  if(qzIdx>=qzCards.length){
+    var pct=Math.round(qzGot/qzCards.length*100);
+    a.innerHTML='<div class="hero"><div class="lbl">Quiz complete</div><div class="big">'+qzGot+' / '+qzCards.length+'</div><div class="meta">'+pct+'% — '+(pct>=80?"great recall!":"keep reviewing")+'</div></div><button class="btn block" id="qz-again">Quiz again</button>';
+    S.el("qz-again").onclick=function(){qzActive=false;renderQuiz();};if(pct>=80)S.confetti();return;
+  }
+  var c=qzCards[qzIdx];
+  a.innerHTML='<div id="qz-card" style="background:var(--card-2,#0e1a2b);border:1px solid var(--line);border-radius:14px;padding:34px 18px;text-align:center;cursor:pointer;min-height:110px;display:flex;align-items:center;justify-content:center;font:600 18px var(--sans)">'+(qzFlip?c.back:c.front)+'</div>'+
+    '<div style="text-align:center;color:var(--muted);font-size:12px;margin-top:8px">'+(qzFlip?"answer":"tap to flip")+' · '+(qzIdx+1)+' / '+qzCards.length+'</div>'+
+    (qzFlip?'<div style="display:flex;gap:8px;justify-content:center;margin-top:12px"><button class="btn ghost sm" id="qz-miss">✗ Missed</button><button class="btn sm" id="qz-got">✓ Got it</button></div>':'');
+  S.el("qz-card").onclick=function(){qzFlip=!qzFlip;paintQuiz();};
+  if(qzFlip){S.el("qz-got").onclick=function(){qzGot++;qzIdx++;qzFlip=false;paintQuiz();};S.el("qz-miss").onclick=function(){qzIdx++;qzFlip=false;paintQuiz();};}
+}
+
+function renderAll(){renderAssign();renderGPA();renderExams();renderSched();renderStudyLog();renderFlash();renderPlanner();renderTrends();renderFocus();renderQuiz();renderHome();renderRewards();S.applyPremium();}
 S.el("a-due").value=S.todayISO();S.el("ss-date").value=S.todayISO();
 S.initShell();
 S.initAccount({name:"steady-study",defaults:DEF,sample:SAMPLE,render:renderAll});
 S.initPremium({title:"Steady Study Premium",desc:"Plan smarter and see your trends.",veil:"Unlock the auto-built study planner and your performance trends.",
-  features:["Smart Planner — a 7-day study plan from your deadlines","Priorities ranked by urgency + suggested daily minutes","Trends — study time, grade distribution & workload","Focus timer — Pomodoro that auto-logs your sessions","Priority on new study tools"],render:renderAll});
+  features:["🎯 Grade Planner — what you need on the final","🧠 Quiz mode — test yourself on any deck, scored","⏳ Focus timer — Pomodoro that auto-logs sessions","🗓️ Smart Planner — a 7-day plan from your deadlines","📈 Trends — study time, grades & workload"],render:renderAll});
 renderAll();
 S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Study</h2><p>Assignments, GPA, exam countdowns and your class schedule — private, on your device.</p></div><div class="feat"><div class="fi">🎯</div><div><b>Stay ahead</b><p>Due-date flags and exam countdowns keep you on track.</p></div></div><div class="feat"><div class="fi">🎓</div><div><b>Watch your GPA</b><p>Add courses and see it update live.</p></div></div>',sample:SAMPLE,render:renderAll});
 </script>

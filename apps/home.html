@@ -36,6 +36,8 @@
   <div class="navgroup"><div class="navhead">Premium</div>
     <button class="snav" data-panel="binder">📘 Binder<span class="lk">🔒</span></button>
     <button class="snav" data-panel="hprojects">🛠️ Projects<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="contacts">📇 Contacts<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="seasonal">🍂 Seasonal<span class="lk">🔒</span></button>
   </div>
   <div class="navgroup"><div class="navhead">You</div>
     <button class="snav" data-panel="rewards">🏆 Rewards</button>
@@ -118,6 +120,22 @@
     </div>
   </section>
 
+  <section class="panel locked" id="panel-contacts">
+    <div class="card"><h2>Home contacts</h2><p class="sub">Keep your plumber, landlord, doctor and emergency numbers in one place.</p>
+      <div class="addform" style="grid-template-columns:1fr 1fr 130px auto"><div class="field"><label>Name</label><input id="co-name" placeholder="Name / company"></div><div class="field"><label>Role</label><input id="co-role" placeholder="Plumber, landlord…"></div><div class="field"><label>Phone</label><input id="co-phone" placeholder="(555) 555-5555"></div><button class="btn" id="co-add">Add</button></div>
+      <div class="field" style="margin-top:9px"><input id="co-note" placeholder="Notes (hours, account #, etc.)"></div>
+      <div id="co-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-seasonal">
+    <div class="card"><h2>Seasonal checklist</h2><p class="sub">Stay ahead of seasonal home upkeep — pick a season and check things off.</p>
+      <div class="seg" id="se-seg" style="max-width:440px;margin-bottom:12px"><button class="on" data-s="Spring">🌱 Spring</button><button data-s="Summer">☀️ Summer</button><button data-s="Fall">🍂 Fall</button><button data-s="Winter">❄️ Winter</button></div>
+      <div class="addform" style="grid-template-columns:1fr auto"><input id="se-task" placeholder="Add a seasonal task…"><button class="btn" id="se-add">Add</button></div>
+      <div id="se-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
   <section class="panel" id="panel-rewards">
     <div class="hero"><div class="lbl">On top of it</div><div class="big" id="rw-ontrack">0</div><div class="meta">cleaning tasks up to date</div>
       <div class="mini"><div>Badges<b id="rw-count">0</b></div></div></div>
@@ -132,7 +150,7 @@
 <div id="home-print"></div>
 <script src="shared.js"></script>
 <script>
-var DEF={cleaning:[],maintenance:[],meals:{week:{Mon:"",Tue:"",Wed:"",Thu:"",Fri:"",Sat:"",Sun:""},grocery:[]},documents:[],inventory:[],hprojects:[]};
+var DEF={cleaning:[],maintenance:[],meals:{week:{Mon:"",Tue:"",Wed:"",Thu:"",Fri:"",Sat:"",Sun:""},grocery:[]},documents:[],inventory:[],hprojects:[],contacts:[],seasonal:{Spring:[],Summer:[],Fall:[],Winter:[]}};
 var db=Steady.load("home",DEF);var S=Steady;
 var DAYS=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
 function daysSince(d){if(!d)return 1e9;return (Date.now()-new Date(d+"T00:00:00"))/86400000;}
@@ -315,19 +333,46 @@ function renderHProjects(){
 }
 S.el("hp-add").onclick=function(){var n=S.val("hp-name");if(!n)return;if(!db.hprojects)db.hprojects=[];db.hprojects.push({id:S.uid(),name:n,budget:S.val("hp-budget-in"),status:S.el("hp-status").value});S.save();S.clr("hp-name","hp-budget-in");renderHProjects();S.toast("Added",1);};
 
-function renderAll(){renderCleaning();renderMaint();renderMeals();renderDocs();renderInventory();renderBinder();renderHProjects();renderRewards();renderHome();S.applyPremium();}
+/* home contacts (premium) */
+function renderContacts(){
+  if(!db.contacts)db.contacts=[];
+  var l=S.el("co-list");l.innerHTML=db.contacts.length?"":'<div class="empty">No contacts yet — add the important ones.</div>';
+  db.contacts.forEach(function(x){var r=document.createElement("div");r.className="row";
+    r.innerHTML='<span class="nm">'+x.name+' <span class="meta">'+(x.role?x.role+" · ":"")+(x.phone||"")+(x.note?" · "+x.note:"")+'</span></span>'+(x.phone?'<a class="btn ghost sm" href="tel:'+x.phone.replace(/[^0-9+]/g,"")+'">Call</a>':"");
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.contacts=db.contacts.filter(function(y){return y.id!==x.id;});S.save();renderContacts();};r.appendChild(del);l.appendChild(r);});
+}
+S.el("co-add").onclick=function(){var n=S.val("co-name");if(!n)return;if(!db.contacts)db.contacts=[];db.contacts.push({id:S.uid(),name:n,role:S.val("co-role"),phone:S.val("co-phone"),note:S.val("co-note")});S.save();S.clr("co-name","co-role","co-phone","co-note");renderContacts();S.toast("Added",1);};
+
+/* seasonal checklist (premium) */
+var seSeason="Spring";
+function renderSeasonal(){
+  if(!db.seasonal)db.seasonal={Spring:[],Summer:[],Fall:[],Winter:[]};
+  var arr=db.seasonal[seSeason]||[],l=S.el("se-list");
+  l.innerHTML=arr.length?"":'<div class="empty">No '+seSeason+' tasks yet. Try "Clean gutters", "Service HVAC" or "Test smoke detectors".</div>';
+  arr.forEach(function(x){var r=document.createElement("div");r.className="row";
+    r.innerHTML='<span class="nm"'+(x.done?' style="text-decoration:line-through;opacity:.6"':'')+'>'+x.task+'</span>';
+    var chk=document.createElement("button");chk.className="pill "+(x.done?"good":"");chk.style.cssText="cursor:pointer;border:0";chk.textContent=x.done?"✓ Done":"To do";chk.onclick=function(){x.done=!x.done;S.save();renderSeasonal();};
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.seasonal[seSeason]=db.seasonal[seSeason].filter(function(y){return y.id!==x.id;});S.save();renderSeasonal();};
+    r.appendChild(chk);r.appendChild(del);l.appendChild(r);});
+}
+document.querySelectorAll("#se-seg button").forEach(function(b){b.onclick=function(){document.querySelectorAll("#se-seg button").forEach(function(x){x.classList.remove("on");});b.classList.add("on");seSeason=b.getAttribute("data-s");renderSeasonal();};});
+S.el("se-add").onclick=function(){var t=S.val("se-task");if(!t)return;if(!db.seasonal)db.seasonal={Spring:[],Summer:[],Fall:[],Winter:[]};if(!db.seasonal[seSeason])db.seasonal[seSeason]=[];db.seasonal[seSeason].push({id:S.uid(),task:t,done:false});S.save();S.clr("se-task");renderSeasonal();S.toast("Added",1);};
+
+function renderAll(){renderCleaning();renderMaint();renderMeals();renderDocs();renderInventory();renderBinder();renderHProjects();renderContacts();renderSeasonal();renderRewards();renderHome();S.applyPremium();}
 function SAMPLE(){var t=new Date();function iso(off){var x=new Date(t.getFullYear(),t.getMonth(),t.getDate()+off);return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0");}
   return {cleaning:[{id:S.uid(),task:"Vacuum & floors",freq:"Weekly",lastDone:iso(-9)},{id:S.uid(),task:"Kitchen deep clean",freq:"Weekly",lastDone:iso(-2)},{id:S.uid(),task:"Make the bed",freq:"Daily",lastDone:iso(-1)},{id:S.uid(),task:"Bathrooms",freq:"Weekly",lastDone:iso(-3)},{id:S.uid(),task:"Change sheets",freq:"Monthly",lastDone:iso(-40)}],
     maintenance:[{id:S.uid(),task:"HVAC filter",lastDone:iso(-80),intervalMo:3},{id:S.uid(),task:"Car oil change",lastDone:iso(-150),intervalMo:6},{id:S.uid(),task:"Smoke detector batteries",lastDone:iso(-200),intervalMo:12}],
     meals:{week:{Mon:"Pasta & salad",Tue:"Tacos",Wed:"Stir fry",Thu:"Leftovers",Fri:"Pizza night",Sat:"Grill out",Sun:"Soup & bread"},grocery:[{id:S.uid(),item:"Chicken",done:false},{id:S.uid(),item:"Rice",done:true},{id:S.uid(),item:"Veggies",done:false},{id:S.uid(),item:"Tortillas",done:false}]},
     documents:[{id:S.uid(),name:"Lease",location:"Desktop folder / Documents",expiry:iso(220)},{id:S.uid(),name:"Car insurance",location:"Glovebox + email",expiry:iso(40)},{id:S.uid(),name:"ID / License",location:"Wallet",expiry:iso(600)},{id:S.uid(),name:"Passport",location:"Safe",expiry:iso(1200)},{id:S.uid(),name:"Birth certificate",location:"Safe",expiry:""}],
     inventory:[{id:S.uid(),name:"Laptop",loc:"Backpack",val:"900",exp:iso(300)},{id:S.uid(),name:'TV 55"',loc:"Living room",val:"450",exp:iso(-20)},{id:S.uid(),name:"Couch",loc:"Living room",val:"600",exp:""},{id:S.uid(),name:"Microwave",loc:"Kitchen",val:"80",exp:iso(120)},{id:S.uid(),name:"Bike",loc:"Storage",val:"320",exp:""}],
-    hprojects:[{id:S.uid(),name:"Paint the bedroom",budget:"120",status:"In progress"},{id:S.uid(),name:"Fix leaky faucet",budget:"40",status:"Planned"},{id:S.uid(),name:"Build a bookshelf",budget:"90",status:"Idea"}]};}
+    hprojects:[{id:S.uid(),name:"Paint the bedroom",budget:"120",status:"In progress"},{id:S.uid(),name:"Fix leaky faucet",budget:"40",status:"Planned"},{id:S.uid(),name:"Build a bookshelf",budget:"90",status:"Idea"}],
+    contacts:[{id:S.uid(),name:"Mike's Plumbing",role:"Plumber",phone:"(555) 240-1180",note:"24/7 emergency"},{id:S.uid(),name:"Landlord — Dana",role:"Landlord",phone:"(555) 904-2277",note:""},{id:S.uid(),name:"Poison Control",role:"Emergency",phone:"1-800-222-1222",note:""}],
+    seasonal:{Spring:[{id:S.uid(),task:"Clean gutters",done:false},{id:S.uid(),task:"Service the AC",done:false}],Summer:[{id:S.uid(),task:"Check window screens",done:false}],Fall:[{id:S.uid(),task:"Furnace tune-up",done:false},{id:S.uid(),task:"Rake & bag leaves",done:false}],Winter:[{id:S.uid(),task:"Test smoke & CO detectors",done:false},{id:S.uid(),task:"Reverse ceiling fans",done:false}]}};}
 S.el("mt-date").value=S.todayISO();
 S.initShell();
 S.initAccount({name:"steady-home",defaults:DEF,sample:SAMPLE,render:renderAll});
 S.initPremium({title:"Steady Home Premium",desc:"Your whole home on one printable sheet.",veil:"Unlock the printable Home Binder — documents, inventory & maintenance in one PDF.",
-  features:["Home Binder — one printable sheet of everything","Document locations & expiry dates","Full inventory with values — ready for insurance","Home Projects — track repairs & improvements with budgets","Maintenance & cleaning schedules included"],render:renderAll});
+  features:["📇 Contacts — plumber, landlord & emergency numbers (one-tap call)","🍂 Seasonal checklists — stay ahead of home upkeep","🛠️ Home Projects — track repairs with budgets","📘 Home Binder — one printable sheet of everything","📦 Inventory ready for insurance"],render:renderAll});
 renderAll();
 S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Home</h2><p>Cleaning, maintenance, meals and important documents — one calm place to run your home.</p></div><div class="feat"><div class="fi">🧹</div><div><b>Nothing slips</b><p>Tasks reset on their own schedule and tell you what\'s due.</p></div></div><div class="feat"><div class="fi">🗄️</div><div><b>Always prepared</b><p>Know where every document is and when it expires.</p></div></div>',sample:SAMPLE,render:renderAll});
 </script>

@@ -37,6 +37,8 @@
     <button class="snav" data-panel="trends">📈 Trends<span class="lk">🔒</span></button>
     <button class="snav" data-panel="insights">💡 Insights<span class="lk">🔒</span></button>
     <button class="snav" data-panel="hreport">📄 Report<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="nutrition">🍎 Nutrition<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="routines">💪 Routines<span class="lk">🔒</span></button>
   </div>
   <div class="navgroup"><div class="navhead">You</div>
     <button class="snav" data-panel="rewards">🏆 Rewards</button>
@@ -163,6 +165,29 @@
     <div class="card"><h2>Preview</h2><div id="hr-prev"></div></div>
   </section>
 
+  <section class="panel locked" id="panel-nutrition">
+    <div class="card"><h2>Nutrition</h2><p class="sub">Log what you eat and keep an eye on your daily calories.</p>
+      <div class="addform" style="grid-template-columns:200px auto"><div class="field"><label>Daily calorie goal</label><input id="nu-goal" type="number" inputmode="numeric"></div><button class="btn sm" id="nu-savegoal" style="align-self:end">Set goal</button></div>
+    </div>
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Today</div><div class="val" id="nu-today">0 cal</div></div>
+      <div class="stat"><div class="label">Goal</div><div class="val" id="nu-goalv">—</div></div>
+      <div class="stat"><div class="label">Left</div><div class="val" id="nu-left">—</div></div>
+    </div>
+    <div class="card"><h2>Add food</h2>
+      <div class="addform" style="grid-template-columns:120px 1fr 100px auto"><div class="field"><label>Date</label><input id="nu-date" type="date"></div><div class="field"><label>Food</label><input id="nu-name" placeholder="Oatmeal, chicken bowl…"></div><div class="field"><label>Calories</label><input id="nu-cal" type="number" inputmode="numeric"></div><button class="btn" id="nu-add">Add</button></div>
+      <div id="nu-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-routines">
+    <div class="card"><h2>Workout routines</h2><p class="sub">Build your go-to routines, then log one with a single tap — it goes straight to your Workouts.</p>
+      <div class="addform" style="grid-template-columns:1fr 120px auto"><div class="field"><label>Routine name</label><input id="ro-name" placeholder="Push day, Leg day…"></div><div class="field"><label>Est. minutes</label><input id="ro-min" type="number" inputmode="numeric"></div><button class="btn" id="ro-add">Create</button></div>
+      <div class="field" style="margin-top:9px"><label>Exercises (one per line)</label><textarea id="ro-ex" rows="3" placeholder="Bench press 3x8&#10;Overhead press 3x10&#10;Pull-ups 3x max"></textarea></div>
+    </div>
+    <div id="ro-list"></div>
+  </section>
+
   <section class="panel" id="panel-rewards">
     <div class="hero"><div class="lbl">🔥 Active streak</div><div class="big" id="rw-streak">0 days</div><div class="meta">consecutive days you tracked something</div>
       <div class="mini"><div>Best streak<b id="rw-best">0 days</b></div><div>Badges<b id="rw-count">0</b></div></div></div>
@@ -177,7 +202,7 @@
 <div id="health-print"></div>
 <script src="shared.js"></script>
 <script>
-var DEF={habits:[],water:{goal:8,log:{}},sleep:[],mood:[],workouts:[],weight:[],hgoals:{weight:"",workouts:3,sleep:8,water:8},moodPick:3,bestStreak:0};
+var DEF={habits:[],water:{goal:8,log:{}},sleep:[],mood:[],workouts:[],weight:[],hgoals:{weight:"",workouts:3,sleep:8,water:8},nutrition:{goal:2000,log:[]},routines:[],moodPick:3,bestStreak:0};
 var db=Steady.load("health",DEF);
 var DOW=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
 function todayIdx(){return (new Date().getDay()+6)%7;}
@@ -442,13 +467,44 @@ function renderHReport(){
 S.el("hr-print").onclick=function(){S.el("health-print").innerHTML=buildHealthReport();document.body.classList.add("printing");window.print();};
 window.onafterprint=function(){document.body.classList.remove("printing");};
 
-function renderAll(){renderHabits();renderWater();renderSleep();renderMood();renderWorkouts();renderWeight();renderGoals();renderTrends();renderInsights();renderHReport();renderHome();renderRewards();S.applyPremium();}
+/* nutrition (premium) */
+function renderNutrition(){
+  if(!db.nutrition)db.nutrition={goal:2000,log:[]};
+  var n=db.nutrition,t=S.todayISO();
+  if(!S.el("nu-date").value)S.el("nu-date").value=t;
+  if(document.activeElement!==S.el("nu-goal"))S.el("nu-goal").value=n.goal||"";
+  var todayCal=n.log.filter(function(x){return x.date===t;}).reduce(function(a,b){return a+(Number(b.cal)||0);},0),goal=Number(n.goal)||0;
+  S.el("nu-today").textContent=todayCal+" cal";
+  S.el("nu-goalv").textContent=goal?goal+" cal":"—";
+  var left=S.el("nu-left");left.textContent=goal?(goal-todayCal)+" cal":"—";left.className="val "+(goal&&todayCal>goal?"neg":goal?"pos":"");
+  var l=S.el("nu-list"),recent=n.log.slice().sort(function(a,b){return b.date.localeCompare(a.date)||b.id.localeCompare(a.id);});
+  l.innerHTML=recent.length?"":'<div class="empty">No food logged yet.</div>';
+  recent.slice(0,20).forEach(function(x){var r=document.createElement("div");r.className="row";r.innerHTML='<span class="nm">'+x.name+' <span class="meta">'+x.cal+' cal · '+new Date(x.date+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'</span></span>';var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.nutrition.log=db.nutrition.log.filter(function(y){return y.id!==x.id;});S.save();renderNutrition();};r.appendChild(del);l.appendChild(r);});
+}
+S.el("nu-savegoal").onclick=function(){if(!db.nutrition)db.nutrition={goal:2000,log:[]};db.nutrition.goal=Number(S.val("nu-goal"))||0;S.save();renderNutrition();S.toast("Goal set",1);};
+S.el("nu-add").onclick=function(){if(!db.nutrition)db.nutrition={goal:2000,log:[]};var d=S.val("nu-date")||S.todayISO(),nm=S.val("nu-name");if(!nm)return;db.nutrition.log.push({id:S.uid(),date:d,name:nm,cal:Number(S.val("nu-cal"))||0});S.save();S.clr("nu-name","nu-cal");renderNutrition();S.toast("Added",1);};
+
+/* workout routines (premium) */
+function renderRoutines(){
+  if(!db.routines)db.routines=[];
+  var l=S.el("ro-list");l.innerHTML=db.routines.length?"":'<div class="empty">No routines yet — create one above.</div>';
+  db.routines.forEach(function(r){var c=document.createElement("div");c.className="card";
+    c.innerHTML='<h2 style="margin:0">'+r.name+' <span class="sub" style="font-weight:400;display:inline">· ~'+(Number(r.min)||0)+' min</span></h2>'+
+      (r.ex?'<div style="font-size:13px;color:var(--muted);white-space:pre-line;margin:8px 0 2px">'+r.ex.replace(/</g,"&lt;")+'</div>':'')+
+      '<div style="display:flex;gap:8px;margin-top:9px"><button class="btn sm" data-did="'+r.id+'">✅ Did it today</button><button class="btn ghost sm" data-delr="'+r.id+'" style="border-color:var(--bad);color:var(--bad)">Delete</button></div>';
+    l.appendChild(c);});
+  l.querySelectorAll("[data-did]").forEach(function(b){b.onclick=function(){var r=db.routines.filter(function(x){return x.id===b.getAttribute("data-did");})[0];if(!r)return;db.workouts.push({id:S.uid(),date:S.todayISO(),type:r.name,min:Number(r.min)||0});S.save();renderWorkouts();renderHome();renderRewards();S.confetti();S.toast("Logged "+r.name+"! 💪",1);};});
+  l.querySelectorAll("[data-delr]").forEach(function(b){b.onclick=function(){db.routines=db.routines.filter(function(x){return x.id!==b.getAttribute("data-delr");});S.save();renderRoutines();};});
+}
+S.el("ro-add").onclick=function(){var n=S.val("ro-name");if(!n)return;if(!db.routines)db.routines=[];db.routines.push({id:S.uid(),name:n,min:S.val("ro-min"),ex:S.val("ro-ex")});S.save();S.clr("ro-name","ro-min","ro-ex");renderRoutines();S.toast("Routine created",1);};
+
+function renderAll(){renderHabits();renderWater();renderSleep();renderMood();renderWorkouts();renderWeight();renderGoals();renderTrends();renderInsights();renderHReport();renderNutrition();renderRoutines();renderHome();renderRewards();S.applyPremium();}
 S.el("sl-date").value=S.todayISO();S.el("w-date").value=S.todayISO();S.el("wt-date").value=S.todayISO();
 if(db.moodPick){document.querySelectorAll("#mood-pick button").forEach(b=>b.classList.toggle("on",Number(b.dataset.m)===db.moodPick));}
 S.initShell();
 S.initAccount({name:"steady-health",defaults:DEF,sample:SAMPLE,render:renderAll});
 S.initPremium({title:"Steady Health Premium",desc:"Deeper analytics that turn your logs into real insight.",veil:"See 30-day trends and what's actually moving your mood, sleep and weight.",
-  features:["30-day Trends — sleep, mood & water charts","Insights — mood vs. sleep & workout correlations","Printable weekly health report (PDF)","30-day weight trend with net change","Priority on new tools as they ship"],render:renderAll});
+  features:["🍎 Nutrition — log meals & track daily calories","💪 Routines — build workouts & log in one tap","📄 Printable weekly health report (PDF)","📈 30-day Trends — sleep, mood & water","💡 Insights — what moves your mood, sleep & weight"],render:renderAll});
 renderAll();
 S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Health</h2><p>Habits, water, sleep, mood and workouts — private, and saved only on your device.</p></div><div class="feat"><div class="fi">🔥</div><div><b>Build streaks</b><p>Track daily and keep the chain going.</p></div></div><div class="feat"><div class="fi">🏆</div><div><b>Earn badges</b><p>Milestones unlock as you go.</p></div></div>',sample:SAMPLE,render:renderAll});
 </script>

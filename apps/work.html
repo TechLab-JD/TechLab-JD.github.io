@@ -46,6 +46,8 @@
     <button class="snav" data-panel="reports">📊 Reports<span class="lk">🔒</span></button>
     <button class="snav" data-panel="trends">📈 Trends<span class="lk">🔒</span></button>
     <button class="snav" data-panel="wgoals">🎯 Goals<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="estimate">📝 Estimates<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="followups">📇 Follow-ups<span class="lk">🔒</span></button>
   </div>
   <div class="navgroup"><div class="navhead">You</div>
     <button class="snav" data-panel="rewards">🏆 Rewards</button>
@@ -199,6 +201,28 @@
     <div class="card"><h2>Forecast</h2><p class="sub">Based on your last 3 months of logged income.</p><div id="wg-forecast"></div></div>
   </section>
 
+  <section class="panel locked" id="panel-estimate">
+    <div class="card"><h2>Estimate / quote</h2><p class="sub">Price a job fast and hand the client a clean one-page quote.</p>
+      <div class="grid2">
+        <div class="field"><label>Client</label><input id="es-client" placeholder="Client / business"></div>
+        <div class="field"><label>Job</label><input id="es-job" placeholder="Website build, logo, etc."></div>
+        <div class="field"><label>Est. hours</label><input id="es-hours" type="number" inputmode="decimal"></div>
+        <div class="field"><label>Rate $/hr</label><input id="es-rate" type="number" inputmode="decimal"></div>
+        <div class="field"><label>Materials / extras $</label><input id="es-mat" type="number" inputmode="decimal"></div>
+        <div class="field"><label>Markup %</label><input id="es-markup" type="number" inputmode="decimal" placeholder="0"></div>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap"><button class="btn" id="es-calc">Calculate</button><button class="btn ghost sm" id="es-print">🖨 Print / Save as PDF</button></div>
+    </div>
+    <div class="card" id="es-box" style="display:none"><h2>Quote</h2><div id="es-res"></div></div>
+  </section>
+
+  <section class="panel locked" id="panel-followups">
+    <div class="card"><h2>Client follow-ups</h2><p class="sub">Never drop a lead — track who to reach out to and when.</p>
+      <div class="addform" style="grid-template-columns:1fr 130px 1fr auto"><div class="field"><label>Client</label><input id="fu-client" placeholder="Name / business"></div><div class="field"><label>Follow up on</label><input id="fu-date" type="date"></div><div class="field"><label>Note</label><input id="fu-note" placeholder="Send proposal, check in…"></div><button class="btn" id="fu-add">Add</button></div>
+      <div id="fu-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
   <section class="panel" id="panel-rewards">
     <div class="hero"><div class="lbl">All-time</div><div class="big" id="rw-total">$0</div><div class="meta">total earned, logged in Steady Work</div>
       <div class="mini"><div>Clients<b id="rw-clients">0</b></div><div>Badges<b id="rw-count">0</b></div></div></div>
@@ -213,7 +237,7 @@
 <div id="invoice-print"></div>
 <script src="shared.js"></script>
 <script>
-var DEF={invoice:{from:"",to:"",num:"",date:"",due:"",tax:0,notes:"",items:[{desc:"",qty:"",rate:""}]},invoices:[],time:[],income:{goal:0,entries:[]},clients:[],projects:[],expenses:[],taxPct:25,wgoal:{rate:""}};
+var DEF={invoice:{from:"",to:"",num:"",date:"",due:"",tax:0,notes:"",items:[{desc:"",qty:"",rate:""}]},invoices:[],time:[],income:{goal:0,entries:[]},clients:[],projects:[],expenses:[],taxPct:25,wgoal:{rate:""},followups:[]};
 var db=Steady.load("work",DEF);var S=Steady;
 function num(v){var n=parseFloat(String(v).replace(/[^0-9.\-]/g,""));return isNaN(n)?0:n;}
 function monthName(){return new Date().toLocaleDateString("en-US",{month:"long",year:"numeric"});}
@@ -500,14 +524,44 @@ function renderWGoals(){
 }
 S.el("wg-save").onclick=function(){db.income.goal=S.val("wg-target");if(!db.wgoal)db.wgoal={};db.wgoal.rate=S.val("wg-rate");S.save();renderWGoals();renderIncome();S.toast("Saved",1);};
 
-function renderAll(){renderInvoice();renderHistory();renderProjects();renderTime();renderIncome();renderExpenses();renderTaxes();renderClients();renderReports();renderTrends();renderWGoals();renderHome();renderRewards();S.applyPremium();}
+/* estimate / quote (premium) */
+function esFigures(){var hours=num(S.val("es-hours")),rate=num(S.val("es-rate")),mat=num(S.val("es-mat")),markup=num(S.val("es-markup")),labor=hours*rate,sub=labor+mat,total=sub*(1+markup/100);return {client:S.val("es-client"),job:S.val("es-job"),hours:hours,rate:rate,mat:mat,markup:markup,labor:labor,sub:sub,total:total};}
+S.el("es-calc").onclick=function(){var f=esFigures();S.el("es-box").style.display="block";
+  function line(k,v){return '<div class="row"><span class="nm">'+k+'</span><span class="amt">'+v+'</span></div>';}
+  S.el("es-res").innerHTML=line("Labor ("+f.hours+" hr × "+S.money(f.rate)+")",S.money(f.labor))+(f.mat?line("Materials / extras",S.money(f.mat)):"")+(f.markup?line("Markup ("+f.markup+"%)",S.money(f.total-f.sub)):"")+'<div class="row" style="border-top:2px solid var(--line);margin-top:4px;padding-top:8px"><span class="nm" style="font-weight:800">Total quote</span><span class="amt" style="font-size:16px">'+S.money(f.total)+'</span></div>';};
+function buildEstimateHTML(){var f=esFigures();
+  function row(k,v){return '<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #eee;font-size:13px"><span>'+k+'</span><span>'+v+'</span></div>';}
+  return '<div style="font-family:Arial,sans-serif;color:#111;max-width:640px;margin:0 auto;padding:20px">'+
+    '<h1 style="font-size:24px;color:#132536;margin:0 0 2px">Estimate</h1><div style="color:#555;font-size:13px;margin-bottom:16px">'+(f.client?"For: "+f.client+" · ":"")+new Date().toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"})+'</div>'+
+    (f.job?'<p style="font-size:14px;margin:0 0 12px"><b>Job:</b> '+f.job+'</p>':"")+
+    row("Labor ("+f.hours+" hr × "+S.money(f.rate)+")",S.money(f.labor))+(f.mat?row("Materials / extras",S.money(f.mat)):"")+(f.markup?row("Markup ("+f.markup+"%)",S.money(f.total-f.sub)):"")+
+    '<div style="display:flex;justify-content:space-between;padding:8px 0;border-top:2px solid #132536;font-size:16px;margin-top:4px"><b>Total</b><b>'+S.money(f.total)+'</b></div>'+
+    '<p style="font-size:11px;color:#777;margin-top:16px">This is an estimate, not a final invoice — the total may change with scope.</p>'+
+    '<p style="font-size:10px;color:#999;margin-top:20px">Made with Steady Work · techlab-jd.github.io/apps</p></div>';}
+S.el("es-print").onclick=function(){S.el("invoice-print").innerHTML=buildEstimateHTML();document.body.classList.add("printing");window.print();};
+/* client follow-ups (premium) */
+function daysToW(d){var t=new Date();t.setHours(0,0,0,0);return Math.round((new Date(d+"T00:00:00")-t)/86400000);}
+function renderFollowups(){
+  if(!db.followups)db.followups=[];
+  var l=S.el("fu-list"),fu=db.followups.slice().sort(function(a,b){if(a.done!==b.done)return a.done?1:-1;return (a.date||"").localeCompare(b.date||"");});
+  l.innerHTML=fu.length?"":'<div class="empty">No follow-ups yet — add one so nothing slips.</div>';
+  fu.forEach(function(x){var r=document.createElement("div");r.className="row";
+    var tag="";if(x.date&&!x.done){var dd=daysToW(x.date);tag='<span class="pill '+(dd<0?"warn":dd<=2?"":"good")+'">'+(dd<0?Math.abs(dd)+"d overdue":dd===0?"today":"in "+dd+"d")+'</span>';}
+    r.innerHTML='<span class="nm"'+(x.done?' style="text-decoration:line-through;opacity:.6"':'')+'>'+x.client+' <span class="meta">'+(x.note||"")+(x.date?" · "+new Date(x.date+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"}):"")+'</span></span>'+tag;
+    var done=document.createElement("button");done.className="btn ghost sm";done.textContent=x.done?"Undo":"✓ Done";done.onclick=function(){x.done=!x.done;S.save();renderFollowups();};
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.followups=db.followups.filter(function(y){return y.id!==x.id;});S.save();renderFollowups();};
+    r.appendChild(done);r.appendChild(del);l.appendChild(r);});
+}
+S.el("fu-add").onclick=function(){var c=S.val("fu-client");if(!c)return;if(!db.followups)db.followups=[];db.followups.push({id:S.uid(),client:c,date:S.val("fu-date"),note:S.val("fu-note"),done:false});S.save();S.clr("fu-client","fu-note");renderFollowups();S.toast("Added",1);};
+
+function renderAll(){renderInvoice();renderHistory();renderProjects();renderTime();renderIncome();renderExpenses();renderTaxes();renderClients();renderReports();renderTrends();renderWGoals();renderFollowups();renderHome();renderRewards();S.applyPremium();}
 ["iv-date","t-date","in-date"].forEach(id=>{if(!S.el(id).value)S.el(id).value=S.todayISO();});
 if(!S.el("rp-month").value)S.el("rp-month").value=tm();
 S.el("rp-month").onchange=renderReports;
 S.initShell();
 S.initAccount({name:"steady-work",defaults:DEF,sample:SAMPLE,render:renderAll});
 S.initPremium({title:"Steady Work Premium",desc:"The business-owner tools: reports and trends.",veil:"Unlock printable monthly reports and your 6-month income trends.",
-  features:["Monthly business report — P&L, margin & effective rate","Print or save any month's report as PDF","Trends — 6-month income & income-by-client","Income planner — target, hours-to-go, pace & forecast","Priority on new freelancer tools"],render:renderAll});
+  features:["📝 Estimates — price a job & print a clean quote","📇 Follow-ups — never drop a lead","🎯 Income planner — target, hours-to-go & forecast","📊 Monthly business report (P&L) — print as PDF","📈 Trends — 6-month income & by-client"],render:renderAll});
 renderAll();
 S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Work</h2><p>Invoices, billable time, income goals and clients — private, and saved on your device.</p></div><div class="feat"><div class="fi">🧾</div><div><b>Look professional</b><p>Build invoices and print or save them as PDF.</p></div></div><div class="feat"><div class="fi">🎯</div><div><b>Hit your number</b><p>Track income against a monthly goal.</p></div></div>',sample:SAMPLE,render:renderAll});
 </script>
