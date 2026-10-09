@@ -299,6 +299,69 @@ def build_despair():
     except Exception as e:
         print("despair: skipped (" + str(e)[:70] + "), keeping existing file")
 
+def build_fiscal():
+    try:
+        FY = 2024
+        def getj(url):
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            return json.loads(urllib.request.urlopen(req, timeout=40).read().decode())
+        def fred_dollars(sid):
+            return {y: round(sum(v) / len(v) * 1e9) for y, v in fetch_csv(sid).items()}
+        def amtf(r, f):
+            try: return float(r[f])
+            except Exception: return None
+        # spending by function (NET, Treasury MTS table 9)
+        FUNCS = {'National Defense', 'International Affairs', 'General Science, Space, and Technology', 'Energy', 'Natural Resources and Environment', 'Agriculture', 'Commerce and Housing Credit', 'Transportation', 'Community and Regional Development', 'Education, Training, Employment, and Social Services', 'Health', 'Medicare', 'Income Security', 'Social Security', 'Veterans Benefits and Services', 'Administration of Justice', 'General Government', 'Net Interest'}
+        t9 = getj("https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9?filter=record_fiscal_year:eq:%d,record_calendar_month:eq:09&fields=classification_desc,current_fytd_rcpt_outly_amt,sequence_level_nbr&page%%5Bsize%%5D=60" % FY)
+        funcs, intl = [], None
+        for r in t9.get("data", []):
+            nm = r["classification_desc"].strip()
+            if nm in FUNCS:
+                v = amtf(r, "current_fytd_rcpt_outly_amt")
+                if v is not None:
+                    funcs.append({"name": nm, "amount": round(v)})
+                    if nm == "International Affairs": intl = round(v)
+        funcs.sort(key=lambda x: -x["amount"])
+        # receipts by source (Treasury MTS table 4)
+        t4 = getj("https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_4?filter=record_fiscal_year:eq:%d,record_calendar_month:eq:09&fields=classification_desc,parent_id,current_fytd_net_rcpt_amt,sequence_level_nbr&page%%5Bsize%%5D=200" % FY)
+        rows = t4.get("data", [])
+        totals_map = {}
+        for r in rows:
+            d = r["classification_desc"]
+            if d.startswith("Total -- "):
+                v = amtf(r, "current_fytd_net_rcpt_amt")
+                if v is not None: totals_map[d[len("Total -- "):].rstrip(":")] = v
+        receipts_total = totals_map.get("Receipts")
+        sources = []
+        for r in rows:
+            if r.get("sequence_level_nbr") != "1": continue
+            nm = r["classification_desc"].rstrip(":")
+            if nm.startswith("Total"): continue
+            a = amtf(r, "current_fytd_net_rcpt_amt")
+            if a is None: a = totals_map.get(nm)
+            if a and a > 0: sources.append({"name": nm, "amount": round(a)})
+        sources.sort(key=lambda x: -x["amount"])
+        fyfsd = fetch_csv("FYFSD")  # {year: [value in $M]}
+        dv = fyfsd.get(FY, [-1815377.0])
+        deficit = abs(round((sum(dv) / len(dv)) * 1e6))
+        tot_rc = round(receipts_total) if receipts_total else sum(s["amount"] for s in sources)
+        if funcs and sources:
+            json.dump({"generated": datetime.date.today().isoformat(), "fy": FY,
+                       "totals": {"outlays": tot_rc + deficit, "receipts": tot_rc, "deficit": deficit},
+                       "note": "Federal outlays by function (NET) and receipts by source, from the U.S. Treasury Monthly Treasury Statement; deficit from FRED. Fiscal year " + str(FY) + ".",
+                       "spending": funcs, "receipts": sources},
+                      open(os.path.join(HERE, "budget.json"), "w"), separators=(",", ":"))
+            print("budget: %d functions, %d sources" % (len(funcs), len(sources)))
+        json.dump({"generated": datetime.date.today().isoformat(),
+                   "note": "Trade (exports, imports, balance) and defense spending from FRED/U.S. BEA; international-affairs outlays from the Treasury MTS.",
+                   "intl_affairs": {"amount": intl, "fy": FY},
+                   "trade": {"exports": fred_dollars("EXPGS"), "imports": fred_dollars("IMPGS"), "balance": fred_dollars("NETEXP")},
+                   "defense": fred_dollars("FDEFX")},
+                  open(os.path.join(HERE, "foreign.json"), "w"), separators=(",", ":"))
+        print("foreign: trade + defense written")
+    except Exception as e:
+        print("fiscal: skipped (" + str(e)[:70] + "), keeping existing files")
+
 if __name__ == "__main__":
     build_national()
     build_states()
@@ -306,4 +369,5 @@ if __name__ == "__main__":
     build_immigration()
     build_distribution()
     build_despair()
+    build_fiscal()
     print("refresh complete", datetime.datetime.now().isoformat())

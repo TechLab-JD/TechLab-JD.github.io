@@ -341,6 +341,37 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
     <p class="srcnote mono" id="imm-src" style="margin-top:12px"></p>
   </section>
 
+  <!-- TAX DOLLARS -->
+  <section>
+    <div class="sectlabel mono">// TAX DOLLARS</div>
+    <h2 class="sec">Where your tax dollars go</h2>
+    <p class="sub">The federal budget: what the government spends your taxes on (by budget function), and where the money comes from (by source). The gap between the two is the deficit.</p>
+    <div class="grid2">
+      <div class="panel">
+        <h2 style="font-size:16px;color:#F4F1E6">Where it goes — spending</h2>
+        <div class="chartbox" style="height:440px"><canvas id="spendChart"></canvas></div>
+      </div>
+      <div class="panel">
+        <h2 style="font-size:16px;color:#F4F1E6">Where it comes from — taxes</h2>
+        <div class="chartbox" style="height:440px"><canvas id="receiptChart"></canvas></div>
+      </div>
+    </div>
+    <div class="grid3" id="budget-stats" style="margin-top:16px"></div>
+    <p class="srcnote mono" id="budget-src" style="margin-top:12px"></p>
+  </section>
+
+  <!-- FOREIGN AFFAIRS -->
+  <section>
+    <div class="sectlabel mono">// FOREIGN AFFAIRS</div>
+    <h2 class="sec">Foreign affairs &amp; trade</h2>
+    <p class="sub">The U.S. and the world: what we buy and sell abroad, and what we spend on defense and diplomacy. Dollars are nominal (not inflation-adjusted).</p>
+    <div class="panel">
+      <div class="chartbox"><canvas id="tradeChart"></canvas></div>
+      <div class="grid3" id="foreign-stats" style="margin-top:16px"></div>
+    </div>
+    <p class="srcnote mono" id="foreign-src" style="margin-top:12px"></p>
+  </section>
+
   <!-- POLICY FEED (live) -->
   <section>
     <div class="sectlabel mono">// POLICY · LIVE</div>
@@ -879,6 +910,48 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
     document.getElementById('state-detail').querySelector('.sc-hint').textContent='Hover or tap a state to see its stats and grade. '+Object.keys(ST).length+' states graded, '+data.generated+'.';
     document.getElementById('state-src').textContent=data.notes+' State grade = income, poverty, unemployment & home-price-to-income, normalized across states.';
   }).catch(e=>{document.getElementById('usmap').innerHTML='<div class="empty" style="color:var(--faint);padding:30px">Couldn’t load the state map data.</div>';console.error(e);});
+})();
+
+/* ===== WHERE TAX DOLLARS GO (USAspending + Treasury) ===== */
+(function(){
+  const TX='#A9AFC4', GRID='rgba(36,49,80,.5)';
+  const fmtM=v=>{const n=Math.abs(v); return (v<0?'−':'')+(n>=1e12?'$'+(n/1e12).toFixed(2)+'T':'$'+(n/1e9).toFixed(0)+'B');};
+  fetch('data/budget.json').then(r=>r.json()).then(d=>{
+    const bar=(canvas,items,color)=>new Chart(canvas,{type:'bar',data:{labels:items.map(i=>i.name),datasets:[{data:items.map(i=>i.amount),backgroundColor:color,borderRadius:4}]},
+      options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+fmtM(c.parsed.x)}}},
+        scales:{x:{grid:{color:GRID},ticks:{color:TX,font:{family:'JetBrains Mono',size:10},callback:v=>fmtM(v)}},
+          y:{grid:{display:false},ticks:{color:TX,font:{family:'JetBrains Mono',size:10},autoSkip:false}}}}});
+    bar(document.getElementById('spendChart'), d.spending, 'rgba(232,163,60,.82)');
+    bar(document.getElementById('receiptChart'), d.receipts, 'rgba(79,192,141,.82)');
+    const T=d.totals;
+    const stat=(l,v,c)=>'<div class="stat"><div class="label">'+l+'</div><div class="val"'+(c?' style="color:'+c+'"':'')+'>'+v+'</div></div>';
+    document.getElementById('budget-stats').innerHTML=stat('Total outlays · FY'+d.fy,fmtM(T.outlays))+stat('Total tax receipts',fmtM(T.receipts))+stat('The gap (deficit)',fmtM(T.deficit),'#d66a5a');
+    document.getElementById('budget-src').textContent=d.note+' Retrieved '+d.generated+'.';
+  }).catch(e=>console.error(e));
+})();
+
+/* ===== FOREIGN AFFAIRS & TRADE (FRED + USAspending) ===== */
+(function(){
+  const TX='#A9AFC4', GRID='rgba(36,49,80,.5)';
+  const fmtM=v=>{const n=Math.abs(v); return (v<0?'−':'')+(n>=1e12?'$'+(n/1e12).toFixed(2)+'T':'$'+(n/1e9).toFixed(0)+'B');};
+  fetch('data/foreign.json').then(r=>r.json()).then(d=>{
+    const T=d.trade, years=Object.keys(T.exports).map(Number).sort((a,b)=>a-b);
+    const mk=(obj,color,lbl)=>({label:lbl,data:years.map(y=>obj[String(y)]!=null?obj[String(y)]:null),borderColor:color,backgroundColor:color+'1f',borderWidth:2,pointRadius:0,pointHoverRadius:4,tension:.2,spanGaps:true,fill:false});
+    new Chart(document.getElementById('tradeChart'),{type:'line',data:{labels:years.map(String),datasets:[mk(T.exports,'#4FC08D','Exports'),mk(T.imports,'#d66a5a','Imports'),mk(T.balance,'#E8A33C','Trade balance')]},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+        plugins:{legend:{labels:{color:TX,font:{family:'JetBrains Mono',size:10},boxWidth:10}},termBands:{show:false},recBands:{show:false},
+          tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+fmtM(c.parsed.y)}}},
+        scales:{x:{grid:{color:GRID},ticks:{color:TX,maxTicksLimit:9,font:{family:'JetBrains Mono'}}},
+          y:{grid:{color:GRID},ticks:{color:TX,font:{family:'JetBrains Mono'},callback:v=>fmtM(v)}}}}});
+    const ly=Math.max.apply(null,years);
+    const stat=(l,v,c)=>'<div class="stat"><div class="label">'+l+'</div><div class="val"'+(c?' style="color:'+c+'"':'')+'>'+v+'</div></div>';
+    document.getElementById('foreign-stats').innerHTML=
+      stat('Trade balance · '+ly,fmtM(T.balance[String(ly)]),'#d66a5a')+
+      stat('Defense spending · '+ly,fmtM(d.defense[String(ly)]))+
+      stat('Foreign affairs · FY'+d.intl_affairs.fy,fmtM(d.intl_affairs.amount));
+    document.getElementById('foreign-src').textContent=d.note+' Retrieved '+d.generated+'.';
+  }).catch(e=>console.error(e));
 })();
 
 /* ===== DEATHS OF DESPAIR & ADDICTION (CDC) ===== */
