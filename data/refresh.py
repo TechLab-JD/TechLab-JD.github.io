@@ -314,14 +314,30 @@ def build_despair():
             prov_years = sorted(y for y in prov if int(y) >= 2020 and suicide.get(y) == prov[y])
         except Exception as _e:
             print("despair: suicide extension skipped (" + str(_e)[:50] + ")")
+        # 2023: CDC's published annual total. The queryable provisional feeds above have
+        # complete years only through 2022; replace when a Socrata source carries 2023.
+        if "2023" not in suicide:
+            suicide["2023"] = 49316
+        # extend OVERDOSE back to 1999 with NCHS final drug-poisoning mortality
+        # (the provisional xkb8-kh2a feed only begins ~2015).
+        try:
+            hist = cdc("https://data.cdc.gov/resource/xbxb-epbu.json?state=United%20States&sex=Both%20Sexes&age_group=All%20Ages&race_and_hispanic_origin=All%20Races-All%20Origins&$select=year,deaths&$order=year&$limit=100")
+            for r in hist:
+                y, v = r.get("year"), r.get("deaths")
+                if y and v and int(y) < 2015 and y not in overdose:
+                    overdose[y] = int(v)
+        except Exception as _e:
+            print("despair: overdose history skipped (" + str(_e)[:50] + ")")
         if not overdose or not suicide:
             print("despair: no data, keeping existing"); return
         snote = "Suicide = final counts 1999-2019 (NCHS)"
         if prov_years:
-            snote += ", plus provisional monthly counts for " + prov_years[0] + "-" + prov_years[-1]
+            snote += ", provisional " + prov_years[0] + "-" + prov_years[-1]
+        if "2023" in suicide:
+            snote += ", plus CDC's published 2023 total"
         snote += "."
         out = {"generated": datetime.date.today().isoformat(),
-               "note": "Deaths of despair. Drug overdose = provisional 12-month-ending counts (Dec). " + snote + " Source: CDC / National Center for Health Statistics (data.cdc.gov: bi63-dtpu, bxq8-mugm, 9dzk-mvmi). Shown for context, not folded into the grade.",
+               "note": "Deaths of despair. Overdose = NCHS final counts 1999-2014, then provisional 12-month-ending (Dec) counts. " + snote + " Source: CDC / NCHS (data.cdc.gov: xkb8-kh2a, xbxb-epbu, bi63-dtpu, bxq8-mugm, 9dzk-mvmi). Shown for context, not folded into the grade.",
                "series": {"overdose": {"label": "Drug overdose deaths", "years": {k: overdose[k] for k in sorted(overdose)}},
                           "suicide": {"label": "Suicide deaths", "years": {k: suicide[k] for k in sorted(suicide, key=int)}}}}
         json.dump(out, open(os.path.join(HERE, "despair.json"), "w"), separators=(",", ":"))
