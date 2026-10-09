@@ -121,6 +121,22 @@ details.method ul{margin:8px 0 8px 18px}
 .statecard .sc-hint{color:var(--faint);font-size:12.5px}
 .maplegend{display:flex;gap:4px;align-items:center;flex-wrap:wrap;margin-top:14px;font-size:11.5px;color:var(--dim);font-family:'JetBrains Mono'}
 .maplegend .lg{width:26px;height:12px;display:inline-block;border-radius:2px}
+.polsearch{background:var(--surface2);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:8px 15px;font:inherit;font-size:13.5px;min-width:260px;flex:1;max-width:340px}
+.polsearch::placeholder{color:var(--faint)}
+.polfeed{display:flex;flex-direction:column}
+.politem{display:block;padding:15px 2px;border-top:1px solid var(--line-soft);text-decoration:none;color:var(--text);transition:.12s}
+.politem:first-child{border-top:0}
+.politem:hover{background:rgba(232,163,60,.04)}
+.politem .pmeta{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:6px}
+.polbadge{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.04em;border-radius:6px;padding:2px 8px;text-transform:uppercase;font-weight:600}
+.polbadge.eo{background:rgba(232,163,60,.16);color:var(--amber);border:1px solid rgba(232,163,60,.4)}
+.polbadge.rule{background:rgba(79,192,141,.14);color:var(--steady);border:1px solid rgba(79,192,141,.4)}
+.polbadge.prule{background:rgba(90,134,214,.14);color:#86a7ef;border:1px solid rgba(90,134,214,.4)}
+.politem .pdate{font-family:'JetBrains Mono';font-size:12px;color:var(--faint)}
+.politem .ptitle{font-size:15px;font-weight:600;color:#F4F1E6;line-height:1.4}
+.politem:hover .ptitle{color:var(--amber)}
+.politem .pagency{font-size:12px;color:var(--dim);margin-top:4px}
+.politem .pabstract{font-size:13px;color:var(--dim);margin-top:7px;line-height:1.6}
 .srcgrid{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));margin-top:6px}
 .srccard{background:var(--surface);border:1px solid var(--line-soft);border-radius:10px;padding:13px 15px}
 .srccard .sname{font-size:14px;color:var(--text);font-weight:600}
@@ -256,6 +272,20 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
     <p class="srcnote mono" id="state-src" style="margin-top:12px"></p>
   </section>
 
+  <!-- POLICY FEED (live) -->
+  <section>
+    <div class="sectlabel mono">// POLICY · LIVE</div>
+    <h2 class="sec">What's coming through Washington</h2>
+    <p class="sub">A live feed from the <b>Federal Register</b> — the U.S. government's official daily journal. Executive orders and new federal regulations, newest first, pulled straight from the source every time you load this page. Search to filter by topic.</p>
+    <div class="panel">
+      <div class="controls">
+        <div class="chips" id="pol-chips"></div>
+        <input id="pol-search" class="polsearch" placeholder="Search policies — housing, AI, energy, taxes…">
+      </div>
+      <div class="polfeed" id="pol-feed"></div>
+    </div>
+  </section>
+
   <!-- SOURCES -->
   <section>
     <div class="sectlabel mono">// SOURCES</div>
@@ -348,6 +378,12 @@ function gradeFor(score){
   for(const [t,g] of b) if(score>=t) return g; return 'F';
 }
 function gradeColor(score){ if(score>=80)return COL.steady; if(score>=65)return '#9ccf5a'; if(score>=50)return COL.amber; if(score>=40)return '#e0843c'; return COL.rep; }
+// grade on a CURVE: letter/color come from a value's percentile rank within the set it's compared against
+function pctRank(score,arr){const s=arr.filter(v=>v!=null).sort((a,b)=>a-b);return s.length?s.filter(v=>v<=score).length/s.length:0;}
+function curveGrade(score,arr){ if(score==null)return'—'; const p=pctRank(score,arr);
+  const b=[[.95,'A+'],[.88,'A'],[.80,'A-'],[.70,'B+'],[.60,'B'],[.50,'B-'],[.40,'C+'],[.30,'C'],[.22,'C-'],[.14,'D+'],[.07,'D'],[.03,'D-']];
+  for(const[t,g]of b)if(p>=t)return g; return'F'; }
+function curveColor(score,arr){ return score==null?'#2a3450':gradeColor(pctRank(score,arr)*100); }
 
 // normalize a metric's value to 0..100 across its own history, oriented so higher=better
 function normMap(key){
@@ -376,7 +412,8 @@ function fmtV(key,v){ return v==null?'—':F[METABYKEY[key].fmt](v); }
 
 function renderGradeHero(){
   const ys=Object.keys(INDEX).map(Number).sort((a,b)=>a-b), ly=ys[ys.length-1], sc=INDEX[ly];
-  const el=document.getElementById('grade-letter'); el.textContent=gradeFor(sc); el.style.color=gradeColor(sc);
+  const arr=Object.values(INDEX);
+  const el=document.getElementById('grade-letter'); el.textContent=curveGrade(sc,arr); el.style.color=curveColor(sc,arr);
   document.getElementById('grade-head').textContent='Quality-of-Life grade · '+ly;
   // rank among history
   const sorted=[...ys].sort((a,b)=>INDEX[b]-INDEX[a]); const rank=sorted.indexOf(ly)+1;
@@ -468,10 +505,11 @@ function drawIndex(){
   const ys=Object.keys(INDEX).map(Number).sort((a,b)=>a-b);
   const pts=ys.map(y=>INDEX[y]);
   const data={labels:ys.map(String),datasets:[{label:'Index',data:pts,borderColor:COL.amber,borderWidth:2.6,pointRadius:0,pointHoverRadius:5,tension:.25,fill:true,backgroundColor:'rgba(232,163,60,.10)',
-    segment:{borderColor:ctx=>gradeColor(pts[ctx.p1DataIndex])}}]};
+    segment:{borderColor:ctx=>curveColor(pts[ctx.p1DataIndex],pts)}}]};
   const opts=baseLineOpts('idx');
-  opts.scales.y.min=0;opts.scales.y.max=100;opts.plugins.termBands.show=true;opts.plugins.recBands.show=true;
-  opts.plugins.tooltip.callbacks.label=c=>' index '+c.parsed.y+'  →  '+gradeFor(c.parsed.y);
+  opts.scales.y.min=Math.max(0,Math.floor(Math.min(...pts)/5)*5-5);opts.scales.y.max=Math.min(100,Math.ceil(Math.max(...pts)/5)*5+5);
+  opts.plugins.termBands.show=true;opts.plugins.recBands.show=true;
+  opts.plugins.tooltip.callbacks.label=c=>' index '+c.parsed.y+'  →  grade '+curveGrade(c.parsed.y,pts);
   indexChart=new Chart(document.getElementById('indexChart'),{type:'line',data,options:opts});
 }
 
@@ -530,7 +568,7 @@ function renderMethod(){
     '<li>Each indicator is <b>normalized</b> to 0–100 across its own full history — the best year on record scores 100, the worst scores 0.</li>'+
     '<li>Indicators where <b>lower is better</b> (unemployment, inflation, poverty, home-price-to-income) are flipped so higher always means better quality of life.</li>'+
     '<li>Each year\'s score is the <b>weighted average</b> of the indicators available that year (a year needs at least 6, and both income and housing-affordability data, to be graded — so the index runs from 1984 on).</li>'+
-    '<li>Letter grades are a <b>curve against U.S. history</b>: an "A" means a year near the top of everything on record, not an absolute ideal.</li>'+
+    '<li>Letter grades are a <b>curve</b>: a year is graded by where its score ranks among all years (an "A" is roughly the top tenth on record, an "F" the bottom). So grades are relative to U.S. history, not an absolute ideal — the best year on record earns an A even though no year is perfect on every measure.</li>'+
     '<li>The current year ('+PARTIAL+') is <b>year-to-date and partial</b>, so it\'s shown on the trend charts (dashed) but <b>not graded</b>.</li>'+
     '</ul>'+
     '<p><b>Indicators used:</b> '+idxM.map(m=>m.label+' ('+(m.good>0?'higher better':'lower better')+')').join('; ')+'.</p>'+
@@ -616,17 +654,17 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
     let t=(mx===mn)?50:(s[curMap]-mn)/(mx-mn)*100; if(m.good<0)t=100-t; return t;
   }
   function colorFor(fp){
-    const sc= curMap==='grade'? scores[fp] : normVal(fp);
-    return sc==null? '#2a3450' : gradeColor(sc);
+    if(curMap==='grade') return curveColor(scores[fp], Object.values(scores));
+    const sc=normVal(fp); return sc==null? '#2a3450' : gradeColor(sc);
   }
   function detail(fp){
     const s=ST[fp]; if(!s){return;}
-    const sc=scores[fp], g=gradeFor(sc);
+    const arr=Object.values(scores), sc=scores[fp], g=curveGrade(sc,arr);
     const box=document.getElementById('state-detail');
     const row=(k,v)=>'<div class="sc-row"><span>'+k+'</span><span class="v">'+v+'</span></div>';
-    box.innerHTML='<div class="sc-grade" style="color:'+gradeColor(sc)+'">'+g+'</div>'+
+    box.innerHTML='<div class="sc-grade" style="color:'+curveColor(sc,arr)+'">'+g+'</div>'+
       '<div class="sc-name">'+s.name+'</div>'+
-      '<div class="sc-hint" style="margin-bottom:10px">QoL grade '+g+' · index '+sc+'/100 · ranks #'+(Object.values(scores).filter(x=>x>sc).length+1)+' of 51</div>'+
+      '<div class="sc-hint" style="margin-bottom:10px">QoL grade '+g+' · ranks #'+(arr.filter(x=>x>sc).length+1)+' of '+arr.length+'</div>'+
       row('Median household income', s.income!=null?'$'+Math.round(s.income).toLocaleString():'—')+
       row('Poverty rate', s.poverty!=null?s.poverty.toFixed(1)+'%':'—')+
       row('Unemployment', s.unemployment!=null?s.unemployment.toFixed(1)+'%':'—')+
@@ -645,9 +683,10 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
   }
   function renderRank(){
     const rows=Object.entries(ST).filter(([fp])=>scores[fp]!=null).sort((a,b)=>scores[b[0]]-scores[a[0]]);
+    const arr=Object.values(scores);
     let h='<tr><th>#</th><th>State</th><th class="r">Grade</th><th class="r">Median income</th><th class="r">Poverty</th><th class="r">Unemployment</th><th class="r hideSm">Price÷income</th></tr>';
     rows.forEach(([fp,s],i)=>{const sc=scores[fp];h+='<tr><td class="mono" style="color:var(--faint)">'+(i+1)+'</td><td>'+s.name+'</td>'+
-      '<td class="r" style="color:'+gradeColor(sc)+';font-weight:700">'+gradeFor(sc)+'</td>'+
+      '<td class="r" style="color:'+curveColor(sc,arr)+';font-weight:700">'+curveGrade(sc,arr)+'</td>'+
       '<td class="r">$'+Math.round(s.income).toLocaleString()+'</td>'+
       '<td class="r">'+s.poverty.toFixed(1)+'%</td><td class="r">'+s.unemployment.toFixed(1)+'%</td>'+
       '<td class="r hideSm">'+(s.afford!=null?s.afford.toFixed(1)+'×':'—')+'</td></tr>';});
@@ -675,6 +714,45 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
     document.getElementById('state-detail').querySelector('.sc-hint').textContent='Hover or tap a state to see its stats and grade. '+Object.keys(ST).length+' states graded, '+data.generated+'.';
     document.getElementById('state-src').textContent=data.notes+' State grade = income, poverty, unemployment & home-price-to-income, normalized across states.';
   }).catch(e=>{document.getElementById('usmap').innerHTML='<div class="empty" style="color:var(--faint);padding:30px">Couldn’t load the state map data.</div>';console.error(e);});
+})();
+
+/* ===== POLICY FEED: live from the Federal Register API ===== */
+(function(){
+  const CATS=[
+    {key:'eo',    label:'Executive orders', badge:'eo',    cond:'conditions[type][]=PRESDOCU&conditions[presidential_document_type][]=executive_order'},
+    {key:'rule',  label:'New rules',        badge:'rule',  cond:'conditions[type][]=RULE'},
+    {key:'prule', label:'Proposed rules',   badge:'prule', cond:'conditions[type][]=PRORULE'},
+  ];
+  const CM={}; CATS.forEach(c=>CM[c.key]=c);
+  let cur='eo', q='', timer;
+  const feed=document.getElementById('pol-feed');
+  function esc(s){return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+  function fmtDate(s){try{return new Date(s+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});}catch(e){return s;}}
+  function render(items){
+    const c=CM[cur];
+    if(!items.length){feed.innerHTML='<div class="empty" style="color:var(--faint);padding:24px">No '+c.label.toLowerCase()+(q?' matching “'+esc(q)+'”':'')+' found.</div>';return;}
+    feed.innerHTML=items.map(it=>{
+      const ag=(it.agency_names||[]).slice(0,2).join(' · ');
+      const ab=it.abstract?('<div class="pabstract">'+esc(it.abstract.slice(0,240))+(it.abstract.length>240?'…':'')+'</div>'):'';
+      const label=c.key==='eo'?'Executive Order':c.key==='rule'?'Final Rule':'Proposed Rule';
+      return '<a class="politem" href="'+esc(it.html_url)+'" target="_blank" rel="noopener">'+
+        '<div class="pmeta"><span class="polbadge '+c.badge+'">'+label+'</span><span class="pdate">'+fmtDate(it.publication_date)+'</span></div>'+
+        '<div class="ptitle">'+esc(it.title)+'</div>'+
+        (ag?'<div class="pagency">'+esc(ag)+'</div>':'')+ab+'</a>';
+    }).join('');
+  }
+  function load(){
+    const c=CM[cur];
+    let url='https://www.federalregister.gov/api/v1/documents.json?per_page=20&order=newest&'+c.cond+
+      '&fields[]=title&fields[]=publication_date&fields[]=abstract&fields[]=html_url&fields[]=agency_names&fields[]=type';
+    if(q) url+='&conditions[term]='+encodeURIComponent(q);
+    feed.innerHTML='<div class="empty" style="color:var(--faint);padding:24px">Loading live from federalregister.gov…</div>';
+    fetch(url).then(r=>r.json()).then(d=>render(d.results||[])).catch(e=>{feed.innerHTML='<div class="empty" style="color:var(--faint);padding:24px">Couldn’t reach the Federal Register right now — <a href="https://www.federalregister.gov/documents/current" target="_blank" rel="noopener">view it directly →</a></div>';});
+  }
+  const chips=document.getElementById('pol-chips');
+  CATS.forEach((c,i)=>{const b=document.createElement('button');b.className='chip'+(i===0?' active':'');b.textContent=c.label;b.onclick=()=>{cur=c.key;[...chips.children].forEach(x=>x.classList.remove('active'));b.classList.add('active');load();};chips.appendChild(b);});
+  document.getElementById('pol-search').oninput=function(){q=this.value.trim();clearTimeout(timer);timer=setTimeout(load,400);};
+  load();
 })();
 </script>
 </body>
