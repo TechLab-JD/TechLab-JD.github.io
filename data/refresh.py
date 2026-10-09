@@ -46,6 +46,9 @@ NATIONAL = {
   "consumer_debt": ("TOTALSL", "Consumer credit (outstanding)", "$ millions", "FRED / Federal Reserve"),
   "co2": ("EMISSCO2TOTVTTTOUSA", "CO2 emissions (total)", "million metric tons", "FRED / U.S. EIA"),
   "college_tuition": ("CUSR0000SEEB", "College tuition & fees (CPI)", "index 1982-84=100", "FRED / U.S. BLS"),
+  "debt_gdp": ("GFDEGDQ188S", "Federal debt (% of GDP)", "% of GDP", "FRED / U.S. OMB"),
+  "total_debt": ("GFDEBTN", "Federal debt (total)", "$ millions", "FRED / U.S. Treasury"),
+  "mortgage_rate": ("MORTGAGE30US", "30-year mortgage rate", "%", "FRED / Freddie Mac"),
 }
 PRESIDENTS = [
   {"name": "Truman", "party": "D", "start": 1945, "end": 1952}, {"name": "Eisenhower", "party": "R", "start": 1953, "end": 1960},
@@ -362,6 +365,49 @@ def build_fiscal():
     except Exception as e:
         print("fiscal: skipped (" + str(e)[:70] + "), keeping existing files")
 
+def build_world():
+    # US vs peer nations (World Bank API, key-free). Mobility is a fixed 2017 dataset, not refreshed here.
+    try:
+        COUNTRIES = ["USA", "CAN", "GBR", "DEU", "FRA", "JPN", "AUS", "SWE", "NLD", "ITA", "ESP", "KOR"]
+        IND = {"life_exp": ("SP.DYN.LE00.IN", "Life expectancy", "years", 1),
+               "health_gdp": ("SH.XPD.CHEX.GD.ZS", "Health spending", "% of GDP", -1),
+               "gdp_pc": ("NY.GDP.PCAP.PP.KD", "GDP per capita", "$ (PPP)", 1),
+               "gini": ("SI.POV.GINI", "Income inequality (Gini)", "index", -1),
+               "maternal": ("SH.STA.MMRT", "Maternal mortality", "per 100k births", -1),
+               "infant": ("SP.DYN.IMRT.IN", "Infant mortality", "per 1,000 births", -1),
+               "homicide": ("VC.IHR.PSRC.P5", "Homicide rate", "per 100k", -1),
+               "suicide": ("SH.STA.SUIC.P5", "Suicide rate", "per 100k", -1)}
+        NAMES = {"USA": "United States", "CAN": "Canada", "GBR": "United Kingdom", "DEU": "Germany", "FRA": "France", "JPN": "Japan", "AUS": "Australia", "SWE": "Sweden", "NLD": "Netherlands", "ITA": "Italy", "ESP": "Spain", "KOR": "South Korea"}
+        def wb(code):
+            url = "https://api.worldbank.org/v2/country/" + ";".join(COUNTRIES) + "/indicator/" + code + "?format=json&per_page=500&date=2015:2025&mrnev=1"
+            for a in range(3):
+                try:
+                    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+                    d = json.loads(urllib.request.urlopen(req, timeout=30).read().decode())
+                    break
+                except Exception:
+                    if a == 2: return {}
+                    time.sleep(2)
+            out = {}
+            for r in (d[1] if len(d) > 1 and d[1] else []):
+                iso, v = r["countryiso3code"], r["value"]
+                if v is not None and iso not in out: out[iso] = {"v": round(v, 1), "y": r["date"]}
+            return out
+        indicators = {}
+        for key, (code, label, unit, better) in IND.items():
+            data = wb(code)
+            if data:
+                indicators[key] = {"label": label, "unit": unit, "better": better, "year": max(x["y"] for x in data.values()),
+                                   "countries": {k: data[k]["v"] for k in data}}
+        if indicators:
+            json.dump({"generated": datetime.date.today().isoformat(),
+                       "note": "The U.S. compared with peer high-income nations. Source: World Bank (most recent year available per indicator).",
+                       "names": NAMES, "indicators": indicators},
+                      open(os.path.join(HERE, "world.json"), "w"), separators=(",", ":"))
+            print("world: %d indicators" % len(indicators))
+    except Exception as e:
+        print("world: skipped (" + str(e)[:70] + "), keeping existing file")
+
 if __name__ == "__main__":
     build_national()
     build_states()
@@ -370,4 +416,5 @@ if __name__ == "__main__":
     build_distribution()
     build_despair()
     build_fiscal()
+    build_world()
     print("refresh complete", datetime.datetime.now().isoformat())

@@ -240,6 +240,18 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
     </div>
   </section>
 
+  <!-- ECONOMIC MOBILITY -->
+  <section>
+    <div class="sectlabel mono">// THE DREAM</div>
+    <h2 class="sec">Do kids still out-earn their parents?</h2>
+    <p class="sub">The most literal measure of the American Dream: the share of 30-year-olds who earn more than their parents did at the same age (inflation-adjusted), by the year they were born. It has roughly halved.</p>
+    <div class="panel">
+      <div class="chartbox sm"><canvas id="mobilityChart"></canvas></div>
+      <div class="grid3" id="mobility-stats" style="margin-top:16px"></div>
+    </div>
+    <p class="srcnote mono" id="mobility-src" style="margin-top:12px"></p>
+  </section>
+
   <!-- COMPARE -->
   <section>
     <div class="sectlabel mono">// COMPARE</div>
@@ -290,6 +302,38 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
     </div>
     <div class="grid3" id="dist-stats" style="margin-top:16px"></div>
     <p class="srcnote mono" id="dist-src" style="margin-top:12px"></p>
+  </section>
+
+  <!-- US VS WORLD -->
+  <section>
+    <div class="sectlabel mono">// VS. THE WORLD</div>
+    <h2 class="sec">How the U.S. stacks up</h2>
+    <p class="sub">The American Dream, compared to where? The U.S. against peer high-income nations. Pick a measure — the U.S. (highlighted) often isn't where you'd expect for the richest country on earth.</p>
+    <div class="panel">
+      <div class="controls"><div class="chips" id="world-chips"></div></div>
+      <div class="chartbox" style="height:380px"><canvas id="worldChart"></canvas></div>
+    </div>
+    <p class="srcnote mono" id="world-src" style="margin-top:12px"></p>
+  </section>
+
+  <!-- HOUSING -->
+  <section>
+    <div class="sectlabel mono">// HOUSING</div>
+    <h2 class="sec">The cost of a home</h2>
+    <p class="sub">The biggest piece of the Dream, and the biggest squeeze. A house now costs more years of income than it used to, and the mortgage to buy it costs more too.</p>
+    <div class="grid2">
+      <div class="panel">
+        <h2 style="font-size:16px;color:#F4F1E6">Home price ÷ household income</h2>
+        <p class="sub" style="margin-bottom:10px">Years of income to buy a typical home</p>
+        <div class="chartbox sm"><canvas id="afffChart"></canvas></div>
+      </div>
+      <div class="panel">
+        <h2 style="font-size:16px;color:#F4F1E6">30-year mortgage rate</h2>
+        <p class="sub" style="margin-bottom:10px">The cost of borrowing to buy</p>
+        <div class="chartbox sm"><canvas id="mortChart"></canvas></div>
+      </div>
+    </div>
+    <div class="grid3" id="housing-stats" style="margin-top:16px"></div>
   </section>
 
   <!-- HIGHS & LOWS -->
@@ -357,6 +401,18 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
       </div>
     </div>
     <div class="grid3" id="budget-stats" style="margin-top:16px"></div>
+    <div class="panel" style="margin-top:18px">
+      <h2 style="font-size:16px;color:#F4F1E6">🧾 Your tax receipt</h2>
+      <p class="sub" style="margin-bottom:12px">Type your income and see roughly where <b>your</b> federal taxes go. A simplified estimate — federal income tax + payroll tax, split across programs by each one's share of spending.</p>
+      <div class="controls"><span class="ctl" style="color:var(--dim)">Annual income $ <input id="tr-income" type="number" inputmode="numeric" placeholder="60000" style="background:var(--surface2);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:7px 11px;width:140px;font:inherit"></span><button class="chip" id="tr-go">Show my receipt</button></div>
+      <div id="tr-out" style="margin-top:14px"></div>
+    </div>
+    <div class="panel" style="margin-top:18px">
+      <h2 style="font-size:16px;color:#F4F1E6">The national debt</h2>
+      <p class="sub" style="margin-bottom:10px">Federal debt as a share of the entire economy (GDP). It last topped 100% around WWII.</p>
+      <div class="chartbox sm"><canvas id="debtChart"></canvas></div>
+      <div class="grid3" id="debt-stats" style="margin-top:16px"></div>
+    </div>
     <p class="srcnote mono" id="budget-src" style="margin-top:12px"></p>
   </section>
 
@@ -448,6 +504,9 @@ const METRICS=[
   {key:'housing_starts',     label:'Housing starts',      fmt:'thousands', good:1},
   {key:'student_debt',       label:'Student debt',        fmt:'trillions', good:-1},
   {key:'consumer_debt',      label:'Consumer debt',       fmt:'trillions', good:-1},
+  {key:'mortgage_rate',      label:'30-yr mortgage rate', fmt:'pct', good:-1},
+  {key:'debt_gdp',           label:'Federal debt (% GDP)',fmt:'pct', good:-1},
+  {key:'total_debt',         label:'Federal debt (total)',fmt:'trillions', good:-1},
   {key:'co2',                label:'CO₂ emissions',       fmt:'megatons', good:-1},
   {key:'median_home_price',  label:'Median home price',   fmt:'dollar0', good:-1},
   {key:'homeownership',      label:'Homeownership rate',  fmt:'pct', good:1},
@@ -715,6 +774,30 @@ function renderSources(){
   document.getElementById('disclaimer').innerHTML=DATA.meta.note+' The Quality-of-Life Index is an original composite built for this page — not an official government statistic. Data retrieved '+DATA.meta.generated+' and refreshed automatically each day. Built by Jordan Dorman as a data-analysis project.';
 }
 
+function miniLine(canvasId,key,color){
+  const o=ALL[key]; if(!o)return; const ys=Object.keys(o).map(Number).sort((a,b)=>a-b), m=METABYKEY[key];
+  new Chart(document.getElementById(canvasId),{type:'line',data:{labels:ys.map(String),datasets:[{data:ys.map(y=>o[y]),borderColor:color,backgroundColor:color+'1f',borderWidth:2,pointRadius:0,pointHoverRadius:4,tension:.2,fill:true}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+F[m.fmt](c.parsed.y)}}},
+      scales:{x:{grid:{color:'rgba(36,49,80,.5)'},ticks:{color:COL.dim,maxTicksLimit:8,font:{family:'JetBrains Mono'}}},y:{grid:{color:'rgba(36,49,80,.5)'},ticks:{color:COL.dim,font:{family:'JetBrains Mono'},callback:v=>F[m.fmt](v)}}}}});
+}
+function lastOf(o){return o[Math.max.apply(null,Object.keys(o).map(Number))];}
+function renderHousing(){
+  miniLine('afffChart','home_price_to_income','#E8A33C'); miniLine('mortChart','mortgage_rate','#d66a5a');
+  const stat=(l,v)=>'<div class="stat"><div class="label">'+l+'</div><div class="val">'+v+'</div></div>';
+  document.getElementById('housing-stats').innerHTML=
+    stat('Home price ÷ income',lastOf(ALL.home_price_to_income).toFixed(1)+'×')+
+    stat('Mortgage rate',lastOf(ALL.mortgage_rate).toFixed(1)+'%')+
+    stat('Homeownership',lastOf(ALL.homeownership).toFixed(0)+'%');
+}
+function renderDebt(){
+  miniLine('debtChart','debt_gdp','#d66a5a');
+  const td=lastOf(ALL.total_debt); // $ millions
+  const stat=(l,v)=>'<div class="stat"><div class="label">'+l+'</div><div class="val">'+v+'</div></div>';
+  document.getElementById('debt-stats').innerHTML=
+    stat('Debt ÷ GDP',lastOf(ALL.debt_gdp).toFixed(0)+'%')+
+    stat('Total debt',F.trillions(td))+
+    stat('Per person','$'+Math.round(td*1e6/335e6).toLocaleString());
+}
 function renderMethod(){
   const idxM=METRICS.filter(m=>m.idx);
   document.getElementById('method-body').innerHTML=
@@ -809,7 +892,7 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
   document.getElementById('h-src').textContent='source: FRED · '+Object.keys(S).filter(k=>!k.startsWith('cpi_')).length+' official series · '+YEARS[0]+'–'+YEARS[YEARS.length-1]+' · retrieved '+d.meta.generated;
   document.getElementById('foot-gen').textContent='© 2026 Jordan Dorman · data via FRED · retrieved '+d.meta.generated;
   document.getElementById('content').style.display='block';
-  renderGradeHero(); initSnapChips(); renderKcards(); initControls(); initWeights(); drawMain(); drawIndex(); drawTerm(); initCompare(); renderHighLow(); renderSources(); renderMethod();
+  renderGradeHero(); initSnapChips(); renderKcards(); initControls(); initWeights(); drawMain(); drawIndex(); drawTerm(); initCompare(); renderHousing(); renderDebt(); renderHighLow(); renderSources(); renderMethod();
 }).catch(e=>{document.getElementById('h-sub').textContent='';document.getElementById('loaderr').style.display='block';console.error(e);});
 </script>
 
@@ -912,6 +995,45 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
   }).catch(e=>{document.getElementById('usmap').innerHTML='<div class="empty" style="color:var(--faint);padding:30px">Couldn’t load the state map data.</div>';console.error(e);});
 })();
 
+/* ===== ECONOMIC MOBILITY (Opportunity Insights) ===== */
+(function(){
+  const TX='#A9AFC4', GRID='rgba(36,49,80,.5)';
+  fetch('data/mobility.json').then(r=>r.json()).then(d=>{
+    const years=Object.keys(d.years).map(Number).sort((a,b)=>a-b);
+    new Chart(document.getElementById('mobilityChart'),{type:'line',data:{labels:years.map(String),datasets:[{data:years.map(y=>d.years[String(y)]),borderColor:'#d66a5a',backgroundColor:'#d66a5a22',borderWidth:2.6,pointRadius:0,pointHoverRadius:5,tension:.2,fill:true}]},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+        plugins:{legend:{display:false},tooltip:{callbacks:{title:c=>'Born in '+c[0].label,label:c=>' '+c.parsed.y+'% out-earned their parents'}}},
+        scales:{x:{grid:{color:GRID},title:{display:true,text:'Birth year',color:'#6C748F',font:{family:'JetBrains Mono',size:10}},ticks:{color:TX,maxTicksLimit:9,font:{family:'JetBrains Mono'}}},
+          y:{min:0,max:100,grid:{color:GRID},ticks:{color:TX,font:{family:'JetBrains Mono'},callback:v=>v+'%'}}}}});
+    const f=d.years[String(years[0])], l=d.years[String(years[years.length-1])];
+    const stat=(a,b)=>'<div class="stat"><div class="label">'+a+'</div><div class="val">'+b+'</div></div>';
+    document.getElementById('mobility-stats').innerHTML=stat('Born '+years[0],f+'%')+stat('Born '+years[years.length-1],l+'%')+stat('The collapse','−'+Math.round(f-l)+' points');
+    document.getElementById('mobility-src').textContent=d.note+' Retrieved '+d.generated+'.';
+  }).catch(e=>console.error(e));
+})();
+
+/* ===== US VS THE WORLD (World Bank) ===== */
+(function(){
+  const TX='#A9AFC4', GRID='rgba(36,49,80,.5)';
+  fetch('data/world.json').then(r=>r.json()).then(d=>{
+    const keys=Object.keys(d.indicators), names=d.names; let cur=keys[0], chart;
+    const fmtV=(v,ind)=>{const u=ind.unit||''; if(u.indexOf('$')>=0)return '$'+Math.round(v).toLocaleString(); if(u.indexOf('%')>=0)return v+'%'; return ''+v;};
+    function draw(){
+      const ind=d.indicators[cur];
+      const entries=Object.entries(ind.countries).sort((a,b)=> ind.better>0 ? b[1]-a[1] : a[1]-b[1]);
+      if(chart)chart.destroy();
+      chart=new Chart(document.getElementById('worldChart'),{type:'bar',data:{labels:entries.map(e=>names[e[0]]||e[0]),datasets:[{data:entries.map(e=>e[1]),backgroundColor:entries.map(e=>e[0]==='USA'?'#E8A33C':'rgba(120,132,164,.55)'),borderRadius:4}]},
+        options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+          plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+fmtV(c.parsed.x,ind)+' · '+ind.unit+' ('+ind.year+')'}}},
+          scales:{x:{grid:{color:GRID},ticks:{color:TX,font:{family:'JetBrains Mono',size:10},callback:v=>fmtV(v,ind)}},y:{grid:{display:false},ticks:{color:TX,font:{family:'JetBrains Mono',size:11}}}}}});
+    }
+    const box=document.getElementById('world-chips');
+    keys.forEach((k,i)=>{const b=document.createElement('button');b.className='chip'+(i===0?' active':'');b.textContent=d.indicators[k].label;b.onclick=()=>{cur=k;[...box.children].forEach(c=>c.classList.remove('active'));b.classList.add('active');if(chart)chart.destroy();chart=null;draw();};box.appendChild(b);});
+    draw();
+    document.getElementById('world-src').textContent=d.note+' Retrieved '+d.generated+'.';
+  }).catch(e=>console.error(e));
+})();
+
 /* ===== WHERE TAX DOLLARS GO (USAspending + Treasury) ===== */
 (function(){
   const TX='#A9AFC4', GRID='rgba(36,49,80,.5)';
@@ -928,6 +1050,25 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
     const stat=(l,v,c)=>'<div class="stat"><div class="label">'+l+'</div><div class="val"'+(c?' style="color:'+c+'"':'')+'>'+v+'</div></div>';
     document.getElementById('budget-stats').innerHTML=stat('Total outlays · FY'+d.fy,fmtM(T.outlays))+stat('Total tax receipts',fmtM(T.receipts))+stat('The gap (deficit)',fmtM(T.deficit),'#d66a5a');
     document.getElementById('budget-src').textContent=d.note+' Retrieved '+d.generated+'.';
+    // personal tax receipt
+    const totSp=d.spending.reduce((a,b)=>a+Math.max(0,b.amount),0);
+    const money=v=>'$'+Math.round(v).toLocaleString();
+    function receipt(){
+      const inc=parseFloat(document.getElementById('tr-income').value)||0;
+      const out=document.getElementById('tr-out');
+      if(inc<=0){out.innerHTML='<div style="color:var(--faint);font-size:13px">Enter an income above to see your receipt.</div>';return;}
+      const std=14600, ti=Math.max(0,inc-std);
+      const br=[[0,.10],[11600,.12],[47150,.22],[100525,.24],[191950,.32],[243725,.35],[609350,.37]];
+      let tax=0; for(let i=0;i<br.length;i++){const lo=br[i][0],hi=i<br.length-1?br[i+1][0]:Infinity;if(ti>lo)tax+=(Math.min(ti,hi)-lo)*br[i][1];}
+      const payroll=Math.min(inc,168600)*.062+inc*.0145;
+      const tot=tax+payroll;
+      const rowsHTML=d.spending.filter(f=>f.amount>0).map(f=>{const share=tot*f.amount/totSp;return {name:f.name,v:share};}).filter(r=>r.v>=0.5)
+        .map(r=>'<div style="display:flex;justify-content:space-between;padding:6px 0;border-top:1px solid var(--line-soft);font-size:13.5px"><span style="color:var(--dim)">'+r.name+'</span><span class="mono" style="color:var(--text)">'+money(r.v)+'</span></div>').join('');
+      out.innerHTML='<div style="font-size:13px;color:var(--dim);margin-bottom:8px">Estimated federal tax on '+money(inc)+': <b style="color:var(--text)">'+money(tot)+'</b> <span style="color:var(--faint)">(income tax '+money(tax)+' + payroll '+money(payroll)+')</span>. Roughly where it goes:</div>'+rowsHTML+
+        '<div style="font-size:11.5px;color:var(--faint);margin-top:8px">Simplified single-filer estimate; split by each program’s share of federal spending. About a quarter of federal spending is borrowed, so these shares reflect spending, not just your taxes.</div>';
+    }
+    document.getElementById('tr-go').onclick=receipt;
+    document.getElementById('tr-income').addEventListener('keydown',e=>{if(e.key==='Enter')receipt();});
   }).catch(e=>console.error(e));
 })();
 
