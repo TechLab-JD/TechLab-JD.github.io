@@ -181,6 +181,14 @@ body.nav-open #pagenav{transform:none}
 .howto summary::before{content:'ⓘ';color:#E8A33C;font-size:13px}
 .howto summary:hover,.howto[open] summary{color:#F4F1E6}
 .howto p{margin:8px 0 0;color:#A9AFC4;font-size:13px;line-height:1.55;max-width:72ch}
+.prez-timeline{display:flex;gap:6px;overflow-x:auto;padding-bottom:10px;scrollbar-width:thin}
+.prez-btn{flex:0 0 auto;cursor:pointer;border:1px solid rgba(60,72,100,.5);background:rgba(19,26,42,.7);color:#A9AFC4;border-radius:9px;padding:7px 12px 7px 11px;font:inherit;font-size:12.5px;text-align:left;line-height:1.25;transition:color .15s,background .15s,border-color .15s}
+.prez-btn .yr{display:block;font-size:10.5px;color:#7f879b;font-family:'JetBrains Mono',monospace;margin-top:2px}
+.prez-btn.D{border-left:3px solid #5a86d6}
+.prez-btn.R{border-left:3px solid #d66a5a}
+.prez-btn:hover{color:#F4F1E6;border-color:rgba(120,132,164,.7)}
+.prez-btn.sel{background:rgba(232,163,60,.14);border-color:#E8A33C;color:#F4F1E6}
+.prez-btn.sel .yr{color:#E8A33C}
 .panelh{font-size:15px;font-weight:600;color:#F4F1E6;margin:0 0 2px}
 .panel .sub{max-width:72ch}
 #dl-csv,#dl-dict,#dl-method{border:1px solid rgba(232,163,60,.55);background:rgba(232,163,60,.12);color:#F4F1E6;cursor:pointer;font-weight:600}
@@ -272,6 +280,17 @@ body.nav-open #pagenav{transform:none}
           <div id="weight-controls" class="wgrid"></div>
         </div>
       </details>
+    </div>
+  </section>
+
+  <!-- PRESIDENTS -->
+  <section>
+    <div class="sectlabel mono">// PRESIDENTS</div>
+    <h2 class="sec">Compare presidents, term by term</h2>
+    <p class="sub">Tap a president to see where key measures stood at the <b>start</b> and <b>end</b> of their time in office, how much changed, and how that change stacks up against the terms right before and after. <b>This compares time periods, not causes</b> — presidents inherit an economy and policy acts with long lags, so a change during a term isn't proof the president caused it. Dashes mean the series doesn't reach that far back.</p>
+    <div class="panel">
+      <div id="prez-timeline" class="prez-timeline"></div>
+      <div id="prez-detail" style="margin-top:16px"></div>
     </div>
   </section>
 
@@ -788,6 +807,59 @@ function renderCorrelation(){
         y:{grid:{color:'rgba(36,49,80,.5)'},title:{display:true,text:'Life expectancy (yrs)',color:'#A9AFC4',font:{family:'JetBrains Mono',size:10}},ticks:{color:'#A9AFC4',font:{family:'JetBrains Mono',size:9}}}}}});
   const src=document.getElementById('corr-src'); if(src)src.textContent='Correlations are Pearson r across each pair’s shared years (current partial year excluded); signs reflect raw co-movement, not whether a change is good or bad. Scatter: real GDP per capita vs life expectancy at birth, by year. Association does not imply causation.';
 }
+// --- presidents: term start/end + before/after comparison ---
+const PREZ_METRICS=['real_median_income','real_gdp_per_capita','unemployment','inflation','poverty_rate','home_price_to_income','real_min_wage','life_expectancy','debt_gdp','gas_price'];
+let PREZ_SEL=null;
+function termChange(key,adm){
+  const o=ALL[key]; if(!o)return null;
+  const maxY=Math.max.apply(null,Object.keys(o).map(Number));
+  const lo=adm.start, hi=Math.min(adm.end,maxY);
+  let sY=null,eY=null;
+  for(let y=lo;y<=hi;y++){ if(o[y]!=null){ if(sY==null)sY=y; eY=y; } }
+  if(sY==null)return null;
+  const sV=o[sY],eV=o[eY], pct=(sY!==eY&&sV!==0)?(eV-sV)/Math.abs(sV)*100:null;
+  return {sY,sV,eY,eV,pct};
+}
+function pctCell(key,tc){
+  if(!tc||tc.pct==null)return '<span style="color:var(--faint)">—</span>';
+  const improved=(tc.pct>=0)===(METABYKEY[key].good>0);
+  return '<span style="color:'+(improved?'#4FC08D':'#d66a5a')+'">'+(tc.pct>=0?'▲ ':'▼ ')+Math.abs(tc.pct).toFixed(Math.abs(tc.pct)<10?1:0)+'%</span>';
+}
+function renderPrezDetail(i){
+  const adm=PRES[i], el=document.getElementById('prez-detail'); if(!el)return;
+  const prev=i>0?PRES[i-1]:null, next=i<PRES.length-1?PRES[i+1]:null;
+  const maxY=Math.max.apply(null,YEARS.filter(y=>y!==PARTIAL)), incomplete=adm.end>maxY;
+  let h='<div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:12px">'+
+    '<span style="font-size:18px;font-weight:700;color:#F4F1E6">'+adm.name+'</span>'+
+    '<span class="mono" style="font-size:12px;color:#A9AFC4">'+(adm.party==='D'?'Democrat':'Republican')+' · '+adm.start+'–'+adm.end+(incomplete?' (through '+maxY+')':'')+'</span></div>';
+  h+='<div style="overflow-x:auto"><table class="data"><tr><th>Measure</th><th class="r">Start</th><th class="r">End</th><th class="r">Change</th>'+
+     '<th class="r" title="change during the previous administration">◀ '+(prev?prev.name:'—')+'</th>'+
+     '<th class="r" title="change during the next administration">'+(next?next.name:'—')+' ▶</th></tr>';
+  PREZ_METRICS.forEach(key=>{
+    const m=METABYKEY[key]; if(!m)return;
+    const tc=termChange(key,adm);
+    const cell=(tc,which)=>tc&&tc[which]!=null?fmtV(key,tc[which])+' <span style="color:#7f879b;font-size:11px">’'+String(tc[which==='sV'?'sY':'eY']).slice(2)+'</span>':'—';
+    h+='<tr><td>'+m.label+'</td><td class="r">'+cell(tc,'sV')+'</td><td class="r">'+cell(tc,'eV')+'</td><td class="r">'+pctCell(key,tc)+'</td>'+
+       '<td class="r">'+(prev?pctCell(key,termChange(key,prev)):'<span style="color:var(--faint)">—</span>')+'</td>'+
+       '<td class="r">'+(next?pctCell(key,termChange(key,next)):'<span style="color:var(--faint)">—</span>')+'</td></tr>';
+  });
+  h+='</table></div><p class="srcnote mono" style="margin-top:10px">Start/End = first and last year of the term with data; Change = start→end during the term. The last two columns are the same start→end change during the adjacent administrations, for comparison. Green = moved in the better direction for that measure, red = worse. Real $ are inflation-adjusted.</p>';
+  el.innerHTML=h;
+}
+function renderPrezTimeline(){
+  const box=document.getElementById('prez-timeline'); if(!box||!PRES)return;
+  box.innerHTML='';
+  PRES.forEach((p,i)=>{
+    const b=document.createElement('button'); b.className='prez-btn '+p.party;
+    b.innerHTML=p.name+'<span class="yr">'+p.start+'–'+p.end+'</span>';
+    b.onclick=()=>{PREZ_SEL=i;[...box.children].forEach(c=>c.classList.remove('sel'));b.classList.add('sel');renderPrezDetail(i);};
+    box.appendChild(b);
+  });
+  const maxY=Math.max.apply(null,YEARS.filter(y=>y!==PARTIAL));
+  let def=PRES.length-1; for(let i=PRES.length-1;i>=0;i--){ if(PRES[i].end<=maxY){def=i;break;} }
+  PREZ_SEL=def; box.children[def].classList.add('sel'); renderPrezDetail(def);
+  try{box.children[def].scrollIntoView({inline:'center',block:'nearest'});}catch(e){}
+}
 // --- data + methodology export (client-side, user's own public data) ---
 function toCSV(){
   const keys=Object.keys(DATA.series).filter(k=>DATA.series[k]&&DATA.series[k].years);
@@ -814,7 +886,7 @@ function methodText(){
 }
 function buildPageNav(){
   const nav=document.getElementById('pagenav'); if(!nav)return;
-  const nice={'SNAPSHOT':'Snapshot','EXPLORE':'Trends','THE GRADE':'Grade','CORRELATION':'Correlation','THE DREAM':'Mobility','COMPARE':'Then vs now','BY ADMINISTRATION':'By president','DISTRIBUTION':'Who gets what','WHO IT REACHES':'By race','VS. THE WORLD':'World','HOUSING':'Housing','RECORDS':'Highs & lows','BY STATE':'States','DESPAIR':'Despair','IMMIGRATION':'Immigration','TAX DOLLARS':'Tax dollars','FOREIGN AFFAIRS':'Foreign','POLICY · LIVE':'Policy','CHECK THIS':'Check it','SOURCES':'Sources'};
+  const nice={'SNAPSHOT':'Snapshot','EXPLORE':'Trends','THE GRADE':'Grade','PRESIDENTS':'Presidents','CORRELATION':'Correlation','THE DREAM':'Mobility','COMPARE':'Then vs now','BY ADMINISTRATION':'Admin averages','DISTRIBUTION':'Who gets what','WHO IT REACHES':'By race','VS. THE WORLD':'World','HOUSING':'Housing','RECORDS':'Highs & lows','BY STATE':'States','DESPAIR':'Despair','IMMIGRATION':'Immigration','TAX DOLLARS':'Tax dollars','FOREIGN AFFAIRS':'Foreign','POLICY · LIVE':'Policy','CHECK THIS':'Check it','SOURCES':'Sources'};
   const links={};
   document.querySelectorAll('#content > section').forEach((s,i)=>{
     const lbl=s.querySelector('.sectlabel'); if(!lbl)return;
@@ -1241,7 +1313,7 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
   document.getElementById('h-src').textContent='source: FRED · '+Object.keys(S).filter(k=>!k.startsWith('cpi_')).length+' official series · '+YEARS[0]+'–'+YEARS[YEARS.length-1]+' · retrieved '+d.meta.generated;
   document.getElementById('foot-gen').textContent='© 2026 Jordan Dorman · data via FRED · retrieved '+d.meta.generated;
   document.getElementById('content').style.display='block';
-  renderGradeHero(); initSnapChips(); renderKcards(); initControls(); initWeights(); drawMain(); drawIndex(); renderPillars(); renderMood(); renderTLDR(); renderHeroStats(); renderCorrelation(); drawTerm(); initCompare(); renderHousing(); renderDebt(); renderHighLow(); renderSources(); renderMethod(); initCheckThis(); buildPageNav(); addHowTos(); labelCanvases(); setTimeout(()=>{addHowTos();labelCanvases();},3000);
+  renderGradeHero(); initSnapChips(); renderKcards(); initControls(); initWeights(); drawMain(); drawIndex(); renderPillars(); renderMood(); renderTLDR(); renderHeroStats(); renderCorrelation(); renderPrezTimeline(); drawTerm(); initCompare(); renderHousing(); renderDebt(); renderHighLow(); renderSources(); renderMethod(); initCheckThis(); buildPageNav(); addHowTos(); labelCanvases(); setTimeout(()=>{addHowTos();labelCanvases();},3000);
 }).catch(e=>{document.getElementById('h-sub').textContent='';document.getElementById('loaderr').style.display='block';console.error(e);});
 </script>
 
