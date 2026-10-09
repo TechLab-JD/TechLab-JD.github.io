@@ -290,6 +290,18 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
     <p class="srcnote mono" id="state-src" style="margin-top:12px"></p>
   </section>
 
+  <!-- IMMIGRATION -->
+  <section>
+    <div class="sectlabel mono">// IMMIGRATION</div>
+    <h2 class="sec">Immigration &amp; enforcement</h2>
+    <p class="sub">Two flows, by year: people granted green cards (lawful permanent residence) and formal deportations (removals), with voluntary/administrative returns for context. Fiscal years, from DHS. Shown for context — <b>not folded into the grade</b>, since whether these are "good" or "bad" is a value judgment, not a data point.</p>
+    <div class="panel">
+      <div class="chartbox"><canvas id="immChart"></canvas></div>
+      <div class="grid3" id="imm-stats" style="margin-top:16px"></div>
+    </div>
+    <p class="srcnote mono" id="imm-src" style="margin-top:12px"></p>
+  </section>
+
   <!-- POLICY FEED (live) -->
   <section>
     <div class="sectlabel mono">// POLICY · LIVE</div>
@@ -794,6 +806,34 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
     document.getElementById('state-detail').querySelector('.sc-hint').textContent='Hover or tap a state to see its stats and grade. '+Object.keys(ST).length+' states graded, '+data.generated+'.';
     document.getElementById('state-src').textContent=data.notes+' State grade = income, poverty, unemployment & home-price-to-income, normalized across states.';
   }).catch(e=>{document.getElementById('usmap').innerHTML='<div class="empty" style="color:var(--faint);padding:30px">Couldn’t load the state map data.</div>';console.error(e);});
+})();
+
+/* ===== IMMIGRATION & ENFORCEMENT (DHS) ===== */
+(function(){
+  fetch('data/immigration.json').then(r=>r.json()).then(d=>{
+    const S=d.series;
+    const yset=new Set(); Object.values(S).forEach(s=>Object.keys(s.years).forEach(y=>yset.add(+y)));
+    const years=[...yset].sort((a,b)=>a-b).filter(y=>y>=1900);
+    const fmtN=v=>v==null?'—':(Math.abs(v)>=1e6?(v/1e6).toFixed(2)+'M':Math.round(v/1e3)+'K');
+    function ds(key,color){const o=S[key].years;return {label:S[key].label,data:years.map(y=>o[String(y)]!=null?o[String(y)]:null),borderColor:color,backgroundColor:color+'1f',borderWidth:2,pointRadius:0,pointHoverRadius:4,tension:.2,spanGaps:true,fill:false};}
+    new Chart(document.getElementById('immChart'),{type:'line',
+      data:{labels:years.map(String),datasets:[ds('legal_immigration','#4FC08D'),ds('deportations','#d66a5a'),ds('returns','#5a86d6')]},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+        plugins:{legend:{labels:{color:'#A9AFC4',font:{family:'JetBrains Mono',size:11},boxWidth:12}},
+          termBands:{show:false},recBands:{show:false},
+          tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+(c.parsed.y!=null?Math.round(c.parsed.y).toLocaleString():'—')}}},
+        scales:{x:{grid:{color:'rgba(36,49,80,.5)'},ticks:{color:'#A9AFC4',maxTicksLimit:12,font:{family:'JetBrains Mono'}}},
+          y:{grid:{color:'rgba(36,49,80,.5)'},ticks:{color:'#A9AFC4',font:{family:'JetBrains Mono'},callback:fmtN}}}}});
+    const lpr=S.legal_immigration.years, rem=S.deportations.years;
+    const lyL=Math.max.apply(null,Object.keys(lpr).map(Number)), lyR=Math.max.apply(null,Object.keys(rem).map(Number));
+    let pk=0,pkY; Object.keys(rem).forEach(y=>{if(rem[y]>pk){pk=rem[y];pkY=y;}});
+    const stat=(l,v)=>'<div class="stat"><div class="label">'+l+'</div><div class="val">'+v+'</div></div>';
+    document.getElementById('imm-stats').innerHTML=
+      stat('Green cards · '+lyL,Math.round(lpr[lyL]).toLocaleString())+
+      stat('Deportations · '+lyR,Math.round(rem[lyR]).toLocaleString())+
+      stat('Peak deportations',Math.round(pk).toLocaleString()+' ('+pkY+')');
+    document.getElementById('imm-src').textContent=d.note+' Retrieved '+d.generated+'.';
+  }).catch(e=>{var c=document.getElementById('immChart'); if(c)c.parentNode.innerHTML='<div class="empty" style="color:var(--faint);padding:24px">Immigration data unavailable.</div>'; console.error(e);});
 })();
 
 /* ===== POLICY FEED: live from the Federal Register API ===== */

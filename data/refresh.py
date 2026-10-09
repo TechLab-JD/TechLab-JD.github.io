@@ -152,8 +152,59 @@ def build_state_bills():
         json.dump(payload, open(os.path.join(HERE, "state-bills.json"), "w"), separators=(",", ":"))
         print("state bills: %d states written" % len(out))
 
+# ---------- immigration & enforcement (DHS Yearbook; annual, best-effort) ----------
+# These xlsx URLs carry a date and change each yearbook; if they 404 the existing
+# bundled immigration.json is kept. Update the URLs when DHS publishes a new yearbook.
+DHS_LPR_XLSX = "https://ohss.dhs.gov/sites/default/files/2024-09/2024_0906_ohss_yearbook_lawful_permanent_residents_fy2023_0.xlsx"
+DHS_ENF_XLSX = "https://ohss.dhs.gov/system/files/2026-08/2026_0806_ohss_yearbook_enforcement_fy2023.xlsx"
+
+def build_immigration():
+    try:
+        import openpyxl, io as _io
+        def getwb(url):
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            return openpyxl.load_workbook(_io.BytesIO(urllib.request.urlopen(req, timeout=40).read()), read_only=True, data_only=True)
+        def num(v):
+            if v is None: return None
+            s = str(v).strip().replace(",", "")
+            if s in ("NA", "X", "-", "", "D", "NaN"): return None
+            try: return int(float(s))
+            except Exception: return None
+        lpr = {}
+        ws = getwb(DHS_LPR_XLSX)["Table 1"]
+        for r in list(ws.iter_rows(values_only=True))[6:]:
+            for c in range(0, len(r) - 1, 2):
+                try: yy = int(str(r[c]).strip())
+                except Exception: continue
+                if 1800 <= yy <= 2035:
+                    n = num(r[c + 1])
+                    if n is not None: lpr[yy] = n
+        rem, ret = {}, {}
+        ws2 = getwb(DHS_ENF_XLSX)["Table 39"]
+        for r in list(ws2.iter_rows(values_only=True))[6:]:
+            try: yy = int(str(r[0]).strip())
+            except Exception: continue
+            if not (1880 <= yy <= 2035): continue
+            rv = num(r[3])
+            if rv is not None: rem[yy] = rv
+            ar, er = num(r[1]), num(r[2])
+            if ar is not None or er is not None: ret[yy] = (ar or 0) + (er or 0)
+        if not lpr or not rem:
+            print("immigration: no data parsed, keeping existing file"); return
+        yr = lambda d: {str(k): d[k] for k in sorted(d)}
+        payload = {"generated": datetime.date.today().isoformat(),
+                   "note": "Legal immigration = persons obtaining lawful permanent resident status (green cards); deportations = formal ICE/DHS removals; returns = voluntary/administrative returns. Source: DHS Office of Homeland Security Statistics, Yearbook of Immigration Statistics (Tables 1 & 39). Fiscal years. Tracking flows, not judging them.",
+                   "series": {"legal_immigration": {"label": "Legal immigration (green cards)", "unit": "persons/year", "years": yr(lpr)},
+                              "deportations": {"label": "Deportations (formal removals)", "unit": "removals/year", "years": yr(rem)},
+                              "returns": {"label": "Voluntary / administrative returns", "unit": "returns/year", "years": yr(ret)}}}
+        json.dump(payload, open(os.path.join(HERE, "immigration.json"), "w"), separators=(",", ":"))
+        print("immigration: LPR %d-%d, removals %d-%d" % (min(lpr), max(lpr), min(rem), max(rem)))
+    except Exception as e:
+        print("immigration: skipped (" + str(e)[:80] + "), keeping existing file")
+
 if __name__ == "__main__":
     build_national()
     build_states()
     build_state_bills()
+    build_immigration()
     print("refresh complete", datetime.datetime.now().isoformat())
