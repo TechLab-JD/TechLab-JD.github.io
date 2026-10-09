@@ -279,10 +279,31 @@ def build_distribution():
     except Exception as e:
         print("distribution: skipped (" + str(e)[:80] + "), keeping existing file")
 
+def build_despair():
+    try:
+        def cdc(url):
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            return json.loads(urllib.request.urlopen(req, timeout=40).read().decode())
+        od = cdc("https://data.cdc.gov/resource/xkb8-kh2a.json?state=US&indicator=Number%20of%20Drug%20Overdose%20Deaths&month=December&$select=year,data_value&$order=year")
+        overdose = {r["year"]: int(float(r["data_value"])) for r in od if r.get("data_value")}
+        su = cdc("https://data.cdc.gov/resource/bi63-dtpu.json?state=United%20States&cause_name=Suicide&$select=year,deaths&$order=year")
+        suicide = {r["year"]: int(float(r["deaths"])) for r in su if r.get("deaths")}
+        if not overdose or not suicide:
+            print("despair: no data, keeping existing"); return
+        out = {"generated": datetime.date.today().isoformat(),
+               "note": "Deaths of despair. Drug overdose = provisional 12-month-ending counts (Dec). Suicide = final counts. Source: CDC / National Center for Health Statistics (data.cdc.gov). Shown for context, not folded into the grade.",
+               "series": {"overdose": {"label": "Drug overdose deaths", "years": {k: overdose[k] for k in sorted(overdose)}},
+                          "suicide": {"label": "Suicide deaths", "years": {k: suicide[k] for k in sorted(suicide)}}}}
+        json.dump(out, open(os.path.join(HERE, "despair.json"), "w"), separators=(",", ":"))
+        print("despair: overdose %s-%s, suicide %s-%s" % (min(overdose), max(overdose), min(suicide), max(suicide)))
+    except Exception as e:
+        print("despair: skipped (" + str(e)[:70] + "), keeping existing file")
+
 if __name__ == "__main__":
     build_national()
     build_states()
     build_state_bills()
     build_immigration()
     build_distribution()
+    build_despair()
     print("refresh complete", datetime.datetime.now().isoformat())

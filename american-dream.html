@@ -317,6 +317,18 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
     <p class="srcnote mono" id="state-src" style="margin-top:12px"></p>
   </section>
 
+  <!-- DESPAIR -->
+  <section>
+    <div class="sectlabel mono">// DESPAIR</div>
+    <h2 class="sec">Deaths of despair &amp; addiction</h2>
+    <p class="sub">Some of "it feels worse" shows up in mortality, not money. Drug overdose deaths and suicides — what researchers call deaths of despair. Overdoses more than doubled in a decade before a recent decline; suicides climbed for years. Shown for context, <b>not folded into the grade</b>.</p>
+    <div class="panel">
+      <div class="chartbox sm"><canvas id="despairChart"></canvas></div>
+      <div class="grid3" id="despair-stats" style="margin-top:16px"></div>
+    </div>
+    <p class="srcnote mono" id="despair-src" style="margin-top:12px"></p>
+  </section>
+
   <!-- IMMIGRATION -->
   <section>
     <div class="sectlabel mono">// IMMIGRATION</div>
@@ -867,6 +879,32 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
     document.getElementById('state-detail').querySelector('.sc-hint').textContent='Hover or tap a state to see its stats and grade. '+Object.keys(ST).length+' states graded, '+data.generated+'.';
     document.getElementById('state-src').textContent=data.notes+' State grade = income, poverty, unemployment & home-price-to-income, normalized across states.';
   }).catch(e=>{document.getElementById('usmap').innerHTML='<div class="empty" style="color:var(--faint);padding:30px">Couldn’t load the state map data.</div>';console.error(e);});
+})();
+
+/* ===== DEATHS OF DESPAIR & ADDICTION (CDC) ===== */
+(function(){
+  const TX='#A9AFC4', GRID='rgba(36,49,80,.5)';
+  fetch('data/despair.json').then(r=>r.json()).then(d=>{
+    const S=d.series, yset=new Set();
+    Object.values(S).forEach(s=>Object.keys(s.years).forEach(y=>yset.add(+y)));
+    const years=[...yset].sort((a,b)=>a-b);
+    const mk=(key,color)=>({label:S[key].label,data:years.map(y=>S[key].years[String(y)]!=null?S[key].years[String(y)]:null),borderColor:color,borderWidth:2.2,pointRadius:0,pointHoverRadius:4,tension:.2,spanGaps:true,fill:false});
+    new Chart(document.getElementById('despairChart'),{type:'line',data:{labels:years.map(String),datasets:[mk('overdose','#d66a5a'),mk('suicide','#e0843c')]},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+        plugins:{legend:{labels:{color:TX,font:{family:'JetBrains Mono',size:10},boxWidth:10}},termBands:{show:false},recBands:{show:false},
+          tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+(c.parsed.y!=null?Math.round(c.parsed.y).toLocaleString()+' deaths':'—')}}},
+        scales:{x:{grid:{color:GRID},ticks:{color:TX,maxTicksLimit:9,font:{family:'JetBrains Mono'}}},
+          y:{grid:{color:GRID},ticks:{color:TX,font:{family:'JetBrains Mono'},callback:v=>v>=1000?(v/1000).toFixed(0)+'K':v}}}}});
+    const od=S.overdose.years, su=S.suicide.years;
+    let pk=0,pkY; Object.keys(od).forEach(y=>{if(od[y]>pk){pk=od[y];pkY=y;}});
+    const odY=Object.keys(od).map(Number), suY=Object.keys(su).map(Number);
+    const stat=(l,v)=>'<div class="stat"><div class="label">'+l+'</div><div class="val">'+v+'</div></div>';
+    document.getElementById('despair-stats').innerHTML=
+      stat('Overdose peak',Math.round(pk).toLocaleString()+' ('+pkY+')')+
+      stat('Overdoses · '+Math.max.apply(null,odY),Math.round(od[Math.max.apply(null,odY)]).toLocaleString())+
+      stat('Suicides/yr',Math.round(su[Math.min.apply(null,suY)]).toLocaleString()+' → '+Math.round(su[Math.max.apply(null,suY)]).toLocaleString());
+    document.getElementById('despair-src').textContent=d.note+' Retrieved '+d.generated+'.';
+  }).catch(e=>{var c=document.getElementById('despairChart'); if(c)c.parentNode.innerHTML='<div class="empty" style="color:var(--faint);padding:24px">Despair data unavailable.</div>'; console.error(e);});
 })();
 
 /* ===== IMMIGRATION & ENFORCEMENT (DHS) ===== */
