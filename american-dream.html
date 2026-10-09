@@ -363,6 +363,20 @@ const METRICS=[
   {key:'rent_cpi',           label:'Rent (CPI index)',    fmt:'idx', good:-1},
 ];
 const METABYKEY={}; METRICS.forEach(m=>METABYKEY[m.key]=m);
+// Three equally-weighted pillars so the index isn't dominated by the biggest cluster of
+// (correlated) jobs/income measures. Each pillar contributes 1/3 of the grade by default.
+const PILLARS={
+  real_median_income:'econ', real_gdp_per_capita:'econ', real_min_wage:'econ', unemployment:'econ', jobless_claims:'econ', job_growth:'econ',
+  home_price_to_income:'cost', inflation:'cost', medical_burden:'cost', debt_service:'cost',
+  poverty_rate:'fair', inequality:'fair', life_expectancy:'fair'
+};
+const PILLAR_NAMES={econ:'Jobs & income', cost:'Cost of living', fair:'Health, poverty & fairness'};
+const BASEW={};
+(function(){ const cnt={}, idxKeys=METRICS.filter(m=>m.idx).map(m=>m.key);
+  idxKeys.forEach(k=>{const p=PILLARS[k]||'econ'; cnt[p]=(cnt[p]||0)+1;});
+  const np=Object.keys(cnt).length;
+  idxKeys.forEach(k=>{BASEW[k]=1/(np*cnt[PILLARS[k]||'econ']);});
+})();
 
 function seriesYears(obj){return Object.keys(obj).map(Number).sort((a,b)=>a-b);}
 function val(key,y){return ALL[key] ? ALL[key][y] : undefined;}
@@ -434,7 +448,7 @@ function computeIndex(){
     if(y===PARTIAL) return; // skip the partial current year — it isn't a full year of data
     // anchor to years with the core "American Dream" metrics present (income + affordability), so grades are comparable
     if(ALL.real_median_income[y]==null || ALL.home_price_to_income[y]==null) return;
-    let sum=0,wsum=0,n=0; keys.forEach(k=>{ if(norms[k][y]!=null){const w=WEIGHTS[k]!=null?WEIGHTS[k]:1; sum+=norms[k][y]*w; wsum+=w; if(w>0)n++;} });
+    let sum=0,wsum=0,n=0; keys.forEach(k=>{ if(norms[k][y]!=null){const w=BASEW[k]*(WEIGHTS[k]!=null?WEIGHTS[k]:1); sum+=norms[k][y]*w; wsum+=w; if(w>0)n++;} });
     if(n>=6 && wsum>0) INDEX[y]=+(sum/wsum).toFixed(1);
   });
 }
@@ -601,10 +615,11 @@ function renderMethod(){
     '<li>Indicators where <b>lower is better</b> (unemployment, inflation, poverty, home-price-to-income) are flipped so higher always means better quality of life.</li>'+
     '<li>Each year\'s score is the <b>weighted average</b> of the indicators available that year (a year needs at least 6, and both income and housing-affordability data, to be graded — so the index runs from 1984 on).</li>'+
     '<li>The letter grade is <b>absolute</b>, not a ranking: a score near 100 would mean a year at or near the best-ever reading on <i>every</i> measure at once. No era comes close — strong years on income and jobs are always weak somewhere else (housing, inequality, prices) — so even the top year on record lands around a B-, and the grade you see reflects that honestly rather than curving the best year up to an A.</li>'+
+    '<li>Measures are grouped into <b>three equally-weighted pillars</b> so the grade isn\'t dominated by the biggest cluster of (closely related) numbers — <b>Jobs &amp; income</b>, <b>Cost of living</b>, and <b>Health, poverty &amp; fairness</b> each count for a third. Dollar figures are <b>inflation-adjusted</b> (real income, real GDP, real minimum wage, all in today\'s dollars), so the shrinking value of a dollar is already baked in.</li>'+
     '<li>The current year ('+PARTIAL+') is <b>year-to-date and partial</b>, so it\'s shown on the trend charts (dashed) but <b>not graded</b>.</li>'+
     '</ul>'+
-    '<p><b>Indicators used:</b> '+idxM.map(m=>m.label+' ('+(m.good>0?'higher better':'lower better')+')').join('; ')+'.</p>'+
-    '<p>Every indicator starts weighted equally — but reasonable people would weight them differently, so you can change the weights yourself below and watch the grade move.</p>';
+    '<p><b>Pillars &amp; measures:</b> '+Object.keys(PILLAR_NAMES).map(p=>'<b>'+PILLAR_NAMES[p]+'</b> — '+idxM.filter(m=>(PILLARS[m.key]||'econ')===p).map(m=>m.label).join(', ')).join('; ')+'.</p>'+
+    '<p>Reasonable people would weight these differently, so change the weights or pick a lens below and watch the grade move.</p>';
 }
 
 function initControls(){
