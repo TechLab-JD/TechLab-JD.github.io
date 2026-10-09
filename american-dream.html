@@ -368,6 +368,9 @@ const F={
   gini:v=>v.toFixed(1),
   claims:v=>Math.round(v/1000)+'K/wk',
   jobs:v=>(v>=0?'+':'−')+(Math.abs(v)>=1000?(Math.abs(v)/1000).toFixed(1)+'M':Math.round(Math.abs(v))+'K'),
+  thousands:v=>Math.round(v).toLocaleString()+'K',
+  trillions:v=>'$'+(v/1e6).toFixed(2)+'T',
+  megatons:v=>Math.round(v).toLocaleString()+' Mt',
   idx:v=>Math.round(v).toLocaleString()
 };
 const COL={amber:'#E8A33C',steady:'#4FC08D',dim:'#A9AFC4',line:'#243150',text:'#E9E4D6',rep:'#d66a5a',dem:'#5a86d6'};
@@ -382,7 +385,9 @@ const METRICS=[
   {key:'unemployment',       label:'Unemployment rate',   fmt:'pct', good:-1, idx:true},
   {key:'inflation',          label:'Inflation (yearly)',  fmt:'pct', good:-1, idx:true, derived:true},
   {key:'poverty_rate',       label:'Poverty rate',        fmt:'pct', good:-1, idx:true},
+  {key:'child_poverty',      label:'Child poverty rate',  fmt:'pct', good:-1, idx:true},
   {key:'life_expectancy',    label:'Life expectancy',     fmt:'years', good:1, idx:true},
+  {key:'education_ba',       label:'College degree (BA+)',fmt:'pct', good:1},
   {key:'inequality',         label:'Income inequality (Gini)', fmt:'gini', good:-1, idx:true},
   {key:'debt_service',       label:'Household debt burden', fmt:'pct', good:-1, idx:true},
   {key:'medical_burden',     label:'Medical cost burden', fmt:'ratio', good:-1, idx:true, derived:true},
@@ -390,6 +395,10 @@ const METRICS=[
   {key:'job_growth',         label:'Jobs created (yearly)', fmt:'jobs', good:1, idx:true, derived:true},
   {key:'gas_price',          label:'Gas price',           fmt:'dollar2', good:-1},
   {key:'grocery_cpi',        label:'Grocery prices (CPI)',fmt:'idx', good:-1},
+  {key:'housing_starts',     label:'Housing starts',      fmt:'thousands', good:1},
+  {key:'student_debt',       label:'Student debt',        fmt:'trillions', good:-1},
+  {key:'consumer_debt',      label:'Consumer debt',       fmt:'trillions', good:-1},
+  {key:'co2',                label:'CO₂ emissions',       fmt:'megatons', good:-1},
   {key:'median_home_price',  label:'Median home price',   fmt:'dollar0', good:-1},
   {key:'homeownership',      label:'Homeownership rate',  fmt:'pct', good:1},
   {key:'savings_rate',       label:'Personal savings rate', fmt:'pct', good:1},
@@ -402,7 +411,7 @@ const METABYKEY={}; METRICS.forEach(m=>METABYKEY[m.key]=m);
 const PILLARS={
   real_median_income:'econ', real_gdp_per_capita:'econ', real_min_wage:'econ', unemployment:'econ', jobless_claims:'econ', job_growth:'econ',
   home_price_to_income:'cost', inflation:'cost', medical_burden:'cost', debt_service:'cost',
-  poverty_rate:'fair', inequality:'fair', life_expectancy:'fair'
+  poverty_rate:'fair', child_poverty:'fair', inequality:'fair', life_expectancy:'fair'
 };
 const PILLAR_NAMES={econ:'Jobs & income', cost:'Cost of living', fair:'Health, poverty & fairness'};
 const BASEW={};
@@ -634,7 +643,8 @@ function renderSources(){
     const us=unitSource(m.key); if(seen.has(us.id))return; seen.add(us.id);
     const o=ALL[m.key], ys=Object.keys(o).map(Number).sort((a,b)=>a-b);
     const c=document.createElement('div'); c.className='srccard';
-    c.innerHTML='<div class="sname">'+m.label+'</div><div class="smeta">'+us.source+'<br>'+ys[0]+'–'+ys[ys.length-1]+' · <a href="https://fred.stlouisfed.org/series/'+us.id+'" target="_blank" rel="noopener">'+us.id+' ↗</a></div>';
+    var link=/FRED/.test(us.source)?('<a href="https://fred.stlouisfed.org/series/'+us.id+'" target="_blank" rel="noopener">'+us.id+' ↗</a>'):us.id;
+    c.innerHTML='<div class="sname">'+m.label+'</div><div class="smeta">'+us.source+'<br>'+ys[0]+'–'+ys[ys.length-1]+' · '+link+'</div>';
     box.appendChild(c);
   });
   document.getElementById('disclaimer').innerHTML=DATA.meta.note+' The Quality-of-Life Index is an original composite built for this page — not an official government statistic. Data retrieved '+DATA.meta.generated+' and refreshed automatically each day. Built by Jordan Dorman as a data-analysis project.';

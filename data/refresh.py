@@ -40,6 +40,11 @@ NATIONAL = {
   "debt_service": ("TDSP", "Household debt service ratio", "% of disposable income", "FRED / Federal Reserve"),
   "inequality": ("SIPOVGINIUSA", "Income inequality (Gini)", "Gini index", "FRED / World Bank"),
   "savings_rate": ("PSAVERT", "Personal savings rate", "% of disposable income", "FRED / U.S. BEA"),
+  "child_poverty": ("PPU18US00000A156NCEN", "Child poverty rate (under 18)", "%", "FRED / U.S. Census Bureau"),
+  "housing_starts": ("HOUST", "Housing starts", "thousands of units/yr", "FRED / U.S. Census Bureau"),
+  "student_debt": ("SLOAS", "Student loan debt (outstanding)", "$ millions", "FRED / Federal Reserve"),
+  "consumer_debt": ("TOTALSL", "Consumer credit (outstanding)", "$ millions", "FRED / Federal Reserve"),
+  "co2": ("EMISSCO2TOTVTTTOUSA", "CO2 emissions (total)", "million metric tons", "FRED / U.S. EIA"),
 }
 PRESIDENTS = [
   {"name": "Truman", "party": "D", "start": 1945, "end": 1952}, {"name": "Eisenhower", "party": "R", "start": 1953, "end": 1960},
@@ -64,6 +69,31 @@ def build_national():
         except Exception as e:
             print("national FAIL", key, e)
         time.sleep(0.05)
+    # education (Census CPS Table A-2, bachelor's-or-higher block) — not on FRED, best-effort
+    try:
+        import openpyxl, io as _io
+        url = "https://www2.census.gov/programs-surveys/demo/tables/educational-attainment/time-series/cps-historical-time-series/taba-2.xlsx"
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        wb = openpyxl.load_workbook(_io.BytesIO(urllib.request.urlopen(req, timeout=40).read()), read_only=True, data_only=True)
+        ws = wb[wb.sheetnames[0]]
+        in_block, edu = False, {}
+        for r in ws.iter_rows(values_only=True):
+            c0 = str(r[0]).strip() if r[0] is not None else ""
+            if "Completed 4 Years of College" in c0 or ("Bachelor" in c0 and "Higher" in c0):
+                in_block = True; continue
+            if not in_block: continue
+            try: y = int(c0)
+            except Exception:
+                if c0 and not c0[:1].isdigit() and len(c0) > 3: break
+                continue
+            try: edu[y] = round(float(str(r[1]).replace(",", "")), 1)
+            except Exception: pass
+        if edu:
+            series["education_ba"] = {"series_id": "CPS-A2", "label": "College degree (bachelor's+)", "unit": "% of adults 25+",
+                                      "source": "U.S. Census Bureau (CPS Table A-2)", "years": {str(k): edu[k] for k in sorted(edu)}}
+            print("education: %d-%d" % (min(edu), max(edu)))
+    except Exception as e:
+        print("education: skipped (" + str(e)[:60] + ")")
     partial = datetime.date.today().year
     out = {"meta": {"title": "The State of the American Dream",
                     "subtitle": "U.S. quality-of-life indicators over time, graded by year and presidential term",
