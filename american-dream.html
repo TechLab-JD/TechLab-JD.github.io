@@ -218,7 +218,7 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
   <section>
     <div class="sectlabel mono">// THE GRADE</div>
     <h2 class="sec">Quality-of-Life Index, year by year</h2>
-    <p class="sub">A composite score (0–100) blending income, growth, jobs, prices, housing affordability, wages, poverty and life expectancy — graded on a curve against U.S. history. Full method below.</p>
+    <p class="sub">A composite score (0–100) blending income, growth, jobs, prices, housing affordability, wages, poverty and life expectancy — scored on an absolute scale against the best readings in modern U.S. history, not curved against other years. Full method below.</p>
     <div class="panel">
       <div class="chartbox sm"><canvas id="indexChart"></canvas></div>
       <details class="method">
@@ -297,7 +297,7 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
     </div>
     <div class="panel" style="margin-top:18px">
       <h2 style="font-size:16px;color:#F4F1E6">Did the economy's gains reach workers?</h2>
-      <p class="sub" style="margin-bottom:10px">Productivity vs. real pay per hour, both set to 100 at the start. They rose together until the late 1970s — then the economy kept getting more productive while the typical paycheck flattened.</p>
+      <p class="sub" style="margin-bottom:10px">Productivity vs. average real pay per hour (total compensation, including benefits), both set to 100 at the start. They rose together until the late 1970s — then the economy kept getting more productive while average pay grew far slower. This is the economy-wide average; the typical (median) worker's pay has lagged even further.</p>
       <div class="chartbox sm"><canvas id="prodChart"></canvas></div>
     </div>
     <div class="grid3" id="dist-stats" style="margin-top:16px"></div>
@@ -308,12 +308,13 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
   <section>
     <div class="sectlabel mono">// VS. THE WORLD</div>
     <h2 class="sec">How the U.S. stacks up</h2>
-    <p class="sub">The American Dream, compared to where? The U.S. against peer high-income nations. Pick a measure — the U.S. (highlighted) often isn't where you'd expect for the richest country on earth.</p>
+    <p class="sub">The American Dream, compared to where? The U.S. against peer high-income nations. Pick a measure — the U.S. (highlighted) leads on output, research and schooling, yet trails the group on most health and equity measures.</p>
     <div class="panel">
       <div class="controls"><div class="chips" id="world-chips"></div></div>
       <div class="chartbox" style="height:380px"><canvas id="worldChart"></canvas></div>
     </div>
-    <p class="srcnote mono" id="world-src" style="margin-top:12px"></p>
+    <p class="srcnote mono" id="world-note" style="margin-top:10px;color:#E8A33C"></p>
+    <p class="srcnote mono" id="world-src" style="margin-top:8px"></p>
   </section>
 
   <!-- HOUSING -->
@@ -323,8 +324,8 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
     <p class="sub">The biggest piece of the Dream, and the biggest squeeze. A house now costs more years of income than it used to, and the mortgage to buy it costs more too.</p>
     <div class="grid2">
       <div class="panel">
-        <h2 style="font-size:16px;color:#F4F1E6">Home price ÷ household income</h2>
-        <p class="sub" style="margin-bottom:10px">Years of income to buy a typical home</p>
+        <h2 style="font-size:16px;color:#F4F1E6">New-home price ÷ household income</h2>
+        <p class="sub" style="margin-bottom:10px">Years of income to buy a typical new home (Census median new-home sale price)</p>
         <div class="chartbox sm"><canvas id="afffChart"></canvas></div>
       </div>
       <div class="panel">
@@ -365,7 +366,7 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
   <section>
     <div class="sectlabel mono">// DESPAIR</div>
     <h2 class="sec">Deaths of despair &amp; addiction</h2>
-    <p class="sub">Some of "it feels worse" shows up in mortality, not money. Drug overdose deaths and suicides — what researchers call deaths of despair. Overdoses more than doubled in a decade before a recent decline; suicides climbed for years. Shown for context, <b>not folded into the grade</b>.</p>
+    <p class="sub">Some of "it feels worse" shows up in mortality, not money. Drug overdose deaths and suicides — what researchers call deaths of despair. Overdose deaths roughly doubled between 2015 and their 2022 peak, then fell in 2023-24; recorded suicides rose from 1999 through 2017 (the latest year in this CDC series). Shown for context, <b>not folded into the grade</b>.</p>
     <div class="panel">
       <div class="chartbox sm"><canvas id="despairChart"></canvas></div>
       <div class="grid3" id="despair-stats" style="margin-top:16px"></div>
@@ -485,12 +486,12 @@ let DATA, S, PRES, YEARS, DERIVED={}, ALL={}, curMetric, mainChart, indexChart, 
 const METRICS=[
   {key:'real_median_income', label:'Real median income', fmt:'dollar0', good:1, idx:true},
   {key:'real_gdp_per_capita',label:'Real GDP per capita', fmt:'dollar0', good:1, idx:true},
-  {key:'home_price_to_income',label:'Home price ÷ income', fmt:'ratio', good:-1, idx:true, derived:true},
+  {key:'home_price_to_income',label:'New-home price ÷ income', fmt:'ratio', good:-1, idx:true, derived:true},
   {key:'real_min_wage',      label:'Real minimum wage',   fmt:'dollar2', good:1, idx:true, derived:true},
   {key:'unemployment',       label:'Unemployment rate',   fmt:'pct', good:-1, idx:true},
   {key:'inflation',          label:'Inflation (yearly)',  fmt:'pct', good:-1, idx:true, derived:true},
   {key:'poverty_rate',       label:'Poverty rate',        fmt:'pct', good:-1, idx:true},
-  {key:'child_poverty',      label:'Child poverty rate',  fmt:'pct', good:-1, idx:true},
+  {key:'child_poverty',      label:'Child poverty rate',  fmt:'pct', good:-1},
   {key:'life_expectancy',    label:'Life expectancy',     fmt:'years', good:1, idx:true},
   {key:'education_ba',       label:'College degree (BA+)',fmt:'pct', good:1},
   {key:'inequality',         label:'Income inequality (Gini)', fmt:'gini', good:-1, idx:true},
@@ -508,7 +509,7 @@ const METRICS=[
   {key:'debt_gdp',           label:'Federal debt (% GDP)',fmt:'pct', good:-1},
   {key:'total_debt',         label:'Federal debt (total)',fmt:'trillions', good:-1},
   {key:'co2',                label:'CO₂ emissions',       fmt:'megatons', good:-1},
-  {key:'median_home_price',  label:'Median home price',   fmt:'dollar0', good:-1},
+  {key:'median_home_price',  label:'Median new-home price', fmt:'dollar0', good:-1},
   {key:'homeownership',      label:'Homeownership rate',  fmt:'pct', good:1},
   {key:'savings_rate',       label:'Personal savings rate', fmt:'pct', good:1},
   {key:'labor_participation',label:'Labor force participation', fmt:'pct', good:1},
@@ -520,7 +521,7 @@ const METABYKEY={}; METRICS.forEach(m=>METABYKEY[m.key]=m);
 const PILLARS={
   real_median_income:'econ', real_gdp_per_capita:'econ', real_min_wage:'econ', unemployment:'econ', jobless_claims:'econ', job_growth:'econ',
   home_price_to_income:'cost', inflation:'cost', medical_burden:'cost', debt_service:'cost',
-  poverty_rate:'fair', child_poverty:'fair', inequality:'fair', life_expectancy:'fair'
+  poverty_rate:'fair', inequality:'fair', life_expectancy:'fair'
 };
 const PILLAR_NAMES={econ:'Jobs & income', cost:'Cost of living', fair:'Health, poverty & fairness'};
 const BASEW={};
@@ -560,7 +561,7 @@ function unitSource(key){
   if(m.derived){
     if(key==='inflation')return{unit:'% change',source:'Derived from CPI (FRED / U.S. BLS)',id:'CPIAUCSL'};
     if(key==='real_min_wage')return{unit:'$/hr ('+S.cpi_base+' dollars)',source:'Derived from federal min wage + CPI (FRED)',id:'FEDMINNFRWG'};
-    if(key==='home_price_to_income')return{unit:'ratio',source:'Derived: median home price ÷ median income (FRED)',id:'MSPUS'};
+    if(key==='home_price_to_income')return{unit:'ratio',source:'Derived: median new-home sale price ÷ median household income (FRED MSPUS, new homes only)',id:'MSPUS'};
     if(key==='medical_burden')return{unit:'ratio vs earliest year',source:'Derived: medical CPI ÷ overall CPI (FRED / U.S. BLS)',id:'CPIMEDSL'};
     if(key==='job_growth')return{unit:'jobs added/year',source:'Derived: year-over-year change in nonfarm payrolls (FRED / U.S. BLS)',id:'PAYEMS'};
   }
@@ -771,7 +772,7 @@ function renderSources(){
     c.innerHTML='<div class="sname">'+m.label+'</div><div class="smeta">'+us.source+'<br>'+ys[0]+'–'+ys[ys.length-1]+' · '+link+'</div>';
     box.appendChild(c);
   });
-  document.getElementById('disclaimer').innerHTML=DATA.meta.note+' The Quality-of-Life Index is an original composite built for this page — not an official government statistic. Data retrieved '+DATA.meta.generated+' and refreshed automatically each day. Built by Jordan Dorman as a data-analysis project.';
+  document.getElementById('disclaimer').innerHTML=DATA.meta.note+' The Quality-of-Life Index is an original composite built for this page — not an official government statistic. Data retrieved '+DATA.meta.generated+' and refreshed automatically each day. Some series (emissions, mortality and Census tables) are reported with a lag of one to several years, so each chart\'s axis shows its own latest year. Built by Jordan Dorman as a data-analysis project.';
 }
 
 function miniLine(canvasId,key,color){
@@ -785,7 +786,7 @@ function renderHousing(){
   miniLine('afffChart','home_price_to_income','#E8A33C'); miniLine('mortChart','mortgage_rate','#d66a5a');
   const stat=(l,v)=>'<div class="stat"><div class="label">'+l+'</div><div class="val">'+v+'</div></div>';
   document.getElementById('housing-stats').innerHTML=
-    stat('Home price ÷ income',lastOf(ALL.home_price_to_income).toFixed(1)+'×')+
+    stat('New-home price ÷ income',lastOf(ALL.home_price_to_income).toFixed(1)+'×')+
     stat('Mortgage rate',lastOf(ALL.mortgage_rate).toFixed(1)+'%')+
     stat('Homeownership',lastOf(ALL.homeownership).toFixed(0)+'%');
 }
@@ -1020,6 +1021,7 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
     const fmtV=(v,ind)=>{const u=ind.unit||''; if(u.indexOf('$')>=0)return '$'+Math.round(v).toLocaleString(); if(u.indexOf('%')>=0)return v+'%'; return ''+v;};
     function draw(){
       const ind=d.indicators[cur];
+      const nEl=document.getElementById('world-note'); if(nEl)nEl.textContent=ind.note||'';
       const entries=Object.entries(ind.countries).sort((a,b)=> ind.better>0 ? b[1]-a[1] : a[1]-b[1]);
       if(chart)chart.destroy();
       chart=new Chart(document.getElementById('worldChart'),{type:'bar',data:{labels:entries.map(e=>names[e[0]]||e[0]),datasets:[{data:entries.map(e=>e[1]),backgroundColor:entries.map(e=>e[0]==='USA'?'#E8A33C':'rgba(120,132,164,.55)'),borderRadius:4}]},
@@ -1065,7 +1067,7 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
       const rowsHTML=d.spending.filter(f=>f.amount>0).map(f=>{const share=tot*f.amount/totSp;return {name:f.name,v:share};}).filter(r=>r.v>=0.5)
         .map(r=>'<div style="display:flex;justify-content:space-between;padding:6px 0;border-top:1px solid var(--line-soft);font-size:13.5px"><span style="color:var(--dim)">'+r.name+'</span><span class="mono" style="color:var(--text)">'+money(r.v)+'</span></div>').join('');
       out.innerHTML='<div style="font-size:13px;color:var(--dim);margin-bottom:8px">Estimated federal tax on '+money(inc)+': <b style="color:var(--text)">'+money(tot)+'</b> <span style="color:var(--faint)">(income tax '+money(tax)+' + payroll '+money(payroll)+')</span>. Roughly where it goes:</div>'+rowsHTML+
-        '<div style="font-size:11.5px;color:var(--faint);margin-top:8px">Simplified single-filer estimate; split by each program’s share of federal spending. About a quarter of federal spending is borrowed, so these shares reflect spending, not just your taxes.</div>';
+        '<div style="font-size:11.5px;color:var(--faint);margin-top:8px">Simplified single-filer estimate (2024 brackets + standard deduction only — no credits like the EITC or Child Tax Credit, so it overstates tax for many lower-income households); split by each program’s share of federal spending. About a quarter of federal spending is borrowed, so these shares reflect spending, not just your taxes.</div>';
     }
     document.getElementById('tr-go').onclick=receipt;
     document.getElementById('tr-income').addEventListener('keydown',e=>{if(e.key==='Enter')receipt();});
@@ -1116,7 +1118,7 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
     document.getElementById('despair-stats').innerHTML=
       stat('Overdose peak',Math.round(pk).toLocaleString()+' ('+pkY+')')+
       stat('Overdoses · '+Math.max.apply(null,odY),Math.round(od[Math.max.apply(null,odY)]).toLocaleString())+
-      stat('Suicides/yr',Math.round(su[Math.min.apply(null,suY)]).toLocaleString()+' → '+Math.round(su[Math.max.apply(null,suY)]).toLocaleString());
+      stat('Suicides · '+Math.min.apply(null,suY)+'→'+Math.max.apply(null,suY),Math.round(su[Math.min.apply(null,suY)]).toLocaleString()+' → '+Math.round(su[Math.max.apply(null,suY)]).toLocaleString());
     document.getElementById('despair-src').textContent=d.note+' Retrieved '+d.generated+'.';
   }).catch(e=>{var c=document.getElementById('despairChart'); if(c)c.parentNode.innerHTML='<div class="empty" style="color:var(--faint);padding:24px">Despair data unavailable.</div>'; console.error(e);});
 })();
@@ -1185,7 +1187,7 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
       const years=Object.keys(O).map(Number).filter(y=>P[String(y)]!=null).sort((a,b)=>a-b);
       const b0=years[0], ob=O[String(b0)], pb=P[String(b0)];
       const mk=(src,base,color,lbl)=>({label:lbl,data:years.map(y=>+(src[String(y)]/base*100).toFixed(1)),borderColor:color,borderWidth:2.2,pointRadius:0,pointHoverRadius:4,tension:.2});
-      new Chart(document.getElementById('prodChart'),{type:'line',data:{labels:years.map(String),datasets:[mk(O,ob,'#E8A33C','Productivity (output per hour)'),mk(P,pb,'#4FC08D','Real pay per hour')]},
+      new Chart(document.getElementById('prodChart'),{type:'line',data:{labels:years.map(String),datasets:[mk(O,ob,'#E8A33C','Productivity (output per hour)'),mk(P,pb,'#4FC08D','Average pay per hour')]},
         options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
           plugins:{legend:{labels:{color:TX,font:{family:'JetBrains Mono',size:10},boxWidth:10}},termBands:{show:false},recBands:{show:false},
             tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+c.parsed.y+' (×'+(c.parsed.y/100).toFixed(2)+' vs '+b0+')'}}},
