@@ -184,7 +184,8 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
   <section>
     <div class="sectlabel mono">// SNAPSHOT</div>
     <h2 class="sec">The numbers, latest year</h2>
-    <p class="sub">Headline indicators with their all-time record high and low. Change is year-over-year — the latest year versus the one before it.</p>
+    <p class="sub">Headline indicators with their all-time record high and low. Pick how far back to compare each one.</p>
+    <div class="controls"><span class="ctl" style="color:var(--dim)">Compare to:</span><div class="chips" id="snap-chips"></div></div>
     <div class="kgrid" id="kgrid"></div>
   </section>
 
@@ -515,23 +516,38 @@ function spark(canvas,key){
   new Chart(canvas,{type:'line',data:{labels:ys,datasets:[{data:ys.map(y=>o[y]),borderColor:COL.amber,borderWidth:1.6,pointRadius:0,tension:.25,fill:true,backgroundColor:'rgba(232,163,60,.10)'}]},
     options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{enabled:false}},scales:{x:{display:false},y:{display:false}}}});
 }
+var SNAP_BACK=1;
 function renderKcards(){
   const box=document.getElementById('kgrid'); box.innerHTML='';
   const show=['real_median_income','real_gdp_per_capita','home_price_to_income','unemployment','inflation','life_expectancy','poverty_rate','real_min_wage'];
   show.forEach(key=>{
-    const o=ALL[key], ys=Object.keys(o).map(Number).sort((a,b)=>a-b), ly=ys[ys.length-1], py=ys[ys.length-2];
-    const last=o[ly], prev=py!=null?o[py]:null, chg=(prev!=null&&prev!==0)?(last-prev)/Math.abs(prev)*100:null;
+    const o=ALL[key], ys=Object.keys(o).map(Number).sort((a,b)=>a-b), ly=ys[ys.length-1];
     let hi=-Infinity,lo=Infinity,hiY,loY; ys.forEach(y=>{if(y===PARTIAL)return;if(o[y]>hi){hi=o[y];hiY=y;}if(o[y]<lo){lo=o[y];loY=y;}});
-    const good=METABYKEY[key].good, improved=chg==null?true:(chg>=0)===(good>0);
-    const card=document.createElement('div'); card.className='kcard';
+    const card=document.createElement('div'); card.className='kcard'; card.dataset.key=key;
     const ytd=(ly===PARTIAL)?' <span style="font-size:11px;color:var(--faint);font-family:JetBrains Mono">’'+String(ly).slice(2)+' YTD</span>':'';
     card.innerHTML='<div class="klabel">'+METABYKEY[key].label+'</div>'+
-      '<div class="kval">'+fmtV(key,last)+ytd+'</div>'+
-      '<div class="kchg '+(improved?'up':'down')+'">'+(chg==null?'—':((chg>=0?'▲ ':'▼ ')+Math.abs(chg).toFixed(1)+'% vs '+py))+'</div>'+
+      '<div class="kval">'+fmtV(key,o[ly])+ytd+'</div>'+
+      '<div class="kchg"></div>'+
       '<canvas></canvas>'+
       '<div class="khl">peak '+fmtV(key,hi)+' ('+hiY+') · low '+fmtV(key,lo)+' ('+loY+')</div>';
     box.appendChild(card); spark(card.querySelector('canvas'),key);
   });
+  updateKchanges();
+}
+function updateKchanges(){
+  document.querySelectorAll('#kgrid .kcard').forEach(card=>{
+    const key=card.dataset.key, o=ALL[key], ys=Object.keys(o).map(Number).sort((a,b)=>a-b), ly=ys[ys.length-1];
+    const py=ly-SNAP_BACK, prev=o[py];
+    const chg=(prev!=null&&prev!==0)?(o[ly]-prev)/Math.abs(prev)*100:null;
+    const good=METABYKEY[key].good, improved=chg==null?true:(chg>=0)===(good>0);
+    const el=card.querySelector('.kchg'); el.className='kchg '+(improved?'up':'down');
+    el.innerHTML=chg==null?('<span style="color:var(--faint)">no '+py+' data</span>'):((chg>=0?'▲ ':'▼ ')+Math.abs(chg).toFixed(1)+'% vs '+py);
+  });
+}
+function initSnapChips(){
+  const box=document.getElementById('snap-chips');
+  [1,2,3,4,5].forEach((n,i)=>{const b=document.createElement('button');b.className='chip'+(n===1?' active':'');b.textContent=n+' yr'+(n>1?'s':'')+' ago';
+    b.onclick=()=>{SNAP_BACK=n;[...box.children].forEach(c=>c.classList.remove('active'));b.classList.add('active');updateKchanges();};box.appendChild(b);});
 }
 
 // presidential term shading plugin
@@ -744,7 +760,7 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
   document.getElementById('h-src').textContent='source: FRED · '+Object.keys(S).filter(k=>!k.startsWith('cpi_')).length+' official series · '+YEARS[0]+'–'+YEARS[YEARS.length-1]+' · retrieved '+d.meta.generated;
   document.getElementById('foot-gen').textContent='© 2026 Jordan Dorman · data via FRED · retrieved '+d.meta.generated;
   document.getElementById('content').style.display='block';
-  renderGradeHero(); renderKcards(); initControls(); initWeights(); drawMain(); drawIndex(); drawTerm(); initCompare(); renderHighLow(); renderSources(); renderMethod();
+  renderGradeHero(); initSnapChips(); renderKcards(); initControls(); initWeights(); drawMain(); drawIndex(); drawTerm(); initCompare(); renderHighLow(); renderSources(); renderMethod();
 }).catch(e=>{document.getElementById('h-sub').textContent='';document.getElementById('loaderr').style.display='block';console.error(e);});
 </script>
 
