@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
 <style>
 :root{
   --bg:#0F1524; --bg2:#121A2E; --surface:#17203A; --surface2:#1C2745; --line:#243150; --line-soft:#1D2A49;
@@ -103,6 +105,22 @@ details.method ul{margin:8px 0 8px 18px}
 .wrow .wval{color:var(--amber);text-align:right}
 @media(max-width:560px){.wrow{grid-template-columns:120px 1fr 42px;gap:8px;font-size:12px}}
 
+.maprow{display:grid;grid-template-columns:1.6fr 1fr;gap:18px;align-items:start}
+@media(max-width:760px){.maprow{grid-template-columns:1fr}}
+#usmap{position:relative}
+#usmap svg{width:100%;height:auto;display:block}
+#usmap path.state{stroke:#0F1524;stroke-width:.6;cursor:pointer;transition:opacity .12s}
+#usmap path.state:hover{opacity:.82;stroke:#F4F1E6;stroke-width:1.2}
+#usmap path.state.sel{stroke:#F4F1E6;stroke-width:1.6}
+.statecard{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:18px;min-height:180px;font-size:14px}
+.statecard .sc-name{font-family:'Space Grotesk';font-weight:700;font-size:20px;color:#F4F1E6}
+.statecard .sc-grade{float:right;font-family:'Space Grotesk';font-weight:700;font-size:34px;line-height:1}
+.statecard .sc-row{display:flex;justify-content:space-between;padding:6px 0;border-top:1px solid var(--line-soft);font-size:13.5px}
+.statecard .sc-row:first-of-type{border-top:0}
+.statecard .sc-row .v{font-family:'JetBrains Mono';color:var(--text)}
+.statecard .sc-hint{color:var(--faint);font-size:12.5px}
+.maplegend{display:flex;gap:4px;align-items:center;flex-wrap:wrap;margin-top:14px;font-size:11.5px;color:var(--dim);font-family:'JetBrains Mono'}
+.maplegend .lg{width:26px;height:12px;display:inline-block;border-radius:2px}
 .srcgrid{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));margin-top:6px}
 .srccard{background:var(--surface);border:1px solid var(--line-soft);border-radius:10px;padding:13px 15px}
 .srccard .sname{font-size:14px;color:var(--text);font-weight:600}
@@ -219,6 +237,23 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
     <h2 class="sec">Highs &amp; lows</h2>
     <p class="sub">The best and worst year on record for each indicator.</p>
     <table class="data" id="hl-table"></table>
+  </section>
+
+  <!-- BY STATE -->
+  <section>
+    <div class="sectlabel mono">// BY STATE</div>
+    <h2 class="sec">The 50 states, graded</h2>
+    <p class="sub">The same idea, mapped. Each state is graded on a curve against the others using real per-state data. Color by the overall grade, or pick a single indicator. Hover or tap a state for its numbers.</p>
+    <div class="panel">
+      <div class="controls"><div class="chips" id="map-chips"></div></div>
+      <div class="maprow">
+        <div id="usmap"></div>
+        <div class="statecard" id="state-detail"><span class="sc-hint">Hover or tap a state to see its stats and grade.</span></div>
+      </div>
+      <div class="maplegend" id="map-legend"></div>
+    </div>
+    <table class="data" id="state-rank" style="margin-top:18px"></table>
+    <p class="srcnote mono" id="state-src" style="margin-top:12px"></p>
   </section>
 
   <!-- SOURCES -->
@@ -549,6 +584,98 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
   document.getElementById('content').style.display='block';
   renderGradeHero(); renderKcards(); initControls(); initWeights(); drawMain(); drawIndex(); drawTerm(); renderHighLow(); renderSources(); renderMethod();
 }).catch(e=>{document.getElementById('h-sub').textContent='';document.getElementById('loaderr').style.display='block';console.error(e);});
+</script>
+
+<script>
+/* ===== BY STATE: choropleth ===== */
+(function(){
+  const GRADE_KEYS=[['income',1],['afford',-1],['poverty',-1],['unemployment',-1]];
+  const MAPMETRICS=[
+    {key:'grade', label:'Overall grade'},
+    {key:'income',label:'Median income', good:1, fmt:v=>'$'+Math.round(v).toLocaleString()},
+    {key:'afford',label:'Home price ÷ income', good:-1, fmt:v=>v.toFixed(1)+'×'},
+    {key:'poverty',label:'Poverty rate', good:-1, fmt:v=>v.toFixed(1)+'%'},
+    {key:'unemployment',label:'Unemployment', good:-1, fmt:v=>v.toFixed(1)+'%'},
+  ];
+  const MM={}; MAPMETRICS.forEach(m=>MM[m.key]=m);
+  let ST, curMap='grade', scores={}, selFp=null, pathGen, feats;
+  const fp2=id=>String(id).padStart(2,'0');
+
+  function computeScores(){
+    scores={}; const norm={};
+    GRADE_KEYS.forEach(([k,good])=>{
+      const vals=Object.values(ST).map(s=>s[k]).filter(v=>v!=null);
+      const mn=Math.min(...vals), mx=Math.max(...vals); norm[k]={};
+      Object.entries(ST).forEach(([fp,s])=>{ if(s[k]!=null){let n=(mx===mn)?50:(s[k]-mn)/(mx-mn)*100; if(good<0)n=100-n; norm[k][fp]=n;} });
+    });
+    Object.keys(ST).forEach(fp=>{let sum=0,n=0;GRADE_KEYS.forEach(([k])=>{if(norm[k][fp]!=null){sum+=norm[k][fp];n++;}});scores[fp]=n?+(sum/n).toFixed(1):null;});
+  }
+  function normVal(fp){ // 0..100 for current indicator, oriented good→high
+    const m=MM[curMap]; const vals=Object.values(ST).map(s=>s[curMap]).filter(v=>v!=null);
+    const mn=Math.min(...vals),mx=Math.max(...vals), s=ST[fp]; if(!s||s[curMap]==null)return null;
+    let t=(mx===mn)?50:(s[curMap]-mn)/(mx-mn)*100; if(m.good<0)t=100-t; return t;
+  }
+  function colorFor(fp){
+    const sc= curMap==='grade'? scores[fp] : normVal(fp);
+    return sc==null? '#2a3450' : gradeColor(sc);
+  }
+  function detail(fp){
+    const s=ST[fp]; if(!s){return;}
+    const sc=scores[fp], g=gradeFor(sc);
+    const box=document.getElementById('state-detail');
+    const row=(k,v)=>'<div class="sc-row"><span>'+k+'</span><span class="v">'+v+'</span></div>';
+    box.innerHTML='<div class="sc-grade" style="color:'+gradeColor(sc)+'">'+g+'</div>'+
+      '<div class="sc-name">'+s.name+'</div>'+
+      '<div class="sc-hint" style="margin-bottom:10px">QoL grade '+g+' · index '+sc+'/100 · ranks #'+(Object.values(scores).filter(x=>x>sc).length+1)+' of 51</div>'+
+      row('Median household income', s.income!=null?'$'+Math.round(s.income).toLocaleString():'—')+
+      row('Poverty rate', s.poverty!=null?s.poverty.toFixed(1)+'%':'—')+
+      row('Unemployment', s.unemployment!=null?s.unemployment.toFixed(1)+'%':'—')+
+      row('Median list price', s.listprice!=null?'$'+Math.round(s.listprice).toLocaleString():'—')+
+      row('Home price ÷ income', s.afford!=null?s.afford.toFixed(1)+'×':'—')+
+      row('Per-capita income', s.pcpi!=null?'$'+Math.round(s.pcpi).toLocaleString():'—');
+  }
+  function paint(){
+    d3.selectAll('#usmap path.state').attr('fill',d=>colorFor(fp2(d.id)));
+  }
+  function renderLegend(){
+    const steps=[['F',35],['D',42],['C',55],['B',68],['A',85],['A+',95]];
+    document.getElementById('map-legend').innerHTML='<span>worse</span>'+
+      steps.map(([,v])=>'<span class="lg" style="background:'+gradeColor(v)+'"></span>').join('')+
+      '<span>better</span> &nbsp;·&nbsp; '+(curMap==='grade'?'overall QoL grade':MM[curMap].label);
+  }
+  function renderRank(){
+    const rows=Object.entries(ST).filter(([fp])=>scores[fp]!=null).sort((a,b)=>scores[b[0]]-scores[a[0]]);
+    let h='<tr><th>#</th><th>State</th><th class="r">Grade</th><th class="r">Median income</th><th class="r">Poverty</th><th class="r">Unemployment</th><th class="r hideSm">Price÷income</th></tr>';
+    rows.forEach(([fp,s],i)=>{const sc=scores[fp];h+='<tr><td class="mono" style="color:var(--faint)">'+(i+1)+'</td><td>'+s.name+'</td>'+
+      '<td class="r" style="color:'+gradeColor(sc)+';font-weight:700">'+gradeFor(sc)+'</td>'+
+      '<td class="r">$'+Math.round(s.income).toLocaleString()+'</td>'+
+      '<td class="r">'+s.poverty.toFixed(1)+'%</td><td class="r">'+s.unemployment.toFixed(1)+'%</td>'+
+      '<td class="r hideSm">'+(s.afford!=null?s.afford.toFixed(1)+'×':'—')+'</td></tr>';});
+    document.getElementById('state-rank').innerHTML=h;
+  }
+  function initChips(){
+    const box=document.getElementById('map-chips');
+    MAPMETRICS.forEach((m,i)=>{const b=document.createElement('button');b.className='chip'+(i===0?' active':'');b.textContent=m.label;
+      b.onclick=()=>{curMap=m.key;[...box.children].forEach(c=>c.classList.remove('active'));b.classList.add('active');paint();renderLegend();};box.appendChild(b);});
+  }
+  Promise.all([fetch('data/us-states-10m.json').then(r=>r.json()), fetch('data/us-states-qol.json').then(r=>r.json())])
+  .then(([topo,data])=>{
+    ST=data.states; computeScores();
+    const fc=topojson.feature(topo, topo.objects.states);
+    feats=fc.features.filter(f=>ST[fp2(f.id)]); // 50 states + DC only
+    const W=960,H=600;
+    const proj=d3.geoAlbersUsa().fitSize([W,H],{type:'FeatureCollection',features:feats});
+    pathGen=d3.geoPath(proj);
+    const svg=d3.select('#usmap').append('svg').attr('viewBox','0 0 '+W+' '+H).attr('role','img').attr('aria-label','US map of quality-of-life grades by state');
+    svg.selectAll('path').data(feats).enter().append('path').attr('class','state').attr('d',pathGen)
+      .attr('fill',d=>colorFor(fp2(d.id)))
+      .on('mousemove',(e,d)=>detail(fp2(d.id)))
+      .on('click',function(e,d){selFp=fp2(d.id);d3.selectAll('#usmap path.state').classed('sel',false);d3.select(this).classed('sel',true);detail(selFp);});
+    initChips(); renderLegend(); renderRank();
+    document.getElementById('state-detail').querySelector('.sc-hint').textContent='Hover or tap a state to see its stats and grade. '+Object.keys(ST).length+' states graded, '+data.generated+'.';
+    document.getElementById('state-src').textContent=data.notes+' State grade = income, poverty, unemployment & home-price-to-income, normalized across states.';
+  }).catch(e=>{document.getElementById('usmap').innerHTML='<div class="empty" style="color:var(--faint);padding:30px">Couldn’t load the state map data.</div>';console.error(e);});
+})();
 </script>
 </body>
 </html>
