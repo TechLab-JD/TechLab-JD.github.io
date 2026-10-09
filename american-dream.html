@@ -294,17 +294,18 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
   <section>
     <div class="sectlabel mono">// POLICY · LIVE</div>
     <h2 class="sec">What's coming through Washington</h2>
-    <p class="sub">Live feeds, pulled straight from the source every time you load this page: executive orders and new regulations from the <b>Federal Register</b>, and <b>bills moving through Congress</b> from GovTrack — newest action first. Search to filter by topic. <span style="color:var(--faint)">(Per-state legislation needs a licensed API, so it isn't live here yet — see the roadmap note below.)</span></p>
+    <p class="sub">What's moving through government, newest action first: <b>executive orders</b> and <b>new regulations</b> from the Federal Register, <b>bills in Congress</b> from GovTrack (live), and <b>state legislation</b> for all 50 states via OpenStates (refreshed daily). Search federal items by topic, or pick a state.</p>
     <div class="panel">
       <div class="controls">
         <div class="chips" id="pol-chips"></div>
         <input id="pol-search" class="polsearch" placeholder="Search policies — housing, AI, energy, taxes…">
+        <select id="pol-state" style="display:none"></select>
       </div>
       <div class="srcnote mono" id="pol-summary" style="margin-bottom:10px"></div>
       <div class="polfeed" id="pol-feed"></div>
       <div style="text-align:center;margin-top:16px"><button class="chip" id="pol-more" style="display:none">Load older ↓</button></div>
     </div>
-    <p class="srcnote mono" style="margin-top:12px">Live sources: federalregister.gov (executive orders &amp; rules) · govtrack.us (congressional bills). State-by-state legislation requires a licensed API (OpenStates / LegiScan); it's on the roadmap as a daily-refreshed feed once a key is in place.</p>
+    <p class="srcnote mono" style="margin-top:12px">Sources: federalregister.gov (executive orders &amp; rules, live) · govtrack.us (congressional bills, live) · openstates.org (state legislation, refreshed daily).</p>
   </section>
 
   <!-- SOURCES -->
@@ -787,10 +788,12 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
     {key:'rule',  label:'New rules',        src:'fr', badge:'rule',  cond:'conditions[type][]=RULE', lbl:'Final Rule'},
     {key:'prule', label:'Proposed rules',   src:'fr', badge:'prule', cond:'conditions[type][]=PRORULE', lbl:'Proposed Rule'},
     {key:'bill',  label:'Bills in Congress',src:'gt'},
+    {key:'state', label:'State bills',       src:'os', bundled:true},
   ];
   const CM={}; CATS.forEach(c=>CM[c.key]=c);
-  let cur='eo', q='', timer;
+  let cur='eo', q='', timer, STATE_BILLS=null;
   const feed=document.getElementById('pol-feed');
+  const stateSel=document.getElementById('pol-state'), searchBox=document.getElementById('pol-search');
   function esc(s){return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
   function fmtDate(s){try{return new Date(s+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});}catch(e){return s;}}
   function billBadge(slug){ if(/^enacted/.test(slug))return['rule','Enacted']; if(/pass/.test(slug))return['prule','Passed']; if(/(fail|kill|veto)/.test(slug))return['eo','Stalled']; return['eo','In progress']; }
@@ -813,6 +816,34 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
         '<div class="pagency">'+esc(it.current_status_label||'')+' · introduced '+fmtDate(it.introduced_date)+'</div></a>';
     }).join('');
   }
+  function stateBadge(t){ if(/resolution/.test(t||''))return['prule','Resolution']; return['eo','Bill']; }
+  function renderOS(bills){
+    return bills.map(b=>{
+      const [cls,txt]=stateBadge(b.type);
+      return '<a class="politem" href="'+esc(b.url)+'" target="_blank" rel="noopener">'+
+        '<div class="pmeta"><span class="polbadge '+cls+'">'+txt+'</span><span class="pdate">'+fmtDate(b.date)+'</span></div>'+
+        '<div class="ptitle">'+esc((b.id?b.id+': ':'')+(b.title||''))+'</div>'+
+        (b.action?'<div class="pagency">'+esc(b.action)+'</div>':'')+'</a>';
+    }).join('');
+  }
+  function populateStates(){
+    if(stateSel.options.length) return;
+    Object.entries(STATE_BILLS.states).sort((a,b)=>a[1].name.localeCompare(b[1].name)).forEach(function(e){stateSel.add(new Option(e[1].name,e[0]));});
+    if(STATE_BILLS.states['TX']) stateSel.value='TX';
+    stateSel.onchange=renderCurState;
+  }
+  function renderCurState(){
+    const ab=stateSel.value||Object.keys(STATE_BILLS.states)[0], s=STATE_BILLS.states[ab];
+    feed.innerHTML=(s&&s.bills.length)?renderOS(s.bills):'<div class="empty" style="color:var(--faint);padding:24px">No recent bills on file for this state.</div>';
+    summary.textContent=s?('Showing '+s.bills.length+' recent bills in '+s.name+' · via OpenStates ('+STATE_BILLS.generated+')'):'';
+  }
+  function loadState(){
+    moreBtn.style.display='none';
+    if(STATE_BILLS){ renderCurState(); return; }
+    feed.innerHTML='<div class="empty" style="color:var(--faint);padding:24px">Loading state legislation…</div>';
+    fetch('data/state-bills.json').then(r=>r.ok?r.json():Promise.reject()).then(function(d){STATE_BILLS=d; populateStates(); renderCurState();})
+      .catch(function(e){feed.innerHTML='<div class="empty" style="color:var(--faint);padding:24px">State legislation isn’t available yet — it’s refreshed daily via OpenStates.</div>';summary.textContent='';});
+  }
   let page=0;
   const moreBtn=document.getElementById('pol-more'), summary=document.getElementById('pol-summary');
   function urlFor(c,pg){
@@ -820,7 +851,8 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
     return 'https://www.federalregister.gov/api/v1/documents.json?per_page=20&order=newest&'+c.cond+'&fields[]=title&fields[]=publication_date&fields[]=abstract&fields[]=html_url&fields[]=agency_names&fields[]=type&page='+(pg+1)+(q?'&conditions[term]='+encodeURIComponent(q):'');
   }
   function load(reset){
-    const c=CM[cur], srcName=(c.src==='gt')?'GovTrack':'federalregister.gov';
+    const c=CM[cur]; if(c.bundled){ return loadState(); }
+    const srcName=(c.src==='gt')?'GovTrack':'federalregister.gov';
     if(reset){page=0;feed.innerHTML='<div class="empty" style="color:var(--faint);padding:24px">Loading live from '+srcName+'…</div>';moreBtn.style.display='none';summary.textContent='';}
     else{moreBtn.textContent='Loading…';}
     fetch(urlFor(c,page)).then(r=>r.json()).then(d=>{
@@ -837,7 +869,7 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
   }
   moreBtn.onclick=()=>load(false);
   const chips=document.getElementById('pol-chips');
-  CATS.forEach((c,i)=>{const b=document.createElement('button');b.className='chip'+(i===0?' active':'');b.textContent=c.label;b.onclick=()=>{cur=c.key;[...chips.children].forEach(x=>x.classList.remove('active'));b.classList.add('active');load(true);};chips.appendChild(b);});
+  CATS.forEach((c,i)=>{const b=document.createElement('button');b.className='chip'+(i===0?' active':'');b.textContent=c.label;b.onclick=()=>{cur=c.key;[...chips.children].forEach(x=>x.classList.remove('active'));b.classList.add('active');var bd=CM[cur].bundled;searchBox.style.display=bd?'none':'';stateSel.style.display=bd?'':'none';load(true);};chips.appendChild(b);});
   document.getElementById('pol-search').oninput=function(){q=this.value.trim();clearTimeout(timer);timer=setTimeout(()=>load(true),400);};
   load(true);
 })();

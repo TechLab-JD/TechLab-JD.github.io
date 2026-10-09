@@ -2,7 +2,7 @@
 Writes usqol.json and us-states-qol.json next to this script. No API key needed.
 Run daily via automation/refresh-datalab.ps1. The state geometry (us-states-10m.json)
 never changes and is not refetched."""
-import urllib.request, csv, io, json, os, datetime, time
+import urllib.request, urllib.parse, csv, io, json, os, datetime, time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -106,7 +106,54 @@ def build_states():
     got = sum(1 for s in states.values() if s["income"])
     print("states: %d (%d with income)" % (len(states), got))
 
+# ---------- per-state legislation (OpenStates; key read from env or local file, never committed) ----------
+def openstates_key():
+    k = os.environ.get("OPENSTATES_API_KEY")
+    if k:
+        return k.strip()
+    for p in [os.path.join(HERE, "..", "..", "automation", ".openstates_key"),
+              os.path.join(HERE, "..", "..", "..", "automation", ".openstates_key")]:
+        try:
+            if os.path.exists(p):
+                return open(p).read().strip()
+        except Exception:
+            pass
+    return None
+
+def build_state_bills():
+    key = openstates_key()
+    if not key:
+        print("state bills: no OpenStates key found, skipping")
+        return
+    out = {}
+    for ab, name in sorted(NAMES.items()):
+        try:
+            url = ("https://v3.openstates.org/bills?jurisdiction=" + urllib.parse.quote(name) +
+                   "&sort=latest_action_desc&per_page=6&apikey=" + key)
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            d = json.loads(urllib.request.urlopen(req, timeout=30).read().decode())
+            bills = []
+            for b in d.get("results", []):
+                bills.append({"id": b.get("identifier"), "title": b.get("title"),
+                              "action": b.get("latest_action_description"),
+                              "date": b.get("latest_action_date", "")[:10],
+                              "url": b.get("openstates_url"),
+                              "type": (b.get("classification") or ["bill"])[0]})
+            if bills:
+                out[ab] = {"name": name, "bills": bills}
+            print("state bills", ab, len(bills), flush=True)
+        except Exception as e:
+            print("state bills FAIL", ab, str(e)[:60])
+        time.sleep(6.5)  # OpenStates free tier ~10 req/min
+    if out:
+        payload = {"generated": datetime.date.today().isoformat(),
+                   "note": "Recent state legislation via the OpenStates API (openstates.org). Up to 6 most-recently-acted bills per state.",
+                   "states": out}
+        json.dump(payload, open(os.path.join(HERE, "state-bills.json"), "w"), separators=(",", ":"))
+        print("state bills: %d states written" % len(out))
+
 if __name__ == "__main__":
     build_national()
     build_states()
+    build_state_bills()
     print("refresh complete", datetime.datetime.now().isoformat())
