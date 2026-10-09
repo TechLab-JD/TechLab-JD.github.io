@@ -265,6 +265,27 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
     </div>
   </section>
 
+  <!-- DISTRIBUTION -->
+  <section>
+    <div class="sectlabel mono">// DISTRIBUTION</div>
+    <h2 class="sec">Who gets what</h2>
+    <p class="sub">The averages hide a lot. Here's how income and wealth are actually split — and how the split has shifted. Income is inflation-adjusted to today's dollars.</p>
+    <div class="grid2">
+      <div class="panel">
+        <h2 style="font-size:16px;color:#F4F1E6">Average income by bracket</h2>
+        <p class="sub" style="margin-bottom:10px">Mean household income, in today's dollars</p>
+        <div class="chartbox sm"><canvas id="incChart"></canvas></div>
+      </div>
+      <div class="panel">
+        <h2 style="font-size:16px;color:#F4F1E6">Share of all wealth</h2>
+        <p class="sub" style="margin-bottom:10px">% of U.S. household net worth held by each group</p>
+        <div class="chartbox sm"><canvas id="wealthChart"></canvas></div>
+      </div>
+    </div>
+    <div class="grid3" id="dist-stats" style="margin-top:16px"></div>
+    <p class="srcnote mono" id="dist-src" style="margin-top:12px"></p>
+  </section>
+
   <!-- HIGHS & LOWS -->
   <section>
     <div class="sectlabel mono">// RECORDS</div>
@@ -371,6 +392,7 @@ const METRICS=[
   {key:'grocery_cpi',        label:'Grocery prices (CPI)',fmt:'idx', good:-1},
   {key:'median_home_price',  label:'Median home price',   fmt:'dollar0', good:-1},
   {key:'homeownership',      label:'Homeownership rate',  fmt:'pct', good:1},
+  {key:'savings_rate',       label:'Personal savings rate', fmt:'pct', good:1},
   {key:'labor_participation',label:'Labor force participation', fmt:'pct', good:1},
   {key:'rent_cpi',           label:'Rent (CPI index)',    fmt:'idx', good:-1},
 ];
@@ -740,21 +762,28 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
     });
     Object.keys(ST).forEach(fp=>{let sum=0,n=0;GRADE_KEYS.forEach(([k])=>{if(norm[k][fp]!=null){sum+=norm[k][fp];n++;}});scores[fp]=n?+(sum/n).toFixed(1):null;});
   }
+  // states are graded RELATIVE to each other (a curve) — the natural framing for a choropleth,
+  // and it gives a full green→red spread that matches the legend.
+  function sPct(score){const a=Object.values(scores).filter(v=>v!=null).sort((x,y)=>x-y);return a.length?a.filter(v=>v<score).length/a.length:0;}
+  function stateGrade(score){ if(score==null)return'—'; const p=sPct(score);
+    const b=[[.94,'A+'],[.86,'A'],[.78,'A-'],[.70,'B+'],[.60,'B'],[.50,'B-'],[.40,'C+'],[.30,'C'],[.22,'C-'],[.14,'D+'],[.07,'D'],[.03,'D-']];
+    for(const[t,g]of b)if(p>=t)return g; return'F'; }
+  function stateColor(score){ return score==null?'#2a3450':gradeColor(sPct(score)*100); }
   function normVal(fp){ // 0..100 for current indicator, oriented good→high
     const m=MM[curMap]; const vals=Object.values(ST).map(s=>s[curMap]).filter(v=>v!=null);
     const mn=Math.min(...vals),mx=Math.max(...vals), s=ST[fp]; if(!s||s[curMap]==null)return null;
     let t=(mx===mn)?50:(s[curMap]-mn)/(mx-mn)*100; if(m.good<0)t=100-t; return t;
   }
   function colorFor(fp){
-    if(curMap==='grade') return curveColor(scores[fp], Object.values(scores));
+    if(curMap==='grade') return stateColor(scores[fp]);
     const sc=normVal(fp); return sc==null? '#2a3450' : gradeColor(sc);
   }
   function detail(fp){
     const s=ST[fp]; if(!s){return;}
-    const arr=Object.values(scores), sc=scores[fp], g=curveGrade(sc,arr);
+    const arr=Object.values(scores), sc=scores[fp], g=stateGrade(sc);
     const box=document.getElementById('state-detail');
     const row=(k,v)=>'<div class="sc-row"><span>'+k+'</span><span class="v">'+v+'</span></div>';
-    box.innerHTML='<div class="sc-grade" style="color:'+curveColor(sc,arr)+'">'+g+'</div>'+
+    box.innerHTML='<div class="sc-grade" style="color:'+stateColor(sc)+'">'+g+'</div>'+
       '<div class="sc-name">'+s.name+'</div>'+
       '<div class="sc-hint" style="margin-bottom:10px">QoL grade '+g+' · ranks #'+(arr.filter(x=>x>sc).length+1)+' of '+arr.length+'</div>'+
       row('Median household income', s.income!=null?'$'+Math.round(s.income).toLocaleString():'—')+
@@ -778,7 +807,7 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
     const arr=Object.values(scores);
     let h='<tr><th>#</th><th>State</th><th class="r">Grade</th><th class="r">Median income</th><th class="r">Poverty</th><th class="r">Unemployment</th><th class="r hideSm">Price÷income</th></tr>';
     rows.forEach(([fp,s],i)=>{const sc=scores[fp];h+='<tr><td class="mono" style="color:var(--faint)">'+(i+1)+'</td><td>'+s.name+'</td>'+
-      '<td class="r" style="color:'+curveColor(sc,arr)+';font-weight:700">'+curveGrade(sc,arr)+'</td>'+
+      '<td class="r" style="color:'+stateColor(sc)+';font-weight:700">'+stateGrade(sc)+'</td>'+
       '<td class="r">$'+Math.round(s.income).toLocaleString()+'</td>'+
       '<td class="r">'+s.poverty.toFixed(1)+'%</td><td class="r">'+s.unemployment.toFixed(1)+'%</td>'+
       '<td class="r hideSm">'+(s.afford!=null?s.afford.toFixed(1)+'×':'—')+'</td></tr>';});
@@ -834,6 +863,51 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
       stat('Peak deportations',Math.round(pk).toLocaleString()+' ('+pkY+')');
     document.getElementById('imm-src').textContent=d.note+' Retrieved '+d.generated+'.';
   }).catch(e=>{var c=document.getElementById('immChart'); if(c)c.parentNode.innerHTML='<div class="empty" style="color:var(--faint);padding:24px">Immigration data unavailable.</div>'; console.error(e);});
+})();
+
+/* ===== WEALTH & INCOME DISTRIBUTION ===== */
+(function(){
+  const TX='#A9AFC4', GRID='rgba(36,49,80,.5)';
+  fetch('data/distribution.json').then(r=>r.json()).then(d=>{
+    // income brackets (lines, real $)
+    (function(){
+      const S=d.income.series, order=['low','mid','high','top5'], colors=['#4FC08D','#E8A33C','#e0843c','#d66a5a'];
+      const yset=new Set(); order.forEach(k=>Object.keys(S[k].years).forEach(y=>yset.add(+y)));
+      const years=[...yset].sort((a,b)=>a-b);
+      const dsets=order.map((k,i)=>({label:S[k].label,data:years.map(y=>S[k].years[String(y)]!=null?S[k].years[String(y)]:null),borderColor:colors[i],borderWidth:2,pointRadius:0,pointHoverRadius:4,tension:.2,spanGaps:true,fill:false}));
+      new Chart(document.getElementById('incChart'),{type:'line',data:{labels:years.map(String),datasets:dsets},
+        options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+          plugins:{legend:{labels:{color:TX,font:{family:'JetBrains Mono',size:10},boxWidth:10}},termBands:{show:false},recBands:{show:false},
+            tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+(c.parsed.y!=null?'$'+Math.round(c.parsed.y).toLocaleString():'—')}}},
+          scales:{x:{grid:{color:GRID},ticks:{color:TX,maxTicksLimit:8,font:{family:'JetBrains Mono'}}},
+            y:{grid:{color:GRID},ticks:{color:TX,font:{family:'JetBrains Mono'},callback:v=>v>=1000?'$'+(v/1000).toFixed(0)+'K':'$'+v}}}}});
+    })();
+    // wealth shares (stacked area, %), bottom50 at bottom
+    (function(){
+      const S=d.wealth.series, order=['bottom50','mid40','next9','top1'], colors=['#4FC08D','#E8A33C','#e0843c','#d66a5a'];
+      const yset=new Set(); order.forEach(k=>Object.keys(S[k].years).forEach(y=>yset.add(+y)));
+      const years=[...yset].sort((a,b)=>a-b);
+      const dsets=order.map((k,i)=>({label:S[k].label,data:years.map(y=>S[k].years[String(y)]!=null?S[k].years[String(y)]:null),borderColor:colors[i],backgroundColor:colors[i]+'66',borderWidth:1.5,pointRadius:0,pointHoverRadius:4,tension:.2,spanGaps:true,fill:true}));
+      new Chart(document.getElementById('wealthChart'),{type:'line',data:{labels:years.map(String),datasets:dsets},
+        options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+          plugins:{legend:{labels:{color:TX,font:{family:'JetBrains Mono',size:10},boxWidth:10}},termBands:{show:false},recBands:{show:false},
+            tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+(c.parsed.y!=null?c.parsed.y.toFixed(1)+'%':'—')}}},
+          scales:{x:{grid:{color:GRID},ticks:{color:TX,maxTicksLimit:8,font:{family:'JetBrains Mono'}}},
+            y:{stacked:true,min:0,max:100,grid:{color:GRID},ticks:{color:TX,font:{family:'JetBrains Mono'},callback:v=>v+'%'}}}}});
+    })();
+    // stats
+    const wl=d.wealth.series, il=d.income.series;
+    const last=o=>{const ys=Object.keys(o).map(Number);return o[String(Math.max.apply(null,ys))];};
+    const lastY=o=>Math.max.apply(null,Object.keys(o).map(Number));
+    const t1=last(wl.top1.years), b50=last(wl.bottom50.years);
+    const hi=last(il.high.years), lo=last(il.low.years);
+    const stat=(l,v)=>'<div class="stat"><div class="label">'+l+'</div><div class="val">'+v+'</div></div>';
+    document.getElementById('dist-stats').innerHTML=
+      stat('Top 1% of wealth',t1.toFixed(1)+'%')+
+      stat('Bottom 50% of wealth',b50.toFixed(1)+'%')+
+      stat('High ÷ low income',(hi/lo).toFixed(1)+'×');
+    document.getElementById('dist-src').textContent=d.wealth.note+' '+d.income.note+' Retrieved '+d.generated+'.';
+  }).catch(e=>{console.error(e);});
 })();
 
 /* ===== POLICY FEED: live from the Federal Register API ===== */

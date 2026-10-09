@@ -39,6 +39,7 @@ NATIONAL = {
   "homeownership": ("RHORUSQ156N", "Homeownership rate", "%", "FRED / U.S. Census Bureau"),
   "debt_service": ("TDSP", "Household debt service ratio", "% of disposable income", "FRED / Federal Reserve"),
   "inequality": ("SIPOVGINIUSA", "Income inequality (Gini)", "Gini index", "FRED / World Bank"),
+  "savings_rate": ("PSAVERT", "Personal savings rate", "% of disposable income", "FRED / U.S. BEA"),
 }
 PRESIDENTS = [
   {"name": "Truman", "party": "D", "start": 1945, "end": 1952}, {"name": "Eisenhower", "party": "R", "start": 1953, "end": 1960},
@@ -202,9 +203,51 @@ def build_immigration():
     except Exception as e:
         print("immigration: skipped (" + str(e)[:80] + "), keeping existing file")
 
+def build_distribution():
+    try:
+        import openpyxl, io as _io, re as _re
+        def dfa(sid): return {y: round(sum(v) / len(v), 2) for y, v in fetch_csv(sid).items()}
+        wealth = {"top1": dfa("WFRBST01134"), "next9": dfa("WFRBSN09161"), "mid40": dfa("WFRBSN40188"), "bottom50": dfa("WFRBSB50215")}
+        url = "https://www2.census.gov/programs-surveys/cps/tables/time-series/historical-income-households/h03ar.xlsx"
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        wb = openpyxl.load_workbook(_io.BytesIO(urllib.request.urlopen(req, timeout=40).read()), read_only=True, data_only=True)
+        ws = wb[wb.sheetnames[0]]
+        real_block, base = False, "2025"
+        low, mid, high, top5 = {}, {}, {}, {}
+        for r in ws.iter_rows(values_only=True):
+            c0 = str(r[0]).strip() if r[0] is not None else ""
+            m = _re.match(r"^(\d{4})\s+Dollars", c0)
+            if m: real_block, base = True, m.group(1); continue
+            if not real_block: continue
+            try: y = int(c0)
+            except Exception: continue
+            if not (1960 <= y <= 2035): continue
+            def g(i):
+                try: return round(float(str(r[i]).replace(",", "")))
+                except Exception: return None
+            if g(1): low[y] = g(1)
+            if g(3): mid[y] = g(3)
+            if g(5): high[y] = g(5)
+            if g(6): top5[y] = g(6)
+        if not low or not wealth["top1"]:
+            print("distribution: no data, keeping existing"); return
+        yr = lambda d: {str(k): d[k] for k in sorted(d)}
+        out = {"generated": datetime.date.today().isoformat(), "base_year": int(base),
+               "wealth": {"note": "Share of total U.S. household net worth held by each group. Source: Federal Reserve Distributional Financial Accounts.",
+                          "series": {"top1": {"label": "Top 1%", "years": yr(wealth["top1"])}, "next9": {"label": "Next 9% (90–99th)", "years": yr(wealth["next9"])},
+                                     "mid40": {"label": "Middle 40% (50–90th)", "years": yr(wealth["mid40"])}, "bottom50": {"label": "Bottom 50%", "years": yr(wealth["bottom50"])}}},
+               "income": {"note": "Mean household income by group, in constant " + base + " dollars. Source: U.S. Census Bureau, Historical Income Table H-3.",
+                          "series": {"low": {"label": "Low income (bottom 20%)", "years": yr(low)}, "mid": {"label": "Middle income (middle 20%)", "years": yr(mid)},
+                                     "high": {"label": "High income (top 20%)", "years": yr(high)}, "top5": {"label": "Top 5%", "years": yr(top5)}}}}
+        json.dump(out, open(os.path.join(HERE, "distribution.json"), "w"), separators=(",", ":"))
+        print("distribution: wealth %d-%d, income %d-%d" % (min(wealth["top1"]), max(wealth["top1"]), min(low), max(low)))
+    except Exception as e:
+        print("distribution: skipped (" + str(e)[:80] + "), keeping existing file")
+
 if __name__ == "__main__":
     build_national()
     build_states()
     build_state_bills()
     build_immigration()
+    build_distribution()
     print("refresh complete", datetime.datetime.now().isoformat())
