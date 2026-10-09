@@ -96,6 +96,12 @@ details.method[open] summary::before{content:'▾ '}
 details.method .mbody{padding:0 18px 18px;color:var(--dim);font-size:13.5px;line-height:1.7}
 details.method .mbody b{color:var(--text)}
 details.method ul{margin:8px 0 8px 18px}
+.wgrid{display:grid;gap:9px;margin-bottom:14px}
+.wrow{display:grid;grid-template-columns:210px 1fr 52px;gap:12px;align-items:center;font-size:13px}
+.wrow .wname{color:var(--dim)}
+.wrow input[type=range]{width:100%;accent-color:var(--amber)}
+.wrow .wval{color:var(--amber);text-align:right}
+@media(max-width:560px){.wrow{grid-template-columns:120px 1fr 42px;gap:8px;font-size:12px}}
 
 .srcgrid{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));margin-top:6px}
 .srccard{background:var(--surface);border:1px solid var(--line-soft);border-radius:10px;padding:13px 15px}
@@ -158,14 +164,17 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
         <div class="chips" id="metric-chips"></div>
       </div>
       <div class="controls">
-        <label class="tgl"><input type="checkbox" id="tgl-terms"> Show presidential terms</label>
+        <label class="tgl"><input type="checkbox" id="tgl-terms"> Presidential terms</label>
+        <label class="tgl"><input type="checkbox" id="tgl-rec" checked> Recessions</label>
         <span class="ctl">From <select id="yr-from"></select></span>
         <span class="ctl">to <select id="yr-to"></select></span>
       </div>
       <div class="chartbox"><canvas id="mainChart"></canvas></div>
-      <div class="termlegend" id="term-legend" style="display:none">
-        <span><span class="sw" style="background:var(--dem)"></span>Democratic administration</span>
-        <span><span class="sw" style="background:var(--rep)"></span>Republican administration</span>
+      <div class="termlegend" id="term-legend">
+        <span><span class="sw" style="background:rgba(150,160,185,.6)"></span>NBER recession</span>
+        <span id="leg-dem" style="display:none"><span class="sw" style="background:var(--dem)"></span>Democratic administration</span>
+        <span id="leg-rep" style="display:none"><span class="sw" style="background:var(--rep)"></span>Republican administration</span>
+        <span><span class="sw" style="background:#F4B860;border-radius:50%"></span>partial year (YTD)</span>
       </div>
     </div>
   </section>
@@ -180,6 +189,14 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
       <details class="method">
         <summary>How this grade is calculated</summary>
         <div class="mbody" id="method-body"></div>
+      </details>
+      <details class="method">
+        <summary>Weight it your way — rebuild the grade live</summary>
+        <div class="mbody">
+          <p style="margin-bottom:14px">Think housing matters more than GDP? Drag the sliders. The index and every grade recompute instantly, so you can see how much the "answer" depends on what you choose to value.</p>
+          <div id="weight-controls" class="wgrid"></div>
+          <button class="chip" id="wreset">↺ Reset to equal weights</button>
+        </div>
       </details>
     </div>
   </section>
@@ -228,10 +245,11 @@ const F={
   pct:v=>v.toFixed(1)+'%',
   years:v=>v.toFixed(1)+' yrs',
   ratio:v=>v.toFixed(1)+'×',
+  gini:v=>v.toFixed(1),
   idx:v=>Math.round(v).toLocaleString()
 };
 const COL={amber:'#E8A33C',steady:'#4FC08D',dim:'#A9AFC4',line:'#243150',text:'#E9E4D6',rep:'#d66a5a',dem:'#5a86d6'};
-let DATA, S, PRES, YEARS, DERIVED={}, ALL={}, curMetric, mainChart, indexChart, termChart;
+let DATA, S, PRES, YEARS, DERIVED={}, ALL={}, curMetric, mainChart, indexChart, termChart, WEIGHTS={}, PARTIAL;
 
 // ---- metric definitions (display order) ----
 const METRICS=[
@@ -243,6 +261,9 @@ const METRICS=[
   {key:'inflation',          label:'Inflation (yearly)',  fmt:'pct', good:-1, idx:true, derived:true},
   {key:'poverty_rate',       label:'Poverty rate',        fmt:'pct', good:-1, idx:true},
   {key:'life_expectancy',    label:'Life expectancy',     fmt:'years', good:1, idx:true},
+  {key:'inequality',         label:'Income inequality (Gini)', fmt:'gini', good:-1, idx:true},
+  {key:'debt_service',       label:'Household debt burden', fmt:'pct', good:-1, idx:true},
+  {key:'medical_burden',     label:'Medical cost burden', fmt:'ratio', good:-1, idx:true, derived:true},
   {key:'median_home_price',  label:'Median home price',   fmt:'dollar0', good:-1},
   {key:'homeownership',      label:'Homeownership rate',  fmt:'pct', good:1},
   {key:'labor_participation',label:'Labor force participation', fmt:'pct', good:1},
@@ -262,7 +283,10 @@ function buildDerived(){
   const rmw={}; seriesYears(S.min_wage.years).forEach(y=>{ if(cpi[String(y)]!=null) rmw[y]=+(S.min_wage.years[String(y)]*base/cpi[String(y)]).toFixed(2); });
   // home price to (nominal) income
   const hpi={}; seriesYears(S.median_home_price.years).forEach(y=>{ const inc=S.nominal_median_income.years[String(y)]; if(inc) hpi[y]=+(S.median_home_price.years[String(y)]/inc).toFixed(2); });
-  DERIVED={inflation:infl, real_min_wage:rmw, home_price_to_income:hpi};
+  // medical cost burden: how much faster medical prices rose than all prices (vs earliest common year = 1.0)
+  const mb={}, med=S.medical_cpi.years, mcy=seriesYears(med).filter(y=>cpi[String(y)]!=null), mb0=med[String(mcy[0])]/cpi[String(mcy[0])];
+  mcy.forEach(y=>{ mb[y]=+((med[String(y)]/cpi[String(y)])/mb0).toFixed(2); });
+  DERIVED={inflation:infl, real_min_wage:rmw, home_price_to_income:hpi, medical_burden:mb};
   // unified ALL map: key -> {year(number): value}
   METRICS.forEach(m=>{
     if(m.derived){ALL[m.key]=DERIVED[m.key];}
@@ -276,6 +300,7 @@ function unitSource(key){
     if(key==='inflation')return{unit:'% change',source:'Derived from CPI (FRED / U.S. BLS)',id:'CPIAUCSL'};
     if(key==='real_min_wage')return{unit:'$/hr ('+S.cpi_base+' dollars)',source:'Derived from federal min wage + CPI (FRED)',id:'FEDMINNFRWG'};
     if(key==='home_price_to_income')return{unit:'ratio',source:'Derived: median home price ÷ median income (FRED)',id:'MSPUS'};
+    if(key==='medical_burden')return{unit:'ratio vs earliest year',source:'Derived: medical CPI ÷ overall CPI (FRED / U.S. BLS)',id:'CPIMEDSL'};
   }
   return{unit:S[key].unit,source:S[key].source,id:S[key].series_id};
 }
@@ -303,10 +328,11 @@ function computeIndex(){
   const allY=new Set(); keys.forEach(k=>Object.keys(norms[k]).forEach(y=>allY.add(+y)));
   INDEX={};
   [...allY].sort((a,b)=>a-b).forEach(y=>{
+    if(y===PARTIAL) return; // skip the partial current year — it isn't a full year of data
     // anchor to years with the core "American Dream" metrics present (income + affordability), so grades are comparable
     if(ALL.real_median_income[y]==null || ALL.home_price_to_income[y]==null) return;
-    let sum=0,n=0; keys.forEach(k=>{ if(norms[k][y]!=null){sum+=norms[k][y];n++;} });
-    if(n>=6) INDEX[y]=+(sum/n).toFixed(1);
+    let sum=0,wsum=0,n=0; keys.forEach(k=>{ if(norms[k][y]!=null){const w=WEIGHTS[k]!=null?WEIGHTS[k]:1; sum+=norms[k][y]*w; wsum+=w; if(w>0)n++;} });
+    if(n>=6 && wsum>0) INDEX[y]=+(sum/wsum).toFixed(1);
   });
 }
 
@@ -334,11 +360,12 @@ function renderKcards(){
   show.forEach(key=>{
     const o=ALL[key], ys=Object.keys(o).map(Number).sort((a,b)=>a-b), ly=ys[ys.length-1], fy=ys[0];
     const last=o[ly], first=o[fy], chg=(last-first)/Math.abs(first)*100;
-    let hi=-Infinity,lo=Infinity,hiY,loY; ys.forEach(y=>{if(o[y]>hi){hi=o[y];hiY=y;}if(o[y]<lo){lo=o[y];loY=y;}});
+    let hi=-Infinity,lo=Infinity,hiY,loY; ys.forEach(y=>{if(y===PARTIAL)return;if(o[y]>hi){hi=o[y];hiY=y;}if(o[y]<lo){lo=o[y];loY=y;}});
     const good=METABYKEY[key].good, improved=(chg>=0)===(good>0);
     const card=document.createElement('div'); card.className='kcard';
+    const ytd=(ly===PARTIAL)?' <span style="font-size:11px;color:var(--faint);font-family:JetBrains Mono">’'+String(ly).slice(2)+' YTD</span>':'';
     card.innerHTML='<div class="klabel">'+METABYKEY[key].label+'</div>'+
-      '<div class="kval">'+fmtV(key,last)+'</div>'+
+      '<div class="kval">'+fmtV(key,last)+ytd+'</div>'+
       '<div class="kchg '+(improved?'up':'down')+'">'+(chg>=0?'▲ ':'▼ ')+Math.abs(chg).toFixed(0)+'% since '+fy+'</div>'+
       '<canvas></canvas>'+
       '<div class="khl">peak '+fmtV(key,hi)+' ('+hiY+') · low '+fmtV(key,lo)+' ('+loY+')</div>';
@@ -367,8 +394,22 @@ const termBands={id:'termBands',beforeDraw(chart,a,opts){
 }};
 Chart.register(termBands);
 
+// NBER recession shading plugin
+const recBands={id:'recBands',beforeDraw(chart,a,opts){
+  if(!opts||!opts.show||!DATA.recessions)return;
+  const {ctx,chartArea:{top,bottom},scales:{x}}=chart, labels=chart.data.labels;
+  const idx=yr=>labels.indexOf(String(yr)), lo=Number(labels[0]), hi=Number(labels[labels.length-1]);
+  const step=labels.length>1?(x.getPixelForValue(1)-x.getPixelForValue(0)):0;
+  ctx.save(); ctx.fillStyle='rgba(150,160,185,.17)';
+  DATA.recessions.forEach(([s,e])=>{ const si=idx(Math.max(s,lo)), ei=idx(Math.min(e,hi)); if(si<0||ei<0)return;
+    let L=x.getPixelForValue(si)-step/2, R=x.getPixelForValue(ei)+step/2; L=Math.max(L,x.left); R=Math.min(R,x.right);
+    ctx.fillRect(L,top,R-L,bottom-top); });
+  ctx.restore();
+}};
+Chart.register(recBands);
+
 function baseLineOpts(fmtKey){return{responsive:true,maintainAspectRatio:false,
-  plugins:{legend:{display:false},termBands:{show:false},
+  plugins:{legend:{display:false},termBands:{show:false},recBands:{show:false},
     tooltip:{callbacks:{label:c=>' '+F[fmtKey](c.parsed.y),title:c=>c[0].label+(presidentFor(+c[0].label)?' · '+presidentFor(+c[0].label).name:'')}}},
   scales:{x:{grid:{color:'rgba(36,49,80,.5)'},ticks:{color:COL.dim,maxTicksLimit:12,font:{family:'JetBrains Mono'}}},
           y:{grid:{color:'rgba(36,49,80,.5)'},ticks:{color:COL.dim,font:{family:'JetBrains Mono'},callback:v=>F[fmtKey](v)}}}};}
@@ -377,20 +418,24 @@ function drawMain(){
   const m=METABYKEY[curMetric], o=ALL[curMetric];
   const from=+document.getElementById('yr-from').value, to=+document.getElementById('yr-to').value;
   const ys=Object.keys(o).map(Number).sort((a,b)=>a-b).filter(y=>y>=from&&y<=to);
-  const data={labels:ys.map(String),datasets:[{label:m.label,data:ys.map(y=>o[y]),borderColor:COL.amber,backgroundColor:'rgba(232,163,60,.12)',borderWidth:2.4,pointRadius:0,pointHoverRadius:5,tension:.2,fill:true}]};
+  const data={labels:ys.map(String),datasets:[{label:m.label,data:ys.map(y=>o[y]),borderColor:COL.amber,backgroundColor:'rgba(232,163,60,.12)',borderWidth:2.4,
+    pointRadius:ys.map(y=>y===PARTIAL?4:0),pointBackgroundColor:'#F4B860',pointHoverRadius:5,tension:.2,fill:true,
+    segment:{borderDash:ctx=>ys[ctx.p1DataIndex]===PARTIAL?[5,4]:undefined}}]};
   const opts=baseLineOpts(m.fmt); opts.plugins.termBands.show=document.getElementById('tgl-terms').checked;
+  opts.plugins.recBands.show=document.getElementById('tgl-rec').checked;
+  opts.plugins.tooltip.callbacks.afterLabel=c=>(+c.label===PARTIAL)?'(year-to-date, partial)':'';
   if(mainChart){mainChart.data=data;mainChart.options=opts;mainChart.update();}
   else mainChart=new Chart(document.getElementById('mainChart'),{type:'line',data,options:opts});
 }
 
 function drawIndex(){
+  if(indexChart){indexChart.destroy();indexChart=null;}
   const ys=Object.keys(INDEX).map(Number).sort((a,b)=>a-b);
   const pts=ys.map(y=>INDEX[y]);
-  const segColors=ys.map(y=>gradeColor(INDEX[y]));
   const data={labels:ys.map(String),datasets:[{label:'Index',data:pts,borderColor:COL.amber,borderWidth:2.6,pointRadius:0,pointHoverRadius:5,tension:.25,fill:true,backgroundColor:'rgba(232,163,60,.10)',
     segment:{borderColor:ctx=>gradeColor(pts[ctx.p1DataIndex])}}]};
   const opts=baseLineOpts('idx');
-  opts.scales.y.min=0;opts.scales.y.max=100;opts.plugins.termBands.show=true;
+  opts.scales.y.min=0;opts.scales.y.max=100;opts.plugins.termBands.show=true;opts.plugins.recBands.show=true;
   opts.plugins.tooltip.callbacks.label=c=>' index '+c.parsed.y+'  →  '+gradeFor(c.parsed.y);
   indexChart=new Chart(document.getElementById('indexChart'),{type:'line',data,options:opts});
 }
@@ -398,7 +443,7 @@ function drawIndex(){
 function drawTerm(){
   const key=document.getElementById('term-metric').value, o=ALL[key], m=METABYKEY[key];
   const rows=PRES.map(p=>{
-    let sum=0,n=0,fy=null,ly=null; for(let y=p.start;y<=p.end;y++){if(o[y]!=null){sum+=o[y];n++;if(fy==null)fy=y;ly=y;}}
+    let sum=0,n=0,fy=null,ly=null; for(let y=p.start;y<=p.end;y++){if(o[y]!=null&&y!==PARTIAL){sum+=o[y];n++;if(fy==null)fy=y;ly=y;}}
     return n?{p,avg:sum/n,fy,ly}:null;
   }).filter(Boolean);
   const data={labels:rows.map(r=>r.p.name),datasets:[{data:rows.map(r=>r.avg),
@@ -420,7 +465,7 @@ function renderHighLow(){
   let html='<tr><th>Indicator</th><th class="r">Best year</th><th class="r">Worst year</th><th class="r">Latest</th></tr>';
   METRICS.forEach(m=>{
     const o=ALL[m.key], ys=Object.keys(o).map(Number).sort((a,b)=>a-b);
-    let hi=-Infinity,lo=Infinity,hiY,loY; ys.forEach(y=>{if(o[y]>hi){hi=o[y];hiY=y;}if(o[y]<lo){lo=o[y];loY=y;}});
+    let hi=-Infinity,lo=Infinity,hiY,loY; ys.forEach(y=>{if(y===PARTIAL)return;if(o[y]>hi){hi=o[y];hiY=y;}if(o[y]<lo){lo=o[y];loY=y;}});
     const best=m.good>0?{v:hi,y:hiY}:{v:lo,y:loY}, worst=m.good>0?{v:lo,y:loY}:{v:hi,y:hiY};
     html+='<tr><td>'+m.label+'</td><td class="r pos">'+fmtV(m.key,best.v)+' <span style="color:var(--faint)">’'+String(best.y).slice(2)+'</span></td>'+
       '<td class="r neg">'+fmtV(m.key,worst.v)+' <span style="color:var(--faint)">’'+String(worst.y).slice(2)+'</span></td>'+
@@ -449,11 +494,12 @@ function renderMethod(){
     '<ul>'+
     '<li>Each indicator is <b>normalized</b> to 0–100 across its own full history — the best year on record scores 100, the worst scores 0.</li>'+
     '<li>Indicators where <b>lower is better</b> (unemployment, inflation, poverty, home-price-to-income) are flipped so higher always means better quality of life.</li>'+
-    '<li>Each year\'s score is the <b>average</b> of the indicators available that year (a year needs at least 5 to be graded).</li>'+
+    '<li>Each year\'s score is the <b>weighted average</b> of the indicators available that year (a year needs at least 6, and both income and housing-affordability data, to be graded — so the index runs from 1984 on).</li>'+
     '<li>Letter grades are a <b>curve against U.S. history</b>: an "A" means a year near the top of everything on record, not an absolute ideal.</li>'+
+    '<li>The current year ('+PARTIAL+') is <b>year-to-date and partial</b>, so it\'s shown on the trend charts (dashed) but <b>not graded</b>.</li>'+
     '</ul>'+
     '<p><b>Indicators used:</b> '+idxM.map(m=>m.label+' ('+(m.good>0?'higher better':'lower better')+')').join('; ')+'.</p>'+
-    '<p>All indicators are weighted equally. Reasonable people would weight them differently — that\'s the point of showing the method.</p>';
+    '<p>Every indicator starts weighted equally — but reasonable people would weight them differently, so you can change the weights yourself below and watch the grade move.</p>';
 }
 
 function initControls(){
@@ -466,16 +512,31 @@ function initControls(){
   YEARS.forEach(y=>{from.add(new Option(y,y)); to.add(new Option(y,y));});
   from.value=YEARS[0]; to.value=YEARS[YEARS.length-1];
   from.onchange=to.onchange=drawMain;
-  document.getElementById('tgl-terms').onchange=e=>{drawMain();document.getElementById('term-legend').style.display=e.target.checked?'flex':'none';};
+  document.getElementById('tgl-terms').onchange=e=>{drawMain();document.getElementById('leg-dem').style.display=document.getElementById('leg-rep').style.display=e.target.checked?'inline-flex':'none';};
+  document.getElementById('tgl-rec').onchange=drawMain;
   // term metric select
   const tm=document.getElementById('term-metric');
   METRICS.filter(m=>m.idx).forEach(m=>tm.add(new Option(m.label,m.key)));
   tm.value='real_median_income'; tm.onchange=drawTerm;
 }
 
+function initWeights(){
+  const idxM=METRICS.filter(m=>m.idx); const box=document.getElementById('weight-controls'); box.innerHTML='';
+  idxM.forEach(m=>{
+    WEIGHTS[m.key]=1;
+    const row=document.createElement('div'); row.className='wrow';
+    row.innerHTML='<span class="wname">'+m.label+'</span><input type="range" min="0" max="2" step="0.1" value="1" data-k="'+m.key+'"><span class="wval mono">1.0×</span>';
+    const rng=row.querySelector('input'), lbl=row.querySelector('.wval');
+    rng.oninput=()=>{WEIGHTS[m.key]=+rng.value; lbl.textContent=(+rng.value).toFixed(1)+'×'; recomputeIndex();};
+    box.appendChild(row);
+  });
+  document.getElementById('wreset').onclick=()=>{[...box.querySelectorAll('input')].forEach(r=>{r.value=1;r.parentNode.querySelector('.wval').textContent='1.0×';WEIGHTS[r.dataset.k]=1;});recomputeIndex();};
+}
+function recomputeIndex(){ computeIndex(); drawIndex(); renderGradeHero(); }
+
 fetch('data/usqol.json').then(r=>r.json()).then(d=>{
-  DATA=d; S=d.series; PRES=d.presidents;
-  S.cpi_base=d.meta.data_cutoff;
+  DATA=d; S=d.series; PRES=d.presidents; PARTIAL=d.meta.partial_year;
+  S.cpi_base=PARTIAL-1; // deflate real $ to the latest COMPLETE year
   buildDerived();
   // full year span across all metrics
   const all=new Set(); Object.values(ALL).forEach(o=>Object.keys(o).forEach(y=>all.add(+y)));
@@ -486,7 +547,7 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
   document.getElementById('h-src').textContent='source: FRED · '+Object.keys(S).filter(k=>!k.startsWith('cpi_')).length+' official series · '+YEARS[0]+'–'+YEARS[YEARS.length-1]+' · retrieved '+d.meta.generated;
   document.getElementById('foot-gen').textContent='© 2026 Jordan Dorman · data via FRED · retrieved '+d.meta.generated;
   document.getElementById('content').style.display='block';
-  renderGradeHero(); renderKcards(); initControls(); drawMain(); drawIndex(); drawTerm(); renderHighLow(); renderSources(); renderMethod();
+  renderGradeHero(); renderKcards(); initControls(); initWeights(); drawMain(); drawIndex(); drawTerm(); renderHighLow(); renderSources(); renderMethod();
 }).catch(e=>{document.getElementById('h-sub').textContent='';document.getElementById('loaderr').style.display='block';console.error(e);});
 </script>
 </body>
