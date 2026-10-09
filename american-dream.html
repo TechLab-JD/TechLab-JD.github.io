@@ -283,6 +283,11 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
         <div class="chartbox sm"><canvas id="wealthChart"></canvas></div>
       </div>
     </div>
+    <div class="panel" style="margin-top:18px">
+      <h2 style="font-size:16px;color:#F4F1E6">Did the economy's gains reach workers?</h2>
+      <p class="sub" style="margin-bottom:10px">Productivity vs. real pay per hour, both set to 100 at the start. They rose together until the late 1970s — then the economy kept getting more productive while the typical paycheck flattened.</p>
+      <div class="chartbox sm"><canvas id="prodChart"></canvas></div>
+    </div>
     <div class="grid3" id="dist-stats" style="margin-top:16px"></div>
     <p class="srcnote mono" id="dist-src" style="margin-top:12px"></p>
   </section>
@@ -396,6 +401,7 @@ const METRICS=[
   {key:'job_growth',         label:'Jobs created (yearly)', fmt:'jobs', good:1, idx:true, derived:true},
   {key:'gas_price',          label:'Gas price',           fmt:'dollar2', good:-1},
   {key:'grocery_cpi',        label:'Grocery prices (CPI)',fmt:'idx', good:-1},
+  {key:'college_tuition',    label:'College tuition (CPI)',fmt:'idx', good:-1},
   {key:'housing_starts',     label:'Housing starts',      fmt:'thousands', good:1},
   {key:'student_debt',       label:'Student debt',        fmt:'trillions', good:-1},
   {key:'consumer_debt',      label:'Consumer debt',       fmt:'trillions', good:-1},
@@ -921,6 +927,19 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
           scales:{x:{grid:{color:GRID},ticks:{color:TX,maxTicksLimit:8,font:{family:'JetBrains Mono'}}},
             y:{stacked:true,min:0,max:100,grid:{color:GRID},ticks:{color:TX,font:{family:'JetBrains Mono'},callback:v=>v+'%'}}}}});
     })();
+    // productivity vs pay (rebased to earliest common year = 100)
+    if(d.productivity){(function(){
+      const S=d.productivity.series, O=S.output.years, P=S.pay.years;
+      const years=Object.keys(O).map(Number).filter(y=>P[String(y)]!=null).sort((a,b)=>a-b);
+      const b0=years[0], ob=O[String(b0)], pb=P[String(b0)];
+      const mk=(src,base,color,lbl)=>({label:lbl,data:years.map(y=>+(src[String(y)]/base*100).toFixed(1)),borderColor:color,borderWidth:2.2,pointRadius:0,pointHoverRadius:4,tension:.2});
+      new Chart(document.getElementById('prodChart'),{type:'line',data:{labels:years.map(String),datasets:[mk(O,ob,'#E8A33C','Productivity (output per hour)'),mk(P,pb,'#4FC08D','Real pay per hour')]},
+        options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+          plugins:{legend:{labels:{color:TX,font:{family:'JetBrains Mono',size:10},boxWidth:10}},termBands:{show:false},recBands:{show:false},
+            tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+c.parsed.y+' (×'+(c.parsed.y/100).toFixed(2)+' vs '+b0+')'}}},
+          scales:{x:{grid:{color:GRID},ticks:{color:TX,maxTicksLimit:8,font:{family:'JetBrains Mono'}}},
+            y:{grid:{color:GRID},ticks:{color:TX,font:{family:'JetBrains Mono'},callback:v=>v}}}}});
+    })();}
     // stats
     const wl=d.wealth.series, il=d.income.series;
     const last=o=>{const ys=Object.keys(o).map(Number);return o[String(Math.max.apply(null,ys))];};
