@@ -170,6 +170,10 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
 #pagenav a{color:#A9AFC4;text-decoration:none;padding:4px 9px;border-radius:5px;flex:0 0 auto;letter-spacing:.04em}
 #pagenav a:hover{background:rgba(232,163,60,.16);color:#F4F1E6}
 #content > section{scroll-margin-top:52px}
+.panelh{font-size:15px;font-weight:600;color:#F4F1E6;margin:0 0 2px}
+.panel .sub{max-width:72ch}
+#dl-csv,#dl-dict,#dl-method{border:1px solid rgba(232,163,60,.55);background:rgba(232,163,60,.12);color:#F4F1E6;cursor:pointer;font-weight:600}
+#dl-csv:hover,#dl-dict:hover,#dl-method:hover{background:rgba(232,163,60,.22)}
 </style>
 <nav id="pagenav" class="mono" aria-label="Jump to section"></nav>
 
@@ -185,8 +189,12 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
       <h3 id="grade-head">Quality-of-Life Index</h3>
       <p id="grade-desc"></p>
       <div class="score mono" id="grade-score"></div>
+      <p style="font-size:12px;color:#A9AFC4;margin-top:8px">A summary, not a verdict — the three pillars below tell the real story.</p>
     </div>
   </div>
+
+  <!-- HERO STATS -->
+  <div id="herostats" class="panel" style="display:flex;gap:18px;flex-wrap:wrap;margin-bottom:18px"></div>
 
   <!-- 60-SECOND READ -->
   <div id="tldr" class="panel" style="margin-bottom:18px"></div>
@@ -253,6 +261,26 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
         </div>
       </details>
     </div>
+  </section>
+
+  <!-- CORRELATION -->
+  <section>
+    <div class="sectlabel mono">// CORRELATION</div>
+    <h2 class="sec">Do these actually move together?</h2>
+    <p class="sub">Blending indicators into one grade only makes sense if you know how they relate — so here's the evidence. <b>Left:</b> how each graded indicator correlates with the others across U.S. history (deeper = stronger; blue = move together, orange = move opposite). <b>Right:</b> the money-vs-longevity path — decades of rising income bought smaller and smaller gains in life expectancy, then none. <b>Association, not cause.</b></p>
+    <div class="grid2">
+      <div class="panel">
+        <h3 class="panelh">Indicator correlation matrix</h3>
+        <p class="sub" style="margin-bottom:10px">Pearson r across each pair's shared years</p>
+        <div id="corrMatrix" style="overflow-x:auto"></div>
+      </div>
+      <div class="panel">
+        <h3 class="panelh">Money vs. longevity</h3>
+        <p class="sub" style="margin-bottom:10px">Each dot is one year; the line follows time</p>
+        <div class="chartbox sm"><canvas id="scatterChart"></canvas></div>
+      </div>
+    </div>
+    <p class="srcnote mono" id="corr-src" style="margin-top:12px"></p>
   </section>
 
   <!-- ECONOMIC MOBILITY -->
@@ -688,15 +716,16 @@ let pillarChart;
 function renderPillars(){
   computePillars();
   const ys=Object.keys(INDEX).map(Number).sort((a,b)=>a-b);
-  const mk=(p,color,label,dash)=>({label:label,data:ys.map(y=>PILLARSCORES[p][y]!=null?PILLARSCORES[p][y]:null),borderColor:color,backgroundColor:color,borderDash:dash||[],borderWidth:2.4,pointRadius:0,pointHoverRadius:4,tension:.25,spanGaps:true,fill:false});
+  const mk=(p,color,label,shortl,dash)=>({label:label,_short:shortl,data:ys.map(y=>PILLARSCORES[p][y]!=null?PILLARSCORES[p][y]:null),borderColor:color,backgroundColor:color,borderDash:dash||[],borderWidth:2.4,pointRadius:0,pointHoverRadius:4,tension:.25,spanGaps:true,fill:false});
   if(pillarChart)pillarChart.destroy();
   pillarChart=new Chart(document.getElementById('pillarChart'),{type:'line',
-    data:{labels:ys.map(String),datasets:[mk('econ','#E69F00',PILLAR_NAMES.econ,[]),mk('cost','#0072B2',PILLAR_NAMES.cost,[7,4]),mk('fair','#009E73',PILLAR_NAMES.fair,[2,3])]},
-    options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
-      plugins:{legend:{labels:{color:'#A9AFC4',font:{family:'JetBrains Mono',size:10},boxWidth:18}},termBands:{show:false},recBands:{show:false},
+    data:{labels:ys.map(String),datasets:[mk('econ','#E69F00',PILLAR_NAMES.econ,'Jobs',[]),mk('cost','#0072B2',PILLAR_NAMES.cost,'Cost',[7,4]),mk('fair','#009E73',PILLAR_NAMES.fair,'Health',[2,3])]},
+    options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},layout:{padding:{right:48}},
+      plugins:{legend:{display:false},endLabels:{show:true},termBands:{show:false},recBands:{show:false},
         tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+(c.parsed.y!=null?c.parsed.y+'/100':'—')}}},
       scales:{x:{grid:{color:'rgba(36,49,80,.5)'},ticks:{color:'#A9AFC4',maxTicksLimit:9,font:{family:'JetBrains Mono'}}},
         y:{min:0,max:100,grid:{color:'rgba(36,49,80,.5)'},ticks:{color:'#A9AFC4',font:{family:'JetBrains Mono'}}}}}});
+  pillarChart.$endLabels=true; pillarChart.update('none');
 }
 function renderMood(){
   const el=document.getElementById('mood-note'); if(!el||!ALL.consumer_sentiment)return;
@@ -706,6 +735,46 @@ function renderMood(){
   const pct=Math.round((cur-mn)/(mx-mn)*100);
   const place = pct<=3 ? 'the lowest annual reading in its entire history (since 1952)' : pct<=25 ? 'near the bottom of its range since 1952' : 'the '+pct+'th percentile of its range since 1952';
   el.innerHTML='People’s own read: in '+ly+', U.S. consumer sentiment averaged <b>'+Math.round(cur)+'</b> — '+place+', near historic lows even with unemployment low. The “feels worse” gap in one number. (Subjective; tracked but not folded into the grade.)';
+}
+// --- correlation: indicator matrix + money-vs-longevity connected scatter ---
+function pearson(a,b){
+  const n=a.length; if(n<3)return null;
+  let sa=0,sb=0; for(let i=0;i<n;i++){sa+=a[i];sb+=b[i];} const ma=sa/n,mb=sb/n;
+  let num=0,da=0,db=0; for(let i=0;i<n;i++){const x=a[i]-ma,y=b[i]-mb;num+=x*y;da+=x*x;db+=y*y;}
+  if(da===0||db===0)return null; return num/Math.sqrt(da*db);
+}
+let scatterChart;
+function renderCorrelation(){
+  const keys=METRICS.filter(m=>m.idx).map(m=>m.key);
+  const short={real_median_income:'Income',real_gdp_per_capita:'GDP/cap',home_price_to_income:'Home/inc',real_min_wage:'Min wage',unemployment:'Unemp',inflation:'Inflation',poverty_rate:'Poverty',life_expectancy:'Life exp',inequality:'Gini',debt_service:'Debt burd',medical_burden:'Medical',jobless_claims:'Layoffs',job_growth:'Jobs'};
+  const col=r=>{ if(r==null)return 'rgba(120,132,164,.15)'; const a=Math.min(1,Math.abs(r)); return (r>=0?'rgba(0,114,178,':'rgba(213,94,0,')+(0.12+a*0.72)+')'; };
+  let html='<table style="border-collapse:collapse;font-size:10px;font-family:JetBrains Mono"><tr><th></th>';
+  keys.forEach(k=>html+='<th style="padding:2px 2px;color:#A9AFC4;font-weight:400;height:62px"><div style="writing-mode:vertical-rl;transform:rotate(180deg);margin:0 auto">'+(short[k]||k)+'</div></th>');
+  html+='</tr>';
+  keys.forEach(k1=>{
+    html+='<tr><th style="padding:2px 6px;color:#A9AFC4;font-weight:400;text-align:right;white-space:nowrap">'+(short[k1]||k1)+'</th>';
+    keys.forEach(k2=>{
+      const o1=ALL[k1],o2=ALL[k2]; const ys=Object.keys(o1).map(Number).filter(y=>o2[y]!=null&&o1[y]!=null&&y!==PARTIAL);
+      const r=k1===k2?1:pearson(ys.map(y=>o1[y]),ys.map(y=>o2[y]));
+      const txt=r==null?'':(r<0?'−':'')+Math.abs(r).toFixed(1).replace(/^0/,'.');
+      html+='<td title="'+(short[k1]||k1)+' vs '+(short[k2]||k2)+': r='+(r==null?'n/a':r.toFixed(2))+'" style="width:24px;height:22px;text-align:center;color:#0b0e18;background:'+col(r)+'">'+txt+'</td>';
+    });
+    html+='</tr>';
+  });
+  html+='</table>';
+  const mEl=document.getElementById('corrMatrix'); if(mEl)mEl.innerHTML=html;
+  const gx=ALL.real_gdp_per_capita, lifx=ALL.life_expectancy;
+  const ys=Object.keys(gx).map(Number).filter(y=>lifx[y]!=null&&gx[y]!=null&&y!==PARTIAL).sort((a,b)=>a-b);
+  const pts=ys.map(y=>({x:gx[y],y:lifx[y],year:y}));
+  if(scatterChart)scatterChart.destroy();
+  scatterChart=new Chart(document.getElementById('scatterChart'),{type:'scatter',
+    data:{datasets:[{label:'US, year by year',data:pts,showLine:true,borderColor:'#E8A33C',backgroundColor:'#E8A33C',borderWidth:1.6,pointRadius:2.3,pointHoverRadius:5}]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},termBands:{show:false},recBands:{show:false},endLabels:{show:false},
+        tooltip:{callbacks:{label:c=>' '+c.raw.year+': $'+Math.round(c.raw.x).toLocaleString()+'/cap, '+c.raw.y.toFixed(1)+' yrs'}}},
+      scales:{x:{grid:{color:'rgba(36,49,80,.5)'},title:{display:true,text:'Real GDP per capita',color:'#A9AFC4',font:{family:'JetBrains Mono',size:10}},ticks:{color:'#A9AFC4',font:{family:'JetBrains Mono',size:9},callback:v=>'$'+Math.round(v/1000)+'k'}},
+        y:{grid:{color:'rgba(36,49,80,.5)'},title:{display:true,text:'Life expectancy (yrs)',color:'#A9AFC4',font:{family:'JetBrains Mono',size:10}},ticks:{color:'#A9AFC4',font:{family:'JetBrains Mono',size:9}}}}}});
+  const src=document.getElementById('corr-src'); if(src)src.textContent='Correlations are Pearson r across each pair’s shared years (current partial year excluded); signs reflect raw co-movement, not whether a change is good or bad. Scatter: real GDP per capita vs life expectancy at birth, by year. Association does not imply causation.';
 }
 // --- data + methodology export (client-side, user's own public data) ---
 function toCSV(){
@@ -746,14 +815,28 @@ function buildPageNav(){
 function renderTLDR(){
   const el=document.getElementById('tldr'); if(!el||!PILLARSCORES.econ)return;
   const ys=Object.keys(INDEX).map(Number).sort((a,b)=>a-b); if(!ys.length)return;
-  const ly=ys[ys.length-1], g=curveGrade(INDEX[ly]);
+  const ly=ys[ys.length-1];
   const py=Object.keys(PILLARSCORES.econ).map(Number).sort((a,b)=>a-b).pop();
   const P=k=>PILLARSCORES[k][py]||0;
+  // derive the one-line read from the actual pillar order (don't hardcode the adjectives)
+  const names={econ:'jobs and income',cost:'the cost of living',fair:'health and fairness'};
+  const ranked=['econ','cost','fair'].sort((a,b)=>P(b)-P(a));
+  const phrase='strongest on '+names[ranked[0]]+', weakest on '+names[ranked[2]];
   const pill=(label,v,color)=>'<div style="flex:1;min-width:130px"><div style="font-size:11px;color:#A9AFC4">'+label+'</div><div style="height:7px;background:rgba(255,255,255,.08);border-radius:4px;margin-top:4px;overflow:hidden"><div style="height:100%;width:'+Math.round(v)+'%;background:'+color+'"></div></div><div class="mono" style="font-size:12px;color:#F4F1E6;margin-top:3px">'+Math.round(v)+'/100</div></div>';
   el.innerHTML='<div class="mono" style="font-size:12px;color:#E8A33C;letter-spacing:.08em">// THE 60-SECOND READ</div>'+
-    '<p style="margin:8px 0 12px;color:#A9AFC4">By this composite, U.S. quality of life grades about <b style="color:#F4F1E6">'+g+'</b> for '+ly+' — steadier on jobs and income, strained on the cost of living, middling on health and fairness. A single letter hides that tension; the three pillars show it:</p>'+
+    '<p style="margin:8px 0 12px;color:#A9AFC4">Read past the single letter. For '+ly+', the three pillars behind the grade sit '+phrase+' — and that spread, not the average, is the real picture:</p>'+
     '<div style="display:flex;gap:14px;flex-wrap:wrap">'+pill(PILLAR_NAMES.econ,P('econ'),'#E69F00')+pill(PILLAR_NAMES.cost,P('cost'),'#0072B2')+pill(PILLAR_NAMES.fair,P('fair'),'#009E73')+'</div>'+
     '<p style="margin-top:12px;font-size:13px"><a href="#sec-the-grade" style="color:#E8A33C">↓ Start with the grade and its three pillars</a> — or use the bar at the top to jump anywhere.</p>';
+}
+function renderHeroStats(){
+  const el=document.getElementById('herostats'); if(!el)return;
+  const hpi=ALL.home_price_to_income||{}, hy=Object.keys(hpi).map(Number).filter(y=>y!==PARTIAL).sort((a,b)=>a-b).pop();
+  const home=(hy&&hpi[hy]!=null)?hpi[hy].toFixed(1)+'×':'—';
+  const stat=(big,small)=>'<div style="flex:1;min-width:150px;text-align:center"><div style="font-size:33px;font-weight:700;color:#E8A33C;line-height:1.05;font-family:JetBrains Mono">'+big+'</div><div style="font-size:12px;color:#A9AFC4;margin-top:7px;line-height:1.3">'+small+'</div></div>';
+  el.innerHTML=stat(home,'years of income to buy a typical new home')+
+    stat('≈6:1','white-to-Black median household wealth (SCF 2022)')+
+    stat('record low','consumer sentiment’s lowest annual reading since 1952 (2025)')+
+    stat('92%→50%','kids out-earning their parents, born 1940 vs 1984');
 }
 function labelCanvases(){
   document.querySelectorAll('#content canvas').forEach(c=>{
@@ -873,6 +956,23 @@ const recBands={id:'recBands',beforeDraw(chart,a,opts){
   ctx.restore();
 }};
 Chart.register(recBands);
+
+// direct line-end labels (reduces legend lookup). Enable via options.plugins.endLabels.show
+const endLabels={id:'endLabels',afterDatasetsDraw(chart,a,opts){
+  if(!chart.$endLabels)return;
+  const {ctx,chartArea}=chart; ctx.save(); ctx.font='600 10px JetBrains Mono'; ctx.textBaseline='middle';
+  const used=[];
+  chart.data.datasets.forEach((ds,i)=>{
+    const meta=chart.getDatasetMeta(i); if(meta.hidden)return;
+    let pt=null; for(let j=meta.data.length-1;j>=0;j--){ if(ds.data[j]!=null && meta.data[j] && !isNaN(meta.data[j].y)){pt=meta.data[j];break;} }
+    if(!pt)return;
+    let y=pt.y; while(used.some(u=>Math.abs(u-y)<11)) y+=11; used.push(y);
+    const x=Math.min(pt.x+6,chartArea.right-2);
+    ctx.fillStyle=ds.borderColor; ctx.fillText(ds._short||ds.label,x,Math.max(chartArea.top+6,Math.min(y,chartArea.bottom-6)));
+  });
+  ctx.restore();
+}};
+Chart.register(endLabels);
 
 function baseLineOpts(fmtKey){return{responsive:true,maintainAspectRatio:false,
   plugins:{legend:{display:false},termBands:{show:false},recBands:{show:false},
@@ -1075,7 +1175,7 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
   document.getElementById('h-src').textContent='source: FRED · '+Object.keys(S).filter(k=>!k.startsWith('cpi_')).length+' official series · '+YEARS[0]+'–'+YEARS[YEARS.length-1]+' · retrieved '+d.meta.generated;
   document.getElementById('foot-gen').textContent='© 2026 Jordan Dorman · data via FRED · retrieved '+d.meta.generated;
   document.getElementById('content').style.display='block';
-  renderGradeHero(); initSnapChips(); renderKcards(); initControls(); initWeights(); drawMain(); drawIndex(); renderPillars(); renderMood(); renderTLDR(); drawTerm(); initCompare(); renderHousing(); renderDebt(); renderHighLow(); renderSources(); renderMethod(); initCheckThis(); buildPageNav(); labelCanvases(); setTimeout(labelCanvases,3000);
+  renderGradeHero(); initSnapChips(); renderKcards(); initControls(); initWeights(); drawMain(); drawIndex(); renderPillars(); renderMood(); renderTLDR(); renderHeroStats(); renderCorrelation(); drawTerm(); initCompare(); renderHousing(); renderDebt(); renderHighLow(); renderSources(); renderMethod(); initCheckThis(); buildPageNav(); labelCanvases(); setTimeout(labelCanvases,3000);
 }).catch(e=>{document.getElementById('h-sub').textContent='';document.getElementById('loaderr').style.display='block';console.error(e);});
 </script>
 
