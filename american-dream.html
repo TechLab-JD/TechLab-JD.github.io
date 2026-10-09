@@ -227,11 +227,29 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
       <details class="method">
         <summary>Weight it your way — rebuild the grade live</summary>
         <div class="mbody">
-          <p style="margin-bottom:14px">Think housing matters more than GDP? Drag the sliders. The index and every grade recompute instantly, so you can see how much the "answer" depends on what you choose to value.</p>
+          <p style="margin-bottom:12px">Think housing matters more than GDP? Drag the sliders — or pick a lens. The index and every grade recompute instantly, so you can see how much the "answer" depends on what you choose to value.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
+            <button class="chip" data-preset="equal">Equal weights</button>
+            <button class="chip" data-preset="col">Cost-of-living lens</button>
+            <button class="chip" data-preset="jobs">Jobs &amp; income lens</button>
+          </div>
           <div id="weight-controls" class="wgrid"></div>
-          <button class="chip" id="wreset">↺ Reset to equal weights</button>
         </div>
       </details>
+    </div>
+  </section>
+
+  <!-- COMPARE -->
+  <section>
+    <div class="sectlabel mono">// COMPARE</div>
+    <h2 class="sec">Then vs. now</h2>
+    <p class="sub">Pick any two years and see how life changed across every measure. A dash means the data wasn't collected that far back — most modern measures start between 1929 and 1984; only prices reach the 1910s.</p>
+    <div class="panel">
+      <div class="controls">
+        <div class="chips" id="cmp-presets"></div>
+        <span class="ctl">Compare <select id="cmp-a"></select> with <select id="cmp-b"></select></span>
+      </div>
+      <table class="data" id="cmp-table"></table>
     </div>
   </section>
 
@@ -282,7 +300,9 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
         <div class="chips" id="pol-chips"></div>
         <input id="pol-search" class="polsearch" placeholder="Search policies — housing, AI, energy, taxes…">
       </div>
+      <div class="srcnote mono" id="pol-summary" style="margin-bottom:10px"></div>
       <div class="polfeed" id="pol-feed"></div>
+      <div style="text-align:center;margin-top:16px"><button class="chip" id="pol-more" style="display:none">Load older ↓</button></div>
     </div>
     <p class="srcnote mono" style="margin-top:12px">Live sources: federalregister.gov (executive orders &amp; rules) · govtrack.us (congressional bills). State-by-state legislation requires a licensed API (OpenStates / LegiScan); it's on the roadmap as a daily-refreshed feed once a key is in place.</p>
   </section>
@@ -312,6 +332,8 @@ const F={
   years:v=>v.toFixed(1)+' yrs',
   ratio:v=>v.toFixed(1)+'×',
   gini:v=>v.toFixed(1),
+  claims:v=>Math.round(v/1000)+'K/wk',
+  jobs:v=>(v>=0?'+':'−')+(Math.abs(v)>=1000?(Math.abs(v)/1000).toFixed(1)+'M':Math.round(Math.abs(v))+'K'),
   idx:v=>Math.round(v).toLocaleString()
 };
 const COL={amber:'#E8A33C',steady:'#4FC08D',dim:'#A9AFC4',line:'#243150',text:'#E9E4D6',rep:'#d66a5a',dem:'#5a86d6'};
@@ -330,6 +352,10 @@ const METRICS=[
   {key:'inequality',         label:'Income inequality (Gini)', fmt:'gini', good:-1, idx:true},
   {key:'debt_service',       label:'Household debt burden', fmt:'pct', good:-1, idx:true},
   {key:'medical_burden',     label:'Medical cost burden', fmt:'ratio', good:-1, idx:true, derived:true},
+  {key:'jobless_claims',     label:'Layoffs (jobless claims)', fmt:'claims', good:-1, idx:true},
+  {key:'job_growth',         label:'Jobs created (yearly)', fmt:'jobs', good:1, idx:true, derived:true},
+  {key:'gas_price',          label:'Gas price',           fmt:'dollar2', good:-1},
+  {key:'grocery_cpi',        label:'Grocery prices (CPI)',fmt:'idx', good:-1},
   {key:'median_home_price',  label:'Median home price',   fmt:'dollar0', good:-1},
   {key:'homeownership',      label:'Homeownership rate',  fmt:'pct', good:1},
   {key:'labor_participation',label:'Labor force participation', fmt:'pct', good:1},
@@ -352,7 +378,9 @@ function buildDerived(){
   // medical cost burden: how much faster medical prices rose than all prices (vs earliest common year = 1.0)
   const mb={}, med=S.medical_cpi.years, mcy=seriesYears(med).filter(y=>cpi[String(y)]!=null), mb0=med[String(mcy[0])]/cpi[String(mcy[0])];
   mcy.forEach(y=>{ mb[y]=+((med[String(y)]/cpi[String(y)])/mb0).toFixed(2); });
-  DERIVED={inflation:infl, real_min_wage:rmw, home_price_to_income:hpi, medical_burden:mb};
+  // jobs created = year-over-year change in nonfarm payrolls (thousands)
+  const jg={}, pay=S.payrolls.years; seriesYears(pay).forEach(y=>{ if(pay[String(y-1)]!=null) jg[y]=+(pay[String(y)]-pay[String(y-1)]).toFixed(0); });
+  DERIVED={inflation:infl, real_min_wage:rmw, home_price_to_income:hpi, medical_burden:mb, job_growth:jg};
   // unified ALL map: key -> {year(number): value}
   METRICS.forEach(m=>{
     if(m.derived){ALL[m.key]=DERIVED[m.key];}
@@ -367,6 +395,7 @@ function unitSource(key){
     if(key==='real_min_wage')return{unit:'$/hr ('+S.cpi_base+' dollars)',source:'Derived from federal min wage + CPI (FRED)',id:'FEDMINNFRWG'};
     if(key==='home_price_to_income')return{unit:'ratio',source:'Derived: median home price ÷ median income (FRED)',id:'MSPUS'};
     if(key==='medical_burden')return{unit:'ratio vs earliest year',source:'Derived: medical CPI ÷ overall CPI (FRED / U.S. BLS)',id:'CPIMEDSL'};
+    if(key==='job_growth')return{unit:'jobs added/year',source:'Derived: year-over-year change in nonfarm payrolls (FRED / U.S. BLS)',id:'PAYEMS'};
   }
   return{unit:S[key].unit,source:S[key].source,id:S[key].series_id};
 }
@@ -379,12 +408,13 @@ function gradeFor(score){
   for(const [t,g] of b) if(score>=t) return g; return 'F';
 }
 function gradeColor(score){ if(score>=80)return COL.steady; if(score>=65)return '#9ccf5a'; if(score>=50)return COL.amber; if(score>=40)return '#e0843c'; return COL.rep; }
-// grade on a CURVE: letter/color come from a value's percentile rank within the set it's compared against
-function pctRank(score,arr){const s=arr.filter(v=>v!=null).sort((a,b)=>a-b);return s.length?s.filter(v=>v<=score).length/s.length:0;}
-function curveGrade(score,arr){ if(score==null)return'—'; const p=pctRank(score,arr);
-  const b=[[.95,'A+'],[.88,'A'],[.80,'A-'],[.70,'B+'],[.60,'B'],[.50,'B-'],[.40,'C+'],[.30,'C'],[.22,'C-'],[.14,'D+'],[.07,'D'],[.03,'D-']];
-  for(const[t,g]of b)if(p>=t)return g; return'F'; }
-function curveColor(score,arr){ return score==null?'#2a3450':gradeColor(pctRank(score,arr)*100); }
+// ABSOLUTE grade: the composite 0-100 is the average percentile a year/state hits across all
+// measures, so the letter reflects real standing — even the best year on record isn't an A, because
+// no era is near the top on everything at once. (2nd arg is ignored; kept for call-site compatibility.)
+const GRADE_SCALE=[[86,'A+'],[81,'A'],[76,'A-'],[72,'B+'],[68,'B'],[64,'B-'],[60,'C+'],[56,'C'],[52,'C-'],[48,'D+'],[44,'D'],[40,'D-']];
+const LETTER_COLORS={'A+':'#4FC08D','A':'#5cc084','A-':'#79c76c','B+':'#9ccf5a','B':'#bcd04e','B-':'#d8c84a','C+':'#E8A33C','C':'#e28f38','C-':'#e07a34','D+':'#df6536','D':'#dc5440','D-':'#d84b45','F':'#d1483f','—':'#2a3450'};
+function curveGrade(score){ if(score==null)return'—'; for(const[t,g]of GRADE_SCALE)if(score>=t)return g; return'F'; }
+function curveColor(score){ return LETTER_COLORS[curveGrade(score)]; }
 
 // normalize a metric's value to 0..100 across its own history, oriented so higher=better
 function normMap(key){
@@ -413,13 +443,13 @@ function fmtV(key,v){ return v==null?'—':F[METABYKEY[key].fmt](v); }
 
 function renderGradeHero(){
   const ys=Object.keys(INDEX).map(Number).sort((a,b)=>a-b), ly=ys[ys.length-1], sc=INDEX[ly];
-  const arr=Object.values(INDEX);
-  const el=document.getElementById('grade-letter'); el.textContent=curveGrade(sc,arr); el.style.color=curveColor(sc,arr);
+  const g=curveGrade(sc);
+  const el=document.getElementById('grade-letter'); el.textContent=g; el.style.color=curveColor(sc);
   document.getElementById('grade-head').textContent='Quality-of-Life grade · '+ly;
-  // rank among history
   const sorted=[...ys].sort((a,b)=>INDEX[b]-INDEX[a]); const rank=sorted.indexOf(ly)+1;
-  document.getElementById('grade-desc').innerHTML='Across '+ys.length+' years of data, '+ly+' ranks <b>#'+rank+'</b> for overall quality of life — '+(rank<=3?'near the best on record.':rank>=ys.length-3?'among the toughest on record.':'middle of the pack.');
-  document.getElementById('grade-score').textContent='index '+sc+' / 100 · graded on a curve vs. U.S. history since '+ys[0];
+  const rankTxt= rank===1?'the highest composite on record':rank<=3?'among the highest on record':rank>=ys.length-2?'among the lowest on record':'#'+rank+' of '+ys.length+' years';
+  document.getElementById('grade-desc').innerHTML='<b>'+ly+'</b> scores <b>'+sc+'/100</b> — '+rankTxt+' — yet only a <b>'+g+'</b>. The score is how close a year comes to the best-ever reading on every measure at once, and no era gets there: record incomes, longevity and employment are offset by the worst housing affordability, inequality and health costs in the data. Think that\'s the wrong trade-off? Re-weight it below.';
+  document.getElementById('grade-score').textContent='index '+sc+' / 100 · absolute scale · best year on record ≈ '+curveGrade(Math.max(...Object.values(INDEX)));
 }
 
 function spark(canvas,key){
@@ -569,7 +599,7 @@ function renderMethod(){
     '<li>Each indicator is <b>normalized</b> to 0–100 across its own full history — the best year on record scores 100, the worst scores 0.</li>'+
     '<li>Indicators where <b>lower is better</b> (unemployment, inflation, poverty, home-price-to-income) are flipped so higher always means better quality of life.</li>'+
     '<li>Each year\'s score is the <b>weighted average</b> of the indicators available that year (a year needs at least 6, and both income and housing-affordability data, to be graded — so the index runs from 1984 on).</li>'+
-    '<li>Letter grades are a <b>curve</b>: a year is graded by where its score ranks among all years (an "A" is roughly the top tenth on record, an "F" the bottom). So grades are relative to U.S. history, not an absolute ideal — the best year on record earns an A even though no year is perfect on every measure.</li>'+
+    '<li>The letter grade is <b>absolute</b>, not a ranking: a score near 100 would mean a year at or near the best-ever reading on <i>every</i> measure at once. No era comes close — strong years on income and jobs are always weak somewhere else (housing, inequality, prices) — so even the top year on record lands around a B-, and the grade you see reflects that honestly rather than curving the best year up to an A.</li>'+
     '<li>The current year ('+PARTIAL+') is <b>year-to-date and partial</b>, so it\'s shown on the trend charts (dashed) but <b>not graded</b>.</li>'+
     '</ul>'+
     '<p><b>Indicators used:</b> '+idxM.map(m=>m.label+' ('+(m.good>0?'higher better':'lower better')+')').join('; ')+'.</p>'+
@@ -604,9 +634,42 @@ function initWeights(){
     rng.oninput=()=>{WEIGHTS[m.key]=+rng.value; lbl.textContent=(+rng.value).toFixed(1)+'×'; recomputeIndex();};
     box.appendChild(row);
   });
-  document.getElementById('wreset').onclick=()=>{[...box.querySelectorAll('input')].forEach(r=>{r.value=1;r.parentNode.querySelector('.wval').textContent='1.0×';WEIGHTS[r.dataset.k]=1;});recomputeIndex();};
+  const PRESETS={
+    equal:{},
+    col:{home_price_to_income:2,inflation:2,medical_burden:2,debt_service:1.5,poverty_rate:1.5,inequality:1.5,real_min_wage:1.5,real_gdp_per_capita:.3,life_expectancy:.5,unemployment:.5,jobless_claims:.5,job_growth:.3,real_median_income:1},
+    jobs:{real_median_income:2,real_gdp_per_capita:1.5,unemployment:2,job_growth:2,jobless_claims:1.5,real_min_wage:1.5,home_price_to_income:.5,inflation:.5,medical_burden:.3,inequality:.5,life_expectancy:.5,poverty_rate:1,debt_service:.5},
+  };
+  document.querySelectorAll('[data-preset]').forEach(btn=>btn.onclick=()=>{
+    const p=PRESETS[btn.dataset.preset]||{};
+    [...box.querySelectorAll('input')].forEach(r=>{const w=(p[r.dataset.k]!=null)?p[r.dataset.k]:1;r.value=w;r.parentNode.querySelector('.wval').textContent=(+w).toFixed(1)+'×';WEIGHTS[r.dataset.k]=w;});
+    recomputeIndex();
+  });
 }
 function recomputeIndex(){ computeIndex(); drawIndex(); renderGradeHero(); }
+
+function renderCompare(){
+  const a=+document.getElementById('cmp-a').value, b=+document.getElementById('cmp-b').value;
+  let h='<tr><th>Measure</th><th class="r">'+a+'</th><th class="r">'+b+'</th><th class="r">Change</th></tr>';
+  METRICS.forEach(m=>{
+    const va=ALL[m.key][a], vb=ALL[m.key][b];
+    let chg='<span style="color:var(--faint)">—</span>', cls='';
+    if(va!=null&&vb!=null&&va!==0){ const p=(vb-va)/Math.abs(va)*100; const improved=(p>=0)===(m.good>0); cls=improved?'pos':'neg'; chg=(p>=0?'▲ ':'▼ ')+Math.abs(p).toFixed(p<10&&p>-10?1:0)+'%'; }
+    h+='<tr><td>'+m.label+'</td><td class="r">'+(va!=null?fmtV(m.key,va):'<span style="color:var(--faint)">—</span>')+'</td><td class="r">'+(vb!=null?fmtV(m.key,vb):'<span style="color:var(--faint)">—</span>')+'</td><td class="r '+cls+'">'+chg+'</td></tr>';
+  });
+  document.getElementById('cmp-table').innerHTML=h;
+}
+function initCompare(){
+  const a=document.getElementById('cmp-a'), b=document.getElementById('cmp-b');
+  YEARS.forEach(y=>{a.add(new Option(y,y)); b.add(new Option(y,y));});
+  const now=Math.max.apply(null,YEARS.filter(y=>y!==PARTIAL)), first=YEARS[0];
+  a.value=Math.max(first,now-10); b.value=now;
+  a.onchange=b.onchange=renderCompare;
+  const presets=[['Year over year',1],['vs 10 years',10],['vs 25 years',25],['vs 50 years',50],['vs 100 years',100]];
+  const box=document.getElementById('cmp-presets');
+  presets.forEach(([lbl,gap])=>{const btn=document.createElement('button');btn.className='chip';btn.textContent=lbl;
+    btn.onclick=()=>{b.value=now;a.value=Math.max(first,now-gap);renderCompare();};box.appendChild(btn);});
+  renderCompare();
+}
 
 fetch('data/usqol.json').then(r=>r.json()).then(d=>{
   DATA=d; S=d.series; PRES=d.presidents; PARTIAL=d.meta.partial_year;
@@ -621,7 +684,7 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
   document.getElementById('h-src').textContent='source: FRED · '+Object.keys(S).filter(k=>!k.startsWith('cpi_')).length+' official series · '+YEARS[0]+'–'+YEARS[YEARS.length-1]+' · retrieved '+d.meta.generated;
   document.getElementById('foot-gen').textContent='© 2026 Jordan Dorman · data via FRED · retrieved '+d.meta.generated;
   document.getElementById('content').style.display='block';
-  renderGradeHero(); renderKcards(); initControls(); initWeights(); drawMain(); drawIndex(); drawTerm(); renderHighLow(); renderSources(); renderMethod();
+  renderGradeHero(); renderKcards(); initControls(); initWeights(); drawMain(); drawIndex(); drawTerm(); initCompare(); renderHighLow(); renderSources(); renderMethod();
 }).catch(e=>{document.getElementById('h-sub').textContent='';document.getElementById('loaderr').style.display='block';console.error(e);});
 </script>
 
@@ -750,29 +813,33 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
         '<div class="pagency">'+esc(it.current_status_label||'')+' · introduced '+fmtDate(it.introduced_date)+'</div></a>';
     }).join('');
   }
-  function render(items){
-    const c=CM[cur];
-    if(!items.length){feed.innerHTML='<div class="empty" style="color:var(--faint);padding:24px">No '+c.label.toLowerCase()+(q?' matching “'+esc(q)+'”':'')+' found.</div>';return;}
-    feed.innerHTML=(c.src==='gt')?renderGT(items):renderFR(items,c);
+  let page=0;
+  const moreBtn=document.getElementById('pol-more'), summary=document.getElementById('pol-summary');
+  function urlFor(c,pg){
+    if(c.src==='gt') return 'https://www.govtrack.us/api/v2/bill?order_by=-current_status_date&limit=20&offset='+(pg*20)+(q?'&q='+encodeURIComponent(q):'');
+    return 'https://www.federalregister.gov/api/v1/documents.json?per_page=20&order=newest&'+c.cond+'&fields[]=title&fields[]=publication_date&fields[]=abstract&fields[]=html_url&fields[]=agency_names&fields[]=type&page='+(pg+1)+(q?'&conditions[term]='+encodeURIComponent(q):'');
   }
-  function load(){
-    const c=CM[cur]; let url, src;
-    if(c.src==='gt'){
-      url='https://www.govtrack.us/api/v2/bill?order_by=-current_status_date&limit=20'+(q?'&q='+encodeURIComponent(q):'');
-      src='GovTrack';
-    } else {
-      url='https://www.federalregister.gov/api/v1/documents.json?per_page=20&order=newest&'+c.cond+
-        '&fields[]=title&fields[]=publication_date&fields[]=abstract&fields[]=html_url&fields[]=agency_names&fields[]=type'+
-        (q?'&conditions[term]='+encodeURIComponent(q):'');
-      src='federalregister.gov';
-    }
-    feed.innerHTML='<div class="empty" style="color:var(--faint);padding:24px">Loading live from '+src+'…</div>';
-    fetch(url).then(r=>r.json()).then(d=>render(c.src==='gt'?(d.objects||[]):(d.results||[]))).catch(e=>{feed.innerHTML='<div class="empty" style="color:var(--faint);padding:24px">Couldn’t reach '+src+' right now.</div>';});
+  function load(reset){
+    const c=CM[cur], srcName=(c.src==='gt')?'GovTrack':'federalregister.gov';
+    if(reset){page=0;feed.innerHTML='<div class="empty" style="color:var(--faint);padding:24px">Loading live from '+srcName+'…</div>';moreBtn.style.display='none';summary.textContent='';}
+    else{moreBtn.textContent='Loading…';}
+    fetch(urlFor(c,page)).then(r=>r.json()).then(d=>{
+      const items=(c.src==='gt')?(d.objects||[]):(d.results||[]);
+      const total=(c.src==='gt')?(d.meta&&d.meta.total_count):(d.count);
+      const html=(c.src==='gt')?renderGT(items):renderFR(items,c);
+      if(reset){ feed.innerHTML=items.length?html:'<div class="empty" style="color:var(--faint);padding:24px">No '+c.label.toLowerCase()+(q?' matching “'+esc(q)+'”':'')+' found.</div>'; }
+      else{ feed.insertAdjacentHTML('beforeend',html); }
+      const shown=feed.querySelectorAll('.politem').length;
+      summary.textContent= shown? ('Showing '+shown+(total?' of '+Number(total).toLocaleString():'')+' '+c.label.toLowerCase()+(q?' matching “'+q+'”':'')+' · live, newest action first') : '';
+      moreBtn.textContent='Load older ↓'; moreBtn.style.display=(items.length>=20)?'inline-block':'none';
+      page++;
+    }).catch(e=>{ if(reset)feed.innerHTML='<div class="empty" style="color:var(--faint);padding:24px">Couldn’t reach '+srcName+' right now.</div>'; moreBtn.textContent='Load older ↓'; });
   }
+  moreBtn.onclick=()=>load(false);
   const chips=document.getElementById('pol-chips');
-  CATS.forEach((c,i)=>{const b=document.createElement('button');b.className='chip'+(i===0?' active':'');b.textContent=c.label;b.onclick=()=>{cur=c.key;[...chips.children].forEach(x=>x.classList.remove('active'));b.classList.add('active');load();};chips.appendChild(b);});
-  document.getElementById('pol-search').oninput=function(){q=this.value.trim();clearTimeout(timer);timer=setTimeout(load,400);};
-  load();
+  CATS.forEach((c,i)=>{const b=document.createElement('button');b.className='chip'+(i===0?' active':'');b.textContent=c.label;b.onclick=()=>{cur=c.key;[...chips.children].forEach(x=>x.classList.remove('active'));b.classList.add('active');load(true);};chips.appendChild(b);});
+  document.getElementById('pol-search').oninput=function(){q=this.value.trim();clearTimeout(timer);timer=setTimeout(()=>load(true),400);};
+  load(true);
 })();
 </script>
 </body>
