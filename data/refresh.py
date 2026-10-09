@@ -1,0 +1,108 @@
+"""Refresh the American Dream dashboard data from FRED (national + per-state).
+Writes usqol.json and us-states-qol.json next to this script. No API key needed.
+Run daily via automation/refresh-datalab.ps1. The state geometry (us-states-10m.json)
+never changes and is not refetched."""
+import urllib.request, csv, io, json, os, datetime, time
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+def fetch_csv(sid):
+    url = "https://fred.stlouisfed.org/graph/fredgraph.csv?id=" + sid
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    rows = list(csv.reader(io.StringIO(urllib.request.urlopen(req, timeout=30).read().decode())))
+    by = {}
+    for r in rows[1:]:
+        if len(r) < 2 or r[1] in ("", ".", "NA"):
+            continue
+        by.setdefault(int(r[0][:4]), []).append(float(r[1]))
+    return by
+
+# ---------- national ----------
+NATIONAL = {
+  "real_median_income": ("MEHOINUSA672N", "Real median household income", "$ (2024 dollars)", "FRED / U.S. Census Bureau"),
+  "real_gdp_per_capita": ("A939RX0Q048SBEA", "Real GDP per capita", "$ (2017 chained)", "FRED / U.S. BEA"),
+  "median_home_price": ("MSPUS", "Median sales price of houses sold", "$", "FRED / U.S. Census & HUD"),
+  "nominal_median_income": ("MEHOINUSA646N", "Median household income (nominal)", "$", "FRED / U.S. Census Bureau"),
+  "unemployment": ("UNRATE", "Unemployment rate", "%", "FRED / U.S. BLS"),
+  "cpi": ("CPIAUCSL", "Consumer Price Index (all items)", "index 1982-84=100", "FRED / U.S. BLS"),
+  "rent_cpi": ("CUUR0000SEHA", "Rent of primary residence (CPI)", "index 1982-84=100", "FRED / U.S. BLS"),
+  "medical_cpi": ("CPIMEDSL", "Medical care prices (CPI)", "index 1982-84=100", "FRED / U.S. BLS"),
+  "home_price_index": ("CSUSHPINSA", "Case-Shiller national home price index", "index Jan2000=100", "FRED / S&P CoreLogic"),
+  "life_expectancy": ("SPDYNLE00INUSA", "Life expectancy at birth", "years", "FRED / World Bank"),
+  "labor_participation": ("CIVPART", "Labor force participation rate", "%", "FRED / U.S. BLS"),
+  "min_wage": ("FEDMINNFRWG", "Federal minimum wage (nominal)", "$/hr", "FRED / U.S. DOL"),
+  "poverty_rate": ("PPAAUS00000A156NCEN", "Official poverty rate", "%", "FRED / U.S. Census Bureau"),
+  "homeownership": ("RHORUSQ156N", "Homeownership rate", "%", "FRED / U.S. Census Bureau"),
+  "debt_service": ("TDSP", "Household debt service ratio", "% of disposable income", "FRED / Federal Reserve"),
+  "inequality": ("SIPOVGINIUSA", "Income inequality (Gini)", "Gini index", "FRED / World Bank"),
+}
+PRESIDENTS = [
+  {"name": "Truman", "party": "D", "start": 1945, "end": 1952}, {"name": "Eisenhower", "party": "R", "start": 1953, "end": 1960},
+  {"name": "Kennedy", "party": "D", "start": 1961, "end": 1963}, {"name": "L. Johnson", "party": "D", "start": 1964, "end": 1968},
+  {"name": "Nixon", "party": "R", "start": 1969, "end": 1974}, {"name": "Ford", "party": "R", "start": 1975, "end": 1976},
+  {"name": "Carter", "party": "D", "start": 1977, "end": 1980}, {"name": "Reagan", "party": "R", "start": 1981, "end": 1988},
+  {"name": "G.H.W. Bush", "party": "R", "start": 1989, "end": 1992}, {"name": "Clinton", "party": "D", "start": 1993, "end": 2000},
+  {"name": "G.W. Bush", "party": "R", "start": 2001, "end": 2008}, {"name": "Obama", "party": "D", "start": 2009, "end": 2016},
+  {"name": "Trump", "party": "R", "start": 2017, "end": 2020}, {"name": "Biden", "party": "D", "start": 2021, "end": 2024},
+  {"name": "Trump", "party": "R", "start": 2025, "end": 2028},
+]
+RECESSIONS = [[1948, 1949], [1953, 1954], [1957, 1958], [1960, 1961], [1969, 1970], [1973, 1975], [1980, 1980], [1981, 1982], [1990, 1991], [2001, 2001], [2007, 2009], [2020, 2020]]
+
+def build_national():
+    series = {}
+    for key, (sid, label, unit, src) in NATIONAL.items():
+        try:
+            by = fetch_csv(sid)
+            yr = {y: round(sum(v) / len(v), 2) for y, v in by.items()}
+            series[key] = {"series_id": sid, "label": label, "unit": unit, "source": src,
+                           "years": {str(y): yr[y] for y in sorted(yr)}}
+        except Exception as e:
+            print("national FAIL", key, e)
+        time.sleep(0.05)
+    partial = datetime.date.today().year
+    out = {"meta": {"title": "The State of the American Dream",
+                    "subtitle": "U.S. quality-of-life indicators over time, graded by year and presidential term",
+                    "generated": datetime.date.today().isoformat(), "partial_year": partial,
+                    "note": "Data from official U.S. statistical agencies via FRED (Federal Reserve Bank of St. Louis). " + str(partial) + " is a partial year (year-to-date averages) and is excluded from the composite grade. Presidential terms are a time grouping (president in office mid-year), not a claim of causation. Shaded grey spans are NBER recessions."},
+           "presidents": PRESIDENTS, "recessions": RECESSIONS, "series": series}
+    json.dump(out, open(os.path.join(HERE, "usqol.json"), "w"), separators=(",", ":"))
+    print("national: %d series" % len(series))
+
+# ---------- per-state ----------
+FIPS = {"AL": "01", "AK": "02", "AZ": "04", "AR": "05", "CA": "06", "CO": "08", "CT": "09", "DE": "10", "DC": "11", "FL": "12", "GA": "13", "HI": "15", "ID": "16", "IL": "17", "IN": "18", "IA": "19", "KS": "20", "KY": "21", "LA": "22", "ME": "23", "MD": "24", "MA": "25", "MI": "26", "MN": "27", "MS": "28", "MO": "29", "MT": "30", "NE": "31", "NV": "32", "NH": "33", "NJ": "34", "NM": "35", "NY": "36", "NC": "37", "ND": "38", "OH": "39", "OK": "40", "OR": "41", "PA": "42", "RI": "44", "SC": "45", "SD": "46", "TN": "47", "TX": "48", "UT": "49", "VT": "50", "VA": "51", "WA": "53", "WV": "54", "WI": "55", "WY": "56"}
+NAMES = {"AL": "Alabama", "AK": "Alaska", "AZ": "Arizona", "AR": "Arkansas", "CA": "California", "CO": "Colorado", "CT": "Connecticut", "DE": "Delaware", "DC": "District of Columbia", "FL": "Florida", "GA": "Georgia", "HI": "Hawaii", "ID": "Idaho", "IL": "Illinois", "IN": "Indiana", "IA": "Iowa", "KS": "Kansas", "KY": "Kentucky", "LA": "Louisiana", "ME": "Maine", "MD": "Maryland", "MA": "Massachusetts", "MI": "Michigan", "MN": "Minnesota", "MS": "Mississippi", "MO": "Missouri", "MT": "Montana", "NE": "Nebraska", "NV": "Nevada", "NH": "New Hampshire", "NJ": "New Jersey", "NM": "New Mexico", "NY": "New York", "NC": "North Carolina", "ND": "North Dakota", "OH": "Ohio", "OK": "Oklahoma", "OR": "Oregon", "PA": "Pennsylvania", "RI": "Rhode Island", "SC": "South Carolina", "SD": "South Dakota", "TN": "Tennessee", "TX": "Texas", "UT": "Utah", "VT": "Vermont", "VA": "Virginia", "WA": "Washington", "WV": "West Virginia", "WI": "Wisconsin", "WY": "Wyoming"}
+
+def last_val(sid):
+    try:
+        by = fetch_csv(sid)
+        if not by:
+            return None
+        y = max(by)
+        return round(sum(by[y]) / len(by[y]), 2)
+    except Exception:
+        return None
+
+def build_states():
+    states = {}
+    for ab, fp in FIPS.items():
+        inc = last_val("MHI%s%s000A052NCEN" % (ab, fp))
+        pov = last_val("PPAA%s%s000A156NCEN" % (ab, fp))
+        un = last_val("%sUR" % ab)
+        lp = last_val("MEDLISPRI%s" % ab)
+        pcpi = last_val("%sPCPI" % ab)
+        pop = last_val("%sPOP" % ab)
+        states[fp] = {"abbr": ab, "name": NAMES[ab], "income": inc, "poverty": pov, "unemployment": un,
+                      "listprice": lp, "pcpi": pcpi, "pop": pop,
+                      "afford": round(lp / inc, 2) if (lp and inc) else None}
+        time.sleep(0.03)
+    out = {"generated": datetime.date.today().isoformat(),
+           "notes": "Per-state data from FRED: median household income & poverty (Census SAIPE), unemployment (BLS, latest month), median listing price (Realtor.com via FRED), per-capita personal income (BEA), population (Census). Affordability = median listing price / median household income.",
+           "states": states}
+    json.dump(out, open(os.path.join(HERE, "us-states-qol.json"), "w"), separators=(",", ":"))
+    got = sum(1 for s in states.values() if s["income"])
+    print("states: %d (%d with income)" % (len(states), got))
+
+if __name__ == "__main__":
+    build_national()
+    build_states()
+    print("refresh complete", datetime.datetime.now().isoformat())
