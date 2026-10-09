@@ -49,6 +49,7 @@ NATIONAL = {
   "debt_gdp": ("GFDEGDQ188S", "Federal debt (% of GDP)", "% of GDP", "FRED / U.S. OMB"),
   "total_debt": ("GFDEBTN", "Federal debt (total)", "$ millions", "FRED / U.S. Treasury"),
   "mortgage_rate": ("MORTGAGE30US", "30-year mortgage rate", "%", "FRED / Freddie Mac"),
+  "consumer_sentiment": ("UMCSENT", "Consumer sentiment", "index 1966=100", "FRED / Univ. of Michigan"),
 }
 PRESIDENTS = [
   {"name": "Truman", "party": "D", "start": 1945, "end": 1952}, {"name": "Eisenhower", "party": "R", "start": 1953, "end": 1960},
@@ -415,8 +416,35 @@ def build_world():
     except Exception as e:
         print("world: skipped (" + str(e)[:70] + "), keeping existing file")
 
+def build_demographics():
+    # The national average hides who the Dream reaches. Two dimensions FRED carries
+    # cleanly over time: unemployment by race (monthly, annual-averaged) and
+    # homeownership by race (quarterly, annual-averaged). No API key needed.
+    try:
+        unemp = {"white": "LNS14000003", "black": "LNS14000006", "hispanic": "LNS14000009", "asian": "LNS14032183"}
+        home = {"white": "NHWAHORUSQ156N", "black": "BOAAAHORUSQ156N", "hispanic": "HOLHORUSQ156N"}
+        def ann(sid):
+            by = fetch_csv(sid)
+            return {str(y): round(sum(v) / len(v), 1) for y, v in by.items()}
+        u = {g: ann(sid) for g, sid in unemp.items()}
+        h = {g: ann(sid) for g, sid in home.items()}
+        out = {"generated": datetime.date.today().isoformat(),
+               "unemployment": {
+                   "note": "Unemployment rate by race/ethnicity, annual averages. Source: FRED / U.S. BLS (LNS14000003/006/009, LNS14032183). Asian series starts 2003.",
+                   "unit": "%", "groups": {"white": "White", "black": "Black", "hispanic": "Hispanic", "asian": "Asian"},
+                   "series": u},
+               "homeownership": {
+                   "note": "Homeownership rate by race/ethnicity, annual averages from quarterly data (from 1994). 'White' is non-Hispanic white. Source: FRED / U.S. Census Bureau (NHWAHORUSQ156N, BOAAAHORUSQ156N, HOLHORUSQ156N).",
+                   "unit": "%", "groups": {"white": "White (non-Hispanic)", "black": "Black", "hispanic": "Hispanic"},
+                   "series": h}}
+        json.dump(out, open(os.path.join(HERE, "demographics.json"), "w"), separators=(",", ":"))
+        print("demographics: unemp %d groups, home %d groups" % (len(u), len(h)))
+    except Exception as e:
+        print("demographics: skipped (" + str(e)[:70] + "), keeping existing file")
+
 if __name__ == "__main__":
     build_national()
+    build_demographics()
     build_states()
     build_state_bills()
     build_immigration()
