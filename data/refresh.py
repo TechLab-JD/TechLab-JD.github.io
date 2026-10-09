@@ -274,9 +274,9 @@ def build_distribution():
                "income": {"note": "Mean household income by group, in constant " + base + " dollars. Source: U.S. Census Bureau, Historical Income Table H-3.",
                           "series": {"low": {"label": "Low income (bottom 20%)", "years": yr(low)}, "mid": {"label": "Middle income (middle 20%)", "years": yr(mid)},
                                      "high": {"label": "High income (top 20%)", "years": yr(high)}, "top5": {"label": "Top 5%", "years": yr(top5)}}},
-               "productivity": {"note": "Nonfarm-business output per hour vs. real hourly compensation, indexed to the earliest common year = 100. Source: FRED / U.S. BLS (OPHNFB, COMPRNFB).",
+               "productivity": {"note": "Nonfarm-business output per hour vs. average real hourly compensation (total comp, incl. benefits), indexed to the earliest common year = 100. Source: FRED / U.S. BLS (OPHNFB, COMPRNFB).",
                                 "series": {"output": {"label": "Productivity (output per hour)", "years": yr(prod["output"])},
-                                           "pay": {"label": "Real pay per hour", "years": yr(prod["pay"])}}}}
+                                           "pay": {"label": "Average pay per hour", "years": yr(prod["pay"])}}}}
         json.dump(out, open(os.path.join(HERE, "distribution.json"), "w"), separators=(",", ":"))
         print("distribution: wealth %d-%d, income %d-%d" % (min(wealth["top1"]), max(wealth["top1"]), min(low), max(low)))
     except Exception as e:
@@ -369,9 +369,13 @@ def build_world():
     # US vs peer nations (World Bank API, key-free). Mobility is a fixed 2017 dataset, not refreshed here.
     try:
         COUNTRIES = ["USA", "CAN", "GBR", "DEU", "FRA", "JPN", "AUS", "SWE", "NLD", "ITA", "ESP", "KOR"]
-        IND = {"life_exp": ("SP.DYN.LE00.IN", "Life expectancy", "years", 1),
+        # Ordered so U.S. strengths (output, research, schooling) lead, then health/equity
+        # measures where it trails, to keep the set balanced rather than negative-leaning.
+        IND = {"gdp_pc": ("NY.GDP.PCAP.PP.KD", "GDP per capita", "$ (PPP)", 1),
+               "rd_gdp": ("GB.XPD.RSDV.GD.ZS", "R&D spending", "% of GDP", 1),
+               "tertiary": ("SE.TER.CUAT.BA.ZS", "Adults with a bachelor's+", "% age 25-64", 1),
+               "life_exp": ("SP.DYN.LE00.IN", "Life expectancy", "years", 1),
                "health_gdp": ("SH.XPD.CHEX.GD.ZS", "Health spending", "% of GDP", -1),
-               "gdp_pc": ("NY.GDP.PCAP.PP.KD", "GDP per capita", "$ (PPP)", 1),
                "gini": ("SI.POV.GINI", "Income inequality (Gini)", "index", -1),
                "maternal": ("SH.STA.MMRT", "Maternal mortality", "per 100k births", -1),
                "infant": ("SP.DYN.IMRT.IN", "Infant mortality", "per 1,000 births", -1),
@@ -399,9 +403,12 @@ def build_world():
             if data:
                 indicators[key] = {"label": label, "unit": unit, "better": better, "year": max(x["y"] for x in data.values()),
                                    "countries": {k: data[k]["v"] for k in data}}
+        if "maternal" in indicators:
+            indicators["maternal"]["note"] = ("World Bank modeled estimate, built for cross-country comparability. "
+                "The U.S. CDC's own measure is higher (about 19 in 2023, and 22-33 in recent years).")
         if indicators:
             json.dump({"generated": datetime.date.today().isoformat(),
-                       "note": "The U.S. compared with peer high-income nations. Source: World Bank (most recent year available per indicator).",
+                       "note": "The U.S. compared with peer high-income nations. The U.S. leads on output and research and sits mid-pack on schooling, but trails the group on most health and equity measures. Source: World Bank (most recent year available per indicator).",
                        "names": NAMES, "indicators": indicators},
                       open(os.path.join(HERE, "world.json"), "w"), separators=(",", ":"))
             print("world: %d indicators" % len(indicators))
