@@ -184,7 +184,7 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
   <section>
     <div class="sectlabel mono">// SNAPSHOT</div>
     <h2 class="sec">The numbers, latest year</h2>
-    <p class="sub">Headline indicators with their all-time record high and low. Change is measured from the earliest year on record for each series.</p>
+    <p class="sub">Headline indicators with their all-time record high and low. Change is year-over-year — the latest year versus the one before it.</p>
     <div class="kgrid" id="kgrid"></div>
   </section>
 
@@ -519,15 +519,15 @@ function renderKcards(){
   const box=document.getElementById('kgrid'); box.innerHTML='';
   const show=['real_median_income','real_gdp_per_capita','home_price_to_income','unemployment','inflation','life_expectancy','poverty_rate','real_min_wage'];
   show.forEach(key=>{
-    const o=ALL[key], ys=Object.keys(o).map(Number).sort((a,b)=>a-b), ly=ys[ys.length-1], fy=ys[0];
-    const last=o[ly], first=o[fy], chg=(last-first)/Math.abs(first)*100;
+    const o=ALL[key], ys=Object.keys(o).map(Number).sort((a,b)=>a-b), ly=ys[ys.length-1], py=ys[ys.length-2];
+    const last=o[ly], prev=py!=null?o[py]:null, chg=(prev!=null&&prev!==0)?(last-prev)/Math.abs(prev)*100:null;
     let hi=-Infinity,lo=Infinity,hiY,loY; ys.forEach(y=>{if(y===PARTIAL)return;if(o[y]>hi){hi=o[y];hiY=y;}if(o[y]<lo){lo=o[y];loY=y;}});
-    const good=METABYKEY[key].good, improved=(chg>=0)===(good>0);
+    const good=METABYKEY[key].good, improved=chg==null?true:(chg>=0)===(good>0);
     const card=document.createElement('div'); card.className='kcard';
     const ytd=(ly===PARTIAL)?' <span style="font-size:11px;color:var(--faint);font-family:JetBrains Mono">’'+String(ly).slice(2)+' YTD</span>':'';
     card.innerHTML='<div class="klabel">'+METABYKEY[key].label+'</div>'+
       '<div class="kval">'+fmtV(key,last)+ytd+'</div>'+
-      '<div class="kchg '+(improved?'up':'down')+'">'+(chg>=0?'▲ ':'▼ ')+Math.abs(chg).toFixed(0)+'% since '+fy+'</div>'+
+      '<div class="kchg '+(improved?'up':'down')+'">'+(chg==null?'—':((chg>=0?'▲ ':'▼ ')+Math.abs(chg).toFixed(1)+'% vs '+py))+'</div>'+
       '<canvas></canvas>'+
       '<div class="khl">peak '+fmtV(key,hi)+' ('+hiY+') · low '+fmtV(key,lo)+' ('+loY+')</div>';
     box.appendChild(card); spark(card.querySelector('canvas'),key);
