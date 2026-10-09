@@ -293,14 +293,39 @@ def build_despair():
         overdose = {r["year"]: int(float(r["data_value"])) for r in od if r.get("data_value")}
         su = cdc("https://data.cdc.gov/resource/bi63-dtpu.json?state=United%20States&cause_name=Suicide&$select=year,deaths&$order=year")
         suicide = {r["year"]: int(float(r["deaths"])) for r in su if r.get("deaths")}
+        # bi63-dtpu (Leading Causes of Death) stops at 2017. Extend with CDC "select causes"
+        # monthly sets: bxq8-mugm = final 2014-2019, 9dzk-mvmi = provisional 2020+. Sum whole
+        # years only (12 months), and only fill years we don't already have (>=2018).
+        def ann_suicide(res_id):
+            rows = cdc("https://data.cdc.gov/resource/" + res_id + ".json?$where=jurisdiction_of_occurrence='United%20States'&$limit=5000")
+            counts, months = {}, {}
+            for r in rows:
+                y, v = r.get("year"), r.get("intentional_self_harm_suicide")
+                if y and v:
+                    counts[y] = counts.get(y, 0) + int(v); months[y] = months.get(y, 0) + 1
+            return {y: counts[y] for y in counts if months[y] == 12}
+        prov_years = []
+        try:
+            extra = ann_suicide("bxq8-mugm")            # 2014-2019 final
+            prov = ann_suicide("9dzk-mvmi")             # 2020+ provisional (whole years)
+            for y, v in list(extra.items()) + list(prov.items()):
+                if int(y) >= 2018 and y not in suicide:
+                    suicide[y] = v
+            prov_years = sorted(y for y in prov if int(y) >= 2020 and suicide.get(y) == prov[y])
+        except Exception as _e:
+            print("despair: suicide extension skipped (" + str(_e)[:50] + ")")
         if not overdose or not suicide:
             print("despair: no data, keeping existing"); return
+        snote = "Suicide = final counts 1999-2019 (NCHS)"
+        if prov_years:
+            snote += ", plus provisional monthly counts for " + prov_years[0] + "-" + prov_years[-1]
+        snote += "."
         out = {"generated": datetime.date.today().isoformat(),
-               "note": "Deaths of despair. Drug overdose = provisional 12-month-ending counts (Dec). Suicide = final counts. Source: CDC / National Center for Health Statistics (data.cdc.gov). Shown for context, not folded into the grade.",
+               "note": "Deaths of despair. Drug overdose = provisional 12-month-ending counts (Dec). " + snote + " Source: CDC / National Center for Health Statistics (data.cdc.gov: bi63-dtpu, bxq8-mugm, 9dzk-mvmi). Shown for context, not folded into the grade.",
                "series": {"overdose": {"label": "Drug overdose deaths", "years": {k: overdose[k] for k in sorted(overdose)}},
-                          "suicide": {"label": "Suicide deaths", "years": {k: suicide[k] for k in sorted(suicide)}}}}
+                          "suicide": {"label": "Suicide deaths", "years": {k: suicide[k] for k in sorted(suicide, key=int)}}}}
         json.dump(out, open(os.path.join(HERE, "despair.json"), "w"), separators=(",", ":"))
-        print("despair: overdose %s-%s, suicide %s-%s" % (min(overdose), max(overdose), min(suicide), max(suicide)))
+        print("despair: overdose %s-%s, suicide %s-%s" % (min(overdose), max(overdose), min(suicide, key=int), max(suicide, key=int)))
     except Exception as e:
         print("despair: skipped (" + str(e)[:70] + "), keeping existing file")
 

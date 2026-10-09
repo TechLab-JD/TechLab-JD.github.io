@@ -434,7 +434,7 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
   <section>
     <div class="sectlabel mono">// DESPAIR</div>
     <h2 class="sec">Deaths of despair &amp; addiction</h2>
-    <p class="sub">Some of "it feels worse" shows up in mortality, not money. Drug overdose deaths and suicides — what researchers call deaths of despair. Overdose deaths roughly doubled between 2015 and their 2022 peak, then fell in 2023-24; recorded suicides rose from 1999 through 2017 (the latest year in this CDC series). Shown for context, <b>not folded into the grade</b>.</p>
+    <p class="sub">Some of "it feels worse" shows up in mortality, not money. Drug overdose deaths and suicides — what researchers call deaths of despair. Overdose deaths roughly doubled between 2015 and their 2022 peak, then fell in 2023-24; recorded suicides climbed to ~48,000 by 2018, dipped during the pandemic, then hit a record ~49,700 in 2022 (counts are final through 2019 and provisional for 2020-22). Shown for context, <b>not folded into the grade</b>.</p>
     <div class="panel">
       <div class="chartbox sm"><canvas id="despairChart"></canvas></div>
       <div class="grid3" id="despair-stats" style="margin-top:16px"></div>
@@ -855,7 +855,7 @@ function initCheckThis(){
     '<li><b>It’s a composite, and composites embed choices.</b> The equal-thirds weights, the 0–100 normalization, and the 1984 start year are defensible but not the only options — change the weights above and watch the grade move.</li>'+
     '<li><b>It’s a national average.</b> It hides gaps by race, class, sex, age and region — see “The Dream isn’t one number” and the state map. One person’s America is not another’s.</li>'+
     '<li><b>Framing is interpretive.</b> Section titles and copy carry a point of view; the underlying numbers don’t. Download them and draw your own conclusions.</li>'+
-    '<li><b>Data vintages differ.</b> Some series (emissions, mortality, Census tables) lag one to several years; overdose counts are provisional and the suicide series here ends in 2017. Each chart’s axis shows its own latest year.</li>'+
+    '<li><b>Data vintages differ.</b> Some series (emissions, mortality, Census tables) lag one to several years; overdose counts are provisional and the suicide series is final through 2019, provisional for 2020-22. Each chart’s axis shows its own latest year.</li>'+
     '<li><b>Shocks aren’t trends.</b> Life expectancy fell sharply in 2020–21 (COVID) and has since rebounded toward pre-pandemic levels (78.9 years in 2024) — read that dip as a one-off, not a new direction.</li>'+
     '<li><b>One inflation gauge, one jobless gauge.</b> "Real" dollars here use the <b>CPI</b>; the Fed’s preferred <b>PCE</b> index runs a bit lower, which would show slightly faster real gains. Headline unemployment is <b>U-3</b>; the broader <b>U-6</b> underemployment rate (on the trends chart) is higher. Reasonable analysts disagree about which to use — the point is that the choice is a choice.</li>'+
     '<li><b>No error bars.</b> Survey-based figures (income, poverty, mortality) carry sampling error and get revised — treat small year-to-year moves as noise.</li>'+
@@ -1421,7 +1421,7 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
     const S=d.series, yset=new Set();
     Object.values(S).forEach(s=>Object.keys(s.years).forEach(y=>yset.add(+y)));
     const years=[...yset].sort((a,b)=>a-b);
-    const mk=(key,color,dash)=>({label:S[key].label+(key==='overdose'?' (provisional)':key==='suicide'?' (final)':''),data:years.map(y=>S[key].years[String(y)]!=null?S[key].years[String(y)]:null),borderColor:color,borderWidth:2.2,borderDash:dash||[],pointRadius:0,pointHoverRadius:4,tension:.2,spanGaps:true,fill:false});
+    const mk=(key,color,dash)=>({label:S[key].label+(key==='overdose'?' (provisional)':key==='suicide'?' (final → 2019, then provisional)':''),data:years.map(y=>S[key].years[String(y)]!=null?S[key].years[String(y)]:null),borderColor:color,borderWidth:2.2,borderDash:dash||[],pointRadius:0,pointHoverRadius:4,tension:.2,spanGaps:true,fill:false});
     new Chart(document.getElementById('despairChart'),{type:'line',data:{labels:years.map(String),datasets:[mk('overdose','#d66a5a',[6,3]),mk('suicide','#e0843c')]},
       options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
         plugins:{legend:{labels:{color:TX,font:{family:'JetBrains Mono',size:10},boxWidth:10}},termBands:{show:false},recBands:{show:false},
