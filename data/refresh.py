@@ -50,6 +50,7 @@ NATIONAL = {
   "total_debt": ("GFDEBTN", "Federal debt (total)", "$ millions", "FRED / U.S. Treasury"),
   "mortgage_rate": ("MORTGAGE30US", "30-year mortgage rate", "%", "FRED / Freddie Mac"),
   "consumer_sentiment": ("UMCSENT", "Consumer sentiment", "index 1966=100", "FRED / Univ. of Michigan"),
+  "u6_rate": ("U6RATE", "Underemployment (U-6)", "%", "FRED / U.S. BLS"),
 }
 PRESIDENTS = [
   {"name": "Truman", "party": "D", "start": 1945, "end": 1952}, {"name": "Eisenhower", "party": "R", "start": 1953, "end": 1960},
@@ -429,14 +430,20 @@ def build_demographics():
         u = {g: ann(sid) for g, sid in unemp.items()}
         h = {g: ann(sid) for g, sid in home.items()}
         out = {"generated": datetime.date.today().isoformat(),
+               "defnote": "Race/ethnicity groups overlap: Hispanic is an ethnicity, so Hispanics also appear in the race groups. The two charts use slightly different 'White' definitions (noted per chart). Native American and multiracial groups lack a clean long series and are not shown.",
                "unemployment": {
-                   "note": "Unemployment rate by race/ethnicity, annual averages. Source: FRED / U.S. BLS (LNS14000003/006/009, LNS14032183). Asian series starts 2003.",
-                   "unit": "%", "groups": {"white": "White", "black": "Black", "hispanic": "Hispanic", "asian": "Asian"},
+                   "note": "Unemployment rate by race/ethnicity, annual averages. 'White' here includes Hispanic whites (BLS definition). Source: FRED / U.S. BLS (LNS14000003/006/009, LNS14032183). Asian series starts 2003.",
+                   "unit": "%", "groups": {"white": "White (incl. Hispanic)", "black": "Black", "hispanic": "Hispanic", "asian": "Asian"},
                    "series": u},
                "homeownership": {
-                   "note": "Homeownership rate by race/ethnicity, annual averages from quarterly data (from 1994). 'White' is non-Hispanic white. Source: FRED / U.S. Census Bureau (NHWAHORUSQ156N, BOAAAHORUSQ156N, HOLHORUSQ156N).",
-                   "unit": "%", "groups": {"white": "White (non-Hispanic)", "black": "Black", "hispanic": "Hispanic"},
-                   "series": h}}
+                   "note": "Homeownership rate by race/ethnicity, annual averages from quarterly data (from 1994). 'White' here is non-Hispanic white. Source: FRED / U.S. Census Bureau (NHWAHORUSQ156N, BOAAAHORUSQ156N, HOLHORUSQ156N).",
+                   "unit": "%", "groups": {"white": "White (non-Hisp.)", "black": "Black", "hispanic": "Hispanic"},
+                   "series": h},
+               "wealth": {
+                   "note": "Median household net worth by race/ethnicity. Source: Federal Reserve, Survey of Consumer Finances (2022). 'Other' includes Asian, Native American and multiracial households (the SCF does not break Asian out separately).",
+                   "unit": "$", "year": "2022",
+                   "groups": {"white": "White (non-Hisp.)", "black": "Black", "hispanic": "Hispanic", "other": "Other*"},
+                   "values": {"white": 285000, "black": 44900, "hispanic": 61600, "other": 132900}}}
         json.dump(out, open(os.path.join(HERE, "demographics.json"), "w"), separators=(",", ":"))
         print("demographics: unemp %d groups, home %d groups" % (len(u), len(h)))
     except Exception as e:

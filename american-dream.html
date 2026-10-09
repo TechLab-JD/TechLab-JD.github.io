@@ -165,6 +165,14 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
   <div class="srcnote mono" id="h-src"></div>
 </div></header>
 
+<style>
+#pagenav{position:sticky;top:0;z-index:50;display:flex;gap:4px;overflow-x:auto;background:rgba(10,14,24,.93);backdrop-filter:blur(6px);border-bottom:1px solid rgba(60,72,100,.5);padding:8px 16px;font-size:11px;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+#pagenav a{color:#A9AFC4;text-decoration:none;padding:4px 9px;border-radius:5px;flex:0 0 auto;letter-spacing:.04em}
+#pagenav a:hover{background:rgba(232,163,60,.16);color:#F4F1E6}
+#content > section{scroll-margin-top:52px}
+</style>
+<nav id="pagenav" class="mono" aria-label="Jump to section"></nav>
+
 <main class="wrap">
 <div id="loaderr">⚠ Couldn't load the dataset (data/usqol.json). If you're viewing this as a local file, run it from a small web server.</div>
 
@@ -179,6 +187,9 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
       <div class="score mono" id="grade-score"></div>
     </div>
   </div>
+
+  <!-- 60-SECOND READ -->
+  <div id="tldr" class="panel" style="margin-bottom:18px"></div>
 
   <!-- KEY INDICATORS -->
   <section>
@@ -218,7 +229,7 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
   <section>
     <div class="sectlabel mono">// THE GRADE</div>
     <h2 class="sec">Quality-of-Life Index, year by year</h2>
-    <p class="sub">A composite score (0–100) blending income, growth, jobs, prices, housing affordability, wages, poverty and life expectancy — scored on an absolute scale against the best readings in modern U.S. history, not curved against other years. Full method below.</p>
+    <p class="sub">A composite score (0–100) blending income, growth, jobs, prices, housing affordability, wages, poverty and life expectancy — scored on an absolute scale against the best readings in modern U.S. history, not curved against other years. <b>The grade is the headline; the three pillars below it are the truth</b> — a single letter can't capture a country, so treat it as a conversation-starter, then watch the pillars pull apart. Full method below.</p>
     <div class="panel">
       <div class="chartbox sm"><canvas id="indexChart"></canvas></div>
       <p class="sub" id="mood-note" style="margin-top:12px;color:#E8A33C"></p>
@@ -312,7 +323,7 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
   <section>
     <div class="sectlabel mono">// WHO IT REACHES</div>
     <h2 class="sec">The Dream isn't one number</h2>
-    <p class="sub">A national average is a blur. Split the same economy by race and the picture changes a lot — gaps that have barely moved in a generation. (The income and wealth charts above split it by economic class.)</p>
+    <p class="sub">A national average is a blur. Split the same economy by race and the picture changes a lot — gaps that have barely moved in a generation. (The income and wealth charts above split it by economic class.) <b>Note:</b> these groups overlap — Hispanic is an ethnicity, so Hispanics also appear in the race lines — and the unemployment chart counts all whites while the homeownership and wealth charts use non-Hispanic whites, each labeled accordingly.</p>
     <div class="grid2">
       <div class="panel">
         <h2 style="font-size:16px;color:#F4F1E6">Unemployment by race</h2>
@@ -324,6 +335,11 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
         <p class="sub" style="margin-bottom:10px">% of households (from 1994)</p>
         <div class="chartbox sm"><canvas id="demoHomeChart"></canvas></div>
       </div>
+    </div>
+    <div class="panel" style="margin-top:18px">
+      <h2 style="font-size:16px;color:#F4F1E6">The gap that dwarfs the rest: median wealth by race</h2>
+      <p class="sub" style="margin-bottom:10px">Median household net worth, 2022 — the starkest number on this page</p>
+      <div class="chartbox sm"><canvas id="demoWealthChart"></canvas></div>
     </div>
     <p class="srcnote mono" id="demo-src" style="margin-top:12px"></p>
   </section>
@@ -479,6 +495,7 @@ footer .flinks a{color:var(--dim);font-size:13.5px;margin-left:18px}
     <div class="panel">
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px">
         <button class="chip" id="dl-csv">⤓ Download national data (CSV)</button>
+        <button class="chip" id="dl-dict">⤓ Download data dictionary (CSV)</button>
         <button class="chip" id="dl-method">⤓ Download methodology (text)</button>
       </div>
       <div class="mbody" id="limits-body"></div>
@@ -553,6 +570,7 @@ const METRICS=[
   {key:'labor_participation',label:'Labor force participation', fmt:'pct', good:1},
   {key:'rent_cpi',           label:'Rent (CPI index)',    fmt:'idx', good:-1},
   {key:'consumer_sentiment', label:'Consumer sentiment',  fmt:'idx', good:1},
+  {key:'u6_rate',            label:'Underemployment (U-6)', fmt:'pct', good:-1},
 ];
 const METABYKEY={}; METRICS.forEach(m=>METABYKEY[m.key]=m);
 // Three equally-weighted pillars so the index isn't dominated by the biggest cluster of
@@ -623,11 +641,16 @@ const LETTER_COLORS={'A+':'#4FC08D','A':'#5cc084','A-':'#79c76c','B+':'#9ccf5a',
 function curveGrade(score){ if(score==null)return'—'; for(const[t,g]of GRADE_SCALE)if(score>=t)return g; return'F'; }
 function curveColor(score){ return LETTER_COLORS[curveGrade(score)]; }
 
-// normalize a metric's value to 0..100 across its own history, oriented so higher=better
+// normalize a metric's value to 0..100 across its own history, oriented so higher=better.
+// Bounds are FROZEN through REF_NORM_END so the daily data refresh (which keeps adding
+// current-year points) can't silently rewrite the grade of past years — later values are
+// clamped to 0..100 instead of expanding the scale. Bump REF_NORM_END once a year.
+const REF_NORM_END=2024;
 function normMap(key){
   const m=METABYKEY[key], o=ALL[key], ys=Object.keys(o).map(Number);
-  let mn=Infinity,mx=-Infinity; ys.forEach(y=>{mn=Math.min(mn,o[y]);mx=Math.max(mx,o[y]);});
-  const out={}; ys.forEach(y=>{ let n=(mx===mn)?50:(o[y]-mn)/(mx-mn)*100; if(m.good<0)n=100-n; out[y]=n; });
+  const refYs=ys.filter(y=>y<=REF_NORM_END), base=refYs.length?refYs:ys;
+  let mn=Infinity,mx=-Infinity; base.forEach(y=>{mn=Math.min(mn,o[y]);mx=Math.max(mx,o[y]);});
+  const out={}; ys.forEach(y=>{ let n=(mx===mn)?50:(o[y]-mn)/(mx-mn)*100; n=Math.max(0,Math.min(100,n)); if(m.good<0)n=100-n; out[y]=n; });
   return out;
 }
 let INDEX={};
@@ -665,12 +688,12 @@ let pillarChart;
 function renderPillars(){
   computePillars();
   const ys=Object.keys(INDEX).map(Number).sort((a,b)=>a-b);
-  const mk=(p,color,label)=>({label:label,data:ys.map(y=>PILLARSCORES[p][y]!=null?PILLARSCORES[p][y]:null),borderColor:color,backgroundColor:color,borderWidth:2.2,pointRadius:0,pointHoverRadius:4,tension:.25,spanGaps:true,fill:false});
+  const mk=(p,color,label,dash)=>({label:label,data:ys.map(y=>PILLARSCORES[p][y]!=null?PILLARSCORES[p][y]:null),borderColor:color,backgroundColor:color,borderDash:dash||[],borderWidth:2.4,pointRadius:0,pointHoverRadius:4,tension:.25,spanGaps:true,fill:false});
   if(pillarChart)pillarChart.destroy();
   pillarChart=new Chart(document.getElementById('pillarChart'),{type:'line',
-    data:{labels:ys.map(String),datasets:[mk('econ','#E8A33C',PILLAR_NAMES.econ),mk('cost','#d66a5a',PILLAR_NAMES.cost),mk('fair','#4FC08D',PILLAR_NAMES.fair)]},
+    data:{labels:ys.map(String),datasets:[mk('econ','#E69F00',PILLAR_NAMES.econ,[]),mk('cost','#0072B2',PILLAR_NAMES.cost,[7,4]),mk('fair','#009E73',PILLAR_NAMES.fair,[2,3])]},
     options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
-      plugins:{legend:{labels:{color:'#A9AFC4',font:{family:'JetBrains Mono',size:10},boxWidth:10}},termBands:{show:false},recBands:{show:false},
+      plugins:{legend:{labels:{color:'#A9AFC4',font:{family:'JetBrains Mono',size:10},boxWidth:18}},termBands:{show:false},recBands:{show:false},
         tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+(c.parsed.y!=null?c.parsed.y+'/100':'—')}}},
       scales:{x:{grid:{color:'rgba(36,49,80,.5)'},ticks:{color:'#A9AFC4',maxTicksLimit:9,font:{family:'JetBrains Mono'}}},
         y:{min:0,max:100,grid:{color:'rgba(36,49,80,.5)'},ticks:{color:'#A9AFC4',font:{family:'JetBrains Mono'}}}}}});
@@ -694,11 +717,54 @@ function toCSV(){
   const lines=years.map(y=>[y].concat(keys.map(k=>{const v=DATA.series[k].years[String(y)];return v==null?'':v;})).join(','));
   return head+'\n'+lines.join('\n');
 }
+function dataDict(){
+  const keys=Object.keys(DATA.series).filter(k=>DATA.series[k]&&DATA.series[k].years);
+  const esc=s=>{s=String(s==null?'':s);return /[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;};
+  const head=['column_key','label','unit','source','fred_series_id','first_year','last_year'].join(',');
+  const rows=keys.map(k=>{const s=DATA.series[k], ys=Object.keys(s.years).map(Number).sort((a,b)=>a-b);
+    return [k,s.label,s.unit,s.source,s.series_id,ys[0],ys[ys.length-1]].map(esc).join(',');});
+  return head+'\n'+rows.join('\n');
+}
 function dlFile(name,text,type){ const b=new Blob([text],{type:type}); const u=URL.createObjectURL(b); const a=document.createElement('a'); a.href=u; a.download=name; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(u); }
 function methodText(){
   const m=(document.getElementById('method-body')||{}).textContent||'';
   const l=(document.getElementById('limits-body')||{}).textContent||'';
   return 'THE STATE OF THE AMERICAN DREAM — METHODOLOGY\n\n'+m+'\n\nKNOWN LIMITATIONS\n\n'+l+'\n\nData: official U.S. agencies via FRED. Generated '+DATA.meta.generated+'. Built by Jordan Dorman.';
+}
+function buildPageNav(){
+  const nav=document.getElementById('pagenav'); if(!nav)return;
+  let html='';
+  document.querySelectorAll('#content > section').forEach((s,i)=>{
+    const lbl=s.querySelector('.sectlabel'); if(!lbl)return;
+    const txt=lbl.textContent.replace(/\/\//g,'').trim();
+    const id='sec-'+(txt.replace(/[^a-z0-9]+/ig,'-').replace(/^-|-$/g,'').toLowerCase()||('s'+i));
+    s.id=id;
+    html+='<a href="#'+id+'">'+txt+'</a>';
+  });
+  nav.innerHTML=html;
+}
+function renderTLDR(){
+  const el=document.getElementById('tldr'); if(!el||!PILLARSCORES.econ)return;
+  const ys=Object.keys(INDEX).map(Number).sort((a,b)=>a-b); if(!ys.length)return;
+  const ly=ys[ys.length-1], g=curveGrade(INDEX[ly]);
+  const py=Object.keys(PILLARSCORES.econ).map(Number).sort((a,b)=>a-b).pop();
+  const P=k=>PILLARSCORES[k][py]||0;
+  const pill=(label,v,color)=>'<div style="flex:1;min-width:130px"><div style="font-size:11px;color:#A9AFC4">'+label+'</div><div style="height:7px;background:rgba(255,255,255,.08);border-radius:4px;margin-top:4px;overflow:hidden"><div style="height:100%;width:'+Math.round(v)+'%;background:'+color+'"></div></div><div class="mono" style="font-size:12px;color:#F4F1E6;margin-top:3px">'+Math.round(v)+'/100</div></div>';
+  el.innerHTML='<div class="mono" style="font-size:12px;color:#E8A33C;letter-spacing:.08em">// THE 60-SECOND READ</div>'+
+    '<p style="margin:8px 0 12px;color:#A9AFC4">By this composite, U.S. quality of life grades about <b style="color:#F4F1E6">'+g+'</b> for '+ly+' — steadier on jobs and income, strained on the cost of living, middling on health and fairness. A single letter hides that tension; the three pillars show it:</p>'+
+    '<div style="display:flex;gap:14px;flex-wrap:wrap">'+pill(PILLAR_NAMES.econ,P('econ'),'#E69F00')+pill(PILLAR_NAMES.cost,P('cost'),'#0072B2')+pill(PILLAR_NAMES.fair,P('fair'),'#009E73')+'</div>'+
+    '<p style="margin-top:12px;font-size:13px"><a href="#sec-the-grade" style="color:#E8A33C">↓ Start with the grade and its three pillars</a> — or use the bar at the top to jump anywhere.</p>';
+}
+function labelCanvases(){
+  document.querySelectorAll('#content canvas').forEach(c=>{
+    if(c.getAttribute('aria-label'))return;
+    const panel=c.closest('.panel'), sec=c.closest('section');
+    const h=(panel&&panel.querySelector('h2'))||(sec&&sec.querySelector('h2.sec'));
+    const sub=panel&&panel.querySelector('.sub');
+    const t=((h&&h.textContent)||'Data')+(sub?' — '+sub.textContent:'');
+    c.setAttribute('role','img');
+    c.setAttribute('aria-label',t+'. Chart; the full underlying data is downloadable as CSV in the “Check this” section.');
+  });
 }
 function initCheckThis(){
   const lb=document.getElementById('limits-body');
@@ -707,11 +773,16 @@ function initCheckThis(){
     '<li><b>It’s a national average.</b> It hides gaps by race, class, sex, age and region — see “The Dream isn’t one number” and the state map. One person’s America is not another’s.</li>'+
     '<li><b>Framing is interpretive.</b> Section titles and copy carry a point of view; the underlying numbers don’t. Download them and draw your own conclusions.</li>'+
     '<li><b>Data vintages differ.</b> Some series (emissions, mortality, Census tables) lag one to several years; overdose counts are provisional and the suicide series here ends in 2017. Each chart’s axis shows its own latest year.</li>'+
+    '<li><b>Shocks aren’t trends.</b> Life expectancy fell sharply in 2020–21 (COVID) and has since rebounded toward pre-pandemic levels (78.9 years in 2024) — read that dip as a one-off, not a new direction.</li>'+
+    '<li><b>One inflation gauge, one jobless gauge.</b> "Real" dollars here use the <b>CPI</b>; the Fed’s preferred <b>PCE</b> index runs a bit lower, which would show slightly faster real gains. Headline unemployment is <b>U-3</b>; the broader <b>U-6</b> underemployment rate (on the trends chart) is higher. Reasonable analysts disagree about which to use — the point is that the choice is a choice.</li>'+
     '<li><b>No error bars.</b> Survey-based figures (income, poverty, mortality) carry sampling error and get revised — treat small year-to-year moves as noise.</li>'+
+    '<li><b>Grades are frozen to 1984–2024 reference points</b> so a fresh data point can’t silently re-grade the past; values beyond that window are clamped rather than rescaling history.</li>'+
     '<li><b>Correlation isn’t cause.</b> Presidential-term bands are a time grouping only; presidents inherit economies and policy acts with long lags.</li>'+
     '<li><b>Peer choice matters.</b> “Vs. the world” uses 12 high-income democracies; a different peer set moves where the U.S. lands.</li>'+
+    '<li><b>Accessibility:</b> charts use a colorblind-safe palette and vary line style as well as color; each chart carries a text description, and the complete data is in the CSV and data dictionary above for anyone using a screen reader.</li>'+
     '</ul>';
   const c=document.getElementById('dl-csv'); if(c)c.onclick=()=>dlFile('american-dream-data.csv',toCSV(),'text/csv');
+  const dd=document.getElementById('dl-dict'); if(dd)dd.onclick=()=>dlFile('american-dream-data-dictionary.csv',dataDict(),'text/csv');
   const mt=document.getElementById('dl-method'); if(mt)mt.onclick=()=>dlFile('american-dream-methodology.txt',methodText(),'text/plain');
 }
 
@@ -1004,7 +1075,7 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
   document.getElementById('h-src').textContent='source: FRED · '+Object.keys(S).filter(k=>!k.startsWith('cpi_')).length+' official series · '+YEARS[0]+'–'+YEARS[YEARS.length-1]+' · retrieved '+d.meta.generated;
   document.getElementById('foot-gen').textContent='© 2026 Jordan Dorman · data via FRED · retrieved '+d.meta.generated;
   document.getElementById('content').style.display='block';
-  renderGradeHero(); initSnapChips(); renderKcards(); initControls(); initWeights(); drawMain(); drawIndex(); renderPillars(); renderMood(); drawTerm(); initCompare(); renderHousing(); renderDebt(); renderHighLow(); renderSources(); renderMethod(); initCheckThis();
+  renderGradeHero(); initSnapChips(); renderKcards(); initControls(); initWeights(); drawMain(); drawIndex(); renderPillars(); renderMood(); renderTLDR(); drawTerm(); initCompare(); renderHousing(); renderDebt(); renderHighLow(); renderSources(); renderMethod(); initCheckThis(); buildPageNav(); labelCanvases(); setTimeout(labelCanvases,3000);
 }).catch(e=>{document.getElementById('h-sub').textContent='';document.getElementById('loaderr').style.display='block';console.error(e);});
 </script>
 
@@ -1211,7 +1282,9 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
 /* ===== WHO IT REACHES (demographics by race) ===== */
 (function(){
   const TX='#A9AFC4', GRID='rgba(36,49,80,.5)';
-  const CLR={white:'#E8A33C',black:'#4FC08D',hispanic:'#6aa9e0',asian:'#d88ac0'};
+  // Okabe-Ito colorblind-safe palette; lines ALSO vary by dash so color isn't the only cue.
+  const CLR={white:'#E69F00',black:'#0072B2',hispanic:'#009E73',asian:'#CC79A7',other:'#D55E00'};
+  const DASH=[[],[7,4],[2,3],[9,3,2,3]];
   fetch('data/demographics.json').then(r=>r.json()).then(d=>{
     const mkChart=(canvas,block)=>{
       const el=document.getElementById(canvas); if(!el)return;
@@ -1219,16 +1292,25 @@ fetch('data/usqol.json').then(r=>r.json()).then(d=>{
       const yset=new Set(); groups.forEach(g=>Object.keys(block.series[g]||{}).forEach(y=>yset.add(+y)));
       const years=[...yset].sort((a,b)=>a-b);
       new Chart(el,{type:'line',
-        data:{labels:years.map(String),datasets:groups.map(g=>({label:block.groups[g],data:years.map(y=>block.series[g][String(y)]!=null?block.series[g][String(y)]:null),borderColor:CLR[g]||'#999',backgroundColor:CLR[g]||'#999',borderWidth:2.2,pointRadius:0,pointHoverRadius:4,tension:.2,spanGaps:true,fill:false}))},
+        data:{labels:years.map(String),datasets:groups.map((g,i)=>({label:block.groups[g],data:years.map(y=>block.series[g][String(y)]!=null?block.series[g][String(y)]:null),borderColor:CLR[g]||'#999',backgroundColor:CLR[g]||'#999',borderDash:DASH[i%DASH.length],borderWidth:2.2,pointRadius:0,pointHoverRadius:4,tension:.2,spanGaps:true,fill:false}))},
         options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
-          plugins:{legend:{labels:{color:TX,font:{family:'JetBrains Mono',size:10},boxWidth:10}},termBands:{show:false},recBands:{show:false},
+          plugins:{legend:{labels:{color:TX,font:{family:'JetBrains Mono',size:10},boxWidth:16}},termBands:{show:false},recBands:{show:false},
             tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+(c.parsed.y!=null?c.parsed.y+'%':'—')}}},
           scales:{x:{grid:{color:GRID},ticks:{color:TX,maxTicksLimit:9,font:{family:'JetBrains Mono'}}},
             y:{grid:{color:GRID},ticks:{color:TX,font:{family:'JetBrains Mono'},callback:v=>v+'%'}}}}});
     };
     mkChart('demoUnempChart',d.unemployment);
     mkChart('demoHomeChart',d.homeownership);
-    const src=document.getElementById('demo-src'); if(src)src.textContent=d.unemployment.note+' '+d.homeownership.note+' Retrieved '+d.generated+'.';
+    // racial wealth gap (static SCF 2022 bar)
+    const wEl=document.getElementById('demoWealthChart');
+    if(wEl && d.wealth){ const w=d.wealth, gs=Object.keys(w.groups);
+      new Chart(wEl,{type:'bar',
+        data:{labels:gs.map(g=>w.groups[g]),datasets:[{data:gs.map(g=>w.values[g]),backgroundColor:gs.map(g=>CLR[g]||'#999'),borderRadius:4}]},
+        options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+          plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' $'+Math.round(c.parsed.x).toLocaleString()+' ('+w.year+')'}}},
+          scales:{x:{grid:{color:GRID},ticks:{color:TX,font:{family:'JetBrains Mono',size:10},callback:v=>'$'+(v/1000)+'K'}},y:{grid:{display:false},ticks:{color:TX,font:{family:'JetBrains Mono',size:11}}}}}});
+    }
+    const src=document.getElementById('demo-src'); if(src)src.textContent=(d.defnote?d.defnote+' ':'')+d.unemployment.note+' '+d.homeownership.note+' '+(d.wealth?d.wealth.note:'')+' Retrieved '+d.generated+'.';
   }).catch(e=>{console.error(e);});
 })();
 
