@@ -194,6 +194,56 @@ window.LAB404_SUBJECTS = {
         { t: "Electrical Basics", band: "all" },
         { t: "Car Maintenance", band: "all" }
       ]
+    },
+    {
+      key: "money", title: "Money & Investing", short: "Money", icon: "💵",
+      desc: "Take control of your money — budgeting, debt, banking, investing & taxes",
+      topics: [
+        { t: "Budgeting", band: "9-adult" },
+        { t: "Saving & Emergency Fund", band: "9-adult" },
+        { t: "Credit & Debt Payoff", band: "9-adult" },
+        { t: "Banking & Accounts", band: "all" },
+        { t: "Investing Basics", band: "9-adult" },
+        { t: "Retirement & 401(k)", band: "adult" },
+        { t: "Taxes", band: "9-adult" },
+        { t: "Insurance", band: "9-adult" }
+      ]
+    },
+    {
+      key: "law", title: "Law & Your Rights", short: "Law", icon: "⚖️",
+      desc: "Know your rights — contracts, tenant & consumer law, small claims & IDs",
+      topics: [
+        { t: "Know Your Rights", band: "all" },
+        { t: "Contracts", band: "9-adult" },
+        { t: "Tenant & Housing Rights", band: "9-adult" },
+        { t: "Consumer Protection", band: "9-adult" },
+        { t: "Small Claims Court", band: "adult" },
+        { t: "Traffic & ID Law", band: "9-adult" }
+      ]
+    },
+    {
+      key: "writing", title: "Writing & Journalism", short: "Writing", icon: "✍️",
+      desc: "Write well for any purpose — stories, essays, journalism & copy",
+      topics: [
+        { t: "Creative Writing", band: "all" },
+        { t: "Essays & Reports", band: "6-college" },
+        { t: "Grammar & Style", band: "all" },
+        { t: "Storytelling", band: "all" },
+        { t: "Journalism", band: "9-college" },
+        { t: "Blogging & Copywriting", band: "9-adult" }
+      ]
+    },
+    {
+      key: "gardening", title: "Gardening & Homesteading", short: "Gardening", icon: "🌱",
+      desc: "Grow your own food — gardens, vegetables, herbs, compost & preserving",
+      topics: [
+        { t: "Garden Basics", band: "all" },
+        { t: "Vegetables", band: "all" },
+        { t: "Herbs", band: "all" },
+        { t: "Container Gardening", band: "all" },
+        { t: "Composting", band: "all" },
+        { t: "Food Preservation", band: "all" }
+      ]
     }
   ]
 };

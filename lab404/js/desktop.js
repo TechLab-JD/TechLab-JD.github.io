@@ -144,6 +144,20 @@
     (S.academic || []).forEach(function (s) {
       order.push({ app: "folder-" + s.key, icon: s.icon || "📁", short: s.short || s.title, title: s.title });
     });
+
+    /* Apply the user's saved icon arrangement (drag-and-drop); new subjects fall to the end. */
+    var ORDER_KEY = "lab404.desktopOrder";
+    try {
+      var saved = JSON.parse(localStorage.getItem(ORDER_KEY) || "null");
+      if (saved && saved.length) {
+        order.sort(function (a, b) {
+          var ia = saved.indexOf(a.app), ib = saved.indexOf(b.app);
+          if (ia === -1) ia = 1000; if (ib === -1) ib = 1000;
+          return ia - ib;
+        });
+      }
+    } catch (e) {}
+
     var di = document.getElementById("desktopIcons");
     if (di) {
       di.innerHTML = order.map(function (o) {
@@ -152,6 +166,30 @@
           '<div class="desktop-icon-img">' + o.icon + '</div>' +
           '<div class="desktop-icon-label">' + escA(o.short) + '</div></div>';
       }).join("");
+
+      /* Drag-and-drop reordering, saved per device. */
+      function saveOrder() {
+        try {
+          var keys = [].map.call(di.querySelectorAll(".desktop-icon[data-app]"), function (el) { return el.dataset.app; });
+          localStorage.setItem(ORDER_KEY, JSON.stringify(keys));
+        } catch (e) {}
+      }
+      var dragEl = null;
+      [].forEach.call(di.querySelectorAll(".desktop-icon"), function (icon) {
+        icon.setAttribute("draggable", "true");
+        icon.addEventListener("dragstart", function (e) {
+          dragEl = icon; icon.classList.add("dragging");
+          try { e.dataTransfer.effectAllowed = "move"; e.dataTransfer.setData("text/plain", icon.dataset.app); } catch (_) {}
+        });
+        icon.addEventListener("dragend", function () { icon.classList.remove("dragging"); saveOrder(); });
+        icon.addEventListener("dragover", function (e) {
+          e.preventDefault();
+          if (!dragEl || dragEl === icon) return;
+          var r = icon.getBoundingClientRect();
+          if (e.clientY < r.top + r.height / 2) di.insertBefore(dragEl, icon);
+          else di.insertBefore(dragEl, icon.nextSibling);
+        });
+      });
     }
     var sms = document.getElementById("startSubjects");
     if (sms) {
@@ -1226,6 +1264,7 @@
       else if (action === "review")     Desktop.openWindow("review");
       else if (action === "glossary")   Desktop.openWindow("glossary");
       else if (action === "notepad")    Desktop.openWindow("notepad");
+      else if (action === "resetlayout") { try { localStorage.removeItem("lab404.desktopOrder"); } catch (e) {} location.reload(); }
       else if (action === "about")      Desktop.openWindow("about");
     });
   }

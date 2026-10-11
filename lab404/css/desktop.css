@@ -34,6 +34,11 @@ body.os-mode {
   z-index: 1;
 }
 
+/* Drag-and-drop reordering of desktop subjects */
+.desktop-icon { cursor: grab; }
+.desktop-icon:active { cursor: grabbing; }
+.desktop-icon.dragging { opacity: 0.4; }
+
 .desktop-icon {
   display: flex;
   flex-direction: column;
