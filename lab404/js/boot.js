@@ -2,28 +2,50 @@
 (function () {
   "use strict";
 
+  /* Short display names for the boot banner, keyed to subjects-data.js */
+  var SHORT = { math: "Math", science: "Science", english: "English", social: "Social Studies",
+                coding: "Coding", languages: "Languages", lifeskills: "Life Skills" };
+
+  function subjectTagRows() {
+    var subs = [];
+    var S = window.LAB404_SUBJECTS;
+    if (S) {
+      if (S.comptia) subs.push("CompTIA");
+      (S.academic || []).forEach(function (s) { subs.push(SHORT[s.key] || s.title); });
+    }
+    if (!subs.length) subs = ["CompTIA"];
+    var rows = [];
+    for (var i = 0; i < subs.length; i += 4) {
+      rows.push("  " + subs.slice(i, i + 4).map(function (t) { return "[" + t + "]"; }).join("  "));
+    }
+    return rows;
+  }
+
   var LINES = [
-    { text: "LAB404 STUDY OS  v2.0.0",                                     delay: 0,    hi: true },
+    { text: "LAB404 STUDY OS  v2.1.0",                                     delay: 0,    hi: true },
     { text: "Copyright (c) 2026 Lab404. All rights reserved.",             delay: 160 },
     { text: "",                                                              delay: 260 },
     { text: "BIOS integrity check.......................... PASS",           delay: 380 },
     { text: "Initializing memory banks..................... OK",             delay: 510 },
-    { text: "Loading chapter modules....................... OK",             delay: 630 },
+    { text: "Loading subject modules....................... OK",             delay: 630 },
     { text: "Mounting study database....................... OK",             delay: 750 },
     { text: "Calibrating flashcard engine.................. OK",             delay: 860 },
     { text: "Verifying practice question sets.............. OK",            delay: 970 },
     { text: "Starting XP tracking engine................... OK",            delay: 1070 },
     { text: "",                                                              delay: 1150 },
-    { text: "CompTIA certification hubs registered:",                       delay: 1220 },
-    { text: "  [A+]  [Net+]  [Sec+]  [Linux+]  [Cloud+]  [Server+]",      delay: 1320 },
-    { text: "  [CySA+]  [PenTest+]  [SecurityX]  [Data+]",                delay: 1420 },
-    { text: "",                                                              delay: 1510 },
-    { text: "ALL SYSTEMS NOMINAL",                                          delay: 1580, hi: true },
-    { text: "Launching Study Zone...",                                      delay: 1750 },
+    { text: "Study subjects registered:",                                   delay: 1220 },
   ];
 
-  var FADE_START = 2150;
-  var FADE_DONE  = 2750;
+  /* Dynamically append one bracketed row per 4 subjects, then the tail. */
+  var _tagRows = subjectTagRows();
+  _tagRows.forEach(function (r, i) { LINES.push({ text: r, delay: 1320 + i * 100 }); });
+  var _tail = 1320 + _tagRows.length * 100;
+  LINES.push({ text: "",                      delay: _tail + 60 });
+  LINES.push({ text: "ALL SYSTEMS NOMINAL",   delay: _tail + 130, hi: true });
+  LINES.push({ text: "Launching Study Zone...", delay: _tail + 300 });
+
+  var FADE_START = _tail + 700;
+  var FADE_DONE  = FADE_START + 600;
 
   function init() {
     var screen = document.getElementById("boot-screen");
