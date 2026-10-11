@@ -103,6 +103,97 @@ window.LAB404_SUBJECTS = {
         { t: "Career & Job Skills", band: "9-adult" },
         { t: "Digital Literacy", band: "all" }
       ]
+    },
+    {
+      key: "medicine", title: "Health & Medicine", icon: "🩺",
+      desc: "Understand your body and health — first aid, anatomy, nutrition & more",
+      topics: [
+        { t: "First Aid & CPR", band: "all" },
+        { t: "Human Anatomy", band: "9-college" },
+        { t: "Nutrition", band: "6-adult" },
+        { t: "Mental Health", band: "9-adult" },
+        { t: "Common Illnesses", band: "all" },
+        { t: "Medical Terminology", band: "college" }
+      ]
+    },
+    {
+      key: "survival", title: "Survival & Preparedness", icon: "🏕️",
+      desc: "Skills for the outdoors and emergencies — be ready for anything",
+      topics: [
+        { t: "Emergency First Aid", band: "all" },
+        { t: "Wilderness Skills", band: "all" },
+        { t: "Navigation & Maps", band: "all" },
+        { t: "Water & Food", band: "all" },
+        { t: "Shelter & Fire", band: "all" },
+        { t: "Disaster Preparedness", band: "all" }
+      ]
+    },
+    {
+      key: "cooking", title: "Cooking & Nutrition", icon: "🍳",
+      desc: "Feed yourself well — techniques, recipes, baking & food safety",
+      topics: [
+        { t: "Kitchen Basics", band: "all" },
+        { t: "Knife Skills", band: "all" },
+        { t: "Cooking Techniques", band: "all" },
+        { t: "Baking", band: "all" },
+        { t: "Meal Planning", band: "all" },
+        { t: "Food Safety", band: "all" }
+      ]
+    },
+    {
+      key: "arts", title: "Arts & Music", icon: "🎨",
+      desc: "Make and appreciate art — drawing, painting, music & photography",
+      topics: [
+        { t: "Drawing", band: "all" },
+        { t: "Painting", band: "all" },
+        { t: "Music Theory", band: "all" },
+        { t: "Playing an Instrument", band: "all" },
+        { t: "Photography", band: "all" }
+      ]
+    },
+    {
+      key: "mind", title: "Psychology & Philosophy", icon: "🧠",
+      desc: "How people think and reason — psychology, logic, ethics & big questions",
+      topics: [
+        { t: "Intro to Psychology", band: "9-college" },
+        { t: "Critical Thinking", band: "all" },
+        { t: "Logic", band: "9-college" },
+        { t: "Ethics", band: "9-college" },
+        { t: "Philosophy", band: "college" }
+      ]
+    },
+    {
+      key: "fitness", title: "Fitness & Wellness", icon: "💪",
+      desc: "Take care of your body and mind — training, recovery & stress",
+      topics: [
+        { t: "Strength Training", band: "all" },
+        { t: "Cardio", band: "all" },
+        { t: "Flexibility & Mobility", band: "all" },
+        { t: "Sleep & Recovery", band: "all" },
+        { t: "Stress Management", band: "all" }
+      ]
+    },
+    {
+      key: "business", title: "Business & Entrepreneurship", icon: "📈",
+      desc: "Build and run a business — marketing, money, management & sales",
+      topics: [
+        { t: "Starting a Business", band: "9-adult" },
+        { t: "Marketing", band: "9-adult" },
+        { t: "Accounting Basics", band: "9-adult" },
+        { t: "Management", band: "college" },
+        { t: "Sales", band: "9-adult" }
+      ]
+    },
+    {
+      key: "repair", title: "Home & Auto Repair", icon: "🔧",
+      desc: "Fix things yourself — home repairs, tools, plumbing, electrical & cars",
+      topics: [
+        { t: "Basic Tools", band: "all" },
+        { t: "Home Repairs", band: "all" },
+        { t: "Plumbing Basics", band: "all" },
+        { t: "Electrical Basics", band: "all" },
+        { t: "Car Maintenance", band: "all" }
+      ]
     }
   ]
 };

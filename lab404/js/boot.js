@@ -4,7 +4,9 @@
 
   /* Short display names for the boot banner, keyed to subjects-data.js */
   var SHORT = { math: "Math", science: "Science", english: "English", social: "Social Studies",
-                coding: "Coding", languages: "Languages", lifeskills: "Life Skills" };
+                coding: "Coding", languages: "Languages", lifeskills: "Life Skills",
+                medicine: "Medicine", survival: "Survival", cooking: "Cooking", arts: "Arts",
+                mind: "Psychology", fitness: "Fitness", business: "Business", repair: "Repair" };
 
   function subjectTagRows() {
     var subs = [];
