@@ -56,6 +56,13 @@
     "dataplus":   "Data+",
   };
 
+  /* ── Per-cert icons for the CompTIA folder window ── */
+  var CERT_ICONS = {
+    "folder-aplus": "💻", "folder-netplus": "🌐", "folder-secplus": "🔒",
+    "folder-linuxplus": "🐧", "folder-cloudplus": "☁️", "folder-serverplus": "🖥️",
+    "folder-cysa": "🔍", "folder-pentest": "⚔️", "folder-securityx": "🛡️", "folder-dataplus": "📊",
+  };
+
   /* ── Folder contents ── */
   var FOLDER_CONTENTS = {
     "folder-aplus": {
@@ -92,6 +99,36 @@
 
   /* The public GitHub copy has no Security+ content yet: keep its folder "coming soon". */
   if (window.LAB404_PUBLIC) delete FOLDER_CONTENTS["folder-secplus"];
+
+  /* ── Universal hub: register CompTIA + academic subject folders from the catalog ──
+     Desktop shows SUBJECT folders. CompTIA opens to its certification icons
+     (A+ -> Core 1 / Core 2, Security+, ...). Academic subjects open to their
+     topic icons; each topic is "coming soon" until its content is added. */
+  (function registerSubjects() {
+    var S = window.LAB404_SUBJECTS;
+    if (!S) return;
+    function slug(s) { return String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, ""); }
+
+    if (S.comptia) {
+      APPS["folder-comptia"] = { title: S.comptia.title, icon: "📁" };
+      var certApps = (S.comptia.certs || []).filter(function (c) { return APPS[c]; }).map(function (c) {
+        return { app: c, icon: CERT_ICONS[c] || "📁",
+                 label: CERT_LABELS[(APPS[c].cert || "")] || APPS[c].title };
+      });
+      FOLDER_CONTENTS["folder-comptia"] = { desc: S.comptia.desc, apps: certApps };
+    }
+
+    (S.academic || []).forEach(function (subj) {
+      var fkey = "folder-" + subj.key;
+      APPS[fkey] = { title: subj.title, icon: "📁" };
+      var topicApps = (subj.topics || []).map(function (tp) {
+        var tkey = "folder-" + subj.key + "-" + slug(tp.t);
+        APPS[tkey] = { title: subj.title + " — " + tp.t, icon: "📘", subjectComingSoon: true };
+        return { app: tkey, icon: "📘", label: tp.t };
+      });
+      FOLDER_CONTENTS[fkey] = { desc: subj.desc, apps: topicApps };
+    });
+  })();
 
   /* ── Window Manager ── */
   var Desktop = {
@@ -618,14 +655,21 @@
 
       var folder = FOLDER_CONTENTS[folderApp];
       if (!folder) {
-        /* Coming-soon placeholder */
+        /* Coming-soon placeholder (works for both certs and academic topics) */
         var appDef = APPS[folderApp] || {};
-        var certName = CERT_LABELS[(appDef.cert || "")] || appDef.title || "This Cert";
+        var csHeading, csMessage;
+        if (appDef.subjectComingSoon) {
+          csHeading = appDef.title || "This topic";
+          csMessage = "Lessons, flashcards and practice for this topic are being built.";
+        } else {
+          csHeading = (CERT_LABELS[(appDef.cert || "")] || appDef.title || "This Cert") + " Study Hub";
+          csMessage = "Content for this certification is being developed.";
+        }
         content.innerHTML =
           '<div class="folder-coming-soon">' +
             '<div class="folder-cs-glyph">🚧</div>' +
-            '<h2>' + escHtml(certName) + ' Study Hub</h2>' +
-            '<p>Content for this certification is being developed.</p>' +
+            '<h2>' + escHtml(csHeading) + '</h2>' +
+            '<p>' + escHtml(csMessage) + '</p>' +
             '<p class="folder-cs-sub">Check back soon \u2014 Lab404 is working on it.</p>' +
           '</div>';
         return;
@@ -1143,7 +1187,8 @@
       if (!item) return;
       closeCtx();
       var action = item.dataset.ctx;
-      if      (action === "aplus")      Desktop.openWindow("folder-aplus");
+      if      (action === "comptia")    Desktop.openWindow("folder-comptia");
+      else if (action === "aplus")      Desktop.openWindow("folder-aplus");
       else if (action === "practice")   Desktop.openWindow("practice");
       else if (action === "flashcards") Desktop.openWindow("flashcards");
       else if (action === "review")     Desktop.openWindow("review");
