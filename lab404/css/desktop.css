@@ -380,6 +380,9 @@ body.os-mode {
   box-shadow: 4px -4px 30px rgba(0,0,0,0.6), 0 0 20px rgba(0, 255, 204, 0.08);
   z-index: 1100;
   overflow: hidden;
+  max-height: calc(100vh - 54px);
+  display: flex;
+  flex-direction: column;
   transform: translateY(0);
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -409,6 +412,9 @@ body.os-mode {
 
 .start-menu-items {
   padding: 8px 0;
+  overflow-y: auto;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 .start-menu-item {

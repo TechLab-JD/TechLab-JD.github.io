@@ -128,6 +128,38 @@
       });
       FOLDER_CONTENTS[fkey] = { desc: subj.desc, apps: topicApps };
     });
+
+    /* Build the desktop icons + start-menu subject list from the catalog, so adding a
+       subject to subjects-data.js is the only edit needed (icons were hardcoded before). */
+    function escA(s) {
+      return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+      });
+    }
+    var order = [];
+    if (S.comptia) {
+      order.push({ app: "folder-comptia", icon: S.comptia.icon || "📁",
+                   short: S.comptia.short || S.comptia.title, title: S.comptia.title });
+    }
+    (S.academic || []).forEach(function (s) {
+      order.push({ app: "folder-" + s.key, icon: s.icon || "📁", short: s.short || s.title, title: s.title });
+    });
+    var di = document.getElementById("desktopIcons");
+    if (di) {
+      di.innerHTML = order.map(function (o) {
+        return '<div class="desktop-icon" data-app="' + escA(o.app) + '" title="' + escA(o.title) +
+          '" role="button" tabindex="0" aria-label="Open ' + escA(o.title) + '">' +
+          '<div class="desktop-icon-img">' + o.icon + '</div>' +
+          '<div class="desktop-icon-label">' + escA(o.short) + '</div></div>';
+      }).join("");
+    }
+    var sms = document.getElementById("startSubjects");
+    if (sms) {
+      sms.innerHTML = order.map(function (o) {
+        return '<button class="start-menu-item" data-app="' + escA(o.app) + '" role="menuitem">' +
+          '<span class="menu-icon">' + o.icon + '</span> ' + escA(o.title) + '</button>';
+      }).join("");
+    }
   })();
 
   /* ── Window Manager ── */

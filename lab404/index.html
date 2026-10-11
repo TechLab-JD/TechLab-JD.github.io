@@ -22,73 +22,7 @@
 
 <!-- ── Desktop ── -->
 <div class="os-desktop">
-  <div class="desktop-icons-area">
-    <!-- Major subjects. Each folder opens to its contents (CompTIA -> certs; academic -> topics). -->
-    <div class="desktop-icon" data-app="folder-comptia" title="CompTIA Certifications" role="button" tabindex="0" aria-label="Open CompTIA certifications">
-      <div class="desktop-icon-img">🎓</div>
-      <div class="desktop-icon-label">CompTIA</div>
-    </div>
-    <div class="desktop-icon" data-app="folder-math" title="Mathematics" role="button" tabindex="0" aria-label="Open Mathematics">
-      <div class="desktop-icon-img">🔢</div>
-      <div class="desktop-icon-label">Math</div>
-    </div>
-    <div class="desktop-icon" data-app="folder-science" title="Science" role="button" tabindex="0" aria-label="Open Science">
-      <div class="desktop-icon-img">🔬</div>
-      <div class="desktop-icon-label">Science</div>
-    </div>
-    <div class="desktop-icon" data-app="folder-english" title="English & Language Arts" role="button" tabindex="0" aria-label="Open English and Language Arts">
-      <div class="desktop-icon-img">📖</div>
-      <div class="desktop-icon-label">English</div>
-    </div>
-    <div class="desktop-icon" data-app="folder-social" title="Social Studies" role="button" tabindex="0" aria-label="Open Social Studies">
-      <div class="desktop-icon-img">🏛️</div>
-      <div class="desktop-icon-label">Social Studies</div>
-    </div>
-    <div class="desktop-icon" data-app="folder-coding" title="Computer Science & Coding" role="button" tabindex="0" aria-label="Open Computer Science and Coding">
-      <div class="desktop-icon-img">💻</div>
-      <div class="desktop-icon-label">Coding</div>
-    </div>
-    <div class="desktop-icon" data-app="folder-languages" title="World Languages" role="button" tabindex="0" aria-label="Open World Languages">
-      <div class="desktop-icon-img">🌍</div>
-      <div class="desktop-icon-label">Languages</div>
-    </div>
-    <div class="desktop-icon" data-app="folder-lifeskills" title="Life Skills & Finance" role="button" tabindex="0" aria-label="Open Life Skills and Finance">
-      <div class="desktop-icon-img">🧭</div>
-      <div class="desktop-icon-label">Life Skills</div>
-    </div>
-    <div class="desktop-icon" data-app="folder-medicine" title="Health & Medicine" role="button" tabindex="0" aria-label="Open Health and Medicine">
-      <div class="desktop-icon-img">🩺</div>
-      <div class="desktop-icon-label">Medicine</div>
-    </div>
-    <div class="desktop-icon" data-app="folder-survival" title="Survival & Preparedness" role="button" tabindex="0" aria-label="Open Survival and Preparedness">
-      <div class="desktop-icon-img">🏕️</div>
-      <div class="desktop-icon-label">Survival</div>
-    </div>
-    <div class="desktop-icon" data-app="folder-cooking" title="Cooking & Nutrition" role="button" tabindex="0" aria-label="Open Cooking and Nutrition">
-      <div class="desktop-icon-img">🍳</div>
-      <div class="desktop-icon-label">Cooking</div>
-    </div>
-    <div class="desktop-icon" data-app="folder-arts" title="Arts & Music" role="button" tabindex="0" aria-label="Open Arts and Music">
-      <div class="desktop-icon-img">🎨</div>
-      <div class="desktop-icon-label">Arts</div>
-    </div>
-    <div class="desktop-icon" data-app="folder-mind" title="Psychology & Philosophy" role="button" tabindex="0" aria-label="Open Psychology and Philosophy">
-      <div class="desktop-icon-img">🧠</div>
-      <div class="desktop-icon-label">Psychology</div>
-    </div>
-    <div class="desktop-icon" data-app="folder-fitness" title="Fitness & Wellness" role="button" tabindex="0" aria-label="Open Fitness and Wellness">
-      <div class="desktop-icon-img">💪</div>
-      <div class="desktop-icon-label">Fitness</div>
-    </div>
-    <div class="desktop-icon" data-app="folder-business" title="Business & Entrepreneurship" role="button" tabindex="0" aria-label="Open Business and Entrepreneurship">
-      <div class="desktop-icon-img">📈</div>
-      <div class="desktop-icon-label">Business</div>
-    </div>
-    <div class="desktop-icon" data-app="folder-repair" title="Home & Auto Repair" role="button" tabindex="0" aria-label="Open Home and Auto Repair">
-      <div class="desktop-icon-img">🔧</div>
-      <div class="desktop-icon-label">Repair</div>
-    </div>
-  </div>
+  <div class="desktop-icons-area" id="desktopIcons"></div>
 </div>
 
 <!-- ── Taskbar ── -->
@@ -127,54 +61,7 @@
   </div>
   <div class="start-menu-items">
     <div class="start-menu-section-label">Subjects</div>
-    <button class="start-menu-item" data-app="folder-comptia" role="menuitem">
-      <span class="menu-icon">🎓</span> CompTIA Certifications
-    </button>
-    <button class="start-menu-item" data-app="folder-math" role="menuitem">
-      <span class="menu-icon">🔢</span> Mathematics
-    </button>
-    <button class="start-menu-item" data-app="folder-science" role="menuitem">
-      <span class="menu-icon">🔬</span> Science
-    </button>
-    <button class="start-menu-item" data-app="folder-english" role="menuitem">
-      <span class="menu-icon">📖</span> English & Language Arts
-    </button>
-    <button class="start-menu-item" data-app="folder-social" role="menuitem">
-      <span class="menu-icon">🏛️</span> Social Studies
-    </button>
-    <button class="start-menu-item" data-app="folder-coding" role="menuitem">
-      <span class="menu-icon">💻</span> Computer Science & Coding
-    </button>
-    <button class="start-menu-item" data-app="folder-languages" role="menuitem">
-      <span class="menu-icon">🌍</span> World Languages
-    </button>
-    <button class="start-menu-item" data-app="folder-lifeskills" role="menuitem">
-      <span class="menu-icon">🧭</span> Life Skills & Finance
-    </button>
-    <button class="start-menu-item" data-app="folder-medicine" role="menuitem">
-      <span class="menu-icon">🩺</span> Health & Medicine
-    </button>
-    <button class="start-menu-item" data-app="folder-survival" role="menuitem">
-      <span class="menu-icon">🏕️</span> Survival & Preparedness
-    </button>
-    <button class="start-menu-item" data-app="folder-cooking" role="menuitem">
-      <span class="menu-icon">🍳</span> Cooking & Nutrition
-    </button>
-    <button class="start-menu-item" data-app="folder-arts" role="menuitem">
-      <span class="menu-icon">🎨</span> Arts & Music
-    </button>
-    <button class="start-menu-item" data-app="folder-mind" role="menuitem">
-      <span class="menu-icon">🧠</span> Psychology & Philosophy
-    </button>
-    <button class="start-menu-item" data-app="folder-fitness" role="menuitem">
-      <span class="menu-icon">💪</span> Fitness & Wellness
-    </button>
-    <button class="start-menu-item" data-app="folder-business" role="menuitem">
-      <span class="menu-icon">📈</span> Business & Entrepreneurship
-    </button>
-    <button class="start-menu-item" data-app="folder-repair" role="menuitem">
-      <span class="menu-icon">🔧</span> Home & Auto Repair
-    </button>
+    <div id="startSubjects"></div>
     <div class="start-menu-divider"></div>
     <div class="start-menu-section-label">Study Tools</div>
     <button class="start-menu-item" data-app="practice" role="menuitem">

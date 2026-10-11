@@ -16,7 +16,7 @@ window.LAB404_SUBJECTS = {
   /* The CompTIA folder, shown on the desktop. Its contents are the cert folders
      already defined in desktop.js (A+ -> Core 1 / Core 2, Security+, etc.). */
   comptia: {
-    key: "comptia", title: "CompTIA", icon: "🎓",
+    key: "comptia", title: "CompTIA", short: "CompTIA", icon: "🎓",
     desc: "IT certifications · A+, Security+ and more",
     certs: ["folder-aplus", "folder-secplus", "folder-netplus", "folder-linuxplus",
             "folder-cloudplus", "folder-serverplus", "folder-cysa", "folder-pentest",
@@ -26,7 +26,7 @@ window.LAB404_SUBJECTS = {
   /* Academic subjects — K-12 through college. Topics start "coming soon". */
   academic: [
     {
-      key: "math", title: "Mathematics", icon: "🔢",
+      key: "math", title: "Mathematics", short: "Math", icon: "🔢",
       desc: "From counting to calculus — arithmetic, algebra, geometry & statistics",
       topics: [
         { t: "Arithmetic", band: "K-5" },
@@ -40,7 +40,7 @@ window.LAB404_SUBJECTS = {
       ]
     },
     {
-      key: "science", title: "Science", icon: "🔬",
+      key: "science", title: "Science", short: "Science", icon: "🔬",
       desc: "How the world works — biology, chemistry, physics & earth science",
       topics: [
         { t: "Life Science", band: "K-8" },
@@ -52,7 +52,7 @@ window.LAB404_SUBJECTS = {
       ]
     },
     {
-      key: "english", title: "English & Language Arts", icon: "📖",
+      key: "english", title: "English & Language Arts", short: "English", icon: "📖",
       desc: "Read, write and think clearly — grammar, vocabulary & literature",
       topics: [
         { t: "Reading & Phonics", band: "K-5" },
@@ -63,7 +63,7 @@ window.LAB404_SUBJECTS = {
       ]
     },
     {
-      key: "social", title: "Social Studies", icon: "🏛️",
+      key: "social", title: "Social Studies", short: "Social Studies", icon: "🏛️",
       desc: "People, places and systems — history, civics, geography & economics",
       topics: [
         { t: "US History", band: "6-12" },
@@ -74,7 +74,7 @@ window.LAB404_SUBJECTS = {
       ]
     },
     {
-      key: "coding", title: "Computer Science & Coding", icon: "💻",
+      key: "coding", title: "Computer Science & Coding", short: "Coding", icon: "💻",
       desc: "How computers think and how to build with them — CS, Python & the web",
       topics: [
         { t: "Computer Science Foundations", band: "6-12" },
@@ -85,7 +85,7 @@ window.LAB404_SUBJECTS = {
       ]
     },
     {
-      key: "languages", title: "World Languages", icon: "🌍",
+      key: "languages", title: "World Languages", short: "Languages", icon: "🌍",
       desc: "Learn to speak, read and understand another language",
       topics: [
         { t: "Spanish", band: "all" },
@@ -95,7 +95,7 @@ window.LAB404_SUBJECTS = {
       ]
     },
     {
-      key: "lifeskills", title: "Life Skills & Finance", icon: "🧭",
+      key: "lifeskills", title: "Life Skills & Finance", short: "Life Skills", icon: "🧭",
       desc: "The practical stuff school skips — money, work and everyday know-how",
       topics: [
         { t: "Personal Finance", band: "9-adult" },
@@ -105,7 +105,7 @@ window.LAB404_SUBJECTS = {
       ]
     },
     {
-      key: "medicine", title: "Health & Medicine", icon: "🩺",
+      key: "medicine", title: "Health & Medicine", short: "Medicine", icon: "🩺",
       desc: "Understand your body and health — first aid, anatomy, nutrition & more",
       topics: [
         { t: "First Aid & CPR", band: "all" },
@@ -117,7 +117,7 @@ window.LAB404_SUBJECTS = {
       ]
     },
     {
-      key: "survival", title: "Survival & Preparedness", icon: "🏕️",
+      key: "survival", title: "Survival & Preparedness", short: "Survival", icon: "🏕️",
       desc: "Skills for the outdoors and emergencies — be ready for anything",
       topics: [
         { t: "Emergency First Aid", band: "all" },
@@ -129,7 +129,7 @@ window.LAB404_SUBJECTS = {
       ]
     },
     {
-      key: "cooking", title: "Cooking & Nutrition", icon: "🍳",
+      key: "cooking", title: "Cooking & Nutrition", short: "Cooking", icon: "🍳",
       desc: "Feed yourself well — techniques, recipes, baking & food safety",
       topics: [
         { t: "Kitchen Basics", band: "all" },
@@ -141,7 +141,7 @@ window.LAB404_SUBJECTS = {
       ]
     },
     {
-      key: "arts", title: "Arts & Music", icon: "🎨",
+      key: "arts", title: "Arts & Music", short: "Arts", icon: "🎨",
       desc: "Make and appreciate art — drawing, painting, music & photography",
       topics: [
         { t: "Drawing", band: "all" },
@@ -152,7 +152,7 @@ window.LAB404_SUBJECTS = {
       ]
     },
     {
-      key: "mind", title: "Psychology & Philosophy", icon: "🧠",
+      key: "mind", title: "Psychology & Philosophy", short: "Psychology", icon: "🧠",
       desc: "How people think and reason — psychology, logic, ethics & big questions",
       topics: [
         { t: "Intro to Psychology", band: "9-college" },
@@ -163,7 +163,7 @@ window.LAB404_SUBJECTS = {
       ]
     },
     {
-      key: "fitness", title: "Fitness & Wellness", icon: "💪",
+      key: "fitness", title: "Fitness & Wellness", short: "Fitness", icon: "💪",
       desc: "Take care of your body and mind — training, recovery & stress",
       topics: [
         { t: "Strength Training", band: "all" },
@@ -174,7 +174,7 @@ window.LAB404_SUBJECTS = {
       ]
     },
     {
-      key: "business", title: "Business & Entrepreneurship", icon: "📈",
+      key: "business", title: "Business & Entrepreneurship", short: "Business", icon: "📈",
       desc: "Build and run a business — marketing, money, management & sales",
       topics: [
         { t: "Starting a Business", band: "9-adult" },
@@ -185,7 +185,7 @@ window.LAB404_SUBJECTS = {
       ]
     },
     {
-      key: "repair", title: "Home & Auto Repair", icon: "🔧",
+      key: "repair", title: "Home & Auto Repair", short: "Repair", icon: "🔧",
       desc: "Fix things yourself — home repairs, tools, plumbing, electrical & cars",
       topics: [
         { t: "Basic Tools", band: "all" },

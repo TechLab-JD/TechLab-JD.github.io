@@ -12,8 +12,8 @@
     var subs = [];
     var S = window.LAB404_SUBJECTS;
     if (S) {
-      if (S.comptia) subs.push("CompTIA");
-      (S.academic || []).forEach(function (s) { subs.push(SHORT[s.key] || s.title); });
+      if (S.comptia) subs.push(S.comptia.short || "CompTIA");
+      (S.academic || []).forEach(function (s) { subs.push(s.short || SHORT[s.key] || s.title); });
     }
     if (!subs.length) subs = ["CompTIA"];
     var rows = [];
