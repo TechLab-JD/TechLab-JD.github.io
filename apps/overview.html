@@ -101,7 +101,7 @@
 <script>
 var S=Steady;S.initShell();
 function read(k){try{var r=localStorage.getItem(k);return r?JSON.parse(r):null;}catch(e){return null;}}
-var M=read("steadyMoney.v1"),H=read("steady.health.v1"),ST=read("steady.study.v1"),W=read("steady.work.v1"),HM=read("steady.home.v1"),BZ=read("steady.biz.v1");
+var M=read("steadyMoney.v1"),H=read("steady.health.v1"),ST=read("steady.study.v1"),W=read("steady.work.v1"),HM=read("steady.home.v1"),BZ=read("steady.biz.v1"),EV=read("steady.events.v1");
 function tm(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0");}
 function dkey(dt){return dt.getFullYear()+"-"+String(dt.getMonth()+1).padStart(2,"0")+"-"+String(dt.getDate()).padStart(2,"0");}
 (function(){
@@ -169,6 +169,16 @@ if(BZ){var bz=(BZ.sales||[]).filter(function(s){return s.date&&s.date.slice(0,7)
   var blow=(BZ.products||[]).filter(function(p){return (p.type||"Product")==="Product"&&n(p.stock)<=n(p.reorder);}).length;
   biz={rev:brev,profit:brev-bcogs,orders:bz.length,low:blow,products:(BZ.products||[]).length,sales:(BZ.sales||[]).length,customers:(BZ.customers||[]).length};}
 
+/* ---- events ---- */
+var events=null;
+if(EV&&(EV.events||[]).length){function evDTo(d){if(!d)return null;var t=new Date();t.setHours(0,0,0,0);return Math.round((new Date(d+"T00:00:00")-t)/86400000);}
+  var upcoming=(EV.events||[]).filter(function(e){return e.date&&evDTo(e.date)>=0;}).sort(function(a,b){return a.date.localeCompare(b.date);});
+  var nx=upcoming[0]||null,nxDays=nx?evDTo(nx.date):null;
+  function evArr(bucket,id){return (EV[bucket]&&EV[bucket][id])||[];}
+  var tl=nx?evArr("todos",nx.id).filter(function(x){return !x.done;}).length:0;
+  var ys=nx?evArr("guests",nx.id).filter(function(x){return x.status==="Yes";}).reduce(function(a,b){return a+(Number(b.count)||1);},0):0;
+  events={count:(EV.events||[]).length,next:nx,nextDays:nxDays,todosLeft:tl,yes:ys};}
+
 /* ---- hero + headline ---- */
 function M0(v){return S.money0(v);}
 S.el("ov-date").textContent=new Date().toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"});
@@ -221,6 +231,8 @@ doms+=domCard("#E8A33C","🏠","Steady Home","home.html",!!home,
   home?stat("Cleaning due",home.cleanDue+"/"+home.cleanTotal)+stat("Maintenance due",home.maintDue)+stat("Meals planned",home.meals+"/7")+stat("Documents",home.docs):"","No home data yet.");
 doms+=domCard("#e5674e","🏪","Steady Biz","biz.html",!!biz,
   biz?stat("Revenue this mo",M0(biz.rev))+stat("Gross profit",M0(biz.profit))+stat("Orders this mo",biz.orders)+stat("Low stock",biz.low):"","No business data yet.");
+doms+=domCard("#d6468f","🎉","Steady Events","events.html",!!events,
+  events?stat("Events",events.count)+stat("Next up",events.next?(events.nextDays===0?"today":events.nextDays+"d"):"—")+stat("To-dos left",events.todosLeft)+stat("RSVP yes",events.yes):"","No events yet.");
 S.el("ov-doms").innerHTML=doms;
 
 /* ---- balance ---- */

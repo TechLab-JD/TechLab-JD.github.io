@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steady Events</title>
+<meta name="description" content="Steady Events — plan any party or event: guest list & RSVPs, budget, a countdown checklist, day-of timeline, gift tracker and potluck sign-up. Private; your data stays on your device.">
+<link rel="stylesheet" href="shared.css">
+<style>:root{--accent:#d6468f;--accent-2:#e8679b;--accent-dark:#b4316f}
+  .evbar{display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+  .evbar label{font:700 12px var(--display);color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .evbar select{min-width:180px}
+  .tl{display:grid;grid-template-columns:78px 1fr auto;gap:8px;align-items:center}
+  .tl .tm{font:800 14px var(--display);color:var(--accent-2)}
+  #ev-print{display:none}
+  @media print{body.printing>*:not(#ev-print){display:none!important}body.printing #ev-print{display:block!important}@page{margin:16mm}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div style="display:flex;align-items:center;gap:10px"><button class="icon-btn hamb" id="hambBtn" title="Menu">☰</button><a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Events</b></a></div>
+  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="premhdr" data-steady="premium">⭐ Premium</button><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
+</div></header>
+<div class="shell">
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side">
+  <div class="navgroup"><div class="navhead">Planning</div>
+    <select id="ev-active" style="width:100%;margin-bottom:6px"></select>
+  </div>
+  <div class="navgroup"><div class="navhead">Dashboard</div>
+    <button class="snav active" data-panel="events">🎉 Overview</button>
+    <button class="snav" data-panel="list">📅 My events</button>
+  </div>
+  <div class="navgroup"><div class="navhead">This event</div>
+    <button class="snav" data-panel="guests">👥 Guests &amp; RSVP</button>
+    <button class="snav" data-panel="budget">💵 Budget</button>
+    <button class="snav" data-panel="todos">✅ Countdown</button>
+    <button class="snav" data-panel="timeline">🕑 Day-of timeline</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Extras</div>
+    <button class="snav" data-panel="gifts">🎁 Gifts</button>
+    <button class="snav" data-panel="potluck">🥘 Potluck</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Premium</div>
+    <button class="snav" data-panel="vendors">📇 Vendors<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="seating">🪑 Seating<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="binder">📘 Event binder<span class="lk">🔒</span></button>
+  </div>
+  <div class="navgroup"><div class="navhead">You</div>
+    <button class="snav" data-panel="rewards">🏆 Rewards</button>
+  </div>
+</aside>
+<main class="main">
+  <section class="panel active" id="panel-events">
+    <div class="hero"><div class="lbl" id="h-name">No event yet</div><div class="big" id="h-count">—</div><div class="meta" id="h-when">add your first event to start planning</div>
+      <div class="mini"><div>Guests yes<b id="h-yes">0</b></div><div>Budget used<b id="h-budg">$0</b></div><div>To-dos left<b id="h-todo">0</b></div><div>Days to go<b id="h-days">—</b></div></div></div>
+    <div class="grid2">
+      <div class="card"><h2>Next up</h2><p class="sub">To-dos coming due for this event</p><div id="ov-next"></div></div>
+      <div class="card"><h2>RSVP snapshot</h2><p class="sub">Who's coming</p><div id="ov-rsvp"></div></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-list">
+    <div class="card"><h2>My events</h2><p class="sub">Birthday, wedding, shower, reunion, dinner party — add one and everything below plans around its date.</p>
+      <div class="addform" style="grid-template-columns:1fr 150px 140px auto"><div class="field"><label>Event name</label><input id="ev-name" placeholder="Mom's 60th birthday"></div><div class="field"><label>Type</label><select id="ev-type"><option>Birthday</option><option>Wedding</option><option>Baby shower</option><option>Bridal shower</option><option>Anniversary</option><option>Holiday party</option><option>Dinner party</option><option>Graduation</option><option>Reunion</option><option>Fundraiser</option><option>Other</option></select></div><div class="field"><label>Date</label><input id="ev-date" type="date"></div><button class="btn" id="ev-add">Add</button></div>
+      <div class="field" style="margin-top:9px"><input id="ev-loc" placeholder="Location (optional) — venue, home, park…"></div>
+      <div id="ev-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-guests">
+    <div class="evbar"><label>Planning</label><select class="ev-sync"></select></div>
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Invited (head count)</div><div class="val" id="g-inv">0</div></div>
+      <div class="stat"><div class="label">Confirmed yes</div><div class="val" id="g-yes">0</div></div>
+      <div class="stat"><div class="label">Awaiting reply</div><div class="val" id="g-pend">0</div></div>
+    </div>
+    <div class="card"><h2>Guest list &amp; RSVP</h2><p class="sub">Track invites, head counts and who's replied. Tap the status to cycle it.</p>
+      <div class="addform" style="grid-template-columns:1fr 90px 130px auto"><div class="field"><label>Name / party</label><input id="gu-name" placeholder="The Garcias"></div><div class="field"><label># in party</label><input id="gu-count" type="number" inputmode="numeric" placeholder="2"></div><div class="field"><label>RSVP</label><select id="gu-status"><option>Invited</option><option>Yes</option><option>No</option><option>Maybe</option></select></div><button class="btn" id="gu-add">Add</button></div>
+      <div class="field" style="margin-top:9px"><input id="gu-note" placeholder="Notes — meal choice, allergy, +1, contact…"></div>
+      <div id="gu-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-budget">
+    <div class="evbar"><label>Planning</label><select class="ev-sync"></select></div>
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Estimated</div><div class="val" id="b-est">$0</div></div>
+      <div class="stat"><div class="label">Actual spent</div><div class="val" id="b-act">$0</div></div>
+      <div class="stat"><div class="label">Still owed</div><div class="val" id="b-owed">$0</div></div>
+    </div>
+    <div class="card"><h2>Event budget</h2><p class="sub">Line items with an estimate and what you actually spent. Check "paid" as you settle each one.</p>
+      <div class="addform" style="grid-template-columns:1fr 130px 110px 110px auto"><div class="field"><label>Item</label><input id="bu-item" placeholder="Catering, cake, venue…"></div><div class="field"><label>Category</label><select id="bu-cat"><option>Venue</option><option>Food &amp; drink</option><option>Cake &amp; dessert</option><option>Decor</option><option>Entertainment</option><option>Rentals</option><option>Photography</option><option>Favors &amp; gifts</option><option>Invitations</option><option>Other</option></select></div><div class="field"><label>Estimate $</label><input id="bu-est" type="number" inputmode="decimal" placeholder="0"></div><div class="field"><label>Actual $</label><input id="bu-act" type="number" inputmode="decimal" placeholder="0"></div><button class="btn" id="bu-add">Add</button></div>
+      <div id="bu-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-todos">
+    <div class="evbar"><label>Planning</label><select class="ev-sync"></select></div>
+    <div class="card"><h2>Countdown checklist</h2><p class="sub">Set how many weeks before the event each task should be done — it tells you what's due and what's slipping.</p>
+      <div class="addform" style="grid-template-columns:1fr 150px auto"><div class="field"><label>Task</label><input id="td-task" placeholder="Send invitations, order cake…"></div><div class="field"><label>Do it … before</label><select id="td-weeks"><option value="8">8 weeks out</option><option value="6">6 weeks out</option><option value="4" selected>4 weeks out</option><option value="2">2 weeks out</option><option value="1">1 week out</option><option value="0">Week of</option></select></div><button class="btn" id="td-add">Add</button></div>
+      <div id="td-list" style="margin-top:12px"></div>
+      <div style="margin-top:10px"><button class="btn ghost sm" id="td-seed">✨ Add a starter checklist</button></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-timeline">
+    <div class="evbar"><label>Planning</label><select class="ev-sync"></select></div>
+    <div class="card"><h2>Day-of timeline</h2><p class="sub">The run of show for the event day — guests arrive, toasts, cake, music. Sorted by time automatically.</p>
+      <div class="addform" style="grid-template-columns:120px 1fr auto"><div class="field"><label>Time</label><input id="ti-time" type="time"></div><div class="field"><label>What happens</label><input id="ti-act" placeholder="Guests arrive, dinner served…"></div><button class="btn" id="ti-add">Add</button></div>
+      <div id="ti-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-gifts">
+    <div class="evbar"><label>Planning</label><select class="ev-sync"></select></div>
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Gifts logged</div><div class="val" id="gf-count">0</div></div>
+      <div class="stat"><div class="label">Thank-yous sent</div><div class="val" id="gf-thx">0</div></div>
+      <div class="stat"><div class="label">Still to thank</div><div class="val" id="gf-left">0</div></div>
+    </div>
+    <div class="card"><h2>Gift tracker</h2><p class="sub">Who gave what, so your thank-you notes are easy and nothing gets missed. Tap "Thanked" when the note goes out.</p>
+      <div class="addform" style="grid-template-columns:1fr 1fr auto"><div class="field"><label>From</label><input id="gi-from" placeholder="Aunt Carol"></div><div class="field"><label>Gift</label><input id="gi-gift" placeholder="Stand mixer"></div><button class="btn" id="gi-add">Add</button></div>
+      <div id="gi-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-potluck">
+    <div class="evbar"><label>Planning</label><select class="ev-sync"></select></div>
+    <div class="card"><h2>Potluck sign-up</h2><p class="sub">Keep the spread balanced — see what each course still needs and who's bringing what.</p>
+      <div class="addform" style="grid-template-columns:150px 1fr 1fr auto"><div class="field"><label>Course</label><select id="po-cat"><option>Appetizer</option><option>Main</option><option>Side</option><option>Salad</option><option>Bread</option><option>Dessert</option><option>Drinks</option><option>Ice &amp; supplies</option></select></div><div class="field"><label>Dish</label><input id="po-dish" placeholder="Potato salad"></div><div class="field"><label>Who's bringing it</label><input id="po-who" placeholder="Jordan"></div><button class="btn" id="po-add">Add</button></div>
+      <div id="po-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-vendors">
+    <div class="evbar"><label>Planning</label><select class="ev-sync"></select></div>
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Vendors</div><div class="val" id="vn-count">0</div></div>
+      <div class="stat"><div class="label">Booked</div><div class="val" id="vn-booked">0</div></div>
+      <div class="stat"><div class="label">Vendor cost</div><div class="val" id="vn-cost">$0</div></div>
+    </div>
+    <div class="card"><h2>Vendors &amp; contacts</h2><p class="sub">Caterer, DJ, florist, photographer — numbers, cost and booking status in one place. Tap status to advance it.</p>
+      <div class="addform" style="grid-template-columns:1fr 1fr 130px 110px auto"><div class="field"><label>Vendor</label><input id="vn-name" placeholder="Rosa's Catering"></div><div class="field"><label>Role</label><input id="vn-role" placeholder="Caterer, DJ, florist…"></div><div class="field"><label>Phone</label><input id="vn-phone" placeholder="(555) 555-5555"></div><div class="field"><label>Cost $</label><input id="vn-amt" type="number" inputmode="decimal" placeholder="0"></div><button class="btn" id="vn-add">Add</button></div>
+      <div id="vn-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-seating">
+    <div class="evbar"><label>Planning</label><select class="ev-sync"></select></div>
+    <div class="card"><h2>Seating &amp; tables</h2><p class="sub">Make your tables, then assign guests from your list to seats. The count turns red when a table is over capacity.</p>
+      <div class="addform" style="grid-template-columns:1fr 120px auto"><div class="field"><label>Table name</label><input id="se-name" placeholder="Table 1, Head table…"></div><div class="field"><label>Seats</label><input id="se-cap" type="number" inputmode="numeric" placeholder="8"></div><button class="btn" id="se-add">Add table</button></div>
+      <div id="se-list" style="margin-top:14px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-binder">
+    <div class="evbar"><label>Planning</label><select class="ev-sync"></select></div>
+    <div class="card"><h2>Event binder</h2><p class="sub">One printable sheet with everything for this event — guest list, budget, checklist, day-of timeline and vendors. Print it or save as PDF to hand to a helper.</p>
+      <button class="btn" id="bn-print">🖨 Print / Save as PDF</button>
+    </div>
+    <div class="card"><h2>Preview</h2><div id="bn-prev"></div></div>
+  </section>
+
+  <section class="panel" id="panel-rewards">
+    <div class="hero"><div class="lbl">Planner level</div><div class="big" id="rw-done">0</div><div class="meta">to-dos completed across your events</div>
+      <div class="mini"><div>Badges<b id="rw-count">0</b></div></div></div>
+    <div class="card"><h2>Your level</h2><p class="sub">Planning events and checking things off earns XP and levels you up.</p><div id="xp-card"></div></div>
+    <div class="card"><h2>Today's goals</h2><p class="sub">Little wins toward a stress-free event.</p><div id="quests"></div></div>
+    <div class="card"><h2>Achievements</h2><p class="sub">Milestones unlock as you plan.</p><div class="badgegrid" id="rw-badges"></div></div>
+  </section>
+</main>
+</div>
+<footer class="ft">Steady Events · a Steady Systems app · your data stays on this device</footer>
+<div id="toasts"></div>
+<div id="ev-print"></div>
+<script src="shared.js"></script>
+<script>
+var DEF={events:[],active:"",guests:{},budget:{},todos:{},timeline:{},gifts:{},potluck:{},vendors:{},tables:{}};
+var db=Steady.load("events",DEF);var S=Steady;
+var BUCKETS=["guests","budget","todos","timeline","gifts","potluck","vendors","tables"];
+function daysTo(d){if(!d)return null;var t=new Date();t.setHours(0,0,0,0);return Math.round((new Date(d+"T00:00:00")-t)/86400000);}
+function fmtDate(d){return d?new Date(d+"T00:00:00").toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric",year:"numeric"}):"no date set";}
+function fmtTime(t){if(!t)return"";var p=t.split(":"),h=Number(p[0]),m=p[1];var ap=h>=12?"PM":"AM";h=h%12;if(h===0)h=12;return h+":"+m+" "+ap;}
+/* active-event helpers */
+function cur(){return db.events.filter(function(e){return e.id===db.active;})[0]||null;}
+function arr(bucket){var e=cur();if(!e)return[];if(!db[bucket])db[bucket]={};if(!db[bucket][e.id])db[bucket][e.id]=[];return db[bucket][e.id];}
+function setArr(bucket,v){var e=cur();if(!e)return;if(!db[bucket])db[bucket]={};db[bucket][e.id]=v;}
+/* to-do due date = event date minus weeks */
+function tdDue(t){var e=cur();if(!e||!e.date)return null;var x=new Date(e.date+"T00:00:00");x.setDate(x.getDate()-(Number(t.weeks)||0)*7);var now=new Date();now.setHours(0,0,0,0);return Math.round((x-now)/86400000);}
+
+/* ---- event selectors ---- */
+function syncSelectors(){
+  var opts=db.events.length?db.events.map(function(e){return '<option value="'+e.id+'"'+(e.id===db.active?" selected":"")+'>'+esc(e.name)+(e.date?" · "+new Date(e.date+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"}):"")+'</option>';}).join(""):'<option value="">No events yet</option>';
+  document.querySelectorAll("#ev-active, .ev-sync").forEach(function(sel){sel.innerHTML=opts;sel.value=db.active;});
+}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+function onSelect(v){db.active=v;S.save();syncSelectors();renderAll();}
+document.addEventListener("change",function(e){if(e.target.id==="ev-active"||e.target.classList.contains("ev-sync"))onSelect(e.target.value);});
+
+/* ---- events list ---- */
+function renderList(){
+  var l=S.el("ev-list");l.innerHTML=db.events.length?"":'<div class="empty">No events yet. Add your first one above — a birthday, a wedding, a dinner party.</div>';
+  db.events.slice().sort(function(a,b){return (a.date||"9").localeCompare(b.date||"9");}).forEach(function(e){
+    var dd=daysTo(e.date),cls=dd===null?"":dd<0?"":dd<=7?"warn":"good",txt=dd===null?"no date":dd<0?"past":dd===0?"today!":"in "+dd+"d";
+    var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";left.style.cursor="pointer";
+    left.innerHTML='<div class="nm">'+(e.id===db.active?'⭐ ':'')+esc(e.name)+'<div class="meta">'+esc(e.type)+' · '+fmtDate(e.date)+(e.location?" · "+esc(e.location):"")+'</div></div>';
+    left.onclick=function(){onSelect(e.id);S.go("guests");};
+    var pill=document.createElement("span");pill.className="pill "+cls;pill.textContent=txt;
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){
+      if(!confirm("Delete \""+e.name+"\" and all its planning data?"))return;
+      db.events=db.events.filter(function(x){return x.id!==e.id;});BUCKETS.forEach(function(b){if(db[b])delete db[b][e.id];});
+      if(db.active===e.id)db.active=db.events.length?db.events[0].id:"";S.save();syncSelectors();renderAll();};
+    r.appendChild(left);r.appendChild(pill);r.appendChild(del);l.appendChild(r);});
+}
+S.el("ev-add").onclick=function(){var n=S.val("ev-name");if(!n)return;var id=S.uid();
+  db.events.push({id:id,name:n,type:S.el("ev-type").value,date:S.val("ev-date"),location:S.val("ev-loc")});
+  db.active=id;S.save();S.clr("ev-name","ev-date","ev-loc");syncSelectors();renderAll();S.toast("Event added — start planning 🎉",1);};
+
+/* ---- guests ---- */
+var GST=["Invited","Yes","No","Maybe"];
+function renderGuests(){
+  var g=arr("guests"),cls={Invited:"",Yes:"good",No:"bad",Maybe:"warn"};
+  var inv=g.reduce(function(a,b){return a+(Number(b.count)||1);},0);
+  var yes=g.filter(function(x){return x.status==="Yes";}).reduce(function(a,b){return a+(Number(b.count)||1);},0);
+  var pend=g.filter(function(x){return x.status==="Invited"||x.status==="Maybe";}).reduce(function(a,b){return a+(Number(b.count)||1);},0);
+  S.el("g-inv").textContent=inv;S.el("g-yes").textContent=yes;S.el("g-pend").textContent=pend;
+  var l=S.el("gu-list");l.innerHTML=g.length?"":'<div class="empty">No guests yet. Add the first party above.</div>';
+  g.forEach(function(x){var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+esc(x.name)+' <span class="meta">party of '+(Number(x.count)||1)+(x.note?" · "+esc(x.note):"")+'</span></div>';
+    var st=document.createElement("button");st.className="pill "+(cls[x.status]||"");st.style.cssText="cursor:pointer;border:0";st.textContent=x.status;
+    st.onclick=function(){x.status=GST[(GST.indexOf(x.status)+1)%GST.length];S.save();renderGuests();renderOverview();};
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){setArr("guests",g.filter(function(y){return y.id!==x.id;}));S.save();renderGuests();renderOverview();};
+    r.appendChild(left);r.appendChild(st);r.appendChild(del);l.appendChild(r);});
+}
+S.el("gu-add").onclick=function(){if(!cur())return S.toast("Add an event first");var n=S.val("gu-name");if(!n)return;var g=arr("guests");g.push({id:S.uid(),name:n,count:S.val("gu-count")||1,status:S.el("gu-status").value,note:S.val("gu-note")});S.save();S.clr("gu-name","gu-count","gu-note");renderGuests();renderOverview();S.toast("Added",1);};
+
+/* ---- budget ---- */
+function renderBudget(){
+  var b=arr("budget");
+  var est=b.reduce(function(a,c){return a+(Number(c.est)||0);},0);
+  var act=b.reduce(function(a,c){return a+(Number(c.act)||0);},0);
+  var owed=b.filter(function(c){return !c.paid;}).reduce(function(a,c){return a+((Number(c.act)||Number(c.est))||0);},0);
+  S.el("b-est").textContent=S.money(est);S.el("b-act").textContent=S.money(act);S.el("b-owed").textContent=S.money(owed);
+  var l=S.el("bu-list");l.innerHTML=b.length?"":'<div class="empty">No budget items yet. Add venue, food, cake…</div>';
+  b.forEach(function(c){var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+esc(c.item)+' <span class="meta">'+esc(c.cat)+' · est '+S.money(Number(c.est)||0)+(Number(c.act)?" · spent "+S.money(Number(c.act)):"")+'</span></div>';
+    var pay=document.createElement("button");pay.className="pill "+(c.paid?"good":"warn");pay.style.cssText="cursor:pointer;border:0";pay.textContent=c.paid?"paid":"unpaid";
+    pay.onclick=function(){c.paid=!c.paid;S.save();renderBudget();renderOverview();};
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){setArr("budget",b.filter(function(y){return y.id!==c.id;}));S.save();renderBudget();renderOverview();};
+    r.appendChild(left);r.appendChild(pay);r.appendChild(del);l.appendChild(r);});
+}
+S.el("bu-add").onclick=function(){if(!cur())return S.toast("Add an event first");var n=S.val("bu-item");if(!n)return;var b=arr("budget");b.push({id:S.uid(),item:n,cat:S.el("bu-cat").value,est:S.val("bu-est"),act:S.val("bu-act"),paid:false});S.save();S.clr("bu-item","bu-est","bu-act");renderBudget();renderOverview();S.toast("Added",1);};
+
+/* ---- countdown to-dos ---- */
+var STARTER=[["Set the date & budget",8],["Make the guest list",8],["Book the venue",6],["Send invitations",4],["Order the cake",4],["Plan the menu / caterer",4],["Buy decorations",2],["Confirm RSVPs",2],["Shop for food & drinks",1],["Set up & decorate",0]];
+function renderTodos(){
+  var t=arr("todos");
+  t=t.slice().sort(function(a,b){return (Number(b.weeks)||0)-(Number(a.weeks)||0);});
+  var l=S.el("td-list");l.innerHTML=t.length?"":'<div class="empty">No tasks yet. Add your own, or tap the starter checklist below.</div>';
+  t.forEach(function(x){var dd=tdDue(x),cls="",txt="";
+    if(x.done){cls="good";txt="done";}
+    else if(dd===null){cls="";txt=x.weeks>0?x.weeks+"w out":"week of";}
+    else if(dd<0){cls="bad";txt="overdue";}else if(dd===0){cls="warn";txt="today";}else if(dd<=7){cls="warn";txt="in "+dd+"d";}else{cls="good";txt="in "+dd+"d";}
+    var r=document.createElement("div");r.className="row";
+    var box=document.createElement("div");box.className="boxcell";box.style.cssText="width:22px;height:22px;aspect-ratio:auto;flex:none";if(x.done){box.classList.add("on");box.textContent="✓";}
+    box.onclick=function(){x.done=!x.done;S.save();renderTodos();renderOverview();renderRewards();if(x.done)S.toast("Nice — "+x.task,1);};
+    var nm=document.createElement("span");nm.className="nm";nm.style.flex="1";nm.innerHTML=esc(x.task)+' <span class="meta">'+(Number(x.weeks)>0?x.weeks+" weeks before":"week of the event")+'</span>';if(x.done)nm.style.cssText+=";text-decoration:line-through;opacity:.6;flex:1";
+    var pill=document.createElement("span");pill.className="pill "+cls;pill.textContent=txt;
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){setArr("todos",arr("todos").filter(function(y){return y.id!==x.id;}));S.save();renderTodos();renderOverview();renderRewards();};
+    r.appendChild(box);r.appendChild(nm);r.appendChild(pill);r.appendChild(del);l.appendChild(r);});
+}
+S.el("td-add").onclick=function(){if(!cur())return S.toast("Add an event first");var n=S.val("td-task");if(!n)return;var t=arr("todos");t.push({id:S.uid(),task:n,weeks:Number(S.el("td-weeks").value),done:false});S.save();S.clr("td-task");renderTodos();renderOverview();renderRewards();S.toast("Added",1);};
+S.el("td-seed").onclick=function(){if(!cur())return S.toast("Add an event first");var t=arr("todos");STARTER.forEach(function(s){t.push({id:S.uid(),task:s[0],weeks:s[1],done:false});});S.save();renderTodos();renderOverview();renderRewards();S.toast("Starter checklist added",1);};
+
+/* ---- timeline ---- */
+function renderTimeline(){
+  var t=arr("timeline").slice().sort(function(a,b){return (a.time||"").localeCompare(b.time||"");});
+  var l=S.el("ti-list");l.innerHTML=t.length?"":'<div class="empty">No timeline yet. Add the first moment — "Guests arrive".</div>';
+  t.forEach(function(x){var r=document.createElement("div");r.className="row tl";
+    r.innerHTML='<span class="tm">'+(fmtTime(x.time)||"—")+'</span><span class="nm">'+esc(x.act)+'</span>';
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){setArr("timeline",arr("timeline").filter(function(y){return y.id!==x.id;}));S.save();renderTimeline();};
+    r.appendChild(del);l.appendChild(r);});
+}
+S.el("ti-add").onclick=function(){if(!cur())return S.toast("Add an event first");var a=S.val("ti-act");if(!a)return;var t=arr("timeline");t.push({id:S.uid(),time:S.val("ti-time"),act:a});S.save();S.clr("ti-time","ti-act");renderTimeline();S.toast("Added",1);};
+
+/* ---- gifts ---- */
+function renderGifts(){
+  var g=arr("gifts");S.el("gf-count").textContent=g.length;
+  var thx=g.filter(function(x){return x.thanked;}).length;S.el("gf-thx").textContent=thx;S.el("gf-left").textContent=g.length-thx;
+  var l=S.el("gi-list");l.innerHTML=g.length?"":'<div class="empty">No gifts logged yet.</div>';
+  g.forEach(function(x){var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+esc(x.gift)+' <span class="meta">from '+esc(x.from)+'</span></div>';
+    var th=document.createElement("button");th.className="pill "+(x.thanked?"good":"warn");th.style.cssText="cursor:pointer;border:0";th.textContent=x.thanked?"✓ thanked":"thank";
+    th.onclick=function(){x.thanked=!x.thanked;S.save();renderGifts();};
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){setArr("gifts",g.filter(function(y){return y.id!==x.id;}));S.save();renderGifts();};
+    r.appendChild(left);r.appendChild(th);r.appendChild(del);l.appendChild(r);});
+}
+S.el("gi-add").onclick=function(){if(!cur())return S.toast("Add an event first");var gf=S.val("gi-gift"),fr=S.val("gi-from");if(!gf&&!fr)return;var g=arr("gifts");g.push({id:S.uid(),gift:gf||"Gift",from:fr||"—",thanked:false});S.save();S.clr("gi-gift","gi-from");renderGifts();S.toast("Added",1);};
+
+/* ---- potluck ---- */
+var COURSES=["Appetizer","Main","Side","Salad","Bread","Dessert","Drinks","Ice & supplies"];
+function renderPotluck(){
+  var p=arr("potluck"),l=S.el("po-list");
+  if(!p.length){l.innerHTML='<div class="empty">No sign-ups yet. Add the first dish above.</div>';return;}
+  l.innerHTML="";
+  COURSES.forEach(function(cat){var items=p.filter(function(x){return x.cat===cat;});if(!items.length)return;
+    var h=document.createElement("div");h.className="navhead";h.style.cssText="margin:12px 0 4px";h.textContent=cat;l.appendChild(h);
+    items.forEach(function(x){var r=document.createElement("div");r.className="row";
+      r.innerHTML='<span class="nm" style="flex:1">'+esc(x.dish)+' <span class="meta">'+(x.who?esc(x.who):"needs a volunteer")+'</span></span>'+(x.who?'':'<span class="pill warn">open</span>');
+      var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){setArr("potluck",arr("potluck").filter(function(y){return y.id!==x.id;}));S.save();renderPotluck();};
+      r.appendChild(del);l.appendChild(r);});});
+}
+S.el("po-add").onclick=function(){if(!cur())return S.toast("Add an event first");var d=S.val("po-dish");if(!d)return;var p=arr("potluck");p.push({id:S.uid(),cat:S.el("po-cat").value,dish:d,who:S.val("po-who")});S.save();S.clr("po-dish","po-who");renderPotluck();S.toast("Added",1);};
+
+/* ---- vendors (premium) ---- */
+var VST=["Inquiring","Quoted","Booked"];
+function renderVendors(){
+  var v=arr("vendors"),cls={Inquiring:"",Quoted:"warn",Booked:"good"};
+  S.el("vn-count").textContent=v.length;
+  S.el("vn-booked").textContent=v.filter(function(x){return x.status==="Booked";}).length;
+  S.el("vn-cost").textContent=S.money(v.reduce(function(a,b){return a+(Number(b.amt)||0);},0));
+  var l=S.el("vn-list");l.innerHTML=v.length?"":'<div class="empty">No vendors yet.</div>';
+  v.forEach(function(x){var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+esc(x.name)+' <span class="meta">'+(x.role?esc(x.role)+" · ":"")+(x.phone?esc(x.phone)+" · ":"")+S.money(Number(x.amt)||0)+'</span></div>';
+    var st=document.createElement("button");st.className="pill "+(cls[x.status]||"");st.style.cssText="cursor:pointer;border:0";st.textContent=x.status;
+    st.onclick=function(){x.status=VST[(VST.indexOf(x.status)+1)%VST.length];S.save();renderVendors();};
+    var call=x.phone?'<a class="btn ghost sm" href="tel:'+x.phone.replace(/[^0-9+]/g,"")+'">Call</a>':"";
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){setArr("vendors",v.filter(function(y){return y.id!==x.id;}));S.save();renderVendors();};
+    r.appendChild(left);if(call){var c=document.createElement("span");c.innerHTML=call;r.appendChild(c.firstChild);}r.appendChild(st);r.appendChild(del);l.appendChild(r);});
+}
+S.el("vn-add").onclick=function(){if(!cur())return S.toast("Add an event first");var n=S.val("vn-name");if(!n)return;var v=arr("vendors");v.push({id:S.uid(),name:n,role:S.val("vn-role"),phone:S.val("vn-phone"),amt:S.val("vn-amt"),status:"Inquiring"});S.save();S.clr("vn-name","vn-role","vn-phone","vn-amt");renderVendors();S.toast("Added",1);};
+
+/* ---- seating (premium) ---- */
+function renderSeating(){
+  var tables=arr("tables"),guests=arr("guests"),l=S.el("se-list");
+  l.innerHTML=tables.length?"":'<div class="empty">No tables yet. Add one above, then assign guests.</div>';
+  var assigned={};tables.forEach(function(t){(t.seats||[]).forEach(function(n){assigned[n]=true;});});
+  tables.forEach(function(t){
+    var seats=t.seats||[],over=seats.length>(Number(t.cap)||0);
+    var card=document.createElement("div");card.className="card";card.style.marginBottom="12px";
+    var head='<div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0">'+esc(t.name)+'</h2><span class="pill '+(over?"bad":"good")+'">'+seats.length+' / '+(Number(t.cap)||0)+'</span></div>';
+    card.innerHTML=head;
+    var chips=document.createElement("div");chips.style.cssText="display:flex;flex-wrap:wrap;gap:6px;margin:10px 0";
+    seats.forEach(function(n){var c=document.createElement("span");c.className="pill";c.style.cssText="cursor:pointer";c.textContent=n+" ×";c.title="Remove from table";
+      c.onclick=function(){t.seats=t.seats.filter(function(z){return z!==n;});S.save();renderSeating();};chips.appendChild(c);});
+    if(!seats.length){var em=document.createElement("span");em.className="meta";em.textContent="No one seated yet.";chips.appendChild(em);}
+    card.appendChild(chips);
+    var unseated=guests.filter(function(g){return !assigned[g.name]&&g.status!=="No";});
+    if(unseated.length){var sel=document.createElement("select");sel.style.cssText="margin-right:8px";
+      sel.innerHTML='<option value="">+ seat a guest…</option>'+unseated.map(function(g){return '<option>'+esc(g.name)+'</option>';}).join("");
+      sel.onchange=function(){if(!sel.value)return;if(!t.seats)t.seats=[];t.seats.push(sel.value);S.save();renderSeating();};
+      card.appendChild(sel);}
+    else{var done=document.createElement("span");done.className="meta";done.textContent=guests.length?"Everyone who's coming is seated. ✨":"Add guests on the Guests tab first.";card.appendChild(done);}
+    var del=document.createElement("button");del.className="btn ghost sm";del.textContent="Delete table";del.style.marginLeft="8px";
+    del.onclick=function(){setArr("tables",tables.filter(function(y){return y.id!==t.id;}));S.save();renderSeating();};card.appendChild(del);
+    l.appendChild(card);});
+}
+S.el("se-add").onclick=function(){if(!cur())return S.toast("Add an event first");var n=S.val("se-name");if(!n)return;var t=arr("tables");t.push({id:S.uid(),name:n,cap:S.val("se-cap")||8,seats:[]});S.save();S.clr("se-name","se-cap");renderSeating();S.toast("Table added",1);};
+
+/* ---- binder (premium) ---- */
+function buildBinderHTML(){
+  var e=cur();if(!e)return '<div style="padding:20px;font-family:Arial,sans-serif;color:#555">Add an event first.</div>';
+  function sec(t){return '<h2 style="font-size:15px;color:#4a1738;margin:18px 0 6px;border-bottom:2px solid #b4316f;padding-bottom:3px">'+t+'</h2>';}
+  function rowL(a,b){return '<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #eee;font-size:13px"><span>'+a+'</span><span style="color:#555;text-align:right">'+b+'</span></div>';}
+  var none='<div style="color:#777;font-size:13px">None logged.</div>';
+  var g=arr("guests"),b=arr("budget"),t=arr("todos"),tl=arr("timeline"),v=arr("vendors");
+  var guests=g.length?g.map(function(x){return rowL(esc(x.name)+" ("+(Number(x.count)||1)+")",x.status+(x.note?" · "+esc(x.note):""));}).join(""):none;
+  var est=b.reduce(function(a,c){return a+(Number(c.est)||0);},0),act=b.reduce(function(a,c){return a+(Number(c.act)||0);},0);
+  var budg=b.length?b.map(function(c){return rowL(esc(c.item)+" ("+esc(c.cat)+")","est "+S.money(Number(c.est)||0)+(Number(c.act)?" · spent "+S.money(Number(c.act)):"")+(c.paid?" · paid":""));}).join(""):none;
+  var todo=t.length?t.slice().sort(function(a,c){return (Number(c.weeks)||0)-(Number(a.weeks)||0);}).map(function(x){return rowL((x.done?"✓ ":"☐ ")+esc(x.task),(Number(x.weeks)>0?x.weeks+" wks before":"week of"));}).join(""):none;
+  var time=tl.length?tl.slice().sort(function(a,c){return (a.time||"").localeCompare(c.time||"");}).map(function(x){return rowL(fmtTime(x.time)||"—",esc(x.act));}).join(""):none;
+  var ven=v.length?v.map(function(x){return rowL(esc(x.name)+(x.role?" · "+esc(x.role):""),(x.phone?esc(x.phone)+" · ":"")+S.money(Number(x.amt)||0)+" · "+x.status);}).join(""):none;
+  return '<div style="font-family:Arial,sans-serif;color:#111;max-width:680px;margin:0 auto;padding:20px">'+
+    '<h1 style="font-size:24px;color:#4a1738;margin:0 0 2px">'+esc(e.name)+'</h1>'+
+    '<div style="color:#555;font-size:12px;margin-bottom:6px">'+esc(e.type)+' · '+fmtDate(e.date)+(e.location?" · "+esc(e.location):"")+'</div>'+
+    sec("Guest list")+guests+
+    sec("Budget — est "+S.money(est)+" · spent "+S.money(act))+budg+
+    sec("Countdown checklist")+todo+
+    sec("Day-of timeline")+time+
+    sec("Vendors")+ven+
+    '<p style="font-size:10px;color:#999;margin-top:26px">Made with Steady Events · syssteady.gumroad.com</p></div>';
+}
+function renderBinder(){S.el("bn-prev").innerHTML='<div style="background:#fff;border-radius:10px;overflow:auto">'+buildBinderHTML()+'</div>';}
+S.el("bn-print").onclick=function(){S.el("ev-print").innerHTML=buildBinderHTML();document.body.classList.add("printing");window.print();};
+window.onafterprint=function(){document.body.classList.remove("printing");};
+
+/* ---- overview ---- */
+function renderOverview(){
+  var e=cur();
+  if(!e){S.el("h-name").textContent="No event yet";S.el("h-count").textContent="—";S.el("h-when").textContent="add your first event on the My events tab";
+    S.el("h-yes").textContent="0";S.el("h-budg").textContent="$0";S.el("h-todo").textContent="0";S.el("h-days").textContent="—";
+    S.el("ov-next").innerHTML='<div class="empty">No event selected.</div>';S.el("ov-rsvp").innerHTML='<div class="empty">No event selected.</div>';return;}
+  var dd=daysTo(e.date);
+  S.el("h-name").textContent=e.name;
+  S.el("h-count").textContent=dd===null?"—":dd<0?"🎉":dd;
+  S.el("h-when").textContent=dd===null?e.type+" · set a date":dd<0?e.type+" · "+fmtDate(e.date):(dd===0?"today — "+e.type+"!":"days until this "+e.type.toLowerCase());
+  var g=arr("guests"),yes=g.filter(function(x){return x.status==="Yes";}).reduce(function(a,b){return a+(Number(b.count)||1);},0);
+  var b=arr("budget"),spent=b.reduce(function(a,c){return a+(Number(c.act)||0);},0);
+  var t=arr("todos"),left=t.filter(function(x){return !x.done;}).length;
+  S.el("h-yes").textContent=yes;S.el("h-budg").textContent=S.money0(spent);S.el("h-todo").textContent=left;S.el("h-days").textContent=dd===null?"—":dd<0?"past":dd;
+  var up=t.filter(function(x){return !x.done;}).sort(function(a,c){return (tdDue(a)==null?1e9:tdDue(a))-(tdDue(c)==null?1e9:tdDue(c));}).slice(0,6);
+  S.el("ov-next").innerHTML=up.length?up.map(function(x){var d=tdDue(x),cls=d===null?"":d<0?"bad":d<=7?"warn":"good",txt=d===null?"—":d<0?"overdue":d===0?"today":"in "+d+"d";return '<div class="row"><span class="nm">'+esc(x.task)+'</span><span class="pill '+cls+'">'+txt+'</span></div>';}).join(""):'<div class="empty">All to-dos done — or add some on the Countdown tab. ✨</div>';
+  var yc=g.filter(function(x){return x.status==="Yes";}).length,nc=g.filter(function(x){return x.status==="No";}).length,pc=g.filter(function(x){return x.status==="Invited"||x.status==="Maybe";}).length;
+  S.el("ov-rsvp").innerHTML=g.length?('<div class="row"><span class="nm">✅ Yes</span><span class="pill good">'+yc+' parties · '+yes+' people</span></div>'+
+    '<div class="row"><span class="nm">⏳ Awaiting</span><span class="pill warn">'+pc+'</span></div>'+
+    '<div class="row"><span class="nm">❌ No</span><span class="pill">'+nc+'</span></div>'):'<div class="empty">Add guests on the Guests tab.</div>';
+}
+
+/* ---- rewards ---- */
+var BADGES=[
+ {id:"first",ic:"🎉",title:"Party Starter",desc:"Created your first event",cond:c=>c.events>0},
+ {id:"list",ic:"👥",title:"The Guest List",desc:"Added 5+ guests",cond:c=>c.guests>=5},
+ {id:"rsvp",ic:"✅",title:"Headcount",desc:"Confirmed a yes",cond:c=>c.yes>0},
+ {id:"budget",ic:"💵",title:"On Budget",desc:"Started a budget",cond:c=>c.budget>0},
+ {id:"check",ic:"📋",title:"Checklist Boss",desc:"Finished 5 to-dos",cond:c=>c.done>=5},
+ {id:"ready",ic:"🏁",title:"All Set",desc:"Cleared the whole checklist",cond:c=>c.todos>0&&c.left===0},
+ {id:"run",ic:"🕑",title:"Run of Show",desc:"Built a day-of timeline",cond:c=>c.timeline>0},
+ {id:"thanks",ic:"🎁",title:"Gracious Host",desc:"Logged a gift",cond:c=>c.gifts>0},
+ {id:"pro",ic:"🏆",title:"Event Pro",desc:"Planned 3 events",cond:c=>c.events>=3}
+];
+function allCount(bucket,fn){var n=0;(db.events||[]).forEach(function(e){var a=(db[bucket]&&db[bucket][e.id])||[];n+=fn?a.filter(fn).length:a.length;});return n;}
+function renderRewards(){
+  var doneAll=allCount("todos",function(x){return x.done;});S.el("rw-done").textContent=doneAll;
+  var ctx={events:db.events.length,guests:allCount("guests"),yes:allCount("guests",function(x){return x.status==="Yes";}),
+    budget:allCount("budget"),todos:allCount("todos"),done:doneAll,left:allCount("todos",function(x){return !x.done;}),
+    timeline:allCount("timeline"),gifts:allCount("gifts")};
+  var earned=S.renderBadges(S.el("rw-badges"),BADGES,ctx);S.el("rw-count").textContent=earned;
+  var xp=earned*40+ctx.events*15+ctx.done*5+ctx.guests*2+ctx.budget*2+ctx.timeline*2+ctx.gifts*3;
+  S.gamify({xp:xp,badges:earned,container:S.el("xp-card")});
+  S.renderQuests(S.el("quests"),[
+    {label:"Have an event on the calendar",xp:10,done:ctx.events>0},
+    {label:"Check off a to-do",xp:10,done:ctx.done>0},
+    {label:"Confirm a guest's RSVP",xp:10,done:ctx.yes>0}
+  ]);
+}
+
+function renderAll(){syncSelectors();renderList();renderGuests();renderBudget();renderTodos();renderTimeline();renderGifts();renderPotluck();renderVendors();renderSeating();renderBinder();renderOverview();renderRewards();S.applyPremium();}
+
+function SAMPLE(){var id1=S.uid(),id2=S.uid();var now=new Date();
+  function iso(off){var x=new Date(now.getFullYear(),now.getMonth(),now.getDate()+off);return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0");}
+  var g1=[{id:S.uid(),name:"The Garcias",count:4,status:"Yes",note:"no nuts"},{id:S.uid(),name:"Aunt Carol",count:1,status:"Yes",note:""},{id:S.uid(),name:"Marcus & Dee",count:2,status:"Maybe",note:""},{id:S.uid(),name:"Coworkers",count:3,status:"Invited",note:""},{id:S.uid(),name:"Grandpa Lee",count:1,status:"Yes",note:"needs a chair"}];
+  return {
+    events:[{id:id1,name:"Mom's 60th Birthday",type:"Birthday",date:iso(24),location:"Backyard"},{id:id2,name:"Thanksgiving Dinner",type:"Holiday party",date:iso(48),location:"Home"}],
+    active:id1,
+    guests:{[id1]:g1,[id2]:[{id:S.uid(),name:"Family",count:8,status:"Yes",note:""}]},
+    budget:{[id1]:[{id:S.uid(),item:"Catering",cat:"Food & drink",est:"300",act:"320",paid:true},{id:S.uid(),item:"Cake",cat:"Cake & dessert",est:"80",act:"",paid:false},{id:S.uid(),item:"Decorations",cat:"Decor",est:"60",act:"45",paid:true},{id:S.uid(),item:"Backyard speaker rental",cat:"Rentals",est:"40",act:"",paid:false}]},
+    todos:{[id1]:[{id:S.uid(),task:"Make the guest list",weeks:8,done:true},{id:S.uid(),task:"Send invitations",weeks:4,done:true},{id:S.uid(),task:"Order the cake",weeks:4,done:false},{id:S.uid(),task:"Buy decorations",weeks:2,done:false},{id:S.uid(),task:"Confirm RSVPs",weeks:2,done:false},{id:S.uid(),task:"Shop for food & drinks",weeks:1,done:false},{id:S.uid(),task:"Set up & decorate",weeks:0,done:false}]},
+    timeline:{[id1]:[{id:S.uid(),time:"16:00",act:"Guests arrive, drinks & music"},{id:S.uid(),time:"16:30",act:"Appetizers"},{id:S.uid(),time:"17:30",act:"Dinner served"},{id:S.uid(),time:"18:30",act:"Toasts & cake"},{id:S.uid(),time:"19:30",act:"Open gifts"},{id:S.uid(),time:"21:00",act:"Wind down"}]},
+    gifts:{[id1]:[{id:S.uid(),gift:"Spa gift card",from:"Aunt Carol",thanked:true},{id:S.uid(),gift:"Garden set",from:"The Garcias",thanked:false}]},
+    potluck:{[id1]:[{id:S.uid(),cat:"Appetizer",dish:"Spinach dip",who:"Dee"},{id:S.uid(),cat:"Main",dish:"Brisket",who:"Jordan"},{id:S.uid(),cat:"Side",dish:"Mac & cheese",who:""},{id:S.uid(),cat:"Dessert",dish:"Pie",who:"Aunt Carol"}]},
+    vendors:{[id1]:[{id:S.uid(),name:"Rosa's Catering",role:"Caterer",phone:"(555) 240-1180",amt:"320",status:"Booked"},{id:S.uid(),name:"Sweet Layers",role:"Cake",phone:"(555) 904-2277",amt:"80",status:"Quoted"}]},
+    tables:{[id1]:[{id:S.uid(),name:"Head table",cap:6,seats:["Aunt Carol","Grandpa Lee"]},{id:S.uid(),name:"Table 2",cap:8,seats:["The Garcias"]}]}
+  };
+}
+
+S.el("ev-date").value=S.todayISO();
+S.initShell();
+S.initAccount({name:"steady-events",defaults:DEF,sample:SAMPLE,render:renderAll});
+S.initPremium({title:"Steady Events Premium",price:"1.25",desc:"Just $1.25/mo — the pro planning tools for stress-free events.",veil:"Unlock the pro event tools — vendor tracker, seating chart and a printable event binder.",
+  features:["📇 Vendors — caterer, DJ, florist with cost & booking status","🪑 Seating — build tables and assign guests from your list","📘 Event binder — one printable sheet of the whole plan","🖨 Hand it to a helper or print for the day"],render:renderAll});
+renderAll();
+S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Events</h2><p>Plan any party or event in one calm place — guests, budget, a countdown checklist and the day-of timeline.</p></div><div class="feat"><div class="fi">👥</div><div><b>Who\'s coming</b><p>Track invites, head counts and RSVPs at a glance.</p></div></div><div class="feat"><div class="fi">✅</div><div><b>Nothing forgotten</b><p>A countdown checklist tells you what\'s due and what\'s slipping.</p></div></div>',sample:SAMPLE,render:renderAll});
+</script>
+</body>
+</html>
