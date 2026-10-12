@@ -427,131 +427,282 @@ window.LAB404_CONTENT = {
  "medicine-first-aid-cpr": {
   "title": "First Aid & CPR",
   "subject": "Health & Medicine",
-  "level": "All levels",
-  "disclaimer": "This is general information, NOT medical training. Take a hands-on certified course (American Red Cross or American Heart Association) and ALWAYS call 911 in a real emergency.",
-  "intro": "First aid is the help you give before professionals arrive — and in the first minutes of an emergency, a bystander often makes the difference between life and death. You don't need to be a doctor; a few simple actions, done calmly, save lives.",
+  "level": "All ages",
+  "objectives": [
+   "Respond safely to an emergency: check, call, care",
+   "Understand the basics of CPR and when it's used",
+   "Give basic help for choking, bleeding, and burns",
+   "Build a basic first-aid kit",
+   "Know your limits and when to get professional help"
+  ],
+  "intro": "First aid is the immediate, basic care you give someone who is injured or suddenly ill, before professional help arrives — and it can save a life. This lesson covers how to respond in an emergency, the basics of CPR, and common situations. Important: this is educational only, not a substitute for a hands-on certified course (such as Red Cross or AHA), and in any real emergency, call your local emergency number (911 in the US) first.",
+  "sections": [
+   {
+    "h": "Responding to an emergency: check, call, care",
+    "body": "In any emergency, follow three steps in order. Check: make sure the scene is safe for you first (you can't help if you're hurt too), then check the person — are they responsive? Breathing? Tap and shout, 'Are you okay?' Call: if it's serious — unresponsiveness, trouble breathing, severe bleeding, signs of a heart attack or stroke — call emergency services (911) immediately, or have someone else call while you help.\n\nCare: give whatever appropriate first aid you can until help arrives. Staying calm is itself a skill — a clear head lets you act. Knowing these three steps, check-call-care, gives you a framework for any emergency, even before you know exactly what's wrong.",
+    "visual": "<svg viewBox=\"0 0 256 66\" width=\"248\" role=\"img\" aria-label=\"Emergency response steps: check the scene, check the person, call 911, give care\"><rect x=\"6\" y=\"18\" width=\"54\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"33\" y=\"38\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Check scene</text><rect x=\"70\" y=\"18\" width=\"54\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"97\" y=\"38\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Check person</text><rect x=\"134\" y=\"18\" width=\"54\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"161\" y=\"38\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Call 911</text><rect x=\"198\" y=\"18\" width=\"54\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"225\" y=\"38\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Give care</text><line x1=\"60\" y1=\"34\" x2=\"65\" y2=\"34\" stroke=\"#39e3c8\" stroke-width=\"2\"/><polygon points=\"65,30 70,34 65,38\" fill=\"#39e3c8\"/><line x1=\"124\" y1=\"34\" x2=\"129\" y2=\"34\" stroke=\"#39e3c8\" stroke-width=\"2\"/><polygon points=\"129,30 134,34 129,38\" fill=\"#39e3c8\"/><line x1=\"188\" y1=\"34\" x2=\"193\" y2=\"34\" stroke=\"#39e3c8\" stroke-width=\"2\"/><polygon points=\"193,30 198,34 193,38\" fill=\"#39e3c8\"/></svg>",
+    "caption": "The emergency framework: check the scene and person, call 911 if serious, then give care.",
+    "tip": "In any emergency: Check (scene + person), Call (911 for anything serious), Care. Your own safety comes first."
+   },
+   {
+    "h": "CPR basics",
+    "body": "CPR (cardiopulmonary resuscitation) is used when someone's heart has stopped — they're unresponsive and not breathing normally. It keeps blood and oxygen moving to the brain until help or a defibrillator arrives. For an adult, the core is hard, fast chest compressions: push hard and fast in the center of the chest, about 2 inches deep, at 100–120 pushes per minute (the beat of the song 'Stayin' Alive').\n\n'Hands-only CPR' — continuous compressions without rescue breaths — is recommended for untrained bystanders and is far better than doing nothing. If an AED (automated external defibrillator) is available, turn it on and follow its spoken instructions. CPR is a hands-on skill best learned in a certified class, but knowing it exists and roughly how it works means you can act instead of freeze.",
+    "example": "Hands-only CPR: call 911, then push hard and fast in the center of the chest, ~2 in deep, 100–120/min, until help arrives.",
+    "tip": "Hands-only CPR (hard, fast chest compressions, ~100–120/min) by a bystander beats doing nothing. Use an AED if available."
+   },
+   {
+    "h": "Choking, bleeding, and burns",
+    "body": "A few common emergencies have clear first responses. Choking: if someone can't breathe, cough, or speak, give abdominal thrusts (the Heimlich maneuver) — stand behind them and thrust inward and upward above the navel until the object comes out. If they can still cough, encourage coughing instead.\n\nSevere bleeding: press firmly on the wound with a clean cloth and keep pressing; raise the area if you can, and don't remove soaked cloths — add more on top. Burns: cool a burn under cool (not ice-cold) running water for several minutes, then cover loosely; never use ice, butter, or ointments on a serious burn. In all of these, call for help if it's severe, and get professional care.",
+    "tip": "Choking (can't breathe) → abdominal thrusts. Severe bleeding → firm constant pressure. Burns → cool running water, no ice."
+   },
+   {
+    "h": "A basic first-aid kit",
+    "body": "Being ready matters, and a simple first-aid kit handles most minor situations. Core contents: adhesive bandages in several sizes, sterile gauze pads and medical tape, antiseptic wipes, antibiotic ointment, tweezers, scissors, disposable gloves, and a pain reliever. Add any personal medications and an emergency contact list.\n\nKeep one at home and a small one in your bag or car. Check it now and then to replace used or expired items. A kit doesn't make you a medic, but it lets you clean and cover a cut, support a sprain, or ease a minor burn — handling the small stuff and stabilizing the bigger stuff until real help is available.",
+    "tip": "Keep a basic kit (bandages, gauze, tape, antiseptic, gloves, tweezers) at home and in your bag; check for expired items."
+   },
+   {
+    "h": "Know your limits",
+    "body": "The most important first-aid skill is knowing what you can and can't do. First aid is about immediate, basic help and stabilizing a person — not diagnosing or treating like a doctor. When in doubt about anything serious, call emergency services and follow the dispatcher's instructions; they can guide you through steps over the phone.\n\nDon't move someone with a possible spinal injury unless they're in danger, don't give food or drink to someone who may need surgery, and don't attempt procedures you're not trained for. Your job is to keep the person as safe and stable as possible until professionals take over. The best preparation of all is taking a real certified first-aid and CPR course — this lesson is a starting point, not a replacement.",
+    "tip": "First aid stabilizes until pros arrive — it doesn't replace them. When unsure, call 911 and follow the dispatcher. Take a certified course."
+   }
+  ],
   "cards": [
    {
-    "h": "Scene safety and calling for help",
-    "body": "Before you help anyone, make sure the scene is safe for YOU — you can't help if you become a second victim. Then call 911 (or point to a specific person and tell them to call) and, if available, get an AED. Give the dispatcher your location first."
+    "h": "Check-call-care",
+    "body": "Check the scene and person, Call 911 if serious, then give Care. Your safety first."
    },
    {
-    "h": "Checking responsiveness and breathing",
-    "body": "Tap the person's shoulder and shout \"Are you okay?\" If there's no response, check for normal breathing for no more than 10 seconds. Gasping is NOT normal breathing — treat it as not breathing and start CPR."
+    "h": "CPR",
+    "body": "For no pulse/breathing: hands-only CPR — hard, fast chest compressions (~100–120/min). Use an AED if available."
    },
    {
-    "h": "Hands-only CPR",
-    "body": "For an adult who collapses and isn't breathing normally, push hard and fast in the center of the chest — about 2 inches deep, 100–120 pushes per minute (the beat of \"Stayin' Alive\"). Let the chest come all the way back up between pushes. Don't stop until help takes over or an AED arrives."
+    "h": "Choking/bleeding/burns",
+    "body": "Choking → abdominal thrusts; severe bleeding → firm pressure; burns → cool running water (no ice)."
    },
    {
-    "h": "Choking",
-    "body": "If someone can't breathe, cough, or speak, give abdominal thrusts (the Heimlich): stand behind them, make a fist just above the navel, and thrust inward and upward. If they become unresponsive, lower them to the ground and start CPR."
+    "h": "First-aid kit",
+    "body": "Bandages, gauze, tape, antiseptic, gloves, tweezers; keep at home and in your bag; check for expired items."
    },
    {
-    "h": "Severe bleeding",
-    "body": "Press firmly and directly on the wound with a clean cloth and don't let up. Keep pressure on even if it soaks through — add more cloth on top rather than removing it. For life-threatening limb bleeding that won't stop, a tourniquet placed above the wound can save a life until help arrives."
+    "h": "Know your limits",
+    "body": "Stabilize until pros arrive; don't attempt what you're not trained for. Take a certified course."
    }
   ],
   "flash": [
    [
     "First aid",
-    "Immediate help given before professional care arrives."
-   ],
-   [
-    "AED",
-    "Automated External Defibrillator — a device that can restart a heart and talks you through it."
+    "Immediate basic care before professional help arrives."
    ],
    [
     "CPR",
-    "Cardiopulmonary resuscitation — chest compressions (and breaths) to keep blood flowing."
+    "Chest compressions (and breaths) when the heart has stopped."
    ],
    [
-    "Compression depth (adult)",
-    "About 2 inches deep, in the center of the chest."
+    "AED",
+    "A device that can restart a stopped heart with a shock."
+   ],
+   [
+    "Hands-only CPR",
+    "Continuous chest compressions without rescue breaths."
    ],
    [
     "Compression rate",
-    "100–120 per minute (the beat of 'Stayin' Alive')."
+    "About 100–120 chest pushes per minute."
    ],
    [
     "Heimlich maneuver",
-    "Abdominal thrusts to clear a blocked airway in a choking person."
+    "Abdominal thrusts to clear a choking person's airway."
+   ],
+   [
+    "Choking",
+    "A blocked airway; the person can't breathe, cough, or speak."
    ],
    [
     "Direct pressure",
-    "Pressing firmly on a wound — the first step to stop bleeding."
+    "Pressing firmly on a wound to stop bleeding."
    ],
    [
-    "Recovery position",
-    "Rolling an unresponsive but breathing person onto their side to protect the airway."
+    "Burn care",
+    "Cool under running water; never ice or butter a serious burn."
+   ],
+   [
+    "911",
+    "The US emergency number to call for serious situations."
+   ],
+   [
+    "Responsive",
+    "Awake and reacting when checked."
+   ],
+   [
+    "First-aid kit",
+    "Supplies for treating minor injuries."
    ]
   ],
   "quiz": [
    {
-    "q": "What's the FIRST thing to do before helping at an emergency?",
+    "q": "The three steps in any emergency are:",
     "options": [
-     "Make sure the scene is safe for you",
-     "Start CPR immediately",
-     "Give water",
-     "Move the person"
+     "Check, call, care",
+     "Run, hide, wait",
+     "Call, ignore, leave",
+     "Care, check, panic"
     ],
     "a": 0,
-    "why": "If you get hurt too, you can't help. Check scene safety first."
+    "why": "Check the scene/person, call 911 if serious, then care."
    },
    {
-    "q": "For adult hands-only CPR, you push at a rate of:",
+    "q": "Before helping, your first concern should be:",
+    "options": [
+     "Is the scene safe for me?",
+     "Taking a photo",
+     "Finding a doctor friend",
+     "Posting online"
+    ],
+    "a": 0,
+    "why": "You can't help if you become a victim too."
+   },
+   {
+    "q": "CPR is used when a person is:",
+    "options": [
+     "Unresponsive and not breathing normally",
+     "Sleeping",
+     "Coughing loudly",
+     "Walking"
+    ],
+    "a": 0,
+    "why": "CPR is for cardiac arrest — no normal breathing/pulse."
+   },
+   {
+    "q": "Hands-only CPR chest compressions should be about:",
     "options": [
      "100–120 per minute",
-     "40–60 per minute",
-     "200+ per minute",
-     "As slow as possible"
+     "20 per minute",
+     "300 per minute",
+     "5 per minute"
     ],
     "a": 0,
-    "why": "100–120 compressions per minute — the beat of 'Stayin' Alive.'"
+    "why": "Push hard and fast, 100–120/min (the 'Stayin' Alive' beat)."
    },
    {
-    "q": "Gasping in an unresponsive person should be treated as:",
+    "q": "For an untrained bystander, the recommended CPR is:",
     "options": [
-     "Not breathing — start CPR",
-     "Normal breathing",
-     "A good sign",
-     "A reason to wait"
+     "Hands-only (compressions, no breaths)",
+     "Nothing at all",
+     "Only rescue breaths",
+     "Shaking the person"
     ],
     "a": 0,
-    "why": "Agonal gasping is not effective breathing; begin CPR."
+    "why": "Hands-only CPR beats doing nothing and is easier."
    },
    {
-    "q": "The first step to control most bleeding is:",
+    "q": "An AED is a device that:",
     "options": [
-     "Firm direct pressure",
-     "A tourniquet",
-     "Rinsing with water",
-     "Elevating only"
+     "Can shock a stopped heart back into rhythm",
+     "Measures temperature",
+     "Bandages wounds",
+     "Calls 911 for you"
     ],
     "a": 0,
-    "why": "Direct pressure on the wound is the first and main step."
+    "why": "An automated external defibrillator delivers a shock; follow its prompts."
    },
    {
-    "q": "Someone is choking and cannot speak or cough. You:",
+    "q": "For a choking person who can't breathe, you give:",
     "options": [
-     "Give abdominal thrusts",
-     "Give them water",
-     "Tell them to lie down",
-     "Wait and watch"
+     "Abdominal thrusts (Heimlich)",
+     "Water to drink",
+     "A pat on the head",
+     "Nothing"
     ],
     "a": 0,
-    "why": "A silent, can't-breathe choking victim needs abdominal thrusts now."
+    "why": "Abdominal thrusts try to dislodge the blockage."
    },
    {
-    "q": "How deep are adult chest compressions?",
+    "q": "For severe bleeding, you should:",
     "options": [
-     "About 2 inches",
-     "About half an inch",
-     "As deep as possible",
-     "About 1 foot"
+     "Apply firm, constant pressure",
+     "Remove soaked cloths repeatedly",
+     "Leave it uncovered",
+     "Rinse with soda"
     ],
     "a": 0,
-    "why": "About 2 inches (5 cm) for an adult, letting the chest fully recoil."
+    "why": "Firm pressure helps stop bleeding; add cloths, don't remove."
+   },
+   {
+    "q": "To treat a burn, you should:",
+    "options": [
+     "Cool it under running water",
+     "Pack it in ice",
+     "Cover it in butter",
+     "Pop any blisters"
+    ],
+    "a": 0,
+    "why": "Cool (not icy) running water; never ice or butter a serious burn."
+   },
+   {
+    "q": "Which belongs in a basic first-aid kit?",
+    "options": [
+     "Bandages, gauze, antiseptic, gloves",
+     "Only candy",
+     "A phone charger only",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Core supplies treat minor injuries."
+   },
+   {
+    "q": "You should check your first-aid kit occasionally to:",
+    "options": [
+     "Replace used or expired items",
+     "Throw it away",
+     "Hide it",
+     "Count the bandages for fun"
+    ],
+    "a": 0,
+    "why": "Expired/used items should be replaced so it's ready."
+   },
+   {
+    "q": "First aid is meant to:",
+    "options": [
+     "Stabilize someone until pros arrive",
+     "Replace doctors",
+     "Diagnose diseases",
+     "Perform surgery"
+    ],
+    "a": 0,
+    "why": "It's immediate, basic help — not professional treatment."
+   },
+   {
+    "q": "If you're unsure in a serious situation, you should:",
+    "options": [
+     "Call 911 and follow the dispatcher",
+     "Guess and hope",
+     "Do nothing ever",
+     "Search slowly online"
+    ],
+    "a": 0,
+    "why": "Dispatchers can guide you through steps."
+   },
+   {
+    "q": "You should avoid moving someone who may have:",
+    "options": [
+     "A spinal injury (unless in danger)",
+     "A small cut",
+     "A mild headache",
+     "A stubbed toe"
+    ],
+    "a": 0,
+    "why": "Moving a possible spinal injury can cause harm."
+   },
+   {
+    "q": "The best way to truly prepare for emergencies is to:",
+    "options": [
+     "Take a certified first-aid/CPR course",
+     "Read one article",
+     "Watch one video",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Hands-on certified training is the real preparation."
    }
   ]
  },
@@ -2086,120 +2237,227 @@ window.LAB404_CONTENT = {
  "medicine-nutrition": {
   "title": "Nutrition",
   "subject": "Health & Medicine",
-  "level": "Grades 6 - adult",
-  "disclaimer": "General nutrition information, not medical or dietary advice. Talk to a doctor or dietitian about your specific needs.",
-  "intro": "Nutrition is how the food you eat fuels and builds your body. You don't need a perfect diet — just a basic grasp of what food does helps you make better choices most of the time.",
+  "level": "All ages",
+  "objectives": [
+   "Explain why the body needs food (energy and building blocks)",
+   "Describe the macronutrients: carbs, protein, fat",
+   "Describe vitamins, minerals, and water",
+   "Read a nutrition label and build a balanced plate",
+   "Build healthy eating habits"
+  ],
+  "intro": "Nutrition is how the food you eat fuels and builds your body. Good nutrition gives you energy, supports growth and repair, and protects long-term health; poor nutrition does the opposite. This lesson covers why you eat, the nutrients food provides, how to build a balanced plate, and healthy habits. (General education, not personalized dietary or medical advice.)",
+  "sections": [
+   {
+    "h": "Why we eat",
+    "body": "Food does two big jobs. First, it provides energy, measured in calories, to power everything your body does — from running to thinking to simply staying alive. Second, it provides the raw materials your body uses to grow, repair tissue, and run the countless chemical reactions of life.\n\nYou need the right amount of energy (too little and you run down; too much, stored as fat, leads to weight gain) and the right mix of nutrients. Nutrients fall into two groups: macronutrients, needed in large amounts (carbohydrates, proteins, fats), and micronutrients, needed in small amounts (vitamins and minerals), plus water. Balance across all of these is what 'eating well' really means.",
+    "tip": "Food gives you energy (calories) and building materials. You need the right amount and the right mix of nutrients."
+   },
+   {
+    "h": "The macronutrients",
+    "body": "Three macronutrients supply nearly all your energy and building blocks. Carbohydrates are the body's main fuel — breads, grains, fruits, vegetables. 'Complex' carbs (whole grains, vegetables) release energy slowly and are healthiest; simple sugars spike and crash. Proteins build and repair tissue (muscle, skin, enzymes) and come from meat, eggs, beans, and dairy — the body's building blocks.\n\nFats, despite their bad reputation, are essential: they store energy, protect organs, and help absorb some vitamins. Healthy unsaturated fats (nuts, fish, olive oil) are good; too much saturated and trans fat is not. A balanced diet includes all three macronutrients in sensible proportions, not the elimination of any one.",
+    "example": "Carbs: rice, bread, fruit (energy). Protein: chicken, beans, eggs (building blocks). Fat: nuts, olive oil, fish (essential).",
+    "tip": "Carbs = main fuel, protein = building/repair, fat = essential storage and protection. You need all three, in balance."
+   },
+   {
+    "h": "Vitamins, minerals, and water",
+    "body": "Micronutrients are needed in tiny amounts but are vital. Vitamins (like A, C, D, and the B group) assist countless body processes — vitamin C supports immunity and healing, vitamin D helps bones. Minerals (like calcium, iron, potassium) build structures and run systems — calcium for bones, iron to carry oxygen in blood. A varied diet, especially rich in fruits and vegetables, usually supplies these.\n\nWater deserves its own mention: your body is about 60% water, and it's involved in nearly every function — temperature control, transport, digestion, joint cushioning. You lose water constantly and must replace it. Mild dehydration causes fatigue and headaches, so drinking enough water is one of the simplest, most overlooked health habits.",
+    "tip": "Vitamins and minerals (from varied fruits/veg) run vital processes; water (~60% of you) is essential — drink enough daily."
+   },
+   {
+    "h": "Balanced eating and reading labels",
+    "body": "A practical way to eat well is the balanced plate: fill about half with fruits and vegetables, about a quarter with whole grains, and about a quarter with protein, plus some dairy or an alternative and water to drink. This simple picture beats memorizing numbers and naturally balances your nutrients.\n\nNutrition labels help you choose. Check the serving size first (all the numbers depend on it), then calories, and the amounts of fat, sugar, sodium, fiber, and protein. Ingredients are listed by weight, so the first few matter most — and watch for added sugars under many names. You don't need to count everything; just reading labels enough to make better choices goes a long way.",
+    "visual": "<svg viewBox=\"0 0 196 206\" width=\"185\" role=\"img\" aria-label=\"A balanced plate: about half vegetables and fruit, a quarter grains, a quarter protein\"><path d=\"M96.0 96.0 L96.0 14.0 A82.0 82.0 0 0 1 174.0 121.3 Z\" fill=\"rgba(57,227,200,.3)\" stroke=\"#1a2233\" stroke-width=\"1.2\"/><path d=\"M96.0 96.0 L174.0 121.3 A82.0 82.0 0 0 1 96.0 178.0 Z\" fill=\"rgba(240,90,90,.28)\" stroke=\"#1a2233\" stroke-width=\"1.2\"/><path d=\"M96.0 96.0 L96.0 178.0 A82.0 82.0 0 0 1 18.0 121.3 Z\" fill=\"rgba(79,156,240,.3)\" stroke=\"#1a2233\" stroke-width=\"1.2\"/><path d=\"M96.0 96.0 L18.0 121.3 A82.0 82.0 0 0 1 96.0 14.0 Z\" fill=\"rgba(232,184,75,.32)\" stroke=\"#1a2233\" stroke-width=\"1.2\"/><text x=\"133.2\" y=\"72.0\" text-anchor=\"middle\" fill=\"#eef3fb\" font-size=\"8.5\">Vegetables</text><text x=\"123.0\" y=\"136.2\" text-anchor=\"middle\" fill=\"#eef3fb\" font-size=\"8.5\">Fruit</text><text x=\"69.0\" y=\"136.2\" text-anchor=\"middle\" fill=\"#eef3fb\" font-size=\"8.5\">Protein</text><text x=\"58.8\" y=\"72.0\" text-anchor=\"middle\" fill=\"#eef3fb\" font-size=\"8.5\">Grains</text><text x=\"96\" y=\"200\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8.5\">half veg + fruit, a quarter grains, a quarter protein</text></svg>",
+    "caption": "The balanced plate: about half fruits and vegetables, a quarter whole grains, a quarter protein.",
+    "tip": "Balanced plate: half fruits/veg, a quarter whole grains, a quarter protein. On labels, check serving size first, then sugar/sodium."
+   },
+   {
+    "h": "Healthy eating habits",
+    "body": "Nutrition is less about perfect single meals and more about overall patterns over time. A few habits carry most of the benefit: eat mostly whole, minimally processed foods; include plenty of fruits and vegetables; limit added sugar, salt, and heavily processed snacks; drink water instead of sugary drinks; and watch portion sizes.\n\nYou don't have to be perfect or give up foods you love — it's the everyday pattern that counts, and small sustainable changes beat crash diets that don't last. Cooking at home, not shopping hungry, and planning meals all help. Good nutrition, kept up over years, is one of the strongest things you can do for your energy now and your health for life.",
+    "tip": "It's the overall pattern that matters: mostly whole foods, lots of veg, less added sugar/salt, water over soda, sensible portions."
+   }
+  ],
   "cards": [
    {
-    "h": "The three macronutrients",
-    "body": "Food energy comes from three macros: carbohydrates (the body's main quick fuel — grains, fruit, bread), protein (builds and repairs muscle and tissue — meat, beans, eggs), and fat (concentrated energy and vitamin absorption — oils, nuts). You need all three."
+    "h": "Why we eat",
+    "body": "Food gives energy (calories) and building materials. Balance the amount and the mix."
    },
    {
-    "h": "Calories and energy balance",
-    "body": "A calorie is a unit of food energy. Eat about as many calories as you burn and weight stays steady; eat more and you gain, fewer and you lose. It's a rough balance, not a precise formula."
+    "h": "Macronutrients",
+    "body": "Carbs = fuel, protein = build/repair, fat = essential storage. Need all three in balance."
    },
    {
-    "h": "Whole foods vs. processed",
-    "body": "Foods closer to their natural state — vegetables, fruit, beans, whole grains, plain meats — tend to have more nutrients and fiber and keep you full longer. Heavily processed foods (chips, soda, candy) pack lots of calories with little nutrition."
+    "h": "Micronutrients & water",
+    "body": "Vitamins and minerals run vital processes; water (~60% of you) is essential — drink enough."
    },
    {
-    "h": "Hydration",
-    "body": "Water carries nutrients, regulates temperature, and keeps you thinking clearly. Thirst, dark urine, and fatigue are signs to drink more. Plain water is best; sugary drinks add calories fast without filling you up."
+    "h": "Balanced plate & labels",
+    "body": "Half veg/fruit, a quarter grains, a quarter protein; on labels check serving size first, then sugar/sodium."
    },
    {
-    "h": "Reading a nutrition label",
-    "body": "Check the serving size first (everything on the label is per serving, and a package is often several). Then scan calories, added sugars, sodium, and fiber. Ingredients are listed by weight — the first few are what there's most of."
+    "h": "Habits",
+    "body": "The pattern matters: whole foods, lots of veg, less sugar/salt, water over soda, sensible portions."
    }
   ],
   "flash": [
    [
+    "Calorie",
+    "A unit of food energy."
+   ],
+   [
     "Macronutrient",
-    "A nutrient needed in large amounts: carbs, protein, or fat."
+    "A nutrient needed in large amounts (carbs, protein, fat)."
    ],
    [
     "Carbohydrate",
-    "The body's main quick energy source (grains, fruit)."
+    "The body's main energy fuel (grains, fruit, veg)."
    ],
    [
     "Protein",
-    "Nutrient that builds and repairs muscle and tissue."
+    "A nutrient that builds and repairs tissue."
    ],
    [
-    "Calorie",
-    "A unit of energy from food."
+    "Fat",
+    "An essential nutrient for energy storage and protection."
    ],
    [
-    "Energy balance",
-    "Calories in vs. calories out — drives weight change."
+    "Micronutrient",
+    "A nutrient needed in small amounts (vitamins, minerals)."
    ],
    [
-    "Whole food",
-    "Food close to its natural state, rich in nutrients and fiber."
+    "Vitamin",
+    "A micronutrient that assists body processes (A, C, D, B)."
    ],
    [
-    "Fiber",
-    "Plant material that aids digestion and keeps you full."
+    "Mineral",
+    "A micronutrient like calcium or iron."
+   ],
+   [
+    "Water",
+    "Essential fluid; about 60% of the body."
+   ],
+   [
+    "Balanced plate",
+    "Half veg/fruit, a quarter grains, a quarter protein."
    ],
    [
     "Serving size",
-    "The amount a nutrition label's numbers are based on."
+    "The amount a label's numbers are based on."
+   ],
+   [
+    "Fiber",
+    "Plant material that aids digestion."
    ]
   ],
   "quiz": [
    {
-    "q": "Which macronutrient mainly builds and repairs muscle?",
+    "q": "Food energy is measured in:",
+    "options": [
+     "Calories",
+     "Inches",
+     "Degrees",
+     "Liters"
+    ],
+    "a": 0,
+    "why": "Calories measure the energy in food."
+   },
+   {
+    "q": "The three macronutrients are:",
+    "options": [
+     "Carbohydrates, proteins, fats",
+     "Vitamins, minerals, water",
+     "Sugar, salt, spice",
+     "Iron, calcium, zinc"
+    ],
+    "a": 0,
+    "why": "Macronutrients are carbs, protein, and fat."
+   },
+   {
+    "q": "The body's main source of energy is:",
+    "options": [
+     "Carbohydrates",
+     "Vitamins",
+     "Water",
+     "Minerals"
+    ],
+    "a": 0,
+    "why": "Carbs are the primary fuel."
+   },
+   {
+    "q": "Which nutrient mainly builds and repairs tissue?",
     "options": [
      "Protein",
-     "Carbohydrate",
      "Fat",
+     "Sugar",
      "Water"
     ],
     "a": 0,
-    "why": "Protein is the body's building and repair material."
+    "why": "Protein is the body's building block."
    },
    {
-    "q": "If you eat more calories than you burn, you generally:",
+    "q": "Fats are:",
     "options": [
-     "Gain weight",
-     "Lose weight",
-     "Stay exactly the same",
-     "Burn muscle only"
+     "Essential in sensible amounts",
+     "Always harmful",
+     "Never needed",
+     "Pure sugar"
     ],
     "a": 0,
-    "why": "Extra energy in beyond what you use is stored, so weight goes up."
+    "why": "Fats store energy, protect organs, and aid vitamin absorption."
    },
    {
-    "q": "The FIRST thing to check on a nutrition label is:",
+    "q": "Vitamins and minerals are:",
+    "options": [
+     "Micronutrients needed in small amounts",
+     "Macronutrients",
+     "Types of water",
+     "Calories"
+    ],
+    "a": 0,
+    "why": "They're vital but needed in tiny amounts."
+   },
+   {
+    "q": "Calcium mainly supports:",
+    "options": [
+     "Bones",
+     "Vision only",
+     "Hearing",
+     "Hair color"
+    ],
+    "a": 0,
+    "why": "Calcium builds and maintains bones."
+   },
+   {
+    "q": "About what fraction of the body is water?",
+    "options": [
+     "About 60%",
+     "About 5%",
+     "About 95%",
+     "0%"
+    ],
+    "a": 0,
+    "why": "The body is roughly 60% water."
+   },
+   {
+    "q": "On the balanced plate, about half should be:",
+    "options": [
+     "Fruits and vegetables",
+     "Candy",
+     "Soda",
+     "Fried food"
+    ],
+    "a": 0,
+    "why": "Half fruits/veg, a quarter grains, a quarter protein."
+   },
+   {
+    "q": "The first thing to check on a nutrition label is:",
     "options": [
      "Serving size",
-     "Calories",
      "The brand",
-     "The color"
+     "The color",
+     "The price"
     ],
     "a": 0,
-    "why": "All the numbers are per serving, and a package often holds several."
-   },
-   {
-    "q": "A sign you need more water is:",
-    "options": [
-     "Dark urine",
-     "Clear urine",
-     "Feeling cold",
-     "Eating slowly"
-    ],
-    "a": 0,
-    "why": "Dark urine, thirst and fatigue signal dehydration."
-   },
-   {
-    "q": "Compared to chips and soda, whole foods usually have:",
-    "options": [
-     "More nutrients and fiber",
-     "Fewer nutrients",
-     "More added sugar",
-     "No calories"
-    ],
-    "a": 0,
-    "why": "Whole foods carry more nutrients and fiber per calorie."
+    "why": "All the numbers depend on serving size."
    },
    {
     "q": "On an ingredient list, items are ordered by:",
@@ -2207,10 +2465,54 @@ window.LAB404_CONTENT = {
      "Weight (most first)",
      "Alphabet",
      "Price",
-     "Random"
+     "Color"
     ],
     "a": 0,
-    "why": "Ingredients are listed from most to least by weight."
+    "why": "The first ingredients make up most of the product."
+   },
+   {
+    "q": "A healthier carb choice is:",
+    "options": [
+     "Whole grains (complex carbs)",
+     "Pure sugar",
+     "Candy",
+     "Soda"
+    ],
+    "a": 0,
+    "why": "Complex carbs release energy slowly."
+   },
+   {
+    "q": "Good nutrition depends most on:",
+    "options": [
+     "Your overall pattern over time",
+     "One perfect meal",
+     "Never eating",
+     "Crash diets"
+    ],
+    "a": 0,
+    "why": "Everyday patterns matter more than single meals."
+   },
+   {
+    "q": "A simple healthy swap is:",
+    "options": [
+     "Water instead of sugary drinks",
+     "Soda instead of water",
+     "More fried food",
+     "Skipping vegetables"
+    ],
+    "a": 0,
+    "why": "Water over sugary drinks cuts added sugar."
+   },
+   {
+    "q": "Mild dehydration can cause:",
+    "options": [
+     "Fatigue and headaches",
+     "Better focus",
+     "Stronger bones",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Not enough water leads to tiredness and headaches."
    }
   ]
  },
@@ -11707,34 +12009,71 @@ window.LAB404_CONTENT = {
  "medicine-human-anatomy": {
   "title": "Human Anatomy",
   "subject": "Health & Medicine",
-  "level": "Grades 9 - college",
-  "intro": "Human anatomy is the study of the body's structure — its systems, organs, and how they fit together. Knowing the basics helps you understand your own health and what doctors are talking about.",
+  "level": "Grades 7-12",
+  "objectives": [
+   "Describe the body's levels of organization",
+   "Name the major organ systems and their jobs",
+   "Describe the skeletal and muscular systems",
+   "Describe the circulatory and respiratory systems",
+   "Explain how systems work together to keep you alive"
+  ],
+  "intro": "Human anatomy is the study of the body's structures and how they're organized; physiology is how they work. Together they explain the remarkable machine you live in. This lesson covers how the body is organized, its major systems, and how they cooperate to keep you alive. (Educational overview only, not medical advice.)",
+  "sections": [
+   {
+    "h": "How the body is organized",
+    "body": "The body is built in levels, each made of the one below. Cells are the basic units of life. Groups of similar cells form tissues (like muscle tissue). Different tissues combine into organs (like the heart), which each do a specific job. Organs that work together form an organ system (like the circulatory system), and all the systems together make the organism — you.\n\nThis organization is why the body can be both incredibly complex and remarkably coordinated. A problem at one level affects the others, which is why medicine often traces a symptom from the whole body down to a tissue or even a single type of cell.",
+    "tip": "Body organization, small to large: cells → tissues → organs → organ systems → the whole organism."
+   },
+   {
+    "h": "The major organ systems",
+    "body": "The body has around eleven organ systems, each with a role. A quick tour: the skeletal system (bones) gives structure; the muscular system (muscles) moves it. The circulatory system (heart, blood vessels) transports blood; the respiratory system (lungs) handles breathing. The digestive system breaks down food; the urinary system filters waste.\n\nThe nervous system (brain, nerves) senses and controls; the endocrine system (hormones) regulates slowly; the immune system defends; the integumentary system (skin) covers and protects; and the reproductive system enables reproduction. No system works alone — they're constantly cooperating, which is the real theme of the body.",
+    "visual": "<svg viewBox=\"0 0 250 142\" width=\"240\" role=\"img\" aria-label=\"Major body organ systems and their jobs\"><rect x=\"8\" y=\"5\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"5\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9.5\">Skeletal</text><text x=\"118\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">structure & protection</text><rect x=\"8\" y=\"27\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"27\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9.5\">Muscular</text><text x=\"118\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">movement</text><rect x=\"8\" y=\"49\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"49\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9.5\">Circulatory</text><text x=\"118\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">transports blood</text><rect x=\"8\" y=\"71\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"71\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9.5\">Respiratory</text><text x=\"118\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">breathing (gas exchange)</text><rect x=\"8\" y=\"93\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"93\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9.5\">Digestive</text><text x=\"118\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">breaks down food</text><rect x=\"8\" y=\"115\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"115\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"130\" fill=\"#cdd9ec\" font-size=\"9.5\">Nervous</text><text x=\"118\" y=\"130\" fill=\"#9adbcf\" font-size=\"8.5\">senses & controls</text></svg>",
+    "caption": "Major organ systems and what each one does — though none works alone.",
+    "example": "Skeletal = structure, Muscular = movement, Circulatory = transport, Respiratory = breathing, Nervous = control.",
+    "tip": "About 11 systems; each has a job, and all work together. Learn the big ones: skeletal, muscular, circulatory, respiratory, nervous."
+   },
+   {
+    "h": "The skeletal and muscular systems",
+    "body": "The skeletal system is your framework: about 206 bones that give the body shape, protect organs (the skull guards the brain, the ribs the heart and lungs), store minerals like calcium, and produce blood cells in the marrow. Bones meet at joints, many of which allow movement.\n\nThe muscular system works with the skeleton to move you. Skeletal muscles attach to bones and pull them — muscles can only pull, not push, so they work in pairs, one bending a joint and another straightening it. Smooth muscle moves things inside organs, and cardiac muscle is the specialized tissue of the heart. Together, bones and muscles let you stand, move, and act on the world.",
+    "tip": "Bones give structure and protect organs; muscles pull on bones to move you (they work in pairs since muscles only pull)."
+   },
+   {
+    "h": "The circulatory and respiratory systems",
+    "body": "These two systems team up to supply the body with oxygen. The respiratory system brings air into the lungs, where oxygen passes into the blood and carbon dioxide (a waste gas) passes out to be exhaled. The circulatory system then moves that blood: the heart, a muscular pump, pushes oxygen-rich blood through arteries to every cell, and oxygen-poor blood returns through veins.\n\nThe link is constant: blood picks up oxygen at the lungs and drops it off at the cells, picking up their carbon dioxide to carry back. Your heart beats around 100,000 times a day doing this. It's a perfect example of two systems working as one — breathing and circulation are useless apart but life-sustaining together.",
+    "tip": "Respiratory system takes in oxygen (lungs); circulatory system (heart + vessels) delivers it to every cell. They work as one."
+   },
+   {
+    "h": "Systems working together",
+    "body": "The body's real wonder is cooperation. Eat a meal and the digestive system breaks it into nutrients, the circulatory system delivers them, cells use them for energy, and the urinary system clears the waste — several systems in one simple act. Run up stairs, and the muscular, skeletal, respiratory, circulatory, and nervous systems all coordinate instantly.\n\nOverseeing it all is a drive for homeostasis — keeping internal conditions (temperature, fluids, blood sugar) stable. When you're too hot, the body sweats to cool you; when blood sugar drops, hormones release stored energy. Health is largely this balance working smoothly, and understanding the body means seeing not isolated parts but a single, coordinated whole.",
+    "tip": "The body's theme is cooperation toward homeostasis — keeping temperature, fluids, and blood sugar stable."
+   }
+  ],
   "cards": [
    {
-    "h": "The body's organization",
-    "body": "The body is organized in levels: cells form tissues, tissues form organs, and organs work together as systems (like the digestive or nervous system). Each level builds on the one below to keep you alive and functioning."
+    "h": "Organization",
+    "body": "Cells → tissues → organs → organ systems → organism."
    },
    {
-    "h": "Skeletal and muscular systems",
-    "body": "The skeleton (about 206 bones in an adult) gives the body structure, protects organs, and works with muscles to produce movement. Muscles pull on bones across joints; they can only pull, not push, which is why they work in opposing pairs."
+    "h": "~11 systems",
+    "body": "Each has a job (skeletal, muscular, circulatory, respiratory, digestive, nervous...); all cooperate."
    },
    {
-    "h": "Circulatory and respiratory systems",
-    "body": "The heart pumps blood through vessels, delivering oxygen and nutrients and carrying away waste. The lungs bring in oxygen and release carbon dioxide. Together they keep every cell supplied — which is why CPR, keeping blood and air moving, saves lives."
+    "h": "Skeletal & muscular",
+    "body": "Bones give structure/protection; muscles pull on bones (in pairs) to move you."
    },
    {
-    "h": "Nervous and digestive systems",
-    "body": "The nervous system (brain, spinal cord, nerves) is the control center — sensing, thinking, and sending signals. The digestive system breaks food into nutrients the body can absorb for energy and building material, from mouth to stomach to intestines."
+    "h": "Circulatory & respiratory",
+    "body": "Lungs take in oxygen; heart and vessels deliver it to every cell. They work as one."
    },
    {
-    "h": "Systems work together",
-    "body": "No system works alone. When you exercise, muscles need more oxygen, so the heart beats faster and you breathe harder, and the nervous system coordinates it all. A problem in one system often affects others, which is why doctors look at the whole body."
+    "h": "Cooperation",
+    "body": "Systems work together toward homeostasis — stable internal conditions."
    }
   ],
   "flash": [
    [
     "Cell",
-    "The smallest living unit of the body."
+    "The basic unit of life."
    ],
    [
     "Tissue",
@@ -11742,487 +12081,1056 @@ window.LAB404_CONTENT = {
    ],
    [
     "Organ",
-    "A structure of tissues doing a specific job (heart, lung)."
+    "A structure of tissues doing a specific job (e.g., heart)."
    ],
    [
     "Organ system",
-    "Organs working together (e.g., the digestive system)."
+    "Organs working together (e.g., circulatory)."
    ],
    [
     "Skeletal system",
-    "The bones that support and protect the body."
+    "The bones that give structure and protect organs."
+   ],
+   [
+    "Muscular system",
+    "The muscles that move the body."
    ],
    [
     "Circulatory system",
-    "The heart and blood vessels that move blood."
+    "The heart and vessels that transport blood."
    ],
    [
     "Respiratory system",
-    "The lungs and airways that exchange gases."
+    "The lungs that handle breathing and gas exchange."
    ],
    [
     "Nervous system",
-    "The brain, spinal cord, and nerves — the control center."
+    "The brain and nerves that sense and control."
+   ],
+   [
+    "Joint",
+    "Where two bones meet, often allowing movement."
+   ],
+   [
+    "Homeostasis",
+    "Keeping internal conditions stable."
+   ],
+   [
+    "Artery",
+    "A vessel carrying blood away from the heart."
    ]
   ],
   "quiz": [
    {
-    "q": "The body's levels of organization go:",
+    "q": "The basic unit of life is the:",
+    "options": [
+     "Cell",
+     "Organ",
+     "Tissue",
+     "System"
+    ],
+    "a": 0,
+    "why": "Cells are the smallest living units."
+   },
+   {
+    "q": "From small to large, the order is:",
     "options": [
      "Cells → tissues → organs → systems",
-     "Organs → cells → systems",
+     "Organs → cells → tissues",
      "Systems → cells",
-     "Tissues → cells only"
+     "Tissues → cells → organs"
     ],
     "a": 0,
-    "why": "Cells form tissues, tissues form organs, organs form systems."
+    "why": "Cells form tissues, tissues organs, organs systems."
    },
    {
-    "q": "The system that pumps blood through the body is the:",
+    "q": "About how many organ systems does the body have?",
     "options": [
-     "Circulatory system",
-     "Respiratory system",
-     "Digestive system",
-     "Skeletal system"
+     "About 11",
+     "Exactly 2",
+     "About 50",
+     "Just 1"
     ],
     "a": 0,
-    "why": "The heart and vessels (circulatory system) move blood."
+    "why": "Roughly eleven, each with a role."
    },
    {
-    "q": "An adult human skeleton has about:",
+    "q": "Which system gives the body structure and protects organs?",
     "options": [
-     "206 bones",
-     "50 bones",
-     "600 bones",
-     "20 bones"
+     "Skeletal",
+     "Digestive",
+     "Nervous",
+     "Respiratory"
     ],
     "a": 0,
-    "why": "An adult has about 206 bones."
+    "why": "Bones form the framework and shield organs."
    },
    {
-    "q": "The control center of the body is the:",
+    "q": "Which system moves the body?",
+    "options": [
+     "Muscular",
+     "Urinary",
+     "Endocrine",
+     "Immune"
+    ],
+    "a": 0,
+    "why": "Muscles pull on bones to create movement."
+   },
+   {
+    "q": "Why do muscles work in pairs?",
+    "options": [
+     "They can only pull, not push",
+     "They're lazy",
+     "They're identical",
+     "To look symmetrical"
+    ],
+    "a": 0,
+    "why": "One pair bends a joint, the other straightens it."
+   },
+   {
+    "q": "Which system handles breathing and gas exchange?",
+    "options": [
+     "Respiratory",
+     "Circulatory",
+     "Skeletal",
+     "Digestive"
+    ],
+    "a": 0,
+    "why": "The lungs take in oxygen and release carbon dioxide."
+   },
+   {
+    "q": "The heart belongs to which system?",
+    "options": [
+     "Circulatory",
+     "Respiratory",
+     "Nervous",
+     "Skeletal"
+    ],
+    "a": 0,
+    "why": "The heart pumps blood through the circulatory system."
+   },
+   {
+    "q": "Arteries carry blood:",
+    "options": [
+     "Away from the heart",
+     "Only to the lungs",
+     "Backward",
+     "Nowhere"
+    ],
+    "a": 0,
+    "why": "Arteries carry blood away from the heart; veins return it."
+   },
+   {
+    "q": "The respiratory and circulatory systems team up to deliver:",
+    "options": [
+     "Oxygen to cells",
+     "Bones to muscles",
+     "Sound to ears",
+     "Light to eyes"
+    ],
+    "a": 0,
+    "why": "Lungs load oxygen into blood; the heart delivers it."
+   },
+   {
+    "q": "The brain and nerves make up the:",
     "options": [
      "Nervous system",
-     "Digestive system",
+     "Muscular system",
      "Skeletal system",
-     "Muscular system"
+     "Urinary system"
     ],
     "a": 0,
-    "why": "The brain, spinal cord, and nerves sense and coordinate everything."
+    "why": "The nervous system senses and controls the body."
    },
    {
-    "q": "Muscles move bones by:",
+    "q": "Keeping internal conditions stable is called:",
     "options": [
-     "Pulling (never pushing)",
-     "Pushing",
-     "Dissolving them",
-     "Growing longer only"
+     "Homeostasis",
+     "Digestion",
+     "Respiration",
+     "Circulation"
     ],
     "a": 0,
-    "why": "Muscles can only pull, so they work in opposing pairs."
+    "why": "Homeostasis maintains temperature, fluids, and blood sugar."
    },
    {
-    "q": "The lungs' main job is to:",
+    "q": "Eating a meal involves mainly which systems working together?",
     "options": [
-     "Exchange oxygen and carbon dioxide",
-     "Pump blood",
-     "Digest food",
-     "Make bones"
+     "Digestive, circulatory, urinary",
+     "Only skeletal",
+     "Only nervous",
+     "None"
     ],
     "a": 0,
-    "why": "They bring in oxygen and release carbon dioxide."
+    "why": "Food is broken down, delivered, used, and waste cleared."
+   },
+   {
+    "q": "Bones also help the body by:",
+    "options": [
+     "Storing minerals and making blood cells",
+     "Thinking",
+     "Breathing",
+     "Digesting food"
+    ],
+    "a": 0,
+    "why": "Bones store calcium and produce blood cells in marrow."
+   },
+   {
+    "q": "The body's main theme, across all systems, is:",
+    "options": [
+     "Cooperation",
+     "Isolation",
+     "Competition",
+     "Randomness"
+    ],
+    "a": 0,
+    "why": "Systems constantly work together to keep you alive."
    }
   ]
  },
  "medicine-mental-health": {
   "title": "Mental Health",
   "subject": "Health & Medicine",
-  "level": "Grades 9 - adult",
-  "disclaimer": "General wellness information, not medical advice. If you're struggling, reach out to a professional or call/text 988 (the U.S. Suicide & Crisis Lifeline).",
-  "intro": "Mental health is part of overall health — how you think, feel, and cope with life. Like physical health, it varies, can be cared for, and sometimes needs help. Taking it seriously is a strength, not a weakness.",
+  "level": "All ages",
+  "objectives": [
+   "Understand what mental health is and why it matters like physical health",
+   "Recognize common challenges: stress, anxiety, depression",
+   "Learn healthy coping and self-care strategies",
+   "Know how to support yourself and others",
+   "Know when and how to seek help"
+  ],
+  "intro": "Mental health is your emotional, psychological, and social well-being — it affects how you think, feel, handle stress, and relate to others. It's just as real and important as physical health, and like physical health, it can be cared for and it can struggle. This lesson covers what mental health is, common challenges, coping, and getting help. Educational only, not therapy or medical advice. If you're in crisis, in the US you can call or text 988, the Suicide & Crisis Lifeline, anytime.",
+  "sections": [
+   {
+    "h": "What mental health is",
+    "body": "Mental health is your overall emotional and psychological well-being: how you feel about yourself, handle life's ups and downs, relate to others, and cope with stress. Everyone has mental health, just as everyone has physical health, and it exists on a spectrum that shifts over time — some days or seasons are better than others.\n\nGood mental health doesn't mean being happy all the time; it means being able to feel a full range of emotions, cope with difficulties, and function and connect in daily life. It's shaped by many things — genetics, experiences, relationships, environment, and physical health. Like a body, a mind can be healthy, can get run down, and can be cared for and strengthened.",
+    "tip": "Everyone has mental health, and it changes over time. Good mental health is coping and connecting — not being happy all the time."
+   },
+   {
+    "h": "Common challenges: stress, anxiety, depression",
+    "body": "Several mental health challenges are extremely common. Stress is the body's response to pressure; some is normal and even useful, but ongoing high stress wears you down. Anxiety is excessive worry or fear that can persist even without a clear threat, sometimes with physical symptoms like a racing heart. Depression is more than sadness — it's a lasting low mood, loss of interest, and low energy that interferes with daily life.\n\nThese are real and common, not weakness or a character flaw, and they're treatable. Millions of people experience them, and like a physical illness, they respond to care and support. Recognizing the signs — in yourself or others — is the first step toward getting help, and there's no shame in needing it.",
+    "tip": "Stress, anxiety, and depression are common and treatable — not weakness. Recognizing the signs is the first step to help."
+   },
+   {
+    "h": "Coping and self-care",
+    "body": "Just as you can strengthen your body, you can support your mental health with daily habits. The basics overlap with physical health: enough sleep, regular physical activity, decent nutrition, and limiting alcohol and drugs all strongly affect mood. On top of that, staying connected to people who care about you is one of the most protective factors there is.\n\nOther tools help in the moment: deep breathing and other relaxation techniques calm the body's stress response; spending time outdoors, doing things you enjoy, and keeping some routine all steady you. Managing what you can (breaking big problems into steps) and accepting what you can't also reduce stress. These aren't cures, but consistent self-care builds real resilience.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Daily pillars that support mental health\"><rect x=\"8\" y=\"5\" width=\"100\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"5\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9.5\">Sleep</text><text x=\"114\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">resets mood & focus</text><rect x=\"8\" y=\"27\" width=\"100\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"27\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9.5\">Exercise</text><text x=\"114\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">eases stress, lifts mood</text><rect x=\"8\" y=\"49\" width=\"100\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"49\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9.5\">Nutrition</text><text x=\"114\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">fuels a steady mind</text><rect x=\"8\" y=\"71\" width=\"100\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"71\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9.5\">Connection</text><text x=\"114\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">people who care protect you</text><rect x=\"8\" y=\"93\" width=\"100\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"93\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9.5\">Relaxation</text><text x=\"114\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">breathing calms the body</text></svg>",
+    "caption": "Daily pillars that protect mental health — most overlap with physical health.",
+    "tip": "Sleep, exercise, nutrition, and staying connected most protect mental health; breathing and routine help in the moment."
+   },
+   {
+    "h": "Supporting yourself and others",
+    "body": "If you're struggling, a few things help: name what you're feeling (even just to yourself), talk to someone you trust, and be kind to yourself rather than self-critical — you'd comfort a friend, so extend that to yourself. Small steps count, and reaching out is a sign of strength, not weakness.\n\nTo support someone else: listen without judging or rushing to fix, take them seriously, ask how you can help, and encourage professional help if they're really struggling. You don't need the perfect words; showing you care and are present matters most. One caution: if someone talks about wanting to harm themselves, take it seriously and help them reach professional or crisis support right away.",
+    "tip": "For yourself: name it, talk to someone, be self-kind. For others: listen without judging and take them seriously."
+   },
+   {
+    "h": "When and how to seek help",
+    "body": "Sometimes self-care isn't enough, and that's exactly when professional help matters — just like you'd see a doctor for a persistent physical problem. Consider reaching out if difficult feelings last for weeks, interfere with daily life (work, school, relationships, sleep, eating), or feel like too much to handle alone.\n\nHelp comes in many forms: a doctor, a therapist or counselor, a school counselor, a trusted clergy member, or a support group; treatment can include talk therapy, lifestyle changes, and sometimes medication. In the US, you can call or text 988 anytime for the Suicide & Crisis Lifeline. Seeking help is a normal, healthy, and courageous step — mental health challenges are real matters, and no one should face a crisis alone.",
+    "tip": "Seek help if hard feelings last weeks or disrupt daily life. In the US, call or text 988 anytime. Asking for help is strength."
+   }
+  ],
   "cards": [
    {
-    "h": "Mental health is health",
-    "body": "Your mind and body are connected. Mental health affects sleep, energy, relationships, and physical health — and vice versa. Everyone has mental health, and it moves up and down. Caring for it is normal maintenance, not a sign something is 'wrong' with you."
+    "h": "What it is",
+    "body": "Emotional/psychological well-being; everyone has it, it shifts over time, and it can be cared for."
    },
    {
-    "h": "Stress and the basics of coping",
-    "body": "Some stress is normal, but ongoing stress wears you down. The foundations that protect mental health are unglamorous but powerful: enough sleep, movement, decent food, connection with people, and time outside. When you're struggling, start there before anything fancy."
+    "h": "Common challenges",
+    "body": "Stress, anxiety, and depression are common and treatable — not weakness."
    },
    {
-    "h": "Common conditions",
-    "body": "Anxiety (persistent, excessive worry) and depression (lasting low mood, loss of interest, low energy) are the most common mental-health conditions — and among the most treatable. They're medical issues, not character flaws, and help works for most people."
+    "h": "Coping & self-care",
+    "body": "Sleep, exercise, nutrition, and connection protect mood; breathing and routine help in the moment."
    },
    {
-    "h": "Healthy vs. harmful coping",
-    "body": "Healthy coping (talking to someone, exercise, rest, problem-solving, breathing) builds you up. Harmful coping (alcohol or drugs, isolating, avoiding everything) feels like relief but makes things worse over time. Noticing which you're reaching for is a useful check."
+    "h": "Supporting others",
+    "body": "Listen without judging, take people seriously, and encourage professional help if they're struggling."
    },
    {
-    "h": "Asking for help",
-    "body": "Reaching out — to a friend, a doctor, a counselor, or a crisis line — is a sign of strength. Therapy and sometimes medication genuinely help, and many resources are low-cost or free. In the U.S., you can call or text 988 anytime for the Suicide & Crisis Lifeline."
+    "h": "Seeking help",
+    "body": "See help if feelings last weeks or disrupt life. US crisis line: call/text 988. Asking is strength."
    }
   ],
   "flash": [
    [
     "Mental health",
-    "How you think, feel, and cope — part of overall health."
+    "Emotional, psychological, and social well-being."
    ],
    [
     "Stress",
-    "The body's response to pressure or demands."
+    "The body's response to pressure or demand."
    ],
    [
     "Anxiety",
-    "Persistent, excessive worry or fear."
+    "Excessive worry or fear, even without a clear threat."
    ],
    [
     "Depression",
-    "Lasting low mood, loss of interest, and low energy."
+    "A lasting low mood, loss of interest, and low energy."
    ],
    [
     "Coping",
-    "How you handle stress and difficult emotions."
+    "Ways of handling stress and difficult feelings."
    ],
    [
     "Self-care",
-    "Basic habits (sleep, movement, connection) that support wellbeing."
+    "Daily habits that support well-being."
    ],
    [
-    "Therapy",
-    "Talking with a trained professional to work through challenges."
+    "Resilience",
+    "The ability to recover from difficulty."
+   ],
+   [
+    "Therapist",
+    "A trained professional who provides talk therapy."
+   ],
+   [
+    "Support system",
+    "The people you can rely on and talk to."
    ],
    [
     "988",
-    "The U.S. Suicide & Crisis Lifeline (call or text)."
+    "The US Suicide & Crisis Lifeline (call or text)."
+   ],
+   [
+    "Mindfulness",
+    "Paying calm attention to the present moment."
+   ],
+   [
+    "Stigma",
+    "Unfair shame attached to mental health struggles."
    ]
   ],
   "quiz": [
    {
-    "q": "Mental health is:",
+    "q": "Mental health refers to your:",
     "options": [
-     "A normal part of overall health everyone has",
-     "Only for a few people",
-     "A character flaw",
-     "Unrelated to the body"
+     "Emotional and psychological well-being",
+     "Height and weight",
+     "Eyesight",
+     "Hearing"
     ],
     "a": 0,
-    "why": "Everyone has mental health; it's part of overall health."
+    "why": "It's emotional, psychological, and social well-being."
    },
    {
-    "q": "A foundation that protects mental health is:",
+    "q": "Who has mental health?",
     "options": [
-     "Sleep, movement, and connection",
-     "Ignoring problems",
-     "Isolating",
-     "Skipping meals"
+     "Everyone",
+     "Only sick people",
+     "Only adults",
+     "No one"
     ],
     "a": 0,
-    "why": "Basics like sleep, exercise, and social connection are powerful."
+    "why": "Everyone has it, and it shifts over time."
    },
    {
-    "q": "Anxiety and depression are:",
+    "q": "Good mental health means:",
     "options": [
-     "Common and treatable conditions",
-     "Rare and hopeless",
-     "Character flaws",
-     "Just laziness"
+     "Being able to cope and connect",
+     "Being happy 100% of the time",
+     "Never feeling sad",
+     "Having no emotions"
     ],
     "a": 0,
-    "why": "They're common, treatable conditions — not personal failings."
+    "why": "It's coping and functioning, not constant happiness."
    },
    {
-    "q": "Which is a HARMFUL coping strategy?",
+    "q": "Anxiety is best described as:",
     "options": [
-     "Using alcohol/drugs to numb feelings",
-     "Talking to a friend",
-     "Exercising",
-     "Getting rest"
+     "Excessive worry or fear",
+     "A broken bone",
+     "A cold",
+     "Pure laziness"
     ],
     "a": 0,
-    "why": "Substances and avoidance feel like relief but worsen things."
+    "why": "Anxiety is persistent excessive worry or fear."
    },
    {
-    "q": "Asking for help is:",
+    "q": "Depression is more than sadness; it's a lasting:",
     "options": [
-     "A sign of strength",
-     "A weakness",
-     "Pointless",
-     "Only a last resort"
+     "Low mood, loss of interest, low energy",
+     "Fever",
+     "Headache",
+     "Cough"
     ],
     "a": 0,
-    "why": "Reaching out is strong, and help genuinely works for most people."
+    "why": "It interferes with daily life over time."
    },
    {
-    "q": "In the U.S., the Suicide & Crisis Lifeline is reached at:",
+    "q": "Stress, anxiety, and depression are:",
     "options": [
-     "988",
-     "411",
-     "211 only",
-     "611"
+     "Common and treatable",
+     "Signs of weakness",
+     "Rare",
+     "Untreatable"
     ],
     "a": 0,
-    "why": "You can call or text 988 anytime."
+    "why": "They're common, real, and respond to care."
+   },
+   {
+    "q": "Which most protects mental health day to day?",
+    "options": [
+     "Sleep, exercise, nutrition, connection",
+     "Skipping sleep",
+     "Isolation",
+     "Junk food only"
+    ],
+    "a": 0,
+    "why": "These basics strongly affect mood and resilience."
+   },
+   {
+    "q": "A quick tool to calm the stress response is:",
+    "options": [
+     "Deep breathing",
+     "Holding your breath forever",
+     "Shouting at others",
+     "Ignoring it"
+    ],
+    "a": 0,
+    "why": "Relaxation techniques like deep breathing help in the moment."
+   },
+   {
+    "q": "If you're struggling, a healthy first step is to:",
+    "options": [
+     "Name it and talk to someone you trust",
+     "Hide it completely",
+     "Be harsh with yourself",
+     "Do nothing"
+    ],
+    "a": 0,
+    "why": "Naming feelings and reaching out helps."
+   },
+   {
+    "q": "Reaching out for help is a sign of:",
+    "options": [
+     "Strength",
+     "Weakness",
+     "Failure",
+     "Shame"
+    ],
+    "a": 0,
+    "why": "Asking for help is courageous and healthy."
+   },
+   {
+    "q": "To support a struggling friend, you should:",
+    "options": [
+     "Listen without judging and take them seriously",
+     "Tell them to get over it",
+     "Change the subject",
+     "Share their secret"
+    ],
+    "a": 0,
+    "why": "Listening and taking them seriously matters most."
+   },
+   {
+    "q": "If someone talks about harming themselves, you should:",
+    "options": [
+     "Take it seriously and help them get support",
+     "Ignore it",
+     "Keep it a secret",
+     "Laugh it off"
+    ],
+    "a": 0,
+    "why": "Take it seriously and connect them to professional/crisis help."
+   },
+   {
+    "q": "You should consider professional help when feelings:",
+    "options": [
+     "Last weeks or disrupt daily life",
+     "Pass in an hour",
+     "Never happen",
+     "Are mild and brief"
+    ],
+    "a": 0,
+    "why": "Persistent, disruptive feelings warrant professional care."
+   },
+   {
+    "q": "In the US, the Suicide & Crisis Lifeline is reached by:",
+    "options": [
+     "Calling or texting 988",
+     "Mailing a letter",
+     "Doing nothing",
+     "Waiting a month"
+    ],
+    "a": 0,
+    "why": "988 is available by call or text anytime."
+   },
+   {
+    "q": "Mental health challenges should be treated like:",
+    "options": [
+     "Real health matters needing care",
+     "Personal failings",
+     "Something to hide",
+     "A joke"
+    ],
+    "a": 0,
+    "why": "They're real and respond to care and support."
    }
   ]
  },
  "medicine-common-illnesses": {
   "title": "Common Illnesses",
   "subject": "Health & Medicine",
-  "level": "All levels",
-  "disclaimer": "General information, not medical advice. See a healthcare provider for diagnosis and treatment, and seek emergency care for severe symptoms.",
-  "intro": "Knowing the basics of common illnesses helps you take care of yourself, know when rest is enough, and recognize when to see a doctor. Most everyday illnesses are mild and pass on their own.",
+  "level": "All ages",
+  "objectives": [
+   "Understand how common illnesses spread and are prevented",
+   "Tell apart a cold, the flu, and similar illnesses",
+   "Recognize common symptoms and basic home care",
+   "Know when to see a doctor",
+   "Understand prevention: hygiene, vaccines, healthy habits"
+  ],
+  "intro": "Most people get sick now and then with common, usually minor illnesses. Understanding how they spread, how to care for yourself, and when to seek a doctor helps you recover faster and avoid spreading illness. This lesson covers common illnesses, their symptoms, basic care, and prevention. General education, not medical advice — when in doubt, consult a healthcare professional.",
+  "sections": [
+   {
+    "h": "How illnesses spread",
+    "body": "Many common illnesses are infections caused by germs — mainly viruses (like colds and flu) and bacteria (like strep throat). They spread in a few main ways: through the air in droplets when someone coughs or sneezes, by touching contaminated surfaces and then your face, and through close contact with a sick person.\n\nKnowing this explains why prevention works: washing hands, covering coughs, and keeping distance from sick people all break the chain of spread. It also explains a key difference in treatment — antibiotics kill bacteria but do nothing against viruses, which is why your doctor won't prescribe them for a common cold. Understanding the cause guides both prevention and care.",
+    "tip": "Most common illnesses are viral or bacterial infections spread by droplets, surfaces, and contact. Antibiotics work on bacteria, not viruses."
+   },
+   {
+    "h": "Cold vs. flu and similar illnesses",
+    "body": "The common cold and influenza (flu) are both viral and share symptoms, but differ in intensity. A cold comes on gradually and is milder: runny or stuffy nose, sore throat, sneezing, mild cough, rarely a high fever. The flu hits harder and faster: fever, body aches, exhaustion, headache, and cough, often leaving you bedridden for days.\n\nOther common illnesses include stomach 'bugs' (gastroenteritis — nausea, vomiting, diarrhea, usually viral), strep throat (a bacterial sore throat needing antibiotics), and seasonal allergies (not an infection at all, but the immune system reacting to pollen or dust). Telling them apart helps you judge how to care for yourself and whether you need a doctor.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"A comparison of cold and flu symptoms\"><rect x=\"8\" y=\"5\" width=\"100\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"5\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9.5\">Onset</text><text x=\"114\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">cold gradual / flu sudden</text><rect x=\"8\" y=\"27\" width=\"100\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"27\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9.5\">Fever</text><text x=\"114\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">cold rare / flu common, high</text><rect x=\"8\" y=\"49\" width=\"100\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"49\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9.5\">Body aches</text><text x=\"114\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">cold mild / flu strong</text><rect x=\"8\" y=\"71\" width=\"100\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"71\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9.5\">Energy</text><text x=\"114\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">cold okay / flu exhausted</text><rect x=\"8\" y=\"93\" width=\"100\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"93\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9.5\">Both are</text><text x=\"114\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">viral infections</text></svg>",
+    "caption": "Cold vs. flu: both viral, but the flu is sudden and far more severe.",
+    "example": "Cold: gradual, mild, rarely feverish. Flu: sudden, with fever, body aches, and exhaustion.",
+    "tip": "Cold = gradual and mild; flu = sudden and severe (fever, aches, exhaustion). Both are viral."
+   },
+   {
+    "h": "Symptoms and basic home care",
+    "body": "For most mild, common illnesses, the body heals itself and care is about comfort and support while it does. The basics: rest (your body needs energy to fight the illness), drink plenty of fluids (especially with fever, vomiting, or diarrhea, to avoid dehydration), and eat lightly if you can. Over-the-counter remedies can ease symptoms — pain relievers for aches and fever, for example — used as directed.\n\nLet a mild fever do some of its job (it helps fight infection) but keep it manageable and stay hydrated. Most colds and similar illnesses pass in a week or so. The goal of home care isn't to 'cure' a virus — there's usually no cure, your immune system does that — but to stay comfortable, hydrated, and rested while you recover.",
+    "tip": "For most mild illnesses: rest, fluids, and comfort while your immune system does the healing. Hydration matters most."
+   },
+   {
+    "h": "When to see a doctor",
+    "body": "Most common illnesses don't need a doctor, but some signs mean you should get professional care. Seek help for a high or persistent fever, trouble breathing or chest pain, symptoms that are severe or getting worse after several days, dehydration (dizziness, very little urine), a stiff neck with fever, or any symptom that worries you — and sooner for infants, older adults, or people with other health conditions.\n\nFor anything life-threatening — severe difficulty breathing, chest pain, confusion, a seizure — treat it as an emergency and call 911. Trust your instincts: you know your body, and it's always okay to check with a doctor or nurse line when unsure. Catching something serious early is far better than waiting too long.",
+    "tip": "See a doctor for high/persistent fever, trouble breathing, worsening symptoms, or dehydration. Call 911 for emergencies."
+   },
+   {
+    "h": "Preventing illness",
+    "body": "The best way to handle illness is to avoid it, and simple habits prevent a great deal. Hand-washing — with soap, for about 20 seconds, often — is the single most effective way to stop the spread of germs. Cover your coughs and sneezes, avoid touching your face, and stay home when you're sick to protect others.\n\nVaccines are another powerful tool: they train your immune system to fight specific diseases before you ever catch them, preventing illnesses that were once common and dangerous. And general health habits — enough sleep, good nutrition, exercise, and managing stress — keep your immune system strong. Prevention is quieter than treatment, but it's where most of the benefit really is.",
+    "tip": "Wash hands often, cover coughs, stay home when sick, keep up vaccines, and stay generally healthy — prevention beats treatment."
+   }
+  ],
   "cards": [
    {
-    "h": "Colds vs. the flu",
-    "body": "Both are viruses. A cold comes on gradually with a runny nose and sore throat and is usually mild. The flu hits suddenly with fever, body aches, and exhaustion, and can be more serious. Neither is helped by antibiotics (those fight bacteria, not viruses) — rest and fluids are the main treatment."
+    "h": "How they spread",
+    "body": "Viral or bacterial infections via droplets, surfaces, and contact. Antibiotics work on bacteria, not viruses."
    },
    {
-    "h": "Bacteria vs. viruses",
-    "body": "Bacteria and viruses are different germs. Antibiotics kill bacteria but do nothing to viruses — taking them for a cold doesn't help and can breed resistant bacteria. Many infections are viral and simply need time; a doctor can tell which is which."
+    "h": "Cold vs flu",
+    "body": "Cold = gradual, mild; flu = sudden, severe (fever, aches, exhaustion). Both viral."
    },
    {
-    "h": "Fever and when to worry",
-    "body": "A fever is the body's defense, raising temperature to fight infection — often a sign the immune system is working. Rest, fluids, and over-the-counter medicine help you feel better. See a doctor for a very high fever, one lasting several days, or fever with trouble breathing, stiff neck, confusion, or severe pain."
+    "h": "Home care",
+    "body": "Rest, fluids, comfort while the immune system heals. Hydration matters most."
    },
    {
-    "h": "Prevention basics",
-    "body": "The simplest protections work: wash your hands, don't touch your face with dirty hands, cover coughs, stay home when sick, and keep up with recommended vaccines. Sleep, good food, and managing stress keep your immune system strong."
+    "h": "See a doctor",
+    "body": "High/persistent fever, trouble breathing, worsening symptoms, or dehydration. 911 for emergencies."
    },
    {
-    "h": "When to seek care",
-    "body": "Most minor illnesses resolve with rest. Seek care for symptoms that are severe, worsening, or lasting too long — trouble breathing, chest pain, severe dehydration, a high or persistent fever, a wound that looks infected, or anything that worries you. When in doubt, call a nurse line or doctor."
+    "h": "Prevention",
+    "body": "Hand-washing, covering coughs, staying home when sick, vaccines, and healthy habits."
    }
   ],
   "flash": [
    [
     "Virus",
-    "A germ causing colds and flu; antibiotics don't work on it."
+    "A germ causing colds, flu, and many infections (not treated by antibiotics)."
    ],
    [
     "Bacteria",
-    "Germs that antibiotics can treat."
+    "A germ causing infections like strep throat (treated by antibiotics)."
+   ],
+   [
+    "Infection",
+    "Illness caused by germs entering the body."
+   ],
+   [
+    "Common cold",
+    "A mild viral illness with gradual onset."
+   ],
+   [
+    "Influenza (flu)",
+    "A viral illness that hits suddenly and hard."
    ],
    [
     "Antibiotic",
     "Medicine that kills bacteria (not viruses)."
    ],
    [
+    "Vaccine",
+    "A preparation that trains immunity against a disease."
+   ],
+   [
+    "Gastroenteritis",
+    "A stomach 'bug' with nausea, vomiting, diarrhea."
+   ],
+   [
+    "Hydration",
+    "Keeping enough fluid in the body."
+   ],
+   [
     "Fever",
-    "Raised body temperature, usually a sign of fighting infection."
+    "A raised body temperature that helps fight infection."
+   ],
+   [
+    "Hand-washing",
+    "The most effective way to stop germ spread."
    ],
    [
     "Immune system",
-    "The body's defense against germs."
-   ],
-   [
-    "Vaccine",
-    "Prepares the immune system to fight a specific disease."
-   ],
-   [
-    "Antibiotic resistance",
-    "When bacteria evolve to survive antibiotics (from overuse)."
-   ],
-   [
-    "Over-the-counter",
-    "Medicine available without a prescription."
+    "The body's defense that fights infection."
    ]
   ],
   "quiz": [
+   {
+    "q": "Colds and flu are caused by:",
+    "options": [
+     "Viruses",
+     "Bacteria",
+     "Broken bones",
+     "Allergies to food"
+    ],
+    "a": 0,
+    "why": "Both are viral infections."
+   },
    {
     "q": "Antibiotics work against:",
     "options": [
      "Bacteria, not viruses",
      "Viruses, not bacteria",
-     "Both equally",
-     "Neither"
+     "Everything",
+     "Nothing"
     ],
     "a": 0,
-    "why": "Antibiotics kill bacteria; they do nothing for viral colds/flu."
+    "why": "That's why they don't help a common (viral) cold."
    },
    {
-    "q": "A cold and the flu are both caused by:",
+    "q": "A cold usually:",
     "options": [
-     "Viruses",
-     "Bacteria",
-     "Allergies",
-     "Poor diet"
+     "Comes on gradually and is mild",
+     "Hits suddenly with high fever",
+     "Requires surgery",
+     "Lasts years"
     ],
     "a": 0,
-    "why": "Both are viral, so antibiotics don't help either."
+    "why": "Colds are gradual and milder than the flu."
    },
    {
-    "q": "A fever usually means:",
+    "q": "The flu is typically:",
     "options": [
-     "The body is fighting an infection",
-     "Something is broken",
-     "You need antibiotics",
-     "Nothing at all"
+     "Sudden, with fever, aches, and exhaustion",
+     "Mild and gradual",
+     "Painless",
+     "Not an illness"
     ],
     "a": 0,
-    "why": "Raised temperature is part of the immune response."
+    "why": "The flu hits harder and faster than a cold."
    },
    {
-    "q": "A simple, powerful way to prevent illness is to:",
+    "q": "Strep throat is bacterial, so it:",
     "options": [
-     "Wash your hands",
-     "Take antibiotics daily",
-     "Avoid all sleep",
-     "Skip vaccines"
+     "May need antibiotics",
+     "Needs no care ever",
+     "Is cured by rest only always",
+     "Is an allergy"
     ],
     "a": 0,
-    "why": "Handwashing stops a huge amount of germ spread."
+    "why": "Bacterial infections can be treated with antibiotics."
    },
    {
-    "q": "Taking antibiotics for a virus can:",
+    "q": "For most mild illnesses, the main care is:",
     "options": [
-     "Breed resistant bacteria",
-     "Cure the virus",
-     "Prevent all colds",
-     "Replace rest"
+     "Rest and fluids",
+     "Antibiotics always",
+     "Surgery",
+     "Nothing matters"
     ],
     "a": 0,
-    "why": "Misuse drives antibiotic resistance and doesn't help viruses."
+    "why": "Comfort and hydration while the immune system heals."
    },
    {
-    "q": "You should seek care for:",
+    "q": "Which matters most while sick with fever or vomiting?",
     "options": [
-     "Trouble breathing or a high, persistent fever",
-     "A mild runny nose",
+     "Staying hydrated",
+     "Eating a huge meal",
+     "Exercising hard",
+     "Skipping water"
+    ],
+    "a": 0,
+    "why": "Fluids prevent dehydration."
+   },
+   {
+    "q": "A mild fever:",
+    "options": [
+     "Helps the body fight infection",
+     "Is always dangerous",
+     "Means nothing",
+     "Should be ignored entirely"
+    ],
+    "a": 0,
+    "why": "Fever aids the immune response; keep it manageable and hydrate."
+   },
+   {
+    "q": "You should see a doctor for:",
+    "options": [
+     "Trouble breathing or a high/persistent fever",
      "A single sneeze",
-     "Feeling slightly tired"
+     "A mild one-day sniffle",
+     "Feeling slightly tired once"
     ],
     "a": 0,
-    "why": "Severe or worsening symptoms need medical attention."
+    "why": "Serious or worsening signs warrant professional care."
+   },
+   {
+    "q": "A life-threatening symptom like severe trouble breathing means:",
+    "options": [
+     "Call 911",
+     "Wait a week",
+     "Ignore it",
+     "Nap it off"
+    ],
+    "a": 0,
+    "why": "Treat emergencies as emergencies."
+   },
+   {
+    "q": "The single most effective way to stop germ spread is:",
+    "options": [
+     "Washing hands",
+     "Touching your face",
+     "Sharing cups",
+     "Skipping sleep"
+    ],
+    "a": 0,
+    "why": "Frequent hand-washing breaks the chain of spread."
+   },
+   {
+    "q": "When you're sick, protecting others means:",
+    "options": [
+     "Staying home and covering coughs",
+     "Going to crowded places",
+     "Shaking many hands",
+     "Sneezing openly"
+    ],
+    "a": 0,
+    "why": "Staying home and covering coughs limits spread."
+   },
+   {
+    "q": "Vaccines work by:",
+    "options": [
+     "Training immunity before you catch a disease",
+     "Curing colds instantly",
+     "Replacing hand-washing",
+     "Doing nothing"
+    ],
+    "a": 0,
+    "why": "They prepare the immune system to fight specific diseases."
+   },
+   {
+    "q": "Seasonal allergies are:",
+    "options": [
+     "The immune system reacting to pollen/dust",
+     "A bacterial infection",
+     "Caused by antibiotics",
+     "Always contagious"
+    ],
+    "a": 0,
+    "why": "Allergies aren't an infection — they're an immune reaction."
+   },
+   {
+    "q": "Overall, the biggest health payoff comes from:",
+    "options": [
+     "Prevention (hygiene, vaccines, habits)",
+     "Treating after the fact only",
+     "Ignoring illness",
+     "Taking random pills"
+    ],
+    "a": 0,
+    "why": "Prevention beats treatment."
    }
   ]
  },
  "medicine-medical-terminology": {
   "title": "Medical Terminology",
   "subject": "Health & Medicine",
-  "level": "College",
-  "intro": "Medical terms can look like a foreign language, but most are built from a few Greek and Latin word parts. Learn the common parts and you can decode words you've never seen — a big help in healthcare or just understanding your own care.",
+  "level": "Grades 9-12",
+  "objectives": [
+   "Understand why medical terms are built from parts",
+   "Identify roots, prefixes, and suffixes in medical words",
+   "Decode common medical terms",
+   "Know common roots for body parts and suffixes for conditions",
+   "Use the skill to understand health information"
+  ],
+  "intro": "Medical terminology is the specialized vocabulary of healthcare — and it looks intimidating until you learn its secret: most medical words are built from a small set of reusable parts. Learn the parts, and you can decode thousands of terms. This lesson shows how medical words are constructed and how to break them down.",
+  "sections": [
+   {
+    "h": "Why medical words are built from parts",
+    "body": "Medical terms can look like a foreign language, and in a sense they are — most come from Greek and Latin roots. But there's good news: they're built systematically from a small kit of reusable pieces. Once you know the common pieces, a long, scary word becomes readable, like reading a sentence built from familiar blocks.\n\nA medical term is typically assembled from up to three kinds of part: a root (the core meaning, usually a body part), a prefix (added to the front to modify meaning), and a suffix (added to the end, often naming a condition or procedure). Learning a few dozen common parts unlocks a huge vocabulary — which is exactly why healthcare students learn the parts, not endless whole words.",
+    "tip": "Medical words are built from reusable Greek/Latin parts. Learn the parts and you can decode thousands of terms."
+   },
+   {
+    "h": "Roots, prefixes, and suffixes",
+    "body": "The root carries the core meaning, almost always a body part or system. Examples: 'cardi' (heart), 'derm' (skin), 'gastr' (stomach), 'neur' (nerve), 'hepat' (liver), 'oste' (bone). Roots are often joined to the rest with a vowel (usually 'o') for easy pronunciation — 'cardi-o-logy.'\n\nA prefix at the front modifies the meaning: 'hyper-' (high/over), 'hypo-' (low/under), 'a-/an-' (without), 'tachy-' (fast), 'brady-' (slow). A suffix at the end often names a condition, disease, or procedure: '-itis' (inflammation), '-ology' (study of), '-ectomy' (surgical removal), '-pathy' (disease), '-algia' (pain). Combine them, and the meaning appears.",
+    "visual": "<svg viewBox=\"0 0 258 88\" width=\"245\" role=\"img\" aria-label=\"The word cardiology broken into the root cardi (heart) and suffix ology (study of)\"><rect x=\"10\" y=\"8\" width=\"88\" height=\"30\" rx=\"6\" fill=\"rgba(79,156,240,.18)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"54\" y=\"28\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"12\">cardi-</text><rect x=\"106\" y=\"8\" width=\"96\" height=\"30\" rx=\"6\" fill=\"rgba(57,227,200,.15)\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><text x=\"154\" y=\"28\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"12\">-ology</text><text x=\"54\" y=\"52\" text-anchor=\"middle\" fill=\"#4f9cf0\" font-size=\"8.5\">root: heart</text><text x=\"154\" y=\"52\" text-anchor=\"middle\" fill=\"#39e3c8\" font-size=\"8.5\">suffix: study of</text><text x=\"129\" y=\"78\" text-anchor=\"middle\" fill=\"#9adbcf\" font-size=\"10\">cardiology = the study of the heart</text></svg>",
+    "caption": "Break a term into its parts — root + suffix — and the meaning appears.",
+    "example": "cardi (heart) + o + logy (study of) = cardiology (the study of the heart).",
+    "tip": "Root = body part (cardi = heart); prefix modifies (hyper = high); suffix = condition/procedure (-itis = inflammation)."
+   },
+   {
+    "h": "Decoding medical terms",
+    "body": "To decode a medical word, break it into parts and read it, usually starting from the suffix, then the prefix, then the root. Take 'dermatitis': 'dermat' (skin) + '-itis' (inflammation) = inflammation of the skin. 'Cardiology': 'cardi' (heart) + '-ology' (study of) = the study of the heart. 'Hypertension': 'hyper-' (high) + 'tension' (pressure) = high blood pressure.\n\nWith practice, this becomes automatic, and even unfamiliar terms become readable. 'Gastritis'? Stomach inflammation. 'Neurology'? The study of nerves. 'Appendectomy'? Surgical removal of the appendix. You don't need to have memorized the whole word — you build its meaning from the parts, which is the entire point of the system.",
+    "example": "dermatitis = dermat (skin) + itis (inflammation) = skin inflammation.  appendectomy = append + ectomy (removal).",
+    "tip": "Decode by parts, often suffix first: '-itis' = inflammation, so gastritis = stomach inflammation."
+   },
+   {
+    "h": "Common parts worth knowing",
+    "body": "A starter kit of parts goes a long way. Useful roots: 'cardi' (heart), 'derm' (skin), 'gastr' (stomach), 'neur' (nerve), 'oste' (bone), 'hepat' (liver), 'nephr' (kidney), 'pulmon' (lung), 'hem' (blood). Useful prefixes: 'hyper-' (high), 'hypo-' (low), 'a-/an-' (without), 'brady-' (slow), 'tachy-' (fast), 'poly-' (many).\n\nUseful suffixes: '-itis' (inflammation), '-ology' (study of), '-ologist' (specialist), '-ectomy' (removal), '-otomy' (cutting into), '-pathy' (disease), '-algia' (pain), '-emia' (blood condition). With just these, you can decode a remarkable range of terms — 'bradycardia' (slow heart), 'osteopathy' (bone disease), 'anemia' (literally 'without blood,' a low-blood-cell condition).",
+    "tip": "A few dozen roots, prefixes, and suffixes unlock most medical terms — build your kit a few at a time."
+   },
+   {
+    "h": "Why this skill is useful",
+    "body": "Medical terminology isn't just for doctors and nurses. It helps anyone understand their own health: reading a diagnosis, a lab result, a medication label, or a doctor's note with more confidence instead of confusion. When you can tell that '-itis' means inflammation or 'hyper-' means high, health information gets far less intimidating.\n\nIt's foundational for any healthcare career — nursing, medical assisting, pharmacy, EMT work, billing and coding — which is why it's often the first course. And it's a satisfying skill: a system that turns an overwhelming wall of jargon into something you can actually read. Learn the parts, practice decoding, and the language of medicine opens up.",
+    "tip": "Decoding medical terms helps you understand your own health and is the foundation of every healthcare career."
+   }
+  ],
   "cards": [
    {
-    "h": "Words built from parts",
-    "body": "Most medical terms combine a root (the body part or meaning), a prefix (at the front), and a suffix (at the end). Break a word into parts and its meaning appears: 'cardiology' = cardio (heart) + logy (study of) = the study of the heart."
+    "h": "Built from parts",
+    "body": "Medical words combine reusable Greek/Latin parts; learn the parts, decode thousands of words."
    },
    {
-    "h": "Common roots",
-    "body": "Roots name body parts or ideas: cardio (heart), derm (skin), neuro (nerve), gastro (stomach), hemo/hema (blood), osteo (bone), pulmo (lung), nephro (kidney). These show up again and again across medicine."
+    "h": "Root, prefix, suffix",
+    "body": "Root = body part (cardi); prefix modifies (hyper-); suffix = condition/procedure (-itis)."
    },
    {
-    "h": "Common prefixes",
-    "body": "Prefixes modify meaning: hyper- (high/over), hypo- (low/under), a-/an- (without), tachy- (fast), brady- (slow), peri- (around), sub- (under). 'Hypertension' = hyper (high) + tension (pressure) = high blood pressure."
+    "h": "Decoding",
+    "body": "Break into parts, often suffix first: dermatitis = skin (dermat) + inflammation (-itis)."
    },
    {
-    "h": "Common suffixes",
-    "body": "Suffixes often tell what's happening: -itis (inflammation), -ectomy (surgical removal), -ology (study of), -pathy (disease), -emia (blood condition), -oma (tumor). 'Appendicitis' = appendic (appendix) + itis (inflammation)."
+    "h": "Common parts",
+    "body": "Roots cardi/gastr/neur/oste; prefixes hyper/hypo; suffixes -itis/-ology/-ectomy."
    },
    {
-    "h": "Putting it together",
-    "body": "With the parts, you can decode unfamiliar terms. 'Dermatitis' = derm (skin) + itis (inflammation) = inflamed skin. 'Nephrology' = nephro (kidney) + logy (study) = the study of kidneys. You won't know every term, but you can make a strong, educated guess."
+    "h": "Usefulness",
+    "body": "Understand your own health info; foundation of every healthcare career."
    }
   ],
   "flash": [
    [
     "Root",
-    "The core of a medical term (the body part or meaning)."
+    "The core of a medical word, usually a body part."
+   ],
+   [
+    "Prefix",
+    "A part at the front that modifies meaning."
+   ],
+   [
+    "Suffix",
+    "A part at the end, often a condition or procedure."
    ],
    [
     "-itis",
-    "Suffix meaning inflammation (e.g., arthritis)."
-   ],
-   [
-    "-ectomy",
-    "Suffix meaning surgical removal (e.g., appendectomy)."
+    "Suffix meaning inflammation."
    ],
    [
     "-ology",
-    "Suffix meaning the study of (e.g., cardiology)."
+    "Suffix meaning the study of."
    ],
    [
-    "hyper- / hypo-",
-    "Prefixes for high/over and low/under."
+    "-ectomy",
+    "Suffix meaning surgical removal."
    ],
    [
-    "cardio-",
+    "cardi-",
     "Root meaning heart."
    ],
    [
-    "derm-",
-    "Root meaning skin."
+    "gastr-",
+    "Root meaning stomach."
    ],
    [
-    "neuro-",
+    "neur-",
     "Root meaning nerve."
+   ],
+   [
+    "hyper-",
+    "Prefix meaning high or over."
+   ],
+   [
+    "hypo-",
+    "Prefix meaning low or under."
+   ],
+   [
+    "dermat-",
+    "Root meaning skin."
    ]
   ],
   "quiz": [
    {
-    "q": "The suffix '-itis' means:",
+    "q": "Most medical terms are built from:",
     "options": [
-     "Inflammation",
-     "Removal",
-     "Study of",
-     "Tumor"
+     "Reusable Greek/Latin parts",
+     "Random letters",
+     "English slang",
+     "Numbers"
     ],
     "a": 0,
-    "why": "'-itis' = inflammation (e.g., tonsillitis)."
+    "why": "A small kit of parts builds most terms."
    },
    {
-    "q": "'Cardiology' means the study of the:",
+    "q": "The part carrying the core meaning (usually a body part) is the:",
+    "options": [
+     "Root",
+     "Prefix",
+     "Suffix",
+     "Vowel"
+    ],
+    "a": 0,
+    "why": "Roots are the core, usually a body part."
+   },
+   {
+    "q": "A part added to the FRONT to modify meaning is a:",
+    "options": [
+     "Prefix",
+     "Suffix",
+     "Root",
+     "Syllable"
+    ],
+    "a": 0,
+    "why": "Prefixes attach to the front."
+   },
+   {
+    "q": "A part added to the END, often a condition or procedure, is a:",
+    "options": [
+     "Suffix",
+     "Prefix",
+     "Root",
+     "Comma"
+    ],
+    "a": 0,
+    "why": "Suffixes attach to the end."
+   },
+   {
+    "q": "The root 'cardi' means:",
     "options": [
      "Heart",
      "Skin",
-     "Brain",
-     "Kidney"
+     "Stomach",
+     "Bone"
     ],
     "a": 0,
-    "why": "cardio (heart) + logy (study of)."
+    "why": "cardi = heart."
    },
    {
-    "q": "The prefix 'hyper-' means:",
+    "q": "The suffix '-itis' means:",
     "options": [
-     "High / over",
-     "Low / under",
-     "Without",
-     "Around"
-    ],
-    "a": 0,
-    "why": "Hyper- = high/over (hypertension = high blood pressure)."
-   },
-   {
-    "q": "'-ectomy' refers to:",
-    "options": [
-     "Surgical removal",
      "Inflammation",
-     "Pain",
-     "Study"
+     "Study of",
+     "Removal",
+     "Pain"
     ],
     "a": 0,
-    "why": "An -ectomy is the removal of something (appendectomy)."
+    "why": "-itis = inflammation."
    },
    {
     "q": "'Dermatitis' means:",
     "options": [
-     "Inflamed skin",
+     "Skin inflammation",
      "Heart study",
-     "Bone removal",
+     "Stomach removal",
      "Nerve pain"
     ],
     "a": 0,
-    "why": "derm (skin) + itis (inflammation)."
+    "why": "dermat (skin) + itis (inflammation)."
    },
    {
-    "q": "The root 'neuro-' refers to:",
+    "q": "'Cardiology' means:",
     "options": [
-     "Nerves",
-     "Blood",
-     "Lungs",
-     "Stomach"
+     "The study of the heart",
+     "Heart removal",
+     "Skin disease",
+     "Slow heart"
     ],
     "a": 0,
-    "why": "Neuro- means nerve (neurology = study of the nervous system)."
+    "why": "cardi (heart) + ology (study of)."
+   },
+   {
+    "q": "The suffix '-ectomy' means:",
+    "options": [
+     "Surgical removal",
+     "Inflammation",
+     "Study of",
+     "Pain"
+    ],
+    "a": 0,
+    "why": "-ectomy = surgical removal (e.g., appendectomy)."
+   },
+   {
+    "q": "The prefix 'hyper-' means:",
+    "options": [
+     "High or over",
+     "Low or under",
+     "Without",
+     "Slow"
+    ],
+    "a": 0,
+    "why": "hyper- = high/over; hypo- = low/under."
+   },
+   {
+    "q": "'Gastritis' means:",
+    "options": [
+     "Stomach inflammation",
+     "Heart study",
+     "Bone pain",
+     "Skin removal"
+    ],
+    "a": 0,
+    "why": "gastr (stomach) + itis (inflammation)."
+   },
+   {
+    "q": "When decoding, it often helps to start from the:",
+    "options": [
+     "Suffix",
+     "Middle letter",
+     "Last letter only",
+     "Prefix color"
+    ],
+    "a": 0,
+    "why": "Reading suffix-first makes decoding systematic."
+   },
+   {
+    "q": "'Bradycardia' (brady = slow, cardia = heart) means:",
+    "options": [
+     "Slow heart rate",
+     "Fast heart",
+     "Heart removal",
+     "Skin disease"
+    ],
+    "a": 0,
+    "why": "brady (slow) + cardia (heart)."
+   },
+   {
+    "q": "Knowing medical terminology helps everyday people:",
+    "options": [
+     "Understand their own health info",
+     "Perform surgery",
+     "Prescribe drugs",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "It makes diagnoses and labels far less confusing."
+   },
+   {
+    "q": "Medical terminology is often the first course in:",
+    "options": [
+     "Healthcare careers",
+     "Cooking school",
+     "Art class",
+     "Driving school"
+    ],
+    "a": 0,
+    "why": "It's foundational for nursing, pharmacy, EMT, coding, and more."
    }
   ]
  },
