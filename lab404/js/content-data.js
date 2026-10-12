@@ -3389,5 +3389,785 @@ window.LAB404_CONTENT = {
     "why": "Plant warm crops once frost danger has passed."
    }
   ]
+ },
+ "math-pre-algebra": {
+  "title": "Pre-Algebra",
+  "subject": "Mathematics",
+  "level": "Grades 6-8",
+  "intro": "Pre-algebra is the bridge between arithmetic and algebra. It takes the numbers you already know and adds the tools you'll need next: negative numbers, ratios, and your first use of variables.",
+  "cards": [
+   {
+    "h": "Integers and negative numbers",
+    "body": "Integers are the whole numbers, their negatives, and zero (…, −2, −1, 0, 1, 2, …). On a number line, negatives sit to the left of zero. Adding a negative moves left; subtracting a negative moves right: 5 − (−3) = 5 + 3 = 8."
+   },
+   {
+    "h": "Rules of signs",
+    "body": "Multiplying or dividing two numbers with the SAME sign gives a positive; DIFFERENT signs give a negative. So (−4)(−2) = 8, but (−4)(2) = −8. The same rule works for division."
+   },
+   {
+    "h": "Fractions, decimals, percents",
+    "body": "These are three ways to write the same value: 1/2 = 0.5 = 50%. To turn a fraction into a decimal, divide top by bottom; into a percent, multiply the decimal by 100. Switching between the three fluently is a core pre-algebra skill."
+   },
+   {
+    "h": "Ratios and proportions",
+    "body": "A ratio compares two quantities (3 cups flour to 2 cups sugar, or 3:2). A proportion sets two ratios equal and lets you solve for an unknown by cross-multiplying: if 3/2 = x/6, then 2x = 18, so x = 9. It's how you scale recipes, maps, and rates."
+   },
+   {
+    "h": "From numbers to variables",
+    "body": "Pre-algebra introduces letters for unknowns and 'expressions' like 2n + 5. You evaluate an expression by substituting a value (if n = 4, 2n + 5 = 13), and solve simple equations by undoing operations — the gateway to algebra."
+   }
+  ],
+  "flash": [
+   [
+    "Integer",
+    "A whole number, its negative, or zero (…, −1, 0, 1, …)."
+   ],
+   [
+    "Absolute value",
+    "A number's distance from zero, always positive (|−5| = 5)."
+   ],
+   [
+    "Ratio",
+    "A comparison of two quantities (3:2)."
+   ],
+   [
+    "Proportion",
+    "An equation saying two ratios are equal."
+   ],
+   [
+    "Cross-multiply",
+    "Multiply across an equal pair of fractions to solve."
+   ],
+   [
+    "Reciprocal",
+    "A fraction flipped upside down (reciprocal of 3/4 is 4/3)."
+   ],
+   [
+    "Sign rule",
+    "Same signs multiply to positive; different signs to negative."
+   ],
+   [
+    "Expression",
+    "Numbers and variables combined with operations, no equals sign."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "What is −4 × −3?",
+    "options": [
+     "12",
+     "−12",
+     "−7",
+     "7"
+    ],
+    "a": 0,
+    "why": "Two negatives multiply to a positive: 4×3 = 12."
+   },
+   {
+    "q": "5 − (−2) =",
+    "options": [
+     "7",
+     "3",
+     "−7",
+     "−3"
+    ],
+    "a": 0,
+    "why": "Subtracting a negative is adding: 5 + 2 = 7."
+   },
+   {
+    "q": "Write 3/4 as a percent.",
+    "options": [
+     "75%",
+     "34%",
+     "43%",
+     "7.5%"
+    ],
+    "a": 0,
+    "why": "3 ÷ 4 = 0.75 = 75%."
+   },
+   {
+    "q": "If 2/3 = x/9, then x =",
+    "options": [
+     "6",
+     "3",
+     "9",
+     "4"
+    ],
+    "a": 0,
+    "why": "Cross-multiply: 3x = 18, so x = 6."
+   },
+   {
+    "q": "The absolute value |−8| is:",
+    "options": [
+     "8",
+     "−8",
+     "0",
+     "16"
+    ],
+    "a": 0,
+    "why": "Absolute value is distance from zero, always non-negative."
+   },
+   {
+    "q": "What is −10 ÷ 2?",
+    "options": [
+     "−5",
+     "5",
+     "−20",
+     "−8"
+    ],
+    "a": 0,
+    "why": "Different signs give a negative: 10÷2 = 5, so −5."
+   }
+  ]
+ },
+ "math-geometry": {
+  "title": "Geometry",
+  "subject": "Mathematics",
+  "level": "Grades 9-12",
+  "intro": "Geometry is the math of shapes, space, and measurement. It's where math gets visual — and where you learn to reason step by step from what you know to what you want to find.",
+  "cards": [
+   {
+    "h": "Points, lines, and angles",
+    "body": "A point marks a location; a line runs forever both ways; a ray starts at a point and goes one way; a segment has two ends. Two rays from a point form an angle, measured in degrees. A right angle is 90°, and a straight line is 180°."
+   },
+   {
+    "h": "Angles that go together",
+    "body": "Complementary angles add to 90°; supplementary angles add to 180°. When two lines cross, the opposite (vertical) angles are equal. These rules let you find unknown angles from ones you already know."
+   },
+   {
+    "h": "Triangles and the angle sum",
+    "body": "The three angles of any triangle always add to 180°. Triangles are named by sides (equilateral = all equal, isosceles = two equal, scalene = none) or by angles (a right triangle has one 90° angle). Know two angles and you know the third."
+   },
+   {
+    "h": "Area and perimeter",
+    "body": "Perimeter is the distance around a shape; area is the space inside. Rectangle area = length × width; triangle area = ½ × base × height; circle area = πr². A circle's perimeter (circumference) = 2πr. Keep your units consistent."
+   },
+   {
+    "h": "The Pythagorean theorem",
+    "body": "In a right triangle, a² + b² = c², where c is the longest side (the hypotenuse, opposite the right angle). A 3-4-5 triangle works: 3² + 4² = 9 + 16 = 25 = 5². It lets you find a missing side length."
+   }
+  ],
+  "flash": [
+   [
+    "Right angle",
+    "A 90° angle (a square corner)."
+   ],
+   [
+    "Complementary angles",
+    "Two angles that add to 90°."
+   ],
+   [
+    "Supplementary angles",
+    "Two angles that add to 180°."
+   ],
+   [
+    "Triangle angle sum",
+    "The three angles of a triangle add to 180°."
+   ],
+   [
+    "Hypotenuse",
+    "The longest side of a right triangle, opposite the right angle."
+   ],
+   [
+    "Pythagorean theorem",
+    "a² + b² = c² for a right triangle."
+   ],
+   [
+    "Perimeter",
+    "The distance around a shape."
+   ],
+   [
+    "Area of a circle",
+    "πr² (pi times radius squared)."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The angles of any triangle add up to:",
+    "options": [
+     "180°",
+     "90°",
+     "360°",
+     "100°"
+    ],
+    "a": 0,
+    "why": "Every triangle's three angles sum to 180°."
+   },
+   {
+    "q": "Two angles that add to 90° are:",
+    "options": [
+     "Complementary",
+     "Supplementary",
+     "Vertical",
+     "Right"
+    ],
+    "a": 0,
+    "why": "Complementary angles total 90°; supplementary total 180°."
+   },
+   {
+    "q": "In a right triangle with legs 3 and 4, the hypotenuse is:",
+    "options": [
+     "5",
+     "7",
+     "6",
+     "12"
+    ],
+    "a": 0,
+    "why": "3² + 4² = 25, and √25 = 5."
+   },
+   {
+    "q": "The area of a rectangle is:",
+    "options": [
+     "length × width",
+     "2(l + w)",
+     "½ base × height",
+     "πr²"
+    ],
+    "a": 0,
+    "why": "Area = length × width; 2(l+w) is its perimeter."
+   },
+   {
+    "q": "The hypotenuse of a right triangle is:",
+    "options": [
+     "The longest side, opposite the right angle",
+     "Any short side",
+     "The right angle itself",
+     "Always 90"
+    ],
+    "a": 0,
+    "why": "It's the side opposite the 90° angle and the longest."
+   },
+   {
+    "q": "A triangle with all three sides equal is:",
+    "options": [
+     "Equilateral",
+     "Scalene",
+     "Right",
+     "Isosceles"
+    ],
+    "a": 0,
+    "why": "Equilateral = all sides (and angles) equal."
+   }
+  ]
+ },
+ "math-trigonometry": {
+  "title": "Trigonometry",
+  "subject": "Mathematics",
+  "level": "Grades 9-12",
+  "intro": "Trigonometry studies the relationship between a triangle's angles and sides. With just three ratios — sine, cosine, and tangent — you can find distances and angles you can't measure directly, which is why it powers navigation, engineering, and physics.",
+  "cards": [
+   {
+    "h": "The three ratios: SOH CAH TOA",
+    "body": "In a right triangle, for a chosen angle: Sine = Opposite/Hypotenuse, Cosine = Adjacent/Hypotenuse, Tangent = Opposite/Adjacent. The mnemonic SOH-CAH-TOA keeps them straight. 'Opposite' and 'adjacent' are relative to the angle you pick."
+   },
+   {
+    "h": "Finding a missing side",
+    "body": "If you know an angle and one side, you can find another. To get the opposite side from the hypotenuse and the angle, use sine: opposite = hypotenuse × sin(angle). Pick the ratio that links the side you have to the side you want."
+   },
+   {
+    "h": "Finding a missing angle",
+    "body": "If you know two sides, find the angle with the inverse functions (sin⁻¹, cos⁻¹, tan⁻¹). When the opposite and adjacent sides are known, angle = tan⁻¹(opposite/adjacent)."
+   },
+   {
+    "h": "Degrees and radians",
+    "body": "Angles can be measured in degrees (a full circle = 360°) or radians (a full circle = 2π). Radians are the 'natural' unit in higher math. Half a circle = 180° = π radians. Convert by multiplying by π/180 or 180/π."
+   },
+   {
+    "h": "Beyond the triangle: the unit circle",
+    "body": "Sine and cosine also describe a point moving around a circle of radius 1 — cosine is the x-coordinate, sine the y-coordinate. That's why trig functions repeat (they're periodic) and why they model waves, sound, and anything that cycles."
+   }
+  ],
+  "flash": [
+   [
+    "Sine (sin)",
+    "Opposite over hypotenuse (SOH)."
+   ],
+   [
+    "Cosine (cos)",
+    "Adjacent over hypotenuse (CAH)."
+   ],
+   [
+    "Tangent (tan)",
+    "Opposite over adjacent (TOA)."
+   ],
+   [
+    "SOH CAH TOA",
+    "Mnemonic for the three trig ratios."
+   ],
+   [
+    "Hypotenuse",
+    "The longest side of a right triangle (opposite the right angle)."
+   ],
+   [
+    "Radian",
+    "An angle unit; a full circle is 2π radians."
+   ],
+   [
+    "Inverse trig",
+    "sin⁻¹, cos⁻¹, tan⁻¹ — find an angle from a ratio."
+   ],
+   [
+    "Unit circle",
+    "A circle of radius 1 used to define sine and cosine."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "SOH CAH TOA: sine equals",
+    "options": [
+     "Opposite / Hypotenuse",
+     "Adjacent / Hypotenuse",
+     "Opposite / Adjacent",
+     "Hypotenuse / Opposite"
+    ],
+    "a": 0,
+    "why": "SOH: Sine = Opposite / Hypotenuse."
+   },
+   {
+    "q": "Tangent of an angle equals:",
+    "options": [
+     "Opposite / Adjacent",
+     "Opposite / Hypotenuse",
+     "Adjacent / Opposite",
+     "Adjacent / Hypotenuse"
+    ],
+    "a": 0,
+    "why": "TOA: Tangent = Opposite / Adjacent."
+   },
+   {
+    "q": "A full circle in radians is:",
+    "options": [
+     "2π",
+     "π",
+     "360",
+     "180"
+    ],
+    "a": 0,
+    "why": "A full circle is 360° = 2π radians."
+   },
+   {
+    "q": "To find an angle from two known sides you use:",
+    "options": [
+     "Inverse trig functions",
+     "Only sine",
+     "The Pythagorean theorem only",
+     "Addition"
+    ],
+    "a": 0,
+    "why": "sin⁻¹, cos⁻¹, or tan⁻¹ return the angle from a ratio."
+   },
+   {
+    "q": "180° equals how many radians?",
+    "options": [
+     "π",
+     "2π",
+     "90",
+     "π/2"
+    ],
+    "a": 0,
+    "why": "Half a circle is 180° = π radians."
+   },
+   {
+    "q": "On the unit circle, the y-coordinate of a point is:",
+    "options": [
+     "sine of the angle",
+     "cosine of the angle",
+     "the radius",
+     "the tangent"
+    ],
+    "a": 0,
+    "why": "Sine gives the y-coordinate; cosine gives x."
+   }
+  ]
+ },
+ "math-pre-calculus": {
+  "title": "Pre-Calculus",
+  "subject": "Mathematics",
+  "level": "Grades 9-12",
+  "intro": "Pre-calculus pulls algebra and trig together and sharpens the big idea you'll need for calculus: the function. You'll get comfortable with how functions behave, how they graph, and the kinds that model growth, decay, and change.",
+  "cards": [
+   {
+    "h": "What a function is",
+    "body": "A function is a rule that takes an input and gives exactly one output. We write f(x) ('f of x'), where x is the input. f(x) = 2x + 1 means 'double the input and add one,' so f(3) = 7. Each input has one and only one output."
+   },
+   {
+    "h": "Reading a graph",
+    "body": "A function's graph pairs every input (x, horizontal) with its output (y = f(x), vertical). The x-intercepts are where it crosses the x-axis (output 0); the y-intercept is where x = 0. The slope shows how fast the output changes."
+   },
+   {
+    "h": "Families of functions",
+    "body": "Linear functions (f(x) = mx + b) graph as straight lines. Quadratics (f(x) = ax² + bx + c) graph as parabolas (U-shapes). Each family has a signature shape, so recognizing the form lets you predict the behavior."
+   },
+   {
+    "h": "Exponential and logarithmic functions",
+    "body": "Exponential functions (f(x) = a·bˣ) model fast growth or decay — populations, interest, radioactivity. Logarithms are their inverse: they answer 'what power gives this number?' log₂(8) = 3 because 2³ = 8. They turn multiplication into addition, which is why they're everywhere in science."
+   },
+   {
+    "h": "The idea of a limit",
+    "body": "A limit asks: what value does a function approach as the input gets closer and closer to some number? It's the central idea calculus is built on — it lets us talk precisely about instantaneous change and behavior right at a point, even where the function isn't defined."
+   }
+  ],
+  "flash": [
+   [
+    "Function",
+    "A rule giving exactly one output for each input."
+   ],
+   [
+    "f(x)",
+    "Function notation: the output of function f at input x."
+   ],
+   [
+    "Domain",
+    "All the allowed inputs of a function."
+   ],
+   [
+    "Range",
+    "All the possible outputs of a function."
+   ],
+   [
+    "Linear function",
+    "f(x) = mx + b; graphs as a straight line."
+   ],
+   [
+    "Quadratic function",
+    "f(x) = ax² + bx + c; graphs as a parabola."
+   ],
+   [
+    "Exponential function",
+    "f(x) = a·bˣ; models rapid growth or decay."
+   ],
+   [
+    "Limit",
+    "The value a function approaches as the input nears a point."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "A function gives each input:",
+    "options": [
+     "Exactly one output",
+     "Many outputs",
+     "No output",
+     "Two outputs"
+    ],
+    "a": 0,
+    "why": "By definition, one input maps to exactly one output."
+   },
+   {
+    "q": "If f(x) = 2x + 1, then f(3) =",
+    "options": [
+     "7",
+     "6",
+     "5",
+     "9"
+    ],
+    "a": 0,
+    "why": "2(3) + 1 = 7."
+   },
+   {
+    "q": "A quadratic function graphs as a:",
+    "options": [
+     "Parabola",
+     "Straight line",
+     "Circle",
+     "Single point"
+    ],
+    "a": 0,
+    "why": "f(x)=ax²+bx+c makes a U-shaped parabola."
+   },
+   {
+    "q": "log₂(8) =",
+    "options": [
+     "3",
+     "2",
+     "4",
+     "8"
+    ],
+    "a": 0,
+    "why": "2³ = 8, so log base 2 of 8 is 3."
+   },
+   {
+    "q": "The domain of a function is:",
+    "options": [
+     "Its allowed inputs",
+     "Its outputs",
+     "Its slope",
+     "Its graph"
+    ],
+    "a": 0,
+    "why": "Domain = the set of valid inputs; range = the outputs."
+   },
+   {
+    "q": "A limit describes the value a function:",
+    "options": [
+     "Approaches as the input nears a point",
+     "Equals everywhere",
+     "Starts at",
+     "Can never reach"
+    ],
+    "a": 0,
+    "why": "It's the value approached as x gets close to a number."
+   }
+  ]
+ },
+ "math-calculus": {
+  "title": "Calculus",
+  "subject": "Mathematics",
+  "level": "College",
+  "intro": "Calculus is the math of change. Where algebra handles fixed quantities, calculus handles things that move and vary — speed at an instant, the area under a curve, how fast anything grows. Its two big ideas are the derivative and the integral.",
+  "cards": [
+   {
+    "h": "The derivative: instantaneous rate of change",
+    "body": "The derivative measures how fast a function is changing at a single instant — the slope of the curve at a point. If position is a function of time, its derivative is velocity. It answers 'how fast, right now?' rather than 'how fast on average?'"
+   },
+   {
+    "h": "Slope of a curve",
+    "body": "For a straight line, slope is constant and easy (rise over run). For a curve, the slope changes everywhere. The derivative uses limits to find the slope of the line that just touches the curve at one point — the tangent line."
+   },
+   {
+    "h": "A basic derivative rule",
+    "body": "For power functions, the derivative of xⁿ is n·xⁿ⁻¹. So the derivative of x² is 2x, and of x³ is 3x². This 'power rule' is one of the first tools you learn for computing derivatives quickly."
+   },
+   {
+    "h": "The integral: accumulation and area",
+    "body": "The integral is the derivative's opposite. It adds up tiny pieces to find a total — most visibly, the area under a curve. If the derivative breaks change into instants, the integral builds a total back up from them."
+   },
+   {
+    "h": "The two are inverses",
+    "body": "The Fundamental Theorem of Calculus says differentiation and integration undo each other — finding the rate of change and finding the accumulated total are two sides of the same coin. That link is what makes calculus so powerful across science and engineering."
+   }
+  ],
+  "flash": [
+   [
+    "Calculus",
+    "The mathematics of change and accumulation."
+   ],
+   [
+    "Derivative",
+    "The instantaneous rate of change (slope at a point)."
+   ],
+   [
+    "Tangent line",
+    "The line that just touches a curve at one point."
+   ],
+   [
+    "Power rule",
+    "The derivative of xⁿ is n·xⁿ⁻¹."
+   ],
+   [
+    "Integral",
+    "Accumulation; the area under a curve."
+   ],
+   [
+    "Velocity",
+    "The derivative of position with respect to time."
+   ],
+   [
+    "Fundamental Theorem",
+    "Differentiation and integration are inverse operations."
+   ],
+   [
+    "Limit",
+    "The idea calculus is built on — approaching a value."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The derivative measures:",
+    "options": [
+     "Instantaneous rate of change",
+     "Total area",
+     "The average only",
+     "A fixed number"
+    ],
+    "a": 0,
+    "why": "It's the rate of change at a single instant — the slope at a point."
+   },
+   {
+    "q": "The derivative of x² is:",
+    "options": [
+     "2x",
+     "x",
+     "x³",
+     "2"
+    ],
+    "a": 0,
+    "why": "Power rule: n·xⁿ⁻¹ = 2·x¹ = 2x."
+   },
+   {
+    "q": "The integral is most visibly used to find:",
+    "options": [
+     "Area under a curve",
+     "The slope at a point",
+     "A single input",
+     "The y-intercept"
+    ],
+    "a": 0,
+    "why": "Integration accumulates pieces — classically, the area under a curve."
+   },
+   {
+    "q": "If position is a function of time, its derivative is:",
+    "options": [
+     "Velocity",
+     "Area",
+     "Acceleration only",
+     "Total distance"
+    ],
+    "a": 0,
+    "why": "The rate of change of position is velocity."
+   },
+   {
+    "q": "Differentiation and integration are:",
+    "options": [
+     "Inverse operations",
+     "The same operation",
+     "Unrelated",
+     "Both just addition"
+    ],
+    "a": 0,
+    "why": "The Fundamental Theorem says they undo each other."
+   },
+   {
+    "q": "The derivative of x³ is:",
+    "options": [
+     "3x²",
+     "x²",
+     "3x",
+     "x⁴"
+    ],
+    "a": 0,
+    "why": "Power rule: 3·x² = 3x²."
+   }
+  ]
+ },
+ "math-statistics": {
+  "title": "Statistics",
+  "subject": "Mathematics",
+  "level": "College",
+  "intro": "Statistics is the science of collecting, summarizing, and drawing conclusions from data. In a world drowning in numbers and claims, it's the toolkit for telling what the data actually says from what someone wants you to think it says.",
+  "cards": [
+   {
+    "h": "Center: mean, median, mode",
+    "body": "Three ways to describe a 'typical' value. The mean is the average (add them up, divide by how many). The median is the middle value when sorted. The mode is the most common value. The median resists being thrown off by extreme outliers; the mean does not."
+   },
+   {
+    "h": "Spread: range and standard deviation",
+    "body": "Center alone isn't enough — you also need how spread out the data is. The range is max minus min. Standard deviation measures how far values typically sit from the mean: small means tightly clustered, large means scattered. Two data sets can share a mean yet differ wildly in spread."
+   },
+   {
+    "h": "Probability basics",
+    "body": "Probability measures how likely something is, from 0 (impossible) to 1 (certain). For equally likely outcomes, it's favorable outcomes divided by total outcomes — rolling a 4 on a die is 1/6. The probabilities of all possible outcomes add up to 1."
+   },
+   {
+    "h": "The normal distribution",
+    "body": "Many things (heights, test scores, measurement errors) follow a bell-shaped 'normal' curve — most values cluster near the mean, with fewer far out. In a normal distribution about 68% of values fall within one standard deviation of the mean. It underlies a huge amount of statistics."
+   },
+   {
+    "h": "Correlation vs. causation",
+    "body": "Statistics can show that two things move together (correlation), but that alone never proves one causes the other. Mistaking correlation for causation is the most common way numbers mislead — always ask whether something else could explain the link."
+   }
+  ],
+  "flash": [
+   [
+    "Mean",
+    "The average: the sum of values divided by their count."
+   ],
+   [
+    "Median",
+    "The middle value when data is sorted."
+   ],
+   [
+    "Mode",
+    "The most frequently occurring value."
+   ],
+   [
+    "Range",
+    "The difference between the largest and smallest value."
+   ],
+   [
+    "Standard deviation",
+    "A measure of how spread out data is from the mean."
+   ],
+   [
+    "Probability",
+    "How likely an event is, from 0 (impossible) to 1 (certain)."
+   ],
+   [
+    "Normal distribution",
+    "The bell-shaped curve many data sets follow."
+   ],
+   [
+    "Outlier",
+    "A value far from the rest of the data."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The mean is:",
+    "options": [
+     "The average",
+     "The middle value",
+     "The most common value",
+     "The largest value"
+    ],
+    "a": 0,
+    "why": "Mean = sum of values ÷ how many there are."
+   },
+   {
+    "q": "Which measure of center is least affected by an extreme outlier?",
+    "options": [
+     "Median",
+     "Mean",
+     "Range",
+     "Sum"
+    ],
+    "a": 0,
+    "why": "The median is the middle value, so one extreme doesn't drag it."
+   },
+   {
+    "q": "The probability of rolling a 4 on a fair six-sided die is:",
+    "options": [
+     "1/6",
+     "1/4",
+     "4/6",
+     "1/2"
+    ],
+    "a": 0,
+    "why": "One favorable outcome out of six equally likely ones."
+   },
+   {
+    "q": "Standard deviation measures:",
+    "options": [
+     "How spread out data is",
+     "The average",
+     "The middle value",
+     "The most common value"
+    ],
+    "a": 0,
+    "why": "It captures the typical distance of values from the mean."
+   },
+   {
+    "q": "In a normal distribution, about 68% of values fall within:",
+    "options": [
+     "One standard deviation of the mean",
+     "The exact mean",
+     "Three standard deviations",
+     "The range"
+    ],
+    "a": 0,
+    "why": "The 68-95-99.7 rule: ~68% within 1 SD of the mean."
+   },
+   {
+    "q": "Two things moving together proves:",
+    "options": [
+     "Correlation, not necessarily causation",
+     "One causes the other",
+     "Nothing at all",
+     "They are identical"
+    ],
+    "a": 0,
+    "why": "Correlation alone doesn't establish that one causes the other."
+   }
+  ]
  }
 };
