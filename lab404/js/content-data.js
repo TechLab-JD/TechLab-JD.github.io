@@ -5368,131 +5368,282 @@ window.LAB404_CONTENT = {
  "fitness-strength-training": {
   "title": "Strength Training",
   "subject": "Fitness & Wellness",
-  "level": "All levels",
-  "disclaimer": "General fitness information, not medical advice. Check with a doctor before starting a new exercise program.",
-  "intro": "Strength training makes you stronger, protects your joints and bones, and helps with everything from daily tasks to long-term health. You don't need a gym full of machines — a few basic movements done consistently do the job.",
-  "cards": [
+  "level": "All ages",
+  "objectives": [
+   "Understand what strength training is and its benefits",
+   "Understand progressive overload (the key principle)",
+   "Know the basic movement patterns and major muscle groups",
+   "Structure sets, reps, and rest for your goal",
+   "Train safely with good form and recovery"
+  ],
+  "intro": "Strength training (resistance training) is exercise that makes your muscles work against resistance to build strength, muscle, and overall health. It's for everyone, not just athletes — it strengthens bones, boosts metabolism, and keeps you capable as you age. This lesson covers how it works and how to start safely. General education, not medical advice — check with a doctor before starting a new program.",
+  "sections": [
    {
-    "h": "Why strength matters",
-    "body": "Lifting (or using your body weight) builds muscle, strengthens bones, boosts metabolism, and keeps you capable as you age. It helps nearly everyone, whatever the goal — fat loss, health, or athletics."
+    "h": "What strength training is and why",
+    "body": "Strength training is any exercise where your muscles work against a resistance — weights, resistance bands, or your own body weight (push-ups, squats). When you challenge a muscle beyond its comfort, it adapts by getting stronger and, over time, bigger. This is the basic mechanism behind all resistance training.\n\nThe benefits go far beyond looking fit. Strength training builds and preserves muscle (which we lose with age), strengthens bones (reducing fracture risk), raises your resting metabolism, improves everyday function and balance, supports joint health, and benefits mood and blood-sugar control. It's one of the highest-value things a person can do for long-term health — and you don't need a gym to start; bodyweight exercises work.",
+    "tip": "Strength training = muscles working against resistance (weights, bands, or bodyweight). Benefits bones, metabolism, aging, and mood — for everyone."
    },
    {
-    "h": "The basic movement patterns",
-    "body": "Most of strength training is a handful of patterns: push (push-ups, overhead press), pull (rows, pull-ups), squat, hinge (deadlift), and carry. Train these and you cover the whole body."
+    "h": "Progressive overload: the key principle",
+    "body": "The single most important principle in strength training is progressive overload: to keep getting stronger, you must gradually increase the demand on your muscles over time. If you always lift the same weight for the same reps, your body has no reason to adapt further — it's already handled that load.\n\nYou can progress in several ways: add weight, do more reps or sets, improve your form or range of motion, or reduce rest between sets. The increases should be gradual — too much too soon causes injury. The principle is simple but powerful: challenge the muscle a little more over time, recover, and it rebuilds stronger. Almost every effective program is just a structured way of applying progressive overload.",
+    "tip": "Progressive overload: gradually increase the challenge (weight, reps, sets) over time. Without it, you stop getting stronger."
+   },
+   {
+    "h": "Movement patterns and muscle groups",
+    "body": "Rather than thinking muscle-by-muscle, it helps to train by movement patterns, which also hit the major muscle groups. The big ones: a squat (legs/glutes), a hinge like a deadlift (back of the legs, lower back), a push like a push-up or press (chest, shoulders, triceps), a pull like a row or pull-up (back, biceps), and a carry/core movement (midsection, stability).\n\nTraining these foundational patterns works your whole body efficiently with just a few exercises. The major muscle groups are legs, back, chest, shoulders, arms, and core. A balanced program hits them all (especially balancing 'push' and 'pull') rather than, say, only training the muscles you can see in the mirror — imbalances cause injury and poor posture.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Rep ranges and rest times mapped to training goals\"><rect x=\"8\" y=\"5\" width=\"128\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"136\" y=\"5\" width=\"106\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">1–6 reps (heavy)</text><text x=\"142\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">maximal strength</text><rect x=\"8\" y=\"27\" width=\"128\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"136\" y=\"27\" width=\"106\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">6–12 reps</text><text x=\"142\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">muscle size (hypertrophy)</text><rect x=\"8\" y=\"49\" width=\"128\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"136\" y=\"49\" width=\"106\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">12+ reps (lighter)</text><text x=\"142\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">muscular endurance</text><rect x=\"8\" y=\"71\" width=\"128\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"136\" y=\"71\" width=\"106\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Rest 2–3 min</text><text x=\"142\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">heavy strength sets</text><rect x=\"8\" y=\"93\" width=\"128\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"136\" y=\"93\" width=\"106\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Rest 30–90 sec</text><text x=\"142\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">endurance / size</text></svg>",
+    "caption": "Rep ranges and rest nudge your results toward strength, size, or endurance — pick for your goal.",
+    "example": "Full-body basics: squat, hinge (deadlift), push (push-up/press), pull (row/pull-up), carry/core. These few cover everything.",
+    "tip": "Train movement patterns: squat, hinge, push, pull, carry/core. Balance push and pull; work the whole body, not just the mirror muscles."
+   },
+   {
+    "h": "Sets, reps, and rest",
+    "body": "How you structure your training depends on your goal. A 'rep' is one repetition of an exercise; a 'set' is a group of reps done in a row. The rep range you use nudges your results: roughly, lower reps with heavier weight (about 1–6) builds maximal strength; a middle range (about 6–12) is good for building muscle size; and higher reps with lighter weight (12+) builds muscular endurance. For general fitness, the middle range is a great default.\n\nRest between sets matters too: longer rest (2–3 min) for heavy strength work, shorter (30–90 sec) for endurance/muscle-building. A simple beginner template: pick a handful of compound exercises covering the main patterns, do 2–4 sets of 8–12 reps each, 2–3 times a week, and apply progressive overload. Consistency beats any perfect program.",
+    "tip": "Reps 1–6 = strength, 6–12 = muscle size, 12+ = endurance. Beginners: 2–4 sets of 8–12 reps, 2–3x/week, add challenge over time."
+   },
+   {
+    "h": "Form, safety, and recovery",
+    "body": "Good form is the foundation — it targets the right muscles and prevents injury. Learn proper technique before adding heavy weight (videos, a trainer, or a knowledgeable friend help); start light to groove the movement. Warm up before training, and never sacrifice form to lift more — ego lifting is how people get hurt.\n\nRecovery is when you actually get stronger: muscles rebuild during rest, not during the workout. Give each muscle group about 48 hours before training it hard again, sleep well, and eat enough protein. Don't train through sharp pain (soreness is normal; sharp pain isn't). Progress comes from the cycle of challenge and recovery, repeated consistently over months. Start where you are, be patient, and the results compound.",
+    "tip": "Form before weight (start light, learn technique). You grow during RECOVERY — rest ~48h per muscle, sleep, and eat enough protein."
+   }
+  ],
+  "cards": [
+   {
+    "h": "What & why",
+    "body": "Muscles vs resistance (weights/bands/bodyweight); builds strength, bone, metabolism, balance, mood — for everyone."
    },
    {
     "h": "Progressive overload",
-    "body": "Muscles grow when you gradually ask more of them — a little more weight, another rep, or better form over time. Doing the exact same workout forever stops producing results. Push a bit past comfortable, safely."
+    "body": "Gradually increase the challenge (weight/reps/sets) over time, or you stop progressing."
    },
    {
-    "h": "Form before weight",
-    "body": "Good form prevents injury and works the right muscles. Learn a movement light, keep your core braced, control the lowering part, and never sacrifice form to lift heavier. Ego lifting is how people get hurt."
+    "h": "Movement patterns",
+    "body": "Squat, hinge, push, pull, carry/core cover the whole body. Balance push and pull."
    },
    {
-    "h": "Recovery is where you grow",
-    "body": "Muscles rebuild stronger during rest, not during the workout. Train a muscle group 2–3 times a week, sleep well, eat enough protein, and give sore muscles a day or two. More isn't always better."
+    "h": "Sets/reps/rest",
+    "body": "1–6 strength, 6–12 size, 12+ endurance. Beginners: 2–4 × 8–12, 2–3x/week."
+   },
+   {
+    "h": "Form & recovery",
+    "body": "Form before weight; you grow during recovery — rest ~48h/muscle, sleep, eat protein."
    }
   ],
   "flash": [
    [
     "Strength training",
-    "Exercise that builds muscle and strength against resistance."
+    "Exercising muscles against resistance to build strength."
    ],
    [
-    "Rep",
-    "One complete repetition of an exercise."
-   ],
-   [
-    "Set",
-    "A group of consecutive reps."
+    "Resistance",
+    "The load muscles work against (weight, band, bodyweight)."
    ],
    [
     "Progressive overload",
-    "Gradually increasing demand to keep gaining strength."
+    "Gradually increasing the training demand over time."
+   ],
+   [
+    "Rep",
+    "One repetition of an exercise."
+   ],
+   [
+    "Set",
+    "A group of reps done in a row."
    ],
    [
     "Compound exercise",
-    "A move using multiple joints/muscles (squat, push-up)."
+    "A move working several muscle groups (squat, row)."
+   ],
+   [
+    "Squat",
+    "A lower-body pattern (legs/glutes)."
+   ],
+   [
+    "Hinge",
+    "A hip-bending pattern (deadlift; hamstrings/back)."
+   ],
+   [
+    "Push / pull",
+    "Pressing away / rowing toward — balance both."
+   ],
+   [
+    "Muscle group",
+    "Legs, back, chest, shoulders, arms, core."
+   ],
+   [
+    "Recovery",
+    "Rest when muscles rebuild stronger (~48h/muscle)."
    ],
    [
     "Form",
     "Correct technique that targets muscles and prevents injury."
-   ],
-   [
-    "Recovery",
-    "Rest that lets muscles rebuild stronger."
-   ],
-   [
-    "Bodyweight training",
-    "Strength work using your own body as resistance."
    ]
   ],
   "quiz": [
    {
-    "q": "Muscles grow stronger mainly during:",
+    "q": "Strength training means muscles working against:",
     "options": [
-     "Rest and recovery",
-     "The workout itself",
-     "Cardio only",
-     "Stretching only"
+     "Resistance",
+     "Nothing",
+     "Only machines",
+     "Only the floor"
     ],
     "a": 0,
-    "why": "Muscles rebuild during rest, so recovery matters as much as training."
+    "why": "Weights, bands, or bodyweight all provide resistance."
    },
    {
-    "q": "'Progressive overload' means:",
+    "q": "A benefit of strength training is:",
     "options": [
-     "Gradually doing a bit more over time",
-     "Max weight every day",
-     "Never changing routine",
-     "Only using machines"
+     "Stronger bones and metabolism",
+     "Weaker muscles",
+     "Less balance",
+     "Nothing"
     ],
     "a": 0,
-    "why": "Steadily increasing demand keeps you getting stronger."
+    "why": "It builds muscle, bone, metabolism, balance, and mood."
    },
    {
-    "q": "When learning a new lift, prioritize:",
+    "q": "Do you need a gym to start?",
     "options": [
-     "Good form",
-     "Max weight",
-     "Speed",
-     "Looking strong"
+     "No — bodyweight exercises work",
+     "Yes, always",
+     "Only machines work",
+     "You need a trainer"
     ],
     "a": 0,
-    "why": "Form first prevents injury and trains the right muscles."
+    "why": "Push-ups, squats, and more build strength anywhere."
    },
    {
-    "q": "Which is a compound (multi-joint) exercise?",
+    "q": "The key principle for continued progress is:",
+    "options": [
+     "Progressive overload",
+     "Lifting the same forever",
+     "Never resting",
+     "Max weight day one"
+    ],
+    "a": 0,
+    "why": "Gradually increasing the challenge drives adaptation."
+   },
+   {
+    "q": "Which is a way to apply progressive overload?",
+    "options": [
+     "Add weight, reps, or sets over time",
+     "Always do the same",
+     "Skip workouts",
+     "Lift less each week"
+    ],
+    "a": 0,
+    "why": "Increase the demand gradually."
+   },
+   {
+    "q": "Which is a basic movement pattern?",
     "options": [
      "Squat",
-     "Bicep curl only",
-     "Wrist curl",
-     "Calf raise only"
+     "Blinking",
+     "Sitting still",
+     "Sleeping"
     ],
     "a": 0,
-    "why": "A squat uses many muscles/joints; isolation moves use one."
+    "why": "Squat, hinge, push, pull, carry/core are the patterns."
    },
    {
-    "q": "A reasonable frequency to train a muscle group is:",
+    "q": "A balanced program especially balances:",
     "options": [
-     "2–3 times a week",
-     "Once a month",
-     "Every hour",
-     "Never twice"
+     "Push and pull",
+     "Only mirror muscles",
+     "Only legs",
+     "Only arms"
     ],
     "a": 0,
-    "why": "2–3 times weekly with recovery works for most people."
+    "why": "Imbalances cause injury and poor posture."
    },
    {
-    "q": "You can build real strength at home with:",
+    "q": "A 'set' is:",
     "options": [
-     "Bodyweight exercises",
-     "Nothing without machines",
-     "Only running",
-     "Only stretching"
+     "A group of reps done in a row",
+     "One repetition",
+     "A rest period",
+     "A machine"
     ],
     "a": 0,
-    "why": "Push-ups, squats and the like build strength with no equipment."
+    "why": "Reps make up a set."
+   },
+   {
+    "q": "Heavy weight for 1–6 reps mainly builds:",
+    "options": [
+     "Maximal strength",
+     "Endurance",
+     "Flexibility",
+     "Cardio"
+    ],
+    "a": 0,
+    "why": "Low reps/heavy = strength."
+   },
+   {
+    "q": "A good default rep range for general fitness is:",
+    "options": [
+     "6–12",
+     "1–2",
+     "50+",
+     "0"
+    ],
+    "a": 0,
+    "why": "The middle range builds muscle and general fitness well."
+   },
+   {
+    "q": "A simple beginner plan is:",
+    "options": [
+     "2–4 sets of 8–12 reps, 2–3x/week",
+     "1 set once a month",
+     "Max singles daily",
+     "Never progress"
+    ],
+    "a": 0,
+    "why": "Cover the main patterns and progress over time."
+   },
+   {
+    "q": "Before adding heavy weight, you should:",
+    "options": [
+     "Learn proper form",
+     "Lift as heavy as possible",
+     "Skip warming up",
+     "Hold your breath"
+    ],
+    "a": 0,
+    "why": "Form targets the right muscles and prevents injury."
+   },
+   {
+    "q": "You actually get stronger during:",
+    "options": [
+     "Recovery (rest)",
+     "The set itself",
+     "Warm-up only",
+     "Sleep deprivation"
+    ],
+    "a": 0,
+    "why": "Muscles rebuild during rest, not the workout."
+   },
+   {
+    "q": "How long should a muscle group rest before hard training again?",
+    "options": [
+     "About 48 hours",
+     "5 minutes",
+     "2 weeks",
+     "Never"
+    ],
+    "a": 0,
+    "why": "~48h lets it recover and rebuild."
+   },
+   {
+    "q": "Sharp pain during a lift means:",
+    "options": [
+     "Stop — it's not normal soreness",
+     "Push harder",
+     "It's good",
+     "Ignore it"
+    ],
+    "a": 0,
+    "why": "Soreness is normal; sharp pain is a warning."
    }
   ]
  },
@@ -20241,6 +20392,1132 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Clear reasoning about what matters is the habit."
+   }
+  ]
+ },
+ "fitness-cardio": {
+  "title": "Cardio",
+  "subject": "Fitness & Wellness",
+  "level": "All ages",
+  "objectives": [
+   "Understand what cardio is and its benefits",
+   "Understand aerobic vs anaerobic exercise",
+   "Understand heart-rate zones and intensity",
+   "Use the FITT principle to plan cardio",
+   "Build a sustainable cardio habit"
+  ],
+  "intro": "Cardio (cardiovascular or aerobic exercise) is any activity that raises your heart rate and breathing for a sustained period — walking, running, cycling, swimming, dancing. It strengthens your heart, lungs, and circulation, and is one of the best things you can do for your health. This lesson covers how cardio works and how to do it well. General education, not medical advice.",
+  "sections": [
+   {
+    "h": "What cardio is and why it matters",
+    "body": "Cardiovascular exercise ('cardio') is sustained activity that elevates your heart rate and breathing — your heart and lungs work harder to deliver oxygen to your muscles. Over time, this makes the whole cardiovascular system more efficient: a stronger heart, better circulation, and greater endurance. Common forms are walking, jogging, cycling, swimming, rowing, and dancing.\n\nThe health benefits are enormous and well-proven: cardio lowers the risk of heart disease (the leading cause of death), helps control weight and blood pressure, improves blood sugar, boosts mood and energy, and improves sleep. Health guidelines commonly recommend about 150 minutes of moderate cardio per week (like a brisk 30-minute walk, five days a week). It's accessible to almost everyone — walking is free and counts.",
+    "tip": "Cardio = sustained activity raising your heart rate (walking, running, cycling). ~150 min/week of moderate cardio is a common goal. Walking counts."
+   },
+   {
+    "h": "Aerobic vs anaerobic",
+    "body": "Exercise uses energy in two broad ways. Aerobic ('with oxygen') exercise is steady, sustained effort your body fuels using oxygen — a jog, a bike ride, a brisk walk. You can keep it up for a long time, and it's the heart of 'cardio.' Anaerobic ('without oxygen') exercise is short, intense bursts your body fuels without enough oxygen — sprinting, heavy lifting — which you can only sustain briefly.\n\nMost cardio is aerobic, but high-intensity bursts tap the anaerobic system. Both have value: steady aerobic work builds endurance and heart health; short intense efforts (like interval training) build fitness efficiently and burn calories. Understanding the difference helps you train on purpose — long and steady, or short and hard, depending on your goal and time.",
+    "tip": "Aerobic = steady, sustained, oxygen-fueled (jogging). Anaerobic = short, intense bursts (sprinting). Most cardio is aerobic; both help."
+   },
+   {
+    "h": "Heart-rate zones and intensity",
+    "body": "Intensity — how hard you're working — is measured well by heart rate. Your maximum heart rate is roughly 220 minus your age. Trainers talk about zones as percentages of that max: light activity (about 50–60%), moderate 'aerobic' (about 60–70%), vigorous/cardio (about 70–85%), and peak/anaerobic (85%+, only sustainable briefly). Moderate-to-vigorous is where most health benefits come from.\n\nYou don't need a monitor to gauge intensity: the 'talk test' works well — at moderate intensity you can talk but not sing; at vigorous you can only say a few words. Beginners should build up gradually and spend most time at light-to-moderate intensity, adding harder efforts over time. The right intensity is challenging but sustainable for your current fitness.",
+    "visual": "<svg viewBox=\"0 0 250 88\" width=\"240\" role=\"img\" aria-label=\"Heart-rate training zones as a percentage of maximum heart rate: light, moderate, vigorous, and peak\"><rect x=\"12\" y=\"22\" width=\"45\" height=\"24\" fill=\"rgba(57,227,200,.3)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><rect x=\"57\" y=\"22\" width=\"45\" height=\"24\" fill=\"rgba(79,156,240,.3)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"102\" y=\"22\" width=\"68\" height=\"24\" fill=\"rgba(232,140,70,.32)\" stroke=\"#e8842a\" stroke-width=\"0.8\"/><rect x=\"170\" y=\"22\" width=\"68\" height=\"24\" fill=\"rgba(240,90,90,.32)\" stroke=\"#f05a5a\" stroke-width=\"0.8\"/><text x=\"34\" y=\"58\" text-anchor=\"middle\" fill=\"#39e3c8\" font-size=\"8\">Light</text><text x=\"79\" y=\"58\" text-anchor=\"middle\" fill=\"#4f9cf0\" font-size=\"8\">Moderate</text><text x=\"136\" y=\"58\" text-anchor=\"middle\" fill=\"#e8a046\" font-size=\"8\">Vigorous</text><text x=\"204\" y=\"58\" text-anchor=\"middle\" fill=\"#f05a5a\" font-size=\"8\">Peak</text><text x=\"12\" y=\"17\" fill=\"#9aa6c0\" font-size=\"7.5\">50%</text><text x=\"170\" y=\"17\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"7.5\">85%</text><text x=\"238\" y=\"17\" text-anchor=\"end\" fill=\"#9aa6c0\" font-size=\"7.5\">100%</text><text x=\"125\" y=\"78\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">% of max heart rate (≈ 220 − your age); most benefit = moderate–vigorous</text></svg>",
+    "caption": "Heart-rate zones as a % of your max (≈ 220 − age). Most health benefit comes from moderate–vigorous.",
+    "example": "Max HR ≈ 220 − your age. 'Talk test': moderate = can talk not sing; vigorous = only a few words at a time.",
+    "tip": "Max heart rate ≈ 220 − age. Moderate-to-vigorous (60–85%) gives most benefits. No monitor? Use the talk test."
+   },
+   {
+    "h": "The FITT principle",
+    "body": "A simple way to plan cardio (and adjust it over time) is the FITT principle: Frequency (how often), Intensity (how hard), Time (how long), and Type (what kind). For general health, that might be: Frequency 3–5 days/week, Intensity moderate, Time 30 minutes, Type whatever you enjoy and will stick with.\n\nFITT is also how you progress: when a routine gets easy, increase one variable — go more often, push a bit harder, go longer, or try a new type. This is cardio's version of progressive overload. Varying the type also keeps things interesting and reduces overuse injuries. Adjusting FITT lets you build a plan that fits your schedule, fitness, and goals, and keeps it improving.",
+    "tip": "FITT = Frequency, Intensity, Time, Type. Plan cardio with it, and progress by bumping one variable when it gets easy."
+   },
+   {
+    "h": "Building a cardio habit",
+    "body": "The best cardio is the kind you'll actually do consistently, so the most important factor is sustainability. Pick activities you enjoy (or at least tolerate), make them convenient, and start small — even 10-minute walks count and build the habit. Consistency over months matters far more than any single hard session.\n\nTips that help: schedule it like an appointment, make it social or entertaining (a friend, music, a podcast), track your progress for motivation, and build gradually to avoid burnout and injury. If you're very sedentary or have health conditions, start gently and check with a doctor. Remember that any movement is better than none — the biggest health jump is from doing nothing to doing a little. Just keep moving, regularly.",
+    "tip": "The best cardio is what you'll actually keep doing. Start small, pick what you enjoy, be consistent — any movement beats none."
+   }
+  ],
+  "cards": [
+   {
+    "h": "What & why",
+    "body": "Sustained heart-rate-raising activity; lowers heart-disease risk, aids weight/mood/sleep. ~150 min/week moderate."
+   },
+   {
+    "h": "Aerobic vs anaerobic",
+    "body": "Aerobic = steady, oxygen-fueled (jog); anaerobic = short intense bursts (sprint). Most cardio is aerobic."
+   },
+   {
+    "h": "Heart-rate zones",
+    "body": "Max HR ≈ 220 − age; moderate–vigorous (60–85%) gives most benefit. Use the talk test."
+   },
+   {
+    "h": "FITT",
+    "body": "Frequency, Intensity, Time, Type. Plan with it; progress by bumping one variable."
+   },
+   {
+    "h": "Habit",
+    "body": "Pick what you enjoy, start small, be consistent. Any movement beats none."
+   }
+  ],
+  "flash": [
+   [
+    "Cardio",
+    "Sustained activity that raises heart rate and breathing."
+   ],
+   [
+    "Aerobic exercise",
+    "Steady, sustained, oxygen-fueled exercise."
+   ],
+   [
+    "Anaerobic exercise",
+    "Short, intense bursts fueled without enough oxygen."
+   ],
+   [
+    "Heart rate",
+    "How many times the heart beats per minute."
+   ],
+   [
+    "Maximum heart rate",
+    "Roughly 220 minus your age."
+   ],
+   [
+    "Moderate intensity",
+    "Working hard enough to talk but not sing."
+   ],
+   [
+    "Interval training",
+    "Alternating hard bursts with easier recovery."
+   ],
+   [
+    "FITT principle",
+    "Frequency, Intensity, Time, Type — for planning cardio."
+   ],
+   [
+    "Endurance",
+    "The ability to sustain activity over time."
+   ],
+   [
+    "Talk test",
+    "Gauging intensity by how easily you can talk."
+   ],
+   [
+    "150 minutes",
+    "A common weekly moderate-cardio goal."
+   ],
+   [
+    "Resting heart rate",
+    "Your heart rate at rest; lower often means fitter."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Cardio is activity that:",
+    "options": [
+     "Raises your heart rate for a sustained time",
+     "Only builds muscle",
+     "Requires no movement",
+     "Is only for athletes"
+    ],
+    "a": 0,
+    "why": "It elevates heart rate and breathing."
+   },
+   {
+    "q": "A commonly recommended amount of moderate cardio is:",
+    "options": [
+     "~150 minutes per week",
+     "5 minutes per year",
+     "10 hours per day",
+     "None"
+    ],
+    "a": 0,
+    "why": "Like a brisk 30-min walk, 5 days a week."
+   },
+   {
+    "q": "Does walking count as cardio?",
+    "options": [
+     "Yes",
+     "No",
+     "Only if running",
+     "Only in a gym"
+    ],
+    "a": 0,
+    "why": "Brisk walking raises heart rate and is free."
+   },
+   {
+    "q": "Steady, sustained, oxygen-fueled exercise is:",
+    "options": [
+     "Aerobic",
+     "Anaerobic",
+     "Stretching",
+     "Static"
+    ],
+    "a": 0,
+    "why": "Aerobic = 'with oxygen,' sustainable."
+   },
+   {
+    "q": "Short, intense bursts (like sprinting) are:",
+    "options": [
+     "Anaerobic",
+     "Aerobic",
+     "Flexibility",
+     "Recovery"
+    ],
+    "a": 0,
+    "why": "Anaerobic efforts can only be sustained briefly."
+   },
+   {
+    "q": "Your maximum heart rate is roughly:",
+    "options": [
+     "220 minus your age",
+     "Your age times 10",
+     "Always 200",
+     "100 plus your weight"
+    ],
+    "a": 0,
+    "why": "A common estimate is 220 − age."
+   },
+   {
+    "q": "Most health benefits come from which intensity?",
+    "options": [
+     "Moderate to vigorous",
+     "Only peak",
+     "Only resting",
+     "None"
+    ],
+    "a": 0,
+    "why": "About 60–85% of max HR."
+   },
+   {
+    "q": "The 'talk test' says moderate intensity is when you can:",
+    "options": [
+     "Talk but not sing",
+     "Sing easily",
+     "Say nothing",
+     "Sprint"
+    ],
+    "a": 0,
+    "why": "Vigorous = only a few words at a time."
+   },
+   {
+    "q": "FITT stands for:",
+    "options": [
+     "Frequency, Intensity, Time, Type",
+     "Fast, Intense, Tough, Tiring",
+     "Fitness In Ten Tries",
+     "Focus, Impact, Train, Tone"
+    ],
+    "a": 0,
+    "why": "A framework for planning cardio."
+   },
+   {
+    "q": "To progress with FITT, you:",
+    "options": [
+     "Bump one variable when it gets easy",
+     "Never change anything",
+     "Always max out",
+     "Stop exercising"
+    ],
+    "a": 0,
+    "why": "It's cardio's progressive overload."
+   },
+   {
+    "q": "Alternating hard bursts with easier recovery is:",
+    "options": [
+     "Interval training",
+     "Static stretching",
+     "Resting",
+     "A warm-up only"
+    ],
+    "a": 0,
+    "why": "Intervals build fitness efficiently."
+   },
+   {
+    "q": "The most important factor in a cardio habit is:",
+    "options": [
+     "Sustainability (you'll keep doing it)",
+     "Buying gear",
+     "One hard session",
+     "Perfection"
+    ],
+    "a": 0,
+    "why": "Consistency over months matters most."
+   },
+   {
+    "q": "A good way to start if you're sedentary is:",
+    "options": [
+     "Short walks, build gradually",
+     "A marathon tomorrow",
+     "Daily sprints",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Start gently; any movement beats none."
+   },
+   {
+    "q": "The biggest health jump comes from going:",
+    "options": [
+     "From nothing to a little",
+     "From a lot to extreme",
+     "From little to none",
+     "Nowhere"
+    ],
+    "a": 0,
+    "why": "Any regular movement hugely beats none."
+   },
+   {
+    "q": "A lower resting heart rate often indicates:",
+    "options": [
+     "Better fitness",
+     "Illness always",
+     "Dehydration only",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "A fitter heart pumps more efficiently at rest."
+   }
+  ]
+ },
+ "fitness-flexibility-mobility": {
+  "title": "Flexibility & Mobility",
+  "subject": "Fitness & Wellness",
+  "level": "All ages",
+  "objectives": [
+   "Understand flexibility and mobility and why they matter",
+   "Know static vs dynamic stretching and when to use each",
+   "Stretch safely and effectively",
+   "Understand mobility work",
+   "Build and keep flexibility over time"
+  ],
+  "intro": "Flexibility and mobility are the often-neglected parts of fitness that keep you moving freely, prevent stiffness and injury, and support everything else you do. This lesson covers what they are, how to stretch effectively, and how to keep your body supple and capable. General education, not medical advice.",
+  "sections": [
+   {
+    "h": "Flexibility and mobility: what they are",
+    "body": "Flexibility is the ability of a muscle to lengthen — how far a joint can be moved passively (like how far you can reach toward your toes). Mobility is broader: the ability to actively move a joint through its full range of motion with control — flexibility plus strength and coordination through that range. You can be flexible but lack mobility if you can't control the movement.\n\nBoth matter because modern life (especially sitting) makes us tight and restricted, which leads to stiffness, poor posture, aches, and higher injury risk. Good flexibility and mobility let you move comfortably, perform other exercise with better form, and stay capable as you age. It's the quiet foundation that keeps the body working well.",
+    "tip": "Flexibility = how far a muscle can lengthen (passive). Mobility = active control through a joint's full range. Both keep you moving well."
+   },
+   {
+    "h": "Static vs dynamic stretching",
+    "body": "There are two main kinds of stretching, used at different times. Static stretching is holding a stretch in a fixed position (e.g., holding a hamstring stretch for 20–30 seconds). It's best done after exercise or on its own to improve flexibility, when muscles are warm. Doing intense static stretching right before activity can temporarily reduce power, so it's not ideal as a warm-up.\n\nDynamic stretching is moving through a range of motion in a controlled way (leg swings, arm circles, walking lunges). It's ideal before exercise as a warm-up — it raises body temperature, activates muscles, and prepares joints for movement. The simple rule: dynamic stretches to warm up before activity, static stretches to cool down and build flexibility afterward.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Static versus dynamic stretching and when to use each\"><rect x=\"8\" y=\"5\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"5\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Dynamic (moving)</text><text x=\"132\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">warm-up BEFORE activity</text><rect x=\"8\" y=\"27\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"27\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Static (holding)</text><text x=\"132\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">cool-down AFTER</text><rect x=\"8\" y=\"49\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"49\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Hold static for</text><text x=\"132\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">~20–30 seconds</text><rect x=\"8\" y=\"71\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"71\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Never</text><text x=\"132\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">bounce (ballistic) into a stretch</text><rect x=\"8\" y=\"93\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"93\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Stretch to</text><text x=\"132\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">mild tension, not pain</text></svg>",
+    "caption": "Dynamic stretching warms you up before activity; static stretching cools you down and builds flexibility.",
+    "tip": "Dynamic stretching (moving) = warm-up BEFORE activity. Static stretching (holding) = cool-down AFTER, to build flexibility."
+   },
+   {
+    "h": "Stretching safely and effectively",
+    "body": "Stretching helps when done right and can hurt when done wrong. Key rules: warm up first (never force a cold muscle into a deep stretch), ease into a stretch to the point of mild tension — not pain — and hold steadily rather than bouncing (bouncing, or 'ballistic' stretching, can cause small tears). Breathe and relax into the stretch; tensing up works against it.\n\nFor building flexibility, consistency beats intensity: stretching a little most days improves your range far more than one long painful session a week. Hold static stretches around 20–30 seconds and repeat, and stretch both sides evenly. Flexibility improves slowly but steadily — you won't touch your toes in a day, but a few weeks of regular, gentle stretching makes a real difference.",
+    "tip": "Warm up first; stretch to mild tension, not pain; don't bounce; breathe and relax. Little-but-often beats rare-but-intense."
+   },
+   {
+    "h": "Mobility work",
+    "body": "Beyond stretching, mobility work keeps your joints healthy and moving fully. This includes controlled movements through a joint's range (hip circles, shoulder rotations, 'cat-cow' for the spine) and exercises that build strength at the end ranges of motion. The goal isn't just to be bendy but to be strong and controlled throughout your range.\n\nMobility especially targets the areas that tighten from modern life: hips (from sitting), the upper back and shoulders (from hunching over screens), and ankles. A few minutes of daily mobility work — or using a full range of motion in your strength training — pays off hugely in how you feel and move. Think of it as maintenance for your joints, the same way you'd maintain anything you want to last.",
+    "tip": "Mobility work = controlled movement through a joint's full range (hip circles, shoulder rotations). Target tight spots: hips, upper back, ankles."
+   },
+   {
+    "h": "Building and keeping it",
+    "body": "Flexibility and mobility are 'use it or lose it' — they improve with regular attention and fade without it. The good news is that small, consistent effort works: a 5–10 minute daily routine (or stretching while watching TV) keeps you limber. Target the areas you personally feel tight, and make it a habit tied to something you already do.\n\nPay special attention if you sit a lot: take movement breaks, and counter sitting with hip and back mobility. As with all fitness, be patient and consistent rather than aggressive — gentle regular practice wins. Staying flexible and mobile is one of the simplest ways to feel better day to day, move without pain, and keep doing everything else you enjoy for years to come.",
+    "tip": "Flexibility/mobility is 'use it or lose it.' A short daily routine keeps you limber; target your tight spots, and move if you sit a lot."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Flexibility vs mobility",
+    "body": "Flexibility = passive lengthening; mobility = active, controlled range. Both keep you moving well."
+   },
+   {
+    "h": "Static vs dynamic",
+    "body": "Dynamic (moving) = warm-up before; static (holding ~20–30s) = cool-down after, builds flexibility."
+   },
+   {
+    "h": "Safe stretching",
+    "body": "Warm up first; mild tension not pain; don't bounce; breathe. Little-but-often wins."
+   },
+   {
+    "h": "Mobility work",
+    "body": "Controlled full-range movement (hip circles, cat-cow); target hips, upper back, ankles."
+   },
+   {
+    "h": "Keeping it",
+    "body": "'Use it or lose it' — a short daily routine; counter lots of sitting with movement breaks."
+   }
+  ],
+  "flash": [
+   [
+    "Flexibility",
+    "How far a muscle can lengthen (passive range)."
+   ],
+   [
+    "Mobility",
+    "Active, controlled movement through a joint's full range."
+   ],
+   [
+    "Range of motion",
+    "How far a joint can move."
+   ],
+   [
+    "Static stretching",
+    "Holding a stretch in a fixed position."
+   ],
+   [
+    "Dynamic stretching",
+    "Moving through a range to warm up."
+   ],
+   [
+    "Ballistic stretching",
+    "Bouncing into a stretch (risky — avoid)."
+   ],
+   [
+    "Warm-up",
+    "Light activity preparing the body for exercise."
+   ],
+   [
+    "Cool-down",
+    "Easing down after exercise (good for static stretching)."
+   ],
+   [
+    "Hamstring",
+    "The muscle at the back of the thigh (often tight)."
+   ],
+   [
+    "Hip mobility",
+    "Keeping hips moving freely (tight from sitting)."
+   ],
+   [
+    "Use it or lose it",
+    "Flexibility fades without regular work."
+   ],
+   [
+    "Cat-cow",
+    "A gentle spinal mobility movement."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Flexibility is the ability of a muscle to:",
+    "options": [
+     "Lengthen",
+     "Lift heavy",
+     "Sprint",
+     "Rest"
+    ],
+    "a": 0,
+    "why": "It's about how far a joint moves passively."
+   },
+   {
+    "q": "Mobility adds what to flexibility?",
+    "options": [
+     "Active control and strength through the range",
+     "Nothing",
+     "Only passive reach",
+     "Speed only"
+    ],
+    "a": 0,
+    "why": "Mobility is controlled movement, not just bendiness."
+   },
+   {
+    "q": "Modern life makes us tight mostly from:",
+    "options": [
+     "Sitting",
+     "Too much stretching",
+     "Too much sleep",
+     "Walking"
+    ],
+    "a": 0,
+    "why": "Prolonged sitting restricts hips and back."
+   },
+   {
+    "q": "Which stretching is best as a warm-up BEFORE activity?",
+    "options": [
+     "Dynamic",
+     "Static",
+     "Ballistic",
+     "None"
+    ],
+    "a": 0,
+    "why": "Dynamic (moving) prepares the body."
+   },
+   {
+    "q": "Which stretching builds flexibility AFTER exercise?",
+    "options": [
+     "Static (holding)",
+     "Dynamic",
+     "Sprinting",
+     "None"
+    ],
+    "a": 0,
+    "why": "Hold static stretches when muscles are warm."
+   },
+   {
+    "q": "Intense static stretching right before activity can:",
+    "options": [
+     "Temporarily reduce power",
+     "Boost power",
+     "Do nothing",
+     "Replace a warm-up"
+    ],
+    "a": 0,
+    "why": "That's why dynamic is preferred as a warm-up."
+   },
+   {
+    "q": "You should stretch to the point of:",
+    "options": [
+     "Mild tension, not pain",
+     "Sharp pain",
+     "No sensation",
+     "Bouncing"
+    ],
+    "a": 0,
+    "why": "Pain signals you're overdoing it."
+   },
+   {
+    "q": "Bouncing into a stretch (ballistic) can:",
+    "options": [
+     "Cause small tears",
+     "Improve safety",
+     "Warm you up best",
+     "Build strength"
+    ],
+    "a": 0,
+    "why": "Hold steadily instead of bouncing."
+   },
+   {
+    "q": "How long should you hold a static stretch?",
+    "options": [
+     "About 20–30 seconds",
+     "1 second",
+     "10 minutes",
+     "Never hold"
+    ],
+    "a": 0,
+    "why": "20–30s, repeated, builds range."
+   },
+   {
+    "q": "For building flexibility, what works best?",
+    "options": [
+     "A little most days",
+     "One long painful session weekly",
+     "Never stretching",
+     "Only bouncing"
+    ],
+    "a": 0,
+    "why": "Consistency beats intensity."
+   },
+   {
+    "q": "Mobility work includes:",
+    "options": [
+     "Controlled movement through a joint's range",
+     "Only holding still",
+     "Sprinting only",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Hip circles, shoulder rotations, cat-cow, etc."
+   },
+   {
+    "q": "Which areas tighten most from modern life?",
+    "options": [
+     "Hips, upper back, ankles",
+     "Fingers only",
+     "Earlobes",
+     "None"
+    ],
+    "a": 0,
+    "why": "Sitting and screens tighten these."
+   },
+   {
+    "q": "Flexibility and mobility follow the rule:",
+    "options": [
+     "Use it or lose it",
+     "Set it and forget it",
+     "Once is enough",
+     "More pain = more gain"
+    ],
+    "a": 0,
+    "why": "They fade without regular work."
+   },
+   {
+    "q": "If you sit a lot, you should:",
+    "options": [
+     "Take movement breaks + do hip/back mobility",
+     "Sit more",
+     "Never move",
+     "Only stretch yearly"
+    ],
+    "a": 0,
+    "why": "Counter sitting with regular movement."
+   },
+   {
+    "q": "The best approach to flexibility is:",
+    "options": [
+     "Gentle and consistent",
+     "Aggressive and rare",
+     "Painful and fast",
+     "Random"
+    ],
+    "a": 0,
+    "why": "Patience and consistency win; forcing causes injury."
+   }
+  ]
+ },
+ "fitness-sleep-recovery": {
+  "title": "Sleep & Recovery",
+  "subject": "Fitness & Wellness",
+  "level": "All ages",
+  "objectives": [
+   "Understand why sleep matters for health and performance",
+   "Understand sleep cycles and stages",
+   "Know how much sleep you need",
+   "Practice good sleep hygiene",
+   "Understand recovery beyond sleep"
+  ],
+  "intro": "Sleep is not wasted time — it's when your body and brain repair, consolidate memory, and recharge. Along with nutrition and exercise, sleep is a pillar of health, yet it's the one people cut first. This lesson covers why sleep matters, how it works, and how to sleep better. General education, not medical advice.",
+  "sections": [
+   {
+    "h": "Why sleep matters",
+    "body": "Sleep is one of the most important things you do for your health, even though you're unconscious for it. While you sleep, your body repairs tissues and muscles, your brain consolidates memories and clears waste products, hormones that regulate growth, appetite, and stress are balanced, and your immune system strengthens. Far from being idle, sleep is active, essential maintenance.\n\nThe costs of too little sleep are serious and add up: impaired focus, memory, and decision-making; worse mood and higher stress; weakened immunity; weight gain and worse blood-sugar control; and, long-term, higher risk of heart disease and other illness. Chronic sleep deprivation affects you much like being intoxicated. Simply put, you can't be healthy, sharp, or at your best without enough good sleep.",
+    "tip": "Sleep is active maintenance: your body repairs, your brain stores memories and clears waste. Too little harms focus, mood, immunity, and health."
+   },
+   {
+    "h": "Sleep cycles and stages",
+    "body": "Sleep isn't uniform — you move through cycles of about 90 minutes, each containing several stages. There's light sleep (drifting off and early sleep), deep sleep (slow-wave sleep, when the body does most of its physical repair and you're hardest to wake), and REM sleep (rapid eye movement, when most vivid dreaming happens and the brain consolidates memories and emotions).\n\nYou cycle through these stages four to six times a night, with more deep sleep early in the night and more REM toward morning. This is why sleep duration matters and why being woken repeatedly is so harmful — you need to complete full cycles to get the restorative benefits of both deep and REM sleep. Both physical and mental restoration depend on moving through these stages uninterrupted.",
+    "tip": "Sleep runs in ~90-min cycles through light, deep (physical repair), and REM (memory/dreaming) stages. You need full, uninterrupted cycles."
+   },
+   {
+    "h": "How much sleep you need",
+    "body": "Sleep needs vary by age, but most adults need about 7–9 hours per night for good health — and the common belief that you can 'get by' on much less is mostly a myth (very few people truly can). Teenagers need more (about 8–10 hours), and children and infants need more still. Needs are fairly individual within those ranges.\n\nA good sign you're getting enough: you wake feeling rested and don't rely on caffeine or feel sleepy during the day. 'Catching up' on weekends helps a little but doesn't fully undo weekday deprivation, so consistency matters. And quality counts as much as quantity — eight hours of fragmented, poor sleep isn't as restorative as solid sleep. Aim for enough hours and good quality, most nights.",
+    "tip": "Most adults need 7–9 hours; teens 8–10. You can't really 'get by' on much less. Quality and consistency matter as much as the hours."
+   },
+   {
+    "h": "Sleep hygiene",
+    "body": "'Sleep hygiene' is the set of habits that help you fall asleep and sleep well. The big ones: keep a consistent schedule (same sleep and wake times, even weekends) — this sets your body clock. Make your bedroom dark, cool, and quiet. Avoid screens before bed (their blue light and stimulation delay sleep), or use night mode and wind down instead.\n\nMore: cut caffeine in the afternoon and evening, limit alcohol (it fragments sleep), get daylight and exercise during the day, avoid big meals late, and build a relaxing pre-sleep routine (reading, a warm shower, dimming lights). If you can't sleep, don't lie there frustrated — get up, do something calm, and return when sleepy. Small consistent habits make a large difference over time.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Good sleep-hygiene habits\"><rect x=\"8\" y=\"5\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"5\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Schedule</text><text x=\"110\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">same sleep/wake times daily</text><rect x=\"8\" y=\"27\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"27\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Bedroom</text><text x=\"110\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">dark, cool, and quiet</text><rect x=\"8\" y=\"49\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"49\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Before bed</text><text x=\"110\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">avoid screens + caffeine</text><rect x=\"8\" y=\"71\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"71\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Wind-down</text><text x=\"110\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">relaxing routine (read, dim lights)</text><rect x=\"8\" y=\"93\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"93\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">By day</text><text x=\"110\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">get daylight + exercise</text></svg>",
+    "caption": "Sleep-hygiene basics — small, consistent habits that add up to better sleep.",
+    "tip": "Sleep hygiene: consistent schedule; dark, cool, quiet room; no screens/caffeine before bed; wind-down routine; daylight by day."
+   },
+   {
+    "h": "Recovery beyond sleep",
+    "body": "Sleep is the cornerstone of recovery, but recovery is broader — it's how your body restores itself after stress, whether from exercise, work, or life. Active recovery (light movement, walking, gentle stretching) helps the body recover from hard training better than total inactivity. Rest days are essential; your fitness gains actually happen during recovery, not during the workout.\n\nManaging overall stress, staying hydrated, and eating well all support recovery too. Watch for signs of under-recovery — constant fatigue, irritability, getting sick often, declining performance — which mean you need more rest, not more effort. In a culture that glorifies 'grinding,' remember that rest isn't laziness; it's a required part of getting stronger, healthier, and performing well. You improve when you recover.",
+    "tip": "Recovery = how you restore after stress. Rest days, light active recovery, hydration, and managing stress all matter. You improve when you RECOVER."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Why sleep matters",
+    "body": "Active maintenance: repair, memory, hormones, immunity. Too little harms focus, mood, immunity, and health."
+   },
+   {
+    "h": "Cycles & stages",
+    "body": "~90-min cycles of light, deep (physical repair), REM (memory/dreams). Need full uninterrupted cycles."
+   },
+   {
+    "h": "How much",
+    "body": "Adults 7–9 hrs, teens 8–10. 'Getting by' on little is a myth; quality + consistency matter."
+   },
+   {
+    "h": "Sleep hygiene",
+    "body": "Consistent schedule; dark/cool/quiet room; no screens/caffeine before bed; wind-down; daylight by day."
+   },
+   {
+    "h": "Recovery",
+    "body": "Rest days + light active recovery; you improve when you recover, not just when you push."
+   }
+  ],
+  "flash": [
+   [
+    "Sleep",
+    "Active rest when the body and brain repair and recharge."
+   ],
+   [
+    "Deep sleep",
+    "Slow-wave sleep when most physical repair happens."
+   ],
+   [
+    "REM sleep",
+    "Dreaming sleep when the brain consolidates memory."
+   ],
+   [
+    "Sleep cycle",
+    "A ~90-minute run through the sleep stages."
+   ],
+   [
+    "Circadian rhythm",
+    "Your internal ~24-hour body clock."
+   ],
+   [
+    "Sleep hygiene",
+    "Habits that help you fall and stay asleep."
+   ],
+   [
+    "Sleep deprivation",
+    "Not getting enough sleep; harms health and focus."
+   ],
+   [
+    "7–9 hours",
+    "The sleep most adults need per night."
+   ],
+   [
+    "Blue light",
+    "Screen light that can delay sleep before bed."
+   ],
+   [
+    "Active recovery",
+    "Light movement that aids recovery vs. total rest."
+   ],
+   [
+    "Rest day",
+    "A day off hard training to let the body recover."
+   ],
+   [
+    "Under-recovery",
+    "Too little rest: fatigue, irritability, poor performance."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "During sleep, your body and brain:",
+    "options": [
+     "Repair and consolidate memory",
+     "Do nothing",
+     "Burn out",
+     "Age faster"
+    ],
+    "a": 0,
+    "why": "Sleep is active, essential maintenance."
+   },
+   {
+    "q": "Too little sleep harms:",
+    "options": [
+     "Focus, mood, and immunity",
+     "Nothing",
+     "Only your hair",
+     "Only your height"
+    ],
+    "a": 0,
+    "why": "It impairs the brain, mood, and body."
+   },
+   {
+    "q": "Chronic sleep deprivation affects you much like:",
+    "options": [
+     "Being intoxicated",
+     "Being well-rested",
+     "Exercising",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "It badly impairs judgment and reaction."
+   },
+   {
+    "q": "One sleep cycle lasts about:",
+    "options": [
+     "90 minutes",
+     "10 minutes",
+     "8 hours",
+     "2 seconds"
+    ],
+    "a": 0,
+    "why": "You run through several ~90-min cycles a night."
+   },
+   {
+    "q": "Most physical repair happens during:",
+    "options": [
+     "Deep (slow-wave) sleep",
+     "REM sleep",
+     "Light sleep only",
+     "Being awake"
+    ],
+    "a": 0,
+    "why": "Deep sleep is when the body repairs most."
+   },
+   {
+    "q": "Dreaming and memory consolidation mostly happen in:",
+    "options": [
+     "REM sleep",
+     "Deep sleep",
+     "Light sleep",
+     "Naps only"
+    ],
+    "a": 0,
+    "why": "REM is rapid-eye-movement, dreaming sleep."
+   },
+   {
+    "q": "Most adults need about:",
+    "options": [
+     "7–9 hours",
+     "3–4 hours",
+     "12–14 hours",
+     "1 hour"
+    ],
+    "a": 0,
+    "why": "Teens need 8–10; children more."
+   },
+   {
+    "q": "The idea that you can 'get by' on very little sleep is:",
+    "options": [
+     "Mostly a myth",
+     "True for everyone",
+     "Proven healthy",
+     "Encouraged"
+    ],
+    "a": 0,
+    "why": "Very few people truly can."
+   },
+   {
+    "q": "A key sleep-hygiene habit is:",
+    "options": [
+     "A consistent sleep/wake schedule",
+     "Random bedtimes",
+     "Caffeine at midnight",
+     "Bright screens in bed"
+    ],
+    "a": 0,
+    "why": "Consistency sets your body clock."
+   },
+   {
+    "q": "Your bedroom should be:",
+    "options": [
+     "Dark, cool, and quiet",
+     "Bright and warm",
+     "Loud",
+     "Full of screens"
+    ],
+    "a": 0,
+    "why": "Those conditions support sleep."
+   },
+   {
+    "q": "Screens before bed can:",
+    "options": [
+     "Delay sleep",
+     "Help you sleep",
+     "Replace sleep",
+     "Do nothing"
+    ],
+    "a": 0,
+    "why": "Blue light and stimulation delay sleep."
+   },
+   {
+    "q": "If you can't fall asleep, you should:",
+    "options": [
+     "Get up, do something calm, return when sleepy",
+     "Lie there frustrated",
+     "Check your phone",
+     "Drink coffee"
+    ],
+    "a": 0,
+    "why": "Lying frustrated trains bad associations."
+   },
+   {
+    "q": "Fitness gains actually happen during:",
+    "options": [
+     "Recovery",
+     "The workout only",
+     "No sleep",
+     "Over-training"
+    ],
+    "a": 0,
+    "why": "Muscles rebuild during rest."
+   },
+   {
+    "q": "Light movement to aid recovery is called:",
+    "options": [
+     "Active recovery",
+     "Over-training",
+     "A rest day only",
+     "Deprivation"
+    ],
+    "a": 0,
+    "why": "It can beat total inactivity for recovery."
+   },
+   {
+    "q": "Constant fatigue, irritability, and getting sick often can signal:",
+    "options": [
+     "Under-recovery (need more rest)",
+     "Perfect health",
+     "Too much sleep",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "It means more rest, not more effort."
+   }
+  ]
+ },
+ "fitness-stress-management": {
+  "title": "Stress Management",
+  "subject": "Fitness & Wellness",
+  "level": "All ages",
+  "objectives": [
+   "Understand what stress is and the stress response",
+   "Tell helpful stress from harmful chronic stress",
+   "Recognize the signs of stress",
+   "Use coping techniques that work",
+   "Build resilience and healthy habits"
+  ],
+  "intro": "Stress is the body's natural response to demands and challenges — useful in short bursts, but harmful when it's constant. Learning to manage stress protects your health, mood, and relationships, and is one of the most practical life skills there is. This lesson covers what stress is and proven ways to handle it. General education, not a substitute for professional help; if stress feels overwhelming, reach out to a professional.",
+  "sections": [
+   {
+    "h": "What stress is",
+    "body": "Stress is your body's response to any demand or threat. When you face a challenge, your brain triggers the 'fight-or-flight' response: stress hormones (like adrenaline and cortisol) surge, your heart rate and breathing speed up, and your body prepares for action. This response is ancient and useful — it helped our ancestors survive danger, and it still helps you rise to a deadline or react in an emergency.\n\nThe problem is that the same system fires for modern, non-physical stressors — traffic, bills, work, worry — that don't need a physical response and don't resolve quickly. Stress itself isn't 'bad'; it's a normal, even helpful reaction in the right dose. What matters is how much, how long, and how you handle it. Understanding that stress is a bodily response, not a character flaw, is the first step to managing it.",
+    "tip": "Stress = the body's 'fight-or-flight' response to demands. It's normal and even useful in short bursts — the problem is when it's constant."
+   },
+   {
+    "h": "Good stress vs chronic stress",
+    "body": "Not all stress is harmful. Short-term, manageable stress (sometimes called 'eustress') can be positive — it sharpens focus, motivates you, and helps you perform and grow. The nervousness before a game or presentation that helps you rise to the occasion is this kind of stress. The key is that it's temporary and you recover afterward.\n\nChronic stress — stress that's intense or never lets up — is the harmful kind. When the stress response stays switched on for weeks and months, it wears the body down: it contributes to high blood pressure, heart problems, weakened immunity, anxiety, depression, digestive issues, and burnout. The goal of stress management isn't to eliminate all stress (impossible and undesirable) but to keep it from becoming chronic — to respond, then recover.",
+    "tip": "Short-term stress can sharpen and motivate you (and you recover). CHRONIC stress that never lets up is the harmful kind that wears you down."
+   },
+   {
+    "h": "Recognizing stress",
+    "body": "Stress shows up in the body, mind, emotions, and behavior, and recognizing your own signs lets you act before it piles up. Physical signs: headaches, muscle tension, fatigue, trouble sleeping, stomach issues, a racing heart. Mental and emotional signs: racing thoughts, trouble concentrating, irritability, anxiety, feeling overwhelmed, or low mood.\n\nBehavioral signs: changes in eating or sleep, withdrawing from people, procrastinating, or relying on unhealthy habits (overusing alcohol, junk food, endless scrolling). People experience stress differently, so learn your personal warning signs. Noticing 'I'm getting stressed' early — before it becomes overwhelming — is itself a powerful skill, because it lets you use a coping strategy while it's still small.",
+    "tip": "Learn your personal stress signs — physical (tension, poor sleep), mental (racing thoughts, irritability), behavioral (withdrawing, bad habits). Catch it early."
+   },
+   {
+    "h": "Coping techniques that work",
+    "body": "Many stress-management techniques are simple and proven. The fastest is controlled breathing: slow, deep breaths (for example 'box breathing' — inhale 4 counts, hold 4, exhale 4, hold 4) calm the body's stress response within minutes. Physical activity is one of the best stress relievers, burning off stress hormones and boosting mood.\n\nOther effective tools: talking to someone you trust, getting enough sleep, spending time outdoors, and relaxation or mindfulness practices (focusing on the present rather than worrying about the future). Managing the source helps too — breaking big problems into steps, saying no to overcommitment, and solving what you can while accepting what you can't. Different tools work for different people; build a small toolkit of what works for you.",
+    "visual": "<svg viewBox=\"0 0 200 182\" width=\"195\" role=\"img\" aria-label=\"Box breathing: inhale 4 counts, hold 4, exhale 4, hold 4, repeated around a square\"><rect x=\"45\" y=\"35\" width=\"110\" height=\"110\" rx=\"10\" fill=\"rgba(79,156,240,.08)\" stroke=\"#4f9cf0\" stroke-width=\"2\"/><polygon points=\"104,31 112,35 104,39\" fill=\"#39e3c8\"/><polygon points=\"151,94 159,94 155,102\" fill=\"#4f9cf0\"/><polygon points=\"96,141 96,149 88,145\" fill=\"#4f9cf0\"/><polygon points=\"41,86 49,86 45,78\" fill=\"#39e3c8\"/><text x=\"100\" y=\"26\" text-anchor=\"middle\" fill=\"#39e3c8\" font-size=\"10\">Inhale · 4</text><text x=\"100\" y=\"162\" text-anchor=\"middle\" fill=\"#4f9cf0\" font-size=\"10\">Exhale · 4</text><text x=\"161\" y=\"93\" text-anchor=\"start\" fill=\"#9aa6c0\" font-size=\"9\">Hold · 4</text><text x=\"39\" y=\"93\" text-anchor=\"end\" fill=\"#9aa6c0\" font-size=\"9\">Hold · 4</text><text x=\"100\" y=\"87\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Box breathing</text><text x=\"100\" y=\"101\" text-anchor=\"middle\" fill=\"#9adbcf\" font-size=\"9\">4 - 4 - 4 - 4</text></svg>",
+    "caption": "Box breathing (4-4-4-4) — a fast way to calm the body's stress response in a couple of minutes.",
+    "example": "Box breathing: inhale 4 counts → hold 4 → exhale 4 → hold 4 → repeat. Calms the body in a couple of minutes.",
+    "tip": "Fast reset: slow breathing (box breathing 4-4-4-4). Longer-term: exercise, sleep, talking to someone, time outdoors, mindfulness."
+   },
+   {
+    "h": "Building resilience",
+    "body": "Beyond coping in the moment, you can build resilience — the ability to handle stress and bounce back from hard times. The foundations overlap with general health: regular exercise, good sleep, decent nutrition, and strong social connections all make you more stress-resistant. So does a sense of purpose and keeping perspective (asking 'will this matter in a year?').\n\nMindset matters too: viewing challenges as things you can grow from, focusing on what you can control, and practicing self-compassion rather than harsh self-criticism all build resilience. And know your limits: if stress is overwhelming, persistent, or affecting your health and life, that's a sign to get help from a doctor or counselor — a sign of wisdom, not weakness. Managing stress is a lifelong skill, and small daily habits build the resilience to handle whatever comes.",
+    "tip": "Build resilience with the health basics (exercise, sleep, connection), focusing on what you control, and self-compassion. Overwhelmed? Get help — that's wisdom."
+   }
+  ],
+  "cards": [
+   {
+    "h": "What stress is",
+    "body": "The body's fight-or-flight response (adrenaline, cortisol). Normal and useful in short bursts."
+   },
+   {
+    "h": "Good vs chronic",
+    "body": "Short-term stress can sharpen/motivate (you recover); chronic, never-ending stress wears you down."
+   },
+   {
+    "h": "Recognizing it",
+    "body": "Physical (tension, poor sleep), mental (racing thoughts, irritability), behavioral (withdrawing). Catch it early."
+   },
+   {
+    "h": "Coping",
+    "body": "Fast: slow breathing (box 4-4-4-4). Longer: exercise, sleep, talk to someone, outdoors, mindfulness."
+   },
+   {
+    "h": "Resilience",
+    "body": "Exercise, sleep, connection, purpose, self-compassion, control what you can. Overwhelmed? Get help."
+   }
+  ],
+  "flash": [
+   [
+    "Stress",
+    "The body's response to demands or threats."
+   ],
+   [
+    "Fight-or-flight",
+    "The body's alarm response to a perceived threat."
+   ],
+   [
+    "Cortisol",
+    "A key stress hormone."
+   ],
+   [
+    "Eustress",
+    "Positive, short-term stress that motivates."
+   ],
+   [
+    "Chronic stress",
+    "Long-lasting stress that harms health."
+   ],
+   [
+    "Burnout",
+    "Exhaustion from prolonged chronic stress."
+   ],
+   [
+    "Box breathing",
+    "Inhale 4, hold 4, exhale 4, hold 4 to calm down."
+   ],
+   [
+    "Mindfulness",
+    "Calm focus on the present moment."
+   ],
+   [
+    "Resilience",
+    "The ability to handle stress and bounce back."
+   ],
+   [
+    "Coping",
+    "Ways of managing stress and difficult feelings."
+   ],
+   [
+    "Stressor",
+    "Something that causes stress."
+   ],
+   [
+    "Self-compassion",
+    "Treating yourself with kindness, not harsh criticism."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Stress is the body's response to:",
+    "options": [
+     "Demands or threats",
+     "Only good news",
+     "Sleep",
+     "Food"
+    ],
+    "a": 0,
+    "why": "It's the fight-or-flight reaction to challenges."
+   },
+   {
+    "q": "The stress response is driven by hormones like:",
+    "options": [
+     "Adrenaline and cortisol",
+     "Insulin only",
+     "Vitamin C",
+     "Oxygen"
+    ],
+    "a": 0,
+    "why": "They prepare the body for action."
+   },
+   {
+    "q": "Is short-term stress always bad?",
+    "options": [
+     "No — it can sharpen and motivate you",
+     "Yes, always",
+     "It doesn't exist",
+     "Only for athletes"
+    ],
+    "a": 0,
+    "why": "Eustress helps you rise to the occasion."
+   },
+   {
+    "q": "The harmful kind of stress is:",
+    "options": [
+     "Chronic (never lets up)",
+     "Any stress at all",
+     "Short bursts",
+     "Excitement"
+    ],
+    "a": 0,
+    "why": "Constant stress wears the body down."
+   },
+   {
+    "q": "Chronic stress can contribute to:",
+    "options": [
+     "High blood pressure and burnout",
+     "Perfect health",
+     "Nothing",
+     "More energy"
+    ],
+    "a": 0,
+    "why": "It harms the heart, immunity, and mood over time."
+   },
+   {
+    "q": "A physical sign of stress is:",
+    "options": [
+     "Muscle tension / poor sleep",
+     "Feeling great",
+     "Clear skin always",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Stress shows up in the body."
+   },
+   {
+    "q": "A behavioral sign of stress is:",
+    "options": [
+     "Withdrawing or unhealthy habits",
+     "Exercising more",
+     "Sleeping perfectly",
+     "Nothing changes"
+    ],
+    "a": 0,
+    "why": "Behavior shifts under stress."
+   },
+   {
+    "q": "Noticing stress early is valuable because:",
+    "options": [
+     "You can cope while it's still small",
+     "It's too late then",
+     "It doesn't help",
+     "Stress is harmless"
+    ],
+    "a": 0,
+    "why": "Early action prevents overwhelm."
+   },
+   {
+    "q": "The fastest way to calm the stress response is:",
+    "options": [
+     "Slow, controlled breathing",
+     "Drinking coffee",
+     "Scrolling your phone",
+     "Yelling"
+    ],
+    "a": 0,
+    "why": "Deep breathing calms the body in minutes."
+   },
+   {
+    "q": "Box breathing is:",
+    "options": [
+     "Inhale 4, hold 4, exhale 4, hold 4",
+     "Holding your breath",
+     "Breathing fast",
+     "Not breathing"
+    ],
+    "a": 0,
+    "why": "A simple 4-4-4-4 calming pattern."
+   },
+   {
+    "q": "One of the best longer-term stress relievers is:",
+    "options": [
+     "Physical activity",
+     "More caffeine",
+     "Isolation",
+     "Skipping sleep"
+    ],
+    "a": 0,
+    "why": "Exercise burns stress hormones and lifts mood."
+   },
+   {
+    "q": "Managing the source of stress includes:",
+    "options": [
+     "Breaking problems into steps and saying no",
+     "Ignoring everything",
+     "Overcommitting",
+     "Avoiding all decisions"
+    ],
+    "a": 0,
+    "why": "Solve what you can; accept what you can't."
+   },
+   {
+    "q": "Resilience is:",
+    "options": [
+     "The ability to handle stress and bounce back",
+     "Never feeling stress",
+     "Avoiding all challenges",
+     "A weakness"
+    ],
+    "a": 0,
+    "why": "It's built with healthy habits and mindset."
+   },
+   {
+    "q": "Which builds resilience?",
+    "options": [
+     "Exercise, sleep, and social connection",
+     "Isolation and no sleep",
+     "Constant grinding",
+     "Harsh self-criticism"
+    ],
+    "a": 0,
+    "why": "The health basics make you stress-resistant."
+   },
+   {
+    "q": "If stress becomes overwhelming, the wise move is to:",
+    "options": [
+     "Get help from a doctor or counselor",
+     "Hide it",
+     "Push harder alone",
+     "Ignore it"
+    ],
+    "a": 0,
+    "why": "Seeking help is wisdom, not weakness."
    }
   ]
  }
