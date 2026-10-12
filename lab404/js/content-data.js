@@ -1210,66 +1210,119 @@ window.LAB404_CONTENT = {
   "title": "Arithmetic",
   "subject": "Mathematics",
   "level": "Grades K-5",
-  "intro": "Arithmetic is working with numbers using the four basic operations. It's the foundation everything else in math is built on — get comfortable here and the rest comes easier.",
-  "cards": [
+  "objectives": [
+   "Read, write, and compare numbers using place value",
+   "Add, subtract, multiply, and divide whole numbers confidently",
+   "Understand fractions and convert among fractions, decimals, and percents",
+   "Apply the order of operations (PEMDAS) to multi-step calculations",
+   "Estimate and check answers for reasonableness"
+  ],
+  "intro": "Arithmetic is the foundation of all mathematics — the everyday skill of working with numbers. Long before algebra or geometry, you need to count, compare, and calculate fluently. This lesson covers place value, the four operations, fractions and how they connect to decimals and percents, the order of operations, and the habit of estimating to check your work. Master these and every later math topic becomes far easier.",
+  "sections": [
    {
-    "h": "Place value",
-    "body": "In a number like 342, each digit's position tells its value: 3 hundreds, 4 tens, 2 ones. Place value is why 50 and 500 are very different — the same digit means ten times more each place to the left."
+    "h": "Place value: what numbers mean",
+    "body": "Our number system is built on place value: a digit's position tells you how much it's worth. In 3,472, the 3 means 3 thousands, the 4 means 4 hundreds, the 7 means 7 tens, and the 2 means 2 ones. Each place to the left is worth ten times the one to its right.\n\nPlace value is why 50 and 500 are so different despite sharing a 5, and it makes comparing numbers easy: line them up and compare digits from the left. The same idea extends to the right of the decimal point into tenths, hundredths, and thousandths.",
+    "visual": "<svg viewBox=\"0 0 320 112\" width=\"300\" role=\"img\" aria-label=\"The number 3,472 split into thousands, hundreds, tens and ones\"><rect x=\"20\" y=\"14\" width=\"62\" height=\"44\" rx=\"4\" fill=\"rgba(79,156,240,.08)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"51\" y=\"46\" text-anchor=\"middle\" fill=\"#e7edf7\" font-size=\"25\" font-weight=\"700\" font-family=\"monospace\">3</text><text x=\"51\" y=\"75\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"10.5\">thousands</text><text x=\"51\" y=\"92\" text-anchor=\"middle\" fill=\"#39e3c8\" font-size=\"11\">3000</text><rect x=\"92\" y=\"14\" width=\"62\" height=\"44\" rx=\"4\" fill=\"rgba(79,156,240,.08)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"123\" y=\"46\" text-anchor=\"middle\" fill=\"#e7edf7\" font-size=\"25\" font-weight=\"700\" font-family=\"monospace\">4</text><text x=\"123\" y=\"75\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"10.5\">hundreds</text><text x=\"123\" y=\"92\" text-anchor=\"middle\" fill=\"#39e3c8\" font-size=\"11\">400</text><rect x=\"164\" y=\"14\" width=\"62\" height=\"44\" rx=\"4\" fill=\"rgba(79,156,240,.08)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"195\" y=\"46\" text-anchor=\"middle\" fill=\"#e7edf7\" font-size=\"25\" font-weight=\"700\" font-family=\"monospace\">7</text><text x=\"195\" y=\"75\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"10.5\">tens</text><text x=\"195\" y=\"92\" text-anchor=\"middle\" fill=\"#39e3c8\" font-size=\"11\">70</text><rect x=\"236\" y=\"14\" width=\"62\" height=\"44\" rx=\"4\" fill=\"rgba(79,156,240,.08)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"267\" y=\"46\" text-anchor=\"middle\" fill=\"#e7edf7\" font-size=\"25\" font-weight=\"700\" font-family=\"monospace\">2</text><text x=\"267\" y=\"75\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"10.5\">ones</text><text x=\"267\" y=\"92\" text-anchor=\"middle\" fill=\"#39e3c8\" font-size=\"11\">2</text></svg>",
+    "caption": "Each digit's value depends on its place — each column is worth ten times the one to its right.",
+    "tip": "Reading a number out loud ('three thousand, four hundred seventy-two') is really just reading its place values."
    },
    {
     "h": "The four operations",
-    "body": "Addition (+) combines, subtraction (−) takes away, multiplication (×) is repeated addition (3×4 = 3+3+3+3), and division (÷) splits into equal groups. Multiplication and division undo each other, as do addition and subtraction."
+    "body": "Four operations do most of arithmetic. Addition (+) combines amounts. Subtraction (−) takes away or finds a difference. Multiplication (×) is repeated addition — 4 × 3 means four groups of three — and is the key to working efficiently with larger numbers. Division (÷) splits into equal groups or asks 'how many times does this fit?'\n\nThese pair up as opposites: subtraction undoes addition, and division undoes multiplication. Knowing your addition facts and times tables by heart is the single best investment in math speed — everything builds on them.",
+    "example": "Multiplication as repeated addition:\n4 × 3 = 3 + 3 + 3 + 3 = 12\nDivision as its reverse:\n12 ÷ 4 = 3"
    },
    {
-    "h": "Fractions",
-    "body": "A fraction like 3/4 means 3 parts out of 4 equal parts. The top (numerator) counts the parts; the bottom (denominator) says how many make a whole. 1/2 = 2/4 = 4/8 — the same amount written different ways."
+    "h": "Fractions, decimals, and percents",
+    "body": "A fraction represents part of a whole. In 3/4, the bottom number (denominator) says the whole is split into 4 equal parts, and the top (numerator) says you have 3 of them. The same amount can be written three ways — as a fraction (3/4), a decimal (0.75), or a percent (75%) — and switching between them is a core skill.\n\nTo turn a fraction into a decimal, divide the top by the bottom (3 ÷ 4 = 0.75). To turn a decimal into a percent, multiply by 100 (0.75 → 75%). Equivalent fractions like 1/2, 2/4, and 4/8 all represent the same value.",
+    "example": "Convert 3/5 to a decimal and a percent:\n3 ÷ 5 = 0.6\n0.6 × 100 = 60%",
+    "tip": "Percent means 'per hundred,' so 25% is just 25 out of 100 — the fraction 25/100 = 1/4."
    },
    {
-    "h": "Order of operations (PEMDAS)",
-    "body": "When a problem has several operations, do them in order: Parentheses, Exponents, Multiplication and Division (left to right), then Addition and Subtraction (left to right). So 2 + 3×4 = 2 + 12 = 14, not 20."
+    "h": "The order of operations (PEMDAS)",
+    "body": "When a calculation mixes operations, the order matters — 2 + 3 × 4 is 14, not 20. Mathematicians agree on one order, remembered as PEMDAS: Parentheses first, then Exponents, then Multiplication and Division (left to right), then Addition and Subtraction (left to right).\n\nMultiplication and division share a step (do them left to right as they appear), and so do addition and subtraction. Following this order guarantees everyone gets the same answer from the same expression.",
+    "example": "Evaluate 2 + 3 × 4:\n= 2 + 12     (multiply first)\n= 14\n\nEvaluate (2 + 3) × 4:\n= 5 × 4      (parentheses first)\n= 20"
    },
    {
-    "h": "Percentages",
-    "body": "Percent means 'out of 100.' 25% = 25/100 = 1/4 = 0.25. To find 25% of 80, multiply: 0.25 × 80 = 20. Percentages are everywhere — sales, tips, grades, interest."
+    "h": "Estimating and checking",
+    "body": "A powerful habit is to estimate before and check after you calculate. Rounding numbers for a quick approximate answer tells you roughly what to expect, so a wildly wrong result jumps out. If 48 × 21 should be about 50 × 20 = 1000, then an answer of 108 or 10,080 is obviously a mistake.\n\nChecking is often built in: verify a subtraction by adding back (if 15 − 7 = 8, then 8 + 7 should equal 15), and a division by multiplying. These quick checks catch the small slips that cause most arithmetic errors.",
+    "tip": "Rounding to estimate first means you'll instantly notice if your final answer is off by a factor of ten."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Place value",
+    "body": "A digit's worth depends on its position; each place left is 10× the one to its right."
+   },
+   {
+    "h": "Four operations",
+    "body": "Add, subtract, multiply, divide. Subtraction undoes addition; division undoes multiplication."
+   },
+   {
+    "h": "Three forms of a part",
+    "body": "Fractions, decimals, and percents are interchangeable (3/4 = 0.75 = 75%)."
+   },
+   {
+    "h": "PEMDAS",
+    "body": "Parentheses, Exponents, Multiply/Divide (L→R), Add/Subtract (L→R)."
+   },
+   {
+    "h": "Estimate and check",
+    "body": "Round to predict the size of the answer, then verify with the inverse operation."
    }
   ],
   "flash": [
    [
     "Place value",
-    "The value of a digit based on its position (ones, tens, hundreds)."
+    "The value of a digit based on its position."
    ],
    [
-    "Numerator",
-    "The top number of a fraction — how many parts you have."
+    "Sum",
+    "The result of addition."
    ],
    [
-    "Denominator",
-    "The bottom number of a fraction — how many parts make a whole."
+    "Difference",
+    "The result of subtraction."
    ],
    [
     "Product",
-    "The answer to a multiplication problem."
+    "The result of multiplication."
    ],
    [
     "Quotient",
-    "The answer to a division problem."
+    "The result of division."
    ],
    [
-    "PEMDAS",
-    "Order of operations: Parentheses, Exponents, Mult/Div, Add/Sub."
+    "Numerator",
+    "The top of a fraction — how many parts you have."
+   ],
+   [
+    "Denominator",
+    "The bottom of a fraction — how many parts make a whole."
+   ],
+   [
+    "Equivalent fractions",
+    "Different fractions equal to the same value (1/2 = 2/4)."
    ],
    [
     "Percent",
     "A number out of 100 (25% = 25/100)."
    ],
    [
-    "Equivalent fractions",
-    "Different fractions that equal the same amount (1/2 = 2/4)."
+    "PEMDAS",
+    "The order of operations."
+   ],
+   [
+    "Estimate",
+    "A quick approximate answer from rounding."
+   ],
+   [
+    "Decimal",
+    "A number written with a decimal point (0.75)."
    ]
   ],
   "quiz": [
    {
-    "q": "In the number 507, the 5 is in the:",
+    "q": "In 507, the digit 5 is in the:",
     "options": [
      "Hundreds place",
      "Tens place",
@@ -1277,18 +1330,51 @@ window.LAB404_CONTENT = {
      "Thousands place"
     ],
     "a": 0,
-    "why": "Reading right to left: 7 ones, 0 tens, 5 hundreds."
+    "why": "Right to left: 7 ones, 0 tens, 5 hundreds."
    },
    {
-    "q": "What is 3 × 4?",
+    "q": "What is 4 × 3?",
     "options": [
      "12",
      "7",
-     "34",
+     "43",
      "1"
     ],
     "a": 0,
-    "why": "3×4 = 3+3+3+3 = 12."
+    "why": "4 × 3 = 3 + 3 + 3 + 3 = 12."
+   },
+   {
+    "q": "Division is the opposite of:",
+    "options": [
+     "Multiplication",
+     "Addition",
+     "Subtraction",
+     "Exponents"
+    ],
+    "a": 0,
+    "why": "Multiplication and division undo each other."
+   },
+   {
+    "q": "Write 3/4 as a decimal.",
+    "options": [
+     "0.75",
+     "0.34",
+     "0.43",
+     "3.4"
+    ],
+    "a": 0,
+    "why": "3 ÷ 4 = 0.75."
+   },
+   {
+    "q": "Write 0.6 as a percent.",
+    "options": [
+     "60%",
+     "6%",
+     "0.6%",
+     "600%"
+    ],
+    "a": 0,
+    "why": "0.6 × 100 = 60%."
    },
    {
     "q": "Which fraction equals 1/2?",
@@ -1299,7 +1385,7 @@ window.LAB404_CONTENT = {
      "3/4"
     ],
     "a": 0,
-    "why": "2/4 reduces to 1/2 — the same amount."
+    "why": "2/4 simplifies to 1/2 — the same amount."
    },
    {
     "q": "Using PEMDAS, 2 + 3 × 4 =",
@@ -1310,7 +1396,29 @@ window.LAB404_CONTENT = {
      "9"
     ],
     "a": 0,
-    "why": "Multiply first (3×4=12), then add 2 → 14."
+    "why": "Multiply first (12), then add 2 → 14."
+   },
+   {
+    "q": "Using PEMDAS, (2 + 3) × 4 =",
+    "options": [
+     "20",
+     "14",
+     "9",
+     "24"
+    ],
+    "a": 0,
+    "why": "Parentheses first (5), then × 4 → 20."
+   },
+   {
+    "q": "The answer to a multiplication problem is the:",
+    "options": [
+     "Product",
+     "Sum",
+     "Quotient",
+     "Difference"
+    ],
+    "a": 0,
+    "why": "Product = result of multiplying; quotient = of dividing."
    },
    {
     "q": "What is 25% of 80?",
@@ -1324,15 +1432,59 @@ window.LAB404_CONTENT = {
     "why": "25% = 0.25; 0.25 × 80 = 20."
    },
    {
-    "q": "Division is the opposite of:",
+    "q": "The bottom number of a fraction is the:",
     "options": [
-     "Multiplication",
-     "Addition",
-     "Subtraction",
-     "Exponents"
+     "Denominator",
+     "Numerator",
+     "Product",
+     "Decimal"
     ],
     "a": 0,
-    "why": "Multiplication and division undo each other."
+    "why": "The denominator says how many equal parts make the whole."
+   },
+   {
+    "q": "A quick way to catch a wrong answer is to:",
+    "options": [
+     "Estimate by rounding first",
+     "Never check",
+     "Always round down",
+     "Skip it"
+    ],
+    "a": 0,
+    "why": "An estimate tells you the expected size of the answer."
+   },
+   {
+    "q": "To check that 15 − 7 = 8, you can:",
+    "options": [
+     "Add 8 + 7 and see if it's 15",
+     "Subtract again",
+     "Multiply",
+     "Guess"
+    ],
+    "a": 0,
+    "why": "Addition undoes subtraction: 8 + 7 = 15."
+   },
+   {
+    "q": "Each place value to the left is worth how many times the one to its right?",
+    "options": [
+     "10 times",
+     "2 times",
+     "100 times",
+     "The same"
+    ],
+    "a": 0,
+    "why": "Our base-ten system multiplies by 10 each place left."
+   },
+   {
+    "q": "'Percent' means:",
+    "options": [
+     "Per hundred",
+     "Per ten",
+     "Per thousand",
+     "Per one"
+    ],
+    "a": 0,
+    "why": "Percent = out of 100."
    }
   ]
  },
@@ -3554,61 +3706,121 @@ window.LAB404_CONTENT = {
   "title": "Pre-Algebra",
   "subject": "Mathematics",
   "level": "Grades 6-8",
-  "intro": "Pre-algebra is the bridge between arithmetic and algebra. It takes the numbers you already know and adds the tools you'll need next: negative numbers, ratios, and your first use of variables.",
-  "cards": [
+  "objectives": [
+   "Work with integers (negative numbers) and apply the rules of signs",
+   "Convert fluently among fractions, decimals, and percents, and find a percent of a number",
+   "Set up and solve ratios and proportions",
+   "Evaluate expressions and solve one- and two-step equations",
+   "Plot and read points on the coordinate plane"
+  ],
+  "intro": "Pre-algebra is the bridge from arithmetic to algebra. It keeps the numbers you know but adds the tools algebra depends on: negative numbers, ratios and proportions, variables and expressions, and the coordinate plane. Get comfortable here and the jump to algebra feels natural instead of sudden. This lesson covers integers and signs, converting between number forms, proportional reasoning, your first equations, and graphing points.",
+  "sections": [
    {
     "h": "Integers and negative numbers",
-    "body": "Integers are the whole numbers, their negatives, and zero (…, −2, −1, 0, 1, 2, …). On a number line, negatives sit to the left of zero. Adding a negative moves left; subtracting a negative moves right: 5 − (−3) = 5 + 3 = 8."
+    "body": "Arithmetic mostly deals with positive numbers, but the real world needs negatives too — temperatures below zero, debts, elevations below sea level. Integers are the whole numbers together with their negatives and zero: …, −2, −1, 0, 1, 2, …\n\nOn a number line, negatives sit to the left of zero and get smaller as you go left (−5 is less than −2). Adding a positive moves right; adding a negative moves left. Subtracting a negative is the surprising one — it moves right, because 'taking away a debt' is like adding: 5 − (−3) = 5 + 3 = 8.",
+    "visual": "<svg viewBox=\"0 0 320 64\" width=\"300\" role=\"img\" aria-label=\"A number line from negative 5 to positive 5 with zero in the middle\"><line x1=\"18\" y1=\"30\" x2=\"302\" y2=\"30\" stroke=\"#4f9cf0\" stroke-width=\"2\"/><polygon points=\"302,30 293,25 293,35\" fill=\"#4f9cf0\"/><polygon points=\"18,30 27,25 27,35\" fill=\"#4f9cf0\"/><line x1=\"30\" y1=\"24\" x2=\"30\" y2=\"36\" stroke=\"#6b7a98\" stroke-width=\"1.3\"/><text x=\"30\" y=\"54\" text-anchor=\"middle\" fill=\"#6b7a98\" font-size=\"11\" font-family=\"monospace\">-5</text><line x1=\"56\" y1=\"24\" x2=\"56\" y2=\"36\" stroke=\"#6b7a98\" stroke-width=\"1.3\"/><text x=\"56\" y=\"54\" text-anchor=\"middle\" fill=\"#6b7a98\" font-size=\"11\" font-family=\"monospace\">-4</text><line x1=\"82\" y1=\"24\" x2=\"82\" y2=\"36\" stroke=\"#6b7a98\" stroke-width=\"1.3\"/><text x=\"82\" y=\"54\" text-anchor=\"middle\" fill=\"#6b7a98\" font-size=\"11\" font-family=\"monospace\">-3</text><line x1=\"108\" y1=\"24\" x2=\"108\" y2=\"36\" stroke=\"#6b7a98\" stroke-width=\"1.3\"/><text x=\"108\" y=\"54\" text-anchor=\"middle\" fill=\"#6b7a98\" font-size=\"11\" font-family=\"monospace\">-2</text><line x1=\"134\" y1=\"24\" x2=\"134\" y2=\"36\" stroke=\"#6b7a98\" stroke-width=\"1.3\"/><text x=\"134\" y=\"54\" text-anchor=\"middle\" fill=\"#6b7a98\" font-size=\"11\" font-family=\"monospace\">-1</text><line x1=\"160\" y1=\"24\" x2=\"160\" y2=\"36\" stroke=\"#39e3c8\" stroke-width=\"2.2\"/><text x=\"160\" y=\"54\" text-anchor=\"middle\" fill=\"#39e3c8\" font-size=\"11\" font-family=\"monospace\">0</text><line x1=\"186\" y1=\"24\" x2=\"186\" y2=\"36\" stroke=\"#6b7a98\" stroke-width=\"1.3\"/><text x=\"186\" y=\"54\" text-anchor=\"middle\" fill=\"#6b7a98\" font-size=\"11\" font-family=\"monospace\">1</text><line x1=\"212\" y1=\"24\" x2=\"212\" y2=\"36\" stroke=\"#6b7a98\" stroke-width=\"1.3\"/><text x=\"212\" y=\"54\" text-anchor=\"middle\" fill=\"#6b7a98\" font-size=\"11\" font-family=\"monospace\">2</text><line x1=\"238\" y1=\"24\" x2=\"238\" y2=\"36\" stroke=\"#6b7a98\" stroke-width=\"1.3\"/><text x=\"238\" y=\"54\" text-anchor=\"middle\" fill=\"#6b7a98\" font-size=\"11\" font-family=\"monospace\">3</text><line x1=\"264\" y1=\"24\" x2=\"264\" y2=\"36\" stroke=\"#6b7a98\" stroke-width=\"1.3\"/><text x=\"264\" y=\"54\" text-anchor=\"middle\" fill=\"#6b7a98\" font-size=\"11\" font-family=\"monospace\">4</text><line x1=\"290\" y1=\"24\" x2=\"290\" y2=\"36\" stroke=\"#6b7a98\" stroke-width=\"1.3\"/><text x=\"290\" y=\"54\" text-anchor=\"middle\" fill=\"#6b7a98\" font-size=\"11\" font-family=\"monospace\">5</text></svg>",
+    "caption": "On the number line, negatives are left of zero; moving right increases, moving left decreases.",
+    "tip": "Subtracting a negative is the same as adding a positive: a − (−b) = a + b."
    },
    {
-    "h": "Rules of signs",
-    "body": "Multiplying or dividing two numbers with the SAME sign gives a positive; DIFFERENT signs give a negative. So (−4)(−2) = 8, but (−4)(2) = −8. The same rule works for division."
+    "h": "The rules of signs",
+    "body": "Multiplying and dividing with negatives follows two simple rules. When the two numbers have the SAME sign, the result is positive. When they have DIFFERENT signs, the result is negative. So (−4)(−2) = 8, but (−4)(2) = −8, and the same holds for division.\n\nA helpful way to remember: a negative 'flips' direction, so two negatives flip twice — back to positive. Keeping signs straight is one of the main things that makes pre-algebra feel different from basic arithmetic, so practice it until it's automatic.",
+    "example": "(−6) × (−3) = 18   (same signs → positive)\n(−6) × 3 = −18      (different signs → negative)\n(−20) ÷ 5 = −4      (different signs → negative)"
    },
    {
-    "h": "Fractions, decimals, percents",
-    "body": "These are three ways to write the same value: 1/2 = 0.5 = 50%. To turn a fraction into a decimal, divide top by bottom; into a percent, multiply the decimal by 100. Switching between the three fluently is a core pre-algebra skill."
+    "h": "Fractions, decimals, and percents",
+    "body": "Pre-algebra leans heavily on moving between the three ways of writing a part: fractions, decimals, and percents. 1/2 = 0.5 = 50% are all the same value, and fluency here is essential because algebra and everyday life (sales, tips, interest) use all three interchangeably.\n\nConvert a fraction to a decimal by dividing top by bottom; a decimal to a percent by multiplying by 100; and a percent to a fraction by writing it over 100 and simplifying. Finding a percent of a number is just multiplication: 20% of 80 is 0.20 × 80 = 16.",
+    "example": "What is 15% of 60?\n15% = 0.15\n0.15 × 60 = 9"
    },
    {
     "h": "Ratios and proportions",
-    "body": "A ratio compares two quantities (3 cups flour to 2 cups sugar, or 3:2). A proportion sets two ratios equal and lets you solve for an unknown by cross-multiplying: if 3/2 = x/6, then 2x = 18, so x = 9. It's how you scale recipes, maps, and rates."
+    "body": "A ratio compares two quantities — 2 cups of flour to 3 cups of sugar is the ratio 2:3. A proportion states that two ratios are equal, and it's one of the most useful tools in all of math because it lets you scale recipes, read maps, convert units, and solve 'if this, then how much of that' problems.\n\nYou solve a proportion by cross-multiplying: if 2/3 = x/12, multiply across to get 3x = 24, so x = 8. Set up the ratio carefully so matching quantities sit in the same positions.",
+    "example": "A recipe uses 2 eggs for 6 pancakes. How many eggs for 15 pancakes?\n2/6 = x/15\n6x = 30\nx = 5 eggs",
+    "tip": "Keep the same kind of quantity in the same spot (eggs over pancakes on both sides) when you set up a proportion."
    },
    {
-    "h": "From numbers to variables",
-    "body": "Pre-algebra introduces letters for unknowns and 'expressions' like 2n + 5. You evaluate an expression by substituting a value (if n = 4, 2n + 5 = 13), and solve simple equations by undoing operations — the gateway to algebra."
+    "h": "Variables, expressions, and first equations",
+    "body": "Pre-algebra introduces the star of algebra: the variable, a letter standing for an unknown number. An expression like 2n + 5 combines variables, numbers, and operations. You evaluate it by substituting a value (if n = 4, 2n + 5 = 13).\n\nAn equation sets two expressions equal and can be solved. Using the balance rule — do the same to both sides — you undo operations to isolate the variable. This is the doorway to algebra: once you can solve 2n + 5 = 13, you're doing algebra.",
+    "example": "Solve 2n + 5 = 13:\n2n = 8      (subtract 5 from both sides)\nn = 4       (divide both sides by 2)"
+   },
+   {
+    "h": "The coordinate plane",
+    "body": "Many ideas in algebra are visual, and the coordinate plane is where you see them. It's formed by a horizontal number line (the x-axis) and a vertical one (the y-axis) crossing at the origin, (0, 0). Any point is named by an ordered pair (x, y): x tells how far right or left, y how far up or down.\n\nTo plot (3, 2), start at the origin, go 3 right, then 2 up. To plot (−2, 1), go 2 left and 1 up. This grid is how equations become graphs, turning algebra into pictures you can reason about.",
+    "visual": "<svg viewBox=\"0 0 210 210\" width=\"200\" role=\"img\" aria-label=\"A coordinate plane with the point 3 comma 2 plotted\"><line x1=\"35\" y1=\"15\" x2=\"35\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"35\" x2=\"195\" y2=\"35\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"55\" y1=\"15\" x2=\"55\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"55\" x2=\"195\" y2=\"55\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"75\" y1=\"15\" x2=\"75\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"75\" x2=\"195\" y2=\"75\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"95\" y1=\"15\" x2=\"95\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"95\" x2=\"195\" y2=\"95\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"115\" y1=\"15\" x2=\"115\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"115\" x2=\"195\" y2=\"115\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"135\" y1=\"15\" x2=\"135\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"135\" x2=\"195\" y2=\"135\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"155\" y1=\"15\" x2=\"155\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"155\" x2=\"195\" y2=\"155\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"175\" y1=\"15\" x2=\"175\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"175\" x2=\"195\" y2=\"175\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"195\" y1=\"15\" x2=\"195\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"195\" x2=\"195\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"105\" x2=\"195\" y2=\"105\" stroke=\"#4f9cf0\" stroke-width=\"2\"/><line x1=\"105\" y1=\"195\" x2=\"105\" y2=\"15\" stroke=\"#4f9cf0\" stroke-width=\"2\"/><polygon points=\"195,105 187,101 187,109\" fill=\"#4f9cf0\"/><polygon points=\"105,15 101,23 109,23\" fill=\"#4f9cf0\"/><line x1=\"105\" y1=\"65\" x2=\"165\" y2=\"65\" stroke=\"#e8b84b\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><line x1=\"165\" y1=\"105\" x2=\"165\" y2=\"65\" stroke=\"#e8b84b\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><circle cx=\"165\" cy=\"65\" r=\"4.5\" fill=\"#e8b84b\"/><text x=\"172\" y=\"59\" fill=\"#e7edf7\" font-size=\"12\" font-family=\"monospace\">(3, 2)</text><text x=\"199\" y=\"109\" fill=\"#9aa6c0\" font-size=\"11\">x</text><text x=\"99\" y=\"14\" fill=\"#9aa6c0\" font-size=\"11\">y</text></svg>",
+    "caption": "A point (x, y): go x right/left from the origin, then y up/down. Here, (3, 2).",
+    "tip": "Order matters: (3, 2) and (2, 3) are different points. Always x first, then y."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Integers & signs",
+    "body": "Integers include negatives. Same signs multiply/divide to positive; different signs to negative."
+   },
+   {
+    "h": "Three forms",
+    "body": "Fractions, decimals, percents convert freely; a percent of a number is multiplication."
+   },
+   {
+    "h": "Proportions",
+    "body": "Set two ratios equal and cross-multiply to solve for the unknown."
+   },
+   {
+    "h": "Variables & equations",
+    "body": "Evaluate expressions by substituting; solve equations with the balance rule."
+   },
+   {
+    "h": "Coordinate plane",
+    "body": "Plot (x, y): x across, y up/down, from the origin (0, 0)."
    }
   ],
   "flash": [
    [
     "Integer",
-    "A whole number, its negative, or zero (…, −1, 0, 1, …)."
+    "A whole number, its negative, or zero."
    ],
    [
     "Absolute value",
     "A number's distance from zero, always positive (|−5| = 5)."
    ],
    [
+    "Sign rule",
+    "Same signs → positive; different signs → negative (× and ÷)."
+   ],
+   [
     "Ratio",
-    "A comparison of two quantities (3:2)."
+    "A comparison of two quantities (2:3)."
    ],
    [
     "Proportion",
-    "An equation saying two ratios are equal."
+    "A statement that two ratios are equal."
    ],
    [
     "Cross-multiply",
     "Multiply across an equal pair of fractions to solve."
    ],
    [
-    "Reciprocal",
-    "A fraction flipped upside down (reciprocal of 3/4 is 4/3)."
-   ],
-   [
-    "Sign rule",
-    "Same signs multiply to positive; different signs to negative."
+    "Variable",
+    "A letter standing for an unknown number."
    ],
    [
     "Expression",
-    "Numbers and variables combined with operations, no equals sign."
+    "Numbers and variables with operations, no equals sign."
+   ],
+   [
+    "Equation",
+    "A statement that two expressions are equal."
+   ],
+   [
+    "Coordinate plane",
+    "The grid of x- and y-axes for plotting points."
+   ],
+   [
+    "Origin",
+    "The point (0, 0) where the axes cross."
+   ],
+   [
+    "Ordered pair",
+    "(x, y) — a point's location, x first then y."
    ]
   ],
   "quiz": [
@@ -3621,7 +3833,7 @@ window.LAB404_CONTENT = {
      "7"
     ],
     "a": 0,
-    "why": "Two negatives multiply to a positive: 4×3 = 12."
+    "why": "Same signs multiply to a positive: 4 × 3 = 12."
    },
    {
     "q": "5 − (−2) =",
@@ -3635,6 +3847,39 @@ window.LAB404_CONTENT = {
     "why": "Subtracting a negative is adding: 5 + 2 = 7."
    },
    {
+    "q": "(−20) ÷ 5 =",
+    "options": [
+     "−4",
+     "4",
+     "−100",
+     "−15"
+    ],
+    "a": 0,
+    "why": "Different signs → negative: 20 ÷ 5 = 4, so −4."
+   },
+   {
+    "q": "On a number line, −5 is:",
+    "options": [
+     "Less than −2",
+     "Greater than −2",
+     "Equal to 5",
+     "To the right of 0"
+    ],
+    "a": 0,
+    "why": "Farther left means smaller; −5 < −2."
+   },
+   {
+    "q": "The absolute value |−8| is:",
+    "options": [
+     "8",
+     "−8",
+     "0",
+     "16"
+    ],
+    "a": 0,
+    "why": "Distance from zero is always non-negative."
+   },
+   {
     "q": "Write 3/4 as a percent.",
     "options": [
      "75%",
@@ -3646,37 +3891,103 @@ window.LAB404_CONTENT = {
     "why": "3 ÷ 4 = 0.75 = 75%."
    },
    {
-    "q": "If 2/3 = x/9, then x =",
+    "q": "What is 15% of 60?",
     "options": [
-     "6",
-     "3",
      "9",
-     "4"
+     "15",
+     "45",
+     "90"
     ],
     "a": 0,
-    "why": "Cross-multiply: 3x = 18, so x = 6."
+    "why": "0.15 × 60 = 9."
    },
    {
-    "q": "The absolute value |−8| is:",
+    "q": "Solve the proportion 2/3 = x/12.",
     "options": [
-     "8",
-     "−8",
-     "0",
-     "16"
+     "x = 8",
+     "x = 6",
+     "x = 18",
+     "x = 4"
     ],
     "a": 0,
-    "why": "Absolute value is distance from zero, always non-negative."
+    "why": "Cross-multiply: 3x = 24, so x = 8."
    },
    {
-    "q": "What is −10 ÷ 2?",
+    "q": "A recipe uses 2 eggs per 6 pancakes. For 15 pancakes you need:",
     "options": [
-     "−5",
-     "5",
-     "−20",
-     "−8"
+     "5 eggs",
+     "3 eggs",
+     "10 eggs",
+     "7 eggs"
     ],
     "a": 0,
-    "why": "Different signs give a negative: 10÷2 = 5, so −5."
+    "why": "2/6 = x/15 → 6x = 30 → x = 5."
+   },
+   {
+    "q": "Evaluate 2n + 5 when n = 4.",
+    "options": [
+     "13",
+     "11",
+     "9",
+     "26"
+    ],
+    "a": 0,
+    "why": "2(4) + 5 = 8 + 5 = 13."
+   },
+   {
+    "q": "Solve 2n + 5 = 13.",
+    "options": [
+     "n = 4",
+     "n = 9",
+     "n = 6",
+     "n = 3"
+    ],
+    "a": 0,
+    "why": "2n = 8, then n = 4."
+   },
+   {
+    "q": "To plot the point (3, 2), from the origin you go:",
+    "options": [
+     "3 right, then 2 up",
+     "2 right, then 3 up",
+     "3 up, then 2 right",
+     "3 left, then 2 down"
+    ],
+    "a": 0,
+    "why": "Ordered pair is (x, y): x across first, then y up."
+   },
+   {
+    "q": "The point where the x- and y-axes cross is the:",
+    "options": [
+     "Origin",
+     "Vertex",
+     "Midpoint",
+     "Quadrant"
+    ],
+    "a": 0,
+    "why": "The origin is (0, 0)."
+   },
+   {
+    "q": "Are (3, 2) and (2, 3) the same point?",
+    "options": [
+     "No — order matters",
+     "Yes",
+     "Only on graphs",
+     "Sometimes"
+    ],
+    "a": 0,
+    "why": "(x, y) order matters, so they're different points."
+   },
+   {
+    "q": "A ratio of 2 cups flour to 3 cups sugar is written:",
+    "options": [
+     "2:3",
+     "3:2",
+     "2+3",
+     "5"
+    ],
+    "a": 0,
+    "why": "A ratio compares the two quantities in order, 2 to 3."
    }
   ]
  },
