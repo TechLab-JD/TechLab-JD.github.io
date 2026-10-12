@@ -6903,5 +6903,1050 @@ window.LAB404_CONTENT = {
     "why": "Verify its output; it can be confidently wrong."
    }
   ]
+ },
+ "medicine-human-anatomy": {
+  "title": "Human Anatomy",
+  "subject": "Health & Medicine",
+  "level": "Grades 9 - college",
+  "intro": "Human anatomy is the study of the body's structure — its systems, organs, and how they fit together. Knowing the basics helps you understand your own health and what doctors are talking about.",
+  "cards": [
+   {
+    "h": "The body's organization",
+    "body": "The body is organized in levels: cells form tissues, tissues form organs, and organs work together as systems (like the digestive or nervous system). Each level builds on the one below to keep you alive and functioning."
+   },
+   {
+    "h": "Skeletal and muscular systems",
+    "body": "The skeleton (about 206 bones in an adult) gives the body structure, protects organs, and works with muscles to produce movement. Muscles pull on bones across joints; they can only pull, not push, which is why they work in opposing pairs."
+   },
+   {
+    "h": "Circulatory and respiratory systems",
+    "body": "The heart pumps blood through vessels, delivering oxygen and nutrients and carrying away waste. The lungs bring in oxygen and release carbon dioxide. Together they keep every cell supplied — which is why CPR, keeping blood and air moving, saves lives."
+   },
+   {
+    "h": "Nervous and digestive systems",
+    "body": "The nervous system (brain, spinal cord, nerves) is the control center — sensing, thinking, and sending signals. The digestive system breaks food into nutrients the body can absorb for energy and building material, from mouth to stomach to intestines."
+   },
+   {
+    "h": "Systems work together",
+    "body": "No system works alone. When you exercise, muscles need more oxygen, so the heart beats faster and you breathe harder, and the nervous system coordinates it all. A problem in one system often affects others, which is why doctors look at the whole body."
+   }
+  ],
+  "flash": [
+   [
+    "Cell",
+    "The smallest living unit of the body."
+   ],
+   [
+    "Tissue",
+    "A group of similar cells working together."
+   ],
+   [
+    "Organ",
+    "A structure of tissues doing a specific job (heart, lung)."
+   ],
+   [
+    "Organ system",
+    "Organs working together (e.g., the digestive system)."
+   ],
+   [
+    "Skeletal system",
+    "The bones that support and protect the body."
+   ],
+   [
+    "Circulatory system",
+    "The heart and blood vessels that move blood."
+   ],
+   [
+    "Respiratory system",
+    "The lungs and airways that exchange gases."
+   ],
+   [
+    "Nervous system",
+    "The brain, spinal cord, and nerves — the control center."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The body's levels of organization go:",
+    "options": [
+     "Cells → tissues → organs → systems",
+     "Organs → cells → systems",
+     "Systems → cells",
+     "Tissues → cells only"
+    ],
+    "a": 0,
+    "why": "Cells form tissues, tissues form organs, organs form systems."
+   },
+   {
+    "q": "The system that pumps blood through the body is the:",
+    "options": [
+     "Circulatory system",
+     "Respiratory system",
+     "Digestive system",
+     "Skeletal system"
+    ],
+    "a": 0,
+    "why": "The heart and vessels (circulatory system) move blood."
+   },
+   {
+    "q": "An adult human skeleton has about:",
+    "options": [
+     "206 bones",
+     "50 bones",
+     "600 bones",
+     "20 bones"
+    ],
+    "a": 0,
+    "why": "An adult has about 206 bones."
+   },
+   {
+    "q": "The control center of the body is the:",
+    "options": [
+     "Nervous system",
+     "Digestive system",
+     "Skeletal system",
+     "Muscular system"
+    ],
+    "a": 0,
+    "why": "The brain, spinal cord, and nerves sense and coordinate everything."
+   },
+   {
+    "q": "Muscles move bones by:",
+    "options": [
+     "Pulling (never pushing)",
+     "Pushing",
+     "Dissolving them",
+     "Growing longer only"
+    ],
+    "a": 0,
+    "why": "Muscles can only pull, so they work in opposing pairs."
+   },
+   {
+    "q": "The lungs' main job is to:",
+    "options": [
+     "Exchange oxygen and carbon dioxide",
+     "Pump blood",
+     "Digest food",
+     "Make bones"
+    ],
+    "a": 0,
+    "why": "They bring in oxygen and release carbon dioxide."
+   }
+  ]
+ },
+ "medicine-mental-health": {
+  "title": "Mental Health",
+  "subject": "Health & Medicine",
+  "level": "Grades 9 - adult",
+  "disclaimer": "General wellness information, not medical advice. If you're struggling, reach out to a professional or call/text 988 (the U.S. Suicide & Crisis Lifeline).",
+  "intro": "Mental health is part of overall health — how you think, feel, and cope with life. Like physical health, it varies, can be cared for, and sometimes needs help. Taking it seriously is a strength, not a weakness.",
+  "cards": [
+   {
+    "h": "Mental health is health",
+    "body": "Your mind and body are connected. Mental health affects sleep, energy, relationships, and physical health — and vice versa. Everyone has mental health, and it moves up and down. Caring for it is normal maintenance, not a sign something is 'wrong' with you."
+   },
+   {
+    "h": "Stress and the basics of coping",
+    "body": "Some stress is normal, but ongoing stress wears you down. The foundations that protect mental health are unglamorous but powerful: enough sleep, movement, decent food, connection with people, and time outside. When you're struggling, start there before anything fancy."
+   },
+   {
+    "h": "Common conditions",
+    "body": "Anxiety (persistent, excessive worry) and depression (lasting low mood, loss of interest, low energy) are the most common mental-health conditions — and among the most treatable. They're medical issues, not character flaws, and help works for most people."
+   },
+   {
+    "h": "Healthy vs. harmful coping",
+    "body": "Healthy coping (talking to someone, exercise, rest, problem-solving, breathing) builds you up. Harmful coping (alcohol or drugs, isolating, avoiding everything) feels like relief but makes things worse over time. Noticing which you're reaching for is a useful check."
+   },
+   {
+    "h": "Asking for help",
+    "body": "Reaching out — to a friend, a doctor, a counselor, or a crisis line — is a sign of strength. Therapy and sometimes medication genuinely help, and many resources are low-cost or free. In the U.S., you can call or text 988 anytime for the Suicide & Crisis Lifeline."
+   }
+  ],
+  "flash": [
+   [
+    "Mental health",
+    "How you think, feel, and cope — part of overall health."
+   ],
+   [
+    "Stress",
+    "The body's response to pressure or demands."
+   ],
+   [
+    "Anxiety",
+    "Persistent, excessive worry or fear."
+   ],
+   [
+    "Depression",
+    "Lasting low mood, loss of interest, and low energy."
+   ],
+   [
+    "Coping",
+    "How you handle stress and difficult emotions."
+   ],
+   [
+    "Self-care",
+    "Basic habits (sleep, movement, connection) that support wellbeing."
+   ],
+   [
+    "Therapy",
+    "Talking with a trained professional to work through challenges."
+   ],
+   [
+    "988",
+    "The U.S. Suicide & Crisis Lifeline (call or text)."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Mental health is:",
+    "options": [
+     "A normal part of overall health everyone has",
+     "Only for a few people",
+     "A character flaw",
+     "Unrelated to the body"
+    ],
+    "a": 0,
+    "why": "Everyone has mental health; it's part of overall health."
+   },
+   {
+    "q": "A foundation that protects mental health is:",
+    "options": [
+     "Sleep, movement, and connection",
+     "Ignoring problems",
+     "Isolating",
+     "Skipping meals"
+    ],
+    "a": 0,
+    "why": "Basics like sleep, exercise, and social connection are powerful."
+   },
+   {
+    "q": "Anxiety and depression are:",
+    "options": [
+     "Common and treatable conditions",
+     "Rare and hopeless",
+     "Character flaws",
+     "Just laziness"
+    ],
+    "a": 0,
+    "why": "They're common, treatable conditions — not personal failings."
+   },
+   {
+    "q": "Which is a HARMFUL coping strategy?",
+    "options": [
+     "Using alcohol/drugs to numb feelings",
+     "Talking to a friend",
+     "Exercising",
+     "Getting rest"
+    ],
+    "a": 0,
+    "why": "Substances and avoidance feel like relief but worsen things."
+   },
+   {
+    "q": "Asking for help is:",
+    "options": [
+     "A sign of strength",
+     "A weakness",
+     "Pointless",
+     "Only a last resort"
+    ],
+    "a": 0,
+    "why": "Reaching out is strong, and help genuinely works for most people."
+   },
+   {
+    "q": "In the U.S., the Suicide & Crisis Lifeline is reached at:",
+    "options": [
+     "988",
+     "411",
+     "211 only",
+     "611"
+    ],
+    "a": 0,
+    "why": "You can call or text 988 anytime."
+   }
+  ]
+ },
+ "medicine-common-illnesses": {
+  "title": "Common Illnesses",
+  "subject": "Health & Medicine",
+  "level": "All levels",
+  "disclaimer": "General information, not medical advice. See a healthcare provider for diagnosis and treatment, and seek emergency care for severe symptoms.",
+  "intro": "Knowing the basics of common illnesses helps you take care of yourself, know when rest is enough, and recognize when to see a doctor. Most everyday illnesses are mild and pass on their own.",
+  "cards": [
+   {
+    "h": "Colds vs. the flu",
+    "body": "Both are viruses. A cold comes on gradually with a runny nose and sore throat and is usually mild. The flu hits suddenly with fever, body aches, and exhaustion, and can be more serious. Neither is helped by antibiotics (those fight bacteria, not viruses) — rest and fluids are the main treatment."
+   },
+   {
+    "h": "Bacteria vs. viruses",
+    "body": "Bacteria and viruses are different germs. Antibiotics kill bacteria but do nothing to viruses — taking them for a cold doesn't help and can breed resistant bacteria. Many infections are viral and simply need time; a doctor can tell which is which."
+   },
+   {
+    "h": "Fever and when to worry",
+    "body": "A fever is the body's defense, raising temperature to fight infection — often a sign the immune system is working. Rest, fluids, and over-the-counter medicine help you feel better. See a doctor for a very high fever, one lasting several days, or fever with trouble breathing, stiff neck, confusion, or severe pain."
+   },
+   {
+    "h": "Prevention basics",
+    "body": "The simplest protections work: wash your hands, don't touch your face with dirty hands, cover coughs, stay home when sick, and keep up with recommended vaccines. Sleep, good food, and managing stress keep your immune system strong."
+   },
+   {
+    "h": "When to seek care",
+    "body": "Most minor illnesses resolve with rest. Seek care for symptoms that are severe, worsening, or lasting too long — trouble breathing, chest pain, severe dehydration, a high or persistent fever, a wound that looks infected, or anything that worries you. When in doubt, call a nurse line or doctor."
+   }
+  ],
+  "flash": [
+   [
+    "Virus",
+    "A germ causing colds and flu; antibiotics don't work on it."
+   ],
+   [
+    "Bacteria",
+    "Germs that antibiotics can treat."
+   ],
+   [
+    "Antibiotic",
+    "Medicine that kills bacteria (not viruses)."
+   ],
+   [
+    "Fever",
+    "Raised body temperature, usually a sign of fighting infection."
+   ],
+   [
+    "Immune system",
+    "The body's defense against germs."
+   ],
+   [
+    "Vaccine",
+    "Prepares the immune system to fight a specific disease."
+   ],
+   [
+    "Antibiotic resistance",
+    "When bacteria evolve to survive antibiotics (from overuse)."
+   ],
+   [
+    "Over-the-counter",
+    "Medicine available without a prescription."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Antibiotics work against:",
+    "options": [
+     "Bacteria, not viruses",
+     "Viruses, not bacteria",
+     "Both equally",
+     "Neither"
+    ],
+    "a": 0,
+    "why": "Antibiotics kill bacteria; they do nothing for viral colds/flu."
+   },
+   {
+    "q": "A cold and the flu are both caused by:",
+    "options": [
+     "Viruses",
+     "Bacteria",
+     "Allergies",
+     "Poor diet"
+    ],
+    "a": 0,
+    "why": "Both are viral, so antibiotics don't help either."
+   },
+   {
+    "q": "A fever usually means:",
+    "options": [
+     "The body is fighting an infection",
+     "Something is broken",
+     "You need antibiotics",
+     "Nothing at all"
+    ],
+    "a": 0,
+    "why": "Raised temperature is part of the immune response."
+   },
+   {
+    "q": "A simple, powerful way to prevent illness is to:",
+    "options": [
+     "Wash your hands",
+     "Take antibiotics daily",
+     "Avoid all sleep",
+     "Skip vaccines"
+    ],
+    "a": 0,
+    "why": "Handwashing stops a huge amount of germ spread."
+   },
+   {
+    "q": "Taking antibiotics for a virus can:",
+    "options": [
+     "Breed resistant bacteria",
+     "Cure the virus",
+     "Prevent all colds",
+     "Replace rest"
+    ],
+    "a": 0,
+    "why": "Misuse drives antibiotic resistance and doesn't help viruses."
+   },
+   {
+    "q": "You should seek care for:",
+    "options": [
+     "Trouble breathing or a high, persistent fever",
+     "A mild runny nose",
+     "A single sneeze",
+     "Feeling slightly tired"
+    ],
+    "a": 0,
+    "why": "Severe or worsening symptoms need medical attention."
+   }
+  ]
+ },
+ "medicine-medical-terminology": {
+  "title": "Medical Terminology",
+  "subject": "Health & Medicine",
+  "level": "College",
+  "intro": "Medical terms can look like a foreign language, but most are built from a few Greek and Latin word parts. Learn the common parts and you can decode words you've never seen — a big help in healthcare or just understanding your own care.",
+  "cards": [
+   {
+    "h": "Words built from parts",
+    "body": "Most medical terms combine a root (the body part or meaning), a prefix (at the front), and a suffix (at the end). Break a word into parts and its meaning appears: 'cardiology' = cardio (heart) + logy (study of) = the study of the heart."
+   },
+   {
+    "h": "Common roots",
+    "body": "Roots name body parts or ideas: cardio (heart), derm (skin), neuro (nerve), gastro (stomach), hemo/hema (blood), osteo (bone), pulmo (lung), nephro (kidney). These show up again and again across medicine."
+   },
+   {
+    "h": "Common prefixes",
+    "body": "Prefixes modify meaning: hyper- (high/over), hypo- (low/under), a-/an- (without), tachy- (fast), brady- (slow), peri- (around), sub- (under). 'Hypertension' = hyper (high) + tension (pressure) = high blood pressure."
+   },
+   {
+    "h": "Common suffixes",
+    "body": "Suffixes often tell what's happening: -itis (inflammation), -ectomy (surgical removal), -ology (study of), -pathy (disease), -emia (blood condition), -oma (tumor). 'Appendicitis' = appendic (appendix) + itis (inflammation)."
+   },
+   {
+    "h": "Putting it together",
+    "body": "With the parts, you can decode unfamiliar terms. 'Dermatitis' = derm (skin) + itis (inflammation) = inflamed skin. 'Nephrology' = nephro (kidney) + logy (study) = the study of kidneys. You won't know every term, but you can make a strong, educated guess."
+   }
+  ],
+  "flash": [
+   [
+    "Root",
+    "The core of a medical term (the body part or meaning)."
+   ],
+   [
+    "-itis",
+    "Suffix meaning inflammation (e.g., arthritis)."
+   ],
+   [
+    "-ectomy",
+    "Suffix meaning surgical removal (e.g., appendectomy)."
+   ],
+   [
+    "-ology",
+    "Suffix meaning the study of (e.g., cardiology)."
+   ],
+   [
+    "hyper- / hypo-",
+    "Prefixes for high/over and low/under."
+   ],
+   [
+    "cardio-",
+    "Root meaning heart."
+   ],
+   [
+    "derm-",
+    "Root meaning skin."
+   ],
+   [
+    "neuro-",
+    "Root meaning nerve."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The suffix '-itis' means:",
+    "options": [
+     "Inflammation",
+     "Removal",
+     "Study of",
+     "Tumor"
+    ],
+    "a": 0,
+    "why": "'-itis' = inflammation (e.g., tonsillitis)."
+   },
+   {
+    "q": "'Cardiology' means the study of the:",
+    "options": [
+     "Heart",
+     "Skin",
+     "Brain",
+     "Kidney"
+    ],
+    "a": 0,
+    "why": "cardio (heart) + logy (study of)."
+   },
+   {
+    "q": "The prefix 'hyper-' means:",
+    "options": [
+     "High / over",
+     "Low / under",
+     "Without",
+     "Around"
+    ],
+    "a": 0,
+    "why": "Hyper- = high/over (hypertension = high blood pressure)."
+   },
+   {
+    "q": "'-ectomy' refers to:",
+    "options": [
+     "Surgical removal",
+     "Inflammation",
+     "Pain",
+     "Study"
+    ],
+    "a": 0,
+    "why": "An -ectomy is the removal of something (appendectomy)."
+   },
+   {
+    "q": "'Dermatitis' means:",
+    "options": [
+     "Inflamed skin",
+     "Heart study",
+     "Bone removal",
+     "Nerve pain"
+    ],
+    "a": 0,
+    "why": "derm (skin) + itis (inflammation)."
+   },
+   {
+    "q": "The root 'neuro-' refers to:",
+    "options": [
+     "Nerves",
+     "Blood",
+     "Lungs",
+     "Stomach"
+    ],
+    "a": 0,
+    "why": "Neuro- means nerve (neurology = study of the nervous system)."
+   }
+  ]
+ },
+ "survival-emergency-first-aid": {
+  "title": "Emergency First Aid",
+  "subject": "Survival & Preparedness",
+  "level": "All levels",
+  "disclaimer": "General information, not a substitute for certified first-aid training. Call 911 in an emergency.",
+  "intro": "In an emergency far from help, basic first aid can keep someone alive until rescue arrives. You don't need a kit full of gear — calm thinking and a few core skills matter most.",
+  "cards": [
+   {
+    "h": "Stay calm and assess",
+    "body": "Panic helps no one. Take a breath, make sure the scene is safe for you, then check the person: Are they responsive? Breathing? Bleeding badly? Handle life threats first — breathing and severe bleeding — before minor injuries."
+   },
+   {
+    "h": "Severe bleeding",
+    "body": "Serious bleeding is an immediate threat. Press firmly and directly on the wound with the cleanest cloth available and keep steady pressure. Don't remove soaked cloth — add more on top. For a limb that won't stop bleeding, a tight band (tourniquet) above the wound can be lifesaving."
+   },
+   {
+    "h": "Shock",
+    "body": "Shock is a dangerous drop in blood flow that can follow serious injury or blood loss. Signs: pale, cold, clammy skin; a rapid, weak pulse; confusion. Have the person lie down, keep them warm, elevate the legs if no spinal injury is suspected, and get help fast."
+   },
+   {
+    "h": "Breaks, sprains, and burns",
+    "body": "For a suspected broken bone, keep it still and supported and don't try to straighten it. For sprains, remember RICE: Rest, Ice, Compression, Elevation. For burns, cool with clean running water for 10–20 minutes — never ice or butter — and cover loosely."
+   },
+   {
+    "h": "A simple first-aid kit",
+    "body": "A basic kit goes a long way: adhesive bandages, gauze and tape, an elastic wrap, antiseptic wipes, tweezers, gloves, pain relievers, and any personal medications. Know what's in it before you need it, and keep one where you spend time (home, car, pack)."
+   }
+  ],
+  "flash": [
+   [
+    "Scene safety",
+    "Making sure it's safe for you before helping."
+   ],
+   [
+    "Direct pressure",
+    "Pressing on a wound to stop bleeding."
+   ],
+   [
+    "Tourniquet",
+    "A tight band above severe limb bleeding, a last resort."
+   ],
+   [
+    "Shock",
+    "Dangerous drop in blood flow after serious injury."
+   ],
+   [
+    "RICE",
+    "Rest, Ice, Compression, Elevation (for sprains)."
+   ],
+   [
+    "Burn care",
+    "Cool with running water 10–20 min; no ice or butter."
+   ],
+   [
+    "Splint",
+    "Support that keeps a suspected broken bone still."
+   ],
+   [
+    "First-aid kit",
+    "Basic supplies to treat injuries until help arrives."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The first life threats to handle are:",
+    "options": [
+     "Breathing and severe bleeding",
+     "Small cuts",
+     "Bruises",
+     "Blisters"
+    ],
+    "a": 0,
+    "why": "Airway/breathing and major bleeding are immediate threats."
+   },
+   {
+    "q": "To stop severe bleeding you should:",
+    "options": [
+     "Apply firm direct pressure",
+     "Rinse and wait",
+     "Elevate only",
+     "Apply ice only"
+    ],
+    "a": 0,
+    "why": "Direct pressure is the first and main step."
+   },
+   {
+    "q": "RICE for a sprain stands for Rest, Ice, Compression, and:",
+    "options": [
+     "Elevation",
+     "Exercise",
+     "Eating",
+     "Energy"
+    ],
+    "a": 0,
+    "why": "Elevation reduces swelling along with the others."
+   },
+   {
+    "q": "To treat a burn, you should:",
+    "options": [
+     "Cool it with running water",
+     "Put butter on it",
+     "Pack it in ice",
+     "Pop any blisters"
+    ],
+    "a": 0,
+    "why": "Cool running water 10–20 min; avoid ice, butter, and popping blisters."
+   },
+   {
+    "q": "Signs of shock include:",
+    "options": [
+     "Pale, cold, clammy skin and confusion",
+     "Warm pink skin",
+     "High energy",
+     "A normal pulse"
+    ],
+    "a": 0,
+    "why": "Shock shows as pale, clammy skin, a weak rapid pulse, and confusion."
+   },
+   {
+    "q": "For a suspected broken bone, you should:",
+    "options": [
+     "Keep it still and supported",
+     "Straighten it",
+     "Have them walk it off",
+     "Massage it"
+    ],
+    "a": 0,
+    "why": "Immobilize it; don't try to realign it yourself."
+   }
+  ]
+ },
+ "survival-wilderness-skills": {
+  "title": "Wilderness Skills",
+  "subject": "Survival & Preparedness",
+  "level": "All levels",
+  "disclaimer": "General outdoor-safety information. Build skills with practice and never take unnecessary risks.",
+  "intro": "Wilderness skills are about staying safe and self-reliant in the outdoors. Most trouble comes from poor preparation, so a little knowledge and planning prevents the majority of emergencies.",
+  "cards": [
+   {
+    "h": "Plan and tell someone",
+    "body": "The single best survival skill is preparation. Before heading out, check the weather, pack the basics, and tell someone your route and when you'll be back. If you don't return, that person is your rescue. Most survival situations are avoided right here."
+   },
+   {
+    "h": "The ten essentials",
+    "body": "Experienced hikers carry a core kit: navigation (map/compass), water and a way to purify it, extra food, extra clothing/rain layer, fire-starting, a knife or tool, a first-aid kit, a headlamp, sun protection, and an emergency shelter. Even a short hike can turn into an overnight."
+   },
+   {
+    "h": "If you get lost: STOP",
+    "body": "If you realize you're lost, STOP: Stop (don't panic or wander), Think (how did you get here?), Observe (surroundings, landmarks, weather), Plan (a careful next step). Wandering makes you harder to find; staying put near an open area is often safest."
+   },
+   {
+    "h": "Protect against the elements",
+    "body": "Exposure is the top wilderness killer. Stay dry, layer clothing, and shelter from wind and rain. In heat, rest in shade during the hottest hours and drink water. Managing your body temperature matters more than food in the short term."
+   },
+   {
+    "h": "Minimize impact and signal",
+    "body": "Respect the outdoors (pack out trash, don't disturb wildlife), and know how to be found if needed. Three of anything (whistle blasts, signal fires, flashes) means distress. Bright colors and open areas make you visible to searchers and aircraft."
+   }
+  ],
+  "flash": [
+   [
+    "Trip plan",
+    "Telling someone your route and return time before you go."
+   ],
+   [
+    "Ten essentials",
+    "The core kit experienced hikers always carry."
+   ],
+   [
+    "STOP",
+    "Stop, Think, Observe, Plan — when you're lost."
+   ],
+   [
+    "Exposure",
+    "Harm from weather (cold, heat, wet) — the top outdoor danger."
+   ],
+   [
+    "Layering",
+    "Wearing adjustable clothing layers to manage temperature."
+   ],
+   [
+    "Signal of three",
+    "Three whistles/fires/flashes signal distress."
+   ],
+   [
+    "Leave No Trace",
+    "Minimizing your impact on the outdoors."
+   ],
+   [
+    "Navigation",
+    "Finding your way with a map and compass or known landmarks."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The single best survival skill is:",
+    "options": [
+     "Preparation (plan + tell someone)",
+     "Running fast",
+     "Eating a lot",
+     "Hiking alone"
+    ],
+    "a": 0,
+    "why": "Good planning prevents most emergencies; a told plan brings rescue."
+   },
+   {
+    "q": "If you realize you're lost, you should:",
+    "options": [
+     "STOP (don't wander)",
+     "Keep walking fast",
+     "Split from your group",
+     "Panic"
+    ],
+    "a": 0,
+    "why": "Stop, Think, Observe, Plan — wandering makes you harder to find."
+   },
+   {
+    "q": "The top killer in the wilderness is:",
+    "options": [
+     "Exposure to the elements",
+     "Hunger",
+     "Boredom",
+     "Thirst only"
+    ],
+    "a": 0,
+    "why": "Cold, heat, and wet (exposure) are the biggest short-term dangers."
+   },
+   {
+    "q": "The 'ten essentials' always include:",
+    "options": [
+     "Navigation, water, fire, shelter, first aid",
+     "Only snacks",
+     "Just a phone",
+     "Nothing special"
+    ],
+    "a": 0,
+    "why": "They're the core safety kit for any trip."
+   },
+   {
+    "q": "To stay warm, you should:",
+    "options": [
+     "Layer clothing and stay dry",
+     "Wear one heavy wet layer",
+     "Stay in the wind",
+     "Sweat a lot"
+    ],
+    "a": 0,
+    "why": "Layering and staying dry manage body temperature best."
+   },
+   {
+    "q": "Before a hike, you should always:",
+    "options": [
+     "Tell someone your route and return time",
+     "Tell no one",
+     "Leave at night unprepared",
+     "Skip checking the weather"
+    ],
+    "a": 0,
+    "why": "A told plan means someone will notice if you don't return."
+   }
+  ]
+ },
+ "survival-navigation-maps": {
+  "title": "Navigation & Maps",
+  "subject": "Survival & Preparedness",
+  "level": "All levels",
+  "disclaimer": "General information. Practice navigation skills in safe areas before relying on them.",
+  "intro": "Knowing where you are and how to get where you're going is a core outdoor skill. Phones fail (dead batteries, no signal), so a map, a compass, and basic know-how are worth learning.",
+  "cards": [
+   {
+    "h": "Reading a map",
+    "body": "A map is a bird's-eye view drawn to scale. Key features: the legend (explains symbols), the scale (map distance vs. real distance), and direction (usually north is up). Topographic maps add contour lines showing elevation — close lines mean steep terrain."
+   },
+   {
+    "h": "Finding direction",
+    "body": "The sun rises in the east and sets in the west, giving you a rough east-west line any clear day. A compass needle always points to magnetic north. Knowing which way is north lets you orient a map and hold a straight heading instead of wandering in circles."
+   },
+   {
+    "h": "Using a compass with a map",
+    "body": "Line up ('orient') the map so its north matches the compass's north; now the map matches the land around you. To travel toward a destination, point yourself along the direction (bearing) from your spot to the target and walk it, checking landmarks as you go."
+   },
+   {
+    "h": "Landmarks and handrails",
+    "body": "Experienced navigators follow obvious features: a ridge, a stream, a trail, a shoreline. These 'handrails' guide you and are hard to lose. Pick a visible landmark in your direction of travel, walk to it, then pick the next — it keeps you on a straight line."
+   },
+   {
+    "h": "Don't rely only on your phone",
+    "body": "GPS and phone maps are great but fragile outdoors — batteries die and signal drops. Carry a paper map and compass as backup, keep your phone charged and conserved, and learn the basics before you need them. Redundancy is what keeps you found."
+   }
+  ],
+  "flash": [
+   [
+    "Map legend",
+    "The key explaining a map's symbols."
+   ],
+   [
+    "Map scale",
+    "The ratio of map distance to real distance."
+   ],
+   [
+    "Contour lines",
+    "Lines on a topo map showing elevation (close = steep)."
+   ],
+   [
+    "Compass",
+    "A tool whose needle points to magnetic north."
+   ],
+   [
+    "Orienting a map",
+    "Lining up the map's north with real north."
+   ],
+   [
+    "Bearing",
+    "The compass direction from you to a destination."
+   ],
+   [
+    "Handrail",
+    "An obvious feature (stream, ridge) you follow to navigate."
+   ],
+   [
+    "Topographic map",
+    "A map showing elevation with contour lines."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "On most maps, which direction is 'up'?",
+    "options": [
+     "North",
+     "South",
+     "East",
+     "West"
+    ],
+    "a": 0,
+    "why": "By convention, maps are drawn with north at the top."
+   },
+   {
+    "q": "A compass needle points to:",
+    "options": [
+     "Magnetic north",
+     "The sun",
+     "Your destination",
+     "Downhill"
+    ],
+    "a": 0,
+    "why": "The needle aligns with magnetic north, letting you orient."
+   },
+   {
+    "q": "The sun rises in the:",
+    "options": [
+     "East",
+     "West",
+     "North",
+     "South"
+    ],
+    "a": 0,
+    "why": "It rises in the east and sets in the west."
+   },
+   {
+    "q": "Close-together contour lines mean:",
+    "options": [
+     "Steep terrain",
+     "Flat ground",
+     "Water",
+     "A trail"
+    ],
+    "a": 0,
+    "why": "Tightly spaced contours show a steep slope."
+   },
+   {
+    "q": "A 'handrail' in navigation is:",
+    "options": [
+     "An obvious feature you follow (stream, ridge)",
+     "A metal rail",
+     "A compass part",
+     "A type of map"
+    ],
+    "a": 0,
+    "why": "Following a clear feature keeps you on course."
+   },
+   {
+    "q": "Why not rely only on your phone outdoors?",
+    "options": [
+     "Batteries die and signal drops",
+     "It's always wrong",
+     "Maps are illegal",
+     "It's too heavy"
+    ],
+    "a": 0,
+    "why": "Electronics are fragile; carry a paper map and compass as backup."
+   }
+  ]
+ },
+ "survival-disaster-preparedness": {
+  "title": "Disaster Preparedness",
+  "subject": "Survival & Preparedness",
+  "level": "All levels",
+  "intro": "Disasters — storms, floods, power outages, wildfires — are easier to get through with a little preparation. A basic plan and kit, made before anything happens, turn a crisis into something manageable.",
+  "cards": [
+   {
+    "h": "Make a plan before you need it",
+    "body": "Decide in advance: how will your household get emergency alerts, where will you meet if separated, how will you communicate if phones are down, and what's your evacuation route? Write it down and make sure everyone knows it. A plan made calmly beats decisions made in panic."
+   },
+   {
+    "h": "Build an emergency kit",
+    "body": "A basic kit covers you for several days without outside help: water (about a gallon per person per day for 3+ days), non-perishable food, a flashlight, batteries, a first-aid kit, medications, a battery or hand-crank radio, a phone charger/power bank, cash, and copies of important documents."
+   },
+   {
+    "h": "Water and food first",
+    "body": "In most disasters, utilities and stores go down. Store water (the hardest to go without) and shelf-stable food you can eat without cooking. Keep your car's gas tank at least half full, and have a way to charge your phone when the power's out."
+   },
+   {
+    "h": "Know your local risks",
+    "body": "Prepare for what's likely where you live — hurricanes and floods in some areas, wildfires or earthquakes in others, winter storms elsewhere. Sign up for local emergency alerts, know your evacuation zones, and learn the difference between a 'watch' (be ready) and a 'warning' (act now)."
+   },
+   {
+    "h": "Evacuate early, shelter smart",
+    "body": "If told to evacuate, go early — roads clog fast and waiting can trap you. If sheltering in place, pick an interior room away from windows for storms, or higher ground for floods. Keep your kit and documents grab-ready in a bag by the door."
+   }
+  ],
+  "flash": [
+   [
+    "Emergency plan",
+    "A household's agreed plan for alerts, meeting, and evacuation."
+   ],
+   [
+    "Go-bag",
+    "A grab-ready bag of essentials for a fast evacuation."
+   ],
+   [
+    "Emergency kit",
+    "Supplies to last several days without outside help."
+   ],
+   [
+    "Watch vs. warning",
+    "A watch means be ready; a warning means act now."
+   ],
+   [
+    "Water storage",
+    "About 1 gallon per person per day for 3+ days."
+   ],
+   [
+    "Evacuation route",
+    "The planned way out of a danger area."
+   ],
+   [
+    "Shelter in place",
+    "Staying put safely indoors during a hazard."
+   ],
+   [
+    "Alerts",
+    "Official emergency notifications to sign up for."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The best time to make an emergency plan is:",
+    "options": [
+     "Before a disaster happens",
+     "During the disaster",
+     "After it's over",
+     "Never"
+    ],
+    "a": 0,
+    "why": "A calm plan beats panicked decisions in the moment."
+   },
+   {
+    "q": "An emergency kit should include water for about:",
+    "options": [
+     "3+ days (a gallon per person/day)",
+     "1 hour",
+     "1 month minimum",
+     "No water needed"
+    ],
+    "a": 0,
+    "why": "Aim for a gallon per person per day for at least three days."
+   },
+   {
+    "q": "A weather 'warning' means:",
+    "options": [
+     "Act now",
+     "Maybe later",
+     "Nothing",
+     "The storm passed"
+    ],
+    "a": 0,
+    "why": "A warning means the hazard is imminent — act. A watch means be ready."
+   },
+   {
+    "q": "If told to evacuate, you should:",
+    "options": [
+     "Leave early",
+     "Wait until the last minute",
+     "Ignore it",
+     "Drive toward the hazard"
+    ],
+    "a": 0,
+    "why": "Leaving early avoids clogged roads and getting trapped."
+   },
+   {
+    "q": "A 'go-bag' is:",
+    "options": [
+     "A grab-ready bag of essentials",
+     "A trash bag",
+     "A grocery bag",
+     "A sleeping bag only"
+    ],
+    "a": 0,
+    "why": "It's packed ahead so you can evacuate fast."
+   },
+   {
+    "q": "You should prepare mostly for:",
+    "options": [
+     "The disasters likely in your area",
+     "Only rare events",
+     "Nothing specific",
+     "Events on other continents"
+    ],
+    "a": 0,
+    "why": "Tailor your prep to your local risks (floods, fires, storms, quakes)."
+   }
+  ]
  }
 };
