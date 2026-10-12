@@ -3616,130 +3616,282 @@ window.LAB404_CONTENT = {
  "lifeskills-career-job-skills": {
   "title": "Career & Job Skills",
   "subject": "Life Skills & Finance",
-  "level": "Grades 9 - adult",
-  "intro": "Getting and keeping a good job is a skill set you can learn, not luck. A clear resume, solid interview habits, and basic workplace professionalism will put you ahead of most applicants.",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Identify the hard and soft skills employers want",
+   "Write a basic resume and cover letter",
+   "Prepare for and handle a job interview",
+   "Practice workplace professionalism",
+   "Plan a path to grow a career"
+  ],
+  "intro": "Getting and keeping a good job is a learnable set of skills — not luck. From presenting yourself on paper to interviewing to thriving at work, these skills shape your income and options for life. This lesson covers the skills employers want, resumes, interviews, professionalism, and growing a career.",
+  "sections": [
+   {
+    "h": "Hard skills and soft skills",
+    "body": "Employers look for two kinds of ability. Hard skills are specific, teachable, often technical — using a software tool, speaking a language, operating equipment, doing accounting. They're what a job description usually lists, and you prove them with training, certificates, or experience.\n\nSoft skills are how you work with people and handle yourself: communication, reliability, teamwork, problem-solving, a positive attitude, showing up on time. Employers often say soft skills are what they most struggle to find — many people can do the task, but fewer are dependable and easy to work with. Build both: hard skills get you the interview, soft skills get you hired and promoted.",
+    "tip": "Hard skills (specific, teachable) get you the interview; soft skills (reliability, communication) get you hired and promoted."
+   },
+   {
+    "h": "The resume and cover letter",
+    "body": "A resume is a one-page summary of your skills, experience, and education, designed to get you an interview. It lists your contact info, a short summary, your work history (most recent first, with what you accomplished), skills, and education. Keep it clean, honest, and tailored to each job — mirror the words from the job posting, and lead with results, not just duties.\n\nA cover letter is a short note that accompanies a resume, explaining why you want this specific job and why you'd be good at it. Not every job needs one, but a focused, genuine cover letter can set you apart. Both are marketing documents: their only job is to make an employer want to meet you.",
+    "visual": "<svg viewBox=\"0 0 256 66\" width=\"248\" role=\"img\" aria-label=\"The job-search steps: resume, apply, interview, offer\"><rect x=\"6\" y=\"18\" width=\"54\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"33\" y=\"38\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9.5\">Resume</text><rect x=\"70\" y=\"18\" width=\"54\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"97\" y=\"38\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9.5\">Apply</text><rect x=\"134\" y=\"18\" width=\"54\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"161\" y=\"38\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9.5\">Interview</text><rect x=\"198\" y=\"18\" width=\"54\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"225\" y=\"38\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9.5\">Offer</text><line x1=\"60\" y1=\"34\" x2=\"65\" y2=\"34\" stroke=\"#39e3c8\" stroke-width=\"2\"/><polygon points=\"65,30 70,34 65,38\" fill=\"#39e3c8\"/><line x1=\"124\" y1=\"34\" x2=\"129\" y2=\"34\" stroke=\"#39e3c8\" stroke-width=\"2\"/><polygon points=\"129,30 134,34 129,38\" fill=\"#39e3c8\"/><line x1=\"188\" y1=\"34\" x2=\"193\" y2=\"34\" stroke=\"#39e3c8\" stroke-width=\"2\"/><polygon points=\"193,30 198,34 193,38\" fill=\"#39e3c8\"/></svg>",
+    "caption": "The job-search path: a strong resume gets you applying, applying earns interviews, interviews lead to offers.",
+    "example": "Resume bullet — weak: 'Worked at store.'  Strong: 'Served 50+ customers a day and cut checkout time 20%.'",
+    "tip": "A resume's only job is to get an interview: keep it to a page, lead with results, and tailor it to each posting."
+   },
+   {
+    "h": "The job interview",
+    "body": "An interview is a conversation where an employer decides if you fit the role and the team. Preparation is most of the battle: research the company, re-read the job description, and practice answers to common questions ('Tell me about yourself,' 'Why do you want this job?', 'Describe a challenge you overcame'). Have a few questions ready to ask them, too — it shows interest.\n\nOn the day: arrive early, dress a notch above the job's normal attire, bring copies of your resume, and silence your phone. During it, make eye contact, listen fully, and answer with specific examples. Afterward, a short thank-you message is a classy touch. Interviews get much easier with practice, so treat early ones as practice and keep going.",
+    "tip": "Interviews are won by preparation: research the company, practice answers with real examples, and arrive early."
+   },
+   {
+    "h": "Professionalism at work",
+    "body": "Getting the job is the start; keeping and growing in it depends on professionalism — how you conduct yourself. The basics are simple but powerful: show up on time and ready, do what you say you'll do, communicate clearly, and treat everyone with respect. Reliability and a good attitude are noticed and remembered.\n\nProfessionalism also means handling mistakes well (own them, fix them, don't hide them), accepting feedback without defensiveness, and keeping personal drama and phones in check during work. You don't have to be the most talented person in the building; being the one others can count on, who's easy to work with and keeps learning, is what earns trust, raises, and opportunities.",
+    "tip": "Be reliable, respectful, and easy to work with. Owning mistakes and taking feedback well matter as much as talent."
+   },
+   {
+    "h": "Growing your career",
+    "body": "A career is built over years through deliberate steps. Keep learning — add skills and certifications that make you more valuable, many of them free online (like this hub). Build a network: most jobs come through people, so stay on good terms with coworkers and contacts, and don't be afraid to ask for help or advice.\n\nSet goals and seek growth: ask for more responsibility, look for a mentor, and periodically assess whether your job still fits your goals — sometimes growth means moving on. Track your accomplishments so your resume stays current. Careers rarely move in a straight line, but steady skill-building, good relationships, and a willingness to step up compound into real advancement over time.",
+    "tip": "Grow a career by always learning, building a network, and stepping up — most opportunities come through people and new skills."
+   }
+  ],
   "cards": [
    {
-    "h": "The resume's one job",
-    "body": "A resume exists to get you an interview, not to list your life story. Keep it to one page, lead with your most relevant experience and skills, use action verbs ('managed,' 'built,' 'fixed'), and tailor it to each job by mirroring the posting's key words."
+    "h": "Hard vs soft skills",
+    "body": "Hard skills (teachable, technical) get interviews; soft skills (reliability, communication) get you hired."
    },
    {
-    "h": "Where jobs actually come from",
-    "body": "Most jobs are filled through connections and referrals, not just online applications. Tell people you're looking, show up to hiring events, and follow up — a quick, polite message after applying sets you apart."
+    "h": "Resume & cover letter",
+    "body": "Resume = 1-page, results-first, tailored; cover letter = why this job, why you. Both aim to win a meeting."
    },
    {
-    "h": "Interview basics",
-    "body": "Research the company first, arrive early, dress a step above the role, and have 2–3 short stories ready that show how you solved a problem. Answer with specifics, not generalities, and always prepare a question or two to ask them."
+    "h": "Interview",
+    "body": "Prepare: research, practice answers with examples, arrive early, follow up with a thank-you."
    },
    {
-    "h": "The STAR answer",
-    "body": "For 'tell me about a time…' questions, use STAR: Situation (set the scene), Task (your job), Action (what you did), Result (how it turned out). It keeps your answer focused and shows real impact."
+    "h": "Professionalism",
+    "body": "Be on time, reliable, and respectful; own mistakes; take feedback well."
    },
    {
-    "h": "Keeping the job",
-    "body": "Show up on time, do what you say you'll do, communicate early when there's a problem, and be easy to work with. Reliability and a good attitude get you further than raw talent in most jobs."
+    "h": "Career growth",
+    "body": "Keep learning, build a network, and step up — opportunities come through people and skills."
    }
   ],
   "flash": [
    [
-    "Resume",
-    "A one-page summary of your skills and experience to land an interview."
-   ],
-   [
-    "Action verb",
-    "A strong verb describing what you did (built, managed, fixed)."
-   ],
-   [
-    "Cover letter",
-    "A short note tailoring your application to a specific job."
-   ],
-   [
-    "Referral",
-    "A recommendation from someone that helps you get hired."
-   ],
-   [
-    "STAR method",
-    "Situation, Task, Action, Result — a way to answer interview questions."
-   ],
-   [
-    "Reference",
-    "Someone who can vouch for your work to an employer."
-   ],
-   [
-    "Follow-up",
-    "A polite message sent after applying or interviewing."
+    "Hard skills",
+    "Specific, teachable abilities (software, trades, languages)."
    ],
    [
     "Soft skills",
-    "Reliability, communication, teamwork — how you work with others."
+    "People and work-habit skills (communication, reliability)."
+   ],
+   [
+    "Resume",
+    "A one-page summary of skills and experience to win an interview."
+   ],
+   [
+    "Cover letter",
+    "A short note explaining why you want a specific job."
+   ],
+   [
+    "Interview",
+    "A conversation where an employer decides if you fit."
+   ],
+   [
+    "Networking",
+    "Building relationships that lead to opportunities."
+   ],
+   [
+    "Professionalism",
+    "Conducting yourself reliably and respectfully at work."
+   ],
+   [
+    "Reliability",
+    "Consistently showing up and doing what you said."
+   ],
+   [
+    "Feedback",
+    "Input on your work used to improve."
+   ],
+   [
+    "Mentor",
+    "An experienced person who guides your growth."
+   ],
+   [
+    "References",
+    "People who can vouch for your work."
+   ],
+   [
+    "Follow-up",
+    "A thank-you or check-in after applying or interviewing."
    ]
   ],
   "quiz": [
    {
-    "q": "The main purpose of a resume is to:",
+    "q": "Specific, teachable abilities like using software are:",
+    "options": [
+     "Hard skills",
+     "Soft skills",
+     "References",
+     "Benefits"
+    ],
+    "a": 0,
+    "why": "Hard skills are specific and teachable."
+   },
+   {
+    "q": "Reliability and communication are examples of:",
+    "options": [
+     "Soft skills",
+     "Hard skills",
+     "Certifications",
+     "Salaries"
+    ],
+    "a": 0,
+    "why": "Soft skills are about working with people and yourself."
+   },
+   {
+    "q": "Which skill type employers often say is hardest to find?",
+    "options": [
+     "Soft skills",
+     "Hard skills",
+     "Typing speed",
+     "Math"
+    ],
+    "a": 0,
+    "why": "Many can do tasks; fewer are dependable and easy to work with."
+   },
+   {
+    "q": "A resume's main job is to:",
     "options": [
      "Get you an interview",
-     "List your whole life",
-     "Replace the interview",
-     "Impress friends"
+     "Get you hired instantly",
+     "Replace a job",
+     "List every hobby"
     ],
     "a": 0,
-    "why": "A resume's job is to earn an interview, so keep it focused."
+    "why": "It's a marketing document to win a meeting."
    },
    {
-    "q": "Most jobs are filled through:",
+    "q": "A strong resume bullet:",
     "options": [
-     "Connections and referrals",
-     "Online forms only",
+     "Leads with results ('cut checkout time 20%')",
+     "Just says 'worked there'",
+     "Lists only dates",
+     "Is three pages"
+    ],
+    "a": 0,
+    "why": "Lead with accomplishments, not duties."
+   },
+   {
+    "q": "You should tailor your resume by:",
+    "options": [
+     "Mirroring words from the job posting",
+     "Using the same one everywhere",
+     "Hiding your skills",
+     "Making it longer"
+    ],
+    "a": 0,
+    "why": "Tailoring to each posting improves your odds."
+   },
+   {
+    "q": "The most important part of interviewing well is:",
+    "options": [
+     "Preparation",
      "Luck",
-     "Cold walk-ins only"
+     "Talking the most",
+     "Arriving late"
     ],
     "a": 0,
-    "why": "Networking and referrals fill more jobs than blind applications."
+    "why": "Research and practice win interviews."
    },
    {
-    "q": "STAR stands for Situation, Task, Action, and:",
+    "q": "On interview day you should:",
     "options": [
-     "Result",
-     "Reason",
-     "Reference",
-     "Review"
+     "Arrive early and bring resume copies",
+     "Arrive late",
+     "Leave your resume home",
+     "Keep your phone loud"
     ],
     "a": 0,
-    "why": "Result — how it turned out — completes the STAR answer."
+    "why": "Early, prepared, and phone silenced."
    },
    {
-    "q": "On a resume you should use:",
+    "q": "A classy move after an interview is to:",
     "options": [
-     "Action verbs",
-     "Long paragraphs",
-     "As many pages as possible",
-     "Only hobbies"
+     "Send a short thank-you",
+     "Never contact them",
+     "Demand the job",
+     "Post about it angrily"
     ],
     "a": 0,
-    "why": "Action verbs (built, managed) show impact concisely."
+    "why": "A thank-you note leaves a good impression."
    },
    {
-    "q": "A good way to stand out after applying is to:",
+    "q": "Professionalism most depends on:",
     "options": [
-     "Send a polite follow-up",
-     "Apply 10 more times",
-     "Do nothing",
-     "Call every hour"
+     "Reliability and respect",
+     "Being the most talented",
+     "Expensive clothes",
+     "Working alone"
     ],
     "a": 0,
-    "why": "A brief, polite follow-up shows initiative without being pushy."
+    "why": "Being dependable and respectful matters most."
    },
    {
-    "q": "What usually keeps a job long-term?",
+    "q": "The best way to handle a mistake at work is to:",
     "options": [
-     "Reliability and attitude",
-     "Raw talent only",
-     "Working in silence",
-     "Never asking questions"
+     "Own it and fix it",
+     "Hide it",
+     "Blame others",
+     "Quit"
     ],
     "a": 0,
-    "why": "Showing up, following through, and being easy to work with matter most."
+    "why": "Owning and fixing mistakes builds trust."
+   },
+   {
+    "q": "Most jobs are found through:",
+    "options": [
+     "People (networking)",
+     "Random luck",
+     "Never applying",
+     "Only ads"
+    ],
+    "a": 0,
+    "why": "Relationships open most opportunities."
+   },
+   {
+    "q": "A good way to become more valuable is to:",
+    "options": [
+     "Keep learning new skills/certifications",
+     "Stop learning",
+     "Avoid feedback",
+     "Hide accomplishments"
+    ],
+    "a": 0,
+    "why": "Adding skills raises your value, often for free online."
+   },
+   {
+    "q": "An experienced person who guides your growth is a:",
+    "options": [
+     "Mentor",
+     "Client",
+     "Competitor",
+     "Reference only"
+    ],
+    "a": 0,
+    "why": "A mentor offers guidance and advice."
+   },
+   {
+    "q": "Careers typically advance through:",
+    "options": [
+     "Steady skill-building and stepping up over time",
+     "One lucky break only",
+     "Never changing",
+     "Avoiding people"
+    ],
+    "a": 0,
+    "why": "Consistent effort and relationships compound into advancement."
    }
   ]
  },
@@ -13120,390 +13272,846 @@ window.LAB404_CONTENT = {
  "lifeskills-personal-finance": {
   "title": "Personal Finance",
   "subject": "Life Skills & Finance",
-  "level": "Grades 9 - adult",
-  "intro": "Personal finance as a life skill is simply managing your money day to day so it works for you, not against you. It ties together earning, spending, saving, and avoiding the traps that keep people stuck.",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Explain income, expenses, and living below your means",
+   "Describe saving and building an emergency fund",
+   "Tell needs from wants and spend smartly",
+   "Understand the basics of taxes and insurance",
+   "Build money habits that create security"
+  ],
+  "intro": "Personal finance is managing your money so it serves your life — covering your needs, handling surprises, and building toward your goals. These skills aren't taught in most schools but matter every single day. This lesson covers income and expenses, saving, smart spending, taxes and insurance, and the habits that create financial security.",
+  "sections": [
+   {
+    "h": "Income, expenses, and living below your means",
+    "body": "Personal finance starts with two numbers: income (money coming in — wages, tips, benefits) and expenses (money going out — rent, food, transport, bills). The single most important rule of money is to spend less than you earn, leaving a gap. That gap is what you save and build with; without it, you slide into debt no matter how much you make.\n\nExpenses come in two kinds. Fixed expenses are the same each month (rent, a phone plan); variable expenses change (groceries, gas, fun). Tracking both — knowing where your money actually goes — is the foundation of every other money skill. You can't manage what you don't measure.",
+    "tip": "The one rule under all of personal finance: spend less than you earn. That gap is what builds security."
+   },
+   {
+    "h": "Saving and the emergency fund",
+    "body": "Saving is setting aside money now for later. The most powerful habit is to 'pay yourself first' — the moment income arrives, move some to savings before you spend on anything else, even a small amount. Treating savings like a required bill, not a leftover, is what makes it actually happen.\n\nThe first savings goal for everyone is an emergency fund: money set aside for surprises — a car repair, a medical bill, a lost job. Aim to build toward three to six months of basic expenses, starting with whatever you can. An emergency fund keeps a bad week from becoming a financial disaster, and it's the foundation of peace of mind with money.",
+    "visual": "<svg viewBox=\"0 0 250 150\" width=\"240\" role=\"img\" aria-label=\"Income split three ways: save first, then needs, then wants\"><rect x=\"8\" y=\"56\" width=\"66\" height=\"38\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"41\" y=\"79\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Income</text><line x1=\"74\" y1=\"75\" x2=\"158\" y2=\"27\" stroke=\"#e8b84b\" stroke-width=\"1.6\"/><polygon points=\"153,24 162,24 157,32\" fill=\"#e8b84b\"/><line x1=\"74\" y1=\"75\" x2=\"158\" y2=\"75\" stroke=\"#4f9cf0\" stroke-width=\"1.6\"/><polygon points=\"156,71 164,75 156,79\" fill=\"#4f9cf0\"/><line x1=\"74\" y1=\"75\" x2=\"158\" y2=\"123\" stroke=\"#39e3c8\" stroke-width=\"1.6\"/><polygon points=\"153,118 162,118 157,126\" fill=\"#39e3c8\"/><rect x=\"164\" y=\"12\" width=\"78\" height=\"30\" rx=\"6\" fill=\"rgba(232,184,75,.16)\" stroke=\"#e8b84b\" stroke-width=\"1.5\"/><text x=\"203\" y=\"31\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Save first</text><rect x=\"164\" y=\"60\" width=\"78\" height=\"30\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"203\" y=\"79\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Needs</text><rect x=\"164\" y=\"108\" width=\"78\" height=\"30\" rx=\"6\" fill=\"rgba(57,227,200,.14)\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><text x=\"203\" y=\"127\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Wants</text></svg>",
+    "caption": "Pay yourself first: when income arrives, send some to savings before needs and wants.",
+    "tip": "Pay yourself first — save before you spend. Build an emergency fund (aim for 3–6 months of expenses) as goal #1."
+   },
+   {
+    "h": "Needs vs wants and smart spending",
+    "body": "Every dollar you spend is a choice, and the first question is: is this a need or a want? Needs are things you must have to live and work — housing, basic food, utilities, transport to a job. Wants are everything else — dining out, new gadgets, entertainment. Both are fine, but needs come first, and knowing the difference prevents overspending.\n\nSmart spending means getting value: comparing prices, avoiding impulse buys (wait a day on big ones), watching small recurring costs (subscriptions add up), and being wary of buying wants on credit. The goal isn't to never enjoy money — it's to spend intentionally, on what actually matters to you, instead of letting money leak away unnoticed.",
+    "tip": "Sort spending into needs vs wants; cover needs first. Pause on big buys, and watch small recurring costs."
+   },
+   {
+    "h": "Taxes and insurance basics",
+    "body": "Two parts of adult finance surprise many people. Taxes: governments take a portion of income to fund public services. Money is withheld from paychecks, and most people file a tax return once a year to settle up — sometimes getting a refund. Understanding that your 'gross' pay isn't your 'take-home' (net) pay is key to budgeting realistically.\n\nInsurance protects you from financial catastrophe. You pay a regular premium, and in exchange the insurer covers large costs if something goes wrong — health insurance for medical bills, auto insurance for crashes, renter's insurance for your belongings. Insurance trades a small, predictable cost for protection against a rare but ruinous one. Both taxes and insurance are unavoidable parts of a stable financial life.",
+    "tip": "Your take-home pay is less than your gross (taxes withheld). Insurance trades a small premium for protection from disaster."
+   },
+   {
+    "h": "Habits that build security",
+    "body": "Financial security comes less from big wins and more from steady habits. Spend less than you earn. Save automatically and regularly. Keep an emergency fund. Avoid high-interest debt. Think before big purchases. None is complicated, but doing them consistently, over years, is what builds real stability — and later, wealth.\n\nTime is your biggest ally, thanks to compound growth: money saved and invested earns returns, which then earn their own returns, snowballing over decades. Starting small but early beats starting big but late. Good money habits don't require being rich; they're how ordinary income becomes security, options, and eventually freedom.",
+    "tip": "Security comes from steady habits, not luck. Start saving early — compound growth rewards time more than amount."
+   }
+  ],
   "cards": [
    {
-    "h": "Spend less than you earn",
-    "body": "The whole foundation of personal finance is one habit: spend less than you make, and put the difference to work (saving, investing, paying off debt). Everything else is detail. If money goes out faster than it comes in, no income is ever 'enough.'"
+    "h": "Income vs expenses",
+    "body": "Spend less than you earn; that gap builds everything. Track fixed and variable expenses."
    },
    {
-    "h": "Know where your money goes",
-    "body": "You can't manage what you don't measure. For a month, track what you actually spend — most people are surprised. Awareness alone changes behavior; you'll spot the small recurring leaks (subscriptions, fast food, fees) that quietly add up."
+    "h": "Save first",
+    "body": "Pay yourself first; build an emergency fund of 3–6 months of expenses as goal #1."
    },
    {
-    "h": "Separate needs from wants",
-    "body": "Needs keep you going (rent, food, transport, basic bills); wants are everything else. In a tight spot, needs come first. This isn't about never enjoying anything — it's about making sure the essentials are covered before the extras."
+    "h": "Needs vs wants",
+    "body": "Cover needs before wants; pause on big buys; watch small recurring costs."
    },
    {
-    "h": "Build a cushion, avoid high-interest debt",
-    "body": "A small emergency fund turns disasters into inconveniences, and avoiding high-interest debt (credit cards carried month to month, payday loans) keeps your money yours instead of a lender's. These two moves prevent most money spirals."
+    "h": "Taxes & insurance",
+    "body": "Take-home (net) pay is less than gross; insurance trades a premium for disaster protection."
    },
    {
-    "h": "Small habits, big results",
-    "body": "Personal finance isn't about big wins; it's small consistent habits — automating savings, checking your accounts weekly, comparing prices, not spending to impress people. Over years these quiet habits build real stability and freedom."
+    "h": "Habits",
+    "body": "Spend less than you earn, save automatically, avoid high-interest debt; start early for compound growth."
    }
   ],
   "flash": [
    [
-    "Personal finance",
-    "Managing your day-to-day money so it works for you."
+    "Income",
+    "Money coming in (wages, tips, benefits)."
    ],
    [
-    "Spend less than you earn",
-    "The core habit of all personal finance."
+    "Expense",
+    "Money going out (rent, food, bills)."
    ],
    [
-    "Tracking spending",
-    "Recording what you spend to see where it goes."
+    "Fixed expense",
+    "A cost that's the same each month (rent, phone plan)."
    ],
    [
-    "Needs vs. wants",
-    "Essentials vs. extras — essentials come first."
+    "Variable expense",
+    "A cost that changes month to month (groceries, gas)."
    ],
    [
-    "Living below your means",
-    "Spending less than you make on purpose."
+    "Saving",
+    "Setting money aside now for later."
    ],
    [
-    "Recurring leaks",
-    "Small repeated expenses that quietly add up."
+    "Emergency fund",
+    "Savings for surprises; aim for 3–6 months of expenses."
    ],
    [
-    "Financial cushion",
-    "Savings that absorb surprises."
+    "Pay yourself first",
+    "Saving before you spend on anything else."
    ],
    [
-    "Lifestyle creep",
-    "Spending more as you earn more, so you never get ahead."
+    "Need",
+    "Something required to live and work."
+   ],
+   [
+    "Want",
+    "Something nice to have but not essential."
+   ],
+   [
+    "Gross pay",
+    "Your total pay before taxes."
+   ],
+   [
+    "Net pay",
+    "Your take-home pay after taxes."
+   ],
+   [
+    "Premium",
+    "The regular payment you make for insurance."
    ]
   ],
   "quiz": [
    {
-    "q": "The foundation of personal finance is to:",
+    "q": "The single most important rule of personal finance is:",
     "options": [
      "Spend less than you earn",
-     "Earn a huge salary",
-     "Win the lottery",
-     "Never spend anything"
+     "Earn as much as possible",
+     "Never save",
+     "Borrow often"
     ],
     "a": 0,
-    "why": "Spending less than you make, and using the difference, is the core."
+    "why": "The gap between income and expenses is what builds security."
    },
    {
-    "q": "The first step to managing money is to:",
+    "q": "Rent, which is the same each month, is a:",
     "options": [
-     "Track where it actually goes",
-     "Ignore it",
-     "Spend freely",
-     "Open more cards"
+     "Fixed expense",
+     "Variable expense",
+     "Income",
+     "Savings"
     ],
     "a": 0,
-    "why": "Awareness of your spending is what changes behavior."
+    "why": "Fixed expenses stay the same each month."
    },
    {
-    "q": "In a tight budget, you should cover ___ first.",
+    "q": "Groceries, which change month to month, are a:",
     "options": [
-     "Needs",
-     "Wants",
-     "Entertainment",
-     "Impulse buys"
+     "Variable expense",
+     "Fixed expense",
+     "Premium",
+     "Tax"
     ],
     "a": 0,
-    "why": "Essentials (rent, food, transport) come before extras."
+    "why": "Variable expenses change over time."
    },
    {
-    "q": "'Lifestyle creep' is when you:",
+    "q": "'Pay yourself first' means:",
     "options": [
-     "Spend more as you earn more, never getting ahead",
-     "Save more automatically",
-     "Track your spending",
-     "Cut expenses"
+     "Save before spending on anything else",
+     "Spend first, save leftovers",
+     "Buy wants first",
+     "Never save"
     ],
     "a": 0,
-    "why": "Letting spending rise with income keeps you from building wealth."
+    "why": "Move money to savings as soon as income arrives."
    },
    {
-    "q": "Personal finance success comes mostly from:",
+    "q": "The first savings goal for everyone is a(n):",
     "options": [
-     "Small consistent habits",
-     "One big windfall",
-     "Risky bets",
-     "Luck"
+     "Emergency fund",
+     "New car",
+     "Vacation",
+     "Big TV"
     ],
     "a": 0,
-    "why": "Quiet, steady habits build stability over time."
+    "why": "An emergency fund handles surprises first."
    },
    {
-    "q": "A small emergency fund turns disasters into:",
+    "q": "A common emergency-fund target is:",
     "options": [
-     "Inconveniences",
-     "Bigger disasters",
-     "Debt",
+     "3–6 months of expenses",
+     "1 day of pay",
+     "10 years of income",
      "Nothing"
     ],
     "a": 0,
-    "why": "A cushion absorbs surprises so they don't become debt."
+    "why": "Three to six months of basic expenses."
+   },
+   {
+    "q": "Housing and basic food are:",
+    "options": [
+     "Needs",
+     "Wants",
+     "Taxes",
+     "Premiums"
+    ],
+    "a": 0,
+    "why": "Needs are required to live and work."
+   },
+   {
+    "q": "A smart move before a big purchase is to:",
+    "options": [
+     "Wait a day to avoid impulse buying",
+     "Buy immediately",
+     "Put it on a high-interest card",
+     "Skip comparing prices"
+    ],
+    "a": 0,
+    "why": "Pausing curbs impulse spending."
+   },
+   {
+    "q": "Your take-home pay after taxes is called:",
+    "options": [
+     "Net pay",
+     "Gross pay",
+     "Premium",
+     "Interest"
+    ],
+    "a": 0,
+    "why": "Net pay is what's left after taxes are withheld."
+   },
+   {
+    "q": "The regular payment you make for insurance is the:",
+    "options": [
+     "Premium",
+     "Refund",
+     "Deductible only",
+     "Tax"
+    ],
+    "a": 0,
+    "why": "A premium buys protection against large costs."
+   },
+   {
+    "q": "Insurance is best described as trading:",
+    "options": [
+     "A small cost for protection from disaster",
+     "Savings for debt",
+     "Income for taxes",
+     "Wants for needs"
+    ],
+    "a": 0,
+    "why": "You pay a small premium to avoid a ruinous expense."
+   },
+   {
+    "q": "Most people settle up on taxes by:",
+    "options": [
+     "Filing a tax return once a year",
+     "Never doing anything",
+     "Paying cash daily",
+     "Ignoring them"
+    ],
+    "a": 0,
+    "why": "Money is withheld; a yearly return settles the balance."
+   },
+   {
+    "q": "Financial security comes mainly from:",
+    "options": [
+     "Steady habits over time",
+     "One lucky win",
+     "Spending freely",
+     "High income alone"
+    ],
+    "a": 0,
+    "why": "Consistent habits build stability."
+   },
+   {
+    "q": "Compound growth rewards:",
+    "options": [
+     "Starting early (time)",
+     "Waiting as long as possible",
+     "Spending savings",
+     "High fees"
+    ],
+    "a": 0,
+    "why": "Returns earn their own returns over time."
+   },
+   {
+    "q": "You can't manage money well without:",
+    "options": [
+     "Tracking where it goes",
+     "Earning a fortune",
+     "A perfect credit score",
+     "Expensive software"
+    ],
+    "a": 0,
+    "why": "You can't manage what you don't measure."
    }
   ]
  },
  "lifeskills-budgeting-credit": {
   "title": "Budgeting & Credit",
   "subject": "Life Skills & Finance",
-  "level": "Grades 9 - adult",
-  "intro": "Budgeting and credit are two everyday money skills everyone needs. A budget tells your money where to go; good credit habits keep borrowing cheap and doors open. Here's the practical version.",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Build a budget and use the 50/30/20 guideline",
+   "Track spending and adjust a budget",
+   "Explain credit and credit scores and how to build good credit",
+   "Understand debt, interest, and how to manage it",
+   "Use credit responsibly"
+  ],
+  "intro": "A budget is a plan for your money, and credit is borrowed money you pay back — two tools that, used well, build stability, and used poorly, create stress. This lesson shows how to make a budget that works, and how credit and debt actually function so you can stay in control.",
+  "sections": [
+   {
+    "h": "What a budget is",
+    "body": "A budget is simply a plan for where your money will go before you spend it. It's not about restriction; it's about control — telling your money what to do instead of wondering where it went. You start by listing your monthly income, then your expenses, and making sure expenses don't exceed income (with some left to save).\n\nThe point is to give every dollar a job. When income minus planned expenses and savings equals zero on paper, you have a plan. A budget turns vague money stress into a clear picture you can act on, and it's the single most effective money tool there is.",
+    "tip": "A budget is a plan for your money before you spend it — give every dollar a job."
+   },
+   {
+    "h": "The 50/30/20 guideline",
+    "body": "A simple, popular starting budget is the 50/30/20 rule. You split your after-tax income into three buckets: about 50% for needs (housing, food, utilities, transport), about 30% for wants (entertainment, dining, extras), and about 20% for savings and paying off debt.\n\nThese percentages are a guide, not a law — if your rent is high, your needs slice may be bigger, and you adjust. The value of 50/30/20 is that it's easy to remember and forces you to save something and limit wants. Any budget you'll actually stick to beats a perfect one you abandon, and this one is simple enough to keep.",
+    "visual": "<svg viewBox=\"0 0 250 78\" width=\"240\" role=\"img\" aria-label=\"The 50/30/20 budget split: 50 percent needs, 30 percent wants, 20 percent savings\"><rect x=\"12\" y=\"16\" width=\"113\" height=\"30\" fill=\"rgba(79,156,240,.3)\" stroke=\"#4f9cf0\" stroke-width=\"1\"/><rect x=\"125\" y=\"16\" width=\"68\" height=\"30\" fill=\"rgba(57,227,200,.28)\" stroke=\"#39e3c8\" stroke-width=\"1\"/><rect x=\"193\" y=\"16\" width=\"45\" height=\"30\" fill=\"rgba(232,184,75,.35)\" stroke=\"#e8b84b\" stroke-width=\"1\"/><text x=\"68\" y=\"35\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">50%</text><text x=\"159\" y=\"35\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">30%</text><text x=\"215\" y=\"35\" text-anchor=\"middle\" fill=\"#1a2233\" font-size=\"10\">20%</text><text x=\"68\" y=\"60\" text-anchor=\"middle\" fill=\"#4f9cf0\" font-size=\"8.5\">Needs</text><text x=\"159\" y=\"60\" text-anchor=\"middle\" fill=\"#39e3c8\" font-size=\"8.5\">Wants</text><text x=\"215\" y=\"60\" text-anchor=\"middle\" fill=\"#e8b84b\" font-size=\"8.5\">Save/Debt</text></svg>",
+    "caption": "The 50/30/20 split: about half to needs, a third to wants, a fifth to savings and debt.",
+    "example": "On $2,000/month after tax: about $1,000 needs, $600 wants, $400 to savings and debt.",
+    "tip": "50/30/20: about half to needs, a third to wants, a fifth to savings and debt. Adjust to your real situation."
+   },
+   {
+    "h": "Understanding credit and credit scores",
+    "body": "Credit is the ability to borrow money now and pay it back later, trusting you'll repay. A credit card is the most common form. Lenders decide whether to trust you using your credit score — a number (commonly 300 to 850) that summarizes how reliably you've handled borrowed money. Higher is better: it unlocks loans, better interest rates, apartments, and sometimes jobs.\n\nYour score is built mostly from paying bills on time (the biggest factor), keeping balances low relative to your limits, and having a longer history. You build good credit slowly: use a little credit, pay it off fully and on time, every time. One missed payment can hurt for years, so reliability matters more than anything fancy.",
+    "visual": "<svg viewBox=\"0 0 250 86\" width=\"240\" role=\"img\" aria-label=\"A credit score range from 300 to 850 with poor, fair, good, and excellent bands\"><rect x=\"12\" y=\"30\" width=\"114\" height=\"22\" fill=\"rgba(240,90,90,.3)\" stroke=\"#f05a5a\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"30\" width=\"37\" height=\"22\" fill=\"rgba(232,160,70,.3)\" stroke=\"#e8a046\" stroke-width=\"0.8\"/><rect x=\"163\" y=\"30\" width=\"29\" height=\"22\" fill=\"rgba(79,156,240,.3)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"192\" y=\"30\" width=\"46\" height=\"22\" fill=\"rgba(57,227,200,.3)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"12\" y=\"25\" fill=\"#9aa6c0\" font-size=\"8\">300</text><text x=\"238\" y=\"25\" text-anchor=\"end\" fill=\"#9aa6c0\" font-size=\"8\">850</text><text x=\"69\" y=\"64\" text-anchor=\"middle\" fill=\"#f05a5a\" font-size=\"8\">Poor</text><text x=\"144\" y=\"64\" text-anchor=\"middle\" fill=\"#e8a046\" font-size=\"8\">Fair</text><text x=\"177\" y=\"64\" text-anchor=\"middle\" fill=\"#4f9cf0\" font-size=\"8\">Good</text><text x=\"215\" y=\"64\" text-anchor=\"middle\" fill=\"#39e3c8\" font-size=\"8\">Excellent</text><text x=\"125\" y=\"80\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">higher = better rates &amp; approval</text></svg>",
+    "caption": "A credit score (about 300–850) rates how reliably you repay — higher means better rates and approval.",
+    "tip": "A credit score (about 300–850) rates how reliably you repay. Pay on time, keep balances low — that builds it."
+   },
+   {
+    "h": "Debt and interest",
+    "body": "Debt is money you owe, and interest is the extra you pay for borrowing it — the lender's fee, charged as a percentage (the APR). Interest is why debt can be dangerous: on a credit card charging 20%+ APR, an unpaid balance grows fast, and you can end up paying far more than you borrowed.\n\nNot all debt is equal. Low-interest debt for something lasting (a mortgage, sometimes student loans) can be reasonable; high-interest debt for wants (credit card balances you carry month to month) is a trap to avoid. The key rules: don't borrow for wants you can't afford, always pay more than the minimum, and attack the highest-interest debt first. Avoid the trap and credit becomes a tool, not a burden.",
+    "tip": "Interest (APR) is the cost of borrowing; high-interest debt grows fast. Pay more than the minimum; avoid carrying card balances."
+   },
+   {
+    "h": "Using credit responsibly",
+    "body": "Used wisely, credit is genuinely useful: it builds your score, handles emergencies, offers fraud protection, and spreads large necessary costs. The trick is to treat a credit card like a debit card — only charge what you already have the money to cover, and pay the full balance every month so you owe no interest.\n\nA few guardrails keep credit a friend: never spend to the limit, set up automatic payments so you're never late, check your statements for errors or fraud, and check your credit report (free) once a year. Responsible credit use, over time, is one of the clearest paths to financial options — the same tool that traps the careless rewards the disciplined.",
+    "tip": "Treat a credit card like cash: only charge what you can pay off in full each month, and never miss a payment."
+   }
+  ],
   "cards": [
    {
-    "h": "A budget is a plan, not a punishment",
-    "body": "A budget just means deciding ahead where your money goes, so the important things get covered first. It's freeing, not restricting — you spend without guilt because you already know it fits. Income minus planned expenses should be zero or positive."
+    "h": "Budget",
+    "body": "A plan for your money before you spend it; give every dollar a job."
    },
    {
-    "h": "A simple budgeting method",
-    "body": "You don't need fancy apps. A simple split like 50/30/20 (half to needs, a third to wants, a fifth to savings/debt) gives a starting frame. Or 'pay the essentials and savings first, then spend the rest freely.' The best method is the one you'll keep using."
+    "h": "50/30/20",
+    "body": "~50% needs, ~30% wants, ~20% savings/debt of after-tax income. Adjust as needed."
    },
    {
-    "h": "What credit is and why it matters",
-    "body": "Credit is borrowed money, and your history of repaying it becomes your credit score — a number lenders, landlords, and sometimes employers check. Good credit means easier approvals and lower interest; bad credit costs you money and opportunities for years."
+    "h": "Credit & scores",
+    "body": "Borrow now, repay later; a score (~300–850) rates reliability. Pay on time, keep balances low."
    },
    {
-    "h": "Building good credit",
-    "body": "The main rules are simple: always pay on time (the biggest factor), keep balances low relative to your limit, and don't open or close lots of accounts at once. Time and consistency build a good score; there's no legitimate overnight fix."
+    "h": "Debt & interest",
+    "body": "Interest (APR) is the cost of borrowing; high-interest debt grows fast. Pay above the minimum."
    },
    {
-    "h": "Using credit cards wisely",
-    "body": "A credit card is a tool that helps or hurts depending on use. Paid in full every month, it builds credit and may earn rewards, costing nothing. Carried as a balance, its high interest quietly drains you. The rule: only charge what you can pay off that month."
+    "h": "Responsible credit",
+    "body": "Treat a card like cash — charge only what you can pay in full monthly; never miss a payment."
    }
   ],
   "flash": [
    [
     "Budget",
-    "A plan for where your money goes before you spend it."
+    "A plan for your money before you spend it."
    ],
    [
-    "50/30/20",
-    "Needs 50%, wants 30%, savings/debt 20%."
+    "50/30/20 rule",
+    "~50% needs, 30% wants, 20% savings and debt."
    ],
    [
     "Credit",
-    "Borrowed money you repay, usually with interest."
+    "The ability to borrow money and repay later."
    ],
    [
     "Credit score",
-    "A number showing how reliably you repay."
-   ],
-   [
-    "On-time payment",
-    "The biggest factor in a good credit score."
-   ],
-   [
-    "Credit utilization",
-    "How much of your available credit you're using (keep low)."
-   ],
-   [
-    "Pay in full",
-    "Clearing a credit card each month to avoid interest."
+    "A number (~300–850) rating how reliably you repay."
    ],
    [
     "Interest",
-    "The cost of borrowing, charged as a percentage."
+    "The extra cost paid for borrowing money."
+   ],
+   [
+    "APR",
+    "Annual percentage rate — the yearly cost of borrowing."
+   ],
+   [
+    "Debt",
+    "Money you owe."
+   ],
+   [
+    "Minimum payment",
+    "The smallest amount due on a debt each month."
+   ],
+   [
+    "Credit limit",
+    "The most you can borrow on a credit card."
+   ],
+   [
+    "Credit report",
+    "A record of your borrowing history."
+   ],
+   [
+    "On-time payment",
+    "Paying by the due date (the biggest score factor)."
+   ],
+   [
+    "Credit card",
+    "A card to borrow up to a limit, ideally repaid monthly."
    ]
   ],
   "quiz": [
    {
-    "q": "A budget is best thought of as:",
+    "q": "A budget is best described as:",
     "options": [
-     "A plan telling your money where to go",
-     "A punishment",
-     "A luxury",
-     "A loan"
+     "A plan for your money before you spend it",
+     "A type of loan",
+     "A credit score",
+     "A tax form"
     ],
     "a": 0,
-    "why": "It's a spending plan that covers what matters first."
+    "why": "A budget tells your money where to go in advance."
+   },
+   {
+    "q": "In the 50/30/20 rule, 50% goes to:",
+    "options": [
+     "Needs",
+     "Wants",
+     "Savings",
+     "Debt only"
+    ],
+    "a": 0,
+    "why": "About half to needs."
+   },
+   {
+    "q": "In 50/30/20, the 20% is for:",
+    "options": [
+     "Savings and paying off debt",
+     "Dining out",
+     "Rent",
+     "Entertainment"
+    ],
+    "a": 0,
+    "why": "A fifth to savings and debt."
+   },
+   {
+    "q": "The 50/30/20 percentages are:",
+    "options": [
+     "A flexible guide you adjust",
+     "A strict legal rule",
+     "Only for the rich",
+     "Never useful"
+    ],
+    "a": 0,
+    "why": "Adjust to your real situation; the value is simplicity."
+   },
+   {
+    "q": "Credit is:",
+    "options": [
+     "Borrowing money now to repay later",
+     "Free money",
+     "Your savings",
+     "A tax"
+    ],
+    "a": 0,
+    "why": "Credit is borrowed money you must repay."
+   },
+   {
+    "q": "A credit score commonly ranges from:",
+    "options": [
+     "300 to 850",
+     "0 to 100",
+     "1 to 10",
+     "500 to 600"
+    ],
+    "a": 0,
+    "why": "Typical scores run 300–850; higher is better."
    },
    {
     "q": "The biggest factor in your credit score is:",
     "options": [
-     "Paying on time",
-     "Your income",
+     "Paying bills on time",
      "Your age",
-     "How much cash you carry"
+     "Your zip code",
+     "Your height"
     ],
     "a": 0,
-    "why": "Payment history is the single largest factor."
+    "why": "On-time payment history matters most."
    },
    {
-    "q": "To avoid credit card interest, you should:",
+    "q": "A higher credit score gets you:",
     "options": [
-     "Pay the full balance each month",
+     "Better interest rates and approvals",
+     "Worse rates",
+     "Higher taxes",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Higher scores unlock better borrowing terms."
+   },
+   {
+    "q": "Interest (APR) is:",
+    "options": [
+     "The cost of borrowing money",
+     "A savings bonus",
+     "A tax refund",
+     "Free credit"
+    ],
+    "a": 0,
+    "why": "APR is the yearly percentage cost of borrowing."
+   },
+   {
+    "q": "The most dangerous common debt is usually:",
+    "options": [
+     "High-interest credit card balances",
+     "A low-rate mortgage",
+     "An emergency fund",
+     "Savings"
+    ],
+    "a": 0,
+    "why": "Carried card balances at 20%+ APR grow fast."
+   },
+   {
+    "q": "When paying down debt, you should pay:",
+    "options": [
+     "More than the minimum",
+     "Only the minimum forever",
+     "Nothing",
+     "Less than due"
+    ],
+    "a": 0,
+    "why": "Paying above the minimum reduces interest and principal faster."
+   },
+   {
+    "q": "The safest way to use a credit card is to:",
+    "options": [
+     "Charge only what you can pay in full monthly",
+     "Max it out",
      "Pay only the minimum",
-     "Skip payments",
-     "Max it out"
+     "Ignore statements"
     ],
     "a": 0,
-    "why": "Paying in full means no interest is charged."
+    "why": "Treat it like cash; pay in full to owe no interest."
    },
    {
-    "q": "Under 50/30/20, wants get:",
+    "q": "To avoid ever being late, you can:",
     "options": [
-     "30%",
-     "50%",
-     "20%",
-     "0%"
+     "Set up automatic payments",
+     "Hide your bills",
+     "Pay randomly",
+     "Cancel reminders"
     ],
     "a": 0,
-    "why": "50% needs, 30% wants, 20% savings/debt."
+    "why": "Autopay prevents missed-payment damage."
    },
    {
-    "q": "Good credit is built by:",
+    "q": "How often should you check your (free) credit report?",
     "options": [
-     "Time and consistent on-time payments",
-     "An overnight trick",
-     "Opening many cards fast",
-     "Carrying big balances"
+     "At least once a year",
+     "Never",
+     "Every hour",
+     "Once in a lifetime"
     ],
     "a": 0,
-    "why": "Consistency over time builds a score; there's no legit instant fix."
+    "why": "Yearly checks catch errors and fraud."
    },
    {
-    "q": "Keeping your credit utilization low means:",
+    "q": "Used responsibly, credit can:",
     "options": [
-     "Using only a small part of your limit",
-     "Maxing out cards",
-     "Closing all accounts",
-     "Never paying"
+     "Build your score and handle emergencies",
+     "Only cause harm",
+     "Replace income",
+     "Erase debt automatically"
     ],
     "a": 0,
-    "why": "Low balances relative to your limit help your score."
+    "why": "Discipline turns credit into a useful tool."
    }
   ]
  },
  "lifeskills-digital-literacy": {
   "title": "Digital Literacy",
   "subject": "Life Skills & Finance",
-  "level": "All levels",
-  "intro": "Digital literacy is being able to use technology effectively and safely — a basic life skill now, whether for work, banking, or just daily life. It also means protecting yourself from the scams and misinformation that come with it.",
+  "level": "All ages",
+  "objectives": [
+   "Use computers and the internet for everyday tasks",
+   "Evaluate online information for reliability",
+   "Stay safe online: passwords, scams, and privacy",
+   "Communicate appropriately online",
+   "Understand and manage your digital footprint"
+  ],
+  "intro": "Digital literacy is the ability to use technology and the internet effectively, safely, and wisely — now a basic life skill for work, school, and daily life. It's not just knowing how to click, but how to judge what you find and protect yourself. This lesson covers using devices, evaluating information, staying safe, and your digital footprint.",
+  "sections": [
+   {
+    "h": "Using devices and the internet",
+    "body": "Digital literacy starts with comfort using the basic tools: a computer or phone, a web browser, email, and common apps for documents, messaging, and search. Core skills include searching effectively (using specific keywords), organizing files, filling out online forms, and troubleshooting small problems (restarting, checking connections) before giving up.\n\nYou don't need to be an expert or a programmer. The goal is confident, independent use: being able to look something up, apply for a job online, send an email with an attachment, make a video call, and use the digital services daily life increasingly requires. These are learnable skills, and comfort grows quickly with practice.",
+    "tip": "Aim for confident, independent use — search, email, forms, files, video calls — not expertise. Practice builds comfort fast."
+   },
+   {
+    "h": "Evaluating online information",
+    "body": "The internet holds the world's knowledge and also endless misinformation, so a key skill is judging what's reliable. Before trusting or sharing something, consider the source: who published it, and are they credible and unbiased? Check whether other reputable sources agree, be wary of anything designed to make you angry or afraid, and notice the difference between fact, opinion, and advertising.\n\nBe especially careful with social media, where false claims spread fast and anyone can post anything. A healthy habit: pause before sharing, and verify surprising claims with a quick search of trusted sources. Learning to think critically about information is now as important as reading itself — it's your defense against being misled.",
+    "tip": "Check the source, confirm with other trusted sites, and pause before sharing. Treat emotional or surprising claims with extra caution."
+   },
+   {
+    "h": "Staying safe online",
+    "body": "Protecting yourself online rests on a few habits. Use strong, unique passwords — long, hard to guess, and different for each important account — ideally stored in a password manager, and turn on two-factor authentication where offered. Never share passwords or personal details in response to unexpected messages.\n\nWatch for scams, especially phishing: messages pretending to be from a bank, company, or person you know, trying to trick you into clicking a bad link or giving up information. Red flags include urgency ('act now!'), odd sender addresses, misspellings, and requests for passwords or payment. The rule of thumb: if something is unexpected and pushes you to act fast, slow down and verify through official channels.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Common red flags of a phishing message or online scam\"><rect x=\"8\" y=\"5\" width=\"104\" height=\"22\" fill=\"rgba(240,90,90,.14)\" stroke=\"#f05a5a\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"5\" width=\"130\" height=\"22\" fill=\"rgba(107,122,152,.1)\" stroke=\"#6b7a98\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#f0a0a0\" font-size=\"9.5\">⚠ Urgency</text><text x=\"118\" y=\"20\" fill=\"#cdd9ec\" font-size=\"8.5\">'Act now or lose access!'</text><rect x=\"8\" y=\"27\" width=\"104\" height=\"22\" fill=\"rgba(240,90,90,.14)\" stroke=\"#f05a5a\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"27\" width=\"130\" height=\"22\" fill=\"rgba(107,122,152,.1)\" stroke=\"#6b7a98\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#f0a0a0\" font-size=\"9.5\">⚠ Odd sender</text><text x=\"118\" y=\"42\" fill=\"#cdd9ec\" font-size=\"8.5\">address looks almost right</text><rect x=\"8\" y=\"49\" width=\"104\" height=\"22\" fill=\"rgba(240,90,90,.14)\" stroke=\"#f05a5a\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"49\" width=\"130\" height=\"22\" fill=\"rgba(107,122,152,.1)\" stroke=\"#6b7a98\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#f0a0a0\" font-size=\"9.5\">⚠ Asks for info</text><text x=\"118\" y=\"64\" fill=\"#cdd9ec\" font-size=\"8.5\">wants a password or payment</text><rect x=\"8\" y=\"71\" width=\"104\" height=\"22\" fill=\"rgba(240,90,90,.14)\" stroke=\"#f05a5a\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"71\" width=\"130\" height=\"22\" fill=\"rgba(107,122,152,.1)\" stroke=\"#6b7a98\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#f0a0a0\" font-size=\"9.5\">⚠ Strange link</text><text x=\"118\" y=\"86\" fill=\"#cdd9ec\" font-size=\"8.5\">hover shows a weird URL</text><rect x=\"8\" y=\"93\" width=\"104\" height=\"22\" fill=\"rgba(240,90,90,.14)\" stroke=\"#f05a5a\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"93\" width=\"130\" height=\"22\" fill=\"rgba(107,122,152,.1)\" stroke=\"#6b7a98\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#f0a0a0\" font-size=\"9.5\">⚠ Errors</text><text x=\"118\" y=\"108\" fill=\"#cdd9ec\" font-size=\"8.5\">typos and odd grammar</text></svg>",
+    "caption": "Red flags of a phishing message or scam — if you see these, slow down and verify.",
+    "tip": "Use strong, unique passwords + 2FA. Beware phishing: urgency, odd senders, and requests for info/payment are red flags."
+   },
+   {
+    "h": "Communicating well online",
+    "body": "How you communicate online matters, because it's often permanent and seen by many. Good digital communication means being clear, respectful, and appropriate to the context — a message to a boss reads differently than one to a friend. Tone is easily lost in text, so reread before sending and assume good intent from others.\n\nBasic etiquette ('netiquette') includes not writing in all caps (it reads as shouting), not oversharing, not spreading rumors or piling on, and thinking before you post in anger. Treat people online as you would in person. The same message can build your reputation or damage it, so a moment's thought before hitting send is always worth it.",
+    "tip": "Be clear and respectful; tone is lost in text, so reread before sending. Treat people online as you would in person."
+   },
+   {
+    "h": "Your digital footprint",
+    "body": "Everything you do online leaves a digital footprint — posts, photos, comments, searches, and accounts that can persist for years and be seen by people you don't expect: employers, schools, strangers. A useful rule is to never post what you wouldn't want a future boss, teacher, or your grandmother to see.\n\nManaging your footprint means thinking before posting, using privacy settings to control who sees what, being mindful of what others tag you in, and occasionally searching your own name to see what's public. You also leave a footprint through the data companies collect; being aware of it helps you make better choices about what you share. Your online reputation is real and lasting — tend it deliberately.",
+    "tip": "Your online footprint is permanent and public-ish. Don't post what you'd not want a boss or family to see; use privacy settings."
+   }
+  ],
   "cards": [
    {
-    "h": "Strong, unique passwords",
-    "body": "Your accounts are only as safe as your passwords. Use a long, unique password for each important account (reusing one means a single breach exposes them all). A password manager remembers them for you. Turn on two-factor authentication (a code to your phone) for anything important."
+    "h": "Using devices",
+    "body": "Aim for confident, independent use: search, email, forms, files, video calls. Practice builds it."
    },
    {
-    "h": "Spotting scams and phishing",
-    "body": "Scammers imitate real companies to steal money or logins. Red flags: urgent pressure ('act now or your account closes'), requests for passwords or payment in gift cards, slightly-wrong web addresses, and unexpected links. When in doubt, don't click — go to the site directly or call the company."
+    "h": "Evaluating info",
+    "body": "Check the source, confirm with trusted sites, pause before sharing; beware emotional claims."
    },
    {
-    "h": "Protecting your privacy",
-    "body": "What you post and share can be seen and stored far beyond who you intended. Think before posting, check privacy settings, and be stingy with personal info (full birthdate, address, location). Free services often make money from your data, so notice what you're agreeing to."
+    "h": "Staying safe",
+    "body": "Strong unique passwords + 2FA; spot phishing red flags (urgency, odd sender, asks for info)."
    },
    {
-    "h": "Judging online information",
-    "body": "Not everything online is true. Check who's behind a claim, whether other reliable sources agree, and whether a headline is designed to make you angry (a sign to slow down). Misinformation spreads fastest when it's emotional and unverified — pause before sharing."
+    "h": "Communicating",
+    "body": "Be clear and respectful; tone is lost in text; reread before sending; treat people as in person."
    },
    {
-    "h": "Everyday digital skills",
-    "body": "Basic competence opens doors: using email professionally, searching effectively, filling out online forms, doing online banking and job applications, and keeping devices updated (updates patch security holes). These are now as essential as reading and writing for getting by."
+    "h": "Digital footprint",
+    "body": "Your online trail is lasting; don't post what you'd not want a boss to see; use privacy settings."
    }
   ],
   "flash": [
    [
     "Digital literacy",
-    "Using technology effectively and safely."
-   ],
-   [
-    "Strong password",
-    "Long, unique, hard to guess — different per account."
-   ],
-   [
-    "Two-factor authentication",
-    "A second login step (a code) for extra security."
-   ],
-   [
-    "Phishing",
-    "A scam imitating a real company to steal info or money."
-   ],
-   [
-    "Privacy settings",
-    "Controls over who sees what you share."
-   ],
-   [
-    "Password manager",
-    "An app that stores your unique passwords securely."
+    "Using technology effectively, safely, and wisely."
    ],
    [
     "Misinformation",
-    "False or misleading information spread online."
+    "False or misleading information."
    ],
    [
-    "Software update",
-    "A fix that often patches security holes."
+    "Source evaluation",
+    "Checking who published info and whether it's credible."
+   ],
+   [
+    "Phishing",
+    "Fake messages trying to steal your info or money."
+   ],
+   [
+    "Strong password",
+    "A long, unique, hard-to-guess password."
+   ],
+   [
+    "Two-factor authentication",
+    "A second login step for extra security."
+   ],
+   [
+    "Scam",
+    "A trick designed to cheat you out of money or info."
+   ],
+   [
+    "Netiquette",
+    "Polite, appropriate online communication."
+   ],
+   [
+    "Digital footprint",
+    "The lasting trail of your online activity."
+   ],
+   [
+    "Privacy settings",
+    "Controls for who can see your information."
+   ],
+   [
+    "Password manager",
+    "A tool that stores strong passwords securely."
+   ],
+   [
+    "Keyword search",
+    "Finding information using specific search terms."
    ]
   ],
   "quiz": [
    {
-    "q": "A strong password should be:",
+    "q": "Digital literacy is:",
     "options": [
-     "Long and unique to each account",
-     "The same everywhere",
-     "Short and simple",
-     "Your name"
+     "Using technology effectively, safely, and wisely",
+     "Only programming",
+     "Only gaming",
+     "Avoiding computers"
     ],
     "a": 0,
-    "why": "Unique, long passwords limit the damage of any one breach."
+    "why": "It's effective, safe, wise use of technology."
    },
    {
-    "q": "A common sign of a phishing scam is:",
+    "q": "To search effectively, you should use:",
     "options": [
-     "Urgent pressure and a request for passwords/gift cards",
-     "A normal greeting",
-     "A real company's official site",
-     "No links at all"
+     "Specific keywords",
+     "Random letters",
+     "Only one word always",
+     "No words"
     ],
     "a": 0,
-    "why": "Urgency and requests for credentials or gift cards are red flags."
+    "why": "Specific keywords find better results."
+   },
+   {
+    "q": "Before trusting online information, first check the:",
+    "options": [
+     "Source (who published it)",
+     "Font",
+     "Page color",
+     "Number of ads"
+    ],
+    "a": 0,
+    "why": "Credible, unbiased sources matter most."
+   },
+   {
+    "q": "Content designed to make you angry or afraid should be:",
+    "options": [
+     "Treated with extra caution",
+     "Shared instantly",
+     "Always believed",
+     "Ignored as a source rule"
+    ],
+    "a": 0,
+    "why": "Emotional manipulation is a warning sign."
+   },
+   {
+    "q": "A good habit before sharing a surprising claim is to:",
+    "options": [
+     "Verify it with trusted sources",
+     "Share it faster",
+     "Add your own exaggeration",
+     "Never read it"
+    ],
+    "a": 0,
+    "why": "Pause and verify to avoid spreading misinformation."
+   },
+   {
+    "q": "A strong password is:",
+    "options": [
+     "Long, unique, and hard to guess",
+     "'password'",
+     "Your birthday",
+     "The same everywhere"
+    ],
+    "a": 0,
+    "why": "Long, unique passwords resist guessing."
    },
    {
     "q": "Two-factor authentication adds:",
     "options": [
      "A second login step for security",
      "More spam",
-     "A faster login only",
-     "A new password daily"
+     "A second password you reuse",
+     "Nothing"
     ],
     "a": 0,
-    "why": "A second factor (like a phone code) blocks most account takeovers."
+    "why": "2FA requires a second verification, boosting security."
    },
    {
-    "q": "Before sharing an emotional, surprising headline you should:",
+    "q": "Phishing messages try to:",
     "options": [
-     "Verify it with reliable sources",
-     "Share it immediately",
-     "Assume it's true",
-     "Get angrier"
+     "Trick you into giving info or clicking bad links",
+     "Deliver real prizes",
+     "Fix your computer",
+     "Teach you coding"
     ],
     "a": 0,
-    "why": "Misinformation spreads on emotion; pause and check first."
+    "why": "Phishing impersonates trusted senders to steal info."
    },
    {
-    "q": "Software updates are important because they:",
+    "q": "Which is a phishing red flag?",
     "options": [
-     "Patch security holes",
-     "Slow your device for fun",
-     "Waste data",
-     "Do nothing"
+     "Urgency and requests for your password",
+     "A normal greeting",
+     "Correct spelling",
+     "A known sender you expected"
     ],
     "a": 0,
-    "why": "Updates fix vulnerabilities that attackers exploit."
+    "why": "Urgency, odd senders, and info requests are warning signs."
    },
    {
-    "q": "A password manager:",
+    "q": "If a message is unexpected and pushes you to act fast, you should:",
     "options": [
-     "Stores unique passwords securely",
-     "Shares your passwords",
-     "Weakens security",
-     "Is a type of virus"
+     "Slow down and verify officially",
+     "Click immediately",
+     "Reply with your password",
+     "Forward it to everyone"
     ],
     "a": 0,
-    "why": "It lets you use strong, unique passwords without memorizing them."
+    "why": "Verify through official channels before acting."
+   },
+   {
+    "q": "Writing in ALL CAPS online reads as:",
+    "options": [
+     "Shouting",
+     "Whispering",
+     "Politeness",
+     "Code"
+    ],
+    "a": 0,
+    "why": "All caps is considered shouting — poor netiquette."
+   },
+   {
+    "q": "Because tone is lost in text, you should:",
+    "options": [
+     "Reread before sending",
+     "Send angrily",
+     "Never punctuate",
+     "Use only emojis"
+    ],
+    "a": 0,
+    "why": "Rereading prevents misread tone."
+   },
+   {
+    "q": "Your digital footprint is:",
+    "options": [
+     "The lasting trail of your online activity",
+     "Erased every night",
+     "Only your password",
+     "Invisible to all"
+    ],
+    "a": 0,
+    "why": "Posts, photos, and searches can persist for years."
+   },
+   {
+    "q": "A good rule before posting is:",
+    "options": [
+     "Don't post what a boss or family shouldn't see",
+     "Post everything",
+     "Share your address",
+     "Ignore privacy"
+    ],
+    "a": 0,
+    "why": "Assume anything posted could be seen by anyone, forever."
+   },
+   {
+    "q": "Privacy settings let you:",
+    "options": [
+     "Control who sees your information",
+     "Delete the internet",
+     "Hide from yourself",
+     "Earn money"
+    ],
+    "a": 0,
+    "why": "They control who can view what you share."
    }
   ]
  },
