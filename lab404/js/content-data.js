@@ -1694,131 +1694,281 @@ window.LAB404_CONTENT = {
  "survival-shelter-fire": {
   "title": "Shelter & Fire",
   "subject": "Survival & Preparedness",
-  "level": "All levels",
-  "disclaimer": "General outdoor-safety information. Practice skills before you need them, and never take unnecessary risks.",
-  "intro": "In a survival situation, your body is in danger from exposure long before hunger. The priorities are usually shelter and warmth first, then water, then food. Knowing how to stay warm and dry can keep you alive through a cold night.",
+  "level": "All ages",
+  "objectives": [
+   "Explain why shelter is a top survival priority",
+   "Build or find basic shelter",
+   "Understand the fire triangle",
+   "Start and use a fire safely",
+   "Stay warm and dry (thermoregulation)"
+  ],
+  "intro": "After air, shelter is the most urgent survival need — protection from cold, heat, wind, and rain can save your life in hours, long before thirst or hunger. Fire supports shelter by providing warmth, a way to purify water and cook, light, and signaling. This lesson covers shelter and fire basics. Educational overview; practice fire skills safely and follow local fire rules.",
+  "sections": [
+   {
+    "h": "Why shelter is urgent",
+    "body": "Shelter is often the first thing to secure in a survival situation because exposure — losing (or gaining) too much body heat — can kill within hours, far faster than dehydration or hunger. Your body must stay near 98.6°F (37°C), and cold, wind, and wet strip heat away fast; heat and sun can be just as deadly in the other direction.\n\nThe goal of shelter is simple: create a barrier between you and the environment. That can mean finding natural protection (a cave, a dense tree, a rock overhang) or building something. Even a simple windbreak or a layer between you and the cold ground (insulation from below is critical) dramatically improves your odds. When in doubt in harsh conditions, shelter first.",
+    "tip": "Exposure kills in hours — shelter is urgent. Block wind, rain, and especially the cold ground (insulate underneath you)."
+   },
+   {
+    "h": "Building basic shelter",
+    "body": "A good survival shelter is small (easier to keep warm), well-insulated, and protected from wind and rain. The simplest options: take advantage of natural features, or build a lean-to by propping branches against a ridgepole and covering them with leaves, bark, or a tarp. Pile debris (leaves, pine needles) thickly for insulation — both over you and, crucially, underneath you, since the ground steals heat.\n\nKeep it just big enough for your body; a smaller space traps your heat better. Face the opening away from the wind. If you have a space blanket, tarp, or even a trash bag, it becomes a fast, effective shelter or rain barrier. In heat, shelter instead means shade and airflow. The best shelter is whatever you can build fast with what's around you, before you get cold, wet, or exhausted.",
+    "tip": "Build small, insulate heavily (especially under you), and block the wind. A tarp or space blanket makes a fast shelter."
+   },
+   {
+    "h": "The fire triangle",
+    "body": "Fire needs three things, together called the fire triangle: heat (a spark or flame to ignite), fuel (something to burn), and oxygen (air). Remove any one and the fire goes out — which is both how you build a fire and how you put one out. Understanding this makes fire-starting logical rather than lucky.\n\nBuild a fire in stages matching the triangle. Start with tinder (tiny, dry, fluffy material that catches a spark — dry grass, bark shavings, cotton), add kindling (small twigs) once it's lit, then larger fuel wood as it grows. Give it air (don't smother it) but shelter it from wind. Gather far more dry material than you think you need before you start. Everything must be dry; damp fuel is the most common reason fires fail.",
+    "visual": "<svg viewBox=\"0 0 224 178\" width=\"215\" role=\"img\" aria-label=\"The fire triangle: fire needs heat, fuel, and oxygen\"><polygon points=\"112,24 26,152 198,152\" fill=\"rgba(240,120,40,.14)\" stroke=\"#e8842a\" stroke-width=\"2\"/><text x=\"112\" y=\"16\" text-anchor=\"middle\" fill=\"#f0a040\" font-size=\"11\">HEAT</text><text x=\"30\" y=\"168\" text-anchor=\"middle\" fill=\"#f0a040\" font-size=\"11\">FUEL</text><text x=\"194\" y=\"168\" text-anchor=\"middle\" fill=\"#f0a040\" font-size=\"11\">OXYGEN</text><text x=\"112\" y=\"118\" text-anchor=\"middle\" fill=\"#f05a5a\" font-size=\"14\">FIRE</text><text x=\"112\" y=\"136\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">remove any one &amp; the fire goes out</text></svg>",
+    "caption": "The fire triangle: heat, fuel, and oxygen. Remove any one and the fire goes out.",
+    "tip": "Fire = heat + fuel + oxygen (the fire triangle). Build up tinder → kindling → fuel, keep it dry, and give it air."
+   },
+   {
+    "h": "Starting and using fire",
+    "body": "To start a fire you need an ignition source and dry tinder. The easiest, most reliable igniters are matches or a lighter, which is why they're survival essentials — carry them, kept dry. A ferro rod throwing sparks works even when wet and lasts long. Primitive methods (friction, like a bow drill) are genuinely hard and a last resort; don't count on them.\n\nOnce lit, a fire earns its keep: it warms you, dries clothing, boils water to make it safe, cooks food, lights the dark, and signals rescuers (three fires, or a smoky fire by day). Keep it fed and sheltered, and never leave it unattended. Fire is also dangerous and can spread, so clear the ground around it, keep it small and controlled, follow local fire rules, and fully extinguish it (remove the oxygen and heat — douse and stir) when done.",
+    "tip": "Carry matches/lighter (kept dry) — fire warms, dries, purifies water, cooks, and signals. Keep it controlled and fully put it out."
+   },
+   {
+    "h": "Staying warm and dry",
+    "body": "Staying warm is mostly about managing heat loss, and clothing is your first shelter. Dress in layers you can add or remove, keep your clothing dry (wet clothing drains heat fast), and cover your head and extremities (you lose significant heat there). Avoid sweating heavily in the cold — damp clothes then chill you — so adjust layers as you work.\n\nThe big enemies are wet and wind. Stay dry, block the wind, insulate yourself from the ground, and if you have fire, use it to dry out. In heat, reverse the logic: cover up from the sun, rest in shade during peak heat, and stay hydrated. Thermoregulation — keeping your body temperature in its safe range — is the quiet skill underneath all survival, and shelter, fire, and clothing are the three tools that do it.",
+    "tip": "Dress in dry layers, cover head/hands, and stay out of wind and wet. In heat, cover up, rest in shade, and hydrate."
+   }
+  ],
   "cards": [
    {
-    "h": "The rule of threes",
-    "body": "As a rough guide, you can survive about 3 minutes without air, 3 hours without shelter in harsh weather, 3 days without water, and 3 weeks without food. It tells you what to handle first: in cold or wet conditions, shelter and warmth come before water or food."
+    "h": "Why shelter",
+    "body": "Exposure kills in hours — faster than thirst or hunger. Block wind, rain, and the cold ground."
    },
    {
-    "h": "Shelter: block wind and ground",
-    "body": "Heat escapes fastest to wind and to the cold ground. A good emergency shelter is small (less air to warm), blocks the wind, and insulates you from the ground with a thick layer of leaves, branches, or a pad. Smaller is warmer."
+    "h": "Building shelter",
+    "body": "Small, well-insulated (especially underneath), opening away from wind. A tarp/space blanket works fast."
    },
    {
-    "h": "Staying dry is staying alive",
-    "body": "Wet clothing pulls heat from your body many times faster than dry clothing. Avoid sweating heavily, keep a dry layer for sleeping, and shelter from rain. Hypothermia — dangerous loss of body heat — is a top killer and can happen even in mild temperatures when you're wet."
+    "h": "Fire triangle",
+    "body": "Fire needs heat + fuel + oxygen; remove one and it dies. Build tinder → kindling → fuel."
    },
    {
-    "h": "Fire: the three ingredients",
-    "body": "Fire needs heat (a spark or flame), fuel, and oxygen. Build up in stages: a tiny nest of dry tinder (fine, fluffy, dry material) → small kindling (pencil-thin twigs) → larger fuel wood. Give it airflow, and never jump straight to big logs."
+    "h": "Starting fire",
+    "body": "Carry matches/lighter (dry) or a ferro rod. Fire warms, dries, purifies water, cooks, signals — keep it controlled."
    },
    {
-    "h": "Signaling for rescue",
-    "body": "Three of anything (three fires, three whistle blasts, three flashes) is a recognized distress signal. If you're lost and someone knows roughly where you are, usually stay put — a stationary person is far easier to find than a moving one."
+    "h": "Staying warm",
+    "body": "Dry layers, cover head/hands, avoid wind and wet. In heat: cover up, shade, hydrate."
    }
   ],
   "flash": [
    [
-    "Rule of threes",
-    "~3 min without air, 3 hrs without shelter, 3 days without water, 3 weeks without food."
-   ],
-   [
     "Exposure",
-    "Harm from the environment (cold, heat, wet) — often the first danger outdoors."
+    "Dangerous loss or gain of body heat from the environment."
    ],
    [
-    "Hypothermia",
-    "Dangerous loss of body heat; made worse by being wet and windy."
+    "Shelter",
+    "A barrier protecting you from the environment."
    ],
    [
-    "Ground insulation",
-    "A barrier (leaves, a pad) between you and the cold ground to keep heat in."
+    "Insulation",
+    "Material (debris, clothing) that traps body heat."
    ],
    [
-    "Tinder",
-    "Fine, dry, fluffy material that catches a spark first."
-   ],
-   [
-    "Kindling",
-    "Small twigs added after the tinder to grow a fire."
+    "Lean-to",
+    "A simple shelter of branches/tarp against a ridgepole."
    ],
    [
     "Fire triangle",
     "Fire needs heat, fuel, and oxygen."
    ],
    [
-    "Signal of three",
-    "Three fires, whistles, or flashes signals distress."
+    "Tinder",
+    "Tiny dry material that catches a spark."
+   ],
+   [
+    "Kindling",
+    "Small twigs added once tinder is lit."
+   ],
+   [
+    "Ferro rod",
+    "A tool that throws sparks, even when wet."
+   ],
+   [
+    "Thermoregulation",
+    "Keeping body temperature in its safe range."
+   ],
+   [
+    "Space blanket",
+    "A thin reflective sheet that conserves heat."
+   ],
+   [
+    "Windbreak",
+    "A barrier that blocks heat-stealing wind."
+   ],
+   [
+    "Extinguish",
+    "Fully putting a fire out (douse and stir)."
    ]
   ],
   "quiz": [
    {
-    "q": "In cold, wet conditions your FIRST priority is usually:",
+    "q": "After air, the most urgent survival need is often:",
     "options": [
-     "Shelter and warmth",
-     "Finding food",
-     "Finding water",
-     "Building a signal fire"
+     "Shelter",
+     "Food",
+     "A map",
+     "Entertainment"
     ],
     "a": 0,
-    "why": "Exposure kills fastest; shelter and warmth come before water or food."
+    "why": "Exposure can kill within hours."
    },
    {
-    "q": "Body heat is lost fastest to:",
+    "q": "Exposure means dangerous:",
     "options": [
-     "Wind and the cold ground",
-     "The sky only",
-     "Dry air",
-     "Your feet only"
+     "Loss or gain of body heat",
+     "Lack of food",
+     "Boredom",
+     "Loss of a map"
     ],
     "a": 0,
-    "why": "Wind and ground conduction steal heat quickly; block both."
+    "why": "The body must stay near 98.6°F."
    },
    {
-    "q": "Why is staying dry so important?",
+    "q": "A critical, often-forgotten part of a warm shelter is:",
     "options": [
-     "Wet clothing pulls heat from you much faster",
-     "It keeps clothes clean",
-     "It saves water",
-     "It helps you sweat"
+     "Insulation underneath you",
+     "A big open doorway",
+     "Facing the wind",
+     "A huge size"
     ],
     "a": 0,
-    "why": "Wet clothing drains body heat rapidly, risking hypothermia."
+    "why": "The cold ground steals heat; insulate below you."
    },
    {
-    "q": "A fire needs heat, oxygen, and:",
+    "q": "A good survival shelter is:",
     "options": [
-     "Fuel",
-     "Water",
-     "Salt",
-     "Metal"
+     "Small and well-insulated",
+     "As large as possible",
+     "Open to the wind",
+     "Uninsulated"
     ],
     "a": 0,
-    "why": "The fire triangle is heat, fuel, and oxygen."
+    "why": "A small space traps body heat better."
    },
    {
-    "q": "What do you light first when building a fire?",
+    "q": "The three parts of the fire triangle are:",
+    "options": [
+     "Heat, fuel, oxygen",
+     "Water, wood, wind",
+     "Spark, smoke, ash",
+     "Match, log, match"
+    ],
+    "a": 0,
+    "why": "Fire needs heat, fuel, and oxygen together."
+   },
+   {
+    "q": "To put a fire out, you remove:",
+    "options": [
+     "Any one side of the fire triangle",
+     "All the ash",
+     "The ground",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Removing heat, fuel, or oxygen stops a fire."
+   },
+   {
+    "q": "The tiny dry material that first catches a spark is:",
     "options": [
      "Tinder",
-     "Large logs",
-     "Kindling",
-     "A whole branch"
+     "Fuel wood",
+     "A log",
+     "A rock"
     ],
     "a": 0,
-    "why": "Start with fine, dry tinder, then add kindling, then larger wood."
+    "why": "Tinder → kindling → fuel wood."
    },
    {
-    "q": "A recognized distress signal is:",
+    "q": "The most common reason survival fires fail is:",
     "options": [
-     "Three of anything",
-     "A single whistle",
-     "A quiet wave",
-     "Moving constantly"
+     "Damp material",
+     "Too much air",
+     "Too many matches",
+     "Bad luck"
     ],
     "a": 0,
-    "why": "Three fires, whistle blasts, or flashes signal distress."
+    "why": "Everything must be dry to burn."
+   },
+   {
+    "q": "The most reliable fire-starter to carry is:",
+    "options": [
+     "Matches or a lighter (kept dry)",
+     "A bow drill only",
+     "Two wet sticks",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Matches/lighters are easy and reliable survival essentials."
+   },
+   {
+    "q": "Besides warmth, a fire can:",
+    "options": [
+     "Purify water, cook, light, and signal",
+     "Only look nice",
+     "Replace shelter",
+     "Produce water"
+    ],
+    "a": 0,
+    "why": "Fire boils water safe, cooks, lights, and signals."
+   },
+   {
+    "q": "When done with a fire you should:",
+    "options": [
+     "Fully extinguish it (douse and stir)",
+     "Leave it burning",
+     "Cover it with leaves",
+     "Walk away"
+    ],
+    "a": 0,
+    "why": "Remove heat and oxygen so it can't spread."
+   },
+   {
+    "q": "In cold, your first 'shelter' is actually your:",
+    "options": [
+     "Clothing (dry layers)",
+     "Phone",
+     "Backpack",
+     "Map"
+    ],
+    "a": 0,
+    "why": "Layered, dry clothing manages heat loss."
+   },
+   {
+    "q": "Wet clothing in the cold is dangerous because it:",
+    "options": [
+     "Drains body heat fast",
+     "Keeps you warmer",
+     "Dries instantly",
+     "Does nothing"
+    ],
+    "a": 0,
+    "why": "Damp clothes chill you quickly."
+   },
+   {
+    "q": "In extreme heat, shelter means:",
+    "options": [
+     "Shade and airflow",
+     "A fire",
+     "Heavy blankets",
+     "Running in the sun"
+    ],
+    "a": 0,
+    "why": "Protect from sun and overheating instead of cold."
+   },
+   {
+    "q": "The quiet skill underneath all survival is:",
+    "options": [
+     "Thermoregulation (staying in a safe temperature range)",
+     "Running fast",
+     "Shouting loud",
+     "Eating a lot"
+    ],
+    "a": 0,
+    "why": "Shelter, fire, and clothing all serve temperature control."
    }
   ]
  },
@@ -3502,35 +3652,71 @@ window.LAB404_CONTENT = {
  "survival-water-food": {
   "title": "Water & Food",
   "subject": "Survival & Preparedness",
-  "level": "All levels",
-  "disclaimer": "General outdoor-safety information. When in doubt about water or wild food, don't risk it.",
-  "intro": "After shelter and warmth, water is your next priority — you can only last a few days without it. Food matters far less in the short term. Knowing how to find water and make it safe is a core survival skill.",
-  "cards": [
+  "level": "All ages",
+  "objectives": [
+   "Explain why water is the top survival resource after shelter",
+   "Find and collect water in the wild",
+   "Make water safe to drink (purification)",
+   "Understand food priorities in survival",
+   "Avoid dangerous water and food mistakes"
+  ],
+  "intro": "After air and shelter, water is your most urgent survival need — you can last only about three days without it. Food matters far less in a short survival situation. This lesson covers finding water, making it safe to drink, and the realistic role of food. Educational overview — never eat or drink anything wild you can't positively identify as safe.",
+  "sections": [
    {
-    "h": "Water is the priority after shelter",
-    "body": "You can survive weeks without food but only about 3 days without water, less in heat. Once you're sheltered and warm, finding and treating water is the next job — long before you worry about food."
+    "h": "Why water comes first",
+    "body": "In survival, water outranks food by a wide margin. You can survive weeks without eating, but only about three days without water — and dehydration degrades your judgment, energy, and body long before that. In a survival situation, finding and treating water is usually your top active task after you're sheltered.\n\nSigns of dehydration — dark urine, headache, dizziness, fatigue — are warnings to act. It's also better to 'ration sweat, not water': move in the cool of the day, rest in heat, and avoid overexertion so you lose less water. Don't 'save' water by refusing to drink when you're dehydrated; drink what you have. Managing water is the central survival skill after shelter.",
+    "tip": "Water is survival priority #1 after shelter (~3 days max without it). Ration sweat, not water — avoid overheating to conserve it."
    },
    {
     "h": "Finding water",
-    "body": "Look downhill and in low spots, toward green vegetation, and listen for running water. Rainwater and morning dew are cleaner sources. Avoid stagnant water with algae or a bad smell if you have a choice."
+    "body": "Water is often closer than you think. The best sources are flowing streams and rivers (moving water is generally safer than stagnant). Rain is excellent — collect it with any clean surface, tarp, or container. Morning dew can be soaked up with a cloth and wrung out. In many places, following terrain downhill, toward green vegetation, or toward the sound of running water leads to a source.\n\nSome water should be avoided or treated with extra care: stagnant pools, water near dead animals or human activity, and seawater (never drink it — it dehydrates you faster) or urine. Snow and ice are water but should be melted first, not eaten (eating snow lowers your body temperature dangerously). The rule: find the cleanest source you can, then treat it.",
+    "tip": "Best sources: flowing water, rain, dew. Avoid stagnant/polluted water; never drink seawater. Melt snow before drinking it."
    },
    {
     "h": "Making water safe",
-    "body": "Clear-looking water can still carry germs that make you very sick. Make it safe by boiling (a rolling boil for 1 minute is the most reliable), using a water filter, or chemical purification (tablets or a few drops of unscented bleach). Boiling is the gold standard."
+    "body": "Almost any wild water can carry germs or parasites that cause serious illness, so treat it before drinking whenever possible. The most reliable method with no special gear is boiling: bring the water to a rolling boil for at least one minute, which kills germs (first filter out dirt through cloth if the water is cloudy). Boiling is the gold standard when you can make fire.\n\nOther methods: a water filter or purifier (if you carry one) removes or kills contaminants; purification tablets or a few drops of unscented household bleach (per published guidance) can disinfect; and clear plastic bottles left in strong sun for hours (SODIS) can help in a pinch. Filtering removes dirt but not all germs, so combine filtering with boiling or chemical treatment when you can. Clear-looking water can still be unsafe.",
+    "visual": "<svg viewBox=\"0 0 252 66\" width=\"245\" role=\"img\" aria-label=\"Making wild water safe: filter out dirt, boil for one minute, then cool and drink\"><rect x=\"10\" y=\"18\" width=\"66\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"43\" y=\"38\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9\">Filter dirt</text><rect x=\"92\" y=\"18\" width=\"66\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"125\" y=\"38\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9\">Boil 1 min</text><rect x=\"174\" y=\"18\" width=\"66\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"207\" y=\"38\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9\">Cool & drink</text><line x1=\"76\" y1=\"34\" x2=\"87\" y2=\"34\" stroke=\"#39e3c8\" stroke-width=\"2\"/><polygon points=\"87,30 92,34 87,38\" fill=\"#39e3c8\"/><line x1=\"158\" y1=\"34\" x2=\"169\" y2=\"34\" stroke=\"#39e3c8\" stroke-width=\"2\"/><polygon points=\"169,30 174,34 169,38\" fill=\"#39e3c8\"/></svg>",
+    "caption": "Treating wild water: strain out dirt, boil for a full minute, then let it cool.",
+    "example": "Cloudy water? Filter it through cloth to remove dirt, then boil 1 minute (a rolling boil) to kill germs, then let it cool.",
+    "tip": "Treat wild water before drinking: filter out dirt, then boil 1 minute (the gold standard). Clear water can still carry germs."
    },
    {
-    "h": "Signs of dehydration",
-    "body": "Watch for thirst, dark urine, headache, dizziness, and fatigue. Sip steadily rather than gulping, and don't wait until you feel terrible. Ration sweat, not water — rest in the heat of the day instead of drinking too little."
+    "h": "Food in survival",
+    "body": "Food feels urgent but usually isn't in a short survival situation — you can go weeks without it, and your energy is better spent on shelter, water, and signaling. Hunger is uncomfortable but rarely the immediate danger. So the first rule of survival food is: don't waste energy or take risks chasing it early on.\n\nIf food does matter (a longer ordeal), the safest calories come from what you can positively identify. The hard rule: never eat any wild plant, berry, or mushroom you can't identify with certainty — many are poisonous, and a wrong guess can kill. Insects and fish are often safer bets than foraged plants for the untrained. Honestly, the best 'wild food' skill for most people is to carry extra food so you don't have to forage at all.",
+    "tip": "Food is rarely the urgent need (weeks without it). Never eat wild plants/mushrooms you can't positively identify. Carry extra food."
    },
    {
-    "h": "Food: caution first",
-    "body": "Food is a low short-term priority, and the biggest danger is eating something poisonous. Never eat a wild plant or mushroom you can't identify with certainty — a mistake can be deadly. Focus energy on water, shelter, and signaling instead."
+    "h": "Water and food mistakes to avoid",
+    "body": "A few mistakes turn a survivable situation into a deadly one. With water: don't drink untreated water if you can treat it, don't drink seawater or urine (both worsen dehydration), and don't eat snow un-melted. But also, if you are badly dehydrated and have no way to treat water, drinking questionable water may be the lesser risk — dehydration kills faster than most waterborne illness. Judge the situation.\n\nWith food: the big one is poisoning yourself with misidentified plants or mushrooms, so when unsure, don't eat it. Also avoid spoiled meat and anything that smells or looks wrong. The overall theme is caution and priorities: secure safe water first, treat it when you can, don't take food risks, and remember that preparation (carrying water, a filter, and extra food) prevents nearly all of these problems.",
+    "tip": "Never drink seawater/urine or eat unknown plants. But severe dehydration is deadlier than risky water — if desperate with no way to treat, drink."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Water first",
+    "body": "After shelter, water is priority #1 (~3 days without it). Ration sweat, not water."
+   },
+   {
+    "h": "Finding water",
+    "body": "Best: flowing water, rain, dew. Avoid stagnant/polluted; never seawater; melt snow first."
+   },
+   {
+    "h": "Making it safe",
+    "body": "Filter out dirt, then boil 1 minute (gold standard). Filters/tablets/SODIS also help. Clear can still be unsafe."
+   },
+   {
+    "h": "Food",
+    "body": "Rarely urgent (weeks without it). Never eat unidentified plants/mushrooms. Carry extra food."
+   },
+   {
+    "h": "Mistakes",
+    "body": "No seawater/urine, no unknown plants. But severe dehydration beats risky water if you truly can't treat it."
    }
   ],
   "flash": [
    [
-    "Water priority",
-    "After shelter, water is the next survival need (~3 days without)."
+    "Dehydration",
+    "A dangerous lack of water in the body."
    ],
    [
     "Potable water",
@@ -3538,95 +3724,210 @@ window.LAB404_CONTENT = {
    ],
    [
     "Boiling",
-    "The most reliable way to make water safe (1-minute rolling boil)."
+    "Heating water to a rolling boil (1+ min) to kill germs."
    ],
    [
     "Water filter",
-    "A device that removes germs/particles from water."
+    "A device that strains contaminants from water."
    ],
    [
-    "Purification",
-    "Making water safe with chemicals (tablets or bleach)."
+    "Purification tablets",
+    "Chemicals that disinfect water."
    ],
    [
-    "Dehydration",
-    "Harmful loss of body water; signs include dark urine and dizziness."
+    "SODIS",
+    "Solar disinfection — clear bottles in strong sun."
    ],
    [
-    "'Ration sweat, not water'",
-    "Avoid overexertion/heat rather than drinking too little."
+    "Stagnant water",
+    "Still water, more likely contaminated."
    ],
    [
-    "Wild food caution",
-    "Never eat a plant or mushroom you can't identify for sure."
+    "Ration sweat",
+    "Avoid overheating to conserve body water."
+   ],
+   [
+    "Foraging",
+    "Gathering wild food (risky without ID skill)."
+   ],
+   [
+    "Rolling boil",
+    "Vigorous bubbling indicating safe boiling."
+   ],
+   [
+    "Seawater",
+    "Salt water — never drink; it worsens dehydration."
+   ],
+   [
+    "Dew",
+    "Morning moisture that can be collected for water."
    ]
   ],
   "quiz": [
    {
-    "q": "After shelter and warmth, your next priority is usually:",
+    "q": "After shelter, your top survival priority is:",
     "options": [
      "Water",
      "Food",
-     "A signal fire",
-     "A weapon"
+     "A fishing rod",
+     "A phone charger"
     ],
     "a": 0,
-    "why": "You can last weeks without food but only days without water."
-   },
-   {
-    "q": "The most reliable way to make water safe is to:",
-    "options": [
-     "Boil it (1-minute rolling boil)",
-     "Let it sit",
-     "Add sugar",
-     "Freeze it"
-    ],
-    "a": 0,
-    "why": "Boiling kills germs reliably; filtering and purification tablets also work."
-   },
-   {
-    "q": "A sign of dehydration is:",
-    "options": [
-     "Dark urine and dizziness",
-     "Clear urine",
-     "Feeling full",
-     "Sweating less on purpose being safe"
-    ],
-    "a": 0,
-    "why": "Dark urine, headache, and dizziness signal you need water."
-   },
-   {
-    "q": "Clear-looking stream water:",
-    "options": [
-     "Can still carry germs — treat it",
-     "Is always safe",
-     "Never needs boiling",
-     "Is safe if cold"
-    ],
-    "a": 0,
-    "why": "Clear water can still contain harmful microbes; always treat it."
-   },
-   {
-    "q": "With wild plants and mushrooms, the rule is:",
-    "options": [
-     "Never eat what you can't identify for sure",
-     "Taste a little first",
-     "If it smells fine, eat it",
-     "Berries are always safe"
-    ],
-    "a": 0,
-    "why": "Misidentifying wild food can be fatal; when unsure, don't eat it."
+    "why": "You last only ~3 days without water."
    },
    {
     "q": "Roughly how long can a person survive without water?",
     "options": [
      "About 3 days",
-     "About 3 weeks",
      "About 3 hours",
+     "About 3 weeks",
      "About 3 months"
     ],
     "a": 0,
-    "why": "Around 3 days (less in heat) — far shorter than without food."
+    "why": "Water is urgent; food can wait weeks."
+   },
+   {
+    "q": "'Ration sweat, not water' means:",
+    "options": [
+     "Avoid overheating to conserve body water",
+     "Never drink",
+     "Drink all your water now",
+     "Sweat as much as possible"
+    ],
+    "a": 0,
+    "why": "Less exertion/heat means less water lost."
+   },
+   {
+    "q": "The safest natural water source is usually:",
+    "options": [
+     "Flowing streams/rivers",
+     "Stagnant pools",
+     "Seawater",
+     "A puddle near a dead animal"
+    ],
+    "a": 0,
+    "why": "Moving water is generally safer than stagnant."
+   },
+   {
+    "q": "You should never drink:",
+    "options": [
+     "Seawater",
+     "Rainwater",
+     "Boiled stream water",
+     "Filtered water"
+    ],
+    "a": 0,
+    "why": "Salt water dehydrates you faster."
+   },
+   {
+    "q": "Snow should be:",
+    "options": [
+     "Melted before drinking",
+     "Eaten by the handful",
+     "Avoided entirely",
+     "Mixed with seawater"
+    ],
+    "a": 0,
+    "why": "Eating snow lowers body temperature dangerously."
+   },
+   {
+    "q": "The gold-standard way to make wild water safe without gear is:",
+    "options": [
+     "Boiling (rolling boil, 1+ min)",
+     "Shaking it",
+     "Freezing it",
+     "Adding dirt"
+    ],
+    "a": 0,
+    "why": "Boiling reliably kills germs."
+   },
+   {
+    "q": "If water is cloudy, first:",
+    "options": [
+     "Filter out the dirt, then boil",
+     "Drink it as is",
+     "Add salt",
+     "Freeze it"
+    ],
+    "a": 0,
+    "why": "Remove sediment, then disinfect by boiling."
+   },
+   {
+    "q": "Filtering water through cloth:",
+    "options": [
+     "Removes dirt but not all germs",
+     "Kills all germs",
+     "Adds minerals",
+     "Makes it salty"
+    ],
+    "a": 0,
+    "why": "Combine filtering with boiling/chemical treatment."
+   },
+   {
+    "q": "In a short survival situation, food is:",
+    "options": [
+     "Rarely the urgent danger",
+     "The first priority",
+     "More urgent than water",
+     "Impossible to go without for a day"
+    ],
+    "a": 0,
+    "why": "You can last weeks without food."
+   },
+   {
+    "q": "The hard rule about wild plants and mushrooms is:",
+    "options": [
+     "Never eat what you can't positively identify",
+     "Eat anything green",
+     "Berries are always safe",
+     "Mushrooms are always safe"
+    ],
+    "a": 0,
+    "why": "Many are poisonous; a wrong guess can kill."
+   },
+   {
+    "q": "For the untrained, safer wild calories often come from:",
+    "options": [
+     "Insects and fish",
+     "Unknown mushrooms",
+     "Random berries",
+     "Any roots"
+    ],
+    "a": 0,
+    "why": "They carry less poisoning risk than foraged plants."
+   },
+   {
+    "q": "The best 'wild food' skill for most people is to:",
+    "options": [
+     "Carry extra food",
+     "Forage aggressively",
+     "Hunt large game",
+     "Eat unknown plants"
+    ],
+    "a": 0,
+    "why": "Preparation avoids risky foraging entirely."
+   },
+   {
+    "q": "If you're severely dehydrated with no way to treat water, the lesser risk is often to:",
+    "options": [
+     "Drink the questionable water",
+     "Drink nothing",
+     "Drink seawater",
+     "Eat snow"
+    ],
+    "a": 0,
+    "why": "Dehydration kills faster than most waterborne illness — judge the situation."
+   },
+   {
+    "q": "Most water and food problems are prevented by:",
+    "options": [
+     "Preparation (carrying water, a filter, extra food)",
+     "Luck",
+     "Foraging skill alone",
+     "Drinking seawater"
+    ],
+    "a": 0,
+    "why": "Carrying the basics avoids nearly all of it."
    }
   ]
  },
@@ -13137,349 +13438,744 @@ window.LAB404_CONTENT = {
  "survival-emergency-first-aid": {
   "title": "Emergency First Aid",
   "subject": "Survival & Preparedness",
-  "level": "All levels",
-  "disclaimer": "General information, not a substitute for certified first-aid training. Call 911 in an emergency.",
-  "intro": "In an emergency far from help, basic first aid can keep someone alive until rescue arrives. You don't need a kit full of gear — calm thinking and a few core skills matter most.",
+  "level": "All ages",
+  "objectives": [
+   "Set priorities in an emergency when help may be delayed",
+   "Control severe bleeding",
+   "Recognize and respond to shock",
+   "Respond to environmental emergencies (hypothermia, heat)",
+   "Know your limits and summon rescue"
+  ],
+  "intro": "Emergency first aid in a survival setting — far from a hospital, after a disaster, or in the wild — follows the same principles as everyday first aid but with one big difference: help may be delayed, so stabilizing and protecting the person matters even more. This lesson covers setting priorities, severe bleeding, shock, and environmental emergencies. Educational only, not a substitute for certified training; call for rescue or 911 whenever you can.",
+  "sections": [
+   {
+    "h": "Priorities when help is delayed",
+    "body": "In any emergency, stay calm and work in order of what kills fastest. First, make sure the scene is safe — don't become a second victim. Then check the person's ABCs: Airway (is it open?), Breathing (are they breathing?), and Circulation (severe bleeding?). Address life threats in that order — a blocked airway or massive bleeding kills in minutes, so those come before anything else.\n\nIn a survival setting, also remember the body's own priorities, the 'rule of threes': you can survive roughly 3 minutes without air, 3 hours without shelter in harsh conditions, 3 days without water, and 3 weeks without food. This ranking tells you what to handle first, both when treating someone and when keeping yourself alive.",
+    "visual": "<svg viewBox=\"0 0 256 66\" width=\"248\" role=\"img\" aria-label=\"Survival first-aid priorities: make the scene safe, check airway/breathing/circulation, stop bleeding, get rescue\"><rect x=\"6\" y=\"18\" width=\"54\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"33\" y=\"38\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Scene safe</text><rect x=\"70\" y=\"18\" width=\"54\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"97\" y=\"38\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Check ABCs</text><rect x=\"134\" y=\"18\" width=\"54\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"161\" y=\"38\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Stop bleeding</text><rect x=\"198\" y=\"18\" width=\"54\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"225\" y=\"38\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Get rescue</text><line x1=\"60\" y1=\"34\" x2=\"65\" y2=\"34\" stroke=\"#39e3c8\" stroke-width=\"2\"/><polygon points=\"65,30 70,34 65,38\" fill=\"#39e3c8\"/><line x1=\"124\" y1=\"34\" x2=\"129\" y2=\"34\" stroke=\"#39e3c8\" stroke-width=\"2\"/><polygon points=\"129,30 134,34 129,38\" fill=\"#39e3c8\"/><line x1=\"188\" y1=\"34\" x2=\"193\" y2=\"34\" stroke=\"#39e3c8\" stroke-width=\"2\"/><polygon points=\"193,30 198,34 193,38\" fill=\"#39e3c8\"/></svg>",
+    "caption": "Survival first-aid order: make the scene safe, check the ABCs, stop major bleeding, then get rescue.",
+    "tip": "Scene safe first, then ABCs: Airway, Breathing, Circulation. Treat what kills fastest first."
+   },
+   {
+    "h": "Controlling severe bleeding",
+    "body": "Severe bleeding can be fatal in minutes, so it's a top priority. The main tool is direct pressure: press hard on the wound with a clean cloth or your gloved hand and keep pressing — most bleeding stops with firm, sustained pressure. Don't lift the cloth to peek; if it soaks through, add more on top and keep pressing.\n\nFor life-threatening bleeding from a limb that won't stop with pressure, a tourniquet placed above the wound can save a life (tightened until bleeding stops, noting the time). Elevate the wound above the heart if you can. Once bleeding is controlled, keep the person warm and still and get them to help. Stopping major bleeding fast is one of the highest-impact first-aid skills there is.",
+    "tip": "Severe bleeding kills fast — apply firm, constant direct pressure. If it won't stop on a limb, a tourniquet above the wound can save a life."
+   },
+   {
+    "h": "Recognizing and treating shock",
+    "body": "Shock is a dangerous condition where the body isn't getting enough blood flow — it can follow serious injury, bleeding, or trauma and can be life-threatening on its own. Signs include pale, cool, clammy skin; a rapid, weak pulse and breathing; confusion or anxiety; and weakness or faintness.\n\nTo treat shock while awaiting help: have the person lie down, keep them warm with a blanket or coat (cold worsens shock), raise their legs slightly if no leg or spine injury is suspected, loosen tight clothing, and reassure them to keep them calm. Don't give food or water (they may need surgery). Treating shock means supporting the body and getting the person to medical care as fast as possible.",
+    "tip": "Shock (pale, clammy, weak pulse) is life-threatening: lay the person down, keep them warm, raise the legs, and get help fast."
+   },
+   {
+    "h": "Environmental emergencies",
+    "body": "The environment itself causes survival emergencies. Hypothermia is dangerous loss of body heat — shivering, confusion, slurred speech; treat by getting the person dry, out of wind and cold, and warmed gradually with blankets and shelter. Heat illness is the opposite — heat exhaustion (heavy sweating, weakness, nausea) can progress to deadly heat stroke (hot skin, confusion, little sweating); move the person to shade, cool them, and give water for exhaustion, treating heat stroke as an emergency.\n\nDehydration worsens everything, so maintaining water is key. The theme: the body must stay in a narrow temperature and hydration range, and in a survival setting, protecting someone from the environment — shade, shelter, dry clothing, water — is often as life-saving as treating a wound.",
+    "tip": "Hypothermia → warm and dry them gradually. Heat stroke (hot, confused, not sweating) → cool fast, it's an emergency. Keep hydrated."
+   },
+   {
+    "h": "Know your limits and get rescue",
+    "body": "Survival first aid is about stabilizing a person and protecting life until real help arrives — not performing medicine you're not trained for. Your single most important action is often to summon rescue: call 911 or emergency services if you have any signal, use a whistle (three blasts is a distress signal), a mirror, or a bright marker to signal searchers, and stay put if lost so rescuers can find you.\n\nKnow what you can't do: don't move someone with a possible spinal injury unless they're in danger, don't attempt advanced procedures, and don't risk yourself needlessly. Prevention beats everything — tell someone your plans before heading out, carry a basic kit, and the best survival skill of all is not getting into the emergency in the first place.",
+    "tip": "Stabilize, then get rescue: signal (3 whistle blasts), call for help, stay put if lost. Prevention beats any rescue."
+   }
+  ],
   "cards": [
    {
-    "h": "Stay calm and assess",
-    "body": "Panic helps no one. Take a breath, make sure the scene is safe for you, then check the person: Are they responsive? Breathing? Bleeding badly? Handle life threats first — breathing and severe bleeding — before minor injuries."
+    "h": "Priorities",
+    "body": "Scene safe, then ABCs (Airway, Breathing, Circulation). Treat what kills fastest first."
    },
    {
     "h": "Severe bleeding",
-    "body": "Serious bleeding is an immediate threat. Press firmly and directly on the wound with the cleanest cloth available and keep steady pressure. Don't remove soaked cloth — add more on top. For a limb that won't stop bleeding, a tight band (tourniquet) above the wound can be lifesaving."
+    "body": "Firm constant direct pressure; add cloths, don't peek; tourniquet above a limb wound if needed."
    },
    {
     "h": "Shock",
-    "body": "Shock is a dangerous drop in blood flow that can follow serious injury or blood loss. Signs: pale, cold, clammy skin; a rapid, weak pulse; confusion. Have the person lie down, keep them warm, elevate the legs if no spinal injury is suspected, and get help fast."
+    "body": "Pale, clammy, weak pulse: lay them down, keep warm, raise legs, no food/water, get help."
    },
    {
-    "h": "Breaks, sprains, and burns",
-    "body": "For a suspected broken bone, keep it still and supported and don't try to straighten it. For sprains, remember RICE: Rest, Ice, Compression, Elevation. For burns, cool with clean running water for 10–20 minutes — never ice or butter — and cover loosely."
+    "h": "Environment",
+    "body": "Hypothermia → warm/dry gradually; heat stroke → cool fast (emergency); stay hydrated."
    },
    {
-    "h": "A simple first-aid kit",
-    "body": "A basic kit goes a long way: adhesive bandages, gauze and tape, an elastic wrap, antiseptic wipes, tweezers, gloves, pain relievers, and any personal medications. Know what's in it before you need it, and keep one where you spend time (home, car, pack)."
+    "h": "Rescue & limits",
+    "body": "Stabilize, then signal/call for rescue; stay put if lost; don't attempt what you're not trained for."
    }
   ],
   "flash": [
    [
-    "Scene safety",
-    "Making sure it's safe for you before helping."
+    "ABCs",
+    "Airway, Breathing, Circulation — checked in that order."
+   ],
+   [
+    "Rule of threes",
+    "~3 min air, 3 hrs shelter, 3 days water, 3 weeks food."
    ],
    [
     "Direct pressure",
-    "Pressing on a wound to stop bleeding."
+    "Pressing firmly on a wound to stop bleeding."
    ],
    [
     "Tourniquet",
-    "A tight band above severe limb bleeding, a last resort."
+    "A tight band above a limb wound to stop life-threatening bleeding."
    ],
    [
     "Shock",
-    "Dangerous drop in blood flow after serious injury."
+    "Dangerous low blood flow (pale, clammy, weak pulse)."
    ],
    [
-    "RICE",
-    "Rest, Ice, Compression, Elevation (for sprains)."
+    "Hypothermia",
+    "Dangerous loss of body heat."
    ],
    [
-    "Burn care",
-    "Cool with running water 10–20 min; no ice or butter."
+    "Heat stroke",
+    "Dangerous overheating (hot skin, confusion) — an emergency."
    ],
    [
-    "Splint",
-    "Support that keeps a suspected broken bone still."
+    "Dehydration",
+    "Not enough water in the body."
    ],
    [
-    "First-aid kit",
-    "Basic supplies to treat injuries until help arrives."
+    "Distress signal",
+    "Three of anything (e.g., 3 whistle blasts)."
+   ],
+   [
+    "Triage",
+    "Deciding what to treat first by severity."
+   ],
+   [
+    "Scene safety",
+    "Making sure it's safe before you help."
+   ],
+   [
+    "Rescue",
+    "Getting the person to professional help."
    ]
   ],
   "quiz": [
    {
-    "q": "The first life threats to handle are:",
+    "q": "Before helping anyone, your first step is to:",
     "options": [
-     "Breathing and severe bleeding",
-     "Small cuts",
-     "Bruises",
-     "Blisters"
+     "Make sure the scene is safe",
+     "Take a photo",
+     "Give them food",
+     "Call a friend"
     ],
     "a": 0,
-    "why": "Airway/breathing and major bleeding are immediate threats."
+    "why": "Don't become a second victim."
    },
    {
-    "q": "To stop severe bleeding you should:",
+    "q": "The ABCs stand for:",
     "options": [
-     "Apply firm direct pressure",
-     "Rinse and wait",
-     "Elevate only",
-     "Apply ice only"
+     "Airway, Breathing, Circulation",
+     "Always Bring Candy",
+     "Ask Before Caring",
+     "Alert, Bandage, Call"
     ],
     "a": 0,
-    "why": "Direct pressure is the first and main step."
+    "why": "Check airway, breathing, then circulation."
    },
    {
-    "q": "RICE for a sprain stands for Rest, Ice, Compression, and:",
+    "q": "The rule of threes says you can survive about how long without shelter in harsh weather?",
     "options": [
-     "Elevation",
-     "Exercise",
-     "Eating",
-     "Energy"
+     "3 hours",
+     "3 minutes",
+     "3 days",
+     "3 weeks"
     ],
     "a": 0,
-    "why": "Elevation reduces swelling along with the others."
+    "why": "Exposure kills far faster than hunger."
    },
    {
-    "q": "To treat a burn, you should:",
+    "q": "The main way to control severe bleeding is:",
     "options": [
-     "Cool it with running water",
-     "Put butter on it",
-     "Pack it in ice",
-     "Pop any blisters"
+     "Firm, constant direct pressure",
+     "Lifting the cloth often to check",
+     "Rinsing it with soda",
+     "Ignoring it"
     ],
     "a": 0,
-    "why": "Cool running water 10–20 min; avoid ice, butter, and popping blisters."
+    "why": "Direct pressure stops most bleeding."
    },
    {
-    "q": "Signs of shock include:",
+    "q": "If a cloth soaks through with blood, you should:",
     "options": [
-     "Pale, cold, clammy skin and confusion",
-     "Warm pink skin",
-     "High energy",
-     "A normal pulse"
+     "Add more on top and keep pressing",
+     "Remove it to look",
+     "Stop pressing",
+     "Wash the wound"
     ],
     "a": 0,
-    "why": "Shock shows as pale, clammy skin, a weak rapid pulse, and confusion."
+    "why": "Don't disturb the clot; add more and keep pressure."
    },
    {
-    "q": "For a suspected broken bone, you should:",
+    "q": "For unstoppable life-threatening bleeding from a limb, you can use a:",
     "options": [
-     "Keep it still and supported",
-     "Straighten it",
-     "Have them walk it off",
-     "Massage it"
+     "Tourniquet above the wound",
+     "Band-aid",
+     "Cold drink",
+     "Pillow"
     ],
     "a": 0,
-    "why": "Immobilize it; don't try to realign it yourself."
+    "why": "A tourniquet above the wound can be life-saving; note the time."
+   },
+   {
+    "q": "Pale, cool, clammy skin with a weak, rapid pulse suggests:",
+    "options": [
+     "Shock",
+     "A minor scrape",
+     "Hunger",
+     "A sunburn"
+    ],
+    "a": 0,
+    "why": "These are classic signs of shock."
+   },
+   {
+    "q": "To treat shock, you should:",
+    "options": [
+     "Lay them down, keep warm, raise legs",
+     "Make them run",
+     "Give a big meal",
+     "Cool them with ice"
+    ],
+    "a": 0,
+    "why": "Support circulation and warmth; get help fast."
+   },
+   {
+    "q": "You should NOT give a shock or seriously injured person:",
+    "options": [
+     "Food or water",
+     "Reassurance",
+     "A blanket",
+     "Rest"
+    ],
+    "a": 0,
+    "why": "They may need surgery."
+   },
+   {
+    "q": "Hypothermia is treated by:",
+    "options": [
+     "Warming and drying the person gradually",
+     "Cooling them",
+     "Giving ice",
+     "Making them exercise hard"
+    ],
+    "a": 0,
+    "why": "Get them dry, sheltered, and gradually warmed."
+   },
+   {
+    "q": "Heat stroke (hot skin, confusion, not sweating) is:",
+    "options": [
+     "A life-threatening emergency — cool fast",
+     "Harmless",
+     "Just thirst",
+     "Normal"
+    ],
+    "a": 0,
+    "why": "Cool them quickly and get emergency help."
+   },
+   {
+    "q": "Three whistle blasts is a universal:",
+    "options": [
+     "Distress signal",
+     "Celebration",
+     "Greeting",
+     "All-clear"
+    ],
+    "a": 0,
+    "why": "Three of anything signals distress."
+   },
+   {
+    "q": "If you're lost, the general rule is to:",
+    "options": [
+     "Stay put so rescuers can find you",
+     "Keep walking fast",
+     "Hide",
+     "Split up"
+    ],
+    "a": 0,
+    "why": "Staying put makes you easier to find."
+   },
+   {
+    "q": "Survival first aid's real goal is to:",
+    "options": [
+     "Stabilize until real help arrives",
+     "Replace a hospital",
+     "Diagnose diseases",
+     "Perform surgery"
+    ],
+    "a": 0,
+    "why": "Stabilize and protect life; then get rescue."
+   },
+   {
+    "q": "The best survival strategy overall is:",
+    "options": [
+     "Prevention (plans, a kit, telling someone)",
+     "Taking big risks",
+     "Going alone unprepared",
+     "Hoping for the best"
+    ],
+    "a": 0,
+    "why": "Avoiding the emergency beats any rescue."
    }
   ]
  },
  "survival-wilderness-skills": {
   "title": "Wilderness Skills",
   "subject": "Survival & Preparedness",
-  "level": "All levels",
-  "disclaimer": "General outdoor-safety information. Build skills with practice and never take unnecessary risks.",
-  "intro": "Wilderness skills are about staying safe and self-reliant in the outdoors. Most trouble comes from poor preparation, so a little knowledge and planning prevents the majority of emergencies.",
+  "level": "All ages",
+  "objectives": [
+   "Apply the survival rule of threes to set priorities",
+   "Keep a survival mindset and stay calm",
+   "Signal for help and stay findable",
+   "Know what essentials to carry",
+   "Prevent wilderness emergencies"
+  ],
+  "intro": "Wilderness survival is about meeting your body's basic needs — air, shelter, water, food — when you're far from help, and doing it with a calm, clear head. This lesson covers the survival priorities, mindset, core skills, and how to prevent trouble in the first place. Educational overview — real skills need hands-on practice, and preparation and prevention matter most.",
+  "sections": [
+   {
+    "h": "The rule of threes",
+    "body": "Survival decisions are guided by a simple priority list, the 'rule of threes': you can survive about 3 minutes without air, 3 hours without shelter in harsh weather, 3 days without water, and 3 weeks without food. It's approximate, but it ranks your needs — and that ranking is what keeps people alive, because in a crisis it's easy to focus on the wrong thing.\n\nThe lesson is counterintuitive to many: in most survival situations, shelter and staying warm and dry matter far more urgently than finding food. People imagine hunting for food, but exposure (losing body heat) kills far faster than hunger. Handle air, then shelter and warmth, then water, then food — in that order.",
+    "visual": "<svg viewBox=\"0 0 250 98\" width=\"240\" role=\"img\" aria-label=\"The survival rule of threes priority list\"><rect x=\"8\" y=\"5\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"5\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"10\">~3 minutes</text><text x=\"110\" y=\"20\" fill=\"#9adbcf\" font-size=\"9\">without air</text><rect x=\"8\" y=\"27\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"27\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"10\">~3 hours</text><text x=\"110\" y=\"42\" fill=\"#9adbcf\" font-size=\"9\">without shelter (harsh weather)</text><rect x=\"8\" y=\"49\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"49\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"10\">~3 days</text><text x=\"110\" y=\"64\" fill=\"#9adbcf\" font-size=\"9\">without water</text><rect x=\"8\" y=\"71\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"71\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"10\">~3 weeks</text><text x=\"110\" y=\"86\" fill=\"#9adbcf\" font-size=\"9\">without food</text></svg>",
+    "caption": "The rule of threes ranks survival needs — shelter and warmth come long before food.",
+    "tip": "Rule of threes: ~3 min without air, 3 hrs without shelter, 3 days without water, 3 weeks without food. Shelter beats food."
+   },
+   {
+    "h": "Survival mindset",
+    "body": "The most important survival tool isn't a knife or a fire — it's your mind. Panic kills: it wastes energy, clouds judgment, and leads to bad decisions. The survival mindset is to stop, breathe, and think before acting. A classic approach is STOP: Stop (don't rush), Think (assess the situation), Observe (what do you have, where are you?), and Plan (decide your next move calmly).\n\nStaying calm and keeping the will to live are documented factors in who survives. Focus on small, achievable tasks — build a shelter, signal for help — to stay in control. Fear is normal; letting it drive you is the danger. A calm person with few tools often outlasts a panicked person with many.",
+    "tip": "Your mind is your top survival tool. Use STOP: Stop, Think, Observe, Plan. Panic kills; calm saves."
+   },
+   {
+    "h": "Staying found and signaling",
+    "body": "If you're lost, the goal shifts to being found. The general rule is to stay put once you realize you're lost — a moving person is far harder for searchers to find, and wandering often makes things worse. Stay where you are, make yourself visible, and conserve energy.\n\nSignaling draws rescuers to you. Three of anything is the universal distress signal — three whistle blasts, three fires, three flashes. A whistle carries far longer than your voice and saves energy. Bright colors, a signal mirror flashing at aircraft, and a smoky fire by day all help. If you told someone your plans before leaving (always do), searchers will know roughly where to look — which is why that one habit is so powerful.",
+    "tip": "Lost? Stay put, stay visible, conserve energy. Signal in threes (3 whistle blasts). Always tell someone your plan before you go."
+   },
+   {
+    "h": "The survival essentials",
+    "body": "Preparation turns an emergency into an inconvenience. Experienced outdoorspeople carry a set of essentials whenever they head out: a way to navigate (map and compass), a way to make fire, a way to signal (whistle, mirror), extra water and a way to purify more, extra food, extra warm or rain clothing, a knife or multi-tool, a first-aid kit, a headlamp or flashlight, and emergency shelter (even a space blanket).\n\nNone of this is heavy or expensive, and any of it can save your life. The idea is simple: assume something might go wrong — you could be out longer than planned, the weather could turn, you could get hurt — and carry the few items that let you handle a night out safely. Gear doesn't replace skill, but skill plus a few essentials is a powerful combination.",
+    "tip": "Always carry the essentials: navigation, fire, signal, water, food, warm/rain layers, knife, first aid, light, emergency shelter."
+   },
+   {
+    "h": "Preventing emergencies",
+    "body": "The best survival situation is the one you avoid. Most wilderness emergencies come from a few preventable mistakes: going unprepared, not checking the weather, overestimating your ability, going alone, and — above all — not telling anyone your plan. Prevention is far easier than rescue.\n\nBefore any trip: tell someone exactly where you're going and when you'll be back (so they can alert rescuers if you don't return), check the forecast, carry the essentials, and know the route and your own limits. Turn back when conditions or daylight run short — ego gets people hurt. Survival skills are vital for when things go wrong, but the real expert's goal is to never need them.",
+    "tip": "Prevention beats rescue: tell someone your plan and return time, check weather, carry essentials, and know when to turn back."
+   }
+  ],
   "cards": [
    {
-    "h": "Plan and tell someone",
-    "body": "The single best survival skill is preparation. Before heading out, check the weather, pack the basics, and tell someone your route and when you'll be back. If you don't return, that person is your rescue. Most survival situations are avoided right here."
+    "h": "Rule of threes",
+    "body": "~3 min air, 3 hrs shelter, 3 days water, 3 weeks food. Shelter and warmth beat food."
    },
    {
-    "h": "The ten essentials",
-    "body": "Experienced hikers carry a core kit: navigation (map/compass), water and a way to purify it, extra food, extra clothing/rain layer, fire-starting, a knife or tool, a first-aid kit, a headlamp, sun protection, and an emergency shelter. Even a short hike can turn into an overnight."
+    "h": "Mindset (STOP)",
+    "body": "Stop, Think, Observe, Plan. Panic kills; staying calm and the will to live save lives."
    },
    {
-    "h": "If you get lost: STOP",
-    "body": "If you realize you're lost, STOP: Stop (don't panic or wander), Think (how did you get here?), Observe (surroundings, landmarks, weather), Plan (a careful next step). Wandering makes you harder to find; staying put near an open area is often safest."
+    "h": "Staying found",
+    "body": "Stay put if lost, stay visible, signal in threes (3 whistle blasts)."
    },
    {
-    "h": "Protect against the elements",
-    "body": "Exposure is the top wilderness killer. Stay dry, layer clothing, and shelter from wind and rain. In heat, rest in shade during the hottest hours and drink water. Managing your body temperature matters more than food in the short term."
+    "h": "Essentials",
+    "body": "Navigation, fire, signal, water, food, warm/rain layers, knife, first aid, light, shelter."
    },
    {
-    "h": "Minimize impact and signal",
-    "body": "Respect the outdoors (pack out trash, don't disturb wildlife), and know how to be found if needed. Three of anything (whistle blasts, signal fires, flashes) means distress. Bright colors and open areas make you visible to searchers and aircraft."
+    "h": "Prevention",
+    "body": "Tell someone your plan + return time, check weather, carry essentials, know when to turn back."
    }
   ],
   "flash": [
    [
-    "Trip plan",
-    "Telling someone your route and return time before you go."
-   ],
-   [
-    "Ten essentials",
-    "The core kit experienced hikers always carry."
-   ],
-   [
-    "STOP",
-    "Stop, Think, Observe, Plan — when you're lost."
+    "Rule of threes",
+    "~3 min air, 3 hrs shelter, 3 days water, 3 weeks food."
    ],
    [
     "Exposure",
-    "Harm from weather (cold, heat, wet) — the top outdoor danger."
+    "Dangerous loss (or gain) of body heat from the environment."
    ],
    [
-    "Layering",
-    "Wearing adjustable clothing layers to manage temperature."
+    "STOP method",
+    "Stop, Think, Observe, Plan."
    ],
    [
-    "Signal of three",
-    "Three whistles/fires/flashes signal distress."
+    "Distress signal",
+    "Three of anything (whistle, fire, flash)."
    ],
    [
-    "Leave No Trace",
-    "Minimizing your impact on the outdoors."
+    "Stay put",
+    "Remaining in place when lost so rescuers can find you."
    ],
    [
-    "Navigation",
-    "Finding your way with a map and compass or known landmarks."
+    "Signal mirror",
+    "A mirror used to flash sunlight at rescuers."
+   ],
+   [
+    "The essentials",
+    "Core gear carried for safety outdoors."
+   ],
+   [
+    "Space blanket",
+    "A thin reflective sheet that conserves body heat."
+   ],
+   [
+    "Whistle",
+    "A signaling tool that carries far and saves energy."
+   ],
+   [
+    "Situational awareness",
+    "Paying attention to your surroundings and conditions."
+   ],
+   [
+    "Will to live",
+    "The mental determination that strongly aids survival."
+   ],
+   [
+    "Trip plan",
+    "Telling someone your route and return time before you go."
    ]
   ],
   "quiz": [
    {
-    "q": "The single best survival skill is:",
+    "q": "The rule of threes ranks survival needs; which is most urgent after air?",
     "options": [
-     "Preparation (plan + tell someone)",
-     "Running fast",
-     "Eating a lot",
-     "Hiking alone"
+     "Shelter/warmth",
+     "Food",
+     "A campfire song",
+     "Finding a trail sign"
     ],
     "a": 0,
-    "why": "Good planning prevents most emergencies; a told plan brings rescue."
+    "why": "Exposure kills faster than thirst or hunger."
    },
    {
-    "q": "If you realize you're lost, you should:",
+    "q": "You can survive roughly how long without water?",
     "options": [
-     "STOP (don't wander)",
-     "Keep walking fast",
-     "Split from your group",
-     "Panic"
+     "About 3 days",
+     "About 3 minutes",
+     "About 3 hours",
+     "About 3 weeks"
     ],
     "a": 0,
-    "why": "Stop, Think, Observe, Plan — wandering makes you harder to find."
+    "why": "~3 days without water in the rule of threes."
    },
    {
-    "q": "The top killer in the wilderness is:",
+    "q": "In most survival situations, what kills faster than hunger?",
     "options": [
-     "Exposure to the elements",
-     "Hunger",
+     "Exposure (losing body heat)",
      "Boredom",
-     "Thirst only"
+     "Lack of a map",
+     "Lack of a knife"
     ],
     "a": 0,
-    "why": "Cold, heat, and wet (exposure) are the biggest short-term dangers."
+    "why": "Shelter and warmth outrank food."
    },
    {
-    "q": "The 'ten essentials' always include:",
+    "q": "The most important survival tool is:",
     "options": [
-     "Navigation, water, fire, shelter, first aid",
+     "Your mind (staying calm)",
+     "A big knife",
+     "A phone",
+     "A tent"
+    ],
+    "a": 0,
+    "why": "Panic kills; a calm, clear head saves."
+   },
+   {
+    "q": "The STOP method stands for:",
+    "options": [
+     "Stop, Think, Observe, Plan",
+     "Shout, Travel, Open, Push",
+     "Sit, Trip, Open, Pack",
+     "Stop, Text, Order, Pay"
+    ],
+    "a": 0,
+    "why": "A calm decision process: Stop, Think, Observe, Plan."
+   },
+   {
+    "q": "If you realize you're lost, you should usually:",
+    "options": [
+     "Stay put and stay visible",
+     "Walk fast in any direction",
+     "Hide from searchers",
+     "Split from your group"
+    ],
+    "a": 0,
+    "why": "Staying put makes you far easier to find."
+   },
+   {
+    "q": "The universal distress signal is:",
+    "options": [
+     "Three of anything",
+     "One long yell",
+     "A smiley face",
+     "Silence"
+    ],
+    "a": 0,
+    "why": "Three whistle blasts, fires, or flashes signal distress."
+   },
+   {
+    "q": "A whistle is better than yelling because it:",
+    "options": [
+     "Carries farther and saves energy",
+     "Is louder than a jet",
+     "Scares animals",
+     "Looks cool"
+    ],
+    "a": 0,
+    "why": "It travels far and conserves your energy."
+   },
+   {
+    "q": "Which belongs in your outdoor essentials?",
+    "options": [
+     "Navigation, fire, signal, water, light",
      "Only snacks",
-     "Just a phone",
-     "Nothing special"
+     "Only a phone",
+     "Nothing"
     ],
     "a": 0,
-    "why": "They're the core safety kit for any trip."
+    "why": "Carry the core safety items every trip."
    },
    {
-    "q": "To stay warm, you should:",
+    "q": "A space blanket helps mainly by:",
     "options": [
-     "Layer clothing and stay dry",
-     "Wear one heavy wet layer",
-     "Stay in the wind",
-     "Sweat a lot"
+     "Conserving body heat",
+     "Making food",
+     "Purifying water",
+     "Lighting fires"
     ],
     "a": 0,
-    "why": "Layering and staying dry manage body temperature best."
+    "why": "It reflects and retains body heat."
    },
    {
-    "q": "Before a hike, you should always:",
+    "q": "The single most powerful prevention habit is:",
     "options": [
-     "Tell someone your route and return time",
-     "Tell no one",
-     "Leave at night unprepared",
-     "Skip checking the weather"
+     "Telling someone your plan and return time",
+     "Buying expensive gear",
+     "Going alone",
+     "Skipping the forecast"
     ],
     "a": 0,
-    "why": "A told plan means someone will notice if you don't return."
+    "why": "So rescuers know where to look if you don't return."
+   },
+   {
+    "q": "Before a trip you should also:",
+    "options": [
+     "Check the weather forecast",
+     "Ignore the weather",
+     "Leave your map home",
+     "Overestimate your ability"
+    ],
+    "a": 0,
+    "why": "Weather turns cause many emergencies."
+   },
+   {
+    "q": "When daylight or conditions run short, the wise move is to:",
+    "options": [
+     "Turn back",
+     "Push on no matter what",
+     "Speed up recklessly",
+     "Ignore it"
+    ],
+    "a": 0,
+    "why": "Ego gets people hurt; turning back is smart."
+   },
+   {
+    "q": "A person who survives often has:",
+    "options": [
+     "A calm mind and the will to live",
+     "The most gear",
+     "The loudest voice",
+     "The fastest legs"
+    ],
+    "a": 0,
+    "why": "Mindset is a documented survival factor."
+   },
+   {
+    "q": "The real expert's goal with survival skills is to:",
+    "options": [
+     "Never need them (prevent emergencies)",
+     "Show off",
+     "Take big risks",
+     "Get rescued often"
+    ],
+    "a": 0,
+    "why": "Prevention beats rescue every time."
    }
   ]
  },
  "survival-navigation-maps": {
   "title": "Navigation & Maps",
   "subject": "Survival & Preparedness",
-  "level": "All levels",
-  "disclaimer": "General information. Practice navigation skills in safe areas before relying on them.",
-  "intro": "Knowing where you are and how to get where you're going is a core outdoor skill. Phones fail (dead batteries, no signal), so a map, a compass, and basic know-how are worth learning.",
+  "level": "All ages",
+  "objectives": [
+   "Read a map and understand its key features",
+   "Use a compass and the cardinal directions",
+   "Use natural signs to find direction",
+   "Combine map and compass (basics)",
+   "Avoid getting lost"
+  ],
+  "intro": "Navigation is finding your way and knowing where you are — a core skill outdoors and a useful one anywhere. With a map, a compass, and some basic know-how, you can travel confidently and avoid getting lost. This lesson covers reading maps, using a compass, natural navigation, and staying oriented.",
+  "sections": [
+   {
+    "h": "Reading a map",
+    "body": "A map is a scaled drawing of an area from above. To use one, understand its features. The legend (key) explains the symbols and colors (blue = water, green = forest, lines = roads or trails). The scale tells you how map distance relates to real distance. Maps are oriented with north at the top by convention, shown by a north arrow.\n\nTopographic maps, used outdoors, add contour lines — lines connecting points of equal elevation that show the shape of the land. Lines close together mean steep terrain; far apart means flat. Reading a map means first orienting it (lining it up with the real world), then relating what you see on paper to what's around you. It's the foundation of all navigation.",
+    "tip": "Check a map's legend, scale, and north arrow. On topo maps, close contour lines = steep, far apart = flat."
+   },
+   {
+    "h": "The compass and cardinal directions",
+    "body": "A compass is a simple, reliable tool: its magnetic needle always points toward magnetic north, giving you a fixed reference. From north, the cardinal directions follow: north, east, south, west, going clockwise (remember 'Never Eat Soggy Waffles'). Directions can be given more precisely as degrees, 0° to 360° (north = 0°/360°, east = 90°, south = 180°, west = 270°).\n\nTo use a compass simply: hold it flat, let the needle settle, and turn until the needle lines up with north on the dial — now you know which way is which. A compass works day or night, in any weather, with no batteries, which is why it remains essential even in the GPS age. (A phone compass works too, until the battery dies.)",
+    "visual": "<svg viewBox=\"0 0 180 182\" width=\"170\" role=\"img\" aria-label=\"A compass rose showing north, east, south, and west with the needle pointing north\"><circle cx=\"90\" cy=\"92\" r=\"74\" fill=\"rgba(79,156,240,.06)\" stroke=\"#4f9cf0\" stroke-width=\"2\"/><line x1=\"90\" y1=\"20\" x2=\"90\" y2=\"164\" stroke=\"#6b7a98\" stroke-width=\"0.8\"/><line x1=\"18\" y1=\"92\" x2=\"162\" y2=\"92\" stroke=\"#6b7a98\" stroke-width=\"0.8\"/><polygon points=\"84,92 96,92 90,34\" fill=\"#f05a5a\"/><polygon points=\"84,92 96,92 90,150\" fill=\"#6b7a98\"/><text x=\"90\" y=\"16\" text-anchor=\"middle\" fill=\"#f05a5a\" font-size=\"12\">N</text><text x=\"171\" y=\"96\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"11\">E</text><text x=\"90\" y=\"180\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"11\">S</text><text x=\"9\" y=\"96\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"11\">W</text></svg>",
+    "caption": "The compass needle points north; the cardinal directions go clockwise N → E → S → W.",
+    "tip": "A compass needle points north; from there go clockwise N→E→S→W. It needs no batteries — always carry one outdoors."
+   },
+   {
+    "h": "Natural navigation",
+    "body": "Even without tools, nature offers clues to direction. The sun rises in the east and sets in the west everywhere on Earth — the most reliable natural guide. At midday in the Northern Hemisphere, the sun sits roughly to the south. A stick's shadow moves predictably through the day and can mark an east-west line.\n\nAt night, in the Northern Hemisphere, the North Star (Polaris) sits almost directly north and is found using the Big Dipper's two 'pointer' stars. Other hints — moss, tree growth, snow-melt patterns — are unreliable and shouldn't be trusted alone. Natural navigation is a valuable backup, but a map and compass are far more dependable; use nature's clues to confirm, not to gamble.",
+    "tip": "Sun rises east, sets west (reliable everywhere). At night up north, the North Star points north. Use nature to confirm, not gamble."
+   },
+   {
+    "h": "Map and compass together",
+    "body": "Map and compass become powerful used together. The first step is to orient the map: place the compass on it and rotate the map until its north lines up with the compass needle — now the map matches the terrain, and features on paper line up with features around you. This alone prevents most confusion.\n\nFrom there you can take a bearing — the compass direction from your location to a destination — and follow it, or identify a distant peak by its bearing. Full map-and-compass navigation takes practice to master, but the core idea is simple: keep the map oriented to reality, know roughly where you are, and move deliberately toward known features. These fundamentals, practiced, make you hard to truly lose.",
+    "tip": "Orient the map to north with your compass so paper matches terrain; then follow a bearing toward your destination."
+   },
+   {
+    "h": "Not getting lost",
+    "body": "The best navigation is never getting lost. Stay aware as you travel: periodically look back (the return trip looks different), note landmarks, and keep rough track of direction and time. Check your map and position regularly rather than only when confused — it's far easier to stay found than to get un-lost.\n\nHave backups: carry a map and compass even if you have GPS, since batteries die and signals fail. Tell someone your route. And if you do become lost, stop — don't wander. Stay calm, use what you know, and if you can't confidently navigate back, stay put and signal for help. Awareness, backups, and humility keep you oriented far more reliably than any single gadget.",
+    "tip": "Stay aware (look back, note landmarks), check your position often, carry map+compass as GPS backup, and if lost, stop — don't wander."
+   }
+  ],
   "cards": [
    {
     "h": "Reading a map",
-    "body": "A map is a bird's-eye view drawn to scale. Key features: the legend (explains symbols), the scale (map distance vs. real distance), and direction (usually north is up). Topographic maps add contour lines showing elevation — close lines mean steep terrain."
+    "body": "Use the legend, scale, and north arrow; on topo maps, close contour lines = steep."
    },
    {
-    "h": "Finding direction",
-    "body": "The sun rises in the east and sets in the west, giving you a rough east-west line any clear day. A compass needle always points to magnetic north. Knowing which way is north lets you orient a map and hold a straight heading instead of wandering in circles."
+    "h": "Compass",
+    "body": "The needle points north; cardinal directions go clockwise N→E→S→W; no batteries needed."
    },
    {
-    "h": "Using a compass with a map",
-    "body": "Line up ('orient') the map so its north matches the compass's north; now the map matches the land around you. To travel toward a destination, point yourself along the direction (bearing) from your spot to the target and walk it, checking landmarks as you go."
+    "h": "Natural navigation",
+    "body": "Sun rises east, sets west; the North Star points north (up north). Confirm, don't gamble."
    },
    {
-    "h": "Landmarks and handrails",
-    "body": "Experienced navigators follow obvious features: a ridge, a stream, a trail, a shoreline. These 'handrails' guide you and are hard to lose. Pick a visible landmark in your direction of travel, walk to it, then pick the next — it keeps you on a straight line."
+    "h": "Map + compass",
+    "body": "Orient the map to north, then follow a bearing toward your destination."
    },
    {
-    "h": "Don't rely only on your phone",
-    "body": "GPS and phone maps are great but fragile outdoors — batteries die and signal drops. Carry a paper map and compass as backup, keep your phone charged and conserved, and learn the basics before you need them. Redundancy is what keeps you found."
+    "h": "Not getting lost",
+    "body": "Stay aware, check position often, carry map+compass as a GPS backup; if lost, stop."
    }
   ],
   "flash": [
    [
-    "Map legend",
-    "The key explaining a map's symbols."
+    "Map",
+    "A scaled drawing of an area seen from above."
    ],
    [
-    "Map scale",
-    "The ratio of map distance to real distance."
+    "Legend",
+    "The key explaining a map's symbols and colors."
+   ],
+   [
+    "Scale",
+    "How map distance relates to real distance."
    ],
    [
     "Contour lines",
-    "Lines on a topo map showing elevation (close = steep)."
+    "Lines showing elevation; close together = steep."
    ],
    [
     "Compass",
     "A tool whose needle points to magnetic north."
    ],
    [
-    "Orienting a map",
-    "Lining up the map's north with real north."
+    "Cardinal directions",
+    "North, east, south, west."
    ],
    [
     "Bearing",
-    "The compass direction from you to a destination."
+    "The compass direction to a destination."
    ],
    [
-    "Handrail",
-    "An obvious feature (stream, ridge) you follow to navigate."
+    "Magnetic north",
+    "The direction a compass needle points."
+   ],
+   [
+    "North Star (Polaris)",
+    "A star over the north point (Northern Hemisphere)."
+   ],
+   [
+    "Orient a map",
+    "Line the map up with north / the real terrain."
    ],
    [
     "Topographic map",
-    "A map showing elevation with contour lines."
+    "A map showing terrain shape with contour lines."
+   ],
+   [
+    "GPS",
+    "Satellite navigation — useful, but batteries/signals can fail."
    ]
   ],
   "quiz": [
    {
-    "q": "On most maps, which direction is 'up'?",
+    "q": "A map's key, explaining symbols and colors, is the:",
     "options": [
-     "North",
-     "South",
-     "East",
-     "West"
+     "Legend",
+     "Scale",
+     "Contour",
+     "Bearing"
     ],
     "a": 0,
-    "why": "By convention, maps are drawn with north at the top."
+    "why": "The legend explains the map's symbols."
    },
    {
-    "q": "A compass needle points to:",
+    "q": "On a topographic map, contour lines close together mean:",
     "options": [
-     "Magnetic north",
-     "The sun",
-     "Your destination",
-     "Downhill"
+     "Steep terrain",
+     "Flat terrain",
+     "Water",
+     "A road"
     ],
     "a": 0,
-    "why": "The needle aligns with magnetic north, letting you orient."
+    "why": "Close lines = steep; far apart = flat."
+   },
+   {
+    "q": "A compass needle points toward:",
+    "options": [
+     "Magnetic north",
+     "The nearest town",
+     "The sun",
+     "Down"
+    ],
+    "a": 0,
+    "why": "It gives a fixed north reference."
+   },
+   {
+    "q": "Going clockwise from north, the cardinal directions are:",
+    "options": [
+     "North, east, south, west",
+     "North, west, south, east",
+     "East, north, west, south",
+     "Random"
+    ],
+    "a": 0,
+    "why": "N→E→S→W clockwise ('Never Eat Soggy Waffles')."
+   },
+   {
+    "q": "East is at what degree on a compass?",
+    "options": [
+     "90°",
+     "0°",
+     "180°",
+     "270°"
+    ],
+    "a": 0,
+    "why": "N=0, E=90, S=180, W=270."
+   },
+   {
+    "q": "A big advantage of a compass over a phone is that it:",
+    "options": [
+     "Needs no batteries",
+     "Is heavier",
+     "Shows videos",
+     "Makes calls"
+    ],
+    "a": 0,
+    "why": "It works in any weather with no power."
    },
    {
     "q": "The sun rises in the:",
@@ -13490,170 +14186,376 @@ window.LAB404_CONTENT = {
      "South"
     ],
     "a": 0,
-    "why": "It rises in the east and sets in the west."
+    "why": "It rises east and sets west everywhere."
    },
    {
-    "q": "Close-together contour lines mean:",
+    "q": "At night in the Northern Hemisphere, which star marks north?",
     "options": [
-     "Steep terrain",
-     "Flat ground",
-     "Water",
-     "A trail"
+     "The North Star (Polaris)",
+     "The brightest planet",
+     "The Moon",
+     "Any star"
     ],
     "a": 0,
-    "why": "Tightly spaced contours show a steep slope."
+    "why": "Polaris sits nearly over the north point."
    },
    {
-    "q": "A 'handrail' in navigation is:",
+    "q": "Moss and tree growth as direction clues are:",
     "options": [
-     "An obvious feature you follow (stream, ridge)",
-     "A metal rail",
-     "A compass part",
-     "A type of map"
+     "Unreliable — don't trust alone",
+     "Always perfectly accurate",
+     "The best method",
+     "A compass substitute"
     ],
     "a": 0,
-    "why": "Following a clear feature keeps you on course."
+    "why": "Use them only to confirm, not to gamble."
    },
    {
-    "q": "Why not rely only on your phone outdoors?",
+    "q": "To 'orient' a map means to:",
     "options": [
-     "Batteries die and signal drops",
-     "It's always wrong",
-     "Maps are illegal",
-     "It's too heavy"
+     "Line it up with north / the real terrain",
+     "Fold it",
+     "Draw on it",
+     "Throw it away"
     ],
     "a": 0,
-    "why": "Electronics are fragile; carry a paper map and compass as backup."
+    "why": "Orienting makes the paper match the land."
+   },
+   {
+    "q": "A 'bearing' is:",
+    "options": [
+     "The compass direction to a destination",
+     "A type of map",
+     "A star",
+     "A trail name"
+    ],
+    "a": 0,
+    "why": "A bearing is a direction in degrees to follow."
+   },
+   {
+    "q": "Even with GPS, you should carry a:",
+    "options": [
+     "Map and compass (backup)",
+     "Second phone only",
+     "Nothing",
+     "Just snacks"
+    ],
+    "a": 0,
+    "why": "Batteries and signals fail; analog backups don't."
+   },
+   {
+    "q": "To stay oriented while hiking, you should:",
+    "options": [
+     "Look back and note landmarks",
+     "Only look forward",
+     "Close your eyes",
+     "Never check the map"
+    ],
+    "a": 0,
+    "why": "The return trip looks different; landmarks keep you found."
+   },
+   {
+    "q": "If you realize you're lost, the first move is to:",
+    "options": [
+     "Stop — don't wander",
+     "Run downhill",
+     "Keep going faster",
+     "Panic"
+    ],
+    "a": 0,
+    "why": "Stopping prevents getting more lost."
+   },
+   {
+    "q": "The most reliable everyday natural direction guide is:",
+    "options": [
+     "The sun's east-west path",
+     "Moss",
+     "Wind",
+     "Bird calls"
+    ],
+    "a": 0,
+    "why": "Sunrise east / sunset west holds everywhere."
    }
   ]
  },
  "survival-disaster-preparedness": {
   "title": "Disaster Preparedness",
   "subject": "Survival & Preparedness",
-  "level": "All levels",
-  "intro": "Disasters — storms, floods, power outages, wildfires — are easier to get through with a little preparation. A basic plan and kit, made before anything happens, turn a crisis into something manageable.",
+  "level": "All ages",
+  "objectives": [
+   "Understand common disasters and the value of preparing",
+   "Build an emergency kit (go-bag and home supplies)",
+   "Make a family emergency plan",
+   "Know what to do during common disasters",
+   "Stay informed and recover afterward"
+  ],
+  "intro": "Disasters — storms, floods, fires, earthquakes, power outages — happen, and a little preparation makes a huge difference in staying safe. Disaster preparedness is about having supplies, a plan, and the know-how before something happens, so you're not caught off guard. This lesson covers kits, plans, responses, and recovery.",
+  "sections": [
+   {
+    "h": "Why prepare",
+    "body": "Disasters come in many forms — natural (hurricanes, floods, wildfires, earthquakes, tornadoes, extreme heat or cold) and human-caused (power outages, chemical spills). Many strike with little warning, and in a widespread disaster, emergency services are overwhelmed and help may not arrive for days. Officials commonly advise being able to take care of yourself for at least 72 hours (three days), sometimes longer.\n\nPreparation isn't about fear or 'prepping' for the end of the world — it's practical insurance. A modest kit and a simple plan turn a frightening event into a manageable one, and the people who cope best in disasters are almost always the ones who thought about it beforehand. A small effort now pays off enormously when it counts.",
+    "tip": "Disasters often strike fast and overwhelm help — plan to be self-sufficient for at least 72 hours. Preparation is practical insurance."
+   },
+   {
+    "h": "Building an emergency kit",
+    "body": "The core of preparedness is a kit of supplies. A basic emergency kit (enough for at least three days, per person) should include: water (about one gallon per person per day), non-perishable food, a flashlight and batteries, a battery or hand-crank radio, a first-aid kit, any essential medications, copies of important documents, some cash, a whistle, sanitation items, and warm blankets or clothing.\n\nKeep a larger kit at home and a portable 'go-bag' ready to grab if you must evacuate fast. Don't forget needs specific to your household — infant supplies, pet food, medical devices. Check and refresh the kit periodically (rotate food and water, replace expired items, update medications). The best time to assemble it is now, calmly, not during an emergency when stores are empty.",
+    "visual": "<svg viewBox=\"0 0 250 142\" width=\"240\" role=\"img\" aria-label=\"A basic 72-hour emergency go-bag checklist\"><rect x=\"8\" y=\"5\" width=\"112\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"120\" y=\"5\" width=\"122\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9.5\">Water</text><text x=\"126\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">1 gal/person/day</text><rect x=\"8\" y=\"27\" width=\"112\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"120\" y=\"27\" width=\"122\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9.5\">Food</text><text x=\"126\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">non-perishable, 3 days</text><rect x=\"8\" y=\"49\" width=\"112\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"120\" y=\"49\" width=\"122\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9.5\">Light + radio</text><text x=\"126\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">power/cell may fail</text><rect x=\"8\" y=\"71\" width=\"112\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"120\" y=\"71\" width=\"122\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9.5\">First aid + meds</text><text x=\"126\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">injuries, health needs</text><rect x=\"8\" y=\"93\" width=\"112\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"120\" y=\"93\" width=\"122\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9.5\">Documents + cash</text><text x=\"126\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">IDs; ATMs may be down</text><rect x=\"8\" y=\"115\" width=\"112\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"120\" y=\"115\" width=\"122\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"130\" fill=\"#cdd9ec\" font-size=\"9.5\">Whistle + blanket</text><text x=\"126\" y=\"130\" fill=\"#9adbcf\" font-size=\"8.5\">signal and warmth</text></svg>",
+    "caption": "A basic 72-hour go-bag — water, food, light/radio, first aid, documents, and signal/warmth items.",
+    "tip": "Build a 72-hour kit per person (water, food, light, radio, first aid, meds, docs, cash) — a grab-and-go bag plus home supplies."
+   },
+   {
+    "h": "Making a plan",
+    "body": "Supplies aren't enough without a plan, because disasters scatter and confuse people. A family emergency plan answers key questions in advance: How will we communicate if separated and phones are down? Where will we meet — both near home and outside the neighborhood? What are our evacuation routes? Who is our out-of-town contact everyone can check in with? (Texts often work when calls don't.)\n\nAlso plan for specifics: how to shut off utilities (gas, water, electricity) if needed, where the kit is, and how to care for children, elderly members, and pets. Write the plan down, share it with everyone, and practice it — a plan no one remembers under stress isn't much help. Knowing what to do removes panic and saves precious time when seconds count.",
+    "tip": "Make a family plan: how to communicate, where to meet, evacuation routes, an out-of-town contact. Write it down and practice it."
+   },
+   {
+    "h": "During a disaster",
+    "body": "When disaster strikes, the first rule is to stay calm and follow official instructions — listen to emergency broadcasts and heed evacuation or shelter orders immediately (they're based on real information you may not have). Acting fast on an evacuation order, before roads clog, saves lives.\n\nResponses differ by event: in an earthquake, 'drop, cover, and hold on' under sturdy furniture; in a tornado, go to a basement or an interior room on the lowest floor; in a flood, move to higher ground and never drive or walk through floodwater; in a fire, get out and stay out. Know the main threats where you live and the right response for each. When told to evacuate, go; when told to shelter in place, do so. Official guidance plus your plan is your best protection.",
+    "tip": "Stay calm, follow official orders fast (evacuate when told). Know the right move for your area's threats (quake: drop-cover-hold)."
+   },
+   {
+    "h": "Staying informed and recovering",
+    "body": "Information is a lifeline in a disaster. Have multiple ways to get alerts — a phone with emergency alerts enabled, a battery or hand-crank radio for when power and cell service fail, and knowledge of your local warning systems. Sign up for local emergency notifications in advance. Reliable information tells you what's happening and what to do.\n\nAfter a disaster, be cautious: hazards like downed power lines, gas leaks, contaminated water, and unstable structures remain. Check on others, especially vulnerable neighbors, and don't return to an evacuated area until officials say it's safe. Recovery takes time; use your supplies, rely on your plan and community, and replenish your kit afterward. Preparedness is a cycle — plan, respond, recover, and prepare again, a little better each time.",
+    "tip": "Keep multiple ways to get alerts (incl. a battery radio). After a disaster, watch for hazards, help neighbors, and return only when cleared."
+   }
+  ],
   "cards": [
    {
-    "h": "Make a plan before you need it",
-    "body": "Decide in advance: how will your household get emergency alerts, where will you meet if separated, how will you communicate if phones are down, and what's your evacuation route? Write it down and make sure everyone knows it. A plan made calmly beats decisions made in panic."
+    "h": "Why prepare",
+    "body": "Disasters strike fast and overwhelm help; plan to be self-sufficient for 72+ hours. It's practical insurance."
    },
    {
-    "h": "Build an emergency kit",
-    "body": "A basic kit covers you for several days without outside help: water (about a gallon per person per day for 3+ days), non-perishable food, a flashlight, batteries, a first-aid kit, medications, a battery or hand-crank radio, a phone charger/power bank, cash, and copies of important documents."
+    "h": "Emergency kit",
+    "body": "72-hour kit per person: water, food, light, radio, first aid, meds, documents, cash, whistle, blankets. Go-bag + home supplies."
    },
    {
-    "h": "Water and food first",
-    "body": "In most disasters, utilities and stores go down. Store water (the hardest to go without) and shelf-stable food you can eat without cooking. Keep your car's gas tank at least half full, and have a way to charge your phone when the power's out."
+    "h": "Make a plan",
+    "body": "Communication, meeting places, evacuation routes, an out-of-town contact; write it down and practice."
    },
    {
-    "h": "Know your local risks",
-    "body": "Prepare for what's likely where you live — hurricanes and floods in some areas, wildfires or earthquakes in others, winter storms elsewhere. Sign up for local emergency alerts, know your evacuation zones, and learn the difference between a 'watch' (be ready) and a 'warning' (act now)."
+    "h": "During",
+    "body": "Stay calm, follow official orders fast. Quake: drop-cover-hold; flood: higher ground; fire: get out."
    },
    {
-    "h": "Evacuate early, shelter smart",
-    "body": "If told to evacuate, go early — roads clog fast and waiting can trap you. If sheltering in place, pick an interior room away from windows for storms, or higher ground for floods. Keep your kit and documents grab-ready in a bag by the door."
+    "h": "Inform & recover",
+    "body": "Keep multiple alert sources (battery radio); after, watch hazards, help neighbors, return only when cleared."
    }
   ],
   "flash": [
    [
-    "Emergency plan",
-    "A household's agreed plan for alerts, meeting, and evacuation."
+    "Disaster preparedness",
+    "Having supplies, a plan, and know-how before a disaster."
    ],
    [
-    "Go-bag",
-    "A grab-ready bag of essentials for a fast evacuation."
+    "72 hours",
+    "The minimum self-sufficiency most officials advise."
    ],
    [
     "Emergency kit",
-    "Supplies to last several days without outside help."
+    "Supplies to get through a disaster."
    ],
    [
-    "Watch vs. warning",
-    "A watch means be ready; a warning means act now."
+    "Go-bag",
+    "A portable kit ready to grab for a fast evacuation."
    ],
    [
-    "Water storage",
-    "About 1 gallon per person per day for 3+ days."
-   ],
-   [
-    "Evacuation route",
-    "The planned way out of a danger area."
+    "Evacuation",
+    "Leaving an area for safety when ordered."
    ],
    [
     "Shelter in place",
-    "Staying put safely indoors during a hazard."
+    "Staying safely indoors when told to."
    ],
    [
-    "Alerts",
-    "Official emergency notifications to sign up for."
+    "Out-of-town contact",
+    "A distant person everyone checks in with."
+   ],
+   [
+    "Drop, cover, hold on",
+    "The earthquake response."
+   ],
+   [
+    "Emergency alert",
+    "An official warning sent to phones/radio."
+   ],
+   [
+    "Hand-crank radio",
+    "A radio that works without batteries or power."
+   ],
+   [
+    "Meeting place",
+    "A pre-agreed spot to reunite after a disaster."
+   ],
+   [
+    "Utilities shutoff",
+    "Turning off gas, water, or electricity if needed."
    ]
   ],
   "quiz": [
    {
-    "q": "The best time to make an emergency plan is:",
+    "q": "Officials commonly advise being able to care for yourself for at least:",
     "options": [
-     "Before a disaster happens",
-     "During the disaster",
-     "After it's over",
+     "72 hours (3 days)",
+     "1 hour",
+     "1 month",
+     "1 year"
+    ],
+    "a": 0,
+    "why": "Help may be delayed in a widespread disaster."
+   },
+   {
+    "q": "Disaster preparedness is best described as:",
+    "options": [
+     "Practical insurance",
+     "Paranoia",
+     "A waste of time",
+     "Only for experts"
+    ],
+    "a": 0,
+    "why": "A small effort pays off hugely when it counts."
+   },
+   {
+    "q": "How much water should a basic kit have per person per day?",
+    "options": [
+     "About one gallon",
+     "One cup",
+     "One teaspoon",
+     "None"
+    ],
+    "a": 0,
+    "why": "~1 gallon/person/day for drinking and sanitation."
+   },
+   {
+    "q": "A portable kit ready to grab for a fast evacuation is a:",
+    "options": [
+     "Go-bag",
+     "Toolbox",
+     "Lunchbox",
+     "Backpack of books"
+    ],
+    "a": 0,
+    "why": "A go-bag is grab-and-go for evacuations."
+   },
+   {
+    "q": "Which belongs in an emergency kit?",
+    "options": [
+     "Flashlight, radio, first aid, water",
+     "Only snacks",
+     "Only a phone",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Core supplies to get through 72+ hours."
+   },
+   {
+    "q": "You should refresh your kit by:",
+    "options": [
+     "Rotating food/water and replacing expired items",
+     "Never touching it",
+     "Throwing it out yearly",
+     "Hiding it"
+    ],
+    "a": 0,
+    "why": "Keep supplies current so they work when needed."
+   },
+   {
+    "q": "A family emergency plan should include:",
+    "options": [
+     "How to communicate and where to meet",
+     "Only snacks",
+     "A movie list",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Communication, meeting places, and routes keep people safe."
+   },
+   {
+    "q": "Why name an out-of-town contact?",
+    "options": [
+     "Everyone can check in there if separated",
+     "They pay the bills",
+     "They drive you",
+     "No reason"
+    ],
+    "a": 0,
+    "why": "A distant contact is reachable when local lines fail; texts often work."
+   },
+   {
+    "q": "When officials order an evacuation, you should:",
+    "options": [
+     "Go promptly",
+     "Wait and see",
+     "Ignore it",
+     "Pack slowly"
+    ],
+    "a": 0,
+    "why": "Acting fast, before roads clog, saves lives."
+   },
+   {
+    "q": "In an earthquake, you should:",
+    "options": [
+     "Drop, cover, and hold on",
+     "Run outside through glass",
+     "Stand in a doorway forever",
+     "Jump"
+    ],
+    "a": 0,
+    "why": "Drop, cover under sturdy furniture, and hold on."
+   },
+   {
+    "q": "In a flood, you should:",
+    "options": [
+     "Move to higher ground; never drive through floodwater",
+     "Drive through it fast",
+     "Swim in it",
+     "Stay in the basement"
+    ],
+    "a": 0,
+    "why": "Floodwater is deadly; get high and stay out of it."
+   },
+   {
+    "q": "A hand-crank radio is valuable because it:",
+    "options": [
+     "Works when power and cell service fail",
+     "Is loud",
+     "Plays music only",
+     "Needs wifi"
+    ],
+    "a": 0,
+    "why": "It delivers alerts without batteries or power."
+   },
+   {
+    "q": "After a disaster, a common hazard is:",
+    "options": [
+     "Downed power lines and gas leaks",
+     "Fresh produce",
+     "Clean water everywhere",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Hazards persist; stay cautious."
+   },
+   {
+    "q": "You should return to an evacuated area:",
+    "options": [
+     "Only when officials say it's safe",
+     "Immediately",
+     "At night",
      "Never"
     ],
     "a": 0,
-    "why": "A calm plan beats panicked decisions in the moment."
+    "why": "Hidden dangers remain until it's cleared."
    },
    {
-    "q": "An emergency kit should include water for about:",
+    "q": "Preparedness is best thought of as:",
     "options": [
-     "3+ days (a gallon per person/day)",
-     "1 hour",
-     "1 month minimum",
-     "No water needed"
+     "A repeating cycle (plan, respond, recover, improve)",
+     "A one-time task",
+     "Only for emergencies",
+     "Impossible"
     ],
     "a": 0,
-    "why": "Aim for a gallon per person per day for at least three days."
-   },
-   {
-    "q": "A weather 'warning' means:",
-    "options": [
-     "Act now",
-     "Maybe later",
-     "Nothing",
-     "The storm passed"
-    ],
-    "a": 0,
-    "why": "A warning means the hazard is imminent — act. A watch means be ready."
-   },
-   {
-    "q": "If told to evacuate, you should:",
-    "options": [
-     "Leave early",
-     "Wait until the last minute",
-     "Ignore it",
-     "Drive toward the hazard"
-    ],
-    "a": 0,
-    "why": "Leaving early avoids clogged roads and getting trapped."
-   },
-   {
-    "q": "A 'go-bag' is:",
-    "options": [
-     "A grab-ready bag of essentials",
-     "A trash bag",
-     "A grocery bag",
-     "A sleeping bag only"
-    ],
-    "a": 0,
-    "why": "It's packed ahead so you can evacuate fast."
-   },
-   {
-    "q": "You should prepare mostly for:",
-    "options": [
-     "The disasters likely in your area",
-     "Only rare events",
-     "Nothing specific",
-     "Events on other continents"
-    ],
-    "a": 0,
-    "why": "Tailor your prep to your local risks (floods, fires, storms, quakes)."
+    "why": "You prepare, respond, recover, and prepare again, better each time."
    }
   ]
  },
