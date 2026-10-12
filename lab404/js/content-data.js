@@ -1045,5 +1045,1047 @@ window.LAB404_CONTENT = {
     "why": "Three fires, whistle blasts, or flashes signal distress."
    }
   ]
+ },
+ "math-arithmetic": {
+  "title": "Arithmetic",
+  "subject": "Mathematics",
+  "level": "Grades K-5",
+  "intro": "Arithmetic is working with numbers using the four basic operations. It's the foundation everything else in math is built on — get comfortable here and the rest comes easier.",
+  "cards": [
+   {
+    "h": "Place value",
+    "body": "In a number like 342, each digit's position tells its value: 3 hundreds, 4 tens, 2 ones. Place value is why 50 and 500 are very different — the same digit means ten times more each place to the left."
+   },
+   {
+    "h": "The four operations",
+    "body": "Addition (+) combines, subtraction (−) takes away, multiplication (×) is repeated addition (3×4 = 3+3+3+3), and division (÷) splits into equal groups. Multiplication and division undo each other, as do addition and subtraction."
+   },
+   {
+    "h": "Fractions",
+    "body": "A fraction like 3/4 means 3 parts out of 4 equal parts. The top (numerator) counts the parts; the bottom (denominator) says how many make a whole. 1/2 = 2/4 = 4/8 — the same amount written different ways."
+   },
+   {
+    "h": "Order of operations (PEMDAS)",
+    "body": "When a problem has several operations, do them in order: Parentheses, Exponents, Multiplication and Division (left to right), then Addition and Subtraction (left to right). So 2 + 3×4 = 2 + 12 = 14, not 20."
+   },
+   {
+    "h": "Percentages",
+    "body": "Percent means 'out of 100.' 25% = 25/100 = 1/4 = 0.25. To find 25% of 80, multiply: 0.25 × 80 = 20. Percentages are everywhere — sales, tips, grades, interest."
+   }
+  ],
+  "flash": [
+   [
+    "Place value",
+    "The value of a digit based on its position (ones, tens, hundreds)."
+   ],
+   [
+    "Numerator",
+    "The top number of a fraction — how many parts you have."
+   ],
+   [
+    "Denominator",
+    "The bottom number of a fraction — how many parts make a whole."
+   ],
+   [
+    "Product",
+    "The answer to a multiplication problem."
+   ],
+   [
+    "Quotient",
+    "The answer to a division problem."
+   ],
+   [
+    "PEMDAS",
+    "Order of operations: Parentheses, Exponents, Mult/Div, Add/Sub."
+   ],
+   [
+    "Percent",
+    "A number out of 100 (25% = 25/100)."
+   ],
+   [
+    "Equivalent fractions",
+    "Different fractions that equal the same amount (1/2 = 2/4)."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "In the number 507, the 5 is in the:",
+    "options": [
+     "Hundreds place",
+     "Tens place",
+     "Ones place",
+     "Thousands place"
+    ],
+    "a": 0,
+    "why": "Reading right to left: 7 ones, 0 tens, 5 hundreds."
+   },
+   {
+    "q": "What is 3 × 4?",
+    "options": [
+     "12",
+     "7",
+     "34",
+     "1"
+    ],
+    "a": 0,
+    "why": "3×4 = 3+3+3+3 = 12."
+   },
+   {
+    "q": "Which fraction equals 1/2?",
+    "options": [
+     "2/4",
+     "1/4",
+     "2/3",
+     "3/4"
+    ],
+    "a": 0,
+    "why": "2/4 reduces to 1/2 — the same amount."
+   },
+   {
+    "q": "Using PEMDAS, 2 + 3 × 4 =",
+    "options": [
+     "14",
+     "20",
+     "24",
+     "9"
+    ],
+    "a": 0,
+    "why": "Multiply first (3×4=12), then add 2 → 14."
+   },
+   {
+    "q": "What is 25% of 80?",
+    "options": [
+     "20",
+     "25",
+     "40",
+     "2"
+    ],
+    "a": 0,
+    "why": "25% = 0.25; 0.25 × 80 = 20."
+   },
+   {
+    "q": "Division is the opposite of:",
+    "options": [
+     "Multiplication",
+     "Addition",
+     "Subtraction",
+     "Exponents"
+    ],
+    "a": 0,
+    "why": "Multiplication and division undo each other."
+   }
+  ]
+ },
+ "money-credit-debt-payoff": {
+  "title": "Credit & Debt Payoff",
+  "subject": "Money & Investing",
+  "level": "Grades 9 - adult",
+  "intro": "Credit is borrowing money you promise to pay back. Used well it builds your reputation with lenders; used badly it traps you paying interest for years. Here's how it works and how to dig out of debt.",
+  "cards": [
+   {
+    "h": "What credit is",
+    "body": "Credit is borrowed money — a credit card, loan, or line of credit. You pay it back over time, almost always with interest (a fee for borrowing). Your track record of paying it back becomes your credit history."
+   },
+   {
+    "h": "Credit score basics",
+    "body": "A credit score (roughly 300–850) is a number lenders use to judge how risky you are to lend to. The biggest factors are paying on time and not using too much of your available credit. Higher scores mean easier approval and lower interest."
+   },
+   {
+    "h": "The minimum-payment trap",
+    "body": "Paying only the minimum on a credit card keeps you in debt for years, because interest piles onto the leftover balance every month. Carrying a balance at 20%+ interest is one of the most expensive things you can do with money."
+   },
+   {
+    "h": "Snowball vs. avalanche",
+    "body": "Two proven payoff plans: the snowball pays smallest balances first (quick wins, momentum); the avalanche pays highest-interest first (saves the most money). Pick whichever keeps you going — the best plan is the one you'll stick with."
+   },
+   {
+    "h": "Avoid the worst traps",
+    "body": "Payday loans, car-title loans, and rent-to-own carry brutal interest (often 200%+ a year) and are built to keep you borrowing. Avoid them. A credit union or a payment plan with the biller is almost always cheaper."
+   }
+  ],
+  "flash": [
+   [
+    "Credit",
+    "Borrowed money you agree to pay back, usually with interest."
+   ],
+   [
+    "Interest",
+    "The fee charged for borrowing money, as a percentage."
+   ],
+   [
+    "Credit score",
+    "A number (about 300–850) showing how reliably you repay."
+   ],
+   [
+    "APR",
+    "Annual Percentage Rate — the yearly cost of borrowing."
+   ],
+   [
+    "Minimum payment",
+    "The smallest amount due; paying only this keeps you in debt."
+   ],
+   [
+    "Debt snowball",
+    "Paying smallest balances first for momentum."
+   ],
+   [
+    "Debt avalanche",
+    "Paying highest-interest debt first to save the most."
+   ],
+   [
+    "Payday loan",
+    "A very high-interest short-term loan — best avoided."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Paying only the minimum on a credit card:",
+    "options": [
+     "Keeps you in debt for years",
+     "Pays it off fastest",
+     "Avoids all interest",
+     "Raises your limit instantly"
+    ],
+    "a": 0,
+    "why": "Interest keeps piling on the leftover balance, dragging payoff out for years."
+   },
+   {
+    "q": "The two biggest factors in a credit score are:",
+    "options": [
+     "Paying on time and low credit usage",
+     "Your age and job",
+     "How many cards you own only",
+     "Your income only"
+    ],
+    "a": 0,
+    "why": "Payment history and how much of your available credit you use matter most."
+   },
+   {
+    "q": "The debt avalanche method pays off which debt first?",
+    "options": [
+     "Highest-interest",
+     "Smallest balance",
+     "Newest",
+     "Largest balance"
+    ],
+    "a": 0,
+    "why": "Avalanche targets the highest interest rate to save the most money."
+   },
+   {
+    "q": "Which should you usually avoid?",
+    "options": [
+     "Payday loans",
+     "A credit union loan",
+     "A biller payment plan",
+     "Paying more than the minimum"
+    ],
+    "a": 0,
+    "why": "Payday loans carry extreme interest and trap borrowers."
+   },
+   {
+    "q": "APR stands for:",
+    "options": [
+     "Annual Percentage Rate",
+     "Average Payment Range",
+     "Account Payment Record",
+     "Annual Principal Return"
+    ],
+    "a": 0,
+    "why": "APR is the yearly cost of borrowing, shown as a percentage."
+   },
+   {
+    "q": "The debt snowball's main advantage is:",
+    "options": [
+     "Quick wins and momentum",
+     "Saving the most interest",
+     "Raising your score instantly",
+     "Avoiding all payments"
+    ],
+    "a": 0,
+    "why": "Clearing small balances first builds motivation to keep going."
+   }
+  ]
+ },
+ "medicine-nutrition": {
+  "title": "Nutrition",
+  "subject": "Health & Medicine",
+  "level": "Grades 6 - adult",
+  "disclaimer": "General nutrition information, not medical or dietary advice. Talk to a doctor or dietitian about your specific needs.",
+  "intro": "Nutrition is how the food you eat fuels and builds your body. You don't need a perfect diet — just a basic grasp of what food does helps you make better choices most of the time.",
+  "cards": [
+   {
+    "h": "The three macronutrients",
+    "body": "Food energy comes from three macros: carbohydrates (the body's main quick fuel — grains, fruit, bread), protein (builds and repairs muscle and tissue — meat, beans, eggs), and fat (concentrated energy and vitamin absorption — oils, nuts). You need all three."
+   },
+   {
+    "h": "Calories and energy balance",
+    "body": "A calorie is a unit of food energy. Eat about as many calories as you burn and weight stays steady; eat more and you gain, fewer and you lose. It's a rough balance, not a precise formula."
+   },
+   {
+    "h": "Whole foods vs. processed",
+    "body": "Foods closer to their natural state — vegetables, fruit, beans, whole grains, plain meats — tend to have more nutrients and fiber and keep you full longer. Heavily processed foods (chips, soda, candy) pack lots of calories with little nutrition."
+   },
+   {
+    "h": "Hydration",
+    "body": "Water carries nutrients, regulates temperature, and keeps you thinking clearly. Thirst, dark urine, and fatigue are signs to drink more. Plain water is best; sugary drinks add calories fast without filling you up."
+   },
+   {
+    "h": "Reading a nutrition label",
+    "body": "Check the serving size first (everything on the label is per serving, and a package is often several). Then scan calories, added sugars, sodium, and fiber. Ingredients are listed by weight — the first few are what there's most of."
+   }
+  ],
+  "flash": [
+   [
+    "Macronutrient",
+    "A nutrient needed in large amounts: carbs, protein, or fat."
+   ],
+   [
+    "Carbohydrate",
+    "The body's main quick energy source (grains, fruit)."
+   ],
+   [
+    "Protein",
+    "Nutrient that builds and repairs muscle and tissue."
+   ],
+   [
+    "Calorie",
+    "A unit of energy from food."
+   ],
+   [
+    "Energy balance",
+    "Calories in vs. calories out — drives weight change."
+   ],
+   [
+    "Whole food",
+    "Food close to its natural state, rich in nutrients and fiber."
+   ],
+   [
+    "Fiber",
+    "Plant material that aids digestion and keeps you full."
+   ],
+   [
+    "Serving size",
+    "The amount a nutrition label's numbers are based on."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Which macronutrient mainly builds and repairs muscle?",
+    "options": [
+     "Protein",
+     "Carbohydrate",
+     "Fat",
+     "Water"
+    ],
+    "a": 0,
+    "why": "Protein is the body's building and repair material."
+   },
+   {
+    "q": "If you eat more calories than you burn, you generally:",
+    "options": [
+     "Gain weight",
+     "Lose weight",
+     "Stay exactly the same",
+     "Burn muscle only"
+    ],
+    "a": 0,
+    "why": "Extra energy in beyond what you use is stored, so weight goes up."
+   },
+   {
+    "q": "The FIRST thing to check on a nutrition label is:",
+    "options": [
+     "Serving size",
+     "Calories",
+     "The brand",
+     "The color"
+    ],
+    "a": 0,
+    "why": "All the numbers are per serving, and a package often holds several."
+   },
+   {
+    "q": "A sign you need more water is:",
+    "options": [
+     "Dark urine",
+     "Clear urine",
+     "Feeling cold",
+     "Eating slowly"
+    ],
+    "a": 0,
+    "why": "Dark urine, thirst and fatigue signal dehydration."
+   },
+   {
+    "q": "Compared to chips and soda, whole foods usually have:",
+    "options": [
+     "More nutrients and fiber",
+     "Fewer nutrients",
+     "More added sugar",
+     "No calories"
+    ],
+    "a": 0,
+    "why": "Whole foods carry more nutrients and fiber per calorie."
+   },
+   {
+    "q": "On an ingredient list, items are ordered by:",
+    "options": [
+     "Weight (most first)",
+     "Alphabet",
+     "Price",
+     "Random"
+    ],
+    "a": 0,
+    "why": "Ingredients are listed from most to least by weight."
+   }
+  ]
+ },
+ "cooking-food-safety": {
+  "title": "Food Safety",
+  "subject": "Cooking & Nutrition",
+  "level": "All levels",
+  "intro": "Most food poisoning is preventable with a few habits. Keeping food out of the temperature range where bacteria thrive, and keeping raw and ready-to-eat food apart, covers the vast majority of risk.",
+  "cards": [
+   {
+    "h": "The danger zone",
+    "body": "Bacteria multiply fastest between 40°F and 140°F — the 'danger zone.' Keep cold food cold (below 40°F / in the fridge) and hot food hot (above 140°F). Don't let perishable food sit in that range more than 2 hours (1 hour if it's above 90°F out)."
+   },
+   {
+    "h": "Clean, separate, cook, chill",
+    "body": "The four core rules: Clean hands and surfaces often; Separate raw meat from other foods; Cook to safe temperatures; Chill leftovers promptly. These four cover most of food safety."
+   },
+   {
+    "h": "Safe internal temperatures",
+    "body": "Use a thermometer, not guesswork: poultry 165°F, ground beef 160°F, whole cuts of beef/pork 145°F (with a short rest), fish 145°F. Color isn't a reliable sign — temperature is."
+   },
+   {
+    "h": "Thawing safely",
+    "body": "Thaw frozen food in the fridge, in cold water (changed every 30 min), or in the microwave — never on the counter, where the outside enters the danger zone while the middle is still frozen. Cook food thawed in water or microwave right away."
+   },
+   {
+    "h": "Leftovers",
+    "body": "Refrigerate leftovers within 2 hours in shallow containers so they cool fast. Eat them within 3–4 days, and reheat to 165°F. When in doubt, throw it out — you can't always smell or see the bacteria that make you sick."
+   }
+  ],
+  "flash": [
+   [
+    "Danger zone",
+    "40°F–140°F, where bacteria multiply fastest."
+   ],
+   [
+    "2-hour rule",
+    "Don't leave perishable food out longer than 2 hours."
+   ],
+   [
+    "Cross-contamination",
+    "Spreading germs from raw food to ready-to-eat food."
+   ],
+   [
+    "Safe poultry temp",
+    "165°F internal."
+   ],
+   [
+    "Safe ground beef temp",
+    "160°F internal."
+   ],
+   [
+    "Clean/Separate/Cook/Chill",
+    "The four core food-safety rules."
+   ],
+   [
+    "Safe thawing",
+    "In the fridge, cold water, or microwave — never on the counter."
+   ],
+   [
+    "Leftover limit",
+    "Eat refrigerated leftovers within 3–4 days."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Bacteria grow fastest between:",
+    "options": [
+     "40°F and 140°F",
+     "0°F and 32°F",
+     "140°F and 212°F",
+     "Below freezing"
+    ],
+    "a": 0,
+    "why": "That range is the 'danger zone' for rapid bacterial growth."
+   },
+   {
+    "q": "The safest way to thaw meat is:",
+    "options": [
+     "In the fridge",
+     "On the counter",
+     "In a sunny window",
+     "Next to the stove"
+    ],
+    "a": 0,
+    "why": "Counter thawing lets the outside enter the danger zone; the fridge is safe."
+   },
+   {
+    "q": "Ground beef is safe at an internal temperature of:",
+    "options": [
+     "160°F",
+     "120°F",
+     "140°F",
+     "100°F"
+    ],
+    "a": 0,
+    "why": "Ground beef must reach 160°F."
+   },
+   {
+    "q": "The four core food-safety rules are clean, separate, cook, and:",
+    "options": [
+     "Chill",
+     "Freeze",
+     "Fry",
+     "Salt"
+    ],
+    "a": 0,
+    "why": "Clean, Separate, Cook, Chill."
+   },
+   {
+    "q": "Refrigerated leftovers should be eaten within about:",
+    "options": [
+     "3–4 days",
+     "2 weeks",
+     "1 month",
+     "1 hour"
+    ],
+    "a": 0,
+    "why": "After 3–4 days, toss them to be safe."
+   },
+   {
+    "q": "To tell if meat is cooked safely, rely on:",
+    "options": [
+     "A thermometer",
+     "Color",
+     "Smell",
+     "Cooking time only"
+    ],
+    "a": 0,
+    "why": "Color and smell are unreliable; internal temperature is the real test."
+   }
+  ]
+ },
+ "coding-web-development-html-css-js": {
+  "title": "Web Development (HTML/CSS/JS)",
+  "subject": "Computer Science & Coding",
+  "level": "Grades 9-12",
+  "intro": "Every website is built from three languages working together. Learn what each one does and you can build and understand web pages — the most visible, shareable kind of code there is.",
+  "cards": [
+   {
+    "h": "Three languages, three jobs",
+    "body": "HTML is the structure (the content and its skeleton), CSS is the style (colors, layout, fonts), and JavaScript is the behavior (things that respond and change). A good way to remember: HTML = nouns, CSS = adjectives, JS = verbs."
+   },
+   {
+    "h": "HTML: tags and elements",
+    "body": "HTML marks up content with tags in angle brackets. Most come in pairs: <p>Hello</p> is a paragraph element. Common tags: <h1> heading, <p> paragraph, <a> link, <img> image, <div> a generic container."
+   },
+   {
+    "h": "CSS: selectors and rules",
+    "body": "CSS styles HTML by selecting elements and setting properties: p { color: blue; font-size: 16px; } makes all paragraphs blue. You can select by tag, by class (.button), or by id (#header)."
+   },
+   {
+    "h": "JavaScript on a page",
+    "body": "JavaScript makes pages interactive — responding to clicks, changing content, validating forms. It can find elements and change them: document.getElementById('msg').textContent = 'Hi'. It runs right in the browser."
+   },
+   {
+    "h": "How a browser builds a page",
+    "body": "When you open a page, the browser reads the HTML top to bottom, applies the CSS to style it, and runs the JavaScript to make it interactive. Together they turn text files into the page you see and use."
+   }
+  ],
+  "flash": [
+   [
+    "HTML",
+    "The language for a web page's structure and content."
+   ],
+   [
+    "CSS",
+    "The language for a web page's style (color, layout, fonts)."
+   ],
+   [
+    "JavaScript",
+    "The language for a web page's behavior and interactivity."
+   ],
+   [
+    "Tag",
+    "HTML markup in angle brackets, like <p> or <h1>."
+   ],
+   [
+    "Element",
+    "An HTML tag plus its content, like <p>Hi</p>."
+   ],
+   [
+    "Selector",
+    "The part of a CSS rule that picks which elements to style."
+   ],
+   [
+    "Class",
+    "A reusable label on elements, selected in CSS with a dot (.button)."
+   ],
+   [
+    "Browser",
+    "The program that reads HTML/CSS/JS and shows the page."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Which language controls a web page's structure?",
+    "options": [
+     "HTML",
+     "CSS",
+     "JavaScript",
+     "Python"
+    ],
+    "a": 0,
+    "why": "HTML provides the content and skeleton of the page."
+   },
+   {
+    "q": "Which language styles colors and layout?",
+    "options": [
+     "CSS",
+     "HTML",
+     "JavaScript",
+     "SQL"
+    ],
+    "a": 0,
+    "why": "CSS handles the look — colors, fonts, spacing, layout."
+   },
+   {
+    "q": "Which makes a page interactive (respond to clicks)?",
+    "options": [
+     "JavaScript",
+     "HTML",
+     "CSS",
+     "JSON"
+    ],
+    "a": 0,
+    "why": "JavaScript adds behavior and interactivity."
+   },
+   {
+    "q": "<p>Hello</p> is an example of a(n):",
+    "options": [
+     "HTML element",
+     "CSS rule",
+     "JS function",
+     "Image file"
+    ],
+    "a": 0,
+    "why": "A tag pair plus its content is an HTML element."
+   },
+   {
+    "q": "In CSS, '.button' selects elements by their:",
+    "options": [
+     "Class",
+     "Tag",
+     "Id",
+     "Color"
+    ],
+    "a": 0,
+    "why": "A leading dot selects by class name."
+   },
+   {
+    "q": "A browser reads the languages in roughly this order:",
+    "options": [
+     "HTML, then CSS, then JavaScript",
+     "JavaScript first",
+     "CSS first",
+     "Random order"
+    ],
+    "a": 0,
+    "why": "It builds structure (HTML), styles it (CSS), then runs behavior (JS)."
+   }
+  ]
+ },
+ "english-writing-composition": {
+  "title": "Writing & Composition",
+  "subject": "English & Language Arts",
+  "level": "Grades 6-12",
+  "intro": "Good writing is clear thinking on paper. It's less about talent and more about process — getting ideas down, then shaping them so a reader follows you easily.",
+  "cards": [
+   {
+    "h": "The writing process",
+    "body": "Strong writing happens in stages: prewrite (brainstorm and plan), draft (get it all down without judging), revise (reshape ideas and structure), and edit (fix grammar and wording). Trying to do all at once is why writing feels hard — separate the stages."
+   },
+   {
+    "h": "Paragraph structure",
+    "body": "A paragraph covers one main idea. It usually opens with a topic sentence that states that idea, follows with sentences that explain or give evidence, and the next paragraph starts when the idea changes."
+   },
+   {
+    "h": "The thesis statement",
+    "body": "In an essay, the thesis is one sentence stating your main point or argument, usually near the end of the introduction. Everything after it should support that one claim. A clear thesis keeps the whole piece focused."
+   },
+   {
+    "h": "Show, don't just tell",
+    "body": "Instead of stating a conclusion flatly ('the room was messy'), give the detail that proves it ('clothes covered the floor and dishes crusted on the desk'). Specific, concrete details make writing vivid and believable."
+   },
+   {
+    "h": "Revising and proofreading",
+    "body": "Revising is big-picture (Is it clear? Organized? Does each part support the point?). Proofreading is last — catching spelling, grammar, and typos. Reading your work aloud catches awkward sentences your eyes skip over."
+   }
+  ],
+  "flash": [
+   [
+    "Prewriting",
+    "Brainstorming and planning before you draft."
+   ],
+   [
+    "Draft",
+    "A first full version, written without stopping to perfect it."
+   ],
+   [
+    "Revising",
+    "Reworking ideas, organization, and clarity (big picture)."
+   ],
+   [
+    "Proofreading",
+    "The final check for spelling, grammar, and typos."
+   ],
+   [
+    "Topic sentence",
+    "The sentence stating a paragraph's main idea."
+   ],
+   [
+    "Thesis statement",
+    "One sentence stating an essay's main point."
+   ],
+   [
+    "Show, don't tell",
+    "Use concrete detail instead of flat statements."
+   ],
+   [
+    "Audience",
+    "Who you're writing for — it shapes word choice and tone."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Which is the correct order of the writing process?",
+    "options": [
+     "Prewrite, draft, revise, edit",
+     "Edit, draft, prewrite, revise",
+     "Draft, edit, prewrite",
+     "Revise, prewrite, draft"
+    ],
+    "a": 0,
+    "why": "Plan, get it down, reshape, then polish."
+   },
+   {
+    "q": "A topic sentence states:",
+    "options": [
+     "A paragraph's main idea",
+     "The essay's title",
+     "A grammar rule",
+     "The conclusion only"
+    ],
+    "a": 0,
+    "why": "It tells the reader what the paragraph is about."
+   },
+   {
+    "q": "A thesis statement is:",
+    "options": [
+     "One sentence giving the essay's main point",
+     "The first word",
+     "A list of sources",
+     "A random fact"
+    ],
+    "a": 0,
+    "why": "It states the central claim the essay supports."
+   },
+   {
+    "q": "'Clothes covered the floor' instead of 'the room was messy' is an example of:",
+    "options": [
+     "Show, don't tell",
+     "A thesis",
+     "Proofreading",
+     "A topic sentence"
+    ],
+    "a": 0,
+    "why": "Concrete detail shows the point rather than just stating it."
+   },
+   {
+    "q": "Proofreading mainly catches:",
+    "options": [
+     "Spelling and grammar errors",
+     "Weak organization",
+     "A missing thesis",
+     "Unclear ideas"
+    ],
+    "a": 0,
+    "why": "Proofreading is the final surface-level polish; revising handles the big picture."
+   },
+   {
+    "q": "A good trick for catching awkward sentences is to:",
+    "options": [
+     "Read it aloud",
+     "Write faster",
+     "Skip editing",
+     "Use longer words"
+    ],
+    "a": 0,
+    "why": "Reading aloud reveals clunky phrasing your eyes skim past."
+   }
+  ]
+ },
+ "social-civics-government": {
+  "title": "Civics & Government",
+  "subject": "Social Studies",
+  "level": "Grades 9-12",
+  "intro": "Civics is how your government works and what your role in it is. Understanding the basics — the branches, your rights, and how decisions get made — lets you take part instead of just being affected.",
+  "cards": [
+   {
+    "h": "The three branches",
+    "body": "The U.S. federal government has three branches: the Legislative (Congress) makes laws, the Executive (the President) carries them out, and the Judicial (the courts) interprets them. Splitting power keeps any one part from controlling everything."
+   },
+   {
+    "h": "Checks and balances",
+    "body": "Each branch can limit the others. Congress passes laws, but the President can veto them, and the courts can rule them unconstitutional. This balance is designed to prevent abuse of power."
+   },
+   {
+    "h": "Federal vs. state",
+    "body": "Power is also split between the national (federal) government and the states. The federal government handles things like the military and money; states handle things like driver's licenses, most schools, and local laws. Some powers they share."
+   },
+   {
+    "h": "Your rights",
+    "body": "The Bill of Rights (the first 10 amendments to the Constitution) protects key freedoms — speech, religion, press, assembly, the right to a fair trial, and protection from unreasonable searches. Knowing them is the first step to using them."
+   },
+   {
+    "h": "How a bill becomes law",
+    "body": "A bill is proposed in Congress, debated and voted on in both the House and the Senate, and if both pass it, it goes to the President to sign into law (or veto). Citizens influence this by voting and contacting representatives."
+   }
+  ],
+  "flash": [
+   [
+    "Legislative branch",
+    "Congress — makes the laws."
+   ],
+   [
+    "Executive branch",
+    "The President — carries out the laws."
+   ],
+   [
+    "Judicial branch",
+    "The courts — interpret the laws."
+   ],
+   [
+    "Checks and balances",
+    "Each branch can limit the powers of the others."
+   ],
+   [
+    "Veto",
+    "The President's power to reject a bill from Congress."
+   ],
+   [
+    "Federalism",
+    "Division of power between national and state governments."
+   ],
+   [
+    "Bill of Rights",
+    "The first 10 amendments protecting basic freedoms."
+   ],
+   [
+    "Amendment",
+    "A formal change or addition to the Constitution."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Which branch makes laws?",
+    "options": [
+     "Legislative (Congress)",
+     "Executive",
+     "Judicial",
+     "State"
+    ],
+    "a": 0,
+    "why": "Congress, the legislative branch, writes and passes laws."
+   },
+   {
+    "q": "The President's power to reject a bill is called a:",
+    "options": [
+     "Veto",
+     "Filibuster",
+     "Ruling",
+     "Pardon"
+    ],
+    "a": 0,
+    "why": "A veto rejects a bill passed by Congress."
+   },
+   {
+    "q": "The first 10 amendments to the Constitution are the:",
+    "options": [
+     "Bill of Rights",
+     "Articles",
+     "Preamble",
+     "Declaration"
+    ],
+    "a": 0,
+    "why": "They protect fundamental freedoms and are called the Bill of Rights."
+   },
+   {
+    "q": "Which is usually a STATE responsibility?",
+    "options": [
+     "Driver's licenses",
+     "The military",
+     "Printing money",
+     "Foreign treaties"
+    ],
+    "a": 0,
+    "why": "States handle licenses, most schools, and local matters; the federal government handles the military and currency."
+   },
+   {
+    "q": "Checks and balances exist to:",
+    "options": [
+     "Prevent any one branch from gaining too much power",
+     "Speed up laws",
+     "Give the President full control",
+     "Remove the courts"
+    ],
+    "a": 0,
+    "why": "They let each branch limit the others to prevent abuse."
+   },
+   {
+    "q": "After both houses of Congress pass a bill, it goes to the:",
+    "options": [
+     "President",
+     "Supreme Court",
+     "Governor",
+     "Voters"
+    ],
+    "a": 0,
+    "why": "The President signs it into law or vetoes it."
+   }
+  ]
+ },
+ "survival-water-food": {
+  "title": "Water & Food",
+  "subject": "Survival & Preparedness",
+  "level": "All levels",
+  "disclaimer": "General outdoor-safety information. When in doubt about water or wild food, don't risk it.",
+  "intro": "After shelter and warmth, water is your next priority — you can only last a few days without it. Food matters far less in the short term. Knowing how to find water and make it safe is a core survival skill.",
+  "cards": [
+   {
+    "h": "Water is the priority after shelter",
+    "body": "You can survive weeks without food but only about 3 days without water, less in heat. Once you're sheltered and warm, finding and treating water is the next job — long before you worry about food."
+   },
+   {
+    "h": "Finding water",
+    "body": "Look downhill and in low spots, toward green vegetation, and listen for running water. Rainwater and morning dew are cleaner sources. Avoid stagnant water with algae or a bad smell if you have a choice."
+   },
+   {
+    "h": "Making water safe",
+    "body": "Clear-looking water can still carry germs that make you very sick. Make it safe by boiling (a rolling boil for 1 minute is the most reliable), using a water filter, or chemical purification (tablets or a few drops of unscented bleach). Boiling is the gold standard."
+   },
+   {
+    "h": "Signs of dehydration",
+    "body": "Watch for thirst, dark urine, headache, dizziness, and fatigue. Sip steadily rather than gulping, and don't wait until you feel terrible. Ration sweat, not water — rest in the heat of the day instead of drinking too little."
+   },
+   {
+    "h": "Food: caution first",
+    "body": "Food is a low short-term priority, and the biggest danger is eating something poisonous. Never eat a wild plant or mushroom you can't identify with certainty — a mistake can be deadly. Focus energy on water, shelter, and signaling instead."
+   }
+  ],
+  "flash": [
+   [
+    "Water priority",
+    "After shelter, water is the next survival need (~3 days without)."
+   ],
+   [
+    "Potable water",
+    "Water that is safe to drink."
+   ],
+   [
+    "Boiling",
+    "The most reliable way to make water safe (1-minute rolling boil)."
+   ],
+   [
+    "Water filter",
+    "A device that removes germs/particles from water."
+   ],
+   [
+    "Purification",
+    "Making water safe with chemicals (tablets or bleach)."
+   ],
+   [
+    "Dehydration",
+    "Harmful loss of body water; signs include dark urine and dizziness."
+   ],
+   [
+    "'Ration sweat, not water'",
+    "Avoid overexertion/heat rather than drinking too little."
+   ],
+   [
+    "Wild food caution",
+    "Never eat a plant or mushroom you can't identify for sure."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "After shelter and warmth, your next priority is usually:",
+    "options": [
+     "Water",
+     "Food",
+     "A signal fire",
+     "A weapon"
+    ],
+    "a": 0,
+    "why": "You can last weeks without food but only days without water."
+   },
+   {
+    "q": "The most reliable way to make water safe is to:",
+    "options": [
+     "Boil it (1-minute rolling boil)",
+     "Let it sit",
+     "Add sugar",
+     "Freeze it"
+    ],
+    "a": 0,
+    "why": "Boiling kills germs reliably; filtering and purification tablets also work."
+   },
+   {
+    "q": "A sign of dehydration is:",
+    "options": [
+     "Dark urine and dizziness",
+     "Clear urine",
+     "Feeling full",
+     "Sweating less on purpose being safe"
+    ],
+    "a": 0,
+    "why": "Dark urine, headache, and dizziness signal you need water."
+   },
+   {
+    "q": "Clear-looking stream water:",
+    "options": [
+     "Can still carry germs — treat it",
+     "Is always safe",
+     "Never needs boiling",
+     "Is safe if cold"
+    ],
+    "a": 0,
+    "why": "Clear water can still contain harmful microbes; always treat it."
+   },
+   {
+    "q": "With wild plants and mushrooms, the rule is:",
+    "options": [
+     "Never eat what you can't identify for sure",
+     "Taste a little first",
+     "If it smells fine, eat it",
+     "Berries are always safe"
+    ],
+    "a": 0,
+    "why": "Misidentifying wild food can be fatal; when unsure, don't eat it."
+   },
+   {
+    "q": "Roughly how long can a person survive without water?",
+    "options": [
+     "About 3 days",
+     "About 3 weeks",
+     "About 3 hours",
+     "About 3 months"
+    ],
+    "a": 0,
+    "why": "Around 3 days (less in heat) — far shorter than without food."
+   }
+  ]
  }
 };
