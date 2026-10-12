@@ -6795,130 +6795,282 @@ window.LAB404_CONTENT = {
  "writing-creative-writing": {
   "title": "Creative Writing",
   "subject": "Writing & Journalism",
-  "level": "All levels",
-  "intro": "Creative writing is making something up and telling it well — stories, characters, worlds. The craft behind it can be learned: strong characters, real conflict, scenes that show rather than tell.",
-  "cards": [
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand what creative writing is",
+   "Understand the elements of fiction",
+   "Use 'show, don't tell' and vivid detail",
+   "Write dialogue and scenes",
+   "Develop a writing practice"
+  ],
+  "intro": "Creative writing is writing that uses imagination and artistry to tell stories, evoke emotion, and create experiences — fiction, poetry, scripts, and more. It's a craft anyone can learn and improve at. This lesson covers the core elements of creative (especially fiction) writing and how to practice.",
+  "sections": [
    {
-    "h": "Story = character + want + obstacle",
-    "body": "At its core, a story is a character who wants something and faces obstacles getting it. No want, no story. The want can be big (survive) or small (ask someone out); the obstacles create the tension that keeps readers turning pages."
+    "h": "What creative writing is",
+    "body": "Creative writing is any writing that goes beyond plain information to create an artistic experience — it's the writing of stories, novels, poems, plays, and personal essays, aiming to entertain, move, provoke thought, or capture something true about life. Unlike a report (which conveys facts), creative writing uses imagination, voice, and craft to make readers feel and experience something.\n\nA common myth is that creative writing is pure inspiration — a gift you either have or don't. In reality it's a craft with learnable techniques (character, structure, scene, dialogue, imagery), and skilled writers improve through practice and study like any other discipline. Inspiration helps, but craft and persistence do most of the work. Whether you want to write a novel, short stories, or just express yourself, the fundamentals are learnable, and this lesson covers the most important ones.",
+    "tip": "Creative writing crafts an artistic experience (stories, poems, scripts). It's a learnable CRAFT (character, scene, dialogue) — not just inspiration you're born with."
+   },
+   {
+    "h": "The elements of fiction",
+    "body": "Most storytelling is built from a few key elements. Character: the people in your story — making them feel real, with clear wants (motivation) and flaws, is often the single most important craft. Plot: what happens — the sequence of events, usually driven by a central conflict (a problem or struggle the character faces). Setting: the time and place, which grounds the story and shapes its mood.\n\nPoint of view (POV): who tells the story (first person 'I,' or third person 'he/she/they') — a crucial choice that shapes everything the reader knows and feels. And theme: the deeper meaning or idea underneath the events. A good story weaves these together: interesting characters pursuing meaningful goals against real obstacles, in a vivid world, told from an effective POV. Mastering these elements is the foundation of writing fiction that works.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"The core craft elements of fiction\"><rect x=\"8\" y=\"5\" width=\"100\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"5\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Character</text><text x=\"114\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">wants + flaws (the key)</text><rect x=\"8\" y=\"27\" width=\"100\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"27\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Plot</text><text x=\"114\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">events driven by conflict</text><rect x=\"8\" y=\"49\" width=\"100\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"49\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Setting</text><text x=\"114\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">time and place (mood)</text><rect x=\"8\" y=\"71\" width=\"100\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"71\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Point of view</text><text x=\"114\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">who tells it (I / he/she)</text><rect x=\"8\" y=\"93\" width=\"100\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"93\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Theme</text><text x=\"114\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">the deeper meaning</text></svg>",
+    "caption": "The craft elements of fiction — character (with wants and flaws) is often the most important.",
+    "tip": "Fiction elements: character (wants + flaws — the key), plot (events driven by conflict), setting, point of view, and theme. Weave them together."
    },
    {
     "h": "Show, don't tell",
-    "body": "Instead of telling the reader an emotion ('she was nervous'), show it through action and detail ('she checked the door three times and couldn't finish her coffee'). Showing pulls readers into the scene; telling keeps them at arm's length."
+    "body": "The most famous piece of creative-writing advice is 'show, don't tell' — and it's foundational. 'Telling' states something flatly ('She was angry'); 'showing' dramatizes it so the reader experiences it ('She slammed the door and her jaw tightened'). Showing uses specific action, sensory detail, and concrete imagery to let readers feel and conclude for themselves, which is far more immersive than being told.\n\nThis connects to using vivid, specific detail: 'a dog' is forgettable; 'a limping three-legged terrier' is vivid. Concrete, sensory writing (what characters see, hear, smell, feel) pulls readers into the experience. You don't show everything (sometimes a quick 'tell' efficiently moves things along), but for the emotional, important moments, showing through specific detail and action is what makes writing come alive. It's the difference between reading about an experience and feeling like you're in it.",
+    "example": "Telling: 'She was nervous.'  Showing: 'Her hands wouldn't stay still, and she read the same line three times.'",
+    "tip": "'Show, don't tell': dramatize with specific action and sensory detail rather than stating it flatly. Concrete, vivid detail pulls readers in."
    },
    {
-    "h": "Scenes and conflict",
-    "body": "Build your story in scenes — a character doing something in a place, in real time. Every scene should have a bit of conflict or change, or it's just filler. If nothing shifts in a scene, cut it or combine it."
+    "h": "Dialogue and scenes",
+    "body": "Two tools bring stories to life. Dialogue — what characters say — reveals personality, advances the plot, and creates immediacy. Good dialogue sounds natural (but is tighter than real speech, cutting the boring parts), each character has a distinct voice, and it does double duty (revealing character or tension while conveying information). Avoid using dialogue just to dump information unnaturally.\n\nScenes are the building blocks of stories — units of continuous action in a specific time and place, where things happen and change. A strong scene has a purpose (it moves the story or reveals something), often involves a goal and an obstacle or conflict, and ends with some change (a question raised, a situation shifted) that pulls the reader onward. Thinking in scenes — rather than just summarizing — keeps a story dramatic and engaging. Most memorable fiction unfolds through vivid scenes with meaningful dialogue.",
+    "tip": "Dialogue reveals character + advances plot (natural but tighter than real speech). Build stories in SCENES — purposeful units where something changes."
    },
    {
-    "h": "Dialogue that works",
-    "body": "Good dialogue sounds natural but is tighter than real speech — cut the 'ums' and small talk. It should reveal character and move the story, not just relay information. Read it aloud; if it sounds stiff, loosen it."
+    "h": "Developing a writing practice",
+    "body": "Becoming a better writer comes down to two things: writing a lot and reading a lot. Write regularly (even a little daily builds the habit and skill), and finish things — completing a rough draft teaches more than endlessly polishing a first page. Expect your early drafts to be bad; 'all first drafts are terrible' is a professional truth, and the real craft is in revision. Write badly first, then fix it.\n\nRead widely and actively, noticing how writers you admire create effects (how they build a character, pace a scene, write dialogue). Get feedback from readers and be open to it. And be patient: writing is a craft you develop over years, with steady improvement for anyone who keeps at it. Don't wait for inspiration or the perfect idea — start writing, finish drafts, revise, and keep going. Persistence and practice, more than talent, make writers.",
+    "tip": "Write a lot (finish drafts — they're meant to be rough), read actively, seek feedback, and revise. Persistence beats waiting for inspiration or talent."
+   }
+  ],
+  "cards": [
+   {
+    "h": "What it is",
+    "body": "Writing that crafts an artistic experience (stories, poems). A learnable craft, not just inborn inspiration."
    },
    {
-    "h": "Write badly first, then revise",
-    "body": "First drafts are supposed to be rough — the goal is to get the story down. The real writing happens in revision: cutting the dull parts, sharpening scenes, fixing what's confusing. Give yourself permission to write a messy first draft."
+    "h": "Fiction elements",
+    "body": "Character (wants + flaws — key), plot (conflict-driven), setting, point of view, theme."
+   },
+   {
+    "h": "Show, don't tell",
+    "body": "Dramatize with specific action/sensory detail instead of stating it. Vivid, concrete detail immerses readers."
+   },
+   {
+    "h": "Dialogue & scenes",
+    "body": "Dialogue reveals character + advances plot. Build stories in purposeful scenes where something changes."
+   },
+   {
+    "h": "Practice",
+    "body": "Write a lot (finish rough drafts), read actively, get feedback, revise. Persistence beats talent."
    }
   ],
   "flash": [
    [
-    "Protagonist",
-    "The main character whose want drives the story."
+    "Creative writing",
+    "Imaginative writing that crafts an artistic experience."
    ],
    [
-    "Conflict",
-    "The obstacle between a character and what they want."
-   ],
-   [
-    "Show, don't tell",
-    "Convey through action and detail, not flat statements."
-   ],
-   [
-    "Scene",
-    "A unit of story: a character acting in a place, in real time."
-   ],
-   [
-    "Dialogue",
-    "Characters' spoken words — tighter than real speech."
+    "Character",
+    "A person in the story (with wants and flaws)."
    ],
    [
     "Plot",
-    "The sequence of events, driven by cause and effect."
+    "The sequence of events in a story."
+   ],
+   [
+    "Conflict",
+    "The central struggle driving the plot."
+   ],
+   [
+    "Setting",
+    "The time and place of a story."
+   ],
+   [
+    "Point of view",
+    "Who narrates (first or third person)."
    ],
    [
     "Theme",
-    "The underlying idea a story explores."
+    "The deeper meaning beneath the events."
+   ],
+   [
+    "Show, don't tell",
+    "Dramatizing with detail vs stating flatly."
+   ],
+   [
+    "Imagery",
+    "Vivid, sensory, descriptive language."
+   ],
+   [
+    "Dialogue",
+    "What characters say to each other."
+   ],
+   [
+    "Scene",
+    "A unit of continuous action where something changes."
    ],
    [
     "Revision",
-    "Reworking a draft — where most real writing happens."
+    "Rewriting and improving a draft."
    ]
   ],
   "quiz": [
    {
-    "q": "At its core, a story needs a character who:",
+    "q": "Creative writing aims mainly to:",
     "options": [
-     "Wants something and faces obstacles",
-     "Is perfectly happy",
-     "Does nothing",
-     "Only narrates"
+     "Create an artistic experience",
+     "Convey only facts",
+     "List data",
+     "Sell products"
     ],
     "a": 0,
-    "why": "Want + obstacle creates the conflict that makes a story."
+    "why": "Stories, poems, scripts that move readers."
    },
    {
-    "q": "'She checked the door three times' instead of 'she was nervous' is:",
+    "q": "Is creative writing pure inborn inspiration?",
+    "options": [
+     "No — it's a learnable craft",
+     "Yes, you have it or you don't",
+     "Only for geniuses",
+     "Impossible to learn"
+    ],
+    "a": 0,
+    "why": "Techniques improve with practice."
+   },
+   {
+    "q": "Often the single most important craft element is:",
+    "options": [
+     "Character (with wants and flaws)",
+     "The font",
+     "The page count",
+     "The title"
+    ],
+    "a": 0,
+    "why": "Real characters with motivations drive stories."
+   },
+   {
+    "q": "What usually drives a plot?",
+    "options": [
+     "Conflict",
+     "A happy mood",
+     "The weather",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "A central struggle moves events forward."
+   },
+   {
+    "q": "Point of view is:",
+    "options": [
+     "Who tells the story",
+     "The theme",
+     "The setting",
+     "The ending"
+    ],
+    "a": 0,
+    "why": "First or third person shapes what readers know."
+   },
+   {
+    "q": "'She slammed the door, jaw tight' instead of 'She was angry' is:",
     "options": [
      "Showing, not telling",
-     "Telling",
-     "A theme",
+     "Telling, not showing",
+     "A summary",
      "Dialogue"
     ],
     "a": 0,
-    "why": "Concrete action shows the emotion rather than stating it."
+    "why": "Dramatizing with action lets readers feel it."
    },
    {
-    "q": "Every scene should contain:",
+    "q": "Which detail is more vivid?",
     "options": [
-     "Some conflict or change",
-     "Only description",
-     "No characters",
-     "A summary"
+     "A limping three-legged terrier",
+     "A dog",
+     "An animal",
+     "A pet"
     ],
     "a": 0,
-    "why": "A scene without change or tension is filler."
+    "why": "Specific, concrete detail is memorable."
    },
    {
     "q": "Good dialogue is:",
     "options": [
-     "Tighter than real speech",
-     "Exactly like real speech",
-     "Only small talk",
-     "All description"
+     "Natural but tighter than real speech",
+     "A word-for-word transcript",
+     "Only for information dumps",
+     "All the same voice"
     ],
     "a": 0,
-    "why": "Trim the filler; dialogue should reveal character and move the story."
+    "why": "It reveals character and advances plot."
    },
    {
-    "q": "A first draft should be:",
+    "q": "A scene is:",
     "options": [
-     "Rough — just get it down",
+     "A unit of action where something changes",
+     "A summary",
+     "A list",
+     "A title"
+    ],
+    "a": 0,
+    "why": "Scenes have purpose and lead the reader onward."
+   },
+   {
+    "q": "A strong scene usually ends with:",
+    "options": [
+     "Some change that pulls the reader onward",
+     "Nothing happening",
+     "A full stop to the story",
+     "A random fact"
+    ],
+    "a": 0,
+    "why": "A shift or question keeps momentum."
+   },
+   {
+    "q": "To improve at writing, you should:",
+    "options": [
+     "Write a lot AND read a lot",
+     "Only wait for inspiration",
+     "Never finish drafts",
+     "Avoid feedback"
+    ],
+    "a": 0,
+    "why": "Both writing and reading build skill."
+   },
+   {
+    "q": "First drafts are generally:",
+    "options": [
+     "Rough (that's normal)",
      "Perfect",
-     "Never revised",
-     "Only an outline"
+     "A waste",
+     "Final"
     ],
     "a": 0,
-    "why": "Get the story down first; the craft comes in revision."
+    "why": "The craft is in revision."
    },
    {
-    "q": "Most real writing happens during:",
+    "q": "Reading like a writer means:",
     "options": [
-     "Revision",
-     "The first sentence",
-     "Brainstorming only",
-     "Reading"
+     "Noticing HOW effects are created",
+     "Reading nothing",
+     "Skimming only",
+     "Memorizing plots"
     ],
     "a": 0,
-    "why": "Revising — cutting and sharpening — is where drafts become good."
+    "why": "Study the techniques you admire."
+   },
+   {
+    "q": "What makes writers, more than talent?",
+    "options": [
+     "Persistence and practice",
+     "Luck",
+     "A fancy laptop",
+     "Inspiration alone"
+    ],
+    "a": 0,
+    "why": "Steady work develops the craft."
+   },
+   {
+    "q": "You should build stories through:",
+    "options": [
+     "Vivid scenes (not just summary)",
+     "Pure summary",
+     "Only dialogue",
+     "Only description"
+    ],
+    "a": 0,
+    "why": "Scenes keep a story dramatic and engaging."
    }
   ]
  },
@@ -26832,6 +26984,1412 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Programs exist to help obtain one."
+   }
+  ]
+ },
+ "writing-essays-reports": {
+  "title": "Essays & Reports",
+  "subject": "Writing & Journalism",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand academic and professional writing",
+   "Structure an essay (thesis, body, conclusion)",
+   "Write clear paragraphs with support",
+   "Research and cite sources",
+   "Edit and format properly"
+  ],
+  "intro": "Essays and reports are the structured, factual writing you'll do throughout school and work — arguing a point, explaining a topic, or presenting findings clearly. Mastering their structure makes you a more effective communicator. This lesson covers how to write clear, well-organized essays and reports.",
+  "sections": [
+   {
+    "h": "What essays and reports are",
+    "body": "Essays and reports are forms of nonfiction writing that inform, explain, analyze, or argue — the opposite of creative writing's artistic goals. An essay typically develops and supports a central idea or argument (common in school). A report presents information or findings, often more formally and factually (common at work — a status report, a research report, a business proposal). Both value clarity, organization, and evidence over style flourishes.\n\nThe purpose is to communicate ideas and information clearly and persuasively. Unlike creative writing, the goal isn't to entertain but to be understood and to make your point convincingly. This means structure matters enormously: a well-organized essay or report guides the reader logically from point to point. Learning to organize your thinking into clear written structure is one of the most valuable and transferable skills there is, useful in virtually every field.",
+    "tip": "Essays/reports inform, explain, or argue (not entertain). They prize clarity, organization, and evidence. Structuring your thinking clearly is the key skill."
+   },
+   {
+    "h": "The structure of an essay",
+    "body": "A classic essay has three parts. The introduction sets up the topic, grabs attention (a 'hook'), and states the thesis — the one clear sentence expressing your main argument or point, which the whole essay supports. The body is several paragraphs, each developing one supporting point with evidence and explanation, in a logical order. The conclusion restates the main point (in fresh words), summarizes, and leaves the reader with a final thought.\n\nThe five-paragraph essay (intro + three body paragraphs + conclusion) is a reliable template for beginners, and the same logic scales to any length. The thesis is the heart: everything in the essay should support it, and if a paragraph doesn't, it doesn't belong. A clear structure — tell them what you'll say, say it with support, remind them what you said — makes your writing easy to follow and your argument convincing.",
+    "visual": "<svg viewBox=\"0 0 250 176\" width=\"240\" role=\"img\" aria-label=\"Essay structure: an introduction with a thesis, three body paragraphs with evidence, and a conclusion\"><rect x=\"18\" y=\"8\" width=\"214\" height=\"25\" rx=\"5\" fill=\"rgba(107,122,152,.22)\" stroke=\"#6b7a98\" stroke-width=\"1.3\"/><text x=\"125\" y=\"24\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9.5\">Introduction — hook + THESIS</text><polygon points=\"121,34 129,34 125,40\" fill=\"#6b7a98\"/><rect x=\"18\" y=\"41\" width=\"214\" height=\"25\" rx=\"5\" fill=\"rgba(57,227,200,.14)\" stroke=\"#39e3c8\" stroke-width=\"1.3\"/><text x=\"125\" y=\"57\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9.5\">Body ¶1 — point + evidence</text><polygon points=\"121,67 129,67 125,73\" fill=\"#6b7a98\"/><rect x=\"18\" y=\"74\" width=\"214\" height=\"25\" rx=\"5\" fill=\"rgba(57,227,200,.14)\" stroke=\"#39e3c8\" stroke-width=\"1.3\"/><text x=\"125\" y=\"90\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9.5\">Body ¶2 — point + evidence</text><polygon points=\"121,100 129,100 125,106\" fill=\"#6b7a98\"/><rect x=\"18\" y=\"107\" width=\"214\" height=\"25\" rx=\"5\" fill=\"rgba(57,227,200,.14)\" stroke=\"#39e3c8\" stroke-width=\"1.3\"/><text x=\"125\" y=\"123\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9.5\">Body ¶3 — point + evidence</text><polygon points=\"121,133 129,133 125,139\" fill=\"#6b7a98\"/><rect x=\"18\" y=\"140\" width=\"214\" height=\"25\" rx=\"5\" fill=\"rgba(107,122,152,.22)\" stroke=\"#6b7a98\" stroke-width=\"1.3\"/><text x=\"125\" y=\"156\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9.5\">Conclusion — restate + close</text></svg>",
+    "caption": "The classic essay structure — intro (with thesis), body paragraphs with evidence, and a conclusion.",
+    "tip": "Essay = introduction (hook + thesis) + body paragraphs (one point each, with evidence) + conclusion. Everything supports the thesis."
+   },
+   {
+    "h": "Strong paragraphs and support",
+    "body": "Within the structure, strong paragraphs do the work. Each body paragraph should focus on one main idea, usually stated in a topic sentence, then developed with supporting details: facts, examples, evidence, quotes, or reasoning that back up the point. A paragraph that makes a claim without support isn't convincing; a paragraph with vague support is weak. Specific, relevant evidence is what makes writing credible.\n\nGood paragraphs also connect to each other with transitions (words like 'however,' 'therefore,' 'in addition') and a logical flow, so the reader moves smoothly from one idea to the next. The overall move within and between paragraphs is: make a claim, support it with evidence, and explain how the evidence proves the point. This claim-evidence-explanation pattern is the engine of all persuasive and analytical writing, from a school essay to a work report.",
+    "tip": "Each paragraph: one main idea (topic sentence) + specific support (evidence/examples) + explanation. Connect with transitions. Claim → evidence → explain."
+   },
+   {
+    "h": "Research and citing sources",
+    "body": "Many essays and reports require research — gathering information and evidence from credible sources. Use reliable sources (reputable publications, experts, official data) rather than random websites, and evaluate them critically (who wrote it, is it credible and current?). Take organized notes, and track where each fact came from so you can cite it.\n\nCiting sources — giving credit to where information came from — is essential for two reasons: it lets readers verify your claims and adds credibility, and it avoids plagiarism (presenting someone else's work or ideas as your own, which is a serious academic and professional offense). There are citation styles (MLA, APA, Chicago) that specify the format; use whichever is required. The principle is simple: whenever you use someone else's words, ideas, or data, credit the source. Good research and honest citation separate credible writing from mere opinion.",
+    "tip": "Use credible sources, take organized notes, and CITE where facts come from (verifiability + credibility + avoids plagiarism). Use the required style (MLA/APA)."
+   },
+   {
+    "h": "Editing and formatting",
+    "body": "A first draft is never the final product — editing is where good writing is made. Revise in two passes. First, 'big picture' revision: is the thesis clear? Is every paragraph on point and in logical order? Is anything missing, repeated, or unsupported? Cut what doesn't serve the argument. Then edit for correctness: grammar, spelling, punctuation, and word choice — reading aloud catches awkward sentences.\n\nFormatting also matters, especially for school and work: follow any required format (margins, font, spacing, headings, a title, citations), use clear headings in longer reports, and make the document clean and professional. A well-formatted, carefully edited essay or report signals competence and respect for the reader; a sloppy one undermines even good ideas. Give yourself time to revise (don't write it all the night before), and the quality jumps dramatically. Writing is rewriting.",
+    "tip": "Revise big-picture first (clear thesis? logical? supported?), then edit for correctness (read aloud). Follow required formatting. Writing is rewriting — leave time."
+   }
+  ],
+  "cards": [
+   {
+    "h": "What they are",
+    "body": "Nonfiction that informs/explains/argues. Prize clarity, organization, evidence. Structure is the key skill."
+   },
+   {
+    "h": "Essay structure",
+    "body": "Intro (hook + thesis) + body paragraphs (one point + evidence each) + conclusion. All support the thesis."
+   },
+   {
+    "h": "Strong paragraphs",
+    "body": "One idea (topic sentence) + specific support + explanation; connect with transitions. Claim → evidence → explain."
+   },
+   {
+    "h": "Research & citing",
+    "body": "Credible sources; cite where facts come from (verifiability, credibility, avoids plagiarism). Use MLA/APA."
+   },
+   {
+    "h": "Edit & format",
+    "body": "Revise big-picture, then for correctness (read aloud); follow formatting. Writing is rewriting."
+   }
+  ],
+  "flash": [
+   [
+    "Essay",
+    "Nonfiction developing and supporting a central idea."
+   ],
+   [
+    "Report",
+    "Writing presenting information or findings."
+   ],
+   [
+    "Thesis",
+    "The one sentence stating the main argument."
+   ],
+   [
+    "Introduction",
+    "The opening with a hook and the thesis."
+   ],
+   [
+    "Body paragraph",
+    "A paragraph developing one supporting point."
+   ],
+   [
+    "Topic sentence",
+    "The sentence stating a paragraph's main idea."
+   ],
+   [
+    "Evidence",
+    "Facts/examples that support a claim."
+   ],
+   [
+    "Transition",
+    "A word/phrase connecting ideas smoothly."
+   ],
+   [
+    "Conclusion",
+    "The closing that restates and wraps up."
+   ],
+   [
+    "Citation",
+    "Crediting a source of information."
+   ],
+   [
+    "Plagiarism",
+    "Passing off others' work as your own."
+   ],
+   [
+    "Revision",
+    "Reworking a draft to improve it."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Essays and reports mainly aim to:",
+    "options": [
+     "Inform, explain, or argue clearly",
+     "Entertain with stories",
+     "Rhyme",
+     "Sell products"
+    ],
+    "a": 0,
+    "why": "They prize clarity and evidence over art."
+   },
+   {
+    "q": "The one sentence stating an essay's main argument is the:",
+    "options": [
+     "Thesis",
+     "Topic sentence",
+     "Conclusion",
+     "Hook"
+    ],
+    "a": 0,
+    "why": "Everything in the essay supports it."
+   },
+   {
+    "q": "A classic essay has:",
+    "options": [
+     "Intro + body + conclusion",
+     "Only a body",
+     "No structure",
+     "Two theses"
+    ],
+    "a": 0,
+    "why": "Intro (thesis), body (support), conclusion."
+   },
+   {
+    "q": "If a paragraph doesn't support the thesis, it:",
+    "options": [
+     "Doesn't belong",
+     "Is the best part",
+     "Should be longer",
+     "Is the thesis"
+    ],
+    "a": 0,
+    "why": "Everything serves the central point."
+   },
+   {
+    "q": "Each body paragraph should focus on:",
+    "options": [
+     "One main idea",
+     "Many ideas",
+     "No idea",
+     "The whole essay"
+    ],
+    "a": 0,
+    "why": "Stated in a topic sentence, backed with support."
+   },
+   {
+    "q": "A claim without support is:",
+    "options": [
+     "Unconvincing",
+     "Strong",
+     "Complete",
+     "A thesis"
+    ],
+    "a": 0,
+    "why": "Specific evidence makes writing credible."
+   },
+   {
+    "q": "Words like 'however' and 'therefore' are:",
+    "options": [
+     "Transitions",
+     "Theses",
+     "Citations",
+     "Hooks"
+    ],
+    "a": 0,
+    "why": "They connect ideas smoothly."
+   },
+   {
+    "q": "The engine of persuasive writing is:",
+    "options": [
+     "Claim → evidence → explanation",
+     "Opinion only",
+     "Length",
+     "Big words"
+    ],
+    "a": 0,
+    "why": "Support and explain every point."
+   },
+   {
+    "q": "For research, you should use:",
+    "options": [
+     "Credible sources, evaluated critically",
+     "Any random website",
+     "No sources",
+     "Only one source"
+    ],
+    "a": 0,
+    "why": "Reputable, current, credible sources."
+   },
+   {
+    "q": "Citing sources helps by:",
+    "options": [
+     "Adding credibility and avoiding plagiarism",
+     "Hiding your sources",
+     "Making it longer",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "It lets readers verify and gives credit."
+   },
+   {
+    "q": "Passing off someone else's work as your own is:",
+    "options": [
+     "Plagiarism (a serious offense)",
+     "Citing",
+     "Research",
+     "Fine"
+    ],
+    "a": 0,
+    "why": "Always credit sources."
+   },
+   {
+    "q": "The first revision pass should focus on:",
+    "options": [
+     "Big picture (thesis, logic, support)",
+     "Only commas",
+     "Only spelling",
+     "The font"
+    ],
+    "a": 0,
+    "why": "Fix structure before correctness."
+   },
+   {
+    "q": "The best technique to catch awkward sentences is to:",
+    "options": [
+     "Read it aloud",
+     "Read it silently once",
+     "Skip editing",
+     "Ignore it"
+    ],
+    "a": 0,
+    "why": "Your ear catches what your eye misses."
+   },
+   {
+    "q": "Good formatting and careful editing signal:",
+    "options": [
+     "Competence and respect for the reader",
+     "Nothing",
+     "Laziness",
+     "Creativity only"
+    ],
+    "a": 0,
+    "why": "Sloppiness undermines good ideas."
+   },
+   {
+    "q": "The truth about writing is:",
+    "options": [
+     "Writing is rewriting (leave time)",
+     "First drafts are final",
+     "Editing is optional",
+     "Longer is better"
+    ],
+    "a": 0,
+    "why": "Quality comes from revision."
+   }
+  ]
+ },
+ "writing-grammar-style": {
+  "title": "Grammar & Style",
+  "subject": "Writing & Journalism",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand the difference between grammar and style",
+   "Write clearly and concisely",
+   "Use strong verbs and the active voice",
+   "Vary sentences and improve flow",
+   "Edit for style"
+  ],
+  "intro": "Beyond basic grammar rules, strong writing has style — clarity, concision, and flow that make it a pleasure to read. This lesson covers how to write not just correctly but well: clear, concise, and engaging. (Complements the foundational grammar in the English subject.)",
+  "sections": [
+   {
+    "h": "Grammar vs style",
+    "body": "Grammar is the set of rules that make writing correct — subject-verb agreement, punctuation, sentence structure. It's the baseline: writing with grammar errors distracts and undermines credibility. Style, by contrast, is about writing well, not just correctly — it's the choices that make writing clear, concise, engaging, and pleasant to read. Two grammatically correct sentences can differ hugely in quality.\n\nThink of it this way: grammar keeps you from being wrong; style makes you good. Both matter — you need correct grammar as a foundation, then style elevates writing from merely acceptable to effective and enjoyable. The good news is that clear style follows a few learnable principles, most of which boil down to one goal: making your writing easy for the reader to understand. This lesson focuses on those style principles, assuming the basic grammar from the English lessons.",
+    "tip": "Grammar = correct (the baseline); style = good (clear, concise, engaging). You need both: grammar keeps you from being wrong, style makes you effective."
+   },
+   {
+    "h": "Clarity and concision",
+    "body": "The two most important style virtues are clarity and concision. Clarity means the reader understands you easily — your meaning is obvious, not buried. Concision means saying it in as few words as needed — cutting the clutter. The famous advice is 'omit needless words': wordiness exhausts readers and hides your point, so tighter writing is almost always stronger.\n\nPractical moves: cut filler phrases ('due to the fact that' → 'because'; 'in order to' → 'to'), remove redundant words ('absolutely essential' → 'essential'), and avoid overly complex words when simple ones work ('utilize' → 'use'). Prefer shorter sentences and plain language, especially for important points. Don't confuse length or big words with sophistication — clear, concise writing is harder to produce and far more impressive. If a reader has to re-read a sentence to understand it, the sentence has failed.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Key writing-style principles\"><rect x=\"8\" y=\"5\" width=\"116\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"124\" y=\"5\" width=\"118\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Omit needless words</text><text x=\"130\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">'due to the fact that' → 'because'</text><rect x=\"8\" y=\"27\" width=\"116\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"124\" y=\"27\" width=\"118\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Active voice</text><text x=\"130\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">'the team decided' (not 'was decided')</text><rect x=\"8\" y=\"49\" width=\"116\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"124\" y=\"49\" width=\"118\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Strong verbs</text><text x=\"130\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">'crept' (not 'walked quietly')</text><rect x=\"8\" y=\"71\" width=\"116\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"124\" y=\"71\" width=\"118\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Vary sentences</text><text x=\"130\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">mix short and long for rhythm</text><rect x=\"8\" y=\"93\" width=\"116\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"124\" y=\"93\" width=\"118\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Read aloud</text><text x=\"130\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">the best test of clarity/flow</text></svg>",
+    "caption": "A handful of style moves that instantly sharpen writing.",
+    "tip": "The core virtues: clarity (easy to understand) + concision (few words). Omit needless words; cut filler; prefer simple words. If a reader must re-read, it failed."
+   },
+   {
+    "h": "Strong verbs and active voice",
+    "body": "Two techniques instantly strengthen writing. First, use the active voice, where the subject does the action ('The team made a decision'), rather than the passive voice, where the subject receives it ('A decision was made by the team'). Active voice is clearer, more direct, and usually shorter — passive often hides who's doing what and feels weak and wordy. (Passive has its uses, but default to active.)\n\nSecond, use strong, specific verbs rather than weak verbs propped up with adverbs. 'She walked slowly and quietly' is weaker than 'She crept.' Strong verbs carry meaning and energy, making writing vivid and tight. Similarly, avoid leaning on 'to be' verbs (is, was, are) and vague verbs (got, made, did) when a precise verb exists. Choosing active voice and powerful verbs are two of the highest-impact habits for making any writing punchier and more alive.",
+    "tip": "Use ACTIVE voice (subject does the action — clearer, shorter) and STRONG, specific verbs (she 'crept,' not 'walked quietly'). Two instant upgrades."
+   },
+   {
+    "h": "Sentence variety and flow",
+    "body": "Good writing has rhythm, which comes from varying your sentences. If every sentence is the same length and structure, writing becomes monotonous (a string of short sentences feels choppy; all long ones feel exhausting). Mixing short and long, and varying how sentences begin, creates a pleasing rhythm that keeps readers engaged. A short sentence after several long ones lands with punch.\n\nFlow also comes from how ideas connect: use transitions to link sentences and paragraphs logically, keep related ideas together, and make sure each sentence leads naturally to the next. Reading your writing aloud is the best test of flow — your ear catches awkward rhythm, run-ons, and clunky transitions that your eye misses. Writing that flows well is easy and even pleasurable to read, and that ease is itself a form of respect for your reader.",
+    "tip": "Vary sentence length and structure for rhythm (a short sentence after long ones punches). Connect ideas with transitions. Read aloud to test flow."
+   },
+   {
+    "h": "Editing for style",
+    "body": "Style is mostly created in editing, not the first draft. Once your ideas are down, go back and sharpen: cut every unnecessary word, replace weak verbs and passive constructions with strong active ones, break up or combine sentences for better rhythm, and simplify anything a reader might stumble over. Each pass can tighten and clarify.\n\nA few editing habits transform writing: read it aloud (the single best technique — you'll hear what's wrong), cut your word count (try removing 10% — it almost always improves), and put it aside and reread with fresh eyes. Ask of every sentence: is it clear? Is it as short as it can be? Does it flow? Great writers aren't necessarily great at first drafts — they're relentless at revision. Clear, strong style is the product of caring enough to cut, sharpen, and polish until the writing is as clear and powerful as you can make it.",
+    "tip": "Style is made in editing: cut needless words, strengthen verbs, fix rhythm, simplify. Read aloud; try cutting 10%. Great writers revise relentlessly."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Grammar vs style",
+    "body": "Grammar = correct (baseline); style = good (clear, concise, engaging). You need both."
+   },
+   {
+    "h": "Clarity & concision",
+    "body": "Easy to understand + few words. Omit needless words; cut filler; prefer simple words."
+   },
+   {
+    "h": "Verbs & voice",
+    "body": "Active voice (subject does the action) + strong specific verbs ('crept' not 'walked quietly')."
+   },
+   {
+    "h": "Variety & flow",
+    "body": "Vary sentence length/structure for rhythm; connect with transitions; read aloud to test flow."
+   },
+   {
+    "h": "Edit for style",
+    "body": "Cut words, strengthen verbs, fix rhythm, simplify. Read aloud; cut 10%. Revise relentlessly."
+   }
+  ],
+  "flash": [
+   [
+    "Grammar",
+    "The rules that make writing correct."
+   ],
+   [
+    "Style",
+    "The choices that make writing clear and engaging."
+   ],
+   [
+    "Clarity",
+    "Being easily understood."
+   ],
+   [
+    "Concision",
+    "Saying it in as few words as needed."
+   ],
+   [
+    "Active voice",
+    "The subject does the action (clearer)."
+   ],
+   [
+    "Passive voice",
+    "The subject receives the action (often weaker)."
+   ],
+   [
+    "Strong verb",
+    "A precise, vivid verb carrying meaning."
+   ],
+   [
+    "Filler words",
+    "Needless words that clutter writing."
+   ],
+   [
+    "Sentence variety",
+    "Mixing sentence lengths/structures for rhythm."
+   ],
+   [
+    "Flow",
+    "How smoothly writing reads."
+   ],
+   [
+    "Transition",
+    "A word connecting ideas smoothly."
+   ],
+   [
+    "Revision",
+    "Reworking to sharpen style and clarity."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Grammar is about writing:",
+    "options": [
+     "Correctly",
+     "Beautifully",
+     "Quickly",
+     "Longer"
+    ],
+    "a": 0,
+    "why": "It's the baseline of correctness."
+   },
+   {
+    "q": "Style is about writing:",
+    "options": [
+     "Well (clear, concise, engaging)",
+     "Just correctly",
+     "In cursive",
+     "With big words"
+    ],
+    "a": 0,
+    "why": "It elevates beyond mere correctness."
+   },
+   {
+    "q": "The two most important style virtues are:",
+    "options": [
+     "Clarity and concision",
+     "Length and complexity",
+     "Rhyme and meter",
+     "Volume and speed"
+    ],
+    "a": 0,
+    "why": "Easy to understand, few words."
+   },
+   {
+    "q": "'Omit needless words' means:",
+    "options": [
+     "Cut the clutter",
+     "Add more words",
+     "Use jargon",
+     "Write longer"
+    ],
+    "a": 0,
+    "why": "Tighter writing is stronger."
+   },
+   {
+    "q": "'Due to the fact that' should become:",
+    "options": [
+     "'Because'",
+     "'Due to the reality that'",
+     "Leave it longer",
+     "'In light of'"
+    ],
+    "a": 0,
+    "why": "Cut filler phrases."
+   },
+   {
+    "q": "Big words and length signal sophistication:",
+    "options": [
+     "False — clear simple writing is more impressive",
+     "True always",
+     "Only in essays",
+     "Only online"
+    ],
+    "a": 0,
+    "why": "Clarity is harder and better."
+   },
+   {
+    "q": "Active voice means:",
+    "options": [
+     "The subject does the action",
+     "The subject receives it",
+     "No subject",
+     "Passive construction"
+    ],
+    "a": 0,
+    "why": "'The team decided' not 'was decided by the team.'"
+   },
+   {
+    "q": "Which is stronger?",
+    "options": [
+     "'She crept'",
+     "'She walked slowly and quietly'",
+     "'She was walking'",
+     "'There was walking'"
+    ],
+    "a": 0,
+    "why": "Strong specific verbs beat verb + adverbs."
+   },
+   {
+    "q": "Varying sentence length creates:",
+    "options": [
+     "Rhythm that keeps readers engaged",
+     "Confusion",
+     "Errors",
+     "Boredom"
+    ],
+    "a": 0,
+    "why": "Monotony loses readers."
+   },
+   {
+    "q": "A short sentence after long ones:",
+    "options": [
+     "Lands with punch",
+     "Is wrong",
+     "Should be avoided",
+     "Breaks grammar"
+    ],
+    "a": 0,
+    "why": "Variety creates emphasis."
+   },
+   {
+    "q": "The best test of flow is to:",
+    "options": [
+     "Read it aloud",
+     "Read silently once",
+     "Skip it",
+     "Count words only"
+    ],
+    "a": 0,
+    "why": "Your ear catches awkward rhythm."
+   },
+   {
+    "q": "Style is mostly created during:",
+    "options": [
+     "Editing",
+     "The first draft",
+     "Brainstorming",
+     "Research"
+    ],
+    "a": 0,
+    "why": "Sharpen after ideas are down."
+   },
+   {
+    "q": "A powerful editing trick is to:",
+    "options": [
+     "Try cutting 10% of the words",
+     "Add 10% more",
+     "Never cut",
+     "Only add adjectives"
+    ],
+    "a": 0,
+    "why": "Cutting almost always improves writing."
+   },
+   {
+    "q": "Great writers are defined by being:",
+    "options": [
+     "Relentless at revision",
+     "Perfect first-drafters",
+     "Fast typists",
+     "Big-word users"
+    ],
+    "a": 0,
+    "why": "Revision makes the writing."
+   },
+   {
+    "q": "If a reader must re-read a sentence to get it, the sentence has:",
+    "options": [
+     "Failed",
+     "Succeeded",
+     "No problem",
+     "Good style"
+    ],
+    "a": 0,
+    "why": "Clarity is the goal."
+   }
+  ]
+ },
+ "writing-storytelling": {
+  "title": "Storytelling",
+  "subject": "Writing & Journalism",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand why stories are powerful",
+   "Understand story structure (three acts)",
+   "Understand conflict and stakes",
+   "Understand character and emotional connection",
+   "Tell stories effectively in any medium"
+  ],
+  "intro": "Storytelling is the ancient, universal skill of conveying events, ideas, and emotions through a narrative — and it's not just for novelists. Stories persuade, teach, connect, and are remembered far better than facts alone. This lesson covers what makes a story work and how to tell one well, in any medium.",
+  "sections": [
+   {
+    "h": "Why stories are powerful",
+    "body": "Humans are wired for stories. Long before writing, people passed knowledge, values, and history through stories, and our brains still respond to narrative far more powerfully than to bare facts. A story engages emotion, creates empathy (we feel what characters feel), and is memorable — people forget statistics but remember a good story. This is why storytelling matters far beyond fiction: in business, teaching, leadership, marketing, and everyday life, the person who can tell a compelling story connects and persuades better than one who just lists information.\n\nThe power comes from how stories work on us: they put abstract ideas into concrete, human terms, they create tension that holds attention, and they let us experience something rather than just hear about it. Learning to think and communicate in stories — not just facts — is one of the most valuable and underrated skills, applicable almost everywhere people need to be moved, taught, or convinced.",
+    "tip": "Humans are wired for stories — they engage emotion, create empathy, and are remembered far better than facts. Storytelling persuades and connects in ANY field."
+   },
+   {
+    "h": "Story structure",
+    "body": "Nearly all effective stories share an underlying structure, often described as three acts. The beginning (Act 1) introduces the character and their world, then presents an inciting incident — the event that kicks off the story and sets the character on their path. The middle (Act 2) is the bulk of the story: the character pursues a goal, faces rising obstacles and complications, and the tension builds toward a climax (the peak moment where the central conflict comes to a head). The end (Act 3) is the resolution — the aftermath, where things are settled and we see how it all turned out.\n\nThis structure works because it creates and then releases tension, taking the audience on a satisfying journey. Whether it's a novel, a movie, a business anecdote, or a bedtime story, this shape — setup, escalating conflict, climax, resolution — is the backbone. Knowing it helps you structure any story so it builds and pays off, rather than meandering.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"The three-act story structure\"><rect x=\"8\" y=\"5\" width=\"112\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"120\" y=\"5\" width=\"122\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Act 1 — Beginning</text><text x=\"126\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">setup + inciting incident</text><rect x=\"8\" y=\"27\" width=\"112\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"120\" y=\"27\" width=\"122\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Act 2 — Middle</text><text x=\"126\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">rising conflict → climax</text><rect x=\"8\" y=\"49\" width=\"112\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"120\" y=\"49\" width=\"122\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Act 3 — End</text><text x=\"126\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">resolution</text><rect x=\"8\" y=\"71\" width=\"112\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"120\" y=\"71\" width=\"122\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">The engine</text><text x=\"126\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">conflict (a struggle)</text><rect x=\"8\" y=\"93\" width=\"112\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"120\" y=\"93\" width=\"122\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Makes us care</text><text x=\"126\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">stakes (what's at risk)</text></svg>",
+    "caption": "The three-act structure — driven by conflict and stakes — builds and releases tension.",
+    "tip": "Story structure (3 acts): beginning (setup + inciting incident) → middle (rising conflict → climax) → end (resolution). It builds and releases tension."
+   },
+   {
+    "h": "Conflict and stakes",
+    "body": "The engine of every story is conflict — the problem, obstacle, or struggle the character faces. Without conflict, there's no story, just a sequence of events ('I woke up, ate, went to sleep' is not a story). Conflict can be against another person, against nature or circumstances, against society, or internal (a struggle within oneself). It's the friction that creates tension and makes us want to know what happens.\n\nClosely tied to conflict are stakes — what the character stands to gain or lose, why it matters. High stakes (something important on the line) make us care; if nothing matters to the character, nothing matters to us. The best stories make us feel the outcome is important. When telling any story, ask: what's the conflict (the problem), and what are the stakes (why does it matter)? Clear conflict and real stakes are what transform information into a gripping story.",
+    "tip": "Conflict (a problem/struggle) is the engine — no conflict, no story. Stakes (what's at risk, why it matters) make us care. Always have both."
+   },
+   {
+    "h": "Character and emotional connection",
+    "body": "Stories connect through characters we care about. We engage with a story emotionally when we relate to or root for someone — so a good story gives the audience a person (or stand-in) to connect with, with clear desires and relatable humanity. We don't connect with abstract ideas; we connect with people pursuing something, struggling, and feeling. This is why even a business or data story lands better when framed around a person ('meet Maria, who struggled with...').\n\nEmotional connection is the real goal of storytelling — making the audience feel something (hope, fear, joy, empathy). Specific, human details create this far better than generalities. When you tell a story, think about the emotional journey you want your audience to take, and build in the human, relatable moments that create that feeling. A story that makes people feel is one they'll remember and be moved by; a story that's all information, even if 'interesting,' rarely sticks.",
+    "tip": "We connect with CHARACTERS, not abstractions — give the audience a relatable person to root for. The goal is emotional connection (make them FEEL something)."
+   },
+   {
+    "h": "Telling stories well",
+    "body": "A few practical principles make any story land, whether written or spoken. Know your point: a good story has a purpose (what's it really about? what should the audience take away?), and every part should serve it — cut anything that doesn't. Start strong: open with something that grabs attention (a vivid moment, a question, a surprise), not slow throat-clearing. Use vivid, specific detail to make it come alive, and keep it as tight as it can be — rambling kills stories.\n\nBuild tension and don't give away the ending too soon; let curiosity pull the audience along. Match the story to your audience and purpose. And practice — telling stories, like all communication, improves with doing it. Whether you're writing fiction, pitching an idea, teaching, or just sharing something that happened, these fundamentals — purpose, strong opening, conflict, stakes, emotional connection, vivid detail, and tightness — make the difference between a story that grips and one that falls flat.",
+    "tip": "Tell stories well: know your point, start strong, build tension, use vivid detail, keep it tight, connect emotionally. Match it to your audience; practice."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Why stories matter",
+    "body": "Wired into us: they engage emotion, build empathy, and stick far better than facts. Persuade in any field."
+   },
+   {
+    "h": "Structure",
+    "body": "3 acts: beginning (setup + inciting incident) → middle (rising conflict → climax) → end (resolution)."
+   },
+   {
+    "h": "Conflict & stakes",
+    "body": "Conflict is the engine (no conflict, no story); stakes (what's at risk) make us care. Always have both."
+   },
+   {
+    "h": "Character & connection",
+    "body": "We connect with people, not abstractions. The goal is emotional connection — make the audience FEEL."
+   },
+   {
+    "h": "Telling it well",
+    "body": "Know your point, start strong, build tension, vivid detail, keep it tight, connect emotionally."
+   }
+  ],
+  "flash": [
+   [
+    "Storytelling",
+    "Conveying events/ideas/emotion through narrative."
+   ],
+   [
+    "Narrative",
+    "A connected account of events (a story)."
+   ],
+   [
+    "Three-act structure",
+    "Beginning, middle, end (setup, conflict, resolution)."
+   ],
+   [
+    "Inciting incident",
+    "The event that kicks off the story."
+   ],
+   [
+    "Climax",
+    "The peak where the central conflict comes to a head."
+   ],
+   [
+    "Resolution",
+    "How the story settles at the end."
+   ],
+   [
+    "Conflict",
+    "The struggle that drives a story."
+   ],
+   [
+    "Stakes",
+    "What a character stands to gain or lose."
+   ],
+   [
+    "Character",
+    "The person the audience connects with."
+   ],
+   [
+    "Emotional connection",
+    "Making the audience feel something."
+   ],
+   [
+    "Tension",
+    "Uncertainty that holds the audience's attention."
+   ],
+   [
+    "Hook",
+    "A strong opening that grabs attention."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Compared to bare facts, stories are:",
+    "options": [
+     "Remembered far better",
+     "Forgotten faster",
+     "Less emotional",
+     "Only for novels"
+    ],
+    "a": 0,
+    "why": "Humans are wired for narrative."
+   },
+   {
+    "q": "Storytelling is useful:",
+    "options": [
+     "In any field (business, teaching, etc.)",
+     "Only in fiction",
+     "Only for kids",
+     "Nowhere practical"
+    ],
+    "a": 0,
+    "why": "It persuades and connects everywhere."
+   },
+   {
+    "q": "The beginning of a story introduces the character and presents the:",
+    "options": [
+     "Inciting incident",
+     "Resolution",
+     "Climax",
+     "Credits"
+    ],
+    "a": 0,
+    "why": "The event that kicks off the story."
+   },
+   {
+    "q": "The peak moment where the conflict comes to a head is the:",
+    "options": [
+     "Climax",
+     "Setup",
+     "Resolution",
+     "Hook"
+    ],
+    "a": 0,
+    "why": "Tension builds toward it in Act 2."
+   },
+   {
+    "q": "The engine of every story is:",
+    "options": [
+     "Conflict",
+     "Peace",
+     "Description",
+     "A title"
+    ],
+    "a": 0,
+    "why": "No conflict, no story."
+   },
+   {
+    "q": "'I woke up, ate, slept' is not a story because it has no:",
+    "options": [
+     "Conflict",
+     "Words",
+     "Character",
+     "Setting"
+    ],
+    "a": 0,
+    "why": "There's no struggle or tension."
+   },
+   {
+    "q": "Stakes are:",
+    "options": [
+     "What a character stands to gain or lose",
+     "The setting",
+     "The title",
+     "The ending"
+    ],
+    "a": 0,
+    "why": "High stakes make us care."
+   },
+   {
+    "q": "We emotionally connect with:",
+    "options": [
+     "Characters (people)",
+     "Abstract ideas",
+     "Statistics",
+     "Logos"
+    ],
+    "a": 0,
+    "why": "Give the audience someone to root for."
+   },
+   {
+    "q": "Even a data story lands better when:",
+    "options": [
+     "Framed around a person",
+     "All numbers",
+     "Longer",
+     "Abstract"
+    ],
+    "a": 0,
+    "why": "'Meet Maria, who struggled with...'"
+   },
+   {
+    "q": "The real goal of storytelling is:",
+    "options": [
+     "Emotional connection (making them feel)",
+     "Listing facts",
+     "Being long",
+     "Using big words"
+    ],
+    "a": 0,
+    "why": "Feeling is what sticks."
+   },
+   {
+    "q": "A good story should start:",
+    "options": [
+     "Strong (grab attention)",
+     "With slow throat-clearing",
+     "With the ending",
+     "With a disclaimer"
+    ],
+    "a": 0,
+    "why": "Open with a hook."
+   },
+   {
+    "q": "To hold attention, you should:",
+    "options": [
+     "Build tension; don't reveal the ending early",
+     "Give away the ending",
+     "Ramble",
+     "Add filler"
+    ],
+    "a": 0,
+    "why": "Curiosity pulls the audience along."
+   },
+   {
+    "q": "Rambling in a story:",
+    "options": [
+     "Kills it (keep it tight)",
+     "Helps",
+     "Is required",
+     "Builds tension"
+    ],
+    "a": 0,
+    "why": "Cut anything that doesn't serve the point."
+   },
+   {
+    "q": "Every part of a story should serve:",
+    "options": [
+     "The point/purpose",
+     "The word count",
+     "The author's ego",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Cut what doesn't serve it."
+   },
+   {
+    "q": "Storytelling, like all communication, improves with:",
+    "options": [
+     "Practice",
+     "Waiting",
+     "Luck",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Telling stories builds the skill."
+   }
+  ]
+ },
+ "writing-journalism": {
+  "title": "Journalism",
+  "subject": "Writing & Journalism",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand what journalism is and its role",
+   "Know the principles (accuracy, fairness, sourcing)",
+   "Structure a news story (inverted pyramid, 5 Ws)",
+   "Report and verify information",
+   "Understand journalism ethics and media literacy"
+  ],
+  "intro": "Journalism is gathering, verifying, and reporting news and information to the public — a cornerstone of an informed society. Understanding how it works makes you a better reader of news and a more capable writer and citizen. This lesson covers the principles and craft of journalism.",
+  "sections": [
+   {
+    "h": "What journalism is",
+    "body": "Journalism is the practice of gathering, verifying, and reporting information — primarily news — to the public. Its core purpose is to inform people about what's happening in their community and world, so they can make decisions as citizens. A free press is considered essential to democracy (it's sometimes called the 'fourth estate') because it holds the powerful accountable and keeps the public informed.\n\nJournalism comes in forms: hard news (timely reporting of events — a fire, an election result), features (deeper, human-interest stories), investigative journalism (digging into wrongdoing), and opinion/editorial (clearly labeled commentary, which is different from news reporting). The crucial distinction is between news (factual reporting) and opinion (analysis and viewpoint) — good journalism keeps them separate and clearly labeled. At its best, journalism is a disciplined pursuit of truth in service of the public.",
+    "tip": "Journalism = gathering, verifying, and reporting news to inform the public (vital to democracy). Key distinction: NEWS (factual reporting) vs OPINION (labeled commentary)."
+   },
+   {
+    "h": "The principles of journalism",
+    "body": "Good journalism follows core principles. Accuracy: getting the facts right is the first duty — errors destroy credibility, so journalists verify before publishing. Fairness and balance: presenting multiple sides, not distorting or taking sides in news reporting (letting the facts speak). Independence: not being controlled by the subjects of coverage or by advertisers or political interests. Accountability: correcting errors openly and being transparent about methods.\n\nSourcing is central: journalists attribute information to sources (people, documents, data) so readers know where it comes from, and verify claims with multiple reliable sources before reporting them. Anonymous sources are used carefully and only when justified. These principles exist to serve the ultimate goal: giving the public accurate, trustworthy information. When you read news, these same principles help you judge quality — is it accurate, fair, sourced, and independent, or one-sided, unsourced, or agenda-driven?",
+    "tip": "Journalism principles: accuracy (verify first), fairness/balance (multiple sides), independence, accountability, and sourcing (attribute + verify). Use these to judge news quality too."
+   },
+   {
+    "h": "Structuring a news story",
+    "body": "News writing has its own efficient structure. The most important is the inverted pyramid: put the most important information first (the lead, or 'lede'), then supporting details in descending order of importance, with the least essential at the bottom. This serves readers (who get the key facts immediately, even if they stop reading) and editors (who can cut from the bottom). It's the opposite of a story that builds to a climax.\n\nThe lead (the opening sentence or paragraph) should capture the essence, typically answering the key questions known as the 5 Ws (and an H): Who, What, When, Where, Why, and How. A good news lead tells you the core of the story in a sentence or two. The headline grabs attention and summarizes. This structure — key facts first, answering the 5 Ws, in an inverted pyramid — makes news clear, fast to read, and efficient, which is exactly what news needs to be.",
+    "visual": "<svg viewBox=\"0 0 230 172\" width=\"220\" role=\"img\" aria-label=\"The inverted pyramid of news writing: most important information first, least essential last\"><polygon points=\"15.0,20 215.0,20 181.4,62 48.6,62\" fill=\"rgba(79,156,240,.3)\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"115\" y=\"44\" text-anchor=\"middle\" fill=\"#eef3fb\" font-size=\"9\">LEAD — most important</text><polygon points=\"48.6,62 181.4,62 147.8,104 82.2,104\" fill=\"rgba(57,227,200,.26)\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"115\" y=\"86\" text-anchor=\"middle\" fill=\"#eef3fb\" font-size=\"9\">supporting details</text><polygon points=\"82.2,104 147.8,104 115.0,145 115.0,145\" fill=\"rgba(107,122,152,.26)\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"115\" y=\"127\" text-anchor=\"middle\" fill=\"#eef3fb\" font-size=\"9\">least essential</text><text x=\"115\" y=\"166\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">news puts the most important info first (the lead answers the 5 Ws)</text></svg>",
+    "caption": "The inverted pyramid: the most important facts (the lead, answering the 5 Ws) come first.",
+    "example": "A news lead answers the 5 Ws: WHO did WHAT, WHEN, WHERE, WHY, and HOW — the most important facts first.",
+    "tip": "News uses the INVERTED PYRAMID: most important info first, details in descending importance. The lead answers the 5 Ws (Who/What/When/Where/Why + How)."
+   },
+   {
+    "h": "Reporting and verifying",
+    "body": "Behind every news story is reporting — the work of gathering information. This means interviewing sources (witnesses, experts, officials), gathering documents and data, observing events firsthand, and researching background. Good reporting is thorough and skeptical: journalists don't just accept claims, they verify them, seek evidence, and get multiple perspectives.\n\nVerification is the heart of journalism — the discipline of confirming information is true before reporting it. This means checking facts against reliable sources, confirming claims with more than one source when possible, being wary of rumors and unverified social media, and distinguishing what's confirmed from what's alleged or speculated. In a world of instant, unverified information, this discipline of verification is what separates journalism from gossip and misinformation. The pressure to be fast is real, but good journalism prioritizes being right over being first.",
+    "tip": "Reporting = gathering info (interviews, documents, observation). Verification = confirming it's true before publishing (multiple sources, check facts). Being right beats being first."
+   },
+   {
+    "h": "Ethics and media literacy",
+    "body": "Journalism operates under ethical standards: tell the truth, minimize harm (be careful with vulnerable people and sensitive info), act independently (avoid conflicts of interest), and be accountable (correct mistakes). These ethics exist because journalism is powerful — it shapes what people believe and do — and that power carries responsibility.\n\nFor you as a news consumer, these same ideas power media literacy: the skill of critically evaluating news. Check the source's credibility and track record, distinguish news from opinion from advertising, notice whether claims are sourced and verified, be aware of bias (including your own), and cross-check important or surprising stories across multiple reputable outlets. In an age of misinformation, being able to tell good journalism from propaganda, clickbait, and fabrication is an essential life skill. Understanding how journalism works — and should work — makes you both a sharper reader and a more responsible sharer of information.",
+    "tip": "Journalism ethics: truth, minimize harm, independence, accountability. As a reader, use media literacy: check sources, separate news/opinion, spot bias, cross-check surprising claims."
+   }
+  ],
+  "cards": [
+   {
+    "h": "What it is",
+    "body": "Gathering, verifying, reporting news to inform the public (vital to democracy). News vs opinion."
+   },
+   {
+    "h": "Principles",
+    "body": "Accuracy, fairness/balance, independence, accountability, sourcing (attribute + verify). Judge news by these."
+   },
+   {
+    "h": "Structure",
+    "body": "Inverted pyramid: most important first; lead answers the 5 Ws (Who/What/When/Where/Why + How)."
+   },
+   {
+    "h": "Report & verify",
+    "body": "Gather info (interviews, docs, observation); verify before publishing. Right beats first."
+   },
+   {
+    "h": "Ethics & media literacy",
+    "body": "Truth, minimize harm, independence, accountability. Readers: check sources, spot bias, cross-check."
+   }
+  ],
+  "flash": [
+   [
+    "Journalism",
+    "Gathering, verifying, and reporting news to the public."
+   ],
+   [
+    "News vs opinion",
+    "Factual reporting vs labeled commentary."
+   ],
+   [
+    "Free press",
+    "Independent news, vital to democracy."
+   ],
+   [
+    "Accuracy",
+    "Getting the facts right (the first duty)."
+   ],
+   [
+    "Fairness",
+    "Presenting multiple sides without distortion."
+   ],
+   [
+    "Source",
+    "A person/document/data providing information."
+   ],
+   [
+    "Attribution",
+    "Crediting where information came from."
+   ],
+   [
+    "Inverted pyramid",
+    "Most important info first in news writing."
+   ],
+   [
+    "Lead (lede)",
+    "The opening that captures the story's essence."
+   ],
+   [
+    "5 Ws",
+    "Who, What, When, Where, Why (and How)."
+   ],
+   [
+    "Verification",
+    "Confirming information is true before reporting."
+   ],
+   [
+    "Media literacy",
+    "Critically evaluating news and information."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Journalism's core purpose is to:",
+    "options": [
+     "Inform the public accurately",
+     "Entertain only",
+     "Sell products",
+     "Hide the truth"
+    ],
+    "a": 0,
+    "why": "So people can make informed decisions."
+   },
+   {
+    "q": "A free press is sometimes called the:",
+    "options": [
+     "Fourth estate",
+     "First responder",
+     "Last resort",
+     "Second opinion"
+    ],
+    "a": 0,
+    "why": "It holds the powerful accountable."
+   },
+   {
+    "q": "The crucial distinction in journalism is between:",
+    "options": [
+     "News and opinion",
+     "Long and short",
+     "Online and print",
+     "Day and night"
+    ],
+    "a": 0,
+    "why": "Factual reporting vs labeled commentary."
+   },
+   {
+    "q": "A journalist's first duty is:",
+    "options": [
+     "Accuracy (get the facts right)",
+     "Being first",
+     "Being clever",
+     "Being funny"
+    ],
+    "a": 0,
+    "why": "Errors destroy credibility."
+   },
+   {
+    "q": "Fairness in news means:",
+    "options": [
+     "Presenting multiple sides",
+     "Picking a side",
+     "Hiding facts",
+     "Being vague"
+    ],
+    "a": 0,
+    "why": "Let the facts speak."
+   },
+   {
+    "q": "Attributing information to sources lets readers:",
+    "options": [
+     "Know where it came from",
+     "Be confused",
+     "Skip it",
+     "Trust blindly"
+    ],
+    "a": 0,
+    "why": "Sourcing adds credibility and verifiability."
+   },
+   {
+    "q": "The inverted pyramid puts the most important info:",
+    "options": [
+     "First",
+     "Last",
+     "In the middle",
+     "Nowhere"
+    ],
+    "a": 0,
+    "why": "Details descend in importance."
+   },
+   {
+    "q": "A news lead typically answers the:",
+    "options": [
+     "5 Ws (Who/What/When/Where/Why)",
+     "Alphabet",
+     "Weather",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Plus How — the core of the story."
+   },
+   {
+    "q": "The inverted pyramid helps editors:",
+    "options": [
+     "Cut from the bottom",
+     "Add fluff",
+     "Hide the lead",
+     "Reverse the story"
+    ],
+    "a": 0,
+    "why": "Least essential is at the bottom."
+   },
+   {
+    "q": "The heart of journalism is:",
+    "options": [
+     "Verification (confirming it's true)",
+     "Speed only",
+     "Opinion",
+     "Guessing"
+    ],
+    "a": 0,
+    "why": "Confirm before reporting."
+   },
+   {
+    "q": "Good journalism prioritizes being:",
+    "options": [
+     "Right over first",
+     "First over right",
+     "Loud",
+     "Short"
+    ],
+    "a": 0,
+    "why": "Accuracy beats speed."
+   },
+   {
+    "q": "Journalism ethics include:",
+    "options": [
+     "Truth, minimize harm, independence, accountability",
+     "Exaggeration",
+     "Hiding errors",
+     "Taking sides in news"
+    ],
+    "a": 0,
+    "why": "Power carries responsibility."
+   },
+   {
+    "q": "Media literacy means being able to:",
+    "options": [
+     "Critically evaluate news",
+     "Believe everything",
+     "Avoid all news",
+     "Only read headlines"
+    ],
+    "a": 0,
+    "why": "Check sources, spot bias, cross-check."
+   },
+   {
+    "q": "For a surprising news story, you should:",
+    "options": [
+     "Cross-check multiple reputable outlets",
+     "Share it instantly",
+     "Believe one source",
+     "Ignore it"
+    ],
+    "a": 0,
+    "why": "Verification before sharing."
+   },
+   {
+    "q": "Opinion pieces should be:",
+    "options": [
+     "Clearly labeled (separate from news)",
+     "Disguised as news",
+     "Hidden",
+     "Never published"
+    ],
+    "a": 0,
+    "why": "Keep news and commentary distinct."
+   }
+  ]
+ },
+ "writing-blogging-copywriting": {
+  "title": "Blogging & Copywriting",
+  "subject": "Writing & Journalism",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand blogging and copywriting",
+   "Write attention-grabbing headlines",
+   "Write for online readers (scannable, clear)",
+   "Understand persuasive copywriting (AIDA, benefits)",
+   "Build an audience and write ethically"
+  ],
+  "intro": "Blogging and copywriting are forms of writing for the digital age — creating online content that informs, engages, and persuades. They power websites, marketing, and personal brands, and the skills are learnable and in demand. This lesson covers writing for the web and the basics of persuasive copy.",
+  "sections": [
+   {
+    "h": "Blogging and copywriting defined",
+    "body": "These are two related but distinct kinds of writing for the web. Blogging is creating content (articles, posts) to inform, entertain, or engage an audience — the goal is usually to provide value, build an audience, and establish authority or a personal brand. A good blog post is helpful, interesting, and worth someone's time. Copywriting is writing designed to persuade and sell — the words on ads, websites, product pages, emails, and landing pages that aim to get the reader to take an action (buy, sign up, click).\n\nThe key difference: blogging mainly provides value (and may lead to sales indirectly through trust), while copywriting directly persuades toward an action. Both are hugely useful skills — blogging for content and audience-building, copywriting for marketing and sales — and both are in demand as businesses need people who can write effectively for the web. The principles overlap, but the intent differs: inform/engage vs persuade/convert.",
+    "tip": "Blogging = content that informs/engages and builds an audience. Copywriting = persuasive words that get a reader to ACT (buy, sign up). Both are in-demand web-writing skills."
+   },
+   {
+    "h": "Writing great headlines",
+    "body": "Online, the headline is everything — it's what determines whether anyone reads your content at all, because people scan and click based on headlines. A great headline is clear (the reader instantly knows what they'll get), compelling (it sparks curiosity or promises value), and honest (it delivers what it promises — misleading 'clickbait' destroys trust). On average, far more people read the headline than the content, so it's worth disproportionate effort.\n\nEffective headline techniques: promise a clear benefit ('How to...', '5 Ways to...'), spark curiosity, use specifics and numbers, address the reader directly ('you'), and keep it concise. But never over-promise — clickbait that doesn't deliver loses readers permanently. Write several headline options and pick the best. A mediocre article with a great headline gets read; a great article with a weak headline gets ignored. The headline is the single highest-leverage piece of writing you do online.",
+    "tip": "Headlines decide if anyone reads you. Make them clear + compelling + honest (promise a real benefit, don't over-promise/clickbait). Write several; pick the best."
+   },
+   {
+    "h": "Writing for online readers",
+    "body": "People read differently online than on paper — they scan, skim, and have short attention spans, often on phones. So web writing must be scannable and easy to digest. Key techniques: use short paragraphs (1–3 sentences), break content with descriptive subheadings (so readers can scan and jump to what they want), use bullet points and lists, bold key points, and keep sentences short and clear. Big walls of text drive online readers away.\n\nAlso: get to the point quickly (don't bury the value), write in a clear, conversational tone (web writing is usually more casual than academic writing), and make it genuinely useful or engaging. Front-load value — tell readers early what they'll get and start delivering it. The goal is to make content easy and inviting to read on a screen: skimmable, clear, and valuable. Respecting how people actually read online is what keeps them reading.",
+    "tip": "Web readers SCAN. Write scannable: short paragraphs, subheadings, bullets, bold key points, clear tone. Get to the point fast; front-load the value."
+   },
+   {
+    "h": "Persuasive copywriting",
+    "body": "Copywriting that sells follows proven principles. A classic framework is AIDA: grab Attention (a compelling headline/opening), build Interest (engage the reader with relevant info), create Desire (make them want it, usually by showing benefits), and prompt Action (a clear call to action — 'Buy now,' 'Sign up'). This maps the path from a reader noticing to a reader acting.\n\nThe single most important copywriting principle: focus on benefits, not just features. A feature is what a product is or has ('this drill has a 20-volt battery'); a benefit is what it does for the reader ('drive screws all day without recharging'). People buy benefits — how it improves their life. Also: know your audience and speak to their needs, write clearly and specifically, use social proof (reviews, testimonials) for credibility, and always include a clear call to action telling the reader exactly what to do next. Good copy is persuasive because it's about the reader, not the product.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"The AIDA copywriting framework\"><rect x=\"8\" y=\"5\" width=\"88\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"96\" y=\"5\" width=\"146\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Attention</text><text x=\"102\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">grab them (headline/opening)</text><rect x=\"8\" y=\"27\" width=\"88\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"96\" y=\"27\" width=\"146\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Interest</text><text x=\"102\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">engage with relevant info</text><rect x=\"8\" y=\"49\" width=\"88\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"96\" y=\"49\" width=\"146\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Desire</text><text x=\"102\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">show benefits — make them want it</text><rect x=\"8\" y=\"71\" width=\"88\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"96\" y=\"71\" width=\"146\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Action</text><text x=\"102\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">clear call to action ('buy now')</text><rect x=\"8\" y=\"93\" width=\"88\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"96\" y=\"93\" width=\"146\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Sell</text><text x=\"102\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">benefits, not features</text></svg>",
+    "caption": "AIDA — the path from a reader noticing to acting; and sell benefits, not features.",
+    "tip": "Persuasive copy follows AIDA (Attention → Interest → Desire → Action). Sell BENEFITS, not features (what it does for them). Always include a clear call to action."
+   },
+   {
+    "h": "Building an audience and writing ethically",
+    "body": "For blogging especially, success is about consistently providing value to build an audience over time. Publish regularly, write about what your audience cares about, make your content genuinely helpful, and be patient — audiences grow slowly through consistent quality. Basic SEO (search engine optimization) — using the words people actually search for, so your content can be found — helps, as does promoting your work and engaging with readers.\n\nThroughout, write ethically and authentically. Be honest (don't deceive readers or make false claims — especially important in copywriting, where exaggeration shades into dishonesty, and legally in advertising). Deliver on what your headlines promise. Build trust, because trust is what makes an audience and makes copy actually work over the long run. The writers and brands that succeed online are overwhelmingly the ones that consistently provide real value honestly. Skills plus consistency plus integrity is the winning combination for writing on the web.",
+    "tip": "Build an audience with consistent, valuable content (+ basic SEO: use words people search). Write honestly — deliver what you promise. Trust is what makes it work long-term."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Blogging vs copywriting",
+    "body": "Blogging = content that informs/engages, builds audience. Copywriting = persuade a reader to ACT (buy/sign up)."
+   },
+   {
+    "h": "Headlines",
+    "body": "Decide if anyone reads you. Clear + compelling + honest (real benefit, no clickbait). Write several; pick best."
+   },
+   {
+    "h": "Write for the web",
+    "body": "Readers scan: short paragraphs, subheadings, bullets, bold, clear tone. Front-load the value."
+   },
+   {
+    "h": "Persuasive copy",
+    "body": "AIDA (Attention → Interest → Desire → Action). Sell BENEFITS not features; always a clear call to action."
+   },
+   {
+    "h": "Audience & ethics",
+    "body": "Consistent valuable content + basic SEO; be honest and deliver what you promise. Trust makes it work."
+   }
+  ],
+  "flash": [
+   [
+    "Blogging",
+    "Creating content to inform/engage and build an audience."
+   ],
+   [
+    "Copywriting",
+    "Persuasive writing to get a reader to act."
+   ],
+   [
+    "Headline",
+    "The title that decides if content gets read."
+   ],
+   [
+    "Clickbait",
+    "A misleading headline that doesn't deliver."
+   ],
+   [
+    "Scannable",
+    "Easy to skim (short paragraphs, subheadings, bullets)."
+   ],
+   [
+    "Subheading",
+    "A mini-title that breaks up content."
+   ],
+   [
+    "AIDA",
+    "Attention, Interest, Desire, Action."
+   ],
+   [
+    "Feature vs benefit",
+    "What it is vs what it does for the reader."
+   ],
+   [
+    "Call to action",
+    "Telling the reader exactly what to do next."
+   ],
+   [
+    "Social proof",
+    "Reviews/testimonials that build credibility."
+   ],
+   [
+    "SEO",
+    "Writing so content can be found in search."
+   ],
+   [
+    "Conversion",
+    "When a reader takes the desired action."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Blogging's main goal is usually to:",
+    "options": [
+     "Inform/engage and build an audience",
+     "Directly sell instantly",
+     "Trick readers",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "It provides value and builds trust/authority."
+   },
+   {
+    "q": "Copywriting is designed to:",
+    "options": [
+     "Persuade a reader to take action",
+     "Inform only",
+     "Entertain only",
+     "Confuse"
+    ],
+    "a": 0,
+    "why": "Get them to buy, sign up, or click."
+   },
+   {
+    "q": "Online, the single most important element is the:",
+    "options": [
+     "Headline",
+     "Footer",
+     "Font",
+     "Page number"
+    ],
+    "a": 0,
+    "why": "People scan and click based on it."
+   },
+   {
+    "q": "A great headline is:",
+    "options": [
+     "Clear, compelling, and honest",
+     "Vague and misleading",
+     "Long and dull",
+     "All caps"
+    ],
+    "a": 0,
+    "why": "Promise a real benefit; don't clickbait."
+   },
+   {
+    "q": "Clickbait that doesn't deliver:",
+    "options": [
+     "Loses readers permanently",
+     "Builds trust",
+     "Is recommended",
+     "Helps SEO"
+    ],
+    "a": 0,
+    "why": "It destroys credibility."
+   },
+   {
+    "q": "Online readers mostly:",
+    "options": [
+     "Scan and skim",
+     "Read every word",
+     "Read slowly",
+     "Print it out"
+    ],
+    "a": 0,
+    "why": "Write scannable content."
+   },
+   {
+    "q": "Which makes web content scannable?",
+    "options": [
+     "Short paragraphs, subheadings, bullets",
+     "Huge walls of text",
+     "No headings",
+     "Tiny font"
+    ],
+    "a": 0,
+    "why": "Easy to skim and jump around."
+   },
+   {
+    "q": "You should structure web content to:",
+    "options": [
+     "Get to the point fast (front-load value)",
+     "Bury the point",
+     "Delay everything",
+     "Ramble first"
+    ],
+    "a": 0,
+    "why": "Tell readers early what they'll get."
+   },
+   {
+    "q": "AIDA stands for:",
+    "options": [
+     "Attention, Interest, Desire, Action",
+     "Ask, Inform, Describe, Argue",
+     "Add, Improve, Deliver, Act",
+     "Always In Demand Ad"
+    ],
+    "a": 0,
+    "why": "The path from noticing to acting."
+   },
+   {
+    "q": "The most important copywriting principle is to sell:",
+    "options": [
+     "Benefits (what it does for them)",
+     "Features only",
+     "The company",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "People buy how it improves their life."
+   },
+   {
+    "q": "'Drive screws all day without recharging' is a:",
+    "options": [
+     "Benefit",
+     "Feature",
+     "Headline only",
+     "Call to action"
+    ],
+    "a": 0,
+    "why": "A feature would be '20-volt battery.'"
+   },
+   {
+    "q": "Good copy always includes a:",
+    "options": [
+     "Clear call to action",
+     "Vague ending",
+     "No next step",
+     "Long disclaimer"
+    ],
+    "a": 0,
+    "why": "Tell the reader exactly what to do next."
+   },
+   {
+    "q": "Building a blog audience requires:",
+    "options": [
+     "Consistent, valuable content over time",
+     "One viral post",
+     "No effort",
+     "Deception"
+    ],
+    "a": 0,
+    "why": "Audiences grow slowly through quality."
+   },
+   {
+    "q": "Basic SEO means:",
+    "options": [
+     "Using words people actually search for",
+     "Keyword stuffing nonsense",
+     "Hiding text",
+     "Buying followers"
+    ],
+    "a": 0,
+    "why": "So your content can be found."
+   },
+   {
+    "q": "What makes web writing work long-term is:",
+    "options": [
+     "Honesty and trust (deliver what you promise)",
+     "Exaggeration",
+     "Clickbait",
+     "Hype"
+    ],
+    "a": 0,
+    "why": "Trust is the foundation of audience and copy."
    }
   ]
  }
