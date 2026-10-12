@@ -5650,130 +5650,281 @@ window.LAB404_CONTENT = {
  "business-starting-a-business": {
   "title": "Starting a Business",
   "subject": "Business & Entrepreneurship",
-  "level": "Grades 9 - adult",
-  "intro": "Starting a business is really about solving a problem people will pay you to solve. You don't need a big idea or a lot of money to start — you need a real customer, a simple offer, and the willingness to learn as you go.",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand entrepreneurship and the entrepreneurial mindset",
+   "Find and validate a business idea",
+   "Understand business models and basic planning",
+   "Know the legal and financial basics of starting",
+   "Launch lean and learn from customers"
+  ],
+  "intro": "Starting a business means creating something that provides value to customers and earns money doing it. Entrepreneurship is more accessible than ever, but most of success comes from solving a real problem and executing well, not just having a great idea. This lesson covers how to go from idea to a launched business.",
+  "sections": [
+   {
+    "h": "Entrepreneurship and the mindset",
+    "body": "An entrepreneur is someone who starts and runs a business, taking on risk to create value. At its core, a business succeeds by solving a problem or meeting a need for customers who'll pay for the solution. That's the whole game: find a real problem, solve it well, and charge enough to make a profit.\n\nThe entrepreneurial mindset matters as much as any skill: being willing to take calculated risks, learning constantly, being resourceful with limited means, persevering through setbacks, and above all being customer-focused (obsessing over their needs, not just your idea). You don't need to be a genius or have lots of money to start — many great businesses began small and scrappy. What you need is a real problem to solve and the willingness to start.",
+    "tip": "A business solves a real problem people will pay for. The mindset — customer-focus, resourcefulness, perseverance — matters as much as the idea."
+   },
+   {
+    "h": "Finding and validating an idea",
+    "body": "Good business ideas come from spotting problems: something that's annoying, inefficient, expensive, or missing — for you or for others. The best ideas solve a real, felt pain, not a problem you have to convince people they have. Look at your own frustrations, your skills, and gaps in the market.\n\nCrucially, don't just assume your idea is good — validate it before investing heavily. Talk to potential customers: would they actually pay for this, and how much? Try to make a few sales or get commitments before building everything. Many businesses fail because they built something nobody wanted. Cheap, early validation — conversations, a simple test, a pre-sale — saves you from pouring time and money into the wrong thing. The market, not your opinion, decides if an idea is good.",
+    "visual": "<svg viewBox=\"0 0 258 62\" width=\"248\" role=\"img\" aria-label=\"Steps to start a business: idea, validate, plan, register, launch\"><rect x=\"6\" y=\"16\" width=\"42\" height=\"30\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"27\" y=\"34\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8\">Idea</text><rect x=\"56\" y=\"16\" width=\"42\" height=\"30\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"77\" y=\"34\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8\">Validate</text><rect x=\"106\" y=\"16\" width=\"42\" height=\"30\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"127\" y=\"34\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8\">Plan</text><rect x=\"156\" y=\"16\" width=\"42\" height=\"30\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"177\" y=\"34\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8\">Register</text><rect x=\"206\" y=\"16\" width=\"42\" height=\"30\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"227\" y=\"34\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8\">Launch</text><line x1=\"48\" y1=\"31\" x2=\"52\" y2=\"31\" stroke=\"#39e3c8\" stroke-width=\"1.8\"/><polygon points=\"52,28 57,31 52,34\" fill=\"#39e3c8\"/><line x1=\"98\" y1=\"31\" x2=\"102\" y2=\"31\" stroke=\"#39e3c8\" stroke-width=\"1.8\"/><polygon points=\"102,28 107,31 102,34\" fill=\"#39e3c8\"/><line x1=\"148\" y1=\"31\" x2=\"152\" y2=\"31\" stroke=\"#39e3c8\" stroke-width=\"1.8\"/><polygon points=\"152,28 157,31 152,34\" fill=\"#39e3c8\"/><line x1=\"198\" y1=\"31\" x2=\"202\" y2=\"31\" stroke=\"#39e3c8\" stroke-width=\"1.8\"/><polygon points=\"202,28 207,31 202,34\" fill=\"#39e3c8\"/></svg>",
+    "caption": "From idea to launch — validate with real customers before you build and register.",
+    "tip": "Find a real problem people feel; then VALIDATE (talk to customers, try to make early sales) before building. The market decides, not you."
+   },
+   {
+    "h": "Business models and planning",
+    "body": "A business model is simply how your business makes money: what you sell, to whom, and how you deliver it profitably. Common models include selling products, offering services, subscriptions (recurring fees), or marketplaces. The key numbers are what it costs you to deliver versus what customers pay — you need a gap (profit) that works at scale.\n\nYou don't need a 50-page business plan to start, but you should be clear on the essentials: who's your customer, what problem you solve, how you'll reach them, how you make money, and what it'll cost. Writing even a one-page plan forces you to think it through and spot gaps. A plan isn't a prediction (reality will differ) — it's a tool for thinking clearly and communicating your idea.",
+    "tip": "A business model = how you make money (sell what, to whom, profitably). You don't need a huge plan — but be clear on customer, value, and the numbers."
+   },
+   {
+    "h": "Legal and financial basics",
+    "body": "Starting a business involves some practical setup. Legally, you choose a structure — a sole proprietorship (simplest, you are the business) or an LLC/corporation (separates your personal assets from business liability, more paperwork). You may need licenses or permits depending on your trade and location, and you'll handle taxes (business income is taxable, and you'll likely owe self-employment tax).\n\nFinancially, keep business and personal money separate (a business bank account), track all income and expenses from day one (for taxes and to know if you're profitable), and understand your startup costs and when you'll break even. Many businesses can start very lean. You don't have to master all of this at once, but ignoring the basics (especially taxes and record-keeping) causes painful problems later. When in doubt, a quick consult with an accountant or attorney is worth it.",
+    "tip": "Pick a structure (sole prop vs LLC), handle licenses + taxes, separate business money, and track income/expenses from day one."
+   },
+   {
+    "h": "Launching lean",
+    "body": "The modern approach to starting is to launch lean: get a basic version of your product or service in front of real customers quickly, rather than perfecting it in secret for a year. The idea of a 'minimum viable product' (MVP) is to offer the smallest thing that delivers real value, learn from actual customer feedback, and improve from there.\n\nThis matters because you'll learn more from real customers than from any amount of planning — they'll show you what they actually want versus what you assumed. Start small, keep costs low, get real sales, and reinvest and grow from there. Expect to adjust (even 'pivot') based on what you learn. The biggest risk isn't failing; it's spending huge effort on something nobody wants. Launch, learn, and improve — momentum and feedback beat perfection.",
+    "tip": "Launch lean: get a basic version (MVP) to real customers fast, learn from them, and improve. Real feedback beats endless planning."
+   }
+  ],
   "cards": [
    {
-    "h": "Start with a problem, not an idea",
-    "body": "Good businesses solve a real problem for a specific group of people. Before building anything, get clear on who your customer is and what pain you're removing. 'A thing I think is cool' fails; 'a thing people already pay to fix' works."
+    "h": "Mindset",
+    "body": "A business solves a real problem people pay for; customer-focus, resourcefulness, and perseverance matter most."
    },
    {
-    "h": "Validate before you invest",
-    "body": "Talk to potential customers and try to make a few sales before spending big. If people won't pay for a simple version, a fancy version won't save it. Real money from real customers is the only proof that counts."
+    "h": "Find & validate",
+    "body": "Spot a felt problem; validate with customers (talk, pre-sell) before building. The market decides."
    },
    {
-    "h": "Know your numbers",
-    "body": "You profit when revenue (money in) beats costs (money out). Know your price, your cost per sale, and your fixed monthly costs. Many businesses fail not from no sales but from not watching the money."
+    "h": "Model & plan",
+    "body": "Business model = how you make money. A one-page plan (customer, value, numbers) beats no plan."
    },
    {
-    "h": "Keep it legal and separate",
-    "body": "Pick a simple structure (many start as a sole proprietor or LLC), get any required licenses, and keep business money separate from personal from day one. It makes taxes and tracking vastly easier."
+    "h": "Legal & financial",
+    "body": "Pick a structure, handle licenses + taxes, separate business money, track income/expenses from day one."
    },
    {
-    "h": "Start small and improve",
-    "body": "You don't need everything perfect to begin. Launch a simple version, get real feedback, and improve. Most successful businesses look very different from their first version — the key is to start and adapt."
+    "h": "Launch lean",
+    "body": "Ship an MVP fast, learn from real customers, improve or pivot. Feedback beats endless planning."
    }
   ],
   "flash": [
    [
-    "Customer",
-    "The specific person who has the problem you solve."
+    "Entrepreneur",
+    "Someone who starts and runs a business, taking on risk."
+   ],
+   [
+    "Value",
+    "The benefit a business provides that customers pay for."
    ],
    [
     "Validation",
-    "Proving people will actually pay before investing big."
+    "Confirming customers will actually pay before you build."
    ],
    [
-    "Revenue",
-    "Total money coming in from sales."
+    "Business model",
+    "How a business makes money (what, to whom, profitably)."
    ],
    [
-    "Profit",
-    "What's left after costs are subtracted from revenue."
+    "Subscription",
+    "A recurring-fee business model."
    ],
    [
-    "Fixed costs",
-    "Expenses that stay the same regardless of sales."
+    "Business plan",
+    "A clear statement of customer, value, and the numbers."
+   ],
+   [
+    "Sole proprietorship",
+    "The simplest structure — you are the business."
    ],
    [
     "LLC",
-    "Limited Liability Company — a common simple business structure."
+    "A structure separating personal assets from business liability."
    ],
    [
-    "Margin",
-    "The profit left on each sale after its costs."
+    "Break-even",
+    "When revenue covers costs (no profit or loss yet)."
+   ],
+   [
+    "Startup costs",
+    "The upfront money needed to launch."
    ],
    [
     "MVP",
-    "Minimum viable product — the simplest version you can launch."
+    "Minimum viable product — the smallest version that delivers value."
+   ],
+   [
+    "Pivot",
+    "Changing direction based on what you learn."
    ]
   ],
   "quiz": [
    {
-    "q": "A business should start with:",
+    "q": "A business fundamentally succeeds by:",
     "options": [
-     "A real problem to solve",
-     "A cool logo",
-     "A big loan",
-     "A fancy office"
+     "Solving a problem people pay for",
+     "Having a clever name",
+     "Spending the most",
+     "Working alone"
     ],
     "a": 0,
-    "why": "Solving a real problem for real people is the foundation."
+    "why": "Value that customers pay for is the whole game."
    },
    {
-    "q": "The best proof that an idea works is:",
+    "q": "Do you need lots of money to start a business?",
     "options": [
-     "Real customers paying",
-     "Friends liking it",
-     "A nice website",
-     "A plan alone"
+     "No — many start small and lean",
+     "Yes, always",
+     "Only millionaires can",
+     "A loan is required"
     ],
     "a": 0,
-    "why": "Actual sales validate demand; opinions don't."
+    "why": "Many great businesses began scrappy."
    },
    {
-    "q": "Profit is:",
+    "q": "The best business ideas solve a problem that is:",
     "options": [
-     "Revenue minus costs",
-     "All money coming in",
-     "The price of one item",
-     "Your fixed costs"
+     "Real and felt by customers",
+     "Imaginary",
+     "Only yours",
+     "Invented by you"
     ],
     "a": 0,
-    "why": "Profit is what's left after you subtract costs from revenue."
+    "why": "Solve a felt pain, not one you must argue exists."
    },
    {
-    "q": "You should keep business and personal money:",
+    "q": "Before investing heavily, you should:",
     "options": [
-     "Separate",
-     "In one account",
-     "Only in cash",
-     "Untracked"
+     "Validate the idea with customers",
+     "Build everything first",
+     "Assume it's great",
+     "Keep it secret"
     ],
     "a": 0,
-    "why": "Separating them simplifies taxes and tracking from day one."
+    "why": "Cheap early validation prevents building what nobody wants."
    },
    {
-    "q": "An MVP is:",
+    "q": "A business model is:",
     "options": [
-     "The simplest version you can launch",
-     "A finished perfect product",
-     "A marketing plan",
+     "How the business makes money",
+     "A toy model",
+     "A logo",
      "A tax form"
     ],
     "a": 0,
-    "why": "A minimum viable product lets you test with real users fast."
+    "why": "What you sell, to whom, profitably."
    },
    {
-    "q": "Many small businesses fail because they:",
+    "q": "A recurring-fee model is a:",
     "options": [
-     "Don't watch their numbers",
-     "Have too many sales",
-     "Start too small",
-     "Talk to customers too much"
+     "Subscription",
+     "One-time sale",
+     "Donation",
+     "Loan"
     ],
     "a": 0,
-    "why": "Losing track of money sinks businesses even with sales."
+    "why": "Subscriptions earn recurring revenue."
+   },
+   {
+    "q": "A business plan is best thought of as:",
+    "options": [
+     "A tool for thinking clearly",
+     "A perfect prediction",
+     "Useless",
+     "A legal requirement to sell"
+    ],
+    "a": 0,
+    "why": "It forces clear thinking; reality will differ."
+   },
+   {
+    "q": "The simplest business structure is a:",
+    "options": [
+     "Sole proprietorship",
+     "Corporation",
+     "Franchise",
+     "Partnership of 50"
+    ],
+    "a": 0,
+    "why": "You are the business; least paperwork."
+   },
+   {
+    "q": "An LLC mainly provides:",
+    "options": [
+     "Separation of personal and business liability",
+     "Free money",
+     "No taxes ever",
+     "Guaranteed success"
+    ],
+    "a": 0,
+    "why": "It protects personal assets."
+   },
+   {
+    "q": "From day one you should:",
+    "options": [
+     "Separate business money and track income/expenses",
+     "Mix all money",
+     "Ignore taxes",
+     "Keep no records"
+    ],
+    "a": 0,
+    "why": "Clean records prevent painful problems later."
+   },
+   {
+    "q": "'Break-even' is when:",
+    "options": [
+     "Revenue covers costs",
+     "You go bankrupt",
+     "You get rich",
+     "You start"
+    ],
+    "a": 0,
+    "why": "No profit or loss — costs are covered."
+   },
+   {
+    "q": "An MVP is the:",
+    "options": [
+     "Smallest version that delivers real value",
+     "Most valuable player",
+     "Most expensive product",
+     "Final perfect product"
+    ],
+    "a": 0,
+    "why": "Ship it fast to learn from customers."
+   },
+   {
+    "q": "Launching lean means:",
+    "options": [
+     "Getting a basic version to customers quickly",
+     "Perfecting in secret for years",
+     "Spending huge amounts first",
+     "Never launching"
+    ],
+    "a": 0,
+    "why": "Real feedback beats endless planning."
+   },
+   {
+    "q": "Changing direction based on what you learn is a:",
+    "options": [
+     "Pivot",
+     "Failure",
+     "Loss",
+     "Launch"
+    ],
+    "a": 0,
+    "why": "Pivoting adapts to real customer feedback."
+   },
+   {
+    "q": "The biggest risk in starting up is:",
+    "options": [
+     "Building something nobody wants",
+     "Trying at all",
+     "Talking to customers",
+     "Starting small"
+    ],
+    "a": 0,
+    "why": "That's why early validation matters."
    }
   ]
  },
@@ -21518,6 +21669,1131 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Seeking help is wisdom, not weakness."
+   }
+  ]
+ },
+ "business-marketing": {
+  "title": "Marketing",
+  "subject": "Business & Entrepreneurship",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand what marketing is (and isn't)",
+   "Define a target market and value proposition",
+   "Understand the marketing mix (4 Ps)",
+   "Understand the marketing funnel and channels",
+   "Market on a small budget"
+  ],
+  "intro": "Marketing is how a business connects its product with the customers who need it — understanding those customers, communicating value, and getting them to buy. It's far more than advertising. This lesson covers the fundamentals of marketing and how to do it even with little money.",
+  "sections": [
+   {
+    "h": "What marketing really is",
+    "body": "Marketing is everything a business does to understand its customers and connect them with its product or service — far more than just ads. At its heart, marketing is about understanding what customers want and need, then communicating how your offering meets that need better than the alternatives. Advertising is just one visible piece.\n\nA useful way to think about it: marketing is not about shouting how great you are; it's about clearly showing customers how you solve their problem. Good marketing starts with the customer (who are they, what do they want, where do they look for solutions?), not with the product. Businesses that obsess over their customers' needs market naturally and effectively; those that only talk about themselves struggle.",
+    "tip": "Marketing = understanding customers and connecting them to your solution — not just ads. Start with the customer, not the product."
+   },
+   {
+    "h": "Target market and value proposition",
+    "body": "You can't market to 'everyone' effectively, so successful marketing starts by defining a target market — the specific group of people most likely to want your product. The more clearly you know your ideal customer (their needs, habits, where they spend time), the more effectively and cheaply you can reach them. Trying to appeal to everyone usually appeals to no one.\n\nThen you need a clear value proposition: a simple statement of the specific value you provide and why someone should choose you over alternatives. What problem do you solve, for whom, and what makes you different or better (faster, cheaper, higher quality, more convenient)? A sharp value proposition — 'we help [this customer] achieve [this result] by [how]' — is the foundation of all your marketing messages.",
+    "tip": "Define a specific target market (not 'everyone') and a clear value proposition (what you do, for whom, and why you're the better choice)."
+   },
+   {
+    "h": "The marketing mix (4 Ps)",
+    "body": "A classic framework for marketing decisions is the 4 Ps, or marketing mix. Product: what you're selling and how it meets the customer's need (features, quality, design). Price: what you charge — which signals value, must cover costs with profit, and should fit what your market will pay. Place: where and how customers get it (a store, online, delivery) — being available where your customers are.\n\nPromotion: how you communicate and persuade — advertising, social media, word of mouth, content, promotions. These four work together and must be consistent: a premium product needs a premium price, a fitting place, and matching promotion. The 4 Ps are a checklist to make sure you've thought through every lever of how your offering reaches and appeals to customers.",
+    "visual": "<svg viewBox=\"0 0 250 98\" width=\"240\" role=\"img\" aria-label=\"The 4 Ps of the marketing mix\"><rect x=\"8\" y=\"5\" width=\"86\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"94\" y=\"5\" width=\"148\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9.5\">Product</text><text x=\"100\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">what you sell / need it meets</text><rect x=\"8\" y=\"27\" width=\"86\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"94\" y=\"27\" width=\"148\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9.5\">Price</text><text x=\"100\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">what you charge (cost + profit)</text><rect x=\"8\" y=\"49\" width=\"86\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"94\" y=\"49\" width=\"148\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9.5\">Place</text><text x=\"100\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">where/how customers get it</text><rect x=\"8\" y=\"71\" width=\"86\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"94\" y=\"71\" width=\"148\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9.5\">Promotion</text><text x=\"100\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">how you communicate & persuade</text></svg>",
+    "caption": "The 4 Ps of the marketing mix — they must work together and match each other.",
+    "tip": "The 4 Ps (marketing mix): Product, Price, Place, Promotion. They must work together and match each other."
+   },
+   {
+    "h": "The marketing funnel and channels",
+    "body": "Customers usually don't buy instantly; they move through stages, often pictured as a funnel: awareness (they learn you exist), interest (they want to know more), decision (they evaluate and consider buying), and action (they buy). Many people enter at the top; fewer reach the bottom — so marketing aims to attract many and guide them toward a purchase.\n\nTo reach people, you use marketing channels: social media, search engines, email, content (blogs/videos), word-of-mouth/referrals, local advertising, and more. Different channels suit different businesses and budgets. The key is to be where your target customers actually are, and to match your message to their funnel stage (build awareness with some content, close the sale with others). Track what works and do more of it.",
+    "tip": "Customers move through a funnel: awareness → interest → decision → action. Reach them on the right channels and match your message to the stage."
+   },
+   {
+    "h": "Marketing on a small budget",
+    "body": "You don't need a big budget to market well — many of the most effective tactics are cheap or free, especially for small and local businesses. Word-of-mouth and referrals are the most powerful and trusted marketing there is: do great work, then ask happy customers to refer you and leave reviews. A free Google Business Profile and good reviews drive local customers.\n\nOther low-cost tactics: a simple website, social media (free to post), helpful content that attracts your audience, partnering with complementary businesses, and showing up where your community is (local groups, events). Focus on a couple of channels and do them well rather than spreading thin. And always track where customers come from, so you spend time and money on what actually works. Consistency and genuine value beat a big budget.",
+    "tip": "Small budget? Word-of-mouth + reviews are king. Use free tools (Google Business, social, content), focus on a couple of channels, and track what works."
+   }
+  ],
+  "cards": [
+   {
+    "h": "What marketing is",
+    "body": "Understanding customers and connecting them to your solution — not just ads. Start with the customer."
+   },
+   {
+    "h": "Target & value prop",
+    "body": "Define a specific target market (not everyone) and a clear value proposition (what/for whom/why you)."
+   },
+   {
+    "h": "4 Ps",
+    "body": "Product, Price, Place, Promotion — the marketing mix; they must match each other."
+   },
+   {
+    "h": "Funnel & channels",
+    "body": "Awareness → interest → decision → action. Be on the right channels; match message to stage."
+   },
+   {
+    "h": "Small budget",
+    "body": "Word-of-mouth + reviews rule; use free tools, focus on a couple of channels, track what works."
+   }
+  ],
+  "flash": [
+   [
+    "Marketing",
+    "Understanding customers and connecting them to your offering."
+   ],
+   [
+    "Target market",
+    "The specific group most likely to want your product."
+   ],
+   [
+    "Value proposition",
+    "The specific value you offer and why to choose you."
+   ],
+   [
+    "Marketing mix",
+    "The combination of marketing decisions (the 4 Ps)."
+   ],
+   [
+    "4 Ps",
+    "Product, Price, Place, Promotion."
+   ],
+   [
+    "Promotion",
+    "How you communicate and persuade customers."
+   ],
+   [
+    "Marketing funnel",
+    "Stages from awareness to purchase."
+   ],
+   [
+    "Brand",
+    "How customers perceive and recognize your business."
+   ],
+   [
+    "Word-of-mouth",
+    "Customers recommending you to others."
+   ],
+   [
+    "Channel",
+    "A path to reach customers (social, search, email)."
+   ],
+   [
+    "Referral",
+    "A new customer sent by an existing one."
+   ],
+   [
+    "Conversion",
+    "When a prospect becomes a paying customer."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Marketing is:",
+    "options": [
+     "Understanding customers and connecting them to your solution",
+     "Only advertising",
+     "Only a logo",
+     "Only sales calls"
+    ],
+    "a": 0,
+    "why": "It's far more than ads."
+   },
+   {
+    "q": "Good marketing starts with:",
+    "options": [
+     "The customer",
+     "The product",
+     "The logo",
+     "The office"
+    ],
+    "a": 0,
+    "why": "Know who they are and what they want first."
+   },
+   {
+    "q": "You should market to:",
+    "options": [
+     "A specific target market",
+     "Literally everyone",
+     "No one",
+     "Only yourself"
+    ],
+    "a": 0,
+    "why": "Appealing to everyone appeals to no one."
+   },
+   {
+    "q": "A value proposition states:",
+    "options": [
+     "The value you offer and why to choose you",
+     "Your phone number",
+     "Your logo colors",
+     "Your office hours"
+    ],
+    "a": 0,
+    "why": "What you do, for whom, and why you're better."
+   },
+   {
+    "q": "The 4 Ps are:",
+    "options": [
+     "Product, Price, Place, Promotion",
+     "Plan, Profit, People, Power",
+     "Push, Pull, Post, Pay",
+     "Pretty, Pricey, Popular, Polite"
+    ],
+    "a": 0,
+    "why": "The marketing mix."
+   },
+   {
+    "q": "In the 4 Ps, 'Place' means:",
+    "options": [
+     "Where/how customers get it",
+     "Your home",
+     "The price",
+     "The ad"
+    ],
+    "a": 0,
+    "why": "Being available where customers are."
+   },
+   {
+    "q": "The 4 Ps must:",
+    "options": [
+     "Work together and match",
+     "Contradict each other",
+     "Be ignored",
+     "Be random"
+    ],
+    "a": 0,
+    "why": "A premium product needs matching price/place/promotion."
+   },
+   {
+    "q": "The marketing funnel goes:",
+    "options": [
+     "Awareness → interest → decision → action",
+     "Action → awareness",
+     "Sale → awareness",
+     "Randomly"
+    ],
+    "a": 0,
+    "why": "Attract many, guide them toward buying."
+   },
+   {
+    "q": "A marketing channel is:",
+    "options": [
+     "A path to reach customers (social, search)",
+     "A TV station only",
+     "A river",
+     "A price"
+    ],
+    "a": 0,
+    "why": "Different channels suit different businesses."
+   },
+   {
+    "q": "The key with channels is to:",
+    "options": [
+     "Be where your customers actually are",
+     "Use every channel at once",
+     "Avoid all of them",
+     "Only use TV"
+    ],
+    "a": 0,
+    "why": "Focus where your target audience is."
+   },
+   {
+    "q": "For a small/local business, the most powerful marketing is:",
+    "options": [
+     "Word-of-mouth and reviews",
+     "Expensive TV ads",
+     "Billboards only",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Trusted recommendations drive local business."
+   },
+   {
+    "q": "A free tool that drives local customers is:",
+    "options": [
+     "A Google Business Profile",
+     "A paid superbowl ad",
+     "A private diary",
+     "Nothing free exists"
+    ],
+    "a": 0,
+    "why": "GBP + reviews boost local search."
+   },
+   {
+    "q": "With a small budget, you should:",
+    "options": [
+     "Focus on a couple of channels and do them well",
+     "Spread across all channels thinly",
+     "Spend nothing ever",
+     "Only buy ads"
+    ],
+    "a": 0,
+    "why": "Focus beats spreading thin."
+   },
+   {
+    "q": "You should always:",
+    "options": [
+     "Track where customers come from",
+     "Guess what works",
+     "Ignore results",
+     "Never measure"
+    ],
+    "a": 0,
+    "why": "Spend time/money on what actually works."
+   },
+   {
+    "q": "When a prospect becomes a paying customer, that's a:",
+    "options": [
+     "Conversion",
+     "Funnel",
+     "Channel",
+     "Brand"
+    ],
+    "a": 0,
+    "why": "Conversion is the goal of the funnel."
+   }
+  ]
+ },
+ "business-accounting-basics": {
+  "title": "Accounting Basics",
+  "subject": "Business & Entrepreneurship",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand why accounting matters",
+   "Understand revenue, expenses, and profit",
+   "Understand the accounting equation (assets, liabilities, equity)",
+   "Know the main financial statements",
+   "Understand cash flow and basic bookkeeping"
+  ],
+  "intro": "Accounting is the language of business — the system for recording, organizing, and understanding a business's money. You don't have to be an accountant to grasp the basics, and understanding them is essential whether you run a business or just want to manage money well. This lesson covers the core concepts.",
+  "sections": [
+   {
+    "h": "Why accounting matters",
+    "body": "Accounting is the process of recording and reporting a business's financial activity — every dollar in and out. Its purpose is to answer vital questions: Is the business making money? Where is it going? Can it pay its bills? Without accounting, you're flying blind, and 'poor financial management' is one of the top reasons businesses fail.\n\nGood records also keep you legal (taxes require accurate records) and let you make smart decisions (which products are profitable, where to cut costs). You don't need to do complex accounting yourself — software and accountants help — but understanding the basics means you can actually read your business's financial story instead of just hoping it works out. Accounting turns a pile of transactions into a clear picture of financial health.",
+    "tip": "Accounting records money in and out so you know: are we making money, where's it going, can we pay our bills? It prevents flying blind."
+   },
+   {
+    "h": "Revenue, expenses, and profit",
+    "body": "The most fundamental idea in business finance is simple: Profit = Revenue − Expenses. Revenue (or 'sales'/'income') is the money coming in from selling your products or services. Expenses are the costs of running the business — materials, rent, wages, supplies, marketing, everything you spend. What's left after expenses is profit (and if expenses exceed revenue, that's a loss).\n\nThis simple equation drives everything. To be profitable, you either increase revenue (sell more, or charge more) or decrease expenses (spend less) — ideally both. A common beginner mistake is confusing revenue with profit: a business can have huge sales and still lose money if its expenses are higher. Always look at what's left after costs, not just what came in.",
+    "example": "Revenue $10,000 − Expenses $7,000 = Profit $3,000. (Big revenue with bigger expenses = a loss, not success.)",
+    "tip": "Profit = Revenue − Expenses. Don't confuse revenue (money in) with profit (what's left). High sales can still be a loss."
+   },
+   {
+    "h": "The accounting equation",
+    "body": "The foundation of all accounting is one equation: Assets = Liabilities + Equity. Assets are everything the business owns that has value (cash, equipment, inventory, money owed to it). Liabilities are what the business owes to others (loans, unpaid bills, debts). Equity (or 'owner's equity') is what's left for the owners after subtracting liabilities from assets — essentially the owners' stake in the business.\n\nThis equation must always balance (hence 'balance sheet'), which is the basis of double-entry bookkeeping: every transaction affects at least two accounts to keep it balanced. You don't need to master double-entry to understand the idea: what you own is funded either by what you owe (liabilities) or by your own stake (equity). It's the framework for understanding a business's overall financial position.",
+    "visual": "<svg viewBox=\"0 0 252 112\" width=\"245\" role=\"img\" aria-label=\"The accounting equation: assets equal liabilities plus equity; and profit equals revenue minus expenses\"><rect x=\"8\" y=\"16\" width=\"62\" height=\"34\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"39\" y=\"37\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Assets</text><text x=\"80\" y=\"37\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"14\">=</text><rect x=\"92\" y=\"16\" width=\"74\" height=\"34\" rx=\"6\" fill=\"rgba(240,90,90,.16)\" stroke=\"#f05a5a\" stroke-width=\"1.5\"/><text x=\"129\" y=\"37\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Liabilities</text><text x=\"174\" y=\"37\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"14\">+</text><rect x=\"184\" y=\"16\" width=\"60\" height=\"34\" rx=\"6\" fill=\"rgba(57,227,200,.14)\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><text x=\"214\" y=\"37\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Equity</text><text x=\"126\" y=\"64\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">what you own = what you owe + your stake</text><line x1=\"20\" y1=\"76\" x2=\"232\" y2=\"76\" stroke=\"#2a2a3a\" stroke-width=\"1\"/><text x=\"126\" y=\"98\" text-anchor=\"middle\" fill=\"#9adbcf\" font-size=\"11\">Profit = Revenue − Expenses</text></svg>",
+    "caption": "The two core formulas: Assets = Liabilities + Equity, and Profit = Revenue − Expenses.",
+    "tip": "The accounting equation: Assets = Liabilities + Equity (what you own = what you owe + your stake). It always balances."
+   },
+   {
+    "h": "Financial statements",
+    "body": "Accounting produces three key reports that together tell a business's financial story. The income statement (or profit & loss statement) shows revenue, expenses, and profit over a period — did we make money? The balance sheet shows assets, liabilities, and equity at a point in time — what we own and owe, our financial position. The cash flow statement shows the actual cash moving in and out — crucial because a profitable business can still run out of cash.\n\nTogether these answer different questions: profitability (income statement), position/net worth (balance sheet), and liquidity (cash flow). You don't have to prepare these by hand — software generates them — but learning to read them is a superpower: they reveal whether a business is truly healthy, which the owner's gut feeling often gets wrong.",
+    "tip": "Three reports: income statement (profit over time), balance sheet (what you own/owe now), cash flow statement (actual cash moving)."
+   },
+   {
+    "h": "Cash flow and bookkeeping",
+    "body": "A critical and often-missed concept is cash flow — the timing of money in and out. A business can be profitable on paper yet fail because it runs out of cash (customers pay late, but bills are due now). 'Cash flow' problems kill many businesses, so managing the timing of money — keeping enough cash on hand, invoicing promptly, controlling when bills are paid — is as important as being profitable.\n\nUnderlying it all is bookkeeping: the day-to-day recording of transactions. The basics: record every transaction, keep receipts, separate business and personal finances, and reconcile your records with your bank regularly. Software (or a bookkeeper) makes this manageable. Good bookkeeping from day one prevents a painful mess at tax time and gives you the accurate data all the above relies on. In business, what gets measured gets managed.",
+    "tip": "Cash flow (timing of money) can sink even a profitable business — keep cash on hand. And do bookkeeping (record everything) from day one."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Why it matters",
+    "body": "Records money in/out so you know if you're profitable and can pay bills. Prevents the #1 killer: poor money management."
+   },
+   {
+    "h": "Profit formula",
+    "body": "Profit = Revenue − Expenses. Don't confuse revenue with profit — high sales can still lose money."
+   },
+   {
+    "h": "Accounting equation",
+    "body": "Assets = Liabilities + Equity (what you own = what you owe + your stake). Always balances."
+   },
+   {
+    "h": "Statements",
+    "body": "Income statement (profit over time), balance sheet (own/owe now), cash flow statement (actual cash)."
+   },
+   {
+    "h": "Cash flow & books",
+    "body": "Cash-flow timing can sink a profitable business; do bookkeeping (record everything) from day one."
+   }
+  ],
+  "flash": [
+   [
+    "Accounting",
+    "Recording and reporting a business's financial activity."
+   ],
+   [
+    "Revenue",
+    "Money coming in from sales."
+   ],
+   [
+    "Expenses",
+    "The costs of running the business."
+   ],
+   [
+    "Profit",
+    "Revenue minus expenses (what's left)."
+   ],
+   [
+    "Loss",
+    "When expenses exceed revenue."
+   ],
+   [
+    "Assets",
+    "Everything the business owns of value."
+   ],
+   [
+    "Liabilities",
+    "What the business owes to others."
+   ],
+   [
+    "Equity",
+    "The owners' stake (assets minus liabilities)."
+   ],
+   [
+    "Income statement",
+    "A report of revenue, expenses, and profit over time."
+   ],
+   [
+    "Balance sheet",
+    "A snapshot of assets, liabilities, and equity."
+   ],
+   [
+    "Cash flow",
+    "The timing of money moving in and out."
+   ],
+   [
+    "Bookkeeping",
+    "The day-to-day recording of transactions."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Accounting's purpose is to answer:",
+    "options": [
+     "Are we making money, and can we pay bills?",
+     "What's the logo?",
+     "Who to hire?",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "It records money in/out to show financial health."
+   },
+   {
+    "q": "A top reason businesses fail is:",
+    "options": [
+     "Poor financial management",
+     "Too many customers",
+     "Good records",
+     "Low prices once"
+    ],
+    "a": 0,
+    "why": "Flying blind on money sinks businesses."
+   },
+   {
+    "q": "Profit equals:",
+    "options": [
+     "Revenue − Expenses",
+     "Revenue + Expenses",
+     "Just revenue",
+     "Just sales"
+    ],
+    "a": 0,
+    "why": "What's left after costs."
+   },
+   {
+    "q": "Revenue is:",
+    "options": [
+     "Money coming in from sales",
+     "What's left after costs",
+     "What you owe",
+     "Your equipment"
+    ],
+    "a": 0,
+    "why": "Revenue = sales/income in."
+   },
+   {
+    "q": "A business with huge sales can still:",
+    "options": [
+     "Lose money (if expenses are higher)",
+     "Never lose money",
+     "Skip taxes",
+     "Ignore costs"
+    ],
+    "a": 0,
+    "why": "Don't confuse revenue with profit."
+   },
+   {
+    "q": "The accounting equation is:",
+    "options": [
+     "Assets = Liabilities + Equity",
+     "Profit = Assets",
+     "Revenue = Equity",
+     "Cash = Debt"
+    ],
+    "a": 0,
+    "why": "What you own = what you owe + your stake."
+   },
+   {
+    "q": "Assets are:",
+    "options": [
+     "Everything the business owns of value",
+     "What you owe",
+     "Your losses",
+     "Your taxes"
+    ],
+    "a": 0,
+    "why": "Cash, equipment, inventory, receivables."
+   },
+   {
+    "q": "Liabilities are:",
+    "options": [
+     "What the business owes others",
+     "What it owns",
+     "Its profit",
+     "Its sales"
+    ],
+    "a": 0,
+    "why": "Loans, unpaid bills, debts."
+   },
+   {
+    "q": "Equity is:",
+    "options": [
+     "The owners' stake (assets − liabilities)",
+     "Total sales",
+     "Total debt",
+     "Cash only"
+    ],
+    "a": 0,
+    "why": "What's left for owners after liabilities."
+   },
+   {
+    "q": "Which statement shows profit over a period?",
+    "options": [
+     "Income statement",
+     "Balance sheet",
+     "Cash flow statement",
+     "Business plan"
+    ],
+    "a": 0,
+    "why": "The income (P&L) statement shows revenue/expenses/profit."
+   },
+   {
+    "q": "Which shows what you own and owe at a point in time?",
+    "options": [
+     "Balance sheet",
+     "Income statement",
+     "Receipt",
+     "Invoice"
+    ],
+    "a": 0,
+    "why": "The balance sheet is a snapshot of position."
+   },
+   {
+    "q": "A profitable business can still fail because of:",
+    "options": [
+     "Cash flow problems (timing of money)",
+     "Too much cash",
+     "Good bookkeeping",
+     "Low expenses"
+    ],
+    "a": 0,
+    "why": "Running out of cash kills businesses."
+   },
+   {
+    "q": "To manage cash flow, you should:",
+    "options": [
+     "Keep cash on hand and invoice promptly",
+     "Spend all cash fast",
+     "Never invoice",
+     "Pay bills early always"
+    ],
+    "a": 0,
+    "why": "Timing matters as much as profit."
+   },
+   {
+    "q": "Bookkeeping means:",
+    "options": [
+     "Recording transactions day to day",
+     "Reading books",
+     "Writing a plan",
+     "Marketing"
+    ],
+    "a": 0,
+    "why": "Record everything, keep receipts, reconcile."
+   },
+   {
+    "q": "You should start bookkeeping:",
+    "options": [
+     "From day one",
+     "At tax time only",
+     "After 5 years",
+     "Never"
+    ],
+    "a": 0,
+    "why": "It prevents a painful mess and gives accurate data."
+   }
+  ]
+ },
+ "business-management": {
+  "title": "Management",
+  "subject": "Business & Entrepreneurship",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand the four functions of management",
+   "Distinguish leadership from management",
+   "Motivate and work well with people",
+   "Delegate and communicate effectively",
+   "Avoid common management mistakes"
+  ],
+  "intro": "Management is getting work done through and with other people — planning, organizing, and guiding a team toward goals. Good management turns a group of individuals into a productive team, and it's a learnable skill whether you lead two people or two hundred. This lesson covers the core functions and principles of managing well.",
+  "sections": [
+   {
+    "h": "What management is: the four functions",
+    "body": "Management is the process of coordinating people and resources to achieve goals. Classically, it's broken into four functions. Planning: setting goals and deciding how to reach them (what needs to happen, when, by whom). Organizing: arranging the people, tasks, and resources to carry out the plan. Leading: motivating, guiding, and directing people to do the work well. Controlling: monitoring progress, measuring results, and adjusting as needed.\n\nThese four functions repeat continuously: you plan, organize, lead, and control, then re-plan based on results. Together they turn intentions into outcomes. A manager who only plans but never follows up (controls), or who organizes but can't motivate (lead), will struggle. Good management means doing all four well — and the balance shifts with the situation.",
+    "visual": "<svg viewBox=\"0 0 250 98\" width=\"240\" role=\"img\" aria-label=\"The four functions of management\"><rect x=\"8\" y=\"5\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"5\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9.5\">Planning</text><text x=\"110\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">set goals + how to reach them</text><rect x=\"8\" y=\"27\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"27\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9.5\">Organizing</text><text x=\"110\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">arrange people, tasks, resources</text><rect x=\"8\" y=\"49\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"49\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9.5\">Leading</text><text x=\"110\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">motivate and guide people</text><rect x=\"8\" y=\"71\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"71\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9.5\">Controlling</text><text x=\"110\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">monitor results and adjust</text></svg>",
+    "caption": "The four functions of management — done continuously, they turn plans into results.",
+    "tip": "The four functions of management: Plan (set goals), Organize (arrange resources), Lead (motivate), Control (monitor & adjust)."
+   },
+   {
+    "h": "Leadership vs management",
+    "body": "Management and leadership overlap but aren't the same. Management is about systems and execution — planning, organizing, and making sure the work gets done correctly and efficiently. Leadership is about people and direction — inspiring, setting a vision, building trust, and bringing out the best in others. A common saying: managers do things right; leaders do the right things.\n\nThe best bosses combine both: they manage the work competently and lead the people genuinely. You can be a manager without being a great leader (keeping things running but uninspiring), or a leader without a formal title (inspiring others through influence). For running a team well, you need the organizational discipline of management and the human, motivating side of leadership. Both can be developed with effort and self-awareness.",
+    "tip": "Management = systems/execution (doing things right). Leadership = people/vision (doing the right things). Great bosses do both."
+   },
+   {
+    "h": "Motivating and working with people",
+    "body": "Since management is getting work done through people, understanding what motivates them is central. People are motivated by more than money: a sense of purpose, feeling valued and respected, growth and learning, autonomy (control over their work), and recognition. A manager who treats people as mere tools gets compliance; one who engages their real motivations gets commitment and better work.\n\nPractical principles: set clear expectations (people can't meet goals they don't understand), give regular, specific feedback (both praise and constructive), recognize good work genuinely, treat people fairly and with respect, and help them grow. Listen more than you talk, and remember that how you make people feel shapes how they perform. Good people management isn't soft — it's the practical key to results, because engaged people do far better work.",
+    "tip": "People are motivated by purpose, respect, growth, and recognition — not just pay. Set clear expectations, give feedback, and treat people fairly."
+   },
+   {
+    "h": "Delegation and communication",
+    "body": "Two skills make or break managers. Delegation is assigning tasks and authority to others — essential because a manager can't (and shouldn't) do everything. Good delegation means giving someone a clear task, the authority and resources to do it, and the trust to do it their way, then holding them accountable for the result. Failing to delegate (doing it all yourself) leads to burnout and a bottleneck; over-controlling ('micromanaging') frustrates people and wastes your time.\n\nCommunication is the other pillar: clear, frequent, two-way communication prevents most team problems. Make sure people know what's expected and why, keep them informed, listen to their input and concerns, and address issues directly rather than letting them fester. Most management failures trace back to poor delegation (a bottleneck or control freak) or poor communication (confusion and mistrust). Get these two right and most else follows.",
+    "tip": "Delegate (give clear tasks + authority + trust, then hold accountable) and communicate clearly both ways. Don't micromanage or go silent."
+   },
+   {
+    "h": "Common management mistakes",
+    "body": "New managers tend to make predictable mistakes, and knowing them helps you avoid them. Micromanaging (controlling every detail) signals distrust and exhausts everyone. Avoiding difficult conversations (not addressing poor performance or conflict) lets problems grow. Taking all the credit and none of the blame destroys trust — good managers do the reverse. Failing to give feedback leaves people guessing.\n\nOther traps: being a friend instead of a fair boss, not setting clear priorities, and never developing your people. The through-line is that management is about the team, not the manager's ego. The shift from 'doing the work' to 'enabling others to do the work well' is the core transition, and it's genuinely hard. Being a good manager means serving your team's ability to succeed — a skill you keep improving at over a career.",
+    "tip": "Avoid micromanaging, dodging hard conversations, hogging credit, and withholding feedback. Management serves the team's success, not your ego."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Four functions",
+    "body": "Plan (goals), Organize (resources), Lead (motivate), Control (monitor & adjust) — done continuously."
+   },
+   {
+    "h": "Leadership vs mgmt",
+    "body": "Management = doing things right (systems); leadership = doing the right things (people/vision). Best bosses do both."
+   },
+   {
+    "h": "Motivating people",
+    "body": "Purpose, respect, growth, recognition — not just pay. Clear expectations + feedback + fairness."
+   },
+   {
+    "h": "Delegate & communicate",
+    "body": "Give clear tasks + authority + trust, then hold accountable; communicate clearly both ways. No micromanaging."
+   },
+   {
+    "h": "Mistakes",
+    "body": "Micromanaging, dodging hard talks, hogging credit, no feedback. Serve the team, not the ego."
+   }
+  ],
+  "flash": [
+   [
+    "Management",
+    "Coordinating people and resources to achieve goals."
+   ],
+   [
+    "Planning",
+    "Setting goals and how to reach them."
+   ],
+   [
+    "Organizing",
+    "Arranging people, tasks, and resources."
+   ],
+   [
+    "Leading",
+    "Motivating and guiding people."
+   ],
+   [
+    "Controlling",
+    "Monitoring results and adjusting."
+   ],
+   [
+    "Leadership",
+    "Inspiring and setting direction for people."
+   ],
+   [
+    "Motivation",
+    "What drives people (purpose, respect, growth)."
+   ],
+   [
+    "Delegation",
+    "Assigning tasks and authority to others."
+   ],
+   [
+    "Micromanaging",
+    "Over-controlling every detail (a mistake)."
+   ],
+   [
+    "Feedback",
+    "Input on performance (praise and constructive)."
+   ],
+   [
+    "Accountability",
+    "Holding people responsible for results."
+   ],
+   [
+    "Communication",
+    "Clear, two-way sharing of information."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Management is getting work done:",
+    "options": [
+     "Through and with other people",
+     "Entirely alone",
+     "By doing everything yourself",
+     "Without goals"
+    ],
+    "a": 0,
+    "why": "It coordinates people and resources toward goals."
+   },
+   {
+    "q": "The four functions of management are:",
+    "options": [
+     "Plan, organize, lead, control",
+     "Buy, sell, hire, fire",
+     "Start, stop, wait, go",
+     "Talk, walk, work, rest"
+    ],
+    "a": 0,
+    "why": "The classic four functions."
+   },
+   {
+    "q": "Setting goals and how to reach them is:",
+    "options": [
+     "Planning",
+     "Controlling",
+     "Leading",
+     "Organizing"
+    ],
+    "a": 0,
+    "why": "Planning decides what/when/by whom."
+   },
+   {
+    "q": "Monitoring results and adjusting is:",
+    "options": [
+     "Controlling",
+     "Planning",
+     "Leading",
+     "Hiring"
+    ],
+    "a": 0,
+    "why": "Controlling measures and corrects."
+   },
+   {
+    "q": "A common saying is: managers do things right, leaders:",
+    "options": [
+     "Do the right things",
+     "Do nothing",
+     "Only plan",
+     "Avoid people"
+    ],
+    "a": 0,
+    "why": "Management = execution; leadership = direction."
+   },
+   {
+    "q": "The best bosses:",
+    "options": [
+     "Combine management and leadership",
+     "Only manage",
+     "Only lead",
+     "Do neither"
+    ],
+    "a": 0,
+    "why": "They run the work and inspire the people."
+   },
+   {
+    "q": "People are motivated by more than money, including:",
+    "options": [
+     "Purpose, respect, growth, recognition",
+     "Only cash",
+     "Only fear",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Engaging real motivations gets commitment."
+   },
+   {
+    "q": "A basic people-management principle is to:",
+    "options": [
+     "Set clear expectations",
+     "Keep goals secret",
+     "Never give feedback",
+     "Play favorites"
+    ],
+    "a": 0,
+    "why": "People can't meet goals they don't understand."
+   },
+   {
+    "q": "Delegation means:",
+    "options": [
+     "Assigning tasks and authority to others",
+     "Doing it all yourself",
+     "Ignoring tasks",
+     "Only giving orders"
+    ],
+    "a": 0,
+    "why": "A manager can't and shouldn't do everything."
+   },
+   {
+    "q": "Good delegation includes giving:",
+    "options": [
+     "Clear task + authority + trust, then accountability",
+     "Only blame",
+     "No resources",
+     "Constant control"
+    ],
+    "a": 0,
+    "why": "Empower, then hold accountable for results."
+   },
+   {
+    "q": "Over-controlling every detail is called:",
+    "options": [
+     "Micromanaging",
+     "Delegating",
+     "Leading",
+     "Planning"
+    ],
+    "a": 0,
+    "why": "It signals distrust and exhausts people."
+   },
+   {
+    "q": "Most management failures trace back to poor:",
+    "options": [
+     "Delegation or communication",
+     "Spelling",
+     "Office decor",
+     "Lunch choices"
+    ],
+    "a": 0,
+    "why": "Confusion and bottlenecks cause most problems."
+   },
+   {
+    "q": "When a team succeeds, a good manager:",
+    "options": [
+     "Shares the credit",
+     "Takes all the credit",
+     "Blames the team",
+     "Says nothing"
+    ],
+    "a": 0,
+    "why": "Good managers give credit, take blame."
+   },
+   {
+    "q": "Avoiding difficult conversations:",
+    "options": [
+     "Lets problems grow",
+     "Solves everything",
+     "Builds trust",
+     "Is good management"
+    ],
+    "a": 0,
+    "why": "Address issues directly before they fester."
+   },
+   {
+    "q": "The core transition to being a manager is:",
+    "options": [
+     "From doing the work to enabling others to",
+     "Doing more work yourself",
+     "Ignoring the team",
+     "Only giving orders"
+    ],
+    "a": 0,
+    "why": "Management serves the team's ability to succeed."
+   }
+  ]
+ },
+ "business-sales": {
+  "title": "Sales",
+  "subject": "Business & Entrepreneurship",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand what sales is (and isn't)",
+   "Understand the sales process steps",
+   "Understand and uncover customer needs",
+   "Handle objections and close the sale",
+   "Build trust and long-term relationships"
+  ],
+  "intro": "Sales is the process of helping customers decide to buy — the activity that actually brings in revenue, without which no business survives. Good selling isn't pushy manipulation; it's understanding what a customer needs and showing how you can help. This lesson covers how selling really works.",
+  "sections": [
+   {
+    "h": "What sales really is",
+    "body": "Sales is the process of persuading and helping a customer to buy a product or service. It's the lifeblood of every business — marketing creates interest, but sales turns that interest into actual revenue. Despite its reputation, good selling isn't about tricking people or being pushy; the best salespeople are trusted advisors who genuinely help customers solve problems.\n\nThe shift in modern selling is from 'always be closing' (pushing) to understanding and serving the customer. When you focus on genuinely helping — figuring out what someone actually needs and honestly showing how you can (or can't) help — selling becomes natural and builds trust, and trust is what makes people buy and come back. Pushy, dishonest selling might win one sale but burns the relationship. Think 'help,' not 'pressure.'",
+    "tip": "Sales = helping customers decide to buy. The best selling isn't pushy — it's understanding needs and genuinely helping. Think 'help,' not 'pressure.'"
+   },
+   {
+    "h": "The sales process",
+    "body": "Selling usually follows a recognizable process. Prospecting: finding potential customers (leads). Connecting and qualifying: reaching out and figuring out whether they're a real fit and have a genuine need. Discovering needs: asking questions to understand their situation and what they actually want. Presenting: showing how your product solves their specific problem. Handling objections: addressing their concerns and questions. Closing: asking for the sale. And following up: delivering well and staying in touch.\n\nEach step matters, but the biggest beginner mistake is jumping straight to presenting/pitching before understanding the customer's needs. Great salespeople spend more time listening and asking than talking. The process is a guide, not a rigid script — the point is to move a potential customer thoughtfully from interest to a decision that genuinely fits them.",
+    "visual": "<svg viewBox=\"0 0 230 174\" width=\"215\" role=\"img\" aria-label=\"A sales funnel narrowing from many prospects down to customers through qualify, present, and close\"><polygon points=\"15.0,15 215.0,15 197.5,51 32.5,51\" fill=\"rgba(79,156,240,.28)\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"115\" y=\"36\" text-anchor=\"middle\" fill=\"#eef3fb\" font-size=\"10\">Prospects</text><polygon points=\"32.5,51 197.5,51 180.0,87 50.0,87\" fill=\"rgba(57,227,200,.26)\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"115\" y=\"72\" text-anchor=\"middle\" fill=\"#eef3fb\" font-size=\"10\">Qualified</text><polygon points=\"50.0,87 180.0,87 162.5,123 67.5,123\" fill=\"rgba(232,140,70,.28)\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"115\" y=\"108\" text-anchor=\"middle\" fill=\"#eef3fb\" font-size=\"10\">Presented</text><polygon points=\"67.5,123 162.5,123 145.0,159 85.0,159\" fill=\"rgba(90,210,120,.3)\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"115\" y=\"144\" text-anchor=\"middle\" fill=\"#eef3fb\" font-size=\"10\">Customers</text><text x=\"115\" y=\"170\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">many prospects in, fewer become customers — guide them down</text></svg>",
+    "caption": "The sales funnel: many prospects enter; qualifying, presenting, and closing guide the fit ones to customers.",
+    "tip": "Sales steps: prospect → connect/qualify → discover needs → present → handle objections → close → follow up. Understand needs BEFORE pitching."
+   },
+   {
+    "h": "Understanding customer needs",
+    "body": "The heart of good selling is understanding what the customer actually needs — which means asking questions and listening far more than talking. People don't buy products; they buy solutions to problems and the results they want. Your job is to uncover the real problem (which may differ from what they first say) and the value a solution would bring them.\n\nAsk open questions ('What are you trying to accomplish?' 'What's not working now?' 'What would an ideal solution do for you?'), then listen carefully. This does two things: it lets you tailor your pitch to what they actually care about, and it builds trust (people feel understood). A salesperson who truly understands the customer can show exactly how their offering fits — or honestly say it doesn't, which paradoxically builds the trust that leads to future sales and referrals.",
+    "tip": "People buy solutions, not products. Ask open questions and LISTEN to find the real need; then show how you fit (or honestly say you don't)."
+   },
+   {
+    "h": "Handling objections and closing",
+    "body": "Objections — a customer's hesitations or concerns ('it's too expensive,' 'I need to think about it,' 'I'm not sure it'll work') — are a normal, even good part of selling: they show the person is engaged and tell you what's holding them back. Don't fight objections; welcome them, understand the real concern behind them, and address it honestly. Often an objection is really a request for more information or reassurance.\n\nClosing is simply asking for the sale — and many people lose sales by never actually asking. If you've understood their need and shown real value, closing is a natural next step, not a high-pressure trick ('Would you like to get started?'). Make it easy to say yes. If it's not the right fit, it's fine — and honest — to say so. Pressuring someone into a bad decision costs you the relationship and the referrals.",
+    "tip": "Welcome objections (they reveal the real concern — address it honestly). Then actually ASK for the sale — many people never close."
+   },
+   {
+    "h": "Building trust and relationships",
+    "body": "The best salespeople win through trust and relationships, not tricks. Trust is built by being honest (including about your product's limits), reliable (doing what you say), and genuinely helpful (putting the customer's real interest first, even when it means a smaller sale). This reputation is worth far more than any single deal.\n\nThe real payoff is in the long term: a happy customer buys again, refers others, and becomes a reference. In fact, referrals and repeat business are the cheapest, highest-quality sales there are — and they only come from trust. So treat every interaction as the start of a relationship, not a one-time transaction. Deliver on your promises, follow up, and take care of people. Ethical, helpful selling isn't just the right thing — it's also, over time, the most effective and profitable.",
+    "tip": "Win on trust: be honest (even about limits), reliable, and genuinely helpful. Happy customers buy again and refer — the cheapest, best sales there are."
+   }
+  ],
+  "cards": [
+   {
+    "h": "What sales is",
+    "body": "Helping customers decide to buy; turns marketing's interest into revenue. Think 'help,' not 'pressure.'"
+   },
+   {
+    "h": "The process",
+    "body": "Prospect → qualify → discover needs → present → handle objections → close → follow up. Needs BEFORE pitch."
+   },
+   {
+    "h": "Understand needs",
+    "body": "People buy solutions, not products. Ask open questions, listen, then show how you fit."
+   },
+   {
+    "h": "Objections & closing",
+    "body": "Welcome objections (address the real concern); then actually ASK for the sale."
+   },
+   {
+    "h": "Trust & relationships",
+    "body": "Honest, reliable, genuinely helpful. Repeat business + referrals are the best sales — from trust."
+   }
+  ],
+  "flash": [
+   [
+    "Sales",
+    "Helping and persuading a customer to buy."
+   ],
+   [
+    "Prospecting",
+    "Finding potential customers (leads)."
+   ],
+   [
+    "Lead",
+    "A potential customer."
+   ],
+   [
+    "Qualifying",
+    "Checking if a lead is a real fit with a need."
+   ],
+   [
+    "Needs discovery",
+    "Asking questions to find the real problem."
+   ],
+   [
+    "Objection",
+    "A customer's hesitation or concern."
+   ],
+   [
+    "Closing",
+    "Asking for the sale."
+   ],
+   [
+    "Upsell",
+    "Offering a higher or additional option."
+   ],
+   [
+    "Follow-up",
+    "Staying in touch after contact or a sale."
+   ],
+   [
+    "Referral",
+    "A new customer sent by a happy one."
+   ],
+   [
+    "Value",
+    "The benefit the customer gets from buying."
+   ],
+   [
+    "Trust",
+    "The foundation of repeat business and referrals."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Sales turns marketing's interest into:",
+    "options": [
+     "Actual revenue",
+     "A logo",
+     "A plan",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Sales is the lifeblood that brings in money."
+   },
+   {
+    "q": "The best selling is:",
+    "options": [
+     "Understanding needs and genuinely helping",
+     "Tricking people",
+     "Being pushy",
+     "Hiding the truth"
+    ],
+    "a": 0,
+    "why": "Trusted advisors sell best; think 'help,' not 'pressure.'"
+   },
+   {
+    "q": "Finding potential customers is:",
+    "options": [
+     "Prospecting",
+     "Closing",
+     "Delivering",
+     "Billing"
+    ],
+    "a": 0,
+    "why": "Prospecting generates leads."
+   },
+   {
+    "q": "Checking whether a lead is a real fit is:",
+    "options": [
+     "Qualifying",
+     "Closing",
+     "Upselling",
+     "Following up"
+    ],
+    "a": 0,
+    "why": "Qualifying confirms a genuine need/fit."
+   },
+   {
+    "q": "The biggest beginner mistake is to:",
+    "options": [
+     "Pitch before understanding needs",
+     "Ask too many questions",
+     "Listen too much",
+     "Follow up"
+    ],
+    "a": 0,
+    "why": "Understand the customer first."
+   },
+   {
+    "q": "Great salespeople spend more time:",
+    "options": [
+     "Listening and asking",
+     "Talking",
+     "Pressuring",
+     "Pitching"
+    ],
+    "a": 0,
+    "why": "Listening uncovers the real need."
+   },
+   {
+    "q": "People fundamentally buy:",
+    "options": [
+     "Solutions to problems",
+     "Products for no reason",
+     "The cheapest thing always",
+     "Logos"
+    ],
+    "a": 0,
+    "why": "They want results, not just a product."
+   },
+   {
+    "q": "Open questions in a sale help you:",
+    "options": [
+     "Find the real need and build trust",
+     "Talk more",
+     "Avoid the customer",
+     "Close instantly"
+    ],
+    "a": 0,
+    "why": "Understanding builds trust and tailors your pitch."
+   },
+   {
+    "q": "Objections from a customer are:",
+    "options": [
+     "Normal and useful (they show the real concern)",
+     "Always a rejection",
+     "A reason to quit",
+     "Bad luck"
+    ],
+    "a": 0,
+    "why": "They reveal what's holding the person back."
+   },
+   {
+    "q": "The best response to an objection is to:",
+    "options": [
+     "Understand the real concern and address it honestly",
+     "Fight it",
+     "Ignore it",
+     "Pressure harder"
+    ],
+    "a": 0,
+    "why": "Often it's a request for information or reassurance."
+   },
+   {
+    "q": "Closing is simply:",
+    "options": [
+     "Asking for the sale",
+     "Tricking the buyer",
+     "Lowering the price only",
+     "Walking away"
+    ],
+    "a": 0,
+    "why": "Many lose sales by never actually asking."
+   },
+   {
+    "q": "If a product isn't the right fit, you should:",
+    "options": [
+     "Honestly say so",
+     "Pressure them anyway",
+     "Lie",
+     "Hide it"
+    ],
+    "a": 0,
+    "why": "Honesty builds trust and future referrals."
+   },
+   {
+    "q": "Trust is built by being:",
+    "options": [
+     "Honest, reliable, and genuinely helpful",
+     "Pushy",
+     "Vague",
+     "Unavailable"
+    ],
+    "a": 0,
+    "why": "Reputation outlasts any single deal."
+   },
+   {
+    "q": "The cheapest, highest-quality sales come from:",
+    "options": [
+     "Repeat business and referrals",
+     "Cold calls only",
+     "Expensive ads",
+     "Pressure tactics"
+    ],
+    "a": 0,
+    "why": "They come from trust and happy customers."
+   },
+   {
+    "q": "You should treat each interaction as:",
+    "options": [
+     "The start of a relationship",
+     "A one-time transaction",
+     "A chance to pressure",
+     "Unimportant"
+    ],
+    "a": 0,
+    "why": "Relationships drive repeat business and referrals."
    }
   ]
  }
