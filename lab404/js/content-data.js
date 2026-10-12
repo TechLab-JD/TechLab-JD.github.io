@@ -4169,5 +4169,789 @@ window.LAB404_CONTENT = {
     "why": "Correlation alone doesn't establish that one causes the other."
    }
   ]
+ },
+ "money-saving-emergency-fund": {
+  "title": "Saving & Emergency Fund",
+  "subject": "Money & Investing",
+  "level": "Grades 9 - adult",
+  "intro": "Saving is the habit that gives you options and a cushion against life's surprises. The two pillars are an emergency fund for emergencies and savings goals for the things you're working toward.",
+  "cards": [
+   {
+    "h": "Why save at all",
+    "body": "Savings turn emergencies into inconveniences and dreams into plans. Without it, a surprise expense becomes debt and goals stay out of reach. Even small, regular amounts add up through consistency."
+   },
+   {
+    "h": "The emergency fund comes first",
+    "body": "Before investing or extra debt payoff, build a starter emergency fund — a common first goal is $500–$1,000, then work toward 3–6 months of expenses. Keep it in a separate, easy-to-reach account so you're not tempted to spend it."
+   },
+   {
+    "h": "Pay yourself first, automatically",
+    "body": "Savers who succeed don't rely on willpower — they automate it. Set up an automatic transfer to savings the day you're paid. You adjust to what's left, and the savings grow without a monthly decision."
+   },
+   {
+    "h": "Short-term vs. long-term goals",
+    "body": "Match the account to the timeline. Money you'll need within a few years (emergency fund, a car, a deposit) belongs somewhere safe and liquid like a high-yield savings account — not the stock market, which can drop right when you need it."
+   },
+   {
+    "h": "High-yield savings accounts",
+    "body": "A high-yield savings account (often online) pays far more interest than a regular bank savings account, with the same safety (FDIC insured). It's the right home for your emergency fund and short-term savings — earning a little while staying safe and available."
+   }
+  ],
+  "flash": [
+   [
+    "Emergency fund",
+    "Cash set aside only for true, unexpected expenses."
+   ],
+   [
+    "Pay yourself first",
+    "Automatically save when paid, before spending."
+   ],
+   [
+    "Liquid",
+    "Easily and quickly turned into cash without loss."
+   ],
+   [
+    "High-yield savings",
+    "A savings account paying much higher interest, still safe."
+   ],
+   [
+    "FDIC insured",
+    "Bank deposits protected by the government up to a limit."
+   ],
+   [
+    "Sinking fund",
+    "Money saved up gradually for a specific planned expense."
+   ],
+   [
+    "3–6 months",
+    "A common full emergency-fund goal (months of expenses)."
+   ],
+   [
+    "Automation",
+    "Setting transfers to happen without a monthly decision."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Before investing, your first savings priority should usually be:",
+    "options": [
+     "An emergency fund",
+     "Buying stocks",
+     "A new car",
+     "Crypto"
+    ],
+    "a": 0,
+    "why": "A cushion for surprises comes before investing or extra risk."
+   },
+   {
+    "q": "The most reliable way to save consistently is to:",
+    "options": [
+     "Automate transfers when paid",
+     "Save whatever's left",
+     "Use willpower each month",
+     "Wait for a raise"
+    ],
+    "a": 0,
+    "why": "Automation removes the monthly decision and builds the habit."
+   },
+   {
+    "q": "Money you'll need in a year or two should be kept:",
+    "options": [
+     "Somewhere safe and liquid",
+     "In the stock market",
+     "In a locked retirement account",
+     "As cash under a mattress"
+    ],
+    "a": 0,
+    "why": "Short-term money shouldn't risk a market drop right when you need it."
+   },
+   {
+    "q": "A high-yield savings account offers:",
+    "options": [
+     "More interest, same safety",
+     "High risk",
+     "No FDIC insurance",
+     "Money locked up for years"
+    ],
+    "a": 0,
+    "why": "It pays more than a regular savings account and is still FDIC insured."
+   },
+   {
+    "q": "'Liquid' means money that is:",
+    "options": [
+     "Easy to access quickly",
+     "Tied up for years",
+     "Already spent",
+     "Invested in stocks"
+    ],
+    "a": 0,
+    "why": "Liquid assets can be turned to cash fast without losing value."
+   },
+   {
+    "q": "A common full emergency-fund target is:",
+    "options": [
+     "3–6 months of expenses",
+     "One day of pay",
+     "$50",
+     "10 years of income"
+    ],
+    "a": 0,
+    "why": "After a starter fund, aim for 3–6 months of living expenses."
+   }
+  ]
+ },
+ "money-banking-accounts": {
+  "title": "Banking & Accounts",
+  "subject": "Money & Investing",
+  "level": "Grades 9 - adult",
+  "intro": "Knowing how bank accounts work — and how to dodge their fees and traps — keeps more of your money in your pocket. The basics are simple once you learn the terms.",
+  "cards": [
+   {
+    "h": "Checking vs. savings",
+    "body": "A checking account is for everyday spending — it comes with a debit card and is built for frequent transactions. A savings account is for setting money aside; it usually pays a little interest and may limit withdrawals. Most people need both."
+   },
+   {
+    "h": "Avoiding fees",
+    "body": "Banks make money on fees — overdraft, monthly maintenance, ATM, minimum-balance. Many are avoidable: pick a free account (credit unions and online banks often charge none), set up direct deposit, keep any required minimum, and turn OFF overdraft 'coverage' so a card simply declines instead of charging $35."
+   },
+   {
+    "h": "Overdraft: the trap to avoid",
+    "body": "An overdraft is spending more than you have. With overdraft 'protection' on, the bank covers it but charges a big fee (often ~$35) per transaction. Opting out means the purchase is simply declined — far cheaper than a fee that can snowball."
+   },
+   {
+    "h": "Debit vs. credit cards",
+    "body": "A debit card spends your own money directly from checking. A credit card borrows the bank's money to repay later. Debit avoids debt; a credit card paid in full each month builds credit history and offers better fraud protection. Know which you're using."
+   },
+   {
+    "h": "Banks vs. credit unions",
+    "body": "Credit unions are member-owned not-for-profits — they often have lower fees, better rates, and friendlier terms than big banks, while offering the same basics (accounts, cards, loans). Both should be FDIC- or NCUA-insured, which protects your deposits."
+   }
+  ],
+  "flash": [
+   [
+    "Checking account",
+    "An everyday account for spending, with a debit card."
+   ],
+   [
+    "Savings account",
+    "An account for setting money aside, usually earning interest."
+   ],
+   [
+    "Overdraft",
+    "Spending more than your balance; often triggers a big fee."
+   ],
+   [
+    "Debit card",
+    "Spends your own money directly from checking."
+   ],
+   [
+    "Credit union",
+    "A member-owned, not-for-profit bank alternative, often cheaper."
+   ],
+   [
+    "Direct deposit",
+    "Pay sent straight to your account; often waives fees."
+   ],
+   [
+    "Minimum balance",
+    "An amount some accounts require to avoid a fee."
+   ],
+   [
+    "NCUA",
+    "Insurance protecting credit-union deposits (like FDIC for banks)."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "An account built for everyday spending with a debit card is a:",
+    "options": [
+     "Checking account",
+     "Savings account",
+     "Retirement account",
+     "Loan"
+    ],
+    "a": 0,
+    "why": "Checking is for frequent, everyday transactions."
+   },
+   {
+    "q": "To avoid a ~$35 charge when you spend more than your balance, you should:",
+    "options": [
+     "Turn off overdraft coverage",
+     "Keep overdraft on",
+     "Use a bigger bank",
+     "Spend faster"
+    ],
+    "a": 0,
+    "why": "Opting out means the card is declined instead of charging an overdraft fee."
+   },
+   {
+    "q": "A debit card:",
+    "options": [
+     "Spends your own money",
+     "Borrows the bank's money",
+     "Builds credit history",
+     "Is a loan"
+    ],
+    "a": 0,
+    "why": "Debit draws directly from your checking balance."
+   },
+   {
+    "q": "Credit unions are:",
+    "options": [
+     "Member-owned not-for-profits",
+     "The same as payday lenders",
+     "Uninsured",
+     "Only for businesses"
+    ],
+    "a": 0,
+    "why": "They're member-owned and often cheaper than big banks."
+   },
+   {
+    "q": "A common way to get monthly bank fees waived is:",
+    "options": [
+     "Set up direct deposit",
+     "Withdraw often",
+     "Keep a zero balance",
+     "Use lots of ATMs"
+    ],
+    "a": 0,
+    "why": "Direct deposit (or a minimum balance) waives many maintenance fees."
+   },
+   {
+    "q": "Which protects your bank deposits?",
+    "options": [
+     "FDIC insurance",
+     "The stock market",
+     "Overdraft coverage",
+     "A credit score"
+    ],
+    "a": 0,
+    "why": "FDIC (banks) / NCUA (credit unions) insure deposits up to a limit."
+   }
+  ]
+ },
+ "money-investing-basics": {
+  "title": "Investing Basics",
+  "subject": "Money & Investing",
+  "level": "Grades 9 - adult",
+  "disclaimer": "General education, NOT investment advice. Investing involves risk, including possible loss of money. Do your own research or consult a licensed advisor.",
+  "intro": "Investing is putting money to work so it can grow over time and outpace inflation. It's how ordinary people build wealth slowly — not by picking hot stocks, but by owning a broad slice of the market and staying patient.",
+  "cards": [
+   {
+    "h": "Why invest: growth and inflation",
+    "body": "Money in a savings account barely keeps up with inflation (rising prices). Investing aims for higher long-term growth so your money gains real value. The trade-off is risk: investments can fall in the short term, which is why investing is for money you won't need for years."
+   },
+   {
+    "h": "Compound growth and time",
+    "body": "Compounding means your earnings start earning too. Over decades it's powerful — which is why starting early matters far more than starting big. A small amount invested in your twenties can outgrow a large amount invested in your forties."
+   },
+   {
+    "h": "Stocks, bonds, and funds",
+    "body": "A stock is a share of ownership in a company. A bond is a loan to a government or company that pays interest. A fund — especially an index fund or ETF — bundles many stocks or bonds into one purchase, giving instant diversification in a single, low-cost investment."
+   },
+   {
+    "h": "Diversify with index funds",
+    "body": "Don't bet on one company — spread your money across many so one failure doesn't sink you. A low-cost index fund that tracks the whole market (like an S&P 500 fund) does this automatically and has historically beaten most stock-pickers over the long run."
+   },
+   {
+    "h": "The boring strategy that works",
+    "body": "For most people: invest regularly (a fixed amount each month — 'dollar-cost averaging'), in low-cost diversified index funds, and leave it alone for the long term. Don't try to time the market, and don't panic-sell in a downturn. Time in the market beats timing the market."
+   }
+  ],
+  "flash": [
+   [
+    "Investing",
+    "Putting money to work to grow over the long term."
+   ],
+   [
+    "Inflation",
+    "The general rise in prices that erodes money's value."
+   ],
+   [
+    "Compounding",
+    "Earnings that themselves earn, snowballing over time."
+   ],
+   [
+    "Stock",
+    "A share of ownership in a company."
+   ],
+   [
+    "Bond",
+    "A loan to a government or company that pays interest."
+   ],
+   [
+    "Index fund",
+    "A low-cost fund tracking a whole market (e.g., S&P 500)."
+   ],
+   [
+    "Diversification",
+    "Spreading money across many investments to reduce risk."
+   ],
+   [
+    "Dollar-cost averaging",
+    "Investing a fixed amount on a regular schedule."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The main reason to invest rather than only save is to:",
+    "options": [
+     "Grow money and beat inflation",
+     "Avoid all risk",
+     "Spend it faster",
+     "Get rich overnight"
+    ],
+    "a": 0,
+    "why": "Investing aims for long-term growth that outpaces rising prices."
+   },
+   {
+    "q": "Compounding is powerful mainly because of:",
+    "options": [
+     "Time",
+     "Luck",
+     "Picking one stock",
+     "High fees"
+    ],
+    "a": 0,
+    "why": "Earnings earning more over many years is why starting early wins."
+   },
+   {
+    "q": "An index fund gives you:",
+    "options": [
+     "Instant diversification at low cost",
+     "One single stock",
+     "Guaranteed profit",
+     "A government loan"
+    ],
+    "a": 0,
+    "why": "It bundles many holdings into one low-cost, diversified investment."
+   },
+   {
+    "q": "A stock represents:",
+    "options": [
+     "Ownership in a company",
+     "A loan to a company",
+     "Cash in a vault",
+     "A savings account"
+    ],
+    "a": 0,
+    "why": "A share of stock is partial ownership; a bond is a loan."
+   },
+   {
+    "q": "A sound long-term strategy for most people is to:",
+    "options": [
+     "Invest regularly in low-cost index funds and hold",
+     "Time the market",
+     "Panic-sell in downturns",
+     "Chase hot tips"
+    ],
+    "a": 0,
+    "why": "Consistent, diversified, patient investing beats trying to time the market."
+   },
+   {
+    "q": "Investing money you might need next month is:",
+    "options": [
+     "Risky — it could drop right then",
+     "Always safe",
+     "Required",
+     "The same as saving"
+    ],
+    "a": 0,
+    "why": "Short-term money shouldn't be exposed to market swings."
+   }
+  ]
+ },
+ "money-retirement-401-k": {
+  "title": "Retirement & 401(k)",
+  "subject": "Money & Investing",
+  "level": "Adult",
+  "disclaimer": "General education, not financial advice. Account rules and contribution limits change — check current IRS limits and your plan's details.",
+  "intro": "Retirement saving is investing with a long runway and big tax advantages. Starting early and capturing the 'free money' from an employer match can be the difference between a comfortable retirement and working forever.",
+  "cards": [
+   {
+    "h": "Why retirement accounts are special",
+    "body": "Accounts like a 401(k) and IRA give you tax breaks to encourage long-term saving. In exchange, the money is meant to stay until retirement (early withdrawals usually bring taxes and a penalty). The tax advantage plus decades of compounding is what makes them so powerful."
+   },
+   {
+    "h": "The employer match is free money",
+    "body": "Many jobs offer a 401(k) match — they add money when you contribute, often up to a few percent of your pay. If your employer matches, contributing at least enough to get the full match is one of the best financial moves there is; skipping it leaves free money on the table."
+   },
+   {
+    "h": "401(k) vs. IRA",
+    "body": "A 401(k) is offered through your job (contributions come straight from your paycheck, sometimes matched). An IRA (Individual Retirement Account) you open yourself at a brokerage. Many people use both — the 401(k) for the match, an IRA for more control over investments."
+   },
+   {
+    "h": "Traditional vs. Roth",
+    "body": "Traditional accounts give a tax break now (you pay tax later, in retirement). Roth accounts take after-tax money now so qualified withdrawals in retirement are tax-free. Roth is often great when you're young and in a lower tax bracket — decades of growth come out tax-free."
+   },
+   {
+    "h": "Start early, keep it simple",
+    "body": "Time is your biggest advantage, so start as soon as you can, even small. Inside the account, a low-cost target-date fund or broad index fund is a simple, solid choice. Then contribute steadily and leave it alone until retirement."
+   }
+  ],
+  "flash": [
+   [
+    "401(k)",
+    "An employer retirement account funded from your paycheck."
+   ],
+   [
+    "IRA",
+    "An Individual Retirement Account you open yourself."
+   ],
+   [
+    "Employer match",
+    "Money your job adds to your 401(k) when you contribute."
+   ],
+   [
+    "Traditional account",
+    "Tax break now; you pay tax on withdrawals later."
+   ],
+   [
+    "Roth account",
+    "After-tax money now; tax-free withdrawals in retirement."
+   ],
+   [
+    "Vesting",
+    "How long you must stay to keep employer-contributed money."
+   ],
+   [
+    "Target-date fund",
+    "A simple fund that adjusts its mix as retirement nears."
+   ],
+   [
+    "Early-withdrawal penalty",
+    "Extra tax for taking retirement money out too soon."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "An employer 401(k) match is best thought of as:",
+    "options": [
+     "Free money",
+     "A loan",
+     "A tax",
+     "Optional and skippable"
+    ],
+    "a": 0,
+    "why": "It's extra pay you only get by contributing — capture the full match."
+   },
+   {
+    "q": "A Roth account's main benefit is:",
+    "options": [
+     "Tax-free withdrawals in retirement",
+     "No risk",
+     "Instant cash",
+     "A bigger paycheck now"
+    ],
+    "a": 0,
+    "why": "You pay tax now so qualified withdrawals later are tax-free."
+   },
+   {
+    "q": "A 401(k) is:",
+    "options": [
+     "Offered through your employer",
+     "Opened by you at any bank",
+     "A checking account",
+     "A type of loan"
+    ],
+    "a": 0,
+    "why": "It's an employer plan; an IRA is the one you open yourself."
+   },
+   {
+    "q": "The biggest advantage a young saver has is:",
+    "options": [
+     "Time for compounding",
+     "A high salary",
+     "Picking hot stocks",
+     "Luck"
+    ],
+    "a": 0,
+    "why": "Decades of compounding make early contributions grow the most."
+   },
+   {
+    "q": "A simple investment choice inside a retirement account is:",
+    "options": [
+     "A low-cost target-date or index fund",
+     "A single risky stock",
+     "Leaving it in cash forever",
+     "Day trading"
+    ],
+    "a": 0,
+    "why": "Broad, low-cost funds are a solid, hands-off choice."
+   },
+   {
+    "q": "Taking money out of a retirement account early usually causes:",
+    "options": [
+     "Taxes and a penalty",
+     "A bonus",
+     "Nothing",
+     "A higher match"
+    ],
+    "a": 0,
+    "why": "Early withdrawals typically trigger income tax plus a penalty."
+   }
+  ]
+ },
+ "money-taxes": {
+  "title": "Taxes",
+  "subject": "Money & Investing",
+  "level": "Grades 9 - adult",
+  "disclaimer": "General education, not tax advice. Rules change yearly — check IRS.gov or a tax professional for your situation.",
+  "intro": "Taxes feel confusing, but the basics are learnable — and understanding them helps you keep more of your money and avoid costly mistakes. For most people, a simple return is very doable.",
+  "cards": [
+   {
+    "h": "How income tax works (brackets)",
+    "body": "The U.S. uses a progressive system: higher income is taxed at higher rates, but only the income within each bracket is taxed at that bracket's rate. A common myth is that earning more can lower your take-home 'because of taxes' — moving into a higher bracket only taxes the extra dollars at the higher rate, never your whole income."
+   },
+   {
+    "h": "Withholding, refunds, and owing",
+    "body": "Your employer withholds estimated tax from each paycheck based on your W-4. At tax time you reconcile: if too much was withheld you get a refund; too little and you owe. A big refund isn't a win — it means you loaned the government your money interest-free all year."
+   },
+   {
+    "h": "Key tax forms",
+    "body": "A W-2 reports your wages from an employer. A 1099 reports other income (freelance, gig work, interest). You file a 1040 — your annual tax return — using those forms. Keep them; you need them to file."
+   },
+   {
+    "h": "Deductions and credits",
+    "body": "A deduction lowers the income you're taxed on; a credit lowers your tax bill directly (dollar for dollar), so credits are more valuable. Most people take the standard deduction (a flat amount) rather than itemizing. Credits like the Earned Income Tax Credit can mean real money back for lower earners."
+   },
+   {
+    "h": "Filing without overpaying for it",
+    "body": "Many people can file for free. If your income is modest, the IRS Free File program and volunteer programs like VITA handle simple returns at no cost. You rarely need to pay a big fee for a straightforward W-2 return."
+   }
+  ],
+  "flash": [
+   [
+    "Progressive tax",
+    "Higher income is taxed at higher rates (by bracket)."
+   ],
+   [
+    "Tax bracket",
+    "An income range taxed at a particular rate."
+   ],
+   [
+    "Withholding",
+    "Tax taken from each paycheck toward your yearly bill."
+   ],
+   [
+    "W-2",
+    "A form reporting wages from an employer."
+   ],
+   [
+    "1099",
+    "A form reporting non-employee income (freelance, interest)."
+   ],
+   [
+    "1040",
+    "The main individual federal income tax return."
+   ],
+   [
+    "Deduction",
+    "Reduces the income you're taxed on."
+   ],
+   [
+    "Tax credit",
+    "Reduces your tax bill directly, dollar for dollar."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "In a progressive tax system, a raise into a higher bracket:",
+    "options": [
+     "Only taxes the extra income at the higher rate",
+     "Taxes all your income higher",
+     "Lowers your take-home overall",
+     "Is tax-free"
+    ],
+    "a": 0,
+    "why": "Only the dollars in the higher bracket are taxed at that rate."
+   },
+   {
+    "q": "A big tax refund actually means:",
+    "options": [
+     "You over-withheld and loaned the government money",
+     "You earned extra",
+     "You paid no tax",
+     "You made a profit"
+    ],
+    "a": 0,
+    "why": "A refund returns your own over-withheld money — interest-free to them all year."
+   },
+   {
+    "q": "Which is more valuable, dollar for dollar?",
+    "options": [
+     "A tax credit",
+     "A tax deduction",
+     "A W-2",
+     "Withholding"
+    ],
+    "a": 0,
+    "why": "A credit cuts your tax bill directly; a deduction only reduces taxable income."
+   },
+   {
+    "q": "Wages from a job are reported on a:",
+    "options": [
+     "W-2",
+     "1099",
+     "1040 only",
+     "W-4"
+    ],
+    "a": 0,
+    "why": "Employers report your wages on a W-2."
+   },
+   {
+    "q": "The main annual federal tax return is the:",
+    "options": [
+     "Form 1040",
+     "Form W-2",
+     "Form 1099",
+     "Form W-4"
+    ],
+    "a": 0,
+    "why": "The 1040 is where you file your yearly return."
+   },
+   {
+    "q": "Someone with a simple W-2 return and modest income can often file:",
+    "options": [
+     "For free (Free File / VITA)",
+     "Only by paying a big fee",
+     "Only with a lawyer",
+     "Never on their own"
+    ],
+    "a": 0,
+    "why": "Free File and VITA handle simple returns at no cost."
+   }
+  ]
+ },
+ "money-insurance": {
+  "title": "Insurance",
+  "subject": "Money & Investing",
+  "level": "Grades 9 - adult",
+  "disclaimer": "General education, not insurance advice. Coverage needs vary — compare policies for your situation.",
+  "intro": "Insurance trades a small, predictable cost (the premium) for protection against a rare but financially devastating event. Used right, it keeps one bad day from wiping you out — and skipping the important kinds is a gamble that can cost everything.",
+  "cards": [
+   {
+    "h": "What insurance is for",
+    "body": "Insurance isn't an investment — it's protection against catastrophe. You pay a premium so that if something expensive and unlikely happens (a wreck, a fire, a hospital stay), the insurer covers most of the cost. Insure what you can't afford to replace; skip coverage on things you could just pay for."
+   },
+   {
+    "h": "Premium, deductible, out-of-pocket",
+    "body": "The premium is what you pay regularly to have coverage. The deductible is what you pay yourself before insurance kicks in. A higher deductible usually means a lower premium — a reasonable trade if you have an emergency fund to cover that deductible."
+   },
+   {
+    "h": "Health insurance",
+    "body": "Medical bills are a leading cause of debt and bankruptcy in the U.S., so health coverage matters even when you feel fine. Learn your deductible, copays, and what's 'in-network.' If money is tight, look into Medicaid, ACA marketplace subsidies, and community health centers — coverage may be free or low-cost based on income."
+   },
+   {
+    "h": "Auto and renters insurance",
+    "body": "Most states require at least liability auto insurance (it covers damage you cause to others). Renters insurance is cheap (often around $15/month) and covers your belongings and liability in a rented home — a small price for real protection that most renters skip."
+   },
+   {
+    "h": "Don't over- or under-insure",
+    "body": "Carry the coverage that protects you from ruin (health, liability, your home or car), and don't waste money insuring small, affordable risks (extended warranties on cheap gadgets, flight insurance). Shop around and re-check rates periodically — loyalty rarely saves money."
+   }
+  ],
+  "flash": [
+   [
+    "Premium",
+    "The amount you pay regularly to keep insurance coverage."
+   ],
+   [
+    "Deductible",
+    "What you pay yourself before insurance starts covering."
+   ],
+   [
+    "Liability coverage",
+    "Pays for harm or damage you cause to others."
+   ],
+   [
+    "Copay",
+    "A fixed fee you pay for a covered medical service."
+   ],
+   [
+    "In-network",
+    "Providers your health plan has agreed rates with (cheaper)."
+   ],
+   [
+    "Renters insurance",
+    "Cheap coverage for your belongings and liability as a renter."
+   ],
+   [
+    "Claim",
+    "A request to your insurer to pay for a covered loss."
+   ],
+   [
+    "Premium vs. deductible",
+    "A higher deductible usually means a lower premium."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The main purpose of insurance is to:",
+    "options": [
+     "Protect against costly, unlikely disasters",
+     "Grow your money",
+     "Avoid all small costs",
+     "Replace saving"
+    ],
+    "a": 0,
+    "why": "It's protection against catastrophe, not an investment."
+   },
+   {
+    "q": "The amount you pay yourself before insurance pays is the:",
+    "options": [
+     "Deductible",
+     "Premium",
+     "Copay",
+     "Claim"
+    ],
+    "a": 0,
+    "why": "The deductible is your share before coverage kicks in."
+   },
+   {
+    "q": "Choosing a higher deductible usually:",
+    "options": [
+     "Lowers your premium",
+     "Raises your premium",
+     "Removes coverage",
+     "Pays you money"
+    ],
+    "a": 0,
+    "why": "You take on more upfront risk in exchange for a cheaper premium."
+   },
+   {
+    "q": "Renters insurance is:",
+    "options": [
+     "Cheap coverage for your belongings and liability",
+     "Only for homeowners",
+     "Required to drive",
+     "A type of savings"
+    ],
+    "a": 0,
+    "why": "It's inexpensive protection most renters overlook."
+   },
+   {
+    "q": "You should insure:",
+    "options": [
+     "Things you can't afford to replace",
+     "Everything, big and small",
+     "Only cheap items",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Insure against ruin; self-cover small, affordable risks."
+   },
+   {
+    "q": "If money is tight, low-cost health coverage may come from:",
+    "options": [
+     "Medicaid or ACA subsidies",
+     "Only full-price plans",
+     "Renters insurance",
+     "A 401(k)"
+    ],
+    "a": 0,
+    "why": "Income-based programs (Medicaid, marketplace subsidies) can be free or cheap."
+   }
+  ]
  }
 };
