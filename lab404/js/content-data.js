@@ -5087,130 +5087,281 @@ window.LAB404_CONTENT = {
  "mind-critical-thinking": {
   "title": "Critical Thinking",
   "subject": "Psychology & Philosophy",
-  "level": "All levels",
-  "intro": "Critical thinking is the skill of judging information carefully instead of just accepting it. In a world full of ads, headlines and strong opinions, it's one of the most protective skills you can build.",
+  "level": "Grades 7-College",
+  "objectives": [
+   "Understand what critical thinking is and why it matters",
+   "Question claims and evaluate evidence",
+   "Tell correlation from causation and fact from opinion",
+   "Recognize common logical fallacies and biases",
+   "Apply critical thinking in daily life"
+  ],
+  "intro": "Critical thinking is the skill of thinking clearly and rationally — questioning claims, weighing evidence, and reasoning carefully instead of accepting things at face value. In a world flooded with information and persuasion, it's one of the most valuable skills you can have. This lesson covers how to evaluate claims, spot bad reasoning, and think better.",
+  "sections": [
+   {
+    "h": "What critical thinking is",
+    "body": "Critical thinking is the active, careful evaluation of information and arguments to decide what to believe or do. It's not about being negative or cynical — the 'critical' means analytical, not harsh. A critical thinker doesn't just accept or reject claims emotionally; they ask questions, look at evidence, consider other viewpoints, and reason toward a conclusion.\n\nThe opposite is passive or lazy thinking: believing something because it's familiar, because everyone says it, because it feels right, or because an authority said so. Critical thinking takes effort and humility — including being willing to question your own beliefs and change your mind when the evidence warrants. It's a skill, which means it can be learned and improved with practice.",
+    "tip": "Critical thinking = actively evaluating claims and evidence before believing. 'Critical' means analytical, not negative."
+   },
+   {
+    "h": "Questioning claims and evidence",
+    "body": "The heart of critical thinking is asking good questions about any claim. Who is saying this, and do they have expertise or a bias or motive? What's the evidence — is it strong, relevant, and from a reliable source, or just an anecdote or a feeling? Is the claim even testable, or is it vague? Are other explanations possible?\n\nA key habit: match your confidence to the evidence. Extraordinary claims need strong evidence. Be wary of claims that rely on emotion, fear, or urgency rather than facts, and of anything that conveniently confirms what you already wanted to believe. You don't have to become an expert on everything — but learning to ask 'how do they know that?' and 'what's the evidence?' protects you from a great deal of nonsense.",
+    "tip": "Ask: who says so, what's the evidence, how reliable is it, could there be another explanation? Match your belief to the evidence."
+   },
+   {
+    "h": "Correlation, causation, fact and opinion",
+    "body": "Two distinctions catch many thinking errors. First, correlation is not causation: just because two things happen together doesn't mean one causes the other. Ice-cream sales and drownings both rise in summer, but ice cream doesn't cause drowning — a third factor (hot weather) drives both. Always ask whether a claimed cause is really the cause, or just associated.\n\nSecond, distinguish fact from opinion. A fact can be checked and verified ('water boils at 100°C at sea level'); an opinion is a judgment or preference ('this is the best movie'). Much of what's presented as fact is actually opinion or interpretation. Spotting the difference — and noticing when someone slides an opinion in as if it were a fact — is a core critical-thinking move.",
+    "tip": "Correlation ≠ causation (two things together ≠ one causing the other). And separate fact (verifiable) from opinion (judgment)."
+   },
+   {
+    "h": "Logical fallacies and biases",
+    "body": "Bad arguments often use logical fallacies — errors in reasoning that can sound convincing. A few common ones: ad hominem (attacking the person instead of their argument), straw man (misrepresenting someone's position to knock it down easily), false dilemma (claiming only two options when more exist), appeal to authority (it's true because a famous person said so), and bandwagon (it's true because it's popular).\n\nWe're also prone to cognitive biases — mental shortcuts that skew our thinking. Confirmation bias (favoring information that fits what we already believe) is the big one; others include jumping to conclusions and being swayed by vivid stories over data. Learning to name these traps helps you spot them in others' arguments and, harder but more important, in your own thinking.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Common logical fallacies and thinking biases\"><rect x=\"8\" y=\"5\" width=\"104\" height=\"22\" fill=\"rgba(240,90,90,.12)\" stroke=\"#f05a5a\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"5\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#f0a0a0\" font-size=\"9\">Ad hominem</text><text x=\"118\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">attack the person, not the argument</text><rect x=\"8\" y=\"27\" width=\"104\" height=\"22\" fill=\"rgba(240,90,90,.12)\" stroke=\"#f05a5a\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"27\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#f0a0a0\" font-size=\"9\">Straw man</text><text x=\"118\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">distort a view to knock it down</text><rect x=\"8\" y=\"49\" width=\"104\" height=\"22\" fill=\"rgba(240,90,90,.12)\" stroke=\"#f05a5a\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"49\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#f0a0a0\" font-size=\"9\">False dilemma</text><text x=\"118\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">'only two options' when more exist</text><rect x=\"8\" y=\"71\" width=\"104\" height=\"22\" fill=\"rgba(240,90,90,.12)\" stroke=\"#f05a5a\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"71\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#f0a0a0\" font-size=\"9\">Bandwagon</text><text x=\"118\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">true because it's popular</text><rect x=\"8\" y=\"93\" width=\"104\" height=\"22\" fill=\"rgba(240,90,90,.12)\" stroke=\"#f05a5a\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"93\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#f0a0a0\" font-size=\"9\">Confirmation bias</text><text x=\"118\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">favor what you already believe</text></svg>",
+    "caption": "Common fallacies and biases — learn to name them and you'll start spotting them everywhere.",
+    "tip": "Watch for fallacies (ad hominem, straw man, false dilemma) and biases (especially confirmation bias — favoring what you already believe)."
+   },
+   {
+    "h": "Thinking well in daily life",
+    "body": "Critical thinking pays off constantly. Evaluating news and social media: check sources, notice emotional manipulation, and verify surprising claims before believing or sharing. Making decisions: list the real options and evidence instead of going with gut or habit. Resisting manipulation: advertising, scams, and propaganda all rely on bypassing careful thought.\n\nA few lifelong habits: stay curious and ask questions; seek out viewpoints that disagree with you (not just ones that confirm you); be comfortable saying 'I don't know' or 'I was wrong'; and slow down on important decisions. Critical thinking is ultimately intellectual honesty — caring more about what's true than about being right. It's the foundation under every other kind of good thinking.",
+    "tip": "Check sources, seek disagreeing views, slow down on big decisions, and be willing to say 'I was wrong.' Care about truth over being right."
+   }
+  ],
   "cards": [
    {
-    "h": "Claims need evidence",
-    "body": "A claim is just an assertion until there's evidence for it. Ask: How do they know? What's the source? Could it be wrong? Strong claims — especially surprising or convenient ones — need strong evidence."
+    "h": "What it is",
+    "body": "Actively evaluating claims and evidence before believing; 'critical' means analytical, not negative."
    },
    {
-    "h": "Correlation isn't causation",
-    "body": "Two things happening together doesn't mean one caused the other. Ice cream sales and drowning both rise in summer — but ice cream doesn't cause drowning; hot weather drives both. Always ask if something else explains the link."
+    "h": "Question claims",
+    "body": "Ask who says so, what's the evidence, how reliable, any other explanation? Match belief to evidence."
    },
    {
-    "h": "Spotting bad arguments",
-    "body": "Common traps (fallacies): attacking the person instead of their point (ad hominem), claiming something's true because many believe it (bandwagon), or presenting only two options when more exist (false dilemma). Name the move and it loses its power."
+    "h": "Correlation & fact",
+    "body": "Correlation ≠ causation. Separate verifiable facts from opinions/judgments."
    },
    {
-    "h": "Check the source and your bias",
-    "body": "Consider who's telling you something and what they gain. Also watch your own confirmation bias — the pull to believe things that fit what you already think. Seek out the strongest version of the other side."
+    "h": "Fallacies & biases",
+    "body": "Ad hominem, straw man, false dilemma, bandwagon; confirmation bias is the big one."
    },
    {
-    "h": "Suspend judgment when unsure",
-    "body": "It's okay to say 'I don't know yet.' Jumping to a conclusion feels good but leads to mistakes. Gather enough evidence, consider alternatives, then decide — and stay open to changing your mind with new facts."
+    "h": "Daily life",
+    "body": "Check sources, seek disagreeing views, slow down, admit 'I was wrong.' Truth over being right."
    }
   ],
   "flash": [
    [
     "Critical thinking",
-    "Carefully judging information instead of accepting it."
+    "Actively evaluating claims and evidence to decide what to believe."
    ],
    [
     "Evidence",
-    "Facts or data that support a claim."
+    "Facts or data offered to support a claim."
    ],
    [
     "Correlation",
-    "Two things occurring together (not necessarily causing each other)."
+    "Two things occurring together."
    ],
    [
     "Causation",
     "One thing actually causing another."
    ],
    [
+    "Fact",
+    "A statement that can be checked and verified."
+   ],
+   [
+    "Opinion",
+    "A judgment or preference."
+   ],
+   [
     "Logical fallacy",
-    "A flaw in reasoning that weakens an argument."
+    "An error in reasoning that can sound convincing."
    ],
    [
     "Ad hominem",
     "Attacking the person instead of their argument."
    ],
    [
-    "Confirmation bias",
-    "Favoring information that fits what you already believe."
+    "Straw man",
+    "Distorting a view to attack it more easily."
    ],
    [
-    "Source credibility",
-    "How trustworthy the origin of information is."
+    "False dilemma",
+    "Claiming only two options when more exist."
+   ],
+   [
+    "Confirmation bias",
+    "Favoring info that fits what you already believe."
+   ],
+   [
+    "Intellectual honesty",
+    "Caring more about truth than being right."
    ]
   ],
   "quiz": [
    {
-    "q": "'Correlation is not causation' means:",
+    "q": "Critical thinking means being:",
     "options": [
-     "Things linked may not cause each other",
-     "All links are false",
-     "Causes don't exist",
-     "Data is useless"
+     "Analytical about claims and evidence",
+     "Negative and cynical",
+     "Quick to agree",
+     "Always suspicious of everyone"
     ],
     "a": 0,
-    "why": "A link between two things doesn't prove one caused the other."
+    "why": "'Critical' means analytical, not harsh."
+   },
+   {
+    "q": "When you meet a claim, a good first question is:",
+    "options": [
+     "What's the evidence?",
+     "Does it feel right?",
+     "Is it popular?",
+     "Who's the loudest?"
+    ],
+    "a": 0,
+    "why": "Evidence and reliability matter most."
+   },
+   {
+    "q": "You should match your confidence in a claim to:",
+    "options": [
+     "The strength of the evidence",
+     "How much you like it",
+     "How often you hear it",
+     "Your mood"
+    ],
+    "a": 0,
+    "why": "Extraordinary claims need strong evidence."
+   },
+   {
+    "q": "Ice-cream sales and drownings both rise in summer. This shows:",
+    "options": [
+     "Correlation, not causation",
+     "Ice cream causes drowning",
+     "Drowning causes ice cream",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "A third factor (heat) drives both."
+   },
+   {
+    "q": "'Water boils at 100°C at sea level' is a:",
+    "options": [
+     "Fact (verifiable)",
+     "Opinion",
+     "Fallacy",
+     "Bias"
+    ],
+    "a": 0,
+    "why": "It can be checked and verified."
+   },
+   {
+    "q": "'This is the best movie ever' is a:",
+    "options": [
+     "Opinion",
+     "Fact",
+     "Law",
+     "Proof"
+    ],
+    "a": 0,
+    "why": "It's a judgment or preference."
    },
    {
     "q": "Attacking the person instead of their argument is:",
     "options": [
      "Ad hominem",
+     "Straw man",
      "Bandwagon",
-     "A strong point",
-     "Evidence"
+     "Fact"
     ],
     "a": 0,
-    "why": "Ad hominem dodges the argument by targeting the person."
+    "why": "Ad hominem dodges the actual argument."
    },
    {
-    "q": "Confirmation bias is the tendency to:",
+    "q": "Misrepresenting someone's view to attack it is a:",
     "options": [
-     "Favor info that fits your beliefs",
-     "Reject all new info",
-     "Be perfectly objective",
-     "Forget facts"
+     "Straw man",
+     "Ad hominem",
+     "False dilemma",
+     "Correlation"
     ],
     "a": 0,
-    "why": "We lean toward evidence that confirms what we already think."
+    "why": "You knock down a distortion, not the real view."
    },
    {
-    "q": "A surprising claim should be met with:",
-    "options": [
-     "A request for strong evidence",
-     "Instant belief",
-     "Instant rejection",
-     "Silence"
-    ],
-    "a": 0,
-    "why": "Extraordinary claims need solid evidence before you accept them."
-   },
-   {
-    "q": "Presenting only two options when more exist is a:",
+    "q": "'You're either with us or against us' is a:",
     "options": [
      "False dilemma",
-     "Correlation",
+     "Straw man",
      "Fact",
      "Hypothesis"
     ],
     "a": 0,
-    "why": "A false dilemma hides the other possibilities."
+    "why": "It falsely claims only two options exist."
    },
    {
-    "q": "When you lack enough evidence, the best move is to:",
+    "q": "'It's true because everyone believes it' is the:",
     "options": [
-     "Suspend judgment",
-     "Pick a side anyway",
-     "Trust the loudest voice",
-     "Guess randomly"
+     "Bandwagon fallacy",
+     "Ad hominem",
+     "Scientific method",
+     "A fact"
     ],
     "a": 0,
-    "why": "It's fine to withhold judgment until you know more."
+    "why": "Popularity doesn't make something true."
+   },
+   {
+    "q": "Favoring information that fits what you already believe is:",
+    "options": [
+     "Confirmation bias",
+     "Causation",
+     "A fact",
+     "Soundness"
+    ],
+    "a": 0,
+    "why": "Confirmation bias is the most common thinking trap."
+   },
+   {
+    "q": "Before sharing a surprising claim online, you should:",
+    "options": [
+     "Verify it with reliable sources",
+     "Share it faster",
+     "Add your own spin",
+     "Trust the headline"
+    ],
+    "a": 0,
+    "why": "Verify to avoid spreading misinformation."
+   },
+   {
+    "q": "A strong critical-thinking habit is to:",
+    "options": [
+     "Seek views that disagree with you",
+     "Only read what confirms you",
+     "Avoid all news",
+     "Trust your gut always"
+    ],
+    "a": 0,
+    "why": "Opposing views test your reasoning."
+   },
+   {
+    "q": "Being willing to say 'I was wrong' shows:",
+    "options": [
+     "Intellectual honesty",
+     "Weakness",
+     "Bad logic",
+     "Bias"
+    ],
+    "a": 0,
+    "why": "Caring about truth over ego is the point."
+   },
+   {
+    "q": "Advertising and scams work mainly by:",
+    "options": [
+     "Bypassing careful thought",
+     "Using strong evidence",
+     "Encouraging questions",
+     "Slowing you down"
+    ],
+    "a": 0,
+    "why": "They rely on emotion and speed, not reasoning."
    }
   ]
  },
@@ -18964,6 +19115,1132 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "A modern phone plus light + composition beats gear you don't understand."
+   }
+  ]
+ },
+ "mind-intro-to-psychology": {
+  "title": "Intro to Psychology",
+  "subject": "Psychology & Philosophy",
+  "level": "Grades 9-College",
+  "objectives": [
+   "Define psychology as the science of mind and behavior",
+   "Know the major perspectives in psychology",
+   "Understand the key areas of the field",
+   "Understand human needs and motivation (Maslow)",
+   "Apply psychology to everyday life"
+  ],
+  "intro": "Psychology is the scientific study of the mind and behavior — why people think, feel, and act as they do. It spans everything from how memory works to why groups behave as they do, and it's one of the most useful subjects for understanding yourself and others. This lesson introduces what psychology is, its main perspectives, and key ideas.",
+  "sections": [
+   {
+    "h": "What psychology is",
+    "body": "Psychology is the science of mind and behavior. The word 'science' matters: psychologists don't just speculate about people — they form hypotheses and test them with careful observation and experiments, using evidence rather than opinion. This separates psychology from pop-culture 'armchair' psychology.\n\nThe field is huge, covering mental processes you can't see directly (thoughts, emotions, memory, perception) and behavior you can (actions, reactions, habits). Psychologists study individuals and groups, the healthy and the struggling, from infancy to old age. The goal is to describe, explain, predict, and sometimes improve how people think, feel, and behave.",
+    "tip": "Psychology is the SCIENCE of mind and behavior — it tests ideas with evidence, not just opinion."
+   },
+   {
+    "h": "The major perspectives",
+    "body": "Psychologists explain behavior through several lenses, each highlighting different causes. The biological perspective looks at the brain, genes, and chemistry. The behavioral looks at how we learn from rewards and punishments in the environment. The cognitive focuses on mental processes — how we think, remember, and solve problems.\n\nThe psychodynamic (from Freud) emphasizes unconscious drives and early experiences, and the humanistic focuses on free will, growth, and reaching one's potential. No single perspective is 'the' answer; modern psychology combines them — most behavior has biological, learned, cognitive, and social causes at once. Knowing the perspectives helps you see that a behavior usually has several layers of explanation.",
+    "tip": "Behavior has many causes at once — biological, learned, cognitive, unconscious, and social. No single lens explains it all."
+   },
+   {
+    "h": "Key areas of psychology",
+    "body": "Psychology branches into many specialties. Developmental psychology studies how people change across the lifespan (childhood, adolescence, aging). Cognitive psychology studies mental processes like memory, attention, and decision-making. Social psychology studies how people influence and are influenced by others (conformity, persuasion, prejudice).\n\nPersonality psychology asks what makes people consistently different from one another; and clinical/counseling psychology focuses on understanding and treating mental-health struggles. There are many more (educational, industrial, health). This range is why psychology connects to nearly everything — school, work, relationships, health, and law all involve how people think and behave.",
+    "tip": "Big areas: developmental (change over life), cognitive (thinking/memory), social (others' influence), personality, clinical (mental health)."
+   },
+   {
+    "h": "Needs and motivation",
+    "body": "A core question in psychology is motivation — why we do what we do. One famous model is Maslow's hierarchy of needs, which arranges human needs in a pyramid. At the base are physiological needs (food, water, sleep); above them, safety (security, stability); then love and belonging (relationships); then esteem (respect, achievement); and at the top, self-actualization (reaching your full potential).\n\nThe idea is that lower, more basic needs generally must be reasonably met before higher ones become pressing motivators — it's hard to focus on personal growth when you're hungry or unsafe. It's a simplification (real motivation is messier and needs can overlap), but it's a useful map of what drives people. Motivation also comes from both inside (intrinsic, for its own sake) and outside (extrinsic, for rewards).",
+    "visual": "<svg viewBox=\"0 0 230 184\" width=\"215\" role=\"img\" aria-label=\"Maslow's hierarchy of needs as a pyramid from physiological at the base to self-actualization at the top\"><polygon points=\"39.0,136 191.0,136 210.0,165 20.0,165\" fill=\"rgba(79,156,240,.28)\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"115\" y=\"153\" text-anchor=\"middle\" fill=\"#eef3fb\" font-size=\"10\">Physiological</text><polygon points=\"58.0,107 172.0,107 191.0,136 39.0,136\" fill=\"rgba(57,227,200,.26)\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"115\" y=\"124\" text-anchor=\"middle\" fill=\"#eef3fb\" font-size=\"10\">Safety</text><polygon points=\"77.0,78 153.0,78 172.0,107 58.0,107\" fill=\"rgba(232,184,75,.28)\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"115\" y=\"95\" text-anchor=\"middle\" fill=\"#eef3fb\" font-size=\"10\">Belonging</text><polygon points=\"96.0,49 134.0,49 153.0,78 77.0,78\" fill=\"rgba(240,140,70,.28)\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"115\" y=\"66\" text-anchor=\"middle\" fill=\"#eef3fb\" font-size=\"10\">Esteem</text><polygon points=\"115.0,20 115.0,20 134.0,49 96.0,49\" fill=\"rgba(240,90,90,.28)\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"115\" y=\"37\" text-anchor=\"middle\" fill=\"#eef3fb\" font-size=\"8\">Self-actualization</text><text x=\"115\" y=\"180\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">basic needs (base) usually come before higher ones (top)</text></svg>",
+    "caption": "Maslow's hierarchy: basic needs at the base generally come before higher needs toward the top.",
+    "tip": "Maslow's pyramid: physiological → safety → belonging → esteem → self-actualization. Basic needs usually come before higher ones."
+   },
+   {
+    "h": "Psychology in everyday life",
+    "body": "Psychology isn't just academic — it's practically useful every day. Understanding how memory works helps you study better (spacing practice beats cramming). Knowing about cognitive biases helps you make better decisions and spot when you're being manipulated. Understanding motivation and habits helps you change your own behavior.\n\nIt also makes you better with people: understanding emotions, communication, and why others act as they do builds empathy and smoother relationships. And understanding mental health reduces stigma and helps you support yourself and others. Psychology gives you, in effect, an owner's manual for the human mind — including your own, which is the one you'll use most.",
+    "tip": "Use psychology daily: study smarter (spacing), spot biases and manipulation, build habits, understand people, support mental health."
+   }
+  ],
+  "cards": [
+   {
+    "h": "What it is",
+    "body": "The science of mind and behavior — tested with evidence, not opinion."
+   },
+   {
+    "h": "Perspectives",
+    "body": "Biological, behavioral, cognitive, psychodynamic, humanistic. Behavior usually has several causes at once."
+   },
+   {
+    "h": "Key areas",
+    "body": "Developmental, cognitive, social, personality, clinical — psychology touches nearly everything."
+   },
+   {
+    "h": "Needs & motivation",
+    "body": "Maslow: physiological → safety → belonging → esteem → self-actualization. Intrinsic vs extrinsic motivation."
+   },
+   {
+    "h": "Everyday use",
+    "body": "Study smarter, spot biases/manipulation, build habits, understand people, support mental health."
+   }
+  ],
+  "flash": [
+   [
+    "Psychology",
+    "The science of mind and behavior."
+   ],
+   [
+    "Hypothesis",
+    "A testable prediction a researcher checks with evidence."
+   ],
+   [
+    "Biological perspective",
+    "Explains behavior via brain, genes, chemistry."
+   ],
+   [
+    "Behavioral perspective",
+    "Explains behavior via learning from rewards/punishments."
+   ],
+   [
+    "Cognitive perspective",
+    "Focuses on mental processes (thinking, memory)."
+   ],
+   [
+    "Developmental psychology",
+    "How people change across the lifespan."
+   ],
+   [
+    "Social psychology",
+    "How others influence our thoughts and behavior."
+   ],
+   [
+    "Clinical psychology",
+    "Understanding and treating mental-health struggles."
+   ],
+   [
+    "Maslow's hierarchy",
+    "A pyramid of needs from basic to self-actualization."
+   ],
+   [
+    "Self-actualization",
+    "Reaching your full potential (top of Maslow's pyramid)."
+   ],
+   [
+    "Intrinsic motivation",
+    "Doing something for its own sake."
+   ],
+   [
+    "Cognitive bias",
+    "A mental shortcut that skews thinking."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Psychology is best defined as the:",
+    "options": [
+     "Science of mind and behavior",
+     "Art of reading minds",
+     "Study of rocks",
+     "Opinion about people"
+    ],
+    "a": 0,
+    "why": "It studies mind and behavior scientifically."
+   },
+   {
+    "q": "What makes psychology a science?",
+    "options": [
+     "It tests ideas with evidence",
+     "It uses gut feelings",
+     "It never changes",
+     "It avoids experiments"
+    ],
+    "a": 0,
+    "why": "Hypotheses tested with observation/experiment."
+   },
+   {
+    "q": "The biological perspective explains behavior through:",
+    "options": [
+     "Brain, genes, and chemistry",
+     "Rewards only",
+     "Popular opinion",
+     "The weather"
+    ],
+    "a": 0,
+    "why": "It focuses on the body's biology."
+   },
+   {
+    "q": "Explaining behavior by rewards and punishments is the:",
+    "options": [
+     "Behavioral perspective",
+     "Cognitive perspective",
+     "Humanistic perspective",
+     "Biological perspective"
+    ],
+    "a": 0,
+    "why": "Behaviorism focuses on learning from consequences."
+   },
+   {
+    "q": "In modern psychology, most behavior is explained by:",
+    "options": [
+     "Several causes at once",
+     "One single cause",
+     "Only biology",
+     "Only the unconscious"
+    ],
+    "a": 0,
+    "why": "Biological, learned, cognitive, and social factors combine."
+   },
+   {
+    "q": "The study of how people change across life is:",
+    "options": [
+     "Developmental psychology",
+     "Social psychology",
+     "Clinical psychology",
+     "Logic"
+    ],
+    "a": 0,
+    "why": "Developmental covers childhood through aging."
+   },
+   {
+    "q": "How others influence us is studied in:",
+    "options": [
+     "Social psychology",
+     "Cognitive psychology",
+     "Personality psychology",
+     "Biology"
+    ],
+    "a": 0,
+    "why": "Social psychology covers conformity, persuasion, prejudice."
+   },
+   {
+    "q": "At the BASE of Maslow's pyramid are:",
+    "options": [
+     "Physiological needs",
+     "Self-actualization",
+     "Esteem",
+     "Belonging"
+    ],
+    "a": 0,
+    "why": "Food, water, sleep are the most basic needs."
+   },
+   {
+    "q": "At the TOP of Maslow's pyramid is:",
+    "options": [
+     "Self-actualization",
+     "Safety",
+     "Food",
+     "Water"
+    ],
+    "a": 0,
+    "why": "Reaching your full potential sits at the peak."
+   },
+   {
+    "q": "Maslow's idea is that basic needs generally must be met:",
+    "options": [
+     "Before higher needs become pressing",
+     "After self-actualization",
+     "Never",
+     "Only for children"
+    ],
+    "a": 0,
+    "why": "Hard to pursue growth while hungry or unsafe."
+   },
+   {
+    "q": "Doing something for its own sake is:",
+    "options": [
+     "Intrinsic motivation",
+     "Extrinsic motivation",
+     "A reward",
+     "A punishment"
+    ],
+    "a": 0,
+    "why": "Intrinsic = internal; extrinsic = for outside rewards."
+   },
+   {
+    "q": "A mental shortcut that skews thinking is a:",
+    "options": [
+     "Cognitive bias",
+     "Hypothesis",
+     "Hierarchy",
+     "Reflex"
+    ],
+    "a": 0,
+    "why": "Biases distort judgment."
+   },
+   {
+    "q": "A better way to study, per psychology, is:",
+    "options": [
+     "Spacing practice over time",
+     "Cramming once",
+     "Never reviewing",
+     "Reading in your sleep"
+    ],
+    "a": 0,
+    "why": "Spaced practice beats cramming for memory."
+   },
+   {
+    "q": "Understanding mental health helps by:",
+    "options": [
+     "Reducing stigma and supporting people",
+     "Making people weaker",
+     "Nothing",
+     "Only for doctors"
+    ],
+    "a": 0,
+    "why": "It builds support and reduces shame."
+   },
+   {
+    "q": "A testable prediction in research is a:",
+    "options": [
+     "Hypothesis",
+     "Conclusion",
+     "Bias",
+     "Reward"
+    ],
+    "a": 0,
+    "why": "Scientists test hypotheses with evidence."
+   }
+  ]
+ },
+ "mind-logic": {
+  "title": "Logic",
+  "subject": "Psychology & Philosophy",
+  "level": "Grades 9-College",
+  "objectives": [
+   "Understand what logic is and why it matters",
+   "Understand arguments: premises and conclusions",
+   "Tell deductive from inductive reasoning",
+   "Understand validity and soundness",
+   "Spot common logical errors"
+  ],
+  "intro": "Logic is the study of correct reasoning — how to tell a good argument from a bad one. It's the backbone of math, science, law, computer programming, and clear thinking in general. This lesson covers what an argument is, the two main kinds of reasoning, and how to judge whether reasoning actually works.",
+  "sections": [
+   {
+    "h": "What logic is",
+    "body": "Logic is the systematic study of valid reasoning — the rules for drawing correct conclusions from information. Where critical thinking is the broad skill of thinking well, logic is the precise core of it: the structure that makes reasoning either hold together or fall apart.\n\nLogic is concerned with the form of an argument, not just its topic. The same logical patterns apply whether you're reasoning about numbers, laws, or everyday choices. This is why logic underlies so many fields: mathematics proves theorems with it, computers run on it (every program is logic), scientists use it to test theories, and lawyers use it to build cases. Learning logic is learning the grammar of reasoning itself.",
+    "tip": "Logic is the study of correct reasoning — the rules for valid conclusions. It's about the FORM of an argument, not just the topic."
+   },
+   {
+    "h": "Arguments: premises and conclusions",
+    "body": "In logic, an argument isn't a quarrel — it's a set of statements where some (the premises) are offered as reasons to accept another (the conclusion). The premises are the evidence or assumptions; the conclusion is what they're supposed to support. Recognizing this structure is the first skill in logic: finding the conclusion (what's being claimed) and the premises (the reasons given for it).\n\nFor example: 'All men are mortal (premise). Socrates is a man (premise). Therefore, Socrates is mortal (conclusion).' Words like 'because,' 'since,' and 'for' usually introduce premises; 'therefore,' 'so,' and 'thus' usually introduce conclusions. Breaking any argument into its premises and conclusion lets you examine whether the reasoning actually works.",
+    "visual": "<svg viewBox=\"0 0 250 150\" width=\"240\" role=\"img\" aria-label=\"An argument: two premises lead to a conclusion. All men are mortal, Socrates is a man, therefore Socrates is mortal\"><rect x=\"10\" y=\"12\" width=\"110\" height=\"34\" rx=\"6\" fill=\"rgba(79,156,240,.14)\" stroke=\"#4f9cf0\" stroke-width=\"1.3\"/><text x=\"65\" y=\"27\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Premise 1</text><text x=\"65\" y=\"39\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">All men are mortal</text><rect x=\"130\" y=\"12\" width=\"110\" height=\"34\" rx=\"6\" fill=\"rgba(79,156,240,.14)\" stroke=\"#4f9cf0\" stroke-width=\"1.3\"/><text x=\"185\" y=\"27\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Premise 2</text><text x=\"185\" y=\"39\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Socrates is a man</text><line x1=\"65\" y1=\"46\" x2=\"108\" y2=\"92\" stroke=\"#39e3c8\" stroke-width=\"1.6\"/><polygon points=\"104,86 112,92 103,95\" fill=\"#39e3c8\"/><line x1=\"185\" y1=\"46\" x2=\"142\" y2=\"92\" stroke=\"#39e3c8\" stroke-width=\"1.6\"/><polygon points=\"146,86 138,92 147,95\" fill=\"#39e3c8\"/><rect x=\"55\" y=\"94\" width=\"140\" height=\"36\" rx=\"6\" fill=\"rgba(57,227,200,.14)\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><text x=\"125\" y=\"109\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Conclusion</text><text x=\"125\" y=\"122\" text-anchor=\"middle\" fill=\"#9adbcf\" font-size=\"9\">∴ Socrates is mortal</text></svg>",
+    "caption": "An argument: premises (reasons) support a conclusion (the claim). ∴ means 'therefore.'",
+    "example": "Premise: All men are mortal. Premise: Socrates is a man. Conclusion: therefore, Socrates is mortal.",
+    "tip": "An argument = premises (reasons) + a conclusion (the claim). 'Because/since' flag premises; 'therefore/so' flag conclusions."
+   },
+   {
+    "h": "Deductive and inductive reasoning",
+    "body": "There are two main kinds of reasoning. Deductive reasoning goes from general to specific, and if it's done correctly, the conclusion is guaranteed by the premises. The Socrates example is deductive — if the premises are true, the conclusion must be true. Math proofs are deductive.\n\nInductive reasoning goes from specific observations to a general conclusion, and gives probable (not certain) conclusions. 'The sun has risen every day of recorded history, so it will rise tomorrow' is inductive — very likely, but not logically guaranteed. Science relies heavily on induction (generalizing from evidence). The key difference: deduction gives certainty if valid; induction gives strong-or-weak likelihood. Confusing their strength is a common error.",
+    "tip": "Deductive = general→specific, conclusion GUARANTEED if valid. Inductive = specific→general, conclusion only PROBABLE."
+   },
+   {
+    "h": "Validity and soundness",
+    "body": "Two precise terms separate good deductive arguments from bad ones. An argument is valid if its conclusion follows logically from its premises — that is, IF the premises were true, the conclusion would have to be true. Validity is about structure, not whether the premises are actually true: 'All cats can fly; Felix is a cat; therefore Felix can fly' is valid (the logic holds) even though a premise is false.\n\nAn argument is sound if it's both valid AND its premises are actually true — which means its conclusion is actually true. So soundness is the gold standard. This distinction matters because an argument can be logically valid yet reach a false conclusion (because of a false premise), and spotting that is powerful: check both 'does the conclusion follow?' and 'are the premises actually true?'",
+    "tip": "Valid = conclusion follows from the premises (structure). Sound = valid AND premises are true. Check both."
+   },
+   {
+    "h": "Common logical errors",
+    "body": "Reasoning goes wrong in recognizable ways. Beyond the fallacies covered in critical thinking, some logical errors include affirming the consequent (assuming that because a result happened, a specific cause must be true), circular reasoning (using the conclusion as a premise — 'it's true because it's true'), and hasty generalization (drawing a broad conclusion from too little evidence).\n\nThe fix is to slow down and check the structure: Are the premises actually true? Does the conclusion really follow from them, or is there a gap? Could the premises be true but the conclusion false? Learning to spot where an argument breaks — a false premise or a logical gap — lets you cut through persuasive-sounding nonsense. Logic is the tool that reveals whether reasoning is genuinely solid or just dressed up to look that way.",
+    "tip": "Logical errors: circular reasoning (conclusion as premise), hasty generalization (too little evidence). Check: true premises + a real link."
+   }
+  ],
+  "cards": [
+   {
+    "h": "What logic is",
+    "body": "The study of correct reasoning — the rules for valid conclusions. About an argument's FORM."
+   },
+   {
+    "h": "Arguments",
+    "body": "Premises (reasons) + conclusion (claim). 'Because/since' = premises; 'therefore/so' = conclusion."
+   },
+   {
+    "h": "Deductive vs inductive",
+    "body": "Deductive: general→specific, certain if valid. Inductive: specific→general, only probable."
+   },
+   {
+    "h": "Validity & soundness",
+    "body": "Valid = conclusion follows from premises. Sound = valid + premises true. Check both."
+   },
+   {
+    "h": "Errors",
+    "body": "Circular reasoning (conclusion as premise), hasty generalization (too little evidence)."
+   }
+  ],
+  "flash": [
+   [
+    "Logic",
+    "The study of correct reasoning."
+   ],
+   [
+    "Argument",
+    "Premises offered as reasons for a conclusion."
+   ],
+   [
+    "Premise",
+    "A statement given as a reason/evidence."
+   ],
+   [
+    "Conclusion",
+    "The claim the premises are meant to support."
+   ],
+   [
+    "Deductive reasoning",
+    "General to specific; certain if valid."
+   ],
+   [
+    "Inductive reasoning",
+    "Specific to general; probable, not certain."
+   ],
+   [
+    "Validity",
+    "The conclusion follows from the premises (structure)."
+   ],
+   [
+    "Soundness",
+    "Valid AND the premises are actually true."
+   ],
+   [
+    "Syllogism",
+    "A two-premise deductive argument."
+   ],
+   [
+    "Circular reasoning",
+    "Using the conclusion as a premise."
+   ],
+   [
+    "Hasty generalization",
+    "A broad conclusion from too little evidence."
+   ],
+   [
+    "Inference",
+    "A conclusion drawn from evidence/reasoning."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Logic is the study of:",
+    "options": [
+     "Correct reasoning",
+     "Emotions",
+     "Memory",
+     "Grammar of English"
+    ],
+    "a": 0,
+    "why": "It's the rules for drawing valid conclusions."
+   },
+   {
+    "q": "Logic is mainly concerned with an argument's:",
+    "options": [
+     "Form/structure",
+     "Topic only",
+     "Length",
+     "Author"
+    ],
+    "a": 0,
+    "why": "The same patterns apply across topics."
+   },
+   {
+    "q": "In logic, the statements given as reasons are the:",
+    "options": [
+     "Premises",
+     "Conclusion",
+     "Fallacies",
+     "Biases"
+    ],
+    "a": 0,
+    "why": "Premises support the conclusion."
+   },
+   {
+    "q": "The claim the reasons support is the:",
+    "options": [
+     "Conclusion",
+     "Premise",
+     "Inference rule",
+     "Topic"
+    ],
+    "a": 0,
+    "why": "The conclusion is what's being argued for."
+   },
+   {
+    "q": "Words like 'therefore' and 'so' usually signal a:",
+    "options": [
+     "Conclusion",
+     "Premise",
+     "Question",
+     "Definition"
+    ],
+    "a": 0,
+    "why": "'Because/since' flag premises; 'therefore/so' flag conclusions."
+   },
+   {
+    "q": "Reasoning from general to specific, with a guaranteed conclusion if valid, is:",
+    "options": [
+     "Deductive",
+     "Inductive",
+     "Circular",
+     "Hasty"
+    ],
+    "a": 0,
+    "why": "Deduction gives certainty when valid."
+   },
+   {
+    "q": "Reasoning from specific observations to a general, probable conclusion is:",
+    "options": [
+     "Inductive",
+     "Deductive",
+     "Valid",
+     "Sound"
+    ],
+    "a": 0,
+    "why": "Induction gives likelihood, not certainty."
+   },
+   {
+    "q": "'The sun always rose before, so it will rise tomorrow' is:",
+    "options": [
+     "Inductive",
+     "Deductive",
+     "Invalid by form",
+     "Circular"
+    ],
+    "a": 0,
+    "why": "It's a probable generalization from observation."
+   },
+   {
+    "q": "An argument is 'valid' when:",
+    "options": [
+     "The conclusion follows from the premises",
+     "The premises are true",
+     "It's popular",
+     "It's short"
+    ],
+    "a": 0,
+    "why": "Validity is about structure, not true premises."
+   },
+   {
+    "q": "'All cats can fly; Felix is a cat; so Felix flies' is:",
+    "options": [
+     "Valid but not sound",
+     "Sound",
+     "Invalid",
+     "Inductive"
+    ],
+    "a": 0,
+    "why": "The logic holds, but a premise is false, so it's not sound."
+   },
+   {
+    "q": "An argument is 'sound' when it's:",
+    "options": [
+     "Valid AND has true premises",
+     "Just valid",
+     "Just popular",
+     "Just long"
+    ],
+    "a": 0,
+    "why": "Soundness = valid + true premises = true conclusion."
+   },
+   {
+    "q": "A valid argument can still reach a false conclusion if:",
+    "options": [
+     "A premise is false",
+     "It's deductive",
+     "It's short",
+     "The topic is hard"
+    ],
+    "a": 0,
+    "why": "Garbage in (false premise), garbage out."
+   },
+   {
+    "q": "Using the conclusion as one of its own premises is:",
+    "options": [
+     "Circular reasoning",
+     "Deduction",
+     "Soundness",
+     "Induction"
+    ],
+    "a": 0,
+    "why": "'It's true because it's true' proves nothing."
+   },
+   {
+    "q": "Drawing a big conclusion from too little evidence is a:",
+    "options": [
+     "Hasty generalization",
+     "Valid deduction",
+     "Syllogism",
+     "Sound argument"
+    ],
+    "a": 0,
+    "why": "Too few cases can't support a broad claim."
+   },
+   {
+    "q": "To check any argument, ask:",
+    "options": [
+     "Are the premises true AND does the conclusion follow?",
+     "Is it popular?",
+     "Is it long?",
+     "Who wrote it?"
+    ],
+    "a": 0,
+    "why": "Both true premises and a real logical link are needed."
+   }
+  ]
+ },
+ "mind-ethics": {
+  "title": "Ethics",
+  "subject": "Psychology & Philosophy",
+  "level": "Grades 9-College",
+  "objectives": [
+   "Understand what ethics is and why it matters",
+   "Distinguish the major ethical frameworks",
+   "Understand key concepts: rights, duties, justice, autonomy",
+   "Reason through real ethical dilemmas",
+   "Develop your own ethical thinking"
+  ],
+  "intro": "Ethics is the branch of philosophy that asks how we should live and act — what makes an action right or wrong, good or bad. Everyone faces ethical questions, and thinking about them carefully leads to better, more consistent decisions. This lesson covers the major frameworks for deciding right from wrong and how to reason through dilemmas.",
+  "sections": [
+   {
+    "h": "What ethics is",
+    "body": "Ethics (also called moral philosophy) is the study of right and wrong — how we ought to act and what kind of person we ought to be. It's not the same as law (some legal things are unethical, and vice versa) or mere opinion/feeling (ethics tries to give reasons, not just 'I don't like it'). It's also distinct from custom, since a whole society can be wrong (slavery was once widely accepted).\n\nEthics asks hard questions: Is there a right answer to moral questions, or is it all relative? What makes an action good — its results, the rule it follows, or the character behind it? These questions matter because we face moral choices constantly, and thinking them through leads to decisions we can defend and live with, rather than just reacting.",
+    "tip": "Ethics = the study of right and wrong, giving REASONS. It's not the same as law, custom, or just a feeling."
+   },
+   {
+    "h": "The major ethical frameworks",
+    "body": "Philosophers have developed several frameworks for deciding what's right, each focusing on a different thing. Consequentialism judges actions by their results — the right action produces the best outcomes (its most famous form, utilitarianism, says: the greatest good for the greatest number). Deontology judges actions by rules and duties — some things are simply right or wrong regardless of consequences (e.g., 'don't lie,' 'keep promises,' respect people's rights).\n\nVirtue ethics focuses not on the act but on character — it asks what a good, wise, honest person would do, and how to become that kind of person. These frameworks often agree, but sometimes clash (a consequentialist might justify a harmful act for a greater good; a deontologist would refuse). Knowing them gives you different tools for thinking through a moral problem.",
+    "visual": "<svg viewBox=\"0 0 250 98\" width=\"240\" role=\"img\" aria-label=\"The major ethical frameworks and what each judges by\"><rect x=\"8\" y=\"5\" width=\"108\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"5\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9.5\">Consequentialism</text><text x=\"122\" y=\"20\" fill=\"#9adbcf\" font-size=\"8\">judge by RESULTS (best outcome)</text><rect x=\"8\" y=\"27\" width=\"108\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"27\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9.5\">Utilitarianism</text><text x=\"122\" y=\"42\" fill=\"#9adbcf\" font-size=\"8\">greatest good for the greatest number</text><rect x=\"8\" y=\"49\" width=\"108\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"49\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9.5\">Deontology</text><text x=\"122\" y=\"64\" fill=\"#9adbcf\" font-size=\"8\">judge by RULES/DUTIES</text><rect x=\"8\" y=\"71\" width=\"108\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"71\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9.5\">Virtue ethics</text><text x=\"122\" y=\"86\" fill=\"#9adbcf\" font-size=\"8\">judge by CHARACTER (a good person)</text></svg>",
+    "caption": "Three big ethical frameworks — results, rules, or character — different lenses on 'what's right?'",
+    "example": "Lie to protect someone? Consequentialism: judge by the outcome. Deontology: lying is wrong by rule. Virtue: what would an honest, compassionate person do?",
+    "tip": "Three frameworks: consequentialism (results), deontology (rules/duties), virtue ethics (character). Different tools, not one answer."
+   },
+   {
+    "h": "Key ethical concepts",
+    "body": "Several ideas recur across ethical thinking. Rights are things people are entitled to (life, liberty, fair treatment) that others shouldn't violate. Duties are obligations we owe to others (to be honest, to not harm, to keep our word). Justice/fairness is about treating people equitably and giving them their due. Autonomy is respecting people's right to make their own choices.\n\nAnother key idea is the difference between what's good for me and what's right — ethics often asks us to consider others, not just ourselves. And many dilemmas are hard precisely because good values conflict: honesty vs. kindness, individual freedom vs. the common good, justice vs. mercy. Ethics gives us the vocabulary to name these tensions and reason about them rather than just feeling torn.",
+    "tip": "Core concepts: rights (entitlements), duties (obligations), justice (fairness), autonomy (freedom to choose). Dilemmas = good values in conflict."
+   },
+   {
+    "h": "Reasoning through dilemmas",
+    "body": "When facing a genuine ethical dilemma, a structured approach helps. First, get the facts straight — many 'ethical' disagreements are really factual ones. Identify who is affected and how (the stakeholders). Then consider the situation through multiple frameworks: What outcomes would each choice produce (consequences)? What duties or rights are at stake (rules)? What would a person of good character do (virtue)?\n\nLook for a choice you could defend publicly, apply consistently (would you accept everyone doing it?), and live with. There often isn't one perfect answer, but careful reasoning leads to a better, more honest one than gut reaction alone. A useful test: could you explain your decision to someone affected by it and have it seem fair?",
+    "tip": "Get the facts, name who's affected, weigh consequences + duties + character, and pick what you could defend publicly and apply to everyone."
+   },
+   {
+    "h": "Developing your ethics",
+    "body": "Ethics isn't about memorizing rules — it's about becoming a thoughtful moral reasoner. A few habits help: think about why you hold your values, not just what they are; consider perspectives different from your own; and notice when you're rationalizing (making excuses for what you wanted to do anyway) versus genuinely reasoning.\n\nPracticing ethical reflection on small, everyday choices builds the judgment you'll need for big ones. It also helps to have moral humility — recognizing that good, smart people disagree on hard questions, and that you might be wrong. The goal isn't to win arguments but to live well and treat others rightly. In the end, ethics is less about having all the answers and more about taking the questions seriously.",
+    "tip": "Build ethical judgment on small daily choices; question your own reasoning; stay humble. The goal is to live well, not to win arguments."
+   }
+  ],
+  "cards": [
+   {
+    "h": "What ethics is",
+    "body": "The study of right and wrong, giving reasons. Not the same as law, custom, or feeling."
+   },
+   {
+    "h": "Frameworks",
+    "body": "Consequentialism (results), deontology (rules/duties), virtue ethics (character)."
+   },
+   {
+    "h": "Key concepts",
+    "body": "Rights, duties, justice/fairness, autonomy. Dilemmas = good values in conflict."
+   },
+   {
+    "h": "Dilemmas",
+    "body": "Get facts, name stakeholders, weigh consequences + duties + character; pick what you'd defend publicly."
+   },
+   {
+    "h": "Developing",
+    "body": "Question your own reasoning, consider other views, stay humble. Live well, don't just win arguments."
+   }
+  ],
+  "flash": [
+   [
+    "Ethics",
+    "The study of right and wrong (moral philosophy)."
+   ],
+   [
+    "Consequentialism",
+    "Judging actions by their results/outcomes."
+   ],
+   [
+    "Utilitarianism",
+    "The greatest good for the greatest number."
+   ],
+   [
+    "Deontology",
+    "Judging actions by rules and duties."
+   ],
+   [
+    "Virtue ethics",
+    "Judging by character — what a good person would do."
+   ],
+   [
+    "Rights",
+    "Entitlements others shouldn't violate (life, liberty)."
+   ],
+   [
+    "Duties",
+    "Obligations we owe to others (honesty, keeping word)."
+   ],
+   [
+    "Justice",
+    "Treating people fairly and giving them their due."
+   ],
+   [
+    "Autonomy",
+    "Respecting people's right to make their own choices."
+   ],
+   [
+    "Moral dilemma",
+    "A situation where good values conflict."
+   ],
+   [
+    "Moral relativism",
+    "The view that right/wrong depends on culture or person."
+   ],
+   [
+    "Rationalization",
+    "Making excuses for what you wanted to do anyway."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Ethics is the study of:",
+    "options": [
+     "Right and wrong, with reasons",
+     "Laws only",
+     "Personal taste",
+     "Weather"
+    ],
+    "a": 0,
+    "why": "Moral philosophy reasons about how we ought to act."
+   },
+   {
+    "q": "Ethics differs from law because:",
+    "options": [
+     "Some legal things are unethical (and vice versa)",
+     "They're identical",
+     "Law is always right",
+     "Ethics is just feelings"
+    ],
+    "a": 0,
+    "why": "Legality and morality can come apart."
+   },
+   {
+    "q": "Judging an action by its results is:",
+    "options": [
+     "Consequentialism",
+     "Deontology",
+     "Virtue ethics",
+     "Relativism"
+    ],
+    "a": 0,
+    "why": "Consequentialism focuses on outcomes."
+   },
+   {
+    "q": "'The greatest good for the greatest number' is:",
+    "options": [
+     "Utilitarianism",
+     "Deontology",
+     "Virtue ethics",
+     "Skepticism"
+    ],
+    "a": 0,
+    "why": "Utilitarianism is a form of consequentialism."
+   },
+   {
+    "q": "Judging by rules and duties regardless of outcome is:",
+    "options": [
+     "Deontology",
+     "Consequentialism",
+     "Utilitarianism",
+     "Aesthetics"
+    ],
+    "a": 0,
+    "why": "Deontology says some acts are simply right or wrong."
+   },
+   {
+    "q": "Asking 'what would a good, honest person do?' is:",
+    "options": [
+     "Virtue ethics",
+     "Consequentialism",
+     "Deontology",
+     "Relativism"
+    ],
+    "a": 0,
+    "why": "Virtue ethics centers on character."
+   },
+   {
+    "q": "Things people are entitled to that others shouldn't violate are:",
+    "options": [
+     "Rights",
+     "Duties",
+     "Results",
+     "Virtues"
+    ],
+    "a": 0,
+    "why": "Rights include life, liberty, fair treatment."
+   },
+   {
+    "q": "Obligations we owe to others are:",
+    "options": [
+     "Duties",
+     "Rights",
+     "Outcomes",
+     "Biases"
+    ],
+    "a": 0,
+    "why": "Duties: honesty, non-harm, keeping promises."
+   },
+   {
+    "q": "Respecting a person's right to make their own choices is:",
+    "options": [
+     "Autonomy",
+     "Justice",
+     "Consequentialism",
+     "Rationalization"
+    ],
+    "a": 0,
+    "why": "Autonomy = self-determination."
+   },
+   {
+    "q": "An ethical dilemma is hard mainly because:",
+    "options": [
+     "Good values conflict",
+     "There are no values",
+     "Everyone agrees",
+     "It's about facts only"
+    ],
+    "a": 0,
+    "why": "E.g., honesty vs. kindness, freedom vs. common good."
+   },
+   {
+    "q": "A good first step in a dilemma is to:",
+    "options": [
+     "Get the facts straight",
+     "Pick fast",
+     "Follow your gut only",
+     "Ignore who's affected"
+    ],
+    "a": 0,
+    "why": "Many 'ethical' disputes are really factual."
+   },
+   {
+    "q": "A useful test for a decision is: could you:",
+    "options": [
+     "Defend it publicly and apply it to everyone",
+     "Hide it",
+     "Benefit only yourself",
+     "Do it in secret"
+    ],
+    "a": 0,
+    "why": "Public defensibility and consistency are good checks."
+   },
+   {
+    "q": "Making excuses for what you wanted to do anyway is:",
+    "options": [
+     "Rationalizing",
+     "Reasoning",
+     "Justice",
+     "A duty"
+    ],
+    "a": 0,
+    "why": "Rationalizing isn't genuine ethical reasoning."
+   },
+   {
+    "q": "Moral humility means recognizing that:",
+    "options": [
+     "Good people disagree and you might be wrong",
+     "You're always right",
+     "Ethics has no answers",
+     "Only you matter"
+    ],
+    "a": 0,
+    "why": "Humility keeps reasoning honest."
+   },
+   {
+    "q": "The ultimate goal of ethics is to:",
+    "options": [
+     "Live well and treat others rightly",
+     "Win arguments",
+     "Memorize rules",
+     "Avoid all choices"
+    ],
+    "a": 0,
+    "why": "It's about living well, not scoring points."
+   }
+  ]
+ },
+ "mind-philosophy": {
+  "title": "Philosophy",
+  "subject": "Psychology & Philosophy",
+  "level": "Grades 9-College",
+  "objectives": [
+   "Understand what philosophy is and its value",
+   "Know the main branches of philosophy",
+   "Understand big questions in epistemology and metaphysics",
+   "Recognize major philosophical ideas and thinkers",
+   "Think philosophically in everyday life"
+  ],
+  "intro": "Philosophy is the study of fundamental questions about existence, knowledge, values, reason, and the mind — the deep questions that other subjects take for granted. It's less about memorizing answers and more about learning to think carefully about things that matter. This lesson introduces what philosophy is, its branches, and some of its biggest questions.",
+  "sections": [
+   {
+    "h": "What philosophy is",
+    "body": "Philosophy means 'love of wisdom' (from the Greek). It's the practice of thinking carefully and systematically about the most basic questions — ones that can't be fully answered by experiment alone: What is real? What can we know? What is right? What is a good life? These are questions everyone wonders about; philosophy just takes them seriously and reasons about them rigorously.\n\nPhilosophy was the original 'mother' of all subjects — science, psychology, and political theory all grew out of it. What makes something philosophical is the method: careful reasoning, defining terms clearly, questioning assumptions, and following arguments wherever they lead. Philosophy doesn't always reach final answers, but it clarifies the questions and sharpens how we think — which is valuable in itself.",
+    "tip": "Philosophy ('love of wisdom') reasons carefully about life's most basic questions. It values the METHOD — clear thinking — over easy answers."
+   },
+   {
+    "h": "The branches of philosophy",
+    "body": "Philosophy is traditionally divided into major branches, each tackling a kind of question. Metaphysics asks what is real — the nature of existence, time, mind, and whether we have free will. Epistemology asks what we can know — what counts as knowledge, how we justify beliefs, and the limits of certainty.\n\nEthics asks how we should live and act (its own lesson). Logic studies correct reasoning (its own lesson too). And aesthetics asks about beauty and art — what makes something beautiful or a work of art. Political philosophy asks how societies should be organized (justice, rights, authority). Together, these branches cover the biggest questions humans ask, and most philosophical problems fall into one or more of them.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"The main branches of philosophy and their questions\"><rect x=\"8\" y=\"5\" width=\"102\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"110\" y=\"5\" width=\"132\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9.5\">Metaphysics</text><text x=\"116\" y=\"20\" fill=\"#9adbcf\" font-size=\"8\">what is real (existence, free will)</text><rect x=\"8\" y=\"27\" width=\"102\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"110\" y=\"27\" width=\"132\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9.5\">Epistemology</text><text x=\"116\" y=\"42\" fill=\"#9adbcf\" font-size=\"8\">what we can know</text><rect x=\"8\" y=\"49\" width=\"102\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"110\" y=\"49\" width=\"132\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9.5\">Ethics</text><text x=\"116\" y=\"64\" fill=\"#9adbcf\" font-size=\"8\">how we should act</text><rect x=\"8\" y=\"71\" width=\"102\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"110\" y=\"71\" width=\"132\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9.5\">Logic</text><text x=\"116\" y=\"86\" fill=\"#9adbcf\" font-size=\"8\">correct reasoning</text><rect x=\"8\" y=\"93\" width=\"102\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"110\" y=\"93\" width=\"132\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9.5\">Aesthetics</text><text x=\"116\" y=\"108\" fill=\"#9adbcf\" font-size=\"8\">beauty and art</text></svg>",
+    "caption": "The main branches of philosophy — each takes on a different kind of fundamental question.",
+    "tip": "Main branches: metaphysics (what's real), epistemology (what we can know), ethics (how to act), logic (reasoning), aesthetics (beauty)."
+   },
+   {
+    "h": "What can we know? (epistemology)",
+    "body": "One of philosophy's oldest questions is how we know anything at all. Epistemology distinguishes knowledge from mere belief or opinion — traditionally, knowledge is a belief that is both true and justified (you have good reason for it). But justifying beliefs is tricky: how do we know our senses aren't deceiving us? Could we be dreaming, or (the modern version) in a simulation?\n\nPhilosophers have taken different routes: rationalists emphasize reason as the source of knowledge, while empiricists emphasize sense experience and evidence. Skepticism questions whether we can be certain of anything at all. These debates aren't just abstract — they underlie science (how do we know our theories are true?) and daily life (how much should you trust what you're told?). Thinking about knowledge makes you a more careful believer.",
+    "tip": "Epistemology studies knowledge: traditionally a TRUE and JUSTIFIED belief. Rationalism (reason) vs empiricism (experience); skepticism doubts certainty."
+   },
+   {
+    "h": "What is real? (metaphysics) and big ideas",
+    "body": "Metaphysics asks about the deepest nature of reality. Classic questions: Do we have free will, or is everything determined by prior causes? What is the mind, and how does it relate to the physical brain (the 'mind-body problem')? What does it mean for something to exist? Does the universe have a purpose?\n\nOver the centuries, great thinkers wrestled with these: Socrates taught by relentless questioning; Plato argued reality includes perfect 'forms' beyond the physical; Aristotle emphasized observation and logic; later thinkers like Descartes ('I think, therefore I am') sought certain foundations, and many others followed. You don't need to master every philosopher, but knowing that humanity's smartest minds have long debated these questions — and that they're still open — is itself illuminating.",
+    "tip": "Metaphysics asks what's real: free will vs determinism, the mind-body problem, whether existence has purpose. The big questions are still open."
+   },
+   {
+    "h": "Thinking philosophically",
+    "body": "You don't have to be a professional to think philosophically — and doing so improves how you handle everything. Philosophy teaches you to question assumptions (why do I believe this?), define your terms (what do I even mean by 'fair' or 'happy'?), follow arguments to their conclusions, and consider objections to your own views.\n\nIt also encourages examining your life and values: the philosopher Socrates said 'the unexamined life is not worth living.' Asking what really matters to you, why you believe what you believe, and how you ought to live are philosophical acts that lead to a more intentional, thoughtful life. Philosophy won't hand you all the answers, but it gives you the tools to think about the questions that matter most — and the habit of thinking them through is a kind of wisdom in itself.",
+    "tip": "Think philosophically: question assumptions, define your terms, follow arguments, examine your own life and values. The habit is itself wisdom."
+   }
+  ],
+  "cards": [
+   {
+    "h": "What it is",
+    "body": "'Love of wisdom' — careful reasoning about life's most basic questions. Values method over easy answers."
+   },
+   {
+    "h": "Branches",
+    "body": "Metaphysics (what's real), epistemology (what we know), ethics (how to act), logic (reasoning), aesthetics (beauty)."
+   },
+   {
+    "h": "Epistemology",
+    "body": "Knowledge = justified true belief. Rationalism (reason) vs empiricism (experience); skepticism doubts certainty."
+   },
+   {
+    "h": "Metaphysics",
+    "body": "Free will vs determinism, the mind-body problem, the nature of existence — still-open questions."
+   },
+   {
+    "h": "Thinking philosophically",
+    "body": "Question assumptions, define terms, follow arguments, examine your life. 'The unexamined life is not worth living.'"
+   }
+  ],
+  "flash": [
+   [
+    "Philosophy",
+    "The study of fundamental questions by careful reasoning ('love of wisdom')."
+   ],
+   [
+    "Metaphysics",
+    "The branch asking what is real (existence, free will)."
+   ],
+   [
+    "Epistemology",
+    "The branch asking what we can know."
+   ],
+   [
+    "Ethics",
+    "The branch asking how we should act."
+   ],
+   [
+    "Logic",
+    "The branch studying correct reasoning."
+   ],
+   [
+    "Aesthetics",
+    "The branch asking about beauty and art."
+   ],
+   [
+    "Knowledge",
+    "Traditionally, a justified true belief."
+   ],
+   [
+    "Rationalism",
+    "Reason as the main source of knowledge."
+   ],
+   [
+    "Empiricism",
+    "Sense experience as the main source of knowledge."
+   ],
+   [
+    "Skepticism",
+    "Doubt about whether we can be certain of anything."
+   ],
+   [
+    "Free will",
+    "Whether our choices are truly up to us."
+   ],
+   [
+    "Mind-body problem",
+    "How the mind relates to the physical brain."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The word 'philosophy' means:",
+    "options": [
+     "Love of wisdom",
+     "Study of stars",
+     "Fear of the unknown",
+     "Science of matter"
+    ],
+    "a": 0,
+    "why": "From the Greek for 'love of wisdom.'"
+   },
+   {
+    "q": "What makes a question philosophical is mainly the:",
+    "options": [
+     "Method of careful reasoning",
+     "Topic being science",
+     "Use of experiments only",
+     "Popularity"
+    ],
+    "a": 0,
+    "why": "Clear reasoning, defining terms, questioning assumptions."
+   },
+   {
+    "q": "The branch asking 'what is real?' is:",
+    "options": [
+     "Metaphysics",
+     "Epistemology",
+     "Aesthetics",
+     "Logic"
+    ],
+    "a": 0,
+    "why": "Metaphysics covers existence, free will, mind."
+   },
+   {
+    "q": "The branch asking 'what can we know?' is:",
+    "options": [
+     "Epistemology",
+     "Metaphysics",
+     "Ethics",
+     "Aesthetics"
+    ],
+    "a": 0,
+    "why": "Epistemology studies knowledge and justification."
+   },
+   {
+    "q": "The branch about beauty and art is:",
+    "options": [
+     "Aesthetics",
+     "Logic",
+     "Metaphysics",
+     "Ethics"
+    ],
+    "a": 0,
+    "why": "Aesthetics asks what makes things beautiful or art."
+   },
+   {
+    "q": "Traditionally, knowledge is defined as a belief that is:",
+    "options": [
+     "True and justified",
+     "Popular",
+     "Strongly felt",
+     "Old"
+    ],
+    "a": 0,
+    "why": "Justified true belief — true plus good reason."
+   },
+   {
+    "q": "Emphasizing reason as the source of knowledge is:",
+    "options": [
+     "Rationalism",
+     "Empiricism",
+     "Skepticism",
+     "Aesthetics"
+    ],
+    "a": 0,
+    "why": "Rationalists stress reason; empiricists stress experience."
+   },
+   {
+    "q": "Emphasizing sense experience and evidence is:",
+    "options": [
+     "Empiricism",
+     "Rationalism",
+     "Metaphysics",
+     "Logic"
+    ],
+    "a": 0,
+    "why": "Empiricism grounds knowledge in observation."
+   },
+   {
+    "q": "Doubting whether we can be certain of anything is:",
+    "options": [
+     "Skepticism",
+     "Dogmatism",
+     "Empiricism",
+     "Ethics"
+    ],
+    "a": 0,
+    "why": "Skepticism questions the possibility of certainty."
+   },
+   {
+    "q": "Whether our choices are truly up to us is the question of:",
+    "options": [
+     "Free will",
+     "Aesthetics",
+     "Logic",
+     "Beauty"
+    ],
+    "a": 0,
+    "why": "Free will vs determinism is a metaphysics question."
+   },
+   {
+    "q": "How the mind relates to the physical brain is the:",
+    "options": [
+     "Mind-body problem",
+     "Rule of thirds",
+     "Social contract",
+     "Exposure triangle"
+    ],
+    "a": 0,
+    "why": "A central metaphysics/philosophy-of-mind puzzle."
+   },
+   {
+    "q": "'I think, therefore I am' is associated with:",
+    "options": [
+     "Descartes",
+     "Aristotle",
+     "Plato",
+     "Newton"
+    ],
+    "a": 0,
+    "why": "Descartes sought a certain foundation for knowledge."
+   },
+   {
+    "q": "Science, psychology, and political theory originally grew out of:",
+    "options": [
+     "Philosophy",
+     "Mathematics only",
+     "Religion only",
+     "Art"
+    ],
+    "a": 0,
+    "why": "Philosophy was the 'mother' of many fields."
+   },
+   {
+    "q": "Socrates is known for saying:",
+    "options": [
+     "'The unexamined life is not worth living'",
+     "'E = mc²'",
+     "'Survival of the fittest'",
+     "'I have a dream'"
+    ],
+    "a": 0,
+    "why": "He urged examining one's life and values."
+   },
+   {
+    "q": "Thinking philosophically mainly means:",
+    "options": [
+     "Questioning assumptions and following arguments",
+     "Memorizing names",
+     "Avoiding hard questions",
+     "Trusting feelings only"
+    ],
+    "a": 0,
+    "why": "Clear reasoning about what matters is the habit."
    }
   ]
  }
