@@ -2604,130 +2604,286 @@ window.LAB404_CONTENT = {
  "social-civics-government": {
   "title": "Civics & Government",
   "subject": "Social Studies",
-  "level": "Grades 9-12",
-  "intro": "Civics is how your government works and what your role in it is. Understanding the basics — the branches, your rights, and how decisions get made — lets you take part instead of just being affected.",
-  "cards": [
+  "level": "Grades 6-12",
+  "objectives": [
+   "Explain what government is and why societies have it",
+   "Describe the US system: Constitution, federalism, three branches",
+   "Explain the separation of powers and checks and balances",
+   "Describe citizens' rights and responsibilities",
+   "Explain how citizens participate in a democracy"
+  ],
+  "intro": "Civics is the study of how government works and what it means to be a citizen. In a democracy, the government answers to the people — which means understanding it is part of your power. This lesson covers why we have government, how the US system is built, and how you take part in it.",
+  "sections": [
+   {
+    "h": "Why we have government",
+    "body": "A government is the system a society uses to make and enforce rules, provide services, and settle disputes. Without one, there would be no laws, no courts, no roads or schools funded in common, and no protection of rights — just whoever is strongest. Government exists to bring order, security, and shared services to a community.\n\nGovernments come in different forms. In a democracy, power ultimately rests with the people, who govern through elected representatives. In an autocracy, one person or small group holds power. The United States is a democratic republic — the people elect leaders to represent them and govern according to a constitution.",
+    "tip": "Government makes and enforces rules; in a democracy, its power comes from the people."
+   },
+   {
+    "h": "The Constitution and federalism",
+    "body": "The US Constitution is the supreme law of the land — the framework for the entire government, written in 1787. It can be changed only by amendment, and all other laws must agree with it. Its first ten amendments, the Bill of Rights, guarantee freedoms like speech, religion, and a fair trial.\n\nThe Constitution also sets up federalism: power is divided between the national (federal) government and the state governments. Some powers belong to the federal government (like printing money and national defense), some to the states (like running schools and local police), and some are shared. This division keeps any single level of government from holding all the power.",
+    "tip": "The Constitution is the supreme law; federalism splits power between the national and state governments."
+   },
    {
     "h": "The three branches",
-    "body": "The U.S. federal government has three branches: the Legislative (Congress) makes laws, the Executive (the President) carries them out, and the Judicial (the courts) interprets them. Splitting power keeps any one part from controlling everything."
+    "body": "To prevent any one person or group from gaining too much power, the Constitution divides the federal government into three branches. The legislative branch (Congress — the House and Senate) makes the laws. The executive branch (the President and agencies) carries out and enforces the laws. The judicial branch (the courts, topped by the Supreme Court) interprets the laws and decides if they follow the Constitution.\n\nEach branch has its own role, but they overlap enough to watch one another. This separation of powers is a cornerstone of American government, designed by founders who feared putting too much power in any single set of hands.",
+    "visual": "<svg viewBox=\"0 0 252 124\" width=\"245\" role=\"img\" aria-label=\"The three branches of the US government: legislative, executive, and judicial\"><rect x=\"86\" y=\"6\" width=\"80\" height=\"26\" rx=\"6\" fill=\"rgba(107,122,152,.2)\" stroke=\"#6b7a98\" stroke-width=\"1.5\"/><text x=\"126\" y=\"23\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9.5\">U.S. Government</text><line x1=\"100\" y1=\"32\" x2=\"43\" y2=\"56\" stroke=\"#6b7a98\" stroke-width=\"1.2\"/><line x1=\"126\" y1=\"32\" x2=\"126\" y2=\"56\" stroke=\"#6b7a98\" stroke-width=\"1.2\"/><line x1=\"152\" y1=\"32\" x2=\"209\" y2=\"56\" stroke=\"#6b7a98\" stroke-width=\"1.2\"/><rect x=\"6\" y=\"58\" width=\"74\" height=\"54\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"43\" y=\"74\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Legislative</text><text x=\"43\" y=\"87\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">(Congress)</text><text x=\"43\" y=\"100\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">MAKES laws</text><rect x=\"89\" y=\"58\" width=\"74\" height=\"54\" rx=\"6\" fill=\"rgba(240,90,90,.16)\" stroke=\"#f05a5a\" stroke-width=\"1.5\"/><text x=\"126\" y=\"74\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Executive</text><text x=\"126\" y=\"87\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">(President)</text><text x=\"126\" y=\"100\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">ENFORCES laws</text><rect x=\"172\" y=\"58\" width=\"74\" height=\"54\" rx=\"6\" fill=\"rgba(57,227,200,.14)\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><text x=\"209\" y=\"74\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Judicial</text><text x=\"209\" y=\"87\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">(Courts)</text><text x=\"209\" y=\"100\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">INTERPRETS laws</text></svg>",
+    "caption": "The three branches: Congress makes laws, the President enforces them, the courts interpret them.",
+    "example": "Legislative (Congress) makes laws → Executive (President) enforces them → Judicial (courts) interprets them.",
+    "tip": "Legislative makes laws, Executive enforces them, Judicial interprets them — three separate branches."
    },
    {
     "h": "Checks and balances",
-    "body": "Each branch can limit the others. Congress passes laws, but the President can veto them, and the courts can rule them unconstitutional. This balance is designed to prevent abuse of power."
+    "body": "The three branches don't just have separate jobs — they also check each other's power, a system called checks and balances. Congress passes a law, but the President can veto it; Congress can override that veto with enough votes. The President appoints judges, but the Senate must approve them. The courts can strike down a law or action that violates the Constitution.\n\nThis constant tug-of-war is intentional. It makes government slower, but it guards against tyranny by ensuring no branch can act entirely on its own. Each branch has tools to limit the others, keeping power balanced among all three.",
+    "tip": "Checks and balances = each branch can limit the others (veto, override, approve, strike down)."
    },
    {
-    "h": "Federal vs. state",
-    "body": "Power is also split between the national (federal) government and the states. The federal government handles things like the military and money; states handle things like driver's licenses, most schools, and local laws. Some powers they share."
+    "h": "Citizenship: rights and responsibilities",
+    "body": "Citizens have both rights and responsibilities. Rights are freedoms the government protects — speech, religion, assembly, a fair trial, and equal protection under the law. These are guaranteed mainly by the Bill of Rights and later amendments that expanded them to more people.\n\nWith rights come responsibilities: obeying the law, paying taxes, serving on juries, and staying informed. Voting is the most powerful one — it's how citizens choose their leaders and shape policy. A healthy democracy depends on citizens who know their rights, meet their responsibilities, and actually take part rather than leaving decisions to others.",
+    "tip": "Rights (speech, fair trial, voting) come with responsibilities (obey laws, pay taxes, serve, stay informed, vote)."
    },
    {
-    "h": "Your rights",
-    "body": "The Bill of Rights (the first 10 amendments to the Constitution) protects key freedoms — speech, religion, press, assembly, the right to a fair trial, and protection from unreasonable searches. Knowing them is the first step to using them."
+    "h": "Taking part in democracy",
+    "body": "Democracy only works when people participate. The clearest way is voting — in national, state, and local elections, where your vote helps pick who makes decisions that affect your daily life. But participation goes further: contacting elected officials, peaceful protest, volunteering, serving on juries, and simply staying informed about the issues.\n\nEven young people who can't yet vote can take part — by learning the issues, joining community efforts, and making their voices heard. The founders built a government meant to answer to its citizens; it stays that way only when citizens show up. Your participation, however small it feels, is how a democracy holds its shape."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Why government",
+    "body": "It makes and enforces rules and provides shared services; a democracy's power comes from the people."
    },
    {
-    "h": "How a bill becomes law",
-    "body": "A bill is proposed in Congress, debated and voted on in both the House and the Senate, and if both pass it, it goes to the President to sign into law (or veto). Citizens influence this by voting and contacting representatives."
+    "h": "Constitution & federalism",
+    "body": "The Constitution is the supreme law; federalism splits power between national and state governments."
+   },
+   {
+    "h": "Three branches",
+    "body": "Legislative makes laws, Executive enforces them, Judicial interprets them (separation of powers)."
+   },
+   {
+    "h": "Checks & balances",
+    "body": "Each branch limits the others — veto, override, approval of appointments, striking down laws."
+   },
+   {
+    "h": "Citizenship",
+    "body": "Rights (speech, fair trial) + responsibilities (obey laws, pay taxes, serve, vote, stay informed)."
    }
   ],
   "flash": [
+   [
+    "Government",
+    "The system a society uses to make and enforce rules and provide services."
+   ],
+   [
+    "Democracy",
+    "A system where power rests with the people."
+   ],
+   [
+    "Republic",
+    "A system where people elect representatives to govern."
+   ],
+   [
+    "Constitution",
+    "The supreme law framing the US government."
+   ],
+   [
+    "Bill of Rights",
+    "The first 10 amendments guaranteeing freedoms."
+   ],
+   [
+    "Federalism",
+    "Dividing power between national and state governments."
+   ],
    [
     "Legislative branch",
     "Congress — makes the laws."
    ],
    [
     "Executive branch",
-    "The President — carries out the laws."
+    "The President and agencies — enforce the laws."
    ],
    [
     "Judicial branch",
     "The courts — interpret the laws."
    ],
    [
+    "Separation of powers",
+    "Splitting government into branches with distinct roles."
+   ],
+   [
     "Checks and balances",
-    "Each branch can limit the powers of the others."
+    "Each branch's power to limit the others."
    ],
    [
-    "Veto",
-    "The President's power to reject a bill from Congress."
-   ],
-   [
-    "Federalism",
-    "Division of power between national and state governments."
-   ],
-   [
-    "Bill of Rights",
-    "The first 10 amendments protecting basic freedoms."
-   ],
-   [
-    "Amendment",
-    "A formal change or addition to the Constitution."
+    "Citizen",
+    "A member of a nation with rights and responsibilities."
    ]
   ],
   "quiz": [
    {
-    "q": "Which branch makes laws?",
+    "q": "A government exists mainly to:",
+    "options": [
+     "Make and enforce rules and provide services",
+     "Win elections only",
+     "Entertain people",
+     "Print books"
+    ],
+    "a": 0,
+    "why": "It brings order, services, and protection to a society."
+   },
+   {
+    "q": "In a democracy, power ultimately rests with:",
+    "options": [
+     "The people",
+     "One king",
+     "The army",
+     "Corporations"
+    ],
+    "a": 0,
+    "why": "Democratic power comes from the people, usually via elected reps."
+   },
+   {
+    "q": "The supreme law of the United States is the:",
+    "options": [
+     "Constitution",
+     "Declaration of Independence",
+     "Mayflower Compact",
+     "Gettysburg Address"
+    ],
+    "a": 0,
+    "why": "All other laws must agree with the Constitution."
+   },
+   {
+    "q": "Dividing power between national and state governments is:",
+    "options": [
+     "Federalism",
+     "A veto",
+     "A monarchy",
+     "Impeachment"
+    ],
+    "a": 0,
+    "why": "Federalism splits power across levels of government."
+   },
+   {
+    "q": "Which branch makes the laws?",
     "options": [
      "Legislative (Congress)",
      "Executive",
      "Judicial",
+     "Military"
+    ],
+    "a": 0,
+    "why": "Congress — the House and Senate — makes laws."
+   },
+   {
+    "q": "Which branch enforces the laws?",
+    "options": [
+     "Executive (President)",
+     "Legislative",
+     "Judicial",
      "State"
     ],
     "a": 0,
-    "why": "Congress, the legislative branch, writes and passes laws."
+    "why": "The President and agencies carry out and enforce laws."
    },
    {
-    "q": "The President's power to reject a bill is called a:",
+    "q": "Which branch interprets the laws?",
+    "options": [
+     "Judicial (courts)",
+     "Legislative",
+     "Executive",
+     "Press"
+    ],
+    "a": 0,
+    "why": "The courts, topped by the Supreme Court, interpret laws."
+   },
+   {
+    "q": "Dividing government into three branches is called:",
+    "options": [
+     "Separation of powers",
+     "A monopoly",
+     "A dictatorship",
+     "Federal aid"
+    ],
+    "a": 0,
+    "why": "Separate branches prevent any one from gaining too much power."
+   },
+   {
+    "q": "When the President rejects a bill from Congress, it's a:",
     "options": [
      "Veto",
-     "Filibuster",
-     "Ruling",
-     "Pardon"
+     "Vote",
+     "Trial",
+     "Tax"
     ],
     "a": 0,
-    "why": "A veto rejects a bill passed by Congress."
+    "why": "A veto is the executive check on new laws."
    },
    {
-    "q": "The first 10 amendments to the Constitution are the:",
+    "q": "The system where each branch limits the others is:",
     "options": [
-     "Bill of Rights",
-     "Articles",
-     "Preamble",
-     "Declaration"
+     "Checks and balances",
+     "Federalism",
+     "Citizenship",
+     "The census"
     ],
     "a": 0,
-    "why": "They protect fundamental freedoms and are called the Bill of Rights."
+    "why": "Checks and balances keep power among the three branches balanced."
    },
    {
-    "q": "Which is usually a STATE responsibility?",
+    "q": "Which is a right protected by the Bill of Rights?",
     "options": [
-     "Driver's licenses",
-     "The military",
-     "Printing money",
-     "Foreign treaties"
+     "Freedom of speech",
+     "Free cars",
+     "Guaranteed wealth",
+     "Unlimited power"
     ],
     "a": 0,
-    "why": "States handle licenses, most schools, and local matters; the federal government handles the military and currency."
+    "why": "Speech, religion, assembly, and a fair trial are protected rights."
    },
    {
-    "q": "Checks and balances exist to:",
+    "q": "Which is a responsibility of citizens?",
     "options": [
-     "Prevent any one branch from gaining too much power",
-     "Speed up laws",
-     "Give the President full control",
-     "Remove the courts"
+     "Obeying laws and paying taxes",
+     "Ignoring all rules",
+     "Never voting",
+     "Avoiding juries"
     ],
     "a": 0,
-    "why": "They let each branch limit the others to prevent abuse."
+    "why": "Responsibilities include obeying laws, taxes, juries, and staying informed."
    },
    {
-    "q": "After both houses of Congress pass a bill, it goes to the:",
+    "q": "The most powerful way most citizens shape government is by:",
     "options": [
-     "President",
-     "Supreme Court",
-     "Governor",
-     "Voters"
+     "Voting",
+     "Watching TV",
+     "Staying silent",
+     "Moving away"
     ],
     "a": 0,
-    "why": "The President signs it into law or vetoes it."
+    "why": "Voting chooses leaders and shapes policy."
+   },
+   {
+    "q": "Checks and balances make government:",
+    "options": [
+     "Slower but safer from tyranny",
+     "Faster and unlimited",
+     "Run by one branch",
+     "Powerless"
+    ],
+    "a": 0,
+    "why": "The tug-of-war guards against any branch acting alone."
+   },
+   {
+    "q": "A democracy stays healthy when citizens:",
+    "options": [
+     "Participate and stay informed",
+     "Leave all decisions to others",
+     "Never vote",
+     "Ignore the issues"
+    ],
+    "a": 0,
+    "why": "Participation keeps the government answering to the people."
    }
   ]
  },
@@ -8959,130 +9115,282 @@ window.LAB404_CONTENT = {
  "social-us-history": {
   "title": "US History",
   "subject": "Social Studies",
-  "level": "Grades 6-12",
-  "intro": "U.S. history is the story of how the United States came to be and how it changed — its founding ideals, its conflicts, and the long struggle to extend its promises to everyone.",
+  "level": "Grades 5-12",
+  "objectives": [
+   "Trace the major eras of US history from founding to today",
+   "Explain the founding: colonization, revolution, and the Constitution",
+   "Describe westward expansion, the divide over slavery, and the Civil War",
+   "Explain industrialization, reform, and America's rise as a world power",
+   "Connect historical events to the present"
+  ],
+  "intro": "US history is the story of how the United States came to be — its founding ideals, its conflicts, and its ongoing struggle to live up to the promise that all people are created equal. Understanding it helps you make sense of the country today. This lesson traces the major eras from the first colonies to modern America.",
+  "sections": [
+   {
+    "h": "Founding: colonies to a new nation",
+    "body": "The United States began as thirteen British colonies along the Atlantic coast. By the 1770s, many colonists resented being taxed by a Parliament they had no vote in — 'no taxation without representation.' Tensions erupted into the American Revolution (1775–1783), and in 1776 the colonies declared independence, asserting that people have rights to 'life, liberty, and the pursuit of happiness.'\n\nAfter winning the war, the new nation wrote the Constitution (1787), creating a federal government with checks and balances, soon followed by the Bill of Rights protecting individual freedoms. These founding documents, and the ideals behind them, still shape American government and life today.",
+    "visual": "<svg viewBox=\"0 0 250 92\" width=\"240\" role=\"img\" aria-label=\"Timeline of major eras in US history\"><line x1=\"14\" y1=\"50\" x2=\"236\" y2=\"50\" stroke=\"#6b7a98\" stroke-width=\"2\"/><circle cx=\"25\" cy=\"50\" r=\"4\" fill=\"#4f9cf0\"/><text x=\"25\" y=\"33\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9\">1776</text><text x=\"25\" y=\"68\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"7.5\">founding</text><circle cx=\"76\" cy=\"50\" r=\"4\" fill=\"#4f9cf0\"/><text x=\"76\" y=\"33\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9\">1865</text><text x=\"76\" y=\"68\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"7.5\">Civil War</text><circle cx=\"128\" cy=\"50\" r=\"4\" fill=\"#4f9cf0\"/><text x=\"128\" y=\"33\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9\">1900</text><text x=\"128\" y=\"68\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"7.5\">industry</text><circle cx=\"180\" cy=\"50\" r=\"4\" fill=\"#4f9cf0\"/><text x=\"180\" y=\"33\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9\">1945</text><text x=\"180\" y=\"68\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"7.5\">superpower</text><circle cx=\"231\" cy=\"50\" r=\"4\" fill=\"#4f9cf0\"/><text x=\"231\" y=\"33\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9\">today</text></svg>",
+    "caption": "Major eras of US history, from the 1776 founding to the present.",
+    "example": "1776 Declaration of Independence; 1787 Constitution; 1791 Bill of Rights (first 10 amendments).",
+    "tip": "The founding era set the ideals — liberty, rights, self-government — the US has worked toward ever since."
+   },
+   {
+    "h": "Expansion and a divided nation",
+    "body": "Through the 1800s, the United States expanded westward across the continent — through purchases, treaties, war, and the forced removal of Native American peoples from their lands, a tragic cost of that growth. The country grew rapidly in size and population.\n\nBut expansion exposed a deep divide: slavery. The Southern economy relied on enslaved people, while the North increasingly opposed slavery. The conflict exploded into the Civil War (1861–1865), the deadliest war in American history. The North's victory preserved the Union and ended slavery — but the struggle for true equality was far from over.",
+    "tip": "The 1800s = westward expansion (at great cost to Native peoples) and a nation torn apart over slavery."
+   },
+   {
+    "h": "Reconstruction, industry, and reform",
+    "body": "After the Civil War, Reconstruction tried to rebuild the South and secure rights for formerly enslaved people, but its gains were rolled back, and segregation took hold for generations. Meanwhile, the late 1800s saw explosive industrialization: factories, railroads, and cities grew, powered by waves of immigrants.\n\nThis rapid growth brought wealth but also harsh working conditions and inequality, sparking the Progressive reform movement of the early 1900s — pushing for labor laws, women's right to vote (won in 1920), and curbs on corporate power. America was becoming a modern industrial nation, wrestling with the problems that came with it.",
+    "tip": "Late 1800s–early 1900s: factories and immigration transformed America; reformers fought the resulting abuses."
+   },
+   {
+    "h": "America and the modern world",
+    "body": "The 20th century pulled the United States onto the world stage. It fought in two World Wars, with World War II (1941–1945) ending its isolation for good and leaving it a global superpower. The decades after brought the Cold War rivalry with the Soviet Union, the Civil Rights Movement that dismantled legal segregation, and vast social and technological change.\n\nFrom the fall of the Soviet Union to the digital age, the US became the world's leading economic and military power while continuing to debate its direction at home. The nation's history is one of constant change, driven by both its founding ideals and its unresolved conflicts.",
+    "example": "Key 20th-century markers: WWII (1941–45), the Civil Rights Movement (1950s–60s), the Cold War (ended 1991).",
+    "tip": "The 1900s turned the US into a global superpower, while movements at home expanded rights and equality."
+   },
+   {
+    "h": "Why history matters",
+    "body": "History isn't just memorizing dates — it's understanding cause and effect, and how the past shapes the present. The Constitution written in 1787 still governs you; debates about rights, equality, and government power that began centuries ago continue today.\n\nStudying history teaches you to weigh evidence, understand different perspectives, and see that the present wasn't inevitable — people's choices made it. It also reveals patterns: how nations rise and struggle, how rights are won and defended. A citizen who knows history is far harder to mislead and far better equipped to shape what comes next."
+   }
+  ],
   "cards": [
    {
-    "h": "Founding and independence",
-    "body": "Thirteen British colonies declared independence in 1776 (the Declaration of Independence), fought the Revolutionary War, and won. The new nation then wrote the Constitution (1787), creating a federal government with three branches and, soon after, the Bill of Rights."
+    "h": "Founding",
+    "body": "13 colonies → Revolution (1775–83) → Declaration (1776) → Constitution (1787) + Bill of Rights."
    },
    {
-    "h": "Expansion and division",
-    "body": "Through the 1800s the U.S. expanded westward across the continent — often by displacing Native Americans. Deep division over slavery grew until it split the nation in the Civil War (1861–1865), which ended slavery and preserved the Union."
+    "h": "Expansion & Civil War",
+    "body": "1800s westward growth (at Native peoples' expense); slavery split the nation; Civil War (1861–65) ended it."
    },
    {
-    "h": "Industrialization and reform",
-    "body": "After the Civil War the country industrialized rapidly — railroads, factories, big cities, and waves of immigrants. This brought wealth but also harsh conditions, sparking reform movements for workers' rights, women's suffrage (won nationally in 1920), and more."
+    "h": "Industry & reform",
+    "body": "Factories, railroads, and immigration reshaped America; Progressives fought abuses; women won the vote in 1920."
    },
    {
-    "h": "The World Wars and the Depression",
-    "body": "The U.S. became a global power through World War I and World War II. Between them, the Great Depression (1930s) brought mass unemployment and new government programs. WWII ended with the U.S. as a superpower."
+    "h": "Modern superpower",
+    "body": "Two World Wars, the Cold War, and the Civil Rights Movement made the US a global power still debating its path."
    },
    {
-    "h": "Civil rights and modern America",
-    "body": "The Civil Rights Movement of the 1950s–60s fought legal segregation and expanded voting and equal rights, led by figures like Martin Luther King Jr. The decades since have continued debates over rights, equality, and America's role in the world."
+    "h": "Why it matters",
+    "body": "History explains the present, teaches you to weigh evidence, and makes you a harder-to-mislead citizen."
    }
   ],
   "flash": [
    [
+    "Colony",
+    "A territory settled and controlled by a distant country."
+   ],
+   [
+    "American Revolution",
+    "The 1775–83 war that won US independence from Britain."
+   ],
+   [
     "Declaration of Independence",
-    "The 1776 document declaring the colonies free from Britain."
+    "The 1776 document declaring the colonies free and stating their ideals."
    ],
    [
     "Constitution",
-    "The 1787 document setting up the U.S. government."
+    "The 1787 supreme law setting up the US government."
+   ],
+   [
+    "Bill of Rights",
+    "The first 10 amendments guaranteeing individual freedoms."
    ],
    [
     "Civil War",
-    "The 1861–1865 war that ended slavery and preserved the Union."
+    "The 1861–65 war over slavery and union; the North won."
+   ],
+   [
+    "Reconstruction",
+    "The post-Civil War effort to rebuild the South and secure rights."
    ],
    [
     "Industrialization",
-    "The shift to factories, railroads, and cities."
+    "The shift to factories, railroads, and cities in the late 1800s."
    ],
    [
-    "Suffrage",
-    "The right to vote (women won it nationally in 1920)."
+    "Progressive movement",
+    "Early-1900s reforms for labor, voting, and curbing corporate power."
    ],
    [
-    "Great Depression",
-    "The severe economic crisis of the 1930s."
+    "Cold War",
+    "The US–Soviet rivalry from after WWII to 1991."
    ],
    [
     "Civil Rights Movement",
-    "The 1950s–60s struggle for equal rights and against segregation."
+    "The 1950s–60s struggle that ended legal segregation."
    ],
    [
     "Superpower",
-    "A nation with dominant global power, as the U.S. became after WWII."
+    "A nation with dominant global economic and military power."
    ]
   ],
   "quiz": [
    {
-    "q": "The Declaration of Independence was adopted in:",
+    "q": "The US began as how many British colonies?",
+    "options": [
+     "Thirteen",
+     "Fifty",
+     "Seven",
+     "One"
+    ],
+    "a": 0,
+    "why": "The thirteen Atlantic-coast colonies formed the original US."
+   },
+   {
+    "q": "The colonists' complaint 'no taxation without representation' was aimed at:",
+    "options": [
+     "Being taxed with no vote in Parliament",
+     "Having too many votes",
+     "Paying no taxes",
+     "The Constitution"
+    ],
+    "a": 0,
+    "why": "They objected to taxes imposed without any representation."
+   },
+   {
+    "q": "The Declaration of Independence was signed in:",
     "options": [
      "1776",
-     "1492",
      "1865",
-     "1920"
+     "1941",
+     "1620"
     ],
     "a": 0,
-    "why": "The colonies declared independence from Britain in 1776."
+    "why": "1776 declared the colonies independent."
    },
    {
-    "q": "The U.S. Civil War was primarily over:",
-    "options": [
-     "Slavery and preserving the Union",
-     "Taxes on tea",
-     "Independence from Britain",
-     "Westward railroads"
-    ],
-    "a": 0,
-    "why": "Division over slavery split the nation; the war ended slavery."
-   },
-   {
-    "q": "The document that set up the U.S. government is the:",
+    "q": "The supreme law setting up the US government is the:",
     "options": [
      "Constitution",
-     "Declaration of Independence",
+     "Declaration",
      "Bill of Sale",
      "Magna Carta"
     ],
     "a": 0,
-    "why": "The Constitution (1787) created the federal government."
+    "why": "The 1787 Constitution frames the government."
    },
    {
-    "q": "Women won the nationwide right to vote in:",
+    "q": "The first ten amendments are called the:",
+    "options": [
+     "Bill of Rights",
+     "Articles",
+     "Preamble",
+     "Cabinet"
+    ],
+    "a": 0,
+    "why": "The Bill of Rights guarantees individual freedoms."
+   },
+   {
+    "q": "The Civil War (1861–65) was fought mainly over:",
+    "options": [
+     "Slavery and union",
+     "Taxes on tea",
+     "Foreign trade",
+     "Religion"
+    ],
+    "a": 0,
+    "why": "The divide over slavery split North and South."
+   },
+   {
+    "q": "The Civil War ended with:",
+    "options": [
+     "The Union preserved and slavery abolished",
+     "The South winning",
+     "A foreign takeover",
+     "No change"
+    ],
+    "a": 0,
+    "why": "The North's victory preserved the Union and ended slavery."
+   },
+   {
+    "q": "The effort to rebuild the South after the war was:",
+    "options": [
+     "Reconstruction",
+     "Revolution",
+     "Reformation",
+     "Reconciliation"
+    ],
+    "a": 0,
+    "why": "Reconstruction aimed to rebuild and secure rights, with mixed results."
+   },
+   {
+    "q": "The late 1800s were defined by:",
+    "options": [
+     "Industrialization and immigration",
+     "Only farming",
+     "No growth",
+     "Isolation"
+    ],
+    "a": 0,
+    "why": "Factories, railroads, cities, and immigrants transformed America."
+   },
+   {
+    "q": "American women won the right to vote in:",
     "options": [
      "1920",
      "1776",
      "1865",
-     "1965"
+     "2000"
     ],
     "a": 0,
-    "why": "The 19th Amendment granted women's suffrage in 1920."
+    "why": "The 19th Amendment (1920) gave women the vote."
    },
    {
-    "q": "The Civil Rights Movement fought mainly against:",
-    "options": [
-     "Legal segregation, for equal rights",
-     "Foreign armies",
-     "High taxes",
-     "Industrialization"
-    ],
-    "a": 0,
-    "why": "It challenged segregation and expanded voting and equal rights."
-   },
-   {
-    "q": "After World War II, the U.S. emerged as a:",
+    "q": "World War II left the United States as a:",
     "options": [
      "Global superpower",
      "British colony",
-     "Neutral nation",
-     "Small economy"
+     "Neutral farm nation",
+     "Small kingdom"
     ],
     "a": 0,
-    "why": "WWII left the U.S. as one of the world's dominant powers."
+    "why": "WWII (1941–45) ended US isolation and made it a superpower."
+   },
+   {
+    "q": "The US–Soviet rivalry after WWII was the:",
+    "options": [
+     "Cold War",
+     "Civil War",
+     "World War I",
+     "Revolution"
+    ],
+    "a": 0,
+    "why": "The Cold War lasted until the Soviet Union fell in 1991."
+   },
+   {
+    "q": "The movement that ended legal segregation was the:",
+    "options": [
+     "Civil Rights Movement",
+     "Progressive movement",
+     "Cold War",
+     "Reconstruction"
+    ],
+    "a": 0,
+    "why": "The 1950s–60s Civil Rights Movement dismantled legal segregation."
+   },
+   {
+    "q": "Studying history helps a citizen mainly by:",
+    "options": [
+     "Understanding the present and weighing evidence",
+     "Memorizing only dates",
+     "Predicting lottery numbers",
+     "Avoiding all news"
+    ],
+    "a": 0,
+    "why": "History explains the present and builds critical judgment."
+   },
+   {
+    "q": "A key lesson of US history is that the present was:",
+    "options": [
+     "Shaped by people's choices, not inevitable",
+     "Always going to happen",
+     "Decided by one person",
+     "Unchangeable"
+    ],
+    "a": 0,
+    "why": "Human choices made history — and can shape what comes next."
    }
   ]
  },
@@ -9090,179 +9398,384 @@ window.LAB404_CONTENT = {
   "title": "World History",
   "subject": "Social Studies",
   "level": "Grades 6-12",
-  "intro": "World history traces the human story across the globe — from the first civilizations to the connected world of today. The patterns of how societies rise, trade, clash, and change repeat in ways worth understanding.",
-  "cards": [
+  "objectives": [
+   "Trace major eras of world history from early civilizations to today",
+   "Describe the first civilizations and the classical empires",
+   "Explain the spread of religions, trade, and ideas across regions",
+   "Describe exploration, revolutions, and industrialization",
+   "Understand the modern globalized world and its roots"
+  ],
+  "intro": "World history is the story of all humanity — how people everywhere built civilizations, exchanged ideas, clashed, and connected into the interconnected world of today. It gives you the big picture: where human societies came from and how they shaped one another. This lesson traces the major eras across the globe.",
+  "sections": [
    {
     "h": "The first civilizations",
-    "body": "Civilization began when farming let people settle and build cities, roughly 5,000+ years ago, in river valleys like Mesopotamia, Egypt, the Indus, and China. These brought writing, laws, trade, organized religion, and government — the foundations of complex societies."
+    "body": "For most of human existence, people lived as nomadic hunter-gatherers. The great turning point was the Agricultural Revolution, around 10,000 years ago, when people learned to farm. Farming produced surplus food, which let people settle in one place, grow in number, and specialize in crafts and trades.\n\nThis gave rise to the first civilizations, in river valleys where farming thrived: Mesopotamia (between the Tigris and Euphrates), ancient Egypt (the Nile), the Indus Valley, and China (the Yellow River). These early societies invented writing, cities, laws, and government — the foundations of everything that followed.",
+    "visual": "<svg viewBox=\"0 0 250 92\" width=\"240\" role=\"img\" aria-label=\"Timeline of major eras in world history\"><line x1=\"14\" y1=\"50\" x2=\"236\" y2=\"50\" stroke=\"#6b7a98\" stroke-width=\"2\"/><circle cx=\"25\" cy=\"50\" r=\"4\" fill=\"#4f9cf0\"/><text x=\"25\" y=\"33\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9\">3000 BCE</text><text x=\"25\" y=\"68\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"7.5\">first cities</text><circle cx=\"76\" cy=\"50\" r=\"4\" fill=\"#4f9cf0\"/><text x=\"76\" y=\"33\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9\">500 BCE</text><text x=\"76\" y=\"68\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"7.5\">classical</text><circle cx=\"128\" cy=\"50\" r=\"4\" fill=\"#4f9cf0\"/><text x=\"128\" y=\"33\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9\">1500 CE</text><text x=\"128\" y=\"68\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"7.5\">exploration</text><circle cx=\"180\" cy=\"50\" r=\"4\" fill=\"#4f9cf0\"/><text x=\"180\" y=\"33\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9\">1800</text><text x=\"180\" y=\"68\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"7.5\">industrial</text><circle cx=\"231\" cy=\"50\" r=\"4\" fill=\"#4f9cf0\"/><text x=\"231\" y=\"33\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9\">today</text></svg>",
+    "caption": "Major eras of world history, from the first river-valley cities to the present.",
+    "example": "The first civilizations arose in river valleys: Mesopotamia, Egypt (Nile), the Indus Valley, and China (Yellow River).",
+    "tip": "Farming (~10,000 years ago) let people settle, grow, and build the first cities and civilizations."
    },
    {
-    "h": "Classical empires",
-    "body": "Great empires like Greece, Rome, Persia, the Maurya in India, and Han China spread ideas, trade, and systems of rule across huge areas. Greece and Rome shaped Western government, law, and philosophy; their rise and fall reshaped the map of the world."
+    "h": "Classical empires and world religions",
+    "body": "From these roots grew the great classical empires — Greece and Rome in the West, the Persian and later Islamic empires in the Middle East, the dynasties of China, and the Maurya and Gupta empires of India. They built road networks, legal systems, and ideas (like Greek democracy and philosophy) still with us today.\n\nThis era also saw the rise of the major world religions and belief systems — Hinduism, Buddhism, Judaism, Christianity, and later Islam — which spread across continents and shaped cultures, laws, and daily life for billions. Trade routes like the Silk Road carried not just goods but these religions and ideas between distant civilizations.",
+    "tip": "Classical empires (Greece, Rome, China, Persia, India) and the major world religions spread ideas across continents."
    },
    {
-    "h": "The medieval and connected world",
-    "body": "After Rome fell, regions developed distinct civilizations — medieval Europe, the Islamic world (a center of science and learning), imperial China, and African kingdoms like Mali. Trade routes like the Silk Road linked them, spreading goods, ideas, and sometimes disease."
+    "h": "The medieval and early modern world",
+    "body": "After the classical empires declined, regions developed along their own paths. In Europe, the Middle Ages brought feudal kingdoms and the powerful Catholic Church. The Islamic world experienced a golden age of science and learning. China, India, and African kingdoms like Mali were centers of wealth and culture, and the Americas held great civilizations like the Maya, Aztec, and Inca.\n\nThen came the Age of Exploration (1400s–1500s), when European ships reached the Americas, Africa, and Asia. This connected the hemispheres for the first time — exchanging crops, goods, and people, but also bringing conquest, colonization, and the brutal transatlantic slave trade.",
+    "tip": "Around 1500, European exploration connected the world's hemispheres — bringing exchange, but also conquest and slavery."
    },
    {
-    "h": "Exploration and empire",
-    "body": "From the 1400s, European powers explored and colonized much of the world, creating global trade — and the brutal Atlantic slave trade. This era connected continents permanently but also brought conquest, exploitation, and lasting inequality."
+    "h": "Revolutions and the modern age",
+    "body": "From the 1600s on, waves of revolution reshaped the world. The Scientific Revolution and the Enlightenment championed reason and human rights, inspiring political revolutions in America and France that spread ideas of democracy and equality. The Industrial Revolution (starting in the late 1700s) transformed how people lived and worked, moving societies from farms to factories and cities.\n\nThe 1900s brought two devastating World Wars, the end of European colonial empires as colonized nations won independence, and the Cold War division of the world. Technology, trade, and communication accelerated until, by today, people and economies across the planet are tied together as never before — a globalized world.",
+    "example": "Key modern turning points: the Enlightenment, the American and French Revolutions, the Industrial Revolution, two World Wars.",
+    "tip": "Enlightenment ideas + the Industrial Revolution + the World Wars built the modern, interconnected world."
    },
    {
-    "h": "The modern age",
-    "body": "The Industrial Revolution (1700s–1800s) transformed how people lived and worked. The 1900s brought two world wars, the end of colonial empires, the Cold War, and a tightly connected global world. Change has accelerated dramatically in modern times."
+    "h": "Learning from world history",
+    "body": "World history reveals that no society developed in isolation — civilizations constantly borrowed, traded, and learned from one another. The numbers you use are called Arabic numerals but came from India; paper and gunpowder came from China; democracy's roots are in Greece. Human progress has always been a shared, global effort.\n\nIt also shows recurring patterns: empires rise and fall, ideas spread and transform, and contact between cultures drives change. Understanding this big picture helps you see today's global issues — migration, trade, conflict, cooperation — not as brand new, but as the latest chapter in a very long human story."
+   }
+  ],
+  "cards": [
+   {
+    "h": "First civilizations",
+    "body": "Farming (~10,000 yrs ago) enabled cities in river valleys: Mesopotamia, Egypt, Indus, China."
+   },
+   {
+    "h": "Classical era",
+    "body": "Empires (Greece, Rome, Persia, China, India) and major world religions spread ideas via trade routes."
+   },
+   {
+    "h": "Exploration",
+    "body": "Around 1500, European voyages connected the hemispheres — exchange plus conquest and slavery."
+   },
+   {
+    "h": "Modern age",
+    "body": "Enlightenment + Industrial Revolution + two World Wars + decolonization built today's world."
+   },
+   {
+    "h": "Big picture",
+    "body": "No society grew alone; ideas and goods always crossed cultures. Today's issues are the latest chapter."
    }
   ],
   "flash": [
+   [
+    "Agricultural Revolution",
+    "The shift to farming (~10,000 years ago) that enabled settled life."
+   ],
    [
     "Civilization",
     "A complex society with cities, writing, and government."
    ],
    [
     "Mesopotamia",
-    "An early river-valley civilization, 'the cradle of civilization.'"
+    "An early river-valley civilization between the Tigris and Euphrates."
    ],
    [
     "Empire",
-    "A group of peoples or lands ruled by a single authority."
+    "A large state ruling many peoples and territories."
    ],
    [
     "Silk Road",
-    "Ancient trade routes linking Asia, the Middle East, and Europe."
+    "Trade routes carrying goods and ideas across Asia."
    ],
    [
-    "Colonization",
-    "One country taking control of and settling another land."
+    "Middle Ages",
+    "The medieval era of feudal kingdoms in Europe."
+   ],
+   [
+    "Age of Exploration",
+    "The 1400s–1500s European voyages that linked the hemispheres."
+   ],
+   [
+    "Enlightenment",
+    "A movement championing reason and human rights."
    ],
    [
     "Industrial Revolution",
-    "The 1700s–1800s shift to machine manufacturing."
+    "The shift to factory production starting in the late 1700s."
    ],
    [
-    "Cold War",
-    "The 1900s standoff between the U.S. and the Soviet Union."
+    "Colonization",
+    "One nation settling and controlling another's land."
+   ],
+   [
+    "World Wars",
+    "The two global wars of 1914–18 and 1939–45."
    ],
    [
     "Globalization",
-    "The growing connection of the world's economies and cultures."
+    "The growing interconnection of the world's economies and cultures."
    ]
   ],
   "quiz": [
    {
-    "q": "Civilization first developed when farming let people:",
+    "q": "The turning point that let people settle and build cities was the:",
     "options": [
-     "Settle and build cities",
-     "Travel constantly",
-     "Stop eating",
-     "Avoid trade"
+     "Agricultural Revolution",
+     "Industrial Revolution",
+     "Cold War",
+     "Space Age"
     ],
     "a": 0,
-    "why": "Settled farming allowed cities, writing, and government to form."
+    "why": "Farming produced surplus food, enabling settled civilizations."
    },
    {
-    "q": "The Silk Road was:",
+    "q": "The first civilizations arose mostly in:",
     "options": [
-     "Ancient trade routes linking Asia and Europe",
-     "A single paved road",
-     "A war",
-     "A river"
+     "River valleys",
+     "Deserts",
+     "Mountaintops",
+     "The open ocean"
     ],
     "a": 0,
-    "why": "It was a network of trade routes spreading goods and ideas."
+    "why": "Fertile river valleys supported farming and cities."
    },
    {
-    "q": "Which civilizations heavily shaped Western law and government?",
+    "q": "Which was an early river-valley civilization?",
     "options": [
-     "Greece and Rome",
-     "Only ancient Egypt",
-     "Only China",
-     "None"
+     "Mesopotamia",
+     "The United States",
+     "The Roman Empire",
+     "The Soviet Union"
     ],
     "a": 0,
-    "why": "Greek and Roman ideas underpin Western governance and law."
+    "why": "Mesopotamia sat between the Tigris and Euphrates rivers."
    },
    {
-    "q": "European colonization from the 1400s created global trade and also:",
+    "q": "Democracy and philosophy are especially associated with classical:",
     "options": [
-     "The Atlantic slave trade",
-     "World peace",
-     "The Silk Road",
+     "Greece",
+     "Antarctica",
+     "Australia",
+     "Canada"
+    ],
+    "a": 0,
+    "why": "Greek city-states developed early democracy and philosophy."
+   },
+   {
+    "q": "The Silk Road carried:",
+    "options": [
+     "Goods and ideas across Asia",
+     "Only soldiers",
+     "Nothing of value",
+     "Water"
+    ],
+    "a": 0,
+    "why": "Trade routes spread goods, religions, and ideas between civilizations."
+   },
+   {
+    "q": "Which spread across continents during the classical and later eras?",
+    "options": [
+     "Major world religions",
+     "Televisions",
+     "Automobiles",
      "The internet"
     ],
     "a": 0,
-    "why": "It connected continents but brought conquest and the slave trade."
+    "why": "Hinduism, Buddhism, Judaism, Christianity, and Islam spread widely."
    },
    {
-    "q": "The Industrial Revolution was the shift to:",
+    "q": "Great civilizations of the Americas included the:",
     "options": [
-     "Machine manufacturing",
-     "Farming for the first time",
-     "Hunting and gathering",
-     "Space travel"
+     "Maya, Aztec, and Inca",
+     "Greeks and Romans",
+     "Mesopotamians",
+     "Vikings only"
     ],
     "a": 0,
-    "why": "It moved production from hand labor to machines and factories."
+    "why": "The Maya, Aztec, and Inca built major American civilizations."
    },
    {
-    "q": "The Cold War was a standoff between the U.S. and the:",
+    "q": "The Age of Exploration (1400s–1500s) first connected:",
     "options": [
-     "Soviet Union",
-     "Roman Empire",
-     "British colonies",
-     "Mongol Empire"
+     "The world's hemispheres",
+     "Two cities",
+     "The planets",
+     "Only Europe"
     ],
     "a": 0,
-    "why": "It was the 20th-century rivalry between the U.S. and USSR."
+    "why": "European voyages linked the Americas, Africa, Asia, and Europe."
+   },
+   {
+    "q": "A tragic result of exploration and colonization was the:",
+    "options": [
+     "Transatlantic slave trade",
+     "End of all war",
+     "Instant democracy",
+     "Loss of farming"
+    ],
+    "a": 0,
+    "why": "Conquest brought colonization and the brutal slave trade."
+   },
+   {
+    "q": "The Enlightenment championed:",
+    "options": [
+     "Reason and human rights",
+     "Feudal kings",
+     "Isolation",
+     "Silence"
+    ],
+    "a": 0,
+    "why": "It promoted reason, rights, and inspired democratic revolutions."
+   },
+   {
+    "q": "The Industrial Revolution moved societies from farms to:",
+    "options": [
+     "Factories and cities",
+     "Deserts",
+     "The sea",
+     "Caves"
+    ],
+    "a": 0,
+    "why": "Factory production reshaped where and how people lived and worked."
+   },
+   {
+    "q": "The 1900s included two:",
+    "options": [
+     "World Wars",
+     "Ice Ages",
+     "Stone Ages",
+     "Renaissances"
+    ],
+    "a": 0,
+    "why": "World War I and World War II were global conflicts of the century."
+   },
+   {
+    "q": "Arabic numerals actually originated in:",
+    "options": [
+     "India",
+     "Rome",
+     "England",
+     "Egypt"
+    ],
+    "a": 0,
+    "why": "The numbers spread from India — progress is a shared global effort."
+   },
+   {
+    "q": "A key lesson of world history is that societies:",
+    "options": [
+     "Borrowed and learned from one another",
+     "Grew in total isolation",
+     "Never traded",
+     "Stayed unchanged"
+    ],
+    "a": 0,
+    "why": "Contact between cultures constantly drove change."
+   },
+   {
+    "q": "Today's interconnected world economy is called:",
+    "options": [
+     "Globalization",
+     "Isolationism",
+     "Feudalism",
+     "The Stone Age"
+    ],
+    "a": 0,
+    "why": "Globalization is the growing interconnection of economies and cultures."
    }
   ]
  },
  "social-geography": {
   "title": "Geography",
   "subject": "Social Studies",
-  "level": "Grades 6-12",
-  "intro": "Geography is the study of places and the relationship between people and their environment — not just where things are, but why they're there and how they shape the way we live.",
+  "level": "Grades 5-12",
+  "objectives": [
+   "Explain the five themes of geography",
+   "Read maps and use latitude and longitude",
+   "Describe Earth's continents, oceans, and major physical features",
+   "Explain climate, biomes, and how physical geography shapes life",
+   "Describe how humans interact with and change their environment"
+  ],
+  "intro": "Geography is the study of Earth's places, people, and the connections between them — not just where things are, but why they're there and how they relate. It helps you understand everything from climate to culture to global events. This lesson covers how geographers think, how to read maps, and how physical and human geography shape the world.",
+  "sections": [
+   {
+    "h": "The five themes of geography",
+    "body": "Geographers organize their thinking around five themes. Location answers 'where is it?' — either absolute (exact coordinates) or relative (near something else). Place describes what a location is like, its physical and human features. Region groups areas that share common traits, like the Middle East or the Corn Belt.\n\nMovement looks at how people, goods, and ideas travel between places. And human-environment interaction examines how people adapt to, depend on, and change their surroundings. Together, these five themes are a toolkit for asking smart questions about any place on Earth.",
+    "tip": "The five themes: Location, Place, Region, Movement, and Human-Environment Interaction."
+   },
+   {
+    "h": "Maps and how to read them",
+    "body": "Maps are geography's main tool — flat representations of places. To read one, you use a few features. The compass rose shows direction (north, south, east, west). The scale tells you how map distance relates to real distance. The legend (or key) explains what the symbols and colors mean. The title says what the map shows.\n\nDifferent maps serve different purposes: physical maps show landforms, political maps show borders and cities, and thematic maps show data like population or climate. No flat map can perfectly represent the round Earth, so every map involves some distortion — something to keep in mind when you read one.",
+    "example": "On a map, a legend might show blue = water, green = forest, and a star = a capital city.",
+    "tip": "Every map has a title, legend, scale, and compass rose — check them before reading it."
+   },
+   {
+    "h": "Latitude and longitude",
+    "body": "To pinpoint any spot on Earth, geographers use a grid of imaginary lines. Lines of latitude run east-west, measuring distance north or south of the Equator (0° latitude). Lines of longitude run north-south, measuring distance east or west of the Prime Meridian (0° longitude).\n\nTogether, a latitude and a longitude give an exact address for any point on the globe. Latitude also tells you a lot about climate: places near the Equator (low latitude) are generally warm, while places near the poles (high latitude) are cold. This simple grid lets us locate anything, anywhere, precisely.",
+    "visual": "<svg viewBox=\"0 0 200 208\" width=\"185\" role=\"img\" aria-label=\"A globe grid of latitude and longitude lines with the Equator and Prime Meridian highlighted\"><circle cx=\"100\" cy=\"100\" r=\"86\" fill=\"rgba(79,156,240,.06)\" stroke=\"#4f9cf0\" stroke-width=\"2\"/><line x1=\"26.7\" y1=\"55\" x2=\"173.3\" y2=\"55\" stroke=\"#4f9cf0\" stroke-width=\"1\" opacity=\"0.50\"/><line x1=\"16.9\" y1=\"78\" x2=\"183.1\" y2=\"78\" stroke=\"#4f9cf0\" stroke-width=\"1\" opacity=\"0.50\"/><line x1=\"14.0\" y1=\"100\" x2=\"186.0\" y2=\"100\" stroke=\"#e8b84b\" stroke-width=\"2\" opacity=\"1.00\"/><line x1=\"16.9\" y1=\"122\" x2=\"183.1\" y2=\"122\" stroke=\"#4f9cf0\" stroke-width=\"1\" opacity=\"0.50\"/><line x1=\"26.7\" y1=\"145\" x2=\"173.3\" y2=\"145\" stroke=\"#4f9cf0\" stroke-width=\"1\" opacity=\"0.50\"/><line x1=\"55\" y1=\"26.7\" x2=\"55\" y2=\"173.3\" stroke=\"#4f9cf0\" stroke-width=\"1\" opacity=\"0.50\"/><line x1=\"78\" y1=\"16.9\" x2=\"78\" y2=\"183.1\" stroke=\"#4f9cf0\" stroke-width=\"1\" opacity=\"0.50\"/><line x1=\"100\" y1=\"14.0\" x2=\"100\" y2=\"186.0\" stroke=\"#e8b84b\" stroke-width=\"2\" opacity=\"1.00\"/><line x1=\"122\" y1=\"16.9\" x2=\"122\" y2=\"183.1\" stroke=\"#4f9cf0\" stroke-width=\"1\" opacity=\"0.50\"/><line x1=\"145\" y1=\"26.7\" x2=\"145\" y2=\"173.3\" stroke=\"#4f9cf0\" stroke-width=\"1\" opacity=\"0.50\"/><text x=\"100\" y=\"203\" text-anchor=\"middle\" fill=\"#e8b84b\" font-size=\"8\">gold = Equator (0° lat) &amp; Prime Meridian (0° long)</text></svg>",
+    "caption": "Latitude lines run east-west; longitude lines run north-south. The Equator and Prime Meridian are the 0° reference lines.",
+    "example": "The Equator is 0° latitude; the Prime Meridian is 0° longitude. A pair of coordinates locates any point exactly.",
+    "tip": "Latitude = north/south (from the Equator); longitude = east/west (from the Prime Meridian)."
+   },
+   {
+    "h": "Continents, oceans, and physical features",
+    "body": "Earth's land is divided into seven continents — Asia, Africa, North America, South America, Antarctica, Europe, and Australia — and its water into five oceans, the largest being the Pacific. These are the biggest features of physical geography.\n\nWithin the continents are landforms shaped over millions of years: mountains, plains, plateaus, valleys, and deserts, along with rivers and lakes. These features aren't just scenery — they shape where people live (near water, on fertile plains), how they travel (mountains and rivers as barriers or routes), and what they can grow. Physical geography sets the stage for human life.",
+    "tip": "7 continents, 5 oceans (the Pacific is biggest). Landforms shape where and how people live."
+   },
+   {
+    "h": "Climate, biomes, and human geography",
+    "body": "Climate is the long-term pattern of temperature and precipitation in a place, driven largely by latitude, altitude, and nearness to water. Climate creates biomes — large regions with characteristic plants and animals, like rainforests, deserts, grasslands, and tundra.\n\nHuman geography studies people: where they live, their cultures, cities, and economies. Most people cluster where the physical geography is favorable — mild climate, water, good soil. Human-environment interaction ties it together: people farm, build cities, and extract resources, reshaping the land and, increasingly, the climate itself. Geography is where the physical and human worlds meet."
+   }
+  ],
   "cards": [
    {
-    "h": "Maps and location",
-    "body": "Geography starts with location. Latitude lines run east-west and measure distance north or south of the equator; longitude lines run north-south and measure east or west of the prime meridian. Together they pinpoint any spot on Earth. Maps also use a scale, a key, and a compass rose."
+    "h": "Five themes",
+    "body": "Location, Place, Region, Movement, Human-Environment Interaction — a toolkit for any place."
    },
    {
-    "h": "Physical geography",
-    "body": "Physical geography is the natural world — landforms (mountains, plains, valleys), bodies of water (oceans, rivers, lakes), climate, and ecosystems. These features shape where people can live, farm, and build."
+    "h": "Maps",
+    "body": "Read the title, legend, scale, and compass rose; physical, political, and thematic maps serve different purposes."
    },
    {
-    "h": "The continents and oceans",
-    "body": "Earth has seven continents (Africa, Antarctica, Asia, Australia, Europe, North America, South America) and five oceans (Pacific, Atlantic, Indian, Southern, Arctic). The Pacific is the largest ocean; Asia is the largest and most populous continent."
+    "h": "Latitude & longitude",
+    "body": "Latitude = N/S from the Equator; longitude = E/W from the Prime Meridian. Together they locate any point."
    },
    {
-    "h": "Human geography",
-    "body": "Human geography looks at people — where and how they live, their cultures, cities, migration, and how they use land and resources. Most people cluster where there's water, fertile land, or economic opportunity."
+    "h": "Continents & features",
+    "body": "7 continents, 5 oceans (Pacific biggest); landforms shape where people live and farm."
    },
    {
-    "h": "People and the environment",
-    "body": "Geography studies the two-way relationship between humans and their surroundings. The environment shapes human life (climate affects crops and cities), and humans reshape the environment (farming, cities, dams, pollution). Understanding this helps tackle issues like resources and climate."
+    "h": "Climate & people",
+    "body": "Climate drives biomes; people cluster where geography is favorable and reshape the land."
    }
   ],
   "flash": [
    [
+    "Geography",
+    "The study of Earth's places, people, and their connections."
+   ],
+   [
+    "Location",
+    "Where a place is, absolute (coordinates) or relative (near something)."
+   ],
+   [
+    "Region",
+    "An area grouped by shared traits."
+   ],
+   [
+    "Map legend",
+    "The key explaining a map's symbols and colors."
+   ],
+   [
+    "Scale",
+    "How map distance relates to real distance."
+   ],
+   [
     "Latitude",
-    "Lines measuring distance north or south of the equator."
+    "Lines measuring distance north or south of the Equator."
    ],
    [
     "Longitude",
-    "Lines measuring distance east or west of the prime meridian."
+    "Lines measuring distance east or west of the Prime Meridian."
    ],
    [
     "Equator",
-    "The 0° latitude line circling Earth's middle."
+    "The 0° line of latitude circling the Earth's middle."
    ],
    [
-    "Physical geography",
-    "The study of Earth's natural features."
-   ],
-   [
-    "Human geography",
-    "The study of people, cultures, and how they use land."
+    "Prime Meridian",
+    "The 0° line of longitude."
    ],
    [
     "Continent",
@@ -9270,24 +9783,90 @@ window.LAB404_CONTENT = {
    ],
    [
     "Climate",
-    "The long-term weather pattern of a place."
+    "The long-term pattern of temperature and precipitation."
    ],
    [
-    "Map scale",
-    "The ratio of map distance to real distance."
+    "Biome",
+    "A large region with characteristic plants and animals."
    ]
   ],
   "quiz": [
    {
-    "q": "Lines that measure distance north or south of the equator are:",
+    "q": "Which is one of the five themes of geography?",
     "options": [
-     "Latitude",
-     "Longitude",
-     "The prime meridian",
+     "Location",
+     "Multiplication",
+     "Grammar",
+     "Photosynthesis"
+    ],
+    "a": 0,
+    "why": "Location, Place, Region, Movement, and Human-Environment Interaction are the five themes."
+   },
+   {
+    "q": "A map's key, explaining its symbols, is the:",
+    "options": [
+     "Legend",
+     "Scale",
+     "Title",
+     "Equator"
+    ],
+    "a": 0,
+    "why": "The legend (key) explains symbols and colors."
+   },
+   {
+    "q": "Which map feature shows direction?",
+    "options": [
+     "Compass rose",
+     "Legend",
+     "Title",
      "Scale"
     ],
     "a": 0,
-    "why": "Latitude runs east-west and measures north-south position."
+    "why": "The compass rose shows north, south, east, and west."
+   },
+   {
+    "q": "Lines of latitude measure distance:",
+    "options": [
+     "North or south of the Equator",
+     "East or west only",
+     "Up and down hills",
+     "Across oceans only"
+    ],
+    "a": 0,
+    "why": "Latitude is north/south of the Equator."
+   },
+   {
+    "q": "Lines of longitude measure distance from the:",
+    "options": [
+     "Prime Meridian",
+     "Equator",
+     "North Pole only",
+     "Nearest city"
+    ],
+    "a": 0,
+    "why": "Longitude is east/west of the Prime Meridian."
+   },
+   {
+    "q": "The Equator is at what latitude?",
+    "options": [
+     "0°",
+     "90°",
+     "45°",
+     "180°"
+    ],
+    "a": 0,
+    "why": "The Equator is 0° latitude."
+   },
+   {
+    "q": "Places near the Equator tend to be:",
+    "options": [
+     "Warm",
+     "Cold",
+     "Frozen",
+     "Dark"
+    ],
+    "a": 0,
+    "why": "Low latitude generally means a warm climate."
    },
    {
     "q": "How many continents are there?",
@@ -9298,181 +9877,366 @@ window.LAB404_CONTENT = {
      "Three"
     ],
     "a": 0,
-    "why": "Africa, Antarctica, Asia, Australia, Europe, North and South America."
+    "why": "Asia, Africa, North America, South America, Antarctica, Europe, Australia."
    },
    {
     "q": "The largest ocean is the:",
     "options": [
      "Pacific",
      "Atlantic",
-     "Indian",
-     "Arctic"
+     "Arctic",
+     "Indian"
     ],
     "a": 0,
-    "why": "The Pacific is the largest and deepest ocean."
+    "why": "The Pacific is Earth's largest ocean."
    },
    {
-    "q": "Physical geography studies:",
+    "q": "Mountains, plains, and valleys are examples of:",
     "options": [
-     "Earth's natural features",
-     "Only cities",
-     "Only politics",
-     "Only history"
+     "Landforms",
+     "Oceans",
+     "Climates",
+     "Legends"
     ],
     "a": 0,
-    "why": "It covers landforms, water, climate, and ecosystems."
+    "why": "Landforms are physical features of the land."
    },
    {
-    "q": "People tend to settle where there is:",
+    "q": "Why can't a flat map perfectly show Earth?",
     "options": [
-     "Water and opportunity",
+     "Earth is round, so flat maps distort it",
+     "Maps are too small",
+     "Paper is flat only sometimes",
+     "Earth is flat"
+    ],
+    "a": 0,
+    "why": "Flattening a sphere always introduces some distortion."
+   },
+   {
+    "q": "The long-term pattern of temperature and rainfall is:",
+    "options": [
+     "Climate",
+     "Weather of one day",
+     "A biome's animals",
+     "A legend"
+    ],
+    "a": 0,
+    "why": "Climate is the long-term pattern; weather is day-to-day."
+   },
+   {
+    "q": "A large region with characteristic plants and animals is a:",
+    "options": [
+     "Biome",
+     "City",
+     "Continent",
+     "Legend"
+    ],
+    "a": 0,
+    "why": "Rainforests, deserts, and tundra are biomes."
+   },
+   {
+    "q": "People tend to cluster where the geography offers:",
+    "options": [
+     "Mild climate, water, and good soil",
+     "Only mountains",
      "No water",
-     "The coldest climate",
-     "No resources"
+     "Extreme cold"
     ],
     "a": 0,
-    "why": "Water, fertile land, and economic opportunity draw populations."
+    "why": "Favorable physical geography attracts settlement."
    },
    {
-    "q": "The equator is located at:",
+    "q": "Human-environment interaction studies how people:",
     "options": [
-     "0° latitude",
-     "0° longitude",
-     "The North Pole",
-     "The prime meridian"
+     "Adapt to and change their surroundings",
+     "Only read maps",
+     "Ignore nature",
+     "Measure latitude"
     ],
     "a": 0,
-    "why": "The equator is the 0° latitude line around Earth's middle."
+    "why": "It examines how humans depend on and reshape the environment."
    }
   ]
  },
  "social-economics": {
   "title": "Economics",
   "subject": "Social Studies",
-  "level": "Grades 9-12",
-  "intro": "Economics is the study of how people and societies use limited resources to meet unlimited wants. It explains why things cost what they do, how markets work, and the trade-offs behind every choice.",
-  "cards": [
+  "level": "Grades 8-12",
+  "objectives": [
+   "Explain scarcity and opportunity cost",
+   "Describe supply and demand and how they set prices",
+   "Distinguish microeconomics from macroeconomics",
+   "Explain money, markets, and the role of government",
+   "Apply basic economics to personal and public decisions"
+  ],
+  "intro": "Economics is the study of how people, businesses, and nations use limited resources to meet unlimited wants. Every choice — what to buy, what to produce, how to spend a budget — is economics in action. This lesson covers scarcity, supply and demand, the big picture of a national economy, and how it all applies to your life.",
+  "sections": [
    {
-    "h": "Scarcity and choice",
-    "body": "The core problem of economics is scarcity: resources are limited but wants are not. So every choice has a cost — what you give up is the 'opportunity cost.' Deciding what to produce, how, and for whom is really the study of handling scarcity."
+    "h": "Scarcity and opportunity cost",
+    "body": "Economics begins with one hard fact: scarcity. Resources — time, money, materials, labor — are limited, but people's wants are unlimited. Because you can't have everything, you must choose. Scarcity is the fundamental economic problem that every person and society faces.\n\nEvery choice has an opportunity cost: the value of the next-best thing you gave up. If you spend $20 on a game, the opportunity cost is whatever else that $20 (and the time playing) could have done. Thinking in terms of trade-offs and opportunity cost is the heart of economic reasoning — there's no such thing as a free lunch.",
+    "example": "Spend Saturday working a shift (earn $80) or studying. If you study, the opportunity cost is the $80 you didn't earn.",
+    "tip": "Scarcity forces choices; a choice's opportunity cost is the best thing you gave up."
    },
    {
     "h": "Supply and demand",
-    "body": "In a market, price is set by supply (how much sellers offer) and demand (how much buyers want). When demand rises or supply falls, prices tend to go up; when demand falls or supply rises, prices tend to drop. This push and pull sets prices for most goods."
+    "body": "In a market, prices are set by the interplay of supply and demand. Demand is how much of something buyers want at various prices; generally, the lower the price, the more people want to buy. Supply is how much sellers will offer at various prices; generally, the higher the price, the more they'll produce.\n\nThe two meet at the equilibrium price — the price where the amount buyers want equals the amount sellers offer. If something becomes scarce or popular, demand outpaces supply and the price rises; if there's a glut, the price falls. This dance of supply and demand sets prices for nearly everything in a market economy.",
+    "visual": "<svg viewBox=\"0 0 222 182\" width=\"215\" role=\"img\" aria-label=\"A supply and demand graph: a downward demand line and an upward supply line crossing at the equilibrium price\"><line x1=\"32\" y1=\"150\" x2=\"205\" y2=\"150\" stroke=\"#6b7a98\" stroke-width=\"1.5\"/><line x1=\"32\" y1=\"150\" x2=\"32\" y2=\"20\" stroke=\"#6b7a98\" stroke-width=\"1.5\"/><line x1=\"45\" y1=\"45\" x2=\"185\" y2=\"135\" stroke=\"#f05a5a\" stroke-width=\"2.2\"/><line x1=\"45\" y1=\"140\" x2=\"185\" y2=\"45\" stroke=\"#39e3c8\" stroke-width=\"2.2\"/><line x1=\"117\" y1=\"91\" x2=\"117\" y2=\"150\" stroke=\"#9aa6c0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"32\" y1=\"91\" x2=\"117\" y2=\"91\" stroke=\"#9aa6c0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"117\" cy=\"91\" r=\"4\" fill=\"#e8b84b\"/><text x=\"190\" y=\"138\" fill=\"#f05a5a\" font-size=\"11\">D</text><text x=\"190\" y=\"48\" fill=\"#39e3c8\" font-size=\"11\">S</text><text x=\"122\" y=\"86\" fill=\"#e8b84b\" font-size=\"8\">equilibrium</text><text x=\"20\" y=\"90\" fill=\"#9aa6c0\" font-size=\"8.5\" transform=\"rotate(-90 20 90)\">Price</text><text x=\"118\" y=\"166\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8.5\">Quantity</text></svg>",
+    "caption": "Demand slopes down, supply slopes up; they cross at the equilibrium price where buyers and sellers agree.",
+    "example": "If a drought shrinks the coffee supply, less coffee is available, so its price rises.",
+    "tip": "Price rises when demand outpaces supply; price falls when supply outpaces demand. They meet at equilibrium."
    },
    {
-    "h": "How markets work",
-    "body": "In a market economy, buyers and sellers trade freely, and prices act as signals that coordinate what gets made. Competition tends to lower prices and improve quality. Most real economies are 'mixed' — mostly markets, with some government rules and services."
+    "h": "Micro and macro",
+    "body": "Economics works at two scales. Microeconomics zooms in on individual pieces: how a single household budgets, how one business prices its product, how one market for one good behaves. It's the economics of specific decisions.\n\nMacroeconomics zooms out to the whole economy of a nation or the world. It studies big-picture measures like gross domestic product (GDP, the total value of what a country produces), unemployment, inflation (rising prices overall), and economic growth. Both scales matter: your personal budget is micro, but the national inflation rate that changes your grocery bill is macro.",
+    "tip": "Micro = individual choices (a household, a business); Macro = the whole economy (GDP, unemployment, inflation)."
    },
    {
-    "h": "Money, inflation, and GDP",
-    "body": "Money is a medium of exchange that makes trade easier. Inflation is a general rise in prices over time, which shrinks money's value. GDP (Gross Domestic Product) measures the total value a country produces — a common gauge of how an economy is doing."
+    "h": "Money, markets, and government",
+    "body": "Money is what makes modern economies work — a medium of exchange everyone accepts, so you don't have to barter. It also stores value and measures prices. Markets are where buyers and sellers meet, in person or online, to trade, guided by supply and demand.\n\nMost modern economies are mixed economies: mostly free markets, but with government playing key roles. Governments provide things markets won't (roads, defense, schools), enforce rules and contracts, and try to steady the economy — adjusting taxes, spending, and interest rates to fight recessions or cool inflation. The debate over how large that role should be is central to economic politics.",
+    "tip": "Money replaces barter; markets run on supply and demand; most economies are 'mixed' (markets + government)."
    },
    {
-    "h": "Government's role",
-    "body": "Governments influence economies through taxes, spending, and rules, and (via central banks) by steering interest rates and the money supply. They provide things markets underprovide (roads, defense), address problems like pollution, and try to smooth out booms and busts."
+    "h": "Economics in your life",
+    "body": "Economics isn't abstract — it's the logic behind every money decision you make. Budgeting is managing scarce income against wants and needs. Understanding opportunity cost helps you weigh choices. Knowing supply and demand helps you see why prices move and when to buy.\n\nOn a bigger level, understanding inflation, interest, and the economy helps you plan — saving, borrowing wisely, and voting on policies that affect jobs and prices. Good economic thinking won't make choices for you, but it gives you a clear framework: identify the trade-offs, weigh the costs and benefits, and choose on purpose instead of by accident."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Scarcity",
+    "body": "Limited resources vs. unlimited wants force choices; every choice has an opportunity cost."
+   },
+   {
+    "h": "Supply & demand",
+    "body": "Demand falls as price rises; supply rises as price rises; they meet at the equilibrium price."
+   },
+   {
+    "h": "Micro vs. macro",
+    "body": "Micro = individual households/businesses; macro = the whole economy (GDP, inflation, unemployment)."
+   },
+   {
+    "h": "Money & markets",
+    "body": "Money replaces barter; markets run on supply and demand; most economies are mixed (markets + government)."
+   },
+   {
+    "h": "Your life",
+    "body": "Budget against scarcity, weigh opportunity cost, and plan around inflation and interest."
    }
   ],
   "flash": [
    [
     "Scarcity",
-    "Limited resources against unlimited wants — economics' core problem."
+    "Limited resources against unlimited wants — the basic economic problem."
    ],
    [
     "Opportunity cost",
-    "What you give up when you make a choice."
+    "The value of the next-best option you gave up."
    ],
    [
-    "Supply and demand",
-    "The forces of sellers and buyers that set prices."
+    "Demand",
+    "How much buyers want at various prices."
    ],
    [
-    "Market economy",
-    "An economy where buyers and sellers trade freely."
+    "Supply",
+    "How much sellers will offer at various prices."
    ],
    [
-    "Inflation",
-    "A general rise in prices that reduces money's value."
+    "Equilibrium price",
+    "The price where supply equals demand."
+   ],
+   [
+    "Microeconomics",
+    "The study of individual households, firms, and markets."
+   ],
+   [
+    "Macroeconomics",
+    "The study of the whole economy (GDP, inflation, jobs)."
    ],
    [
     "GDP",
-    "Gross Domestic Product — the total value an economy produces."
+    "Gross domestic product — the total value a country produces."
    ],
    [
-    "Competition",
-    "Rivalry among sellers that tends to lower prices."
+    "Inflation",
+    "A general rise in prices over time."
+   ],
+   [
+    "Money",
+    "A widely accepted medium of exchange and store of value."
+   ],
+   [
+    "Market",
+    "Where buyers and sellers meet to trade."
    ],
    [
     "Mixed economy",
-    "Mostly markets plus some government role."
+    "Mostly free markets plus a government role."
    ]
   ],
   "quiz": [
    {
-    "q": "The core economic problem is:",
+    "q": "The basic economic problem is:",
     "options": [
      "Scarcity",
      "Too much money",
-     "No wants",
-     "Free resources"
+     "Too few people",
+     "No markets"
     ],
     "a": 0,
-    "why": "Limited resources versus unlimited wants is the central problem."
+    "why": "Limited resources vs. unlimited wants forces choices."
    },
    {
-    "q": "What you give up when you make a choice is the:",
+    "q": "The value of the next-best option you gave up is the:",
     "options": [
      "Opportunity cost",
-     "Profit",
-     "Tax",
-     "Inflation rate"
+     "Supply",
+     "Inflation",
+     "GDP"
     ],
     "a": 0,
-    "why": "Opportunity cost is the value of the next best alternative."
+    "why": "Every choice has an opportunity cost."
    },
    {
-    "q": "If demand rises and supply stays the same, price usually:",
+    "q": "Generally, as a price falls, the quantity buyers want:",
     "options": [
-     "Goes up",
-     "Goes down",
-     "Stays exactly flat",
-     "Becomes zero"
+     "Rises",
+     "Falls",
+     "Stays the same",
+     "Disappears"
     ],
     "a": 0,
-    "why": "More demand against the same supply pushes prices up."
+    "why": "Lower prices increase quantity demanded."
    },
    {
-    "q": "Inflation means:",
+    "q": "Generally, as a price rises, the quantity sellers offer:",
     "options": [
-     "Prices generally rising over time",
-     "Prices falling",
-     "More jobs",
-     "Higher GDP only"
+     "Rises",
+     "Falls",
+     "Vanishes",
+     "Stays flat"
     ],
     "a": 0,
-    "why": "Inflation is a general rise in prices, eroding money's value."
+    "why": "Higher prices encourage more supply."
    },
    {
-    "q": "GDP measures:",
+    "q": "The price where supply equals demand is the:",
     "options": [
-     "The total value a country produces",
-     "The number of people",
-     "The size of the land",
-     "The tax rate"
+     "Equilibrium price",
+     "GDP",
+     "Inflation rate",
+     "Opportunity cost"
+    ],
+    "a": 0,
+    "why": "Supply and demand meet at equilibrium."
+   },
+   {
+    "q": "If a drought shrinks the coffee supply, the price will likely:",
+    "options": [
+     "Rise",
+     "Fall",
+     "Stay exactly the same",
+     "Become zero"
+    ],
+    "a": 0,
+    "why": "Less supply with steady demand pushes prices up."
+   },
+   {
+    "q": "Studying one household's budget is:",
+    "options": [
+     "Microeconomics",
+     "Macroeconomics",
+     "Inflation",
+     "Trade policy"
+    ],
+    "a": 0,
+    "why": "Micro looks at individual decisions."
+   },
+   {
+    "q": "Studying national unemployment and GDP is:",
+    "options": [
+     "Macroeconomics",
+     "Microeconomics",
+     "Budgeting",
+     "A market"
+    ],
+    "a": 0,
+    "why": "Macro looks at the whole economy."
+   },
+   {
+    "q": "GDP measures a country's:",
+    "options": [
+     "Total value of production",
+     "Population only",
+     "Land area",
+     "Number of banks"
     ],
     "a": 0,
     "why": "GDP is the total value of goods and services produced."
    },
    {
-    "q": "Most real-world economies are:",
+    "q": "A general rise in prices over time is:",
     "options": [
-     "Mixed (markets plus some government)",
-     "Purely government-run",
-     "Purely free markets",
+     "Inflation",
+     "Scarcity",
+     "Supply",
+     "A surplus"
+    ],
+    "a": 0,
+    "why": "Inflation is rising prices across the economy."
+   },
+   {
+    "q": "Money's main job is to:",
+    "options": [
+     "Serve as a medium of exchange",
+     "Be eaten",
+     "Replace all laws",
+     "Measure distance"
+    ],
+    "a": 0,
+    "why": "Money is a widely accepted medium of exchange that beats barter."
+   },
+   {
+    "q": "Most modern economies are:",
+    "options": [
+     "Mixed (markets + government)",
+     "Pure barter",
+     "Fully government-run",
      "Without money"
     ],
     "a": 0,
-    "why": "They blend free markets with some government role."
+    "why": "They combine free markets with a government role."
+   },
+   {
+    "q": "Which is something markets usually won't provide, so governments do?",
+    "options": [
+     "Roads and national defense",
+     "Candy bars",
+     "Phones",
+     "Movies"
+    ],
+    "a": 0,
+    "why": "Public goods like roads and defense are government-provided."
+   },
+   {
+    "q": "Budgeting is essentially managing:",
+    "options": [
+     "Scarce income against wants and needs",
+     "Unlimited money",
+     "Only taxes",
+     "The weather"
+    ],
+    "a": 0,
+    "why": "A budget allocates limited income — scarcity in action."
+   },
+   {
+    "q": "Good economic thinking helps you:",
+    "options": [
+     "Weigh trade-offs and choose on purpose",
+     "Avoid all decisions",
+     "Get free money",
+     "Ignore prices"
+    ],
+    "a": 0,
+    "why": "It gives a framework of costs, benefits, and trade-offs."
    }
   ]
  },
