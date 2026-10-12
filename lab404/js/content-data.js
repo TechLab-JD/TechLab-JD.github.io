@@ -7077,130 +7077,281 @@ window.LAB404_CONTENT = {
  "gardening-garden-basics": {
   "title": "Garden Basics",
   "subject": "Gardening & Homesteading",
-  "level": "All levels",
-  "intro": "Growing some of your own food is satisfying, cheap, and easier than it looks. With sun, soil, water and a little patience, almost anyone can grow vegetables — even in pots on a balcony.",
+  "level": "All ages",
+  "objectives": [
+   "Understand what plants need to grow",
+   "Understand sunlight, soil, and water",
+   "Choose what and where to plant",
+   "Plant and care for a garden",
+   "Troubleshoot common problems"
+  ],
+  "intro": "Gardening — growing your own plants, vegetables, herbs, and flowers — is a rewarding, money-saving, and healthy skill anyone can learn, even in small spaces. It starts with understanding a few basics about what plants need. This lesson covers the fundamentals of growing things successfully.",
+  "sections": [
+   {
+    "h": "What plants need",
+    "body": "All plants need a few basic things to grow, and gardening is largely about providing them. Sunlight: plants make their own food from light (photosynthesis), so most need plenty of sun — typically 6+ hours a day for vegetables, though some tolerate shade. Water: enough but not too much — most plant problems come from over- or under-watering. Soil: healthy soil provides nutrients, anchors roots, and holds the right amount of water and air. Air and the right temperature round it out.\n\nUnderstanding these needs is the key to success: a plant in the wrong spot (too little sun, poor soil, wrong water) will struggle no matter what else you do. So gardening starts with matching plants to conditions and providing their basic needs. The good news is that these needs are simple, and once you understand them, you can grow almost anything suited to your climate and space.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"What plants need to grow\"><rect x=\"8\" y=\"5\" width=\"108\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"5\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Sunlight</text><text x=\"122\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">most veg want 6+ hours</text><rect x=\"8\" y=\"27\" width=\"108\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"27\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Water</text><text x=\"122\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">enough, not too much</text><rect x=\"8\" y=\"49\" width=\"108\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"49\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Soil</text><text x=\"122\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">healthy, with compost</text><rect x=\"8\" y=\"71\" width=\"108\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"71\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Space</text><text x=\"122\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">enough to not crowd</text><rect x=\"8\" y=\"93\" width=\"108\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"93\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Right plant</text><text x=\"122\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">matched to your climate/zone</text></svg>",
+    "caption": "The basic needs of plants — match the plant to the conditions you can provide.",
+    "tip": "Plants need sunlight (most veg want 6+ hrs), the right amount of water (not too much/little), and healthy soil. Match the plant to the conditions."
+   },
+   {
+    "h": "Sunlight, soil, and water",
+    "body": "Three factors deserve a closer look. Sunlight: observe how much sun your space actually gets, and match plants to it — 'full sun' (6+ hours), 'part sun/shade' (3–6), or 'shade' (less). Putting a sun-loving tomato in shade guarantees failure. Soil: good soil is the foundation. Most garden soil benefits from added organic matter (compost), which feeds plants and improves structure. You can test and amend soil, or (especially for beginners) use quality potting or garden soil and compost.\n\nWater: consistency matters more than frequency — most plants prefer deep, less-frequent watering (encouraging deep roots) over shallow daily sprinkles. Water the soil (roots), not the leaves, ideally in the morning. Check soil moisture with your finger (dig an inch down) rather than guessing. Over-watering (drowning roots) kills more plants than under-watering. Get sun, soil, and water right, and most of gardening takes care of itself.",
+    "tip": "Sun: match the plant to how much your spot gets (full/part/shade). Soil: add compost. Water: deep and less often, at the soil, in the morning; check with your finger."
+   },
+   {
+    "h": "Choosing what and where to plant",
+    "body": "Success starts with smart choices. Grow what you'll use and what suits your climate — check your 'growing zone' (hardiness zone) and your region's growing season (when it's warm enough). Start with easy, forgiving plants (lettuce, radishes, beans, herbs, zucchini are beginner-friendly) rather than finicky ones, and don't plant more than you can care for — a small, well-tended garden beats a big, neglected one.\n\nTiming matters: each plant has a right time to plant (based on your last frost date and the season), listed on seed packets and local guides. Place plants where their sun needs are met and give them enough space (crowded plants compete and get disease). You can grow from seeds (cheaper, more variety, more patience) or buy young plants/seedlings (faster, easier for beginners). Choosing suitable, easy plants, planted at the right time in the right spot, sets you up to succeed.",
+    "tip": "Grow easy plants suited to your climate/zone and season; start small. Plant at the right time (check seed packets/frost dates) with enough space and the right sun."
+   },
+   {
+    "h": "Planting and caring",
+    "body": "Once you've chosen well, the care is straightforward. Plant seeds or seedlings at the right depth and spacing (follow the seed packet or plant label — a key beginner reference). Water them in. Then the ongoing care: water consistently (per the plants' needs and weather), weed regularly (weeds compete for water, nutrients, and light — easier to pull when small), and watch for pests and problems.\n\nMany plants benefit from a bit of feeding (compost or fertilizer) during the growing season, and some need support (stakes/cages for tomatoes) or mulch (a layer over the soil that holds moisture and suppresses weeds). Mostly, though, gardening is about regular, modest attention: a few minutes most days to water, check, and tend beats occasional marathons. Observe your plants — they tell you what they need (wilting, yellowing, pests) — and respond. Consistent, attentive care is what turns seeds into a harvest.",
+    "tip": "Plant at the right depth/spacing (read the packet), water in, then: water consistently, weed while small, mulch, and watch for pests. Regular small attention beats marathons."
+   },
+   {
+    "h": "Common problems",
+    "body": "When things go wrong, most problems have recognizable causes. Yellowing leaves often mean over-watering (or a nutrient issue); wilting can mean too little water (or, confusingly, too much — check the soil). Leggy, weak plants usually need more light. Holes in leaves or chewed plants point to pests (insects, slugs) — many can be managed by hand-picking, barriers, or gentle remedies before reaching for chemicals. Poor growth overall often traces to wrong sun, poor soil, or crowding.\n\nThe gardener's best tool is observation: catch problems early by looking at your plants regularly, and most are fixable. Don't be discouraged by failures — every gardener kills plants, and each one teaches you something. Keep notes on what worked and what didn't. Gardening is a skill that improves every season with experience, patience, and paying attention. Start small, learn from each try, and you'll be growing food and flowers successfully before long.",
+    "tip": "Diagnose by observing: yellow = often over-watering; wilting = check soil (could be either); leggy = more light; holes = pests. Catch problems early — most are fixable."
+   }
+  ],
   "cards": [
    {
-    "h": "The four things plants need",
-    "body": "Sunlight, water, soil (nutrients), and air. Most vegetables want 6+ hours of direct sun a day, consistent moisture, and loose, rich soil. Get those right and plants mostly take care of themselves."
+    "h": "Plant needs",
+    "body": "Sunlight (6+ hrs for most veg), right amount of water, healthy soil, space. Match plant to conditions."
    },
    {
-    "h": "Start with easy crops",
-    "body": "Beginners do best with forgiving plants: lettuce, radishes, beans, zucchini, tomatoes, and herbs like basil and mint. They grow fast and reward you quickly, which keeps you going. Skip the fussy stuff at first."
+    "h": "Sun/soil/water",
+    "body": "Match plants to your sun; add compost; water deep + less often at the soil; check moisture with a finger."
    },
    {
-    "h": "Soil is everything",
-    "body": "Plants are only as healthy as their soil. Loose soil rich in organic matter (compost) holds water and feeds roots. If your ground soil is poor, raised beds or pots with bought potting mix are a great shortcut."
+    "h": "Choosing",
+    "body": "Easy plants for your zone/season; start small; plant at the right time (packets/frost dates) with space."
    },
    {
-    "h": "Water deeply, not often",
-    "body": "Frequent shallow watering grows weak, shallow roots. Water deeply so moisture reaches down, then let the top inch dry before watering again. Morning is best; wet leaves overnight invite disease."
+    "h": "Planting & care",
+    "body": "Right depth/spacing (read packet), water in; then water, weed small, mulch, watch pests. Small daily attention."
    },
    {
-    "h": "Spacing and timing",
-    "body": "Give plants the spacing on the seed packet — crowded plants compete and get sick. Plant warm crops (tomatoes, peppers) after your area's last frost, and cool crops (lettuce, peas) in early spring or fall."
+    "h": "Problems",
+    "body": "Yellow = often over-water; wilt = check soil; leggy = more light; holes = pests. Observe; catch early."
    }
   ],
   "flash": [
+   [
+    "Photosynthesis",
+    "How plants make food from sunlight."
+   ],
    [
     "Full sun",
     "6+ hours of direct sunlight a day."
    ],
    [
     "Compost",
-    "Decomposed organic matter that enriches soil."
-   ],
-   [
-    "Raised bed",
-    "A contained garden bed filled with good soil."
-   ],
-   [
-    "Potting mix",
-    "Bagged soil blend made for containers."
-   ],
-   [
-    "Last frost date",
-    "The point after which it's safe to plant warm crops."
-   ],
-   [
-    "Deep watering",
-    "Watering thoroughly so roots grow down, not often and shallow."
-   ],
-   [
-    "Cool crop",
-    "A plant that prefers cooler weather (lettuce, peas)."
+    "Decomposed organic matter that feeds soil."
    ],
    [
     "Organic matter",
-    "Decayed plant material that feeds and loosens soil."
+    "Decayed plant/animal material improving soil."
+   ],
+   [
+    "Hardiness zone",
+    "A region's climate zone for growing."
+   ],
+   [
+    "Growing season",
+    "The frost-free period for growing."
+   ],
+   [
+    "Seedling",
+    "A young plant started from seed."
+   ],
+   [
+    "Mulch",
+    "A soil cover that holds moisture, blocks weeds."
+   ],
+   [
+    "Over-watering",
+    "Drowning roots — a top plant killer."
+   ],
+   [
+    "Frost date",
+    "The expected last/first frost of the season."
+   ],
+   [
+    "Germinate",
+    "When a seed sprouts."
+   ],
+   [
+    "Weeding",
+    "Removing competing unwanted plants."
    ]
   ],
   "quiz": [
    {
-    "q": "Most vegetables need how much direct sun daily?",
+    "q": "Most vegetables need how much sun?",
     "options": [
-     "6+ hours",
+     "6+ hours a day",
      "1 hour",
      "None",
-     "24 hours"
+     "Only moonlight"
     ],
     "a": 0,
-    "why": "Six or more hours of direct sun suits most vegetables."
+    "why": "Full sun for most veg."
    },
    {
-    "q": "A good crop for beginners is:",
+    "q": "Which kills more plants?",
     "options": [
-     "Lettuce",
-     "A rare orchid",
-     "A fruit tree from seed",
-     "Saffron"
+     "Over-watering",
+     "Under-watering only",
+     "Too much sun always",
+     "Compost"
     ],
     "a": 0,
-    "why": "Lettuce (and beans, zucchini, herbs) grow fast and forgive mistakes."
+    "why": "Drowning roots is a top killer."
    },
    {
-    "q": "Healthy plants start with:",
+    "q": "Good soil usually benefits from added:",
     "options": [
-     "Good soil",
-     "Expensive seeds",
-     "Daily fertilizer",
-     "Plastic flowers"
+     "Compost (organic matter)",
+     "Sand only",
+     "Nothing",
+     "Gravel"
     ],
     "a": 0,
-    "why": "Loose, compost-rich soil is the foundation of healthy plants."
+    "why": "It feeds plants and improves structure."
    },
    {
     "q": "The best watering approach is:",
     "options": [
-     "Deeply, then let the top dry",
-     "A little every hour",
-     "Soaking leaves at night",
-     "Never"
+     "Deep and less frequent, at the soil",
+     "Light daily sprinkles on leaves",
+     "Never",
+     "Only at night"
     ],
     "a": 0,
-    "why": "Deep, less-frequent watering grows strong, deep roots."
+    "why": "Encourages deep roots; morning is best."
    },
    {
-    "q": "No garden space? A good option is:",
+    "q": "To check if soil needs water:",
     "options": [
-     "Pots or raised beds",
-     "Give up",
-     "Only indoor cactus",
-     "Wait for land"
+     "Feel an inch down with your finger",
+     "Guess",
+     "Water daily regardless",
+     "Look at the sky"
     ],
     "a": 0,
-    "why": "Containers and raised beds let you grow almost anywhere with sun."
+    "why": "Don't over- or under-water by guessing."
    },
    {
-    "q": "Warm crops like tomatoes should be planted:",
+    "q": "A sun-loving tomato in shade will:",
     "options": [
-     "After the last frost",
-     "In midwinter",
-     "Before any thaw",
-     "Only indoors forever"
+     "Struggle/fail",
+     "Thrive",
+     "Grow faster",
+     "Be fine"
     ],
     "a": 0,
-    "why": "Plant warm crops once frost danger has passed."
+    "why": "Match plants to their sun needs."
+   },
+   {
+    "q": "Beginners should start with:",
+    "options": [
+     "Easy plants, and start small",
+     "The finickiest crops",
+     "A huge plot",
+     "Only exotic plants"
+    ],
+    "a": 0,
+    "why": "A small well-tended garden beats a neglected one."
+   },
+   {
+    "q": "When to plant is based mostly on:",
+    "options": [
+     "Your frost dates and the season",
+     "The day of the week",
+     "Your mood",
+     "The moon only"
+    ],
+    "a": 0,
+    "why": "Check seed packets and local guides."
+   },
+   {
+    "q": "Crowded plants:",
+    "options": [
+     "Compete and get disease",
+     "Grow better",
+     "Need no space",
+     "Are ideal"
+    ],
+    "a": 0,
+    "why": "Give plants enough space."
+   },
+   {
+    "q": "Weeds should be pulled:",
+    "options": [
+     "While they're small",
+     "When huge",
+     "Never",
+     "Only yearly"
+    ],
+    "a": 0,
+    "why": "They compete for water/nutrients/light."
+   },
+   {
+    "q": "Mulch helps by:",
+    "options": [
+     "Holding moisture and suppressing weeds",
+     "Blocking the sun from roots",
+     "Adding pests",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "A soil cover with multiple benefits."
+   },
+   {
+    "q": "Yellowing leaves often indicate:",
+    "options": [
+     "Over-watering (or nutrients)",
+     "Too much sun always",
+     "Perfect health",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Check watering first."
+   },
+   {
+    "q": "Leggy, weak plants usually need:",
+    "options": [
+     "More light",
+     "Less light",
+     "More water",
+     "A bigger pot"
+    ],
+    "a": 0,
+    "why": "They're stretching for sun."
+   },
+   {
+    "q": "Holes chewed in leaves suggest:",
+    "options": [
+     "Pests",
+     "Too much sun",
+     "Good soil",
+     "Over-watering"
+    ],
+    "a": 0,
+    "why": "Insects or slugs — often managed without chemicals."
+   },
+   {
+    "q": "The gardener's best tool is:",
+    "options": [
+     "Observation (catch problems early)",
+     "Expensive gear",
+     "Luck",
+     "Chemicals"
+    ],
+    "a": 0,
+    "why": "Most problems are fixable if caught early."
    }
   ]
  },
@@ -28390,6 +28541,1413 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Trust is the foundation of audience and copy."
+   }
+  ]
+ },
+ "gardening-vegetables": {
+  "title": "Vegetables",
+  "subject": "Gardening & Homesteading",
+  "level": "All ages",
+  "objectives": [
+   "Understand growing vegetables",
+   "Know cool-season vs warm-season crops",
+   "Start seeds and transplants",
+   "Care for and harvest vegetables",
+   "Choose easy beginner vegetables"
+  ],
+  "intro": "Growing your own vegetables is one of the most rewarding and practical parts of gardening — fresh food, saved money, and satisfaction. Even a small space or a few containers can produce a surprising amount. This lesson covers how to grow vegetables successfully.",
+  "sections": [
+   {
+    "h": "Why grow vegetables",
+    "body": "Growing vegetables gives you fresh, flavorful, often healthier food (picked ripe, not shipped) and can save money, especially on things you eat a lot of. It's also deeply satisfying and connects you to where food comes from. And it's more accessible than people think: you don't need a farm — a small raised bed, a sunny patch, or even containers on a balcony can grow a meaningful amount of food.\n\nThe basics of vegetable gardening follow the general plant needs — most vegetables want full sun (6+ hours), good soil rich in compost, and consistent water. Beyond that, the main thing to understand is timing: vegetables are seasonal, and planting the right crop at the right time for your climate is the biggest factor in success. Get the timing and the basics right, and vegetables are genuinely rewarding to grow, even for beginners.",
+    "tip": "Vegetables = fresh food + savings + satisfaction, even in small spaces/containers. They need full sun, good soil, and water — and the RIGHT crop at the RIGHT time."
+   },
+   {
+    "h": "Cool-season vs warm-season crops",
+    "body": "The most important vegetable-growing concept is that crops are divided by the temperature they like. Cool-season crops grow best in the cooler parts of the year (spring and fall) and tolerate light frost — these include lettuce and other greens, spinach, peas, radishes, carrots, broccoli, kale, and onions. They often bolt (go to seed) or struggle in summer heat.\n\nWarm-season crops need warmth and are killed by frost — plant them after the last spring frost, for summer harvest. These include tomatoes, peppers, cucumbers, squash/zucchini, beans, corn, and melons. Planting a warm-season crop too early (before frost danger passes) kills it; planting a cool-season crop in peak summer makes it bolt. Knowing which category a vegetable is in, and your region's frost dates, tells you when to plant it. This single concept prevents the most common vegetable-gardening failures.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Cool-season versus warm-season vegetables\"><rect x=\"8\" y=\"5\" width=\"104\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"5\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Cool-season</text><text x=\"118\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">spring/fall; tolerate frost</text><rect x=\"8\" y=\"27\" width=\"104\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"27\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Examples</text><text x=\"118\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">lettuce, peas, spinach, broccoli</text><rect x=\"8\" y=\"49\" width=\"104\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"49\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Warm-season</text><text x=\"118\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">summer; killed by frost</text><rect x=\"8\" y=\"71\" width=\"104\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"71\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Examples</text><text x=\"118\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">tomatoes, peppers, squash, beans</text><rect x=\"8\" y=\"93\" width=\"104\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"93\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Key rule</text><text x=\"118\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">plant each in its own season</text></svg>",
+    "caption": "Cool-season crops love spring/fall and tolerate frost; warm-season crops need heat and die in frost.",
+    "example": "Cool-season (spring/fall, tolerate frost): lettuce, peas, spinach, broccoli. Warm-season (after frost, love heat): tomatoes, peppers, squash, beans.",
+    "tip": "Cool-season crops (lettuce, peas, broccoli) love spring/fall + tolerate frost; warm-season (tomatoes, peppers, squash) need heat + die in frost. Plant each in its season."
+   },
+   {
+    "h": "Starting seeds and transplants",
+    "body": "You can start vegetables two ways. From seed: cheaper and with far more variety, sown either directly in the garden (good for beans, peas, carrots, radishes, squash — plants that don't like being moved) or started indoors earlier and transplanted out (good for tomatoes and peppers, which need a head start in cold climates). From transplants: buying young plants (seedlings) from a nursery — easier and faster for beginners, especially for slow starters like tomatoes and peppers.\n\nSeed packets are your guide: they tell you when and how deep to plant, spacing, and days to harvest — read them. For starting seeds indoors, you need light (a sunny window or grow light), warmth, and to 'harden off' seedlings (gradually acclimate them to outdoors) before transplanting. For beginners, a mix works well: buy transplants of the slow or tricky ones (tomatoes, peppers) and direct-sow the easy fast ones (beans, lettuce, radishes).",
+    "tip": "Start from seed (cheap, more variety; direct-sow beans/carrots/lettuce) or buy transplants (easier for tomatoes/peppers). Read the seed packet for timing, depth, spacing."
+   },
+   {
+    "h": "Caring for and harvesting",
+    "body": "Vegetable care follows the fundamentals with a few specifics. Water consistently — irregular watering causes problems (cracked tomatoes, bitter cucumbers, blossom-end rot). Keep weeds down (they compete), mulch to retain moisture and suppress weeds, and feed heavy-feeding crops (like tomatoes) with compost or fertilizer. Provide support for climbers and tall plants (stakes/cages/trellises for tomatoes, beans, cucumbers) to save space and keep fruit off the ground.\n\nHarvesting at the right time matters and encourages more production. Pick vegetables when ripe (color, size, firmness — check guides for each), and harvest regularly: many crops (beans, zucchini, cucumbers, lettuce) produce more the more you pick, while leaving them too long makes the plant stop or the produce turn tough/bitter. The reward of fresh-picked vegetables is a big part of the joy — and keeping up with the harvest keeps the plants producing all season.",
+    "tip": "Water consistently (irregular water causes problems), weed, mulch, feed heavy feeders, support climbers. Harvest at ripeness and OFTEN — picking keeps many crops producing."
+   },
+   {
+    "h": "Easy beginner vegetables",
+    "body": "Starting with forgiving, productive crops builds confidence and success. Great beginner vegetables: lettuce and leafy greens (fast, easy, cut-and-come-again), radishes (ready in weeks — instant gratification), green beans (easy, productive), zucchini/summer squash (famously prolific), cherry tomatoes (more forgiving than big tomatoes), and herbs (easy and useful). These are reliable, relatively trouble-free, and rewarding.\n\nAvoid starting with the finicky ones (cauliflower, celery, head lettuce, melons) until you have some experience. And start small — a few well-chosen crops you can actually tend beats an overwhelming plot. Pick a few vegetables you like to eat, give them the basics (sun, soil, water, right timing), and learn as you go. Every season teaches you more. Before long, you'll be enjoying homegrown food and expanding to try new things. The first harvest, however small, is a genuine thrill that keeps gardeners coming back.",
+    "tip": "Start with easy, productive crops: lettuce, radishes, green beans, zucchini, cherry tomatoes, herbs. Grow a few you'll eat, start small, and learn each season."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Why grow",
+    "body": "Fresh food + savings + satisfaction, even in small spaces. Full sun, good soil, water, right timing."
+   },
+   {
+    "h": "Cool vs warm",
+    "body": "Cool-season (lettuce/peas/broccoli): spring/fall, tolerate frost. Warm-season (tomato/pepper/squash): heat, die in frost."
+   },
+   {
+    "h": "Seeds vs transplants",
+    "body": "Seed = cheap, more variety (direct-sow beans/carrots). Transplants = easier for slow starters (tomato/pepper). Read the packet."
+   },
+   {
+    "h": "Care & harvest",
+    "body": "Water consistently, weed, mulch, feed heavy feeders, support climbers. Harvest ripe + often to keep producing."
+   },
+   {
+    "h": "Easy beginners",
+    "body": "Lettuce, radishes, green beans, zucchini, cherry tomatoes, herbs. Start small with a few you'll eat."
+   }
+  ],
+  "flash": [
+   [
+    "Full sun",
+    "6+ hours of sun (most vegetables)."
+   ],
+   [
+    "Cool-season crop",
+    "Grows in spring/fall; tolerates frost."
+   ],
+   [
+    "Warm-season crop",
+    "Needs heat; killed by frost."
+   ],
+   [
+    "Last frost date",
+    "When it's safe to plant warm-season crops."
+   ],
+   [
+    "Direct sow",
+    "Planting seeds right in the garden."
+   ],
+   [
+    "Transplant",
+    "Moving a young plant into the garden."
+   ],
+   [
+    "Seedling",
+    "A young plant grown from seed."
+   ],
+   [
+    "Harden off",
+    "Gradually acclimating seedlings to outdoors."
+   ],
+   [
+    "Days to harvest",
+    "How long from planting to picking."
+   ],
+   [
+    "Mulch",
+    "A soil cover retaining moisture, blocking weeds."
+   ],
+   [
+    "Heavy feeder",
+    "A crop (like tomatoes) needing extra nutrients."
+   ],
+   [
+    "Bolt",
+    "When a cool-season crop goes to seed in heat."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Do you need a farm to grow vegetables?",
+    "options": [
+     "No — small beds/containers work",
+     "Yes, acres",
+     "Only a greenhouse",
+     "Yes, a field"
+    ],
+    "a": 0,
+    "why": "Even a balcony can grow food."
+   },
+   {
+    "q": "The biggest factor in vegetable success is:",
+    "options": [
+     "Planting the right crop at the right time",
+     "The brand of seeds",
+     "Luck",
+     "The pot color"
+    ],
+    "a": 0,
+    "why": "Vegetables are seasonal."
+   },
+   {
+    "q": "Cool-season crops (like lettuce and peas):",
+    "options": [
+     "Grow in spring/fall and tolerate frost",
+     "Need summer heat",
+     "Die in cool weather",
+     "Grow only indoors"
+    ],
+    "a": 0,
+    "why": "They bolt in summer heat."
+   },
+   {
+    "q": "Warm-season crops (like tomatoes) are:",
+    "options": [
+     "Killed by frost; need heat",
+     "Frost-tolerant",
+     "Winter crops",
+     "Shade lovers"
+    ],
+    "a": 0,
+    "why": "Plant after the last spring frost."
+   },
+   {
+    "q": "Planting a warm-season crop too early (before frost passes):",
+    "options": [
+     "Kills it",
+     "Helps it",
+     "Doesn't matter",
+     "Speeds it up"
+    ],
+    "a": 0,
+    "why": "Frost destroys warm-season plants."
+   },
+   {
+    "q": "Which is better to direct-sow (plant in place)?",
+    "options": [
+     "Beans, carrots, radishes",
+     "Tomatoes",
+     "Peppers",
+     "All must be transplanted"
+    ],
+    "a": 0,
+    "why": "They don't like being moved."
+   },
+   {
+    "q": "For beginners, tomatoes and peppers are easiest to:",
+    "options": [
+     "Buy as transplants",
+     "Grow from seed outdoors",
+     "Skip",
+     "Direct sow in winter"
+    ],
+    "a": 0,
+    "why": "They're slow starters needing a head start."
+   },
+   {
+    "q": "Seed packets tell you:",
+    "options": [
+     "When, how deep, spacing, days to harvest",
+     "The weather",
+     "Your zone automatically",
+     "Nothing useful"
+    ],
+    "a": 0,
+    "why": "They're a key reference."
+   },
+   {
+    "q": "'Hardening off' means:",
+    "options": [
+     "Gradually acclimating seedlings to outdoors",
+     "Freezing seeds",
+     "Watering heavily",
+     "Fertilizing"
+    ],
+    "a": 0,
+    "why": "Before transplanting indoor-started plants."
+   },
+   {
+    "q": "Irregular watering can cause:",
+    "options": [
+     "Cracked tomatoes, bitter cucumbers",
+     "Better flavor",
+     "Faster growth",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Consistency matters for vegetables."
+   },
+   {
+    "q": "Heavy feeders like tomatoes need:",
+    "options": [
+     "Extra compost/fertilizer",
+     "No nutrients",
+     "Only water",
+     "Shade"
+    ],
+    "a": 0,
+    "why": "They use a lot of nutrients."
+   },
+   {
+    "q": "Many crops (beans, zucchini) produce more when you:",
+    "options": [
+     "Harvest often",
+     "Leave them on the plant",
+     "Never pick",
+     "Water less"
+    ],
+    "a": 0,
+    "why": "Picking keeps them producing."
+   },
+   {
+    "q": "Leaving a cucumber too long makes it:",
+    "options": [
+     "Tough/bitter and stops production",
+     "Sweeter",
+     "Bigger and better",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Harvest at ripeness."
+   },
+   {
+    "q": "A great beginner vegetable is:",
+    "options": [
+     "Lettuce or radishes",
+     "Cauliflower",
+     "Celery",
+     "Melons"
+    ],
+    "a": 0,
+    "why": "Fast, easy, and forgiving."
+   },
+   {
+    "q": "The smartest way to start is to:",
+    "options": [
+     "Grow a few easy crops you'll eat",
+     "Plant a huge plot",
+     "Grow only hard crops",
+     "Not plan"
+    ],
+    "a": 0,
+    "why": "Start small and learn each season."
+   }
+  ]
+ },
+ "gardening-herbs": {
+  "title": "Herbs",
+  "subject": "Gardening & Homesteading",
+  "level": "All ages",
+  "objectives": [
+   "Understand growing herbs",
+   "Know common culinary herbs",
+   "Grow herbs indoors and out",
+   "Harvest and use herbs",
+   "Preserve herbs"
+  ],
+  "intro": "Herbs are among the easiest, most rewarding plants to grow — they're compact, thrive in containers and small spaces (even a windowsill), and give you fresh flavor for cooking plus savings over store-bought. This lesson covers growing and using herbs.",
+  "sections": [
+   {
+    "h": "Why grow herbs",
+    "body": "Herbs are a perfect starting point for new gardeners and a staple for cooks. They're easy to grow (most are hardy and forgiving), compact (a few pots on a windowsill or patio suffice — you don't need a yard), and fast to reward (you can snip fresh herbs within weeks). Fresh herbs dramatically improve cooking, and growing your own saves money (store herbs are expensive and often go bad before you use them).\n\nMost culinary herbs share simple needs: plenty of sun (most want 6+ hours, though some tolerate less), well-draining soil (herbs hate soggy roots), and moderate water (many Mediterranean herbs prefer to dry out a bit between waterings). Because they're small and undemanding, herbs are ideal for containers, indoors or out. If you want an easy, useful, satisfying intro to gardening, a few herb pots are the perfect place to start.",
+    "tip": "Herbs are easy, compact (grow on a windowsill), and reward fast — perfect for beginners. Most want lots of sun, well-draining soil, and moderate water."
+   },
+   {
+    "h": "Common culinary herbs",
+    "body": "A handful of herbs cover most cooking. Basil (warm-season, loves sun and warmth — great for Italian dishes, but killed by frost). Mint (extremely vigorous — grow it in a pot or it takes over; great for teas and more). Parsley, cilantro (cilantro is cool-season and bolts in heat), and chives are easy and widely used. Rosemary, thyme, oregano, and sage are hardy Mediterranean perennials (they come back year after year) that like sun and dry-ish soil.\n\nHerbs split roughly into annuals (basil, cilantro — grow for one season) and perennials (rosemary, thyme, oregano, sage, chives, mint — come back yearly). For beginners, easy wins include basil (in warm weather), mint, chives, parsley, and thyme. Grow the herbs you actually cook with, a few plants of each — a little goes a long way. This small set of herbs, grown fresh, upgrades your cooking and your garden skills at once.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Common culinary herbs and how they grow\"><rect x=\"8\" y=\"5\" width=\"128\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"136\" y=\"5\" width=\"106\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Basil</text><text x=\"142\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">warm-season; killed by frost</text><rect x=\"8\" y=\"27\" width=\"128\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"136\" y=\"27\" width=\"106\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Mint</text><text x=\"142\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">vigorous — grow in a pot!</text><rect x=\"8\" y=\"49\" width=\"128\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"136\" y=\"49\" width=\"106\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Rosemary/thyme/oregano</text><text x=\"142\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">hardy perennials; sun + dry-ish</text><rect x=\"8\" y=\"71\" width=\"128\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"136\" y=\"71\" width=\"106\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Parsley/cilantro/chives</text><text x=\"142\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">easy, widely used</text><rect x=\"8\" y=\"93\" width=\"128\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"136\" y=\"93\" width=\"106\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Annual vs perennial</text><text x=\"142\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">basil/cilantro vs rosemary/thyme</text></svg>",
+    "caption": "Common culinary herbs — note which are annuals vs hardy perennials, and which need warmth.",
+    "tip": "Easy herbs: basil (warm), mint (vigorous — pot it!), parsley, chives, thyme, rosemary. Annuals (basil/cilantro) vs perennials (rosemary/thyme come back). Grow what you cook with."
+   },
+   {
+    "h": "Growing herbs indoors and out",
+    "body": "Herbs are flexible about location. Outdoors: plant them in the garden or in pots on a sunny patio or balcony; most want full sun and good drainage. Group herbs with similar needs together (the dry-loving Mediterranean herbs — rosemary, thyme, oregano, sage — vs. the thirstier ones like basil, parsley, mint). Indoors: a sunny south-facing windowsill can grow herbs year-round, making fresh herbs available even in winter — one of the easiest forms of indoor gardening.\n\nWhether in or out, the keys are enough light (herbs get leggy and weak without it — a grow light helps indoors in dark spots), well-draining containers (pots must have drainage holes — soggy roots kill herbs), and not overwatering (let the soil dry a bit, especially for Mediterranean herbs). Herbs are so adaptable that nearly anyone, anywhere, can grow at least a few — a windowsill is all it takes to always have fresh herbs on hand.",
+    "tip": "Grow herbs outdoors (sun + drainage) or on a sunny windowsill year-round. Keys: enough light, pots WITH drainage holes, and don't overwater. Group by water needs."
+   },
+   {
+    "h": "Harvesting and using",
+    "body": "Harvesting herbs correctly actually makes them grow better. The golden rule: pinch or snip from the top and regularly, which encourages the plant to branch out and become bushier and more productive — the more you harvest (within reason), the more you get. Don't take more than about a third at once. For leafy herbs like basil, pinching off the growing tips (and any flower buds) keeps it producing leaves rather than going to seed.\n\nUse herbs fresh for the best flavor — add delicate ones (basil, cilantro, parsley) near the end of cooking (heat destroys their flavor), while hardy ones (rosemary, thyme, oregano) can cook longer. Fresh herbs are far more flavorful than dried, and having them on hand encourages you to cook with them. Harvest in the morning for the best flavor, and enjoy the immediate payoff of snipping fresh herbs straight into your cooking — the whole point of growing them.",
+    "tip": "Harvest from the top, regularly (it makes herbs bushier/more productive); don't take over a third. Add delicate herbs late in cooking; use fresh for best flavor."
+   },
+   {
+    "h": "Preserving herbs",
+    "body": "When you have more herbs than you can use fresh (or at season's end before frost), you can preserve them. Drying is classic and easy for hardy herbs (rosemary, thyme, oregano, sage): hang small bunches in a dry, airy spot or use a low oven/dehydrator, then store the dried leaves in airtight jars. Dried herbs keep for months and concentrate flavor (use less than fresh).\n\nFreezing works better for delicate herbs that don't dry well (basil, cilantro, parsley): chop and freeze them in ice-cube trays with a little water or oil, then pop out cubes as needed — great for cooking. You can also make herb pastes (like pesto) and freeze those. Preserving lets you enjoy your harvest long after the plants are gone, and means an abundant summer herb crop isn't wasted. Growing, harvesting, and preserving herbs is a complete, satisfying little cycle — and a great foundation for the rest of gardening and homesteading.",
+    "tip": "Preserve extra herbs: DRY hardy ones (rosemary/thyme) and store in jars; FREEZE delicate ones (basil/cilantro) in oil/water cubes. Don't waste the harvest."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Why herbs",
+    "body": "Easy, compact (windowsill), reward fast — perfect for beginners. Sun, well-draining soil, moderate water."
+   },
+   {
+    "h": "Common herbs",
+    "body": "Basil (warm), mint (pot it!), parsley/cilantro/chives, rosemary/thyme/oregano (hardy perennials). Annual vs perennial."
+   },
+   {
+    "h": "Indoors/out",
+    "body": "Sunny spot or windowsill year-round. Keys: enough light, drainage holes, don't overwater. Group by water needs."
+   },
+   {
+    "h": "Harvest & use",
+    "body": "Snip from the top, often (makes them bushier); ≤ a third. Add delicate herbs late; fresh tastes best."
+   },
+   {
+    "h": "Preserve",
+    "body": "Dry hardy herbs (jars); freeze delicate ones in oil/water cubes. Don't waste the harvest."
+   }
+  ],
+  "flash": [
+   [
+    "Herb",
+    "A plant grown for flavor, aroma, or use."
+   ],
+   [
+    "Annual herb",
+    "Grows for one season (basil, cilantro)."
+   ],
+   [
+    "Perennial herb",
+    "Comes back yearly (rosemary, thyme, oregano)."
+   ],
+   [
+    "Basil",
+    "A warm-season herb killed by frost."
+   ],
+   [
+    "Mint",
+    "A vigorous herb — grow in a pot."
+   ],
+   [
+    "Mediterranean herbs",
+    "Sun/dry-loving (rosemary, thyme, oregano, sage)."
+   ],
+   [
+    "Drainage",
+    "Letting water flow out so roots aren't soggy."
+   ],
+   [
+    "Leggy",
+    "Stretched, weak growth from too little light."
+   ],
+   [
+    "Pinching",
+    "Snipping tips to make a plant bushier."
+   ],
+   [
+    "Drying",
+    "Preserving herbs by removing moisture."
+   ],
+   [
+    "Freezing herbs",
+    "Preserving delicate herbs in oil/water cubes."
+   ],
+   [
+    "Bolt",
+    "Going to seed (cilantro bolts in heat)."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Herbs are a great beginner plant because they're:",
+    "options": [
+     "Easy, compact, and reward fast",
+     "Huge and slow",
+     "Hard to grow",
+     "Expensive to start"
+    ],
+    "a": 0,
+    "why": "A windowsill is enough."
+   },
+   {
+    "q": "Most culinary herbs want:",
+    "options": [
+     "Lots of sun and well-draining soil",
+     "Shade and soggy soil",
+     "No sun",
+     "Constant flooding"
+    ],
+    "a": 0,
+    "why": "Herbs hate soggy roots."
+   },
+   {
+    "q": "Basil is:",
+    "options": [
+     "A warm-season herb killed by frost",
+     "Frost-hardy",
+     "A winter crop",
+     "A perennial"
+    ],
+    "a": 0,
+    "why": "It loves warmth and sun."
+   },
+   {
+    "q": "Mint should be:",
+    "options": [
+     "Grown in a pot (it's vigorous)",
+     "Planted loose in the garden",
+     "Avoided",
+     "Grown in shade only"
+    ],
+    "a": 0,
+    "why": "It takes over if unconfined."
+   },
+   {
+    "q": "Rosemary, thyme, and oregano are:",
+    "options": [
+     "Hardy perennials (come back yearly)",
+     "Annuals",
+     "Frost-killed",
+     "Shade plants"
+    ],
+    "a": 0,
+    "why": "Mediterranean perennials liking sun + dry-ish soil."
+   },
+   {
+    "q": "Herb pots MUST have:",
+    "options": [
+     "Drainage holes",
+     "No holes",
+     "A lid",
+     "Gravel only"
+    ],
+    "a": 0,
+    "why": "Soggy roots kill herbs."
+   },
+   {
+    "q": "Herbs grown indoors need especially:",
+    "options": [
+     "Enough light (a sunny window/grow light)",
+     "Total darkness",
+     "Constant water",
+     "Cold"
+    ],
+    "a": 0,
+    "why": "Too little light makes them leggy."
+   },
+   {
+    "q": "You can grow fresh herbs in winter by:",
+    "options": [
+     "Using a sunny windowsill",
+     "Planting outside in snow",
+     "Not watering",
+     "Freezing them"
+    ],
+    "a": 0,
+    "why": "One of the easiest indoor gardens."
+   },
+   {
+    "q": "To make herbs bushier and more productive, harvest:",
+    "options": [
+     "From the top, regularly",
+     "From the bottom only",
+     "Never",
+     "All at once"
+    ],
+    "a": 0,
+    "why": "Pinching encourages branching."
+   },
+   {
+    "q": "You shouldn't take more than about:",
+    "options": [
+     "A third at once",
+     "Everything",
+     "Nothing",
+     "Half the roots"
+    ],
+    "a": 0,
+    "why": "Leave enough for the plant to recover."
+   },
+   {
+    "q": "Delicate herbs (basil, cilantro) should be added to cooking:",
+    "options": [
+     "Near the end",
+     "At the very start",
+     "Never",
+     "Only dried"
+    ],
+    "a": 0,
+    "why": "Heat destroys their flavor."
+   },
+   {
+    "q": "Compared to dried, fresh herbs are:",
+    "options": [
+     "More flavorful",
+     "Weaker",
+     "The same",
+     "Worse"
+    ],
+    "a": 0,
+    "why": "Use fresh when you can."
+   },
+   {
+    "q": "The best way to preserve hardy herbs (rosemary, thyme) is:",
+    "options": [
+     "Drying",
+     "Freezing in water",
+     "Leaving out",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "They dry well and keep for months."
+   },
+   {
+    "q": "Delicate herbs (basil) preserve better by:",
+    "options": [
+     "Freezing (in oil/water cubes)",
+     "Drying",
+     "Boiling",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "They lose flavor when dried."
+   },
+   {
+    "q": "Dried herbs vs fresh: you should use:",
+    "options": [
+     "Less dried (flavor is concentrated)",
+     "More dried",
+     "The same",
+     "None"
+    ],
+    "a": 0,
+    "why": "Drying concentrates flavor."
+   }
+  ]
+ },
+ "gardening-container-gardening": {
+  "title": "Container Gardening",
+  "subject": "Gardening & Homesteading",
+  "level": "All ages",
+  "objectives": [
+   "Understand container gardening and its benefits",
+   "Choose containers and soil",
+   "Know what grows well in containers",
+   "Water and feed container plants",
+   "Succeed with limited space"
+  ],
+  "intro": "Container gardening is growing plants in pots and containers rather than in the ground — perfect for small spaces, balconies, patios, renters, and anyone without a yard. It makes growing food and plants accessible to almost everyone. This lesson covers how to garden successfully in containers.",
+  "sections": [
+   {
+    "h": "Why container gardening",
+    "body": "Container gardening lets you grow plants anywhere you have a bit of sun — a balcony, patio, windowsill, porch, or doorstep — no yard or garden bed required. This makes it ideal for apartment dwellers, renters (containers move with you), small spaces, and anyone wanting to start simply. It's one of the most accessible ways to grow food and flowers.\n\nContainers also offer real advantages: you control the soil completely (no bad native soil to fight), you can move plants to follow the sun or escape frost, there are fewer weeds and some fewer pests, and it's easier on your back (raised to a comfortable height). The main trade-offs are that containers dry out faster (needing more frequent watering) and limit root space (so plants may need feeding). Understanding those few differences is the key to container success. For many people, containers aren't a compromise — they're the perfect way to garden.",
+    "tip": "Container gardening grows plants anywhere with sun (balcony, patio, windowsill) — great for small spaces/renters. You control the soil + can move plants; just water more."
+   },
+   {
+    "h": "Choosing containers and soil",
+    "body": "Two choices set you up for success. Containers: the most important rule is drainage — every container must have holes in the bottom so excess water escapes (soggy roots rot and kill plants). Size matters too: bigger pots hold more soil and water (so they dry out slower and support bigger plants), while tiny pots dry out fast and limit growth. Match the pot to the plant (a tomato needs a large pot; herbs are fine in small ones). Material is flexible (plastic, fabric, ceramic, even repurposed buckets with drainage holes) — plastic and fabric are light and retain moisture well.\n\nSoil: don't use garden soil in containers — it compacts and drains poorly. Use potting mix (also called 'potting soil'), which is light, drains well, and is made for containers. Mixing in some compost adds nutrients. Good drainage (holey container + potting mix) is the single biggest factor in container success, because container plants are far more vulnerable to the over-watering and root-rot problem than ground plants.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Keys to successful container gardening\"><rect x=\"8\" y=\"5\" width=\"100\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"5\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Drainage</text><text x=\"114\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">holes in the bottom (a must)</text><rect x=\"8\" y=\"27\" width=\"100\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"27\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Pot size</text><text x=\"114\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">bigger = less frequent watering</text><rect x=\"8\" y=\"49\" width=\"100\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"49\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Soil</text><text x=\"114\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">potting mix (not garden soil)</text><rect x=\"8\" y=\"71\" width=\"100\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"71\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Water</text><text x=\"114\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">dries fast — check daily in heat</text><rect x=\"8\" y=\"93\" width=\"100\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"93\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Feed</text><text x=\"114\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">regularly (watering flushes nutrients)</text></svg>",
+    "caption": "The keys to container success — drainage, right-sized pots, potting mix, and attentive watering.",
+    "tip": "Containers MUST have drainage holes (soggy roots rot). Bigger pots = less frequent watering. Use POTTING MIX (not garden soil, which compacts). Drainage is key."
+   },
+   {
+    "h": "What grows well in containers",
+    "body": "Many plants thrive in containers, especially if you match the plant to the pot size. Excellent container plants: herbs (nearly all — small and perfect), leafy greens and lettuce (shallow roots), cherry/patio tomatoes (choose compact varieties; use a big pot), peppers, bush beans, radishes, green onions, and many flowers. Compact or 'dwarf'/'patio' varieties are bred specifically for containers and do best.\n\nBigger or sprawling plants (large tomatoes, squash, melons, corn) are harder in containers — they need very large pots and still may underperform, so they're better in the ground if you have it. The rule of thumb: smaller-rooted, compact plants excel in containers, while big space-hogs struggle. Start with herbs, greens, and a compact tomato or pepper — reliable container winners. With the right plant in the right-sized pot, container gardens can be remarkably productive for their footprint.",
+    "tip": "Great in containers: herbs, lettuce/greens, cherry/patio tomatoes (big pot), peppers, bush beans, radishes. Choose compact/'patio' varieties. Big sprawlers struggle in pots."
+   },
+   {
+    "h": "Watering and feeding containers",
+    "body": "The two things container plants need more attention on are water and nutrients, because the limited soil can't buffer like the ground does. Water: containers dry out much faster than garden beds (sometimes needing daily watering in summer heat), so check often — stick a finger in the soil, and water when the top inch is dry, thoroughly until it drains out the bottom. In hot weather, small pots may need water twice a day. This is the #1 cause of container failure: letting them dry out.\n\nFeeding: because frequent watering flushes nutrients out and roots can't reach for more, container plants benefit from regular feeding — mix compost into the soil and/or use a liquid or slow-release fertilizer during the growing season (following the label). Refreshing the potting mix (or at least the top layer) each season helps too. Get the watering right (the big one) and feed periodically, and container plants stay healthy and productive.",
+    "tip": "Containers dry out fast — check daily in heat, water thoroughly when the top inch is dry (the #1 failure cause). Feed regularly (compost/fertilizer), since watering flushes nutrients."
+   },
+   {
+    "h": "Succeeding with limited space",
+    "body": "Container gardening shines at making the most of small spaces. Go vertical: use trellises, hanging baskets, wall planters, and stacked or tiered containers to grow up, not just out, multiplying your growing area. Group containers to create an attractive, easy-to-tend mini-garden, and put thirsty plants where they're easy to water.\n\nChoose high-value crops for your limited space — things that are expensive to buy, that you use a lot, or that are much better fresh (herbs, cherry tomatoes, salad greens, specialty peppers) give the best return per pot. Start small (a few pots), succeed, and expand. Even a sunny windowsill or a tiny balcony can produce fresh herbs and salad greens most of the year. Container gardening proves you don't need land to grow your own food — just a bit of sun, the right containers and soil, consistent watering, and a few well-chosen plants. It's gardening for everyone.",
+    "tip": "Maximize small space: go vertical (trellises, hanging/tiered pots) and grow high-value crops (herbs, cherry tomatoes, greens). Start small, succeed, expand. No land needed."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Why containers",
+    "body": "Grow anywhere with sun (balcony/windowsill); great for renters/small spaces. Control soil, move plants; just water more."
+   },
+   {
+    "h": "Containers & soil",
+    "body": "Must have drainage holes; bigger = waters less often; use potting mix (not garden soil). Drainage is #1."
+   },
+   {
+    "h": "What grows well",
+    "body": "Herbs, greens, cherry/patio tomatoes (big pot), peppers, bush beans, radishes. Use compact varieties."
+   },
+   {
+    "h": "Water & feed",
+    "body": "Dries fast — check daily in heat (the #1 failure). Feed regularly since watering flushes nutrients."
+   },
+   {
+    "h": "Small space",
+    "body": "Go vertical (trellises/hanging pots); grow high-value crops. Start small, expand. No land needed."
+   }
+  ],
+  "flash": [
+   [
+    "Container gardening",
+    "Growing plants in pots instead of the ground."
+   ],
+   [
+    "Drainage holes",
+    "Bottom holes letting excess water escape (a must)."
+   ],
+   [
+    "Potting mix",
+    "Light, well-draining soil made for containers."
+   ],
+   [
+    "Pot size",
+    "Bigger pots hold more water and support bigger plants."
+   ],
+   [
+    "Compact variety",
+    "A plant bred to stay small (good for pots)."
+   ],
+   [
+    "Root space",
+    "The limited soil volume a container provides."
+   ],
+   [
+    "Overwatering",
+    "A top killer — but containers also dry out fast."
+   ],
+   [
+    "Vertical gardening",
+    "Growing up (trellises, hanging pots) to save space."
+   ],
+   [
+    "Slow-release fertilizer",
+    "Feeds container plants gradually."
+   ],
+   [
+    "Hanging basket",
+    "A suspended container for trailing plants."
+   ],
+   [
+    "Patio variety",
+    "A compact plant type bred for containers."
+   ],
+   [
+    "High-value crop",
+    "A crop worth growing in limited space."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Container gardening is great for:",
+    "options": [
+     "Small spaces and renters",
+     "Only big farms",
+     "Only greenhouses",
+     "No one"
+    ],
+    "a": 0,
+    "why": "Grow anywhere with a bit of sun."
+   },
+   {
+    "q": "Every container MUST have:",
+    "options": [
+     "Drainage holes",
+     "A lid",
+     "Gravel bottom",
+     "No holes"
+    ],
+    "a": 0,
+    "why": "Soggy roots rot without drainage."
+   },
+   {
+    "q": "Bigger pots:",
+    "options": [
+     "Dry out slower and support bigger plants",
+     "Dry out faster",
+     "Can't hold plants",
+     "Are always worse"
+    ],
+    "a": 0,
+    "why": "More soil = more water buffer."
+   },
+   {
+    "q": "In containers you should use:",
+    "options": [
+     "Potting mix",
+     "Garden soil (it compacts)",
+     "Sand only",
+     "Gravel"
+    ],
+    "a": 0,
+    "why": "Garden soil drains poorly in pots."
+   },
+   {
+    "q": "The biggest factor in container success is:",
+    "options": [
+     "Good drainage",
+     "Expensive pots",
+     "A big yard",
+     "The pot color"
+    ],
+    "a": 0,
+    "why": "Container plants are vulnerable to root rot."
+   },
+   {
+    "q": "Which grows especially well in containers?",
+    "options": [
+     "Herbs and leafy greens",
+     "Corn",
+     "Melons",
+     "Large sprawling squash"
+    ],
+    "a": 0,
+    "why": "Small-rooted, compact plants excel."
+   },
+   {
+    "q": "For container tomatoes, choose:",
+    "options": [
+     "Compact/'patio' varieties in a big pot",
+     "The biggest sprawling type",
+     "A tiny pot",
+     "Shade"
+    ],
+    "a": 0,
+    "why": "Compact varieties suit containers."
+   },
+   {
+    "q": "The #1 cause of container failure is:",
+    "options": [
+     "Letting them dry out",
+     "Too much soil",
+     "Too few holes in the pot wall",
+     "Good drainage"
+    ],
+    "a": 0,
+    "why": "Containers dry out fast — check often."
+   },
+   {
+    "q": "In hot weather, small pots may need watering:",
+    "options": [
+     "Twice a day",
+     "Once a month",
+     "Never",
+     "Once a year"
+    ],
+    "a": 0,
+    "why": "They dry out quickly."
+   },
+   {
+    "q": "Container plants need regular feeding because:",
+    "options": [
+     "Watering flushes nutrients out",
+     "They never need food",
+     "Soil is unlimited",
+     "Roots reach far"
+    ],
+    "a": 0,
+    "why": "Limited soil + flushing means feeding helps."
+   },
+   {
+    "q": "To check if a container needs water:",
+    "options": [
+     "Feel the top inch of soil",
+     "Guess",
+     "Water on a fixed schedule only",
+     "Look at the pot"
+    ],
+    "a": 0,
+    "why": "Water when the top inch is dry."
+   },
+   {
+    "q": "To maximize a small space, you can:",
+    "options": [
+     "Go vertical (trellises, hanging pots)",
+     "Only grow one plant",
+     "Use tiny pots only",
+     "Avoid stacking"
+    ],
+    "a": 0,
+    "why": "Growing up multiplies area."
+   },
+   {
+    "q": "The best crops for limited space are:",
+    "options": [
+     "High-value ones (herbs, cherry tomatoes)",
+     "Space-hogs like corn",
+     "Melons",
+     "Whatever's cheapest to buy"
+    ],
+    "a": 0,
+    "why": "Best return per pot."
+   },
+   {
+    "q": "A smart way to start container gardening is to:",
+    "options": [
+     "Start small and expand",
+     "Fill every surface at once",
+     "Grow only hard plants",
+     "Skip watering"
+    ],
+    "a": 0,
+    "why": "Succeed first, then grow."
+   },
+   {
+    "q": "Do you need land to grow your own food?",
+    "options": [
+     "No — containers work",
+     "Yes, acres",
+     "Yes, a field",
+     "Only a farm"
+    ],
+    "a": 0,
+    "why": "Sun + pots + soil + water is enough."
+   }
+  ]
+ },
+ "gardening-composting": {
+  "title": "Composting",
+  "subject": "Gardening & Homesteading",
+  "level": "All ages",
+  "objectives": [
+   "Understand what composting is and why",
+   "Know what to compost (greens and browns)",
+   "Build and maintain a compost pile",
+   "Troubleshoot composting problems",
+   "Use finished compost"
+  ],
+  "intro": "Composting is nature's recycling — turning kitchen scraps and yard waste into rich, free fertilizer for your garden. It reduces waste, saves money, and feeds your soil. This lesson covers how to compost, even in small spaces.",
+  "sections": [
+   {
+    "h": "What composting is and why",
+    "body": "Composting is the natural process of letting organic materials (food scraps, leaves, yard waste) decompose into a dark, crumbly, nutrient-rich material called compost — sometimes called 'black gold' by gardeners. You're simply speeding up and directing what nature does anyway: breaking down dead plant matter into soil. The result is a free, excellent soil amendment and fertilizer.\n\nThe benefits are substantial. Composting turns waste into a resource: it keeps food and yard waste out of landfills (where it produces methane, a greenhouse gas) and gives you free, high-quality compost instead of buying fertilizer and soil. For your garden, compost improves soil structure, feeds plants slowly and naturally, helps soil hold water, and supports healthy soil life. It's one of the most sustainable and rewarding gardening practices — you're closing the loop, turning your 'garbage' back into food-growing soil.",
+    "tip": "Composting turns food/yard scraps into free, rich soil ('black gold'). It cuts landfill waste + methane, and feeds your garden naturally. You're recycling nature's way."
+   },
+   {
+    "h": "What to compost: greens and browns",
+    "body": "Successful composting balances two kinds of material. 'Greens' are moist, nitrogen-rich materials: fruit and vegetable scraps, coffee grounds, fresh grass clippings, and plant trimmings. 'Browns' are dry, carbon-rich materials: dry leaves, cardboard, paper, straw, and small twigs. A good compost pile needs both — roughly more browns than greens (a common guide is 2–3 parts browns to 1 part greens by volume) — because the mix of nitrogen and carbon lets the decomposing microbes work well.\n\nDo compost: fruit/veggie scraps, coffee grounds and filters, eggshells, dry leaves, grass, paper, cardboard, plant trimmings. Don't compost: meat, fish, dairy, and oily/greasy food (they smell, attract pests, and rot badly), pet waste, diseased plants, and anything treated with chemicals. Learning this greens/browns balance — and what to keep out — is the core of composting. Get the mix roughly right, and nature does the rest.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"What to compost: greens and browns\"><rect x=\"8\" y=\"5\" width=\"116\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"124\" y=\"5\" width=\"118\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Greens (nitrogen)</text><text x=\"130\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">veggie scraps, grass, coffee</text><rect x=\"8\" y=\"27\" width=\"116\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"124\" y=\"27\" width=\"118\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Browns (carbon)</text><text x=\"130\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">dry leaves, cardboard, paper</text><rect x=\"8\" y=\"49\" width=\"116\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"124\" y=\"49\" width=\"118\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">The mix</text><text x=\"130\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">~2–3 parts browns : 1 greens</text><rect x=\"8\" y=\"71\" width=\"116\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"124\" y=\"71\" width=\"118\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Keep moist</text><text x=\"130\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">like a wrung-out sponge</text><rect x=\"8\" y=\"93\" width=\"116\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"124\" y=\"93\" width=\"118\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Never add</text><text x=\"130\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">meat, dairy, oil, pet waste</text></svg>",
+    "caption": "Balance greens (nitrogen) and browns (carbon), keep it moist, and keep meat/dairy out.",
+    "example": "Greens (nitrogen): veggie scraps, coffee grounds, grass. Browns (carbon): dry leaves, cardboard, paper. Aim for ~2–3 parts browns to 1 part greens.",
+    "tip": "Balance GREENS (wet/nitrogen: scraps, grass, coffee) with BROWNS (dry/carbon: leaves, cardboard). Use ~2–3 parts browns. NO meat, dairy, oil, or pet waste."
+   },
+   {
+    "h": "Building and maintaining a pile",
+    "body": "Composting can be as simple or structured as you like. The basics: pick a spot or a bin (an open pile, a purchased or homemade bin, or a tumbler — bins keep it tidy and contained), and start layering or mixing greens and browns. Keep the pile moist like a wrung-out sponge (not soggy, not dry), and give it air by turning or mixing it periodically (every week or two) — oxygen speeds decomposition and prevents odor.\n\nHeat is a good sign: an active, well-balanced pile heats up as microbes work. Over weeks to months (faster if you turn it often, chop materials small, and keep the balance right), the materials break down into finished compost. You can compost year-round, and even small-space composters exist (small bins, worm composting or 'vermicomposting' indoors, or counter collectors feeding a community site). The process is forgiving — nature will break it down eventually — but a little attention (balance, moisture, air) makes it faster and odor-free.",
+    "tip": "Layer/mix greens + browns; keep it moist like a wrung-out sponge; turn it every week or two for air. Heat = it's working. Chopping small + turning speeds it up."
+   },
+   {
+    "h": "Troubleshooting composting",
+    "body": "A few common issues have easy fixes, all tracing back to the balance of greens, browns, moisture, and air. A smelly pile (rotten or ammonia smell) usually means too many greens, too wet, or not enough air — add browns, and turn it to add oxygen. A pile that isn't breaking down (just sitting there) is often too dry, too many browns, or too small — add greens and water, and make sure it's big enough to heat up. Pests (flies, rodents) usually mean food scraps are exposed or you added the wrong things (meat/dairy) — bury scraps in the center and keep forbidden items out.\n\nThe through-line: most problems are a balance issue, and the fixes are adding greens or browns, adjusting moisture, or turning for air. Composting is quite forgiving, so don't be intimidated — if something's off, nudge the balance and it recovers. With a little experience you'll intuitively know whether a pile needs more browns, more water, or a good turn.",
+    "tip": "Smelly = too wet/too many greens/no air → add browns + turn. Not breaking down = too dry/too many browns → add greens + water. Pests = bury scraps, keep meat/dairy out."
+   },
+   {
+    "h": "Using finished compost",
+    "body": "Finished compost is ready when it's dark brown, crumbly, and earthy-smelling, with the original materials mostly unrecognizable (bits of browns may remain — that's fine, or sift them out to compost again). This rich material is pure benefit for your garden, and there's no way to over-use it reasonably.\n\nHow to use it: mix it into garden beds or containers before planting (improving soil nutrients and structure), spread it as a top layer ('top-dressing') around established plants, add it to potting mix for containers, or steep it in water to make 'compost tea' for watering. It feeds plants gently, improves any soil (sandy or clay), and helps hold moisture. Using your own compost closes the gardening loop: your scraps become soil, which grows food, whose scraps become compost again. It's free, sustainable, and genuinely improves everything you grow — the satisfying payoff of composting.",
+    "tip": "Finished compost = dark, crumbly, earthy. Use it: mix into beds/containers, top-dress around plants, or add to potting mix. It feeds plants + improves any soil, for free."
+   }
+  ],
+  "cards": [
+   {
+    "h": "What & why",
+    "body": "Scraps + yard waste → free rich soil ('black gold'). Cuts landfill waste/methane; feeds the garden naturally."
+   },
+   {
+    "h": "Greens & browns",
+    "body": "Greens (nitrogen: scraps/grass/coffee) + browns (carbon: leaves/cardboard), ~2–3 browns : 1 green. No meat/dairy/oil/pet waste."
+   },
+   {
+    "h": "Build & maintain",
+    "body": "Layer/mix; keep moist like a wrung-out sponge; turn every week or two for air. Heat = working."
+   },
+   {
+    "h": "Troubleshoot",
+    "body": "Smelly = add browns + turn. Not breaking down = add greens + water. Pests = bury scraps, no meat/dairy."
+   },
+   {
+    "h": "Use it",
+    "body": "Dark/crumbly/earthy when done. Mix into beds/pots, top-dress plants, or make compost tea."
+   }
+  ],
+  "flash": [
+   [
+    "Compost",
+    "Decomposed organic matter — rich 'black gold' for soil."
+   ],
+   [
+    "Greens",
+    "Moist, nitrogen-rich materials (scraps, grass, coffee)."
+   ],
+   [
+    "Browns",
+    "Dry, carbon-rich materials (leaves, cardboard, paper)."
+   ],
+   [
+    "Carbon-nitrogen balance",
+    "The greens-to-browns mix (~2–3 browns : 1 green)."
+   ],
+   [
+    "Compost bin",
+    "A container that holds and tidies a compost pile."
+   ],
+   [
+    "Turning",
+    "Mixing a pile to add air and speed decomposition."
+   ],
+   [
+    "Vermicomposting",
+    "Composting with worms (good for small spaces)."
+   ],
+   [
+    "Decomposition",
+    "The breaking down of organic matter."
+   ],
+   [
+    "Top-dressing",
+    "Spreading compost on top around plants."
+   ],
+   [
+    "Compost tea",
+    "Compost steeped in water to feed plants."
+   ],
+   [
+    "Soil amendment",
+    "Material added to improve soil."
+   ],
+   [
+    "Black gold",
+    "Gardeners' nickname for finished compost."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Composting turns scraps into:",
+    "options": [
+     "Rich soil/fertilizer ('black gold')",
+     "Trash",
+     "Plastic",
+     "Water"
+    ],
+    "a": 0,
+    "why": "A free soil amendment."
+   },
+   {
+    "q": "A benefit of composting is:",
+    "options": [
+     "Cutting landfill waste and feeding soil",
+     "Creating pollution",
+     "Wasting food",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "It closes the loop sustainably."
+   },
+   {
+    "q": "'Greens' in composting are:",
+    "options": [
+     "Moist, nitrogen-rich (scraps, grass)",
+     "Dry leaves",
+     "Cardboard",
+     "Plastic"
+    ],
+    "a": 0,
+    "why": "They provide nitrogen."
+   },
+   {
+    "q": "'Browns' are:",
+    "options": [
+     "Dry, carbon-rich (leaves, cardboard)",
+     "Food scraps",
+     "Grass clippings",
+     "Coffee grounds"
+    ],
+    "a": 0,
+    "why": "They provide carbon."
+   },
+   {
+    "q": "A good compost mix is roughly:",
+    "options": [
+     "2–3 parts browns to 1 part greens",
+     "All greens",
+     "All browns",
+     "Half plastic"
+    ],
+    "a": 0,
+    "why": "Balance carbon and nitrogen."
+   },
+   {
+    "q": "You should NOT compost:",
+    "options": [
+     "Meat, dairy, oil, pet waste",
+     "Veggie scraps",
+     "Dry leaves",
+     "Coffee grounds"
+    ],
+    "a": 0,
+    "why": "They smell, attract pests, rot badly."
+   },
+   {
+    "q": "A compost pile should be kept moist like:",
+    "options": [
+     "A wrung-out sponge",
+     "A swamp",
+     "Bone dry",
+     "A puddle"
+    ],
+    "a": 0,
+    "why": "Not soggy, not dry."
+   },
+   {
+    "q": "Turning the pile:",
+    "options": [
+     "Adds air and speeds it up",
+     "Slows it down",
+     "Is harmful",
+     "Is unnecessary ever"
+    ],
+    "a": 0,
+    "why": "Oxygen speeds decomposition, prevents odor."
+   },
+   {
+    "q": "A hot pile means:",
+    "options": [
+     "It's working (microbes active)",
+     "It's on fire",
+     "It failed",
+     "It's too wet"
+    ],
+    "a": 0,
+    "why": "Heat is a good sign."
+   },
+   {
+    "q": "A smelly compost pile usually needs:",
+    "options": [
+     "More browns + turning (air)",
+     "More greens",
+     "More water",
+     "Meat added"
+    ],
+    "a": 0,
+    "why": "Too wet/too many greens/no air."
+   },
+   {
+    "q": "A pile that isn't breaking down is often:",
+    "options": [
+     "Too dry or too many browns",
+     "Perfect",
+     "Too many greens",
+     "On fire"
+    ],
+    "a": 0,
+    "why": "Add greens and water."
+   },
+   {
+    "q": "Composting for small spaces can use:",
+    "options": [
+     "Worm composting (vermicomposting)",
+     "A huge field only",
+     "Nothing",
+     "A swimming pool"
+    ],
+    "a": 0,
+    "why": "Worm bins work indoors."
+   },
+   {
+    "q": "Finished compost looks:",
+    "options": [
+     "Dark, crumbly, and earthy",
+     "Like fresh garbage",
+     "Like plastic",
+     "Like water"
+    ],
+    "a": 0,
+    "why": "Original materials are mostly unrecognizable."
+   },
+   {
+    "q": "You can use compost by:",
+    "options": [
+     "Mixing into beds or top-dressing plants",
+     "Throwing it away",
+     "Burning it",
+     "Eating it"
+    ],
+    "a": 0,
+    "why": "It feeds plants and improves soil."
+   },
+   {
+    "q": "Composting is best described as:",
+    "options": [
+     "Closing the loop (scraps → soil → food)",
+     "Making trash",
+     "A waste of time",
+     "Only for farms"
+    ],
+    "a": 0,
+    "why": "Sustainable recycling of nutrients."
+   }
+  ]
+ },
+ "gardening-food-preservation": {
+  "title": "Food Preservation",
+  "subject": "Gardening & Homesteading",
+  "level": "All ages",
+  "objectives": [
+   "Understand why and how to preserve food",
+   "Know the main methods (freezing, canning, drying, fermenting)",
+   "Understand food-preservation safety",
+   "Choose the right method",
+   "Store preserved food safely"
+  ],
+  "intro": "Food preservation is the age-old skill of keeping food edible far beyond its fresh life — letting you store a harvest, reduce waste, save money, and have food on hand. This lesson covers the main preservation methods and how to do them safely. Food safety is critical in preservation — follow tested, reliable instructions, especially for canning.",
+  "sections": [
+   {
+    "h": "Why preserve food",
+    "body": "Food preservation is any method of treating and storing food so it lasts much longer without spoiling. Humans have done it for millennia (it's how people survived winters before refrigeration), and it's experiencing a revival for good reasons. It lets you save a seasonal abundance (a big garden harvest or a bulk/sale purchase) for later, dramatically reduces food waste (preserving what would otherwise spoil), saves money (buying in season/bulk and storing), and gives you a stock of food for convenience or emergencies.\n\nAll preservation works by stopping or slowing the things that make food spoil — microbes (bacteria, mold, yeast) and enzymes. Different methods do this differently: by cold (freezing), heat and sealing (canning), removing moisture (drying), or creating conditions microbes can't survive (fermenting, salting). Understanding that you're fighting spoilage organisms explains why each method works and why safety matters. Preserving food is a practical, satisfying, money-saving skill that connects to cooking, gardening, and self-reliance.",
+    "tip": "Food preservation makes food last by stopping spoilage microbes/enzymes — via cold, heat+sealing, drying, or fermenting. It saves a harvest, cuts waste, and saves money."
+   },
+   {
+    "h": "The main methods",
+    "body": "Four main methods cover most home food preservation. Freezing is the easiest and most forgiving: just put food in the freezer, where cold stops spoilage. It keeps flavor and nutrients well, works for most foods (blanch vegetables briefly first), and requires no special skill — but depends on power and freezer space. Canning preserves food in sealed jars via heat that kills microbes and creates a vacuum seal; it's shelf-stable (no fridge needed) but requires correct technique and equipment, and safety is critical.\n\nDrying (dehydrating) removes moisture so microbes can't grow — great for fruits (raisins, dried apples), herbs, jerky, and more; dried food is lightweight and shelf-stable. Fermenting uses beneficial microbes and salt to transform and preserve food (sauerkraut, pickles, kimchi, yogurt) while adding flavor and probiotics. Other methods include salting, smoking, and pickling (in vinegar). Each suits different foods and situations — many people use several.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"The main food-preservation methods\"><rect x=\"8\" y=\"5\" width=\"96\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"5\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Freezing</text><text x=\"110\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">easiest; most foods</text><rect x=\"8\" y=\"27\" width=\"96\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"27\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Canning</text><text x=\"110\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">sealed jars + heat; shelf-stable</text><rect x=\"8\" y=\"49\" width=\"96\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"49\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Drying</text><text x=\"110\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">removes moisture (fruit, herbs)</text><rect x=\"8\" y=\"71\" width=\"96\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"71\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Fermenting</text><text x=\"110\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">microbes + salt (kraut, pickles)</text><rect x=\"8\" y=\"93\" width=\"96\" height=\"22\" fill=\"rgba(90,210,120,.16)\" stroke=\"#5ad278\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"93\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Safety</text><text x=\"110\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">follow TESTED recipes (esp. canning)</text></svg>",
+    "caption": "The main preservation methods — each suits different foods; follow tested recipes for safety.",
+    "tip": "Four main methods: FREEZING (easiest), CANNING (shelf-stable, needs technique), DRYING (removes moisture), FERMENTING (microbes + salt). Each suits different foods."
+   },
+   {
+    "h": "Food-preservation safety",
+    "body": "Safety is the most important part of food preservation, because improperly preserved food can cause serious illness — most dangerously botulism, a potentially fatal poisoning from bacteria that can grow in improperly canned (especially low-acid) foods. This is not something to improvise or guess at. The cardinal rule: follow tested, research-based recipes and methods (from sources like the USDA, university extension services, or trusted preservation guides) exactly — don't wing it, especially with canning.\n\nKey safety points: canning low-acid foods (vegetables, meats) requires a pressure canner (a boiling-water bath isn't hot enough to kill botulism spores); high-acid foods (most fruits, pickles, jams) can use a water-bath canner. Always use proper equipment, clean jars and lids, and tested recipes, and check seals. For any method, use good-quality food, keep everything clean, and when in doubt, throw it out. Freezing and drying are more forgiving; canning (especially low-acid) is where following tested procedures exactly is literally a matter of safety.",
+    "tip": "SAFETY FIRST: follow tested recipes exactly (USDA/extension), especially for canning. Low-acid foods need a PRESSURE canner (botulism risk). When in doubt, throw it out."
+   },
+   {
+    "h": "Choosing the right method",
+    "body": "Which method to use depends on the food, your goals, and your resources. Freezing is the best all-around choice for most people starting out: easiest, safest, and works for the widest range of foods (most vegetables, fruits, meats, cooked dishes) — just mind freezer space and power reliability. Drying suits herbs, fruits, and jerky, and gives lightweight, shelf-stable results with modest equipment (even a low oven or air-drying). Fermenting is great for cabbage, cucumbers, and dairy, adding flavor and health benefits with simple supplies.\n\nCanning is the method for shelf-stable storage without a freezer — ideal for a big harvest you want to store at room temperature for a year (jams, pickles, tomatoes, sauces) — but it has the steepest learning curve and the most important safety rules. Many people mix methods: freeze some, can some, dry herbs, ferment vegetables. Start with the easy ones (freezing, drying herbs) and add canning/fermenting as you learn. Match the method to what you're preserving and your situation.",
+    "tip": "Start with the easy methods: FREEZING (most foods) and DRYING (herbs/fruit). Add CANNING for shelf-stable storage (learn the safety rules) and FERMENTING for flavor/probiotics."
+   },
+   {
+    "h": "Storing preserved food",
+    "body": "Preserving is only half the job — proper storage keeps preserved food good and safe. Label everything with the contents and date (you will forget otherwise), and generally use oldest first ('first in, first out'). Frozen food: keep the freezer at 0°F, use within recommended times (quality declines over months even when safe), and protect against freezer burn with good packaging. Dried food: store in airtight containers in a cool, dark, dry place (moisture and light are the enemies).\n\nCanned food: store sealed jars in a cool, dark, dry place; check that seals are intact before use, and never eat from a jar that's unsealed, leaking, bulging, moldy, or smells off (signs of spoilage — when in doubt, discard without tasting). Fermented foods are usually refrigerated after fermenting. Good storage — cool, dark, dry, dated, and checked — protects your effort and keeps preserved food safe to eat. With preserving and proper storage, a single harvest or sale can feed you for months, which is the whole rewarding point.",
+    "tip": "Label + date everything; use oldest first. Frozen: 0°F, good packaging. Dried: airtight, cool/dark/dry. Canned: cool/dark; check seals — bulging/leaking/off = discard, don't taste."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Why preserve",
+    "body": "Makes food last by stopping spoilage microbes/enzymes. Saves a harvest, cuts waste, saves money."
+   },
+   {
+    "h": "Methods",
+    "body": "Freezing (easiest), canning (shelf-stable), drying (removes moisture), fermenting (microbes + salt)."
+   },
+   {
+    "h": "Safety",
+    "body": "Follow TESTED recipes (USDA/extension), esp. canning. Low-acid foods need a PRESSURE canner (botulism). When in doubt, toss it."
+   },
+   {
+    "h": "Choosing",
+    "body": "Start easy: freezing (most foods), drying (herbs/fruit). Canning for shelf-stable; fermenting for flavor/probiotics."
+   },
+   {
+    "h": "Storing",
+    "body": "Label + date; oldest first. Frozen 0°F; dried airtight/cool/dark; canned cool/dark — check seals, discard if off."
+   }
+  ],
+  "flash": [
+   [
+    "Food preservation",
+    "Treating food so it lasts far longer."
+   ],
+   [
+    "Freezing",
+    "Preserving with cold (easiest method)."
+   ],
+   [
+    "Canning",
+    "Preserving in sealed jars with heat (shelf-stable)."
+   ],
+   [
+    "Drying",
+    "Removing moisture so microbes can't grow."
+   ],
+   [
+    "Fermenting",
+    "Using good microbes + salt to preserve (kraut, pickles)."
+   ],
+   [
+    "Pressure canner",
+    "Needed to safely can low-acid foods."
+   ],
+   [
+    "Water-bath canning",
+    "For high-acid foods (fruits, pickles, jams)."
+   ],
+   [
+    "Botulism",
+    "A deadly poisoning risk from bad canning."
+   ],
+   [
+    "Blanching",
+    "Briefly boiling vegetables before freezing."
+   ],
+   [
+    "Shelf-stable",
+    "Storable at room temperature without a fridge."
+   ],
+   [
+    "Freezer burn",
+    "Quality loss in poorly packaged frozen food."
+   ],
+   [
+    "First in, first out",
+    "Using older preserved food before newer."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Food preservation works by:",
+    "options": [
+     "Stopping spoilage microbes and enzymes",
+     "Adding bacteria",
+     "Making food rot",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Via cold, heat, drying, or fermenting."
+   },
+   {
+    "q": "A benefit of preserving food is:",
+    "options": [
+     "Saving a harvest and cutting waste",
+     "Wasting food",
+     "Spending more",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Store abundance, save money."
+   },
+   {
+    "q": "The easiest, most forgiving method is:",
+    "options": [
+     "Freezing",
+     "Canning",
+     "Smoking",
+     "Salting"
+    ],
+    "a": 0,
+    "why": "Just needs a freezer and space."
+   },
+   {
+    "q": "Canning preserves food by:",
+    "options": [
+     "Heat + a sealed jar (shelf-stable)",
+     "Freezing",
+     "Air-drying",
+     "Fermenting"
+    ],
+    "a": 0,
+    "why": "It needs correct technique and equipment."
+   },
+   {
+    "q": "Drying preserves food by:",
+    "options": [
+     "Removing moisture",
+     "Adding water",
+     "Freezing",
+     "Fermenting"
+    ],
+    "a": 0,
+    "why": "Microbes can't grow without moisture."
+   },
+   {
+    "q": "Fermenting uses:",
+    "options": [
+     "Beneficial microbes and salt",
+     "Only heat",
+     "Only cold",
+     "Chemicals"
+    ],
+    "a": 0,
+    "why": "Makes kraut, pickles, yogurt; adds probiotics."
+   },
+   {
+    "q": "The most dangerous preservation risk is:",
+    "options": [
+     "Botulism (from bad canning)",
+     "Freezer burn",
+     "A bruise",
+     "Spilling"
+    ],
+    "a": 0,
+    "why": "Potentially fatal; follow tested recipes."
+   },
+   {
+    "q": "The cardinal safety rule is to:",
+    "options": [
+     "Follow tested recipes exactly",
+     "Improvise",
+     "Guess",
+     "Skip instructions"
+    ],
+    "a": 0,
+    "why": "Use USDA/extension sources, especially for canning."
+   },
+   {
+    "q": "Low-acid foods (vegetables, meats) must be canned with a:",
+    "options": [
+     "Pressure canner",
+     "Water-bath only",
+     "Microwave",
+     "Freezer"
+    ],
+    "a": 0,
+    "why": "Boiling water isn't hot enough for botulism spores."
+   },
+   {
+    "q": "High-acid foods (fruits, pickles, jams) can use a:",
+    "options": [
+     "Water-bath canner",
+     "Pressure canner only",
+     "No canner",
+     "Freezer only"
+    ],
+    "a": 0,
+    "why": "Acidity plus heat makes them safe."
+   },
+   {
+    "q": "Before freezing most vegetables, you should:",
+    "options": [
+     "Blanch them briefly",
+     "Boil them fully",
+     "Ferment them",
+     "Dry them"
+    ],
+    "a": 0,
+    "why": "Blanching preserves quality."
+   },
+   {
+    "q": "Dried food should be stored:",
+    "options": [
+     "Airtight, cool, dark, and dry",
+     "In the sun",
+     "Wet",
+     "Open to air"
+    ],
+    "a": 0,
+    "why": "Moisture and light ruin it."
+   },
+   {
+    "q": "You should label preserved food with:",
+    "options": [
+     "Contents and date",
+     "Nothing",
+     "Only a smiley",
+     "A price"
+    ],
+    "a": 0,
+    "why": "You'll forget; use oldest first."
+   },
+   {
+    "q": "A canned jar that is bulging, leaking, or smells off should be:",
+    "options": [
+     "Discarded without tasting",
+     "Eaten quickly",
+     "Tasted to check",
+     "Refrozen"
+    ],
+    "a": 0,
+    "why": "Signs of dangerous spoilage."
+   },
+   {
+    "q": "The best methods to START with are:",
+    "options": [
+     "Freezing and drying herbs",
+     "Pressure canning meats",
+     "Only fermenting",
+     "None"
+    ],
+    "a": 0,
+    "why": "Easiest and most forgiving."
    }
   ]
  }
