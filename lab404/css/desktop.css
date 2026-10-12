@@ -1453,3 +1453,10 @@ body.is-resizing * { user-select: none !important; cursor: inherit !important; }
 .lsn-obj li{font-size:13px;line-height:1.55;color:var(--text,#dbe3f2);margin-bottom:3px}
 .lsn-sec-h{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted,#9aa6c0);margin:18px 0 8px;padding-top:10px;border-top:1px solid var(--border,#2a3650)}
 .lsn-card p + p{margin-top:8px}
+
+/* Lesson content padding (breathing room off the edges) + diagrams */
+.os-window-content.lsn-content{padding:0 22px 20px}
+.lsn-content .lsn-nav{margin:0 -22px 12px;padding:10px 22px 6px}
+.lsn-fig{margin:12px 0;padding:14px;background:rgba(255,255,255,.02);border:1px solid var(--border,#2a3650);border-radius:10px;text-align:center}
+.lsn-fig svg{max-width:100%;height:auto}
+.lsn-fig-cap{margin-top:8px;font-size:11.5px;color:var(--text-muted,#9aa6c0);font-style:italic}

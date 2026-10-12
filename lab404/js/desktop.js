@@ -811,6 +811,7 @@
       function block(c) {
         var h = '<div class="lsn-card"><h3>' + esc(c.h) + '</h3>';
         String(c.body == null ? "" : c.body).split(/\n\n+/).forEach(function (p) { if (p.trim()) h += '<p>' + esc(p.trim()) + '</p>'; });
+        if (c.visual) h += '<figure class="lsn-fig">' + c.visual + (c.caption ? '<figcaption class="lsn-fig-cap">' + esc(c.caption) + '</figcaption>' : "") + '</figure>';
         if (c.example) h += '<div class="lsn-ex"><span class="lsn-ex-l">Worked example</span>' + esc(c.example) + '</div>';
         if (c.tip) h += '<div class="lsn-tip">💡 ' + esc(c.tip) + '</div>';
         return h + '</div>';
@@ -843,6 +844,7 @@
             '<div class="qz-why hide">' + esc(q.why || "") + '</div></div>';
         }).join("") + '</div>';
       content.innerHTML = nav + lessonView + flashView + quizView;
+      content.classList.add("lsn-content");
 
       var fi = 0, flipped = false;
       function drawFC() {
