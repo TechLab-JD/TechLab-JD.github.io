@@ -297,130 +297,281 @@ window.LAB404_CONTENT = {
  "money-budgeting": {
   "title": "Budgeting",
   "subject": "Money & Investing",
-  "level": "Grades 9 - adult",
-  "intro": "A budget is a plan for your money — deciding where it goes before it's gone. The goal isn't to restrict you; it's to make sure the important things (rent, food, saving) get covered first, so you're in control instead of wondering where it all went.",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand what a budget is and why it works",
+   "Track your income and expenses",
+   "Use a budgeting method (50/30/20, zero-based, envelopes)",
+   "Adjust and stick to a budget",
+   "Use budgeting to reach your goals"
+  ],
+  "intro": "A budget is a plan for your money — telling it where to go instead of wondering where it went. It's the single most powerful tool for taking control of your finances, whatever your income. This lesson covers how to build a budget and actually stick to it.",
+  "sections": [
+   {
+    "h": "What a budget is and why it works",
+    "body": "A budget is simply a plan for your income — deciding in advance how you'll spend, save, and give your money. It's not about restriction or deprivation; it's about intention and control. People who budget aren't poorer or stingier — they just direct their money on purpose, which is why they tend to save more, stress less, and reach goals faster.\n\nThe reason budgeting works is simple: you can't manage what you don't plan and measure. Without a budget, money leaks away in small, forgotten purchases, and you end the month wondering where it went. With one, every dollar has a job, and you make trade-offs consciously ('I'd rather spend this on X than Y') instead of by accident. A budget turns vague money anxiety into a clear, actionable plan.",
+    "visual": "<svg viewBox=\"0 0 250 78\" width=\"240\" role=\"img\" aria-label=\"The 50/30/20 budget: 50 percent needs, 30 percent wants, 20 percent savings and debt\"><rect x=\"12\" y=\"16\" width=\"113\" height=\"30\" fill=\"rgba(79,156,240,.3)\" stroke=\"#4f9cf0\" stroke-width=\"1\"/><rect x=\"125\" y=\"16\" width=\"68\" height=\"30\" fill=\"rgba(57,227,200,.28)\" stroke=\"#39e3c8\" stroke-width=\"1\"/><rect x=\"193\" y=\"16\" width=\"45\" height=\"30\" fill=\"rgba(232,184,75,.35)\" stroke=\"#e8b84b\" stroke-width=\"1\"/><text x=\"68\" y=\"35\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">50%</text><text x=\"159\" y=\"35\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">30%</text><text x=\"215\" y=\"35\" text-anchor=\"middle\" fill=\"#1a2233\" font-size=\"10\">20%</text><text x=\"68\" y=\"60\" text-anchor=\"middle\" fill=\"#4f9cf0\" font-size=\"8.5\">Needs</text><text x=\"159\" y=\"60\" text-anchor=\"middle\" fill=\"#39e3c8\" font-size=\"8.5\">Wants</text><text x=\"215\" y=\"60\" text-anchor=\"middle\" fill=\"#e8b84b\" font-size=\"8.5\">Save/Debt</text></svg>",
+    "caption": "The 50/30/20 split is a simple, flexible first budget — about half needs, a third wants, a fifth savings/debt.",
+    "tip": "A budget is a plan that tells your money where to go. It's about intention, not restriction — you can't manage what you don't plan."
+   },
+   {
+    "h": "Tracking income and expenses",
+    "body": "Budgeting starts with knowing your numbers. First, your income: the total money you reliably bring in each month (after taxes — your actual take-home). Then your expenses: everything you spend. The eye-opening step for most people is tracking expenses for a month — writing down or reviewing every purchase — because almost everyone underestimates where their money actually goes (especially small, frequent spending).\n\nExpenses fall into categories: fixed (same each month — rent, insurance, subscriptions) and variable (changing — food, gas, entertainment). Seeing your spending laid out by category reveals the truth and shows where you can adjust. You don't need fancy tools — a notebook, a spreadsheet, or a free budgeting app all work. The key is to actually see the full picture of money in versus money out; that awareness alone changes behavior.",
+    "tip": "Know your real take-home income and track every expense for a month. Sort into fixed vs variable — seeing it by category reveals the truth."
+   },
+   {
+    "h": "Budgeting methods",
+    "body": "A few popular methods make budgeting manageable. The 50/30/20 rule splits after-tax income into roughly 50% needs, 30% wants, and 20% savings/debt — simple and flexible, great for beginners. Zero-based budgeting assigns every dollar a specific job until income minus all assignments equals zero — more detailed, giving total control. The envelope method (physical or digital 'envelopes' for each spending category) helps people who overspend by making limits concrete.\n\nThere's no single 'right' method — the best one is the one you'll actually use. Start simple (50/30/20 is a fine first budget), and adjust as you learn your patterns. The method is just a framework; the real work is making a plan where your spending and saving fit within your income, with intention behind each category.",
+    "tip": "Methods: 50/30/20 (simple), zero-based (every dollar a job), envelopes (concrete limits). The best method is the one you'll actually stick to."
+   },
+   {
+    "h": "Adjusting and sticking to it",
+    "body": "A budget isn't set in stone — it's a living plan you adjust as life and priorities change. Review it regularly (monthly is good), compare what you planned versus what you actually spent, and tweak the numbers to be realistic. A budget that doesn't match reality gets abandoned; one you refine to fit your actual life, you'll keep.\n\nSticking to a budget is mostly about habits and honesty. Automate what you can (automatic transfers to savings, autopay for bills). Expect to overspend sometimes — don't quit over a bad week; just adjust and continue. Build in some 'fun money' so it's sustainable (an all-restriction budget fails). And connect it to goals you care about, which makes the trade-offs feel worth it. Consistency over perfection is what makes budgeting work long-term.",
+    "tip": "Review monthly (plan vs actual), keep it realistic, automate savings, include some fun money, and don't quit over one bad week. Consistency over perfection."
+   },
+   {
+    "h": "Budgeting toward goals",
+    "body": "The real power of budgeting is that it funds your goals. A budget isn't just about covering bills — it's about intentionally directing money toward what matters to you: an emergency fund, paying off debt, a car, a home, education, or freedom from money stress. When you budget with goals in mind, every dollar you save or allocate is progress toward something you want.\n\nMake your goals specific and give them a line in your budget (e.g., 'save $200/month toward an emergency fund'). Seeing progress is motivating, and automating those contributions makes them happen. A budget transforms money from a source of stress into a tool you control — and over time, the consistent small decisions a budget guides add up to genuinely life-changing results. It's the foundation every other money skill builds on.",
+    "tip": "Budget toward specific goals (give each a line + automate it). A budget turns money from stress into a tool that funds what you actually want."
+   }
+  ],
   "cards": [
    {
-    "h": "Income minus expenses",
-    "body": "Start with your take-home (after-tax) income — the money that actually lands in your account. Then list what goes out. Income minus expenses that's positive means money to save or pay down debt; negative means you're going backwards and something has to change."
+    "h": "What & why",
+    "body": "A plan that tells your money where to go — intention, not restriction. You can't manage what you don't plan."
    },
    {
-    "h": "Needs, wants, and savings",
-    "body": "A simple split is 50/30/20: about 50% of take-home to needs (rent, food, utilities, transport), 30% to wants (eating out, fun), 20% to savings and debt payoff. The percentages are a starting guide, not a rule — adjust to your reality."
+    "h": "Track",
+    "body": "Know real take-home income; track every expense a month; sort fixed vs variable to see the truth."
    },
    {
-    "h": "Fixed vs. variable costs",
-    "body": "Fixed costs are the same each month (rent, phone, insurance). Variable costs change (groceries, gas, fun). Fixed costs are hard to cut month to month, so variable spending is usually where you find room when money's tight."
+    "h": "Methods",
+    "body": "50/30/20 (simple), zero-based (every $ a job), envelopes (concrete limits). Pick what you'll use."
    },
    {
-    "h": "Pay yourself first",
-    "body": "Treat savings like a bill you owe yourself — move money to savings as soon as you're paid, not whatever's left at the end (there's usually nothing left). Even $10 a paycheck builds the habit and a cushion."
+    "h": "Stick to it",
+    "body": "Review monthly, keep it realistic, automate, include fun money, don't quit over one bad week."
    },
    {
-    "h": "The emergency fund",
-    "body": "An emergency fund is cash set aside only for true surprises — a car repair, a medical bill, a lost job. Start with a small goal like $500, then build toward a month of expenses. It's what keeps a bad week from becoming debt."
+    "h": "Goals",
+    "body": "Give each goal a budget line + automate it. A budget funds what you actually want."
    }
   ],
   "flash": [
    [
     "Budget",
-    "A plan for where your money goes before you spend it."
+    "A plan for your money before you spend it."
+   ],
+   [
+    "Income",
+    "Money you reliably bring in."
    ],
    [
     "Take-home pay",
-    "Income after taxes and deductions — what hits your account."
+    "Your income after taxes (net)."
    ],
    [
-    "Fixed cost",
-    "An expense that's the same each month (rent, insurance)."
+    "Fixed expense",
+    "A cost that's the same each month."
    ],
    [
-    "Variable cost",
-    "An expense that changes month to month (groceries, gas)."
+    "Variable expense",
+    "A cost that changes month to month."
    ],
    [
-    "50/30/20",
-    "A budget guide: 50% needs, 30% wants, 20% savings/debt."
+    "50/30/20 rule",
+    "~50% needs, 30% wants, 20% savings/debt."
    ],
    [
-    "Pay yourself first",
-    "Save money as soon as you're paid, before spending."
+    "Zero-based budget",
+    "Assigning every dollar a job (income − plan = 0)."
    ],
    [
-    "Emergency fund",
-    "Cash set aside only for true surprises."
+    "Envelope method",
+    "Allocating cash/limits to spending categories."
    ],
    [
-    "Deficit",
-    "Spending more than you earn (the opposite of a surplus)."
+    "Discretionary spending",
+    "Non-essential 'wants' spending."
+   ],
+   [
+    "Automate",
+    "Setting money moves to happen automatically."
+   ],
+   [
+    "Overspending",
+    "Spending more than planned/earned."
+   ],
+   [
+    "Financial goal",
+    "A specific money target you save toward."
    ]
   ],
   "quiz": [
    {
-    "q": "You take home $2,000/month and spend $2,300. You have a:",
+    "q": "A budget is best described as:",
     "options": [
-     "Deficit",
-     "Surplus",
-     "Balanced budget",
-     "Emergency fund"
+     "A plan for your money",
+     "A restriction",
+     "A loan",
+     "A bank"
     ],
     "a": 0,
-    "why": "Spending more than you earn is a deficit — you're going backwards."
+    "why": "It tells your money where to go in advance."
    },
    {
-    "q": "Under 50/30/20, how much of $2,000 take-home goes to savings/debt?",
+    "q": "People who budget tend to:",
     "options": [
-     "$400",
-     "$1,000",
-     "$600",
-     "$200"
+     "Save more and stress less",
+     "Earn less",
+     "Be stingy",
+     "Spend randomly"
     ],
     "a": 0,
-    "why": "20% of $2,000 is $400."
+    "why": "Intentional direction of money helps them."
    },
    {
-    "q": "Which is a fixed cost?",
+    "q": "The eye-opening first step is to:",
     "options": [
-     "Car insurance",
-     "Groceries",
-     "Gas",
-     "Eating out"
+     "Track every expense for a month",
+     "Guess your spending",
+     "Stop earning",
+     "Ignore small purchases"
     ],
     "a": 0,
-    "why": "Insurance is the same each month; the others vary."
+    "why": "Most people underestimate where money goes."
    },
    {
-    "q": "'Pay yourself first' means:",
+    "q": "Rent is a:",
     "options": [
-     "Save right when you're paid",
-     "Spend on yourself first",
-     "Pay your newest bill first",
-     "Buy what you want guilt-free"
+     "Fixed expense",
+     "Variable expense",
+     "Income",
+     "Goal"
     ],
     "a": 0,
-    "why": "Move money to savings before you spend, so it actually happens."
+    "why": "It's the same each month."
    },
    {
-    "q": "The main purpose of an emergency fund is to:",
+    "q": "In 50/30/20, the 20% goes to:",
     "options": [
-     "Cover true surprises without debt",
-     "Invest in stocks",
-     "Pay monthly rent",
-     "Buy wants faster"
+     "Savings and debt",
+     "Needs",
+     "Wants",
+     "Rent"
     ],
     "a": 0,
-    "why": "It's a cash cushion so a setback doesn't become debt."
+    "why": "A fifth to savings and paying off debt."
    },
    {
-    "q": "Which is usually easiest to cut when money is tight?",
+    "q": "Zero-based budgeting means:",
     "options": [
-     "Variable spending",
-     "Rent",
-     "Insurance",
-     "Loan payments"
+     "Every dollar gets a job",
+     "You have zero dollars",
+     "No budget",
+     "Spending everything"
     ],
     "a": 0,
-    "why": "Variable costs flex month to month; fixed costs are locked in."
+    "why": "Income minus assignments equals zero."
+   },
+   {
+    "q": "The envelope method helps people who:",
+    "options": [
+     "Overspend (by making limits concrete)",
+     "Never spend",
+     "Earn a lot",
+     "Hate cash"
+    ],
+    "a": 0,
+    "why": "Category limits feel real."
+   },
+   {
+    "q": "The best budgeting method is:",
+    "options": [
+     "The one you'll actually use",
+     "The most complex",
+     "The strictest",
+     "None"
+    ],
+    "a": 0,
+    "why": "Sustainability beats sophistication."
+   },
+   {
+    "q": "You should review your budget:",
+    "options": [
+     "Regularly (monthly)",
+     "Never",
+     "Once a decade",
+     "Only when broke"
+    ],
+    "a": 0,
+    "why": "Compare plan vs actual and adjust."
+   },
+   {
+    "q": "A budget with no 'fun money' usually:",
+    "options": [
+     "Fails (too restrictive)",
+     "Works best",
+     "Saves the most",
+     "Is required"
+    ],
+    "a": 0,
+    "why": "All-restriction budgets get abandoned."
+   },
+   {
+    "q": "After one bad spending week, you should:",
+    "options": [
+     "Adjust and continue",
+     "Quit budgeting",
+     "Give up",
+     "Hide from it"
+    ],
+    "a": 0,
+    "why": "Consistency over perfection."
+   },
+   {
+    "q": "The most reliable way to actually save is to:",
+    "options": [
+     "Automate transfers",
+     "Rely on willpower",
+     "Save leftovers",
+     "Hope"
+    ],
+    "a": 0,
+    "why": "Automation bypasses temptation."
+   },
+   {
+    "q": "Giving each goal a budget line helps you:",
+    "options": [
+     "Fund and track it",
+     "Forget it",
+     "Spend it",
+     "Avoid it"
+    ],
+    "a": 0,
+    "why": "Specific goals get funded."
+   },
+   {
+    "q": "'You can't manage what you don't...':",
+    "options": [
+     "Plan and measure",
+     "Spend",
+     "Borrow",
+     "Hide"
+    ],
+    "a": 0,
+    "why": "Awareness and planning enable control."
+   },
+   {
+    "q": "Your budget income should be your:",
+    "options": [
+     "After-tax take-home pay",
+     "Gross pay",
+     "Hoped-for pay",
+     "Last year's pay"
+    ],
+    "a": 0,
+    "why": "Budget with the money you actually get."
    }
   ]
  },
@@ -2409,130 +2560,281 @@ window.LAB404_CONTENT = {
  "money-credit-debt-payoff": {
   "title": "Credit & Debt Payoff",
   "subject": "Money & Investing",
-  "level": "Grades 9 - adult",
-  "intro": "Credit is borrowing money you promise to pay back. Used well it builds your reputation with lenders; used badly it traps you paying interest for years. Here's how it works and how to dig out of debt.",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand credit, interest, and how debt works",
+   "Distinguish good debt from bad debt",
+   "Build and protect your credit score",
+   "Pay off debt (snowball vs avalanche)",
+   "Avoid debt traps"
+  ],
+  "intro": "Credit and debt are powerful financial tools that can help you or hurt you. Understanding how they work — and how to pay off debt efficiently and build good credit — is essential to financial health. This lesson covers credit, debt, and getting out of (and staying out of) debt.",
+  "sections": [
+   {
+    "h": "How credit and debt work",
+    "body": "Credit is the ability to borrow money with a promise to repay; debt is the money you owe as a result. The cost of borrowing is interest — a percentage (the APR) the lender charges for the use of their money. This is the key thing to understand: debt isn't just paying back what you borrowed; it's paying back more, and the higher the interest rate, the more it costs.\n\nOn high-interest debt like credit cards (often 20%+ APR), interest compounds against you — unpaid balances grow, and a surprisingly large share of each payment can go to interest rather than reducing what you owe. This is how people get stuck making payments for years. Understanding that interest is the price of debt, and that it works relentlessly, is the foundation of handling credit wisely.",
+    "tip": "Credit = borrowing; debt = what you owe; interest (APR) = the cost. High-interest debt grows fast against you — that's the trap to understand."
+   },
+   {
+    "h": "Good debt vs bad debt",
+    "body": "Not all debt is equal. 'Good' debt is borrowing for something that builds value or income over time, usually at a lower interest rate — like a mortgage (a home that may appreciate), a student loan (if it boosts earning power), or a business loan. It's an investment that can pay off, and the interest cost is often reasonable.\n\n'Bad' debt is borrowing for things that lose value or are consumed, especially at high interest — like carrying a credit card balance for everyday purchases, or high-interest loans for wants you can't afford. This debt just costs you money with nothing lasting to show for it. The practical rule: minimize and quickly eliminate high-interest 'bad' debt, and be cautious even with 'good' debt (borrow only what you truly need and can repay). Debt is a tool — useful for the right things, dangerous for the wrong ones.",
+    "tip": "Good debt builds value at low rates (mortgage, sometimes student loans). Bad debt = high-interest borrowing for things that lose value. Kill bad debt first."
+   },
+   {
+    "h": "Building and protecting credit",
+    "body": "Your credit score (commonly 300–850) is a number summarizing how reliably you handle borrowed money, and it matters: it affects whether you can get loans, the interest rates you pay, renting an apartment, and sometimes jobs. A good score saves you a lot of money over a lifetime through better rates.\n\nThe score is built mostly from: paying every bill on time (the single biggest factor), keeping your credit card balances low relative to your limits (called 'utilization'), having a longer credit history, and not opening too many new accounts at once. To build good credit: use a little credit, pay it off fully and on time every time, and be patient — it grows over months and years. Check your credit report yearly (it's free) for errors or fraud. Good credit is a valuable asset you build with consistent, boring reliability.",
+    "tip": "Credit score (300–850) = your borrowing reliability. Build it: pay on time (biggest factor), keep balances low, be patient. Check your report yearly (free)."
+   },
+   {
+    "h": "Paying off debt: snowball vs avalanche",
+    "body": "If you're in debt, two proven strategies help you pay it off systematically. The debt avalanche: pay minimums on everything, then put all extra money toward the debt with the highest interest rate first. This saves the most money mathematically, since you kill the most expensive debt fastest. The debt snowball: pay minimums, then attack the smallest balance first, regardless of rate. You save slightly less on interest, but you get quick wins that build motivation.\n\nBoth work; the best one is the one you'll stick with. Avalanche is optimal on paper; snowball is often better in practice because the psychological momentum keeps people going. Either way, the keys are the same: pay more than the minimum, direct extra money at one debt at a time, and don't add new debt while paying off the old. A clear plan turns an overwhelming pile of debt into a finite, beatable project.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Debt-payoff strategies: avalanche versus snowball\"><rect x=\"8\" y=\"5\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"5\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Debt avalanche</text><text x=\"118\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">highest interest first (saves most $)</text><rect x=\"8\" y=\"27\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"27\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Debt snowball</text><text x=\"118\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">smallest balance first (quick wins)</text><rect x=\"8\" y=\"49\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"49\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Both</text><text x=\"118\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">pay minimums + extra at one debt</text><rect x=\"8\" y=\"71\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"71\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Both</text><text x=\"118\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">pay MORE than the minimum</text><rect x=\"8\" y=\"93\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"93\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Never</text><text x=\"118\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">add new debt while paying off</text></svg>",
+    "caption": "Two debt-payoff strategies — avalanche saves the most money, snowball builds the most momentum.",
+    "tip": "Avalanche = highest interest first (saves most money). Snowball = smallest balance first (quick wins). Both work — pick what you'll stick to."
+   },
+   {
+    "h": "Avoiding debt traps",
+    "body": "The best debt strategy is avoiding bad debt in the first place. Watch out for traps: carrying a credit card balance (paying interest on everyday spending), only making minimum payments (which stretches debt for years and maximizes interest), payday and title loans (extremely high interest that trap borrowers), buy-now-pay-later overuse, and borrowing for wants you can't afford.\n\nThe protective habits: treat a credit card like a debit card (only charge what you can pay in full each month, avoiding all interest), build an emergency fund so surprises don't force you into debt, and live below your means so you're not relying on credit to get by. Credit, used responsibly, builds your score and offers convenience and protection; used carelessly, it's one of the fastest paths to financial stress. Respect it, and it's a tool; abuse it, and it's a trap.",
+    "tip": "Avoid traps: carrying card balances, minimum-only payments, payday loans. Treat a card like a debit card (pay in full), keep an emergency fund, live below your means."
+   }
+  ],
   "cards": [
    {
-    "h": "What credit is",
-    "body": "Credit is borrowed money — a credit card, loan, or line of credit. You pay it back over time, almost always with interest (a fee for borrowing). Your track record of paying it back becomes your credit history."
+    "h": "How it works",
+    "body": "Credit = borrowing; interest (APR) = the cost. High-interest debt compounds against you."
    },
    {
-    "h": "Credit score basics",
-    "body": "A credit score (roughly 300–850) is a number lenders use to judge how risky you are to lend to. The biggest factors are paying on time and not using too much of your available credit. Higher scores mean easier approval and lower interest."
+    "h": "Good vs bad debt",
+    "body": "Good: low-rate, builds value (mortgage). Bad: high-rate for things that lose value (carried card balances). Kill bad first."
    },
    {
-    "h": "The minimum-payment trap",
-    "body": "Paying only the minimum on a credit card keeps you in debt for years, because interest piles onto the leftover balance every month. Carrying a balance at 20%+ interest is one of the most expensive things you can do with money."
+    "h": "Build credit",
+    "body": "Score 300–850: pay on time (biggest factor), keep balances low, be patient. Check report yearly (free)."
    },
    {
-    "h": "Snowball vs. avalanche",
-    "body": "Two proven payoff plans: the snowball pays smallest balances first (quick wins, momentum); the avalanche pays highest-interest first (saves the most money). Pick whichever keeps you going — the best plan is the one you'll stick with."
+    "h": "Payoff methods",
+    "body": "Avalanche (highest rate first, saves most) or snowball (smallest first, momentum). Pay above the minimum."
    },
    {
-    "h": "Avoid the worst traps",
-    "body": "Payday loans, car-title loans, and rent-to-own carry brutal interest (often 200%+ a year) and are built to keep you borrowing. Avoid them. A credit union or a payment plan with the biller is almost always cheaper."
+    "h": "Avoid traps",
+    "body": "No carried balances, minimum-only payments, or payday loans. Card like debit; emergency fund; live below means."
    }
   ],
   "flash": [
    [
     "Credit",
-    "Borrowed money you agree to pay back, usually with interest."
+    "The ability to borrow money and repay later."
+   ],
+   [
+    "Debt",
+    "Money you owe."
    ],
    [
     "Interest",
-    "The fee charged for borrowing money, as a percentage."
-   ],
-   [
-    "Credit score",
-    "A number (about 300–850) showing how reliably you repay."
+    "The cost charged for borrowing money."
    ],
    [
     "APR",
-    "Annual Percentage Rate — the yearly cost of borrowing."
+    "Annual percentage rate — the yearly cost of borrowing."
    ],
    [
-    "Minimum payment",
-    "The smallest amount due; paying only this keeps you in debt."
+    "Credit score",
+    "A number (~300–850) rating borrowing reliability."
    ],
    [
-    "Debt snowball",
-    "Paying smallest balances first for momentum."
+    "Utilization",
+    "Your balances relative to your credit limits."
+   ],
+   [
+    "Good debt",
+    "Low-rate borrowing that builds value/income."
+   ],
+   [
+    "Bad debt",
+    "High-rate borrowing for things that lose value."
    ],
    [
     "Debt avalanche",
-    "Paying highest-interest debt first to save the most."
+    "Paying the highest-interest debt first."
+   ],
+   [
+    "Debt snowball",
+    "Paying the smallest balance first."
+   ],
+   [
+    "Minimum payment",
+    "The smallest amount due each month."
    ],
    [
     "Payday loan",
-    "A very high-interest short-term loan — best avoided."
+    "A very high-interest short-term loan (a trap)."
    ]
   ],
   "quiz": [
    {
-    "q": "Paying only the minimum on a credit card:",
+    "q": "The cost of borrowing money is:",
     "options": [
-     "Keeps you in debt for years",
-     "Pays it off fastest",
-     "Avoids all interest",
-     "Raises your limit instantly"
+     "Interest (APR)",
+     "Free",
+     "A tax",
+     "A fee only"
     ],
     "a": 0,
-    "why": "Interest keeps piling on the leftover balance, dragging payoff out for years."
+    "why": "You repay more than you borrowed."
    },
    {
-    "q": "The two biggest factors in a credit score are:",
+    "q": "High-interest debt like credit cards often charges:",
     "options": [
-     "Paying on time and low credit usage",
-     "Your age and job",
-     "How many cards you own only",
-     "Your income only"
+     "20%+ APR",
+     "0%",
+     "1%",
+     "A flat $5"
     ],
     "a": 0,
-    "why": "Payment history and how much of your available credit you use matter most."
+    "why": "That's why carried balances grow fast."
    },
    {
-    "q": "The debt avalanche method pays off which debt first?",
+    "q": "On an unpaid card balance, interest:",
     "options": [
-     "Highest-interest",
-     "Smallest balance",
-     "Newest",
-     "Largest balance"
+     "Compounds against you",
+     "Disappears",
+     "Helps you",
+     "Is refunded"
     ],
     "a": 0,
-    "why": "Avalanche targets the highest interest rate to save the most money."
+    "why": "It grows the balance relentlessly."
    },
    {
-    "q": "Which should you usually avoid?",
+    "q": "Which is usually 'good' debt?",
     "options": [
-     "Payday loans",
-     "A credit union loan",
-     "A biller payment plan",
-     "Paying more than the minimum"
+     "A low-rate mortgage",
+     "A carried card balance",
+     "A payday loan",
+     "High-rate wants"
     ],
     "a": 0,
-    "why": "Payday loans carry extreme interest and trap borrowers."
+    "why": "It builds value at a reasonable rate."
    },
    {
-    "q": "APR stands for:",
+    "q": "'Bad' debt is typically:",
     "options": [
-     "Annual Percentage Rate",
-     "Average Payment Range",
-     "Account Payment Record",
-     "Annual Principal Return"
+     "High-interest borrowing for things that lose value",
+     "A mortgage",
+     "A business loan",
+     "Saving"
     ],
     "a": 0,
-    "why": "APR is the yearly cost of borrowing, shown as a percentage."
+    "why": "It costs money with nothing lasting."
    },
    {
-    "q": "The debt snowball's main advantage is:",
+    "q": "The biggest factor in your credit score is:",
     "options": [
-     "Quick wins and momentum",
-     "Saving the most interest",
+     "Paying bills on time",
+     "Your age",
+     "Your income",
+     "Your zip code"
+    ],
+    "a": 0,
+    "why": "On-time payment history matters most."
+   },
+   {
+    "q": "Keeping card balances low relative to limits is called:",
+    "options": [
+     "Utilization",
+     "Avalanche",
+     "Interest",
+     "A trap"
+    ],
+    "a": 0,
+    "why": "Low utilization helps your score."
+   },
+   {
+    "q": "The debt AVALANCHE pays off:",
+    "options": [
+     "Highest-interest debt first",
+     "Smallest balance first",
+     "Nothing",
+     "Randomly"
+    ],
+    "a": 0,
+    "why": "It saves the most money."
+   },
+   {
+    "q": "The debt SNOWBALL pays off:",
+    "options": [
+     "Smallest balance first",
+     "Highest interest first",
+     "Biggest balance first",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Quick wins build motivation."
+   },
+   {
+    "q": "When paying off debt, you should pay:",
+    "options": [
+     "More than the minimum",
+     "Only the minimum",
+     "Nothing",
+     "Less than due"
+    ],
+    "a": 0,
+    "why": "Minimum-only stretches debt for years."
+   },
+   {
+    "q": "Payday loans are:",
+    "options": [
+     "Extremely high-interest traps",
+     "Cheap and safe",
+     "Interest-free",
+     "Recommended"
+    ],
+    "a": 0,
+    "why": "They trap borrowers in a cycle."
+   },
+   {
+    "q": "The safest way to use a credit card is to:",
+    "options": [
+     "Pay the full balance each month",
+     "Carry a balance",
+     "Pay only the minimum",
+     "Max it out"
+    ],
+    "a": 0,
+    "why": "Paying in full means no interest."
+   },
+   {
+    "q": "An emergency fund helps with debt by:",
+    "options": [
+     "Preventing surprises from forcing you into debt",
+     "Paying your cards automatically",
      "Raising your score instantly",
-     "Avoiding all payments"
+     "Nothing"
     ],
     "a": 0,
-    "why": "Clearing small balances first builds motivation to keep going."
+    "why": "Cash for surprises avoids borrowing."
+   },
+   {
+    "q": "A good credit score helps you get:",
+    "options": [
+     "Better interest rates",
+     "Worse rates",
+     "Higher taxes",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "It saves money over a lifetime."
+   },
+   {
+    "q": "The best debt strategy overall is to:",
+    "options": [
+     "Avoid bad debt in the first place",
+     "Borrow freely",
+     "Only pay minimums",
+     "Ignore it"
+    ],
+    "a": 0,
+    "why": "Prevention beats payoff."
    }
   ]
  },
@@ -8326,303 +8628,645 @@ window.LAB404_CONTENT = {
  "money-saving-emergency-fund": {
   "title": "Saving & Emergency Fund",
   "subject": "Money & Investing",
-  "level": "Grades 9 - adult",
-  "intro": "Saving is the habit that gives you options and a cushion against life's surprises. The two pillars are an emergency fund for emergencies and savings goals for the things you're working toward.",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand why saving matters",
+   "Build an emergency fund",
+   "Pay yourself first and automate",
+   "Understand compound growth",
+   "Save toward specific goals"
+  ],
+  "intro": "Saving money — setting aside part of what you earn — is the foundation of financial security and freedom. An emergency fund protects you from life's surprises, and the habit of saving, powered by compound growth, builds wealth over time. This lesson covers how and why to save.",
+  "sections": [
+   {
+    "h": "Why saving matters",
+    "body": "Saving is setting aside money now instead of spending it, so you have it later. It matters for three big reasons: it protects you from emergencies (so a surprise expense doesn't become a crisis or debt), it lets you afford big goals (a car, a home, education) without borrowing, and it's the seed of building wealth and financial freedom over time.\n\nThe hardest part is simply starting, because saving means delaying gratification — giving up something now for security and options later. But even small amounts add up, and the habit matters more than the amount at first. People who save consistently, even a little, end up far more secure than high earners who spend everything. Saving isn't about how much you make; it's about keeping some of what you make, reliably.",
+    "tip": "Saving protects you from emergencies, funds goals without debt, and builds wealth. The habit matters more than the amount — just start."
+   },
+   {
+    "h": "The emergency fund",
+    "body": "The first and most important savings goal for everyone is an emergency fund: money set aside specifically for unexpected expenses — a car repair, a medical bill, a job loss. Its job is to keep life's surprises from turning into debt or disaster. Financial experts commonly recommend building toward three to six months of essential expenses, but any emergency fund is far better than none.\n\nStart with a small, achievable target — even $500 or $1,000 covers many common emergencies and breaks the cycle of putting them on credit. Keep the money somewhere safe and accessible (a separate savings account), not invested or hard to reach, since you need it available on short notice. Building an emergency fund is the single biggest step toward financial stability, because it turns a crisis into merely an inconvenience.",
+    "tip": "Build an emergency fund FIRST — start with $500–1,000, aim for 3–6 months of essentials. Keep it safe and accessible. It turns a crisis into an inconvenience."
+   },
+   {
+    "h": "Pay yourself first and automate",
+    "body": "The most effective saving strategy is to 'pay yourself first': treat saving like a required bill, moving money to savings as soon as you're paid, before you spend on anything else. This flips the usual (and failing) approach of saving 'whatever's left over' — because there's rarely anything left. By saving first, you adjust your spending to what remains, and the saving actually happens.\n\nThe secret weapon is automation. Set up an automatic transfer from checking to savings right after each payday (even a small amount). Because it happens without you deciding each time, it bypasses willpower and temptation — you can't spend what's already been moved. Automating your savings is the closest thing to a guaranteed way to build the habit. Start with an amount you won't miss, and increase it over time, especially when your income rises.",
+    "tip": "Pay yourself first (save BEFORE you spend), and AUTOMATE it (auto-transfer each payday). This bypasses willpower — you can't spend what's already saved."
+   },
+   {
+    "h": "Compound growth: your money earning money",
+    "body": "Here's what makes saving (and investing) genuinely powerful over time: compound growth. When your savings earn interest or returns, that growth then earns its own growth, and so on — money making money, snowballing faster the longer it goes. Over decades, this turns modest, consistent saving into surprisingly large sums.\n\nThe crucial factor is time: the earlier you start, the more compounding works for you, because it needs years to build momentum. Someone who saves a little starting young often ends up with more than someone who saves a lot starting late, purely because of compounding. This is why 'start early' is the most repeated advice in personal finance. Even if you can only save a small amount now, starting the compounding clock is worth far more than waiting until you can save 'enough.'",
+    "visual": "<svg viewBox=\"0 0 232 152\" width=\"225\" role=\"img\" aria-label=\"Compound growth: a savings curve that accelerates upward over time versus a straight line without compounding\"><line x1=\"18\" y1=\"132\" x2=\"216\" y2=\"132\" stroke=\"#6b7a98\" stroke-width=\"1.3\"/><line x1=\"18\" y1=\"132\" x2=\"18\" y2=\"14\" stroke=\"#6b7a98\" stroke-width=\"1.3\"/><path d=\"M20.0 130.0 L25.0 128.8 L30.0 127.6 L35.0 126.4 L40.0 125.3 L45.0 124.1 L50.0 122.9 L55.0 121.7 L60.0 120.5 L65.0 119.3 L70.0 118.2 L75.0 117.0 L80.0 115.8 L85.0 114.6 L90.0 113.4 L95.0 112.2 L100.0 111.1 L105.0 109.9 L110.0 108.7 L115.0 107.5 L120.0 106.3 L125.0 105.1 L130.0 103.9 L135.0 102.8 L140.0 101.6 L145.0 100.4 L150.0 99.2 L155.0 98.0 L160.0 96.8 L165.0 95.7 L170.0 94.5 L175.0 93.3 L180.0 92.1 L185.0 90.9 L190.0 89.7 L195.0 88.6 L200.0 87.4 L205.0 86.2 L210.0 85.0\" fill=\"none\" stroke=\"#6b7a98\" stroke-width=\"1.8\" stroke-dasharray=\"4 3\"/><path d=\"M20.0 130.0 L25.0 129.9 L30.0 129.7 L35.0 129.3 L40.0 128.8 L45.0 128.2 L50.0 127.4 L55.0 126.4 L60.0 125.3 L65.0 124.1 L70.0 122.7 L75.0 121.2 L80.0 119.5 L85.0 117.7 L90.0 115.7 L95.0 113.6 L100.0 111.4 L105.0 109.0 L110.0 106.4 L115.0 103.8 L120.0 100.9 L125.0 97.9 L130.0 94.8 L135.0 91.5 L140.0 88.1 L145.0 84.6 L150.0 80.8 L155.0 77.0 L160.0 73.0 L165.0 68.8 L170.0 64.6 L175.0 60.1 L180.0 55.5 L185.0 50.8 L190.0 45.9 L195.0 40.9 L200.0 35.8 L205.0 30.5 L210.0 25.0\" fill=\"none\" stroke=\"#39e3c8\" stroke-width=\"2.4\"/><text x=\"150\" y=\"40\" fill=\"#39e3c8\" font-size=\"8.5\">with compounding</text><text x=\"120\" y=\"96\" fill=\"#9aa6c0\" font-size=\"8\">no growth</text><text x=\"10\" y=\"80\" fill=\"#9aa6c0\" font-size=\"8.5\" transform=\"rotate(-90 10 80)\">$ saved</text><text x=\"117\" y=\"148\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8.5\">time → (start early)</text></svg>",
+    "caption": "Compound growth accelerates over time — which is why starting early beats saving more later.",
+    "example": "Saving consistently from a young age, compound growth can turn modest contributions into far more than you put in — time is the key ingredient.",
+    "tip": "Compound growth = your money earns money, which earns more — snowballing over time. START EARLY: time matters more than amount."
+   },
+   {
+    "h": "Saving toward goals",
+    "body": "Beyond the emergency fund, saving works best when tied to specific goals. Short-term goals (a trip, a gadget, holiday gifts) and medium goals (a car, a wedding, a home down payment) all become achievable when you save toward them deliberately rather than hoping to afford them later or borrowing.\n\nGive each goal a name, a target amount, and a timeline, then divide to find how much to save per month (e.g., '$2,400 for a car in 12 months = $200/month'). Keeping goals in separate savings 'buckets' (or sub-accounts) helps you track progress and not spend the money. Seeing a goal fill up is motivating. The combination — an emergency fund for safety, automated saving for the future, and goal-based saving for what you want — is a simple, powerful system that works at any income level.",
+    "tip": "Tie saving to specific goals (name, amount, timeline → monthly amount). Separate 'buckets' track progress. Emergency fund + automation + goals = a full system."
+   }
+  ],
   "cards": [
    {
-    "h": "Why save at all",
-    "body": "Savings turn emergencies into inconveniences and dreams into plans. Without it, a surprise expense becomes debt and goals stay out of reach. Even small, regular amounts add up through consistency."
+    "h": "Why save",
+    "body": "Protects from emergencies, funds goals without debt, builds wealth. The habit beats the amount — start."
    },
    {
-    "h": "The emergency fund comes first",
-    "body": "Before investing or extra debt payoff, build a starter emergency fund — a common first goal is $500–$1,000, then work toward 3–6 months of expenses. Keep it in a separate, easy-to-reach account so you're not tempted to spend it."
+    "h": "Emergency fund",
+    "body": "Build it first: start $500–1,000, aim 3–6 months of essentials; keep it safe and accessible."
    },
    {
-    "h": "Pay yourself first, automatically",
-    "body": "Savers who succeed don't rely on willpower — they automate it. Set up an automatic transfer to savings the day you're paid. You adjust to what's left, and the savings grow without a monthly decision."
+    "h": "Pay yourself first",
+    "body": "Save BEFORE spending and AUTOMATE it — bypasses willpower."
    },
    {
-    "h": "Short-term vs. long-term goals",
-    "body": "Match the account to the timeline. Money you'll need within a few years (emergency fund, a car, a deposit) belongs somewhere safe and liquid like a high-yield savings account — not the stock market, which can drop right when you need it."
+    "h": "Compound growth",
+    "body": "Money earns money, snowballing over time. Start early — time matters more than amount."
    },
    {
-    "h": "High-yield savings accounts",
-    "body": "A high-yield savings account (often online) pays far more interest than a regular bank savings account, with the same safety (FDIC insured). It's the right home for your emergency fund and short-term savings — earning a little while staying safe and available."
+    "h": "Goals",
+    "body": "Name, amount, timeline → monthly target; use separate buckets. Fund + automation + goals = a system."
    }
   ],
   "flash": [
    [
+    "Saving",
+    "Setting money aside now to have it later."
+   ],
+   [
     "Emergency fund",
-    "Cash set aside only for true, unexpected expenses."
+    "Savings for unexpected expenses (3–6 months)."
    ],
    [
     "Pay yourself first",
-    "Automatically save when paid, before spending."
-   ],
-   [
-    "Liquid",
-    "Easily and quickly turned into cash without loss."
-   ],
-   [
-    "High-yield savings",
-    "A savings account paying much higher interest, still safe."
-   ],
-   [
-    "FDIC insured",
-    "Bank deposits protected by the government up to a limit."
-   ],
-   [
-    "Sinking fund",
-    "Money saved up gradually for a specific planned expense."
-   ],
-   [
-    "3–6 months",
-    "A common full emergency-fund goal (months of expenses)."
+    "Saving before you spend on anything else."
    ],
    [
     "Automation",
-    "Setting transfers to happen without a monthly decision."
+    "Setting savings transfers to happen automatically."
+   ],
+   [
+    "Compound interest",
+    "Earnings that themselves earn more over time."
+   ],
+   [
+    "Principal",
+    "The original amount saved or invested."
+   ],
+   [
+    "Interest",
+    "Money earned on savings (or paid on debt)."
+   ],
+   [
+    "Liquid savings",
+    "Money you can access quickly (for emergencies)."
+   ],
+   [
+    "Savings rate",
+    "The share of income you save."
+   ],
+   [
+    "Financial goal",
+    "A specific money target you save toward."
+   ],
+   [
+    "Delayed gratification",
+    "Giving up now for a bigger benefit later."
+   ],
+   [
+    "Sinking fund",
+    "Saving gradually for a known future expense."
    ]
   ],
   "quiz": [
    {
-    "q": "Before investing, your first savings priority should usually be:",
+    "q": "Saving mainly protects you from:",
     "options": [
-     "An emergency fund",
-     "Buying stocks",
-     "A new car",
-     "Crypto"
+     "Emergencies turning into debt",
+     "Earning money",
+     "Paying taxes",
+     "Getting a job"
     ],
     "a": 0,
-    "why": "A cushion for surprises comes before investing or extra risk."
+    "why": "A fund keeps surprises from becoming crises."
    },
    {
-    "q": "The most reliable way to save consistently is to:",
+    "q": "At first, what matters most in saving?",
     "options": [
-     "Automate transfers when paid",
-     "Save whatever's left",
-     "Use willpower each month",
-     "Wait for a raise"
+     "The habit (even small amounts)",
+     "Saving thousands",
+     "Perfect timing",
+     "A big income"
     ],
     "a": 0,
-    "why": "Automation removes the monthly decision and builds the habit."
+    "why": "Consistency beats amount early on."
    },
    {
-    "q": "Money you'll need in a year or two should be kept:",
+    "q": "The first savings goal everyone should have is a(n):",
     "options": [
-     "Somewhere safe and liquid",
-     "In the stock market",
-     "In a locked retirement account",
+     "Emergency fund",
+     "Vacation fund",
+     "New car",
+     "Stock portfolio"
+    ],
+    "a": 0,
+    "why": "It's the foundation of stability."
+   },
+   {
+    "q": "A common emergency-fund target is:",
+    "options": [
+     "3–6 months of essentials",
+     "1 day of pay",
+     "20 years of income",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Start small, build toward 3–6 months."
+   },
+   {
+    "q": "An emergency fund should be kept:",
+    "options": [
+     "Safe and accessible",
+     "Locked up for years",
+     "Fully invested in stocks",
      "As cash under a mattress"
     ],
     "a": 0,
-    "why": "Short-term money shouldn't risk a market drop right when you need it."
+    "why": "You need it available on short notice."
    },
    {
-    "q": "A high-yield savings account offers:",
+    "q": "'Pay yourself first' means:",
     "options": [
-     "More interest, same safety",
-     "High risk",
-     "No FDIC insurance",
-     "Money locked up for years"
+     "Save before spending on anything else",
+     "Spend first, save leftovers",
+     "Buy wants first",
+     "Never save"
     ],
     "a": 0,
-    "why": "It pays more than a regular savings account and is still FDIC insured."
+    "why": "There's rarely anything 'left over.'"
    },
    {
-    "q": "'Liquid' means money that is:",
+    "q": "The most reliable way to save is to:",
     "options": [
-     "Easy to access quickly",
-     "Tied up for years",
-     "Already spent",
-     "Invested in stocks"
+     "Automate transfers",
+     "Rely on willpower",
+     "Save randomly",
+     "Hope"
     ],
     "a": 0,
-    "why": "Liquid assets can be turned to cash fast without losing value."
+    "why": "You can't spend what's already moved."
    },
    {
-    "q": "A common full emergency-fund target is:",
+    "q": "Compound growth means your earnings:",
     "options": [
-     "3–6 months of expenses",
-     "One day of pay",
-     "$50",
-     "10 years of income"
+     "Earn more earnings over time",
+     "Disappear",
+     "Stay flat",
+     "Are taxed away"
     ],
     "a": 0,
-    "why": "After a starter fund, aim for 3–6 months of living expenses."
+    "why": "Money making money, snowballing."
+   },
+   {
+    "q": "The most important factor in compounding is:",
+    "options": [
+     "Time (start early)",
+     "Luck",
+     "A huge first deposit",
+     "Your zip code"
+    ],
+    "a": 0,
+    "why": "Compounding needs years to build."
+   },
+   {
+    "q": "Someone who saves a little starting young often:",
+    "options": [
+     "Beats someone saving more starting late",
+     "Loses money",
+     "Does worse",
+     "Can't compound"
+    ],
+    "a": 0,
+    "why": "Because of compounding over more time."
+   },
+   {
+    "q": "To save toward a goal, you should give it a:",
+    "options": [
+     "Name, amount, and timeline",
+     "Vague wish",
+     "Single deadline only",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Then divide to find the monthly amount."
+   },
+   {
+    "q": "$2,400 for a car in 12 months means saving:",
+    "options": [
+     "$200/month",
+     "$24/month",
+     "$2,400/month",
+     "$12/month"
+    ],
+    "a": 0,
+    "why": "2400 ÷ 12 = 200."
+   },
+   {
+    "q": "Keeping goals in separate 'buckets' helps you:",
+    "options": [
+     "Track progress and not spend it",
+     "Lose track",
+     "Spend faster",
+     "Pay fees"
+    ],
+    "a": 0,
+    "why": "Sub-accounts keep goals visible and protected."
+   },
+   {
+    "q": "Saving is fundamentally about:",
+    "options": [
+     "Keeping some of what you make",
+     "How much you earn",
+     "Being rich already",
+     "Luck"
+    ],
+    "a": 0,
+    "why": "Even low earners who save beat spenders who earn more."
+   },
+   {
+    "q": "A full saving system combines:",
+    "options": [
+     "Emergency fund + automation + goals",
+     "Only an emergency fund",
+     "Only goals",
+     "Only luck"
+    ],
+    "a": 0,
+    "why": "Safety, consistency, and direction together."
    }
   ]
  },
  "money-banking-accounts": {
   "title": "Banking & Accounts",
   "subject": "Money & Investing",
-  "level": "Grades 9 - adult",
-  "intro": "Knowing how bank accounts work — and how to dodge their fees and traps — keeps more of your money in your pocket. The basics are simple once you learn the terms.",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand what banks do and why to use them",
+   "Know the main account types",
+   "Understand fees and how to avoid them",
+   "Bank safely (security and FDIC insurance)",
+   "Choose and manage accounts wisely"
+  ],
+  "intro": "Banks and accounts are the basic infrastructure of managing money — a safe place to keep it, tools to spend and move it, and services that help it grow. Understanding how they work and how to avoid their pitfalls (like fees) is foundational financial literacy. This lesson covers banking basics.",
+  "sections": [
+   {
+    "h": "What banks do and why use them",
+    "body": "A bank is a business that safely holds your money and provides financial services. Keeping money in a bank (rather than cash at home) is safer (protected against theft and loss, and insured — see below), more convenient (debit cards, online payments, direct deposit, ATMs), and useful (it can earn a little interest, and a banking relationship helps you access loans and build financial history).\n\nBanks make money by lending out deposits and charging interest and fees, but for you, the core value is a secure, functional home base for your money. Credit unions are similar but member-owned and often have lower fees and better service. Having a bank account is a basic step toward managing money well — it's hard to budget, save, get paid, or build credit without one. For those without accounts, this is often the first financial move to make.",
+    "tip": "A bank safely holds your money + provides tools (cards, payments, direct deposit) + insurance. Credit unions are member-owned, often cheaper. Everyone needs a money home base."
+   },
+   {
+    "h": "Types of accounts",
+    "body": "Banks offer several account types for different jobs. A checking account is for everyday spending and bills — money flows in (direct deposit) and out (debit card, checks, online payments) freely; it earns little or no interest. A savings account is for money you're setting aside — it earns some interest and is meant to be touched less often, making it ideal for an emergency fund or goals.\n\nBeyond these: high-yield savings accounts (often online banks) pay noticeably more interest than regular savings. Money market accounts and certificates of deposit (CDs, which lock money up for a set time at a higher rate) are other options for savings. For most people starting out, the essentials are a checking account (for daily money) and a savings account (for saving) — simple, and you build from there as needed.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Common bank account types and what they're for\"><rect x=\"8\" y=\"5\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"5\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Checking</text><text x=\"132\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">everyday spending (little interest)</text><rect x=\"8\" y=\"27\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"27\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Savings</text><text x=\"132\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">money set aside (earns interest)</text><rect x=\"8\" y=\"49\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"49\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">High-yield savings</text><text x=\"132\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">savings paying more interest</text><rect x=\"8\" y=\"71\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"71\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">CD</text><text x=\"132\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">locks money for a higher rate</text><rect x=\"8\" y=\"93\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"93\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Insured by</text><text x=\"132\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">FDIC / NCUA to $250k</text></svg>",
+    "caption": "The common account types — checking for spending, savings (incl. high-yield and CDs) for setting money aside.",
+    "tip": "Checking = everyday spending (little interest). Savings = money set aside (earns interest). High-yield savings pays more; CDs lock money for a higher rate."
+   },
+   {
+    "h": "Fees and how to avoid them",
+    "body": "Banks charge various fees, and avoiding them is easy money. Common ones: monthly maintenance fees (often waived if you keep a minimum balance or set up direct deposit), overdraft fees (charged — and steep — when you spend more than you have, sometimes $35 per occurrence), ATM fees (for using out-of-network machines), and minimum-balance fees.\n\nThe good news is most fees are avoidable: choose a free checking account (many banks and most credit unions and online banks offer them), keep enough to avoid minimum-balance fees, opt out of overdraft 'coverage' so transactions are declined rather than overdrafted, and use in-network ATMs. Overdraft fees in particular can quietly cost people hundreds of dollars a year. Reading your account's fee schedule and choosing a low- or no-fee account saves real money for doing nothing.",
+    "tip": "Avoid bank fees: pick a free checking account, keep any minimum balance, opt OUT of overdraft (get declined instead), and use in-network ATMs."
+   },
+   {
+    "h": "Banking safely",
+    "body": "Your money in a bank is remarkably safe, and knowing why builds confidence. In the US, deposits at banks are insured by the FDIC (and at credit unions by the NCUA) up to $250,000 per depositor, per institution — meaning even if the bank fails, the government guarantees your money up to that limit. This is a key reason banks beat cash under the mattress.\n\nProtecting your accounts from fraud is your part: use strong, unique passwords and enable two-factor authentication on online banking, never share your PIN or account details, be alert to phishing (banks won't ask for your password or PIN via email/text/call), monitor your accounts regularly for unauthorized charges, and report anything suspicious immediately. With FDIC insurance covering bank failure and good personal security habits covering fraud, your banked money is far safer than cash.",
+    "tip": "US bank deposits are FDIC-insured to $250k (NCUA for credit unions) — safe even if the bank fails. Protect vs fraud: strong passwords, 2FA, watch for phishing, monitor accounts."
+   },
+   {
+    "h": "Choosing and managing accounts",
+    "body": "Picking the right bank and managing accounts well saves money and hassle. When choosing, compare fees (favor free/low-fee), interest rates on savings (online banks often pay much more), convenience (ATMs, branches, a good app), and service. Credit unions and online banks frequently beat big traditional banks on fees and rates. You can also use more than one — e.g., a local bank for checking and a high-yield online account for savings.\n\nTo manage accounts well: monitor them regularly (catch errors, fraud, and overspending), keep enough in checking to cover bills and avoid overdrafts, move extra into savings, and set up alerts for low balances and large transactions. Use direct deposit and autopay to simplify life. Good account management is mostly a few simple habits that, once set up, run quietly in the background and keep your financial foundation solid.",
+    "tip": "Choose low-fee accounts with good savings rates (online banks/credit unions often win). Monitor regularly, keep a checking buffer, automate, and set balance alerts."
+   }
+  ],
   "cards": [
    {
-    "h": "Checking vs. savings",
-    "body": "A checking account is for everyday spending — it comes with a debit card and is built for frequent transactions. A savings account is for setting money aside; it usually pays a little interest and may limit withdrawals. Most people need both."
+    "h": "What banks do",
+    "body": "Safely hold money + tools (cards, payments, direct deposit) + insurance. Credit unions = member-owned, cheaper."
    },
    {
-    "h": "Avoiding fees",
-    "body": "Banks make money on fees — overdraft, monthly maintenance, ATM, minimum-balance. Many are avoidable: pick a free account (credit unions and online banks often charge none), set up direct deposit, keep any required minimum, and turn OFF overdraft 'coverage' so a card simply declines instead of charging $35."
+    "h": "Account types",
+    "body": "Checking (spending), savings (set aside, earns interest), high-yield savings, CDs (locked, higher rate)."
    },
    {
-    "h": "Overdraft: the trap to avoid",
-    "body": "An overdraft is spending more than you have. With overdraft 'protection' on, the bank covers it but charges a big fee (often ~$35) per transaction. Opting out means the purchase is simply declined — far cheaper than a fee that can snowball."
+    "h": "Fees",
+    "body": "Avoid them: free checking, keep minimums, opt out of overdraft, use in-network ATMs."
    },
    {
-    "h": "Debit vs. credit cards",
-    "body": "A debit card spends your own money directly from checking. A credit card borrows the bank's money to repay later. Debit avoids debt; a credit card paid in full each month builds credit history and offers better fraud protection. Know which you're using."
+    "h": "Safety",
+    "body": "FDIC/NCUA insured to $250k — safe even if the bank fails. Protect vs fraud: 2FA, watch phishing, monitor."
    },
    {
-    "h": "Banks vs. credit unions",
-    "body": "Credit unions are member-owned not-for-profits — they often have lower fees, better rates, and friendlier terms than big banks, while offering the same basics (accounts, cards, loans). Both should be FDIC- or NCUA-insured, which protects your deposits."
+    "h": "Choosing",
+    "body": "Compare fees + savings rates (online/credit unions often win); monitor, automate, set alerts."
    }
   ],
   "flash": [
    [
-    "Checking account",
-    "An everyday account for spending, with a debit card."
-   ],
-   [
-    "Savings account",
-    "An account for setting money aside, usually earning interest."
-   ],
-   [
-    "Overdraft",
-    "Spending more than your balance; often triggers a big fee."
-   ],
-   [
-    "Debit card",
-    "Spends your own money directly from checking."
+    "Bank",
+    "A business that safely holds money and offers services."
    ],
    [
     "Credit union",
-    "A member-owned, not-for-profit bank alternative, often cheaper."
+    "A member-owned bank-like institution, often cheaper."
+   ],
+   [
+    "Checking account",
+    "An account for everyday spending and bills."
+   ],
+   [
+    "Savings account",
+    "An account for setting money aside (earns interest)."
+   ],
+   [
+    "High-yield savings",
+    "Savings paying noticeably more interest."
+   ],
+   [
+    "CD",
+    "A certificate of deposit — money locked for a higher rate."
+   ],
+   [
+    "Overdraft fee",
+    "A steep fee for spending more than you have."
+   ],
+   [
+    "Maintenance fee",
+    "A monthly account fee (often avoidable)."
+   ],
+   [
+    "FDIC insurance",
+    "US bank deposit insurance up to $250k."
    ],
    [
     "Direct deposit",
-    "Pay sent straight to your account; often waives fees."
+    "Having pay sent straight to your account."
+   ],
+   [
+    "Two-factor authentication",
+    "A second login step for security."
    ],
    [
     "Minimum balance",
-    "An amount some accounts require to avoid a fee."
-   ],
-   [
-    "NCUA",
-    "Insurance protecting credit-union deposits (like FDIC for banks)."
+    "The amount needed to avoid certain fees."
    ]
   ],
   "quiz": [
    {
-    "q": "An account built for everyday spending with a debit card is a:",
+    "q": "Keeping money in a bank vs at home is:",
+    "options": [
+     "Safer and more convenient",
+     "Riskier",
+     "The same",
+     "Illegal"
+    ],
+    "a": 0,
+    "why": "Insured, protected, and comes with useful tools."
+   },
+   {
+    "q": "A credit union is:",
+    "options": [
+     "Member-owned, often cheaper",
+     "A type of loan",
+     "A stock",
+     "A tax"
+    ],
+    "a": 0,
+    "why": "Similar to a bank but owned by members."
+   },
+   {
+    "q": "An account for everyday spending is a:",
     "options": [
      "Checking account",
      "Savings account",
-     "Retirement account",
+     "CD",
+     "Stock"
+    ],
+    "a": 0,
+    "why": "Money flows freely; little interest."
+   },
+   {
+    "q": "An account meant for setting money aside is a:",
+    "options": [
+     "Savings account",
+     "Checking account",
+     "Credit card",
      "Loan"
     ],
     "a": 0,
-    "why": "Checking is for frequent, everyday transactions."
+    "why": "It earns interest and is touched less."
    },
    {
-    "q": "To avoid a ~$35 charge when you spend more than your balance, you should:",
+    "q": "A high-yield savings account:",
     "options": [
-     "Turn off overdraft coverage",
-     "Keep overdraft on",
-     "Use a bigger bank",
-     "Spend faster"
+     "Pays more interest than regular savings",
+     "Pays nothing",
+     "Is a loan",
+     "Locks money forever"
     ],
     "a": 0,
-    "why": "Opting out means the card is declined instead of charging an overdraft fee."
+    "why": "Often from online banks."
    },
    {
-    "q": "A debit card:",
+    "q": "A CD (certificate of deposit):",
     "options": [
-     "Spends your own money",
-     "Borrows the bank's money",
-     "Builds credit history",
-     "Is a loan"
+     "Locks money for a set time at a higher rate",
+     "Is free checking",
+     "Is a credit card",
+     "Loses value"
     ],
     "a": 0,
-    "why": "Debit draws directly from your checking balance."
+    "why": "Higher rate in exchange for locking it up."
    },
    {
-    "q": "Credit unions are:",
+    "q": "An overdraft fee is charged when you:",
     "options": [
-     "Member-owned not-for-profits",
-     "The same as payday lenders",
-     "Uninsured",
-     "Only for businesses"
+     "Spend more than you have",
+     "Save money",
+     "Use your own ATM",
+     "Deposit cash"
     ],
     "a": 0,
-    "why": "They're member-owned and often cheaper than big banks."
+    "why": "Often ~$35 per occurrence."
    },
    {
-    "q": "A common way to get monthly bank fees waived is:",
+    "q": "To avoid overdraft fees, you can:",
     "options": [
-     "Set up direct deposit",
-     "Withdraw often",
-     "Keep a zero balance",
-     "Use lots of ATMs"
+     "Opt out so transactions are declined",
+     "Spend freely",
+     "Ignore your balance",
+     "Add more cards"
     ],
     "a": 0,
-    "why": "Direct deposit (or a minimum balance) waives many maintenance fees."
+    "why": "Declined beats overdrafted."
    },
    {
-    "q": "Which protects your bank deposits?",
+    "q": "Monthly maintenance fees are often waived if you:",
     "options": [
-     "FDIC insurance",
-     "The stock market",
-     "Overdraft coverage",
-     "A credit score"
+     "Keep a minimum balance or use direct deposit",
+     "Spend a lot",
+     "Have many cards",
+     "Overdraft"
     ],
     "a": 0,
-    "why": "FDIC (banks) / NCUA (credit unions) insure deposits up to a limit."
+    "why": "Or choose a free account entirely."
+   },
+   {
+    "q": "In the US, bank deposits are insured by the:",
+    "options": [
+     "FDIC (NCUA for credit unions) to $250k",
+     "No one",
+     "The bank only",
+     "A private company"
+    ],
+    "a": 0,
+    "why": "Government-backed up to the limit."
+   },
+   {
+    "q": "FDIC insurance means that if the bank fails:",
+    "options": [
+     "Your money is guaranteed up to $250k",
+     "You lose everything",
+     "Nothing happens",
+     "You owe the bank"
+    ],
+    "a": 0,
+    "why": "A key reason banks beat cash at home."
+   },
+   {
+    "q": "Banks will ask for your password/PIN via email or text:",
+    "options": [
+     "Never (that's phishing)",
+     "Always",
+     "Sometimes",
+     "Only on Mondays"
+    ],
+    "a": 0,
+    "why": "Legit banks never ask that way."
+   },
+   {
+    "q": "To protect online banking, you should use:",
+    "options": [
+     "Strong passwords + two-factor authentication",
+     "One simple password",
+     "No password",
+     "Your birthday"
+    ],
+    "a": 0,
+    "why": "Plus monitor accounts for fraud."
+   },
+   {
+    "q": "Online banks and credit unions often beat big banks on:",
+    "options": [
+     "Fees and savings rates",
+     "Nothing",
+     "Branch count only",
+     "ATM stickers"
+    ],
+    "a": 0,
+    "why": "Lower fees, higher rates."
+   },
+   {
+    "q": "A good account habit is to:",
+    "options": [
+     "Monitor regularly + set balance alerts",
+     "Never check it",
+     "Overdraft often",
+     "Ignore fees"
+    ],
+    "a": 0,
+    "why": "Catch errors, fraud, and overspending early."
    }
   ]
  },
  "money-investing-basics": {
   "title": "Investing Basics",
   "subject": "Money & Investing",
-  "level": "Grades 9 - adult",
-  "disclaimer": "General education, NOT investment advice. Investing involves risk, including possible loss of money. Do your own research or consult a licensed advisor.",
-  "intro": "Investing is putting money to work so it can grow over time and outpace inflation. It's how ordinary people build wealth slowly — not by picking hot stocks, but by owning a broad slice of the market and staying patient.",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand what investing is and why to do it",
+   "Understand the risk-and-return trade-off",
+   "Know the main asset types (stocks, bonds, funds)",
+   "Understand diversification and index funds",
+   "Start investing wisely (long-term, low-cost)"
+  ],
+  "intro": "Investing is putting money to work so it grows over time — the main way ordinary people build wealth beyond just saving. It involves risk, but understanding the basics lets you invest wisely for the long term. This lesson covers how investing works and how beginners can start smart. Educational only, not personalized financial advice.",
+  "sections": [
+   {
+    "h": "What investing is and why",
+    "body": "Investing means putting money into assets (like stocks, bonds, or funds) expecting them to grow in value or pay income over time. It's different from saving: saving keeps money safe but earns little; investing accepts some risk in exchange for the potential of much higher growth over the long run. Both have a role — saving for safety and short-term needs, investing for long-term growth.\n\nThe big reason to invest is to beat inflation and build wealth. Inflation erodes the value of money sitting idle (what costs $100 today may cost $150 in 20 years), so money that just sits loses purchasing power. Investing, through compound growth over years and decades, is how modest sums become significant wealth, and how most people fund big goals like retirement. You don't need to be rich to start — you need time and consistency.",
+    "tip": "Investing = putting money into assets to grow over time (more risk, more potential growth than saving). It beats inflation and builds long-term wealth."
+   },
+   {
+    "h": "Risk and return",
+    "body": "The central trade-off in investing is risk versus return. Return is how much you gain (or lose); risk is the uncertainty — the chance your investment loses value. The fundamental rule: higher potential returns come with higher risk, and safer investments offer lower returns. There's no free lunch — anything promising high returns with no risk is a scam.\n\nDifferent investments sit at different points on this scale: cash/savings are very safe but barely grow; bonds are moderate; stocks are riskier but historically grow the most over long periods. Your own risk tolerance depends on your timeline and temperament: money you need soon should be in safe places, while money for far-off goals can take more risk (because it has time to recover from dips). Understanding this trade-off — that risk and return go together — is the foundation of every investing decision.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Investment risk-and-return comparison\"><rect x=\"8\" y=\"5\" width=\"110\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"118\" y=\"5\" width=\"124\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Cash / savings</text><text x=\"124\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">very safe, very low return</text><rect x=\"8\" y=\"27\" width=\"110\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"118\" y=\"27\" width=\"124\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Bonds</text><text x=\"124\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">moderate risk & return</text><rect x=\"8\" y=\"49\" width=\"110\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"118\" y=\"49\" width=\"124\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Stocks</text><text x=\"124\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">higher risk, higher long-term growth</text><rect x=\"8\" y=\"71\" width=\"110\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"118\" y=\"71\" width=\"124\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Rule</text><text x=\"124\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">higher return = higher risk</text><rect x=\"8\" y=\"93\" width=\"110\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"118\" y=\"93\" width=\"124\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Scam sign</text><text x=\"124\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">'high returns, no risk'</text></svg>",
+    "caption": "Risk and return go together: safe assets grow slowly; stocks grow most over time but swing more.",
+    "tip": "Higher potential return = higher risk; safe = low return. No high-return, no-risk option exists (that's a scam). Match risk to your timeline."
+   },
+   {
+    "h": "The main asset types",
+    "body": "A few building blocks make up most investing. Stocks (equities) are shares of ownership in a company — if the company grows, your shares gain value, and some pay dividends. Stocks have the highest long-term growth but swing up and down a lot. Bonds are loans to a government or company that pay you interest — safer and steadier than stocks, but lower growth.\n\nFunds pool many investments together: a mutual fund or an ETF (exchange-traded fund) holds many stocks or bonds at once, so one purchase gives you instant diversification. Index funds are a special, popular type that simply track a whole market (like the S&P 500) at very low cost. Other assets include real estate and more. For most beginners, broad, low-cost funds are the simplest smart way to own a slice of the whole market without picking individual stocks.",
+    "tip": "Stocks = ownership (high growth, volatile). Bonds = loans (safer, steadier). Funds (esp. low-cost index funds) hold many at once — instant diversification."
+   },
+   {
+    "h": "Diversification and index funds",
+    "body": "A core principle that reduces risk is diversification: don't put all your money in one place. Spreading investments across many companies, industries, and asset types means that if one does badly, others can offset it — you're not wiped out by a single failure. 'Don't put all your eggs in one basket' is the whole idea.\n\nThe easiest way for a beginner to be diversified is a broad index fund, which instantly spreads your money across hundreds or thousands of companies at rock-bottom cost. Decades of evidence show that low-cost index funds beat most expensive, actively-managed funds and individual stock-picking over the long run — because fees are low and you own the whole market's growth. For most people, regularly investing in a few broad, low-cost index funds is a simple, proven strategy that doesn't require picking winners.",
+    "tip": "Diversify — don't bet on one stock. A broad, low-cost index fund instantly spreads your money across the whole market, and beats most stock-picking over time."
+   },
+   {
+    "h": "Starting to invest wisely",
+    "body": "A few principles guide smart beginner investing. Invest for the long term — the stock market swings wildly short-term but has trended strongly upward over decades, so time in the market beats timing the market. Invest regularly and automatically (a fixed amount each month, called 'dollar-cost averaging') rather than trying to pick the perfect moment. Keep costs low (fees quietly eat returns). And don't panic-sell when markets drop — downturns are normal, and selling locks in losses.\n\nFirst, get the foundation right: have your emergency fund and high-interest debt handled before investing much, since investing money you might need soon is risky. For retirement, use tax-advantaged accounts first. The simple, proven path for most people: invest regularly in low-cost, diversified funds, for the long haul, and leave it alone. You don't need to be an expert — you need patience and consistency.",
+    "tip": "Invest long-term, regularly (automatically), in low-cost diversified funds — and don't panic-sell. Time in the market beats timing it. Emergency fund + debt first."
+   }
+  ],
   "cards": [
    {
-    "h": "Why invest: growth and inflation",
-    "body": "Money in a savings account barely keeps up with inflation (rising prices). Investing aims for higher long-term growth so your money gains real value. The trade-off is risk: investments can fall in the short term, which is why investing is for money you won't need for years."
+    "h": "What & why",
+    "body": "Putting money in assets to grow (more risk/reward than saving). Beats inflation; builds long-term wealth."
    },
    {
-    "h": "Compound growth and time",
-    "body": "Compounding means your earnings start earning too. Over decades it's powerful — which is why starting early matters far more than starting big. A small amount invested in your twenties can outgrow a large amount invested in your forties."
+    "h": "Risk & return",
+    "body": "Higher potential return = higher risk; safe = low return. 'High return, no risk' = scam. Match to timeline."
    },
    {
-    "h": "Stocks, bonds, and funds",
-    "body": "A stock is a share of ownership in a company. A bond is a loan to a government or company that pays interest. A fund — especially an index fund or ETF — bundles many stocks or bonds into one purchase, giving instant diversification in a single, low-cost investment."
+    "h": "Asset types",
+    "body": "Stocks (ownership, volatile), bonds (loans, steadier), funds/index funds (many at once, diversified)."
    },
    {
-    "h": "Diversify with index funds",
-    "body": "Don't bet on one company — spread your money across many so one failure doesn't sink you. A low-cost index fund that tracks the whole market (like an S&P 500 fund) does this automatically and has historically beaten most stock-pickers over the long run."
+    "h": "Diversify",
+    "body": "Don't bet on one stock; a broad low-cost index fund spreads across the market and beats most picking."
    },
    {
-    "h": "The boring strategy that works",
-    "body": "For most people: invest regularly (a fixed amount each month — 'dollar-cost averaging'), in low-cost diversified index funds, and leave it alone for the long term. Don't try to time the market, and don't panic-sell in a downturn. Time in the market beats timing the market."
+    "h": "Start wisely",
+    "body": "Long-term, regular (dollar-cost averaging), low-cost, don't panic-sell. Emergency fund + debt first."
    }
   ],
   "flash": [
    [
     "Investing",
-    "Putting money to work to grow over the long term."
+    "Putting money into assets to grow over time."
    ],
    [
     "Inflation",
-    "The general rise in prices that erodes money's value."
+    "The rising cost of things, eroding idle money."
    ],
    [
-    "Compounding",
-    "Earnings that themselves earn, snowballing over time."
+    "Return",
+    "The gain (or loss) on an investment."
+   ],
+   [
+    "Risk",
+    "The uncertainty/chance of losing value."
    ],
    [
     "Stock",
@@ -8630,480 +9274,1042 @@ window.LAB404_CONTENT = {
    ],
    [
     "Bond",
-    "A loan to a government or company that pays interest."
+    "A loan to a government/company that pays interest."
+   ],
+   [
+    "Mutual fund",
+    "A pooled investment holding many assets."
+   ],
+   [
+    "ETF",
+    "An exchange-traded fund of many assets."
    ],
    [
     "Index fund",
-    "A low-cost fund tracking a whole market (e.g., S&P 500)."
+    "A fund tracking a whole market at low cost."
    ],
    [
     "Diversification",
-    "Spreading money across many investments to reduce risk."
+    "Spreading money to reduce risk."
    ],
    [
     "Dollar-cost averaging",
-    "Investing a fixed amount on a regular schedule."
+    "Investing a fixed amount regularly."
+   ],
+   [
+    "Dividend",
+    "A share of profit paid to stockholders."
    ]
   ],
   "quiz": [
    {
-    "q": "The main reason to invest rather than only save is to:",
+    "q": "Investing differs from saving in that it:",
     "options": [
-     "Grow money and beat inflation",
-     "Avoid all risk",
-     "Spend it faster",
-     "Get rich overnight"
+     "Accepts risk for higher potential growth",
+     "Is always safe",
+     "Earns nothing",
+     "Is only for the rich"
     ],
     "a": 0,
-    "why": "Investing aims for long-term growth that outpaces rising prices."
+    "why": "More risk, more potential long-term growth."
    },
    {
-    "q": "Compounding is powerful mainly because of:",
+    "q": "A big reason to invest is to:",
     "options": [
-     "Time",
-     "Luck",
-     "Picking one stock",
-     "High fees"
+     "Beat inflation and build wealth",
+     "Lose money",
+     "Pay more taxes",
+     "Avoid banks"
     ],
     "a": 0,
-    "why": "Earnings earning more over many years is why starting early wins."
+    "why": "Idle money loses value to inflation."
    },
    {
-    "q": "An index fund gives you:",
+    "q": "The fundamental rule of risk and return is:",
     "options": [
-     "Instant diversification at low cost",
-     "One single stock",
-     "Guaranteed profit",
-     "A government loan"
+     "Higher return = higher risk",
+     "Higher return = no risk",
+     "Risk is always bad",
+     "Returns are guaranteed"
     ],
     "a": 0,
-    "why": "It bundles many holdings into one low-cost, diversified investment."
+    "why": "Safe investments grow slowly."
    },
    {
-    "q": "A stock represents:",
+    "q": "An investment promising 'high returns, no risk' is:",
     "options": [
-     "Ownership in a company",
-     "A loan to a company",
-     "Cash in a vault",
-     "A savings account"
+     "A scam",
+     "A great deal",
+     "A bond",
+     "Normal"
     ],
     "a": 0,
-    "why": "A share of stock is partial ownership; a bond is a loan."
+    "why": "There's no free lunch."
    },
    {
-    "q": "A sound long-term strategy for most people is to:",
+    "q": "Over long periods, which historically grows the most?",
     "options": [
-     "Invest regularly in low-cost index funds and hold",
-     "Time the market",
-     "Panic-sell in downturns",
-     "Chase hot tips"
+     "Stocks",
+     "Cash",
+     "A checking account",
+     "Nothing"
     ],
     "a": 0,
-    "why": "Consistent, diversified, patient investing beats trying to time the market."
+    "why": "Stocks grow most but swing more."
    },
    {
-    "q": "Investing money you might need next month is:",
+    "q": "A stock is:",
     "options": [
-     "Risky — it could drop right then",
-     "Always safe",
-     "Required",
-     "The same as saving"
+     "A share of ownership in a company",
+     "A loan",
+     "A bank account",
+     "A tax"
     ],
     "a": 0,
-    "why": "Short-term money shouldn't be exposed to market swings."
+    "why": "You own a slice of the company."
+   },
+   {
+    "q": "A bond is:",
+    "options": [
+     "A loan that pays you interest",
+     "Company ownership",
+     "Free money",
+     "A scam"
+    ],
+    "a": 0,
+    "why": "Safer and steadier than stocks."
+   },
+   {
+    "q": "A fund that tracks a whole market at low cost is a(n):",
+    "options": [
+     "Index fund",
+     "Single stock",
+     "Savings account",
+     "Bond only"
+    ],
+    "a": 0,
+    "why": "Instant broad diversification, cheaply."
+   },
+   {
+    "q": "Diversification means:",
+    "options": [
+     "Don't put all your eggs in one basket",
+     "Bet everything on one stock",
+     "Avoid investing",
+     "Buy only one fund type"
+    ],
+    "a": 0,
+    "why": "Spreading money reduces risk."
+   },
+   {
+    "q": "Low-cost index funds historically:",
+    "options": [
+     "Beat most stock-picking over time",
+     "Always lose",
+     "Charge the most",
+     "Can't be bought"
+    ],
+    "a": 0,
+    "why": "Low fees + owning the whole market win long-term."
+   },
+   {
+    "q": "For long-term investing, it's best to:",
+    "options": [
+     "Invest regularly and hold for years",
+     "Time the market perfectly",
+     "Panic-sell on dips",
+     "Trade daily"
+    ],
+    "a": 0,
+    "why": "Time in the market beats timing it."
+   },
+   {
+    "q": "Investing a fixed amount on a schedule is called:",
+    "options": [
+     "Dollar-cost averaging",
+     "Timing the market",
+     "Day trading",
+     "Gambling"
+    ],
+    "a": 0,
+    "why": "It avoids trying to pick the perfect moment."
+   },
+   {
+    "q": "When the market drops, a long-term investor should:",
+    "options": [
+     "Stay calm; not panic-sell",
+     "Sell everything",
+     "Borrow to buy",
+     "Quit forever"
+    ],
+    "a": 0,
+    "why": "Selling locks in losses; downturns are normal."
+   },
+   {
+    "q": "Before investing much, you should first have:",
+    "options": [
+     "An emergency fund and high-interest debt handled",
+     "A new car",
+     "A big house",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Don't invest money you may need soon."
+   },
+   {
+    "q": "Fees in investing:",
+    "options": [
+     "Quietly eat your returns",
+     "Help you",
+     "Don't matter",
+     "Are refunded"
+    ],
+    "a": 0,
+    "why": "Keeping costs low matters a lot over time."
    }
   ]
  },
  "money-retirement-401-k": {
   "title": "Retirement & 401(k)",
   "subject": "Money & Investing",
-  "level": "Adult",
-  "disclaimer": "General education, not financial advice. Account rules and contribution limits change — check current IRS limits and your plan's details.",
-  "intro": "Retirement saving is investing with a long runway and big tax advantages. Starting early and capturing the 'free money' from an employer match can be the difference between a comfortable retirement and working forever.",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand why retirement saving matters and starting early",
+   "Understand 401(k)s and the employer match",
+   "Understand IRAs and Roth vs traditional",
+   "Understand how retirement accounts grow",
+   "Build a simple retirement plan"
+  ],
+  "intro": "Retirement saving is about funding the decades of life after you stop working — and because of compound growth, when you start matters enormously. Special tax-advantaged accounts make it easier. This lesson covers 401(k)s, IRAs, and the basics of planning for retirement. Educational only, not personalized advice.",
+  "sections": [
+   {
+    "h": "Why retirement saving matters",
+    "body": "Retirement is the period later in life when you stop working and need income without a paycheck — and it can last decades. Social Security (government retirement benefits) typically replaces only part of your income, so most people need their own savings to live comfortably. Funding 20–30 years of living expenses is a huge sum, which is why you save gradually over a working lifetime.\n\nThe single most important factor is starting early, because of compound growth. Money invested in your 20s has 40+ years to compound, so even small early contributions can outgrow much larger contributions made later. This is the clearest example of why time is an investor's greatest asset. The painful math: waiting even 10 years to start can cut your final retirement savings dramatically. Whatever your age, the best time to start was years ago; the second-best time is now.",
+    "tip": "You need your own savings for retirement (Social Security covers only part). START EARLY — compound growth means early contributions outweigh much larger late ones."
+   },
+   {
+    "h": "401(k)s and the employer match",
+    "body": "A 401(k) is a retirement account offered through an employer. You contribute money from your paycheck (often before taxes, lowering your taxable income now), it's invested (usually in funds you choose), and it grows tax-advantaged until retirement. The money is meant to stay until retirement age — withdrawing early usually brings taxes and penalties.\n\nThe most important 401(k) feature is the employer match: many employers match your contributions up to a percentage (e.g., they add 50 cents or a dollar for every dollar you put in, up to say 5% of your salary). This is free money — an instant 50–100% return — so the universal advice is: always contribute at least enough to get the full employer match. Not doing so is leaving free money on the table. The 401(k) match is one of the best deals in all of personal finance.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Retirement account types and tax treatment\"><rect x=\"8\" y=\"5\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"5\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">401(k)</text><text x=\"110\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">employer account — get the match!</text><rect x=\"8\" y=\"27\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"27\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">IRA</text><text x=\"110\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">retirement account you open yourself</text><rect x=\"8\" y=\"49\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"49\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Traditional</text><text x=\"110\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">tax break now, taxed later</text><rect x=\"8\" y=\"71\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"71\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Roth</text><text x=\"110\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">taxed now, tax-FREE later</text><rect x=\"8\" y=\"93\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"93\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Both grow</text><text x=\"110\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">tax-advantaged over decades</text></svg>",
+    "caption": "Retirement accounts: a 401(k) (get the employer match!) and an IRA, each in traditional or Roth tax flavors.",
+    "tip": "A 401(k) is an employer retirement account (tax-advantaged). ALWAYS contribute enough to get the full employer match — it's free money (an instant 50–100% return)."
+   },
+   {
+    "h": "IRAs and Roth vs traditional",
+    "body": "An IRA (Individual Retirement Account) is a retirement account you open yourself (not through an employer), useful if you have no 401(k) or want to save more. Both 401(k)s and IRAs come in two tax flavors, and the difference matters. Traditional: you contribute pre-tax money (getting a tax break now), it grows tax-deferred, and you pay taxes when you withdraw in retirement. Roth: you contribute money you've already paid taxes on (no break now), but it grows and is withdrawn completely tax-free in retirement.\n\nThe choice hinges on taxes now vs later: Roth is often great for younger people and those in lower tax brackets now (pay the low tax now, enjoy tax-free growth for decades). Both are powerful. The key point is to use these tax-advantaged accounts — the tax savings, compounded over decades, add up to a huge amount compared to a regular investment account.",
+    "tip": "IRA = a retirement account you open yourself. Traditional = tax break now, taxed later; Roth = taxed now, tax-free later (great when young/low bracket). Use these accounts!"
+   },
+   {
+    "h": "How retirement accounts grow",
+    "body": "The power of retirement accounts comes from two things working together over a long time: compound growth and tax advantages. The money you contribute is invested (typically in diversified funds), and over decades it compounds — your returns earn returns. Because it's untouched for so long, this compounding reaches its full, dramatic potential.\n\nThe tax advantage supercharges it: in a traditional account, you invest pre-tax dollars and defer taxes, so more money is working for you now; in a Roth, decades of growth come out entirely tax-free. Either way, sheltering your investments from yearly taxes, and letting them compound for 30–40 years, produces far more than the same money in a taxable account. This is why financial advice universally says to max out tax-advantaged retirement accounts before investing elsewhere — time, compounding, and tax savings together are unbeatable.",
+    "tip": "Retirement accounts combine decades of compounding WITH tax advantages — a powerful combo. Shelter investments here first before a regular taxable account."
+   },
+   {
+    "h": "A simple retirement plan",
+    "body": "You don't need a complicated plan — a simple, consistent one works. A common priority order: (1) contribute to your 401(k) at least enough to get the full employer match (free money), (2) pay off high-interest debt and build your emergency fund, (3) contribute to a Roth or traditional IRA, (4) go back and contribute more to your 401(k), up to the limits. Within the accounts, most people do well with low-cost, diversified index funds (or a 'target-date fund' that automatically adjusts over time).\n\nThen the main job is consistency: contribute regularly (ideally automatically from each paycheck), increase it when your income rises, and leave it alone to grow for decades. Don't panic during market dips — retirement money is long-term. Check in once a year. That's genuinely most of it: start early, get the match, use tax-advantaged accounts, invest in diversified funds, contribute consistently, and let compounding do the heavy lifting.",
+    "tip": "Simple plan: get the full 401(k) match → kill high-interest debt + emergency fund → IRA → more 401(k). Use low-cost diversified funds, contribute consistently, leave it alone."
+   }
+  ],
   "cards": [
    {
-    "h": "Why retirement accounts are special",
-    "body": "Accounts like a 401(k) and IRA give you tax breaks to encourage long-term saving. In exchange, the money is meant to stay until retirement (early withdrawals usually bring taxes and a penalty). The tax advantage plus decades of compounding is what makes them so powerful."
+    "h": "Why & early",
+    "body": "Social Security covers only part; you need your own savings. Start early — compounding rewards time enormously."
    },
    {
-    "h": "The employer match is free money",
-    "body": "Many jobs offer a 401(k) match — they add money when you contribute, often up to a few percent of your pay. If your employer matches, contributing at least enough to get the full match is one of the best financial moves there is; skipping it leaves free money on the table."
+    "h": "401(k) + match",
+    "body": "Employer, tax-advantaged account. ALWAYS get the full employer match — free money, instant 50–100% return."
    },
    {
-    "h": "401(k) vs. IRA",
-    "body": "A 401(k) is offered through your job (contributions come straight from your paycheck, sometimes matched). An IRA (Individual Retirement Account) you open yourself at a brokerage. Many people use both — the 401(k) for the match, an IRA for more control over investments."
+    "h": "IRA / Roth vs trad",
+    "body": "IRA = you open it. Traditional = tax break now, taxed later; Roth = taxed now, tax-free later. Use them."
    },
    {
-    "h": "Traditional vs. Roth",
-    "body": "Traditional accounts give a tax break now (you pay tax later, in retirement). Roth accounts take after-tax money now so qualified withdrawals in retirement are tax-free. Roth is often great when you're young and in a lower tax bracket — decades of growth come out tax-free."
+    "h": "How they grow",
+    "body": "Decades of compounding + tax advantages. Shelter investments here before a taxable account."
    },
    {
-    "h": "Start early, keep it simple",
-    "body": "Time is your biggest advantage, so start as soon as you can, even small. Inside the account, a low-cost target-date fund or broad index fund is a simple, solid choice. Then contribute steadily and leave it alone until retirement."
+    "h": "Simple plan",
+    "body": "Match → debt + emergency fund → IRA → more 401(k). Low-cost funds, contribute consistently, leave it alone."
    }
   ],
   "flash": [
    [
-    "401(k)",
-    "An employer retirement account funded from your paycheck."
+    "Retirement",
+    "Later life after you stop working (needs income)."
    ],
    [
-    "IRA",
-    "An Individual Retirement Account you open yourself."
+    "Social Security",
+    "Government retirement benefits (covers only part)."
+   ],
+   [
+    "401(k)",
+    "An employer-offered tax-advantaged retirement account."
    ],
    [
     "Employer match",
-    "Money your job adds to your 401(k) when you contribute."
+    "Free money your employer adds to your 401(k)."
    ],
    [
-    "Traditional account",
-    "Tax break now; you pay tax on withdrawals later."
+    "IRA",
+    "A retirement account you open yourself."
    ],
    [
-    "Roth account",
-    "After-tax money now; tax-free withdrawals in retirement."
+    "Roth",
+    "Taxed now, grows and withdraws tax-free later."
    ],
    [
-    "Vesting",
-    "How long you must stay to keep employer-contributed money."
+    "Traditional",
+    "Tax break now, taxed on withdrawal later."
+   ],
+   [
+    "Tax-advantaged",
+    "Accounts that reduce taxes on your investments."
+   ],
+   [
+    "Tax-deferred",
+    "Taxes postponed until withdrawal."
    ],
    [
     "Target-date fund",
-    "A simple fund that adjusts its mix as retirement nears."
+    "A fund that auto-adjusts as retirement nears."
    ],
    [
-    "Early-withdrawal penalty",
-    "Extra tax for taking retirement money out too soon."
+    "Contribution limit",
+    "The max you can put in per year."
+   ],
+   [
+    "Compound growth",
+    "Returns earning returns over time."
    ]
   ],
   "quiz": [
    {
-    "q": "An employer 401(k) match is best thought of as:",
+    "q": "Social Security typically:",
     "options": [
-     "Free money",
+     "Replaces only part of your income",
+     "Covers everything",
+     "Is enough alone",
+     "Doesn't exist"
+    ],
+    "a": 0,
+    "why": "You need your own savings too."
+   },
+   {
+    "q": "The single most important retirement factor is:",
+    "options": [
+     "Starting early",
+     "Your zip code",
+     "Luck",
+     "Your shoe size"
+    ],
+    "a": 0,
+    "why": "Compounding rewards time most."
+   },
+   {
+    "q": "A 401(k) is offered through your:",
+    "options": [
+     "Employer",
+     "Bank only",
+     "The IRS",
+     "A store"
+    ],
+    "a": 0,
+    "why": "You contribute from your paycheck."
+   },
+   {
+    "q": "The employer match is:",
+    "options": [
+     "Free money (an instant return)",
      "A loan",
      "A tax",
-     "Optional and skippable"
+     "A fee"
     ],
     "a": 0,
-    "why": "It's extra pay you only get by contributing — capture the full match."
+    "why": "Always contribute enough to get it all."
    },
    {
-    "q": "A Roth account's main benefit is:",
+    "q": "The universal advice about the match is to:",
     "options": [
-     "Tax-free withdrawals in retirement",
-     "No risk",
-     "Instant cash",
-     "A bigger paycheck now"
+     "Always get the full match",
+     "Skip it",
+     "Get half",
+     "Avoid 401(k)s"
     ],
     "a": 0,
-    "why": "You pay tax now so qualified withdrawals later are tax-free."
+    "why": "Not getting it leaves free money behind."
    },
    {
-    "q": "A 401(k) is:",
+    "q": "An IRA is a retirement account:",
     "options": [
-     "Offered through your employer",
-     "Opened by you at any bank",
-     "A checking account",
-     "A type of loan"
+     "You open yourself",
+     "Only employers offer",
+     "The government assigns",
+     "For businesses only"
     ],
     "a": 0,
-    "why": "It's an employer plan; an IRA is the one you open yourself."
+    "why": "Useful if you have no 401(k) or want to save more."
    },
    {
-    "q": "The biggest advantage a young saver has is:",
+    "q": "A TRADITIONAL account gives you:",
     "options": [
-     "Time for compounding",
-     "A high salary",
+     "A tax break now, taxed later",
+     "Tax-free forever",
+     "No benefits",
+     "A loan"
+    ],
+    "a": 0,
+    "why": "Pre-tax contributions, taxed on withdrawal."
+   },
+   {
+    "q": "A ROTH account is:",
+    "options": [
+     "Taxed now, tax-free later",
+     "Taxed twice",
+     "Never taxed on deposit",
+     "A 401(k) only"
+    ],
+    "a": 0,
+    "why": "Great when young/low tax bracket."
+   },
+   {
+    "q": "Roth is often best for:",
+    "options": [
+     "Younger people in lower brackets now",
+     "Only retirees",
+     "No one",
+     "The wealthy only"
+    ],
+    "a": 0,
+    "why": "Pay low tax now, enjoy tax-free growth."
+   },
+   {
+    "q": "Retirement accounts grow so well because of:",
+    "options": [
+     "Compounding + tax advantages over decades",
+     "Luck",
+     "Daily trading",
+     "High fees"
+    ],
+    "a": 0,
+    "why": "Time, compounding, and tax savings combine."
+   },
+   {
+    "q": "Advice says to max tax-advantaged accounts:",
+    "options": [
+     "Before investing elsewhere",
+     "Last",
+     "Never",
+     "Only if rich"
+    ],
+    "a": 0,
+    "why": "The tax savings compounded are huge."
+   },
+   {
+    "q": "A fund that auto-adjusts as you near retirement is a:",
+    "options": [
+     "Target-date fund",
+     "Penny stock",
+     "Savings account",
+     "Bond only"
+    ],
+    "a": 0,
+    "why": "It shifts to safer assets over time."
+   },
+   {
+    "q": "A common priority is: first get the match, then:",
+    "options": [
+     "Kill high-interest debt + emergency fund",
+     "Buy a boat",
+     "Day trade",
+     "Stop saving"
+    ],
+    "a": 0,
+    "why": "Then IRA, then more 401(k)."
+   },
+   {
+    "q": "During a market dip, retirement savers should:",
+    "options": [
+     "Stay the course (it's long-term)",
+     "Sell everything",
+     "Stop contributing forever",
+     "Panic"
+    ],
+    "a": 0,
+    "why": "Retirement money has decades to recover."
+   },
+   {
+    "q": "Most of retirement success is:",
+    "options": [
+     "Start early, get the match, invest consistently, leave it alone",
+     "Perfect timing",
      "Picking hot stocks",
      "Luck"
     ],
     "a": 0,
-    "why": "Decades of compounding make early contributions grow the most."
-   },
-   {
-    "q": "A simple investment choice inside a retirement account is:",
-    "options": [
-     "A low-cost target-date or index fund",
-     "A single risky stock",
-     "Leaving it in cash forever",
-     "Day trading"
-    ],
-    "a": 0,
-    "why": "Broad, low-cost funds are a solid, hands-off choice."
-   },
-   {
-    "q": "Taking money out of a retirement account early usually causes:",
-    "options": [
-     "Taxes and a penalty",
-     "A bonus",
-     "Nothing",
-     "A higher match"
-    ],
-    "a": 0,
-    "why": "Early withdrawals typically trigger income tax plus a penalty."
+    "why": "Consistency + compounding do the work."
    }
   ]
  },
  "money-taxes": {
   "title": "Taxes",
   "subject": "Money & Investing",
-  "level": "Grades 9 - adult",
-  "disclaimer": "General education, not tax advice. Rules change yearly — check IRS.gov or a tax professional for your situation.",
-  "intro": "Taxes feel confusing, but the basics are learnable — and understanding them helps you keep more of your money and avoid costly mistakes. For most people, a simple return is very doable.",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand what taxes are and why they exist",
+   "Understand the main types of taxes",
+   "Understand income tax, brackets, and withholding",
+   "Understand deductions, credits, and filing",
+   "Handle taxes responsibly"
+  ],
+  "intro": "Taxes are mandatory payments to the government that fund public services — and understanding them helps you keep more of your money legally, avoid problems, and not be intimidated by filing. This lesson covers the basics everyone should know. General education, not tax advice; consult a professional for your situation.",
+  "sections": [
+   {
+    "h": "What taxes are and why",
+    "body": "Taxes are required payments individuals and businesses make to governments (federal, state, local). They fund everything the government provides: roads, schools, police and fire, the military, Social Security and Medicare, parks, and countless public services. Taxes are how a society collectively pays for shared things no individual would fund alone.\n\nPaying taxes is a legal obligation — not paying what you owe (tax evasion) is a crime with serious penalties. However, legally reducing your taxes (tax avoidance, through deductions, credits, and smart planning) is perfectly fine and encouraged. The goal of tax literacy isn't to dodge taxes but to understand them so you pay what you legally owe and not a dollar more, file correctly and on time, and avoid costly mistakes. Taxes feel complex, but the core concepts are learnable.",
+    "tip": "Taxes fund public services and are a legal obligation (evasion is a crime). But legally minimizing them (deductions, credits) is fine — know the rules to pay only what you owe."
+   },
+   {
+    "h": "The main types of taxes",
+    "body": "You pay several kinds of taxes, often without noticing. Income tax is on the money you earn (from work or investments) — the big one, charged by the federal government and most states. Payroll taxes (Social Security and Medicare, often labeled 'FICA') are taken from your paycheck to fund those programs. Sales tax is added to things you buy (varies by state and city). Property tax is on real estate you own.\n\nOthers include capital gains tax (on profits from selling investments) and excise taxes (on specific goods like gas or tobacco). The important thing is awareness: these taxes are why your take-home pay is less than your salary, and why a $10 item costs more at the register. Understanding which taxes apply to you helps you budget realistically — your 'gross' income is not what you get to keep.",
+    "tip": "Main taxes: income (what you earn), payroll/FICA (Social Security + Medicare), sales (what you buy), property (real estate). They're why take-home < salary."
+   },
+   {
+    "h": "Income tax, brackets, and withholding",
+    "body": "Income tax in the US is progressive, using tax brackets: different portions of your income are taxed at increasing rates. A crucial and widely-misunderstood point: being 'in' a higher bracket doesn't mean all your income is taxed at that rate — only the portion within each bracket is taxed at that bracket's rate. So earning a bit more never leaves you with less after taxes; only the extra is taxed higher.\n\nFor employees, taxes are collected through withholding: your employer estimates your tax and takes it out of each paycheck, sending it to the government. This is why your take-home (net) pay is less than your gross pay. At year-end you file a tax return to reconcile — if too much was withheld, you get a refund; if too little, you owe. A refund isn't 'free money'; it's your own over-withheld money returned (an interest-free loan you gave the government).",
+    "visual": "<svg viewBox=\"0 0 250 82\" width=\"240\" role=\"img\" aria-label=\"A paycheck split: taxes are withheld, leaving your take-home net pay\"><rect x=\"12\" y=\"18\" width=\"56\" height=\"30\" fill=\"rgba(240,90,90,.3)\" stroke=\"#f05a5a\" stroke-width=\"1\"/><rect x=\"68\" y=\"18\" width=\"170\" height=\"30\" fill=\"rgba(57,227,200,.28)\" stroke=\"#39e3c8\" stroke-width=\"1\"/><text x=\"40\" y=\"37\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9\">taxes</text><text x=\"153\" y=\"37\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">take-home (net) pay</text><text x=\"40\" y=\"60\" text-anchor=\"middle\" fill=\"#f0a0a0\" font-size=\"7.5\">withheld</text><text x=\"125\" y=\"13\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8.5\">GROSS PAY (your full salary)</text><text x=\"125\" y=\"74\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">take-home is less than your salary; a refund = your own overpayment back</text></svg>",
+    "caption": "Taxes are withheld from your gross pay, leaving your take-home (net) pay — which is why it's less than your salary.",
+    "example": "Brackets are marginal: a raise into a higher bracket only taxes the EXTRA income at the higher rate — you never take home less by earning more.",
+    "tip": "Tax brackets are marginal — only income in each bracket is taxed at its rate (earning more never nets you less). Taxes are withheld; a refund = your own overpayment back."
+   },
+   {
+    "h": "Deductions, credits, and filing",
+    "body": "Two tools legally lower your tax: deductions and credits. A deduction reduces your taxable income (so you're taxed on less) — most people take the 'standard deduction,' a flat amount, rather than itemizing. A credit directly reduces the tax you owe dollar-for-dollar, so credits are more valuable than deductions of the same size. There are credits for things like children, education, and lower incomes (like the Earned Income Tax Credit).\n\nFiling a tax return (by April 15 in the US) reports your income and calculates what you owe or are owed. Most people can file fairly easily with tax software (free versions exist for simple returns) or free help programs; complex situations warrant a professional. Keep your tax documents (your W-2 from an employer, 1099s, receipts for deductions). File on time to avoid penalties, and don't fear it — for most people with a job, it's more straightforward than it looks.",
+    "tip": "Deductions lower taxable income; CREDITS lower tax owed dollar-for-dollar (more valuable). File by April 15 (software/free help exists). Keep your W-2/1099s and file on time."
+   },
+   {
+    "h": "Handling taxes responsibly",
+    "body": "A few habits keep taxes from becoming a problem. Keep good records all year (income documents, and receipts for anything deductible) so filing is easy and you don't miss savings. Understand your paycheck — check that the right amount is being withheld (too little means a surprise bill; too much means an interest-free loan to the government). If you're self-employed or a contractor (1099), remember no taxes are withheld for you, so you must set aside money (often ~25–30%) and usually pay quarterly estimated taxes yourself.\n\nAbove all: file and pay on time to avoid penalties and interest, and never ignore tax problems — they only grow. If you can't pay, the government offers payment plans; communication beats avoidance. And watch for tax scams (the IRS won't demand immediate payment by gift card or threaten arrest by phone). Taxes are a lifelong certainty, so building these simple habits early makes them a routine chore rather than a crisis.",
+    "tip": "Keep records, check your withholding, and (if self-employed/1099) set aside ~25–30% and pay quarterly. File + pay on time; don't ignore problems; beware tax scams."
+   }
+  ],
   "cards": [
    {
-    "h": "How income tax works (brackets)",
-    "body": "The U.S. uses a progressive system: higher income is taxed at higher rates, but only the income within each bracket is taxed at that bracket's rate. A common myth is that earning more can lower your take-home 'because of taxes' — moving into a higher bracket only taxes the extra dollars at the higher rate, never your whole income."
+    "h": "What & why",
+    "body": "Required payments funding public services. Evasion is a crime; legal minimizing (deductions/credits) is fine."
    },
    {
-    "h": "Withholding, refunds, and owing",
-    "body": "Your employer withholds estimated tax from each paycheck based on your W-4. At tax time you reconcile: if too much was withheld you get a refund; too little and you owe. A big refund isn't a win — it means you loaned the government your money interest-free all year."
+    "h": "Types",
+    "body": "Income, payroll/FICA (SS + Medicare), sales, property, capital gains. They make take-home < salary."
    },
    {
-    "h": "Key tax forms",
-    "body": "A W-2 reports your wages from an employer. A 1099 reports other income (freelance, gig work, interest). You file a 1040 — your annual tax return — using those forms. Keep them; you need them to file."
+    "h": "Brackets & withholding",
+    "body": "Brackets are MARGINAL (only the extra is taxed higher). Taxes are withheld; a refund = your overpayment back."
    },
    {
-    "h": "Deductions and credits",
-    "body": "A deduction lowers the income you're taxed on; a credit lowers your tax bill directly (dollar for dollar), so credits are more valuable. Most people take the standard deduction (a flat amount) rather than itemizing. Credits like the Earned Income Tax Credit can mean real money back for lower earners."
+    "h": "Deductions & credits",
+    "body": "Deductions lower taxable income; credits cut tax owed dollar-for-dollar (better). File by April 15."
    },
    {
-    "h": "Filing without overpaying for it",
-    "body": "Many people can file for free. If your income is modest, the IRS Free File program and volunteer programs like VITA handle simple returns at no cost. You rarely need to pay a big fee for a straightforward W-2 return."
+    "h": "Responsibly",
+    "body": "Keep records, check withholding; 1099 → set aside ~25–30% + pay quarterly. File on time; beware scams."
    }
   ],
   "flash": [
    [
-    "Progressive tax",
-    "Higher income is taxed at higher rates (by bracket)."
+    "Tax",
+    "A required payment to the government."
+   ],
+   [
+    "Income tax",
+    "Tax on money you earn."
+   ],
+   [
+    "Payroll tax (FICA)",
+    "Social Security + Medicare taxes from pay."
+   ],
+   [
+    "Sales tax",
+    "Tax added to things you buy."
+   ],
+   [
+    "Property tax",
+    "Tax on real estate you own."
    ],
    [
     "Tax bracket",
-    "An income range taxed at a particular rate."
+    "An income range taxed at a given rate (marginal)."
    ],
    [
     "Withholding",
-    "Tax taken from each paycheck toward your yearly bill."
+    "Tax taken from each paycheck in advance."
    ],
    [
-    "W-2",
-    "A form reporting wages from an employer."
+    "Gross pay",
+    "Pay before taxes."
    ],
    [
-    "1099",
-    "A form reporting non-employee income (freelance, interest)."
-   ],
-   [
-    "1040",
-    "The main individual federal income tax return."
+    "Net pay",
+    "Take-home pay after taxes."
    ],
    [
     "Deduction",
-    "Reduces the income you're taxed on."
+    "Something that lowers your taxable income."
    ],
    [
     "Tax credit",
-    "Reduces your tax bill directly, dollar for dollar."
+    "Something that lowers tax owed dollar-for-dollar."
+   ],
+   [
+    "Tax return",
+    "The yearly filing reconciling what you owe/are owed."
    ]
   ],
   "quiz": [
    {
-    "q": "In a progressive tax system, a raise into a higher bracket:",
+    "q": "Taxes fund:",
     "options": [
-     "Only taxes the extra income at the higher rate",
+     "Public services (roads, schools, etc.)",
+     "Only the wealthy",
+     "Nothing",
+     "Private companies"
+    ],
+    "a": 0,
+    "why": "Shared things society pays for collectively."
+   },
+   {
+    "q": "Not paying taxes you owe (tax evasion) is:",
+    "options": [
+     "A crime",
+     "Encouraged",
+     "Fine",
+     "Impossible"
+    ],
+    "a": 0,
+    "why": "But legally minimizing taxes is okay."
+   },
+   {
+    "q": "FICA/payroll taxes fund:",
+    "options": [
+     "Social Security and Medicare",
+     "Roads only",
+     "Schools only",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Taken from your paycheck."
+   },
+   {
+    "q": "Tax added to things you buy is:",
+    "options": [
+     "Sales tax",
+     "Income tax",
+     "Property tax",
+     "FICA"
+    ],
+    "a": 0,
+    "why": "It varies by state/city."
+   },
+   {
+    "q": "US income tax brackets are 'marginal,' meaning:",
+    "options": [
+     "Only income in each bracket is taxed at its rate",
+     "All income is taxed at the top rate",
+     "You lose money earning more",
+     "Everyone pays the same"
+    ],
+    "a": 0,
+    "why": "Earning more never nets you less."
+   },
+   {
+    "q": "A raise into a higher bracket:",
+    "options": [
+     "Only taxes the extra income higher",
      "Taxes all your income higher",
-     "Lowers your take-home overall",
-     "Is tax-free"
+     "Lowers your pay",
+     "Is bad"
     ],
     "a": 0,
-    "why": "Only the dollars in the higher bracket are taxed at that rate."
+    "why": "You still take home more overall."
    },
    {
-    "q": "A big tax refund actually means:",
+    "q": "Withholding is:",
     "options": [
-     "You over-withheld and loaned the government money",
-     "You earned extra",
-     "You paid no tax",
-     "You made a profit"
+     "Tax taken from each paycheck in advance",
+     "A refund",
+     "A deduction",
+     "A credit"
     ],
     "a": 0,
-    "why": "A refund returns your own over-withheld money — interest-free to them all year."
+    "why": "It's why net < gross pay."
    },
    {
-    "q": "Which is more valuable, dollar for dollar?",
+    "q": "A tax refund is:",
     "options": [
-     "A tax credit",
-     "A tax deduction",
+     "Your own over-withheld money returned",
+     "Free money",
+     "A gift",
+     "A bonus"
+    ],
+    "a": 0,
+    "why": "You lent the government interest-free."
+   },
+   {
+    "q": "A deduction:",
+    "options": [
+     "Reduces your taxable income",
+     "Reduces tax owed dollar-for-dollar",
+     "Is a refund",
+     "Is a penalty"
+    ],
+    "a": 0,
+    "why": "You're taxed on less income."
+   },
+   {
+    "q": "A tax credit:",
+    "options": [
+     "Reduces tax owed dollar-for-dollar",
+     "Reduces taxable income",
+     "Is a penalty",
+     "Is withholding"
+    ],
+    "a": 0,
+    "why": "More valuable than a same-size deduction."
+   },
+   {
+    "q": "US tax returns are generally due by:",
+    "options": [
+     "April 15",
+     "January 1",
+     "December 31",
+     "Never"
+    ],
+    "a": 0,
+    "why": "File on time to avoid penalties."
+   },
+   {
+    "q": "Which document reports your wages from an employer?",
+    "options": [
      "A W-2",
-     "Withholding"
+     "A refund",
+     "A deduction",
+     "A 401(k)"
     ],
     "a": 0,
-    "why": "A credit cuts your tax bill directly; a deduction only reduces taxable income."
+    "why": "1099s report contractor/other income."
    },
    {
-    "q": "Wages from a job are reported on a:",
+    "q": "If you're a 1099 contractor, taxes are:",
     "options": [
-     "W-2",
-     "1099",
-     "1040 only",
-     "W-4"
+     "Not withheld — set aside ~25–30%",
+     "Withheld automatically",
+     "Never owed",
+     "Paid by the client"
     ],
     "a": 0,
-    "why": "Employers report your wages on a W-2."
+    "why": "Often pay quarterly estimated taxes."
    },
    {
-    "q": "The main annual federal tax return is the:",
+    "q": "If you can't pay your taxes, you should:",
     "options": [
-     "Form 1040",
-     "Form W-2",
-     "Form 1099",
-     "Form W-4"
+     "Set up a payment plan (don't ignore it)",
+     "Ignore it",
+     "Flee",
+     "Pay with gift cards to a caller"
     ],
     "a": 0,
-    "why": "The 1040 is where you file your yearly return."
+    "why": "Communication beats avoidance; problems grow."
    },
    {
-    "q": "Someone with a simple W-2 return and modest income can often file:",
+    "q": "The real IRS will:",
     "options": [
-     "For free (Free File / VITA)",
-     "Only by paying a big fee",
-     "Only with a lawyer",
-     "Never on their own"
+     "Not demand gift-card payment or threaten arrest by phone",
+     "Call and threaten you",
+     "Text for your password",
+     "Email for your PIN"
     ],
     "a": 0,
-    "why": "Free File and VITA handle simple returns at no cost."
+    "why": "Those are scams."
    }
   ]
  },
  "money-insurance": {
   "title": "Insurance",
   "subject": "Money & Investing",
-  "level": "Grades 9 - adult",
-  "disclaimer": "General education, not insurance advice. Coverage needs vary — compare policies for your situation.",
-  "intro": "Insurance trades a small, predictable cost (the premium) for protection against a rare but financially devastating event. Used right, it keeps one bad day from wiping you out — and skipping the important kinds is a gamble that can cost everything.",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand what insurance is and how it works",
+   "Know the main types of insurance",
+   "Understand premiums, deductibles, and coverage",
+   "Decide what insurance you need",
+   "Use insurance wisely"
+  ],
+  "intro": "Insurance is financial protection against life's big, unpredictable risks — you pay a small, regular cost to avoid a potentially catastrophic one. Understanding how it works helps you protect yourself without overpaying. This lesson covers the essentials of insurance. General education, not specific advice.",
+  "sections": [
+   {
+    "h": "What insurance is and how it works",
+    "body": "Insurance is a way to protect yourself financially against large, unexpected losses. The basic idea: you pay a regular, affordable amount (a premium) to an insurance company, and in exchange, they agree to cover a big cost if something specific goes wrong (an accident, illness, fire, etc.). You're trading a small, predictable expense for protection against a rare but potentially ruinous one.\n\nIt works because of pooling risk: many people pay premiums, but only a few suffer big losses at any time, so the pool covers those losses. For you, insurance means a disaster — a totaled car, a hospital stay, a house fire — becomes a manageable expense (your share) rather than financial devastation. You hope to never 'use' it, but it's there to prevent one bad event from wiping you out. That's the core value: protection against catastrophe.",
+    "tip": "Insurance = paying a small regular premium to an insurer who covers a big loss if disaster strikes. You trade a small predictable cost for protection from a ruinous one."
+   },
+   {
+    "h": "The main types of insurance",
+    "body": "A few types of insurance cover life's major risks. Health insurance covers medical costs (doctor visits, hospital stays, surgery) — crucial because medical bills are a leading cause of financial ruin. Auto insurance covers car accidents and is legally required to drive in most places. Homeowner's or renter's insurance covers your home and belongings against theft, fire, and damage (renter's insurance is cheap and protects your stuff).\n\nLife insurance pays money to your family if you die — important if people depend on your income. Disability insurance replaces income if you can't work due to injury or illness. There are others (dental, travel, and so on). The key is matching insurance to your real risks: everyone needs health and (if they drive) auto; renters should have renter's insurance; those with dependents need life insurance. You don't need every type — you need the ones that protect against losses you couldn't absorb yourself.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"The main types of insurance and what they cover\"><rect x=\"8\" y=\"5\" width=\"102\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"110\" y=\"5\" width=\"132\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Health</text><text x=\"116\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">medical bills (a top cause of ruin)</text><rect x=\"8\" y=\"27\" width=\"102\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"110\" y=\"27\" width=\"132\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Auto</text><text x=\"116\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">car accidents (legally required)</text><rect x=\"8\" y=\"49\" width=\"102\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"110\" y=\"49\" width=\"132\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Home / renter's</text><text x=\"116\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">your home & belongings</text><rect x=\"8\" y=\"71\" width=\"102\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"110\" y=\"71\" width=\"132\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Life</text><text x=\"116\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">income for dependents if you die</text><rect x=\"8\" y=\"93\" width=\"102\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"110\" y=\"93\" width=\"132\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Disability</text><text x=\"116\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">income if you can't work</text></svg>",
+    "caption": "The main insurance types — match them to the risks you personally couldn't afford to absorb.",
+    "tip": "Main types: health (medical bills), auto (required to drive), home/renter's (your stuff), life (if people depend on you), disability (income). Match to YOUR risks."
+   },
+   {
+    "h": "Premiums, deductibles, and coverage",
+    "body": "A few terms are key to understanding any insurance policy. The premium is what you pay regularly (monthly or yearly) to have the insurance. The deductible is the amount you pay out of pocket before insurance starts covering a claim (e.g., a $500 car-repair deductible means you pay the first $500). Coverage (or the coverage limit) is the maximum the insurer will pay.\n\nThese trade off: a higher deductible usually means a lower premium (you take on more of the small risks, so insurance costs less), and vice versa. The art of buying insurance is balancing these — a deductible you could actually afford to pay in an emergency, with a premium that fits your budget, and enough coverage to protect against the big losses. Understanding these terms lets you compare policies and not overpay or get caught underinsured.",
+    "tip": "Premium = what you pay to have it; deductible = what you pay before coverage kicks in; coverage limit = the max it pays. Higher deductible = lower premium (and vice versa)."
+   },
+   {
+    "h": "What insurance you need",
+    "body": "The principle for deciding is simple: insure against losses you couldn't afford to cover yourself, and don't bother insuring small, affordable risks. A house fire or major illness could bankrupt most people — insure those. A $20 gadget breaking won't — skip the extended warranty. Insurance is for catastrophes, not minor inconveniences.\n\nPractically, most adults need: health insurance (medical costs are enormous), auto insurance if they drive (and it's legally required), and renter's or homeowner's insurance. Those with dependents need life insurance; those reliant on their income benefit from disability insurance. Beyond the essentials, be skeptical of niche or 'extended warranty' type insurance that covers small, affordable losses — the insurer profits because most people would come out ahead self-insuring (paying for the rare small loss themselves). Cover the big risks; self-insure the small ones.",
+    "tip": "Insure what you CAN'T afford to lose (health, car, home, income, life if dependents). Don't insure small affordable risks (skip most extended warranties)."
+   },
+   {
+    "h": "Using insurance wisely",
+    "body": "A few habits get you good protection without overpaying. Shop around and compare — insurance prices vary a lot between companies for the same coverage, so get multiple quotes and re-shop every few years. Pick the right deductible — as high as you could comfortably pay in an emergency, to lower your premiums. Bundle policies (auto + home with one insurer) for discounts, and ask about other discounts.\n\nUnderstand your policies — know what's covered and what's not before you need it, so there are no nasty surprises during a claim. Don't over-insure (paying for coverage you don't need) or under-insure (leaving a big risk exposed). And keep insurance you truly need even when money is tight, since that's exactly when a disaster would hurt most. Used wisely, insurance is a cornerstone of financial security — quietly protecting everything else you've built from a single bad day.",
+    "tip": "Shop around + re-quote periodically; pick a deductible you could afford; bundle for discounts; know what's covered. Don't over- or under-insure. Keep essential coverage."
+   }
+  ],
   "cards": [
    {
-    "h": "What insurance is for",
-    "body": "Insurance isn't an investment — it's protection against catastrophe. You pay a premium so that if something expensive and unlikely happens (a wreck, a fire, a hospital stay), the insurer covers most of the cost. Insure what you can't afford to replace; skip coverage on things you could just pay for."
+    "h": "What & how",
+    "body": "Pay a small premium; the insurer covers a big loss. Pooling risk trades a small cost for catastrophe protection."
    },
    {
-    "h": "Premium, deductible, out-of-pocket",
-    "body": "The premium is what you pay regularly to have coverage. The deductible is what you pay yourself before insurance kicks in. A higher deductible usually means a lower premium — a reasonable trade if you have an emergency fund to cover that deductible."
+    "h": "Types",
+    "body": "Health, auto (required), home/renter's, life (dependents), disability (income). Match to your real risks."
    },
    {
-    "h": "Health insurance",
-    "body": "Medical bills are a leading cause of debt and bankruptcy in the U.S., so health coverage matters even when you feel fine. Learn your deductible, copays, and what's 'in-network.' If money is tight, look into Medicaid, ACA marketplace subsidies, and community health centers — coverage may be free or low-cost based on income."
+    "h": "Key terms",
+    "body": "Premium (pay to have it), deductible (you pay first), coverage limit (max paid). Higher deductible = lower premium."
    },
    {
-    "h": "Auto and renters insurance",
-    "body": "Most states require at least liability auto insurance (it covers damage you cause to others). Renters insurance is cheap (often around $15/month) and covers your belongings and liability in a rented home — a small price for real protection that most renters skip."
+    "h": "What you need",
+    "body": "Insure what you can't afford to lose; skip small affordable risks (most extended warranties)."
    },
    {
-    "h": "Don't over- or under-insure",
-    "body": "Carry the coverage that protects you from ruin (health, liability, your home or car), and don't waste money insuring small, affordable risks (extended warranties on cheap gadgets, flight insurance). Shop around and re-check rates periodically — loyalty rarely saves money."
+    "h": "Use wisely",
+    "body": "Shop around, right deductible, bundle, know your coverage. Don't over/under-insure; keep essentials."
    }
   ],
   "flash": [
    [
+    "Insurance",
+    "Financial protection against big unexpected losses."
+   ],
+   [
     "Premium",
-    "The amount you pay regularly to keep insurance coverage."
+    "The regular amount you pay for insurance."
    ],
    [
     "Deductible",
-    "What you pay yourself before insurance starts covering."
+    "What you pay out of pocket before coverage starts."
    ],
    [
-    "Liability coverage",
-    "Pays for harm or damage you cause to others."
-   ],
-   [
-    "Copay",
-    "A fixed fee you pay for a covered medical service."
-   ],
-   [
-    "In-network",
-    "Providers your health plan has agreed rates with (cheaper)."
-   ],
-   [
-    "Renters insurance",
-    "Cheap coverage for your belongings and liability as a renter."
+    "Coverage limit",
+    "The maximum the insurer will pay."
    ],
    [
     "Claim",
-    "A request to your insurer to pay for a covered loss."
+    "A request for the insurer to pay for a loss."
    ],
    [
-    "Premium vs. deductible",
-    "A higher deductible usually means a lower premium."
+    "Health insurance",
+    "Covers medical costs."
+   ],
+   [
+    "Auto insurance",
+    "Covers car accidents (legally required to drive)."
+   ],
+   [
+    "Renter's insurance",
+    "Covers your belongings cheaply."
+   ],
+   [
+    "Life insurance",
+    "Pays your family if you die."
+   ],
+   [
+    "Disability insurance",
+    "Replaces income if you can't work."
+   ],
+   [
+    "Pooling risk",
+    "Many pay premiums; the pool covers the few big losses."
+   ],
+   [
+    "Self-insure",
+    "Covering a small affordable risk yourself."
    ]
   ],
   "quiz": [
    {
-    "q": "The main purpose of insurance is to:",
+    "q": "Insurance lets you trade a:",
     "options": [
-     "Protect against costly, unlikely disasters",
-     "Grow your money",
-     "Avoid all small costs",
-     "Replace saving"
-    ],
-    "a": 0,
-    "why": "It's protection against catastrophe, not an investment."
-   },
-   {
-    "q": "The amount you pay yourself before insurance pays is the:",
-    "options": [
-     "Deductible",
-     "Premium",
-     "Copay",
-     "Claim"
-    ],
-    "a": 0,
-    "why": "The deductible is your share before coverage kicks in."
-   },
-   {
-    "q": "Choosing a higher deductible usually:",
-    "options": [
-     "Lowers your premium",
-     "Raises your premium",
-     "Removes coverage",
-     "Pays you money"
-    ],
-    "a": 0,
-    "why": "You take on more upfront risk in exchange for a cheaper premium."
-   },
-   {
-    "q": "Renters insurance is:",
-    "options": [
-     "Cheap coverage for your belongings and liability",
-     "Only for homeowners",
-     "Required to drive",
-     "A type of savings"
-    ],
-    "a": 0,
-    "why": "It's inexpensive protection most renters overlook."
-   },
-   {
-    "q": "You should insure:",
-    "options": [
-     "Things you can't afford to replace",
-     "Everything, big and small",
-     "Only cheap items",
+     "Small regular cost for protection from a big loss",
+     "Big cost for a small loss",
+     "Gain for a loss",
      "Nothing"
     ],
     "a": 0,
-    "why": "Insure against ruin; self-cover small, affordable risks."
+    "why": "Protection against catastrophe."
    },
    {
-    "q": "If money is tight, low-cost health coverage may come from:",
+    "q": "Insurance works through:",
     "options": [
-     "Medicaid or ACA subsidies",
-     "Only full-price plans",
-     "Renters insurance",
-     "A 401(k)"
+     "Pooling risk among many people",
+     "Luck",
+     "Loans",
+     "Gambling only"
     ],
     "a": 0,
-    "why": "Income-based programs (Medicaid, marketplace subsidies) can be free or cheap."
+    "why": "Many pay; the pool covers the few big losses."
+   },
+   {
+    "q": "Medical bills are:",
+    "options": [
+     "A leading cause of financial ruin",
+     "Never expensive",
+     "Always free",
+     "Covered by auto insurance"
+    ],
+    "a": 0,
+    "why": "That's why health insurance matters."
+   },
+   {
+    "q": "Which insurance is legally required to drive?",
+    "options": [
+     "Auto insurance",
+     "Life insurance",
+     "Dental",
+     "Travel"
+    ],
+    "a": 0,
+    "why": "Required in most places."
+   },
+   {
+    "q": "Cheap insurance that protects a renter's belongings is:",
+    "options": [
+     "Renter's insurance",
+     "Homeowner's only",
+     "Life insurance",
+     "None exists"
+    ],
+    "a": 0,
+    "why": "It's inexpensive and worth having."
+   },
+   {
+    "q": "Life insurance is most important if:",
+    "options": [
+     "People depend on your income",
+     "You live alone with no dependents",
+     "You're young only",
+     "Never"
+    ],
+    "a": 0,
+    "why": "It supports your family if you die."
+   },
+   {
+    "q": "The premium is:",
+    "options": [
+     "What you pay regularly to have insurance",
+     "What you pay before coverage",
+     "The max payout",
+     "A refund"
+    ],
+    "a": 0,
+    "why": "Your ongoing cost."
+   },
+   {
+    "q": "The deductible is:",
+    "options": [
+     "What you pay before coverage kicks in",
+     "The premium",
+     "The max payout",
+     "Free"
+    ],
+    "a": 0,
+    "why": "E.g., you pay the first $500."
+   },
+   {
+    "q": "A higher deductible usually means:",
+    "options": [
+     "A lower premium",
+     "A higher premium",
+     "No coverage",
+     "More claims"
+    ],
+    "a": 0,
+    "why": "You take on more small risk, so it costs less."
+   },
+   {
+    "q": "You should insure against:",
+    "options": [
+     "Losses you couldn't afford yourself",
+     "Every tiny risk",
+     "Nothing",
+     "Only cheap things"
+    ],
+    "a": 0,
+    "why": "Insurance is for catastrophes."
+   },
+   {
+    "q": "Extended warranties on cheap gadgets are usually:",
+    "options": [
+     "Not worth it (self-insure)",
+     "Essential",
+     "Free",
+     "Legally required"
+    ],
+    "a": 0,
+    "why": "The insurer profits; you'd come out ahead self-insuring."
+   },
+   {
+    "q": "To avoid overpaying, you should:",
+    "options": [
+     "Shop around and compare quotes",
+     "Never compare",
+     "Pick the first option",
+     "Overinsure"
+    ],
+    "a": 0,
+    "why": "Prices vary a lot for the same coverage."
+   },
+   {
+    "q": "Bundling auto + home with one insurer often gives:",
+    "options": [
+     "A discount",
+     "A penalty",
+     "Less coverage",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Ask about discounts."
+   },
+   {
+    "q": "Before a claim, you should:",
+    "options": [
+     "Know what's covered and what's not",
+     "Guess",
+     "Assume everything's covered",
+     "Read nothing"
+    ],
+    "a": 0,
+    "why": "Avoid nasty surprises."
+   },
+   {
+    "q": "When money is tight, essential insurance should be:",
+    "options": [
+     "Kept (that's when disaster hurts most)",
+     "Dropped first",
+     "Doubled",
+     "Ignored"
+    ],
+    "a": 0,
+    "why": "Losing it right before a disaster is the worst case."
    }
   ]
  },
