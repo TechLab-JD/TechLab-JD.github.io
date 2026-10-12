@@ -269,6 +269,11 @@
         winEl.style.width = "520px";
         winEl.style.height = "380px";
       }
+      /* Topic windows that have real content open larger (lesson view) */
+      if (app.indexOf("folder-") === 0 && window.LAB404_CONTENT && window.LAB404_CONTENT[app.replace(/^folder-/, "")]) {
+        winEl.style.width = "680px";
+        winEl.style.height = "580px";
+      }
 
       /* Smaller windows for utility apps */
       if (app === "notepad") { winEl.style.width = "560px"; winEl.style.height = "460px"; }
@@ -745,6 +750,13 @@
       var content = document.getElementById(winId + "-content");
       if (!content) return;
 
+      /* A topic with real content opens as a lesson, not a folder / coming-soon. */
+      var ckey = folderApp.replace(/^folder-/, "");
+      if (window.LAB404_CONTENT && window.LAB404_CONTENT[ckey]) {
+        Desktop._renderLesson(content, window.LAB404_CONTENT[ckey], winId);
+        return;
+      }
+
       var folder = FOLDER_CONTENTS[folderApp];
       if (!folder) {
         /* Coming-soon placeholder (works for both certs and academic topics) */
@@ -790,6 +802,70 @@
             Desktop.openWindow(this.dataset.app, childParams);
           }
         });
+      });
+    },
+
+    /* Render a subject topic as a lesson: intro + concept cards, with flashcard and quiz views. */
+    _renderLesson: function (content, d, winId) {
+      var esc = escHtml;
+      var cards = (d.cards || []).map(function (c) {
+        return '<div class="lsn-card"><h3>' + esc(c.h) + '</h3><p>' + esc(c.body) + '</p></div>';
+      }).join("");
+      var nav = '<div class="lsn-nav">' +
+        '<button class="lsn-tab on" data-view="lesson">📖 Lesson</button>' +
+        (d.flash && d.flash.length ? '<button class="lsn-tab" data-view="flash">🃏 Flashcards (' + d.flash.length + ')</button>' : "") +
+        (d.quiz && d.quiz.length ? '<button class="lsn-tab" data-view="quiz">🎯 Quiz (' + d.quiz.length + ')</button>' : "") + '</div>';
+      var lessonView = '<div class="lsn-view" data-v="lesson">' +
+        '<div class="lsn-head"><h2>' + esc(d.title) + '</h2><span class="lsn-lvl">' + esc(d.subject || "") + (d.level ? " · " + esc(d.level) : "") + '</span></div>' +
+        (d.intro ? '<p class="lsn-intro">' + esc(d.intro) + '</p>' : "") + cards +
+        '<p class="lsn-src">Original Lab404 lesson, written for study. ' + (d.disclaimer ? esc(d.disclaimer) : "Double-check anything important against an authoritative source.") + '</p></div>';
+      var flashView = '<div class="lsn-view hide" data-v="flash"><div class="fc" id="' + winId + '-fc"></div>' +
+        '<div class="fc-ctrl"><button class="lsn-btn" data-fprev>‹ Prev</button><span class="fc-count" id="' + winId + '-fcn"></span><button class="lsn-btn" data-fnext>Next ›</button></div></div>';
+      var quizView = '<div class="lsn-view hide" data-v="quiz"><div class="qz-score" id="' + winId + '-qs"></div>' +
+        (d.quiz || []).map(function (q, qi) {
+          return '<div class="qz-q" data-qi="' + qi + '"><div class="qz-qt">' + (qi + 1) + ". " + esc(q.q) + '</div>' +
+            q.options.map(function (o, oi) { return '<button class="qz-opt" data-qi="' + qi + '" data-oi="' + oi + '">' + esc(o) + '</button>'; }).join("") +
+            '<div class="qz-why hide">' + esc(q.why || "") + '</div></div>';
+        }).join("") + '</div>';
+      content.innerHTML = nav + lessonView + flashView + quizView;
+
+      var fi = 0, flipped = false;
+      function drawFC() {
+        var fc = document.getElementById(winId + "-fc"); if (!fc || !d.flash || !d.flash.length) return;
+        var card = d.flash[fi];
+        fc.innerHTML = '<div class="fc-card" data-flip><div class="fc-side">' + esc(flipped ? card[1] : card[0]) +
+          '</div><div class="fc-hint">' + (flipped ? "definition — tap to flip" : "term — tap to flip") + '</div></div>';
+        document.getElementById(winId + "-fcn").textContent = (fi + 1) + " / " + d.flash.length;
+      }
+      drawFC();
+      var answered = {}, correct = 0;
+      function updateScore() { var qs = document.getElementById(winId + "-qs"); if (qs && d.quiz) qs.textContent = "Score: " + correct + " correct of " + Object.keys(answered).length + " answered (" + d.quiz.length + " total)"; }
+      updateScore();
+      content.addEventListener("click", function (e) {
+        var tab = e.target.closest("[data-view]");
+        if (tab) {
+          content.querySelectorAll(".lsn-tab").forEach(function (t) { t.classList.remove("on"); });
+          tab.classList.add("on");
+          content.querySelectorAll(".lsn-view").forEach(function (v) { v.classList.toggle("hide", v.getAttribute("data-v") !== tab.getAttribute("data-view")); });
+          return;
+        }
+        if (e.target.closest("[data-flip]")) { flipped = !flipped; drawFC(); return; }
+        if (e.target.closest("[data-fnext]")) { fi = (fi + 1) % d.flash.length; flipped = false; drawFC(); return; }
+        if (e.target.closest("[data-fprev]")) { fi = (fi - 1 + d.flash.length) % d.flash.length; flipped = false; drawFC(); return; }
+        var opt = e.target.closest(".qz-opt");
+        if (opt) {
+          var qi = +opt.getAttribute("data-qi"), oi = +opt.getAttribute("data-oi"), q = d.quiz[qi];
+          var qEl = content.querySelector('.qz-q[data-qi="' + qi + '"]');
+          if (qEl.classList.contains("done")) return;
+          qEl.classList.add("done");
+          qEl.querySelectorAll(".qz-opt").forEach(function (b) {
+            var bi = +b.getAttribute("data-oi");
+            if (bi === q.a) b.classList.add("ok"); else if (bi === oi) b.classList.add("no");
+            b.disabled = true;
+          });
+          qEl.querySelector(".qz-why").classList.remove("hide");
+          answered[qi] = oi; if (oi === q.a) correct++; updateScore();
+        }
       });
     },
 
