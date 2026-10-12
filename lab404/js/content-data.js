@@ -817,131 +817,283 @@ window.LAB404_CONTENT = {
  },
  "english-grammar-mechanics": {
   "title": "Grammar & Mechanics",
-  "subject": "English & Language Arts",
-  "level": "Grades 6-12",
-  "intro": "Good grammar isn't about fancy rules — it's about being clear so readers understand you the first time. A few core ideas (complete sentences, subject–verb agreement, and the common comma and apostrophe uses) cover most of everyday writing.",
+  "subject": "English",
+  "level": "Grades 4-9",
+  "objectives": [
+   "Identify the main parts of speech",
+   "Build complete sentences with a subject and a predicate",
+   "Use punctuation and capitalization correctly",
+   "Recognize and fix fragments, run-ons, and agreement errors",
+   "Understand how grammar makes writing clear"
+  ],
+  "intro": "Grammar is the set of rules that holds language together — it's what lets words combine into clear, meaningful sentences others can understand. Good grammar isn't about being fancy; it's about being clear. This lesson covers the parts of speech, sentence structure, punctuation, and the common mistakes to watch for.",
+  "sections": [
+   {
+    "h": "The parts of speech",
+    "body": "Every word in English does a job, and those jobs are the parts of speech. Nouns name people, places, things, or ideas (dog, city, freedom). Verbs show action or a state of being (run, is, think). Adjectives describe nouns (red, quick); adverbs describe verbs, adjectives, or other adverbs (quickly, very).\n\nThe rest round out the system: pronouns replace nouns (he, she, it, they); prepositions show relationships (in, on, under); conjunctions join words or ideas (and, but, because); and interjections express emotion (wow!). Knowing each word's job is the first step to building sentences that work.",
+    "visual": "<svg viewBox=\"0 0 268 76\" width=\"255\" role=\"img\" aria-label=\"The sentence The happy dog ran quickly with each word labeled by its part of speech\"><rect x=\"6\" y=\"10\" width=\"34\" height=\"28\" rx=\"5\" fill=\"rgba(107,122,152,.18)\" stroke=\"#6b7a98\" stroke-width=\"1.3\"/><text x=\"23\" y=\"29\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"11\">The</text><rect x=\"44\" y=\"10\" width=\"50\" height=\"28\" rx=\"5\" fill=\"rgba(232,184,75,.18)\" stroke=\"#e8b84b\" stroke-width=\"1.3\"/><text x=\"69\" y=\"29\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"11\">happy</text><rect x=\"98\" y=\"10\" width=\"40\" height=\"28\" rx=\"5\" fill=\"rgba(79,156,240,.18)\" stroke=\"#4f9cf0\" stroke-width=\"1.3\"/><text x=\"118\" y=\"29\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"11\">dog</text><rect x=\"142\" y=\"10\" width=\"36\" height=\"28\" rx=\"5\" fill=\"rgba(240,90,90,.18)\" stroke=\"#f05a5a\" stroke-width=\"1.3\"/><text x=\"160\" y=\"29\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"11\">ran</text><rect x=\"182\" y=\"10\" width=\"68\" height=\"28\" rx=\"5\" fill=\"rgba(57,227,200,.15)\" stroke=\"#39e3c8\" stroke-width=\"1.3\"/><text x=\"216\" y=\"29\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"11\">quickly</text><text x=\"23\" y=\"54\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">article</text><text x=\"69\" y=\"54\" text-anchor=\"middle\" fill=\"#e8b84b\" font-size=\"8\">adjective</text><text x=\"118\" y=\"54\" text-anchor=\"middle\" fill=\"#4f9cf0\" font-size=\"8\">noun</text><text x=\"160\" y=\"54\" text-anchor=\"middle\" fill=\"#f05a5a\" font-size=\"8\">verb</text><text x=\"216\" y=\"54\" text-anchor=\"middle\" fill=\"#39e3c8\" font-size=\"8\">adverb</text></svg>",
+    "caption": "Each word in a sentence does a job — its part of speech.",
+    "example": "In 'The happy dog ran quickly': happy = adjective, dog = noun, ran = verb, quickly = adverb.",
+    "tip": "Nouns name, verbs do, adjectives describe nouns, adverbs describe verbs — the four you'll use most."
+   },
+   {
+    "h": "Building a sentence",
+    "body": "A complete sentence needs two things: a subject (who or what the sentence is about) and a predicate (what the subject does or is). In 'The dog barked,' 'the dog' is the subject and 'barked' is the predicate. Without both, you don't have a complete thought.\n\nSentences come in types: a statement declares something (She left.), a question asks (Did she leave?), a command tells (Leave now.), and an exclamation shows strong feeling (She left!). A sentence always starts with a capital letter and ends with a punctuation mark — that's how a reader knows where one thought stops and the next begins.",
+    "tip": "A complete sentence = a subject + a predicate = one complete thought."
+   },
+   {
+    "h": "Punctuation and capitalization",
+    "body": "Punctuation marks are the traffic signals of writing. A period ends a statement. A question mark ends a question; an exclamation point shows strong emotion. A comma signals a short pause — it separates items in a list, joins clauses with a conjunction, and sets off extra information.\n\nOther marks have specific jobs: apostrophes show possession (Sara's book) or contractions (don't); quotation marks mark someone's exact words. Capitalization also carries meaning: the first word of a sentence, the pronoun 'I,' and all proper nouns (names, places, days) are capitalized. These small marks prevent big confusion.",
+    "example": "Compare: 'Let's eat, Grandma.' vs. 'Let's eat Grandma.' One comma changes everything.",
+    "tip": "Commas and capitals aren't decoration — they tell the reader how to read your sentence."
+   },
+   {
+    "h": "Common errors to fix",
+    "body": "A few mistakes trip up most writers. A fragment is an incomplete sentence missing a subject or predicate ('Because I was late.'). A run-on jams two sentences together with no proper break ('I was late I missed the bus.'). Both confuse readers; fix a fragment by completing it, and a run-on by splitting it or joining it correctly.\n\nAgreement errors are another: the subject and verb must match in number ('She runs,' not 'She run'), and pronouns must match what they replace. Reading your writing aloud is the best way to catch these — your ear often hears what your eye misses.",
+    "tip": "Read your writing aloud. Fragments, run-ons, and agreement slips usually sound wrong before they look wrong."
+   },
+   {
+    "h": "Why grammar matters",
+    "body": "Grammar can feel like a pile of rules, but its real purpose is simple: to make your meaning clear. When you follow the shared rules of grammar, your reader understands you without having to work at it. When you break them, even a smart reader can get lost or get the wrong idea.\n\nGood grammar also builds credibility. Whether it's an essay, an email, or a job application, clean writing signals care and competence. You don't need to sound formal or complicated — you need to be clear and correct. Master the basics, and your writing will carry your ideas instead of getting in their way."
+   }
+  ],
   "cards": [
    {
-    "h": "What makes a complete sentence",
-    "body": "A sentence needs a subject (who or what) and a verb (the action or state), and it must express a complete thought. \"The dog ran.\" is complete. \"Because the dog ran.\" is a fragment — it leaves you hanging."
+    "h": "Parts of speech",
+    "body": "Noun (names), verb (action/being), adjective (describes nouns), adverb (describes verbs), plus pronouns, prepositions, conjunctions, interjections."
    },
    {
-    "h": "Subject–verb agreement",
-    "body": "The verb must match the subject in number. One subject takes a singular verb (The dog runs); more than one takes a plural verb (The dogs run). The tricky part: the verb matches the subject, not words in between."
+    "h": "Sentence",
+    "body": "A complete sentence has a subject + a predicate = one complete thought."
    },
    {
-    "h": "Run-ons and how to fix them",
-    "body": "A run-on jams two complete sentences together wrongly (\"I was tired I went to bed\"). Fix it with a period, a semicolon, or a comma plus a joining word (and, but, so): \"I was tired, so I went to bed.\""
+    "h": "Punctuation",
+    "body": "Periods, question marks, commas, apostrophes, and quotes guide the reader; capitalize sentence starts, 'I,' and proper nouns."
    },
    {
-    "h": "Commas that matter most",
-    "body": "Use a comma between items in a list (apples, bread, and milk), after an introductory phrase (After lunch, we left), and before and/but/so when they join two full sentences. When unsure, read it aloud — natural pauses often signal commas."
+    "h": "Common errors",
+    "body": "Fragments (incomplete), run-ons (jammed together), and subject-verb agreement slips."
    },
    {
-    "h": "Apostrophes: contraction vs. possession",
-    "body": "An apostrophe shows a contraction (do not → don't) or possession (the dog's bowl). The big trap: \"its\" (belonging to it) has NO apostrophe; \"it's\" always means \"it is.\" \"Your\" = belonging to you; \"you're\" = you are."
+    "h": "Clarity",
+    "body": "Grammar's purpose is to make meaning clear and build credibility — be clear and correct, not fancy."
    }
   ],
   "flash": [
    [
-    "Subject",
-    "Who or what the sentence is about."
+    "Noun",
+    "A word naming a person, place, thing, or idea."
    ],
    [
     "Verb",
-    "The action or state of being in a sentence."
+    "A word showing action or a state of being."
+   ],
+   [
+    "Adjective",
+    "A word that describes a noun."
+   ],
+   [
+    "Adverb",
+    "A word that describes a verb, adjective, or adverb."
+   ],
+   [
+    "Pronoun",
+    "A word that replaces a noun (he, she, it, they)."
+   ],
+   [
+    "Subject",
+    "Who or what a sentence is about."
+   ],
+   [
+    "Predicate",
+    "What the subject does or is."
    ],
    [
     "Fragment",
-    "An incomplete sentence missing a subject, verb, or complete thought."
+    "An incomplete sentence missing a subject or predicate."
    ],
    [
     "Run-on",
-    "Two complete sentences wrongly joined together."
+    "Two sentences joined with no proper break."
    ],
    [
-    "Subject–verb agreement",
-    "The verb matches the subject in number (singular/plural)."
+    "Comma",
+    "A mark showing a short pause; separates list items and clauses."
    ],
    [
-    "Contraction",
-    "Two words shortened with an apostrophe (can't = cannot)."
+    "Apostrophe",
+    "A mark showing possession or a contraction."
    ],
    [
-    "Its vs. it's",
-    "'Its' = belonging to it; 'it's' = it is."
-   ],
-   [
-    "Your vs. you're",
-    "'Your' = belonging to you; 'you're' = you are."
+    "Subject-verb agreement",
+    "The subject and verb matching in number."
    ]
   ],
   "quiz": [
    {
-    "q": "Which is a complete sentence?",
+    "q": "A word that names a person, place, or thing is a:",
     "options": [
-     "The cat slept.",
-     "Because it was late.",
-     "Running down the street.",
-     "When the rain stopped."
+     "Noun",
+     "Verb",
+     "Adverb",
+     "Preposition"
     ],
     "a": 0,
-    "why": "It has a subject (cat), a verb (slept), and a complete thought."
+    "why": "Nouns name people, places, things, and ideas."
    },
    {
-    "q": "Choose the correct verb: The group of students ___ ready.",
+    "q": "In 'She ran fast,' the verb is:",
     "options": [
-     "is",
-     "are",
-     "were being",
-     "be"
+     "ran",
+     "She",
+     "fast",
+     "None"
     ],
     "a": 0,
-    "why": "The subject is 'group' (singular), so 'is.' Don't be fooled by 'students.'"
+    "why": "'Ran' shows the action."
    },
    {
-    "q": "Which fixes the run-on 'It was hot we went inside'?",
+    "q": "An adjective describes a:",
     "options": [
-     "It was hot, so we went inside.",
-     "It was hot we, went inside.",
-     "It was, hot we went inside.",
-     "It was hot; we, inside."
+     "Noun",
+     "Verb",
+     "Adverb",
+     "Sentence"
     ],
     "a": 0,
-    "why": "A comma plus a joining word ('so') correctly links two sentences."
+    "why": "Adjectives describe nouns (red, quick)."
    },
    {
-    "q": "Which is correct?",
+    "q": "'Quickly' in 'ran quickly' is a(n):",
     "options": [
-     "The dog wagged its tail.",
-     "The dog wagged it's tail.",
-     "The dog wagged its' tail.",
-     "The dog wagged its's tail."
+     "Adverb",
+     "Noun",
+     "Adjective",
+     "Pronoun"
     ],
     "a": 0,
-    "why": "'Its' (no apostrophe) shows possession; 'it's' means 'it is.'"
+    "why": "Adverbs describe verbs — how the running was done."
    },
    {
-    "q": "Pick the correct word: ___ going to love this.",
+    "q": "A complete sentence must have a subject and a:",
     "options": [
-     "You're",
-     "Your",
-     "Youre",
-     "Yours"
+     "Predicate",
+     "Adjective",
+     "Comma",
+     "Title"
     ],
     "a": 0,
-    "why": "'You're' = 'you are,' which fits here."
+    "why": "Subject + predicate = a complete thought."
    },
    {
-    "q": "Where does a comma belong in 'After the movie we got food'?",
+    "q": "In 'The dog barked,' the subject is:",
     "options": [
-     "After 'movie'",
-     "After 'we'",
-     "After 'got'",
-     "No comma needed"
+     "The dog",
+     "barked",
+     "The",
+     "dog barked"
     ],
     "a": 0,
-    "why": "A comma follows an introductory phrase: 'After the movie, we got food.'"
+    "why": "The subject is who/what the sentence is about."
+   },
+   {
+    "q": "Which ends a question?",
+    "options": [
+     "Question mark",
+     "Period",
+     "Comma",
+     "Apostrophe"
+    ],
+    "a": 0,
+    "why": "A question mark ends a question."
+   },
+   {
+    "q": "'Because I was late.' on its own is a:",
+    "options": [
+     "Fragment",
+     "Run-on",
+     "Complete sentence",
+     "Question"
+    ],
+    "a": 0,
+    "why": "It's incomplete — a dependent clause with no main thought."
+   },
+   {
+    "q": "'I was late I missed the bus.' is a:",
+    "options": [
+     "Run-on",
+     "Fragment",
+     "Correct sentence",
+     "Command"
+    ],
+    "a": 0,
+    "why": "Two sentences are jammed together with no proper break."
+   },
+   {
+    "q": "Which shows correct subject-verb agreement?",
+    "options": [
+     "She runs",
+     "She run",
+     "They runs",
+     "He run"
+    ],
+    "a": 0,
+    "why": "A singular subject takes the matching verb form 'runs.'"
+   },
+   {
+    "q": "An apostrophe in 'don't' shows a:",
+    "options": [
+     "Contraction",
+     "List",
+     "Question",
+     "Plural"
+    ],
+    "a": 0,
+    "why": "It marks the missing letters in a contraction."
+   },
+   {
+    "q": "Which word should always be capitalized?",
+    "options": [
+     "The pronoun 'I'",
+     "every noun",
+     "the word 'and'",
+     "verbs"
+    ],
+    "a": 0,
+    "why": "'I,' sentence starts, and proper nouns are capitalized."
+   },
+   {
+    "q": "A comma in a list is used to:",
+    "options": [
+     "Separate the items",
+     "End the sentence",
+     "Show possession",
+     "Ask a question"
+    ],
+    "a": 0,
+    "why": "Commas separate items in a series."
+   },
+   {
+    "q": "The real purpose of grammar is to:",
+    "options": [
+     "Make meaning clear",
+     "Sound fancy",
+     "Add length",
+     "Confuse readers"
+    ],
+    "a": 0,
+    "why": "Grammar exists to make writing clear and understood."
+   },
+   {
+    "q": "The best way to catch fragments and run-ons is to:",
+    "options": [
+     "Read your writing aloud",
+     "Write faster",
+     "Ignore them",
+     "Use longer words"
+    ],
+    "a": 0,
+    "why": "Your ear hears errors the eye skips over."
    }
   ]
  },
@@ -2168,29 +2320,67 @@ window.LAB404_CONTENT = {
  },
  "english-writing-composition": {
   "title": "Writing & Composition",
-  "subject": "English & Language Arts",
-  "level": "Grades 6-12",
-  "intro": "Good writing is clear thinking on paper. It's less about talent and more about process — getting ideas down, then shaping them so a reader follows you easily.",
-  "cards": [
+  "subject": "English",
+  "level": "Grades 5-12",
+  "objectives": [
+   "Explain the writing process: prewrite, draft, revise, edit, publish",
+   "Structure a paragraph with a topic sentence, support, and a close",
+   "Organize an essay with an introduction, body, and conclusion",
+   "Write for different purposes: narrative, informative, persuasive",
+   "Revise and edit to make writing clear and strong"
+  ],
+  "intro": "Writing is how you turn thoughts into words others can understand — a skill you'll use in school, work, and life. Good writing isn't a gift reserved for a few; it's a process anyone can learn, with clear steps and structures. This lesson walks through the writing process, how to build paragraphs and essays, and how to write for different purposes.",
+  "sections": [
    {
     "h": "The writing process",
-    "body": "Strong writing happens in stages: prewrite (brainstorm and plan), draft (get it all down without judging), revise (reshape ideas and structure), and edit (fix grammar and wording). Trying to do all at once is why writing feels hard — separate the stages."
+    "body": "Good writing almost never happens in one pass. Writers follow a process with five stages. First, prewriting: brainstorming ideas, choosing a topic, and planning. Second, drafting: getting your ideas down without worrying about perfection. Third, revising: reshaping the content — adding, cutting, and reordering so it says what you mean.\n\nFourth, editing: fixing grammar, spelling, and punctuation. Fifth, publishing: sharing the finished piece. The key insight is that these stages are separate jobs — trying to write perfectly on the first try usually freezes you. Get your ideas down first; fix them later.",
+    "visual": "<svg viewBox=\"0 0 262 64\" width=\"250\" role=\"img\" aria-label=\"The writing process: prewrite, draft, revise, edit, publish\"><rect x=\"4\" y=\"16\" width=\"44\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.15)\" stroke=\"#4f9cf0\" stroke-width=\"1.4\"/><text x=\"26\" y=\"36\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Prewrite</text><rect x=\"54\" y=\"16\" width=\"44\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.15)\" stroke=\"#4f9cf0\" stroke-width=\"1.4\"/><text x=\"76\" y=\"36\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Draft</text><rect x=\"104\" y=\"16\" width=\"44\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.15)\" stroke=\"#4f9cf0\" stroke-width=\"1.4\"/><text x=\"126\" y=\"36\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Revise</text><rect x=\"154\" y=\"16\" width=\"44\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.15)\" stroke=\"#4f9cf0\" stroke-width=\"1.4\"/><text x=\"176\" y=\"36\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Edit</text><rect x=\"204\" y=\"16\" width=\"44\" height=\"32\" rx=\"6\" fill=\"rgba(79,156,240,.15)\" stroke=\"#4f9cf0\" stroke-width=\"1.4\"/><text x=\"226\" y=\"36\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Publish</text><line x1=\"48\" y1=\"32\" x2=\"53\" y2=\"32\" stroke=\"#39e3c8\" stroke-width=\"1.8\"/><polygon points=\"53,29 58,32 53,35\" fill=\"#39e3c8\"/><line x1=\"98\" y1=\"32\" x2=\"103\" y2=\"32\" stroke=\"#39e3c8\" stroke-width=\"1.8\"/><polygon points=\"103,29 108,32 103,35\" fill=\"#39e3c8\"/><line x1=\"148\" y1=\"32\" x2=\"153\" y2=\"32\" stroke=\"#39e3c8\" stroke-width=\"1.8\"/><polygon points=\"153,29 158,32 153,35\" fill=\"#39e3c8\"/><line x1=\"198\" y1=\"32\" x2=\"203\" y2=\"32\" stroke=\"#39e3c8\" stroke-width=\"1.8\"/><polygon points=\"203,29 208,32 203,35\" fill=\"#39e3c8\"/></svg>",
+    "caption": "The five stages of writing — each a separate job, done in order.",
+    "tip": "Don't try to write and edit at once. Draft messily first, then revise and edit — they're different jobs."
    },
    {
-    "h": "Paragraph structure",
-    "body": "A paragraph covers one main idea. It usually opens with a topic sentence that states that idea, follows with sentences that explain or give evidence, and the next paragraph starts when the idea changes."
+    "h": "Building a paragraph",
+    "body": "The paragraph is the basic building block of writing. A strong paragraph focuses on one main idea, stated in a topic sentence (usually first). The sentences that follow are supporting details — facts, examples, or reasons that back up or explain that main idea.\n\nA good paragraph often ends with a concluding or transition sentence that wraps up the point or leads into the next. Think of it as a mini-essay: one clear idea, developed with support, tied together. If a paragraph wanders into a second big idea, that's a sign it should be split in two.",
+    "example": "Topic sentence: 'Dogs make great pets.' Support: loyal, easy to train, good company. Close: 'That's why dogs are so popular.'",
+    "tip": "One paragraph = one main idea, stated in a topic sentence and backed by details."
    },
    {
-    "h": "The thesis statement",
-    "body": "In an essay, the thesis is one sentence stating your main point or argument, usually near the end of the introduction. Everything after it should support that one claim. A clear thesis keeps the whole piece focused."
+    "h": "Structuring an essay",
+    "body": "An essay scales the paragraph up. It has three parts. The introduction opens with a hook to grab attention and states the main point in a thesis — the one sentence that says what the whole essay will argue or explain. The body is several paragraphs, each developing one supporting point with details and examples.\n\nThe conclusion restates the main point in fresh words and leaves the reader with a final thought. A classic structure is the five-paragraph essay: one intro, three body paragraphs, one conclusion. It's a reliable frame for beginners — and the same logic (tell them, show them, remind them) scales up to any length.",
+    "tip": "Essay = introduction (with a thesis) + body paragraphs (one point each) + conclusion."
    },
    {
-    "h": "Show, don't just tell",
-    "body": "Instead of stating a conclusion flatly ('the room was messy'), give the detail that proves it ('clothes covered the floor and dishes crusted on the desk'). Specific, concrete details make writing vivid and believable."
+    "h": "Writing for different purposes",
+    "body": "Why you're writing shapes how you write. Narrative writing tells a story, real or imagined, usually in time order with characters and a plot. Informative (or expository) writing explains or teaches — reports, how-tos, explanations — and aims to be clear and organized, not dramatic.\n\nPersuasive (or argumentative) writing tries to convince the reader of a position, using reasons and evidence to support a claim. Knowing your purpose, and your audience, guides every choice: a text to a friend, a school essay, and a job cover letter call for very different tones even when the topic is the same.",
+    "example": "Narrative: 'The day I got lost...' Informative: 'How volcanoes form.' Persuasive: 'Our school should start later.'",
+    "tip": "Decide your purpose (tell a story, explain, or persuade) and audience first — they shape everything else."
    },
    {
-    "h": "Revising and proofreading",
-    "body": "Revising is big-picture (Is it clear? Organized? Does each part support the point?). Proofreading is last — catching spelling, grammar, and typos. Reading your work aloud catches awkward sentences your eyes skip over."
+    "h": "Revising and editing",
+    "body": "First drafts are supposed to be rough; the magic is in revision. When revising, read for the big things: Is the main idea clear? Is every paragraph on topic? Does it flow in a logical order? Is anything missing or repeated? Don't be afraid to cut — removing weak parts almost always makes writing stronger.\n\nEditing comes last and is about correctness: spelling, grammar, punctuation, and word choice. Reading aloud catches awkward sentences and errors your eye skips. Good writers also seek feedback — a fresh reader spots confusion the writer can't see. Writing is rewriting; the willingness to revise is what separates strong writing from weak.",
+    "tip": "Revise for meaning and flow first; edit for correctness last. Cutting weak parts makes writing stronger."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Writing process",
+    "body": "Prewrite → draft → revise → edit → publish. Separate jobs — don't do them all at once."
+   },
+   {
+    "h": "Paragraph",
+    "body": "One main idea: topic sentence + supporting details + a closing/transition."
+   },
+   {
+    "h": "Essay",
+    "body": "Introduction (hook + thesis) + body paragraphs (one point each) + conclusion."
+   },
+   {
+    "h": "Purposes",
+    "body": "Narrative (story), informative (explain), persuasive (convince) — plus knowing your audience."
+   },
+   {
+    "h": "Revise & edit",
+    "body": "Revise for meaning and flow first; edit for correctness last; seek feedback."
    }
   ],
   "flash": [
@@ -2200,99 +2390,214 @@ window.LAB404_CONTENT = {
    ],
    [
     "Draft",
-    "A first full version, written without stopping to perfect it."
+    "A first, rough version getting ideas down."
    ],
    [
-    "Revising",
-    "Reworking ideas, organization, and clarity (big picture)."
+    "Revise",
+    "Reshaping content — adding, cutting, reordering."
    ],
    [
-    "Proofreading",
-    "The final check for spelling, grammar, and typos."
+    "Edit",
+    "Fixing grammar, spelling, and punctuation."
    ],
    [
     "Topic sentence",
     "The sentence stating a paragraph's main idea."
    ],
    [
-    "Thesis statement",
-    "One sentence stating an essay's main point."
+    "Supporting detail",
+    "A fact, example, or reason that backs the main idea."
    ],
    [
-    "Show, don't tell",
-    "Use concrete detail instead of flat statements."
+    "Thesis",
+    "The one sentence stating an essay's main point."
+   ],
+   [
+    "Introduction",
+    "The opening that hooks the reader and gives the thesis."
+   ],
+   [
+    "Conclusion",
+    "The closing that restates the point and ends the piece."
+   ],
+   [
+    "Narrative writing",
+    "Writing that tells a story."
+   ],
+   [
+    "Persuasive writing",
+    "Writing that argues a position with reasons."
    ],
    [
     "Audience",
-    "Who you're writing for — it shapes word choice and tone."
+    "The readers you are writing for."
    ]
   ],
   "quiz": [
    {
-    "q": "Which is the correct order of the writing process?",
+    "q": "The five stages of writing, in order, are:",
     "options": [
-     "Prewrite, draft, revise, edit",
-     "Edit, draft, prewrite, revise",
-     "Draft, edit, prewrite",
-     "Revise, prewrite, draft"
+     "Prewrite, draft, revise, edit, publish",
+     "Edit, draft, prewrite",
+     "Publish, revise, draft",
+     "Draft, publish, prewrite"
     ],
     "a": 0,
-    "why": "Plan, get it down, reshape, then polish."
+    "why": "Plan, draft, reshape, correct, then share."
    },
    {
-    "q": "A topic sentence states:",
+    "q": "Why keep drafting and editing separate?",
     "options": [
-     "A paragraph's main idea",
-     "The essay's title",
-     "A grammar rule",
-     "The conclusion only"
+     "Trying to perfect a first draft freezes you",
+     "Editing is unimportant",
+     "Drafts must be perfect",
+     "They're the same step"
     ],
     "a": 0,
-    "why": "It tells the reader what the paragraph is about."
+    "why": "Get ideas down first; fix them later."
    },
    {
-    "q": "A thesis statement is:",
+    "q": "A paragraph's main idea is stated in its:",
     "options": [
-     "One sentence giving the essay's main point",
-     "The first word",
-     "A list of sources",
-     "A random fact"
+     "Topic sentence",
+     "Last word",
+     "Title",
+     "Thesis"
     ],
     "a": 0,
-    "why": "It states the central claim the essay supports."
+    "why": "The topic sentence states the paragraph's one main idea."
    },
    {
-    "q": "'Clothes covered the floor' instead of 'the room was messy' is an example of:",
+    "q": "Facts and examples that back the main idea are:",
     "options": [
-     "Show, don't tell",
-     "A thesis",
-     "Proofreading",
-     "A topic sentence"
+     "Supporting details",
+     "Topic sentences",
+     "Theses",
+     "Hooks"
     ],
     "a": 0,
-    "why": "Concrete detail shows the point rather than just stating it."
+    "why": "Supporting details develop the main idea."
    },
    {
-    "q": "Proofreading mainly catches:",
+    "q": "A paragraph should focus on:",
     "options": [
-     "Spelling and grammar errors",
-     "Weak organization",
-     "A missing thesis",
-     "Unclear ideas"
+     "One main idea",
+     "As many ideas as possible",
+     "No clear idea",
+     "Only questions"
     ],
     "a": 0,
-    "why": "Proofreading is the final surface-level polish; revising handles the big picture."
+    "why": "One idea per paragraph; split it if a second big idea appears."
    },
    {
-    "q": "A good trick for catching awkward sentences is to:",
+    "q": "The one sentence stating an essay's main point is the:",
+    "options": [
+     "Thesis",
+     "Topic sentence",
+     "Conclusion",
+     "Hook"
+    ],
+    "a": 0,
+    "why": "The thesis is the essay's central claim."
+   },
+   {
+    "q": "A classic essay has an introduction, a body, and a:",
+    "options": [
+     "Conclusion",
+     "Second thesis",
+     "Title page",
+     "Quiz"
+    ],
+    "a": 0,
+    "why": "Intro + body + conclusion is the standard frame."
+   },
+   {
+    "q": "Writing that tells a story is:",
+    "options": [
+     "Narrative",
+     "Persuasive",
+     "Informative",
+     "A thesis"
+    ],
+    "a": 0,
+    "why": "Narrative writing tells a story with characters and plot."
+   },
+   {
+    "q": "Writing that explains or teaches is:",
+    "options": [
+     "Informative",
+     "Narrative",
+     "Persuasive",
+     "Poetry"
+    ],
+    "a": 0,
+    "why": "Informative (expository) writing explains clearly."
+   },
+   {
+    "q": "Writing that tries to convince you of a position is:",
+    "options": [
+     "Persuasive",
+     "Narrative",
+     "Informative",
+     "A summary"
+    ],
+    "a": 0,
+    "why": "Persuasive writing argues a claim with reasons and evidence."
+   },
+   {
+    "q": "Besides purpose, what else shapes every writing choice?",
+    "options": [
+     "The audience",
+     "The paper size",
+     "The font only",
+     "The weather"
+    ],
+    "a": 0,
+    "why": "Who will read it shapes tone and word choice."
+   },
+   {
+    "q": "Revising mainly fixes:",
+    "options": [
+     "Meaning, flow, and content",
+     "Only commas",
+     "Only spelling",
+     "The title"
+    ],
+    "a": 0,
+    "why": "Revision reshapes content; editing handles correctness."
+   },
+   {
+    "q": "Editing mainly fixes:",
+    "options": [
+     "Grammar, spelling, punctuation",
+     "Big ideas",
+     "The thesis",
+     "The audience"
+    ],
+    "a": 0,
+    "why": "Editing is about correctness at the end."
+   },
+   {
+    "q": "Cutting weak parts usually makes writing:",
+    "options": [
+     "Stronger",
+     "Longer",
+     "Worse",
+     "Unreadable"
+    ],
+    "a": 0,
+    "why": "Removing filler sharpens writing."
+   },
+   {
+    "q": "A simple trick to catch awkward sentences is to:",
     "options": [
      "Read it aloud",
      "Write faster",
-     "Skip editing",
-     "Use longer words"
+     "Add more words",
+     "Ignore it"
     ],
     "a": 0,
-    "why": "Reading aloud reveals clunky phrasing your eyes skim past."
+    "why": "Your ear catches what your eye skips."
    }
   ]
  },
@@ -7801,39 +8106,108 @@ window.LAB404_CONTENT = {
  },
  "english-reading-phonics": {
   "title": "Reading & Phonics",
-  "subject": "English & Language Arts",
+  "subject": "English",
   "level": "Grades K-5",
-  "intro": "Reading is the gateway skill for everything else in school and life. It starts with cracking the code — connecting letters to sounds — and grows into understanding and enjoying what you read.",
+  "objectives": [
+   "Explain how letters connect to sounds to decode words (phonics)",
+   "Blend sounds to read words and segment words into sounds to spell",
+   "Build fluency: reading smoothly, accurately, and with expression",
+   "Use strategies to understand what you read (comprehension)",
+   "Grow into an independent, confident reader"
+  ],
+  "intro": "Reading is the foundation of all learning — once you can read, you can teach yourself almost anything. This lesson covers how reading works, starting with phonics (matching letters to sounds), then blending those sounds into words, building up to smooth, fluent reading, and finally understanding and thinking about what you read.",
+  "sections": [
+   {
+    "h": "Letters and their sounds (phonics)",
+    "body": "Reading begins with a simple but powerful idea: letters stand for sounds. The English alphabet has 26 letters, but they make about 44 distinct sounds, called phonemes. The letter 'b' makes the /b/ sound; 's' makes /s/. This letter-to-sound connection is phonics, and it's the key that unlocks reading.\n\nSome sounds are made by letter teams: 'sh' makes one sound (/sh/), 'ch' makes /ch/, and two vowels often work together (as in 'rain'). Learning these letter-sound patterns lets a reader sound out words they've never seen before — the single most important skill a beginning reader builds.",
+    "tip": "Phonics = matching letters to the sounds they make. It lets you 'sound out' brand-new words."
+   },
+   {
+    "h": "Blending and segmenting",
+    "body": "Once you know letter sounds, you combine them. Blending means pushing sounds together to read a word: /k/ /a/ /t/ blends into 'cat.' At first this is slow and deliberate, sound by sound; with practice it becomes instant.\n\nThe reverse skill is segmenting — breaking a spoken word back into its sounds, which is the foundation of spelling. If you can hear that 'dog' is /d/ /o/ /g/, you can write it. Blending (for reading) and segmenting (for spelling) are two sides of the same coin, and strong readers do both automatically.",
+    "visual": "<svg viewBox=\"0 0 250 68\" width=\"230\" role=\"img\" aria-label=\"Blending the sounds k, a, t into the word cat\"><rect x=\"8\" y=\"14\" width=\"38\" height=\"36\" rx=\"6\" fill=\"rgba(79,156,240,.15)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"27\" y=\"38\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"13\">/k/</text><text x=\"54\" y=\"38\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"14\">+</text><rect x=\"62\" y=\"14\" width=\"38\" height=\"36\" rx=\"6\" fill=\"rgba(79,156,240,.15)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"81\" y=\"38\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"13\">/a/</text><text x=\"108\" y=\"38\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"14\">+</text><rect x=\"116\" y=\"14\" width=\"38\" height=\"36\" rx=\"6\" fill=\"rgba(79,156,240,.15)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"135\" y=\"38\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"13\">/t/</text><line x1=\"160\" y1=\"32\" x2=\"188\" y2=\"32\" stroke=\"#39e3c8\" stroke-width=\"2\"/><polygon points=\"188,28 196,32 188,36\" fill=\"#39e3c8\"/><text x=\"222\" y=\"39\" text-anchor=\"middle\" fill=\"#39e3c8\" font-size=\"17\">cat</text></svg>",
+    "caption": "Blending: push the separate sounds together to read the whole word.",
+    "example": "Blend to read: /s/ + /u/ + /n/ → 'sun.' Segment to spell: 'map' → /m/ /a/ /p/ → m-a-p.",
+    "tip": "Blend sounds together to READ a word; break a word into sounds to SPELL it."
+   },
+   {
+    "h": "Sight words and fluency",
+    "body": "Some common words don't follow regular phonics rules — words like 'the,' 'said,' 'was,' and 'of.' These are sight words, and because they appear so often, readers learn to recognize them instantly rather than sounding them out every time.\n\nAs sounding-out and sight-word recognition become automatic, a reader gains fluency: the ability to read smoothly, accurately, and at a good pace, with natural expression. Fluency matters because a reader who no longer struggles with individual words can finally focus their attention on what the words mean.",
+    "tip": "Fluency is reading smoothly and with expression — it frees your mind to think about the meaning."
+   },
+   {
+    "h": "Understanding what you read",
+    "body": "The whole point of reading is comprehension — understanding and thinking about the text. Good readers do this actively. They ask questions as they go ('Why did she do that?'), make predictions, and picture what's happening in their minds.\n\nThey also connect what they read to what they already know, and check themselves when something doesn't make sense, rereading if needed. After reading, they can summarize the main idea and recall key details. Comprehension turns reading from just saying words aloud into actually learning from them.",
+    "tip": "Active readers ask questions, predict, picture the scene, and summarize — reading is thinking, not just decoding."
+   },
+   {
+    "h": "Becoming a strong reader",
+    "body": "Reading is a skill that grows with practice, like a muscle. The single best way to improve is to read a lot — a little every day, across many kinds of texts: stories, facts, poems, instructions. The more you read, the more words you recognize and the easier it becomes.\n\nChoosing books at the right level helps: not so easy they're boring, not so hard they're frustrating — a comfortable stretch. And reading should be enjoyable; a reader who finds books they love will read more, and a reader who reads more becomes a strong reader. Confidence and curiosity carry the rest.",
+    "tip": "Read a little every day. The right book is a comfortable stretch — and one you actually enjoy."
+   }
+  ],
   "cards": [
    {
-    "h": "Letters and sounds (phonics)",
-    "body": "Phonics is the link between letters and the sounds they make. Each letter (or group, like 'sh' or 'ch') stands for a sound; blending those sounds lets you sound out words you've never seen. C-A-T blended is 'cat.'"
+    "h": "Phonics",
+    "body": "Letters stand for sounds (phonemes); matching them lets you sound out new words."
    },
    {
-    "h": "Blending and sounding out",
-    "body": "To read a new word, say each sound in order and blend them smoothly: /d/ /o/ /g/ → 'dog.' With practice, common words become automatic (you know them on sight) and you only sound out the unfamiliar ones."
+    "h": "Blending & segmenting",
+    "body": "Blend sounds together to read; break words into sounds to spell."
    },
    {
-    "h": "Vowels and consonants",
-    "body": "The vowels are a, e, i, o, u (and sometimes y). Every word needs at least one vowel sound. Consonants are the other letters. Vowels can be short (cat, bed) or long (cake, bike) — a silent 'e' at the end often makes the vowel say its name."
+    "h": "Sight words & fluency",
+    "body": "Learn common irregular words by sight; fluency = smooth, expressive reading."
    },
    {
-    "h": "Reading comprehension",
-    "body": "Decoding words is only half of reading — understanding is the goal. After reading, ask: Who is it about? What happened? Why? Picture the story in your head and connect it to what you already know. If a sentence doesn't make sense, reread it."
+    "h": "Comprehension",
+    "body": "Ask questions, predict, picture it, and summarize — reading is active thinking."
    },
    {
-    "h": "Building the habit",
-    "body": "Reading gets easier the more you do it. Read a little every day, pick things you enjoy, and don't worry about every hard word — use the sentence around it to guess, and look up the ones that really matter."
+    "h": "Practice",
+    "body": "Read a little daily at a comfortable level; enjoyment builds strong readers."
    }
   ],
   "flash": [
    [
     "Phonics",
-    "Connecting letters to the sounds they make."
+    "Matching letters to the sounds they make."
+   ],
+   [
+    "Phoneme",
+    "A single distinct sound in a word."
    ],
    [
     "Blending",
-    "Combining sounds in order to read a word."
+    "Pushing sounds together to read a word."
+   ],
+   [
+    "Segmenting",
+    "Breaking a word into its separate sounds (for spelling)."
+   ],
+   [
+    "Sight word",
+    "A common word recognized instantly, not sounded out."
+   ],
+   [
+    "Fluency",
+    "Reading smoothly, accurately, and with expression."
+   ],
+   [
+    "Comprehension",
+    "Understanding and thinking about what you read."
+   ],
+   [
+    "Prediction",
+    "Guessing what will happen next in a text."
+   ],
+   [
+    "Summary",
+    "A short retelling of the main idea and key points."
+   ],
+   [
+    "Decode",
+    "To sound out and read an unfamiliar word."
    ],
    [
     "Vowel",
@@ -7841,351 +8215,744 @@ window.LAB404_CONTENT = {
    ],
    [
     "Consonant",
-    "Any letter that isn't a vowel."
-   ],
-   [
-    "Decoding",
-    "Sounding out a written word."
-   ],
-   [
-    "Sight word",
-    "A common word you recognize instantly without sounding out."
-   ],
-   [
-    "Comprehension",
-    "Understanding the meaning of what you read."
-   ],
-   [
-    "Context",
-    "The words around an unknown word that hint at its meaning."
+    "Any letter that is not a vowel."
    ]
   ],
   "quiz": [
    {
-    "q": "Phonics is about connecting letters to:",
+    "q": "Phonics is:",
     "options": [
-     "Their sounds",
-     "Their colors",
-     "Numbers",
-     "Pictures only"
+     "Matching letters to sounds",
+     "Memorizing whole books",
+     "Writing in cursive",
+     "Reading silently"
     ],
     "a": 0,
-    "why": "Phonics links letters with the sounds they make."
+    "why": "Phonics connects letters to the sounds they represent."
    },
    {
-    "q": "Blending /c/ /a/ /t/ gives the word:",
+    "q": "About how many distinct sounds (phonemes) does English have?",
     "options": [
-     "cat",
-     "act",
-     "tac",
-     "cot"
+     "About 44",
+     "Exactly 26",
+     "About 100",
+     "About 10"
     ],
     "a": 0,
-    "why": "Say the sounds in order and blend: 'cat.'"
+    "why": "26 letters make roughly 44 sounds."
    },
    {
-    "q": "Which are the vowels?",
+    "q": "Pushing /k/ /a/ /t/ together to say 'cat' is:",
+    "options": [
+     "Blending",
+     "Segmenting",
+     "Spelling aloud",
+     "Predicting"
+    ],
+    "a": 0,
+    "why": "Blending combines sounds to read a word."
+   },
+   {
+    "q": "Breaking 'dog' into /d/ /o/ /g/ is:",
+    "options": [
+     "Segmenting",
+     "Blending",
+     "Skimming",
+     "Summarizing"
+    ],
+    "a": 0,
+    "why": "Segmenting splits a word into sounds — the basis of spelling."
+   },
+   {
+    "q": "Words like 'the' and 'said' that don't follow normal rules are:",
+    "options": [
+     "Sight words",
+     "Phonemes",
+     "Vowels",
+     "Prefixes"
+    ],
+    "a": 0,
+    "why": "Sight words are learned by instant recognition."
+   },
+   {
+    "q": "Reading smoothly, accurately, and with expression is:",
+    "options": [
+     "Fluency",
+     "Phonics",
+     "Segmenting",
+     "Decoding"
+    ],
+    "a": 0,
+    "why": "Fluency is smooth, expressive reading."
+   },
+   {
+    "q": "Why does fluency matter?",
+    "options": [
+     "It frees your mind to focus on meaning",
+     "It makes you read louder",
+     "It replaces comprehension",
+     "It avoids reading"
+    ],
+    "a": 0,
+    "why": "Not struggling with words lets you think about what they mean."
+   },
+   {
+    "q": "Understanding and thinking about what you read is:",
+    "options": [
+     "Comprehension",
+     "Blending",
+     "Capitalization",
+     "Fluency"
+    ],
+    "a": 0,
+    "why": "Comprehension is the real goal of reading."
+   },
+   {
+    "q": "A good reader, when confused, should:",
+    "options": [
+     "Reread the part that didn't make sense",
+     "Skip the whole book",
+     "Read faster",
+     "Stop reading forever"
+    ],
+    "a": 0,
+    "why": "Rereading is a key self-monitoring strategy."
+   },
+   {
+    "q": "The best single way to improve reading is to:",
+    "options": [
+     "Read a lot, a little every day",
+     "Only watch videos",
+     "Memorize the dictionary",
+     "Read once a year"
+    ],
+    "a": 0,
+    "why": "Regular reading builds word recognition and comprehension."
+   },
+   {
+    "q": "The 'right' book for practice is:",
+    "options": [
+     "A comfortable stretch you enjoy",
+     "As hard as possible",
+     "As easy as possible",
+     "Any textbook"
+    ],
+    "a": 0,
+    "why": "Not too easy, not too hard, and enjoyable keeps you reading."
+   },
+   {
+    "q": "To decode a word means to:",
+    "options": [
+     "Sound it out and read it",
+     "Translate it to Spanish",
+     "Erase it",
+     "Count its letters"
+    ],
+    "a": 0,
+    "why": "Decoding is sounding out an unfamiliar word."
+   },
+   {
+    "q": "Which are vowels?",
     "options": [
      "a, e, i, o, u",
-     "b, c, d, f",
-     "x, y, z",
-     "all letters"
+     "b, c, d",
+     "s, t, r",
+     "x, y, z only"
     ],
     "a": 0,
-    "why": "A, E, I, O, U (and sometimes Y) are vowels."
+    "why": "a, e, i, o, u (and sometimes y) are the vowels."
    },
    {
-    "q": "A word you recognize instantly without sounding out is a:",
+    "q": "Picturing the scene in your mind while reading helps with:",
     "options": [
-     "Sight word",
-     "Vowel",
-     "Syllable",
-     "Consonant"
+     "Comprehension",
+     "Spelling only",
+     "Handwriting",
+     "Nothing"
     ],
     "a": 0,
-    "why": "Common words become automatic sight words."
+    "why": "Visualizing is an active comprehension strategy."
    },
    {
-    "q": "The real goal of reading is:",
+    "q": "After reading, a strong reader can:",
     "options": [
-     "Understanding the meaning",
-     "Reading fast only",
-     "Memorizing letters",
-     "Never rereading"
+     "Summarize the main idea",
+     "Forget it immediately",
+     "Only recall the last word",
+     "Do nothing"
     ],
     "a": 0,
-    "why": "Comprehension — understanding — is the point, not just decoding."
-   },
-   {
-    "q": "If you hit a word you don't know, a good first step is to:",
-    "options": [
-     "Use the surrounding context",
-     "Skip the whole book",
-     "Give up",
-     "Only guess randomly"
-    ],
-    "a": 0,
-    "why": "Context — the nearby words — often reveals the meaning."
+    "why": "Summarizing shows real understanding."
    }
   ]
  },
  "english-vocabulary": {
   "title": "Vocabulary",
-  "subject": "English & Language Arts",
-  "level": "Grades 6-12",
-  "intro": "A strong vocabulary helps you understand more of what you read and say exactly what you mean. The best part: you can grow it with a few habits, not just memorizing word lists.",
+  "subject": "English",
+  "level": "Grades 4-10",
+  "objectives": [
+   "Understand what vocabulary is and why it matters",
+   "Use context clues to figure out unknown words",
+   "Break words into roots, prefixes, and suffixes to find meaning",
+   "Tell apart synonyms, antonyms, and shades of meaning",
+   "Build a lifelong habit of growing your vocabulary"
+  ],
+  "intro": "Your vocabulary is the set of words you know and use — and it shapes how well you read, write, speak, and understand the world. A bigger vocabulary lets you grasp more of what you read and express yourself more precisely. This lesson shows how to figure out new words and keep growing your word power for life.",
+  "sections": [
+   {
+    "h": "What vocabulary is and why it matters",
+    "body": "Vocabulary is simply the collection of words you know. You actually have two: your recognition vocabulary (words you understand when you hear or read them) and your usage vocabulary (words you actively use). The first is always larger, and both grow throughout life.\n\nVocabulary matters more than almost any other language skill. Research consistently links a strong vocabulary to better reading comprehension, school success, and clearer communication. Simply put, you can only understand ideas you have words for — so the more words you own, the more of the world you can think and talk about.",
+    "tip": "You know more words than you use. Both grow for life — and a bigger vocabulary means understanding more of everything you read."
+   },
+   {
+    "h": "Context clues",
+    "body": "You don't need a dictionary for every unfamiliar word. Often the surrounding sentence gives you clues to the meaning — this is using context clues. A sentence may define the word directly, give an example, offer a contrast, or let you infer the meaning from the overall situation.\n\nFor instance, in 'The arid desert hadn't seen rain in years,' you can tell 'arid' means dry even without knowing the word. Skilled readers do this constantly, almost without noticing. When you meet a new word, pause and ask: what does the rest of the sentence tell me it must mean?",
+    "example": "'He was gregarious, always surrounded by friends and talking to everyone.' → gregarious means sociable/outgoing.",
+    "tip": "Before reaching for a dictionary, read the whole sentence — the context often reveals the meaning."
+   },
+   {
+    "h": "Word parts: roots, prefixes, suffixes",
+    "body": "Many English words are built from smaller parts, and knowing them lets you decode thousands of words. A root is the core meaning (the root 'port' means carry). A prefix attaches to the front to change meaning ('re-' means again, 'un-' means not). A suffix attaches to the end, often changing the word's job ('-able' means able to be).\n\nCombine them and the meaning emerges: 'transport' = trans (across) + port (carry) = carry across; 'unbreakable' = un (not) + break + able = not able to be broken. Learning common word parts is like getting a master key — one root can unlock a whole family of related words.",
+    "visual": "<svg viewBox=\"0 0 260 88\" width=\"245\" role=\"img\" aria-label=\"The word unbreakable broken into prefix un, root break, and suffix able\"><rect x=\"8\" y=\"8\" width=\"48\" height=\"30\" rx=\"6\" fill=\"rgba(232,184,75,.18)\" stroke=\"#e8b84b\" stroke-width=\"1.5\"/><text x=\"32\" y=\"28\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"12\">un-</text><rect x=\"64\" y=\"8\" width=\"60\" height=\"30\" rx=\"6\" fill=\"rgba(79,156,240,.18)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"94\" y=\"28\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"12\">break</text><rect x=\"132\" y=\"8\" width=\"56\" height=\"30\" rx=\"6\" fill=\"rgba(57,227,200,.15)\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><text x=\"160\" y=\"28\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"12\">-able</text><text x=\"32\" y=\"52\" text-anchor=\"middle\" fill=\"#e8b84b\" font-size=\"8\">prefix (not)</text><text x=\"94\" y=\"52\" text-anchor=\"middle\" fill=\"#4f9cf0\" font-size=\"8\">root</text><text x=\"160\" y=\"52\" text-anchor=\"middle\" fill=\"#39e3c8\" font-size=\"8\">suffix (able to be)</text><text x=\"130\" y=\"78\" text-anchor=\"middle\" fill=\"#9adbcf\" font-size=\"10\">unbreakable = not able to be broken</text></svg>",
+    "caption": "Break a long word into its parts — prefix, root, suffix — and the meaning often appears.",
+    "example": "'Unbelievable' = un (not) + believe + able (able to be) = not able to be believed.",
+    "tip": "Learn common roots and prefixes once, and you can decode hundreds of words you've never seen."
+   },
+   {
+    "h": "Synonyms, antonyms, and shades of meaning",
+    "body": "Words relate to each other. Synonyms have similar meanings (big, large, huge); antonyms have opposite meanings (hot/cold, happy/sad). Knowing synonyms gives you variety and precision; knowing antonyms sharpens contrast.\n\nBut synonyms are rarely identical — they carry different shades of meaning, or connotations. 'Slim,' 'thin,' and 'skinny' all describe a narrow build, but 'slim' sounds positive while 'skinny' can sound negative. A strong vocabulary isn't just knowing many words; it's choosing the one whose exact shade fits what you mean.",
+    "tip": "Synonyms aren't identical — 'confident' and 'arrogant' are close in meaning but opposite in tone. Pick the right shade."
+   },
+   {
+    "h": "Growing your vocabulary for life",
+    "body": "Vocabulary grows mostly through exposure, and the number-one source is reading. Readers constantly meet new words in context and absorb them naturally; it's why avid readers tend to have large vocabularies. Reading widely — not just one kind of book — exposes you to the most words.\n\nYou can speed it up deliberately: keep a list of new words you encounter, look up ones context can't crack, and actually use a new word a few times until it sticks. Pay attention to words in conversation, podcasts, and shows too. A growing vocabulary is a lifelong project that quietly makes everything else — reading, writing, thinking — easier.",
+    "tip": "Read widely, note new words, and use each one a few times until it's yours. Vocabulary grows for life."
+   }
+  ],
   "cards": [
    {
-    "h": "Learn words from context",
-    "body": "Most vocabulary is learned by meeting words in reading, not from lists. When you hit an unfamiliar word, use the sentence around it to guess the meaning before you look it up. The more you read, the faster your vocabulary grows."
+    "h": "What & why",
+    "body": "Vocabulary is the words you know; a bigger one means better comprehension and clearer expression."
    },
    {
-    "h": "Roots, prefixes, and suffixes",
-    "body": "Many English words are built from parts. Knowing common ones lets you decode new words: 'tele' (far) + 'vision' (seeing) = seeing from far. A prefix at the front (un-, re-, pre-) or a suffix at the end (-less, -ful, -tion) changes a word's meaning."
+    "h": "Context clues",
+    "body": "The surrounding sentence often reveals a new word's meaning — read it before reaching for a dictionary."
    },
    {
-    "h": "Synonyms, antonyms, and shades",
-    "body": "Synonyms are words with similar meanings (big/large); antonyms are opposites (hot/cold). But similar words often carry different shades — 'confident' and 'arrogant' both mean sure of oneself, but one is positive. Picking the right shade sharpens your writing."
+    "h": "Word parts",
+    "body": "Root (core meaning) + prefix (front) + suffix (end). Learn them to decode whole word families."
    },
    {
-    "h": "Denotation vs. connotation",
-    "body": "A word's denotation is its dictionary meaning; its connotation is the feeling it carries. 'Cheap' and 'affordable' both mean low-cost, but 'cheap' sounds negative. Word choice shapes how readers feel, so choose for both meaning and tone."
+    "h": "Synonyms & antonyms",
+    "body": "Similar vs. opposite meanings; synonyms carry different shades (connotations)."
    },
    {
-    "h": "Make new words stick",
-    "body": "To remember a new word, use it: say it, write it in a sentence, and connect it to something you know. Words you actually use become yours; words you only recognize fade. A handful learned deeply beats a long list half-remembered."
+    "h": "Growing it",
+    "body": "Read widely, note new words, and use them until they stick — a lifelong habit."
    }
   ],
   "flash": [
+   [
+    "Vocabulary",
+    "The set of words a person knows and uses."
+   ],
    [
     "Context clue",
     "A hint to a word's meaning from the surrounding text."
    ],
    [
+    "Root",
+    "The core part of a word that carries its main meaning."
+   ],
+   [
     "Prefix",
-    "A word part added to the front that changes meaning (un-, re-)."
+    "A word part added to the front to change meaning."
    ],
    [
     "Suffix",
-    "A word part added to the end (-less, -ful, -tion)."
-   ],
-   [
-    "Root",
-    "The core part of a word that carries its basic meaning."
+    "A word part added to the end, often changing the word's job."
    ],
    [
     "Synonym",
-    "A word with a meaning similar to another."
+    "A word with a similar meaning to another."
    ],
    [
     "Antonym",
     "A word with the opposite meaning."
    ],
    [
-    "Denotation",
-    "A word's literal dictionary meaning."
-   ],
-   [
     "Connotation",
     "The feeling or tone a word carries beyond its definition."
+   ],
+   [
+    "Denotation",
+    "A word's plain dictionary definition."
+   ],
+   [
+    "Infer",
+    "To work out a meaning from clues."
+   ],
+   [
+    "Define",
+    "To state exactly what a word means."
+   ],
+   [
+    "Exposure",
+    "Meeting new words through reading and listening."
    ]
   ],
   "quiz": [
    {
-    "q": "Most vocabulary is best learned by:",
+    "q": "Your vocabulary is:",
     "options": [
-     "Meeting words in reading",
-     "Memorizing long lists",
-     "Watching TV only",
-     "Avoiding hard words"
+     "The words you know and use",
+     "Your handwriting",
+     "Your reading speed",
+     "Your grammar only"
     ],
     "a": 0,
-    "why": "Reading exposes you to words in context, which makes them stick."
+    "why": "Vocabulary is the collection of words you know."
    },
    {
-    "q": "The prefix 'un-' in 'unhappy' means:",
+    "q": "A strong vocabulary is most linked to better:",
     "options": [
-     "Not",
-     "Very",
-     "Again",
-     "Before"
+     "Reading comprehension",
+     "Running speed",
+     "Memory of faces",
+     "Math alone"
     ],
     "a": 0,
-    "why": "'Un-' means not: unhappy = not happy."
+    "why": "More words means understanding more of what you read."
    },
    {
-    "q": "A word with the opposite meaning is a(n):",
+    "q": "Using the surrounding sentence to guess a word's meaning is using:",
     "options": [
-     "Antonym",
-     "Synonym",
+     "Context clues",
+     "A thesaurus",
+     "A prefix",
+     "A synonym"
+    ],
+    "a": 0,
+    "why": "Context clues come from the words around the unknown word."
+   },
+   {
+    "q": "In 'The arid desert hadn't seen rain in years,' 'arid' means:",
+    "options": [
+     "Dry",
+     "Wet",
+     "Cold",
+     "Loud"
+    ],
+    "a": 0,
+    "why": "The context (desert, no rain) signals 'dry.'"
+   },
+   {
+    "q": "The core part of a word that carries its meaning is the:",
+    "options": [
+     "Root",
+     "Prefix",
+     "Suffix",
+     "Synonym"
+    ],
+    "a": 0,
+    "why": "The root holds the main meaning."
+   },
+   {
+    "q": "In 'rewrite,' the part 're-' is a:",
+    "options": [
+     "Prefix",
+     "Suffix",
+     "Root",
+     "Antonym"
+    ],
+    "a": 0,
+    "why": "A prefix attaches to the front; 're-' means again."
+   },
+   {
+    "q": "In 'breakable,' the part '-able' is a:",
+    "options": [
+     "Suffix",
+     "Prefix",
+     "Root",
+     "Synonym"
+    ],
+    "a": 0,
+    "why": "A suffix attaches to the end; '-able' means able to be."
+   },
+   {
+    "q": "'Transport' = trans (across) + port. 'Port' means:",
+    "options": [
+     "Carry",
+     "Stop",
+     "Water",
+     "Door"
+    ],
+    "a": 0,
+    "why": "The root 'port' means carry; transport = carry across."
+   },
+   {
+    "q": "'Big' and 'huge' are:",
+    "options": [
+     "Synonyms",
+     "Antonyms",
+     "Prefixes",
+     "Roots"
+    ],
+    "a": 0,
+    "why": "They have similar meanings."
+   },
+   {
+    "q": "'Hot' and 'cold' are:",
+    "options": [
+     "Antonyms",
+     "Synonyms",
+     "Suffixes",
+     "Context clues"
+    ],
+    "a": 0,
+    "why": "They have opposite meanings."
+   },
+   {
+    "q": "The tone or feeling a word carries beyond its definition is its:",
+    "options": [
+     "Connotation",
+     "Denotation",
      "Prefix",
      "Root"
     ],
     "a": 0,
-    "why": "Antonyms are opposites; synonyms are similar."
+    "why": "Connotation is a word's emotional shade."
    },
    {
-    "q": "'Cheap' vs. 'affordable' differ mainly in their:",
+    "q": "'Skinny' vs. 'slim' differ mainly in:",
     "options": [
      "Connotation (tone)",
      "Spelling only",
      "Number of letters",
-     "Denotation"
+     "Nothing"
     ],
     "a": 0,
-    "why": "Both mean low-cost, but 'cheap' carries a negative tone."
+    "why": "Both mean thin, but 'slim' sounds positive, 'skinny' negative."
    },
    {
-    "q": "A context clue is:",
+    "q": "The number-one way to grow vocabulary is to:",
     "options": [
-     "A hint to meaning from nearby words",
-     "A dictionary",
-     "A synonym list",
-     "A spelling rule"
+     "Read widely",
+     "Watch TV with no sound",
+     "Avoid new words",
+     "Only use short words"
     ],
     "a": 0,
-    "why": "The surrounding sentence hints at an unfamiliar word's meaning."
+    "why": "Reading exposes you to the most new words in context."
    },
    {
-    "q": "The best way to make a new word stick is to:",
+    "q": "To make a new word stick, you should:",
     "options": [
-     "Use it in your own speech and writing",
-     "Read it once",
-     "Ignore it",
-     "Only look it up"
+     "Use it a few times",
+     "Write it once and forget it",
+     "Never say it",
+     "Only read it"
     ],
     "a": 0,
     "why": "Actively using a word cements it in memory."
+   },
+   {
+    "q": "A word's plain dictionary meaning is its:",
+    "options": [
+     "Denotation",
+     "Connotation",
+     "Prefix",
+     "Antonym"
+    ],
+    "a": 0,
+    "why": "Denotation is the literal definition; connotation is the tone."
    }
   ]
  },
  "english-literature": {
   "title": "Literature",
-  "subject": "English & Language Arts",
-  "level": "Grades 9-12",
-  "intro": "Literature is writing worth returning to — stories, poems, and plays that explore what it means to be human. Learning to read it closely lets you get more out of any book and see how writers create meaning.",
-  "cards": [
+  "subject": "English",
+  "level": "Grades 6-12",
+  "objectives": [
+   "Identify the main genres of literature",
+   "Analyze the elements of a story: plot, character, setting, theme",
+   "Recognize point of view and how it shapes a story",
+   "Understand figurative language and literary devices",
+   "Read actively to interpret meaning, not just plot"
+  ],
+  "intro": "Literature is writing valued as art — stories, poems, and plays that entertain, move us, and help us understand ourselves and others. Reading literature closely teaches you to see how writers create meaning and feeling with words. This lesson covers genres, the elements of a story, point of view, figurative language, and how to read like an analyst.",
+  "sections": [
    {
-    "h": "Elements of a story",
-    "body": "Most stories share building blocks: characters (who), setting (where and when), plot (what happens), conflict (the struggle), and theme (the deeper idea). Noticing these helps you understand how a story works, not just what happens in it."
+    "h": "Genres of literature",
+    "body": "Literature divides into broad genres. Fiction tells invented stories — novels and short stories. Nonfiction is based on fact — biographies, essays, memoirs. Poetry uses compressed, often rhythmic language to create images and feeling. Drama is written to be performed, told mostly through dialogue and action on a stage.\n\nWithin fiction are sub-genres like mystery, fantasy, science fiction, and realistic fiction, each with its own conventions. Knowing the genre sets your expectations: you read a poem differently than a news report, and a play differently than a novel. Genre is the first lens through which you approach any text.",
+    "tip": "The four big genres: fiction (invented), nonfiction (fact), poetry (compressed language), drama (to be performed)."
    },
    {
-    "h": "Theme: the big idea",
-    "body": "The theme is the underlying message or insight a work explores — like 'power corrupts' or 'love requires sacrifice.' It's not the plot (the events) but what the events add up to. Good stories suggest their theme rather than stating it outright."
+    "h": "The elements of a story",
+    "body": "Most stories are built from a few key elements. The plot is the sequence of events — what happens. The characters are the people (or beings) the story is about, driven by their traits and motivations. The setting is when and where the story takes place, which shapes its mood and possibilities.\n\nAt the heart is usually a conflict — a struggle the characters face, whether against another person, nature, society, or themselves. The conflict drives the plot forward. And underneath it all is the theme: the deeper message or insight about life the story explores. Plot is what happens; theme is what it means.",
+    "visual": "<svg viewBox=\"0 0 250 150\" width=\"240\" role=\"img\" aria-label=\"A plot pyramid showing exposition, rising action, climax, falling action, and resolution\"><polyline points=\"15,126 115,28 235,126\" fill=\"none\" stroke=\"#4f9cf0\" stroke-width=\"2.5\"/><circle cx=\"115\" cy=\"28\" r=\"4\" fill=\"#f05a5a\"/><circle cx=\"15\" cy=\"126\" r=\"3\" fill=\"#39e3c8\"/><circle cx=\"235\" cy=\"126\" r=\"3\" fill=\"#39e3c8\"/><text x=\"12\" y=\"140\" text-anchor=\"start\" fill=\"#9aa6c0\" font-size=\"8.5\">exposition</text><text x=\"52\" y=\"76\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\" transform=\"rotate(-44 52 76)\">rising action</text><text x=\"115\" y=\"20\" text-anchor=\"middle\" fill=\"#f05a5a\" font-size=\"9\">climax</text><text x=\"178\" y=\"76\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\" transform=\"rotate(44 178 76)\">falling action</text><text x=\"238\" y=\"140\" text-anchor=\"end\" fill=\"#9aa6c0\" font-size=\"8.5\">resolution</text></svg>",
+    "caption": "A classic plot rises through conflict to a climax, then falls to a resolution.",
+    "example": "In many stories the conflict rises to a climax (the turning point), then falls to a resolution.",
+    "tip": "Plot = what happens; theme = what it means. Conflict is the engine that drives the plot."
+   },
+   {
+    "h": "The shape of a plot",
+    "body": "Classic plots follow a recognizable shape, often drawn as a pyramid. It opens with exposition — introducing the characters, setting, and situation. Then rising action builds tension as the conflict develops and complications pile up. These lead to the climax, the turning point of highest tension where the outcome is decided.\n\nAfter the climax comes the falling action, as events wind down, and finally the resolution, where the conflict is settled and loose ends are tied. Not every story follows this exactly, but recognizing the pattern helps you track where you are in a story and feel its rising and falling tension.",
+    "tip": "Exposition → rising action → climax → falling action → resolution. The climax is the peak."
+   },
+   {
+    "h": "Point of view and voice",
+    "body": "Who tells the story changes everything. In first person, a character narrates using 'I,' giving us their direct thoughts but limiting us to what they know. In third person, an outside narrator uses 'he,' 'she,' 'they'; a third-person omniscient narrator knows everyone's thoughts, while a limited one follows just one character.\n\nPoint of view controls what information the reader gets and how we feel about events. An unreliable narrator — one we can't fully trust — adds another layer. Alongside point of view is voice: the distinctive style and personality of the writing. Noticing who's telling the story, and how, is central to understanding it.",
+    "example": "First person: 'I opened the door.' Third person: 'She opened the door.'",
+    "tip": "First person = 'I' (inside one head); third person = 'he/she/they' (outside). POV shapes what you know."
+   },
+   {
+    "h": "Figurative language and devices",
+    "body": "Writers use figurative language — words that mean more than their literal sense — to create vivid images and deeper meaning. A simile compares using 'like' or 'as' ('brave as a lion'); a metaphor compares directly ('the classroom was a zoo'). Personification gives human traits to non-human things ('the wind whispered').\n\nOther devices add layers: symbolism uses an object to stand for a bigger idea (a dove for peace); imagery appeals to the senses; irony means the opposite of what's expected. These tools are why literature rewards close reading — the meaning often lives beneath the surface, in how things are said as much as what is said.",
+    "tip": "Simile uses 'like'/'as'; metaphor says one thing IS another; personification gives things human traits."
+   },
+   {
+    "h": "Reading like an analyst",
+    "body": "Reading literature deeply means going beyond 'what happened' to 'what does it mean and how does the writer do it.' Analytical readers ask questions: Why did the character make that choice? What does this setting or object represent? What is the author really saying about life?\n\nThey notice patterns, pay attention to word choice, and support their interpretations with evidence from the text. There's rarely one 'right' answer, but good interpretations are grounded in the words on the page. This is the real reward of literature: it trains you to read carefully, think deeply, and understand experiences far beyond your own."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Genres",
+    "body": "Fiction (invented), nonfiction (fact), poetry (compressed language), drama (performed)."
+   },
+   {
+    "h": "Story elements",
+    "body": "Plot, character, setting, conflict, and theme. Plot = what happens; theme = what it means."
+   },
+   {
+    "h": "Plot shape",
+    "body": "Exposition → rising action → climax (peak) → falling action → resolution."
    },
    {
     "h": "Point of view",
-    "body": "Who's telling the story shapes everything. First person ('I') puts you inside one character's head; third person ('he/she/they') can follow one character or know everyone's thoughts. An unreliable narrator may not tell the full truth — part of the fun is noticing."
+    "body": "First person ('I') vs. third person ('he/she/they'); POV controls what the reader knows."
    },
    {
     "h": "Figurative language",
-    "body": "Writers use language that means more than its literal words. A metaphor says one thing is another ('time is a thief'); a simile compares using like/as ('brave as a lion'); symbolism lets an object stand for an idea (a storm for inner turmoil). These make writing vivid and layered."
-   },
-   {
-    "h": "Reading closely",
-    "body": "Close reading means slowing down to notice how a passage works — word choice, imagery, what's repeated, what's left unsaid. Ask not just 'what happened' but 'why did the author write it this way, and what does it make me feel or think?' That's where literature rewards you."
+    "body": "Simile (like/as), metaphor (is), personification, symbolism, imagery, irony."
    }
   ],
   "flash": [
    [
-    "Theme",
-    "The underlying message or insight a work explores."
+    "Fiction",
+    "Invented stories, such as novels and short stories."
+   ],
+   [
+    "Nonfiction",
+    "Writing based on fact, such as memoirs and essays."
    ],
    [
     "Plot",
     "The sequence of events in a story."
    ],
    [
+    "Character",
+    "A person or being the story is about."
+   ],
+   [
+    "Setting",
+    "When and where a story takes place."
+   ],
+   [
     "Conflict",
-    "The central struggle that drives a story."
+    "The central struggle that drives the plot."
    ],
    [
-    "Point of view",
-    "Who is telling the story (first or third person)."
+    "Theme",
+    "The deeper message or insight about life."
    ],
    [
-    "Metaphor",
-    "Saying one thing is another ('time is a thief')."
+    "Climax",
+    "The turning point of highest tension in a plot."
+   ],
+   [
+    "First person",
+    "A story narrated by a character using 'I.'"
+   ],
+   [
+    "Third person",
+    "A story told by an outside narrator ('he/she/they')."
    ],
    [
     "Simile",
-    "A comparison using 'like' or 'as' ('brave as a lion')."
+    "A comparison using 'like' or 'as.'"
    ],
    [
-    "Symbolism",
-    "When an object stands for a larger idea."
-   ],
-   [
-    "Close reading",
-    "Analyzing how a passage creates meaning."
+    "Metaphor",
+    "A direct comparison saying one thing is another."
    ]
   ],
   "quiz": [
    {
-    "q": "The theme of a story is:",
+    "q": "Invented stories like novels belong to which genre?",
     "options": [
-     "Its underlying message or insight",
-     "The list of events",
-     "The main character's name",
-     "The setting"
+     "Fiction",
+     "Nonfiction",
+     "Poetry",
+     "Drama"
     ],
     "a": 0,
-    "why": "Theme is the deeper idea; plot is the events."
+    "why": "Fiction is invented narrative."
    },
    {
-    "q": "'Brave as a lion' is an example of a:",
+    "q": "Writing meant to be performed on a stage is:",
     "options": [
-     "Simile",
-     "Metaphor",
+     "Drama",
+     "Poetry",
+     "Nonfiction",
+     "A novel"
+    ],
+    "a": 0,
+    "why": "Drama is written for performance."
+   },
+   {
+    "q": "The sequence of events in a story is the:",
+    "options": [
+     "Plot",
      "Theme",
-     "Setting"
+     "Setting",
+     "Narrator"
     ],
     "a": 0,
-    "why": "A simile compares using 'like' or 'as.'"
+    "why": "Plot is what happens."
    },
    {
-    "q": "A story told from the 'I' perspective uses:",
+    "q": "When and where a story takes place is the:",
     "options": [
-     "First person point of view",
-     "Third person",
-     "No narrator",
-     "Symbolism"
+     "Setting",
+     "Plot",
+     "Climax",
+     "Voice"
     ],
     "a": 0,
-    "why": "First person is narrated by a character using 'I.'"
+    "why": "The setting is the time and place."
    },
    {
-    "q": "'Time is a thief' is a:",
+    "q": "The central struggle that drives a story is the:",
+    "options": [
+     "Conflict",
+     "Resolution",
+     "Genre",
+     "Simile"
+    ],
+    "a": 0,
+    "why": "Conflict is the engine of the plot."
+   },
+   {
+    "q": "The deeper message about life a story explores is its:",
+    "options": [
+     "Theme",
+     "Plot",
+     "Setting",
+     "Exposition"
+    ],
+    "a": 0,
+    "why": "Theme = what the story means."
+   },
+   {
+    "q": "The turning point of highest tension is the:",
+    "options": [
+     "Climax",
+     "Exposition",
+     "Resolution",
+     "Hook"
+    ],
+    "a": 0,
+    "why": "The climax is the peak of the plot pyramid."
+   },
+   {
+    "q": "What comes right after the climax?",
+    "options": [
+     "Falling action",
+     "Exposition",
+     "Rising action",
+     "Title"
+    ],
+    "a": 0,
+    "why": "Events wind down in the falling action."
+   },
+   {
+    "q": "A story told with 'I' is in:",
+    "options": [
+     "First person",
+     "Third person",
+     "Second person only",
+     "No point of view"
+    ],
+    "a": 0,
+    "why": "First-person narrators use 'I.'"
+   },
+   {
+    "q": "A narrator who knows every character's thoughts is:",
+    "options": [
+     "Third-person omniscient",
+     "First person",
+     "Unreliable",
+     "Limited to one"
+    ],
+    "a": 0,
+    "why": "Omniscient means all-knowing."
+   },
+   {
+    "q": "'Brave as a lion' is a:",
+    "options": [
+     "Simile",
+     "Metaphor",
+     "Personification",
+     "Symbol"
+    ],
+    "a": 0,
+    "why": "It compares using 'as' — a simile."
+   },
+   {
+    "q": "'The classroom was a zoo' is a:",
     "options": [
      "Metaphor",
      "Simile",
-     "Fact",
+     "Irony",
      "Setting"
     ],
     "a": 0,
-    "why": "A metaphor states one thing IS another, without 'like/as.'"
+    "why": "It says one thing IS another — a metaphor."
    },
    {
-    "q": "When an object stands for a bigger idea, that's:",
+    "q": "'The wind whispered' gives the wind a human trait. This is:",
+    "options": [
+     "Personification",
+     "Simile",
+     "Plot",
+     "Genre"
+    ],
+    "a": 0,
+    "why": "Personification gives human traits to non-human things."
+   },
+   {
+    "q": "A dove standing for peace is an example of:",
     "options": [
      "Symbolism",
-     "Plot",
-     "Conflict",
-     "Point of view"
+     "A simile",
+     "A fragment",
+     "Exposition"
     ],
     "a": 0,
-    "why": "Symbolism uses a concrete thing to represent an abstract idea."
+    "why": "Symbolism uses an object to represent a bigger idea."
    },
    {
-    "q": "Close reading means:",
+    "q": "Analytical reading means focusing on:",
     "options": [
-     "Slowing down to analyze how a passage works",
-     "Reading as fast as possible",
-     "Only reading the ending",
-     "Skipping hard parts"
+     "What it means and how the writer does it",
+     "Only what happened",
+     "Only the last page",
+     "The cover art"
     ],
     "a": 0,
-    "why": "It's careful analysis of word choice, imagery, and meaning."
+    "why": "Analysis goes beyond plot to meaning and craft, backed by evidence."
    }
   ]
  },
