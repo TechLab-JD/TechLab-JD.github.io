@@ -687,43 +687,88 @@ window.LAB404_CONTENT = {
  },
  "coding-python": {
   "title": "Python",
-  "subject": "Computer Science & Coding",
-  "level": "Grades 9-12",
-  "intro": "Python is one of the best first programming languages — it reads almost like English and is used everywhere from websites to data science. Programming is just giving a computer exact, step-by-step instructions. Learn these building blocks and you can write real, useful code.",
+  "subject": "Coding",
+  "level": "Grades 7-12",
+  "objectives": [
+   "Explain what Python is and why it's a great first language",
+   "Use variables and the basic data types",
+   "Use input, output, and operators",
+   "Control flow with if-statements and loops",
+   "Organize code with functions and lists"
+  ],
+  "intro": "Python is one of the world's most popular programming languages — readable, beginner-friendly, and powerful enough for websites, data science, and AI. It's an ideal first language. This lesson teaches the core building blocks of Python, enough to start writing real programs that make decisions and repeat work.",
+  "sections": [
+   {
+    "h": "Why Python, and your first program",
+    "body": "Python is prized for reading almost like plain English, which lets you focus on solving problems instead of fighting the language. It's used everywhere — from small scripts to major companies and NASA — and it's free. You write Python as plain text and run it; the result appears immediately.\n\nThe traditional first program just prints a message to the screen. In Python, that's a single line: print(\"Hello, world!\"). The print() function displays whatever you put inside its parentheses. That simplicity — one readable line to see a result — is a big part of why Python is the most recommended first language.",
+    "example": "print(\"Hello, world!\")\n# Output:  Hello, world!",
+    "tip": "Python reads almost like English. print(...) displays text; a # starts a comment Python ignores."
+   },
+   {
+    "h": "Variables and data types",
+    "body": "A variable is a named box that stores a value so you can use it later. You create one by giving it a name and a value with the = sign: age = 16. After that, 'age' holds 16 until you change it. Variables make programs flexible — the same code can work with different values.\n\nPython values come in types. An integer (int) is a whole number (5); a float is a decimal (3.14); a string (str) is text in quotes (\"hello\"); and a boolean (bool) is True or False. Python figures out the type automatically. Knowing types matters because you can do math with numbers but not, directly, with text.",
+    "example": "name = \"Sam\"      # a string\nage = 16          # an integer\nheight = 5.4      # a float\nis_student = True  # a boolean",
+    "tip": "A variable stores a value with =. Core types: int (5), float (3.14), str (\"text\"), bool (True/False)."
+   },
+   {
+    "h": "Input, output, and operators",
+    "body": "Programs become interactive when they take input. Python's input() function pauses and waits for the user to type something, then hands back what they typed as a string. You usually store it in a variable: name = input(\"What's your name? \"). To show results, you use print(), often combined with variables.\n\nOperators let you compute. The arithmetic operators are + - * / (add, subtract, multiply, divide). Comparison operators like == (equal to), >, and < compare values and give a True/False result. One common gotcha: input() always gives text, so to do math on a typed number you must convert it with int() or float() first.",
+    "example": "age = int(input(\"Your age? \"))\nnext_year = age + 1\nprint(\"Next year you will be\", next_year)",
+    "tip": "input() returns text — wrap it in int() or float() before math. == checks equality; = assigns."
+   },
+   {
+    "h": "Making decisions and repeating work",
+    "body": "Real programs make choices. An if statement runs a block of code only when a condition is True; else gives an alternative, and elif ('else if') checks more conditions. Python uses indentation (spaces at the start of a line) to show which code belongs inside the if — a defining feature of the language.\n\nTo repeat work, you use loops. A for loop repeats a set number of times or over a collection of items; a while loop repeats as long as a condition stays True. Loops are what let a program do thousands of repetitions without you writing thousands of lines. Decisions and loops together give programs their real power.",
+    "visual": "<svg viewBox=\"0 0 240 150\" width=\"230\" role=\"img\" aria-label=\"A flowchart: if score is 60 or more, print Pass, otherwise print Fail\"><polygon points=\"120,12 180,45 120,78 60,45\" fill=\"rgba(232,184,75,.14)\" stroke=\"#e8b84b\" stroke-width=\"1.6\"/><text x=\"120\" y=\"48\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9\">score &gt;= 60 ?</text><polyline points=\"180,45 184,45 184,100\" fill=\"none\" stroke=\"#39e3c8\" stroke-width=\"1.6\"/><polygon points=\"180,94 188,94 184,101\" fill=\"#39e3c8\"/><polyline points=\"60,45 56,45 56,100\" fill=\"none\" stroke=\"#f05a5a\" stroke-width=\"1.6\"/><polygon points=\"52,94 60,94 56,101\" fill=\"#f05a5a\"/><text x=\"193\" y=\"72\" fill=\"#39e3c8\" font-size=\"9\">Yes</text><text x=\"40\" y=\"72\" fill=\"#f05a5a\" font-size=\"9\">No</text><rect x=\"153\" y=\"100\" width=\"62\" height=\"30\" rx=\"6\" fill=\"rgba(57,227,200,.14)\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><text x=\"184\" y=\"119\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Pass</text><rect x=\"25\" y=\"100\" width=\"62\" height=\"30\" rx=\"6\" fill=\"rgba(240,90,90,.16)\" stroke=\"#f05a5a\" stroke-width=\"1.5\"/><text x=\"56\" y=\"119\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Fail</text></svg>",
+    "caption": "An if/else decision: the condition is tested, and the program branches one way or the other.",
+    "example": "score = 72\nif score >= 60:\n    print(\"Pass\")\nelse:\n    print(\"Fail\")\n\nfor i in range(3):\n    print(\"Hello\")",
+    "tip": "if/elif/else make decisions; for and while loops repeat. Indentation (not braces) marks a block in Python."
+   },
+   {
+    "h": "Functions and lists",
+    "body": "As programs grow, you organize code into functions — named, reusable blocks that do one job. You define a function with def and call it by name whenever you need it. Functions can take inputs (parameters) and give back a result (return). They keep code from repeating and make it easier to read and fix.\n\nTo store many values together, Python uses a list — an ordered collection written in square brackets: scores = [90, 85, 72]. You can access items by position (starting at 0), add to a list, and loop over it. Functions and lists are where beginner programs start to become genuinely useful, handling many values and tasks cleanly.",
+    "example": "def greet(name):\n    return \"Hi, \" + name\n\nprint(greet(\"Sam\"))   # Hi, Sam\n\nscores = [90, 85, 72]\nprint(scores[0])      # 90",
+    "tip": "def defines a reusable function; a list [ .. ] stores many values, indexed from 0."
+   }
+  ],
   "cards": [
    {
-    "h": "Variables store values",
-    "body": "A variable is a named box that holds a value: name = \"Sam\" or age = 20. You can change what's inside later. Python figures out the type automatically — text (strings), whole numbers (ints), decimals (floats), and True/False (booleans)."
+    "h": "First program",
+    "body": "Python reads like English; print(\"Hello, world!\") shows text. A # begins a comment."
    },
    {
-    "h": "print() and input()",
-    "body": "print() shows text on the screen; input() reads what the user types (always as text). print(\"Hello\") displays Hello. These two let your program talk with a person."
+    "h": "Variables & types",
+    "body": "name = value stores it. Types: int (5), float (3.14), str (\"text\"), bool (True/False)."
    },
    {
-    "h": "if / else makes decisions",
-    "body": "Code can choose what to do based on a condition: if age >= 18: print(\"adult\") else: print(\"minor\"). Indentation (the spaces at the start of a line) is how Python groups code — it is not optional."
+    "h": "Input & operators",
+    "body": "input() reads text (convert with int()/float() for math); + - * / compute; == compares."
    },
    {
-    "h": "Loops repeat work",
-    "body": "A for loop repeats over a sequence; a while loop repeats as long as a condition is true. for i in range(3): print(i) prints 0, 1, 2. Loops save you from writing the same line over and over."
+    "h": "Decisions & loops",
+    "body": "if/elif/else choose; for and while repeat; indentation marks the block."
    },
    {
-    "h": "Functions package code",
-    "body": "A function is reusable code you define once and call by name: def greet(name): return \"Hi \" + name. Then greet(\"Sam\") gives \"Hi Sam\". Functions keep programs organized and avoid repetition."
+    "h": "Functions & lists",
+    "body": "def makes a reusable function (parameters, return); a list [..] holds many values, indexed from 0."
    }
   ],
   "flash": [
    [
     "Variable",
-    "A named container that stores a value."
+    "A named box that stores a value."
    ],
    [
     "String",
-    "Text data, written in quotes (e.g., \"hello\")."
+    "Text data, written in quotes."
    ],
    [
     "Integer",
-    "A whole number with no decimal (e.g., 5)."
+    "A whole number value (int)."
+   ],
+   [
+    "Float",
+    "A decimal number value."
    ],
    [
     "Boolean",
@@ -731,87 +776,198 @@ window.LAB404_CONTENT = {
    ],
    [
     "print()",
-    "A function that displays output on the screen."
+    "A function that displays output on screen."
+   ],
+   [
+    "input()",
+    "A function that reads text typed by the user."
    ],
    [
     "if statement",
-    "Runs code only when a condition is true."
+    "Code that runs only when a condition is True."
    ],
    [
     "Loop",
-    "Code that repeats (a for loop or a while loop)."
+    "Code that repeats (for or while)."
    ],
    [
     "Function",
-    "A reusable named block of code you define and call."
+    "A named, reusable block of code (defined with def)."
+   ],
+   [
+    "List",
+    "An ordered collection of values in square brackets."
+   ],
+   [
+    "Comment",
+    "A # note in code that Python ignores."
    ]
   ],
   "quiz": [
    {
-    "q": "Which creates a variable holding text?",
+    "q": "Which line prints text in Python?",
     "options": [
-     "name = \"Sam\"",
-     "name = Sam",
-     "\"Sam\" = name",
-     "name == Sam"
+     "print(\"Hello\")",
+     "say Hello",
+     "echo Hello",
+     "write(Hello)"
     ],
     "a": 0,
-    "why": "Text goes in quotes and is assigned with a single =."
+    "why": "print() displays whatever is in its parentheses."
    },
    {
-    "q": "What does print(2 + 3) display?",
+    "q": "What symbol starts a comment Python ignores?",
     "options": [
-     "5",
-     "23",
-     "2 + 3",
-     "Error"
+     "#",
+     "//",
+     "<!--",
+     ";"
     ],
     "a": 0,
-    "why": "Python evaluates 2 + 3 to 5 and prints the number."
+    "why": "A # begins a Python comment."
    },
    {
-    "q": "input() always returns data as a:",
+    "q": "Which creates a variable?",
     "options": [
-     "String (text)",
+     "age = 16",
+     "16 = age",
+     "var age",
+     "age := 16"
+    ],
+    "a": 0,
+    "why": "name = value assigns a variable."
+   },
+   {
+    "q": "\"hello\" is which data type?",
+    "options": [
+     "String",
      "Integer",
      "Boolean",
      "Float"
     ],
     "a": 0,
-    "why": "input() gives text; convert with int() if you need a number."
+    "why": "Text in quotes is a string."
    },
    {
-    "q": "How is code grouped under an if or a loop in Python?",
+    "q": "3.14 is which data type?",
+    "options": [
+     "Float",
+     "Integer",
+     "String",
+     "Boolean"
+    ],
+    "a": 0,
+    "why": "A decimal number is a float."
+   },
+   {
+    "q": "True and False are which type?",
+    "options": [
+     "Boolean",
+     "String",
+     "Integer",
+     "List"
+    ],
+    "a": 0,
+    "why": "Boolean values are True or False."
+   },
+   {
+    "q": "input() always returns a:",
+    "options": [
+     "String",
+     "Integer",
+     "Float",
+     "Boolean"
+    ],
+    "a": 0,
+    "why": "Typed input comes back as text until you convert it."
+   },
+   {
+    "q": "To do math on a typed number, you first:",
+    "options": [
+     "Convert it with int() or float()",
+     "Print it",
+     "Delete it",
+     "Capitalize it"
+    ],
+    "a": 0,
+    "why": "input() gives text; convert before math."
+   },
+   {
+    "q": "Which operator checks if two values are equal?",
+    "options": [
+     "==",
+     "=",
+     "=>",
+     "!"
+    ],
+    "a": 0,
+    "why": "== compares; a single = assigns."
+   },
+   {
+    "q": "An if statement runs its block when the condition is:",
+    "options": [
+     "True",
+     "False",
+     "A string",
+     "Empty"
+    ],
+    "a": 0,
+    "why": "The block runs only when the condition is True."
+   },
+   {
+    "q": "Which repeats code a set number of times?",
+    "options": [
+     "A for loop",
+     "An if statement",
+     "print()",
+     "A comment"
+    ],
+    "a": 0,
+    "why": "A for loop repeats over a range or collection."
+   },
+   {
+    "q": "In Python, what marks which code is inside an if or loop?",
     "options": [
      "Indentation",
-     "Curly braces { }",
+     "Curly braces {}",
      "Semicolons",
      "Parentheses"
     ],
     "a": 0,
-    "why": "Python uses indentation (spaces) to define blocks."
+    "why": "Python uses indentation to define blocks."
    },
    {
-    "q": "for i in range(3): print(i) prints:",
+    "q": "A reusable named block of code is a:",
     "options": [
-     "0 1 2",
-     "1 2 3",
-     "0 1 2 3",
-     "3"
+     "Function",
+     "Variable",
+     "String",
+     "List"
     ],
     "a": 0,
-    "why": "range(3) gives 0, 1, 2 — it stops before 3."
+    "why": "Functions (def) group reusable code."
    },
    {
-    "q": "What does a function let you do?",
+    "q": "Which stores many values in order?",
     "options": [
-     "Reuse code by name",
-     "Only print text",
-     "Store one number",
-     "Stop the program"
+     "A list",
+     "A single int",
+     "A boolean",
+     "A comment"
     ],
     "a": 0,
-    "why": "Functions package reusable code you call whenever needed."
+    "why": "A list [..] holds an ordered collection."
+   },
+   {
+    "q": "In scores = [90, 85, 72], scores[0] is:",
+    "options": [
+     "90",
+     "85",
+     "72",
+     "0"
+    ],
+    "a": 0,
+    "why": "Lists are indexed from 0, so [0] is the first item, 90."
    }
   ]
  },
@@ -2190,131 +2346,285 @@ window.LAB404_CONTENT = {
  },
  "coding-web-development-html-css-js": {
   "title": "Web Development (HTML/CSS/JS)",
-  "subject": "Computer Science & Coding",
-  "level": "Grades 9-12",
-  "intro": "Every website is built from three languages working together. Learn what each one does and you can build and understand web pages — the most visible, shareable kind of code there is.",
+  "subject": "Coding",
+  "level": "Grades 7-12",
+  "objectives": [
+   "Explain how the web works (client, server, request/response)",
+   "Structure a page with HTML",
+   "Style a page with CSS",
+   "Add interactivity with JavaScript",
+   "Understand how the three languages work together"
+  ],
+  "intro": "Every website you visit is built from three core technologies working together: HTML for structure, CSS for style, and JavaScript for behavior. Learning them lets you build anything from a personal page to a web app. This lesson explains how the web works and introduces each of the three languages.",
+  "sections": [
+   {
+    "h": "How the web works",
+    "body": "The web is a huge collection of pages stored on computers called servers. When you type an address or click a link, your browser (the client) sends a request over the internet to the server that holds that page. The server sends back the page's files, and your browser renders them into what you see.\n\nA web address (URL) points to a specific resource. The files that come back are mostly three kinds: HTML, CSS, and JavaScript. The browser's job is to take those text files and turn them into a living, interactive page. Understanding this request-and-response cycle is the foundation of all web development.",
+    "visual": "<svg viewBox=\"0 0 252 116\" width=\"245\" role=\"img\" aria-label=\"A browser sending a request to a server and the server responding with HTML, CSS and JavaScript\"><rect x=\"12\" y=\"28\" width=\"74\" height=\"46\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"49\" y=\"55\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Browser</text><rect x=\"166\" y=\"28\" width=\"74\" height=\"46\" rx=\"6\" fill=\"rgba(107,122,152,.2)\" stroke=\"#6b7a98\" stroke-width=\"1.5\"/><text x=\"203\" y=\"55\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Server</text><text x=\"49\" y=\"86\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">(client)</text><line x1=\"88\" y1=\"46\" x2=\"159\" y2=\"46\" stroke=\"#39e3c8\" stroke-width=\"2\"/><polygon points=\"159,42 164,46 159,50\" fill=\"#39e3c8\"/><text x=\"126\" y=\"40\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">request (URL)</text><line x1=\"164\" y1=\"66\" x2=\"93\" y2=\"66\" stroke=\"#4f9cf0\" stroke-width=\"2\"/><polygon points=\"93,62 88,66 93,70\" fill=\"#4f9cf0\"/><text x=\"126\" y=\"84\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">HTML / CSS / JS</text></svg>",
+    "caption": "The browser requests a page; the server responds with HTML, CSS, and JavaScript, which the browser renders.",
+    "tip": "Browser (client) requests a page → server sends HTML/CSS/JS → browser renders it. That's the web."
+   },
+   {
+    "h": "HTML: structure",
+    "body": "HTML (HyperText Markup Language) provides the structure and content of a page — its skeleton. You write HTML using tags, keywords in angle brackets that usually come in pairs wrapping content: <h1>Title</h1> makes a big heading, <p>text</p> makes a paragraph. The tags tell the browser what each piece of content is.\n\nCommon elements include headings (<h1> through <h6>), paragraphs (<p>), links (<a>), images (<img>), lists (<ul>, <li>), and containers (<div>). HTML alone produces a plain but complete page — all the content and structure, with no styling yet. It answers the question: what's on the page?",
+    "example": "<h1>My Page</h1>\n<p>Welcome to my <a href=\"about.html\">site</a>.</p>",
+    "tip": "HTML = structure. Tags like <h1>, <p>, <a>, <img> label what each piece of content is."
+   },
+   {
+    "h": "CSS: style",
+    "body": "CSS (Cascading Style Sheets) controls how the page looks — its appearance. If HTML is the skeleton, CSS is the skin and clothes: colors, fonts, sizes, spacing, and layout. You write CSS as rules that select elements and set properties: p { color: blue; font-size: 16px; } makes all paragraphs blue and 16 pixels.\n\nA rule has a selector (what to style) and declarations (property: value pairs). CSS is what makes the web beautiful and lets pages adapt to phones and desktops. Separating style (CSS) from structure (HTML) is a core principle — it lets you restyle an entire site by changing one stylesheet.",
+    "example": "h1 { color: navy; text-align: center; }\np  { font-size: 16px; line-height: 1.5; }",
+    "tip": "CSS = style. A rule is selector { property: value; } — it controls color, fonts, spacing, and layout."
+   },
+   {
+    "h": "JavaScript: behavior",
+    "body": "JavaScript makes pages interactive — it's the behavior. While HTML structures and CSS styles, JavaScript responds to what the user does and changes the page on the fly. It can react to clicks, validate a form, fetch new data, animate elements, and build full applications right in the browser.\n\nJavaScript is a full programming language with variables, conditions, loops, and functions (much like Python, with different syntax). A typical use: when a user clicks a button, JavaScript runs a function that updates the page without reloading it. It's what turns a static document into a dynamic app — the reason the modern web feels alive.",
+    "example": "const btn = document.querySelector(\"button\");\nbtn.addEventListener(\"click\", () => {\n  btn.textContent = \"Clicked!\";\n});",
+    "tip": "JavaScript = behavior. It reacts to user actions (like clicks) and changes the page without reloading."
+   },
+   {
+    "h": "Putting it together",
+    "body": "A real web page uses all three languages at once, each doing its own job. HTML lays out the content and structure. CSS, usually in a separate .css file, styles it. JavaScript, often in a separate .js file, adds the interactivity. The browser combines them into the final experience.\n\nThis separation of concerns — structure, style, and behavior kept apart — is a hallmark of good web development. It makes pages easier to build, read, and maintain: a designer can tweak the CSS without touching the logic, and a programmer can change the JavaScript without breaking the layout. Master the three and how they cooperate, and you can build for the entire web.",
+    "tip": "HTML (structure) + CSS (style) + JavaScript (behavior), kept separate, combine into every modern web page."
+   }
+  ],
   "cards": [
    {
-    "h": "Three languages, three jobs",
-    "body": "HTML is the structure (the content and its skeleton), CSS is the style (colors, layout, fonts), and JavaScript is the behavior (things that respond and change). A good way to remember: HTML = nouns, CSS = adjectives, JS = verbs."
+    "h": "How the web works",
+    "body": "Browser (client) requests a URL; the server responds with HTML/CSS/JS; the browser renders the page."
    },
    {
-    "h": "HTML: tags and elements",
-    "body": "HTML marks up content with tags in angle brackets. Most come in pairs: <p>Hello</p> is a paragraph element. Common tags: <h1> heading, <p> paragraph, <a> link, <img> image, <div> a generic container."
+    "h": "HTML",
+    "body": "Structure and content via tags: <h1>, <p>, <a>, <img>, <ul>. Answers 'what's on the page?'"
    },
    {
-    "h": "CSS: selectors and rules",
-    "body": "CSS styles HTML by selecting elements and setting properties: p { color: blue; font-size: 16px; } makes all paragraphs blue. You can select by tag, by class (.button), or by id (#header)."
+    "h": "CSS",
+    "body": "Style: colors, fonts, spacing, layout. Rules are selector { property: value; }."
    },
    {
-    "h": "JavaScript on a page",
-    "body": "JavaScript makes pages interactive — responding to clicks, changing content, validating forms. It can find elements and change them: document.getElementById('msg').textContent = 'Hi'. It runs right in the browser."
+    "h": "JavaScript",
+    "body": "Behavior: reacts to user actions (clicks, input) and changes the page without reloading."
    },
    {
-    "h": "How a browser builds a page",
-    "body": "When you open a page, the browser reads the HTML top to bottom, applies the CSS to style it, and runs the JavaScript to make it interactive. Together they turn text files into the page you see and use."
+    "h": "Together",
+    "body": "HTML + CSS + JS each do one job, kept separate — structure, style, behavior."
    }
   ],
   "flash": [
    [
     "HTML",
-    "The language for a web page's structure and content."
+    "The language for a page's structure and content."
    ],
    [
     "CSS",
-    "The language for a web page's style (color, layout, fonts)."
+    "The language for a page's style and appearance."
    ],
    [
     "JavaScript",
-    "The language for a web page's behavior and interactivity."
+    "The language for a page's behavior and interactivity."
    ],
    [
     "Tag",
-    "HTML markup in angle brackets, like <p> or <h1>."
+    "A keyword in angle brackets, like <p>, that marks content."
    ],
    [
     "Element",
-    "An HTML tag plus its content, like <p>Hi</p>."
+    "A piece of a page defined by tags (e.g., a paragraph)."
    ],
    [
-    "Selector",
-    "The part of a CSS rule that picks which elements to style."
+    "Server",
+    "A computer that stores and sends web pages."
    ],
    [
-    "Class",
-    "A reusable label on elements, selected in CSS with a dot (.button)."
+    "Client",
+    "The browser that requests and displays pages."
    ],
    [
     "Browser",
-    "The program that reads HTML/CSS/JS and shows the page."
+    "Software that renders web pages (Chrome, Firefox)."
+   ],
+   [
+    "URL",
+    "A web address pointing to a resource."
+   ],
+   [
+    "Selector",
+    "The part of a CSS rule that chooses what to style."
+   ],
+   [
+    "Event",
+    "A user action (like a click) that JavaScript can respond to."
+   ],
+   [
+    "Attribute",
+    "Extra info on an HTML tag, like href on a link."
    ]
   ],
   "quiz": [
    {
-    "q": "Which language controls a web page's structure?",
+    "q": "The three core web languages are:",
     "options": [
-     "HTML",
-     "CSS",
-     "JavaScript",
-     "Python"
+     "HTML, CSS, JavaScript",
+     "Python, Java, C++",
+     "Word, Excel, PDF",
+     "HTTP, FTP, SSH"
     ],
     "a": 0,
-    "why": "HTML provides the content and skeleton of the page."
+    "why": "Structure, style, and behavior."
    },
    {
-    "q": "Which language styles colors and layout?",
+    "q": "When you open a page, your browser sends a:",
     "options": [
-     "CSS",
-     "HTML",
-     "JavaScript",
-     "SQL"
+     "Request to a server",
+     "Virus",
+     "Payment",
+     "Photo"
     ],
     "a": 0,
-    "why": "CSS handles the look — colors, fonts, spacing, layout."
+    "why": "The client requests; the server responds."
    },
    {
-    "q": "Which makes a page interactive (respond to clicks)?",
+    "q": "A computer that stores and sends web pages is a:",
     "options": [
-     "JavaScript",
-     "HTML",
-     "CSS",
-     "JSON"
+     "Server",
+     "Printer",
+     "Router cable",
+     "Keyboard"
     ],
     "a": 0,
-    "why": "JavaScript adds behavior and interactivity."
+    "why": "Servers host and send pages."
    },
    {
-    "q": "<p>Hello</p> is an example of a(n):",
+    "q": "HTML is responsible for a page's:",
     "options": [
-     "HTML element",
-     "CSS rule",
-     "JS function",
-     "Image file"
+     "Structure and content",
+     "Colors only",
+     "Click behavior",
+     "Server location"
     ],
     "a": 0,
-    "why": "A tag pair plus its content is an HTML element."
+    "why": "HTML is the skeleton — structure and content."
    },
    {
-    "q": "In CSS, '.button' selects elements by their:",
+    "q": "Which is an HTML tag for a paragraph?",
     "options": [
-     "Class",
+     "<p>",
+     "{p}",
+     "(p)",
+     "[p]"
+    ],
+    "a": 0,
+    "why": "Tags use angle brackets, like <p>."
+   },
+   {
+    "q": "CSS is responsible for a page's:",
+    "options": [
+     "Style and appearance",
+     "Content",
+     "Server",
+     "Database"
+    ],
+    "a": 0,
+    "why": "CSS controls colors, fonts, spacing, and layout."
+   },
+   {
+    "q": "A CSS rule is written as:",
+    "options": [
+     "selector { property: value; }",
+     "if (x) then y",
+     "print(x)",
+     "<style=blue>"
+    ],
+    "a": 0,
+    "why": "Selector plus property:value declarations."
+   },
+   {
+    "q": "Which CSS makes paragraphs blue?",
+    "options": [
+     "p { color: blue; }",
+     "<p blue>",
+     "color.p = blue",
+     "p = blue"
+    ],
+    "a": 0,
+    "why": "Select p, set the color property to blue."
+   },
+   {
+    "q": "JavaScript is responsible for a page's:",
+    "options": [
+     "Behavior and interactivity",
+     "Structure",
+     "Colors only",
+     "Hosting"
+    ],
+    "a": 0,
+    "why": "JS reacts to actions and changes the page."
+   },
+   {
+    "q": "A user clicking a button is an example of a(n):",
+    "options": [
+     "Event",
      "Tag",
-     "Id",
-     "Color"
+     "Selector",
+     "Server"
     ],
     "a": 0,
-    "why": "A leading dot selects by class name."
+    "why": "Events are user actions JavaScript can respond to."
    },
    {
-    "q": "A browser reads the languages in roughly this order:",
+    "q": "JavaScript can change the page:",
     "options": [
-     "HTML, then CSS, then JavaScript",
-     "JavaScript first",
-     "CSS first",
-     "Random order"
+     "Without reloading it",
+     "Only by reloading",
+     "Never",
+     "Only on the server"
     ],
     "a": 0,
-    "why": "It builds structure (HTML), styles it (CSS), then runs behavior (JS)."
+    "why": "JS updates the page dynamically in the browser."
+   },
+   {
+    "q": "In <a href=\"about.html\">, href is a(n):",
+    "options": [
+     "Attribute",
+     "Tag",
+     "Selector",
+     "Loop"
+    ],
+    "a": 0,
+    "why": "Attributes add info to a tag, like a link's destination."
+   },
+   {
+    "q": "A web address pointing to a resource is a:",
+    "options": [
+     "URL",
+     "CPU",
+     "RAM",
+     "GIF"
+    ],
+    "a": 0,
+    "why": "URL = the address of a web resource."
+   },
+   {
+    "q": "Keeping structure, style, and behavior in separate files is called:",
+    "options": [
+     "Separation of concerns",
+     "A syntax error",
+     "Compiling",
+     "Hosting"
+    ],
+    "a": 0,
+    "why": "It makes pages easier to build and maintain."
+   },
+   {
+    "q": "The software that renders web pages is the:",
+    "options": [
+     "Browser",
+     "Server",
+     "Database",
+     "Compiler"
+    ],
+    "a": 0,
+    "why": "The browser turns HTML/CSS/JS into what you see."
    }
   ]
  },
@@ -10242,391 +10552,848 @@ window.LAB404_CONTENT = {
  },
  "coding-computer-science-foundations": {
   "title": "Computer Science Foundations",
-  "subject": "Computer Science & Coding",
+  "subject": "Coding",
   "level": "Grades 6-12",
-  "intro": "Computer science is about solving problems with clear, logical steps a computer can follow. Before any specific language, these foundational ideas explain how computers 'think' and how good solutions are built.",
-  "cards": [
+  "objectives": [
+   "Explain what a computer does with the input-process-output-storage model",
+   "Describe how computers represent data in binary (bits and bytes)",
+   "Explain what an algorithm is and how programs run",
+   "Distinguish hardware from software and how they interact",
+   "Understand the core problem-solving ideas of computer science"
+  ],
+  "intro": "Computer science is the study of computation — how we represent information and solve problems step by step so a machine can carry them out. Before any programming language, these foundations explain what a computer really does. This lesson covers how computers work, binary, algorithms, hardware and software, and the thinking behind it all.",
+  "sections": [
    {
-    "h": "What a computer actually does",
-    "body": "A computer follows instructions exactly, very fast, with no common sense. It takes input, processes it with instructions (a program), stores data, and produces output. Everything — videos, games, apps — is built from these simple operations repeated at enormous speed."
+    "h": "What a computer does",
+    "body": "At its core, a computer is a machine that follows instructions to process information. Everything it does fits a simple model with four parts: input (data comes in — keyboard, mouse, sensors), processing (the CPU performs calculations and logic on that data), output (results come out — screen, speakers, printer), and storage (data is saved for later — drives and memory).\n\nThis input-process-output model describes everything from a calculator to a supercomputer. The computer itself doesn't 'understand' anything; it blindly and very quickly follows the precise instructions it's given. Its power comes from doing simple operations billions of times per second, reliably.",
+    "visual": "<svg viewBox=\"0 0 252 148\" width=\"245\" role=\"img\" aria-label=\"The input, process, output, storage model of a computer\"><rect x=\"6\" y=\"24\" width=\"64\" height=\"38\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"38\" y=\"47\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Input</text><line x1=\"70\" y1=\"43\" x2=\"89\" y2=\"43\" stroke=\"#39e3c8\" stroke-width=\"2\"/><polygon points=\"89,39 94,43 89,47\" fill=\"#39e3c8\"/><rect x=\"94\" y=\"24\" width=\"64\" height=\"38\" rx=\"6\" fill=\"rgba(240,90,90,.16)\" stroke=\"#f05a5a\" stroke-width=\"1.5\"/><text x=\"126\" y=\"47\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Process</text><line x1=\"158\" y1=\"43\" x2=\"177\" y2=\"43\" stroke=\"#39e3c8\" stroke-width=\"2\"/><polygon points=\"177,39 182,43 177,47\" fill=\"#39e3c8\"/><rect x=\"182\" y=\"24\" width=\"64\" height=\"38\" rx=\"6\" fill=\"rgba(57,227,200,.14)\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><text x=\"214\" y=\"47\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Output</text><line x1=\"126\" y1=\"62\" x2=\"126\" y2=\"96\" stroke=\"#e8b84b\" stroke-width=\"2\"/><polygon points=\"122,69 130,69 126,62\" fill=\"#e8b84b\"/><polygon points=\"122,89 130,89 126,96\" fill=\"#e8b84b\"/><rect x=\"94\" y=\"96\" width=\"64\" height=\"38\" rx=\"6\" fill=\"rgba(232,184,75,.16)\" stroke=\"#e8b84b\" stroke-width=\"1.5\"/><text x=\"126\" y=\"119\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Storage</text><text x=\"126\" y=\"18\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">the CPU processes; storage holds data for later</text></svg>",
+    "caption": "Every computer follows the same model: data comes in, the CPU processes it, results go out, and storage keeps data for later.",
+    "tip": "Every computer follows the same model: Input → Process → Output, with Storage holding data for later."
    },
    {
-    "h": "Everything is bits (binary)",
-    "body": "Computers store and process everything as binary — 1s and 0s (bits). Numbers, letters, images, and sound are all encoded as patterns of bits. Eight bits make a byte. This on/off system works because it maps perfectly onto electronic switches."
+    "h": "Binary: how computers store data",
+    "body": "Computers are electronic, and at the lowest level they understand only two states: on and off, represented as 1 and 0. Each 1 or 0 is a bit, the smallest piece of data. Group eight bits together and you get a byte, enough to represent a single character like the letter 'A.'\n\nEverything a computer handles — numbers, text, images, sound, video — is ultimately stored as patterns of these bits. Text uses codes (like ASCII) that map each character to a number; images store the color of each pixel as numbers; and so on. This binary system is simple, but with enough bits it can represent anything digital.",
+    "example": "The letter 'A' = 01000001 in binary (one byte). The number 5 = 101.",
+    "tip": "A bit is one 1 or 0; 8 bits make a byte. All data — text, images, sound — is stored as binary patterns."
    },
    {
     "h": "Algorithms: step-by-step solutions",
-    "body": "An algorithm is a precise set of steps to solve a problem — like a recipe. A good algorithm is correct and efficient. The same problem can have many algorithms, some far faster than others; choosing well is a core skill in computer science."
+    "body": "An algorithm is a precise, step-by-step set of instructions for solving a problem or completing a task. A recipe is an everyday algorithm; so are the directions to a friend's house. In computer science, algorithms are the heart of everything — a program is really just one or more algorithms written in a language a computer can run.\n\nGood algorithms are clear, correct, and efficient. The same problem can often be solved many ways, and computer scientists compare algorithms by how fast they run and how much memory they use. Learning to break a problem into clear, ordered steps — before writing any code — is the single most important skill in programming.",
+    "example": "Find the biggest number in a list: start with the first, compare each next one, keep the larger, repeat to the end.",
+    "tip": "An algorithm is a clear step-by-step solution. Solve the problem in steps first, then turn it into code."
    },
    {
-    "h": "Thinking like a programmer",
-    "body": "Programmers break big problems into smaller pieces (decomposition), spot patterns, ignore irrelevant detail (abstraction), and write clear steps (logic). This 'computational thinking' is useful far beyond coding — it's a way to tackle any complex problem."
+    "h": "Hardware and software",
+    "body": "A computer has two halves that work together. Hardware is the physical parts you can touch: the CPU (the 'brain' that processes), memory (RAM, fast temporary workspace), storage (drives that keep data permanently), and input/output devices. Software is the set of instructions — the programs — that tell the hardware what to do.\n\nNeither is useful alone: hardware without software is an inert box, and software needs hardware to run on. The operating system (like Windows or Linux) is special software that manages the hardware and lets other programs run. Understanding this split helps you see what's actually happening when you use any device.",
+    "tip": "Hardware = the physical parts; software = the instructions. The OS is the software that manages the hardware."
    },
    {
-    "h": "Logic and conditions",
-    "body": "Computers make decisions with logic: IF a condition is true, do one thing, ELSE do another. They combine conditions with AND, OR, and NOT. All the 'smart' behavior of software is built from huge numbers of these simple true/false decisions."
+    "h": "Thinking like a computer scientist",
+    "body": "Computer science is less about memorizing and more about a way of thinking, often called computational thinking. It has a few key moves. Decomposition means breaking a big problem into smaller, manageable parts. Pattern recognition means spotting similarities you can reuse. Abstraction means focusing on the essentials and ignoring irrelevant detail.\n\nTogether with algorithm design — laying out clear steps — these let you tackle problems far too complex to hold in your head at once. This way of thinking is useful far beyond computers: it's a general method for solving hard problems in any field, which is why computer science has become a foundational skill."
+   }
+  ],
+  "cards": [
+   {
+    "h": "IPOS model",
+    "body": "A computer takes Input, does Processing (CPU), gives Output, and uses Storage to keep data."
+   },
+   {
+    "h": "Binary",
+    "body": "Everything is 1s and 0s. A bit = one 1/0; a byte = 8 bits (one character)."
+   },
+   {
+    "h": "Algorithms",
+    "body": "A clear, step-by-step solution to a problem; a program is algorithms a computer can run."
+   },
+   {
+    "h": "Hardware vs software",
+    "body": "Hardware = physical parts (CPU, RAM, drives); software = the programs. The OS manages the hardware."
+   },
+   {
+    "h": "Computational thinking",
+    "body": "Decomposition, pattern recognition, abstraction, and algorithm design — a method for any hard problem."
    }
   ],
   "flash": [
    [
-    "Program",
-    "A set of instructions a computer follows."
+    "Computer",
+    "A machine that follows instructions to process information."
    ],
    [
-    "Input / output",
-    "Data going into a computer / results coming out."
+    "Input",
+    "Data going into a computer (keyboard, mouse, sensors)."
+   ],
+   [
+    "Output",
+    "Results coming out (screen, speakers, printer)."
+   ],
+   [
+    "CPU",
+    "The processor — the 'brain' that performs calculations and logic."
+   ],
+   [
+    "Bit",
+    "The smallest unit of data: a single 1 or 0."
+   ],
+   [
+    "Byte",
+    "Eight bits grouped together (enough for one character)."
    ],
    [
     "Binary",
-    "The 1s-and-0s (bits) system computers use for everything."
-   ],
-   [
-    "Bit / byte",
-    "A single 1 or 0 / a group of 8 bits."
+    "The base-2 system of 1s and 0s computers use."
    ],
    [
     "Algorithm",
-    "A precise step-by-step procedure to solve a problem."
+    "A precise step-by-step set of instructions to solve a problem."
    ],
    [
-    "Abstraction",
-    "Hiding detail to focus on what matters."
+    "Hardware",
+    "The physical parts of a computer."
+   ],
+   [
+    "Software",
+    "The programs (instructions) that tell hardware what to do."
+   ],
+   [
+    "Operating system",
+    "Software that manages the hardware and runs other programs."
    ],
    [
     "Decomposition",
     "Breaking a big problem into smaller parts."
-   ],
-   [
-    "Boolean logic",
-    "True/false decisions using AND, OR, NOT."
    ]
   ],
   "quiz": [
    {
-    "q": "A computer follows instructions:",
+    "q": "The four parts of the basic computer model are:",
     "options": [
-     "Exactly, with no common sense",
-     "Creatively",
-     "Only sometimes",
-     "By guessing"
+     "Input, process, output, storage",
+     "Read, write, delete, copy",
+     "Add, subtract, multiply, divide",
+     "Open, close, save, print"
     ],
     "a": 0,
-    "why": "It does precisely what it's told, very fast — nothing more."
+    "why": "Input → process → output, with storage for later."
    },
    {
-    "q": "Computers store all data as:",
+    "q": "The part that performs calculations and logic is the:",
     "options": [
-     "Binary (1s and 0s)",
-     "Words",
-     "Pictures only",
-     "Decimals only"
+     "CPU",
+     "Monitor",
+     "Keyboard",
+     "Printer"
     ],
     "a": 0,
-    "why": "Everything is encoded as bits — 1s and 0s."
+    "why": "The CPU is the processor."
    },
    {
-    "q": "An algorithm is:",
+    "q": "Computers represent data at the lowest level using:",
     "options": [
-     "A step-by-step procedure to solve a problem",
-     "A type of computer",
-     "A programming language",
-     "A kind of bit"
-    ],
-    "a": 0,
-    "why": "It's a precise sequence of steps, like a recipe."
-   },
-   {
-    "q": "Breaking a big problem into smaller parts is called:",
-    "options": [
-     "Decomposition",
-     "Abstraction",
-     "Binary",
-     "Output"
-    ],
-    "a": 0,
-    "why": "Decomposition splits a hard problem into manageable pieces."
-   },
-   {
-    "q": "Eight bits make one:",
-    "options": [
-     "Byte",
-     "Program",
-     "Algorithm",
-     "Pixel"
-    ],
-    "a": 0,
-    "why": "A byte is 8 bits."
-   },
-   {
-    "q": "Computers make decisions using:",
-    "options": [
-     "True/false logic (IF/ELSE)",
-     "Emotions",
-     "Random luck",
+     "1s and 0s (binary)",
+     "Letters only",
+     "Decimals only",
      "Colors"
     ],
     "a": 0,
-    "why": "Boolean logic — IF a condition is true, do this, else that."
+    "why": "Electronic on/off states become binary 1s and 0s."
+   },
+   {
+    "q": "A single 1 or 0 is a:",
+    "options": [
+     "Bit",
+     "Byte",
+     "Pixel",
+     "File"
+    ],
+    "a": 0,
+    "why": "A bit is the smallest unit of data."
+   },
+   {
+    "q": "Eight bits grouped together make a:",
+    "options": [
+     "Byte",
+     "Kilobyte",
+     "Bit",
+     "Megabyte"
+    ],
+    "a": 0,
+    "why": "8 bits = 1 byte, enough for one character."
+   },
+   {
+    "q": "A precise step-by-step set of instructions to solve a problem is an:",
+    "options": [
+     "Algorithm",
+     "Operating system",
+     "Byte",
+     "Error"
+    ],
+    "a": 0,
+    "why": "Algorithms are step-by-step solutions."
+   },
+   {
+    "q": "A program is best described as:",
+    "options": [
+     "Algorithms written in a language a computer runs",
+     "A physical chip",
+     "A type of monitor",
+     "Random data"
+    ],
+    "a": 0,
+    "why": "Programs are algorithms expressed in code."
+   },
+   {
+    "q": "Computer scientists compare algorithms mainly by:",
+    "options": [
+     "Speed and memory used",
+     "Color",
+     "Price",
+     "Length of the file name"
+    ],
+    "a": 0,
+    "why": "Efficiency (time and memory) matters."
+   },
+   {
+    "q": "The physical parts of a computer are the:",
+    "options": [
+     "Hardware",
+     "Software",
+     "Algorithms",
+     "Internet"
+    ],
+    "a": 0,
+    "why": "Hardware is the physical components."
+   },
+   {
+    "q": "The programs that tell the hardware what to do are the:",
+    "options": [
+     "Software",
+     "Hardware",
+     "Pixels",
+     "Cables"
+    ],
+    "a": 0,
+    "why": "Software is the instructions."
+   },
+   {
+    "q": "Windows and Linux are examples of a(n):",
+    "options": [
+     "Operating system",
+     "CPU",
+     "Algorithm",
+     "Bit"
+    ],
+    "a": 0,
+    "why": "The OS manages hardware and runs other programs."
+   },
+   {
+    "q": "Breaking a big problem into smaller parts is:",
+    "options": [
+     "Decomposition",
+     "Abstraction",
+     "Output",
+     "Storage"
+    ],
+    "a": 0,
+    "why": "Decomposition splits a problem into manageable pieces."
+   },
+   {
+    "q": "Ignoring irrelevant detail to focus on essentials is:",
+    "options": [
+     "Abstraction",
+     "Decomposition",
+     "Binary",
+     "Input"
+    ],
+    "a": 0,
+    "why": "Abstraction keeps only what matters."
+   },
+   {
+    "q": "A computer's power comes mainly from:",
+    "options": [
+     "Doing simple operations extremely fast",
+     "Truly understanding tasks",
+     "Guessing answers",
+     "Having feelings"
+    ],
+    "a": 0,
+    "why": "It follows instructions billions of times per second."
+   },
+   {
+    "q": "The best first step in programming is to:",
+    "options": [
+     "Break the problem into clear steps",
+     "Write code immediately",
+     "Buy new hardware",
+     "Memorize binary"
+    ],
+    "a": 0,
+    "why": "Design the algorithm before coding."
    }
   ]
  },
  "coding-data-databases": {
   "title": "Data & Databases",
-  "subject": "Computer Science & Coding",
-  "level": "College",
-  "intro": "Data is everything a program stores and works with — and databases are how we store, organize, and find large amounts of it reliably. Understanding data is key to almost every modern app.",
+  "subject": "Coding",
+  "level": "Grades 8-12",
+  "objectives": [
+   "Explain what data is and why organizing it matters",
+   "Describe tables, records, and fields",
+   "Explain relational databases and keys",
+   "Introduce querying data with SQL",
+   "Describe data in the real world and why privacy matters"
+  ],
+  "intro": "Data is the raw material of the digital world — every app, website, and business runs on it. A database is an organized system for storing data so it can be found, updated, and analyzed quickly. This lesson covers what data is, how databases organize it into tables, how tables relate, and how we ask them questions.",
+  "sections": [
+   {
+    "h": "What is data?",
+    "body": "Data is simply recorded facts — names, numbers, dates, measurements, clicks. On its own, a single value ('42') is just data. When data is organized and given context, it becomes information you can use ('42 students passed the exam'). Turning raw data into useful information is much of what computing is about.\n\nModern life produces staggering amounts of data: every purchase, message, and sensor reading. The challenge isn't collecting it but organizing it so you can actually find and use what you need. That's exactly the problem databases were invented to solve — storing huge amounts of data in a structured, searchable way.",
+    "tip": "Data = raw recorded facts; organized and in context, it becomes useful information."
+   },
+   {
+    "h": "Tables, records, and fields",
+    "body": "The most common way to organize data is in a table, like a grid or spreadsheet. Each row is a record — one complete entry, such as a single student. Each column is a field — one kind of information, such as 'name' or 'grade.' Every record has a value for each field.\n\nFor example, a 'Students' table might have fields for ID, name, and grade, with one record per student. This simple structure — rows of records, columns of fields — is the foundation of most databases. It keeps data consistent (every student has the same fields) and makes it easy to scan, sort, and search.",
+    "visual": "<svg viewBox=\"0 0 252 118\" width=\"245\" role=\"img\" aria-label=\"A small Students database table with ID, Name and Grade columns and three student records\"><rect x=\"14\" y=\"10\" width=\"76\" height=\"24\" fill=\"rgba(79,156,240,.28)\" stroke=\"#4f9cf0\" stroke-width=\"1\"/><text x=\"52\" y=\"26\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">ID</text><rect x=\"92\" y=\"10\" width=\"76\" height=\"24\" fill=\"rgba(79,156,240,.28)\" stroke=\"#4f9cf0\" stroke-width=\"1\"/><text x=\"130\" y=\"26\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Name</text><rect x=\"170\" y=\"10\" width=\"76\" height=\"24\" fill=\"rgba(79,156,240,.28)\" stroke=\"#4f9cf0\" stroke-width=\"1\"/><text x=\"208\" y=\"26\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Grade</text><rect x=\"14\" y=\"34\" width=\"76\" height=\"24\" fill=\"rgba(79,156,240,.06)\" stroke=\"#4f9cf0\" stroke-width=\"1\"/><text x=\"52\" y=\"50\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">1</text><rect x=\"92\" y=\"34\" width=\"76\" height=\"24\" fill=\"rgba(79,156,240,.06)\" stroke=\"#4f9cf0\" stroke-width=\"1\"/><text x=\"130\" y=\"50\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Ana</text><rect x=\"170\" y=\"34\" width=\"76\" height=\"24\" fill=\"rgba(79,156,240,.06)\" stroke=\"#4f9cf0\" stroke-width=\"1\"/><text x=\"208\" y=\"50\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">95</text><rect x=\"14\" y=\"58\" width=\"76\" height=\"24\" fill=\"rgba(79,156,240,.06)\" stroke=\"#4f9cf0\" stroke-width=\"1\"/><text x=\"52\" y=\"74\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">2</text><rect x=\"92\" y=\"58\" width=\"76\" height=\"24\" fill=\"rgba(79,156,240,.06)\" stroke=\"#4f9cf0\" stroke-width=\"1\"/><text x=\"130\" y=\"74\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Ben</text><rect x=\"170\" y=\"58\" width=\"76\" height=\"24\" fill=\"rgba(79,156,240,.06)\" stroke=\"#4f9cf0\" stroke-width=\"1\"/><text x=\"208\" y=\"74\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">88</text><rect x=\"14\" y=\"82\" width=\"76\" height=\"24\" fill=\"rgba(79,156,240,.06)\" stroke=\"#4f9cf0\" stroke-width=\"1\"/><text x=\"52\" y=\"98\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">3</text><rect x=\"92\" y=\"82\" width=\"76\" height=\"24\" fill=\"rgba(79,156,240,.06)\" stroke=\"#4f9cf0\" stroke-width=\"1\"/><text x=\"130\" y=\"98\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">Cris</text><rect x=\"170\" y=\"82\" width=\"76\" height=\"24\" fill=\"rgba(79,156,240,.06)\" stroke=\"#4f9cf0\" stroke-width=\"1\"/><text x=\"208\" y=\"98\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">91</text><text x=\"126\" y=\"112\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">each row = a record (one student); each column = a field</text></svg>",
+    "caption": "A Students table: each row is a record (one student), and each column is a field (one kind of info).",
+    "example": "Students table — columns: ID | Name | Grade. Each row is one student's complete record.",
+    "tip": "In a table: each row = a record (one entry), each column = a field (one kind of info)."
+   },
+   {
+    "h": "Relational databases and keys",
+    "body": "Most real databases are relational, meaning they store data in multiple tables that connect to one another. Instead of cramming everything into one giant table, you split it: a 'Students' table, a 'Classes' table, an 'Enrollments' table linking them. This avoids repeating data and keeps it tidy.\n\nThe glue is keys. A primary key is a field that uniquely identifies each record (like a student ID — no two the same). A foreign key is a field in one table that refers to the primary key of another, creating the link between tables. Keys are what let a database connect related information across many tables reliably.",
+    "tip": "Relational databases split data across linked tables; a primary key uniquely IDs a record, a foreign key links tables."
+   },
+   {
+    "h": "Asking questions: queries and SQL",
+    "body": "A database is only useful if you can get answers out of it. You do that with a query — a request for specific data. The standard language for querying relational databases is SQL (Structured Query Language), and its core command is SELECT.\n\nA simple query reads almost like a sentence: SELECT name FROM Students WHERE grade > 90 means 'give me the names of students whose grade is above 90.' You can filter (WHERE), sort (ORDER BY), and combine data from multiple tables. SQL lets you pull exactly the slice of data you need out of millions of records in an instant — which is why it's one of the most valuable skills in tech.",
+    "example": "SELECT name FROM Students WHERE grade >= 90 ORDER BY name;",
+    "tip": "A query asks a database for data. In SQL, SELECT ... FROM ... WHERE ... pulls exactly the records you want."
+   },
+   {
+    "h": "Data in the real world",
+    "body": "Databases power almost everything digital: your bank balance, a store's inventory, a social network's posts, a hospital's records. Small, simple data often lives in a spreadsheet (like Excel), which is fine for a few hundred rows; databases take over when data gets large, shared by many users, or needs strict structure and reliability.\n\nWith great data comes responsibility. Much data is personal and sensitive, so protecting it matters — through security (keeping it from thieves) and privacy (using it only as people expect and consent to). As data grows ever more central, understanding how it's stored, queried, and protected is a skill that touches nearly every career.",
+    "tip": "Spreadsheets suit small data; databases scale to large, shared, structured data. Always protect personal data."
+   }
+  ],
   "cards": [
    {
-    "h": "Data and data types",
-    "body": "Data is information a computer stores. It comes in types: numbers, text (strings), true/false (booleans), dates, and more. Choosing the right type matters — storing a phone number as text, not a number, keeps leading zeros and avoids doing math on it."
+    "h": "Data vs information",
+    "body": "Data is raw facts; organized and in context, it becomes useful information."
    },
    {
-    "h": "Structuring data",
-    "body": "Raw data gets organized into structures. A list holds items in order; a table organizes data into rows (records) and columns (fields), like a spreadsheet. Good structure makes data easy to search, sort, and update."
+    "h": "Table structure",
+    "body": "A table holds rows (records = one entry) and columns (fields = one kind of info)."
    },
    {
-    "h": "What a database is",
-    "body": "A database is an organized collection of data that a program can store and retrieve reliably, even with millions of records and many users at once. Databases handle the hard parts: fast searching, preventing conflicts, and not losing data if the power cuts out."
+    "h": "Relational & keys",
+    "body": "Data split across linked tables; a primary key uniquely IDs a record, a foreign key links tables."
    },
    {
-    "h": "Tables, queries, and SQL",
-    "body": "Most business databases are 'relational' — data lives in tables that relate to each other (a customers table linked to an orders table). You ask questions of the data with queries, often written in SQL (Structured Query Language): e.g., 'show all orders over $100.'"
+    "h": "SQL queries",
+    "body": "A query asks for data; SQL's SELECT ... FROM ... WHERE ... pulls exactly what you need."
    },
    {
-    "h": "Why data matters",
-    "body": "Nearly every app runs on data — your messages, photos, bank balance, and playlists all live in databases. Skills in organizing and querying data power software, business analytics, and the data science behind AI. Protecting that data (privacy and security) is just as important as using it."
+    "h": "Real world",
+    "body": "Databases run banks, stores, hospitals; spreadsheets suit small data. Protect personal data."
    }
   ],
   "flash": [
    [
     "Data",
-    "Information stored and processed by a computer."
+    "Recorded facts — numbers, names, dates, measurements."
    ],
    [
-    "Data type",
-    "The kind of value stored (number, text, boolean, date)."
-   ],
-   [
-    "Record",
-    "A single row of related data (e.g., one customer)."
-   ],
-   [
-    "Field",
-    "A single column/attribute of data (e.g., a name)."
+    "Information",
+    "Data that has been organized and given context."
    ],
    [
     "Database",
-    "An organized collection of data for reliable storage/retrieval."
+    "An organized system for storing and finding data."
+   ],
+   [
+    "Table",
+    "A grid of data with rows and columns."
+   ],
+   [
+    "Record",
+    "One complete entry in a table (a row)."
+   ],
+   [
+    "Field",
+    "One kind of information in a table (a column)."
    ],
    [
     "Relational database",
-    "Data stored in related tables."
+    "A database storing data in multiple linked tables."
+   ],
+   [
+    "Primary key",
+    "A field that uniquely identifies each record."
+   ],
+   [
+    "Foreign key",
+    "A field linking to another table's primary key."
    ],
    [
     "Query",
-    "A request to retrieve or change data."
+    "A request to a database for specific data."
    ],
    [
     "SQL",
-    "Structured Query Language — used to query databases."
+    "Structured Query Language, used to query databases."
+   ],
+   [
+    "SELECT",
+    "The SQL command that retrieves data."
    ]
   ],
   "quiz": [
    {
-    "q": "A phone number is often stored as text because:",
+    "q": "Raw recorded facts, like the value '42', are:",
     "options": [
-     "It keeps leading zeros and needs no math",
-     "Text is always smaller",
-     "Numbers can't be stored",
-     "It looks nicer"
+     "Data",
+     "Information",
+     "A query",
+     "A key"
     ],
     "a": 0,
-    "why": "Storing it as text preserves formatting like leading zeros."
+    "why": "Data is raw facts; context makes it information."
    },
    {
-    "q": "In a table, a single row of related data is a:",
+    "q": "'42 students passed the exam' is an example of:",
+    "options": [
+     "Information",
+     "Raw data only",
+     "A database",
+     "A field"
+    ],
+    "a": 0,
+    "why": "Organized data with context becomes information."
+   },
+   {
+    "q": "An organized system for storing and finding data is a:",
+    "options": [
+     "Database",
+     "Keyboard",
+     "Browser",
+     "Compiler"
+    ],
+    "a": 0,
+    "why": "Databases store data in a structured, searchable way."
+   },
+   {
+    "q": "In a table, one complete entry (a row) is a:",
     "options": [
      "Record",
      "Field",
      "Query",
-     "Type"
+     "Key"
     ],
     "a": 0,
-    "why": "A row is a record; a column is a field."
+    "why": "A row is a record — one entry."
    },
    {
-    "q": "A database's main job is to:",
-    "options": [
-     "Store and retrieve data reliably",
-     "Draw graphics",
-     "Connect to Wi-Fi",
-     "Run the screen"
-    ],
-    "a": 0,
-    "why": "It organizes data for fast, reliable storage and retrieval."
-   },
-   {
-    "q": "SQL is used to:",
-    "options": [
-     "Query databases",
-     "Style web pages",
-     "Edit photos",
-     "Measure Wi-Fi"
-    ],
-    "a": 0,
-    "why": "SQL (Structured Query Language) asks questions of a database."
-   },
-   {
-    "q": "A relational database stores data in:",
-    "options": [
-     "Related tables",
-     "A single long list",
-     "Images",
-     "Sound files"
-    ],
-    "a": 0,
-    "why": "Relational databases use tables that relate to one another."
-   },
-   {
-    "q": "A column/attribute in a table is a:",
+    "q": "In a table, one column (one kind of info) is a:",
     "options": [
      "Field",
      "Record",
-     "Query",
-     "Row"
+     "Database",
+     "Query"
     ],
     "a": 0,
-    "why": "A field is a column; a record is a row."
+    "why": "A column is a field."
+   },
+   {
+    "q": "A database that stores data across multiple linked tables is:",
+    "options": [
+     "Relational",
+     "Flat only",
+     "A spreadsheet",
+     "A browser"
+    ],
+    "a": 0,
+    "why": "Relational databases connect multiple tables."
+   },
+   {
+    "q": "A field that uniquely identifies each record is a:",
+    "options": [
+     "Primary key",
+     "Foreign key",
+     "Query",
+     "Record"
+    ],
+    "a": 0,
+    "why": "No two records share the same primary key."
+   },
+   {
+    "q": "A field that links to another table's primary key is a:",
+    "options": [
+     "Foreign key",
+     "Primary key",
+     "Record",
+     "Field name"
+    ],
+    "a": 0,
+    "why": "Foreign keys create links between tables."
+   },
+   {
+    "q": "A request to a database for specific data is a:",
+    "options": [
+     "Query",
+     "Record",
+     "Field",
+     "Table"
+    ],
+    "a": 0,
+    "why": "A query asks the database a question."
+   },
+   {
+    "q": "The standard language for querying relational databases is:",
+    "options": [
+     "SQL",
+     "HTML",
+     "Python",
+     "CSS"
+    ],
+    "a": 0,
+    "why": "SQL (Structured Query Language) queries databases."
+   },
+   {
+    "q": "Which SQL command retrieves data?",
+    "options": [
+     "SELECT",
+     "PRINT",
+     "FETCHALL",
+     "GET"
+    ],
+    "a": 0,
+    "why": "SELECT retrieves rows from tables."
+   },
+   {
+    "q": "'SELECT name FROM Students WHERE grade > 90' returns:",
+    "options": [
+     "Names of students scoring above 90",
+     "All students",
+     "Only grades",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "WHERE filters to grades above 90, SELECT returns names."
+   },
+   {
+    "q": "For just a few hundred rows, a good simple tool is a:",
+    "options": [
+     "Spreadsheet",
+     "Supercomputer",
+     "Server farm",
+     "Neural network"
+    ],
+    "a": 0,
+    "why": "Spreadsheets suit small data; databases scale up."
+   },
+   {
+    "q": "Databases take over when data is:",
+    "options": [
+     "Large, shared, and needs structure",
+     "Tiny",
+     "Printed on paper",
+     "Never used"
+    ],
+    "a": 0,
+    "why": "They handle large, shared, structured, reliable data."
+   },
+   {
+    "q": "Why does protecting personal data matter?",
+    "options": [
+     "It's sensitive; security and privacy are responsibilities",
+     "It isn't important",
+     "Data can't be stolen",
+     "Only companies care"
+    ],
+    "a": 0,
+    "why": "Personal data must be kept secure and used as people consent."
    }
   ]
  },
  "coding-intro-to-ai": {
   "title": "Intro to AI",
-  "subject": "Computer Science & Coding",
-  "level": "College",
-  "intro": "Artificial intelligence (AI) is software that can do tasks we usually associate with human intelligence — recognizing images, understanding language, making predictions. It's not magic or a conscious mind; it's math and data at a large scale.",
+  "subject": "Coding",
+  "level": "Grades 8-12",
+  "objectives": [
+   "Explain what artificial intelligence is and isn't",
+   "Describe machine learning and how systems learn from data",
+   "Explain neural networks and modern AI at a high level",
+   "Describe real-world uses of AI",
+   "Understand AI's limits and ethical concerns"
+  ],
+  "intro": "Artificial intelligence (AI) is one of the most important technologies of our time, powering everything from search engines to chatbots to self-driving cars. But what is it really? This lesson explains what AI is, how modern AI learns from data, where it's used, and the serious questions it raises — cutting through the hype.",
+  "sections": [
+   {
+    "h": "What AI is (and isn't)",
+    "body": "Artificial intelligence is the field of building computer systems that can do tasks we normally associate with human intelligence — recognizing images, understanding language, making decisions, playing games. An AI isn't conscious or 'alive'; it's software running math on data, often very cleverly.\n\nIt helps to separate two ideas. Narrow AI is built for one specific task (a spam filter, a chess engine, a photo tagger), and this is all the AI that exists today. General AI — a system as broadly capable as a human across any task — does not exist and remains hypothetical. When people say 'AI' in daily life, they almost always mean narrow AI doing one job well.",
+    "tip": "All real AI today is 'narrow' — built for one task. It's clever software, not conscious; human-level general AI doesn't exist yet."
+   },
+   {
+    "h": "Machine learning: learning from data",
+    "body": "Most modern AI works through machine learning (ML) — instead of a programmer writing explicit rules for every case, the system learns patterns from examples. You show it lots of data, and it adjusts itself to make better predictions. The more good examples it sees, the better it gets.\n\nA classic example: to build a system that recognizes cats in photos, you don't write rules describing a cat. Instead, you show the model thousands of labeled photos ('cat' / 'not cat'), and it learns the patterns on its own. This is why data is so central to AI — the quality and quantity of examples largely determine how well a model performs.",
+    "example": "To detect spam, an ML model learns from thousands of emails already labeled 'spam' or 'not spam,' then flags new ones.",
+    "tip": "Machine learning finds patterns from examples instead of following hand-written rules. More good data = better results."
+   },
+   {
+    "h": "Neural networks and modern AI",
+    "body": "Much of today's most powerful AI uses neural networks — systems loosely inspired by the brain, made of layers of simple connected units ('neurons'). Each connection has a weight the system tunes during training. Data flows in one side, through the layers, and a prediction comes out the other. Networks with many layers are called deep learning, which drove the recent AI boom.\n\nLarge language models (LLMs) like the ones behind modern chatbots are huge neural networks trained on enormous amounts of text. They work by predicting the most likely next word, over and over, which — at massive scale — produces strikingly fluent, useful responses. Powerful as they are, they're pattern-matchers, not thinkers.",
+    "visual": "<svg viewBox=\"0 0 244 152\" width=\"235\" role=\"img\" aria-label=\"A simple neural network with an input layer, a hidden layer, and an output node, fully connected\"><line x1=\"40\" y1=\"35\" x2=\"122\" y2=\"35\" stroke=\"#4f9cf0\" stroke-width=\"0.8\" opacity=\"0.45\"/><line x1=\"40\" y1=\"35\" x2=\"122\" y2=\"78\" stroke=\"#4f9cf0\" stroke-width=\"0.8\" opacity=\"0.45\"/><line x1=\"40\" y1=\"35\" x2=\"122\" y2=\"121\" stroke=\"#4f9cf0\" stroke-width=\"0.8\" opacity=\"0.45\"/><line x1=\"40\" y1=\"78\" x2=\"122\" y2=\"35\" stroke=\"#4f9cf0\" stroke-width=\"0.8\" opacity=\"0.45\"/><line x1=\"40\" y1=\"78\" x2=\"122\" y2=\"78\" stroke=\"#4f9cf0\" stroke-width=\"0.8\" opacity=\"0.45\"/><line x1=\"40\" y1=\"78\" x2=\"122\" y2=\"121\" stroke=\"#4f9cf0\" stroke-width=\"0.8\" opacity=\"0.45\"/><line x1=\"40\" y1=\"121\" x2=\"122\" y2=\"35\" stroke=\"#4f9cf0\" stroke-width=\"0.8\" opacity=\"0.45\"/><line x1=\"40\" y1=\"121\" x2=\"122\" y2=\"78\" stroke=\"#4f9cf0\" stroke-width=\"0.8\" opacity=\"0.45\"/><line x1=\"40\" y1=\"121\" x2=\"122\" y2=\"121\" stroke=\"#4f9cf0\" stroke-width=\"0.8\" opacity=\"0.45\"/><line x1=\"122\" y1=\"35\" x2=\"204\" y2=\"78\" stroke=\"#39e3c8\" stroke-width=\"0.9\" opacity=\"0.6\"/><line x1=\"122\" y1=\"78\" x2=\"204\" y2=\"78\" stroke=\"#39e3c8\" stroke-width=\"0.9\" opacity=\"0.6\"/><line x1=\"122\" y1=\"121\" x2=\"204\" y2=\"78\" stroke=\"#39e3c8\" stroke-width=\"0.9\" opacity=\"0.6\"/><circle cx=\"40\" cy=\"35\" r=\"9\" fill=\"rgba(79,156,240,.3)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><circle cx=\"40\" cy=\"78\" r=\"9\" fill=\"rgba(79,156,240,.3)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><circle cx=\"40\" cy=\"121\" r=\"9\" fill=\"rgba(79,156,240,.3)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><circle cx=\"122\" cy=\"35\" r=\"9\" fill=\"rgba(240,90,90,.25)\" stroke=\"#f05a5a\" stroke-width=\"1.5\"/><circle cx=\"122\" cy=\"78\" r=\"9\" fill=\"rgba(240,90,90,.25)\" stroke=\"#f05a5a\" stroke-width=\"1.5\"/><circle cx=\"122\" cy=\"121\" r=\"9\" fill=\"rgba(240,90,90,.25)\" stroke=\"#f05a5a\" stroke-width=\"1.5\"/><circle cx=\"204\" cy=\"78\" r=\"9\" fill=\"rgba(57,227,200,.25)\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><text x=\"40\" y=\"146\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8.5\">input</text><text x=\"122\" y=\"146\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8.5\">hidden</text><text x=\"204\" y=\"146\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8.5\">output</text></svg>",
+    "caption": "A neural network: data enters the input layer, passes through hidden layers of weighted connections, and a prediction comes out.",
+    "tip": "Neural networks are layers of simple units with tunable weights; 'deep learning' means many layers. LLMs predict the next word."
+   },
+   {
+    "h": "AI in the real world",
+    "body": "AI is already woven into daily life, usually invisibly. It filters your spam, recommends videos and products, powers voice assistants and translation, detects fraud on your bank card, and helps doctors read medical scans. Each is a narrow AI trained for its particular job.\n\nThe pace is rapid: AI now generates text, images, and code, assists in science, and drives experimental vehicles. This brings huge potential benefits — faster medicine, wider access to help, automation of tedious work — alongside real disruption, especially to jobs. Understanding AI is quickly becoming a basic literacy, like reading or using a computer, for taking part in modern life and work.",
+    "tip": "You already use AI daily — spam filters, recommendations, voice assistants, fraud detection. It's mostly invisible, task-specific tools."
+   },
+   {
+    "h": "Limits and ethics of AI",
+    "body": "AI is powerful but far from perfect, and its flaws matter. Models can be biased: if they learn from biased data, they repeat and amplify those biases (for example, in hiring or lending). They can be confidently wrong, producing false information that sounds convincing. And they don't truly understand — they match patterns, which is why they can fail in strange ways a human never would.\n\nThis raises serious ethical questions: about privacy (AI runs on personal data), fairness, accountability (who's responsible when AI errs?), and the impact on jobs and truth. Using AI wisely means knowing its limits, checking its output, and thinking about its effects on people. The technology is a tool — powerful, but only as good and as fair as the humans who build and use it.",
+    "tip": "AI can be biased, confidently wrong, and doesn't truly understand — always check its output and consider its effects on people."
+   }
+  ],
   "cards": [
    {
-    "h": "What AI really is",
-    "body": "AI is software designed to perform tasks that normally need human intelligence — seeing, understanding language, deciding, predicting. Most modern AI isn't programmed with explicit rules for every case; instead it learns patterns from large amounts of data."
+    "h": "What AI is",
+    "body": "Software doing tasks tied to human intelligence. All real AI is 'narrow' (one task); general AI doesn't exist yet."
    },
    {
     "h": "Machine learning",
-    "body": "Machine learning is the main approach behind today's AI. Instead of a programmer writing every rule, the system is shown many examples and finds the patterns itself — like learning to recognize cats by seeing thousands of cat photos. More and better data usually means better results."
+    "body": "Systems learn patterns from many examples instead of hand-written rules; more good data = better results."
    },
    {
-    "h": "Training and data",
-    "body": "An AI model 'learns' during training, adjusting itself to make fewer mistakes on example data. The quality and fairness of that data matters enormously — if the data is biased or wrong, the AI will be too. 'Garbage in, garbage out' applies strongly."
+    "h": "Neural networks",
+    "body": "Layers of simple units with tunable weights; many layers = deep learning. LLMs predict the next word."
    },
    {
-    "h": "What AI is good and bad at",
-    "body": "AI excels at finding patterns in huge data, repetitive tasks, and speed. It struggles with true understanding, common sense, and situations unlike its training data. It can also be confidently wrong, so its output needs checking — especially for important decisions."
+    "h": "Real world",
+    "body": "Spam filters, recommendations, voice assistants, fraud detection, medical scans — mostly invisible, task-specific."
    },
    {
-    "h": "Using AI responsibly",
-    "body": "AI is a powerful tool with real risks: bias, privacy, misinformation, and over-reliance. Used well, it helps people work faster and solve hard problems; used carelessly, it can mislead or harm. Treat it as an assistant whose work you verify, not an oracle."
+    "h": "Limits & ethics",
+    "body": "Can be biased and confidently wrong; doesn't truly understand. Mind privacy, fairness, accountability, jobs."
    }
   ],
   "flash": [
    [
     "Artificial intelligence",
-    "Software doing tasks that normally need human intelligence."
+    "Building systems that do tasks tied to human intelligence."
+   ],
+   [
+    "Narrow AI",
+    "AI built for one specific task (all real AI today)."
+   ],
+   [
+    "General AI",
+    "Hypothetical AI as broadly capable as a human."
    ],
    [
     "Machine learning",
-    "AI that learns patterns from data instead of fixed rules."
+    "AI that learns patterns from examples/data."
    ],
    [
     "Training data",
-    "The examples an AI model learns from."
+    "The examples a model learns from."
    ],
    [
     "Model",
-    "The trained system that makes predictions or decisions."
+    "The trained system that makes predictions."
+   ],
+   [
+    "Neural network",
+    "Layers of connected units with tunable weights."
+   ],
+   [
+    "Deep learning",
+    "Neural networks with many layers."
+   ],
+   [
+    "Large language model",
+    "A huge neural net trained on text that predicts the next word."
    ],
    [
     "Bias",
-    "Unfair patterns an AI picks up from flawed data."
+    "Unfair patterns a model learns from skewed data."
    ],
    [
-    "Pattern recognition",
-    "Finding regularities in data — a core AI strength."
+    "Prediction",
+    "The output a model produces from its input."
    ],
    [
-    "Garbage in, garbage out",
-    "Bad input data produces bad AI output."
-   ],
-   [
-    "Hallucination",
-    "When an AI confidently produces false information."
+    "AI ethics",
+    "Questions of fairness, privacy, accountability, and impact."
    ]
   ],
   "quiz": [
    {
+    "q": "Artificial intelligence is best described as:",
+    "options": [
+     "Software doing tasks tied to human intelligence",
+     "A conscious living being",
+     "A type of hardware chip",
+     "Magic"
+    ],
+    "a": 0,
+    "why": "AI is clever software running math on data — not alive."
+   },
+   {
+    "q": "All AI that exists today is:",
+    "options": [
+     "Narrow (built for one task)",
+     "General (human-level)",
+     "Conscious",
+     "Unlimited"
+    ],
+    "a": 0,
+    "why": "Narrow AI does one job; general AI is still hypothetical."
+   },
+   {
+    "q": "General AI — as broadly capable as a human — currently:",
+    "options": [
+     "Does not exist",
+     "Runs every phone",
+     "Is conscious",
+     "Controls the internet"
+    ],
+    "a": 0,
+    "why": "General AI remains hypothetical."
+   },
+   {
     "q": "Most modern AI works by:",
     "options": [
-     "Learning patterns from data",
-     "Following rules a human wrote for every case",
+     "Learning patterns from examples (machine learning)",
+     "Following only hand-written rules",
      "Random guessing",
-     "Human thought"
+     "Copying one answer"
     ],
     "a": 0,
-    "why": "Machine learning finds patterns in data rather than fixed rules."
+    "why": "ML learns from data rather than explicit rules."
    },
    {
-    "q": "If an AI is trained on biased data, it will:",
+    "q": "To make a cat-detector, you mainly give the model:",
     "options": [
-     "Likely be biased too",
+     "Many labeled example photos",
+     "One rule about whiskers",
+     "A dictionary",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "It learns patterns from thousands of labeled examples."
+   },
+   {
+    "q": "Why is data so central to AI?",
+    "options": [
+     "Model quality depends on example quality and quantity",
+     "Data looks nice",
+     "It isn't central",
+     "Data replaces the model"
+    ],
+    "a": 0,
+    "why": "More, better examples generally mean better performance."
+   },
+   {
+    "q": "Neural networks are loosely inspired by the:",
+    "options": [
+     "Brain",
+     "Stomach",
+     "Internet cables",
+     "Sun"
+    ],
+    "a": 0,
+    "why": "They're layers of simple connected 'neurons.'"
+   },
+   {
+    "q": "Neural networks with many layers are called:",
+    "options": [
+     "Deep learning",
+     "Shallow data",
+     "Spreadsheets",
+     "Queries"
+    ],
+    "a": 0,
+    "why": "Many layers = deep learning."
+   },
+   {
+    "q": "Large language models mainly work by:",
+    "options": [
+     "Predicting the next word repeatedly",
+     "Looking up answers in a table",
+     "Thinking like a human",
+     "Searching Google live"
+    ],
+    "a": 0,
+    "why": "At scale, next-word prediction produces fluent responses."
+   },
+   {
+    "q": "Which is an everyday use of AI?",
+    "options": [
+     "Spam filtering and recommendations",
+     "Boiling water",
+     "Cutting paper",
+     "Opening a door"
+    ],
+    "a": 0,
+    "why": "Spam filters, recommendations, and voice assistants are AI."
+   },
+   {
+    "q": "If a model learns from biased data, it will likely:",
+    "options": [
+     "Repeat and amplify that bias",
      "Fix the bias automatically",
      "Ignore the data",
-     "Become neutral"
+     "Become conscious"
     ],
     "a": 0,
-    "why": "'Garbage in, garbage out' — flawed data yields flawed AI."
+    "why": "Models reflect the data they learn from."
    },
    {
-    "q": "AI is generally GOOD at:",
+    "q": "AI models can be 'confidently wrong,' meaning they:",
     "options": [
-     "Finding patterns in huge data",
-     "Common sense",
-     "True understanding",
-     "Knowing what it doesn't know"
+     "Produce convincing false information",
+     "Always admit mistakes",
+     "Never make errors",
+     "Refuse to answer"
     ],
     "a": 0,
-    "why": "Pattern-finding at scale is a core strength; understanding isn't."
+    "why": "They can state false things that sound convincing."
    },
    {
-    "q": "An AI confidently producing false information is called a:",
+    "q": "A key reason AI fails in strange ways is that it:",
     "options": [
-     "Hallucination",
-     "Query",
-     "Byte",
-     "Model"
+     "Matches patterns without truly understanding",
+     "Thinks exactly like people",
+     "Gets tired",
+     "Has emotions"
     ],
     "a": 0,
-    "why": "That's a hallucination — plausible-sounding but wrong output."
+    "why": "Pattern-matching isn't real understanding."
    },
    {
-    "q": "Machine learning improves mainly with:",
+    "q": "Using AI wisely means you should:",
     "options": [
-     "More and better data",
-     "More rules written by hand",
-     "Faster typing",
-     "Luck"
-    ],
-    "a": 0,
-    "why": "Quality data and examples drive better learned performance."
-   },
-   {
-    "q": "The responsible way to use AI is to:",
-    "options": [
-     "Treat it as an assistant whose work you verify",
-     "Trust it completely",
+     "Check its output and weigh its effects",
+     "Trust it blindly",
      "Never use it",
-     "Assume it's conscious"
+     "Hide its use"
     ],
     "a": 0,
-    "why": "Verify its output; it can be confidently wrong."
+    "why": "Know its limits, verify output, consider impacts."
+   },
+   {
+    "q": "AI is ultimately:",
+    "options": [
+     "A tool, only as fair as those who build and use it",
+     "A neutral god",
+     "Always right",
+     "Beyond human control today"
+    ],
+    "a": 0,
+    "why": "It reflects the choices and data of the people behind it."
    }
   ]
  },
