@@ -5931,130 +5931,281 @@ window.LAB404_CONTENT = {
  "repair-basic-tools": {
   "title": "Basic Tools",
   "subject": "Home & Auto Repair",
-  "level": "All levels",
-  "intro": "A small set of tools and the confidence to use them will save you money for the rest of your life. Most common home and car fixes need only basic hand tools and a willingness to try.",
+  "level": "All ages",
+  "objectives": [
+   "Build a basic toolkit everyone should own",
+   "Know what common tools do",
+   "Use tools safely and correctly",
+   "Understand fasteners (screws, nails, bolts)",
+   "Maintain and store tools"
+  ],
+  "intro": "A small set of basic tools and knowing how to use them handles a huge share of everyday home fixes — saving money and frustration. You don't need a workshop full of gear; a dozen essentials cover most jobs. This lesson covers the core toolkit, how to use tools safely, and the basics of fasteners.",
+  "sections": [
+   {
+    "h": "The essential toolkit",
+    "body": "Most home tasks are handled by a small, affordable set of tools. The essentials: a claw hammer (driving and pulling nails), a set of screwdrivers (Phillips and flathead, or a multi-bit driver), an adjustable wrench and pliers (gripping and turning), a tape measure, a utility knife, and a level. Add a cordless drill/driver — the single most useful power tool — and you can do most small jobs.\n\nRound it out with a stud finder, an assortment of screws and nails, painter's tape, a flashlight or headlamp, and safety glasses. That's it — this kit fits in a small toolbox and handles the vast majority of household repairs and projects. Buy decent quality for the tools you'll use most (the drill, a good tape measure); the rest can be inexpensive. Skill and the right basic tool beat an expensive collection you don't know how to use.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Essential tools and what each does\"><rect x=\"8\" y=\"5\" width=\"116\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"124\" y=\"5\" width=\"118\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Hammer</text><text x=\"130\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">drive & pull nails</text><rect x=\"8\" y=\"27\" width=\"116\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"124\" y=\"27\" width=\"118\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Screwdrivers</text><text x=\"130\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">turn screws (Phillips/flathead)</text><rect x=\"8\" y=\"49\" width=\"116\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"124\" y=\"49\" width=\"118\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Adjustable wrench</text><text x=\"130\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">turn bolts & nuts</text><rect x=\"8\" y=\"71\" width=\"116\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"124\" y=\"71\" width=\"118\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Tape measure + level</text><text x=\"130\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">measure; check true/plumb</text><rect x=\"8\" y=\"93\" width=\"116\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"124\" y=\"93\" width=\"118\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Cordless drill</text><text x=\"130\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">bore holes & drive screws</text></svg>",
+    "caption": "A basic toolkit — a dozen essentials handle most household repairs.",
+    "tip": "Core kit: hammer, screwdrivers, adjustable wrench, pliers, tape measure, utility knife, level, and a cordless drill. That handles most jobs."
+   },
+   {
+    "h": "What the common tools do",
+    "body": "Knowing each tool's job prevents the classic mistake of using the wrong tool (which damages the tool, the work, or you). Screwdrivers turn screws — match the tip (Phillips cross-head or flathead slot) and size to the screw to avoid stripping it. A wrench turns bolts and nuts; an adjustable wrench fits many sizes. Pliers grip, bend, and cut — needle-nose for tight spots, slip-joint for general gripping.\n\nA level tells you if something is truly horizontal (level) or vertical (plumb) using a bubble. A tape measure measures (remember 'measure twice, cut once'). A utility knife cuts with a replaceable sharp blade. A drill both bores holes and drives screws (with the right bit) far faster than by hand. Using the right tool for each job, correctly, is most of what 'being handy' really is.",
+    "tip": "Use the RIGHT tool: match screwdriver tip/size to avoid stripping screws; 'measure twice, cut once'; a level shows true horizontal/vertical."
+   },
+   {
+    "h": "Using tools safely",
+    "body": "Tools are safe when respected and dangerous when careless. General rules: wear safety glasses for anything that can produce flying bits (drilling, hammering, cutting), keep your hands and body out of the path of a blade or bit, and cut or push away from yourself, not toward. Keep tools sharp and in good repair (a dull blade slips, which is how people get cut), and use the right tool rather than forcing the wrong one.\n\nFor power tools: read the basics, unplug or remove the battery before changing bits or clearing a jam, secure your workpiece (clamp it) so it can't move, and be aware of cords and surroundings. Don't rush, and don't use tools when tired or distracted. Most tool injuries come from haste, the wrong tool, or a dull blade — all avoidable with a little care.",
+    "tip": "Safety: wear eye protection, cut away from yourself, keep blades sharp, use the right tool, and secure your work. Most injuries come from haste or a dull blade."
+   },
+   {
+    "h": "Fasteners: screws, nails, bolts",
+    "body": "Much of repair is joining things together with fasteners, and knowing the basics helps. Nails are driven with a hammer and hold through friction — fast, good for rough framing and where strength isn't critical. Screws are driven with a screwdriver or drill and hold far better (their threads grip), and they can be removed — the better choice for most jobs where you want a strong, reversible hold.\n\nBolts pass through holes and are secured with a nut on the other side, for the strongest connections (often used with washers to spread the load). Match the fastener to the job: the right length (long enough to hold, not so long it pokes through), the right type for the material, and for screws, the right drive (Phillips, etc.). Using the correct fastener, properly sized, is the difference between a repair that lasts and one that fails.",
+    "tip": "Nails (hammer, friction, rough work); screws (threads, strong + removable — usually best); bolts + nuts (strongest). Match length and type to the job."
+   },
+   {
+    "h": "Maintaining and storing tools",
+    "body": "Tools last for decades if cared for. Keep them clean and dry (moisture causes rust — wipe metal tools after use, and store them somewhere dry). Keep cutting tools sharp. Keep track of your tools by storing them organized in a toolbox or on a wall, so you can find what you need and notice if something's missing or damaged.\n\nA little organization saves a lot of frustration: group by type, keep fasteners sorted in small containers, and return tools to their place after use. Charge cordless tool batteries and store them properly. Good tools treated well are a one-time investment that serves you for life, so it's worth the small habit of cleaning, sharpening, and putting them away. A cared-for toolkit is always ready when you need it.",
+    "tip": "Keep tools clean, dry (prevent rust), sharp, and organized. Return them to their place. Well-cared-for tools last a lifetime."
+   }
+  ],
   "cards": [
    {
-    "h": "The starter toolkit",
-    "body": "A handful covers most jobs: a claw hammer, screwdrivers (Phillips and flathead), an adjustable wrench, pliers (regular and needle-nose), a tape measure, a utility knife, a level, and a cordless drill. Add specialized tools as needs come up."
+    "h": "Essential kit",
+    "body": "Hammer, screwdrivers, adjustable wrench, pliers, tape measure, utility knife, level, cordless drill."
    },
    {
-    "h": "Righty-tighty, lefty-loosey",
-    "body": "Almost all screws, bolts, and lids tighten clockwise and loosen counterclockwise. Facing the fastener, turn right to tighten, left to loosen. This simple rule covers the vast majority of fasteners you'll meet."
+    "h": "What tools do",
+    "body": "Match screwdriver tip/size (avoid stripping); level = true horizontal/vertical; drill bores + drives."
    },
    {
-    "h": "Use the right size and type",
-    "body": "A screwdriver or wrench that doesn't fit snugly will strip the screw or round the bolt, turning an easy job into a hard one. Match Phillips to Phillips, use the correct socket size, and seat the tool fully before turning."
+    "h": "Safety",
+    "body": "Eye protection, cut away from yourself, sharp blades, right tool, secure the work. Haste causes injuries."
    },
    {
-    "h": "Measure twice, cut once",
-    "body": "Mistakes are cheaper to prevent than to fix. Measure carefully (and again) before cutting or drilling, mark your spot, and check for wires or pipes behind a wall before you make a hole."
+    "h": "Fasteners",
+    "body": "Nails (friction, rough); screws (threads, strong + removable); bolts + nuts (strongest). Match size/type."
    },
    {
-    "h": "Safety basics",
-    "body": "Turn off the power at the breaker before electrical work, and shut off the water before plumbing work. Wear eye protection when cutting or hammering, and unplug power tools before changing bits. When a job feels unsafe or over your head, call a pro."
+    "h": "Maintenance",
+    "body": "Keep tools clean, dry, sharp, and organized; return them to their place. They last a lifetime."
    }
   ],
   "flash": [
    [
-    "Phillips screwdriver",
-    "A screwdriver with a cross/plus-shaped tip."
+    "Claw hammer",
+    "Drives and pulls nails."
    ],
    [
-    "Flathead screwdriver",
-    "A screwdriver with a single flat blade tip."
+    "Screwdriver",
+    "Turns screws (Phillips or flathead)."
    ],
    [
     "Adjustable wrench",
-    "A wrench whose jaw width you can change to fit bolts."
+    "Turns bolts and nuts of many sizes."
    ],
    [
-    "Righty-tighty",
-    "Turn clockwise to tighten, counterclockwise to loosen."
-   ],
-   [
-    "Stripped screw",
-    "A screw head damaged so a driver can't grip it."
+    "Pliers",
+    "Grip, bend, and cut."
    ],
    [
     "Level",
-    "A tool that shows if something is perfectly horizontal/vertical."
+    "Shows if something is truly horizontal/vertical."
+   ],
+   [
+    "Tape measure",
+    "Measures distance ('measure twice, cut once')."
+   ],
+   [
+    "Utility knife",
+    "Cuts with a replaceable sharp blade."
+   ],
+   [
+    "Cordless drill",
+    "Bores holes and drives screws."
    ],
    [
     "Stud finder",
-    "A tool that locates framing behind a wall."
+    "Locates wooden studs behind drywall."
    ],
    [
-    "Breaker",
-    "The switch that cuts power to a circuit for safe electrical work."
+    "Nail",
+    "A fastener driven by a hammer (holds by friction)."
+   ],
+   [
+    "Screw",
+    "A threaded fastener; strong and removable."
+   ],
+   [
+    "Bolt",
+    "A fastener secured with a nut for the strongest hold."
    ]
   ],
   "quiz": [
    {
-    "q": "To loosen most screws and bolts you turn them:",
+    "q": "The single most useful power tool for a basic kit is a:",
     "options": [
-     "Counterclockwise (left)",
-     "Clockwise (right)",
-     "Straight out",
-     "It doesn't matter"
+     "Cordless drill/driver",
+     "Table saw",
+     "Jackhammer",
+     "Welder"
     ],
     "a": 0,
-    "why": "Lefty-loosey: counterclockwise loosens most fasteners."
+    "why": "It bores holes and drives screws fast."
    },
    {
-    "q": "Using a screwdriver that doesn't fit well risks:",
+    "q": "A claw hammer is used to:",
     "options": [
-     "Stripping the screw",
-     "Nothing",
-     "Faster work",
-     "Tightening it more"
+     "Drive and pull nails",
+     "Turn screws",
+     "Measure",
+     "Cut wire"
     ],
     "a": 0,
-    "why": "A poor fit rounds out the head, making it hard to turn."
+    "why": "The claw pulls nails; the face drives them."
    },
    {
-    "q": "Before electrical work you should:",
+    "q": "To avoid stripping a screw, you should:",
     "options": [
-     "Turn off power at the breaker",
-     "Just be careful",
-     "Wear gloves only",
-     "Work faster"
+     "Match the screwdriver tip and size",
+     "Use any screwdriver",
+     "Use a hammer",
+     "Use pliers"
     ],
     "a": 0,
-    "why": "Cutting power at the breaker prevents shock."
+    "why": "The wrong tip/size strips the screw head."
+   },
+   {
+    "q": "A level tells you if something is:",
+    "options": [
+     "Truly horizontal or vertical",
+     "Hot or cold",
+     "Heavy or light",
+     "New or old"
+    ],
+    "a": 0,
+    "why": "The bubble shows level (horizontal) and plumb (vertical)."
    },
    {
     "q": "'Measure twice, cut once' means:",
     "options": [
-     "Check measurements before cutting",
-     "Cut quickly",
+     "Check your measurement before cutting",
+     "Cut twice",
      "Measure after cutting",
-     "Guess the size"
+     "Never measure"
     ],
     "a": 0,
-    "why": "Verifying first avoids wasted material and mistakes."
+    "why": "It prevents wasted material and mistakes."
    },
    {
-    "q": "Which belongs in a basic toolkit?",
+    "q": "For drilling or hammering, you should wear:",
     "options": [
-     "Adjustable wrench",
-     "Welding torch",
-     "Table saw",
-     "Backhoe"
+     "Safety glasses",
+     "Sandals",
+     "Nothing special",
+     "Headphones only"
     ],
     "a": 0,
-    "why": "Basic hand tools like an adjustable wrench cover most small jobs."
+    "why": "Flying bits can injure your eyes."
    },
    {
-    "q": "Before plumbing work you should:",
+    "q": "When cutting with a utility knife, cut:",
     "options": [
-     "Shut off the water",
-     "Turn up the heat",
-     "Open all faucets first",
+     "Away from yourself",
+     "Toward yourself",
+     "At your hand",
+     "Blindly"
+    ],
+    "a": 0,
+    "why": "Cutting away avoids slicing yourself if it slips."
+   },
+   {
+    "q": "A dull blade is dangerous because it:",
+    "options": [
+     "Slips instead of cutting",
+     "Is too sharp",
+     "Can't cut at all safely",
+     "Weighs more"
+    ],
+    "a": 0,
+    "why": "Slipping dull blades cause many cuts."
+   },
+   {
+    "q": "Before changing a bit on a power drill, you should:",
+    "options": [
+     "Unplug it or remove the battery",
+     "Keep it running",
+     "Grab the bit while spinning",
      "Nothing"
     ],
     "a": 0,
-    "why": "Shutting off the water prevents floods while you work."
+    "why": "Prevents accidental starts."
+   },
+   {
+    "q": "Nails hold mainly by:",
+    "options": [
+     "Friction",
+     "Threads",
+     "Glue",
+     "Magnets"
+    ],
+    "a": 0,
+    "why": "Screws hold by threads; nails by friction."
+   },
+   {
+    "q": "For a strong, removable hold, the best fastener is usually a:",
+    "options": [
+     "Screw",
+     "Nail",
+     "Staple",
+     "Tape"
+    ],
+    "a": 0,
+    "why": "Screw threads grip and can be undone."
+   },
+   {
+    "q": "The strongest connection uses a:",
+    "options": [
+     "Bolt and nut",
+     "Single nail",
+     "Thumbtack",
+     "Piece of tape"
+    ],
+    "a": 0,
+    "why": "Bolts through holes with nuts hold the strongest."
+   },
+   {
+    "q": "A fastener should be:",
+    "options": [
+     "The right length and type for the job",
+     "As long as possible",
+     "As short as possible",
+     "Any random one"
+    ],
+    "a": 0,
+    "why": "Match length/type so it holds without poking through."
+   },
+   {
+    "q": "To prevent rust, metal tools should be kept:",
+    "options": [
+     "Clean and dry",
+     "Wet",
+     "Outside in rain",
+     "In water"
+    ],
+    "a": 0,
+    "why": "Moisture causes rust; wipe and store dry."
+   },
+   {
+    "q": "The real key to 'being handy' is:",
+    "options": [
+     "Using the right tool correctly",
+     "Owning expensive tools",
+     "Natural talent",
+     "Working fast"
+    ],
+    "a": 0,
+    "why": "Skill plus the right basic tool beats a big collection."
    }
   ]
  },
@@ -22794,6 +22945,1131 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Relationships drive repeat business and referrals."
+   }
+  ]
+ },
+ "repair-home-repairs": {
+  "title": "Home Repairs",
+  "subject": "Home & Auto Repair",
+  "level": "All ages",
+  "objectives": [
+   "Know common home repairs you can do yourself",
+   "Understand when to DIY vs call a professional",
+   "Handle basic fixes (patching, caulking, hanging)",
+   "Do preventive maintenance",
+   "Stay safe and know your home's shutoffs"
+  ],
+  "intro": "Many common home problems are simple to fix yourself with basic tools, saving money and waiting time — while others are genuinely dangerous or complex and should go to a professional. Knowing the difference, and handling the easy stuff, is a hugely practical life skill. This lesson covers common repairs, maintenance, and when to call a pro. Safety first — when unsure, consult a professional.",
+  "sections": [
+   {
+    "h": "Repairs you can usually do yourself",
+    "body": "A surprising number of household fixes are well within a beginner's reach with basic tools and a little patience. Common DIY repairs include: patching small holes in drywall, caulking around tubs, sinks, and windows (to seal gaps and stop leaks/drafts), fixing a running or clogged toilet, unclogging a drain, replacing a worn faucet washer, tightening loose screws on cabinets and furniture, hanging pictures and shelves (into studs), replacing air filters, and swapping out light fixtures or switches (with the power off).\n\nThese don't require special skills — just the right basic tools, a how-to video or guide, and some care. Doing them yourself saves money and the wait for a handyman. Start with the simplest, build confidence, and you'll handle more over time. Most of 'being handy' is just a willingness to look up how and try carefully.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"What's DIY-friendly versus when to call a professional\"><rect x=\"8\" y=\"5\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"5\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">DIY-friendly</text><text x=\"110\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">patch drywall, caulk, unclog drains</text><rect x=\"8\" y=\"27\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"27\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">DIY-friendly</text><text x=\"110\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">hang on studs, replace filters</text><rect x=\"8\" y=\"49\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"49\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Call a pro</text><text x=\"110\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">major electrical, gas (always)</text><rect x=\"8\" y=\"71\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"71\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Call a pro</text><text x=\"110\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">re-piping, roofing, structural</text><rect x=\"8\" y=\"93\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"93\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Always first</text><text x=\"110\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">shut off the utility + know your limits</text></svg>",
+    "caption": "Know the line: do the simple, low-risk fixes yourself; hand the dangerous or complex ones to a pro.",
+    "tip": "Many fixes are DIY-friendly: patching drywall, caulking, unclogging drains, hanging things on studs, replacing filters. Look it up and try carefully."
+   },
+   {
+    "h": "When to call a professional",
+    "body": "Just as important as knowing what you can do is knowing what you shouldn't. Call a professional for: major electrical work (anything beyond swapping a fixture/switch — mistakes cause fires and electrocution), significant plumbing (re-piping, main lines, gas lines — never DIY gas), gas appliances or any gas smell (leave and call immediately), structural issues, roof work (fall danger), and anything requiring a permit or that you're simply not confident about.\n\nThe rule of thumb: if a mistake could hurt you, burn down the house, cause major water damage, or involves gas, electricity beyond the basics, heights, or structure — hire a qualified pro. It's cheaper than the damage a botched job causes, and some work legally requires licensed professionals. There's no shame in calling a pro; the skill is knowing your limits. DIY the safe, simple stuff; delegate the dangerous, complex stuff.",
+    "tip": "Call a pro for major electrical, gas (always!), significant plumbing, roofing, and structural work. If a mistake could seriously hurt you or the home, hire out."
+   },
+   {
+    "h": "Basic fixes: how they work",
+    "body": "A few techniques cover many small repairs. Caulking: squeeze a bead of caulk into a gap (around a tub, window, or sink), smooth it with a wet finger, and let it cure — it seals against water and air. Patching a small drywall hole: for tiny holes, spackle and sand smooth; for bigger ones, use a patch kit. Both then get painted over.\n\nHanging things securely: light items can go on the drywall with the right anchor, but anything heavy must be screwed into a wooden stud (found with a stud finder) or a proper heavy-duty anchor, or it'll pull out. Unclogging a drain: often a plunger or a drain snake clears it (avoid harsh chemicals when possible). The common thread: most small repairs are simple step-by-step processes you can learn from a short video, using basic tools and a bit of patience.",
+    "tip": "Caulk seals gaps (smooth with a wet finger); spackle patches small holes; hang heavy things into a STUD (or a rated anchor), not bare drywall."
+   },
+   {
+    "h": "Preventive maintenance",
+    "body": "The cheapest repair is the one you prevent. Regular home maintenance catches small problems before they become expensive disasters. Key tasks: change HVAC air filters every 1–3 months (improves air and protects the system), test smoke and carbon-monoxide detectors and replace batteries, clean gutters so water doesn't damage the roof or foundation, check for and fix leaks promptly (water damage is costly and causes mold), and seal gaps/drafts to save energy.\n\nSeasonal checks help too: before winter, protect pipes from freezing; service heating and cooling systems periodically. Keeping a simple maintenance checklist and doing a little regularly prevents the big, costly failures. A well-maintained home is cheaper, safer, more comfortable, and holds its value. Think of maintenance as inexpensive insurance against expensive surprises.",
+    "tip": "Prevent costly repairs: change HVAC filters, test smoke/CO detectors, clean gutters, fix leaks fast, and do seasonal checks. Maintenance = cheap insurance."
+   },
+   {
+    "h": "Safety and knowing your home",
+    "body": "Before any repair, safety comes first, and knowing a few things about your home is essential — even if you never do a repair yourself. Know where your main water shutoff is (to stop a flood from a burst pipe or overflowing fixture), your electrical panel / breaker box (to cut power to a circuit before electrical work, or in an emergency), and your gas shutoff if you have gas.\n\nFor any repair: turn off the relevant utility first (water for plumbing, power at the breaker for electrical), work carefully, and if something seems beyond you or unsafe, stop and get help. Keep a basic first-aid kit and the number of a trusted plumber/electrician handy. Knowing your shutoffs and your limits turns home ownership from stressful to manageable — you can handle the small stuff and respond calmly to the big stuff.",
+    "tip": "Know your main WATER shutoff, breaker box, and gas shutoff. Turn off the utility before a repair. Knowing your shutoffs prevents disasters."
+   }
+  ],
+  "cards": [
+   {
+    "h": "DIY repairs",
+    "body": "Patch drywall, caulk, unclog drains, hang on studs, replace filters, fix a running toilet — all beginner-friendly."
+   },
+   {
+    "h": "Call a pro",
+    "body": "Major electrical, gas (always), significant plumbing, roofing, structural. If a mistake could seriously hurt — hire out."
+   },
+   {
+    "h": "Basic fixes",
+    "body": "Caulk seals gaps; spackle patches holes; hang heavy things into a stud; plunger/snake for clogs."
+   },
+   {
+    "h": "Maintenance",
+    "body": "Change filters, test detectors, clean gutters, fix leaks fast, seasonal checks. Cheap insurance."
+   },
+   {
+    "h": "Safety",
+    "body": "Know your water shutoff, breaker box, gas shutoff. Turn off the utility first; know your limits."
+   }
+  ],
+  "flash": [
+   [
+    "Caulk",
+    "A sealant squeezed into gaps to block water/air."
+   ],
+   [
+    "Spackle",
+    "A paste for patching small holes in drywall."
+   ],
+   [
+    "Stud",
+    "A vertical wooden beam inside a wall (hang heavy items here)."
+   ],
+   [
+    "Drywall anchor",
+    "A fastener that holds light items in drywall."
+   ],
+   [
+    "Stud finder",
+    "A tool that locates studs behind drywall."
+   ],
+   [
+    "Plunger",
+    "A tool that clears clogs with pressure."
+   ],
+   [
+    "Drain snake",
+    "An auger that physically removes a clog."
+   ],
+   [
+    "HVAC filter",
+    "An air filter to change every 1–3 months."
+   ],
+   [
+    "Main water shutoff",
+    "The valve that stops all water to the home."
+   ],
+   [
+    "Breaker box",
+    "The panel that controls electrical circuits."
+   ],
+   [
+    "Preventive maintenance",
+    "Upkeep that prevents costly failures."
+   ],
+   [
+    "Permit",
+    "Official approval required for certain work."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Which is a beginner-friendly DIY repair?",
+    "options": [
+     "Caulking a tub",
+     "Rewiring the house",
+     "Replacing the roof",
+     "Moving a gas line"
+    ],
+    "a": 0,
+    "why": "Caulking is simple and low-risk."
+   },
+   {
+    "q": "You should call a professional for:",
+    "options": [
+     "Major electrical and any gas work",
+     "Hanging a picture",
+     "Changing an air filter",
+     "Caulking"
+    ],
+    "a": 0,
+    "why": "Those risk fire, electrocution, or explosion."
+   },
+   {
+    "q": "Any gas smell means you should:",
+    "options": [
+     "Leave and call immediately",
+     "Light a match to check",
+     "Ignore it",
+     "Open a window and keep working"
+    ],
+    "a": 0,
+    "why": "Gas is extremely dangerous — never DIY it."
+   },
+   {
+    "q": "The rule of thumb for calling a pro is: if a mistake could:",
+    "options": [
+     "Seriously hurt you or the home",
+     "Save a little money",
+     "Take time",
+     "Teach you something"
+    ],
+    "a": 0,
+    "why": "Dangerous/complex work goes to licensed pros."
+   },
+   {
+    "q": "To seal a gap around a tub, you use:",
+    "options": [
+     "Caulk",
+     "Spackle",
+     "Nails",
+     "Tape measure"
+    ],
+    "a": 0,
+    "why": "Caulk seals against water and air."
+   },
+   {
+    "q": "Small holes in drywall are patched with:",
+    "options": [
+     "Spackle (then sand and paint)",
+     "Caulk only",
+     "Water",
+     "A hammer"
+    ],
+    "a": 0,
+    "why": "Spackle fills, then you sand and paint."
+   },
+   {
+    "q": "To hang something heavy, you should screw into:",
+    "options": [
+     "A stud (or a rated anchor)",
+     "Bare drywall",
+     "Paint",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Bare drywall won't hold heavy weight."
+   },
+   {
+    "q": "To clear a clogged drain, it's best to use a:",
+    "options": [
+     "Plunger or drain snake",
+     "Harsh chemicals first",
+     "A hammer",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Mechanical methods are safer for pipes."
+   },
+   {
+    "q": "HVAC air filters should be changed about every:",
+    "options": [
+     "1–3 months",
+     "10 years",
+     "Week",
+     "Never"
+    ],
+    "a": 0,
+    "why": "It protects the system and air quality."
+   },
+   {
+    "q": "A key preventive task is to:",
+    "options": [
+     "Test smoke/CO detectors",
+     "Ignore small leaks",
+     "Skip gutter cleaning",
+     "Wait for failures"
+    ],
+    "a": 0,
+    "why": "Prevention avoids costly disasters."
+   },
+   {
+    "q": "Fixing a small leak promptly matters because:",
+    "options": [
+     "Water damage is costly and causes mold",
+     "It never spreads",
+     "Leaks fix themselves",
+     "It's not important"
+    ],
+    "a": 0,
+    "why": "Water damage compounds quickly."
+   },
+   {
+    "q": "In a plumbing emergency, you should first:",
+    "options": [
+     "Shut off the water",
+     "Call later",
+     "Keep using it",
+     "Add more water"
+    ],
+    "a": 0,
+    "why": "Shutting off water stops the damage."
+   },
+   {
+    "q": "Before electrical work, you should:",
+    "options": [
+     "Turn off power at the breaker",
+     "Leave it on",
+     "Touch the wires first",
+     "Pour water on it"
+    ],
+    "a": 0,
+    "why": "Cut power at the breaker box for safety."
+   },
+   {
+    "q": "Everyone in a home should know the location of the:",
+    "options": [
+     "Main water shutoff and breaker box",
+     "Nearest mall",
+     "TV remote",
+     "Spare key only"
+    ],
+    "a": 0,
+    "why": "It prevents floods and enables safe emergency response."
+   },
+   {
+    "q": "The skill in home repair is:",
+    "options": [
+     "Knowing both the easy fixes and your limits",
+     "Doing everything yourself",
+     "Never trying anything",
+     "Always hiring out"
+    ],
+    "a": 0,
+    "why": "DIY the simple stuff; hire pros for the dangerous stuff."
+   }
+  ]
+ },
+ "repair-plumbing-basics": {
+  "title": "Plumbing Basics",
+  "subject": "Home & Auto Repair",
+  "level": "All ages",
+  "objectives": [
+   "Understand how home plumbing works (supply + drain)",
+   "Know how to shut off the water",
+   "Fix common problems (clogs, running toilet, leaks)",
+   "Understand fixtures and simple parts",
+   "Know when to call a plumber"
+  ],
+  "intro": "Home plumbing seems mysterious but follows simple logic: clean water comes in under pressure, and used water and waste go out by gravity. Understanding the basics lets you handle common problems and, crucially, stop a leak before it causes damage. This lesson covers how plumbing works and the fixes you can do. Know your limits — gas lines and major work need a pro.",
+  "sections": [
+   {
+    "h": "How home plumbing works",
+    "body": "A home's plumbing has two separate systems. The supply system brings clean, pressurized water in from the city main or a well, and distributes it (hot and cold) to every faucet, toilet, and appliance. Because it's under pressure, a break here sprays water — which is why shutoff valves matter. The drain-waste system carries used water and waste away, flowing by gravity (downhill) into the sewer or septic system.\n\nA key part of the drain system is the trap — the U-shaped bend of pipe under every sink and fixture. It holds a little water that blocks sewer gases from coming back up into your home while still letting water drain. Vents (pipes to the roof) let air in so drains flow smoothly. Understanding this — pressurized supply in, gravity drainage out, traps blocking gas — demystifies most of plumbing.",
+    "visual": "<svg viewBox=\"0 0 220 152\" width=\"215\" role=\"img\" aria-label=\"A sink P-trap: the U-shaped bend under a drain that holds water to block sewer gas\"><path d=\"M62 16 L62 96 Q62 120 82 120 Q102 120 102 96 L102 74 L180 74\" fill=\"none\" stroke=\"#4f9cf0\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M68 104 Q82 116 96 104 L96 112 Q82 124 68 112 Z\" fill=\"rgba(57,227,200,.5)\"/><text x=\"62\" y=\"12\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8.5\">drain in</text><text x=\"182\" y=\"70\" text-anchor=\"start\" fill=\"#9aa6c0\" font-size=\"8.5\">→ sewer</text><text x=\"110\" y=\"145\" text-anchor=\"middle\" fill=\"#9adbcf\" font-size=\"8.5\">the trap holds water that blocks sewer gas</text></svg>",
+    "caption": "The P-trap under every fixture: its U-bend holds water that blocks sewer gas while letting water drain.",
+    "tip": "Plumbing = pressurized clean water IN, gravity waste OUT. The U-shaped 'trap' under each fixture holds water that blocks sewer gas."
+   },
+   {
+    "h": "Shutting off the water",
+    "body": "The single most important plumbing skill — even if you never fix anything — is knowing how to shut off the water, because it stops a small leak from becoming a flood. There are shutoffs at two levels. Fixture shutoffs: small valves under sinks and behind toilets that stop water to just that fixture — turn these for a repair or a leaking fixture. The main shutoff: a valve where water enters your home (often near the meter, in a basement, or outside) that stops all water to the house.\n\nFind and test these before you ever need them. In a plumbing emergency — a burst pipe, an overflowing toilet, a leak you can't stop — turning off the water (fixture valve first, or the main if needed) is the first thing to do, before water damage mounts. Everyone in a household should know where the main shutoff is. This one piece of knowledge prevents enormous, expensive water damage.",
+    "tip": "KNOW your water shutoffs: small ones under each fixture, and the MAIN valve for the whole house. Shutting off water first prevents flood damage."
+   },
+   {
+    "h": "Common fixes: clogs and running toilets",
+    "body": "A few problems come up again and again. A clogged drain is usually cleared with a plunger (for sinks and toilets) or a drain snake (auger) that physically removes the blockage — these work better and safer than harsh chemical drain cleaners, which can damage pipes. Preventing clogs (hair catchers, not pouring grease down drains) beats clearing them.\n\nA running toilet (water constantly trickling) is a very common, easy fix: it's usually the flapper (the rubber seal at the bottom of the tank) not sealing, or the fill valve misadjusted — inexpensive parts you can replace by hand in minutes, and worth fixing fast since a running toilet wastes a lot of water. Both of these are beginner-friendly repairs that save money, and are far cheaper than a plumber visit once you've seen how simple they are.",
+    "tip": "Clogs: use a plunger or drain snake (not harsh chemicals). Running toilet: usually a cheap flapper or fill-valve fix — easy, and it wastes water fast."
+   },
+   {
+    "h": "Fixtures and simple parts",
+    "body": "Basic plumbing repairs often come down to a few simple, replaceable parts. A dripping faucet is usually a worn washer or cartridge inside — an inexpensive part you can swap after shutting off that fixture's water. Toilets have just a few parts in the tank (flapper, fill valve, flush handle) that are all easy to replace. Supply lines (the flexible hoses to fixtures) can be swapped if they leak.\n\nThe general approach for a small plumbing repair: shut off the water to that fixture, have a towel and bucket ready (there's always a little water), take the old part to the hardware store to match it, and reverse the steps to install the new one. Many 'plumbing problems' are just a worn 10-dollar part. Knowing this turns scary leaks into simple swaps — and teaches you that a lot of home repair is just replacing worn parts.",
+    "tip": "Many fixes are just swapping a cheap worn part (faucet washer, toilet flapper). Shut off that fixture's water, match the part, and reverse the steps."
+   },
+   {
+    "h": "When to call a plumber",
+    "body": "Plenty of plumbing is DIY-friendly, but some situations need a professional. Call a plumber for: major leaks or burst pipes you can't control (after shutting off the water), anything involving the main sewer line or a backed-up whole house, water heater repairs or replacement, re-piping, low water pressure throughout the house, and anything behind walls or that requires soldering/permits. And never DIY gas lines — gas work is for licensed pros only, and any gas smell means leave and call immediately.\n\nThe theme, as with all home repair: do the simple, low-risk fixes (clogs, running toilets, worn washers), but call a pro for anything that could cause major water damage, involves the main systems, or you're not confident about. Shutting off the water buys you time to call. Knowing both the easy fixes and your limits makes plumbing far less intimidating.",
+    "tip": "Call a plumber for burst pipes, sewer/main-line issues, water heaters, and anything behind walls. NEVER DIY gas. Shut off water first, then call."
+   }
+  ],
+  "cards": [
+   {
+    "h": "How it works",
+    "body": "Pressurized clean water IN; gravity waste OUT. The U-shaped trap holds water that blocks sewer gas."
+   },
+   {
+    "h": "Shutoffs",
+    "body": "Know the small fixture valves and the MAIN house valve. Shut off water first in any emergency."
+   },
+   {
+    "h": "Common fixes",
+    "body": "Clogs → plunger/snake (not chemicals). Running toilet → cheap flapper/fill-valve fix."
+   },
+   {
+    "h": "Parts",
+    "body": "Many fixes are a worn cheap part (faucet washer, flapper). Shut water, match part, reverse steps."
+   },
+   {
+    "h": "Call a plumber",
+    "body": "Burst pipes, sewer/main line, water heaters, behind-wall work. NEVER DIY gas."
+   }
+  ],
+  "flash": [
+   [
+    "Supply system",
+    "Pressurized clean water piped into the home."
+   ],
+   [
+    "Drain-waste system",
+    "Gravity-fed pipes carrying waste out."
+   ],
+   [
+    "Trap",
+    "The U-bend holding water that blocks sewer gas."
+   ],
+   [
+    "Main shutoff",
+    "The valve stopping all water to the house."
+   ],
+   [
+    "Fixture shutoff",
+    "A valve stopping water to one fixture."
+   ],
+   [
+    "Plunger",
+    "A tool that clears clogs with pressure."
+   ],
+   [
+    "Drain snake",
+    "An auger that removes a clog physically."
+   ],
+   [
+    "Flapper",
+    "The tank seal that often causes a running toilet."
+   ],
+   [
+    "Fill valve",
+    "The toilet part that refills the tank."
+   ],
+   [
+    "Faucet washer",
+    "A small worn part that causes a dripping faucet."
+   ],
+   [
+    "Water pressure",
+    "The force pushing supply water through pipes."
+   ],
+   [
+    "Vent",
+    "A pipe letting air in so drains flow."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Home plumbing has two systems:",
+    "options": [
+     "Pressurized supply in, gravity drain out",
+     "Only drains",
+     "Only supply",
+     "Gas only"
+    ],
+    "a": 0,
+    "why": "Clean water in under pressure; waste out by gravity."
+   },
+   {
+    "q": "The U-shaped trap under a sink:",
+    "options": [
+     "Holds water that blocks sewer gas",
+     "Stores extra water",
+     "Heats water",
+     "Measures pressure"
+    ],
+    "a": 0,
+    "why": "Its water seal keeps sewer gas out."
+   },
+   {
+    "q": "The most important plumbing skill is:",
+    "options": [
+     "Knowing how to shut off the water",
+     "Soldering pipes",
+     "Reading blueprints",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "It stops a leak from becoming a flood."
+   },
+   {
+    "q": "The valve that stops ALL water to the house is the:",
+    "options": [
+     "Main shutoff",
+     "Fixture shutoff",
+     "Flapper",
+     "Vent"
+    ],
+    "a": 0,
+    "why": "Fixture valves stop one fixture; the main stops everything."
+   },
+   {
+    "q": "In a burst-pipe emergency, first:",
+    "options": [
+     "Shut off the water",
+     "Call next week",
+     "Keep it running",
+     "Add water"
+    ],
+    "a": 0,
+    "why": "Stop the flow before damage mounts."
+   },
+   {
+    "q": "To clear a clog, it's best to use a:",
+    "options": [
+     "Plunger or drain snake",
+     "Harsh chemicals first",
+     "A torch",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Mechanical methods are safer for pipes."
+   },
+   {
+    "q": "A running toilet is usually caused by:",
+    "options": [
+     "A worn flapper or fill valve",
+     "A burst main",
+     "No water",
+     "A clogged vent"
+    ],
+    "a": 0,
+    "why": "Cheap, easy parts to replace."
+   },
+   {
+    "q": "A running toilet matters because it:",
+    "options": [
+     "Wastes a lot of water",
+     "Is dangerous",
+     "Can't be fixed",
+     "Saves water"
+    ],
+    "a": 0,
+    "why": "Fix it fast to stop waste."
+   },
+   {
+    "q": "A dripping faucet is usually:",
+    "options": [
+     "A worn washer or cartridge",
+     "A main-line break",
+     "Normal",
+     "Unfixable"
+    ],
+    "a": 0,
+    "why": "A cheap part swap after shutting off that fixture."
+   },
+   {
+    "q": "Before swapping a fixture part, you should:",
+    "options": [
+     "Shut off water to that fixture",
+     "Leave water on",
+     "Remove the main valve",
+     "Call a pro always"
+    ],
+    "a": 0,
+    "why": "Have a towel/bucket ready too."
+   },
+   {
+    "q": "To match a replacement part, a good trick is to:",
+    "options": [
+     "Take the old part to the store",
+     "Guess the size",
+     "Buy the biggest",
+     "Use tape"
+    ],
+    "a": 0,
+    "why": "Matching avoids buying the wrong part."
+   },
+   {
+    "q": "You should NEVER DIY:",
+    "options": [
+     "Gas lines",
+     "A clogged sink",
+     "A running toilet",
+     "A dripping faucet"
+    ],
+    "a": 0,
+    "why": "Gas work is for licensed pros only."
+   },
+   {
+    "q": "Call a plumber for:",
+    "options": [
+     "Burst pipes or sewer/main-line issues",
+     "A slow sink drain",
+     "A running toilet",
+     "A dripping faucet"
+    ],
+    "a": 0,
+    "why": "Major systems and behind-wall work need a pro."
+   },
+   {
+    "q": "Harsh chemical drain cleaners:",
+    "options": [
+     "Can damage pipes",
+     "Are always best",
+     "Are free",
+     "Fix running toilets"
+    ],
+    "a": 0,
+    "why": "Mechanical clearing is safer."
+   },
+   {
+    "q": "Everyone in a household should know:",
+    "options": [
+     "Where the main water shutoff is",
+     "The water's chemistry",
+     "The pipe brand",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "It prevents major water damage in emergencies."
+   }
+  ]
+ },
+ "repair-electrical-basics": {
+  "title": "Electrical Basics",
+  "subject": "Home & Auto Repair",
+  "level": "All ages",
+  "objectives": [
+   "Understand electricity basics: voltage, current, circuits",
+   "Understand home electrical safety",
+   "Understand breakers, outlets, and grounding",
+   "Do only safe, simple electrical tasks",
+   "Know when to call an electrician (most of the time)"
+  ],
+  "intro": "Electricity powers modern life but is genuinely dangerous — it can shock, electrocute, or start fires. Understanding the basics makes you safer and lets you handle a few simple tasks, but electrical work has a low tolerance for mistakes. This lesson covers how electricity works and, above all, how to stay safe. Safety-critical: when in doubt, hire a licensed electrician — mistakes can kill.",
+  "sections": [
+   {
+    "h": "How electricity works",
+    "body": "Electricity is the flow of electric charge (electrons) through a conductor like a wire. Three basic quantities describe it. Voltage (volts) is the 'pressure' pushing the electricity — like water pressure in a pipe. Current (amps) is the rate of flow — how much electricity is moving. Resistance (ohms) is how much the material opposes the flow.\n\nFor electricity to do work, it needs a complete circuit — an unbroken loop from the power source, through whatever it powers (a light, an appliance), and back. A switch simply breaks or completes that loop (off = broken, on = complete). When the loop is broken, no current flows. Understanding this — pressure (voltage) pushes flow (current) around a complete loop (circuit) — is the foundation, and it's also why a break in the loop, or a short cut across it, matters so much.",
+    "visual": "<svg viewBox=\"0 0 224 148\" width=\"215\" role=\"img\" aria-label=\"A simple electric circuit: a power source, a switch, and a bulb connected in a complete loop\"><rect x=\"32\" y=\"34\" width=\"160\" height=\"78\" fill=\"none\" stroke=\"#39e3c8\" stroke-width=\"2\"/><line x1=\"20\" y1=\"67\" x2=\"44\" y2=\"67\" stroke=\"#f05a5a\" stroke-width=\"3\"/><line x1=\"26\" y1=\"79\" x2=\"38\" y2=\"79\" stroke=\"#f05a5a\" stroke-width=\"3\"/><circle cx=\"192\" cy=\"73\" r=\"13\" fill=\"rgba(232,184,75,.4)\" stroke=\"#e8b84b\" stroke-width=\"2\"/><line x1=\"184\" y1=\"65\" x2=\"200\" y2=\"81\" stroke=\"#e8b84b\" stroke-width=\"1.2\"/><line x1=\"200\" y1=\"65\" x2=\"184\" y2=\"81\" stroke=\"#e8b84b\" stroke-width=\"1.2\"/><circle cx=\"98\" cy=\"34\" r=\"2.5\" fill=\"#cdd9ec\"/><circle cx=\"128\" cy=\"34\" r=\"2.5\" fill=\"#cdd9ec\"/><line x1=\"98\" y1=\"34\" x2=\"126\" y2=\"28\" stroke=\"#cdd9ec\" stroke-width=\"2\"/><polygon points=\"66,30 74,34 66,38\" fill=\"#4f9cf0\"/><polygon points=\"188,92 192,100 196,92\" fill=\"#4f9cf0\"/><polygon points=\"132,108 124,112 132,116\" fill=\"#4f9cf0\"/><text x=\"28\" y=\"98\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">source</text><text x=\"113\" y=\"20\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">switch</text><text x=\"192\" y=\"100\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">bulb</text><text x=\"112\" y=\"140\" text-anchor=\"middle\" fill=\"#9adbcf\" font-size=\"8.5\">a complete loop lets current flow; the switch breaks it</text></svg>",
+    "caption": "A simple circuit: the source pushes current around a complete loop through the bulb; the switch breaks or completes it.",
+    "tip": "Voltage = pressure, current = flow, resistance = opposition. Electricity needs a complete circuit (loop); a switch breaks or completes it."
+   },
+   {
+    "h": "Electrical safety first",
+    "body": "Electricity deserves deep respect because its dangers are invisible and severe: electric shock can injure or kill, and faulty wiring causes house fires. The cardinal rule of any electrical work is: turn off the power first — at the breaker, not just the switch — and verify it's off with a tester before touching wires. Never assume a wire is dead.\n\nOther safety essentials: water and electricity are a deadly combination (never handle electrical things with wet hands or near water), don't overload outlets or circuits (a common fire cause), replace damaged cords rather than taping them, and respect that much electrical work legally requires a licensed electrician. If you feel a tingle from an appliance, smell burning, or see scorch marks or sparks, stop and get it checked. With electricity, caution isn't optional — a mistake you'd shrug off elsewhere can be fatal here.",
+    "tip": "ALWAYS cut power at the breaker and verify it's off before touching wires. Never assume a wire is dead. Keep water away. When unsure, hire a pro."
+   },
+   {
+    "h": "Breakers, outlets, and grounding",
+    "body": "A few components keep your home's electricity safe. The breaker box (electrical panel) distributes power into circuits, each protected by a circuit breaker — a switch that automatically cuts power if a circuit draws too much (preventing overheating and fire). When a breaker 'trips,' it's doing its job; you reset it, but if it keeps tripping, something's wrong — investigate, don't just keep resetting.\n\nOutlets (receptacles) are where you plug in. Modern ones are grounded (three-prong): the third prong is a safety ground that routes dangerous faults safely away. GFCI outlets (the kind with test/reset buttons, used near water in kitchens and bathrooms) cut power instantly if they detect a dangerous imbalance, preventing electrocution. These protections — breakers, grounding, GFCIs — are why modern electrical systems are far safer, and why you shouldn't defeat them (like removing a ground prong).",
+    "tip": "Breakers cut power on overload (don't keep resetting a tripping one). Grounding (3rd prong) and GFCI outlets (near water) are safety features — never defeat them."
+   },
+   {
+    "h": "Simple tasks you can do safely",
+    "body": "A few basic electrical tasks are reasonable for a careful DIYer — always with the power off at the breaker and verified dead. These include: replacing a light bulb (obviously), replacing a simple light fixture or a standard switch or outlet with an identical one, resetting a tripped breaker or GFCI, and replacing a cord on a lamp. These are common and well-documented.\n\nEven for these, follow the rules: power off at the breaker, test to confirm it's dead, note or photograph how wires were connected before disconnecting, and connect the new one the same way. If anything is unexpected (old wiring, no ground wire, aluminum wiring, something you don't understand), stop and call an electrician. The simple stuff is doable with care; the moment it gets complicated or unfamiliar, it crosses into pro territory.",
+    "tip": "Safe DIY (power off + verified dead): swap identical fixtures/switches/outlets, reset breakers, replace lamp cords. Anything unfamiliar = stop, call a pro."
+   },
+   {
+    "h": "When to call an electrician",
+    "body": "With electricity, the list of 'call a pro' is long, and that's appropriate. Call a licensed electrician for: any new wiring or circuits, anything in the breaker panel beyond resetting a breaker, frequently tripping breakers (a sign of a real problem), flickering lights or warm/scorched outlets, adding outlets, work requiring permits, old or aluminum wiring, and honestly anything you're not fully confident about.\n\nThe reason is simple: electrical mistakes don't give second chances the way a bad paint job does — they cause shocks, fires, and deaths, and they're often hidden inside walls. Licensed electricians are trained and the work is often legally required to be permitted and inspected. There's zero shame in calling one; it's the smart, safe choice. Learn the basics to stay safe and handle the few simple tasks — but with electricity, 'when in doubt, call a pro' is a rule worth following strictly.",
+    "tip": "Call an electrician for new wiring, panel work, repeated tripping, warm/scorched outlets, or anything unfamiliar. Electrical mistakes cause fires and deaths — don't gamble."
+   }
+  ],
+  "cards": [
+   {
+    "h": "How it works",
+    "body": "Voltage = pressure, current = flow, resistance = opposition. Needs a complete circuit (loop); a switch breaks/completes it."
+   },
+   {
+    "h": "Safety first",
+    "body": "Cut power at the breaker + verify dead before touching wires. Never assume dead. Keep water away."
+   },
+   {
+    "h": "Breakers & grounding",
+    "body": "Breakers cut power on overload (don't keep resetting); grounding + GFCI (near water) are safety features — don't defeat them."
+   },
+   {
+    "h": "Safe DIY",
+    "body": "Power off + verified: swap identical fixtures/switches/outlets, reset breakers, replace lamp cords. Unfamiliar = stop."
+   },
+   {
+    "h": "Call a pro",
+    "body": "New wiring, panel work, repeated tripping, warm/scorched outlets. Mistakes cause fires and deaths — don't gamble."
+   }
+  ],
+  "flash": [
+   [
+    "Voltage",
+    "The 'pressure' pushing electricity (volts)."
+   ],
+   [
+    "Current",
+    "The rate of electric flow (amps)."
+   ],
+   [
+    "Resistance",
+    "How much a material opposes flow (ohms)."
+   ],
+   [
+    "Circuit",
+    "A complete loop for electricity to flow."
+   ],
+   [
+    "Conductor",
+    "A material (like wire) that carries electricity."
+   ],
+   [
+    "Circuit breaker",
+    "A switch that cuts power on overload."
+   ],
+   [
+    "Breaker box",
+    "The panel distributing power into circuits."
+   ],
+   [
+    "Ground",
+    "A safety path routing dangerous faults away (3rd prong)."
+   ],
+   [
+    "GFCI",
+    "An outlet that cuts power fast near water to prevent shock."
+   ],
+   [
+    "Short circuit",
+    "An unintended low-resistance path (dangerous)."
+   ],
+   [
+    "Overload",
+    "Drawing too much current (can cause fire)."
+   ],
+   [
+    "Electrocution",
+    "Death or injury from electric shock."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Voltage is like:",
+    "options": [
+     "Water pressure (the push)",
+     "The pipe size",
+     "The water amount",
+     "Resistance"
+    ],
+    "a": 0,
+    "why": "Voltage pushes the current."
+   },
+   {
+    "q": "Current is:",
+    "options": [
+     "The rate of electric flow (amps)",
+     "The pressure",
+     "The opposition",
+     "A wire"
+    ],
+    "a": 0,
+    "why": "Amps measure how much electricity flows."
+   },
+   {
+    "q": "For electricity to flow, you need a:",
+    "options": [
+     "Complete circuit (loop)",
+     "Broken wire",
+     "Single wire end",
+     "Switch that's off"
+    ],
+    "a": 0,
+    "why": "An unbroken loop from source and back."
+   },
+   {
+    "q": "A switch works by:",
+    "options": [
+     "Breaking or completing the loop",
+     "Adding voltage",
+     "Removing resistance",
+     "Grounding"
+    ],
+    "a": 0,
+    "why": "Off = broken loop; on = complete loop."
+   },
+   {
+    "q": "The cardinal rule before any electrical work is:",
+    "options": [
+     "Cut power at the breaker and verify it's off",
+     "Just flip the switch",
+     "Work fast",
+     "Assume it's dead"
+    ],
+    "a": 0,
+    "why": "Never assume a wire is dead."
+   },
+   {
+    "q": "Water and electricity are:",
+    "options": [
+     "A deadly combination",
+     "Perfectly safe",
+     "Helpful together",
+     "Unrelated"
+    ],
+    "a": 0,
+    "why": "Never handle electrical things wet or near water."
+   },
+   {
+    "q": "A circuit breaker's job is to:",
+    "options": [
+     "Cut power when a circuit draws too much",
+     "Add power",
+     "Store electricity",
+     "Make light"
+    ],
+    "a": 0,
+    "why": "It prevents overheating and fire."
+   },
+   {
+    "q": "If a breaker keeps tripping, you should:",
+    "options": [
+     "Investigate the cause",
+     "Keep resetting it forever",
+     "Tape it on",
+     "Ignore it"
+    ],
+    "a": 0,
+    "why": "Repeated tripping signals a real problem."
+   },
+   {
+    "q": "The third prong on an outlet is the:",
+    "options": [
+     "Safety ground",
+     "Extra power",
+     "A fake prong",
+     "A fuse"
+    ],
+    "a": 0,
+    "why": "Grounding routes dangerous faults away."
+   },
+   {
+    "q": "GFCI outlets (with test/reset buttons) are used:",
+    "options": [
+     "Near water (kitchens, bathrooms)",
+     "Only outdoors",
+     "Nowhere",
+     "In the attic only"
+    ],
+    "a": 0,
+    "why": "They cut power fast to prevent electrocution near water."
+   },
+   {
+    "q": "You should never:",
+    "options": [
+     "Defeat safety features (like removing a ground prong)",
+     "Reset a GFCI",
+     "Replace a bulb",
+     "Use a tester"
+    ],
+    "a": 0,
+    "why": "Grounding and GFCIs protect your life."
+   },
+   {
+    "q": "A reasonable DIY task (power off + verified) is:",
+    "options": [
+     "Swapping an identical light switch",
+     "New house wiring",
+     "Panel upgrades",
+     "Gas line work"
+    ],
+    "a": 0,
+    "why": "Simple like-for-like swaps are doable with care."
+   },
+   {
+    "q": "If you find old or aluminum wiring you don't understand, you should:",
+    "options": [
+     "Stop and call an electrician",
+     "Guess",
+     "Keep going",
+     "Rip it out"
+    ],
+    "a": 0,
+    "why": "Unfamiliar wiring crosses into pro territory."
+   },
+   {
+    "q": "Warm or scorched outlets mean:",
+    "options": [
+     "Call an electrician",
+     "Nothing",
+     "Keep using it",
+     "Add more plugs"
+    ],
+    "a": 0,
+    "why": "It's a fire hazard needing a pro."
+   },
+   {
+    "q": "The reason to be strict about calling a pro for electricity is:",
+    "options": [
+     "Mistakes cause shocks, fires, and deaths",
+     "It's trendy",
+     "Pros are cheap",
+     "There's no risk"
+    ],
+    "a": 0,
+    "why": "Electrical errors don't give second chances."
+   }
+  ]
+ },
+ "repair-car-maintenance": {
+  "title": "Car Maintenance",
+  "subject": "Home & Auto Repair",
+  "level": "All ages",
+  "objectives": [
+   "Understand why basic car maintenance matters",
+   "Know the key fluids and when to check/change them",
+   "Understand tires, brakes, and routine safety checks",
+   "Follow a maintenance schedule",
+   "Know roadside basics and when to see a mechanic"
+  ],
+  "intro": "A car is a big investment, and basic maintenance keeps it running safely, reliably, and far longer while avoiding expensive breakdowns. You don't have to be a mechanic — a few simple checks and following the maintenance schedule prevent most problems. This lesson covers the essentials of keeping a car healthy.",
+  "sections": [
+   {
+    "h": "Why maintenance matters",
+    "body": "Cars are complex machines that wear out with use, and regular maintenance is what keeps them running well and avoids far more expensive repairs. The core idea: small, scheduled upkeep (like oil changes) prevents big, costly failures (like a destroyed engine). A neglected car breaks down, costs more over time, is less safe, and loses value faster.\n\nYour most important resource is the owner's manual, which lists exactly what your specific car needs and when (the 'maintenance schedule'). You don't have to do the work yourself — a shop can — but knowing the basics helps you keep up with it, avoid being overcharged for things you don't need, and catch problems early. Think of maintenance as cheap insurance that keeps a major asset working and safe.",
+    "tip": "Small scheduled upkeep (oil changes, etc.) prevents big, costly failures. Your owner's manual lists exactly what YOUR car needs and when."
+   },
+   {
+    "h": "Fluids: the car's lifeblood",
+    "body": "Several fluids keep a car running, and checking and changing them is core maintenance. Engine oil is the most important — it lubricates the engine; it must be changed regularly (per your manual, often every 5,000–10,000 miles for modern cars) or the engine wears out. Check the level with the dipstick and watch for the oil-change light.\n\nOther key fluids: coolant/antifreeze (keeps the engine from overheating or freezing), brake fluid (lets your brakes work — critical for safety), transmission fluid, power-steering fluid, and windshield washer fluid. Most have a dipstick or marked reservoir you can check. Low or dirty fluid causes expensive damage, so keeping fluids topped up and changed on schedule is one of the highest-value things you can do for a car. A sweet or burning smell, or a puddle under the car, can signal a fluid leak worth investigating.",
+    "tip": "Engine oil is #1 — change it on schedule or the engine dies. Also watch coolant, brake fluid, and the rest. Low/dirty fluid causes costly damage."
+   },
+   {
+    "h": "Tires, brakes, and safety checks",
+    "body": "A few components are both wear items and safety-critical. Tires: keep them at the right air pressure (on the door-jamb sticker — proper pressure improves safety, handling, and fuel economy), check the tread (bald tires are dangerous, especially in rain), rotate them per schedule for even wear, and watch for uneven wear (which signals alignment issues). Don't ignore a tire-pressure warning light.\n\nBrakes: they wear down and are obviously safety-critical — squealing, grinding, a soft pedal, or longer stopping distances mean get them checked now, not later. Also keep an eye on lights (headlights, brake lights, turn signals — replace burnt-out bulbs), wiper blades (replace when they streak), and the battery (most last 3–5 years). A quick walk-around and attention to warning lights catches most safety issues before they become dangerous or expensive.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"A basic car-maintenance interval guide\"><rect x=\"8\" y=\"5\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"5\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Engine oil</text><text x=\"118\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">change per manual (~5k–10k mi)</text><rect x=\"8\" y=\"27\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"27\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Tire rotation</text><text x=\"118\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">per schedule, for even wear</text><rect x=\"8\" y=\"49\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"49\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Tire pressure</text><text x=\"118\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">check monthly (door-jamb sticker)</text><rect x=\"8\" y=\"71\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"71\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Brakes</text><text x=\"118\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">inspect; any squeal/grind = now</text><rect x=\"8\" y=\"93\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"93\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Big services</text><text x=\"118\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">fluids/plugs/belts at major mileage</text></svg>",
+    "caption": "A basic maintenance-interval guide — but always follow your own car's manual.",
+    "example": "Door-jamb sticker shows correct tire pressure. Squealing/grinding brakes = check now. Dashboard warning lights = don't ignore.",
+    "tip": "Tires: right pressure + good tread (don't ignore the warning light). Brakes: any squeal/grind/soft pedal = check now. Watch lights, wipers, battery."
+   },
+   {
+    "h": "Following a maintenance schedule",
+    "body": "The heart of car care is simply following the maintenance schedule in your owner's manual, which tells you what to service at which mileage. Typical intervals: oil and filter changes (most frequent), tire rotation, air filter replacement, brake inspection, and bigger services at major mileages (like fluids, spark plugs, and timing belts at manufacturer-specified intervals). Following this schedule is the single best thing you can do for reliability.\n\nKeep simple records of what was done and when (an app or even a notebook works), so you know what's due. Don't skip services to save money short-term — a missed oil change or timing belt can cause catastrophic, expensive failure. Regular, on-schedule maintenance keeps a car reliable for 150,000–200,000+ miles. The schedule takes the guesswork out; just follow it, and keep track.",
+    "tip": "Follow the owner's manual schedule (oil, rotation, filters, big services at major mileage). Keep records. Skipping services risks catastrophic failure."
+   },
+   {
+    "h": "Roadside know-how and when to see a mechanic",
+    "body": "A few basics make you safer and more self-reliant. Know how to check your fluids and tire pressure, how to change a flat tire (or use the spare / a repair kit — practice before you need it), how to jump-start a dead battery safely, and what the common dashboard warning lights mean (the manual explains them — some mean 'stop driving now,' like oil pressure or overheating). Keep an emergency kit in the car (jack, spare, jumper cables, flashlight, water).\n\nFor actual repairs, a trustworthy mechanic is invaluable. See one for: anything beyond basic maintenance, any warning light you don't understand, unusual noises/vibrations/smells, and the scheduled services you don't do yourself. Find a reputable shop before an emergency, get estimates for big jobs, and understand that catching issues early (at a routine check) is always cheaper than waiting for a breakdown. Basic knowledge plus a good mechanic keeps you safe and your car running for years.",
+    "tip": "Know how to check fluids/tires, change a flat, jump a battery, and read warning lights. For repairs, find a trustworthy mechanic — and catch issues early."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Why it matters",
+    "body": "Small scheduled upkeep prevents big costly failures. The owner's manual lists what your car needs and when."
+   },
+   {
+    "h": "Fluids",
+    "body": "Engine oil is #1 (change on schedule). Also coolant, brake fluid, transmission, etc. Low/dirty = damage."
+   },
+   {
+    "h": "Tires & brakes",
+    "body": "Right tire pressure + tread; rotate. Brakes: any squeal/grind/soft pedal = check now. Watch lights/wipers/battery."
+   },
+   {
+    "h": "Schedule",
+    "body": "Follow the manual's intervals; keep records; don't skip services (risks catastrophic failure)."
+   },
+   {
+    "h": "Roadside & mechanic",
+    "body": "Know fluids, flat changes, jump-starts, warning lights. Find a trustworthy mechanic; catch issues early."
+   }
+  ],
+  "flash": [
+   [
+    "Engine oil",
+    "Lubricant that must be changed regularly or the engine fails."
+   ],
+   [
+    "Oil change",
+    "Replacing oil and filter on schedule (most frequent service)."
+   ],
+   [
+    "Coolant",
+    "Antifreeze that stops the engine overheating or freezing."
+   ],
+   [
+    "Brake fluid",
+    "The fluid that makes brakes work (safety-critical)."
+   ],
+   [
+    "Tire pressure",
+    "Correct air level (on the door-jamb sticker)."
+   ],
+   [
+    "Tread",
+    "The grip pattern on a tire (bald = dangerous)."
+   ],
+   [
+    "Tire rotation",
+    "Swapping tire positions for even wear."
+   ],
+   [
+    "Maintenance schedule",
+    "The manual's list of what to service when."
+   ],
+   [
+    "Owner's manual",
+    "The guide to your specific car's needs."
+   ],
+   [
+    "Warning light",
+    "A dashboard alert (some mean stop now)."
+   ],
+   [
+    "Jump-start",
+    "Starting a dead battery from another source."
+   ],
+   [
+    "Spare tire",
+    "A backup tire for a flat."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Regular maintenance mainly:",
+    "options": [
+     "Prevents big, costly failures",
+     "Wastes money",
+     "Hurts the car",
+     "Does nothing"
+    ],
+    "a": 0,
+    "why": "Small upkeep avoids expensive breakdowns."
+   },
+   {
+    "q": "The best guide to what YOUR car needs is the:",
+    "options": [
+     "Owner's manual",
+     "Neighbor's advice",
+     "A random video",
+     "Guessing"
+    ],
+    "a": 0,
+    "why": "It lists the exact maintenance schedule."
+   },
+   {
+    "q": "The most important fluid to change on schedule is:",
+    "options": [
+     "Engine oil",
+     "Washer fluid",
+     "Nothing",
+     "Soda"
+    ],
+    "a": 0,
+    "why": "Oil lubricates the engine; skipping it ruins it."
+   },
+   {
+    "q": "Coolant (antifreeze) keeps the engine from:",
+    "options": [
+     "Overheating or freezing",
+     "Starting",
+     "Steering",
+     "Braking"
+    ],
+    "a": 0,
+    "why": "It regulates engine temperature."
+   },
+   {
+    "q": "Brake fluid is:",
+    "options": [
+     "Safety-critical (brakes need it)",
+     "Optional",
+     "For windshields",
+     "Just for looks"
+    ],
+    "a": 0,
+    "why": "Without it, brakes fail."
+   },
+   {
+    "q": "Correct tire pressure is found on the:",
+    "options": [
+     "Door-jamb sticker",
+     "Tire's color",
+     "Radio",
+     "Windshield"
+    ],
+    "a": 0,
+    "why": "The sticker lists your car's recommended pressure."
+   },
+   {
+    "q": "Bald tires (worn tread) are:",
+    "options": [
+     "Dangerous, especially in rain",
+     "Fine",
+     "Better for grip",
+     "Required"
+    ],
+    "a": 0,
+    "why": "Low tread loses grip and traction."
+   },
+   {
+    "q": "Squealing or grinding brakes mean:",
+    "options": [
+     "Get them checked now",
+     "Keep driving",
+     "Nothing",
+     "Turn up the radio"
+    ],
+    "a": 0,
+    "why": "It signals brake wear — a safety issue."
+   },
+   {
+    "q": "A dashboard warning light should be:",
+    "options": [
+     "Not ignored (some mean stop now)",
+     "Covered with tape",
+     "Ignored",
+     "Disconnected"
+    ],
+    "a": 0,
+    "why": "Some (oil pressure, overheating) mean stop driving."
+   },
+   {
+    "q": "The single best thing for reliability is to:",
+    "options": [
+     "Follow the maintenance schedule",
+     "Skip oil changes",
+     "Drive hard",
+     "Never service it"
+    ],
+    "a": 0,
+    "why": "On-schedule maintenance prevents failures."
+   },
+   {
+    "q": "Skipping a timing belt or oil change can cause:",
+    "options": [
+     "Catastrophic, expensive failure",
+     "Nothing",
+     "Better mileage",
+     "A cleaner engine"
+    ],
+    "a": 0,
+    "why": "Some skipped services destroy the engine."
+   },
+   {
+    "q": "With good maintenance, a car can last:",
+    "options": [
+     "150,000–200,000+ miles",
+     "5,000 miles",
+     "A month",
+     "Forever without care"
+    ],
+    "a": 0,
+    "why": "Regular care greatly extends its life."
+   },
+   {
+    "q": "A useful roadside skill is knowing how to:",
+    "options": [
+     "Change a flat and jump-start a battery",
+     "Rebuild the engine",
+     "Repaint it",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Practice these before you need them."
+   },
+   {
+    "q": "You should find a trustworthy mechanic:",
+    "options": [
+     "Before an emergency",
+     "Only during a breakdown",
+     "Never",
+     "After the car dies"
+    ],
+    "a": 0,
+    "why": "A reputable shop found early saves money and stress."
+   },
+   {
+    "q": "Catching car issues early (at a routine check) is:",
+    "options": [
+     "Cheaper than waiting for a breakdown",
+     "More expensive",
+     "Pointless",
+     "Dangerous"
+    ],
+    "a": 0,
+    "why": "Prevention beats emergency repair."
    }
   ]
  }
