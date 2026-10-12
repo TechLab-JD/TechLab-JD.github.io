@@ -2087,5 +2087,1307 @@ window.LAB404_CONTENT = {
     "why": "Around 3 days (less in heat) — far shorter than without food."
    }
   ]
+ },
+ "languages-spanish": {
+  "title": "Spanish",
+  "subject": "World Languages",
+  "level": "All levels",
+  "intro": "Spanish is one of the most useful languages to learn — spoken by over 400 million people and especially handy in the U.S. The good news: it's spelled how it sounds, so once you learn the sounds, you can read almost anything.",
+  "cards": [
+   {
+    "h": "Spanish is phonetic",
+    "body": "Unlike English, Spanish letters almost always make the same sound. Learn the five vowel sounds (a = ah, e = eh, i = ee, o = oh, u = oo) and you can pronounce most words on sight. They're short and crisp, not drawn out."
+   },
+   {
+    "h": "Greetings and courtesy",
+    "body": "Hola (hello), Buenos días (good morning), Buenas tardes (good afternoon), Gracias (thank you), Por favor (please), De nada (you're welcome). ¿Cómo estás? asks 'How are you?'"
+   },
+   {
+    "h": "Nouns have gender",
+    "body": "Every noun is masculine or feminine. Most ending in -o are masculine (el libro, the book); most ending in -a are feminine (la casa, the house). 'The' is el (masc.) or la (fem.); 'a/an' is un or una."
+   },
+   {
+    "h": "Simple sentences",
+    "body": "Spanish word order is usually like English: subject + verb + rest. Yo como pan = I eat bread. You can often drop the subject because the verb ending shows who: Como pan also means 'I eat bread.'"
+   },
+   {
+    "h": "Question words",
+    "body": "¿Qué? (what), ¿Quién? (who), ¿Dónde? (where), ¿Cuándo? (when), ¿Por qué? (why), ¿Cómo? (how). Note the upside-down ¿ that opens every Spanish question."
+   }
+  ],
+  "flash": [
+   [
+    "Hola",
+    "Hello"
+   ],
+   [
+    "Gracias",
+    "Thank you"
+   ],
+   [
+    "Por favor",
+    "Please"
+   ],
+   [
+    "Sí / No",
+    "Yes / No"
+   ],
+   [
+    "el / la",
+    "'the' (masculine / feminine)"
+   ],
+   [
+    "Buenos días",
+    "Good morning"
+   ],
+   [
+    "¿Dónde?",
+    "Where?"
+   ],
+   [
+    "Phonetic",
+    "Spelled the way it sounds — true of Spanish."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "How do you say 'thank you' in Spanish?",
+    "options": [
+     "Gracias",
+     "Hola",
+     "Por favor",
+     "Adiós"
+    ],
+    "a": 0,
+    "why": "Gracias means thank you."
+   },
+   {
+    "q": "The Spanish vowel 'i' sounds like:",
+    "options": [
+     "ee (as in 'see')",
+     "eye",
+     "ih",
+     "ay"
+    ],
+    "a": 0,
+    "why": "In Spanish, i = 'ee.'"
+   },
+   {
+    "q": "Which article is feminine?",
+    "options": [
+     "la",
+     "el",
+     "un",
+     "los"
+    ],
+    "a": 0,
+    "why": "'la' is the feminine 'the'; 'el' is masculine."
+   },
+   {
+    "q": "A noun ending in -o is usually:",
+    "options": [
+     "Masculine",
+     "Feminine",
+     "Plural",
+     "A verb"
+    ],
+    "a": 0,
+    "why": "Most -o nouns are masculine (el libro)."
+   },
+   {
+    "q": "What does ¿Dónde? mean?",
+    "options": [
+     "Where?",
+     "Who?",
+     "What?",
+     "When?"
+    ],
+    "a": 0,
+    "why": "¿Dónde? asks 'where?'"
+   },
+   {
+    "q": "Spanish questions open with:",
+    "options": [
+     "An upside-down ¿",
+     "A capital letter only",
+     "A dash",
+     "Nothing special"
+    ],
+    "a": 0,
+    "why": "An inverted question mark ¿ begins Spanish questions."
+   }
+  ]
+ },
+ "lifeskills-career-job-skills": {
+  "title": "Career & Job Skills",
+  "subject": "Life Skills & Finance",
+  "level": "Grades 9 - adult",
+  "intro": "Getting and keeping a good job is a skill set you can learn, not luck. A clear resume, solid interview habits, and basic workplace professionalism will put you ahead of most applicants.",
+  "cards": [
+   {
+    "h": "The resume's one job",
+    "body": "A resume exists to get you an interview, not to list your life story. Keep it to one page, lead with your most relevant experience and skills, use action verbs ('managed,' 'built,' 'fixed'), and tailor it to each job by mirroring the posting's key words."
+   },
+   {
+    "h": "Where jobs actually come from",
+    "body": "Most jobs are filled through connections and referrals, not just online applications. Tell people you're looking, show up to hiring events, and follow up — a quick, polite message after applying sets you apart."
+   },
+   {
+    "h": "Interview basics",
+    "body": "Research the company first, arrive early, dress a step above the role, and have 2–3 short stories ready that show how you solved a problem. Answer with specifics, not generalities, and always prepare a question or two to ask them."
+   },
+   {
+    "h": "The STAR answer",
+    "body": "For 'tell me about a time…' questions, use STAR: Situation (set the scene), Task (your job), Action (what you did), Result (how it turned out). It keeps your answer focused and shows real impact."
+   },
+   {
+    "h": "Keeping the job",
+    "body": "Show up on time, do what you say you'll do, communicate early when there's a problem, and be easy to work with. Reliability and a good attitude get you further than raw talent in most jobs."
+   }
+  ],
+  "flash": [
+   [
+    "Resume",
+    "A one-page summary of your skills and experience to land an interview."
+   ],
+   [
+    "Action verb",
+    "A strong verb describing what you did (built, managed, fixed)."
+   ],
+   [
+    "Cover letter",
+    "A short note tailoring your application to a specific job."
+   ],
+   [
+    "Referral",
+    "A recommendation from someone that helps you get hired."
+   ],
+   [
+    "STAR method",
+    "Situation, Task, Action, Result — a way to answer interview questions."
+   ],
+   [
+    "Reference",
+    "Someone who can vouch for your work to an employer."
+   ],
+   [
+    "Follow-up",
+    "A polite message sent after applying or interviewing."
+   ],
+   [
+    "Soft skills",
+    "Reliability, communication, teamwork — how you work with others."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The main purpose of a resume is to:",
+    "options": [
+     "Get you an interview",
+     "List your whole life",
+     "Replace the interview",
+     "Impress friends"
+    ],
+    "a": 0,
+    "why": "A resume's job is to earn an interview, so keep it focused."
+   },
+   {
+    "q": "Most jobs are filled through:",
+    "options": [
+     "Connections and referrals",
+     "Online forms only",
+     "Luck",
+     "Cold walk-ins only"
+    ],
+    "a": 0,
+    "why": "Networking and referrals fill more jobs than blind applications."
+   },
+   {
+    "q": "STAR stands for Situation, Task, Action, and:",
+    "options": [
+     "Result",
+     "Reason",
+     "Reference",
+     "Review"
+    ],
+    "a": 0,
+    "why": "Result — how it turned out — completes the STAR answer."
+   },
+   {
+    "q": "On a resume you should use:",
+    "options": [
+     "Action verbs",
+     "Long paragraphs",
+     "As many pages as possible",
+     "Only hobbies"
+    ],
+    "a": 0,
+    "why": "Action verbs (built, managed) show impact concisely."
+   },
+   {
+    "q": "A good way to stand out after applying is to:",
+    "options": [
+     "Send a polite follow-up",
+     "Apply 10 more times",
+     "Do nothing",
+     "Call every hour"
+    ],
+    "a": 0,
+    "why": "A brief, polite follow-up shows initiative without being pushy."
+   },
+   {
+    "q": "What usually keeps a job long-term?",
+    "options": [
+     "Reliability and attitude",
+     "Raw talent only",
+     "Working in silence",
+     "Never asking questions"
+    ],
+    "a": 0,
+    "why": "Showing up, following through, and being easy to work with matter most."
+   }
+  ]
+ },
+ "arts-drawing": {
+  "title": "Drawing",
+  "subject": "Arts & Music",
+  "level": "All levels",
+  "intro": "Drawing is a skill, not a gift — it's really about learning to see accurately and practicing. Anyone can improve dramatically with a few fundamentals and regular practice.",
+  "cards": [
+   {
+    "h": "Drawing is seeing",
+    "body": "Most 'bad' drawing comes from drawing what you think something looks like (a symbol) instead of what's actually there. Slow down and really look at shapes, angles and proportions. Draw what you see, not what you know."
+   },
+   {
+    "h": "Start with basic shapes",
+    "body": "Almost anything can be broken into simple shapes — circles, boxes, cylinders. Block in the big shapes first (a head is a ball, a body a series of cylinders), then refine. This keeps proportions right before you add detail."
+   },
+   {
+    "h": "Line and proportion",
+    "body": "Use light, loose lines to sketch first, then darken the ones you keep. Compare sizes to judge proportion ('the head fits about seven times into the body'), and hold your pencil at arm's length to measure lengths."
+   },
+   {
+    "h": "Value and shading",
+    "body": "Value is how light or dark something is. Shading with a range of values — from bright highlight to dark shadow — is what makes a flat drawing look three-dimensional. Squint at your subject to see the big light and dark shapes."
+   },
+   {
+    "h": "Practice beats talent",
+    "body": "Improvement comes from drawing regularly, even badly. Draw from life, copy drawings you admire to learn, and keep old sketches to see progress. Twenty minutes a day beats one long session a month."
+   }
+  ],
+  "flash": [
+   [
+    "Proportion",
+    "The size relationship between parts of a drawing."
+   ],
+   [
+    "Gesture",
+    "A quick, loose sketch capturing a pose or motion."
+   ],
+   [
+    "Value",
+    "How light or dark an area is."
+   ],
+   [
+    "Shading",
+    "Adding value to create the look of light and form."
+   ],
+   [
+    "Highlight",
+    "The brightest spot where light hits."
+   ],
+   [
+    "Blocking in",
+    "Sketching the big basic shapes before detail."
+   ],
+   [
+    "Contour line",
+    "A line following the edge of a form."
+   ],
+   [
+    "Perspective",
+    "How objects appear smaller and converge with distance."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The biggest key to realistic drawing is:",
+    "options": [
+     "Drawing what you actually see",
+     "Drawing from memory",
+     "Expensive pencils",
+     "Drawing fast"
+    ],
+    "a": 0,
+    "why": "Accurate observation beats drawing the symbol in your head."
+   },
+   {
+    "q": "A good way to start a complex drawing is to:",
+    "options": [
+     "Block in basic shapes",
+     "Start with tiny details",
+     "Darken everything first",
+     "Trace it"
+    ],
+    "a": 0,
+    "why": "Big shapes first keep proportions right before detail."
+   },
+   {
+    "q": "'Value' in drawing refers to:",
+    "options": [
+     "How light or dark an area is",
+     "The cost of materials",
+     "The subject's price",
+     "Line thickness only"
+    ],
+    "a": 0,
+    "why": "Value is lightness/darkness; shading with it creates form."
+   },
+   {
+    "q": "Shading makes a drawing look:",
+    "options": [
+     "Three-dimensional",
+     "Flatter",
+     "Smaller",
+     "Blurry"
+    ],
+    "a": 0,
+    "why": "A range of values gives the illusion of light and depth."
+   },
+   {
+    "q": "The fastest way to improve at drawing is to:",
+    "options": [
+     "Practice regularly",
+     "Wait for talent",
+     "Only watch videos",
+     "One big monthly session"
+    ],
+    "a": 0,
+    "why": "Frequent practice, even short sessions, drives improvement."
+   },
+   {
+    "q": "To compare proportions, artists often:",
+    "options": [
+     "Hold a pencil at arm's length",
+     "Guess",
+     "Use a ruler on the subject",
+     "Close both eyes"
+    ],
+    "a": 0,
+    "why": "Measuring with a pencil at arm's length checks relative sizes."
+   }
+  ]
+ },
+ "mind-critical-thinking": {
+  "title": "Critical Thinking",
+  "subject": "Psychology & Philosophy",
+  "level": "All levels",
+  "intro": "Critical thinking is the skill of judging information carefully instead of just accepting it. In a world full of ads, headlines and strong opinions, it's one of the most protective skills you can build.",
+  "cards": [
+   {
+    "h": "Claims need evidence",
+    "body": "A claim is just an assertion until there's evidence for it. Ask: How do they know? What's the source? Could it be wrong? Strong claims — especially surprising or convenient ones — need strong evidence."
+   },
+   {
+    "h": "Correlation isn't causation",
+    "body": "Two things happening together doesn't mean one caused the other. Ice cream sales and drowning both rise in summer — but ice cream doesn't cause drowning; hot weather drives both. Always ask if something else explains the link."
+   },
+   {
+    "h": "Spotting bad arguments",
+    "body": "Common traps (fallacies): attacking the person instead of their point (ad hominem), claiming something's true because many believe it (bandwagon), or presenting only two options when more exist (false dilemma). Name the move and it loses its power."
+   },
+   {
+    "h": "Check the source and your bias",
+    "body": "Consider who's telling you something and what they gain. Also watch your own confirmation bias — the pull to believe things that fit what you already think. Seek out the strongest version of the other side."
+   },
+   {
+    "h": "Suspend judgment when unsure",
+    "body": "It's okay to say 'I don't know yet.' Jumping to a conclusion feels good but leads to mistakes. Gather enough evidence, consider alternatives, then decide — and stay open to changing your mind with new facts."
+   }
+  ],
+  "flash": [
+   [
+    "Critical thinking",
+    "Carefully judging information instead of accepting it."
+   ],
+   [
+    "Evidence",
+    "Facts or data that support a claim."
+   ],
+   [
+    "Correlation",
+    "Two things occurring together (not necessarily causing each other)."
+   ],
+   [
+    "Causation",
+    "One thing actually causing another."
+   ],
+   [
+    "Logical fallacy",
+    "A flaw in reasoning that weakens an argument."
+   ],
+   [
+    "Ad hominem",
+    "Attacking the person instead of their argument."
+   ],
+   [
+    "Confirmation bias",
+    "Favoring information that fits what you already believe."
+   ],
+   [
+    "Source credibility",
+    "How trustworthy the origin of information is."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "'Correlation is not causation' means:",
+    "options": [
+     "Things linked may not cause each other",
+     "All links are false",
+     "Causes don't exist",
+     "Data is useless"
+    ],
+    "a": 0,
+    "why": "A link between two things doesn't prove one caused the other."
+   },
+   {
+    "q": "Attacking the person instead of their argument is:",
+    "options": [
+     "Ad hominem",
+     "Bandwagon",
+     "A strong point",
+     "Evidence"
+    ],
+    "a": 0,
+    "why": "Ad hominem dodges the argument by targeting the person."
+   },
+   {
+    "q": "Confirmation bias is the tendency to:",
+    "options": [
+     "Favor info that fits your beliefs",
+     "Reject all new info",
+     "Be perfectly objective",
+     "Forget facts"
+    ],
+    "a": 0,
+    "why": "We lean toward evidence that confirms what we already think."
+   },
+   {
+    "q": "A surprising claim should be met with:",
+    "options": [
+     "A request for strong evidence",
+     "Instant belief",
+     "Instant rejection",
+     "Silence"
+    ],
+    "a": 0,
+    "why": "Extraordinary claims need solid evidence before you accept them."
+   },
+   {
+    "q": "Presenting only two options when more exist is a:",
+    "options": [
+     "False dilemma",
+     "Correlation",
+     "Fact",
+     "Hypothesis"
+    ],
+    "a": 0,
+    "why": "A false dilemma hides the other possibilities."
+   },
+   {
+    "q": "When you lack enough evidence, the best move is to:",
+    "options": [
+     "Suspend judgment",
+     "Pick a side anyway",
+     "Trust the loudest voice",
+     "Guess randomly"
+    ],
+    "a": 0,
+    "why": "It's fine to withhold judgment until you know more."
+   }
+  ]
+ },
+ "fitness-strength-training": {
+  "title": "Strength Training",
+  "subject": "Fitness & Wellness",
+  "level": "All levels",
+  "disclaimer": "General fitness information, not medical advice. Check with a doctor before starting a new exercise program.",
+  "intro": "Strength training makes you stronger, protects your joints and bones, and helps with everything from daily tasks to long-term health. You don't need a gym full of machines — a few basic movements done consistently do the job.",
+  "cards": [
+   {
+    "h": "Why strength matters",
+    "body": "Lifting (or using your body weight) builds muscle, strengthens bones, boosts metabolism, and keeps you capable as you age. It helps nearly everyone, whatever the goal — fat loss, health, or athletics."
+   },
+   {
+    "h": "The basic movement patterns",
+    "body": "Most of strength training is a handful of patterns: push (push-ups, overhead press), pull (rows, pull-ups), squat, hinge (deadlift), and carry. Train these and you cover the whole body."
+   },
+   {
+    "h": "Progressive overload",
+    "body": "Muscles grow when you gradually ask more of them — a little more weight, another rep, or better form over time. Doing the exact same workout forever stops producing results. Push a bit past comfortable, safely."
+   },
+   {
+    "h": "Form before weight",
+    "body": "Good form prevents injury and works the right muscles. Learn a movement light, keep your core braced, control the lowering part, and never sacrifice form to lift heavier. Ego lifting is how people get hurt."
+   },
+   {
+    "h": "Recovery is where you grow",
+    "body": "Muscles rebuild stronger during rest, not during the workout. Train a muscle group 2–3 times a week, sleep well, eat enough protein, and give sore muscles a day or two. More isn't always better."
+   }
+  ],
+  "flash": [
+   [
+    "Strength training",
+    "Exercise that builds muscle and strength against resistance."
+   ],
+   [
+    "Rep",
+    "One complete repetition of an exercise."
+   ],
+   [
+    "Set",
+    "A group of consecutive reps."
+   ],
+   [
+    "Progressive overload",
+    "Gradually increasing demand to keep gaining strength."
+   ],
+   [
+    "Compound exercise",
+    "A move using multiple joints/muscles (squat, push-up)."
+   ],
+   [
+    "Form",
+    "Correct technique that targets muscles and prevents injury."
+   ],
+   [
+    "Recovery",
+    "Rest that lets muscles rebuild stronger."
+   ],
+   [
+    "Bodyweight training",
+    "Strength work using your own body as resistance."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Muscles grow stronger mainly during:",
+    "options": [
+     "Rest and recovery",
+     "The workout itself",
+     "Cardio only",
+     "Stretching only"
+    ],
+    "a": 0,
+    "why": "Muscles rebuild during rest, so recovery matters as much as training."
+   },
+   {
+    "q": "'Progressive overload' means:",
+    "options": [
+     "Gradually doing a bit more over time",
+     "Max weight every day",
+     "Never changing routine",
+     "Only using machines"
+    ],
+    "a": 0,
+    "why": "Steadily increasing demand keeps you getting stronger."
+   },
+   {
+    "q": "When learning a new lift, prioritize:",
+    "options": [
+     "Good form",
+     "Max weight",
+     "Speed",
+     "Looking strong"
+    ],
+    "a": 0,
+    "why": "Form first prevents injury and trains the right muscles."
+   },
+   {
+    "q": "Which is a compound (multi-joint) exercise?",
+    "options": [
+     "Squat",
+     "Bicep curl only",
+     "Wrist curl",
+     "Calf raise only"
+    ],
+    "a": 0,
+    "why": "A squat uses many muscles/joints; isolation moves use one."
+   },
+   {
+    "q": "A reasonable frequency to train a muscle group is:",
+    "options": [
+     "2–3 times a week",
+     "Once a month",
+     "Every hour",
+     "Never twice"
+    ],
+    "a": 0,
+    "why": "2–3 times weekly with recovery works for most people."
+   },
+   {
+    "q": "You can build real strength at home with:",
+    "options": [
+     "Bodyweight exercises",
+     "Nothing without machines",
+     "Only running",
+     "Only stretching"
+    ],
+    "a": 0,
+    "why": "Push-ups, squats and the like build strength with no equipment."
+   }
+  ]
+ },
+ "business-starting-a-business": {
+  "title": "Starting a Business",
+  "subject": "Business & Entrepreneurship",
+  "level": "Grades 9 - adult",
+  "intro": "Starting a business is really about solving a problem people will pay you to solve. You don't need a big idea or a lot of money to start — you need a real customer, a simple offer, and the willingness to learn as you go.",
+  "cards": [
+   {
+    "h": "Start with a problem, not an idea",
+    "body": "Good businesses solve a real problem for a specific group of people. Before building anything, get clear on who your customer is and what pain you're removing. 'A thing I think is cool' fails; 'a thing people already pay to fix' works."
+   },
+   {
+    "h": "Validate before you invest",
+    "body": "Talk to potential customers and try to make a few sales before spending big. If people won't pay for a simple version, a fancy version won't save it. Real money from real customers is the only proof that counts."
+   },
+   {
+    "h": "Know your numbers",
+    "body": "You profit when revenue (money in) beats costs (money out). Know your price, your cost per sale, and your fixed monthly costs. Many businesses fail not from no sales but from not watching the money."
+   },
+   {
+    "h": "Keep it legal and separate",
+    "body": "Pick a simple structure (many start as a sole proprietor or LLC), get any required licenses, and keep business money separate from personal from day one. It makes taxes and tracking vastly easier."
+   },
+   {
+    "h": "Start small and improve",
+    "body": "You don't need everything perfect to begin. Launch a simple version, get real feedback, and improve. Most successful businesses look very different from their first version — the key is to start and adapt."
+   }
+  ],
+  "flash": [
+   [
+    "Customer",
+    "The specific person who has the problem you solve."
+   ],
+   [
+    "Validation",
+    "Proving people will actually pay before investing big."
+   ],
+   [
+    "Revenue",
+    "Total money coming in from sales."
+   ],
+   [
+    "Profit",
+    "What's left after costs are subtracted from revenue."
+   ],
+   [
+    "Fixed costs",
+    "Expenses that stay the same regardless of sales."
+   ],
+   [
+    "LLC",
+    "Limited Liability Company — a common simple business structure."
+   ],
+   [
+    "Margin",
+    "The profit left on each sale after its costs."
+   ],
+   [
+    "MVP",
+    "Minimum viable product — the simplest version you can launch."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "A business should start with:",
+    "options": [
+     "A real problem to solve",
+     "A cool logo",
+     "A big loan",
+     "A fancy office"
+    ],
+    "a": 0,
+    "why": "Solving a real problem for real people is the foundation."
+   },
+   {
+    "q": "The best proof that an idea works is:",
+    "options": [
+     "Real customers paying",
+     "Friends liking it",
+     "A nice website",
+     "A plan alone"
+    ],
+    "a": 0,
+    "why": "Actual sales validate demand; opinions don't."
+   },
+   {
+    "q": "Profit is:",
+    "options": [
+     "Revenue minus costs",
+     "All money coming in",
+     "The price of one item",
+     "Your fixed costs"
+    ],
+    "a": 0,
+    "why": "Profit is what's left after you subtract costs from revenue."
+   },
+   {
+    "q": "You should keep business and personal money:",
+    "options": [
+     "Separate",
+     "In one account",
+     "Only in cash",
+     "Untracked"
+    ],
+    "a": 0,
+    "why": "Separating them simplifies taxes and tracking from day one."
+   },
+   {
+    "q": "An MVP is:",
+    "options": [
+     "The simplest version you can launch",
+     "A finished perfect product",
+     "A marketing plan",
+     "A tax form"
+    ],
+    "a": 0,
+    "why": "A minimum viable product lets you test with real users fast."
+   },
+   {
+    "q": "Many small businesses fail because they:",
+    "options": [
+     "Don't watch their numbers",
+     "Have too many sales",
+     "Start too small",
+     "Talk to customers too much"
+    ],
+    "a": 0,
+    "why": "Losing track of money sinks businesses even with sales."
+   }
+  ]
+ },
+ "repair-basic-tools": {
+  "title": "Basic Tools",
+  "subject": "Home & Auto Repair",
+  "level": "All levels",
+  "intro": "A small set of tools and the confidence to use them will save you money for the rest of your life. Most common home and car fixes need only basic hand tools and a willingness to try.",
+  "cards": [
+   {
+    "h": "The starter toolkit",
+    "body": "A handful covers most jobs: a claw hammer, screwdrivers (Phillips and flathead), an adjustable wrench, pliers (regular and needle-nose), a tape measure, a utility knife, a level, and a cordless drill. Add specialized tools as needs come up."
+   },
+   {
+    "h": "Righty-tighty, lefty-loosey",
+    "body": "Almost all screws, bolts, and lids tighten clockwise and loosen counterclockwise. Facing the fastener, turn right to tighten, left to loosen. This simple rule covers the vast majority of fasteners you'll meet."
+   },
+   {
+    "h": "Use the right size and type",
+    "body": "A screwdriver or wrench that doesn't fit snugly will strip the screw or round the bolt, turning an easy job into a hard one. Match Phillips to Phillips, use the correct socket size, and seat the tool fully before turning."
+   },
+   {
+    "h": "Measure twice, cut once",
+    "body": "Mistakes are cheaper to prevent than to fix. Measure carefully (and again) before cutting or drilling, mark your spot, and check for wires or pipes behind a wall before you make a hole."
+   },
+   {
+    "h": "Safety basics",
+    "body": "Turn off the power at the breaker before electrical work, and shut off the water before plumbing work. Wear eye protection when cutting or hammering, and unplug power tools before changing bits. When a job feels unsafe or over your head, call a pro."
+   }
+  ],
+  "flash": [
+   [
+    "Phillips screwdriver",
+    "A screwdriver with a cross/plus-shaped tip."
+   ],
+   [
+    "Flathead screwdriver",
+    "A screwdriver with a single flat blade tip."
+   ],
+   [
+    "Adjustable wrench",
+    "A wrench whose jaw width you can change to fit bolts."
+   ],
+   [
+    "Righty-tighty",
+    "Turn clockwise to tighten, counterclockwise to loosen."
+   ],
+   [
+    "Stripped screw",
+    "A screw head damaged so a driver can't grip it."
+   ],
+   [
+    "Level",
+    "A tool that shows if something is perfectly horizontal/vertical."
+   ],
+   [
+    "Stud finder",
+    "A tool that locates framing behind a wall."
+   ],
+   [
+    "Breaker",
+    "The switch that cuts power to a circuit for safe electrical work."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "To loosen most screws and bolts you turn them:",
+    "options": [
+     "Counterclockwise (left)",
+     "Clockwise (right)",
+     "Straight out",
+     "It doesn't matter"
+    ],
+    "a": 0,
+    "why": "Lefty-loosey: counterclockwise loosens most fasteners."
+   },
+   {
+    "q": "Using a screwdriver that doesn't fit well risks:",
+    "options": [
+     "Stripping the screw",
+     "Nothing",
+     "Faster work",
+     "Tightening it more"
+    ],
+    "a": 0,
+    "why": "A poor fit rounds out the head, making it hard to turn."
+   },
+   {
+    "q": "Before electrical work you should:",
+    "options": [
+     "Turn off power at the breaker",
+     "Just be careful",
+     "Wear gloves only",
+     "Work faster"
+    ],
+    "a": 0,
+    "why": "Cutting power at the breaker prevents shock."
+   },
+   {
+    "q": "'Measure twice, cut once' means:",
+    "options": [
+     "Check measurements before cutting",
+     "Cut quickly",
+     "Measure after cutting",
+     "Guess the size"
+    ],
+    "a": 0,
+    "why": "Verifying first avoids wasted material and mistakes."
+   },
+   {
+    "q": "Which belongs in a basic toolkit?",
+    "options": [
+     "Adjustable wrench",
+     "Welding torch",
+     "Table saw",
+     "Backhoe"
+    ],
+    "a": 0,
+    "why": "Basic hand tools like an adjustable wrench cover most small jobs."
+   },
+   {
+    "q": "Before plumbing work you should:",
+    "options": [
+     "Shut off the water",
+     "Turn up the heat",
+     "Open all faucets first",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Shutting off the water prevents floods while you work."
+   }
+  ]
+ },
+ "law-know-your-rights": {
+  "title": "Know Your Rights",
+  "subject": "Law & Your Rights",
+  "level": "Grades 9 - adult",
+  "disclaimer": "General legal information, NOT legal advice. For a real legal issue, consult a licensed attorney or legal aid. Specifics vary by state.",
+  "intro": "Knowing your basic rights helps you stay calm and protected in stressful situations. These are general principles in the U.S.; a lawyer is the right call for a real legal problem.",
+  "cards": [
+   {
+    "h": "The right to remain silent",
+    "body": "If questioned by police, you have the right not to answer questions beyond identifying yourself (where required). You can calmly say 'I am going to remain silent, and I want a lawyer.' Anything you say can be used against you — staying silent is often wise."
+   },
+   {
+    "h": "Searches and consent",
+    "body": "Generally, police need a warrant, your consent, or a specific legal reason to search you, your home, or your car. You can clearly and politely say 'I do not consent to a search.' Refusing doesn't make you guilty — it protects your rights."
+   },
+   {
+    "h": "The right to a lawyer",
+    "body": "If you're arrested, you have the right to an attorney, and one is provided if you can't afford it. Ask for a lawyer and then stop talking. Don't try to 'explain your way out' — that's what the lawyer is for."
+   },
+   {
+    "h": "Stay calm, don't resist",
+    "body": "Even if you believe your rights are being violated, the moment to fight it is later, in court — not on the street. Keep your hands visible, stay polite, don't physically resist, and remember details for afterward."
+   },
+   {
+    "h": "Everyday rights",
+    "body": "You also have rights as a tenant, a worker, and a consumer — against unsafe housing, unpaid wages, and fraud. Many are enforced free through legal aid, labor boards, or small claims court. Knowing a right exists is the first step to using it."
+   }
+  ],
+  "flash": [
+   [
+    "Right to remain silent",
+    "You don't have to answer questions that could incriminate you."
+   ],
+   [
+    "Miranda rights",
+    "The rights (silence, attorney) police must read on arrest."
+   ],
+   [
+    "Consent to search",
+    "You can refuse a search without a warrant or legal cause."
+   ],
+   [
+    "Warrant",
+    "A judge's authorization for a search or arrest."
+   ],
+   [
+    "Right to an attorney",
+    "You're entitled to a lawyer; one is provided if you can't afford it."
+   ],
+   [
+    "Legal aid",
+    "Free or low-cost legal help for those who qualify."
+   ],
+   [
+    "Due process",
+    "The right to fair legal procedures."
+   ],
+   [
+    "Small claims court",
+    "A simple court for disputes over small amounts of money."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "If police question you, you have the right to:",
+    "options": [
+     "Remain silent",
+     "Lie freely",
+     "Leave any arrest",
+     "Ignore all ID requests always"
+    ],
+    "a": 0,
+    "why": "You can decline to answer and ask for a lawyer."
+   },
+   {
+    "q": "If asked to search your car without a warrant, you can:",
+    "options": [
+     "Clearly decline consent",
+     "Never say no",
+     "Only consent",
+     "Must always allow it"
+    ],
+    "a": 0,
+    "why": "You may politely refuse a consent search; it's your right."
+   },
+   {
+    "q": "If you can't afford a lawyer after arrest:",
+    "options": [
+     "One is provided for you",
+     "You get none",
+     "You must self-defend",
+     "You wait a year"
+    ],
+    "a": 0,
+    "why": "The right to an attorney includes a provided one if you can't afford it."
+   },
+   {
+    "q": "If you think your rights are violated during a stop, you should:",
+    "options": [
+     "Stay calm and contest it later in court",
+     "Physically resist",
+     "Run",
+     "Argue aggressively"
+    ],
+    "a": 0,
+    "why": "Resisting makes it worse; the place to fight it is in court."
+   },
+   {
+    "q": "A simple court for small money disputes is:",
+    "options": [
+     "Small claims court",
+     "Supreme Court",
+     "Traffic school",
+     "The DMV"
+    ],
+    "a": 0,
+    "why": "Small claims court handles minor disputes simply and cheaply."
+   },
+   {
+    "q": "This lesson is:",
+    "options": [
+     "General info, not legal advice",
+     "A substitute for a lawyer",
+     "Identical in every state",
+     "A court ruling"
+    ],
+    "a": 0,
+    "why": "Laws vary by state; consult an attorney for a real issue."
+   }
+  ]
+ },
+ "writing-creative-writing": {
+  "title": "Creative Writing",
+  "subject": "Writing & Journalism",
+  "level": "All levels",
+  "intro": "Creative writing is making something up and telling it well — stories, characters, worlds. The craft behind it can be learned: strong characters, real conflict, scenes that show rather than tell.",
+  "cards": [
+   {
+    "h": "Story = character + want + obstacle",
+    "body": "At its core, a story is a character who wants something and faces obstacles getting it. No want, no story. The want can be big (survive) or small (ask someone out); the obstacles create the tension that keeps readers turning pages."
+   },
+   {
+    "h": "Show, don't tell",
+    "body": "Instead of telling the reader an emotion ('she was nervous'), show it through action and detail ('she checked the door three times and couldn't finish her coffee'). Showing pulls readers into the scene; telling keeps them at arm's length."
+   },
+   {
+    "h": "Scenes and conflict",
+    "body": "Build your story in scenes — a character doing something in a place, in real time. Every scene should have a bit of conflict or change, or it's just filler. If nothing shifts in a scene, cut it or combine it."
+   },
+   {
+    "h": "Dialogue that works",
+    "body": "Good dialogue sounds natural but is tighter than real speech — cut the 'ums' and small talk. It should reveal character and move the story, not just relay information. Read it aloud; if it sounds stiff, loosen it."
+   },
+   {
+    "h": "Write badly first, then revise",
+    "body": "First drafts are supposed to be rough — the goal is to get the story down. The real writing happens in revision: cutting the dull parts, sharpening scenes, fixing what's confusing. Give yourself permission to write a messy first draft."
+   }
+  ],
+  "flash": [
+   [
+    "Protagonist",
+    "The main character whose want drives the story."
+   ],
+   [
+    "Conflict",
+    "The obstacle between a character and what they want."
+   ],
+   [
+    "Show, don't tell",
+    "Convey through action and detail, not flat statements."
+   ],
+   [
+    "Scene",
+    "A unit of story: a character acting in a place, in real time."
+   ],
+   [
+    "Dialogue",
+    "Characters' spoken words — tighter than real speech."
+   ],
+   [
+    "Plot",
+    "The sequence of events, driven by cause and effect."
+   ],
+   [
+    "Theme",
+    "The underlying idea a story explores."
+   ],
+   [
+    "Revision",
+    "Reworking a draft — where most real writing happens."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "At its core, a story needs a character who:",
+    "options": [
+     "Wants something and faces obstacles",
+     "Is perfectly happy",
+     "Does nothing",
+     "Only narrates"
+    ],
+    "a": 0,
+    "why": "Want + obstacle creates the conflict that makes a story."
+   },
+   {
+    "q": "'She checked the door three times' instead of 'she was nervous' is:",
+    "options": [
+     "Showing, not telling",
+     "Telling",
+     "A theme",
+     "Dialogue"
+    ],
+    "a": 0,
+    "why": "Concrete action shows the emotion rather than stating it."
+   },
+   {
+    "q": "Every scene should contain:",
+    "options": [
+     "Some conflict or change",
+     "Only description",
+     "No characters",
+     "A summary"
+    ],
+    "a": 0,
+    "why": "A scene without change or tension is filler."
+   },
+   {
+    "q": "Good dialogue is:",
+    "options": [
+     "Tighter than real speech",
+     "Exactly like real speech",
+     "Only small talk",
+     "All description"
+    ],
+    "a": 0,
+    "why": "Trim the filler; dialogue should reveal character and move the story."
+   },
+   {
+    "q": "A first draft should be:",
+    "options": [
+     "Rough — just get it down",
+     "Perfect",
+     "Never revised",
+     "Only an outline"
+    ],
+    "a": 0,
+    "why": "Get the story down first; the craft comes in revision."
+   },
+   {
+    "q": "Most real writing happens during:",
+    "options": [
+     "Revision",
+     "The first sentence",
+     "Brainstorming only",
+     "Reading"
+    ],
+    "a": 0,
+    "why": "Revising — cutting and sharpening — is where drafts become good."
+   }
+  ]
+ },
+ "gardening-garden-basics": {
+  "title": "Garden Basics",
+  "subject": "Gardening & Homesteading",
+  "level": "All levels",
+  "intro": "Growing some of your own food is satisfying, cheap, and easier than it looks. With sun, soil, water and a little patience, almost anyone can grow vegetables — even in pots on a balcony.",
+  "cards": [
+   {
+    "h": "The four things plants need",
+    "body": "Sunlight, water, soil (nutrients), and air. Most vegetables want 6+ hours of direct sun a day, consistent moisture, and loose, rich soil. Get those right and plants mostly take care of themselves."
+   },
+   {
+    "h": "Start with easy crops",
+    "body": "Beginners do best with forgiving plants: lettuce, radishes, beans, zucchini, tomatoes, and herbs like basil and mint. They grow fast and reward you quickly, which keeps you going. Skip the fussy stuff at first."
+   },
+   {
+    "h": "Soil is everything",
+    "body": "Plants are only as healthy as their soil. Loose soil rich in organic matter (compost) holds water and feeds roots. If your ground soil is poor, raised beds or pots with bought potting mix are a great shortcut."
+   },
+   {
+    "h": "Water deeply, not often",
+    "body": "Frequent shallow watering grows weak, shallow roots. Water deeply so moisture reaches down, then let the top inch dry before watering again. Morning is best; wet leaves overnight invite disease."
+   },
+   {
+    "h": "Spacing and timing",
+    "body": "Give plants the spacing on the seed packet — crowded plants compete and get sick. Plant warm crops (tomatoes, peppers) after your area's last frost, and cool crops (lettuce, peas) in early spring or fall."
+   }
+  ],
+  "flash": [
+   [
+    "Full sun",
+    "6+ hours of direct sunlight a day."
+   ],
+   [
+    "Compost",
+    "Decomposed organic matter that enriches soil."
+   ],
+   [
+    "Raised bed",
+    "A contained garden bed filled with good soil."
+   ],
+   [
+    "Potting mix",
+    "Bagged soil blend made for containers."
+   ],
+   [
+    "Last frost date",
+    "The point after which it's safe to plant warm crops."
+   ],
+   [
+    "Deep watering",
+    "Watering thoroughly so roots grow down, not often and shallow."
+   ],
+   [
+    "Cool crop",
+    "A plant that prefers cooler weather (lettuce, peas)."
+   ],
+   [
+    "Organic matter",
+    "Decayed plant material that feeds and loosens soil."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Most vegetables need how much direct sun daily?",
+    "options": [
+     "6+ hours",
+     "1 hour",
+     "None",
+     "24 hours"
+    ],
+    "a": 0,
+    "why": "Six or more hours of direct sun suits most vegetables."
+   },
+   {
+    "q": "A good crop for beginners is:",
+    "options": [
+     "Lettuce",
+     "A rare orchid",
+     "A fruit tree from seed",
+     "Saffron"
+    ],
+    "a": 0,
+    "why": "Lettuce (and beans, zucchini, herbs) grow fast and forgive mistakes."
+   },
+   {
+    "q": "Healthy plants start with:",
+    "options": [
+     "Good soil",
+     "Expensive seeds",
+     "Daily fertilizer",
+     "Plastic flowers"
+    ],
+    "a": 0,
+    "why": "Loose, compost-rich soil is the foundation of healthy plants."
+   },
+   {
+    "q": "The best watering approach is:",
+    "options": [
+     "Deeply, then let the top dry",
+     "A little every hour",
+     "Soaking leaves at night",
+     "Never"
+    ],
+    "a": 0,
+    "why": "Deep, less-frequent watering grows strong, deep roots."
+   },
+   {
+    "q": "No garden space? A good option is:",
+    "options": [
+     "Pots or raised beds",
+     "Give up",
+     "Only indoor cactus",
+     "Wait for land"
+    ],
+    "a": 0,
+    "why": "Containers and raised beds let you grow almost anywhere with sun."
+   },
+   {
+    "q": "Warm crops like tomatoes should be planted:",
+    "options": [
+     "After the last frost",
+     "In midwinter",
+     "Before any thaw",
+     "Only indoors forever"
+    ],
+    "a": 0,
+    "why": "Plant warm crops once frost danger has passed."
+   }
+  ]
  }
 };
