@@ -3684,41 +3684,110 @@ window.LAB404_CONTENT = {
   "title": "Geometry",
   "subject": "Mathematics",
   "level": "Grades 9-12",
-  "intro": "Geometry is the math of shapes, space, and measurement. It's where math gets visual — and where you learn to reason step by step from what you know to what you want to find.",
-  "cards": [
+  "objectives": [
+   "Identify points, lines, rays, segments, and angles, and classify angles as acute, right, or obtuse",
+   "Use complementary, supplementary, and vertical angle relationships to find unknown angles",
+   "Classify triangles and use the triangle angle-sum rule (180°) to find a missing angle",
+   "Calculate perimeter and area of rectangles and triangles, and circumference and area of circles",
+   "Apply the Pythagorean theorem (a² + b² = c²) to find a missing side of a right triangle"
+  ],
+  "intro": "Geometry is the mathematics of shape, size, and space — the branch where math becomes visual. Beyond measuring the world around you (How much paint? How long a ramp?), geometry trains a powerful habit: reasoning step by step from what you know to what you want to find. This lesson covers the language of points and angles, the rules of triangles, area and perimeter, circles, and the famous Pythagorean theorem, with diagrams throughout.",
+  "sections": [
    {
-    "h": "Points, lines, and angles",
-    "body": "A point marks a location; a line runs forever both ways; a ray starts at a point and goes one way; a segment has two ends. Two rays from a point form an angle, measured in degrees. A right angle is 90°, and a straight line is 180°."
+    "h": "Points, lines, rays, and angles",
+    "body": "Geometry is built from a few simple basics. A point is a single location with no size, marked by a dot. A line is perfectly straight and extends forever in both directions; a ray starts at one point and goes forever in one direction; a line segment is a piece of a line with two endpoints.\n\nWhen two rays share an endpoint (the vertex), they form an angle, measured in degrees from 0° to 360°. The key reference angles are the right angle (exactly 90°, a square corner), the straight angle (180°, a straight line), acute angles (less than 90°), and obtuse angles (between 90° and 180°). Recognizing these on sight is the first step in geometry.",
+    "tip": "An angle's size doesn't depend on how long you draw the rays — only on how far apart they open."
    },
    {
-    "h": "Angles that go together",
-    "body": "Complementary angles add to 90°; supplementary angles add to 180°. When two lines cross, the opposite (vertical) angles are equal. These rules let you find unknown angles from ones you already know."
+    "h": "Angle relationships",
+    "body": "Angles that occur together follow reliable rules that let you find unknown angles from known ones. Complementary angles are two angles that add up to 90°; supplementary angles add up to 180°. When two straight lines cross, they form two pairs of equal 'vertical' angles (directly opposite each other), and adjacent angles along a straight line are supplementary.\n\nThese relationships turn geometry into a puzzle you can solve. If one angle is 110°, the angle beside it on a straight line must be 70° (supplementary), and the angle across from it must also be 110° (vertical).",
+    "visual": "<svg viewBox=\"0 0 240 150\" width=\"220\" role=\"img\" aria-label=\"Two crossing lines forming equal vertical angles and supplementary adjacent angles\"><line x1=\"20\" y1=\"120\" x2=\"220\" y2=\"30\" stroke=\"#4f9cf0\" stroke-width=\"2.5\"/><line x1=\"20\" y1=\"30\" x2=\"220\" y2=\"120\" stroke=\"#4f9cf0\" stroke-width=\"2.5\"/><text x=\"120\" y=\"35\" text-anchor=\"middle\" fill=\"#e8b84b\" font-size=\"13\">x</text><text x=\"120\" y=\"122\" text-anchor=\"middle\" fill=\"#e8b84b\" font-size=\"13\">x</text><text x=\"42\" y=\"78\" fill=\"#39e3c8\" font-size=\"13\">y</text><text x=\"188\" y=\"78\" fill=\"#39e3c8\" font-size=\"13\">y</text><text x=\"120\" y=\"145\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"11\">vertical angles are equal; x + y = 180°</text></svg>",
+    "caption": "When two lines cross, opposite (vertical) angles are equal, and angles on a straight line add to 180°.",
+    "example": "Two angles are complementary and one is 35°. Find the other:\n90° − 35° = 55°"
    },
    {
-    "h": "Triangles and the angle sum",
-    "body": "The three angles of any triangle always add to 180°. Triangles are named by sides (equilateral = all equal, isosceles = two equal, scalene = none) or by angles (a right triangle has one 90° angle). Know two angles and you know the third."
+    "h": "Triangles and the angle-sum rule",
+    "body": "The triangle is geometry's most important shape. No matter its size or form, the three interior angles of ANY triangle always add up to exactly 180°. This single fact lets you find a missing angle whenever you know the other two.\n\nTriangles are classified two ways. By their sides: equilateral (all three sides equal), isosceles (two sides equal), and scalene (no sides equal). By their angles: acute (all angles under 90°), right (one 90° angle), and obtuse (one angle over 90°). The right triangle is especially important, as the last section shows.",
+    "visual": "<svg viewBox=\"0 0 300 180\" width=\"280\" role=\"img\" aria-label=\"A triangle with interior angles A, B and C that sum to 180 degrees\"><polygon points=\"40,150 260,150 120,45\" fill=\"rgba(57,227,200,.08)\" stroke=\"#39e3c8\" stroke-width=\"2.5\"/><text x=\"58\" y=\"143\" fill=\"#e8b84b\" font-size=\"15\" font-weight=\"700\">A</text><text x=\"236\" y=\"143\" fill=\"#e8b84b\" font-size=\"15\" font-weight=\"700\">B</text><text x=\"114\" y=\"66\" fill=\"#e8b84b\" font-size=\"15\" font-weight=\"700\">C</text><text x=\"150\" y=\"172\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"13\">A + B + C = 180°</text></svg>",
+    "caption": "The three interior angles of any triangle always sum to 180°.",
+    "example": "A triangle has angles of 90° and 55°. Find the third:\n180° − 90° − 55° = 35°"
    },
    {
-    "h": "Area and perimeter",
-    "body": "Perimeter is the distance around a shape; area is the space inside. Rectangle area = length × width; triangle area = ½ × base × height; circle area = πr². A circle's perimeter (circumference) = 2πr. Keep your units consistent."
+    "h": "Perimeter and area",
+    "body": "Two measurements describe how big a shape is. Perimeter is the total distance around the outside — just add up all the side lengths. Area is the amount of flat space inside, measured in square units.\n\nThe formulas worth memorizing: a rectangle's area is length × width; a triangle's area is ½ × base × height; a square's area is side × side. Keep your units consistent, and remember that area is in square units (cm², ft²) while perimeter is in plain units.",
+    "example": "A rectangle is 8 cm by 5 cm:\nPerimeter = 8 + 5 + 8 + 5 = 26 cm\nArea = 8 × 5 = 40 cm²",
+    "tip": "A triangle's height must be perpendicular (straight up) from the base — not the length of a slanted side."
+   },
+   {
+    "h": "Circles",
+    "body": "A circle is the set of all points the same distance from a center. That distance is the radius (r); the full distance across through the center is the diameter (d = 2r). Circles use the special number π (pi ≈ 3.14), which is the ratio of any circle's circumference to its diameter.\n\nTwo formulas cover circles: the circumference (the distance around) is C = 2πr, and the area is A = πr². So a circle with radius 3 has a circumference of about 2 × 3.14 × 3 ≈ 18.8 units and an area of about 3.14 × 9 ≈ 28.3 square units.",
+    "visual": "<svg viewBox=\"0 0 240 180\" width=\"220\" role=\"img\" aria-label=\"A circle showing its center, a radius r, and the diameter\"><line x1=\"50\" y1=\"90\" x2=\"190\" y2=\"90\" stroke=\"#4f9cf0\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\"/><circle cx=\"120\" cy=\"90\" r=\"70\" fill=\"rgba(79,156,240,.07)\" stroke=\"#4f9cf0\" stroke-width=\"2.5\"/><line x1=\"120\" y1=\"90\" x2=\"169\" y2=\"41\" stroke=\"#39e3c8\" stroke-width=\"2\"/><circle cx=\"120\" cy=\"90\" r=\"3.5\" fill=\"#39e3c8\"/><text x=\"150\" y=\"60\" fill=\"#39e3c8\" font-size=\"15\" font-style=\"italic\">r</text><text x=\"120\" y=\"24\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"12\">diameter = 2r</text><text x=\"120\" y=\"108\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"11\">center</text></svg>",
+    "caption": "The radius (r) runs from the center to the edge; the diameter is twice the radius.",
+    "example": "A circle has radius 5:\nCircumference = 2π(5) = 10π ≈ 31.4\nArea = π(5)² = 25π ≈ 78.5"
    },
    {
     "h": "The Pythagorean theorem",
-    "body": "In a right triangle, a² + b² = c², where c is the longest side (the hypotenuse, opposite the right angle). A 3-4-5 triangle works: 3² + 4² = 9 + 16 = 25 = 5². It lets you find a missing side length."
+    "body": "In a right triangle, the three sides are linked by one of the most useful rules in all of math: a² + b² = c². Here a and b are the two shorter sides (the legs, which form the right angle) and c is the longest side (the hypotenuse), always opposite the right angle.\n\nThis lets you find any missing side when you know the other two. If the legs are 3 and 4, then c² = 3² + 4² = 9 + 16 = 25, so c = 5 — the famous 3-4-5 triangle. The theorem powers everything from construction and navigation to computer graphics.",
+    "visual": "<svg viewBox=\"0 0 260 195\" width=\"250\" role=\"img\" aria-label=\"A right triangle with legs a and b and hypotenuse c, illustrating a squared plus b squared equals c squared\"><polygon points=\"50,165 215,165 50,50\" fill=\"rgba(57,227,200,.08)\" stroke=\"#39e3c8\" stroke-width=\"2.5\"/><rect x=\"50\" y=\"150\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><text x=\"130\" y=\"183\" text-anchor=\"middle\" fill=\"#e8b84b\" font-size=\"15\" font-weight=\"700\">b</text><text x=\"34\" y=\"112\" text-anchor=\"middle\" fill=\"#e8b84b\" font-size=\"15\" font-weight=\"700\">a</text><text x=\"142\" y=\"100\" fill=\"#e8b84b\" font-size=\"15\" font-weight=\"700\">c</text><text x=\"135\" y=\"32\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"13\">a² + b² = c²</text></svg>",
+    "caption": "The hypotenuse (c) is opposite the right angle; the legs a and b form it.",
+    "example": "A right triangle has legs 6 and 8. Find the hypotenuse:\nc² = 6² + 8² = 36 + 64 = 100\nc = √100 = 10",
+    "tip": "The hypotenuse (c) is always the longest side and always sits opposite the right angle — never a leg."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Angle basics",
+    "body": "Right = 90°, straight = 180°, acute < 90°, obtuse is between 90° and 180°."
+   },
+   {
+    "h": "Angle pairs",
+    "body": "Complementary angles add to 90°; supplementary add to 180°; vertical angles (across a crossing) are equal."
+   },
+   {
+    "h": "Triangle rule",
+    "body": "The three interior angles of any triangle always sum to 180°."
+   },
+   {
+    "h": "Area formulas",
+    "body": "Rectangle = length × width; triangle = ½ × base × height; circle area = πr²."
+   },
+   {
+    "h": "Circle & right triangle",
+    "body": "Circumference = 2πr. In a right triangle, a² + b² = c² (c is the hypotenuse)."
    }
   ],
   "flash": [
    [
+    "Point",
+    "A single location with no size."
+   ],
+   [
+    "Line segment",
+    "A straight piece of a line with two endpoints."
+   ],
+   [
+    "Vertex",
+    "The common endpoint where two rays meet to form an angle."
+   ],
+   [
     "Right angle",
-    "A 90° angle (a square corner)."
+    "An angle of exactly 90° (a square corner)."
+   ],
+   [
+    "Acute / obtuse",
+    "Less than 90° / between 90° and 180°."
    ],
    [
     "Complementary angles",
-    "Two angles that add to 90°."
+    "Two angles that add up to 90°."
    ],
    [
     "Supplementary angles",
-    "Two angles that add to 180°."
+    "Two angles that add up to 180°."
+   ],
+   [
+    "Vertical angles",
+    "Opposite, equal angles formed when two lines cross."
    ],
    [
     "Triangle angle sum",
@@ -3733,47 +3802,87 @@ window.LAB404_CONTENT = {
     "a² + b² = c² for a right triangle."
    ],
    [
-    "Perimeter",
-    "The distance around a shape."
-   ],
-   [
-    "Area of a circle",
-    "πr² (pi times radius squared)."
+    "Circumference",
+    "The distance around a circle: C = 2πr."
    ]
   ],
   "quiz": [
    {
-    "q": "The angles of any triangle add up to:",
+    "q": "An angle of exactly 90° is called:",
     "options": [
-     "180°",
-     "90°",
-     "360°",
-     "100°"
+     "A right angle",
+     "An acute angle",
+     "An obtuse angle",
+     "A straight angle"
     ],
     "a": 0,
-    "why": "Every triangle's three angles sum to 180°."
+    "why": "90° is a right angle; 180° is a straight angle."
    },
    {
-    "q": "Two angles that add to 90° are:",
+    "q": "Two angles that add up to 180° are:",
     "options": [
-     "Complementary",
      "Supplementary",
+     "Complementary",
      "Vertical",
      "Right"
     ],
     "a": 0,
-    "why": "Complementary angles total 90°; supplementary total 180°."
+    "why": "Supplementary = 180°; complementary = 90°."
    },
    {
-    "q": "In a right triangle with legs 3 and 4, the hypotenuse is:",
+    "q": "One of two complementary angles is 20°. The other is:",
     "options": [
-     "5",
-     "7",
-     "6",
-     "12"
+     "70°",
+     "160°",
+     "20°",
+     "90°"
     ],
     "a": 0,
-    "why": "3² + 4² = 25, and √25 = 5."
+    "why": "Complementary angles add to 90°: 90 − 20 = 70°."
+   },
+   {
+    "q": "When two lines cross, the angles opposite each other are:",
+    "options": [
+     "Equal (vertical angles)",
+     "Always 90°",
+     "Complementary",
+     "Always different"
+    ],
+    "a": 0,
+    "why": "Vertical angles, directly opposite, are always equal."
+   },
+   {
+    "q": "The three angles of any triangle add up to:",
+    "options": [
+     "180°",
+     "360°",
+     "90°",
+     "100°"
+    ],
+    "a": 0,
+    "why": "Every triangle's interior angles sum to 180°."
+   },
+   {
+    "q": "A triangle has angles 40° and 75°. The third angle is:",
+    "options": [
+     "65°",
+     "75°",
+     "115°",
+     "45°"
+    ],
+    "a": 0,
+    "why": "180 − 40 − 75 = 65°."
+   },
+   {
+    "q": "A triangle with all three sides equal is:",
+    "options": [
+     "Equilateral",
+     "Isosceles",
+     "Scalene",
+     "Right"
+    ],
+    "a": 0,
+    "why": "Equilateral = all sides (and angles) equal."
    },
    {
     "q": "The area of a rectangle is:",
@@ -3784,29 +3893,84 @@ window.LAB404_CONTENT = {
      "πr²"
     ],
     "a": 0,
-    "why": "Area = length × width; 2(l+w) is its perimeter."
+    "why": "Area = length × width; 2(l + w) is the perimeter."
+   },
+   {
+    "q": "The area of a triangle is:",
+    "options": [
+     "½ × base × height",
+     "base × height",
+     "length × width",
+     "πr²"
+    ],
+    "a": 0,
+    "why": "A triangle's area is half the base times the height."
+   },
+   {
+    "q": "The distance around a circle (its circumference) is:",
+    "options": [
+     "2πr",
+     "πr²",
+     "2r",
+     "πd²"
+    ],
+    "a": 0,
+    "why": "Circumference = 2πr; πr² is the area."
+   },
+   {
+    "q": "The area of a circle is:",
+    "options": [
+     "πr²",
+     "2πr",
+     "πd",
+     "r²"
+    ],
+    "a": 0,
+    "why": "Area = π times the radius squared."
+   },
+   {
+    "q": "In a right triangle, the Pythagorean theorem states:",
+    "options": [
+     "a² + b² = c²",
+     "a + b = c",
+     "a² − b² = c²",
+     "abc = 180"
+    ],
+    "a": 0,
+    "why": "The squares of the legs add to the square of the hypotenuse."
+   },
+   {
+    "q": "A right triangle has legs 6 and 8. The hypotenuse is:",
+    "options": [
+     "10",
+     "12",
+     "14",
+     "48"
+    ],
+    "a": 0,
+    "why": "6² + 8² = 36 + 64 = 100, and √100 = 10."
    },
    {
     "q": "The hypotenuse of a right triangle is:",
     "options": [
      "The longest side, opposite the right angle",
-     "Any short side",
+     "Either short side",
      "The right angle itself",
      "Always 90"
     ],
     "a": 0,
-    "why": "It's the side opposite the 90° angle and the longest."
+    "why": "It's the side opposite the 90° angle and the longest side."
    },
    {
-    "q": "A triangle with all three sides equal is:",
+    "q": "The diameter of a circle is:",
     "options": [
-     "Equilateral",
-     "Scalene",
-     "Right",
-     "Isosceles"
+     "Twice the radius",
+     "Half the radius",
+     "The same as π",
+     "The area"
     ],
     "a": 0,
-    "why": "Equilateral = all sides (and angles) equal."
+    "why": "Diameter = 2r — straight across through the center."
    }
   ]
  },
