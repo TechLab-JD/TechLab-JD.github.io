@@ -8,66 +8,92 @@ window.LAB404_CONTENT = {
   "title": "Algebra",
   "subject": "Mathematics",
   "level": "Grades 9-12",
-  "intro": "Algebra is arithmetic with letters — a toolkit for describing relationships and solving for unknowns. Instead of only working with specific numbers, you use variables to stand for quantities you don't know yet, then follow logical rules to uncover their values. This one idea runs through science, money, engineering, and everyday problem-solving. This lesson builds from what a variable is, through solving equations step by step, to turning real-world problems into equations you can solve.",
+  "objectives": [
+   "Explain what variables, terms, coefficients, and expressions are, and evaluate an expression for a given value",
+   "Simplify expressions by combining like terms and applying the distributive property",
+   "Solve one-step, two-step, and multi-step linear equations, including ones with variables on both sides",
+   "Translate real-world word problems into equations and solve them",
+   "Check a solution and recognize the most common algebra mistakes"
+  ],
+  "intro": "Algebra is where math grows up. Arithmetic asks 'what is 7 + 5?'; algebra asks the far more powerful question 'what number, when I do something to it, gives this result?' To answer that, it introduces the variable — a letter standing for an unknown — and turns math from calculating fixed answers into describing relationships and solving for the unknown. This lesson takes you from the vocabulary, through simplifying and solving equations, to turning real-world problems into equations you can crack, with worked examples at every step.",
+  "sections": [
+   {
+    "h": "What algebra is, and why it matters",
+    "body": "Arithmetic answers questions with specific numbers. Algebra answers a more powerful kind of question: what number, when I operate on it, produces a given result? To do that it introduces the variable — a letter that stands in for a number we don't yet know or that can change. That single move turns math from calculating fixed answers into describing relationships and solving for unknowns.\n\nThis is why algebra appears everywhere. A phone plan's monthly cost, the time a road trip takes, the interest a savings account earns, the path of a thrown ball — each is a relationship between quantities, and algebra is the language for writing it down and working with it. Nearly every field that uses math at all — science, engineering, finance, medicine, computing — runs on algebra.\n\nThe reassuring part is that algebra is built from a small set of rules applied patiently. If you can do arithmetic and you're willing to work one careful step at a time, you can do algebra. Everything that follows is those few rules, used over and over.",
+    "tip": "Don't rush to 'the answer.' Algebra rewards doing one small, legal step at a time and writing each step down."
+   },
+   {
+    "h": "The building blocks: variables, terms, and expressions",
+    "body": "A variable is a letter — most often x — that represents a number whose value we don't yet know or that can vary. A constant is a plain fixed number, like 7. A coefficient is the number multiplied by a variable; in the term 3x, the 3 is the coefficient and x is the variable.\n\nA term is a single building block: a constant, a variable, or a product of numbers and variables (3x, 5, and −2xy are all terms). An expression is one or more terms joined by + and −, such as 3x + 5 or 2x² − 4x + 1. An expression has no equals sign, so there's nothing to 'solve.' With an expression you can only simplify it (write it more compactly) or evaluate it (find its value) by substituting a number for the variable.\n\nEvaluating is careful substitution followed by arithmetic: replace every variable with its given value — using parentheses to protect signs and exponents — then follow the order of operations.",
+    "example": "Evaluate 2x² − 4x + 1 when x = 3:\n  2(3)² − 4(3) + 1\n= 2(9) − 12 + 1\n= 18 − 12 + 1\n= 7",
+    "tip": "Always substitute with parentheses, e.g., 2(3)², so you don't lose a sign or an exponent."
+   },
+   {
+    "h": "Simplifying: like terms and the distributive property",
+    "body": "Before solving, you usually simplify, and two tools do most of the work.\n\nFirst, combining like terms. Like terms have the exact same variable raised to the exact same power. 3x and 5x are like terms and add to 8x; 4x² and x² add to 5x²; but 3x and 3x² are NOT like terms, because the powers differ, so they stay separate. Plain numbers are like terms with each other. To combine, add or subtract the coefficients and keep the variable part unchanged.\n\nSecond, the distributive property: a(b + c) = ab + ac. When a number — or a negative sign — sits in front of parentheses, it multiplies every term inside. This is where many mistakes happen: a minus sign in front flips the sign of each term inside, so treat a leading minus as ×(−1). After distributing, you can usually combine like terms to finish.",
+    "example": "Simplify 3(2x + 4) − (x − 5):\n= 6x + 12 − x + 5      (distribute; the minus flips both signs)\n= (6x − x) + (12 + 5)  (group like terms)\n= 5x + 17",
+    "tip": "A minus sign in front of parentheses changes the sign of everything inside — the most common slip in all of algebra."
+   },
+   {
+    "h": "Solving equations: the balance rule",
+    "body": "An equation sets two expressions equal, like 2x + 3 = 11. Picture a scale that must stay balanced: the left side weighs exactly as much as the right. The one rule that solves any linear equation is this — whatever operation you perform, perform it on BOTH sides, so the balance is preserved.\n\nSolving means isolating the variable: getting it alone on one side. You do that by undoing the operations around it, in reverse of the order of operations — first undo addition and subtraction, then undo multiplication and division. Each undo uses the inverse operation (subtraction undoes addition; division undoes multiplication).\n\nA one-step equation needs a single undo; a two-step equation needs two. The structure never changes — you just peel the operations away one at a time.",
+    "example": "Solve 2x + 3 = 11:\n2x + 3 = 11      (subtract 3 from both sides)\n2x = 8           (divide both sides by 2)\nx = 4"
+   },
+   {
+    "h": "Multi-step equations and variables on both sides",
+    "body": "Real equations are often longer, but the plan stays the same, done in order: (1) simplify each side on its own — distribute and combine like terms; (2) collect all the variable terms on one side and all the constants on the other, using the balance rule; (3) divide to isolate the variable.\n\nWhen the variable appears on both sides, pick a side to keep it on and subtract the variable term from the other. It doesn't matter which side you choose — the answer is the same — but moving the smaller variable term usually keeps the numbers positive and easier.\n\nTaken one legal step at a time, even the longest equation becomes a short sequence of simple moves.",
+    "example": "Solve 3(x + 2) = 5x − 4:\n3x + 6 = 5x − 4      (distribute on the left)\n6 = 2x − 4           (subtract 3x from both sides)\n10 = 2x              (add 4 to both sides)\n5 = x                (divide both sides by 2)",
+    "tip": "If you end up with an always-true statement like 7 = 7, the equation has infinitely many solutions; a false one like 3 = 8 means it has no solution."
+   },
+   {
+    "h": "From words to equations — and checking your work",
+    "body": "Algebra earns its keep by modeling real situations, and the skill is translation. Name the unknown with a variable, then convert the sentence into symbols piece by piece: 'is'/'equals' becomes =, 'sum'/'more than' becomes +, 'difference'/'less than' becomes −, 'product'/'times'/'of' becomes ×, and 'twice'/'tripled' become ×2 and ×3. Once the sentence is an equation, you solve it with the tools you already have.\n\nFinally, build the habit of checking every answer. Substitute your solution back into the ORIGINAL equation — not a later step, in case that step held an error — and confirm both sides come out equal. If they match, trust your answer; if not, you know to go back and find the slip. This one habit catches the large majority of mistakes.",
+    "example": "'The sum of a number and twice the number is 21. Find the number.'\nLet the number be n:\nn + 2n = 21\n3n = 21\nn = 7\nCheck: 7 + 2(7) = 7 + 14 = 21  ✓",
+    "tip": "Checking isn't busywork — it's a free, built-in way to know whether you're right."
+   }
+  ],
   "cards": [
    {
-    "h": "Variables, terms, and expressions",
-    "body": "A variable is a letter — usually x — that stands for a number you don't know yet. A term is a single piece of an expression: a plain number (a constant), a variable, or a number times a variable (like 3x, where 3 is the coefficient). An expression combines terms with + and −, like 3x + 5. An expression has no equals sign, so you can't 'solve' it — you can only simplify it, or evaluate it by substituting a value for the variable.",
-    "example": "Evaluate 3x + 5 when x = 4:\n  3(4) + 5\n= 12 + 5\n= 17"
+    "h": "Vocabulary",
+    "body": "A variable stands for an unknown; a coefficient multiplies it; a term is one building block; an expression (no = sign) is terms joined by + and −."
    },
    {
-    "h": "Equations and the balance rule",
-    "body": "An equation says two expressions are equal, like 2x + 3 = 11. Picture a balanced scale: the two sides weigh the same. The golden rule of algebra is that you may do anything to an equation as long as you do it to BOTH sides — then it stays balanced. You solve by using this rule to peel away everything around the variable until it sits alone on one side.",
-    "example": "2x + 3 = 11      (subtract 3 from both sides)\n2x = 8           (divide both sides by 2)\nx = 4",
-    "tip": "Undo operations in reverse order: deal with addition/subtraction first, then multiplication/division."
+    "h": "Simplify before you solve",
+    "body": "Combine like terms (same variable and power) and distribute across parentheses first."
    },
    {
-    "h": "Solving multi-step equations",
-    "body": "Most equations take a few steps, but the strategy never changes: first simplify each side (combine like terms, distribute if needed), then move all the variable terms to one side and all the numbers to the other, and finally divide to isolate the variable. Work carefully, one legal step at a time, and the answer falls out.",
-    "example": "Solve 5x − 2 = 3x + 8:\n5x − 2 = 3x + 8    (subtract 3x from both sides)\n2x − 2 = 8         (add 2 to both sides)\n2x = 10            (divide both sides by 2)\nx = 5"
+    "h": "The balance rule",
+    "body": "Do the same operation to both sides to keep an equation equal, undoing operations in reverse order to isolate the variable."
    },
    {
-    "h": "Combining like terms",
-    "body": "Like terms have the exact same variable raised to the same power. 3x and 5x are like terms (both x to the first power) and combine to 8x. But 3x and 3x² are NOT like terms — different powers — so they can't be combined. Plain numbers are like terms with each other. Combining like terms tidies an expression before you solve it.",
-    "example": "Simplify 4x + 7 + 2x − 3:\n(4x + 2x) + (7 − 3)\n= 6x + 4"
+    "h": "Watch the signs",
+    "body": "A minus sign in front of parentheses flips the sign of every term inside."
    },
    {
-    "h": "The distributive property",
-    "body": "When a number multiplies a group in parentheses, it multiplies EVERY term inside — that's distributing: a(b + c) = ab + ac. Watch the signs: a negative in front flips the sign of each term inside. This is one of the most common places students slip, so slow down whenever you see a minus outside parentheses.",
-    "example": "Expand 3(2x + 4):   = 6x + 12\nExpand −(x − 5):     = −x + 5   (the minus flips both signs)",
-    "tip": "A minus sign in front of parentheses is really ×(−1) — it changes the sign of everything inside."
-   },
-   {
-    "h": "Turning words into equations",
-    "body": "The real power of algebra is modeling real situations. The trick is to name the unknown with a variable, then translate the sentence into math piece by piece: 'is' becomes =, 'more than' becomes +, 'times' or 'of' becomes ×. Once it's an equation, you solve it with the rules you already know.",
-    "example": "'A number tripled, plus 4, equals 19. Find the number.'\nLet the number be n:\n3n + 4 = 19\n3n = 15\nn = 5"
-   },
-   {
-    "h": "Always check your answer",
-    "body": "Every algebra problem comes with a built-in way to check itself: substitute your answer back into the ORIGINAL equation and confirm both sides come out equal. If they match, you're right; if they don't, you slipped somewhere and can hunt down the step. This habit catches most mistakes and builds real confidence.",
-    "example": "Check x = 5 in 5x − 2 = 3x + 8:\nLeft:  5(5) − 2 = 23\nRight: 3(5) + 8 = 23   ✓ both sides equal 23"
+    "h": "Model and check",
+    "body": "Translate words into an equation, solve it, then substitute the answer back into the original equation to verify."
    }
   ],
   "flash": [
    [
     "Variable",
-    "A letter standing for an unknown number (e.g., x)."
-   ],
-   [
-    "Coefficient",
-    "The number multiplying a variable (the 3 in 3x)."
+    "A letter standing for an unknown or changing number."
    ],
    [
     "Constant",
     "A fixed number with no variable."
    ],
    [
+    "Coefficient",
+    "The number multiplying a variable (the 3 in 3x)."
+   ],
+   [
     "Term",
-    "A single part of an expression: a number, a variable, or their product."
+    "A number, a variable, or a product of them (3x, 5, −2xy)."
    ],
    [
     "Expression",
-    "Terms combined with + and −, with no equals sign."
+    "Terms joined by + and −, with no equals sign."
    ],
    [
     "Equation",
@@ -75,131 +101,194 @@ window.LAB404_CONTENT = {
    ],
    [
     "Like terms",
-    "Terms with the same variable to the same power; they can be combined."
+    "Terms with the same variable to the same power; they combine."
    ],
    [
     "Balance rule",
-    "Do the same operation to both sides to keep an equation equal."
+    "Do the same operation to both sides of an equation."
    ],
    [
     "Distributive property",
-    "a(b + c) = ab + ac — multiply across the parentheses."
+    "a(b + c) = ab + ac."
    ],
    [
     "Isolate the variable",
     "Get the variable alone on one side to solve."
+   ],
+   [
+    "Inverse operation",
+    "The operation that undoes another (− undoes +)."
+   ],
+   [
+    "Evaluate",
+    "Find an expression's value by substituting for the variable."
    ]
   ],
   "quiz": [
    {
-    "q": "Evaluate 2x + 3 when x = 5.",
+    "q": "Evaluate 2x² − 4x + 1 when x = 3.",
     "options": [
-     "13",
-     "10",
-     "16",
-     "25"
+     "7",
+     "19",
+     "1",
+     "13"
     ],
     "a": 0,
-    "why": "Substitute: 2(5) + 3 = 10 + 3 = 13."
+    "why": "2(9) − 12 + 1 = 18 − 12 + 1 = 7."
    },
    {
-    "q": "Solve: x + 9 = 4",
+    "q": "Which are like terms?",
     "options": [
-     "x = −5",
+     "4x² and x²",
+     "4x and 4x²",
+     "4x and 4",
+     "4 and 4y"
+    ],
+    "a": 0,
+    "why": "Like terms share the same variable AND the same power."
+   },
+   {
+    "q": "Simplify 7x − 2 + 3x + 9.",
+    "options": [
+     "10x + 7",
+     "10x + 11",
+     "4x + 7",
+     "21x"
+    ],
+    "a": 0,
+    "why": "(7x + 3x) + (−2 + 9) = 10x + 7."
+   },
+   {
+    "q": "Expand 3(2x + 4) − (x − 5).",
+    "options": [
+     "5x + 17",
+     "5x + 7",
+     "7x + 7",
+     "5x + 11"
+    ],
+    "a": 0,
+    "why": "6x + 12 − x + 5 = 5x + 17."
+   },
+   {
+    "q": "Solve x − 8 = −3.",
+    "options": [
      "x = 5",
-     "x = 13",
-     "x = −13"
-    ],
-    "a": 0,
-    "why": "Subtract 9 from both sides: x = 4 − 9 = −5."
-   },
-   {
-    "q": "Solve: 3x = 21",
-    "options": [
-     "x = 7",
-     "x = 18",
-     "x = 24",
-     "x = 63"
-    ],
-    "a": 0,
-    "why": "Divide both sides by 3: x = 7."
-   },
-   {
-    "q": "Simplify: 5x + 2 − 3x + 6",
-    "options": [
-     "2x + 8",
-     "8x + 8",
-     "2x + 4",
-     "10x"
-    ],
-    "a": 0,
-    "why": "Combine like terms: (5x − 3x) + (2 + 6) = 2x + 8."
-   },
-   {
-    "q": "Expand: 4(x + 3)",
-    "options": [
-     "4x + 12",
-     "4x + 3",
-     "x + 12",
-     "4x + 7"
-    ],
-    "a": 0,
-    "why": "Distribute 4 to each term: 4·x + 4·3 = 4x + 12."
-   },
-   {
-    "q": "Expand: −(2x − 7)",
-    "options": [
-     "−2x + 7",
-     "−2x − 7",
-     "2x − 7",
-     "2x + 7"
-    ],
-    "a": 0,
-    "why": "The minus flips both signs: −2x + 7."
-   },
-   {
-    "q": "Solve: 2x + 5 = 17",
-    "options": [
-     "x = 6",
+     "x = −11",
      "x = 11",
-     "x = 22",
+     "x = −5"
+    ],
+    "a": 0,
+    "why": "Add 8 to both sides: x = −3 + 8 = 5."
+   },
+   {
+    "q": "Solve 2x + 3 = 11.",
+    "options": [
+     "x = 4",
+     "x = 7",
+     "x = 5.5",
      "x = 8"
     ],
     "a": 0,
-    "why": "Subtract 5 (2x = 12), then divide by 2: x = 6."
+    "why": "2x = 8, then x = 4."
    },
    {
-    "q": "Solve: 4x − 1 = 2x + 7",
+    "q": "Solve 5x − 2 = 3x + 8.",
     "options": [
-     "x = 4",
+     "x = 5",
      "x = 3",
-     "x = 8",
+     "x = 10",
+     "x = 1"
+    ],
+    "a": 0,
+    "why": "Subtract 3x (2x − 2 = 8), add 2 (2x = 10), divide by 2: x = 5."
+   },
+   {
+    "q": "Solve 3(x + 2) = 5x − 4.",
+    "options": [
+     "x = 5",
+     "x = 1",
+     "x = −5",
      "x = 2"
     ],
     "a": 0,
-    "why": "Subtract 2x (2x − 1 = 7), add 1 (2x = 8), divide by 2: x = 4."
+    "why": "3x + 6 = 5x − 4 → 10 = 2x → x = 5."
    },
    {
-    "q": "'Five more than twice a number is 13.' Which equation fits?",
+    "q": "A minus sign directly in front of parentheses:",
     "options": [
-     "2n + 5 = 13",
-     "5n + 2 = 13",
-     "2n − 5 = 13",
-     "5 + 13 = 2n"
+     "Flips the sign of every term inside",
+     "Only affects the first term",
+     "Does nothing",
+     "Doubles each term"
     ],
     "a": 0,
-    "why": "Twice a number is 2n; five more is + 5; 'is' means =."
+    "why": "A leading minus is ×(−1), so every inside term changes sign."
    },
    {
-    "q": "You solved an equation and got x = 3. How do you check it?",
+    "q": "To isolate a variable, you undo operations in what order?",
     "options": [
-     "Substitute 3 back into the original equation",
-     "Solve it again a different way",
-     "Ask a friend",
-     "You can't check algebra"
+     "Reverse of the order of operations",
+     "Same as the order of operations",
+     "Alphabetical order",
+     "Random order"
     ],
     "a": 0,
-    "why": "Plug it in and confirm both sides are equal — the built-in check."
+    "why": "Undo +/− first, then ×/÷ — the reverse of PEMDAS."
+   },
+   {
+    "q": "'Twice a number, decreased by 5, is 9.' Which equation fits?",
+    "options": [
+     "2n − 5 = 9",
+     "5 − 2n = 9",
+     "2(n − 5) = 9",
+     "n/2 − 5 = 9"
+    ],
+    "a": 0,
+    "why": "Twice a number is 2n; decreased by 5 is − 5; 'is' means =."
+   },
+   {
+    "q": "How should you check that x = 4 solves 2x + 3 = 11?",
+    "options": [
+     "Substitute 4 into the original equation",
+     "Re-read the problem",
+     "Guess again",
+     "Solve a different equation"
+    ],
+    "a": 0,
+    "why": "Plug it in: 2(4) + 3 = 11 ✓."
+   },
+   {
+    "q": "If solving an equation leads to 7 = 7, the equation has:",
+    "options": [
+     "Infinitely many solutions",
+     "No solution",
+     "Exactly one solution",
+     "A negative solution"
+    ],
+    "a": 0,
+    "why": "An always-true statement means every value works."
+   },
+   {
+    "q": "If solving an equation leads to 3 = 8, the equation has:",
+    "options": [
+     "No solution",
+     "Infinitely many",
+     "One solution",
+     "Two solutions"
+    ],
+    "a": 0,
+    "why": "A false statement means nothing satisfies the equation."
+   },
+   {
+    "q": "Evaluate 3x + 5 when x = −2.",
+    "options": [
+     "−1",
+     "11",
+     "1",
+     "−11"
+    ],
+    "a": 0,
+    "why": "3(−2) + 5 = −6 + 5 = −1."
    }
   ]
  },

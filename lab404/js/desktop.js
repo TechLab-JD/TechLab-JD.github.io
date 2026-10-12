@@ -808,19 +808,31 @@
     /* Render a subject topic as a lesson: intro + concept cards, with flashcard and quiz views. */
     _renderLesson: function (content, d, winId) {
       var esc = escHtml;
-      var cards = (d.cards || []).map(function (c) {
-        var h = '<div class="lsn-card"><h3>' + esc(c.h) + '</h3><p>' + esc(c.body) + '</p>';
+      function block(c) {
+        var h = '<div class="lsn-card"><h3>' + esc(c.h) + '</h3>';
+        String(c.body == null ? "" : c.body).split(/\n\n+/).forEach(function (p) { if (p.trim()) h += '<p>' + esc(p.trim()) + '</p>'; });
         if (c.example) h += '<div class="lsn-ex"><span class="lsn-ex-l">Worked example</span>' + esc(c.example) + '</div>';
         if (c.tip) h += '<div class="lsn-tip">💡 ' + esc(c.tip) + '</div>';
         return h + '</div>';
-      }).join("");
+      }
+      var objectives = (d.objectives && d.objectives.length)
+        ? '<div class="lsn-obj"><div class="lsn-obj-h">🎯 In this lesson you’ll learn to…</div><ul>' +
+          d.objectives.map(function (o) { return '<li>' + esc(o) + '</li>'; }).join("") + '</ul></div>' : "";
+      var mainContent, keyPoints;
+      if (d.sections && d.sections.length) {
+        mainContent = d.sections.map(block).join("");
+        keyPoints = (d.cards && d.cards.length) ? '<h3 class="lsn-sec-h">Key points to remember</h3>' + d.cards.map(block).join("") : "";
+      } else {
+        mainContent = (d.cards || []).map(block).join("");  /* older lessons: cards are the content */
+        keyPoints = "";
+      }
       var nav = '<div class="lsn-nav">' +
         '<button class="lsn-tab on" data-view="lesson">📖 Lesson</button>' +
         (d.flash && d.flash.length ? '<button class="lsn-tab" data-view="flash">🃏 Flashcards (' + d.flash.length + ')</button>' : "") +
         (d.quiz && d.quiz.length ? '<button class="lsn-tab" data-view="quiz">🎯 Quiz (' + d.quiz.length + ')</button>' : "") + '</div>';
       var lessonView = '<div class="lsn-view" data-v="lesson">' +
         '<div class="lsn-head"><h2>' + esc(d.title) + '</h2><span class="lsn-lvl">' + esc(d.subject || "") + (d.level ? " · " + esc(d.level) : "") + '</span></div>' +
-        (d.intro ? '<p class="lsn-intro">' + esc(d.intro) + '</p>' : "") + cards +
+        objectives + (d.intro ? '<p class="lsn-intro">' + esc(d.intro) + '</p>' : "") + mainContent + keyPoints +
         '<p class="lsn-src">Original Lab404 lesson, written for study. ' + (d.disclaimer ? esc(d.disclaimer) : "Double-check anything important against an authoritative source.") + '</p></div>';
       var flashView = '<div class="lsn-view hide" data-v="flash"><div class="fc" id="' + winId + '-fc"></div>' +
         '<div class="fc-ctrl"><button class="lsn-btn" data-fprev>‹ Prev</button><span class="fc-count" id="' + winId + '-fcn"></span><button class="lsn-btn" data-fnext>Next ›</button></div></div>';
