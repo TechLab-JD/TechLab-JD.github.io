@@ -4577,27 +4577,64 @@ window.LAB404_CONTENT = {
   "title": "Pre-Calculus",
   "subject": "Mathematics",
   "level": "Grades 9-12",
-  "intro": "Pre-calculus pulls algebra and trig together and sharpens the big idea you'll need for calculus: the function. You'll get comfortable with how functions behave, how they graph, and the kinds that model growth, decay, and change.",
-  "cards": [
+  "objectives": [
+   "Define a function and use function notation f(x), including domain and range",
+   "Recognize and graph the linear, quadratic, and exponential function families",
+   "Read a graph: intercepts, slope, and increasing/decreasing behavior",
+   "Relate exponential and logarithmic functions as inverses",
+   "Understand the idea of a limit as the bridge to calculus"
+  ],
+  "intro": "Pre-calculus gathers everything from algebra and trigonometry and focuses it on the most important object in higher math: the function. You'll sharpen how functions are written, graphed, and combined, meet the main families that model the world, and glimpse the limit — the idea calculus is built on. Think of this as basic training for calculus.",
+  "sections": [
    {
-    "h": "What a function is",
-    "body": "A function is a rule that takes an input and gives exactly one output. We write f(x) ('f of x'), where x is the input. f(x) = 2x + 1 means 'double the input and add one,' so f(3) = 7. Each input has one and only one output."
+    "h": "Functions and function notation",
+    "body": "A function is a rule that assigns exactly one output to each input. We write it as f(x) ('f of x'), where x is the input and f(x) is the output. For f(x) = 2x + 1, feeding in 3 gives f(3) = 2(3) + 1 = 7. The defining feature is 'exactly one output per input' — no input maps to two different outputs.\n\nTwo sets describe a function's reach. The domain is all the allowed inputs (sometimes everything, sometimes restricted — you can't divide by zero or take the square root of a negative). The range is all the possible outputs. Function notation makes it easy to talk about specific values and to chain functions together.",
+    "example": "For f(x) = x² − 1:\nf(3) = 3² − 1 = 8\nf(0) = 0² − 1 = −1\nf(−2) = (−2)² − 1 = 3",
+    "tip": "The 'one output per input' rule is why the vertical-line test works: if a vertical line hits a graph twice, it's not a function."
    },
    {
     "h": "Reading a graph",
-    "body": "A function's graph pairs every input (x, horizontal) with its output (y = f(x), vertical). The x-intercepts are where it crosses the x-axis (output 0); the y-intercept is where x = 0. The slope shows how fast the output changes."
+    "body": "A function's graph plots every input on the horizontal x-axis against its output on the vertical y-axis (y = f(x)). Reading a graph tells you a lot at a glance. The x-intercepts are where the graph crosses the x-axis — the inputs that give an output of zero. The y-intercept is where it crosses the y-axis, the output when x = 0.\n\nYou can also see behavior: where the graph rises (increasing) or falls (decreasing), where it peaks or bottoms out, and how steep it is (slope). Learning to translate between an equation and its picture is a central pre-calculus skill.",
+    "tip": "A positive slope rises left to right; a negative slope falls; a zero slope is flat."
    },
    {
     "h": "Families of functions",
-    "body": "Linear functions (f(x) = mx + b) graph as straight lines. Quadratics (f(x) = ax² + bx + c) graph as parabolas (U-shapes). Each family has a signature shape, so recognizing the form lets you predict the behavior."
+    "body": "A few families of functions model most situations, and each has a signature shape. Linear functions, f(x) = mx + b, graph as straight lines; m is the slope (steepness) and b is the y-intercept. Quadratic functions, f(x) = ax² + bx + c, graph as parabolas — symmetric U-shapes that open up or down.\n\nExponential functions, f(x) = a·bˣ, grow (or decay) by multiplying by a constant each step, producing the dramatic curves of population growth, compound interest, and radioactive decay. Recognizing the family from the equation lets you predict the graph's shape instantly.",
+    "visual": "<svg viewBox=\"0 0 230 180\" width=\"220\" role=\"img\" aria-label=\"A graph with a straight line and a U-shaped parabola on x and y axes\"><line x1=\"15\" y1=\"95\" x2=\"215\" y2=\"95\" stroke=\"#2a3650\" stroke-width=\"1.2\"/><line x1=\"115\" y1=\"15\" x2=\"115\" y2=\"165\" stroke=\"#2a3650\" stroke-width=\"1.2\"/><path d=\"M60 42 Q 115 172 170 42\" fill=\"none\" stroke=\"#39e3c8\" stroke-width=\"2.5\"/><line x1=\"32\" y1=\"150\" x2=\"200\" y2=\"35\" stroke=\"#4f9cf0\" stroke-width=\"2.5\"/><text x=\"118\" y=\"160\" fill=\"#39e3c8\" font-size=\"11\">parabola (quadratic)</text><text x=\"150\" y=\"52\" fill=\"#4f9cf0\" font-size=\"11\">line (linear)</text></svg>",
+    "caption": "Linear functions graph as straight lines; quadratics as U-shaped parabolas.",
+    "example": "f(x) = 2x + 1  →  a line, slope 2, crossing y at 1\nf(x) = x²       →  a parabola opening up, vertex at (0, 0)"
    },
    {
-    "h": "Exponential and logarithmic functions",
-    "body": "Exponential functions (f(x) = a·bˣ) model fast growth or decay — populations, interest, radioactivity. Logarithms are their inverse: they answer 'what power gives this number?' log₂(8) = 3 because 2³ = 8. They turn multiplication into addition, which is why they're everywhere in science."
+    "h": "Exponentials and logarithms",
+    "body": "Exponential functions describe repeated multiplication — doubling, tripling, halving. Logarithms are their inverse: a logarithm answers 'what power produces this number?' Since 2³ = 8, we write log₂(8) = 3.\n\nLogarithms turn multiplication into addition and compress huge ranges into manageable numbers, which is why they appear throughout science — the Richter scale for earthquakes, decibels for sound, and pH for acidity are all logarithmic. Exponentials and logs are two views of the same relationship, each undoing the other.",
+    "example": "Because 10² = 100, log₁₀(100) = 2.\nBecause 2⁴ = 16, log₂(16) = 4."
    },
    {
     "h": "The idea of a limit",
-    "body": "A limit asks: what value does a function approach as the input gets closer and closer to some number? It's the central idea calculus is built on — it lets us talk precisely about instantaneous change and behavior right at a point, even where the function isn't defined."
+    "body": "The limit is the single idea that separates pre-calculus from calculus. A limit asks: as the input gets closer and closer to some value, what value does the output approach? It's about approaching, not necessarily reaching — a function can have a limit at a point even where it isn't defined.\n\nFor example, as x gets close to 2, the function f(x) = x + 3 approaches 5. That seems obvious here, but the power of limits is that they let us talk rigorously about instantaneous rates of change and the exact behavior at a single point — the two questions all of calculus is built to answer.",
+    "tip": "A limit is about where a function is headed as you approach a point, not necessarily the value it has there."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Functions",
+    "body": "A rule giving exactly one output per input, written f(x); domain = inputs, range = outputs."
+   },
+   {
+    "h": "Reading graphs",
+    "body": "x-intercepts (output 0), y-intercept (x = 0), slope, and where it rises or falls."
+   },
+   {
+    "h": "Three families",
+    "body": "Linear (line), quadratic (parabola), exponential (rapid growth/decay)."
+   },
+   {
+    "h": "Exp & log",
+    "body": "Logarithms invert exponentials: 2³ = 8 means log₂(8) = 3."
+   },
+   {
+    "h": "Limits",
+    "body": "The value a function approaches as the input nears a point — the gateway to calculus."
    }
   ],
   "flash": [
@@ -4607,15 +4644,27 @@ window.LAB404_CONTENT = {
    ],
    [
     "f(x)",
-    "Function notation: the output of function f at input x."
+    "Function notation: the output of f at input x."
    ],
    [
     "Domain",
-    "All the allowed inputs of a function."
+    "All allowed inputs of a function."
    ],
    [
     "Range",
-    "All the possible outputs of a function."
+    "All possible outputs of a function."
+   ],
+   [
+    "x-intercept",
+    "Where a graph crosses the x-axis (output = 0)."
+   ],
+   [
+    "y-intercept",
+    "Where a graph crosses the y-axis (x = 0)."
+   ],
+   [
+    "Slope",
+    "How steep a line is; rise over run."
    ],
    [
     "Linear function",
@@ -4627,7 +4676,11 @@ window.LAB404_CONTENT = {
    ],
    [
     "Exponential function",
-    "f(x) = a·bˣ; models rapid growth or decay."
+    "f(x) = a·bˣ; rapid growth or decay."
+   ],
+   [
+    "Logarithm",
+    "The inverse of an exponential; 'what power gives this number?'"
    ],
    [
     "Limit",
@@ -4644,18 +4697,29 @@ window.LAB404_CONTENT = {
      "Two outputs"
     ],
     "a": 0,
-    "why": "By definition, one input maps to exactly one output."
+    "why": "One input maps to exactly one output — the defining rule."
    },
    {
-    "q": "If f(x) = 2x + 1, then f(3) =",
+    "q": "If f(x) = x² − 1, then f(3) =",
     "options": [
-     "7",
-     "6",
+     "8",
      "5",
-     "9"
+     "9",
+     "−1"
     ],
     "a": 0,
-    "why": "2(3) + 1 = 7."
+    "why": "3² − 1 = 9 − 1 = 8."
+   },
+   {
+    "q": "The domain of a function is:",
+    "options": [
+     "Its allowed inputs",
+     "Its outputs",
+     "Its slope",
+     "Its graph"
+    ],
+    "a": 0,
+    "why": "Domain = valid inputs; range = outputs."
    },
    {
     "q": "A quadratic function graphs as a:",
@@ -4666,7 +4730,51 @@ window.LAB404_CONTENT = {
      "Single point"
     ],
     "a": 0,
-    "why": "f(x)=ax²+bx+c makes a U-shaped parabola."
+    "why": "ax² + bx + c makes a U-shaped parabola."
+   },
+   {
+    "q": "A linear function graphs as a:",
+    "options": [
+     "Straight line",
+     "Parabola",
+     "Wave",
+     "Circle"
+    ],
+    "a": 0,
+    "why": "f(x) = mx + b is a straight line."
+   },
+   {
+    "q": "The y-intercept is the output when:",
+    "options": [
+     "x = 0",
+     "y = 0",
+     "x = 1",
+     "the slope is 0"
+    ],
+    "a": 0,
+    "why": "It's where the graph crosses the y-axis, at x = 0."
+   },
+   {
+    "q": "A positive slope means the line:",
+    "options": [
+     "Rises left to right",
+     "Falls left to right",
+     "Is flat",
+     "Is vertical"
+    ],
+    "a": 0,
+    "why": "Positive slope goes up as x increases."
+   },
+   {
+    "q": "Exponential functions model:",
+    "options": [
+     "Rapid growth or decay",
+     "Straight-line change",
+     "No change",
+     "Only negatives"
+    ],
+    "a": 0,
+    "why": "They multiply by a constant each step — growth or decay."
    },
    {
     "q": "log₂(8) =",
@@ -4680,15 +4788,26 @@ window.LAB404_CONTENT = {
     "why": "2³ = 8, so log base 2 of 8 is 3."
    },
    {
-    "q": "The domain of a function is:",
+    "q": "log₁₀(100) =",
     "options": [
-     "Its allowed inputs",
-     "Its outputs",
-     "Its slope",
-     "Its graph"
+     "2",
+     "10",
+     "100",
+     "1"
     ],
     "a": 0,
-    "why": "Domain = the set of valid inputs; range = the outputs."
+    "why": "10² = 100, so the log is 2."
+   },
+   {
+    "q": "A logarithm is the inverse of a(n):",
+    "options": [
+     "Exponential",
+     "Line",
+     "Parabola",
+     "Circle"
+    ],
+    "a": 0,
+    "why": "Logs undo exponentials and vice versa."
    },
    {
     "q": "A limit describes the value a function:",
@@ -4699,7 +4818,40 @@ window.LAB404_CONTENT = {
      "Can never reach"
     ],
     "a": 0,
-    "why": "It's the value approached as x gets close to a number."
+    "why": "It's about where the output is headed near a point."
+   },
+   {
+    "q": "The vertical-line test checks whether a graph is a:",
+    "options": [
+     "Function",
+     "Line",
+     "Parabola",
+     "Circle"
+    ],
+    "a": 0,
+    "why": "If a vertical line hits it twice, an input has two outputs — not a function."
+   },
+   {
+    "q": "In f(x) = mx + b, m is the:",
+    "options": [
+     "Slope",
+     "y-intercept",
+     "Input",
+     "Output"
+    ],
+    "a": 0,
+    "why": "m is the slope; b is the y-intercept."
+   },
+   {
+    "q": "Why is the limit important?",
+    "options": [
+     "It's the foundation of calculus",
+     "It's only for graphing",
+     "It replaces algebra",
+     "It has no use"
+    ],
+    "a": 0,
+    "why": "Limits let calculus define instantaneous rates and exact accumulation."
    }
   ]
  },
@@ -4707,27 +4859,66 @@ window.LAB404_CONTENT = {
   "title": "Calculus",
   "subject": "Mathematics",
   "level": "College",
-  "intro": "Calculus is the math of change. Where algebra handles fixed quantities, calculus handles things that move and vary — speed at an instant, the area under a curve, how fast anything grows. Its two big ideas are the derivative and the integral.",
+  "objectives": [
+   "Explain what the derivative measures (instantaneous rate of change / slope of a curve)",
+   "Use the power rule to differentiate simple functions",
+   "Explain what the integral measures (accumulation / area under a curve)",
+   "State how derivatives and integrals relate (the Fundamental Theorem)",
+   "Recognize real-world uses of calculus"
+  ],
+  "intro": "Calculus is the mathematics of change and accumulation — the tool for handling things that vary continuously rather than staying fixed. Its two great ideas, the derivative and the integral, answer two ancient questions: how fast is something changing at this exact instant, and how much has accumulated in total? This lesson explains both, how they connect, and why calculus underpins modern science and engineering.",
+  "sections": [
+   {
+    "h": "The problem calculus solves",
+    "body": "Algebra handles fixed quantities and average rates — the average speed over a whole trip. But the real world changes moment to moment: a car's speedometer shows speed right now, not the average. How do you find a rate of change at a single instant, when 'rate' normally needs an interval of time?\n\nCalculus answers this using limits: it looks at the change over smaller and smaller intervals and sees what value that approaches. That limiting value is the instantaneous rate of change. The same limit idea, run the other direction, lets you add up infinitely many tiny pieces to find an exact total. These two moves are the derivative and the integral."
+   },
+   {
+    "h": "The derivative: slope of a curve",
+    "body": "The derivative measures how fast a function is changing at a single point — geometrically, it's the slope of the curve there, the slope of the straight line that just touches the curve (the tangent line) at that point. For a straight line the slope is constant and easy; for a curve it changes from point to point, and the derivative gives it anywhere.\n\nA concrete meaning: if a function gives position over time, its derivative gives velocity (how fast position is changing). The derivative of velocity, in turn, is acceleration. The derivative is the 'rate-of-change' machine.",
+    "visual": "<svg viewBox=\"0 0 220 170\" width=\"210\" role=\"img\" aria-label=\"A curve with a straight tangent line touching it at one point, whose slope is the derivative\"><line x1=\"20\" y1=\"150\" x2=\"205\" y2=\"150\" stroke=\"#2a3650\" stroke-width=\"1.2\"/><line x1=\"35\" y1=\"15\" x2=\"35\" y2=\"160\" stroke=\"#2a3650\" stroke-width=\"1.2\"/><path d=\"M38 140 Q 120 138 198 28\" fill=\"none\" stroke=\"#39e3c8\" stroke-width=\"2.5\"/><line x1=\"85\" y1=\"125\" x2=\"195\" y2=\"50\" stroke=\"#e8b84b\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"88\" r=\"4.5\" fill=\"#e8b84b\"/><text x=\"88\" y=\"46\" fill=\"#e8b84b\" font-size=\"11\">tangent line</text><text x=\"44\" y=\"32\" fill=\"#39e3c8\" font-size=\"11\">curve</text><text x=\"120\" y=\"108\" fill=\"#9aa6c0\" font-size=\"10\">slope = derivative</text></svg>",
+    "caption": "The derivative at a point is the slope of the tangent line that just touches the curve there.",
+    "tip": "Derivative = slope of the tangent line = instantaneous rate of change — three names for the same thing."
+   },
+   {
+    "h": "Computing derivatives: the power rule",
+    "body": "While the definition uses limits, in practice you compute derivatives with rules. The most basic is the power rule: the derivative of xⁿ is n·xⁿ⁻¹ — bring the exponent down as a multiplier, and reduce the exponent by one.\n\nSo the derivative of x² is 2x, the derivative of x³ is 3x², and the derivative of x (which is x¹) is 1. The derivative of a constant is 0, because a constant doesn't change. With a handful of rules like this, you can differentiate most functions quickly.",
+    "example": "d/dx of x² = 2x\nd/dx of x³ = 3x²\nd/dx of 5x = 5\nd/dx of 7 = 0"
+   },
+   {
+    "h": "The integral: area and accumulation",
+    "body": "The integral is the derivative's opposite. Where the derivative breaks change into instants, the integral builds a total back up by adding infinitely many tiny pieces. Its most visible meaning is the area under a curve: slice the region into countless thin rectangles, add their areas, and take the limit.\n\nAccumulation shows up everywhere: integrate a velocity over time to get total distance traveled; integrate a flow rate to get total volume. Whenever you need a 'total amount' from a continuously varying quantity, you're integrating.",
+    "visual": "<svg viewBox=\"0 0 230 170\" width=\"215\" role=\"img\" aria-label=\"Thin rectangles filling the area under a curve, illustrating the integral as accumulated area\"><line x1=\"30\" y1=\"150\" x2=\"215\" y2=\"150\" stroke=\"#2a3650\" stroke-width=\"1.2\"/><line x1=\"40\" y1=\"15\" x2=\"40\" y2=\"160\" stroke=\"#2a3650\" stroke-width=\"1.2\"/><rect x=\"48\" y=\"135\" width=\"20\" height=\"15\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"70\" y=\"122\" width=\"20\" height=\"28\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"92\" y=\"110\" width=\"20\" height=\"40\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"114\" y=\"98\" width=\"20\" height=\"52\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"136\" y=\"85\" width=\"20\" height=\"65\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"158\" y=\"73\" width=\"20\" height=\"77\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"180\" y=\"61\" width=\"20\" height=\"89\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><line x1=\"45\" y1=\"142\" x2=\"200\" y2=\"55\" stroke=\"#39e3c8\" stroke-width=\"2.5\"/><text x=\"120\" y=\"135\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"10\">area = integral (sum of thin slices)</text></svg>",
+    "caption": "The integral adds up infinitely many thin slices — the area under the curve."
+   },
+   {
+    "h": "How derivatives and integrals connect",
+    "body": "The crowning result of calculus is the Fundamental Theorem of Calculus, which says differentiation and integration are inverse operations — they undo each other. Finding the rate of change and finding the accumulated total are two sides of the same coin.\n\nThis is both profound and practical: it means you can compute an otherwise impossible 'sum of infinitely many pieces' (an integral) by reversing a derivative. That connection is what turned calculus from a collection of clever tricks into a single, powerful theory."
+   },
+   {
+    "h": "Why calculus matters",
+    "body": "Calculus is the language of change, so it appears anywhere things move, grow, or accumulate. Physics uses it for motion, forces, and energy; engineering for designing everything from bridges to circuits; economics for marginal cost and optimization; biology for population and disease models; and computer graphics and machine learning rely on derivatives to optimize.\n\nYou don't need calculus for daily life, but it's the gateway to nearly every quantitative field. Understanding its two ideas — rate of change and accumulation — is understanding how modern science describes a changing world."
+   }
+  ],
   "cards": [
    {
-    "h": "The derivative: instantaneous rate of change",
-    "body": "The derivative measures how fast a function is changing at a single instant — the slope of the curve at a point. If position is a function of time, its derivative is velocity. It answers 'how fast, right now?' rather than 'how fast on average?'"
+    "h": "The core problem",
+    "body": "Find a rate of change at a single instant, and a total from continuous change — solved with limits."
    },
    {
-    "h": "Slope of a curve",
-    "body": "For a straight line, slope is constant and easy (rise over run). For a curve, the slope changes everywhere. The derivative uses limits to find the slope of the line that just touches the curve at one point — the tangent line."
+    "h": "Derivative",
+    "body": "The instantaneous rate of change = slope of the tangent line at a point."
    },
    {
-    "h": "A basic derivative rule",
-    "body": "For power functions, the derivative of xⁿ is n·xⁿ⁻¹. So the derivative of x² is 2x, and of x³ is 3x². This 'power rule' is one of the first tools you learn for computing derivatives quickly."
+    "h": "Power rule",
+    "body": "The derivative of xⁿ is n·xⁿ⁻¹; the derivative of a constant is 0."
    },
    {
-    "h": "The integral: accumulation and area",
-    "body": "The integral is the derivative's opposite. It adds up tiny pieces to find a total — most visibly, the area under a curve. If the derivative breaks change into instants, the integral builds a total back up from them."
+    "h": "Integral",
+    "body": "Accumulation — the area under a curve, built from infinitely many thin slices."
    },
    {
-    "h": "The two are inverses",
-    "body": "The Fundamental Theorem of Calculus says differentiation and integration undo each other — finding the rate of change and finding the accumulated total are two sides of the same coin. That link is what makes calculus so powerful across science and engineering."
+    "h": "Fundamental Theorem",
+    "body": "Differentiation and integration are inverse operations; they undo each other."
    }
   ],
   "flash": [
@@ -4737,31 +4928,47 @@ window.LAB404_CONTENT = {
    ],
    [
     "Derivative",
-    "The instantaneous rate of change (slope at a point)."
+    "Instantaneous rate of change; slope of a curve at a point."
    ],
    [
     "Tangent line",
-    "The line that just touches a curve at one point."
+    "The straight line that just touches a curve at one point."
+   ],
+   [
+    "Instantaneous rate",
+    "A rate at a single moment, not an average."
    ],
    [
     "Power rule",
     "The derivative of xⁿ is n·xⁿ⁻¹."
    ],
    [
-    "Integral",
-    "Accumulation; the area under a curve."
-   ],
-   [
     "Velocity",
     "The derivative of position with respect to time."
    ],
    [
+    "Integral",
+    "Accumulation; the area under a curve."
+   ],
+   [
+    "Accumulation",
+    "Adding up infinitely many tiny pieces to a total."
+   ],
+   [
     "Fundamental Theorem",
-    "Differentiation and integration are inverse operations."
+    "Differentiation and integration are inverses."
+   ],
+   [
+    "Differentiation",
+    "The process of finding a derivative."
    ],
    [
     "Limit",
-    "The idea calculus is built on — approaching a value."
+    "The value a function approaches — calculus's foundation."
+   ],
+   [
+    "Constant rule",
+    "The derivative of a constant is 0."
    ]
   ],
   "quiz": [
@@ -4777,6 +4984,17 @@ window.LAB404_CONTENT = {
     "why": "It's the rate of change at a single instant — the slope at a point."
    },
    {
+    "q": "Geometrically, the derivative at a point is the:",
+    "options": [
+     "Slope of the tangent line",
+     "Area under the curve",
+     "y-intercept",
+     "Length of the curve"
+    ],
+    "a": 0,
+    "why": "The tangent line's slope is the derivative there."
+   },
+   {
     "q": "The derivative of x² is:",
     "options": [
      "2x",
@@ -4788,15 +5006,26 @@ window.LAB404_CONTENT = {
     "why": "Power rule: n·xⁿ⁻¹ = 2·x¹ = 2x."
    },
    {
-    "q": "The integral is most visibly used to find:",
+    "q": "The derivative of x³ is:",
     "options": [
-     "Area under a curve",
-     "The slope at a point",
-     "A single input",
-     "The y-intercept"
+     "3x²",
+     "x²",
+     "3x",
+     "x⁴"
     ],
     "a": 0,
-    "why": "Integration accumulates pieces — classically, the area under a curve."
+    "why": "Power rule: 3·x² = 3x²."
+   },
+   {
+    "q": "The derivative of a constant (like 7) is:",
+    "options": [
+     "0",
+     "7",
+     "1",
+     "−7"
+    ],
+    "a": 0,
+    "why": "A constant doesn't change, so its rate of change is 0."
    },
    {
     "q": "If position is a function of time, its derivative is:",
@@ -4810,6 +5039,28 @@ window.LAB404_CONTENT = {
     "why": "The rate of change of position is velocity."
    },
    {
+    "q": "The integral is most visibly used to find:",
+    "options": [
+     "Area under a curve",
+     "The slope at a point",
+     "A single input",
+     "The y-intercept"
+    ],
+    "a": 0,
+    "why": "Integration accumulates thin slices — the area under a curve."
+   },
+   {
+    "q": "Integration builds a total by adding:",
+    "options": [
+     "Infinitely many tiny pieces",
+     "Two numbers",
+     "A single rectangle",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "It sums countless thin slices and takes the limit."
+   },
+   {
     "q": "Differentiation and integration are:",
     "options": [
      "Inverse operations",
@@ -4821,15 +5072,70 @@ window.LAB404_CONTENT = {
     "why": "The Fundamental Theorem says they undo each other."
    },
    {
-    "q": "The derivative of x³ is:",
+    "q": "The idea that makes both derivatives and integrals rigorous is the:",
     "options": [
-     "3x²",
-     "x²",
-     "3x",
-     "x⁴"
+     "Limit",
+     "Fraction",
+     "Equation",
+     "Percentage"
     ],
     "a": 0,
-    "why": "Power rule: 3·x² = 3x²."
+    "why": "Both are defined using limits."
+   },
+   {
+    "q": "The derivative of velocity is:",
+    "options": [
+     "Acceleration",
+     "Position",
+     "Distance",
+     "Area"
+    ],
+    "a": 0,
+    "why": "Acceleration is the rate of change of velocity."
+   },
+   {
+    "q": "'Tangent line' and 'slope at a point' both describe the:",
+    "options": [
+     "Derivative",
+     "Integral",
+     "Limit",
+     "Domain"
+    ],
+    "a": 0,
+    "why": "They're two names for what the derivative gives."
+   },
+   {
+    "q": "To get total distance from a velocity that changes, you:",
+    "options": [
+     "Integrate the velocity",
+     "Differentiate it",
+     "Average two values",
+     "Square it"
+    ],
+    "a": 0,
+    "why": "Integrating a rate over time accumulates the total amount."
+   },
+   {
+    "q": "Calculus is mainly the study of:",
+    "options": [
+     "Change and accumulation",
+     "Fixed shapes only",
+     "Whole numbers",
+     "Spelling"
+    ],
+    "a": 0,
+    "why": "Its two ideas handle how things change and how they add up."
+   },
+   {
+    "q": "The power rule says the derivative of xⁿ is:",
+    "options": [
+     "n·xⁿ⁻¹",
+     "xⁿ⁺¹",
+     "n·x",
+     "x / n"
+    ],
+    "a": 0,
+    "why": "Bring the exponent down and reduce it by one."
    }
   ]
  },
