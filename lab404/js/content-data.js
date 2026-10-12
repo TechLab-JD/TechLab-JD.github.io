@@ -3331,34 +3331,82 @@ window.LAB404_CONTENT = {
  "languages-spanish": {
   "title": "Spanish",
   "subject": "World Languages",
-  "level": "All levels",
-  "intro": "Spanish is one of the most useful languages to learn — spoken by over 400 million people and especially handy in the U.S. The good news: it's spelled how it sounds, so once you learn the sounds, you can read almost anything.",
+  "level": "Beginner",
+  "objectives": [
+   "Understand where Spanish is spoken and why it's useful",
+   "Greet people and use essential courtesy phrases",
+   "Pronounce Spanish vowels and key sounds",
+   "Understand noun gender, articles, and basic verb conjugation",
+   "Count to ten and keep learning Spanish"
+  ],
+  "intro": "Spanish is spoken by over 500 million people across Spain, Latin America, and large parts of the United States — making it one of the most useful languages to learn. It's also one of the friendliest for English speakers: it's written much as it sounds. This lesson gets you started with greetings, pronunciation, basic grammar, and numbers.",
+  "sections": [
+   {
+    "h": "Why Spanish, and the basics",
+    "body": "Spanish is the official language of 20 countries and the second-most spoken native language in the world. For an English speaker it's especially approachable: it shares the Latin alphabet, thousands of similar words (cognates like 'familia,' 'música,' 'hospital'), and — unlike English — it's almost entirely phonetic, meaning words are pronounced the way they're spelled.\n\nSpanish adds a few letters and marks English lacks: the ñ (as in 'español'), and accent marks (á, é, í, ó, ú) that show which syllable to stress. Once you learn its consistent sound rules, you can read almost any Spanish word aloud correctly, even without knowing what it means — a huge head start.",
+    "tip": "Spanish is nearly phonetic — spelled the way it sounds. Learn the sound rules once and you can read any word aloud."
+   },
+   {
+    "h": "Greetings and essential phrases",
+    "body": "A handful of phrases carry you through most first encounters. 'Hola' (OH-lah) means hello; 'Buenos días' is good morning, 'Buenas tardes' good afternoon, 'Buenas noches' good evening or night. To ask how someone is: '¿Cómo estás?' and to answer, 'Bien, gracias' (fine, thanks).\n\nThe courtesy words matter everywhere: 'por favor' (please), 'gracias' (thank you), 'de nada' (you're welcome), 'perdón' (excuse me / sorry), and 'sí' / 'no.' To say goodbye: 'adiós' or the casual 'hasta luego' (see you later). Just these phrases, delivered warmly, go a long way.",
+    "visual": "<svg viewBox=\"0 0 250 142\" width=\"240\" role=\"img\" aria-label=\"Common Spanish greetings and courtesy phrases with English meanings\"><rect x=\"8\" y=\"5\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"5\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"10\">Hola</text><text x=\"114\" y=\"20\" fill=\"#9adbcf\" font-size=\"9\">Hello</text><rect x=\"8\" y=\"27\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"27\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"10\">Buenos días</text><text x=\"114\" y=\"42\" fill=\"#9adbcf\" font-size=\"9\">Good morning</text><rect x=\"8\" y=\"49\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"49\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"10\">¿Cómo estás?</text><text x=\"114\" y=\"64\" fill=\"#9adbcf\" font-size=\"9\">How are you?</text><rect x=\"8\" y=\"71\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"71\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"10\">Por favor</text><text x=\"114\" y=\"86\" fill=\"#9adbcf\" font-size=\"9\">Please</text><rect x=\"8\" y=\"93\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"93\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"10\">Gracias</text><text x=\"114\" y=\"108\" fill=\"#9adbcf\" font-size=\"9\">Thank you</text><rect x=\"8\" y=\"115\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"115\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"130\" fill=\"#cdd9ec\" font-size=\"10\">Adiós</text><text x=\"114\" y=\"130\" fill=\"#9adbcf\" font-size=\"9\">Goodbye</text></svg>",
+    "caption": "The first Spanish phrases to memorize — you'll use them in almost every conversation.",
+    "example": "Hola = Hello\n¿Cómo estás? = How are you?\nBien, gracias = Fine, thanks\nPor favor / Gracias = Please / Thank you\nAdiós = Goodbye",
+    "tip": "Start with hola, por favor, gracias, sí/no, and adiós — the phrases you'll use in almost every conversation."
+   },
+   {
+    "h": "Pronunciation",
+    "body": "Spanish pronunciation is consistent, which makes it learnable fast. The five vowels each have one clean sound: a = 'ah,' e = 'eh,' i = 'ee,' o = 'oh,' u = 'oo.' Unlike English, they don't change — learn them once and they hold everywhere.\n\nA few consonants differ from English: 'j' sounds like a strong English 'h' (as in 'José'), 'll' usually sounds like 'y' (as in 'llamar' → 'ya-MAR'), 'ñ' is 'ny' (as in 'niño'), and a rolled 'r' takes practice. Stress usually falls on the second-to-last syllable — unless an accent mark tells you otherwise, which is exactly what those marks are for.",
+    "example": "Vowels: a=ah, e=eh, i=ee, o=oh, u=oo\nj = English h (José = ho-SEH)\nll = y (llamar = ya-MAR)\nñ = ny (niño = NEE-nyo)",
+    "tip": "The five vowels each have one fixed sound (a-e-i-o-u = ah-eh-ee-oh-oo). Master those and pronunciation falls into place."
+   },
+   {
+    "h": "Grammar basics: nouns and verbs",
+    "body": "Spanish nouns have gender: every noun is masculine or feminine. The word for 'the' changes to match: 'el' for masculine (el libro, the book), 'la' for feminine (la casa, the house). Most nouns ending in -o are masculine and most ending in -a are feminine, a helpful (if imperfect) rule. Adjectives also change to match: 'un gato negro' (a black cat), 'una casa blanca' (a white house).\n\nVerbs change their endings depending on who is doing the action — called conjugation. The verb 'hablar' (to speak) becomes 'yo hablo' (I speak), 'tú hablas' (you speak), 'él habla' (he speaks). This is more than English does, but the patterns are regular for most verbs, so once you learn a pattern it applies to hundreds of verbs.",
+    "example": "el libro (the book, masc.) / la casa (the house, fem.)\nhablar (to speak): yo hablo, tú hablas, él/ella habla",
+    "tip": "Nouns are masculine (el) or feminine (la); verbs change endings by who acts (yo hablo, tú hablas)."
+   },
+   {
+    "h": "Numbers and keeping it up",
+    "body": "Numbers one to ten are the place to start: uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez. They appear constantly — prices, times, ages — and build toward the rest (once you know 1–10 and the tens, you can count far).\n\nThe real key to learning any language is steady, daily practice and real use. Label things around you in Spanish, use a free app for a few minutes a day, listen to Spanish music or shows, and above all speak — badly at first, which is fine. A little every day beats cramming, and even a small vocabulary used bravely lets you communicate. ¡Buena suerte! (Good luck!)",
+    "example": "1-10: uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez",
+    "tip": "Learn 1–10 first, then practice a few minutes daily and actually speak — small and steady wins at languages."
+   }
+  ],
   "cards": [
    {
-    "h": "Spanish is phonetic",
-    "body": "Unlike English, Spanish letters almost always make the same sound. Learn the five vowel sounds (a = ah, e = eh, i = ee, o = oh, u = oo) and you can pronounce most words on sight. They're short and crisp, not drawn out."
+    "h": "Why & basics",
+    "body": "500M+ speakers; nearly phonetic (spelled as it sounds). Extra letters: ñ and accent marks."
    },
    {
-    "h": "Greetings and courtesy",
-    "body": "Hola (hello), Buenos días (good morning), Buenas tardes (good afternoon), Gracias (thank you), Por favor (please), De nada (you're welcome). ¿Cómo estás? asks 'How are you?'"
+    "h": "Greetings",
+    "body": "Hola, buenos días, ¿cómo estás?, por favor, gracias, adiós."
    },
    {
-    "h": "Nouns have gender",
-    "body": "Every noun is masculine or feminine. Most ending in -o are masculine (el libro, the book); most ending in -a are feminine (la casa, the house). 'The' is el (masc.) or la (fem.); 'a/an' is un or una."
+    "h": "Pronunciation",
+    "body": "Vowels a-e-i-o-u = ah-eh-ee-oh-oo (fixed); j=h, ll=y, ñ=ny; rolled r."
    },
    {
-    "h": "Simple sentences",
-    "body": "Spanish word order is usually like English: subject + verb + rest. Yo como pan = I eat bread. You can often drop the subject because the verb ending shows who: Como pan also means 'I eat bread.'"
+    "h": "Grammar",
+    "body": "Nouns are masc. (el) or fem. (la); verbs conjugate by subject (yo hablo, tú hablas)."
    },
    {
-    "h": "Question words",
-    "body": "¿Qué? (what), ¿Quién? (who), ¿Dónde? (where), ¿Cuándo? (when), ¿Por qué? (why), ¿Cómo? (how). Note the upside-down ¿ that opens every Spanish question."
+    "h": "Numbers & practice",
+    "body": "uno–diez first; then daily practice and speaking beats cramming."
    }
   ],
   "flash": [
    [
     "Hola",
     "Hello"
+   ],
+   [
+    "Buenos días",
+    "Good morning"
+   ],
+   [
+    "¿Cómo estás?",
+    "How are you?"
    ],
    [
     "Gracias",
@@ -3369,62 +3417,136 @@ window.LAB404_CONTENT = {
     "Please"
    ],
    [
+    "Adiós",
+    "Goodbye"
+   ],
+   [
     "Sí / No",
     "Yes / No"
    ],
    [
     "el / la",
-    "'the' (masculine / feminine)"
+    "the (masculine / feminine)"
    ],
    [
-    "Buenos días",
-    "Good morning"
+    "hablar",
+    "to speak"
    ],
    [
-    "¿Dónde?",
-    "Where?"
+    "uno, dos, tres",
+    "one, two, three"
    ],
    [
-    "Phonetic",
-    "Spelled the way it sounds — true of Spanish."
+    "casa",
+    "house"
+   ],
+   [
+    "gato",
+    "cat"
    ]
   ],
   "quiz": [
    {
-    "q": "How do you say 'thank you' in Spanish?",
+    "q": "About how many people speak Spanish?",
     "options": [
-     "Gracias",
-     "Hola",
-     "Por favor",
-     "Adiós"
+     "Over 500 million",
+     "About 5 million",
+     "About 50,000",
+     "A few thousand"
     ],
     "a": 0,
-    "why": "Gracias means thank you."
+    "why": "Spanish has 500M+ speakers worldwide."
+   },
+   {
+    "q": "Spanish is described as nearly 'phonetic,' meaning:",
+    "options": [
+     "It's spelled the way it sounds",
+     "It has no vowels",
+     "It can't be written",
+     "It uses no alphabet"
+    ],
+    "a": 0,
+    "why": "Words are pronounced as they're spelled."
+   },
+   {
+    "q": "'Hola' means:",
+    "options": [
+     "Hello",
+     "Goodbye",
+     "Please",
+     "Thanks"
+    ],
+    "a": 0,
+    "why": "Hola = hello."
+   },
+   {
+    "q": "'Gracias' means:",
+    "options": [
+     "Thank you",
+     "Hello",
+     "Yes",
+     "House"
+    ],
+    "a": 0,
+    "why": "Gracias = thank you."
+   },
+   {
+    "q": "How do you say 'please'?",
+    "options": [
+     "Por favor",
+     "Adiós",
+     "Bien",
+     "Gato"
+    ],
+    "a": 0,
+    "why": "Por favor = please."
    },
    {
     "q": "The Spanish vowel 'i' sounds like:",
     "options": [
-     "ee (as in 'see')",
+     "ee",
      "eye",
      "ih",
-     "ay"
+     "oo"
     ],
     "a": 0,
-    "why": "In Spanish, i = 'ee.'"
+    "why": "i = 'ee' in Spanish."
    },
    {
-    "q": "Which article is feminine?",
+    "q": "The letter 'j' in Spanish sounds most like English:",
     "options": [
-     "la",
-     "el",
-     "un",
-     "los"
+     "h",
+     "j",
+     "y",
+     "z"
     ],
     "a": 0,
-    "why": "'la' is the feminine 'the'; 'el' is masculine."
+    "why": "Spanish j is a strong English 'h' (José = ho-SEH)."
    },
    {
-    "q": "A noun ending in -o is usually:",
+    "q": "'ll' in 'llamar' usually sounds like:",
+    "options": [
+     "y",
+     "l",
+     "j",
+     "w"
+    ],
+    "a": 0,
+    "why": "ll usually sounds like 'y' (ya-MAR)."
+   },
+   {
+    "q": "Spanish nouns are:",
+    "options": [
+     "Masculine or feminine",
+     "Always neuter",
+     "All the same",
+     "Numbered"
+    ],
+    "a": 0,
+    "why": "Every noun has gender."
+   },
+   {
+    "q": "'The book' (el libro) uses 'el' because libro is:",
     "options": [
      "Masculine",
      "Feminine",
@@ -3432,29 +3554,62 @@ window.LAB404_CONTENT = {
      "A verb"
     ],
     "a": 0,
-    "why": "Most -o nouns are masculine (el libro)."
+    "why": "el marks masculine nouns."
    },
    {
-    "q": "What does ¿Dónde? mean?",
+    "q": "Changing a verb's ending by who does the action is:",
     "options": [
-     "Where?",
-     "Who?",
-     "What?",
-     "When?"
+     "Conjugation",
+     "Translation",
+     "A cognate",
+     "An accent"
     ],
     "a": 0,
-    "why": "¿Dónde? asks 'where?'"
+    "why": "Conjugation changes verb endings by subject."
    },
    {
-    "q": "Spanish questions open with:",
+    "q": "'Yo hablo' means:",
     "options": [
-     "An upside-down ¿",
-     "A capital letter only",
-     "A dash",
-     "Nothing special"
+     "I speak",
+     "You speak",
+     "He speaks",
+     "They spoke"
     ],
     "a": 0,
-    "why": "An inverted question mark ¿ begins Spanish questions."
+    "why": "hablar → yo hablo = I speak."
+   },
+   {
+    "q": "Which is 'three' in Spanish?",
+    "options": [
+     "tres",
+     "dos",
+     "cinco",
+     "diez"
+    ],
+    "a": 0,
+    "why": "uno, dos, tres … three = tres."
+   },
+   {
+    "q": "The best way to learn Spanish is:",
+    "options": [
+     "A little daily practice and speaking",
+     "One long session a year",
+     "Only reading silently",
+     "Never making mistakes"
+    ],
+    "a": 0,
+    "why": "Steady daily use and speaking wins."
+   },
+   {
+    "q": "The letter ñ makes which sound?",
+    "options": [
+     "ny",
+     "n",
+     "m",
+     "ng"
+    ],
+    "a": 0,
+    "why": "ñ = 'ny' as in niño."
    }
   ]
  },
@@ -13355,34 +13510,82 @@ window.LAB404_CONTENT = {
  "languages-french": {
   "title": "French",
   "subject": "World Languages",
-  "level": "All levels",
-  "intro": "French is spoken across the world — in France, parts of Canada, and much of Africa — and shares a lot of vocabulary with English. Its spelling looks tricky at first, but it follows consistent rules once you learn a few patterns.",
+  "level": "Beginner",
+  "objectives": [
+   "Understand where French is spoken and why it's useful",
+   "Greet people and use essential phrases",
+   "Pronounce French sounds, including silent letters and nasal vowels",
+   "Understand noun gender, articles, and basic verbs",
+   "Count to ten and keep learning French"
+  ],
+  "intro": "French is spoken by around 300 million people across France, Canada, parts of Africa, and beyond, and it's a major language of diplomacy, art, and cuisine. It shares much vocabulary with English, though its pronunciation takes practice. This lesson starts you with greetings, sounds, grammar, and numbers.",
+  "sections": [
+   {
+    "h": "Why French, and the basics",
+    "body": "French is an official language in about 29 countries and a working language of the UN, the EU, and the Olympics. English speakers have a secret advantage: after the Norman conquest of 1066, French poured thousands of words into English, so you already 'know' many — 'table,' 'nation,' 'important,' 'restaurant' are nearly identical.\n\nThe catch is pronunciation and spelling: French often doesn't sound the way it looks, with many silent letters (especially final consonants) and nasal vowels that have no English equivalent. French also uses accent marks (é, è, ê, ç) that affect sound. The grammar and vocabulary come fairly easily; the sounds are where you'll spend your practice.",
+    "tip": "English borrowed thousands of words from French, so vocabulary is familiar — but pronunciation and silent letters take practice."
+   },
+   {
+    "h": "Greetings and essential phrases",
+    "body": "'Bonjour' (bohn-ZHOOR) means hello or good day and is used constantly — in France it's polite to say it when entering a shop. 'Bonsoir' is good evening; 'Salut' is a casual hi or bye among friends. To ask how someone is: 'Comment ça va?' and to answer, 'Ça va bien, merci' (I'm well, thanks).\n\nThe essentials: 's'il vous plaît' (please), 'merci' (thank you), 'de rien' (you're welcome), 'excusez-moi' (excuse me), 'oui' / 'non' (yes / no). To say goodbye: 'au revoir' (oh ruh-VWAR). As in many cultures, greeting people properly is expected courtesy, so these phrases matter.",
+    "visual": "<svg viewBox=\"0 0 250 142\" width=\"240\" role=\"img\" aria-label=\"Common French greetings and courtesy phrases with English meanings\"><rect x=\"8\" y=\"5\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"5\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"10\">Bonjour</text><text x=\"114\" y=\"20\" fill=\"#9adbcf\" font-size=\"9\">Hello / Good day</text><rect x=\"8\" y=\"27\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"27\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"10\">Comment ça va?</text><text x=\"114\" y=\"42\" fill=\"#9adbcf\" font-size=\"9\">How are you?</text><rect x=\"8\" y=\"49\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"49\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"10\">S'il vous plaît</text><text x=\"114\" y=\"64\" fill=\"#9adbcf\" font-size=\"9\">Please</text><rect x=\"8\" y=\"71\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"71\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"10\">Merci</text><text x=\"114\" y=\"86\" fill=\"#9adbcf\" font-size=\"9\">Thank you</text><rect x=\"8\" y=\"93\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"93\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"10\">Oui / Non</text><text x=\"114\" y=\"108\" fill=\"#9adbcf\" font-size=\"9\">Yes / No</text><rect x=\"8\" y=\"115\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"115\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"130\" fill=\"#cdd9ec\" font-size=\"10\">Au revoir</text><text x=\"114\" y=\"130\" fill=\"#9adbcf\" font-size=\"9\">Goodbye</text></svg>",
+    "caption": "Core French greetings and courtesy phrases — and always greet with 'bonjour' first.",
+    "example": "Bonjour = Hello / Good day\nComment ça va? = How are you?\nÇa va bien, merci = I'm well, thanks\nS'il vous plaît / Merci = Please / Thank you\nAu revoir = Goodbye",
+    "tip": "Lead with bonjour, s'il vous plaît, merci, oui/non, and au revoir — and always greet before asking."
+   },
+   {
+    "h": "Pronunciation",
+    "body": "French pronunciation has a few signature features. Final consonants are usually silent: 'Paris' is 'pah-REE,' 'petit' is 'puh-TEE.' The letter 'h' is always silent. Nasal vowels — made by letting air through the nose, as in 'bon' or 'vin' — are the hardest for English speakers and worth hearing from a native.\n\nThe French 'r' comes from the back of the throat, softer than a Spanish roll. And French stress is even, landing gently on the last syllable of a group rather than hammering one syllable like English. Listening and imitating matters more here than any rule — French rewards training your ear.",
+    "example": "Final consonants often silent: Paris = pah-REE\nh is always silent: homme = \"om\"\nNasal vowels: bon, vin, blanc (air through the nose)",
+    "tip": "Final consonants and h are usually silent; nasal vowels need listening practice. Train your ear with native audio."
+   },
+   {
+    "h": "Grammar basics: nouns and verbs",
+    "body": "Like Spanish, French nouns have gender — masculine or feminine — and 'the' changes to match: 'le' for masculine (le livre, the book), 'la' for feminine (la table), and 'les' for plural. 'A / an' is 'un' (masc.) or 'une' (fem.). There's no reliable rule for which nouns are which, so it's best to learn each noun together with its article.\n\nVerbs conjugate by subject, as in Spanish. 'Parler' (to speak) gives 'je parle' (I speak), 'tu parles' (you speak), 'il parle' (he speaks). Many common verbs follow regular patterns by their ending (-er, -ir, -re), so learning the pattern unlocks many verbs at once.",
+    "example": "le livre (the book, masc.) / la table (the table, fem.) / les (plural)\nparler (to speak): je parle, tu parles, il/elle parle",
+    "tip": "Learn each noun with its article (le/la); verbs conjugate by subject (je parle, tu parles)."
+   },
+   {
+    "h": "Numbers and keeping it up",
+    "body": "The numbers one to ten: un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix. French counting has a quirk higher up (70 is 'soixante-dix,' literally 'sixty-ten'), but 1–10 are straightforward and the foundation for everything.\n\nConsistency beats intensity. A few minutes a day — an app, a song, a short video, labeling objects at home — builds far more than occasional marathons. Speak and make mistakes freely; French speakers appreciate the effort. Films and music are a pleasant way to train your ear to those tricky sounds. Bonne chance! (Good luck!)",
+    "example": "1-10: un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix",
+    "tip": "Master un–dix first, then practice daily and listen to real French to tune your ear. Small and steady wins."
+   }
+  ],
   "cards": [
    {
-    "h": "French and English are cousins",
-    "body": "Thanks to history, English borrowed thousands of words from French, so you already know many: table, menu, art, nation, important. This shared vocabulary gives English speakers a real head start."
+    "h": "Why & basics",
+    "body": "~300M speakers; English shares thousands of French words. Pronunciation/spelling is the challenge."
    },
    {
-    "h": "Greetings and politeness",
-    "body": "Bonjour (hello/good day), Bonsoir (good evening), Salut (hi, casual), Merci (thank you), S'il vous plaît (please), Au revoir (goodbye), Oui / Non (yes / no). Politeness matters in French — saying 'bonjour' before asking something is expected."
+    "h": "Greetings",
+    "body": "Bonjour, bonsoir, comment ça va?, s'il vous plaît, merci, au revoir."
    },
    {
-    "h": "Pronunciation basics",
-    "body": "French often doesn't pronounce final consonants (the 't' in 'et' is silent). Accents change sounds: é sounds like 'ay.' The French 'r' comes from the back of the throat. It takes practice, but the rules are consistent."
+    "h": "Pronunciation",
+    "body": "Final consonants and h usually silent; nasal vowels and throaty r need listening practice."
    },
    {
-    "h": "Nouns and gender",
-    "body": "Like Spanish, every French noun is masculine or feminine, with 'the' as le (masc.) or la (fem.), and 'a/an' as un (masc.) or une (fem.). You usually learn the gender along with the word, and adjectives change to match it."
+    "h": "Grammar",
+    "body": "Nouns masc. (le) or fem. (la); learn each with its article; verbs conjugate (je parle)."
    },
    {
-    "h": "Simple sentences",
-    "body": "Basic word order is like English: subject + verb + object. Je mange une pomme = I eat an apple. 'Je' (I), 'tu/vous' (you, informal/formal), and 'il/elle' (he/she) are your core subjects to start speaking."
+    "h": "Numbers & practice",
+    "body": "un–dix first; then daily practice and native audio to train the ear."
    }
   ],
   "flash": [
    [
     "Bonjour",
-    "Hello / good day"
+    "Hello / Good day"
+   ],
+   [
+    "Bonsoir",
+    "Good evening"
+   ],
+   [
+    "Comment ça va?",
+    "How are you?"
    ],
    [
     "Merci",
@@ -13402,42 +13605,83 @@ window.LAB404_CONTENT = {
    ],
    [
     "le / la",
-    "'the' (masculine / feminine)"
+    "the (masculine / feminine)"
    ],
    [
-    "Je / tu / vous",
-    "I / you (informal) / you (formal)"
+    "parler",
+    "to speak"
    ],
    [
-    "Cognate",
-    "A word that looks and means the same in both languages (table)."
+    "un, deux, trois",
+    "one, two, three"
+   ],
+   [
+    "livre",
+    "book"
+   ],
+   [
+    "eau",
+    "water"
    ]
   ],
   "quiz": [
    {
-    "q": "How do you say 'hello' in French?",
+    "q": "'Bonjour' means:",
     "options": [
-     "Bonjour",
-     "Merci",
+     "Hello / Good day",
+     "Goodbye",
+     "Thank you",
+     "Please"
+    ],
+    "a": 0,
+    "why": "Bonjour = hello / good day."
+   },
+   {
+    "q": "Why is French vocabulary familiar to English speakers?",
+    "options": [
+     "English borrowed thousands of French words",
+     "They're the same language",
+     "French copied English",
+     "It isn't familiar"
+    ],
+    "a": 0,
+    "why": "The 1066 Norman conquest brought French words into English."
+   },
+   {
+    "q": "'Merci' means:",
+    "options": [
+     "Thank you",
+     "Hello",
+     "Yes",
+     "Book"
+    ],
+    "a": 0,
+    "why": "Merci = thank you."
+   },
+   {
+    "q": "How do you say 'please' (formal)?",
+    "options": [
+     "S'il vous plaît",
      "Au revoir",
+     "Bonsoir",
      "Oui"
     ],
     "a": 0,
-    "why": "Bonjour means hello / good day."
+    "why": "S'il vous plaît = please."
    },
    {
-    "q": "English and French share many words because:",
+    "q": "'Au revoir' means:",
     "options": [
-     "English borrowed thousands from French",
-     "They're unrelated",
-     "French copied English only",
-     "By accident"
+     "Goodbye",
+     "Hello",
+     "Please",
+     "Water"
     ],
     "a": 0,
-    "why": "Historical borrowing gives English speakers a vocabulary head start."
+    "why": "Au revoir = goodbye."
    },
    {
-    "q": "In French, final consonants are often:",
+    "q": "In French, final consonants are usually:",
     "options": [
      "Silent",
      "Stressed loudly",
@@ -13445,68 +13689,174 @@ window.LAB404_CONTENT = {
      "Rolled"
     ],
     "a": 0,
-    "why": "Many final consonants aren't pronounced (e.g., 'et')."
+    "why": "Paris = 'pah-REE' — the final s is silent."
    },
    {
-    "q": "'Merci' means:",
+    "q": "The letter 'h' in French is:",
     "options": [
-     "Thank you",
-     "Hello",
-     "Goodbye",
-     "Please"
+     "Always silent",
+     "Always stressed",
+     "A vowel",
+     "Rolled"
     ],
     "a": 0,
-    "why": "Merci is thank you."
+    "why": "French h is silent (homme = 'om')."
    },
    {
-    "q": "Which is the feminine 'the'?",
+    "q": "Nasal vowels (like in 'bon') are made by letting air through the:",
     "options": [
-     "la",
-     "le",
-     "un",
-     "les"
+     "Nose",
+     "Ears",
+     "Teeth only",
+     "Throat only"
     ],
     "a": 0,
-    "why": "'la' is feminine; 'le' is masculine."
+    "why": "Nasal vowels resonate through the nose."
    },
    {
-    "q": "A word like 'table' that's the same in both languages is a:",
+    "q": "French nouns have:",
     "options": [
-     "Cognate",
-     "Verb",
-     "Accent",
-     "Prefix"
+     "Gender (masc./fem.)",
+     "No gender",
+     "Only plural forms",
+     "Numbers"
     ],
     "a": 0,
-    "why": "Cognates share form and meaning across languages."
+    "why": "Each noun is masculine or feminine."
+   },
+   {
+    "q": "'The book' is 'le livre' because livre is:",
+    "options": [
+     "Masculine",
+     "Feminine",
+     "Plural",
+     "A verb"
+    ],
+    "a": 0,
+    "why": "le marks masculine nouns."
+   },
+   {
+    "q": "'Je parle' means:",
+    "options": [
+     "I speak",
+     "You speak",
+     "He speaks",
+     "We spoke"
+    ],
+    "a": 0,
+    "why": "parler → je parle = I speak."
+   },
+   {
+    "q": "Which is 'two' in French?",
+    "options": [
+     "deux",
+     "trois",
+     "cinq",
+     "dix"
+    ],
+    "a": 0,
+    "why": "un, deux … two = deux."
+   },
+   {
+    "q": "Best practice for the tricky French sounds is to:",
+    "options": [
+     "Listen to native audio and imitate",
+     "Only read silently",
+     "Avoid speaking",
+     "Memorize spellings only"
+    ],
+    "a": 0,
+    "why": "French rewards training your ear."
+   },
+   {
+    "q": "It's considered polite in France to say 'bonjour':",
+    "options": [
+     "When entering a shop",
+     "Only at midnight",
+     "Never",
+     "Only in writing"
+    ],
+    "a": 0,
+    "why": "Greeting with bonjour first is expected courtesy."
+   },
+   {
+    "q": "'Les' is used for:",
+    "options": [
+     "Plural nouns",
+     "Only verbs",
+     "Only questions",
+     "Numbers"
+    ],
+    "a": 0,
+    "why": "les is the plural 'the.'"
    }
   ]
  },
  "languages-german": {
   "title": "German",
   "subject": "World Languages",
-  "level": "All levels",
-  "intro": "German is spoken by over 100 million people in the heart of Europe. It's closely related to English — many words are recognizable — and it's famously logical and consistent, so once you learn a rule it usually sticks.",
+  "level": "Beginner",
+  "objectives": [
+   "Understand where German is spoken and why it's useful",
+   "Greet people and use essential phrases",
+   "Pronounce German letters, including umlauts and ß",
+   "Understand noun gender, articles, and basic verbs",
+   "Count to ten and keep learning German"
+  ],
+  "intro": "German is spoken by about 100 million people, mainly in Germany, Austria, and Switzerland, and it's a major language of science, engineering, and business in Europe. It's closely related to English — both are Germanic languages — so many words look familiar. This lesson introduces greetings, pronunciation, grammar, and numbers.",
+  "sections": [
+   {
+    "h": "Why German, and the basics",
+    "body": "German is the most widely spoken native language in the European Union and the tongue of an economic powerhouse. Because English and German are cousins in the Germanic family, you'll spot many related words: 'Haus' (house), 'Wasser' (water), 'Buch' (book), 'Freund' (friend).\n\nGerman is largely phonetic — spelled as it sounds, once you learn its rules — which makes reading it aloud predictable. It adds a few letters: the umlauts ä, ö, ü (which change a vowel's sound) and the ß ('ess-tsett'), a special form of 'ss.' A famous feature: all nouns are capitalized, always, which actually helps you spot them.",
+    "tip": "German is a cousin of English with many familiar words, is largely phonetic, and capitalizes every noun."
+   },
+   {
+    "h": "Greetings and essential phrases",
+    "body": "'Hallo' is a universal hello; 'Guten Morgen' (good morning), 'Guten Tag' (good day), and 'Guten Abend' (good evening) are the standard greetings by time of day. To ask how someone is: 'Wie geht's?' and to answer, 'Gut, danke' (good, thanks).\n\nThe courtesy essentials: 'bitte' (please — and also 'you're welcome'), 'danke' (thank you), 'Entschuldigung' (excuse me / sorry), 'ja' / 'nein' (yes / no). To say goodbye: 'Auf Wiedersehen' (formal) or the casual 'Tschüss' (bye). Germans tend to value directness and politeness together, so these basics serve you well.",
+    "visual": "<svg viewBox=\"0 0 250 142\" width=\"240\" role=\"img\" aria-label=\"Common German greetings and courtesy phrases with English meanings\"><rect x=\"8\" y=\"5\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"5\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"10\">Hallo</text><text x=\"114\" y=\"20\" fill=\"#9adbcf\" font-size=\"9\">Hello</text><rect x=\"8\" y=\"27\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"27\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"10\">Guten Tag</text><text x=\"114\" y=\"42\" fill=\"#9adbcf\" font-size=\"9\">Good day</text><rect x=\"8\" y=\"49\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"49\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"10\">Wie geht's?</text><text x=\"114\" y=\"64\" fill=\"#9adbcf\" font-size=\"9\">How are you?</text><rect x=\"8\" y=\"71\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"71\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"10\">Bitte</text><text x=\"114\" y=\"86\" fill=\"#9adbcf\" font-size=\"9\">Please / Welcome</text><rect x=\"8\" y=\"93\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"93\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"10\">Danke</text><text x=\"114\" y=\"108\" fill=\"#9adbcf\" font-size=\"9\">Thank you</text><rect x=\"8\" y=\"115\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"115\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"130\" fill=\"#cdd9ec\" font-size=\"10\">Auf Wiedersehen</text><text x=\"114\" y=\"130\" fill=\"#9adbcf\" font-size=\"9\">Goodbye</text></svg>",
+    "caption": "Core German greetings and courtesy phrases — note 'bitte' means both please and you're welcome.",
+    "example": "Hallo = Hello\nGuten Tag = Good day\nWie geht's? = How are you?\nBitte / Danke = Please / Thank you\nAuf Wiedersehen = Goodbye",
+    "tip": "Core set: Hallo, Guten Tag, bitte, danke, ja/nein, Auf Wiedersehen. 'Bitte' means both please and you're welcome."
+   },
+   {
+    "h": "Pronunciation",
+    "body": "German pronunciation is consistent once you know the rules. Some letters differ from English: 'w' sounds like English 'v' (Wasser = VAH-ser), 'v' often sounds like 'f' (Vater = FAH-ter), and 'z' sounds like 'ts' (Zeit = tsite). The 'ch' has a soft throaty sound with no exact English match.\n\nThe umlauts reshape vowels: 'ä' is like the 'e' in 'bet,' 'ö' and 'ü' are rounded sounds English lacks, best learned by ear. The ß is simply a sharp 's' sound. German words, even very long compound ones, are read in order by these steady rules — so long words are less scary than they look.",
+    "example": "w = English v (Wasser = VAH-ser)\nv = English f (Vater = FAH-ter)\nz = ts (Zeit = tsite)\nä, ö, ü = umlaut vowels (learn by ear)",
+    "tip": "w=v, v=f, z=ts. Umlauts (ä ö ü) reshape vowels — learn those by ear."
+   },
+   {
+    "h": "Grammar basics: nouns, gender, and cases",
+    "body": "German nouns have three genders — masculine, feminine, and neuter — and 'the' changes accordingly: 'der' (masc., der Mann), 'die' (fem., die Frau), 'das' (neuter, das Kind). The gender often isn't predictable, so learn each noun with its article. (And remember — every noun is capitalized.)\n\nGerman also has cases: the article and endings shift depending on a word's role in the sentence (subject, direct object, and so on). This is the trickiest part for beginners, but you can communicate well before mastering it. Verbs conjugate by subject too: 'sprechen' (to speak) gives 'ich spreche,' 'du sprichst,' 'er spricht.'",
+    "example": "der Mann (the man) / die Frau (the woman) / das Kind (the child)\nsprechen (to speak): ich spreche, du sprichst, er spricht",
+    "tip": "Three genders (der/die/das); learn each noun with its article. Verbs conjugate by subject (ich spreche)."
+   },
+   {
+    "h": "Numbers and keeping it up",
+    "body": "One to ten: eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn. You'll notice how close some are to English (zwei/two, drei/three, sechs/six) — the family resemblance again. These ten are the base for counting much higher.\n\nAs always, steady daily practice wins. Use an app briefly each day, label things at home, and lean on German's familiarity with English to pick up vocabulary fast. German music, films, and the clear phonetic spelling all help. Don't fear the long words or the grammar — start speaking simply and build. Viel Glück! (Good luck!)",
+    "example": "1-10: eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn",
+    "tip": "Learn eins–zehn (several resemble English), then practice daily. Start speaking simply; grammar details come later."
+   }
+  ],
   "cards": [
    {
-    "h": "German and English are closely related",
-    "body": "Both come from the same Germanic root, so lots of basic words are similar: Hand (hand), Wasser (water), Haus (house), Freund (friend), gut (good). You'll recognize more than you expect."
+    "h": "Why & basics",
+    "body": "~100M speakers; a Germanic cousin of English (Haus, Wasser, Buch). Every noun is capitalized."
    },
    {
-    "h": "Greetings and basics",
-    "body": "Hallo (hello), Guten Tag (good day), Guten Morgen (good morning), Danke (thank you), Bitte (please / you're welcome), Auf Wiedersehen (goodbye), Ja / Nein (yes / no). 'Bitte' handily covers both 'please' and 'you're welcome.'"
+    "h": "Greetings",
+    "body": "Hallo, Guten Tag, Wie geht's?, bitte, danke, Auf Wiedersehen."
    },
    {
-    "h": "Nouns are capitalized and have gender",
-    "body": "In German, every noun is capitalized (das Haus, the house) — a unique, helpful rule. Nouns have three genders, with 'the' as der (masc.), die (fem.), or das (neuter). You learn the article with each noun."
+    "h": "Pronunciation",
+    "body": "w=v, v=f, z=ts; umlauts ä/ö/ü reshape vowels; ß = sharp 's.'"
    },
    {
-    "h": "Pronunciation is consistent",
-    "body": "German is pronounced much as it's spelled, with steady rules. 'W' sounds like English 'v' (Wasser = 'vasser'); 'ei' sounds like 'eye'; 'ie' sounds like 'ee.' The ß (eszett) is a sharp 's' sound. Once you learn the sounds, you can read aloud reliably."
+    "h": "Grammar",
+    "body": "Three genders der/die/das; cases shift endings; verbs conjugate (ich spreche)."
    },
    {
-    "h": "Building words",
-    "body": "German famously builds long words by sticking shorter ones together. Handschuh = Hand + Schuh (hand + shoe) = glove. Once you can break a long word into its parts, the scary-looking ones become readable."
+    "h": "Numbers & practice",
+    "body": "eins–zehn (several like English); practice daily and start speaking simply."
    }
   ],
   "flash": [
@@ -13515,12 +13865,20 @@ window.LAB404_CONTENT = {
     "Hello"
    ],
    [
+    "Guten Tag",
+    "Good day"
+   ],
+   [
+    "Wie geht's?",
+    "How are you?"
+   ],
+   [
     "Danke",
     "Thank you"
    ],
    [
     "Bitte",
-    "Please / you're welcome"
+    "Please / You're welcome"
    ],
    [
     "Auf Wiedersehen",
@@ -13532,213 +13890,472 @@ window.LAB404_CONTENT = {
    ],
    [
     "der / die / das",
-    "'the' (masculine / feminine / neuter)"
+    "the (masc. / fem. / neuter)"
    ],
    [
-    "Noun capitalization",
-    "All German nouns are capitalized."
+    "sprechen",
+    "to speak"
    ],
    [
-    "Compound word",
-    "A long word built from shorter ones (Handschuh)."
+    "eins, zwei, drei",
+    "one, two, three"
+   ],
+   [
+    "Haus",
+    "house"
+   ],
+   [
+    "Wasser",
+    "water"
    ]
   ],
   "quiz": [
    {
-    "q": "How do you say 'thank you' in German?",
+    "q": "German is in the same language family as English, called:",
     "options": [
-     "Danke",
-     "Hallo",
-     "Bitte",
-     "Nein"
+     "Germanic",
+     "Romance",
+     "Slavic",
+     "Celtic"
     ],
     "a": 0,
-    "why": "Danke means thank you."
+    "why": "Both are Germanic, so many words resemble each other."
    },
    {
-    "q": "A unique German spelling rule is that:",
+    "q": "A famous rule of German writing is that it capitalizes:",
     "options": [
-     "All nouns are capitalized",
-     "There are no vowels",
-     "Words never have spaces",
-     "Everything is lowercase"
+     "Every noun",
+     "No words",
+     "Only verbs",
+     "Only names"
     ],
     "a": 0,
-    "why": "Every German noun is capitalized."
+    "why": "All German nouns are capitalized."
    },
    {
-    "q": "German 'W' is pronounced like English:",
+    "q": "'Danke' means:",
     "options": [
-     "V",
-     "W",
-     "B",
-     "F"
+     "Thank you",
+     "Hello",
+     "Goodbye",
+     "House"
     ],
     "a": 0,
-    "why": "W sounds like 'v' (Wasser = 'vasser')."
+    "why": "Danke = thank you."
    },
    {
-    "q": "German is closely related to:",
+    "q": "'Bitte' can mean please and also:",
     "options": [
-     "English",
-     "Chinese",
-     "Arabic",
-     "Swahili"
+     "You're welcome",
+     "Goodbye",
+     "No",
+     "Water"
     ],
     "a": 0,
-    "why": "Both are Germanic languages with shared roots."
+    "why": "Bitte serves as both please and you're welcome."
+   },
+   {
+    "q": "'Auf Wiedersehen' means:",
+    "options": [
+     "Goodbye",
+     "Hello",
+     "Thanks",
+     "Good morning"
+    ],
+    "a": 0,
+    "why": "Auf Wiedersehen = goodbye."
+   },
+   {
+    "q": "The German 'w' sounds like English:",
+    "options": [
+     "v",
+     "w",
+     "f",
+     "b"
+    ],
+    "a": 0,
+    "why": "Wasser = 'VAH-ser.'"
+   },
+   {
+    "q": "The German 'z' sounds like:",
+    "options": [
+     "ts",
+     "z",
+     "s",
+     "sh"
+    ],
+    "a": 0,
+    "why": "Zeit = 'tsite.'"
+   },
+   {
+    "q": "Umlauts (ä, ö, ü) change a letter's:",
+    "options": [
+     "Vowel sound",
+     "Capitalization",
+     "Gender",
+     "Number"
+    ],
+    "a": 0,
+    "why": "Umlauts reshape the vowel sound."
    },
    {
     "q": "How many genders do German nouns have?",
     "options": [
-     "Three (der, die, das)",
-     "One",
+     "Three",
      "Two",
-     "None"
+     "One",
+     "Five"
     ],
     "a": 0,
     "why": "Masculine (der), feminine (die), neuter (das)."
    },
    {
-    "q": "'Handschuh' (hand + shoe) means:",
+    "q": "'The man' is 'der Mann' because Mann is:",
     "options": [
-     "Glove",
-     "Sock",
-     "Hat",
-     "Boot"
+     "Masculine",
+     "Feminine",
+     "Neuter",
+     "Plural"
     ],
     "a": 0,
-    "why": "German builds compound words; a 'hand shoe' is a glove."
+    "why": "der marks masculine nouns."
+   },
+   {
+    "q": "'Ich spreche' means:",
+    "options": [
+     "I speak",
+     "You speak",
+     "He speaks",
+     "They spoke"
+    ],
+    "a": 0,
+    "why": "sprechen → ich spreche = I speak."
+   },
+   {
+    "q": "Which German number resembles English 'three'?",
+    "options": [
+     "drei",
+     "zwei",
+     "acht",
+     "zehn"
+    ],
+    "a": 0,
+    "why": "drei = three (family resemblance)."
+   },
+   {
+    "q": "German long compound words are:",
+    "options": [
+     "Read in order by steady rules",
+     "Impossible to pronounce",
+     "Always silent",
+     "Never used"
+    ],
+    "a": 0,
+    "why": "Phonetic rules make even long words readable."
+   },
+   {
+    "q": "The trickiest part of German grammar for beginners is often:",
+    "options": [
+     "Cases (endings that shift by role)",
+     "Saying hello",
+     "Counting to three",
+     "Capital letters"
+    ],
+    "a": 0,
+    "why": "Cases change articles and endings by a word's role."
+   },
+   {
+    "q": "'das Kind' uses 'das' because Kind is:",
+    "options": [
+     "Neuter",
+     "Masculine",
+     "Feminine",
+     "Plural"
+    ],
+    "a": 0,
+    "why": "das marks neuter nouns."
    }
   ]
  },
  "languages-american-sign-language": {
   "title": "American Sign Language",
   "subject": "World Languages",
-  "level": "All levels",
-  "intro": "American Sign Language (ASL) is a complete, natural language used by the Deaf community in the U.S. and much of Canada. It isn't English on the hands — it has its own vocabulary and grammar, expressed visually with handshapes, movement, and facial expression.",
+  "level": "Beginner",
+  "objectives": [
+   "Understand what ASL is and who uses it",
+   "Recognize that ASL is a full, distinct language, not English on the hands",
+   "Understand the five parameters that build a sign",
+   "Learn about fingerspelling, facial grammar, and core vocabulary",
+   "Begin learning ASL respectfully, from Deaf signers"
+  ],
+  "intro": "American Sign Language (ASL) is a complete, natural language expressed with the hands, face, and body, used by the Deaf and hard-of-hearing community across the United States and parts of Canada. It is not English written in the air — it has its own vocabulary and grammar. This lesson introduces what ASL is and how it works. Because ASL is visual, pair it with video from Deaf teachers to actually learn the signs.",
+  "sections": [
+   {
+    "h": "What ASL is",
+    "body": "American Sign Language is a fully developed, natural language — as rich and expressive as any spoken one — that uses visual-gestural signs instead of sound. It is the primary language of many Deaf and hard-of-hearing people in the U.S. and much of Canada, and it has its own grammar, idioms, and regional variations.\n\nA common myth is that ASL is just English spelled or mimed with the hands. It isn't: ASL is a distinct language with its own word order and structure, unrelated to English grammar. (In fact, it's historically closer to French Sign Language than to British Sign Language.) Respecting ASL as a real language, and Deaf culture alongside it, is the starting point for learning it.",
+    "tip": "ASL is a complete, distinct language — not English on the hands. It has its own grammar and its own culture."
+   },
+   {
+    "h": "Why ASL is visual (and how to learn it)",
+    "body": "Because ASL is expressed through sight and movement, it cannot be fully taught in text — a sign is a motion, not a spelling. To truly learn ASL, you need to watch it, ideally from Deaf native signers, through video lessons, classes, or community events. This written lesson can give you the concepts and etiquette; the signs themselves you must see.\n\nThis visual nature is a strength: ASL conveys things spoken language struggles with, using space, speed, and expression all at once. It also means eye contact and attention are central — you watch the signer's whole face and body, not just the hands. Learning ASL well means immersing yourself in it visually and connecting with the Deaf community.",
+    "tip": "ASL must be seen to be learned — use video from Deaf signers. Watch the whole face and body, not just the hands."
+   },
+   {
+    "h": "The building blocks of a sign",
+    "body": "Every ASL sign is built from a small set of physical parameters, and changing any one can change the meaning — much like changing a sound changes a spoken word. Linguists describe five: handshape (the shape your hand forms), location (where the sign is made relative to the body), movement (how the hand moves), palm orientation (which way the palm faces), and facial expression (also called non-manual markers).\n\nThat last one is crucial: the face isn't decoration in ASL, it's grammar. Raised eyebrows can turn a statement into a question; mouth and eye movements carry meaning. Two signs with identical hands but different faces can mean different things. Signing without facial expression is like speaking in a flat monotone that drops half the message.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"The five parameters that make up an ASL sign\"><rect x=\"8\" y=\"5\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"5\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"10\">Handshape</text><text x=\"114\" y=\"20\" fill=\"#9adbcf\" font-size=\"9\">shape the hand forms</text><rect x=\"8\" y=\"27\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"27\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"10\">Location</text><text x=\"114\" y=\"42\" fill=\"#9adbcf\" font-size=\"9\">where it's made</text><rect x=\"8\" y=\"49\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"49\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"10\">Movement</text><text x=\"114\" y=\"64\" fill=\"#9adbcf\" font-size=\"9\">how the hand moves</text><rect x=\"8\" y=\"71\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"71\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"10\">Palm orientation</text><text x=\"114\" y=\"86\" fill=\"#9adbcf\" font-size=\"9\">way the palm faces</text><rect x=\"8\" y=\"93\" width=\"98\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"108\" y=\"93\" width=\"134\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"10\">Facial expression</text><text x=\"114\" y=\"108\" fill=\"#9adbcf\" font-size=\"9\">carries grammar</text></svg>",
+    "caption": "The five parameters of an ASL sign — change any one and the meaning can change.",
+    "example": "The 5 parameters: handshape, location, movement, palm orientation, and facial expression.",
+    "tip": "A sign = handshape + location + movement + palm orientation + facial expression. The face carries grammar, not just feeling."
+   },
+   {
+    "h": "Fingerspelling and core vocabulary",
+    "body": "ASL has a manual alphabet — a distinct handshape for each of the 26 letters — used for fingerspelling: spelling out names, places, and words that don't have (or that the signer doesn't know) a dedicated sign. Learning the alphabet is often a beginner's first step, because it lets you spell anything, if slowly.\n\nBut fluent ASL is mostly whole-word signs, not spelling. Early vocabulary usually includes greetings (HELLO, a flat hand moving out from near the forehead), courtesy (THANK-YOU, fingers moving from the chin outward), and common words (YES, NO, PLEASE, NAME, LEARN). These descriptions only hint at the motions — you'll need to watch them performed to sign them correctly.",
+    "tip": "The manual alphabet lets you fingerspell anything; but fluent ASL mostly uses whole-word signs, not spelling."
+   },
+   {
+    "h": "ASL grammar and Deaf culture",
+    "body": "ASL grammar differs from English. It often uses a topic-comment structure — naming the topic first, then commenting on it (roughly, 'store, I go' for 'I'm going to the store'). It uses the space in front of the signer to set up people and things and refer back to them, and it relies on facial expression for grammar as described above. It is efficient and logical, just organized differently from English.\n\nLearning ASL also means respecting Deaf culture — a vibrant community with its own norms, history, and pride. Many Deaf people see deafness not as something to fix but as a culture and identity. Approaching ASL with that respect, learning from Deaf people, and valuing the language on its own terms is both the polite and the effective way in.",
+    "tip": "ASL uses topic-comment order and signing space, with grammar on the face. Learn it from Deaf people and respect Deaf culture."
+   }
+  ],
   "cards": [
    {
-    "h": "ASL is a real, full language",
-    "body": "ASL is not 'English with gestures' — it's a distinct language with its own grammar, just as complete as any spoken language. It's the primary language of many Deaf Americans and has its own rich culture and history."
+    "h": "What ASL is",
+    "body": "A complete, natural visual-gestural language with its own grammar — not English on the hands."
    },
    {
-    "h": "How ASL is made",
-    "body": "Signs are built from a few building blocks: handshape (the shape your hand makes), location (where you sign, near the face or body), movement, and palm orientation. Change one and you can change the whole meaning, the way changing a sound changes a spoken word."
+    "h": "Visual & how to learn",
+    "body": "A sign is a motion, not a spelling; learn by watching Deaf signers on video. Watch the whole face and body."
    },
    {
-    "h": "Facial expression is grammar",
-    "body": "In ASL, your face and body aren't just emotion — they carry grammar. Raised eyebrows can mark a yes/no question; a furrowed brow marks a different kind of question; a head shake shows negation. Signing without facial expression is like speaking in a flat monotone that loses meaning."
+    "h": "Five parameters",
+    "body": "Handshape, location, movement, palm orientation, and facial expression build every sign."
    },
    {
-    "h": "Fingerspelling and word order",
-    "body": "ASL has a manual alphabet (fingerspelling) used for names and words with no established sign. Its grammar differs from English — it often uses a topic-comment order and drops English's little connecting words, so it's not signed word-for-word from English."
+    "h": "Fingerspelling",
+    "body": "The manual alphabet spells names and new words; fluent ASL mostly uses whole-word signs."
    },
    {
-    "h": "Why learn it",
-    "body": "ASL opens communication with Deaf people, is one of the most-studied languages in the U.S., and builds awareness of Deaf culture. Like any language, it's learned best through practice with others and, ideally, with Deaf teachers and community."
+    "h": "Grammar & culture",
+    "body": "Topic-comment order, signing space, facial grammar. Respect Deaf culture; learn from Deaf people."
    }
   ],
   "flash": [
    [
     "ASL",
-    "American Sign Language — a complete visual language."
+    "American Sign Language, a complete visual language."
+   ],
+   [
+    "Deaf community",
+    "People who use ASL and share Deaf culture."
    ],
    [
     "Handshape",
-    "The shape of the hand, a building block of a sign."
+    "The shape the hand forms in a sign."
    ],
    [
-    "Fingerspelling",
-    "Spelling words letter by letter with the manual alphabet."
+    "Location",
+    "Where a sign is made relative to the body."
    ],
    [
-    "Non-manual markers",
-    "Facial expressions and body movements that carry grammar."
-   ],
-   [
-    "Deaf culture",
-    "The shared community, values, and history of Deaf people."
-   ],
-   [
-    "Topic-comment",
-    "A common ASL sentence structure (state the topic, then comment)."
+    "Movement",
+    "How the hand moves in a sign."
    ],
    [
     "Palm orientation",
-    "Which way the palm faces — part of a sign's meaning."
+    "Which way the palm faces in a sign."
    ],
    [
-    "Visual language",
-    "A language expressed and received through sight, not sound."
+    "Non-manual markers",
+    "Facial expressions that carry grammar in ASL."
+   ],
+   [
+    "Fingerspelling",
+    "Spelling words using the manual alphabet."
+   ],
+   [
+    "Manual alphabet",
+    "A handshape for each of the 26 letters."
+   ],
+   [
+    "Topic-comment",
+    "ASL structure: name the topic, then comment on it."
+   ],
+   [
+    "Signing space",
+    "The area in front of the signer used grammatically."
+   ],
+   [
+    "Deaf culture",
+    "The shared community, norms, and identity of Deaf people."
    ]
   ],
   "quiz": [
    {
-    "q": "ASL is:",
+    "q": "American Sign Language is:",
     "options": [
-     "A complete language with its own grammar",
-     "English gestures",
-     "A code for English",
-     "Just miming"
+     "A complete, natural language",
+     "English spelled in the air",
+     "A set of gestures with no grammar",
+     "A kind of mime"
     ],
     "a": 0,
-    "why": "It's a full, natural language distinct from English."
+    "why": "ASL is a full language with its own grammar."
    },
    {
-    "q": "In ASL, facial expressions:",
+    "q": "ASL's grammar is:",
     "options": [
-     "Carry grammar (like marking questions)",
-     "Are just for emotion",
-     "Don't matter",
-     "Are forbidden"
+     "Its own, different from English",
+     "Identical to English",
+     "Nonexistent",
+     "Based on Spanish"
     ],
     "a": 0,
-    "why": "Non-manual markers convey grammatical meaning."
+    "why": "ASL has its own word order and structure."
    },
    {
-    "q": "Fingerspelling is used for:",
+    "q": "Who primarily uses ASL?",
     "options": [
-     "Names and words with no set sign",
-     "Every single word",
-     "Numbers only",
+     "The Deaf and hard-of-hearing community",
+     "Only teachers",
+     "Only actors",
+     "No one today"
+    ],
+    "a": 0,
+    "why": "It's the primary language of many Deaf people in the U.S./Canada."
+   },
+   {
+    "q": "Why can't ASL be fully learned from text?",
+    "options": [
+     "A sign is a motion, not a spelling",
+     "It has no words",
+     "It's secret",
+     "Text is too long"
+    ],
+    "a": 0,
+    "why": "You must see signs performed to learn them."
+   },
+   {
+    "q": "The best way to learn ASL is:",
+    "options": [
+     "Watching Deaf native signers (video/classes)",
+     "Reading a list of words",
+     "Listening to audio",
+     "Guessing"
+    ],
+    "a": 0,
+    "why": "ASL is visual; learn by watching, ideally Deaf signers."
+   },
+   {
+    "q": "How many parameters build an ASL sign?",
+    "options": [
+     "Five",
+     "Two",
+     "Ten",
+     "One"
+    ],
+    "a": 0,
+    "why": "Handshape, location, movement, palm orientation, facial expression."
+   },
+   {
+    "q": "Which is one of the five parameters?",
+    "options": [
+     "Handshape",
+     "Volume",
+     "Rhyme",
+     "Spelling"
+    ],
+    "a": 0,
+    "why": "Handshape is one of the five building blocks."
+   },
+   {
+    "q": "In ASL, facial expression is:",
+    "options": [
+     "Part of the grammar",
+     "Just for show",
+     "Not used",
+     "Only for actors"
+    ],
+    "a": 0,
+    "why": "The face carries grammar, like turning a statement into a question."
+   },
+   {
+    "q": "Raised eyebrows in ASL can:",
+    "options": [
+     "Turn a statement into a question",
+     "Mean nothing",
+     "End a conversation",
+     "Spell a letter"
+    ],
+    "a": 0,
+    "why": "Non-manual markers change meaning grammatically."
+   },
+   {
+    "q": "Fingerspelling uses the:",
+    "options": [
+     "Manual alphabet",
+     "Five parameters only",
+     "Topic-comment order",
+     "Signing space"
+    ],
+    "a": 0,
+    "why": "A handshape per letter spells words out."
+   },
+   {
+    "q": "Fluent ASL relies mostly on:",
+    "options": [
+     "Whole-word signs",
+     "Fingerspelling everything",
+     "Writing",
+     "Lip-reading only"
+    ],
+    "a": 0,
+    "why": "Fingerspelling is for names/new words; signs carry most meaning."
+   },
+   {
+    "q": "ASL often orders a sentence as:",
+    "options": [
+     "Topic first, then comment",
+     "Exactly like English",
+     "Backwards letters",
+     "Random"
+    ],
+    "a": 0,
+    "why": "Topic-comment structure is common (e.g., 'store, I go')."
+   },
+   {
+    "q": "The space in front of a signer is used to:",
+    "options": [
+     "Set up people/things and refer back to them",
+     "Store objects",
+     "Show off",
      "Nothing"
     ],
     "a": 0,
-    "why": "The manual alphabet spells names and new/uncommon words."
+    "why": "Signing space is part of ASL grammar."
    },
    {
-    "q": "A building block of an ASL sign is:",
+    "q": "Learning ASL well includes:",
     "options": [
-     "Handshape",
-     "Tone of voice",
-     "Spelling",
-     "Volume"
+     "Respecting Deaf culture and learning from Deaf people",
+     "Ignoring the community",
+     "Only using apps",
+     "Avoiding Deaf people"
     ],
     "a": 0,
-    "why": "Handshape, location, movement, and palm orientation form signs."
+    "why": "Respect for Deaf culture is central and effective."
    },
    {
-    "q": "ASL grammar is:",
+    "q": "Many Deaf people view deafness as:",
     "options": [
-     "Different from English word order",
-     "Identical to English",
-     "Nonexistent",
-     "Based on sound"
+     "A culture and identity",
+     "Only a problem to fix",
+     "Unimportant",
+     "A language"
     ],
     "a": 0,
-    "why": "It uses its own structure, often topic-comment, not word-for-word English."
-   },
-   {
-    "q": "ASL is the primary language of:",
-    "options": [
-     "Many Deaf Americans",
-     "Everyone in the U.S.",
-     "Only teachers",
-     "No one"
-    ],
-    "a": 0,
-    "why": "It's a primary language of the U.S. Deaf community."
+    "why": "Deaf culture is a source of community and pride for many."
    }
   ]
  }
