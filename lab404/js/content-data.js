@@ -4805,130 +4805,282 @@ window.LAB404_CONTENT = {
  "arts-drawing": {
   "title": "Drawing",
   "subject": "Arts & Music",
-  "level": "All levels",
-  "intro": "Drawing is a skill, not a gift — it's really about learning to see accurately and practicing. Anyone can improve dramatically with a few fundamentals and regular practice.",
+  "level": "All ages",
+  "objectives": [
+   "Understand that drawing is a learnable skill, not just talent",
+   "Use the basic elements: line, shape, form, value, space",
+   "Apply shading (value) to create the illusion of 3D",
+   "Use perspective to create depth",
+   "Practice effectively to improve"
+  ],
+  "intro": "Drawing is the foundation of all visual art — and it's a skill you learn, not a talent you're born with. At its heart, drawing is really learning to see, then training your hand to record what you see. This lesson covers the fundamentals: the elements of drawing, shading, perspective, and how to practice.",
+  "sections": [
+   {
+    "h": "Drawing is learned, not inborn",
+    "body": "The biggest myth about art is that you either 'can draw' or you can't. In reality, drawing is a trainable skill like any other — the people who draw well are the ones who practiced seeing and mark-making, usually for years. Talent gives a head start; practice does the rest, and practice wins.\n\nThe real skill underneath drawing is observation — learning to see what's actually in front of you (the true shapes, angles, proportions, and shadows) rather than the symbol your brain expects (a 'house' or an 'eye'). Most beginner mistakes come from drawing the symbol instead of the reality. Train your eyes to see accurately, and your hand follows.",
+    "tip": "Drawing is a learnable skill, not a born talent. It's mostly learning to SEE accurately — then the hand follows."
+   },
+   {
+    "h": "The elements of drawing",
+    "body": "All drawings are built from a few basic elements. Line is the most fundamental — the path of a moving point, used for edges, contours, and gesture. Shape is a flat, enclosed area (a circle, a square); form is a shape that looks three-dimensional (a sphere, a cube). Value is the lightness or darkness of an area — the key to making things look solid.\n\nTwo more: space is the area in and around objects (including the empty 'negative space' around a subject, which is often easier to draw accurately than the object itself), and texture is the surface quality (rough, smooth, furry). Learning to see and control these elements is what drawing practice is really about.",
+    "tip": "The elements: line, shape, form, value, space, texture. Value (light/dark) is what makes a drawing look 3D."
+   },
+   {
+    "h": "Shading and value",
+    "body": "What turns a flat outline into something that looks solid is value — the range from light to dark. When light hits a form, it creates a predictable pattern: a highlight (brightest), a mid-tone, a core shadow (the darkest part on the object), reflected light, and a cast shadow (thrown onto the surface). Learning to see and render this pattern is the single biggest leap in drawing.\n\nPractice with a value scale — a strip from white to black in even steps — to train control of your pencil pressure. Techniques like hatching (parallel lines), cross-hatching, and blending build value. The trick is squinting at your subject to simplify it into light and dark masses, then matching those values. Get value right and even a simple drawing reads as three-dimensional.",
+    "tip": "Light creates a pattern: highlight, mid-tone, core shadow, reflected light, cast shadow. Squint to see the big light/dark shapes."
+   },
+   {
+    "h": "Perspective and depth",
+    "body": "To make a flat page show deep space, artists use perspective. The core idea: things look smaller as they get farther away, and parallel lines appear to converge toward a vanishing point on the horizon line (your eye level). In one-point perspective, lines recede to a single vanishing point — like a road or hallway going straight away from you.\n\nTwo-point perspective uses two vanishing points (good for the corner of a building). You don't always need formal perspective, but understanding it explains why your drawings of boxes, rooms, and streets either look right or look 'off.' Overlapping objects, and making distant things lighter and less detailed (atmospheric perspective), also create depth.",
+    "visual": "<svg viewBox=\"0 0 250 160\" width=\"240\" role=\"img\" aria-label=\"One-point perspective: a box with edges receding to a single vanishing point on the horizon line\"><line x1=\"8\" y1=\"55\" x2=\"242\" y2=\"55\" stroke=\"#6b7a98\" stroke-width=\"1.5\"/><circle cx=\"175\" cy=\"55\" r=\"3.5\" fill=\"#f05a5a\"/><line x1=\"42\" y1=\"88\" x2=\"175\" y2=\"55\" stroke=\"#9aa6c0\" stroke-width=\"0.8\" stroke-dasharray=\"3 3\"/><line x1=\"104\" y1=\"88\" x2=\"175\" y2=\"55\" stroke=\"#9aa6c0\" stroke-width=\"0.8\" stroke-dasharray=\"3 3\"/><line x1=\"42\" y1=\"134\" x2=\"175\" y2=\"55\" stroke=\"#9aa6c0\" stroke-width=\"0.8\" stroke-dasharray=\"3 3\"/><line x1=\"104\" y1=\"134\" x2=\"175\" y2=\"55\" stroke=\"#9aa6c0\" stroke-width=\"0.8\" stroke-dasharray=\"3 3\"/><line x1=\"98\" y1=\"74\" x2=\"134\" y2=\"74\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><line x1=\"134\" y1=\"74\" x2=\"134\" y2=\"101\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><line x1=\"134\" y1=\"101\" x2=\"98\" y2=\"101\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><line x1=\"98\" y1=\"101\" x2=\"98\" y2=\"74\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><line x1=\"42\" y1=\"88\" x2=\"98\" y2=\"74\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><line x1=\"104\" y1=\"88\" x2=\"134\" y2=\"74\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><line x1=\"42\" y1=\"134\" x2=\"98\" y2=\"101\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><line x1=\"104\" y1=\"134\" x2=\"134\" y2=\"101\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><line x1=\"42\" y1=\"88\" x2=\"104\" y2=\"88\" stroke=\"#4f9cf0\" stroke-width=\"2.2\"/><line x1=\"104\" y1=\"88\" x2=\"104\" y2=\"134\" stroke=\"#4f9cf0\" stroke-width=\"2.2\"/><line x1=\"104\" y1=\"134\" x2=\"42\" y2=\"134\" stroke=\"#4f9cf0\" stroke-width=\"2.2\"/><line x1=\"42\" y1=\"134\" x2=\"42\" y2=\"88\" stroke=\"#4f9cf0\" stroke-width=\"2.2\"/><text x=\"12\" y=\"50\" fill=\"#9aa6c0\" font-size=\"8.5\">horizon line (eye level)</text><text x=\"175\" y=\"44\" text-anchor=\"middle\" fill=\"#f05a5a\" font-size=\"9\">VP</text></svg>",
+    "caption": "One-point perspective: edges recede to a single vanishing point (VP) on the horizon line (your eye level).",
+    "example": "A road running straight away from you narrows to a single point on the horizon — that's one-point perspective.",
+    "tip": "Things shrink with distance, and parallel lines converge to a vanishing point on the horizon (your eye level)."
+   },
+   {
+    "h": "How to get better",
+    "body": "Drawing improves with consistent practice, and a few habits accelerate it. Draw from life and from observation (real objects, not just imagination) — it trains accurate seeing. Draw a lot and often; a quick sketch daily beats a masterpiece monthly. Do focused exercises: contour drawing (draw the edges slowly without looking much at the page), gesture drawing (fast, loose capture of a pose), and value studies.\n\nDon't fear 'bad' drawings — they're how you learn, and every artist has thousands of them. Study things you like and figure out how they work. Be patient: visible progress comes in weeks, real skill over years, but it does come for anyone who keeps at it. The only people who never learn to draw are the ones who stop.",
+    "tip": "Draw from life, draw often (daily beats rarely), do focused exercises (contour, gesture, value), and don't fear bad drawings."
+   }
+  ],
   "cards": [
    {
-    "h": "Drawing is seeing",
-    "body": "Most 'bad' drawing comes from drawing what you think something looks like (a symbol) instead of what's actually there. Slow down and really look at shapes, angles and proportions. Draw what you see, not what you know."
+    "h": "Learned, not inborn",
+    "body": "Drawing is a trainable skill; the core of it is learning to SEE accurately, then the hand follows."
    },
    {
-    "h": "Start with basic shapes",
-    "body": "Almost anything can be broken into simple shapes — circles, boxes, cylinders. Block in the big shapes first (a head is a ball, a body a series of cylinders), then refine. This keeps proportions right before you add detail."
+    "h": "Elements",
+    "body": "Line, shape, form, value, space, texture. Value (light/dark) makes things look 3D."
    },
    {
-    "h": "Line and proportion",
-    "body": "Use light, loose lines to sketch first, then darken the ones you keep. Compare sizes to judge proportion ('the head fits about seven times into the body'), and hold your pencil at arm's length to measure lengths."
+    "h": "Value & shading",
+    "body": "Light makes a pattern: highlight, mid-tone, core shadow, reflected light, cast shadow. Squint to simplify."
    },
    {
-    "h": "Value and shading",
-    "body": "Value is how light or dark something is. Shading with a range of values — from bright highlight to dark shadow — is what makes a flat drawing look three-dimensional. Squint at your subject to see the big light and dark shapes."
+    "h": "Perspective",
+    "body": "Things shrink with distance; parallel lines converge to a vanishing point on the horizon."
    },
    {
-    "h": "Practice beats talent",
-    "body": "Improvement comes from drawing regularly, even badly. Draw from life, copy drawings you admire to learn, and keep old sketches to see progress. Twenty minutes a day beats one long session a month."
+    "h": "Practice",
+    "body": "Draw from life, often; do contour/gesture/value exercises; don't fear bad drawings."
    }
   ],
   "flash": [
    [
-    "Proportion",
-    "The size relationship between parts of a drawing."
+    "Observation",
+    "Seeing what's really there, not the symbol you expect."
    ],
    [
-    "Gesture",
-    "A quick, loose sketch capturing a pose or motion."
+    "Line",
+    "The path of a moving point; edges and contours."
+   ],
+   [
+    "Shape",
+    "A flat, enclosed area."
+   ],
+   [
+    "Form",
+    "A shape that looks three-dimensional."
    ],
    [
     "Value",
-    "How light or dark an area is."
+    "The lightness or darkness of an area."
    ],
    [
-    "Shading",
-    "Adding value to create the look of light and form."
+    "Negative space",
+    "The empty area around and between objects."
    ],
    [
     "Highlight",
-    "The brightest spot where light hits."
+    "The brightest spot where light hits a form."
    ],
    [
-    "Blocking in",
-    "Sketching the big basic shapes before detail."
+    "Core shadow",
+    "The darkest band on the object itself."
    ],
    [
-    "Contour line",
-    "A line following the edge of a form."
+    "Cast shadow",
+    "The shadow a form throws onto a surface."
    ],
    [
-    "Perspective",
-    "How objects appear smaller and converge with distance."
+    "Hatching",
+    "Shading with parallel lines."
+   ],
+   [
+    "Vanishing point",
+    "The point on the horizon where parallel lines converge."
+   ],
+   [
+    "Gesture drawing",
+    "A fast, loose capture of a pose or movement."
    ]
   ],
   "quiz": [
    {
-    "q": "The biggest key to realistic drawing is:",
+    "q": "The biggest myth about drawing is that:",
     "options": [
-     "Drawing what you actually see",
-     "Drawing from memory",
-     "Expensive pencils",
+     "You either can or can't — it's inborn",
+     "It takes practice",
+     "Observation matters",
+     "Anyone can learn it"
+    ],
+    "a": 0,
+    "why": "Drawing is a learnable skill, not a fixed talent."
+   },
+   {
+    "q": "The real skill underneath drawing is:",
+    "options": [
+     "Accurate observation (seeing)",
+     "Owning expensive pencils",
+     "Natural genius",
      "Drawing fast"
     ],
     "a": 0,
-    "why": "Accurate observation beats drawing the symbol in your head."
+    "why": "Learning to see accurately is the core skill."
    },
    {
-    "q": "A good way to start a complex drawing is to:",
+    "q": "A shape that looks three-dimensional is called a:",
     "options": [
-     "Block in basic shapes",
-     "Start with tiny details",
-     "Darken everything first",
-     "Trace it"
+     "Form",
+     "Line",
+     "Value",
+     "Texture"
     ],
     "a": 0,
-    "why": "Big shapes first keep proportions right before detail."
+    "why": "Form = a 3D-looking shape (sphere, cube)."
    },
    {
-    "q": "'Value' in drawing refers to:",
+    "q": "The lightness or darkness of an area is its:",
     "options": [
-     "How light or dark an area is",
-     "The cost of materials",
-     "The subject's price",
-     "Line thickness only"
+     "Value",
+     "Line",
+     "Shape",
+     "Hue"
     ],
     "a": 0,
-    "why": "Value is lightness/darkness; shading with it creates form."
+    "why": "Value is what makes a drawing look solid."
    },
    {
-    "q": "Shading makes a drawing look:",
+    "q": "The empty area around a subject is the:",
     "options": [
-     "Three-dimensional",
-     "Flatter",
-     "Smaller",
-     "Blurry"
+     "Negative space",
+     "Positive form",
+     "Cast shadow",
+     "Horizon"
     ],
     "a": 0,
-    "why": "A range of values gives the illusion of light and depth."
+    "why": "Negative space is often easier to draw accurately."
    },
    {
-    "q": "The fastest way to improve at drawing is to:",
+    "q": "What makes a flat outline look three-dimensional?",
     "options": [
-     "Practice regularly",
-     "Wait for talent",
-     "Only watch videos",
-     "One big monthly session"
+     "Value (shading)",
+     "More outlines",
+     "Brighter paper",
+     "A frame"
     ],
     "a": 0,
-    "why": "Frequent practice, even short sessions, drives improvement."
+    "why": "Rendering light and shadow (value) creates solidity."
    },
    {
-    "q": "To compare proportions, artists often:",
+    "q": "The darkest band on the object itself is the:",
     "options": [
-     "Hold a pencil at arm's length",
-     "Guess",
-     "Use a ruler on the subject",
-     "Close both eyes"
+     "Core shadow",
+     "Highlight",
+     "Cast shadow",
+     "Mid-tone"
     ],
     "a": 0,
-    "why": "Measuring with a pencil at arm's length checks relative sizes."
+    "why": "The core shadow sits on the form; the cast shadow is thrown onto a surface."
+   },
+   {
+    "q": "A good trick to see the big light/dark shapes is to:",
+    "options": [
+     "Squint at your subject",
+     "Stare wide-eyed",
+     "Look away",
+     "Use a flashlight"
+    ],
+    "a": 0,
+    "why": "Squinting simplifies the scene into value masses."
+   },
+   {
+    "q": "In perspective, parallel lines appear to:",
+    "options": [
+     "Converge toward a vanishing point",
+     "Stay perfectly parallel",
+     "Curve away",
+     "Disappear instantly"
+    ],
+    "a": 0,
+    "why": "They meet at a vanishing point on the horizon."
+   },
+   {
+    "q": "The horizon line represents your:",
+    "options": [
+     "Eye level",
+     "Feet",
+     "The sun",
+     "The frame edge"
+    ],
+    "a": 0,
+    "why": "The horizon line is at the viewer's eye level."
+   },
+   {
+    "q": "A hallway receding straight away from you uses:",
+    "options": [
+     "One-point perspective",
+     "No perspective",
+     "Four-point perspective",
+     "Negative space"
+    ],
+    "a": 0,
+    "why": "Lines recede to a single vanishing point."
+   },
+   {
+    "q": "Making distant things lighter and less detailed is:",
+    "options": [
+     "Atmospheric perspective",
+     "Hatching",
+     "Gesture",
+     "A cast shadow"
+    ],
+    "a": 0,
+    "why": "Atmospheric perspective adds depth."
+   },
+   {
+    "q": "The best way to improve at drawing is to:",
+    "options": [
+     "Draw from life, often",
+     "Only draw once a year",
+     "Only copy photos",
+     "Buy more supplies"
+    ],
+    "a": 0,
+    "why": "Frequent observational practice builds skill."
+   },
+   {
+    "q": "A fast, loose capture of a pose is a:",
+    "options": [
+     "Gesture drawing",
+     "Contour drawing",
+     "Value scale",
+     "Final piece"
+    ],
+    "a": 0,
+    "why": "Gesture drawings capture movement quickly."
+   },
+   {
+    "q": "'Bad' drawings should be seen as:",
+    "options": [
+     "Part of learning",
+     "Proof you can't draw",
+     "A waste",
+     "A reason to quit"
+    ],
+    "a": 0,
+    "why": "Every artist makes thousands; they're how you improve."
    }
   ]
  },
@@ -17685,6 +17837,1133 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Deaf culture is a source of community and pride for many."
+   }
+  ]
+ },
+ "arts-painting": {
+  "title": "Painting",
+  "subject": "Arts & Music",
+  "level": "All ages",
+  "objectives": [
+   "Know the main painting media (watercolor, acrylic, oil)",
+   "Understand the color wheel: primary, secondary, complementary, warm/cool",
+   "Mix colors and control value with paint",
+   "Understand basic brushwork and techniques",
+   "Start painting with simple exercises"
+  ],
+  "intro": "Painting is the art of applying color to a surface — and where drawing is mostly about line and value, painting adds the whole world of color. This lesson covers the main painting media, color theory (the painter's most important tool), mixing, brushwork, and how to start.",
+  "sections": [
+   {
+    "h": "Types of paint",
+    "body": "Painters work in several media, each with its own feel. Watercolor is transparent, water-based, and luminous; it's portable and quick but unforgiving (hard to cover mistakes). Acrylic is water-based, dries fast, and is versatile and beginner-friendly — it can be thinned like watercolor or layered thick, and cleans up with water. Oil paint is slow-drying, rich, and blendable, prized for its depth, but uses solvents and takes patience.\n\nFor beginners, acrylic is usually the easiest start: cheap, forgiving, water clean-up, and fast-drying so you can keep going. You also need a surface (paper for watercolor, canvas or board for acrylic/oil), brushes, and a palette for mixing. Start simple — a few colors and brushes do a lot.",
+    "tip": "Watercolor = transparent/portable; acrylic = fast, forgiving, beginner-friendly; oil = rich, slow, blendable. Start with acrylic."
+   },
+   {
+    "h": "Color theory and the color wheel",
+    "body": "Color is the painter's most powerful tool, and it's organized by the color wheel. The three primary colors — red, yellow, blue — can't be mixed from others, but mixing them makes everything else. Mixing two primaries gives the secondary colors: red+yellow=orange, yellow+blue=green, blue+red=purple. Mixing a primary with a neighboring secondary gives tertiary colors.\n\nThe wheel also shows relationships. Complementary colors sit opposite each other (red/green, blue/orange) — they make each other pop when placed together, and neutralize into browns and grays when mixed. Colors are also warm (reds, oranges, yellows — energetic, advancing) or cool (blues, greens, purples — calm, receding). Understanding these relationships lets you mix and combine color on purpose.",
+    "visual": "<svg viewBox=\"0 0 200 206\" width=\"185\" role=\"img\" aria-label=\"A 12-color color wheel with the three primary colors red, yellow, blue and the secondary colors orange, green, violet\"><path d=\"M100.0 100.0 L100.0 20.0 A80.0 80.0 0 0 1 140.0 30.7 Z\" fill=\"#e23b3b\" stroke=\"#13131f\" stroke-width=\"0.8\"/><path d=\"M100.0 100.0 L140.0 30.7 A80.0 80.0 0 0 1 169.3 60.0 Z\" fill=\"#e8642a\" stroke=\"#13131f\" stroke-width=\"0.8\"/><path d=\"M100.0 100.0 L169.3 60.0 A80.0 80.0 0 0 1 180.0 100.0 Z\" fill=\"#f0932a\" stroke=\"#13131f\" stroke-width=\"0.8\"/><path d=\"M100.0 100.0 L180.0 100.0 A80.0 80.0 0 0 1 169.3 140.0 Z\" fill=\"#f4c22a\" stroke=\"#13131f\" stroke-width=\"0.8\"/><path d=\"M100.0 100.0 L169.3 140.0 A80.0 80.0 0 0 1 140.0 169.3 Z\" fill=\"#f0e23b\" stroke=\"#13131f\" stroke-width=\"0.8\"/><path d=\"M100.0 100.0 L140.0 169.3 A80.0 80.0 0 0 1 100.0 180.0 Z\" fill=\"#b5d13b\" stroke=\"#13131f\" stroke-width=\"0.8\"/><path d=\"M100.0 100.0 L100.0 180.0 A80.0 80.0 0 0 1 60.0 169.3 Z\" fill=\"#4caf50\" stroke=\"#13131f\" stroke-width=\"0.8\"/><path d=\"M100.0 100.0 L60.0 169.3 A80.0 80.0 0 0 1 30.7 140.0 Z\" fill=\"#2aa39a\" stroke=\"#13131f\" stroke-width=\"0.8\"/><path d=\"M100.0 100.0 L30.7 140.0 A80.0 80.0 0 0 1 20.0 100.0 Z\" fill=\"#3b7de2\" stroke=\"#13131f\" stroke-width=\"0.8\"/><path d=\"M100.0 100.0 L20.0 100.0 A80.0 80.0 0 0 1 30.7 60.0 Z\" fill=\"#6150c8\" stroke=\"#13131f\" stroke-width=\"0.8\"/><path d=\"M100.0 100.0 L30.7 60.0 A80.0 80.0 0 0 1 60.0 30.7 Z\" fill=\"#8e44ad\" stroke=\"#13131f\" stroke-width=\"0.8\"/><path d=\"M100.0 100.0 L60.0 30.7 A80.0 80.0 0 0 1 100.0 20.0 Z\" fill=\"#c2418a\" stroke=\"#13131f\" stroke-width=\"0.8\"/><text x=\"114.9\" y=\"48.4\" text-anchor=\"middle\" fill=\"#13131f\" font-size=\"11\" font-weight=\"bold\">R</text><text x=\"155.6\" y=\"89.1\" text-anchor=\"middle\" fill=\"#13131f\" font-size=\"11\" font-weight=\"bold\">O</text><text x=\"140.7\" y=\"144.7\" text-anchor=\"middle\" fill=\"#13131f\" font-size=\"11\" font-weight=\"bold\">Y</text><text x=\"85.1\" y=\"159.6\" text-anchor=\"middle\" fill=\"#13131f\" font-size=\"11\" font-weight=\"bold\">G</text><text x=\"44.4\" y=\"118.9\" text-anchor=\"middle\" fill=\"#13131f\" font-size=\"11\" font-weight=\"bold\">B</text><text x=\"59.3\" y=\"63.3\" text-anchor=\"middle\" fill=\"#13131f\" font-size=\"11\" font-weight=\"bold\">V</text><circle cx=\"100\" cy=\"100\" r=\"26\" fill=\"#eef3fb\"/><text x=\"100\" y=\"97\" text-anchor=\"middle\" fill=\"#5b5b6b\" font-size=\"8\">primary</text><text x=\"100\" y=\"107\" text-anchor=\"middle\" fill=\"#5b5b6b\" font-size=\"8\">R Y B</text><text x=\"100\" y=\"202\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">opposite colors = complements (they pop together)</text></svg>",
+    "caption": "The color wheel: primaries (R, Y, B) mix into secondaries (O, G, V); opposite colors are complements.",
+    "example": "Primaries: red, yellow, blue. Secondaries: orange, green, purple. Complements (opposites): red/green, blue/orange, yellow/purple.",
+    "tip": "Red/yellow/blue mix everything. Opposite (complementary) colors pop together and neutralize when mixed. Warm advances, cool recedes."
+   },
+   {
+    "h": "Mixing color and value",
+    "body": "Most painting is mixing, not using colors straight from the tube. Beyond the hue (which color it is), two properties matter. Value — lightness/darkness — is controlled by adding white (to lighten, a 'tint') or a darker color (to darken, a 'shade'); value does more work than color in making a painting read, just as in drawing. Saturation is how vivid vs. dull a color is; you dull a color by mixing in a little of its complement.\n\nA practical tip: you can mix a huge range from just a few colors (the three primaries plus white), which trains your eye better than owning dozens of tubes. Mix a little at a time, test it, and remember that colors look different next to other colors. Learning to mix the color you actually see — not the color you assume — is the heart of painting.",
+    "tip": "Lighten with white (tint), darken with a dark (shade), dull a color with a touch of its complement. Value matters more than hue."
+   },
+   {
+    "h": "Brushwork and techniques",
+    "body": "How you apply paint matters as much as the color. Different brushes make different marks — flats for broad strokes and crisp edges, rounds for detail and lines. A few core techniques: a wash is a thin, even layer of diluted paint; blending softens the transition between colors; drybrush (little paint on the brush) gives a rough, textured, broken stroke; and layering builds the image up, usually working from larger background shapes to smaller foreground details.\n\nGenerally, painters work background-to-foreground and big shapes before small, blocking in the large masses first and refining. Hold the brush loosely, use your whole arm for big strokes, and don't overwork an area. Brushwork is personal — it becomes part of your style.",
+    "tip": "Flats = broad strokes/edges, rounds = detail. Work background-to-foreground, big shapes first, and don't overwork it."
+   },
+   {
+    "h": "Starting to paint",
+    "body": "The way to learn painting is to paint. Start with simple subjects and limited colors — a single piece of fruit, a basic landscape, or color-mixing exercises (make a value scale, mix a color chart). Limiting your palette early actually teaches you more than a huge set of colors.\n\nDon't aim for a masterpiece; aim to learn one thing each time (mixing a specific green, softening an edge, getting the values right). Expect mud and mistakes — they're normal, and in acrylic or oil you can paint right over them. Study paintings you love and notice their colors and values. As with drawing, consistent practice is everything: paint regularly, stay curious, and your eye and hand improve together.",
+    "tip": "Start simple with a limited palette; learn one thing per painting. Mistakes wipe away (acrylic/oil) — just keep painting."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Types of paint",
+    "body": "Watercolor (transparent/portable), acrylic (fast, forgiving — best for beginners), oil (rich, slow, blendable)."
+   },
+   {
+    "h": "Color wheel",
+    "body": "Primaries R/Y/B mix all else; secondaries O/G/V; complements are opposite (pop together, neutralize when mixed)."
+   },
+   {
+    "h": "Mixing & value",
+    "body": "White lightens (tint), dark darkens (shade), complement dulls. Value does more than hue."
+   },
+   {
+    "h": "Brushwork",
+    "body": "Flats for broad/edges, rounds for detail; background-to-foreground, big shapes first; don't overwork."
+   },
+   {
+    "h": "Starting",
+    "body": "Simple subjects, limited palette, one lesson per painting. Mistakes paint over — keep going."
+   }
+  ],
+  "flash": [
+   [
+    "Watercolor",
+    "Transparent, water-based, luminous, portable paint."
+   ],
+   [
+    "Acrylic",
+    "Fast-drying, forgiving, water-based paint (beginner-friendly)."
+   ],
+   [
+    "Oil paint",
+    "Slow-drying, rich, blendable paint using solvents."
+   ],
+   [
+    "Primary colors",
+    "Red, yellow, blue — can't be mixed from others."
+   ],
+   [
+    "Secondary colors",
+    "Orange, green, purple — from mixing two primaries."
+   ],
+   [
+    "Complementary colors",
+    "Colors opposite on the wheel (red/green)."
+   ],
+   [
+    "Warm colors",
+    "Reds, oranges, yellows — energetic, advancing."
+   ],
+   [
+    "Cool colors",
+    "Blues, greens, purples — calm, receding."
+   ],
+   [
+    "Hue",
+    "Which color something is."
+   ],
+   [
+    "Value",
+    "The lightness or darkness of a color."
+   ],
+   [
+    "Tint",
+    "A color lightened with white."
+   ],
+   [
+    "Saturation",
+    "How vivid or dull a color is."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Which paint is usually easiest for beginners?",
+    "options": [
+     "Acrylic",
+     "Oil",
+     "Watercolor",
+     "Spray paint"
+    ],
+    "a": 0,
+    "why": "Acrylic is cheap, forgiving, fast-drying, water clean-up."
+   },
+   {
+    "q": "Oil paint is known for being:",
+    "options": [
+     "Rich, slow-drying, and blendable",
+     "Instant-drying",
+     "Transparent only",
+     "Water-based"
+    ],
+    "a": 0,
+    "why": "Oils blend beautifully but dry slowly."
+   },
+   {
+    "q": "The three primary colors are:",
+    "options": [
+     "Red, yellow, blue",
+     "Orange, green, purple",
+     "Black, white, gray",
+     "Pink, teal, gold"
+    ],
+    "a": 0,
+    "why": "Primaries can't be mixed from other colors."
+   },
+   {
+    "q": "Mixing yellow and blue makes:",
+    "options": [
+     "Green",
+     "Purple",
+     "Orange",
+     "Brown"
+    ],
+    "a": 0,
+    "why": "Yellow + blue = green (a secondary)."
+   },
+   {
+    "q": "Colors opposite each other on the wheel are:",
+    "options": [
+     "Complementary",
+     "Primary",
+     "Warm",
+     "Identical"
+    ],
+    "a": 0,
+    "why": "Complements like red/green sit opposite."
+   },
+   {
+    "q": "Placed side by side, complementary colors:",
+    "options": [
+     "Make each other pop",
+     "Disappear",
+     "Turn black",
+     "Become primaries"
+    ],
+    "a": 0,
+    "why": "They intensify each other; mixed, they neutralize."
+   },
+   {
+    "q": "Reds, oranges, and yellows are:",
+    "options": [
+     "Warm colors",
+     "Cool colors",
+     "Neutrals",
+     "Primaries only"
+    ],
+    "a": 0,
+    "why": "Warm colors feel energetic and advancing."
+   },
+   {
+    "q": "To lighten a color you add:",
+    "options": [
+     "White (making a tint)",
+     "Its complement",
+     "Black",
+     "Water only"
+    ],
+    "a": 0,
+    "why": "White makes a tint; a dark makes a shade."
+   },
+   {
+    "q": "To dull (neutralize) a color, mix in a little of its:",
+    "options": [
+     "Complement",
+     "White",
+     "Own hue",
+     "Primary"
+    ],
+    "a": 0,
+    "why": "A touch of the opposite color grays it down."
+   },
+   {
+    "q": "In painting, what often does more work than hue?",
+    "options": [
+     "Value",
+     "The brand of paint",
+     "The frame",
+     "Canvas size"
+    ],
+    "a": 0,
+    "why": "Correct values make a painting read, as in drawing."
+   },
+   {
+    "q": "You can mix a huge range of colors from:",
+    "options": [
+     "The 3 primaries plus white",
+     "Dozens of tubes only",
+     "Black alone",
+     "Water"
+    ],
+    "a": 0,
+    "why": "A limited palette trains your eye and mixes most colors."
+   },
+   {
+    "q": "A flat brush is best for:",
+    "options": [
+     "Broad strokes and crisp edges",
+     "Only fine detail",
+     "Only dots",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Flats cover broadly; rounds do detail."
+   },
+   {
+    "q": "Painters generally work:",
+    "options": [
+     "Background-to-foreground, big shapes first",
+     "Foreground first always",
+     "Only tiny details first",
+     "Randomly"
+    ],
+    "a": 0,
+    "why": "Block in big masses, then refine."
+   },
+   {
+    "q": "A good way to start learning is with:",
+    "options": [
+     "Simple subjects and a limited palette",
+     "The hardest possible subject",
+     "No plan",
+     "Only black paint"
+    ],
+    "a": 0,
+    "why": "Simplicity and limits teach faster."
+   },
+   {
+    "q": "A painting mistake in acrylic or oil can usually be:",
+    "options": [
+     "Painted right over",
+     "Never fixed",
+     "Only erased",
+     "Framed as-is"
+    ],
+    "a": 0,
+    "why": "Opaque media let you paint over errors."
+   }
+  ]
+ },
+ "arts-music-theory": {
+  "title": "Music Theory",
+  "subject": "Arts & Music",
+  "level": "Beginner",
+  "objectives": [
+   "Understand the musical alphabet and the staff",
+   "Understand pitch and the piano keyboard",
+   "Understand rhythm: beats, note values, time signatures",
+   "Understand scales and keys",
+   "Understand chords and harmony"
+  ],
+  "intro": "Music theory is the 'grammar' of music — how pitches and rhythms combine into melody and harmony. You don't need it to enjoy music, but understanding it lets you read, write, and play with far more freedom. This lesson covers notes, rhythm, scales, and chords.",
+  "sections": [
+   {
+    "h": "Notes and the musical alphabet",
+    "body": "Western music uses just seven letter names for notes: A, B, C, D, E, F, G — then it repeats (the eighth note is an 'octave' higher and has the same letter). Between some of these are sharps (♯, a half step higher) and flats (♭, a half step lower), giving twelve notes total in an octave.\n\nThese pitches are written on a staff — five lines and four spaces — where higher on the staff means higher in pitch. A symbol called a clef (the treble clef and bass clef are most common) fixes which lines and spaces are which notes. Reading music is largely learning to translate those dots on the staff into pitches.",
+    "tip": "7 letter names (A–G) repeat each octave; sharps/flats fill the gaps for 12 notes. The staff shows pitch: higher up = higher sound."
+   },
+   {
+    "h": "The keyboard and pitch",
+    "body": "A piano keyboard is the clearest map of pitch, which is why theory is often taught on it. The white keys are the natural notes (A–G); the black keys are the sharps and flats. The pattern of black keys (groups of two and three) repeats every octave and lets you find any note — for example, C is always the white key just to the left of the group of two black keys.\n\nThe distance between one key and the very next (white or black) is a half step — the smallest standard distance in Western music. Two half steps make a whole step. These steps are the building blocks of scales and chords, so the keyboard's simple layout makes the whole system visible: pitch rising left to right, with half steps between adjacent keys.",
+    "visual": "<svg viewBox=\"0 0 216 150\" width=\"235\" role=\"img\" aria-label=\"One octave of a piano keyboard: seven white keys C to B and five black keys for the sharps and flats\"><rect x=\"10\" y=\"18\" width=\"28\" height=\"104\" fill=\"#f7f9fc\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"24\" y=\"114\" text-anchor=\"middle\" fill=\"#13131f\" font-size=\"11\">C</text><rect x=\"38\" y=\"18\" width=\"28\" height=\"104\" fill=\"#f7f9fc\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"52\" y=\"114\" text-anchor=\"middle\" fill=\"#13131f\" font-size=\"11\">D</text><rect x=\"66\" y=\"18\" width=\"28\" height=\"104\" fill=\"#f7f9fc\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"80\" y=\"114\" text-anchor=\"middle\" fill=\"#13131f\" font-size=\"11\">E</text><rect x=\"94\" y=\"18\" width=\"28\" height=\"104\" fill=\"#f7f9fc\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"108\" y=\"114\" text-anchor=\"middle\" fill=\"#13131f\" font-size=\"11\">F</text><rect x=\"122\" y=\"18\" width=\"28\" height=\"104\" fill=\"#f7f9fc\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"136\" y=\"114\" text-anchor=\"middle\" fill=\"#13131f\" font-size=\"11\">G</text><rect x=\"150\" y=\"18\" width=\"28\" height=\"104\" fill=\"#f7f9fc\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"164\" y=\"114\" text-anchor=\"middle\" fill=\"#13131f\" font-size=\"11\">A</text><rect x=\"178\" y=\"18\" width=\"28\" height=\"104\" fill=\"#f7f9fc\" stroke=\"#13131f\" stroke-width=\"1\"/><text x=\"192\" y=\"114\" text-anchor=\"middle\" fill=\"#13131f\" font-size=\"11\">B</text><rect x=\"30\" y=\"18\" width=\"16\" height=\"64\" fill=\"#1a1a26\" stroke=\"#000\" stroke-width=\"1\"/><rect x=\"58\" y=\"18\" width=\"16\" height=\"64\" fill=\"#1a1a26\" stroke=\"#000\" stroke-width=\"1\"/><rect x=\"114\" y=\"18\" width=\"16\" height=\"64\" fill=\"#1a1a26\" stroke=\"#000\" stroke-width=\"1\"/><rect x=\"142\" y=\"18\" width=\"16\" height=\"64\" fill=\"#1a1a26\" stroke=\"#000\" stroke-width=\"1\"/><rect x=\"170\" y=\"18\" width=\"16\" height=\"64\" fill=\"#1a1a26\" stroke=\"#000\" stroke-width=\"1\"/><text x=\"108\" y=\"140\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8.5\">white = natural notes (A–G) · black = sharps/flats · C sits left of the 2 black keys</text></svg>",
+    "caption": "One octave: white keys are the natural notes A–G; black keys are the sharps/flats. C is left of the two black keys.",
+    "tip": "On a keyboard, white keys = natural notes, black = sharps/flats. Adjacent keys = a half step; two of those = a whole step."
+   },
+   {
+    "h": "Rhythm: beats and note values",
+    "body": "If pitch is the 'what,' rhythm is the 'when' — how music is organized in time. The steady pulse you tap your foot to is the beat. Notes have durations: a whole note lasts four beats, a half note two, a quarter note one, and eighth/sixteenth notes are halves and quarters of a beat. Rests are silences with the same durations.\n\nMusic is grouped into measures (bars), and a time signature at the start says how beats are organized — the top number is beats per measure, the bottom which note gets one beat. 4/4 (four quarter-note beats per bar) is by far the most common. Tempo is how fast the beat goes. Rhythm is what makes music move, and feeling the beat is the foundation of playing in time.",
+    "tip": "Beat = the pulse. Whole=4, half=2, quarter=1 beat. Time signature (e.g., 4/4) = beats per measure / which note gets the beat."
+   },
+   {
+    "h": "Scales and keys",
+    "body": "A scale is an ordered set of notes that sounds 'right' together and forms the basis of a melody. The most important is the major scale — a specific pattern of whole and half steps (W-W-H-W-W-W-H) that gives the familiar 'do-re-mi' sound. Starting that pattern on C uses only white keys (C-D-E-F-G-A-B-C), which is why C major is where beginners start.\n\nThe minor scale uses a different step pattern and sounds darker or sadder. The note a piece centers on, and the scale it uses, define its key (for example, 'the key of C major'). Keys are why a song feels anchored to a 'home' note. Understanding scales explains why certain notes sound good together and is the key to both melody and improvisation.",
+    "example": "C major scale (all white keys): C - D - E - F - G - A - B - C. Pattern: whole-whole-half-whole-whole-whole-half.",
+    "tip": "A scale is a pattern of whole/half steps. The major scale (W-W-H-W-W-W-H) is 'do-re-mi'; C major = all white keys."
+   },
+   {
+    "h": "Chords and harmony",
+    "body": "While a melody is notes played one at a time, harmony is notes played together — and the basic unit is the chord: three or more notes sounded at once. The most common chord is the triad, built by stacking every other note of a scale (the 1st, 3rd, and 5th). A C major triad is C-E-G.\n\nChords come in qualities — major (bright, happy) and minor (darker, sad) are the main two, decided by the exact spacing of the notes. A song's chords, played in a sequence (a chord progression), create the harmonic backdrop under the melody. A huge number of popular songs use just a few common chords. Melody, rhythm, and harmony together are the three pillars of nearly all music.",
+    "tip": "A chord = 3+ notes at once; a triad stacks the 1st, 3rd, 5th of a scale (C-E-G). Major = bright, minor = darker."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Notes & staff",
+    "body": "7 letters A–G repeat each octave; sharps/flats = 12 notes. Staff: higher = higher pitch; clef sets the notes."
+   },
+   {
+    "h": "Keyboard",
+    "body": "White = natural notes, black = sharps/flats. Adjacent key = half step; two = whole step."
+   },
+   {
+    "h": "Rhythm",
+    "body": "Beat = pulse. Whole 4 / half 2 / quarter 1 beat. Time signature = beats per bar / which note = 1 beat (4/4 common)."
+   },
+   {
+    "h": "Scales & keys",
+    "body": "Major scale pattern W-W-H-W-W-W-H ('do-re-mi'); C major = all white keys. The key = the home note + scale."
+   },
+   {
+    "h": "Chords",
+    "body": "3+ notes at once; a triad = 1st-3rd-5th of a scale (C-E-G). Major bright, minor dark."
+   }
+  ],
+  "flash": [
+   [
+    "Note",
+    "A single musical pitch."
+   ],
+   [
+    "Staff",
+    "The 5 lines and 4 spaces music is written on."
+   ],
+   [
+    "Clef",
+    "A symbol fixing which notes the staff lines are."
+   ],
+   [
+    "Sharp / flat",
+    "A half step higher (♯) or lower (♭)."
+   ],
+   [
+    "Octave",
+    "The distance to the next note of the same letter name."
+   ],
+   [
+    "Half step",
+    "The smallest distance — one key to the very next."
+   ],
+   [
+    "Whole step",
+    "Two half steps."
+   ],
+   [
+    "Beat",
+    "The steady pulse of the music."
+   ],
+   [
+    "Time signature",
+    "Beats per measure / which note gets the beat."
+   ],
+   [
+    "Scale",
+    "An ordered set of notes (a pattern of whole/half steps)."
+   ],
+   [
+    "Major scale",
+    "The W-W-H-W-W-W-H 'do-re-mi' scale."
+   ],
+   [
+    "Chord (triad)",
+    "3+ notes together; the 1st, 3rd, 5th of a scale."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "How many letter names does the musical alphabet use?",
+    "options": [
+     "Seven (A–G)",
+     "Twelve",
+     "Five",
+     "Twenty-six"
+    ],
+    "a": 0,
+    "why": "A–G, then they repeat each octave."
+   },
+   {
+    "q": "How many notes are in an octave (including sharps/flats)?",
+    "options": [
+     "Twelve",
+     "Seven",
+     "Five",
+     "Eight"
+    ],
+    "a": 0,
+    "why": "7 naturals + 5 sharps/flats = 12."
+   },
+   {
+    "q": "On a staff, higher up means:",
+    "options": [
+     "Higher pitch",
+     "Louder",
+     "Faster",
+     "Lower pitch"
+    ],
+    "a": 0,
+    "why": "Vertical position = pitch."
+   },
+   {
+    "q": "On a piano, the white keys are the:",
+    "options": [
+     "Natural notes (A–G)",
+     "Sharps and flats",
+     "Rests",
+     "Octaves"
+    ],
+    "a": 0,
+    "why": "Black keys are the sharps/flats."
+   },
+   {
+    "q": "The distance from one key to the very next is a:",
+    "options": [
+     "Half step",
+     "Whole step",
+     "Octave",
+     "Beat"
+    ],
+    "a": 0,
+    "why": "A half step is the smallest standard distance."
+   },
+   {
+    "q": "The steady pulse you tap your foot to is the:",
+    "options": [
+     "Beat",
+     "Clef",
+     "Chord",
+     "Scale"
+    ],
+    "a": 0,
+    "why": "The beat is the pulse of the music."
+   },
+   {
+    "q": "A quarter note lasts how many beats?",
+    "options": [
+     "One",
+     "Two",
+     "Four",
+     "Half"
+    ],
+    "a": 0,
+    "why": "Whole=4, half=2, quarter=1."
+   },
+   {
+    "q": "In a time signature, the top number is the:",
+    "options": [
+     "Beats per measure",
+     "Tempo",
+     "Which note = 1 beat",
+     "Key"
+    ],
+    "a": 0,
+    "why": "Top = beats per bar; bottom = which note gets the beat."
+   },
+   {
+    "q": "The most common time signature is:",
+    "options": [
+     "4/4",
+     "7/8",
+     "2/2",
+     "12/16"
+    ],
+    "a": 0,
+    "why": "4/4 (four quarter-note beats) is by far the most common."
+   },
+   {
+    "q": "The major scale pattern of steps is:",
+    "options": [
+     "W-W-H-W-W-W-H",
+     "H-H-H-H",
+     "W-W-W-W",
+     "Random"
+    ],
+    "a": 0,
+    "why": "That pattern gives the 'do-re-mi' sound."
+   },
+   {
+    "q": "The C major scale uses:",
+    "options": [
+     "All white keys",
+     "All black keys",
+     "Only sharps",
+     "Three notes"
+    ],
+    "a": 0,
+    "why": "C-D-E-F-G-A-B-C are all white keys."
+   },
+   {
+    "q": "The note a piece centers on, plus its scale, define its:",
+    "options": [
+     "Key",
+     "Tempo",
+     "Clef",
+     "Beat"
+    ],
+    "a": 0,
+    "why": "The key is the 'home' note and scale."
+   },
+   {
+    "q": "Notes played together form:",
+    "options": [
+     "Harmony / a chord",
+     "A melody",
+     "A rest",
+     "A beat"
+    ],
+    "a": 0,
+    "why": "Harmony is simultaneous notes; a chord is the basic unit."
+   },
+   {
+    "q": "A triad is built from a scale's:",
+    "options": [
+     "1st, 3rd, and 5th notes",
+     "1st and 2nd notes",
+     "Last note only",
+     "All seven notes"
+    ],
+    "a": 0,
+    "why": "Stack every other note: 1-3-5 (e.g., C-E-G)."
+   },
+   {
+    "q": "A minor chord generally sounds:",
+    "options": [
+     "Darker or sadder",
+     "Brighter",
+     "Louder",
+     "Faster"
+    ],
+    "a": 0,
+    "why": "Major = bright, minor = darker, set by note spacing."
+   }
+  ]
+ },
+ "arts-playing-an-instrument": {
+  "title": "Playing an Instrument",
+  "subject": "Arts & Music",
+  "level": "Beginner",
+  "objectives": [
+   "Choose an instrument and know the families",
+   "Understand what learning an instrument involves",
+   "Build effective practice habits",
+   "Understand reading music vs. playing by ear",
+   "Stay motivated and keep progressing"
+  ],
+  "intro": "Learning to play a musical instrument is one of the most rewarding skills a person can develop — it's good for the brain, deeply satisfying, and open to anyone at any age. This lesson covers choosing an instrument, how learning works, and how to practice so you actually improve.",
+  "sections": [
+   {
+    "h": "Choosing an instrument",
+    "body": "Instruments fall into families based on how they make sound. String instruments vibrate strings (guitar, violin, cello, bass). Wind instruments vibrate air — subdivided into woodwinds (flute, clarinet, saxophone) and brass (trumpet, trombone). Percussion makes sound by being struck (drums, xylophone). Keyboard instruments (piano) are in a class of their own and are great for learning theory.\n\nWhich to choose? Pick something you're genuinely drawn to — you'll practice more if you love the sound. Consider practicality (size, cost, noise, whether you can get one), and that some are friendlier for absolute beginners (piano and guitar are popular starts because you can make pleasant sounds quickly and they show music theory clearly). There's no wrong choice; the best instrument is the one you'll actually play.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"The families of musical instruments with examples\"><rect x=\"8\" y=\"5\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"5\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9.5\">Strings</text><text x=\"110\" y=\"20\" fill=\"#9adbcf\" font-size=\"9\">guitar, violin, cello, bass</text><rect x=\"8\" y=\"27\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"27\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9.5\">Woodwind</text><text x=\"110\" y=\"42\" fill=\"#9adbcf\" font-size=\"9\">flute, clarinet, saxophone</text><rect x=\"8\" y=\"49\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"49\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9.5\">Brass</text><text x=\"110\" y=\"64\" fill=\"#9adbcf\" font-size=\"9\">trumpet, trombone, tuba</text><rect x=\"8\" y=\"71\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"71\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9.5\">Percussion</text><text x=\"110\" y=\"86\" fill=\"#9adbcf\" font-size=\"9\">drums, xylophone</text><rect x=\"8\" y=\"93\" width=\"96\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"104\" y=\"93\" width=\"138\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9.5\">Keyboard</text><text x=\"110\" y=\"108\" fill=\"#9adbcf\" font-size=\"9\">piano, organ</text></svg>",
+    "caption": "The instrument families — pick what you love; you'll practice more.",
+    "tip": "Instrument families: strings, winds (woodwind/brass), percussion, keyboard. Pick what you love — you'll practice more."
+   },
+   {
+    "h": "What learning actually involves",
+    "body": "Playing an instrument combines several skills at once: physical technique (how to hold it and produce a good sound), coordination (often both hands doing different things), listening (playing in tune and in time), and reading or memorizing music. Early on it feels like a lot — that's normal, and it gets easier as the basics become automatic.\n\nExpect the first weeks to be humbling: your fingers won't cooperate, and simple things feel hard. This is your brain and body building new connections, and it's temporary. Beginners who push through the awkward early phase almost always find it starts clicking. A teacher (in person or online) speeds this up a lot by fixing bad habits early, but plenty of people start on their own with good resources.",
+    "tip": "It combines technique, coordination, listening, and reading at once — awkward at first, then it clicks. A teacher speeds it up."
+   },
+   {
+    "h": "How to practice",
+    "body": "Progress comes from how you practice, not just how long. The golden rule: short and regular beats long and rare — 15–20 minutes daily does far more than three hours once a week, because skill builds through frequent repetition. Practice is also about focus, not mindless repetition: work on the specific hard parts, slowly.\n\nKey habits: warm up, then isolate the tricky passage and play it slowly until it's clean before speeding up (a metronome keeps your timing honest). Practice slowly — speed comes from accuracy, not the reverse. Break a piece into small chunks. End on something you can play well so you finish feeling good. Quality, focused, regular practice is the single biggest predictor of how fast anyone improves.",
+    "tip": "Short and daily beats long and rare. Practice the hard parts SLOWLY until clean — speed comes from accuracy, not the reverse."
+   },
+   {
+    "h": "Reading music vs. playing by ear",
+    "body": "There are two main ways musicians get notes: reading written music (the staff, or simpler systems like tablature for guitar), and playing by ear (figuring out music by listening). Both are valuable, and most good musicians develop both over time.\n\nReading lets you play anything written down and communicate with other musicians; playing by ear builds a deep intuitive sense of music and is great for improvising and picking up songs you love. For beginners, which to emphasize depends on the instrument and your goals — a classical path leans on reading, while learning pop songs on guitar might start with chords and ear. You don't have to choose forever; start with whatever gets you playing music you enjoy soonest.",
+    "tip": "Reading music and playing by ear are both valuable; most musicians develop both. Start with whatever gets you playing enjoyable music fastest."
+   },
+   {
+    "h": "Staying motivated",
+    "body": "The biggest reason people quit an instrument isn't lack of talent — it's losing motivation during the slow early grind. A few things keep you going. Play music you actually like (not just exercises), set small achievable goals (learn this one song), and track your progress so you can see how far you've come, which is easy to forget.\n\nMake practice a daily habit tied to a routine so it doesn't rely on willpower. Play with or for others when you can — it's motivating and fun. Be patient and kind to yourself: everyone sounds bad at first, plateaus are normal, and the people who get good are simply the ones who didn't quit. Months of steady practice turn a complete beginner into someone who can genuinely play.",
+    "tip": "Most quitting is lost motivation, not lack of talent. Play music you love, set small goals, make it a daily habit, and don't quit."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Choosing",
+    "body": "Families: strings, winds (woodwind/brass), percussion, keyboard. Pick what you love; piano/guitar are friendly starts."
+   },
+   {
+    "h": "What it involves",
+    "body": "Technique + coordination + listening + reading at once. Awkward first weeks are normal and temporary."
+   },
+   {
+    "h": "How to practice",
+    "body": "Short + daily beats long + rare; practice hard parts slowly to accuracy; a metronome keeps time honest."
+   },
+   {
+    "h": "Reading vs. ear",
+    "body": "Both valuable; most musicians develop both. Start with whatever gets you playing music you enjoy."
+   },
+   {
+    "h": "Motivation",
+    "body": "Quitting = lost motivation, not talent. Play music you love, set small goals, make it a daily habit."
+   }
+  ],
+  "flash": [
+   [
+    "String instrument",
+    "Makes sound from vibrating strings (guitar, violin)."
+   ],
+   [
+    "Woodwind",
+    "A wind instrument like flute, clarinet, saxophone."
+   ],
+   [
+    "Brass",
+    "A wind instrument like trumpet, trombone, tuba."
+   ],
+   [
+    "Percussion",
+    "Instruments played by striking (drums, xylophone)."
+   ],
+   [
+    "Keyboard",
+    "Piano/organ family; great for learning theory."
+   ],
+   [
+    "Technique",
+    "How you hold and play to produce a good sound."
+   ],
+   [
+    "Metronome",
+    "A device that keeps a steady beat for practice."
+   ],
+   [
+    "Short + daily practice",
+    "Frequent short sessions beat rare long ones."
+   ],
+   [
+    "Tablature",
+    "A simplified notation (e.g., for guitar)."
+   ],
+   [
+    "Playing by ear",
+    "Figuring out music by listening."
+   ],
+   [
+    "Tempo",
+    "How fast the beat goes."
+   ],
+   [
+    "Plateau",
+    "A normal pause in visible progress."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "A guitar belongs to which family?",
+    "options": [
+     "Strings",
+     "Brass",
+     "Percussion",
+     "Woodwind"
+    ],
+    "a": 0,
+    "why": "Strings vibrate to make sound."
+   },
+   {
+    "q": "A trumpet is a:",
+    "options": [
+     "Brass instrument",
+     "String instrument",
+     "Percussion instrument",
+     "Keyboard"
+    ],
+    "a": 0,
+    "why": "Brass is a wind family."
+   },
+   {
+    "q": "Drums are:",
+    "options": [
+     "Percussion",
+     "Strings",
+     "Woodwind",
+     "Keyboard"
+    ],
+    "a": 0,
+    "why": "Percussion is played by striking."
+   },
+   {
+    "q": "Two popular beginner instruments are:",
+    "options": [
+     "Piano and guitar",
+     "Tuba and harp",
+     "Bagpipes and sitar",
+     "Organ and oboe"
+    ],
+    "a": 0,
+    "why": "You can make pleasant sounds quickly and they show theory clearly."
+   },
+   {
+    "q": "The best instrument to choose is:",
+    "options": [
+     "The one you'll actually play",
+     "The most expensive",
+     "The loudest",
+     "The biggest"
+    ],
+    "a": 0,
+    "why": "Loving the sound means you'll practice more."
+   },
+   {
+    "q": "The awkward, hard first weeks of learning are:",
+    "options": [
+     "Normal and temporary",
+     "A sign you can't do it",
+     "Permanent",
+     "Unique to you"
+    ],
+    "a": 0,
+    "why": "Your brain and body are building new connections."
+   },
+   {
+    "q": "A teacher mainly helps by:",
+    "options": [
+     "Fixing bad habits early",
+     "Playing for you",
+     "Buying your instrument",
+     "Doing the practice"
+    ],
+    "a": 0,
+    "why": "Early correction prevents ingrained mistakes."
+   },
+   {
+    "q": "Which practice schedule works best?",
+    "options": [
+     "15–20 min daily",
+     "3 hours once a week",
+     "Once a month",
+     "Only before a show"
+    ],
+    "a": 0,
+    "why": "Short and regular builds skill fastest."
+   },
+   {
+    "q": "When a passage is hard, you should play it:",
+    "options": [
+     "Slowly until clean, then speed up",
+     "As fast as possible",
+     "Once and move on",
+     "Louder"
+    ],
+    "a": 0,
+    "why": "Speed comes from accuracy, not the reverse."
+   },
+   {
+    "q": "A metronome helps you:",
+    "options": [
+     "Keep steady time",
+     "Tune the strings",
+     "Read music",
+     "Play louder"
+    ],
+    "a": 0,
+    "why": "It keeps your rhythm honest."
+   },
+   {
+    "q": "Figuring out music by listening is called:",
+    "options": [
+     "Playing by ear",
+     "Reading",
+     "Tablature",
+     "Transposing"
+    ],
+    "a": 0,
+    "why": "Ear playing builds intuition and helps improvising."
+   },
+   {
+    "q": "Reading music and playing by ear are:",
+    "options": [
+     "Both valuable; most musicians develop both",
+     "Opposites you must choose",
+     "Useless",
+     "The same thing"
+    ],
+    "a": 0,
+    "why": "Good musicians usually do both over time."
+   },
+   {
+    "q": "The main reason people quit an instrument is:",
+    "options": [
+     "Lost motivation",
+     "Lack of talent",
+     "Bad instruments",
+     "Too much talent"
+    ],
+    "a": 0,
+    "why": "The slow early grind kills motivation; pushing through wins."
+   },
+   {
+    "q": "A good motivation habit is to:",
+    "options": [
+     "Play music you actually like",
+     "Only play exercises",
+     "Never set goals",
+     "Compare yourself to pros"
+    ],
+    "a": 0,
+    "why": "Enjoyment keeps you practicing."
+   },
+   {
+    "q": "A plateau (a pause in progress) is:",
+    "options": [
+     "Normal — keep going",
+     "A reason to quit",
+     "Permanent",
+     "A mistake"
+    ],
+    "a": 0,
+    "why": "Plateaus are normal; persistence breaks through them."
+   }
+  ]
+ },
+ "arts-photography": {
+  "title": "Photography",
+  "subject": "Arts & Music",
+  "level": "Beginner",
+  "objectives": [
+   "Understand how a camera captures a photo (light + exposure)",
+   "Understand the exposure triangle: aperture, shutter speed, ISO",
+   "Use composition to make stronger photos",
+   "Understand focus, lenses, and light",
+   "Improve your photography with practice"
+  ],
+  "intro": "Photography is capturing light to make an image — and great photos come far more from understanding light and composition than from expensive gear. Whether you shoot on a phone or a camera, the same principles apply. This lesson covers how a camera works, exposure, composition, and how to improve.",
+  "sections": [
+   {
+    "h": "How a camera captures light",
+    "body": "A photograph is made of light. A camera works by letting light through a lens onto a sensor (or film) for a brief moment, recording the scene. The core challenge of every photo is exposure — getting the right amount of light: too much and the photo is 'blown out' (too bright), too little and it's underexposed (too dark).\n\nThree controls govern how much light reaches the sensor, and together they're called the exposure triangle. Even on a phone (where the camera often sets these automatically), understanding them explains why photos turn out the way they do, and lets you take control when you want a specific look. Photography is, at bottom, the craft of controlling light.",
+    "tip": "A photo is captured light. The central challenge is exposure — getting the right amount (not too bright or dark)."
+   },
+   {
+    "h": "The exposure triangle",
+    "body": "Three settings control exposure, each with a creative side effect. Aperture is how wide the lens opening is (measured in f-stops); a wide aperture lets in lots of light and creates a blurry background (shallow depth of field, great for portraits), while a narrow one keeps more in focus. Shutter speed is how long the sensor is exposed; fast freezes motion, slow blurs it (and risks camera shake).\n\nISO is the sensor's sensitivity to light; higher ISO brightens a dark scene but adds grain ('noise'). The three work together: change one and you usually adjust another to keep the exposure balanced. Learning the triangle is the single biggest step from 'auto' snapshots to intentional photography — you decide the trade-offs.",
+    "visual": "<svg viewBox=\"0 0 230 176\" width=\"220\" role=\"img\" aria-label=\"The exposure triangle: aperture, shutter speed, and ISO, which together set a photo exposure\"><polygon points=\"115,22 26,152 204,152\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"2\"/><text x=\"115\" y=\"14\" text-anchor=\"middle\" fill=\"#4f9cf0\" font-size=\"10\">APERTURE</text><text x=\"115\" y=\"34\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"7.5\">(light + blur)</text><text x=\"30\" y=\"166\" text-anchor=\"middle\" fill=\"#39e3c8\" font-size=\"10\">SHUTTER</text><text x=\"30\" y=\"150\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"7.5\">(motion)</text><text x=\"200\" y=\"166\" text-anchor=\"middle\" fill=\"#e8b84b\" font-size=\"10\">ISO</text><text x=\"200\" y=\"150\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"7.5\">(grain)</text><text x=\"115\" y=\"112\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"12\">EXPOSURE</text><text x=\"115\" y=\"128\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"7.5\">change one, rebalance another</text></svg>",
+    "caption": "The exposure triangle: aperture, shutter speed, and ISO each add light plus one creative effect.",
+    "example": "Blurry-background portrait = wide aperture. Freeze a sprinter = fast shutter. Dark room, no flash = raise ISO (more grain).",
+    "tip": "Exposure triangle: aperture (light + background blur), shutter speed (light + motion), ISO (light + grain). Change one, rebalance another."
+   },
+   {
+    "h": "Composition",
+    "body": "Composition — how you arrange what's in the frame — is what separates a snapshot from a strong photo, and it's free. The best-known guideline is the rule of thirds: imagine the frame divided into a 3×3 grid and place your subject or key elements along those lines or at their intersections, rather than dead center. It usually makes an image more dynamic and balanced.\n\nOther powerful tools: leading lines (roads or fences that draw the eye toward the subject), framing (using a doorway or branches to surround the subject), filling the frame to remove clutter, and watching your background (a distracting background ruins a good subject). Simplify — decide what the photo is about and compose to make that clear. These are guidelines, not laws; learn them, then break them on purpose.",
+    "tip": "Compose on purpose: rule of thirds (off-center), leading lines, simple backgrounds, fill the frame. Decide what the photo is ABOUT."
+   },
+   {
+    "h": "Focus, lenses, and light",
+    "body": "A sharp photo needs good focus — making sure your subject (usually the eyes, for people) is crisp. Cameras and phones autofocus, but you often choose the focus point; a common mistake is letting the camera focus on the wrong thing. Related is depth of field — how much is in focus front to back — controlled mainly by aperture and distance.\n\nLenses change your view: wide-angle lenses capture a broad scene (landscapes, tight spaces) but can distort up close; telephoto lenses zoom in and compress distance (great for portraits and far subjects). And above all, light quality matters: soft light (cloudy days, open shade, the 'golden hour' near sunrise/sunset) is usually flattering, while harsh midday sun creates unflattering hard shadows. Great photographers are really students of light.",
+    "tip": "Focus on what matters (the eyes for people). Wide lens = broad view, telephoto = zoomed/compressed. Soft light (golden hour) flatters."
+   },
+   {
+    "h": "Getting better at photography",
+    "body": "Photography improves fastest with two things: shooting a lot and looking critically. Take many photos — the best photographers shoot far more than they keep — and review them to see what worked and what didn't. Study photos you admire and ask why they work (the light, the composition, the moment).\n\nYou don't need expensive gear; a modern phone takes excellent photos, and learning light and composition on it beats owning a camera you don't understand. Try deliberate exercises: shoot one subject many ways, practice the rule of thirds, chase good light. Editing (even basic adjustments to exposure, contrast, and crop) is part of the craft too. Like any art, consistent practice and a curious eye turn a beginner into a photographer.",
+    "tip": "Shoot a lot and review critically; study photos you love; chase good light. A phone is plenty — gear matters far less than your eye."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Capturing light",
+    "body": "A photo is captured light; the core challenge is exposure — the right amount (not blown out or dark)."
+   },
+   {
+    "h": "Exposure triangle",
+    "body": "Aperture (light + blur), shutter speed (light + motion), ISO (light + grain). Change one, rebalance another."
+   },
+   {
+    "h": "Composition",
+    "body": "Rule of thirds (off-center), leading lines, framing, simple backgrounds, fill the frame. Decide the subject."
+   },
+   {
+    "h": "Focus, lenses, light",
+    "body": "Focus on the subject (eyes); wide = broad, telephoto = zoomed; soft/golden-hour light flatters."
+   },
+   {
+    "h": "Getting better",
+    "body": "Shoot a lot, review critically, study photos you love, chase light. A phone is plenty."
+   }
+  ],
+  "flash": [
+   [
+    "Exposure",
+    "The amount of light captured in a photo."
+   ],
+   [
+    "Aperture",
+    "The lens opening size; controls light + background blur."
+   ],
+   [
+    "Shutter speed",
+    "How long the sensor is exposed; controls light + motion."
+   ],
+   [
+    "ISO",
+    "Sensor light-sensitivity; higher brightens but adds grain."
+   ],
+   [
+    "Depth of field",
+    "How much of the scene is in focus front-to-back."
+   ],
+   [
+    "Rule of thirds",
+    "Placing subjects off-center on a 3×3 grid."
+   ],
+   [
+    "Leading lines",
+    "Lines that draw the eye toward the subject."
+   ],
+   [
+    "Focus",
+    "Making the subject sharp and crisp."
+   ],
+   [
+    "Wide-angle lens",
+    "A lens capturing a broad view."
+   ],
+   [
+    "Telephoto lens",
+    "A lens that zooms in and compresses distance."
+   ],
+   [
+    "Golden hour",
+    "The soft, flattering light near sunrise/sunset."
+   ],
+   [
+    "Noise",
+    "Grain in a photo, worse at high ISO."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "A photograph is fundamentally made of:",
+    "options": [
+     "Light",
+     "Paint",
+     "Sound",
+     "Pixels only"
+    ],
+    "a": 0,
+    "why": "A camera captures light onto a sensor or film."
+   },
+   {
+    "q": "Getting the right amount of light in a photo is called:",
+    "options": [
+     "Exposure",
+     "Focus",
+     "Composition",
+     "Zoom"
+    ],
+    "a": 0,
+    "why": "Too much = blown out; too little = underexposed."
+   },
+   {
+    "q": "The three parts of the exposure triangle are:",
+    "options": [
+     "Aperture, shutter speed, ISO",
+     "Zoom, flash, crop",
+     "Red, green, blue",
+     "Focus, frame, filter"
+    ],
+    "a": 0,
+    "why": "These three together set the exposure."
+   },
+   {
+    "q": "A wide aperture creates:",
+    "options": [
+     "A blurry background (shallow depth of field)",
+     "More grain",
+     "Frozen motion",
+     "A dark photo"
+    ],
+    "a": 0,
+    "why": "Wide aperture = lots of light + background blur."
+   },
+   {
+    "q": "To freeze a fast-moving subject, use a:",
+    "options": [
+     "Fast shutter speed",
+     "Slow shutter speed",
+     "High ISO only",
+     "Wide lens"
+    ],
+    "a": 0,
+    "why": "Fast shutter freezes motion; slow blurs it."
+   },
+   {
+    "q": "Raising ISO in a dark scene:",
+    "options": [
+     "Brightens it but adds grain",
+     "Darkens it",
+     "Freezes motion",
+     "Blurs the background"
+    ],
+    "a": 0,
+    "why": "Higher ISO = more sensitivity + more noise."
+   },
+   {
+    "q": "Change one exposure setting and you usually:",
+    "options": [
+     "Adjust another to rebalance",
+     "Ruin the photo",
+     "Change the lens",
+     "Do nothing else"
+    ],
+    "a": 0,
+    "why": "The three trade off to keep exposure balanced."
+   },
+   {
+    "q": "The rule of thirds says to place the subject:",
+    "options": [
+     "Off-center on a 3×3 grid",
+     "Dead center always",
+     "In a corner only",
+     "Out of frame"
+    ],
+    "a": 0,
+    "why": "Off-center placement is usually more dynamic."
+   },
+   {
+    "q": "Roads or fences that draw the eye to the subject are:",
+    "options": [
+     "Leading lines",
+     "Noise",
+     "Depth of field",
+     "ISO"
+    ],
+    "a": 0,
+    "why": "Leading lines guide the viewer's eye."
+   },
+   {
+    "q": "A distracting background:",
+    "options": [
+     "Can ruin a good subject",
+     "Improves every photo",
+     "Doesn't matter",
+     "Adds focus"
+    ],
+    "a": 0,
+    "why": "Watch and simplify your background."
+   },
+   {
+    "q": "For a portrait, you should usually focus on the:",
+    "options": [
+     "Eyes",
+     "Background",
+     "Hands only",
+     "Nearest object"
+    ],
+    "a": 0,
+    "why": "Sharp eyes make a portrait work."
+   },
+   {
+    "q": "A telephoto lens:",
+    "options": [
+     "Zooms in and compresses distance",
+     "Captures the widest view",
+     "Only works up close",
+     "Adds grain"
+    ],
+    "a": 0,
+    "why": "Telephoto is great for portraits and far subjects."
+   },
+   {
+    "q": "The most flattering natural light is usually:",
+    "options": [
+     "Soft light / golden hour",
+     "Harsh midday sun",
+     "Direct flash",
+     "None"
+    ],
+    "a": 0,
+    "why": "Soft light avoids harsh shadows."
+   },
+   {
+    "q": "To improve fastest at photography, you should:",
+    "options": [
+     "Shoot a lot and review critically",
+     "Only buy gear",
+     "Shoot once a year",
+     "Never review your photos"
+    ],
+    "a": 0,
+    "why": "Volume + critical review builds your eye."
+   },
+   {
+    "q": "To take good photos you need:",
+    "options": [
+     "A good eye more than expensive gear",
+     "The most expensive camera",
+     "Many lenses",
+     "A studio"
+    ],
+    "a": 0,
+    "why": "A modern phone plus light + composition beats gear you don't understand."
    }
   ]
  }
