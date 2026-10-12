@@ -7948,5 +7948,1305 @@ window.LAB404_CONTENT = {
     "why": "Tailor your prep to your local risks (floods, fires, storms, quakes)."
    }
   ]
+ },
+ "cooking-knife-skills": {
+  "title": "Knife Skills",
+  "subject": "Cooking & Nutrition",
+  "level": "All levels",
+  "intro": "Good knife skills make cooking faster, safer, and more enjoyable — it's the first real technique worth learning. A little practice turns the most-used kitchen tool from scary into second nature.",
+  "cards": [
+   {
+    "h": "A sharp knife is a safe knife",
+    "body": "A dull knife slips off food and takes more force, which is how cuts happen. A sharp knife bites in and cuts predictably. Keep your knife sharp (a honing steel aligns the edge; occasional sharpening restores it) and it's both safer and easier."
+   },
+   {
+    "h": "The grip and the guiding hand",
+    "body": "Hold the knife with a 'pinch grip' — thumb and forefinger on the blade itself, other fingers around the handle — for control. Your other hand forms a 'claw,' fingertips curled under so knuckles guide the blade and fingertips stay clear."
+   },
+   {
+    "h": "The rocking motion",
+    "body": "For most chopping, keep the knife tip on the board and rock the blade down and forward through the food, rather than lifting and chopping straight down. It's faster, smoother, and safer once it clicks."
+   },
+   {
+    "h": "Basic cuts",
+    "body": "A few cuts cover most recipes: dice (small cubes), slice (thin flat pieces), mince (very fine, for garlic/herbs), and julienne (thin matchsticks). Even sizes matter — pieces the same size cook evenly, so one isn't raw while another's mush."
+   },
+   {
+    "h": "A stable board and clean habits",
+    "body": "Put a damp paper towel or cloth under your cutting board so it can't slip. Cut a flat edge on round foods so they don't roll. Keep raw meat on a separate board, and clear cut food into a bowl so your workspace stays clear."
+   }
+  ],
+  "flash": [
+   [
+    "Pinch grip",
+    "Holding the blade with thumb and forefinger for control."
+   ],
+   [
+    "Claw grip",
+    "Curling the guiding hand's fingers under to protect them."
+   ],
+   [
+    "Honing",
+    "Realigning a knife's edge with a steel (do often)."
+   ],
+   [
+    "Sharpening",
+    "Grinding a new edge onto a dull knife (do occasionally)."
+   ],
+   [
+    "Dice",
+    "To cut into small cubes."
+   ],
+   [
+    "Mince",
+    "To cut very finely (garlic, herbs)."
+   ],
+   [
+    "Julienne",
+    "To cut into thin matchsticks."
+   ],
+   [
+    "Even cuts",
+    "Same-size pieces so food cooks evenly."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The safest knife is:",
+    "options": [
+     "A sharp one",
+     "A dull one",
+     "A small one",
+     "A rusty one"
+    ],
+    "a": 0,
+    "why": "Dull knives slip and need more force; sharp knives cut predictably."
+   },
+   {
+    "q": "The guiding hand should form a:",
+    "options": [
+     "Claw with curled fingers",
+     "Flat palm",
+     "Fist on the food",
+     "Pointed finger"
+    ],
+    "a": 0,
+    "why": "Curled fingertips keep them clear and let knuckles guide the blade."
+   },
+   {
+    "q": "Cutting food into even sizes helps it:",
+    "options": [
+     "Cook evenly",
+     "Taste saltier",
+     "Cost less",
+     "Look older"
+    ],
+    "a": 0,
+    "why": "Same-size pieces finish cooking at the same time."
+   },
+   {
+    "q": "To keep a cutting board from slipping, put under it a:",
+    "options": [
+     "Damp cloth or paper towel",
+     "Dry plate",
+     "Nothing",
+     "A knife"
+    ],
+    "a": 0,
+    "why": "A damp towel grips the counter and stabilizes the board."
+   },
+   {
+    "q": "'Mince' means to cut:",
+    "options": [
+     "Very finely",
+     "Into big chunks",
+     "In half only",
+     "Into cubes"
+    ],
+    "a": 0,
+    "why": "Mincing is cutting very fine, like for garlic."
+   },
+   {
+    "q": "Honing a knife:",
+    "options": [
+     "Realigns the edge (do it often)",
+     "Replaces the knife",
+     "Dulls it",
+     "Is the same as washing"
+    ],
+    "a": 0,
+    "why": "A honing steel straightens the edge between sharpenings."
+   }
+  ]
+ },
+ "cooking-cooking-techniques": {
+  "title": "Cooking Techniques",
+  "subject": "Cooking & Nutrition",
+  "level": "All levels",
+  "intro": "A handful of core cooking methods cover almost every recipe. Understand what each one does to food — and when to use it — and you can cook confidently without following a recipe word for word.",
+  "cards": [
+   {
+    "h": "Dry heat: sauté, roast, grill",
+    "body": "Dry-heat methods brown food and build flavor. Sautéing cooks small pieces fast in a little fat over medium-high heat; roasting cooks larger food in the oven with dry heat; grilling cooks over direct high heat. Browning (the 'Maillard reaction') is where a lot of flavor comes from."
+   },
+   {
+    "h": "Moist heat: boil, simmer, steam",
+    "body": "Moist-heat methods cook with water or steam and are gentler. Boiling is rapid bubbling (pasta, blanching); simmering is gentle bubbling (soups, sauces, tougher cuts); steaming cooks food above boiling water, keeping nutrients and color. These don't brown food."
+   },
+   {
+    "h": "Combination: braising",
+    "body": "Braising combines both — brown the food first (dry heat, for flavor), then cook it slowly in a little liquid (moist heat, to tenderize). It's how tough, cheap cuts of meat become fall-apart tender, and it's very forgiving."
+   },
+   {
+    "h": "Match the method to the food",
+    "body": "Tender foods (a fish fillet, a steak, quick vegetables) suit fast, high-heat methods. Tough, cheap cuts and dried beans need slow, moist cooking to break down. Picking the right method for the ingredient is most of what separates good results from bad."
+   },
+   {
+    "h": "Heat control and resting",
+    "body": "Most mistakes come from heat that's too high (burning) or too low (steaming instead of browning). Preheat your pan, don't crowd it (crowding steams food), and let roasted or grilled meat rest a few minutes after cooking so the juices stay in."
+   }
+  ],
+  "flash": [
+   [
+    "Sauté",
+    "Cook small pieces quickly in a little fat over medium-high heat."
+   ],
+   [
+    "Roast",
+    "Cook larger food in the oven with dry heat."
+   ],
+   [
+    "Simmer",
+    "Cook gently in liquid just below a boil."
+   ],
+   [
+    "Steam",
+    "Cook food above boiling water, keeping nutrients."
+   ],
+   [
+    "Braise",
+    "Brown, then cook slowly in a little liquid to tenderize."
+   ],
+   [
+    "Maillard reaction",
+    "The browning that builds deep flavor."
+   ],
+   [
+    "Dry vs. moist heat",
+    "Dry browns; moist cooks gently without browning."
+   ],
+   [
+    "Resting meat",
+    "Letting cooked meat sit so juices redistribute."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Browning food for flavor requires:",
+    "options": [
+     "Dry heat (sauté, roast, grill)",
+     "Boiling",
+     "Steaming",
+     "Soaking"
+    ],
+    "a": 0,
+    "why": "Moist-heat methods don't brown; dry heat does (Maillard reaction)."
+   },
+   {
+    "q": "Tough, cheap cuts of meat are best cooked:",
+    "options": [
+     "Slowly with moist heat (braising)",
+     "Quickly on high heat",
+     "Raw",
+     "By boiling for 1 minute"
+    ],
+    "a": 0,
+    "why": "Slow, moist cooking breaks down tough tissue into tenderness."
+   },
+   {
+    "q": "Braising is a combination of:",
+    "options": [
+     "Browning then slow moist cooking",
+     "Only boiling",
+     "Only grilling",
+     "Freezing then frying"
+    ],
+    "a": 0,
+    "why": "You brown for flavor, then simmer in liquid to tenderize."
+   },
+   {
+    "q": "Crowding a hot pan causes food to:",
+    "options": [
+     "Steam instead of brown",
+     "Brown faster",
+     "Cook less",
+     "Taste sweeter"
+    ],
+    "a": 0,
+    "why": "Too much food drops the temperature and releases moisture, steaming it."
+   },
+   {
+    "q": "Steaming is good because it:",
+    "options": [
+     "Keeps nutrients and color",
+     "Browns food",
+     "Adds fat",
+     "Toughens food"
+    ],
+    "a": 0,
+    "why": "Gentle moist heat preserves nutrients and color."
+   },
+   {
+    "q": "After roasting meat, you should:",
+    "options": [
+     "Let it rest a few minutes",
+     "Cut it instantly",
+     "Freeze it",
+     "Add water"
+    ],
+    "a": 0,
+    "why": "Resting lets juices redistribute so they don't run out."
+   }
+  ]
+ },
+ "cooking-baking": {
+  "title": "Baking",
+  "subject": "Cooking & Nutrition",
+  "level": "All levels",
+  "intro": "Baking is cooking's precise cousin — more like chemistry than freestyle cooking. Measure carefully and understand what each ingredient does, and you can bake reliably instead of hoping for the best.",
+  "cards": [
+   {
+    "h": "Baking is a measured science",
+    "body": "Unlike stovetop cooking, baking relies on exact ratios and reactions, so measuring matters. Too much flour makes it dry; too much liquid, dense. Weighing ingredients (in grams) is more accurate than cups. Follow the recipe closely the first time, then adjust."
+   },
+   {
+    "h": "What the main ingredients do",
+    "body": "Flour gives structure (its gluten forms the framework); sugar sweetens, browns, and keeps things moist; fat (butter, oil) adds richness and tenderness; eggs bind and add structure; liquid brings it together. Change one and you change the result."
+   },
+   {
+    "h": "Leavening: what makes it rise",
+    "body": "Leaveners make baked goods light. Baking soda and baking powder release gas bubbles through a chemical reaction; yeast is a living organism that ferments and produces gas slowly (for bread). Without leavening, cakes and breads would be flat and dense."
+   },
+   {
+    "h": "Mixing matters",
+    "body": "How you mix affects texture. Overmixing batter develops too much gluten and makes muffins and cakes tough; gentle mixing keeps them tender. Creaming butter and sugar adds air for fluffiness. The recipe's mixing instructions aren't optional — they shape the result."
+   },
+   {
+    "h": "Oven and doneness",
+    "body": "An accurate, preheated oven is essential — an oven thermometer is cheap insurance, since many ovens run off. Check doneness with the right test: a toothpick comes out clean for cakes, edges pull away, or an internal temperature for bread. Don't open the oven too early or it can sink."
+   }
+  ],
+  "flash": [
+   [
+    "Gluten",
+    "The protein in flour that gives baked goods structure."
+   ],
+   [
+    "Leavening",
+    "Agents (baking soda/powder, yeast) that make baking rise."
+   ],
+   [
+    "Baking soda vs. powder",
+    "Both leaven chemically; powder has its own acid built in."
+   ],
+   [
+    "Yeast",
+    "A living organism that leavens bread by fermenting."
+   ],
+   [
+    "Creaming",
+    "Beating butter and sugar together to add air."
+   ],
+   [
+    "Overmixing",
+    "Too much mixing that toughens batter."
+   ],
+   [
+    "Measuring by weight",
+    "Using grams for accuracy over cups."
+   ],
+   [
+    "Preheating",
+    "Bringing the oven to temperature before baking."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Compared to stovetop cooking, baking is:",
+    "options": [
+     "More precise, like chemistry",
+     "More freestyle",
+     "Never measured",
+     "Always faster"
+    ],
+    "a": 0,
+    "why": "Baking depends on exact ratios and reactions."
+   },
+   {
+    "q": "What gives baked goods their structure?",
+    "options": [
+     "Flour (gluten)",
+     "Sugar",
+     "Food coloring",
+     "Salt alone"
+    ],
+    "a": 0,
+    "why": "Gluten, the protein in flour, forms the framework."
+   },
+   {
+    "q": "Leavening agents make baked goods:",
+    "options": [
+     "Rise and become light",
+     "Flat",
+     "Salty",
+     "Cold"
+    ],
+    "a": 0,
+    "why": "Baking soda/powder and yeast create gas bubbles that lift the dough."
+   },
+   {
+    "q": "Overmixing cake or muffin batter makes it:",
+    "options": [
+     "Tough",
+     "Fluffier",
+     "Sweeter",
+     "Safer"
+    ],
+    "a": 0,
+    "why": "It develops too much gluten, toughening the texture."
+   },
+   {
+    "q": "The most accurate way to measure baking ingredients is:",
+    "options": [
+     "By weight (grams)",
+     "By the handful",
+     "By guessing",
+     "By eye"
+    ],
+    "a": 0,
+    "why": "Weighing avoids the variability of scooping cups."
+   },
+   {
+    "q": "Yeast leavens bread by:",
+    "options": [
+     "Fermenting and producing gas",
+     "A quick chemical fizz",
+     "Melting",
+     "Freezing"
+    ],
+    "a": 0,
+    "why": "Yeast is alive; it ferments and slowly produces gas."
+   }
+  ]
+ },
+ "cooking-meal-planning": {
+  "title": "Meal Planning",
+  "subject": "Cooking & Nutrition",
+  "level": "All levels",
+  "intro": "Meal planning is deciding ahead of time what you'll eat — and it's one of the biggest money-and-time savers in the kitchen. A little planning means less takeout, less waste, and less daily 'what's for dinner?' stress.",
+  "cards": [
+   {
+    "h": "Why plan",
+    "body": "Deciding meals in advance saves money (fewer impulse buys and takeout), saves time (one shopping trip, less daily deciding), and cuts waste (you buy what you'll actually use). It also tends to mean healthier eating, since you're not grabbing whatever's fastest when hungry."
+   },
+   {
+    "h": "Plan around what's cheap and on hand",
+    "body": "Build meals around what's on sale, in season, and already in your pantry. Check what you have before shopping. Planning a few meals that share ingredients (buy a big bag of rice or a rotisserie chicken and use it several ways) stretches your dollar."
+   },
+   {
+    "h": "Make a list and stick to it",
+    "body": "From your plan, write a shopping list organized by the store's sections, and shop it — ideally not hungry. A list is your defense against impulse buys, which are where a lot of food money leaks away."
+   },
+   {
+    "h": "Batch cooking and leftovers",
+    "body": "Cooking once and eating several times is a huge time-saver. Make a big batch of something (chili, rice, roasted vegetables), then repurpose it across the week. Plan leftovers on purpose — cook extra dinner to become tomorrow's lunch."
+   },
+   {
+    "h": "Keep it realistic",
+    "body": "The best meal plan is one you'll actually follow. Start small — plan just dinners, or just a few days. Keep some easy backup meals (eggs, pasta, canned beans) for busy nights so one skipped plan doesn't send you to takeout. Flexibility keeps the habit going."
+   }
+  ],
+  "flash": [
+   [
+    "Meal planning",
+    "Deciding meals ahead to save money, time, and waste."
+   ],
+   [
+    "Shopping list",
+    "A planned list that curbs impulse buying."
+   ],
+   [
+    "Batch cooking",
+    "Cooking a large amount to eat over several meals."
+   ],
+   [
+    "Repurposing",
+    "Using one cooked ingredient in several different meals."
+   ],
+   [
+    "In season",
+    "Produce that's cheapest and best at that time of year."
+   ],
+   [
+    "Pantry staples",
+    "Shelf-stable basics (rice, beans, pasta) to build meals on."
+   ],
+   [
+    "Food waste",
+    "Food bought but thrown away unused."
+   ],
+   [
+    "Backup meal",
+    "An easy fallback for busy nights (eggs, pasta)."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Meal planning mainly helps you:",
+    "options": [
+     "Save money, time, and waste",
+     "Spend more",
+     "Eat more takeout",
+     "Cook slower"
+    ],
+    "a": 0,
+    "why": "Planning cuts impulse spending, daily deciding, and wasted food."
+   },
+   {
+    "q": "A shopping list helps by:",
+    "options": [
+     "Curbing impulse buys",
+     "Making food cost more",
+     "Wasting time",
+     "Hiding sales"
+    ],
+    "a": 0,
+    "why": "Sticking to a list prevents costly impulse purchases."
+   },
+   {
+    "q": "Batch cooking means:",
+    "options": [
+     "Cooking a large amount to reuse",
+     "Cooking one tiny portion",
+     "Eating out",
+     "Never cooking"
+    ],
+    "a": 0,
+    "why": "You cook once and eat it across several meals."
+   },
+   {
+    "q": "You should build meals around:",
+    "options": [
+     "What's cheap, in season, and on hand",
+     "The most expensive items",
+     "Only new ingredients",
+     "Random cravings"
+    ],
+    "a": 0,
+    "why": "Using sales, seasonal produce, and your pantry stretches your money."
+   },
+   {
+    "q": "The best meal plan is one that:",
+    "options": [
+     "You'll actually follow",
+     "Is the most complicated",
+     "Has no leftovers",
+     "Ignores your schedule"
+    ],
+    "a": 0,
+    "why": "A realistic, flexible plan beats an ambitious one you abandon."
+   },
+   {
+    "q": "Keeping easy backup meals on hand helps you:",
+    "options": [
+     "Avoid takeout on busy nights",
+     "Spend more",
+     "Waste food",
+     "Skip meals"
+    ],
+    "a": 0,
+    "why": "A fallback (eggs, pasta) prevents a busy night from derailing the plan."
+   }
+  ]
+ },
+ "lifeskills-personal-finance": {
+  "title": "Personal Finance",
+  "subject": "Life Skills & Finance",
+  "level": "Grades 9 - adult",
+  "intro": "Personal finance as a life skill is simply managing your money day to day so it works for you, not against you. It ties together earning, spending, saving, and avoiding the traps that keep people stuck.",
+  "cards": [
+   {
+    "h": "Spend less than you earn",
+    "body": "The whole foundation of personal finance is one habit: spend less than you make, and put the difference to work (saving, investing, paying off debt). Everything else is detail. If money goes out faster than it comes in, no income is ever 'enough.'"
+   },
+   {
+    "h": "Know where your money goes",
+    "body": "You can't manage what you don't measure. For a month, track what you actually spend — most people are surprised. Awareness alone changes behavior; you'll spot the small recurring leaks (subscriptions, fast food, fees) that quietly add up."
+   },
+   {
+    "h": "Separate needs from wants",
+    "body": "Needs keep you going (rent, food, transport, basic bills); wants are everything else. In a tight spot, needs come first. This isn't about never enjoying anything — it's about making sure the essentials are covered before the extras."
+   },
+   {
+    "h": "Build a cushion, avoid high-interest debt",
+    "body": "A small emergency fund turns disasters into inconveniences, and avoiding high-interest debt (credit cards carried month to month, payday loans) keeps your money yours instead of a lender's. These two moves prevent most money spirals."
+   },
+   {
+    "h": "Small habits, big results",
+    "body": "Personal finance isn't about big wins; it's small consistent habits — automating savings, checking your accounts weekly, comparing prices, not spending to impress people. Over years these quiet habits build real stability and freedom."
+   }
+  ],
+  "flash": [
+   [
+    "Personal finance",
+    "Managing your day-to-day money so it works for you."
+   ],
+   [
+    "Spend less than you earn",
+    "The core habit of all personal finance."
+   ],
+   [
+    "Tracking spending",
+    "Recording what you spend to see where it goes."
+   ],
+   [
+    "Needs vs. wants",
+    "Essentials vs. extras — essentials come first."
+   ],
+   [
+    "Living below your means",
+    "Spending less than you make on purpose."
+   ],
+   [
+    "Recurring leaks",
+    "Small repeated expenses that quietly add up."
+   ],
+   [
+    "Financial cushion",
+    "Savings that absorb surprises."
+   ],
+   [
+    "Lifestyle creep",
+    "Spending more as you earn more, so you never get ahead."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The foundation of personal finance is to:",
+    "options": [
+     "Spend less than you earn",
+     "Earn a huge salary",
+     "Win the lottery",
+     "Never spend anything"
+    ],
+    "a": 0,
+    "why": "Spending less than you make, and using the difference, is the core."
+   },
+   {
+    "q": "The first step to managing money is to:",
+    "options": [
+     "Track where it actually goes",
+     "Ignore it",
+     "Spend freely",
+     "Open more cards"
+    ],
+    "a": 0,
+    "why": "Awareness of your spending is what changes behavior."
+   },
+   {
+    "q": "In a tight budget, you should cover ___ first.",
+    "options": [
+     "Needs",
+     "Wants",
+     "Entertainment",
+     "Impulse buys"
+    ],
+    "a": 0,
+    "why": "Essentials (rent, food, transport) come before extras."
+   },
+   {
+    "q": "'Lifestyle creep' is when you:",
+    "options": [
+     "Spend more as you earn more, never getting ahead",
+     "Save more automatically",
+     "Track your spending",
+     "Cut expenses"
+    ],
+    "a": 0,
+    "why": "Letting spending rise with income keeps you from building wealth."
+   },
+   {
+    "q": "Personal finance success comes mostly from:",
+    "options": [
+     "Small consistent habits",
+     "One big windfall",
+     "Risky bets",
+     "Luck"
+    ],
+    "a": 0,
+    "why": "Quiet, steady habits build stability over time."
+   },
+   {
+    "q": "A small emergency fund turns disasters into:",
+    "options": [
+     "Inconveniences",
+     "Bigger disasters",
+     "Debt",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "A cushion absorbs surprises so they don't become debt."
+   }
+  ]
+ },
+ "lifeskills-budgeting-credit": {
+  "title": "Budgeting & Credit",
+  "subject": "Life Skills & Finance",
+  "level": "Grades 9 - adult",
+  "intro": "Budgeting and credit are two everyday money skills everyone needs. A budget tells your money where to go; good credit habits keep borrowing cheap and doors open. Here's the practical version.",
+  "cards": [
+   {
+    "h": "A budget is a plan, not a punishment",
+    "body": "A budget just means deciding ahead where your money goes, so the important things get covered first. It's freeing, not restricting — you spend without guilt because you already know it fits. Income minus planned expenses should be zero or positive."
+   },
+   {
+    "h": "A simple budgeting method",
+    "body": "You don't need fancy apps. A simple split like 50/30/20 (half to needs, a third to wants, a fifth to savings/debt) gives a starting frame. Or 'pay the essentials and savings first, then spend the rest freely.' The best method is the one you'll keep using."
+   },
+   {
+    "h": "What credit is and why it matters",
+    "body": "Credit is borrowed money, and your history of repaying it becomes your credit score — a number lenders, landlords, and sometimes employers check. Good credit means easier approvals and lower interest; bad credit costs you money and opportunities for years."
+   },
+   {
+    "h": "Building good credit",
+    "body": "The main rules are simple: always pay on time (the biggest factor), keep balances low relative to your limit, and don't open or close lots of accounts at once. Time and consistency build a good score; there's no legitimate overnight fix."
+   },
+   {
+    "h": "Using credit cards wisely",
+    "body": "A credit card is a tool that helps or hurts depending on use. Paid in full every month, it builds credit and may earn rewards, costing nothing. Carried as a balance, its high interest quietly drains you. The rule: only charge what you can pay off that month."
+   }
+  ],
+  "flash": [
+   [
+    "Budget",
+    "A plan for where your money goes before you spend it."
+   ],
+   [
+    "50/30/20",
+    "Needs 50%, wants 30%, savings/debt 20%."
+   ],
+   [
+    "Credit",
+    "Borrowed money you repay, usually with interest."
+   ],
+   [
+    "Credit score",
+    "A number showing how reliably you repay."
+   ],
+   [
+    "On-time payment",
+    "The biggest factor in a good credit score."
+   ],
+   [
+    "Credit utilization",
+    "How much of your available credit you're using (keep low)."
+   ],
+   [
+    "Pay in full",
+    "Clearing a credit card each month to avoid interest."
+   ],
+   [
+    "Interest",
+    "The cost of borrowing, charged as a percentage."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "A budget is best thought of as:",
+    "options": [
+     "A plan telling your money where to go",
+     "A punishment",
+     "A luxury",
+     "A loan"
+    ],
+    "a": 0,
+    "why": "It's a spending plan that covers what matters first."
+   },
+   {
+    "q": "The biggest factor in your credit score is:",
+    "options": [
+     "Paying on time",
+     "Your income",
+     "Your age",
+     "How much cash you carry"
+    ],
+    "a": 0,
+    "why": "Payment history is the single largest factor."
+   },
+   {
+    "q": "To avoid credit card interest, you should:",
+    "options": [
+     "Pay the full balance each month",
+     "Pay only the minimum",
+     "Skip payments",
+     "Max it out"
+    ],
+    "a": 0,
+    "why": "Paying in full means no interest is charged."
+   },
+   {
+    "q": "Under 50/30/20, wants get:",
+    "options": [
+     "30%",
+     "50%",
+     "20%",
+     "0%"
+    ],
+    "a": 0,
+    "why": "50% needs, 30% wants, 20% savings/debt."
+   },
+   {
+    "q": "Good credit is built by:",
+    "options": [
+     "Time and consistent on-time payments",
+     "An overnight trick",
+     "Opening many cards fast",
+     "Carrying big balances"
+    ],
+    "a": 0,
+    "why": "Consistency over time builds a score; there's no legit instant fix."
+   },
+   {
+    "q": "Keeping your credit utilization low means:",
+    "options": [
+     "Using only a small part of your limit",
+     "Maxing out cards",
+     "Closing all accounts",
+     "Never paying"
+    ],
+    "a": 0,
+    "why": "Low balances relative to your limit help your score."
+   }
+  ]
+ },
+ "lifeskills-digital-literacy": {
+  "title": "Digital Literacy",
+  "subject": "Life Skills & Finance",
+  "level": "All levels",
+  "intro": "Digital literacy is being able to use technology effectively and safely — a basic life skill now, whether for work, banking, or just daily life. It also means protecting yourself from the scams and misinformation that come with it.",
+  "cards": [
+   {
+    "h": "Strong, unique passwords",
+    "body": "Your accounts are only as safe as your passwords. Use a long, unique password for each important account (reusing one means a single breach exposes them all). A password manager remembers them for you. Turn on two-factor authentication (a code to your phone) for anything important."
+   },
+   {
+    "h": "Spotting scams and phishing",
+    "body": "Scammers imitate real companies to steal money or logins. Red flags: urgent pressure ('act now or your account closes'), requests for passwords or payment in gift cards, slightly-wrong web addresses, and unexpected links. When in doubt, don't click — go to the site directly or call the company."
+   },
+   {
+    "h": "Protecting your privacy",
+    "body": "What you post and share can be seen and stored far beyond who you intended. Think before posting, check privacy settings, and be stingy with personal info (full birthdate, address, location). Free services often make money from your data, so notice what you're agreeing to."
+   },
+   {
+    "h": "Judging online information",
+    "body": "Not everything online is true. Check who's behind a claim, whether other reliable sources agree, and whether a headline is designed to make you angry (a sign to slow down). Misinformation spreads fastest when it's emotional and unverified — pause before sharing."
+   },
+   {
+    "h": "Everyday digital skills",
+    "body": "Basic competence opens doors: using email professionally, searching effectively, filling out online forms, doing online banking and job applications, and keeping devices updated (updates patch security holes). These are now as essential as reading and writing for getting by."
+   }
+  ],
+  "flash": [
+   [
+    "Digital literacy",
+    "Using technology effectively and safely."
+   ],
+   [
+    "Strong password",
+    "Long, unique, hard to guess — different per account."
+   ],
+   [
+    "Two-factor authentication",
+    "A second login step (a code) for extra security."
+   ],
+   [
+    "Phishing",
+    "A scam imitating a real company to steal info or money."
+   ],
+   [
+    "Privacy settings",
+    "Controls over who sees what you share."
+   ],
+   [
+    "Password manager",
+    "An app that stores your unique passwords securely."
+   ],
+   [
+    "Misinformation",
+    "False or misleading information spread online."
+   ],
+   [
+    "Software update",
+    "A fix that often patches security holes."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "A strong password should be:",
+    "options": [
+     "Long and unique to each account",
+     "The same everywhere",
+     "Short and simple",
+     "Your name"
+    ],
+    "a": 0,
+    "why": "Unique, long passwords limit the damage of any one breach."
+   },
+   {
+    "q": "A common sign of a phishing scam is:",
+    "options": [
+     "Urgent pressure and a request for passwords/gift cards",
+     "A normal greeting",
+     "A real company's official site",
+     "No links at all"
+    ],
+    "a": 0,
+    "why": "Urgency and requests for credentials or gift cards are red flags."
+   },
+   {
+    "q": "Two-factor authentication adds:",
+    "options": [
+     "A second login step for security",
+     "More spam",
+     "A faster login only",
+     "A new password daily"
+    ],
+    "a": 0,
+    "why": "A second factor (like a phone code) blocks most account takeovers."
+   },
+   {
+    "q": "Before sharing an emotional, surprising headline you should:",
+    "options": [
+     "Verify it with reliable sources",
+     "Share it immediately",
+     "Assume it's true",
+     "Get angrier"
+    ],
+    "a": 0,
+    "why": "Misinformation spreads on emotion; pause and check first."
+   },
+   {
+    "q": "Software updates are important because they:",
+    "options": [
+     "Patch security holes",
+     "Slow your device for fun",
+     "Waste data",
+     "Do nothing"
+    ],
+    "a": 0,
+    "why": "Updates fix vulnerabilities that attackers exploit."
+   },
+   {
+    "q": "A password manager:",
+    "options": [
+     "Stores unique passwords securely",
+     "Shares your passwords",
+     "Weakens security",
+     "Is a type of virus"
+    ],
+    "a": 0,
+    "why": "It lets you use strong, unique passwords without memorizing them."
+   }
+  ]
+ },
+ "languages-french": {
+  "title": "French",
+  "subject": "World Languages",
+  "level": "All levels",
+  "intro": "French is spoken across the world — in France, parts of Canada, and much of Africa — and shares a lot of vocabulary with English. Its spelling looks tricky at first, but it follows consistent rules once you learn a few patterns.",
+  "cards": [
+   {
+    "h": "French and English are cousins",
+    "body": "Thanks to history, English borrowed thousands of words from French, so you already know many: table, menu, art, nation, important. This shared vocabulary gives English speakers a real head start."
+   },
+   {
+    "h": "Greetings and politeness",
+    "body": "Bonjour (hello/good day), Bonsoir (good evening), Salut (hi, casual), Merci (thank you), S'il vous plaît (please), Au revoir (goodbye), Oui / Non (yes / no). Politeness matters in French — saying 'bonjour' before asking something is expected."
+   },
+   {
+    "h": "Pronunciation basics",
+    "body": "French often doesn't pronounce final consonants (the 't' in 'et' is silent). Accents change sounds: é sounds like 'ay.' The French 'r' comes from the back of the throat. It takes practice, but the rules are consistent."
+   },
+   {
+    "h": "Nouns and gender",
+    "body": "Like Spanish, every French noun is masculine or feminine, with 'the' as le (masc.) or la (fem.), and 'a/an' as un (masc.) or une (fem.). You usually learn the gender along with the word, and adjectives change to match it."
+   },
+   {
+    "h": "Simple sentences",
+    "body": "Basic word order is like English: subject + verb + object. Je mange une pomme = I eat an apple. 'Je' (I), 'tu/vous' (you, informal/formal), and 'il/elle' (he/she) are your core subjects to start speaking."
+   }
+  ],
+  "flash": [
+   [
+    "Bonjour",
+    "Hello / good day"
+   ],
+   [
+    "Merci",
+    "Thank you"
+   ],
+   [
+    "S'il vous plaît",
+    "Please"
+   ],
+   [
+    "Au revoir",
+    "Goodbye"
+   ],
+   [
+    "Oui / Non",
+    "Yes / No"
+   ],
+   [
+    "le / la",
+    "'the' (masculine / feminine)"
+   ],
+   [
+    "Je / tu / vous",
+    "I / you (informal) / you (formal)"
+   ],
+   [
+    "Cognate",
+    "A word that looks and means the same in both languages (table)."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "How do you say 'hello' in French?",
+    "options": [
+     "Bonjour",
+     "Merci",
+     "Au revoir",
+     "Oui"
+    ],
+    "a": 0,
+    "why": "Bonjour means hello / good day."
+   },
+   {
+    "q": "English and French share many words because:",
+    "options": [
+     "English borrowed thousands from French",
+     "They're unrelated",
+     "French copied English only",
+     "By accident"
+    ],
+    "a": 0,
+    "why": "Historical borrowing gives English speakers a vocabulary head start."
+   },
+   {
+    "q": "In French, final consonants are often:",
+    "options": [
+     "Silent",
+     "Stressed loudly",
+     "Doubled",
+     "Rolled"
+    ],
+    "a": 0,
+    "why": "Many final consonants aren't pronounced (e.g., 'et')."
+   },
+   {
+    "q": "'Merci' means:",
+    "options": [
+     "Thank you",
+     "Hello",
+     "Goodbye",
+     "Please"
+    ],
+    "a": 0,
+    "why": "Merci is thank you."
+   },
+   {
+    "q": "Which is the feminine 'the'?",
+    "options": [
+     "la",
+     "le",
+     "un",
+     "les"
+    ],
+    "a": 0,
+    "why": "'la' is feminine; 'le' is masculine."
+   },
+   {
+    "q": "A word like 'table' that's the same in both languages is a:",
+    "options": [
+     "Cognate",
+     "Verb",
+     "Accent",
+     "Prefix"
+    ],
+    "a": 0,
+    "why": "Cognates share form and meaning across languages."
+   }
+  ]
+ },
+ "languages-german": {
+  "title": "German",
+  "subject": "World Languages",
+  "level": "All levels",
+  "intro": "German is spoken by over 100 million people in the heart of Europe. It's closely related to English — many words are recognizable — and it's famously logical and consistent, so once you learn a rule it usually sticks.",
+  "cards": [
+   {
+    "h": "German and English are closely related",
+    "body": "Both come from the same Germanic root, so lots of basic words are similar: Hand (hand), Wasser (water), Haus (house), Freund (friend), gut (good). You'll recognize more than you expect."
+   },
+   {
+    "h": "Greetings and basics",
+    "body": "Hallo (hello), Guten Tag (good day), Guten Morgen (good morning), Danke (thank you), Bitte (please / you're welcome), Auf Wiedersehen (goodbye), Ja / Nein (yes / no). 'Bitte' handily covers both 'please' and 'you're welcome.'"
+   },
+   {
+    "h": "Nouns are capitalized and have gender",
+    "body": "In German, every noun is capitalized (das Haus, the house) — a unique, helpful rule. Nouns have three genders, with 'the' as der (masc.), die (fem.), or das (neuter). You learn the article with each noun."
+   },
+   {
+    "h": "Pronunciation is consistent",
+    "body": "German is pronounced much as it's spelled, with steady rules. 'W' sounds like English 'v' (Wasser = 'vasser'); 'ei' sounds like 'eye'; 'ie' sounds like 'ee.' The ß (eszett) is a sharp 's' sound. Once you learn the sounds, you can read aloud reliably."
+   },
+   {
+    "h": "Building words",
+    "body": "German famously builds long words by sticking shorter ones together. Handschuh = Hand + Schuh (hand + shoe) = glove. Once you can break a long word into its parts, the scary-looking ones become readable."
+   }
+  ],
+  "flash": [
+   [
+    "Hallo",
+    "Hello"
+   ],
+   [
+    "Danke",
+    "Thank you"
+   ],
+   [
+    "Bitte",
+    "Please / you're welcome"
+   ],
+   [
+    "Auf Wiedersehen",
+    "Goodbye"
+   ],
+   [
+    "Ja / Nein",
+    "Yes / No"
+   ],
+   [
+    "der / die / das",
+    "'the' (masculine / feminine / neuter)"
+   ],
+   [
+    "Noun capitalization",
+    "All German nouns are capitalized."
+   ],
+   [
+    "Compound word",
+    "A long word built from shorter ones (Handschuh)."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "How do you say 'thank you' in German?",
+    "options": [
+     "Danke",
+     "Hallo",
+     "Bitte",
+     "Nein"
+    ],
+    "a": 0,
+    "why": "Danke means thank you."
+   },
+   {
+    "q": "A unique German spelling rule is that:",
+    "options": [
+     "All nouns are capitalized",
+     "There are no vowels",
+     "Words never have spaces",
+     "Everything is lowercase"
+    ],
+    "a": 0,
+    "why": "Every German noun is capitalized."
+   },
+   {
+    "q": "German 'W' is pronounced like English:",
+    "options": [
+     "V",
+     "W",
+     "B",
+     "F"
+    ],
+    "a": 0,
+    "why": "W sounds like 'v' (Wasser = 'vasser')."
+   },
+   {
+    "q": "German is closely related to:",
+    "options": [
+     "English",
+     "Chinese",
+     "Arabic",
+     "Swahili"
+    ],
+    "a": 0,
+    "why": "Both are Germanic languages with shared roots."
+   },
+   {
+    "q": "How many genders do German nouns have?",
+    "options": [
+     "Three (der, die, das)",
+     "One",
+     "Two",
+     "None"
+    ],
+    "a": 0,
+    "why": "Masculine (der), feminine (die), neuter (das)."
+   },
+   {
+    "q": "'Handschuh' (hand + shoe) means:",
+    "options": [
+     "Glove",
+     "Sock",
+     "Hat",
+     "Boot"
+    ],
+    "a": 0,
+    "why": "German builds compound words; a 'hand shoe' is a glove."
+   }
+  ]
+ },
+ "languages-american-sign-language": {
+  "title": "American Sign Language",
+  "subject": "World Languages",
+  "level": "All levels",
+  "intro": "American Sign Language (ASL) is a complete, natural language used by the Deaf community in the U.S. and much of Canada. It isn't English on the hands — it has its own vocabulary and grammar, expressed visually with handshapes, movement, and facial expression.",
+  "cards": [
+   {
+    "h": "ASL is a real, full language",
+    "body": "ASL is not 'English with gestures' — it's a distinct language with its own grammar, just as complete as any spoken language. It's the primary language of many Deaf Americans and has its own rich culture and history."
+   },
+   {
+    "h": "How ASL is made",
+    "body": "Signs are built from a few building blocks: handshape (the shape your hand makes), location (where you sign, near the face or body), movement, and palm orientation. Change one and you can change the whole meaning, the way changing a sound changes a spoken word."
+   },
+   {
+    "h": "Facial expression is grammar",
+    "body": "In ASL, your face and body aren't just emotion — they carry grammar. Raised eyebrows can mark a yes/no question; a furrowed brow marks a different kind of question; a head shake shows negation. Signing without facial expression is like speaking in a flat monotone that loses meaning."
+   },
+   {
+    "h": "Fingerspelling and word order",
+    "body": "ASL has a manual alphabet (fingerspelling) used for names and words with no established sign. Its grammar differs from English — it often uses a topic-comment order and drops English's little connecting words, so it's not signed word-for-word from English."
+   },
+   {
+    "h": "Why learn it",
+    "body": "ASL opens communication with Deaf people, is one of the most-studied languages in the U.S., and builds awareness of Deaf culture. Like any language, it's learned best through practice with others and, ideally, with Deaf teachers and community."
+   }
+  ],
+  "flash": [
+   [
+    "ASL",
+    "American Sign Language — a complete visual language."
+   ],
+   [
+    "Handshape",
+    "The shape of the hand, a building block of a sign."
+   ],
+   [
+    "Fingerspelling",
+    "Spelling words letter by letter with the manual alphabet."
+   ],
+   [
+    "Non-manual markers",
+    "Facial expressions and body movements that carry grammar."
+   ],
+   [
+    "Deaf culture",
+    "The shared community, values, and history of Deaf people."
+   ],
+   [
+    "Topic-comment",
+    "A common ASL sentence structure (state the topic, then comment)."
+   ],
+   [
+    "Palm orientation",
+    "Which way the palm faces — part of a sign's meaning."
+   ],
+   [
+    "Visual language",
+    "A language expressed and received through sight, not sound."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "ASL is:",
+    "options": [
+     "A complete language with its own grammar",
+     "English gestures",
+     "A code for English",
+     "Just miming"
+    ],
+    "a": 0,
+    "why": "It's a full, natural language distinct from English."
+   },
+   {
+    "q": "In ASL, facial expressions:",
+    "options": [
+     "Carry grammar (like marking questions)",
+     "Are just for emotion",
+     "Don't matter",
+     "Are forbidden"
+    ],
+    "a": 0,
+    "why": "Non-manual markers convey grammatical meaning."
+   },
+   {
+    "q": "Fingerspelling is used for:",
+    "options": [
+     "Names and words with no set sign",
+     "Every single word",
+     "Numbers only",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "The manual alphabet spells names and new/uncommon words."
+   },
+   {
+    "q": "A building block of an ASL sign is:",
+    "options": [
+     "Handshape",
+     "Tone of voice",
+     "Spelling",
+     "Volume"
+    ],
+    "a": 0,
+    "why": "Handshape, location, movement, and palm orientation form signs."
+   },
+   {
+    "q": "ASL grammar is:",
+    "options": [
+     "Different from English word order",
+     "Identical to English",
+     "Nonexistent",
+     "Based on sound"
+    ],
+    "a": 0,
+    "why": "It uses its own structure, often topic-comment, not word-for-word English."
+   },
+   {
+    "q": "ASL is the primary language of:",
+    "options": [
+     "Many Deaf Americans",
+     "Everyone in the U.S.",
+     "Only teachers",
+     "No one"
+    ],
+    "a": 0,
+    "why": "It's a primary language of the U.S. Deaf community."
+   }
+  ]
  }
 };
