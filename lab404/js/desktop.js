@@ -167,29 +167,51 @@
           '<div class="desktop-icon-label">' + escA(o.short) + '</div></div>';
       }).join("");
 
-      /* Drag-and-drop reordering, saved per device. */
+      /* Drag-and-drop reordering via Pointer Events (works on mouse, trackpad AND touch),
+         saved per device. A real drag suppresses the click so it doesn't also open the folder. */
       function saveOrder() {
         try {
           var keys = [].map.call(di.querySelectorAll(".desktop-icon[data-app]"), function (el) { return el.dataset.app; });
           localStorage.setItem(ORDER_KEY, JSON.stringify(keys));
         } catch (e) {}
       }
-      var dragEl = null;
-      [].forEach.call(di.querySelectorAll(".desktop-icon"), function (icon) {
-        icon.setAttribute("draggable", "true");
-        icon.addEventListener("dragstart", function (e) {
-          dragEl = icon; icon.classList.add("dragging");
-          try { e.dataTransfer.effectAllowed = "move"; e.dataTransfer.setData("text/plain", icon.dataset.app); } catch (_) {}
-        });
-        icon.addEventListener("dragend", function () { icon.classList.remove("dragging"); saveOrder(); });
-        icon.addEventListener("dragover", function (e) {
-          e.preventDefault();
-          if (!dragEl || dragEl === icon) return;
-          var r = icon.getBoundingClientRect();
-          if (e.clientY < r.top + r.height / 2) di.insertBefore(dragEl, icon);
-          else di.insertBefore(dragEl, icon.nextSibling);
-        });
+      var drag = null;
+      di.addEventListener("pointerdown", function (e) {
+        var icon = e.target.closest(".desktop-icon");
+        if (!icon || (e.button && e.button !== 0)) return;
+        drag = { el: icon, x: e.clientX, y: e.clientY, moved: false, pid: e.pointerId };
       });
+      di.addEventListener("pointermove", function (e) {
+        if (!drag) return;
+        if (!drag.moved) {
+          if (Math.abs(e.clientX - drag.x) < 6 && Math.abs(e.clientY - drag.y) < 6) return;
+          drag.moved = true;
+          drag.el.classList.add("dragging");
+          try { drag.el.setPointerCapture(drag.pid); } catch (_) {}
+        }
+        e.preventDefault();
+        var under = document.elementFromPoint(e.clientX, e.clientY);
+        under = under && under.closest(".desktop-icon");
+        if (under && under !== drag.el && under.parentNode === di) {
+          var r = under.getBoundingClientRect();
+          di.insertBefore(drag.el, (e.clientY < r.top + r.height / 2) ? under : under.nextSibling);
+        }
+      });
+      function endDrag() {
+        if (!drag) return;
+        var d = drag; drag = null;
+        if (d.moved) {
+          d.el.classList.remove("dragging");
+          try { d.el.releasePointerCapture(d.pid); } catch (_) {}
+          saveOrder();
+          /* swallow the click that fires right after a drag */
+          var block = function (ev) { ev.stopPropagation(); ev.preventDefault(); d.el.removeEventListener("click", block, true); };
+          d.el.addEventListener("click", block, true);
+          setTimeout(function () { d.el.removeEventListener("click", block, true); }, 350);
+        }
+      }
+      di.addEventListener("pointerup", endDrag);
+      di.addEventListener("pointercancel", function () { if (drag && drag.moved) drag.el.classList.remove("dragging"); drag = null; });
     }
     var sms = document.getElementById("startSubjects");
     if (sms) {
