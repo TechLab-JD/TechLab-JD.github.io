@@ -4953,5 +4953,1955 @@ window.LAB404_CONTENT = {
     "why": "Income-based programs (Medicaid, marketplace subsidies) can be free or cheap."
    }
   ]
+ },
+ "science-life-science": {
+  "title": "Life Science",
+  "subject": "Science",
+  "level": "Grades K-8",
+  "intro": "Life science is the study of living things — what they are, what they need, and how they live and grow. It's biology's foundation, and it starts with the world you can see all around you.",
+  "cards": [
+   {
+    "h": "Living vs. nonliving",
+    "body": "Living things do things nonliving things can't: they grow, use energy (food), respond to their surroundings, and reproduce (make more of their kind). A rock doesn't; a plant, a bug, and you do."
+   },
+   {
+    "h": "What living things need",
+    "body": "Almost all living things need energy (food or sunlight), water, air (most need oxygen or carbon dioxide), and a suitable place to live. Take any of these away and a living thing can't survive."
+   },
+   {
+    "h": "Plants vs. animals",
+    "body": "Plants make their own food from sunlight (photosynthesis) and usually stay in one place. Animals can't make their own food — they must eat plants or other animals — and most can move. Both are living things with different strategies."
+   },
+   {
+    "h": "Habitats and food chains",
+    "body": "A habitat is where a living thing naturally lives and gets what it needs. A food chain shows who eats whom: the sun feeds plants, plants feed plant-eaters, and plant-eaters feed meat-eaters. Energy passes up the chain."
+   },
+   {
+    "h": "Life cycles",
+    "body": "Every living thing goes through a life cycle — born or sprouted, growing up, reproducing, and eventually dying. A butterfly's (egg → caterpillar → chrysalis → butterfly) looks very different from a human's, but every species has one."
+   }
+  ],
+  "flash": [
+   [
+    "Living thing",
+    "Something that grows, uses energy, responds, and reproduces."
+   ],
+   [
+    "Organism",
+    "Any individual living thing."
+   ],
+   [
+    "Photosynthesis",
+    "How plants make food from sunlight, water, and air."
+   ],
+   [
+    "Habitat",
+    "The place where a living thing naturally lives."
+   ],
+   [
+    "Food chain",
+    "The order of who eats whom, passing energy along."
+   ],
+   [
+    "Producer",
+    "A living thing (plant) that makes its own food."
+   ],
+   [
+    "Consumer",
+    "A living thing that eats other living things."
+   ],
+   [
+    "Life cycle",
+    "The stages a living thing goes through from birth to death."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Which is a sign of a living thing?",
+    "options": [
+     "It grows and reproduces",
+     "It's hard",
+     "It's shiny",
+     "It's large"
+    ],
+    "a": 0,
+    "why": "Living things grow, use energy, respond, and reproduce."
+   },
+   {
+    "q": "Plants make their own food using:",
+    "options": [
+     "Sunlight (photosynthesis)",
+     "Meat",
+     "Other plants only",
+     "Rocks"
+    ],
+    "a": 0,
+    "why": "Photosynthesis turns sunlight, water, and air into food."
+   },
+   {
+    "q": "A habitat is:",
+    "options": [
+     "Where a living thing naturally lives",
+     "A type of food",
+     "A kind of rock",
+     "A season"
+    ],
+    "a": 0,
+    "why": "It's the place that provides what an organism needs."
+   },
+   {
+    "q": "In a food chain, energy originally comes from:",
+    "options": [
+     "The sun",
+     "Meat-eaters",
+     "The soil only",
+     "Water only"
+    ],
+    "a": 0,
+    "why": "The sun feeds plants, which feed the rest of the chain."
+   },
+   {
+    "q": "An animal is a:",
+    "options": [
+     "Consumer (must eat other things)",
+     "Producer",
+     "Nonliving thing",
+     "Type of plant"
+    ],
+    "a": 0,
+    "why": "Animals can't make their own food, so they consume others."
+   },
+   {
+    "q": "A butterfly's egg → caterpillar → chrysalis → butterfly is its:",
+    "options": [
+     "Life cycle",
+     "Habitat",
+     "Food chain",
+     "Diet"
+    ],
+    "a": 0,
+    "why": "Those are the stages of its life cycle."
+   }
+  ]
+ },
+ "science-chemistry": {
+  "title": "Chemistry",
+  "subject": "Science",
+  "level": "Grades 9-12",
+  "intro": "Chemistry is the study of matter — what everything is made of, and how it changes. From the air you breathe to the food you digest, it's all chemistry, built from tiny building blocks called atoms.",
+  "cards": [
+   {
+    "h": "Matter and its states",
+    "body": "Matter is anything that has mass and takes up space. It commonly exists as a solid (fixed shape), liquid (flows, takes its container's shape), or gas (spreads to fill space). Adding or removing heat moves a substance between states."
+   },
+   {
+    "h": "Atoms and elements",
+    "body": "Atoms are the tiny building blocks of all matter. An element is a substance made of just one kind of atom — like oxygen, gold, or carbon. There are about 118 known elements, and everything is built from combinations of them."
+   },
+   {
+    "h": "The periodic table",
+    "body": "The periodic table organizes all the elements by their properties. Each element has a symbol (O for oxygen, Na for sodium) and a number (its count of protons). Elements in the same column behave similarly, making the table a map of how matter behaves."
+   },
+   {
+    "h": "Molecules and compounds",
+    "body": "Atoms join to form molecules. When different elements combine, they make a compound with new properties — two hydrogen atoms and one oxygen make water (H₂O), which is nothing like hydrogen or oxygen gas on their own."
+   },
+   {
+    "h": "Chemical reactions",
+    "body": "In a chemical reaction, substances (reactants) rearrange their atoms into new substances (products) — like iron plus oxygen making rust, or fuel burning. Atoms are never created or destroyed, only rearranged (conservation of mass)."
+   }
+  ],
+  "flash": [
+   [
+    "Matter",
+    "Anything that has mass and takes up space."
+   ],
+   [
+    "Atom",
+    "The basic building block of all matter."
+   ],
+   [
+    "Element",
+    "A substance made of only one kind of atom."
+   ],
+   [
+    "Molecule",
+    "Two or more atoms bonded together."
+   ],
+   [
+    "Compound",
+    "A substance of different elements combined (e.g., H₂O)."
+   ],
+   [
+    "Periodic table",
+    "A chart organizing all elements by their properties."
+   ],
+   [
+    "Chemical reaction",
+    "A process where atoms rearrange into new substances."
+   ],
+   [
+    "Conservation of mass",
+    "Matter is not created or destroyed in a reaction."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The basic building block of all matter is the:",
+    "options": [
+     "Atom",
+     "Molecule",
+     "Rock",
+     "Cell"
+    ],
+    "a": 0,
+    "why": "Atoms are the smallest units that make up matter."
+   },
+   {
+    "q": "A substance made of only one kind of atom is a(n):",
+    "options": [
+     "Element",
+     "Compound",
+     "Mixture",
+     "Molecule"
+    ],
+    "a": 0,
+    "why": "An element has just one type of atom; a compound has several."
+   },
+   {
+    "q": "Water (H₂O) is an example of a:",
+    "options": [
+     "Compound",
+     "Element",
+     "Single atom",
+     "Mixture of gases"
+    ],
+    "a": 0,
+    "why": "It's different elements chemically combined into a new substance."
+   },
+   {
+    "q": "The three common states of matter are:",
+    "options": [
+     "Solid, liquid, gas",
+     "Hot, warm, cold",
+     "Big, medium, small",
+     "Hard, soft, wet"
+    ],
+    "a": 0,
+    "why": "Matter commonly exists as solid, liquid, or gas."
+   },
+   {
+    "q": "In a chemical reaction, atoms are:",
+    "options": [
+     "Rearranged, not created or destroyed",
+     "Created from nothing",
+     "Destroyed",
+     "Turned into energy only"
+    ],
+    "a": 0,
+    "why": "Conservation of mass: atoms are conserved, just rearranged."
+   },
+   {
+    "q": "The periodic table organizes elements by their:",
+    "options": [
+     "Properties",
+     "Price",
+     "Color only",
+     "Discovery date"
+    ],
+    "a": 0,
+    "why": "It groups elements with similar properties together."
+   }
+  ]
+ },
+ "science-physics": {
+  "title": "Physics",
+  "subject": "Science",
+  "level": "Grades 9-12",
+  "intro": "Physics is the study of matter, energy, and how they interact — the rules governing motion, forces, light, and electricity. It's the most fundamental science, describing everything from a thrown ball to the stars.",
+  "cards": [
+   {
+    "h": "Forces and motion",
+    "body": "A force is a push or a pull. Newton's first law says an object stays still, or keeps moving at a steady speed in a straight line, unless a force acts on it (inertia). Things don't speed up, slow down, or turn on their own — a force makes them."
+   },
+   {
+    "h": "Newton's second and third laws",
+    "body": "The second law: a bigger force makes a bigger acceleration, and heavier objects are harder to accelerate (F = ma). The third law: for every action there's an equal and opposite reaction — push on a wall and it pushes back; that's how rockets and walking work."
+   },
+   {
+    "h": "Energy",
+    "body": "Energy is the ability to do work, in forms like kinetic (motion), potential (stored, like a raised weight), heat, light, and electrical. Energy can change form but is never created or destroyed (conservation of energy). A roller coaster trades potential for kinetic and back."
+   },
+   {
+    "h": "Gravity",
+    "body": "Gravity is the force that pulls objects with mass toward each other. On Earth it pulls everything down at the same rate (ignoring air resistance) — a feather and a hammer fall together in a vacuum. Gravity keeps the Moon orbiting Earth and Earth orbiting the Sun."
+   },
+   {
+    "h": "Waves: light and sound",
+    "body": "A wave carries energy without carrying matter along with it. Sound is a wave that needs a medium (air, water) to travel, which is why space is silent. Light is a wave that can travel through empty space, which is how the Sun's energy reaches us."
+   }
+  ],
+  "flash": [
+   [
+    "Force",
+    "A push or a pull on an object."
+   ],
+   [
+    "Inertia",
+    "An object's resistance to a change in its motion."
+   ],
+   [
+    "F = ma",
+    "Force equals mass times acceleration (Newton's second law)."
+   ],
+   [
+    "Kinetic energy",
+    "The energy of motion."
+   ],
+   [
+    "Potential energy",
+    "Stored energy (e.g., a raised or stretched object)."
+   ],
+   [
+    "Conservation of energy",
+    "Energy changes form but is never created or destroyed."
+   ],
+   [
+    "Gravity",
+    "The force pulling objects with mass toward each other."
+   ],
+   [
+    "Wave",
+    "A disturbance that carries energy without carrying matter."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "An object keeps moving at a steady speed unless:",
+    "options": [
+     "A force acts on it",
+     "It gets tired",
+     "Time passes",
+     "It wants to stop"
+    ],
+    "a": 0,
+    "why": "Newton's first law (inertia): motion changes only when a force acts."
+   },
+   {
+    "q": "Newton's second law is written as:",
+    "options": [
+     "F = ma",
+     "E = mc²",
+     "a = F",
+     "F = m"
+    ],
+    "a": 0,
+    "why": "Force = mass × acceleration."
+   },
+   {
+    "q": "The energy of motion is called:",
+    "options": [
+     "Kinetic energy",
+     "Potential energy",
+     "Heat only",
+     "Light"
+    ],
+    "a": 0,
+    "why": "Kinetic energy is energy an object has because it's moving."
+   },
+   {
+    "q": "'For every action there is an equal and opposite reaction' is Newton's:",
+    "options": [
+     "Third law",
+     "First law",
+     "Second law",
+     "Law of gravity"
+    ],
+    "a": 0,
+    "why": "That's the third law of motion."
+   },
+   {
+    "q": "Sound cannot travel through:",
+    "options": [
+     "Empty space (a vacuum)",
+     "Air",
+     "Water",
+     "Metal"
+    ],
+    "a": 0,
+    "why": "Sound needs a medium; space has none, so it's silent."
+   },
+   {
+    "q": "Energy can:",
+    "options": [
+     "Change form but not be destroyed",
+     "Be created from nothing",
+     "Disappear completely",
+     "Only be heat"
+    ],
+    "a": 0,
+    "why": "Conservation of energy: it transforms but is conserved."
+   }
+  ]
+ },
+ "science-earth-space": {
+  "title": "Earth & Space",
+  "subject": "Science",
+  "level": "Grades 6-12",
+  "intro": "Earth and space science looks at our planet and the universe around it — how Earth is built, how it changes, its weather and water, and our place among the Sun, Moon, and stars.",
+  "cards": [
+   {
+    "h": "Earth's layers",
+    "body": "Earth is built in layers: a thin rocky crust we live on, a thick hot mantle beneath, and a core of mostly iron (a liquid outer core and a solid inner core). Heat from deep inside drives much of what happens at the surface."
+   },
+   {
+    "h": "Plate tectonics",
+    "body": "Earth's crust is broken into huge moving pieces called tectonic plates that drift slowly on the mantle. Where they meet, they build mountains, open oceans, and cause earthquakes and volcanoes. It's why the continents look like puzzle pieces."
+   },
+   {
+    "h": "The rock cycle",
+    "body": "Rocks slowly change form. Igneous rock forms from cooled lava or magma; weathering breaks rock into sediment that compacts into sedimentary rock; heat and pressure turn rock into metamorphic rock. Over long time, rock cycles between these types."
+   },
+   {
+    "h": "The water cycle and weather",
+    "body": "Water constantly cycles: it evaporates into the air, condenses into clouds, and falls as precipitation (rain, snow), then flows back to the sea. Weather is the day-to-day state of the atmosphere; climate is the long-term average pattern of a place."
+   },
+   {
+    "h": "The solar system",
+    "body": "Earth is one of eight planets orbiting the Sun, a star. The Moon orbits Earth, causing tides and its changing phases. Earth's tilt as it orbits the Sun gives us seasons, and its spin gives us day and night."
+   }
+  ],
+  "flash": [
+   [
+    "Crust",
+    "Earth's thin, solid outer rocky layer."
+   ],
+   [
+    "Mantle",
+    "The thick, hot layer beneath Earth's crust."
+   ],
+   [
+    "Tectonic plates",
+    "Giant moving pieces of Earth's crust."
+   ],
+   [
+    "Rock cycle",
+    "How rocks change among igneous, sedimentary, metamorphic."
+   ],
+   [
+    "Water cycle",
+    "Evaporation, condensation, precipitation, and runoff."
+   ],
+   [
+    "Weather vs. climate",
+    "Weather is day-to-day; climate is the long-term average."
+   ],
+   [
+    "Orbit",
+    "The path one object takes around another in space."
+   ],
+   [
+    "Seasons",
+    "Caused by Earth's tilt as it orbits the Sun."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Earth's thin outer rocky layer is the:",
+    "options": [
+     "Crust",
+     "Mantle",
+     "Core",
+     "Atmosphere"
+    ],
+    "a": 0,
+    "why": "We live on the crust; the mantle and core lie beneath."
+   },
+   {
+    "q": "Earthquakes and volcanoes mostly occur:",
+    "options": [
+     "Where tectonic plates meet",
+     "In the center of plates only",
+     "In the ocean only",
+     "Randomly, evenly everywhere"
+    ],
+    "a": 0,
+    "why": "Plate boundaries are where most happen."
+   },
+   {
+    "q": "In the water cycle, water rising into the air is:",
+    "options": [
+     "Evaporation",
+     "Precipitation",
+     "Condensation",
+     "Runoff"
+    ],
+    "a": 0,
+    "why": "Evaporation turns liquid water into vapor that rises."
+   },
+   {
+    "q": "The difference between weather and climate is:",
+    "options": [
+     "Weather is day-to-day; climate is long-term",
+     "They're the same",
+     "Climate is one day",
+     "Weather is 100 years"
+    ],
+    "a": 0,
+    "why": "Climate is the long-term average; weather is right now."
+   },
+   {
+    "q": "Seasons are caused by:",
+    "options": [
+     "Earth's tilt as it orbits the Sun",
+     "Earth moving closer to the Sun",
+     "The Moon",
+     "Clouds"
+    ],
+    "a": 0,
+    "why": "The tilt changes how directly sunlight hits each hemisphere."
+   },
+   {
+    "q": "What causes day and night?",
+    "options": [
+     "Earth spinning on its axis",
+     "Earth orbiting the Sun",
+     "The Moon's phases",
+     "Clouds blocking the Sun"
+    ],
+    "a": 0,
+    "why": "Earth's rotation turns us toward and away from the Sun."
+   }
+  ]
+ },
+ "science-environmental-science": {
+  "title": "Environmental Science",
+  "subject": "Science",
+  "level": "College",
+  "intro": "Environmental science studies how living things interact with each other and their surroundings — and how human activity affects the natural systems we all depend on. It connects biology, chemistry, and earth science to real-world problems.",
+  "cards": [
+   {
+    "h": "Ecosystems",
+    "body": "An ecosystem is a community of living things interacting with each other and their physical environment (air, water, soil). Energy flows through it from the sun to producers to consumers, and nutrients cycle and get reused. Everything is connected — change one part and others feel it."
+   },
+   {
+    "h": "Biodiversity",
+    "body": "Biodiversity is the variety of life in an area — many different species. It makes ecosystems more stable and resilient, provides food and medicine, and keeps natural systems working. Losing species (extinction) weakens the whole web of life."
+   },
+   {
+    "h": "Natural cycles",
+    "body": "Key materials cycle through the environment. In the carbon cycle, carbon moves between the air, living things, and the ground; in the water cycle, water moves among sea, air, and land. Human activity can overload these cycles — for example, adding extra carbon dioxide to the air."
+   },
+   {
+    "h": "Human impact and pollution",
+    "body": "People affect the environment through pollution (air, water, plastic), habitat destruction, and overuse of resources. These harm wildlife and human health. Many effects are reversible with better choices, but some — like extinction — are permanent."
+   },
+   {
+    "h": "Climate change and sustainability",
+    "body": "Burning fossil fuels releases greenhouse gases that trap heat, warming the planet and shifting weather and sea levels — the core of human-caused climate change. Sustainability means meeting today's needs without using up what future generations will need, through things like renewable energy, conservation, and recycling."
+   }
+  ],
+  "flash": [
+   [
+    "Ecosystem",
+    "A community of living things and their environment, interacting."
+   ],
+   [
+    "Biodiversity",
+    "The variety of different species in an area."
+   ],
+   [
+    "Carbon cycle",
+    "How carbon moves among air, living things, and the ground."
+   ],
+   [
+    "Greenhouse gas",
+    "A gas (like CO₂) that traps heat in the atmosphere."
+   ],
+   [
+    "Climate change",
+    "Long-term warming and weather shifts, largely human-caused."
+   ],
+   [
+    "Sustainability",
+    "Meeting today's needs without harming future generations'."
+   ],
+   [
+    "Renewable energy",
+    "Energy from sources that don't run out (sun, wind)."
+   ],
+   [
+    "Extinction",
+    "The permanent loss of a species."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "An ecosystem is:",
+    "options": [
+     "Living things interacting with their environment",
+     "Only the animals",
+     "Only the weather",
+     "A single organism"
+    ],
+    "a": 0,
+    "why": "It's the whole community plus its physical surroundings."
+   },
+   {
+    "q": "Biodiversity refers to:",
+    "options": [
+     "The variety of species in an area",
+     "The number of rocks",
+     "The amount of rain",
+     "One species only"
+    ],
+    "a": 0,
+    "why": "More variety of life generally means a more resilient ecosystem."
+   },
+   {
+    "q": "Greenhouse gases like CO₂ cause warming because they:",
+    "options": [
+     "Trap heat in the atmosphere",
+     "Block all sunlight",
+     "Cool the planet",
+     "Make oxygen"
+    ],
+    "a": 0,
+    "why": "They trap heat, raising global temperatures."
+   },
+   {
+    "q": "Which is a renewable energy source?",
+    "options": [
+     "Solar (sun)",
+     "Coal",
+     "Oil",
+     "Natural gas"
+    ],
+    "a": 0,
+    "why": "Sunlight and wind don't run out; fossil fuels do."
+   },
+   {
+    "q": "Sustainability means:",
+    "options": [
+     "Meeting needs without using up future resources",
+     "Using everything now",
+     "Never using resources",
+     "Only recycling paper"
+    ],
+    "a": 0,
+    "why": "It balances present needs with protecting the future."
+   },
+   {
+    "q": "Which human impact is permanent?",
+    "options": [
+     "Extinction of a species",
+     "Air pollution",
+     "Littering",
+     "Water pollution"
+    ],
+    "a": 0,
+    "why": "Pollution can often be reversed; extinction cannot."
+   }
+  ]
+ },
+ "english-reading-phonics": {
+  "title": "Reading & Phonics",
+  "subject": "English & Language Arts",
+  "level": "Grades K-5",
+  "intro": "Reading is the gateway skill for everything else in school and life. It starts with cracking the code — connecting letters to sounds — and grows into understanding and enjoying what you read.",
+  "cards": [
+   {
+    "h": "Letters and sounds (phonics)",
+    "body": "Phonics is the link between letters and the sounds they make. Each letter (or group, like 'sh' or 'ch') stands for a sound; blending those sounds lets you sound out words you've never seen. C-A-T blended is 'cat.'"
+   },
+   {
+    "h": "Blending and sounding out",
+    "body": "To read a new word, say each sound in order and blend them smoothly: /d/ /o/ /g/ → 'dog.' With practice, common words become automatic (you know them on sight) and you only sound out the unfamiliar ones."
+   },
+   {
+    "h": "Vowels and consonants",
+    "body": "The vowels are a, e, i, o, u (and sometimes y). Every word needs at least one vowel sound. Consonants are the other letters. Vowels can be short (cat, bed) or long (cake, bike) — a silent 'e' at the end often makes the vowel say its name."
+   },
+   {
+    "h": "Reading comprehension",
+    "body": "Decoding words is only half of reading — understanding is the goal. After reading, ask: Who is it about? What happened? Why? Picture the story in your head and connect it to what you already know. If a sentence doesn't make sense, reread it."
+   },
+   {
+    "h": "Building the habit",
+    "body": "Reading gets easier the more you do it. Read a little every day, pick things you enjoy, and don't worry about every hard word — use the sentence around it to guess, and look up the ones that really matter."
+   }
+  ],
+  "flash": [
+   [
+    "Phonics",
+    "Connecting letters to the sounds they make."
+   ],
+   [
+    "Blending",
+    "Combining sounds in order to read a word."
+   ],
+   [
+    "Vowel",
+    "The letters a, e, i, o, u (and sometimes y)."
+   ],
+   [
+    "Consonant",
+    "Any letter that isn't a vowel."
+   ],
+   [
+    "Decoding",
+    "Sounding out a written word."
+   ],
+   [
+    "Sight word",
+    "A common word you recognize instantly without sounding out."
+   ],
+   [
+    "Comprehension",
+    "Understanding the meaning of what you read."
+   ],
+   [
+    "Context",
+    "The words around an unknown word that hint at its meaning."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Phonics is about connecting letters to:",
+    "options": [
+     "Their sounds",
+     "Their colors",
+     "Numbers",
+     "Pictures only"
+    ],
+    "a": 0,
+    "why": "Phonics links letters with the sounds they make."
+   },
+   {
+    "q": "Blending /c/ /a/ /t/ gives the word:",
+    "options": [
+     "cat",
+     "act",
+     "tac",
+     "cot"
+    ],
+    "a": 0,
+    "why": "Say the sounds in order and blend: 'cat.'"
+   },
+   {
+    "q": "Which are the vowels?",
+    "options": [
+     "a, e, i, o, u",
+     "b, c, d, f",
+     "x, y, z",
+     "all letters"
+    ],
+    "a": 0,
+    "why": "A, E, I, O, U (and sometimes Y) are vowels."
+   },
+   {
+    "q": "A word you recognize instantly without sounding out is a:",
+    "options": [
+     "Sight word",
+     "Vowel",
+     "Syllable",
+     "Consonant"
+    ],
+    "a": 0,
+    "why": "Common words become automatic sight words."
+   },
+   {
+    "q": "The real goal of reading is:",
+    "options": [
+     "Understanding the meaning",
+     "Reading fast only",
+     "Memorizing letters",
+     "Never rereading"
+    ],
+    "a": 0,
+    "why": "Comprehension — understanding — is the point, not just decoding."
+   },
+   {
+    "q": "If you hit a word you don't know, a good first step is to:",
+    "options": [
+     "Use the surrounding context",
+     "Skip the whole book",
+     "Give up",
+     "Only guess randomly"
+    ],
+    "a": 0,
+    "why": "Context — the nearby words — often reveals the meaning."
+   }
+  ]
+ },
+ "english-vocabulary": {
+  "title": "Vocabulary",
+  "subject": "English & Language Arts",
+  "level": "Grades 6-12",
+  "intro": "A strong vocabulary helps you understand more of what you read and say exactly what you mean. The best part: you can grow it with a few habits, not just memorizing word lists.",
+  "cards": [
+   {
+    "h": "Learn words from context",
+    "body": "Most vocabulary is learned by meeting words in reading, not from lists. When you hit an unfamiliar word, use the sentence around it to guess the meaning before you look it up. The more you read, the faster your vocabulary grows."
+   },
+   {
+    "h": "Roots, prefixes, and suffixes",
+    "body": "Many English words are built from parts. Knowing common ones lets you decode new words: 'tele' (far) + 'vision' (seeing) = seeing from far. A prefix at the front (un-, re-, pre-) or a suffix at the end (-less, -ful, -tion) changes a word's meaning."
+   },
+   {
+    "h": "Synonyms, antonyms, and shades",
+    "body": "Synonyms are words with similar meanings (big/large); antonyms are opposites (hot/cold). But similar words often carry different shades — 'confident' and 'arrogant' both mean sure of oneself, but one is positive. Picking the right shade sharpens your writing."
+   },
+   {
+    "h": "Denotation vs. connotation",
+    "body": "A word's denotation is its dictionary meaning; its connotation is the feeling it carries. 'Cheap' and 'affordable' both mean low-cost, but 'cheap' sounds negative. Word choice shapes how readers feel, so choose for both meaning and tone."
+   },
+   {
+    "h": "Make new words stick",
+    "body": "To remember a new word, use it: say it, write it in a sentence, and connect it to something you know. Words you actually use become yours; words you only recognize fade. A handful learned deeply beats a long list half-remembered."
+   }
+  ],
+  "flash": [
+   [
+    "Context clue",
+    "A hint to a word's meaning from the surrounding text."
+   ],
+   [
+    "Prefix",
+    "A word part added to the front that changes meaning (un-, re-)."
+   ],
+   [
+    "Suffix",
+    "A word part added to the end (-less, -ful, -tion)."
+   ],
+   [
+    "Root",
+    "The core part of a word that carries its basic meaning."
+   ],
+   [
+    "Synonym",
+    "A word with a meaning similar to another."
+   ],
+   [
+    "Antonym",
+    "A word with the opposite meaning."
+   ],
+   [
+    "Denotation",
+    "A word's literal dictionary meaning."
+   ],
+   [
+    "Connotation",
+    "The feeling or tone a word carries beyond its definition."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Most vocabulary is best learned by:",
+    "options": [
+     "Meeting words in reading",
+     "Memorizing long lists",
+     "Watching TV only",
+     "Avoiding hard words"
+    ],
+    "a": 0,
+    "why": "Reading exposes you to words in context, which makes them stick."
+   },
+   {
+    "q": "The prefix 'un-' in 'unhappy' means:",
+    "options": [
+     "Not",
+     "Very",
+     "Again",
+     "Before"
+    ],
+    "a": 0,
+    "why": "'Un-' means not: unhappy = not happy."
+   },
+   {
+    "q": "A word with the opposite meaning is a(n):",
+    "options": [
+     "Antonym",
+     "Synonym",
+     "Prefix",
+     "Root"
+    ],
+    "a": 0,
+    "why": "Antonyms are opposites; synonyms are similar."
+   },
+   {
+    "q": "'Cheap' vs. 'affordable' differ mainly in their:",
+    "options": [
+     "Connotation (tone)",
+     "Spelling only",
+     "Number of letters",
+     "Denotation"
+    ],
+    "a": 0,
+    "why": "Both mean low-cost, but 'cheap' carries a negative tone."
+   },
+   {
+    "q": "A context clue is:",
+    "options": [
+     "A hint to meaning from nearby words",
+     "A dictionary",
+     "A synonym list",
+     "A spelling rule"
+    ],
+    "a": 0,
+    "why": "The surrounding sentence hints at an unfamiliar word's meaning."
+   },
+   {
+    "q": "The best way to make a new word stick is to:",
+    "options": [
+     "Use it in your own speech and writing",
+     "Read it once",
+     "Ignore it",
+     "Only look it up"
+    ],
+    "a": 0,
+    "why": "Actively using a word cements it in memory."
+   }
+  ]
+ },
+ "english-literature": {
+  "title": "Literature",
+  "subject": "English & Language Arts",
+  "level": "Grades 9-12",
+  "intro": "Literature is writing worth returning to — stories, poems, and plays that explore what it means to be human. Learning to read it closely lets you get more out of any book and see how writers create meaning.",
+  "cards": [
+   {
+    "h": "Elements of a story",
+    "body": "Most stories share building blocks: characters (who), setting (where and when), plot (what happens), conflict (the struggle), and theme (the deeper idea). Noticing these helps you understand how a story works, not just what happens in it."
+   },
+   {
+    "h": "Theme: the big idea",
+    "body": "The theme is the underlying message or insight a work explores — like 'power corrupts' or 'love requires sacrifice.' It's not the plot (the events) but what the events add up to. Good stories suggest their theme rather than stating it outright."
+   },
+   {
+    "h": "Point of view",
+    "body": "Who's telling the story shapes everything. First person ('I') puts you inside one character's head; third person ('he/she/they') can follow one character or know everyone's thoughts. An unreliable narrator may not tell the full truth — part of the fun is noticing."
+   },
+   {
+    "h": "Figurative language",
+    "body": "Writers use language that means more than its literal words. A metaphor says one thing is another ('time is a thief'); a simile compares using like/as ('brave as a lion'); symbolism lets an object stand for an idea (a storm for inner turmoil). These make writing vivid and layered."
+   },
+   {
+    "h": "Reading closely",
+    "body": "Close reading means slowing down to notice how a passage works — word choice, imagery, what's repeated, what's left unsaid. Ask not just 'what happened' but 'why did the author write it this way, and what does it make me feel or think?' That's where literature rewards you."
+   }
+  ],
+  "flash": [
+   [
+    "Theme",
+    "The underlying message or insight a work explores."
+   ],
+   [
+    "Plot",
+    "The sequence of events in a story."
+   ],
+   [
+    "Conflict",
+    "The central struggle that drives a story."
+   ],
+   [
+    "Point of view",
+    "Who is telling the story (first or third person)."
+   ],
+   [
+    "Metaphor",
+    "Saying one thing is another ('time is a thief')."
+   ],
+   [
+    "Simile",
+    "A comparison using 'like' or 'as' ('brave as a lion')."
+   ],
+   [
+    "Symbolism",
+    "When an object stands for a larger idea."
+   ],
+   [
+    "Close reading",
+    "Analyzing how a passage creates meaning."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The theme of a story is:",
+    "options": [
+     "Its underlying message or insight",
+     "The list of events",
+     "The main character's name",
+     "The setting"
+    ],
+    "a": 0,
+    "why": "Theme is the deeper idea; plot is the events."
+   },
+   {
+    "q": "'Brave as a lion' is an example of a:",
+    "options": [
+     "Simile",
+     "Metaphor",
+     "Theme",
+     "Setting"
+    ],
+    "a": 0,
+    "why": "A simile compares using 'like' or 'as.'"
+   },
+   {
+    "q": "A story told from the 'I' perspective uses:",
+    "options": [
+     "First person point of view",
+     "Third person",
+     "No narrator",
+     "Symbolism"
+    ],
+    "a": 0,
+    "why": "First person is narrated by a character using 'I.'"
+   },
+   {
+    "q": "'Time is a thief' is a:",
+    "options": [
+     "Metaphor",
+     "Simile",
+     "Fact",
+     "Setting"
+    ],
+    "a": 0,
+    "why": "A metaphor states one thing IS another, without 'like/as.'"
+   },
+   {
+    "q": "When an object stands for a bigger idea, that's:",
+    "options": [
+     "Symbolism",
+     "Plot",
+     "Conflict",
+     "Point of view"
+    ],
+    "a": 0,
+    "why": "Symbolism uses a concrete thing to represent an abstract idea."
+   },
+   {
+    "q": "Close reading means:",
+    "options": [
+     "Slowing down to analyze how a passage works",
+     "Reading as fast as possible",
+     "Only reading the ending",
+     "Skipping hard parts"
+    ],
+    "a": 0,
+    "why": "It's careful analysis of word choice, imagery, and meaning."
+   }
+  ]
+ },
+ "social-us-history": {
+  "title": "US History",
+  "subject": "Social Studies",
+  "level": "Grades 6-12",
+  "intro": "U.S. history is the story of how the United States came to be and how it changed — its founding ideals, its conflicts, and the long struggle to extend its promises to everyone.",
+  "cards": [
+   {
+    "h": "Founding and independence",
+    "body": "Thirteen British colonies declared independence in 1776 (the Declaration of Independence), fought the Revolutionary War, and won. The new nation then wrote the Constitution (1787), creating a federal government with three branches and, soon after, the Bill of Rights."
+   },
+   {
+    "h": "Expansion and division",
+    "body": "Through the 1800s the U.S. expanded westward across the continent — often by displacing Native Americans. Deep division over slavery grew until it split the nation in the Civil War (1861–1865), which ended slavery and preserved the Union."
+   },
+   {
+    "h": "Industrialization and reform",
+    "body": "After the Civil War the country industrialized rapidly — railroads, factories, big cities, and waves of immigrants. This brought wealth but also harsh conditions, sparking reform movements for workers' rights, women's suffrage (won nationally in 1920), and more."
+   },
+   {
+    "h": "The World Wars and the Depression",
+    "body": "The U.S. became a global power through World War I and World War II. Between them, the Great Depression (1930s) brought mass unemployment and new government programs. WWII ended with the U.S. as a superpower."
+   },
+   {
+    "h": "Civil rights and modern America",
+    "body": "The Civil Rights Movement of the 1950s–60s fought legal segregation and expanded voting and equal rights, led by figures like Martin Luther King Jr. The decades since have continued debates over rights, equality, and America's role in the world."
+   }
+  ],
+  "flash": [
+   [
+    "Declaration of Independence",
+    "The 1776 document declaring the colonies free from Britain."
+   ],
+   [
+    "Constitution",
+    "The 1787 document setting up the U.S. government."
+   ],
+   [
+    "Civil War",
+    "The 1861–1865 war that ended slavery and preserved the Union."
+   ],
+   [
+    "Industrialization",
+    "The shift to factories, railroads, and cities."
+   ],
+   [
+    "Suffrage",
+    "The right to vote (women won it nationally in 1920)."
+   ],
+   [
+    "Great Depression",
+    "The severe economic crisis of the 1930s."
+   ],
+   [
+    "Civil Rights Movement",
+    "The 1950s–60s struggle for equal rights and against segregation."
+   ],
+   [
+    "Superpower",
+    "A nation with dominant global power, as the U.S. became after WWII."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The Declaration of Independence was adopted in:",
+    "options": [
+     "1776",
+     "1492",
+     "1865",
+     "1920"
+    ],
+    "a": 0,
+    "why": "The colonies declared independence from Britain in 1776."
+   },
+   {
+    "q": "The U.S. Civil War was primarily over:",
+    "options": [
+     "Slavery and preserving the Union",
+     "Taxes on tea",
+     "Independence from Britain",
+     "Westward railroads"
+    ],
+    "a": 0,
+    "why": "Division over slavery split the nation; the war ended slavery."
+   },
+   {
+    "q": "The document that set up the U.S. government is the:",
+    "options": [
+     "Constitution",
+     "Declaration of Independence",
+     "Bill of Sale",
+     "Magna Carta"
+    ],
+    "a": 0,
+    "why": "The Constitution (1787) created the federal government."
+   },
+   {
+    "q": "Women won the nationwide right to vote in:",
+    "options": [
+     "1920",
+     "1776",
+     "1865",
+     "1965"
+    ],
+    "a": 0,
+    "why": "The 19th Amendment granted women's suffrage in 1920."
+   },
+   {
+    "q": "The Civil Rights Movement fought mainly against:",
+    "options": [
+     "Legal segregation, for equal rights",
+     "Foreign armies",
+     "High taxes",
+     "Industrialization"
+    ],
+    "a": 0,
+    "why": "It challenged segregation and expanded voting and equal rights."
+   },
+   {
+    "q": "After World War II, the U.S. emerged as a:",
+    "options": [
+     "Global superpower",
+     "British colony",
+     "Neutral nation",
+     "Small economy"
+    ],
+    "a": 0,
+    "why": "WWII left the U.S. as one of the world's dominant powers."
+   }
+  ]
+ },
+ "social-world-history": {
+  "title": "World History",
+  "subject": "Social Studies",
+  "level": "Grades 6-12",
+  "intro": "World history traces the human story across the globe — from the first civilizations to the connected world of today. The patterns of how societies rise, trade, clash, and change repeat in ways worth understanding.",
+  "cards": [
+   {
+    "h": "The first civilizations",
+    "body": "Civilization began when farming let people settle and build cities, roughly 5,000+ years ago, in river valleys like Mesopotamia, Egypt, the Indus, and China. These brought writing, laws, trade, organized religion, and government — the foundations of complex societies."
+   },
+   {
+    "h": "Classical empires",
+    "body": "Great empires like Greece, Rome, Persia, the Maurya in India, and Han China spread ideas, trade, and systems of rule across huge areas. Greece and Rome shaped Western government, law, and philosophy; their rise and fall reshaped the map of the world."
+   },
+   {
+    "h": "The medieval and connected world",
+    "body": "After Rome fell, regions developed distinct civilizations — medieval Europe, the Islamic world (a center of science and learning), imperial China, and African kingdoms like Mali. Trade routes like the Silk Road linked them, spreading goods, ideas, and sometimes disease."
+   },
+   {
+    "h": "Exploration and empire",
+    "body": "From the 1400s, European powers explored and colonized much of the world, creating global trade — and the brutal Atlantic slave trade. This era connected continents permanently but also brought conquest, exploitation, and lasting inequality."
+   },
+   {
+    "h": "The modern age",
+    "body": "The Industrial Revolution (1700s–1800s) transformed how people lived and worked. The 1900s brought two world wars, the end of colonial empires, the Cold War, and a tightly connected global world. Change has accelerated dramatically in modern times."
+   }
+  ],
+  "flash": [
+   [
+    "Civilization",
+    "A complex society with cities, writing, and government."
+   ],
+   [
+    "Mesopotamia",
+    "An early river-valley civilization, 'the cradle of civilization.'"
+   ],
+   [
+    "Empire",
+    "A group of peoples or lands ruled by a single authority."
+   ],
+   [
+    "Silk Road",
+    "Ancient trade routes linking Asia, the Middle East, and Europe."
+   ],
+   [
+    "Colonization",
+    "One country taking control of and settling another land."
+   ],
+   [
+    "Industrial Revolution",
+    "The 1700s–1800s shift to machine manufacturing."
+   ],
+   [
+    "Cold War",
+    "The 1900s standoff between the U.S. and the Soviet Union."
+   ],
+   [
+    "Globalization",
+    "The growing connection of the world's economies and cultures."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Civilization first developed when farming let people:",
+    "options": [
+     "Settle and build cities",
+     "Travel constantly",
+     "Stop eating",
+     "Avoid trade"
+    ],
+    "a": 0,
+    "why": "Settled farming allowed cities, writing, and government to form."
+   },
+   {
+    "q": "The Silk Road was:",
+    "options": [
+     "Ancient trade routes linking Asia and Europe",
+     "A single paved road",
+     "A war",
+     "A river"
+    ],
+    "a": 0,
+    "why": "It was a network of trade routes spreading goods and ideas."
+   },
+   {
+    "q": "Which civilizations heavily shaped Western law and government?",
+    "options": [
+     "Greece and Rome",
+     "Only ancient Egypt",
+     "Only China",
+     "None"
+    ],
+    "a": 0,
+    "why": "Greek and Roman ideas underpin Western governance and law."
+   },
+   {
+    "q": "European colonization from the 1400s created global trade and also:",
+    "options": [
+     "The Atlantic slave trade",
+     "World peace",
+     "The Silk Road",
+     "The internet"
+    ],
+    "a": 0,
+    "why": "It connected continents but brought conquest and the slave trade."
+   },
+   {
+    "q": "The Industrial Revolution was the shift to:",
+    "options": [
+     "Machine manufacturing",
+     "Farming for the first time",
+     "Hunting and gathering",
+     "Space travel"
+    ],
+    "a": 0,
+    "why": "It moved production from hand labor to machines and factories."
+   },
+   {
+    "q": "The Cold War was a standoff between the U.S. and the:",
+    "options": [
+     "Soviet Union",
+     "Roman Empire",
+     "British colonies",
+     "Mongol Empire"
+    ],
+    "a": 0,
+    "why": "It was the 20th-century rivalry between the U.S. and USSR."
+   }
+  ]
+ },
+ "social-geography": {
+  "title": "Geography",
+  "subject": "Social Studies",
+  "level": "Grades 6-12",
+  "intro": "Geography is the study of places and the relationship between people and their environment — not just where things are, but why they're there and how they shape the way we live.",
+  "cards": [
+   {
+    "h": "Maps and location",
+    "body": "Geography starts with location. Latitude lines run east-west and measure distance north or south of the equator; longitude lines run north-south and measure east or west of the prime meridian. Together they pinpoint any spot on Earth. Maps also use a scale, a key, and a compass rose."
+   },
+   {
+    "h": "Physical geography",
+    "body": "Physical geography is the natural world — landforms (mountains, plains, valleys), bodies of water (oceans, rivers, lakes), climate, and ecosystems. These features shape where people can live, farm, and build."
+   },
+   {
+    "h": "The continents and oceans",
+    "body": "Earth has seven continents (Africa, Antarctica, Asia, Australia, Europe, North America, South America) and five oceans (Pacific, Atlantic, Indian, Southern, Arctic). The Pacific is the largest ocean; Asia is the largest and most populous continent."
+   },
+   {
+    "h": "Human geography",
+    "body": "Human geography looks at people — where and how they live, their cultures, cities, migration, and how they use land and resources. Most people cluster where there's water, fertile land, or economic opportunity."
+   },
+   {
+    "h": "People and the environment",
+    "body": "Geography studies the two-way relationship between humans and their surroundings. The environment shapes human life (climate affects crops and cities), and humans reshape the environment (farming, cities, dams, pollution). Understanding this helps tackle issues like resources and climate."
+   }
+  ],
+  "flash": [
+   [
+    "Latitude",
+    "Lines measuring distance north or south of the equator."
+   ],
+   [
+    "Longitude",
+    "Lines measuring distance east or west of the prime meridian."
+   ],
+   [
+    "Equator",
+    "The 0° latitude line circling Earth's middle."
+   ],
+   [
+    "Physical geography",
+    "The study of Earth's natural features."
+   ],
+   [
+    "Human geography",
+    "The study of people, cultures, and how they use land."
+   ],
+   [
+    "Continent",
+    "One of Earth's seven great landmasses."
+   ],
+   [
+    "Climate",
+    "The long-term weather pattern of a place."
+   ],
+   [
+    "Map scale",
+    "The ratio of map distance to real distance."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Lines that measure distance north or south of the equator are:",
+    "options": [
+     "Latitude",
+     "Longitude",
+     "The prime meridian",
+     "Scale"
+    ],
+    "a": 0,
+    "why": "Latitude runs east-west and measures north-south position."
+   },
+   {
+    "q": "How many continents are there?",
+    "options": [
+     "Seven",
+     "Five",
+     "Ten",
+     "Three"
+    ],
+    "a": 0,
+    "why": "Africa, Antarctica, Asia, Australia, Europe, North and South America."
+   },
+   {
+    "q": "The largest ocean is the:",
+    "options": [
+     "Pacific",
+     "Atlantic",
+     "Indian",
+     "Arctic"
+    ],
+    "a": 0,
+    "why": "The Pacific is the largest and deepest ocean."
+   },
+   {
+    "q": "Physical geography studies:",
+    "options": [
+     "Earth's natural features",
+     "Only cities",
+     "Only politics",
+     "Only history"
+    ],
+    "a": 0,
+    "why": "It covers landforms, water, climate, and ecosystems."
+   },
+   {
+    "q": "People tend to settle where there is:",
+    "options": [
+     "Water and opportunity",
+     "No water",
+     "The coldest climate",
+     "No resources"
+    ],
+    "a": 0,
+    "why": "Water, fertile land, and economic opportunity draw populations."
+   },
+   {
+    "q": "The equator is located at:",
+    "options": [
+     "0° latitude",
+     "0° longitude",
+     "The North Pole",
+     "The prime meridian"
+    ],
+    "a": 0,
+    "why": "The equator is the 0° latitude line around Earth's middle."
+   }
+  ]
+ },
+ "social-economics": {
+  "title": "Economics",
+  "subject": "Social Studies",
+  "level": "Grades 9-12",
+  "intro": "Economics is the study of how people and societies use limited resources to meet unlimited wants. It explains why things cost what they do, how markets work, and the trade-offs behind every choice.",
+  "cards": [
+   {
+    "h": "Scarcity and choice",
+    "body": "The core problem of economics is scarcity: resources are limited but wants are not. So every choice has a cost — what you give up is the 'opportunity cost.' Deciding what to produce, how, and for whom is really the study of handling scarcity."
+   },
+   {
+    "h": "Supply and demand",
+    "body": "In a market, price is set by supply (how much sellers offer) and demand (how much buyers want). When demand rises or supply falls, prices tend to go up; when demand falls or supply rises, prices tend to drop. This push and pull sets prices for most goods."
+   },
+   {
+    "h": "How markets work",
+    "body": "In a market economy, buyers and sellers trade freely, and prices act as signals that coordinate what gets made. Competition tends to lower prices and improve quality. Most real economies are 'mixed' — mostly markets, with some government rules and services."
+   },
+   {
+    "h": "Money, inflation, and GDP",
+    "body": "Money is a medium of exchange that makes trade easier. Inflation is a general rise in prices over time, which shrinks money's value. GDP (Gross Domestic Product) measures the total value a country produces — a common gauge of how an economy is doing."
+   },
+   {
+    "h": "Government's role",
+    "body": "Governments influence economies through taxes, spending, and rules, and (via central banks) by steering interest rates and the money supply. They provide things markets underprovide (roads, defense), address problems like pollution, and try to smooth out booms and busts."
+   }
+  ],
+  "flash": [
+   [
+    "Scarcity",
+    "Limited resources against unlimited wants — economics' core problem."
+   ],
+   [
+    "Opportunity cost",
+    "What you give up when you make a choice."
+   ],
+   [
+    "Supply and demand",
+    "The forces of sellers and buyers that set prices."
+   ],
+   [
+    "Market economy",
+    "An economy where buyers and sellers trade freely."
+   ],
+   [
+    "Inflation",
+    "A general rise in prices that reduces money's value."
+   ],
+   [
+    "GDP",
+    "Gross Domestic Product — the total value an economy produces."
+   ],
+   [
+    "Competition",
+    "Rivalry among sellers that tends to lower prices."
+   ],
+   [
+    "Mixed economy",
+    "Mostly markets plus some government role."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "The core economic problem is:",
+    "options": [
+     "Scarcity",
+     "Too much money",
+     "No wants",
+     "Free resources"
+    ],
+    "a": 0,
+    "why": "Limited resources versus unlimited wants is the central problem."
+   },
+   {
+    "q": "What you give up when you make a choice is the:",
+    "options": [
+     "Opportunity cost",
+     "Profit",
+     "Tax",
+     "Inflation rate"
+    ],
+    "a": 0,
+    "why": "Opportunity cost is the value of the next best alternative."
+   },
+   {
+    "q": "If demand rises and supply stays the same, price usually:",
+    "options": [
+     "Goes up",
+     "Goes down",
+     "Stays exactly flat",
+     "Becomes zero"
+    ],
+    "a": 0,
+    "why": "More demand against the same supply pushes prices up."
+   },
+   {
+    "q": "Inflation means:",
+    "options": [
+     "Prices generally rising over time",
+     "Prices falling",
+     "More jobs",
+     "Higher GDP only"
+    ],
+    "a": 0,
+    "why": "Inflation is a general rise in prices, eroding money's value."
+   },
+   {
+    "q": "GDP measures:",
+    "options": [
+     "The total value a country produces",
+     "The number of people",
+     "The size of the land",
+     "The tax rate"
+    ],
+    "a": 0,
+    "why": "GDP is the total value of goods and services produced."
+   },
+   {
+    "q": "Most real-world economies are:",
+    "options": [
+     "Mixed (markets plus some government)",
+     "Purely government-run",
+     "Purely free markets",
+     "Without money"
+    ],
+    "a": 0,
+    "why": "They blend free markets with some government role."
+   }
+  ]
+ },
+ "coding-computer-science-foundations": {
+  "title": "Computer Science Foundations",
+  "subject": "Computer Science & Coding",
+  "level": "Grades 6-12",
+  "intro": "Computer science is about solving problems with clear, logical steps a computer can follow. Before any specific language, these foundational ideas explain how computers 'think' and how good solutions are built.",
+  "cards": [
+   {
+    "h": "What a computer actually does",
+    "body": "A computer follows instructions exactly, very fast, with no common sense. It takes input, processes it with instructions (a program), stores data, and produces output. Everything — videos, games, apps — is built from these simple operations repeated at enormous speed."
+   },
+   {
+    "h": "Everything is bits (binary)",
+    "body": "Computers store and process everything as binary — 1s and 0s (bits). Numbers, letters, images, and sound are all encoded as patterns of bits. Eight bits make a byte. This on/off system works because it maps perfectly onto electronic switches."
+   },
+   {
+    "h": "Algorithms: step-by-step solutions",
+    "body": "An algorithm is a precise set of steps to solve a problem — like a recipe. A good algorithm is correct and efficient. The same problem can have many algorithms, some far faster than others; choosing well is a core skill in computer science."
+   },
+   {
+    "h": "Thinking like a programmer",
+    "body": "Programmers break big problems into smaller pieces (decomposition), spot patterns, ignore irrelevant detail (abstraction), and write clear steps (logic). This 'computational thinking' is useful far beyond coding — it's a way to tackle any complex problem."
+   },
+   {
+    "h": "Logic and conditions",
+    "body": "Computers make decisions with logic: IF a condition is true, do one thing, ELSE do another. They combine conditions with AND, OR, and NOT. All the 'smart' behavior of software is built from huge numbers of these simple true/false decisions."
+   }
+  ],
+  "flash": [
+   [
+    "Program",
+    "A set of instructions a computer follows."
+   ],
+   [
+    "Input / output",
+    "Data going into a computer / results coming out."
+   ],
+   [
+    "Binary",
+    "The 1s-and-0s (bits) system computers use for everything."
+   ],
+   [
+    "Bit / byte",
+    "A single 1 or 0 / a group of 8 bits."
+   ],
+   [
+    "Algorithm",
+    "A precise step-by-step procedure to solve a problem."
+   ],
+   [
+    "Abstraction",
+    "Hiding detail to focus on what matters."
+   ],
+   [
+    "Decomposition",
+    "Breaking a big problem into smaller parts."
+   ],
+   [
+    "Boolean logic",
+    "True/false decisions using AND, OR, NOT."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "A computer follows instructions:",
+    "options": [
+     "Exactly, with no common sense",
+     "Creatively",
+     "Only sometimes",
+     "By guessing"
+    ],
+    "a": 0,
+    "why": "It does precisely what it's told, very fast — nothing more."
+   },
+   {
+    "q": "Computers store all data as:",
+    "options": [
+     "Binary (1s and 0s)",
+     "Words",
+     "Pictures only",
+     "Decimals only"
+    ],
+    "a": 0,
+    "why": "Everything is encoded as bits — 1s and 0s."
+   },
+   {
+    "q": "An algorithm is:",
+    "options": [
+     "A step-by-step procedure to solve a problem",
+     "A type of computer",
+     "A programming language",
+     "A kind of bit"
+    ],
+    "a": 0,
+    "why": "It's a precise sequence of steps, like a recipe."
+   },
+   {
+    "q": "Breaking a big problem into smaller parts is called:",
+    "options": [
+     "Decomposition",
+     "Abstraction",
+     "Binary",
+     "Output"
+    ],
+    "a": 0,
+    "why": "Decomposition splits a hard problem into manageable pieces."
+   },
+   {
+    "q": "Eight bits make one:",
+    "options": [
+     "Byte",
+     "Program",
+     "Algorithm",
+     "Pixel"
+    ],
+    "a": 0,
+    "why": "A byte is 8 bits."
+   },
+   {
+    "q": "Computers make decisions using:",
+    "options": [
+     "True/false logic (IF/ELSE)",
+     "Emotions",
+     "Random luck",
+     "Colors"
+    ],
+    "a": 0,
+    "why": "Boolean logic — IF a condition is true, do this, else that."
+   }
+  ]
+ },
+ "coding-data-databases": {
+  "title": "Data & Databases",
+  "subject": "Computer Science & Coding",
+  "level": "College",
+  "intro": "Data is everything a program stores and works with — and databases are how we store, organize, and find large amounts of it reliably. Understanding data is key to almost every modern app.",
+  "cards": [
+   {
+    "h": "Data and data types",
+    "body": "Data is information a computer stores. It comes in types: numbers, text (strings), true/false (booleans), dates, and more. Choosing the right type matters — storing a phone number as text, not a number, keeps leading zeros and avoids doing math on it."
+   },
+   {
+    "h": "Structuring data",
+    "body": "Raw data gets organized into structures. A list holds items in order; a table organizes data into rows (records) and columns (fields), like a spreadsheet. Good structure makes data easy to search, sort, and update."
+   },
+   {
+    "h": "What a database is",
+    "body": "A database is an organized collection of data that a program can store and retrieve reliably, even with millions of records and many users at once. Databases handle the hard parts: fast searching, preventing conflicts, and not losing data if the power cuts out."
+   },
+   {
+    "h": "Tables, queries, and SQL",
+    "body": "Most business databases are 'relational' — data lives in tables that relate to each other (a customers table linked to an orders table). You ask questions of the data with queries, often written in SQL (Structured Query Language): e.g., 'show all orders over $100.'"
+   },
+   {
+    "h": "Why data matters",
+    "body": "Nearly every app runs on data — your messages, photos, bank balance, and playlists all live in databases. Skills in organizing and querying data power software, business analytics, and the data science behind AI. Protecting that data (privacy and security) is just as important as using it."
+   }
+  ],
+  "flash": [
+   [
+    "Data",
+    "Information stored and processed by a computer."
+   ],
+   [
+    "Data type",
+    "The kind of value stored (number, text, boolean, date)."
+   ],
+   [
+    "Record",
+    "A single row of related data (e.g., one customer)."
+   ],
+   [
+    "Field",
+    "A single column/attribute of data (e.g., a name)."
+   ],
+   [
+    "Database",
+    "An organized collection of data for reliable storage/retrieval."
+   ],
+   [
+    "Relational database",
+    "Data stored in related tables."
+   ],
+   [
+    "Query",
+    "A request to retrieve or change data."
+   ],
+   [
+    "SQL",
+    "Structured Query Language — used to query databases."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "A phone number is often stored as text because:",
+    "options": [
+     "It keeps leading zeros and needs no math",
+     "Text is always smaller",
+     "Numbers can't be stored",
+     "It looks nicer"
+    ],
+    "a": 0,
+    "why": "Storing it as text preserves formatting like leading zeros."
+   },
+   {
+    "q": "In a table, a single row of related data is a:",
+    "options": [
+     "Record",
+     "Field",
+     "Query",
+     "Type"
+    ],
+    "a": 0,
+    "why": "A row is a record; a column is a field."
+   },
+   {
+    "q": "A database's main job is to:",
+    "options": [
+     "Store and retrieve data reliably",
+     "Draw graphics",
+     "Connect to Wi-Fi",
+     "Run the screen"
+    ],
+    "a": 0,
+    "why": "It organizes data for fast, reliable storage and retrieval."
+   },
+   {
+    "q": "SQL is used to:",
+    "options": [
+     "Query databases",
+     "Style web pages",
+     "Edit photos",
+     "Measure Wi-Fi"
+    ],
+    "a": 0,
+    "why": "SQL (Structured Query Language) asks questions of a database."
+   },
+   {
+    "q": "A relational database stores data in:",
+    "options": [
+     "Related tables",
+     "A single long list",
+     "Images",
+     "Sound files"
+    ],
+    "a": 0,
+    "why": "Relational databases use tables that relate to one another."
+   },
+   {
+    "q": "A column/attribute in a table is a:",
+    "options": [
+     "Field",
+     "Record",
+     "Query",
+     "Row"
+    ],
+    "a": 0,
+    "why": "A field is a column; a record is a row."
+   }
+  ]
+ },
+ "coding-intro-to-ai": {
+  "title": "Intro to AI",
+  "subject": "Computer Science & Coding",
+  "level": "College",
+  "intro": "Artificial intelligence (AI) is software that can do tasks we usually associate with human intelligence — recognizing images, understanding language, making predictions. It's not magic or a conscious mind; it's math and data at a large scale.",
+  "cards": [
+   {
+    "h": "What AI really is",
+    "body": "AI is software designed to perform tasks that normally need human intelligence — seeing, understanding language, deciding, predicting. Most modern AI isn't programmed with explicit rules for every case; instead it learns patterns from large amounts of data."
+   },
+   {
+    "h": "Machine learning",
+    "body": "Machine learning is the main approach behind today's AI. Instead of a programmer writing every rule, the system is shown many examples and finds the patterns itself — like learning to recognize cats by seeing thousands of cat photos. More and better data usually means better results."
+   },
+   {
+    "h": "Training and data",
+    "body": "An AI model 'learns' during training, adjusting itself to make fewer mistakes on example data. The quality and fairness of that data matters enormously — if the data is biased or wrong, the AI will be too. 'Garbage in, garbage out' applies strongly."
+   },
+   {
+    "h": "What AI is good and bad at",
+    "body": "AI excels at finding patterns in huge data, repetitive tasks, and speed. It struggles with true understanding, common sense, and situations unlike its training data. It can also be confidently wrong, so its output needs checking — especially for important decisions."
+   },
+   {
+    "h": "Using AI responsibly",
+    "body": "AI is a powerful tool with real risks: bias, privacy, misinformation, and over-reliance. Used well, it helps people work faster and solve hard problems; used carelessly, it can mislead or harm. Treat it as an assistant whose work you verify, not an oracle."
+   }
+  ],
+  "flash": [
+   [
+    "Artificial intelligence",
+    "Software doing tasks that normally need human intelligence."
+   ],
+   [
+    "Machine learning",
+    "AI that learns patterns from data instead of fixed rules."
+   ],
+   [
+    "Training data",
+    "The examples an AI model learns from."
+   ],
+   [
+    "Model",
+    "The trained system that makes predictions or decisions."
+   ],
+   [
+    "Bias",
+    "Unfair patterns an AI picks up from flawed data."
+   ],
+   [
+    "Pattern recognition",
+    "Finding regularities in data — a core AI strength."
+   ],
+   [
+    "Garbage in, garbage out",
+    "Bad input data produces bad AI output."
+   ],
+   [
+    "Hallucination",
+    "When an AI confidently produces false information."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Most modern AI works by:",
+    "options": [
+     "Learning patterns from data",
+     "Following rules a human wrote for every case",
+     "Random guessing",
+     "Human thought"
+    ],
+    "a": 0,
+    "why": "Machine learning finds patterns in data rather than fixed rules."
+   },
+   {
+    "q": "If an AI is trained on biased data, it will:",
+    "options": [
+     "Likely be biased too",
+     "Fix the bias automatically",
+     "Ignore the data",
+     "Become neutral"
+    ],
+    "a": 0,
+    "why": "'Garbage in, garbage out' — flawed data yields flawed AI."
+   },
+   {
+    "q": "AI is generally GOOD at:",
+    "options": [
+     "Finding patterns in huge data",
+     "Common sense",
+     "True understanding",
+     "Knowing what it doesn't know"
+    ],
+    "a": 0,
+    "why": "Pattern-finding at scale is a core strength; understanding isn't."
+   },
+   {
+    "q": "An AI confidently producing false information is called a:",
+    "options": [
+     "Hallucination",
+     "Query",
+     "Byte",
+     "Model"
+    ],
+    "a": 0,
+    "why": "That's a hallucination — plausible-sounding but wrong output."
+   },
+   {
+    "q": "Machine learning improves mainly with:",
+    "options": [
+     "More and better data",
+     "More rules written by hand",
+     "Faster typing",
+     "Luck"
+    ],
+    "a": 0,
+    "why": "Quality data and examples drive better learned performance."
+   },
+   {
+    "q": "The responsible way to use AI is to:",
+    "options": [
+     "Treat it as an assistant whose work you verify",
+     "Trust it completely",
+     "Never use it",
+     "Assume it's conscious"
+    ],
+    "a": 0,
+    "why": "Verify its output; it can be confidently wrong."
+   }
+  ]
  }
 };
