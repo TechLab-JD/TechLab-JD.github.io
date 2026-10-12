@@ -6514,131 +6514,281 @@ window.LAB404_CONTENT = {
  "law-know-your-rights": {
   "title": "Know Your Rights",
   "subject": "Law & Your Rights",
-  "level": "Grades 9 - adult",
-  "disclaimer": "General legal information, NOT legal advice. For a real legal issue, consult a licensed attorney or legal aid. Specifics vary by state.",
-  "intro": "Knowing your basic rights helps you stay calm and protected in stressful situations. These are general principles in the U.S.; a lawyer is the right call for a real legal problem.",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand what constitutional rights are",
+   "Know your key rights (speech, due process, etc.)",
+   "Understand your rights during police encounters (general)",
+   "Understand how rights are protected and their limits",
+   "Exercise your rights responsibly"
+  ],
+  "intro": "Knowing your basic legal rights helps you protect yourself, participate as a citizen, and handle encounters with authority calmly and correctly. This lesson covers the fundamental rights people in the US have and how they work. General education, not legal advice; laws vary and situations differ — consult a lawyer for your situation.",
+  "sections": [
+   {
+    "h": "What rights are",
+    "body": "Rights are freedoms and protections that the law guarantees you — things the government (and often others) cannot take away without cause. In the US, the most fundamental are in the Constitution, especially the Bill of Rights (the first ten amendments), plus later amendments and laws. These establish that government power has limits, and that individuals have protected freedoms.\n\nRights matter because they protect you from abuses of power and ensure fair treatment. They're not unlimited — most come with reasonable restrictions (your free speech doesn't let you commit fraud or threats) — but they set the baseline of what you're entitled to. Understanding your rights means you can recognize when they're being respected or violated, assert them appropriately, and function as an informed citizen rather than being at the mercy of those with more power or knowledge.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Key rights people have under US law\"><rect x=\"8\" y=\"5\" width=\"120\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"128\" y=\"5\" width=\"114\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Speech/religion</text><text x=\"134\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">express, worship, assemble, press</text><rect x=\"8\" y=\"27\" width=\"120\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"128\" y=\"27\" width=\"114\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Due process</text><text x=\"134\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">fair legal procedures first</text><rect x=\"8\" y=\"49\" width=\"120\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"128\" y=\"49\" width=\"114\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Equal protection</text><text x=\"134\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">the law treats people equally</text><rect x=\"8\" y=\"71\" width=\"120\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"128\" y=\"71\" width=\"114\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Right to silence</text><text x=\"134\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">don't have to self-incriminate</text><rect x=\"8\" y=\"93\" width=\"120\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"128\" y=\"93\" width=\"114\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Right to a lawyer</text><text x=\"134\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">and a fair, speedy trial</text></svg>",
+    "caption": "Key rights under US law — fundamental protections, though each has reasonable limits.",
+    "tip": "Rights are legally guaranteed freedoms/protections that limit government power. They're fundamental but not unlimited. Knowing them protects you."
+   },
+   {
+    "h": "Key rights you have",
+    "body": "Several core rights are worth knowing. Freedom of speech, religion, press, and assembly (First Amendment) let you express yourself, worship (or not), and gather and protest peacefully. Due process means the government must follow fair legal procedures before depriving you of life, liberty, or property — you can't just be punished arbitrarily. Equal protection means the law should treat people equally, without unjust discrimination.\n\nIn the justice system specifically: the right to remain silent (you don't have to incriminate yourself), the right to a lawyer, the right to a fair and speedy trial, protection against unreasonable searches and seizures, and protection against 'cruel and unusual' punishment. These rights are the foundation of a fair legal system. Knowing they exist — and roughly what they mean — is the first step to protecting yourself if you ever need to.",
+    "tip": "Key rights: free speech/religion/press/assembly; due process (fair procedures); equal protection; and in the justice system, the right to silence, a lawyer, and a fair trial."
+   },
+   {
+    "h": "Rights during police encounters",
+    "body": "This is general information (not legal advice, and specifics vary), but a few widely-applicable points help. You generally have the right to remain silent — you don't have to answer questions beyond basic identification in some situations, and you can say you wish to remain silent. You have the right to a lawyer if arrested or questioned as a suspect. You can decline to consent to a search in many cases (police may still search with a warrant or legal cause).\n\nThe practical wisdom in any police encounter: stay calm and polite, keep your hands visible, don't resist or run (even if you believe you're right — argue it later, in court, not on the street), and don't lie. You can ask 'Am I free to go?' and, if detained, clearly state you wish to remain silent and want a lawyer. The goal is to stay safe and protect your rights without escalating. If your rights are violated, the place to fight it is afterward, through legal channels.",
+    "tip": "General: you can remain silent and ask for a lawyer. Stay calm, keep hands visible, don't resist or run — fight any violation later in court, not on the street."
+   },
+   {
+    "h": "How rights are protected and their limits",
+    "body": "Rights are protected by the court system: if the government (or sometimes others) violates your rights, you can challenge it in court, and courts can strike down laws or actions that violate constitutional rights. This is why an independent judiciary matters — it enforces rights against those in power. The famous Miranda warning ('you have the right to remain silent...') exists because courts require police to inform suspects of certain rights.\n\nBut rights have limits and must be balanced against others' rights and public safety. Free speech doesn't protect true threats, fraud, or inciting violence; your rights end where they'd seriously harm others. Rights can also be restricted through proper legal process (a warrant, a conviction). The system constantly balances individual freedoms against the common good, which is why many rights issues are debated and decided case by case. Rights are powerful but operate within a framework of law and limits.",
+    "tip": "Courts enforce your rights (and the Miranda warning informs you of some). But rights have limits — balanced against others' rights, safety, and legal process."
+   },
+   {
+    "h": "Exercising rights responsibly",
+    "body": "Knowing your rights is most useful when paired with good judgment. Assert your rights calmly and clearly when needed (e.g., stating you wish to remain silent or want a lawyer), but do so respectfully — being confrontational rarely helps and can escalate a situation. Rights are a shield, not a weapon to provoke with.\n\nAlso know that exercising a right the wrong way, or not understanding the specifics, can backfire — which is why, in any serious legal matter, getting a lawyer is wise (many areas have free legal aid for those who can't afford it). And remember rights come with responsibilities: the same rights you have, others have too, and a free society depends on respecting each other's. Learn the basics here to protect yourself and participate as a citizen, and seek professional legal help for anything serious. Knowledge of your rights is quiet power.",
+    "tip": "Assert rights calmly and clearly, not confrontationally. For anything serious, get a lawyer (free legal aid exists). Rights come with responsibilities to respect others'."
+   }
+  ],
   "cards": [
    {
-    "h": "The right to remain silent",
-    "body": "If questioned by police, you have the right not to answer questions beyond identifying yourself (where required). You can calmly say 'I am going to remain silent, and I want a lawyer.' Anything you say can be used against you — staying silent is often wise."
+    "h": "What rights are",
+    "body": "Legally guaranteed freedoms/protections that limit government power. Fundamental but not unlimited."
    },
    {
-    "h": "Searches and consent",
-    "body": "Generally, police need a warrant, your consent, or a specific legal reason to search you, your home, or your car. You can clearly and politely say 'I do not consent to a search.' Refusing doesn't make you guilty — it protects your rights."
+    "h": "Key rights",
+    "body": "Speech/religion/press/assembly; due process; equal protection; silence, a lawyer, a fair trial."
    },
    {
-    "h": "The right to a lawyer",
-    "body": "If you're arrested, you have the right to an attorney, and one is provided if you can't afford it. Ask for a lawyer and then stop talking. Don't try to 'explain your way out' — that's what the lawyer is for."
+    "h": "Police encounters",
+    "body": "You can stay silent + ask for a lawyer. Stay calm, hands visible, don't resist/run — fight violations in court."
    },
    {
-    "h": "Stay calm, don't resist",
-    "body": "Even if you believe your rights are being violated, the moment to fight it is later, in court — not on the street. Keep your hands visible, stay polite, don't physically resist, and remember details for afterward."
+    "h": "Protection & limits",
+    "body": "Courts enforce rights (Miranda informs you). But rights have limits — balanced vs others' rights and safety."
    },
    {
-    "h": "Everyday rights",
-    "body": "You also have rights as a tenant, a worker, and a consumer — against unsafe housing, unpaid wages, and fraud. Many are enforced free through legal aid, labor boards, or small claims court. Knowing a right exists is the first step to using it."
+    "h": "Exercise responsibly",
+    "body": "Assert calmly, not confrontationally. Get a lawyer for serious matters (legal aid exists). Respect others' rights."
    }
   ],
   "flash": [
    [
-    "Right to remain silent",
-    "You don't have to answer questions that could incriminate you."
+    "Rights",
+    "Legally guaranteed freedoms and protections."
    ],
    [
-    "Miranda rights",
-    "The rights (silence, attorney) police must read on arrest."
-   ],
-   [
-    "Consent to search",
-    "You can refuse a search without a warrant or legal cause."
-   ],
-   [
-    "Warrant",
-    "A judge's authorization for a search or arrest."
-   ],
-   [
-    "Right to an attorney",
-    "You're entitled to a lawyer; one is provided if you can't afford it."
-   ],
-   [
-    "Legal aid",
-    "Free or low-cost legal help for those who qualify."
+    "Bill of Rights",
+    "The first 10 amendments to the US Constitution."
    ],
    [
     "Due process",
     "The right to fair legal procedures."
    ],
    [
-    "Small claims court",
-    "A simple court for disputes over small amounts of money."
+    "Equal protection",
+    "The law treating people equally."
+   ],
+   [
+    "Freedom of speech",
+    "The right to express yourself (with limits)."
+   ],
+   [
+    "Right to remain silent",
+    "You don't have to incriminate yourself."
+   ],
+   [
+    "Right to an attorney",
+    "The right to a lawyer if accused."
+   ],
+   [
+    "Unreasonable search",
+    "A search without warrant or legal cause (barred)."
+   ],
+   [
+    "Miranda warning",
+    "Police informing a suspect of certain rights."
+   ],
+   [
+    "Judiciary",
+    "The court system that enforces rights."
+   ],
+   [
+    "Probable cause",
+    "The legal basis police need for certain actions."
+   ],
+   [
+    "Legal aid",
+    "Free legal help for those who can't afford a lawyer."
    ]
   ],
   "quiz": [
    {
-    "q": "If police question you, you have the right to:",
+    "q": "Most fundamental US rights are found in the:",
     "options": [
-     "Remain silent",
-     "Lie freely",
-     "Leave any arrest",
-     "Ignore all ID requests always"
+     "Constitution (esp. the Bill of Rights)",
+     "Phone book",
+     "A single law",
+     "Nowhere"
     ],
     "a": 0,
-    "why": "You can decline to answer and ask for a lawyer."
+    "why": "The Bill of Rights + later amendments."
    },
    {
-    "q": "If asked to search your car without a warrant, you can:",
+    "q": "Rights mainly protect you from:",
     "options": [
-     "Clearly decline consent",
-     "Never say no",
-     "Only consent",
-     "Must always allow it"
+     "Abuses of power / unfair treatment",
+     "Earning money",
+     "Voting",
+     "Nothing"
     ],
     "a": 0,
-    "why": "You may politely refuse a consent search; it's your right."
+    "why": "They limit government power."
    },
    {
-    "q": "If you can't afford a lawyer after arrest:",
+    "q": "Are rights unlimited?",
     "options": [
-     "One is provided for you",
-     "You get none",
-     "You must self-defend",
-     "You wait a year"
+     "No — they have reasonable limits",
+     "Yes, always",
+     "Only for the rich",
+     "Never applied"
     ],
     "a": 0,
-    "why": "The right to an attorney includes a provided one if you can't afford it."
+    "why": "Speech doesn't protect fraud or threats, etc."
    },
    {
-    "q": "If you think your rights are violated during a stop, you should:",
+    "q": "Due process means the government must:",
     "options": [
-     "Stay calm and contest it later in court",
-     "Physically resist",
-     "Run",
-     "Argue aggressively"
+     "Follow fair legal procedures first",
+     "Do whatever it wants",
+     "Skip trials",
+     "Punish instantly"
     ],
     "a": 0,
-    "why": "Resisting makes it worse; the place to fight it is in court."
+    "why": "No arbitrary deprivation of life/liberty/property."
    },
    {
-    "q": "A simple court for small money disputes is:",
+    "q": "The right to remain silent means you:",
     "options": [
-     "Small claims court",
-     "Supreme Court",
-     "Traffic school",
-     "The DMV"
+     "Don't have to incriminate yourself",
+     "Must answer everything",
+     "Can't speak ever",
+     "Must confess"
     ],
     "a": 0,
-    "why": "Small claims court handles minor disputes simply and cheaply."
+    "why": "You can decline to self-incriminate."
    },
    {
-    "q": "This lesson is:",
+    "q": "In a police encounter, you should:",
     "options": [
-     "General info, not legal advice",
-     "A substitute for a lawyer",
-     "Identical in every state",
-     "A court ruling"
+     "Stay calm, keep hands visible, not resist",
+     "Run away",
+     "Argue aggressively",
+     "Lie"
     ],
     "a": 0,
-    "why": "Laws vary by state; consult an attorney for a real issue."
+    "why": "Fight any violation later in court."
+   },
+   {
+    "q": "If arrested or questioned as a suspect, you have the right to:",
+    "options": [
+     "A lawyer",
+     "Nothing",
+     "Leave instantly",
+     "Resist"
+    ],
+    "a": 0,
+    "why": "Plus the right to remain silent."
+   },
+   {
+    "q": "A good question to ask police is:",
+    "options": [
+     "'Am I free to go?'",
+     "'Why do you exist?'",
+     "Nothing",
+     "'Can I run?'"
+    ],
+    "a": 0,
+    "why": "It clarifies whether you're detained."
+   },
+   {
+    "q": "The Miranda warning exists because courts require police to:",
+    "options": [
+     "Inform suspects of certain rights",
+     "Arrest everyone",
+     "Skip rights",
+     "Charge fees"
+    ],
+    "a": 0,
+    "why": "'You have the right to remain silent...'"
+   },
+   {
+    "q": "Who enforces your rights against those in power?",
+    "options": [
+     "The courts (judiciary)",
+     "No one",
+     "The police alone",
+     "Yourself only"
+    ],
+    "a": 0,
+    "why": "Courts can strike down rights violations."
+   },
+   {
+    "q": "Free speech does NOT protect:",
+    "options": [
+     "True threats, fraud, inciting violence",
+     "Opinions",
+     "Peaceful protest",
+     "Worship"
+    ],
+    "a": 0,
+    "why": "Rights end where they'd seriously harm others."
+   },
+   {
+    "q": "You should assert your rights:",
+    "options": [
+     "Calmly and clearly",
+     "Aggressively",
+     "By provoking",
+     "By running"
+    ],
+    "a": 0,
+    "why": "Confrontation escalates; rights are a shield."
+   },
+   {
+    "q": "For any serious legal matter, you should:",
+    "options": [
+     "Get a lawyer (legal aid exists)",
+     "Handle it alone",
+     "Ignore it",
+     "Guess"
+    ],
+    "a": 0,
+    "why": "Specifics matter and backfire if misunderstood."
+   },
+   {
+    "q": "Rights come with:",
+    "options": [
+     "Responsibilities to respect others' rights",
+     "No duties",
+     "Only privileges",
+     "Fees"
+    ],
+    "a": 0,
+    "why": "A free society depends on mutual respect."
+   },
+   {
+    "q": "If your rights are violated during an encounter, you should:",
+    "options": [
+     "Fight it afterward through legal channels",
+     "Fight on the street",
+     "Do nothing ever",
+     "Resist physically"
+    ],
+    "a": 0,
+    "why": "The place to challenge it is in court."
    }
   ]
  },
@@ -25276,6 +25426,1412 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Prevention beats emergency repair."
+   }
+  ]
+ },
+ "law-contracts": {
+  "title": "Contracts",
+  "subject": "Law & Your Rights",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand what a contract is",
+   "Know the elements of a valid contract",
+   "Read and sign contracts carefully",
+   "Understand breaking a contract and consequences",
+   "Protect yourself with contracts"
+  ],
+  "intro": "A contract is a legally binding agreement, and they're everywhere in life — jobs, leases, loans, purchases, services. Understanding how contracts work protects you from bad deals and from unknowingly binding yourself to something harmful. This lesson covers contract basics. General education, not legal advice.",
+  "sections": [
+   {
+    "h": "What a contract is",
+    "body": "A contract is a legally enforceable agreement between two or more parties — meaning if someone breaks it, the law can require them to fulfill it or compensate the other party. Contracts can be written or, often, verbal (though written is far safer and easier to prove). You enter contracts constantly: accepting a job, signing a lease, taking a loan, buying a phone plan, even clicking 'I agree' online.\n\nThe purpose of a contract is to make promises reliable: both sides know what they're committing to and can count on it. The key thing to understand is that a contract, once validly formed, binds you — you're legally obligated to do what you agreed. This is why you should never sign (or verbally agree to) something you don't understand or can't fulfill. A contract is a serious commitment with legal teeth, not just a formality.",
+    "tip": "A contract is a legally binding agreement (written or sometimes verbal). Once valid, it OBLIGATES you — never agree to what you don't understand or can't fulfill."
+   },
+   {
+    "h": "Elements of a valid contract",
+    "body": "For a contract to be legally valid and enforceable, a few elements generally must be present. Offer: one party proposes terms ('I'll do X for Y'). Acceptance: the other party agrees to those terms. Consideration: both sides exchange something of value (money, goods, services, a promise) — a one-sided promise with nothing in return usually isn't an enforceable contract.\n\nAlso required: both parties must have the capacity to contract (be of legal age and sound mind — contracts with minors are generally not enforceable against the minor), there must be mutual consent (genuine agreement, not obtained by fraud, duress, or deception), and the purpose must be legal (a contract to do something illegal is void). When these elements are present, you have a binding contract; if one is missing, the agreement may not be enforceable. Understanding these helps you know when you're truly bound.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"The elements of a valid contract\"><rect x=\"8\" y=\"5\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"5\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Offer</text><text x=\"118\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">one party proposes terms</text><rect x=\"8\" y=\"27\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"27\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Acceptance</text><text x=\"118\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">the other agrees</text><rect x=\"8\" y=\"49\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"49\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Consideration</text><text x=\"118\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">both exchange value</text><rect x=\"8\" y=\"71\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"71\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Capacity</text><text x=\"118\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">legal age + sound mind</text><rect x=\"8\" y=\"93\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"93\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Legal purpose</text><text x=\"118\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">(an illegal deal is void)</text></svg>",
+    "caption": "The elements that make a contract valid and enforceable.",
+    "example": "Offer ('I'll sell my bike for $100') + acceptance ('I agree') + consideration ($100 for the bike) = a contract.",
+    "tip": "Valid contract = offer + acceptance + consideration (both give value) + capacity (legal age/mind) + genuine consent + a legal purpose."
+   },
+   {
+    "h": "Reading and signing contracts",
+    "body": "The golden rule of contracts is: read it before you sign it, and understand what you're agreeing to. This sounds obvious, but people routinely sign leases, loans, and terms without reading, then get caught by surprise. Pay special attention to: the total cost and all fees, your obligations and deadlines, what happens if you cancel or miss a payment (penalties), the length/term of the agreement, and how it can be ended.\n\nWatch for red flags: pressure to sign quickly ('this offer expires today!'), blank spaces (never sign a contract with blanks to be filled in later), terms that differ from what you were told verbally (the written contract controls, so get verbal promises in writing), and anything you don't understand. If it's important or expensive, it's worth taking time, asking questions, and even having someone knowledgeable (or a lawyer) review it. Never let yourself be rushed into signing — a legitimate deal will let you read it.",
+    "tip": "READ it before you sign; understand the costs, obligations, penalties, and term. Red flags: pressure to sign fast, blank spaces, verbal promises not in writing."
+   },
+   {
+    "h": "Breaking a contract",
+    "body": "Failing to do what you agreed in a contract is called a 'breach,' and it has consequences. The other party can typically sue to enforce the contract or recover damages (money to compensate for the loss your breach caused). This is why contracts are serious: breaking one can cost you money, legal trouble, and reputation. Minor breaches have smaller consequences; major ones can be costly.\n\nThat said, there are situations where you may be able to get out of a contract legally: if it was never valid (e.g., signed under fraud or duress, or for an illegal purpose), if both parties agree to cancel, if there's a cancellation clause or legal cooling-off period (some contracts give you a few days to cancel), or if the other party breaches first. The practical lesson: don't enter a contract you can't honor, read cancellation terms before signing, and if you need out of one, understand your actual options rather than just stopping — simply walking away from a valid contract can expose you to being sued.",
+    "tip": "Breaking a contract (breach) can mean being sued for damages. Getting out legally needs a reason (invalid contract, mutual cancel, cancellation clause, other party's breach) — don't just walk away."
+   },
+   {
+    "h": "Protecting yourself",
+    "body": "A few habits keep contracts working for you, not against you. Get important agreements in writing — verbal contracts are valid but nearly impossible to prove; a written one protects both sides. Keep copies of everything you sign. Make sure the written contract matches what you were promised, and that all blanks are filled before you sign. For big commitments (a lease, a major loan, a business deal), the cost of a lawyer's review is small compared to the cost of a bad contract.\n\nAlso understand the common contracts in your life: know your lease's terms, read loan agreements (especially the interest and fees), and skim the key points of 'terms of service' you agree to. You don't need to be a lawyer, but a healthy respect for contracts — reading before signing, keeping records, and getting help for the big stuff — protects you from a great deal of avoidable trouble. A contract is a tool; used carefully, it makes agreements reliable and protects your interests.",
+    "tip": "Get it in writing, keep copies, ensure it matches what you were promised, and have a lawyer review big ones. Respect contracts: read before signing, keep records."
+   }
+  ],
+  "cards": [
+   {
+    "h": "What it is",
+    "body": "A legally binding agreement (written or verbal). Once valid, it obligates you — don't agree to what you can't fulfill."
+   },
+   {
+    "h": "Elements",
+    "body": "Offer + acceptance + consideration (both give value) + capacity + genuine consent + legal purpose."
+   },
+   {
+    "h": "Read & sign",
+    "body": "Read it first; check costs, obligations, penalties, term. Red flags: rush pressure, blanks, unwritten verbal promises."
+   },
+   {
+    "h": "Breaking it",
+    "body": "Breach can mean being sued for damages. Legal exits need a reason — don't just walk away from a valid contract."
+   },
+   {
+    "h": "Protect yourself",
+    "body": "Get it in writing, keep copies, match it to promises, and have a lawyer review big ones."
+   }
+  ],
+  "flash": [
+   [
+    "Contract",
+    "A legally binding agreement."
+   ],
+   [
+    "Offer",
+    "A proposal of terms by one party."
+   ],
+   [
+    "Acceptance",
+    "Agreement to the offered terms."
+   ],
+   [
+    "Consideration",
+    "Something of value each side exchanges."
+   ],
+   [
+    "Capacity",
+    "Being of legal age and sound mind to contract."
+   ],
+   [
+    "Mutual consent",
+    "Genuine agreement (not fraud or duress)."
+   ],
+   [
+    "Breach",
+    "Failing to do what a contract requires."
+   ],
+   [
+    "Damages",
+    "Money awarded to compensate for a breach."
+   ],
+   [
+    "Verbal contract",
+    "A spoken agreement (valid but hard to prove)."
+   ],
+   [
+    "Cancellation clause",
+    "A term allowing a party to cancel."
+   ],
+   [
+    "Terms of service",
+    "The contract you accept using a service."
+   ],
+   [
+    "Void",
+    "Not legally valid or enforceable."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "A contract is:",
+    "options": [
+     "A legally binding agreement",
+     "A casual promise",
+     "A suggestion",
+     "A gift"
+    ],
+    "a": 0,
+    "why": "The law can enforce it."
+   },
+   {
+    "q": "Contracts can be:",
+    "options": [
+     "Written or verbal (written is safer)",
+     "Only written",
+     "Only verbal",
+     "Never binding"
+    ],
+    "a": 0,
+    "why": "Written is far easier to prove."
+   },
+   {
+    "q": "Once a contract is valid, it:",
+    "options": [
+     "Obligates you legally",
+     "Means nothing",
+     "Can be ignored",
+     "Is just a formality"
+    ],
+    "a": 0,
+    "why": "You must do what you agreed."
+   },
+   {
+    "q": "Which is an element of a valid contract?",
+    "options": [
+     "Consideration (value exchanged)",
+     "A logo",
+     "A witness always",
+     "A notary always"
+    ],
+    "a": 0,
+    "why": "Both sides must give something of value."
+   },
+   {
+    "q": "'Capacity' to contract means being:",
+    "options": [
+     "Of legal age and sound mind",
+     "Wealthy",
+     "A citizen",
+     "A homeowner"
+    ],
+    "a": 0,
+    "why": "Minors generally can't be bound."
+   },
+   {
+    "q": "A contract to do something illegal is:",
+    "options": [
+     "Void (unenforceable)",
+     "Extra strong",
+     "Fine",
+     "Required"
+    ],
+    "a": 0,
+    "why": "The purpose must be legal."
+   },
+   {
+    "q": "The golden rule of contracts is:",
+    "options": [
+     "Read it before you sign",
+     "Sign fast",
+     "Trust verbal promises",
+     "Skip the details"
+    ],
+    "a": 0,
+    "why": "Understand what you're agreeing to."
+   },
+   {
+    "q": "You should never sign a contract that:",
+    "options": [
+     "Has blank spaces to fill in later",
+     "You've read",
+     "Matches what you were promised",
+     "You understand"
+    ],
+    "a": 0,
+    "why": "Blanks can be filled against you."
+   },
+   {
+    "q": "If a verbal promise isn't in the written contract:",
+    "options": [
+     "The written contract controls — get it in writing",
+     "It's automatically included",
+     "It overrides the contract",
+     "It doesn't matter"
+    ],
+    "a": 0,
+    "why": "Get verbal promises written down."
+   },
+   {
+    "q": "Failing to do what a contract requires is a:",
+    "options": [
+     "Breach",
+     "Credit",
+     "Deduction",
+     "Refund"
+    ],
+    "a": 0,
+    "why": "Breach can lead to being sued for damages."
+   },
+   {
+    "q": "If you breach a contract, the other party can:",
+    "options": [
+     "Sue for damages",
+     "Do nothing ever",
+     "Reward you",
+     "Give you more"
+    ],
+    "a": 0,
+    "why": "Damages compensate their loss."
+   },
+   {
+    "q": "A legal way out of a contract is:",
+    "options": [
+     "A cancellation clause or mutual agreement",
+     "Just stopping",
+     "Ignoring it",
+     "Running away"
+    ],
+    "a": 0,
+    "why": "Or if it was invalid, or the other side breached."
+   },
+   {
+    "q": "Walking away from a valid contract can:",
+    "options": [
+     "Expose you to being sued",
+     "Be free",
+     "Fix everything",
+     "Help you"
+    ],
+    "a": 0,
+    "why": "Understand your real options first."
+   },
+   {
+    "q": "To protect yourself, you should:",
+    "options": [
+     "Get it in writing and keep copies",
+     "Rely on memory",
+     "Sign blindly",
+     "Trust everyone"
+    ],
+    "a": 0,
+    "why": "Records protect both sides."
+   },
+   {
+    "q": "For big commitments (lease, major loan), it's wise to:",
+    "options": [
+     "Have a lawyer review it",
+     "Skip reading",
+     "Sign immediately",
+     "Guess the terms"
+    ],
+    "a": 0,
+    "why": "Cheap vs the cost of a bad contract."
+   }
+  ]
+ },
+ "law-tenant-housing-rights": {
+  "title": "Tenant & Housing Rights",
+  "subject": "Law & Your Rights",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand the lease and the tenant-landlord relationship",
+   "Know your rights as a tenant",
+   "Understand security deposits and rent rules",
+   "Understand repairs, habitability, and privacy",
+   "Handle disputes and eviction correctly"
+  ],
+  "intro": "Renting a home involves legal rights and responsibilities on both sides — tenant and landlord. Knowing your rights helps you avoid being taken advantage of and handle problems correctly. This lesson covers the basics of tenant and housing rights. General education; renter law varies a lot by state and city — check your local laws and consult legal aid for your situation.",
+  "sections": [
+   {
+    "h": "The lease and the relationship",
+    "body": "When you rent, you sign a lease — a contract between you (the tenant) and the landlord that sets the terms: the rent amount, the length of the tenancy, the rules, and each party's responsibilities. The lease is legally binding on both sides, so read it carefully before signing (it's a contract — see the contracts lesson). A 'month-to-month' arrangement is more flexible; a fixed-term lease (e.g., one year) locks in terms for that period.\n\nThe tenant-landlord relationship is a legal one with rights and duties for both. Broadly, the tenant's main duties are to pay rent on time, keep the place reasonably clean and undamaged, and follow the lease rules; the landlord's main duties are to provide a safe, livable home and respect the tenant's rights. Understanding that both sides have legal obligations — and that the lease and local laws define them — is the foundation of renting well.",
+    "tip": "A lease is a binding contract setting rent, term, rules, and each side's duties. Read it before signing. Both tenant and landlord have legal rights and responsibilities."
+   },
+   {
+    "h": "Your rights as a tenant",
+    "body": "Tenants have important legal protections (which vary by location but share common themes). You have the right to a habitable home — a safe, livable place with working essentials (heat, water, plumbing, no serious hazards); the landlord must maintain it. You have the right to privacy — landlords generally must give notice (often 24 hours) before entering, except in emergencies. You're protected against illegal discrimination in housing (the Fair Housing Act bars discrimination based on race, religion, sex, family status, disability, and more).\n\nYou also have the right to the return of your security deposit (minus legitimate deductions), protection against illegal 'self-help' eviction (a landlord can't just change the locks, remove your things, or shut off utilities to force you out — they must go through the legal eviction process), and often protection against retaliation for exercising your rights (like reporting a code violation). Knowing these rights helps you recognize when a landlord is overstepping.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Common tenant rights\"><rect x=\"8\" y=\"5\" width=\"108\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"5\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Habitable home</text><text x=\"122\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">safe, livable; landlord maintains</text><rect x=\"8\" y=\"27\" width=\"108\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"27\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Privacy</text><text x=\"122\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">notice before entry (not emergencies)</text><rect x=\"8\" y=\"49\" width=\"108\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"49\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">No discrimination</text><text x=\"122\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">Fair Housing Act protections</text><rect x=\"8\" y=\"71\" width=\"108\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"71\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Deposit back</text><text x=\"122\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">minus real damages, on time</text><rect x=\"8\" y=\"93\" width=\"108\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"93\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">No lockouts</text><text x=\"122\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">eviction needs a court order</text></svg>",
+    "caption": "Common tenant rights (they vary by state/city, but share these themes).",
+    "tip": "Tenant rights (vary locally): a habitable home, privacy (notice before entry), no housing discrimination, your deposit back, and no illegal lockouts or retaliation."
+   },
+   {
+    "h": "Security deposits and rent",
+    "body": "Money is central to renting, and there are rules. A security deposit is money you pay upfront that the landlord holds to cover unpaid rent or damage beyond normal wear and tear. Laws often limit how much can be charged, require it to be returned within a set time after you move out (commonly 14–30 days), and require an itemized list of any deductions. Document the unit's condition with photos when you move in and out to protect your deposit.\n\nRent rules vary: your lease sets the amount and due date, and late fees must usually be reasonable and stated in the lease. In most places, a landlord can't raise the rent during a fixed-term lease (only at renewal), and must give proper notice for increases on month-to-month tenancies. Some cities have rent control limiting increases. Always pay rent on time (it's your biggest obligation and protects you), keep records and receipts of payments, and understand your lease's specific money terms.",
+    "tip": "Document the unit's condition (photos) to protect your deposit, which must be returned (minus real damages) within a set time. Pay rent on time; keep receipts."
+   },
+   {
+    "h": "Repairs, habitability, and privacy",
+    "body": "A landlord's core legal duty is to keep the rental habitable — safe and livable, with essential services working. If something essential breaks (heat, water, a dangerous condition), you typically have the right to request repairs, and the landlord must fix them within a reasonable time. Report problems in writing (keep a copy) so there's a record. If a landlord won't make essential repairs, tenants often have legal remedies that vary by place (options can include repair-and-deduct, withholding rent through proper legal steps, or reporting to code enforcement) — but follow the correct legal process, since just withholding rent on your own can get you evicted.\n\nYour privacy is also protected: a landlord generally can't enter whenever they want. Most places require advance notice (often 24 hours) and entry only for legitimate reasons (repairs, inspections, showings), except in genuine emergencies. Know your local rules, communicate in writing, and keep records — documentation is your best protection in any tenant dispute.",
+    "tip": "Landlords must keep the place habitable (fix essential problems); request repairs IN WRITING. They must usually give notice before entering. Follow proper legal steps — don't just withhold rent."
+   },
+   {
+    "h": "Disputes and eviction",
+    "body": "When problems arise, handle them correctly. For disputes (deposit, repairs, etc.), start by communicating clearly and in writing; many issues resolve with a documented request. If not, know your options: local tenant unions, housing agencies, and legal aid (free legal help for renters exists in many areas) can advise you, and small claims court handles things like deposit disputes.\n\nEviction is the legal process a landlord must use to remove a tenant, and it has rules. A landlord generally must have legal grounds (like unpaid rent or a lease violation), give proper written notice, and get a court order — they cannot legally lock you out, remove your belongings, or cut utilities to force you out ('self-help eviction' is illegal). If you face eviction, you have the right to be notified and to respond in court, and you should seek legal help immediately (tenants often have more rights than they realize). Knowing the proper process protects you from being wrongfully removed.",
+    "tip": "Resolve disputes in writing first; use tenant unions, housing agencies, legal aid, or small claims court. Eviction needs legal grounds + notice + a court order — lockouts are illegal. Get help if evicted."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Lease",
+    "body": "A binding contract setting rent, term, rules, duties. Read before signing; both sides have obligations."
+   },
+   {
+    "h": "Tenant rights",
+    "body": "Habitable home, privacy (notice before entry), no discrimination, deposit back, no illegal lockouts/retaliation."
+   },
+   {
+    "h": "Deposits & rent",
+    "body": "Photo-document condition; deposit returned (minus real damage) on time. Pay rent on time; keep receipts."
+   },
+   {
+    "h": "Repairs & privacy",
+    "body": "Landlord must keep it habitable; request repairs in writing; they give notice before entry. Follow legal steps."
+   },
+   {
+    "h": "Disputes/eviction",
+    "body": "Document and use legal aid/small claims. Eviction needs grounds + notice + court order; lockouts are illegal."
+   }
+  ],
+  "flash": [
+   [
+    "Lease",
+    "A rental contract between tenant and landlord."
+   ],
+   [
+    "Tenant",
+    "The person renting a home."
+   ],
+   [
+    "Landlord",
+    "The owner renting out the property."
+   ],
+   [
+    "Security deposit",
+    "Upfront money held for damage/unpaid rent."
+   ],
+   [
+    "Habitability",
+    "The duty to keep a rental safe and livable."
+   ],
+   [
+    "Fair Housing Act",
+    "A law barring housing discrimination."
+   ],
+   [
+    "Right to privacy",
+    "Landlord must usually give notice before entering."
+   ],
+   [
+    "Self-help eviction",
+    "Illegal lockouts/utility shutoffs to force a tenant out."
+   ],
+   [
+    "Normal wear and tear",
+    "Ordinary aging a deposit can't be charged for."
+   ],
+   [
+    "Retaliation",
+    "Illegally punishing a tenant for using their rights."
+   ],
+   [
+    "Eviction",
+    "The legal process to remove a tenant (needs a court order)."
+   ],
+   [
+    "Legal aid",
+    "Free legal help for renters who qualify."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "A lease is:",
+    "options": [
+     "A binding contract between tenant and landlord",
+     "A suggestion",
+     "Optional",
+     "A receipt"
+    ],
+    "a": 0,
+    "why": "Read it carefully before signing."
+   },
+   {
+    "q": "A tenant's main duty is to:",
+    "options": [
+     "Pay rent on time and not damage the place",
+     "Repair the roof",
+     "Pay the landlord's taxes",
+     "Do nothing"
+    ],
+    "a": 0,
+    "why": "Plus follow the lease rules."
+   },
+   {
+    "q": "A landlord's core duty is to:",
+    "options": [
+     "Keep the home safe and livable (habitable)",
+     "Enter whenever they want",
+     "Keep your deposit",
+     "Discriminate"
+    ],
+    "a": 0,
+    "why": "Habitability is a legal requirement."
+   },
+   {
+    "q": "Before entering your rental, a landlord generally must:",
+    "options": [
+     "Give notice (except emergencies)",
+     "Enter freely anytime",
+     "Never enter",
+     "Ask the neighbors"
+    ],
+    "a": 0,
+    "why": "Often 24 hours' notice."
+   },
+   {
+    "q": "The Fair Housing Act bars discrimination based on:",
+    "options": [
+     "Race, religion, sex, disability, family status",
+     "Income only",
+     "Nothing",
+     "Zip code only"
+    ],
+    "a": 0,
+    "why": "It protects against housing discrimination."
+   },
+   {
+    "q": "A security deposit must generally be:",
+    "options": [
+     "Returned (minus real damages) within a set time",
+     "Kept forever",
+     "Spent by the landlord",
+     "Doubled"
+    ],
+    "a": 0,
+    "why": "With an itemized list of deductions."
+   },
+   {
+    "q": "To protect your deposit, you should:",
+    "options": [
+     "Photo-document the unit's condition",
+     "Nothing",
+     "Hide damage",
+     "Skip the walkthrough"
+    ],
+    "a": 0,
+    "why": "Move-in/out photos are evidence."
+   },
+   {
+    "q": "During a fixed-term lease, rent usually:",
+    "options": [
+     "Can't be raised until renewal",
+     "Can be raised anytime",
+     "Doubles monthly",
+     "Is free"
+    ],
+    "a": 0,
+    "why": "Increases need proper notice (esp. month-to-month)."
+   },
+   {
+    "q": "You should request repairs:",
+    "options": [
+     "In writing (keep a copy)",
+     "Verbally only",
+     "Never",
+     "By moving out"
+    ],
+    "a": 0,
+    "why": "A record protects you."
+   },
+   {
+    "q": "If a landlord won't make essential repairs, you should:",
+    "options": [
+     "Follow proper legal steps (not just withhold rent)",
+     "Stop paying immediately",
+     "Trash the place",
+     "Do nothing"
+    ],
+    "a": 0,
+    "why": "Self-withholding can get you evicted."
+   },
+   {
+    "q": "Changing the locks to force a tenant out is:",
+    "options": [
+     "Illegal (self-help eviction)",
+     "Allowed",
+     "Required",
+     "Normal"
+    ],
+    "a": 0,
+    "why": "Eviction needs the legal process."
+   },
+   {
+    "q": "To evict a tenant, a landlord must:",
+    "options": [
+     "Have grounds, give notice, and get a court order",
+     "Just lock them out",
+     "Cut utilities",
+     "Remove their stuff"
+    ],
+    "a": 0,
+    "why": "Legal eviction only."
+   },
+   {
+    "q": "Punishing a tenant for reporting a code violation is:",
+    "options": [
+     "Illegal retaliation",
+     "Encouraged",
+     "Fine",
+     "Required"
+    ],
+    "a": 0,
+    "why": "Many places protect against retaliation."
+   },
+   {
+    "q": "For a deposit dispute, a tenant can use:",
+    "options": [
+     "Small claims court / legal aid",
+     "Nothing",
+     "Only prayer",
+     "Self-eviction"
+    ],
+    "a": 0,
+    "why": "Document and use legal channels."
+   },
+   {
+    "q": "If you face eviction, you should:",
+    "options": [
+     "Seek legal help immediately",
+     "Ignore it",
+     "Leave at once with no response",
+     "Lock yourself in"
+    ],
+    "a": 0,
+    "why": "Tenants often have more rights than they realize."
+   }
+  ]
+ },
+ "law-consumer-protection": {
+  "title": "Consumer Protection",
+  "subject": "Law & Your Rights",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand consumer rights and protection laws",
+   "Recognize scams and fraud",
+   "Understand returns, warranties, and refunds",
+   "Protect your identity and data",
+   "Resolve consumer problems"
+  ],
+  "intro": "As a consumer, you have legal rights and protections against unfair, deceptive, and fraudulent business practices. Knowing them helps you avoid scams, handle bad purchases, and stand up for yourself. This lesson covers consumer protection basics. General education, not legal advice.",
+  "sections": [
+   {
+    "h": "Your consumer rights",
+    "body": "Consumer protection laws exist to ensure fair treatment in the marketplace — they guard against businesses that deceive, cheat, or endanger customers. Broadly, consumers have the right to safety (products shouldn't be dangerous), the right to accurate information (businesses can't lie about products or hide key terms), the right to choose (fair competition), and the right to be heard (to complain and seek redress).\n\nIn practice, this means false advertising is illegal, products must meet basic safety standards, and businesses must disclose important terms (like the real price and fees). Agencies like the FTC (Federal Trade Commission) and state consumer-protection offices enforce these laws and take complaints. You don't have to accept being cheated — the law is on your side against genuinely deceptive or unfair practices. Knowing your rights is the first defense against being taken advantage of.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Common scam red flags\"><rect x=\"8\" y=\"5\" width=\"86\" height=\"22\" fill=\"rgba(240,90,90,.12)\" stroke=\"#f05a5a\" stroke-width=\"0.8\"/><rect x=\"94\" y=\"5\" width=\"148\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#f0a0a0\" font-size=\"9\">Urgency</text><text x=\"100\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">'act now or lose access'</text><rect x=\"8\" y=\"27\" width=\"86\" height=\"22\" fill=\"rgba(240,90,90,.12)\" stroke=\"#f05a5a\" stroke-width=\"0.8\"/><rect x=\"94\" y=\"27\" width=\"148\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#f0a0a0\" font-size=\"9\">Odd payment</text><text x=\"100\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">gift cards, wire, crypto</text><rect x=\"8\" y=\"49\" width=\"86\" height=\"22\" fill=\"rgba(240,90,90,.12)\" stroke=\"#f05a5a\" stroke-width=\"0.8\"/><rect x=\"94\" y=\"49\" width=\"148\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#f0a0a0\" font-size=\"9\">Too good to be true</text><text x=\"100\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">guaranteed riches, free prizes</text><rect x=\"8\" y=\"71\" width=\"86\" height=\"22\" fill=\"rgba(240,90,90,.12)\" stroke=\"#f05a5a\" stroke-width=\"0.8\"/><rect x=\"94\" y=\"71\" width=\"148\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#f0a0a0\" font-size=\"9\">Out of the blue</text><text x=\"100\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">unexpected ask for info/$</text><rect x=\"8\" y=\"93\" width=\"86\" height=\"22\" fill=\"rgba(240,90,90,.12)\" stroke=\"#f05a5a\" stroke-width=\"0.8\"/><rect x=\"94\" y=\"93\" width=\"148\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#f0a0a0\" font-size=\"9\">Your defense</text><text x=\"100\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">slow down + verify independently</text></svg>",
+    "caption": "Scam red flags cut across nearly all scams — learn them and you'll spot most.",
+    "tip": "Consumer laws protect you from deception, fraud, and unsafe products. False advertising is illegal; businesses must disclose key terms. Agencies like the FTC enforce this."
+   },
+   {
+    "h": "Recognizing scams and fraud",
+    "body": "Scams cost people enormous amounts, and recognizing them is your best protection. Common red flags cut across nearly all scams: pressure to act immediately ('limited time!', 'your account will be closed!'), requests for unusual payment (gift cards, wire transfers, crypto — favored by scammers because they're irreversible), promises too good to be true (guaranteed riches, free prizes you must pay to claim), requests for personal/financial info out of the blue, and contact you didn't initiate.\n\nSpecific scams to know: phishing (fake messages impersonating banks, companies, or the government to steal info), fake tech support, romance scams, 'you've won' prizes, and impersonation of agencies like the IRS. The core defenses: slow down (scams rely on urgency and emotion), never give money or info to someone who contacted you unexpectedly, verify independently (look up the real number and call it yourself), and remember that legitimate organizations don't demand gift cards or threaten you. When in doubt, it's a scam.",
+    "tip": "Scam red flags: urgency, odd payment (gift cards/wire/crypto), too-good-to-be-true, out-of-the-blue asks for info/money. Slow down, verify independently — when in doubt, it's a scam."
+   },
+   {
+    "h": "Returns, warranties, and refunds",
+    "body": "When a purchase goes wrong, you often have options. Return policies: stores aren't always legally required to accept returns, so a store's stated policy governs — check it before buying (especially for big or final-sale items). Many stores offer returns as a courtesy; know the window and conditions. Warranties: a warranty is a promise the product will work (or be repaired/replaced if not). A manufacturer's warranty often comes free with a product; 'extended warranties' you pay for are often not worth it for cheap items.\n\nIf a product is defective or a service wasn't as promised, you're generally entitled to a remedy (repair, replacement, or refund), and persistent, polite complaints often succeed. For bigger disputes, document everything (receipts, communications), escalate to a manager or the company's customer service, and if needed, use a chargeback (disputing a charge with your credit card company for goods not received or not as described) — a powerful consumer tool. Knowing your options turns a bad purchase from a loss into a solvable problem.",
+    "tip": "Check return policies before buying (stores aren't always required to accept returns). Defective product = you're owed a remedy. A credit-card chargeback is a powerful tool for bad purchases."
+   },
+   {
+    "h": "Protecting your identity and data",
+    "body": "Identity theft — someone using your personal information to commit fraud — is a serious modern risk. Protecting yourself: guard sensitive information (Social Security number, bank and card numbers, passwords), be cautious about what you share and with whom, shred documents with personal info, and be alert to phishing. Use strong, unique passwords and two-factor authentication on financial accounts.\n\nMonitor your accounts and credit: check bank and card statements regularly for unauthorized charges, and review your credit report (free yearly) for accounts you didn't open. If you spot identity theft, act fast: contact the affected institutions, consider a credit freeze (which blocks new accounts from being opened in your name — a strong, free protection), and report it. The earlier you catch it, the easier it is to fix. In the data age, protecting your personal information is a core part of protecting your money.",
+    "tip": "Guard your SSN/account numbers, use strong passwords + 2FA, monitor statements, check your credit report yearly. Suspect identity theft? Act fast; a credit freeze is a strong free protection."
+   },
+   {
+    "h": "Resolving consumer problems",
+    "body": "When you have a legitimate complaint, a clear process usually gets results. Start direct: contact the business calmly, explain the problem and what you want (refund, repair, replacement), and give them a chance to fix it — most reputable businesses will. Be polite but firm, and keep records of all communications. If that fails, escalate: ask for a supervisor, or use the company's formal complaint channel.\n\nIf the business won't cooperate, you have external options: file a complaint with the relevant agency (the FTC, your state attorney general or consumer-protection office, or the Better Business Bureau), dispute the charge with your credit card (chargeback), or for monetary disputes, use small claims court. Leaving an honest review also informs others. The key is to be persistent, organized, and reasonable — document everything, know your rights, and escalate step by step. Most consumer problems are resolvable when you know the process and don't give up.",
+    "tip": "Complain directly first (calm, specific, documented). If that fails: escalate, file with the FTC/state AG/BBB, do a chargeback, or use small claims. Be persistent and organized."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Consumer rights",
+    "body": "Laws protect against deception, fraud, unsafe products. False advertising is illegal; FTC/state offices enforce."
+   },
+   {
+    "h": "Scams",
+    "body": "Red flags: urgency, odd payment (gift cards/wire/crypto), too-good, out-of-the-blue. Slow down + verify."
+   },
+   {
+    "h": "Returns/warranties",
+    "body": "Check return policy before buying; defective = you're owed a remedy; chargeback is a powerful tool."
+   },
+   {
+    "h": "Identity",
+    "body": "Guard SSN/accounts; strong passwords + 2FA; monitor statements; check credit yearly; freeze credit if needed."
+   },
+   {
+    "h": "Resolve problems",
+    "body": "Complain directly (documented) → escalate → FTC/state AG/BBB, chargeback, or small claims."
+   }
+  ],
+  "flash": [
+   [
+    "Consumer protection",
+    "Laws ensuring fair, safe, honest treatment of buyers."
+   ],
+   [
+    "FTC",
+    "The Federal Trade Commission (enforces consumer law)."
+   ],
+   [
+    "False advertising",
+    "Illegally lying about a product."
+   ],
+   [
+    "Scam",
+    "A trick to cheat you out of money or info."
+   ],
+   [
+    "Phishing",
+    "Fake messages impersonating a trusted sender."
+   ],
+   [
+    "Warranty",
+    "A promise a product will work (or be fixed/replaced)."
+   ],
+   [
+    "Chargeback",
+    "Disputing a card charge for a bad purchase."
+   ],
+   [
+    "Return policy",
+    "A store's rules for accepting returns."
+   ],
+   [
+    "Identity theft",
+    "Using your personal info to commit fraud."
+   ],
+   [
+    "Credit freeze",
+    "Blocking new accounts in your name (free protection)."
+   ],
+   [
+    "Two-factor authentication",
+    "A second login step for security."
+   ],
+   [
+    "Better Business Bureau",
+    "An org that takes business complaints."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Consumer protection laws guard against:",
+    "options": [
+     "Deceptive, unfair, unsafe business practices",
+     "Low prices",
+     "Fair competition",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "They ensure fair treatment in the marketplace."
+   },
+   {
+    "q": "False advertising is:",
+    "options": [
+     "Illegal",
+     "Encouraged",
+     "Required",
+     "Fine"
+    ],
+    "a": 0,
+    "why": "Businesses can't lie about products."
+   },
+   {
+    "q": "A near-universal scam red flag is:",
+    "options": [
+     "Pressure to act immediately",
+     "A detailed contract",
+     "A refund offer",
+     "Good reviews"
+    ],
+    "a": 0,
+    "why": "Urgency bypasses careful thinking."
+   },
+   {
+    "q": "Scammers favor payment by:",
+    "options": [
+     "Gift cards, wire, crypto (irreversible)",
+     "Credit card",
+     "Check",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Irreversible payments can't be recovered."
+   },
+   {
+    "q": "If someone contacts you unexpectedly asking for money/info, you should:",
+    "options": [
+     "Verify independently (look up the real number)",
+     "Comply fast",
+     "Trust them",
+     "Pay with a gift card"
+    ],
+    "a": 0,
+    "why": "When in doubt, it's a scam."
+   },
+   {
+    "q": "Legitimate organizations will:",
+    "options": [
+     "Not demand gift cards or threaten you",
+     "Threaten arrest by phone",
+     "Ask for your password by text",
+     "Demand crypto"
+    ],
+    "a": 0,
+    "why": "Those are scam behaviors."
+   },
+   {
+    "q": "Stores are:",
+    "options": [
+     "Not always legally required to accept returns",
+     "Always required to refund",
+     "Never allowed returns",
+     "Required to double refunds"
+    ],
+    "a": 0,
+    "why": "Their stated policy governs — check before buying."
+   },
+   {
+    "q": "If a product is defective, you're generally owed:",
+    "options": [
+     "A remedy (repair, replacement, or refund)",
+     "Nothing",
+     "A bigger product",
+     "An apology only"
+    ],
+    "a": 0,
+    "why": "Document and complain persistently."
+   },
+   {
+    "q": "A powerful tool for a bad purchase on a credit card is a:",
+    "options": [
+     "Chargeback",
+     "Return policy",
+     "Warranty only",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Disputing the charge for goods not as described."
+   },
+   {
+    "q": "Identity theft is:",
+    "options": [
+     "Using your personal info to commit fraud",
+     "Losing your wallet",
+     "A credit score",
+     "A scam-free zone"
+    ],
+    "a": 0,
+    "why": "A serious modern risk."
+   },
+   {
+    "q": "A strong, free protection against new fraudulent accounts is a:",
+    "options": [
+     "Credit freeze",
+     "Credit card",
+     "Loan",
+     "Gift card"
+    ],
+    "a": 0,
+    "why": "It blocks new accounts in your name."
+   },
+   {
+    "q": "You should check your credit report:",
+    "options": [
+     "Yearly (it's free)",
+     "Never",
+     "Once a lifetime",
+     "Hourly"
+    ],
+    "a": 0,
+    "why": "Catch accounts you didn't open."
+   },
+   {
+    "q": "To resolve a consumer problem, start by:",
+    "options": [
+     "Contacting the business directly (documented)",
+     "Suing immediately",
+     "Posting angrily",
+     "Giving up"
+    ],
+    "a": 0,
+    "why": "Most reputable businesses will fix it."
+   },
+   {
+    "q": "If a business won't cooperate, you can file with:",
+    "options": [
+     "The FTC / state AG / BBB",
+     "No one",
+     "A random website",
+     "The weather service"
+    ],
+    "a": 0,
+    "why": "Plus chargeback or small claims."
+   },
+   {
+    "q": "The key to resolving consumer problems is to be:",
+    "options": [
+     "Persistent, organized, and documented",
+     "Loud and vague",
+     "Quick to give up",
+     "Aggressive only"
+    ],
+    "a": 0,
+    "why": "Records and persistence win."
+   }
+  ]
+ },
+ "law-small-claims-court": {
+  "title": "Small Claims Court",
+  "subject": "Law & Your Rights",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand what small claims court is",
+   "Know what cases it handles and the limits",
+   "Prepare and file a case",
+   "Present your case",
+   "Collect a judgment"
+  ],
+  "intro": "Small claims court is a simplified, low-cost court where ordinary people can resolve disputes over relatively small amounts of money — without needing a lawyer. It's a powerful, accessible tool for getting justice on everyday problems. This lesson covers how it works. General education; procedures vary by state — check your local court's rules.",
+  "sections": [
+   {
+    "h": "What small claims court is",
+    "body": "Small claims court is a special, simplified court designed for everyday people to resolve minor money disputes quickly, cheaply, and without a lawyer. Its whole purpose is accessibility: the rules are simplified, filing fees are low (often $30–100), you usually represent yourself (lawyers are often not allowed or not needed), and cases are decided relatively fast. It's the legal system's 'people's court' for small matters.\n\nThis matters because, without it, pursuing a few hundred or thousand dollars through regular court would cost more in time and legal fees than the amount at stake — so people would just give up. Small claims court makes it practical to hold someone accountable for a modest debt or wrong. Common uses: a landlord keeping your security deposit unfairly, someone who owes you money and won't pay, a contractor who took payment but didn't do the work, or property damage someone won't cover.",
+    "visual": "<svg viewBox=\"0 0 258 62\" width=\"248\" role=\"img\" aria-label=\"Small claims steps: send a demand, file the claim, serve the defendant, attend the hearing, collect the judgment\"><rect x=\"6\" y=\"16\" width=\"42\" height=\"30\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"27\" y=\"34\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8\">Demand</text><rect x=\"56\" y=\"16\" width=\"42\" height=\"30\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"77\" y=\"34\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8\">File</text><rect x=\"106\" y=\"16\" width=\"42\" height=\"30\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"127\" y=\"34\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8\">Serve</text><rect x=\"156\" y=\"16\" width=\"42\" height=\"30\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"177\" y=\"34\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8\">Hearing</text><rect x=\"206\" y=\"16\" width=\"42\" height=\"30\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"227\" y=\"34\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8\">Collect</text><line x1=\"48\" y1=\"31\" x2=\"52\" y2=\"31\" stroke=\"#39e3c8\" stroke-width=\"1.8\"/><polygon points=\"52,28 57,31 52,34\" fill=\"#39e3c8\"/><line x1=\"98\" y1=\"31\" x2=\"102\" y2=\"31\" stroke=\"#39e3c8\" stroke-width=\"1.8\"/><polygon points=\"102,28 107,31 102,34\" fill=\"#39e3c8\"/><line x1=\"148\" y1=\"31\" x2=\"152\" y2=\"31\" stroke=\"#39e3c8\" stroke-width=\"1.8\"/><polygon points=\"152,28 157,31 152,34\" fill=\"#39e3c8\"/><line x1=\"198\" y1=\"31\" x2=\"202\" y2=\"31\" stroke=\"#39e3c8\" stroke-width=\"1.8\"/><polygon points=\"202,28 207,31 202,34\" fill=\"#39e3c8\"/></svg>",
+    "caption": "The small-claims path: demand payment, file, serve the defendant, attend the hearing, then collect.",
+    "tip": "Small claims court = a simplified, low-cost court for small money disputes, no lawyer needed. It makes it practical to pursue amounts too small for regular court."
+   },
+   {
+    "h": "What it handles and the limits",
+    "body": "Small claims court handles civil disputes over money, up to a dollar limit that varies by state (commonly anywhere from $2,500 to $10,000 or more). If your claim exceeds the limit, you can either sue in regular court or 'waive' the excess and sue for the maximum in small claims. It handles things like unpaid debts, security deposits, unpaid work, broken contracts, property damage, and faulty goods or services.\n\nIt does not handle everything: it's for money claims, not for things like divorce, custody, or getting an injunction (ordering someone to do or stop doing something) — those go to other courts. It also can't help if you can't identify or locate the person/business you're suing. Before filing, confirm your dispute is a money matter within the limit, that you have a valid claim (someone legally owes you), and that you can identify the defendant. If it fits, small claims is often the most practical path.",
+    "tip": "Small claims handles MONEY disputes up to a state limit (~$2.5k–$10k+): debts, deposits, unpaid work, damage. Not divorce/custody/injunctions. Confirm it fits before filing."
+   },
+   {
+    "h": "Preparing and filing",
+    "body": "Winning in small claims starts long before court — with preparation and documentation. First, it's often required (and always wise) to demand payment first: send a clear written 'demand letter' stating what you're owed, why, and that you'll sue if it's not paid by a date. This sometimes resolves it, and shows the court you tried.\n\nIf that fails, file your claim: go to the right court (usually where the defendant lives or where the dispute happened), fill out the forms naming the defendant correctly (get the exact legal name of a business), state your claim and amount, and pay the filing fee. The court then serves the defendant with notice of the lawsuit (there are specific rules for this). Meanwhile, gather all your evidence: contracts, receipts, photos, text/email records, and any witnesses. The side that shows up organized, with clear documentation proving what they're owed, usually wins. Preparation is most of the battle.",
+    "tip": "First send a written demand letter (may resolve it + shows you tried). Then file at the right court, name the defendant exactly, pay the fee, and gather ALL your evidence."
+   },
+   {
+    "h": "Presenting your case",
+    "body": "On your court date, the process is informal but you should be prepared and professional. Show up on time, dressed neatly, with your evidence organized (bring copies for the judge and the other party). When it's your turn, calmly and clearly tell your story: what happened, what you're owed, and why, referring to your evidence as you go. Stick to the relevant facts — judges value clarity and brevity over emotion or rambling.\n\nThe judge will hear both sides, look at the evidence, and often decide quickly (sometimes on the spot, sometimes by mail later). Be respectful, don't interrupt, and answer questions directly. Because there's no lawyer, it comes down to who presents their case more clearly and credibly, backed by documentation. If you've prepared well — organized evidence, a clear timeline, and a calm, factual presentation — you give yourself the best chance. The person with proof usually prevails over the person with just a story.",
+    "tip": "In court: be on time, organized, calm, and factual. Tell your story clearly with your evidence; stick to relevant facts. Proof + clarity beats emotion. No lawyer needed."
+   },
+   {
+    "h": "Collecting a judgment",
+    "body": "An important reality: winning your case is not the same as getting your money. If the judge rules in your favor, you get a 'judgment' — an official ruling that the defendant owes you — but the court doesn't automatically collect it for you. Many people are surprised that collecting can be the hard part, especially if the defendant won't pay or claims they can't.\n\nIf they don't pay voluntarily, you have legal collection tools (which vary by state): you can garnish wages, levy a bank account, or place a lien on property, usually with additional court steps. This is why, before suing, it's worth considering whether the defendant actually has money or assets to pay. For solvent defendants (like a business or employed person), a judgment is strong leverage and often gets paid. The lesson: small claims is powerful, but factor in collection — a judgment is a tool, and you may need to take further steps to actually get paid.",
+    "tip": "Winning gives you a JUDGMENT, but the court won't collect it for you. If they won't pay, use collection tools (wage garnishment, bank levy, liens). Consider if they can actually pay BEFORE suing."
+   }
+  ],
+  "cards": [
+   {
+    "h": "What it is",
+    "body": "A simplified, low-cost court for small money disputes — no lawyer needed. Makes small amounts worth pursuing."
+   },
+   {
+    "h": "What it handles",
+    "body": "Money disputes up to a state limit (~$2.5k–$10k+). Not divorce/custody/injunctions."
+   },
+   {
+    "h": "Prepare & file",
+    "body": "Send a demand letter first; file at the right court, name the defendant exactly, pay the fee, gather all evidence."
+   },
+   {
+    "h": "Present",
+    "body": "Be on time, organized, calm, factual. Tell your story with evidence. Proof + clarity beats emotion."
+   },
+   {
+    "h": "Collect",
+    "body": "Winning = a judgment, not the money. Use garnishment/levy/liens if they won't pay. Check they can pay first."
+   }
+  ],
+  "flash": [
+   [
+    "Small claims court",
+    "A simplified court for small money disputes."
+   ],
+   [
+    "Plaintiff",
+    "The person bringing the lawsuit."
+   ],
+   [
+    "Defendant",
+    "The person being sued."
+   ],
+   [
+    "Claim limit",
+    "The maximum amount small claims handles."
+   ],
+   [
+    "Demand letter",
+    "A written request for payment before suing."
+   ],
+   [
+    "Filing fee",
+    "The low cost to file a small-claims case."
+   ],
+   [
+    "Service of process",
+    "Formally notifying the defendant of the suit."
+   ],
+   [
+    "Evidence",
+    "Documents/photos/records proving your case."
+   ],
+   [
+    "Judgment",
+    "The court's ruling that money is owed."
+   ],
+   [
+    "Wage garnishment",
+    "Collecting a judgment from someone's pay."
+   ],
+   [
+    "Lien",
+    "A legal claim on property to secure a debt."
+   ],
+   [
+    "Judgment-proof",
+    "A defendant with no assets to collect from."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Small claims court is designed to be:",
+    "options": [
+     "Simple, low-cost, and lawyer-free",
+     "Expensive and complex",
+     "Only for lawyers",
+     "For big corporations"
+    ],
+    "a": 0,
+    "why": "It's the 'people's court' for small matters."
+   },
+   {
+    "q": "Small claims court handles:",
+    "options": [
+     "Money disputes up to a state limit",
+     "Divorce and custody",
+     "Criminal trials",
+     "Everything"
+    ],
+    "a": 0,
+    "why": "Civil money claims within the limit."
+   },
+   {
+    "q": "If your claim exceeds the small-claims limit, you can:",
+    "options": [
+     "Waive the excess or sue in regular court",
+     "Not sue at all",
+     "Double it",
+     "Ignore the limit"
+    ],
+    "a": 0,
+    "why": "Sue for the max, or go to regular court."
+   },
+   {
+    "q": "Small claims does NOT handle:",
+    "options": [
+     "Divorce, custody, injunctions",
+     "Unpaid debts",
+     "Security deposits",
+     "Property damage"
+    ],
+    "a": 0,
+    "why": "It's for money claims only."
+   },
+   {
+    "q": "Before filing, it's wise (often required) to:",
+    "options": [
+     "Send a written demand letter",
+     "Sue immediately",
+     "Call once",
+     "Do nothing"
+    ],
+    "a": 0,
+    "why": "It may resolve it and shows you tried."
+   },
+   {
+    "q": "You usually file in the court where:",
+    "options": [
+     "The defendant lives or the dispute happened",
+     "You want to",
+     "It's sunniest",
+     "The judge lives"
+    ],
+    "a": 0,
+    "why": "Jurisdiction rules apply."
+   },
+   {
+    "q": "When suing a business, you should:",
+    "options": [
+     "Name its exact legal name",
+     "Guess the name",
+     "Use a nickname",
+     "Skip the name"
+    ],
+    "a": 0,
+    "why": "The defendant must be named correctly."
+   },
+   {
+    "q": "The most important preparation is:",
+    "options": [
+     "Gathering clear evidence",
+     "Hiring a lawyer",
+     "Dressing badly",
+     "Rambling"
+    ],
+    "a": 0,
+    "why": "The side with documentation usually wins."
+   },
+   {
+    "q": "In court you should:",
+    "options": [
+     "Be calm, organized, and factual",
+     "Be emotional and vague",
+     "Interrupt the judge",
+     "Arrive late"
+    ],
+    "a": 0,
+    "why": "Clarity and proof win."
+   },
+   {
+    "q": "Because there's no lawyer, cases come down to:",
+    "options": [
+     "Who presents more clearly, backed by proof",
+     "Who talks loudest",
+     "Who's angrier",
+     "Luck only"
+    ],
+    "a": 0,
+    "why": "Proof + clarity beats a mere story."
+   },
+   {
+    "q": "Winning your case gives you a:",
+    "options": [
+     "Judgment (not automatically the money)",
+     "Full refund instantly",
+     "A lawyer",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Collecting can be a separate step."
+   },
+   {
+    "q": "If the defendant won't pay a judgment, you can:",
+    "options": [
+     "Garnish wages, levy a bank account, or lien property",
+     "Nothing",
+     "Give up",
+     "Re-sue forever"
+    ],
+    "a": 0,
+    "why": "Legal collection tools, with extra steps."
+   },
+   {
+    "q": "Before suing, you should consider whether the defendant:",
+    "options": [
+     "Actually has money/assets to pay",
+     "Is nice",
+     "Has a lawyer",
+     "Lives nearby only"
+    ],
+    "a": 0,
+    "why": "A 'judgment-proof' defendant can't pay."
+   },
+   {
+    "q": "A defendant with no assets to collect from is:",
+    "options": [
+     "Judgment-proof",
+     "Rich",
+     "A plaintiff",
+     "A witness"
+    ],
+    "a": 0,
+    "why": "You can't get blood from a stone."
+   },
+   {
+    "q": "Formally notifying the defendant of the lawsuit is called:",
+    "options": [
+     "Service of process",
+     "A demand letter",
+     "A judgment",
+     "Collection"
+    ],
+    "a": 0,
+    "why": "There are specific rules for serving."
+   }
+  ]
+ },
+ "law-traffic-id-law": {
+  "title": "Traffic & ID Law",
+  "subject": "Law & Your Rights",
+  "level": "Teen – Adult",
+  "objectives": [
+   "Understand driving as a licensed privilege",
+   "Know the documents you must carry",
+   "Understand traffic stops (general)",
+   "Understand common traffic laws and tickets",
+   "Understand ID laws and your options"
+  ],
+  "intro": "Driving and identification involve laws nearly every adult deals with. Knowing the basics — what to carry, how to handle a traffic stop, and how tickets work — keeps you safe, legal, and out of avoidable trouble. This lesson covers traffic and ID law basics. General education, not legal advice; laws vary by state.",
+  "sections": [
+   {
+    "h": "Driving is a licensed privilege",
+    "body": "In the US, driving is legally a privilege, not a right — it requires a license, which you earn by passing tests and can lose by breaking the rules. To drive legally, you generally need three things: a valid driver's license (proving you're qualified), vehicle registration (proving the car is legally registered with the state), and auto insurance (required in nearly all states to cover potential harm you cause).\n\nBecause it's a privilege, the state can suspend or revoke your license for serious or repeated violations (like DUI, reckless driving, or too many points). Driving without a license, registration, or insurance is itself illegal and can bring fines, a suspended license, or worse. Keeping these three current — license, registration, insurance — is the baseline of legal driving, and lapses (like expired insurance) can turn a minor stop into a serious problem.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Documents required to drive legally\"><rect x=\"8\" y=\"5\" width=\"108\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"5\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Driver's license</text><text x=\"122\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">proves you're qualified to drive</text><rect x=\"8\" y=\"27\" width=\"108\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"27\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Registration</text><text x=\"122\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">car is registered with the state</text><rect x=\"8\" y=\"49\" width=\"108\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"49\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Auto insurance</text><text x=\"122\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">required to cover harm you cause</text><rect x=\"8\" y=\"71\" width=\"108\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"71\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Keep in car</text><text x=\"122\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">registration + insurance card</text><rect x=\"8\" y=\"93\" width=\"108\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"116\" y=\"93\" width=\"126\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9\">Non-drivers</text><text x=\"122\" y=\"108\" fill=\"#9adbcf\" font-size=\"8.5\">can get a state ID card</text></svg>",
+    "caption": "The three things legal driving requires — keep all current.",
+    "tip": "Driving is a licensed PRIVILEGE (can be suspended/revoked). Legal driving needs three things current: a valid license, registration, and insurance."
+   },
+   {
+    "h": "Documents you must carry",
+    "body": "When driving, you're generally required to have (and produce if asked by police) three documents: your driver's license, your vehicle registration, and proof of insurance. Keep your registration and insurance card in the car (the glovebox is standard), and your license on you. Many states now allow digital proof of insurance (on your phone), but a physical backup is wise.\n\nMore broadly, everyone benefits from having valid identification. A government-issued photo ID (driver's license or a state ID card for non-drivers) is needed for countless things: employment, banking, voting in many places, travel, and more. If you don't drive, a state ID card serves the same identification purpose. Keeping your ID current and knowing where your key documents are prevents a lot of friction — from a traffic stop to opening a bank account to boarding a plane (where a REAL ID or passport is increasingly required).",
+    "tip": "Carry (and show if asked) your license, registration, and proof of insurance. Everyone needs a valid government photo ID (a state ID card if you don't drive)."
+   },
+   {
+    "h": "Traffic stops",
+    "body": "If you're pulled over, how you handle it matters for both safety and your legal situation (this is general guidance; stay calm and follow lawful instructions). Pull over safely and promptly to the right, turn off the engine, turn on interior lights if it's dark, and keep your hands visible (on the wheel). Don't reach around or dig through compartments until asked — tell the officer where your documents are before reaching for them.\n\nBe calm and polite. You'll generally be asked for your license, registration, and insurance — provide them. You have the right to remain silent beyond basic identification and the requested documents, and you can decline to consent to a search of your car (police may still search with cause). Don't argue the ticket on the roadside — if you disagree, the place to contest it is in court. Never flee, resist, or become hostile. The goals are safety and not making things worse; any dispute about the stop's legality is handled later, legally.",
+    "tip": "Traffic stop: pull over safely, hands visible, say where your documents are before reaching. Provide license/registration/insurance; stay calm. Contest the ticket in court, not roadside."
+   },
+   {
+    "h": "Traffic laws and tickets",
+    "body": "Traffic laws exist for safety, and breaking them brings tickets (citations). Common violations: speeding, running red lights or stop signs, illegal turns, distracted driving (phone use), not wearing a seatbelt, and the serious ones — DUI/DWI (driving under the influence, which carries severe penalties) and reckless driving. Many states use a 'points' system where violations add points to your license; too many points can mean suspension and higher insurance.\n\nIf you get a ticket, you generally have options: pay it (which usually admits guilt and may add points or raise insurance), or contest it in traffic court (where you can present your side; sometimes charges are reduced or dismissed, especially with a good reason or if the officer doesn't appear). Some areas offer traffic school to remove points. Don't ignore a ticket — unpaid tickets lead to bigger fines, license suspension, or a warrant. Handle it one way or another by the deadline.",
+    "tip": "Tickets add points (too many = suspension + higher insurance). You can pay (admits guilt) or contest in court. NEVER ignore a ticket — it escalates to suspension or a warrant."
+   },
+   {
+    "h": "ID laws and your options",
+    "body": "Identification laws affect daily life. You generally must show ID in specific situations: when driving (to police), for age-restricted purchases, air travel, and many official transactions. Whether you must identify yourself to police when not driving varies by state ('stop and identify' laws) — in some states you must give your name if lawfully detained, in others not; when in doubt, giving your name (but not necessarily more) is usually safe.\n\nFor those without a license, getting a state ID card provides essential identification for jobs, banking, and benefits — it's often a crucial first step for someone getting established, and there are programs to help obtain one (sometimes free). Note that for domestic air travel, the US now requires a REAL ID-compliant license/ID or a passport. Keeping valid ID, understanding when you're required to show it, and knowing that a non-driver can get a state ID are practical pieces of everyday legal literacy that smooth the path through modern life.",
+    "tip": "You must show ID when driving, for age-restricted buys, and air travel (REAL ID/passport). 'Stop-and-identify' rules vary by state. Non-drivers can get a state ID card — often a key first step."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Licensed privilege",
+    "body": "Driving is a privilege (can be suspended/revoked). Legal driving = valid license + registration + insurance."
+   },
+   {
+    "h": "Documents",
+    "body": "Carry and show license, registration, insurance. Everyone needs a government photo ID (state ID if non-driver)."
+   },
+   {
+    "h": "Traffic stops",
+    "body": "Pull over safely, hands visible, say where documents are. Provide docs, stay calm. Contest tickets in court."
+   },
+   {
+    "h": "Tickets",
+    "body": "Add points (→ suspension + higher insurance). Pay (admits guilt) or contest. Never ignore — it escalates."
+   },
+   {
+    "h": "ID laws",
+    "body": "Show ID when driving/age-buys/flying (REAL ID/passport). Stop-and-identify varies. Non-drivers can get a state ID."
+   }
+  ],
+  "flash": [
+   [
+    "Driver's license",
+    "Proof you're qualified and allowed to drive."
+   ],
+   [
+    "Vehicle registration",
+    "Proof a car is registered with the state."
+   ],
+   [
+    "Auto insurance",
+    "Required coverage for harm you cause driving."
+   ],
+   [
+    "License suspension",
+    "Temporarily losing your driving privilege."
+   ],
+   [
+    "Traffic stop",
+    "When police pull a driver over."
+   ],
+   [
+    "Citation (ticket)",
+    "A notice of a traffic violation."
+   ],
+   [
+    "Points system",
+    "Violations adding points toward suspension."
+   ],
+   [
+    "DUI/DWI",
+    "Driving under the influence (severe penalties)."
+   ],
+   [
+    "Traffic court",
+    "Where you can contest a ticket."
+   ],
+   [
+    "State ID card",
+    "Government photo ID for non-drivers."
+   ],
+   [
+    "REAL ID",
+    "A compliant ID now needed for domestic flights."
+   ],
+   [
+    "Stop and identify",
+    "State laws on giving your name to police."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "In the US, driving is legally a:",
+    "options": [
+     "Privilege (can be lost)",
+     "Guaranteed right",
+     "Secret",
+     "Free-for-all"
+    ],
+    "a": 0,
+    "why": "It requires a license and can be suspended."
+   },
+   {
+    "q": "Legal driving requires which three things current?",
+    "options": [
+     "License, registration, insurance",
+     "Just a license",
+     "Just insurance",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "All three are needed."
+   },
+   {
+    "q": "Auto insurance is required to:",
+    "options": [
+     "Cover harm you might cause",
+     "Lower your taxes",
+     "Prove your age",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Required in nearly all states."
+   },
+   {
+    "q": "You should keep in the car:",
+    "options": [
+     "Registration and insurance card",
+     "Your birth certificate",
+     "Nothing",
+     "Cash only"
+    ],
+    "a": 0,
+    "why": "Produce them if asked; license on you."
+   },
+   {
+    "q": "Someone who doesn't drive can get a:",
+    "options": [
+     "State ID card",
+     "Driver's license automatically",
+     "Nothing",
+     "Passport only"
+    ],
+    "a": 0,
+    "why": "It provides essential identification."
+   },
+   {
+    "q": "When pulled over, you should:",
+    "options": [
+     "Pull over safely, keep hands visible",
+     "Speed up",
+     "Jump out",
+     "Hide documents"
+    ],
+    "a": 0,
+    "why": "Reduce risk and don't escalate."
+   },
+   {
+    "q": "Before reaching for documents, you should:",
+    "options": [
+     "Tell the officer where they are",
+     "Grab them fast",
+     "Hide them",
+     "Refuse"
+    ],
+    "a": 0,
+    "why": "Avoid sudden movements."
+   },
+   {
+    "q": "If you disagree with a ticket, you should:",
+    "options": [
+     "Contest it in court, not roadside",
+     "Argue with the officer",
+     "Tear it up",
+     "Flee"
+    ],
+    "a": 0,
+    "why": "The roadside is not where it's decided."
+   },
+   {
+    "q": "Many states track violations with a:",
+    "options": [
+     "Points system",
+     "Star rating",
+     "Lottery",
+     "Coin flip"
+    ],
+    "a": 0,
+    "why": "Too many points = suspension + higher insurance."
+   },
+   {
+    "q": "DUI/DWI means:",
+    "options": [
+     "Driving under the influence (severe penalties)",
+     "Driving in winter",
+     "A parking ticket",
+     "A license type"
+    ],
+    "a": 0,
+    "why": "One of the most serious violations."
+   },
+   {
+    "q": "Paying a ticket usually:",
+    "options": [
+     "Admits guilt (and may add points)",
+     "Erases it",
+     "Is free",
+     "Raises your score"
+    ],
+    "a": 0,
+    "why": "Contesting is the alternative."
+   },
+   {
+    "q": "You should NEVER:",
+    "options": [
+     "Ignore a ticket",
+     "Pay a ticket",
+     "Contest a ticket",
+     "Read a ticket"
+    ],
+    "a": 0,
+    "why": "Ignoring leads to suspension or a warrant."
+   },
+   {
+    "q": "For domestic US air travel, you now need a:",
+    "options": [
+     "REAL ID or a passport",
+     "Library card",
+     "Any paper",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "REAL ID compliance is required."
+   },
+   {
+    "q": "Whether you must give police your name when NOT driving:",
+    "options": [
+     "Varies by state ('stop and identify')",
+     "Is the same everywhere",
+     "Is never required",
+     "Is always required"
+    ],
+    "a": 0,
+    "why": "When unsure, giving your name is usually safe."
+   },
+   {
+    "q": "For someone getting established, a state ID is often:",
+    "options": [
+     "A crucial first step (for jobs, banking)",
+     "Useless",
+     "Only for driving",
+     "Impossible to get"
+    ],
+    "a": 0,
+    "why": "Programs exist to help obtain one."
    }
   ]
  }
