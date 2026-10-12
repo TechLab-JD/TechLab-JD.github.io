@@ -949,27 +949,69 @@ window.LAB404_CONTENT = {
   "title": "Biology",
   "subject": "Science",
   "level": "Grades 9-12",
-  "intro": "Biology is the study of life — how living things are built, how they work, and how they pass on traits. From a single cell to a whole ecosystem, a few big ideas (cells, energy, DNA and evolution) tie all of life together.",
-  "cards": [
+  "objectives": [
+   "State the cell theory and explain that all life is made of cells",
+   "Distinguish prokaryotic from eukaryotic cells and name key organelles",
+   "Describe how cells capture and release energy (photosynthesis and respiration)",
+   "Explain how DNA stores and passes on genetic information",
+   "Explain evolution by natural selection as the unifying theme of biology"
+  ],
+  "intro": "Biology is the study of life — from a single bacterium to the entire web of living things on Earth. Despite life's staggering variety, a few big ideas tie it all together: every living thing is made of cells, runs on energy it captures and converts, carries instructions in DNA, and has been shaped by evolution. This lesson builds those core ideas, which underlie everything else in biology and medicine.",
+  "sections": [
    {
-    "h": "The cell is the unit of life",
-    "body": "Every living thing is made of one or more cells — the smallest unit that counts as alive. Some organisms (bacteria) are a single cell; you are trillions. Cells take in nutrients, use energy, and reproduce."
+    "h": "The cell theory",
+    "body": "The foundation of biology is the cell theory, one of science's great unifying ideas. It states three things: all living things are made of one or more cells; the cell is the basic unit of life; and all cells come from pre-existing cells.\n\nA cell is the smallest thing that counts as alive — it can take in nutrients, use energy, respond to its surroundings, and reproduce. Some organisms, like bacteria, are a single cell; others, like you, are made of trillions working together. Whatever the organism, life happens at the level of the cell.",
+    "tip": "If something isn't made of cells, it isn't alive — which is why viruses are a gray area, since they aren't cells."
    },
    {
-    "h": "Two main cell types",
-    "body": "Prokaryotic cells (bacteria) are small and simple, with no nucleus. Eukaryotic cells (plants, animals, fungi) are bigger and have a nucleus that holds their DNA, plus specialized parts called organelles."
+    "h": "Two kinds of cells",
+    "body": "All cells fall into two broad types. Prokaryotic cells are small and simple, with their DNA floating freely — bacteria are the main example. Eukaryotic cells are larger and more complex, keeping their DNA inside a membrane-bound nucleus, and they build the bodies of plants, animals, fungi, and protists.\n\nEukaryotic cells also contain organelles — specialized internal compartments, each with a job. The nucleus holds the DNA; mitochondria release energy; in plants, chloroplasts capture sunlight; the cell membrane controls what enters and leaves. Think of organelles as the organs of the cell.",
+    "visual": "<svg viewBox=\"0 0 250 190\" width=\"235\" role=\"img\" aria-label=\"A eukaryotic cell showing the cell membrane, nucleus, mitochondria and cytoplasm\"><ellipse cx=\"125\" cy=\"92\" rx=\"112\" ry=\"78\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"2.5\"/><circle cx=\"110\" cy=\"88\" r=\"33\" fill=\"rgba(79,156,240,.18)\" stroke=\"#4f9cf0\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"88\" r=\"9\" fill=\"#4f9cf0\" opacity=\"0.5\"/><ellipse cx=\"190\" cy=\"66\" rx=\"21\" ry=\"11\" fill=\"rgba(240,90,90,.18)\" stroke=\"#f05a5a\" stroke-width=\"1.5\"/><ellipse cx=\"66\" cy=\"140\" rx=\"19\" ry=\"10\" fill=\"rgba(240,90,90,.18)\" stroke=\"#f05a5a\" stroke-width=\"1.5\"/><text x=\"110\" y=\"91\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">nucleus</text><text x=\"190\" y=\"69\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9\">mitochondria</text><text x=\"125\" y=\"180\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"10\">cell membrane surrounds the cytoplasm</text></svg>",
+    "caption": "A eukaryotic cell: DNA sits in the nucleus; mitochondria release energy; the membrane controls what enters.",
+    "example": "Prokaryote: a bacterium (no nucleus)\nEukaryote: a human skin cell, a plant leaf cell, a yeast cell (all have a nucleus)"
    },
    {
-    "h": "Energy: photosynthesis and respiration",
-    "body": "Plants make their own food from sunlight, water and carbon dioxide through photosynthesis, releasing oxygen. Almost all living things (including plants) then break food down for energy through cellular respiration, using oxygen and releasing carbon dioxide — the two processes feed each other."
+    "h": "How cells get energy",
+    "body": "Life runs on energy, and cells capture and release it through two complementary processes. In photosynthesis, plants (and some microbes) use sunlight to build sugar from carbon dioxide and water, releasing oxygen. This is how energy from the sun enters the living world.\n\nIn cellular respiration, cells — including plant cells — break that sugar back down to release usable energy, consuming oxygen and giving off carbon dioxide. The two form a cycle: photosynthesis stores the sun's energy in sugar; respiration spends it. The products of one are the raw materials of the other.",
+    "tip": "Photosynthesis makes food and releases oxygen; respiration burns food and releases carbon dioxide — mirror images."
    },
    {
-    "h": "DNA and genes",
-    "body": "DNA is the molecule that carries the instructions for building and running an organism. A gene is a segment of DNA that codes for a trait. DNA is copied and passed from parents to offspring, which is why you resemble your family."
+    "h": "DNA and inheritance",
+    "body": "Every cell carries a set of instructions in a molecule called DNA, shaped like a twisted ladder (the double helix). A gene is a segment of DNA that codes for a particular trait or protein, and your full set of genes is your genome.\n\nWhen a cell divides, it first copies its DNA so each new cell gets a complete set. When organisms reproduce, they pass DNA to their offspring — which is why you resemble your parents. Occasional copying errors (mutations) create the genetic variation that makes each individual unique and gives evolution something to act on.",
+    "visual": "<svg viewBox=\"0 0 110 190\" width=\"78\" role=\"img\" aria-label=\"A DNA double helix with two strands and base-pair rungs\"><line x1=\"70.3\" y1=\"25.7\" x2=\"39.7\" y2=\"25.7\" stroke=\"#e8b84b\" stroke-width=\"2\"/><line x1=\"79.7\" y1=\"41.1\" x2=\"30.3\" y2=\"41.1\" stroke=\"#39e3c8\" stroke-width=\"2\"/><line x1=\"55.0\" y1=\"56.5\" x2=\"55.0\" y2=\"56.5\" stroke=\"#e8b84b\" stroke-width=\"2\"/><line x1=\"30.3\" y1=\"71.9\" x2=\"79.7\" y2=\"71.9\" stroke=\"#39e3c8\" stroke-width=\"2\"/><line x1=\"39.7\" y1=\"87.3\" x2=\"70.3\" y2=\"87.3\" stroke=\"#e8b84b\" stroke-width=\"2\"/><line x1=\"70.3\" y1=\"102.7\" x2=\"39.7\" y2=\"102.7\" stroke=\"#39e3c8\" stroke-width=\"2\"/><line x1=\"79.7\" y1=\"118.1\" x2=\"30.3\" y2=\"118.1\" stroke=\"#e8b84b\" stroke-width=\"2\"/><line x1=\"55.0\" y1=\"133.5\" x2=\"55.0\" y2=\"133.5\" stroke=\"#39e3c8\" stroke-width=\"2\"/><line x1=\"30.3\" y1=\"148.9\" x2=\"79.7\" y2=\"148.9\" stroke=\"#e8b84b\" stroke-width=\"2\"/><line x1=\"39.7\" y1=\"164.3\" x2=\"70.3\" y2=\"164.3\" stroke=\"#39e3c8\" stroke-width=\"2\"/><path d=\"M55.0 18.0 L63.0 21.9 L70.3 25.7 L76.0 29.6 L79.7 33.4 L81.0 37.2 L79.7 41.1 L76.0 45.0 L70.3 48.8 L63.0 52.6 L55.0 56.5 L47.0 60.4 L39.7 64.2 L34.0 68.0 L30.3 71.9 L29.0 75.8 L30.3 79.6 L34.0 83.5 L39.7 87.3 L47.0 91.2 L55.0 95.0 L63.0 98.8 L70.3 102.7 L76.0 106.5 L79.7 110.4 L81.0 114.2 L79.7 118.1 L76.0 122.0 L70.3 125.8 L63.0 129.7 L55.0 133.5 L47.0 137.3 L39.7 141.2 L34.0 145.1 L30.3 148.9 L29.0 152.8 L30.3 156.6 L34.0 160.4 L39.7 164.3 L47.0 168.2 L55.0 172.0\" fill=\"none\" stroke=\"#4f9cf0\" stroke-width=\"2.5\"/><path d=\"M55.0 18.0 L47.0 21.9 L39.7 25.7 L34.0 29.6 L30.3 33.4 L29.0 37.2 L30.3 41.1 L34.0 45.0 L39.7 48.8 L47.0 52.6 L55.0 56.5 L63.0 60.4 L70.3 64.2 L76.0 68.0 L79.7 71.9 L81.0 75.8 L79.7 79.6 L76.0 83.5 L70.3 87.3 L63.0 91.2 L55.0 95.0 L47.0 98.8 L39.7 102.7 L34.0 106.5 L30.3 110.4 L29.0 114.2 L30.3 118.1 L34.0 122.0 L39.7 125.8 L47.0 129.7 L55.0 133.5 L63.0 137.3 L70.3 141.2 L76.0 145.1 L79.7 148.9 L81.0 152.8 L79.7 156.6 L76.0 160.4 L70.3 164.3 L63.0 168.2 L55.0 172.0\" fill=\"none\" stroke=\"#4f9cf0\" stroke-width=\"2.5\"/></svg>",
+    "caption": "DNA's double-helix structure: two strands joined by rungs of base pairs that store the genetic code.",
+    "example": "DNA → genes → traits. A gene for eye color is one stretch of the DNA you inherited from your parents."
    },
    {
     "h": "Evolution by natural selection",
-    "body": "Within a species, individuals vary. Those whose traits help them survive and reproduce in their environment pass on more of their genes, so helpful traits become more common over generations. This gradual change is evolution — the thread connecting all life."
+    "body": "The single idea that ties all of biology together is evolution by natural selection, Darwin's great insight. It works like this: individuals in a population vary (thanks to genetic differences); some variations help an individual survive and reproduce in its environment; those individuals pass on more of their genes; so, over many generations, helpful traits become more common.\n\nThis slow change is evolution. It explains the staggering diversity of life, why organisms are so well-suited to their environments, and why all living things share deep similarities — we're all descended from common ancestors. Nothing in biology makes full sense except in the light of evolution.",
+    "tip": "Natural selection isn't random: the variation is random, but which traits survive is shaped by the environment."
+   },
+   {
+    "h": "Levels of life",
+    "body": "Biology studies life at many scales, each building on the one below. Molecules (like DNA and proteins) make up cells; cells form tissues; tissues form organs; organs form organ systems; and systems form a whole organism.\n\nZooming out, organisms of one kind form a population; different populations living together form a community; the community plus its physical environment is an ecosystem; and all ecosystems together make the biosphere — all life on Earth. Understanding biology means moving between these levels, from a single molecule to the living planet."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Cell theory",
+    "body": "All living things are made of cells; the cell is life's basic unit; cells come from other cells."
+   },
+   {
+    "h": "Two cell types",
+    "body": "Prokaryotic (no nucleus, e.g. bacteria) vs. eukaryotic (nucleus + organelles, e.g. plants/animals)."
+   },
+   {
+    "h": "Energy",
+    "body": "Photosynthesis stores the sun's energy in sugar (releasing O₂); respiration releases it (using O₂, giving off CO₂)."
+   },
+   {
+    "h": "DNA & genes",
+    "body": "DNA (a double helix) holds the instructions; a gene codes for a trait; mutations create variation."
+   },
+   {
+    "h": "Evolution",
+    "body": "Helpful traits become more common over generations because they aid survival and reproduction."
    }
   ],
   "flash": [
@@ -978,8 +1020,8 @@ window.LAB404_CONTENT = {
     "The smallest unit of life; all living things are made of cells."
    ],
    [
-    "Nucleus",
-    "The part of a eukaryotic cell that holds its DNA."
+    "Cell theory",
+    "All life is cells; the cell is life's basic unit; cells come from cells."
    ],
    [
     "Prokaryote",
@@ -990,25 +1032,41 @@ window.LAB404_CONTENT = {
     "A cell with a nucleus and organelles (plants, animals, fungi)."
    ],
    [
+    "Nucleus",
+    "The organelle that holds a eukaryotic cell's DNA."
+   ],
+   [
+    "Organelle",
+    "A specialized compartment inside a cell with a specific job."
+   ],
+   [
     "Photosynthesis",
-    "Plants making food from sunlight, water and CO₂, releasing oxygen."
+    "Plants making sugar from sunlight, water, and CO₂, releasing O₂."
    ],
    [
     "Cellular respiration",
-    "Breaking food down for energy, using oxygen and releasing CO₂."
+    "Breaking sugar down for energy, using O₂, releasing CO₂."
    ],
    [
     "DNA",
-    "The molecule carrying an organism's genetic instructions."
+    "The double-helix molecule carrying genetic instructions."
+   ],
+   [
+    "Gene",
+    "A segment of DNA that codes for a trait."
+   ],
+   [
+    "Mutation",
+    "A change in DNA that creates genetic variation."
    ],
    [
     "Natural selection",
-    "Helpful traits become more common because they aid survival and reproduction."
+    "Helpful traits spreading because they aid survival and reproduction."
    ]
   ],
   "quiz": [
    {
-    "q": "The smallest unit of life is the:",
+    "q": "The cell theory says the basic unit of life is the:",
     "options": [
      "Cell",
      "Atom",
@@ -1016,7 +1074,7 @@ window.LAB404_CONTENT = {
      "Molecule"
     ],
     "a": 0,
-    "why": "All living things are made of one or more cells."
+    "why": "All living things are made of cells, the basic unit of life."
    },
    {
     "q": "Which cell type has a nucleus?",
@@ -1024,10 +1082,32 @@ window.LAB404_CONTENT = {
      "Eukaryotic",
      "Prokaryotic",
      "Bacterial",
-     "None of them"
+     "None"
     ],
     "a": 0,
-    "why": "Eukaryotic cells (plants, animals, fungi) have a nucleus; prokaryotes don't."
+    "why": "Eukaryotes (plants, animals, fungi) have a nucleus; prokaryotes don't."
+   },
+   {
+    "q": "A bacterium is an example of a:",
+    "options": [
+     "Prokaryote",
+     "Eukaryote",
+     "Plant cell",
+     "Fungus cell"
+    ],
+    "a": 0,
+    "why": "Bacteria are prokaryotes — no nucleus."
+   },
+   {
+    "q": "The organelle that holds a cell's DNA is the:",
+    "options": [
+     "Nucleus",
+     "Mitochondrion",
+     "Membrane",
+     "Chloroplast"
+    ],
+    "a": 0,
+    "why": "The nucleus stores the DNA in eukaryotic cells."
    },
    {
     "q": "Photosynthesis releases which gas?",
@@ -1038,7 +1118,40 @@ window.LAB404_CONTENT = {
      "Hydrogen"
     ],
     "a": 0,
-    "why": "Plants take in CO₂ and release oxygen during photosynthesis."
+    "why": "Plants take in CO₂ and release O₂ during photosynthesis."
+   },
+   {
+    "q": "Cellular respiration uses oxygen to:",
+    "options": [
+     "Release energy from food",
+     "Make DNA",
+     "Build cell walls",
+     "Produce sunlight"
+    ],
+    "a": 0,
+    "why": "Respiration breaks sugar down to release usable energy."
+   },
+   {
+    "q": "Photosynthesis and respiration are:",
+    "options": [
+     "Complementary (one stores energy, one releases it)",
+     "Identical",
+     "Unrelated",
+     "Both random"
+    ],
+    "a": 0,
+    "why": "One stores the sun's energy in sugar; the other spends it."
+   },
+   {
+    "q": "DNA is shaped like a:",
+    "options": [
+     "Double helix (twisted ladder)",
+     "Flat square",
+     "Single line",
+     "Sphere"
+    ],
+    "a": 0,
+    "why": "Two strands twist around each other with base-pair rungs."
    },
    {
     "q": "A gene is:",
@@ -1052,15 +1165,26 @@ window.LAB404_CONTENT = {
     "why": "Genes are stretches of DNA that code for traits."
    },
    {
-    "q": "Cellular respiration uses oxygen to:",
+    "q": "You resemble your parents because they passed on their:",
     "options": [
-     "Release energy from food",
-     "Make DNA",
-     "Build cell walls",
-     "Produce sunlight"
+     "DNA",
+     "Cells only",
+     "Energy",
+     "Mitochondria only"
     ],
     "a": 0,
-    "why": "Respiration breaks food down to release usable energy."
+    "why": "DNA (genes) is inherited from parents."
+   },
+   {
+    "q": "A mutation is:",
+    "options": [
+     "A change in DNA creating variation",
+     "A dead cell",
+     "A type of organ",
+     "An energy source"
+    ],
+    "a": 0,
+    "why": "Mutations are DNA changes that produce genetic variation."
    },
    {
     "q": "In natural selection, traits become more common when they:",
@@ -1071,7 +1195,40 @@ window.LAB404_CONTENT = {
      "Appear purely at random"
     ],
     "a": 0,
-    "why": "Traits that aid survival and reproduction get passed on more often."
+    "why": "Helpful traits get passed on more often over generations."
+   },
+   {
+    "q": "What provides the raw variation that natural selection acts on?",
+    "options": [
+     "Random genetic differences/mutations",
+     "The environment choosing",
+     "Learning",
+     "Practice"
+    ],
+    "a": 0,
+    "why": "Variation is random; the environment decides which traits survive."
+   },
+   {
+    "q": "From smallest to largest, the order is:",
+    "options": [
+     "Cell → tissue → organ → organism",
+     "Organ → cell → tissue",
+     "Organism → cell",
+     "Tissue → cell → organ"
+    ],
+    "a": 0,
+    "why": "Cells form tissues, tissues form organs, organs form organisms."
+   },
+   {
+    "q": "All ecosystems on Earth together make the:",
+    "options": [
+     "Biosphere",
+     "Nucleus",
+     "Population",
+     "Community"
+    ],
+    "a": 0,
+    "why": "The biosphere is all life on Earth, the broadest level."
    }
   ]
  },
@@ -6212,130 +6369,286 @@ window.LAB404_CONTENT = {
  "science-life-science": {
   "title": "Life Science",
   "subject": "Science",
-  "level": "Grades K-8",
-  "intro": "Life science is the study of living things — what they are, what they need, and how they live and grow. It's biology's foundation, and it starts with the world you can see all around you.",
+  "level": "Grades 6-10",
+  "objectives": [
+   "List the characteristics all living things share",
+   "Classify living things into major groups down to the species",
+   "Describe how energy flows through food chains and food webs",
+   "Name the major human body systems and their jobs",
+   "Explain how living things reproduce and grow"
+  ],
+  "intro": "Life science is the branch of science that studies living things — what makes something alive, how living things are organized, how they get energy, and how their bodies work. It's the gateway to biology, ecology, and medicine. This lesson covers the traits of life, how we classify organisms, food chains, the human body's systems, and how life reproduces.",
+  "sections": [
+   {
+    "h": "What makes something alive",
+    "body": "Living things, however different, share a set of characteristics. They are made of cells; they grow and develop; they use energy through metabolism; they respond to their environment; they reproduce, making more of their kind; and they keep stable internal conditions (homeostasis). A rock does none of these; a mouse does all of them.\n\nThese traits are how scientists decide what counts as alive. A candle flame uses energy and grows, but it can't reproduce or respond the way a living thing does, so it isn't alive. Life is defined not by any single trait but by the whole package together.",
+    "tip": "Living things share: made of cells, grow, use energy, respond, reproduce, and keep stable internal conditions."
+   },
+   {
+    "h": "Classifying living things",
+    "body": "Life is astonishingly diverse, so scientists organize it. The broadest groupings are kingdoms — including animals, plants, fungi, and several groups of microorganisms. Within each kingdom, organisms are sorted into ever-finer groups down to the species, the basic unit (one kind of organism that can breed with its own kind).\n\nThis classification groups organisms by shared traits and shared ancestry. Animals eat other organisms and usually move; plants make their own food from sunlight; fungi, like mushrooms, absorb nutrients from their surroundings. Classification helps us see the relationships that tie all life together.",
+    "example": "A house cat belongs to Kingdom Animalia, is grouped with other mammals, then cats, down to its own species."
+   },
+   {
+    "h": "Energy and food chains",
+    "body": "Every living thing needs energy, and it flows through an ecosystem in a food chain. It starts with producers — plants and algae that make their own food from sunlight. Next come consumers that eat others: herbivores eat plants, carnivores eat animals, and omnivores eat both. Finally, decomposers like fungi and bacteria break down dead material, returning nutrients to the soil.\n\nEnergy passes up the chain as one organism eats another, but most of it is lost as heat at each step — which is why there are far more plants than predators. Real ecosystems link many chains into a food web, since most animals eat, and are eaten by, more than one thing.",
+    "visual": "<svg viewBox=\"0 0 250 150\" width=\"240\" role=\"img\" aria-label=\"A food chain: the Sun feeds grass, grass feeds a rabbit, the rabbit feeds a fox, and decomposers recycle nutrients back to the grass\"><circle cx=\"39\" cy=\"18\" r=\"10\" fill=\"rgba(232,184,75,.45)\" stroke=\"#e8b84b\" stroke-width=\"1.5\"/><line x1=\"39\" y1=\"28\" x2=\"39\" y2=\"40\" stroke=\"#e8b84b\" stroke-width=\"2\"/><polygon points=\"35,36 43,36 39,42\" fill=\"#e8b84b\"/><rect x=\"8\" y=\"42\" width=\"62\" height=\"34\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"39\" y=\"63\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">grass</text><line x1=\"70\" y1=\"59\" x2=\"88\" y2=\"59\" stroke=\"#39e3c8\" stroke-width=\"2\"/><polygon points=\"88,55 94,59 88,63\" fill=\"#39e3c8\"/><rect x=\"94\" y=\"42\" width=\"62\" height=\"34\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"125\" y=\"63\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">rabbit</text><line x1=\"156\" y1=\"59\" x2=\"174\" y2=\"59\" stroke=\"#39e3c8\" stroke-width=\"2\"/><polygon points=\"174,55 180,59 174,63\" fill=\"#39e3c8\"/><rect x=\"180\" y=\"42\" width=\"62\" height=\"34\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"211\" y=\"63\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">fox</text><rect x=\"78\" y=\"106\" width=\"96\" height=\"30\" rx=\"6\" fill=\"rgba(57,227,200,.14)\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><text x=\"126\" y=\"125\" text-anchor=\"middle\" fill=\"#9adbcf\" font-size=\"9.5\">decomposers</text><path d=\"M78 120 Q40 120 39 78\" fill=\"none\" stroke=\"#39e3c8\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><polygon points=\"35,82 43,82 39,74\" fill=\"#39e3c8\"/><text x=\"200\" y=\"100\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8\">nutrients recycled</text></svg>",
+    "caption": "A food chain: the Sun powers the grass, which feeds the rabbit, which feeds the fox; decomposers recycle nutrients back.",
+    "tip": "Producers make food; consumers eat; decomposers recycle. Energy flows one way and shrinks at each step."
+   },
+   {
+    "h": "The human body's systems",
+    "body": "Your body is a team of organ systems, each with a job, all working together. The skeletal and muscular systems give structure and movement. The digestive system breaks food into nutrients; the respiratory system takes in oxygen and expels carbon dioxide; the circulatory system pumps blood to carry both around the body.\n\nThe nervous system (brain, spinal cord, nerves) senses and controls; the immune system defends against disease. No system works alone — when you run, your muscles move bones, your lungs pull in more air, your heart beats faster, and your nerves coordinate it all at once.",
+    "example": "Eating an apple: the digestive system breaks it down → the circulatory system delivers the nutrients → cells use them for energy.",
+    "tip": "Body systems work as a team — a single action like running calls on muscles, lungs, heart, and nerves together."
+   },
+   {
+    "h": "Reproduction and growth",
+    "body": "A defining trait of life is reproduction — making new individuals. Some simple organisms reproduce asexually, where one parent produces offspring that are copies of itself (bacteria splitting in two). Most familiar organisms reproduce sexually, combining genetic material from two parents, producing offspring with a mix of traits.\n\nAfter reproduction comes growth and development. A seed becomes a plant; a fertilized egg becomes an animal through many cell divisions. Genes inherited from the parents guide this growth, which is why offspring resemble their parents without being identical to them — except in asexual reproduction, where they are copies.",
+    "tip": "Asexual = one parent, identical copies; sexual = two parents, mixed traits and more variety."
+   },
+   {
+    "h": "Living things and their environment",
+    "body": "No organism lives alone; each is part of an ecosystem — a community of living things interacting with their nonliving surroundings of water, soil, air, and sunlight. Organisms are adapted to their environment: a cactus stores water for the desert; a polar bear has thick fur for the cold.\n\nThese adaptations are the result of evolution over long stretches of time. When the environment changes, organisms that happen to be well-suited survive and reproduce, slowly shifting the whole population. Understanding life means understanding not just the organism but the web of relationships it lives within."
+   }
+  ],
   "cards": [
    {
-    "h": "Living vs. nonliving",
-    "body": "Living things do things nonliving things can't: they grow, use energy (food), respond to their surroundings, and reproduce (make more of their kind). A rock doesn't; a plant, a bug, and you do."
+    "h": "Traits of life",
+    "body": "Cells, growth, energy use, response, reproduction, and homeostasis — together, not alone."
    },
    {
-    "h": "What living things need",
-    "body": "Almost all living things need energy (food or sunlight), water, air (most need oxygen or carbon dioxide), and a suitable place to live. Take any of these away and a living thing can't survive."
+    "h": "Classification",
+    "body": "Kingdoms (animals, plants, fungi, microbes) down to the species, grouped by shared traits and ancestry."
    },
    {
-    "h": "Plants vs. animals",
-    "body": "Plants make their own food from sunlight (photosynthesis) and usually stay in one place. Animals can't make their own food — they must eat plants or other animals — and most can move. Both are living things with different strategies."
+    "h": "Food chains",
+    "body": "Producers → consumers (herbivore/carnivore/omnivore) → decomposers. Energy flows up and shrinks."
    },
    {
-    "h": "Habitats and food chains",
-    "body": "A habitat is where a living thing naturally lives and gets what it needs. A food chain shows who eats whom: the sun feeds plants, plants feed plant-eaters, and plant-eaters feed meat-eaters. Energy passes up the chain."
+    "h": "Body systems",
+    "body": "Skeletal, muscular, digestive, respiratory, circulatory, nervous, immune — all working as a team."
    },
    {
-    "h": "Life cycles",
-    "body": "Every living thing goes through a life cycle — born or sprouted, growing up, reproducing, and eventually dying. A butterfly's (egg → caterpillar → chrysalis → butterfly) looks very different from a human's, but every species has one."
+    "h": "Reproduction",
+    "body": "Asexual (one parent, copies) or sexual (two parents, mixed traits); genes guide growth."
    }
   ],
   "flash": [
    [
-    "Living thing",
-    "Something that grows, uses energy, responds, and reproduces."
-   ],
-   [
     "Organism",
-    "Any individual living thing."
+    "An individual living thing."
    ],
    [
-    "Photosynthesis",
-    "How plants make food from sunlight, water, and air."
+    "Cell",
+    "The basic unit all living things are made of."
    ],
    [
-    "Habitat",
-    "The place where a living thing naturally lives."
+    "Homeostasis",
+    "Keeping stable internal conditions."
    ],
    [
-    "Food chain",
-    "The order of who eats whom, passing energy along."
+    "Species",
+    "One kind of organism that can breed with its own kind."
+   ],
+   [
+    "Kingdom",
+    "A broad group of living things (animals, plants, fungi...)."
    ],
    [
     "Producer",
-    "A living thing (plant) that makes its own food."
+    "An organism that makes its own food, like a plant."
    ],
    [
     "Consumer",
-    "A living thing that eats other living things."
+    "An organism that eats other organisms for energy."
    ],
    [
-    "Life cycle",
-    "The stages a living thing goes through from birth to death."
+    "Decomposer",
+    "An organism that breaks down dead material and recycles nutrients."
+   ],
+   [
+    "Food web",
+    "The connected network of food chains in an ecosystem."
+   ],
+   [
+    "Organ system",
+    "A group of organs working together for one function."
+   ],
+   [
+    "Asexual reproduction",
+    "One parent producing identical offspring."
+   ],
+   [
+    "Sexual reproduction",
+    "Two parents combining genes, producing varied offspring."
    ]
   ],
   "quiz": [
    {
-    "q": "Which is a sign of a living thing?",
+    "q": "Which is a characteristic of all living things?",
     "options": [
-     "It grows and reproduces",
-     "It's hard",
-     "It's shiny",
-     "It's large"
+     "Made of cells",
+     "Made of metal",
+     "Never changes",
+     "Cannot move"
     ],
     "a": 0,
-    "why": "Living things grow, use energy, respond, and reproduce."
+    "why": "All living things are made of cells (plus growth, energy use, etc.)."
    },
    {
-    "q": "Plants make their own food using:",
+    "q": "Keeping stable internal conditions is called:",
     "options": [
-     "Sunlight (photosynthesis)",
-     "Meat",
-     "Other plants only",
-     "Rocks"
+     "Homeostasis",
+     "Reproduction",
+     "Classification",
+     "Digestion"
     ],
     "a": 0,
-    "why": "Photosynthesis turns sunlight, water, and air into food."
+    "why": "Homeostasis is maintaining a stable internal state."
    },
    {
-    "q": "A habitat is:",
+    "q": "A candle flame isn't alive because it can't:",
     "options": [
-     "Where a living thing naturally lives",
-     "A type of food",
-     "A kind of rock",
-     "A season"
+     "Reproduce and respond like living things",
+     "Give off heat",
+     "Grow at all",
+     "Use energy"
     ],
     "a": 0,
-    "why": "It's the place that provides what an organism needs."
+    "why": "It lacks the full set of life traits — notably reproduction."
    },
    {
-    "q": "In a food chain, energy originally comes from:",
+    "q": "The basic unit of classification is the:",
     "options": [
-     "The sun",
-     "Meat-eaters",
-     "The soil only",
-     "Water only"
+     "Species",
+     "Kingdom",
+     "Planet",
+     "Cell"
     ],
     "a": 0,
-    "why": "The sun feeds plants, which feed the rest of the chain."
+    "why": "Species is the most specific grouping of organisms."
    },
    {
-    "q": "An animal is a:",
+    "q": "Plants, which make their own food, are:",
     "options": [
-     "Consumer (must eat other things)",
-     "Producer",
-     "Nonliving thing",
-     "Type of plant"
+     "Producers",
+     "Consumers",
+     "Decomposers",
+     "Predators"
     ],
     "a": 0,
-    "why": "Animals can't make their own food, so they consume others."
+    "why": "Producers make food from sunlight."
    },
    {
-    "q": "A butterfly's egg → caterpillar → chrysalis → butterfly is its:",
+    "q": "An animal that eats only plants is a:",
     "options": [
-     "Life cycle",
-     "Habitat",
-     "Food chain",
-     "Diet"
+     "Herbivore",
+     "Carnivore",
+     "Decomposer",
+     "Producer"
     ],
     "a": 0,
-    "why": "Those are the stages of its life cycle."
+    "why": "Herbivores eat plants; carnivores eat animals; omnivores eat both."
+   },
+   {
+    "q": "Fungi and bacteria that break down dead matter are:",
+    "options": [
+     "Decomposers",
+     "Producers",
+     "Herbivores",
+     "Predators"
+    ],
+    "a": 0,
+    "why": "Decomposers recycle nutrients back to the soil."
+   },
+   {
+    "q": "Why are there far more plants than top predators?",
+    "options": [
+     "Energy is lost at each step up the chain",
+     "Plants reproduce once",
+     "Predators don't eat",
+     "Plants are bigger"
+    ],
+    "a": 0,
+    "why": "Most energy is lost as heat at each level, so less supports higher levels."
+   },
+   {
+    "q": "Which system takes in oxygen and expels carbon dioxide?",
+    "options": [
+     "Respiratory",
+     "Digestive",
+     "Skeletal",
+     "Immune"
+    ],
+    "a": 0,
+    "why": "The respiratory system handles gas exchange."
+   },
+   {
+    "q": "Which system pumps blood around the body?",
+    "options": [
+     "Circulatory",
+     "Nervous",
+     "Muscular",
+     "Digestive"
+    ],
+    "a": 0,
+    "why": "The circulatory system moves blood, oxygen, and nutrients."
+   },
+   {
+    "q": "The brain, spinal cord, and nerves make up the:",
+    "options": [
+     "Nervous system",
+     "Immune system",
+     "Skeletal system",
+     "Digestive system"
+    ],
+    "a": 0,
+    "why": "The nervous system senses and controls the body."
+   },
+   {
+    "q": "Bacteria splitting into two is an example of:",
+    "options": [
+     "Asexual reproduction",
+     "Sexual reproduction",
+     "Digestion",
+     "Homeostasis"
+    ],
+    "a": 0,
+    "why": "One parent making copies of itself is asexual reproduction."
+   },
+   {
+    "q": "Sexual reproduction produces offspring that are:",
+    "options": [
+     "A mix of two parents' traits",
+     "Identical to one parent",
+     "Not living",
+     "Always male"
+    ],
+    "a": 0,
+    "why": "Combining two parents' genes gives varied traits."
+   },
+   {
+    "q": "A cactus storing water for the desert is an example of:",
+    "options": [
+     "Adaptation",
+     "Reproduction",
+     "Classification",
+     "Digestion"
+    ],
+    "a": 0,
+    "why": "Adaptations are traits that suit an organism to its environment."
+   },
+   {
+    "q": "A community of living things plus their nonliving surroundings is a(n):",
+    "options": [
+     "Ecosystem",
+     "Species",
+     "Cell",
+     "Kingdom"
+    ],
+    "a": 0,
+    "why": "An ecosystem includes organisms and their physical environment."
    }
   ]
  },
@@ -6343,27 +6656,67 @@ window.LAB404_CONTENT = {
   "title": "Chemistry",
   "subject": "Science",
   "level": "Grades 9-12",
-  "intro": "Chemistry is the study of matter — what everything is made of, and how it changes. From the air you breathe to the food you digest, it's all chemistry, built from tiny building blocks called atoms.",
-  "cards": [
+  "objectives": [
+   "Define matter and describe its states and physical changes",
+   "Explain atomic structure (protons, neutrons, electrons) and what an element is",
+   "Read basic information from the periodic table",
+   "Describe how atoms bond to form molecules and compounds",
+   "Explain chemical reactions and the conservation of mass"
+  ],
+  "intro": "Chemistry is the science of matter — what everything is made of and how it transforms. Every material thing, from the air you breathe to the food that fuels you, is chemistry in action, built from tiny particles called atoms. This lesson covers states of matter, the structure of the atom, the periodic table, how atoms combine, and the reactions that rearrange them.",
+  "sections": [
    {
     "h": "Matter and its states",
-    "body": "Matter is anything that has mass and takes up space. It commonly exists as a solid (fixed shape), liquid (flows, takes its container's shape), or gas (spreads to fill space). Adding or removing heat moves a substance between states."
+    "body": "Matter is anything that has mass and takes up space — nearly everything physical. It commonly exists in three states: solid (a fixed shape and volume, particles locked in place), liquid (a fixed volume but takes its container's shape, particles sliding past each other), and gas (no fixed shape or volume, particles flying freely and filling any space).\n\nAdding or removing energy, usually heat, moves matter between states: ice melts to water, water boils to steam, and the reverse on cooling. These are physical changes — the substance is still water (H₂O) throughout; only its form changes.",
+    "tip": "Melting, boiling, and freezing are physical changes — the substance stays the same, only its state changes."
    },
    {
-    "h": "Atoms and elements",
-    "body": "Atoms are the tiny building blocks of all matter. An element is a substance made of just one kind of atom — like oxygen, gold, or carbon. There are about 118 known elements, and everything is built from combinations of them."
+    "h": "Inside the atom",
+    "body": "Atoms are the tiny building blocks of all matter, and they have structure. At the center sits a dense nucleus containing positively charged protons and neutral neutrons. Whirling around the nucleus are negatively charged electrons, far lighter, occupying most of the atom's volume.\n\nThe number of protons — the atomic number — defines what element an atom is: every atom with 6 protons is carbon, every atom with 8 is oxygen. Electrons, especially the outermost ones, determine how an atom bonds and reacts. Atoms are mostly empty space, with a tiny heavy nucleus and a cloud of electrons.",
+    "visual": "<svg viewBox=\"0 0 210 180\" width=\"200\" role=\"img\" aria-label=\"An atom with a nucleus of protons and neutrons and electrons orbiting\"><ellipse cx=\"105\" cy=\"90\" rx=\"88\" ry=\"38\" fill=\"none\" stroke=\"#4f9cf0\" stroke-width=\"1.4\"/><ellipse cx=\"105\" cy=\"90\" rx=\"88\" ry=\"38\" fill=\"none\" stroke=\"#4f9cf0\" stroke-width=\"1.4\" transform=\"rotate(60 105 90)\"/><ellipse cx=\"105\" cy=\"90\" rx=\"88\" ry=\"38\" fill=\"none\" stroke=\"#4f9cf0\" stroke-width=\"1.4\" transform=\"rotate(120 105 90)\"/><circle cx=\"99\" cy=\"85\" r=\"7\" fill=\"#f05a5a\"/><circle cx=\"111\" cy=\"86\" r=\"7\" fill=\"#6b7a98\"/><circle cx=\"104\" cy=\"96\" r=\"7\" fill=\"#f05a5a\"/><circle cx=\"113\" cy=\"95\" r=\"7\" fill=\"#6b7a98\"/><circle cx=\"193\" cy=\"90\" r=\"4.5\" fill=\"#39e3c8\"/><circle cx=\"61\" cy=\"56\" r=\"4.5\" fill=\"#39e3c8\"/><circle cx=\"61\" cy=\"124\" r=\"4.5\" fill=\"#39e3c8\"/><text x=\"105\" y=\"145\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"10\">nucleus (protons + neutrons), electrons orbit</text></svg>",
+    "caption": "An atom: protons (+) and neutrons sit in the nucleus; electrons (−) orbit around it.",
+    "example": "Carbon: 6 protons, 6 neutrons, 6 electrons (atomic number 6)\nOxygen: 8 protons, 8 electrons (atomic number 8)"
    },
    {
-    "h": "The periodic table",
-    "body": "The periodic table organizes all the elements by their properties. Each element has a symbol (O for oxygen, Na for sodium) and a number (its count of protons). Elements in the same column behave similarly, making the table a map of how matter behaves."
+    "h": "Elements and the periodic table",
+    "body": "An element is a pure substance made of just one kind of atom, and there are about 118 of them. The periodic table organizes all the elements in a grid by atomic number, arranged so that elements with similar properties line up in columns (called groups).\n\nEach element has a one- or two-letter symbol — O for oxygen, Na for sodium, Fe for iron. The arrangement isn't arbitrary: an element's position predicts how it behaves, whether it's a reactive metal, an inert gas, or something in between. It's chemistry's single most important reference tool.",
+    "tip": "Elements in the same column (group) of the periodic table have similar chemical behavior."
    },
    {
-    "h": "Molecules and compounds",
-    "body": "Atoms join to form molecules. When different elements combine, they make a compound with new properties — two hydrogen atoms and one oxygen make water (H₂O), which is nothing like hydrogen or oxygen gas on their own."
+    "h": "Molecules, compounds, and bonding",
+    "body": "Atoms rarely sit alone — they bond together to form molecules. When different elements bond, they make a compound, a new substance with properties all its own. Two hydrogen atoms bonded to one oxygen make water (H₂O), which behaves nothing like hydrogen gas or oxygen gas.\n\nAtoms bond by sharing or transferring electrons to reach a stable arrangement. In a covalent bond, atoms share electrons (as in water); in an ionic bond, one atom gives electrons to another and the resulting opposite charges attract (as in table salt, NaCl). Bonding is why about a hundred elements combine into millions of substances.",
+    "example": "H₂O (water) = 2 hydrogen + 1 oxygen\nNaCl (table salt) = sodium + chlorine\nCO₂ (carbon dioxide) = 1 carbon + 2 oxygen"
    },
    {
     "h": "Chemical reactions",
-    "body": "In a chemical reaction, substances (reactants) rearrange their atoms into new substances (products) — like iron plus oxygen making rust, or fuel burning. Atoms are never created or destroyed, only rearranged (conservation of mass)."
+    "body": "In a chemical reaction, substances transform into new substances as their atoms break apart and recombine. The starting materials are the reactants; what you end with are the products. Iron plus oxygen becomes rust; wood plus oxygen becomes ash, smoke, and gases when it burns.\n\nA fundamental rule governs every reaction: the conservation of mass. Atoms are never created or destroyed — only rearranged — so the total mass of the products equals the total mass of the reactants. This is why chemical equations must be 'balanced,' with the same number of each atom on both sides.",
+    "tip": "In any reaction, atoms are rearranged but never created or destroyed — so mass is conserved."
+   },
+   {
+    "h": "Physical vs. chemical changes",
+    "body": "It's worth distinguishing two kinds of change. A physical change alters a substance's form but not its identity — melting ice, dissolving sugar, tearing paper. The substance is still the same chemically, and the change can often be reversed.\n\nA chemical change creates new substances with new properties — burning, rusting, baking, digesting. Signs of a chemical change include a color change, gas bubbles, heat or light released, or a new smell. Learning to tell them apart is a basic chemistry skill: has the substance merely changed shape, or become something new?"
+   }
+  ],
+  "cards": [
+   {
+    "h": "Matter & states",
+    "body": "Matter has mass and takes up space; solid, liquid, gas — heat moves it between states (physical changes)."
+   },
+   {
+    "h": "The atom",
+    "body": "Nucleus of protons (+) and neutrons; electrons (−) orbit. Protons (atomic number) define the element."
+   },
+   {
+    "h": "Periodic table",
+    "body": "Organizes ~118 elements by atomic number; columns (groups) share properties."
+   },
+   {
+    "h": "Bonding",
+    "body": "Atoms share (covalent) or transfer (ionic) electrons to form molecules and compounds (H₂O, NaCl)."
+   },
+   {
+    "h": "Reactions",
+    "body": "Reactants → products by rearranging atoms; mass is conserved (equations must balance)."
    }
   ],
   "flash": [
@@ -6376,24 +6729,40 @@ window.LAB404_CONTENT = {
     "The basic building block of all matter."
    ],
    [
+    "Proton",
+    "A positively charged particle in the nucleus; its count = the element."
+   ],
+   [
+    "Neutron",
+    "A neutral particle in the nucleus."
+   ],
+   [
+    "Electron",
+    "A negatively charged particle orbiting the nucleus."
+   ],
+   [
+    "Atomic number",
+    "The number of protons, which defines the element."
+   ],
+   [
     "Element",
-    "A substance made of only one kind of atom."
+    "A pure substance of only one kind of atom."
+   ],
+   [
+    "Compound",
+    "A substance of different elements chemically combined (H₂O)."
    ],
    [
     "Molecule",
     "Two or more atoms bonded together."
    ],
    [
-    "Compound",
-    "A substance of different elements combined (e.g., H₂O)."
+    "Covalent bond",
+    "Atoms sharing electrons."
    ],
    [
-    "Periodic table",
-    "A chart organizing all elements by their properties."
-   ],
-   [
-    "Chemical reaction",
-    "A process where atoms rearrange into new substances."
+    "Ionic bond",
+    "One atom transferring electrons to another; charges attract."
    ],
    [
     "Conservation of mass",
@@ -6402,37 +6771,15 @@ window.LAB404_CONTENT = {
   ],
   "quiz": [
    {
-    "q": "The basic building block of all matter is the:",
+    "q": "Matter is anything that:",
     "options": [
-     "Atom",
-     "Molecule",
-     "Rock",
-     "Cell"
+     "Has mass and takes up space",
+     "Is alive",
+     "Is a solid only",
+     "Can be seen"
     ],
     "a": 0,
-    "why": "Atoms are the smallest units that make up matter."
-   },
-   {
-    "q": "A substance made of only one kind of atom is a(n):",
-    "options": [
-     "Element",
-     "Compound",
-     "Mixture",
-     "Molecule"
-    ],
-    "a": 0,
-    "why": "An element has just one type of atom; a compound has several."
-   },
-   {
-    "q": "Water (H₂O) is an example of a:",
-    "options": [
-     "Compound",
-     "Element",
-     "Single atom",
-     "Mixture of gases"
-    ],
-    "a": 0,
-    "why": "It's different elements chemically combined into a new substance."
+    "why": "That's the definition of matter."
    },
    {
     "q": "The three common states of matter are:",
@@ -6446,7 +6793,106 @@ window.LAB404_CONTENT = {
     "why": "Matter commonly exists as solid, liquid, or gas."
    },
    {
-    "q": "In a chemical reaction, atoms are:",
+    "q": "Melting ice is an example of a:",
+    "options": [
+     "Physical change",
+     "Chemical change",
+     "New element",
+     "Reaction"
+    ],
+    "a": 0,
+    "why": "It's still H₂O — only the state changed."
+   },
+   {
+    "q": "The particles in the nucleus are:",
+    "options": [
+     "Protons and neutrons",
+     "Electrons only",
+     "Protons only",
+     "Molecules"
+    ],
+    "a": 0,
+    "why": "The nucleus holds protons (+) and neutrons; electrons orbit."
+   },
+   {
+    "q": "What defines which element an atom is?",
+    "options": [
+     "Its number of protons",
+     "Its number of electrons' colors",
+     "Its size",
+     "Its temperature"
+    ],
+    "a": 0,
+    "why": "The atomic number (protons) defines the element."
+   },
+   {
+    "q": "A substance made of only one kind of atom is a(n):",
+    "options": [
+     "Element",
+     "Compound",
+     "Mixture",
+     "Molecule"
+    ],
+    "a": 0,
+    "why": "An element has just one type of atom."
+   },
+   {
+    "q": "The periodic table organizes elements by:",
+    "options": [
+     "Atomic number and properties",
+     "Price",
+     "Color",
+     "Discovery date"
+    ],
+    "a": 0,
+    "why": "It's arranged by atomic number so similar elements line up in groups."
+   },
+   {
+    "q": "Water (H₂O) is a:",
+    "options": [
+     "Compound",
+     "Element",
+     "Single atom",
+     "Mixture of gases"
+    ],
+    "a": 0,
+    "why": "Different elements chemically combined form a new compound."
+   },
+   {
+    "q": "In a covalent bond, atoms:",
+    "options": [
+     "Share electrons",
+     "Transfer electrons fully",
+     "Lose their nucleus",
+     "Never interact"
+    ],
+    "a": 0,
+    "why": "Covalent = sharing; ionic = transferring electrons."
+   },
+   {
+    "q": "In table salt (NaCl), sodium gives an electron to chlorine. This is a(n):",
+    "options": [
+     "Ionic bond",
+     "Covalent bond",
+     "Physical change",
+     "Element"
+    ],
+    "a": 0,
+    "why": "Transferring electrons so opposite charges attract is an ionic bond."
+   },
+   {
+    "q": "In a chemical reaction, the starting materials are the:",
+    "options": [
+     "Reactants",
+     "Products",
+     "Elements only",
+     "Ions"
+    ],
+    "a": 0,
+    "why": "Reactants → products."
+   },
+   {
+    "q": "Conservation of mass means atoms are:",
     "options": [
      "Rearranged, not created or destroyed",
      "Created from nothing",
@@ -6454,18 +6900,40 @@ window.LAB404_CONTENT = {
      "Turned into energy only"
     ],
     "a": 0,
-    "why": "Conservation of mass: atoms are conserved, just rearranged."
+    "why": "Mass is conserved; atoms only recombine."
    },
    {
-    "q": "The periodic table organizes elements by their:",
+    "q": "Which is a sign of a CHEMICAL change?",
     "options": [
-     "Properties",
-     "Price",
-     "Color only",
-     "Discovery date"
+     "A color change or gas produced",
+     "Melting",
+     "Dissolving",
+     "Tearing"
     ],
     "a": 0,
-    "why": "It groups elements with similar properties together."
+    "why": "New substances (color change, bubbling) signal a chemical change."
+   },
+   {
+    "q": "Electrons carry what charge?",
+    "options": [
+     "Negative",
+     "Positive",
+     "Neutral",
+     "It varies"
+    ],
+    "a": 0,
+    "why": "Electrons are negative; protons positive; neutrons neutral."
+   },
+   {
+    "q": "Carbon has 6 protons. Its atomic number is:",
+    "options": [
+     "6",
+     "12",
+     "3",
+     "8"
+    ],
+    "a": 0,
+    "why": "The atomic number equals the number of protons."
    }
   ]
  },
@@ -6473,41 +6941,108 @@ window.LAB404_CONTENT = {
   "title": "Physics",
   "subject": "Science",
   "level": "Grades 9-12",
-  "intro": "Physics is the study of matter, energy, and how they interact — the rules governing motion, forces, light, and electricity. It's the most fundamental science, describing everything from a thrown ball to the stars.",
-  "cards": [
+  "objectives": [
+   "Describe motion using speed, velocity, and acceleration",
+   "State Newton's three laws of motion and apply them",
+   "Explain forces including gravity and friction",
+   "Describe energy, its forms, and the conservation of energy",
+   "Explain waves and the basic properties of light and sound"
+  ],
+  "intro": "Physics is the study of matter, energy, motion, and force — the fundamental rules that govern how everything in the universe behaves, from a falling apple to a distant galaxy. Its power is in its reach: the same handful of laws explain a rolling ball, a rocket launch, and the orbit of the Moon. This lesson covers motion, Newton's laws, forces, energy, and waves.",
+  "sections": [
    {
-    "h": "Forces and motion",
-    "body": "A force is a push or a pull. Newton's first law says an object stays still, or keeps moving at a steady speed in a straight line, unless a force acts on it (inertia). Things don't speed up, slow down, or turn on their own — a force makes them."
+    "h": "Describing motion",
+    "body": "Physics starts by describing how things move. Speed is how fast something moves — distance covered per unit of time, like 60 miles per hour. Velocity is speed plus direction (60 mph north); direction matters because physics treats a car turning as 'changing velocity' even at constant speed.\n\nAcceleration is any change in velocity over time — speeding up, slowing down, or changing direction. A car pressing the gas accelerates; hitting the brakes is negative acceleration. These three ideas — speed, velocity, acceleration — are the vocabulary for everything that moves.",
+    "example": "A car travels 120 miles in 2 hours. Speed = 120 ÷ 2 = 60 mph.",
+    "tip": "Velocity includes direction; speed doesn't. Changing direction changes velocity even if speed stays the same."
    },
    {
-    "h": "Newton's second and third laws",
-    "body": "The second law: a bigger force makes a bigger acceleration, and heavier objects are harder to accelerate (F = ma). The third law: for every action there's an equal and opposite reaction — push on a wall and it pushes back; that's how rockets and walking work."
+    "h": "Newton's three laws of motion",
+    "body": "Isaac Newton captured motion in three laws. The first law (inertia): an object at rest stays at rest, and an object in motion stays in motion in a straight line, unless a force acts on it. This is why you lurch forward when a car stops suddenly — your body 'wants' to keep moving.\n\nThe second law: force equals mass times acceleration (F = ma). A bigger force produces more acceleration; a heavier object needs more force for the same acceleration. The third law: for every action there is an equal and opposite reaction. A rocket pushes gas down, and the gas pushes the rocket up — that's how it flies.",
+    "visual": "<svg viewBox=\"0 0 240 180\" width=\"230\" role=\"img\" aria-label=\"A block on a surface with four force arrows: applied force right, friction left, gravity down, and the normal force up\"><line x1=\"12\" y1=\"122\" x2=\"228\" y2=\"122\" stroke=\"#6b7a98\" stroke-width=\"2\"/><rect x=\"92\" y=\"90\" width=\"56\" height=\"32\" fill=\"rgba(79,156,240,.2)\" stroke=\"#4f9cf0\" stroke-width=\"2\"/><line x1=\"148\" y1=\"106\" x2=\"200\" y2=\"106\" stroke=\"#39e3c8\" stroke-width=\"2.5\"/><polygon points=\"200,101 211,106 200,111\" fill=\"#39e3c8\"/><line x1=\"92\" y1=\"106\" x2=\"44\" y2=\"106\" stroke=\"#f05a5a\" stroke-width=\"2.5\"/><polygon points=\"44,101 33,106 44,111\" fill=\"#f05a5a\"/><line x1=\"120\" y1=\"122\" x2=\"120\" y2=\"156\" stroke=\"#e8b84b\" stroke-width=\"2.5\"/><polygon points=\"115,156 125,156 120,167\" fill=\"#e8b84b\"/><line x1=\"120\" y1=\"90\" x2=\"120\" y2=\"56\" stroke=\"#4f9cf0\" stroke-width=\"2.5\"/><polygon points=\"115,56 125,56 120,45\" fill=\"#4f9cf0\"/><text x=\"214\" y=\"100\" text-anchor=\"middle\" fill=\"#39e3c8\" font-size=\"9\">push</text><text x=\"30\" y=\"100\" text-anchor=\"middle\" fill=\"#f05a5a\" font-size=\"9\">friction</text><text x=\"120\" y=\"178\" text-anchor=\"middle\" fill=\"#e8b84b\" font-size=\"9\">gravity</text><text x=\"120\" y=\"40\" text-anchor=\"middle\" fill=\"#4f9cf0\" font-size=\"9\">normal</text></svg>",
+    "caption": "Forces on a block: the push (applied force) competes with friction; gravity pulls down, the surface pushes back up (normal force).",
+    "example": "F = ma. To accelerate a 10 kg cart at 2 m/s²: force = 10 × 2 = 20 newtons.",
+    "tip": "First law = inertia; second law = F = ma; third law = equal-and-opposite action/reaction pairs."
+   },
+   {
+    "h": "Forces: gravity and friction",
+    "body": "A force is a push or a pull. Two forces shape everyday life. Gravity is the attraction between masses; Earth's gravity pulls everything toward its center, giving objects weight and making dropped things fall. It's also what keeps the Moon orbiting Earth and the planets orbiting the Sun.\n\nFriction is a force that resists motion between surfaces in contact. It's why a sliding book eventually stops and why your shoes grip the floor. Friction can be a nuisance (wasted energy as heat) or essential (brakes, walking). Most motion you see is a tug-of-war between a driving force and friction.",
+    "tip": "Gravity pulls masses together; friction opposes motion between surfaces. Both are everywhere."
+   },
+   {
+    "h": "Energy and its conservation",
+    "body": "Energy is the capacity to do work, and it comes in many forms: kinetic energy (energy of motion), potential energy (stored energy, like a ball held up high), thermal energy (heat), chemical energy (in food and fuel), and electrical energy, among others.\n\nThe great rule is the conservation of energy: energy is never created or destroyed, only transformed from one form to another. A roller coaster at the top has potential energy; as it drops, that converts to kinetic energy; friction turns some into heat. Add it all up, and the total never changes.",
+    "example": "A ball held at the top of a hill has potential energy; rolling down, it becomes kinetic energy of motion.",
+    "tip": "Energy changes form but is never lost — track where it goes (often into heat via friction)."
+   },
+   {
+    "h": "Waves, light, and sound",
+    "body": "A wave is a disturbance that carries energy from place to place without carrying matter along with it. Waves have a wavelength (distance between peaks), a frequency (how many pass per second), and an amplitude (height, tied to intensity or loudness).\n\nSound is a wave of vibrating air or another medium — which is why there's no sound in the vacuum of space. Light is an electromagnetic wave that needs no medium and travels incredibly fast (about 300,000 km per second). Different wavelengths of light are different colors; beyond the visible range lie infrared, ultraviolet, X-rays, and radio waves.",
+    "tip": "Sound needs a medium (air); light does not — light crosses empty space to reach us from the Sun and stars."
+   },
+   {
+    "h": "Why physics is the base of science",
+    "body": "Physics is often called the most fundamental science because its laws underlie all the others. Chemistry is, at bottom, physics applied to atoms and their electrons; biology runs on the chemistry of living cells; astronomy applies physics to stars and galaxies.\n\nThe same laws of motion and gravity that describe a thrown ball describe a spacecraft's trajectory to Mars. This universality is what makes physics so powerful: learn the core principles, and you hold a key that unlocks phenomena across every scale of the universe."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Motion",
+    "body": "Speed = distance/time; velocity adds direction; acceleration = any change in velocity."
+   },
+   {
+    "h": "Newton's laws",
+    "body": "1) inertia; 2) F = ma; 3) every action has an equal and opposite reaction."
+   },
+   {
+    "h": "Forces",
+    "body": "Gravity pulls masses together (weight, orbits); friction resists motion between surfaces."
    },
    {
     "h": "Energy",
-    "body": "Energy is the ability to do work, in forms like kinetic (motion), potential (stored, like a raised weight), heat, light, and electrical. Energy can change form but is never created or destroyed (conservation of energy). A roller coaster trades potential for kinetic and back."
+    "body": "Kinetic, potential, thermal, chemical, electrical — never created or destroyed, only transformed."
    },
    {
-    "h": "Gravity",
-    "body": "Gravity is the force that pulls objects with mass toward each other. On Earth it pulls everything down at the same rate (ignoring air resistance) — a feather and a hammer fall together in a vacuum. Gravity keeps the Moon orbiting Earth and Earth orbiting the Sun."
-   },
-   {
-    "h": "Waves: light and sound",
-    "body": "A wave carries energy without carrying matter along with it. Sound is a wave that needs a medium (air, water) to travel, which is why space is silent. Light is a wave that can travel through empty space, which is how the Sun's energy reaches us."
+    "h": "Waves",
+    "body": "Carry energy, not matter. Sound needs a medium; light is electromagnetic and needs none."
    }
   ],
   "flash": [
    [
+    "Speed",
+    "How fast something moves: distance per unit time."
+   ],
+   [
+    "Velocity",
+    "Speed plus direction."
+   ],
+   [
+    "Acceleration",
+    "Any change in velocity over time."
+   ],
+   [
     "Force",
-    "A push or a pull on an object."
+    "A push or a pull."
    ],
    [
-    "Inertia",
-    "An object's resistance to a change in its motion."
+    "Newton's 1st law",
+    "Objects keep doing what they're doing unless a force acts (inertia)."
    ],
    [
-    "F = ma",
-    "Force equals mass times acceleration (Newton's second law)."
+    "Newton's 2nd law",
+    "Force equals mass times acceleration (F = ma)."
+   ],
+   [
+    "Newton's 3rd law",
+    "Every action has an equal and opposite reaction."
+   ],
+   [
+    "Gravity",
+    "The attractive force between masses."
+   ],
+   [
+    "Friction",
+    "A force that resists motion between surfaces in contact."
    ],
    [
     "Kinetic energy",
@@ -6515,57 +7050,71 @@ window.LAB404_CONTENT = {
    ],
    [
     "Potential energy",
-    "Stored energy (e.g., a raised or stretched object)."
+    "Stored energy due to position or state."
    ],
    [
     "Conservation of energy",
-    "Energy changes form but is never created or destroyed."
-   ],
-   [
-    "Gravity",
-    "The force pulling objects with mass toward each other."
-   ],
-   [
-    "Wave",
-    "A disturbance that carries energy without carrying matter."
+    "Energy is never created or destroyed, only transformed."
    ]
   ],
   "quiz": [
    {
-    "q": "An object keeps moving at a steady speed unless:",
+    "q": "Speed is:",
     "options": [
-     "A force acts on it",
-     "It gets tired",
-     "Time passes",
-     "It wants to stop"
+     "Distance divided by time",
+     "Direction only",
+     "Mass times acceleration",
+     "Stored energy"
     ],
     "a": 0,
-    "why": "Newton's first law (inertia): motion changes only when a force acts."
+    "why": "Speed = distance / time."
+   },
+   {
+    "q": "What does velocity include that speed does not?",
+    "options": [
+     "Direction",
+     "Weight",
+     "Color",
+     "Temperature"
+    ],
+    "a": 0,
+    "why": "Velocity is speed plus direction."
+   },
+   {
+    "q": "A car slowing to a stop is undergoing:",
+    "options": [
+     "Acceleration (negative)",
+     "No change",
+     "Constant velocity",
+     "Zero force"
+    ],
+    "a": 0,
+    "why": "Any change in velocity — including slowing — is acceleration."
+   },
+   {
+    "q": "Newton's first law is also called the law of:",
+    "options": [
+     "Inertia",
+     "Gravity",
+     "Energy",
+     "Friction"
+    ],
+    "a": 0,
+    "why": "Objects keep their state of motion unless a force acts — inertia."
    },
    {
     "q": "Newton's second law is written as:",
     "options": [
      "F = ma",
      "E = mc²",
-     "a = F",
-     "F = m"
+     "v = d/t",
+     "F = 0"
     ],
     "a": 0,
-    "why": "Force = mass × acceleration."
+    "why": "Force equals mass times acceleration."
    },
    {
-    "q": "The energy of motion is called:",
-    "options": [
-     "Kinetic energy",
-     "Potential energy",
-     "Heat only",
-     "Light"
-    ],
-    "a": 0,
-    "why": "Kinetic energy is energy an object has because it's moving."
-   },
-   {
-    "q": "'For every action there is an equal and opposite reaction' is Newton's:",
+    "q": "A rocket flies because the gas it pushes down pushes it up. This is Newton's:",
     "options": [
      "Third law",
      "First law",
@@ -6573,289 +7122,680 @@ window.LAB404_CONTENT = {
      "Law of gravity"
     ],
     "a": 0,
-    "why": "That's the third law of motion."
+    "why": "Every action has an equal and opposite reaction."
    },
    {
-    "q": "Sound cannot travel through:",
+    "q": "To accelerate a 5 kg cart at 2 m/s², the force needed is:",
     "options": [
-     "Empty space (a vacuum)",
-     "Air",
-     "Water",
+     "10 newtons",
+     "7 newtons",
+     "2.5 newtons",
+     "3 newtons"
+    ],
+    "a": 0,
+    "why": "F = ma = 5 × 2 = 10 N."
+   },
+   {
+    "q": "What force keeps the Moon orbiting Earth?",
+    "options": [
+     "Gravity",
+     "Friction",
+     "Magnetism",
+     "Sound"
+    ],
+    "a": 0,
+    "why": "Gravity, the attraction between masses, holds orbits."
+   },
+   {
+    "q": "A sliding book stops because of:",
+    "options": [
+     "Friction",
+     "Gravity alone",
+     "Inertia",
+     "Electricity"
+    ],
+    "a": 0,
+    "why": "Friction resists motion between the book and the surface."
+   },
+   {
+    "q": "A ball held high has mostly which energy?",
+    "options": [
+     "Potential",
+     "Kinetic",
+     "Thermal",
+     "Electrical"
+    ],
+    "a": 0,
+    "why": "Stored energy from its height is potential energy."
+   },
+   {
+    "q": "As that ball falls, potential energy converts to:",
+    "options": [
+     "Kinetic energy",
+     "More potential energy",
+     "Nothing",
+     "Sound only"
+    ],
+    "a": 0,
+    "why": "Energy of position becomes energy of motion."
+   },
+   {
+    "q": "The conservation of energy says energy is:",
+    "options": [
+     "Never created or destroyed, only transformed",
+     "Always increasing",
+     "Always lost",
+     "Created from nothing"
+    ],
+    "a": 0,
+    "why": "Total energy stays constant; it just changes form."
+   },
+   {
+    "q": "Why is there no sound in the vacuum of space?",
+    "options": [
+     "Sound needs a medium like air",
+     "Space is too cold",
+     "Light blocks it",
+     "Space has no gravity"
+    ],
+    "a": 0,
+    "why": "Sound is a vibration that needs a medium to travel through."
+   },
+   {
+    "q": "Light is a type of:",
+    "options": [
+     "Electromagnetic wave",
+     "Sound wave",
+     "Chemical",
      "Metal"
     ],
     "a": 0,
-    "why": "Sound needs a medium; space has none, so it's silent."
+    "why": "Light is an electromagnetic wave needing no medium."
    },
    {
-    "q": "Energy can:",
+    "q": "Different wavelengths of visible light appear as different:",
     "options": [
-     "Change form but not be destroyed",
-     "Be created from nothing",
-     "Disappear completely",
-     "Only be heat"
+     "Colors",
+     "Sounds",
+     "Weights",
+     "Temperatures"
     ],
     "a": 0,
-    "why": "Conservation of energy: it transforms but is conserved."
+    "why": "Wavelength determines color across the visible spectrum."
    }
   ]
  },
  "science-earth-space": {
-  "title": "Earth & Space",
+  "title": "Earth & Space Science",
   "subject": "Science",
-  "level": "Grades 6-12",
-  "intro": "Earth and space science looks at our planet and the universe around it — how Earth is built, how it changes, its weather and water, and our place among the Sun, Moon, and stars.",
-  "cards": [
+  "level": "Grades 9-12",
+  "objectives": [
+   "Describe Earth's internal layers and the theory of plate tectonics",
+   "Explain the rock cycle and how the three rock types form",
+   "Describe the water cycle and its role on Earth",
+   "Explain the structure of the solar system and Earth's place in it",
+   "Describe stars, galaxies, and the scale of the universe"
+  ],
+  "intro": "Earth and space science studies our planet and the cosmos it sits within — the ground beneath your feet, the water and air that sustain life, and the vast universe beyond. It connects the very large (galaxies) to the very close (the rock in your hand), all governed by the same physical laws. This lesson covers Earth's structure, its cycles, the solar system, and the universe.",
+  "sections": [
    {
-    "h": "Earth's layers",
-    "body": "Earth is built in layers: a thin rocky crust we live on, a thick hot mantle beneath, and a core of mostly iron (a liquid outer core and a solid inner core). Heat from deep inside drives much of what happens at the surface."
+    "h": "Inside the Earth",
+    "body": "Earth is layered like an onion. At the center is the core — a solid inner core and a molten outer core of iron and nickel, incredibly hot, whose motion generates Earth's magnetic field. Surrounding it is the mantle, a thick layer of hot, slowly flowing rock that makes up most of Earth's volume.\n\nOn the outside is the crust, a thin, rigid shell of rock — the ground we live on, thinner than an eggshell by comparison. The crust and the uppermost mantle are broken into huge slabs called tectonic plates that drift on the hotter mantle below.",
+    "visual": "<svg viewBox=\"0 0 200 206\" width=\"185\" role=\"img\" aria-label=\"Earth's interior as concentric layers: inner core, outer core, mantle, and thin crust\"><circle cx=\"100\" cy=\"100\" r=\"90\" fill=\"rgba(230,150,70,.16)\" stroke=\"#8a5a2b\" stroke-width=\"4\"/><circle cx=\"100\" cy=\"100\" r=\"52\" fill=\"rgba(240,90,90,.22)\" stroke=\"#f05a5a\" stroke-width=\"1.5\"/><circle cx=\"100\" cy=\"100\" r=\"24\" fill=\"rgba(232,184,75,.4)\" stroke=\"#e8b84b\" stroke-width=\"1.5\"/><text x=\"100\" y=\"103\" text-anchor=\"middle\" fill=\"#1a2233\" font-size=\"9\">inner core</text><text x=\"100\" y=\"62\" text-anchor=\"middle\" fill=\"#2a1f14\" font-size=\"9\">outer core</text><text x=\"100\" y=\"26\" text-anchor=\"middle\" fill=\"#2a1f14\" font-size=\"9\">mantle</text><text x=\"100\" y=\"202\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8.5\">outer ring = crust (very thin in reality)</text></svg>",
+    "caption": "Earth's layers from the center out: a solid inner core, molten outer core, thick mantle, and thin crust.",
+    "tip": "From center out: inner core, outer core, mantle, crust. The crust is surprisingly thin."
    },
    {
     "h": "Plate tectonics",
-    "body": "Earth's crust is broken into huge moving pieces called tectonic plates that drift slowly on the mantle. Where they meet, they build mountains, open oceans, and cause earthquakes and volcanoes. It's why the continents look like puzzle pieces."
+    "body": "Earth's crust is broken into about a dozen major tectonic plates that move slowly — only centimeters a year, but over millions of years, enough to rearrange whole continents. This movement, driven by heat in the mantle, is the theory of plate tectonics, one of the great unifying ideas in Earth science.\n\nWhere plates meet, dramatic things happen. Plates colliding push up mountains; plates pulling apart let magma rise and form new crust; plates grinding past each other cause earthquakes. Volcanoes, earthquakes, mountain ranges, and the very shape of the continents are all products of moving plates.",
+    "example": "The Himalayas rose where India's plate collided with Asia; California's quakes come from plates grinding along the San Andreas fault."
    },
    {
     "h": "The rock cycle",
-    "body": "Rocks slowly change form. Igneous rock forms from cooled lava or magma; weathering breaks rock into sediment that compacts into sedimentary rock; heat and pressure turn rock into metamorphic rock. Over long time, rock cycles between these types."
+    "body": "Rocks aren't permanent — they're constantly recycled through the rock cycle, and there are three main types. Igneous rock forms when molten rock (magma or lava) cools and hardens, like granite or basalt. Sedimentary rock forms when bits of rock and shell are pressed and cemented together over time, like sandstone or limestone.\n\nMetamorphic rock forms when existing rock is changed by intense heat and pressure deep underground, like marble (from limestone). Over vast time, any rock can become any other type: mountains erode into sediment, sediment buries and heats into metamorphic rock, which can melt and cool into igneous rock again.",
+    "tip": "Igneous = cooled from melt; sedimentary = pressed layers; metamorphic = changed by heat and pressure."
    },
    {
-    "h": "The water cycle and weather",
-    "body": "Water constantly cycles: it evaporates into the air, condenses into clouds, and falls as precipitation (rain, snow), then flows back to the sea. Weather is the day-to-day state of the atmosphere; climate is the long-term average pattern of a place."
+    "h": "The water cycle",
+    "body": "Water constantly circulates between the oceans, air, and land in the water cycle, powered by the Sun. The Sun's heat drives evaporation, turning liquid water from oceans and lakes into water vapor that rises into the air. High up, the vapor cools and undergoes condensation, forming clouds.\n\nWhen the droplets grow heavy enough, they fall as precipitation — rain or snow. That water flows across the land as runoff into rivers and back to the sea, or soaks into the ground, and the cycle repeats. This endless loop distributes fresh water across the planet and shapes weather and climate.",
+    "visual": "<svg viewBox=\"0 0 250 185\" width=\"240\" role=\"img\" aria-label=\"The water cycle: evaporation from the ocean, condensation into a cloud, precipitation as rain, and runoff back to the ocean\"><rect x=\"0\" y=\"142\" width=\"250\" height=\"43\" fill=\"rgba(79,156,240,.22)\"/><circle cx=\"28\" cy=\"28\" r=\"15\" fill=\"rgba(232,184,75,.4)\" stroke=\"#e8b84b\" stroke-width=\"1.5\"/><ellipse cx=\"178\" cy=\"42\" rx=\"40\" ry=\"17\" fill=\"rgba(205,217,236,.22)\" stroke=\"#cdd9ec\" stroke-width=\"1.5\"/><path d=\"M72 142 Q58 85 120 55\" fill=\"none\" stroke=\"#39e3c8\" stroke-width=\"2.5\"/><polygon points=\"114,50 123,53 117,62\" fill=\"#39e3c8\"/><line x1=\"158\" y1=\"60\" x2=\"152\" y2=\"82\" stroke=\"#4f9cf0\" stroke-width=\"2\"/><line x1=\"178\" y1=\"60\" x2=\"172\" y2=\"84\" stroke=\"#4f9cf0\" stroke-width=\"2\"/><line x1=\"198\" y1=\"60\" x2=\"192\" y2=\"82\" stroke=\"#4f9cf0\" stroke-width=\"2\"/><path d=\"M190 100 Q215 130 225 150\" fill=\"none\" stroke=\"#4f9cf0\" stroke-width=\"2\"/><text x=\"70\" y=\"108\" text-anchor=\"middle\" fill=\"#39e3c8\" font-size=\"9\">evaporation</text><text x=\"178\" y=\"20\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9\">condensation</text><text x=\"178\" y=\"104\" text-anchor=\"middle\" fill=\"#4f9cf0\" font-size=\"9\">precipitation</text><text x=\"125\" y=\"170\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"9\">ocean</text></svg>",
+    "caption": "The water cycle: the Sun evaporates ocean water, it condenses into clouds, falls as precipitation, and runs back to the sea.",
+    "tip": "Evaporation (up) → condensation (clouds) → precipitation (rain/snow) → runoff (back to sea) → repeat."
    },
    {
     "h": "The solar system",
-    "body": "Earth is one of eight planets orbiting the Sun, a star. The Moon orbits Earth, causing tides and its changing phases. Earth's tilt as it orbits the Sun gives us seasons, and its spin gives us day and night."
+    "body": "Earth is the third of eight planets orbiting the Sun, a medium-sized star. The four inner planets — Mercury, Venus, Earth, Mars — are small and rocky. The four outer planets — Jupiter, Saturn, Uranus, Neptune — are giant balls of gas and ice. Moons orbit many planets, and asteroids and comets fill the gaps.\n\nGravity holds it all together: the Sun's immense gravity keeps the planets in their orbits, and each planet's gravity holds its moons. Earth's particular distance from the Sun — not too hot, not too cold — is a big part of why it can hold liquid water and life.",
+    "example": "Order from the Sun: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune."
+   },
+   {
+    "h": "Stars, galaxies, and the universe",
+    "body": "The Sun is just one of hundreds of billions of stars in our galaxy, the Milky Way — a vast spinning disk of stars, gas, and dust. A star is a giant ball of gas that shines by fusing hydrogen into helium in its core, releasing enormous energy; our Sun does this every second.\n\nGalaxies themselves number in the hundreds of billions across the observable universe. The distances are staggering: light from the Sun takes 8 minutes to reach us, but light from other stars takes years, and from other galaxies, millions of years. When you look at the night sky, you're looking back in time.",
+    "tip": "The Sun is one star in one galaxy (the Milky Way); there are billions of galaxies, each with billions of stars."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Earth's layers",
+    "body": "Inner core (solid) → outer core (molten) → mantle (thick, flowing) → crust (thin, rigid)."
+   },
+   {
+    "h": "Plate tectonics",
+    "body": "The crust is broken into drifting plates; their collisions and grinding make mountains, quakes, and volcanoes."
+   },
+   {
+    "h": "Rock cycle",
+    "body": "Igneous (cooled melt), sedimentary (pressed layers), metamorphic (heat + pressure) — endlessly recycled."
+   },
+   {
+    "h": "Water cycle",
+    "body": "Evaporation → condensation → precipitation → runoff, powered by the Sun."
+   },
+   {
+    "h": "Solar system & universe",
+    "body": "8 planets orbit the Sun; the Sun is one star in the Milky Way, one of billions of galaxies."
    }
   ],
   "flash": [
    [
     "Crust",
-    "Earth's thin, solid outer rocky layer."
+    "Earth's thin, rigid outer rock shell."
    ],
    [
     "Mantle",
-    "The thick, hot layer beneath Earth's crust."
+    "The thick layer of hot, slowly flowing rock below the crust."
    ],
    [
-    "Tectonic plates",
-    "Giant moving pieces of Earth's crust."
+    "Core",
+    "Earth's center: a solid inner and molten outer core of iron and nickel."
    ],
    [
-    "Rock cycle",
-    "How rocks change among igneous, sedimentary, metamorphic."
+    "Tectonic plate",
+    "A large slab of crust that slowly drifts on the mantle."
    ],
    [
-    "Water cycle",
-    "Evaporation, condensation, precipitation, and runoff."
+    "Igneous rock",
+    "Rock formed when molten magma or lava cools and hardens."
    ],
    [
-    "Weather vs. climate",
-    "Weather is day-to-day; climate is the long-term average."
+    "Sedimentary rock",
+    "Rock formed from pressed and cemented layers of sediment."
    ],
    [
-    "Orbit",
-    "The path one object takes around another in space."
+    "Metamorphic rock",
+    "Rock changed by intense heat and pressure."
    ],
    [
-    "Seasons",
-    "Caused by Earth's tilt as it orbits the Sun."
+    "Evaporation",
+    "Liquid water turning into vapor (driven by heat)."
+   ],
+   [
+    "Condensation",
+    "Water vapor cooling into droplets, forming clouds."
+   ],
+   [
+    "Precipitation",
+    "Water falling from clouds as rain or snow."
+   ],
+   [
+    "Solar system",
+    "The Sun and everything orbiting it — 8 planets, moons, asteroids, comets."
+   ],
+   [
+    "Galaxy",
+    "A huge system of billions of stars, like our Milky Way."
    ]
   ],
   "quiz": [
    {
-    "q": "Earth's thin outer rocky layer is the:",
+    "q": "From the center outward, Earth's layers are:",
     "options": [
+     "Inner core, outer core, mantle, crust",
+     "Crust, mantle, core",
+     "Mantle, crust, core",
+     "Core, crust, mantle"
+    ],
+    "a": 0,
+    "why": "Solid inner core, molten outer core, mantle, then thin crust."
+   },
+   {
+    "q": "Earth's magnetic field is generated by motion in the:",
+    "options": [
+     "Molten outer core",
      "Crust",
-     "Mantle",
-     "Core",
-     "Atmosphere"
+     "Atmosphere",
+     "Oceans"
     ],
     "a": 0,
-    "why": "We live on the crust; the mantle and core lie beneath."
+    "why": "The churning molten outer core generates the magnetic field."
    },
    {
-    "q": "Earthquakes and volcanoes mostly occur:",
+    "q": "The crust is broken into drifting slabs called:",
     "options": [
-     "Where tectonic plates meet",
-     "In the center of plates only",
-     "In the ocean only",
-     "Randomly, evenly everywhere"
+     "Tectonic plates",
+     "Rock cycles",
+     "Continents only",
+     "Fault lines"
     ],
     "a": 0,
-    "why": "Plate boundaries are where most happen."
+    "why": "Tectonic plates move slowly on the mantle."
    },
    {
-    "q": "In the water cycle, water rising into the air is:",
+    "q": "Mountains like the Himalayas form mainly where plates:",
+    "options": [
+     "Collide",
+     "Stand still",
+     "Melt entirely",
+     "Disappear"
+    ],
+    "a": 0,
+    "why": "Colliding plates push crust upward into mountains."
+   },
+   {
+    "q": "Granite, which cooled from molten rock, is which type?",
+    "options": [
+     "Igneous",
+     "Sedimentary",
+     "Metamorphic",
+     "Mineral only"
+    ],
+    "a": 0,
+    "why": "Igneous rock forms from cooled magma or lava."
+   },
+   {
+    "q": "Sandstone, formed from pressed layers, is which type?",
+    "options": [
+     "Sedimentary",
+     "Igneous",
+     "Metamorphic",
+     "Volcanic"
+    ],
+    "a": 0,
+    "why": "Sedimentary rock forms from cemented sediment layers."
+   },
+   {
+    "q": "Marble, changed from limestone by heat and pressure, is:",
+    "options": [
+     "Metamorphic",
+     "Igneous",
+     "Sedimentary",
+     "Liquid"
+    ],
+    "a": 0,
+    "why": "Metamorphic rock is existing rock changed by heat and pressure."
+   },
+   {
+    "q": "In the water cycle, the Sun's heat drives:",
     "options": [
      "Evaporation",
-     "Precipitation",
      "Condensation",
+     "Precipitation",
      "Runoff"
     ],
     "a": 0,
-    "why": "Evaporation turns liquid water into vapor that rises."
+    "why": "Heat evaporates liquid water into vapor."
    },
    {
-    "q": "The difference between weather and climate is:",
+    "q": "Clouds form when water vapor undergoes:",
     "options": [
-     "Weather is day-to-day; climate is long-term",
-     "They're the same",
-     "Climate is one day",
-     "Weather is 100 years"
+     "Condensation",
+     "Evaporation",
+     "Melting",
+     "Runoff"
     ],
     "a": 0,
-    "why": "Climate is the long-term average; weather is right now."
+    "why": "Cooling vapor condenses into droplets that form clouds."
    },
    {
-    "q": "Seasons are caused by:",
+    "q": "Rain and snow are examples of:",
     "options": [
-     "Earth's tilt as it orbits the Sun",
-     "Earth moving closer to the Sun",
-     "The Moon",
-     "Clouds"
+     "Precipitation",
+     "Evaporation",
+     "Condensation",
+     "Erosion"
     ],
     "a": 0,
-    "why": "The tilt changes how directly sunlight hits each hemisphere."
+    "why": "Precipitation is water falling from clouds."
    },
    {
-    "q": "What causes day and night?",
+    "q": "How many planets orbit the Sun?",
     "options": [
-     "Earth spinning on its axis",
-     "Earth orbiting the Sun",
-     "The Moon's phases",
-     "Clouds blocking the Sun"
+     "8",
+     "9",
+     "7",
+     "12"
     ],
     "a": 0,
-    "why": "Earth's rotation turns us toward and away from the Sun."
+    "why": "Eight planets, from Mercury to Neptune."
+   },
+   {
+    "q": "Which is the correct order from the Sun?",
+    "options": [
+     "Mercury, Venus, Earth, Mars",
+     "Earth, Venus, Mercury, Mars",
+     "Mars, Earth, Venus, Mercury",
+     "Venus, Mercury, Earth, Mars"
+    ],
+    "a": 0,
+    "why": "Mercury is closest, then Venus, Earth, Mars."
+   },
+   {
+    "q": "What holds the planets in their orbits?",
+    "options": [
+     "The Sun's gravity",
+     "Friction",
+     "Magnetism",
+     "Air pressure"
+    ],
+    "a": 0,
+    "why": "The Sun's immense gravity keeps planets orbiting."
+   },
+   {
+    "q": "Our galaxy is called the:",
+    "options": [
+     "Milky Way",
+     "Solar System",
+     "Andromeda",
+     "Universe"
+    ],
+    "a": 0,
+    "why": "We live in the Milky Way galaxy."
+   },
+   {
+    "q": "A star shines by:",
+    "options": [
+     "Fusing hydrogen into helium",
+     "Burning wood",
+     "Reflecting light",
+     "Spinning fast"
+    ],
+    "a": 0,
+    "why": "Stars release energy by nuclear fusion of hydrogen into helium."
    }
   ]
  },
  "science-environmental-science": {
   "title": "Environmental Science",
   "subject": "Science",
-  "level": "College",
-  "intro": "Environmental science studies how living things interact with each other and their surroundings — and how human activity affects the natural systems we all depend on. It connects biology, chemistry, and earth science to real-world problems.",
-  "cards": [
+  "level": "Grades 9-12",
+  "objectives": [
+   "Describe ecosystems and how energy and matter move through them",
+   "Explain the energy pyramid and the 10% rule",
+   "Describe key natural cycles (water and carbon)",
+   "Explain human impacts: pollution, habitat loss, and climate change",
+   "Describe conservation, sustainability, and biodiversity"
+  ],
+  "intro": "Environmental science studies how living things interact with each other and with their physical surroundings — and how human activity affects those systems. It draws on biology, chemistry, and earth science to understand ecosystems, natural cycles, and the challenge of keeping the planet livable. This lesson covers ecosystems, energy flow, natural cycles, human impact, and conservation.",
+  "sections": [
    {
     "h": "Ecosystems",
-    "body": "An ecosystem is a community of living things interacting with each other and their physical environment (air, water, soil). Energy flows through it from the sun to producers to consumers, and nutrients cycle and get reused. Everything is connected — change one part and others feel it."
+    "body": "An ecosystem is all the living things in an area together with their nonliving environment — the plants, animals, and microbes plus the soil, water, air, and sunlight they depend on. Ecosystems range from a single pond to an entire rainforest, and every part is connected.\n\nWithin an ecosystem, each species occupies a niche — its particular role and way of making a living. A healthy ecosystem has many species in balance; remove or add one (a top predator, an invasive weed) and the effects ripple through the whole system. This interconnectedness is the central idea of ecology.",
+    "tip": "An ecosystem = living things + their nonliving environment, all interconnected."
    },
    {
-    "h": "Biodiversity",
-    "body": "Biodiversity is the variety of life in an area — many different species. It makes ecosystems more stable and resilient, provides food and medicine, and keeps natural systems working. Losing species (extinction) weakens the whole web of life."
+    "h": "Energy flow and the energy pyramid",
+    "body": "Energy enters almost every ecosystem as sunlight, which producers (plants) capture through photosynthesis. It then flows to consumers that eat them, and on to predators. But at each step, most of the energy is lost as heat — only about 10% passes to the next level.\n\nThis is why ecologists picture an energy pyramid: a broad base of many plants, fewer herbivores above, and only a few top predators at the peak. It takes an enormous amount of grass to support one lion. The 10% rule also explains why food chains are rarely more than four or five links long — there simply isn't enough energy left.",
+    "visual": "<svg viewBox=\"0 0 230 180\" width=\"220\" role=\"img\" aria-label=\"An energy pyramid: a wide base of producers, fewer herbivores, fewer carnivores, and few top predators at the peak\"><polygon points=\"115,30 15,160 215,160\" fill=\"rgba(79,156,240,.12)\" stroke=\"#4f9cf0\" stroke-width=\"2\"/><line x1=\"84\" y1=\"70\" x2=\"146\" y2=\"70\" stroke=\"#4f9cf0\" stroke-width=\"1.2\"/><line x1=\"61\" y1=\"100\" x2=\"169\" y2=\"100\" stroke=\"#4f9cf0\" stroke-width=\"1.2\"/><line x1=\"38\" y1=\"130\" x2=\"192\" y2=\"130\" stroke=\"#4f9cf0\" stroke-width=\"1.2\"/><text x=\"115\" y=\"58\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"9\">top predators</text><text x=\"115\" y=\"90\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">carnivores</text><text x=\"115\" y=\"119\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">herbivores</text><text x=\"115\" y=\"150\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"10\">producers (plants)</text><text x=\"115\" y=\"176\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"8.5\">only ~10% of energy passes up each level</text></svg>",
+    "caption": "The energy pyramid: a wide base of producers narrows to few top predators, because only ~10% of energy passes up each level.",
+    "example": "1,000 units of plant energy → ~100 reach herbivores → ~10 reach carnivores → ~1 reaches top predators.",
+    "tip": "Only about 10% of energy passes up each level — that's why top predators are rare."
    },
    {
     "h": "Natural cycles",
-    "body": "Key materials cycle through the environment. In the carbon cycle, carbon moves between the air, living things, and the ground; in the water cycle, water moves among sea, air, and land. Human activity can overload these cycles — for example, adding extra carbon dioxide to the air."
+    "body": "While energy flows through and out of ecosystems, matter cycles around and around. In the water cycle, water evaporates, condenses, and falls as rain again and again. In the carbon cycle, carbon moves between the air (as carbon dioxide), living things, and the ground: plants take in CO₂, animals breathe it out, and decay and burning return it to the air.\n\nThese cycles keep ecosystems supplied with the materials life needs — water, carbon, nitrogen — without running out. They're also where human activity has outsized effects: burning fossil fuels, for example, adds extra carbon to the air faster than the natural cycle can remove it.",
+    "tip": "Energy flows through an ecosystem and is lost; matter (water, carbon) cycles and is reused."
    },
    {
-    "h": "Human impact and pollution",
-    "body": "People affect the environment through pollution (air, water, plastic), habitat destruction, and overuse of resources. These harm wildlife and human health. Many effects are reversible with better choices, but some — like extinction — are permanent."
+    "h": "Human impact on the environment",
+    "body": "Humans change ecosystems on a vast scale. Pollution puts harmful substances into air, water, and soil — from factory smoke to plastic in the oceans. Habitat destruction, such as clearing forests for farms and cities, removes the homes species need and is a leading cause of extinction.\n\nClimate change is a global impact: burning fossil fuels releases carbon dioxide and other greenhouse gases that trap heat, warming the planet and shifting weather patterns. These impacts are connected — and because ecosystems are interconnected, a change in one place (a warming ocean, a cleared forest) can affect species and people far away.",
+    "tip": "The big three human impacts: pollution, habitat destruction, and climate change from greenhouse gases."
    },
    {
-    "h": "Climate change and sustainability",
-    "body": "Burning fossil fuels releases greenhouse gases that trap heat, warming the planet and shifting weather and sea levels — the core of human-caused climate change. Sustainability means meeting today's needs without using up what future generations will need, through things like renewable energy, conservation, and recycling."
+    "h": "Conservation and sustainability",
+    "body": "The response to these challenges is conservation — protecting ecosystems and using natural resources wisely so they last. This includes setting aside protected lands, restoring damaged habitats, and protecting endangered species before they vanish.\n\nA key idea is sustainability: meeting today's needs without using up the resources future generations will need. Renewable energy (solar, wind), recycling, reducing waste, and protecting biodiversity all serve sustainability. The goal isn't to stop using nature but to use it at a rate it can keep up with — living off the interest, not the principal.",
+    "tip": "Sustainability = using resources at a rate nature can replace, so they're still there tomorrow."
+   },
+   {
+    "h": "Biodiversity and why it matters",
+    "body": "Biodiversity is the variety of life in an ecosystem — the number and range of different species. High biodiversity makes ecosystems more stable and resilient: when many species fill different roles, the system can absorb shocks like disease or drought without collapsing.\n\nBiodiversity also directly benefits people. Different plants give us food and medicines; healthy, varied ecosystems clean our water, pollinate crops, and build soil. Protecting biodiversity isn't only about saving individual species — it's about keeping the whole web of life, which we depend on, intact and working."
+   }
+  ],
+  "cards": [
+   {
+    "h": "Ecosystems",
+    "body": "Living things + their nonliving environment, interconnected; each species has a niche."
+   },
+   {
+    "h": "Energy pyramid",
+    "body": "Only ~10% of energy passes up each level, so predators are few and chains are short."
+   },
+   {
+    "h": "Natural cycles",
+    "body": "Energy flows through and is lost; matter (water, carbon) cycles and is reused."
+   },
+   {
+    "h": "Human impact",
+    "body": "Pollution, habitat destruction, and climate change from greenhouse gases."
+   },
+   {
+    "h": "Conservation",
+    "body": "Protect and restore ecosystems; use resources sustainably; safeguard biodiversity."
    }
   ],
   "flash": [
    [
     "Ecosystem",
-    "A community of living things and their environment, interacting."
+    "All living things in an area plus their nonliving environment."
    ],
    [
-    "Biodiversity",
-    "The variety of different species in an area."
+    "Niche",
+    "A species' particular role and way of life in an ecosystem."
+   ],
+   [
+    "Producer",
+    "An organism (plant) that makes its own food from sunlight."
+   ],
+   [
+    "Consumer",
+    "An organism that eats others for energy."
+   ],
+   [
+    "Energy pyramid",
+    "A model showing energy shrinking at each higher feeding level."
    ],
    [
     "Carbon cycle",
-    "How carbon moves among air, living things, and the ground."
+    "The movement of carbon among air, living things, and the ground."
+   ],
+   [
+    "Pollution",
+    "Harmful substances released into air, water, or soil."
+   ],
+   [
+    "Habitat destruction",
+    "Removing the environments species need to live."
+   ],
+   [
+    "Climate change",
+    "Long-term warming and weather shifts from greenhouse gases."
    ],
    [
     "Greenhouse gas",
     "A gas (like CO₂) that traps heat in the atmosphere."
    ],
    [
-    "Climate change",
-    "Long-term warming and weather shifts, largely human-caused."
+    "Conservation",
+    "Protecting ecosystems and using resources wisely."
    ],
    [
-    "Sustainability",
-    "Meeting today's needs without harming future generations'."
-   ],
-   [
-    "Renewable energy",
-    "Energy from sources that don't run out (sun, wind)."
-   ],
-   [
-    "Extinction",
-    "The permanent loss of a species."
+    "Biodiversity",
+    "The variety of different species in an ecosystem."
    ]
   ],
   "quiz": [
    {
-    "q": "An ecosystem is:",
+    "q": "An ecosystem includes:",
     "options": [
-     "Living things interacting with their environment",
-     "Only the animals",
-     "Only the weather",
-     "A single organism"
+     "Living things and their nonliving environment",
+     "Only animals",
+     "Only plants",
+     "Only water"
     ],
     "a": 0,
-    "why": "It's the whole community plus its physical surroundings."
+    "why": "It's organisms plus their physical surroundings, interconnected."
    },
    {
-    "q": "Biodiversity refers to:",
+    "q": "A species' particular role in an ecosystem is its:",
     "options": [
-     "The variety of species in an area",
-     "The number of rocks",
-     "The amount of rain",
-     "One species only"
+     "Niche",
+     "Kingdom",
+     "Pyramid",
+     "Cycle"
     ],
     "a": 0,
-    "why": "More variety of life generally means a more resilient ecosystem."
+    "why": "A niche is how a species makes its living."
    },
    {
-    "q": "Greenhouse gases like CO₂ cause warming because they:",
+    "q": "Energy enters most ecosystems as:",
     "options": [
-     "Trap heat in the atmosphere",
-     "Block all sunlight",
-     "Cool the planet",
-     "Make oxygen"
+     "Sunlight",
+     "Soil",
+     "Rock",
+     "Wind only"
     ],
     "a": 0,
-    "why": "They trap heat, raising global temperatures."
+    "why": "Producers capture sunlight through photosynthesis."
+   },
+   {
+    "q": "About how much energy passes to the next feeding level?",
+    "options": [
+     "10%",
+     "90%",
+     "100%",
+     "50%"
+    ],
+    "a": 0,
+    "why": "Roughly 10%; the rest is lost as heat."
+   },
+   {
+    "q": "The energy pyramid is widest at the:",
+    "options": [
+     "Base (producers)",
+     "Peak (predators)",
+     "Middle",
+     "It's even"
+    ],
+    "a": 0,
+    "why": "Many producers support progressively fewer consumers above."
+   },
+   {
+    "q": "Which CYCLES through an ecosystem rather than flowing out?",
+    "options": [
+     "Matter like carbon and water",
+     "Energy",
+     "Sunlight",
+     "Heat"
+    ],
+    "a": 0,
+    "why": "Matter cycles and is reused; energy flows through and is lost."
+   },
+   {
+    "q": "In the carbon cycle, plants take in:",
+    "options": [
+     "Carbon dioxide",
+     "Oxygen only",
+     "Nitrogen only",
+     "Salt"
+    ],
+    "a": 0,
+    "why": "Plants absorb CO₂; animals breathe it out; burning returns it."
+   },
+   {
+    "q": "Clearing forests for farmland is an example of:",
+    "options": [
+     "Habitat destruction",
+     "Conservation",
+     "Recycling",
+     "Sustainability"
+    ],
+    "a": 0,
+    "why": "Removing habitat is a leading cause of extinction."
+   },
+   {
+    "q": "Climate change is driven mainly by:",
+    "options": [
+     "Greenhouse gases from burning fossil fuels",
+     "Too many trees",
+     "Ocean salt",
+     "Volcano smell"
+    ],
+    "a": 0,
+    "why": "CO₂ and other greenhouse gases trap heat and warm the planet."
+   },
+   {
+    "q": "Which is a greenhouse gas?",
+    "options": [
+     "Carbon dioxide",
+     "Helium",
+     "Argon",
+     "Neon"
+    ],
+    "a": 0,
+    "why": "CO₂ traps heat in the atmosphere."
+   },
+   {
+    "q": "Protecting ecosystems and using resources wisely is called:",
+    "options": [
+     "Conservation",
+     "Pollution",
+     "Extinction",
+     "Erosion"
+    ],
+    "a": 0,
+    "why": "Conservation protects nature for the long term."
+   },
+   {
+    "q": "Sustainability means using resources:",
+    "options": [
+     "At a rate nature can replace",
+     "As fast as possible",
+     "Only once",
+     "Never"
+    ],
+    "a": 0,
+    "why": "Meeting today's needs without using up tomorrow's resources."
    },
    {
     "q": "Which is a renewable energy source?",
     "options": [
-     "Solar (sun)",
+     "Solar",
      "Coal",
      "Oil",
      "Natural gas"
     ],
     "a": 0,
-    "why": "Sunlight and wind don't run out; fossil fuels do."
+    "why": "Solar (and wind) renew naturally; fossil fuels don't."
    },
    {
-    "q": "Sustainability means:",
+    "q": "Biodiversity is the:",
     "options": [
-     "Meeting needs without using up future resources",
-     "Using everything now",
-     "Never using resources",
-     "Only recycling paper"
+     "Variety of different species",
+     "Number of rocks",
+     "Amount of sunlight",
+     "Temperature"
     ],
     "a": 0,
-    "why": "It balances present needs with protecting the future."
+    "why": "Biodiversity is the range of life in an ecosystem."
    },
    {
-    "q": "Which human impact is permanent?",
+    "q": "High biodiversity tends to make an ecosystem more:",
     "options": [
-     "Extinction of a species",
-     "Air pollution",
-     "Littering",
-     "Water pollution"
+     "Stable and resilient",
+     "Fragile",
+     "Empty",
+     "Polluted"
     ],
     "a": 0,
-    "why": "Pollution can often be reversed; extinction cannot."
+    "why": "Many species filling different roles help absorb shocks."
    }
   ]
  },
