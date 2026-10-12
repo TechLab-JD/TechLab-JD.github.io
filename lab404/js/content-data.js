@@ -709,130 +709,282 @@ window.LAB404_CONTENT = {
  "cooking-kitchen-basics": {
   "title": "Kitchen Basics",
   "subject": "Cooking & Nutrition",
-  "level": "All levels",
-  "intro": "Cooking for yourself saves money, eats healthier, and isn't as hard as it looks. Master a handful of basics — a few tools, how heat works, and food safety — and you can make most simple meals without a recipe.",
+  "level": "All ages",
+  "objectives": [
+   "Identify essential kitchen tools and equipment",
+   "Understand common measurements and conversions",
+   "Set up and organize your space (mise en place)",
+   "Understand heat and basic cooking vocabulary",
+   "Build the confidence to start cooking"
+  ],
+  "intro": "Cooking at home saves money, is healthier, and is a genuinely useful life skill — and it starts with the basics: knowing your tools, measurements, and how a kitchen works. This lesson covers essential equipment, measuring, setting up your space, and the vocabulary that makes recipes make sense.",
+  "sections": [
+   {
+    "h": "Essential tools",
+    "body": "You don't need a fancy kitchen to cook well — a few key tools do most of the work. The essentials: a good chef's knife (your most-used tool) and a cutting board; a couple of pots and a skillet (frying pan); mixing bowls; measuring cups and spoons; a spatula, a wooden spoon, and tongs; and a colander for draining.\n\nAdd an oven, a stovetop, and basics like a baking sheet, and you can make the vast majority of home recipes. Quality matters most for your knife and a sturdy pan; the rest can be inexpensive. Start with these, learn to use them well, and add specialized gadgets only when you find you actually need them. Skill beats equipment every time.",
+    "tip": "A sharp chef's knife, a cutting board, a pot, and a skillet do most home cooking. Skill beats fancy gadgets."
+   },
+   {
+    "h": "Measurements and conversions",
+    "body": "Recipes use standard measurements, and knowing them makes any recipe readable. Volume is measured in teaspoons (tsp), tablespoons (tbsp), and cups; weight in ounces and pounds (or grams). A few conversions come up constantly: 3 teaspoons = 1 tablespoon, and 16 tablespoons = 1 cup.\n\nLearning these lets you scale recipes up or down and improvise. Measuring accurately matters more in baking (which is chemistry) than in general cooking (where you can adjust to taste). A simple set of measuring cups and spoons covers volume; a kitchen scale, while optional, gives the most accurate results, especially for baking. Keep a conversion chart handy until these become second nature.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Common kitchen measurement conversions\"><rect x=\"8\" y=\"5\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"5\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9.5\">3 teaspoons</text><text x=\"132\" y=\"20\" fill=\"#9adbcf\" font-size=\"9\">= 1 tablespoon</text><rect x=\"8\" y=\"27\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"27\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9.5\">16 tablespoons</text><text x=\"132\" y=\"42\" fill=\"#9adbcf\" font-size=\"9\">= 1 cup</text><rect x=\"8\" y=\"49\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"49\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9.5\">1 cup</text><text x=\"132\" y=\"64\" fill=\"#9adbcf\" font-size=\"9\">= 8 fluid ounces</text><rect x=\"8\" y=\"71\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"71\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9.5\">2 cups</text><text x=\"132\" y=\"86\" fill=\"#9adbcf\" font-size=\"9\">= 1 pint</text><rect x=\"8\" y=\"93\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"93\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9.5\">4 cups</text><text x=\"132\" y=\"108\" fill=\"#9adbcf\" font-size=\"9\">= 1 quart</text></svg>",
+    "caption": "The handful of measurement conversions that come up again and again.",
+    "example": "3 tsp = 1 tbsp  ·  16 tbsp = 1 cup  ·  1 cup = 8 fluid ounces  ·  2 cups = 1 pint.",
+    "tip": "Memorize two: 3 tsp = 1 tbsp, and 16 tbsp = 1 cup. Baking needs precise measuring; general cooking is more forgiving."
+   },
+   {
+    "h": "Mise en place: setting up",
+    "body": "Professional kitchens live by a French phrase: mise en place — 'everything in its place.' It means preparing and organizing all your ingredients and tools before you start cooking: wash and chop the vegetables, measure the spices, open the cans, and line everything up ready to go.\n\nThis habit transforms cooking from chaotic to calm. When everything is prepped, you can follow the recipe smoothly instead of frantically chopping while something burns. Read the whole recipe first, do your prep, then cook. It takes a little discipline at the start, but mise en place is the single habit that most separates confident cooks from stressed ones.",
+    "tip": "Mise en place = prep and organize everything BEFORE you start cooking. Read the whole recipe first, then prep, then cook."
+   },
+   {
+    "h": "Heat and basic vocabulary",
+    "body": "Understanding heat is central to cooking. The stovetop gives you adjustable heat levels — high heat for boiling and searing, medium for most cooking, low for simmering and gentle work. The oven cooks with surrounding dry heat at a set temperature. Learning to control heat (and not always cranking it to high) prevents most beginner disasters like burning the outside while the inside stays raw.\n\nRecipes also use a shared vocabulary: 'sauté' (cook quickly in a little fat over higher heat), 'simmer' (cook gently in liquid just below boiling), 'boil' (bubbling rapidly), 'bake' and 'roast' (cook with dry oven heat), 'season' (add salt, pepper, spices). Knowing these terms means you can follow almost any recipe. The words aren't hard — they're just a cook's shorthand.",
+    "tip": "Control the heat (don't default to high). Learn key terms: sauté, simmer, boil, bake/roast, season — they unlock any recipe."
+   },
+   {
+    "h": "Building confidence",
+    "body": "The biggest barrier to cooking isn't skill — it's confidence, and that only comes from doing it. Start simple: a handful of easy recipes you can repeat until they're automatic (scrambled eggs, pasta, a stir-fry, a simple soup). Mastering a few basics builds a foundation you can expand from.\n\nExpect some failures — every cook burns things and over-salts — and treat them as lessons, not verdicts. Taste as you go and adjust (this is the real secret of good cooks). Follow recipes closely at first, then start improvising as you learn what you like. Cooking is a skill that rewards practice quickly: cook a little regularly, and within weeks you'll be noticeably better. Everyone starts as a beginner.",
+    "tip": "Confidence comes from doing it: master a few simple recipes, taste as you go, and treat flops as lessons. Everyone starts a beginner."
+   }
+  ],
   "cards": [
    {
-    "h": "The few tools you actually need",
-    "body": "You can cook almost anything with a chef's knife, a cutting board, one good skillet, one pot, a spatula and a mixing bowl. Everything else is a bonus. A sharp knife is safer than a dull one — dull knives slip."
+    "h": "Essential tools",
+    "body": "A chef's knife, cutting board, a pot, a skillet, bowls, and measuring cups do most home cooking."
    },
    {
-    "h": "How heat works",
-    "body": "Low heat is for gentle cooking (eggs, sauces, simmering). Medium is the everyday default. High heat sears and boils. Most beginners burn food by using heat that's too high — when in doubt, go medium and be patient."
+    "h": "Measurements",
+    "body": "3 tsp = 1 tbsp; 16 tbsp = 1 cup. Baking needs precision; general cooking is forgiving."
    },
    {
-    "h": "Salt, taste, adjust",
-    "body": "Season in layers as you cook, not just at the end, and taste as you go — it's the single biggest thing separating good food from bland food. Salt brings out flavor, acid (lemon, vinegar) brightens, and fat (oil, butter) carries flavor."
+    "h": "Mise en place",
+    "body": "Prep and organize everything before you cook. Read the recipe first, then prep, then cook."
    },
    {
-    "h": "Food safety basics",
-    "body": "Wash hands and surfaces, and keep raw meat away from ready-to-eat food (use separate cutting boards). Cook chicken to 165°F and ground beef to 160°F. Don't leave perishable food out more than 2 hours. When in doubt, throw it out."
+    "h": "Heat & terms",
+    "body": "Control heat (not always high). Know sauté, simmer, boil, bake/roast, season."
    },
    {
-    "h": "A simple method: the one-pan sauté",
-    "body": "Heat a little oil in a skillet over medium. Add aromatics (onion, garlic) first, then your protein until cooked through, then vegetables, seasoning as you go. Most quick dinners are a version of this."
+    "h": "Confidence",
+    "body": "Master a few simple recipes, taste as you go, treat flops as lessons. Practice pays off fast."
    }
   ],
   "flash": [
    [
     "Chef's knife",
-    "The one essential knife — does most kitchen cutting."
+    "The large, all-purpose, most-used kitchen knife."
    ],
    [
-    "Sauté",
-    "To cook quickly in a little fat over medium-high heat."
-   ],
-   [
-    "Simmer",
-    "To cook in liquid just below a boil (small bubbles)."
-   ],
-   [
-    "Sear",
-    "To brown the surface of food over high heat for flavor."
-   ],
-   [
-    "Aromatics",
-    "Onion, garlic and the like, cooked first to build flavor."
-   ],
-   [
-    "Cross-contamination",
-    "Spreading germs from raw meat to other food — avoid with separate boards."
-   ],
-   [
-    "Safe chicken temp",
-    "165°F internal temperature."
+    "Skillet",
+    "A frying pan for sautéing and searing."
    ],
    [
     "Mise en place",
-    "Prepping and measuring everything before you start cooking."
+    "Prepping and organizing everything before cooking."
+   ],
+   [
+    "Teaspoon / tablespoon",
+    "1 tbsp = 3 tsp (volume measures)."
+   ],
+   [
+    "Cup",
+    "A volume measure; 16 tbsp = 1 cup = 8 fl oz."
+   ],
+   [
+    "Sauté",
+    "Cook quickly in a little hot fat."
+   ],
+   [
+    "Simmer",
+    "Cook gently in liquid just below boiling."
+   ],
+   [
+    "Boil",
+    "Cook in rapidly bubbling liquid."
+   ],
+   [
+    "Roast",
+    "Cook with the oven's dry heat (savory foods)."
+   ],
+   [
+    "Season",
+    "Add salt, pepper, and spices."
+   ],
+   [
+    "Colander",
+    "A bowl with holes for draining."
+   ],
+   [
+    "Cutting board",
+    "A stable surface for cutting."
    ]
   ],
   "quiz": [
    {
-    "q": "The safest knife is:",
+    "q": "A cook's most-used and most important tool is the:",
     "options": [
-     "A sharp one",
-     "A dull one",
-     "A small one",
-     "A serrated one"
+     "Chef's knife",
+     "Microwave",
+     "Can opener",
+     "Blender"
     ],
     "a": 0,
-    "why": "Dull knives slip and cause cuts; sharp knives cut predictably."
+    "why": "The chef's knife does most prep work."
    },
    {
-    "q": "Chicken is safe to eat at an internal temperature of:",
+    "q": "3 teaspoons equal:",
     "options": [
-     "165°F",
-     "120°F",
-     "140°F",
-     "212°F"
+     "1 tablespoon",
+     "1 cup",
+     "1 pint",
+     "1 ounce"
     ],
     "a": 0,
-    "why": "Poultry must reach 165°F to be safe."
+    "why": "3 tsp = 1 tbsp."
    },
    {
-    "q": "Most beginners ruin food by:",
+    "q": "16 tablespoons equal:",
     "options": [
-     "Using heat that's too high",
-     "Using medium heat",
-     "Stirring too much",
-     "Tasting as they go"
+     "1 cup",
+     "1 teaspoon",
+     "1 gallon",
+     "1 pound"
     ],
     "a": 0,
-    "why": "Too-high heat burns food; medium is the safer everyday default."
+    "why": "16 tbsp = 1 cup."
    },
    {
-    "q": "To avoid cross-contamination you should:",
+    "q": "Precise measuring matters most in:",
     "options": [
-     "Keep raw meat separate from ready-to-eat food",
-     "Rinse everything in hot water only",
-     "Cook everything on high",
-     "Use one board for all"
+     "Baking",
+     "Making soup",
+     "Grilling",
+     "Salads"
     ],
     "a": 0,
-    "why": "Separate boards/surfaces for raw meat prevent spreading germs."
+    "why": "Baking is chemistry; cooking is more forgiving."
    },
    {
     "q": "'Mise en place' means:",
     "options": [
-     "Prep everything before cooking",
-     "Cook on medium",
-     "Season only at the end",
-     "Clean as you go"
+     "Everything prepped and in its place before cooking",
+     "Cook as fast as possible",
+     "Clean up first",
+     "Use French recipes"
     ],
     "a": 0,
-    "why": "French for 'everything in its place' — prep first, cook smoother."
+    "why": "Prep and organize before you start cooking."
    },
    {
-    "q": "Perishable food shouldn't sit out longer than:",
+    "q": "A smart first step with any recipe is to:",
     "options": [
-     "2 hours",
-     "8 hours",
-     "24 hours",
-     "All day"
+     "Read the whole thing first",
+     "Start cooking immediately",
+     "Skip to the end",
+     "Double everything"
     ],
     "a": 0,
-    "why": "Bacteria grow quickly at room temperature; 2 hours is the limit."
+    "why": "Reading it fully lets you prep and avoid surprises."
+   },
+   {
+    "q": "A common beginner mistake with heat is:",
+    "options": [
+     "Cranking everything to high",
+     "Using medium heat",
+     "Simmering soups",
+     "Controlling temperature"
+    ],
+    "a": 0,
+    "why": "High heat burns the outside while the inside stays raw."
+   },
+   {
+    "q": "To 'sauté' means to:",
+    "options": [
+     "Cook quickly in a little hot fat",
+     "Boil for hours",
+     "Freeze",
+     "Bake slowly"
+    ],
+    "a": 0,
+    "why": "Sautéing is fast cooking in a bit of fat."
+   },
+   {
+    "q": "To 'simmer' means to cook:",
+    "options": [
+     "Gently just below a boil",
+     "At a rapid rolling boil",
+     "In the freezer",
+     "With no heat"
+    ],
+    "a": 0,
+    "why": "Simmering uses gentle bubbles below boiling."
+   },
+   {
+    "q": "To 'season' food means to:",
+    "options": [
+     "Add salt, pepper, and spices",
+     "Freeze it",
+     "Measure it",
+     "Wash it"
+    ],
+    "a": 0,
+    "why": "Seasoning adds flavor with salt and spices."
+   },
+   {
+    "q": "Quality matters most for your:",
+    "options": [
+     "Knife and a sturdy pan",
+     "Gadgets",
+     "Dish towels",
+     "Spice rack"
+    ],
+    "a": 0,
+    "why": "A good knife and pan do the heavy lifting; the rest can be cheap."
+   },
+   {
+    "q": "The real secret of good cooks is to:",
+    "options": [
+     "Taste as you go and adjust",
+     "Never taste the food",
+     "Always use high heat",
+     "Follow no recipe ever"
+    ],
+    "a": 0,
+    "why": "Tasting and adjusting is how flavor gets right."
+   },
+   {
+    "q": "When you're starting out, you should:",
+    "options": [
+     "Master a few simple recipes by repeating them",
+     "Attempt the hardest dish first",
+     "Avoid cooking",
+     "Never follow a recipe"
+    ],
+    "a": 0,
+    "why": "Repeating basics builds a foundation."
+   },
+   {
+    "q": "Kitchen failures (burning, over-salting) should be treated as:",
+    "options": [
+     "Lessons",
+     "Proof you can't cook",
+     "Reasons to quit",
+     "Normal forever"
+    ],
+    "a": 0,
+    "why": "Every cook has flops; they're how you learn."
+   },
+   {
+    "q": "The biggest barrier to home cooking is usually:",
+    "options": [
+     "Confidence (built by doing it)",
+     "Lack of talent",
+     "Expensive gear",
+     "Bad genes"
+    ],
+    "a": 0,
+    "why": "Practice builds confidence quickly."
    }
   ]
  },
@@ -2669,130 +2821,282 @@ window.LAB404_CONTENT = {
  "cooking-food-safety": {
   "title": "Food Safety",
   "subject": "Cooking & Nutrition",
-  "level": "All levels",
-  "intro": "Most food poisoning is preventable with a few habits. Keeping food out of the temperature range where bacteria thrive, and keeping raw and ready-to-eat food apart, covers the vast majority of risk.",
+  "level": "All ages",
+  "objectives": [
+   "Understand how foodborne illness happens",
+   "Apply the four core practices: clean, separate, cook, chill",
+   "Know the temperature danger zone",
+   "Store and handle food safely",
+   "Recognize and avoid risky situations"
+  ],
+  "intro": "Food safety is handling, preparing, and storing food so it doesn't make you sick. Foodborne illness ('food poisoning') sickens millions each year and is largely preventable with a few simple habits. This lesson covers how food gets contaminated and the core practices that keep it safe.",
+  "sections": [
+   {
+    "h": "How food makes people sick",
+    "body": "Most food poisoning comes from harmful germs — bacteria like Salmonella and E. coli, plus viruses — that get into food and multiply. They can arrive from raw meat, poultry, eggs, and seafood; from unwashed produce; from dirty hands or surfaces; or by spreading from one food to another (cross-contamination). Symptoms (nausea, vomiting, diarrhea, cramps, fever) usually appear hours to days later.\n\nThe key insight is that these germs are usually invisible — contaminated food often looks, smells, and tastes completely normal, so you can't rely on your senses to catch it. That's why food safety is about prevention through good habits, not detection. The good news: a handful of simple practices stop the vast majority of foodborne illness before it starts.",
+    "tip": "Food germs are usually invisible (food looks/smells fine) — so safety is about prevention habits, not spotting bad food."
+   },
+   {
+    "h": "The four core practices",
+    "body": "Food-safety guidance boils down to four words: Clean, Separate, Cook, Chill. Clean: wash your hands for 20 seconds before and after handling food, and wash surfaces, utensils, and produce. Separate: keep raw meat, poultry, and seafood (and their juices) away from ready-to-eat foods — use separate cutting boards and never put cooked food back on a plate that held raw meat.\n\nCook: cook foods to a safe internal temperature (a thermometer is the only sure way) to kill germs. Chill: refrigerate perishable food promptly, and don't leave it out too long. These four habits, applied consistently, prevent the overwhelming majority of food poisoning. They're simple, but it's doing them every time that counts.",
+    "tip": "Four words: Clean (hands & surfaces), Separate (raw from ready-to-eat), Cook (to a safe temp), Chill (refrigerate promptly)."
+   },
+   {
+    "h": "The temperature danger zone",
+    "body": "Bacteria multiply fastest in a range of temperatures called the 'danger zone' — roughly 40°F to 140°F (4°C to 60°C). In this range, germs on food can double in as little as 20 minutes, so time in the danger zone is the enemy. The rule is to keep hot food hot (above 140°F) and cold food cold (below 40°F), moving food through the danger zone quickly.\n\nPractically: don't leave perishable food out at room temperature for more than about two hours (one hour if it's very hot out). Refrigerate leftovers promptly, thaw frozen food in the fridge (not on the counter), and reheat leftovers thoroughly. Cooking to a proper internal temperature kills germs, and keeping food out of the danger zone stops them from multiplying in the first place — together, that's most of food safety.",
+    "visual": "<svg viewBox=\"0 0 232 192\" width=\"222\" role=\"img\" aria-label=\"The temperature danger zone: above 140F safe hot, 40 to 140F danger, below 40F safe cold\"><rect x=\"24\" y=\"20\" width=\"30\" height=\"36\" fill=\"rgba(232,132,42,.3)\" stroke=\"#e8842a\" stroke-width=\"1\"/><rect x=\"24\" y=\"56\" width=\"30\" height=\"78\" fill=\"rgba(240,90,90,.32)\" stroke=\"#f05a5a\" stroke-width=\"1\"/><rect x=\"24\" y=\"134\" width=\"30\" height=\"40\" fill=\"rgba(79,156,240,.3)\" stroke=\"#4f9cf0\" stroke-width=\"1\"/><circle cx=\"39\" cy=\"180\" r=\"12\" fill=\"rgba(79,156,240,.3)\" stroke=\"#4f9cf0\" stroke-width=\"1\"/><text x=\"60\" y=\"42\" fill=\"#f0a040\" font-size=\"9\">Keep HOT (above 140°F)</text><text x=\"60\" y=\"88\" fill=\"#f0a0a0\" font-size=\"10\">DANGER ZONE</text><text x=\"60\" y=\"103\" fill=\"#f0a0a0\" font-size=\"9\">40–140°F: germs</text><text x=\"60\" y=\"116\" fill=\"#f0a0a0\" font-size=\"9\">multiply fast</text><text x=\"60\" y=\"158\" fill=\"#9cc4f5\" font-size=\"9\">Keep COLD (below 40°F)</text><line x1=\"20\" y1=\"56\" x2=\"58\" y2=\"56\" stroke=\"#cdd9ec\" stroke-width=\"0.8\"/><text x=\"14\" y=\"59\" text-anchor=\"end\" fill=\"#cdd9ec\" font-size=\"7.5\">140°</text><line x1=\"20\" y1=\"134\" x2=\"58\" y2=\"134\" stroke=\"#cdd9ec\" stroke-width=\"0.8\"/><text x=\"14\" y=\"137\" text-anchor=\"end\" fill=\"#cdd9ec\" font-size=\"7.5\">40°</text></svg>",
+    "caption": "The danger zone (40–140°F): keep hot food hot and cold food cold to limit germ growth.",
+    "example": "Danger zone = 40°F–140°F. Don't leave perishable food out more than 2 hours (1 hour if above 90°F).",
+    "tip": "Danger zone = 40–140°F, where germs multiply fast. Keep hot food hot, cold food cold; don't leave perishables out over ~2 hours."
+   },
+   {
+    "h": "Safe storage and handling",
+    "body": "Good storage keeps food out of the danger zone and separated. Keep your refrigerator below 40°F and freezer at 0°F. Store raw meat on the bottom shelf (so its juices can't drip onto other food), and keep it wrapped. Refrigerate or freeze perishables promptly after buying or cooking, and use or freeze leftovers within a few days.\n\nHandling matters too: wash hands and surfaces often, wash fruits and vegetables, don't wash raw chicken (it splashes germs around the sink), use separate cutting boards for raw meat and produce, and sanitize surfaces that touched raw meat. Thaw food safely — in the fridge, in cold water, or in the microwave — never on the counter for hours. These habits keep contamination from starting and spreading.",
+    "tip": "Fridge below 40°F; store raw meat on the bottom shelf, wrapped; use separate boards; thaw in the fridge, not on the counter."
+   },
+   {
+    "h": "Recognizing and avoiding risks",
+    "body": "A few situations carry extra risk and deserve caution. 'When in doubt, throw it out' — if you're unsure whether food has been left out too long or has spoiled, it's not worth the gamble. Be extra careful with higher-risk foods (raw or undercooked meat, eggs, and seafood; unpasteurized dairy; raw sprouts) and with higher-risk people (young children, older adults, pregnant people, and anyone with a weak immune system), for whom food poisoning can be far more serious.\n\nWatch for obvious spoilage (off smells, slime, mold) and discard it — though remember dangerous germs often leave no sign. At restaurants and gatherings, be wary of food left sitting out. Food safety isn't about fear; it's a few consistent habits and a bit of judgment that keep a basic, invisible risk from ever becoming a problem.",
+    "tip": "'When in doubt, throw it out.' Take extra care with risky foods (raw meat/eggs) and risky people (kids, elderly, pregnant, immune-compromised)."
+   }
+  ],
   "cards": [
    {
-    "h": "The danger zone",
-    "body": "Bacteria multiply fastest between 40°F and 140°F — the 'danger zone.' Keep cold food cold (below 40°F / in the fridge) and hot food hot (above 140°F). Don't let perishable food sit in that range more than 2 hours (1 hour if it's above 90°F out)."
+    "h": "How illness happens",
+    "body": "Invisible germs (Salmonella, E. coli) from raw meat, dirty hands, or cross-contamination. Prevent, don't detect."
    },
    {
-    "h": "Clean, separate, cook, chill",
-    "body": "The four core rules: Clean hands and surfaces often; Separate raw meat from other foods; Cook to safe temperatures; Chill leftovers promptly. These four cover most of food safety."
+    "h": "Four Cs",
+    "body": "Clean (hands/surfaces), Separate (raw from ready-to-eat), Cook (safe temp), Chill (refrigerate promptly)."
    },
    {
-    "h": "Safe internal temperatures",
-    "body": "Use a thermometer, not guesswork: poultry 165°F, ground beef 160°F, whole cuts of beef/pork 145°F (with a short rest), fish 145°F. Color isn't a reliable sign — temperature is."
+    "h": "Danger zone",
+    "body": "40–140°F: germs multiply fast. Keep hot food hot, cold food cold; perishables out under ~2 hours."
    },
    {
-    "h": "Thawing safely",
-    "body": "Thaw frozen food in the fridge, in cold water (changed every 30 min), or in the microwave — never on the counter, where the outside enters the danger zone while the middle is still frozen. Cook food thawed in water or microwave right away."
+    "h": "Storage & handling",
+    "body": "Fridge below 40°F; raw meat on the bottom shelf, wrapped; separate boards; thaw in the fridge."
    },
    {
-    "h": "Leftovers",
-    "body": "Refrigerate leftovers within 2 hours in shallow containers so they cool fast. Eat them within 3–4 days, and reheat to 165°F. When in doubt, throw it out — you can't always smell or see the bacteria that make you sick."
+    "h": "Risks",
+    "body": "When in doubt, throw it out. Extra care with raw meat/eggs and with kids, elderly, pregnant, and immune-compromised."
    }
   ],
   "flash": [
    [
-    "Danger zone",
-    "40°F–140°F, where bacteria multiply fastest."
-   ],
-   [
-    "2-hour rule",
-    "Don't leave perishable food out longer than 2 hours."
+    "Foodborne illness",
+    "Sickness caused by eating contaminated food."
    ],
    [
     "Cross-contamination",
-    "Spreading germs from raw food to ready-to-eat food."
+    "Germs spreading from one food (or surface) to another."
    ],
    [
-    "Safe poultry temp",
-    "165°F internal."
+    "Danger zone",
+    "40–140°F, where bacteria multiply fastest."
    ],
    [
-    "Safe ground beef temp",
-    "160°F internal."
+    "Clean, separate, cook, chill",
+    "The four core food-safety practices."
    ],
    [
-    "Clean/Separate/Cook/Chill",
-    "The four core food-safety rules."
+    "Internal temperature",
+    "The temp inside food; the sure test that it's cooked safely."
    ],
    [
-    "Safe thawing",
-    "In the fridge, cold water, or microwave — never on the counter."
+    "Salmonella",
+    "A common bacterium causing food poisoning."
    ],
    [
-    "Leftover limit",
-    "Eat refrigerated leftovers within 3–4 days."
+    "Perishable",
+    "Food that spoils and needs refrigeration."
+   ],
+   [
+    "Two-hour rule",
+    "Don't leave perishables out more than ~2 hours."
+   ],
+   [
+    "Thaw safely",
+    "Defrost in the fridge, cold water, or microwave — not on the counter."
+   ],
+   [
+    "When in doubt, throw it out",
+    "Discard food you're unsure about."
+   ],
+   [
+    "High-risk foods",
+    "Raw/undercooked meat, eggs, seafood, raw sprouts."
+   ],
+   [
+    "Sanitize",
+    "Clean surfaces to kill germs (after raw meat)."
    ]
   ],
   "quiz": [
    {
-    "q": "Bacteria grow fastest between:",
+    "q": "Most food poisoning is caused by:",
     "options": [
-     "40°F and 140°F",
-     "0°F and 32°F",
-     "140°F and 212°F",
-     "Below freezing"
+     "Invisible germs that multiply in food",
+     "Too much salt",
+     "Cold food",
+     "Spices"
     ],
     "a": 0,
-    "why": "That range is the 'danger zone' for rapid bacterial growth."
+    "why": "Bacteria and viruses you usually can't see."
    },
    {
-    "q": "The safest way to thaw meat is:",
+    "q": "Can you rely on smell and taste to detect unsafe food?",
     "options": [
-     "In the fridge",
-     "On the counter",
-     "In a sunny window",
-     "Next to the stove"
+     "No — it often seems normal",
+     "Yes, always",
+     "Only for meat",
+     "Only for fruit"
     ],
     "a": 0,
-    "why": "Counter thawing lets the outside enter the danger zone; the fridge is safe."
+    "why": "Dangerous germs usually leave no sign."
    },
    {
-    "q": "Ground beef is safe at an internal temperature of:",
+    "q": "The four core food-safety practices are:",
     "options": [
-     "160°F",
-     "120°F",
-     "140°F",
-     "100°F"
-    ],
-    "a": 0,
-    "why": "Ground beef must reach 160°F."
-   },
-   {
-    "q": "The four core food-safety rules are clean, separate, cook, and:",
-    "options": [
-     "Chill",
-     "Freeze",
-     "Fry",
-     "Salt"
+     "Clean, separate, cook, chill",
+     "Buy, cook, eat, nap",
+     "Wash, dry, fold, store",
+     "Salt, pepper, oil, heat"
     ],
     "a": 0,
     "why": "Clean, Separate, Cook, Chill."
    },
    {
-    "q": "Refrigerated leftovers should be eaten within about:",
+    "q": "'Separate' means keeping:",
     "options": [
-     "3–4 days",
-     "2 weeks",
-     "1 month",
-     "1 hour"
+     "Raw meat away from ready-to-eat foods",
+     "Forks from spoons",
+     "Hot from warm",
+     "Plates stacked"
     ],
     "a": 0,
-    "why": "After 3–4 days, toss them to be safe."
+    "why": "Prevent cross-contamination from raw meat and juices."
    },
    {
-    "q": "To tell if meat is cooked safely, rely on:",
+    "q": "The only sure way to know food is cooked safely is to:",
     "options": [
-     "A thermometer",
-     "Color",
-     "Smell",
-     "Cooking time only"
+     "Check its internal temperature",
+     "Look at the color",
+     "Smell it",
+     "Time it exactly"
     ],
     "a": 0,
-    "why": "Color and smell are unreliable; internal temperature is the real test."
+    "why": "A thermometer confirms a safe internal temp."
+   },
+   {
+    "q": "The temperature danger zone is roughly:",
+    "options": [
+     "40°F to 140°F",
+     "0°F to 20°F",
+     "200°F to 300°F",
+     "60°F to 65°F"
+    ],
+    "a": 0,
+    "why": "Bacteria multiply fastest between 40 and 140°F."
+   },
+   {
+    "q": "In the danger zone, bacteria can double in as little as:",
+    "options": [
+     "20 minutes",
+     "20 hours",
+     "20 days",
+     "1 week"
+    ],
+    "a": 0,
+    "why": "Time in the danger zone is the enemy."
+   },
+   {
+    "q": "Perishable food shouldn't be left out longer than about:",
+    "options": [
+     "2 hours (1 hour if very hot)",
+     "12 hours",
+     "a full day",
+     "a week"
+    ],
+    "a": 0,
+    "why": "The two-hour rule limits germ growth."
+   },
+   {
+    "q": "Raw meat should be stored in the fridge:",
+    "options": [
+     "On the bottom shelf, wrapped",
+     "On the top shelf, open",
+     "Next to fruit",
+     "On the counter"
+    ],
+    "a": 0,
+    "why": "So its juices can't drip onto other food."
+   },
+   {
+    "q": "You should thaw frozen food:",
+    "options": [
+     "In the fridge (or cold water/microwave)",
+     "On the counter for hours",
+     "In hot sun",
+     "However"
+    ],
+    "a": 0,
+    "why": "Counter-thawing lets the surface enter the danger zone."
+   },
+   {
+    "q": "Washing raw chicken is discouraged because it:",
+    "options": [
+     "Splashes germs around the sink",
+     "Cleans it well",
+     "Cooks it",
+     "Adds flavor"
+    ],
+    "a": 0,
+    "why": "Cooking kills the germs; washing just spreads them."
+   },
+   {
+    "q": "A safe refrigerator temperature is:",
+    "options": [
+     "Below 40°F",
+     "60°F",
+     "Room temperature",
+     "Below 0°F only"
+    ],
+    "a": 0,
+    "why": "Fridge below 40°F; freezer at 0°F."
+   },
+   {
+    "q": "When unsure whether food is still safe, you should:",
+    "options": [
+     "Throw it out",
+     "Eat it anyway",
+     "Smell-test and risk it",
+     "Share it"
+    ],
+    "a": 0,
+    "why": "'When in doubt, throw it out.'"
+   },
+   {
+    "q": "Food poisoning is most dangerous for:",
+    "options": [
+     "Kids, elderly, pregnant, immune-compromised",
+     "Only adults",
+     "No one",
+     "Only athletes"
+    ],
+    "a": 0,
+    "why": "High-risk groups can get far sicker."
+   },
+   {
+    "q": "Overall, food safety is best achieved by:",
+    "options": [
+     "Consistent prevention habits",
+     "Detecting bad food by smell",
+     "Cooking everything twice",
+     "Luck"
+    ],
+    "a": 0,
+    "why": "Clean, separate, cook, chill — done every time."
    }
   ]
  },
@@ -14562,241 +14866,490 @@ window.LAB404_CONTENT = {
  "cooking-knife-skills": {
   "title": "Knife Skills",
   "subject": "Cooking & Nutrition",
-  "level": "All levels",
-  "intro": "Good knife skills make cooking faster, safer, and more enjoyable — it's the first real technique worth learning. A little practice turns the most-used kitchen tool from scary into second nature.",
+  "level": "All ages",
+  "objectives": [
+   "Hold a knife safely and correctly",
+   "Protect your fingers with the claw grip",
+   "Make the basic cuts: slice, dice, mince, julienne",
+   "Keep knives sharp and cared for",
+   "Build speed safely with practice"
+  ],
+  "intro": "The knife is a cook's most important and most-used tool, and good knife skills make cooking faster, safer, and more enjoyable. This lesson covers how to hold a knife, keep your fingers safe, make the basic cuts, and care for your blade. Practice slowly and carefully — safety first.",
+  "sections": [
+   {
+    "h": "Holding the knife",
+    "body": "Good knife work starts with a proper grip. The most controlled way to hold a chef's knife is the 'pinch grip': pinch the blade just in front of the handle between your thumb and the side of your index finger, with the other three fingers wrapped around the handle. This feels odd at first but gives far more control than gripping the handle alone.\n\nControl, not force, is the goal — a sharp knife does the cutting; you just guide it. Keep your movements deliberate and unhurried, especially while learning. A relaxed, confident grip and a sharp blade make cutting smooth and safe; a death-grip on a dull knife is how people get hurt.",
+    "tip": "Use the pinch grip (pinch the blade, wrap the handle) for control. Guide the knife — don't force it."
+   },
+   {
+    "h": "Keeping fingers safe: the claw",
+    "body": "The hand not holding the knife holds the food — and it needs protecting. The technique is the 'claw grip': curl your fingertips under and grip the food with your knuckles, tucking the tips safely back so the flat of the blade rides against your knuckles as a guide. Your fingertips are never in the blade's path.\n\nThis is the single most important knife-safety habit. Combined with cutting slowly while you learn, it keeps your fingers safe even as you speed up later. Also keep your cutting board from sliding (a damp towel underneath steadies it), cut on a stable surface, and never try to catch a falling knife — step back and let it drop. Respect for the blade, not fear, is the mindset.",
+    "visual": "<svg viewBox=\"0 0 250 98\" width=\"240\" role=\"img\" aria-label=\"The basic knife cuts and what they look like\"><rect x=\"8\" y=\"5\" width=\"92\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"100\" y=\"5\" width=\"142\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9.5\">Slice</text><text x=\"106\" y=\"20\" fill=\"#9adbcf\" font-size=\"9\">flat pieces or coins</text><rect x=\"8\" y=\"27\" width=\"92\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"100\" y=\"27\" width=\"142\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9.5\">Dice</text><text x=\"106\" y=\"42\" fill=\"#9adbcf\" font-size=\"9\">cubes (small/medium/large)</text><rect x=\"8\" y=\"49\" width=\"92\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"100\" y=\"49\" width=\"142\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9.5\">Mince</text><text x=\"106\" y=\"64\" fill=\"#9adbcf\" font-size=\"9\">very fine chop</text><rect x=\"8\" y=\"71\" width=\"92\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"100\" y=\"71\" width=\"142\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9.5\">Julienne</text><text x=\"106\" y=\"86\" fill=\"#9adbcf\" font-size=\"9\">thin matchsticks</text></svg>",
+    "caption": "The four basic cuts you'll meet in most recipes.",
+    "tip": "Use the claw grip: curl fingertips under, guide the blade with your knuckles. Never try to catch a falling knife."
+   },
+   {
+    "h": "The basic cuts",
+    "body": "A few cuts cover most recipes. A slice is a straight cut (coins of a carrot). A dice is cutting food into cubes — large, medium, or small — by first making planks, then sticks, then cubes. A mince is a very fine, irregular chop, used for garlic and herbs where you want the flavor spread throughout. A julienne is thin matchsticks (as in stir-fries).\n\nWhy does it matter? Even-sized pieces cook evenly — a pile of unevenly cut vegetables will have some burnt and some raw. Precision isn't about looking fancy; it's about food that cooks properly and looks appealing. Recipes specify a cut because it affects both cooking time and texture. Learn these few and you can follow almost any recipe's prep instructions.",
+    "example": "Slice = coins/flat pieces  ·  Dice = cubes  ·  Mince = very fine chop  ·  Julienne = thin matchsticks.",
+    "tip": "Learn slice, dice, mince, and julienne. Even-sized pieces cook evenly — that's the real reason cuts matter."
+   },
+   {
+    "h": "Knife care: sharp is safe",
+    "body": "It sounds backward, but a sharp knife is safer than a dull one. A sharp blade cuts where you aim it with little force; a dull blade slips and requires pushing hard, which is exactly when it skids off the food and into your hand. Keeping knives sharp is a safety practice, not just a performance one.\n\nCare basics: hone the blade regularly with a honing steel (this realigns the edge), and sharpen it periodically with a sharpener or a pro (this restores the edge). Wash knives by hand and dry them right away — never leave them in a sink of soapy water where someone could grab the blade, and skip the dishwasher, which dulls and damages them. Store them safely in a block, on a magnetic strip, or in a guard, not loose in a drawer.",
+    "tip": "A sharp knife is a SAFE knife (it won't slip). Hone often, sharpen periodically, hand-wash, and store blades protected."
+   },
+   {
+    "h": "Building speed safely",
+    "body": "Speed in the kitchen is a byproduct of good technique repeated, not something to chase directly. Start slow and correct: proper grip, claw hand, even cuts. As those become automatic, speed comes on its own, and chasing speed before technique is how fingers get cut.\n\nPractice on forgiving foods — an onion, a few carrots — and focus on consistency over quickness. Watch your non-knife hand's claw at all times. Over weeks of regular cooking, you'll notice yourself getting faster and smoother without trying. Good knife skills make every meal easier and are one of the most satisfying basic skills to develop. Slow is smooth, and smooth is fast.",
+    "tip": "Don't chase speed — build correct technique (grip, claw, even cuts) and speed follows. Slow is smooth, smooth is fast."
+   }
+  ],
   "cards": [
    {
-    "h": "A sharp knife is a safe knife",
-    "body": "A dull knife slips off food and takes more force, which is how cuts happen. A sharp knife bites in and cuts predictably. Keep your knife sharp (a honing steel aligns the edge; occasional sharpening restores it) and it's both safer and easier."
+    "h": "Grip",
+    "body": "Use the pinch grip (pinch the blade, wrap the handle) for control; guide, don't force."
    },
    {
-    "h": "The grip and the guiding hand",
-    "body": "Hold the knife with a 'pinch grip' — thumb and forefinger on the blade itself, other fingers around the handle — for control. Your other hand forms a 'claw,' fingertips curled under so knuckles guide the blade and fingertips stay clear."
-   },
-   {
-    "h": "The rocking motion",
-    "body": "For most chopping, keep the knife tip on the board and rock the blade down and forward through the food, rather than lifting and chopping straight down. It's faster, smoother, and safer once it clicks."
+    "h": "The claw",
+    "body": "Curl fingertips under and guide the blade with your knuckles — the top safety habit."
    },
    {
     "h": "Basic cuts",
-    "body": "A few cuts cover most recipes: dice (small cubes), slice (thin flat pieces), mince (very fine, for garlic/herbs), and julienne (thin matchsticks). Even sizes matter — pieces the same size cook evenly, so one isn't raw while another's mush."
+    "body": "Slice, dice, mince, julienne. Even-sized pieces cook evenly."
    },
    {
-    "h": "A stable board and clean habits",
-    "body": "Put a damp paper towel or cloth under your cutting board so it can't slip. Cut a flat edge on round foods so they don't roll. Keep raw meat on a separate board, and clear cut food into a bowl so your workspace stays clear."
+    "h": "Knife care",
+    "body": "A sharp knife is safe (won't slip). Hone often, sharpen periodically, hand-wash, store protected."
+   },
+   {
+    "h": "Speed",
+    "body": "Build technique first; speed follows. Slow is smooth, smooth is fast."
    }
   ],
   "flash": [
    [
     "Pinch grip",
-    "Holding the blade with thumb and forefinger for control."
+    "Holding a knife by pinching the blade for control."
    ],
    [
     "Claw grip",
-    "Curling the guiding hand's fingers under to protect them."
+    "Curling fingertips under to protect them while cutting."
    ],
    [
-    "Honing",
-    "Realigning a knife's edge with a steel (do often)."
-   ],
-   [
-    "Sharpening",
-    "Grinding a new edge onto a dull knife (do occasionally)."
+    "Slice",
+    "A straight cut into flat pieces or coins."
    ],
    [
     "Dice",
-    "To cut into small cubes."
+    "Cutting food into cubes."
    ],
    [
     "Mince",
-    "To cut very finely (garlic, herbs)."
+    "A very fine, irregular chop."
    ],
    [
     "Julienne",
-    "To cut into thin matchsticks."
+    "Cutting into thin matchsticks."
+   ],
+   [
+    "Honing steel",
+    "A rod that realigns a knife's edge."
+   ],
+   [
+    "Sharpening",
+    "Restoring a knife's cutting edge."
+   ],
+   [
+    "Chef's knife",
+    "The large, all-purpose kitchen knife."
+   ],
+   [
+    "Dull knife",
+    "A blade that slips — more dangerous than a sharp one."
+   ],
+   [
+    "Cutting board",
+    "A stable cutting surface (steady it with a towel)."
    ],
    [
     "Even cuts",
-    "Same-size pieces so food cooks evenly."
+    "Uniform pieces that cook at the same rate."
    ]
   ],
   "quiz": [
    {
-    "q": "The safest knife is:",
+    "q": "The most controlled way to hold a chef's knife is the:",
     "options": [
-     "A sharp one",
-     "A dull one",
-     "A small one",
-     "A rusty one"
+     "Pinch grip",
+     "Fingertip grip",
+     "Two-hand grip",
+     "Backhand grip"
     ],
     "a": 0,
-    "why": "Dull knives slip and need more force; sharp knives cut predictably."
+    "why": "Pinch the blade and wrap the handle for control."
    },
    {
-    "q": "The guiding hand should form a:",
+    "q": "When cutting, a sharp knife means you should use:",
     "options": [
-     "Claw with curled fingers",
-     "Flat palm",
-     "Fist on the food",
-     "Pointed finger"
+     "Control, not force",
+     "Maximum force",
+     "A sawing motion",
+     "Both hands on the blade"
     ],
     "a": 0,
-    "why": "Curled fingertips keep them clear and let knuckles guide the blade."
+    "why": "A sharp blade cuts with little force; you guide it."
    },
    {
-    "q": "Cutting food into even sizes helps it:",
+    "q": "The claw grip protects your fingers by:",
     "options": [
-     "Cook evenly",
-     "Taste saltier",
-     "Cost less",
-     "Look older"
+     "Curling fingertips under behind the knuckles",
+     "Spreading fingers flat",
+     "Hiding your hand",
+     "Holding the blade"
     ],
     "a": 0,
-    "why": "Same-size pieces finish cooking at the same time."
+    "why": "Tucked fingertips stay out of the blade's path."
    },
    {
-    "q": "To keep a cutting board from slipping, put under it a:",
+    "q": "If a knife falls, you should:",
     "options": [
-     "Damp cloth or paper towel",
-     "Dry plate",
-     "Nothing",
-     "A knife"
+     "Step back and let it drop",
+     "Catch it",
+     "Kick it",
+     "Grab the blade"
     ],
     "a": 0,
-    "why": "A damp towel grips the counter and stabilizes the board."
+    "why": "Never try to catch a falling knife."
    },
    {
-    "q": "'Mince' means to cut:",
+    "q": "To keep a cutting board from sliding, put under it a:",
     "options": [
-     "Very finely",
-     "Into big chunks",
-     "In half only",
-     "Into cubes"
+     "Damp towel",
+     "Plate",
+     "Dry napkin",
+     "Nothing"
     ],
     "a": 0,
-    "why": "Mincing is cutting very fine, like for garlic."
+    "why": "A damp towel steadies the board."
    },
    {
-    "q": "Honing a knife:",
+    "q": "Cutting food into cubes is a:",
     "options": [
-     "Realigns the edge (do it often)",
-     "Replaces the knife",
-     "Dulls it",
-     "Is the same as washing"
+     "Dice",
+     "Slice",
+     "Mince",
+     "Julienne"
     ],
     "a": 0,
-    "why": "A honing steel straightens the edge between sharpenings."
+    "why": "Dice = cubes."
+   },
+   {
+    "q": "A very fine, irregular chop (for garlic/herbs) is a:",
+    "options": [
+     "Mince",
+     "Slice",
+     "Dice",
+     "Julienne"
+    ],
+    "a": 0,
+    "why": "Mince spreads flavor throughout."
+   },
+   {
+    "q": "Thin matchstick cuts are called:",
+    "options": [
+     "Julienne",
+     "Dice",
+     "Slice",
+     "Mince"
+    ],
+    "a": 0,
+    "why": "Julienne = thin matchsticks."
+   },
+   {
+    "q": "The real reason even cuts matter is that they:",
+    "options": [
+     "Cook at the same rate",
+     "Look fancy only",
+     "Weigh the same",
+     "Taste different"
+    ],
+    "a": 0,
+    "why": "Uneven pieces have some burnt and some raw."
+   },
+   {
+    "q": "A sharp knife is:",
+    "options": [
+     "Safer than a dull one",
+     "More dangerous than a dull one",
+     "The same as dull",
+     "Only for pros"
+    ],
+    "a": 0,
+    "why": "Dull knives slip; sharp ones go where aimed."
+   },
+   {
+    "q": "Honing a knife with a steel:",
+    "options": [
+     "Realigns the edge",
+     "Removes rust",
+     "Washes it",
+     "Sharpens fully by itself"
+    ],
+    "a": 0,
+    "why": "Honing realigns; periodic sharpening restores the edge."
+   },
+   {
+    "q": "Knives should be:",
+    "options": [
+     "Hand-washed and dried right away",
+     "Left in soapy water",
+     "Run through the dishwasher",
+     "Stored loose in a drawer"
+    ],
+    "a": 0,
+    "why": "The dishwasher and soapy sinks damage and endanger."
+   },
+   {
+    "q": "Knives are best stored:",
+    "options": [
+     "In a block, magnetic strip, or guard",
+     "Loose in a drawer",
+     "Point-up in a cup",
+     "On the counter edge"
+    ],
+    "a": 0,
+    "why": "Protected storage is safe and preserves the edge."
+   },
+   {
+    "q": "Speed in knife work comes from:",
+    "options": [
+     "Repeating good technique",
+     "Chasing speed directly",
+     "Gripping hard",
+     "Using a dull knife"
+    ],
+    "a": 0,
+    "why": "Technique first; speed follows."
+   },
+   {
+    "q": "The saying that captures safe knife work is:",
+    "options": [
+     "Slow is smooth, smooth is fast",
+     "Faster is always better",
+     "Force beats finesse",
+     "Dull is safe"
+    ],
+    "a": 0,
+    "why": "Build smooth technique and speed arrives on its own."
    }
   ]
  },
  "cooking-cooking-techniques": {
   "title": "Cooking Techniques",
   "subject": "Cooking & Nutrition",
-  "level": "All levels",
-  "intro": "A handful of core cooking methods cover almost every recipe. Understand what each one does to food — and when to use it — and you can cook confidently without following a recipe word for word.",
+  "level": "All ages",
+  "objectives": [
+   "Distinguish dry-heat and moist-heat cooking methods",
+   "Understand sautéing, roasting, and searing (dry heat)",
+   "Understand boiling, steaming, and braising (moist heat)",
+   "Know how heat and seasoning develop flavor",
+   "Choose the right method for a food"
+  ],
+  "intro": "Once you know your way around the kitchen, cooking techniques are the core skills that turn ingredients into meals. Most methods fall into two families — dry heat and moist heat — and knowing a handful lets you cook almost anything. This lesson covers the main techniques, how they work, and when to use each.",
+  "sections": [
+   {
+    "h": "Dry heat vs. moist heat",
+    "body": "Cooking methods divide into two big families based on how heat reaches the food. Dry-heat methods use hot air, metal, or fat with no water — roasting, baking, sautéing, searing, grilling, frying. They tend to brown food and create rich, deep flavor (that delicious crust on seared meat or roasted vegetables).\n\nMoist-heat methods use water or steam — boiling, simmering, steaming, braising, poaching. They're gentler, keep food moist, and are good for tenderizing tougher items, but they don't brown. Knowing which family a method belongs to tells you what it will do: dry heat for browning and crisping, moist heat for tenderness and gentle cooking. Most of cooking is choosing the right one.",
+    "visual": "<svg viewBox=\"0 0 250 120\" width=\"240\" role=\"img\" aria-label=\"Dry-heat vs moist-heat cooking methods\"><rect x=\"8\" y=\"5\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"5\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9.5\">Dry heat</text><text x=\"118\" y=\"20\" fill=\"#9adbcf\" font-size=\"9\">roast, sauté, sear, grill</text><rect x=\"8\" y=\"27\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"27\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9.5\">Moist heat</text><text x=\"118\" y=\"42\" fill=\"#9adbcf\" font-size=\"9\">boil, simmer, steam, braise</text><rect x=\"8\" y=\"49\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"49\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9.5\">Dry heat does</text><text x=\"118\" y=\"64\" fill=\"#9adbcf\" font-size=\"9\">browns & crisps</text><rect x=\"8\" y=\"71\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"71\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9.5\">Moist heat does</text><text x=\"118\" y=\"86\" fill=\"#9adbcf\" font-size=\"9\">tenderizes, keeps moist</text><rect x=\"8\" y=\"93\" width=\"104\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"112\" y=\"93\" width=\"130\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"108\" fill=\"#cdd9ec\" font-size=\"9.5\">Braising</text><text x=\"118\" y=\"108\" fill=\"#9adbcf\" font-size=\"9\">sears then slow-cooks (both)</text></svg>",
+    "caption": "The two cooking families: dry heat browns and crisps; moist heat is gentle and tenderizes.",
+    "tip": "Dry heat (roast, sauté, sear, grill) browns and crisps; moist heat (boil, steam, braise) is gentle and tenderizes."
+   },
+   {
+    "h": "Dry-heat methods",
+    "body": "Dry-heat methods create browning and bold flavor. Sautéing cooks small pieces quickly in a little hot fat in a pan, tossing or stirring — great for vegetables and thin cuts of meat. Searing uses high heat to brown a surface deeply (the flavorful crust on a steak), often before finishing another way. Roasting and baking surround food with the oven's dry heat — roasting usually for savory foods and vegetables at higher temperatures, baking for breads and more.\n\nThe key to dry heat is getting the pan or oven properly hot before adding food, and not overcrowding the pan (crowding traps steam and prevents browning). The magic is the browning itself — a chemical reaction (the Maillard reaction) that creates hundreds of new flavor compounds. That's why seared, roasted, and grilled foods taste so good.",
+    "example": "Sauté onions in a hot pan with a little oil; sear a steak on high heat for a crust; roast vegetables at 425°F.",
+    "tip": "For dry heat: get the pan/oven hot first and don't crowd the pan — crowding steams food instead of browning it."
+   },
+   {
+    "h": "Moist-heat methods",
+    "body": "Moist-heat methods use water or steam and excel at gentle, even cooking. Boiling (rapidly bubbling water) cooks pasta, potatoes, and eggs. Simmering (gentle bubbles, just below a boil) is for soups, sauces, and slow-cooking — a hard boil can toughen or break up delicate foods, so much 'boiling' is really simmering. Steaming cooks food over (not in) boiling water, keeping nutrients and color, great for vegetables.\n\nBraising combines both families: you first sear food (dry heat) for flavor, then cook it slowly in a little liquid (moist heat), which turns tough, cheap cuts of meat meltingly tender over time. Moist-heat methods are forgiving and healthy, and braising in particular is how inexpensive ingredients become deeply satisfying meals.",
+    "tip": "Simmer (gentle bubbles), don't always hard-boil. Steaming keeps nutrients; braising (sear then slow-cook in liquid) tenderizes tough cuts."
+   },
+   {
+    "h": "Developing flavor",
+    "body": "Great cooking is largely about building flavor, and a few principles do most of the work. Salt is the biggest lever — it doesn't just make food 'salty,' it makes food taste more like itself, and seasoning in layers as you cook (not just at the end) makes a huge difference. Taste as you go and adjust.\n\nBrowning (from dry heat) builds deep, savory flavor, so don't be afraid to let things get golden. Fat carries flavor and aroma. Acid (a squeeze of lemon, a splash of vinegar) brightens and balances rich or heavy dishes. And aromatics — onion, garlic, herbs, spices — build a flavor base, which is why so many recipes start by cooking them first. Season, brown, balance with acid, and taste: that's most of what separates bland food from delicious food.",
+    "tip": "Flavor comes from salt (in layers), browning, fat, acid (lemon/vinegar), and aromatics. Taste as you go and adjust."
+   },
+   {
+    "h": "Choosing the right method",
+    "body": "Matching method to ingredient is a cook's key judgment. Tender foods (a good steak, fish, quick vegetables) suit fast, high-heat dry methods that brown without overcooking. Tough, cheap cuts (chuck, shoulder) need slow, moist methods like braising to break down and tenderize — cook them fast and they're like shoe leather; cook them slow and low and they're glorious.\n\nDelicate items (eggs, fish, greens) want gentle heat. Starchy staples (pasta, rice, potatoes) usually start with boiling or steaming. There's often more than one right answer, but understanding what each method does — and what each food needs — lets you cook confidently without a recipe, improvising based on what you have. That's the real goal: not memorizing recipes, but understanding techniques.",
+    "tip": "Match method to food: high-heat dry for tender cuts/quick browning; slow, moist braising for tough cheap cuts; gentle heat for delicate foods."
+   }
+  ],
   "cards": [
    {
-    "h": "Dry heat: sauté, roast, grill",
-    "body": "Dry-heat methods brown food and build flavor. Sautéing cooks small pieces fast in a little fat over medium-high heat; roasting cooks larger food in the oven with dry heat; grilling cooks over direct high heat. Browning (the 'Maillard reaction') is where a lot of flavor comes from."
+    "h": "Two families",
+    "body": "Dry heat (roast, sauté, sear, grill) browns and crisps; moist heat (boil, steam, braise) is gentle and tenderizes."
    },
    {
-    "h": "Moist heat: boil, simmer, steam",
-    "body": "Moist-heat methods cook with water or steam and are gentler. Boiling is rapid bubbling (pasta, blanching); simmering is gentle bubbling (soups, sauces, tougher cuts); steaming cooks food above boiling water, keeping nutrients and color. These don't brown food."
+    "h": "Dry heat",
+    "body": "Get the pan/oven hot and don't crowd it. Browning (Maillard reaction) builds deep flavor."
    },
    {
-    "h": "Combination: braising",
-    "body": "Braising combines both — brown the food first (dry heat, for flavor), then cook it slowly in a little liquid (moist heat, to tenderize). It's how tough, cheap cuts of meat become fall-apart tender, and it's very forgiving."
+    "h": "Moist heat",
+    "body": "Simmer rather than hard-boil; steaming keeps nutrients; braising tenderizes tough, cheap cuts."
    },
    {
-    "h": "Match the method to the food",
-    "body": "Tender foods (a fish fillet, a steak, quick vegetables) suit fast, high-heat methods. Tough, cheap cuts and dried beans need slow, moist cooking to break down. Picking the right method for the ingredient is most of what separates good results from bad."
+    "h": "Flavor",
+    "body": "Salt in layers, browning, fat, acid (lemon/vinegar), and aromatics. Taste and adjust."
    },
    {
-    "h": "Heat control and resting",
-    "body": "Most mistakes come from heat that's too high (burning) or too low (steaming instead of browning). Preheat your pan, don't crowd it (crowding steams food), and let roasted or grilled meat rest a few minutes after cooking so the juices stay in."
+    "h": "Choosing a method",
+    "body": "High-heat dry for tender foods; slow, moist for tough cuts; gentle heat for delicate items."
    }
   ],
   "flash": [
    [
+    "Dry heat",
+    "Cooking with hot air, metal, or fat (no water); browns food."
+   ],
+   [
+    "Moist heat",
+    "Cooking with water or steam; gentle, tenderizing."
+   ],
+   [
     "Sauté",
-    "Cook small pieces quickly in a little fat over medium-high heat."
+    "Cook small pieces quickly in a little hot fat."
+   ],
+   [
+    "Sear",
+    "Brown a surface deeply with high heat."
    ],
    [
     "Roast",
-    "Cook larger food in the oven with dry heat."
+    "Cook with the oven's dry heat (savory foods)."
+   ],
+   [
+    "Boil",
+    "Cook in rapidly bubbling water."
    ],
    [
     "Simmer",
-    "Cook gently in liquid just below a boil."
+    "Cook with gentle bubbles just below boiling."
    ],
    [
     "Steam",
-    "Cook food above boiling water, keeping nutrients."
+    "Cook over (not in) boiling water."
    ],
    [
     "Braise",
-    "Brown, then cook slowly in a little liquid to tenderize."
+    "Sear, then slow-cook in a little liquid (tenderizes)."
    ],
    [
     "Maillard reaction",
-    "The browning that builds deep flavor."
+    "The browning that creates deep savory flavor."
    ],
    [
-    "Dry vs. moist heat",
-    "Dry browns; moist cooks gently without browning."
+    "Aromatics",
+    "Onion, garlic, herbs, spices used as a flavor base."
    ],
    [
-    "Resting meat",
-    "Letting cooked meat sit so juices redistribute."
+    "Seasoning",
+    "Adding salt and spices, ideally in layers."
    ]
   ],
   "quiz": [
    {
-    "q": "Browning food for flavor requires:",
+    "q": "Cooking methods divide into which two families?",
     "options": [
-     "Dry heat (sauté, roast, grill)",
-     "Boiling",
+     "Dry heat and moist heat",
+     "Hot and cold",
+     "Sweet and salty",
+     "Fast and slow"
+    ],
+    "a": 0,
+    "why": "Based on whether water/steam is involved."
+   },
+   {
+    "q": "Dry-heat methods are best at:",
+    "options": [
+     "Browning and crisping",
+     "Keeping food soggy",
+     "Adding water",
+     "Cooling food"
+    ],
+    "a": 0,
+    "why": "Dry heat browns and creates deep flavor."
+   },
+   {
+    "q": "Which is a moist-heat method?",
+    "options": [
      "Steaming",
-     "Soaking"
+     "Roasting",
+     "Grilling",
+     "Searing"
     ],
     "a": 0,
-    "why": "Moist-heat methods don't brown; dry heat does (Maillard reaction)."
+    "why": "Steaming uses water vapor; the others are dry heat."
    },
    {
-    "q": "Tough, cheap cuts of meat are best cooked:",
+    "q": "Sautéing means cooking:",
     "options": [
-     "Slowly with moist heat (braising)",
-     "Quickly on high heat",
-     "Raw",
-     "By boiling for 1 minute"
+     "Small pieces quickly in a little hot fat",
+     "In lots of boiling water",
+     "In the freezer",
+     "Slowly over days"
     ],
     "a": 0,
-    "why": "Slow, moist cooking breaks down tough tissue into tenderness."
+    "why": "Fast cooking in a bit of fat over higher heat."
    },
    {
-    "q": "Braising is a combination of:",
+    "q": "Searing is used to:",
     "options": [
-     "Browning then slow moist cooking",
-     "Only boiling",
-     "Only grilling",
-     "Freezing then frying"
+     "Brown a surface deeply",
+     "Boil pasta",
+     "Steam vegetables",
+     "Chill meat"
     ],
     "a": 0,
-    "why": "You brown for flavor, then simmer in liquid to tenderize."
+    "why": "High heat creates a flavorful crust."
    },
    {
-    "q": "Crowding a hot pan causes food to:",
+    "q": "Why not overcrowd the pan when browning?",
     "options": [
-     "Steam instead of brown",
-     "Brown faster",
-     "Cook less",
-     "Taste sweeter"
+     "Crowding traps steam and prevents browning",
+     "It looks messy",
+     "It's faster",
+     "It adds salt"
     ],
     "a": 0,
-    "why": "Too much food drops the temperature and releases moisture, steaming it."
+    "why": "Steam from crowded food stops it from browning."
    },
    {
-    "q": "Steaming is good because it:",
+    "q": "The browning that creates deep flavor is called the:",
+    "options": [
+     "Maillard reaction",
+     "Fermentation",
+     "Oxidation",
+     "Dilution"
+    ],
+    "a": 0,
+    "why": "The Maillard reaction makes seared/roasted food taste great."
+   },
+   {
+    "q": "Most 'boiling' of delicate foods is really:",
+    "options": [
+     "Simmering",
+     "Deep frying",
+     "Steaming",
+     "Searing"
+    ],
+    "a": 0,
+    "why": "Gentle simmering avoids toughening or breaking up food."
+   },
+   {
+    "q": "Steaming is valued because it:",
     "options": [
      "Keeps nutrients and color",
      "Browns food",
@@ -14804,278 +15357,636 @@ window.LAB404_CONTENT = {
      "Toughens food"
     ],
     "a": 0,
-    "why": "Gentle moist heat preserves nutrients and color."
+    "why": "Cooking over steam preserves nutrients and color."
    },
    {
-    "q": "After roasting meat, you should:",
+    "q": "Braising combines:",
     "options": [
-     "Let it rest a few minutes",
-     "Cut it instantly",
-     "Freeze it",
-     "Add water"
+     "Searing (dry) then slow-cooking in liquid (moist)",
+     "Only boiling",
+     "Only grilling",
+     "Freezing and baking"
     ],
     "a": 0,
-    "why": "Resting lets juices redistribute so they don't run out."
+    "why": "It browns for flavor, then tenderizes tough cuts."
+   },
+   {
+    "q": "The biggest lever for flavor is:",
+    "options": [
+     "Salt (seasoned in layers)",
+     "Only sugar",
+     "Water",
+     "Ice"
+    ],
+    "a": 0,
+    "why": "Salt makes food taste more like itself; season as you go."
+   },
+   {
+    "q": "A squeeze of lemon or splash of vinegar adds:",
+    "options": [
+     "Acid, which brightens and balances",
+     "Sweetness",
+     "Fat",
+     "Salt"
+    ],
+    "a": 0,
+    "why": "Acid lifts and balances rich dishes."
+   },
+   {
+    "q": "Onion, garlic, and herbs cooked first form a:",
+    "options": [
+     "Flavor base (aromatics)",
+     "Dessert",
+     "Sauce thickener only",
+     "Garnish"
+    ],
+    "a": 0,
+    "why": "Aromatics build the base of many dishes."
+   },
+   {
+    "q": "A tough, cheap cut of meat is best cooked by:",
+    "options": [
+     "Slow, moist braising",
+     "Fast high-heat searing only",
+     "Quick boiling",
+     "Freezing"
+    ],
+    "a": 0,
+    "why": "Slow moist heat breaks it down to tender."
+   },
+   {
+    "q": "The real goal of learning techniques is to:",
+    "options": [
+     "Cook confidently without needing a recipe",
+     "Memorize 1,000 recipes",
+     "Only follow videos",
+     "Avoid cooking"
+    ],
+    "a": 0,
+    "why": "Understanding methods lets you improvise."
    }
   ]
  },
  "cooking-baking": {
   "title": "Baking",
   "subject": "Cooking & Nutrition",
-  "level": "All levels",
-  "intro": "Baking is cooking's precise cousin — more like chemistry than freestyle cooking. Measure carefully and understand what each ingredient does, and you can bake reliably instead of hoping for the best.",
+  "level": "All ages",
+  "objectives": [
+   "Understand why baking is a precise science",
+   "Know the main ingredients and what each does",
+   "Understand leavening (how baked goods rise)",
+   "Follow baking best practices",
+   "Troubleshoot common baking problems"
+  ],
+  "intro": "Baking — breads, cakes, cookies, pastries — is cooking's precise cousin. Where general cooking is forgiving and improvised, baking is chemistry: ingredients react in exact ratios, so measuring and method matter. This lesson covers how baking works, what each ingredient does, leavening, and how to get reliable results.",
+  "sections": [
+   {
+    "h": "Baking is a science",
+    "body": "The biggest shift from cooking to baking is precision. In cooking you taste and adjust; in baking, the chemistry is set once it goes in the oven, so you get the ratios right beforehand. Too much flour makes a cake dry; too much leavening makes it collapse; the wrong oven temperature ruins the rise. This is why bakers measure carefully (many weigh ingredients with a scale for accuracy) and follow recipes closely, especially at first.\n\nThat precision is also what makes baking satisfying: follow a good recipe accurately and you get a reliable, repeatable result. Baking rewards reading the full recipe, measuring properly, and doing steps in the right order. Once you understand why the rules exist, you can start to bend them — but learn the science first.",
+    "tip": "Baking is chemistry — precise ratios matter. Measure carefully (a scale helps) and follow recipes closely until you know the 'why.'"
+   },
+   {
+    "h": "What each ingredient does",
+    "body": "Baked goods come from a few core ingredients, each with a job. Flour provides structure through gluten (a protein network that gives bread its chew). Sugar sweetens but also adds moisture, tenderness, and browning. Fat (butter, oil) adds richness, tenderness, and flavor. Eggs bind ingredients, add structure, and help with rising.\n\nLiquid (milk, water) hydrates and activates things; salt sharpens flavor and controls yeast; and leaveners make it rise. Understanding these roles explains why recipes are built the way they are — and why you can't freely swap or skip ingredients in baking the way you might in cooking. Change one and you change the chemistry. This is also why baking substitutions need care and often a tested conversion.",
+    "tip": "Flour = structure, sugar = sweetness/tenderness/browning, fat = richness, eggs = bind/structure. Each has a job; don't swap freely."
+   },
+   {
+    "h": "Leavening: how things rise",
+    "body": "What makes baked goods light instead of dense is leavening — the creation of gas bubbles that expand in the heat. There are three main ways. Biological: yeast, a living organism, eats sugar and releases carbon dioxide, which makes bread rise slowly over time (and gives it flavor). Chemical: baking soda and baking powder react to produce gas quickly, used in cakes, cookies, and quick breads.\n\nMechanical or physical: air beaten into batter (whipped eggs, or creamed butter and sugar) and steam from the liquid also lift baked goods. Each leavener works differently, which is why recipes specify one — using baking soda where powder is needed, or old yeast, gives flat, dense results. Leavening is the heart of why baking feels like magic: invisible gas turning dense dough into something airy.",
+    "visual": "<svg viewBox=\"0 0 250 98\" width=\"240\" role=\"img\" aria-label=\"The main types of leavening and what they raise\"><rect x=\"8\" y=\"5\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"5\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"20\" fill=\"#cdd9ec\" font-size=\"9\">Yeast</text><text x=\"132\" y=\"20\" fill=\"#9adbcf\" font-size=\"8.5\">slow, biological → bread</text><rect x=\"8\" y=\"27\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"27\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"42\" fill=\"#cdd9ec\" font-size=\"9\">Baking soda/powder</text><text x=\"132\" y=\"42\" fill=\"#9adbcf\" font-size=\"8.5\">fast, chemical → cakes/cookies</text><rect x=\"8\" y=\"49\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"49\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"64\" fill=\"#cdd9ec\" font-size=\"9\">Whipped air</text><text x=\"132\" y=\"64\" fill=\"#9adbcf\" font-size=\"8.5\">beaten eggs/butter → light</text><rect x=\"8\" y=\"71\" width=\"118\" height=\"22\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"0.8\"/><rect x=\"126\" y=\"71\" width=\"116\" height=\"22\" fill=\"rgba(57,227,200,.06)\" stroke=\"#39e3c8\" stroke-width=\"0.8\"/><text x=\"14\" y=\"86\" fill=\"#cdd9ec\" font-size=\"9\">Steam</text><text x=\"132\" y=\"86\" fill=\"#9adbcf\" font-size=\"8.5\">from liquid → lift, pastry</text></svg>",
+    "caption": "The main ways baked goods rise — each leavener works differently, so recipes specify one.",
+    "example": "Yeast → bread (slow, biological)  ·  baking powder/soda → cakes & cookies (fast, chemical)  ·  whipped air/steam → light cakes.",
+    "tip": "Leavening = gas that makes things rise: yeast (slow, bread), baking soda/powder (fast, cakes/cookies), or beaten-in air/steam."
+   },
+   {
+    "h": "Baking best practices",
+    "body": "A few habits make baking reliable. Measure accurately — spoon flour into the cup and level it (don't scoop and pack, which adds too much), or better, weigh it. Use ingredients at the temperature the recipe says (room-temperature butter and eggs blend very differently than cold). Preheat the oven fully before baking, and know your oven may run hot or cold (an oven thermometer helps).\n\nDon't overmix once flour is added (overmixing develops too much gluten and makes things tough — except in bread, where you want it). Follow the order of steps; it's usually chemistry, not fussiness. And resist opening the oven door too early, which drops the temperature and can collapse a rising cake. These small disciplines are the difference between reliable baking and random results.",
+    "tip": "Measure precisely (spoon & level, or weigh), use the right ingredient temps, preheat fully, and don't overmix or peek early."
+   },
+   {
+    "h": "Troubleshooting",
+    "body": "When baking goes wrong, the cause is usually traceable. A cake that sank often means too much leavening, the oven door opened too early, or underbaking. Dense, flat results can mean dead yeast, too much flour, or old baking powder. Dry, tough baked goods usually mean too much flour or overmixing (or overbaking). Burnt bottoms often mean the oven runs hot or the rack is too low.\n\nThe lesson: baking problems have reasons, and diagnosing them makes you better. Keep notes on what you changed. Check that your leaveners are fresh (baking powder and yeast expire), measure more carefully, and verify your oven's real temperature. Baking is less about talent than about accuracy and understanding — get those right, and good results follow consistently. Every baker learns by fixing their flops.",
+    "tip": "Baking flops have reasons: sank = too much leavening/opened early; dense = dead yeast/too much flour; tough = overmixed. Diagnose and adjust."
+   }
+  ],
   "cards": [
    {
-    "h": "Baking is a measured science",
-    "body": "Unlike stovetop cooking, baking relies on exact ratios and reactions, so measuring matters. Too much flour makes it dry; too much liquid, dense. Weighing ingredients (in grams) is more accurate than cups. Follow the recipe closely the first time, then adjust."
+    "h": "Baking is science",
+    "body": "Precise ratios matter — measure carefully (a scale helps) and follow recipes until you know the 'why.'"
    },
    {
-    "h": "What the main ingredients do",
-    "body": "Flour gives structure (its gluten forms the framework); sugar sweetens, browns, and keeps things moist; fat (butter, oil) adds richness and tenderness; eggs bind and add structure; liquid brings it together. Change one and you change the result."
+    "h": "Ingredient roles",
+    "body": "Flour = structure (gluten), sugar = sweet/tender/browning, fat = richness, eggs = bind. Don't swap freely."
    },
    {
-    "h": "Leavening: what makes it rise",
-    "body": "Leaveners make baked goods light. Baking soda and baking powder release gas bubbles through a chemical reaction; yeast is a living organism that ferments and produces gas slowly (for bread). Without leavening, cakes and breads would be flat and dense."
+    "h": "Leavening",
+    "body": "Gas that makes things rise: yeast (slow/bread), baking soda/powder (fast/cakes), beaten air/steam."
    },
    {
-    "h": "Mixing matters",
-    "body": "How you mix affects texture. Overmixing batter develops too much gluten and makes muffins and cakes tough; gentle mixing keeps them tender. Creaming butter and sugar adds air for fluffiness. The recipe's mixing instructions aren't optional — they shape the result."
+    "h": "Best practices",
+    "body": "Spoon & level (or weigh), right ingredient temps, preheat fully, don't overmix or open the oven early."
    },
    {
-    "h": "Oven and doneness",
-    "body": "An accurate, preheated oven is essential — an oven thermometer is cheap insurance, since many ovens run off. Check doneness with the right test: a toothpick comes out clean for cakes, edges pull away, or an internal temperature for bread. Don't open the oven too early or it can sink."
+    "h": "Troubleshooting",
+    "body": "Sank = too much leavening/opened early; dense = dead yeast/too much flour; tough = overmixed. Flops have reasons."
    }
   ],
   "flash": [
    [
     "Gluten",
-    "The protein in flour that gives baked goods structure."
+    "A protein network in flour that gives structure and chew."
    ],
    [
     "Leavening",
-    "Agents (baking soda/powder, yeast) that make baking rise."
-   ],
-   [
-    "Baking soda vs. powder",
-    "Both leaven chemically; powder has its own acid built in."
+    "Gas that makes baked goods rise."
    ],
    [
     "Yeast",
-    "A living organism that leavens bread by fermenting."
+    "A living leavener that rises bread slowly."
+   ],
+   [
+    "Baking soda",
+    "A chemical leavener that reacts to produce gas fast."
+   ],
+   [
+    "Baking powder",
+    "A chemical leavener (soda plus acid) for cakes/cookies."
    ],
    [
     "Creaming",
-    "Beating butter and sugar together to add air."
+    "Beating butter and sugar to whip in air."
+   ],
+   [
+    "Preheat",
+    "Fully heating the oven before baking."
+   ],
+   [
+    "Spoon and level",
+    "Measuring flour accurately without packing it."
    ],
    [
     "Overmixing",
-    "Too much mixing that toughens batter."
+    "Mixing too much, which toughens baked goods."
    ],
    [
-    "Measuring by weight",
-    "Using grams for accuracy over cups."
+    "Room temperature",
+    "The ingredient temp many recipes require."
    ],
    [
-    "Preheating",
-    "Bringing the oven to temperature before baking."
+    "Quick bread",
+    "Bread leavened chemically (no yeast), like muffins."
+   ],
+   [
+    "Proofing",
+    "Letting yeast dough rise before baking."
    ]
   ],
   "quiz": [
    {
-    "q": "Compared to stovetop cooking, baking is:",
+    "q": "Compared with cooking, baking is:",
     "options": [
-     "More precise, like chemistry",
-     "More freestyle",
+     "More precise (a science)",
+     "Totally improvised",
      "Never measured",
-     "Always faster"
+     "Faster always"
     ],
     "a": 0,
-    "why": "Baking depends on exact ratios and reactions."
+    "why": "Baking chemistry depends on exact ratios."
    },
    {
-    "q": "What gives baked goods their structure?",
+    "q": "Why do many bakers weigh ingredients?",
     "options": [
-     "Flour (gluten)",
-     "Sugar",
-     "Food coloring",
-     "Salt alone"
+     "For accuracy",
+     "To slow down",
+     "It's required by law",
+     "For no reason"
     ],
     "a": 0,
-    "why": "Gluten, the protein in flour, forms the framework."
+    "why": "A scale is the most accurate way to measure."
    },
    {
-    "q": "Leavening agents make baked goods:",
+    "q": "In baking, flour mainly provides:",
     "options": [
-     "Rise and become light",
-     "Flat",
-     "Salty",
-     "Cold"
+     "Structure (gluten)",
+     "Sweetness",
+     "Rising gas",
+     "Color only"
     ],
     "a": 0,
-    "why": "Baking soda/powder and yeast create gas bubbles that lift the dough."
+    "why": "Gluten in flour builds structure."
    },
    {
-    "q": "Overmixing cake or muffin batter makes it:",
+    "q": "Sugar in baking does more than sweeten; it also adds:",
+    "options": [
+     "Moisture, tenderness, and browning",
+     "Gluten",
+     "Gas",
+     "Salt"
+    ],
+    "a": 0,
+    "why": "Sugar affects texture and browning too."
+   },
+   {
+    "q": "Leavening is:",
+    "options": [
+     "Gas that makes baked goods rise",
+     "A type of flour",
+     "An oven setting",
+     "A kind of sugar"
+    ],
+    "a": 0,
+    "why": "Leaveners create gas bubbles that expand with heat."
+   },
+   {
+    "q": "Which leavener is a living organism?",
+    "options": [
+     "Yeast",
+     "Baking soda",
+     "Baking powder",
+     "Salt"
+    ],
+    "a": 0,
+    "why": "Yeast eats sugar and releases CO2."
+   },
+   {
+    "q": "Baking soda and baking powder are:",
+    "options": [
+     "Chemical leaveners (fast)",
+     "Living organisms",
+     "Types of fat",
+     "Flours"
+    ],
+    "a": 0,
+    "why": "They react chemically to produce gas quickly."
+   },
+   {
+    "q": "Beating butter and sugar to trap air is called:",
+    "options": [
+     "Creaming",
+     "Proofing",
+     "Kneading",
+     "Chilling"
+    ],
+    "a": 0,
+    "why": "Creaming whips air in as a physical leavener."
+   },
+   {
+    "q": "To measure flour accurately, you should:",
+    "options": [
+     "Spoon it in and level it off",
+     "Scoop and pack it",
+     "Guess",
+     "Heap the cup"
+    ],
+    "a": 0,
+    "why": "Scooping/packing adds too much flour."
+   },
+   {
+    "q": "Overmixing batter (once flour is in) makes it:",
     "options": [
      "Tough",
-     "Fluffier",
+     "Lighter",
      "Sweeter",
-     "Safer"
+     "Saltier"
     ],
     "a": 0,
-    "why": "It develops too much gluten, toughening the texture."
+    "why": "Too much gluten develops, toughening the result."
    },
    {
-    "q": "The most accurate way to measure baking ingredients is:",
+    "q": "Opening the oven door too early can:",
     "options": [
-     "By weight (grams)",
-     "By the handful",
-     "By guessing",
-     "By eye"
+     "Collapse a rising cake",
+     "Improve the rise",
+     "Add flavor",
+     "Do nothing"
     ],
     "a": 0,
-    "why": "Weighing avoids the variability of scooping cups."
+    "why": "The temperature drop can make a cake fall."
    },
    {
-    "q": "Yeast leavens bread by:",
+    "q": "A cake that sank is most likely due to:",
     "options": [
-     "Fermenting and producing gas",
-     "A quick chemical fizz",
-     "Melting",
-     "Freezing"
+     "Too much leavening or opening the oven early",
+     "Too little sugar",
+     "Too much salt",
+     "Nothing"
     ],
     "a": 0,
-    "why": "Yeast is alive; it ferments and slowly produces gas."
+    "why": "Over-leavening or a temperature drop causes sinking."
+   },
+   {
+    "q": "Dense, flat bread often means:",
+    "options": [
+     "Dead yeast or too much flour",
+     "Too much air",
+     "Perfect technique",
+     "Too little flour"
+    ],
+    "a": 0,
+    "why": "Expired yeast or excess flour prevents a good rise."
+   },
+   {
+    "q": "Baking powder and yeast:",
+    "options": [
+     "Expire and lose power over time",
+     "Last forever",
+     "Get stronger with age",
+     "Don't matter"
+    ],
+    "a": 0,
+    "why": "Stale leaveners give flat results; check freshness."
+   },
+   {
+    "q": "Success in baking is mostly about:",
+    "options": [
+     "Accuracy and understanding",
+     "Natural talent only",
+     "Expensive gear",
+     "Luck"
+    ],
+    "a": 0,
+    "why": "Precise measuring and knowing the 'why' give reliable results."
    }
   ]
  },
  "cooking-meal-planning": {
   "title": "Meal Planning",
   "subject": "Cooking & Nutrition",
-  "level": "All levels",
-  "intro": "Meal planning is deciding ahead of time what you'll eat — and it's one of the biggest money-and-time savers in the kitchen. A little planning means less takeout, less waste, and less daily 'what's for dinner?' stress.",
+  "level": "All ages",
+  "objectives": [
+   "Understand the benefits of planning meals",
+   "Plan a week of balanced meals",
+   "Make an efficient grocery list and shop smart",
+   "Prep and batch-cook to save time",
+   "Store food and reduce waste"
+  ],
+  "intro": "Meal planning is deciding ahead of time what you'll eat and shopping for it, instead of improvising hungry every day. It saves money, time, and stress, cuts food waste, and makes eating well far easier. This lesson covers planning, shopping, prepping, and storing food.",
+  "sections": [
+   {
+    "h": "Why plan meals",
+    "body": "Planning meals ahead has big, practical payoffs. It saves money — you buy only what you need and waste less, and you're not grabbing expensive takeout because there's 'nothing to eat.' It saves time and daily decision stress — the 'what's for dinner?' question is already answered. And it makes healthy eating much easier, since you decide on balanced meals calmly in advance rather than when you're hungry and tired.\n\nYou don't need an elaborate system. Even loosely planning a week of dinners and shopping for them once transforms how smoothly the week goes. Meal planning is one of those small habits — like budgeting money — that quietly removes a recurring source of friction and expense from life. The effort is front-loaded; the payoff is all week.",
+    "tip": "Planning meals ahead saves money, time, and stress and cuts waste — the effort is front-loaded, the payoff lasts all week."
+   },
+   {
+    "h": "Planning a balanced week",
+    "body": "A simple weekly plan: decide on meals for the days ahead (dinners are the usual focus), aiming for variety and balance. A balanced meal roughly combines a protein, a vegetable or two, and a starch or grain — think 'something from each group.' Planning a mix keeps meals interesting and nutritious without overthinking.\n\nPractical tips make it realistic: plan a couple of quick meals for busy nights, repeat favorites so it's not all new cooking, plan to reuse ingredients across meals (a bunch of spinach in two dishes), and intentionally plan to use leftovers (cook once, eat twice). Check what you already have before planning. A plan that fits your real schedule and tastes is one you'll actually follow.",
+    "tip": "Aim for balance (protein + veg + starch), mix quick and favorite meals, reuse ingredients, and plan for leftovers."
+   },
+   {
+    "h": "Smart grocery shopping",
+    "body": "A plan leads naturally to a grocery list — and a list is the key to efficient, cheap shopping. Build it from your meal plan plus staples you're out of, and organize it by store section (produce, dairy, and so on) so you're not crisscrossing the store. The golden rules: shop with a list and stick to it, and never shop hungry (hunger drives impulse buys).\n\nSave money by comparing unit prices (price per ounce, not per package), buying store brands (often identical to name brands), purchasing non-perishables and freezer items in bulk when cheaper, and watching sales for things you'll actually use. Checking weekly specials before planning lets you build meals around what's cheap. A little shopping discipline is one of the easiest ways to cut your food budget.",
+    "visual": "<svg viewBox=\"0 0 256 62\" width=\"248\" role=\"img\" aria-label=\"The meal-prep cycle: plan, shop, prep, cook, store\"><rect x=\"6\" y=\"16\" width=\"42\" height=\"30\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"27\" y=\"35\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Plan</text><rect x=\"56\" y=\"16\" width=\"42\" height=\"30\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"77\" y=\"35\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Shop</text><rect x=\"106\" y=\"16\" width=\"42\" height=\"30\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"127\" y=\"35\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Prep</text><rect x=\"156\" y=\"16\" width=\"42\" height=\"30\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"177\" y=\"35\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Cook</text><rect x=\"206\" y=\"16\" width=\"42\" height=\"30\" rx=\"6\" fill=\"rgba(79,156,240,.16)\" stroke=\"#4f9cf0\" stroke-width=\"1.5\"/><text x=\"227\" y=\"35\" text-anchor=\"middle\" fill=\"#cdd9ec\" font-size=\"8.5\">Store</text><line x1=\"48\" y1=\"31\" x2=\"52\" y2=\"31\" stroke=\"#39e3c8\" stroke-width=\"1.8\"/><polygon points=\"52,28 57,31 52,34\" fill=\"#39e3c8\"/><line x1=\"98\" y1=\"31\" x2=\"102\" y2=\"31\" stroke=\"#39e3c8\" stroke-width=\"1.8\"/><polygon points=\"102,28 107,31 102,34\" fill=\"#39e3c8\"/><line x1=\"148\" y1=\"31\" x2=\"152\" y2=\"31\" stroke=\"#39e3c8\" stroke-width=\"1.8\"/><polygon points=\"152,28 157,31 152,34\" fill=\"#39e3c8\"/><line x1=\"198\" y1=\"31\" x2=\"202\" y2=\"31\" stroke=\"#39e3c8\" stroke-width=\"1.8\"/><polygon points=\"202,28 207,31 202,34\" fill=\"#39e3c8\"/></svg>",
+    "caption": "The meal-prep cycle: plan the week, shop once, prep ahead, cook, and store the rest.",
+    "tip": "Shop from a list, never hungry. Compare unit prices, try store brands, and build meals around what's on sale."
+   },
+   {
+    "h": "Prepping and batch cooking",
+    "body": "Much of the time cost of cooking is prep and cleanup, so doing it in batches saves enormous time. Meal prep means doing some cooking ahead — often on a free day — so weeknights are easy. You might wash and chop vegetables for the week, cook a big batch of rice or beans, or fully make a few meals to portion out.\n\nBatch cooking (making large quantities to eat over several days or freeze) is especially efficient — it's barely more work to cook a double portion, and freezing extras gives you 'instant' homemade meals later. Even light prep — having ingredients ready to go — makes weeknight cooking feel effortless. The idea is to concentrate the effort into one session and coast the rest of the week.",
+    "tip": "Do prep/cooking in batches on a free day: chop ahead, cook big portions, and freeze extras for 'instant' meals later."
+   },
+   {
+    "h": "Storing food and cutting waste",
+    "body": "Proper storage saves money and food. Keep your fridge and freezer at safe temperatures, store leftovers in sealed containers, and freeze anything you won't eat in a few days (most cooked food and many raw ingredients freeze well). Label frozen items with the date. Know roughly how long things last, and follow 'first in, first out' — use older items before newer ones.\n\nReducing food waste is both frugal and responsible: a large share of household food is thrown away. Plan portions you'll actually eat, repurpose leftovers (roast chicken becomes soup or sandwiches), and keep a rough eye on what needs using up soon. Good storage plus a 'use it up' mindset means the food you bought actually gets eaten — which is where the real savings of meal planning finally land.",
+    "tip": "Store leftovers sealed, freeze what you won't eat soon (and label it), use oldest first, and repurpose leftovers to cut waste."
+   }
+  ],
   "cards": [
    {
     "h": "Why plan",
-    "body": "Deciding meals in advance saves money (fewer impulse buys and takeout), saves time (one shopping trip, less daily deciding), and cuts waste (you buy what you'll actually use). It also tends to mean healthier eating, since you're not grabbing whatever's fastest when hungry."
+    "body": "Saves money, time, and stress and cuts waste. Effort is front-loaded; payoff lasts all week."
    },
    {
-    "h": "Plan around what's cheap and on hand",
-    "body": "Build meals around what's on sale, in season, and already in your pantry. Check what you have before shopping. Planning a few meals that share ingredients (buy a big bag of rice or a rotisserie chicken and use it several ways) stretches your dollar."
+    "h": "Balanced week",
+    "body": "Protein + veg + starch; mix quick and favorite meals, reuse ingredients, plan for leftovers."
    },
    {
-    "h": "Make a list and stick to it",
-    "body": "From your plan, write a shopping list organized by the store's sections, and shop it — ideally not hungry. A list is your defense against impulse buys, which are where a lot of food money leaks away."
+    "h": "Smart shopping",
+    "body": "Shop from a list, never hungry; compare unit prices, try store brands, build meals around sales."
    },
    {
-    "h": "Batch cooking and leftovers",
-    "body": "Cooking once and eating several times is a huge time-saver. Make a big batch of something (chili, rice, roasted vegetables), then repurpose it across the week. Plan leftovers on purpose — cook extra dinner to become tomorrow's lunch."
+    "h": "Prep & batch",
+    "body": "Prep/cook in batches on a free day; cook big portions and freeze extras for instant meals."
    },
    {
-    "h": "Keep it realistic",
-    "body": "The best meal plan is one you'll actually follow. Start small — plan just dinners, or just a few days. Keep some easy backup meals (eggs, pasta, canned beans) for busy nights so one skipped plan doesn't send you to takeout. Flexibility keeps the habit going."
+    "h": "Storage & waste",
+    "body": "Seal and freeze leftovers (label them), use oldest first, repurpose leftovers."
    }
   ],
   "flash": [
    [
     "Meal planning",
-    "Deciding meals ahead to save money, time, and waste."
+    "Deciding meals ahead and shopping for them."
    ],
    [
-    "Shopping list",
-    "A planned list that curbs impulse buying."
+    "Balanced meal",
+    "Roughly a protein, vegetables, and a starch/grain."
+   ],
+   [
+    "Grocery list",
+    "A shopping list built from your plan and staples."
+   ],
+   [
+    "Unit price",
+    "Price per ounce/unit — the true cost comparison."
+   ],
+   [
+    "Store brand",
+    "A cheaper brand often identical to name brands."
    ],
    [
     "Batch cooking",
-    "Cooking a large amount to eat over several meals."
+    "Making large quantities to eat later or freeze."
    ],
    [
-    "Repurposing",
-    "Using one cooked ingredient in several different meals."
+    "Meal prep",
+    "Doing some cooking/prep ahead of time."
    ],
    [
-    "In season",
-    "Produce that's cheapest and best at that time of year."
+    "Leftovers",
+    "Extra cooked food saved for another meal."
    ],
    [
-    "Pantry staples",
-    "Shelf-stable basics (rice, beans, pasta) to build meals on."
+    "First in, first out",
+    "Using older items before newer ones."
    ],
    [
     "Food waste",
-    "Food bought but thrown away unused."
+    "Edible food that gets thrown away."
    ],
    [
-    "Backup meal",
-    "An easy fallback for busy nights (eggs, pasta)."
+    "Staples",
+    "Basic foods you keep stocked (rice, pasta, oil)."
+   ],
+   [
+    "Portion",
+    "The amount of food served or planned per person."
    ]
   ],
   "quiz": [
    {
-    "q": "Meal planning mainly helps you:",
+    "q": "Meal planning mainly saves:",
     "options": [
-     "Save money, time, and waste",
-     "Spend more",
-     "Eat more takeout",
-     "Cook slower"
+     "Money, time, and stress",
+     "Only money",
+     "Only time",
+     "Nothing"
     ],
     "a": 0,
-    "why": "Planning cuts impulse spending, daily deciding, and wasted food."
+    "why": "It cuts cost, decisions, and waste at once."
    },
    {
-    "q": "A shopping list helps by:",
+    "q": "A balanced meal roughly combines:",
     "options": [
-     "Curbing impulse buys",
-     "Making food cost more",
-     "Wasting time",
-     "Hiding sales"
+     "A protein, vegetables, and a starch/grain",
+     "Only dessert",
+     "Only meat",
+     "Only bread"
     ],
     "a": 0,
-    "why": "Sticking to a list prevents costly impulse purchases."
+    "why": "Something from each group keeps it nutritious."
+   },
+   {
+    "q": "To make a plan you'll actually follow, you should:",
+    "options": [
+     "Fit it to your real schedule and tastes",
+     "Make it as fancy as possible",
+     "Plan only new recipes",
+     "Ignore your schedule"
+    ],
+    "a": 0,
+    "why": "Realistic plans get followed."
+   },
+   {
+    "q": "A good habit when planning is to:",
+    "options": [
+     "Plan to reuse ingredients and leftovers",
+     "Buy one-use items only",
+     "Never repeat meals",
+     "Skip checking the fridge"
+    ],
+    "a": 0,
+    "why": "Reuse and leftovers save money and effort."
+   },
+   {
+    "q": "The key tool for efficient shopping is a:",
+    "options": [
+     "Grocery list",
+     "Big cart",
+     "Coupon only",
+     "Full stomach"
+    ],
+    "a": 0,
+    "why": "A list keeps you focused and efficient."
+   },
+   {
+    "q": "You should never grocery shop while:",
+    "options": [
+     "Hungry",
+     "Making a list",
+     "With a plan",
+     "In the morning"
+    ],
+    "a": 0,
+    "why": "Hunger drives impulse buys."
+   },
+   {
+    "q": "To compare true cost, look at the:",
+    "options": [
+     "Unit price (per ounce)",
+     "Package size",
+     "Brand color",
+     "Shelf height"
+    ],
+    "a": 0,
+    "why": "Unit price reveals the real value."
+   },
+   {
+    "q": "Store brands are:",
+    "options": [
+     "Often identical to name brands, cheaper",
+     "Always worse",
+     "Illegal",
+     "More expensive"
+    ],
+    "a": 0,
+    "why": "They frequently match name brands for less."
    },
    {
     "q": "Batch cooking means:",
     "options": [
-     "Cooking a large amount to reuse",
-     "Cooking one tiny portion",
-     "Eating out",
-     "Never cooking"
+     "Making large quantities to eat later or freeze",
+     "Cooking one serving",
+     "Never cooking",
+     "Eating out"
     ],
     "a": 0,
-    "why": "You cook once and eat it across several meals."
+    "why": "Cooking extra is barely more work and saves time later."
    },
    {
-    "q": "You should build meals around:",
+    "q": "Doing prep on a free day makes weeknights:",
     "options": [
-     "What's cheap, in season, and on hand",
-     "The most expensive items",
-     "Only new ingredients",
-     "Random cravings"
+     "Easier",
+     "Harder",
+     "Impossible",
+     "Longer"
     ],
     "a": 0,
-    "why": "Using sales, seasonal produce, and your pantry stretches your money."
+    "why": "Front-loaded effort means easy weeknight cooking."
    },
    {
-    "q": "The best meal plan is one that:",
+    "q": "Leftovers you won't eat in a few days should be:",
     "options": [
-     "You'll actually follow",
-     "Is the most complicated",
-     "Has no leftovers",
-     "Ignores your schedule"
+     "Frozen (and labeled)",
+     "Left on the counter",
+     "Thrown out immediately",
+     "Ignored"
     ],
     "a": 0,
-    "why": "A realistic, flexible plan beats an ambitious one you abandon."
+    "why": "Freezing preserves them as future meals."
    },
    {
-    "q": "Keeping easy backup meals on hand helps you:",
+    "q": "'First in, first out' means:",
     "options": [
-     "Avoid takeout on busy nights",
-     "Spend more",
-     "Waste food",
-     "Skip meals"
+     "Use older items before newer ones",
+     "Buy the newest",
+     "Eat the newest first",
+     "Store randomly"
     ],
     "a": 0,
-    "why": "A fallback (eggs, pasta) prevents a busy night from derailing the plan."
+    "why": "FIFO reduces spoilage and waste."
+   },
+   {
+    "q": "Repurposing leftovers (chicken → soup) helps:",
+    "options": [
+     "Cut food waste",
+     "Increase cost",
+     "Waste time",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Reusing food saves money and reduces waste."
+   },
+   {
+    "q": "Where do the real savings of meal planning land?",
+    "options": [
+     "When the food you bought actually gets eaten",
+     "At the checkout only",
+     "In the freezer forever",
+     "Nowhere"
+    ],
+    "a": 0,
+    "why": "Good storage + 'use it up' means less thrown away."
+   },
+   {
+    "q": "Checking weekly store specials before planning lets you:",
+    "options": [
+     "Build meals around what's cheap",
+     "Pay more",
+     "Skip shopping",
+     "Avoid cooking"
+    ],
+    "a": 0,
+    "why": "Planning around sales lowers the grocery bill."
    }
   ]
  },
