@@ -46,8 +46,10 @@
   LINES.push({ text: "ALL SYSTEMS NOMINAL",   delay: _tail + 130, hi: true });
   LINES.push({ text: "Launching Study Zone...", delay: _tail + 300 });
 
-  var FADE_START = _tail + 700;
-  var FADE_DONE  = FADE_START + 600;
+  /* Snappy, index-based timing so the boot screen stays short no matter how many subjects. */
+  var STEP = 34;                                /* ms between lines */
+  var FADE_START = LINES.length * STEP + 200;   /* begin fade right after the last line */
+  var FADE_DONE  = FADE_START + 300;
 
   function init() {
     var screen = document.getElementById("boot-screen");
@@ -70,11 +72,19 @@
           log.scrollTop = log.scrollHeight;
         }
         bar.style.width = Math.round((i + 1) / total * 100) + "%";
-      }, item.delay);
+      }, i * STEP);
     });
 
     setTimeout(function () { screen.classList.add("boot-fade"); }, FADE_START);
     setTimeout(function () { screen.style.display = "none"; },    FADE_DONE);
+
+    /* Click/tap anywhere to skip straight to the desktop. */
+    screen.style.cursor = "pointer";
+    screen.title = "Click to skip";
+    screen.addEventListener("click", function () {
+      screen.classList.add("boot-fade");
+      setTimeout(function () { screen.style.display = "none"; }, 140);
+    });
   }
 
   if (document.readyState === "loading") {
