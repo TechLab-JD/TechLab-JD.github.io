@@ -3978,61 +3978,120 @@ window.LAB404_CONTENT = {
   "title": "Trigonometry",
   "subject": "Mathematics",
   "level": "Grades 9-12",
-  "intro": "Trigonometry studies the relationship between a triangle's angles and sides. With just three ratios — sine, cosine, and tangent — you can find distances and angles you can't measure directly, which is why it powers navigation, engineering, and physics.",
-  "cards": [
+  "objectives": [
+   "Define sine, cosine, and tangent as ratios of a right triangle's sides (SOH CAH TOA)",
+   "Use a trig ratio to find a missing side when an angle and one side are known",
+   "Use inverse trig functions to find a missing angle when two sides are known",
+   "Convert between degrees and radians and describe the unit circle",
+   "Explain why trig functions are periodic and where they model real-world cycles"
+  ],
+  "intro": "Trigonometry — literally 'triangle measurement' — studies the relationships between the angles and sides of triangles, and from that small idea comes a tool for measuring distances and angles you could never reach with a ruler. It's how surveyors find the height of a mountain, how GPS locates you, and how physics describes waves. This lesson builds the three core ratios, uses them to find unknown sides and angles, and then extends them to the circle that lets them model anything that cycles.",
+  "sections": [
    {
-    "h": "The three ratios: SOH CAH TOA",
-    "body": "In a right triangle, for a chosen angle: Sine = Opposite/Hypotenuse, Cosine = Adjacent/Hypotenuse, Tangent = Opposite/Adjacent. The mnemonic SOH-CAH-TOA keeps them straight. 'Opposite' and 'adjacent' are relative to the angle you pick."
+    "h": "Right triangles and the three ratios (SOH CAH TOA)",
+    "body": "Trigonometry begins with the right triangle. Pick one of its two non-right angles to focus on. Relative to that angle, the three sides get names: the hypotenuse is the longest side (opposite the right angle), the opposite side is directly across from your angle, and the adjacent side is beside it.\n\nFor that angle, three ratios are defined, memorized by SOH-CAH-TOA: Sine = Opposite/Hypotenuse, Cosine = Adjacent/Hypotenuse, Tangent = Opposite/Adjacent. These ratios depend ONLY on the angle, not on the triangle's size — every right triangle with a 30° angle has the same sine of 30°. That's what makes them so powerful.",
+    "visual": "<svg viewBox=\"0 0 280 200\" width=\"260\" role=\"img\" aria-label=\"A right triangle with angle theta, showing the opposite, adjacent and hypotenuse sides\"><polygon points=\"40,170 240,170 240,45\" fill=\"rgba(57,227,200,.08)\" stroke=\"#39e3c8\" stroke-width=\"2.5\"/><rect x=\"225\" y=\"155\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"#39e3c8\" stroke-width=\"1.5\"/><path d=\"M72 170 A32 32 0 0 0 61 147\" fill=\"none\" stroke=\"#e8b84b\" stroke-width=\"2\"/><text x=\"78\" y=\"163\" fill=\"#e8b84b\" font-size=\"15\">θ</text><text x=\"248\" y=\"112\" fill=\"#9aa6c0\" font-size=\"12\">opposite</text><text x=\"140\" y=\"188\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"12\">adjacent</text><text x=\"95\" y=\"98\" fill=\"#9aa6c0\" font-size=\"12\" transform=\"rotate(-32 95 98)\">hypotenuse</text></svg>",
+    "caption": "SOH: sin = Opp/Hyp · CAH: cos = Adj/Hyp · TOA: tan = Opp/Adj (relative to angle θ).",
+    "tip": "'Opposite' and 'adjacent' are defined relative to the angle you choose — switch angles and they swap."
    },
    {
     "h": "Finding a missing side",
-    "body": "If you know an angle and one side, you can find another. To get the opposite side from the hypotenuse and the angle, use sine: opposite = hypotenuse × sin(angle). Pick the ratio that links the side you have to the side you want."
+    "body": "If you know one angle and one side of a right triangle, you can find any other side. The method: pick the ratio (sin, cos, or tan) that connects the side you know to the side you want, then solve for the unknown.\n\nFor example, to find the side opposite a 30° angle when the hypotenuse is 10, use sine (opposite over hypotenuse): sin(30°) = opposite/10, so opposite = 10 × sin(30°) = 10 × 0.5 = 5. A calculator gives you the sine, cosine, or tangent of any angle.",
+    "example": "Find the side opposite a 40° angle when the hypotenuse is 12:\nsin(40°) = opposite / 12\nopposite = 12 × sin(40°) ≈ 12 × 0.643 ≈ 7.7"
    },
    {
     "h": "Finding a missing angle",
-    "body": "If you know two sides, find the angle with the inverse functions (sin⁻¹, cos⁻¹, tan⁻¹). When the opposite and adjacent sides are known, angle = tan⁻¹(opposite/adjacent)."
+    "body": "The reverse question — given two sides, what is the angle? — is answered by the inverse trig functions, written sin⁻¹, cos⁻¹, and tan⁻¹ (also called arcsin, arccos, arctan). They take a ratio and give back the angle that produces it.\n\nIf the opposite side is 3 and the adjacent side is 4, then tan(angle) = 3/4 = 0.75, so angle = tan⁻¹(0.75) ≈ 36.9°. Choose the inverse function that matches the two sides you know.",
+    "example": "Opposite = 5, adjacent = 12. Find the angle:\ntan(angle) = 5/12 ≈ 0.417\nangle = tan⁻¹(0.417) ≈ 22.6°",
+    "tip": "Use an inverse function (sin⁻¹, cos⁻¹, tan⁻¹) whenever you have the sides and want the angle."
    },
    {
     "h": "Degrees and radians",
-    "body": "Angles can be measured in degrees (a full circle = 360°) or radians (a full circle = 2π). Radians are the 'natural' unit in higher math. Half a circle = 180° = π radians. Convert by multiplying by π/180 or 180/π."
+    "body": "Angles can be measured two ways. Degrees divide a full circle into 360 parts — familiar and intuitive. Radians measure angle by arc length and divide a full circle into 2π (about 6.28) parts; they're the natural unit in higher math and physics.\n\nThe key conversions all follow from 'half a circle = 180° = π radians.' To go from degrees to radians, multiply by π/180; to go the other way, multiply by 180/π. So 90° = π/2 radians and 360° = 2π radians.",
+    "example": "Convert 60° to radians:\n60 × π/180 = π/3 ≈ 1.05 radians"
    },
    {
-    "h": "Beyond the triangle: the unit circle",
-    "body": "Sine and cosine also describe a point moving around a circle of radius 1 — cosine is the x-coordinate, sine the y-coordinate. That's why trig functions repeat (they're periodic) and why they model waves, sound, and anything that cycles."
+    "h": "The unit circle and periodicity",
+    "body": "The ratios extend far beyond triangles using the unit circle — a circle of radius 1 centered at the origin. For an angle measured from the positive x-axis, the point on the circle has coordinates (cos θ, sin θ): cosine is the x-coordinate and sine is the y-coordinate. This definition works for any angle, even past 90° or negative.\n\nBecause going all the way around returns you to the start, the values repeat every 360° (2π) — the functions are periodic. That repetition is exactly why sine and cosine model anything that cycles: sound waves, light, alternating current, tides, and seasons.",
+    "visual": "<svg viewBox=\"0 0 220 220\" width=\"200\" role=\"img\" aria-label=\"A unit circle with a point at angle theta where cosine is the x-coordinate and sine is the y-coordinate\"><line x1=\"10\" y1=\"110\" x2=\"210\" y2=\"110\" stroke=\"#2a3650\" stroke-width=\"1.2\"/><line x1=\"110\" y1=\"10\" x2=\"110\" y2=\"210\" stroke=\"#2a3650\" stroke-width=\"1.2\"/><circle cx=\"110\" cy=\"110\" r=\"80\" fill=\"none\" stroke=\"#4f9cf0\" stroke-width=\"2\"/><line x1=\"167\" y1=\"53\" x2=\"167\" y2=\"110\" stroke=\"#e8b84b\" stroke-width=\"1.4\" stroke-dasharray=\"3 3\"/><line x1=\"110\" y1=\"110\" x2=\"167\" y2=\"53\" stroke=\"#39e3c8\" stroke-width=\"2.5\"/><circle cx=\"167\" cy=\"53\" r=\"4\" fill=\"#e8b84b\"/><path d=\"M142 110 A32 32 0 0 0 132 88\" fill=\"none\" stroke=\"#e8b84b\" stroke-width=\"2\"/><text x=\"146\" y=\"104\" fill=\"#e8b84b\" font-size=\"13\">θ</text><text x=\"124\" y=\"127\" fill=\"#9aa6c0\" font-size=\"11\">cos θ</text><text x=\"172\" y=\"86\" fill=\"#9aa6c0\" font-size=\"11\">sin θ</text></svg>",
+    "caption": "On the unit circle, cosine is the x-coordinate of the point and sine is the y-coordinate.",
+    "tip": "The y-axis value of a unit-circle point is its sine; the x-axis value is its cosine."
+   },
+   {
+    "h": "Where trigonometry is used",
+    "body": "Trig turns 'unreachable' measurements into simple calculations. Surveyors and builders use it to find heights and distances they can't measure directly — sight the angle to the top of a tree, measure your distance to its base, and tangent gives the height. Navigation and GPS triangulate position from angles.\n\nIn science and engineering, the periodic nature of sine and cosine describes every kind of wave and oscillation — from music and radio signals to the orbits of planets. Learn the three ratios well and you hold a tool used across nearly every technical field."
+   }
+  ],
+  "cards": [
+   {
+    "h": "The three ratios",
+    "body": "SOH CAH TOA: sin = Opp/Hyp, cos = Adj/Hyp, tan = Opp/Adj — they depend only on the angle."
+   },
+   {
+    "h": "Missing side",
+    "body": "Know an angle and a side? Pick the ratio linking known to unknown, then solve (e.g., opposite = hyp × sinθ)."
+   },
+   {
+    "h": "Missing angle",
+    "body": "Know two sides? Use the inverse functions sin⁻¹, cos⁻¹, tan⁻¹ to get the angle."
+   },
+   {
+    "h": "Degrees and radians",
+    "body": "180° = π radians. Degrees → radians: ×π/180. Radians → degrees: ×180/π."
+   },
+   {
+    "h": "Unit circle",
+    "body": "Point = (cosθ, sinθ); the functions repeat every 360°, which is why they model waves."
    }
   ],
   "flash": [
    [
     "Sine (sin)",
-    "Opposite over hypotenuse (SOH)."
+    "Opposite ÷ hypotenuse (SOH)."
    ],
    [
     "Cosine (cos)",
-    "Adjacent over hypotenuse (CAH)."
+    "Adjacent ÷ hypotenuse (CAH)."
    ],
    [
     "Tangent (tan)",
-    "Opposite over adjacent (TOA)."
-   ],
-   [
-    "SOH CAH TOA",
-    "Mnemonic for the three trig ratios."
+    "Opposite ÷ adjacent (TOA)."
    ],
    [
     "Hypotenuse",
     "The longest side of a right triangle (opposite the right angle)."
    ],
    [
-    "Radian",
-    "An angle unit; a full circle is 2π radians."
+    "Opposite side",
+    "The side directly across from the chosen angle."
+   ],
+   [
+    "Adjacent side",
+    "The side beside the chosen angle (not the hypotenuse)."
    ],
    [
     "Inverse trig",
     "sin⁻¹, cos⁻¹, tan⁻¹ — find an angle from a ratio."
    ],
    [
+    "Radian",
+    "An angle unit; a full circle is 2π radians."
+   ],
+   [
+    "Degree–radian",
+    "180° = π radians."
+   ],
+   [
     "Unit circle",
-    "A circle of radius 1 used to define sine and cosine."
+    "A radius-1 circle where a point is (cosθ, sinθ)."
+   ],
+   [
+    "Periodic",
+    "Repeating at regular intervals — why trig models cycles."
+   ],
+   [
+    "SOH CAH TOA",
+    "Mnemonic for the three trig ratios."
    ]
   ],
   "quiz": [
@@ -4048,7 +4107,7 @@ window.LAB404_CONTENT = {
     "why": "SOH: Sine = Opposite / Hypotenuse."
    },
    {
-    "q": "Tangent of an angle equals:",
+    "q": "Tangent equals",
     "options": [
      "Opposite / Adjacent",
      "Opposite / Hypotenuse",
@@ -4059,6 +4118,61 @@ window.LAB404_CONTENT = {
     "why": "TOA: Tangent = Opposite / Adjacent."
    },
    {
+    "q": "The trig ratios of an angle depend on:",
+    "options": [
+     "The angle only, not the triangle's size",
+     "The triangle's size",
+     "The longest side only",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "Same angle → same ratios, at any scale."
+   },
+   {
+    "q": "To find the side opposite a 30° angle given the hypotenuse, use:",
+    "options": [
+     "sine",
+     "cosine (adjacent)",
+     "the Pythagorean theorem only",
+     "addition"
+    ],
+    "a": 0,
+    "why": "Opposite and hypotenuse → sine (SOH)."
+   },
+   {
+    "q": "sin(30°) = 0.5 and the hypotenuse is 10. The opposite side is:",
+    "options": [
+     "5",
+     "20",
+     "0.05",
+     "15"
+    ],
+    "a": 0,
+    "why": "opposite = 10 × sin(30°) = 10 × 0.5 = 5."
+   },
+   {
+    "q": "To find an angle from two known sides, you use:",
+    "options": [
+     "Inverse trig functions",
+     "Only sine",
+     "The Pythagorean theorem only",
+     "Multiplication"
+    ],
+    "a": 0,
+    "why": "sin⁻¹, cos⁻¹, or tan⁻¹ return the angle."
+   },
+   {
+    "q": "If opposite = 3 and adjacent = 4, the angle is about:",
+    "options": [
+     "tan⁻¹(0.75) ≈ 36.9°",
+     "0.75°",
+     "90°",
+     "12°"
+    ],
+    "a": 0,
+    "why": "tan(angle) = 3/4; angle = tan⁻¹(0.75) ≈ 36.9°."
+   },
+   {
     "q": "A full circle in radians is:",
     "options": [
      "2π",
@@ -4067,18 +4181,7 @@ window.LAB404_CONTENT = {
      "180"
     ],
     "a": 0,
-    "why": "A full circle is 360° = 2π radians."
-   },
-   {
-    "q": "To find an angle from two known sides you use:",
-    "options": [
-     "Inverse trig functions",
-     "Only sine",
-     "The Pythagorean theorem only",
-     "Addition"
-    ],
-    "a": 0,
-    "why": "sin⁻¹, cos⁻¹, or tan⁻¹ return the angle from a ratio."
+    "why": "360° = 2π radians."
    },
    {
     "q": "180° equals how many radians?",
@@ -4092,15 +4195,70 @@ window.LAB404_CONTENT = {
     "why": "Half a circle is 180° = π radians."
    },
    {
-    "q": "On the unit circle, the y-coordinate of a point is:",
+    "q": "To convert 60° to radians you multiply by:",
     "options": [
-     "sine of the angle",
-     "cosine of the angle",
-     "the radius",
-     "the tangent"
+     "π/180",
+     "180/π",
+     "60",
+     "π"
     ],
     "a": 0,
-    "why": "Sine gives the y-coordinate; cosine gives x."
+    "why": "Degrees → radians: multiply by π/180 (giving π/3)."
+   },
+   {
+    "q": "On the unit circle, a point's y-coordinate is its:",
+    "options": [
+     "sine",
+     "cosine",
+     "tangent",
+     "radius"
+    ],
+    "a": 0,
+    "why": "(cosθ, sinθ): sine is the y-coordinate, cosine the x."
+   },
+   {
+    "q": "Trig functions are periodic, which means they:",
+    "options": [
+     "Repeat at regular intervals",
+     "Never repeat",
+     "Only work below 90°",
+     "Are random"
+    ],
+    "a": 0,
+    "why": "Values repeat every 360°, so they model cycles/waves."
+   },
+   {
+    "q": "The adjacent side is:",
+    "options": [
+     "Beside the chosen angle (not the hypotenuse)",
+     "Always the longest",
+     "Across from the angle",
+     "The right angle"
+    ],
+    "a": 0,
+    "why": "Adjacent is next to the angle; opposite is across from it."
+   },
+   {
+    "q": "Cosine equals",
+    "options": [
+     "Adjacent / Hypotenuse",
+     "Opposite / Hypotenuse",
+     "Opposite / Adjacent",
+     "Hypotenuse / Adjacent"
+    ],
+    "a": 0,
+    "why": "CAH: Cosine = Adjacent / Hypotenuse."
+   },
+   {
+    "q": "Why can sine and cosine describe sound and light waves?",
+    "options": [
+     "They are periodic (repeat)",
+     "They are triangles",
+     "They only use degrees",
+     "They never change"
+    ],
+    "a": 0,
+    "why": "Their repeating (periodic) nature matches anything that cycles."
    }
   ]
  },
@@ -4368,45 +4526,90 @@ window.LAB404_CONTENT = {
   "title": "Statistics",
   "subject": "Mathematics",
   "level": "College",
-  "intro": "Statistics is the science of collecting, summarizing, and drawing conclusions from data. In a world drowning in numbers and claims, it's the toolkit for telling what the data actually says from what someone wants you to think it says.",
+  "objectives": [
+   "Calculate and interpret the mean, median, and mode, and choose the best one for a data set",
+   "Describe the spread of data using range and standard deviation",
+   "Compute basic probabilities and know that all outcomes sum to 1",
+   "Describe the normal distribution and the 68-95-99.7 rule",
+   "Distinguish correlation from causation and spot misleading statistics"
+  ],
+  "intro": "Statistics is the science of turning data into understanding — collecting it, summarizing it, and drawing careful conclusions from it. In a world flooded with numbers, polls, and claims, it's the toolkit for separating what the data actually shows from what someone wants you to believe. This lesson covers how to describe a data set's center and spread, the basics of probability, the famous bell curve, and the single most common way numbers mislead.",
+  "sections": [
+   {
+    "h": "Measures of center: mean, median, mode",
+    "body": "The first job of statistics is to summarize a pile of numbers with a single 'typical' value, and there are three. The mean (average) is the sum of all values divided by how many there are. The median is the middle value when the data is sorted (or the average of the two middle values). The mode is the value that appears most often.\n\nEach has its use. The mean uses every value but gets dragged by extreme outliers — one billionaire in a room makes the 'average' wealth meaningless. The median ignores how far out the extremes are, so it better represents 'typical' for skewed data like incomes or home prices.",
+    "example": "Data: 2, 3, 3, 8, 24\nMean = (2+3+3+8+24) / 5 = 40 / 5 = 8\nMedian = 3 (the middle value)\nMode = 3 (most frequent)\nThe outlier 24 pulls the mean well above the median.",
+    "tip": "For skewed data (incomes, house prices), the median is usually the more honest 'typical' value."
+   },
+   {
+    "h": "Measures of spread: range and standard deviation",
+    "body": "Knowing the center isn't enough — you also need how spread out the data is. Two data sets can share the same average yet be wildly different: test scores all clustered near 80 tell a very different story than scores scattered from 40 to 100.\n\nThe simplest measure of spread is the range: the largest value minus the smallest. A richer measure is the standard deviation, which captures how far values typically sit from the mean. A small standard deviation means the data is tightly clustered; a large one means it's widely scattered.",
+    "example": "Set A: 49, 50, 51   (mean 50, tightly clustered → tiny spread)\nSet B: 10, 50, 90   (mean 50, widely scattered → large spread)\nSame mean, very different standard deviation."
+   },
+   {
+    "h": "The basics of probability",
+    "body": "Probability measures how likely an event is, on a scale from 0 (impossible) to 1 (certain), often written as a fraction, decimal, or percent. For outcomes that are equally likely, probability is simply the number of favorable outcomes divided by the total number of outcomes.\n\nRolling a 4 on a fair six-sided die has probability 1/6, because there's one favorable outcome out of six. A key rule: the probabilities of all possible outcomes always add up to 1 — something must happen.",
+    "example": "A bag has 3 red and 2 blue marbles (5 total):\nP(red) = 3/5 = 0.6\nP(blue) = 2/5 = 0.4\nThey sum to 1."
+   },
+   {
+    "h": "The normal distribution (the bell curve)",
+    "body": "Many things in nature and society — heights, test scores, measurement errors — follow a bell-shaped pattern called the normal distribution. Most values cluster near the mean in the middle, and fewer and fewer appear as you move toward the extremes on either side.\n\nThe normal distribution follows the 68-95-99.7 rule: about 68% of values fall within one standard deviation of the mean, about 95% within two, and about 99.7% within three. This predictable shape is the backbone of a huge amount of statistics, from quality control to standardized testing.",
+    "visual": "<svg viewBox=\"0 0 300 175\" width=\"280\" role=\"img\" aria-label=\"A normal distribution bell curve with the mean at the center and about 68 percent of values within one standard deviation\"><path d=\"M20 150 C 80 150, 110 45, 150 42 C 190 45, 220 150, 280 150\" fill=\"rgba(79,156,240,.1)\" stroke=\"#4f9cf0\" stroke-width=\"2.5\"/><line x1=\"150\" y1=\"42\" x2=\"150\" y2=\"152\" stroke=\"#39e3c8\" stroke-width=\"1.4\" stroke-dasharray=\"3 3\"/><line x1=\"110\" y1=\"152\" x2=\"110\" y2=\"92\" stroke=\"#6b7a98\" stroke-width=\"1\"/><line x1=\"190\" y1=\"152\" x2=\"190\" y2=\"92\" stroke=\"#6b7a98\" stroke-width=\"1\"/><text x=\"150\" y=\"168\" text-anchor=\"middle\" fill=\"#39e3c8\" font-size=\"12\">mean</text><text x=\"150\" y=\"108\" text-anchor=\"middle\" fill=\"#9aa6c0\" font-size=\"11\">~68% within 1 SD</text></svg>",
+    "caption": "In a normal distribution, ~68% of values lie within one standard deviation of the mean.",
+    "tip": "Score two standard deviations above the mean on a normal test and you're in roughly the top 2.5%."
+   },
+   {
+    "h": "Correlation is not causation",
+    "body": "The most important — and most abused — idea in statistics is the difference between correlation and causation. Correlation means two things tend to change together. Causation means one actually causes the other. Correlation does NOT prove causation.\n\nIce cream sales and drowning deaths both rise in summer, so they're correlated — but ice cream doesn't cause drowning; hot weather drives both. Whenever you see 'studies show X is linked to Y,' ask whether a third factor could explain it, or whether it's just coincidence. This one habit makes you far harder to fool with numbers.",
+    "example": "Observation: towns with more firefighters have more fire damage.\nWrong conclusion: firefighters cause damage.\nReality: bigger fires cause BOTH more firefighters sent AND more damage."
+   },
+   {
+    "h": "How statistics mislead",
+    "body": "Numbers can be technically true yet deeply misleading. Watch for a few classic tricks: a misleading graph (a y-axis that doesn't start at zero exaggerates tiny differences); a biased or tiny sample (a survey of your friends isn't the whole country); cherry-picked data (showing only the years that support a point); and confusing correlation with causation.\n\nBeing statistically literate doesn't mean distrusting all numbers — it means asking good questions: Who collected this, and how? Compared to what? Is the sample representative? Good statistics illuminate; bad statistics manipulate, and now you can tell them apart."
+   }
+  ],
   "cards": [
    {
-    "h": "Center: mean, median, mode",
-    "body": "Three ways to describe a 'typical' value. The mean is the average (add them up, divide by how many). The median is the middle value when sorted. The mode is the most common value. The median resists being thrown off by extreme outliers; the mean does not."
+    "h": "Center",
+    "body": "Mean = average (sensitive to outliers); median = middle (best for skewed data); mode = most frequent."
    },
    {
-    "h": "Spread: range and standard deviation",
-    "body": "Center alone isn't enough — you also need how spread out the data is. The range is max minus min. Standard deviation measures how far values typically sit from the mean: small means tightly clustered, large means scattered. Two data sets can share a mean yet differ wildly in spread."
+    "h": "Spread",
+    "body": "Range = max − min. Standard deviation = typical distance from the mean (small = clustered, large = scattered)."
    },
    {
-    "h": "Probability basics",
-    "body": "Probability measures how likely something is, from 0 (impossible) to 1 (certain). For equally likely outcomes, it's favorable outcomes divided by total outcomes — rolling a 4 on a die is 1/6. The probabilities of all possible outcomes add up to 1."
+    "h": "Probability",
+    "body": "From 0 (impossible) to 1 (certain) = favorable ÷ total outcomes; all outcomes sum to 1."
    },
    {
-    "h": "The normal distribution",
-    "body": "Many things (heights, test scores, measurement errors) follow a bell-shaped 'normal' curve — most values cluster near the mean, with fewer far out. In a normal distribution about 68% of values fall within one standard deviation of the mean. It underlies a huge amount of statistics."
+    "h": "Normal curve",
+    "body": "Bell-shaped; 68-95-99.7 rule — ~68% within 1 SD, 95% within 2, 99.7% within 3 of the mean."
    },
    {
-    "h": "Correlation vs. causation",
-    "body": "Statistics can show that two things move together (correlation), but that alone never proves one causes the other. Mistaking correlation for causation is the most common way numbers mislead — always ask whether something else could explain the link."
+    "h": "Correlation ≠ causation",
+    "body": "Two things moving together doesn't prove one causes the other — look for a hidden third factor."
    }
   ],
   "flash": [
    [
     "Mean",
-    "The average: the sum of values divided by their count."
+    "The average: sum of values ÷ how many there are."
    ],
    [
     "Median",
-    "The middle value when data is sorted."
+    "The middle value when the data is sorted."
    ],
    [
     "Mode",
     "The most frequently occurring value."
    ],
    [
+    "Outlier",
+    "A value far from the rest of the data."
+   ],
+   [
     "Range",
-    "The difference between the largest and smallest value."
+    "The largest value minus the smallest."
    ],
    [
     "Standard deviation",
@@ -4414,31 +4617,54 @@ window.LAB404_CONTENT = {
    ],
    [
     "Probability",
-    "How likely an event is, from 0 (impossible) to 1 (certain)."
+    "How likely an event is, from 0 to 1."
    ],
    [
     "Normal distribution",
     "The bell-shaped curve many data sets follow."
    ],
    [
-    "Outlier",
-    "A value far from the rest of the data."
+    "68-95-99.7 rule",
+    "% of values within 1, 2, and 3 standard deviations."
+   ],
+   [
+    "Correlation",
+    "Two things tending to change together."
+   ],
+   [
+    "Causation",
+    "One thing actually causing another."
+   ],
+   [
+    "Sample",
+    "The portion of a population actually measured."
    ]
   ],
   "quiz": [
    {
-    "q": "The mean is:",
+    "q": "The mean of 2, 3, 3, 8, 24 is:",
     "options": [
-     "The average",
-     "The middle value",
-     "The most common value",
-     "The largest value"
+     "8",
+     "3",
+     "24",
+     "5"
     ],
     "a": 0,
-    "why": "Mean = sum of values ÷ how many there are."
+    "why": "(2+3+3+8+24)/5 = 40/5 = 8."
    },
    {
-    "q": "Which measure of center is least affected by an extreme outlier?",
+    "q": "The median of 2, 3, 3, 8, 24 is:",
+    "options": [
+     "3",
+     "8",
+     "24",
+     "5"
+    ],
+    "a": 0,
+    "why": "The middle value of the sorted list is 3."
+   },
+   {
+    "q": "Which measure of center is LEAST affected by an outlier?",
     "options": [
      "Median",
      "Mean",
@@ -4446,7 +4672,51 @@ window.LAB404_CONTENT = {
      "Sum"
     ],
     "a": 0,
-    "why": "The median is the middle value, so one extreme doesn't drag it."
+    "why": "The median is the middle value, so one extreme can't drag it."
+   },
+   {
+    "q": "For skewed data like incomes, the better 'typical' value is usually the:",
+    "options": [
+     "Median",
+     "Mean",
+     "Mode",
+     "Range"
+    ],
+    "a": 0,
+    "why": "The mean gets pulled by extremes; the median resists them."
+   },
+   {
+    "q": "The range of a data set is:",
+    "options": [
+     "Largest value minus smallest",
+     "The average",
+     "The middle value",
+     "The most common value"
+    ],
+    "a": 0,
+    "why": "Range = max − min."
+   },
+   {
+    "q": "A large standard deviation means the data is:",
+    "options": [
+     "Widely scattered",
+     "Tightly clustered",
+     "All the same",
+     "Always normal"
+    ],
+    "a": 0,
+    "why": "Bigger standard deviation = values typically farther from the mean."
+   },
+   {
+    "q": "Probability ranges from:",
+    "options": [
+     "0 to 1",
+     "1 to 100",
+     "−1 to 1",
+     "0 to 10"
+    ],
+    "a": 0,
+    "why": "0 = impossible, 1 = certain."
    },
    {
     "q": "The probability of rolling a 4 on a fair six-sided die is:",
@@ -4460,37 +4730,81 @@ window.LAB404_CONTENT = {
     "why": "One favorable outcome out of six equally likely ones."
    },
    {
-    "q": "Standard deviation measures:",
+    "q": "The probabilities of all possible outcomes always add up to:",
     "options": [
-     "How spread out data is",
-     "The average",
-     "The middle value",
-     "The most common value"
+     "1",
+     "0",
+     "100",
+     "Depends"
     ],
     "a": 0,
-    "why": "It captures the typical distance of values from the mean."
+    "why": "Something must happen, so they total 1 (100%)."
    },
    {
     "q": "In a normal distribution, about 68% of values fall within:",
     "options": [
-     "One standard deviation of the mean",
-     "The exact mean",
-     "Three standard deviations",
+     "1 standard deviation of the mean",
+     "The mean exactly",
+     "3 standard deviations",
      "The range"
     ],
     "a": 0,
-    "why": "The 68-95-99.7 rule: ~68% within 1 SD of the mean."
+    "why": "The 68-95-99.7 rule: ~68% within 1 SD."
    },
    {
-    "q": "Two things moving together proves:",
+    "q": "The normal distribution is shaped like a:",
     "options": [
-     "Correlation, not necessarily causation",
-     "One causes the other",
-     "Nothing at all",
-     "They are identical"
+     "Bell",
+     "Straight line",
+     "Square",
+     "U"
     ],
     "a": 0,
-    "why": "Correlation alone doesn't establish that one causes the other."
+    "why": "It's the symmetric bell curve, peaking at the mean."
+   },
+   {
+    "q": "Ice cream sales and drownings both rise in summer. This shows:",
+    "options": [
+     "Correlation, not causation",
+     "Ice cream causes drowning",
+     "Drowning causes ice cream sales",
+     "Nothing"
+    ],
+    "a": 0,
+    "why": "A third factor (hot weather) drives both — correlation isn't causation."
+   },
+   {
+    "q": "A graph whose y-axis doesn't start at zero can:",
+    "options": [
+     "Exaggerate small differences",
+     "Never mislead",
+     "Only help",
+     "Fix bias"
+    ],
+    "a": 0,
+    "why": "A truncated axis makes tiny gaps look huge — a classic trick."
+   },
+   {
+    "q": "A survey of only your friends is a problem because the sample is:",
+    "options": [
+     "Not representative",
+     "Too large",
+     "Perfectly random",
+     "Too expensive"
+    ],
+    "a": 0,
+    "why": "A biased, unrepresentative sample can't speak for everyone."
+   },
+   {
+    "q": "Being statistically literate mainly means:",
+    "options": [
+     "Asking good questions about the data",
+     "Distrusting all numbers",
+     "Memorizing formulas only",
+     "Avoiding math"
+    ],
+    "a": 0,
+    "why": "Ask who collected it, how, compared to what, and whether the sample fits."
    }
   ]
  },
