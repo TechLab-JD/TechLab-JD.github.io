@@ -1440,3 +1440,8 @@ body.is-resizing * { user-select: none !important; cursor: inherit !important; }
 .qz-opt.ok{background:rgba(54,211,153,.15);border-color:#36d399;color:#9bf0cf}
 .qz-opt.no{background:rgba(240,90,90,.14);border-color:#f05a5a;color:#f3b6b6}
 .qz-why{margin-top:7px;font-size:12.5px;line-height:1.55;color:var(--text-muted,#9aa6c0);padding:8px 11px;background:rgba(255,255,255,.03);border-radius:8px}
+
+/* Worked examples and tips inside lessons */
+.lsn-ex{margin-top:9px;background:rgba(0,0,0,.28);border:1px solid var(--border,#2a3650);border-radius:8px;padding:9px 12px;font-family:"JetBrains Mono",Consolas,monospace;font-size:12.5px;white-space:pre-wrap;color:#cdd9ec;line-height:1.55}
+.lsn-ex-l{display:block;font-family:-apple-system,"Segoe UI",sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:var(--accent2,#39e3c8);margin-bottom:6px;font-weight:700}
+.lsn-tip{margin-top:8px;font-size:12px;color:var(--amber,#e8b84b);background:rgba(232,184,75,.08);border-left:3px solid var(--amber,#e8b84b);border-radius:0 6px 6px 0;padding:6px 10px;line-height:1.5}

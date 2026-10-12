@@ -8,129 +8,198 @@ window.LAB404_CONTENT = {
   "title": "Algebra",
   "subject": "Mathematics",
   "level": "Grades 9-12",
-  "intro": "Algebra is arithmetic with letters. Instead of only known numbers, you use letters (variables) to stand for unknown numbers, then follow rules to find what they equal. It's the language math uses to describe patterns and solve for things you don't know yet.",
+  "intro": "Algebra is arithmetic with letters — a toolkit for describing relationships and solving for unknowns. Instead of only working with specific numbers, you use variables to stand for quantities you don't know yet, then follow logical rules to uncover their values. This one idea runs through science, money, engineering, and everyday problem-solving. This lesson builds from what a variable is, through solving equations step by step, to turning real-world problems into equations you can solve.",
   "cards": [
    {
-    "h": "Variables and expressions",
-    "body": "A variable is a letter (like x) that stands for a number you don't know yet. An expression combines numbers, variables and operations, like 3x + 5. You can't \"solve\" an expression — you simplify it, or evaluate it by plugging in a value for the variable."
+    "h": "Variables, terms, and expressions",
+    "body": "A variable is a letter — usually x — that stands for a number you don't know yet. A term is a single piece of an expression: a plain number (a constant), a variable, or a number times a variable (like 3x, where 3 is the coefficient). An expression combines terms with + and −, like 3x + 5. An expression has no equals sign, so you can't 'solve' it — you can only simplify it, or evaluate it by substituting a value for the variable.",
+    "example": "Evaluate 3x + 5 when x = 4:\n  3(4) + 5\n= 12 + 5\n= 17"
    },
    {
     "h": "Equations and the balance rule",
-    "body": "An equation says two expressions are equal, like 2x + 3 = 11. The golden rule: whatever you do to one side, you must do to the other, to keep it balanced. You solve by undoing operations until the variable is alone."
+    "body": "An equation says two expressions are equal, like 2x + 3 = 11. Picture a balanced scale: the two sides weigh the same. The golden rule of algebra is that you may do anything to an equation as long as you do it to BOTH sides — then it stays balanced. You solve by using this rule to peel away everything around the variable until it sits alone on one side.",
+    "example": "2x + 3 = 11      (subtract 3 from both sides)\n2x = 8           (divide both sides by 2)\nx = 4",
+    "tip": "Undo operations in reverse order: deal with addition/subtraction first, then multiplication/division."
    },
    {
-    "h": "Solving a one-variable equation",
-    "body": "Work backwards through the order of operations. For 2x + 3 = 11: subtract 3 from both sides (2x = 8), then divide both sides by 2 (x = 4). Always do the same step to both sides."
+    "h": "Solving multi-step equations",
+    "body": "Most equations take a few steps, but the strategy never changes: first simplify each side (combine like terms, distribute if needed), then move all the variable terms to one side and all the numbers to the other, and finally divide to isolate the variable. Work carefully, one legal step at a time, and the answer falls out.",
+    "example": "Solve 5x − 2 = 3x + 8:\n5x − 2 = 3x + 8    (subtract 3x from both sides)\n2x − 2 = 8         (add 2 to both sides)\n2x = 10            (divide both sides by 2)\nx = 5"
    },
    {
     "h": "Combining like terms",
-    "body": "Like terms have the same variable to the same power — 3x and 5x are like terms (they add to 8x), but 3x and 3x² are not. Combine like terms to simplify before solving; plain numbers (constants) combine separately."
+    "body": "Like terms have the exact same variable raised to the same power. 3x and 5x are like terms (both x to the first power) and combine to 8x. But 3x and 3x² are NOT like terms — different powers — so they can't be combined. Plain numbers are like terms with each other. Combining like terms tidies an expression before you solve it.",
+    "example": "Simplify 4x + 7 + 2x − 3:\n(4x + 2x) + (7 − 3)\n= 6x + 4"
    },
    {
-    "h": "Distributing and signs",
-    "body": "Distributing means multiplying a term across a parenthesis: 2(x + 4) = 2x + 8. Watch signs — a negative in front flips the signs inside: −(x − 3) = −x + 3."
+    "h": "The distributive property",
+    "body": "When a number multiplies a group in parentheses, it multiplies EVERY term inside — that's distributing: a(b + c) = ab + ac. Watch the signs: a negative in front flips the sign of each term inside. This is one of the most common places students slip, so slow down whenever you see a minus outside parentheses.",
+    "example": "Expand 3(2x + 4):   = 6x + 12\nExpand −(x − 5):     = −x + 5   (the minus flips both signs)",
+    "tip": "A minus sign in front of parentheses is really ×(−1) — it changes the sign of everything inside."
+   },
+   {
+    "h": "Turning words into equations",
+    "body": "The real power of algebra is modeling real situations. The trick is to name the unknown with a variable, then translate the sentence into math piece by piece: 'is' becomes =, 'more than' becomes +, 'times' or 'of' becomes ×. Once it's an equation, you solve it with the rules you already know.",
+    "example": "'A number tripled, plus 4, equals 19. Find the number.'\nLet the number be n:\n3n + 4 = 19\n3n = 15\nn = 5"
+   },
+   {
+    "h": "Always check your answer",
+    "body": "Every algebra problem comes with a built-in way to check itself: substitute your answer back into the ORIGINAL equation and confirm both sides come out equal. If they match, you're right; if they don't, you slipped somewhere and can hunt down the step. This habit catches most mistakes and builds real confidence.",
+    "example": "Check x = 5 in 5x − 2 = 3x + 8:\nLeft:  5(5) − 2 = 23\nRight: 3(5) + 8 = 23   ✓ both sides equal 23"
    }
   ],
   "flash": [
    [
     "Variable",
-    "A letter that stands for an unknown number (e.g., x)."
-   ],
-   [
-    "Expression",
-    "Numbers, variables and operations combined, with no equals sign (e.g., 3x + 5)."
-   ],
-   [
-    "Equation",
-    "A statement that two expressions are equal, using an equals sign."
+    "A letter standing for an unknown number (e.g., x)."
    ],
    [
     "Coefficient",
-    "The number multiplied by a variable (the 3 in 3x)."
+    "The number multiplying a variable (the 3 in 3x)."
    ],
    [
     "Constant",
-    "A fixed number with no variable (the 5 in 3x + 5)."
+    "A fixed number with no variable."
+   ],
+   [
+    "Term",
+    "A single part of an expression: a number, a variable, or their product."
+   ],
+   [
+    "Expression",
+    "Terms combined with + and −, with no equals sign."
+   ],
+   [
+    "Equation",
+    "A statement that two expressions are equal."
    ],
    [
     "Like terms",
-    "Terms with the same variable to the same power, which can be combined."
+    "Terms with the same variable to the same power; they can be combined."
    ],
    [
-    "The balance rule",
-    "Whatever you do to one side of an equation, do to the other."
+    "Balance rule",
+    "Do the same operation to both sides to keep an equation equal."
    ],
    [
-    "Distribute",
-    "Multiply a term across everything inside the parentheses."
+    "Distributive property",
+    "a(b + c) = ab + ac — multiply across the parentheses."
+   ],
+   [
+    "Isolate the variable",
+    "Get the variable alone on one side to solve."
    ]
   ],
   "quiz": [
    {
-    "q": "Solve for x: x + 7 = 12",
+    "q": "Evaluate 2x + 3 when x = 5.",
     "options": [
+     "13",
+     "10",
+     "16",
+     "25"
+    ],
+    "a": 0,
+    "why": "Substitute: 2(5) + 3 = 10 + 3 = 13."
+   },
+   {
+    "q": "Solve: x + 9 = 4",
+    "options": [
+     "x = −5",
      "x = 5",
-     "x = 19",
+     "x = 13",
+     "x = −13"
+    ],
+    "a": 0,
+    "why": "Subtract 9 from both sides: x = 4 − 9 = −5."
+   },
+   {
+    "q": "Solve: 3x = 21",
+    "options": [
      "x = 7",
-     "x = 12"
+     "x = 18",
+     "x = 24",
+     "x = 63"
     ],
     "a": 0,
-    "why": "Subtract 7 from both sides: x = 12 − 7 = 5."
+    "why": "Divide both sides by 3: x = 7."
    },
    {
-    "q": "Simplify: 4x + 3x",
+    "q": "Simplify: 5x + 2 − 3x + 6",
     "options": [
-     "7x",
-     "12x",
-     "7x²",
-     "x + 7"
+     "2x + 8",
+     "8x + 8",
+     "2x + 4",
+     "10x"
     ],
     "a": 0,
-    "why": "They're like terms, so add the coefficients: 4 + 3 = 7, giving 7x."
+    "why": "Combine like terms: (5x − 3x) + (2 + 6) = 2x + 8."
    },
    {
-    "q": "Solve for x: 2x − 6 = 10",
+    "q": "Expand: 4(x + 3)",
     "options": [
+     "4x + 12",
+     "4x + 3",
+     "x + 12",
+     "4x + 7"
+    ],
+    "a": 0,
+    "why": "Distribute 4 to each term: 4·x + 4·3 = 4x + 12."
+   },
+   {
+    "q": "Expand: −(2x − 7)",
+    "options": [
+     "−2x + 7",
+     "−2x − 7",
+     "2x − 7",
+     "2x + 7"
+    ],
+    "a": 0,
+    "why": "The minus flips both signs: −2x + 7."
+   },
+   {
+    "q": "Solve: 2x + 5 = 17",
+    "options": [
+     "x = 6",
+     "x = 11",
+     "x = 22",
+     "x = 8"
+    ],
+    "a": 0,
+    "why": "Subtract 5 (2x = 12), then divide by 2: x = 6."
+   },
+   {
+    "q": "Solve: 4x − 1 = 2x + 7",
+    "options": [
+     "x = 4",
+     "x = 3",
      "x = 8",
-     "x = 2",
-     "x = 5",
-     "x = 16"
+     "x = 2"
     ],
     "a": 0,
-    "why": "Add 6 to both sides (2x = 16), then divide by 2: x = 8."
+    "why": "Subtract 2x (2x − 1 = 7), add 1 (2x = 8), divide by 2: x = 4."
    },
    {
-    "q": "What is the coefficient in the term 9y?",
+    "q": "'Five more than twice a number is 13.' Which equation fits?",
     "options": [
-     "9",
-     "y",
-     "0",
-     "1"
+     "2n + 5 = 13",
+     "5n + 2 = 13",
+     "2n − 5 = 13",
+     "5 + 13 = 2n"
     ],
     "a": 0,
-    "why": "The coefficient is the number multiplying the variable — here, 9."
+    "why": "Twice a number is 2n; five more is + 5; 'is' means =."
    },
    {
-    "q": "Distribute: 3(x + 2)",
+    "q": "You solved an equation and got x = 3. How do you check it?",
     "options": [
-     "3x + 6",
-     "3x + 2",
-     "x + 6",
-     "3x + 5"
+     "Substitute 3 back into the original equation",
+     "Solve it again a different way",
+     "Ask a friend",
+     "You can't check algebra"
     ],
     "a": 0,
-    "why": "Multiply 3 by each term inside: 3·x + 3·2 = 3x + 6."
-   },
-   {
-    "q": "Which pair are like terms?",
-    "options": [
-     "5x and 2x",
-     "5x and 5x²",
-     "5x and 5",
-     "5 and 2y"
-    ],
-    "a": 0,
-    "why": "Like terms share the same variable to the same power. 5x and 2x both have x¹."
+    "why": "Plug it in and confirm both sides are equal — the built-in check."
    }
   ]
  },

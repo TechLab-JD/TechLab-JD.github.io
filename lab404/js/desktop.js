@@ -271,8 +271,8 @@
       }
       /* Topic windows that have real content open larger (lesson view) */
       if (app.indexOf("folder-") === 0 && window.LAB404_CONTENT && window.LAB404_CONTENT[app.replace(/^folder-/, "")]) {
-        winEl.style.width = "680px";
-        winEl.style.height = "580px";
+        winEl.style.width = "700px";
+        winEl.style.height = "640px";
       }
 
       /* Smaller windows for utility apps */
@@ -809,7 +809,10 @@
     _renderLesson: function (content, d, winId) {
       var esc = escHtml;
       var cards = (d.cards || []).map(function (c) {
-        return '<div class="lsn-card"><h3>' + esc(c.h) + '</h3><p>' + esc(c.body) + '</p></div>';
+        var h = '<div class="lsn-card"><h3>' + esc(c.h) + '</h3><p>' + esc(c.body) + '</p>';
+        if (c.example) h += '<div class="lsn-ex"><span class="lsn-ex-l">Worked example</span>' + esc(c.example) + '</div>';
+        if (c.tip) h += '<div class="lsn-tip">💡 ' + esc(c.tip) + '</div>';
+        return h + '</div>';
       }).join("");
       var nav = '<div class="lsn-nav">' +
         '<button class="lsn-tab on" data-view="lesson">📖 Lesson</button>' +
