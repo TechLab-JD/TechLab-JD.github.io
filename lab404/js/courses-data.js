@@ -1142,5 +1142,136 @@ window.LAB404_COURSES = {
       { id: "se3c", obj: "5.SS.E3", type: "mc", q: "A farmer growing wheat to sell is a:", options: ["Producer", "Consumer", "Tourist", "Voter"], a: 0, why: "Producers make or grow goods." },
       { id: "se3d", obj: "5.SS.E3", type: "mc", q: "A shirt, a book, and an apple are examples of:", options: ["Goods", "Services", "Taxes", "Rights"], a: 0, why: "Goods are physical products." }
     ]
+  },
+
+  "g6-math": {
+    id: "g6-math", title: "Grade 6 Math", subjectKey: "math", grade: "6",
+    standard: "Massachusetts Curriculum Frameworks — Grade 6 Mathematics",
+    note: "A comprehensive set of Grade 6 objectives across all five domains.",
+    domains: [
+      { code: "RP", name: "Ratios & Proportional Relationships" },
+      { code: "NS", name: "The Number System" },
+      { code: "EE", name: "Expressions & Equations" },
+      { code: "G", name: "Geometry" },
+      { code: "SP", name: "Statistics & Probability" }
+    ],
+    objectives: [
+      { code: "6.RP.1", domain: "RP", weight: 1.0, title: "Understand the concept of a ratio", xwalk: { cc: "6.RP.A.1", ma: "6.RP.A.1", teks: "", vasol: "", flbest: "" } },
+      { code: "6.RP.2", domain: "RP", weight: 1.0, title: "Understand unit rate", xwalk: { cc: "6.RP.A.2", ma: "6.RP.A.2", teks: "", vasol: "", flbest: "" } },
+      { code: "6.RP.3", domain: "RP", weight: 1.1, title: "Use ratio & rate reasoning, including percent", xwalk: { cc: "6.RP.A.3", ma: "6.RP.A.3", teks: "", vasol: "", flbest: "" } },
+      { code: "6.NS.1", domain: "NS", weight: 1.1, title: "Divide fractions by fractions", xwalk: { cc: "6.NS.A.1", ma: "6.NS.A.1", teks: "", vasol: "", flbest: "" } },
+      { code: "6.NS.2", domain: "NS", weight: 0.9, title: "Divide multi-digit numbers fluently", xwalk: { cc: "6.NS.B.2", ma: "6.NS.B.2", teks: "", vasol: "", flbest: "" } },
+      { code: "6.NS.3", domain: "NS", weight: 1.0, title: "Add, subtract, multiply & divide decimals", xwalk: { cc: "6.NS.B.3", ma: "6.NS.B.3", teks: "", vasol: "", flbest: "" } },
+      { code: "6.NS.4", domain: "NS", weight: 0.9, title: "Find the greatest common factor and least common multiple", xwalk: { cc: "6.NS.B.4", ma: "6.NS.B.4", teks: "", vasol: "", flbest: "" } },
+      { code: "6.NS.5", domain: "NS", weight: 1.0, title: "Understand positive and negative numbers", xwalk: { cc: "6.NS.C.5", ma: "6.NS.C.5", teks: "", vasol: "", flbest: "" } },
+      { code: "6.NS.6", domain: "NS", weight: 1.0, title: "Negatives on the number line and coordinate plane", xwalk: { cc: "6.NS.C.6", ma: "6.NS.C.6", teks: "", vasol: "", flbest: "" } },
+      { code: "6.NS.7", domain: "NS", weight: 1.0, title: "Order rational numbers and understand absolute value", xwalk: { cc: "6.NS.C.7", ma: "6.NS.C.7", teks: "", vasol: "", flbest: "" } },
+      { code: "6.EE.1", domain: "EE", weight: 1.0, title: "Write and evaluate numerical expressions with exponents", xwalk: { cc: "6.EE.A.1", ma: "6.EE.A.1", teks: "", vasol: "", flbest: "" } },
+      { code: "6.EE.2", domain: "EE", weight: 1.1, title: "Write, read & evaluate expressions with variables", xwalk: { cc: "6.EE.A.2", ma: "6.EE.A.2", teks: "", vasol: "", flbest: "" } },
+      { code: "6.EE.7", domain: "EE", weight: 1.1, title: "Solve one-step equations", xwalk: { cc: "6.EE.B.7", ma: "6.EE.B.7", teks: "", vasol: "", flbest: "" } },
+      { code: "6.EE.8", domain: "EE", weight: 0.9, title: "Write and understand inequalities", xwalk: { cc: "6.EE.B.8", ma: "6.EE.B.8", teks: "", vasol: "", flbest: "" } },
+      { code: "6.G.1", domain: "G", weight: 1.0, title: "Find the area of triangles and quadrilaterals", xwalk: { cc: "6.G.A.1", ma: "6.G.A.1", teks: "", vasol: "", flbest: "" } },
+      { code: "6.G.2", domain: "G", weight: 0.9, title: "Find the volume of rectangular prisms", xwalk: { cc: "6.G.A.2", ma: "6.G.A.2", teks: "", vasol: "", flbest: "" } },
+      { code: "6.G.4", domain: "G", weight: 0.9, title: "Find surface area using nets", xwalk: { cc: "6.G.A.4", ma: "6.G.A.4", teks: "", vasol: "", flbest: "" } },
+      { code: "6.SP.3", domain: "SP", weight: 0.9, title: "Understand measures of center and variability", xwalk: { cc: "6.SP.A.3", ma: "6.SP.A.3", teks: "", vasol: "", flbest: "" } },
+      { code: "6.SP.5", domain: "SP", weight: 1.0, title: "Summarize data: mean, median, mode, and range", xwalk: { cc: "6.SP.B.5", ma: "6.SP.B.5", teks: "", vasol: "", flbest: "" } }
+    ],
+    questions: [
+      // 6.RP.1
+      { id: "rp1a", obj: "6.RP.1", type: "mc", q: "There are 3 cats and 5 dogs. The ratio of cats to dogs is:", options: ["3 to 5", "5 to 3", "3 to 8", "8 to 5"], a: 0, why: "Cats first: 3 to 5." },
+      { id: "rp1b", obj: "6.RP.1", type: "mc", q: "A ratio of 2:4 is equivalent to:", options: ["1:2", "4:2", "2:1", "3:4"], a: 0, why: "Divide both by 2 to get 1:2." },
+      { id: "rp1c", obj: "6.RP.1", type: "numeric", q: "The ratio of boys to girls is 2:3. If there are 6 boys, how many girls?", answer: 9, why: "2:3 scales to 6:9." },
+      { id: "rp1d", obj: "6.RP.1", type: "mc", q: "'For every 4 apples there are 2 oranges' describes a:", options: ["Ratio", "Sum", "Difference", "Single quotient"], a: 0, why: "It compares two quantities — a ratio." },
+      // 6.RP.2
+      { id: "rp2a", obj: "6.RP.2", type: "numeric", q: "If 3 notebooks cost $6, the unit rate is $___ per notebook.", answer: 2, why: "6 ÷ 3 = 2." },
+      { id: "rp2b", obj: "6.RP.2", type: "numeric", q: "A car travels 120 miles in 2 hours. Its speed is ___ miles per hour.", answer: 60, why: "120 ÷ 2 = 60." },
+      { id: "rp2c", obj: "6.RP.2", type: "numeric", q: "12 cookies for $4 is ___ cookies per dollar.", answer: 3, why: "12 ÷ 4 = 3." },
+      { id: "rp2d", obj: "6.RP.2", type: "mc", q: "A unit rate compares a quantity to:", options: ["One unit of another", "Ten units", "A ratio", "Nothing"], a: 0, why: "A unit rate is 'per one'." },
+      // 6.RP.3
+      { id: "rp3a", obj: "6.RP.3", type: "numeric", q: "What is 25% of 80?", answer: 20, why: "0.25 × 80 = 20." },
+      { id: "rp3b", obj: "6.RP.3", type: "numeric", q: "If 40% of a number is 20, the number is ___.", answer: 50, why: "20 ÷ 0.40 = 50." },
+      { id: "rp3c", obj: "6.RP.3", type: "numeric", q: "A shirt is $50 with 10% off. The discount is $___.", answer: 5, why: "10% of 50 = 5." },
+      { id: "rp3d", obj: "6.RP.3", type: "numeric", q: "What is 50% of 30?", answer: 15, why: "Half of 30 is 15." },
+      // 6.NS.1
+      { id: "ns1a", obj: "6.NS.1", type: "mc", q: "1/2 ÷ 1/4 = ?", options: ["2", "1/8", "1/2", "8"], a: 0, why: "1/2 × 4/1 = 2." },
+      { id: "ns1b", obj: "6.NS.1", type: "mc", q: "3/4 ÷ 1/2 = ?", options: ["3/2 (1 1/2)", "3/8", "1/2", "2/3"], a: 0, why: "3/4 × 2/1 = 6/4 = 3/2." },
+      { id: "ns1c", obj: "6.NS.1", type: "numeric", q: "How many 1/3-cup servings are in 2 cups?", answer: 6, why: "2 ÷ 1/3 = 6." },
+      { id: "ns1d", obj: "6.NS.1", type: "mc", q: "To divide by a fraction, you:", options: ["Multiply by its reciprocal (flip it)", "Add it", "Subtract it", "Square it"], a: 0, why: "Dividing is multiplying by the reciprocal." },
+      // 6.NS.2
+      { id: "ns2a", obj: "6.NS.2", type: "numeric", q: "432 ÷ 12 = ?", answer: 36, why: "12 × 36 = 432." },
+      { id: "ns2b", obj: "6.NS.2", type: "numeric", q: "1,248 ÷ 24 = ?", answer: 52, why: "24 × 52 = 1,248." },
+      { id: "ns2c", obj: "6.NS.2", type: "numeric", q: "945 ÷ 15 = ?", answer: 63, why: "15 × 63 = 945." },
+      { id: "ns2d", obj: "6.NS.2", type: "numeric", q: "2,000 ÷ 50 = ?", answer: 40, why: "50 × 40 = 2,000." },
+      // 6.NS.3
+      { id: "ns3a", obj: "6.NS.3", type: "numeric", q: "3.5 + 2.75 = ?", answer: 6.25, why: "3.50 + 2.75 = 6.25." },
+      { id: "ns3b", obj: "6.NS.3", type: "numeric", q: "10 − 3.4 = ?", answer: 6.6, why: "10.0 − 3.4 = 6.6." },
+      { id: "ns3c", obj: "6.NS.3", type: "numeric", q: "2.5 × 4 = ?", answer: 10, why: "2.5 × 4 = 10." },
+      { id: "ns3d", obj: "6.NS.3", type: "numeric", q: "4.8 ÷ 2 = ?", answer: 2.4, why: "4.8 ÷ 2 = 2.4." },
+      // 6.NS.4
+      { id: "ns4a", obj: "6.NS.4", type: "numeric", q: "The greatest common factor (GCF) of 12 and 18 is ___.", answer: 6, why: "6 is the largest factor of both." },
+      { id: "ns4b", obj: "6.NS.4", type: "numeric", q: "The least common multiple (LCM) of 4 and 6 is ___.", answer: 12, why: "12 is the smallest multiple of both." },
+      { id: "ns4c", obj: "6.NS.4", type: "numeric", q: "The GCF of 8 and 20 is ___.", answer: 4, why: "4 divides both 8 and 20." },
+      { id: "ns4d", obj: "6.NS.4", type: "mc", q: "The GCF is the largest number that:", options: ["Divides both numbers evenly", "Is a multiple of both", "Adds to both", "Is bigger than both"], a: 0, why: "GCF = greatest common factor." },
+      // 6.NS.5
+      { id: "ns5a", obj: "6.NS.5", type: "mc", q: "A temperature of 5 degrees below zero is written as:", options: ["−5", "5", "+5", "0"], a: 0, why: "Below zero is negative." },
+      { id: "ns5b", obj: "6.NS.5", type: "mc", q: "On a number line, −3 is located:", options: ["To the left of 0", "To the right of 0", "At 0", "Above 0"], a: 0, why: "Negatives are left of zero." },
+      { id: "ns5c", obj: "6.NS.5", type: "mc", q: "Which is a real-life use of negative numbers?", options: ["Owing money (debt)", "Counting apples", "A full cup", "Your age"], a: 0, why: "Debt is below zero." },
+      { id: "ns5d", obj: "6.NS.5", type: "mc", q: "Which number is less than 0?", options: ["−2", "2", "0", "5"], a: 0, why: "−2 is negative." },
+      // 6.NS.6
+      { id: "ns6a", obj: "6.NS.6", type: "mc", q: "The point (−2, 3) is located:", options: ["Left of the y-axis and above the x-axis", "Right and up", "Right and down", "At the origin"], a: 0, why: "Negative x is left; positive y is up." },
+      { id: "ns6b", obj: "6.NS.6", type: "mc", q: "The opposite of −7 is:", options: ["7", "−7", "0", "14"], a: 0, why: "Opposites are the same distance from 0." },
+      { id: "ns6c", obj: "6.NS.6", type: "mc", q: "On a number line, which is farther right: −1 or −5?", options: ["−1", "−5", "equal", "neither"], a: 0, why: "−1 is greater, so farther right." },
+      { id: "ns6d", obj: "6.NS.6", type: "mc", q: "The coordinate plane has how many quadrants?", options: ["4", "2", "1", "8"], a: 0, why: "Two axes divide it into 4 quadrants." },
+      // 6.NS.7
+      { id: "ns7a", obj: "6.NS.7", type: "mc", q: "Which is greater: −3 or −8?", options: ["−3", "−8"], a: 0, why: "−3 is to the right of −8, so greater." },
+      { id: "ns7b", obj: "6.NS.7", type: "numeric", q: "The absolute value |−6| = ?", answer: 6, why: "Absolute value is distance from 0." },
+      { id: "ns7c", obj: "6.NS.7", type: "numeric", q: "|9| = ?", answer: 9, why: "9 is 9 units from 0." },
+      { id: "ns7d", obj: "6.NS.7", type: "mc", q: "Of −5, 0, and 2, the smallest is:", options: ["−5", "0", "2", "they're equal"], a: 0, why: "−5 is the least." },
+      // 6.EE.1
+      { id: "ee1a", obj: "6.EE.1", type: "numeric", q: "What is 2³ (2 to the 3rd power)?", answer: 8, why: "2 × 2 × 2 = 8." },
+      { id: "ee1b", obj: "6.EE.1", type: "numeric", q: "What is 5²?", answer: 25, why: "5 × 5 = 25." },
+      { id: "ee1c", obj: "6.EE.1", type: "numeric", q: "What is 10⁴?", answer: 10000, why: "10 × 10 × 10 × 10 = 10,000." },
+      { id: "ee1d", obj: "6.EE.1", type: "mc", q: "3⁴ means:", options: ["3 × 3 × 3 × 3", "3 × 4", "4 × 4 × 4", "3 + 4"], a: 0, why: "The exponent 4 means multiply 3 four times." },
+      // 6.EE.2
+      { id: "ee2a", obj: "6.EE.2", type: "mc", q: "The expression 'x + 5' means:", options: ["A number plus 5", "5 minus a number", "5 times x", "x divided by 5"], a: 0, why: "x stands for a number, plus 5." },
+      { id: "ee2b", obj: "6.EE.2", type: "numeric", q: "Evaluate 3n + 2 when n = 4.", answer: 14, why: "3 × 4 = 12, + 2 = 14." },
+      { id: "ee2c", obj: "6.EE.2", type: "mc", q: "In the expression 4y, the 4 is the:", options: ["Coefficient", "Exponent", "Variable", "Sum"], a: 0, why: "The number multiplying a variable is the coefficient." },
+      { id: "ee2d", obj: "6.EE.2", type: "numeric", q: "Evaluate 2x − 1 when x = 5.", answer: 9, why: "2 × 5 = 10, − 1 = 9." },
+      // 6.EE.7
+      { id: "ee7a", obj: "6.EE.7", type: "numeric", q: "Solve for x:  x + 7 = 12.  x = ?", answer: 5, why: "12 − 7 = 5." },
+      { id: "ee7b", obj: "6.EE.7", type: "numeric", q: "Solve:  3x = 21.  x = ?", answer: 7, why: "21 ÷ 3 = 7." },
+      { id: "ee7c", obj: "6.EE.7", type: "numeric", q: "Solve:  x − 4 = 10.  x = ?", answer: 14, why: "10 + 4 = 14." },
+      { id: "ee7d", obj: "6.EE.7", type: "numeric", q: "Solve:  x ÷ 2 = 8.  x = ?", answer: 16, why: "8 × 2 = 16." },
+      // 6.EE.8
+      { id: "ee8a", obj: "6.EE.8", type: "mc", q: "The inequality x > 5 means x is:", options: ["Greater than 5", "Less than 5", "Equal to 5", "At most 5"], a: 0, why: "> means greater than." },
+      { id: "ee8b", obj: "6.EE.8", type: "mc", q: "Which number makes x < 3 true?", options: ["2", "3", "5", "10"], a: 0, why: "2 is less than 3." },
+      { id: "ee8c", obj: "6.EE.8", type: "mc", q: "'At least 10' is written as:", options: ["x ≥ 10", "x > 10", "x < 10", "x = 10"], a: 0, why: "At least means greater than or equal to." },
+      { id: "ee8d", obj: "6.EE.8", type: "mc", q: "The symbol ≤ means:", options: ["Less than or equal to", "Greater than", "Exactly", "Not equal"], a: 0, why: "≤ is 'less than or equal to'." },
+      // 6.G.1
+      { id: "g1a", obj: "6.G.1", type: "numeric", q: "The area of a triangle with base 6 and height 4 is ___. (Area = 1/2 × b × h)", answer: 12, why: "1/2 × 6 × 4 = 12." },
+      { id: "g1b", obj: "6.G.1", type: "numeric", q: "The area of a rectangle 8 by 5 is ___.", answer: 40, why: "8 × 5 = 40." },
+      { id: "g1c", obj: "6.G.1", type: "numeric", q: "A triangle has base 10 and height 3. Its area is ___.", answer: 15, why: "1/2 × 10 × 3 = 15." },
+      { id: "g1d", obj: "6.G.1", type: "numeric", q: "A parallelogram with base 7 and height 4 has area ___. (A = b × h)", answer: 28, why: "7 × 4 = 28." },
+      // 6.G.2
+      { id: "g2a", obj: "6.G.2", type: "numeric", q: "A box 3 × 4 × 2 has a volume of ___ cubic units.", answer: 24, why: "3 × 4 × 2 = 24." },
+      { id: "g2b", obj: "6.G.2", type: "numeric", q: "A cube with side 2 has a volume of ___.", answer: 8, why: "2 × 2 × 2 = 8." },
+      { id: "g2c", obj: "6.G.2", type: "mc", q: "The volume of a rectangular prism is:", options: ["length × width × height", "length + width + height", "2 × length", "base × 2"], a: 0, why: "V = l × w × h." },
+      { id: "g2d", obj: "6.G.2", type: "numeric", q: "A box 5 × 2 × 3 has a volume of ___ cubic units.", answer: 30, why: "5 × 2 × 3 = 30." },
+      // 6.G.4
+      { id: "g4a", obj: "6.G.4", type: "mc", q: "A flat pattern you can fold into a 3-D shape is called a:", options: ["Net", "Graph", "Grid", "Line"], a: 0, why: "A net unfolds the faces of a solid." },
+      { id: "g4b", obj: "6.G.4", type: "numeric", q: "A cube has 6 faces, each with area 4 sq units. Its total surface area is ___ sq units.", answer: 24, why: "6 × 4 = 24." },
+      { id: "g4c", obj: "6.G.4", type: "mc", q: "Surface area measures:", options: ["The total area of all the faces", "The space inside", "The length", "The weight"], a: 0, why: "Surface area adds up every face." },
+      { id: "g4d", obj: "6.G.4", type: "numeric", q: "A cube has 6 faces, each 1 sq unit. Its surface area = ___.", answer: 6, why: "6 × 1 = 6." },
+      // 6.SP.3
+      { id: "sp3a", obj: "6.SP.3", type: "mc", q: "The 'mean' of a set of numbers is the:", options: ["Average", "Middle value", "Most common value", "Range"], a: 0, why: "Mean is the average." },
+      { id: "sp3b", obj: "6.SP.3", type: "mc", q: "The 'median' is the:", options: ["Middle value when ordered", "Average", "Most common", "Biggest"], a: 0, why: "Median is the middle." },
+      { id: "sp3c", obj: "6.SP.3", type: "mc", q: "The 'mode' is the:", options: ["Most common value", "Average", "Middle", "Smallest"], a: 0, why: "Mode appears most often." },
+      { id: "sp3d", obj: "6.SP.3", type: "mc", q: "The 'range' is:", options: ["The highest minus the lowest", "The average", "The middle", "The mode"], a: 0, why: "Range = max − min." },
+      // 6.SP.5
+      { id: "sp5a", obj: "6.SP.5", type: "numeric", q: "The mean (average) of 4, 6, and 8 is ___.", answer: 6, why: "(4 + 6 + 8) ÷ 3 = 6." },
+      { id: "sp5b", obj: "6.SP.5", type: "numeric", q: "The median of 3, 7, 9 is ___.", answer: 7, why: "7 is the middle value." },
+      { id: "sp5c", obj: "6.SP.5", type: "numeric", q: "The range of 2, 5, 10 is ___.", answer: 8, why: "10 − 2 = 8." },
+      { id: "sp5d", obj: "6.SP.5", type: "numeric", q: "The mean of 10 and 20 is ___.", answer: 15, why: "(10 + 20) ÷ 2 = 15." }
+    ]
   }
 };
