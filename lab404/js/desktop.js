@@ -928,6 +928,30 @@
       render();
     },
 
+    /* ── shared grade context (one `lab404.myGrade` across By-Grade + every subject folder) ── */
+    _GRADES: ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "C"],
+    _gradeGet: function () { try { var g = localStorage.getItem("lab404.myGrade"); return this._GRADES.indexOf(g) >= 0 ? g : "K"; } catch (e) { return "K"; } },
+    _gradeSet: function (g) { try { localStorage.setItem("lab404.myGrade", g); } catch (e) {} },
+    _gradeFull: function (g) { return g === "K" ? "Kindergarten" : g === "C" ? "College / Intro" : "Grade " + g; },
+    _gradeShort: function (g) { return g === "C" ? "Col" : g; },
+    _gradePickerStyle: function () {
+      if (document.getElementById("gp-style")) return;
+      var s = document.createElement("style"); s.id = "gp-style";
+      s.textContent =
+        ".gp-bar{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin:0 0 12px;padding:8px 10px;border:1px solid var(--border,#334);border-radius:11px}" +
+        ".gp-lab{font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text-muted,#9aa);margin-right:3px}" +
+        ".gp-tab{border:1px solid var(--border,#334);background:transparent;color:var(--text-muted,#9aa);border-radius:7px;padding:3px 7px;font:inherit;font-size:.72rem;font-weight:700;cursor:pointer;min-width:25px}" +
+        ".gp-tab.on{background:var(--accent2,#4a90e2);border-color:var(--accent2,#4a90e2);color:#fff}" +
+        ".gp-tab:hover{border-color:var(--accent2,#4a90e2)}";
+      document.head.appendChild(s);
+    },
+    _gradeBar: function (cur) {
+      return '<div class="gp-bar"><span class="gp-lab">Grade</span>' +
+        this._GRADES.map(function (g) {
+          return '<button class="gp-tab' + (g === cur ? " on" : "") + '" data-grade="' + g + '" title="' + escHtml(Desktop._gradeFull(g)) + '">' + escHtml(Desktop._gradeShort(g)) + '</button>';
+        }).join("") + '</div>';
+    },
+
     _folderCourseStyle: function () {
       if (document.getElementById("fcs-style")) return;
       var s = document.createElement("style"); s.id = "fcs-style";
@@ -938,7 +962,10 @@
         ".folder-course-btn:hover{background:rgba(74,144,226,.16)}" +
         ".folder-course-btn b{font-size:.84rem}" +
         ".folder-course-btn span{display:block;font-size:.65rem;color:var(--text-muted,#9aa);margin-top:2px;font-weight:400}" +
-        ".folder-lessons-h{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--text-muted,#9aa);margin:0 0 7px}";
+        ".folder-course-none{font-size:.76rem;color:var(--text-muted,#9aa);border:1px dashed var(--border,#334);border-radius:10px;padding:9px 12px;line-height:1.5}" +
+        ".folder-lessons-h{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--text-muted,#9aa);margin:0 0 7px}" +
+        ".folder-lessons-note{font-weight:400;text-transform:none;letter-spacing:0;color:var(--accent2,#4a90e2)}" +
+        ".folder-app-icon--grade .folder-app-img{box-shadow:0 0 0 2px var(--accent2,#4a90e2);border-radius:12px}";
       document.head.appendChild(s);
     },
 
@@ -982,25 +1009,61 @@
         '</div>';
       }).join("");
 
+      /* Grade-aware subject view: the K–12 grade is the structure, the subject is the content.
+         An academic subject shows a shared grade picker, the graded course FOR that grade as the
+         headline, and its lessons (the ones for that grade highlighted). CompTIA/cert folders are
+         not grade-based, so they skip all of this. */
       var subjKey = folderApp.replace(/^folder-/, "");
       var COURSES = window.LAB404_COURSES || {};
-      var myCourses = Object.keys(COURSES).filter(function (k) { return COURSES[k].subjectKey === subjKey; })
-        .sort(function (a, b) { return String(COURSES[a].grade).localeCompare(String(COURSES[b].grade), undefined, { numeric: true }); });
-      var coursesHtml = "";
-      if (myCourses.length) {
-        Desktop._folderCourseStyle();
-        coursesHtml = '<div class="folder-courses"><div class="folder-courses-h">🎯 Graded courses (by grade)</div>' +
-          myCourses.map(function (k) {
-            return '<button class="folder-course-btn" data-course="' + escHtml(k) + '"><b>' + escHtml(COURSES[k].title) +
-              '</b><span>Objectives · placement test · mastery bands · report-card grade</span></button>';
-          }).join("") + '</div>';
+      var SUBJ = window.LAB404_SUBJECTS || {};
+      var acadSubj = (SUBJ.academic || []).filter(function (s) { return s.key === subjKey; })[0];
+      var isAcademic = !!acadSubj && !folder.certKey;
+
+      var byGrade = {};
+      Object.keys(COURSES).forEach(function (k) { if (COURSES[k].subjectKey === subjKey) byGrade[String(COURSES[k].grade)] = k; });
+      var hasCourses = Object.keys(byGrade).length > 0;
+      var grade = Desktop._gradeGet();
+
+      var gradeBar = "", courseHtml = "";
+      if (isAcademic) {
+        Desktop._gradePickerStyle();
+        gradeBar = Desktop._gradeBar(grade);
+        if (hasCourses) {
+          Desktop._folderCourseStyle();
+          var curKey = byGrade[grade];
+          if (curKey) {
+            courseHtml = '<div class="folder-courses"><div class="folder-courses-h">🎯 ' + escHtml(Desktop._gradeFull(grade)) + ' — graded course</div>' +
+              '<button class="folder-course-btn" data-course="' + escHtml(curKey) + '"><b>' + escHtml(COURSES[curKey].title) +
+              '</b><span>Objectives · placement test · mastery bands · live report-card grade</span></button></div>';
+          } else {
+            var avail = Object.keys(byGrade).sort(function (a, b) { return String(a).localeCompare(String(b), undefined, { numeric: true }); });
+            courseHtml = '<div class="folder-courses"><div class="folder-courses-h">🎯 Graded course</div>' +
+              '<div class="folder-course-none">No graded ' + escHtml(acadSubj.title) + ' course for ' + escHtml(Desktop._gradeFull(grade)) + ' yet' +
+              (avail.length ? ' — graded courses exist for ' + avail.map(function (g) { return Desktop._gradeShort(g); }).join(", ") + '. Switch grade above.' : ' (K–3 foundation is in progress).') +
+              '</div></div>';
+          }
+        }
       }
+
+      /* highlight the lessons that belong to the selected grade */
+      var gradeTitles = {};
+      if (isAcademic) (acadSubj.topics || []).forEach(function (t) { if ((t.grades || []).indexOf(grade) >= 0) gradeTitles[t.t] = 1; });
+      iconsHtml = folder.apps.map(function (item) {
+        var mark = gradeTitles[item.label] ? " folder-app-icon--grade" : "";
+        return '<div class="folder-app-icon' + mark + '" data-app="' + escHtml(item.app) + '" role="button" tabindex="0" aria-label="Open ' + escHtml(item.label) + '">' +
+          '<div class="folder-app-img">' + item.icon + '</div>' +
+          '<div class="folder-app-label">' + escHtml(item.label) + '</div>' +
+        '</div>';
+      }).join("");
 
       content.innerHTML =
         '<div class="folder-header">' + escHtml(folder.desc) + '</div>' +
-        coursesHtml +
-        (iconsHtml ? ((coursesHtml ? '<div class="folder-lessons-h">Topic lessons</div>' : "") + '<div class="folder-apps-grid">' + iconsHtml + '</div>') : "");
+        gradeBar + courseHtml +
+        (iconsHtml ? ((isAcademic ? '<div class="folder-lessons-h">📘 Lessons' + (Object.keys(gradeTitles).length ? ' <span class="folder-lessons-note">(highlighted = ' + escHtml(Desktop._gradeFull(grade)) + ')</span>' : '') + '</div>' : (courseHtml ? '<div class="folder-lessons-h">Topic lessons</div>' : "")) + '<div class="folder-apps-grid">' + iconsHtml + '</div>') : "");
 
+      content.querySelectorAll(".gp-tab[data-grade]").forEach(function (b) {
+        b.addEventListener("click", function () { Desktop._gradeSet(this.getAttribute("data-grade")); Desktop._renderFolder(winId, folderApp); });
+      });
       content.querySelectorAll(".folder-course-btn[data-course]").forEach(function (b) {
         b.addEventListener("click", function () { Desktop.openWindow("course", { course: this.getAttribute("data-course") }); });
       });
@@ -1032,6 +1095,9 @@
       if (document.getElementById("lhm-style")) return;
       var s = document.createElement("style"); s.id = "lhm-style";
       s.textContent =
+        ".lsn-coursetie{display:flex;align-items:center;gap:8px;width:100%;text-align:left;border:1px solid var(--accent2,#4a90e2);background:rgba(74,144,226,.1);color:var(--text,#eee);border-radius:10px;padding:9px 13px;font:inherit;font-weight:700;font-size:.82rem;cursor:pointer;margin:0 0 14px}" +
+        ".lsn-coursetie span{margin-left:auto;color:var(--accent2,#4a90e2);font-size:1rem}" +
+        ".lsn-coursetie:hover{background:rgba(74,144,226,.18)}" +
         ".lsn-prog{padding:2px}" +
         ".lsn-pstat{display:flex;align-items:center;gap:14px;border:1px solid var(--border,#334);border-radius:11px;padding:12px 14px;margin-bottom:14px;flex-wrap:wrap}" +
         ".lsn-pstat .big{font-size:1.6rem;font-weight:800;line-height:1}" +
@@ -1076,8 +1142,13 @@
         (d.flash && d.flash.length ? '<button class="lsn-tab" data-view="flash">🃏 Flashcards (' + d.flash.length + ')</button>' : "") +
         (d.quiz && d.quiz.length ? '<button class="lsn-tab" data-view="quiz">🎯 Quiz (' + d.quiz.length + ')</button>' : "") +
         '<button class="lsn-tab" data-view="progress">📊 Progress</button>' + '</div>';
+      /* tie this lesson to its subject's graded course for the current grade (K-12 = the structure) */
+      var _sk = ckey ? ckey.split("-")[0] : "", _CO = window.LAB404_COURSES || {}, _g = Desktop._gradeGet();
+      var _ck = Object.keys(_CO).filter(function (k) { return _CO[k].subjectKey === _sk && String(_CO[k].grade) === _g; })[0];
+      var courseTie = _ck ? '<button class="lsn-coursetie" data-course="' + esc(_ck) + '">🎯 Practice &amp; get graded — ' + esc(_CO[_ck].title) + '<span>→</span></button>' : "";
       var lessonView = '<div class="lsn-view" data-v="lesson">' +
         '<div class="lsn-head"><h2>' + esc(d.title) + '</h2><span class="lsn-lvl">' + esc(d.subject || "") + (d.level ? " · " + esc(d.level) : "") + '</span></div>' +
+        courseTie +
         objectives + (d.intro ? '<p class="lsn-intro">' + esc(d.intro) + '</p>' : "") + mainContent + keyPoints +
         '<p class="lsn-src">Original Lab404 lesson, written for study. ' + (d.disclaimer ? esc(d.disclaimer) : "Double-check anything important against an authoritative source.") + '</p></div>';
       var flashView = '<div class="lsn-view hide" data-v="flash"><div class="fc" id="' + winId + '-fc"></div>' +
@@ -1139,6 +1210,8 @@
       renderProgress();
 
       content.addEventListener("click", function (e) {
+        var tie = e.target.closest(".lsn-coursetie[data-course]");
+        if (tie) { Desktop.openWindow("course", { course: tie.getAttribute("data-course") }); return; }
         var tab = e.target.closest("[data-view]");
         if (tab) {
           content.querySelectorAll(".lsn-tab").forEach(function (t) { t.classList.remove("on"); });
