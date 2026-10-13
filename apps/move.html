@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steady Move</title>
+<meta name="description" content="Steady Move — a free moving &amp; relocation planner: countdown checklist, moving budget, box inventory, address-change list, movers &amp; utilities, plus a quote comparison and printable move-day plan. Private; data stays on your device.">
+<link rel="stylesheet" href="shared.css">
+<style>
+  :root{--accent:#4c7ef3;--accent-2:#6d97f6;--accent-dark:#3a66d6}
+  .ptable{width:100%;border-collapse:collapse;font-size:13px}
+  .ptable th{color:var(--muted);font-size:10.5px;text-transform:uppercase;letter-spacing:.4px;text-align:left;padding:6px 4px}
+  .ptable td{padding:7px 4px;border-top:1px solid var(--line)}
+  .ptable td.r,.ptable th.r{text-align:right}
+  .phasehd{font-family:inherit;font-size:12px;font-weight:700;letter-spacing:.3px;color:var(--accent);text-transform:uppercase;margin:14px 0 6px}
+  .chk{display:flex;align-items:center;gap:10px;padding:8px 2px;border-top:1px solid var(--line);cursor:pointer}
+  .chk .bx{flex:none;width:20px;height:20px;border:2px solid var(--line);border-radius:6px;display:grid;place-items:center;font-size:12px;color:#fff}
+  .chk.on .bx{background:var(--accent);border-color:var(--accent)}
+  .chk.on .tx{text-decoration:line-through;color:var(--muted)}
+  .chk .tx{flex:1}
+  #report-print{display:none}
+  @media print{body.printing>*:not(#report-print){display:none!important}body.printing #report-print{display:block!important}@page{margin:16mm}}
+  @media(max-width:600px){.ptable th.hideSm,.ptable td.hideSm{display:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div style="display:flex;align-items:center;gap:10px"><button class="icon-btn hamb" id="hambBtn" title="Menu">☰</button><a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Move</b></a></div>
+  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="premhdr" data-steady="premium">⭐ Premium</button><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
+</div></header>
+<div class="shell">
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side">
+  <div class="navgroup"><div class="navhead">Dashboard</div>
+    <button class="snav active" data-panel="home">🏠 Overview</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Plan</div>
+    <button class="snav" data-panel="tasks">✅ Checklist</button>
+    <button class="snav" data-panel="budget">💵 Budget</button>
+    <button class="snav" data-panel="boxes">📦 Boxes</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Switch over</div>
+    <button class="snav" data-panel="address">📬 Address change</button>
+    <button class="snav" data-panel="vendors">🚚 Movers &amp; utilities</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Premium</div>
+    <button class="snav" data-panel="compare">🧮 Quote compare<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="runsheet">📋 Move-day plan<span class="lk">🔒</span></button>
+  </div>
+  <div class="navgroup"><div class="navhead">You</div>
+    <button class="snav" data-panel="rewards">🏆 Rewards</button>
+  </div>
+</aside>
+<main class="main">
+  <section class="panel active" id="panel-home">
+    <div class="hero"><div class="lbl">Moving day</div><div class="big" id="h-count">—</div><div class="meta" id="h-date">no date set yet</div>
+      <div class="mini"><div>Checklist<b id="h-tasks">0%</b></div><div>Boxes packed<b id="h-boxes">0</b></div><div>Budget<b id="h-budget">$0</b></div><div>To notify<b id="h-notify">0</b></div></div></div>
+    <div class="card"><h2>Your move</h2><p class="sub">Set your moving date and where you're headed — the countdown and checklist work from this.</p>
+      <div class="addform" style="grid-template-columns:150px 1fr 1fr auto"><div class="field"><label>Moving date</label><input id="mv-date" type="date"></div><div class="field"><label>From</label><input id="mv-from" placeholder="Old address / city"></div><div class="field"><label>To</label><input id="mv-to" placeholder="New address / city"></div><button class="btn" id="mv-save">Save</button></div>
+    </div>
+    <div class="grid2">
+      <div class="card"><h2>Checklist progress</h2><p class="sub">How much of your moving plan is done</p><div id="home-ring" style="display:flex;justify-content:center;padding:6px 0"></div></div>
+      <div class="card"><h2>Coming up next</h2><p class="sub">The next things on your list</p><div id="home-next"></div></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-tasks">
+    <div class="card"><h2>Moving checklist</h2><p class="sub">Tasks grouped by how far out they are. Load the standard checklist from Settings → sample, or add your own.</p>
+      <div class="addform" style="grid-template-columns:1fr 160px auto"><div class="field"><label>Task</label><input id="t-label" placeholder="Book the movers"></div><div class="field"><label>When</label><select id="t-phase"></select></div><button class="btn" id="t-add">Add</button></div>
+      <div id="t-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-budget">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Estimated total</div><div class="val" id="b-est">$0</div></div>
+      <div class="stat"><div class="label">Actual so far</div><div class="val" id="b-act">$0</div></div>
+      <div class="stat"><div class="label">Over / under</div><div class="val" id="b-diff">$0</div></div>
+    </div>
+    <div class="card"><h2>Moving budget</h2><p class="sub">Estimate each cost, then fill in the actual as you pay. Steady totals both.</p>
+      <div class="addform" style="grid-template-columns:1fr 120px 120px auto"><div class="field"><label>Cost</label><input id="b-cat" placeholder="Movers / truck"></div><div class="field"><label>Estimated $</label><input id="b-estin" type="number" inputmode="decimal"></div><div class="field"><label>Actual $</label><input id="b-actin" type="number" inputmode="decimal"></div><button class="btn" id="b-add">Add</button></div>
+      <div id="b-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-boxes">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Boxes total</div><div class="val" id="bx-total">0</div></div>
+      <div class="stat"><div class="label">Packed</div><div class="val pos" id="bx-packed">0</div></div>
+      <div class="stat"><div class="label">Unpacked at new place</div><div class="val" id="bx-left">0</div></div>
+    </div>
+    <div class="card"><h2>Box inventory</h2><p class="sub">Number your boxes and note the room and contents. Tap a box to mark it unpacked at the new place.</p>
+      <div class="addform" style="grid-template-columns:90px 130px 1fr auto"><div class="field"><label>Box #</label><input id="bx-num" placeholder="1"></div><div class="field"><label>Room</label><input id="bx-room" placeholder="Kitchen"></div><div class="field"><label>Contents</label><input id="bx-cont" placeholder="Pots, pans, utensils"></div><button class="btn" id="bx-add">Add</button></div>
+      <label class="chk" style="border:0;margin-top:4px"><input type="checkbox" id="bx-frag" style="width:auto"> <span class="tx" style="flex:none">Fragile</span></label>
+      <div id="bx-list" style="margin-top:6px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-address">
+    <div class="card"><h2>Who to tell your new address</h2><p class="sub">Check each off as you update it. Load the standard list from Settings → sample.</p>
+      <div class="addform" style="grid-template-columns:1fr 1fr auto"><div class="field"><label>Who</label><input id="n-who" placeholder="Bank / employer / subscription"></div><div class="field"><label>Account / note</label><input id="n-acct" placeholder="Account # or where to update"></div><button class="btn" id="n-add">Add</button></div>
+      <div id="n-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-vendors">
+    <div class="card"><h2>Movers &amp; utilities</h2><p class="sub">Keep movers, the landlord and every utility to set up or shut off in one place.</p>
+      <div class="addform" style="grid-template-columns:140px 1fr 120px 130px auto"><div class="field"><label>Type</label><select id="v-type"><option>Mover</option><option>Utility</option><option>Internet</option><option>Landlord</option><option>Other</option></select></div><div class="field"><label>Name</label><input id="v-name" placeholder="Company / person"></div><div class="field"><label>Phone</label><input id="v-phone" placeholder="Phone"></div><div class="field"><label>Date</label><input id="v-date" type="date"></div><button class="btn" id="v-add">Add</button></div>
+      <div id="v-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-compare">
+    <div class="card"><h2>Mover quote compare</h2><p class="sub">Enter each mover's quote the way they price it — Steady works out the real total and flags the cheapest.</p>
+      <div class="addform" style="grid-template-columns:1fr 100px 100px 90px 100px auto"><div class="field"><label>Mover</label><input id="q-name" placeholder="ABC Movers"></div><div class="field"><label>Base $</label><input id="q-base" type="number" inputmode="decimal"></div><div class="field"><label>$ / hour</label><input id="q-hr" type="number" inputmode="decimal"></div><div class="field"><label>Hours</label><input id="q-hrs" type="number" inputmode="decimal"></div><div class="field"><label>Extras $</label><input id="q-extra" type="number" inputmode="decimal"></div><button class="btn" id="q-add">Add</button></div>
+      <div id="q-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-runsheet">
+    <div class="card"><h2>Move-day plan</h2><p class="sub">A printable one-page plan for moving day — your movers, utilities to confirm, boxes by room and the day-of tasks, all pulled from what you've entered.</p>
+      <div class="addform" style="grid-template-columns:auto"><button class="btn" id="rs-print">🖨 Print / Save as PDF</button></div>
+      <div id="rs-preview" style="margin-top:14px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-rewards">
+    <div class="hero"><div class="lbl">Your move</div><div class="big" id="rw-done">0</div><div class="meta">checklist tasks done</div>
+      <div class="mini"><div>Boxes<b id="rw-boxes">0</b></div><div>Notified<b id="rw-notify">0</b></div><div>Badges<b id="rw-count">0</b></div></div></div>
+    <div class="card"><h2>Your level</h2><p class="sub">Every task, box and update builds your XP.</p><div id="xp-card"></div></div>
+    <div class="card"><h2>Today's goals</h2><p class="sub">Keep the move moving.</p><div id="quests"></div></div>
+    <div class="card"><h2>Achievements</h2><p class="sub">Milestones unlock as the move comes together.</p><div class="badgegrid" id="rw-badges"></div></div>
+  </section>
+</main>
+</div>
+<footer class="ft">Steady Move · a Steady Systems app · your data stays on this device</footer>
+<div id="toasts"></div>
+<div id="report-print"></div>
+<script src="shared.js"></script>
+<script>
+var PHASES=["6–8 weeks out","3–4 weeks out","1–2 weeks out","Moving week","Moving day","After the move"];
+var DEF={move:{date:"",from:"",to:""},tasks:[],budget:[],boxes:[],notify:[],vendors:[],quotes:[]};
+var db=Steady.load("move",DEF);var S=Steady;
+function num(v){var n=parseFloat(String(v).replace(/[^0-9.\-]/g,""));return isNaN(n)?0:n;}
+function daysTo(d){if(!d)return null;var t=new Date();t.setHours(0,0,0,0);return Math.round((new Date(d+"T00:00:00")-t)/86400000);}
+function shortDate(d){return d?new Date(d+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"}):"";}
+
+/* home */
+function renderHome(){
+  if(document.activeElement!==S.el("mv-date"))S.el("mv-date").value=db.move.date||"";
+  if(document.activeElement!==S.el("mv-from"))S.el("mv-from").value=db.move.from||"";
+  if(document.activeElement!==S.el("mv-to"))S.el("mv-to").value=db.move.to||"";
+  var dt=daysTo(db.move.date);
+  S.el("h-count").textContent=dt==null?"—":(dt>0?dt+(dt===1?" day":" days"):dt===0?"Today!":"Moved");
+  S.el("h-date").textContent=db.move.date?(new Date(db.move.date+"T00:00:00").toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"})+(db.move.to?" → "+db.move.to:"")):"no date set yet";
+  var done=db.tasks.filter(function(t){return t.done;}).length,pct=db.tasks.length?done/db.tasks.length:0;
+  S.el("h-tasks").textContent=Math.round(pct*100)+"%";
+  S.el("h-boxes").textContent=db.boxes.length;
+  S.el("h-budget").textContent=S.money(db.budget.reduce(function(a,b){return a+(num(b.actual)||num(b.est));},0));
+  S.el("h-notify").textContent=db.notify.filter(function(n){return !n.done;}).length;
+  S.el("home-ring").innerHTML=S.ring(pct,120,Math.round(pct*100)+"%",done+"/"+db.tasks.length);
+  var next=db.tasks.filter(function(t){return !t.done;}).sort(function(a,b){return PHASES.indexOf(a.phase)-PHASES.indexOf(b.phase);}).slice(0,6);
+  S.el("home-next").innerHTML=next.length?next.map(function(t){return '<div class="row"><span class="nm">'+t.label+'<div class="meta">'+t.phase+'</div></span></div>';}).join(""):'<div class="empty">No open tasks — add your checklist or load the standard one from Settings.</div>';
+}
+S.el("mv-save").onclick=function(){db.move={date:S.val("mv-date"),from:S.val("mv-from"),to:S.val("mv-to")};S.save();renderAll();S.toast("Saved",1);};
+
+/* tasks */
+function fillPhases(){S.el("t-phase").innerHTML=PHASES.map(function(p){return '<option>'+p+'</option>';}).join("");}
+function renderTasks(){
+  var l=S.el("t-list");l.innerHTML="";
+  if(!db.tasks.length){l.innerHTML='<div class="empty">No tasks yet. Add one above, or load the standard moving checklist from Settings → sample data.</div>';return;}
+  PHASES.forEach(function(ph){
+    var items=db.tasks.filter(function(t){return t.phase===ph;});
+    if(!items.length)return;
+    var hd=document.createElement("div");hd.className="phasehd";hd.textContent=ph;l.appendChild(hd);
+    items.forEach(function(t){
+      var row=document.createElement("div");row.className="chk"+(t.done?" on":"");
+      row.innerHTML='<span class="bx">'+(t.done?"✓":"")+'</span><span class="tx">'+t.label+'</span>';
+      var del=document.createElement("button");del.className="del";del.textContent="×";
+      del.onclick=function(e){e.stopPropagation();db.tasks=db.tasks.filter(function(x){return x.id!==t.id;});S.save();renderAll();};
+      row.onclick=function(){t.done=!t.done;S.save();renderAll();};
+      row.appendChild(del);l.appendChild(row);
+    });
+  });
+}
+S.el("t-add").onclick=function(){var lb=S.val("t-label");if(!lb)return;db.tasks.push({id:S.uid(),phase:S.val("t-phase"),label:lb,done:false});S.save();S.clr("t-label");renderAll();S.toast("Task added",1);};
+
+/* budget */
+function renderBudget(){
+  var est=db.budget.reduce(function(a,b){return a+num(b.est);},0),act=db.budget.reduce(function(a,b){return a+num(b.actual);},0);
+  S.el("b-est").textContent=S.money(est);S.el("b-act").textContent=S.money(act);
+  var diff=est-act,de=S.el("b-diff");de.textContent=(diff>=0?"":"-")+S.money(Math.abs(diff)).replace("-","");de.className="val "+(diff>=0?"pos":"neg");
+  var l=S.el("b-list");l.innerHTML=db.budget.length?"":'<div class="empty">No costs added yet.</div>';
+  db.budget.forEach(function(b){var r=document.createElement("div");r.className="row";
+    r.innerHTML='<span class="nm">'+b.cat+'<div class="meta">est '+S.money(num(b.est))+' · '+(b.actual?("actual "+S.money(num(b.actual))):"not paid yet")+'</div></span><span class="amt">'+S.money(num(b.actual)||num(b.est))+'</span>';
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.budget=db.budget.filter(function(x){return x.id!==b.id;});S.save();renderAll();};
+    r.appendChild(del);l.appendChild(r);});
+}
+S.el("b-add").onclick=function(){var c=S.val("b-cat");if(!c)return;db.budget.push({id:S.uid(),cat:c,est:S.val("b-estin"),actual:S.val("b-actin")});S.save();S.clr("b-cat","b-estin","b-actin");renderAll();S.toast("Added",1);};
+
+/* boxes */
+function renderBoxes(){
+  S.el("bx-total").textContent=db.boxes.length;
+  S.el("bx-packed").textContent=db.boxes.length;
+  S.el("bx-left").textContent=db.boxes.filter(function(b){return !b.unpacked;}).length;
+  var l=S.el("bx-list");l.innerHTML=db.boxes.length?"":'<div class="empty">No boxes logged yet.</div>';
+  db.boxes.slice().sort(function(a,b){return num(a.num)-num(b.num);}).forEach(function(b){
+    var r=document.createElement("div");r.className="row"+(b.unpacked?"":"");
+    var meta=b.room+(b.contents?" · "+b.contents:"")+(b.fragile?" · ⚠ fragile":"");
+    r.innerHTML='<span class="nm">Box '+b.num+' <span class="meta">'+meta+'</span></span><span class="pill '+(b.unpacked?"good":"")+'">'+(b.unpacked?"Unpacked":"Packed")+'</span>';
+    r.style.cursor="pointer";r.onclick=function(){b.unpacked=!b.unpacked;S.save();renderBoxes();renderHome();};
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(e){e.stopPropagation();db.boxes=db.boxes.filter(function(x){return x.id!==b.id;});S.save();renderAll();};
+    r.appendChild(del);l.appendChild(r);
+  });
+}
+S.el("bx-add").onclick=function(){var n=S.val("bx-num")||String(db.boxes.length+1);db.boxes.push({id:S.uid(),num:n,room:S.val("bx-room"),contents:S.val("bx-cont"),fragile:S.el("bx-frag").checked,unpacked:false});S.save();S.clr("bx-num","bx-room","bx-cont");S.el("bx-frag").checked=false;renderAll();S.toast("Box added",1);};
+
+/* address change */
+function renderNotify(){
+  var l=S.el("n-list");l.innerHTML=db.notify.length?"":'<div class="empty">No one on the list yet. Load the standard who-to-notify list from Settings → sample.</div>';
+  db.notify.forEach(function(n){
+    var row=document.createElement("div");row.className="chk"+(n.done?" on":"");
+    row.innerHTML='<span class="bx">'+(n.done?"✓":"")+'</span><span class="tx">'+n.who+(n.acct?' <span class="meta">· '+n.acct+'</span>':"")+'</span>';
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(e){e.stopPropagation();db.notify=db.notify.filter(function(x){return x.id!==n.id;});S.save();renderAll();};
+    row.onclick=function(){n.done=!n.done;S.save();renderAll();};
+    row.appendChild(del);l.appendChild(row);
+  });
+}
+S.el("n-add").onclick=function(){var w=S.val("n-who");if(!w)return;db.notify.push({id:S.uid(),who:w,acct:S.val("n-acct"),done:false});S.save();S.clr("n-who","n-acct");renderAll();S.toast("Added",1);};
+
+/* vendors */
+function renderVendors(){
+  var l=S.el("v-list");l.innerHTML=db.vendors.length?"":'<div class="empty">No movers or utilities added yet.</div>';
+  db.vendors.forEach(function(v){
+    var r=document.createElement("div");r.className="row";
+    var meta=v.type+(v.phone?" · "+v.phone:"")+(v.date?" · "+shortDate(v.date):"");
+    r.innerHTML='<span class="nm">'+(v.name||v.type)+'<div class="meta">'+meta+'</div></span><span class="pill '+(v.status==="Done"?"good":v.status==="Booked"?"":"warn")+'">'+(v.status||"To do")+'</span>';
+    r.style.cursor="pointer";
+    r.onclick=function(){var order=["To do","Booked","Done"];v.status=order[(order.indexOf(v.status||"To do")+1)%order.length];S.save();renderVendors();};
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(e){e.stopPropagation();db.vendors=db.vendors.filter(function(x){return x.id!==v.id;});S.save();renderAll();};
+    r.appendChild(del);l.appendChild(r);
+  });
+}
+S.el("v-add").onclick=function(){var nm=S.val("v-name");if(!nm){S.toast("Add a name");return;}db.vendors.push({id:S.uid(),type:S.val("v-type"),name:nm,phone:S.val("v-phone"),date:S.val("v-date"),status:"To do"});S.save();S.clr("v-name","v-phone","v-date");renderAll();S.toast("Added",1);};
+
+/* quote compare (premium) */
+function quoteTotal(q){return num(q.base)+num(q.hr)*num(q.hrs)+num(q.extra);}
+function renderCompare(){
+  var l=S.el("q-list");
+  if(!db.quotes.length){l.innerHTML='<div class="empty">Add a couple of quotes above to compare their real totals.</div>';return;}
+  var totals=db.quotes.map(quoteTotal),min=Math.min.apply(null,totals);
+  l.innerHTML='<table class="ptable"><tr><th>Mover</th><th class="r hideSm">Base</th><th class="r hideSm">Hourly × hrs</th><th class="r">Total</th></tr>'+
+    db.quotes.map(function(q){var t=quoteTotal(q),best=t===min;
+      return '<tr><td>'+q.name+(best?' <span class="pill good">cheapest</span>':"")+'</td><td class="r hideSm">'+S.money(num(q.base))+'</td><td class="r hideSm">'+S.money(num(q.hr))+' × '+num(q.hrs)+'</td><td class="r"><b>'+S.money(t)+'</b></td></tr>';
+    }).join("")+'</table><div style="margin-top:10px">'+db.quotes.map(function(q){return '<button class="btn ghost sm" data-del="'+q.id+'">× '+q.name+'</button>';}).join(" ")+'</div>';
+  l.querySelectorAll("[data-del]").forEach(function(b){b.onclick=function(){db.quotes=db.quotes.filter(function(x){return x.id!==b.dataset.del;});S.save();renderCompare();};});
+}
+S.el("q-add").onclick=function(){var n=S.val("q-name");if(!n)return;db.quotes.push({id:S.uid(),name:n,base:S.val("q-base"),hr:S.val("q-hr"),hrs:S.val("q-hrs"),extra:S.val("q-extra")});S.save();S.clr("q-name","q-base","q-hr","q-hrs","q-extra");renderCompare();S.toast("Quote added",1);};
+
+/* move-day plan (premium) */
+function buildPlanHTML(forPrint){
+  var movers=db.vendors.filter(function(v){return v.type==="Mover";});
+  var utils=db.vendors.filter(function(v){return v.type!=="Mover";});
+  var dayTasks=db.tasks.filter(function(t){return t.phase==="Moving day";});
+  var rooms={};db.boxes.forEach(function(b){rooms[b.room||"Unlabeled"]=(rooms[b.room||"Unlabeled"]||0)+1;});
+  var roomRows=Object.keys(rooms).map(function(k){return k+" — "+rooms[k]+" box"+(rooms[k]===1?"":"es");});
+  var mn=db.move.date?new Date(db.move.date+"T00:00:00").toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric",year:"numeric"}):"(set your move date)";
+  function sec(t,items,empty){return '<h2 style="font-size:15px;color:'+(forPrint?"#132536":"var(--text)")+';margin:16px 0 6px">'+t+'</h2>'+(items.length?'<ul style="margin:0 0 0 18px;padding:0;line-height:1.8">'+items.map(function(i){return "<li>"+i+"</li>";}).join("")+'</ul>':'<div style="color:'+(forPrint?"#888":"var(--muted)")+';font-size:13px">'+empty+'</div>');}
+  var wrap=forPrint?'style="font-family:Arial,sans-serif;color:#111;max-width:660px;margin:0 auto;padding:20px"':'';
+  return '<div '+wrap+'>'+(forPrint?'<h1 style="font-size:24px;color:#132536;margin:0 0 2px">Move-Day Plan</h1><div style="color:#555;font-size:13px;margin-bottom:8px">'+mn+(db.move.to?(" · "+db.move.to):"")+'</div>':'')+
+    sec("Movers",movers.map(function(m){return m.name+(m.phone?" — "+m.phone:"")+(m.date?" ("+shortDate(m.date)+")":"");}),"No movers added.")+
+    sec("Utilities &amp; services to confirm",utils.map(function(u){return u.type+": "+u.name+(u.phone?" — "+u.phone:"")+" ["+(u.status||"To do")+"]";}),"No utilities added.")+
+    sec("Boxes by room ("+db.boxes.length+" total)",roomRows,"No boxes logged.")+
+    sec("Day-of tasks",dayTasks.map(function(t){return (t.done?"☑ ":"☐ ")+t.label;}),"No moving-day tasks on the checklist.")+
+    (forPrint?'<p style="font-size:10px;color:#999;margin-top:26px">Made with Steady Move · syssteady.gumroad.com</p>':"")+'</div>';
+}
+function renderRunsheet(){S.el("rs-preview").innerHTML=buildPlanHTML(false);}
+S.el("rs-print").onclick=function(){S.el("report-print").innerHTML=buildPlanHTML(true);document.body.classList.add("printing");window.print();};
+window.onafterprint=function(){document.body.classList.remove("printing");};
+
+/* rewards */
+var BADGES=[
+ {id:"dated",ic:"📅",title:"It's Official",desc:"Set your move date",cond:function(c){return c.dated;}},
+ {id:"firsttask",ic:"✅",title:"Getting Organized",desc:"Checked off a task",cond:function(c){return c.done>0;}},
+ {id:"half",ic:"🚀",title:"Halfway There",desc:"Half the checklist done",cond:function(c){return c.tasks>0&&c.done>=c.tasks/2;}},
+ {id:"allpacked",ic:"📦",title:"Boxed Up",desc:"Logged 10 boxes",cond:function(c){return c.boxes>=10;}},
+ {id:"notified",ic:"📬",title:"Address Updated",desc:"Notified 5 on your list",cond:function(c){return c.notified>=5;}},
+ {id:"booked",ic:"🚚",title:"Movers Booked",desc:"A mover marked booked or done",cond:function(c){return c.booked;}},
+ {id:"budgeted",ic:"💵",title:"On Budget",desc:"Added 5 budget lines",cond:function(c){return c.budget>=5;}},
+ {id:"moved",ic:"🏡",title:"Home At Last",desc:"Whole checklist done",cond:function(c){return c.tasks>0&&c.done===c.tasks;}}
+];
+function renderRewards(){
+  var done=db.tasks.filter(function(t){return t.done;}).length;
+  var notified=db.notify.filter(function(n){return n.done;}).length;
+  S.el("rw-done").textContent=done;S.el("rw-boxes").textContent=db.boxes.length;S.el("rw-notify").textContent=notified;
+  var ctx={dated:!!db.move.date,done:done,tasks:db.tasks.length,boxes:db.boxes.length,notified:notified,booked:db.vendors.some(function(v){return v.type==="Mover"&&(v.status==="Booked"||v.status==="Done");}),budget:db.budget.length};
+  var earned=S.renderBadges(S.el("rw-badges"),BADGES,ctx);
+  S.el("rw-count").textContent=earned;
+  var xp=earned*40+done*8+db.boxes.length*4+notified*5+db.vendors.length*4+db.budget.length*4;
+  S.gamify({xp:xp,badges:earned,container:S.el("xp-card")});
+  S.renderQuests(S.el("quests"),[
+    {label:"Set your moving date",xp:10,done:!!db.move.date},
+    {label:"Check off a task today",xp:10,done:done>0},
+    {label:"Log at least 5 boxes",xp:15,done:db.boxes.length>=5}
+  ]);
+}
+
+function SAMPLE(){
+  function dk(n){var d=new Date();d.setDate(d.getDate()+n);return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+  function task(ph,lb,done){return {id:S.uid(),phase:ph,label:lb,done:!!done};}
+  function notif(w,a,d){return {id:S.uid(),who:w,acct:a||"",done:!!d};}
+  return {
+    move:{date:dk(21),from:"Dallas, TX",to:"Austin, TX"},
+    tasks:[
+      task("6–8 weeks out","Set a moving budget",1),task("6–8 weeks out","Get quotes from movers",1),task("6–8 weeks out","Sort & declutter room by room"),
+      task("3–4 weeks out","Book the movers or truck"),task("3–4 weeks out","Order packing supplies"),task("3–4 weeks out","Start packing non-essentials"),
+      task("1–2 weeks out","Change your address (USPS)"),task("1–2 weeks out","Transfer / set up utilities"),task("1–2 weeks out","Confirm the movers"),
+      task("Moving week","Pack an essentials bag"),task("Moving week","Defrost the fridge"),task("Moving week","Finish packing"),
+      task("Moving day","Do a final walk-through"),task("Moving day","Read meters & take photos"),task("Moving day","Hand over keys"),
+      task("After the move","Unpack room by room"),task("After the move","Update license & registration"),task("After the move","Meet the neighbors")
+    ],
+    budget:[{id:S.uid(),cat:"Movers",est:"1200",actual:"1150"},{id:S.uid(),cat:"Truck / fuel",est:"300",actual:""},{id:S.uid(),cat:"Packing supplies",est:"120",actual:"96"},{id:S.uid(),cat:"Deposit (new place)",est:"1000",actual:"1000"},{id:S.uid(),cat:"Cleaning",est:"150",actual:""}],
+    boxes:[{id:S.uid(),num:"1",room:"Kitchen",contents:"Pots, pans",fragile:true,unpacked:false},{id:S.uid(),num:"2",room:"Kitchen",contents:"Dishes",fragile:true,unpacked:false},{id:S.uid(),num:"3",room:"Bedroom",contents:"Clothes",fragile:false,unpacked:true},{id:S.uid(),num:"4",room:"Living room",contents:"Books",fragile:false,unpacked:false},{id:S.uid(),num:"5",room:"Bathroom",contents:"Toiletries",fragile:false,unpacked:true}],
+    notify:[notif("USPS (official change of address)","usps.com",1),notif("Bank","Checking & savings",1),notif("Employer / HR"),notif("Car insurance"),notif("Phone / internet"),notif("Driver's license / DMV"),notif("Subscriptions & deliveries"),notif("Doctor & pharmacy")],
+    vendors:[{id:S.uid(),type:"Mover",name:"Lone Star Movers",phone:"555-0148",date:dk(21),status:"Booked"},{id:S.uid(),type:"Internet",name:"City Fiber",phone:"555-0199",date:dk(20),status:"To do"},{id:S.uid(),type:"Utility",name:"Electric Co.",phone:"",date:dk(20),status:"To do"},{id:S.uid(),type:"Landlord",name:"New complex office",phone:"555-0122",date:"",status:"Done"}],
+    quotes:[{id:S.uid(),name:"Lone Star Movers",base:"150",hr:"120",hrs:"6",extra:"80"},{id:S.uid(),name:"QuickMove",base:"400",hr:"95",hrs:"6",extra:"0"},{id:S.uid(),name:"Budget Haul",base:"0",hr:"140",hrs:"7",extra:"120"}]
+  };
+}
+
+function renderAll(){renderHome();renderTasks();renderBudget();renderBoxes();renderNotify();renderVendors();renderCompare();renderRunsheet();renderRewards();S.applyPremium();}
+fillPhases();
+if(!S.el("v-date").value)S.el("v-date").value="";
+S.initShell();
+S.initAccount({name:"steady-move",defaults:DEF,sample:SAMPLE,render:renderAll});
+S.initPremium({title:"Steady Move Premium",price:"1.25",desc:"Just $1.25/mo — smarter tools for a smoother move.",veil:"Unlock the mover quote comparison and the printable move-day plan.",
+  features:["🧮 Quote compare — turn hourly + base + extras into one real total","🏆 See the cheapest mover at a glance","📋 Move-day plan — movers, utilities, boxes & tasks on one page","🖨 Print it or save as PDF for the day"],render:renderAll});
+renderAll();
+S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Move</h2><p>Plan your whole move from one calm screen — a countdown checklist, budget, boxes, address changes and your movers. Private, and saved on your device.</p></div><div class="feat"><div class="fi">✅</div><div><b>A checklist that times itself</b><p>Tasks grouped from eight weeks out down to moving day.</p></div></div><div class="feat"><div class="fi">📦</div><div><b>Never lose a box</b><p>Number your boxes by room and track what\'s unpacked.</p></div></div>',sample:SAMPLE,render:renderAll});
+</script>
+</body>
+</html>

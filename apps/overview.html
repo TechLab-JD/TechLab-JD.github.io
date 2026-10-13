@@ -101,7 +101,7 @@
 <script>
 var S=Steady;S.initShell();
 function read(k){try{var r=localStorage.getItem(k);return r?JSON.parse(r):null;}catch(e){return null;}}
-var M=read("steadyMoney.v1"),H=read("steady.health.v1"),ST=read("steady.study.v1"),W=read("steady.work.v1"),HM=read("steady.home.v1"),BZ=read("steady.biz.v1"),EV=read("steady.events.v1");
+var M=read("steadyMoney.v1"),H=read("steady.health.v1"),ST=read("steady.study.v1"),W=read("steady.work.v1"),HM=read("steady.home.v1"),BZ=read("steady.biz.v1"),EV=read("steady.events.v1"),MV=read("steady.move.v1"),PT=read("steady.pets.v1");
 function tm(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0");}
 function dkey(dt){return dt.getFullYear()+"-"+String(dt.getMonth()+1).padStart(2,"0")+"-"+String(dt.getDate()).padStart(2,"0");}
 (function(){
@@ -179,6 +179,19 @@ if(EV&&(EV.events||[]).length){function evDTo(d){if(!d)return null;var t=new Dat
   var ys=nx?evArr("guests",nx.id).filter(function(x){return x.status==="Yes";}).reduce(function(a,b){return a+(Number(b.count)||1);},0):0;
   events={count:(EV.events||[]).length,next:nx,nextDays:nxDays,todosLeft:tl,yes:ys};}
 
+/* ---- move ---- */
+var move=null;
+if(MV&&(MV.move||MV.tasks)){function mvDTo(d){if(!d)return null;var t=new Date();t.setHours(0,0,0,0);return Math.round((new Date(d+"T00:00:00")-t)/86400000);}
+  var mt=(MV.tasks||[]),mdone=mt.filter(function(t){return t.done;}).length;
+  move={hasDate:!!(MV.move||{}).date,days:mvDTo((MV.move||{}).date),pct:mt.length?Math.round(mdone/mt.length*100):0,boxes:(MV.boxes||[]).length,notify:(MV.notify||[]).filter(function(x){return !x.done;}).length};}
+
+/* ---- pets ---- */
+var pets=null;
+if(PT&&(PT.pets||[]).length){function ptDTo(d){if(!d)return null;var t=new Date();t.setHours(0,0,0,0);return Math.round((new Date(d+"T00:00:00")-t)/86400000);}
+  var pdue=(PT.health||[]).filter(function(h){return h.next;}).map(function(h){return ptDTo(h.next);}).filter(function(d){return d!=null&&d>=0&&d<=30;}).length;
+  var cm2=tm(),yr2=String(new Date().getFullYear());
+  pets={count:(PT.pets||[]).length,due30:pdue,spentMo:(PT.expenses||[]).filter(function(e){return (e.date||"").slice(0,7)===cm2;}).reduce(function(a,b){return a+n(b.amount);},0),spentYr:(PT.expenses||[]).filter(function(e){return (e.date||"").slice(0,4)===yr2;}).reduce(function(a,b){return a+n(b.amount);},0)};}
+
 /* ---- hero + headline ---- */
 function M0(v){return S.money0(v);}
 S.el("ov-date").textContent=new Date().toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"});
@@ -186,7 +199,7 @@ S.el("ov-nw").textContent=money?M0(money.nw):"—";
 S.el("ov-earn").textContent=work?M0(work.earnMo):"—";
 S.el("ov-gpa").textContent=study&&study.gpa!==null?study.gpa.toFixed(2):"—";
 S.el("ov-hab").textContent=health?(health.habToday+"/"+health.habCount):"—";
-var any=money||work||health||study||biz;
+var any=money||work||health||study||biz||events||move||pets;
 if(!any){S.el("ov-head").textContent="Nothing yet";S.el("ov-sub").innerHTML='Open any app and your data shows up here. <a href="index.html">See the apps →</a>';}
 else{var headParts=[];if(money)headParts.push(M0(money.nw)+" net worth");if(work&&work.earnMo)headParts.push(M0(work.earnMo)+" earned");
   S.el("ov-head").textContent=headParts.length?headParts.join(" · "):"You're set up";}
@@ -233,6 +246,10 @@ doms+=domCard("#e5674e","🏪","Steady Biz","biz.html",!!biz,
   biz?stat("Revenue this mo",M0(biz.rev))+stat("Gross profit",M0(biz.profit))+stat("Orders this mo",biz.orders)+stat("Low stock",biz.low):"","No business data yet.");
 doms+=domCard("#d6468f","🎉","Steady Events","events.html",!!events,
   events?stat("Events",events.count)+stat("Next up",events.next?(events.nextDays===0?"today":events.nextDays+"d"):"—")+stat("To-dos left",events.todosLeft)+stat("RSVP yes",events.yes):"","No events yet.");
+doms+=domCard("#4c7ef3","🚚","Steady Move","move.html",!!move,
+  move?stat("Moving in",move.hasDate?(move.days>0?move.days+"d":move.days===0?"today":"done"):"—")+stat("Checklist",move.pct+"%")+stat("Boxes",move.boxes)+stat("To notify",move.notify):"","No move planned yet.");
+doms+=domCard("#3fa86b","🐾","Steady Pets","pets.html",!!pets,
+  pets?stat("Pets",pets.count)+stat("Due in 30d",pets.due30)+stat("Spent this mo",M0(pets.spentMo))+stat("This year",M0(pets.spentYr)):"","No pets added yet.");
 S.el("ov-doms").innerHTML=doms;
 
 /* ---- balance ---- */
@@ -243,7 +260,9 @@ var bal=[
   {bl:"Health",c:"#2fae5f",v:health?score([health.habCount>0,health.workouts.length>0,health.water>0,health.mood.length>0]):0},
   {bl:"Study",c:"#4a90e2",v:study?score([(ST.courses||[]).length>0,study.assign.length>0,study.exams.length>0]):0},
   {bl:"Home",c:"#E8A33C",v:home?score([home.cleanTotal>0,home.maint>0,home.meals>0,home.docs>0]):0},
-  {bl:"Biz",c:"#e5674e",v:biz?score([biz.products>0,biz.sales>0,biz.customers>0]):0}
+  {bl:"Biz",c:"#e5674e",v:biz?score([biz.products>0,biz.sales>0,biz.customers>0]):0},
+  {bl:"Move",c:"#4c7ef3",v:move?score([move.hasDate,move.pct>0,move.boxes>0,(MV.notify||[]).length>0]):0},
+  {bl:"Pets",c:"#3fa86b",v:pets?score([pets.count>0,(PT.health||[]).length>0,(PT.weights||[]).length>0,(PT.expenses||[]).length>0]):0}
 ];
 S.el("ov-balance").innerHTML=bal.map(b=>'<div class="balrow"><span class="bl">'+b.bl+'</span><div class="bar"><span style="width:'+b.v+'%;background:'+b.c+'"></span></div><span style="font:700 13px var(--display);width:38px;text-align:right">'+b.v+'%</span></div>').join("");
 
@@ -257,6 +276,8 @@ if(money&&money.debt>0&&work&&work.earnMo>0)ins.push(["📉","At this month's fr
 if(home&&(home.cleanDue+home.maintDue+home.docsExp)>0)ins.push(["🏠","Home needs attention: <b>"+home.cleanDue+"</b> cleaning, <b>"+home.maintDue+"</b> maintenance"+(home.docsExp?", <b>"+home.docsExp+"</b> expired doc"+(home.docsExp===1?"":"s"):"")+"."]);
 if(biz&&biz.low>0)ins.push(["📦","<b>"+biz.low+"</b> product"+(biz.low===1?" is":"s are")+" at or below the reorder point in Steady Biz — the Reorder Planner can tell you how much to restock."]);
 if(biz&&biz.rev>0)ins.push(["🏪","You've booked <b>"+M0(biz.rev)+"</b> in sales this month (Steady Biz), about <b>"+M0(biz.profit)+"</b> gross profit after cost of goods."]);
+if(move&&move.hasDate&&move.days!=null&&move.days>=0)ins.push(["🚚","You're moving in <b>"+move.days+" day"+(move.days===1?"":"s")+"</b> and your checklist is <b>"+move.pct+"%</b> done (Steady Move)"+(move.notify>0?" — "+move.notify+" more to tell your new address":"")+"."]);
+if(pets&&pets.due30>0)ins.push(["🐾","<b>"+pets.due30+"</b> pet "+(pets.due30===1?"item is":"items are")+" due in the next 30 days (Steady Pets) — a vaccine, med or visit."]);
 if(!ins.length)ins.push(["👋","Use a couple of the apps and real cross-app insights will show up here — or hit <b>Load demo data</b> below to see the whole thing filled in."]);
 S.el("ov-insights").innerHTML=ins.map(i=>'<div class="insight"><span class="b">'+i[0]+'</span><span>'+i[1]+'</span></div>').join("");
 
@@ -273,15 +294,17 @@ function seedAll(){
   localStorage.setItem("steady.home.v1",JSON.stringify({cleaning:[{id:uid(),task:"Vacuum",freq:"Weekly",lastDone:dk(-9)},{id:uid(),task:"Make bed",freq:"Daily",lastDone:dk(-1)},{id:uid(),task:"Bathrooms",freq:"Weekly",lastDone:dk(-3)}],maintenance:[{id:uid(),task:"HVAC filter",lastDone:dk(-80),intervalMo:3},{id:uid(),task:"Oil change",lastDone:dk(-150),intervalMo:6}],meals:{week:{Mon:"Pasta",Tue:"Tacos",Wed:"Stir fry",Thu:"Leftovers",Fri:"Pizza",Sat:"Grill",Sun:"Soup"},grocery:[{id:uid(),item:"Chicken",done:false},{id:uid(),item:"Rice",done:true}]},documents:[{id:uid(),name:"Lease",location:"Documents folder",expiry:dk(220)},{id:uid(),name:"Car insurance",location:"Glovebox",expiry:dk(40)}],__onboarded:true}));
   var mug=uid(),stk=uid(),tote=uid(),logo=uid();
   localStorage.setItem("steady.biz.v1",JSON.stringify({biz:{name:"Corner Goods"},products:[{id:mug,name:"Ceramic mug",type:"Product",price:"18",cost:"6",stock:"22",reorder:"10"},{id:stk,name:"Sticker pack",type:"Product",price:"6",cost:"1.5",stock:"8",reorder:"20"},{id:tote,name:"Canvas tote",type:"Product",price:"24",cost:"9",stock:"4",reorder:"6"},{id:logo,name:"Logo design",type:"Service",price:"150",cost:"0",stock:"0",reorder:"0"}],sales:[{id:uid(),date:cd(dd-1),productId:mug,name:"Ceramic mug",qty:"3",price:"18",cost:"6",customer:"Maya R."},{id:uid(),date:cd(dd-3),productId:tote,name:"Canvas tote",qty:"2",price:"24",cost:"9",customer:"Dev K."},{id:uid(),date:cd(dd-6),productId:mug,name:"Ceramic mug",qty:"4",price:"18",cost:"6",customer:""},{id:uid(),date:cd(dd-9),productId:logo,name:"Logo design",qty:"1",price:"150",cost:"0",customer:"Maya R."},{id:uid(),date:cd(dd-12),productId:stk,name:"Sticker pack",qty:"10",price:"6",cost:"1.5",customer:"Dev K."}],expenses:[{id:uid(),date:cd(dd-4),cat:"Marketing",desc:"Instagram ads",amount:"25"},{id:uid(),date:cd(dd-10),cat:"Supplies",desc:"Packaging",amount:"32"}],customers:[{id:uid(),name:"Maya R.",contact:"maya@email.com",notes:"Repeat"},{id:uid(),name:"Dev K.",contact:"555-0171",notes:"Wholesale totes"}],pricing:{var:"6",margin:"65",fixed:"200",units:"40"},__onboarded:true}));
+  localStorage.setItem("steady.move.v1",JSON.stringify({move:{date:dk(21),from:"Dallas, TX",to:"Austin, TX"},tasks:[{id:uid(),phase:"3–4 weeks out",label:"Book the movers",done:true},{id:uid(),phase:"3–4 weeks out",label:"Order packing supplies",done:true},{id:uid(),phase:"1–2 weeks out",label:"Change address (USPS)",done:false},{id:uid(),phase:"1–2 weeks out",label:"Transfer utilities",done:false},{id:uid(),phase:"Moving day",label:"Final walk-through",done:false}],budget:[{id:uid(),cat:"Movers",est:"1200",actual:"1150"},{id:uid(),cat:"Supplies",est:"120",actual:"96"},{id:uid(),cat:"Deposit",est:"1000",actual:""}],boxes:[{id:uid(),num:"1",room:"Kitchen",contents:"Pots & pans",fragile:true,unpacked:false},{id:uid(),num:"2",room:"Bedroom",contents:"Clothes",fragile:false,unpacked:true},{id:uid(),num:"3",room:"Living room",contents:"Books",fragile:false,unpacked:false}],notify:[{id:uid(),who:"USPS",acct:"",done:true},{id:uid(),who:"Bank",acct:"",done:false},{id:uid(),who:"Employer",acct:"",done:false},{id:uid(),who:"Car insurance",acct:"",done:false}],vendors:[{id:uid(),type:"Mover",name:"Lone Star Movers",phone:"555-0148",date:dk(21),status:"Booked"}],quotes:[],__onboarded:true}));
+  localStorage.setItem("steady.pets.v1",JSON.stringify({pets:[{id:"rexdemo",name:"Rex",species:"Dog",breed:"Lab mix",dob:dk(-1140),chip:"",vet:"Maple Vet"},{id:"miademo",name:"Mia",species:"Cat",breed:"Tabby",dob:dk(-730),chip:"",vet:"Maple Vet"}],health:[{id:uid(),petId:"rexdemo",type:"Vaccine",name:"Rabies",date:dk(-300),next:dk(20)},{id:uid(),petId:"rexdemo",type:"Medication",name:"Heartworm",date:dk(-20),next:dk(10)},{id:uid(),petId:"miademo",type:"Vaccine",name:"FVRCP",date:dk(-200),next:dk(55)}],weights:[{id:uid(),petId:"rexdemo",date:dk(-60),lbs:"62"},{id:uid(),petId:"rexdemo",date:dk(-5),lbs:"63"}],feeding:[{id:uid(),petId:"rexdemo",food:"Kibble",amount:"2 cups",times:"7am & 6pm"}],expenses:[{id:uid(),petId:"rexdemo",date:cd(dd-6),cat:"Food",amount:"48"},{id:uid(),petId:"rexdemo",date:cd(dd-18),cat:"Vet",amount:"145"},{id:uid(),petId:"miademo",date:cd(dd-12),cat:"Food",amount:"26"}],__onboarded:true}));
   }catch(e){}
   location.reload();
 }
-S.el("seed-btn").onclick=function(){if(confirm("This loads demo data into all six apps (replacing anything already there). Continue?"))seedAll();};
+S.el("seed-btn").onclick=function(){if(confirm("This loads demo data into all the apps (replacing anything already there). Continue?"))seedAll();};
 
 /* ---- month calendar ---- */
 (function(){
-  var APPC={money:"#19c3ad",study:"#4a90e2",work:"#8168f2",home:"#e0a93c",health:"#2fae5f"};
-  var APPURL={money:"money/index.html",study:"study.html",work:"work.html",home:"home.html",health:"health.html"};
+  var APPC={money:"#19c3ad",study:"#4a90e2",work:"#8168f2",home:"#e0a93c",health:"#2fae5f",move:"#4c7ef3",pets:"#3fa86b"};
+  var APPURL={money:"money/index.html",study:"study.html",work:"work.html",home:"home.html",health:"health.html",move:"move.html",pets:"pets.html"};
   function evRow(e,k,showDate){
     var date=showDate?'<span style="color:var(--muted);font-size:12px;min-width:50px;flex:none">'+new Date(k+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'</span>':"";
     return '<a href="'+(APPURL[e.app]||"#")+'" class="calev calrow" style="text-decoration:none;color:var(--ink)"><span class="cdot" style="background:'+(APPC[e.app]||"#888")+'"></span>'+date+'<span>'+e.icon+' '+e.label+'</span><span style="margin-left:auto;color:var(--muted);font-size:12px">›</span></a>';
@@ -304,6 +327,8 @@ S.el("seed-btn").onclick=function(){if(confirm("This loads demo data into all si
     if(HM&&HM.maintenance)HM.maintenance.forEach(function(m){if(!m.lastDone||!m.intervalMo)return;var nd=new Date(m.lastDone+"T00:00:00");nd.setMonth(nd.getMonth()+Number(m.intervalMo));add(dayOf(dkey(nd)),"🔧","Maintenance: "+m.task,"home");});
     if(HM&&HM.documents)HM.documents.forEach(function(x){add(dayOf(x.expiry),"📄","Expires: "+x.name,"home");});
     if(H&&H.workouts)H.workouts.forEach(function(w){add(dayOf(w.date),"🏃","Workout: "+(w.type||"session")+(w.min?" ("+w.min+"m)":""),"health");});
+    if(MV&&MV.move&&MV.move.date)add(dayOf(MV.move.date),"🚚","Moving day"+(MV.move.to?" → "+MV.move.to:""),"move");
+    if(PT&&PT.health){var pmap={};(PT.pets||[]).forEach(function(p){pmap[p.id]=p.name;});PT.health.forEach(function(h){if(h.next)add(dayOf(h.next),"💉",(h.name||"Due")+(pmap[h.petId]?(" — "+pmap[h.petId]):""),"pets");});}
     return ev;
   }
   function render(){
@@ -330,7 +355,7 @@ S.el("seed-btn").onclick=function(){if(confirm("This loads demo data into all si
         ev[selD].map(function(e){return evRow(e,selKey,false);}).join("");
     } else if(selD){dd.innerHTML='<div class="empty">Nothing on '+new Date(selKey+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'.</div>';}
     else{dd.innerHTML="";}
-    S.el("cal-legend").innerHTML=[["money","💳 Money"],["work","🧾 Work"],["study","📝 Study"],["home","🔧 Home"],["health","🏃 Health"]].map(function(x){return '<span style="display:inline-flex;align-items:center;gap:5px"><span class="cdot" style="background:'+APPC[x[0]]+'"></span>'+x[1]+'</span>';}).join("");
+    S.el("cal-legend").innerHTML=[["money","💳 Money"],["work","🧾 Work"],["study","📝 Study"],["home","🔧 Home"],["health","🏃 Health"],["move","🚚 Move"],["pets","💉 Pets"]].map(function(x){return '<span style="display:inline-flex;align-items:center;gap:5px"><span class="cdot" style="background:'+APPC[x[0]]+'"></span>'+x[1]+'</span>';}).join("");
   }
   S.el("cal-prev").onclick=function(){cur.setMonth(cur.getMonth()-1);render();};
   S.el("cal-next").onclick=function(){cur.setMonth(cur.getMonth()+1);render();};
