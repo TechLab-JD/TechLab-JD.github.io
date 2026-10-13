@@ -148,6 +148,7 @@
     /* "Browse by Grade" — the grade picker / per-grade dashboard (grade spine). First icon + start-menu item. */
     APPS["bygrade"] = { title: "Browse by Grade", icon: "🎓" };
     order.unshift({ app: "bygrade", icon: "🎓", short: "By Grade", title: "Browse by grade (K–12 + College)" });
+    APPS["course"] = { title: "Mastery Course", icon: "🎯" };
 
     /* Apply the user's saved icon arrangement (drag-and-drop); new subjects fall to the end. */
     var ORDER_KEY = "lab404.desktopOrder";
@@ -285,6 +286,7 @@
       if (app === "skills")  { winEl.style.width = "620px"; winEl.style.height = "580px"; }
       if (app === "about")   { winEl.style.width = "400px"; winEl.style.height = "340px"; }
       if (app === "bygrade") { winEl.style.width = "740px"; winEl.style.height = "640px"; }
+      if (app === "course")  { winEl.style.width = "780px"; winEl.style.height = "660px"; }
 
       /* Cert theme for folder titlebars */
       if (appDef.cert) winEl.setAttribute("data-cert", appDef.cert);
@@ -682,6 +684,9 @@
         Desktop._renderFolder(winId, app);
       } else if (app === "bygrade") {
         Desktop._renderGradeDash(winId);
+      } else if (app === "course") {
+        if (window.CourseLoader) window.CourseLoader.init(content, params || {});
+        else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Course loader not available.</div>';
       } else if (app === "chapters-1") {
         Desktop._renderChapterList(winId, 1);
       } else if (app === "chapters-2") {
@@ -786,7 +791,10 @@
           ".gd-tb{font-size:.6rem;color:var(--text-faint,#778);flex:none;white-space:nowrap}" +
           ".gd-topic.ready .gd-tb{color:var(--accent2,#4a90e2)}" +
           ".gd-empty{color:var(--text-muted,#9aa);font-size:.8rem;padding:14px 0}" +
-          ".gd-note{margin-top:14px;color:var(--text-faint,#778);font-size:.7rem;line-height:1.5}";
+          ".gd-note{margin-top:14px;color:var(--text-faint,#778);font-size:.7rem;line-height:1.5}" +
+          ".gd-course{margin-bottom:16px}" +
+          ".gd-cbtn{display:block;width:100%;text-align:left;border:1px solid var(--accent2,#4a90e2);background:rgba(74,144,226,.08);color:var(--text,#eee);border-radius:11px;padding:11px 14px;font:inherit;font-weight:700;font-size:.86rem;cursor:pointer;margin-bottom:6px}" +
+          ".gd-cbtn span{display:block;font-weight:400;font-size:.7rem;color:var(--text-muted,#9aa);margin-top:2px}";
         document.head.appendChild(st);
       }
 
@@ -811,11 +819,19 @@
           blocks += '<div class="gd-subj"><div class="gd-sh">' + subj.icon + " " + escHtml(subj.title) + '</div><div class="gd-topics">' + items + '</div></div>';
         });
         if (!blocks) blocks = '<div class="gd-empty">No subjects are tagged for ' + escHtml(gFull(sel)) + ' yet — they’re on the build roadmap.</div>';
+        var courses = window.LAB404_COURSES || {};
+        var cb = Object.keys(courses).filter(function (k) { return courses[k].grade === sel; });
+        var courseBanner = cb.length ? '<div class="gd-course">' + cb.map(function (k) {
+          var co = courses[k];
+          return '<button class="gd-cbtn" data-course="' + k + '">🎯 ' + escHtml(co.title) + ' — Mastery course' +
+            '<span>Objective-based: placement test, mastery bands, and a live readiness grade (A–F / GPA)</span></button>';
+        }).join("") + '</div>' : "";
         content.innerHTML =
           '<div class="gd-wrap">' +
             '<div class="gd-head"><h2>🎓 ' + escHtml(gFull(sel)) + '</h2>' +
               '<p class="gd-sub">' + nSub + " subject" + (nSub === 1 ? "" : "s") + " · " + nTop + " topic" + (nTop === 1 ? "" : "s") + " · " + nReady + ' with lessons ready &mdash; pick a grade:</p></div>' +
             '<div class="gd-tabs">' + tabs + "</div>" +
+            courseBanner +
             blocks +
             '<p class="gd-note">Grades follow the Massachusetts Curriculum Frameworks (provisional spine). 📘 = lesson ready, 🔒 = on the roadmap. Your grade is remembered on this device.</p>' +
           "</div>";
@@ -824,6 +840,9 @@
         });
         content.querySelectorAll(".gd-topic[data-app]").forEach(function (b) {
           b.addEventListener("click", function () { Desktop.openWindow(this.getAttribute("data-app")); });
+        });
+        content.querySelectorAll(".gd-cbtn[data-course]").forEach(function (b) {
+          b.addEventListener("click", function () { Desktop.openWindow("course", { course: this.getAttribute("data-course") }); });
         });
       }
       render();
