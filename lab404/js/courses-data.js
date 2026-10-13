@@ -342,7 +342,16 @@ window.LAB404_COURSES = {
       { code: "4.L.2", domain: "L", weight: 1.0, title: "Capitalization, punctuation (commas, quotation marks) & spelling", xwalk: { cc: "4.L.2", ma: "4.L.2", teks: "", vasol: "", flbest: "" } },
       { code: "4.L.4", domain: "L", weight: 1.0, title: "Word meaning from context clues and prefixes, suffixes & roots", xwalk: { cc: "4.L.4", ma: "4.L.4", teks: "", vasol: "", flbest: "" } },
       { code: "4.L.5", domain: "L", weight: 0.9, title: "Figurative language (similes, idioms) and synonyms/antonyms", xwalk: { cc: "4.L.5", ma: "4.L.5", teks: "", vasol: "", flbest: "" } },
-      { code: "4.RF.3", domain: "RF", weight: 0.9, title: "Decode multisyllable words using syllables and word parts", xwalk: { cc: "4.RF.3", ma: "4.RF.3", teks: "", vasol: "", flbest: "" } }
+      { code: "4.RF.3", domain: "RF", weight: 0.9, title: "Decode multisyllable words using syllables and word parts", xwalk: { cc: "4.RF.3", ma: "4.RF.3", teks: "", vasol: "", flbest: "" } },
+      { code: "4.RL.4", domain: "RL", weight: 1.0, title: "Determine word & phrase meaning in a story, including mythological allusions", xwalk: { cc: "4.RL.4", ma: "4.RL.4", teks: "", vasol: "", flbest: "" } },
+      { code: "4.RL.5", domain: "RL", weight: 0.9, title: "Explain major differences between poems, drama, and prose", xwalk: { cc: "4.RL.5", ma: "4.RL.5", teks: "", vasol: "", flbest: "" } },
+      { code: "4.RL.6", domain: "RL", weight: 0.9, title: "Compare first- and third-person points of view", xwalk: { cc: "4.RL.6", ma: "4.RL.6", teks: "", vasol: "", flbest: "" } },
+      { code: "4.RL.9", domain: "RL", weight: 0.9, title: "Compare themes and patterns across stories, myths, and folktales", xwalk: { cc: "4.RL.9", ma: "4.RL.9", teks: "", vasol: "", flbest: "" } },
+      { code: "4.RI.4", domain: "RI", weight: 1.0, title: "Determine academic & domain-specific word meanings in informational text", xwalk: { cc: "4.RI.4", ma: "4.RI.4", teks: "", vasol: "", flbest: "" } },
+      { code: "4.RI.5", domain: "RI", weight: 1.0, title: "Describe a text's structure (sequence, cause/effect, compare, problem/solution)", xwalk: { cc: "4.RI.5", ma: "4.RI.5", teks: "", vasol: "", flbest: "" } },
+      { code: "4.RI.6", domain: "RI", weight: 0.9, title: "Compare firsthand and secondhand accounts of an event", xwalk: { cc: "4.RI.6", ma: "4.RI.6", teks: "", vasol: "", flbest: "" } },
+      { code: "4.RI.8", domain: "RI", weight: 1.0, title: "Explain how an author uses reasons and evidence to support points", xwalk: { cc: "4.RI.8", ma: "4.RI.8", teks: "", vasol: "", flbest: "" } },
+      { code: "4.L.6", domain: "L", weight: 0.9, title: "Acquire and use grade-level academic and domain-specific vocabulary", xwalk: { cc: "4.L.6", ma: "4.L.6", teks: "", vasol: "", flbest: "" } }
     ],
     questions: [
       // 4.RL.1
@@ -399,7 +408,73 @@ window.LAB404_COURSES = {
       { id: "rf3a", obj: "4.RF.3", type: "mc", q: "How many syllables are in the word butterfly?", options: ["3", "2", "4", "1"], a: 0, why: "but-ter-fly = 3 syllables." },
       { id: "rf3b", obj: "4.RF.3", type: "mc", q: "The word unhappiness is built from these parts:", options: ["un + happy + ness", "unh + appi + ness", "u + nhappi + ness", "unhapp + iness"], a: 0, why: "Prefix 'un-' + root 'happy' + suffix '-ness'." },
       { id: "rf3c", obj: "4.RF.3", type: "mc", q: "Which prefix means 'not'?", options: ["un-", "re-", "pre-", "mis-"], a: 0, why: "'un-' means not (unhappy = not happy)." },
-      { id: "rf3d", obj: "4.RF.3", type: "mc", q: "To read a long word like independent, it helps to:", options: ["Break it into syllables and parts", "Guess from the first letter only", "Skip it", "Spell it backward"], a: 0, why: "Decode long words by chunking them into parts." }
+      { id: "rf3d", obj: "4.RF.3", type: "mc", q: "To read a long word like independent, it helps to:", options: ["Break it into syllables and parts", "Guess from the first letter only", "Skip it", "Spell it backward"], a: 0, why: "Decode long words by chunking them into parts." },
+      // 4.RL.4
+      { id: "rl4a", obj: "4.RL.4", type: "mc", q: "In 'The old house groaned in the wind,' the word groaned suggests the house:", options: ["Made a low creaking sound", "Was happy", "Was freshly painted", "Was very tall"], a: 0, why: "'Groaned' is a sound word suggesting creaking." },
+      { id: "rl4b", obj: "4.RL.4", type: "mc", q: "A character has 'the strength of Hercules.' This means they are very:", options: ["Strong", "Weak", "Quiet", "Short"], a: 0, why: "Hercules was a myth hero famous for strength (an allusion)." },
+      { id: "rl4c", obj: "4.RL.4", type: "mc", q: "In 'She had a mountain of homework,' a mountain means:", options: ["A very large amount", "A real mountain", "A tiny bit", "A snack"], a: 0, why: "It's an exaggeration for a huge amount." },
+      { id: "rl4d", obj: "4.RL.4", type: "mc", q: "The phrase 'quick as a wink' describes something:", options: ["Very fast", "Very slow", "Very loud", "Very cold"], a: 0, why: "A wink is fast, so it means very fast." },
+      { id: "rl4e", obj: "4.RL.4", type: "mc", q: "If a plan was someone's 'Achilles' heel,' it was their:", options: ["Weak spot", "Best skill", "Favorite food", "New shoe"], a: 0, why: "An allusion to the myth of Achilles' one weak spot." },
+      // 4.RL.5
+      { id: "rl5a", obj: "4.RL.5", type: "mc", q: "Which is written in lines and stanzas, often with rhythm or rhyme?", options: ["A poem", "A news article", "A recipe", "A map"], a: 0, why: "Poems use lines and stanzas." },
+      { id: "rl5b", obj: "4.RL.5", type: "mc", q: "In a play, the notes that tell actors how to move are called:", options: ["Stage directions", "Stanzas", "Chapters", "Verses"], a: 0, why: "Stage directions guide the actors." },
+      { id: "rl5c", obj: "4.RL.5", type: "mc", q: "A story written in regular sentences and paragraphs is:", options: ["Prose", "A poem", "A song", "A stanza"], a: 0, why: "Prose is ordinary sentence-and-paragraph writing." },
+      { id: "rl5d", obj: "4.RL.5", type: "mc", q: "A group of lines in a poem is called a:", options: ["Stanza", "Chapter", "Scene", "Paragraph"], a: 0, why: "Poems are grouped into stanzas." },
+      { id: "rl5e", obj: "4.RL.5", type: "mc", q: "A play (drama) is usually divided into:", options: ["Acts and scenes", "Stanzas", "Verses", "Rhymes"], a: 0, why: "Plays have acts and scenes." },
+      // 4.RL.6
+      { id: "rl6a", obj: "4.RL.6", type: "mc", q: "A story that uses 'I' and 'me' to tell what happens is written in:", options: ["First person", "Third person", "Second person", "No point of view"], a: 0, why: "First person uses I/me." },
+      { id: "rl6b", obj: "4.RL.6", type: "mc", q: "A story that uses 'he,' 'she,' and 'they' for the characters is in:", options: ["Third person", "First person", "Second person", "No point of view"], a: 0, why: "Third person uses he/she/they." },
+      { id: "rl6c", obj: "4.RL.6", type: "mc", q: "In first-person point of view, the narrator is:", options: ["A character in the story", "Outside the story", "The reader", "The publisher"], a: 0, why: "A first-person narrator is inside the story." },
+      { id: "rl6d", obj: "4.RL.6", type: "mc", q: "'He opened the door and saw the surprise.' This is told in:", options: ["Third person", "First person", "Second person", "No point of view"], a: 0, why: "It uses 'he' — third person." },
+      { id: "rl6e", obj: "4.RL.6", type: "mc", q: "'I couldn't believe my eyes!' uses ___ point of view.", options: ["First person", "Third person", "Second person", "None"], a: 0, why: "'I' signals first person." },
+      // 4.RL.9
+      { id: "rl9a", obj: "4.RL.9", type: "mc", q: "Many folktales from around the world share the theme that:", options: ["Kindness is rewarded", "Being mean always wins", "Nothing matters", "Animals can't talk"], a: 0, why: "Rewarded kindness is a common folktale theme." },
+      { id: "rl9b", obj: "4.RL.9", type: "mc", q: "Two stories each show a small, clever character beating a big, strong one. This is a shared:", options: ["Theme/pattern", "Setting", "Author", "Title"], a: 0, why: "It's a recurring theme or pattern." },
+      { id: "rl9c", obj: "4.RL.9", type: "mc", q: "Comparing two myths means looking at how they are:", options: ["Alike and different", "Exactly copied", "Totally unrelated", "The same length"], a: 0, why: "Comparing = finding similarities and differences." },
+      { id: "rl9d", obj: "4.RL.9", type: "mc", q: "A common pattern in fairy tales is:", options: ["Good triumphs over evil", "Villains always win", "No one learns anything", "Stories never end"], a: 0, why: "Good overcoming evil is a classic pattern." },
+      { id: "rl9e", obj: "4.RL.9", type: "mc", q: "'The Tortoise and the Hare' and another 'slow but steady' story share a:", options: ["Lesson about patience and persistence", "Main character's name", "Setting", "Page count"], a: 0, why: "They share the same theme." },
+      // 4.RI.4
+      { id: "ri4a", obj: "4.RI.4", type: "mc", q: "In a science text, 'The water will evaporate in the sun.' Evaporate means to:", options: ["Turn into vapor (gas)", "Freeze solid", "Spill over", "Get colder"], a: 0, why: "Evaporate = change from liquid to gas." },
+      { id: "ri4b", obj: "4.RI.4", type: "mc", q: "In a government text, 'citizens' means:", options: ["Members of a country or community", "Buildings", "Laws", "Animals"], a: 0, why: "Citizens are members of a community/country." },
+      { id: "ri4c", obj: "4.RI.4", type: "mc", q: "A text says 'The heart pumps blood through arteries.' An artery is a kind of:", options: ["Blood vessel", "Bone", "Food", "Tooth"], a: 0, why: "Arteries are blood vessels." },
+      { id: "ri4d", obj: "4.RI.4", type: "mc", q: "To figure out a hard science word in a text, you can use:", options: ["Context clues and a glossary", "Only the cover", "The page number", "The author's name"], a: 0, why: "Context and a glossary give the meaning." },
+      { id: "ri4e", obj: "4.RI.4", type: "mc", q: "In a history text, an 'ancestor' is a:", options: ["Family member from long ago", "A new baby", "A stranger", "A building"], a: 0, why: "Ancestors are relatives from the past." },
+      // 4.RI.5
+      { id: "ri5a", obj: "4.RI.5", type: "mc", q: "A text that lists First, Next, Then, Finally uses a ___ structure.", options: ["Sequence (order of steps)", "Compare/contrast", "Cause/effect", "Problem/solution"], a: 0, why: "Those signal words show sequence." },
+      { id: "ri5b", obj: "4.RI.5", type: "mc", q: "A text explaining WHY something happened and WHAT resulted uses:", options: ["Cause and effect", "A poem", "A rhyme", "Alphabetical order"], a: 0, why: "Cause/effect links a reason to a result." },
+      { id: "ri5c", obj: "4.RI.5", type: "mc", q: "A text showing how two animals are alike and different uses:", options: ["Compare and contrast", "Sequence", "Rhyme", "A cast list"], a: 0, why: "Alike-and-different is compare/contrast." },
+      { id: "ri5d", obj: "4.RI.5", type: "mc", q: "A text that describes a trouble and then how it was fixed uses:", options: ["Problem and solution", "Rhyme scheme", "A stanza", "A cast list"], a: 0, why: "Trouble + fix = problem/solution." },
+      { id: "ri5e", obj: "4.RI.5", type: "mc", q: "Signal words like 'because,' 'so,' and 'as a result' point to a ___ structure.", options: ["Cause/effect", "Sequence", "Compare", "Rhyme"], a: 0, why: "They connect causes to effects." },
+      // 4.RI.6
+      { id: "ri6a", obj: "4.RI.6", type: "mc", q: "A firsthand account of an event is told by:", options: ["Someone who was there", "A reporter who wasn't there", "A later textbook author", "A stranger"], a: 0, why: "Firsthand = from someone who experienced it." },
+      { id: "ri6b", obj: "4.RI.6", type: "mc", q: "A diary entry by a soldier about a battle he fought is a ___ account.", options: ["Firsthand", "Secondhand", "Fictional", "Rhyming"], a: 0, why: "He was there, so it's firsthand." },
+      { id: "ri6c", obj: "4.RI.6", type: "mc", q: "A textbook paragraph summarizing a battle, written by a historian later, is a ___ account.", options: ["Secondhand", "Firsthand", "Personal", "Poetic"], a: 0, why: "The writer wasn't there — secondhand." },
+      { id: "ri6d", obj: "4.RI.6", type: "mc", q: "Firsthand accounts often use words like:", options: ["I and we", "it is known", "the author states", "long ago they"], a: 0, why: "First-person words signal a firsthand account." },
+      { id: "ri6e", obj: "4.RI.6", type: "mc", q: "Why read both firsthand AND secondhand accounts?", options: ["To get personal detail AND a broad overview", "To get confused", "They're identical", "Only one is allowed"], a: 0, why: "Each gives something the other doesn't." },
+      // 4.RI.8
+      { id: "ri8a", obj: "4.RI.8", type: "mc", q: "An author claims 'Recess is important.' Good EVIDENCE would be:", options: ["A study showing recess improves focus", "The author likes recess", "Recess is a nice word", "It sounds fun"], a: 0, why: "Evidence is facts/data that support the point." },
+      { id: "ri8b", obj: "4.RI.8", type: "mc", q: "Reasons and evidence in a text are used to:", options: ["Support the author's point", "Decorate the page", "Confuse readers", "Rhyme"], a: 0, why: "They back up the author's claims." },
+      { id: "ri8c", obj: "4.RI.8", type: "mc", q: "Which is EVIDENCE, not just an opinion?", options: ["Sharks have existed for over 400 million years", "Sharks are the coolest animal", "Sharks are scary", "I love sharks"], a: 0, why: "A fact can be checked; the others are opinions." },
+      { id: "ri8d", obj: "4.RI.8", type: "mc", q: "To check if an author's point is well supported, look for:", options: ["Facts, examples, and reasons", "Pretty pictures only", "The title", "The page count"], a: 0, why: "Support comes from facts, examples, and reasons." },
+      { id: "ri8e", obj: "4.RI.8", type: "mc", q: "An author writes 'Plant trees because they clean the air and give shade.' The reasons given are:", options: ["They clean the air and give shade", "Trees are tall", "The author's name", "A rhyme"], a: 0, why: "Those two 'because' statements are the reasons." },
+      // 4.L.6
+      { id: "l6a", obj: "4.L.6", type: "mc", q: "The science word 'observe' means to:", options: ["Watch carefully", "Run fast", "Guess", "Ignore"], a: 0, why: "To observe is to watch closely." },
+      { id: "l6b", obj: "4.L.6", type: "mc", q: "In math, 'estimate' means to:", options: ["Make a close guess", "Find the exact answer always", "Erase", "Count to ten"], a: 0, why: "An estimate is a reasonable approximate value." },
+      { id: "l6c", obj: "4.L.6", type: "mc", q: "The academic word 'compare' asks you to tell how things are:", options: ["Alike and different", "Only wrong", "Loud", "Colored"], a: 0, why: "Comparing looks at similarities and differences." },
+      { id: "l6d", obj: "4.L.6", type: "mc", q: "The word 'predict' means to:", options: ["Say what will probably happen", "Look only at the past", "Measure weight", "Draw a picture"], a: 0, why: "A prediction says what will likely happen." },
+      { id: "l6e", obj: "4.L.6", type: "mc", q: "When a teacher says 'summarize the text,' they want you to:", options: ["Tell the main points briefly", "Copy every word", "Read it louder", "Skip it"], a: 0, why: "A summary is a brief retelling of the main points." },
+      // 5th questions for the original objectives
+      { id: "rl1e", obj: "4.RL.1", type: "mc", q: "Read: The lights flickered and Sam pulled the blanket tighter. Sam most likely feels:", options: ["Scared", "Excited", "Bored", "Hungry"], a: 0, why: "Flickering lights + pulling the blanket close suggests fear." },
+      { id: "rl2e", obj: "4.RL.2", type: "mc", q: "A fable usually ends with a short lesson called a:", options: ["Moral", "Title", "Rhyme", "Setting"], a: 0, why: "A fable's lesson is its moral." },
+      { id: "rl3e", obj: "4.RL.3", type: "mc", q: "Read: Dev practiced the piano every day, even when it was hard. Dev is:", options: ["Determined", "Lazy", "Cruel", "Shy"], a: 0, why: "Practicing even when it's hard shows determination." },
+      { id: "ri1e", obj: "4.RI.1", type: "mc", q: "The best way to answer 'What does the text say?' is to:", options: ["Find the exact words in the text", "Guess", "Use the picture only", "Skip ahead"], a: 0, why: "Go back to the text for the evidence." },
+      { id: "ri2e", obj: "4.RI.2", type: "mc", q: "The sentence that often states the main idea of a paragraph is the:", options: ["Topic sentence", "Last word", "Page number", "Caption"], a: 0, why: "The topic sentence usually states the main idea." },
+      { id: "ri3e", obj: "4.RI.3", type: "mc", q: "Read: The seed sprouts, then grows leaves, then flowers. What happens after it sprouts?", options: ["It grows leaves", "It flowers", "It dies", "It becomes a seed again"], a: 0, why: "The order in the text: sprout → leaves → flowers." },
+      { id: "l1e", obj: "4.L.1", type: "mc", q: "Choose the correct word: 'The team played ___ best game.'", options: ["its", "it's", "its'", "it is"], a: 0, why: "'Its' shows possession; 'it's' means 'it is'." },
+      { id: "l2e", obj: "4.L.2", type: "mc", q: "Which word should be capitalized in 'my friend lives in texas'?", options: ["Texas", "friend", "lives", "in"], a: 0, why: "Texas is a proper noun." },
+      { id: "l4e", obj: "4.L.4", type: "mc", q: "The root 'port' (as in transport and portable) means:", options: ["Carry", "Water", "Fire", "See"], a: 0, why: "'Port' means to carry." },
+      { id: "l5e", obj: "4.L.5", type: "mc", q: "'The classroom was a zoo' is an example of a:", options: ["Metaphor", "Simile", "Fact", "Rhyme"], a: 0, why: "It calls one thing another directly — a metaphor." },
+      { id: "rf3e", obj: "4.RF.3", type: "mc", q: "Which word has the prefix 'pre-' meaning 'before'?", options: ["preview", "review", "unfair", "helpful"], a: 0, why: "Preview = view before." }
     ]
   },
 
