@@ -145,6 +145,10 @@
       order.push({ app: "folder-" + s.key, icon: s.icon || "📁", short: s.short || s.title, title: s.title });
     });
 
+    /* "Browse by Grade" — the grade picker / per-grade dashboard (grade spine). First icon + start-menu item. */
+    APPS["bygrade"] = { title: "Browse by Grade", icon: "🎓" };
+    order.unshift({ app: "bygrade", icon: "🎓", short: "By Grade", title: "Browse by grade (K–12 + College)" });
+
     /* Apply the user's saved icon arrangement (drag-and-drop); new subjects fall to the end. */
     var ORDER_KEY = "lab404.desktopOrder";
     try {
@@ -280,6 +284,7 @@
       if (app === "data")    { winEl.style.width = "580px"; winEl.style.height = "520px"; }
       if (app === "skills")  { winEl.style.width = "620px"; winEl.style.height = "580px"; }
       if (app === "about")   { winEl.style.width = "400px"; winEl.style.height = "340px"; }
+      if (app === "bygrade") { winEl.style.width = "740px"; winEl.style.height = "640px"; }
 
       /* Cert theme for folder titlebars */
       if (appDef.cert) winEl.setAttribute("data-cert", appDef.cert);
@@ -675,6 +680,8 @@
 
       if (app.indexOf("folder-") === 0) {
         Desktop._renderFolder(winId, app);
+      } else if (app === "bygrade") {
+        Desktop._renderGradeDash(winId);
       } else if (app === "chapters-1") {
         Desktop._renderChapterList(winId, 1);
       } else if (app === "chapters-2") {
@@ -744,6 +751,82 @@
             '<p style="font-size:0.68rem;color:var(--text-faint);margin:0;">Built for CompTIA A+ 220-1201/1202 and beyond</p>' +
           '</div>';
       }
+    },
+
+    _renderGradeDash: function (winId) {
+      var content = document.getElementById(winId + "-content");
+      if (!content) return;
+      var S = window.LAB404_SUBJECTS || {};
+      var C = window.LAB404_CONTENT || {};
+      function slug(s) { return String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, ""); }
+      var GRADES = ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "C"];
+      function gShort(g) { return g === "C" ? "Col" : g; }
+      function gFull(g) { return g === "K" ? "Kindergarten" : g === "C" ? "College / Intro" : "Grade " + g; }
+      var KEY = "lab404.myGrade", sel;
+      try { sel = localStorage.getItem(KEY); } catch (e) {}
+      if (GRADES.indexOf(sel) < 0) sel = "K";
+
+      if (!document.getElementById("gd-style")) {
+        var st = document.createElement("style"); st.id = "gd-style";
+        st.textContent =
+          ".gd-wrap{padding:14px}" +
+          ".gd-head h2{margin:0 0 2px;font-size:1.15rem;color:var(--accent2,#4a90e2)}" +
+          ".gd-sub{font-size:.76rem;color:var(--text-muted,#9aa);margin:0 0 12px}" +
+          ".gd-tabs{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px}" +
+          ".gd-tab{border:1px solid var(--border,#334);background:transparent;color:var(--text-muted,#9aa);border-radius:8px;padding:5px 9px;font-size:.78rem;font-weight:700;cursor:pointer;min-width:30px}" +
+          ".gd-tab.on{background:var(--accent2,#4a90e2);border-color:var(--accent2,#4a90e2);color:#fff}" +
+          ".gd-subj{margin-bottom:14px}" +
+          ".gd-sh{font-weight:700;font-size:.9rem;margin-bottom:7px}" +
+          ".gd-topics{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:7px}" +
+          ".gd-topic{display:flex;align-items:center;gap:7px;border:1px solid var(--border,#334);border-radius:9px;padding:8px 10px;background:transparent;color:var(--text,#eee);cursor:pointer;text-align:left;font:inherit}" +
+          ".gd-topic.ready{border-color:var(--accent2,#4a90e2)}" +
+          ".gd-topic:hover{background:rgba(127,127,127,.12)}" +
+          ".gd-ti{font-size:1rem;flex:none}" +
+          ".gd-tt{flex:1;font-size:.8rem;font-weight:600}" +
+          ".gd-tb{font-size:.6rem;color:var(--text-faint,#778);flex:none;white-space:nowrap}" +
+          ".gd-topic.ready .gd-tb{color:var(--accent2,#4a90e2)}" +
+          ".gd-empty{color:var(--text-muted,#9aa);font-size:.8rem;padding:14px 0}" +
+          ".gd-note{margin-top:14px;color:var(--text-faint,#778);font-size:.7rem;line-height:1.5}";
+        document.head.appendChild(st);
+      }
+
+      function render() {
+        var tabs = GRADES.map(function (g) {
+          return '<button class="gd-tab' + (g === sel ? " on" : "") + '" data-g="' + g + '" title="' + escHtml(gFull(g)) + '">' + gShort(g) + "</button>";
+        }).join("");
+        var acad = S.academic || [], blocks = "", nSub = 0, nTop = 0, nReady = 0;
+        acad.forEach(function (subj) {
+          var tps = (subj.topics || []).filter(function (t) { return (t.grades || []).indexOf(sel) >= 0; });
+          if (!tps.length) return;
+          nSub++;
+          var items = tps.map(function (t) {
+            var ck = subj.key + "-" + slug(t.t), ready = !!C[ck];
+            if (ready) nReady++;
+            nTop++;
+            return '<button class="gd-topic' + (ready ? " ready" : "") + '" data-app="folder-' + subj.key + "-" + slug(t.t) + '">' +
+              '<span class="gd-ti">' + (ready ? "📘" : "🔒") + '</span>' +
+              '<span class="gd-tt">' + escHtml(t.t) + '</span>' +
+              '<span class="gd-tb">' + (ready ? "Lesson" : "Soon") + '</span></button>';
+          }).join("");
+          blocks += '<div class="gd-subj"><div class="gd-sh">' + subj.icon + " " + escHtml(subj.title) + '</div><div class="gd-topics">' + items + '</div></div>';
+        });
+        if (!blocks) blocks = '<div class="gd-empty">No subjects are tagged for ' + escHtml(gFull(sel)) + ' yet — they’re on the build roadmap.</div>';
+        content.innerHTML =
+          '<div class="gd-wrap">' +
+            '<div class="gd-head"><h2>🎓 ' + escHtml(gFull(sel)) + '</h2>' +
+              '<p class="gd-sub">' + nSub + " subject" + (nSub === 1 ? "" : "s") + " · " + nTop + " topic" + (nTop === 1 ? "" : "s") + " · " + nReady + ' with lessons ready &mdash; pick a grade:</p></div>' +
+            '<div class="gd-tabs">' + tabs + "</div>" +
+            blocks +
+            '<p class="gd-note">Grades follow the Massachusetts Curriculum Frameworks (provisional spine). 📘 = lesson ready, 🔒 = on the roadmap. Your grade is remembered on this device.</p>' +
+          "</div>";
+        content.querySelectorAll(".gd-tab").forEach(function (b) {
+          b.addEventListener("click", function () { sel = this.getAttribute("data-g"); try { localStorage.setItem(KEY, sel); } catch (e) {} render(); });
+        });
+        content.querySelectorAll(".gd-topic[data-app]").forEach(function (b) {
+          b.addEventListener("click", function () { Desktop.openWindow(this.getAttribute("data-app")); });
+        });
+      }
+      render();
     },
 
     _renderFolder: function (winId, folderApp) {
