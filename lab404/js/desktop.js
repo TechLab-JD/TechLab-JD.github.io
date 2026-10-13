@@ -129,6 +129,24 @@
       FOLDER_CONTENTS[fkey] = { desc: subj.desc, apps: topicApps };
     });
 
+    /* Grouping folders (e.g. Tech, Life Skills): a folder whose children are other
+       subject folders. Built from S.groups; a grouped subject is tracked so it is
+       dropped from the top-level desktop and shown inside its group instead. */
+    var memberMeta = {};
+    if (S.comptia) memberMeta.comptia = { icon: S.comptia.icon || "📁", short: S.comptia.short || S.comptia.title };
+    (S.academic || []).forEach(function (s) { memberMeta[s.key] = { icon: s.icon || "📁", short: s.short || s.title }; });
+    var grouped = {}, groupByKey = {};
+    (S.groups || []).forEach(function (g) {
+      groupByKey[g.key] = g;
+      var fkey = "folder-" + g.key;
+      APPS[fkey] = { title: g.title, icon: "📁" };
+      var memApps = (g.members || []).filter(function (m) { return memberMeta[m]; }).map(function (m) {
+        grouped[m] = g.key;
+        return { app: "folder-" + m, icon: memberMeta[m].icon, label: memberMeta[m].short };
+      });
+      FOLDER_CONTENTS[fkey] = { desc: g.desc, apps: memApps };
+    });
+
     /* Build the desktop icons + start-menu subject list from the catalog, so adding a
        subject to subjects-data.js is the only edit needed (icons were hardcoded before). */
     function escA(s) {
@@ -136,12 +154,24 @@
         return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
       });
     }
-    var order = [];
-    if (S.comptia) {
+    var order = [], emittedGroup = {};
+    /* CompTIA shows top-level only if it is not folded into a group. */
+    if (S.comptia && !grouped.comptia) {
       order.push({ app: "folder-comptia", icon: S.comptia.icon || "📁",
                    short: S.comptia.short || S.comptia.title, title: S.comptia.title });
     }
     (S.academic || []).forEach(function (s) {
+      /* A grouped subject is replaced on the desktop by its group folder, emitted
+         once at the position of its first member so placement stays natural. */
+      if (grouped[s.key]) {
+        var gk = grouped[s.key];
+        if (!emittedGroup[gk]) {
+          emittedGroup[gk] = true;
+          var g = groupByKey[gk];
+          order.push({ app: "folder-" + gk, icon: g.icon || "📁", short: g.short || g.title, title: g.title });
+        }
+        return;
+      }
       order.push({ app: "folder-" + s.key, icon: s.icon || "📁", short: s.short || s.title, title: s.title });
     });
 

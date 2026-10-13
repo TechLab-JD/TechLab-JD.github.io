@@ -24,6 +24,26 @@ window.LAB404_SUBJECTS = {
             "folder-securityx", "folder-dataplus"]
   },
 
+  /* Grouping folders — a desktop folder that holds several subject folders, to
+     declutter the desktop. `members` are subject keys (academic keys, or "comptia").
+     A grouped subject no longer shows as its own top-level desktop icon; it lives
+     inside its group folder instead. desktop.js builds these from the catalog.
+     (Group key must NOT collide with a subject key — e.g. the group is "life", the
+     subject is "lifeskills".) */
+  groups: [
+    {
+      key: "tech", title: "Technology", short: "Tech", icon: "🖥️",
+      desc: "Computing & IT — coding plus the CompTIA certification tracks",
+      members: ["coding", "comptia"]
+    },
+    {
+      key: "life", title: "Life Skills", short: "Life Skills", icon: "🧰",
+      desc: "Real-world living — cooking, survival, repair, home, money, health & more",
+      members: ["cooking", "survival", "repair", "gardening", "lifeskills",
+                "medicine", "fitness", "money", "business", "law"]
+    }
+  ],
+
   /* Academic subjects — K-12 through college. Topics start "coming soon". */
   academic: [
     {
