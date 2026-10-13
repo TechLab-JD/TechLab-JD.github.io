@@ -190,12 +190,12 @@
       order.push({ app: "folder-" + s.key, icon: s.icon || "📁", short: s.short || s.title, title: s.title });
     });
 
-    /* "Browse by Grade" — the grade picker / per-grade dashboard (grade spine). First icon + start-menu item. */
+    /* Browse by Grade + Report Card are the student/progress tools. They are NOT
+       desktop icons anymore — they live behind the level badge in the taskbar tray
+       (see wireProgressMenu below), keeping the desktop to pure subjects. */
     APPS["bygrade"] = { title: "Browse by Grade", icon: "🎓" };
-    order.unshift({ app: "bygrade", icon: "🎓", short: "By Grade", title: "Browse by grade (K–12 + College)" });
     APPS["course"] = { title: "Mastery Course", icon: "🎯" };
     APPS["transcript"] = { title: "Report Card", icon: "📋" };
-    order.splice(1, 0, { app: "transcript", icon: "📋", short: "Report Card", title: "Report card & transcript (grades + GPA)" });
 
     /* Apply the user's saved icon arrangement (drag-and-drop); new subjects fall to the end. */
     var ORDER_KEY = "lab404.desktopOrder";
@@ -227,19 +227,22 @@
           localStorage.setItem(ORDER_KEY, JSON.stringify(keys));
         } catch (e) {}
       }
+      /* Drag to reorder. The move/up are tracked on `document` (not via pointer
+         capture) because insertBefore moves the dragged node mid-drag, which drops
+         an implicit capture on some browsers and froze the old handler. */
       var drag = null;
       di.addEventListener("pointerdown", function (e) {
+        if (e.button && e.button !== 0) return;
         var icon = e.target.closest(".desktop-icon");
-        if (!icon || (e.button && e.button !== 0)) return;
-        drag = { el: icon, x: e.clientX, y: e.clientY, moved: false, pid: e.pointerId };
+        if (!icon || icon.parentNode !== di) return;
+        drag = { el: icon, x: e.clientX, y: e.clientY, moved: false };
       });
-      di.addEventListener("pointermove", function (e) {
+      document.addEventListener("pointermove", function (e) {
         if (!drag) return;
         if (!drag.moved) {
-          if (Math.abs(e.clientX - drag.x) < 6 && Math.abs(e.clientY - drag.y) < 6) return;
+          if (Math.abs(e.clientX - drag.x) < 5 && Math.abs(e.clientY - drag.y) < 5) return;
           drag.moved = true;
           drag.el.classList.add("dragging");
-          try { drag.el.setPointerCapture(drag.pid); } catch (_) {}
         }
         e.preventDefault();
         var under = document.elementFromPoint(e.clientX, e.clientY);
@@ -249,21 +252,19 @@
           di.insertBefore(drag.el, (e.clientY < r.top + r.height / 2) ? under : under.nextSibling);
         }
       });
-      function endDrag() {
+      document.addEventListener("pointerup", function () {
         if (!drag) return;
         var d = drag; drag = null;
-        if (d.moved) {
-          d.el.classList.remove("dragging");
-          try { d.el.releasePointerCapture(d.pid); } catch (_) {}
-          saveOrder();
-          /* swallow the click that fires right after a drag */
-          var block = function (ev) { ev.stopPropagation(); ev.preventDefault(); d.el.removeEventListener("click", block, true); };
-          d.el.addEventListener("click", block, true);
-          setTimeout(function () { d.el.removeEventListener("click", block, true); }, 350);
-        }
-      }
-      di.addEventListener("pointerup", endDrag);
-      di.addEventListener("pointercancel", function () { if (drag && drag.moved) drag.el.classList.remove("dragging"); drag = null; });
+        if (!d.moved) return;
+        d.el.classList.remove("dragging");
+        saveOrder();
+        /* Swallow the click that fires right after a drag so it doesn't open the folder.
+           stopImmediatePropagation (capture phase) also blocks same-element listeners. */
+        var block = function (ev) { ev.stopImmediatePropagation(); ev.preventDefault(); d.el.removeEventListener("click", block, true); };
+        d.el.addEventListener("click", block, true);
+        setTimeout(function () { d.el.removeEventListener("click", block, true); }, 400);
+      });
+      document.addEventListener("pointercancel", function () { if (drag && drag.moved) drag.el.classList.remove("dragging"); drag = null; });
     }
     var sms = document.getElementById("startSubjects");
     if (sms) {
@@ -1686,6 +1687,44 @@
       }
     });
   });
+
+  /* ── Progress menu behind the level badge (Browse by Grade + Report Card) ──
+     These two aren't desktop icons; clicking the taskbar level badge opens them. */
+  (function wireProgressMenu() {
+    var badge = document.getElementById("trayXP");
+    if (!badge) return;
+    badge.setAttribute("role", "button");
+    badge.setAttribute("tabindex", "0");
+    badge.setAttribute("aria-haspopup", "true");
+    badge.setAttribute("aria-expanded", "false");
+
+    var menu = document.createElement("div");
+    menu.className = "progress-menu";
+    menu.setAttribute("hidden", "");
+    menu.innerHTML =
+      '<div class="progress-menu-h">Your progress</div>' +
+      '<button class="progress-menu-item" data-app="bygrade"><span>🎓</span> Browse by Grade</button>' +
+      '<button class="progress-menu-item" data-app="transcript"><span>📋</span> Report Card</button>';
+    document.body.appendChild(menu);
+
+    function place() {
+      var r = badge.getBoundingClientRect();
+      menu.style.right = Math.max(8, window.innerWidth - r.right) + "px";
+      menu.style.bottom = (window.innerHeight - r.top + 8) + "px";
+    }
+    function open() { place(); menu.removeAttribute("hidden"); badge.setAttribute("aria-expanded", "true"); }
+    function close() { menu.setAttribute("hidden", ""); badge.setAttribute("aria-expanded", "false"); }
+
+    badge.addEventListener("click", function (e) { e.stopPropagation(); if (menu.hasAttribute("hidden")) open(); else close(); });
+    badge.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); if (menu.hasAttribute("hidden")) open(); else close(); } });
+    menu.addEventListener("click", function (e) { e.stopPropagation(); });
+    menu.querySelectorAll(".progress-menu-item[data-app]").forEach(function (b) {
+      b.addEventListener("click", function () { Desktop.openWindow(this.getAttribute("data-app")); close(); });
+    });
+    document.addEventListener("click", close);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+    window.addEventListener("resize", function () { if (!menu.hasAttribute("hidden")) place(); });
+  })();
 
   /* ── Clock ── */
   var clockEl = document.getElementById("taskbarClock");

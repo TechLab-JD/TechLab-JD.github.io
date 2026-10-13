@@ -76,6 +76,7 @@ window.LAB404_SUBJECTS = {
     {
       key: "english", title: "English & Language Arts", short: "English", icon: "📖",
       desc: "Read, write and think clearly — grammar, vocabulary & literature",
+      adopt: ["writing"],  /* nest Writing & Journalism inside English */
       topics: [
         { t: "Reading & Phonics", band: "K-5", grades: ["K", "1", "2", "3", "4", "5"] },
         { t: "Grammar & Mechanics", band: "6-12", grades: ["3", "4", "5", "6", "7", "8", "9", "10", "11", "12"] },
@@ -108,6 +109,7 @@ window.LAB404_SUBJECTS = {
     },
     {
       key: "languages", title: "World Languages", short: "Languages", icon: "🌍",
+      adopt: ["english"],  /* nest English & Language Arts inside World Languages */
       desc: "Learn to speak, read and understand another language",
       topics: [
         { t: "Spanish", band: "all", grades: ["6", "7", "8", "9", "10", "11", "12"] },

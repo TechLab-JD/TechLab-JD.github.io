@@ -37,7 +37,34 @@ body.os-mode {
 /* Drag-and-drop reordering of desktop subjects (pointer-based, touch-friendly) */
 .desktop-icon { cursor: grab; touch-action: none; }
 .desktop-icon:active { cursor: grabbing; }
-.desktop-icon.dragging { opacity: 0.4; }
+.desktop-icon.dragging { opacity: 0.4; pointer-events: none; }
+
+/* Level badge opens a small progress menu (Browse by Grade + Report Card) */
+.tray-xp { cursor: pointer; }
+.tray-xp:hover { filter: brightness(1.15); }
+.progress-menu {
+  position: fixed;
+  z-index: 10000;
+  min-width: 190px;
+  background: var(--panel, #1e2330);
+  border: 1px solid var(--border, #333a4a);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  padding: 6px;
+}
+.progress-menu[hidden] { display: none; }
+.progress-menu-h {
+  font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--text-muted, #9aa); padding: 6px 8px 4px; font-weight: 700;
+}
+.progress-menu-item {
+  display: flex; align-items: center; gap: 8px; width: 100%;
+  background: none; border: 0; border-radius: 7px; cursor: pointer;
+  color: var(--text, #eee); font: inherit; font-size: 0.84rem;
+  padding: 9px 10px; text-align: left;
+}
+.progress-menu-item:hover { background: var(--accent2, #4a90e2); color: #fff; }
+.progress-menu-item span { font-size: 1rem; }
 
 .desktop-icon {
   display: flex;
