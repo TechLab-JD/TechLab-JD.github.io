@@ -149,6 +149,8 @@
     APPS["bygrade"] = { title: "Browse by Grade", icon: "🎓" };
     order.unshift({ app: "bygrade", icon: "🎓", short: "By Grade", title: "Browse by grade (K–12 + College)" });
     APPS["course"] = { title: "Mastery Course", icon: "🎯" };
+    APPS["transcript"] = { title: "Report Card", icon: "📋" };
+    order.splice(1, 0, { app: "transcript", icon: "📋", short: "Report Card", title: "Report card & transcript (grades + GPA)" });
 
     /* Apply the user's saved icon arrangement (drag-and-drop); new subjects fall to the end. */
     var ORDER_KEY = "lab404.desktopOrder";
@@ -287,6 +289,7 @@
       if (app === "about")   { winEl.style.width = "400px"; winEl.style.height = "340px"; }
       if (app === "bygrade") { winEl.style.width = "740px"; winEl.style.height = "640px"; }
       if (app === "course")  { winEl.style.width = "780px"; winEl.style.height = "660px"; }
+      if (app === "transcript") { winEl.style.width = "640px"; winEl.style.height = "600px"; }
 
       /* Cert theme for folder titlebars */
       if (appDef.cert) winEl.setAttribute("data-cert", appDef.cert);
@@ -687,6 +690,8 @@
       } else if (app === "course") {
         if (window.CourseLoader) window.CourseLoader.init(content, params || {});
         else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Course loader not available.</div>';
+      } else if (app === "transcript") {
+        Desktop._renderTranscript(winId);
       } else if (app === "chapters-1") {
         Desktop._renderChapterList(winId, 1);
       } else if (app === "chapters-2") {
@@ -756,6 +761,81 @@
             '<p style="font-size:0.68rem;color:var(--text-faint);margin:0;">Built for CompTIA A+ 220-1201/1202 and beyond</p>' +
           '</div>';
       }
+    },
+
+    _renderTranscript: function (winId) {
+      var content = document.getElementById(winId + "-content");
+      if (!content) return;
+      var COURSES = window.LAB404_COURSES || {};
+      var M = window.LAB404_MASTERY;
+      function gFull(g) { return g === "K" ? "Kindergarten" : g === "C" ? "College / Intro" : "Grade " + g; }
+      function gcol(gpa) { return gpa >= 3.5 ? "#3cbe6e" : gpa >= 2.5 ? "#4a90e2" : gpa >= 1.5 ? "#e0a93c" : "#e0484a"; }
+      var GORDER = ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "C"];
+
+      if (!document.getElementById("tc-style")) {
+        var st = document.createElement("style"); st.id = "tc-style";
+        st.textContent =
+          ".tc-wrap{padding:16px;font-size:.9rem}" +
+          ".tc-head{display:flex;gap:20px;align-items:center;border:1px solid var(--border,#334);border-radius:14px;padding:16px;margin-bottom:16px;flex-wrap:wrap}" +
+          ".tc-head .col{text-align:center}" +
+          ".tc-big{font-size:2rem;font-weight:800;line-height:1}" +
+          ".tc-head small{display:block;font-size:.62rem;color:var(--text-muted,#9aa);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-top:3px}" +
+          ".tc-title{font-size:1.15rem;font-weight:800;color:var(--accent2,#4a90e2);margin:0 0 2px}" +
+          ".tc-sub{font-size:.72rem;color:var(--text-muted,#9aa);margin:0}" +
+          ".tc-gradehd{font-weight:700;font-size:.8rem;color:var(--text-muted,#9aa);text-transform:uppercase;letter-spacing:.4px;margin:16px 0 7px}" +
+          ".tc-course{display:flex;align-items:center;gap:12px;border:1px solid var(--border,#334);border-radius:10px;padding:10px 13px;margin-bottom:6px;cursor:pointer}" +
+          ".tc-course:hover{background:rgba(127,127,127,.1)}" +
+          ".tc-cmain{flex:1;min-width:0}.tc-ctitle{font-weight:700;font-size:.88rem}" +
+          ".tc-cmeta{font-size:.68rem;color:var(--text-muted,#9aa);margin-top:2px}" +
+          ".tc-cg{text-align:center;min-width:40px}.tc-cg b{font-size:1.3rem;font-weight:800;display:block;line-height:1}.tc-cg small{font-size:.56rem;color:var(--text-faint,#778)}" +
+          ".tc-empty{color:var(--text-muted,#9aa);font-size:.85rem;padding:16px 0;line-height:1.6}" +
+          ".tc-note{color:var(--text-faint,#778);font-size:.68rem;margin-top:14px;line-height:1.5}";
+        document.head.appendChild(st);
+      }
+
+      var ids = Object.keys(COURSES);
+      var cumW = 0, cumGpaW = 0, startedN = 0, masteredTot = 0, objTot = 0;
+      ids.forEach(function (id) {
+        var r = M.readiness(id); if (!r) return;
+        objTot += r.total; masteredTot += r.mastered;
+        if (r.started) { var w = r.total || 1; cumW += w; cumGpaW += r.gpa * w; startedN++; }
+      });
+      var cumGpa = cumW ? cumGpaW / cumW : 0;
+
+      var groups = "";
+      GORDER.forEach(function (g) {
+        var gids = ids.filter(function (id) { return COURSES[id].grade === g; });
+        if (!gids.length) return;
+        var rows = gids.map(function (id) {
+          var c = COURSES[id], r = M.readiness(id);
+          var meta = r.started ? (Math.round(r.pct * 100) + "% ready · " + r.mastered + "/" + r.total + " objectives mastered") : "Not started — open to take the placement test";
+          return '<div class="tc-course" data-course="' + escHtml(id) + '">' +
+            '<div class="tc-cmain"><div class="tc-ctitle">' + escHtml(c.title) + '</div><div class="tc-cmeta">' + escHtml(meta) + '</div></div>' +
+            (r.started
+              ? '<div class="tc-cg"><b style="color:' + gcol(r.gpa) + '">' + r.letter + '</b><small>grade</small></div><div class="tc-cg"><b>' + r.gpa.toFixed(1) + '</b><small>GPA</small></div>'
+              : '<div class="tc-cg"><b style="color:var(--text-faint,#778)">—</b><small>grade</small></div>') +
+            '</div>';
+        }).join("");
+        groups += '<div class="tc-gradehd">' + gFull(g) + '</div>' + rows;
+      });
+      if (!groups) groups = '<div class="tc-empty">No mastery courses yet. Open <b>🎓 By Grade</b>, pick a grade, and start a mastery course — your grades and GPA will show up here like a report card.</div>';
+
+      content.innerHTML =
+        '<div class="tc-wrap">' +
+          '<div class="tc-head">' +
+            '<div class="col" style="flex:1;text-align:left;min-width:160px"><div class="tc-title">📋 Report Card & Transcript</div>' +
+              '<p class="tc-sub">Your whole education on one page — grades are mastery-driven and climb as you learn.</p></div>' +
+            '<div class="col"><span class="tc-big" style="color:' + gcol(cumGpa) + '">' + cumGpa.toFixed(2) + '</span><small>Cumulative GPA</small></div>' +
+            '<div class="col"><span class="tc-big">' + masteredTot + "/" + objTot + '</span><small>Objectives mastered</small></div>' +
+            '<div class="col"><span class="tc-big">' + startedN + '</span><small>Courses started</small></div>' +
+          '</div>' +
+          groups +
+          '<p class="tc-note">GPA is weighted by each course’s number of objectives and counts only courses you’ve started. Grades are <b>living</b> — they rise toward an A as objectives reach <b>Mastered</b> (85%+). As more mastery courses are added across the grades, they’ll appear here automatically.</p>' +
+        '</div>';
+
+      content.querySelectorAll(".tc-course[data-course]").forEach(function (b) {
+        b.addEventListener("click", function () { Desktop.openWindow("course", { course: this.getAttribute("data-course") }); });
+      });
     },
 
     _renderGradeDash: function (winId) {
