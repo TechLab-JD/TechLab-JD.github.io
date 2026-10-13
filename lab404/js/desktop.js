@@ -1030,7 +1030,7 @@
       if (isAcademic && hasCourses) {
         Desktop._gradePickerStyle(); Desktop._folderCourseStyle();
         var allKeys = Object.keys(COURSES).filter(function (k) { return COURSES[k].subjectKey === subjKey; })
-          .sort(function (a, b) { return String(COURSES[a].grade).localeCompare(String(COURSES[b].grade), undefined, { numeric: true }); });
+          .sort(function (a, b) { return Desktop._GRADES.indexOf(String(COURSES[a].grade)) - Desktop._GRADES.indexOf(String(COURSES[b].grade)); });
         var level = "all"; try { level = localStorage.getItem("lab404.folderLevel") || "all"; } catch (e) {}
         if (level !== "all" && !allKeys.some(function (k) { return String(COURSES[k].grade) === level; })) level = "all";
         var chips = '<div class="gp-bar"><span class="gp-lab">Level · optional</span>' +
