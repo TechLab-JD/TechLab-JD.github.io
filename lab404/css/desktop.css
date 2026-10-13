@@ -66,6 +66,35 @@ body.os-mode {
 .progress-menu-item:hover { background: var(--accent2, #4a90e2); color: #fff; }
 .progress-menu-item span { font-size: 1rem; }
 
+/* Clock opens a calendar popup */
+.taskbar-clock { cursor: pointer; }
+.cal-pop {
+  position: fixed; z-index: 10000; width: 220px; padding: 10px;
+  background: var(--panel, #1e2330); border: 1px solid var(--border, #333a4a);
+  border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+.cal-pop[hidden] { display: none; }
+.cal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.cal-title { font-size: 0.82rem; font-weight: 700; color: var(--text, #eee); }
+.cal-nav {
+  background: none; border: 0; color: var(--text, #eee); cursor: pointer;
+  font-size: 1.1rem; line-height: 1; padding: 2px 8px; border-radius: 6px;
+}
+.cal-nav:hover { background: var(--accent2, #4a90e2); color: #fff; }
+.cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+.cal-dow {
+  font-size: 0.58rem; text-transform: uppercase; color: var(--text-muted, #9aa);
+  text-align: center; padding: 2px 0; font-weight: 700;
+}
+.cal-cell { text-align: center; font-size: 0.72rem; color: var(--text, #eee); padding: 5px 0; border-radius: 6px; }
+.cal-empty { visibility: hidden; }
+.cal-today { background: var(--accent2, #4a90e2); color: #fff; font-weight: 700; }
+.cal-today-btn {
+  margin-top: 8px; width: 100%; background: none; border: 1px solid var(--border, #333a4a);
+  border-radius: 7px; color: var(--text, #eee); cursor: pointer; font: inherit; font-size: 0.72rem; padding: 6px;
+}
+.cal-today-btn:hover { background: var(--accent2, #4a90e2); color: #fff; }
+
 .desktop-icon {
   display: flex;
   flex-direction: column;

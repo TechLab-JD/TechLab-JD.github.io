@@ -1726,6 +1726,71 @@
     window.addEventListener("resize", function () { if (!menu.hasAttribute("hidden")) place(); });
   })();
 
+  /* ── Calendar popup behind the taskbar clock ── */
+  (function wireCalendar() {
+    var clock = document.getElementById("taskbarClock");
+    if (!clock) return;
+    clock.setAttribute("role", "button");
+    clock.setAttribute("tabindex", "0");
+    clock.setAttribute("aria-haspopup", "true");
+
+    var pop = document.createElement("div");
+    pop.className = "cal-pop";
+    pop.setAttribute("hidden", "");
+    document.body.appendChild(pop);
+
+    var viewY, viewM;
+    var MON = ["January", "February", "March", "April", "May", "June",
+               "July", "August", "September", "October", "November", "December"];
+    var DOW = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+
+    function render() {
+      var today = new Date();
+      var startDow = new Date(viewY, viewM, 1).getDay();
+      var daysInMonth = new Date(viewY, viewM + 1, 0).getDate();
+      var cells = "";
+      DOW.forEach(function (d) { cells += '<div class="cal-dow">' + d + "</div>"; });
+      for (var i = 0; i < startDow; i++) cells += '<div class="cal-cell cal-empty"></div>';
+      for (var day = 1; day <= daysInMonth; day++) {
+        var isToday = (day === today.getDate() && viewM === today.getMonth() && viewY === today.getFullYear());
+        cells += '<div class="cal-cell' + (isToday ? " cal-today" : "") + '">' + day + "</div>";
+      }
+      pop.innerHTML =
+        '<div class="cal-head">' +
+          '<button class="cal-nav" data-nav="-1" aria-label="Previous month">‹</button>' +
+          '<span class="cal-title">' + MON[viewM] + " " + viewY + "</span>" +
+          '<button class="cal-nav" data-nav="1" aria-label="Next month">›</button>' +
+        "</div>" +
+        '<div class="cal-grid">' + cells + "</div>" +
+        '<button class="cal-today-btn">Today</button>';
+      pop.querySelectorAll(".cal-nav").forEach(function (b) {
+        b.addEventListener("click", function (e) {
+          e.stopPropagation();
+          viewM += parseInt(this.getAttribute("data-nav"), 10);
+          if (viewM < 0) { viewM = 11; viewY--; } else if (viewM > 11) { viewM = 0; viewY++; }
+          render();
+        });
+      });
+      pop.querySelector(".cal-today-btn").addEventListener("click", function (e) {
+        e.stopPropagation(); var t = new Date(); viewY = t.getFullYear(); viewM = t.getMonth(); render();
+      });
+    }
+    function place() {
+      var r = clock.getBoundingClientRect();
+      pop.style.right = Math.max(8, window.innerWidth - r.right) + "px";
+      pop.style.bottom = (window.innerHeight - r.top + 8) + "px";
+    }
+    function open() { var t = new Date(); viewY = t.getFullYear(); viewM = t.getMonth(); render(); place(); pop.removeAttribute("hidden"); }
+    function close() { pop.setAttribute("hidden", ""); }
+
+    clock.addEventListener("click", function (e) { e.stopPropagation(); if (pop.hasAttribute("hidden")) open(); else close(); });
+    clock.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); if (pop.hasAttribute("hidden")) open(); else close(); } });
+    pop.addEventListener("click", function (e) { e.stopPropagation(); });
+    document.addEventListener("click", close);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+    window.addEventListener("resize", function () { if (!pop.hasAttribute("hidden")) place(); });
+  })();
+
   /* ── Clock ── */
   var clockEl = document.getElementById("taskbarClock");
   function updateClock() {
