@@ -5,6 +5,26 @@
 window.CourseLoader = (function () {
   var M = window.LAB404_MASTERY;
   var el, courseId, course, quiz = null;
+  var audio = { base: "", have: null, autoplay: false, cur: null };  // pre-rendered Kokoro clips (optional per course)
+
+  function loadAudioManifest() {
+    audio.have = null; audio.cur = null;
+    audio.base = "audio/courses/" + courseId + "/";
+    audio.autoplay = /^(K|1|2|3)$/.test(String(course.grade));
+    try {
+      fetch(audio.base + "manifest.json", { cache: "no-cache" })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (m) { audio.have = (m && m.files) || {}; })
+        .catch(function () { audio.have = {}; });
+    } catch (e) { audio.have = {}; }
+  }
+  function hasClip(qid) { return !!(audio.have && audio.have[qid]); }
+  function stopClip() { if (audio.cur) { try { audio.cur.pause(); } catch (e) {} audio.cur = null; } }
+  function playClip(qid) {
+    if (!hasClip(qid)) return;
+    stopClip();
+    try { audio.cur = new Audio(audio.base + audio.have[qid].file); audio.cur.play().catch(function () {}); } catch (e) {}
+  }
 
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]; }); }
   function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
@@ -51,6 +71,8 @@ window.CourseLoader = (function () {
       ".cv-q{max-width:560px;margin:0 auto}" +
       ".cv-prog{font-size:.72rem;color:var(--text-muted,#9aa);margin-bottom:6px;display:flex;justify-content:space-between}" +
       ".cv-qtext{font-size:1.05rem;font-weight:600;line-height:1.5;margin:6px 0 16px}" +
+      ".cv-spk{display:inline-flex;align-items:center;gap:7px;border:1.5px solid var(--accent2,#4a90e2);background:rgba(74,144,226,.1);color:var(--accent2,#4a90e2);border-radius:99px;padding:7px 15px;font:inherit;font-weight:700;font-size:.82rem;cursor:pointer;margin:0 0 14px}" +
+      ".cv-spk:active{transform:scale(.96)}" +
       ".cv-opts{display:flex;flex-direction:column;gap:8px}" +
       ".cv-opt{text-align:left;border:1.5px solid var(--border,#334);border-radius:10px;padding:11px 14px;background:transparent;color:var(--text,#eee);cursor:pointer;font:inherit;font-size:.9rem}" +
       ".cv-opt.sel{border-color:var(--accent2,#4a90e2);background:rgba(74,144,226,.1)}" +
@@ -81,6 +103,7 @@ window.CourseLoader = (function () {
     course = (window.LAB404_COURSES || {})[courseId];
     injectStyle();
     if (!course || !M) { el.innerHTML = '<div class="cv-wrap">Course not available.</div>'; return; }
+    loadAudioManifest();
     renderDash();
   }
 
@@ -103,6 +126,11 @@ window.CourseLoader = (function () {
       banner = '<div class="cv-banner"><p><b>Keep going.</b> Practice your weakest objectives to raise your readiness toward an A.</p>' +
         '<button class="cv-btn" data-act="weakest">🎯 Practice weakest</button></div>';
     }
+    if (r.placed && r.reviewDue) {  // spaced review takes priority — stale mastery is dragging the grade down
+      banner = '<div class="cv-banner"><p>🔁 <b>' + r.reviewDue + ' objective' + (r.reviewDue > 1 ? 's' : '') + ' due for review.</b> ' +
+        'Mastery fades over time — a quick review locks it back in and restores your grade.</p>' +
+        '<button class="cv-btn" data-act="review">🔁 Review now</button></div>';
+    }
 
     var doms = (course.domains || []).map(function (dm) {
       var objs = (course.objectives || []).filter(function (o) { return o.domain === dm.code; });
@@ -114,7 +142,7 @@ window.CourseLoader = (function () {
           '<div class="cv-obj-main"><div class="cv-obj-code">' + esc(ob.code) + ' · ' + esc((ob.xwalk && ob.xwalk.cc) || "") + '</div>' +
           '<div class="cv-obj-title">' + esc(ob.title) + '</div>' +
           '<div class="cv-obj-bar"><span class="cv-b-' + s.band + '" style="width:' + Math.round(s.pct * 100) + '%"></span></div></div>' +
-          pill(s.band, s.bandLabel + (s.seen ? " · " + Math.round(s.pct * 100) + "%" : "")) +
+          pill(s.band, s.bandLabel + (s.seen ? " · " + Math.round(s.pct * 100) + "%" : "") + (s.dueForReview ? " · review due" : "")) +
           '<button class="cv-btn ghost sm" data-practice="' + esc(ob.code) + '"' + (nq ? "" : " disabled") + '>Practice</button>' +
           '</div>';
       }).join("");
@@ -141,6 +169,7 @@ window.CourseLoader = (function () {
         var a = this.getAttribute("data-act");
         if (a === "placement") startQuiz("placement");
         else if (a === "weakest") startQuiz("weakest");
+        else if (a === "review") startQuiz("review");
         else if (a === "reset") { if (confirm("Reset all progress for this course?")) { M.reset(courseId); renderDash(); } }
       });
     });
@@ -162,6 +191,9 @@ window.CourseLoader = (function () {
     } else if (mode === "weakest") {
       M.weakest(courseId, 3).forEach(function (c) { qs = qs.concat(M.questionsFor(courseId, c)); });
       shuffle(qs);
+    } else if (mode === "review") {
+      M.dueReview(courseId).forEach(function (c) { qs = qs.concat(M.questionsFor(courseId, c)); });
+      shuffle(qs);
     }
     if (!qs.length) { renderDash(); return; }
     quiz = { mode: mode, qs: qs, i: 0, correct: 0, answered: false };
@@ -169,8 +201,9 @@ window.CourseLoader = (function () {
   }
 
   function renderQ() {
+    stopClip();
     var q = quiz.qs[quiz.i];
-    var title = quiz.mode === "placement" ? "Placement check" : quiz.mode === "weakest" ? "Practice — weakest objectives" : "Practice — " + q.obj;
+    var title = quiz.mode === "placement" ? "Placement check" : quiz.mode === "weakest" ? "Practice — weakest objectives" : quiz.mode === "review" ? "🔁 Review — due objectives" : "Practice — " + q.obj;
     var body;
     if (q.type === "numeric") {
       body = '<input class="cv-num" id="cv-in" type="text" inputmode="decimal" autocomplete="off" placeholder="Your answer">' +
@@ -183,10 +216,12 @@ window.CourseLoader = (function () {
           return '<button class="cv-opt" data-i="' + i + '">' + esc(q.options[i]) + '</button>';
         }).join("") + '</div>';
     }
+    var spk = hasClip(q.id) ? '<button class="cv-spk" id="cv-spk">🔊 Listen</button>' : "";
     el.innerHTML =
       '<div class="cv-wrap"><div class="cv-q">' +
         '<div class="cv-prog"><span>' + esc(title) + '</span><span>' + (quiz.i + 1) + " / " + quiz.qs.length + '</span></div>' +
         '<div class="cv-qtext">' + esc(q.q) + '</div>' +
+        spk +
         body +
         '<div id="cv-fb"></div>' +
         '<div class="cv-row" id="cv-row"><button class="cv-btn" id="cv-check">Check</button>' +
@@ -208,7 +243,10 @@ window.CourseLoader = (function () {
         }
       });
     });
-    document.getElementById("cv-quit").addEventListener("click", function () { quiz = null; renderDash(); });
+    var spkBtn = document.getElementById("cv-spk");
+    if (spkBtn) spkBtn.addEventListener("click", function () { playClip(q.id); });
+    if (spkBtn && audio.autoplay) playClip(q.id);  // early grades (K-3): read the question aloud automatically
+    document.getElementById("cv-quit").addEventListener("click", function () { stopClip(); quiz = null; renderDash(); });
     document.getElementById("cv-check").addEventListener("click", function () {
       if (quiz.answered) return;
       var resp = q.type === "numeric" ? document.getElementById("cv-in").value : sel;
@@ -250,6 +288,7 @@ window.CourseLoader = (function () {
   }
 
   function finish() {
+    stopClip();
     if (quiz.mode === "placement") M.markPlaced(courseId);
     var s = quiz, r = M.readiness(courseId); quiz = null;
     el.innerHTML =

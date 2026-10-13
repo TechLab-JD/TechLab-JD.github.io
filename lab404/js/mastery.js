@@ -8,6 +8,13 @@ window.LAB404_MASTERY = (function () {
   var RECENT = 8;        // how many recent attempts count per objective
   var THRESHOLD = 0.85;  // world-class mastery bar
   var MIN_FOR_MASTERED = 4; // consistency: can't "master" on one lucky hit
+  // Spaced review + decay: mastery is NOT permanent. Each objective sits in a Leitner "box"
+  // that sets how long until it's due for review; once overdue its effective mastery decays,
+  // so a grade reflects durable (re-demonstrated) competence. Re-practicing restores it.
+  var DAY = 86400000;
+  var BOX_DAYS = [0, 1, 3, 7, 16, 35];   // review interval per box; box grows as an objective is held strong
+  var DECAY_FLOOR = 0.5;                 // overdue mastery never decays below half of what was earned
+  var FRESH_MIN = 0.70;                  // only "strong+"" objectives are scheduled/decayed (weak ones are just "study now")
 
   function course(id) { return (window.LAB404_COURSES || {})[id] || null; }
   function key(id) { return "lab404.mastery." + id; }
@@ -27,6 +34,14 @@ window.LAB404_MASTERY = (function () {
     o.recent.push(correct ? 1 : 0);
     while (o.recent.length > RECENT) o.recent.shift();
     o.seen = (o.seen || 0) + 1;
+    // spaced-review scheduling: grow the interval only while the objective is held strong,
+    // drop it hard on a miss, and stamp when it's next due.
+    var n = o.recent.length;
+    var raw = n ? o.recent.reduce(function (a, b) { return a + b; }, 0) / n : 0;
+    if (correct) { if (raw >= FRESH_MIN) o.box = Math.min((o.box || 0) + 1, BOX_DAYS.length - 1); }
+    else { o.box = Math.max(0, (o.box || 0) - 2); }
+    o.last = Date.now();
+    o.due = o.last + BOX_DAYS[o.box || 0] * DAY;
     save(id, st);
     return o;
   }
@@ -46,9 +61,24 @@ window.LAB404_MASTERY = (function () {
     st = st || load(id);
     var o = st.obj[code] || { recent: [], seen: 0 };
     var n = o.recent.length;
-    var pct = n ? o.recent.reduce(function (a, b) { return a + b; }, 0) / n : 0;
+    var raw = n ? o.recent.reduce(function (a, b) { return a + b; }, 0) / n : 0;
+    var pct = raw, dueForReview = false, overdueDays = 0;
+    // time-based decay: a strong/mastered objective left past its review date loses effective
+    // mastery (down to a floor) and is flagged for review; re-practicing (record) refreshes it.
+    if (o.due && raw >= FRESH_MIN && Date.now() > o.due) {
+      var interval = (BOX_DAYS[Math.min(o.box || 0, BOX_DAYS.length - 1)] || 1) * DAY;
+      var ratio = (Date.now() - o.due) / interval;
+      pct = raw * Math.max(DECAY_FLOOR, 1 - 0.25 * ratio);
+      dueForReview = true;
+      overdueDays = Math.floor((Date.now() - o.due) / DAY);
+      var b0 = bandOf(pct, o.seen || 0);
+      // stale mastery must be re-confirmed: cap a mastered objective to strong, and to needs if long overdue
+      if (b0 === "mastered") b0 = ratio > 1 ? "needs" : "strong";
+      else if (b0 === "strong" && ratio > 1) b0 = "needs";
+      return { code: code, pct: pct, rawPct: raw, band: b0, bandLabel: BAND_LABEL[b0], seen: o.seen || 0, dueForReview: true, overdueDays: overdueDays };
+    }
     var band = bandOf(pct, o.seen || 0);
-    return { code: code, pct: pct, band: band, bandLabel: BAND_LABEL[band], seen: o.seen || 0 };
+    return { code: code, pct: pct, rawPct: raw, band: band, bandLabel: BAND_LABEL[band], seen: o.seen || 0, dueForReview: false, overdueDays: 0 };
   }
 
   var GRADE_TABLE = [
@@ -64,11 +94,12 @@ window.LAB404_MASTERY = (function () {
   function readiness(id) {
     var c = course(id); if (!c) return null;
     var st = load(id);
-    var wSum = 0, pSum = 0, counts = { none: 0, weak: 0, needs: 0, strong: 0, mastered: 0 }, started = false;
+    var wSum = 0, pSum = 0, counts = { none: 0, weak: 0, needs: 0, strong: 0, mastered: 0 }, started = false, reviewDue = 0;
     (c.objectives || []).forEach(function (ob) {
       var s = objStats(id, ob.code, st), w = ob.weight || 1;
       wSum += w; pSum += s.pct * w;
       counts[s.band]++;
+      if (s.dueForReview) reviewDue++;
       if (s.seen > 0) started = true;
     });
     var pct = wSum ? pSum / wSum : 0;
@@ -76,7 +107,7 @@ window.LAB404_MASTERY = (function () {
     var total = (c.objectives || []).length;
     return {
       pct: pct, letter: g.letter, gpa: g.gpa, counts: counts, total: total,
-      mastered: counts.mastered, started: started, placed: !!st.placed,
+      mastered: counts.mastered, started: started, placed: !!st.placed, reviewDue: reviewDue,
       complete: total > 0 && counts.mastered === total
     };
   }
@@ -86,6 +117,16 @@ window.LAB404_MASTERY = (function () {
     var st = load(id);
     var arr = (c.objectives || []).map(function (ob) { return objStats(id, ob.code, st); });
     arr.sort(function (a, b) { return (BAND_RANK[a.band] - BAND_RANK[b.band]) || (a.pct - b.pct); });
+    return arr.slice(0, n || arr.length).map(function (s) { return s.code; });
+  }
+
+  // objectives that were learned (strong/mastered) but are now past their review date — most overdue first
+  function dueReview(id, n) {
+    var c = course(id); if (!c) return [];
+    var st = load(id);
+    var arr = (c.objectives || []).map(function (ob) { return objStats(id, ob.code, st); })
+      .filter(function (s) { return s.dueForReview; });
+    arr.sort(function (a, b) { return b.overdueDays - a.overdueDays; });
     return arr.slice(0, n || arr.length).map(function (s) { return s.code; });
   }
 
@@ -111,6 +152,6 @@ window.LAB404_MASTERY = (function () {
     RECENT: RECENT, THRESHOLD: THRESHOLD, BAND_LABEL: BAND_LABEL, BAND_RANK: BAND_RANK,
     course: course, load: load, save: save, reset: reset, record: record, markPlaced: markPlaced,
     bandOf: bandOf, objStats: objStats, grade: grade, readiness: readiness, weakest: weakest,
-    check: check, questionsFor: questionsFor
+    dueReview: dueReview, check: check, questionsFor: questionsFor
   };
 })();
