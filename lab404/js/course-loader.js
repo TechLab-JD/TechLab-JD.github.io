@@ -69,6 +69,7 @@ window.CourseLoader = (function () {
       ".cv-note{color:var(--text-faint,#778);font-size:.68rem;margin-top:12px;line-height:1.5}" +
       ".cv-objwrap{margin-bottom:6px}" +
       ".cv-learn{border-left:3px solid var(--accent2,#4a90e2);border-radius:0 8px 8px 0;margin:0 0 8px;padding:11px 13px;background:rgba(74,144,226,.06);font-size:.85rem;line-height:1.55}" +
+      ".cv-learn.hide{display:none}" +
       ".cv-learn p{margin:0 0 8px}" +
       ".cv-ex{background:rgba(127,127,127,.12);border-radius:8px;padding:8px 11px;margin:4px 0 10px;font-size:.82rem}" +
       ".cv-ex-l{display:block;font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text-muted,#9aa);margin-bottom:3px}" +

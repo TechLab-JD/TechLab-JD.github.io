@@ -1024,28 +1024,29 @@
       var hasCourses = Object.keys(byGrade).length > 0;
       var grade = Desktop._gradeGet();
 
-      var gradeBar = "", courseHtml = "";
+      /* Subject-first: open Math and you get ALL of Math (a tool for everyone, not just students).
+         The grade/level is an OPTIONAL filter, never the structure. Default shows the whole ladder. */
+      var courseHtml = "";
       if (isAcademic && hasCourses) {
-        /* core subject: the graded course (learn + practice per objective) is the ONE path.
-           The grade is the structure; overview topic-lessons are retired here to avoid a second path. */
         Desktop._gradePickerStyle(); Desktop._folderCourseStyle();
-        gradeBar = Desktop._gradeBar(grade);
-        var curKey = byGrade[grade];
-        if (curKey) {
-          courseHtml = '<div class="folder-courses"><div class="folder-courses-h">🎓 ' + escHtml(Desktop._gradeFull(grade)) + ' course</div>' +
-            '<button class="folder-course-btn" data-course="' + escHtml(curKey) + '"><b>' + escHtml(COURSES[curKey].title) +
-            '</b><span>Learn + practice every objective · placement test · mastery bands · live grade</span></button></div>';
-        } else {
-          var avail = Object.keys(byGrade).sort(function (a, b) { return String(a).localeCompare(String(b), undefined, { numeric: true }); });
-          courseHtml = '<div class="folder-courses"><div class="folder-courses-h">🎓 ' + escHtml(Desktop._gradeFull(grade)) + '</div>' +
-            '<div class="folder-course-none">No ' + escHtml(acadSubj.title) + ' course for ' + escHtml(Desktop._gradeFull(grade)) + ' yet' +
-            (avail.length ? ' — available for ' + avail.map(function (g) { return Desktop._gradeShort(g); }).join(", ") + '. Switch grade above.' : ' (K–3 foundation is in progress).') +
-            '</div></div>';
-        }
+        var allKeys = Object.keys(COURSES).filter(function (k) { return COURSES[k].subjectKey === subjKey; })
+          .sort(function (a, b) { return String(COURSES[a].grade).localeCompare(String(COURSES[b].grade), undefined, { numeric: true }); });
+        var level = "all"; try { level = localStorage.getItem("lab404.folderLevel") || "all"; } catch (e) {}
+        if (level !== "all" && !allKeys.some(function (k) { return String(COURSES[k].grade) === level; })) level = "all";
+        var chips = '<div class="gp-bar"><span class="gp-lab">Level · optional</span>' +
+          '<button class="gp-tab' + (level === "all" ? " on" : "") + '" data-level="all">All</button>' +
+          allKeys.map(function (k) { var g = String(COURSES[k].grade); return '<button class="gp-tab' + (level === g ? " on" : "") + '" data-level="' + g + '" title="' + escHtml(Desktop._gradeFull(g)) + '">' + escHtml(Desktop._gradeShort(g)) + '</button>'; }).join("") +
+          '</div>';
+        var shown = (level === "all") ? allKeys : allKeys.filter(function (k) { return String(COURSES[k].grade) === level; });
+        var list = shown.map(function (k) {
+          return '<button class="folder-course-btn" data-course="' + escHtml(k) + '"><b>' + escHtml(COURSES[k].title) +
+            '</b><span>Learn + practice every objective · placement · mastery · live grade</span></button>';
+        }).join("");
+        courseHtml = '<div class="folder-courses"><div class="folder-courses-h">📚 ' + escHtml(acadSubj.title) + ' — choose where to start</div>' +
+          chips + list + '</div>';
       }
 
-      /* lessons grid: shown for subjects WITHOUT a graded course (enrichment / non-core);
-         core subjects use the graded course instead (overview lessons retired). */
+      /* lessons grid: shown for subjects WITHOUT a graded course (enrichment / non-core). */
       var showLessons = !(isAcademic && hasCourses);
       var lessonsBlock = (showLessons && iconsHtml)
         ? ((isAcademic ? '<div class="folder-lessons-h">📘 Lessons</div>' : (courseHtml ? '<div class="folder-lessons-h">Topic lessons</div>' : "")) +
@@ -1054,10 +1055,10 @@
 
       content.innerHTML =
         '<div class="folder-header">' + escHtml(folder.desc) + '</div>' +
-        gradeBar + courseHtml + lessonsBlock;
+        courseHtml + lessonsBlock;
 
-      content.querySelectorAll(".gp-tab[data-grade]").forEach(function (b) {
-        b.addEventListener("click", function () { Desktop._gradeSet(this.getAttribute("data-grade")); Desktop._renderFolder(winId, folderApp); });
+      content.querySelectorAll(".gp-tab[data-level]").forEach(function (b) {
+        b.addEventListener("click", function () { try { localStorage.setItem("lab404.folderLevel", this.getAttribute("data-level")); } catch (e) {} Desktop._renderFolder(winId, folderApp); });
       });
       content.querySelectorAll(".folder-course-btn[data-course]").forEach(function (b) {
         b.addEventListener("click", function () { Desktop.openWindow("course", { course: this.getAttribute("data-course") }); });
