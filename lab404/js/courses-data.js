@@ -17,17 +17,34 @@ window.LAB404_COURSES = {
       { code: "G", name: "Geometry" }
     ],
     objectives: [
+      { code: "4.OA.1", domain: "OA", weight: 0.9, title: "Interpret multiplication as a comparison (e.g., 35 is 5 times as many as 7)", xwalk: { cc: "4.OA.A.1", ma: "4.OA.A.1", teks: "", vasol: "", flbest: "" } },
       { code: "4.OA.2", domain: "OA", weight: 1.0, title: "Solve multiplication & division word problems, including “times as many” comparisons", xwalk: { cc: "4.OA.A.2", ma: "4.OA.A.2", teks: "", vasol: "", flbest: "" } },
+      { code: "4.OA.3", domain: "OA", weight: 1.0, title: "Solve multistep word problems; interpret remainders; estimate", xwalk: { cc: "4.OA.A.3", ma: "4.OA.A.3", teks: "", vasol: "", flbest: "" } },
       { code: "4.OA.4", domain: "OA", weight: 0.9, title: "Find factor pairs & multiples; tell if a number 1–100 is prime or composite", xwalk: { cc: "4.OA.B.4", ma: "4.OA.B.4", teks: "", vasol: "", flbest: "" } },
+      { code: "4.OA.5", domain: "OA", weight: 0.8, title: "Generate and analyze number and shape patterns", xwalk: { cc: "4.OA.C.5", ma: "4.OA.C.5", teks: "", vasol: "", flbest: "" } },
+      { code: "4.NBT.1", domain: "NBT", weight: 0.9, title: "A digit in one place is worth 10 times the place to its right", xwalk: { cc: "4.NBT.A.1", ma: "4.NBT.A.1", teks: "", vasol: "", flbest: "" } },
       { code: "4.NBT.2", domain: "NBT", weight: 1.0, title: "Read, write & compare multi-digit whole numbers using place value", xwalk: { cc: "4.NBT.A.2", ma: "4.NBT.A.2", teks: "", vasol: "", flbest: "" } },
       { code: "4.NBT.3", domain: "NBT", weight: 0.9, title: "Round multi-digit whole numbers to any place", xwalk: { cc: "4.NBT.A.3", ma: "4.NBT.A.3", teks: "", vasol: "", flbest: "" } },
+      { code: "4.NBT.4", domain: "NBT", weight: 1.1, title: "Add and subtract multi-digit whole numbers fluently", xwalk: { cc: "4.NBT.B.4", ma: "4.NBT.B.4", teks: "", vasol: "", flbest: "" } },
       { code: "4.NBT.5", domain: "NBT", weight: 1.1, title: "Multiply multi-digit numbers (up to 4-digit × 1-digit, 2-digit × 2-digit)", xwalk: { cc: "4.NBT.B.5", ma: "4.NBT.B.5", teks: "", vasol: "", flbest: "" } },
       { code: "4.NBT.6", domain: "NBT", weight: 1.1, title: "Divide up to 4-digit by 1-digit numbers, with remainders", xwalk: { cc: "4.NBT.B.6", ma: "4.NBT.B.6", teks: "", vasol: "", flbest: "" } },
       { code: "4.NF.1", domain: "NF", weight: 1.2, title: "Recognize & generate equivalent fractions", xwalk: { cc: "4.NF.A.1", ma: "4.NF.A.1", teks: "", vasol: "", flbest: "" } },
       { code: "4.NF.2", domain: "NF", weight: 1.2, title: "Compare two fractions with different numerators & denominators", xwalk: { cc: "4.NF.A.2", ma: "4.NF.A.2", teks: "", vasol: "", flbest: "" } },
       { code: "4.NF.3", domain: "NF", weight: 1.2, title: "Add & subtract fractions with like denominators; add mixed numbers", xwalk: { cc: "4.NF.B.3", ma: "4.NF.B.3", teks: "", vasol: "", flbest: "" } },
+      { code: "4.NF.4", domain: "NF", weight: 1.1, title: "Multiply a fraction by a whole number", xwalk: { cc: "4.NF.B.4", ma: "4.NF.B.4", teks: "", vasol: "", flbest: "" } },
+      { code: "4.NF.5", domain: "NF", weight: 0.9, title: "Add fractions with denominators 10 and 100", xwalk: { cc: "4.NF.C.5", ma: "4.NF.C.5", teks: "", vasol: "", flbest: "" } },
+      { code: "4.NF.6", domain: "NF", weight: 1.0, title: "Use decimal notation for fractions with denominators 10 or 100", xwalk: { cc: "4.NF.C.6", ma: "4.NF.C.6", teks: "", vasol: "", flbest: "" } },
+      { code: "4.NF.7", domain: "NF", weight: 1.0, title: "Compare two decimals to the hundredths", xwalk: { cc: "4.NF.C.7", ma: "4.NF.C.7", teks: "", vasol: "", flbest: "" } },
+      { code: "4.MD.1", domain: "MD", weight: 0.9, title: "Know relative sizes of units; convert within a measurement system", xwalk: { cc: "4.MD.A.1", ma: "4.MD.A.1", teks: "", vasol: "", flbest: "" } },
+      { code: "4.MD.2", domain: "MD", weight: 1.0, title: "Solve word problems involving measurement, time, and money", xwalk: { cc: "4.MD.A.2", ma: "4.MD.A.2", teks: "", vasol: "", flbest: "" } },
       { code: "4.MD.3", domain: "MD", weight: 0.9, title: "Apply area & perimeter formulas for rectangles", xwalk: { cc: "4.MD.A.3", ma: "4.MD.A.3", teks: "", vasol: "", flbest: "" } },
-      { code: "4.G.1", domain: "G", weight: 0.8, title: "Identify points, lines, rays, angles (right/acute/obtuse) & parallel/perpendicular lines", xwalk: { cc: "4.G.A.1", ma: "4.G.A.1", teks: "", vasol: "", flbest: "" } }
+      { code: "4.MD.4", domain: "MD", weight: 0.8, title: "Make and interpret line plots with fractions", xwalk: { cc: "4.MD.B.4", ma: "4.MD.B.4", teks: "", vasol: "", flbest: "" } },
+      { code: "4.MD.5", domain: "MD", weight: 0.8, title: "Understand angles and measure them in degrees", xwalk: { cc: "4.MD.C.5", ma: "4.MD.C.5", teks: "", vasol: "", flbest: "" } },
+      { code: "4.MD.6", domain: "MD", weight: 0.8, title: "Measure and draw angles using a protractor", xwalk: { cc: "4.MD.C.6", ma: "4.MD.C.6", teks: "", vasol: "", flbest: "" } },
+      { code: "4.MD.7", domain: "MD", weight: 0.8, title: "Add angle measures; find an unknown angle", xwalk: { cc: "4.MD.C.7", ma: "4.MD.C.7", teks: "", vasol: "", flbest: "" } },
+      { code: "4.G.1", domain: "G", weight: 0.8, title: "Identify points, lines, rays, angles (right/acute/obtuse) & parallel/perpendicular lines", xwalk: { cc: "4.G.A.1", ma: "4.G.A.1", teks: "", vasol: "", flbest: "" } },
+      { code: "4.G.2", domain: "G", weight: 0.9, title: "Classify 2D figures by their lines and angles; identify right triangles", xwalk: { cc: "4.G.A.2", ma: "4.G.A.2", teks: "", vasol: "", flbest: "" } },
+      { code: "4.G.3", domain: "G", weight: 0.8, title: "Recognize lines of symmetry in 2D figures", xwalk: { cc: "4.G.A.3", ma: "4.G.A.3", teks: "", vasol: "", flbest: "" } }
     ],
     questions: [
       // 4.OA.2
@@ -84,7 +101,109 @@ window.LAB404_COURSES = {
       { id: "g1a", obj: "4.G.1", type: "mc", q: "An angle smaller than a right angle is called:", options: ["Acute", "Obtuse", "Right", "Straight"], a: 0, why: "Acute angles are less than 90°." },
       { id: "g1b", obj: "4.G.1", type: "mc", q: "Lines that never cross and stay the same distance apart are:", options: ["Parallel", "Perpendicular", "Intersecting", "Rays"], a: 0, why: "Parallel lines never meet." },
       { id: "g1c", obj: "4.G.1", type: "mc", q: "A right angle measures how many degrees?", options: ["90", "45", "180", "60"], a: 0, why: "A right angle is exactly 90°." },
-      { id: "g1d", obj: "4.G.1", type: "mc", q: "Two lines that cross to form right angles are:", options: ["Perpendicular", "Parallel", "Acute", "Obtuse"], a: 0, why: "Perpendicular lines meet at 90°." }
+      { id: "g1d", obj: "4.G.1", type: "mc", q: "Two lines that cross to form right angles are:", options: ["Perpendicular", "Parallel", "Acute", "Obtuse"], a: 0, why: "Perpendicular lines meet at 90°." },
+      // 4.OA.1
+      { id: "oa1a", obj: "4.OA.1", type: "mc", q: "Which statement matches 24 = 4 × 6?", options: ["24 is 4 times as many as 6", "24 is 4 more than 6", "24 is 6 less than 4", "24 is half of 6"], a: 0, why: "Multiplication can mean 'times as many'." },
+      { id: "oa1b", obj: "4.OA.1", type: "numeric", q: "A blue rope is 5 times as long as a 3-foot red rope. How long is the blue rope, in feet?", answer: 15, why: "5 × 3 = 15." },
+      { id: "oa1c", obj: "4.OA.1", type: "mc", q: "'3 times as many as 8' is written as:", options: ["3 × 8", "3 + 8", "8 − 3", "8 ÷ 3"], a: 0, why: "'times as many' means multiply." },
+      { id: "oa1d", obj: "4.OA.1", type: "numeric", q: "There are 6 apples and 4 times as many oranges. How many oranges are there?", answer: 24, why: "4 × 6 = 24." },
+      { id: "oa1e", obj: "4.OA.1", type: "mc", q: "If 42 = 6 × 7, then 42 is:", options: ["7 times as many as 6", "7 more than 6", "6 less than 7", "half of 6"], a: 0, why: "42 = 7 groups of 6." },
+      // 4.OA.3
+      { id: "oa3a", obj: "4.OA.3", type: "numeric", q: "4 teams share 29 markers equally. How many does each team get (ignore the leftovers)?", answer: 7, why: "29 ÷ 4 = 7 remainder 1." },
+      { id: "oa3b", obj: "4.OA.3", type: "numeric", q: "Each bus holds 30 students. 95 students go on a trip. How many buses are needed?", answer: 4, why: "95 ÷ 30 = 3 r5, so round up to 4 buses." },
+      { id: "oa3c", obj: "4.OA.3", type: "numeric", q: "Maria buys 3 books at $8 each and pays with $50. How much change does she get, in dollars?", answer: 26, why: "3 × 8 = 24; 50 − 24 = 26." },
+      { id: "oa3d", obj: "4.OA.3", type: "numeric", q: "A baker makes 5 trays of 12 muffins, then sells 48. How many muffins are left?", answer: 12, why: "5 × 12 = 60; 60 − 48 = 12." },
+      { id: "oa3e", obj: "4.OA.3", type: "mc", q: "For '53 pencils packed in boxes of 6, how many FULL boxes?' you should:", options: ["Ignore the remainder — 8 boxes", "Round up to 9", "Use the remainder as the answer", "Add 6"], a: 0, why: "53 ÷ 6 = 8 r5; only 8 boxes are full." },
+      // 4.OA.5
+      { id: "oa5a", obj: "4.OA.5", type: "numeric", q: "The pattern adds 5 each time: 3, 8, 13, 18, ___. What is the next number?", answer: 23, why: "18 + 5 = 23." },
+      { id: "oa5b", obj: "4.OA.5", type: "mc", q: "In the pattern 2, 4, 6, 8, 10, all the numbers are:", options: ["Even", "Odd", "Prime", "Multiples of 3"], a: 0, why: "They are all even numbers." },
+      { id: "oa5c", obj: "4.OA.5", type: "numeric", q: "A pattern starts at 4 and doubles each time: 4, 8, 16, ___. What is next?", answer: 32, why: "16 × 2 = 32." },
+      { id: "oa5d", obj: "4.OA.5", type: "numeric", q: "Rule: subtract 3. The sequence is 20, 17, 14, 11, ___. What is next?", answer: 8, why: "11 − 3 = 8." },
+      { id: "oa5e", obj: "4.OA.5", type: "mc", q: "The pattern 5, 10, 15, 20, ... is made by:", options: ["Adding 5 each time", "Multiplying by 5", "Subtracting 5", "Adding 10"], a: 0, why: "Each term is 5 more than the last." },
+      // 4.NBT.1
+      { id: "nb1a", obj: "4.NBT.1", type: "mc", q: "In 770, the first 7 is worth how many times the second 7?", options: ["10", "100", "2", "7"], a: 0, why: "Each place is 10 times the place to its right." },
+      { id: "nb1b", obj: "4.NBT.1", type: "mc", q: "The 5 in 5,000 is worth ___ compared to the 5 in 500.", options: ["10 times as much", "1/10 as much", "the same", "100 times as much"], a: 0, why: "5,000 is 10 times 500." },
+      { id: "nb1c", obj: "4.NBT.1", type: "numeric", q: "What is 10 times 30?", answer: 300, why: "10 × 30 = 300." },
+      { id: "nb1d", obj: "4.NBT.1", type: "mc", q: "In 4,000 the 4 means:", options: ["4 thousands", "4 hundreds", "4 tens", "4 ones"], a: 0, why: "The 4 is in the thousands place." },
+      { id: "nb1e", obj: "4.NBT.1", type: "numeric", q: "The value of the 8 in 8,000 is how many times the value of the 8 in 800?", answer: 10, why: "Each place is 10 times larger." },
+      // 4.NBT.4
+      { id: "nb4a", obj: "4.NBT.4", type: "numeric", q: "4,582 + 3,219 = ?", answer: 7801, why: "4,582 + 3,219 = 7,801." },
+      { id: "nb4b", obj: "4.NBT.4", type: "numeric", q: "6,000 − 2,345 = ?", answer: 3655, why: "6,000 − 2,345 = 3,655." },
+      { id: "nb4c", obj: "4.NBT.4", type: "numeric", q: "12,450 + 8,275 = ?", answer: 20725, why: "12,450 + 8,275 = 20,725." },
+      { id: "nb4d", obj: "4.NBT.4", type: "numeric", q: "9,004 − 3,678 = ?", answer: 5326, why: "9,004 − 3,678 = 5,326." },
+      { id: "nb4e", obj: "4.NBT.4", type: "numeric", q: "3,456 + 2,544 = ?", answer: 6000, why: "3,456 + 2,544 = 6,000." },
+      // 4.NF.4
+      { id: "nf4a", obj: "4.NF.4", type: "mc", q: "3 × 1/4 = ?", options: ["3/4", "1/12", "4/3", "3/12"], a: 0, why: "Three one-fourths is 3/4." },
+      { id: "nf4b", obj: "4.NF.4", type: "mc", q: "2 × 2/5 = ?", options: ["4/5", "2/10", "4/10", "2/5"], a: 0, why: "2 × 2/5 = 4/5." },
+      { id: "nf4c", obj: "4.NF.4", type: "mc", q: "5 × 1/3 = ?", options: ["5/3", "1/15", "5/15", "6/3"], a: 0, why: "Five one-thirds is 5/3." },
+      { id: "nf4d", obj: "4.NF.4", type: "numeric", q: "A recipe uses 1/3 cup of sugar per batch. For 6 batches, how many cups of sugar? (whole number)", answer: 2, why: "6 × 1/3 = 6/3 = 2." },
+      { id: "nf4e", obj: "4.NF.4", type: "mc", q: "4 × 3/8 = ?", options: ["12/8", "7/8", "12/32", "4/8"], a: 0, why: "4 × 3/8 = 12/8." },
+      // 4.NF.5
+      { id: "nf5a", obj: "4.NF.5", type: "mc", q: "3/10 is the same as how many hundredths?", options: ["30/100", "3/100", "13/100", "300/100"], a: 0, why: "3/10 = 30/100." },
+      { id: "nf5b", obj: "4.NF.5", type: "mc", q: "3/10 + 4/100 = ?", options: ["34/100", "7/100", "7/110", "34/10"], a: 0, why: "3/10 = 30/100, plus 4/100 = 34/100." },
+      { id: "nf5c", obj: "4.NF.5", type: "mc", q: "6/10 + 20/100 = ?", options: ["80/100", "26/100", "26/110", "80/10"], a: 0, why: "60/100 + 20/100 = 80/100." },
+      { id: "nf5d", obj: "4.NF.5", type: "numeric", q: "Write 50/100 as tenths: __/10 (give the numerator)", answer: 5, why: "50/100 = 5/10." },
+      { id: "nf5e", obj: "4.NF.5", type: "mc", q: "2/10 equals:", options: ["20/100", "2/100", "12/100", "200/100"], a: 0, why: "2/10 = 20/100." },
+      // 4.NF.6
+      { id: "nf6a", obj: "4.NF.6", type: "mc", q: "7/10 written as a decimal is:", options: ["0.7", "0.07", "7.10", "0.007"], a: 0, why: "Seven tenths = 0.7." },
+      { id: "nf6b", obj: "4.NF.6", type: "mc", q: "0.25 written as a fraction is:", options: ["25/100", "25/10", "2.5/100", "100/25"], a: 0, why: "0.25 = 25 hundredths = 25/100." },
+      { id: "nf6c", obj: "4.NF.6", type: "numeric", q: "Write 3/10 as a decimal.", answer: 0.3, why: "3/10 = 0.3." },
+      { id: "nf6d", obj: "4.NF.6", type: "numeric", q: "Write 45/100 as a decimal.", answer: 0.45, why: "45/100 = 0.45." },
+      { id: "nf6e", obj: "4.NF.6", type: "mc", q: "The decimal 0.9 means:", options: ["9 tenths", "9 hundredths", "9 ones", "90"], a: 0, why: "0.9 = nine tenths." },
+      // 4.NF.7
+      { id: "nf7a", obj: "4.NF.7", type: "mc", q: "Which is greater: 0.3 or 0.25?", options: ["0.3", "0.25"], a: 0, why: "0.30 is greater than 0.25." },
+      { id: "nf7b", obj: "4.NF.7", type: "mc", q: "Which symbol makes it true?   0.7 ___ 0.70", options: ["=", "<", ">"], a: 0, why: "0.7 and 0.70 are equal." },
+      { id: "nf7c", obj: "4.NF.7", type: "mc", q: "Which of these is the smallest?", options: ["0.05", "0.5", "0.55"], a: 0, why: "0.05 is five hundredths, the least." },
+      { id: "nf7d", obj: "4.NF.7", type: "mc", q: "Compare:   0.4 ___ 0.40", options: ["=", ">", "<"], a: 0, why: "0.4 equals 0.40." },
+      { id: "nf7e", obj: "4.NF.7", type: "mc", q: "Which is greater: 0.6 or 0.59?", options: ["0.6", "0.59"], a: 0, why: "0.60 is greater than 0.59." },
+      // 4.MD.1
+      { id: "md1a", obj: "4.MD.1", type: "numeric", q: "How many inches are in 2 feet?", answer: 24, why: "1 foot = 12 inches, so 2 × 12 = 24." },
+      { id: "md1b", obj: "4.MD.1", type: "numeric", q: "How many centimeters are in 3 meters?", answer: 300, why: "1 m = 100 cm, so 3 × 100 = 300." },
+      { id: "md1c", obj: "4.MD.1", type: "numeric", q: "How many minutes are in 3 hours?", answer: 180, why: "1 hour = 60 minutes, so 3 × 60 = 180." },
+      { id: "md1d", obj: "4.MD.1", type: "mc", q: "Which is heavier: 1 kilogram or 1 gram?", options: ["1 kilogram", "1 gram", "They are equal"], a: 0, why: "1 kg = 1,000 g." },
+      { id: "md1e", obj: "4.MD.1", type: "numeric", q: "How many feet are in 2 yards?", answer: 6, why: "1 yard = 3 feet, so 2 × 3 = 6." },
+      // 4.MD.2
+      { id: "md2a", obj: "4.MD.2", type: "numeric", q: "A movie starts at 3:00 and lasts 2 hours. What hour does it end? (e.g., 5)", answer: 5, why: "3 + 2 = 5 o'clock." },
+      { id: "md2b", obj: "4.MD.2", type: "numeric", q: "You have $10 and spend $3.50. How much is left, in dollars?", answer: 6.5, why: "10 − 3.50 = 6.50." },
+      { id: "md2c", obj: "4.MD.2", type: "numeric", q: "A ribbon is 150 cm long. You cut off 60 cm. How many cm are left?", answer: 90, why: "150 − 60 = 90." },
+      { id: "md2d", obj: "4.MD.2", type: "numeric", q: "A water jug holds 2 liters. How many milliliters is that?", answer: 2000, why: "1 L = 1,000 mL, so 2 L = 2,000 mL." },
+      { id: "md2e", obj: "4.MD.2", type: "numeric", q: "A trip is 240 miles and you've driven 90. How many miles are left?", answer: 150, why: "240 − 90 = 150." },
+      // 4.MD.4
+      { id: "md4a", obj: "4.MD.4", type: "mc", q: "A line plot uses marks above a number line to show:", options: ["How many times each value occurs", "The area of a shape", "The current time", "A pattern of shapes"], a: 0, why: "Line plots show how often each value appears." },
+      { id: "md4b", obj: "4.MD.4", type: "mc", q: "On a line plot, each X usually stands for:", options: ["One data point", "Ten points", "A fraction only", "Nothing"], a: 0, why: "Each X is one measurement." },
+      { id: "md4c", obj: "4.MD.4", type: "mc", q: "If a line plot shows three X's above 1/2, that means:", options: ["Three measurements were 1/2", "One measurement was 3", "The total is 1/2", "Half of an X"], a: 0, why: "Three data points had the value 1/2." },
+      { id: "md4d", obj: "4.MD.4", type: "mc", q: "Line plots are most useful for showing:", options: ["How often each measurement appears", "A map", "The weather", "A story"], a: 0, why: "They display frequency of values." },
+      { id: "md4e", obj: "4.MD.4", type: "mc", q: "To find the most common value on a line plot, look for:", options: ["The value with the most X's", "The smallest number", "The biggest X", "The last point"], a: 0, why: "The tallest stack of X's is the most common value." },
+      // 4.MD.5
+      { id: "md5a", obj: "4.MD.5", type: "mc", q: "Angles are measured in:", options: ["Degrees", "Inches", "Pounds", "Liters"], a: 0, why: "Angles are measured in degrees." },
+      { id: "md5b", obj: "4.MD.5", type: "numeric", q: "A right angle measures how many degrees?", answer: 90, why: "A right angle is 90°." },
+      { id: "md5c", obj: "4.MD.5", type: "numeric", q: "A straight angle measures how many degrees?", answer: 180, why: "A straight angle is 180°." },
+      { id: "md5d", obj: "4.MD.5", type: "mc", q: "An angle smaller than 90° is:", options: ["Acute", "Obtuse", "Right", "Straight"], a: 0, why: "Acute angles are less than 90°." },
+      { id: "md5e", obj: "4.MD.5", type: "mc", q: "An angle between 90° and 180° is:", options: ["Obtuse", "Acute", "Right", "Straight"], a: 0, why: "Obtuse angles are between 90° and 180°." },
+      // 4.MD.6
+      { id: "md6a", obj: "4.MD.6", type: "mc", q: "The tool used to measure angles is a:", options: ["Protractor", "Ruler", "Scale", "Thermometer"], a: 0, why: "A protractor measures angles." },
+      { id: "md6b", obj: "4.MD.6", type: "mc", q: "A protractor measures angles from 0° up to:", options: ["180°", "90°", "360°", "100°"], a: 0, why: "A standard protractor goes to 180°." },
+      { id: "md6c", obj: "4.MD.6", type: "numeric", q: "An angle opens from 0 to the 45 mark on a protractor. It measures ___ degrees.", answer: 45, why: "It reads 45°." },
+      { id: "md6d", obj: "4.MD.6", type: "mc", q: "To measure an angle, place the protractor's center on the angle's:", options: ["Vertex (corner)", "Longest side", "Middle of a side", "Top edge"], a: 0, why: "Center the protractor on the vertex." },
+      { id: "md6e", obj: "4.MD.6", type: "mc", q: "An angle measured at 120° is:", options: ["Obtuse", "Acute", "Right", "Straight"], a: 0, why: "120° is between 90° and 180°, so obtuse." },
+      // 4.MD.7
+      { id: "md7a", obj: "4.MD.7", type: "numeric", q: "Angles of 30° and 40° side by side make an angle of ___ degrees.", answer: 70, why: "30 + 40 = 70." },
+      { id: "md7b", obj: "4.MD.7", type: "numeric", q: "A 90° angle is split into a 55° angle and another. The other angle is ___ degrees.", answer: 35, why: "90 − 55 = 35." },
+      { id: "md7c", obj: "4.MD.7", type: "numeric", q: "Three 60° angles together make ___ degrees.", answer: 180, why: "60 × 3 = 180." },
+      { id: "md7d", obj: "4.MD.7", type: "numeric", q: "A straight angle (180°) is split into 110° and ___ degrees.", answer: 70, why: "180 − 110 = 70." },
+      { id: "md7e", obj: "4.MD.7", type: "numeric", q: "Two angles of 25° each make ___ degrees together.", answer: 50, why: "25 + 25 = 50." },
+      // 4.G.2
+      { id: "g2a", obj: "4.G.2", type: "mc", q: "A triangle with one 90° angle is called a:", options: ["Right triangle", "Equilateral triangle", "Circle", "Square"], a: 0, why: "A right triangle has a 90° angle." },
+      { id: "g2b", obj: "4.G.2", type: "mc", q: "A shape with 4 equal sides and 4 right angles is a:", options: ["Square", "Triangle", "Pentagon", "Circle"], a: 0, why: "That describes a square." },
+      { id: "g2c", obj: "4.G.2", type: "mc", q: "Parallel lines in a shape are lines that:", options: ["Never cross", "Always cross", "Form right angles", "Curve"], a: 0, why: "Parallel lines never meet." },
+      { id: "g2d", obj: "4.G.2", type: "mc", q: "A triangle with all three angles less than 90° is a(n):", options: ["Acute triangle", "Right triangle", "Obtuse triangle", "Square"], a: 0, why: "All acute angles make an acute triangle." },
+      { id: "g2e", obj: "4.G.2", type: "multi", q: "Select ALL shapes that have at least one pair of parallel sides.", options: ["Square", "Rectangle", "Parallelogram", "Triangle"], correct: [0, 1, 2], why: "A triangle has no parallel sides." },
+      // 4.G.3
+      { id: "g3a", obj: "4.G.3", type: "mc", q: "A line of symmetry divides a shape into:", options: ["Two matching halves", "Three parts", "Four corners", "A circle"], a: 0, why: "The two halves are mirror images." },
+      { id: "g3b", obj: "4.G.3", type: "mc", q: "How many lines of symmetry does a square have?", options: ["4", "1", "2", "0"], a: 0, why: "A square has 4 lines of symmetry." },
+      { id: "g3c", obj: "4.G.3", type: "mc", q: "A shape has a line of symmetry if one half is the ___ of the other.", options: ["Mirror image", "Opposite color", "Bigger version", "Rotation"], a: 0, why: "The halves match like a mirror." },
+      { id: "g3d", obj: "4.G.3", type: "mc", q: "Which letter has a vertical line of symmetry?", options: ["A", "F", "G", "J"], a: 0, why: "A looks the same on both sides of a vertical line." },
+      { id: "g3e", obj: "4.G.3", type: "numeric", q: "How many lines of symmetry does a (non-square) rectangle have?", answer: 2, why: "One vertical and one horizontal." }
     ]
   },
 
