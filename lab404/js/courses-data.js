@@ -414,5 +414,86 @@ window.LAB404_COURSES = {
       { id: "g1c5", obj: "5.G.1", type: "mc", q: "To plot the point (2, 4), you go:", options: ["Right 2, then up 4", "Up 2, then right 4", "Left 2, then down 4", "Right 4, then up 2"], a: 0, why: "x = 2 (right), y = 4 (up)." },
       { id: "g1d5", obj: "5.G.1", type: "mc", q: "The two number lines on a coordinate grid are the:", options: ["x-axis and y-axis", "top and bottom", "rows and columns", "start and end"], a: 0, why: "The horizontal x-axis and vertical y-axis." }
     ]
+  },
+
+  "g5-science": {
+    id: "g5-science", title: "Grade 5 Science", subjectKey: "science", grade: "5",
+    standard: "Massachusetts Science & Technology/Engineering (Grade 5, NGSS-aligned)",
+    note: "Pilot course: matter, forces & energy, ecosystems, and Earth & space science.",
+    domains: [
+      { code: "PS", name: "Physical Science (Matter, Forces & Energy)" },
+      { code: "LS", name: "Life Science (Ecosystems)" },
+      { code: "ESS", name: "Earth & Space Science" }
+    ],
+    objectives: [
+      { code: "5-PS1-1", domain: "PS", weight: 1.0, title: "Matter is made of particles too small to be seen", xwalk: { cc: "5-PS1-1", ma: "5-PS1-1", teks: "", vasol: "", flbest: "" } },
+      { code: "5-PS1-2", domain: "PS", weight: 1.0, title: "The amount of matter is conserved during changes", xwalk: { cc: "5-PS1-2", ma: "5-PS1-2", teks: "", vasol: "", flbest: "" } },
+      { code: "5-PS1-3", domain: "PS", weight: 0.9, title: "Identify materials by their observable properties", xwalk: { cc: "5-PS1-3", ma: "5-PS1-3", teks: "", vasol: "", flbest: "" } },
+      { code: "5-PS2-1", domain: "PS", weight: 0.9, title: "Gravity pulls objects down, toward Earth's center", xwalk: { cc: "5-PS2-1", ma: "5-PS2-1", teks: "", vasol: "", flbest: "" } },
+      { code: "5-PS3-1", domain: "PS", weight: 1.0, title: "The energy in food can be traced back to the sun", xwalk: { cc: "5-PS3-1", ma: "5-PS3-1", teks: "", vasol: "", flbest: "" } },
+      { code: "5-LS1-1", domain: "LS", weight: 1.1, title: "Plants get materials for growth mainly from air and water", xwalk: { cc: "5-LS1-1", ma: "5-LS1-1", teks: "", vasol: "", flbest: "" } },
+      { code: "5-LS2-1", domain: "LS", weight: 1.1, title: "Matter cycles among organisms and the environment", xwalk: { cc: "5-LS2-1", ma: "5-LS2-1", teks: "", vasol: "", flbest: "" } },
+      { code: "5-ESS1-1", domain: "ESS", weight: 1.0, title: "The sun is a star; brightness depends on distance", xwalk: { cc: "5-ESS1-1", ma: "5-ESS1-1", teks: "", vasol: "", flbest: "" } },
+      { code: "5-ESS1-2", domain: "ESS", weight: 1.0, title: "Daily patterns (day/night, shadows) come from Earth's motion", xwalk: { cc: "5-ESS1-2", ma: "5-ESS1-2", teks: "", vasol: "", flbest: "" } },
+      { code: "5-ESS2-2", domain: "ESS", weight: 0.9, title: "Most of Earth's water is salt water in the oceans", xwalk: { cc: "5-ESS2-2", ma: "5-ESS2-2", teks: "", vasol: "", flbest: "" } },
+      { code: "5-ESS3-1", domain: "ESS", weight: 1.0, title: "Ways people can protect Earth's resources and environment", xwalk: { cc: "5-ESS3-1", ma: "5-ESS3-1", teks: "", vasol: "", flbest: "" } }
+    ],
+    questions: [
+      // 5-PS1-1
+      { id: "p11a", obj: "5-PS1-1", type: "mc", q: "Even though you can't see it, air is made of:", options: ["Tiny particles of matter", "Nothing at all", "Only water", "Light"], a: 0, why: "Air is matter made of particles too small to see." },
+      { id: "p11b", obj: "5-PS1-1", type: "mc", q: "A balloon filled with air weighs slightly more than an empty one. This shows that air:", options: ["Is matter and has mass", "Is nothing", "Is only warmth", "Disappears"], a: 0, why: "Having mass means air is matter." },
+      { id: "p11c", obj: "5-PS1-1", type: "mc", q: "Sugar stirred into water seems to disappear. Really, the sugar:", options: ["Broke into particles too small to see", "Was destroyed", "Turned into water", "Floated away as a gas"], a: 0, why: "It's still there as tiny dissolved particles." },
+      { id: "p11d", obj: "5-PS1-1", type: "mc", q: "Matter is anything that:", options: ["Has mass and takes up space", "Can be seen", "Is always solid", "Gives off light"], a: 0, why: "That's the definition of matter." },
+      // 5-PS1-2
+      { id: "p12a", obj: "5-PS1-2", type: "mc", q: "When ice melts into water, the amount of matter (its weight):", options: ["Stays the same", "Disappears", "Doubles", "Becomes zero"], a: 0, why: "Matter is conserved in a physical change." },
+      { id: "p12b", obj: "5-PS1-2", type: "mc", q: "You mix 50 g of baking soda with 50 g of vinegar in a SEALED bag. The total mass afterward is about:", options: ["100 g", "0 g", "50 g", "200 g"], a: 0, why: "Mass is conserved — the gas stays in the sealed bag." },
+      { id: "p12c", obj: "5-PS1-2", type: "mc", q: "When a log burns, the matter:", options: ["Changes into ash, smoke, and gases", "Is destroyed", "Turns into light only", "Vanishes completely"], a: 0, why: "Matter changes form but is not destroyed." },
+      { id: "p12d", obj: "5-PS1-2", type: "mc", q: "In any physical or chemical change, the total amount of matter:", options: ["Is conserved (stays the same)", "Always increases", "Always vanishes", "Turns into energy"], a: 0, why: "Conservation of matter." },
+      // 5-PS1-3
+      { id: "p13a", obj: "5-PS1-3", type: "multi", q: "Select ALL the properties you could use to identify a material.", options: ["Color", "Hardness", "Whether it conducts electricity", "Magnetism", "A sticker someone put on it"], correct: [0, 1, 2, 3], why: "Observable, testable properties identify a material." },
+      { id: "p13b", obj: "5-PS1-3", type: "mc", q: "To test whether a material is magnetic, you would:", options: ["See if a magnet sticks to it", "Smell it", "Weigh the room", "Ask a friend"], a: 0, why: "Test it with a magnet." },
+      { id: "p13c", obj: "5-PS1-3", type: "mc", q: "Which property tells how well a material lets electricity flow through it?", options: ["Conductivity", "Color", "Smell", "Shape"], a: 0, why: "Conductivity measures how electricity flows." },
+      { id: "p13d", obj: "5-PS1-3", type: "mc", q: "Two clear liquids that look the same can be told apart by testing their:", options: ["Properties (like density or how they react)", "Names", "Prices", "Labels"], a: 0, why: "Properties distinguish materials." },
+      // 5-PS2-1
+      { id: "p21a", obj: "5-PS2-1", type: "mc", q: "When you drop a ball, gravity pulls it:", options: ["Down, toward the center of Earth", "Up", "Sideways", "In a circle"], a: 0, why: "Gravity pulls objects toward Earth's center." },
+      { id: "p21b", obj: "5-PS2-1", type: "mc", q: "The force that keeps us on the ground is:", options: ["Gravity", "Magnetism", "Wind", "Friction"], a: 0, why: "Gravity holds us down." },
+      { id: "p21c", obj: "5-PS2-1", type: "mc", q: "If you jump up, you come back down because of:", options: ["Gravity", "Electricity", "Sound", "Light"], a: 0, why: "Gravity pulls you back to Earth." },
+      { id: "p21d", obj: "5-PS2-1", type: "mc", q: "Earth's gravity pulls objects:", options: ["Toward Earth's center", "Away from Earth", "Only if they are heavy", "Only at night"], a: 0, why: "Always toward the center of Earth." },
+      // 5-PS3-1
+      { id: "p31a", obj: "5-PS3-1", type: "mc", q: "The energy in the food you eat originally came from:", options: ["The sun", "The ocean", "Rocks", "The moon"], a: 0, why: "Plants capture sunlight, and that energy flows up the food chain." },
+      { id: "p31b", obj: "5-PS3-1", type: "mc", q: "A rabbit eats grass for energy. The grass got its energy from:", options: ["Sunlight", "The soil only", "The rabbit", "The wind"], a: 0, why: "Grass makes food using sunlight." },
+      { id: "p31c", obj: "5-PS3-1", type: "mc", q: "Energy in a food chain starts with:", options: ["The sun and plants", "Top predators", "Decomposers", "Rocks"], a: 0, why: "Producers use sunlight to start the chain." },
+      { id: "p31d", obj: "5-PS3-1", type: "mc", q: "When you eat an apple, the energy you get started as:", options: ["Sunlight", "Moonlight", "Electricity", "Cold"], a: 0, why: "The apple tree used sunlight to make the apple." },
+      // 5-LS1-1
+      { id: "l11a", obj: "5-LS1-1", type: "mc", q: "Most of the material that makes a plant grow bigger comes from:", options: ["Air and water", "Dirt becoming part of the plant", "Sunlight turning solid", "Rocks"], a: 0, why: "Plants build material mainly from air (carbon dioxide) and water." },
+      { id: "l11b", obj: "5-LS1-1", type: "mc", q: "Plants take in carbon dioxide from the:", options: ["Air", "Soil", "Ocean floor", "Sun"], a: 0, why: "Carbon dioxide comes from the air." },
+      { id: "l11c", obj: "5-LS1-1", type: "mc", q: "A plant uses sunlight, water, and air to:", options: ["Make its own food (sugar)", "Eat other plants", "Drink soil", "Make rocks"], a: 0, why: "Photosynthesis makes the plant's food." },
+      { id: "l11d", obj: "5-LS1-1", type: "mc", q: "When a plant grows a new branch, that new material comes mostly from:", options: ["Air and water the plant took in", "The pot", "The gardener", "Nothing"], a: 0, why: "New plant material is built from air and water." },
+      // 5-LS2-1
+      { id: "l21a", obj: "5-LS2-1", type: "mc", q: "Organisms that break down dead plants and animals are called:", options: ["Decomposers", "Producers", "Predators", "Stars"], a: 0, why: "Decomposers (like fungi and bacteria) recycle matter." },
+      { id: "l21b", obj: "5-LS2-1", type: "mc", q: "In a food web, matter and energy pass from:", options: ["Producers to consumers to decomposers", "Rocks to the sun", "Decomposers to the sun", "Water to the moon"], a: 0, why: "That's how matter cycles through an ecosystem." },
+      { id: "l21c", obj: "5-LS2-1", type: "mc", q: "What do decomposers return to the soil for plants to reuse?", options: ["Nutrients", "Sunlight", "Sound", "Plastic"], a: 0, why: "They recycle nutrients back to the soil." },
+      { id: "l21d", obj: "5-LS2-1", type: "mc", q: "Plants are called producers because they:", options: ["Make their own food", "Eat animals", "Decompose things", "Hunt prey"], a: 0, why: "They produce food through photosynthesis." },
+      // 5-ESS1-1
+      { id: "e11a", obj: "5-ESS1-1", type: "mc", q: "The sun looks much bigger and brighter than other stars because it is:", options: ["Much closer to Earth", "The biggest star there is", "Made only of fire", "Hotter than every star"], a: 0, why: "The sun is far closer than any other star." },
+      { id: "e11b", obj: "5-ESS1-1", type: "mc", q: "The sun is actually a:", options: ["Star", "Planet", "Moon", "Comet"], a: 0, why: "The sun is a star." },
+      { id: "e11c", obj: "5-ESS1-1", type: "mc", q: "Other stars look like tiny points of light because they are:", options: ["Very far away", "Very small", "Not real", "Behind the sun"], a: 0, why: "Their great distance makes them look tiny." },
+      { id: "e11d", obj: "5-ESS1-1", type: "mc", q: "A star bigger than the sun can still look dimmer from Earth because of its:", options: ["Distance", "Color", "Name", "Shape"], a: 0, why: "Distance strongly affects how bright a star appears." },
+      // 5-ESS1-2
+      { id: "e12a", obj: "5-ESS1-2", type: "mc", q: "Day and night are caused by:", options: ["Earth spinning (rotating) once a day", "The sun turning off", "The moon blocking the sun", "Clouds"], a: 0, why: "Earth's rotation causes day and night." },
+      { id: "e12b", obj: "5-ESS1-2", type: "mc", q: "A shadow changes length during the day because:", options: ["The sun appears to move across the sky", "The object grows", "It is magic", "The ground moves"], a: 0, why: "The sun's apparent position changes as Earth rotates." },
+      { id: "e12c", obj: "5-ESS1-2", type: "mc", q: "Earth takes about how long to spin around once?", options: ["24 hours (one day)", "One year", "One month", "One minute"], a: 0, why: "One rotation takes about 24 hours." },
+      { id: "e12d", obj: "5-ESS1-2", type: "mc", q: "The sun appears to rise in the ___ and set in the ___.", options: ["east; west", "west; east", "north; south", "up; down"], a: 0, why: "Earth's spin makes the sun rise east and set west." },
+      // 5-ESS2-2
+      { id: "e22a", obj: "5-ESS2-2", type: "mc", q: "Most of Earth's water is:", options: ["Salt water in the oceans", "Fresh water in lakes", "Ice at the North Pole", "Rain"], a: 0, why: "About 97% of Earth's water is salty ocean water." },
+      { id: "e22b", obj: "5-ESS2-2", type: "mc", q: "Only a small amount of Earth's water is:", options: ["Fresh water we can drink", "Salt water", "In the ocean", "Underground salt"], a: 0, why: "Fresh water is a small fraction of all water." },
+      { id: "e22c", obj: "5-ESS2-2", type: "mc", q: "Most of Earth's FRESH water is found:", options: ["Frozen in ice caps and glaciers", "In rivers", "In bottles", "In clouds"], a: 0, why: "Most fresh water is locked up as ice." },
+      { id: "e22d", obj: "5-ESS2-2", type: "mc", q: "Why is it important to protect fresh water?", options: ["There is only a little of it on Earth", "There is an unlimited supply", "Water isn't needed", "The oceans are fresh water"], a: 0, why: "Usable fresh water is limited." },
+      // 5-ESS3-1
+      { id: "e31a", obj: "5-ESS3-1", type: "multi", q: "Select ALL the ways people can protect Earth's resources.", options: ["Recycling", "Saving water", "Reducing pollution", "Planting trees", "Wasting electricity"], correct: [0, 1, 2, 3], why: "The first four protect resources; wasting electricity does not." },
+      { id: "e31b", obj: "5-ESS3-1", type: "mc", q: "Turning off lights when you leave a room helps save:", options: ["Energy", "Only water", "Only trees", "Nothing"], a: 0, why: "It saves electrical energy." },
+      { id: "e31c", obj: "5-ESS3-1", type: "mc", q: "Recycling paper helps protect:", options: ["Trees and forests", "The sun", "Gravity", "The moon"], a: 0, why: "Less new paper means fewer trees cut down." },
+      { id: "e31d", obj: "5-ESS3-1", type: "mc", q: "One way communities reduce pollution is by:", options: ["Using cleaner energy like solar and wind", "Burning more coal", "Dumping trash in rivers", "Idling cars longer"], a: 0, why: "Clean energy produces less pollution." }
+    ]
   }
 };
