@@ -227,7 +227,10 @@ window.LAB404_COURSES = {
       { code: "4-ESS2-1", domain: "ESS", weight: 1.0, title: "Weathering and erosion change the land", xwalk: { cc: "4-ESS2-1", ma: "4-ESS2-1", teks: "", vasol: "", flbest: "" } },
       { code: "4-ESS2-2", domain: "ESS", weight: 0.9, title: "Maps show where Earth's features are, and reveal patterns", xwalk: { cc: "4-ESS2-2", ma: "4-ESS2-2", teks: "", vasol: "", flbest: "" } },
       { code: "4-ESS3-1", domain: "ESS", weight: 1.0, title: "Energy & fuels come from natural resources (renewable vs. nonrenewable)", xwalk: { cc: "4-ESS3-1", ma: "4-ESS3-1", teks: "", vasol: "", flbest: "" } },
-      { code: "4-ESS3-2", domain: "ESS", weight: 0.9, title: "Communities can reduce the impacts of natural hazards", xwalk: { cc: "4-ESS3-2", ma: "4-ESS3-2", teks: "", vasol: "", flbest: "" } }
+      { code: "4-ESS3-2", domain: "ESS", weight: 0.9, title: "Communities can reduce the impacts of natural hazards", xwalk: { cc: "4-ESS3-2", ma: "4-ESS3-2", teks: "", vasol: "", flbest: "" } },
+      { code: "4-PS3-1", domain: "PS", weight: 0.9, title: "A faster-moving object has more energy of motion", xwalk: { cc: "4-PS3-1", ma: "4-PS3-1", teks: "", vasol: "", flbest: "" } },
+      { code: "4-PS3-3", domain: "PS", weight: 0.9, title: "Energy transfers when objects collide", xwalk: { cc: "4-PS3-3", ma: "4-PS3-3", teks: "", vasol: "", flbest: "" } },
+      { code: "4-PS4-3", domain: "PS", weight: 0.9, title: "Patterns can be used to transfer information (codes & signals)", xwalk: { cc: "4-PS4-3", ma: "4-PS4-3", teks: "", vasol: "", flbest: "" } }
     ],
     questions: [
       // 4-PS3-2
@@ -284,7 +287,37 @@ window.LAB404_COURSES = {
       { id: "ess32a", obj: "4-ESS3-2", type: "mc", q: "Building levees or flood walls near a river helps protect against:", options: ["Floods", "Sunlight", "Homework", "Wind only"], a: 0, why: "Levees reduce flood damage." },
       { id: "ess32b", obj: "4-ESS3-2", type: "mc", q: "An earthquake drill at school helps people:", options: ["Stay safer during an earthquake", "Cause earthquakes", "Predict the lottery", "Stop the rain"], a: 0, why: "Drills reduce injuries during a hazard." },
       { id: "ess32c", obj: "4-ESS3-2", type: "multi", q: "Select ALL the ways communities reduce damage from natural hazards.", options: ["Early warning systems", "Stronger buildings", "Evacuation plans", "Ignoring the danger"], correct: [0, 1, 2], why: "Warnings, strong buildings, and plans all reduce harm." },
-      { id: "ess32d", obj: "4-ESS3-2", type: "mc", q: "We can't always stop natural hazards, but we can:", options: ["Prepare and reduce their impact", "Make them disappear forever", "Fully control the weather", "Safely ignore them"], a: 0, why: "Preparation reduces the impact of hazards." }
+      { id: "ess32d", obj: "4-ESS3-2", type: "mc", q: "We can't always stop natural hazards, but we can:", options: ["Prepare and reduce their impact", "Make them disappear forever", "Fully control the weather", "Safely ignore them"], a: 0, why: "Preparation reduces the impact of hazards." },
+      // 4-PS3-1 (speed & energy)
+      { id: "ps31a", obj: "4-PS3-1", type: "mc", q: "A faster-moving object has:", options: ["More energy of motion", "Less energy", "No energy", "Only heat"], a: 0, why: "Faster motion means more energy of motion." },
+      { id: "ps31b", obj: "4-PS3-1", type: "mc", q: "Which has more energy of motion: a car rolling fast or the same car rolling slowly?", options: ["The fast car", "The slow car", "They are equal", "Neither has any"], a: 0, why: "Greater speed means more energy of motion." },
+      { id: "ps31c", obj: "4-PS3-1", type: "mc", q: "When a swing moves faster, its energy of motion:", options: ["Increases", "Decreases", "Stays zero", "Disappears"], a: 0, why: "More speed, more energy." },
+      { id: "ps31d", obj: "4-PS3-1", type: "mc", q: "A bowling ball knocks down more pins when it is rolled:", options: ["Faster (more energy)", "Slower", "Not at all", "Backward"], a: 0, why: "A faster ball carries more energy to the pins." },
+      { id: "ps31e", obj: "4-PS3-1", type: "mc", q: "The energy an object has because it is moving is called:", options: ["Energy of motion", "Light", "Sound", "Cold"], a: 0, why: "Moving objects have energy of motion (kinetic energy)." },
+      // 4-PS3-3 (collisions)
+      { id: "ps33a", obj: "4-PS3-3", type: "mc", q: "When a moving marble hits a still marble, energy:", options: ["Transfers to the still marble, making it move", "Disappears", "Only makes light", "Goes up"], a: 0, why: "Energy transfers in the collision." },
+      { id: "ps33b", obj: "4-PS3-3", type: "mc", q: "In a collision, a faster object usually transfers:", options: ["More energy", "Less energy", "No energy", "Only sound"], a: 0, why: "More speed means more energy to transfer." },
+      { id: "ps33c", obj: "4-PS3-3", type: "mc", q: "When two toy cars bump, some energy of motion changes into:", options: ["Sound and heat", "Light only", "New cars", "Nothing"], a: 0, why: "Energy changes form during a collision." },
+      { id: "ps33d", obj: "4-PS3-3", type: "mc", q: "If a rolling ball hits a wall and stops, its energy of motion is:", options: ["Transferred and changed to sound and heat", "Destroyed", "Doubled", "Turned into a ball"], a: 0, why: "Energy isn't destroyed — it changes form." },
+      { id: "ps33e", obj: "4-PS3-3", type: "mc", q: "The harder (faster) a hammer hits a nail:", options: ["The more energy it transfers to the nail", "The less the nail moves", "The quieter it is", "Nothing changes"], a: 0, why: "More energy drives the nail farther." },
+      // 4-PS4-3 (information transfer)
+      { id: "ps43a", obj: "4-PS4-3", type: "mc", q: "Morse code sends messages using patterns of:", options: ["Dots and dashes", "Colors only", "Smells", "Weights"], a: 0, why: "Morse code is a pattern of dots and dashes." },
+      { id: "ps43b", obj: "4-PS4-3", type: "mc", q: "Which is an example of using a pattern to send information?", options: ["A lighthouse's flashing light signal", "A plain rock", "Still water", "An empty box"], a: 0, why: "The flashing pattern carries information." },
+      { id: "ps43c", obj: "4-PS4-3", type: "mc", q: "Text messages travel as patterns of:", options: ["Electronic signals (code)", "Paper", "Sound in the air only", "Sunlight"], a: 0, why: "Devices send coded electronic signals." },
+      { id: "ps43d", obj: "4-PS4-3", type: "mc", q: "Binary code uses just two symbols:", options: ["0 and 1", "A and B", "Red and blue", "Up and down"], a: 0, why: "Computers use 0s and 1s." },
+      { id: "ps43e", obj: "4-PS4-3", type: "multi", q: "Select ALL the ways people send information using patterns.", options: ["Morse code", "Flashing light signals", "Written words", "Sign language", "A plain rock"], correct: [0, 1, 2, 3], why: "All but the plain rock carry a pattern of information." },
+      // 5th questions for the original objectives
+      { id: "ps32e", obj: "4-PS3-2", type: "mc", q: "A hot cup of cocoa warms your cold hands. Energy transfers as:", options: ["Heat", "Sound", "Light", "Gravity"], a: 0, why: "Thermal energy transfers as heat." },
+      { id: "ps34e", obj: "4-PS3-4", type: "mc", q: "A hand-crank flashlight changes the motion of your hand into:", options: ["Electrical energy, then light", "Only sound", "Cold", "Gravity"], a: 0, why: "Motion → electricity → light." },
+      { id: "ps41e", obj: "4-PS4-1", type: "mc", q: "Which part of a wave is how high it rises above the middle line?", options: ["Amplitude", "Wavelength", "Speed", "Width"], a: 0, why: "Amplitude is the wave's height." },
+      { id: "ps42e", obj: "4-PS4-2", type: "mc", q: "Why can't you see colors well in very dim light?", options: ["There isn't enough light reflecting into your eyes", "Your eyes make color", "Colors turn off", "Light is too fast"], a: 0, why: "Seeing color needs light reflecting to your eyes." },
+      { id: "ls11e", obj: "4-LS1-1", type: "mc", q: "A fish's gills are a structure that help it:", options: ["Take in oxygen from water", "Fly", "See in the dark", "Make sound"], a: 0, why: "Gills let fish breathe underwater." },
+      { id: "ls12e", obj: "4-LS1-2", type: "mc", q: "When you touch something hot and jerk your hand back, your body:", options: ["Sensed danger and responded", "Grew bigger", "Made light", "Stopped working"], a: 0, why: "Senses → brain/nerves → quick response." },
+      { id: "ess11e", obj: "4-ESS1-1", type: "mc", q: "Rock layers near the bottom of a canyon wall are usually:", options: ["Older than the layers on top", "Newer than the top", "The same age", "Not rock"], a: 0, why: "Lower layers were deposited first, so they're older." },
+      { id: "ess21e", obj: "4-ESS2-1", type: "mc", q: "Over many years, a river can carve a canyon through:", options: ["Erosion (wearing away rock)", "Building new rock", "Freezing metal", "Melting"], a: 0, why: "Flowing water erodes rock over time." },
+      { id: "ess22e", obj: "4-ESS2-2", type: "mc", q: "A map showing rivers, mountains, and deserts helps us find:", options: ["Patterns in Earth's features", "The time of day", "People's names", "The temperature"], a: 0, why: "Maps reveal where features are and their patterns." },
+      { id: "ess31e", obj: "4-ESS3-1", type: "mc", q: "Which energy source is nonrenewable (it can run out)?", options: ["Oil", "Sunlight", "Wind", "Moving water"], a: 0, why: "Oil is a fossil fuel; the others renew." },
+      { id: "ess32e", obj: "4-ESS3-2", type: "mc", q: "Planting trees and grass on a bare hillside can help prevent:", options: ["Erosion and landslides", "Sunshine", "Wind forever", "Rain"], a: 0, why: "Roots hold soil in place, reducing erosion." }
     ]
   },
 
