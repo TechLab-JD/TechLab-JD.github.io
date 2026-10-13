@@ -1273,5 +1273,117 @@ window.LAB404_COURSES = {
       { id: "sp5c", obj: "6.SP.5", type: "numeric", q: "The range of 2, 5, 10 is ___.", answer: 8, why: "10 − 2 = 8." },
       { id: "sp5d", obj: "6.SP.5", type: "numeric", q: "The mean of 10 and 20 is ___.", answer: 15, why: "(10 + 20) ÷ 2 = 15." }
     ]
+  },
+
+  "g6-science": {
+    id: "g6-science", title: "Grade 6 Science", subjectKey: "science", grade: "6",
+    standard: "Massachusetts STE / NGSS Middle School (grades 6–8 band)",
+    note: "Middle-school science concepts across physical, life, and Earth/space science, plus engineering design. (NGSS bands MS science 6–8 rather than by single grade.)",
+    domains: [
+      { code: "PS", name: "Physical Science" },
+      { code: "LS", name: "Life Science" },
+      { code: "ESS", name: "Earth & Space Science" },
+      { code: "ETS", name: "Engineering Design" }
+    ],
+    objectives: [
+      { code: "6.PS.1", domain: "PS", weight: 1.0, title: "States of matter and changes between them", xwalk: { cc: "", ma: "MS-PS1", teks: "", vasol: "", flbest: "" } },
+      { code: "6.PS.2", domain: "PS", weight: 1.0, title: "Matter is made of atoms and molecules", xwalk: { cc: "", ma: "MS-PS1", teks: "", vasol: "", flbest: "" } },
+      { code: "6.PS.3", domain: "PS", weight: 1.0, title: "Distinguish physical and chemical changes", xwalk: { cc: "", ma: "MS-PS1", teks: "", vasol: "", flbest: "" } },
+      { code: "6.PS.4", domain: "PS", weight: 1.0, title: "Forms of energy and energy transfer", xwalk: { cc: "", ma: "MS-PS3", teks: "", vasol: "", flbest: "" } },
+      { code: "6.PS.5", domain: "PS", weight: 1.0, title: "Forces and their effect on motion", xwalk: { cc: "", ma: "MS-PS2", teks: "", vasol: "", flbest: "" } },
+      { code: "6.LS.1", domain: "LS", weight: 1.1, title: "Cells are the basic unit of life", xwalk: { cc: "", ma: "MS-LS1", teks: "", vasol: "", flbest: "" } },
+      { code: "6.LS.2", domain: "LS", weight: 1.0, title: "Levels of organization in living things", xwalk: { cc: "", ma: "MS-LS1", teks: "", vasol: "", flbest: "" } },
+      { code: "6.LS.3", domain: "LS", weight: 1.0, title: "How organisms get energy (photosynthesis & respiration)", xwalk: { cc: "", ma: "MS-LS1", teks: "", vasol: "", flbest: "" } },
+      { code: "6.LS.4", domain: "LS", weight: 1.0, title: "Energy flow and matter cycles in ecosystems", xwalk: { cc: "", ma: "MS-LS2", teks: "", vasol: "", flbest: "" } },
+      { code: "6.LS.5", domain: "LS", weight: 0.9, title: "Traits are inherited through genes", xwalk: { cc: "", ma: "MS-LS3", teks: "", vasol: "", flbest: "" } },
+      { code: "6.ESS.1", domain: "ESS", weight: 1.0, title: "The water cycle", xwalk: { cc: "", ma: "MS-ESS2", teks: "", vasol: "", flbest: "" } },
+      { code: "6.ESS.2", domain: "ESS", weight: 0.9, title: "Weather versus climate", xwalk: { cc: "", ma: "MS-ESS2", teks: "", vasol: "", flbest: "" } },
+      { code: "6.ESS.3", domain: "ESS", weight: 0.9, title: "Rocks, minerals, and the rock cycle", xwalk: { cc: "", ma: "MS-ESS2", teks: "", vasol: "", flbest: "" } },
+      { code: "6.ESS.4", domain: "ESS", weight: 1.0, title: "Earth's layers and plate tectonics", xwalk: { cc: "", ma: "MS-ESS2", teks: "", vasol: "", flbest: "" } },
+      { code: "6.ESS.5", domain: "ESS", weight: 0.9, title: "The solar system and Earth-sun-moon", xwalk: { cc: "", ma: "MS-ESS1", teks: "", vasol: "", flbest: "" } },
+      { code: "6.ETS.1", domain: "ETS", weight: 0.8, title: "The engineering design process", xwalk: { cc: "", ma: "MS-ETS1", teks: "", vasol: "", flbest: "" } }
+    ],
+    questions: [
+      // 6.PS.1
+      { id: "ps1a", obj: "6.PS.1", type: "mc", q: "The three common states of matter are solid, liquid, and:", options: ["Gas", "Energy", "Light", "Sound"], a: 0, why: "Solid, liquid, and gas." },
+      { id: "ps1b", obj: "6.PS.1", type: "mc", q: "In a GAS, the particles are:", options: ["Far apart and moving fast", "Packed tightly in place", "Stuck in a row", "Not moving at all"], a: 0, why: "Gas particles are spread out and fast." },
+      { id: "ps1c", obj: "6.PS.1", type: "mc", q: "When ice melts to water, it changes from a solid to a:", options: ["Liquid", "Gas", "Plasma", "New element"], a: 0, why: "Melting: solid → liquid." },
+      { id: "ps1d", obj: "6.PS.1", type: "mc", q: "Adding heat energy to a substance usually makes its particles:", options: ["Move faster", "Stop", "Disappear", "Shrink"], a: 0, why: "Heat speeds up particle motion." },
+      // 6.PS.2
+      { id: "ps2a", obj: "6.PS.2", type: "mc", q: "The smallest basic building block of matter is the:", options: ["Atom", "Cell", "Rock", "Planet"], a: 0, why: "Atoms are the building blocks of matter." },
+      { id: "ps2b", obj: "6.PS.2", type: "mc", q: "A substance made of only one kind of atom is an:", options: ["Element", "Mixture", "Organism", "Machine"], a: 0, why: "Elements are one type of atom." },
+      { id: "ps2c", obj: "6.PS.2", type: "mc", q: "Water (H2O) is made of hydrogen and oxygen atoms joined into a:", options: ["Molecule", "Planet", "Cell", "Rock"], a: 0, why: "Joined atoms form a molecule." },
+      { id: "ps2d", obj: "6.PS.2", type: "mc", q: "Atoms are:", options: ["Too small to see with the eye", "Larger than cells", "Visible to everyone", "Made of wood"], a: 0, why: "Atoms are extremely tiny." },
+      // 6.PS.3
+      { id: "ps3a", obj: "6.PS.3", type: "mc", q: "Cutting paper is a ___ change (no new substance).", options: ["Physical", "Chemical", "Nuclear", "None"], a: 0, why: "It's still paper — a physical change." },
+      { id: "ps3b", obj: "6.PS.3", type: "mc", q: "Burning paper is a ___ change (new substances form).", options: ["Chemical", "Physical", "No", "Frozen"], a: 0, why: "Burning forms new substances." },
+      { id: "ps3c", obj: "6.PS.3", type: "mc", q: "Which is a sign of a CHEMICAL change?", options: ["A new color, gas, or smell forms", "You cut it", "You bend it", "You freeze it"], a: 0, why: "New substances show new properties." },
+      { id: "ps3d", obj: "6.PS.3", type: "mc", q: "Melting and freezing are ___ changes.", options: ["Physical", "Chemical", "New-substance", "Nuclear"], a: 0, why: "Changing state is physical." },
+      // 6.PS.4
+      { id: "ps4a", obj: "6.PS.4", type: "mc", q: "Energy an object has because it is MOVING is:", options: ["Kinetic energy", "Potential energy", "No energy", "Chemical only"], a: 0, why: "Kinetic energy is energy of motion." },
+      { id: "ps4b", obj: "6.PS.4", type: "mc", q: "Stored energy, like a ball held up high, is:", options: ["Potential energy", "Kinetic energy", "Light only", "Sound"], a: 0, why: "Stored energy is potential energy." },
+      { id: "ps4c", obj: "6.PS.4", type: "mc", q: "Energy can be transferred but it cannot be:", options: ["Created or destroyed", "Moved", "Stored", "Changed in form"], a: 0, why: "Energy is conserved." },
+      { id: "ps4d", obj: "6.PS.4", type: "mc", q: "A battery stores ___ energy.", options: ["Chemical", "Light only", "Sound", "Gravity"], a: 0, why: "Batteries store chemical energy." },
+      // 6.PS.5
+      { id: "ps5a", obj: "6.PS.5", type: "mc", q: "A force is a:", options: ["Push or a pull", "Color", "Smell", "Sound only"], a: 0, why: "A force is a push or pull." },
+      { id: "ps5b", obj: "6.PS.5", type: "mc", q: "An object at rest stays at rest unless acted on by a:", options: ["Force", "Color", "Smell", "Light"], a: 0, why: "Newton's first law: inertia." },
+      { id: "ps5c", obj: "6.PS.5", type: "mc", q: "The force that pulls objects toward Earth is:", options: ["Gravity", "Magnetism", "Friction", "Sound"], a: 0, why: "Gravity pulls objects down." },
+      { id: "ps5d", obj: "6.PS.5", type: "mc", q: "The force that slows a sliding object is:", options: ["Friction", "Gravity upward", "Magnetism", "Light"], a: 0, why: "Friction opposes motion." },
+      // 6.LS.1
+      { id: "ls1a", obj: "6.LS.1", type: "mc", q: "The basic unit of all living things is the:", options: ["Cell", "Atom", "Rock", "Organ"], a: 0, why: "Cells are the basic unit of life." },
+      { id: "ls1b", obj: "6.LS.1", type: "mc", q: "Which of these is NOT made of cells?", options: ["A rock", "A tree", "A dog", "A person"], a: 0, why: "Rocks are nonliving — not made of cells." },
+      { id: "ls1c", obj: "6.LS.1", type: "mc", q: "The cell structure that controls the cell and holds DNA is the:", options: ["Nucleus", "Wall", "Floor", "Window"], a: 0, why: "The nucleus is the control center." },
+      { id: "ls1d", obj: "6.LS.1", type: "mc", q: "Plant cells have a ___ that animal cells do not.", options: ["Cell wall", "Nucleus", "Membrane", "Cytoplasm"], a: 0, why: "Only plant cells have a cell wall." },
+      // 6.LS.2
+      { id: "ls2a", obj: "6.LS.2", type: "mc", q: "Cells group together to form:", options: ["Tissues", "Atoms", "Planets", "Rocks"], a: 0, why: "Cells → tissues." },
+      { id: "ls2b", obj: "6.LS.2", type: "mc", q: "The order from smallest to largest is:", options: ["Cell → tissue → organ → organ system", "Organ → cell → tissue", "Organ system → cell", "Tissue → cell → organ"], a: 0, why: "Living things build up from cells." },
+      { id: "ls2c", obj: "6.LS.2", type: "mc", q: "The heart is an example of an:", options: ["Organ", "Atom", "Element", "Ecosystem"], a: 0, why: "The heart is an organ." },
+      { id: "ls2d", obj: "6.LS.2", type: "mc", q: "A group of organs working together is an:", options: ["Organ system", "Atom", "Cell", "Element"], a: 0, why: "Organs → organ systems." },
+      // 6.LS.3
+      { id: "ls3a", obj: "6.LS.3", type: "mc", q: "Plants make their own food using sunlight in a process called:", options: ["Photosynthesis", "Digestion", "Erosion", "Gravity"], a: 0, why: "Photosynthesis makes food from sunlight." },
+      { id: "ls3b", obj: "6.LS.3", type: "mc", q: "In photosynthesis, plants take in carbon dioxide and release:", options: ["Oxygen", "Rocks", "Plastic", "Sound"], a: 0, why: "Plants release oxygen." },
+      { id: "ls3c", obj: "6.LS.3", type: "mc", q: "Cells release energy from food through:", options: ["Cellular respiration", "Photosynthesis only", "Erosion", "Freezing"], a: 0, why: "Respiration frees energy from food." },
+      { id: "ls3d", obj: "6.LS.3", type: "mc", q: "The energy in food originally comes from:", options: ["The sun", "The soil only", "Rocks", "The moon"], a: 0, why: "Sunlight, captured by plants." },
+      // 6.LS.4
+      { id: "ls4a", obj: "6.LS.4", type: "mc", q: "In a food chain, energy flows from:", options: ["Producers to consumers to decomposers", "Rocks to the sun", "Decomposers to the sun", "Water to the moon"], a: 0, why: "Energy flows up the chain." },
+      { id: "ls4b", obj: "6.LS.4", type: "mc", q: "Organisms that break down dead material are:", options: ["Decomposers", "Producers", "Predators", "Stars"], a: 0, why: "Decomposers recycle matter." },
+      { id: "ls4c", obj: "6.LS.4", type: "mc", q: "Plants are called producers because they:", options: ["Make their own food", "Eat animals", "Decompose things", "Hunt"], a: 0, why: "They produce food by photosynthesis." },
+      { id: "ls4d", obj: "6.LS.4", type: "mc", q: "Matter (like carbon and water) in an ecosystem is:", options: ["Recycled over and over", "Created new each day", "Destroyed forever", "Never used"], a: 0, why: "Matter cycles through ecosystems." },
+      // 6.LS.5
+      { id: "ls5a", obj: "6.LS.5", type: "mc", q: "Traits are passed from parents to offspring through:", options: ["Genes (DNA)", "The weather", "Food only", "Exercise only"], a: 0, why: "Genes carry inherited traits." },
+      { id: "ls5b", obj: "6.LS.5", type: "mc", q: "You have features similar to your parents because of:", options: ["Heredity", "Luck", "The sun", "Gravity"], a: 0, why: "Heredity passes traits along." },
+      { id: "ls5c", obj: "6.LS.5", type: "mc", q: "The molecule that carries genetic instructions is:", options: ["DNA", "Water", "Oxygen", "Salt"], a: 0, why: "DNA holds the genetic code." },
+      { id: "ls5d", obj: "6.LS.5", type: "mc", q: "Offspring usually:", options: ["Resemble their parents but aren't identical", "Look nothing like parents", "Are exact copies always", "Have no traits"], a: 0, why: "They inherit a mix of traits." },
+      // 6.ESS.1
+      { id: "es1a", obj: "6.ESS.1", type: "mc", q: "Water turning into vapor and rising into the air is:", options: ["Evaporation", "Condensation", "Precipitation", "Erosion"], a: 0, why: "Evaporation: liquid → vapor." },
+      { id: "es1b", obj: "6.ESS.1", type: "mc", q: "Water vapor cooling and forming clouds is:", options: ["Condensation", "Evaporation", "Precipitation", "Melting"], a: 0, why: "Condensation forms clouds." },
+      { id: "es1c", obj: "6.ESS.1", type: "mc", q: "Rain, snow, and hail are forms of:", options: ["Precipitation", "Evaporation", "Condensation", "Erosion"], a: 0, why: "Precipitation falls from clouds." },
+      { id: "es1d", obj: "6.ESS.1", type: "mc", q: "The water cycle is powered by energy from the:", options: ["Sun", "Moon", "Earth's core only", "Wind only"], a: 0, why: "The sun drives the water cycle." },
+      // 6.ESS.2
+      { id: "es2a", obj: "6.ESS.2", type: "mc", q: "The day-to-day conditions of the atmosphere are called:", options: ["Weather", "Climate", "Seasons only", "A map"], a: 0, why: "Weather is short-term." },
+      { id: "es2b", obj: "6.ESS.2", type: "mc", q: "The typical, long-term pattern of conditions in a region is its:", options: ["Climate", "Weather", "A single storm", "The time"], a: 0, why: "Climate is long-term average weather." },
+      { id: "es2c", obj: "6.ESS.2", type: "mc", q: "'It is raining today' describes:", options: ["Weather", "Climate", "A map", "A season only"], a: 0, why: "Today's conditions = weather." },
+      { id: "es2d", obj: "6.ESS.2", type: "mc", q: "'This desert is hot and dry year after year' describes:", options: ["Climate", "Weather", "A single day", "Nothing"], a: 0, why: "Long-term pattern = climate." },
+      // 6.ESS.3
+      { id: "es3a", obj: "6.ESS.3", type: "mc", q: "Rocks formed from cooled lava or magma are:", options: ["Igneous", "Sedimentary", "Metamorphic", "Liquid"], a: 0, why: "Igneous rocks form from cooled molten rock." },
+      { id: "es3b", obj: "6.ESS.3", type: "mc", q: "Rocks made of layers of sediment pressed together are:", options: ["Sedimentary", "Igneous", "Liquid", "Gas"], a: 0, why: "Sedimentary rocks form in layers." },
+      { id: "es3c", obj: "6.ESS.3", type: "mc", q: "Rocks changed by heat and pressure are:", options: ["Metamorphic", "Sedimentary only", "Liquid", "Gas"], a: 0, why: "Heat + pressure → metamorphic." },
+      { id: "es3d", obj: "6.ESS.3", type: "mc", q: "The rock cycle shows that rocks can:", options: ["Change from one type to another over time", "Never change", "Only melt", "Disappear"], a: 0, why: "Rocks transform over long times." },
+      // 6.ESS.4
+      { id: "es4a", obj: "6.ESS.4", type: "mc", q: "Earth's outer rocky layer is the:", options: ["Crust", "Core", "Mantle", "Atmosphere"], a: 0, why: "The crust is the outer layer." },
+      { id: "es4b", obj: "6.ESS.4", type: "mc", q: "The movement of Earth's giant plates can cause:", options: ["Earthquakes and volcanoes", "Rainbows", "Sunsets", "Tides only"], a: 0, why: "Plate motion causes quakes and volcanoes." },
+      { id: "es4c", obj: "6.ESS.4", type: "mc", q: "Earth's center, made of very hot metal, is the:", options: ["Core", "Crust", "Atmosphere", "Ocean"], a: 0, why: "The core is Earth's hot metal center." },
+      { id: "es4d", obj: "6.ESS.4", type: "mc", q: "Most earthquakes and volcanoes happen:", options: ["Along plate boundaries", "Randomly everywhere equally", "Only at the poles", "Only in deserts"], a: 0, why: "They cluster at plate boundaries." },
+      // 6.ESS.5
+      { id: "es5a", obj: "6.ESS.5", type: "mc", q: "The sun is at the center of our:", options: ["Solar system", "Planet", "Moon", "City"], a: 0, why: "The solar system orbits the sun." },
+      { id: "es5b", obj: "6.ESS.5", type: "mc", q: "Earth's revolution around the sun takes about:", options: ["One year", "One day", "One month", "One hour"], a: 0, why: "One orbit = one year." },
+      { id: "es5c", obj: "6.ESS.5", type: "mc", q: "The moon's changing shapes we see are called:", options: ["Phases", "Eclipses only", "Seasons", "Tides"], a: 0, why: "Moon phases change through the month." },
+      { id: "es5d", obj: "6.ESS.5", type: "mc", q: "The force that keeps planets orbiting the sun is:", options: ["Gravity", "Magnetism", "Friction", "Wind"], a: 0, why: "Gravity holds the orbits." },
+      // 6.ETS.1
+      { id: "et1a", obj: "6.ETS.1", type: "mc", q: "The first step in solving an engineering problem is to:", options: ["Define the problem clearly", "Build it immediately", "Give up", "Guess"], a: 0, why: "Define the problem first." },
+      { id: "et1b", obj: "6.ETS.1", type: "mc", q: "After building a prototype, engineers:", options: ["Test it and improve it", "Never change it", "Throw it away", "Ignore results"], a: 0, why: "Test and refine." },
+      { id: "et1c", obj: "6.ETS.1", type: "mc", q: "A 'prototype' is:", options: ["An early model to test an idea", "A finished product only", "A type of rock", "A planet"], a: 0, why: "A prototype is a testable early model." },
+      { id: "et1d", obj: "6.ETS.1", type: "mc", q: "When a design fails a test, a good engineer:", options: ["Learns from it and redesigns", "Quits", "Hides it", "Blames the tools"], a: 0, why: "Failure guides improvement." }
+    ]
   }
 };
