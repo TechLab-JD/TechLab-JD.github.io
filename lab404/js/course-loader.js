@@ -177,9 +177,10 @@ window.CourseLoader = (function () {
         '<div class="cv-hint">Type the number (no units).</div>';
     } else {
       var multi = q.type === "multi";
+      var order = shuffle(q.options.map(function (_, i) { return i; })); // shuffle display; data-i keeps the real index
       body = (multi ? '<div class="cv-hint" style="margin:0 0 8px">Select ALL that apply, then Check.</div>' : "") +
-        '<div class="cv-opts">' + q.options.map(function (o, i) {
-          return '<button class="cv-opt" data-i="' + i + '">' + esc(o) + '</button>';
+        '<div class="cv-opts">' + order.map(function (i) {
+          return '<button class="cv-opt" data-i="' + i + '">' + esc(q.options[i]) + '</button>';
         }).join("") + '</div>';
     }
     el.innerHTML =
