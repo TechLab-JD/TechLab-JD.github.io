@@ -249,5 +249,87 @@ window.LAB404_COURSES = {
       { id: "rf3c", obj: "4.RF.3", type: "mc", q: "Which prefix means 'not'?", options: ["un-", "re-", "pre-", "mis-"], a: 0, why: "'un-' means not (unhappy = not happy)." },
       { id: "rf3d", obj: "4.RF.3", type: "mc", q: "To read a long word like independent, it helps to:", options: ["Break it into syllables and parts", "Guess from the first letter only", "Skip it", "Spell it backward"], a: 0, why: "Decode long words by chunking them into parts." }
     ]
+  },
+
+  "g4-social": {
+    id: "g4-social", title: "Grade 4 Social Studies", subjectKey: "social", grade: "4",
+    standard: "Massachusetts History & Social Science (Grade 4) + C3 Framework",
+    note: "Pilot course: geography & map skills, civics & government, economics, and early history (Social studies has no Common Core; codes are internal, aligned to MA frameworks).",
+    domains: [
+      { code: "G", name: "Geography & Map Skills" },
+      { code: "C", name: "Civics & Government" },
+      { code: "E", name: "Economics" },
+      { code: "H", name: "History" }
+    ],
+    objectives: [
+      { code: "4.SS.G1", domain: "G", weight: 1.0, title: "Use map skills: directions, the compass rose, and the map key", xwalk: { cc: "", ma: "4.T1", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.G2", domain: "G", weight: 0.9, title: "Identify the continents and oceans", xwalk: { cc: "", ma: "4.T1", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.G3", domain: "G", weight: 1.0, title: "Identify US regions and major landforms", xwalk: { cc: "", ma: "4.T2", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.G4", domain: "G", weight: 0.9, title: "Use the globe: equator, latitude/longitude, hemispheres", xwalk: { cc: "", ma: "4.T1", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.C1", domain: "C", weight: 1.1, title: "Rights and responsibilities of citizens", xwalk: { cc: "", ma: "4.T4", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.C2", domain: "C", weight: 1.0, title: "Levels of government: local, state, and national", xwalk: { cc: "", ma: "4.T4", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.C3", domain: "C", weight: 0.9, title: "Why communities have rules and laws", xwalk: { cc: "", ma: "4.T4", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.E1", domain: "E", weight: 1.0, title: "Goods and services; needs versus wants", xwalk: { cc: "", ma: "4.T5", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.E2", domain: "E", weight: 0.9, title: "Producers, consumers, and scarcity", xwalk: { cc: "", ma: "4.T5", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.H1", domain: "H", weight: 1.0, title: "Native American cultures were shaped by their regions", xwalk: { cc: "", ma: "4.T3", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.H2", domain: "H", weight: 0.9, title: "Read timelines and use chronological order", xwalk: { cc: "", ma: "4.T3", teks: "", vasol: "", flbest: "" } }
+    ],
+    questions: [
+      // G1
+      { id: "ssg1a", obj: "4.SS.G1", type: "mc", q: "On most maps, which direction is at the top?", options: ["North", "South", "East", "West"], a: 0, why: "By convention, north is at the top of a map." },
+      { id: "ssg1b", obj: "4.SS.G1", type: "mc", q: "The part of a map that explains what the symbols mean is the:", options: ["Map key (legend)", "Title", "Scale", "Border"], a: 0, why: "The key, or legend, explains the symbols." },
+      { id: "ssg1c", obj: "4.SS.G1", type: "mc", q: "The compass rose on a map shows:", options: ["Directions (N, S, E, W)", "The weather", "The population", "The time"], a: 0, why: "A compass rose shows directions." },
+      { id: "ssg1d", obj: "4.SS.G1", type: "mc", q: "If you travel from the United States toward the North Pole, you are heading:", options: ["North", "South", "East", "West"], a: 0, why: "The North Pole is to the north." },
+      // G2
+      { id: "ssg2a", obj: "4.SS.G2", type: "mc", q: "How many continents are there on Earth?", options: ["7", "5", "4", "10"], a: 0, why: "There are 7 continents." },
+      { id: "ssg2b", obj: "4.SS.G2", type: "mc", q: "Which is the largest ocean?", options: ["Pacific", "Atlantic", "Indian", "Arctic"], a: 0, why: "The Pacific is the largest ocean." },
+      { id: "ssg2c", obj: "4.SS.G2", type: "multi", q: "Select ALL of these that are CONTINENTS.", options: ["Africa", "Asia", "Antarctica", "Canada", "Europe"], correct: [0, 1, 2, 4], why: "Canada is a country, not a continent." },
+      { id: "ssg2d", obj: "4.SS.G2", type: "mc", q: "The continent the United States is located on is:", options: ["North America", "Europe", "Asia", "Africa"], a: 0, why: "The US is in North America." },
+      // G3
+      { id: "ssg3a", obj: "4.SS.G3", type: "mc", q: "A large area of flat or gently rolling land, good for farming, is a:", options: ["Plain", "Mountain", "Ocean", "Canyon"], a: 0, why: "Plains are flat lands good for farming." },
+      { id: "ssg3b", obj: "4.SS.G3", type: "mc", q: "A very tall landform with steep sides is a:", options: ["Mountain", "Valley", "Plain", "Island"], a: 0, why: "Mountains are tall and steep." },
+      { id: "ssg3c", obj: "4.SS.G3", type: "mc", q: "Land completely surrounded by water is an:", options: ["Island", "Isthmus", "Plateau", "Plain"], a: 0, why: "An island is surrounded by water." },
+      { id: "ssg3d", obj: "4.SS.G3", type: "mc", q: "The US is often divided into regions such as the Northeast, South, Midwest, and:", options: ["West", "Canada", "Europe", "Ocean"], a: 0, why: "The West is one of the main US regions." },
+      // G4
+      { id: "ssg4a", obj: "4.SS.G4", type: "mc", q: "The imaginary line around the middle of the Earth is the:", options: ["Equator", "Prime Meridian", "North Pole", "Border"], a: 0, why: "The Equator circles the middle of the Earth." },
+      { id: "ssg4b", obj: "4.SS.G4", type: "mc", q: "Lines that run east-west and measure distance north or south of the Equator are called:", options: ["Latitude", "Longitude", "Borders", "Rivers"], a: 0, why: "Latitude lines run east-west." },
+      { id: "ssg4c", obj: "4.SS.G4", type: "mc", q: "A round model of the Earth shaped like a ball is a:", options: ["Globe", "Map", "Chart", "Graph"], a: 0, why: "A globe is a 3-D model of Earth." },
+      { id: "ssg4d", obj: "4.SS.G4", type: "mc", q: "The halves of the Earth divided by the Equator are called:", options: ["Hemispheres", "Continents", "Oceans", "Poles"], a: 0, why: "The Northern and Southern hemispheres." },
+      // C1
+      { id: "ssc1a", obj: "4.SS.C1", type: "mc", q: "A responsibility of a good citizen is to:", options: ["Follow laws and help the community", "Ignore all rules", "Never vote", "Litter"], a: 0, why: "Following laws and helping are citizen responsibilities." },
+      { id: "ssc1b", obj: "4.SS.C1", type: "mc", q: "A right that US citizens have is:", options: ["Freedom of speech", "The right to break laws", "The right to never pay any taxes", "The right to own the government"], a: 0, why: "Freedom of speech is a protected right." },
+      { id: "ssc1c", obj: "4.SS.C1", type: "multi", q: "Select ALL responsibilities of a good citizen.", options: ["Voting when old enough", "Obeying laws", "Helping neighbors", "Paying taxes", "Never telling the truth"], correct: [0, 1, 2, 3], why: "The first four are responsibilities of a citizen." },
+      { id: "ssc1d", obj: "4.SS.C1", type: "mc", q: "Voting lets citizens:", options: ["Choose their leaders", "Avoid all rules", "Pick the weather", "Leave the country"], a: 0, why: "Voting is how citizens choose their leaders." },
+      // C2
+      { id: "ssc2a", obj: "4.SS.C2", type: "mc", q: "A mayor leads which level of government?", options: ["Local (a city or town)", "State", "National", "None"], a: 0, why: "A mayor leads a city or town." },
+      { id: "ssc2b", obj: "4.SS.C2", type: "mc", q: "The President leads which level of government?", options: ["National (federal)", "Local", "State", "City"], a: 0, why: "The President leads the national government." },
+      { id: "ssc2c", obj: "4.SS.C2", type: "mc", q: "A governor leads a:", options: ["State", "City", "Country", "School"], a: 0, why: "Governors lead states." },
+      { id: "ssc2d", obj: "4.SS.C2", type: "mc", q: "Laws for the whole country are made by the:", options: ["National government (Congress)", "Your school", "Your family", "A single city"], a: 0, why: "Congress makes national laws." },
+      // C3
+      { id: "ssc3a", obj: "4.SS.C3", type: "mc", q: "Communities have rules and laws mainly to:", options: ["Keep people safe and treat them fairly", "Make life boring", "Help only leaders", "Waste time"], a: 0, why: "Rules and laws keep people safe and fair." },
+      { id: "ssc3b", obj: "4.SS.C3", type: "mc", q: "What might happen if there were no traffic laws?", options: ["Driving would be dangerous", "Everyone would be safer", "Cars would fly", "Nothing would change"], a: 0, why: "Traffic laws keep driving orderly and safe." },
+      { id: "ssc3c", obj: "4.SS.C3", type: "mc", q: "A rule and a law are alike because both:", options: ["Tell people how to behave", "Are always fun", "Cost money", "Are secret"], a: 0, why: "Both guide how people behave." },
+      { id: "ssc3d", obj: "4.SS.C3", type: "mc", q: "Who is expected to follow a community's laws?", options: ["Everyone", "Only children", "Only adults", "Only leaders"], a: 0, why: "Laws apply to everyone." },
+      // E1
+      { id: "sse1a", obj: "4.SS.E1", type: "mc", q: "A haircut is an example of a:", options: ["Service", "Good", "Need", "Factory"], a: 0, why: "A service is useful work done for others." },
+      { id: "sse1b", obj: "4.SS.E1", type: "mc", q: "A toy, a shirt, and an apple are all examples of:", options: ["Goods", "Services", "Taxes", "Laws"], a: 0, why: "Goods are physical products you can hold." },
+      { id: "sse1c", obj: "4.SS.E1", type: "mc", q: "Which is a NEED, not just a want?", options: ["Food", "A video game", "Candy", "A toy"], a: 0, why: "Food is a basic need for survival." },
+      { id: "sse1d", obj: "4.SS.E1", type: "multi", q: "Select ALL that are SERVICES.", options: ["A doctor's checkup", "Teaching a class", "Delivering mail", "A loaf of bread"], correct: [0, 1, 2], why: "Bread is a good; the other three are services." },
+      // E2
+      { id: "sse2a", obj: "4.SS.E2", type: "mc", q: "A person who makes or grows goods is a:", options: ["Producer", "Consumer", "Tourist", "Voter"], a: 0, why: "Producers make or grow goods." },
+      { id: "sse2b", obj: "4.SS.E2", type: "mc", q: "A person who buys and uses goods is a:", options: ["Consumer", "Producer", "Mayor", "Factory"], a: 0, why: "Consumers buy and use goods." },
+      { id: "sse2c", obj: "4.SS.E2", type: "mc", q: "When there is not enough of something for everyone who wants it, that is:", options: ["Scarcity", "Plenty", "A service", "A law"], a: 0, why: "Scarcity means limited supply." },
+      { id: "sse2d", obj: "4.SS.E2", type: "mc", q: "Because of scarcity, people must:", options: ["Make choices", "Have everything", "Never trade", "Stop working"], a: 0, why: "Limited resources force people to make choices." },
+      // H1
+      { id: "ssh1a", obj: "4.SS.H1", type: "mc", q: "Native American groups in different regions had different ways of life mostly because of:", options: ["The land and resources around them", "Their favorite colors", "The internet", "Cars"], a: 0, why: "The environment shaped how groups lived." },
+      { id: "ssh1b", obj: "4.SS.H1", type: "mc", q: "Many Great Plains Native American groups depended heavily on the:", options: ["Buffalo (bison)", "Ocean whales", "Pineapple", "Camel"], a: 0, why: "Buffalo were central to Plains life." },
+      { id: "ssh1c", obj: "4.SS.H1", type: "mc", q: "Native Americans lived in the Americas:", options: ["Long before European explorers arrived", "Only after the year 1900", "Only in modern cities", "Just last year"], a: 0, why: "They lived here for thousands of years before Europeans." },
+      { id: "ssh1d", obj: "4.SS.H1", type: "mc", q: "The kinds of homes and foods a Native American group had depended on:", options: ["The natural environment of their region", "The alphabet", "Television", "Airplanes"], a: 0, why: "Available resources came from the environment." },
+      // H2
+      { id: "ssh2a", obj: "4.SS.H2", type: "mc", q: "A timeline shows events in order of:", options: ["Time (when they happened)", "Size", "Color", "Price"], a: 0, why: "Timelines are ordered by time." },
+      { id: "ssh2b", obj: "4.SS.H2", type: "mc", q: "On most timelines, the earliest event is on the:", options: ["Left", "Right", "Top corner", "Bottom"], a: 0, why: "Timelines read from left (earliest) to right (latest)." },
+      { id: "ssh2c", obj: "4.SS.H2", type: "mc", q: "The word chronological means in order of:", options: ["Time", "Importance", "Height", "The alphabet"], a: 0, why: "Chronological means time order." },
+      { id: "ssh2d", obj: "4.SS.H2", type: "mc", q: "A period of 100 years is called a:", options: ["Century", "Decade", "Year", "Week"], a: 0, why: "A century is 100 years." }
+    ]
   }
 };
