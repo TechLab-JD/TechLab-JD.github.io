@@ -828,7 +828,9 @@ window.LAB404_COURSES = {
       { code: "5-ESS1-1", domain: "ESS", weight: 1.0, title: "The sun is a star; brightness depends on distance", xwalk: { cc: "5-ESS1-1", ma: "5-ESS1-1", teks: "", vasol: "", flbest: "" } },
       { code: "5-ESS1-2", domain: "ESS", weight: 1.0, title: "Daily patterns (day/night, shadows) come from Earth's motion", xwalk: { cc: "5-ESS1-2", ma: "5-ESS1-2", teks: "", vasol: "", flbest: "" } },
       { code: "5-ESS2-2", domain: "ESS", weight: 0.9, title: "Most of Earth's water is salt water in the oceans", xwalk: { cc: "5-ESS2-2", ma: "5-ESS2-2", teks: "", vasol: "", flbest: "" } },
-      { code: "5-ESS3-1", domain: "ESS", weight: 1.0, title: "Ways people can protect Earth's resources and environment", xwalk: { cc: "5-ESS3-1", ma: "5-ESS3-1", teks: "", vasol: "", flbest: "" } }
+      { code: "5-ESS3-1", domain: "ESS", weight: 1.0, title: "Ways people can protect Earth's resources and environment", xwalk: { cc: "5-ESS3-1", ma: "5-ESS3-1", teks: "", vasol: "", flbest: "" } },
+      { code: "5-PS1-4", domain: "PS", weight: 1.0, title: "Mixing substances can form a new substance (chemical change)", xwalk: { cc: "5-PS1-4", ma: "5-PS1-4", teks: "", vasol: "", flbest: "" } },
+      { code: "5-ESS2-1", domain: "ESS", weight: 1.0, title: "Earth's systems (land, water, air, life) interact", xwalk: { cc: "5-ESS2-1", ma: "5-ESS2-1", teks: "", vasol: "", flbest: "" } }
     ],
     questions: [
       // 5-PS1-1
@@ -885,7 +887,31 @@ window.LAB404_COURSES = {
       { id: "e31a", obj: "5-ESS3-1", type: "multi", q: "Select ALL the ways people can protect Earth's resources.", options: ["Recycling", "Saving water", "Reducing pollution", "Planting trees", "Wasting electricity"], correct: [0, 1, 2, 3], why: "The first four protect resources; wasting electricity does not." },
       { id: "e31b", obj: "5-ESS3-1", type: "mc", q: "Turning off lights when you leave a room helps save:", options: ["Energy", "Only water", "Only trees", "Nothing"], a: 0, why: "It saves electrical energy." },
       { id: "e31c", obj: "5-ESS3-1", type: "mc", q: "Recycling paper helps protect:", options: ["Trees and forests", "The sun", "Gravity", "The moon"], a: 0, why: "Less new paper means fewer trees cut down." },
-      { id: "e31d", obj: "5-ESS3-1", type: "mc", q: "One way communities reduce pollution is by:", options: ["Using cleaner energy like solar and wind", "Burning more coal", "Dumping trash in rivers", "Idling cars longer"], a: 0, why: "Clean energy produces less pollution." }
+      { id: "e31d", obj: "5-ESS3-1", type: "mc", q: "One way communities reduce pollution is by:", options: ["Using cleaner energy like solar and wind", "Burning more coal", "Dumping trash in rivers", "Idling cars longer"], a: 0, why: "Clean energy produces less pollution." },
+      // 5-PS1-4 (new substance from mixing)
+      { id: "p14a", obj: "5-PS1-4", type: "mc", q: "When vinegar and baking soda mix and fizz, it shows:", options: ["A new substance forming (a chemical change)", "Just a color change", "Nothing happening", "Only melting"], a: 0, why: "The fizzing gas is a new substance." },
+      { id: "p14b", obj: "5-PS1-4", type: "mc", q: "Which is a sign that a NEW substance has formed?", options: ["Fizzing, a color change, or a new smell", "The bowl gets bigger", "You stir it", "It stays exactly the same"], a: 0, why: "New gas, color, or odor signals a chemical change." },
+      { id: "p14c", obj: "5-PS1-4", type: "mc", q: "Stirring salt into water makes a:", options: ["Mixture you can separate again (no new substance)", "Brand new metal", "Fire", "A gas"], a: 0, why: "Dissolving is a physical change, not a new substance." },
+      { id: "p14d", obj: "5-PS1-4", type: "mc", q: "Burning wood produces ash and smoke. This is:", options: ["A new substance forming", "Just melting", "No change at all", "Freezing"], a: 0, why: "Burning is a chemical change making new substances." },
+      { id: "p14e", obj: "5-PS1-4", type: "mc", q: "When some substances are combined, the result:", options: ["Can be a different substance with new properties", "Is always the same stuff", "Disappears", "Becomes gold"], a: 0, why: "Chemical changes create new substances." },
+      // 5-ESS2-1 (Earth's systems interact)
+      { id: "e21a", obj: "5-ESS2-1", type: "mc", q: "Land, water, air, and living things are Earth's:", options: ["Four major systems", "Four planets", "Four oceans", "Four countries"], a: 0, why: "Geosphere, hydrosphere, atmosphere, and biosphere." },
+      { id: "e21b", obj: "5-ESS2-1", type: "mc", q: "Rain (water) wearing down a rocky hill (land) is an example of Earth's systems:", options: ["Interacting", "Never touching", "Disappearing", "Freezing only"], a: 0, why: "Water and land are interacting." },
+      { id: "e21c", obj: "5-ESS2-1", type: "mc", q: "Plants (living things) taking in air shows two Earth systems:", options: ["Working together", "Being totally separate", "Fighting", "Vanishing"], a: 0, why: "The biosphere and atmosphere interact." },
+      { id: "e21d", obj: "5-ESS2-1", type: "mc", q: "Which of these is part of the water system (hydrosphere)?", options: ["Oceans, rivers, and lakes", "Mountains", "The air", "Birds"], a: 0, why: "The hydrosphere is Earth's water." },
+      { id: "e21e", obj: "5-ESS2-1", type: "mc", q: "Wind shaping sand dunes is an example of:", options: ["Earth's systems interacting (air and land)", "Magic", "Nothing", "A new planet"], a: 0, why: "The atmosphere shapes the geosphere." },
+      // 5th questions for the original objectives
+      { id: "p11e", obj: "5-PS1-1", type: "mc", q: "Steam rising from a kettle is water in the form of a:", options: ["Gas (tiny particles spread out)", "Solid", "A new substance", "Light"], a: 0, why: "Steam is water as a gas — still matter, just spread out." },
+      { id: "p12e", obj: "5-PS1-2", type: "mc", q: "If you freeze 200 g of water into ice, the ice weighs about:", options: ["200 g", "0 g", "100 g", "400 g"], a: 0, why: "Mass is conserved when water freezes." },
+      { id: "p13e", obj: "5-PS1-3", type: "mc", q: "You could identify an unknown metal by testing its:", options: ["Properties, like magnetism and hardness", "Name", "Price", "Owner"], a: 0, why: "Properties identify a material." },
+      { id: "p21e", obj: "5-PS2-1", type: "mc", q: "A dropped pencil falls because Earth's gravity pulls it:", options: ["Downward (toward Earth's center)", "Upward", "Sideways", "Away"], a: 0, why: "Gravity pulls objects down." },
+      { id: "p31e", obj: "5-PS3-1", type: "mc", q: "A deer gets energy by eating plants. Those plants got their energy from:", options: ["The sun", "The soil only", "The deer", "Rocks"], a: 0, why: "Plants capture sunlight; energy flows up the chain." },
+      { id: "l11e", obj: "5-LS1-1", type: "mc", q: "A tree's trunk and leaves are built mostly from materials taken from:", options: ["Air and water", "The soil turning solid", "Rocks", "Sunlight turning solid"], a: 0, why: "Plants build material from air and water." },
+      { id: "l21e", obj: "5-LS2-1", type: "mc", q: "In a food web, mushrooms and other fungi usually act as:", options: ["Decomposers", "Producers", "Top predators", "Stars"], a: 0, why: "Fungi break down dead matter." },
+      { id: "e11e", obj: "5-ESS1-1", type: "mc", q: "Compared to the sun, the other stars we see at night are:", options: ["Much farther from Earth", "Much closer", "Not really stars", "Inside the sun"], a: 0, why: "They look dim because they're very far away." },
+      { id: "e12e", obj: "5-ESS1-2", type: "mc", q: "Shadows are usually shortest around:", options: ["Midday (noon)", "Sunrise", "Midnight", "Sunset"], a: 0, why: "The sun is highest in the sky at midday." },
+      { id: "e22e", obj: "5-ESS2-2", type: "mc", q: "About how much of Earth's water is fresh water we could drink?", options: ["A small amount (only a few percent)", "Most of it", "Exactly half", "None"], a: 0, why: "Most water is salty ocean water; little is fresh." },
+      { id: "e31e", obj: "5-ESS3-1", type: "mc", q: "Using a refillable water bottle instead of plastic ones helps:", options: ["Reduce waste", "Make more trash", "Use more oil", "Nothing"], a: 0, why: "Reusing cuts down on plastic waste." }
     ]
   }
 };
