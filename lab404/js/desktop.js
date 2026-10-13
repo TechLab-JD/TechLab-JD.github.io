@@ -147,6 +147,19 @@
       FOLDER_CONTENTS[fkey] = { desc: g.desc, apps: memApps };
     });
 
+    /* Adopted subjects: an academic subject can nest another subject's folder inside
+       itself (e.g. Science adopts Psychology). The child keeps its own folder + topics
+       but is removed from the top-level desktop and shown inside its parent folder. */
+    var adoptedBy = {};
+    (S.academic || []).forEach(function (parent) {
+      (parent.adopt || []).forEach(function (childKey) {
+        if (!memberMeta[childKey] || adoptedBy[childKey] || grouped[childKey]) return;
+        var pf = FOLDER_CONTENTS["folder-" + parent.key];
+        if (pf && pf.apps) pf.apps.push({ app: "folder-" + childKey, icon: memberMeta[childKey].icon, label: memberMeta[childKey].short });
+        adoptedBy[childKey] = parent.key;
+      });
+    });
+
     /* Build the desktop icons + start-menu subject list from the catalog, so adding a
        subject to subjects-data.js is the only edit needed (icons were hardcoded before). */
     function escA(s) {
@@ -161,6 +174,8 @@
                    short: S.comptia.short || S.comptia.title, title: S.comptia.title });
     }
     (S.academic || []).forEach(function (s) {
+      /* An adopted subject is nested inside its parent folder — hide it from top-level. */
+      if (adoptedBy[s.key]) return;
       /* A grouped subject is replaced on the desktop by its group folder, emitted
          once at the position of its first member so placement stays natural. */
       if (grouped[s.key]) {

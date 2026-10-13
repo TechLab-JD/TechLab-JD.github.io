@@ -63,6 +63,7 @@ window.LAB404_SUBJECTS = {
     {
       key: "science", title: "Science", short: "Science", icon: "🔬",
       desc: "How the world works — biology, chemistry, physics & earth science",
+      adopt: ["mind"],  /* nest the Psychology & Philosophy folder inside Science */
       topics: [
         { t: "Life Science", band: "K-8", grades: ["K", "1", "2", "3", "4", "5", "6", "7", "8"] },
         { t: "Biology", band: "9-12", grades: ["9", "10"] },
