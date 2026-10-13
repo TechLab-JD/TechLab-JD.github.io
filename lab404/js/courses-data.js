@@ -657,7 +657,22 @@ window.LAB404_COURSES = {
       { code: "5.NF.4", domain: "NF", weight: 1.1, title: "Multiply a fraction by a fraction or whole number", xwalk: { cc: "5.NF.B.4", ma: "5.NF.B.4", teks: "", vasol: "", flbest: "" } },
       { code: "5.MD.1", domain: "MD", weight: 0.9, title: "Convert among measurement units", xwalk: { cc: "5.MD.A.1", ma: "5.MD.A.1", teks: "", vasol: "", flbest: "" } },
       { code: "5.MD.5", domain: "MD", weight: 1.0, title: "Find the volume of rectangular prisms (l × w × h)", xwalk: { cc: "5.MD.C.5", ma: "5.MD.C.5", teks: "", vasol: "", flbest: "" } },
-      { code: "5.G.1", domain: "G", weight: 0.9, title: "Plot and interpret points on the coordinate plane", xwalk: { cc: "5.G.A.1", ma: "5.G.A.1", teks: "", vasol: "", flbest: "" } }
+      { code: "5.G.1", domain: "G", weight: 0.9, title: "Plot and interpret points on the coordinate plane", xwalk: { cc: "5.G.A.1", ma: "5.G.A.1", teks: "", vasol: "", flbest: "" } },
+      { code: "5.OA.2", domain: "OA", weight: 0.9, title: "Write and interpret numerical expressions", xwalk: { cc: "5.OA.A.2", ma: "5.OA.A.2", teks: "", vasol: "", flbest: "" } },
+      { code: "5.OA.3", domain: "OA", weight: 0.8, title: "Generate two patterns and graph the ordered pairs", xwalk: { cc: "5.OA.B.3", ma: "5.OA.B.3", teks: "", vasol: "", flbest: "" } },
+      { code: "5.NBT.2", domain: "NBT", weight: 0.9, title: "Explain patterns with powers of 10 and exponents", xwalk: { cc: "5.NBT.A.2", ma: "5.NBT.A.2", teks: "", vasol: "", flbest: "" } },
+      { code: "5.NBT.6", domain: "NBT", weight: 1.1, title: "Divide up to 4-digit by 2-digit whole numbers", xwalk: { cc: "5.NBT.B.6", ma: "5.NBT.B.6", teks: "", vasol: "", flbest: "" } },
+      { code: "5.NF.2", domain: "NF", weight: 1.1, title: "Solve word problems adding and subtracting fractions", xwalk: { cc: "5.NF.A.2", ma: "5.NF.A.2", teks: "", vasol: "", flbest: "" } },
+      { code: "5.NF.3", domain: "NF", weight: 1.0, title: "Understand a fraction as division (a/b = a ÷ b)", xwalk: { cc: "5.NF.B.3", ma: "5.NF.B.3", teks: "", vasol: "", flbest: "" } },
+      { code: "5.NF.5", domain: "NF", weight: 0.9, title: "Interpret multiplication as scaling (resizing)", xwalk: { cc: "5.NF.B.5", ma: "5.NF.B.5", teks: "", vasol: "", flbest: "" } },
+      { code: "5.NF.6", domain: "NF", weight: 1.1, title: "Solve real-world problems multiplying fractions", xwalk: { cc: "5.NF.B.6", ma: "5.NF.B.6", teks: "", vasol: "", flbest: "" } },
+      { code: "5.NF.7", domain: "NF", weight: 1.0, title: "Divide unit fractions and whole numbers", xwalk: { cc: "5.NF.B.7", ma: "5.NF.B.7", teks: "", vasol: "", flbest: "" } },
+      { code: "5.MD.2", domain: "MD", weight: 0.8, title: "Make a line plot with fractions and use it to solve problems", xwalk: { cc: "5.MD.B.2", ma: "5.MD.B.2", teks: "", vasol: "", flbest: "" } },
+      { code: "5.MD.3", domain: "MD", weight: 0.9, title: "Understand volume as the number of unit cubes", xwalk: { cc: "5.MD.C.3", ma: "5.MD.C.3", teks: "", vasol: "", flbest: "" } },
+      { code: "5.MD.4", domain: "MD", weight: 0.9, title: "Measure volume by counting unit cubes", xwalk: { cc: "5.MD.C.4", ma: "5.MD.C.4", teks: "", vasol: "", flbest: "" } },
+      { code: "5.G.2", domain: "G", weight: 0.9, title: "Graph and interpret points on the coordinate plane to solve problems", xwalk: { cc: "5.G.A.2", ma: "5.G.A.2", teks: "", vasol: "", flbest: "" } },
+      { code: "5.G.3", domain: "G", weight: 0.8, title: "Attributes of a shape category belong to all its subcategories", xwalk: { cc: "5.G.B.3", ma: "5.G.B.3", teks: "", vasol: "", flbest: "" } },
+      { code: "5.G.4", domain: "G", weight: 0.8, title: "Classify two-dimensional figures in a hierarchy", xwalk: { cc: "5.G.B.4", ma: "5.G.B.4", teks: "", vasol: "", flbest: "" } }
     ],
     questions: [
       // 5.OA.1
@@ -714,7 +729,82 @@ window.LAB404_COURSES = {
       { id: "g1a5", obj: "5.G.1", type: "mc", q: "In the point (3, 5), the first number tells you to move:", options: ["Right along the x-axis", "Up the y-axis", "Down", "Left"], a: 0, why: "The x-coordinate comes first (horizontal)." },
       { id: "g1b5", obj: "5.G.1", type: "mc", q: "The point where the x-axis and y-axis cross is the:", options: ["Origin", "Corner", "Peak", "End"], a: 0, why: "The origin is (0, 0)." },
       { id: "g1c5", obj: "5.G.1", type: "mc", q: "To plot the point (2, 4), you go:", options: ["Right 2, then up 4", "Up 2, then right 4", "Left 2, then down 4", "Right 4, then up 2"], a: 0, why: "x = 2 (right), y = 4 (up)." },
-      { id: "g1d5", obj: "5.G.1", type: "mc", q: "The two number lines on a coordinate grid are the:", options: ["x-axis and y-axis", "top and bottom", "rows and columns", "start and end"], a: 0, why: "The horizontal x-axis and vertical y-axis." }
+      { id: "g1d5", obj: "5.G.1", type: "mc", q: "The two number lines on a coordinate grid are the:", options: ["x-axis and y-axis", "top and bottom", "rows and columns", "start and end"], a: 0, why: "The horizontal x-axis and vertical y-axis." },
+      // 5.OA.2
+      { id: "oa2a", obj: "5.OA.2", type: "mc", q: "Which expression means 'add 8 and 7, then multiply by 2'?", options: ["2 × (8 + 7)", "2 × 8 + 7", "8 + 7 × 2", "(8 + 7) ÷ 2"], a: 0, why: "Parentheses keep the sum together, then multiply by 2." },
+      { id: "oa2b", obj: "5.OA.2", type: "numeric", q: "Write as a number: 'the sum of 6 and 4, times 3'.", answer: 30, why: "(6 + 4) × 3 = 30." },
+      { id: "oa2c", obj: "5.OA.2", type: "mc", q: "'3 times as large as (5 + 2)' is written:", options: ["3 × (5 + 2)", "3 + 5 + 2", "(3 × 5) + 2", "3 ÷ (5 + 2)"], a: 0, why: "Multiply 3 by the quantity (5 + 2)." },
+      { id: "oa2d", obj: "5.OA.2", type: "numeric", q: "Evaluate: (10 − 2) × 5", answer: 40, why: "10 − 2 = 8, then 8 × 5 = 40." },
+      // 5.OA.3
+      { id: "oa3a", obj: "5.OA.3", type: "numeric", q: "Pattern A adds 2 (0, 2, 4, ...); Pattern B adds 4 (0, 4, 8, ...). When A is 6, B is ___.", answer: 12, why: "B is always double A." },
+      { id: "oa3b", obj: "5.OA.3", type: "mc", q: "In the ordered pair (3, 5), the 3 is the:", options: ["x-coordinate", "y-coordinate", "origin", "sum"], a: 0, why: "The first number is the x-coordinate." },
+      { id: "oa3c", obj: "5.OA.3", type: "mc", q: "If pattern B is always 3 times pattern A, the point for A = 2 is:", options: ["(2, 6)", "(6, 2)", "(2, 2)", "(3, 3)"], a: 0, why: "B = 3 × 2 = 6, so (2, 6)." },
+      { id: "oa3d", obj: "5.OA.3", type: "numeric", q: "Rule: multiply by 5. If the input is 4, the output is ___.", answer: 20, why: "4 × 5 = 20." },
+      // 5.NBT.2
+      { id: "nb2a", obj: "5.NBT.2", type: "numeric", q: "10 × 10 × 10 = ?", answer: 1000, why: "That's 10³ = 1,000." },
+      { id: "nb2b", obj: "5.NBT.2", type: "mc", q: "Multiplying a number by 10 moves the decimal point:", options: ["One place to the right", "One place to the left", "Nowhere", "Two places left"], a: 0, why: "×10 shifts the decimal one place right." },
+      { id: "nb2c", obj: "5.NBT.2", type: "numeric", q: "4.5 × 100 = ?", answer: 450, why: "×100 moves the decimal two places right." },
+      { id: "nb2d", obj: "5.NBT.2", type: "mc", q: "10 to the 3rd power (10³) equals:", options: ["1,000", "30", "300", "100"], a: 0, why: "10 × 10 × 10 = 1,000." },
+      // 5.NBT.6
+      { id: "nb6a", obj: "5.NBT.6", type: "numeric", q: "144 ÷ 12 = ?", answer: 12, why: "12 × 12 = 144." },
+      { id: "nb6b", obj: "5.NBT.6", type: "numeric", q: "875 ÷ 25 = ?", answer: 35, why: "25 × 35 = 875." },
+      { id: "nb6c", obj: "5.NBT.6", type: "numeric", q: "1,200 ÷ 40 = ?", answer: 30, why: "40 × 30 = 1,200." },
+      { id: "nb6d", obj: "5.NBT.6", type: "numeric", q: "96 ÷ 16 = ?", answer: 6, why: "16 × 6 = 96." },
+      // 5.NF.2
+      { id: "nf2a", obj: "5.NF.2", type: "mc", q: "You run 1/2 mile, then 1/4 mile more. How far in total?", options: ["3/4 mile", "2/6 mile", "1/6 mile", "2/4 mile"], a: 0, why: "1/2 = 2/4, plus 1/4 = 3/4." },
+      { id: "nf2b", obj: "5.NF.2", type: "mc", q: "A recipe needs 3/4 cup of flour. You've added 1/4 cup. How much more?", options: ["1/2 cup", "1/4 cup", "1 cup", "3/8 cup"], a: 0, why: "3/4 − 1/4 = 2/4 = 1/2." },
+      { id: "nf2c", obj: "5.NF.2", type: "mc", q: "A board is 5/6 ft long. You cut off 1/6 ft. What is left?", options: ["4/6 ft", "6/6 ft", "4/12 ft", "5/12 ft"], a: 0, why: "5/6 − 1/6 = 4/6." },
+      { id: "nf2d", obj: "5.NF.2", type: "mc", q: "You read 1/3 of a book Monday and 1/6 Tuesday. How much in total?", options: ["1/2", "2/9", "1/9", "2/3"], a: 0, why: "1/3 = 2/6, plus 1/6 = 3/6 = 1/2." },
+      // 5.NF.3
+      { id: "nf3a", obj: "5.NF.3", type: "mc", q: "The fraction 3/4 can be read as:", options: ["3 divided by 4", "4 divided by 3", "3 times 4", "3 minus 4"], a: 0, why: "a/b means a ÷ b." },
+      { id: "nf3b", obj: "5.NF.3", type: "mc", q: "If 3 pizzas are shared equally among 4 people, each gets:", options: ["3/4 of a pizza", "4/3 pizzas", "3 pizzas", "12 pizzas"], a: 0, why: "3 ÷ 4 = 3/4." },
+      { id: "nf3c", obj: "5.NF.3", type: "numeric", q: "8 ÷ 4 (written as the fraction 8/4) equals what whole number?", answer: 2, why: "8/4 = 2." },
+      { id: "nf3d", obj: "5.NF.3", type: "mc", q: "5 cookies shared by 2 kids means each gets:", options: ["5/2 (2 1/2) cookies", "2/5 cookie", "10 cookies", "5 cookies"], a: 0, why: "5 ÷ 2 = 5/2 = 2 1/2." },
+      // 5.NF.5
+      { id: "nf5a", obj: "5.NF.5", type: "mc", q: "Multiplying a number by a fraction LESS than 1 makes the result:", options: ["Smaller than the original", "Larger", "The same", "Negative"], a: 0, why: "Scaling by less than 1 shrinks it." },
+      { id: "nf5b", obj: "5.NF.5", type: "mc", q: "Multiplying 8 by 2 makes it:", options: ["Larger (16)", "Smaller", "The same", "Zero"], a: 0, why: "×2 (more than 1) makes it larger." },
+      { id: "nf5c", obj: "5.NF.5", type: "mc", q: "6 × 1/2 is ___ 6.", options: ["Less than", "Greater than", "Equal to", "Double"], a: 0, why: "Half of 6 is 3, which is less than 6." },
+      { id: "nf5d", obj: "5.NF.5", type: "mc", q: "Multiplying a number by 1 gives you:", options: ["The same number", "A bigger number", "Zero", "Half"], a: 0, why: "×1 leaves a number unchanged." },
+      // 5.NF.6
+      { id: "nf6a", obj: "5.NF.6", type: "numeric", q: "A room is 1/2 of 10 meters long. How long is it, in meters?", answer: 5, why: "1/2 × 10 = 5." },
+      { id: "nf6b", obj: "5.NF.6", type: "mc", q: "You eat 1/4 of a pizza that had 8 slices. How many slices did you eat?", options: ["2", "4", "8", "1"], a: 0, why: "1/4 of 8 = 2." },
+      { id: "nf6c", obj: "5.NF.6", type: "numeric", q: "3/4 of 12 cookies = ? cookies", answer: 9, why: "12 ÷ 4 = 3, × 3 = 9." },
+      { id: "nf6d", obj: "5.NF.6", type: "numeric", q: "2/3 of 15 students = ? students", answer: 10, why: "15 ÷ 3 = 5, × 2 = 10." },
+      // 5.NF.7
+      { id: "nf7a", obj: "5.NF.7", type: "numeric", q: "How many 1/2-cup servings are in 3 cups?", answer: 6, why: "3 ÷ 1/2 = 6." },
+      { id: "nf7b", obj: "5.NF.7", type: "numeric", q: "How many 1/4s are in 1 whole?", answer: 4, why: "1 ÷ 1/4 = 4." },
+      { id: "nf7c", obj: "5.NF.7", type: "mc", q: "1/2 ÷ 2 = ?", options: ["1/4", "1", "2", "4"], a: 0, why: "Half, split into 2 equal parts, is a quarter." },
+      { id: "nf7d", obj: "5.NF.7", type: "numeric", q: "How many 1/3-cup scoops fill 2 cups?", answer: 6, why: "2 ÷ 1/3 = 6." },
+      // 5.MD.2
+      { id: "md2a", obj: "5.MD.2", type: "mc", q: "A line plot can display measurements given in:", options: ["Fractions like 1/2 and 1/4", "Only whole numbers", "Only money", "Only time"], a: 0, why: "Line plots can show fractional measurements." },
+      { id: "md2b", obj: "5.MD.2", type: "mc", q: "Each X above a value on a line plot represents:", options: ["One measurement", "Ten measurements", "A fraction of an X", "Nothing"], a: 0, why: "One X = one data point." },
+      { id: "md2c", obj: "5.MD.2", type: "mc", q: "To find the total of all values on a line plot, you:", options: ["Add up each value times how many X's it has", "Count only the X's", "Use the biggest value", "Ignore repeats"], a: 0, why: "Multiply each value by its count, then add." },
+      { id: "md2d", obj: "5.MD.2", type: "mc", q: "Line plots help you see:", options: ["How data is spread out and repeated", "A map", "The weather", "A story"], a: 0, why: "They show the distribution of values." },
+      // 5.MD.3
+      { id: "md3a", obj: "5.MD.3", type: "mc", q: "Volume is measured in:", options: ["Cubic units", "Square units", "Units of length", "Degrees"], a: 0, why: "Volume uses cubic units." },
+      { id: "md3b", obj: "5.MD.3", type: "mc", q: "A 'unit cube' is a cube that is:", options: ["1 unit on each side", "Flat", "Very large", "Round"], a: 0, why: "A unit cube measures 1 × 1 × 1." },
+      { id: "md3c", obj: "5.MD.3", type: "numeric", q: "A box is filled with exactly 24 unit cubes. Its volume is ___ cubic units.", answer: 24, why: "Volume = number of unit cubes." },
+      { id: "md3d", obj: "5.MD.3", type: "mc", q: "Volume measures:", options: ["How much space a solid takes up", "How long something is", "How heavy it is", "Its temperature"], a: 0, why: "Volume is the space inside a solid." },
+      // 5.MD.4
+      { id: "md4a", obj: "5.MD.4", type: "numeric", q: "A box is 3 cubes long, 2 wide, and 2 tall. How many unit cubes fit?", answer: 12, why: "3 × 2 × 2 = 12." },
+      { id: "md4b", obj: "5.MD.4", type: "numeric", q: "A layer has 6 cubes, and there are 3 layers. Total cubes = ?", answer: 18, why: "6 × 3 = 18." },
+      { id: "md4c", obj: "5.MD.4", type: "numeric", q: "A box holds 2 rows of 4 cubes per layer, with 2 layers. Total cubes = ?", answer: 16, why: "8 cubes per layer × 2 layers = 16." },
+      { id: "md4d", obj: "5.MD.4", type: "mc", q: "To count all the cubes in a box, you can multiply:", options: ["Length × width × height", "Length + width", "Only two sides", "The weight"], a: 0, why: "That gives the number of unit cubes (the volume)." },
+      // 5.G.2
+      { id: "g2a", obj: "5.G.2", type: "mc", q: "On a graph, moving right means the ___ coordinate gets bigger.", options: ["x", "y", "both", "neither"], a: 0, why: "Right increases the x value." },
+      { id: "g2b", obj: "5.G.2", type: "mc", q: "The point (0, 0) is called the:", options: ["Origin", "Top", "End", "Peak"], a: 0, why: "The origin is where the axes meet." },
+      { id: "g2c", obj: "5.G.2", type: "mc", q: "To plot (4, 2), start at the origin and go:", options: ["Right 4, up 2", "Up 4, right 2", "Left 4, down 2", "Right 2, up 4"], a: 0, why: "x = 4 (right), y = 2 (up)." },
+      { id: "g2d", obj: "5.G.2", type: "mc", q: "A line that goes up to the right on a graph shows a value that is:", options: ["Increasing", "Decreasing", "Staying flat", "Disappearing"], a: 0, why: "Up-to-the-right means increasing." },
+      // 5.G.3
+      { id: "g3a", obj: "5.G.3", type: "mc", q: "All squares are also rectangles because a square has:", options: ["4 right angles, like all rectangles", "3 sides", "No sides", "Curved edges"], a: 0, why: "A square meets the definition of a rectangle." },
+      { id: "g3b", obj: "5.G.3", type: "mc", q: "A square is a special kind of:", options: ["Rectangle (and rhombus)", "Triangle", "Circle", "Pentagon"], a: 0, why: "A square is a rectangle with equal sides." },
+      { id: "g3c", obj: "5.G.3", type: "mc", q: "If all rectangles have 4 right angles, then a square (a type of rectangle):", options: ["Also has 4 right angles", "Has no right angles", "Has 3 angles", "Is a circle"], a: 0, why: "Attributes pass down to subcategories." },
+      { id: "g3d", obj: "5.G.3", type: "mc", q: "Attributes of a shape category belong to:", options: ["All shapes in that category", "Only one shape", "No shapes", "Circles only"], a: 0, why: "Every member of the category shares them." },
+      // 5.G.4
+      { id: "g4a", obj: "5.G.4", type: "mc", q: "A shape with exactly 4 equal sides and 4 right angles is best classified as a:", options: ["Square", "Triangle", "Pentagon", "Circle"], a: 0, why: "Equal sides + right angles = a square." },
+      { id: "g4b", obj: "5.G.4", type: "mc", q: "A quadrilateral is any shape with:", options: ["4 sides", "3 sides", "5 sides", "Curved sides"], a: 0, why: "Quadri- means four sides." },
+      { id: "g4c", obj: "5.G.4", type: "mc", q: "A rectangle is always a:", options: ["Quadrilateral (4-sided figure)", "Triangle", "Pentagon", "Circle"], a: 0, why: "Rectangles have 4 sides." },
+      { id: "g4d", obj: "5.G.4", type: "multi", q: "Select ALL the shapes that are quadrilaterals (4-sided).", options: ["Square", "Rectangle", "Trapezoid", "Triangle"], correct: [0, 1, 2], why: "A triangle has 3 sides, not 4." }
     ]
   },
 
