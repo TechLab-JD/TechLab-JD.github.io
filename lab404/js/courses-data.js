@@ -1030,5 +1030,117 @@ window.LAB404_COURSES = {
       { id: "l6c", obj: "5.L.6", type: "mc", q: "The word 'describe' asks you to:", options: ["Tell details about something", "Only name it", "Erase it", "Rhyme"], a: 0, why: "Describing means giving details." },
       { id: "l6d", obj: "5.L.6", type: "mc", q: "'Determine the meaning' means to:", options: ["Figure out what it means", "Spell it", "Count its letters", "Draw it"], a: 0, why: "Determine = figure out." }
     ]
+  },
+
+  "g5-social": {
+    id: "g5-social", title: "Grade 5 Social Studies", subjectKey: "social", grade: "5",
+    standard: "Massachusetts History & Social Science (Grade 5: US history to the founding) + C3",
+    note: "US history from the early Americas through the Constitution, plus geography, civics, and economics. Social studies has no Common Core; codes are internal, aligned to MA frameworks.",
+    domains: [
+      { code: "G", name: "Geography" },
+      { code: "H", name: "History" },
+      { code: "C", name: "Civics & Government" },
+      { code: "E", name: "Economics" }
+    ],
+    objectives: [
+      { code: "5.SS.G1", domain: "G", weight: 0.9, title: "US regions and major physical features", xwalk: { cc: "", ma: "5.T1", teks: "", vasol: "", flbest: "" } },
+      { code: "5.SS.G2", domain: "G", weight: 1.0, title: "How geography influenced settlement and the colonies", xwalk: { cc: "", ma: "5.T1", teks: "", vasol: "", flbest: "" } },
+      { code: "5.SS.H1", domain: "H", weight: 1.0, title: "Diverse Native American cultures before European contact", xwalk: { cc: "", ma: "5.T2", teks: "", vasol: "", flbest: "" } },
+      { code: "5.SS.H2", domain: "H", weight: 1.0, title: "European exploration of the Americas and the Columbian Exchange", xwalk: { cc: "", ma: "5.T2", teks: "", vasol: "", flbest: "" } },
+      { code: "5.SS.H3", domain: "H", weight: 1.0, title: "European colonization and the 13 colonies", xwalk: { cc: "", ma: "5.T3", teks: "", vasol: "", flbest: "" } },
+      { code: "5.SS.H4", domain: "H", weight: 1.1, title: "Causes of the American Revolution (taxation & representation)", xwalk: { cc: "", ma: "5.T3", teks: "", vasol: "", flbest: "" } },
+      { code: "5.SS.H5", domain: "H", weight: 1.1, title: "The American Revolution and the Declaration of Independence", xwalk: { cc: "", ma: "5.T3", teks: "", vasol: "", flbest: "" } },
+      { code: "5.SS.H6", domain: "H", weight: 1.0, title: "Slavery in early America (its injustice and impact)", xwalk: { cc: "", ma: "5.T3", teks: "", vasol: "", flbest: "" } },
+      { code: "5.SS.H7", domain: "H", weight: 0.9, title: "Timelines and primary vs. secondary sources", xwalk: { cc: "", ma: "5.T2", teks: "", vasol: "", flbest: "" } },
+      { code: "5.SS.C1", domain: "C", weight: 1.1, title: "The Constitution: purpose and the three branches", xwalk: { cc: "", ma: "5.T4", teks: "", vasol: "", flbest: "" } },
+      { code: "5.SS.C2", domain: "C", weight: 1.0, title: "The Bill of Rights and basic freedoms", xwalk: { cc: "", ma: "5.T4", teks: "", vasol: "", flbest: "" } },
+      { code: "5.SS.C3", domain: "C", weight: 1.0, title: "Rights, responsibilities, and how citizens participate", xwalk: { cc: "", ma: "5.T4", teks: "", vasol: "", flbest: "" } },
+      { code: "5.SS.C4", domain: "C", weight: 0.9, title: "Federalism: national, state, and local government", xwalk: { cc: "", ma: "5.T4", teks: "", vasol: "", flbest: "" } },
+      { code: "5.SS.E1", domain: "E", weight: 1.0, title: "The colonial economy, cash crops, and trade", xwalk: { cc: "", ma: "5.T5", teks: "", vasol: "", flbest: "" } },
+      { code: "5.SS.E2", domain: "E", weight: 1.0, title: "Supply, demand, and scarcity", xwalk: { cc: "", ma: "5.T5", teks: "", vasol: "", flbest: "" } },
+      { code: "5.SS.E3", domain: "E", weight: 0.9, title: "Goods & services, producers & consumers", xwalk: { cc: "", ma: "5.T5", teks: "", vasol: "", flbest: "" } }
+    ],
+    questions: [
+      // 5.SS.G1
+      { id: "sg1a", obj: "5.SS.G1", type: "mc", q: "The US region known for the Rocky Mountains and dry deserts is the:", options: ["West", "Northeast", "Southeast", "Midwest"], a: 0, why: "The West has the Rockies and desert areas." },
+      { id: "sg1b", obj: "5.SS.G1", type: "mc", q: "The Mississippi River was important because it:", options: ["Was a major route for trade and travel", "Is the smallest river", "Is in the ocean", "Is frozen all year"], a: 0, why: "Rivers served as highways for trade." },
+      { id: "sg1c", obj: "5.SS.G1", type: "mc", q: "The flat, fertile farmland of the central US is called the:", options: ["Great Plains", "Rocky Mountains", "Atlantic Ocean", "Desert Southwest"], a: 0, why: "The Great Plains are flat farmland." },
+      { id: "sg1d", obj: "5.SS.G1", type: "mc", q: "The region along the Atlantic coast where the 13 colonies formed is the:", options: ["East Coast", "West Coast", "Hawaii", "Alaska"], a: 0, why: "The 13 colonies were on the Atlantic (east) coast." },
+      // 5.SS.G2
+      { id: "sg2a", obj: "5.SS.G2", type: "mc", q: "Early colonies were built near the coast and rivers mainly for:", options: ["Water, trade, and transportation", "The mountains", "Desert heat", "No reason"], a: 0, why: "Water access supported survival and trade." },
+      { id: "sg2b", obj: "5.SS.G2", type: "mc", q: "Good farmland and a warm climate in the Southern colonies led to:", options: ["Large farms and plantations", "No farming", "Only fishing", "Deserts"], a: 0, why: "The South's climate favored large cash-crop farms." },
+      { id: "sg2c", obj: "5.SS.G2", type: "mc", q: "Rocky soil and short summers in New England led colonists to rely more on:", options: ["Fishing, trade, and shipbuilding", "Growing cotton", "Large plantations", "Mining gold"], a: 0, why: "Poor farmland pushed New England toward the sea and trade." },
+      { id: "sg2d", obj: "5.SS.G2", type: "mc", q: "Geography affects where people settle because people need:", options: ["Water, food, and ways to travel", "Only mountains", "Only deserts", "Nothing"], a: 0, why: "Settlement follows resources and routes." },
+      // 5.SS.H1
+      { id: "sh1a", obj: "5.SS.H1", type: "mc", q: "Before Europeans arrived, the Americas were home to:", options: ["Many diverse Native American cultures", "No people", "Only Europeans", "Only one tribe"], a: 0, why: "Hundreds of diverse nations lived here." },
+      { id: "sh1b", obj: "5.SS.H1", type: "mc", q: "Different Native American groups had different ways of life mainly because of:", options: ["The land and resources where they lived", "Their favorite colors", "The internet", "Cars"], a: 0, why: "Environment shaped each culture." },
+      { id: "sh1c", obj: "5.SS.H1", type: "mc", q: "Peoples of the Southwest, like the Ancestral Puebloans, built homes from:", options: ["Adobe (clay/mud) and stone", "Ice", "Steel", "Glass"], a: 0, why: "They used local clay and stone." },
+      { id: "sh1d", obj: "5.SS.H1", type: "mc", q: "Native Americans had lived in the Americas for:", options: ["Thousands of years before Europeans", "Only a few years", "Never", "Only since 1900"], a: 0, why: "They were here for millennia before contact." },
+      // 5.SS.H2
+      { id: "sh2a", obj: "5.SS.H2", type: "mc", q: "European explorers in the 1400s-1500s sailed hoping to find:", options: ["New trade routes, riches, and land", "The North Pole only", "Nothing", "A new moon"], a: 0, why: "They sought trade routes and wealth." },
+      { id: "sh2b", obj: "5.SS.H2", type: "mc", q: "In 1492, Christopher Columbus sailed for:", options: ["Spain", "England", "France", "Germany"], a: 0, why: "Spain funded Columbus's voyage." },
+      { id: "sh2c", obj: "5.SS.H2", type: "mc", q: "The 'Columbian Exchange' was the transfer of plants, animals, and diseases between:", options: ["The Americas and Europe/Africa", "Two US cities", "Two planets", "Two oceans"], a: 0, why: "It connected the hemispheres." },
+      { id: "sh2d", obj: "5.SS.H2", type: "mc", q: "A tragic result of European contact was that many Native Americans died from:", options: ["New diseases they had never been exposed to", "Too much food", "Cold weather only", "Nothing"], a: 0, why: "Diseases like smallpox devastated Native populations." },
+      // 5.SS.H3
+      { id: "sh3a", obj: "5.SS.H3", type: "mc", q: "The 13 British colonies were located along the:", options: ["Atlantic coast of North America", "Pacific coast", "Rocky Mountains", "Hawaiian Islands"], a: 0, why: "They lined the Atlantic coast." },
+      { id: "sh3b", obj: "5.SS.H3", type: "mc", q: "Many people came to the colonies seeking:", options: ["Religious freedom and economic opportunity", "Worse lives", "Colder weather", "Nothing"], a: 0, why: "Freedom and opportunity drew settlers." },
+      { id: "sh3c", obj: "5.SS.H3", type: "mc", q: "The 13 colonies were ruled by:", options: ["Great Britain (England)", "Spain", "France", "No one"], a: 0, why: "They were British colonies." },
+      { id: "sh3d", obj: "5.SS.H3", type: "mc", q: "The three colonial regions were New England, the Middle colonies, and the:", options: ["Southern colonies", "Western colonies", "Arctic colonies", "Island colonies"], a: 0, why: "New England, Middle, and Southern colonies." },
+      // 5.SS.H4
+      { id: "sh4a", obj: "5.SS.H4", type: "mc", q: "A main complaint of the colonists was 'taxation without ___.'", options: ["representation", "money", "food", "water"], a: 0, why: "They had no representatives in Parliament." },
+      { id: "sh4b", obj: "5.SS.H4", type: "mc", q: "The Boston Tea Party was a protest against:", options: ["British taxes on tea", "Too much tea", "No tea", "Coffee"], a: 0, why: "Colonists dumped taxed tea into the harbor." },
+      { id: "sh4c", obj: "5.SS.H4", type: "mc", q: "Colonists were angry that Britain taxed them but they had no:", options: ["Representatives in Parliament", "Tea", "Ships", "Maps"], a: 0, why: "No voice in the government taxing them." },
+      { id: "sh4d", obj: "5.SS.H4", type: "mc", q: "'No taxation without representation' means people should help make the laws that:", options: ["Tax them", "Feed them", "Draw maps", "Build ships"], a: 0, why: "People wanted a say in their own taxes." },
+      // 5.SS.H5
+      { id: "sh5a", obj: "5.SS.H5", type: "mc", q: "The Declaration of Independence (1776) announced that the colonies were:", options: ["Free and independent from Britain", "Staying British", "A single city", "Part of Spain"], a: 0, why: "It declared independence." },
+      { id: "sh5b", obj: "5.SS.H5", type: "mc", q: "The main author of the Declaration of Independence was:", options: ["Thomas Jefferson", "King George", "Christopher Columbus", "Abraham Lincoln"], a: 0, why: "Jefferson drafted it." },
+      { id: "sh5c", obj: "5.SS.H5", type: "mc", q: "The American Revolution was a war between the colonies and:", options: ["Great Britain", "Spain", "France", "Canada"], a: 0, why: "The colonies fought Britain for independence." },
+      { id: "sh5d", obj: "5.SS.H5", type: "mc", q: "The Declaration says people have rights to 'life, liberty, and the pursuit of ___.'", options: ["happiness", "money", "gold", "power"], a: 0, why: "'...the pursuit of Happiness.'" },
+      // 5.SS.H6
+      { id: "sh6a", obj: "5.SS.H6", type: "mc", q: "Enslaved people in early America were:", options: ["Forced to work against their will, with no freedom or pay", "Paid workers who could leave", "Free citizens", "Visitors"], a: 0, why: "Slavery denied people freedom and basic rights." },
+      { id: "sh6b", obj: "5.SS.H6", type: "mc", q: "Many enslaved people were brought by force from:", options: ["Africa", "Europe only", "The moon", "Nowhere"], a: 0, why: "Enslaved Africans were taken across the Atlantic." },
+      { id: "sh6c", obj: "5.SS.H6", type: "mc", q: "Slavery was wrong because it:", options: ["Denied people their freedom and basic human rights", "Helped everyone", "Was fair", "Was a free choice"], a: 0, why: "It stripped people of their rights and humanity." },
+      { id: "sh6d", obj: "5.SS.H6", type: "mc", q: "Despite terrible treatment, enslaved Africans and their descendants:", options: ["Contributed greatly to building the early American economy and culture", "Did nothing", "Only lived in Europe", "Built only ships"], a: 0, why: "Their forced labor and culture shaped early America." },
+      // 5.SS.H7
+      { id: "sh7a", obj: "5.SS.H7", type: "mc", q: "A diary written by a colonist in 1776 is a ___ source.", options: ["Primary", "Secondary", "Fictional", "Rhyming"], a: 0, why: "It was created by someone who was there." },
+      { id: "sh7b", obj: "5.SS.H7", type: "mc", q: "A textbook written today about the Revolution is a ___ source.", options: ["Secondary", "Primary", "Personal", "Poetic"], a: 0, why: "It was written later, about the events." },
+      { id: "sh7c", obj: "5.SS.H7", type: "mc", q: "On a timeline, the year 1492 comes ___ the year 1776.", options: ["before (to the left)", "after", "at the same time", "nowhere"], a: 0, why: "1492 is earlier than 1776." },
+      { id: "sh7d", obj: "5.SS.H7", type: "mc", q: "Historians study the past using:", options: ["Evidence from primary and secondary sources", "Guesses only", "The weather", "Nothing"], a: 0, why: "They rely on source evidence." },
+      // 5.SS.C1
+      { id: "sc1a", obj: "5.SS.C1", type: "mc", q: "The US Constitution is:", options: ["The plan of government and supreme law", "A grocery list", "A map", "A storybook"], a: 0, why: "It's the framework and highest law." },
+      { id: "sc1b", obj: "5.SS.C1", type: "mc", q: "The branch that makes laws is the:", options: ["Legislative (Congress)", "Executive", "Judicial", "City"], a: 0, why: "Congress makes laws." },
+      { id: "sc1c", obj: "5.SS.C1", type: "mc", q: "The branch that carries out laws, led by the President, is the:", options: ["Executive", "Legislative", "Judicial", "Local"], a: 0, why: "The executive enforces laws." },
+      { id: "sc1d", obj: "5.SS.C1", type: "mc", q: "The branch of courts that interprets laws is the:", options: ["Judicial", "Executive", "Legislative", "Mayor"], a: 0, why: "Courts interpret the law." },
+      // 5.SS.C2
+      { id: "sc2a", obj: "5.SS.C2", type: "mc", q: "The first ten amendments to the Constitution are called the:", options: ["Bill of Rights", "Declaration", "Preamble", "Map key"], a: 0, why: "The Bill of Rights is the first ten amendments." },
+      { id: "sc2b", obj: "5.SS.C2", type: "mc", q: "Freedom of speech, religion, and the press are protected by the:", options: ["First Amendment", "Map", "Timeline", "Scale"], a: 0, why: "These are First Amendment freedoms." },
+      { id: "sc2c", obj: "5.SS.C2", type: "mc", q: "The Bill of Rights protects:", options: ["Basic freedoms and rights of the people", "Only the President", "Only soldiers", "No one"], a: 0, why: "It guards the people's rights." },
+      { id: "sc2d", obj: "5.SS.C2", type: "mc", q: "The Bill of Rights was added to make sure the government could not:", options: ["Take away people's basic rights", "Build roads", "Collect any taxes", "Have a flag"], a: 0, why: "It limits government power over rights." },
+      // 5.SS.C3
+      { id: "sc3a", obj: "5.SS.C3", type: "mc", q: "A way citizens participate in government is by:", options: ["Voting", "Ignoring elections", "Breaking laws", "Doing nothing"], a: 0, why: "Voting is key participation." },
+      { id: "sc3b", obj: "5.SS.C3", type: "mc", q: "A responsibility of citizens is to:", options: ["Obey laws and stay informed", "Never vote", "Litter", "Ignore rules"], a: 0, why: "Good citizens follow laws and stay informed." },
+      { id: "sc3c", obj: "5.SS.C3", type: "mc", q: "Citizens can influence their government by:", options: ["Voting, speaking out, and contacting leaders", "Doing nothing", "Complaining silently only", "Moving away"], a: 0, why: "There are many ways to take part." },
+      { id: "sc3d", obj: "5.SS.C3", type: "mc", q: "In a democracy, power ultimately comes from:", options: ["The people", "One king", "The army", "The weather"], a: 0, why: "Democracy means rule by the people." },
+      // 5.SS.C4
+      { id: "sc4a", obj: "5.SS.C4", type: "mc", q: "In the US, power is shared between the national government and the:", options: ["State governments", "Ocean", "Other countries", "No one"], a: 0, why: "Power is divided between national and state governments." },
+      { id: "sc4b", obj: "5.SS.C4", type: "mc", q: "A governor leads a:", options: ["State", "City", "Country", "School"], a: 0, why: "Governors lead states." },
+      { id: "sc4c", obj: "5.SS.C4", type: "mc", q: "National laws for the whole country are made by:", options: ["Congress", "A single city", "Your family", "A governor alone"], a: 0, why: "Congress makes federal law." },
+      { id: "sc4d", obj: "5.SS.C4", type: "mc", q: "Sharing power between national, state, and local government is called:", options: ["Federalism", "A monarchy", "A map", "Scarcity"], a: 0, why: "That system is federalism." },
+      // 5.SS.E1
+      { id: "se1a", obj: "5.SS.E1", type: "mc", q: "The Southern colonies' economy depended heavily on cash crops like:", options: ["Tobacco and rice", "Ice", "Steel", "Oil"], a: 0, why: "Tobacco and rice were major Southern crops." },
+      { id: "se1b", obj: "5.SS.E1", type: "mc", q: "Colonists traded goods with Britain and others across the:", options: ["Atlantic Ocean", "Pacific Ocean", "Desert", "Rocky Mountains"], a: 0, why: "Trade crossed the Atlantic." },
+      { id: "se1c", obj: "5.SS.E1", type: "mc", q: "A 'cash crop' is a crop grown mainly to:", options: ["Sell for money", "Feed only the farmer", "Decorate", "Throw away"], a: 0, why: "Cash crops are grown to sell." },
+      { id: "se1d", obj: "5.SS.E1", type: "mc", q: "Natural resources in a colony affected:", options: ["The kinds of jobs and trade there", "The alphabet", "The flag", "Nothing"], a: 0, why: "Resources shaped the local economy." },
+      // 5.SS.E2
+      { id: "se2a", obj: "5.SS.E2", type: "mc", q: "When MANY people want something but there is very little of it, the price usually:", options: ["Goes up", "Goes down", "Disappears", "Stays zero"], a: 0, why: "High demand + low supply raises prices." },
+      { id: "se2b", obj: "5.SS.E2", type: "mc", q: "Scarcity means:", options: ["There is not enough for everyone who wants it", "There is plenty of everything", "Nothing is for sale", "Everything is free"], a: 0, why: "Scarcity is limited supply." },
+      { id: "se2c", obj: "5.SS.E2", type: "mc", q: "Because resources are limited, people and countries must:", options: ["Make choices", "Buy everything", "Never trade", "Stop working"], a: 0, why: "Scarcity forces choices." },
+      { id: "se2d", obj: "5.SS.E2", type: "mc", q: "If the supply of a toy is HIGH and demand is low, the price tends to:", options: ["Go down", "Go way up", "Stay infinite", "Vanish"], a: 0, why: "Lots of supply and little demand lowers price." },
+      // 5.SS.E3
+      { id: "se3a", obj: "5.SS.E3", type: "mc", q: "A doctor's checkup and a haircut are both:", options: ["Services", "Goods", "Taxes", "Laws"], a: 0, why: "Services are useful work done for others." },
+      { id: "se3b", obj: "5.SS.E3", type: "mc", q: "A person who buys and uses goods is a:", options: ["Consumer", "Producer", "Judge", "Explorer"], a: 0, why: "Consumers buy and use goods." },
+      { id: "se3c", obj: "5.SS.E3", type: "mc", q: "A farmer growing wheat to sell is a:", options: ["Producer", "Consumer", "Tourist", "Voter"], a: 0, why: "Producers make or grow goods." },
+      { id: "se3d", obj: "5.SS.E3", type: "mc", q: "A shirt, a book, and an apple are examples of:", options: ["Goods", "Services", "Taxes", "Rights"], a: 0, why: "Goods are physical products." }
+    ]
   }
 };
