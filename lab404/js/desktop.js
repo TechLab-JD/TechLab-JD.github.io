@@ -273,8 +273,8 @@
 
       /* Folder windows open smaller */
       if (app.indexOf("folder-") === 0) {
-        winEl.style.width = "520px";
-        winEl.style.height = "380px";
+        winEl.style.width = "540px";
+        winEl.style.height = "440px";
       }
       /* Topic windows that have real content open larger (lesson view) */
       if (app.indexOf("folder-") === 0 && window.LAB404_CONTENT && window.LAB404_CONTENT[app.replace(/^folder-/, "")]) {
@@ -928,6 +928,20 @@
       render();
     },
 
+    _folderCourseStyle: function () {
+      if (document.getElementById("fcs-style")) return;
+      var s = document.createElement("style"); s.id = "fcs-style";
+      s.textContent =
+        ".folder-courses{margin:0 0 14px}" +
+        ".folder-courses-h{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--accent2,#4a90e2);margin:0 0 7px}" +
+        ".folder-course-btn{display:block;width:100%;text-align:left;border:1px solid var(--accent2,#4a90e2);background:rgba(74,144,226,.08);color:var(--text,#eee);border-radius:10px;padding:9px 12px;font:inherit;cursor:pointer;margin-bottom:6px}" +
+        ".folder-course-btn:hover{background:rgba(74,144,226,.16)}" +
+        ".folder-course-btn b{font-size:.84rem}" +
+        ".folder-course-btn span{display:block;font-size:.65rem;color:var(--text-muted,#9aa);margin-top:2px;font-weight:400}" +
+        ".folder-lessons-h{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--text-muted,#9aa);margin:0 0 7px}";
+      document.head.appendChild(s);
+    },
+
     _renderFolder: function (winId, folderApp) {
       var content = document.getElementById(winId + "-content");
       if (!content) return;
@@ -968,10 +982,28 @@
         '</div>';
       }).join("");
 
+      var subjKey = folderApp.replace(/^folder-/, "");
+      var COURSES = window.LAB404_COURSES || {};
+      var myCourses = Object.keys(COURSES).filter(function (k) { return COURSES[k].subjectKey === subjKey; })
+        .sort(function (a, b) { return String(COURSES[a].grade).localeCompare(String(COURSES[b].grade), undefined, { numeric: true }); });
+      var coursesHtml = "";
+      if (myCourses.length) {
+        Desktop._folderCourseStyle();
+        coursesHtml = '<div class="folder-courses"><div class="folder-courses-h">🎯 Graded courses (by grade)</div>' +
+          myCourses.map(function (k) {
+            return '<button class="folder-course-btn" data-course="' + escHtml(k) + '"><b>' + escHtml(COURSES[k].title) +
+              '</b><span>Objectives · placement test · mastery bands · report-card grade</span></button>';
+          }).join("") + '</div>';
+      }
+
       content.innerHTML =
         '<div class="folder-header">' + escHtml(folder.desc) + '</div>' +
-        '<div class="folder-apps-grid">' + iconsHtml + '</div>';
+        coursesHtml +
+        (iconsHtml ? ((coursesHtml ? '<div class="folder-lessons-h">Topic lessons</div>' : "") + '<div class="folder-apps-grid">' + iconsHtml + '</div>') : "");
 
+      content.querySelectorAll(".folder-course-btn[data-course]").forEach(function (b) {
+        b.addEventListener("click", function () { Desktop.openWindow("course", { course: this.getAttribute("data-course") }); });
+      });
       content.querySelectorAll(".folder-app-icon[data-app]").forEach(function (icon) {
         icon.addEventListener("click", function () {
           var childParams = folder.certKey ? { certKey: folder.certKey, core: folder.core } : undefined;
