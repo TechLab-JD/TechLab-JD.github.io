@@ -913,5 +913,122 @@ window.LAB404_COURSES = {
       { id: "e22e", obj: "5-ESS2-2", type: "mc", q: "About how much of Earth's water is fresh water we could drink?", options: ["A small amount (only a few percent)", "Most of it", "Exactly half", "None"], a: 0, why: "Most water is salty ocean water; little is fresh." },
       { id: "e31e", obj: "5-ESS3-1", type: "mc", q: "Using a refillable water bottle instead of plastic ones helps:", options: ["Reduce waste", "Make more trash", "Use more oil", "Nothing"], a: 0, why: "Reusing cuts down on plastic waste." }
     ]
+  },
+
+  "g5-english": {
+    id: "g5-english", title: "Grade 5 English (ELA)", subjectKey: "english", grade: "5",
+    standard: "Massachusetts English Language Arts (Grade 5, Common Core-aligned)",
+    note: "Reading (literature & informational), language conventions, and vocabulary (auto-graded). Writing (W) is assessed separately once AI-graded writing is added.",
+    domains: [
+      { code: "RL", name: "Reading: Literature" },
+      { code: "RI", name: "Reading: Informational Text" },
+      { code: "L", name: "Language & Vocabulary" }
+    ],
+    objectives: [
+      { code: "5.RL.1", domain: "RL", weight: 1.1, title: "Quote accurately from a story and draw inferences", xwalk: { cc: "5.RL.1", ma: "5.RL.1", teks: "", vasol: "", flbest: "" } },
+      { code: "5.RL.2", domain: "RL", weight: 1.1, title: "Determine a theme and summarize a story", xwalk: { cc: "5.RL.2", ma: "5.RL.2", teks: "", vasol: "", flbest: "" } },
+      { code: "5.RL.3", domain: "RL", weight: 1.0, title: "Compare and contrast characters, settings, and events", xwalk: { cc: "5.RL.3", ma: "5.RL.3", teks: "", vasol: "", flbest: "" } },
+      { code: "5.RL.4", domain: "RL", weight: 1.0, title: "Determine word meaning, including figurative language", xwalk: { cc: "5.RL.4", ma: "5.RL.4", teks: "", vasol: "", flbest: "" } },
+      { code: "5.RL.5", domain: "RL", weight: 0.9, title: "Explain how chapters, scenes, and stanzas structure a text", xwalk: { cc: "5.RL.5", ma: "5.RL.5", teks: "", vasol: "", flbest: "" } },
+      { code: "5.RL.6", domain: "RL", weight: 0.9, title: "Describe how a narrator's point of view shapes a story", xwalk: { cc: "5.RL.6", ma: "5.RL.6", teks: "", vasol: "", flbest: "" } },
+      { code: "5.RI.1", domain: "RI", weight: 1.1, title: "Quote accurately from informational text and draw inferences", xwalk: { cc: "5.RI.1", ma: "5.RI.1", teks: "", vasol: "", flbest: "" } },
+      { code: "5.RI.2", domain: "RI", weight: 1.1, title: "Determine main ideas and key details; summarize", xwalk: { cc: "5.RI.2", ma: "5.RI.2", teks: "", vasol: "", flbest: "" } },
+      { code: "5.RI.3", domain: "RI", weight: 1.0, title: "Explain relationships and interactions between ideas or events", xwalk: { cc: "5.RI.3", ma: "5.RI.3", teks: "", vasol: "", flbest: "" } },
+      { code: "5.RI.4", domain: "RI", weight: 1.0, title: "Determine academic and domain-specific word meanings", xwalk: { cc: "5.RI.4", ma: "5.RI.4", teks: "", vasol: "", flbest: "" } },
+      { code: "5.RI.5", domain: "RI", weight: 1.0, title: "Compare the overall structure of two or more texts", xwalk: { cc: "5.RI.5", ma: "5.RI.5", teks: "", vasol: "", flbest: "" } },
+      { code: "5.RI.8", domain: "RI", weight: 1.0, title: "Explain how an author uses reasons and evidence to support points", xwalk: { cc: "5.RI.8", ma: "5.RI.8", teks: "", vasol: "", flbest: "" } },
+      { code: "5.L.1", domain: "L", weight: 1.1, title: "Command of grammar (tenses, conjunctions, prepositions, interjections)", xwalk: { cc: "5.L.1", ma: "5.L.1", teks: "", vasol: "", flbest: "" } },
+      { code: "5.L.2", domain: "L", weight: 1.0, title: "Conventions: commas, punctuation, titles, and spelling", xwalk: { cc: "5.L.2", ma: "5.L.2", teks: "", vasol: "", flbest: "" } },
+      { code: "5.L.4", domain: "L", weight: 1.0, title: "Word meaning from context, roots/affixes, and reference materials", xwalk: { cc: "5.L.4", ma: "5.L.4", teks: "", vasol: "", flbest: "" } },
+      { code: "5.L.5", domain: "L", weight: 0.9, title: "Figurative language, idioms, proverbs, synonyms & antonyms", xwalk: { cc: "5.L.5", ma: "5.L.5", teks: "", vasol: "", flbest: "" } },
+      { code: "5.L.6", domain: "L", weight: 0.9, title: "Acquire and use grade-level academic and domain-specific vocabulary", xwalk: { cc: "5.L.6", ma: "5.L.6", teks: "", vasol: "", flbest: "" } }
+    ],
+    questions: [
+      // 5.RL.1
+      { id: "rl1a", obj: "5.RL.1", type: "mc", q: "Read: The trophy slipped from Dana's hands and shattered. She stared at the floor, unable to speak. Dana most likely feels:", options: ["Shocked and upset", "Proud", "Bored", "Hungry"], a: 0, why: "A broken trophy and stunned silence suggest shock." },
+      { id: "rl1b", obj: "5.RL.1", type: "mc", q: "To 'quote accurately' from a story means to:", options: ["Copy the exact words from the text", "Paraphrase loosely", "Make something up", "Use the title"], a: 0, why: "A quote uses the author's exact words." },
+      { id: "rl1c", obj: "5.RL.1", type: "mc", q: "Read: Leo packed an umbrella, boots, and a raincoat. What can you infer?", options: ["He expects rain", "It is sunny", "He is going swimming", "It is summer"], a: 0, why: "Rain gear suggests he expects rain." },
+      { id: "rl1d", obj: "5.RL.1", type: "mc", q: "An inference is:", options: ["A smart conclusion based on text clues", "A direct quote", "A random guess", "The title"], a: 0, why: "Inferences combine clues with reasoning." },
+      // 5.RL.2
+      { id: "rl2a", obj: "5.RL.2", type: "mc", q: "A story shows a selfish king who learns to share and becomes loved. The theme is:", options: ["Generosity brings happiness", "Greed always wins", "Kings never change", "Sharing is bad"], a: 0, why: "The lesson is about generosity." },
+      { id: "rl2b", obj: "5.RL.2", type: "mc", q: "A good summary of a story is:", options: ["Brief, covering the main events", "As long as the story", "Only your opinion", "Just the first line"], a: 0, why: "Summaries are short and hit the main points." },
+      { id: "rl2c", obj: "5.RL.2", type: "mc", q: "A theme is a story's:", options: ["Central message or lesson", "Setting", "Narrator's name", "Page count"], a: 0, why: "Theme = the underlying message." },
+      { id: "rl2d", obj: "5.RL.2", type: "mc", q: "When you summarize, you leave out:", options: ["Small, unimportant details", "The main events", "The ending", "The main characters"], a: 0, why: "Summaries drop minor details." },
+      // 5.RL.3
+      { id: "rl3a", obj: "5.RL.3", type: "mc", q: "Read: Mia shares her snacks, but her brother hoards his. The author is showing the characters are:", options: ["Different (contrasting)", "Exactly the same", "Both greedy", "Twins"], a: 0, why: "Their behavior contrasts." },
+      { id: "rl3b", obj: "5.RL.3", type: "mc", q: "Comparing two characters means looking at how they are:", options: ["Alike and different", "Only identical", "Never related", "The same age"], a: 0, why: "Compare = similarities and differences." },
+      { id: "rl3c", obj: "5.RL.3", type: "mc", q: "A character who goes from shy to confident shows a change in the:", options: ["Character", "Setting", "Title", "Author"], a: 0, why: "The character developed." },
+      { id: "rl3d", obj: "5.RL.3", type: "mc", q: "To compare two events in a story, examine their:", options: ["Causes, effects, and how they're alike/different", "Page numbers", "Fonts", "Covers"], a: 0, why: "Look at how the events relate." },
+      // 5.RL.4
+      { id: "rl4a", obj: "5.RL.4", type: "mc", q: "'Time is a thief' is an example of a:", options: ["Metaphor", "Simile", "Fact", "List"], a: 0, why: "It calls time a thief directly — a metaphor." },
+      { id: "rl4b", obj: "5.RL.4", type: "mc", q: "'He ran like the wind' is a:", options: ["Simile", "Metaphor", "Fact", "Command"], a: 0, why: "'like' makes it a simile." },
+      { id: "rl4c", obj: "5.RL.4", type: "mc", q: "In 'the stars winked at us,' giving stars a human action is:", options: ["Personification", "A fact", "A question", "A list"], a: 0, why: "Human traits given to non-human things = personification." },
+      { id: "rl4d", obj: "5.RL.4", type: "mc", q: "The phrase 'a heart of stone' means someone is:", options: ["Unkind or unfeeling", "Made of rock", "Very soft", "A doctor"], a: 0, why: "It's figurative for being cold/unfeeling." },
+      // 5.RL.5
+      { id: "rl5a", obj: "5.RL.5", type: "mc", q: "Chapters, scenes, and stanzas are parts that give a text its:", options: ["Structure", "Color", "Price", "Author"], a: 0, why: "They structure (organize) the text." },
+      { id: "rl5b", obj: "5.RL.5", type: "mc", q: "A group of lines in a poem is a:", options: ["Stanza", "Chapter", "Scene", "Act"], a: 0, why: "Poems are built from stanzas." },
+      { id: "rl5c", obj: "5.RL.5", type: "mc", q: "In a play, a section where the setting stays the same is a:", options: ["Scene", "Stanza", "Chapter", "Verse"], a: 0, why: "Plays are divided into scenes." },
+      { id: "rl5d", obj: "5.RL.5", type: "mc", q: "Why do authors divide a novel into chapters?", options: ["To organize the story into parts", "To waste paper", "To rhyme", "To hide the ending"], a: 0, why: "Chapters organize the story." },
+      // 5.RL.6
+      { id: "rl6a", obj: "5.RL.6", type: "mc", q: "If a narrator says 'I was terrified,' the story is told in:", options: ["First person", "Third person", "Second person", "No point of view"], a: 0, why: "'I' signals first person." },
+      { id: "rl6b", obj: "5.RL.6", type: "mc", q: "A narrator's point of view affects:", options: ["Whose thoughts and feelings we know", "The page count", "The cover", "The font"], a: 0, why: "POV controls what the reader sees." },
+      { id: "rl6c", obj: "5.RL.6", type: "mc", q: "A narrator outside the story who knows every character's thoughts is:", options: ["Third-person omniscient", "First person", "A character", "The reader"], a: 0, why: "Omniscient = all-knowing outside narrator." },
+      { id: "rl6d", obj: "5.RL.6", type: "mc", q: "Reading the SAME event from two characters' points of view helps you see:", options: ["Different feelings and perspectives", "Nothing new", "The exact same thing", "Only the setting"], a: 0, why: "Different POVs reveal different perspectives." },
+      // 5.RI.1
+      { id: "ri1a", obj: "5.RI.1", type: "mc", q: "Read: The city added bike lanes, and accidents dropped by 30%. You can infer bike lanes:", options: ["Made streets safer", "Caused more crashes", "Did nothing", "Are ugly"], a: 0, why: "Fewer accidents implies greater safety." },
+      { id: "ri1b", obj: "5.RI.1", type: "mc", q: "To support an answer from a nonfiction text, you should:", options: ["Quote or cite details from the text", "Guess", "Use only a picture", "Skip it"], a: 0, why: "Use textual evidence." },
+      { id: "ri1c", obj: "5.RI.1", type: "mc", q: "Read: The desert gets less than 10 inches of rain a year. You can infer the desert is:", options: ["Very dry", "Very wet", "Underwater", "Snowy all year"], a: 0, why: "Little rain means a dry climate." },
+      { id: "ri1d", obj: "5.RI.1", type: "mc", q: "'Quote accurately' means using the author's:", options: ["Exact words", "Rough idea", "Opposite meaning", "Title only"], a: 0, why: "A quote is word-for-word." },
+      // 5.RI.2
+      { id: "ri2a", obj: "5.RI.2", type: "mc", q: "Read: Exercise helps your heart, muscles, mood, and sleep. The main idea is:", options: ["Exercise has many health benefits", "Sleep is nice", "Muscles are big", "Hearts beat"], a: 0, why: "The overall point is exercise's benefits." },
+      { id: "ri2b", obj: "5.RI.2", type: "mc", q: "A longer informational text can have:", options: ["More than one main idea", "Only a title", "No details", "Just page 1"], a: 0, why: "Grade 5 texts may have multiple main ideas." },
+      { id: "ri2c", obj: "5.RI.2", type: "mc", q: "Key details in a text:", options: ["Support the main idea", "Contradict it", "Are random", "Are decorations"], a: 0, why: "Details back up the main idea." },
+      { id: "ri2d", obj: "5.RI.2", type: "mc", q: "To find the main idea, ask:", options: ["What is this mostly about?", "What is the last word?", "Who printed it?", "What color is it?"], a: 0, why: "Main idea = what it's mostly about." },
+      // 5.RI.3
+      { id: "ri3a", obj: "5.RI.3", type: "mc", q: "Read: When the factory closed, workers lost jobs, so the town's shops lost customers. This shows:", options: ["A chain of cause and effect", "No connection", "A poem", "A rhyme"], a: 0, why: "One event causes the next." },
+      { id: "ri3b", obj: "5.RI.3", type: "mc", q: "A science text explaining how the sun, plants, and animals connect describes their:", options: ["Relationships and interactions", "Names", "Prices", "Sizes only"], a: 0, why: "It shows how they interact." },
+      { id: "ri3c", obj: "5.RI.3", type: "mc", q: "Explaining how two historical events are linked means showing:", options: ["How one affected the other", "Their page numbers", "Their fonts", "Nothing"], a: 0, why: "It shows the connection between them." },
+      { id: "ri3d", obj: "5.RI.3", type: "mc", q: "In informational text, 'interactions' means how things:", options: ["Affect or connect to each other", "Are spelled", "Look", "Rhyme"], a: 0, why: "Interactions = how they influence each other." },
+      // 5.RI.4
+      { id: "ri4a", obj: "5.RI.4", type: "mc", q: "In a science text, 'The circuit was complete, so the bulb lit up.' A circuit is a:", options: ["Path for electricity", "Kind of food", "Type of weather", "Musical note"], a: 0, why: "A circuit is a path electricity flows through." },
+      { id: "ri4b", obj: "5.RI.4", type: "mc", q: "In an economics text, 'demand' means:", options: ["How much people want to buy something", "A loud noise", "A kind of map", "A fruit"], a: 0, why: "Demand = consumer desire to buy." },
+      { id: "ri4c", obj: "5.RI.4", type: "mc", q: "To figure out a domain-specific word, use:", options: ["Context clues and a glossary", "The cover", "The author's age", "The price"], a: 0, why: "Context and a glossary give the meaning." },
+      { id: "ri4d", obj: "5.RI.4", type: "mc", q: "In a history text, a 'colony' is:", options: ["A settlement controlled by a faraway country", "A kind of insect only", "A planet", "A dessert"], a: 0, why: "At grade 5, colony = a settlement ruled by another country." },
+      // 5.RI.5
+      { id: "ri5a", obj: "5.RI.5", type: "mc", q: "A text organized by First, Then, Next uses a ___ structure.", options: ["Sequence", "Compare/contrast", "Rhyme", "Stanza"], a: 0, why: "Those words signal sequence." },
+      { id: "ri5b", obj: "5.RI.5", type: "mc", q: "One text lists causes and effects; another compares two volcanoes. They use ___ structures.", options: ["Different", "Identical", "No", "Rhyming"], a: 0, why: "Cause/effect vs. compare/contrast are different." },
+      { id: "ri5c", obj: "5.RI.5", type: "mc", q: "A text that presents a trouble and its fix uses:", options: ["Problem/solution", "Rhyme", "A cast list", "Alphabetical order"], a: 0, why: "Trouble + fix = problem/solution." },
+      { id: "ri5d", obj: "5.RI.5", type: "mc", q: "Comparing how two texts are organized means looking at their:", options: ["Text structure", "Covers", "Fonts", "Prices"], a: 0, why: "Structure is how a text is organized." },
+      // 5.RI.8
+      { id: "ri8a", obj: "5.RI.8", type: "mc", q: "An author argues 'Schools should start later.' Which is EVIDENCE?", options: ["A study showing teens learn better later", "The author prefers it", "It sounds nice", "Mornings are early"], a: 0, why: "A study is factual support." },
+      { id: "ri8b", obj: "5.RI.8", type: "mc", q: "Reasons and evidence are used to:", options: ["Support the author's claims", "Decorate the page", "Confuse readers", "Rhyme"], a: 0, why: "They back up the author's points." },
+      { id: "ri8c", obj: "5.RI.8", type: "mc", q: "To decide which evidence supports which point, you:", options: ["Match each reason to the claim it backs up", "Ignore the claims", "Count the words", "Look at the cover"], a: 0, why: "Connect each reason to its point." },
+      { id: "ri8d", obj: "5.RI.8", type: "mc", q: "Which is a fact (evidence), not an opinion?", options: ["The Pacific is the largest ocean", "Oceans are the best", "Water is boring", "I like beaches"], a: 0, why: "A fact can be checked; the rest are opinions." },
+      // 5.L.1
+      { id: "l1a", obj: "5.L.1", type: "mc", q: "Choose the correct verb: 'By the time we arrived, the show had ___.'", options: ["started", "start", "starts", "starting"], a: 0, why: "Past perfect: 'had started'." },
+      { id: "l1b", obj: "5.L.1", type: "mc", q: "Which word is a conjunction (a joining word)?", options: ["and", "happy", "quickly", "blue"], a: 0, why: "'And' joins words or clauses." },
+      { id: "l1c", obj: "5.L.1", type: "mc", q: "'Wow, that was amazing!' The word 'Wow' is an:", options: ["Interjection", "Noun", "Verb", "Preposition"], a: 0, why: "Interjections express feeling." },
+      { id: "l1d", obj: "5.L.1", type: "mc", q: "Which word is a preposition?", options: ["under", "run", "bright", "they"], a: 0, why: "'Under' shows position — a preposition." },
+      // 5.L.2
+      { id: "l2a", obj: "5.L.2", type: "mc", q: "Which sentence uses commas correctly?", options: ["We bought apples, bread, and milk.", "We bought apples bread and milk.", "We, bought apples and bread.", "We bought, apples and bread."], a: 0, why: "Commas separate items in a list." },
+      { id: "l2b", obj: "5.L.2", type: "mc", q: "A book title should usually be:", options: ["Italicized or underlined", "All lowercase", "Spelled backward", "In a tiny font"], a: 0, why: "Titles of books are italicized or underlined." },
+      { id: "l2c", obj: "5.L.2", type: "mc", q: "Which sentence is punctuated correctly?", options: ["Yes, I will help you.", "Yes I will help you", "Yes; I will help you.", "Yes I, will help you."], a: 0, why: "A comma follows the introductory 'Yes'." },
+      { id: "l2d", obj: "5.L.2", type: "mc", q: "Choose the correctly spelled word:", options: ["separate", "seperate", "separete", "sepparate"], a: 0, why: "It's 'separate' (there's 'a rat' in sep-a-rate)." },
+      // 5.L.4
+      { id: "l4a", obj: "5.L.4", type: "mc", q: "In 'The ancient ruins were thousands of years old,' ancient means:", options: ["Very old", "Brand new", "Loud", "Tall"], a: 0, why: "Context ('thousands of years') shows very old." },
+      { id: "l4b", obj: "5.L.4", type: "mc", q: "The root 'spect' (inspect, spectator) means:", options: ["Look or see", "Carry", "Water", "Write"], a: 0, why: "'Spect' relates to seeing." },
+      { id: "l4c", obj: "5.L.4", type: "mc", q: "The prefix 'bi-' in bicycle and biweekly means:", options: ["Two", "Not", "Before", "Under"], a: 0, why: "'Bi-' means two." },
+      { id: "l4d", obj: "5.L.4", type: "mc", q: "To find a word's exact meaning and part of speech, use a:", options: ["Dictionary", "Clock", "Map", "Ruler"], a: 0, why: "A dictionary gives meaning and part of speech." },
+      // 5.L.5
+      { id: "l5a", obj: "5.L.5", type: "mc", q: "The idiom 'bite the bullet' means to:", options: ["Face something hard bravely", "Eat metal", "Give up", "Chew gum"], a: 0, why: "It means to endure something difficult." },
+      { id: "l5b", obj: "5.L.5", type: "mc", q: "The proverb 'Don't count your chickens before they hatch' means:", options: ["Don't assume success too early", "Raise more chickens", "Count carefully", "Wake up early"], a: 0, why: "Don't rely on something before it happens." },
+      { id: "l5c", obj: "5.L.5", type: "mc", q: "A synonym for 'enormous' is:", options: ["Huge", "Tiny", "Fast", "Quiet"], a: 0, why: "Enormous means very large (huge)." },
+      { id: "l5d", obj: "5.L.5", type: "mc", q: "An antonym (opposite) of 'generous' is:", options: ["Stingy", "Kind", "Giving", "Big"], a: 0, why: "Stingy is the opposite of generous." },
+      // 5.L.6
+      { id: "l6a", obj: "5.L.6", type: "mc", q: "The academic word 'analyze' means to:", options: ["Examine something in detail", "Guess quickly", "Ignore it", "Color it"], a: 0, why: "To analyze is to study closely." },
+      { id: "l6b", obj: "5.L.6", type: "mc", q: "In a word problem, 'in all' usually signals you should:", options: ["Add", "Subtract", "Divide", "Do nothing"], a: 0, why: "'In all' often means find the total (add)." },
+      { id: "l6c", obj: "5.L.6", type: "mc", q: "The word 'describe' asks you to:", options: ["Tell details about something", "Only name it", "Erase it", "Rhyme"], a: 0, why: "Describing means giving details." },
+      { id: "l6d", obj: "5.L.6", type: "mc", q: "'Determine the meaning' means to:", options: ["Figure out what it means", "Spell it", "Count its letters", "Draw it"], a: 0, why: "Determine = figure out." }
+    ]
   }
 };
