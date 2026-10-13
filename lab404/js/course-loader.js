@@ -67,6 +67,13 @@ window.CourseLoader = (function () {
       ".cv-mastered{background:rgba(60,190,110,.18);color:#4fc07a}" +
       ".cv-b-weak{background:#e0484a}.cv-b-needs{background:#e0a93c}.cv-b-strong{background:#4a90e2}.cv-b-mastered{background:#3cbe6e}.cv-b-none{background:#556}" +
       ".cv-note{color:var(--text-faint,#778);font-size:.68rem;margin-top:12px;line-height:1.5}" +
+      ".cv-objwrap{margin-bottom:6px}" +
+      ".cv-learn{border-left:3px solid var(--accent2,#4a90e2);border-radius:0 8px 8px 0;margin:0 0 8px;padding:11px 13px;background:rgba(74,144,226,.06);font-size:.85rem;line-height:1.55}" +
+      ".cv-learn p{margin:0 0 8px}" +
+      ".cv-ex{background:rgba(127,127,127,.12);border-radius:8px;padding:8px 11px;margin:4px 0 10px;font-size:.82rem}" +
+      ".cv-ex-l{display:block;font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text-muted,#9aa);margin-bottom:3px}" +
+      ".cv-learn-btn{border:1px solid var(--accent2,#4a90e2);background:transparent;color:var(--accent2,#4a90e2);border-radius:8px;padding:5px 10px;font:inherit;font-size:.72rem;font-weight:700;cursor:pointer;white-space:nowrap}" +
+      ".cv-learn-btn.on{background:var(--accent2,#4a90e2);color:#fff}" +
       /* quiz */
       ".cv-q{max-width:560px;margin:0 auto}" +
       ".cv-prog{font-size:.72rem;color:var(--text-muted,#9aa);margin-bottom:6px;display:flex;justify-content:space-between}" +
@@ -138,13 +145,21 @@ window.CourseLoader = (function () {
       var rows = objs.map(function (ob) {
         var s = M.objStats(courseId, ob.code);
         var nq = M.questionsFor(courseId, ob.code).length;
-        return '<div class="cv-obj">' +
+        var hasTeach = !!ob.teach;
+        var head = '<div class="cv-obj">' +
           '<div class="cv-obj-main"><div class="cv-obj-code">' + esc(ob.code) + ' · ' + esc((ob.xwalk && ob.xwalk.cc) || "") + '</div>' +
           '<div class="cv-obj-title">' + esc(ob.title) + '</div>' +
           '<div class="cv-obj-bar"><span class="cv-b-' + s.band + '" style="width:' + Math.round(s.pct * 100) + '%"></span></div></div>' +
           pill(s.band, s.bandLabel + (s.seen ? " · " + Math.round(s.pct * 100) + "%" : "") + (s.dueForReview ? " · review due" : "")) +
+          (hasTeach ? '<button class="cv-learn-btn" data-learn="' + esc(ob.code) + '">📖 Learn</button>' : "") +
           '<button class="cv-btn ghost sm" data-practice="' + esc(ob.code) + '"' + (nq ? "" : " disabled") + '>Practice</button>' +
           '</div>';
+        var learn = hasTeach ? '<div class="cv-learn hide" id="cv-learn-' + esc(ob.code) + '">' +
+          String(ob.teach).split(/\n\n+/).map(function (p) { return p.trim() ? '<p>' + esc(p.trim()) + '</p>' : ""; }).join("") +
+          (ob.ex ? '<div class="cv-ex"><span class="cv-ex-l">Worked example</span>' + esc(ob.ex) + '</div>' : "") +
+          '<button class="cv-btn sm" data-practice="' + esc(ob.code) + '"' + (nq ? "" : " disabled") + '>🎯 Practice this objective</button>' +
+          '</div>' : "";
+        return '<div class="cv-objwrap">' + head + learn + '</div>';
       }).join("");
       return '<div class="cv-dom"><div class="cv-domh">' + esc(dm.code) + " — " + esc(dm.name) + '</div>' + rows + '</div>';
     }).join("");
@@ -175,6 +190,12 @@ window.CourseLoader = (function () {
     });
     el.querySelectorAll("[data-practice]").forEach(function (b) {
       b.addEventListener("click", function () { startQuiz("objective", this.getAttribute("data-practice")); });
+    });
+    el.querySelectorAll("[data-learn]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var panel = document.getElementById("cv-learn-" + this.getAttribute("data-learn"));
+        if (panel) { var open = panel.classList.toggle("hide"); this.classList.toggle("on", !open); }
+      });
     });
   }
 
