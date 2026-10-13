@@ -167,5 +167,87 @@ window.LAB404_COURSES = {
       { id: "ess32c", obj: "4-ESS3-2", type: "multi", q: "Select ALL the ways communities reduce damage from natural hazards.", options: ["Early warning systems", "Stronger buildings", "Evacuation plans", "Ignoring the danger"], correct: [0, 1, 2], why: "Warnings, strong buildings, and plans all reduce harm." },
       { id: "ess32d", obj: "4-ESS3-2", type: "mc", q: "We can't always stop natural hazards, but we can:", options: ["Prepare and reduce their impact", "Make them disappear forever", "Fully control the weather", "Safely ignore them"], a: 0, why: "Preparation reduces the impact of hazards." }
     ]
+  },
+
+  "g4-english": {
+    id: "g4-english", title: "Grade 4 English (ELA)", subjectKey: "english", grade: "4",
+    standard: "Massachusetts English Language Arts (Grade 4, Common Core-aligned)",
+    note: "Pilot course: reading comprehension, language conventions, and vocabulary (auto-graded). Writing (the W standards) is assessed separately once AI-graded writing is added.",
+    domains: [
+      { code: "RL", name: "Reading: Literature" },
+      { code: "RI", name: "Reading: Informational Text" },
+      { code: "L", name: "Language & Vocabulary" },
+      { code: "RF", name: "Word Analysis" }
+    ],
+    objectives: [
+      { code: "4.RL.1", domain: "RL", weight: 1.1, title: "Refer to details & examples and draw inferences from a story", xwalk: { cc: "4.RL.1", ma: "4.RL.1", teks: "", vasol: "", flbest: "" } },
+      { code: "4.RL.2", domain: "RL", weight: 1.1, title: "Determine a theme and summarize a story", xwalk: { cc: "4.RL.2", ma: "4.RL.2", teks: "", vasol: "", flbest: "" } },
+      { code: "4.RL.3", domain: "RL", weight: 1.0, title: "Describe a character, setting, or event using details", xwalk: { cc: "4.RL.3", ma: "4.RL.3", teks: "", vasol: "", flbest: "" } },
+      { code: "4.RI.1", domain: "RI", weight: 1.0, title: "Refer to details & draw inferences from informational text", xwalk: { cc: "4.RI.1", ma: "4.RI.1", teks: "", vasol: "", flbest: "" } },
+      { code: "4.RI.2", domain: "RI", weight: 1.1, title: "Determine the main idea and supporting details", xwalk: { cc: "4.RI.2", ma: "4.RI.2", teks: "", vasol: "", flbest: "" } },
+      { code: "4.RI.3", domain: "RI", weight: 1.0, title: "Explain events, procedures, or ideas using text information", xwalk: { cc: "4.RI.3", ma: "4.RI.3", teks: "", vasol: "", flbest: "" } },
+      { code: "4.L.1", domain: "L", weight: 1.1, title: "Command of grammar: pronouns, verb tenses, complete sentences", xwalk: { cc: "4.L.1", ma: "4.L.1", teks: "", vasol: "", flbest: "" } },
+      { code: "4.L.2", domain: "L", weight: 1.0, title: "Capitalization, punctuation (commas, quotation marks) & spelling", xwalk: { cc: "4.L.2", ma: "4.L.2", teks: "", vasol: "", flbest: "" } },
+      { code: "4.L.4", domain: "L", weight: 1.0, title: "Word meaning from context clues and prefixes, suffixes & roots", xwalk: { cc: "4.L.4", ma: "4.L.4", teks: "", vasol: "", flbest: "" } },
+      { code: "4.L.5", domain: "L", weight: 0.9, title: "Figurative language (similes, idioms) and synonyms/antonyms", xwalk: { cc: "4.L.5", ma: "4.L.5", teks: "", vasol: "", flbest: "" } },
+      { code: "4.RF.3", domain: "RF", weight: 0.9, title: "Decode multisyllable words using syllables and word parts", xwalk: { cc: "4.RF.3", ma: "4.RF.3", teks: "", vasol: "", flbest: "" } }
+    ],
+    questions: [
+      // 4.RL.1
+      { id: "rl1a", obj: "4.RL.1", type: "mc", q: "Read: Maya checked the sky, grabbed her umbrella, and sighed. What will most likely happen?", options: ["It will rain", "It is sunny", "She lost her umbrella", "It is nighttime"], a: 0, why: "Grabbing an umbrella and sighing hints that rain is coming." },
+      { id: "rl1b", obj: "4.RL.1", type: "mc", q: "Read: Tom's hands shook as he stepped onto the stage, and he forgot his first line. How does Tom most likely feel?", options: ["Nervous", "Bored", "Sleepy", "Angry"], a: 0, why: "Shaking hands and forgetting lines show nervousness." },
+      { id: "rl1c", obj: "4.RL.1", type: "mc", q: "Read: The puppy wagged its tail and licked Jamal's face. Which detail shows the puppy is happy?", options: ["Wagging its tail", "It was raining", "Jamal was tall", "The floor was clean"], a: 0, why: "A wagging tail is a detail that shows happiness." },
+      { id: "rl1d", obj: "4.RL.1", type: "mc", q: "To support an answer about what a character is like, you should:", options: ["Point to details and examples in the text", "Just guess", "Use only your own opinion", "Skip to the last page"], a: 0, why: "Back up answers with evidence from the text." },
+      // 4.RL.2
+      { id: "rl2a", obj: "4.RL.2", type: "mc", q: "A story shows a boy who keeps trying after failing, and finally succeeds. The theme is most likely:", options: ["Hard work and persistence pay off", "Never try new things", "Cheating is best", "Give up quickly"], a: 0, why: "Persistence leading to success is the message (theme)." },
+      { id: "rl2b", obj: "4.RL.2", type: "mc", q: "A good summary of a story includes:", options: ["The main events, in order", "Every tiny detail", "Your opinion of the author", "Only the title"], a: 0, why: "A summary briefly retells the main events." },
+      { id: "rl2c", obj: "4.RL.2", type: "mc", q: "The lesson or message a story teaches is called its:", options: ["Theme", "Setting", "Title", "Author"], a: 0, why: "Theme is the central message." },
+      { id: "rl2d", obj: "4.RL.2", type: "mc", q: "Read: The ant saved food all summer while the grasshopper played. In winter, the ant had plenty and the grasshopper had none. The theme is:", options: ["Plan ahead and work for the future", "Playing is always best", "Winter is fun", "Ants are small"], a: 0, why: "It teaches preparing for the future." },
+      // 4.RL.3
+      { id: "rl3a", obj: "4.RL.3", type: "mc", q: "Read: Rosa shared her lunch with the new student and showed her around school. Rosa is best described as:", options: ["Kind", "Rude", "Lazy", "Selfish"], a: 0, why: "Sharing and helping show kindness." },
+      { id: "rl3b", obj: "4.RL.3", type: "mc", q: "The time and place where a story happens is the:", options: ["Setting", "Character", "Plot", "Theme"], a: 0, why: "Setting is the time and place." },
+      { id: "rl3c", obj: "4.RL.3", type: "mc", q: "Read: Snow covered the quiet village as lanterns glowed in the windows. This mostly describes the story's:", options: ["Setting", "Main character", "Problem", "Ending"], a: 0, why: "It paints the time and place — the setting." },
+      { id: "rl3d", obj: "4.RL.3", type: "mc", q: "To describe a character well, you should use:", options: ["Their actions, words, and thoughts in the text", "Only their name", "The page number", "The cover color"], a: 0, why: "Use what the character does, says, and thinks." },
+      // 4.RI.1
+      { id: "ri1a", obj: "4.RI.1", type: "mc", q: "Read: Bats sleep during the day and hunt at night. Bats are best described as:", options: ["Nocturnal", "Daytime animals", "Plants", "Fish"], a: 0, why: "Active at night means nocturnal — an inference from the detail." },
+      { id: "ri1b", obj: "4.RI.1", type: "mc", q: "Read: Recycling one aluminum can saves enough energy to run a TV for three hours. This detail supports the idea that recycling:", options: ["Saves energy", "Wastes time", "Is impossible", "Makes TVs"], a: 0, why: "The example shows an energy benefit." },
+      { id: "ri1c", obj: "4.RI.1", type: "mc", q: "When answering a question about a nonfiction text, you should:", options: ["Refer to details and examples from the text", "Make it up", "Use only the picture", "Ask a friend"], a: 0, why: "Support answers with evidence from the text." },
+      { id: "ri1d", obj: "4.RI.1", type: "mc", q: "Read: Unlike frogs, toads have dry, bumpy skin. What can you infer about frogs' skin?", options: ["It is smoother and moister", "It is also dry and bumpy", "Frogs have no skin", "Frogs are toads"], a: 0, why: "'Unlike frogs' implies frogs are different — smoother/moister." },
+      // 4.RI.2
+      { id: "ri2a", obj: "4.RI.2", type: "mc", q: "Read: Honeybees pollinate crops, make honey, and support many plants. Without bees, many foods would disappear. The main idea is:", options: ["Bees are very important to our food", "Honey tastes sweet", "Bees are small", "Bees can sting"], a: 0, why: "The overall point is that bees matter to our food." },
+      { id: "ri2b", obj: "4.RI.2", type: "mc", q: "The main idea of a paragraph is:", options: ["What the paragraph is mostly about", "The first word", "One tiny detail", "The author's name"], a: 0, why: "The main idea is the central point." },
+      { id: "ri2c", obj: "4.RI.2", type: "mc", q: "Supporting details in a paragraph should:", options: ["Back up the main idea", "Contradict the topic", "Be about anything", "Be left out"], a: 0, why: "Details support the main idea." },
+      { id: "ri2d", obj: "4.RI.2", type: "mc", q: "Read: Exercise strengthens your heart, builds muscles, and lifts your mood. A good title would be:", options: ["The Benefits of Exercise", "My Favorite Color", "A Rainy Day", "How to Draw"], a: 0, why: "The title should match the main idea." },
+      // 4.RI.3
+      { id: "ri3a", obj: "4.RI.3", type: "mc", q: "Read: First the caterpillar eats leaves, then it forms a chrysalis, and finally it becomes a butterfly. What happens right after it eats leaves?", options: ["It forms a chrysalis", "It becomes a butterfly", "It lays eggs", "It flies away"], a: 0, why: "The sequence is stated in the text." },
+      { id: "ri3b", obj: "4.RI.3", type: "mc", q: "Read: Because the dam blocked the river, a lake slowly formed behind it. Why did the lake form?", options: ["The dam blocked the river", "The sun was hot", "Fish swam in", "It rained once"], a: 0, why: "The cause is stated: the dam blocked the river." },
+      { id: "ri3c", obj: "4.RI.3", type: "mc", q: "A text that explains the steps of how something happens is describing a:", options: ["Sequence or process", "Character", "Setting", "Rhyme"], a: 0, why: "Steps in order describe a process." },
+      { id: "ri3d", obj: "4.RI.3", type: "mc", q: "Read: Plants need sunlight to make food. In a dark closet, the plant turned yellow and wilted. Why did the plant wilt?", options: ["It did not get sunlight", "It got too much water", "It was too happy", "It was a toy"], a: 0, why: "No sunlight means it cannot make food." },
+      // 4.L.1
+      { id: "l1a", obj: "4.L.1", type: "mc", q: "Choose the sentence with correct grammar.", options: ["She and I went to the park.", "Her and me went to the park.", "Me and her goed to the park.", "She and me gone to the park."], a: 0, why: "Use the subject pronouns 'She and I' with 'went'." },
+      { id: "l1b", obj: "4.L.1", type: "mc", q: "Which word is a pronoun?", options: ["they", "run", "happy", "quickly"], a: 0, why: "'They' takes the place of a noun." },
+      { id: "l1c", obj: "4.L.1", type: "mc", q: "Pick the complete, correctly joined sentence (no fragment or run-on).", options: ["The dog barked, and the cat ran.", "Because it was late.", "The dog barked the cat ran away quickly.", "Running fast."], a: 0, why: "It is a complete sentence, properly joined with a comma and 'and'." },
+      { id: "l1d", obj: "4.L.1", type: "mc", q: "Choose the correct verb: Yesterday we ___ to the museum.", options: ["went", "go", "goes", "going"], a: 0, why: "'Yesterday' calls for the past tense 'went'." },
+      // 4.L.2 (double quotes in options -> single-quoted JS strings)
+      { id: "l2a", obj: "4.L.2", type: "mc", q: "Which sentence is punctuated correctly?", options: ['She asked, "Where are we going?"', 'She asked where are we going', 'She asked, Where are we going?', 'She asked "where are we going".'], a: 0, why: "A comma sets off the quote, and the question mark goes inside the quotation marks." },
+      { id: "l2b", obj: "4.L.2", type: "mc", q: "Which sentence is capitalized correctly?", options: ["We visited New York in July.", "we visited new york in july.", "We visited new York in july.", "we Visited New York In July."], a: 0, why: "Capitalize the first word and proper nouns (New York, July)." },
+      { id: "l2c", obj: "4.L.2", type: "mc", q: "Choose the correctly spelled word.", options: ["believe", "beleive", "belive", "beleeve"], a: 0, why: "'Believe' — i before e here." },
+      { id: "l2d", obj: "4.L.2", type: "mc", q: "In a list, commas go between items. Which is correct?", options: ["I bought apples, oranges, and grapes.", "I bought apples oranges and grapes.", "I bought apples; oranges; and grapes.", "I bought apples oranges, and grapes."], a: 0, why: "Commas separate the items in a list." },
+      // 4.L.4
+      { id: "l4a", obj: "4.L.4", type: "mc", q: "In 'The gigantic whale was bigger than a bus,' the word gigantic means:", options: ["Very big", "Tiny", "Fast", "Blue"], a: 0, why: "The context ('bigger than a bus') shows it means huge." },
+      { id: "l4b", obj: "4.L.4", type: "mc", q: "The prefix 're-' in the word rewrite means:", options: ["Again", "Not", "Before", "Under"], a: 0, why: "'re-' means again (rewrite = write again)." },
+      { id: "l4c", obj: "4.L.4", type: "mc", q: "The suffix '-less' in the word fearless means:", options: ["Without", "Full of", "More", "Again"], a: 0, why: "'-less' means without (fearless = without fear)." },
+      { id: "l4d", obj: "4.L.4", type: "mc", q: "In 'The nocturnal owl hunts at night,' nocturnal most likely means:", options: ["Active at night", "Sleepy", "Large", "Hungry"], a: 0, why: "The context 'hunts at night' is the clue." },
+      // 4.L.5
+      { id: "l5a", obj: "4.L.5", type: "mc", q: "Her smile was as bright as the sun. This is an example of a:", options: ["Simile", "Fact", "Question", "Command"], a: 0, why: "A comparison using 'as...as' is a simile." },
+      { id: "l5b", obj: "4.L.5", type: "mc", q: "The idiom 'It's raining cats and dogs' means:", options: ["It is raining very hard", "Animals are falling", "It is sunny", "It is snowing"], a: 0, why: "It is an idiom for heavy rain." },
+      { id: "l5c", obj: "4.L.5", type: "mc", q: "Which word is an ANTONYM (opposite) of 'ancient'?", options: ["Modern", "Old", "Dusty", "Historic"], a: 0, why: "Ancient means very old; its opposite is modern." },
+      { id: "l5d", obj: "4.L.5", type: "mc", q: "Which word is a SYNONYM for 'happy'?", options: ["Joyful", "Sad", "Angry", "Tired"], a: 0, why: "Joyful means the same as happy." },
+      // 4.RF.3
+      { id: "rf3a", obj: "4.RF.3", type: "mc", q: "How many syllables are in the word butterfly?", options: ["3", "2", "4", "1"], a: 0, why: "but-ter-fly = 3 syllables." },
+      { id: "rf3b", obj: "4.RF.3", type: "mc", q: "The word unhappiness is built from these parts:", options: ["un + happy + ness", "unh + appi + ness", "u + nhappi + ness", "unhapp + iness"], a: 0, why: "Prefix 'un-' + root 'happy' + suffix '-ness'." },
+      { id: "rf3c", obj: "4.RF.3", type: "mc", q: "Which prefix means 'not'?", options: ["un-", "re-", "pre-", "mis-"], a: 0, why: "'un-' means not (unhappy = not happy)." },
+      { id: "rf3d", obj: "4.RF.3", type: "mc", q: "To read a long word like independent, it helps to:", options: ["Break it into syllables and parts", "Guess from the first letter only", "Skip it", "Spell it backward"], a: 0, why: "Decode long words by chunking them into parts." }
+    ]
   }
 };
