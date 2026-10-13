@@ -331,5 +331,88 @@ window.LAB404_COURSES = {
       { id: "ssh2c", obj: "4.SS.H2", type: "mc", q: "The word chronological means in order of:", options: ["Time", "Importance", "Height", "The alphabet"], a: 0, why: "Chronological means time order." },
       { id: "ssh2d", obj: "4.SS.H2", type: "mc", q: "A period of 100 years is called a:", options: ["Century", "Decade", "Year", "Week"], a: 0, why: "A century is 100 years." }
     ]
+  },
+
+  "g5-math": {
+    id: "g5-math", title: "Grade 5 Math", subjectKey: "math", grade: "5",
+    standard: "Massachusetts Curriculum Frameworks — Grade 5 Mathematics",
+    note: "Pilot course: a representative set of Grade 5 objectives across all five domains.",
+    domains: [
+      { code: "OA", name: "Operations & Algebraic Thinking" },
+      { code: "NBT", name: "Number & Operations in Base Ten" },
+      { code: "NF", name: "Fractions" },
+      { code: "MD", name: "Measurement & Data" },
+      { code: "G", name: "Geometry" }
+    ],
+    objectives: [
+      { code: "5.OA.1", domain: "OA", weight: 1.0, title: "Evaluate expressions using parentheses and order of operations", xwalk: { cc: "5.OA.A.1", ma: "5.OA.A.1", teks: "", vasol: "", flbest: "" } },
+      { code: "5.NBT.1", domain: "NBT", weight: 1.0, title: "Place value: a digit is 10× the place to its right", xwalk: { cc: "5.NBT.A.1", ma: "5.NBT.A.1", teks: "", vasol: "", flbest: "" } },
+      { code: "5.NBT.3", domain: "NBT", weight: 1.1, title: "Read, write & compare decimals to the thousandths", xwalk: { cc: "5.NBT.A.3", ma: "5.NBT.A.3", teks: "", vasol: "", flbest: "" } },
+      { code: "5.NBT.4", domain: "NBT", weight: 0.9, title: "Round decimals to any place", xwalk: { cc: "5.NBT.A.4", ma: "5.NBT.A.4", teks: "", vasol: "", flbest: "" } },
+      { code: "5.NBT.5", domain: "NBT", weight: 1.0, title: "Multiply multi-digit whole numbers", xwalk: { cc: "5.NBT.B.5", ma: "5.NBT.B.5", teks: "", vasol: "", flbest: "" } },
+      { code: "5.NBT.7", domain: "NBT", weight: 1.1, title: "Add, subtract, multiply & divide decimals", xwalk: { cc: "5.NBT.B.7", ma: "5.NBT.B.7", teks: "", vasol: "", flbest: "" } },
+      { code: "5.NF.1", domain: "NF", weight: 1.2, title: "Add & subtract fractions with unlike denominators", xwalk: { cc: "5.NF.A.1", ma: "5.NF.A.1", teks: "", vasol: "", flbest: "" } },
+      { code: "5.NF.4", domain: "NF", weight: 1.1, title: "Multiply a fraction by a fraction or whole number", xwalk: { cc: "5.NF.B.4", ma: "5.NF.B.4", teks: "", vasol: "", flbest: "" } },
+      { code: "5.MD.1", domain: "MD", weight: 0.9, title: "Convert among measurement units", xwalk: { cc: "5.MD.A.1", ma: "5.MD.A.1", teks: "", vasol: "", flbest: "" } },
+      { code: "5.MD.5", domain: "MD", weight: 1.0, title: "Find the volume of rectangular prisms (l × w × h)", xwalk: { cc: "5.MD.C.5", ma: "5.MD.C.5", teks: "", vasol: "", flbest: "" } },
+      { code: "5.G.1", domain: "G", weight: 0.9, title: "Plot and interpret points on the coordinate plane", xwalk: { cc: "5.G.A.1", ma: "5.G.A.1", teks: "", vasol: "", flbest: "" } }
+    ],
+    questions: [
+      // 5.OA.1
+      { id: "oa1a", obj: "5.OA.1", type: "numeric", q: "Evaluate: 3 × (4 + 2)", answer: 18, why: "Parentheses first: 4 + 2 = 6, then 3 × 6 = 18." },
+      { id: "oa1b", obj: "5.OA.1", type: "numeric", q: "Evaluate: (12 − 4) ÷ 2", answer: 4, why: "12 − 4 = 8, then 8 ÷ 2 = 4." },
+      { id: "oa1c", obj: "5.OA.1", type: "numeric", q: "Evaluate: 2 × (3 + 5) − 4", answer: 12, why: "3 + 5 = 8, 2 × 8 = 16, 16 − 4 = 12." },
+      { id: "oa1d", obj: "5.OA.1", type: "mc", q: "In 5 × (2 + 3), what do you do FIRST?", options: ["Add 2 + 3", "Multiply 5 × 2", "Multiply 5 × 3", "Nothing"], a: 0, why: "Do what's inside the parentheses first." },
+      // 5.NBT.1
+      { id: "nb1a", obj: "5.NBT.1", type: "mc", q: "In 4,400, the first 4 is worth how many times the second 4?", options: ["10", "100", "2", "1000"], a: 0, why: "Each place is 10 times the place to its right." },
+      { id: "nb1b", obj: "5.NBT.1", type: "mc", q: "The 7 in 7,000 is worth ___ compared to the 7 in 700.", options: ["10 times as much", "1/10 as much", "the same", "100 times as much"], a: 0, why: "7,000 is 10 times 700." },
+      { id: "nb1c", obj: "5.NBT.1", type: "numeric", q: "What is 10 times 46?", answer: 460, why: "10 × 46 = 460." },
+      { id: "nb1d", obj: "5.NBT.1", type: "numeric", q: "What is one-tenth (1/10) of 80?", answer: 8, why: "80 ÷ 10 = 8." },
+      // 5.NBT.3
+      { id: "nb3a", obj: "5.NBT.3", type: "mc", q: "Which is greater: 0.6 or 0.06?", options: ["0.6", "0.06"], a: 0, why: "0.6 = 0.60, which is greater than 0.06." },
+      { id: "nb3b", obj: "5.NBT.3", type: "mc", q: "How do you write 'three and twelve hundredths' as a decimal?", options: ["3.12", "3.012", "312", "0.312"], a: 0, why: "Twelve hundredths is .12, so 3.12." },
+      { id: "nb3c", obj: "5.NBT.3", type: "mc", q: "Which symbol makes it true?   0.45 ___ 0.5", options: ["<", ">", "="], a: 0, why: "0.5 = 0.50, which is greater than 0.45." },
+      { id: "nb3d", obj: "5.NBT.3", type: "numeric", q: "Write 'seven tenths' as a decimal.", answer: 0.7, why: "Seven tenths = 0.7." },
+      // 5.NBT.4
+      { id: "nb4a", obj: "5.NBT.4", type: "numeric", q: "Round 3.47 to the nearest tenth.", answer: 3.5, why: "The hundredths digit is 7, so round up to 3.5." },
+      { id: "nb4b", obj: "5.NBT.4", type: "numeric", q: "Round 8.62 to the nearest whole number.", answer: 9, why: ".62 is more than .5, so round up to 9." },
+      { id: "nb4c", obj: "5.NBT.4", type: "numeric", q: "Round 0.834 to the nearest hundredth.", answer: 0.83, why: "The thousandths digit is 4, so round down to 0.83." },
+      { id: "nb4d", obj: "5.NBT.4", type: "numeric", q: "Round 12.5 to the nearest whole number.", answer: 13, why: ".5 rounds up to 13." },
+      // 5.NBT.5
+      { id: "nb5a", obj: "5.NBT.5", type: "numeric", q: "245 × 3 = ?", answer: 735, why: "245 × 3 = 735." },
+      { id: "nb5b", obj: "5.NBT.5", type: "numeric", q: "32 × 24 = ?", answer: 768, why: "32 × 24 = 768." },
+      { id: "nb5c", obj: "5.NBT.5", type: "numeric", q: "126 × 12 = ?", answer: 1512, why: "126 × 12 = 1,512." },
+      { id: "nb5d", obj: "5.NBT.5", type: "numeric", q: "408 × 20 = ?", answer: 8160, why: "408 × 20 = 8,160." },
+      // 5.NBT.7
+      { id: "nb7a", obj: "5.NBT.7", type: "numeric", q: "0.5 + 0.25 = ?", answer: 0.75, why: "0.50 + 0.25 = 0.75." },
+      { id: "nb7b", obj: "5.NBT.7", type: "numeric", q: "3.6 − 1.2 = ?", answer: 2.4, why: "3.6 − 1.2 = 2.4." },
+      { id: "nb7c", obj: "5.NBT.7", type: "numeric", q: "0.2 × 4 = ?", answer: 0.8, why: "0.2 × 4 = 0.8." },
+      { id: "nb7d", obj: "5.NBT.7", type: "numeric", q: "1.5 + 2.75 = ?", answer: 4.25, why: "1.50 + 2.75 = 4.25." },
+      // 5.NF.1
+      { id: "nf1a5", obj: "5.NF.1", type: "mc", q: "1/2 + 1/4 = ?", options: ["3/4", "2/6", "1/6", "2/4"], a: 0, why: "1/2 = 2/4, plus 1/4 = 3/4." },
+      { id: "nf1b5", obj: "5.NF.1", type: "mc", q: "2/3 − 1/6 = ?", options: ["1/2", "1/6", "5/6", "1/3"], a: 0, why: "2/3 = 4/6, minus 1/6 = 3/6 = 1/2." },
+      { id: "nf1c5", obj: "5.NF.1", type: "mc", q: "1/3 + 1/6 = ?", options: ["1/2", "2/9", "1/9", "2/3"], a: 0, why: "1/3 = 2/6, plus 1/6 = 3/6 = 1/2." },
+      { id: "nf1d5", obj: "5.NF.1", type: "mc", q: "3/4 − 1/2 = ?", options: ["1/4", "1/2", "3/8", "1/8"], a: 0, why: "3/4 − 2/4 = 1/4." },
+      // 5.NF.4
+      { id: "nf4a5", obj: "5.NF.4", type: "mc", q: "1/2 × 1/3 = ?", options: ["1/6", "2/5", "1/3", "3/4"], a: 0, why: "Multiply tops and bottoms: 1×1 over 2×3 = 1/6." },
+      { id: "nf4b5", obj: "5.NF.4", type: "mc", q: "2/3 × 1/2 = ?", options: ["1/3", "2/5", "3/5", "4/5"], a: 0, why: "2/6 = 1/3." },
+      { id: "nf4c5", obj: "5.NF.4", type: "numeric", q: "1/4 of 12 = ?", answer: 3, why: "12 ÷ 4 = 3." },
+      { id: "nf4d5", obj: "5.NF.4", type: "numeric", q: "2/3 of 9 = ?", answer: 6, why: "9 ÷ 3 = 3, then × 2 = 6." },
+      // 5.MD.1
+      { id: "md1a", obj: "5.MD.1", type: "numeric", q: "How many centimeters are in 2 meters?", answer: 200, why: "1 m = 100 cm, so 2 m = 200 cm." },
+      { id: "md1b", obj: "5.MD.1", type: "numeric", q: "How many inches are in 3 feet?", answer: 36, why: "1 ft = 12 in, so 3 ft = 36 in." },
+      { id: "md1c", obj: "5.MD.1", type: "numeric", q: "How many minutes are in 2 hours?", answer: 120, why: "1 hr = 60 min, so 2 hr = 120 min." },
+      { id: "md1d", obj: "5.MD.1", type: "mc", q: "Which is longer: 1 kilometer or 1 meter?", options: ["1 kilometer", "1 meter", "They are equal"], a: 0, why: "1 km = 1,000 m." },
+      // 5.MD.5
+      { id: "md5a", obj: "5.MD.5", type: "numeric", q: "A box is 4 cm long, 3 cm wide, and 2 cm tall. What is its volume, in cubic cm?", answer: 24, why: "V = 4 × 3 × 2 = 24." },
+      { id: "md5b", obj: "5.MD.5", type: "numeric", q: "A cube has sides of 3 cm. What is its volume, in cubic cm?", answer: 27, why: "3 × 3 × 3 = 27." },
+      { id: "md5c", obj: "5.MD.5", type: "mc", q: "The volume of a rectangular prism is found by:", options: ["length × width × height", "length + width + height", "length × width", "side × 4"], a: 0, why: "V = l × w × h." },
+      { id: "md5d", obj: "5.MD.5", type: "numeric", q: "A box 5 cm × 2 cm × 2 cm has a volume of ___ cubic cm.", answer: 20, why: "5 × 2 × 2 = 20." },
+      // 5.G.1
+      { id: "g1a5", obj: "5.G.1", type: "mc", q: "In the point (3, 5), the first number tells you to move:", options: ["Right along the x-axis", "Up the y-axis", "Down", "Left"], a: 0, why: "The x-coordinate comes first (horizontal)." },
+      { id: "g1b5", obj: "5.G.1", type: "mc", q: "The point where the x-axis and y-axis cross is the:", options: ["Origin", "Corner", "Peak", "End"], a: 0, why: "The origin is (0, 0)." },
+      { id: "g1c5", obj: "5.G.1", type: "mc", q: "To plot the point (2, 4), you go:", options: ["Right 2, then up 4", "Up 2, then right 4", "Left 2, then down 4", "Right 4, then up 2"], a: 0, why: "x = 2 (right), y = 4 (up)." },
+      { id: "g1d5", obj: "5.G.1", type: "mc", q: "The two number lines on a coordinate grid are the:", options: ["x-axis and y-axis", "top and bottom", "rows and columns", "start and end"], a: 0, why: "The horizontal x-axis and vertical y-axis." }
+    ]
   }
 };
