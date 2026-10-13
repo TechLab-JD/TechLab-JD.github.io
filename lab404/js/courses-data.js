@@ -499,7 +499,16 @@ window.LAB404_COURSES = {
       { code: "4.SS.E1", domain: "E", weight: 1.0, title: "Goods and services; needs versus wants", xwalk: { cc: "", ma: "4.T5", teks: "", vasol: "", flbest: "" } },
       { code: "4.SS.E2", domain: "E", weight: 0.9, title: "Producers, consumers, and scarcity", xwalk: { cc: "", ma: "4.T5", teks: "", vasol: "", flbest: "" } },
       { code: "4.SS.H1", domain: "H", weight: 1.0, title: "Native American cultures were shaped by their regions", xwalk: { cc: "", ma: "4.T3", teks: "", vasol: "", flbest: "" } },
-      { code: "4.SS.H2", domain: "H", weight: 0.9, title: "Read timelines and use chronological order", xwalk: { cc: "", ma: "4.T3", teks: "", vasol: "", flbest: "" } }
+      { code: "4.SS.H2", domain: "H", weight: 0.9, title: "Read timelines and use chronological order", xwalk: { cc: "", ma: "4.T3", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.G5", domain: "G", weight: 0.9, title: "Use a map's scale and legend to read distances and features", xwalk: { cc: "", ma: "4.T1", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.G6", domain: "G", weight: 1.0, title: "Explain how climate and resources shape how people live", xwalk: { cc: "", ma: "4.T2", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.C4", domain: "C", weight: 1.1, title: "Identify the three branches of government and what each does", xwalk: { cc: "", ma: "4.T4", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.C5", domain: "C", weight: 1.0, title: "Recognize key US symbols and founding documents", xwalk: { cc: "", ma: "4.T4", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.E3", domain: "E", weight: 1.0, title: "Understand money, saving, trade, and the choices scarcity forces", xwalk: { cc: "", ma: "4.T5", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.E4", domain: "E", weight: 0.9, title: "Explain why people pay taxes and what public goods are", xwalk: { cc: "", ma: "4.T5", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.H3", domain: "H", weight: 1.0, title: "Describe why European explorers came to the Americas", xwalk: { cc: "", ma: "4.T3", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.H4", domain: "H", weight: 0.9, title: "Explain why people move to and within a country (immigration)", xwalk: { cc: "", ma: "4.T3", teks: "", vasol: "", flbest: "" } },
+      { code: "4.SS.H5", domain: "H", weight: 0.9, title: "Tell the difference between primary and secondary sources", xwalk: { cc: "", ma: "4.T3", teks: "", vasol: "", flbest: "" } }
     ],
     questions: [
       // G1
@@ -556,7 +565,73 @@ window.LAB404_COURSES = {
       { id: "ssh2a", obj: "4.SS.H2", type: "mc", q: "A timeline shows events in order of:", options: ["Time (when they happened)", "Size", "Color", "Price"], a: 0, why: "Timelines are ordered by time." },
       { id: "ssh2b", obj: "4.SS.H2", type: "mc", q: "On most timelines, the earliest event is on the:", options: ["Left", "Right", "Top corner", "Bottom"], a: 0, why: "Timelines read from left (earliest) to right (latest)." },
       { id: "ssh2c", obj: "4.SS.H2", type: "mc", q: "The word chronological means in order of:", options: ["Time", "Importance", "Height", "The alphabet"], a: 0, why: "Chronological means time order." },
-      { id: "ssh2d", obj: "4.SS.H2", type: "mc", q: "A period of 100 years is called a:", options: ["Century", "Decade", "Year", "Week"], a: 0, why: "A century is 100 years." }
+      { id: "ssh2d", obj: "4.SS.H2", type: "mc", q: "A period of 100 years is called a:", options: ["Century", "Decade", "Year", "Week"], a: 0, why: "A century is 100 years." },
+      // 4.SS.G5
+      { id: "ssg5a", obj: "4.SS.G5", type: "mc", q: "A map's SCALE tells you:", options: ["How real distances compare to distances on the map", "The map's title", "Who made the map", "The weather"], a: 0, why: "Scale relates map distance to real distance." },
+      { id: "ssg5b", obj: "4.SS.G5", type: "mc", q: "If a map's scale is 1 inch = 10 miles, then 2 inches on the map equals:", options: ["20 miles", "2 miles", "10 miles", "100 miles"], a: 0, why: "2 × 10 = 20 miles." },
+      { id: "ssg5c", obj: "4.SS.G5", type: "mc", q: "A small picture on a map, explained in the legend, is a map:", options: ["Symbol", "Scale", "Title", "Border"], a: 0, why: "Symbols stand for real features." },
+      { id: "ssg5d", obj: "4.SS.G5", type: "mc", q: "To find what a blue line on a map stands for, you check the:", options: ["Legend (key)", "Scale", "Compass", "Title"], a: 0, why: "The legend explains the symbols." },
+      { id: "ssg5e", obj: "4.SS.G5", type: "mc", q: "Map scale helps you figure out:", options: ["How far apart two places are", "The time of day", "People's names", "The temperature"], a: 0, why: "Scale gives real-world distances." },
+      // 4.SS.G6
+      { id: "ssg6a", obj: "4.SS.G6", type: "mc", q: "People in a very cold, snowy region are MOST likely to:", options: ["Wear heavy coats and heat their homes", "Grow bananas outside", "Swim at the beach daily", "Never need shelter"], a: 0, why: "People adapt to a cold climate." },
+      { id: "ssg6b", obj: "4.SS.G6", type: "mc", q: "A region with rich soil and plenty of rain is well suited for:", options: ["Farming", "Deep-sea fishing only", "No activities", "Skiing only"], a: 0, why: "Good soil and rain support farming." },
+      { id: "ssg6c", obj: "4.SS.G6", type: "mc", q: "A town built beside a big river might use the river for:", options: ["Water, travel, and trade", "Nothing", "Decoration only", "Blocking the sun"], a: 0, why: "Rivers provide water, transport, and trade." },
+      { id: "ssg6d", obj: "4.SS.G6", type: "mc", q: "Why do many large cities grow near coasts or rivers?", options: ["For water, trade, and transportation", "To avoid people", "Because of deserts", "For no reason"], a: 0, why: "Water access supports trade and travel." },
+      { id: "ssg6e", obj: "4.SS.G6", type: "mc", q: "Natural resources like forests and minerals affect a region's:", options: ["Jobs and economy", "Alphabet", "Day of the week", "Flag colors"], a: 0, why: "Resources shape the kinds of work available." },
+      // 4.SS.C4
+      { id: "ssc4a", obj: "4.SS.C4", type: "mc", q: "How many branches does the US federal government have?", options: ["Three", "One", "Five", "Ten"], a: 0, why: "Legislative, Executive, and Judicial — three branches." },
+      { id: "ssc4b", obj: "4.SS.C4", type: "mc", q: "The branch that MAKES laws is the:", options: ["Legislative (Congress)", "Executive", "Judicial", "Local"], a: 0, why: "Congress (legislative) makes laws." },
+      { id: "ssc4c", obj: "4.SS.C4", type: "mc", q: "The branch that CARRIES OUT laws, led by the President, is the:", options: ["Executive", "Legislative", "Judicial", "City council"], a: 0, why: "The executive branch carries out laws." },
+      { id: "ssc4d", obj: "4.SS.C4", type: "mc", q: "The branch that decides if laws follow the Constitution (the courts) is the:", options: ["Judicial", "Executive", "Legislative", "Mayor"], a: 0, why: "The judicial branch interprets the laws." },
+      { id: "ssc4e", obj: "4.SS.C4", type: "mc", q: "Having three branches helps make sure:", options: ["No one branch has too much power", "One person rules everything", "Laws stay secret", "There are no laws"], a: 0, why: "It balances power among the branches." },
+      // 4.SS.C5
+      { id: "ssc5a", obj: "4.SS.C5", type: "mc", q: "The document that sets out the basic plan and laws of the US government is the:", options: ["Constitution", "Grocery list", "Weather report", "Phone book"], a: 0, why: "The Constitution is the plan of government." },
+      { id: "ssc5b", obj: "4.SS.C5", type: "mc", q: "The Declaration of Independence announced that the colonies would:", options: ["Be free from Britain", "Stay British forever", "Have no leaders", "Become one city"], a: 0, why: "It declared independence from Britain." },
+      { id: "ssc5c", obj: "4.SS.C5", type: "mc", q: "The bald eagle and the flag are US:", options: ["Symbols", "Laws", "Taxes", "Rivers"], a: 0, why: "They are national symbols." },
+      { id: "ssc5d", obj: "4.SS.C5", type: "mc", q: "The Statue of Liberty is a symbol of:", options: ["Freedom and welcome", "War", "Winter", "Farming"], a: 0, why: "It symbolizes liberty and welcoming newcomers." },
+      { id: "ssc5e", obj: "4.SS.C5", type: "mc", q: "The first part of the Constitution that lists basic rights is the:", options: ["Bill of Rights", "Map key", "Timeline", "Legend"], a: 0, why: "The Bill of Rights lists protected rights." },
+      // 4.SS.E3
+      { id: "sse3a", obj: "4.SS.E3", type: "mc", q: "Trading goods directly without using money is called:", options: ["Bartering", "Saving", "Paying tax", "Borrowing"], a: 0, why: "Barter is trading goods for goods." },
+      { id: "sse3b", obj: "4.SS.E3", type: "mc", q: "When you spend money on one thing, you give up buying something else. That give-up is a:", options: ["Trade-off (opportunity cost)", "Tax", "Profit", "Map"], a: 0, why: "Every choice has an opportunity cost." },
+      { id: "sse3c", obj: "4.SS.E3", type: "mc", q: "Saving money means:", options: ["Keeping some instead of spending it all", "Spending everything", "Giving it all away", "Losing it"], a: 0, why: "Saving is setting money aside." },
+      { id: "sse3d", obj: "4.SS.E3", type: "mc", q: "People use money instead of trading goods because money is:", options: ["Easy to use for any purchase", "Only for the rich", "Never accepted", "Made of gold only"], a: 0, why: "Money is accepted everywhere for goods and services." },
+      { id: "sse3e", obj: "4.SS.E3", type: "mc", q: "Because we can't have everything (scarcity), we must:", options: ["Make choices about what to buy", "Buy it all", "Never shop", "Stop earning"], a: 0, why: "Scarcity forces choices." },
+      // 4.SS.E4
+      { id: "sse4a", obj: "4.SS.E4", type: "mc", q: "Taxes are money that people pay to:", options: ["The government, to pay for shared services", "A toy store", "Their neighbors", "No one"], a: 0, why: "Taxes fund government services." },
+      { id: "sse4b", obj: "4.SS.E4", type: "mc", q: "Which is paid for by taxes (a public good)?", options: ["Public schools and roads", "A private birthday gift", "Your own candy", "A video game you buy"], a: 0, why: "Schools and roads are public goods." },
+      { id: "sse4c", obj: "4.SS.E4", type: "multi", q: "Select ALL the things taxes usually help pay for.", options: ["Roads", "Public schools", "Firefighters and police", "Your personal toys"], correct: [0, 1, 2], why: "Personal toys aren't paid for by taxes." },
+      { id: "sse4d", obj: "4.SS.E4", type: "mc", q: "Public parks are free to use because they are paid for by:", options: ["Taxes (everyone's shared money)", "One person", "Nobody", "A candy sale"], a: 0, why: "Taxes fund public parks." },
+      { id: "sse4e", obj: "4.SS.E4", type: "mc", q: "A 'public good' is something that:", options: ["Is shared by the whole community", "Only one person owns", "Can't be used", "Is always a toy"], a: 0, why: "Public goods are shared by everyone." },
+      // 4.SS.H3
+      { id: "ssh3a", obj: "4.SS.H3", type: "mc", q: "European explorers like Columbus sailed hoping to find:", options: ["New trade routes and riches", "The North Pole only", "Nothing in particular", "A new moon"], a: 0, why: "They sought trade routes and wealth." },
+      { id: "ssh3b", obj: "4.SS.H3", type: "mc", q: "When Europeans arrived, the Americas were:", options: ["Already home to millions of Native Americans", "Completely empty", "Only ocean", "Underwater"], a: 0, why: "Native peoples had lived there for thousands of years." },
+      { id: "ssh3c", obj: "4.SS.H3", type: "mc", q: "Explorers crossed the ocean by:", options: ["Sailing ships", "Airplanes", "Trains", "Cars"], a: 0, why: "They used sailing ships." },
+      { id: "ssh3d", obj: "4.SS.H3", type: "mc", q: "One result of European exploration was:", options: ["Contact and conflict between Europeans and Native peoples", "Nothing changed", "The Americas disappeared", "Time stopped"], a: 0, why: "Exploration led to major (and often harmful) contact." },
+      { id: "ssh3e", obj: "4.SS.H3", type: "mc", q: "Explorers often claimed the land for:", options: ["Their home countries (like Spain or England)", "Themselves forever", "No one", "The ocean"], a: 0, why: "They claimed territory for their nations." },
+      // 4.SS.H4
+      { id: "ssh4a", obj: "4.SS.H4", type: "mc", q: "Many people have immigrated to the United States to find:", options: ["Freedom and a better life", "Worse jobs", "Nothing", "Colder weather"], a: 0, why: "Opportunity and freedom draw immigrants." },
+      { id: "ssh4b", obj: "4.SS.H4", type: "mc", q: "A person who moves to a new country to live there is an:", options: ["Immigrant", "Explorer", "Ancestor", "Astronaut"], a: 0, why: "Immigrants move to a new country to settle." },
+      { id: "ssh4c", obj: "4.SS.H4", type: "mc", q: "The United States is often called a nation of:", options: ["Immigrants", "Only one group", "Robots", "Islands"], a: 0, why: "People came from all over the world." },
+      { id: "ssh4d", obj: "4.SS.H4", type: "mc", q: "People sometimes move to a new place because of:", options: ["Jobs, safety, or family", "No reason ever", "To get lost", "Boredom only"], a: 0, why: "Work, safety, and family are common reasons." },
+      { id: "ssh4e", obj: "4.SS.H4", type: "mc", q: "Different immigrant groups have brought the US their:", options: ["Foods, traditions, and languages", "Nothing at all", "Only problems", "The same exact culture"], a: 0, why: "Immigrants enrich the culture." },
+      // 4.SS.H5
+      { id: "ssh5a", obj: "4.SS.H5", type: "mc", q: "A primary source is:", options: ["A record made by someone who was there (a letter, diary, or photo)", "A textbook written much later", "A made-up story", "A guess"], a: 0, why: "Primary sources come from the time and the people involved." },
+      { id: "ssh5b", obj: "4.SS.H5", type: "mc", q: "A textbook or encyclopedia article about the past is a ___ source.", options: ["Secondary", "Primary", "Fictional", "Rhyming"], a: 0, why: "It was written later, about the events — secondary." },
+      { id: "ssh5c", obj: "4.SS.H5", type: "mc", q: "Which is a PRIMARY source about the 1800s?", options: ["A diary written in the 1800s", "A new movie about the 1800s", "A modern textbook", "A guess"], a: 0, why: "A diary from the time is a primary source." },
+      { id: "ssh5d", obj: "4.SS.H5", type: "mc", q: "Historians use sources to:", options: ["Learn what really happened in the past", "Predict the lottery", "Make maps only", "Do math"], a: 0, why: "Sources are evidence about the past." },
+      { id: "ssh5e", obj: "4.SS.H5", type: "mc", q: "An old photograph taken during an event is a:", options: ["Primary source", "Secondary source", "Fiction", "Prediction"], a: 0, why: "It captured the event firsthand." },
+      // 5th questions for the original objectives
+      { id: "ssg1e", obj: "4.SS.G1", type: "mc", q: "On a compass, halfway between north and east is:", options: ["Northeast", "South", "West", "Down"], a: 0, why: "The in-between direction is northeast." },
+      { id: "ssg2e", obj: "4.SS.G2", type: "mc", q: "Which of these is an OCEAN, not a continent?", options: ["Atlantic", "Africa", "Asia", "Europe"], a: 0, why: "The Atlantic is an ocean." },
+      { id: "ssg3e", obj: "4.SS.G3", type: "mc", q: "A low area of land between hills or mountains is a:", options: ["Valley", "Peak", "Island", "Plateau"], a: 0, why: "A valley is low land between higher land." },
+      { id: "ssg4e", obj: "4.SS.G4", type: "mc", q: "The imaginary line at 0° longitude is the:", options: ["Prime Meridian", "Equator", "Border", "Coastline"], a: 0, why: "The Prime Meridian is 0° longitude." },
+      { id: "ssc1e", obj: "4.SS.C1", type: "mc", q: "Serving on a jury is a ___ of citizens.", options: ["Responsibility", "Toy", "Vacation", "Snack"], a: 0, why: "Jury duty is a civic responsibility." },
+      { id: "ssc2e", obj: "4.SS.C2", type: "mc", q: "A city council makes rules for a:", options: ["Local city or town", "Whole country", "Single family", "School club only"], a: 0, why: "City councils govern locally." },
+      { id: "ssc3e", obj: "4.SS.C3", type: "mc", q: "A school rule like 'walk in the hallway' exists mainly to:", options: ["Keep students safe", "Make school boring", "Punish teachers", "Waste time"], a: 0, why: "Rules protect safety." },
+      { id: "sse1e", obj: "4.SS.E1", type: "mc", q: "A NEED is something you must have to live; a WANT is something you:", options: ["Would like but can live without", "Must have to live", "Can never get", "Always sell"], a: 0, why: "Wants are nice-to-haves, not necessities." },
+      { id: "sse2e", obj: "4.SS.E2", type: "mc", q: "A farmer who grows corn to sell is acting as a:", options: ["Producer", "Consumer", "Tourist", "Judge"], a: 0, why: "Producers make or grow goods." },
+      { id: "ssh1e", obj: "4.SS.H1", type: "mc", q: "Native American groups near forests often built homes from:", options: ["Wood and bark", "Ice only", "Steel", "Plastic"], a: 0, why: "They used the materials their environment provided." },
+      { id: "ssh2e", obj: "4.SS.H2", type: "mc", q: "On a timeline, events that happened earlier go:", options: ["To the left (before)", "To the right", "On top", "Nowhere"], a: 0, why: "Timelines run earliest-left to latest-right." }
     ]
   },
 
