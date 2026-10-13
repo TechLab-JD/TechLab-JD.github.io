@@ -28,6 +28,14 @@ window.CourseLoader = (function () {
 
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]; }); }
   function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function paras(t) { return String(t == null ? "" : t).split(/\n\n+/).map(function (p) { return p.trim() ? "<p>" + esc(p.trim()) + "</p>" : ""; }).join(""); }
+  function deepSection(sec) {  // textbook-depth lesson section
+    return (sec.h ? '<div class="cv-ds-h">' + esc(sec.h) + "</div>" : "") +
+      paras(sec.body) +
+      (sec.example ? '<div class="cv-ex"><span class="cv-ex-l">Worked example</span>' + esc(sec.example) + "</div>" : "") +
+      (sec.tip ? '<div class="cv-tip">💡 ' + esc(sec.tip) + "</div>" : "") +
+      (sec.watch ? '<div class="cv-warn">⚠️ Watch out: ' + esc(sec.watch) + "</div>" : "");
+  }
 
   function injectStyle() {
     if (document.getElementById("cv-style")) return;
@@ -73,6 +81,9 @@ window.CourseLoader = (function () {
       ".cv-learn p{margin:0 0 8px}" +
       ".cv-ex{background:rgba(127,127,127,.12);border-radius:8px;padding:8px 11px;margin:4px 0 10px;font-size:.82rem}" +
       ".cv-ex-l{display:block;font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text-muted,#9aa);margin-bottom:3px}" +
+      ".cv-ds-h{font-weight:800;font-size:.8rem;color:var(--accent2,#4a90e2);margin:12px 0 5px}" +
+      ".cv-tip{background:rgba(60,190,110,.12);border-left:3px solid #3cbe6e;border-radius:6px;padding:7px 11px;margin:6px 0 10px;font-size:.82rem}" +
+      ".cv-warn{background:rgba(230,160,40,.12);border-left:3px solid #e0a93c;border-radius:6px;padding:7px 11px;margin:6px 0 10px;font-size:.82rem}" +
       ".cv-learn-btn{border:1px solid var(--accent2,#4a90e2);background:transparent;color:var(--accent2,#4a90e2);border-radius:8px;padding:5px 10px;font:inherit;font-size:.72rem;font-weight:700;cursor:pointer;white-space:nowrap}" +
       ".cv-learn-btn.on{background:var(--accent2,#4a90e2);color:#fff}" +
       /* quiz */
@@ -146,18 +157,21 @@ window.CourseLoader = (function () {
       var rows = objs.map(function (ob) {
         var s = M.objStats(courseId, ob.code);
         var nq = M.questionsFor(courseId, ob.code).length;
-        var hasTeach = !!ob.teach;
+        var hasDeep = !!(ob.deep && ob.deep.length);
+        var hasLearn = !!(ob.teach || hasDeep);
         var head = '<div class="cv-obj">' +
           '<div class="cv-obj-main"><div class="cv-obj-code">' + esc(ob.code) + ' · ' + esc((ob.xwalk && ob.xwalk.cc) || "") + '</div>' +
           '<div class="cv-obj-title">' + esc(ob.title) + '</div>' +
           '<div class="cv-obj-bar"><span class="cv-b-' + s.band + '" style="width:' + Math.round(s.pct * 100) + '%"></span></div></div>' +
           pill(s.band, s.bandLabel + (s.seen ? " · " + Math.round(s.pct * 100) + "%" : "") + (s.dueForReview ? " · review due" : "")) +
-          (hasTeach ? '<button class="cv-learn-btn" data-learn="' + esc(ob.code) + '">📖 Learn</button>' : "") +
+          (hasLearn ? '<button class="cv-learn-btn" data-learn="' + esc(ob.code) + '">📖 Learn</button>' : "") +
           '<button class="cv-btn ghost sm" data-practice="' + esc(ob.code) + '"' + (nq ? "" : " disabled") + '>Practice</button>' +
           '</div>';
-        var learn = hasTeach ? '<div class="cv-learn hide" id="cv-learn-' + esc(ob.code) + '">' +
-          String(ob.teach).split(/\n\n+/).map(function (p) { return p.trim() ? '<p>' + esc(p.trim()) + '</p>' : ""; }).join("") +
-          (ob.ex ? '<div class="cv-ex"><span class="cv-ex-l">Worked example</span>' + esc(ob.ex) + '</div>' : "") +
+        var body = hasDeep
+          ? (ob.teach ? paras(ob.teach) : "") + ob.deep.map(deepSection).join("")
+          : (ob.teach ? paras(ob.teach) : "") + (ob.ex ? '<div class="cv-ex"><span class="cv-ex-l">Worked example</span>' + esc(ob.ex) + '</div>' : "");
+        var learn = hasLearn ? '<div class="cv-learn hide" id="cv-learn-' + esc(ob.code) + '">' +
+          body +
           '<button class="cv-btn sm" data-practice="' + esc(ob.code) + '"' + (nq ? "" : " disabled") + '>🎯 Practice this objective</button>' +
           '</div>' : "";
         return '<div class="cv-objwrap">' + head + learn + '</div>';
