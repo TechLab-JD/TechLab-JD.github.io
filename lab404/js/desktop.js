@@ -935,7 +935,7 @@
       /* A topic with real content opens as a lesson, not a folder / coming-soon. */
       var ckey = folderApp.replace(/^folder-/, "");
       if (window.LAB404_CONTENT && window.LAB404_CONTENT[ckey]) {
-        Desktop._renderLesson(content, window.LAB404_CONTENT[ckey], winId);
+        Desktop._renderLesson(content, window.LAB404_CONTENT[ckey], winId, ckey);
         return;
       }
 
@@ -988,7 +988,37 @@
     },
 
     /* Render a subject topic as a lesson: intro + concept cards, with flashcard and quiz views. */
-    _renderLesson: function (content, d, winId) {
+    _progKey: "lab404.progress",
+    _progGet: function () { try { return JSON.parse(localStorage.getItem(this._progKey)) || {}; } catch (e) { return {}; } },
+    _progSet: function (p) { try { localStorage.setItem(this._progKey, JSON.stringify(p)); } catch (e) {} },
+    _recordQuiz: function (ckey, pct) { if (!ckey) return null; var p = this._progGet(); var e = p[ckey] || { best: 0, attempts: 0 }; var leveled = pct >= 0.85 && (e.best || 0) < 0.85; e.best = Math.max(e.best || 0, pct); e.last = pct; e.attempts = (e.attempts || 0) + 1; p[ckey] = e; this._progSet(p); return { leveled: leveled }; },
+    _bandFromPct: function (best, attempted) { if (!attempted) return "none"; if (best >= 0.85) return "mastered"; if (best >= 0.70) return "strong"; if (best >= 0.40) return "needs"; return "weak"; },
+    _topicBand: function (ckey) { var e = this._progGet()[ckey]; return this._bandFromPct(e ? e.best : 0, !!(e && e.attempts)); },
+    _BAND_COL: { none: "#5a6472", weak: "#e0484a", needs: "#e0a93c", strong: "#4a90e2", mastered: "#3cbe6e" },
+    _BAND_LAB: { none: "Not started", weak: "Weak", needs: "Needs work", strong: "Strong", mastered: "Mastered" },
+    _lhmStyle: function () {
+      if (document.getElementById("lhm-style")) return;
+      var s = document.createElement("style"); s.id = "lhm-style";
+      s.textContent =
+        ".lsn-prog{padding:2px}" +
+        ".lsn-pstat{display:flex;align-items:center;gap:14px;border:1px solid var(--border,#334);border-radius:11px;padding:12px 14px;margin-bottom:14px;flex-wrap:wrap}" +
+        ".lsn-pstat .big{font-size:1.6rem;font-weight:800;line-height:1}" +
+        ".lsn-pill{font-size:.66rem;font-weight:700;border-radius:99px;padding:3px 10px;color:#fff;display:inline-block}" +
+        ".lsn-ph{font-weight:700;font-size:.78rem;margin:16px 0 7px;color:var(--text-muted,#9aa);text-transform:uppercase;letter-spacing:.4px}" +
+        ".lsn-objlist{margin:0;padding-left:18px;font-size:.84rem;line-height:1.7}" +
+        ".lsn-hm{display:grid;grid-template-columns:repeat(auto-fill,minmax(135px,1fr));gap:7px}" +
+        ".lsn-hmc{border:1px solid var(--border,#334);border-left-width:4px;border-radius:9px;padding:8px 10px;cursor:pointer;background:transparent;color:var(--text,#eee);text-align:left;font:inherit}" +
+        ".lsn-hmc:hover{background:rgba(127,127,127,.1)}.lsn-hmc[disabled]{opacity:.5;cursor:default}" +
+        ".lsn-hmc .t{font-size:.76rem;font-weight:600;line-height:1.25}.lsn-hmc .b{font-size:.6rem;margin-top:3px;font-weight:700}" +
+        ".lsn-hmc.cur{box-shadow:0 0 0 2px var(--accent2,#4a90e2) inset}" +
+        ".lsn-legend{display:flex;gap:11px;flex-wrap:wrap;font-size:.64rem;color:var(--text-muted,#9aa);margin-top:9px}" +
+        ".lsn-legend span{display:inline-flex;align-items:center;gap:4px}.lsn-legend i{width:10px;height:10px;border-radius:3px;display:inline-block}" +
+        ".lsn-lvl2{border:1px solid var(--border,#334);border-radius:11px;padding:12px 14px;margin-top:16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}" +
+        ".lsn-lvl2 .big{font-size:1.4rem;font-weight:800;line-height:1}";
+      document.head.appendChild(s);
+    },
+
+    _renderLesson: function (content, d, winId, ckey) {
       var esc = escHtml;
       function block(c) {
         var h = '<div class="lsn-card"><h3>' + esc(c.h) + '</h3>';
@@ -1012,7 +1042,8 @@
       var nav = '<div class="lsn-nav">' +
         '<button class="lsn-tab on" data-view="lesson">📖 Lesson</button>' +
         (d.flash && d.flash.length ? '<button class="lsn-tab" data-view="flash">🃏 Flashcards (' + d.flash.length + ')</button>' : "") +
-        (d.quiz && d.quiz.length ? '<button class="lsn-tab" data-view="quiz">🎯 Quiz (' + d.quiz.length + ')</button>' : "") + '</div>';
+        (d.quiz && d.quiz.length ? '<button class="lsn-tab" data-view="quiz">🎯 Quiz (' + d.quiz.length + ')</button>' : "") +
+        '<button class="lsn-tab" data-view="progress">📊 Progress</button>' + '</div>';
       var lessonView = '<div class="lsn-view" data-v="lesson">' +
         '<div class="lsn-head"><h2>' + esc(d.title) + '</h2><span class="lsn-lvl">' + esc(d.subject || "") + (d.level ? " · " + esc(d.level) : "") + '</span></div>' +
         objectives + (d.intro ? '<p class="lsn-intro">' + esc(d.intro) + '</p>' : "") + mainContent + keyPoints +
@@ -1025,8 +1056,10 @@
             q.options.map(function (o, oi) { return '<button class="qz-opt" data-qi="' + qi + '" data-oi="' + oi + '">' + esc(o) + '</button>'; }).join("") +
             '<div class="qz-why hide">' + esc(q.why || "") + '</div></div>';
         }).join("") + '</div>';
-      content.innerHTML = nav + lessonView + flashView + quizView;
+      var progressView = '<div class="lsn-view hide" data-v="progress"></div>';
+      content.innerHTML = nav + lessonView + flashView + quizView + progressView;
       content.classList.add("lsn-content");
+      Desktop._lhmStyle();
 
       var fi = 0, flipped = false;
       function drawFC() {
@@ -1040,12 +1073,46 @@
       var answered = {}, correct = 0;
       function updateScore() { var qs = document.getElementById(winId + "-qs"); if (qs && d.quiz) qs.textContent = "Score: " + correct + " correct of " + Object.keys(answered).length + " answered (" + d.quiz.length + " total)"; }
       updateScore();
+
+      function tslug(s) { return String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, ""); }
+      function renderProgress() {
+        var pv = content.querySelector('.lsn-view[data-v="progress"]'); if (!pv) return;
+        var COL = Desktop._BAND_COL, LAB = Desktop._BAND_LAB, prog = Desktop._progGet();
+        var me = (ckey && prog[ckey]) || {}, myBand = Desktop._bandFromPct(me.best || 0, !!me.attempts);
+        var bestTxt = me.attempts ? Math.round((me.best || 0) * 100) + "%" : "—";
+        var subjKey = ckey ? ckey.split("-")[0] : "";
+        var S = window.LAB404_SUBJECTS || {}, subj = (S.academic || []).filter(function (s) { return s.key === subjKey; })[0];
+        var cells = "", mastered = 0, total = 0, attempted = 0;
+        if (subj) (subj.topics || []).forEach(function (t) {
+          var k = subjKey + "-" + tslug(t.t), b = Desktop._topicBand(k); total++;
+          if (b === "mastered") mastered++;
+          if (prog[k] && prog[k].attempts) attempted++;
+          var has = !!(window.LAB404_CONTENT && window.LAB404_CONTENT[k]);
+          cells += '<button class="lsn-hmc' + (k === ckey ? " cur" : "") + '" style="border-left-color:' + COL[b] + '"' + (has ? ' data-open="folder-' + k + '"' : " disabled") + '>' +
+            '<div class="t">' + esc(t.t) + '</div><div class="b" style="color:' + COL[b] + '">' + LAB[b] + '</div></button>';
+        });
+        var objs = (d.objectives && d.objectives.length) ? '<ul class="lsn-objlist">' + d.objectives.map(function (o) { return '<li>' + esc(o) + '</li>'; }).join("") + '</ul>' : '<p style="color:var(--text-muted,#9aa);font-size:.8rem">No objectives listed for this lesson.</p>';
+        var legend = '<div class="lsn-legend">' + ["mastered", "strong", "needs", "weak", "none"].map(function (b) { return '<span><i style="background:' + COL[b] + '"></i>' + LAB[b] + '</span>'; }).join("") + '</div>';
+        pv.innerHTML = '<div class="lsn-prog">' +
+          '<div class="lsn-pstat"><div style="text-align:center"><div class="big" style="color:' + COL[myBand] + '">' + bestTxt + '</div><small style="color:var(--text-muted,#9aa);font-size:.6rem;text-transform:uppercase;letter-spacing:.5px">Best quiz</small></div>' +
+            '<div style="flex:1;min-width:150px"><span class="lsn-pill" style="background:' + COL[myBand] + '">' + LAB[myBand] + '</span>' +
+            '<div style="font-size:.74rem;color:var(--text-muted,#9aa);margin-top:6px">' + (myBand === "mastered" ? "You’ve got this topic. 🎉" : "Score 85%+ on the quiz to master this topic.") + '</div></div></div>' +
+          '<div class="lsn-ph">🎯 Objectives for this lesson</div>' + objs +
+          (subj ? ('<div class="lsn-ph">📊 ' + esc(subj.title) + ' — your heat map</div><div class="lsn-hm">' + cells + '</div>' + legend +
+            '<div class="lsn-lvl2"><div style="text-align:center"><div class="big" style="color:var(--accent2,#4a90e2)">Lv ' + (mastered + 1) + '</div><small style="color:var(--text-muted,#9aa);font-size:.6rem">' + esc(subj.short || subj.title) + ' level</small></div>' +
+              '<div style="flex:1;min-width:160px;font-size:.8rem;color:var(--text-muted,#9aa)"><b style="color:var(--text,#eee)">' + mastered + ' of ' + total + '</b> topics mastered · ' + attempted + ' attempted. Master more topics to level up ' + esc(subj.short || subj.title) + '.</div></div>') : "") +
+          '</div>';
+        pv.querySelectorAll("[data-open]").forEach(function (b) { b.addEventListener("click", function () { Desktop.openWindow(this.getAttribute("data-open")); }); });
+      }
+      renderProgress();
+
       content.addEventListener("click", function (e) {
         var tab = e.target.closest("[data-view]");
         if (tab) {
           content.querySelectorAll(".lsn-tab").forEach(function (t) { t.classList.remove("on"); });
           tab.classList.add("on");
           content.querySelectorAll(".lsn-view").forEach(function (v) { v.classList.toggle("hide", v.getAttribute("data-v") !== tab.getAttribute("data-view")); });
+          if (tab.getAttribute("data-view") === "progress") renderProgress();
           return;
         }
         if (e.target.closest("[data-flip]")) { flipped = !flipped; drawFC(); return; }
@@ -1064,6 +1131,7 @@
           });
           qEl.querySelector(".qz-why").classList.remove("hide");
           answered[qi] = oi; if (oi === q.a) correct++; updateScore();
+          if (d.quiz && Object.keys(answered).length === d.quiz.length) { Desktop._recordQuiz(ckey, correct / d.quiz.length); renderProgress(); }
         }
       });
     },
