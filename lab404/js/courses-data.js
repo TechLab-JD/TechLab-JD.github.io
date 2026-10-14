@@ -4410,6 +4410,15 @@ window.LAB404_COURSES = {
       { id: "gK-eng-l1e", obj: "K.L.1", type: "mc", q: "Which word always starts with a capital?", options: ["I", "and", "the", "dog"], a: 0, why: "The word 'I' is always capital." },
       { id: "gK-eng-l4e", obj: "K.L.4", type: "mc", q: "'Where is my hat?' asks about a:", options: ["place", "person", "time", "reason"], a: 0, why: "Where asks about a place." },
       { id: "gK-eng-l5e", obj: "K.L.5", type: "mc", q: "Which word does NOT belong: apple, banana, grape, shoe?", options: ["shoe", "apple", "banana", "grape"], a: 0, why: "The others are fruits; shoe is not." }
+,
+      { id: "gK-eng-rf1f", obj: "K.RF.1", type: "mc", q: "On a page, after you finish the top line, your eyes move:", options: ["down to the next line", "back up", "off the page", "in a circle"], a: 0, why: "We read top to bottom." },
+      { id: "gK-eng-rf3cf", obj: "K.RF.3c", type: "mc", q: "Which word is a sight word we memorize?", options: ["to", "elephant", "butterfly", "computer"], a: 0, why: "'To' is a common sight word." },
+      { id: "gK-eng-rl1f", obj: "K.RL.1", type: "mc", q: "'Who is in the story?' asks about a:", options: ["person or animal", "place", "time", "color"], a: 0, why: "Who asks about a person or animal." },
+      { id: "gK-eng-rl3f", obj: "K.RL.3", type: "mc", q: "The people or animals a story is about are the:", options: ["characters", "setting", "pages", "title"], a: 0, why: "Characters are who the story is about." },
+      { id: "gK-eng-ri2f", obj: "K.RI.2", type: "mc", q: "A book that teaches all about the ocean has the main topic:", options: ["the ocean", "cars", "shoes", "pizza"], a: 0, why: "The whole book is about the ocean." },
+      { id: "gK-eng-l1f", obj: "K.L.1", type: "mc", q: "The first letter of a sentence should be:", options: ["a capital letter", "a lowercase letter", "a number", "a space"], a: 0, why: "Sentences start with a capital." },
+      { id: "gK-eng-l4f", obj: "K.L.4", type: "mc", q: "'Why is she happy?' asks about a:", options: ["reason", "place", "thing", "time"], a: 0, why: "Why asks about a reason." },
+      { id: "gK-eng-l5f", obj: "K.L.5", type: "mc", q: "Which group do red, blue, and green belong to?", options: ["colors", "animals", "foods", "numbers"], a: 0, why: "They are all colors." }
 
     ]
   },
@@ -4478,6 +4487,15 @@ window.LAB404_COURSES = {
       { id: "g1-eng-rl3e", obj: "1.RL.3", type: "mc", q: "A 'dark forest' describes the story's:", options: ["setting", "character", "lesson", "title"], a: 0, why: "It tells where the story happens." },
       { id: "g1-eng-ri2e", obj: "1.RI.2", type: "mc", q: "'Bees make honey' is a ___ about the topic bees.", options: ["key detail", "main topic", "title", "question"], a: 0, why: "It's a detail that tells more about bees." },
       { id: "g1-eng-ri5e", obj: "1.RI.5", type: "mc", q: "What part of a nonfiction book labels each section?", options: ["headings", "the spine", "page numbers", "the cover"], a: 0, why: "Headings label sections." }
+,
+      { id: "g1-eng-rf3gf", obj: "1.RF.3g", type: "mc", q: "Which is a tricky sight word to memorize?", options: ["said", "cat", "run", "big"], a: 0, why: "'Said' doesn't follow the rules." },
+      { id: "g1-eng-rf3gg", obj: "1.RF.3g", type: "numeric", q: "How many sight words in 'they come here' (they, come, here)?", answer: 3, why: "they, come, and here are sight words." },
+      { id: "g1-eng-l1pf", obj: "1.L.1p", type: "mc", q: "What is the plural of 'fox'?", options: ["foxes", "foxs", "fox", "foxies"], a: 0, why: "Words ending in x add -es: foxes." },
+      { id: "g1-eng-rl1f", obj: "1.RL.1", type: "mc", q: "'When did it happen?' asks about a:", options: ["time", "place", "person", "reason"], a: 0, why: "When asks about a time." },
+      { id: "g1-eng-rl2f", obj: "1.RL.2", type: "mc", q: "To retell a story means to:", options: ["tell what happened in order", "change the ending", "skip it", "draw it"], a: 0, why: "Retelling tells the events in order." },
+      { id: "g1-eng-rl3f", obj: "1.RL.3", type: "mc", q: "A 'kind old man' describes a:", options: ["character", "setting", "lesson", "title"], a: 0, why: "The man is a character." },
+      { id: "g1-eng-ri2f", obj: "1.RI.2", type: "mc", q: "The important facts that tell more about the topic are the:", options: ["key details", "title", "cover", "author"], a: 0, why: "Key details support the main topic." },
+      { id: "g1-eng-ri5f", obj: "1.RI.5", type: "mc", q: "A glossary in a nonfiction book gives you:", options: ["word meanings", "the price", "the author's age", "nothing"], a: 0, why: "A glossary gives word meanings." }
 
     ]
   },
@@ -4542,6 +4560,14 @@ window.LAB404_COURSES = {
       { id: "g2-eng-rl5e", obj: "2.RL.5", type: "mc", q: "Where does a story introduce its characters?", options: ["the beginning", "the ending", "the title only", "nowhere"], a: 0, why: "The beginning introduces characters and problem." },
       { id: "g2-eng-ri2e", obj: "2.RI.2", type: "mc", q: "A text about the ocean has the main topic:", options: ["the ocean", "one sentence", "the author", "the index"], a: 0, why: "The whole text is about the ocean." },
       { id: "g2-eng-ri5e", obj: "2.RI.5", type: "mc", q: "To find what page a topic is on, use the:", options: ["index", "cover", "spine", "glossary"], a: 0, why: "The index lists topics and page numbers." }
+,
+      { id: "g2-eng-rf3rf", obj: "2.RF.3r", type: "mc", q: "Which word has an r-controlled vowel?", options: ["corn", "cot", "cup", "cat"], a: 0, why: "or in 'corn' is r-controlled." },
+      { id: "g2-eng-l1af", obj: "2.L.1a", type: "mc", q: "In 'the loud dog', 'loud' is a(n):", options: ["adjective", "adverb", "verb", "noun"], a: 0, why: "It describes the noun 'dog'." },
+      { id: "g2-eng-l4cf", obj: "2.L.4c", type: "mc", q: "'cupcake' is made of which two words?", options: ["cup + cake", "cu + pcake", "cup + ake", "cap + cake"], a: 0, why: "cup + cake = cupcake." },
+      { id: "g2-eng-rl2f", obj: "2.RL.2", type: "mc", q: "A story where a greedy character loses everything teaches:", options: ["don't be greedy", "be greedy", "run fast", "sleep in"], a: 0, why: "The lesson is about not being greedy." },
+      { id: "g2-eng-rl5f", obj: "2.RL.5", type: "mc", q: "The main events and growing problem happen in the story's:", options: ["middle", "beginning", "title", "cover"], a: 0, why: "The middle has the main action." },
+      { id: "g2-eng-ri2f", obj: "2.RI.2", type: "mc", q: "Each paragraph of a text has its own smaller:", options: ["focus", "cover", "price", "author"], a: 0, why: "Each paragraph focuses on one piece of the topic." },
+      { id: "g2-eng-ri5f", obj: "2.RI.5", type: "mc", q: "Bold words in a nonfiction book are usually:", options: ["important vocabulary", "mistakes", "the title", "page numbers"], a: 0, why: "Bold words are often key vocabulary." }
 
     ]
   },
@@ -4602,6 +4628,13 @@ window.LAB404_COURSES = {
       { id: "g3-eng-rl4e", obj: "3.RL.4", type: "mc", q: "'He was a couch potato' is an example of:", options: ["figurative language", "literal language", "a question", "a fact"], a: 0, why: "It's figurative — it means lazy, not a real potato." },
       { id: "g3-eng-ri2e", obj: "3.RI.2", type: "mc", q: "The most important point an author makes is the:", options: ["main idea", "last sentence", "title", "page number"], a: 0, why: "The main idea is the most important point." },
       { id: "g3-eng-ri8e", obj: "3.RI.8", type: "mc", q: "'The alarm rang, so everyone left.' This shows:", options: ["cause and effect", "a list", "a rhyme", "a question"], a: 0, why: "'So' signals cause and effect." }
+,
+      { id: "g3-eng-l1tf", obj: "3.L.1t", type: "mc", q: "'I walk to school every day' is which tense?", options: ["present", "past", "future", "none"], a: 0, why: "'walk' (now) is present tense." },
+      { id: "g3-eng-l1cf", obj: "3.L.1c", type: "mc", q: "Which word compares exactly TWO things?", options: ["bigger", "biggest", "most big", "big"], a: 0, why: "-er compares two." },
+      { id: "g3-eng-l2f", obj: "3.L.2", type: "mc", q: "Which is punctuated correctly?", options: ["I bought apples, pears, and grapes.", "I bought apples pears and grapes.", "I bought, apples pears grapes.", "I bought apples, pears and, grapes."], a: 0, why: "Commas separate items in a list." },
+      { id: "g3-eng-l4f", obj: "3.L.4", type: "mc", q: "'The fragile glass shattered easily.' Fragile means:", options: ["easily broken", "very strong", "colorful", "heavy"], a: 0, why: "Context (shattered easily) shows fragile = easily broken." },
+      { id: "g3-eng-rl2f", obj: "3.RL.2", type: "mc", q: "The wise idea a story teaches is called the:", options: ["moral", "setting", "title", "index"], a: 0, why: "The moral is the lesson." },
+      { id: "g3-eng-ri2f", obj: "3.RI.2", type: "mc", q: "Facts and examples that prove the main idea are:", options: ["supporting details", "the title", "the moral", "figurative language"], a: 0, why: "Supporting details back up the main idea." }
 
     ]
   },
@@ -4648,6 +4681,11 @@ window.LAB404_COURSES = {
       { id: "gK-sci-ess2e", obj: "K-ESS2", type: "mc", q: "Which word describes weather?", options: ["windy", "happy", "round", "tall"], a: 0, why: "Windy describes the weather." },
       { id: "gK-sci-ess3e", obj: "K-ESS3", type: "mc", q: "Where does a bird often build its home?", options: ["a nest in a tree", "under water", "in the sun only", "in a car"], a: 0, why: "Birds nest in trees — their habitat." },
       { id: "gK-sci-ess3ce", obj: "K-ESS3c", type: "mc", q: "Picking up litter helps:", options: ["keep the Earth clean", "waste water", "hurt animals", "nothing"], a: 0, why: "Cleaning up cares for the Earth." }
+,
+      { id: "gK-sci-obsf", obj: "K.OBS", type: "mc", q: "Which sense do you use to feel if something is smooth or rough?", options: ["touch", "hearing", "smell", "sight"], a: 0, why: "Touch tells you smooth or rough." },
+      { id: "gK-sci-ps3f", obj: "K-PS3", type: "mc", q: "A spot in the shade is usually:", options: ["cooler than the sun", "hotter than the sun", "the same", "on fire"], a: 0, why: "Shade blocks sunlight, so it's cooler." },
+      { id: "gK-sci-ess3f", obj: "K-ESS3", type: "mc", q: "The place where a plant or animal lives is called its:", options: ["habitat", "weather", "season", "color"], a: 0, why: "A habitat is where it lives." },
+      { id: "gK-sci-ess3cf", obj: "K-ESS3c", type: "mc", q: "Recycling cans and bottles helps:", options: ["take care of the Earth", "make litter", "waste water", "nothing"], a: 0, why: "Recycling cares for the Earth." }
 
     ]
   },
@@ -4691,6 +4729,9 @@ window.LAB404_COURSES = {
       { id: "g1-sci-ls3e", obj: "1-LS3", type: "mc", q: "A baby plant grows up to look like:", options: ["its parent plant", "an animal", "a rock", "a cloud"], a: 0, why: "Young plants resemble their parents." },
       { id: "g1-sci-ess1se", obj: "1-ESS1s", type: "mc", q: "The sun SETS in the:", options: ["west", "east", "north", "ground"], a: 0, why: "The sun sets in the west." },
       { id: "g1-sci-ess1de", obj: "1-ESS1d", type: "mc", q: "More daylight usually happens in:", options: ["summer", "winter", "the night", "never"], a: 0, why: "Summer has the longest days." }
+,
+      { id: "g1-sci-ls3f", obj: "1-LS3", type: "mc", q: "A kitten grows up to look most like:", options: ["a cat", "a dog", "a bird", "a fish"], a: 0, why: "Young animals resemble their parents." },
+      { id: "g1-sci-ess1df", obj: "1-ESS1d", type: "mc", q: "In winter, days are ___ than in summer.", options: ["shorter", "longer", "the same", "warmer"], a: 0, why: "Winter days are shorter." }
 
     ]
   },
@@ -4737,6 +4778,11 @@ window.LAB404_COURSES = {
       { id: "g2-sci-ls4e", obj: "2-LS4", type: "mc", q: "Which animal lives in the ocean?", options: ["fish", "camel", "squirrel", "lizard"], a: 0, why: "Fish live in the ocean habitat." },
       { id: "g2-sci-ess1e", obj: "2-ESS1", type: "mc", q: "An earthquake changes the land:", options: ["quickly", "very slowly", "never", "over a thousand years"], a: 0, why: "Earthquakes are fast events." },
       { id: "g2-sci-ess2e", obj: "2-ESS2", type: "mc", q: "Wind slowly blowing sand into dunes is an example of:", options: ["erosion", "melting", "boiling", "vibrating"], a: 0, why: "Wind moving land material is erosion." }
+,
+      { id: "g2-sci-ps1cf", obj: "2-PS1c", type: "mc", q: "Baking a cake is a change that:", options: ["cannot be undone", "can be undone", "freezes it", "melts it"], a: 0, why: "Baking is not reversible." },
+      { id: "g2-sci-ls4f", obj: "2-LS4", type: "mc", q: "Different habitats have:", options: ["different plants and animals", "the exact same animals", "no living things", "only rocks"], a: 0, why: "Each habitat has its own living things (biodiversity)." },
+      { id: "g2-sci-ess1f", obj: "2-ESS1", type: "mc", q: "A canyon forming over many years is a change that is:", options: ["slow", "fast", "instant", "impossible"], a: 0, why: "Canyons form slowly." },
+      { id: "g2-sci-ess2f", obj: "2-ESS2", type: "mc", q: "A river slowly carving a path through rock is an example of:", options: ["erosion", "melting", "vibrating", "freezing"], a: 0, why: "Moving water reshaping land is erosion." }
 
     ]
   },
@@ -4786,6 +4832,13 @@ window.LAB404_COURSES = {
       { id: "g3-sci-ls4e", obj: "3-LS4", type: "mc", q: "A cactus's spines are an adaptation that help it:", options: ["survive in the dry desert", "swim", "fly", "glow"], a: 0, why: "Spines protect it and reduce water loss." },
       { id: "g3-sci-ess2e", obj: "3-ESS2", type: "mc", q: "The usual weather of a place over many years is its:", options: ["climate", "forecast", "temperature today", "season"], a: 0, why: "Climate is long-term typical weather." },
       { id: "g3-sci-ess3e", obj: "3-ESS3", type: "mc", q: "What helps people stay safe from a hurricane?", options: ["warnings and evacuation", "ignoring the news", "going to the beach", "nothing"], a: 0, why: "Warnings and evacuation reduce the danger." }
+,
+      { id: "g3-sci-ps2pf", obj: "3-PS2p", type: "mc", q: "A swinging pendulum repeats, so its motion is:", options: ["predictable", "random", "impossible", "chemical"], a: 0, why: "Repeating patterns are predictable." },
+      { id: "g3-sci-ls1f", obj: "3-LS1", type: "mc", q: "The stages of birth, growth, reproduction, and death make up a:", options: ["life cycle", "food web", "habitat", "force"], a: 0, why: "That's a life cycle." },
+      { id: "g3-sci-ls3f", obj: "3-LS3", type: "mc", q: "Eye color is mostly a trait that is:", options: ["inherited from parents", "chosen", "caused by weather", "random each day"], a: 0, why: "Eye color is inherited." },
+      { id: "g3-sci-ls4f", obj: "3-LS4", type: "mc", q: "A duck's webbed feet are an adaptation that help it:", options: ["swim", "fly higher", "dig", "climb trees"], a: 0, why: "Webbed feet help ducks swim." },
+      { id: "g3-sci-ess2f", obj: "3-ESS2", type: "mc", q: "A single snowy day is an example of:", options: ["weather", "climate", "a habitat", "a force"], a: 0, why: "Weather is what's happening now." },
+      { id: "g3-sci-ess3f", obj: "3-ESS3", type: "mc", q: "A tornado siren is meant to:", options: ["warn people to take shelter", "start the storm", "stop the wind", "tell the time"], a: 0, why: "Sirens warn people to shelter." }
 
     ]
   },
@@ -4838,6 +4891,16 @@ window.LAB404_COURSES = {
       { id: "gK-soc-e2e", obj: "K.E.2", type: "mc", q: "Who helps sick people?", options: ["a doctor", "a farmer", "a pilot", "a painter"], a: 0, why: "Doctors help sick people." },
       { id: "gK-soc-h1e", obj: "K.H.1", type: "mc", q: "Which belongs to 'now' (the present)?", options: ["riding in a car", "riding a horse to town", "using a candle for light", "writing with a feather"], a: 0, why: "Cars are used now." },
       { id: "gK-soc-h2e", obj: "K.H.2", type: "mc", q: "People who care for each other and live together are a:", options: ["family", "map", "rule", "flag"], a: 0, why: "That's a family." }
+,
+      { id: "gK-soc-g1f", obj: "K.G.1", type: "mc", q: "A map is a drawing of a place seen from:", options: ["above", "the side", "underground", "far behind"], a: 0, why: "Maps show places from above." },
+      { id: "gK-soc-g2f", obj: "K.G.2", type: "mc", q: "If your shoe is ON TOP of a box, it is:", options: ["above the box", "below the box", "inside you", "far away"], a: 0, why: "On top means above." },
+      { id: "gK-soc-c1f", obj: "K.C.1", type: "mc", q: "Rules at school help keep students:", options: ["safe", "bored", "late", "lost"], a: 0, why: "Rules keep us safe." },
+      { id: "gK-soc-c2f", obj: "K.C.2", type: "mc", q: "Helping a friend who fell down is being:", options: ["a good citizen", "unkind", "a leader only", "silly"], a: 0, why: "Helping is good citizenship." },
+      { id: "gK-soc-c3f", obj: "K.C.3", type: "mc", q: "The flag is a symbol of our:", options: ["country", "lunch", "recess", "backpack"], a: 0, why: "The flag stands for the country." },
+      { id: "gK-soc-e1f", obj: "K.E.1", type: "mc", q: "A home to live in is a:", options: ["need", "want", "toy", "game"], a: 0, why: "Shelter is a need." },
+      { id: "gK-soc-e2f", obj: "K.E.2", type: "mc", q: "Who brings letters to your house?", options: ["a mail carrier", "a baker", "a dentist", "a pilot"], a: 0, why: "A mail carrier delivers mail." },
+      { id: "gK-soc-h1f", obj: "K.H.1", type: "mc", q: "'Then' and 'now' are ways to compare the:", options: ["past and present", "left and right", "up and down", "big and small"], a: 0, why: "Then = past, now = present." },
+      { id: "gK-soc-h2f", obj: "K.H.2", type: "mc", q: "A special meal a family eats every holiday is a:", options: ["tradition", "rule", "map", "flag"], a: 0, why: "That's a family tradition." }
 
     ]
   },
@@ -4895,6 +4958,16 @@ window.LAB404_COURSES = {
       { id: "g1-soc-h1e", obj: "1.H.1", type: "mc", q: "What word means time that is happening right now?", options: ["present", "past", "future", "yesterday"], a: 0, why: "The present is now." },
       { id: "g1-soc-h2e", obj: "1.H.2", type: "mc", q: "The bald eagle is a national symbol of:", options: ["the United States", "the weather", "a sport", "math"], a: 0, why: "The bald eagle represents the U.S." },
       { id: "g1-soc-h3e", obj: "1.H.3", type: "mc", q: "Memorial Day honors people who:", options: ["served the country", "won games", "built houses", "sold food"], a: 0, why: "Memorial Day honors those who served." }
+,
+      { id: "g1-soc-g1f", obj: "1.G.1", type: "mc", q: "If a map has a green patch, the map key might tell you it is a:", options: ["park", "river", "road", "star"], a: 0, why: "The map key explains what symbols mean." },
+      { id: "g1-soc-c1f", obj: "1.C.1", type: "mc", q: "A rule just for your classroom is a:", options: ["rule", "law for the whole country", "symbol", "tradition"], a: 0, why: "Classroom rules are for a small group, not laws for everyone." },
+      { id: "g1-soc-c2f", obj: "1.C.2", type: "mc", q: "Who leads a school?", options: ["a principal", "the President", "a governor", "a farmer"], a: 0, why: "A principal leads a school." },
+      { id: "g1-soc-c3f", obj: "1.C.3", type: "mc", q: "When a class votes, the winning choice has:", options: ["the most votes", "the fewest votes", "no votes", "the longest name"], a: 0, why: "The majority (most votes) wins." },
+      { id: "g1-soc-e1f", obj: "1.E.1", type: "mc", q: "Which is a GOOD (a thing you can hold)?", options: ["a book", "a haircut", "a lesson", "a bus ride"], a: 0, why: "A book is a good." },
+      { id: "g1-soc-e2f", obj: "1.E.2", type: "mc", q: "We make choices about what to buy because money is:", options: ["limited", "unlimited", "free", "endless"], a: 0, why: "Money is limited, so we choose." },
+      { id: "g1-soc-h1f", obj: "1.H.1", type: "mc", q: "Which word means time that already happened?", options: ["past", "present", "future", "now"], a: 0, why: "The past already happened." },
+      { id: "g1-soc-h2f", obj: "1.H.2", type: "mc", q: "The Liberty Bell and the flag are examples of:", options: ["national symbols", "weather", "math", "sports"], a: 0, why: "They are national symbols." },
+      { id: "g1-soc-h3f", obj: "1.H.3", type: "mc", q: "We celebrate national holidays to:", options: ["remember important events", "skip school forever", "break rules", "make maps"], a: 0, why: "Holidays remember important events and people." }
 
     ]
   },
@@ -4952,6 +5025,16 @@ window.LAB404_COURSES = {
       { id: "g2-soc-e3e", obj: "2.E.3", type: "mc", q: "When a store runs out of a popular toy, that shows:", options: ["scarcity", "a surplus", "a service", "a tax"], a: 0, why: "Not enough for everyone = scarcity." },
       { id: "g2-soc-h1e", obj: "2.H.1", type: "mc", q: "In 'the river flooded, so people moved', the CAUSE is:", options: ["the river flooded", "people moved", "the sun rose", "nothing"], a: 0, why: "The flood is the cause." },
       { id: "g2-soc-h2e", obj: "2.H.2", type: "mc", q: "Important people in history:", options: ["helped solve problems", "did nothing", "were all kings", "were never teachers"], a: 0, why: "They made a difference by helping solve problems." }
+,
+      { id: "g2-soc-g2f", obj: "2.G.2", type: "mc", q: "Which is a CONTINENT?", options: ["Africa", "Pacific", "Atlantic", "Indian"], a: 0, why: "Africa is a continent; the others are oceans." },
+      { id: "g2-soc-g3f", obj: "2.G.3", type: "mc", q: "A place with farms and lots of open land is a ___ community.", options: ["rural", "urban", "suburban", "ocean"], a: 0, why: "Country/farm areas are rural." },
+      { id: "g2-soc-c1f", obj: "2.C.1", type: "mc", q: "Which handles things for the whole country, like the military?", options: ["national government", "the city council", "your school", "a store"], a: 0, why: "The national government handles country-wide matters." },
+      { id: "g2-soc-c2f", obj: "2.C.2", type: "mc", q: "Public libraries and parks are provided by:", options: ["the government", "no one", "a toy store", "the weather"], a: 0, why: "Government provides shared public services." },
+      { id: "g2-soc-e1f", obj: "2.E.1", type: "mc", q: "A person buying and using goods is a:", options: ["consumer", "producer", "mayor", "tourist"], a: 0, why: "Consumers buy and use goods." },
+      { id: "g2-soc-e2f", obj: "2.E.2", type: "mc", q: "Today we mostly buy and sell using:", options: ["money", "only barter", "rocks", "nothing"], a: 0, why: "Money is used for buying and selling now." },
+      { id: "g2-soc-e3f", obj: "2.E.3", type: "mc", q: "Keeping some money for later instead of spending it all is:", options: ["saving", "bartering", "voting", "mapping"], a: 0, why: "Saving keeps money for later." },
+      { id: "g2-soc-h1f", obj: "2.H.1", type: "mc", q: "In history, the result of an event is called the:", options: ["effect", "cause", "map", "symbol"], a: 0, why: "The effect is the result; the cause makes it happen." },
+      { id: "g2-soc-h2f", obj: "2.H.2", type: "mc", q: "Dr. Martin Luther King Jr. is remembered for working for:", options: ["equal rights", "faster trains", "new maps", "taller buildings"], a: 0, why: "He worked for equal rights and fairness." }
 
     ]
   },
@@ -5011,6 +5094,14 @@ window.LAB404_COURSES = {
       { id: "g3-soc-e3e", obj: "3.E.3", type: "mc", q: "A plan for spending and saving money is a:", options: ["budget", "map", "law", "timeline"], a: 0, why: "A budget plans your money." },
       { id: "g3-soc-h1e", obj: "3.H.1", type: "mc", q: "An old photograph from the time of an event is a:", options: ["primary source", "secondary source", "budget", "map key"], a: 0, why: "First-hand items are primary sources." },
       { id: "g3-soc-h2e", obj: "3.H.2", type: "mc", q: "Putting events oldest-first is called:", options: ["chronological order", "alphabetical order", "random order", "reverse size"], a: 0, why: "Chronological order is by time." }
+,
+      { id: "g3-soc-c2f", obj: "3.C.2", type: "mc", q: "The Bill of Rights is part of the:", options: ["Constitution", "map key", "almanac", "dictionary"], a: 0, why: "The Bill of Rights is part of the Constitution." },
+      { id: "g3-soc-c3f", obj: "3.C.3", type: "mc", q: "Following the law is an example of a citizen's:", options: ["responsibility", "right to break rules", "secret", "vacation"], a: 0, why: "Obeying laws is a responsibility." },
+      { id: "g3-soc-e1f", obj: "3.E.1", type: "mc", q: "Scarcity forces people to:", options: ["make choices", "have everything", "never decide", "stop working"], a: 0, why: "Limited resources mean we must choose." },
+      { id: "g3-soc-e2f", obj: "3.E.2", type: "mc", q: "A place where buyers and sellers trade is a:", options: ["market", "timeline", "map", "branch"], a: 0, why: "A market is where trade happens." },
+      { id: "g3-soc-e3f", obj: "3.E.3", type: "mc", q: "Saving part of your money helps you:", options: ["reach bigger goals and handle emergencies", "lose it", "never use it", "avoid needs"], a: 0, why: "Saving builds toward goals and emergencies." },
+      { id: "g3-soc-h1f", obj: "3.H.1", type: "mc", q: "A history textbook written long after the events is a:", options: ["secondary source", "primary source", "diary", "photo from the time"], a: 0, why: "Later accounts are secondary sources." },
+      { id: "g3-soc-h2f", obj: "3.H.2", type: "mc", q: "On a timeline, later events are placed:", options: ["to the right", "to the left", "above", "nowhere"], a: 0, why: "Timelines run earliest (left) to latest (right)." }
 
     ]
   },
