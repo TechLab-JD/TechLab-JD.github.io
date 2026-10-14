@@ -1116,6 +1116,23 @@ window.LAB404_CONTENT = {
     "h": "Building confidence",
     "body": "The biggest barrier to cooking isn't skill — it's confidence, and that only comes from doing it. Start simple: a handful of easy recipes you can repeat until they're automatic (scrambled eggs, pasta, a stir-fry, a simple soup). Mastering a few basics builds a foundation you can expand from.\n\nExpect some failures — every cook burns things and over-salts — and treat them as lessons, not verdicts. Taste as you go and adjust (this is the real secret of good cooks). Follow recipes closely at first, then start improvising as you learn what you like. Cooking is a skill that rewards practice quickly: cook a little regularly, and within weeks you'll be noticeably better. Everyone starts as a beginner.",
     "tip": "Confidence comes from doing it: master a few simple recipes, taste as you go, and treat flops as lessons. Everyone starts a beginner."
+   },
+   {
+    "h": "Seasoning and tasting as you go",
+    "body": "The difference between flat food and good food is usually seasoning. Salt doesn't just make food salty — it makes food taste more like itself, brightening flavors. The key habit is tasting as you cook and adjusting in small steps, rather than seasoning once at the end and hoping.\n\nAdd salt in layers through cooking, taste, and add a little more if needed. Acid (a squeeze of lemon or vinegar) is the other quiet fix — it lifts a dish that tastes dull.",
+    "example": "Soup tastes flat? Add a pinch of salt, taste. Still flat? A small squeeze of lemon often fixes it.",
+    "tip": "Taste as you go and season in small steps. Salt makes food taste more like itself; a little acid brightens a dull dish."
+   },
+   {
+    "h": "Reading and following a recipe",
+    "body": "A recipe is a set of instructions, and reading the whole thing before you start saves disasters. Check that you have every ingredient and tool, note any step that takes time (marinating, preheating, chilling), and do the prep the recipe assumes before you turn on the heat.\n\nRecipes also carry hidden cues: 'until golden', 'until fragrant', 'until it coats the spoon' describe what to look for, which matters more than exact minutes, since every stove differs.",
+    "example": "Read it fully first -> gather everything -> prep -> then cook.\n'Until golden' beats a strict timer.",
+    "tip": "Read the whole recipe before starting and prep first. Trust sensory cues ('until golden') over exact times — stoves vary."
+   },
+   {
+    "h": "Cleanup and organization",
+    "body": "Good cooks clean as they go. Washing or stacking tools between steps keeps your space clear, prevents cross-contamination, and makes the final cleanup trivial instead of overwhelming. A clear counter is a safer, faster workspace.\n\nStart with an empty sink and a trash bowl at your station for scraps. Wipe spills right away, especially raw-meat juices. The meal isn't done until the kitchen is reset for next time — and a reset kitchen is what makes cooking again feel easy.",
+    "tip": "Clean as you go: a clear counter is safer and faster. Keep a scrap bowl at your station and wipe raw-meat spills immediately."
    }
   ],
   "cards": [
@@ -1355,6 +1372,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Practice builds confidence quickly."
+   },
+   {
+    "q": "The best habit for seasoning food is to:",
+    "options": [
+     "taste as you go and adjust",
+     "season only at the very end",
+     "never use salt",
+     "add all the salt at once"
+    ],
+    "a": 0,
+    "why": "Tasting and adjusting in steps prevents over- or under-seasoning."
+   },
+   {
+    "q": "Salt mainly works by:",
+    "options": [
+     "making food taste more like itself",
+     "adding color",
+     "cooling the dish",
+     "removing flavor"
+    ],
+    "a": 0,
+    "why": "Salt brightens and enhances a food's own flavors."
+   },
+   {
+    "q": "Before starting a recipe you should:",
+    "options": [
+     "read the whole thing and gather everything",
+     "turn on the heat first",
+     "skip the ingredient list",
+     "guess the steps"
+    ],
+    "a": 0,
+    "why": "Reading fully and prepping first prevents mistakes."
+   },
+   {
+    "q": "A cue like 'until golden' is more reliable than a timer because:",
+    "options": [
+     "every stove differs",
+     "timers are banned",
+     "color never matters",
+     "recipes are always wrong"
+    ],
+    "a": 0,
+    "why": "Sensory cues account for differences between stoves."
+   },
+   {
+    "q": "'Clean as you go' helps by:",
+    "options": [
+     "keeping the space safe and the final cleanup small",
+     "wasting time",
+     "spreading germs",
+     "dulling knives"
+    ],
+    "a": 0,
+    "why": "A clear counter is safer and easier to work on."
    }
   ]
  },
@@ -2471,6 +2543,24 @@ window.LAB404_CONTENT = {
     "h": "Staying warm and dry",
     "body": "Staying warm is mostly about managing heat loss, and clothing is your first shelter. Dress in layers you can add or remove, keep your clothing dry (wet clothing drains heat fast), and cover your head and extremities (you lose significant heat there). Avoid sweating heavily in the cold — damp clothes then chill you — so adjust layers as you work.\n\nThe big enemies are wet and wind. Stay dry, block the wind, insulate yourself from the ground, and if you have fire, use it to dry out. In heat, reverse the logic: cover up from the sun, rest in shade during peak heat, and stay hydrated. Thermoregulation — keeping your body temperature in its safe range — is the quiet skill underneath all survival, and shelter, fire, and clothing are the three tools that do it.",
     "tip": "Dress in dry layers, cover head/hands, and stay out of wind and wet. In heat, cover up, rest in shade, and hydrate."
+   },
+   {
+    "h": "Insulation: off the cold ground",
+    "body": "In cold conditions, the ground steals your body heat faster than the air does, through direct contact (conduction). A shelter with no insulation beneath you can leave you colder than no shelter at all. The fix is a thick layer between you and the ground — dry leaves, pine boughs, grass, a pad, anything that traps air.\n\nAim for a hand's depth of compressed insulation. Staying dry matters just as much: wet insulation and wet clothing conduct heat away and can be deadly.",
+    "example": "Pile dry leaves/boughs a hand's depth thick under you before lying down.",
+    "tip": "The cold ground drains heat fast. Put a thick, dry layer of leaves or boughs beneath you — insulation under you matters as much as over you."
+   },
+   {
+    "h": "Keeping a fire going",
+    "body": "Starting a fire is only half the job; keeping it alive takes preparation. Gather far more wood than you think you need before you light it, sorted into three sizes: tinder (fine, dry, catches a spark), kindling (pencil to thumb thickness), and fuel (larger logs). Build up gradually — rushing to big wood smothers a young fire.\n\nProtect the fire from wind and wet ground, and keep dry wood sheltered nearby. A banked fire with coals can be revived in the morning.",
+    "example": "Gather tinder + kindling + fuel first.\nSmall to large: don't smother a young flame with big logs.",
+    "tip": "Gather three sizes of wood (tinder, kindling, fuel) BEFORE lighting, and build up slowly. Shelter the fire from wind and keep dry wood ready."
+   },
+   {
+    "h": "Choosing a shelter site",
+    "body": "Where you build matters as much as how. Pick ground that is dry and slightly elevated, not a low spot where cold air and water collect. Avoid dead trees or branches overhead ('widowmakers'), the bottoms of gullies that can flash-flood, and exposed ridgelines with high wind.\n\nUse natural features — a rock face, a fallen log, dense trees — to block wind and cut the work. Being near (but not in) water and firewood saves energy you'll need.",
+    "example": "Good: dry, elevated, sheltered from wind, no dead branches above.\nBad: gully bottom, under dead trees, exposed ridge.",
+    "tip": "Build on dry, slightly raised ground sheltered from wind, with nothing dead overhead and clear of flood-prone gullies."
    }
   ],
   "cards": [
@@ -2710,6 +2800,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Shelter, fire, and clothing all serve temperature control."
+   },
+   {
+    "q": "In the cold, the ground is dangerous because it:",
+    "options": [
+     "steals body heat through contact",
+     "is always wet",
+     "attracts animals",
+     "blocks the wind"
+    ],
+    "a": 0,
+    "why": "Conduction drains heat into the cold ground."
+   },
+   {
+    "q": "To stay warm in a shelter, you should put beneath you:",
+    "options": [
+     "a thick, dry layer of insulation",
+     "nothing",
+     "a sheet of metal",
+     "cold rocks"
+    ],
+    "a": 0,
+    "why": "Insulation under you traps air and stops heat loss."
+   },
+   {
+    "q": "Before lighting a fire you should:",
+    "options": [
+     "gather tinder, kindling, and fuel",
+     "light the biggest log first",
+     "skip the small wood",
+     "pour on water"
+    ],
+    "a": 0,
+    "why": "Having all three sizes ready keeps the fire alive."
+   },
+   {
+    "q": "A young fire is often smothered by:",
+    "options": [
+     "adding big logs too soon",
+     "adding tinder",
+     "gentle airflow",
+     "small kindling"
+    ],
+    "a": 0,
+    "why": "Build up gradually from small to large wood."
+   },
+   {
+    "q": "A good shelter site is:",
+    "options": [
+     "dry, elevated, and sheltered from wind",
+     "a gully bottom",
+     "under dead branches",
+     "an exposed ridge"
+    ],
+    "a": 0,
+    "why": "Avoid flood, falling branches, and high wind."
    }
   ]
  },
@@ -3815,6 +3960,24 @@ window.LAB404_CONTENT = {
     "h": "Recognizing and avoiding risks",
     "body": "A few situations carry extra risk and deserve caution. 'When in doubt, throw it out' — if you're unsure whether food has been left out too long or has spoiled, it's not worth the gamble. Be extra careful with higher-risk foods (raw or undercooked meat, eggs, and seafood; unpasteurized dairy; raw sprouts) and with higher-risk people (young children, older adults, pregnant people, and anyone with a weak immune system), for whom food poisoning can be far more serious.\n\nWatch for obvious spoilage (off smells, slime, mold) and discard it — though remember dangerous germs often leave no sign. At restaurants and gatherings, be wary of food left sitting out. Food safety isn't about fear; it's a few consistent habits and a bit of judgment that keep a basic, invisible risk from ever becoming a problem.",
     "tip": "'When in doubt, throw it out.' Take extra care with risky foods (raw meat/eggs) and risky people (kids, elderly, pregnant, immune-compromised)."
+   },
+   {
+    "h": "Cross-contamination",
+    "body": "Cross-contamination is when harmful germs move from one food to another, most often from raw meat, poultry, or eggs to foods eaten raw, like salad. It's a leading cause of food poisoning and is easy to prevent.\n\nUse separate cutting boards and utensils for raw meat and for produce, or wash them thoroughly in between. Never put cooked food back on the plate that held it raw. Wash your hands after handling raw proteins.",
+    "example": "Raw chicken -> its own board -> wash board and hands before touching salad.",
+    "tip": "Keep raw meat away from ready-to-eat foods. Use separate boards or wash thoroughly between, and never reuse the raw plate for cooked food."
+   },
+   {
+    "h": "Safe internal temperatures",
+    "body": "You can't tell food is safe by look alone — a thermometer is the only sure way. Cooking to the right internal temperature kills harmful bacteria. Poultry needs to reach 165 degrees F, ground meat 160, and whole cuts of beef or pork 145 with a rest.\n\nInsert the thermometer into the thickest part, away from bone. This single tool removes the guesswork that causes most undercooked-meat illnesses.",
+    "example": "Poultry: 165 F.  Ground meat: 160 F.  Whole beef/pork: 145 F (then rest).",
+    "tip": "A thermometer is the only sure test. Poultry to 165 F, ground meat to 160 F, whole cuts to 145 F, measured in the thickest part."
+   },
+   {
+    "h": "Cooling and reheating leftovers",
+    "body": "The danger zone (40 to 140 degrees F) is where bacteria multiply fastest, so hot food shouldn't sit out. Refrigerate leftovers within two hours (one hour if it's very warm out). Cool large amounts quickly by splitting them into shallow containers.\n\nWhen reheating, bring leftovers all the way back to 165 degrees F, not just warm. Eat refrigerated leftovers within about three to four days, and when in doubt, throw it out.",
+    "example": "Fridge within 2 hours -> store shallow -> reheat to 165 F -> eat within 3-4 days.",
+    "tip": "Refrigerate leftovers within two hours, cool them in shallow containers, reheat to 165 F, and use within 3-4 days."
    }
   ],
   "cards": [
@@ -4054,6 +4217,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Clean, separate, cook, chill — done every time."
+   },
+   {
+    "q": "Cross-contamination most often spreads germs from:",
+    "options": [
+     "raw meat to ready-to-eat foods",
+     "clean plates to the sink",
+     "water to ice",
+     "cooked food to the fridge"
+    ],
+    "a": 0,
+    "why": "Raw proteins carry germs onto foods eaten raw."
+   },
+   {
+    "q": "To prevent cross-contamination you should:",
+    "options": [
+     "use separate boards for raw meat and produce",
+     "use one board for everything",
+     "never wash your hands",
+     "reuse the raw-meat plate"
+    ],
+    "a": 0,
+    "why": "Separate boards or thorough washing keep germs apart."
+   },
+   {
+    "q": "Poultry is safe to eat at an internal temperature of:",
+    "options": [
+     "165 F",
+     "100 F",
+     "120 F",
+     "140 F"
+    ],
+    "a": 0,
+    "why": "165 F kills harmful bacteria in poultry."
+   },
+   {
+    "q": "The only sure way to know meat is cooked safely is to:",
+    "options": [
+     "use a thermometer",
+     "check the color",
+     "guess by time",
+     "smell it"
+    ],
+    "a": 0,
+    "why": "Color and time are unreliable; temperature is sure."
+   },
+   {
+    "q": "Leftovers should be refrigerated within:",
+    "options": [
+     "two hours",
+     "eight hours",
+     "one day",
+     "whenever convenient"
+    ],
+    "a": 0,
+    "why": "The danger zone lets bacteria grow if food sits out longer."
    }
   ]
  },
@@ -5169,6 +5387,23 @@ window.LAB404_CONTENT = {
     "h": "Water and food mistakes to avoid",
     "body": "A few mistakes turn a survivable situation into a deadly one. With water: don't drink untreated water if you can treat it, don't drink seawater or urine (both worsen dehydration), and don't eat snow un-melted. But also, if you are badly dehydrated and have no way to treat water, drinking questionable water may be the lesser risk — dehydration kills faster than most waterborne illness. Judge the situation.\n\nWith food: the big one is poisoning yourself with misidentified plants or mushrooms, so when unsure, don't eat it. Also avoid spoiled meat and anything that smells or looks wrong. The overall theme is caution and priorities: secure safe water first, treat it when you can, don't take food risks, and remember that preparation (carrying water, a filter, and extra food) prevents nearly all of these problems.",
     "tip": "Never drink seawater/urine or eat unknown plants. But severe dehydration is deadlier than risky water — if desperate with no way to treat, drink."
+   },
+   {
+    "h": "Signs of dehydration",
+    "body": "Because water is the top survival priority, recognizing dehydration early is vital. Mild signs are thirst, dark urine, a dry mouth, and tiredness. As it worsens, you get headaches, dizziness, confusion, and a fast heartbeat — and confusion is dangerous because it keeps you from making good decisions.\n\nDon't wait to feel thirsty; by then you're already behind. Urine color is a quick gauge: pale is good, dark means drink more. Ration sweat, not water — rest in heat and keep drinking.",
+    "example": "Pale urine = hydrated.  Dark urine = drink more.\nWorsening: headache -> dizziness -> confusion.",
+    "tip": "Watch for dark urine, dry mouth, and fatigue early; headache, dizziness, and confusion are serious. Don't wait for thirst — drink steadily."
+   },
+   {
+    "h": "Making water safe",
+    "body": "Found water can carry germs that cause illness you can't afford in survival. Three methods make it safer. Boiling is the most reliable — a rolling boil for one minute kills pathogens. A filter removes dirt and many microbes. Chemical treatment (purification tablets or a few drops of unscented bleach) works when you can't boil.\n\nClear, moving water is a better starting point than still, cloudy water, but treat any wild water before drinking it.",
+    "example": "Boil: rolling boil 1 minute (most reliable).\nFilter or tablets when you can't boil.",
+    "tip": "Treat all wild water. Boiling for one minute is the surest method; filters and purification tablets are the backups."
+   },
+   {
+    "h": "The cautious rule for food",
+    "body": "Food is a lower priority than water and shelter — you can last weeks without it — so never gamble on it. The cautious rule: do not eat any wild plant, mushroom, or berry you cannot identify with certainty, because many look edible but are poisonous, and a mistake can disable you.\n\nStick to foods you know. Insects, fish, and familiar plants are safer bets than unknown mushrooms or berries. When unsure, go hungry; starvation is slow, poisoning is fast.",
+    "tip": "Food matters less than water and shelter. Never eat an unidentified plant, berry, or mushroom — when unsure, go without."
    }
   ],
   "cards": [
@@ -5408,6 +5643,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Carrying the basics avoids nearly all of it."
+   },
+   {
+    "q": "An early sign of dehydration is:",
+    "options": [
+     "dark urine",
+     "pale urine",
+     "clear thinking",
+     "a slow heartbeat"
+    ],
+    "a": 0,
+    "why": "Dark urine signals you need more water."
+   },
+   {
+    "q": "The most reliable way to make wild water safe is to:",
+    "options": [
+     "boil it for a minute",
+     "let it sit",
+     "freeze it",
+     "add sugar"
+    ],
+    "a": 0,
+    "why": "A rolling boil kills pathogens."
+   },
+   {
+    "q": "When you can't boil water, a backup is:",
+    "options": [
+     "purification tablets",
+     "doing nothing",
+     "stirring it",
+     "warming it slightly"
+    ],
+    "a": 0,
+    "why": "Chemical treatment or a filter helps when boiling isn't possible."
+   },
+   {
+    "q": "Compared to water and shelter, food is:",
+    "options": [
+     "a lower survival priority",
+     "the top priority",
+     "equal to water",
+     "unnecessary ever"
+    ],
+    "a": 0,
+    "why": "You can last weeks without food."
+   },
+   {
+    "q": "The safe rule for wild plants and berries is:",
+    "options": [
+     "don't eat anything you can't identify",
+     "try a small bite to test",
+     "eat all bright berries",
+     "mushrooms are always safe"
+    ],
+    "a": 0,
+    "why": "Many edible-looking plants are poisonous."
    }
   ]
  },
@@ -5454,6 +5744,24 @@ window.LAB404_CONTENT = {
     "body": "Numbers one to ten are the place to start: uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez. They appear constantly — prices, times, ages — and build toward the rest (once you know 1–10 and the tens, you can count far).\n\nThe real key to learning any language is steady, daily practice and real use. Label things around you in Spanish, use a free app for a few minutes a day, listen to Spanish music or shows, and above all speak — badly at first, which is fine. A little every day beats cramming, and even a small vocabulary used bravely lets you communicate. ¡Buena suerte! (Good luck!)",
     "example": "1-10: uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez",
     "tip": "Learn 1–10 first, then practice a few minutes daily and actually speak — small and steady wins at languages."
+   },
+   {
+    "h": "Gender and articles",
+    "body": "Spanish nouns have a gender — masculine or feminine — and the words around them must match. 'The' is 'el' for masculine nouns and 'la' for feminine (los/las in the plural); 'a/an' is 'un' or 'una'. Most nouns ending in -o are masculine and -a are feminine, though there are exceptions to memorize.\n\nLearning each noun together with its article (el libro, la mesa) saves you from guessing later, because gender affects adjectives too.",
+    "example": "el libro (the book, m.)   la mesa (the table, f.)\nun gato (a cat)   una casa (a house)",
+    "tip": "Spanish nouns are masculine or feminine; learn each noun WITH its article (el/la). Usually -o is masculine, -a is feminine."
+   },
+   {
+    "h": "Present-tense verbs",
+    "body": "Spanish verbs end in -ar, -er, or -ir, and you conjugate them by changing the ending to match who is doing the action. For regular -ar verbs like 'hablar' (to speak): yo hablo (I speak), tú hablas (you speak), él/ella habla (he/she speaks), nosotros hablamos (we speak).\n\nBecause the ending shows who acts, Spanish often drops the subject pronoun — 'hablo' already means 'I speak'. The -er and -ir verbs follow their own regular patterns.",
+    "example": "hablar: hablo, hablas, habla, hablamos, hablan.\n'Hablo espanol' = 'I speak Spanish' (yo is optional).",
+    "tip": "Conjugate -ar/-er/-ir verbs by changing the ending to match the subject. The ending shows who acts, so the pronoun is often dropped."
+   },
+   {
+    "h": "Everyday phrases and questions",
+    "body": "A handful of question words and polite phrases unlock real conversation. Question words: que (what), quien (who), donde (where), cuando (when), por que (why), como (how), cuanto (how much). Essential phrases include por favor (please), gracias (thank you), de nada (you're welcome), and perdon (excuse me).\n\nTo ask a yes/no question, you can simply raise your intonation at the end of a statement. Pairing a question word with a verb gets you far: Donde esta...? (Where is...?).",
+    "example": "Donde esta el bano? = Where is the bathroom?\nCuanto cuesta? = How much does it cost?",
+    "tip": "Learn the question words (que, quien, donde, cuando, como, cuanto) and polite phrases. Raising your tone turns a statement into a yes/no question."
    }
   ],
   "cards": [
@@ -5693,6 +6001,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "ñ = 'ny' as in niño."
+   },
+   {
+    "q": "In Spanish, 'the' before a masculine noun is:",
+    "options": [
+     "el",
+     "la",
+     "los",
+     "una"
+    ],
+    "a": 0,
+    "why": "'el' is the masculine singular 'the'."
+   },
+   {
+    "q": "Most Spanish nouns ending in -a are:",
+    "options": [
+     "feminine",
+     "masculine",
+     "plural only",
+     "verbs"
+    ],
+    "a": 0,
+    "why": "-a endings are usually feminine (with exceptions)."
+   },
+   {
+    "q": "Spanish verbs end in -ar, -er, or:",
+    "options": [
+     "-ir",
+     "-os",
+     "-an",
+     "-el"
+    ],
+    "a": 0,
+    "why": "The three infinitive endings are -ar, -er, -ir."
+   },
+   {
+    "q": "Why can Spanish drop the subject pronoun?",
+    "options": [
+     "the verb ending shows who acts",
+     "pronouns are banned",
+     "it never does",
+     "nouns have no gender"
+    ],
+    "a": 0,
+    "why": "'Hablo' already means 'I speak'."
+   },
+   {
+    "q": "The Spanish word 'donde' means:",
+    "options": [
+     "where",
+     "what",
+     "who",
+     "when"
+    ],
+    "a": 0,
+    "why": "'Donde' asks about location."
    }
   ]
  },
@@ -5736,6 +6099,23 @@ window.LAB404_CONTENT = {
     "h": "Growing your career",
     "body": "A career is built over years through deliberate steps. Keep learning — add skills and certifications that make you more valuable, many of them free online (like this hub). Build a network: most jobs come through people, so stay on good terms with coworkers and contacts, and don't be afraid to ask for help or advice.\n\nSet goals and seek growth: ask for more responsibility, look for a mentor, and periodically assess whether your job still fits your goals — sometimes growth means moving on. Track your accomplishments so your resume stays current. Careers rarely move in a straight line, but steady skill-building, good relationships, and a willingness to step up compound into real advancement over time.",
     "tip": "Grow a career by always learning, building a network, and stepping up — most opportunities come through people and new skills."
+   },
+   {
+    "h": "Networking and connections",
+    "body": "Many jobs are never advertised — they're filled through people. Networking just means building genuine professional relationships before you need them: staying in touch with former coworkers, classmates, and people in fields you admire. Most people are glad to share advice if you ask respectfully and don't only reach out when you want something.\n\nA simple habit — a short message of thanks, congratulations, or a relevant article — keeps a connection warm. Informational interviews (asking someone about their job) are a low-pressure way to learn and be remembered.",
+    "tip": "Build relationships before you need them. Stay in touch, offer value, and use informational interviews to learn — many jobs come through people."
+   },
+   {
+    "h": "Workplace communication and email",
+    "body": "Clear communication is itself a job skill. In professional email, use a specific subject line, get to the point in the first sentence, keep it short, and proofread before sending. Match your tone to the reader — more formal with people you don't know. Reply within a reasonable time even if only to say you'll follow up.\n\nIn person and in meetings, listening well and asking good questions makes a stronger impression than talking the most. Writing and speaking clearly signals that you're organized and reliable.",
+    "example": "Good email: clear subject, point first, short, proofread.\n'Following up on Tuesday's report — can you confirm the deadline?'",
+    "tip": "Write clear, short, proofread emails with a specific subject and the point first. Good listening and timely replies signal reliability."
+   },
+   {
+    "h": "Setting goals and seeking feedback",
+    "body": "Careers grow on purpose, not by accident. Setting clear goals — a skill to learn, a certification, a role to aim for — gives your effort direction, and breaking a big goal into small steps makes it achievable. Writing goals down and reviewing them keeps them real.\n\nJust as important is actively seeking feedback: asking a manager or mentor 'what's one thing I could do better?' shows maturity and speeds up growth. Acting on the feedback is what builds a reputation as someone who improves.",
+    "example": "Vague: 'do better'.  Clear: 'earn the CompTIA A+ in 3 months, studying 1 hour a day.'",
+    "tip": "Set specific goals and break them into steps. Actively ask for feedback ('what could I improve?') and act on it — that's how careers grow."
    }
   ],
   "cards": [
@@ -5975,6 +6355,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Consistent effort and relationships compound into advancement."
+   },
+   {
+    "q": "Networking is most effective when you:",
+    "options": [
+     "build relationships before you need them",
+     "only reach out when job hunting",
+     "never talk to coworkers",
+     "ask only for favors"
+    ],
+    "a": 0,
+    "why": "Genuine connections maintained over time open doors."
+   },
+   {
+    "q": "A good professional email should:",
+    "options": [
+     "be clear, short, and proofread",
+     "be very long",
+     "skip the subject line",
+     "use slang"
+    ],
+    "a": 0,
+    "why": "Clarity and brevity signal professionalism."
+   },
+   {
+    "q": "An informational interview is:",
+    "options": [
+     "asking someone about their job to learn",
+     "a formal job interview",
+     "a performance review",
+     "a sales pitch"
+    ],
+    "a": 0,
+    "why": "It's a low-pressure way to learn and connect."
+   },
+   {
+    "q": "Setting a clear career goal works best when you:",
+    "options": [
+     "break it into small steps",
+     "keep it vague",
+     "never write it down",
+     "avoid reviewing it"
+    ],
+    "a": 0,
+    "why": "Small steps make a big goal achievable."
+   },
+   {
+    "q": "Actively seeking feedback shows:",
+    "options": [
+     "maturity and speeds growth",
+     "weakness",
+     "that you can't do the job",
+     "nothing useful"
+    ],
+    "a": 0,
+    "why": "Asking what to improve and acting on it builds your reputation."
    }
   ]
  },
@@ -19321,6 +19756,24 @@ window.LAB404_CONTENT = {
     "h": "Know your limits and get rescue",
     "body": "Survival first aid is about stabilizing a person and protecting life until real help arrives — not performing medicine you're not trained for. Your single most important action is often to summon rescue: call 911 or emergency services if you have any signal, use a whistle (three blasts is a distress signal), a mirror, or a bright marker to signal searchers, and stay put if lost so rescuers can find you.\n\nKnow what you can't do: don't move someone with a possible spinal injury unless they're in danger, don't attempt advanced procedures, and don't risk yourself needlessly. Prevention beats everything — tell someone your plans before heading out, carry a basic kit, and the best survival skill of all is not getting into the emergency in the first place.",
     "tip": "Stabilize, then get rescue: signal (3 whistle blasts), call for help, stay put if lost. Prevention beats any rescue."
+   },
+   {
+    "h": "Splinting a broken bone",
+    "body": "A splint keeps an injured limb from moving, which reduces pain, prevents further damage, and makes moving to safety possible. The principle: immobilize the joint above and below the break. Use anything rigid — a stick, a trekking pole, rolled magazine — padded against the skin, and tie it on snugly but not so tight it cuts off circulation.\n\nCheck the fingers or toes beyond the splint stay warm and pink; if they go cold or blue, the ties are too tight.",
+    "example": "Rigid support + padding -> immobilize the joints above and below -> check circulation beyond it.",
+    "tip": "Splint by immobilizing the joints above and below the break with something rigid and padded. Keep checking circulation past the splint."
+   },
+   {
+    "h": "Hypothermia and frostbite",
+    "body": "Cold injuries come in two forms. Hypothermia is dangerously low body temperature — shivering, confusion, slurred speech, clumsiness; it's a whole-body emergency. Frostbite is freezing of tissue, usually fingers, toes, nose, ears — skin turns white, waxy, and numb.\n\nFor hypothermia, get the person dry, insulated, and warmed gradually with shelter and warm (not hot) drinks if alert. For frostbite, warm the area gently and never rub it or refreeze it. Both need medical help as soon as possible.",
+    "example": "Hypothermia: shivering, confusion -> dry, insulate, warm gradually.\nFrostbite: white/waxy skin -> warm gently, don't rub.",
+    "tip": "Hypothermia (low body temp, confusion) needs gradual whole-body warming. Frostbite (white, numb skin) is warmed gently — never rubbed or refrozen."
+   },
+   {
+    "h": "Heat emergencies",
+    "body": "Heat illness also has two levels. Heat exhaustion brings heavy sweating, weakness, nausea, and cool clammy skin — move to shade, cool down, and sip water, and it usually resolves. Heat stroke is the life-threat: the body stops cooling itself, so skin may be hot and dry, with confusion and a very high temperature.\n\nHeat stroke is an emergency — cool the person aggressively (shade, water, fanning, cool packs) and get medical help immediately. Confusion is the red flag that exhaustion has become stroke.",
+    "example": "Heat exhaustion: sweaty, clammy -> rest, shade, water.\nHeat stroke: hot, confused -> cool fast + emergency help.",
+    "tip": "Heat exhaustion (sweaty, weak) is treated with shade, rest, and water. Heat stroke (hot skin, confusion) is an emergency — cool aggressively and call for help."
    }
   ],
   "cards": [
@@ -19560,6 +20013,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Avoiding the emergency beats any rescue."
+   },
+   {
+    "q": "A splint should immobilize:",
+    "options": [
+     "the joints above and below the break",
+     "only the break itself",
+     "the whole body",
+     "nothing"
+    ],
+    "a": 0,
+    "why": "Stabilizing both joints keeps the bone still."
+   },
+   {
+    "q": "After splinting, you should check that fingers or toes beyond it:",
+    "options": [
+     "stay warm and pink",
+     "turn blue",
+     "go numb",
+     "feel cold"
+    ],
+    "a": 0,
+    "why": "Cold or blue means the ties are too tight."
+   },
+   {
+    "q": "Signs of hypothermia include:",
+    "options": [
+     "shivering and confusion",
+     "sweating heavily",
+     "hot dry skin",
+     "sunburn"
+    ],
+    "a": 0,
+    "why": "It is dangerously low body temperature."
+   },
+   {
+    "q": "Frostbitten skin should be:",
+    "options": [
+     "warmed gently and never rubbed",
+     "rubbed hard",
+     "refrozen",
+     "ignored"
+    ],
+    "a": 0,
+    "why": "Rubbing damages frozen tissue."
+   },
+   {
+    "q": "Which is a life-threatening emergency?",
+    "options": [
+     "heat stroke",
+     "heat exhaustion",
+     "mild thirst",
+     "a small blister"
+    ],
+    "a": 0,
+    "why": "In heat stroke the body stops cooling itself; cool fast and call for help."
    }
   ]
  },
@@ -19602,6 +20110,24 @@ window.LAB404_CONTENT = {
     "h": "Preventing emergencies",
     "body": "The best survival situation is the one you avoid. Most wilderness emergencies come from a few preventable mistakes: going unprepared, not checking the weather, overestimating your ability, going alone, and — above all — not telling anyone your plan. Prevention is far easier than rescue.\n\nBefore any trip: tell someone exactly where you're going and when you'll be back (so they can alert rescuers if you don't return), check the forecast, carry the essentials, and know the route and your own limits. Turn back when conditions or daylight run short — ego gets people hurt. Survival skills are vital for when things go wrong, but the real expert's goal is to never need them.",
     "tip": "Prevention beats rescue: tell someone your plan and return time, check weather, carry essentials, and know when to turn back."
+   },
+   {
+    "h": "Making yourself visible to rescuers",
+    "body": "If you're lost, being found fast depends on being seen and heard. Signals work in threes — three whistle blasts, three fires, three flashes — the recognized distress pattern. A whistle carries far longer than your voice and costs no energy. A signal mirror can flash sunlight to aircraft miles away.\n\nChoose an open, high spot for signals, and make yourself big and unnatural: bright colors, geometric shapes on the ground, movement. Rescuers look for what doesn't belong.",
+    "example": "Distress = groups of three (whistle blasts, fires, flashes).\nA whistle beats shouting; a mirror flashes for miles.",
+    "tip": "Signal in threes and make yourself big, bright, and unnatural in an open spot. A whistle and a mirror reach far beyond your voice."
+   },
+   {
+    "h": "The ten essentials",
+    "body": "Experienced hikers carry a set of items that cover the basics of survival, so a day trip gone wrong is survivable. The classic ten essentials are: navigation (map/compass), sun protection, insulation (extra layers), illumination (headlamp), first-aid, fire, a repair kit and tools, extra food, extra water, and emergency shelter.\n\nYou don't need everything to be fancy — just present. The point is that if you're stranded overnight, you can stay warm, found, and fed.",
+    "example": "Nav, sun, insulation, light, first-aid, fire, tools, food, water, shelter.",
+    "tip": "Carry the ten essentials (navigation, light, fire, water, food, insulation, shelter, first-aid, sun protection, tools) so a bad day stays survivable."
+   },
+   {
+    "h": "Staying calm: STOP",
+    "body": "Panic is the real killer in a survival situation because it wastes energy and leads to bad choices. The STOP method resets you: Stop (don't rush off), Think (what's the situation?), Observe (resources, weather, terrain), Plan (a deliberate next step).\n\nSitting still for a few minutes to make a plan feels counterintuitive when you're scared, but it's what separates people who get out from people who get more lost. Calm is a survival skill you can practice.",
+    "example": "STOP: Stop, Think, Observe, Plan.",
+    "tip": "Panic causes bad decisions. Use STOP — Stop, Think, Observe, Plan — to stay calm and act deliberately instead of rushing."
    }
   ],
   "cards": [
@@ -19841,6 +20367,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Prevention beats rescue every time."
+   },
+   {
+    "q": "The recognized distress signal pattern is groups of:",
+    "options": [
+     "three",
+     "two",
+     "five",
+     "ten"
+    ],
+    "a": 0,
+    "why": "Three blasts, fires, or flashes signal distress."
+   },
+   {
+    "q": "A whistle is better than shouting because it:",
+    "options": [
+     "carries far and saves energy",
+     "is quieter",
+     "needs batteries",
+     "works underwater"
+    ],
+    "a": 0,
+    "why": "Its sound travels much farther than your voice."
+   },
+   {
+    "q": "The 'ten essentials' are meant to:",
+    "options": [
+     "cover basic survival if stranded",
+     "replace a tent",
+     "be fancy gear",
+     "carry only food"
+    ],
+    "a": 0,
+    "why": "They let you stay warm, found, and fed overnight."
+   },
+   {
+    "q": "Which is one of the ten essentials?",
+    "options": [
+     "a headlamp (illumination)",
+     "a television",
+     "a lawn chair",
+     "a board game"
+    ],
+    "a": 0,
+    "why": "Illumination is a core essential."
+   },
+   {
+    "q": "The main purpose of the STOP method is to:",
+    "options": [
+     "stay calm and act deliberately",
+     "run as fast as possible",
+     "keep wandering",
+     "give up"
+    ],
+    "a": 0,
+    "why": "Pausing to think prevents the bad decisions panic causes."
    }
   ]
  },
@@ -19883,6 +20464,23 @@ window.LAB404_CONTENT = {
     "h": "Not getting lost",
     "body": "The best navigation is never getting lost. Stay aware as you travel: periodically look back (the return trip looks different), note landmarks, and keep rough track of direction and time. Check your map and position regularly rather than only when confused — it's far easier to stay found than to get un-lost.\n\nHave backups: carry a map and compass even if you have GPS, since batteries die and signals fail. Tell someone your route. And if you do become lost, stop — don't wander. Stay calm, use what you know, and if you can't confidently navigate back, stay put and signal for help. Awareness, backups, and humility keep you oriented far more reliably than any single gadget.",
     "tip": "Stay aware (look back, note landmarks), check your position often, carry map+compass as GPS backup, and if lost, stop — don't wander."
+   },
+   {
+    "h": "Topographic lines",
+    "body": "A topographic map shows the shape of the land with contour lines — each line connects points of equal elevation. Reading them turns a flat map into a 3-D picture. Lines close together mean a steep slope; far apart means gentle ground. A ring of closed lines is a hilltop; lines pointing like a V usually mark a valley or stream (the V points uphill).\n\nThis lets you plan a route that avoids cliffs, find high ground to signal from, and know what's over the next rise.",
+    "example": "Lines close = steep.  Lines far = gentle.\nClosed rings = a hill.  V's point uphill (valleys).",
+    "tip": "Contour lines connect equal elevations: close together is steep, far apart is gentle. Reading them reveals hills, valleys, and the safest route."
+   },
+   {
+    "h": "Taking and following a bearing",
+    "body": "A compass lets you travel a straight line toward something you can't always see. A bearing is a direction in degrees (0 to 360). You set your desired bearing, turn until the compass needle lines up, and walk that way. To stay on course over distance, aim at a visible landmark on the bearing, walk to it, then sight the next one.\n\nRemember that a compass points to magnetic north, which differs from true north by an amount (declination) that varies by location.",
+    "example": "Set bearing -> align the needle -> aim at a landmark on that line -> walk to it -> repeat.",
+    "tip": "A bearing is a direction in degrees. Align the needle, aim at a landmark on that line, and leapfrog between landmarks to stay straight."
+   },
+   {
+    "h": "What to do if you're lost",
+    "body": "The moment you realize you're lost, stop moving — wandering makes it worse and harder for searchers. Use STOP (Stop, Think, Observe, Plan). Try to retrace to your last known location only if you're sure of the way; otherwise stay put, especially if you told someone your plan.\n\nMake yourself findable: get to an open area, signal in threes, and conserve energy and warmth. A person who stays put and visible is far easier to rescue than one who keeps moving.",
+    "tip": "If lost, stop moving and use STOP. Staying put and visible (open area, signals in threes) makes rescue far easier than wandering."
    }
   ],
   "cards": [
@@ -20122,6 +20720,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Sunrise east / sunset west holds everywhere."
+   },
+   {
+    "q": "On a topographic map, contour lines far apart mean:",
+    "options": [
+     "a gentle slope",
+     "a steep slope",
+     "a cliff",
+     "deep water"
+    ],
+    "a": 0,
+    "why": "Widely spaced lines show gradual elevation change."
+   },
+   {
+    "q": "A ring of closed contour lines usually marks:",
+    "options": [
+     "a hilltop",
+     "a river",
+     "a road",
+     "a lake"
+    ],
+    "a": 0,
+    "why": "Closed loops of increasing elevation form a hill."
+   },
+   {
+    "q": "A compass bearing is:",
+    "options": [
+     "a direction in degrees",
+     "a distance in miles",
+     "an elevation",
+     "a time"
+    ],
+    "a": 0,
+    "why": "Bearings run 0 to 360 degrees."
+   },
+   {
+    "q": "To follow a bearing accurately over distance, you should:",
+    "options": [
+     "aim at landmarks on the line and walk to them",
+     "stare at the compass and run",
+     "ignore landmarks",
+     "walk in circles"
+    ],
+    "a": 0,
+    "why": "Leapfrogging landmarks keeps you straight."
+   },
+   {
+    "q": "If you realize you are lost, you should first:",
+    "options": [
+     "stop moving and think",
+     "run downhill",
+     "keep wandering",
+     "shout and panic"
+    ],
+    "a": 0,
+    "why": "Stopping prevents getting more lost and aids rescue."
    }
   ]
  },
@@ -20164,6 +20817,24 @@ window.LAB404_CONTENT = {
     "h": "Staying informed and recovering",
     "body": "Information is a lifeline in a disaster. Have multiple ways to get alerts — a phone with emergency alerts enabled, a battery or hand-crank radio for when power and cell service fail, and knowledge of your local warning systems. Sign up for local emergency notifications in advance. Reliable information tells you what's happening and what to do.\n\nAfter a disaster, be cautious: hazards like downed power lines, gas leaks, contaminated water, and unstable structures remain. Check on others, especially vulnerable neighbors, and don't return to an evacuated area until officials say it's safe. Recovery takes time; use your supplies, rely on your plan and community, and replenish your kit afterward. Preparedness is a cycle — plan, respond, recover, and prepare again, a little better each time.",
     "tip": "Keep multiple ways to get alerts (incl. a battery radio). After a disaster, watch for hazards, help neighbors, and return only when cleared."
+   },
+   {
+    "h": "Water and food storage",
+    "body": "In a disaster, normal supplies can vanish for days, so a home store is the foundation of preparedness. The common guideline is one gallon of water per person per day for at least three days (two weeks is better), for drinking and basic hygiene. Store non-perishable food that needs little or no cooking — canned goods, peanut butter, dried food — plus a manual can opener.\n\nRotate the supply so it stays fresh, and keep some in a grab-and-go bag in case you must leave.",
+    "example": "Water: ~1 gallon per person per day, 3+ days.\nFood: non-perishable, no-cook, plus a manual can opener.",
+    "tip": "Store about a gallon of water per person per day (3+ days) and no-cook non-perishable food with a manual can opener. Rotate it to stay fresh."
+   },
+   {
+    "h": "Communication and meeting plans",
+    "body": "Disasters often knock out phones and separate families, so a plan made in advance is priceless. Pick an out-of-area contact everyone can check in with (long-distance lines sometimes work when local ones don't), and agree on two meeting places — one near home, one outside the neighborhood.\n\nTeach everyone, including kids, the plan and key numbers written on paper, since phones may die. Text messages often get through when calls won't.",
+    "example": "Out-of-area contact + two meeting spots (near home, outside the area).\nTexts often work when calls fail.",
+    "tip": "Agree in advance on an out-of-area contact and two meeting places. Write numbers on paper, and remember texts often work when calls don't."
+   },
+   {
+    "h": "Specific hazards",
+    "body": "Different disasters call for different actions, so know the ones common to your area. Fire: get out and stay out, crawl low under smoke. Flood: move to higher ground, never drive through moving water. Earthquake: drop, cover, and hold on under sturdy furniture. Severe storm or tornado: get to an interior room on the lowest floor, away from windows.\n\nSign up for local emergency alerts so you learn early, and know your community's evacuation routes before you need them.",
+    "example": "Fire: get out, crawl low.  Flood: high ground, don't drive through water.\nQuake: drop/cover/hold.  Tornado: interior low room.",
+    "tip": "Match the action to the hazard: fire = get out low; flood = higher ground; quake = drop/cover/hold; storm = interior low room. Sign up for local alerts."
    }
   ],
   "cards": [
@@ -20403,6 +21074,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "You prepare, respond, recover, and prepare again, better each time."
+   },
+   {
+    "q": "A common water-storage guideline is about:",
+    "options": [
+     "one gallon per person per day",
+     "one cup per person per week",
+     "no stored water",
+     "ten gallons per hour"
+    ],
+    "a": 0,
+    "why": "That covers drinking and basic hygiene."
+   },
+   {
+    "q": "Good disaster food is:",
+    "options": [
+     "non-perishable and needs little cooking",
+     "frozen and needs an oven",
+     "fresh and spoils fast",
+     "only candy"
+    ],
+    "a": 0,
+    "why": "No-cook, shelf-stable food works when power is out."
+   },
+   {
+    "q": "A smart family communication plan includes:",
+    "options": [
+     "an out-of-area contact and meeting places",
+     "no plan at all",
+     "relying only on one cell phone",
+     "a secret code only"
+    ],
+    "a": 0,
+    "why": "Pre-agreed contacts and meeting spots reconnect families."
+   },
+   {
+    "q": "During an earthquake you should:",
+    "options": [
+     "drop, cover, and hold on",
+     "run outside immediately",
+     "stand in a doorway on an upper floor",
+     "get in an elevator"
+    ],
+    "a": 0,
+    "why": "Drop/cover/hold under sturdy furniture protects you."
+   },
+   {
+    "q": "In a flood you should never:",
+    "options": [
+     "drive through moving water",
+     "move to higher ground",
+     "follow alerts",
+     "evacuate early"
+    ],
+    "a": 0,
+    "why": "Moving water can sweep away a vehicle."
    }
   ]
  },
@@ -20446,6 +21172,24 @@ window.LAB404_CONTENT = {
     "h": "Building speed safely",
     "body": "Speed in the kitchen is a byproduct of good technique repeated, not something to chase directly. Start slow and correct: proper grip, claw hand, even cuts. As those become automatic, speed comes on its own, and chasing speed before technique is how fingers get cut.\n\nPractice on forgiving foods — an onion, a few carrots — and focus on consistency over quickness. Watch your non-knife hand's claw at all times. Over weeks of regular cooking, you'll notice yourself getting faster and smoother without trying. Good knife skills make every meal easier and are one of the most satisfying basic skills to develop. Slow is smooth, and smooth is fast.",
     "tip": "Don't chase speed — build correct technique (grip, claw, even cuts) and speed follows. Slow is smooth, smooth is fast."
+   },
+   {
+    "h": "Choosing the right knife",
+    "body": "Most kitchen tasks need only a few knives. A chef's knife (8 inches is common) handles the vast majority of cutting — chopping, slicing, dicing. A paring knife does small, delicate work like peeling. A serrated knife saws through bread and tomatoes without crushing them.\n\nA good, comfortable chef's knife you keep sharp is worth more than a block full of dull ones. Pick the knife that fits your hand and the task.",
+    "example": "Chef's knife: most tasks.  Paring: small/delicate.  Serrated: bread and tomatoes.",
+    "tip": "A sharp chef's knife handles most jobs; add a paring knife for delicate work and a serrated one for bread. Comfort and sharpness beat quantity."
+   },
+   {
+    "h": "Common cuts",
+    "body": "Recipes call for specific cuts because size affects how food cooks. A dice is a cube (large, medium, or small); even dicing means even cooking. A julienne is thin matchsticks, good for stir-fries and garnishes. A chiffonade is leafy herbs or greens rolled and sliced into thin ribbons.\n\nUniform pieces aren't just pretty — they cook at the same rate, so nothing is raw while the rest is overdone.",
+    "example": "Dice: cubes.  Julienne: matchsticks.  Chiffonade: thin ribbons of leaves.",
+    "tip": "Cuts like dice, julienne, and chiffonade control size. Uniform pieces cook evenly, which is the real reason to cut carefully."
+   },
+   {
+    "h": "Cutting round and awkward foods",
+    "body": "Round foods roll, which is dangerous. The rule: create a flat surface first. Cut a thin slice off one side so the food sits steady, then place the flat side down and cut from there. For an onion, cut it in half through the root, then lay the flat side down.\n\nKeep your guiding hand in the claw (fingertips curled under, knuckles guiding the blade) at all times. A stable food plus the claw grip prevents almost every kitchen cut.",
+    "example": "Round food -> slice a flat side -> lay it flat -> cut safely.",
+    "tip": "Make a flat surface on round foods so they can't roll, then cut with your other hand in the claw grip. Stability prevents cuts."
    }
   ],
   "cards": [
@@ -20685,6 +21429,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Build smooth technique and speed arrives on its own."
+   },
+   {
+    "q": "Which knife handles the majority of kitchen tasks?",
+    "options": [
+     "a chef's knife",
+     "a paring knife",
+     "a serrated knife",
+     "a butter knife"
+    ],
+    "a": 0,
+    "why": "A chef's knife chops, slices, and dices most foods."
+   },
+   {
+    "q": "A serrated knife is best for:",
+    "options": [
+     "bread and tomatoes",
+     "peeling fruit",
+     "fine dicing",
+     "carving bone"
+    ],
+    "a": 0,
+    "why": "Its teeth saw without crushing soft or crusty foods."
+   },
+   {
+    "q": "A 'julienne' cut produces:",
+    "options": [
+     "thin matchsticks",
+     "cubes",
+     "ribbons of leaves",
+     "large chunks"
+    ],
+    "a": 0,
+    "why": "Julienne means thin matchstick strips."
+   },
+   {
+    "q": "Uniform cuts matter mainly because they:",
+    "options": [
+     "cook evenly",
+     "look fancy only",
+     "use a sharper knife",
+     "take longer"
+    ],
+    "a": 0,
+    "why": "Even sizes cook at the same rate."
+   },
+   {
+    "q": "To safely cut a round food, you should first:",
+    "options": [
+     "make a flat surface so it can't roll",
+     "cut it while it rolls",
+     "freeze it solid",
+     "use a dull knife"
+    ],
+    "a": 0,
+    "why": "A flat side keeps the food stable."
    }
   ]
  },
@@ -20728,6 +21527,24 @@ window.LAB404_CONTENT = {
     "h": "Choosing the right method",
     "body": "Matching method to ingredient is a cook's key judgment. Tender foods (a good steak, fish, quick vegetables) suit fast, high-heat dry methods that brown without overcooking. Tough, cheap cuts (chuck, shoulder) need slow, moist methods like braising to break down and tenderize — cook them fast and they're like shoe leather; cook them slow and low and they're glorious.\n\nDelicate items (eggs, fish, greens) want gentle heat. Starchy staples (pasta, rice, potatoes) usually start with boiling or steaming. There's often more than one right answer, but understanding what each method does — and what each food needs — lets you cook confidently without a recipe, improvising based on what you have. That's the real goal: not memorizing recipes, but understanding techniques.",
     "tip": "Match method to food: high-heat dry for tender cuts/quick browning; slow, moist braising for tough cheap cuts; gentle heat for delicate foods."
+   },
+   {
+    "h": "Searing and the Maillard reaction",
+    "body": "When you cook protein or vegetables in a hot, dry pan until they brown, you trigger the Maillard reaction — a chemistry between heat, proteins, and sugars that creates hundreds of new flavor compounds. That deep brown crust on a steak or roasted vegetable is where much of the flavor lives.\n\nFor a good sear, use high heat, a dry surface (pat food dry), and don't crowd the pan or move the food too soon — browning needs contact and patience.",
+    "example": "Pat dry -> hot pan -> don't crowd -> leave it until browned, then flip.",
+    "tip": "Browning (the Maillard reaction) builds deep flavor. Dry the food, use high heat, don't crowd the pan, and let a crust form before flipping."
+   },
+   {
+    "h": "Braising: combining the methods",
+    "body": "Braising unites dry and moist heat and is how tough, cheap cuts become tender and rich. First you sear the food in a hot pan for flavor (dry heat), then add liquid partway up, cover, and cook low and slow (moist heat). The long, gentle cooking breaks down tough connective tissue into silkiness.\n\nStews, pot roast, and many comfort foods are braises. It's forgiving and mostly hands-off once it's going.",
+    "example": "Sear -> add liquid halfway -> cover -> cook low and slow until tender.",
+    "tip": "Braising sears first (flavor), then simmers low and slow in liquid (tenderness). It turns tough, cheap cuts into rich, tender meals."
+   },
+   {
+    "h": "Resting and carryover cooking",
+    "body": "Meat keeps cooking after it leaves the heat — carryover cooking can raise its internal temperature several more degrees. So pull roasts and steaks just before the target and let them rest. Resting also lets the juices, driven to the center by heat, redistribute, so they stay in the meat instead of spilling out when you cut.\n\nA few minutes for a steak, longer for a roast, makes a big difference in juiciness.",
+    "example": "Pull a steak a few degrees early -> rest it -> juices redistribute, stays juicy.",
+    "tip": "Rest meat after cooking: carryover heat finishes it, and the juices redistribute so they don't run out when you cut."
    }
   ],
   "cards": [
@@ -20967,6 +21784,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Understanding methods lets you improvise."
+   },
+   {
+    "q": "The browning that builds deep flavor is called the:",
+    "options": [
+     "Maillard reaction",
+     "danger zone",
+     "chiffonade",
+     "braise"
+    ],
+    "a": 0,
+    "why": "Heat, proteins, and sugars create new flavor compounds."
+   },
+   {
+    "q": "For a good sear you should:",
+    "options": [
+     "use high heat and not crowd the pan",
+     "use low heat and a wet surface",
+     "crowd the pan",
+     "flip constantly"
+    ],
+    "a": 0,
+    "why": "High heat, dry food, and space let a crust form."
+   },
+   {
+    "q": "After searing, a braise is cooked:",
+    "options": [
+     "low and slow in liquid",
+     "fast over high heat",
+     "with no liquid at all",
+     "in a toaster"
+    ],
+    "a": 0,
+    "why": "Gentle, slow moist heat tenderizes the meat."
+   },
+   {
+    "q": "Braising is especially good for:",
+    "options": [
+     "tough, cheap cuts",
+     "delicate fish",
+     "fresh salad",
+     "raw vegetables"
+    ],
+    "a": 0,
+    "why": "Low, slow moist heat tenderizes tough cuts."
+   },
+   {
+    "q": "Resting meat after cooking lets the:",
+    "options": [
+     "juices redistribute",
+     "meat cool completely",
+     "crust disappear",
+     "fat vanish"
+    ],
+    "a": 0,
+    "why": "Resting keeps the meat juicy when cut."
    }
   ]
  },
@@ -21010,6 +21882,23 @@ window.LAB404_CONTENT = {
     "h": "Troubleshooting",
     "body": "When baking goes wrong, the cause is usually traceable. A cake that sank often means too much leavening, the oven door opened too early, or underbaking. Dense, flat results can mean dead yeast, too much flour, or old baking powder. Dry, tough baked goods usually mean too much flour or overmixing (or overbaking). Burnt bottoms often mean the oven runs hot or the rack is too low.\n\nThe lesson: baking problems have reasons, and diagnosing them makes you better. Keep notes on what you changed. Check that your leaveners are fresh (baking powder and yeast expire), measure more carefully, and verify your oven's real temperature. Baking is less about talent than about accuracy and understanding — get those right, and good results follow consistently. Every baker learns by fixing their flops.",
     "tip": "Baking flops have reasons: sank = too much leavening/opened early; dense = dead yeast/too much flour; tough = overmixed. Diagnose and adjust."
+   },
+   {
+    "h": "Measuring by weight vs volume",
+    "body": "Baking is precise chemistry, so how you measure matters. A cup of flour can vary a lot depending on how you scoop it, which throws off a recipe. Measuring by weight with a kitchen scale (grams) is far more accurate and consistent than measuring by volume (cups).\n\nIf you bake a lot, a scale is the single best upgrade. If using cups, spoon flour in and level it off rather than scooping, which packs in too much.",
+    "example": "Scooped cup of flour: can be 20% too much.\nWeighed flour: exact every time.",
+    "tip": "Weigh ingredients (grams) for consistent baking. If using cups, spoon flour in and level it — scooping packs in too much."
+   },
+   {
+    "h": "Gluten and mixing",
+    "body": "When flour meets liquid and gets mixed, it forms gluten — a stretchy network of proteins. Gluten is what you want in bread (chewy, strong structure) but not in tender cakes and muffins. That's why bread is kneaded a lot and muffin batter is barely stirred.\n\nOvermixing a tender batter develops too much gluten and makes it tough and rubbery. Mix just until combined for cakes, quick breads, and muffins.",
+    "example": "Bread: knead a lot (strong gluten).\nMuffins/cakes: mix just until combined (little gluten).",
+    "tip": "Mixing flour and liquid builds gluten — great for chewy bread, bad for tender cakes. Knead bread; barely stir muffin and cake batter."
+   },
+   {
+    "h": "Oven temperature and placement",
+    "body": "Ovens lie. Many run hotter or cooler than the dial says, which ruins careful baking, so an inexpensive oven thermometer is worth it. Always preheat fully — putting batter into a not-yet-hot oven changes how it rises.\n\nPlacement matters too: the middle rack gives the most even heat, and opening the door often lets heat escape and can collapse delicate bakes. Trust your eyes and a tester near the end, not just the timer.",
+    "tip": "Preheat fully and use an oven thermometer — ovens are often off. Bake on the middle rack and avoid opening the door on delicate items."
    }
   ],
   "cards": [
@@ -21249,6 +22138,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Precise measuring and knowing the 'why' give reliable results."
+   },
+   {
+    "q": "The most accurate way to measure baking ingredients is by:",
+    "options": [
+     "weight",
+     "volume",
+     "guessing",
+     "color"
+    ],
+    "a": 0,
+    "why": "A scale avoids the variation of scooped cups."
+   },
+   {
+    "q": "If measuring flour by cups, you should:",
+    "options": [
+     "spoon it in and level it off",
+     "scoop and pack it",
+     "heap it over the top",
+     "shake the cup"
+    ],
+    "a": 0,
+    "why": "Scooping packs in too much flour."
+   },
+   {
+    "q": "Mixing flour with liquid develops:",
+    "options": [
+     "gluten",
+     "sugar",
+     "salt",
+     "water"
+    ],
+    "a": 0,
+    "why": "Gluten is the stretchy protein network."
+   },
+   {
+    "q": "For tender cakes and muffins you should:",
+    "options": [
+     "mix just until combined",
+     "knead for ten minutes",
+     "beat as long as possible",
+     "skip mixing"
+    ],
+    "a": 0,
+    "why": "Overmixing builds gluten and makes them tough."
+   },
+   {
+    "q": "A smart baking habit is to:",
+    "options": [
+     "preheat fully and use an oven thermometer",
+     "skip preheating",
+     "open the oven often",
+     "trust the dial blindly"
+    ],
+    "a": 0,
+    "why": "Ovens are often off, and full preheating ensures proper rise."
    }
   ]
  },
@@ -21291,6 +22235,23 @@ window.LAB404_CONTENT = {
     "h": "Storing food and cutting waste",
     "body": "Proper storage saves money and food. Keep your fridge and freezer at safe temperatures, store leftovers in sealed containers, and freeze anything you won't eat in a few days (most cooked food and many raw ingredients freeze well). Label frozen items with the date. Know roughly how long things last, and follow 'first in, first out' — use older items before newer ones.\n\nReducing food waste is both frugal and responsible: a large share of household food is thrown away. Plan portions you'll actually eat, repurpose leftovers (roast chicken becomes soup or sandwiches), and keep a rough eye on what needs using up soon. Good storage plus a 'use it up' mindset means the food you bought actually gets eaten — which is where the real savings of meal planning finally land.",
     "tip": "Store leftovers sealed, freeze what you won't eat soon (and label it), use oldest first, and repurpose leftovers to cut waste."
+   },
+   {
+    "h": "Building meals around a template",
+    "body": "Planning gets easy when you stop inventing from scratch. Use a simple template: a protein, a vegetable, and a starch (or carb). Fill the slots with whatever's on sale or in season, and you have endless balanced meals without overthinking.\n\nTheme nights help too — taco night, stir-fry night, pasta night — because each theme is a template you vary. Templates turn 'what's for dinner?' from a daily stress into a quick fill-in-the-blank.",
+    "example": "Template: protein + vegetable + starch.\nSwap the parts: chicken/broccoli/rice, beans/peppers/tortilla, ...",
+    "tip": "Plan meals with a template (protein + vegetable + starch) and theme nights. It removes the daily 'what's for dinner' stress."
+   },
+   {
+    "h": "Shopping your pantry first",
+    "body": "Before making a grocery list, look at what you already have. 'Shopping your pantry' — building meals around food you own, especially things nearing their use-by date — saves money and cuts waste. Then list only what's missing.\n\nOrganizing the list by store section (produce, dairy, frozen) speeds up the trip and reduces impulse buys. Shopping with a list and a full stomach is the cheapest grocery habit there is.",
+    "tip": "Plan around what you already own first, then list only the gaps. Shop with a list (and not hungry) to save money and cut waste."
+   },
+   {
+    "h": "Using leftovers creatively",
+    "body": "Leftovers are built-in future meals, not sad repeats. Cook once and reuse: roast a chicken for dinner, then use the rest in tacos, soup, or a salad. 'Planned-overs' — deliberately making extra — can turn one cooking session into several meals.\n\nMany foods transform rather than just repeat: extra rice becomes fried rice, stale bread becomes croutons or French toast, wilting vegetables go into soup. A little creativity turns waste into tomorrow's lunch.",
+    "example": "Roast chicken -> next day tacos or soup.\nExtra rice -> fried rice.  Stale bread -> croutons.",
+    "tip": "Cook once, eat several times: turn leftovers into new dishes. Deliberate 'planned-overs' save time and money and cut waste."
    }
   ],
   "cards": [
@@ -21530,6 +22491,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Planning around sales lowers the grocery bill."
+   },
+   {
+    "q": "A simple meal-planning template is:",
+    "options": [
+     "protein + vegetable + starch",
+     "dessert only",
+     "one ingredient",
+     "random items"
+    ],
+    "a": 0,
+    "why": "Filling those slots makes balanced meals easy."
+   },
+   {
+    "q": "'Theme nights' help meal planning by:",
+    "options": [
+     "giving a template to vary",
+     "banning vegetables",
+     "requiring new recipes daily",
+     "costing more"
+    ],
+    "a": 0,
+    "why": "Each theme is a repeatable template."
+   },
+   {
+    "q": "'Shopping your pantry' means:",
+    "options": [
+     "building meals around food you already have",
+     "buying everything new",
+     "shopping while hungry",
+     "ignoring expiration dates"
+    ],
+    "a": 0,
+    "why": "It uses what you own first to cut waste."
+   },
+   {
+    "q": "Organizing a grocery list by store section helps:",
+    "options": [
+     "speed the trip and reduce impulse buys",
+     "cost more",
+     "waste food",
+     "skip produce"
+    ],
+    "a": 0,
+    "why": "A sorted list is faster and more disciplined."
+   },
+   {
+    "q": "Making extra on purpose to reuse later is called:",
+    "options": [
+     "planned-overs",
+     "cross-contamination",
+     "the danger zone",
+     "a chiffonade"
+    ],
+    "a": 0,
+    "why": "Planned-overs turn one session into several meals."
    }
   ]
  },
@@ -21572,6 +22588,23 @@ window.LAB404_CONTENT = {
     "h": "Habits that build security",
     "body": "Financial security comes less from big wins and more from steady habits. Spend less than you earn. Save automatically and regularly. Keep an emergency fund. Avoid high-interest debt. Think before big purchases. None is complicated, but doing them consistently, over years, is what builds real stability — and later, wealth.\n\nTime is your biggest ally, thanks to compound growth: money saved and invested earns returns, which then earn their own returns, snowballing over decades. Starting small but early beats starting big but late. Good money habits don't require being rich; they're how ordinary income becomes security, options, and eventually freedom.",
     "tip": "Security comes from steady habits, not luck. Start saving early — compound growth rewards time more than amount."
+   },
+   {
+    "h": "Tracking where your money goes",
+    "body": "You can't manage money you don't measure. Before budgeting, spend a month simply tracking every dollar — a note on your phone, an app, or a saved receipt. Almost everyone is surprised: small, frequent purchases (coffee, apps, delivery fees) quietly add up to large monthly totals.\n\nSeeing the real numbers, without judgment, is what makes change possible. You can't cut spending you didn't know you had, and tracking turns vague worry into a clear, fixable picture.",
+    "tip": "Track every dollar for a month before changing anything. Small frequent purchases add up fast — seeing the real numbers is what enables change."
+   },
+   {
+    "h": "Good debt vs bad debt",
+    "body": "Not all debt is equal. 'Good' debt tends to buy something that grows in value or boosts income — a reasonable mortgage, a student loan for a degree that raises earnings, sometimes a modest business loan. 'Bad' debt funds things that lose value or get consumed, especially at high interest — credit-card balances, payday loans, financing depreciating stuff you can't afford.\n\nThe test isn't the word 'debt' but the interest rate and what it buys. High-interest consumer debt is the one to attack first.",
+    "example": "Good: mortgage, degree loan (builds value/income).\nBad: credit-card balance, payday loan (high interest, consumed).",
+    "tip": "Good debt builds value or income at low interest; bad debt funds consumption at high interest. Attack high-interest consumer debt first."
+   },
+   {
+    "h": "Building a financial safety net",
+    "body": "Security comes from a buffer between you and life's surprises. The core of a safety net is an emergency fund — starting with a small goal like $500 or $1,000, then building toward three to six months of expenses. It turns a car repair or lost shift from a crisis into an inconvenience.\n\nAdd to that the basics: adequate insurance so one accident can't wipe you out, and living a bit below your means so there's always margin. The safety net is what lets you take smart risks without fear.",
+    "example": "Start: $500-$1,000 emergency fund.\nBuild: 3-6 months of expenses + basic insurance + living below your means.",
+    "tip": "Build an emergency fund (start small, aim for 3-6 months of expenses), carry basic insurance, and live below your means. Margin prevents crises."
    }
   ],
   "cards": [
@@ -21811,6 +22844,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "You can't manage what you don't measure."
+   },
+   {
+    "q": "Before making a budget, a useful first step is to:",
+    "options": [
+     "track every dollar for a month",
+     "cut all spending blindly",
+     "ignore small purchases",
+     "borrow money"
+    ],
+    "a": 0,
+    "why": "Seeing where money goes makes change possible."
+   },
+   {
+    "q": "Small frequent purchases tend to:",
+    "options": [
+     "add up to large totals",
+     "never matter",
+     "lower your spending",
+     "be free"
+    ],
+    "a": 0,
+    "why": "Coffee, apps, and fees quietly accumulate."
+   },
+   {
+    "q": "'Good' debt generally:",
+    "options": [
+     "buys something that builds value or income",
+     "has very high interest",
+     "funds consumption",
+     "is always to be avoided"
+    ],
+    "a": 0,
+    "why": "A reasonable mortgage or degree loan can build value."
+   },
+   {
+    "q": "Which is usually 'bad' debt?",
+    "options": [
+     "a high-interest credit-card balance",
+     "a modest mortgage",
+     "a degree loan that raises income",
+     "no debt"
+    ],
+    "a": 0,
+    "why": "High-interest consumer debt funds consumption."
+   },
+   {
+    "q": "The core of a financial safety net is:",
+    "options": [
+     "an emergency fund",
+     "a new car",
+     "a credit card",
+     "a lottery ticket"
+    ],
+    "a": 0,
+    "why": "It turns surprises into inconveniences."
    }
   ]
  },
@@ -21856,6 +22944,23 @@ window.LAB404_CONTENT = {
     "h": "Using credit responsibly",
     "body": "Used wisely, credit is genuinely useful: it builds your score, handles emergencies, offers fraud protection, and spreads large necessary costs. The trick is to treat a credit card like a debit card — only charge what you already have the money to cover, and pay the full balance every month so you owe no interest.\n\nA few guardrails keep credit a friend: never spend to the limit, set up automatic payments so you're never late, check your statements for errors or fraud, and check your credit report (free) once a year. Responsible credit use, over time, is one of the clearest paths to financial options — the same tool that traps the careless rewards the disciplined.",
     "tip": "Treat a credit card like cash: only charge what you can pay off in full each month, and never miss a payment."
+   },
+   {
+    "h": "A budget you'll actually follow",
+    "body": "The best budget is the one you stick to, so simple beats perfect. Start with a method you'll keep up — the 50/30/20 split, a few spending categories, or an app that tracks automatically. Build in some money for fun, because a budget with zero flexibility fails like a diet with zero treats.\n\nReview it briefly each week, adjust when life changes, and forgive the occasional slip. Consistency over months, not perfection in one month, is what builds results.",
+    "example": "Keep it simple: a method you'll actually maintain beats a perfect one you abandon.",
+    "tip": "A budget only works if you follow it. Keep it simple, leave room for fun, review weekly, and value consistency over perfection."
+   },
+   {
+    "h": "What hurts and helps a credit score",
+    "body": "A credit score rewards boring, reliable habits. It HELPS to pay every bill on time (the biggest factor), keep credit-card balances low relative to your limit, and keep old accounts open to lengthen your history. It HURTS to miss payments, max out cards, apply for lots of credit at once, or let an account go to collections.\n\nYou don't need to carry a balance or pay interest to build credit — using a card lightly and paying it off in full each month works well.",
+    "example": "Helps: on-time payments, low balances, old accounts.\nHurts: missed payments, maxed cards, many applications.",
+    "tip": "On-time payments and low balances help your score most; missed payments and maxed cards hurt. You don't need to carry a balance to build credit."
+   },
+   {
+    "h": "Avoiding credit mistakes",
+    "body": "A few common traps cause most credit damage. Paying only the minimum keeps you in expensive debt for years. Ignoring the interest rate on a card or loan leads to paying far more than the sticker price. Opening store cards for a one-time discount can ding your score and tempt overspending.\n\nThe safest approach: understand any rate before you borrow, pay balances in full when you can, and treat credit as a tool for convenience and building history — not as extra income.",
+    "tip": "Avoid paying only the minimum, ignoring interest rates, and opening cards impulsively. Treat credit as a tool, not extra income."
    }
   ],
   "cards": [
@@ -22095,6 +23200,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Discipline turns credit into a useful tool."
+   },
+   {
+    "q": "The best budget is one that:",
+    "options": [
+     "you'll actually follow",
+     "is the most complicated",
+     "has zero flexibility",
+     "ignores your income"
+    ],
+    "a": 0,
+    "why": "Consistency matters more than perfection."
+   },
+   {
+    "q": "A budget with no room for fun tends to:",
+    "options": [
+     "fail like a diet with no treats",
+     "always succeed",
+     "build credit",
+     "lower interest"
+    ],
+    "a": 0,
+    "why": "Some flexibility makes it sustainable."
+   },
+   {
+    "q": "The biggest factor helping a credit score is:",
+    "options": [
+     "paying bills on time",
+     "carrying a big balance",
+     "opening many cards",
+     "ignoring due dates"
+    ],
+    "a": 0,
+    "why": "Payment history is the largest factor."
+   },
+   {
+    "q": "To build credit, you:",
+    "options": [
+     "don't need to carry a balance",
+     "must pay interest",
+     "must max out a card",
+     "should miss a payment"
+    ],
+    "a": 0,
+    "why": "Using a card lightly and paying in full works."
+   },
+   {
+    "q": "Paying only the minimum on a credit card:",
+    "options": [
+     "keeps you in expensive debt longer",
+     "clears the balance fast",
+     "raises your score instantly",
+     "removes interest"
+    ],
+    "a": 0,
+    "why": "Minimums stretch out the debt and its interest."
    }
   ]
  },
@@ -22137,6 +23297,23 @@ window.LAB404_CONTENT = {
     "h": "Your digital footprint",
     "body": "Everything you do online leaves a digital footprint — posts, photos, comments, searches, and accounts that can persist for years and be seen by people you don't expect: employers, schools, strangers. A useful rule is to never post what you wouldn't want a future boss, teacher, or your grandmother to see.\n\nManaging your footprint means thinking before posting, using privacy settings to control who sees what, being mindful of what others tag you in, and occasionally searching your own name to see what's public. You also leave a footprint through the data companies collect; being aware of it helps you make better choices about what you share. Your online reputation is real and lasting — tend it deliberately.",
     "tip": "Your online footprint is permanent and public-ish. Don't post what you'd not want a boss or family to see; use privacy settings."
+   },
+   {
+    "h": "Spotting misinformation and scams",
+    "body": "The internet mixes reliable information with errors, bias, and outright scams. Before believing or sharing, check the source (is it known and credible?), look for evidence and other outlets reporting the same thing, and be suspicious of content designed to make you angry or afraid — strong emotion is how false information spreads.\n\nScams use urgency ('act now!'), too-good-to-be-true offers, and requests for money or personal details. A simple pause to verify defeats most of them.",
+    "example": "Red flags: urgency, strong emotion, too-good-to-be-true, requests for money/info.",
+    "tip": "Check the source and look for corroboration before believing or sharing. Scams rely on urgency and emotion — pausing to verify defeats most."
+   },
+   {
+    "h": "Strong passwords and account security",
+    "body": "Weak, reused passwords are the top cause of hacked accounts. Use a long, unique password for each important account — a passphrase of several random words is both strong and memorable. Better still, use a password manager to create and store them so you don't have to remember each one.\n\nTurn on two-factor authentication (a code from your phone) wherever possible; it stops most break-ins even if your password leaks. Never reuse your email password anywhere, since email can reset everything else.",
+    "example": "Strong: a unique passphrase per account + two-factor authentication.\nWeak: one password reused everywhere.",
+    "tip": "Use a long, unique password per account (a password manager helps) and turn on two-factor authentication. Never reuse your email password."
+   },
+   {
+    "h": "Protecting your privacy online",
+    "body": "Much of what you do online is collected, so some caution protects you. Review the privacy settings on your accounts and limit what's public. Think before posting — assume anything you share could be seen by employers, strangers, or the future. Be careful with personal details (full birth date, address, location) that enable identity theft or tracking.\n\nUse secure (https) sites for anything sensitive, avoid logging into important accounts on public Wi-Fi, and be stingy about the permissions you grant apps.",
+    "tip": "Limit what's public, think before posting, and guard personal details. Use https, avoid sensitive logins on public Wi-Fi, and restrict app permissions."
    }
   ],
   "cards": [
@@ -22376,6 +23553,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "They control who can view what you share."
+   },
+   {
+    "q": "Before sharing online information you should:",
+    "options": [
+     "check the source and look for corroboration",
+     "share it immediately",
+     "trust anything emotional",
+     "ignore the author"
+    ],
+    "a": 0,
+    "why": "Verifying the source stops misinformation from spreading."
+   },
+   {
+    "q": "A common sign of a scam is:",
+    "options": [
+     "urgency and too-good-to-be-true offers",
+     "a calm, verifiable message",
+     "no request for money",
+     "a known sender"
+    ],
+    "a": 0,
+    "why": "Scams pressure you to act fast before you think."
+   },
+   {
+    "q": "The strongest password habit is to:",
+    "options": [
+     "use a unique password per account",
+     "reuse one password everywhere",
+     "use '1234'",
+     "share passwords"
+    ],
+    "a": 0,
+    "why": "Unique passwords limit the damage of any leak."
+   },
+   {
+    "q": "Two-factor authentication helps because it:",
+    "options": [
+     "stops break-ins even if your password leaks",
+     "replaces the need for passwords",
+     "slows your computer",
+     "shares your data"
+    ],
+    "a": 0,
+    "why": "A second code blocks most unauthorized logins."
+   },
+   {
+    "q": "To protect your privacy you should:",
+    "options": [
+     "limit personal details you post",
+     "share your full address publicly",
+     "log into banks on public Wi-Fi",
+     "accept every app permission"
+    ],
+    "a": 0,
+    "why": "Guarding personal details reduces identity theft and tracking."
    }
   ]
  },
@@ -22422,6 +23654,24 @@ window.LAB404_CONTENT = {
     "body": "The numbers one to ten: un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix. French counting has a quirk higher up (70 is 'soixante-dix,' literally 'sixty-ten'), but 1–10 are straightforward and the foundation for everything.\n\nConsistency beats intensity. A few minutes a day — an app, a song, a short video, labeling objects at home — builds far more than occasional marathons. Speak and make mistakes freely; French speakers appreciate the effort. Films and music are a pleasant way to train your ear to those tricky sounds. Bonne chance! (Good luck!)",
     "example": "1-10: un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix",
     "tip": "Master un–dix first, then practice daily and listen to real French to tune your ear. Small and steady wins."
+   },
+   {
+    "h": "Gender and articles",
+    "body": "Like Spanish, French nouns are masculine or feminine, and the article must match. 'The' is 'le' (masculine) or 'la' (feminine), and 'les' in the plural; 'a/an' is 'un' (m.) or 'une' (f.). Before a vowel, le and la both shorten to l' (l'ami).\n\nFrench gender is less predictable from the ending than Spanish, so the best habit is to learn every noun together with its article: le livre, la table.",
+    "example": "le livre (the book, m.)   la table (the table, f.)\nun chat (a cat)   une maison (a house)",
+    "tip": "French nouns are masculine or feminine; learn each with its article (le/la). Before a vowel, both become l' (l'ami)."
+   },
+   {
+    "h": "Verbs and subject pronouns",
+    "body": "French subject pronouns are je (I), tu (you, informal), il/elle (he/she), nous (we), vous (you, formal or plural), ils/elles (they). Regular verbs are grouped by ending, the largest being -er verbs like 'parler' (to speak): je parle, tu parles, il parle, nous parlons, vous parlez, ils parlent.\n\nNote that several of those forms sound the same even though they're spelled differently — French spelling often shows distinctions the ear doesn't hear.",
+    "example": "parler: je parle, tu parles, il parle, nous parlons, vous parlez, ils parlent.",
+    "tip": "Learn the subject pronouns (je, tu, il/elle, nous, vous, ils/elles) and conjugate -er verbs by their endings. Many forms sound alike but are spelled differently."
+   },
+   {
+    "h": "Everyday phrases and politeness",
+    "body": "French places real importance on politeness, and a few words smooth every interaction. Say bonjour (hello) when entering a shop, s'il vous plait (please), merci (thank you), de rien (you're welcome), and pardon/excusez-moi (excuse me). Question words include qui (who), que (what), ou (where), quand (when), pourquoi (why), comment (how), combien (how much).\n\nAdding 'bonjour' and 'merci' is not optional courtesy in France — it shapes how you're treated.",
+    "example": "Ou est...? = Where is...?\nCombien ca coute? = How much does it cost?",
+    "tip": "Politeness matters: open with bonjour, use s'il vous plait and merci. Learn question words (qui, que, ou, quand, comment, combien)."
    }
   ],
   "cards": [
@@ -22661,6 +23911,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "les is the plural 'the.'"
+   },
+   {
+    "q": "In French, 'the' before a feminine noun is:",
+    "options": [
+     "la",
+     "le",
+     "les",
+     "un"
+    ],
+    "a": 0,
+    "why": "'la' is the feminine singular 'the'."
+   },
+   {
+    "q": "Before a vowel, 'le' and 'la' become:",
+    "options": [
+     "l'",
+     "les",
+     "un",
+     "une"
+    ],
+    "a": 0,
+    "why": "They contract to l' (as in l'ami)."
+   },
+   {
+    "q": "The largest group of regular French verbs ends in:",
+    "options": [
+     "-er",
+     "-ir",
+     "-re",
+     "-ez"
+    ],
+    "a": 0,
+    "why": "-er verbs like parler are the biggest regular group."
+   },
+   {
+    "q": "The French subject pronoun 'nous' means:",
+    "options": [
+     "we",
+     "I",
+     "they",
+     "you (singular)"
+    ],
+    "a": 0,
+    "why": "'Nous' is the pronoun for 'we'."
+   },
+   {
+    "q": "A key French courtesy when entering a shop is to say:",
+    "options": [
+     "bonjour",
+     "nothing",
+     "pardon only",
+     "au revoir"
+    ],
+    "a": 0,
+    "why": "Greeting with 'bonjour' is expected politeness."
    }
   ]
  },
@@ -22707,6 +24012,24 @@ window.LAB404_CONTENT = {
     "body": "One to ten: eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn. You'll notice how close some are to English (zwei/two, drei/three, sechs/six) — the family resemblance again. These ten are the base for counting much higher.\n\nAs always, steady daily practice wins. Use an app briefly each day, label things at home, and lean on German's familiarity with English to pick up vocabulary fast. German music, films, and the clear phonetic spelling all help. Don't fear the long words or the grammar — start speaking simply and build. Viel Glück! (Good luck!)",
     "example": "1-10: eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn",
     "tip": "Learn eins–zehn (several resemble English), then practice daily. Start speaking simply; grammar details come later."
+   },
+   {
+    "h": "The four cases",
+    "body": "German nouns change the words around them depending on their role in the sentence — this is the case system, and it's the feature that most surprises English speakers. There are four cases: nominative (the subject), accusative (the direct object), dative (the indirect object), and genitive (possession).\n\nThe case mainly changes the article (der/den/dem for masculine 'the', for example), not usually the noun itself. You don't master it overnight; you learn it pattern by pattern as you go.",
+    "example": "Nominative (subject): der Mann (the man).\nAccusative (object): den Mann.\nDative (to/for): dem Mann.",
+    "tip": "German has four cases (nominative, accusative, dative, genitive) that mark a noun's role. They mostly change the article, learned gradually."
+   },
+   {
+    "h": "Word order",
+    "body": "German word order has one famous rule: in a normal statement, the conjugated verb comes second — always in the second position, even if that's not right after the subject. If you start a sentence with a time or place, the verb still comes second and the subject follows it.\n\nIn many sentences with helping verbs, the main verb goes to the very end. This 'verb-second, other verb last' pattern feels strange at first but is consistent.",
+    "example": "Ich spiele heute Fussball. (I play football today.)\nHeute spiele ich Fussball. (Today play I football.) -- verb still second.",
+    "tip": "In a German statement the conjugated verb is always in second position. With helping verbs, the other verb goes to the very end."
+   },
+   {
+    "h": "Everyday phrases and words",
+    "body": "Core phrases get you communicating fast: hallo (hello), guten Tag (good day), bitte (please / you're welcome), danke (thank you), entschuldigung (excuse me / sorry), ja (yes), nein (no). Question words include wer (who), was (what), wo (where), wann (when), warum (why), wie (how), wie viel (how much).\n\nGerman pronunciation is largely consistent once you learn the sounds, so these phrases are easier to say correctly than they look.",
+    "example": "Wo ist...? = Where is...?\nWie viel kostet das? = How much does that cost?",
+    "tip": "Learn core phrases (hallo, bitte, danke, entschuldigung) and question words (wer, was, wo, wann, wie). German spelling maps consistently to sound."
    }
   ],
   "cards": [
@@ -22946,6 +24269,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "das marks neuter nouns."
+   },
+   {
+    "q": "German's case system mainly changes:",
+    "options": [
+     "the article around the noun",
+     "the verb only",
+     "nothing",
+     "the punctuation"
+    ],
+    "a": 0,
+    "why": "Cases usually change der/den/dem, not the noun itself."
+   },
+   {
+    "q": "How many cases does German have?",
+    "options": [
+     "four",
+     "two",
+     "six",
+     "ten"
+    ],
+    "a": 0,
+    "why": "Nominative, accusative, dative, and genitive."
+   },
+   {
+    "q": "In a normal German statement, the conjugated verb comes:",
+    "options": [
+     "second",
+     "first",
+     "last always",
+     "anywhere"
+    ],
+    "a": 0,
+    "why": "The verb-second rule is fundamental."
+   },
+   {
+    "q": "The German word 'danke' means:",
+    "options": [
+     "thank you",
+     "hello",
+     "where",
+     "please"
+    ],
+    "a": 0,
+    "why": "'Danke' is 'thank you'."
+   },
+   {
+    "q": "The German question word 'wo' means:",
+    "options": [
+     "where",
+     "who",
+     "what",
+     "when"
+    ],
+    "a": 0,
+    "why": "'Wo' asks about location."
    }
   ]
  },
@@ -22989,6 +24367,23 @@ window.LAB404_CONTENT = {
     "h": "ASL grammar and Deaf culture",
     "body": "ASL grammar differs from English. It often uses a topic-comment structure — naming the topic first, then commenting on it (roughly, 'store, I go' for 'I'm going to the store'). It uses the space in front of the signer to set up people and things and refer back to them, and it relies on facial expression for grammar as described above. It is efficient and logical, just organized differently from English.\n\nLearning ASL also means respecting Deaf culture — a vibrant community with its own norms, history, and pride. Many Deaf people see deafness not as something to fix but as a culture and identity. Approaching ASL with that respect, learning from Deaf people, and valuing the language on its own terms is both the polite and the effective way in.",
     "tip": "ASL uses topic-comment order and signing space, with grammar on the face. Learn it from Deaf people and respect Deaf culture."
+   },
+   {
+    "h": "Facial expressions as grammar",
+    "body": "In ASL, your face isn't just emotion — it's grammar. Raised eyebrows turn a statement into a yes/no question; furrowed brows mark a who/what/where question. Facial expressions and mouth movements also show intensity, so a sign done with a certain expression can mean 'a little' versus 'a lot'.\n\nThis means a flat, expressionless face in ASL is like a monotone, grammar-free voice in English — it loses meaning. Learning to use the face is as important as learning the hand signs.",
+    "example": "Raised eyebrows -> yes/no question.\nFurrowed brows -> wh- question (who/what/where).",
+    "tip": "In ASL the face carries grammar: raised eyebrows mark a yes/no question, furrowed brows a wh- question. Expression is not optional."
+   },
+   {
+    "h": "Common everyday signs",
+    "body": "A small set of signs covers a lot of daily interaction. Learn greetings (hello, thank you, please, sorry), the yes and no signs, and high-frequency words like 'name', 'help', 'eat', 'bathroom', 'learn', and 'again'. Learning to sign your own name and ask someone theirs ('your name what?') opens real conversations.\n\nAs with any language, consistent daily practice and using it with others beats memorizing long lists you never use.",
+    "example": "'Your name what?' is how you ask someone's name in ASL word order.",
+    "tip": "Start with greetings and high-frequency signs (name, help, eat, again). Learning to ask someone's name opens real conversation."
+   },
+   {
+    "h": "Etiquette and getting attention",
+    "body": "Deaf culture has its own polite norms worth respecting. To get someone's attention, a gentle tap on the shoulder or a wave in their line of sight is appropriate; flicking lights works for a room. Maintain eye contact during a conversation — looking away is like covering your ears.\n\nDon't shout or exaggerate your lip movements 'to help'; it doesn't. And remember ASL is a full language with its own grammar, not English on the hands — approach it with the same respect you'd give any culture's language.",
+    "tip": "Get attention with a shoulder tap or a wave; keep eye contact during signing. ASL is a complete language and culture, deserving full respect."
    }
   ],
   "cards": [
@@ -23228,6 +24623,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Deaf culture is a source of community and pride for many."
+   },
+   {
+    "q": "In ASL, raised eyebrows usually signal a:",
+    "options": [
+     "yes/no question",
+     "command",
+     "past tense",
+     "whisper"
+    ],
+    "a": 0,
+    "why": "Facial expression carries grammar in ASL."
+   },
+   {
+    "q": "Facial expression in ASL is:",
+    "options": [
+     "part of the grammar",
+     "just decoration",
+     "never used",
+     "only emotion"
+    ],
+    "a": 0,
+    "why": "A flat face loses grammatical meaning."
+   },
+   {
+    "q": "A good first signing skill is to:",
+    "options": [
+     "sign your name and ask someone's",
+     "memorize the dictionary",
+     "shout words",
+     "avoid eye contact"
+    ],
+    "a": 0,
+    "why": "It opens real conversations."
+   },
+   {
+    "q": "A polite way to get a Deaf person's attention is to:",
+    "options": [
+     "tap the shoulder or wave in sight",
+     "shout loudly",
+     "grab their hands",
+     "flash a camera"
+    ],
+    "a": 0,
+    "why": "A gentle tap or visible wave is appropriate."
+   },
+   {
+    "q": "ASL is best understood as:",
+    "options": [
+     "a full language with its own grammar",
+     "English on the hands",
+     "a code",
+     "just gestures"
+    ],
+    "a": 0,
+    "why": "It has its own grammar and culture."
    }
   ]
  },
