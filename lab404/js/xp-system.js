@@ -149,6 +149,14 @@
     if (!document.hidden) refresh();
   });
 
+  /* Level + progress-to-next-level, for the My Progress dashboard. */
+  function levelInfo() {
+    var xp = calcXp();
+    var level = 1, threshold = 100, step = 150, prev = 0;
+    while (xp >= threshold) { level++; prev = threshold; threshold += step; step += 50; }
+    return { xp: xp, level: level, tag: levelTag(level), prev: prev, next: threshold, into: xp - prev, span: threshold - prev };
+  }
+
   window.refreshXP = refresh;
-  window.XPSystem  = { getXP: calcXp };
+  window.XPSystem  = { getXP: calcXp, levelInfo: levelInfo };
 })();

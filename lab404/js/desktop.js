@@ -193,6 +193,7 @@
     /* Browse by Grade + Report Card are the student/progress tools. They are NOT
        desktop icons anymore — they live behind the level badge in the taskbar tray
        (see wireProgressMenu below), keeping the desktop to pure subjects. */
+    APPS["myprogress"] = { title: "My Progress", icon: "📈" };
     APPS["bygrade"] = { title: "Browse by Grade", icon: "🎓" };
     APPS["course"] = { title: "Mastery Course", icon: "🎯" };
     APPS["transcript"] = { title: "Report Card", icon: "📋" };
@@ -333,6 +334,7 @@
       if (app === "data")    { winEl.style.width = "580px"; winEl.style.height = "520px"; }
       if (app === "skills")  { winEl.style.width = "620px"; winEl.style.height = "580px"; }
       if (app === "about")   { winEl.style.width = "400px"; winEl.style.height = "340px"; }
+      if (app === "myprogress") { winEl.style.width = "620px"; winEl.style.height = "600px"; }
       if (app === "bygrade") { winEl.style.width = "740px"; winEl.style.height = "640px"; }
       if (app === "course")  { winEl.style.width = "780px"; winEl.style.height = "660px"; }
       if (app === "transcript") { winEl.style.width = "640px"; winEl.style.height = "600px"; }
@@ -731,6 +733,8 @@
 
       if (app.indexOf("folder-") === 0) {
         Desktop._renderFolder(winId, app);
+      } else if (app === "myprogress") {
+        Desktop._renderMyProgress(winId);
       } else if (app === "bygrade") {
         Desktop._renderGradeDash(winId);
       } else if (app === "course") {
@@ -807,6 +811,109 @@
             '<p style="font-size:0.68rem;color:var(--text-faint);margin:0;">Built for CompTIA A+ 220-1201/1202 and beyond</p>' +
           '</div>';
       }
+    },
+
+    _renderMyProgress: function (winId) {
+      var content = document.getElementById(winId + "-content");
+      if (!content) return;
+      var C = window.LAB404_CONTENT || {}, COURSES = window.LAB404_COURSES || {}, M = window.LAB404_MASTERY;
+      var prog = Desktop._progGet();
+      var li = (window.XPSystem && window.XPSystem.levelInfo) ? window.XPSystem.levelInfo()
+             : { xp: 0, level: 1, tag: "LV.1", into: 0, span: 100 };
+      var streak = parseInt(localStorage.getItem("study-streak-count") || "0", 10);
+
+      /* Life/elective topics */
+      var ck = Object.keys(C), topicTotal = ck.length, topicMastered = 0, topicExplored = 0;
+      ck.forEach(function (k) { var e = prog[k]; if (e && e.attempts) { topicExplored++; if ((e.best || 0) >= 0.85) topicMastered++; } });
+
+      /* Graded courses */
+      var objTot = 0, objMastered = 0, startedN = 0, reviewCourses = [];
+      if (M && M.readiness) Object.keys(COURSES).forEach(function (id) {
+        var r = M.readiness(id); if (!r) return;
+        objTot += r.total; objMastered += r.mastered;
+        if (r.started) startedN++;
+        if (localStorage.getItem("lab404.mastery." + id) && r.reviewDue > 0) reviewCourses.push({ id: id, title: COURSES[id].title, n: r.reviewDue });
+      });
+
+      /* Study-next suggestions: review-due courses, then weak topics, then something new */
+      var next = [];
+      reviewCourses.slice(0, 3).forEach(function (rc) {
+        next.push({ icon: "🔁", label: "Review due · " + rc.title, sub: rc.n + " objective" + (rc.n > 1 ? "s" : "") + " to refresh", app: "course", params: { course: rc.id } });
+      });
+      ck.forEach(function (k) {
+        if (next.length >= 6) return;
+        var e = prog[k];
+        if (e && e.attempts && (e.best || 0) < 0.85) next.push({ icon: "📘", label: "Keep practicing · " + C[k].title, sub: (C[k].subject || "") + " · best " + Math.round((e.best || 0) * 100) + "%", app: "folder-" + k });
+      });
+      for (var i = 0; i < ck.length && next.length < 4; i++) {
+        var k2 = ck[i]; if (prog[k2] && prog[k2].attempts) continue;
+        next.push({ icon: "✨", label: "Try · " + C[k2].title, sub: (C[k2].subject || "") + " · new topic", app: "folder-" + k2 });
+      }
+
+      if (!document.getElementById("mp-style")) {
+        var st = document.createElement("style"); st.id = "mp-style";
+        st.textContent =
+          ".mp-wrap{padding:16px;font-size:.9rem}" +
+          ".mp-head{border:1px solid var(--border,#334);border-radius:14px;padding:16px;margin-bottom:14px}" +
+          ".mp-lvl{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}" +
+          ".mp-tag{font-size:1.6rem;font-weight:800;color:var(--accent2,#39e3c8);line-height:1}" +
+          ".mp-xp{font-size:.72rem;color:var(--text-muted,#9aa)}" +
+          ".mp-streak{margin-left:auto;font-size:.85rem;font-weight:700;color:var(--amber,#E8A33C)}" +
+          ".mp-bar{height:8px;background:var(--border,#334);border-radius:4px;overflow:hidden;margin-top:10px}" +
+          ".mp-bar-fill{height:100%;background:linear-gradient(90deg,var(--accent2,#39e3c8),var(--accent,#4a90e2));border-radius:4px}" +
+          ".mp-stats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}" +
+          ".mp-stat{flex:1;min-width:120px;border:1px solid var(--border,#334);border-radius:12px;padding:12px;text-align:center}" +
+          ".mp-stat b{display:block;font-size:1.5rem;font-weight:800;line-height:1}" +
+          ".mp-stat small{display:block;font-size:.6rem;color:var(--text-muted,#9aa);text-transform:uppercase;letter-spacing:.4px;margin-top:4px}" +
+          ".mp-h{font-weight:700;font-size:.8rem;color:var(--text-muted,#9aa);text-transform:uppercase;letter-spacing:.4px;margin:4px 0 8px}" +
+          ".mp-item{display:flex;align-items:center;gap:11px;border:1px solid var(--border,#334);border-radius:10px;padding:10px 13px;margin-bottom:6px;cursor:pointer;width:100%;text-align:left;background:transparent;color:var(--text);font-family:inherit}" +
+          ".mp-item:hover{background:rgba(127,127,127,.1)}" +
+          ".mp-item .ic{font-size:18px;flex-shrink:0}" +
+          ".mp-item>span:last-child{display:flex;flex-direction:column;min-width:0}" +
+          ".mp-item .lab{display:block;font-weight:700;font-size:.85rem}.mp-item .sb{display:block;font-size:.66rem;color:var(--text-muted,#9aa);margin-top:1px}" +
+          ".mp-empty{color:var(--text-muted,#9aa);font-size:.82rem;padding:8px 0 4px;line-height:1.6}" +
+          ".mp-links{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}" +
+          ".mp-link{flex:1;min-width:130px;border:1px solid var(--border,#334);border-radius:10px;padding:10px;text-align:center;cursor:pointer;background:transparent;color:var(--text);font-family:inherit;font-size:.8rem;font-weight:700}" +
+          ".mp-link:hover{background:rgba(0,255,204,.08);border-color:rgba(0,255,204,.3)}";
+        document.head.appendChild(st);
+      }
+
+      var pct = li.span ? Math.max(0, Math.min(100, Math.round(li.into / li.span * 100))) : 0;
+      var nextHtml = next.length
+        ? next.map(function (n, i) {
+            return '<button class="mp-item" data-i="' + i + '"><span class="ic">' + n.icon + '</span>' +
+              '<span style="min-width:0"><span class="lab">' + escHtml(n.label) + '</span><span class="sb">' + escHtml(n.sub) + '</span></span></button>';
+          }).join("")
+        : '<div class="mp-empty">You’re all caught up. Open a subject and take a quiz to build your level — every subject counts. 🎉</div>';
+
+      content.innerHTML =
+        '<div class="mp-wrap">' +
+          '<div class="mp-head">' +
+            '<div class="mp-lvl"><span class="mp-tag">' + escHtml(li.tag) + '</span>' +
+              '<span class="mp-xp">' + li.xp + ' XP total' + (li.span ? ' · ' + li.into + ' / ' + li.span + ' to next level' : '') + '</span>' +
+              (streak > 0 ? '<span class="mp-streak">🔥 ' + streak + '-day streak</span>' : '') +
+            '</div>' +
+            '<div class="mp-bar"><div class="mp-bar-fill" style="width:' + pct + '%"></div></div>' +
+          '</div>' +
+          '<div class="mp-stats">' +
+            '<div class="mp-stat"><b>' + topicMastered + '<span style="font-size:.9rem;color:var(--text-faint,#778)">/' + topicTotal + '</span></b><small>Topics mastered</small></div>' +
+            '<div class="mp-stat"><b>' + topicExplored + '</b><small>Topics explored</small></div>' +
+            '<div class="mp-stat"><b>' + objMastered + '<span style="font-size:.9rem;color:var(--text-faint,#778)">/' + objTot + '</span></b><small>Objectives mastered</small></div>' +
+            '<div class="mp-stat"><b>' + startedN + '</b><small>Courses started</small></div>' +
+          '</div>' +
+          '<div class="mp-h">🎯 Study next</div>' + nextHtml +
+          '<div class="mp-links">' +
+            '<button class="mp-link" data-open="bygrade">🎓 Browse by Grade</button>' +
+            '<button class="mp-link" data-open="transcript">📋 Report Card</button>' +
+          '</div>' +
+        '</div>';
+
+      content.querySelectorAll(".mp-item[data-i]").forEach(function (b) {
+        b.addEventListener("click", function () { var n = next[+this.getAttribute("data-i")]; if (n) Desktop.openWindow(n.app, n.params); });
+      });
+      content.querySelectorAll(".mp-link[data-open]").forEach(function (b) {
+        b.addEventListener("click", function () { Desktop.openWindow(this.getAttribute("data-open")); });
+      });
     },
 
     _renderTranscript: function (winId) {
@@ -1731,6 +1838,7 @@
     menu.setAttribute("hidden", "");
     menu.innerHTML =
       '<div class="progress-menu-h">Your progress</div>' +
+      '<button class="progress-menu-item" data-app="myprogress"><span>📈</span> My Progress</button>' +
       '<button class="progress-menu-item" data-app="bygrade"><span>🎓</span> Browse by Grade</button>' +
       '<button class="progress-menu-item" data-app="transcript"><span>📋</span> Report Card</button>';
     document.body.appendChild(menu);
