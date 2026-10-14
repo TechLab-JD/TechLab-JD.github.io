@@ -406,6 +406,24 @@ window.LAB404_CONTENT = {
     "h": "Budgeting toward goals",
     "body": "The real power of budgeting is that it funds your goals. A budget isn't just about covering bills — it's about intentionally directing money toward what matters to you: an emergency fund, paying off debt, a car, a home, education, or freedom from money stress. When you budget with goals in mind, every dollar you save or allocate is progress toward something you want.\n\nMake your goals specific and give them a line in your budget (e.g., 'save $200/month toward an emergency fund'). Seeing progress is motivating, and automating those contributions makes them happen. A budget transforms money from a source of stress into a tool you control — and over time, the consistent small decisions a budget guides add up to genuinely life-changing results. It's the foundation every other money skill builds on.",
     "tip": "Budget toward specific goals (give each a line + automate it). A budget turns money from stress into a tool that funds what you actually want."
+   },
+   {
+    "h": "The 50/30/20 rule",
+    "body": "A simple, popular budget splits your after-tax income into three buckets: 50 percent for needs (rent, food, utilities, minimum debt payments), 30 percent for wants (dining out, entertainment, hobbies), and 20 percent for savings and extra debt payoff.\n\nThe percentages are a starting guide, not a law — if rent is high where you live, needs may take more, and you adjust the others. The value is having a clear, memorable target for each dollar.",
+    "example": "Take-home $2,000/month:\n  Needs $1,000 | Wants $600 | Savings/debt $400",
+    "tip": "50% needs, 30% wants, 20% savings and debt payoff. Adjust the percentages to your real costs, but keep every dollar assigned."
+   },
+   {
+    "h": "Zero-based budgeting",
+    "body": "In a zero-based budget, you give every dollar a job until income minus all assigned amounts equals zero. That doesn't mean you spend everything — savings and debt payoff are jobs too. It just means no dollar is left unplanned.\n\nThis method catches 'mystery money' that otherwise disappears, and it forces you to decide on purpose where your money goes rather than wondering where it went.",
+    "example": "Income $2,000 = rent $800 + food $300 + gas $150 + savings $400 + fun $200 + ... = $0 left to assign.",
+    "tip": "Zero-based budgeting assigns every dollar a job (including savings) so income minus plans equals zero. Nothing is unaccounted for."
+   },
+   {
+    "h": "Sinking funds for big expenses",
+    "body": "Big irregular expenses — car repairs, holidays, insurance premiums, a new laptop — wreck budgets when they hit all at once. A sinking fund prevents that: you save a small amount each month toward a known future cost, so the money is ready when the bill arrives.\n\nIt turns a painful $600 surprise into an easy $50 a month. Separate sinking funds for separate goals keep the money from being 'borrowed' for something else.",
+    "example": "Car registration of $600 due yearly -> save $50/month in a 'car' sinking fund.",
+    "tip": "A sinking fund saves a little each month for a known future cost, so big irregular bills never blow up your budget."
    }
   ],
   "cards": [
@@ -645,6 +663,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Budget with the money you actually get."
+   },
+   {
+    "q": "In the 50/30/20 rule, what does the 20 percent cover?",
+    "options": [
+     "savings and extra debt payoff",
+     "rent",
+     "dining out",
+     "all needs"
+    ],
+    "a": 0,
+    "why": "20% goes to savings and paying down debt faster."
+   },
+   {
+    "q": "In the 50/30/20 rule, 'needs' should be about:",
+    "options": [
+     "50 percent",
+     "20 percent",
+     "80 percent",
+     "10 percent"
+    ],
+    "a": 0,
+    "why": "Half of take-home pay goes to needs."
+   },
+   {
+    "q": "A zero-based budget means:",
+    "options": [
+     "every dollar is assigned a job",
+     "you spend down to zero dollars",
+     "you have no savings",
+     "you ignore income"
+    ],
+    "a": 0,
+    "why": "Income minus all assigned amounts (including savings) equals zero."
+   },
+   {
+    "q": "A sinking fund is money saved for:",
+    "options": [
+     "a known future expense",
+     "today's groceries",
+     "paying taxes late",
+     "nothing in particular"
+    ],
+    "a": 0,
+    "why": "You set aside a little each month for a big upcoming cost."
+   },
+   {
+    "q": "Saving $50 a month for a $600 yearly bill is an example of:",
+    "options": [
+     "a sinking fund",
+     "a monopoly",
+     "an overdraft",
+     "inflation"
+    ],
+    "a": 0,
+    "why": "It spreads a big irregular cost into small monthly amounts."
    }
   ]
  },
@@ -688,6 +761,24 @@ window.LAB404_CONTENT = {
     "h": "Know your limits",
     "body": "The most important first-aid skill is knowing what you can and can't do. First aid is about immediate, basic help and stabilizing a person — not diagnosing or treating like a doctor. When in doubt about anything serious, call emergency services and follow the dispatcher's instructions; they can guide you through steps over the phone.\n\nDon't move someone with a possible spinal injury unless they're in danger, don't give food or drink to someone who may need surgery, and don't attempt procedures you're not trained for. Your job is to keep the person as safe and stable as possible until professionals take over. The best preparation of all is taking a real certified first-aid and CPR course — this lesson is a starting point, not a replacement.",
     "tip": "First aid stabilizes until pros arrive — it doesn't replace them. When unsure, call 911 and follow the dispatcher. Take a certified course."
+   },
+   {
+    "h": "Using an AED",
+    "body": "An automated external defibrillator (AED) is a portable device that can restart a heart in cardiac arrest, and it's designed for untrained people. You turn it on and it gives spoken instructions. It analyzes the heart rhythm and only delivers a shock if one is needed — it will not shock a normal heart, so you can't hurt someone by trying.\n\nFor a collapsed, unresponsive person who isn't breathing, send someone for an AED while you start CPR, and use it as soon as it arrives.",
+    "example": "Turn it on -> follow the voice prompts -> attach pads to bare chest -> stand clear when it says 'analyzing'.",
+    "tip": "An AED talks you through every step and only shocks if needed. Get one and use it fast on an unresponsive, non-breathing person while doing CPR."
+   },
+   {
+    "h": "Recognizing a stroke and heart attack",
+    "body": "Fast recognition saves lives and brain. For stroke, remember FAST: Face drooping, Arm weakness, Speech difficulty, Time to call emergency services. For a heart attack, watch for chest pressure or pain, pain spreading to the arm, jaw, or back, shortness of breath, nausea, and cold sweat — and note that symptoms can be subtler in women.\n\nIn both cases, every minute matters. Call emergency services immediately rather than waiting to see if it passes.",
+    "example": "Stroke = FAST: Face, Arm, Speech, Time.\nHeart attack: chest pressure, arm/jaw pain, shortness of breath, cold sweat.",
+    "tip": "Use FAST to spot a stroke. For heart attacks, watch for chest pressure and pain spreading to the arm or jaw. Call for help immediately."
+   },
+   {
+    "h": "Allergic reactions",
+    "body": "An allergic reaction can range from mild (itching, hives) to life-threatening anaphylaxis, where the airway swells and blood pressure drops within minutes. Signs of anaphylaxis include trouble breathing, swelling of the face or throat, a widespread rash, and faintness.\n\nAnaphylaxis is an emergency: if the person has an epinephrine auto-injector (an EpiPen), help them use it right away, then call emergency services — even if they improve, because symptoms can return.",
+    "example": "Mild: itching, hives.\nSevere (anaphylaxis): throat swelling, trouble breathing -> use epinephrine + call for help.",
+    "tip": "Anaphylaxis (airway swelling, trouble breathing) is a life-threat. Use an epinephrine auto-injector immediately and call emergency services."
    }
   ],
   "cards": [
@@ -927,6 +1018,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Hands-on certified training is the real preparation."
+   },
+   {
+    "q": "An AED will deliver a shock:",
+    "options": [
+     "only if the heart rhythm needs it",
+     "to anyone every time",
+     "only if a doctor is present",
+     "never"
+    ],
+    "a": 0,
+    "why": "It analyzes first and shocks only a shockable rhythm."
+   },
+   {
+    "q": "The FAST check helps you recognize a:",
+    "options": [
+     "stroke",
+     "broken bone",
+     "sunburn",
+     "common cold"
+    ],
+    "a": 0,
+    "why": "Face, Arm, Speech, Time are the stroke warning signs."
+   },
+   {
+    "q": "A classic heart-attack sign is:",
+    "options": [
+     "chest pressure spreading to the arm or jaw",
+     "an itchy foot",
+     "a mild headache only",
+     "better breathing"
+    ],
+    "a": 0,
+    "why": "Chest pressure with radiating pain is a key warning."
+   },
+   {
+    "q": "The life-threatening severe allergic reaction is called:",
+    "options": [
+     "anaphylaxis",
+     "a cold",
+     "a cramp",
+     "a bruise"
+    ],
+    "a": 0,
+    "why": "Anaphylaxis swells the airway and drops blood pressure."
+   },
+   {
+    "q": "For anaphylaxis with an auto-injector available, you should:",
+    "options": [
+     "use the epinephrine and call for help",
+     "wait and watch",
+     "give water only",
+     "do nothing"
+    ],
+    "a": 0,
+    "why": "Epinephrine is the immediate treatment; then call emergency services."
    }
   ]
  },
@@ -2961,6 +3107,23 @@ window.LAB404_CONTENT = {
     "h": "Avoiding debt traps",
     "body": "The best debt strategy is avoiding bad debt in the first place. Watch out for traps: carrying a credit card balance (paying interest on everyday spending), only making minimum payments (which stretches debt for years and maximizes interest), payday and title loans (extremely high interest that trap borrowers), buy-now-pay-later overuse, and borrowing for wants you can't afford.\n\nThe protective habits: treat a credit card like a debit card (only charge what you can pay in full each month, avoiding all interest), build an emergency fund so surprises don't force you into debt, and live below your means so you're not relying on credit to get by. Credit, used responsibly, builds your score and offers convenience and protection; used carelessly, it's one of the fastest paths to financial stress. Respect it, and it's a tool; abuse it, and it's a trap.",
     "tip": "Avoid traps: carrying card balances, minimum-only payments, payday loans. Treat a card like a debit card (pay in full), keep an emergency fund, live below your means."
+   },
+   {
+    "h": "Your credit score explained",
+    "body": "A credit score (commonly 300-850) is a number lenders use to judge how risky it is to lend to you. It's built mostly from your payment history (do you pay on time?) and your credit utilization (how much of your available credit you're using). Length of history, types of credit, and new applications matter less.\n\nA higher score means easier approvals and lower interest rates, saving you real money on loans and even affecting apartment and job applications.",
+    "example": "Biggest factors:\n  1. Payment history (on-time)\n  2. Utilization (keep it under ~30%)",
+    "tip": "Pay on time and keep balances low relative to your limit. Those two habits drive most of your credit score."
+   },
+   {
+    "h": "How interest compounds against you",
+    "body": "On debt, interest is the price of borrowing, and on credit cards it compounds — you're charged interest on your interest. Carrying a balance means the debt grows even if you stop spending. A card at 24 percent APR roughly doubles an unpaid balance in about three years if you only make tiny payments.\n\nThis is why paying more than the minimum matters so much: minimums are designed to keep you in debt and maximize what the lender earns.",
+    "example": "$1,000 balance at 24% APR, minimum payments only: years to pay off, and you pay far more than $1,000 total.",
+    "tip": "Credit-card interest compounds against you. Always pay more than the minimum; paying the full balance avoids interest entirely."
+   },
+   {
+    "h": "Consolidating and negotiating debt",
+    "body": "When debt feels unmanageable, two tools can help. Consolidation combines several debts into one loan, ideally at a lower interest rate, so you have a single payment and pay less interest. A balance-transfer card can do this for credit-card debt, sometimes at 0 percent for a promo period.\n\nYou can also simply call a creditor and ask for a lower rate or a hardship plan — it costs nothing and often works. The key is to avoid running the old cards back up.",
+    "tip": "Consolidation merges debts into one cheaper payment; calling to ask for a lower rate often works. Don't re-borrow on the cleared cards."
    }
   ],
   "cards": [
@@ -3200,6 +3363,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Prevention beats payoff."
+   },
+   {
+    "q": "The two biggest factors in a credit score are:",
+    "options": [
+     "payment history and utilization",
+     "your age and height",
+     "your job title",
+     "your zip code"
+    ],
+    "a": 0,
+    "why": "On-time payments and low balances matter most."
+   },
+   {
+    "q": "A good credit utilization is generally:",
+    "options": [
+     "under about 30 percent",
+     "over 90 percent",
+     "exactly 100 percent",
+     "it doesn't matter"
+    ],
+    "a": 0,
+    "why": "Keeping balances low relative to your limit helps your score."
+   },
+   {
+    "q": "Credit-card interest is dangerous because it:",
+    "options": [
+     "compounds against you",
+     "is always zero",
+     "is a one-time fee",
+     "lowers your balance"
+    ],
+    "a": 0,
+    "why": "You get charged interest on unpaid interest."
+   },
+   {
+    "q": "Paying only the minimum on a card:",
+    "options": [
+     "keeps you in debt longer",
+     "clears the balance fast",
+     "lowers the interest rate",
+     "is required by law"
+    ],
+    "a": 0,
+    "why": "Minimums are designed to stretch out the debt."
+   },
+   {
+    "q": "Debt consolidation aims to:",
+    "options": [
+     "combine debts into one cheaper payment",
+     "add more cards",
+     "raise your interest",
+     "skip payments"
+    ],
+    "a": 0,
+    "why": "It merges debts, ideally at a lower rate."
    }
   ]
  },
@@ -3243,6 +3461,23 @@ window.LAB404_CONTENT = {
     "h": "Healthy eating habits",
     "body": "Nutrition is less about perfect single meals and more about overall patterns over time. A few habits carry most of the benefit: eat mostly whole, minimally processed foods; include plenty of fruits and vegetables; limit added sugar, salt, and heavily processed snacks; drink water instead of sugary drinks; and watch portion sizes.\n\nYou don't have to be perfect or give up foods you love — it's the everyday pattern that counts, and small sustainable changes beat crash diets that don't last. Cooking at home, not shopping hungry, and planning meals all help. Good nutrition, kept up over years, is one of the strongest things you can do for your energy now and your health for life.",
     "tip": "It's the overall pattern that matters: mostly whole foods, lots of veg, less added sugar/salt, water over soda, sensible portions."
+   },
+   {
+    "h": "Calories and energy balance",
+    "body": "A calorie is a unit of energy. Your body burns calories to live, move, and think, and gets them from food. Energy balance is simple in principle: take in about the same as you burn and weight stays steady; take in more and you gain, less and you lose.\n\nBut not all calories are equal in how they affect hunger and health — 200 calories of nuts fills you far more than 200 of soda. Focus on quality foods, and the quantity often takes care of itself.",
+    "example": "Calories in = calories out -> stable weight.\n200 cal of nuts satisfies far more than 200 cal of soda.",
+    "tip": "Weight tracks energy balance (calories in vs out), but food quality matters: filling, nutritious foods make the math easier."
+   },
+   {
+    "h": "Fiber, sugar, and whole foods",
+    "body": "Carbohydrates aren't all the same. Fiber — found in vegetables, fruit, beans, and whole grains — slows digestion, steadies blood sugar, and keeps you full and regular. Added sugar does the opposite: it spikes blood sugar, adds calories with no nutrients, and leaves you hungry again soon.\n\nWhole foods (minimally processed) naturally pair nutrients with fiber, while many packaged foods strip the fiber and add sugar. Choosing whole foods most of the time is the single most useful nutrition habit.",
+    "example": "Whole: apple (fiber + nutrients).\nProcessed: apple juice + added sugar (fiber removed).",
+    "tip": "Fiber steadies blood sugar and fills you up; added sugar spikes and empties. Favor whole, minimally processed foods."
+   },
+   {
+    "h": "Hydration and healthy drinks",
+    "body": "Water makes up most of your body and drives nearly every process, from temperature control to carrying nutrients. Mild dehydration causes fatigue, headaches, and poor focus that people often mistake for hunger. Thirst is a late signal, so it's better to drink steadily through the day.\n\nWater is the best default drink. Sugary sodas and energy drinks add lots of calories and sugar; even fruit juice is concentrated sugar. Unsweetened tea or water with fruit are easy upgrades.",
+    "tip": "Drink water steadily; don't wait for thirst. Sugary drinks and juice are concentrated sugar — water is the best default."
    }
   ],
   "cards": [
@@ -3482,6 +3717,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Not enough water leads to tiredness and headaches."
+   },
+   {
+    "q": "A calorie is a unit of:",
+    "options": [
+     "energy",
+     "weight",
+     "vitamins",
+     "water"
+    ],
+    "a": 0,
+    "why": "Calories measure the energy food provides."
+   },
+   {
+    "q": "To keep weight steady, calories in should:",
+    "options": [
+     "roughly match calories out",
+     "far exceed calories out",
+     "be as high as possible",
+     "be zero"
+    ],
+    "a": 0,
+    "why": "Energy balance keeps weight stable."
+   },
+   {
+    "q": "Fiber helps by:",
+    "options": [
+     "steadying blood sugar and keeping you full",
+     "spiking blood sugar",
+     "adding empty calories",
+     "removing nutrients"
+    ],
+    "a": 0,
+    "why": "Fiber slows digestion and promotes fullness."
+   },
+   {
+    "q": "Compared to whole foods, added sugar:",
+    "options": [
+     "spikes blood sugar and adds empty calories",
+     "is more filling",
+     "has more fiber",
+     "is healthier"
+    ],
+    "a": 0,
+    "why": "Added sugar gives calories without nutrients or fiber."
+   },
+   {
+    "q": "The best default drink for hydration is:",
+    "options": [
+     "water",
+     "soda",
+     "energy drinks",
+     "fruit juice"
+    ],
+    "a": 0,
+    "why": "Water hydrates without added sugar or calories."
    }
   ]
  },
@@ -4524,6 +4814,24 @@ window.LAB404_CONTENT = {
    {
     "h": "Taking part in democracy",
     "body": "Democracy only works when people participate. The clearest way is voting — in national, state, and local elections, where your vote helps pick who makes decisions that affect your daily life. But participation goes further: contacting elected officials, peaceful protest, volunteering, serving on juries, and simply staying informed about the issues.\n\nEven young people who can't yet vote can take part — by learning the issues, joining community efforts, and making their voices heard. The founders built a government meant to answer to its citizens; it stays that way only when citizens show up. Your participation, however small it feels, is how a democracy holds its shape."
+   },
+   {
+    "h": "The Bill of Rights and civil liberties",
+    "body": "The first ten amendments to the Constitution are the Bill of Rights, added to guarantee individual freedoms against government overreach. The First Amendment protects speech, religion, press, assembly, and petition. Others protect against unreasonable searches, guarantee fair trials, and ensure due process.\n\nThese civil liberties are limits on what the government may do to you, and they are enforced by the courts. Knowing them is the first step to exercising them.",
+    "example": "1st Amendment: speech, religion, press, assembly, petition.\n4th: protection from unreasonable search.",
+    "tip": "The Bill of Rights is the first 10 amendments. They protect individuals from government overreach and are enforced by courts."
+   },
+   {
+    "h": "How a bill becomes a law",
+    "body": "A law begins as a bill — a proposal introduced in Congress. It is studied in committee, debated, and voted on in both the House and the Senate. If both chambers pass the same version, it goes to the President, who can sign it into law or veto it. Congress can override a veto with a two-thirds vote in each chamber.\n\nThe many steps are deliberate: they force compromise and prevent hasty lawmaking.",
+    "example": "Bill -> committee -> House vote -> Senate vote -> President signs (or vetoes) -> law.",
+    "tip": "A bill must pass both the House and Senate, then be signed by the President. A veto can be overridden by a two-thirds vote."
+   },
+   {
+    "h": "State and local government",
+    "body": "The United States has government at three levels. The federal government handles national matters (defense, currency, foreign policy). State governments run schools, highways, and most criminal law. Local governments — city councils, county boards, school boards — handle police, fire, zoning, and trash.\n\nMany decisions that affect daily life are made locally, which is why local elections and meetings matter even though they get less attention.",
+    "example": "Federal: army, money, treaties.\nState: driver's licenses, schools.\nLocal: police, trash, zoning.",
+    "tip": "Power is split across federal, state, and local levels. The decisions closest to daily life are often made locally."
    }
   ],
   "cards": [
@@ -4763,6 +5071,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Participation keeps the government answering to the people."
+   },
+   {
+    "q": "The Bill of Rights is the:",
+    "options": [
+     "first ten amendments",
+     "whole Constitution",
+     "first law ever passed",
+     "Declaration of Independence"
+    ],
+    "a": 0,
+    "why": "It is the first ten amendments protecting individual freedoms."
+   },
+   {
+    "q": "The First Amendment protects:",
+    "options": [
+     "speech and religion",
+     "the right to vote at 18",
+     "term limits",
+     "state borders"
+    ],
+    "a": 0,
+    "why": "It guards speech, religion, press, assembly, and petition."
+   },
+   {
+    "q": "A bill becomes a law after it passes:",
+    "options": [
+     "both houses of Congress and is signed",
+     "only the Senate",
+     "the Supreme Court",
+     "a state legislature"
+    ],
+    "a": 0,
+    "why": "Both chambers must pass it, then the President signs."
+   },
+   {
+    "q": "Congress can override a presidential veto with a:",
+    "options": [
+     "two-thirds vote",
+     "simple majority",
+     "single vote",
+     "court order"
+    ],
+    "a": 0,
+    "why": "A two-thirds vote in each chamber overrides a veto."
+   },
+   {
+    "q": "Police, fire, and trash services are usually run by:",
+    "options": [
+     "local government",
+     "the federal government",
+     "foreign governments",
+     "the Supreme Court"
+    ],
+    "a": 0,
+    "why": "These are typically local responsibilities."
    }
   ]
  },
@@ -10065,6 +10428,24 @@ window.LAB404_CONTENT = {
     "h": "Saving toward goals",
     "body": "Beyond the emergency fund, saving works best when tied to specific goals. Short-term goals (a trip, a gadget, holiday gifts) and medium goals (a car, a wedding, a home down payment) all become achievable when you save toward them deliberately rather than hoping to afford them later or borrowing.\n\nGive each goal a name, a target amount, and a timeline, then divide to find how much to save per month (e.g., '$2,400 for a car in 12 months = $200/month'). Keeping goals in separate savings 'buckets' (or sub-accounts) helps you track progress and not spend the money. Seeing a goal fill up is motivating. The combination — an emergency fund for safety, automated saving for the future, and goal-based saving for what you want — is a simple, powerful system that works at any income level.",
     "tip": "Tie saving to specific goals (name, amount, timeline → monthly amount). Separate 'buckets' track progress. Emergency fund + automation + goals = a full system."
+   },
+   {
+    "h": "Where to keep your savings",
+    "body": "Savings should be safe and reachable, but still working for you. An emergency fund belongs in a high-yield savings account — separate from your checking, insured, and earning interest, but accessible within a day or two. Avoid locking emergency money in investments that can drop in value right when you need it.\n\nMoney for goals years away can go somewhere with higher growth, but your safety net stays liquid and boring on purpose.",
+    "example": "Emergency fund -> high-yield savings (safe, liquid).\nLong-term goal -> invested for growth.",
+    "tip": "Keep your emergency fund in a safe, separate high-yield savings account — liquid and insured, not invested where it could drop."
+   },
+   {
+    "h": "Short-term vs long-term goals",
+    "body": "Matching the account to the timeline is the core skill. Short-term goals (under a few years) — a trip, a car, a deposit — need safety, so a savings account is right; you can't risk a market dip before you spend it. Long-term goals (retirement, a house a decade out) benefit from investing, because time smooths out the ups and downs and growth compounds.\n\nMixing these up — investing next month's rent or saving 30-year money in cash — is a common, costly mistake.",
+    "example": "Need it soon -> save (safe).\nNeed it in 10+ years -> invest (growth).",
+    "tip": "Short-term money stays in savings (safe); long-term money gets invested (growth). Match the account to when you'll need it."
+   },
+   {
+    "h": "The cost of waiting to save",
+    "body": "Because interest compounds, when you start matters more than how much you start with. A small amount saved in your twenties can outgrow a larger amount started in your forties, simply because it has more years to grow on itself.\n\nThe lesson isn't to wait until you can save a lot — it's to start now with whatever you can. Automating even a small transfer each payday builds the habit and lets time do the heavy lifting.",
+    "example": "$100/month from age 25 can beat $200/month from age 40, thanks to extra years of compounding.",
+    "tip": "Starting early beats starting big, because compounding rewards time. Automate a small amount now rather than waiting."
    }
   ],
   "cards": [
@@ -10304,6 +10685,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Safety, consistency, and direction together."
+   },
+   {
+    "q": "An emergency fund is best kept in:",
+    "options": [
+     "a high-yield savings account",
+     "the stock market",
+     "cash under a mattress",
+     "a long-term CD you can't touch"
+    ],
+    "a": 0,
+    "why": "It should be safe, insured, and liquid."
+   },
+   {
+    "q": "Money you need in six months should be:",
+    "options": [
+     "saved, not invested",
+     "put in stocks",
+     "spent now",
+     "locked away for 10 years"
+    ],
+    "a": 0,
+    "why": "Short-term money can't risk a market dip."
+   },
+   {
+    "q": "Long-term goals like retirement benefit from:",
+    "options": [
+     "investing for growth",
+     "a checking account",
+     "hiding cash",
+     "spending it"
+    ],
+    "a": 0,
+    "why": "Time lets investments grow and smooth out dips."
+   },
+   {
+    "q": "Because interest compounds, the most important thing is to:",
+    "options": [
+     "start saving early",
+     "wait until you earn a lot",
+     "save only once",
+     "avoid saving"
+    ],
+    "a": 0,
+    "why": "Early money has more years to grow on itself."
+   },
+   {
+    "q": "A good way to make saving automatic is to:",
+    "options": [
+     "set up a transfer each payday",
+     "wait for leftover money",
+     "save only bonuses",
+     "never budget"
+    ],
+    "a": 0,
+    "why": "Automating builds the habit and removes temptation."
    }
   ]
  },
@@ -10346,6 +10782,23 @@ window.LAB404_CONTENT = {
     "h": "Choosing and managing accounts",
     "body": "Picking the right bank and managing accounts well saves money and hassle. When choosing, compare fees (favor free/low-fee), interest rates on savings (online banks often pay much more), convenience (ATMs, branches, a good app), and service. Credit unions and online banks frequently beat big traditional banks on fees and rates. You can also use more than one — e.g., a local bank for checking and a high-yield online account for savings.\n\nTo manage accounts well: monitor them regularly (catch errors, fraud, and overspending), keep enough in checking to cover bills and avoid overdrafts, move extra into savings, and set up alerts for low balances and large transactions. Use direct deposit and autopay to simplify life. Good account management is mostly a few simple habits that, once set up, run quietly in the background and keep your financial foundation solid.",
     "tip": "Choose low-fee accounts with good savings rates (online banks/credit unions often win). Monitor regularly, keep a checking buffer, automate, and set balance alerts."
+   },
+   {
+    "h": "Checking, savings, and money market",
+    "body": "Different accounts do different jobs. A checking account is for everyday spending — frequent transactions, a debit card, bill pay — and usually earns little or no interest. A savings account holds money you don't touch often and earns more interest. A money market account is a hybrid that pays higher interest but may limit transactions or require a bigger balance.\n\nUsing checking for spending and savings for your reserve keeps your money organized and reduces accidental overspending.",
+    "example": "Checking: daily spending, debit card.\nSavings: reserve, more interest.\nMoney market: higher interest, some limits.",
+    "tip": "Use checking for spending and savings for your reserve. Keeping them separate protects your savings from everyday temptation."
+   },
+   {
+    "h": "Online and mobile banking",
+    "body": "Banking today happens mostly on a phone. Mobile apps let you check balances, deposit a check by photo, pay bills, and transfer money instantly. Online-only banks often pay higher interest and charge fewer fees because they have no branches.\n\nThe convenience is real, but so is the need for security: use a strong unique password, enable two-factor authentication, and never log in on public Wi-Fi without caution. Set up alerts so you spot any unexpected charge fast.",
+    "tip": "Mobile and online banking are convenient and often cheaper. Protect them with a strong password, two-factor login, and transaction alerts."
+   },
+   {
+    "h": "Overdrafts and how to avoid them",
+    "body": "An overdraft happens when you spend more than your account holds. Banks may cover it but charge a steep overdraft fee (often around $35) per transaction — a tiny shortfall can trigger a huge cost. 'Overdraft protection' can link savings to cover it, but the real fix is awareness.\n\nTrack your balance, keep a small cushion, set a low-balance alert, and consider opting out of overdraft 'coverage' so a card is simply declined instead of charging you a fee.",
+    "example": "Buy a $4 coffee with $2 in the account -> possible $35 overdraft fee.",
+    "tip": "Overdraft fees are large and avoidable. Keep a cushion, set low-balance alerts, and consider having cards declined instead of overdrawn."
    }
   ],
   "cards": [
@@ -10585,6 +11038,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Catch errors, fraud, and overspending early."
+   },
+   {
+    "q": "Which account is designed for everyday spending?",
+    "options": [
+     "checking",
+     "savings",
+     "a retirement account",
+     "a money market CD"
+    ],
+    "a": 0,
+    "why": "Checking handles frequent transactions and a debit card."
+   },
+   {
+    "q": "Which account usually earns more interest?",
+    "options": [
+     "savings",
+     "checking",
+     "neither earns interest",
+     "a debit card"
+    ],
+    "a": 0,
+    "why": "Savings pays more since the money sits longer."
+   },
+   {
+    "q": "A benefit of online-only banks is often:",
+    "options": [
+     "higher interest and fewer fees",
+     "more physical branches",
+     "no security needed",
+     "free overdrafts always"
+    ],
+    "a": 0,
+    "why": "No branches means lower costs passed to you."
+   },
+   {
+    "q": "To protect mobile banking you should:",
+    "options": [
+     "use two-factor authentication",
+     "share your password",
+     "bank on open public Wi-Fi freely",
+     "disable all alerts"
+    ],
+    "a": 0,
+    "why": "Two-factor login adds a strong layer of security."
+   },
+   {
+    "q": "A good way to avoid overdraft fees is to:",
+    "options": [
+     "keep a cushion and set low-balance alerts",
+     "spend more than your balance",
+     "ignore your account",
+     "turn off all notifications"
+    ],
+    "a": 0,
+    "why": "Awareness and a small buffer prevent overdrafts."
    }
   ]
  },
@@ -10627,6 +11135,23 @@ window.LAB404_CONTENT = {
     "h": "Starting to invest wisely",
     "body": "A few principles guide smart beginner investing. Invest for the long term — the stock market swings wildly short-term but has trended strongly upward over decades, so time in the market beats timing the market. Invest regularly and automatically (a fixed amount each month, called 'dollar-cost averaging') rather than trying to pick the perfect moment. Keep costs low (fees quietly eat returns). And don't panic-sell when markets drop — downturns are normal, and selling locks in losses.\n\nFirst, get the foundation right: have your emergency fund and high-interest debt handled before investing much, since investing money you might need soon is risky. For retirement, use tax-advantaged accounts first. The simple, proven path for most people: invest regularly in low-cost, diversified funds, for the long haul, and leave it alone. You don't need to be an expert — you need patience and consistency.",
     "tip": "Invest long-term, regularly (automatically), in low-cost diversified funds — and don't panic-sell. Time in the market beats timing it. Emergency fund + debt first."
+   },
+   {
+    "h": "Compound interest: the eighth wonder",
+    "body": "Compound interest means your earnings themselves start earning. Interest paid on your original money plus all the interest it has already earned makes growth accelerate over time, curving upward rather than rising in a straight line.\n\nThis is the engine of long-term investing. The two levers are time (start early) and rate (reasonable, steady returns). Even modest regular investing can grow into a large sum over decades purely because of compounding.",
+    "example": "$1,000 at 7% for 30 years grows to about $7,600 — with no new deposits, just compounding.",
+    "tip": "Compounding means earnings earn too, so growth accelerates. Time is the most powerful ingredient, so start early."
+   },
+   {
+    "h": "Stocks, bonds, and funds",
+    "body": "The main building blocks differ in risk and role. A stock is a share of ownership in a company — higher potential return, higher ups and downs. A bond is a loan to a company or government that pays interest — steadier, lower return. A fund (like an index fund or ETF) bundles many stocks or bonds together, giving instant diversification in one purchase.\n\nMost beginners are well served by low-cost, broad index funds rather than trying to pick individual winners.",
+    "example": "Stock: own a slice of a company (higher risk/reward).\nBond: lend money for interest (steadier).\nIndex fund: own a little of everything.",
+    "tip": "Stocks own companies (riskier), bonds lend money (steadier), and index funds bundle many together. Broad index funds suit most beginners."
+   },
+   {
+    "h": "Avoiding common mistakes",
+    "body": "Most investing damage is self-inflicted. The big errors: trying to time the market (jumping in and out), panic-selling when prices drop, chasing hot tips or fads, and paying high fees that quietly eat returns. Another is not being diversified — putting everything in one stock.\n\nThe boring approach usually wins: invest regularly into low-cost diversified funds, ignore the daily noise, and leave it alone for years. Time in the market beats timing the market.",
+    "tip": "Avoid timing the market, panic-selling, chasing tips, and high fees. Invest steadily in diversified funds and leave it alone."
    }
   ],
   "cards": [
@@ -10866,6 +11391,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Keeping costs low matters a lot over time."
+   },
+   {
+    "q": "Compound interest means:",
+    "options": [
+     "your earnings also earn interest",
+     "interest is paid once",
+     "you lose money yearly",
+     "there is no growth"
+    ],
+    "a": 0,
+    "why": "Earnings are reinvested and grow on themselves."
+   },
+   {
+    "q": "The most powerful ingredient in compounding is:",
+    "options": [
+     "time",
+     "luck",
+     "a hot tip",
+     "a big single bet"
+    ],
+    "a": 0,
+    "why": "More years means far more growth, so starting early matters most."
+   },
+   {
+    "q": "A stock represents:",
+    "options": [
+     "ownership in a company",
+     "a loan to a government",
+     "a savings account",
+     "a credit card"
+    ],
+    "a": 0,
+    "why": "A stock is a share of ownership."
+   },
+   {
+    "q": "Which gives instant diversification in one purchase?",
+    "options": [
+     "an index fund",
+     "a single stock",
+     "one bond",
+     "a lottery ticket"
+    ],
+    "a": 0,
+    "why": "A fund bundles many holdings together."
+   },
+   {
+    "q": "A common costly investing mistake is:",
+    "options": [
+     "panic-selling when prices drop",
+     "investing steadily",
+     "diversifying",
+     "keeping fees low"
+    ],
+    "a": 0,
+    "why": "Reacting to short-term dips locks in losses."
    }
   ]
  },
@@ -10908,6 +11488,24 @@ window.LAB404_CONTENT = {
     "h": "A simple retirement plan",
     "body": "You don't need a complicated plan — a simple, consistent one works. A common priority order: (1) contribute to your 401(k) at least enough to get the full employer match (free money), (2) pay off high-interest debt and build your emergency fund, (3) contribute to a Roth or traditional IRA, (4) go back and contribute more to your 401(k), up to the limits. Within the accounts, most people do well with low-cost, diversified index funds (or a 'target-date fund' that automatically adjusts over time).\n\nThen the main job is consistency: contribute regularly (ideally automatically from each paycheck), increase it when your income rises, and leave it alone to grow for decades. Don't panic during market dips — retirement money is long-term. Check in once a year. That's genuinely most of it: start early, get the match, use tax-advantaged accounts, invest in diversified funds, contribute consistently, and let compounding do the heavy lifting.",
     "tip": "Simple plan: get the full 401(k) match → kill high-interest debt + emergency fund → IRA → more 401(k). Use low-cost diversified funds, contribute consistently, leave it alone."
+   },
+   {
+    "h": "The power of starting early",
+    "body": "Retirement saving is the ultimate compounding story because the time horizon is so long. Money invested in your twenties has forty years to grow, so even small amounts become large. Someone who starts at 25 can end up with more than someone who starts at 35 and saves more each month, simply from the extra decade.\n\nThe practical takeaway: begin contributing as soon as you have any earned income, even a little, and increase it as you earn more.",
+    "example": "Start at 25 vs 35: the early starter can finish ahead even saving less, thanks to ten more years of growth.",
+    "tip": "In retirement saving, time is everything. Start as early as you can, even with small amounts, and raise it over time."
+   },
+   {
+    "h": "Roth vs traditional in depth",
+    "body": "The two account flavors differ on when you pay tax. A traditional 401(k) or IRA uses pre-tax money — you get a tax break now, and pay tax when you withdraw in retirement. A Roth uses after-tax money — no break now, but qualified withdrawals in retirement are tax-free, including all the growth.\n\nA rough guide: choose Roth if you expect to be in a higher tax bracket later (often younger savers), and traditional if you want the deduction now. Many people use some of each.",
+    "example": "Traditional: tax break now, taxed later.\nRoth: taxed now, tax-free later (growth included).",
+    "tip": "Traditional gives a tax break now and is taxed at withdrawal; Roth is taxed now but grows and withdraws tax-free. Younger savers often favor Roth."
+   },
+   {
+    "h": "The employer match and Social Security",
+    "body": "Two pillars support retirement beyond your own saving. An employer 401(k) match is free money — if your employer adds, say, 50 cents per dollar up to 6 percent of pay, not contributing enough to get the full match leaves guaranteed money on the table. Always capture the full match first.\n\nSocial Security provides a government benefit based on your lifetime earnings, but it's designed to replace only part of income. Think of retirement as a three-legged stool: your savings, your employer match, and Social Security together.",
+    "example": "If the match is 50% up to 6%, contribute at least 6% to grab all the free money.",
+    "tip": "Always contribute enough to get the full employer match — it's free money. Retirement rests on savings, the match, and Social Security together."
    }
   ],
   "cards": [
@@ -11147,6 +11745,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Consistency + compounding do the work."
+   },
+   {
+    "q": "Why does starting retirement saving early matter so much?",
+    "options": [
+     "decades of compounding growth",
+     "taxes are lower when young",
+     "stocks only rise when you're young",
+     "it doesn't matter"
+    ],
+    "a": 0,
+    "why": "A long time horizon makes compounding powerful."
+   },
+   {
+    "q": "A traditional 401(k) is taxed:",
+    "options": [
+     "when you withdraw in retirement",
+     "never",
+     "only on deposits",
+     "twice"
+    ],
+    "a": 0,
+    "why": "You get a break now and pay tax at withdrawal."
+   },
+   {
+    "q": "A Roth account's qualified retirement withdrawals are:",
+    "options": [
+     "tax-free",
+     "taxed at a high rate",
+     "not allowed",
+     "taxed twice"
+    ],
+    "a": 0,
+    "why": "You pay tax up front, so withdrawals and growth are tax-free."
+   },
+   {
+    "q": "An employer 401(k) match is essentially:",
+    "options": [
+     "free money",
+     "a loan you repay",
+     "a tax penalty",
+     "a type of bond"
+    ],
+    "a": 0,
+    "why": "The employer adds money on top of your contribution."
+   },
+   {
+    "q": "To get the full employer match, you should:",
+    "options": [
+     "contribute at least up to the match limit",
+     "contribute nothing",
+     "wait until age 60",
+     "only use a Roth IRA"
+    ],
+    "a": 0,
+    "why": "Contributing less than the match leaves free money unclaimed."
    }
   ]
  },
@@ -11190,6 +11843,24 @@ window.LAB404_CONTENT = {
     "h": "Handling taxes responsibly",
     "body": "A few habits keep taxes from becoming a problem. Keep good records all year (income documents, and receipts for anything deductible) so filing is easy and you don't miss savings. Understand your paycheck — check that the right amount is being withheld (too little means a surprise bill; too much means an interest-free loan to the government). If you're self-employed or a contractor (1099), remember no taxes are withheld for you, so you must set aside money (often ~25–30%) and usually pay quarterly estimated taxes yourself.\n\nAbove all: file and pay on time to avoid penalties and interest, and never ignore tax problems — they only grow. If you can't pay, the government offers payment plans; communication beats avoidance. And watch for tax scams (the IRS won't demand immediate payment by gift card or threaten arrest by phone). Taxes are a lifelong certainty, so building these simple habits early makes them a routine chore rather than a crisis.",
     "tip": "Keep records, check your withholding, and (if self-employed/1099) set aside ~25–30% and pay quarterly. File + pay on time; don't ignore problems; beware tax scams."
+   },
+   {
+    "h": "How tax brackets really work",
+    "body": "A common myth is that earning more can drop your whole income into a higher tax rate and leave you with less. That's not how it works. Tax brackets are marginal: only the dollars within each bracket's range are taxed at that bracket's rate. A raise that pushes part of your income into a higher bracket taxes only that part more, never the whole amount.\n\nSo earning more always leaves you with more after tax — a raise is always worth taking.",
+    "example": "If the 22% bracket starts at $45,000, only the dollars above $45,000 are taxed at 22%, not your whole income.",
+    "tip": "Tax brackets are marginal: a higher bracket taxes only the dollars inside it. Earning more never lowers your total take-home."
+   },
+   {
+    "h": "W-2s, W-4s, and 1099s",
+    "body": "Three forms run the tax year. A W-4 is what you give an employer when hired, telling them how much tax to withhold from each paycheck. A W-2 is what the employer sends you in January, summarizing your yearly wages and the tax already withheld. A 1099 reports other income — freelance work, contractor pay, or interest — where no tax was withheld.\n\nIf you get 1099 income, you usually owe tax on it yourself, so set money aside to avoid a surprise bill.",
+    "example": "W-4: set withholding (at hiring).\nW-2: yearly wage summary (from employer).\n1099: other income, no tax withheld.",
+    "tip": "A W-4 sets your withholding, a W-2 summarizes wages, and a 1099 reports untaxed income like freelancing — set money aside for 1099 taxes."
+   },
+   {
+    "h": "Deductions and credits",
+    "body": "Two things lower your tax bill, differently. A deduction reduces your taxable income — most people take the standard deduction, a flat amount, rather than itemizing. A credit reduces the tax you owe dollar for dollar, so a $1,000 credit is worth more than a $1,000 deduction.\n\nCommon credits help with children, education, and lower incomes. Filing accurately and on time, and claiming the credits you qualify for, is how you avoid overpaying.",
+    "example": "Deduction: lowers income that gets taxed.\nCredit: lowers the tax itself, dollar for dollar (worth more).",
+    "tip": "A deduction shrinks taxable income; a credit cuts the tax owed dollar for dollar. Credits are more valuable per dollar."
    }
   ],
   "cards": [
@@ -11429,6 +12100,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Those are scams."
+   },
+   {
+    "q": "Tax brackets are marginal, which means a raise:",
+    "options": [
+     "taxes only the dollars in the higher bracket",
+     "taxes all your income at the top rate",
+     "lowers your take-home pay",
+     "is never worth taking"
+    ],
+    "a": 0,
+    "why": "Only income within each bracket is taxed at that rate."
+   },
+   {
+    "q": "Which form tells your employer how much tax to withhold?",
+    "options": [
+     "a W-4",
+     "a W-2",
+     "a 1099",
+     "a credit"
+    ],
+    "a": 0,
+    "why": "You fill out a W-4 when hired."
+   },
+   {
+    "q": "A 1099 reports income that:",
+    "options": [
+     "had no tax withheld",
+     "was already fully taxed",
+     "is tax-free",
+     "came from a W-2 job"
+    ],
+    "a": 0,
+    "why": "Freelance and contractor income usually has no withholding."
+   },
+   {
+    "q": "A tax credit reduces:",
+    "options": [
+     "the tax you owe, dollar for dollar",
+     "only your state address",
+     "your paycheck size",
+     "nothing"
+    ],
+    "a": 0,
+    "why": "Credits cut the tax itself, making them very valuable."
+   },
+   {
+    "q": "Compared to a deduction, a credit of the same amount is:",
+    "options": [
+     "worth more",
+     "worth less",
+     "exactly equal",
+     "never allowed"
+    ],
+    "a": 0,
+    "why": "A credit cuts tax directly; a deduction only cuts taxable income."
    }
   ]
  },
@@ -11471,6 +12197,24 @@ window.LAB404_CONTENT = {
     "h": "Using insurance wisely",
     "body": "A few habits get you good protection without overpaying. Shop around and compare — insurance prices vary a lot between companies for the same coverage, so get multiple quotes and re-shop every few years. Pick the right deductible — as high as you could comfortably pay in an emergency, to lower your premiums. Bundle policies (auto + home with one insurer) for discounts, and ask about other discounts.\n\nUnderstand your policies — know what's covered and what's not before you need it, so there are no nasty surprises during a claim. Don't over-insure (paying for coverage you don't need) or under-insure (leaving a big risk exposed). And keep insurance you truly need even when money is tight, since that's exactly when a disaster would hurt most. Used wisely, insurance is a cornerstone of financial security — quietly protecting everything else you've built from a single bad day.",
     "tip": "Shop around + re-quote periodically; pick a deductible you could afford; bundle for discounts; know what's covered. Don't over- or under-insure. Keep essential coverage."
+   },
+   {
+    "h": "How to read a policy",
+    "body": "Insurance jargon trips people up, but a few terms unlock any policy. The premium is what you pay regularly to keep coverage. The deductible is what you pay out of pocket before insurance starts paying. The out-of-pocket maximum caps your total yearly cost. Coverage limits are the most the policy will pay.\n\nGenerally, a higher deductible means a lower premium and vice versa. Reading these numbers before you buy tells you exactly what you'd owe when something happens.",
+    "example": "Premium: ongoing cost.\nDeductible: what you pay first.\nOut-of-pocket max: your yearly ceiling.",
+    "tip": "Know the premium, deductible, and out-of-pocket max before buying. A higher deductible usually lowers the premium."
+   },
+   {
+    "h": "Health insurance basics",
+    "body": "Health insurance protects you from catastrophic medical costs. You pay a monthly premium; when you get care, you may owe a copay (a set fee) or coinsurance (a percentage) until you hit your deductible and then your out-of-pocket maximum, after which insurance covers the rest.\n\nStaying 'in-network' (using providers your plan contracts with) costs far less than going out of network. Even healthy people need coverage, because one accident or illness can cost tens of thousands of dollars.",
+    "example": "Copay: flat fee per visit.\nCoinsurance: your % share.\nIn-network: much cheaper than out-of-network.",
+    "tip": "Health insurance caps your risk from huge medical bills. Stay in-network to pay far less, and know your copay vs coinsurance."
+   },
+   {
+    "h": "When to file a claim",
+    "body": "Insurance is for losses you couldn't easily absorb, not small ones. Filing many small claims can raise your premiums or get a policy canceled, and a claim below your deductible pays you nothing anyway. So pay small, affordable repairs yourself and save insurance for the big, genuinely damaging events — a major car crash, a house fire, a serious illness.\n\nThe mindset: insurance transfers risk you can't afford, while you self-insure the small stuff with your emergency fund.",
+    "example": "$300 fender scratch, $500 deductible -> don't file (you'd pay it all anyway and risk higher premiums).",
+    "tip": "File claims for big losses you can't absorb, not small ones below your deductible. Small, affordable costs are better paid yourself."
    }
   ],
   "cards": [
@@ -11710,6 +12454,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Losing it right before a disaster is the worst case."
+   },
+   {
+    "q": "The out-of-pocket maximum is:",
+    "options": [
+     "the most you'll pay in a year",
+     "the monthly premium",
+     "the insurer's profit",
+     "a government tax"
+    ],
+    "a": 0,
+    "why": "It caps your total yearly cost; after it, insurance pays the rest."
+   },
+   {
+    "q": "A copay is:",
+    "options": [
+     "a set fee you pay per visit",
+     "your percentage share of a cost",
+     "the yearly premium",
+     "the insurer's address"
+    ],
+    "a": 0,
+    "why": "A copay is a flat fee for a service."
+   },
+   {
+    "q": "Coinsurance is:",
+    "options": [
+     "the percentage of a cost you pay",
+     "a flat yearly fee",
+     "a tax credit",
+     "the premium"
+    ],
+    "a": 0,
+    "why": "Coinsurance is your percentage share, usually after the deductible."
+   },
+   {
+    "q": "Staying 'in-network' for health care:",
+    "options": [
+     "costs far less",
+     "costs far more",
+     "has no effect",
+     "is never allowed"
+    ],
+    "a": 0,
+    "why": "In-network providers are contracted for lower rates."
+   },
+   {
+    "q": "You should generally file an insurance claim for:",
+    "options": [
+     "big losses you can't absorb",
+     "every tiny expense",
+     "costs below your deductible",
+     "routine small repairs"
+    ],
+    "a": 0,
+    "why": "Insurance is for large losses; small ones are better self-paid."
    }
   ]
  },
@@ -14621,6 +15420,24 @@ window.LAB404_CONTENT = {
    {
     "h": "Why history matters",
     "body": "History isn't just memorizing dates — it's understanding cause and effect, and how the past shapes the present. The Constitution written in 1787 still governs you; debates about rights, equality, and government power that began centuries ago continue today.\n\nStudying history teaches you to weigh evidence, understand different perspectives, and see that the present wasn't inevitable — people's choices made it. It also reveals patterns: how nations rise and struggle, how rights are won and defended. A citizen who knows history is far harder to mislead and far better equipped to shape what comes next."
+   },
+   {
+    "h": "The American Revolution",
+    "body": "By the 1770s, Britain's thirteen American colonies resented being taxed without representation in Parliament. Protest grew into rebellion, and in 1776 the colonies issued the Declaration of Independence, arguing that governments derive their power from the consent of the governed. After years of war, the colonies won independence and became the United States.\n\nThe Revolution's ideals — liberty, equality, self-government — shaped the nation and inspired movements worldwide.",
+    "example": "1776: Declaration of Independence.\nKey idea: 'no taxation without representation'; consent of the governed.",
+    "tip": "The Revolution grew from 'no taxation without representation'. The 1776 Declaration argued government power comes from the people."
+   },
+   {
+    "h": "The Civil War and its causes",
+    "body": "The United States split over slavery and the power of states versus the federal government. The Northern economy was industrial and increasingly anti-slavery; the Southern economy depended on enslaved labor. When Abraham Lincoln was elected in 1860, Southern states seceded, and the Civil War (1861-1865) followed.\n\nThe Union won, slavery was abolished by the 13th Amendment, and the war settled that the nation was one country, not a collection of states free to leave.",
+    "example": "1861-1865: Civil War.\n13th Amendment: abolished slavery.\nCause: slavery and states' rights.",
+    "tip": "The Civil War's central cause was slavery. The Union won, slavery was ended by the 13th Amendment, and the nation stayed united."
+   },
+   {
+    "h": "The civil rights movement",
+    "body": "Even after slavery ended, Black Americans faced legal segregation and denial of voting rights, especially in the South. In the 1950s and 1960s, a movement led by figures like Martin Luther King Jr. used nonviolent protest, boycotts, and marches to demand equality. Landmark results included the Civil Rights Act of 1964 and the Voting Rights Act of 1965.\n\nThe movement reshaped the nation and became a model for other struggles for equal rights.",
+    "example": "Brown v. Board (1954): school segregation unconstitutional.\nCivil Rights Act (1964), Voting Rights Act (1965).",
+    "tip": "The civil rights movement used nonviolent protest to end legal segregation, winning the Civil Rights Act (1964) and Voting Rights Act (1965)."
    }
   ],
   "cards": [
@@ -14860,6 +15677,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Human choices made history — and can shape what comes next."
+   },
+   {
+    "q": "The Declaration of Independence was issued in:",
+    "options": [
+     "1776",
+     "1861",
+     "1964",
+     "1492"
+    ],
+    "a": 0,
+    "why": "The colonies declared independence in 1776."
+   },
+   {
+    "q": "A main grievance leading to the Revolution was:",
+    "options": [
+     "taxation without representation",
+     "too much voting",
+     "free trade",
+     "the Civil War"
+    ],
+    "a": 0,
+    "why": "Colonists objected to being taxed without a voice in Parliament."
+   },
+   {
+    "q": "The central cause of the Civil War was:",
+    "options": [
+     "slavery",
+     "foreign invasion",
+     "a tax on tea",
+     "the moon landing"
+    ],
+    "a": 0,
+    "why": "The war split the nation over slavery and states' rights."
+   },
+   {
+    "q": "Slavery was abolished by the:",
+    "options": [
+     "13th Amendment",
+     "1st Amendment",
+     "Declaration of Independence",
+     "Voting Rights Act"
+    ],
+    "a": 0,
+    "why": "The 13th Amendment ended slavery after the Civil War."
+   },
+   {
+    "q": "The civil rights movement primarily used:",
+    "options": [
+     "nonviolent protest",
+     "secession",
+     "foreign armies",
+     "tax cuts"
+    ],
+    "a": 0,
+    "why": "Boycotts, marches, and nonviolent protest drove the movement."
    }
   ]
  },
@@ -14903,6 +15775,24 @@ window.LAB404_CONTENT = {
    {
     "h": "Learning from world history",
     "body": "World history reveals that no society developed in isolation — civilizations constantly borrowed, traded, and learned from one another. The numbers you use are called Arabic numerals but came from India; paper and gunpowder came from China; democracy's roots are in Greece. Human progress has always been a shared, global effort.\n\nIt also shows recurring patterns: empires rise and fall, ideas spread and transform, and contact between cultures drives change. Understanding this big picture helps you see today's global issues — migration, trade, conflict, cooperation — not as brand new, but as the latest chapter in a very long human story."
+   },
+   {
+    "h": "The Renaissance and the Age of Exploration",
+    "body": "Beginning in Italy around 1400, the Renaissance ('rebirth') revived interest in classical learning, art, and science, producing figures like Leonardo da Vinci. New ideas and wealth fueled the Age of Exploration, as European powers sailed in search of trade routes, 'discovering' and colonizing the Americas.\n\nThis era connected the continents through the Columbian Exchange of crops, animals, and diseases — transforming the whole world, often devastatingly for native peoples.",
+    "example": "~1400-1600: Renaissance and exploration.\nColumbian Exchange: crops, animals, and diseases crossed the Atlantic.",
+    "tip": "The Renaissance revived classical learning and art; exploration linked the continents through the Columbian Exchange."
+   },
+   {
+    "h": "The Industrial Revolution",
+    "body": "Starting in Britain in the late 1700s, the Industrial Revolution replaced hand production with machines and factories powered first by water, then steam. It massively increased output, moved people from farms to cities, and created a new working class.\n\nIt raised living standards over time but brought harsh early factory conditions, child labor, and pollution — problems that sparked labor movements and reforms still shaping work today.",
+    "example": "Late 1700s onward: machines and factories.\nSteam power + factories -> mass production + urban growth.",
+    "tip": "The Industrial Revolution replaced handwork with machines and factories, moving people to cities and creating the modern working class."
+   },
+   {
+    "h": "The World Wars and the modern era",
+    "body": "The twentieth century was shaped by two global wars. World War I (1914-1918) and World War II (1939-1945) killed tens of millions and redrew the map. WWII included the Holocaust and ended with the atomic bomb. Afterward, the United States and Soviet Union entered the Cold War, a decades-long rivalry without direct war between them.\n\nThis era also brought decolonization, the United Nations, and the technology-driven, globally connected world we live in now.",
+    "example": "WWI: 1914-1918.  WWII: 1939-1945 (incl. the Holocaust).\nCold War: US vs USSR rivalry after 1945.",
+    "tip": "Two World Wars reshaped the 20th century; the Cold War rivalry and decolonization followed, building today's connected world."
    }
   ],
   "cards": [
@@ -15142,6 +16032,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Globalization is the growing interconnection of economies and cultures."
+   },
+   {
+    "q": "The Renaissance was a rebirth of interest in:",
+    "options": [
+     "classical learning and art",
+     "factory machines",
+     "the Cold War",
+     "the internet"
+    ],
+    "a": 0,
+    "why": "It revived classical knowledge, art, and science."
+   },
+   {
+    "q": "The Columbian Exchange moved what between continents?",
+    "options": [
+     "crops, animals, and diseases",
+     "only gold",
+     "only books",
+     "nothing"
+    ],
+    "a": 0,
+    "why": "It transferred plants, animals, and diseases across the Atlantic."
+   },
+   {
+    "q": "The Industrial Revolution replaced handwork with:",
+    "options": [
+     "machines and factories",
+     "slavery only",
+     "farming",
+     "the Renaissance"
+    ],
+    "a": 0,
+    "why": "Machines and factories drove mass production."
+   },
+   {
+    "q": "A major effect of the Industrial Revolution was:",
+    "options": [
+     "people moving from farms to cities",
+     "fewer goods produced",
+     "the end of all work",
+     "the Renaissance"
+    ],
+    "a": 0,
+    "why": "Urbanization created the modern working class."
+   },
+   {
+    "q": "After World War II, the US and USSR entered the:",
+    "options": [
+     "Cold War",
+     "Renaissance",
+     "Industrial Revolution",
+     "Age of Exploration"
+    ],
+    "a": 0,
+    "why": "The Cold War was their decades-long rivalry."
    }
   ]
  },
@@ -15185,6 +16130,24 @@ window.LAB404_CONTENT = {
    {
     "h": "Climate, biomes, and human geography",
     "body": "Climate is the long-term pattern of temperature and precipitation in a place, driven largely by latitude, altitude, and nearness to water. Climate creates biomes — large regions with characteristic plants and animals, like rainforests, deserts, grasslands, and tundra.\n\nHuman geography studies people: where they live, their cultures, cities, and economies. Most people cluster where the physical geography is favorable — mild climate, water, good soil. Human-environment interaction ties it together: people farm, build cities, and extract resources, reshaping the land and, increasingly, the climate itself. Geography is where the physical and human worlds meet."
+   },
+   {
+    "h": "Physical vs. human geography",
+    "body": "Geography has two big branches. Physical geography studies the natural world — landforms, climate, rivers, ecosystems, and how they form. Human geography studies people — where they live, how they move, their cultures, cities, and economies, and how they shape and are shaped by the land.\n\nMost real questions mix both: why a city grew where it did usually involves rivers and harbors (physical) and trade and culture (human).",
+    "example": "Physical: mountains, climate, rivers.\nHuman: cities, languages, trade routes, borders.",
+    "tip": "Physical geography is the natural world; human geography is people and their activity. Real places are explained by both together."
+   },
+   {
+    "h": "Population, migration, and cities",
+    "body": "Where and how people live is central to geography. Population density measures how crowded a place is. Migration is the movement of people — pushed by hardship (war, drought, poverty) or pulled by opportunity (jobs, safety, family). Over the last century, the world has urbanized rapidly, with more than half of people now living in cities.\n\nThis movement reshapes economies, cultures, and the environment on every continent.",
+    "example": "Push factors: war, famine, lack of jobs.\nPull factors: jobs, safety, family, opportunity.",
+    "tip": "Migration is driven by push factors (what people flee) and pull factors (what attracts them). The world is rapidly urbanizing."
+   },
+   {
+    "h": "Resources and the environment",
+    "body": "Geography shapes where resources are and how people use them. Some regions are rich in water, fertile soil, or energy; others are not, which drives trade and sometimes conflict. Human activity — farming, mining, building, burning fuel — changes landscapes and climate.\n\nUnderstanding this link helps explain global patterns: why certain places industrialized, why some face shortages, and why sustainability has become a worldwide concern.",
+    "example": "Resource-rich regions trade with resource-poor ones.\nHuman activity reshapes climate, rivers, and land.",
+    "tip": "Where resources sit shapes trade, wealth, and conflict. Human use of land and energy changes the environment everywhere."
    }
   ],
   "cards": [
@@ -15424,6 +16387,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "It examines how humans depend on and reshape the environment."
+   },
+   {
+    "q": "Which is part of physical geography?",
+    "options": [
+     "climate and landforms",
+     "city trade routes",
+     "languages",
+     "national borders"
+    ],
+    "a": 0,
+    "why": "Physical geography covers the natural world."
+   },
+   {
+    "q": "The study of where people live and their cultures is:",
+    "options": [
+     "human geography",
+     "physical geography",
+     "geology",
+     "astronomy"
+    ],
+    "a": 0,
+    "why": "Human geography focuses on people and their activity."
+   },
+   {
+    "q": "A 'pull factor' in migration is:",
+    "options": [
+     "job opportunity",
+     "war",
+     "famine",
+     "drought"
+    ],
+    "a": 0,
+    "why": "Pull factors attract people to a place."
+   },
+   {
+    "q": "Over the last century, the world has become more:",
+    "options": [
+     "urban",
+     "rural",
+     "empty",
+     "frozen"
+    ],
+    "a": 0,
+    "why": "More than half the world now lives in cities."
+   },
+   {
+    "q": "Where natural resources are located affects:",
+    "options": [
+     "trade and sometimes conflict",
+     "nothing",
+     "only the weather",
+     "only language"
+    ],
+    "a": 0,
+    "why": "Resource distribution drives trade and can cause conflict."
    }
   ]
  },
@@ -15467,6 +16485,24 @@ window.LAB404_CONTENT = {
    {
     "h": "Economics in your life",
     "body": "Economics isn't abstract — it's the logic behind every money decision you make. Budgeting is managing scarce income against wants and needs. Understanding opportunity cost helps you weigh choices. Knowing supply and demand helps you see why prices move and when to buy.\n\nOn a bigger level, understanding inflation, interest, and the economy helps you plan — saving, borrowing wisely, and voting on policies that affect jobs and prices. Good economic thinking won't make choices for you, but it gives you a clear framework: identify the trade-offs, weigh the costs and benefits, and choose on purpose instead of by accident."
+   },
+   {
+    "h": "Market structures and competition",
+    "body": "Markets differ by how much competition they have. In perfect competition, many sellers offer similar products and no one controls the price. A monopoly is the opposite — a single seller with the power to set high prices. Between them are oligopolies (a few large firms) and monopolistic competition (many firms with slightly different products).\n\nCompetition generally benefits consumers with lower prices and more choice, which is why governments use antitrust laws to limit monopolies.",
+    "example": "Many sellers = competition = lower prices.\nOne seller = monopoly = higher prices, less choice.",
+    "tip": "More competition usually means lower prices and more choice. Monopolies raise prices, so antitrust laws limit them."
+   },
+   {
+    "h": "Inflation, unemployment, and GDP",
+    "body": "Three indicators describe an economy's health. GDP (gross domestic product) is the total value of goods and services produced — a measure of size and growth. Inflation is a general rise in prices, which erodes what money can buy. Unemployment measures people who want work but can't find it.\n\nGovernments watch all three: strong growth with low inflation and low unemployment is the goal, and policy tools are aimed at keeping them in balance.",
+    "example": "GDP up = growth.  Inflation up = money buys less.\nUnemployment up = fewer jobs.",
+    "tip": "GDP measures the economy's size, inflation measures rising prices, and unemployment measures joblessness. Policy aims to balance them."
+   },
+   {
+    "h": "Trade and the global economy",
+    "body": "Countries trade because no nation makes everything most efficiently. Specializing in what you produce best and trading for the rest (comparative advantage) makes both sides richer. Exports are what a country sells abroad; imports are what it buys.\n\nGlobal trade lowers prices and widens choice, but it also exposes countries to each other's downturns and can disrupt local industries — which is why trade is both powerful and politically contested.",
+    "example": "Comparative advantage: each country makes what it does best, then trades.\nExports = sold abroad; imports = bought from abroad.",
+    "tip": "Trade lets countries specialize in what they do best and swap for the rest, making both richer — but it links their economies' ups and downs."
    }
   ],
   "cards": [
@@ -15706,6 +16742,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "It gives a framework of costs, benefits, and trade-offs."
+   },
+   {
+    "q": "A market with a single seller is a:",
+    "options": [
+     "monopoly",
+     "perfect competition",
+     "oligopoly",
+     "free market"
+    ],
+    "a": 0,
+    "why": "One seller with price-setting power is a monopoly."
+   },
+   {
+    "q": "Competition generally gives consumers:",
+    "options": [
+     "lower prices and more choice",
+     "higher prices",
+     "fewer options",
+     "no effect"
+    ],
+    "a": 0,
+    "why": "Rival sellers compete on price and quality."
+   },
+   {
+    "q": "GDP measures:",
+    "options": [
+     "total goods and services produced",
+     "the inflation rate",
+     "the number of jobs lost",
+     "a country's population"
+    ],
+    "a": 0,
+    "why": "GDP is the total value of production."
+   },
+   {
+    "q": "Inflation means that over time, money:",
+    "options": [
+     "buys less",
+     "buys more",
+     "disappears",
+     "stays exactly the same"
+    ],
+    "a": 0,
+    "why": "Rising prices erode purchasing power."
+   },
+   {
+    "q": "Countries trade mainly because:",
+    "options": [
+     "each can specialize in what it does best",
+     "they dislike each other",
+     "money is unlimited",
+     "trade is required by law"
+    ],
+    "a": 0,
+    "why": "Comparative advantage makes specializing and trading beneficial."
    }
   ]
  },
@@ -16813,6 +17904,24 @@ window.LAB404_CONTENT = {
     "h": "Systems working together",
     "body": "The body's real wonder is cooperation. Eat a meal and the digestive system breaks it into nutrients, the circulatory system delivers them, cells use them for energy, and the urinary system clears the waste — several systems in one simple act. Run up stairs, and the muscular, skeletal, respiratory, circulatory, and nervous systems all coordinate instantly.\n\nOverseeing it all is a drive for homeostasis — keeping internal conditions (temperature, fluids, blood sugar) stable. When you're too hot, the body sweats to cool you; when blood sugar drops, hormones release stored energy. Health is largely this balance working smoothly, and understanding the body means seeing not isolated parts but a single, coordinated whole.",
     "tip": "The body's theme is cooperation toward homeostasis — keeping temperature, fluids, and blood sugar stable."
+   },
+   {
+    "h": "The nervous system and brain",
+    "body": "The nervous system is the body's control and communication network. The brain and spinal cord form the central nervous system, which processes information and makes decisions. Nerves branching out to the body form the peripheral nervous system, carrying signals both ways as fast electrical impulses.\n\nThe brain's regions specialize: areas for movement, senses, language, and the brainstem that runs automatic functions like breathing and heartbeat without your awareness.",
+    "example": "Central: brain + spinal cord (processing).\nPeripheral: nerves to the body (signals in and out).",
+    "tip": "The brain and spinal cord (central nervous system) process information; peripheral nerves carry signals to and from the body as electrical impulses."
+   },
+   {
+    "h": "The digestive system",
+    "body": "Digestion breaks food into nutrients the body can absorb. It starts in the mouth (chewing and saliva), down the esophagus to the stomach, where acid and enzymes break food into a liquid. Most absorption happens in the small intestine, where nutrients pass into the blood; the large intestine absorbs water and forms waste.\n\nThe liver, pancreas, and gallbladder assist by making enzymes and bile. From bite to absorption, it's a coordinated assembly line.",
+    "example": "Mouth -> esophagus -> stomach -> small intestine (absorb) -> large intestine (water + waste).",
+    "tip": "Digestion runs mouth -> stomach -> small intestine (most absorption) -> large intestine (water and waste), aided by the liver and pancreas."
+   },
+   {
+    "h": "The immune system",
+    "body": "The immune system defends the body against germs. The first line is physical barriers — skin and mucus. If something gets through, white blood cells attack it, and the system 'remembers' specific invaders so it can respond faster next time, which is why you usually catch some illnesses only once.\n\nVaccines use this memory, training the immune system against a germ safely so it's ready for the real thing. Fever and inflammation are signs the system is fighting.",
+    "example": "Barriers (skin) -> white blood cells attack -> immune memory for next time.",
+    "tip": "The immune system blocks germs with barriers, attacks invaders with white blood cells, and remembers them — the basis of immunity and vaccines."
    }
   ],
   "cards": [
@@ -17052,6 +18161,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Systems constantly work together to keep you alive."
+   },
+   {
+    "q": "The central nervous system is the:",
+    "options": [
+     "brain and spinal cord",
+     "heart and lungs",
+     "stomach and liver",
+     "skin and nerves"
+    ],
+    "a": 0,
+    "why": "It processes information and makes decisions."
+   },
+   {
+    "q": "The brainstem controls automatic functions like:",
+    "options": [
+     "breathing and heartbeat",
+     "reading",
+     "math",
+     "running only"
+    ],
+    "a": 0,
+    "why": "It runs vital functions without conscious effort."
+   },
+   {
+    "q": "Most nutrient absorption happens in the:",
+    "options": [
+     "small intestine",
+     "mouth",
+     "esophagus",
+     "large intestine"
+    ],
+    "a": 0,
+    "why": "The small intestine passes nutrients into the blood."
+   },
+   {
+    "q": "The large intestine mainly absorbs:",
+    "options": [
+     "water",
+     "all nutrients",
+     "oxygen",
+     "protein"
+    ],
+    "a": 0,
+    "why": "It absorbs water and forms waste."
+   },
+   {
+    "q": "Vaccines work by training the body's:",
+    "options": [
+     "immune memory",
+     "digestive system",
+     "bones",
+     "muscles"
+    ],
+    "a": 0,
+    "why": "They prepare the immune system to recognize a germ."
    }
   ]
  },
@@ -17094,6 +18258,22 @@ window.LAB404_CONTENT = {
     "h": "When and how to seek help",
     "body": "Sometimes self-care isn't enough, and that's exactly when professional help matters — just like you'd see a doctor for a persistent physical problem. Consider reaching out if difficult feelings last for weeks, interfere with daily life (work, school, relationships, sleep, eating), or feel like too much to handle alone.\n\nHelp comes in many forms: a doctor, a therapist or counselor, a school counselor, a trusted clergy member, or a support group; treatment can include talk therapy, lifestyle changes, and sometimes medication. In the US, you can call or text 988 anytime for the Suicide & Crisis Lifeline. Seeking help is a normal, healthy, and courageous step — mental health challenges are real matters, and no one should face a crisis alone.",
     "tip": "Seek help if hard feelings last weeks or disrupt daily life. In the US, call or text 988 anytime. Asking for help is strength."
+   },
+   {
+    "h": "Sleep, exercise, and mental health",
+    "body": "Mental and physical health are deeply linked. Regular exercise releases chemicals that lift mood and reduce anxiety, and is one of the most effective, side-effect-free ways to feel better. Sleep is just as crucial — too little sleep worsens mood, focus, and stress tolerance, while good sleep restores them.\n\nSmall, consistent habits — moving your body, getting daylight, keeping a regular sleep schedule — protect mental health as much as any single big change.",
+    "example": "Exercise -> mood-lifting chemicals, less anxiety.\nGood sleep -> better mood, focus, stress tolerance.",
+    "tip": "Exercise and sleep are powerful, free mental-health tools. Regular movement and a steady sleep schedule protect your mood."
+   },
+   {
+    "h": "Understanding anxiety and depression",
+    "body": "Anxiety and depression are common and treatable, not personal failings. Anxiety is excessive, persistent worry or fear that interferes with life; it can bring a racing heart, restlessness, and trouble concentrating. Depression is more than sadness — a lasting loss of interest, low energy, hopelessness, and changes in sleep or appetite.\n\nBoth are medical conditions influenced by biology and circumstances, and both respond to support, therapy, lifestyle changes, and sometimes medication. Recognizing them is the first step to getting help.",
+    "tip": "Anxiety (persistent worry) and depression (lasting low mood and loss of interest) are common, treatable conditions — not weaknesses."
+   },
+   {
+    "h": "Habits and healthy boundaries",
+    "body": "Protecting mental health is partly about daily habits and limits. Boundaries — saying no, limiting draining people or endless news and social media, protecting your time — prevent burnout. Connection with others, time outdoors, and activities that give a sense of purpose or accomplishment all build resilience.\n\nStress is normal, but chronic, unmanaged stress harms the body and mind. Noticing your limits and honoring them is a skill worth practicing, not a luxury.",
+    "tip": "Boundaries (saying no, limiting draining inputs) prevent burnout. Connection, nature, and purpose build resilience against chronic stress."
    }
   ],
   "cards": [
@@ -17333,6 +18513,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "They're real and respond to care and support."
+   },
+   {
+    "q": "Regular exercise generally:",
+    "options": [
+     "lifts mood and reduces anxiety",
+     "worsens mental health",
+     "has no effect on mood",
+     "replaces all sleep"
+    ],
+    "a": 0,
+    "why": "It releases mood-lifting chemicals."
+   },
+   {
+    "q": "Too little sleep tends to:",
+    "options": [
+     "worsen mood and focus",
+     "improve concentration",
+     "cure anxiety",
+     "have no effect"
+    ],
+    "a": 0,
+    "why": "Sleep loss harms mood, focus, and stress tolerance."
+   },
+   {
+    "q": "Depression is best described as:",
+    "options": [
+     "a treatable medical condition",
+     "just a bad day",
+     "a personal weakness",
+     "always permanent"
+    ],
+    "a": 0,
+    "why": "It's a common, treatable condition, not a character flaw."
+   },
+   {
+    "q": "Anxiety that interferes with daily life is:",
+    "options": [
+     "a common, treatable condition",
+     "untreatable",
+     "a sign of weakness",
+     "always imaginary"
+    ],
+    "a": 0,
+    "why": "It responds to therapy, support, and sometimes medication."
+   },
+   {
+    "q": "Setting boundaries, like limiting draining inputs, helps:",
+    "options": [
+     "prevent burnout",
+     "cause stress",
+     "weaken resilience",
+     "harm sleep"
+    ],
+    "a": 0,
+    "why": "Boundaries protect your time and energy."
    }
   ]
  },
@@ -17376,6 +18611,24 @@ window.LAB404_CONTENT = {
     "h": "Preventing illness",
     "body": "The best way to handle illness is to avoid it, and simple habits prevent a great deal. Hand-washing — with soap, for about 20 seconds, often — is the single most effective way to stop the spread of germs. Cover your coughs and sneezes, avoid touching your face, and stay home when you're sick to protect others.\n\nVaccines are another powerful tool: they train your immune system to fight specific diseases before you ever catch them, preventing illnesses that were once common and dangerous. And general health habits — enough sleep, good nutrition, exercise, and managing stress — keep your immune system strong. Prevention is quieter than treatment, but it's where most of the benefit really is.",
     "tip": "Wash hands often, cover coughs, stay home when sick, keep up vaccines, and stay generally healthy — prevention beats treatment."
+   },
+   {
+    "h": "Vaccines and how they work",
+    "body": "A vaccine safely teaches the immune system to recognize a specific germ without making you sick. It exposes the body to a harmless piece or weakened form of the germ, so the immune system builds memory and antibodies. If the real germ later shows up, the body fights it off fast, often before you feel ill.\n\nWidespread vaccination also protects those who can't be vaccinated, by making it hard for a disease to spread — an effect called herd immunity.",
+    "example": "Vaccine -> harmless exposure -> immune memory built -> fast defense against the real germ.",
+    "tip": "Vaccines train immune memory using a harmless form of a germ. Wide vaccination also protects others through herd immunity."
+   },
+   {
+    "h": "Chronic vs acute conditions",
+    "body": "Illnesses fall into two broad types. Acute conditions come on quickly and usually resolve — a cold, a flu, a broken bone, a stomach bug. Chronic conditions develop slowly and last a long time, often for life — diabetes, asthma, high blood pressure, heart disease.\n\nAcute illnesses are usually cured; chronic ones are typically managed over years with medication, lifestyle, and monitoring. Knowing which you're dealing with shapes how you respond and when to seek care.",
+    "example": "Acute: cold, flu, broken bone (short-term).\nChronic: diabetes, asthma, high blood pressure (long-term).",
+    "tip": "Acute illnesses come and go; chronic conditions are long-term and managed, not usually cured. The two call for different approaches."
+   },
+   {
+    "h": "Antibiotics and why misuse is dangerous",
+    "body": "Antibiotics kill bacteria and are powerful against bacterial infections — but they do nothing against viruses like colds and flu. Taking them when they aren't needed, or not finishing a prescribed course, lets the toughest bacteria survive and multiply, breeding antibiotic-resistant 'superbugs' that are much harder to treat.\n\nSo take antibiotics only when a clinician prescribes them for a bacterial infection, and finish the full course. This protects both you and everyone else.",
+    "example": "Antibiotics: work on bacteria, NOT viruses (colds, flu).\nMisuse -> resistant superbugs.",
+    "tip": "Antibiotics treat bacteria, not viruses. Misusing them breeds resistant superbugs, so take them only as prescribed and finish the course."
    }
   ],
   "cards": [
@@ -17615,6 +18868,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Prevention beats treatment."
+   },
+   {
+    "q": "A vaccine works by:",
+    "options": [
+     "training immune memory with a harmless form of a germ",
+     "giving you the full disease",
+     "killing all bacteria",
+     "replacing antibiotics"
+    ],
+    "a": 0,
+    "why": "It builds immunity safely before real exposure."
+   },
+   {
+    "q": "Herd immunity protects:",
+    "options": [
+     "people who can't be vaccinated",
+     "only the vaccinated",
+     "no one",
+     "only children"
+    ],
+    "a": 0,
+    "why": "Widespread vaccination limits a disease's spread."
+   },
+   {
+    "q": "A cold or flu is an example of a(n):",
+    "options": [
+     "acute condition",
+     "chronic condition",
+     "vaccine",
+     "antibiotic"
+    ],
+    "a": 0,
+    "why": "Acute illnesses come on fast and usually resolve."
+   },
+   {
+    "q": "Which is a chronic condition?",
+    "options": [
+     "diabetes",
+     "a common cold",
+     "a stomach bug",
+     "a paper cut"
+    ],
+    "a": 0,
+    "why": "Chronic conditions last a long time and are managed."
+   },
+   {
+    "q": "Antibiotics are useless against:",
+    "options": [
+     "viruses like colds and flu",
+     "bacterial infections",
+     "strep throat",
+     "bacterial pneumonia"
+    ],
+    "a": 0,
+    "why": "Antibiotics kill bacteria, not viruses."
    }
   ]
  },
@@ -17659,6 +18967,24 @@ window.LAB404_CONTENT = {
     "h": "Why this skill is useful",
     "body": "Medical terminology isn't just for doctors and nurses. It helps anyone understand their own health: reading a diagnosis, a lab result, a medication label, or a doctor's note with more confidence instead of confusion. When you can tell that '-itis' means inflammation or 'hyper-' means high, health information gets far less intimidating.\n\nIt's foundational for any healthcare career — nursing, medical assisting, pharmacy, EMT work, billing and coding — which is why it's often the first course. And it's a satisfying skill: a system that turns an overwhelming wall of jargon into something you can actually read. Learn the parts, practice decoding, and the language of medicine opens up.",
     "tip": "Decoding medical terms helps you understand your own health and is the foundation of every healthcare career."
+   },
+   {
+    "h": "Directional and anatomical terms",
+    "body": "Healthcare uses precise position words so there's no confusion about where something is. Anterior means front, posterior means back; superior is above, inferior below. Medial is toward the midline, lateral away from it. Proximal is closer to the body's center, distal farther away.\n\nThese pair with body planes and regions to describe any location exactly — essential when a small difference in position changes the meaning entirely.",
+    "example": "Anterior/posterior = front/back.\nSuperior/inferior = above/below.\nProximal/distal = nearer/farther from center.",
+    "tip": "Learn the paired direction words — anterior/posterior, superior/inferior, proximal/distal — to pin down any location on the body precisely."
+   },
+   {
+    "h": "Abbreviations in healthcare",
+    "body": "Medicine runs on abbreviations for speed, and knowing common ones helps you read instructions and records. Examples: BP (blood pressure), HR (heart rate), Rx (prescription), bid (twice a day), prn (as needed), NPO (nothing by mouth), Hx (history), Dx (diagnosis), Tx (treatment).\n\nBecause a misread abbreviation can be dangerous, some error-prone ones have been banned in hospitals — but recognizing the standard set makes medical writing far less mysterious.",
+    "example": "BP: blood pressure.  HR: heart rate.\nRx: prescription.  bid: twice daily.  prn: as needed.",
+    "tip": "Common abbreviations like BP, HR, Rx, bid (twice daily), and prn (as needed) speed up medical writing. Learn the standard set to read records."
+   },
+   {
+    "h": "Terms for symptoms and procedures",
+    "body": "Built-from-parts words describe what's wrong and what's done about it. Suffixes often signal the type: -itis means inflammation (arthritis = joint inflammation), -ectomy means surgical removal (appendectomy), -otomy means cutting into, -oscopy means looking inside with a scope, -algia means pain.\n\nCombine a root (the body part) with these endings and you can often decode an unfamiliar term, or at least its general meaning, without a dictionary.",
+    "example": "arthr/itis = joint inflammation.\nappend/ectomy = removal of the appendix.\ncolon/oscopy = looking inside the colon.",
+    "tip": "Suffixes carry meaning: -itis (inflammation), -ectomy (removal), -oscopy (scope exam), -algia (pain). Root + suffix decodes most terms."
    }
   ],
   "cards": [
@@ -17898,6 +19224,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "It's foundational for nursing, pharmacy, EMT, coding, and more."
+   },
+   {
+    "q": "Anterior means:",
+    "options": [
+     "front",
+     "back",
+     "above",
+     "below"
+    ],
+    "a": 0,
+    "why": "Anterior is the front; posterior is the back."
+   },
+   {
+    "q": "'Proximal' means:",
+    "options": [
+     "closer to the body's center",
+     "farther from the center",
+     "above",
+     "on the left"
+    ],
+    "a": 0,
+    "why": "Proximal is nearer the point of attachment or center."
+   },
+   {
+    "q": "In healthcare, 'prn' means:",
+    "options": [
+     "as needed",
+     "twice a day",
+     "nothing by mouth",
+     "blood pressure"
+    ],
+    "a": 0,
+    "why": "prn marks a medication taken only as needed."
+   },
+   {
+    "q": "The suffix '-oscopy' means:",
+    "options": [
+     "looking inside with a scope",
+     "inflammation",
+     "removal",
+     "pain"
+    ],
+    "a": 0,
+    "why": "A colonoscopy looks inside the colon."
+   },
+   {
+    "q": "An 'appendectomy' is the:",
+    "options": [
+     "removal of the appendix",
+     "inflammation of the appendix",
+     "scope of the appendix",
+     "pain in the appendix"
+    ],
+    "a": 0,
+    "why": "The suffix -ectomy means surgical removal."
    }
   ]
  },
