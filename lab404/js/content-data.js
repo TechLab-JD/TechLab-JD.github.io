@@ -6453,6 +6453,24 @@ window.LAB404_CONTENT = {
     "h": "How to get better",
     "body": "Drawing improves with consistent practice, and a few habits accelerate it. Draw from life and from observation (real objects, not just imagination) — it trains accurate seeing. Draw a lot and often; a quick sketch daily beats a masterpiece monthly. Do focused exercises: contour drawing (draw the edges slowly without looking much at the page), gesture drawing (fast, loose capture of a pose), and value studies.\n\nDon't fear 'bad' drawings — they're how you learn, and every artist has thousands of them. Study things you like and figure out how they work. Be patient: visible progress comes in weeks, real skill over years, but it does come for anyone who keeps at it. The only people who never learn to draw are the ones who stop.",
     "tip": "Draw from life, draw often (daily beats rarely), do focused exercises (contour, gesture, value), and don't fear bad drawings."
+   },
+   {
+    "h": "Seeing shapes, not objects",
+    "body": "Beginners draw what they think a thing looks like — a symbol of an eye, a generic tree — instead of what's actually in front of them. The core skill of drawing is really a skill of seeing: breaking a subject into simple shapes (circles, boxes, cylinders) and the spaces between them, then drawing those.\n\nLooking at the actual edges, angles, and gaps rather than naming the object is what makes a drawing resemble its subject.",
+    "example": "Don't draw 'a hand'; draw the shapes: the box of the palm, the cylinders of the fingers.",
+    "tip": "Drawing is really seeing. Break a subject into simple shapes and draw what's actually there, not the symbol in your head."
+   },
+   {
+    "h": "Proportion and measuring",
+    "body": "Proportion is the size relationship between parts, and getting it right is what makes a drawing look correct rather than 'off'. Artists measure by comparison — holding a pencil at arm's length to gauge how many 'heads' tall a figure is, or checking whether one shape is wider than another.\n\nYou don't need precise numbers; you need relationships. Constantly comparing sizes as you draw catches errors early, while they're easy to fix.",
+    "example": "Compare: 'the eyes sit about halfway down the head', 'this gap equals that width'.",
+    "tip": "Proportion is the size relationship between parts. Measure by comparison (pencil at arm's length) and keep checking relationships as you draw."
+   },
+   {
+    "h": "Line quality and mark-making",
+    "body": "A line can be more than an outline. Varying its weight — pressing harder for a thick, dark line, lighter for a thin, faint one — adds depth and focus. Thicker, darker lines pull forward and suggest shadow or importance; lighter lines recede.\n\nDifferent marks build texture too: hatching (parallel lines), cross-hatching (crossed lines), and stippling (dots) create tone and surface. Confident, deliberate marks read better than timid, scratchy ones, so commit to each stroke.",
+    "example": "Hatching: parallel lines.  Cross-hatching: crossed lines.  Stippling: dots.",
+    "tip": "Vary line weight for depth, and use marks like hatching and stippling to build tone and texture. Confident strokes beat timid ones."
    }
   ],
   "cards": [
@@ -6692,6 +6710,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Every artist makes thousands; they're how you improve."
+   },
+   {
+    "q": "The core skill behind drawing well is really:",
+    "options": [
+     "seeing accurately",
+     "owning expensive pencils",
+     "natural talent only",
+     "drawing fast"
+    ],
+    "a": 0,
+    "why": "Breaking a subject into shapes and drawing what's there is the key."
+   },
+   {
+    "q": "Beginners often draw:",
+    "options": [
+     "a symbol of a thing instead of what they see",
+     "too accurately",
+     "only shapes",
+     "nothing at all"
+    ],
+    "a": 0,
+    "why": "Drawing the idea of an object instead of the real shapes causes errors."
+   },
+   {
+    "q": "Artists usually measure proportion by:",
+    "options": [
+     "comparing sizes",
+     "exact rulers only",
+     "guessing blindly",
+     "ignoring it"
+    ],
+    "a": 0,
+    "why": "Comparing relationships (like 'heads tall') keeps proportions right."
+   },
+   {
+    "q": "Pressing harder to make a thicker, darker line is called varying:",
+    "options": [
+     "line weight",
+     "proportion",
+     "color",
+     "the subject"
+    ],
+    "a": 0,
+    "why": "Line weight adds depth and focus."
+   },
+   {
+    "q": "Crossed sets of parallel lines that build tone are called:",
+    "options": [
+     "cross-hatching",
+     "stippling",
+     "blending",
+     "erasing"
+    ],
+    "a": 0,
+    "why": "Cross-hatching layers lines to darken an area."
    }
   ]
  },
@@ -6734,6 +6807,23 @@ window.LAB404_CONTENT = {
     "h": "Thinking well in daily life",
     "body": "Critical thinking pays off constantly. Evaluating news and social media: check sources, notice emotional manipulation, and verify surprising claims before believing or sharing. Making decisions: list the real options and evidence instead of going with gut or habit. Resisting manipulation: advertising, scams, and propaganda all rely on bypassing careful thought.\n\nA few lifelong habits: stay curious and ask questions; seek out viewpoints that disagree with you (not just ones that confirm you); be comfortable saying 'I don't know' or 'I was wrong'; and slow down on important decisions. Critical thinking is ultimately intellectual honesty — caring more about what's true than about being right. It's the foundation under every other kind of good thinking.",
     "tip": "Check sources, seek disagreeing views, slow down on big decisions, and be willing to say 'I was wrong.' Care about truth over being right."
+   },
+   {
+    "h": "Evaluating sources and evidence",
+    "body": "Not all information deserves equal trust. Strong critical thinkers weigh the source (expertise, track record, possible motives), the evidence (is there data, or just assertion?), and whether other independent sources agree. A single anonymous claim is weak; a result confirmed by several credible, independent sources is strong.\n\nWatch for conflicts of interest — who benefits if you believe this? — and prefer primary sources over someone's summary of a summary.",
+    "tip": "Weigh the source, the evidence, and whether independent sources agree. Ask who benefits from your belief, and prefer primary sources."
+   },
+   {
+    "h": "Common cognitive biases",
+    "body": "Our minds take shortcuts that often mislead us. Confirmation bias makes us notice evidence that fits what we already believe and ignore the rest. Anchoring makes the first number we hear skew our judgment. The availability bias makes vivid, recent events feel more common than they are.\n\nYou can't delete biases, but naming them helps. The habit of asking 'what would change my mind?' and actively seeking the other side counteracts the strongest ones.",
+    "example": "Confirmation bias: seeing only what fits your view.\nAvailability: vivid events feel more common than they are.",
+    "tip": "Biases like confirmation bias and anchoring quietly distort judgment. Naming them and asking 'what would change my mind?' counteracts them."
+   },
+   {
+    "h": "Asking better questions",
+    "body": "Critical thinking is driven by good questions more than quick answers. Instead of accepting a claim, ask: What exactly is being claimed? What's the evidence? Could there be another explanation? What's being left out? Who says so, and how would they know?\n\nThese questions slow down automatic agreement and surface weak reasoning. The goal isn't to doubt everything cynically, but to believe things for good reasons — proportioning your confidence to the evidence.",
+    "example": "Ask: What's the claim? What's the evidence? What else could explain this? What's left out?",
+    "tip": "Good questions drive critical thinking: What's the claim? The evidence? Another explanation? What's left out? Believe things for good reasons."
    }
   ],
   "cards": [
@@ -6973,6 +7063,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "They rely on emotion and speed, not reasoning."
+   },
+   {
+    "q": "Evidence is strongest when it is:",
+    "options": [
+     "confirmed by several independent sources",
+     "from one anonymous claim",
+     "emotionally powerful",
+     "the first thing you read"
+    ],
+    "a": 0,
+    "why": "Independent corroboration strengthens a claim."
+   },
+   {
+    "q": "A key question about any source is:",
+    "options": [
+     "who benefits if you believe it",
+     "how long it is",
+     "what font it uses",
+     "when you found it"
+    ],
+    "a": 0,
+    "why": "Conflicts of interest reveal possible bias."
+   },
+   {
+    "q": "Confirmation bias is the tendency to:",
+    "options": [
+     "notice evidence that fits your beliefs",
+     "change your mind easily",
+     "distrust everything",
+     "remember numbers"
+    ],
+    "a": 0,
+    "why": "It makes us ignore evidence against our views."
+   },
+   {
+    "q": "A good habit against bias is to ask:",
+    "options": [
+     "what would change my mind?",
+     "how can I win?",
+     "who agrees with me?",
+     "nothing"
+    ],
+    "a": 0,
+    "why": "It opens you to disconfirming evidence."
+   },
+   {
+    "q": "Critical thinking means proportioning your confidence to:",
+    "options": [
+     "the evidence",
+     "your feelings",
+     "the loudest voice",
+     "the first claim"
+    ],
+    "a": 0,
+    "why": "Believe things as strongly as the evidence supports."
    }
   ]
  },
@@ -7016,6 +7161,23 @@ window.LAB404_CONTENT = {
     "h": "Form, safety, and recovery",
     "body": "Good form is the foundation — it targets the right muscles and prevents injury. Learn proper technique before adding heavy weight (videos, a trainer, or a knowledgeable friend help); start light to groove the movement. Warm up before training, and never sacrifice form to lift more — ego lifting is how people get hurt.\n\nRecovery is when you actually get stronger: muscles rebuild during rest, not during the workout. Give each muscle group about 48 hours before training it hard again, sleep well, and eat enough protein. Don't train through sharp pain (soreness is normal; sharp pain isn't). Progress comes from the cycle of challenge and recovery, repeated consistently over months. Start where you are, be patient, and the results compound.",
     "tip": "Form before weight (start light, learn technique). You grow during RECOVERY — rest ~48h per muscle, sleep, and eat enough protein."
+   },
+   {
+    "h": "Compound vs isolation exercises",
+    "body": "Strength moves fall into two kinds. Compound exercises work several muscle groups and joints at once — squats, deadlifts, push-ups, rows. Isolation exercises target a single muscle — bicep curls, calf raises. Compounds give the most strength and real-world benefit per minute, so they form the backbone of a good program; isolation work fills in specific weak points.\n\nFor general fitness, prioritize a few big compound lifts over many isolation movements.",
+    "example": "Compound: squat, deadlift, push-up, row (many muscles).\nIsolation: bicep curl, calf raise (one muscle).",
+    "tip": "Compound exercises (squats, push-ups) work many muscles and give the most benefit; isolation moves target one. Build a program around compounds."
+   },
+   {
+    "h": "Warming up properly",
+    "body": "Jumping into heavy lifting cold invites injury and weaker performance. A good warm-up raises your body temperature and prepares the specific muscles and joints you're about to use. Start with a few minutes of light movement to get blood flowing, then do dynamic stretches and lighter 'warm-up sets' of the exercise itself before your working weight.\n\nThis primes your nervous system and joints, so you lift better and safer. Save long static stretching for after the workout.",
+    "example": "Light cardio -> dynamic stretches -> lighter warm-up sets -> working weight.",
+    "tip": "Warm up with light movement, dynamic stretches, and lighter sets of the lift itself. It prevents injury and improves performance; save static stretching for after."
+   },
+   {
+    "h": "Nutrition and protein for muscle",
+    "body": "Training breaks muscle down; food and rest build it back stronger, so nutrition is half of strength progress. Protein provides the building blocks — aim to include a protein source in each meal (meat, eggs, dairy, beans, tofu). Overall you need enough total calories to support growth, and enough sleep for repair.\n\nYou can't out-train poor nutrition: lifting hard but eating too little protein or too few calories stalls progress. Fuel the work you're putting in.",
+    "tip": "Muscle is built by food and rest, not just training. Eat enough protein (a source each meal) and total calories, and sleep — you can't out-train poor nutrition."
    }
   ],
   "cards": [
@@ -7255,6 +7417,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Soreness is normal; sharp pain is a warning."
+   },
+   {
+    "q": "A compound exercise:",
+    "options": [
+     "works several muscle groups at once",
+     "targets one muscle",
+     "uses no joints",
+     "is always isolation"
+    ],
+    "a": 0,
+    "why": "Squats and push-ups are compounds."
+   },
+   {
+    "q": "For general fitness you should prioritize:",
+    "options": [
+     "compound exercises",
+     "only isolation moves",
+     "no exercises",
+     "stretching only"
+    ],
+    "a": 0,
+    "why": "Compounds give the most benefit per minute."
+   },
+   {
+    "q": "A good warm-up includes:",
+    "options": [
+     "light movement and dynamic stretches",
+     "heavy lifting right away",
+     "a long nap",
+     "only static stretching"
+    ],
+    "a": 0,
+    "why": "It prepares muscles and joints safely."
+   },
+   {
+    "q": "Muscle is actually built during:",
+    "options": [
+     "food and rest after training",
+     "the lift itself only",
+     "warm-ups",
+     "static stretching"
+    ],
+    "a": 0,
+    "why": "Training breaks muscle down; recovery rebuilds it."
+   },
+   {
+    "q": "The nutrient most associated with building muscle is:",
+    "options": [
+     "protein",
+     "sugar",
+     "sodium",
+     "caffeine"
+    ],
+    "a": 0,
+    "why": "Protein provides the building blocks for repair."
    }
   ]
  },
@@ -7297,6 +7514,23 @@ window.LAB404_CONTENT = {
     "h": "Launching lean",
     "body": "The modern approach to starting is to launch lean: get a basic version of your product or service in front of real customers quickly, rather than perfecting it in secret for a year. The idea of a 'minimum viable product' (MVP) is to offer the smallest thing that delivers real value, learn from actual customer feedback, and improve from there.\n\nThis matters because you'll learn more from real customers than from any amount of planning — they'll show you what they actually want versus what you assumed. Start small, keep costs low, get real sales, and reinvest and grow from there. Expect to adjust (even 'pivot') based on what you learn. The biggest risk isn't failing; it's spending huge effort on something nobody wants. Launch, learn, and improve — momentum and feedback beat perfection.",
     "tip": "Launch lean: get a basic version (MVP) to real customers fast, learn from them, and improve. Real feedback beats endless planning."
+   },
+   {
+    "h": "Writing a simple business plan",
+    "body": "A business plan doesn't need to be a long document; it needs to answer key questions clearly. What problem do you solve, and for whom? How will you reach those customers? How will you make money (your revenue model)? What will it cost, and when do you break even?\n\nEven a one-page plan forces you to think through the whole picture and spot gaps before you spend money. It's a thinking tool first, and a document for others (like lenders) second.",
+    "example": "One-pager: problem, customer, solution, how you'll reach them, revenue, costs, break-even.",
+    "tip": "A business plan answers: what problem, for whom, how you reach them, how you make money, and when you break even. Even one page clarifies the whole picture."
+   },
+   {
+    "h": "Understanding your customer",
+    "body": "Businesses succeed by solving a real problem for real people, so knowing your customer is everything. Define who they are, what they need, what they currently do instead, and what they'd pay to solve the problem. The biggest startup mistake is building something nobody wants.\n\nTalk to potential customers before building — their answers are worth more than your assumptions. A clear picture of one specific customer beats a vague hope of appealing to 'everyone'.",
+    "tip": "Know your customer: who they are, their real need, and what they'd pay. Talk to them before building — the top startup mistake is making something nobody wants."
+   },
+   {
+    "h": "Pricing your product or service",
+    "body": "Price is one of the most important and most agonized decisions. Three anchors help: your costs (you must charge more than it costs you to deliver), your competitors (what the market expects), and the value to the customer (what the solution is worth to them). Underpricing is as dangerous as overpricing — too-low prices can't sustain the business and can signal low quality.\n\nMany beginners price too low out of fear. Price for the value you provide, and test and adjust as you learn.",
+    "example": "Price above cost, near market, toward customer value.\nUnderpricing can't sustain a business.",
+    "tip": "Price using three anchors: your costs, competitors, and the value to the customer. Beginners often price too low — charge for the value you deliver."
    }
   ],
   "cards": [
@@ -7536,6 +7770,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "That's why early validation matters."
+   },
+   {
+    "q": "A simple business plan should mainly:",
+    "options": [
+     "answer key questions clearly",
+     "be hundreds of pages",
+     "avoid mentioning money",
+     "ignore customers"
+    ],
+    "a": 0,
+    "why": "Even one page that covers the essentials clarifies the picture."
+   },
+   {
+    "q": "The biggest startup mistake is:",
+    "options": [
+     "building something nobody wants",
+     "talking to customers",
+     "making a plan",
+     "pricing for value"
+    ],
+    "a": 0,
+    "why": "Solving a real problem for real people is essential."
+   },
+   {
+    "q": "Before building, you should:",
+    "options": [
+     "talk to potential customers",
+     "assume you know their needs",
+     "skip research",
+     "set no price"
+    ],
+    "a": 0,
+    "why": "Their answers beat your assumptions."
+   },
+   {
+    "q": "Pricing should be anchored partly on:",
+    "options": [
+     "the value to the customer",
+     "a random number",
+     "always the lowest possible",
+     "ignoring costs"
+    ],
+    "a": 0,
+    "why": "Cost, competition, and customer value together guide price."
+   },
+   {
+    "q": "Underpricing is dangerous because it:",
+    "options": [
+     "can't sustain the business",
+     "always wins customers",
+     "signals high quality",
+     "has no downside"
+    ],
+    "a": 0,
+    "why": "Too-low prices starve the business and can signal low quality."
    }
   ]
  },
@@ -24721,6 +25010,24 @@ window.LAB404_CONTENT = {
     "h": "Starting to paint",
     "body": "The way to learn painting is to paint. Start with simple subjects and limited colors — a single piece of fruit, a basic landscape, or color-mixing exercises (make a value scale, mix a color chart). Limiting your palette early actually teaches you more than a huge set of colors.\n\nDon't aim for a masterpiece; aim to learn one thing each time (mixing a specific green, softening an edge, getting the values right). Expect mud and mistakes — they're normal, and in acrylic or oil you can paint right over them. Study paintings you love and notice their colors and values. As with drawing, consistent practice is everything: paint regularly, stay curious, and your eye and hand improve together.",
     "tip": "Start simple with a limited palette; learn one thing per painting. Mistakes wipe away (acrylic/oil) — just keep painting."
+   },
+   {
+    "h": "Warm and cool colors",
+    "body": "Colors carry temperature. Warm colors (reds, oranges, yellows) feel energetic and seem to advance toward the viewer; cool colors (blues, greens, purples) feel calm and seem to recede. Painters use this to create depth on a flat surface — warm objects pop forward, cool backgrounds fall away.\n\nTemperature also sets mood: a scene painted in cool tones feels serene or cold, while warm tones feel cozy or intense. Thinking in warm versus cool is one of the most useful habits in painting.",
+    "example": "Warm (red/orange/yellow): advances, energetic.\nCool (blue/green/purple): recedes, calm.",
+    "tip": "Warm colors advance and energize; cool colors recede and calm. Use temperature to create depth and set the mood of a painting."
+   },
+   {
+    "h": "Building up in layers",
+    "body": "Most paintings are built, not placed in one pass. A common approach works from general to specific: block in big shapes and the overall value pattern first, then refine, adding detail and the brightest highlights last. In oil and acrylic, it's common to work dark to light and thin to thick.\n\nLayering lets you correct as you go and keeps you from fussing over details before the big picture is right. Resist the urge to finish one corner perfectly before the whole is established.",
+    "example": "Block in big shapes -> refine values -> add details -> highlights last.",
+    "tip": "Build a painting in layers: big shapes and values first, details and bright highlights last. Establish the whole before perfecting any part."
+   },
+   {
+    "h": "Composition in painting",
+    "body": "Composition is how you arrange things within the frame, and it decides whether a painting holds attention. Guidelines help: the rule of thirds (place focal points off-center, at the thirds), leading lines that draw the eye, and leaving some breathing room rather than cramming the center.\n\nA strong composition has a clear focal point and a path for the eye to travel. Planning the arrangement with a quick thumbnail sketch before painting saves a lot of frustration.",
+    "example": "Rule of thirds: put the focal point off-center.\nThumbnail sketch first to test the arrangement.",
+    "tip": "Composition arranges the frame around a clear focal point. Use the rule of thirds and leading lines, and plan with a thumbnail sketch first."
    }
   ],
   "cards": [
@@ -24960,6 +25267,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Opaque media let you paint over errors."
+   },
+   {
+    "q": "Warm colors like red and orange tend to:",
+    "options": [
+     "advance toward the viewer",
+     "recede into the distance",
+     "feel cold",
+     "disappear"
+    ],
+    "a": 0,
+    "why": "Warm colors pop forward and feel energetic."
+   },
+   {
+    "q": "Cool colors like blue and green tend to:",
+    "options": [
+     "recede and feel calm",
+     "advance and feel hot",
+     "be invisible",
+     "always dominate"
+    ],
+    "a": 0,
+    "why": "Cool colors fall back and feel serene."
+   },
+   {
+    "q": "A common way to build a painting is:",
+    "options": [
+     "big shapes first, details last",
+     "tiny details first",
+     "highlights before anything",
+     "one perfect corner at a time"
+    ],
+    "a": 0,
+    "why": "Working general to specific lets you correct as you go."
+   },
+   {
+    "q": "The rule of thirds suggests placing a focal point:",
+    "options": [
+     "off-center",
+     "dead center",
+     "in a corner only",
+     "off the canvas"
+    ],
+    "a": 0,
+    "why": "Off-center placement is more dynamic."
+   },
+   {
+    "q": "Planning a composition with a quick thumbnail sketch helps you:",
+    "options": [
+     "test the arrangement first",
+     "waste paint",
+     "skip the focal point",
+     "avoid painting"
+    ],
+    "a": 0,
+    "why": "A thumbnail tries the layout before committing."
    }
   ]
  },
@@ -25003,6 +25365,24 @@ window.LAB404_CONTENT = {
     "h": "Chords and harmony",
     "body": "While a melody is notes played one at a time, harmony is notes played together — and the basic unit is the chord: three or more notes sounded at once. The most common chord is the triad, built by stacking every other note of a scale (the 1st, 3rd, and 5th). A C major triad is C-E-G.\n\nChords come in qualities — major (bright, happy) and minor (darker, sad) are the main two, decided by the exact spacing of the notes. A song's chords, played in a sequence (a chord progression), create the harmonic backdrop under the melody. A huge number of popular songs use just a few common chords. Melody, rhythm, and harmony together are the three pillars of nearly all music.",
     "tip": "A chord = 3+ notes at once; a triad stacks the 1st, 3rd, 5th of a scale (C-E-G). Major = bright, minor = darker."
+   },
+   {
+    "h": "The staff, clefs, and reading notes",
+    "body": "Written music lives on a staff — five lines and four spaces. A note's vertical position shows its pitch: higher on the staff means higher in sound. A clef at the start sets the reference; the treble clef is used for higher instruments and voices, the bass clef for lower ones.\n\nEach line and space is a letter note, and simple memory phrases help you learn them. Once you can name the lines and spaces, you can read a melody.",
+    "example": "Treble clef lines (bottom to top): E G B D F.\nSpaces: F A C E.",
+    "tip": "Music sits on a 5-line staff; higher position = higher pitch. The clef (treble or bass) sets the reference for naming the lines and spaces."
+   },
+   {
+    "h": "Intervals",
+    "body": "An interval is the distance between two notes, and intervals are the building blocks of melody and harmony. They're counted by letter steps: C up to E is a third (C-D-E), C up to G is a fifth. The quality of an interval (major, minor, perfect) gives it a characteristic sound — some feel bright, some tense, some stable.\n\nTraining your ear to recognize intervals is how musicians play by ear and understand why chords sound the way they do.",
+    "example": "C to E = a third.  C to G = a fifth.\nOctave: the same letter, higher (C to the next C).",
+    "tip": "An interval is the distance between two notes, counted in letter steps (C to G is a fifth). Intervals are the building blocks of melody and chords."
+   },
+   {
+    "h": "Time signatures and counting",
+    "body": "Rhythm is organized into measures, and a time signature at the start tells you how to count them. The top number is how many beats are in each measure; the bottom number says which note value gets one beat. In 4/4 — the most common — there are four beats per measure and the quarter note gets the beat.\n\nCounting steadily ('1, 2, 3, 4') keeps you in time. Understanding the time signature lets you feel where the strong beats fall.",
+    "example": "4/4: four beats per measure, quarter note = one beat.\n3/4: three beats (a waltz feel).",
+    "tip": "A time signature's top number is beats per measure; the bottom is which note gets the beat. 4/4 (four quarter-note beats) is the most common."
    }
   ],
   "cards": [
@@ -25242,6 +25622,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Major = bright, minor = darker, set by note spacing."
+   },
+   {
+    "q": "On a music staff, a note placed higher means a:",
+    "options": [
+     "higher pitch",
+     "lower pitch",
+     "louder sound",
+     "faster note"
+    ],
+    "a": 0,
+    "why": "Vertical position shows pitch."
+   },
+   {
+    "q": "The treble clef is used for:",
+    "options": [
+     "higher instruments and voices",
+     "only drums",
+     "lower instruments",
+     "silence"
+    ],
+    "a": 0,
+    "why": "The bass clef covers lower ranges."
+   },
+   {
+    "q": "An interval is:",
+    "options": [
+     "the distance between two notes",
+     "the speed of a song",
+     "a type of drum",
+     "the volume"
+    ],
+    "a": 0,
+    "why": "Intervals are counted in letter steps."
+   },
+   {
+    "q": "C up to G is which interval?",
+    "options": [
+     "a fifth",
+     "a third",
+     "an octave",
+     "a second"
+    ],
+    "a": 0,
+    "why": "C-D-E-F-G spans five letter names."
+   },
+   {
+    "q": "In the time signature 4/4, each measure has:",
+    "options": [
+     "four beats",
+     "two beats",
+     "eight beats",
+     "one beat"
+    ],
+    "a": 0,
+    "why": "The top number gives beats per measure."
    }
   ]
  },
@@ -25284,6 +25719,22 @@ window.LAB404_CONTENT = {
     "h": "Staying motivated",
     "body": "The biggest reason people quit an instrument isn't lack of talent — it's losing motivation during the slow early grind. A few things keep you going. Play music you actually like (not just exercises), set small achievable goals (learn this one song), and track your progress so you can see how far you've come, which is easy to forget.\n\nMake practice a daily habit tied to a routine so it doesn't rely on willpower. Play with or for others when you can — it's motivating and fun. Be patient and kind to yourself: everyone sounds bad at first, plateaus are normal, and the people who get good are simply the ones who didn't quit. Months of steady practice turn a complete beginner into someone who can genuinely play.",
     "tip": "Most quitting is lost motivation, not lack of talent. Play music you love, set small goals, make it a daily habit, and don't quit."
+   },
+   {
+    "h": "Tuning and care",
+    "body": "An in-tune instrument is the foundation of sounding good; even perfect playing sounds wrong on an out-of-tune instrument. Learn to tune yours every time you play, using a tuner app or a reference pitch. Your ear improves as you do it.\n\nBasic care keeps an instrument playable: wipe it down after use, store it safely in its case, keep it away from extreme heat, cold, and humidity, and change strings or reeds when they wear. A cared-for instrument plays better and lasts for decades.",
+    "tip": "Tune your instrument every time you play (a tuner app helps), and care for it — wipe it, case it, and avoid temperature extremes."
+   },
+   {
+    "h": "Practicing slowly with a metronome",
+    "body": "The fastest way to learn a piece is, paradoxically, to practice it slowly. Playing slowly lets you hit the right notes and build correct muscle memory; speeding up before you're accurate just cements mistakes. A metronome — a steady click — keeps your timing honest and lets you increase speed gradually.\n\nPractice the hard parts in isolation, slowly and correctly, then slowly raise the tempo. Short, focused, accurate practice beats long, sloppy sessions.",
+    "example": "Slow + correct -> gradually faster with a metronome.\nIsolate the hard measures and drill them.",
+    "tip": "Practice slowly and accurately with a metronome, then raise the tempo gradually. Correct slow repetitions build the right muscle memory."
+   },
+   {
+    "h": "Playing with others",
+    "body": "Making music with other people is one of the greatest rewards of playing, and a skill of its own. It requires listening as much as playing — matching your volume, staying in time together, and blending rather than competing. Keeping a steady tempo matters even more in a group, because everyone depends on it.\n\nStart simple: play along with recordings, jam with a friend, or join a group for beginners. The social motivation also makes you practice more and improve faster.",
+    "tip": "Playing with others means listening as much as playing — match volume, keep steady time, and blend. It's rewarding and speeds your growth."
    }
   ],
   "cards": [
@@ -25523,6 +25974,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Plateaus are normal; persistence breaks through them."
+   },
+   {
+    "q": "Why tune your instrument before playing?",
+    "options": [
+     "an out-of-tune instrument sounds wrong even if played well",
+     "it is never needed",
+     "to break the strings",
+     "to slow down"
+    ],
+    "a": 0,
+    "why": "Tuning is the foundation of good sound."
+   },
+   {
+    "q": "The fastest way to learn a difficult passage is to:",
+    "options": [
+     "practice it slowly and accurately",
+     "play it fast immediately",
+     "skip it",
+     "play it once"
+    ],
+    "a": 0,
+    "why": "Slow, correct repetition builds proper muscle memory."
+   },
+   {
+    "q": "A metronome helps by:",
+    "options": [
+     "keeping steady timing",
+     "tuning the strings",
+     "writing the music",
+     "playing for you"
+    ],
+    "a": 0,
+    "why": "Its steady click keeps your tempo honest."
+   },
+   {
+    "q": "Playing music with others requires especially good:",
+    "options": [
+     "listening",
+     "talking",
+     "speed only",
+     "volume only"
+    ],
+    "a": 0,
+    "why": "You must match and blend with the group."
+   },
+   {
+    "q": "In a group, keeping a steady tempo matters because:",
+    "options": [
+     "everyone depends on it",
+     "it doesn't matter",
+     "only the leader plays",
+     "speed is the goal"
+    ],
+    "a": 0,
+    "why": "The group stays together through shared timing."
    }
   ]
  },
@@ -25566,6 +26072,23 @@ window.LAB404_CONTENT = {
     "h": "Getting better at photography",
     "body": "Photography improves fastest with two things: shooting a lot and looking critically. Take many photos — the best photographers shoot far more than they keep — and review them to see what worked and what didn't. Study photos you admire and ask why they work (the light, the composition, the moment).\n\nYou don't need expensive gear; a modern phone takes excellent photos, and learning light and composition on it beats owning a camera you don't understand. Try deliberate exercises: shoot one subject many ways, practice the rule of thirds, chase good light. Editing (even basic adjustments to exposure, contrast, and crop) is part of the craft too. Like any art, consistent practice and a curious eye turn a beginner into a photographer.",
     "tip": "Shoot a lot and review critically; study photos you love; chase good light. A phone is plenty — gear matters far less than your eye."
+   },
+   {
+    "h": "Rule of thirds and framing",
+    "body": "Composition turns a snapshot into a photograph. The rule of thirds imagines the frame divided by two horizontal and two vertical lines; placing your subject along those lines or at their intersections is more dynamic than centering it. Framing uses elements in the scene — a doorway, branches, a window — to surround and draw attention to your subject.\n\nPaying attention to the whole frame, including the background and edges, is what separates deliberate photos from accidental ones.",
+    "example": "Place the subject off-center on a thirds line.\nFrame it with a doorway or branches.",
+    "tip": "Use the rule of thirds (place the subject off-center) and natural frames like doorways. Mind the whole frame, including the background."
+   },
+   {
+    "h": "Natural light",
+    "body": "Light is the raw material of photography, and natural light changes dramatically through the day. The 'golden hour' just after sunrise and before sunset gives soft, warm, flattering light; midday sun is harsh and casts hard shadows. The direction matters too: front light is even but flat, side light reveals texture and depth, backlight creates silhouettes and glow.\n\nLearning to see the quality and direction of light — and to wait for or move into good light — improves photos more than any gear.",
+    "example": "Golden hour: soft, warm, flattering.\nSide light reveals texture; backlight makes silhouettes.",
+    "tip": "Natural light's quality and direction shape a photo. Golden hour is soft and flattering; side light adds texture. Chasing good light beats buying gear."
+   },
+   {
+    "h": "Editing basics",
+    "body": "Most strong photos are edited, not faked — small adjustments bring out what the camera flattened. The core moves: adjust exposure (brightness), contrast (difference between light and dark), white balance (color temperature so whites look white), and a light crop to improve composition.\n\nThe goal is to enhance, not overdo — subtle edits look natural, while extreme saturation and heavy filters look artificial. Editing is a skill worth learning alongside shooting.",
+    "tip": "Editing enhances a photo: adjust exposure, contrast, white balance, and crop. Keep it subtle — small edits look natural, heavy ones look fake."
    }
   ],
   "cards": [
@@ -25805,6 +26328,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "A modern phone plus light + composition beats gear you don't understand."
+   },
+   {
+    "q": "The rule of thirds suggests placing your subject:",
+    "options": [
+     "off-center on a thirds line",
+     "dead center always",
+     "in a corner only",
+     "out of frame"
+    ],
+    "a": 0,
+    "why": "Off-center placement is more dynamic."
+   },
+   {
+    "q": "'Framing' in photography means:",
+    "options": [
+     "using scene elements to surround the subject",
+     "printing a border",
+     "buying a frame",
+     "centering everything"
+    ],
+    "a": 0,
+    "why": "Doorways or branches draw attention to the subject."
+   },
+   {
+    "q": "The 'golden hour' light is:",
+    "options": [
+     "soft and warm near sunrise/sunset",
+     "harsh midday sun",
+     "only indoors",
+     "always blue"
+    ],
+    "a": 0,
+    "why": "It gives flattering, warm light."
+   },
+   {
+    "q": "Side lighting on a subject tends to:",
+    "options": [
+     "reveal texture and depth",
+     "flatten everything",
+     "create silhouettes only",
+     "remove all shadow"
+    ],
+    "a": 0,
+    "why": "Light from the side shows form and texture."
+   },
+   {
+    "q": "Good photo editing is usually:",
+    "options": [
+     "subtle enhancement",
+     "extreme and heavy",
+     "faking the scene",
+     "unnecessary always"
+    ],
+    "a": 0,
+    "why": "Small adjustments look natural; overdoing it looks artificial."
    }
   ]
  },
@@ -25847,6 +26425,23 @@ window.LAB404_CONTENT = {
     "h": "Psychology in everyday life",
     "body": "Psychology isn't just academic — it's practically useful every day. Understanding how memory works helps you study better (spacing practice beats cramming). Knowing about cognitive biases helps you make better decisions and spot when you're being manipulated. Understanding motivation and habits helps you change your own behavior.\n\nIt also makes you better with people: understanding emotions, communication, and why others act as they do builds empathy and smoother relationships. And understanding mental health reduces stigma and helps you support yourself and others. Psychology gives you, in effect, an owner's manual for the human mind — including your own, which is the one you'll use most.",
     "tip": "Use psychology daily: study smarter (spacing), spot biases and manipulation, build habits, understand people, support mental health."
+   },
+   {
+    "h": "Memory and how it works",
+    "body": "Memory isn't a video recording — it's reconstructed, and that makes it fallible. Psychologists describe stages: sensory memory (a brief flash), short-term or working memory (a handful of items held briefly), and long-term memory (durable storage). Information moves to long-term memory better through meaning and repetition than through cramming.\n\nBecause we rebuild memories each time we recall them, they can change, which is why eyewitness accounts are surprisingly unreliable.",
+    "example": "Sensory -> short-term (working) -> long-term.\nMeaning + spacing beats cramming for long-term memory.",
+    "tip": "Memory is reconstructed, not recorded, so it's fallible. It moves to long-term storage through meaning and spaced repetition, not cramming."
+   },
+   {
+    "h": "Learning: conditioning and reinforcement",
+    "body": "Much behavior is learned through association and consequences. Classical conditioning links a neutral trigger to a response (Pavlov's dogs salivating at a bell). Operant conditioning shapes behavior through consequences: reinforcement (a reward) makes a behavior more likely, punishment makes it less likely.\n\nThese principles explain habits, training, and even why apps and games are so engaging — they use reinforcement schedules. Understanding them helps you build good habits and break bad ones.",
+    "example": "Classical: bell -> salivation (association).\nOperant: reward a behavior -> it increases (reinforcement).",
+    "tip": "Classical conditioning links triggers to responses; operant conditioning shapes behavior with reinforcement and punishment. Both explain habits."
+   },
+   {
+    "h": "Development across the lifespan",
+    "body": "People change in patterned ways from infancy to old age, and developmental psychology studies these stages — physical, cognitive, and social-emotional. Children pass through stages of thinking, from very concrete to more abstract. Adolescence brings identity-seeking; adulthood brings shifting priorities and relationships.\n\nKnowing what's typical for an age helps parents, teachers, and anyone understand behavior in context — a toddler's tantrum and a teen's risk-taking both make more sense through a developmental lens.",
+    "tip": "Developmental psychology maps patterned change across life — physical, cognitive, social. Knowing what's typical for an age explains behavior in context."
    }
   ],
   "cards": [
@@ -26086,6 +26681,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Scientists test hypotheses with evidence."
+   },
+   {
+    "q": "Human memory is best described as:",
+    "options": [
+     "reconstructed and fallible",
+     "a perfect recording",
+     "unchangeable",
+     "unlimited and exact"
+    ],
+    "a": 0,
+    "why": "We rebuild memories, so they can change."
+   },
+   {
+    "q": "Information enters long-term memory best through:",
+    "options": [
+     "meaning and spaced repetition",
+     "a single cram session",
+     "ignoring it",
+     "stress alone"
+    ],
+    "a": 0,
+    "why": "Meaning and spacing beat cramming."
+   },
+   {
+    "q": "Pavlov's dogs salivating at a bell is:",
+    "options": [
+     "classical conditioning",
+     "operant conditioning",
+     "reinforcement",
+     "punishment"
+    ],
+    "a": 0,
+    "why": "A neutral trigger became linked to a response."
+   },
+   {
+    "q": "Reinforcement makes a behavior:",
+    "options": [
+     "more likely",
+     "less likely",
+     "disappear",
+     "unchanged"
+    ],
+    "a": 0,
+    "why": "A reward increases the behavior."
+   },
+   {
+    "q": "Developmental psychology studies:",
+    "options": [
+     "patterned change across the lifespan",
+     "only old age",
+     "only memory",
+     "only animals"
+    ],
+    "a": 0,
+    "why": "It covers physical, cognitive, and social change over life."
    }
   ]
  },
@@ -26129,6 +26779,24 @@ window.LAB404_CONTENT = {
     "h": "Common logical errors",
     "body": "Reasoning goes wrong in recognizable ways. Beyond the fallacies covered in critical thinking, some logical errors include affirming the consequent (assuming that because a result happened, a specific cause must be true), circular reasoning (using the conclusion as a premise — 'it's true because it's true'), and hasty generalization (drawing a broad conclusion from too little evidence).\n\nThe fix is to slow down and check the structure: Are the premises actually true? Does the conclusion really follow from them, or is there a gap? Could the premises be true but the conclusion false? Learning to spot where an argument breaks — a false premise or a logical gap — lets you cut through persuasive-sounding nonsense. Logic is the tool that reveals whether reasoning is genuinely solid or just dressed up to look that way.",
     "tip": "Logical errors: circular reasoning (conclusion as premise), hasty generalization (too little evidence). Check: true premises + a real link."
+   },
+   {
+    "h": "Formal vs informal fallacies",
+    "body": "A fallacy is a flaw in reasoning. Formal fallacies have a broken logical structure — the conclusion doesn't follow from the premises no matter the topic. Informal fallacies fail for reasons of content or context: attacking the person instead of the argument (ad hominem), appealing to emotion or popularity, or setting up a straw man of the opposing view.\n\nSpotting fallacies lets you see when an argument sounds persuasive but doesn't actually support its conclusion.",
+    "example": "Ad hominem: attack the person, not the argument.\nStraw man: distort the opponent's view, then knock it down.",
+    "tip": "Formal fallacies have broken structure; informal ones fail on content (ad hominem, straw man, appeal to emotion). Both look convincing but prove nothing."
+   },
+   {
+    "h": "Necessary and sufficient conditions",
+    "body": "Clear thinking often hinges on these two ideas. A necessary condition must be true for something to happen (oxygen is necessary for fire). A sufficient condition guarantees it (being a dog is sufficient for being a mammal). They're not the same: oxygen is necessary for fire but not sufficient — you also need fuel and heat.\n\nConfusing the two causes bad reasoning, like assuming that because a condition is required, meeting it alone is enough.",
+    "example": "Necessary: required (oxygen for fire).\nSufficient: enough on its own (being a dog -> a mammal).",
+    "tip": "A necessary condition is required; a sufficient condition guarantees. Oxygen is necessary for fire but not sufficient. Don't confuse the two."
+   },
+   {
+    "h": "Reasoning to the best explanation",
+    "body": "Beyond deduction and induction, much everyday reasoning is abduction — inferring the most likely explanation for what you observe. A doctor diagnosing from symptoms, a detective from clues, you deciding why your car won't start — all pick the explanation that best fits the evidence.\n\nAbduction isn't certain; a better explanation might emerge. Good abductive reasoning prefers explanations that are simple, fit all the evidence, and don't require far-fetched assumptions.",
+    "example": "Wet grass + cloudy sky -> best explanation: it rained (not a sprinkler at midnight).",
+    "tip": "Abduction infers the best explanation for what you observe (diagnosis, detective work). Prefer explanations that are simple and fit all the evidence."
    }
   ],
   "cards": [
@@ -26368,6 +27036,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Both true premises and a real logical link are needed."
+   },
+   {
+    "q": "A fallacy is:",
+    "options": [
+     "a flaw in reasoning",
+     "a true conclusion",
+     "a kind of evidence",
+     "a logical proof"
+    ],
+    "a": 0,
+    "why": "It's an error that weakens an argument."
+   },
+   {
+    "q": "Attacking the person instead of their argument is:",
+    "options": [
+     "ad hominem",
+     "a straw man",
+     "deduction",
+     "a valid move"
+    ],
+    "a": 0,
+    "why": "Ad hominem dodges the actual argument."
+   },
+   {
+    "q": "Oxygen for fire is an example of a:",
+    "options": [
+     "necessary condition",
+     "sufficient condition",
+     "fallacy",
+     "conclusion"
+    ],
+    "a": 0,
+    "why": "Fire requires oxygen but needs fuel and heat too."
+   },
+   {
+    "q": "A sufficient condition:",
+    "options": [
+     "guarantees the result on its own",
+     "is merely required",
+     "is always false",
+     "is a fallacy"
+    ],
+    "a": 0,
+    "why": "Being a dog is sufficient for being a mammal."
+   },
+   {
+    "q": "Inferring the most likely explanation for evidence is:",
+    "options": [
+     "abduction",
+     "deduction only",
+     "a fallacy",
+     "guessing randomly"
+    ],
+    "a": 0,
+    "why": "Abduction is reasoning to the best explanation."
    }
   ]
  },
@@ -26411,6 +27134,23 @@ window.LAB404_CONTENT = {
     "h": "Developing your ethics",
     "body": "Ethics isn't about memorizing rules — it's about becoming a thoughtful moral reasoner. A few habits help: think about why you hold your values, not just what they are; consider perspectives different from your own; and notice when you're rationalizing (making excuses for what you wanted to do anyway) versus genuinely reasoning.\n\nPracticing ethical reflection on small, everyday choices builds the judgment you'll need for big ones. It also helps to have moral humility — recognizing that good, smart people disagree on hard questions, and that you might be wrong. The goal isn't to win arguments but to live well and treat others rightly. In the end, ethics is less about having all the answers and more about taking the questions seriously.",
     "tip": "Build ethical judgment on small daily choices; question your own reasoning; stay humble. The goal is to live well, not to win arguments."
+   },
+   {
+    "h": "Consequences vs duties",
+    "body": "Two of the biggest ethical approaches disagree about what makes an action right. Consequentialism (including utilitarianism) judges actions by their outcomes — the right act produces the most good, or the greatest well-being for the most people. Deontology judges by duties and rules — some actions are right or wrong in themselves, regardless of outcome, like keeping a promise or not lying.\n\nReal dilemmas often pit these against each other: would you lie to protect someone? Knowing both lenses sharpens your thinking.",
+    "example": "Consequentialism: judge by outcomes (most good).\nDeontology: judge by duties and rules (some acts are wrong in themselves).",
+    "tip": "Consequentialism judges actions by outcomes; deontology judges by duties and rules. Many dilemmas pit 'best result' against 'right action'."
+   },
+   {
+    "h": "Rights and justice",
+    "body": "Ethics also concerns what people are owed. Rights are moral claims — to life, liberty, fair treatment — that others must respect. Justice is about fairness in how benefits, burdens, and punishments are distributed. A just outcome treats like cases alike and gives people their due.\n\nThese ideas ground arguments about law, equality, and fairness. A choice can produce good overall results yet still be unjust if it violates someone's rights or distributes burdens unfairly.",
+    "tip": "Rights are moral claims others must respect; justice is fairness in distributing benefits and burdens. A good outcome can still be unjust if it tramples rights."
+   },
+   {
+    "h": "Applying ethics to real choices",
+    "body": "Ethical frameworks are tools for thinking, not formulas that spit out answers. Faced with a real decision, you can ask several questions: What are the consequences for everyone affected? What duties or promises apply? Whose rights are at stake? What would a person of good character do? Would I be comfortable if everyone acted this way?\n\nUsing several lenses, rather than one, usually gives a fuller, wiser view — and the habit of asking at all is what ethical maturity looks like.",
+    "example": "Ask: consequences? duties? rights? character? universal rule?",
+    "tip": "Apply ethics by asking several questions — consequences, duties, rights, character, 'what if everyone did this?' Using multiple lenses gives the wisest view."
    }
   ],
   "cards": [
@@ -26650,6 +27390,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "It's about living well, not scoring points."
+   },
+   {
+    "q": "Consequentialism judges an action by its:",
+    "options": [
+     "outcomes",
+     "rules alone",
+     "popularity",
+     "difficulty"
+    ],
+    "a": 0,
+    "why": "The right act produces the most good."
+   },
+   {
+    "q": "Deontology judges an action by:",
+    "options": [
+     "duties and rules",
+     "results only",
+     "feelings",
+     "profit"
+    ],
+    "a": 0,
+    "why": "Some actions are right or wrong in themselves."
+   },
+   {
+    "q": "A 'right' in ethics is:",
+    "options": [
+     "a moral claim others must respect",
+     "a legal loophole",
+     "a profit",
+     "a feeling"
+    ],
+    "a": 0,
+    "why": "Rights are claims like life and liberty."
+   },
+   {
+    "q": "Justice is primarily about:",
+    "options": [
+     "fairness in distributing benefits and burdens",
+     "maximizing profit",
+     "personal taste",
+     "speed"
+    ],
+    "a": 0,
+    "why": "It treats like cases alike and gives people their due."
+   },
+   {
+    "q": "A wise way to approach an ethical choice is to:",
+    "options": [
+     "use several frameworks",
+     "use only one rule",
+     "ignore consequences",
+     "follow the crowd"
+    ],
+    "a": 0,
+    "why": "Multiple lenses give a fuller view."
    }
   ]
  },
@@ -26692,6 +27487,23 @@ window.LAB404_CONTENT = {
     "h": "Thinking philosophically",
     "body": "You don't have to be a professional to think philosophically — and doing so improves how you handle everything. Philosophy teaches you to question assumptions (why do I believe this?), define your terms (what do I even mean by 'fair' or 'happy'?), follow arguments to their conclusions, and consider objections to your own views.\n\nIt also encourages examining your life and values: the philosopher Socrates said 'the unexamined life is not worth living.' Asking what really matters to you, why you believe what you believe, and how you ought to live are philosophical acts that lead to a more intentional, thoughtful life. Philosophy won't hand you all the answers, but it gives you the tools to think about the questions that matter most — and the habit of thinking them through is a kind of wisdom in itself.",
     "tip": "Think philosophically: question assumptions, define your terms, follow arguments, examine your own life and values. The habit is itself wisdom."
+   },
+   {
+    "h": "Famous thought experiments",
+    "body": "Philosophers use thought experiments — imagined scenarios — to test ideas and intuitions. The trolley problem asks whether you'd divert a runaway trolley to kill one person instead of five, probing how we weigh outcomes against actions. The 'experience machine' asks whether you'd plug into a simulation of a perfect life, probing whether pleasure is all we value.\n\nThese scenarios aren't about the odd specifics; they isolate a principle so we can examine what we really believe and why.",
+    "example": "Trolley problem: divert to kill 1 instead of 5?\nExperience machine: would a simulated perfect life be enough?",
+    "tip": "Thought experiments like the trolley problem isolate a principle to test our intuitions. The point isn't the scenario but what it reveals about our beliefs."
+   },
+   {
+    "h": "The problem of free will",
+    "body": "Do we truly choose, or are our actions determined by prior causes — genes, upbringing, brain states? Determinism says every event, including choices, follows from earlier causes. Libertarian free will says we genuinely could have chosen otherwise. Compatibilism tries to reconcile them, arguing freedom means acting according to your own desires, even in a causal world.\n\nThe question matters because it touches responsibility, praise, and blame — if we don't choose freely, what do we deserve?",
+    "example": "Determinism: choices follow from prior causes.\nCompatibilism: freedom = acting on your own desires.",
+    "tip": "Free will asks whether we truly choose or are determined by prior causes. It matters because moral responsibility — praise and blame — hinges on the answer."
+   },
+   {
+    "h": "Philosophy of mind",
+    "body": "What is a mind, and how does it relate to the brain? The 'hard problem' of consciousness asks why physical brain processes are accompanied by inner experience — why there's something it's like to see red or feel pain. Dualism says mind and matter are distinct; physicalism says the mind is entirely what the brain does.\n\nThese questions connect to artificial intelligence (could a machine be conscious?) and to our sense of self, making philosophy of mind one of the liveliest areas today.",
+    "tip": "Philosophy of mind asks how mind relates to brain. The 'hard problem' is why physical processes come with inner experience — key to debates on AI and the self."
    }
   ],
   "cards": [
@@ -26931,6 +27743,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Clear reasoning about what matters is the habit."
+   },
+   {
+    "q": "A thought experiment is used to:",
+    "options": [
+     "test ideas and intuitions with an imagined scenario",
+     "run a lab test",
+     "prove math",
+     "measure the brain"
+    ],
+    "a": 0,
+    "why": "It isolates a principle to examine what we believe."
+   },
+   {
+    "q": "The trolley problem probes how we weigh:",
+    "options": [
+     "outcomes against actions",
+     "colors",
+     "prices",
+     "distances"
+    ],
+    "a": 0,
+    "why": "It pits saving more lives against actively causing a death."
+   },
+   {
+    "q": "Determinism holds that choices:",
+    "options": [
+     "follow from prior causes",
+     "are entirely free",
+     "don't exist",
+     "are random"
+    ],
+    "a": 0,
+    "why": "Every event follows from earlier causes."
+   },
+   {
+    "q": "Compatibilism says freedom means:",
+    "options": [
+     "acting on your own desires",
+     "escaping all causes",
+     "having no will",
+     "being random"
+    ],
+    "a": 0,
+    "why": "It reconciles free will with a causal world."
+   },
+   {
+    "q": "The 'hard problem' of consciousness asks why:",
+    "options": [
+     "physical processes come with inner experience",
+     "brains are large",
+     "logic works",
+     "math is true"
+    ],
+    "a": 0,
+    "why": "It questions why there's something it's like to have experience."
    }
   ]
  },
@@ -26974,6 +27841,23 @@ window.LAB404_CONTENT = {
     "h": "Building a cardio habit",
     "body": "The best cardio is the kind you'll actually do consistently, so the most important factor is sustainability. Pick activities you enjoy (or at least tolerate), make them convenient, and start small — even 10-minute walks count and build the habit. Consistency over months matters far more than any single hard session.\n\nTips that help: schedule it like an appointment, make it social or entertaining (a friend, music, a podcast), track your progress for motivation, and build gradually to avoid burnout and injury. If you're very sedentary or have health conditions, start gently and check with a doctor. Remember that any movement is better than none — the biggest health jump is from doing nothing to doing a little. Just keep moving, regularly.",
     "tip": "The best cardio is what you'll actually keep doing. Start small, pick what you enjoy, be consistent — any movement beats none."
+   },
+   {
+    "h": "Steady-state vs interval training",
+    "body": "Cardio comes in two main styles. Steady-state means holding a moderate pace for a sustained time — a jog, a bike ride — which builds endurance and is easy on the mind and joints. Interval training (including HIIT, high-intensity interval training) alternates hard bursts with recovery, which improves fitness in less time and burns lots of energy, but is more taxing.\n\nBoth are valuable; mixing them gives endurance plus efficiency. Beginners should build a steady-state base before adding intense intervals.",
+    "example": "Steady-state: moderate, sustained (a jog).\nIntervals/HIIT: hard bursts + recovery (efficient, taxing).",
+    "tip": "Steady-state cardio builds endurance at a moderate pace; interval/HIIT training improves fitness fast with hard bursts. Build a base before heavy intervals."
+   },
+   {
+    "h": "Measuring intensity",
+    "body": "You don't need a heart-rate monitor to gauge effort. The 'talk test' is simple: at an easy pace you can hold a conversation; at a moderate pace you can speak in short phrases; at a hard pace you can barely get out a word. Rate of perceived exertion (RPE), a 1-to-10 scale of how hard it feels, works the same way.\n\nThese let you train at the right intensity for your goal — easy for recovery and base-building, harder for improving fitness.",
+    "example": "Talk test: converse (easy) -> short phrases (moderate) -> one word (hard).",
+    "tip": "Gauge cardio intensity with the talk test or an RPE (1-10) scale — no gadget needed. Match intensity to your goal: easy to build a base, hard to push fitness."
+   },
+   {
+    "h": "Cardio for heart health and recovery",
+    "body": "Beyond burning calories, cardio strengthens the heart and lungs, lowers resting heart rate and blood pressure, and improves mood and sleep — benefits that show up even at modest amounts. Health guidelines commonly suggest about 150 minutes of moderate activity a week.\n\nLight cardio also aids recovery between hard workouts by increasing blood flow without adding much stress — a gentle walk or easy bike ride the day after heavy training can help you feel better and recover faster.",
+    "tip": "Regular cardio strengthens the heart, lowers blood pressure, and lifts mood (about 150 min/week is a common target). Light cardio also aids recovery."
    }
   ],
   "cards": [
@@ -27213,6 +28097,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "A fitter heart pumps more efficiently at rest."
+   },
+   {
+    "q": "Steady-state cardio is:",
+    "options": [
+     "a moderate pace held for a sustained time",
+     "all-out sprints only",
+     "lifting weights",
+     "stretching"
+    ],
+    "a": 0,
+    "why": "A jog or steady bike ride builds endurance."
+   },
+   {
+    "q": "HIIT training alternates:",
+    "options": [
+     "hard bursts with recovery",
+     "only rest",
+     "slow walking only",
+     "lifting and sitting"
+    ],
+    "a": 0,
+    "why": "Intervals improve fitness efficiently but are taxing."
+   },
+   {
+    "q": "With the 'talk test', a hard effort means you can:",
+    "options": [
+     "barely say a word",
+     "sing easily",
+     "hold a full conversation",
+     "nap"
+    ],
+    "a": 0,
+    "why": "Difficulty speaking signals high intensity."
+   },
+   {
+    "q": "A common weekly target for moderate cardio is about:",
+    "options": [
+     "150 minutes",
+     "10 minutes",
+     "20 hours",
+     "zero"
+    ],
+    "a": 0,
+    "why": "Guidelines suggest roughly 150 minutes a week."
+   },
+   {
+    "q": "Light cardio the day after hard training can:",
+    "options": [
+     "aid recovery by increasing blood flow",
+     "replace all sleep",
+     "cause injury",
+     "do nothing"
+    ],
+    "a": 0,
+    "why": "Gentle movement helps recovery without much stress."
    }
   ]
  },
@@ -27255,6 +28194,23 @@ window.LAB404_CONTENT = {
     "h": "Building and keeping it",
     "body": "Flexibility and mobility are 'use it or lose it' — they improve with regular attention and fade without it. The good news is that small, consistent effort works: a 5–10 minute daily routine (or stretching while watching TV) keeps you limber. Target the areas you personally feel tight, and make it a habit tied to something you already do.\n\nPay special attention if you sit a lot: take movement breaks, and counter sitting with hip and back mobility. As with all fitness, be patient and consistent rather than aggressive — gentle regular practice wins. Staying flexible and mobile is one of the simplest ways to feel better day to day, move without pain, and keep doing everything else you enjoy for years to come.",
     "tip": "Flexibility/mobility is 'use it or lose it.' A short daily routine keeps you limber; target your tight spots, and move if you sit a lot."
+   },
+   {
+    "h": "Dynamic warm-ups",
+    "body": "Before activity, dynamic stretching — moving the joints through their range with controlled motion (leg swings, arm circles, lunges with a twist) — prepares the body better than holding still stretches. It raises temperature, wakes up the muscles, and improves range for the movement ahead.\n\nStatic stretching (holding a stretch) is best saved for after exercise or separate sessions, since holding long stretches before activity can briefly reduce power. Match the stretch type to the moment.",
+    "example": "Before activity: dynamic (leg swings, lunges).\nAfter activity: static (held stretches).",
+    "tip": "Do dynamic stretches (moving through range) to warm up before activity; save static held stretches for afterward. Match the type to the moment."
+   },
+   {
+    "h": "Common tight areas",
+    "body": "Modern life — lots of sitting — tends to tighten the same spots in most people: hip flexors, hamstrings, chest and shoulders, and the upper back and neck. Gently and regularly stretching these counteracts the 'desk posture' that causes aches.\n\nYou don't need a long routine; a few targeted stretches held comfortably (never to sharp pain) most days makes a real difference. Consistency matters far more than intensity for flexibility.",
+    "example": "Sitting tightens: hip flexors, hamstrings, chest/shoulders, neck.",
+    "tip": "Sitting tightens the hips, hamstrings, chest, and neck. A few gentle, regular stretches of these areas beats occasional intense ones — consistency wins."
+   },
+   {
+    "h": "Mobility prevents injury",
+    "body": "Flexibility is how far a muscle can lengthen; mobility is how well a joint moves through its full range with control. Good mobility lets you move correctly — squatting deeply, reaching overhead — without compensating in ways that cause injury.\n\nMobility work (controlled movements through a joint's range, not just passive stretching) keeps joints healthy and movement efficient as you age. It's especially valuable for anyone who sits a lot or trains hard, protecting the body for the long run.",
+    "tip": "Flexibility is muscle length; mobility is controlled joint range. Good mobility lets you move correctly without compensating, which prevents injury over time."
    }
   ],
   "cards": [
@@ -27494,6 +28450,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Patience and consistency win; forcing causes injury."
+   },
+   {
+    "q": "Before activity, the best kind of stretching is:",
+    "options": [
+     "dynamic",
+     "long static holds",
+     "none",
+     "sleeping"
+    ],
+    "a": 0,
+    "why": "Dynamic stretches warm up and prepare range of motion."
+   },
+   {
+    "q": "Static (held) stretching is best done:",
+    "options": [
+     "after exercise",
+     "right before sprinting",
+     "never",
+     "during heavy lifts"
+    ],
+    "a": 0,
+    "why": "Long holds before activity can briefly reduce power."
+   },
+   {
+    "q": "Lots of sitting tends to tighten the:",
+    "options": [
+     "hips and hamstrings",
+     "fingertips",
+     "ankles only",
+     "ears"
+    ],
+    "a": 0,
+    "why": "Hip flexors, hamstrings, chest, and neck tighten from sitting."
+   },
+   {
+    "q": "For flexibility, what matters most is:",
+    "options": [
+     "consistency",
+     "intensity",
+     "stretching to sharp pain",
+     "doing it once"
+    ],
+    "a": 0,
+    "why": "Regular gentle stretching beats occasional hard sessions."
+   },
+   {
+    "q": "Mobility is best described as:",
+    "options": [
+     "controlled joint range of motion",
+     "how fast you run",
+     "muscle size",
+     "heart rate"
+    ],
+    "a": 0,
+    "why": "It's how well a joint moves through its range with control."
    }
   ]
  },
@@ -27536,6 +28547,23 @@ window.LAB404_CONTENT = {
     "h": "Recovery beyond sleep",
     "body": "Sleep is the cornerstone of recovery, but recovery is broader — it's how your body restores itself after stress, whether from exercise, work, or life. Active recovery (light movement, walking, gentle stretching) helps the body recover from hard training better than total inactivity. Rest days are essential; your fitness gains actually happen during recovery, not during the workout.\n\nManaging overall stress, staying hydrated, and eating well all support recovery too. Watch for signs of under-recovery — constant fatigue, irritability, getting sick often, declining performance — which mean you need more rest, not more effort. In a culture that glorifies 'grinding,' remember that rest isn't laziness; it's a required part of getting stronger, healthier, and performing well. You improve when you recover.",
     "tip": "Recovery = how you restore after stress. Rest days, light active recovery, hydration, and managing stress all matter. You improve when you RECOVER."
+   },
+   {
+    "h": "Rest days and overtraining",
+    "body": "Progress happens during recovery, not just during workouts, so rest is part of training, not a break from it. Overtraining — too much work with too little recovery — causes plateaus, fatigue, poor sleep, irritability, and higher injury risk. Scheduled rest days let muscles rebuild and the nervous system recover.\n\nMore is not always better. A sustainable program balances hard effort with enough rest, and listening to persistent fatigue or declining performance as a signal to back off.",
+    "tip": "Recovery is when you actually get stronger, so rest days are part of training. Overtraining causes plateaus, fatigue, and injury — balance effort with rest."
+   },
+   {
+    "h": "Active recovery",
+    "body": "Rest days don't have to mean doing nothing. Active recovery — gentle movement like walking, easy cycling, light stretching, or yoga — increases blood flow to tired muscles, which can ease soreness and speed recovery without adding real stress.\n\nIt also keeps the habit of moving alive on off days. The key is 'easy': active recovery should feel refreshing, not like another hard workout. If it leaves you more tired, it was too much.",
+    "example": "Active recovery: a walk, easy bike ride, light yoga — gentle, refreshing, not taxing.",
+    "tip": "Active recovery is gentle movement (walking, easy cycling, light yoga) that boosts blood flow and eases soreness. Keep it easy — it should refresh, not tire."
+   },
+   {
+    "h": "Nutrition and hydration for recovery",
+    "body": "What you eat and drink shapes how well you bounce back. After hard exercise, protein supports muscle repair and carbohydrates refill energy stores. Staying hydrated matters too — even mild dehydration slows recovery and hurts performance the next day.\n\nYou don't need special supplements; regular balanced meals, enough protein, and water do the job. Poor fueling and hydration can undo good training, leaving you sore, tired, and underperforming.",
+    "example": "After hard exercise: protein (repair) + carbs (refuel) + water.",
+    "tip": "Recovery depends on fuel: protein repairs muscle, carbs refill energy, and water rehydrates. Balanced meals and hydration matter as much as the training."
    }
   ],
   "cards": [
@@ -27775,6 +28803,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "It means more rest, not more effort."
+   },
+   {
+    "q": "Getting stronger actually happens during:",
+    "options": [
+     "recovery",
+     "only the workout",
+     "overtraining",
+     "skipped meals"
+    ],
+    "a": 0,
+    "why": "Muscles rebuild during rest after training."
+   },
+   {
+    "q": "Overtraining tends to cause:",
+    "options": [
+     "plateaus, fatigue, and injury",
+     "faster progress always",
+     "better sleep",
+     "no effect"
+    ],
+    "a": 0,
+    "why": "Too much work with too little rest backfires."
+   },
+   {
+    "q": "Active recovery means:",
+    "options": [
+     "gentle, refreshing movement",
+     "another hard workout",
+     "complete bed rest only",
+     "sprinting"
+    ],
+    "a": 0,
+    "why": "Light movement boosts blood flow without stress."
+   },
+   {
+    "q": "After hard exercise, helpful recovery nutrition includes:",
+    "options": [
+     "protein and carbohydrates",
+     "only water fasting",
+     "no food",
+     "only candy"
+    ],
+    "a": 0,
+    "why": "Protein repairs and carbs refuel."
+   },
+   {
+    "q": "Even mild dehydration can:",
+    "options": [
+     "slow recovery and hurt performance",
+     "speed recovery",
+     "build muscle",
+     "do nothing"
+    ],
+    "a": 0,
+    "why": "Staying hydrated supports recovery."
    }
   ]
  },
@@ -27818,6 +28901,22 @@ window.LAB404_CONTENT = {
     "h": "Building resilience",
     "body": "Beyond coping in the moment, you can build resilience — the ability to handle stress and bounce back from hard times. The foundations overlap with general health: regular exercise, good sleep, decent nutrition, and strong social connections all make you more stress-resistant. So does a sense of purpose and keeping perspective (asking 'will this matter in a year?').\n\nMindset matters too: viewing challenges as things you can grow from, focusing on what you can control, and practicing self-compassion rather than harsh self-criticism all build resilience. And know your limits: if stress is overwhelming, persistent, or affecting your health and life, that's a sign to get help from a doctor or counselor — a sign of wisdom, not weakness. Managing stress is a lifelong skill, and small daily habits build the resilience to handle whatever comes.",
     "tip": "Build resilience with the health basics (exercise, sleep, connection), focusing on what you control, and self-compassion. Overwhelmed? Get help — that's wisdom."
+   },
+   {
+    "h": "Breathing and relaxation techniques",
+    "body": "The body has a built-in off switch for stress, reachable through the breath. Slow, deep belly breathing — longer exhales than inhales — activates the calming part of the nervous system and lowers heart rate within minutes. Techniques like box breathing (inhale, hold, exhale, hold, each for a count of four) give the mind something steady to focus on.\n\nProgressive muscle relaxation — tensing then releasing muscle groups in turn — is another quick reset. These tools work anywhere and get more effective with practice.",
+    "example": "Box breathing: inhale 4, hold 4, exhale 4, hold 4.\nLonger exhales calm the nervous system.",
+    "tip": "Slow deep breathing with long exhales activates the body's calming response fast. Box breathing and muscle relaxation are quick resets you can use anywhere."
+   },
+   {
+    "h": "Reducing stressors",
+    "body": "Coping with stress is important, but reducing its sources is even better. Much stress comes from overcommitment and disorganization, so managing time helps: prioritizing what matters, breaking big tasks into steps, and saying no to what you can't take on. Tackling a looming task often relieves more stress than avoiding it.\n\nIdentify your recurring stressors and ask which you can remove, reduce, or plan around. You can't eliminate all stress, but you can stop feeding the avoidable kind.",
+    "tip": "Reduce stress at the source: manage time, prioritize, break tasks down, and say no. Facing a looming task relieves more stress than avoiding it."
+   },
+   {
+    "h": "Building a support network",
+    "body": "Humans handle stress far better with connection than alone. Talking to a trusted friend, family member, or counselor relieves pressure, offers perspective, and reminds you that you're supported. Isolation, by contrast, tends to amplify stress and low mood.\n\nBuilding and maintaining relationships — reaching out regularly, not only in crisis — creates a network you can lean on. Asking for help is a strength, not a weakness, and knowing you have people to turn to is itself protective against stress.",
+    "tip": "Connection buffers stress; isolation worsens it. Build and maintain relationships, and reach out before a crisis. Asking for help is a strength."
    }
   ],
   "cards": [
@@ -28057,6 +29156,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Seeking help is wisdom, not weakness."
+   },
+   {
+    "q": "Slow deep breathing with long exhales:",
+    "options": [
+     "activates the body's calming response",
+     "raises stress",
+     "has no effect",
+     "stops the heart"
+    ],
+    "a": 0,
+    "why": "It engages the calming part of the nervous system."
+   },
+   {
+    "q": "Box breathing uses a pattern of:",
+    "options": [
+     "inhale, hold, exhale, hold",
+     "only fast breaths",
+     "holding forever",
+     "no breathing"
+    ],
+    "a": 0,
+    "why": "Each phase is held for a steady count."
+   },
+   {
+    "q": "A powerful way to reduce stress is to:",
+    "options": [
+     "manage time and reduce stressors",
+     "ignore all tasks",
+     "take on more commitments",
+     "avoid everything"
+    ],
+    "a": 0,
+    "why": "Reducing the sources beats only coping after."
+   },
+   {
+    "q": "Facing a looming task, rather than avoiding it, usually:",
+    "options": [
+     "relieves more stress",
+     "adds stress",
+     "has no effect",
+     "is impossible"
+    ],
+    "a": 0,
+    "why": "Avoidance keeps the stress alive."
+   },
+   {
+    "q": "For handling stress, connection with others:",
+    "options": [
+     "buffers stress",
+     "makes it worse",
+     "doesn't matter",
+     "replaces sleep"
+    ],
+    "a": 0,
+    "why": "Support and perspective relieve pressure; isolation amplifies it."
    }
   ]
  },
@@ -28099,6 +29253,22 @@ window.LAB404_CONTENT = {
     "h": "Marketing on a small budget",
     "body": "You don't need a big budget to market well — many of the most effective tactics are cheap or free, especially for small and local businesses. Word-of-mouth and referrals are the most powerful and trusted marketing there is: do great work, then ask happy customers to refer you and leave reviews. A free Google Business Profile and good reviews drive local customers.\n\nOther low-cost tactics: a simple website, social media (free to post), helpful content that attracts your audience, partnering with complementary businesses, and showing up where your community is (local groups, events). Focus on a couple of channels and do them well rather than spreading thin. And always track where customers come from, so you spend time and money on what actually works. Consistency and genuine value beat a big budget.",
     "tip": "Small budget? Word-of-mouth + reviews are king. Use free tools (Google Business, social, content), focus on a couple of channels, and track what works."
+   },
+   {
+    "h": "Branding and positioning",
+    "body": "A brand is more than a logo — it's the impression and promise people associate with you. Positioning is the space you claim in customers' minds: what makes you different and why they'd choose you over alternatives. Clear positioning ('the affordable option', 'the premium craft choice', 'the fastest service') shapes every other decision.\n\nConsistency builds a brand: the same look, voice, and quality across every touchpoint makes you recognizable and trustworthy. Decide what you want to stand for, then reinforce it everywhere.",
+    "tip": "A brand is the promise people associate with you; positioning is what makes you different and the reason to choose you. Consistency across touchpoints builds it."
+   },
+   {
+    "h": "Content and social media marketing",
+    "body": "Instead of only interrupting people with ads, content marketing attracts them by being useful — helpful posts, how-to videos, guides — which builds trust and an audience over time. Social media extends this reach, letting you engage directly with customers where they already are.\n\nThe key is consistency and genuine value, not constant selling. Pick one or two platforms your customers actually use and show up regularly. Attention earned through usefulness converts better than attention bought through ads alone.",
+    "example": "Content marketing: attract with useful posts/videos, not just ads.\nPick 1-2 platforms your customers use.",
+    "tip": "Content marketing attracts customers by being genuinely useful, building trust over time. Pick a couple of platforms your audience uses and show up consistently."
+   },
+   {
+    "h": "Measuring what works",
+    "body": "Marketing without measurement is guessing. Track a few meaningful numbers: how many people you reach, how many take the next step (a click, a sign-up, a purchase), and what it costs to gain a customer. These tell you which efforts pay off and which to drop.\n\nThe goal isn't vanity metrics like follower counts, but actions that lead to revenue. Test one change at a time, watch the numbers, and put more into what works. Marketing improves by measuring and iterating, not by spending blindly.",
+    "tip": "Measure marketing by actions that lead to revenue (clicks, sign-ups, cost per customer), not vanity metrics. Test one change at a time and double down on what works."
    }
   ],
   "cards": [
@@ -28338,6 +29508,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Conversion is the goal of the funnel."
+   },
+   {
+    "q": "A brand is best described as:",
+    "options": [
+     "the promise and impression people associate with you",
+     "just a logo",
+     "a price",
+     "a tax form"
+    ],
+    "a": 0,
+    "why": "It's the whole impression, not only a logo."
+   },
+   {
+    "q": "Positioning is:",
+    "options": [
+     "what makes you different and why to choose you",
+     "your office address",
+     "a product's weight",
+     "a type of ad"
+    ],
+    "a": 0,
+    "why": "It's the space you claim in customers' minds."
+   },
+   {
+    "q": "Content marketing attracts customers by:",
+    "options": [
+     "being genuinely useful",
+     "only interrupting with ads",
+     "hiding information",
+     "constant hard selling"
+    ],
+    "a": 0,
+    "why": "Useful content builds trust and an audience."
+   },
+   {
+    "q": "On social media, it's best to:",
+    "options": [
+     "focus on a couple of platforms consistently",
+     "be on every platform occasionally",
+     "never post",
+     "only sell"
+    ],
+    "a": 0,
+    "why": "Consistency where your audience is beats spreading thin."
+   },
+   {
+    "q": "Marketing should be measured by:",
+    "options": [
+     "actions that lead to revenue",
+     "follower counts alone",
+     "nothing",
+     "how much you spend"
+    ],
+    "a": 0,
+    "why": "Meaningful metrics show what actually pays off."
    }
   ]
  },
@@ -28381,6 +29606,23 @@ window.LAB404_CONTENT = {
     "h": "Cash flow and bookkeeping",
     "body": "A critical and often-missed concept is cash flow — the timing of money in and out. A business can be profitable on paper yet fail because it runs out of cash (customers pay late, but bills are due now). 'Cash flow' problems kill many businesses, so managing the timing of money — keeping enough cash on hand, invoicing promptly, controlling when bills are paid — is as important as being profitable.\n\nUnderlying it all is bookkeeping: the day-to-day recording of transactions. The basics: record every transaction, keep receipts, separate business and personal finances, and reconcile your records with your bank regularly. Software (or a bookkeeper) makes this manageable. Good bookkeeping from day one prevents a painful mess at tax time and gives you the accurate data all the above relies on. In business, what gets measured gets managed.",
     "tip": "Cash flow (timing of money) can sink even a profitable business — keep cash on hand. And do bookkeeping (record everything) from day one."
+   },
+   {
+    "h": "Reading an income statement",
+    "body": "An income statement (or profit-and-loss) shows whether a business made money over a period. It starts with revenue (total sales), subtracts the cost of goods sold to get gross profit, then subtracts operating expenses (rent, wages, marketing) to reach net profit — the bottom line.\n\nReading one tells you not just if you profited, but where the money went. A business can have high sales yet little profit if costs are too high, which the statement makes visible.",
+    "example": "Revenue - cost of goods = gross profit.\nGross profit - expenses = net profit (the bottom line).",
+    "tip": "An income statement goes revenue -> gross profit (minus cost of goods) -> net profit (minus expenses). It shows if you profited and where money went."
+   },
+   {
+    "h": "Profit vs cash flow",
+    "body": "A profitable business can still fail if it runs out of cash — this surprises many owners. Profit is revenue minus expenses on paper; cash flow is the actual money moving in and out of your account. You can be profitable but cash-poor if customers haven't paid yet while your bills are due now.\n\nManaging cash flow — timing of money in versus out — is often more urgent day to day than profit. Watch both: profit is the long-term score, cash flow is what keeps the lights on.",
+    "example": "Profit: revenue minus expenses (on paper).\nCash flow: actual money in and out (can differ a lot).",
+    "tip": "Profit is on paper; cash flow is money actually moving. A profitable business can fail if cash runs out, so watch cash flow closely day to day."
+   },
+   {
+    "h": "Separating business and personal finances",
+    "body": "One of the first and most important habits is keeping business money separate from personal money. Open a dedicated business bank account and run all business income and expenses through it. This makes bookkeeping and taxes far simpler, shows the true health of the business, and protects you legally with certain business structures.\n\nMixing the two creates a tangle that's painful at tax time and hides whether the business is actually working. Separate from day one, even as a side hustle.",
+    "tip": "Keep business and personal money in separate accounts from day one. It simplifies taxes and bookkeeping, shows the business's true health, and can protect you legally."
    }
   ],
   "cards": [
@@ -28620,6 +29862,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "It prevents a painful mess and gives accurate data."
+   },
+   {
+    "q": "An income statement shows whether a business:",
+    "options": [
+     "made money over a period",
+     "has many employees",
+     "is popular",
+     "owns a building"
+    ],
+    "a": 0,
+    "why": "It reports revenue, costs, and profit."
+   },
+   {
+    "q": "Net profit is revenue minus:",
+    "options": [
+     "cost of goods and operating expenses",
+     "nothing",
+     "only taxes",
+     "only rent"
+    ],
+    "a": 0,
+    "why": "It's the bottom line after all costs."
+   },
+   {
+    "q": "Profit differs from cash flow because profit is:",
+    "options": [
+     "on paper, while cash flow is money actually moving",
+     "always the same as cash",
+     "larger always",
+     "unimportant"
+    ],
+    "a": 0,
+    "why": "You can be profitable but cash-poor."
+   },
+   {
+    "q": "A profitable business can still fail if it:",
+    "options": [
+     "runs out of cash",
+     "makes too much profit",
+     "has a plan",
+     "keeps records"
+    ],
+    "a": 0,
+    "why": "Cash flow keeps the lights on day to day."
+   },
+   {
+    "q": "A key early accounting habit is to:",
+    "options": [
+     "separate business and personal finances",
+     "mix all money together",
+     "avoid a bank account",
+     "never track expenses"
+    ],
+    "a": 0,
+    "why": "Separation simplifies taxes and shows true health."
    }
   ]
  },
@@ -28662,6 +29959,23 @@ window.LAB404_CONTENT = {
     "h": "Common management mistakes",
     "body": "New managers tend to make predictable mistakes, and knowing them helps you avoid them. Micromanaging (controlling every detail) signals distrust and exhausts everyone. Avoiding difficult conversations (not addressing poor performance or conflict) lets problems grow. Taking all the credit and none of the blame destroys trust — good managers do the reverse. Failing to give feedback leaves people guessing.\n\nOther traps: being a friend instead of a fair boss, not setting clear priorities, and never developing your people. The through-line is that management is about the team, not the manager's ego. The shift from 'doing the work' to 'enabling others to do the work well' is the core transition, and it's genuinely hard. Being a good manager means serving your team's ability to succeed — a skill you keep improving at over a career.",
     "tip": "Avoid micromanaging, dodging hard conversations, hogging credit, and withholding feedback. Management serves the team's success, not your ego."
+   },
+   {
+    "h": "Setting goals and priorities",
+    "body": "A manager's job is to get results through a team, and that starts with clear goals. Vague direction ('do better', 'work harder') leaves people guessing; specific, measurable goals with deadlines align everyone. Just as important is prioritizing — deciding what matters most when everything feels urgent, so the team focuses energy where it counts.\n\nCommunicating the 'why' behind goals, not just the 'what', helps people make good decisions on their own and stay motivated.",
+    "example": "Vague: 'improve sales'.  Clear: 'increase repeat orders 10% this quarter'.",
+    "tip": "Managers get results through clear, specific goals and priorities. Communicate the 'why', not just the 'what', so the team aligns and stays motivated."
+   },
+   {
+    "h": "Giving effective feedback",
+    "body": "Feedback is how people improve, but it has to be done well. Good feedback is specific (point to the actual behavior, not a vague judgment), timely (soon after, not months later), and balanced (recognize what's working, not only what's wrong). Framing it around behavior and impact — 'when X happened, the effect was Y' — keeps it constructive rather than personal.\n\nRegular, honest feedback builds trust and growth; avoiding it lets small problems fester into big ones.",
+    "example": "Specific + timely + about behavior and impact, not the person.",
+    "tip": "Effective feedback is specific, timely, and focused on behavior and impact, not the person. Give it regularly — avoiding it lets small problems grow."
+   },
+   {
+    "h": "Handling conflict",
+    "body": "Disagreement is normal on any team; unmanaged conflict is what causes damage. A good manager addresses it early rather than hoping it passes, listens to all sides to understand the real issue (which is often not the surface complaint), and focuses on the problem rather than blaming people.\n\nThe aim is a resolution people can accept, and sometimes a healthy airing of different views actually improves decisions. Avoiding conflict entirely tends to let resentment build and problems stay unsolved.",
+    "tip": "Address conflict early, listen to all sides for the real issue, and focus on the problem not the person. Handled well, differing views can improve decisions."
    }
   ],
   "cards": [
@@ -28901,6 +30215,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Management serves the team's ability to succeed."
+   },
+   {
+    "q": "A manager primarily gets results through:",
+    "options": [
+     "a team",
+     "working alone",
+     "avoiding goals",
+     "ignoring people"
+    ],
+    "a": 0,
+    "why": "Management is achieving results through others."
+   },
+   {
+    "q": "Good goals for a team are:",
+    "options": [
+     "specific and measurable with deadlines",
+     "vague",
+     "unspoken",
+     "impossible"
+    ],
+    "a": 0,
+    "why": "Clear goals align everyone's effort."
+   },
+   {
+    "q": "Effective feedback is:",
+    "options": [
+     "specific, timely, and about behavior",
+     "vague and delayed",
+     "always negative",
+     "personal attacks"
+    ],
+    "a": 0,
+    "why": "It targets behavior and impact, not the person."
+   },
+   {
+    "q": "Avoiding giving feedback tends to:",
+    "options": [
+     "let small problems grow",
+     "fix everything",
+     "build trust",
+     "improve performance"
+    ],
+    "a": 0,
+    "why": "Unaddressed issues fester."
+   },
+   {
+    "q": "A manager should handle conflict by:",
+    "options": [
+     "addressing it early and focusing on the problem",
+     "ignoring it",
+     "blaming people",
+     "picking a favorite"
+    ],
+    "a": 0,
+    "why": "Early, problem-focused handling resolves it well."
    }
   ]
  },
@@ -28943,6 +30312,21 @@ window.LAB404_CONTENT = {
     "h": "Building trust and relationships",
     "body": "The best salespeople win through trust and relationships, not tricks. Trust is built by being honest (including about your product's limits), reliable (doing what you say), and genuinely helpful (putting the customer's real interest first, even when it means a smaller sale). This reputation is worth far more than any single deal.\n\nThe real payoff is in the long term: a happy customer buys again, refers others, and becomes a reference. In fact, referrals and repeat business are the cheapest, highest-quality sales there are — and they only come from trust. So treat every interaction as the start of a relationship, not a one-time transaction. Deliver on your promises, follow up, and take care of people. Ethical, helpful selling isn't just the right thing — it's also, over time, the most effective and profitable.",
     "tip": "Win on trust: be honest (even about limits), reliable, and genuinely helpful. Happy customers buy again and refer — the cheapest, best sales there are."
+   },
+   {
+    "h": "Listening and asking good questions",
+    "body": "The biggest myth about sales is that it's about talking. Great salespeople listen more than they speak. By asking open questions about the customer's situation, needs, and goals, they understand the real problem — and only then recommend a fit. A solution offered before understanding the need usually misses.\n\nListening also builds trust: people buy from those who seem to genuinely understand them. Aim to talk less than half the time, and let the customer's answers guide you.",
+    "tip": "Sales is about listening, not talking. Ask open questions to understand the real need first, then recommend a fit. Listening builds the trust that drives the sale."
+   },
+   {
+    "h": "Following up without being pushy",
+    "body": "Most sales don't happen on the first contact, so following up is essential — but there's a line between persistent and annoying. The key is to add value each time rather than just 'checking in': share a helpful resource, answer a question, or address a concern they raised. Respect their timeline and a clear no.\n\nA helpful, patient follow-up keeps you in mind without pressure, and often it's the person who follows up thoughtfully — not the pushiest — who earns the sale.",
+    "tip": "Most sales need follow-up, but add value each time instead of just 'checking in'. Respect their timeline — thoughtful persistence beats pushiness."
+   },
+   {
+    "h": "Turning customers into repeat buyers",
+    "body": "Winning a new customer costs far more than keeping an existing one, so the sale isn't the finish line. Delivering on your promise, following up after the purchase to make sure they're happy, and staying in touch turn a one-time buyer into a repeat customer — and repeat customers often become referrals.\n\nTrust built through a good experience is the best marketing there is. Focus on the relationship after the sale, not just the transaction, and the business compounds over time.",
+    "tip": "Keeping a customer costs far less than finding one. Deliver, follow up after the sale, and build the relationship — repeat buyers and referrals compound over time."
    }
   ],
   "cards": [
@@ -29182,6 +30566,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Relationships drive repeat business and referrals."
+   },
+   {
+    "q": "Great salespeople tend to:",
+    "options": [
+     "listen more than they talk",
+     "talk the whole time",
+     "skip questions",
+     "ignore the customer"
+    ],
+    "a": 0,
+    "why": "Understanding the real need comes first."
+   },
+   {
+    "q": "Asking open questions in sales helps you:",
+    "options": [
+     "understand the real problem",
+     "talk more",
+     "avoid the customer",
+     "set a random price"
+    ],
+    "a": 0,
+    "why": "Understanding the need lets you recommend a fit."
+   },
+   {
+    "q": "Good sales follow-up should:",
+    "options": [
+     "add value each time",
+     "just 'check in' repeatedly",
+     "pressure the customer",
+     "ignore their timeline"
+    ],
+    "a": 0,
+    "why": "Value-adding follow-up keeps you in mind without pressure."
+   },
+   {
+    "q": "Compared to keeping a customer, winning a new one usually:",
+    "options": [
+     "costs far more",
+     "costs far less",
+     "costs the same",
+     "is free"
+    ],
+    "a": 0,
+    "why": "Retention is cheaper than acquisition."
+   },
+   {
+    "q": "After a sale, a smart seller focuses on:",
+    "options": [
+     "the ongoing relationship",
+     "only the next new lead",
+     "forgetting the customer",
+     "the transaction alone"
+    ],
+    "a": 0,
+    "why": "Happy repeat customers become referrals."
    }
   ]
  },
