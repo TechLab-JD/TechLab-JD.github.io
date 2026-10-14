@@ -1,4 +1,4 @@
-/* Lab404 Study Zone — mastery / readiness engine (Synapse-style, objective-based).
+/* Lab404 Study Hub — mastery / readiness engine (Synapse-style, objective-based).
    Pure logic + localStorage; no DOM. Consumed by js/course-loader.js.
    Per objective: a recent-weighted mastery % (last N attempts) → one of four bands
    (weak / needs / strong / mastered, Mastered ≥85% with consistency). Course readiness =

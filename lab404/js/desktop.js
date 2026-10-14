@@ -30,7 +30,7 @@
     "chapters-1": { title: "Core 1 \u2014 Chapters", icon: "📚" },
     "chapters-2": { title: "Core 2 \u2014 Chapters", icon: "📗" },
     "chapters-3": { title: "Security+ \u2014 Chapters", icon: "🛡️" },
-    "synapse":    { title: "Synapse — Security+ Study Zone", icon: "🧠" },
+    "synapse":    { title: "Synapse — Security+ Study Hub", icon: "🧠" },
     "practice":   { title: "Practice Test",           icon: "🎯" },
     "flashcards": { title: "Flashcards",               icon: "🃏" },
     "review":     { title: "Review Checklist",         icon: "📋" },
@@ -39,7 +39,7 @@
     "notepad":    { title: "Notepad",                  icon: "📝" },
     "data":       { title: "Data Manager",             icon: "💾" },
     "skills":     { title: "Skill Overview",           icon: "📊" },
-    "about":      { title: "About Lab404 Study Zone",  icon: "🚀" },
+    "about":      { title: "About Lab404 Study Hub",  icon: "🚀" },
   };
 
   /* ── Cert human-readable labels ── */
@@ -795,7 +795,7 @@
         content.innerHTML =
           '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:2rem;text-align:center;gap:0.6rem;">' +
             '<div style="font-size:2.8rem;">🚀</div>' +
-            '<h2 style="font-size:1.1rem;color:var(--accent2);margin:0;">Lab404 Study Zone</h2>' +
+            '<h2 style="font-size:1.1rem;color:var(--accent2);margin:0;">Lab404 Study Hub</h2>' +
             '<p style="font-size:0.8rem;color:var(--text-muted);margin:0;">CompTIA certification study hub &mdash; OS Edition</p>' +
             '<div style="width:160px;height:1px;background:var(--border);margin:0.8rem auto;"></div>' +
             '<p style="font-size:0.75rem;color:var(--text-faint);margin:0;line-height:1.8;">' +

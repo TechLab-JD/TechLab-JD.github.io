@@ -58,7 +58,7 @@
 
     /* ── Page title ── */
     var safeTitle = window.AplusUtils ? window.AplusUtils.safeTitle(data.title) : String(data.title || "").replace(/[<>"'&]/g, "");
-    document.title = "Lab404 Study Zone";
+    document.title = "Lab404 Study Hub";
 
     var root = rootEl || document.getElementById("chapter-root");
     if (!root) return;

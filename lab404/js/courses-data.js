@@ -1,4 +1,4 @@
-/* Lab404 Study Zone — mastery courses (objective-based, Synapse-style grading).
+/* Lab404 Study Hub — mastery courses (objective-based, Synapse-style grading).
    Pilot: Grade 4 Math, aligned to the Massachusetts Curriculum Frameworks (= Common Core codes for core
    standards). Each objective carries a multi-state crosswalk (cc + ma filled; teks/vasol/flbest pending the
    crosswalk brick). Questions are tagged to an objective and use anti-guess types (numeric / multi / mc).

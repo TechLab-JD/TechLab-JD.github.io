@@ -1,4 +1,4 @@
-/* Lab404 Study Zone — mastery course view (objective dashboard + placement + practice).
+/* Lab404 Study Hub — mastery course view (objective dashboard + placement + practice).
    window.CourseLoader.init(contentEl, {course:"g4-math"}). Uses LAB404_COURSES + LAB404_MASTERY.
    Shows a living report card (readiness % / letter / GPA), the objective list with the four mastery bands,
    a placement "test-out" diagnostic, and an anti-guess practice runner that updates mastery live. */

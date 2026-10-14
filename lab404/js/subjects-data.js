@@ -1,5 +1,5 @@
 /* ──────────────────────────────────────────────────────────────────────────
-   Lab404 Study Zone — subject catalog (framework for all major subjects).
+   Lab404 Study Hub — subject catalog (framework for all major subjects).
 
    Single source of truth for the universal hub's subjects. desktop.js reads
    window.LAB404_SUBJECTS to build the desktop folders, their windows, and the

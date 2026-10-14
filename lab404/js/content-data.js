@@ -1,4 +1,4 @@
-/* content-data.js — Study Zone lesson content (first wave, 2026-10-11).
+/* content-data.js — Study Hub lesson content (first wave, 2026-10-11).
    window.LAB404_CONTENT["<subject>-<topic-slug>"] = { title, subject, level, intro, cards[], flash[], quiz[] }.
    A topic folder with an entry here opens as a lesson (intro + concept cards, flashcards, quiz) instead of
    coming-soon. All original content, written for study and checked against standard curricula. Add topics by

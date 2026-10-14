@@ -44,7 +44,7 @@
   var _tail = 1320 + _tagRows.length * 100;
   LINES.push({ text: "",                      delay: _tail + 60 });
   LINES.push({ text: "ALL SYSTEMS NOMINAL",   delay: _tail + 130, hi: true });
-  LINES.push({ text: "Launching Study Zone...", delay: _tail + 300 });
+  LINES.push({ text: "Launching Study Hub...", delay: _tail + 300 });
 
   /* Snappy, index-based timing so the boot screen stays short no matter how many subjects. */
   var STEP = 34;                                /* ms between lines */
