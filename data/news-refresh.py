@@ -74,6 +74,25 @@ FACTCHECKERS = [
     {"name": "Full Fact",     "rss": "https://fullfact.org/feed/all/"},
 ]
 
+# News YouTube channels (free per-channel RSS, no API key). Clips are matched to
+# story clusters by headline overlap, and carry the channel's bias tag.
+YT_CHANNELS = [
+    {"name": "AP",             "lean": 0,  "cid": "UC52X5wxOL_s5yw0dQk7NtgA"},
+    {"name": "Reuters",        "lean": 0,  "cid": "UChqUTb7kYRX8-EiaN3XFrSQ"},
+    {"name": "BBC News",       "lean": 0,  "cid": "UC16niRr50-MSBwiO3YDb3RA"},
+    {"name": "PBS NewsHour",   "lean": -1, "cid": "UC6ZFN9Tx6xh-skXCuRHCDpQ"},
+    {"name": "NBC News",       "lean": -1, "cid": "UCeY0bbntWzzVIaj2z3QigXg"},
+    {"name": "ABC News",       "lean": -1, "cid": "UCBi2mrWuNuyYy4gbM6fU18Q"},
+    {"name": "CBS News",       "lean": -1, "cid": "UC8p1vwvWtl6T73JiExfWs1g"},
+    {"name": "CNN",            "lean": -1, "cid": "UCupvZG-5ko_eiXAupbDfxWw"},
+    {"name": "The Guardian",   "lean": -1, "cid": "UCHpw8xwDNhU9gdohEcJu4aA"},
+    {"name": "Washington Post","lean": -1, "cid": "UCHd62-u_v4DvJ8TCFtpi4GA"},
+    {"name": "Al Jazeera",     "lean": 0,  "cid": "UCNye-wNBqNL5ZzHSJj3l8Bg"},
+    {"name": "DW News",        "lean": 0,  "cid": "UCknLrEdhRCp1aegoMqRaCZg"},
+    {"name": "Sky News",       "lean": 0,  "cid": "UCoMdktPbSTixAyNGwb-UYkQ"},
+    {"name": "Fox News",       "lean": 2,  "cid": "UCXIJgqnII2ZOINSWNOGFThA"},
+]
+
 LEAN_LABEL = {-2: "Left", -1: "Lean Left", 0: "Center", 1: "Lean Right", 2: "Right"}
 
 CATEGORIES = {
@@ -140,6 +159,28 @@ def parse_items(raw):
             when = text_of(en, f"{ns}updated", f"{ns}published")
             if title:
                 out.append({"title": title, "link": link, "summary": summ[:280], "when": when})
+    return out
+
+
+def parse_youtube(raw):
+    """Parse a YouTube channel RSS (Atom) feed into video dicts."""
+    out = []
+    try:
+        root = ET.fromstring(raw)
+    except Exception:
+        return out
+    A = "{http://www.w3.org/2005/Atom}"
+    YT = "{http://www.youtube.com/xml/schemas/2015}"
+    for e in root.findall(A + "entry"):
+        vid_el = e.find(YT + "videoId")
+        t_el = e.find(A + "title")
+        p_el = e.find(A + "published")
+        if vid_el is None or t_el is None or not vid_el.text:
+            continue
+        vid = vid_el.text
+        out.append({"videoId": vid, "title": unescape(t_el.text or ""),
+                    "thumb": f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg",
+                    "when": p_el.text if p_el is not None else ""})
     return out
 
 
@@ -219,6 +260,19 @@ def main():
             print(f"  ! FACT {f['name']}: failed")
         time.sleep(0.2)
 
+    # News videos (YouTube channel feeds)
+    videos = []
+    for c in YT_CHANNELS:
+        try:
+            vs = parse_youtube(fetch(f"https://www.youtube.com/feeds/videos.xml?channel_id={c['cid']}"))[:10]
+            for v in vs:
+                videos.append({**v, "channel": c["name"], "lean": c["lean"],
+                               "toks": tokens(v["title"])})
+            print(f"  + VID {c['name']}: {len(vs)}")
+        except Exception:
+            print(f"  ! VID {c['name']}: failed")
+        time.sleep(0.15)
+
     # drop near-duplicate items from the same source (feeds often repeat a story)
     seen = set()
     deduped = []
@@ -245,6 +299,18 @@ def main():
         for f in factchecks:
             if len(ctoks & set(f["toks"])) >= 3:
                 fc.append({"org": f["org"], "title": f["title"], "link": f["link"]})
+        # match news videos to this cluster, preferring distinct channels
+        vids, seen_vid, seen_chan = [], set(), set()
+        for v in sorted(videos, key=lambda x: len(ctoks & x["toks"]), reverse=True):
+            if len(ctoks & v["toks"]) < 4 or v["videoId"] in seen_vid:
+                continue
+            if v["channel"] in seen_chan and len(vids) >= 1:
+                continue
+            seen_vid.add(v["videoId"]); seen_chan.add(v["channel"])
+            vids.append({"videoId": v["videoId"], "title": v["title"], "thumb": v["thumb"],
+                         "channel": v["channel"], "lean": v["lean"], "label": LEAN_LABEL[v["lean"]]})
+            if len(vids) >= 3:
+                break
         span = (max(leans) - min(leans)) if leans else 0
         n_src = len({a["source"] for a in group})
         # coverage balance: distinct sources on each side of center
@@ -271,6 +337,7 @@ def main():
             "sources": [{"name": a["source"], "lean": a["lean"], "label": LEAN_LABEL[a["lean"]],
                           "title": a["title"], "url": a["link"]} for a in group],
             "factchecks": fc[:3],
+            "videos": vids,
         })
 
     # rank: multi-source + wide spectrum span first (those are the "every angle" stories)
@@ -290,6 +357,17 @@ def main():
     trending = sorted(({"term": t, "n": len(src)} for t, src in tok_src.items() if len(src) >= 3),
                       key=lambda x: x["n"], reverse=True)[:16]
 
+    # latest videos across channels (for the Watch strip)
+    seen_lv, latest_videos = set(), []
+    for v in sorted(videos, key=lambda x: x.get("when", ""), reverse=True):
+        if v["videoId"] in seen_lv:
+            continue
+        seen_lv.add(v["videoId"])
+        latest_videos.append({"videoId": v["videoId"], "title": v["title"], "thumb": v["thumb"],
+                              "channel": v["channel"], "lean": v["lean"], "label": LEAN_LABEL[v["lean"]]})
+        if len(latest_videos) >= 16:
+            break
+
     standalone_fc = [{"org": f["org"], "title": f["title"], "link": f["link"], "summary": f["summary"]}
                      for f in factchecks][:24]
 
@@ -298,14 +376,18 @@ def main():
         "generated_human": datetime.now(timezone.utc).strftime("%b %d, %Y · %H:%M UTC"),
         "sources": live_sources,
         "n_articles": len(articles),
+        "n_videos": len(videos),
         "trending": trending,
+        "videos": latest_videos,
         "stories": stories[:50],
         "blindspots": blindspots,
         "factchecks": standalone_fc,
     }
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    n_story_vids = sum(1 for s in stories if s["videos"])
     print(f"Wrote {OUT.name}: {len(stories)} stories, {len(blindspots)} blindspots, "
-          f"{len(standalone_fc)} fact-checks, {len(live_sources)} live sources.")
+          f"{len(standalone_fc)} fact-checks, {len(live_sources)} live sources, "
+          f"{len(videos)} videos ({n_story_vids} stories with video).")
 
 
 if __name__ == "__main__":
