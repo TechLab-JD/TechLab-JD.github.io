@@ -27,24 +27,44 @@ OUT = HERE / "news.json"
 # Bias buckets: -2 left, -1 lean-left, 0 center, +1 lean-right, +2 right.
 # Ratings follow the broad consensus of AllSides / Ad Fontes media-bias charts;
 # they describe the outlet, not any single story. Edit freely.
+# "fact" = factual-reporting reputation (High / Mostly / Mixed), per the broad
+# consensus of media-reliability raters. Like bias, it describes the outlet, not
+# any single article.
 SOURCES = [
-    {"name": "NPR",                 "lean": -1, "rss": "https://feeds.npr.org/1001/rss.xml"},
-    {"name": "The Guardian",        "lean": -1, "rss": "https://www.theguardian.com/world/rss"},
-    {"name": "NBC News",            "lean": -1, "rss": "https://feeds.nbcnews.com/nbcnews/public/news"},
-    {"name": "CBS News",            "lean": -1, "rss": "https://www.cbsnews.com/latest/rss/main"},
-    {"name": "PBS NewsHour",        "lean": -1, "rss": "https://www.pbs.org/newshour/feeds/rss/headlines"},
-    {"name": "Politico",            "lean": -1, "rss": "https://www.politico.com/rss/politicopicks.xml"},
-    {"name": "BBC News",            "lean":  0, "rss": "http://feeds.bbci.co.uk/news/world/rss.xml"},
-    {"name": "The Hill",            "lean":  0, "rss": "https://thehill.com/news/feed/"},
-    {"name": "CNBC",                "lean":  0, "rss": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114"},
-    {"name": "Al Jazeera",          "lean":  0, "rss": "https://www.aljazeera.com/xml/rss/all.xml"},
-    {"name": "The Christian Science Monitor", "lean": 0, "rss": "https://rss.csmonitor.com/feeds/all"},
-    {"name": "Reason",              "lean":  1, "rss": "https://reason.com/latest/feed/"},
-    {"name": "New York Post",       "lean":  1, "rss": "https://nypost.com/feed/"},
-    {"name": "Washington Examiner", "lean":  1, "rss": "https://www.washingtonexaminer.com/feed"},
-    {"name": "Fox News",            "lean":  2, "rss": "https://moxie.foxnews.com/google-publisher/latest.xml"},
-    {"name": "The Daily Wire",      "lean":  2, "rss": "https://www.dailywire.com/feeds/rss.xml"},
-    {"name": "Newsmax",             "lean":  2, "rss": "https://www.newsmax.com/rss/Newsfront/16/"},
+    # --- Left / Lean Left ---
+    {"name": "NPR",                 "lean": -1, "fact": "High",   "rss": "https://feeds.npr.org/1001/rss.xml"},
+    {"name": "The Guardian",        "lean": -1, "fact": "High",   "rss": "https://www.theguardian.com/world/rss"},
+    {"name": "NBC News",            "lean": -1, "fact": "High",   "rss": "https://feeds.nbcnews.com/nbcnews/public/news"},
+    {"name": "CBS News",            "lean": -1, "fact": "High",   "rss": "https://www.cbsnews.com/latest/rss/main"},
+    {"name": "ABC News",            "lean": -1, "fact": "High",   "rss": "https://abcnews.go.com/abcnews/topstories"},
+    {"name": "PBS NewsHour",        "lean": -1, "fact": "High",   "rss": "https://www.pbs.org/newshour/feeds/rss/headlines"},
+    {"name": "Politico",            "lean": -1, "fact": "High",   "rss": "https://rss.politico.com/politics-news.xml"},
+    {"name": "Vox",                 "lean": -2, "fact": "Mostly", "rss": "https://www.vox.com/rss/index.xml"},
+    {"name": "Slate",               "lean": -2, "fact": "Mostly", "rss": "https://slate.com/feeds/all.rss"},
+    {"name": "Mother Jones",        "lean": -2, "fact": "Mostly", "rss": "https://www.motherjones.com/feed/"},
+    {"name": "The Atlantic",        "lean": -1, "fact": "High",   "rss": "https://www.theatlantic.com/feed/all/"},
+    {"name": "Time",                "lean": -1, "fact": "High",   "rss": "https://time.com/feed/"},
+    # --- Center ---
+    {"name": "BBC News",            "lean":  0, "fact": "High",   "rss": "http://feeds.bbci.co.uk/news/world/rss.xml"},
+    {"name": "The Hill",            "lean":  0, "fact": "High",   "rss": "https://thehill.com/news/feed/"},
+    {"name": "CNBC",                "lean":  0, "fact": "High",   "rss": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114"},
+    {"name": "USA Today",           "lean":  0, "fact": "High",   "rss": "https://rssfeeds.usatoday.com/usatoday-NewsTopStories"},
+    {"name": "Axios",               "lean":  0, "fact": "High",   "rss": "https://api.axios.com/feed/"},
+    {"name": "Al Jazeera",          "lean":  0, "fact": "Mostly", "rss": "https://www.aljazeera.com/xml/rss/all.xml"},
+    {"name": "The Christian Science Monitor", "lean": 0, "fact": "High", "rss": "https://rss.csmonitor.com/feeds/all"},
+    {"name": "Deutsche Welle",      "lean":  0, "fact": "High",   "rss": "https://rss.dw.com/rdf/rss-en-all"},
+    {"name": "Newsweek",            "lean":  0, "fact": "Mixed",  "rss": "https://www.newsweek.com/rss"},
+    # --- Lean Right / Right ---
+    {"name": "Reason",              "lean":  1, "fact": "Mostly", "rss": "https://reason.com/latest/feed/"},
+    {"name": "New York Post",       "lean":  1, "fact": "Mixed",  "rss": "https://nypost.com/feed/"},
+    {"name": "Washington Examiner", "lean":  1, "fact": "Mostly", "rss": "https://www.washingtonexaminer.com/feed"},
+    {"name": "National Review",     "lean":  1, "fact": "Mostly", "rss": "https://www.nationalreview.com/feed/"},
+    {"name": "Washington Times",    "lean":  1, "fact": "Mostly", "rss": "https://www.washingtontimes.com/rss/headlines/news/"},
+    {"name": "Fox News",            "lean":  2, "fact": "Mixed",  "rss": "https://moxie.foxnews.com/google-publisher/latest.xml"},
+    {"name": "The Daily Wire",      "lean":  2, "fact": "Mixed",  "rss": "https://www.dailywire.com/feeds/rss.xml"},
+    {"name": "The Federalist",      "lean":  2, "fact": "Mixed",  "rss": "https://thefederalist.com/feed/"},
+    {"name": "Newsmax",             "lean":  2, "fact": "Mixed",  "rss": "https://www.newsmax.com/rss/Newsfront/16/"},
+    {"name": "Daily Caller",        "lean":  2, "fact": "Mixed",  "rss": "https://feeds.feedburner.com/dailycaller"},
 ]
 
 FACTCHECKERS = [
@@ -177,8 +197,10 @@ def main():
             items = parse_items(fetch(s["rss"]))
             if not items:
                 print(f"  - {s['name']}: no items"); continue
-            live_sources.append({"name": s["name"], "lean": s["lean"], "label": LEAN_LABEL[s["lean"]]})
-            for it in items[:14]:
+            take = items[:12]
+            live_sources.append({"name": s["name"], "lean": s["lean"], "label": LEAN_LABEL[s["lean"]],
+                                 "fact": s.get("fact", "Mostly"), "count": len(take)})
+            for it in take:
                 articles.append({**it, "source": s["name"], "lean": s["lean"]})
             print(f"  + {s['name']}: {len(items)} items")
         except Exception as e:
@@ -225,6 +247,12 @@ def main():
                 fc.append({"org": f["org"], "title": f["title"], "link": f["link"]})
         span = (max(leans) - min(leans)) if leans else 0
         n_src = len({a["source"] for a in group})
+        # coverage balance: distinct sources on each side of center
+        bal = {"l": set(), "c": set(), "r": set()}
+        for a in group:
+            side = "l" if a["lean"] < 0 else ("r" if a["lean"] > 0 else "c")
+            bal[side].add(a["source"])
+        balance = {"l": len(bal["l"]), "c": len(bal["c"]), "r": len(bal["r"])}
         # blindspot: 2+ outlets, all on one side of center
         blindspot = None
         if n_src >= 2 and all(l <= -1 for l in leans):
@@ -238,6 +266,7 @@ def main():
             "leans": leans,
             "span": span,
             "n_sources": n_src,
+            "balance": balance,
             "blindspot": blindspot,
             "sources": [{"name": a["source"], "lean": a["lean"], "label": LEAN_LABEL[a["lean"]],
                           "title": a["title"], "url": a["link"]} for a in group],
@@ -249,6 +278,18 @@ def main():
 
     blindspots = [s for s in stories if s["blindspot"] and s["n_sources"] >= 2][:12]
 
+    # trending: significant headline terms weighted by how many DISTINCT outlets use them
+    tok_src = {}
+    GENERIC = {"news", "says", "said", "report", "reports", "live", "update", "updates",
+               "video", "watch", "could", "would", "after", "amid", "over", "first", "year", "years"}
+    for a in articles:
+        for t in tokens(a["title"]):
+            if t in GENERIC:
+                continue
+            tok_src.setdefault(t, set()).add(a["source"])
+    trending = sorted(({"term": t, "n": len(src)} for t, src in tok_src.items() if len(src) >= 3),
+                      key=lambda x: x["n"], reverse=True)[:16]
+
     standalone_fc = [{"org": f["org"], "title": f["title"], "link": f["link"], "summary": f["summary"]}
                      for f in factchecks][:24]
 
@@ -257,7 +298,8 @@ def main():
         "generated_human": datetime.now(timezone.utc).strftime("%b %d, %Y · %H:%M UTC"),
         "sources": live_sources,
         "n_articles": len(articles),
-        "stories": stories[:70],
+        "trending": trending,
+        "stories": stories[:50],
         "blindspots": blindspots,
         "factchecks": standalone_fc,
     }

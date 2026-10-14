@@ -1,90 +1,427 @@
 {
- "generated": "2026-10-14T14:40:47Z",
- "generated_human": "Oct 14, 2026 · 14:40 UTC",
+ "generated": "2026-10-14T14:53:55Z",
+ "generated_human": "Oct 14, 2026 · 14:53 UTC",
  "sources": [
   {
    "name": "NPR",
    "lean": -1,
-   "label": "Lean Left"
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 10
   },
   {
    "name": "The Guardian",
    "lean": -1,
-   "label": "Lean Left"
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
   },
   {
    "name": "NBC News",
    "lean": -1,
-   "label": "Lean Left"
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
   },
   {
    "name": "CBS News",
    "lean": -1,
-   "label": "Lean Left"
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "ABC News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
   },
   {
    "name": "PBS NewsHour",
    "lean": -1,
-   "label": "Lean Left"
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Politico",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Vox",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "Slate",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Mother Jones",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "The Atlantic",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Time",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
   },
   {
    "name": "BBC News",
    "lean": 0,
-   "label": "Center"
+   "label": "Center",
+   "fact": "High",
+   "count": 12
   },
   {
    "name": "The Hill",
    "lean": 0,
-   "label": "Center"
+   "label": "Center",
+   "fact": "High",
+   "count": 12
   },
   {
    "name": "CNBC",
    "lean": 0,
-   "label": "Center"
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Axios",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
   },
   {
    "name": "Al Jazeera",
    "lean": 0,
-   "label": "Center"
+   "label": "Center",
+   "fact": "Mostly",
+   "count": 12
   },
   {
    "name": "The Christian Science Monitor",
    "lean": 0,
-   "label": "Center"
+   "label": "Center",
+   "fact": "High",
+   "count": 10
+  },
+  {
+   "name": "Newsweek",
+   "lean": 0,
+   "label": "Center",
+   "fact": "Mixed",
+   "count": 12
   },
   {
    "name": "Reason",
    "lean": 1,
-   "label": "Lean Right"
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
   },
   {
    "name": "New York Post",
    "lean": 1,
-   "label": "Lean Right"
+   "label": "Lean Right",
+   "fact": "Mixed",
+   "count": 12
   },
   {
    "name": "Washington Examiner",
    "lean": 1,
-   "label": "Lean Right"
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "National Review",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Washington Times",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
   },
   {
    "name": "Fox News",
    "lean": 2,
-   "label": "Right"
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
   },
   {
    "name": "The Daily Wire",
    "lean": 2,
-   "label": "Right"
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "The Federalist",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
   },
   {
    "name": "Newsmax",
    "lean": 2,
-   "label": "Right"
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Daily Caller",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
   }
  ],
- "n_articles": 207,
+ "n_articles": 335,
+ "trending": [
+  {
+   "term": "trump",
+   "n": 18
+  },
+  {
+   "term": "inflation",
+   "n": 13
+  },
+  {
+   "term": "security",
+   "n": 10
+  },
+  {
+   "term": "omar",
+   "n": 10
+  },
+  {
+   "term": "social",
+   "n": 9
+  },
+  {
+   "term": "pope",
+   "n": 9
+  },
+  {
+   "term": "house",
+   "n": 9
+  },
+  {
+   "term": "cancer",
+   "n": 8
+  },
+  {
+   "term": "cornell",
+   "n": 8
+  },
+  {
+   "term": "saudi",
+   "n": 8
+  },
+  {
+   "term": "guilfoyle",
+   "n": 7
+  },
+  {
+   "term": "midterm",
+   "n": 7
+  },
+  {
+   "term": "white",
+   "n": 7
+  },
+  {
+   "term": "ilhan",
+   "n": 7
+  },
+  {
+   "term": "lung",
+   "n": 6
+  },
+  {
+   "term": "judge",
+   "n": 6
+  }
+ ],
  "stories": [
+  {
+   "title": "Trump’s revenge campaign comes for Ilhan Omar",
+   "summary": "This story appeared in Today, Explained, a daily newsletter that helps you understand the most compelling news and stories of the day. Subscribe here. When life gives you lemons, make it rain. Or…something like that! On Tuesday morning, Minnesota Rep. Ilhan Omar launched a fundra",
+   "category": "Politics",
+   "leans": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 4,
+   "n_sources": 7,
+   "balance": {
+    "l": 2,
+    "c": 1,
+    "r": 4
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Trump’s revenge campaign comes for Ilhan Omar",
+     "url": "https://www.vox.com/today-explained-newsletter/505820/ilhan-omar-investigat"
+    },
+    {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump’s Dubious Claim About the Ilhan Omar Search",
+     "url": "https://www.theatlantic.com/newsletters/2026/10/trump-doj-ilhan-omar-search/688984/?utm_source=feed"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Democrats fear \"more October surprises\" after \"bullshit\" raid on Ilhan Omar's home",
+     "url": "https://www.axios.com/2026/10/13/ilhan-omar-raid-democrats-reaction-midterms-2026"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Rep. Ilhan Omar under investigation by Jeanine Pirro's office",
+     "url": "https://www.axios.com/2026/10/13/ilhan-omar-investigation-finances-pirro"
+    },
+    {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Who Is Ilhan Omar?",
+     "url": "https://www.nationalreview.com/2026/10/who-is-ilhan-omar/"
+    },
+    {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "What to Make of the Trump DOJ’s Investigation of Ilhan Omar",
+     "url": "https://www.nationalreview.com/2026/10/what-to-make-of-the-trump-dojs-investigation-of-ilhan-omar/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Vance says White House will not 'micromanage' Justice Dept. probe of Rep. Ilhan Omar",
+     "url": "https://www.washingtontimes.com/news/2026/oct/14/jd-vance-says-white-house-not-micromanage-justice-dept-probe-rep/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Ilhan Omar’s husband insists he has ‘no concerns’ amid federal immigration investigation",
+     "url": "https://www.foxnews.com/politics/ilhan-omar-husband-insists-no-concerns-federal-immigration-investigation"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "5 Crimes That Could Be Behind The Ilhan Omar Raid",
+     "url": "https://www.dailywire.com/news/5-crimes-that-could-be-behind-the-ilhan-omar-raid"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Ilhan Omar: 18 rumors we've examined",
+     "link": "https://www.snopes.com/collections/ilhan-omar-rumors-collection/"
+    }
+   ]
+  },
+  {
+   "title": "Cornell Can Do a Lot More Than Pause Frat Parties",
+   "summary": "All parties and other social events held in fraternity houses on the campus of Cornell University will be cancelled for the remainder of the 2026-27 school year as the university’s administration contends with a lawsuit alleging a horrific 2024 gang rape in the Chi Phi fraternity",
+   "category": "Politics",
+   "leans": [
+    -2,
+    -1,
+    2
+   ],
+   "span": 4,
+   "n_sources": 5,
+   "balance": {
+    "l": 4,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "Cornell Can Do a Lot More Than Pause Frat Parties",
+     "url": "https://www.motherjones.com/politics/2026/10/cornell-fraternity-party-ban-jane-doe-sexual-assault-lawsuit-greek-college/"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Cornell Bans Frat Parties, Promises New Safeguards for Students",
+     "url": "https://www.today.com/video/cornell-president-offers-apology-for-first-time-in-jane-doe-case-271547461977"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Text messages between Jane Doe, frat members reveal new details in Cornell case",
+     "url": "https://www.cbsnews.com/video/text-messages-between-jane-doe-frat-members-reveal-new-details-in-cornell-case/"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "News Wrap: Cornell bans fraternity parties for rest of academic year",
+     "url": "https://www.pbs.org/newshour/show/news-wrap-cornell-bans-fraternity-parties-for-rest-of-academic-year"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Cornell Bans All Fraternity Parties For The Rest Of Academic Year",
+     "url": "https://dailycaller.com/2026/10/13/cornell-bans-fraternity-parties-academic-year-gang-rape"
+    }
+   ],
+   "factchecks": []
+  },
   {
    "title": "Social Security benefits increasing by 3.6 percent in 2027",
    "summary": "Social Security benefits will increase by 3.6 percent in 2027, the Trump administration announced Wednesday. With the latest cost of living adjustment (COLA), Social Security retirement benefits will increase by $75 per month on average, according to the Social Security Administr",
@@ -95,7 +432,12 @@
     2
    ],
    "span": 3,
-   "n_sources": 6,
+   "n_sources": 8,
+   "balance": {
+    "l": 3,
+    "c": 4,
+    "r": 1
+   },
    "blindspot": null,
    "sources": [
     {
@@ -134,11 +476,123 @@
      "url": "https://www.cnbc.com/2026/10/14/social-security-cola-2027.html"
     },
     {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Social Security recipients will see rise in monthly payments next year",
+     "url": "https://www.axios.com/2026/10/14/social-security-cola-inflation"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Why the Large Social Security COLA Increase is Bad News for Americans",
+     "url": "https://www.newsweek.com/why-the-large-social-security-cola-increase-is-bad-news-for-americans-12558235"
+    },
+    {
      "name": "Newsmax",
      "lean": 2,
      "label": "Right",
      "title": "Social Security to Grant 3.6% Cost-of-Living Boost",
      "url": "https://www.newsmax.com/newsfront/social-security-administration-cost-of-living-joe-biden/2026/10/14/id/1272723"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "Misleading GOP Attacks Over Taxes on Tips, Overtime, Social Security",
+     "link": "https://www.factcheck.org/2026/10/misleading-gop-attacks-over-taxes-on-tips-overtime-social-security/"
+    }
+   ]
+  },
+  {
+   "title": "Katie Zacharia Bombs First Day as White House Press Secretary",
+   "summary": "Any remaining skepticism of America’s literacy crisis vanished Tuesday morning, when Katie Zacharia, a former TV political commentator, stepped up to the White House podium for her first briefing as President Trump’s new press secretary. It is from this esteemed perch that Zachar",
+   "category": "Politics",
+   "leans": [
+    -2,
+    -1,
+    0,
+    1
+   ],
+   "span": 3,
+   "n_sources": 8,
+   "balance": {
+    "l": 3,
+    "c": 1,
+    "r": 4
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "Katie Zacharia Bombs First Day as White House Press Secretary",
+     "url": "https://www.motherjones.com/politics/2026/10/katie-zacharia-first-day-white-house-press-secretary/"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Katie Zacharia's debut shows the pitfalls and possibilities of White House press secretary's role",
+     "url": "https://www.pbs.org/newshour/politics/katie-zacharias-debut-shows-the-pitfalls-and-possibilities-of-white-house-press-secretarys-role"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "White House press secretary's debut brings news of Guilfoyle's exit",
+     "url": "https://www.pbs.org/newshour/show/white-house-press-secretarys-debut-brings-news-of-guilfoyles-exit"
+    },
+    {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Hi, I’m Your New Press Secretary, and It’s My First Time Reading Words Out Loud",
+     "url": "https://www.theatlantic.com/newsletters/2026/10/press-secretary-katie-zacharia-first-briefing/688988/?utm_source=feed"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Judge orders White House to reinstate press access until litigation concludes",
+     "url": "https://www.axios.com/2026/10/14/white-house-cnn-ms-now-politico-access"
+    },
+    {
+     "name": "Reason",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Court Issues Preliminary Injunction Requiring CNN, MS NOW, and Politico to Be Readmitted to White House",
+     "url": "https://reason.com/volokh/2026/10/13/court-issues-preliminary-injunction-requiring-cnn-ms-now-and-politico-to-be-readmitted-to-white-house/"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Judge extends MS Now, CNN, and Politico’s White House access indefinitely",
+     "url": "https://www.washingtonexaminer.com/news/justice/4765236/judge-extends-msnow-cnn-politico-white-house-access/"
+    },
+    {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Guilfoyle’s Exit",
+     "url": "https://www.nationalreview.com/2026/10/guilfoyles-exit/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Judge firms up ban on Trump kicking CNN, Politico, MS NOW out of White House",
+     "url": "https://www.washingtontimes.com/news/2026/oct/14/judge-firms-ban-donald-trump-kicking-cnn-politico-ms-white-house/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Judge extends order blocking Trump from banning CNN, MS NOW and Politico reporters from White House",
+     "url": "https://www.washingtontimes.com/news/2026/oct/14/judge-extends-order-blocking-trump-banning-cnn-ms-politico-white/"
     }
    ],
    "factchecks": []
@@ -153,7 +607,12 @@
     2
    ],
    "span": 3,
-   "n_sources": 6,
+   "n_sources": 7,
+   "balance": {
+    "l": 4,
+    "c": 1,
+    "r": 2
+   },
    "blindspot": null,
    "sources": [
     {
@@ -171,25 +630,11 @@
      "url": "https://www.today.com/video/pope-leo-xiv-diagnosed-with-pulmonary-adenocarcinoma-271548997632"
     },
     {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Pope Leo spends a peaceful night in the hospital after cancer surgery",
-     "url": "https://www.nbcnews.com/world/pope-leo-xiv/pope-leo-cancer-surgery-hospital-diagnosis-treatment-rcna603413"
-    },
-    {
      "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
      "title": "Pope recovering \"as expected\" after surgery, lung cancer diagnosis",
      "url": "https://www.cbsnews.com/news/pope-leo-diagnosed-lung-cancer-surgery/"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Catholics pray for Pope Leo following lung cancer diagnosis",
-     "url": "https://www.cbsnews.com/video/catholics-pray-for-pope-leo-following-cancer-diagnosis/"
     },
     {
      "name": "PBS NewsHour",
@@ -218,9 +663,141 @@
      "label": "Right",
      "title": "Pope Leo Eating, Recovering After Cancer Surgery, Doctors Say",
      "url": "https://www.newsmax.com/newsfront/vatican-pope-leo-surgery/2026/10/14/id/1272689"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Pope Diagnosed With Lung Cancer Following Surgery, Vatican Says",
+     "url": "https://dailycaller.com/2026/10/13/pope-leo-diagnosed-lung-cancer-surgery-vatica"
     }
    ],
    "factchecks": []
+  },
+  {
+   "title": "Inflation increased to 3.7% in last consumer price index report before midterm elections",
+   "summary": "Inflation rose three-tenths of a percentage point to 3.7% for the year ending in September, the Bureau of Labor Statistics reported in an update to the consumer price index on Wednesday, a sign that the price pressures that have soured voters on President Donald Trump and the GOP",
+   "category": "Politics",
+   "leans": [
+    -1,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 6,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 5
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Inflation worsened last month to 3.7% as midterm elections near",
+     "url": "https://www.pbs.org/newshour/economy/inflation-worsened-last-month-to-3-7-as-midterm-elections-near"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Inflation increased to 3.7% in last consumer price index report before midterm elections",
+     "url": "https://www.washingtonexaminer.com/policy/finance-and-economy/4764177/inflation-last-consumer-price-index-report-midterm-elections/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Inflation accelerates to 3.7% in final consumer price report before midterm elections",
+     "url": "https://www.washingtontimes.com/news/2026/oct/14/inflation-accelerates-37-final-consumer-price-report-midterm/"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Americans Get Final Inflation Report Before Midterms. Here’s What It Shows.",
+     "url": "https://www.dailywire.com/news/americans-get-final-inflation-report-before-midterms-heres-what-it-shows"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Inflation Worsened Last Month to 3.7%",
+     "url": "https://www.newsmax.com/newsfront/cpi-inflation-prices/2026/10/14/id/1272712"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Inflation Jumps Higher In Final Report Before Midterm Elections",
+     "url": "https://dailycaller.com/2026/10/14/inflation-soars-to-37-as-gas-prices-batter-americans"
+    }
+   ],
+   "factchecks": []
+  },
+  {
+   "title": "Mike Pence group urges Trump to reverse Russia diesel plan",
+   "summary": "Advancing American Freedom, a conservative think tank founded by former Vice President Pence, is calling on the Trump administration to not allow Russia to ship unsanctioned diesel to the U.S., according to a letter obtained by The Hill. The GOP group joins some Senate Republican",
+   "category": "World",
+   "leans": [
+    -1,
+    0,
+    2
+   ],
+   "span": 3,
+   "n_sources": 5,
+   "balance": {
+    "l": 1,
+    "c": 3,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump’s Affection for Russia Is No Mystery",
+     "url": "https://www.theatlantic.com/ideas/2026/10/trump-russia-putin-oil/688986/?utm_source=feed"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Mike Pence group urges Trump to reverse Russia diesel plan",
+     "url": "https://thehill.com/homenews/administration/6147755-trump-russia-diesel-pence-advancing-american-freedom/"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump's diesel dilemma — by the numbers",
+     "url": "https://www.cnbc.com/2026/10/14/trumps-diesel-dilemma-by-the-numbers.html"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Russia Is Showing Trump ‘Ostentatious Disrespect,’ Zelensky Says",
+     "url": "https://www.newsweek.com/russia-showing-trump-ostentatious-disrespect-zelensky-12566225"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Zelenskyy: Russia Defies Trump's Energy Ceasefire Push",
+     "url": "https://www.newsmax.com/newsfront/russia-ukraine-war/2026/10/14/id/1272693"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Trump claims Russia and Ukraine agreed to 'energy ceasefire.' Is there proof?",
+     "link": "https://www.snopes.com/news/2026/10/13/russia-ukraine-energy-ceasefire-trump/"
+    }
+   ]
   },
   {
    "title": "Ukraine says SpaceX limiting Starlink operations, impacting air defense",
@@ -234,6 +811,11 @@
    ],
    "span": 3,
    "n_sources": 4,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 2
+   },
    "blindspot": null,
    "sources": [
     {
@@ -274,51 +856,6 @@
    ]
   },
   {
-   "title": "Inflation increased to 3.7% in last consumer price index report before midterm elections",
-   "summary": "Inflation rose three-tenths of a percentage point to 3.7% for the year ending in September, the Bureau of Labor Statistics reported in an update to the consumer price index on Wednesday, a sign that the price pressures that have soured voters on President Donald Trump and the GOP",
-   "category": "Politics",
-   "leans": [
-    -1,
-    0,
-    1,
-    2
-   ],
-   "span": 3,
-   "n_sources": 4,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Inflation worsened last month to 3.7% as midterm elections near",
-     "url": "https://www.pbs.org/newshour/economy/inflation-worsened-last-month-to-3-7-as-midterm-elections-near"
-    },
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "US inflation rises more than expected ahead of midterm elections",
-     "url": "https://www.bbc.co.uk/news/articles/cwy8lx3pg4k2o?at_medium=RSS&at_campaign=rss"
-    },
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Inflation increased to 3.7% in last consumer price index report before midterm elections",
-     "url": "https://www.washingtonexaminer.com/policy/finance-and-economy/4764177/inflation-last-consumer-price-index-report-midterm-elections/"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Inflation Worsened Last Month to 3.7%",
-     "url": "https://www.newsmax.com/newsfront/cpi-inflation-prices/2026/10/14/id/1272712"
-    }
-   ],
-   "factchecks": []
-  },
-  {
    "title": "Ossoff: 'Zero Interest' in Running for President in 2028",
    "summary": "Sen. Jon Ossoff said during a Senate debate Tuesday night that he has no plans to run for president in 2028, pushing back against speculation about his political future as he seeks reelection.",
    "category": "Politics",
@@ -327,7 +864,12 @@
     2
    ],
    "span": 3,
-   "n_sources": 3,
+   "n_sources": 4,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 2
+   },
    "blindspot": null,
    "sources": [
     {
@@ -336,6 +878,13 @@
      "label": "Lean Left",
      "title": "Jon Ossoff says he won’t run for president in 2028 during heated Georgia debate",
      "url": "https://www.nbcnews.com/politics/2026-election/heated-georgia-senate-debate-jon-ossoff-says-wont-run-president-2028-rcna603300"
+    },
+    {
+     "name": "Politico",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Sen. Jon Ossoff: ‘I’m not running for president’",
+     "url": "https://www.politico.com/news/2026/10/13/jon-ossoff-zero-interest-2028-georgia-01117546"
     },
     {
      "name": "Fox News",
@@ -364,6 +913,11 @@
    ],
    "span": 3,
    "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
    "blindspot": null,
    "sources": [
     {
@@ -390,45 +944,117 @@
    ]
   },
   {
-   "title": "Guilfoyle exit refuels Democrats’ corruption messaging against Trump",
-   "summary": "Kimberly Guilfoyle was supposed to be out of sight, out of mind. Her loyalty to President Donald Trump and MAGA was rewarded with a Greek odyssey, a low-stakes but glamorous ambassadorship in Athens. It also came with the added benefit of her being on the other side of the world ",
+   "title": "ICJ judge Navi Pillay wins Nobel peace prize for promoting international law",
+   "summary": "Committee recognises work of South African who chaired UN commission that concluded Israel was guilty of genocide in Gaza The Nobel peace prize has been awarded to Navi Pillay, the South African former UN human rights chief who chaired the UN commission that concluded Israel was ",
    "category": "World",
    "leans": [
     -1,
-    0,
     1
    ],
    "span": 2,
-   "n_sources": 4,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
    "blindspot": null,
    "sources": [
     {
-     "name": "NPR",
+     "name": "The Guardian",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Trump's ambassador to Greece, Kimberly Guilfoyle, resigns after allegations of improper conduct",
-     "url": "https://www.npr.org/2026/10/14/g-s1-148027/trump-ambassador-greece-resignation"
+     "title": "ICJ judge Navi Pillay wins Nobel peace prize for promoting international law",
+     "url": "https://www.theguardian.com/world/2026/oct/09/navanethem-navi-pillay-wins-nobel-peace-prize"
+    },
+    {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Navi Pillay’s Undeserved Nobel Peace Prize",
+     "url": "https://www.nationalreview.com/2026/10/navi-pillays-undeserved-nobel-peace-prize/"
+    }
+   ],
+   "factchecks": []
+  },
+  {
+   "title": "Apple bets AI can finally make us want a smart home",
+   "summary": "Apple's big new hardware bet for the AI era is here, and it's a...smart display? Why it matters : Cue the time machine and let's head back to 2014, when Amazon's Alexa shocked the tech world and led us to imagine a Jetsons-style home would be ours in the near future. It wasn't, b",
+   "category": "World",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Apple bets AI can finally make us want a smart home",
+     "url": "https://www.axios.com/2026/10/14/apple-ai-hardware-smart-display-homeview"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "DUKE: Apple’s New Ad Is Three Minutes Of Hell In A Smart Home",
+     "url": "https://dailycaller.com/2026/10/14/duke-apple-advertisement-homeview-cucked-liberal-helpless-family-ai"
+    }
+   ],
+   "factchecks": []
+  },
+  {
+   "title": "Inflation heats up as gas prices surge",
+   "summary": "Data: Bureau of Labor Statistics ; Chart: Courtenay Brown/Axios U.S. inflation picked up in September as soaring energy prices added to already stubborn price pressures, the Labor Department said on Wednesday. Why it matters: The latest Consumer Price Index shows that the inflati",
+   "category": "Economy",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 4,
+   "balance": {
+    "l": 2,
+    "c": 2,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Inflation jumps to 3.7% as gas and diesel prices squeeze consumers ahead of the midterms",
+     "url": "https://www.nbcnews.com/business/economy/inflation-jumped-september-gas-diesel-prices-squeezed-consumers-ahead-rcna603202"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Inflation climbs in September as gas prices surge",
+     "url": "https://abcnews.com/Business/inflation-report-provide-snapshot-prices-midterms-approach/story?id=137221675"
     },
     {
      "name": "BBC News",
      "lean": 0,
      "label": "Center",
-     "title": "Trump ousts Kimberly Guilfoyle as US ambassador to Greece after corruption allegations",
-     "url": "https://www.bbc.co.uk/news/articles/cr5ynplvpg7lo?at_medium=RSS&at_campaign=rss"
+     "title": "US inflation rises more than expected - here's what is happening with prices",
+     "url": "https://www.bbc.co.uk/news/articles/cwy8lx3pg4k2o?at_medium=RSS&at_campaign=rss"
     },
     {
-     "name": "Reason",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Trump Fired Kimberly Guilfoyle for Influence Peddling That Pales Next to His Presidential Profiteering",
-     "url": "https://reason.com/2026/10/13/trump-fired-kimberly-guilfoyle-for-influence-peddling-that-pales-next-to-his-presidential-profiteering/"
-    },
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Guilfoyle exit refuels Democrats’ corruption messaging against Trump",
-     "url": "https://www.washingtonexaminer.com/news/white-house/4764801/guilfoyle-exit-democrats-trump-corruption-messaging/"
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Inflation heats up as gas prices surge",
+     "url": "https://www.axios.com/2026/10/14/cpi-september-inflation-trump"
     }
    ],
    "factchecks": []
@@ -442,7 +1068,12 @@
     0
    ],
    "span": 1,
-   "n_sources": 4,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 2,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -460,11 +1091,11 @@
      "url": "https://www.bbc.co.uk/news/articles/cwg5jq4vlddzo?at_medium=RSS&at_campaign=rss"
     },
     {
-     "name": "CNBC",
+     "name": "Al Jazeera",
      "lean": 0,
      "label": "Center",
-     "title": "FBI arrests Saudi OpenAI employee who allegedly planted recording device in conference room",
-     "url": "https://www.cnbc.com/2026/10/13/openai-employee-arrested-recording-device.html"
+     "title": "Saudi national charged with planting a listening device at OpenAI offices",
+     "url": "https://www.aljazeera.com/news/2026/10/14/saudi-national-charged-with-planting-a-listening-device-at-openai-offices?traffic_source=rss"
     },
     {
      "name": "Al Jazeera",
@@ -472,6 +1103,81 @@
      "label": "Center",
      "title": "What we know about OpenAI engineer arrested over office spying",
      "url": "https://www.aljazeera.com/video/newsfeed/2026/10/14/what-we-know-about-openai-engineer-arrested-over-office-spying?traffic_source=rss"
+    }
+   ],
+   "factchecks": []
+  },
+  {
+   "title": "Headquarters of Saudi oil titan Aramco hit in Houthi airstrikes",
+   "summary": "The Houthis struck the headquarters of national Saudi oil giant Aramco in Dhahran, Saudi Arabia, overnight, marking the latest airstrike barrage from the Iran-backed Yemeni rebel group against the kingdom. According to the Saudi Ministry of Energy, there were no casualties after ",
+   "category": "World",
+   "leans": [
+    0,
+    1
+   ],
+   "span": 1,
+   "n_sources": 3,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Iran says it’s ‘counting the moments’ until it can attack U.S. warships; Saudi Aramco facilities attacked",
+     "url": "https://www.cnbc.com/2026/10/14/us-iran-war-trump-hormuz-saudi.html"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Headquarters of Saudi oil titan Aramco hit in Houthi airstrikes",
+     "url": "https://www.washingtonexaminer.com/news/world/4765370/headquarters-saudi-oil-aramco-houthi-strike/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Iran-backed Houthi rebels claim more strikes on Saudi airport, Aramco facility",
+     "url": "https://www.washingtontimes.com/news/2026/oct/14/iran-backed-houthi-rebels-claim-strikes-saudi-airport-aramco-facility/"
+    }
+   ],
+   "factchecks": []
+  },
+  {
+   "title": "Trump's ambassador to Greece, Kimberly Guilfoyle, resigns after allegations of improper conduct",
+   "summary": "The White House publicly asked for U.S. Ambassador to Greece Kimberly Guilfoyle's resignation on Tuesday as she faced mounting accusations of improper conduct.",
+   "category": "Politics",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump's ambassador to Greece, Kimberly Guilfoyle, resigns after allegations of improper conduct",
+     "url": "https://www.npr.org/2026/10/14/g-s1-148027/trump-ambassador-greece-resignation"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump ousts Kimberly Guilfoyle as US ambassador to Greece after corruption allegations",
+     "url": "https://www.bbc.co.uk/news/articles/cr5ynplvpg7lo?at_medium=RSS&at_campaign=rss"
     }
    ],
    "factchecks": []
@@ -486,6 +1192,11 @@
    ],
    "span": 1,
    "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -515,6 +1226,11 @@
    ],
    "span": 1,
    "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -535,34 +1251,6 @@
    "factchecks": []
   },
   {
-   "title": "Cornell Bans Frat Parties, Promises New Safeguards for Students",
-   "summary": "Cornell University is now suspending all fraternity parties and social events for the rest of the school year, and promising tough new measures to safeguard students. It comes as Cornell’s president is acknowledging missteps in the school’s handling of the Jane Doe case and offer",
-   "category": "Economy",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "blindspot": "right",
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Cornell Bans Frat Parties, Promises New Safeguards for Students",
-     "url": "https://www.today.com/video/cornell-president-offers-apology-for-first-time-in-jane-doe-case-271547461977"
-    },
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "News Wrap: Cornell bans fraternity parties for rest of academic year",
-     "url": "https://www.pbs.org/newshour/show/news-wrap-cornell-bans-fraternity-parties-for-rest-of-academic-year"
-    }
-   ],
-   "factchecks": []
-  },
-  {
    "title": "Saudi conflict with Houthis escalates with new strikes",
    "summary": "The threat of a widening war on the Arabian Peninsula is accelerating. Houthi rebels in Yemen are again targeting Saudi infrastructure and military sites, escalating a conflict which may yet draw in other regional powers. The Saudi-led coalition launched new airstrikes on oil fac",
    "category": "World",
@@ -571,6 +1259,11 @@
    ],
    "span": 0,
    "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": "right",
    "sources": [
     {
@@ -591,57 +1284,34 @@
    "factchecks": []
   },
   {
-   "title": "Mike Pence group urges Trump to reverse Russia diesel plan",
-   "summary": "Advancing American Freedom, a conservative think tank founded by former Vice President Pence, is calling on the Trump administration to not allow Russia to ship unsanctioned diesel to the U.S., according to a letter obtained by The Hill. The GOP group joins some Senate Republican",
-   "category": "World",
+   "title": "Bank of America hit with $1.2 billion penalty over money laundering allegations",
+   "summary": "The Treasury Department on Tuesday announced more than $1.2 billion in penalties against Bank of America for years of failures to report suspicious transactions and address shortcomings in its anti-money-laundering program. Why it matters: The action includes the third-largest pe",
+   "category": "General",
    "leans": [
     0
    ],
    "span": 0,
    "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 2,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Mike Pence group urges Trump to reverse Russia diesel plan",
-     "url": "https://thehill.com/homenews/administration/6147755-trump-russia-diesel-pence-advancing-american-freedom/"
-    },
     {
      "name": "CNBC",
      "lean": 0,
      "label": "Center",
-     "title": "Trump's diesel dilemma — by the numbers",
-     "url": "https://www.cnbc.com/2026/10/14/trumps-diesel-dilemma-by-the-numbers.html"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Judge extends MS Now, CNN, and Politico’s White House access indefinitely",
-   "summary": "A federal judge issued a preliminary injunction late Tuesday to extend White House press access for three news outlets targeted by President Donald Trump. U.S. District Judge Timothy Kelly, who was appointed by Trump, determined that MS Now, CNN, and Politico would likely succeed",
-   "category": "Politics",
-   "leans": [
-    1
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Reason",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Court Issues Preliminary Injunction Requiring CNN, MS NOW, and Politico to Be Readmitted to White House",
-     "url": "https://reason.com/volokh/2026/10/13/court-issues-preliminary-injunction-requiring-cnn-ms-now-and-politico-to-be-readmitted-to-white-house/"
+     "title": "Bank of America shares drop 8% after third-quarter revenue miss and regulatory penalty",
+     "url": "https://www.cnbc.com/2026/10/14/bank-of-america-bac-q3-2026-earnings.html"
     },
     {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Judge extends MS Now, CNN, and Politico’s White House access indefinitely",
-     "url": "https://www.washingtonexaminer.com/news/justice/4765236/judge-extends-msnow-cnn-politico-white-house-access/"
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Bank of America hit with $1.2 billion penalty over money laundering allegations",
+     "url": "https://www.axios.com/2026/10/13/treasury-bank-america-fine"
     }
    ],
    "factchecks": []
@@ -655,6 +1325,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -682,6 +1357,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -701,68 +1381,115 @@
    ]
   },
   {
-   "title": "Ilhan Omar’s husband insists he has ‘no concerns’ amid federal immigration investigation",
-   "summary": "Tim Mynett says he has \"no concerns\" after HSI agents raided his and Ilhan Omar's D.C. home as subpoenas reach multiple family members nearby.",
-   "category": "Economy",
+   "title": "Drone Strikes Didn’t Take Out a Russian Bot Farm, But We Were Primed to Believe It",
+   "summary": "On Monday, Ukrainian President Volodymyr Zelenskyy claimed that a Ukrainian bombing strike on Yandex’s data centers, a large Russian technology company, had led to a sudden decrease in bot activity online. “When our strikes reached Yandex’s data centers, it suddenly became a litt",
+   "category": "World",
    "leans": [
-    2
+    -2
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Ilhan Omar’s husband insists he has ‘no concerns’ amid federal immigration investigation",
-     "url": "https://www.foxnews.com/politics/ilhan-omar-husband-insists-no-concerns-federal-immigration-investigation"
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "Drone Strikes Didn’t Take Out a Russian Bot Farm, But We Were Primed to Believe It",
+     "url": "https://www.motherjones.com/politics/2026/10/ukraine-drone-strike-yandex-russian-bot-farm-right-wing-maga-afd-reform-uk-conspiracy-theory-viral-rumor/"
     }
    ],
    "factchecks": [
     {
      "org": "Snopes",
-     "title": "Ilhan Omar: 18 rumors we've examined",
-     "link": "https://www.snopes.com/collections/ilhan-omar-rumors-collection/"
+     "title": "Did Ukraine's strikes on Yandex servers take out Russian bots? What we know",
+     "link": "https://www.snopes.com/news/2026/10/13/ukraine-yandex-strikes-russian-bots/"
     }
    ]
   },
   {
-   "title": "Zelenskyy: Russia Defies Trump's Energy Ceasefire Push",
-   "summary": "Ukrainian President Volodymyr Zelenskyy voiced outrage Wednesday over Russia's continuing aerial bombardment of Ukraine's energy infrastructure in apparent defiance of President Donald Trump's demand for a ceasefire.",
+   "title": "Pete Hegseth’s Firing Squad Livestream Is Finding Fans in the Defense Industry",
+   "summary": "“I have been outspoken on wanting public executions for over a decade.” So said Palmer Luckey, the co-founder of Anduril Industries, a military technology company that sells autonomous drones and software to the Defense Department, Customs and Border Protection, and militaries ab",
    "category": "World",
    "leans": [
-    2
+    -2
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Zelenskyy: Russia Defies Trump's Energy Ceasefire Push",
-     "url": "https://www.newsmax.com/newsfront/russia-ukraine-war/2026/10/14/id/1272693"
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "Pete Hegseth’s Firing Squad Livestream Is Finding Fans in the Defense Industry",
+     "url": "https://www.motherjones.com/politics/2026/10/hasan-hegseth-firing-squad-livestream-execution-palantir-anduril-luckey/"
     }
    ],
    "factchecks": [
     {
      "org": "Snopes",
-     "title": "Trump claims Russia and Ukraine agreed to 'energy ceasefire.' Is there proof?",
-     "link": "https://www.snopes.com/news/2026/10/13/russia-ukraine-energy-ceasefire-trump/"
+     "title": "Did Charlie Kirk say children could watch public executions as 'initiation' at 'certain age'?",
+     "link": "https://www.snopes.com/fact-check/charlie-kirk-public-executions-quote/"
+    }
+   ]
+  },
+  {
+   "title": "U.S. military archbishop: Catholic soldiers shouldn't take part in firing squad of Fort Hood shooter",
+   "summary": "The archbishop for the U.S. military says Catholic soldiers should not participate in the firing squad execution of the former Army psychiatrist who killed 13 people at Fort Hood, Texas, in 2009.",
+   "category": "General",
+   "leans": [
+    1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "U.S. military archbishop: Catholic soldiers shouldn't take part in firing squad of Fort Hood shooter",
+     "url": "https://www.washingtontimes.com/news/2026/oct/14/us-military-archbishop-catholic-soldiers-shouldnt-take-part-firing/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Did Charlie Kirk say children could watch public executions as 'initiation' at 'certain age'?",
+     "link": "https://www.snopes.com/fact-check/charlie-kirk-public-executions-quote/"
     }
    ]
   },
   {
    "title": "Hands-on with the Ocarina of Time remake, the most ornate Zelda game ever made",
-   "summary": "We got to play the The Legend of Zelda: Ocarina of Time early. Here are our impressions of the remake and its elaborate new style.",
+   "summary": "We got to play The Legend of Zelda: Ocarina of Time early. Here are our impressions of the remake and its elaborate new style.",
    "category": "Economy",
    "leans": [
     -1
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -784,6 +1511,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -805,6 +1537,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -826,6 +1563,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -847,6 +1589,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -868,6 +1615,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -889,6 +1641,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -910,6 +1667,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -931,6 +1693,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -944,27 +1711,6 @@
    "factchecks": []
   },
   {
-   "title": "ICJ judge Navi Pillay wins Nobel peace prize for promoting international law",
-   "summary": "Committee recognises work of South African who chaired UN commission that concluded Israel was guilty of genocide in Gaza The Nobel peace prize has been awarded to Navi Pillay, the South African former UN human rights chief who chaired the UN commission that concluded Israel was ",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "ICJ judge Navi Pillay wins Nobel peace prize for promoting international law",
-     "url": "https://www.theguardian.com/world/2026/oct/09/navanethem-navi-pillay-wins-nobel-peace-prize"
-    }
-   ],
-   "factchecks": []
-  },
-  {
    "title": "Isaias strengthens to become first Atlantic hurricane of 2026 season",
    "summary": "Storm expected to make landfall on US’s northern Gulf coast with risk of flash floods and isolated river flooding Isaias has become the first Atlantic hurricane of the 2026 season, with wind speeds of 80mph and a minimum pressure of 975mb. It is expected to strengthen to a catego",
    "category": "General",
@@ -973,6 +1719,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -994,6 +1745,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -1015,6 +1771,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -1036,6 +1797,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -1057,6 +1823,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -1078,6 +1849,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -1099,6 +1875,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -1120,6 +1901,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -1133,48 +1919,6 @@
    "factchecks": []
   },
   {
-   "title": "Indonesia wildfire fuelled by El Niño razes almost 300 homes",
-   "summary": "Hundreds of people displaced in Bangka Belitung with conditions described as worst in a decade with wildlife also badly hit A forest fire on Indonesia’s Sumatra island fuelled by El Niño has razed nearly 300 homes, forcing hundreds of people to evacuate, an official has said, as ",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Indonesia wildfire fuelled by El Niño razes almost 300 homes",
-     "url": "https://www.theguardian.com/world/2026/oct/13/indonesia-wildfire-el-nino-razes-300-homes-bankga-belitung"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "EU to limit Chinese hybrid vehicle imports to 350,000 a year",
-   "summary": "Brussels uses WTO rules to quickly impose quota, which will halve Chinese market share to 3% Business live – latest updates VW boss backs EU plan to bolster domestic industry The EU is to limit the number of hybrid electric vehicles imported from China to 350,000 cars a year, the",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "EU to limit Chinese hybrid vehicle imports to 350,000 a year",
-     "url": "https://www.theguardian.com/environment/2026/oct/12/eu-deal-china-limit-imports-hybrid-electric-vehicles"
-    }
-   ],
-   "factchecks": []
-  },
-  {
    "title": "Texas DA says ICE intentionally hit immigrant with a car and may have withheld evidence",
    "summary": "Harris County DA Sean Teare told NBC News his office has collected multiple videos for its own investigation but isn’t getting cooperation from the federal government.",
    "category": "World",
@@ -1183,6 +1927,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -1204,6 +1953,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -1225,6 +1979,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -1238,48 +1997,6 @@
    "factchecks": []
   },
   {
-   "title": "Inflation jumps to 3.7% as gas and diesel prices squeeze consumers ahead of the midterms",
-   "summary": "Prices rose across broad swaths of the economy in September, as high energy costs triggered by the Iran war pushed up costs in many major consumer categories.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Inflation jumps to 3.7% as gas and diesel prices squeeze consumers ahead of the midterms",
-     "url": "https://www.nbcnews.com/business/economy/inflation-jumped-september-gas-diesel-prices-squeezed-consumers-ahead-rcna603202"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Chick-fil-A bet on chicken 60 years ago. Now it’s America’s third largest restaurant chain.",
-   "summary": "The family-owned company reported nearly $24 billion in sales last year and recently expanded to Singapore and the United Kingdom.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Chick-fil-A bet on chicken 60 years ago. Now it’s America’s third largest restaurant chain.",
-     "url": "https://www.nbcnews.com/business/ceo-interviews/chick-fil-a-ceo-andrew-cathy-restaurant-rcna603203"
-    }
-   ],
-   "factchecks": []
-  },
-  {
    "title": "Best friend duo behind #IMomSoHard on managing middle school chaos",
    "summary": "Kristin Hensley and Jen Smedley, the comedy duo and best friends behind the \"#IMomSoHard\" podcast, sit down with \"CBS Mornings\" to talk about \"The Crashing Out Tour,\" and their new book, \"The Middle School Mom's Survival Guide.\"",
    "category": "General",
@@ -1288,6 +2005,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -1309,6 +2031,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -1330,6 +2057,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -1351,6 +2083,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -1372,6 +2109,11 @@
    ],
    "span": 0,
    "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": null,
    "sources": [
     {
@@ -1383,499 +2125,9 @@
     }
    ],
    "factchecks": []
-  },
-  {
-   "title": "Top meme coin buyers vying for Trump dinner appear to be overseas",
-   "summary": "At least 52 $TRUMP holders moved funds through crypto exchanges that bar U.S. customers.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Top meme coin buyers vying for Trump dinner appear to be overseas",
-     "url": "https://www.cbsnews.com/news/trump-meme-coin-dinner-foreign-top-bidders/"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Text messages between Jane Doe, frat members reveal new details in Cornell case",
-   "summary": "Cornell University has suspended all fraternity parties for the remainder of the academic year amid backlash against the administration's handling of a major sexual assault case. CBS News' Lilia Luciano has more details.",
-   "category": "Economy",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Text messages between Jane Doe, frat members reveal new details in Cornell case",
-     "url": "https://www.cbsnews.com/video/text-messages-between-jane-doe-frat-members-reveal-new-details-in-cornell-case/"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Trump promised to lower prices for Americans. Here's what the data shows.",
-   "summary": "Just weeks before the midterm elections, 90% of Americans say prices in the U.S. are the main factor shaping their view of the economy. These charts show why.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Trump promised to lower prices for Americans. Here's what the data shows.",
-     "url": "https://www.cbsnews.com/news/trump-promised-lower-prices-cost-living-inflation/"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Katie Zacharia's debut shows the pitfalls and possibilities of White House press secretary's role",
-   "summary": "This would not be an easy job under any circumstances.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Katie Zacharia's debut shows the pitfalls and possibilities of White House press secretary's role",
-     "url": "https://www.pbs.org/newshour/politics/katie-zacharias-debut-shows-the-pitfalls-and-possibilities-of-white-house-press-secretarys-role"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Does a Russian lab worker's death carry pandemic risk? Experts say it's unlikely, with one caveat",
-   "summary": "Some details surrounding a Russian lab worker's death of an unknown pneumonia parallel COVID-19 news that unfolded seven years ago, but health security experts say they don't see signs this is a precursor to another pandemic.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Does a Russian lab worker's death carry pandemic risk? Experts say it's unlikely, with one caveat",
-     "url": "https://www.pbs.org/newshour/health/does-a-russian-lab-workers-death-carry-pandemic-risk-experts-say-its-unlikely-with-one-caveat"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "White House press secretary's debut brings news of Guilfoyle's exit",
-   "summary": "On her first day at the podium, new White House Press Secretary Katie Zacharia made news. She announced that President Trump has asked his son's former fiancée and ambassador to Greece, Kimberly Guilfoyle, to resign amid allegations that she sought $100,000 from a donor. White Ho",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "White House press secretary's debut brings news of Guilfoyle's exit",
-     "url": "https://www.pbs.org/newshour/show/white-house-press-secretarys-debut-brings-news-of-guilfoyles-exit"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Trump Accounts expand to millions of children, but new rules raise questions",
-   "summary": "The Treasury Department has created Trump Accounts for every eligible child, automatically enrolling more than 60 million. The expansion also comes with changes to how the program works. Donors can now donate individual stocks that families can't choose or reject and must keep fo",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Trump Accounts expand to millions of children, but new rules raise questions",
-     "url": "https://www.pbs.org/newshour/show/trump-accounts-expand-to-millions-of-children-but-new-rules-raise-questions"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Florida executed a prisoner who killed his cellmate in hopes of getting a death sentence. It's the state's 17th execution of the year",
-   "summary": "Robertson's execution comes at a time of escalating attention on the death penalty in the United States.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Florida executed a prisoner who killed his cellmate in hopes of getting a death sentence. It's the state's 17th execution of the year",
-     "url": "https://www.pbs.org/newshour/nation/florida-executes-a-prisoner-who-killed-his-cellmate-in-hopes-of-getting-a-death-sentence-its-the-states-17th-execution-of-the-year"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Climate change gives Swedish winemakers an unexpected boost",
-   "summary": "Record high temperatures this year forced European wine producers to harvest grapes much earlier than usual. French wineries fear it will lead to the worst season in 30 years. But Nordic newcomers to the world of wine are toasting what they believe will be a vintage harvest, than",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Climate change gives Swedish winemakers an unexpected boost",
-     "url": "https://www.pbs.org/newshour/show/climate-change-gives-swedish-winemakers-an-unexpected-boost"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Grandma Joy and Me' follows a grandmother and grandson's journey to every national park",
-   "summary": "Eleven years ago, Brad Ryan took his grandmother, Joy, camping in the Smoky Mountains after hearing that she had never seen a mountain. That one trip to a national park turned into dozens, and \"Grandma Joy's Road Trip\" took them to every one. Brad and Joy joined Geoff Bennett to ",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Grandma Joy and Me' follows a grandmother and grandson's journey to every national park",
-     "url": "https://www.pbs.org/newshour/show/grandma-joy-and-me-follows-a-grandmother-and-grandsons-journey-to-every-national-park"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Starlink restrictions in Ukraine war linked to political situation, Zelensky aide says",
-   "summary": "Elon Musk's system allows Kyiv to protect Ukrainian skies and effectively guide drones to Russian targets.",
-   "category": "World",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Starlink restrictions in Ukraine war linked to political situation, Zelensky aide says",
-     "url": "https://www.bbc.co.uk/news/articles/cm2d6e62p49do?at_medium=RSS&at_campaign=rss"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Germany puts Ukrainian on trial accused of blowing up Nord Stream pipelines",
-   "summary": "Four years after the attacks, Serhii Kuznetsov appears in court accused of a plot to destroy Russia's gas pipelines to Germany.",
-   "category": "World",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Germany puts Ukrainian on trial accused of blowing up Nord Stream pipelines",
-     "url": "https://www.bbc.co.uk/news/articles/cw99zpmnxzmjo?at_medium=RSS&at_campaign=rss"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Turkish police raid opposition TV station, halting live broadcasts",
-   "summary": "It is the latest in a series of crackdowns on media critical of the Turkish president and his government.",
-   "category": "General",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Turkish police raid opposition TV station, halting live broadcasts",
-     "url": "https://www.bbc.co.uk/news/articles/crx23y3d970vo?at_medium=RSS&at_campaign=rss"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "World's oldest shipwreck found off coast of Turkey",
-   "summary": "Archaeologists say the wreck is up to 4,700 years old, dating to the Early Bronze Age.",
-   "category": "General",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "World's oldest shipwreck found off coast of Turkey",
-     "url": "https://www.bbc.co.uk/news/articles/c6gr80rk1yyko?at_medium=RSS&at_campaign=rss"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Hundreds of thousands of workers on strike across Republic of Ireland",
-   "summary": "It comes amidst an an ongoing pay dispute between public sector workers and the Irish government.",
-   "category": "General",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Hundreds of thousands of workers on strike across Republic of Ireland",
-     "url": "https://www.bbc.co.uk/news/articles/cjn5vxlrgqn4o?at_medium=RSS&at_campaign=rss"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Mauritius reels from worst riots in decades after woman shot by police",
-   "summary": "Prime Minister Navin Ramgoolam imposed a curfew after days of unrest that first began over water shortages.",
-   "category": "General",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Mauritius reels from worst riots in decades after woman shot by police",
-     "url": "https://www.bbc.co.uk/news/articles/cm4g1rnj5qweo?at_medium=RSS&at_campaign=rss"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Burnham says he wants to 'repair bridges' between Ukraine and US",
-   "summary": "It comes ahead of a meeting between the prime minister and President Zelensky at Downing Street.",
-   "category": "World",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Burnham says he wants to 'repair bridges' between Ukraine and US",
-     "url": "https://www.bbc.co.uk/news/articles/cq98z59xdny5o?at_medium=RSS&at_campaign=rss"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Ex-gang boss sentenced to 40 years for orchestrating Tupac Shakur's murder",
-   "summary": "Davis was found guilty last month over his role in the late rap superstar's death in a drive-by shooting in 1996.",
-   "category": "General",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Ex-gang boss sentenced to 40 years for orchestrating Tupac Shakur's murder",
-     "url": "https://www.bbc.co.uk/news/articles/c60rln2jvv2zo?at_medium=RSS&at_campaign=rss"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Zimbabwean author denies using AI to write award-winning story",
-   "summary": "Simbarashe Kundizeza was responding to an accusation that has caused an uproar on social media.",
-   "category": "World",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Zimbabwean author denies using AI to write award-winning story",
-     "url": "https://www.bbc.co.uk/news/articles/cm4g1rekpgnjo?at_medium=RSS&at_campaign=rss"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Lena Dunham's Girls to return for limited HBO run",
-   "summary": "Ten years after the series finale, the \"Girls\" are getting back together to explore the \"milestone of turning forty\", HBO says.",
-   "category": "General",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Lena Dunham's Girls to return for limited HBO run",
-     "url": "https://www.bbc.co.uk/news/articles/c9m26xp4zp8jo?at_medium=RSS&at_campaign=rss"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "GOP donor in Guilfoyle scandal: 'I am not going to let JD Vance off the hook'",
-   "summary": "The Republican donor at the center of the Kimberly Guilfoyle scandal said he was ready to go after other administration officials, including Vice President Vance, if they did not heed his call to extradite Dr. Abubakar Atiq Durrani, who fled to Pakistan after being accused of per",
-   "category": "Politics",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "GOP donor in Guilfoyle scandal: 'I am not going to let JD Vance off the hook'",
-     "url": "https://thehill.com/homenews/administration/6147843-deters-threatens-vance-guilfoyle/"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "The West can't power its future without more transmission",
-   "summary": "As governors of Western states, we see this moment as a defining test of whether the region will lead the next generation of industry or fall behind.",
-   "category": "Politics",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "The West can't power its future without more transmission",
-     "url": "https://thehill.com/opinion/energy-environment/6146025-western-governors-energy-roadmap/"
-    }
-   ],
-   "factchecks": []
   }
  ],
  "blindspots": [
-  {
-   "title": "Cornell Bans Frat Parties, Promises New Safeguards for Students",
-   "summary": "Cornell University is now suspending all fraternity parties and social events for the rest of the school year, and promising tough new measures to safeguard students. It comes as Cornell’s president is acknowledging missteps in the school’s handling of the Jane Doe case and offer",
-   "category": "Economy",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "blindspot": "right",
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Cornell Bans Frat Parties, Promises New Safeguards for Students",
-     "url": "https://www.today.com/video/cornell-president-offers-apology-for-first-time-in-jane-doe-case-271547461977"
-    },
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "News Wrap: Cornell bans fraternity parties for rest of academic year",
-     "url": "https://www.pbs.org/newshour/show/news-wrap-cornell-bans-fraternity-parties-for-rest-of-academic-year"
-    }
-   ],
-   "factchecks": []
-  },
   {
    "title": "Saudi conflict with Houthis escalates with new strikes",
    "summary": "The threat of a widening war on the Arabian Peninsula is accelerating. Houthi rebels in Yemen are again targeting Saudi infrastructure and military sites, escalating a conflict which may yet draw in other regional powers. The Saudi-led coalition launched new airstrikes on oil fac",
@@ -1885,6 +2137,11 @@
    ],
    "span": 0,
    "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
    "blindspot": "right",
    "sources": [
     {
@@ -1900,34 +2157,6 @@
      "label": "Lean Left",
      "title": "Saudi conflict with Houthis escalates with new strikes",
      "url": "https://www.pbs.org/newshour/show/saudi-conflict-with-houthis-escalates-with-new-strikes"
-    }
-   ],
-   "factchecks": []
-  },
-  {
-   "title": "Judge extends MS Now, CNN, and Politico’s White House access indefinitely",
-   "summary": "A federal judge issued a preliminary injunction late Tuesday to extend White House press access for three news outlets targeted by President Donald Trump. U.S. District Judge Timothy Kelly, who was appointed by Trump, determined that MS Now, CNN, and Politico would likely succeed",
-   "category": "Politics",
-   "leans": [
-    1
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Reason",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Court Issues Preliminary Injunction Requiring CNN, MS NOW, and Politico to Be Readmitted to White House",
-     "url": "https://reason.com/volokh/2026/10/13/court-issues-preliminary-injunction-requiring-cnn-ms-now-and-politico-to-be-readmitted-to-white-house/"
-    },
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Judge extends MS Now, CNN, and Politico’s White House access indefinitely",
-     "url": "https://www.washingtonexaminer.com/news/justice/4765236/judge-extends-msnow-cnn-politico-white-house-access/"
     }
    ],
    "factchecks": []

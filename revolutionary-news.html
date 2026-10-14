@@ -110,6 +110,34 @@ details.method .mbody b{color:var(--text)}
 .srcgrid{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .srcpill{font-family:'JetBrains Mono';font-size:11px;padding:4px 9px;border-radius:999px;border:1px solid var(--line);color:var(--dim)}
 
+/* trending */
+.trendwrap{margin:22px 0 4px}
+.trendlabel{font-family:'JetBrains Mono';font-size:11.5px;color:var(--faint);letter-spacing:.08em;margin-bottom:8px}
+.trend{display:flex;gap:8px;flex-wrap:wrap}
+.tchip{font-family:'JetBrains Mono';font-size:12px;color:var(--text);border:1px solid var(--line);background:rgba(23,32,58,.6);border-radius:999px;padding:6px 12px;cursor:pointer;transition:.12s}
+.tchip:hover{border-color:var(--amber);color:var(--amber)}
+.tchip b{color:var(--amber);margin-left:5px}
+.tchip.hot b{color:#ff9d5c}
+
+/* coverage meter */
+.covbar{display:flex;height:7px;width:150px;border-radius:3px;overflow:hidden;background:#202b49}
+.covbar i{display:block;height:100%}
+.covbar i.l{background:#5a86d6}.covbar i.c{background:#9aa3bd}.covbar i.r{background:#d66a5a}
+.covtxt{font-family:'JetBrains Mono';font-size:11px;color:var(--faint)}
+
+/* bias map */
+.biasmap{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:8px}
+@media(max-width:720px){.biasmap{grid-template-columns:1fr 1fr;}}
+.bmcol{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;min-height:70px}
+.bmcol .bmh{font-family:'JetBrains Mono';font-size:11px;font-weight:700;letter-spacing:.04em;margin-bottom:9px;text-align:center;padding-bottom:7px;border-bottom:1px solid var(--line-soft)}
+.bmcol.l2 .bmh{color:#3f6fd1}.bmcol.l1 .bmh{color:#6f97dd}.bmcol.c .bmh{color:#aeb6cc}
+.bmcol.r1 .bmh{color:#dd8a7d}.bmcol.r2 .bmh{color:#d6594a}
+.bmsrc{font-size:12px;color:var(--dim);padding:4px 0;display:flex;align-items:center;gap:6px;justify-content:space-between}
+.bmsrc .fdot{width:7px;height:7px;border-radius:50%;flex:none}
+.fdot.High{background:var(--steady)}.fdot.Mostly{background:var(--amber)}.fdot.Mixed{background:var(--right)}
+.biaskey{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--faint);margin-top:12px;font-family:'JetBrains Mono'}
+.biaskey .fdot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:0}
+
 #loaderr{display:none;background:rgba(214,106,90,.1);border:1px solid rgba(214,106,90,.4);border-radius:12px;padding:16px 18px;color:#f0c3bb;font-size:14px;margin-top:24px}
 .empty{color:var(--faint);font-size:14px;padding:20px 0}
 
@@ -154,8 +182,27 @@ footer .flinks a{margin-left:16px}
     <label class="tgl"><input type="checkbox" id="multionly"> every-angle only (2+ sources)</label>
   </div>
 
+  <div class="trendwrap" id="trendwrap" style="display:none">
+    <div class="trendlabel">◆ TRENDING NOW — most-covered topics across all outlets (tap to filter)</div>
+    <div class="trend" id="trending"></div>
+  </div>
+
   <section style="border-top:none;margin-top:14px;padding-top:6px">
-    <div class="sectlabel">01 / TOP STORIES</div>
+    <div class="sectlabel">01 / THE SOURCE SPECTRUM</div>
+    <h2 class="sec">Every outlet, placed on the map</h2>
+    <p class="sub">The outlets this reader pulls from, laid out left to right. The dot shows each one's
+    factual-reporting reputation — a reminder that where a source sits and how carefully it reports are two
+    different things.</p>
+    <div class="biasmap" id="biasmap"></div>
+    <div class="biaskey">
+      <span><span class="fdot High"></span>High factual reporting</span>
+      <span><span class="fdot Mostly"></span>Mostly factual</span>
+      <span><span class="fdot Mixed"></span>Mixed — read with care</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="sectlabel">02 / TOP STORIES</div>
     <h2 class="sec">Every angle, side by side</h2>
     <p class="sub">Each card is one story as covered across outlets. The colored bar shows which parts of the spectrum
     are reporting it. Open the sources to read the exact same event in each outlet's own words.</p>
@@ -164,7 +211,7 @@ footer .flinks a{margin-left:16px}
   </section>
 
   <section id="blindspot-sec">
-    <div class="sectlabel">02 / BLINDSPOTS</div>
+    <div class="sectlabel">03 / BLINDSPOTS</div>
     <h2 class="sec">What one side isn't telling you</h2>
     <p class="sub">Stories being covered by outlets on only one side of the spectrum. Not necessarily wrong — just a
     gap. If only the left is running it, the right has a blindspot here, and the other way around.</p>
@@ -172,7 +219,7 @@ footer .flinks a{margin-left:16px}
   </section>
 
   <section>
-    <div class="sectlabel">03 / FACT-CHECK WIRE</div>
+    <div class="sectlabel">04 / FACT-CHECK WIRE</div>
     <h2 class="sec">Fresh from the fact-checkers</h2>
     <p class="sub">The latest claims checked by independent, non-partisan fact-checking organizations.</p>
     <div class="fcfeed" id="fcfeed"></div>
@@ -224,7 +271,16 @@ function storyCard(s, blind){
   h += `<div class="cat">${esc(s.category)}</div>`;
   h += `<h3>${esc(s.title)}</h3>`;
   if(s.summary) h += `<div class="summ">${esc(s.summary)}</div>`;
-  h += `<div class="meta">${specBar(s.leans)}<span class="covn">${s.n_sources} source${s.n_sources>1?"s":""}</span></div>`;
+  h += `<div class="meta">${specBar(s.leans)}<span class="covn">${s.n_sources} source${s.n_sources>1?"s":""}</span>`;
+  if(s.balance && s.n_sources>=2){
+    const b=s.balance;
+    h += `<span class="covbar" aria-hidden="true">`+
+         (b.l?`<i class="l" style="flex:${b.l}"></i>`:"")+
+         (b.c?`<i class="c" style="flex:${b.c}"></i>`:"")+
+         (b.r?`<i class="r" style="flex:${b.r}"></i>`:"")+`</span>`+
+         `<span class="covtxt">${b.l} left · ${b.c} center · ${b.r} right</span>`;
+  }
+  h += `</div>`;
   h += '<div class="srcs">';
   for(const src of s.sources){
     const cls = LEANCLS[String(src.lean)];
@@ -279,13 +335,41 @@ function buildChips(){
   });
 }
 
+function renderTrending(){
+  const t = state.data.trending||[];
+  if(!t.length) return;
+  const max = t[0].n;
+  document.getElementById("trendwrap").style.display="block";
+  document.getElementById("trending").innerHTML = t.map(x=>{
+    const hot = x.n >= max*0.7 ? "hot":"";
+    const term = x.term.charAt(0).toUpperCase()+x.term.slice(1);
+    return `<span class="tchip ${hot}" data-t="${esc(x.term)}">${esc(term)}<b>${x.n}</b></span>`;
+  }).join("");
+  document.querySelectorAll("#trending .tchip").forEach(c=>c.onclick=()=>{
+    const s=document.getElementById("search"); s.value=c.dataset.t; state.q=c.dataset.t;
+    state.cat="All"; document.querySelectorAll("#catchips .chip").forEach(x=>x.classList.toggle("active",x.dataset.c==="All"));
+    render(); document.getElementById("stories").scrollIntoView({behavior:"smooth",block:"start"});
+  });
+}
+function renderBiasMap(){
+  const cols=[[-2,"Left","l2"],[-1,"Lean Left","l1"],[0,"Center","c"],[1,"Lean Right","r1"],[2,"Right","r2"]];
+  const byLean={}; state.data.sources.forEach(s=>{(byLean[s.lean]=byLean[s.lean]||[]).push(s);});
+  document.getElementById("biasmap").innerHTML = cols.map(([lv,label,cls])=>{
+    const list=(byLean[lv]||[]).sort((a,b)=>a.name.localeCompare(b.name));
+    return `<div class="bmcol ${cls}"><div class="bmh">${label}</div>`+
+      list.map(s=>`<div class="bmsrc"><span>${esc(s.name)}</span><span class="fdot ${esc(s.fact)}" title="${esc(s.fact)} factual reporting"></span></div>`).join("")+
+      `</div>`;
+  }).join("");
+}
+
 fetch("data/news.json").then(r=>{if(!r.ok)throw 0;return r.json();}).then(d=>{
   state.data=d;
   document.getElementById("genline").textContent =
     `${d.n_articles} articles · ${d.sources.length} outlets · updated ${d.generated_human}`;
   document.getElementById("srclist").innerHTML = d.sources
     .sort((a,b)=>a.lean-b.lean)
-    .map(s=>`<span class="srcpill">${esc(s.name)} · ${esc(s.label)}</span>`).join("");
+    .map(s=>`<span class="srcpill">${esc(s.name)} · ${esc(s.label)} · ${esc(s.fact)}</span>`).join("");
+  renderTrending(); renderBiasMap();
   buildChips(); render();
   document.getElementById("search").oninput = e=>{state.q=e.target.value;render();};
   document.getElementById("multionly").onchange = e=>{state.multi=e.target.checked;render();};

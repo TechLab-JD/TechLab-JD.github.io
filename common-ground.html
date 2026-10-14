@@ -133,6 +133,43 @@ details.method[open] summary::before{content:'▾ '}
 details.method .mbody{padding:0 18px 18px;color:var(--dim);font-size:13.5px;line-height:1.7}
 details.method .mbody b{color:var(--text)}
 
+/* exhausted majority */
+.emband{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;margin-top:4px}
+.segbar{display:flex;height:46px;border-radius:10px;overflow:hidden;margin:18px 0 8px;border:1px solid var(--line)}
+.seg2{display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono';font-size:10px;color:#0c1a12;font-weight:700;position:relative;min-width:0;overflow:hidden;white-space:nowrap}
+.seg2.left{background:#5a86d6}.seg2.right{background:#d66a5a}
+.seg2.mid{background:#4FC08D}.seg2.mid.alt{background:#6fd0a3}
+.seglegend{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--dim);margin-top:12px;font-family:'JetBrains Mono'}
+.seglegend .sw{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.emhero{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.emhero .pctbig{font-family:'Space Grotesk';font-weight:700;font-size:40px;color:var(--steady)}
+.emnote{color:var(--faint);font-size:12px;margin-top:10px;font-family:'JetBrains Mono'}
+
+/* enriched issue fields */
+.nums{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.numchip{background:rgba(23,32,58,.6);border:1px solid var(--line);border-radius:12px;padding:10px 14px;min-width:120px}
+.numchip .nv{font-family:'Space Grotesk';font-weight:700;font-size:20px;color:#F4F1E6}
+.numchip .nl{font-size:11.5px;color:var(--faint);margin-top:2px;line-height:1.35}
+.miscon{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
+@media(max-width:680px){.miscon{grid-template-columns:1fr}}
+.mcard{border-radius:12px;padding:14px 16px;font-size:13.5px;color:var(--dim);line-height:1.55}
+.mcard.l{background:rgba(90,134,214,.08);border:1px solid rgba(90,134,214,.3)}
+.mcard.r{background:rgba(214,106,90,.08);border:1px solid rgba(214,106,90,.3)}
+.mcard .mh{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px}
+.mcard.l .mh{color:#a9c4f5}.mcard.r .mh{color:#f0b3a9}
+.midbox{background:linear-gradient(135deg,rgba(79,192,141,.1),var(--surface));border:1px solid rgba(79,192,141,.35);border-radius:12px;padding:16px 18px;font-size:14.5px;color:var(--text);line-height:1.6}
+.bh.mid{color:var(--steady)} .bh.mis{color:#c9a0e0} .bh.num{color:#e8b86a}
+
+/* drivers + bridge */
+.cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:6px}
+.dcard{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.dcard h4{font-size:15.5px;color:#F4F1E6;margin-bottom:8px}
+.dcard p{font-size:13.5px;color:var(--dim);line-height:1.6}
+.dcard .dsrc{font-family:'JetBrains Mono';font-size:10.5px;color:var(--faint);margin-top:10px}
+.bcard{background:linear-gradient(160deg,rgba(79,192,141,.08),var(--surface));border:1px solid rgba(79,192,141,.3);border-radius:14px;padding:18px 20px}
+.bcard h4{font-size:15.5px;color:var(--steady);margin-bottom:7px}
+.bcard p{font-size:13.5px;color:var(--dim);line-height:1.6}
+
 #loaderr{display:none;background:rgba(214,106,90,.1);border:1px solid rgba(214,106,90,.4);border-radius:12px;padding:16px 18px;color:#f0c3bb;font-size:14px;margin-top:24px}
 
 footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:26px 0}
@@ -206,12 +243,46 @@ footer .flinks a{margin-left:16px}
   </section>
 
   <section>
-    <div class="sectlabel">02 / THE HARD ISSUES</div>
+    <div class="sectlabel">02 / WHO WE ACTUALLY ARE</div>
+    <h2 class="sec">The Exhausted Majority</h2>
+    <p class="sub">The loudest third of the country dominates cable news and social media. But most Americans belong
+    to a quieter middle — different on policy, yet tired of the fighting and open to compromise. Here's the real
+    breakdown of the seven &ldquo;tribes.&rdquo;</p>
+    <div class="emband">
+      <div class="emhero"><span class="pctbig" id="em-pct">—</span><span id="em-head" style="color:var(--text);font-weight:600"></span></div>
+      <p id="em-body" style="color:var(--dim);font-size:14.5px;margin-top:8px"></p>
+      <div class="segbar" id="em-bar"></div>
+      <div class="seglegend">
+        <span><span class="sw" style="background:#5a86d6"></span>Progressive wing</span>
+        <span><span class="sw" style="background:#4FC08D"></span>Exhausted Majority (4 tribes)</span>
+        <span><span class="sw" style="background:#d66a5a"></span>Conservative wing</span>
+      </div>
+      <div class="emnote" id="em-src"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sectlabel">03 / THE HARD ISSUES</div>
     <h2 class="sec">Where we agree, and what we're really fighting about</h2>
-    <p class="sub">Pick an issue. You'll see the common ground first, then the real crux, the strongest honest case on
-    each side, and a split of what's a checkable fact versus a values question no data can settle.</p>
+    <p class="sub">Pick an issue. You'll see the common ground first, the real crux, the strongest honest case on each
+    side, what each side <b>gets wrong</b> about the other, where the actual policy middle is, and a split of
+    checkable facts versus values no data can settle.</p>
     <div class="issuenav" id="issuenav"></div>
     <div id="issues"></div>
+  </section>
+
+  <section>
+    <div class="sectlabel">04 / THE MACHINERY</div>
+    <h2 class="sec" id="drv-head">Why does it feel this bad?</h2>
+    <p class="sub" id="drv-sub"></p>
+    <div class="cardgrid" id="drivers"></div>
+  </section>
+
+  <section>
+    <div class="sectlabel">05 / WHAT YOU CAN DO</div>
+    <h2 class="sec" id="brg-head">How to talk across the divide</h2>
+    <p class="sub" id="brg-sub"></p>
+    <div class="cardgrid" id="bridge"></div>
   </section>
 
   <details class="method">
@@ -325,6 +396,23 @@ function issueHTML(it,i){
   h+=`<div class="block"><div class="bh">The strongest honest case on each side</div><div class="steel">`;
   h+=`<div class="side l"><h4>${esc(it.left.head)}</h4><p>${esc(it.left.body)}</p></div>`;
   h+=`<div class="side r"><h4>${esc(it.right.head)}</h4><p>${esc(it.right.body)}</p></div></div></div>`;
+  if(it.misconceptions && it.misconceptions.length){
+    h+=`<div class="block"><div class="bh mis">What each side gets wrong about the other</div><div class="miscon">`;
+    for(const m of it.misconceptions){
+      const cls=m.side==="left"?"l":"r";
+      const lab=m.side==="left"?"The left → the right":"The right → the left";
+      h+=`<div class="mcard ${cls}"><div class="mh">${lab}</div>${esc(m.text)}</div>`;
+    }
+    h+=`</div></div>`;
+  }
+  if(it.middle){
+    h+=`<div class="block"><div class="bh mid">Where the real middle is</div><div class="midbox">${esc(it.middle)}</div></div>`;
+  }
+  if(it.numbers && it.numbers.length){
+    h+=`<div class="block"><div class="bh num">By the numbers</div><div class="nums">`+
+       it.numbers.map(n=>`<div class="numchip"><div class="nv">${esc(n.v)}</div><div class="nl">${esc(n.label)}</div></div>`).join("")+
+       `</div></div>`;
+  }
   h+=`<div class="block"><div class="fv">`;
   h+=`<div class="fvcol"><div class="bh facts">What we can check — facts</div><ul>`+
      it.facts.map(f=>`<li>${esc(f)}</li>`).join("")+`</ul></div>`;
@@ -333,6 +421,39 @@ function issueHTML(it,i){
   h+=`</div></div>`;
   h+=`</div>`;
   return h;
+}
+
+/* ---------- Exhausted Majority ---------- */
+function renderExhausted(){
+  const em=DATA.exhausted_majority; if(!em) return;
+  document.getElementById("em-pct").textContent = em.exhausted_pct+"%";
+  document.getElementById("em-head").textContent = em.headline;
+  document.getElementById("em-body").textContent = em.body;
+  document.getElementById("em-src").textContent = "Source: "+em.source;
+  const bar=document.getElementById("em-bar");
+  let alt=false;
+  bar.innerHTML = em.segments.map(s=>{
+    let cls=s.wing;
+    if(s.wing==="mid"){ cls="mid"+(alt?" alt":""); alt=!alt; }
+    const show = s.pct>=9 ? `${s.name.split(" ")[0]} ${s.pct}%` : `${s.pct}%`;
+    return `<div class="seg2 ${cls}" style="flex:${s.pct}" title="${esc(s.name)} — ${s.pct}%">${esc(show)}</div>`;
+  }).join("");
+}
+/* ---------- drivers + bridge ---------- */
+function renderDrivers(){
+  const d=DATA.drivers; if(!d) return;
+  document.getElementById("drv-head").textContent = d.headline;
+  document.getElementById("drv-sub").textContent = d.sub;
+  document.getElementById("drivers").innerHTML = d.items.map(it=>
+    `<div class="dcard"><h4>${esc(it.title)}</h4><p>${esc(it.body)}</p>`+
+    (it.src?`<div class="dsrc">${esc(it.src)}</div>`:"")+`</div>`).join("");
+}
+function renderBridge(){
+  const b=DATA.bridge; if(!b) return;
+  document.getElementById("brg-head").textContent = b.headline;
+  document.getElementById("brg-sub").textContent = b.sub;
+  document.getElementById("bridge").innerHTML = b.tips.map(t=>
+    `<div class="bcard"><h4>${esc(t.title)}</h4><p>${esc(t.body)}</p></div>`).join("");
 }
 
 /* ---------- wire ---------- */
@@ -348,7 +469,10 @@ fetch("data/common-ground.json").then(r=>{if(!r.ok)throw 0;return r.json();}).th
   document.getElementById("g-next").onclick=next;
   document.getElementById("g-again").onclick=startGame;
   startGame();
+  renderExhausted();
   renderIssues();
+  renderDrivers();
+  renderBridge();
 }).catch(()=>{document.getElementById("loaderr").style.display="block";});
 </script>
 </body>

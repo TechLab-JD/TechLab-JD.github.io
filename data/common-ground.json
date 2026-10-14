@@ -5,19 +5,62 @@
   "detail": "Democrats estimate that 53% of Republicans hold extreme positions; the actual figure is closer to 34%. Republicans are about as wrong in the other direction. The gap is widest among the most politically engaged and the heaviest news consumers.",
   "source": "More in Common, “The Perception Gap” (2019), perceptiongap.us"
  },
+ "exhausted_majority": {
+  "headline": "Two thirds of us are the Exhausted Majority.",
+  "body": "The loudest 33% — the ‘wings’ — dominate the debate, cable news and social media. But most Americans are tired of the fighting, hold a mix of views, and think we have more in common than what divides us. They are just quieter.",
+  "segments": [
+   {"name": "Progressive Activists", "pct": 8, "wing": "left"},
+   {"name": "Traditional Liberals", "pct": 11, "wing": "mid"},
+   {"name": "Passive Liberals", "pct": 15, "wing": "mid"},
+   {"name": "Politically Disengaged", "pct": 26, "wing": "mid"},
+   {"name": "Moderates", "pct": 15, "wing": "mid"},
+   {"name": "Traditional Conservatives", "pct": 19, "wing": "right"},
+   {"name": "Devoted Conservatives", "pct": 6, "wing": "right"}
+  ],
+  "exhausted_pct": 67,
+  "wings_pct": 33,
+  "source": "More in Common, “Hidden Tribes of America” (2018), hiddentribes.us"
+ },
  "perception_gap": [
   {"statement": "Most police are bad people", "polarity": "disagree", "group": "Democrats", "estimator": "Republicans", "actual": 85, "estimate": 48, "note": "Share of Democrats who DISAGREE that most police are bad people."},
   {"statement": "I am proud to be American, while acknowledging my country’s flaws", "polarity": "agree", "group": "Democrats", "estimator": "Republicans", "actual": 82, "estimate": 54, "note": "More than four in five Democrats say they are proud to be American."},
   {"statement": "The US should have completely open borders", "polarity": "disagree", "group": "Democrats", "estimator": "Republicans", "actual": 71, "estimate": 38, "note": "Share of Democrats who REJECT fully open borders."},
   {"statement": "Law-abiding citizens should have the right to bear firearms", "polarity": "agree", "group": "Democrats", "estimator": "Republicans", "actual": 68, "estimate": 44, "note": "Most Democrats affirm a right to bear arms."},
+  {"statement": "The US should abolish ICE", "polarity": "disagree", "group": "Democrats", "estimator": "Republicans", "actual": 53, "estimate": 40, "note": "Most Democrats do NOT want to abolish ICE."},
+  {"statement": "It is important that men are protected from false accusations of assault", "polarity": "agree", "group": "Democrats", "estimator": "Republicans", "actual": 74, "estimate": 45, "note": "Most Democrats agree due process matters for the accused."},
   {"statement": "Properly controlled immigration can be good for America", "polarity": "agree", "group": "Republicans", "estimator": "Democrats", "actual": 85, "estimate": 52, "note": "The vast majority of Republicans see controlled immigration as a positive."},
   {"statement": "Racism still exists in America", "polarity": "agree", "group": "Republicans", "estimator": "Democrats", "actual": 79, "estimate": 51, "note": "Nearly four in five Republicans agree racism still exists."},
   {"statement": "Many Muslims are good Americans", "polarity": "agree", "group": "Republicans", "estimator": "Democrats", "actual": 70, "estimate": 41, "note": "Most Republicans agree."},
   {"statement": "Sexism still exists in America", "polarity": "agree", "group": "Republicans", "estimator": "Democrats", "actual": 66, "estimate": 47, "note": "Two-thirds of Republicans agree sexism still exists."},
   {"statement": "The government should do more to keep guns from dangerous people", "polarity": "agree", "group": "Republicans", "estimator": "Democrats", "actual": 65, "estimate": 47, "note": "Most Republicans support keeping guns from bad actors."},
-  {"statement": "America should be a socialist country", "polarity": "disagree", "group": "Democrats", "estimator": "Republicans", "actual": 62, "estimate": 37, "note": "Share of Democrats who DISAGREE that America should be socialist."}
+  {"statement": "America should be a socialist country", "polarity": "disagree", "group": "Democrats", "estimator": "Republicans", "actual": 62, "estimate": 37, "note": "Share of Democrats who DISAGREE that America should be socialist."},
+  {"statement": "Donald Trump is a flawed person", "polarity": "agree", "group": "Republicans", "estimator": "Democrats", "actual": 48, "estimate": 47, "note": "Here Democrats guessed almost exactly right — not every perception is a gap."},
+  {"statement": "People are right to be concerned about climate change", "polarity": "agree", "group": "Republicans", "estimator": "Democrats", "actual": 46, "estimate": 44, "note": "Another accurate guess — the gap is real but not universal."}
  ],
  "gap_source": "All figures: More in Common, “The Perception Gap” (June 2019). “Actual” is the real share of that group holding the view; “estimate” is what the other party guessed.",
+ "drivers": {
+  "headline": "Why does it feel this bad?",
+  "sub": "The division is real — but a lot of it is manufactured and self-reinforcing. Five forces most researchers agree on:",
+  "items": [
+   {"title": "Affective polarization", "body": "We increasingly dislike the other side as people, not just their policies. In 1994, about 17% of each party viewed the other ‘very unfavorably.’ By 2022 it was roughly 54% of Democrats and 62% of Republicans — and most of them say the other party’s policies ‘threaten the nation’s well-being.’", "src": "Pew Research, 2022"},
+   {"title": "We think they’re evil", "body": "In 2016, about 47% of Republicans and 35% of Democrats said the other side was ‘more immoral.’ By 2022 that had jumped to 72% and 63%. Once you believe the other side is immoral rather than mistaken, compromise feels like betrayal.", "src": "Pew Research, 2022"},
+   {"title": "The perception gap feeds itself", "body": "We wildly overestimate how extreme the other side is — and the more news we consume, the worse our estimate gets. Heavy news consumers are nearly three times more distorted than people who follow politics ‘only now and then.’", "src": "More in Common, 2019"},
+   {"title": "Outrage is the business model", "body": "Attention is what media and platforms sell, and nothing holds attention like anger at an enemy. The most extreme, least representative voices get amplified because they drive engagement — so the wings look bigger than they are.", "src": "well-documented in media research"},
+   {"title": "We sorted ourselves", "body": "Over decades the parties became more ideologically, geographically and culturally uniform. More of us now live, work and scroll surrounded only by people who agree with us — so the other side becomes an abstraction that’s easy to caricature.", "src": "political-science consensus"}
+  ]
+ },
+ "bridge": {
+  "headline": "How to actually talk across the divide",
+  "sub": "None of this means the differences aren’t real — some are. But if you do want to lower the temperature, the research and practitioners (Braver Angels, negotiation scholars) point to a few moves that genuinely work:",
+  "tips": [
+   {"title": "Get curious, not furious", "body": "Ask a real question and actually listen to the answer. ‘What led you to see it that way?’ disarms far more than ‘How can you believe that?’ People soften when they feel heard, not cornered."},
+   {"title": "Find the value under the position", "body": "Behind most positions is a value you probably share — safety, fairness, freedom, caring for family. Argue with the position all you want, but acknowledge the value first. It’s almost always legitimate."},
+   {"title": "Steelman before you strike", "body": "State the other person’s view so well they say ‘yes, that’s it.’ You earn the right to disagree, you might learn something, and you stop fighting a strawman that was never really there."},
+   {"title": "Share a story, not a statistic", "body": "Stats bounce off; stories land. ‘Here’s what happened to my family’ moves people in a way a chart never will — and it invites them to share one back."},
+   {"title": "Assume good faith", "body": "Start from ‘this is a decent person who weighs things differently’ rather than ‘this person is stupid or evil.’ You’re usually right — and you’ll be a lot less exhausted."},
+   {"title": "Separate the person from the party", "body": "The caricature on cable news is not the human in front of you. Most people are more moderate, more conflicted and more reasonable in private than their ‘side’ looks in public."}
+  ]
+ },
  "issues": [
   {
    "id": "immigration",
@@ -25,17 +68,27 @@
    "temp": "High tension",
    "shared": [
     "A country has the right to decide who enters and to enforce that decision.",
-    "A functioning, predictable legal immigration system is better than a broken one.",
+    "A functioning, predictable legal immigration system beats a broken one.",
     "People fleeing real danger deserve a fair hearing.",
-    "Human trafficking and smuggling networks are a genuine evil worth stopping."
+    "Human trafficking and smuggling networks are a genuine evil worth stopping.",
+    "Immigrants who work hard and play by the rules are an asset, not a threat."
    ],
-   "crux": "The real disagreement is rarely “open borders vs. no immigrants.” It is about pace and control — how many people, how quickly, through which door — and how to weigh compassion for people already here against the rule of law and the interests of current workers.",
-   "left": {"head": "The strongest case on the left", "body": "Immigrants commit crimes at lower rates than the native-born and fill essential jobs; mass deportation of long-settled families is cruel and economically disruptive. A nation of immigrants should offer a realistic path to legal status and treat asylum seekers humanely."},
-   "right": {"head": "The strongest case on the right", "body": "Laws that are not enforced are not really laws, and a border that cannot be controlled invites chaos, exploitation and wage pressure on the most vulnerable workers. Orderly, legal immigration — chosen by the country, not by whoever crosses — is both fairer and more sustainable."},
+   "crux": "The real disagreement is rarely ‘open borders vs. no immigrants.’ It is about pace and control — how many people, how fast, through which door — and how to weigh compassion for those already here against the rule of law and the interests of current workers.",
+   "left": {"head": "The strongest case on the left", "body": "Immigrants commit crimes at lower rates than the native-born and fill essential jobs that keep the economy running. Mass deportation of long-settled families is cruel and disruptive. A nation built by immigrants should offer a realistic path to legal status and treat asylum seekers as human beings, not invaders."},
+   "right": {"head": "The strongest case on the right", "body": "Laws that aren’t enforced aren’t really laws, and a border that can’t be controlled invites chaos, cartels and downward pressure on the wages of the most vulnerable workers. Orderly, legal immigration — chosen by the country rather than by whoever manages to cross — is both fairer and more sustainable."},
+   "misconceptions": [
+    {"side": "left", "text": "Many on the left assume the right wants no immigrants. In fact ~85% of Republicans say controlled immigration is good for America."},
+    {"side": "right", "text": "Many on the right assume the left wants open borders. In fact ~71% of Democrats reject fully open borders."}
+   ],
+   "middle": "Large bipartisan majorities support BOTH stronger border security AND a legal path for immigrants who’ve lived here peacefully for years. The deal most Americans would accept — enforcement plus a path — has existed for decades; it keeps dying in Congress, not in the public.",
+   "numbers": [
+    {"v": "~11M", "label": "unauthorized immigrants in the US (Pew/DHS)"},
+    {"v": "lower", "label": "immigrant crime rate vs. native-born (Cato, academic reviews)"}
+   ],
    "facts": [
-    "The US is home to roughly 11 million unauthorized immigrants (Pew Research / DHS estimates).",
-    "Multiple studies (e.g., Cato Institute, academic reviews) find immigrants, including the unauthorized, are not more likely to commit violent crime than native-born citizens.",
-    "Large majorities in both parties support a legal path for long-settled immigrants AND stronger border security — they are not mutually exclusive (Pew)."
+    "The US is home to roughly 11 million unauthorized immigrants (Pew / DHS estimates).",
+    "Multiple studies find immigrants, including the unauthorized, are not more likely to commit violent crime than the native-born (Cato Institute, peer-reviewed reviews).",
+    "Majorities in both parties support a legal path for long-settled immigrants AND stronger border security (Pew)."
    ],
    "values": [
     "How much weight should go to the rule of law vs. mercy for those already here?",
@@ -52,13 +105,22 @@
     "Law-abiding citizens have a recognized right to defend themselves.",
     "Enforcing the laws already on the books matters."
    ],
-   "crux": "Both sides want less gun violence; they disagree on the lever. One side sees the number of guns and the ease of access as the problem; the other sees people — criminals, untreated mental illness, weak enforcement — as the problem, and worries new laws mostly burden the law-abiding.",
-   "left": {"head": "The strongest case on the left", "body": "The US has far more guns and far more gun deaths than peer nations; that is not a coincidence. Universal background checks, red-flag laws and limits on the most lethal weapons are broadly popular and could save lives without ending lawful ownership."},
-   "right": {"head": "The strongest case on the right", "body": "The right to self-defense is fundamental, and most proposed restrictions would not have stopped the atrocities used to justify them. Criminals ignore gun laws by definition; the honest answer is enforcement, mental-health care and not disarming peaceable citizens."},
+   "crux": "Both sides want less gun violence; they disagree on the lever. One side sees the sheer number of guns and the ease of access as the problem; the other sees people — criminals, untreated mental illness, weak enforcement — as the problem, and fears new laws mostly burden the law-abiding.",
+   "left": {"head": "The strongest case on the left", "body": "The US has far more guns and far more gun deaths than any peer nation; that is not a coincidence. Universal background checks, red-flag laws and limits on the most lethal weapons are broadly popular and could save lives without ending lawful ownership. Doing nothing after each massacre is its own choice."},
+   "right": {"head": "The strongest case on the right", "body": "The right to self-defense is fundamental, and most proposed restrictions wouldn’t have stopped the atrocities used to justify them. Criminals ignore gun laws by definition; the honest answers are enforcement, mental-health care and securing targets — not disarming peaceable citizens who did nothing wrong."},
+   "misconceptions": [
+    {"side": "left", "text": "The left often assumes gun owners don’t care about safety. In fact ~65% of Republicans want government to do more to keep guns from dangerous people."},
+    {"side": "right", "text": "The right often assumes Democrats want to confiscate all guns. In fact ~68% of Democrats affirm a right to bear arms."}
+   ],
+   "middle": "Universal background checks, keeping guns from domestic abusers, and red-flag laws with due process draw supermajority support across both parties. The fight is really at the edges — assault-weapon bans, magazine limits — not the broadly popular core.",
+   "numbers": [
+    {"v": "#1", "label": "US rank in civilian guns per capita (Small Arms Survey)"},
+    {"v": "~55%", "label": "of US gun deaths that are suicides, not homicides (CDC)"}
+   ],
    "facts": [
     "The US has more civilian-owned firearms per capita than any other country (Small Arms Survey).",
     "The majority of US gun deaths each year are suicides, not homicides (CDC).",
-    "Universal background checks are supported by large majorities of BOTH Republican and Democratic voters (Pew, Gallup)."
+    "Universal background checks are supported by large majorities of BOTH parties’ voters (Pew, Gallup)."
    ],
    "values": [
     "How do we weigh individual liberty against collective risk?",
@@ -76,12 +138,21 @@
     "The life of the mother and cases of rape are treated as exceptional by large majorities."
    ],
    "crux": "This is a genuine clash of first principles, not a misunderstanding: when does a developing human life acquire rights that can override a woman’s control over her own body? Where you draw that line drives almost everything else.",
-   "left": {"head": "The strongest case on the left", "body": "A woman’s control over her own body is fundamental, and the state forcing a pregnancy to term — with real medical risk — is a profound intrusion. Bans endanger women in miscarriage and complex pregnancies and fall hardest on the poor."},
-   "right": {"head": "The strongest case on the right", "body": "If a fetus is a human life, then a society that protects the vulnerable cannot treat ending it as a purely private choice. Many simply want the line drawn earlier, with real support for mothers so no woman feels abortion is her only option."},
+   "left": {"head": "The strongest case on the left", "body": "A woman’s control over her own body is fundamental, and the state forcing a pregnancy to term — with real medical risk — is a profound intrusion. Bans endanger women in miscarriage and complex pregnancies, and fall hardest on the poor who can’t travel for care."},
+   "right": {"head": "The strongest case on the right", "body": "If a fetus is a human life, a society that protects the vulnerable can’t treat ending it as a purely private choice. Many simply want the line drawn earlier than the old standard, paired with real support for mothers so that no woman feels abortion is her only option."},
+   "misconceptions": [
+    {"side": "left", "text": "The left often assumes the right wants a total ban with no exceptions. Most pro-life Americans support exceptions for rape, incest and the mother’s life."},
+    {"side": "right", "text": "The right often assumes the left wants abortion with no limits ever. Most pro-choice Americans support some limits later in pregnancy."}
+   ],
+   "middle": "Most Americans cluster in a messy middle: legal early, restricted later, with exceptions. Roughly first-trimester access with support for mothers and children is where a majority actually lands — even as the loudest voices argue the absolutes.",
+   "numbers": [
+    {"v": "~93%", "label": "of US abortions occur in the first trimester (CDC)"},
+    {"v": "middle", "label": "most Americans support legal-but-limited, not either extreme (Pew/Gallup)"}
+   ],
    "facts": [
-    "US abortion rates had been declining for decades before 2022 (Guttmacher / CDC).",
-    "A majority of Americans support legal abortion in the first trimester and oppose it later in pregnancy, with exceptions — i.e., most are in the middle (Pew, Gallup).",
-    "Most abortions occur in the first trimester (CDC)."
+    "US abortion rates declined for decades before 2022 (Guttmacher / CDC).",
+    "Most Americans support legal abortion early in pregnancy and oppose it later, with exceptions — i.e., most are in the middle (Pew, Gallup).",
+    "The large majority of abortions occur in the first trimester (CDC)."
    ],
    "values": [
     "At what point does a developing life gain rights the state should protect?",
@@ -96,14 +167,23 @@
     "Clean air and clean water are things nearly everyone wants.",
     "Energy should be reliable and affordable.",
     "Innovation and American energy independence are broadly popular goals.",
-    "Most people, including most Republicans, say they are concerned about the environment."
+    "Most people, including most Republicans, say they care about the environment."
    ],
-   "crux": "Less a fight about whether the climate is changing than about cost, speed and trust: how fast to move, who pays, how much to rely on government mandates vs. markets and innovation, and whether the proposed cures are worth their disruption to jobs and prices.",
-   "left": {"head": "The strongest case on the left", "body": "The science is settled enough to act, and the cost of delay compounds. Shifting to clean energy is also an economic opportunity; moving early beats paying for disasters later. Markets alone have not priced in the damage."},
-   "right": {"head": "The strongest case on the right", "body": "Energy policy should not wreck working-class budgets or hand advantage to rival nations that pollute freely. Innovation, nuclear and an ‘all of the above’ approach may cut emissions more durably than mandates that raise costs and invite backlash."},
+   "crux": "Less a fight about whether the climate is changing than about cost, speed and trust: how fast to move, who pays, how much to rely on mandates vs. markets and innovation, and whether the proposed cures are worth their disruption to jobs and prices.",
+   "left": {"head": "The strongest case on the left", "body": "The science is settled enough to act, and the cost of delay compounds. Shifting to clean energy is also an economic opportunity — moving early beats paying for disasters later. Markets alone have not priced in the damage, so policy has to."},
+   "right": {"head": "The strongest case on the right", "body": "Energy policy shouldn’t wreck working-class budgets or hand advantage to rival nations that pollute freely. Innovation, nuclear and an ‘all of the above’ approach may cut emissions more durably than mandates that spike costs and provoke backlash."},
+   "misconceptions": [
+    {"side": "left", "text": "The left often assumes the right denies climate change entirely. Roughly 46% of Republicans say people are right to be concerned about it, and the share is rising among the young."},
+    {"side": "right", "text": "The right often assumes the left wants to ban all fossil fuels tomorrow. Most climate voters accept a transition that keeps the lights on and prices stable."}
+   ],
+   "middle": "Clean-energy development, nuclear power, grid resilience and cutting real pollution draw broad support. The disagreement is about mandates and timelines, not whether cleaner, cheaper, more independent energy is worth pursuing.",
+   "numbers": [
+    {"v": "falling", "label": "US energy CO₂ emissions since the mid-2000s peak (EIA)"},
+    {"v": "growing", "label": "clean-energy support among younger Republicans (Pew)"}
+   ],
    "facts": [
-    "The major scientific bodies agree the climate is warming and human activity is the main driver (IPCC, NASA, NOAA).",
-    "US energy-related CO₂ emissions have fallen from their mid-2000s peak, largely via the shift from coal to natural gas and renewables (EIA).",
+    "Major scientific bodies agree the climate is warming and human activity is the main driver (IPCC, NASA, NOAA).",
+    "US energy-related CO₂ emissions have fallen from their mid-2000s peak, largely via coal-to-gas and renewables (EIA).",
     "A majority of Americans, including a growing share of younger Republicans, support developing more clean-energy sources (Pew)."
    ],
    "values": [
@@ -121,12 +201,21 @@
     "A strong economy with plentiful good jobs is the goal.",
     "Both sides worry about the cost of housing, healthcare and raising a family."
    ],
-   "crux": "Everyone wants broad prosperity; the fight is over how it is best produced and shared — whether growth and opportunity come mainly from free markets and low taxes, or whether government must actively correct inequality and provide a stronger safety net.",
+   "crux": "Everyone wants broad prosperity; the fight is over how it’s best produced and shared — whether opportunity comes mainly from free markets and low taxes, or whether government must actively correct inequality and provide a stronger safety net.",
    "left": {"head": "The strongest case on the left", "body": "When gains concentrate at the very top while wages stagnate, the deal stops working for ordinary people. Public investment, worker power and a fairer tax code can widen opportunity that the market alone leaves behind."},
-   "right": {"head": "The strongest case on the right", "body": "Growth, not redistribution, is what has lifted the most people out of poverty. Lower taxes and lighter regulation let businesses hire and invest; heavy-handed intervention tends to slow the very growth the poor depend on."},
+   "right": {"head": "The strongest case on the right", "body": "Growth, not redistribution, has lifted the most people out of poverty. Lower taxes and lighter regulation let businesses hire and invest; heavy-handed intervention tends to slow the very growth the poor depend on."},
+   "misconceptions": [
+    {"side": "left", "text": "The left often assumes the right doesn’t care about inequality. Most conservatives want a strong floor — they just trust growth over redistribution to raise it."},
+    {"side": "right", "text": "The right often assumes the left wants socialism. ~62% of Democrats reject the idea that America should be a socialist country."}
+   ],
+   "middle": "Both sides want work to pay and crony capitalism to end. There’s real overlap on cutting corporate welfare, child support for working families, and lowering the cost of housing and healthcare — even where they disagree on tax rates.",
+   "numbers": [
+    {"v": "↑ since 70s", "label": "US income inequality by most measures (Census, CBO)"},
+    {"v": "global", "label": "the 2021–23 inflation surge hit most countries (OECD)"}
+   ],
    "facts": [
     "US income inequality has risen since the 1970s by most measures (Census, CBO).",
-    "Both large tax cuts and large social programs have passed under administrations of both parties — the record is mixed, not one-sided (CBO).",
+    "Both large tax cuts and large social programs have passed under both parties — the record is mixed (CBO).",
     "Inflation erodes real wages regardless of who is in office; the 2021–23 surge was global (BLS, OECD)."
    ],
    "values": [
@@ -142,15 +231,24 @@
     "People of every background want to be safe in their neighborhoods.",
     "Good policing and community trust reinforce each other.",
     "Bad actors — whether criminals or abusive officers — should be held accountable.",
-    "Most people respect the police AND want misconduct addressed; these are not opposites."
+    "Most people respect police AND want misconduct addressed; these aren’t opposites."
    ],
    "crux": "Both sides want safe streets and fair treatment. They differ on where the greater danger lies — in crime and disorder, or in abuse of power — and therefore on whether the fix is more enforcement or more reform and accountability.",
-   "left": {"head": "The strongest case on the left", "body": "Documented patterns of abuse and unequal treatment are real and corrode trust, especially in minority communities. Accountability, training and investment in prevention make policing both fairer and more effective."},
+   "left": {"head": "The strongest case on the left", "body": "Documented patterns of abuse and unequal treatment are real and corrode trust, especially in minority communities. Accountability, better training and investment in prevention make policing both fairer and more effective."},
    "right": {"head": "The strongest case on the right", "body": "When order breaks down, the poorest neighborhoods suffer first and worst. Most officers are decent people doing a dangerous job; demonizing them drives good cops out and emboldens criminals."},
+   "misconceptions": [
+    {"side": "left", "text": "The left is often heard as ‘anti-cop.’ In fact ~85% of Democrats reject the claim that most police are bad people, and few support abolition."},
+    {"side": "right", "text": "The right often assumes reformers want no police. Most want accountability AND a strong, well-trained police presence."}
+   ],
+   "middle": "Supermajorities across parties want BOTH effective policing and real accountability — better training, body cameras, consequences for misconduct, and funding that works. ‘Abolish’ and ‘back the blue, no questions’ are both minority positions.",
+   "numbers": [
+    {"v": "both", "label": "Americans want reform AND strong policing, not abolition (Gallup)"},
+    {"v": "local", "label": "crime trends vary sharply by city/year; national narratives lag (FBI)"}
+   ],
    "facts": [
-    "Large majorities of Americans across parties say they want police reform AND a strong police presence — not abolition (Gallup, Pew).",
-    "As noted in the Perception Gap data above, about 85% of Democrats reject the claim that ‘most police are bad people.’",
-    "Crime trends vary widely by city and year; national narratives often lag the actual local data (FBI UCR / NIBRS)."
+    "Large majorities across parties want police reform AND a strong police presence — not abolition (Gallup, Pew).",
+    "About 85% of Democrats reject the claim that ‘most police are bad people’ (More in Common).",
+    "Crime trends vary widely by city and year; national narratives often lag the local data (FBI UCR / NIBRS)."
    ],
    "values": [
     "Where is the greater present danger — disorder, or abuse of authority?",
@@ -168,16 +266,249 @@
     "Concentrated power over public speech — by anyone — makes most people uneasy."
    ],
    "crux": "The disagreement is over who is the bigger threat to open discourse: platforms and governments that remove too much (‘censorship’), or the flood of misinformation and harassment that goes unchecked when they remove too little. Both sides fear being silenced — just by different hands.",
-   "left": {"head": "The strongest case on the left", "body": "Unchecked lies, harassment and incitement can drown out truth and drive vulnerable people offline. Private platforms setting standards is not government censorship, and some moderation is what makes open conversation possible at all."},
+   "left": {"head": "The strongest case on the left", "body": "Unchecked lies, harassment and incitement can drown out truth and drive vulnerable people offline. Private platforms setting standards isn’t government censorship, and some moderation is what makes open conversation possible at all."},
    "right": {"head": "The strongest case on the right", "body": "A handful of companies now shape what a whole society may say and see, and ‘misinformation’ is too easily stretched to mean ‘views we dislike.’ The cure for bad speech is more speech, not opaque rules enforced by the powerful."},
+   "misconceptions": [
+    {"side": "left", "text": "The left often hears free-speech concerns as cover for bigotry. Most are genuinely worried about who gets to decide what’s ‘allowed.’"},
+    {"side": "right", "text": "The right often calls all moderation ‘censorship.’ The First Amendment restrains government, not private companies choosing their own rules."}
+   ],
+   "middle": "Most Americans want both less harassment of real people AND less arbitrary, opaque gatekeeping — transparency about the rules, consistent enforcement, and an appeals process. The concern genuinely cuts both ways.",
+   "numbers": [
+    {"v": "both", "label": "majorities worry about BOTH misinformation and censorship (Pew)"},
+    {"v": "gov’t only", "label": "the First Amendment restrains government, not private firms"}
+   ],
    "facts": [
-    "The First Amendment restrains government, not private companies — a frequent source of confusion in these debates (constitutional text / case law).",
-    "Majorities in both parties say they worry about online misinformation AND about censorship — the concern cuts both ways (Pew).",
+    "The First Amendment restrains government, not private companies — a frequent source of confusion (constitutional text / case law).",
+    "Majorities in both parties worry about online misinformation AND about censorship — the concern cuts both ways (Pew).",
     "No major platform is purely neutral or purely censorial; moderation decisions are contested case by case."
    ],
    "values": [
     "Who do we trust less with speech — platforms and government, or the mob and the liar?",
     "Is the greater risk too much moderation or too little?"
+   ]
+  },
+  {
+   "id": "healthcare",
+   "title": "Healthcare",
+   "temp": "Medium tension",
+   "shared": [
+    "No one should go bankrupt or die because they couldn’t afford care.",
+    "Care is too expensive and the system is maddening to navigate.",
+    "Quality and choice matter; people want to keep good doctors.",
+    "Waste, fraud and middlemen that add cost without value should go."
+   ],
+   "crux": "Both sides want affordable, quality care for everyone; they disagree on the mechanism — how big a role government should play versus markets and competition — and on what trade-offs between cost, access and choice are acceptable.",
+   "left": {"head": "The strongest case on the left", "body": "Health isn’t a normal consumer good — you can’t shop around during a heart attack. Peer nations cover everyone for less by using public programs and negotiated prices; a stronger public role could cut cost and end the fear of losing coverage."},
+   "right": {"head": "The strongest case on the right", "body": "Government-run systems can mean waits, rationing and less innovation, and the US drives much of the world’s medical advancement. Competition, price transparency and choice can lower cost without handing Washington control of your care."},
+   "misconceptions": [
+    {"side": "left", "text": "The left often assumes the right wants people to go uninsured. Most conservatives want universal access — through markets and catastrophic coverage rather than a single government plan."},
+    {"side": "right", "text": "The right often assumes the left wants to ban private insurance. Most Democrats favor a public option alongside private plans, not abolishing choice."}
+   ],
+   "middle": "Price transparency, capping surprise bills, lowering drug prices, and protecting people with pre-existing conditions draw broad bipartisan support. The real fight is over single-payer vs. a mixed system — not whether people should be able to get care.",
+   "numbers": [
+    {"v": "most $", "label": "US spends more per person on healthcare than any peer nation (OECD)"},
+    {"v": "broad", "label": "bipartisan support for protecting pre-existing conditions (KFF)"}
+   ],
+   "facts": [
+    "The US spends more per capita on healthcare than any comparable country, without better overall outcomes on many measures (OECD, Commonwealth Fund).",
+    "Protecting coverage for pre-existing conditions has broad support across both parties (KFF polling).",
+    "Medical bills are a leading contributor to personal bankruptcies in the US (academic studies)."
+   ],
+   "values": [
+    "Is healthcare a right to be guaranteed, or a service best delivered by markets?",
+    "How do we trade off universal coverage against cost, choice and innovation?"
+   ]
+  },
+  {
+   "id": "education",
+   "title": "Education & Schools",
+   "temp": "Medium tension",
+   "shared": [
+    "Every child deserves a safe school and a real shot at a good education.",
+    "Good teachers are essential and generally underpaid.",
+    "Parents should have a meaningful voice in their kids’ schooling.",
+    "Kids should leave school literate, numerate and able to think."
+   ],
+   "crux": "Both sides want kids well-educated; they differ on who should steer — parents, local communities, or professional educators and standards — and on what belongs in a classroom versus a home, especially on values-laden topics.",
+   "left": {"head": "The strongest case on the left", "body": "Public schools are a shared foundation; underfunding them and draining them for vouchers deepens inequality. Teaching an honest, full account of history and giving every child support — regardless of ZIP code — is how opportunity actually spreads."},
+   "right": {"head": "The strongest case on the right", "body": "Parents, not bureaucracies, should have the final say in how their children are raised and what they’re taught. School choice lets a kid escape a failing school, and competition pushes all schools to improve, especially for poor families stuck with one option."},
+   "misconceptions": [
+    {"side": "left", "text": "The left often hears ‘parents’ rights’ as an attack on teachers. Most parents deeply respect teachers — they just want transparency and a say."},
+    {"side": "right", "text": "The right often hears ‘public schools’ as anti-choice. Most educators want kids to succeed by any route and welcome engaged parents."}
+   ],
+   "middle": "Better pay for teachers, more transparency for parents, strong basics (reading, math), and expanded options for kids trapped in failing schools find support across the aisle. The heat is over culture-war content, not the shared goal of educated kids.",
+   "numbers": [
+    {"v": "broad", "label": "bipartisan support for raising teacher pay (Pew)"},
+    {"v": "rising", "label": "support for some school choice across parties (polling varies)"}
+   ],
+   "facts": [
+    "Teacher pay has lagged comparable professions for years (EPI, BLS).",
+    "US student performance in reading and math fell after pandemic disruptions (NAEP).",
+    "Support for school choice and for well-funded public schools both exist across party lines; they aren’t strictly either-or (various polls)."
+   ],
+   "values": [
+    "Who has final authority over a child’s education — parents or professional educators?",
+    "Is the priority a strong shared public system, or maximum family choice?"
+   ]
+  },
+  {
+   "id": "race",
+   "title": "Race & Equality",
+   "temp": "High tension",
+   "shared": [
+    "Discrimination based on race is wrong.",
+    "Every person deserves equal treatment under the law.",
+    "America’s history includes grave racial injustices.",
+    "We want a country where a kid’s race doesn’t cap their future."
+   ],
+   "crux": "Both sides reject racism and want equality. They disagree on how much of today’s inequality traces to present-day discrimination versus other causes — and on the remedy: whether fairness means treating everyone identically now, or actively correcting for past and ongoing disadvantage.",
+   "left": {"head": "The strongest case on the left", "body": "The legacy of slavery, segregation and ongoing bias still shapes wealth, housing, policing and opportunity. Pretending we’re already color-blind freezes those gaps in place; naming and addressing them directly is how you actually get to equality."},
+   "right": {"head": "The strongest case on the right", "body": "The ideal is to judge people as individuals, by character and merit, not by group. Policies that sort and treat people by race — even for good ends — can entrench the very race-consciousness we’re trying to leave behind, and breed resentment."},
+   "misconceptions": [
+    {"side": "left", "text": "The left often assumes the right denies racism exists. In fact ~79% of Republicans agree racism still exists in America."},
+    {"side": "right", "text": "The right often assumes the left thinks all of them are racist. Most on the left distinguish structural problems from individual guilt."}
+   ],
+   "middle": "Equal treatment under the law, opportunity for poor kids of every race, fair policing, and condemning open bigotry are widely shared. The genuine divide is over race-conscious remedies versus strict color-blindness — a real disagreement among people who both oppose racism.",
+   "numbers": [
+    {"v": "79%", "label": "of Republicans agree racism still exists in America (More in Common)"},
+    {"v": "wide", "label": "racial wealth gaps persist by most measures (Fed/Census)"}
+   ],
+   "facts": [
+    "About 79% of Republicans agree racism still exists in America (More in Common).",
+    "Significant racial gaps in wealth and homeownership persist (Federal Reserve, Census).",
+    "Americans broadly reject overt discrimination while disagreeing sharply on race-conscious policy remedies (Pew)."
+   ],
+   "values": [
+    "Does fairness mean identical treatment now, or correcting for past and present disadvantage?",
+    "How much of today’s inequality is due to ongoing discrimination vs. other causes?"
+   ]
+  },
+  {
+   "id": "religion",
+   "title": "Religion & Public Life",
+   "temp": "Medium tension",
+   "shared": [
+    "People should be free to practice their faith — or none — without persecution.",
+    "Government shouldn’t establish an official religion.",
+    "Houses of worship do real good in communities.",
+    "No one should be forced to violate their deepest conscience lightly."
+   ],
+   "crux": "Both sides accept religious freedom and no state church; they differ on where to draw the line between the two — how much faith belongs in public life and law, and how to handle clashes between religious conviction and anti-discrimination or equal-treatment claims.",
+   "left": {"head": "The strongest case on the left", "body": "A pluralist society protects everyone precisely by keeping government neutral between faiths and non-faith. ‘Religious liberty’ shouldn’t become a license to deny others equal treatment under public law."},
+   "right": {"head": "The strongest case on the right", "body": "Faith has shaped the nation’s values and still anchors millions of lives; pushing it entirely out of public life isn’t neutrality, it’s hostility. People shouldn’t be forced by the state to act against sincere, long-held religious conscience."},
+   "misconceptions": [
+    {"side": "left", "text": "The left is often heard as anti-religion. Most simply want government neutral, not faith erased."},
+    {"side": "right", "text": "The right is often heard as wanting a theocracy. Most just want to live out their faith without government forcing them to violate it."}
+   ],
+   "middle": "Freedom to worship, freedom from a state church, and space for faith groups to serve their communities are broadly shared. The hard cases are narrow collisions between conscience and equal-treatment law — real, but far smaller than the culture war suggests.",
+   "numbers": [
+    {"v": "1st Am.", "label": "guarantees both free exercise AND no establishment"},
+    {"v": "declining", "label": "US religious affiliation, but still a majority (Pew)"}
+   ],
+   "facts": [
+    "The First Amendment protects both the free exercise of religion and prohibits an established state church.",
+    "US religious affiliation has declined over recent decades but a majority still identify with a faith (Pew).",
+    "Most church-state disputes turn on narrow conflicts between conscience and equal-treatment law, not broad bans."
+   ],
+   "values": [
+    "How much should faith shape public law in a pluralist society?",
+    "When conscience and anti-discrimination claims collide, which gives way?"
+   ]
+  },
+  {
+   "id": "gender",
+   "title": "Gender Identity",
+   "temp": "High tension",
+   "shared": [
+    "Transgender people, like everyone, deserve dignity and safety from violence.",
+    "Parents and doctors — not strangers online — should guide a child’s care.",
+    "Fairness in sports and in medicine both genuinely matter.",
+    "This is a small population at the center of an outsized fight."
+   ],
+   "crux": "Both sides generally agree trans people deserve respect; the hard disagreements are specific — medical care for minors, sports eligibility, and when self-identification should govern access to sex-specific spaces — where sincere concerns about safety, fairness and autonomy genuinely collide.",
+   "left": {"head": "The strongest case on the left", "body": "Trans people face high rates of harassment, discrimination and suicide; affirming their identity and access to care saves lives. These are intimate medical and personal decisions that belong to individuals, families and doctors — not to politicians."},
+   "right": {"head": "The strongest case on the right", "body": "Irreversible medical steps for minors deserve caution while the evidence is still debated, and fairness for women and girls in sports and private spaces is a legitimate concern — not bigotry. Compassion for trans people and these worries can coexist."},
+   "misconceptions": [
+    {"side": "left", "text": "The left often hears any caution as hatred. Many who raise sports or minors-care questions still want trans people treated with respect."},
+    {"side": "right", "text": "The right often hears affirmation as ideology forced on kids. Most on the left simply want trans people safe and cared for by their own families and doctors."}
+   ],
+   "middle": "Protecting trans people from violence and discrimination, while treating medical decisions as the realm of families and doctors, is broadly acceptable. The genuine disagreements are narrow — minors’ care, elite sports, specific spaces — and deserve more humility than either wing offers.",
+   "numbers": [
+    {"v": "~1%", "label": "of US adults identify as transgender (Williams Institute)"},
+    {"v": "high", "label": "rates of harassment and mental-health risk reported by trans people"}
+   ],
+   "facts": [
+    "Roughly 1% of US adults identify as transgender; the share is somewhat higher among teens (Williams Institute, Pew).",
+    "Medical bodies and countries differ on protocols for minors; the evidence and guidelines are actively evolving and contested.",
+    "Trans people report high rates of harassment and mental-health challenges (survey data)."
+   ],
+   "values": [
+    "When do individual autonomy, child welfare, and competing fairness claims take priority?",
+    "How much caution is warranted where long-term evidence is still emerging?"
+   ]
+  },
+  {
+   "id": "foreign",
+   "title": "Foreign Policy & War",
+   "temp": "Medium tension",
+   "shared": [
+    "America’s own security and people come first.",
+    "Endless, aimless wars have real human and financial costs.",
+    "Genuine allies and genuine threats both exist.",
+    "Our troops’ lives should never be spent carelessly."
+   ],
+   "crux": "Both sides want the country safe and prosperous; they disagree on how engaged America should be abroad — when to lead, fund allies or intervene, versus when to pull back and focus at home — and how to weigh values and alliances against cost and risk.",
+   "left": {"head": "The strongest case for engagement", "body": "A world where democracies abandon each other is a world where aggressors win and threats eventually reach us. Alliances, aid and deterrence are often cheaper than the wars that follow retreat, and standing for freedom abroad reflects who we say we are."},
+   "right": {"head": "The strongest case for restraint", "body": "America has poured blood and trillions into conflicts with little to show for it. Charity and strength begin at home; we should defend clear national interests and strong borders, not police the globe or write blank checks to distant causes."},
+   "misconceptions": [
+    {"side": "left", "text": "Engagement isn’t the same as endless war — most internationalists also want wars ended wisely."},
+    {"side": "right", "text": "Restraint isn’t isolationism or siding with aggressors — most restrainers still want a strong, well-defended America."}
+   ],
+   "middle": "A strong defense, clear national interests, careful allies and skepticism of open-ended wars command broad support. The real debate is about degree and case-by-case judgment, not a binary of ‘world cop’ vs. ‘fortress America.’",
+   "numbers": [
+    {"v": "war-weary", "label": "majorities across parties are skeptical of open-ended wars (Pew)"},
+    {"v": "case-by-case", "label": "support for specific interventions varies widely by conflict"}
+   ],
+   "facts": [
+    "Majorities across parties express fatigue with prolonged, open-ended military involvement (Pew).",
+    "Public support for intervention varies dramatically by the specific conflict and framing.",
+    "Defense is among the largest federal expenditures; its size is debated across both parties (CBO/OMB)."
+   ],
+   "values": [
+    "How much should America lead or intervene abroad versus focus at home?",
+    "How do we weigh moral commitments and alliances against cost and risk?"
+   ]
+  },
+  {
+   "id": "housing",
+   "title": "Housing & Cost of Living",
+   "temp": "Low tension",
+   "shared": [
+    "Housing has become brutally unaffordable for many working people.",
+    "Hard-working families should be able to afford a decent place to live.",
+    "Homelessness on this scale is a problem everyone wants solved.",
+    "Local communities should have a real say in how they grow."
+   ],
+   "crux": "There’s unusual agreement that housing costs too much; the disagreement is about cause and cure — whether the core problem is too little building (supply and zoning) or too little protection and support (tenants, subsidies, speculation) — and how much to rely on markets versus government.",
+   "left": {"head": "The strongest case on the left", "body": "Housing is a necessity, not just an investment. Rent is crushing families faster than wages rise; tenant protections, public and subsidized housing, and curbs on speculation keep roofs over people’s heads while supply catches up."},
+   "right": {"head": "The strongest case on the right", "body": "Prices are high mainly because we’ve made it too hard and slow to build. Cut the red tape and restrictive zoning, let the market add homes, and supply will bring prices down — rent control and mandates tend to shrink the housing that exists."},
+   "misconceptions": [
+    {"side": "left", "text": "Deregulating zoning isn’t just a giveaway to developers — it’s how you get enough homes to lower rents."},
+    {"side": "right", "text": "Wanting tenant protections isn’t anti-market — it’s trying to keep families housed while supply grows."}
+   ],
+   "middle": "A rare bipartisan bright spot: cutting restrictive zoning to build more homes (the ‘YES in my backyard’ idea) has support on both left and right. Build more, speed up permitting, and help those priced out — there’s real room to agree here.",
+   "numbers": [
+    {"v": "shortage", "label": "the US is millions of housing units short of demand (industry estimates)"},
+    {"v": "bipartisan", "label": "zoning reform to build more has cross-party support"}
+   ],
+   "facts": [
+    "The US has a shortage of millions of housing units relative to demand (Freddie Mac, housing researchers).",
+    "Most economists find that increasing housing supply lowers or restrains prices over time.",
+    "Zoning reform to allow more building has drawn support from both progressive and conservative policymakers."
+   ],
+   "values": [
+    "Is the core fix more building (supply) or more protection and support (demand-side)?",
+    "How do we balance local control against the regional need for more homes?"
    ]
   }
  ]
