@@ -7867,6 +7867,23 @@ window.LAB404_CONTENT = {
     "h": "Maintaining and storing tools",
     "body": "Tools last for decades if cared for. Keep them clean and dry (moisture causes rust — wipe metal tools after use, and store them somewhere dry). Keep cutting tools sharp. Keep track of your tools by storing them organized in a toolbox or on a wall, so you can find what you need and notice if something's missing or damaged.\n\nA little organization saves a lot of frustration: group by type, keep fasteners sorted in small containers, and return tools to their place after use. Charge cordless tool batteries and store them properly. Good tools treated well are a one-time investment that serves you for life, so it's worth the small habit of cleaning, sharpening, and putting them away. A cared-for toolkit is always ready when you need it.",
     "tip": "Keep tools clean, dry (prevent rust), sharp, and organized. Return them to their place. Well-cared-for tools last a lifetime."
+   },
+   {
+    "h": "Measuring and marking accurately",
+    "body": "'Measure twice, cut once' is the oldest rule in repair for a reason — a mistake in measuring wastes materials and time. Use a tape measure correctly: hook the end on an edge and read at eye level to avoid parallax error. Mark cut lines with a pencil and use a square to draw lines that are truly straight and at a right angle.\n\nAccurate measuring and marking is the unglamorous skill behind every clean, well-fitting repair.",
+    "example": "Measure twice, cut once.\nUse a square for true right-angle lines.",
+    "tip": "Measure twice, cut once. Hook the tape, read at eye level, and mark with a pencil and square for straight, accurate lines."
+   },
+   {
+    "h": "Power tools basics and safety",
+    "body": "A cordless drill/driver is the most useful power tool — it drills holes and drives screws, saving huge effort over hand tools. When you add power, you add risk, so safety matters: wear eye protection, keep hands clear of the bit or blade, secure your workpiece so it can't move, and unplug or remove the battery when changing bits.\n\nLet the tool do the work rather than forcing it, and read the manual for any tool you're new to.",
+    "example": "Eye protection + secured workpiece + hands clear + battery out when changing bits.",
+    "tip": "A drill/driver is the most useful power tool. Wear eye protection, secure the workpiece, keep hands clear, and remove the battery when changing bits."
+   },
+   {
+    "h": "Choosing quality tools on a budget",
+    "body": "You don't need a huge expensive collection — you need a few good tools for the jobs you actually do. Buy quality for the tools you'll use often (a good drill, a solid tape measure, a comfortable hammer) where cheap versions fail or frustrate, and save on rarely-used specialty tools.\n\nBuying used, watching for sales, and borrowing or renting a tool you'll use once are smart ways to build a kit affordably. A few reliable tools beat a drawer of broken bargains.",
+    "tip": "Buy quality for tools you use often (drill, tape, hammer) and save on rarely-used ones. Used, sales, and renting build a solid kit affordably."
    }
   ],
   "cards": [
@@ -8106,6 +8123,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Skill plus the right basic tool beats a big collection."
+   },
+   {
+    "q": "The oldest rule of accurate cutting is:",
+    "options": [
+     "measure twice, cut once",
+     "cut first, measure later",
+     "never measure",
+     "guess the length"
+    ],
+    "a": 0,
+    "why": "Measuring carefully avoids wasted material."
+   },
+   {
+    "q": "To read a tape measure accurately you should:",
+    "options": [
+     "read at eye level to avoid parallax",
+     "read from an angle",
+     "never hook the end",
+     "estimate"
+    ],
+    "a": 0,
+    "why": "Reading straight-on prevents parallax error."
+   },
+   {
+    "q": "The most generally useful power tool is a:",
+    "options": [
+     "cordless drill/driver",
+     "chainsaw",
+     "jackhammer",
+     "welder"
+    ],
+    "a": 0,
+    "why": "It drills and drives screws for most jobs."
+   },
+   {
+    "q": "When changing a drill bit you should:",
+    "options": [
+     "remove the battery first",
+     "leave it running",
+     "force the chuck",
+     "skip eye protection"
+    ],
+    "a": 0,
+    "why": "Disconnecting power prevents accidental starts."
+   },
+   {
+    "q": "A smart budget approach to tools is to:",
+    "options": [
+     "buy quality for frequently used tools",
+     "buy the cheapest of everything",
+     "buy every specialty tool",
+     "never buy tools"
+    ],
+    "a": 0,
+    "why": "Spend where it counts, save on rare-use items."
    }
   ]
  },
@@ -8148,6 +8220,23 @@ window.LAB404_CONTENT = {
     "h": "Exercising rights responsibly",
     "body": "Knowing your rights is most useful when paired with good judgment. Assert your rights calmly and clearly when needed (e.g., stating you wish to remain silent or want a lawyer), but do so respectfully — being confrontational rarely helps and can escalate a situation. Rights are a shield, not a weapon to provoke with.\n\nAlso know that exercising a right the wrong way, or not understanding the specifics, can backfire — which is why, in any serious legal matter, getting a lawyer is wise (many areas have free legal aid for those who can't afford it). And remember rights come with responsibilities: the same rights you have, others have too, and a free society depends on respecting each other's. Learn the basics here to protect yourself and participate as a citizen, and seek professional legal help for anything serious. Knowledge of your rights is quiet power.",
     "tip": "Assert rights calmly and clearly, not confrontationally. For anything serious, get a lawyer (free legal aid exists). Rights come with responsibilities to respect others'."
+   },
+   {
+    "h": "The right to remain silent and to a lawyer",
+    "body": "In the United States, you have the right not to answer questions that could incriminate you (the Fifth Amendment), and the right to a lawyer if you are arrested. You can state clearly, 'I am going to remain silent, and I want a lawyer,' and then stop talking. Anything you say can be used against you, so silence is often the safest choice.\n\nIf you cannot afford a lawyer, one must be provided for criminal charges. Stay calm and polite; exercising a right is not an admission of guilt.",
+    "example": "Say: 'I am going to remain silent. I want a lawyer.' Then stop.",
+    "tip": "You have the right to remain silent and to a lawyer. State both clearly and stop talking — exercising a right is not an admission of guilt. This is general information, not legal advice."
+   },
+   {
+    "h": "Search and seizure basics",
+    "body": "The Fourth Amendment protects against unreasonable searches. Generally, police need a warrant or your consent to search your home, and you can decline to consent by saying, 'I do not consent to a search.' There are exceptions (plain view, certain vehicle and safety situations), so declining doesn't always stop a search — but it preserves your rights and later legal options.\n\nDon't physically resist; state your objection clearly and calmly, and let the courts sort out whether a search was lawful.",
+    "example": "Say: 'I do not consent to a search.' Do not physically resist.",
+    "tip": "Police generally need a warrant or consent to search. You may say 'I do not consent to a search' — but never physically resist; let the courts decide. General information, not legal advice."
+   },
+   {
+    "h": "If your rights are violated",
+    "body": "If you believe your rights were violated, the time to fight it is later, through the legal system — not by arguing or resisting on the spot, which can escalate and add charges. In the moment, stay calm, comply with lawful orders, and remember details: officers' names and badge numbers, what was said, times, and any witnesses.\n\nAfterward, write everything down while it's fresh, keep any documents, and consult a lawyer or a legal-aid organization. Documentation is what makes a later complaint or case possible.",
+    "tip": "Fight a rights violation later through the legal system, not on the spot. Stay calm, note details (names, badge numbers, witnesses), write it down after, and see a lawyer. General information, not legal advice."
    }
   ],
   "cards": [
@@ -8387,6 +8476,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "The place to challenge it is in court."
+   },
+   {
+    "q": "The right to remain silent comes from the:",
+    "options": [
+     "Fifth Amendment",
+     "First Amendment",
+     "lease",
+     "tax code"
+    ],
+    "a": 0,
+    "why": "It protects against self-incrimination."
+   },
+   {
+    "q": "A clear way to exercise your rights is to say:",
+    "options": [
+     "'I want a lawyer and will remain silent'",
+     "nothing and keep talking",
+     "'arrest me'",
+     "'I waive my rights'"
+    ],
+    "a": 0,
+    "why": "Stating it clearly then stopping is safest."
+   },
+   {
+    "q": "To search your home, police generally need:",
+    "options": [
+     "a warrant or your consent",
+     "nothing at all",
+     "only a phone call",
+     "your neighbor's approval"
+    ],
+    "a": 0,
+    "why": "The Fourth Amendment requires one or the other, with limited exceptions."
+   },
+   {
+    "q": "If asked to consent to a search, you may:",
+    "options": [
+     "decline by saying you don't consent",
+     "must always say yes",
+     "physically block them",
+     "run away"
+    ],
+    "a": 0,
+    "why": "You can decline, but never physically resist."
+   },
+   {
+    "q": "If you believe your rights were violated, you should:",
+    "options": [
+     "stay calm, note details, and fight it later legally",
+     "resist on the spot",
+     "argue aggressively",
+     "do nothing ever"
+    ],
+    "a": 0,
+    "why": "The legal system, not the scene, is where to contest it."
    }
   ]
  },
@@ -8430,6 +8574,24 @@ window.LAB404_CONTENT = {
     "h": "Developing a writing practice",
     "body": "Becoming a better writer comes down to two things: writing a lot and reading a lot. Write regularly (even a little daily builds the habit and skill), and finish things — completing a rough draft teaches more than endlessly polishing a first page. Expect your early drafts to be bad; 'all first drafts are terrible' is a professional truth, and the real craft is in revision. Write badly first, then fix it.\n\nRead widely and actively, noticing how writers you admire create effects (how they build a character, pace a scene, write dialogue). Get feedback from readers and be open to it. And be patient: writing is a craft you develop over years, with steady improvement for anyone who keeps at it. Don't wait for inspiration or the perfect idea — start writing, finish drafts, revise, and keep going. Persistence and practice, more than talent, make writers.",
     "tip": "Write a lot (finish drafts — they're meant to be rough), read actively, seek feedback, and revise. Persistence beats waiting for inspiration or talent."
+   },
+   {
+    "h": "Building believable characters",
+    "body": "Readers follow characters, not plots, so a believable character is the heart of fiction. Give each a clear want (what they're chasing) and a need (what they truly require, often different), plus flaws and contradictions that make them human. Flat, perfect characters are forgettable; a hero with a weakness and a villain with a reason feel real.\n\nReveal character through choices and actions under pressure, not just description. What someone does when it's hard tells the reader who they are.",
+    "example": "A character's WANT drives the plot; their flaws make them human.\nReveal them through choices under pressure.",
+    "tip": "Believable characters have a clear want, a deeper need, and human flaws. Reveal them through choices under pressure, not just description."
+   },
+   {
+    "h": "Setting and world-building",
+    "body": "Setting is more than backdrop — it shapes mood, limits what characters can do, and can feel like a character itself. Strong settings are built from specific, sensory details (the smell of a place, a particular sound) rather than generic description. You don't need to describe everything; a few telling details let the reader fill in the rest.\n\nIn fantasy or sci-fi, world-building means consistent rules — how magic or technology works — so the reader can trust the world and feel real stakes.",
+    "example": "Specific sensory details beat generic description.\nWorld-building needs consistent rules.",
+    "tip": "Setting shapes mood and stakes. Build it from a few specific sensory details, not exhaustive description. Invented worlds need consistent rules to feel real."
+   },
+   {
+    "h": "Revising your first draft",
+    "body": "First drafts are supposed to be rough — the saying goes that writing is rewriting. The first draft gets the story down; revision makes it good. Revise in layers: big-picture first (does the plot hold together, do characters grow?), then scene and paragraph level, and only last the line-by-line polish of words and grammar.\n\nReading your work aloud catches clunky sentences the eye skims over. Cutting what doesn't serve the story — even good lines — often improves it most.",
+    "example": "Revise big first (plot, character), then scenes, then word-level polish.\nRead aloud; cut what doesn't serve the story.",
+    "tip": "First drafts are meant to be rough. Revise in layers — plot and character first, word-level polish last. Read aloud, and cut what doesn't serve the story."
    }
   ],
   "cards": [
@@ -8669,6 +8831,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Scenes keep a story dramatic and engaging."
+   },
+   {
+    "q": "The heart of most fiction is:",
+    "options": [
+     "believable characters",
+     "fancy vocabulary",
+     "long descriptions",
+     "perfect grammar"
+    ],
+    "a": 0,
+    "why": "Readers follow characters, not plots alone."
+   },
+   {
+    "q": "Characters feel human when they have:",
+    "options": [
+     "flaws and contradictions",
+     "no weaknesses",
+     "no wants",
+     "only perfection"
+    ],
+    "a": 0,
+    "why": "Flaws and a clear want make them real."
+   },
+   {
+    "q": "Strong setting is built from:",
+    "options": [
+     "specific sensory details",
+     "generic description",
+     "no details",
+     "only dialogue"
+    ],
+    "a": 0,
+    "why": "A few telling details beat exhaustive description."
+   },
+   {
+    "q": "Invented worlds feel real when they have:",
+    "options": [
+     "consistent rules",
+     "no rules",
+     "random magic",
+     "no stakes"
+    ],
+    "a": 0,
+    "why": "Consistency lets readers trust the world."
+   },
+   {
+    "q": "The best order for revision is:",
+    "options": [
+     "big-picture first, word-level last",
+     "grammar first",
+     "random",
+     "never revise"
+    ],
+    "a": 0,
+    "why": "Fix plot and character before polishing words."
    }
   ]
  },
@@ -8711,6 +8928,23 @@ window.LAB404_CONTENT = {
     "h": "Common problems",
     "body": "When things go wrong, most problems have recognizable causes. Yellowing leaves often mean over-watering (or a nutrient issue); wilting can mean too little water (or, confusingly, too much — check the soil). Leggy, weak plants usually need more light. Holes in leaves or chewed plants point to pests (insects, slugs) — many can be managed by hand-picking, barriers, or gentle remedies before reaching for chemicals. Poor growth overall often traces to wrong sun, poor soil, or crowding.\n\nThe gardener's best tool is observation: catch problems early by looking at your plants regularly, and most are fixable. Don't be discouraged by failures — every gardener kills plants, and each one teaches you something. Keep notes on what worked and what didn't. Gardening is a skill that improves every season with experience, patience, and paying attention. Start small, learn from each try, and you'll be growing food and flowers successfully before long.",
     "tip": "Diagnose by observing: yellow = often over-watering; wilting = check soil (could be either); leggy = more light; holes = pests. Catch problems early — most are fixable."
+   },
+   {
+    "h": "Understanding your soil",
+    "body": "Healthy soil is the foundation of a healthy garden — plants are only as good as what they grow in. Good garden soil holds moisture yet drains well and is rich in organic matter. You can gauge your soil by feel: sandy soil is gritty and drains fast, clay soil is sticky and holds water (sometimes too much), and loam — the ideal — is a balanced crumbly mix.\n\nAdding compost improves almost any soil, loosening clay and helping sand hold nutrients and water. Feed the soil, and the soil feeds the plants.",
+    "example": "Sandy: gritty, drains fast.  Clay: sticky, holds water.  Loam: ideal, crumbly.\nCompost improves them all.",
+    "tip": "Soil is the foundation. Sandy drains fast, clay holds water, loam is ideal. Adding compost improves any soil — feed the soil and it feeds the plants."
+   },
+   {
+    "h": "Watering wisely",
+    "body": "More gardens are harmed by bad watering than by too little rain. The key is to water deeply but less often, which encourages roots to grow down and makes plants more drought-resistant; frequent shallow watering keeps roots near the surface where they dry out. Water the soil at the base, not the leaves, to reduce disease, and water in the morning so foliage dries during the day.\n\nCheck the soil before watering — stick a finger in; if it's moist a couple inches down, wait. Overwatering drowns roots as surely as drought starves them.",
+    "example": "Deep and less often > shallow and daily.\nWater the base in the morning; check soil before watering.",
+    "tip": "Water deeply but less often to grow deep roots; water the base in the morning. Check the soil first — overwatering harms plants as much as drought."
+   },
+   {
+    "h": "Planning your garden layout",
+    "body": "A little planning makes a garden far more productive. Put taller plants (corn, tomatoes) where they won't shade shorter ones, group plants with similar water and sun needs together, and leave enough space between plants for air and growth — crowding invites disease and competition.\n\nConsider access, too: paths so you can reach everything, and placing herbs and frequent harvests near the kitchen. Sketching the beds before planting, noting sun and spacing, prevents the common mistake of a cramped, hard-to-tend garden.",
+    "tip": "Plan the layout: keep tall plants from shading short ones, group similar needs, and give proper spacing. Sketch beds first to avoid a cramped garden."
    }
   ],
   "cards": [
@@ -8950,6 +9184,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Most problems are fixable if caught early."
+   },
+   {
+    "q": "The ideal garden soil type is:",
+    "options": [
+     "loam",
+     "pure sand",
+     "pure clay",
+     "gravel"
+    ],
+    "a": 0,
+    "why": "Loam is a balanced, crumbly mix."
+   },
+   {
+    "q": "Adding compost to soil:",
+    "options": [
+     "improves almost any soil",
+     "only helps clay",
+     "harms plants",
+     "does nothing"
+    ],
+    "a": 0,
+    "why": "It loosens clay and helps sand hold water and nutrients."
+   },
+   {
+    "q": "Watering deeply but less often encourages:",
+    "options": [
+     "deep, drought-resistant roots",
+     "shallow roots",
+     "root rot",
+     "no growth"
+    ],
+    "a": 0,
+    "why": "Deep roots make plants more drought-tolerant."
+   },
+   {
+    "q": "You should water plants at:",
+    "options": [
+     "the base, in the morning",
+     "the leaves, at night",
+     "midday on foliage",
+     "never the roots"
+    ],
+    "a": 0,
+    "why": "Base watering in the morning reduces disease."
+   },
+   {
+    "q": "When planning a layout, tall plants should go where they:",
+    "options": [
+     "won't shade shorter ones",
+     "block all sun",
+     "crowd everything",
+     "hide the path"
+    ],
+    "a": 0,
+    "why": "Proper placement prevents shading and crowding."
    }
   ]
  },
@@ -30663,6 +30952,23 @@ window.LAB404_CONTENT = {
     "h": "Safety and knowing your home",
     "body": "Before any repair, safety comes first, and knowing a few things about your home is essential — even if you never do a repair yourself. Know where your main water shutoff is (to stop a flood from a burst pipe or overflowing fixture), your electrical panel / breaker box (to cut power to a circuit before electrical work, or in an emergency), and your gas shutoff if you have gas.\n\nFor any repair: turn off the relevant utility first (water for plumbing, power at the breaker for electrical), work carefully, and if something seems beyond you or unsafe, stop and get help. Keep a basic first-aid kit and the number of a trusted plumber/electrician handy. Knowing your shutoffs and your limits turns home ownership from stressful to manageable — you can handle the small stuff and respond calmly to the big stuff.",
     "tip": "Know your main WATER shutoff, breaker box, and gas shutoff. Turn off the utility before a repair. Knowing your shutoffs prevents disasters."
+   },
+   {
+    "h": "Patching walls and painting",
+    "body": "Small holes and dents in drywall are among the most common and easiest home repairs. Fill a nail hole or small dent with spackle, let it dry, sand it smooth, then prime and paint. Larger holes need a patch (mesh or a drywall piece) before filling.\n\nFor painting, preparation is 90 percent of a good result: clean the surface, patch and sand, use painter's tape on edges, and prime bare spots. Two thin coats look far better than one thick, drippy one.",
+    "example": "Nail hole: spackle -> sand -> prime -> paint.\nPainting: prep well, two thin coats beat one thick.",
+    "tip": "Fill small wall holes with spackle, sand, prime, and paint. For painting, preparation matters most, and two thin coats beat one thick coat."
+   },
+   {
+    "h": "Squeaks, sticking doors, and drafts",
+    "body": "Everyday annoyances have easy fixes. A squeaky hinge or floorboard usually just needs lubrication (a bit of oil on a hinge) or a screw tightened. A door that sticks is often from loose hinge screws or swelling — tightening screws or lightly sanding the binding edge fixes most.\n\nDrafts around doors and windows waste energy; weatherstripping and door sweeps are cheap and cut heating and cooling costs. These small repairs improve comfort immediately and build your confidence for bigger ones.",
+    "example": "Squeaky hinge: a drop of oil.\nSticking door: tighten hinge screws or sand the edge.\nDraft: weatherstrip.",
+    "tip": "Squeaks need lubrication or a tightened screw; sticking doors need tighter hinges or light sanding; drafts need weatherstripping. Easy, high-value fixes."
+   },
+   {
+    "h": "A home-maintenance schedule",
+    "body": "Most expensive home problems start small and are prevented by routine upkeep. A simple seasonal checklist keeps a home healthy: change HVAC filters regularly, test smoke and carbon-monoxide detectors, clean gutters, check for leaks under sinks, and service the water heater and furnace.\n\nPreventive maintenance is far cheaper than emergency repairs — a $15 filter protects an expensive furnace; cleared gutters prevent water damage. Spending a little time regularly saves a lot of money and stress later.",
+    "tip": "Routine upkeep prevents expensive problems: change HVAC filters, test detectors, clean gutters, check for leaks. Prevention is far cheaper than emergency repair."
    }
   ],
   "cards": [
@@ -30902,6 +31208,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "DIY the simple stuff; hire pros for the dangerous stuff."
+   },
+   {
+    "q": "A small nail hole in drywall is best fixed by:",
+    "options": [
+     "filling with spackle, then sanding and painting",
+     "ignoring it",
+     "making it bigger",
+     "taping cardboard over it"
+    ],
+    "a": 0,
+    "why": "Spackle, sand, prime, and paint gives a clean fix."
+   },
+   {
+    "q": "For a good paint job, the most important part is:",
+    "options": [
+     "preparation",
+     "using one thick coat",
+     "skipping primer",
+     "painting fast"
+    ],
+    "a": 0,
+    "why": "Clean, patch, tape, and prime before painting."
+   },
+   {
+    "q": "A squeaky door hinge usually needs:",
+    "options": [
+     "a little lubrication",
+     "full replacement",
+     "a new door",
+     "painting"
+    ],
+    "a": 0,
+    "why": "A drop of oil quiets most hinges."
+   },
+   {
+    "q": "Drafts around doors and windows are cheaply fixed with:",
+    "options": [
+     "weatherstripping",
+     "a new wall",
+     "more heating",
+     "nothing"
+    ],
+    "a": 0,
+    "why": "Weatherstripping and sweeps cut energy loss."
+   },
+   {
+    "q": "Preventive home maintenance is:",
+    "options": [
+     "far cheaper than emergency repairs",
+     "a waste of time",
+     "more expensive than repairs",
+     "only for experts"
+    ],
+    "a": 0,
+    "why": "Small routine upkeep avoids big failures."
    }
   ]
  },
@@ -30944,6 +31305,24 @@ window.LAB404_CONTENT = {
     "h": "When to call a plumber",
     "body": "Plenty of plumbing is DIY-friendly, but some situations need a professional. Call a plumber for: major leaks or burst pipes you can't control (after shutting off the water), anything involving the main sewer line or a backed-up whole house, water heater repairs or replacement, re-piping, low water pressure throughout the house, and anything behind walls or that requires soldering/permits. And never DIY gas lines — gas work is for licensed pros only, and any gas smell means leave and call immediately.\n\nThe theme, as with all home repair: do the simple, low-risk fixes (clogs, running toilets, worn washers), but call a pro for anything that could cause major water damage, involves the main systems, or you're not confident about. Shutting off the water buys you time to call. Knowing both the easy fixes and your limits makes plumbing far less intimidating.",
     "tip": "Call a plumber for burst pipes, sewer/main-line issues, water heaters, and anything behind walls. NEVER DIY gas. Shut off water first, then call."
+   },
+   {
+    "h": "Stopping a leak quickly",
+    "body": "When water is leaking, speed limits the damage. First, shut off the water: most fixtures have a local shutoff valve (under a sink, behind a toilet), and the whole house has a main shutoff you should know the location of before an emergency. Turning that valve stops the flow while you fix or call for help.\n\nFor a small drip you can often tighten a connection or replace a worn washer; for a burst pipe or major leak, shut the main and call a plumber. Knowing where the main valve is can save a home.",
+    "example": "Local valve under the fixture; main valve for the whole house.\nKnow the main's location BEFORE an emergency.",
+    "tip": "Stop a leak by shutting off water — a local valve at the fixture or the main for the whole house. Know where the main shutoff is before you need it."
+   },
+   {
+    "h": "Preventing clogs and frozen pipes",
+    "body": "Prevention beats repair in plumbing. To avoid clogs, keep grease, coffee grounds, and fibrous scraps out of drains, use strainers to catch hair and food, and never flush anything but toilet paper. In cold climates, pipes can freeze and burst — a very expensive failure.\n\nProtect them by insulating exposed pipes, letting a faucet drip in a hard freeze, and keeping the heat on. A little prevention avoids both the mess of a clog and the disaster of a burst pipe.",
+    "example": "No grease/grounds down drains; strainers for hair.\nHard freeze: insulate pipes, let a faucet drip.",
+    "tip": "Prevent clogs by keeping grease and scraps out and using strainers. Prevent frozen pipes by insulating them and letting a faucet drip in a hard freeze."
+   },
+   {
+    "h": "Simple fixture fixes",
+    "body": "Two of the most common plumbing repairs are easy DIY jobs. A dripping faucet is often just a worn washer or cartridge — shut off the local valve, take the faucet apart, and replace the cheap part. A toilet that keeps running usually has a worn flapper (the rubber seal in the tank); replacing it is inexpensive and stops water (and money) from running away.\n\nThese small fixes save water and spare you a plumber's bill for jobs that take minutes once you know how.",
+    "example": "Dripping faucet: replace the washer/cartridge.\nRunning toilet: replace the flapper (cheap, quick).",
+    "tip": "A dripping faucet usually needs a new washer; a running toilet usually needs a new flapper. Both are cheap, quick DIY fixes that save water."
    }
   ],
   "cards": [
@@ -31183,6 +31562,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "It prevents major water damage in emergencies."
+   },
+   {
+    "q": "The first thing to do about a water leak is to:",
+    "options": [
+     "shut off the water",
+     "paint over it",
+     "call a lawyer",
+     "wait a day"
+    ],
+    "a": 0,
+    "why": "Stopping the flow limits damage."
+   },
+   {
+    "q": "You should know the location of the main shutoff valve:",
+    "options": [
+     "before an emergency",
+     "only after a flood",
+     "never",
+     "only if a plumber tells you"
+    ],
+    "a": 0,
+    "why": "Finding it fast in a crisis saves a home."
+   },
+   {
+    "q": "To prevent drain clogs you should:",
+    "options": [
+     "keep grease and scraps out",
+     "pour grease down the drain",
+     "remove all strainers",
+     "flush anything"
+    ],
+    "a": 0,
+    "why": "Grease and debris are the main clog causes."
+   },
+   {
+    "q": "In a hard freeze, a tip to protect pipes is to:",
+    "options": [
+     "let a faucet drip",
+     "turn off the heat",
+     "open all windows",
+     "pour water on pipes"
+    ],
+    "a": 0,
+    "why": "Moving water and insulation resist freezing."
+   },
+   {
+    "q": "A toilet that keeps running usually needs a new:",
+    "options": [
+     "flapper",
+     "roof",
+     "faucet",
+     "water heater"
+    ],
+    "a": 0,
+    "why": "The worn tank flapper lets water leak through."
    }
   ]
  },
@@ -31225,6 +31659,24 @@ window.LAB404_CONTENT = {
     "h": "When to call an electrician",
     "body": "With electricity, the list of 'call a pro' is long, and that's appropriate. Call a licensed electrician for: any new wiring or circuits, anything in the breaker panel beyond resetting a breaker, frequently tripping breakers (a sign of a real problem), flickering lights or warm/scorched outlets, adding outlets, work requiring permits, old or aluminum wiring, and honestly anything you're not fully confident about.\n\nThe reason is simple: electrical mistakes don't give second chances the way a bad paint job does — they cause shocks, fires, and deaths, and they're often hidden inside walls. Licensed electricians are trained and the work is often legally required to be permitted and inspected. There's zero shame in calling one; it's the smart, safe choice. Learn the basics to stay safe and handle the few simple tasks — but with electricity, 'when in doubt, call a pro' is a rule worth following strictly.",
     "tip": "Call an electrician for new wiring, panel work, repeated tripping, warm/scorched outlets, or anything unfamiliar. Electrical mistakes cause fires and deaths — don't gamble."
+   },
+   {
+    "h": "Reading your breaker panel",
+    "body": "The breaker panel (electrical panel) is the heart of a home's wiring. Each breaker controls a circuit — a group of outlets and lights — and trips (switches off) when that circuit is overloaded or shorts, protecting you from fire. When power dies in one area, a tripped breaker is the usual cause.\n\nLabel your panel so you know which breaker controls what. To reset a tripped breaker, switch it fully off, then back on. If it trips again immediately, there's a problem — stop and call an electrician.",
+    "example": "Tripped breaker: switch fully OFF, then ON.\nTrips again immediately -> call an electrician.",
+    "tip": "Each breaker protects one circuit and trips on overload. Label your panel. Reset a tripped breaker off-then-on; if it trips again, call an electrician."
+   },
+   {
+    "h": "Replacing a fixture or switch safely",
+    "body": "Simple electrical swaps — a light fixture, a switch, an outlet — are doable, but ONLY with the power off. The rule that keeps you alive: turn off the breaker for that circuit, then confirm the wires are dead with a non-contact voltage tester before touching anything. Turning off a switch is not enough; kill the breaker.\n\nNote how wires connect before disconnecting (or photograph it), match wire colors, and if anything looks unfamiliar — scorching, aluminum wiring, a tangle — stop and hire a licensed electrician.",
+    "example": "Breaker OFF -> test wires are dead -> then work.\nMatch wire colors; photograph before disconnecting.",
+    "tip": "Turn off the breaker AND verify wires are dead with a tester before any electrical work. Match wire colors, and stop if anything looks unfamiliar or unsafe."
+   },
+   {
+    "h": "GFCI outlets",
+    "body": "A GFCI (ground-fault circuit interrupter) outlet — the kind with TEST and RESET buttons — protects against shock by cutting power instantly if it detects electricity leaking, such as through water or a person. That's why code requires them near water: kitchens, bathrooms, garages, and outdoors.\n\nTest them monthly by pressing TEST (power should cut) then RESET. A GFCI that won't reset or test is faulty and should be replaced. These outlets prevent many serious and fatal shocks.",
+    "example": "GFCI (TEST/RESET buttons): required near water (kitchen, bath, outdoors).\nTest monthly.",
+    "tip": "A GFCI outlet cuts power instantly on a ground fault, preventing shock — required near water. Test them monthly with the TEST and RESET buttons."
    }
   ],
   "cards": [
@@ -31464,6 +31916,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Electrical errors don't give second chances."
+   },
+   {
+    "q": "A breaker trips in order to:",
+    "options": [
+     "protect a circuit from overload and fire",
+     "save electricity for fun",
+     "turn on more lights",
+     "charge a fee"
+    ],
+    "a": 0,
+    "why": "It cuts power when a circuit is overloaded or shorts."
+   },
+   {
+    "q": "If a breaker trips again immediately after resetting, you should:",
+    "options": [
+     "stop and call an electrician",
+     "keep resetting it",
+     "tape it on",
+     "ignore it"
+    ],
+    "a": 0,
+    "why": "Repeated tripping signals a real problem."
+   },
+   {
+    "q": "Before doing any electrical work you must:",
+    "options": [
+     "turn off the breaker and verify wires are dead",
+     "just flip the light switch",
+     "wear gloves only",
+     "work faster"
+    ],
+    "a": 0,
+    "why": "A voltage tester confirms the power is truly off."
+   },
+   {
+    "q": "A GFCI outlet protects against:",
+    "options": [
+     "electric shock from ground faults",
+     "clogs",
+     "low water pressure",
+     "squeaks"
+    ],
+    "a": 0,
+    "why": "It cuts power instantly if current leaks."
+   },
+   {
+    "q": "GFCI outlets are required:",
+    "options": [
+     "near water (kitchens, baths, outdoors)",
+     "only in bedrooms",
+     "nowhere",
+     "only in garages"
+    ],
+    "a": 0,
+    "why": "Code mandates them in wet or damp locations."
    }
   ]
  },
@@ -31507,6 +32014,24 @@ window.LAB404_CONTENT = {
     "h": "Roadside know-how and when to see a mechanic",
     "body": "A few basics make you safer and more self-reliant. Know how to check your fluids and tire pressure, how to change a flat tire (or use the spare / a repair kit — practice before you need it), how to jump-start a dead battery safely, and what the common dashboard warning lights mean (the manual explains them — some mean 'stop driving now,' like oil pressure or overheating). Keep an emergency kit in the car (jack, spare, jumper cables, flashlight, water).\n\nFor actual repairs, a trustworthy mechanic is invaluable. See one for: anything beyond basic maintenance, any warning light you don't understand, unusual noises/vibrations/smells, and the scheduled services you don't do yourself. Find a reputable shop before an emergency, get estimates for big jobs, and understand that catching issues early (at a routine check) is always cheaper than waiting for a breakdown. Basic knowledge plus a good mechanic keeps you safe and your car running for years.",
     "tip": "Know how to check fluids/tires, change a flat, jump a battery, and read warning lights. For repairs, find a trustworthy mechanic — and catch issues early."
+   },
+   {
+    "h": "Checking and changing the oil",
+    "body": "Engine oil lubricates and cools the engine; running low or old oil is a leading cause of engine damage. Check it with the dipstick when the engine is cool: pull it, wipe, reinsert, and read the level between the marks, noting if the oil is very dark or gritty. Top up if low.\n\nChange the oil and filter on the schedule in your owner's manual (often every several thousand miles). It's one of the cheapest services and the single best thing you can do for engine life.",
+    "example": "Dipstick: pull, wipe, reinsert, read between the marks.\nChange oil + filter per the manual.",
+    "tip": "Check oil with the dipstick (between the marks) and change oil and filter on schedule. It's cheap and the best thing you can do for engine life."
+   },
+   {
+    "h": "Dashboard warning lights",
+    "body": "Dashboard lights are your car talking to you, and knowing the big ones prevents breakdowns. The oil-pressure light (an oil can) and the temperature warning are serious — pull over safely and stop the engine, because driving on can destroy it. The check-engine light covers many issues; if it's steady, get it diagnosed soon, but if it's flashing, that's urgent.\n\nThe brake and battery/charging lights also warrant prompt attention. Your manual explains each symbol — don't ignore a warning hoping it passes.",
+    "example": "Oil-pressure or temperature light: stop safely, now.\nCheck-engine flashing = urgent; steady = diagnose soon.",
+    "tip": "Warning lights matter: oil-pressure and temperature lights mean stop now; a flashing check-engine is urgent. Don't ignore a dashboard warning."
+   },
+   {
+    "h": "Changing a flat tire",
+    "body": "A flat can happen anywhere, and changing it yourself gets you moving safely. The steps: pull fully off the road on level ground, turn on hazards, loosen the lug nuts slightly BEFORE jacking, jack up the car at the proper lift point, remove the nuts and flat, mount the spare, hand-tighten the nuts in a star pattern, lower the car, then fully tighten.\n\nMany spares are temporary 'donuts' with a speed and distance limit — drive gently to a shop. Knowing this turns a roadside crisis into a 20-minute task.",
+    "example": "Loosen lugs BEFORE jacking; tighten in a star pattern after lowering.\nA donut spare is temporary — drive gently.",
+    "tip": "To change a flat: pull off level, loosen lugs before jacking, swap the spare, tighten in a star pattern. A donut spare is temporary — drive gently to a shop."
    }
   ],
   "cards": [
@@ -31746,6 +32271,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Prevention beats emergency repair."
+   },
+   {
+    "q": "You check engine oil level using the:",
+    "options": [
+     "dipstick",
+     "steering wheel",
+     "radio",
+     "spare tire"
+    ],
+    "a": 0,
+    "why": "The dipstick reads the level between its marks."
+   },
+   {
+    "q": "Changing oil on schedule is:",
+    "options": [
+     "one of the best things for engine life",
+     "unnecessary",
+     "harmful",
+     "only for old cars"
+    ],
+    "a": 0,
+    "why": "Fresh oil protects the engine cheaply."
+   },
+   {
+    "q": "If the oil-pressure or temperature warning light comes on, you should:",
+    "options": [
+     "pull over safely and stop the engine",
+     "speed up",
+     "ignore it",
+     "turn up the radio"
+    ],
+    "a": 0,
+    "why": "Driving on can destroy the engine."
+   },
+   {
+    "q": "A flashing check-engine light means:",
+    "options": [
+     "an urgent problem",
+     "everything is fine",
+     "time for gas",
+     "the radio is on"
+    ],
+    "a": 0,
+    "why": "Flashing is more serious than a steady light."
+   },
+   {
+    "q": "When changing a tire, you should loosen the lug nuts:",
+    "options": [
+     "before jacking up the car",
+     "after the car is fully raised",
+     "never",
+     "with your hands only"
+    ],
+    "a": 0,
+    "why": "Loosening before jacking keeps the wheel from spinning."
    }
   ]
  },
@@ -31789,6 +32369,22 @@ window.LAB404_CONTENT = {
     "h": "Protecting yourself",
     "body": "A few habits keep contracts working for you, not against you. Get important agreements in writing — verbal contracts are valid but nearly impossible to prove; a written one protects both sides. Keep copies of everything you sign. Make sure the written contract matches what you were promised, and that all blanks are filled before you sign. For big commitments (a lease, a major loan, a business deal), the cost of a lawyer's review is small compared to the cost of a bad contract.\n\nAlso understand the common contracts in your life: know your lease's terms, read loan agreements (especially the interest and fees), and skim the key points of 'terms of service' you agree to. You don't need to be a lawyer, but a healthy respect for contracts — reading before signing, keeping records, and getting help for the big stuff — protects you from a great deal of avoidable trouble. A contract is a tool; used carefully, it makes agreements reliable and protects your interests.",
     "tip": "Get it in writing, keep copies, ensure it matches what you were promised, and have a lawyer review big ones. Respect contracts: read before signing, keep records."
+   },
+   {
+    "h": "Written vs verbal agreements",
+    "body": "A contract doesn't always have to be written — many verbal agreements are legally binding. But some types must be in writing to be enforceable (commonly real estate, and agreements that can't be completed within a year). And even when a verbal deal is valid, it's far harder to prove.\n\nThe practical rule: get important agreements in writing. A written contract records exactly what each side agreed to, which prevents honest misunderstandings and protects you if there's a dispute.",
+    "tip": "Verbal agreements can be binding, but some deals must be written, and written is always easier to prove. Get important agreements in writing. General information, not legal advice."
+   },
+   {
+    "h": "Common clauses to watch",
+    "body": "Before signing, read the whole thing and pay attention to clauses that can surprise you. Watch for: automatic renewals (it re-ups unless you cancel), cancellation terms and fees, late penalties, arbitration clauses (giving up the right to sue), and anything that makes you responsible for costs or damages.\n\nThe fine print is where the real obligations often hide. If a term is unclear, ask for it in plain language or in writing before you sign — not after.",
+    "example": "Watch for: auto-renewal, cancellation fees, late penalties, arbitration clauses.",
+    "tip": "Read the whole contract and watch for auto-renewals, cancellation fees, penalties, and arbitration clauses. The fine print holds the real obligations. General information, not legal advice."
+   },
+   {
+    "h": "Getting out of a contract legally",
+    "body": "Breaking a contract carelessly can cost you, but there are legitimate ways out. Some contracts include a cancellation window or a clause allowing exit under conditions. Certain consumer contracts have a legal 'cooling-off' period. If the other side fails to deliver what they promised (a breach), that may free you — but document it.\n\nBefore stopping payments or walking away, read the exit terms, keep records, communicate in writing, and for anything significant, get legal advice. Mutual agreement to cancel, in writing, is the cleanest exit.",
+    "tip": "To exit a contract legally, use its cancellation terms, any cooling-off period, or the other side's breach. Document everything and get written agreement. General information, not legal advice."
    }
   ],
   "cards": [
@@ -32028,6 +32624,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Cheap vs the cost of a bad contract."
+   },
+   {
+    "q": "Verbal agreements are:",
+    "options": [
+     "sometimes legally binding",
+     "never binding",
+     "always written",
+     "illegal"
+    ],
+    "a": 0,
+    "why": "Many are binding, though harder to prove."
+   },
+   {
+    "q": "Important agreements should be:",
+    "options": [
+     "in writing",
+     "kept secret",
+     "only verbal",
+     "never recorded"
+    ],
+    "a": 0,
+    "why": "Writing records exactly what was agreed."
+   },
+   {
+    "q": "An 'automatic renewal' clause means the contract:",
+    "options": [
+     "re-ups unless you cancel",
+     "ends automatically",
+     "can't be renewed",
+     "is free"
+    ],
+    "a": 0,
+    "why": "It continues unless you act to stop it."
+   },
+   {
+    "q": "An arbitration clause generally means you:",
+    "options": [
+     "give up the right to sue in court",
+     "pay no fees",
+     "can cancel anytime",
+     "own the company"
+    ],
+    "a": 0,
+    "why": "Disputes go to arbitration instead of court."
+   },
+   {
+    "q": "A legitimate way out of a contract is:",
+    "options": [
+     "the other side's breach of its terms",
+     "simply ignoring it",
+     "lying about it",
+     "never reading it"
+    ],
+    "a": 0,
+    "why": "If they fail to deliver, that may free you — document it."
    }
   ]
  },
@@ -32070,6 +32721,24 @@ window.LAB404_CONTENT = {
     "h": "Disputes and eviction",
     "body": "When problems arise, handle them correctly. For disputes (deposit, repairs, etc.), start by communicating clearly and in writing; many issues resolve with a documented request. If not, know your options: local tenant unions, housing agencies, and legal aid (free legal help for renters exists in many areas) can advise you, and small claims court handles things like deposit disputes.\n\nEviction is the legal process a landlord must use to remove a tenant, and it has rules. A landlord generally must have legal grounds (like unpaid rent or a lease violation), give proper written notice, and get a court order — they cannot legally lock you out, remove your belongings, or cut utilities to force you out ('self-help eviction' is illegal). If you face eviction, you have the right to be notified and to respond in court, and you should seek legal help immediately (tenants often have more rights than they realize). Knowing the proper process protects you from being wrongfully removed.",
     "tip": "Resolve disputes in writing first; use tenant unions, housing agencies, legal aid, or small claims court. Eviction needs legal grounds + notice + a court order — lockouts are illegal. Get help if evicted."
+   },
+   {
+    "h": "Before you sign a lease",
+    "body": "A lease is a binding contract, so read it fully before signing. Check the rent amount and due date, the length of the term, the security deposit and its return terms, who pays which utilities, pet and guest rules, and the rules for breaking the lease early. Note the condition of the unit in writing (with photos) at move-in so you aren't blamed for prior damage.\n\nIf a promised repair or term isn't in the written lease, it may not be enforceable — get everything in writing before you sign.",
+    "example": "At move-in: photograph the unit's condition and keep a copy of the signed lease.",
+    "tip": "Read the whole lease before signing: rent, term, deposit, utilities, and early-exit rules. Photograph the unit's condition at move-in. General information, not legal advice."
+   },
+   {
+    "h": "Getting repairs made",
+    "body": "Landlords are generally required to keep a rental livable (habitable) — working heat, water, and safe conditions. If something essential breaks, request the repair in writing and keep a copy, which creates a record. Give reasonable time to fix it.\n\nIf a landlord ignores a serious habitability problem, tenants often have legal options that vary by location — but never simply stop paying rent without knowing your local law, as that can get you evicted. Document everything and check your area's tenant rights or legal aid.",
+    "example": "Request repairs in writing, keep copies, give reasonable time.\nDon't withhold rent without knowing local law.",
+    "tip": "Landlords must keep a rental habitable. Request repairs in writing and keep records. Don't withhold rent without knowing local law. General information, not legal advice."
+   },
+   {
+    "h": "The eviction process",
+    "body": "Eviction is a legal process, not something a landlord can do by force. A landlord generally cannot change your locks, remove your belongings, or shut off utilities to push you out — those 'self-help' evictions are illegal in most places. A lawful eviction requires proper written notice and usually a court order.\n\nIf you receive an eviction notice, don't ignore it: you typically have the right to respond and appear in court. Know your local timelines and seek legal aid quickly, as acting fast protects your options.",
+    "example": "Lawful eviction = written notice + usually a court order.\nLockouts and utility shutoffs to force you out are usually illegal.",
+    "tip": "Eviction requires proper notice and usually a court order — lockouts and utility shutoffs are usually illegal. Don't ignore a notice; respond and seek legal aid fast. General information, not legal advice."
    }
   ],
   "cards": [
@@ -32309,6 +32978,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Tenants often have more rights than they realize."
+   },
+   {
+    "q": "Before signing a lease you should check:",
+    "options": [
+     "rent, term, deposit, and early-exit rules",
+     "only the color of the walls",
+     "nothing",
+     "the landlord's age"
+    ],
+    "a": 0,
+    "why": "A lease is a binding contract; read all key terms first."
+   },
+   {
+    "q": "At move-in, a smart step is to:",
+    "options": [
+     "photograph the unit's condition",
+     "sign nothing",
+     "break something",
+     "skip the walkthrough"
+    ],
+    "a": 0,
+    "why": "Documentation protects you from blame for prior damage."
+   },
+   {
+    "q": "Landlords are generally required to keep a rental:",
+    "options": [
+     "habitable (livable)",
+     "fully furnished",
+     "free",
+     "painted yearly"
+    ],
+    "a": 0,
+    "why": "Working heat, water, and safe conditions are required."
+   },
+   {
+    "q": "Before withholding rent over repairs, you should:",
+    "options": [
+     "know your local law",
+     "just stop paying",
+     "move out secretly",
+     "ignore it"
+    ],
+    "a": 0,
+    "why": "Withholding wrongly can get you evicted."
+   },
+   {
+    "q": "A landlord forcing you out by changing locks is:",
+    "options": [
+     "usually illegal",
+     "always allowed",
+     "required by law",
+     "a court order"
+    ],
+    "a": 0,
+    "why": "Lawful eviction needs notice and usually a court order."
    }
   ]
  },
@@ -32351,6 +33075,23 @@ window.LAB404_CONTENT = {
     "h": "Resolving consumer problems",
     "body": "When you have a legitimate complaint, a clear process usually gets results. Start direct: contact the business calmly, explain the problem and what you want (refund, repair, replacement), and give them a chance to fix it — most reputable businesses will. Be polite but firm, and keep records of all communications. If that fails, escalate: ask for a supervisor, or use the company's formal complaint channel.\n\nIf the business won't cooperate, you have external options: file a complaint with the relevant agency (the FTC, your state attorney general or consumer-protection office, or the Better Business Bureau), dispute the charge with your credit card (chargeback), or for monetary disputes, use small claims court. Leaving an honest review also informs others. The key is to be persistent, organized, and reasonable — document everything, know your rights, and escalate step by step. Most consumer problems are resolvable when you know the process and don't give up.",
     "tip": "Complain directly first (calm, specific, documented). If that fails: escalate, file with the FTC/state AG/BBB, do a chargeback, or use small claims. Be persistent and organized."
+   },
+   {
+    "h": "Rights with debt collectors",
+    "body": "If a debt collector contacts you, you have protections (in the US, under the Fair Debt Collection Practices Act). Collectors cannot harass you, threaten you, call at unreasonable hours, or lie about what you owe. You can request that they verify the debt in writing, and you can tell them in writing to stop contacting you.\n\nNever ignore a lawsuit, but also don't be bullied into paying a debt you don't recognize — ask for written validation first. Keep records of all contact.",
+    "example": "You can demand written validation of a debt and tell collectors to stop contacting you.",
+    "tip": "Debt collectors can't harass, threaten, or lie. You can demand written validation of a debt and tell them to stop contacting you. Keep records. General information, not legal advice."
+   },
+   {
+    "h": "Disputing a charge or billing error",
+    "body": "You're not stuck with a wrong or fraudulent charge. For credit-card billing errors or fraud, you can dispute the charge with your card issuer, usually within a set time (often 60 days), and they must investigate; you typically don't have to pay the disputed amount while it's reviewed. A 'chargeback' can reverse a payment for goods never received or not as described.\n\nAct promptly, dispute in writing when possible, and keep your receipts and records — documentation wins disputes.",
+    "example": "Credit-card error or fraud: dispute with the issuer, usually within ~60 days.",
+    "tip": "You can dispute a wrong or fraudulent charge with your card issuer (often within 60 days) and need not pay it while reviewed. Act promptly and keep records. General information, not legal advice."
+   },
+   {
+    "h": "Reading the fine print",
+    "body": "Many consumer problems come from terms people didn't read. Before buying or signing up, check the return policy, warranty, cancellation and auto-renewal terms, and any fees. 'Free trials' that auto-convert to paid subscriptions are a common trap — note the cancellation deadline the moment you sign up.\n\nBeing a careful consumer means slowing down at the fine print, especially anything involving recurring charges or giving up rights. A few minutes of reading prevents most consumer headaches.",
+    "tip": "Read the fine print before buying: returns, warranty, fees, and auto-renewals. 'Free trials' often auto-convert — note the cancellation deadline. General information, not legal advice."
    }
   ],
   "cards": [
@@ -32590,6 +33331,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Records and persistence win."
+   },
+   {
+    "q": "Debt collectors are NOT allowed to:",
+    "options": [
+     "harass or threaten you",
+     "contact you at all",
+     "send a letter",
+     "verify a debt"
+    ],
+    "a": 0,
+    "why": "Harassment, threats, and lies are prohibited."
+   },
+   {
+    "q": "You can ask a debt collector to:",
+    "options": [
+     "validate the debt in writing",
+     "add fees",
+     "call at midnight",
+     "skip the law"
+    ],
+    "a": 0,
+    "why": "You're entitled to written validation."
+   },
+   {
+    "q": "For a fraudulent credit-card charge, you can:",
+    "options": [
+     "dispute it with your card issuer",
+     "only pay it",
+     "do nothing",
+     "sue the store first"
+    ],
+    "a": 0,
+    "why": "Issuers must investigate disputes, often within 60 days."
+   },
+   {
+    "q": "During a credit-card dispute, you usually:",
+    "options": [
+     "don't have to pay the disputed amount while reviewed",
+     "must pay immediately",
+     "lose the card",
+     "owe double"
+    ],
+    "a": 0,
+    "why": "The disputed amount is held while investigated."
+   },
+   {
+    "q": "A common trap in the fine print is:",
+    "options": [
+     "free trials that auto-convert to paid",
+     "a clear return policy",
+     "no fees",
+     "a written warranty"
+    ],
+    "a": 0,
+    "why": "Note the cancellation deadline when signing up."
    }
   ]
  },
@@ -32632,6 +33428,22 @@ window.LAB404_CONTENT = {
     "h": "Collecting a judgment",
     "body": "An important reality: winning your case is not the same as getting your money. If the judge rules in your favor, you get a 'judgment' — an official ruling that the defendant owes you — but the court doesn't automatically collect it for you. Many people are surprised that collecting can be the hard part, especially if the defendant won't pay or claims they can't.\n\nIf they don't pay voluntarily, you have legal collection tools (which vary by state): you can garnish wages, levy a bank account, or place a lien on property, usually with additional court steps. This is why, before suing, it's worth considering whether the defendant actually has money or assets to pay. For solvent defendants (like a business or employed person), a judgment is strong leverage and often gets paid. The lesson: small claims is powerful, but factor in collection — a judgment is a tool, and you may need to take further steps to actually get paid.",
     "tip": "Winning gives you a JUDGMENT, but the court won't collect it for you. If they won't pay, use collection tools (wage garnishment, bank levy, liens). Consider if they can actually pay BEFORE suing."
+   },
+   {
+    "h": "Is small claims right for your dispute?",
+    "body": "Small claims court handles disputes up to a dollar limit that varies by state (often a few thousand to around ten thousand dollars). It's designed to be used without a lawyer, with simpler rules and lower fees than regular court. It's a good fit for unpaid debts, security-deposit disputes, bad repairs, or small property damage.\n\nIf your claim is above the limit, or needs complex legal remedies, small claims may not fit. Also make sure the person or business you're suing can actually pay — a judgment you can't collect has little value.",
+    "tip": "Small claims handles disputes up to a state limit, without a lawyer, for things like unpaid debts and deposits. Check the limit and whether the defendant can actually pay. General information, not legal advice."
+   },
+   {
+    "h": "Gathering evidence that wins",
+    "body": "Small claims cases are won on evidence and organization. Collect everything that supports your side: contracts, receipts, photos, text messages and emails, estimates, and names of witnesses. Put it in order and bring copies for the judge and the other party.\n\nA clear timeline of what happened, backed by documents, is far more persuasive than your word alone. The person who shows up organized, with proof for each claim, usually prevails over someone relying on memory.",
+    "example": "Bring: contracts, receipts, photos, messages, estimates, witnesses. Copies for all.",
+    "tip": "Small claims is won on evidence: gather contracts, receipts, photos, and messages, organized with a clear timeline. Bring copies. General information, not legal advice."
+   },
+   {
+    "h": "What happens at the hearing",
+    "body": "A small claims hearing is usually brief and informal. You (the plaintiff) explain your case to a judge, present your evidence, and the other side (the defendant) responds. The judge may ask questions and then decides, sometimes on the spot or by mail. Dress neatly, be respectful, speak clearly, and stick to the facts.\n\nPrepare a short, logical summary: what happened, what you're owed, and why. Practicing it keeps you calm and focused. After a judgment, there may be separate steps to actually collect the money.",
+    "tip": "A small claims hearing is brief: present your case and evidence to the judge, respectfully and factually. Prepare a short summary. Collecting a judgment is a separate step. General information, not legal advice."
    }
   ],
   "cards": [
@@ -32871,6 +33683,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "There are specific rules for serving."
+   },
+   {
+    "q": "Small claims court is designed to be used:",
+    "options": [
+     "without a lawyer",
+     "only with a lawyer",
+     "only by businesses",
+     "for huge cases"
+    ],
+    "a": 0,
+    "why": "It has simpler rules and lower fees."
+   },
+   {
+    "q": "Small claims handles disputes:",
+    "options": [
+     "up to a dollar limit that varies by state",
+     "of any size",
+     "only over a million dollars",
+     "with no limit"
+    ],
+    "a": 0,
+    "why": "Each state sets a maximum amount."
+   },
+   {
+    "q": "Before suing, you should check that the defendant:",
+    "options": [
+     "can actually pay a judgment",
+     "is famous",
+     "lives far away",
+     "has a lawyer"
+    ],
+    "a": 0,
+    "why": "A judgment you can't collect has little value."
+   },
+   {
+    "q": "Small claims cases are mostly won on:",
+    "options": [
+     "evidence and organization",
+     "loud arguing",
+     "luck",
+     "who talks longest"
+    ],
+    "a": 0,
+    "why": "Documents and a clear timeline persuade the judge."
+   },
+   {
+    "q": "At the hearing you should:",
+    "options": [
+     "be respectful and stick to the facts",
+     "interrupt the judge",
+     "exaggerate",
+     "bring no evidence"
+    ],
+    "a": 0,
+    "why": "A clear, factual, organized case wins."
    }
   ]
  },
@@ -32913,6 +33780,24 @@ window.LAB404_CONTENT = {
     "h": "ID laws and your options",
     "body": "Identification laws affect daily life. You generally must show ID in specific situations: when driving (to police), for age-restricted purchases, air travel, and many official transactions. Whether you must identify yourself to police when not driving varies by state ('stop and identify' laws) — in some states you must give your name if lawfully detained, in others not; when in doubt, giving your name (but not necessarily more) is usually safe.\n\nFor those without a license, getting a state ID card provides essential identification for jobs, banking, and benefits — it's often a crucial first step for someone getting established, and there are programs to help obtain one (sometimes free). Note that for domestic air travel, the US now requires a REAL ID-compliant license/ID or a passport. Keeping valid ID, understanding when you're required to show it, and knowing that a non-driver can get a state ID are practical pieces of everyday legal literacy that smooth the path through modern life.",
     "tip": "You must show ID when driving, for age-restricted buys, and air travel (REAL ID/passport). 'Stop-and-identify' rules vary by state. Non-drivers can get a state ID card — often a key first step."
+   },
+   {
+    "h": "Handling a traffic ticket",
+    "body": "A traffic ticket isn't automatically a conviction — you usually have options. You can pay it (which typically admits guilt and adds points to your license), contest it in court, or sometimes attend traffic school to reduce points or keep it off your record. Read the ticket for the deadline and your choices; ignoring it leads to bigger penalties and possible license suspension.\n\nIf you contest, you can present your side to a judge. Weigh the fine, insurance impact, and license points when deciding how to respond.",
+    "example": "Options: pay (admits guilt), contest in court, or traffic school.\nNever ignore the deadline.",
+    "tip": "A ticket has options: pay (admits guilt and adds points), contest in court, or traffic school. Don't ignore the deadline. General information, not legal advice."
+   },
+   {
+    "h": "DUI laws and consequences",
+    "body": "Driving under the influence of alcohol or drugs is one of the most serious traffic offenses, and penalties are severe. Most places set a legal blood-alcohol limit (commonly 0.08 percent for adults, lower or zero for commercial and underage drivers). A DUI can mean heavy fines, license suspension, required classes, higher insurance, and even jail.\n\nMany states have 'implied consent' laws: by driving, you've agreed to chemical testing, and refusing can bring its own automatic penalties. The only safe choice is never to drive impaired — arrange another way home.",
+    "example": "Common limit: 0.08% BAC (lower for commercial/underage).\nThe safe rule: never drive impaired.",
+    "tip": "DUI carries severe penalties — fines, license loss, higher insurance, jail. The legal limit is commonly 0.08%, and 'implied consent' penalizes refusing a test. Never drive impaired. General information, not legal advice."
+   },
+   {
+    "h": "Your rights at a checkpoint",
+    "body": "Sobriety or license checkpoints are legal in many states, where officers may briefly stop vehicles. You must provide your license, registration, and insurance when driving. You generally still have the right to remain silent beyond basic identification and to decline to consent to a search of your vehicle, though declining doesn't always prevent one.\n\nBe calm, polite, and cooperative with lawful requests. Keep your documents accessible, keep your hands visible, and remember that arguing at the scene rarely helps — concerns are better raised later, legally.",
+    "example": "Driving: you must show license, registration, insurance.\nStay calm; raise concerns later, legally.",
+    "tip": "At a checkpoint you must show license, registration, and insurance, but generally keep the right to remain silent and to decline a vehicle search. Stay calm and cooperative. General information, not legal advice."
    }
   ],
   "cards": [
@@ -33152,6 +34037,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Programs exist to help obtain one."
+   },
+   {
+    "q": "Paying a traffic ticket usually:",
+    "options": [
+     "admits guilt and adds points",
+     "has no consequences",
+     "removes all record",
+     "is illegal"
+    ],
+    "a": 0,
+    "why": "Paying typically counts as pleading guilty."
+   },
+   {
+    "q": "Ignoring a traffic ticket can lead to:",
+    "options": [
+     "bigger penalties and license suspension",
+     "nothing",
+     "a refund",
+     "automatic dismissal"
+    ],
+    "a": 0,
+    "why": "Missing the deadline makes things worse."
+   },
+   {
+    "q": "A common legal blood-alcohol limit for adult drivers is:",
+    "options": [
+     "0.08 percent",
+     "0.50 percent",
+     "there is none",
+     "1.0 percent"
+    ],
+    "a": 0,
+    "why": "Many places set 0.08%, lower for some drivers."
+   },
+   {
+    "q": "'Implied consent' laws mean that by driving you've agreed to:",
+    "options": [
+     "chemical testing for impairment",
+     "pay any ticket",
+     "waive all rights",
+     "a vehicle search anytime"
+    ],
+    "a": 0,
+    "why": "Refusing a test can bring automatic penalties."
+   },
+   {
+    "q": "When driving, you must provide:",
+    "options": [
+     "license, registration, and insurance",
+     "nothing",
+     "your phone",
+     "a lawyer's card"
+    ],
+    "a": 0,
+    "why": "These documents are required when operating a vehicle."
    }
   ]
  },
@@ -33194,6 +34134,23 @@ window.LAB404_CONTENT = {
     "h": "Editing and formatting",
     "body": "A first draft is never the final product — editing is where good writing is made. Revise in two passes. First, 'big picture' revision: is the thesis clear? Is every paragraph on point and in logical order? Is anything missing, repeated, or unsupported? Cut what doesn't serve the argument. Then edit for correctness: grammar, spelling, punctuation, and word choice — reading aloud catches awkward sentences.\n\nFormatting also matters, especially for school and work: follow any required format (margins, font, spacing, headings, a title, citations), use clear headings in longer reports, and make the document clean and professional. A well-formatted, carefully edited essay or report signals competence and respect for the reader; a sloppy one undermines even good ideas. Give yourself time to revise (don't write it all the night before), and the quality jumps dramatically. Writing is rewriting.",
     "tip": "Revise big-picture first (clear thesis? logical? supported?), then edit for correctness (read aloud). Follow required formatting. Writing is rewriting — leave time."
+   },
+   {
+    "h": "Writing a clear thesis",
+    "body": "An essay or report needs a controlling idea — a thesis — that states its main point in one specific, arguable sentence, usually near the end of the introduction. Everything else supports it. A vague thesis ('technology is interesting') gives the reader no direction; a sharp one ('schools should teach coding because it builds problem-solving skills') promises a clear argument.\n\nA good test: could someone reasonably disagree? If not, it's a fact, not a thesis. The thesis is the spine the whole piece hangs on.",
+    "example": "Weak: 'Technology is interesting.'\nStrong: 'Schools should teach coding because it builds problem-solving skills.'",
+    "tip": "A thesis states the main point in one specific, arguable sentence near the end of the intro. If no one could disagree, it's a fact, not a thesis."
+   },
+   {
+    "h": "Integrating research and quotes",
+    "body": "Research supports your argument, but it should serve your points, not replace them. Introduce evidence, then explain what it shows — don't just drop a quote and move on. Use quotations sparingly for wording that matters, and paraphrase (in your own words) the rest. Every source, quoted or paraphrased, must be cited to avoid plagiarism.\n\nThe strongest writing weaves evidence into your own reasoning, so the reader sees how each fact backs your claim rather than reading a string of disconnected quotes.",
+    "example": "Introduce the evidence -> quote or paraphrase -> explain what it proves.\nCite every source.",
+    "tip": "Make research serve your points: introduce evidence, then explain what it shows. Quote sparingly, paraphrase the rest, and cite every source."
+   },
+   {
+    "h": "Proofreading and formatting",
+    "body": "A strong argument loses credibility if it's full of errors, so proofreading is the final essential step. Read slowly — ideally aloud or after a break — to catch typos, missing words, and clunky sentences the eye glides over. Check that each paragraph has one clear idea and that transitions connect them.\n\nFormatting matters too: follow the required style (margins, spacing, citation format like MLA or APA) and present the work cleanly. Neatness and correctness signal that you took the work, and the reader, seriously.",
+    "tip": "Proofread slowly (aloud or after a break) to catch errors, and check each paragraph has one idea. Follow the required formatting and citation style."
    }
   ],
   "cards": [
@@ -33433,6 +34390,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Quality comes from revision."
+   },
+   {
+    "q": "A thesis statement should be:",
+    "options": [
+     "specific and arguable",
+     "vague and broad",
+     "a known fact",
+     "a question"
+    ],
+    "a": 0,
+    "why": "If no one could disagree, it isn't a thesis."
+   },
+   {
+    "q": "Where does a thesis usually go?",
+    "options": [
+     "near the end of the introduction",
+     "in the last sentence of the essay",
+     "in a footnote",
+     "nowhere"
+    ],
+    "a": 0,
+    "why": "It sets up the argument the essay develops."
+   },
+   {
+    "q": "When using research, you should:",
+    "options": [
+     "introduce evidence and explain what it shows",
+     "drop quotes without comment",
+     "never cite",
+     "quote everything"
+    ],
+    "a": 0,
+    "why": "Evidence must serve your reasoning."
+   },
+   {
+    "q": "Every quoted or paraphrased source must be:",
+    "options": [
+     "cited",
+     "ignored",
+     "made up",
+     "hidden"
+    ],
+    "a": 0,
+    "why": "Citing avoids plagiarism."
+   },
+   {
+    "q": "The best way to catch errors when proofreading is to:",
+    "options": [
+     "read slowly, aloud or after a break",
+     "read very fast",
+     "skip it",
+     "trust spellcheck only"
+    ],
+    "a": 0,
+    "why": "Slowing down reveals what the eye skims."
    }
   ]
  },
@@ -33475,6 +34487,23 @@ window.LAB404_CONTENT = {
     "h": "Editing for style",
     "body": "Style is mostly created in editing, not the first draft. Once your ideas are down, go back and sharpen: cut every unnecessary word, replace weak verbs and passive constructions with strong active ones, break up or combine sentences for better rhythm, and simplify anything a reader might stumble over. Each pass can tighten and clarify.\n\nA few editing habits transform writing: read it aloud (the single best technique — you'll hear what's wrong), cut your word count (try removing 10% — it almost always improves), and put it aside and reread with fresh eyes. Ask of every sentence: is it clear? Is it as short as it can be? Does it flow? Great writers aren't necessarily great at first drafts — they're relentless at revision. Clear, strong style is the product of caring enough to cut, sharpen, and polish until the writing is as clear and powerful as you can make it.",
     "tip": "Style is made in editing: cut needless words, strengthen verbs, fix rhythm, simplify. Read aloud; try cutting 10%. Great writers revise relentlessly."
+   },
+   {
+    "h": "Cutting clutter and wordiness",
+    "body": "Good style is clear, and clarity usually means fewer words. Clutter — unnecessary words and phrases — makes writing harder to read. Cut redundancies ('end result' is just 'result'), trim filler ('due to the fact that' means 'because'), and delete words that add nothing ('very', 'really', 'in order to').\n\nThe test: if a sentence means the same with a word removed, remove it. Concise writing respects the reader's time and makes your points land harder.",
+    "example": "'Due to the fact that' -> 'because'.\n'End result' -> 'result'.",
+    "tip": "Clear style means fewer words. Cut redundancies and filler ('due to the fact that' = 'because'). If a sentence means the same without a word, remove it."
+   },
+   {
+    "h": "Tone and audience",
+    "body": "Style isn't one-size-fits-all; it should match your reader and purpose. A text to a friend, a job application, and a scientific report call for different tones — casual, professional, formal. Word choice, sentence length, and formality all shift with the audience.\n\nBefore writing, ask who will read this and what they need. Writing for the reader — not just expressing yourself — is what makes communication work. The same idea may need very different words for a child, a boss, or an expert.",
+    "tip": "Match your tone to the reader and purpose: casual, professional, or formal. Ask who will read it and what they need — write for the reader, not just yourself."
+   },
+   {
+    "h": "Punctuation for style",
+    "body": "Beyond correctness, punctuation shapes rhythm and emphasis. A period is a full stop; a comma is a brief pause. A semicolon links two closely related complete sentences. A colon introduces a list or an explanation. A dash adds a sharp break or emphasis — like this.\n\nUsing these deliberately gives your sentences variety and control, guiding how the reader hears them. Short sentences hit hard; longer ones flow. Mixing punctuation and sentence length keeps writing from feeling monotonous.",
+    "example": "Semicolon: links two related sentences.\nColon: introduces a list or explanation.\nDash: a sharp break for emphasis.",
+    "tip": "Punctuation shapes rhythm: semicolons link related sentences, colons introduce lists or explanations, and dashes add emphasis. Vary it to control how the reader hears you."
    }
   ],
   "cards": [
@@ -33714,6 +34743,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Clarity is the goal."
+   },
+   {
+    "q": "Clear style usually means:",
+    "options": [
+     "fewer, well-chosen words",
+     "as many words as possible",
+     "no punctuation",
+     "long filler phrases"
+    ],
+    "a": 0,
+    "why": "Cutting clutter makes points land harder."
+   },
+   {
+    "q": "'Due to the fact that' can be replaced with:",
+    "options": [
+     "because",
+     "therefore",
+     "however",
+     "a comma"
+    ],
+    "a": 0,
+    "why": "It's wordy filler for 'because'."
+   },
+   {
+    "q": "Your writing's tone should match:",
+    "options": [
+     "the reader and purpose",
+     "only your mood",
+     "the longest word",
+     "nothing"
+    ],
+    "a": 0,
+    "why": "Audience and purpose set the right tone."
+   },
+   {
+    "q": "A semicolon is used to:",
+    "options": [
+     "link two related complete sentences",
+     "introduce a list",
+     "end a question",
+     "replace all commas"
+    ],
+    "a": 0,
+    "why": "It joins closely related independent clauses."
+   },
+   {
+    "q": "A colon is used to:",
+    "options": [
+     "introduce a list or explanation",
+     "link two sentences",
+     "add a pause only",
+     "end a sentence"
+    ],
+    "a": 0,
+    "why": "It sets up what follows."
    }
   ]
  },
@@ -33756,6 +34840,23 @@ window.LAB404_CONTENT = {
     "h": "Telling stories well",
     "body": "A few practical principles make any story land, whether written or spoken. Know your point: a good story has a purpose (what's it really about? what should the audience take away?), and every part should serve it — cut anything that doesn't. Start strong: open with something that grabs attention (a vivid moment, a question, a surprise), not slow throat-clearing. Use vivid, specific detail to make it come alive, and keep it as tight as it can be — rambling kills stories.\n\nBuild tension and don't give away the ending too soon; let curiosity pull the audience along. Match the story to your audience and purpose. And practice — telling stories, like all communication, improves with doing it. Whether you're writing fiction, pitching an idea, teaching, or just sharing something that happened, these fundamentals — purpose, strong opening, conflict, stakes, emotional connection, vivid detail, and tightness — make the difference between a story that grips and one that falls flat.",
     "tip": "Tell stories well: know your point, start strong, build tension, use vivid detail, keep it tight, connect emotionally. Match it to your audience; practice."
+   },
+   {
+    "h": "The hook: starting strong",
+    "body": "You have seconds to earn a reader's or listener's attention, so a story's opening matters enormously. A strong hook drops us into something interesting — a question, a tension, a vivid moment, a surprising statement — rather than slow throat-clearing or backstory. Start close to the action and let context come later.\n\nThe goal of the opening is one thing: make the audience want to know what happens next. If the first lines don't pull them in, the rest may never get read or heard.",
+    "example": "Weak open: pages of backstory.\nStrong open: drop into a moment of tension or a question.",
+    "tip": "A story's opening has seconds to hook the audience. Start close to the action with a question, tension, or vivid moment — make them need to know what's next."
+   },
+   {
+    "h": "Pacing and tension",
+    "body": "Pacing is how fast a story moves, and controlling it keeps an audience engaged. Slow down for important, emotional moments so they land; speed up through transitions and less crucial parts. Tension — the sense that something is at stake and uncertain — is what pulls a reader forward.\n\nRaise questions the audience wants answered, and don't resolve everything at once. A story that's all action exhausts; one that's all calm bores. The rhythm of tension and release is what makes storytelling gripping.",
+    "example": "Slow down for big moments; speed through transitions.\nTension = stakes + uncertainty, pulling the reader on.",
+    "tip": "Pacing controls the story's speed — slow for key moments, fast through transitions. Tension (stakes plus uncertainty) pulls the audience forward. Alternate tension and release."
+   },
+   {
+    "h": "Endings that land",
+    "body": "An ending is what an audience remembers, so it deserves care. A satisfying ending resolves the central question or conflict the story raised — it pays off the promise the beginning made. It doesn't have to be happy, but it should feel earned by what came before, not random or rushed.\n\nThe best endings often echo the beginning or reveal a change in the character. Avoid tacking on a moral or explaining too much; trust the story to have made its point. Leave the audience with a feeling.",
+    "tip": "An ending is what's remembered. Resolve the central conflict so it feels earned, not random. Echo the beginning or show a change, and leave the audience with a feeling."
    }
   ],
   "cards": [
@@ -33995,6 +35096,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Telling stories builds the skill."
+   },
+   {
+    "q": "A story's opening should:",
+    "options": [
+     "hook the audience quickly",
+     "start with long backstory",
+     "be boring on purpose",
+     "explain everything"
+    ],
+    "a": 0,
+    "why": "You have seconds to make them want more."
+   },
+   {
+    "q": "A strong hook often starts with:",
+    "options": [
+     "tension, a question, or a vivid moment",
+     "slow throat-clearing",
+     "a table of contents",
+     "an apology"
+    ],
+    "a": 0,
+    "why": "Start close to the action."
+   },
+   {
+    "q": "Pacing means controlling:",
+    "options": [
+     "how fast the story moves",
+     "the grammar",
+     "the font",
+     "the page count"
+    ],
+    "a": 0,
+    "why": "Slow for key moments, fast through transitions."
+   },
+   {
+    "q": "Tension in a story comes from:",
+    "options": [
+     "stakes and uncertainty",
+     "resolving everything at once",
+     "no conflict",
+     "long descriptions"
+    ],
+    "a": 0,
+    "why": "Unanswered questions pull the reader forward."
+   },
+   {
+    "q": "A satisfying ending should feel:",
+    "options": [
+     "earned by what came before",
+     "random",
+     "rushed",
+     "unrelated"
+    ],
+    "a": 0,
+    "why": "It pays off the story's central question."
    }
   ]
  },
@@ -34038,6 +35194,23 @@ window.LAB404_CONTENT = {
     "h": "Ethics and media literacy",
     "body": "Journalism operates under ethical standards: tell the truth, minimize harm (be careful with vulnerable people and sensitive info), act independently (avoid conflicts of interest), and be accountable (correct mistakes). These ethics exist because journalism is powerful — it shapes what people believe and do — and that power carries responsibility.\n\nFor you as a news consumer, these same ideas power media literacy: the skill of critically evaluating news. Check the source's credibility and track record, distinguish news from opinion from advertising, notice whether claims are sourced and verified, be aware of bias (including your own), and cross-check important or surprising stories across multiple reputable outlets. In an age of misinformation, being able to tell good journalism from propaganda, clickbait, and fabrication is an essential life skill. Understanding how journalism works — and should work — makes you both a sharper reader and a more responsible sharer of information.",
     "tip": "Journalism ethics: truth, minimize harm, independence, accountability. As a reader, use media literacy: check sources, separate news/opinion, spot bias, cross-check surprising claims."
+   },
+   {
+    "h": "The inverted pyramid",
+    "body": "News writing uses a structure called the inverted pyramid: put the most important information first, then supporting details, then background, in descending order of importance. The opening (the 'lede') answers the key questions — who, what, when, where, why, how — so a reader knows the gist from the first paragraph.\n\nThis serves busy readers (who can stop anytime and still have the main point) and traditionally let editors cut from the bottom to fit space. It's the opposite of a story that builds to a reveal.",
+    "example": "Most important first (the lede: who/what/when/where/why/how) -> details -> background.",
+    "tip": "News uses the inverted pyramid: most important facts first (the lede answers who/what/when/where/why/how), then details and background. Readers get the gist immediately."
+   },
+   {
+    "h": "Interviewing sources",
+    "body": "Good reporting depends on good interviews. Prepare by researching the topic and writing open-ended questions (ones that can't be answered yes/no) that invite real answers. During the interview, listen closely and follow up on interesting threads rather than rigidly reading your list. Let silence do some work — people often fill it with more.\n\nGet names and titles right, confirm key facts and quotes, and record or take careful notes. Treat sources fairly and accurately; your credibility depends on representing them correctly.",
+    "tip": "Good interviews use open-ended questions, close listening, and follow-ups. Get names and quotes exactly right and treat sources fairly — your credibility depends on it."
+   },
+   {
+    "h": "Fact-checking and accuracy",
+    "body": "Accuracy is journalism's core duty. Every fact — names, numbers, dates, claims — should be verified, ideally against more than one reliable source. A single error can destroy a story's and a journalist's credibility. Distinguish what you know from what someone merely claims, and attribute information to its source.\n\nIn an age of fast, viral information, the pressure to publish quickly is exactly when care matters most. Correct mistakes promptly and transparently; owning an error honestly protects trust more than hiding it.",
+    "example": "Verify every fact against reliable sources; attribute claims; correct errors openly.",
+    "tip": "Accuracy is journalism's core duty: verify every fact against reliable sources, attribute claims, and correct errors openly. Credibility depends on getting it right."
    }
   ],
   "cards": [
@@ -34277,6 +35450,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Keep news and commentary distinct."
+   },
+   {
+    "q": "The inverted pyramid puts:",
+    "options": [
+     "the most important information first",
+     "the conclusion last",
+     "background first",
+     "a reveal at the end"
+    ],
+    "a": 0,
+    "why": "News leads with the key facts."
+   },
+   {
+    "q": "A news 'lede' should answer:",
+    "options": [
+     "who, what, when, where, why, how",
+     "only the writer's opinion",
+     "nothing specific",
+     "the ending"
+    ],
+    "a": 0,
+    "why": "It gives the gist in the first paragraph."
+   },
+   {
+    "q": "Good interview questions are:",
+    "options": [
+     "open-ended",
+     "yes/no only",
+     "leading",
+     "unprepared"
+    ],
+    "a": 0,
+    "why": "Open questions invite real answers."
+   },
+   {
+    "q": "Journalism's core duty is:",
+    "options": [
+     "accuracy",
+     "speed above all",
+     "opinion",
+     "entertainment only"
+    ],
+    "a": 0,
+    "why": "Facts must be verified."
+   },
+   {
+    "q": "When a journalist makes an error, they should:",
+    "options": [
+     "correct it promptly and openly",
+     "hide it",
+     "delete the story silently",
+     "blame a source"
+    ],
+    "a": 0,
+    "why": "Transparent corrections protect trust."
    }
   ]
  },
@@ -34319,6 +35547,22 @@ window.LAB404_CONTENT = {
     "h": "Building an audience and writing ethically",
     "body": "For blogging especially, success is about consistently providing value to build an audience over time. Publish regularly, write about what your audience cares about, make your content genuinely helpful, and be patient — audiences grow slowly through consistent quality. Basic SEO (search engine optimization) — using the words people actually search for, so your content can be found — helps, as does promoting your work and engaging with readers.\n\nThroughout, write ethically and authentically. Be honest (don't deceive readers or make false claims — especially important in copywriting, where exaggeration shades into dishonesty, and legally in advertising). Deliver on what your headlines promise. Build trust, because trust is what makes an audience and makes copy actually work over the long run. The writers and brands that succeed online are overwhelmingly the ones that consistently provide real value honestly. Skills plus consistency plus integrity is the winning combination for writing on the web.",
     "tip": "Build an audience with consistent, valuable content (+ basic SEO: use words people search). Write honestly — deliver what you promise. Trust is what makes it work long-term."
+   },
+   {
+    "h": "SEO basics for writers",
+    "body": "Search engine optimization (SEO) helps people find your writing online. The foundation is simple and writer-friendly: understand what people actually search for (keywords) and genuinely answer it well. Use clear, descriptive titles and headings, write for humans first, and structure content so it's easy to scan.\n\nAvoid keyword-stuffing (cramming words unnaturally) — search engines and readers both dislike it. Good SEO today largely overlaps with good, useful, well-organized writing that truly helps the searcher.",
+    "tip": "SEO helps people find your writing: target what people actually search, use clear titles and headings, and write for humans first. Good SEO is mostly good, useful writing."
+   },
+   {
+    "h": "A call to action that works",
+    "body": "Copywriting usually aims to get the reader to do something — subscribe, buy, click, sign up — and the call to action (CTA) is where you ask. A strong CTA is clear, specific, and tells the reader exactly what to do and why ('Start your free trial' beats 'Submit'). Place it where the reader is convinced, and don't bury it.\n\nOne clear CTA usually works better than several competing ones. Make the next step obvious and easy, and give a reason to act now.",
+    "example": "Weak CTA: 'Submit'.\nStrong CTA: 'Start your free trial today.'",
+    "tip": "A call to action asks the reader to do one specific thing. Make it clear and benefit-focused ('Start your free trial' beats 'Submit'), and don't bury it."
+   },
+   {
+    "h": "Finding your voice",
+    "body": "In a sea of online content, a distinct voice is what makes writing memorable and builds an audience. Voice is your personality on the page — your word choice, rhythm, humor, and point of view. It develops by writing a lot, reading widely, and being willing to sound like yourself rather than a generic 'content' tone.\n\nConsistency builds trust: readers return to a voice they recognize and like. Write the way you'd explain something to a smart friend, and let your real perspective come through.",
+    "tip": "A distinct voice makes writing memorable and builds an audience. It develops by writing a lot and sounding like yourself. Write as if explaining to a smart friend."
    }
   ],
   "cards": [
@@ -34558,6 +35802,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Trust is the foundation of audience and copy."
+   },
+   {
+    "q": "The foundation of good SEO is to:",
+    "options": [
+     "genuinely answer what people search for",
+     "stuff in keywords unnaturally",
+     "hide the topic",
+     "ignore readers"
+    ],
+    "a": 0,
+    "why": "Useful, well-organized writing is good SEO."
+   },
+   {
+    "q": "Keyword-stuffing is:",
+    "options": [
+     "cramming words unnaturally, which backfires",
+     "a best practice",
+     "required",
+     "writing for humans"
+    ],
+    "a": 0,
+    "why": "Readers and search engines dislike it."
+   },
+   {
+    "q": "A call to action (CTA) should be:",
+    "options": [
+     "clear and specific",
+     "vague",
+     "hidden",
+     "repeated ten times"
+    ],
+    "a": 0,
+    "why": "'Start your free trial' beats 'Submit'."
+   },
+   {
+    "q": "Usually it's best to have:",
+    "options": [
+     "one clear CTA",
+     "many competing CTAs",
+     "no CTA",
+     "a hidden CTA"
+    ],
+    "a": 0,
+    "why": "One obvious next step converts better."
+   },
+   {
+    "q": "A distinct writing 'voice' is:",
+    "options": [
+     "your personality on the page",
+     "perfect grammar only",
+     "a generic tone",
+     "irrelevant online"
+    ],
+    "a": 0,
+    "why": "A recognizable voice builds an audience."
    }
   ]
  },
@@ -34601,6 +35900,24 @@ window.LAB404_CONTENT = {
     "h": "Easy beginner vegetables",
     "body": "Starting with forgiving, productive crops builds confidence and success. Great beginner vegetables: lettuce and leafy greens (fast, easy, cut-and-come-again), radishes (ready in weeks — instant gratification), green beans (easy, productive), zucchini/summer squash (famously prolific), cherry tomatoes (more forgiving than big tomatoes), and herbs (easy and useful). These are reliable, relatively trouble-free, and rewarding.\n\nAvoid starting with the finicky ones (cauliflower, celery, head lettuce, melons) until you have some experience. And start small — a few well-chosen crops you can actually tend beats an overwhelming plot. Pick a few vegetables you like to eat, give them the basics (sun, soil, water, right timing), and learn as you go. Every season teaches you more. Before long, you'll be enjoying homegrown food and expanding to try new things. The first harvest, however small, is a genuine thrill that keeps gardeners coming back.",
     "tip": "Start with easy, productive crops: lettuce, radishes, green beans, zucchini, cherry tomatoes, herbs. Grow a few you'll eat, start small, and learn each season."
+   },
+   {
+    "h": "Crop rotation and spacing",
+    "body": "Two habits keep a vegetable garden healthy. Crop rotation means not planting the same family in the same spot year after year — rotating prevents soil-borne diseases from building up and balances nutrient use, since different crops draw different things from the soil. Proper spacing gives each plant room for roots, air, and light.\n\nCrowded plants compete, grow poorly, and spread disease through damp, still air. Follow the spacing on the seed packet even though tiny seedlings look lonely — they'll fill in.",
+    "example": "Rotate plant families year to year.\nFollow seed-packet spacing even if seedlings look sparse.",
+    "tip": "Rotate plant families between beds each year to prevent disease and balance nutrients. Give proper spacing — crowded plants compete and spread disease."
+   },
+   {
+    "h": "Managing vegetable pests",
+    "body": "Pests are part of gardening; the goal is management, not total war. Start with prevention: healthy plants in good soil resist pests better, and attracting beneficial insects (ladybugs, which eat aphids) helps. Inspect regularly so you catch problems early. Many pests can be removed by hand or sprayed off with water.\n\nUse the gentlest effective method first — physical removal, barriers, or row covers — before stronger controls. Correctly identifying the pest matters; not every insect is harmful, and some are helping you.",
+    "example": "Prevention first: healthy plants + beneficial insects.\nHand-pick or hose off; identify before treating.",
+    "tip": "Manage pests with prevention (healthy plants, beneficial insects) and early inspection. Use the gentlest method first, and identify a pest before treating it."
+   },
+   {
+    "h": "Extending the season",
+    "body": "A few techniques give you harvests earlier and later than the open garden allows. Starting seeds indoors gets a head start before the last frost. In fall, row covers, cold frames, or a simple cloche (a cover over a plant) trap warmth and protect from early frost, stretching the season by weeks.\n\nSuccession planting — sowing a new small batch every couple of weeks — keeps crops like lettuce coming steadily instead of all at once. Knowing your area's frost dates is the key to timing it all.",
+    "example": "Row covers / cold frames extend the season.\nSuccession planting = steady harvests, not all at once.",
+    "tip": "Extend the season by starting seeds indoors and using row covers or cold frames against frost. Succession planting (small batches over time) gives steady harvests."
    }
   ],
   "cards": [
@@ -34840,6 +36157,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Start small and learn each season."
+   },
+   {
+    "q": "Crop rotation means:",
+    "options": [
+     "not planting the same family in the same spot each year",
+     "watering in circles",
+     "spinning the plants",
+     "harvesting daily"
+    ],
+    "a": 0,
+    "why": "Rotating prevents disease buildup and balances nutrients."
+   },
+   {
+    "q": "Proper plant spacing prevents:",
+    "options": [
+     "crowding, competition, and disease",
+     "all growth",
+     "sunlight",
+     "harvesting"
+    ],
+    "a": 0,
+    "why": "Crowded plants compete and spread disease."
+   },
+   {
+    "q": "A good first approach to pests is:",
+    "options": [
+     "prevention and the gentlest effective method",
+     "the strongest chemical immediately",
+     "ignoring them",
+     "removing all insects"
+    ],
+    "a": 0,
+    "why": "Healthy plants and beneficial insects help first."
+   },
+   {
+    "q": "Ladybugs in the garden are:",
+    "options": [
+     "beneficial (they eat aphids)",
+     "a harmful pest",
+     "a disease",
+     "a weed"
+    ],
+    "a": 0,
+    "why": "Not every insect is harmful; some help."
+   },
+   {
+    "q": "Row covers and cold frames help by:",
+    "options": [
+     "extending the growing season",
+     "killing plants",
+     "blocking all light",
+     "attracting pests"
+    ],
+    "a": 0,
+    "why": "They trap warmth and protect from frost."
    }
   ]
  },
@@ -34882,6 +36254,24 @@ window.LAB404_CONTENT = {
     "h": "Preserving herbs",
     "body": "When you have more herbs than you can use fresh (or at season's end before frost), you can preserve them. Drying is classic and easy for hardy herbs (rosemary, thyme, oregano, sage): hang small bunches in a dry, airy spot or use a low oven/dehydrator, then store the dried leaves in airtight jars. Dried herbs keep for months and concentrate flavor (use less than fresh).\n\nFreezing works better for delicate herbs that don't dry well (basil, cilantro, parsley): chop and freeze them in ice-cube trays with a little water or oil, then pop out cubes as needed — great for cooking. You can also make herb pastes (like pesto) and freeze those. Preserving lets you enjoy your harvest long after the plants are gone, and means an abundant summer herb crop isn't wasted. Growing, harvesting, and preserving herbs is a complete, satisfying little cycle — and a great foundation for the rest of gardening and homesteading.",
     "tip": "Preserve extra herbs: DRY hardy ones (rosemary/thyme) and store in jars; FREEZE delicate ones (basil/cilantro) in oil/water cubes. Don't waste the harvest."
+   },
+   {
+    "h": "Starting herbs from seed or cuttings",
+    "body": "Herbs can begin two ways. Many (basil, cilantro, dill) grow easily and quickly from seed, which is cheap and gives lots of plants. Others (rosemary, mint, thyme) are slow or tricky from seed and are easier from a cutting — snipping a stem from an existing plant and rooting it in water or soil to make a clone.\n\nStarting from a small nursery plant is the fastest route if you just want a few. Match the method to the herb and your patience.",
+    "example": "Fast from seed: basil, cilantro, dill.\nEasier from cuttings: rosemary, mint, thyme.",
+    "tip": "Some herbs (basil, cilantro) grow fast from seed; others (rosemary, mint) are easier from cuttings — rooting a snipped stem. Match the method to the herb."
+   },
+   {
+    "h": "Keeping herbs productive by pinching",
+    "body": "The secret to bushy, productive herbs is regular harvesting, especially pinching. Pinching off the top growth (just above a pair of leaves) makes the plant branch out and grow fuller instead of tall and leggy. For leafy herbs like basil, this also delays flowering — once an herb flowers and sets seed, its leaves often turn bitter and growth slows.\n\nSo harvesting isn't just taking; it's pruning that keeps the plant yielding more. Snip regularly and the plant rewards you.",
+    "example": "Pinch the tops above a leaf pair -> bushier plant, more leaves.\nRemove flower buds to keep leaves tasty.",
+    "tip": "Pinch off herb tops above a leaf pair to make plants bushy and productive, and remove flower buds so leaves stay tasty. Harvesting is pruning that boosts yield."
+   },
+   {
+    "h": "Companion planting with herbs",
+    "body": "Herbs earn their place beyond the kitchen. Many are good companions in the vegetable garden: their strong scents can confuse or repel pests, and flowering herbs attract pollinators and beneficial insects. Basil is often grown near tomatoes, and aromatic herbs like rosemary and mint can deter some pests.\n\nA note of caution: mint spreads aggressively and is best kept in a container so it doesn't take over a bed. Mixing herbs among vegetables makes a garden both more productive and more resilient.",
+    "example": "Basil near tomatoes; aromatic herbs can deter pests.\nKeep mint in a pot — it spreads aggressively.",
+    "tip": "Herbs make good companions — their scent can repel pests and flowers draw pollinators (basil near tomatoes). But keep mint in a container, as it spreads aggressively."
    }
   ],
   "cards": [
@@ -35121,6 +36511,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Drying concentrates flavor."
+   },
+   {
+    "q": "Which herbs grow easily and fast from seed?",
+    "options": [
+     "basil and cilantro",
+     "rosemary and thyme",
+     "none",
+     "only mint"
+    ],
+    "a": 0,
+    "why": "They sprout quickly and cheaply from seed."
+   },
+   {
+    "q": "A cutting is:",
+    "options": [
+     "a snipped stem rooted to make a new plant",
+     "a type of seed",
+     "a flower",
+     "a pest"
+    ],
+    "a": 0,
+    "why": "It clones an existing plant, good for rosemary or mint."
+   },
+   {
+    "q": "Pinching the tops of an herb makes it:",
+    "options": [
+     "bushier and more productive",
+     "taller and leggy",
+     "flower sooner",
+     "die"
+    ],
+    "a": 0,
+    "why": "It encourages branching and more leaves."
+   },
+   {
+    "q": "Once a leafy herb flowers, its leaves often:",
+    "options": [
+     "turn bitter",
+     "taste better",
+     "double",
+     "disappear"
+    ],
+    "a": 0,
+    "why": "Removing flower buds keeps leaves tasty."
+   },
+   {
+    "q": "Mint should be grown in a container because it:",
+    "options": [
+     "spreads aggressively",
+     "needs no water",
+     "won't grow otherwise",
+     "repels bees"
+    ],
+    "a": 0,
+    "why": "Uncontained mint can take over a bed."
    }
   ]
  },
@@ -35163,6 +36608,22 @@ window.LAB404_CONTENT = {
     "h": "Succeeding with limited space",
     "body": "Container gardening shines at making the most of small spaces. Go vertical: use trellises, hanging baskets, wall planters, and stacked or tiered containers to grow up, not just out, multiplying your growing area. Group containers to create an attractive, easy-to-tend mini-garden, and put thirsty plants where they're easy to water.\n\nChoose high-value crops for your limited space — things that are expensive to buy, that you use a lot, or that are much better fresh (herbs, cherry tomatoes, salad greens, specialty peppers) give the best return per pot. Start small (a few pots), succeed, and expand. Even a sunny windowsill or a tiny balcony can produce fresh herbs and salad greens most of the year. Container gardening proves you don't need land to grow your own food — just a bit of sun, the right containers and soil, consistent watering, and a few well-chosen plants. It's gardening for everyone.",
     "tip": "Maximize small space: go vertical (trellises, hanging/tiered pots) and grow high-value crops (herbs, cherry tomatoes, greens). Start small, succeed, expand. No land needed."
+   },
+   {
+    "h": "Drainage and the right mix",
+    "body": "Containers live or die by drainage. A pot must have holes in the bottom so excess water escapes — without them, roots sit in water and rot, the most common container killer. Use a potting mix (light and designed for containers), not garden soil, which packs down hard and drains poorly in a pot.\n\nPotting mix holds moisture while still letting water through and air reach the roots. The right pot-plus-mix combination solves most container problems before they start.",
+    "example": "Pots need drainage holes.\nUse potting MIX, not garden soil (which compacts in pots).",
+    "tip": "Containers need drainage holes so roots don't rot, and a light potting mix — not garden soil, which compacts. The right pot and mix prevent most problems."
+   },
+   {
+    "h": "Vertical gardening in small spaces",
+    "body": "When ground space is tight, grow upward. Vertical gardening uses trellises, wall planters, hanging baskets, and stacked or tiered pots to fit far more plants into a small footprint — a balcony or patio can produce a surprising amount. Climbing plants (beans, cucumbers, some tomatoes) naturally grow up a support.\n\nGoing vertical also improves air flow (reducing disease) and makes harvesting easier on the back. Think in three dimensions, and a small space grows much more than its floor area suggests.",
+    "tip": "In small spaces, grow upward: trellises, hanging baskets, and stacked pots fit more plants and improve airflow. Climbing plants like beans naturally go vertical."
+   },
+   {
+    "h": "Overwintering container plants",
+    "body": "Containers are more exposed to cold than the ground, because roots above ground freeze more easily. For tender perennials and herbs, you can bring pots indoors to a sunny window for winter, or move them to a sheltered spot and insulate the pot. Annuals simply finish their life and can be composted.\n\nKnow whether each plant is an annual (lives one season), a perennial (comes back), or tender (survives only if protected). Protecting the right plants means your container garden isn't starting from zero every spring.",
+    "tip": "Container roots freeze more easily than ground. Bring tender plants indoors or insulate pots for winter; annuals finish and can be composted. Protect the plants worth keeping."
    }
   ],
   "cards": [
@@ -35402,6 +36863,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Sun + pots + soil + water is enough."
+   },
+   {
+    "q": "The most common container-plant killer is:",
+    "options": [
+     "roots sitting in water (no drainage)",
+     "too much sun",
+     "too little soil",
+     "fresh air"
+    ],
+    "a": 0,
+    "why": "Pots must have drainage holes."
+   },
+   {
+    "q": "For containers you should use:",
+    "options": [
+     "potting mix",
+     "dense garden soil",
+     "pure clay",
+     "gravel only"
+    ],
+    "a": 0,
+    "why": "Garden soil compacts and drains poorly in pots."
+   },
+   {
+    "q": "Vertical gardening helps by:",
+    "options": [
+     "fitting more plants in a small space",
+     "needing more floor space",
+     "blocking all light",
+     "killing plants"
+    ],
+    "a": 0,
+    "why": "Trellises and stacked pots use upward space."
+   },
+   {
+    "q": "Climbing plants like beans naturally:",
+    "options": [
+     "grow up a support",
+     "grow only flat",
+     "need no light",
+     "repel water"
+    ],
+    "a": 0,
+    "why": "They're ideal for vertical growing."
+   },
+   {
+    "q": "Container roots are more vulnerable to cold because they:",
+    "options": [
+     "are above ground and freeze easily",
+     "are deeper than ground roots",
+     "never freeze",
+     "like frost"
+    ],
+    "a": 0,
+    "why": "Bring tender pots in or insulate them."
    }
   ]
  },
@@ -35445,6 +36961,24 @@ window.LAB404_CONTENT = {
     "h": "Using finished compost",
     "body": "Finished compost is ready when it's dark brown, crumbly, and earthy-smelling, with the original materials mostly unrecognizable (bits of browns may remain — that's fine, or sift them out to compost again). This rich material is pure benefit for your garden, and there's no way to over-use it reasonably.\n\nHow to use it: mix it into garden beds or containers before planting (improving soil nutrients and structure), spread it as a top layer ('top-dressing') around established plants, add it to potting mix for containers, or steep it in water to make 'compost tea' for watering. It feeds plants gently, improves any soil (sandy or clay), and helps hold moisture. Using your own compost closes the gardening loop: your scraps become soil, which grows food, whose scraps become compost again. It's free, sustainable, and genuinely improves everything you grow — the satisfying payoff of composting.",
     "tip": "Finished compost = dark, crumbly, earthy. Use it: mix into beds/containers, top-dress around plants, or add to potting mix. It feeds plants + improves any soil, for free."
+   },
+   {
+    "h": "The carbon-to-nitrogen balance",
+    "body": "Good compost is a balance of two ingredients: 'greens' (nitrogen-rich, wet — vegetable scraps, grass clippings, coffee grounds) and 'browns' (carbon-rich, dry — dead leaves, cardboard, straw). Greens feed the microbes; browns give them energy and air space. A rough mix of more browns than greens by volume keeps a pile healthy.\n\nToo many greens makes a wet, smelly pile; too many browns makes it break down very slowly. Balancing the two is the main skill of composting.",
+    "example": "Greens (wet, nitrogen): scraps, grass, coffee.\nBrowns (dry, carbon): leaves, cardboard, straw.",
+    "tip": "Compost balances greens (wet, nitrogen: scraps, grass) with browns (dry, carbon: leaves, cardboard). Too many greens smells; too many browns is slow. Favor more browns."
+   },
+   {
+    "h": "Composting methods",
+    "body": "There's a method for any space. A simple pile or bin suits a yard — you add material and turn it occasionally. A tumbler is an enclosed, crankable bin that speeds things up and keeps pests out, good for small yards. Vermicomposting uses worms in a bin to turn food scraps into rich castings, and works indoors or on a balcony — ideal without a yard.\n\nAll of them do the same thing: give microbes (or worms) the right food, air, and moisture, and they turn waste into soil.",
+    "example": "Pile/bin: simple, for a yard.\nTumbler: faster, pest-proof.\nWorm bin: indoors, no yard needed.",
+    "tip": "Choose a method for your space: a pile or bin for a yard, a tumbler for speed, or a worm bin indoors. All turn scraps into soil with air, moisture, and the right mix."
+   },
+   {
+    "h": "What not to compost",
+    "body": "Most food and yard scraps compost well, but some things should stay out of a home pile. Avoid meat, fish, dairy, and oily or greasy food — they smell, rot badly, and attract rodents and pests. Skip pet waste from dogs and cats (it can carry pathogens) and diseased plants or weeds gone to seed, which can spread problems.\n\nStick to fruit and vegetable scraps, coffee grounds, eggshells, and yard trimmings, and your compost stays clean, healthy, and pest-free.",
+    "example": "Keep OUT: meat, dairy, oily food, pet waste, diseased plants.\nKeep IN: fruit/veg scraps, coffee, eggshells, yard trimmings.",
+    "tip": "Keep meat, dairy, oily food, pet waste, and diseased plants OUT of a home compost — they attract pests or spread problems. Stick to fruit/veg scraps, coffee, and yard trimmings."
    }
   ],
   "cards": [
@@ -35684,6 +37218,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Sustainable recycling of nutrients."
+   },
+   {
+    "q": "In composting, 'greens' are:",
+    "options": [
+     "nitrogen-rich wet material like scraps",
+     "dry leaves",
+     "soil",
+     "rocks"
+    ],
+    "a": 0,
+    "why": "Greens include vegetable scraps and grass."
+   },
+   {
+    "q": "'Browns' in a compost pile are:",
+    "options": [
+     "carbon-rich dry material like leaves",
+     "fresh vegetables",
+     "water",
+     "worms"
+    ],
+    "a": 0,
+    "why": "Browns include dead leaves and cardboard."
+   },
+   {
+    "q": "A pile with too many greens tends to be:",
+    "options": [
+     "wet and smelly",
+     "too dry",
+     "perfect",
+     "frozen"
+    ],
+    "a": 0,
+    "why": "Excess nitrogen makes it soggy and smelly."
+   },
+   {
+    "q": "Which composting method needs no yard?",
+    "options": [
+     "a worm bin",
+     "a large open pile",
+     "a field",
+     "none work indoors"
+    ],
+    "a": 0,
+    "why": "Vermicomposting works indoors or on a balcony."
+   },
+   {
+    "q": "Which should you keep OUT of a home compost?",
+    "options": [
+     "meat and dairy",
+     "vegetable scraps",
+     "coffee grounds",
+     "dead leaves"
+    ],
+    "a": 0,
+    "why": "They smell and attract pests."
    }
   ]
  },
@@ -35726,6 +37315,24 @@ window.LAB404_CONTENT = {
     "h": "Storing preserved food",
     "body": "Preserving is only half the job — proper storage keeps preserved food good and safe. Label everything with the contents and date (you will forget otherwise), and generally use oldest first ('first in, first out'). Frozen food: keep the freezer at 0°F, use within recommended times (quality declines over months even when safe), and protect against freezer burn with good packaging. Dried food: store in airtight containers in a cool, dark, dry place (moisture and light are the enemies).\n\nCanned food: store sealed jars in a cool, dark, dry place; check that seals are intact before use, and never eat from a jar that's unsealed, leaking, bulging, moldy, or smells off (signs of spoilage — when in doubt, discard without tasting). Fermented foods are usually refrigerated after fermenting. Good storage — cool, dark, dry, dated, and checked — protects your effort and keeps preserved food safe to eat. With preserving and proper storage, a single harvest or sale can feed you for months, which is the whole rewarding point.",
     "tip": "Label + date everything; use oldest first. Frozen: 0°F, good packaging. Dried: airtight, cool/dark/dry. Canned: cool/dark; check seals — bulging/leaking/off = discard, don't taste."
+   },
+   {
+    "h": "Water-bath vs pressure canning",
+    "body": "Canning seals food in jars for long storage, and the right method depends on the food's acidity — this is a safety issue, not a preference. High-acid foods (most fruits, jams, pickles, tomatoes with added acid) can be safely processed in a boiling water bath. Low-acid foods (vegetables, meats, beans) must be processed in a pressure canner, which reaches higher temperatures that kill the bacteria causing botulism.\n\nUsing a water bath for low-acid food is dangerous. When in doubt, follow a tested, up-to-date recipe exactly.",
+    "example": "High-acid (fruit, pickles, jam): water-bath canning.\nLow-acid (vegetables, meat): pressure canning (required).",
+    "tip": "Canning method depends on acidity: high-acid foods use a water bath; low-acid foods REQUIRE a pressure canner to prevent botulism. Follow tested recipes exactly."
+   },
+   {
+    "h": "Freezing well",
+    "body": "Freezing is the easiest preservation method, but some foods freeze better than others. It works great for berries, many vegetables (often best blanched first — a quick boil that preserves color and texture), meats, and cooked dishes. It works poorly for high-water foods meant to be eaten crisp — lettuce, cucumbers, and whole tomatoes turn mushy.\n\nPrevent freezer burn by removing air and sealing well, and label everything with the date. Frozen food stays safe indefinitely but is best used within months for quality.",
+    "example": "Freezes well: berries, blanched veg, meat, cooked meals.\nFreezes poorly: lettuce, cucumbers (go mushy).",
+    "tip": "Freezing suits berries, blanched vegetables, and meats; it ruins crisp high-water foods like lettuce. Remove air to prevent freezer burn, and label with dates."
+   },
+   {
+    "h": "Fermentation basics",
+    "body": "Fermentation preserves food while creating tangy flavor and beneficial bacteria — think sauerkraut, kimchi, and pickles. In lactofermentation, vegetables are submerged in a salt brine; the salt and lack of oxygen let good bacteria thrive and crowd out spoilage, turning sugars into preserving acids.\n\nThe keys are the right salt ratio and keeping the food under the brine (exposed bits can mold). It's an ancient, low-tech method needing no canning equipment, and it adds probiotics and flavor. Start with a simple sauerkraut to learn the process.",
+    "example": "Lactofermentation: vegetables in a salt brine, kept submerged.\nSalt + no oxygen -> good bacteria preserve it.",
+    "tip": "Fermentation (sauerkraut, kimchi) preserves food in a salt brine where good bacteria thrive. Keep food under the brine, use the right salt ratio, and start with sauerkraut."
    }
   ],
   "cards": [
@@ -35965,6 +37572,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Easiest and most forgiving."
+   },
+   {
+    "q": "High-acid foods like jams and pickles can be canned using:",
+    "options": [
+     "a boiling water bath",
+     "a pressure canner only",
+     "the freezer only",
+     "no method"
+    ],
+    "a": 0,
+    "why": "Their acidity makes water-bath canning safe."
+   },
+   {
+    "q": "Low-acid foods like vegetables and meat must be:",
+    "options": [
+     "pressure canned",
+     "water-bath canned",
+     "left at room temperature",
+     "never canned"
+    ],
+    "a": 0,
+    "why": "Pressure canning reaches temperatures that prevent botulism."
+   },
+   {
+    "q": "Which food freezes poorly?",
+    "options": [
+     "lettuce",
+     "berries",
+     "cooked stew",
+     "blanched green beans"
+    ],
+    "a": 0,
+    "why": "High-water crisp foods turn mushy when frozen."
+   },
+   {
+    "q": "To prevent freezer burn you should:",
+    "options": [
+     "remove air and seal well",
+     "leave the bag open",
+     "freeze slowly in the door",
+     "add water"
+    ],
+    "a": 0,
+    "why": "Air causes freezer burn."
+   },
+   {
+    "q": "Fermentation preserves vegetables by:",
+    "options": [
+     "submerging them in a salt brine for good bacteria",
+     "drying them fully",
+     "freezing them",
+     "adding sugar only"
+    ],
+    "a": 0,
+    "why": "Salt and no oxygen let preserving bacteria thrive."
    }
   ]
  }
