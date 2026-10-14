@@ -1,0 +1,184 @@
+{
+ "updated": "2026-10-14",
+ "intro_stat": {
+  "headline": "On average, Americans believe 55% of the other party holds extreme views. The real number is about 30%.",
+  "detail": "Democrats estimate that 53% of Republicans hold extreme positions; the actual figure is closer to 34%. Republicans are about as wrong in the other direction. The gap is widest among the most politically engaged and the heaviest news consumers.",
+  "source": "More in Common, “The Perception Gap” (2019), perceptiongap.us"
+ },
+ "perception_gap": [
+  {"statement": "Most police are bad people", "polarity": "disagree", "group": "Democrats", "estimator": "Republicans", "actual": 85, "estimate": 48, "note": "Share of Democrats who DISAGREE that most police are bad people."},
+  {"statement": "I am proud to be American, while acknowledging my country’s flaws", "polarity": "agree", "group": "Democrats", "estimator": "Republicans", "actual": 82, "estimate": 54, "note": "More than four in five Democrats say they are proud to be American."},
+  {"statement": "The US should have completely open borders", "polarity": "disagree", "group": "Democrats", "estimator": "Republicans", "actual": 71, "estimate": 38, "note": "Share of Democrats who REJECT fully open borders."},
+  {"statement": "Law-abiding citizens should have the right to bear firearms", "polarity": "agree", "group": "Democrats", "estimator": "Republicans", "actual": 68, "estimate": 44, "note": "Most Democrats affirm a right to bear arms."},
+  {"statement": "Properly controlled immigration can be good for America", "polarity": "agree", "group": "Republicans", "estimator": "Democrats", "actual": 85, "estimate": 52, "note": "The vast majority of Republicans see controlled immigration as a positive."},
+  {"statement": "Racism still exists in America", "polarity": "agree", "group": "Republicans", "estimator": "Democrats", "actual": 79, "estimate": 51, "note": "Nearly four in five Republicans agree racism still exists."},
+  {"statement": "Many Muslims are good Americans", "polarity": "agree", "group": "Republicans", "estimator": "Democrats", "actual": 70, "estimate": 41, "note": "Most Republicans agree."},
+  {"statement": "Sexism still exists in America", "polarity": "agree", "group": "Republicans", "estimator": "Democrats", "actual": 66, "estimate": 47, "note": "Two-thirds of Republicans agree sexism still exists."},
+  {"statement": "The government should do more to keep guns from dangerous people", "polarity": "agree", "group": "Republicans", "estimator": "Democrats", "actual": 65, "estimate": 47, "note": "Most Republicans support keeping guns from bad actors."},
+  {"statement": "America should be a socialist country", "polarity": "disagree", "group": "Democrats", "estimator": "Republicans", "actual": 62, "estimate": 37, "note": "Share of Democrats who DISAGREE that America should be socialist."}
+ ],
+ "gap_source": "All figures: More in Common, “The Perception Gap” (June 2019). “Actual” is the real share of that group holding the view; “estimate” is what the other party guessed.",
+ "issues": [
+  {
+   "id": "immigration",
+   "title": "Immigration & the Border",
+   "temp": "High tension",
+   "shared": [
+    "A country has the right to decide who enters and to enforce that decision.",
+    "A functioning, predictable legal immigration system is better than a broken one.",
+    "People fleeing real danger deserve a fair hearing.",
+    "Human trafficking and smuggling networks are a genuine evil worth stopping."
+   ],
+   "crux": "The real disagreement is rarely “open borders vs. no immigrants.” It is about pace and control — how many people, how quickly, through which door — and how to weigh compassion for people already here against the rule of law and the interests of current workers.",
+   "left": {"head": "The strongest case on the left", "body": "Immigrants commit crimes at lower rates than the native-born and fill essential jobs; mass deportation of long-settled families is cruel and economically disruptive. A nation of immigrants should offer a realistic path to legal status and treat asylum seekers humanely."},
+   "right": {"head": "The strongest case on the right", "body": "Laws that are not enforced are not really laws, and a border that cannot be controlled invites chaos, exploitation and wage pressure on the most vulnerable workers. Orderly, legal immigration — chosen by the country, not by whoever crosses — is both fairer and more sustainable."},
+   "facts": [
+    "The US is home to roughly 11 million unauthorized immigrants (Pew Research / DHS estimates).",
+    "Multiple studies (e.g., Cato Institute, academic reviews) find immigrants, including the unauthorized, are not more likely to commit violent crime than native-born citizens.",
+    "Large majorities in both parties support a legal path for long-settled immigrants AND stronger border security — they are not mutually exclusive (Pew)."
+   ],
+   "values": [
+    "How much weight should go to the rule of law vs. mercy for those already here?",
+    "Who should immigration primarily serve — the newcomer, current workers, or employers?"
+   ]
+  },
+  {
+   "id": "guns",
+   "title": "Guns & Public Safety",
+   "temp": "High tension",
+   "shared": [
+    "Dangerous people — violent felons, abusers, the acutely suicidal — should not have easy access to firearms.",
+    "Everyone wants fewer mass shootings and fewer dead children.",
+    "Law-abiding citizens have a recognized right to defend themselves.",
+    "Enforcing the laws already on the books matters."
+   ],
+   "crux": "Both sides want less gun violence; they disagree on the lever. One side sees the number of guns and the ease of access as the problem; the other sees people — criminals, untreated mental illness, weak enforcement — as the problem, and worries new laws mostly burden the law-abiding.",
+   "left": {"head": "The strongest case on the left", "body": "The US has far more guns and far more gun deaths than peer nations; that is not a coincidence. Universal background checks, red-flag laws and limits on the most lethal weapons are broadly popular and could save lives without ending lawful ownership."},
+   "right": {"head": "The strongest case on the right", "body": "The right to self-defense is fundamental, and most proposed restrictions would not have stopped the atrocities used to justify them. Criminals ignore gun laws by definition; the honest answer is enforcement, mental-health care and not disarming peaceable citizens."},
+   "facts": [
+    "The US has more civilian-owned firearms per capita than any other country (Small Arms Survey).",
+    "The majority of US gun deaths each year are suicides, not homicides (CDC).",
+    "Universal background checks are supported by large majorities of BOTH Republican and Democratic voters (Pew, Gallup)."
+   ],
+   "values": [
+    "How do we weigh individual liberty against collective risk?",
+    "Is violence mainly a weapons problem or mainly a people-and-culture problem?"
+   ]
+  },
+  {
+   "id": "abortion",
+   "title": "Abortion",
+   "temp": "High tension",
+   "shared": [
+    "Almost no one wants abortion to be common; both sides would rather see fewer unwanted pregnancies.",
+    "Support for contraception and for supporting mothers and children is broad.",
+    "Most people hold nuanced views, not the absolutes each side imagines of the other.",
+    "The life of the mother and cases of rape are treated as exceptional by large majorities."
+   ],
+   "crux": "This is a genuine clash of first principles, not a misunderstanding: when does a developing human life acquire rights that can override a woman’s control over her own body? Where you draw that line drives almost everything else.",
+   "left": {"head": "The strongest case on the left", "body": "A woman’s control over her own body is fundamental, and the state forcing a pregnancy to term — with real medical risk — is a profound intrusion. Bans endanger women in miscarriage and complex pregnancies and fall hardest on the poor."},
+   "right": {"head": "The strongest case on the right", "body": "If a fetus is a human life, then a society that protects the vulnerable cannot treat ending it as a purely private choice. Many simply want the line drawn earlier, with real support for mothers so no woman feels abortion is her only option."},
+   "facts": [
+    "US abortion rates had been declining for decades before 2022 (Guttmacher / CDC).",
+    "A majority of Americans support legal abortion in the first trimester and oppose it later in pregnancy, with exceptions — i.e., most are in the middle (Pew, Gallup).",
+    "Most abortions occur in the first trimester (CDC)."
+   ],
+   "values": [
+    "At what point does a developing life gain rights the state should protect?",
+    "How do we balance bodily autonomy against the claim of a potential life?"
+   ]
+  },
+  {
+   "id": "climate",
+   "title": "Climate & Energy",
+   "temp": "Medium tension",
+   "shared": [
+    "Clean air and clean water are things nearly everyone wants.",
+    "Energy should be reliable and affordable.",
+    "Innovation and American energy independence are broadly popular goals.",
+    "Most people, including most Republicans, say they are concerned about the environment."
+   ],
+   "crux": "Less a fight about whether the climate is changing than about cost, speed and trust: how fast to move, who pays, how much to rely on government mandates vs. markets and innovation, and whether the proposed cures are worth their disruption to jobs and prices.",
+   "left": {"head": "The strongest case on the left", "body": "The science is settled enough to act, and the cost of delay compounds. Shifting to clean energy is also an economic opportunity; moving early beats paying for disasters later. Markets alone have not priced in the damage."},
+   "right": {"head": "The strongest case on the right", "body": "Energy policy should not wreck working-class budgets or hand advantage to rival nations that pollute freely. Innovation, nuclear and an ‘all of the above’ approach may cut emissions more durably than mandates that raise costs and invite backlash."},
+   "facts": [
+    "The major scientific bodies agree the climate is warming and human activity is the main driver (IPCC, NASA, NOAA).",
+    "US energy-related CO₂ emissions have fallen from their mid-2000s peak, largely via the shift from coal to natural gas and renewables (EIA).",
+    "A majority of Americans, including a growing share of younger Republicans, support developing more clean-energy sources (Pew)."
+   ],
+   "values": [
+    "How much present cost is worth bearing for future risk reduction?",
+    "Mandates and regulation vs. markets and innovation — which do we trust more?"
+   ]
+  },
+  {
+   "id": "economy",
+   "title": "Taxes, Jobs & Inequality",
+   "temp": "Medium tension",
+   "shared": [
+    "Hard work should let a person afford a decent life.",
+    "Rigging the system — bailouts for the connected, cronyism — is wrong.",
+    "A strong economy with plentiful good jobs is the goal.",
+    "Both sides worry about the cost of housing, healthcare and raising a family."
+   ],
+   "crux": "Everyone wants broad prosperity; the fight is over how it is best produced and shared — whether growth and opportunity come mainly from free markets and low taxes, or whether government must actively correct inequality and provide a stronger safety net.",
+   "left": {"head": "The strongest case on the left", "body": "When gains concentrate at the very top while wages stagnate, the deal stops working for ordinary people. Public investment, worker power and a fairer tax code can widen opportunity that the market alone leaves behind."},
+   "right": {"head": "The strongest case on the right", "body": "Growth, not redistribution, is what has lifted the most people out of poverty. Lower taxes and lighter regulation let businesses hire and invest; heavy-handed intervention tends to slow the very growth the poor depend on."},
+   "facts": [
+    "US income inequality has risen since the 1970s by most measures (Census, CBO).",
+    "Both large tax cuts and large social programs have passed under administrations of both parties — the record is mixed, not one-sided (CBO).",
+    "Inflation erodes real wages regardless of who is in office; the 2021–23 surge was global (BLS, OECD)."
+   ],
+   "values": [
+    "Is prosperity best grown by free markets or actively shared by government?",
+    "How much inequality is acceptable if the floor keeps rising?"
+   ]
+  },
+  {
+   "id": "policing",
+   "title": "Policing & Criminal Justice",
+   "temp": "Medium tension",
+   "shared": [
+    "People of every background want to be safe in their neighborhoods.",
+    "Good policing and community trust reinforce each other.",
+    "Bad actors — whether criminals or abusive officers — should be held accountable.",
+    "Most people respect the police AND want misconduct addressed; these are not opposites."
+   ],
+   "crux": "Both sides want safe streets and fair treatment. They differ on where the greater danger lies — in crime and disorder, or in abuse of power — and therefore on whether the fix is more enforcement or more reform and accountability.",
+   "left": {"head": "The strongest case on the left", "body": "Documented patterns of abuse and unequal treatment are real and corrode trust, especially in minority communities. Accountability, training and investment in prevention make policing both fairer and more effective."},
+   "right": {"head": "The strongest case on the right", "body": "When order breaks down, the poorest neighborhoods suffer first and worst. Most officers are decent people doing a dangerous job; demonizing them drives good cops out and emboldens criminals."},
+   "facts": [
+    "Large majorities of Americans across parties say they want police reform AND a strong police presence — not abolition (Gallup, Pew).",
+    "As noted in the Perception Gap data above, about 85% of Democrats reject the claim that ‘most police are bad people.’",
+    "Crime trends vary widely by city and year; national narratives often lag the actual local data (FBI UCR / NIBRS)."
+   ],
+   "values": [
+    "Where is the greater present danger — disorder, or abuse of authority?",
+    "How do we hold power accountable without undermining those who use it well?"
+   ]
+  },
+  {
+   "id": "speech",
+   "title": "Free Speech & Social Media",
+   "temp": "Medium tension",
+   "shared": [
+    "Free expression is a core value almost everyone claims to cherish.",
+    "Nobody wants children exposed to genuine harm online.",
+    "Deliberate, harmful lies that hurt real people are bad.",
+    "Concentrated power over public speech — by anyone — makes most people uneasy."
+   ],
+   "crux": "The disagreement is over who is the bigger threat to open discourse: platforms and governments that remove too much (‘censorship’), or the flood of misinformation and harassment that goes unchecked when they remove too little. Both sides fear being silenced — just by different hands.",
+   "left": {"head": "The strongest case on the left", "body": "Unchecked lies, harassment and incitement can drown out truth and drive vulnerable people offline. Private platforms setting standards is not government censorship, and some moderation is what makes open conversation possible at all."},
+   "right": {"head": "The strongest case on the right", "body": "A handful of companies now shape what a whole society may say and see, and ‘misinformation’ is too easily stretched to mean ‘views we dislike.’ The cure for bad speech is more speech, not opaque rules enforced by the powerful."},
+   "facts": [
+    "The First Amendment restrains government, not private companies — a frequent source of confusion in these debates (constitutional text / case law).",
+    "Majorities in both parties say they worry about online misinformation AND about censorship — the concern cuts both ways (Pew).",
+    "No major platform is purely neutral or purely censorial; moderation decisions are contested case by case."
+   ],
+   "values": [
+    "Who do we trust less with speech — platforms and government, or the mob and the liar?",
+    "Is the greater risk too much moderation or too little?"
+   ]
+  }
+ ]
+}

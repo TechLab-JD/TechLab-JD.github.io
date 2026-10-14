@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Common Ground — less heat, more understanding</title>
+<meta name="description" content="A free, non-partisan tool that finds what we actually agree on. Test your Perception Gap, see the strongest honest case on each side of the hardest issues, and separate the facts we can check from the values we're really arguing about. Built by Jordan Dorman.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0F1524; --bg2:#121A2E; --surface:#17203A; --surface2:#1C2745; --line:#243150; --line-soft:#1D2A49;
+  --text:#E9E4D6; --dim:#A9AFC4; --faint:#6C748F;
+  --amber:#E8A33C; --amber-deep:#C9801F; --steady:#4FC08D; --ember:#B4621F;
+  --left:#5a86d6; --right:#d66a5a;
+  --glow:0 0 32px rgba(232,163,60,.14);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:16px/1.7 Inter,system-ui,sans-serif;min-height:100vh;
+  background-image:radial-gradient(900px 480px at 85% -10%, rgba(79,192,141,.08), transparent 60%),
+    radial-gradient(700px 420px at 5% 108%, rgba(232,163,60,.08), transparent 60%),
+    linear-gradient(rgba(36,49,80,.22) 1px, transparent 1px), linear-gradient(90deg, rgba(36,49,80,.22) 1px, transparent 1px);
+  background-size:auto, auto, 44px 44px, 44px 44px;}
+h1,h2,h3{font-family:'Space Grotesk',Inter,sans-serif;line-height:1.14}
+a{color:var(--amber);text-decoration:none}
+.mono{font-family:'JetBrains Mono',monospace}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+::selection{background:rgba(79,192,141,.35)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+
+nav{position:sticky;top:0;background:rgba(15,21,36,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft);z-index:10}
+nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+nav .brand{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:15px;margin-right:auto;color:var(--text)}
+nav .brand span{color:var(--steady)}
+nav a:not(.brand){color:var(--dim);font-size:14.5px;font-weight:500}
+nav a:not(.brand):hover{color:var(--text)}
+@media(max-width:620px){nav a.plain{display:none}}
+
+header{padding:58px 0 10px}
+.kicker{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--steady);letter-spacing:.12em;margin-bottom:10px}
+header h1{font-size:clamp(32px,6vw,54px);font-weight:700;letter-spacing:-.01em;color:#F4F1E6}
+header h1 em{color:var(--steady);font-style:normal}
+header p.lede{max-width:730px;font-size:17.5px;color:var(--dim);margin-top:14px}
+
+.statband{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:18px;padding:26px 28px;margin-top:26px;box-shadow:var(--glow)}
+.statband .big{font-family:'Space Grotesk';font-weight:700;font-size:clamp(19px,3.2vw,26px);color:#F4F1E6;line-height:1.3}
+.statband .big b{color:var(--steady)}
+.statband p{color:var(--dim);font-size:14.5px;margin-top:10px}
+.statband .src{color:var(--faint);font-size:12px;margin-top:10px;font-family:'JetBrains Mono'}
+
+section{padding:34px 0;border-top:1px solid var(--line-soft);margin-top:30px}
+.sectlabel{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--steady);letter-spacing:.1em;margin-bottom:6px}
+h2.sec{font-size:26px;color:#F4F1E6;margin-bottom:6px}
+.sub{color:var(--faint);margin-bottom:22px;font-size:14.5px;max-width:720px}
+
+/* perception game */
+.game{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px;max-width:720px}
+.game .q{font-family:'JetBrains Mono';font-size:12px;color:var(--faint);letter-spacing:.06em}
+.game .stmt{font-family:'Space Grotesk';font-weight:600;font-size:21px;color:#F4F1E6;margin:10px 0 4px;line-height:1.35}
+.game .ask{color:var(--dim);font-size:14.5px;margin-bottom:22px}
+.game .ask b{color:var(--text)}
+.slabel{display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:11px;color:var(--faint);margin-top:4px}
+input[type=range]{width:100%;accent-color:var(--steady);height:26px}
+.guessval{text-align:center;font-family:'Space Grotesk';font-weight:700;font-size:40px;color:var(--steady);margin:6px 0}
+.btn{background:var(--steady);color:#0c1a12;border:none;border-radius:10px;padding:11px 22px;font:inherit;font-weight:700;font-size:14.5px;cursor:pointer;margin-top:12px}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--dim);border:1px solid var(--line)}
+.btn.ghost:hover{color:var(--text);border-color:var(--steady)}
+.reveal{margin-top:20px;display:none}
+.reveal.show{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.bars{display:grid;gap:12px;margin:16px 0}
+.barrow{display:grid;grid-template-columns:130px 1fr 48px;gap:12px;align-items:center;font-size:13px}
+.barrow .bl{color:var(--dim);font-family:'JetBrains Mono';font-size:11.5px}
+.track{height:22px;background:#202b49;border-radius:6px;overflow:hidden;position:relative}
+.fill{height:100%;border-radius:6px;transition:width .6s cubic-bezier(.4,0,.2,1)}
+.fill.actual{background:var(--steady)}
+.fill.est{background:var(--left)}
+.fill.you{background:var(--amber)}
+.barrow .pv{font-family:'JetBrains Mono';font-weight:700;text-align:right}
+.verdict{background:rgba(79,192,141,.08);border:1px solid rgba(79,192,141,.3);border-radius:12px;padding:14px 16px;font-size:14px;color:var(--text);margin-top:6px}
+.verdict b{color:var(--steady)}
+.note{color:var(--faint);font-size:12.5px;margin-top:10px;font-family:'JetBrains Mono'}
+.gamefoot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:18px}
+.scoreline{font-size:13px;color:var(--dim);margin-left:auto;font-family:'JetBrains Mono'}
+.done{background:var(--surface);border:1px solid rgba(79,192,141,.4);border-radius:18px;padding:30px;max-width:720px;text-align:center;display:none}
+.done.show{display:block}
+.done .num{font-family:'Space Grotesk';font-weight:700;font-size:54px;color:var(--steady)}
+
+/* issues */
+.issuenav{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px}
+.inav{font-family:'JetBrains Mono';font-size:12px;color:var(--dim);border:1px solid var(--line);background:rgba(23,32,58,.5);border-radius:999px;padding:7px 13px;cursor:pointer;transition:.12s}
+.inav:hover{color:var(--text);border-color:var(--steady)}
+.inav.active{background:var(--steady);color:#0c1a12;border-color:var(--steady);font-weight:600}
+.issue{display:none}
+.issue.show{display:block;animation:fade .3s ease}
+.issuehead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.issuehead h3{font-size:24px;color:#F4F1E6}
+.temp{font-family:'JetBrains Mono';font-size:11px;padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--faint)}
+
+.block{margin-top:20px}
+.block .bh{font-family:'JetBrains Mono';font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.bh.agree{color:var(--steady)} .bh.crux{color:var(--amber)} .bh.facts{color:#7fa7e6} .bh.values{color:#c9a0e0}
+.shared{display:grid;gap:8px}
+.shared li{list-style:none;background:rgba(79,192,141,.07);border:1px solid rgba(79,192,141,.28);border-radius:10px;padding:10px 14px;font-size:14px;color:var(--text)}
+.shared li::before{content:'✓ ';color:var(--steady);font-weight:700}
+.cruxbox{background:linear-gradient(135deg,rgba(45,34,12,.5),var(--surface));border:1px solid rgba(232,163,60,.4);border-radius:12px;padding:16px 18px;color:var(--text);font-size:15px}
+
+.steel{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+@media(max-width:680px){.steel{grid-template-columns:1fr}}
+.side{border-radius:14px;padding:18px;border:1px solid var(--line)}
+.side.l{background:linear-gradient(160deg,rgba(90,134,214,.12),var(--surface));border-color:rgba(90,134,214,.4)}
+.side.r{background:linear-gradient(160deg,rgba(214,106,90,.12),var(--surface));border-color:rgba(214,106,90,.4)}
+.side h4{font-size:14px;margin-bottom:8px}
+.side.l h4{color:#a9c4f5}.side.r h4{color:#f0b3a9}
+.side p{font-size:14px;color:var(--dim);line-height:1.65}
+
+.fv{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+@media(max-width:680px){.fv{grid-template-columns:1fr}}
+.fvcol{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.fvcol ul{margin:0;padding-left:0}
+.fvcol li{list-style:none;font-size:13.5px;color:var(--dim);padding:7px 0;border-top:1px solid var(--line-soft)}
+.fvcol li:first-child{border-top:none}
+.fvcol li::before{content:'›';color:var(--faint);margin-right:8px}
+
+details.method{margin-top:8px;border:1px solid var(--line);border-radius:12px;background:rgba(23,32,58,.4)}
+details.method summary{cursor:pointer;padding:14px 18px;font-weight:600;color:var(--text);font-size:14.5px;list-style:none}
+details.method summary::-webkit-details-marker{display:none}
+details.method summary::before{content:'▸ ';color:var(--steady)}
+details.method[open] summary::before{content:'▾ '}
+details.method .mbody{padding:0 18px 18px;color:var(--dim);font-size:13.5px;line-height:1.7}
+details.method .mbody b{color:var(--text)}
+
+#loaderr{display:none;background:rgba(214,106,90,.1);border:1px solid rgba(214,106,90,.4);border-radius:12px;padding:16px 18px;color:#f0c3bb;font-size:14px;margin-top:24px}
+
+footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:26px 0}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;color:var(--faint)}
+footer a{color:var(--dim)}footer a:hover{color:var(--steady)}
+footer .flinks a{margin-left:16px}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="./">jordan<span>@</span>steady<span>:~/</span>bridge<span>$</span></a>
+  <a class="plain" href="./">← Portfolio</a>
+  <a class="plain" href="revolutionary-news.html">Revolutionary News</a>
+  <a class="plain" href="american-dream.html">Data Lab</a>
+</div></nav>
+
+<header><div class="wrap">
+  <div class="kicker">LESS HEAT · MORE UNDERSTANDING</div>
+  <h1>Common <em>Ground</em></h1>
+  <p class="lede">We are less divided than we think. This tool finds what we actually agree on, shows the strongest
+  honest case on each side of the hardest issues, and separates the facts we can check from the values we are really
+  arguing about. It won't tell you what to think — just help you see the human on the other side.</p>
+  <div class="statband">
+    <div class="big" id="stat-big">—</div>
+    <p id="stat-detail"></p>
+    <div class="src" id="stat-src"></div>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div id="loaderr">⚠ Couldn't load the data (data/common-ground.json). If you're viewing this as a local file, run it from a small web server.</div>
+
+  <section style="border-top:none">
+    <div class="sectlabel">01 / THE PERCEPTION GAP</div>
+    <h2 class="sec">Guess how extreme the other side really is</h2>
+    <p class="sub">For each statement, drag the slider to guess what share of that group <b>actually</b> holds the view.
+    Then see the truth — and how badly the other party misjudged it. Based on a national study by More in Common.</p>
+
+    <div class="game" id="game">
+      <div class="q" id="g-count"></div>
+      <div class="stmt" id="g-stmt"></div>
+      <div class="ask" id="g-ask"></div>
+      <div class="guessval"><span id="g-guess">50</span>%</div>
+      <input type="range" id="g-slider" min="0" max="100" value="50">
+      <div class="slabel"><span>0% — almost none</span><span>100% — nearly all</span></div>
+      <div class="gamefoot">
+        <button class="btn" id="g-reveal">Reveal the real number</button>
+      </div>
+
+      <div class="reveal" id="g-revealbox">
+        <div class="bars">
+          <div class="barrow"><span class="bl">Reality</span><div class="track"><div class="fill actual" id="bar-actual"></div></div><span class="pv" style="color:var(--steady)" id="pv-actual"></span></div>
+          <div class="barrow"><span class="bl" id="bl-est">Other side guessed</span><div class="track"><div class="fill est" id="bar-est"></div></div><span class="pv" style="color:var(--left)" id="pv-est"></span></div>
+          <div class="barrow"><span class="bl">Your guess</span><div class="track"><div class="fill you" id="bar-you"></div></div><span class="pv" style="color:var(--amber)" id="pv-you"></span></div>
+        </div>
+        <div class="verdict" id="g-verdict"></div>
+        <div class="note" id="g-note"></div>
+        <div class="gamefoot">
+          <button class="btn" id="g-next">Next statement →</button>
+          <span class="scoreline" id="g-score"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="done" id="g-done">
+      <div class="q">YOU'RE DONE</div>
+      <div class="num" id="done-num"></div>
+      <p id="done-msg" style="color:var(--dim);margin-top:4px"></p>
+      <div style="margin-top:16px"><button class="btn ghost" id="g-again">Play again</button></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sectlabel">02 / THE HARD ISSUES</div>
+    <h2 class="sec">Where we agree, and what we're really fighting about</h2>
+    <p class="sub">Pick an issue. You'll see the common ground first, then the real crux, the strongest honest case on
+    each side, and a split of what's a checkable fact versus a values question no data can settle.</p>
+    <div class="issuenav" id="issuenav"></div>
+    <div id="issues"></div>
+  </section>
+
+  <details class="method">
+    <summary>About this tool — sources &amp; principles</summary>
+    <div class="mbody">
+      <p><b>The goal is understanding, not persuasion.</b> Every issue brief is written to pass the other side's
+      test: each camp's view is stated the way a thoughtful person who holds it would recognize — a steelman, never a
+      strawman. If any summary feels unfair to your side, that's a bug worth reporting.</p>
+      <p style="margin-top:10px"><b>Perception Gap data:</b> More in Common, <i>&ldquo;The Perception Gap&rdquo;</i>
+      (June 2019), a national study of how accurately partisans estimate each other's views. &ldquo;Reality&rdquo; is
+      the real share of that group holding the view; the comparison bar is what the other party guessed.</p>
+      <p style="margin-top:10px"><b>Facts vs. values:</b> the facts listed are drawn from non-partisan sources (Pew,
+      Gallup, CDC, Census, CBO, EIA, IPCC and similar). Values questions are left open on purpose — data can inform
+      them, but not decide them. Nothing on this page is logged or tracked.</p>
+    </div>
+  </details>
+</main>
+
+<footer><div class="wrap">
+  <span class="mono">© 2026 Jordan Dorman · built to lower the temperature</span>
+  <span class="flinks"><a href="./">Portfolio</a><a href="revolutionary-news.html">Revolutionary News</a><a href="https://github.com/TechLab-JD">GitHub</a></span>
+</div></footer>
+
+<script>
+function esc(s){return (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+let DATA=null, gi=0, order=[], yourErr=[], theirErr=[];
+
+/* ---------- Perception game ---------- */
+function startGame(){
+  gi=0; yourErr=[]; theirErr=[];
+  order = DATA.perception_gap.map((_,i)=>i);
+  document.getElementById("g-done").classList.remove("show");
+  document.getElementById("game").style.display="block";
+  showQ();
+}
+function showQ(){
+  const item = DATA.perception_gap[order[gi]];
+  document.getElementById("g-count").textContent = `STATEMENT ${gi+1} OF ${order.length}`;
+  const verb = item.polarity==="disagree" ? "disagree with" : "agree with";
+  document.getElementById("g-stmt").textContent = `“${item.statement}”`;
+  document.getElementById("g-ask").innerHTML =
+    `What share of <b>${item.group}</b> do you think actually <b>${verb}</b> this?`;
+  const sl=document.getElementById("g-slider"); sl.value=50;
+  document.getElementById("g-guess").textContent="50";
+  document.getElementById("g-revealbox").classList.remove("show");
+  document.getElementById("g-reveal").style.display="inline-block";
+}
+function reveal(){
+  const item = DATA.perception_gap[order[gi]];
+  const you = +document.getElementById("g-slider").value;
+  const act = item.actual, est = item.estimate;
+  document.getElementById("bar-actual").style.width = act+"%";
+  document.getElementById("bar-est").style.width = est+"%";
+  document.getElementById("bar-you").style.width = you+"%";
+  document.getElementById("pv-actual").textContent = act+"%";
+  document.getElementById("pv-est").textContent = est+"%";
+  document.getElementById("pv-you").textContent = you+"%";
+  document.getElementById("bl-est").textContent = item.estimator+" guessed";
+  const ye=Math.abs(you-act), te=Math.abs(est-act);
+  yourErr.push(ye); theirErr.push(te);
+  let v;
+  if(ye<=8) v=`<b>Nailed it.</b> You were only ${ye} points off. ${item.estimator} missed by ${te}.`;
+  else if(ye<te) v=`You were ${ye} points off — but still closer than the average ${item.estimator.slice(0,-1)}, who missed by ${te}.`;
+  else v=`You were ${ye} points off. Like most people, the gap is real — ${item.estimator} missed by ${te}.`;
+  document.getElementById("g-verdict").innerHTML = v;
+  document.getElementById("g-note").textContent = item.note;
+  document.getElementById("g-score").textContent =
+    `avg error — you: ${avg(yourErr)} pts · typical ${item.estimator.toLowerCase()}: ${avg(theirErr)} pts`;
+  document.getElementById("g-reveal").style.display="none";
+  document.getElementById("g-revealbox").classList.add("show");
+  document.getElementById("g-next").textContent = gi+1>=order.length ? "See your result →" : "Next statement →";
+}
+function avg(a){return a.length? Math.round(a.reduce((x,y)=>x+y,0)/a.length):0;}
+function next(){
+  if(gi+1>=order.length){ finish(); return; }
+  gi++; showQ();
+}
+function finish(){
+  document.getElementById("game").style.display="none";
+  const you=avg(yourErr), them=avg(theirErr);
+  document.getElementById("done-num").textContent = you+" pts";
+  let msg;
+  if(you<=10) msg=`Your average guess was only ${you} points from reality — far better than the typical partisan (${them} points off). You see the other side pretty clearly.`;
+  else if(you<them) msg=`Your average miss was ${you} points — better than the typical partisan's ${them}. Still, notice how the real numbers lean toward agreement.`;
+  else msg=`Your average miss was ${you} points — right around the national average. We nearly all overestimate how extreme the other side is. That's the whole point: they're more reasonable than the fight suggests.`;
+  document.getElementById("done-msg").textContent = msg;
+  document.getElementById("g-done").classList.add("show");
+}
+
+/* ---------- Issues ---------- */
+function renderIssues(){
+  const nav=document.getElementById("issuenav"), host=document.getElementById("issues");
+  nav.innerHTML = DATA.issues.map((it,i)=>
+    `<span class="inav ${i===0?"active":""}" data-i="${i}">${esc(it.title)}</span>`).join("");
+  host.innerHTML = DATA.issues.map((it,i)=>issueHTML(it,i)).join("");
+  nav.querySelectorAll(".inav").forEach(b=>b.onclick=()=>{
+    nav.querySelectorAll(".inav").forEach(x=>x.classList.remove("active"));
+    b.classList.add("active");
+    host.querySelectorAll(".issue").forEach(x=>x.classList.remove("show"));
+    host.querySelector(`.issue[data-i="${b.dataset.i}"]`).classList.add("show");
+    document.getElementById("issuenav").scrollIntoView({behavior:"smooth",block:"start"});
+  });
+}
+function issueHTML(it,i){
+  let h=`<div class="issue ${i===0?"show":""}" data-i="${i}">`;
+  h+=`<div class="issuehead"><h3>${esc(it.title)}</h3><span class="temp">${esc(it.temp)}</span></div>`;
+  h+=`<div class="block"><div class="bh agree">Where we already agree</div><ul class="shared">`;
+  h+=it.shared.map(s=>`<li>${esc(s)}</li>`).join("");
+  h+=`</ul></div>`;
+  h+=`<div class="block"><div class="bh crux">The real disagreement</div><div class="cruxbox">${esc(it.crux)}</div></div>`;
+  h+=`<div class="block"><div class="bh">The strongest honest case on each side</div><div class="steel">`;
+  h+=`<div class="side l"><h4>${esc(it.left.head)}</h4><p>${esc(it.left.body)}</p></div>`;
+  h+=`<div class="side r"><h4>${esc(it.right.head)}</h4><p>${esc(it.right.body)}</p></div></div></div>`;
+  h+=`<div class="block"><div class="fv">`;
+  h+=`<div class="fvcol"><div class="bh facts">What we can check — facts</div><ul>`+
+     it.facts.map(f=>`<li>${esc(f)}</li>`).join("")+`</ul></div>`;
+  h+=`<div class="fvcol"><div class="bh values">What we can't — values</div><ul>`+
+     it.values.map(v=>`<li>${esc(v)}</li>`).join("")+`</ul></div>`;
+  h+=`</div></div>`;
+  h+=`</div>`;
+  return h;
+}
+
+/* ---------- wire ---------- */
+fetch("data/common-ground.json").then(r=>{if(!r.ok)throw 0;return r.json();}).then(d=>{
+  DATA=d;
+  document.getElementById("stat-big").innerHTML =
+    esc(d.intro_stat.headline).replace(/55%/,"<b>55%</b>").replace(/about 30%/,"<b>about 30%</b>");
+  document.getElementById("stat-detail").textContent = d.intro_stat.detail;
+  document.getElementById("stat-src").textContent = "Source: "+d.intro_stat.source;
+  const sl=document.getElementById("g-slider");
+  sl.oninput=()=>document.getElementById("g-guess").textContent=sl.value;
+  document.getElementById("g-reveal").onclick=reveal;
+  document.getElementById("g-next").onclick=next;
+  document.getElementById("g-again").onclick=startGame;
+  startGame();
+  renderIssues();
+}).catch(()=>{document.getElementById("loaderr").style.display="block";});
+</script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revolutionary News — every angle, verified</title>
+<meta name="description" content="A free, no-login news reader that clusters the same story across the political spectrum — left, center and right side by side — attaches independent fact-checks, and surfaces the stories one side is ignoring. Built by Jordan Dorman.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0F1524; --bg2:#121A2E; --surface:#17203A; --surface2:#1C2745; --line:#243150; --line-soft:#1D2A49;
+  --text:#E9E4D6; --dim:#A9AFC4; --faint:#6C748F;
+  --amber:#E8A33C; --amber-deep:#C9801F; --steady:#4FC08D; --ember:#B4621F;
+  --left:#5a86d6; --right:#d66a5a; --center:#9aa3bd;
+  --glow:0 0 32px rgba(232,163,60,.14);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:16px/1.7 Inter,system-ui,sans-serif;min-height:100vh;
+  background-image:radial-gradient(900px 480px at 85% -10%, rgba(232,163,60,.09), transparent 60%),
+    radial-gradient(700px 420px at 5% 108%, rgba(90,134,214,.07), transparent 60%),
+    linear-gradient(rgba(36,49,80,.22) 1px, transparent 1px), linear-gradient(90deg, rgba(36,49,80,.22) 1px, transparent 1px);
+  background-size:auto, auto, 44px 44px, 44px 44px;}
+h1,h2,h3{font-family:'Space Grotesk',Inter,sans-serif;line-height:1.14}
+a{color:var(--amber);text-decoration:none}
+.mono{font-family:'JetBrains Mono',monospace}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+::selection{background:rgba(232,163,60,.35)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+
+nav{position:sticky;top:0;background:rgba(15,21,36,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft);z-index:10}
+nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+nav .brand{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:15px;margin-right:auto;color:var(--text)}
+nav .brand span{color:var(--amber)}
+nav a:not(.brand){color:var(--dim);font-size:14.5px;font-weight:500}
+nav a:not(.brand):hover{color:var(--text)}
+@media(max-width:620px){nav a.plain{display:none}}
+
+header{padding:58px 0 10px}
+.kicker{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--amber);letter-spacing:.12em;margin-bottom:10px}
+header h1{font-size:clamp(32px,6vw,54px);font-weight:700;letter-spacing:-.01em;color:#F4F1E6}
+header h1 em{color:var(--amber);font-style:normal}
+header p.lede{max-width:730px;font-size:17.5px;color:var(--dim);margin-top:14px}
+.srcnote{font-size:12.5px;color:var(--faint);margin-top:16px;font-family:'JetBrains Mono',monospace}
+
+.spectrum-key{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px;font-size:12px;color:var(--dim);font-family:'JetBrains Mono'}
+.spectrum-key .sw{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:26px 0 8px}
+.chips{display:flex;gap:7px;flex-wrap:wrap}
+.chip{font-family:'JetBrains Mono';font-size:12px;color:var(--dim);border:1px solid var(--line);background:rgba(23,32,58,.5);border-radius:999px;padding:6px 12px;cursor:pointer;transition:.12s}
+.chip:hover{color:var(--text);border-color:var(--amber)}
+.chip.active{background:var(--amber);color:#1A1205;border-color:var(--amber);font-weight:600}
+input.search{background:var(--surface2);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font:inherit;font-size:13.5px;min-width:200px;flex:1}
+label.tgl{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--dim);cursor:pointer;user-select:none;font-family:'JetBrains Mono'}
+
+section{padding:30px 0;border-top:1px solid var(--line-soft);margin-top:26px}
+.sectlabel{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--amber);letter-spacing:.1em;margin-bottom:6px}
+h2.sec{font-size:24px;color:#F4F1E6;margin-bottom:6px}
+.sub{color:var(--faint);margin-bottom:20px;font-size:14.5px;max-width:730px}
+
+.story{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin-bottom:16px}
+.story .cat{font-family:'JetBrains Mono';font-size:11px;color:var(--amber);letter-spacing:.08em;text-transform:uppercase}
+.story h3{font-size:19px;color:#F4F1E6;margin:6px 0 8px}
+.story .summ{color:var(--dim);font-size:14.5px;margin-bottom:14px}
+.story .meta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:12px}
+
+.spec{display:flex;gap:3px;align-items:center}
+.spec .seg{width:30px;height:8px;border-radius:2px;background:#222d4b;opacity:.35}
+.spec .seg.on{opacity:1}
+.spec .seg.l2{background:#3f6fd1}.spec .seg.l1{background:#6f97dd}.spec .seg.c{background:#9aa3bd}
+.spec .seg.r1{background:#dd8a7d}.spec .seg.r2{background:#d6594a}
+.spec-label{font-family:'JetBrains Mono';font-size:11px;color:var(--faint)}
+.covn{font-family:'JetBrains Mono';font-size:12px;color:var(--dim)}
+
+.srcs{display:grid;gap:7px;margin-top:4px}
+.srcrow{display:flex;gap:10px;align-items:baseline;font-size:13.5px;padding:7px 10px;border-radius:9px;background:rgba(18,26,46,.5);border:1px solid var(--line-soft)}
+.srcrow .tag{font-family:'JetBrains Mono';font-size:10.5px;padding:2px 7px;border-radius:999px;flex:none;font-weight:700;letter-spacing:.02em}
+.tag.l2,.tag.l1{color:#bcd0f5;background:rgba(90,134,214,.18);border:1px solid rgba(90,134,214,.5)}
+.tag.c{color:#d4d8e4;background:rgba(154,163,189,.15);border:1px solid rgba(154,163,189,.45)}
+.tag.r2,.tag.r1{color:#f5c7bf;background:rgba(214,106,90,.18);border:1px solid rgba(214,106,90,.5)}
+.srcrow .sname{color:var(--faint);font-family:'JetBrains Mono';font-size:11.5px;flex:none;width:118px}
+.srcrow a{color:var(--text);font-weight:500}
+.srcrow a:hover{color:var(--amber)}
+@media(max-width:560px){.srcrow{flex-wrap:wrap}.srcrow .sname{width:auto}}
+
+.fc{margin-top:13px;display:flex;flex-direction:column;gap:6px}
+.fcbadge{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--steady);background:rgba(79,192,141,.08);border:1px solid rgba(79,192,141,.35);border-radius:9px;padding:7px 11px}
+.fcbadge b{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.04em;flex:none}
+.fcbadge a{color:var(--text)}.fcbadge a:hover{color:var(--steady)}
+
+.blind{border-color:rgba(232,163,60,.4);background:linear-gradient(135deg,var(--surface),rgba(45,34,12,.5))}
+.blindtag{display:inline-flex;align-items:center;gap:7px;font-family:'JetBrains Mono';font-size:11.5px;color:var(--amber);border:1px solid rgba(232,163,60,.45);border-radius:999px;padding:4px 11px;margin-bottom:8px}
+
+.fcfeed{display:grid;gap:10px}
+.fcitem{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.fcitem .org{font-family:'JetBrains Mono';font-size:11px;color:var(--steady);letter-spacing:.06em;text-transform:uppercase}
+.fcitem a{color:var(--text);font-weight:500;font-size:14.5px}.fcitem a:hover{color:var(--amber)}
+.fcitem p{color:var(--faint);font-size:13px;margin-top:5px}
+
+details.method{margin-top:18px;border:1px solid var(--line);border-radius:12px;background:rgba(23,32,58,.4)}
+details.method summary{cursor:pointer;padding:14px 18px;font-weight:600;color:var(--text);font-size:14.5px;list-style:none}
+details.method summary::-webkit-details-marker{display:none}
+details.method summary::before{content:'▸ ';color:var(--amber)}
+details.method[open] summary::before{content:'▾ '}
+details.method .mbody{padding:0 18px 18px;color:var(--dim);font-size:13.5px;line-height:1.7}
+details.method .mbody b{color:var(--text)}
+.srcgrid{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.srcpill{font-family:'JetBrains Mono';font-size:11px;padding:4px 9px;border-radius:999px;border:1px solid var(--line);color:var(--dim)}
+
+#loaderr{display:none;background:rgba(214,106,90,.1);border:1px solid rgba(214,106,90,.4);border-radius:12px;padding:16px 18px;color:#f0c3bb;font-size:14px;margin-top:24px}
+.empty{color:var(--faint);font-size:14px;padding:20px 0}
+
+footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:26px 0}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;color:var(--faint)}
+footer a{color:var(--dim)}footer a:hover{color:var(--amber)}
+footer .flinks a{margin-left:16px}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="./">jordan<span>@</span>steady<span>:~/</span>news<span>$</span></a>
+  <a class="plain" href="./">← Portfolio</a>
+  <a class="plain" href="common-ground.html">Common Ground</a>
+  <a class="plain" href="american-dream.html">Data Lab</a>
+</div></nav>
+
+<header><div class="wrap">
+  <div class="kicker">THE NEWS, WITHOUT THE SILO</div>
+  <h1>Revolutionary <em>News</em></h1>
+  <p class="lede">The same story, from every angle. We gather headlines across the political spectrum — left, center and
+  right side by side — attach independent fact-checks, and flag the stories one side is quietly ignoring. No feed to
+  trap you, no login, no tracking. You see the spread; you decide.</p>
+  <div class="spectrum-key">
+    <span><span class="sw" style="background:#3f6fd1"></span>Left</span>
+    <span><span class="sw" style="background:#6f97dd"></span>Lean Left</span>
+    <span><span class="sw" style="background:#9aa3bd"></span>Center</span>
+    <span><span class="sw" style="background:#dd8a7d"></span>Lean Right</span>
+    <span><span class="sw" style="background:#d6594a"></span>Right</span>
+  </div>
+  <div class="srcnote" id="genline">loading latest headlines…</div>
+</div></header>
+
+<main class="wrap">
+  <div id="loaderr">⚠ Couldn't load the headlines (data/news.json). If you're viewing this as a local file, run it from a small web server, or the daily refresh may not have run yet.</div>
+
+  <div class="controls">
+    <div class="chips" id="catchips"></div>
+  </div>
+  <div class="controls" style="margin-top:0">
+    <input class="search" id="search" type="search" placeholder="Search headlines…" aria-label="Search headlines">
+    <label class="tgl"><input type="checkbox" id="multionly"> every-angle only (2+ sources)</label>
+  </div>
+
+  <section style="border-top:none;margin-top:14px;padding-top:6px">
+    <div class="sectlabel">01 / TOP STORIES</div>
+    <h2 class="sec">Every angle, side by side</h2>
+    <p class="sub">Each card is one story as covered across outlets. The colored bar shows which parts of the spectrum
+    are reporting it. Open the sources to read the exact same event in each outlet's own words.</p>
+    <div id="stories"></div>
+    <p class="empty" id="noresults" style="display:none">No stories match that filter.</p>
+  </section>
+
+  <section id="blindspot-sec">
+    <div class="sectlabel">02 / BLINDSPOTS</div>
+    <h2 class="sec">What one side isn't telling you</h2>
+    <p class="sub">Stories being covered by outlets on only one side of the spectrum. Not necessarily wrong — just a
+    gap. If only the left is running it, the right has a blindspot here, and the other way around.</p>
+    <div id="blindspots"></div>
+  </section>
+
+  <section>
+    <div class="sectlabel">03 / FACT-CHECK WIRE</div>
+    <h2 class="sec">Fresh from the fact-checkers</h2>
+    <p class="sub">The latest claims checked by independent, non-partisan fact-checking organizations.</p>
+    <div class="fcfeed" id="fcfeed"></div>
+  </section>
+
+  <details class="method">
+    <summary>How this works — sources &amp; method</summary>
+    <div class="mbody">
+      <p><b>No browser tracking, no server watching you.</b> A scheduled job fetches public headline feeds from the
+      outlets below, groups articles describing the <b>same event</b> by their shared keywords, and writes a static
+      file this page reads. Nothing you click is logged.</p>
+      <p style="margin-top:10px"><b>Bias ratings</b> describe the <i>outlet</i>, not the individual story, and follow
+      the broad consensus of independent media-bias research (AllSides, Ad&nbsp;Fontes). Reasonable people disagree on
+      the exact placement — that's the point: see the label, then judge the reporting yourself.</p>
+      <p style="margin-top:10px"><b>Fact-checks</b> come from independent organizations and are matched to stories by
+      topic. A fact-check appearing on a story is <i>not</i> a verdict on that outlet's article — it's related
+      material worth reading.</p>
+      <div class="srcgrid" id="srclist"></div>
+    </div>
+  </details>
+</main>
+
+<footer><div class="wrap">
+  <span class="mono">© 2026 Jordan Dorman · built to cut through the noise</span>
+  <span class="flinks"><a href="./">Portfolio</a><a href="common-ground.html">Common Ground</a><a href="https://github.com/TechLab-JD">GitHub</a></span>
+</div></footer>
+
+<script>
+const LEANCLS = {"-2":"l2","-1":"l1","0":"c","1":"r1","2":"r2"};
+const state = {data:null, cat:"All", q:"", multi:false};
+
+function esc(s){return (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+
+function specBar(leans){
+  const have = new Set(leans);
+  const order = [[-2,"l2"],[-1,"l1"],[0,"c"],[1,"r1"],[2,"r2"]];
+  let h = '<div class="spec">';
+  for(const [v,cls] of order){ h += `<span class="seg ${cls} ${have.has(v)?"on":""}"></span>`; }
+  h += '</div>';
+  return h;
+}
+
+function storyCard(s, blind){
+  let h = `<div class="story ${blind?"blind":""}">`;
+  if(blind){
+    const who = s.blindspot==="right" ? "The right isn't covering this" : "The left isn't covering this";
+    h += `<div class="blindtag">◆ ${who}</div>`;
+  }
+  h += `<div class="cat">${esc(s.category)}</div>`;
+  h += `<h3>${esc(s.title)}</h3>`;
+  if(s.summary) h += `<div class="summ">${esc(s.summary)}</div>`;
+  h += `<div class="meta">${specBar(s.leans)}<span class="covn">${s.n_sources} source${s.n_sources>1?"s":""}</span></div>`;
+  h += '<div class="srcs">';
+  for(const src of s.sources){
+    const cls = LEANCLS[String(src.lean)];
+    h += `<div class="srcrow"><span class="tag ${cls}">${esc(src.label)}</span>`+
+         `<span class="sname">${esc(src.name)}</span>`+
+         `<a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.title)}</a></div>`;
+  }
+  h += '</div>';
+  if(s.factchecks && s.factchecks.length){
+    h += '<div class="fc">';
+    for(const f of s.factchecks){
+      h += `<span class="fcbadge"><b>✓ ${esc(f.org)}</b><a href="${esc(f.link)}" target="_blank" rel="noopener">${esc(f.title)}</a></span>`;
+    }
+    h += '</div>';
+  }
+  h += '</div>';
+  return h;
+}
+
+function render(){
+  const d = state.data; if(!d) return;
+  let list = d.stories.slice();
+  if(state.cat!=="All") list = list.filter(s=>s.category===state.cat);
+  if(state.multi) list = list.filter(s=>s.n_sources>=2);
+  if(state.q){
+    const q = state.q.toLowerCase();
+    list = list.filter(s=> (s.title+" "+s.summary).toLowerCase().includes(q) ||
+                            s.sources.some(x=>x.title.toLowerCase().includes(q)));
+  }
+  const host = document.getElementById("stories");
+  host.innerHTML = list.map(s=>storyCard(s,false)).join("");
+  document.getElementById("noresults").style.display = list.length? "none":"block";
+
+  const bs = d.blindspots||[];
+  document.getElementById("blindspot-sec").style.display = bs.length? "block":"none";
+  document.getElementById("blindspots").innerHTML = bs.map(s=>storyCard(s,true)).join("");
+
+  document.getElementById("fcfeed").innerHTML = (d.factchecks||[]).map(f=>
+    `<div class="fcitem"><div class="org">✓ ${esc(f.org)}</div>`+
+    `<a href="${esc(f.link)}" target="_blank" rel="noopener">${esc(f.title)}</a>`+
+    (f.summary?`<p>${esc(f.summary)}</p>`:"")+`</div>`).join("");
+}
+
+function buildChips(){
+  const cats = ["All", ...Array.from(new Set(state.data.stories.map(s=>s.category)))
+    .filter(c=>c!=="General").sort(), "General"];
+  const host = document.getElementById("catchips");
+  host.innerHTML = cats.map(c=>`<span class="chip ${c==="All"?"active":""}" data-c="${c}">${c}</span>`).join("");
+  host.querySelectorAll(".chip").forEach(ch=>ch.onclick=()=>{
+    host.querySelectorAll(".chip").forEach(x=>x.classList.remove("active"));
+    ch.classList.add("active"); state.cat=ch.dataset.c; render();
+  });
+}
+
+fetch("data/news.json").then(r=>{if(!r.ok)throw 0;return r.json();}).then(d=>{
+  state.data=d;
+  document.getElementById("genline").textContent =
+    `${d.n_articles} articles · ${d.sources.length} outlets · updated ${d.generated_human}`;
+  document.getElementById("srclist").innerHTML = d.sources
+    .sort((a,b)=>a.lean-b.lean)
+    .map(s=>`<span class="srcpill">${esc(s.name)} · ${esc(s.label)}</span>`).join("");
+  buildChips(); render();
+  document.getElementById("search").oninput = e=>{state.q=e.target.value;render();};
+  document.getElementById("multionly").onchange = e=>{state.multi=e.target.checked;render();};
+}).catch(()=>{document.getElementById("loaderr").style.display="block";
+  document.getElementById("genline").textContent="";});
+</script>
+</body>
+</html>
