@@ -4167,7 +4167,23 @@ window.LAB404_COURSES = {
       { id: "g1-math-g1c", obj: "1.G.1", type: "numeric", q: "How many corners does a square have?", answer: 4, why: "A square has 4 corners." },
       { id: "g1-math-g3a", obj: "1.G.3", type: "numeric", q: "How many equal parts are in halves?", answer: 2, why: "Halves means 2 equal parts." },
       { id: "g1-math-g3b", obj: "1.G.3", type: "numeric", q: "How many equal parts are in quarters (fourths)?", answer: 4, why: "Quarters means 4 equal parts." },
-      { id: "g1-math-g3c", obj: "1.G.3", type: "mc", q: "You cut a pizza into 4 equal pieces. Each piece is one:", options: ["Half", "Quarter", "Whole", "Third"], a: 1, why: "4 equal parts means each is a quarter (fourth)." }
+      { id: "g1-math-g3c", obj: "1.G.3", type: "mc", q: "You cut a pizza into 4 equal pieces. Each piece is one:", options: ["Half", "Quarter", "Whole", "Third"], a: 1, why: "4 equal parts means each is a quarter (fourth)." },
+      { id: "g1-math-oa1d", obj: "1.OA.1", type: "numeric", q: "There were 12 ducks. 5 swam away. How many are left?", answer: 7, why: "12 - 5 = 7." },
+      { id: "g1-math-oa3d", obj: "1.OA.3", type: "numeric", q: "If 5 + 9 = 14, then 9 + 5 = ?", answer: 14, why: "Order doesn't change the sum." },
+      { id: "g1-math-oa6d", obj: "1.OA.6", type: "numeric", q: "Make a ten: 9 + 4 = ?", answer: 13, why: "9 + 1 = 10, then 10 + 3 = 13." },
+      { id: "g1-math-oa7d", obj: "1.OA.7", type: "mc", q: "Is 3 + 4 = 7 true or false?", options: ["True", "False"], a: 0, why: "3 + 4 = 7, so it is true." },
+      { id: "g1-math-oa8d", obj: "1.OA.8", type: "numeric", q: "6 + ? = 10. What is the missing number?", answer: 4, why: "10 - 6 = 4." },
+      { id: "g1-math-nbt1d", obj: "1.NBT.1", type: "numeric", q: "What number comes right after 99?", answer: 100, why: "After 99 comes 100." },
+      { id: "g1-math-nbt2d", obj: "1.NBT.2", type: "numeric", q: "How many tens are in the number 60?", answer: 6, why: "60 is 6 tens and 0 ones." },
+      { id: "g1-math-nbt3d", obj: "1.NBT.3", type: "mc", q: "Which is greater, 29 or 32?", options: ["32", "29", "Equal"], a: 0, why: "3 tens beats 2 tens, so 32 > 29." },
+      { id: "g1-math-nbt4d", obj: "1.NBT.4", type: "numeric", q: "40 + 50 = ?", answer: 90, why: "4 tens + 5 tens = 9 tens = 90." },
+      { id: "g1-math-nbt5d", obj: "1.NBT.5", type: "numeric", q: "What is 10 less than 48?", answer: 38, why: "Only the tens change: 38." },
+      { id: "g1-math-md1c", obj: "1.MD.1", type: "mc", q: "To compare lengths fairly, both objects should start at:", options: ["the same line", "any spot", "the middle", "the top"], a: 0, why: "Start both at the same end to compare." },
+      { id: "g1-math-md1d", obj: "1.MD.1", type: "mc", q: "A bus is longer than a car. The car is longer than a bike. Which is shortest?", options: ["the bike", "the bus", "the car", "they are equal"], a: 0, why: "The bike is shorter than both." },
+      { id: "g1-math-md3d", obj: "1.MD.3", type: "mc", q: "The short hand is on 7 and the long hand is on 12. What time is it?", options: ["7:00", "12:00", "7:30", "6:00"], a: 0, why: "Long hand on 12 means o'clock: 7:00." },
+      { id: "g1-math-g1d", obj: "1.G.1", type: "numeric", q: "How many sides does a rectangle have?", answer: 4, why: "A rectangle has 4 sides." },
+      { id: "g1-math-g3d", obj: "1.G.3", type: "mc", q: "If you cut a shape into 2 equal parts, each part is a:", options: ["half", "quarter", "third", "whole"], a: 0, why: "2 equal parts are halves." }
+
     ]
   },
   "g2-math": {
@@ -4233,7 +4249,22 @@ window.LAB404_COURSES = {
       { id: "g2-math-g1c", obj: "2.G.1", type: "mc", q: "A shape with 4 sides is called a:", options: ["Triangle", "Quadrilateral", "Pentagon", "Hexagon"], a: 1, why: "'Quad' means four sides." },
       { id: "g2-math-g3a", obj: "2.G.3", type: "numeric", q: "How many equal parts are thirds?", answer: 3, why: "Thirds means 3 equal parts." },
       { id: "g2-math-g3b", obj: "2.G.3", type: "mc", q: "A pizza cut into 4 equal slices — each slice is a:", options: ["Half", "Third", "Fourth", "Whole"], a: 2, why: "4 equal parts means each is a fourth." },
-      { id: "g2-math-g3c", obj: "2.G.3", type: "mc", q: "To be a fair half, the two parts must be:", options: ["The same size", "Different sizes", "Both circles", "Colorful"], a: 0, why: "Equal parts are the same size." }
+      { id: "g2-math-g3c", obj: "2.G.3", type: "mc", q: "To be a fair half, the two parts must be:", options: ["The same size", "Different sizes", "Both circles", "Colorful"], a: 0, why: "Equal parts are the same size." },
+      { id: "g2-math-oa1d", obj: "2.OA.1", type: "numeric", q: "A store had 63 toys and sold 27. How many toys are left?", answer: 36, why: "63 - 27 = 36." },
+      { id: "g2-math-oa2d", obj: "2.OA.2", type: "numeric", q: "13 - 5 = ?", answer: 8, why: "13 - 5 = 8." },
+      { id: "g2-math-oa3d", obj: "2.OA.3", type: "mc", q: "Is 12 odd or even?", options: ["Even", "Odd"], a: 0, why: "12 splits into 6 and 6, so even." },
+      { id: "g2-math-oa4d", obj: "2.OA.4", type: "numeric", q: "5 rows of 3 dots. How many dots in all?", answer: 15, why: "3 + 3 + 3 + 3 + 3 = 15." },
+      { id: "g2-math-nbt1d", obj: "2.NBT.1", type: "numeric", q: "What is the value of the 7 in 274?", answer: 70, why: "7 is in the tens place = 70." },
+      { id: "g2-math-nbt2d", obj: "2.NBT.2", type: "numeric", q: "Skip-count by 10s: 40, 50, 60, then what?", answer: 70, why: "After 60 comes 70." },
+      { id: "g2-math-nbt4d", obj: "2.NBT.4", type: "mc", q: "Which is greater, 356 or 365?", options: ["365", "356", "Equal"], a: 0, why: "Hundreds match; 6 tens beats 5 tens." },
+      { id: "g2-math-nbt5d", obj: "2.NBT.5", type: "numeric", q: "64 + 29 = ?", answer: 93, why: "4+9=13 carry 1; 60+20+10 = 90, so 93." },
+      { id: "g2-math-nbt7d", obj: "2.NBT.7", type: "numeric", q: "340 + 250 = ?", answer: 590, why: "340 + 250 = 590." },
+      { id: "g2-math-md7d", obj: "2.MD.7", type: "mc", q: "Eating dinner usually happens in the:", options: ["p.m.", "a.m."], a: 0, why: "Evening is p.m." },
+      { id: "g2-math-md8d", obj: "2.MD.8", type: "numeric", q: "4 quarters is how many cents?", answer: 100, why: "4 x 25 = 100 cents (one dollar)." },
+      { id: "g2-math-md1d", obj: "2.MD.1", type: "mc", q: "Which unit best measures the length of a soccer field?", options: ["feet", "inches", "centimeters", "none"], a: 0, why: "Large distances use feet (or yards/meters)." },
+      { id: "g2-math-g1d", obj: "2.G.1", type: "numeric", q: "How many sides does an octagon (like a stop sign) have?", answer: 8, why: "An octagon has 8 sides." },
+      { id: "g2-math-g3d", obj: "2.G.3", type: "numeric", q: "How many equal parts are halves?", answer: 2, why: "Halves means 2 equal parts." }
+
     ]
   },
   "g3-math": {
@@ -4296,7 +4327,22 @@ window.LAB404_COURSES = {
       { id: "g3-math-nbt2a", obj: "3.NBT.2", type: "numeric", q: "456 + 278 = ?", answer: 734, why: "456 + 278 = 734." },
       { id: "g3-math-nbt2b", obj: "3.NBT.2", type: "numeric", q: "800 - 350 = ?", answer: 450, why: "800 - 350 = 450." },
       { id: "g3-math-g1a", obj: "3.G.1", type: "mc", q: "A quadrilateral is a shape with:", options: ["4 sides", "3 sides", "5 sides", "No sides"], a: 0, why: "'Quad' means four sides." },
-      { id: "g3-math-g1b", obj: "3.G.1", type: "mc", q: "Is a square also a rectangle?", options: ["Yes — it has 4 right angles", "No", "Only sometimes", "Only if big"], a: 0, why: "A square is a rectangle with all sides equal." }
+      { id: "g3-math-g1b", obj: "3.G.1", type: "mc", q: "Is a square also a rectangle?", options: ["Yes — it has 4 right angles", "No", "Only sometimes", "Only if big"], a: 0, why: "A square is a rectangle with all sides equal." },
+      { id: "g3-math-oa1d", obj: "3.OA.1", type: "numeric", q: "7 groups of 3 is how many? (7 × 3)", answer: 21, why: "7 × 3 = 21." },
+      { id: "g3-math-oa2d", obj: "3.OA.2", type: "numeric", q: "24 ÷ 6 = ?", answer: 4, why: "24 ÷ 6 = 4." },
+      { id: "g3-math-oa3d", obj: "3.OA.3", type: "numeric", q: "There are 5 teams with 8 players each. How many players in all?", answer: 40, why: "5 × 8 = 40." },
+      { id: "g3-math-oa7d", obj: "3.OA.7", type: "numeric", q: "6 × 7 = ?", answer: 42, why: "6 × 7 = 42." },
+      { id: "g3-math-oa8d", obj: "3.OA.8", type: "numeric", q: "You buy 4 boxes of 5 pencils, then give away 3. How many pencils left?", answer: 17, why: "4 × 5 = 20, then 20 - 3 = 17." },
+      { id: "g3-math-nbt1d", obj: "3.NBT.1", type: "numeric", q: "Round 83 to the nearest ten.", answer: 80, why: "3 is less than 5, so round down to 80." },
+      { id: "g3-math-nbt3d", obj: "3.NBT.3", type: "numeric", q: "9 × 50 = ?", answer: 450, why: "9 × 5 = 45, add the 0 → 450." },
+      { id: "g3-math-nf1d", obj: "3.NF.1", type: "mc", q: "In 2/5, the top number (2) tells you:", options: ["how many parts you have", "how many parts in the whole", "to add 2", "nothing"], a: 0, why: "The numerator is how many parts you have." },
+      { id: "g3-math-nf3d", obj: "3.NF.3", type: "mc", q: "Which fraction equals 2/4?", options: ["1/2", "1/4", "3/4", "2/3"], a: 0, why: "2/4 = 1/2." },
+      { id: "g3-math-md1d", obj: "3.MD.1", type: "numeric", q: "How many minutes from 4:10 to 4:55?", answer: 45, why: "55 - 10 = 45 minutes." },
+      { id: "g3-math-md7d", obj: "3.MD.7", type: "numeric", q: "A rectangle is 7 by 3. What is its area in square units?", answer: 21, why: "Area = 7 × 3 = 21." },
+      { id: "g3-math-md8d", obj: "3.MD.8", type: "numeric", q: "A triangle has sides of 5, 6, and 7. What is the perimeter?", answer: 18, why: "5 + 6 + 7 = 18." },
+      { id: "g3-math-nbt2d", obj: "3.NBT.2", type: "numeric", q: "725 - 300 = ?", answer: 425, why: "725 - 300 = 425." },
+      { id: "g3-math-g1d", obj: "3.G.1", type: "mc", q: "Which shape is a quadrilateral?", options: ["a rectangle", "a triangle", "a pentagon", "a circle"], a: 0, why: "A rectangle has 4 sides." }
+
     ]
   },
   "gK-english": {
