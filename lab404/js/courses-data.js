@@ -4264,6 +4264,12 @@ window.LAB404_COURSES = {
       { id: "g2-math-md1d", obj: "2.MD.1", type: "mc", q: "Which unit best measures the length of a soccer field?", options: ["feet", "inches", "centimeters", "none"], a: 0, why: "Large distances use feet (or yards/meters)." },
       { id: "g2-math-g1d", obj: "2.G.1", type: "numeric", q: "How many sides does an octagon (like a stop sign) have?", answer: 8, why: "An octagon has 8 sides." },
       { id: "g2-math-g3d", obj: "2.G.3", type: "numeric", q: "How many equal parts are halves?", answer: 2, why: "Halves means 2 equal parts." }
+,
+      { id: "g2-math-oa4e", obj: "2.OA.4", type: "numeric", q: "4 rows of 4 chairs. How many chairs in all?", answer: 16, why: "4 + 4 + 4 + 4 = 16." },
+      { id: "g2-math-nbt2e", obj: "2.NBT.2", type: "numeric", q: "Skip-count by 5s: 50, 55, 60, then what?", answer: 65, why: "After 60 comes 65." },
+      { id: "g2-math-nbt4e", obj: "2.NBT.4", type: "mc", q: "Which sign is true: 418 ? 481", options: ["<", ">", "="], a: 0, why: "418 is less than 481 (1 ten vs 8 tens)." },
+      { id: "g2-math-nbt7e", obj: "2.NBT.7", type: "numeric", q: "615 + 200 = ?", answer: 815, why: "6 hundreds + 2 hundreds = 8 hundreds, so 815." },
+      { id: "g2-math-md1e", obj: "2.MD.1", type: "mc", q: "Which tool measures how long something is?", options: ["a ruler", "a clock", "a scale for weight", "a thermometer"], a: 0, why: "A ruler measures length." }
 
     ]
   },
@@ -4342,6 +4348,16 @@ window.LAB404_COURSES = {
       { id: "g3-math-md8d", obj: "3.MD.8", type: "numeric", q: "A triangle has sides of 5, 6, and 7. What is the perimeter?", answer: 18, why: "5 + 6 + 7 = 18." },
       { id: "g3-math-nbt2d", obj: "3.NBT.2", type: "numeric", q: "725 - 300 = ?", answer: 425, why: "725 - 300 = 425." },
       { id: "g3-math-g1d", obj: "3.G.1", type: "mc", q: "Which shape is a quadrilateral?", options: ["a rectangle", "a triangle", "a pentagon", "a circle"], a: 0, why: "A rectangle has 4 sides." }
+,
+      { id: "g3-math-oa3e", obj: "3.OA.3", type: "numeric", q: "There are 8 rows of 6 seats. How many seats in all?", answer: 48, why: "8 × 6 = 48." },
+      { id: "g3-math-oa8e", obj: "3.OA.8", type: "numeric", q: "You have 30 stickers, share them on 5 pages, then use 4. How many left?", answer: 2, why: "30 ÷ 5 = 6 per page; the question: 6 - 4 = 2 left on a page." },
+      { id: "g3-math-nbt3e", obj: "3.NBT.3", type: "numeric", q: "4 × 70 = ?", answer: 280, why: "4 × 7 = 28, add the 0 → 280." },
+      { id: "g3-math-nf1e", obj: "3.NF.1", type: "mc", q: "In the fraction 3/5, the 5 is the:", options: ["denominator (parts in the whole)", "numerator", "sum", "product"], a: 0, why: "The bottom number is the denominator." },
+      { id: "g3-math-md1e", obj: "3.MD.1", type: "numeric", q: "How many minutes from 1:20 to 2:00?", answer: 40, why: "60 - 20 = 40 minutes." },
+      { id: "g3-math-md7e", obj: "3.MD.7", type: "numeric", q: "A rectangle is 8 by 5. What is its area in square units?", answer: 40, why: "Area = 8 × 5 = 40." },
+      { id: "g3-math-md8e", obj: "3.MD.8", type: "numeric", q: "A rectangle is 10 by 2. What is the perimeter?", answer: 24, why: "10 + 2 + 10 + 2 = 24." },
+      { id: "g3-math-nbt2e", obj: "3.NBT.2", type: "numeric", q: "347 + 215 = ?", answer: 562, why: "347 + 215 = 562." },
+      { id: "g3-math-g1e", obj: "3.G.1", type: "mc", q: "A square is a special kind of:", options: ["rectangle", "triangle", "circle", "pentagon"], a: 0, why: "A square is a rectangle with all sides equal." }
 
     ]
   },
@@ -5249,7 +5265,21 @@ window.LAB404_COURSES = {
       { id: "gC-math-sp1c", obj: "C.SP.1", type: "mc", q: "Which measure of center resists outliers best?", options: ["median", "mean", "range", "sum"], a: 0, why: "The median isn't pulled by extreme values." },
       { id: "gC-math-sp2a", obj: "C.SP.2", type: "mc", q: "Probability of rolling a 4 on a six-sided die:", options: ["1/6", "1/4", "4/6", "1/2"], a: 0, why: "1 favorable of 6 outcomes." },
       { id: "gC-math-sp2b", obj: "C.SP.2", type: "mc", q: "Probability of two coin flips both landing heads:", options: ["1/4", "1/2", "1", "1/8"], a: 0, why: "1/2 × 1/2 = 1/4." },
-      { id: "gC-math-sp2c", obj: "C.SP.2", type: "mc", q: "A probability of 0 means the event is:", options: ["impossible", "certain", "likely", "random"], a: 0, why: "0 = impossible, 1 = certain." }
+      { id: "gC-math-sp2c", obj: "C.SP.2", type: "mc", q: "A probability of 0 means the event is:", options: ["impossible", "certain", "likely", "random"], a: 0, why: "0 = impossible, 1 = certain." },
+      { id: "gC-math-eq1d", obj: "C.EQ.1", type: "numeric", q: "Solve: 5x + 3 = 28. x = ?", answer: 5, why: "5x = 25, x = 5." },
+      { id: "gC-math-eq2d", obj: "C.EQ.2", type: "mc", q: "Simplify x^8 / x^3.", options: ["x^5", "x^11", "x^24", "x^2"], a: 0, why: "Subtract exponents: 8-3 = 5." },
+      { id: "gC-math-eq3d", obj: "C.EQ.3", type: "mc", q: "Solve x^2 - 9 = 0.", options: ["x = 3 or -3", "x = 9", "x = 3 only", "x = 0"], a: 0, why: "(x-3)(x+3)=0, so x = 3 or -3." },
+      { id: "gC-math-fn1d", obj: "C.FN.1", type: "numeric", q: "If f(x) = 3x - 4, find f(5).", answer: 11, why: "3(5)-4 = 11." },
+      { id: "gC-math-fn2d", obj: "C.FN.2", type: "numeric", q: "Find the slope through (1,1) and (3,7).", answer: 3, why: "(7-1)/(3-1) = 6/2 = 3." },
+      { id: "gC-math-fn3c", obj: "C.FN.3", type: "mc", q: "The parabola y = 2x^2 opens:", options: ["up", "down", "left", "right"], a: 0, why: "a > 0 opens up." },
+      { id: "gC-math-fn3d", obj: "C.FN.3", type: "numeric", q: "For y = x^2 - 6x + 5, the vertex x-coordinate -b/(2a) = ?", answer: 3, why: "-(-6)/(2·1) = 3." },
+      { id: "gC-math-fn4c", obj: "C.FN.4", type: "mc", q: "y = a·b^x shows DECAY when:", options: ["0 < b < 1", "b > 1", "b = 1", "b < -1"], a: 0, why: "A base between 0 and 1 means decay." },
+      { id: "gC-math-fn4d", obj: "C.FN.4", type: "mc", q: "A population doubling each year is modeled by a base of:", options: ["2", "0.5", "1", "-2"], a: 0, why: "Doubling means multiply by 2 each step." },
+      { id: "gC-math-eq4c", obj: "C.EQ.4", type: "mc", q: "Solve the system y = 2x and x + y = 9. x = ?", options: ["3", "6", "9", "2"], a: 0, why: "x + 2x = 9 → 3x = 9 → x = 3." },
+      { id: "gC-math-eq4d", obj: "C.EQ.4", type: "mc", q: "A system with the same line for both equations has:", options: ["infinite solutions", "no solution", "one solution", "two solutions"], a: 0, why: "Identical lines share every point." },
+      { id: "gC-math-sp1d", obj: "C.SP.1", type: "numeric", q: "Find the mode of 3, 7, 7, 7, 9, 2.", answer: 7, why: "7 appears most often." },
+      { id: "gC-math-sp2d", obj: "C.SP.2", type: "mc", q: "A probability of 1 means the event is:", options: ["certain", "impossible", "unlikely", "random"], a: 0, why: "1 = certain, 0 = impossible." }
+
     ]
   },
   "gC-english": {
@@ -5297,7 +5327,25 @@ window.LAB404_COURSES = {
       { id: "gC-eng-mc1a", obj: "C.MC.1", type: "mc", q: "'It rained, we stayed in.' This error is a:", options: ["comma splice", "parallelism error", "correct sentence", "fragment"], a: 0, why: "Two sentences joined by only a comma." },
       { id: "gC-eng-mc1b", obj: "C.MC.1", type: "mc", q: "Which correctly fixes 'I studied hard, I passed'?", options: ["I studied hard, so I passed.", "I studied hard I passed.", "I studied hard, I passed,", "I studied hard: I passed,"], a: 0, why: "Comma + conjunction fixes the splice." },
       { id: "gC-eng-mc2a", obj: "C.MC.2", type: "mc", q: "Which list is parallel?", options: ["reading, writing, and studying", "reading, writing, and to study", "to read, writing, study", "read, to write, studying"], a: 0, why: "All -ing forms are parallel." },
-      { id: "gC-eng-mc2b", obj: "C.MC.2", type: "mc", q: "Replace 'due to the fact that' with:", options: ["because", "on account of the reason", "owing to the fact", "in light of that"], a: 0, why: "'Because' is concise." }
+      { id: "gC-eng-mc2b", obj: "C.MC.2", type: "mc", q: "Replace 'due to the fact that' with:", options: ["because", "on account of the reason", "owing to the fact", "in light of that"], a: 0, why: "'Because' is concise." },
+      { id: "gC-eng-w1d", obj: "C.W.1", type: "mc", q: "A thesis belongs where in most essays?", options: ["end of the introduction", "the title", "a random body paragraph", "the works cited"], a: 0, why: "The thesis usually closes the intro." },
+      { id: "gC-eng-w2c", obj: "C.W.2", type: "mc", q: "The job of the introduction is to:", options: ["hook the reader and present the thesis", "cite all sources", "list the conclusion", "repeat the body"], a: 0, why: "The intro hooks and states the thesis." },
+      { id: "gC-eng-w2d", obj: "C.W.2", type: "mc", q: "Transitions (however, furthermore) are used to:", options: ["connect ideas smoothly", "end the essay", "cite sources", "start a quote"], a: 0, why: "Transitions link ideas for flow." },
+      { id: "gC-eng-w3c", obj: "C.W.3", type: "mc", q: "How many main ideas should one body paragraph develop?", options: ["one", "three", "five", "as many as possible"], a: 0, why: "One idea per paragraph keeps it focused." },
+      { id: "gC-eng-w3d", obj: "C.W.3", type: "mc", q: "In the P-E-E structure, the final E stands for:", options: ["Explanation", "Ending", "Example only", "Evidence"], a: 0, why: "Point, Evidence, Explanation." },
+      { id: "gC-eng-ar1c", obj: "C.AR.1", type: "mc", q: "Unsupported claims are really just:", options: ["opinions", "evidence", "facts", "citations"], a: 0, why: "Without evidence, a claim is only opinion." },
+      { id: "gC-eng-ar1d", obj: "C.AR.1", type: "mc", q: "A rebuttal is when you:", options: ["answer the counterargument", "ignore the other side", "restate the thesis", "add a quote"], a: 0, why: "A rebuttal responds to the opposing view." },
+      { id: "gC-eng-ar2d", obj: "C.AR.2", type: "mc", q: "Over-relying on pathos can make an argument feel:", options: ["manipulative", "logical", "credible", "balanced"], a: 0, why: "Too much emotion can feel manipulative." },
+      { id: "gC-eng-ar3c", obj: "C.AR.3", type: "mc", q: "A writer's word choice is also called:", options: ["diction", "citation", "margin", "thesis"], a: 0, why: "Diction = word choice, which reveals tone." },
+      { id: "gC-eng-ar3d", obj: "C.AR.3", type: "mc", q: "If an author's purpose is to inform, the tone is usually:", options: ["neutral and factual", "sarcastic", "angry", "pleading"], a: 0, why: "Informative writing tends to be neutral." },
+      { id: "gC-eng-rs1c", obj: "C.RS.1", type: "mc", q: "A source's publication date matters because:", options: ["information can become outdated", "it changes the font", "it sets the price", "it never matters"], a: 0, why: "Old sources may be outdated." },
+      { id: "gC-eng-rs1d", obj: "C.RS.1", type: "mc", q: "Which domain type is often (but not always) more reliable?", options: [".gov or .edu", "a random blog", "an anonymous post", "a meme"], a: 0, why: ".gov/.edu are often reliable — still verify." },
+      { id: "gC-eng-rs2d", obj: "C.RS.2", type: "mc", q: "Changing just a few words of a source without a citation is:", options: ["still plagiarism", "proper paraphrasing", "quoting", "fine"], a: 0, why: "True paraphrase rewrites AND cites." },
+      { id: "gC-eng-mc1c", obj: "C.MC.1", type: "mc", q: "A run-on sentence joins two complete sentences with:", options: ["no proper punctuation", "a period", "a semicolon", "a conjunction"], a: 0, why: "Run-ons lack correct punctuation between clauses." },
+      { id: "gC-eng-mc1d", obj: "C.MC.1", type: "mc", q: "Which correctly joins two independent clauses?", options: ["I ran; I won.", "I ran, I won.", "I ran I won.", "I ran, I won"], a: 0, why: "A semicolon correctly joins two independent clauses." },
+      { id: "gC-eng-mc2c", obj: "C.MC.2", type: "mc", q: "Which sentence is parallel?", options: ["She likes hiking, biking, and swimming.", "She likes hiking, to bike, and swimming.", "She likes to hike, biking, swim.", "She likes hike, biking, to swim."], a: 0, why: "All -ing forms are parallel." },
+      { id: "gC-eng-mc2d", obj: "C.MC.2", type: "mc", q: "Concise writing means:", options: ["saying it clearly with no extra words", "using the longest words", "repeating ideas", "adding filler"], a: 0, why: "Concision cuts wordiness while keeping meaning." }
+
     ]
   },
   "gC-science": {
@@ -5345,7 +5393,25 @@ window.LAB404_COURSES = {
       { id: "gC-sci-phy2b", obj: "C.PHY.2", type: "mc", q: "'Every action has an equal and opposite reaction' is Newton's:", options: ["third law", "first law", "second law", "law of gravity"], a: 0, why: "That's the third law." },
       { id: "gC-sci-phy2c", obj: "C.PHY.2", type: "mc", q: "The tendency of objects to resist changes in motion is:", options: ["inertia", "friction", "gravity", "acceleration"], a: 0, why: "Inertia is described by Newton's first law." },
       { id: "gC-sci-chem3a", obj: "C.CHEM.3", type: "mc", q: "In which state do particles move freely and are far apart?", options: ["gas", "solid", "liquid", "none"], a: 0, why: "Gas particles move freely and spread out." },
-      { id: "gC-sci-chem3b", obj: "C.CHEM.3", type: "mc", q: "Melting is the change from:", options: ["solid to liquid", "liquid to gas", "gas to liquid", "liquid to solid"], a: 0, why: "Melting: solid → liquid." }
+      { id: "gC-sci-chem3b", obj: "C.CHEM.3", type: "mc", q: "Melting is the change from:", options: ["solid to liquid", "liquid to gas", "gas to liquid", "liquid to solid"], a: 0, why: "Melting: solid → liquid." },
+      { id: "gC-sci-sm1d", obj: "C.SM.1", type: "mc", q: "The variable you MEASURE in an experiment is the:", options: ["dependent variable", "independent variable", "control", "hypothesis"], a: 0, why: "The dependent variable is measured." },
+      { id: "gC-sci-bio1d", obj: "C.BIO.1", type: "mc", q: "Which organelle stores the cell's DNA?", options: ["nucleus", "mitochondria", "ribosome", "cell membrane"], a: 0, why: "The nucleus stores DNA." },
+      { id: "gC-sci-bio2c", obj: "C.BIO.2", type: "mc", q: "The process of copying DNA into RNA is called:", options: ["transcription", "translation", "mitosis", "digestion"], a: 0, why: "DNA -> RNA is transcription." },
+      { id: "gC-sci-bio2d", obj: "C.BIO.2", type: "mc", q: "An organism's set of genes is its:", options: ["genotype", "phenotype", "habitat", "niche"], a: 0, why: "Genotype = the genes; phenotype = visible trait." },
+      { id: "gC-sci-bio3c", obj: "C.BIO.3", type: "mc", q: "Antibiotic-resistant bacteria becoming common is an example of:", options: ["natural selection", "photosynthesis", "condensation", "inertia"], a: 0, why: "Survivors reproduce and pass on resistance." },
+      { id: "gC-sci-bio3d", obj: "C.BIO.3", type: "mc", q: "Natural selection acts on:", options: ["populations over generations", "one individual in a day", "nonliving rocks", "the weather"], a: 0, why: "Selection changes populations over time." },
+      { id: "gC-sci-bio4c", obj: "C.BIO.4", type: "mc", q: "Organisms that break down dead matter and recycle nutrients are:", options: ["decomposers", "producers", "predators", "herbivores"], a: 0, why: "Decomposers recycle nutrients." },
+      { id: "gC-sci-bio4d", obj: "C.BIO.4", type: "mc", q: "Energy in an ecosystem ultimately flows:", options: ["one way, lost as heat", "in a closed circle forever", "backward up the chain", "nowhere"], a: 0, why: "Energy flows one way and is lost as heat." },
+      { id: "gC-sci-chem1c", obj: "C.CHEM.1", type: "mc", q: "Which subatomic particle has a negative charge?", options: ["electron", "proton", "neutron", "nucleus"], a: 0, why: "Electrons are negative." },
+      { id: "gC-sci-chem1d", obj: "C.CHEM.1", type: "mc", q: "A neutral atom has equal numbers of:", options: ["protons and electrons", "neutrons and protons only", "electrons and neutrons", "none"], a: 0, why: "Equal + and - charges make it neutral." },
+      { id: "gC-sci-chem2c", obj: "C.CHEM.2", type: "mc", q: "A bond that SHARES electrons between nonmetals is:", options: ["covalent", "ionic", "magnetic", "nuclear"], a: 0, why: "Covalent bonds share electrons." },
+      { id: "gC-sci-chem2d", obj: "C.CHEM.2", type: "mc", q: "To balance a chemical equation, the number of each atom must:", options: ["match on both sides", "be zero", "double", "disappear"], a: 0, why: "Conservation of mass: atoms match on both sides." },
+      { id: "gC-sci-phy1c", obj: "C.PHY.1", type: "mc", q: "Energy of motion is called:", options: ["kinetic energy", "potential energy", "chemical energy", "nuclear energy"], a: 0, why: "Kinetic energy is energy of motion." },
+      { id: "gC-sci-phy1d", obj: "C.PHY.1", type: "mc", q: "When a ball falls, potential energy turns into:", options: ["kinetic energy", "more potential energy", "sound only", "nothing"], a: 0, why: "Falling converts potential to kinetic energy." },
+      { id: "gC-sci-phy2d", obj: "C.PHY.2", type: "mc", q: "Doubling the force on an object (same mass) will:", options: ["double its acceleration", "halve its acceleration", "stop it", "not change it"], a: 0, why: "F = ma: more force, more acceleration." },
+      { id: "gC-sci-chem3c", obj: "C.CHEM.3", type: "mc", q: "Freezing is the change from:", options: ["liquid to solid", "solid to liquid", "liquid to gas", "gas to solid"], a: 0, why: "Freezing: liquid -> solid." },
+      { id: "gC-sci-chem3d", obj: "C.CHEM.3", type: "mc", q: "During a phase change, the temperature usually:", options: ["stays constant", "rises fast", "drops to zero", "doubles"], a: 0, why: "Energy breaks bonds, so temperature holds steady." }
+
     ]
   },
   "gC-social": {
@@ -5390,7 +5456,26 @@ window.LAB404_COURSES = {
       { id: "gC-soc-eco4b", obj: "C.ECO.4", type: "mc", q: "A general rise in overall prices is:", options: ["inflation", "unemployment", "GDP", "a surplus"], a: 0, why: "Inflation is rising prices." },
       { id: "gC-soc-eco5a", obj: "C.ECO.5", type: "mc", q: "Government using taxes and spending to steer the economy is:", options: ["fiscal policy", "monetary policy", "judicial review", "federalism"], a: 0, why: "Fiscal policy = taxes and spending." },
       { id: "gC-soc-eco5b", obj: "C.ECO.5", type: "mc", q: "The Federal Reserve adjusting interest rates is:", options: ["monetary policy", "fiscal policy", "a veto", "an election"], a: 0, why: "The Fed conducts monetary policy." },
-      { id: "gC-soc-eco5c", obj: "C.ECO.5", type: "mc", q: "To encourage borrowing and growth, the Fed usually:", options: ["lowers interest rates", "raises interest rates", "stops printing money", "raises taxes"], a: 0, why: "Lower rates make borrowing cheaper." }
+      { id: "gC-soc-eco5c", obj: "C.ECO.5", type: "mc", q: "To encourage borrowing and growth, the Fed usually:", options: ["lowers interest rates", "raises interest rates", "stops printing money", "raises taxes"], a: 0, why: "Lower rates make borrowing cheaper." },
+      { id: "gC-soc-gov1c", obj: "C.GOV.1", type: "mc", q: "The three branches of U.S. government are:", options: ["legislative, executive, judicial", "local, state, federal", "House, Senate, President", "left, center, right"], a: 0, why: "The three branches are legislative, executive, judicial." },
+      { id: "gC-soc-gov1d", obj: "C.GOV.1", type: "mc", q: "The Tenth Amendment reserves un-delegated powers to:", options: ["the states", "the President", "the courts", "foreign nations"], a: 0, why: "The 10th Amendment reserves powers to the states." },
+      { id: "gC-soc-gov2c", obj: "C.GOV.2", type: "mc", q: "The President's main check on Congress is the:", options: ["veto", "filibuster", "impeachment", "pardon"], a: 0, why: "The President can veto bills." },
+      { id: "gC-soc-gov2d", obj: "C.GOV.2", type: "mc", q: "Marbury v. Madison established:", options: ["judicial review", "the veto", "federalism", "term limits"], a: 0, why: "It established judicial review." },
+      { id: "gC-soc-gov3c", obj: "C.GOV.3", type: "mc", q: "The first ten amendments are known as the:", options: ["Bill of Rights", "Preamble", "Declaration", "Articles"], a: 0, why: "The Bill of Rights is the first ten amendments." },
+      { id: "gC-soc-gov3d", obj: "C.GOV.3", type: "mc", q: "Freedom from unreasonable searches is protected by the:", options: ["Fourth Amendment", "First Amendment", "Tenth Amendment", "Fifth Amendment"], a: 0, why: "The 4th Amendment covers searches." },
+      { id: "gC-soc-gov4c", obj: "C.GOV.4", type: "mc", q: "A bill is first studied in:", options: ["committee", "the Supreme Court", "the Oval Office", "the states"], a: 0, why: "Committees review bills first." },
+      { id: "gC-soc-gov4d", obj: "C.GOV.4", type: "mc", q: "If the President vetoes a bill, Congress can override with a:", options: ["two-thirds vote in both chambers", "simple majority", "court ruling", "public vote"], a: 0, why: "A two-thirds vote overrides a veto." },
+      { id: "gC-soc-gov5c", obj: "C.GOV.5", type: "mc", q: "In a representative democracy, voters:", options: ["elect officials to make decisions", "make every law directly", "appoint a king", "do nothing"], a: 0, why: "Citizens elect representatives." },
+      { id: "gC-soc-gov5d", obj: "C.GOV.5", type: "mc", q: "Which is a form of civic participation?", options: ["voting", "ignoring elections", "breaking laws", "nothing"], a: 0, why: "Voting is civic participation." },
+      { id: "gC-soc-eco1c", obj: "C.ECO.1", type: "mc", q: "Scarcity exists because:", options: ["wants are unlimited but resources are limited", "everything is free", "no one wants anything", "money grows on trees"], a: 0, why: "Limited resources + unlimited wants = scarcity." },
+      { id: "gC-soc-eco1d", obj: "C.ECO.1", type: "mc", q: "'Thinking at the margin' means weighing:", options: ["a little more vs a little less", "all or nothing", "only the past", "the total only"], a: 0, why: "Marginal thinking compares small changes." },
+      { id: "gC-soc-eco2d", obj: "C.ECO.2", type: "mc", q: "By the law of supply, when price rises, quantity supplied:", options: ["rises", "falls", "stays the same", "disappears"], a: 0, why: "Higher price, more supplied." },
+      { id: "gC-soc-eco3c", obj: "C.ECO.3", type: "mc", q: "Laws that keep markets competitive are called:", options: ["antitrust laws", "tax laws", "zoning laws", "traffic laws"], a: 0, why: "Antitrust laws limit monopoly power." },
+      { id: "gC-soc-eco3d", obj: "C.ECO.3", type: "mc", q: "A monopoly tends to:", options: ["raise prices and reduce choice", "lower prices", "improve competition", "help consumers most"], a: 0, why: "With no competition, a monopoly can charge more." },
+      { id: "gC-soc-eco4c", obj: "C.ECO.4", type: "mc", q: "The unemployment rate measures:", options: ["jobless people who want work, as a share of the labor force", "total population", "the number of jobs", "GDP"], a: 0, why: "It's jobless job-seekers over the labor force." },
+      { id: "gC-soc-eco4d", obj: "C.ECO.4", type: "mc", q: "GDP adjusted for inflation is called:", options: ["real GDP", "nominal GDP", "net GDP", "gross GDP"], a: 0, why: "Real GDP is inflation-adjusted." },
+      { id: "gC-soc-eco5d", obj: "C.ECO.5", type: "mc", q: "To slow high inflation, the Federal Reserve usually:", options: ["raises interest rates", "lowers interest rates", "prints more money", "cuts taxes"], a: 0, why: "Higher rates cool spending and inflation." }
+
     ]
   }
 };
