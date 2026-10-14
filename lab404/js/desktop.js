@@ -1137,7 +1137,7 @@
     _progKey: "lab404.progress",
     _progGet: function () { try { return JSON.parse(localStorage.getItem(this._progKey)) || {}; } catch (e) { return {}; } },
     _progSet: function (p) { try { localStorage.setItem(this._progKey, JSON.stringify(p)); } catch (e) {} },
-    _recordQuiz: function (ckey, pct) { if (!ckey) return null; var p = this._progGet(); var e = p[ckey] || { best: 0, attempts: 0 }; var leveled = pct >= 0.85 && (e.best || 0) < 0.85; e.best = Math.max(e.best || 0, pct); e.last = pct; e.attempts = (e.attempts || 0) + 1; p[ckey] = e; this._progSet(p); return { leveled: leveled }; },
+    _recordQuiz: function (ckey, pct) { if (!ckey) return null; var p = this._progGet(); var e = p[ckey] || { best: 0, attempts: 0 }; var leveled = pct >= 0.85 && (e.best || 0) < 0.85; e.best = Math.max(e.best || 0, pct); e.last = pct; e.attempts = (e.attempts || 0) + 1; p[ckey] = e; this._progSet(p); if (window.refreshXP) { try { window.refreshXP(); } catch (x) {} } return { leveled: leveled }; },
     _bandFromPct: function (best, attempted) { if (!attempted) return "none"; if (best >= 0.85) return "mastered"; if (best >= 0.70) return "strong"; if (best >= 0.40) return "needs"; return "weak"; },
     _topicBand: function (ckey) { var e = this._progGet()[ckey]; return this._bandFromPct(e ? e.best : 0, !!(e && e.attempts)); },
     _BAND_COL: { none: "#5a6472", weak: "#e0484a", needs: "#e0a93c", strong: "#4a90e2", mastered: "#3cbe6e" },

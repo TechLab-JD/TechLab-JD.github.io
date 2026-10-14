@@ -34,6 +34,34 @@
       xp += Math.min(Object.keys(wrong).length * 2, 200); /* cap at 200 from this source */
     } catch (e) {}
 
+    /* Life/elective topic quizzes (lab404.progress): best score + participation,
+       so studying ANY subject feeds the same level. ~23 XP for a mastered topic. */
+    try {
+      var prog = JSON.parse(localStorage.getItem("lab404.progress") || "{}");
+      Object.keys(prog).forEach(function (k) {
+        var e = prog[k];
+        if (!e || !e.attempts) return;
+        xp += Math.round((e.best || 0) * 20) + 3;
+      });
+    } catch (e) {}
+
+    /* Graded-course mastery (lab404.mastery.<id>): reward mastered + strong
+       objectives, so K-12 / College course progress counts toward the level too. */
+    try {
+      var M = window.LAB404_MASTERY, COURSES = window.LAB404_COURSES || {};
+      if (M && M.readiness) {
+        Object.keys(COURSES).forEach(function (id) {
+          if (!localStorage.getItem("lab404.mastery." + id)) return; /* only started courses */
+          var r = M.readiness(id);
+          if (!r) return;
+          xp += (r.mastered || 0) * 15;
+          var strong = (r.counts && r.counts.strong) ? r.counts.strong : 0;
+          xp += strong * 7;
+          if (r.started) xp += 5;
+        });
+      }
+    } catch (e) {}
+
     return xp;
   }
 
