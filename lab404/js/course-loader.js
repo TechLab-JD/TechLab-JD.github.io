@@ -6,6 +6,18 @@ window.CourseLoader = (function () {
   var M = window.LAB404_MASTERY;
   var el, courseId, course, quiz = null;
   var audio = { base: "", have: null, autoplay: false, cur: null };  // pre-rendered Kokoro clips (optional per course)
+  var learnText = {};  // plain-text per objective for the read-aloud layer
+
+  function objPlain(ob) {
+    var t = (ob.title ? ob.title + ". " : "") + (ob.teach ? ob.teach + " " : "");
+    if (ob.deep && ob.deep.length) {
+      ob.deep.forEach(function (s) {
+        t += (s.h ? s.h + ". " : "") + (s.body ? s.body + " " : "") +
+          (s.example ? "For example, " + s.example + " " : "") + (s.tip ? "Tip. " + s.tip + " " : "");
+      });
+    } else if (ob.ex) { t += "Worked example. " + ob.ex + " "; }
+    return t;
+  }
 
   function loadAudioManifest() {
     audio.have = null; audio.cur = null;
@@ -86,6 +98,9 @@ window.CourseLoader = (function () {
       ".cv-warn{background:rgba(230,160,40,.12);border-left:3px solid #e0a93c;border-radius:6px;padding:7px 11px;margin:6px 0 10px;font-size:.82rem}" +
       ".cv-learn-btn{border:1px solid var(--accent2,#4a90e2);background:transparent;color:var(--accent2,#4a90e2);border-radius:8px;padding:5px 10px;font:inherit;font-size:.72rem;font-weight:700;cursor:pointer;white-space:nowrap}" +
       ".cv-learn-btn.on{background:var(--accent2,#4a90e2);color:#fff}" +
+      ".cv-learn-foot{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:4px}" +
+      ".cv-readaloud{border-color:rgba(232,163,60,.5);color:var(--amber,#E8A33C)}" +
+      ".cv-readaloud.playing{background:var(--amber,#E8A33C);color:#1a1205;border-color:var(--amber,#E8A33C)}" +
       /* quiz */
       ".cv-q{max-width:560px;margin:0 auto}" +
       ".cv-prog{font-size:.72rem;color:var(--text-muted,#9aa);margin-bottom:6px;display:flex;justify-content:space-between}" +
@@ -127,6 +142,7 @@ window.CourseLoader = (function () {
   }
 
   function renderDash() {
+    learnText = {};
     var r = M.readiness(courseId);
     var pill = function (b, n) { return '<span class="cv-pill cv-' + b + '">' + n + '</span>'; };
     var counts = '<span class="cv-pill cv-mastered">' + r.counts.mastered + ' mastered</span>' +
@@ -170,10 +186,13 @@ window.CourseLoader = (function () {
         var body = hasDeep
           ? (ob.teach ? paras(ob.teach) : "") + ob.deep.map(deepSection).join("")
           : (ob.teach ? paras(ob.teach) : "") + (ob.ex ? '<div class="cv-ex"><span class="cv-ex-l">Worked example</span>' + esc(ob.ex) + '</div>' : "");
+        if (hasLearn) learnText[ob.code] = objPlain(ob);
         var learn = hasLearn ? '<div class="cv-learn hide" id="cv-learn-' + esc(ob.code) + '">' +
           body +
+          '<div class="cv-learn-foot">' +
           '<button class="cv-btn sm" data-practice="' + esc(ob.code) + '"' + (nq ? "" : " disabled") + '>🎯 Practice this objective</button>' +
-          '</div>' : "";
+          '<button class="cv-btn ghost sm cv-readaloud" data-readaloud="' + esc(ob.code) + '" aria-pressed="false" title="Read this aloud"><span class="ra-lbl">🔊 Listen</span></button>' +
+          '</div></div>' : "";
         return '<div class="cv-objwrap">' + head + learn + '</div>';
       }).join("");
       return '<div class="cv-dom"><div class="cv-domh">' + esc(dm.code) + " — " + esc(dm.name) + '</div>' + rows + '</div>';
@@ -209,8 +228,12 @@ window.CourseLoader = (function () {
     el.querySelectorAll("[data-learn]").forEach(function (b) {
       b.addEventListener("click", function () {
         var panel = document.getElementById("cv-learn-" + this.getAttribute("data-learn"));
-        if (panel) { var open = panel.classList.toggle("hide"); this.classList.toggle("on", !open); }
+        if (panel) { var open = panel.classList.toggle("hide"); this.classList.toggle("on", !open); if (open && window.ReadAloud) window.ReadAloud.stop(); }
       });
+    });
+    el.querySelectorAll("[data-readaloud]").forEach(function (b) {
+      if (!(window.ReadAloud && window.ReadAloud.supported())) { b.style.display = "none"; return; }
+      b.addEventListener("click", function () { window.ReadAloud.toggle(learnText[this.getAttribute("data-readaloud")] || "", this); });
     });
   }
 

@@ -1183,7 +1183,8 @@
         '<button class="lsn-tab on" data-view="lesson">📖 Lesson</button>' +
         (d.flash && d.flash.length ? '<button class="lsn-tab" data-view="flash">🃏 Flashcards (' + d.flash.length + ')</button>' : "") +
         (d.quiz && d.quiz.length ? '<button class="lsn-tab" data-view="quiz">🎯 Quiz (' + d.quiz.length + ')</button>' : "") +
-        '<button class="lsn-tab" data-view="progress">📊 Progress</button>' + '</div>';
+        '<button class="lsn-tab" data-view="progress">📊 Progress</button>' +
+        '<button class="lsn-tab lsn-listen" type="button" aria-pressed="false" title="Read this lesson aloud"><span class="ra-lbl">🔊 Listen</span></button>' + '</div>';
       /* tie this lesson to its subject's graded course for the current grade (K-12 = the structure) */
       var _sk = ckey ? ckey.split("-")[0] : "", _CO = window.LAB404_COURSES || {}, _g = Desktop._gradeGet();
       var _ck = Object.keys(_CO).filter(function (k) { return _CO[k].subjectKey === _sk && String(_CO[k].grade) === _g; })[0];
@@ -1205,6 +1206,24 @@
       content.innerHTML = nav + lessonView + flashView + quizView + progressView;
       content.classList.add("lsn-content");
       Desktop._lhmStyle();
+
+      /* read-aloud: speak the lesson (intro + concept sections/cards + tips) */
+      (function () {
+        var lb = content.querySelector(".lsn-listen");
+        if (!lb) return;
+        if (!(window.ReadAloud && window.ReadAloud.supported())) { lb.style.display = "none"; return; }
+        var secs = (d.sections && d.sections.length) ? d.sections : (d.cards || []);
+        var txt = (d.title ? d.title + ". " : "") + (d.intro ? d.intro + " " : "");
+        secs.forEach(function (c) {
+          txt += (c.h ? c.h + ". " : "") + (c.body ? String(c.body).replace(/\n+/g, " ") + " " : "");
+          if (c.tip) txt += "Tip. " + c.tip + " ";
+        });
+        lb.onclick = function () { window.ReadAloud.toggle(txt, lb); };
+        /* stop speaking when the user switches tabs */
+        content.querySelectorAll('.lsn-tab[data-view]').forEach(function (t) {
+          t.addEventListener("click", function () { window.ReadAloud.stop(); });
+        });
+      })();
 
       var fi = 0, flipped = false;
       function drawFC() {
