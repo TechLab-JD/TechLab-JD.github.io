@@ -52,6 +52,24 @@ window.LAB404_CONTENT = {
     "body": "Algebra earns its keep by modeling real situations, and the skill is translation. Name the unknown with a variable, then convert the sentence into symbols piece by piece: 'is'/'equals' becomes =, 'sum'/'more than' becomes +, 'difference'/'less than' becomes −, 'product'/'times'/'of' becomes ×, and 'twice'/'tripled' become ×2 and ×3. Once the sentence is an equation, you solve it with the tools you already have.\n\nFinally, build the habit of checking every answer. Substitute your solution back into the ORIGINAL equation — not a later step, in case that step held an error — and confirm both sides come out equal. If they match, trust your answer; if not, you know to go back and find the slip. This one habit catches the large majority of mistakes.",
     "example": "'The sum of a number and twice the number is 21. Find the number.'\nLet the number be n:\nn + 2n = 21\n3n = 21\nn = 7\nCheck: 7 + 2(7) = 7 + 14 = 21  ✓",
     "tip": "Checking isn't busywork — it's a free, built-in way to know whether you're right."
+   },
+   {
+    "h": "Inequalities and their graphs",
+    "body": "An inequality compares two expressions with <, >, less-than-or-equal, or greater-than-or-equal instead of an equals sign. You solve one almost exactly like an equation — isolate the variable — with one crucial extra rule: when you multiply or divide both sides by a negative number, the inequality sign flips.\n\nAn inequality's solution is a range of values, not a single number, so we picture it on a number line: an open circle for < or > (the endpoint is not included) and a filled circle for the 'or-equal' versions.",
+    "example": "-2x + 1 < 7\n-2x < 6\nx > -3   (sign flips when dividing by -2)",
+    "tip": "The only real trap: flip the inequality when you multiply or divide by a negative. Everything else works like solving an equation."
+   },
+   {
+    "h": "Systems of equations",
+    "body": "A system is two or more equations that share the same variables, and its solution is the point that makes all of them true at once — graphically, where the lines cross. Two common methods solve a system by hand: substitution (solve one equation for a variable, then plug it into the other) and elimination (add or subtract the equations to cancel a variable).\n\nIf the lines are parallel there is no solution; if they are the same line there are infinitely many.",
+    "example": "x + y = 10\nx - y = 2\nAdd the equations: 2x = 12, so x = 6, then y = 4.",
+    "tip": "Elimination is fastest when a variable already lines up to cancel; substitution shines when one equation is already solved for a variable."
+   },
+   {
+    "h": "The laws of exponents",
+    "body": "Exponents are repeated multiplication, and a few laws let you simplify them without expanding everything. Multiply powers of the same base by adding exponents; divide by subtracting; raise a power to a power by multiplying. Any nonzero base to the zero power is 1, and a negative exponent means a reciprocal.\n\nThese rules are the backbone of working with polynomials, scientific notation, and exponential functions later on.",
+    "example": "x^3 * x^4 = x^7\n(x^2)^5 = x^10\nx^-2 = 1 / x^2",
+    "tip": "Add exponents when multiplying like bases, subtract when dividing. A zero exponent is always 1; a negative exponent flips to a reciprocal."
    }
   ],
   "cards": [
@@ -291,6 +309,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "3(−2) + 5 = −6 + 5 = −1."
+   },
+   {
+    "q": "When you divide both sides of an inequality by a negative number, you:",
+    "options": [
+     "flip the inequality sign",
+     "keep the sign the same",
+     "drop the sign",
+     "add the two sides"
+    ],
+    "a": 0,
+    "why": "Multiplying or dividing by a negative reverses the inequality."
+   },
+   {
+    "q": "Solve: 3x > 12.",
+    "options": [
+     "x > 4",
+     "x > 36",
+     "x < 4",
+     "x > 9"
+    ],
+    "a": 0,
+    "why": "Divide both sides by 3 (positive, no flip)."
+   },
+   {
+    "q": "The solution to a system of two equations is:",
+    "options": [
+     "where the lines intersect",
+     "the larger equation",
+     "always zero",
+     "the y-intercept"
+    ],
+    "a": 0,
+    "why": "It is the point that satisfies both equations."
+   },
+   {
+    "q": "Simplify x^5 * x^2.",
+    "options": [
+     "x^7",
+     "x^10",
+     "x^3",
+     "2x^7"
+    ],
+    "a": 0,
+    "why": "Add exponents when multiplying the same base."
+   },
+   {
+    "q": "What is x^0 for any nonzero x?",
+    "options": [
+     "1",
+     "0",
+     "x",
+     "undefined"
+    ],
+    "a": 0,
+    "why": "Any nonzero base to the zero power equals 1."
    }
   ]
  },
@@ -1183,6 +1256,24 @@ window.LAB404_CONTENT = {
     "body": "As programs grow, you organize code into functions — named, reusable blocks that do one job. You define a function with def and call it by name whenever you need it. Functions can take inputs (parameters) and give back a result (return). They keep code from repeating and make it easier to read and fix.\n\nTo store many values together, Python uses a list — an ordered collection written in square brackets: scores = [90, 85, 72]. You can access items by position (starting at 0), add to a list, and loop over it. Functions and lists are where beginner programs start to become genuinely useful, handling many values and tasks cleanly.",
     "example": "def greet(name):\n    return \"Hi, \" + name\n\nprint(greet(\"Sam\"))   # Hi, Sam\n\nscores = [90, 85, 72]\nprint(scores[0])      # 90",
     "tip": "def defines a reusable function; a list [ .. ] stores many values, indexed from 0."
+   },
+   {
+    "h": "Working with text: strings",
+    "body": "Text in Python is a string — characters inside quotes. Strings can be joined with +, repeated with *, and measured with len(). You can pull out pieces by position (indexing starts at 0) or a range (slicing).\n\nThe cleanest way to build a message from variables is an f-string: put an f before the opening quote and wrap any variable in curly braces. Useful string methods include .upper(), .lower(), .strip() (removes surrounding spaces), and .replace(old, new).",
+    "example": "name = \"Ada\"\nprint(f\"Hello, {name}!\")   # Hello, Ada!\nprint(name.upper())         # ADA\nprint(len(name))            # 3",
+    "tip": "Indexing starts at 0, so name[0] is the first character. f-strings are the modern way to combine text and variables."
+   },
+   {
+    "h": "Dictionaries: storing pairs",
+    "body": "A list holds items in order; a dictionary holds key-value pairs, like a real dictionary maps a word to its meaning. You create one with curly braces and colons, then look a value up by its key instead of a number.\n\nDictionaries are everywhere in real programs — storing a user's settings, counting how often things appear, or representing a record with named fields. Keys must be unique; assigning to a key either adds it or updates it.",
+    "example": "scores = {\"math\": 95, \"science\": 88}\nprint(scores[\"math\"])     # 95\nscores[\"art\"] = 90         # add a new pair\nfor subject, score in scores.items():\n    print(subject, score)",
+    "tip": "Use a list when order matters and you loop through everything; use a dictionary when you look things up by a name or id."
+   },
+   {
+    "h": "Errors and debugging",
+    "body": "Every programmer writes code that breaks — debugging is a core skill, not a sign of failure. When Python hits a problem it stops and prints a traceback: read it from the bottom up, where the error type and message are. A NameError means an undefined variable; a TypeError means mismatched types; a SyntaxError means a typo in the code's structure.\n\nTo keep a program from crashing on an expected problem — like bad user input — wrap the risky code in try/except. The code in try runs; if it fails, the except block handles it gracefully.",
+    "example": "try:\n    age = int(input(\"Age? \"))\n    print(age + 1)\nexcept ValueError:\n    print(\"Please type a whole number.\")",
+    "tip": "Read a traceback from the bottom line up. Print the values of your variables when stuck — seeing what they actually hold usually reveals the bug."
    }
   ],
   "cards": [
@@ -1422,6 +1513,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Lists are indexed from 0, so [0] is the first item, 90."
+   },
+   {
+    "q": "How do you insert a variable called name into an f-string?",
+    "options": [
+     "f\"Hi {name}\"",
+     "\"Hi {name}\"",
+     "f\"Hi (name)\"",
+     "\"Hi\" + name + f"
+    ],
+    "a": 0,
+    "why": "An f before the quotes and {name} inserts the variable's value."
+   },
+   {
+    "q": "What does name[0] return if name = \"Ada\"?",
+    "options": [
+     "\"A\"",
+     "\"d\"",
+     "\"Ada\"",
+     "0"
+    ],
+    "a": 0,
+    "why": "Indexing starts at 0, so [0] is the first character."
+   },
+   {
+    "q": "Which structure stores key-value pairs?",
+    "options": [
+     "a dictionary",
+     "a list",
+     "a string",
+     "an integer"
+    ],
+    "a": 0,
+    "why": "Dictionaries map keys to values; lists store ordered items."
+   },
+   {
+    "q": "What does try/except do?",
+    "options": [
+     "runs risky code and handles it if it fails",
+     "repeats code forever",
+     "defines a function",
+     "prints every variable"
+    ],
+    "a": 0,
+    "why": "try runs the code; except catches an error so the program doesn't crash."
+   },
+   {
+    "q": "You should read a Python traceback:",
+    "options": [
+     "from the bottom up",
+     "from the top down",
+     "only the first line",
+     "backwards letter by letter"
+    ],
+    "a": 0,
+    "why": "The bottom line names the error type and message."
    }
   ]
  },
@@ -1465,6 +1611,24 @@ window.LAB404_CONTENT = {
    {
     "h": "Why grammar matters",
     "body": "Grammar can feel like a pile of rules, but its real purpose is simple: to make your meaning clear. When you follow the shared rules of grammar, your reader understands you without having to work at it. When you break them, even a smart reader can get lost or get the wrong idea.\n\nGood grammar also builds credibility. Whether it's an essay, an email, or a job application, clean writing signals care and competence. You don't need to sound formal or complicated — you need to be clear and correct. Master the basics, and your writing will carry your ideas instead of getting in their way."
+   },
+   {
+    "h": "Subject-verb agreement",
+    "body": "A verb must match its subject in number: a singular subject takes a singular verb, a plural subject takes a plural verb. 'The dog runs' but 'The dogs run.' This feels automatic with simple sentences but trips people up when words come between the subject and verb, or with tricky subjects.\n\nWatch for a phrase between subject and verb ('The box of apples IS heavy' — box is the subject, not apples), and for indefinite pronouns like 'everyone' and 'each', which are singular.",
+    "example": "The box of apples IS heavy.  (subject = box)\nEveryone HAS a ticket.  (everyone is singular)",
+    "tip": "Find the real subject, ignore any phrase between it and the verb, then match them in number. 'Each' and 'everyone' are singular."
+   },
+   {
+    "h": "Clauses, phrases, and sentence types",
+    "body": "A clause has a subject and a verb; a phrase does not. An independent clause can stand alone as a sentence; a dependent clause cannot ('because it rained' leaves you waiting). Combining them gives the four sentence types: simple (one independent clause), compound (two joined independent clauses), complex (one independent plus a dependent), and compound-complex.\n\nVarying these types is what makes writing flow instead of sounding choppy.",
+    "example": "Simple: She ran.\nCompound: She ran, and he walked.\nComplex: She ran because she was late.",
+    "tip": "An independent clause stands alone; a dependent clause can't. Mixing simple, compound, and complex sentences creates good rhythm."
+   },
+   {
+    "h": "Pronouns and clear reference",
+    "body": "Pronouns (he, she, it, they, this, which) replace nouns so we don't repeat them. Every pronoun needs a clear antecedent — the noun it stands for. Trouble comes when the reference is vague ('Maria told Ana that she won' — who won?) or when a pronoun doesn't agree with its antecedent in number.\n\nWhen in doubt, repeat the noun. Clear beats clever.",
+    "example": "Vague: Maria told Ana that she won.\nClear: Maria told Ana that Maria had won.",
+    "tip": "Every pronoun must point clearly to one noun. If a reader could ask 'which one?', rewrite with the actual noun."
    }
   ],
   "cards": [
@@ -1704,6 +1868,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Your ear hears errors the eye skips over."
+   },
+   {
+    "q": "Choose the correct verb: 'The box of apples ___ heavy.'",
+    "options": [
+     "is",
+     "are",
+     "were",
+     "be"
+    ],
+    "a": 0,
+    "why": "The subject is 'box' (singular), not 'apples'."
+   },
+   {
+    "q": "'Everyone ___ a ticket.' The correct verb is:",
+    "options": [
+     "has",
+     "have",
+     "are having",
+     "were"
+    ],
+    "a": 0,
+    "why": "'Everyone' is singular."
+   },
+   {
+    "q": "A group of words with a subject and verb that can stand alone is a(n):",
+    "options": [
+     "independent clause",
+     "phrase",
+     "dependent clause",
+     "fragment"
+    ],
+    "a": 0,
+    "why": "An independent clause is a complete sentence."
+   },
+   {
+    "q": "'She ran because she was late' is a ___ sentence.",
+    "options": [
+     "complex",
+     "simple",
+     "compound",
+     "run-on"
+    ],
+    "a": 0,
+    "why": "It has one independent and one dependent clause."
+   },
+   {
+    "q": "A pronoun needs a clear:",
+    "options": [
+     "antecedent",
+     "adjective",
+     "adverb",
+     "preposition"
+    ],
+    "a": 0,
+    "why": "The antecedent is the noun the pronoun replaces."
    }
   ]
  },
@@ -1752,6 +1971,24 @@ window.LAB404_CONTENT = {
    {
     "h": "Levels of life",
     "body": "Biology studies life at many scales, each building on the one below. Molecules (like DNA and proteins) make up cells; cells form tissues; tissues form organs; organs form organ systems; and systems form a whole organism.\n\nZooming out, organisms of one kind form a population; different populations living together form a community; the community plus its physical environment is an ecosystem; and all ecosystems together make the biosphere — all life on Earth. Understanding biology means moving between these levels, from a single molecule to the living planet."
+   },
+   {
+    "h": "Photosynthesis and respiration",
+    "body": "Life runs on two linked reactions. In photosynthesis, plants (and algae) use sunlight to turn carbon dioxide and water into glucose (stored energy) and oxygen. In cellular respiration, cells — plant and animal — break glucose back down with oxygen to release usable energy, giving off carbon dioxide and water.\n\nThe two are near mirror images, and together they cycle energy and gases through every ecosystem. The oxygen you breathe and the food you eat both trace back to photosynthesis.",
+    "example": "Photosynthesis:  CO2 + water + light  ->  glucose + oxygen\nRespiration:      glucose + oxygen  ->  CO2 + water + energy",
+    "tip": "Photosynthesis stores the Sun's energy in glucose; respiration releases it. They are roughly reverse reactions."
+   },
+   {
+    "h": "Cell division: mitosis and meiosis",
+    "body": "Cells reproduce by dividing. Mitosis makes two identical copies of a cell, each with the full set of chromosomes — this is how you grow and heal. Meiosis is special: it makes sex cells (eggs and sperm) with half the chromosomes, so that when two combine, the offspring gets a full set with a new mix of genes.\n\nMitosis keeps you alive and growing; meiosis creates the variation that fuels inheritance and evolution.",
+    "example": "Mitosis:  1 cell  ->  2 identical cells (full chromosome set)\nMeiosis:  1 cell  ->  4 sex cells (half the chromosomes)",
+    "tip": "Mitosis = growth and repair (identical cells). Meiosis = sex cells with half the DNA, creating genetic variety."
+   },
+   {
+    "h": "Ecology and energy flow",
+    "body": "Organisms depend on each other and their environment. Energy enters an ecosystem from the Sun, is captured by producers (plants), and passes to consumers that eat them, then to predators. Only about 10 percent of the energy moves to each next level, which is why food chains are short and predators are few.\n\nDecomposers recycle dead matter back into the soil, closing the loop. A food web maps all these feeding links.",
+    "example": "Sun -> grass (producer) -> rabbit (consumer) -> fox (predator)\n~10% of energy passes up at each step.",
+    "tip": "Energy flows one way from the Sun through producers to consumers, losing ~90% at each level. Matter is recycled by decomposers."
    }
   ],
   "cards": [
@@ -1991,6 +2228,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "The biosphere is all life on Earth, the broadest level."
+   },
+   {
+    "q": "Photosynthesis produces glucose and:",
+    "options": [
+     "oxygen",
+     "carbon dioxide",
+     "nitrogen",
+     "salt"
+    ],
+    "a": 0,
+    "why": "It releases oxygen as a byproduct."
+   },
+   {
+    "q": "Cellular respiration releases energy from:",
+    "options": [
+     "glucose",
+     "sunlight directly",
+     "water only",
+     "oxygen alone"
+    ],
+    "a": 0,
+    "why": "Cells break down glucose with oxygen to release energy."
+   },
+   {
+    "q": "Mitosis produces:",
+    "options": [
+     "two identical cells",
+     "four sex cells",
+     "half the chromosomes",
+     "only oxygen"
+    ],
+    "a": 0,
+    "why": "Mitosis makes two cells with the full chromosome set."
+   },
+   {
+    "q": "Meiosis makes sex cells with:",
+    "options": [
+     "half the chromosomes",
+     "double the chromosomes",
+     "no chromosomes",
+     "the same full set"
+    ],
+    "a": 0,
+    "why": "Halving lets two cells combine into a full set."
+   },
+   {
+    "q": "Roughly how much energy passes to the next level of a food chain?",
+    "options": [
+     "10 percent",
+     "90 percent",
+     "100 percent",
+     "50 percent"
+    ],
+    "a": 0,
+    "why": "About 90% is lost as heat and life processes at each step."
    }
   ]
  },
@@ -2315,6 +2607,24 @@ window.LAB404_CONTENT = {
     "h": "Estimating and checking",
     "body": "A powerful habit is to estimate before and check after you calculate. Rounding numbers for a quick approximate answer tells you roughly what to expect, so a wildly wrong result jumps out. If 48 × 21 should be about 50 × 20 = 1000, then an answer of 108 or 10,080 is obviously a mistake.\n\nChecking is often built in: verify a subtraction by adding back (if 15 − 7 = 8, then 8 + 7 should equal 15), and a division by multiplying. These quick checks catch the small slips that cause most arithmetic errors.",
     "tip": "Rounding to estimate first means you'll instantly notice if your final answer is off by a factor of ten."
+   },
+   {
+    "h": "Factors, multiples, and primes",
+    "body": "A factor of a number divides it evenly; a multiple is what you get by multiplying it by whole numbers. A prime number has exactly two factors, 1 and itself (2, 3, 5, 7, 11...); every other whole number above 1 is composite and can be broken into a unique product of primes.\n\nFactors and multiples power fraction work: the greatest common factor (GCF) reduces fractions, and the least common multiple (LCM) finds a common denominator.",
+    "example": "Factors of 12: 1, 2, 3, 4, 6, 12\nGCF of 12 and 18 = 6\nLCM of 4 and 6 = 12",
+    "tip": "Primes are the building blocks of numbers. GCF helps you simplify; LCM helps you add fractions."
+   },
+   {
+    "h": "Negative numbers and the number line",
+    "body": "Numbers extend both ways from zero: positive to the right, negative to the left. A negative number represents an amount below zero — a debt, a temperature, a step back. On the number line, the further left you go, the smaller the value, so -5 is less than -2.\n\nAdding a negative moves left; subtracting a negative moves right (it's the same as adding). Multiplying or dividing two numbers with the same sign gives a positive, and with different signs gives a negative.",
+    "example": "3 + (-5) = -2\n4 - (-2) = 6\n(-3) * (-4) = 12",
+    "tip": "Same signs multiply/divide to a positive; different signs give a negative. Subtracting a negative is the same as adding."
+   },
+   {
+    "h": "Ratios, rates, and proportions",
+    "body": "A ratio compares two quantities, like 2 cups of flour to 1 cup of sugar (2:1). A rate is a ratio of two different units, like miles per hour; a unit rate has 1 in the denominator. A proportion sets two ratios equal and is solved by cross-multiplying.\n\nRatios and proportions are everywhere — scaling a recipe, reading a map, comparing prices, converting units.",
+    "example": "If 3 apples cost $1.50, what do 5 cost?\n3/1.50 = 5/x  ->  cross-multiply  ->  x = $2.50",
+    "tip": "To solve a proportion, cross-multiply and divide. A unit rate (per 1) makes comparing prices and speeds easy."
    }
   ],
   "cards": [
@@ -2554,6 +2864,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Percent = out of 100."
+   },
+   {
+    "q": "Which number is prime?",
+    "options": [
+     "7",
+     "9",
+     "15",
+     "21"
+    ],
+    "a": 0,
+    "why": "7's only factors are 1 and itself."
+   },
+   {
+    "q": "What is the GCF of 12 and 18?",
+    "options": [
+     "6",
+     "3",
+     "9",
+     "36"
+    ],
+    "a": 0,
+    "why": "6 is the largest number dividing both."
+   },
+   {
+    "q": "Compute (-3) * (-4).",
+    "options": [
+     "12",
+     "-12",
+     "-7",
+     "7"
+    ],
+    "a": 0,
+    "why": "Two negatives multiply to a positive."
+   },
+   {
+    "q": "What is 4 - (-2)?",
+    "options": [
+     "6",
+     "2",
+     "-6",
+     "-2"
+    ],
+    "a": 0,
+    "why": "Subtracting a negative is the same as adding."
+   },
+   {
+    "q": "If 3 apples cost $1.50, 5 apples cost:",
+    "options": [
+     "$2.50",
+     "$4.50",
+     "$2.00",
+     "$5.00"
+    ],
+    "a": 0,
+    "why": "Set up 3/1.50 = 5/x and cross-multiply."
    }
   ]
  },
@@ -3444,6 +3809,24 @@ window.LAB404_CONTENT = {
     "h": "Putting it together",
     "body": "A real web page uses all three languages at once, each doing its own job. HTML lays out the content and structure. CSS, usually in a separate .css file, styles it. JavaScript, often in a separate .js file, adds the interactivity. The browser combines them into the final experience.\n\nThis separation of concerns — structure, style, and behavior kept apart — is a hallmark of good web development. It makes pages easier to build, read, and maintain: a designer can tweak the CSS without touching the logic, and a programmer can change the JavaScript without breaking the layout. Master the three and how they cooperate, and you can build for the entire web.",
     "tip": "HTML (structure) + CSS (style) + JavaScript (behavior), kept separate, combine into every modern web page."
+   },
+   {
+    "h": "Links, images, and forms",
+    "body": "Three HTML elements make pages interactive. A link uses the anchor tag with an href attribute pointing to a URL. An image uses the img tag with a src (the file) and alt (text read aloud if the image fails or for screen readers). A form collects input from the user.\n\nInside a form, input elements gather text, numbers, checkboxes, and a submit button. Every input should have a matching label so the page is usable for everyone, including people using assistive technology.",
+    "example": "<a href=\"https://example.com\">Visit</a>\n<img src=\"cat.jpg\" alt=\"A sleeping cat\">\n<form>\n  <label>Name: <input type=\"text\"></label>\n  <button>Send</button>\n</form>",
+    "tip": "Always write alt text on images and a label on every input — it's both good accessibility and good for search engines."
+   },
+   {
+    "h": "The box model and responsive design",
+    "body": "CSS treats every element as a box with four layers from the inside out: content, padding (space inside the border), border, and margin (space outside). Understanding this box model explains almost all spacing on a page.\n\nResponsive design makes one page work on phones and desktops. Instead of fixed pixel widths, use flexible units (percentages, rem) and a media query — a rule that applies only when the screen is a certain size. The meta viewport tag in the head is required for phones to render correctly.",
+    "example": "@media (max-width: 600px) {\n  .menu { flex-direction: column; }\n}",
+    "tip": "A media query lets one stylesheet adapt the layout to the screen. Test your page by narrowing the browser window."
+   },
+   {
+    "h": "The DOM and events",
+    "body": "When a browser loads HTML it builds the DOM — the Document Object Model, a live tree of every element that JavaScript can read and change. document.querySelector finds an element; you can then change its text, style, or attributes and the page updates instantly.\n\nPages feel alive through events — clicks, key presses, form submissions. addEventListener runs a function whenever an event happens, letting you respond to what the user does.",
+    "example": "const btn = document.querySelector(\"button\");\nbtn.addEventListener(\"click\", () => {\n  btn.textContent = \"Clicked!\";\n});",
+    "tip": "The DOM is the bridge between your JavaScript and what the user sees. Change the DOM, and the page changes live."
    }
   ],
   "cards": [
@@ -3683,6 +4066,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "The browser turns HTML/CSS/JS into what you see."
+   },
+   {
+    "q": "Which attribute gives a link its destination?",
+    "options": [
+     "href",
+     "src",
+     "alt",
+     "link"
+    ],
+    "a": 0,
+    "why": "The anchor tag's href holds the URL."
+   },
+   {
+    "q": "Why does an img need alt text?",
+    "options": [
+     "accessibility and a fallback if it fails",
+     "to make it bigger",
+     "to add a border",
+     "it is required for color"
+    ],
+    "a": 0,
+    "why": "Alt text is read by screen readers and shown if the image can't load."
+   },
+   {
+    "q": "In the CSS box model, which layer is OUTSIDE the border?",
+    "options": [
+     "margin",
+     "padding",
+     "content",
+     "text"
+    ],
+    "a": 0,
+    "why": "Order inside-out: content, padding, border, margin."
+   },
+   {
+    "q": "What is the DOM?",
+    "options": [
+     "a live tree of the page's elements",
+     "a CSS file",
+     "a type of server",
+     "a database"
+    ],
+    "a": 0,
+    "why": "The Document Object Model lets JavaScript read and change the page."
+   },
+   {
+    "q": "What does addEventListener do?",
+    "options": [
+     "runs a function when an event like a click happens",
+     "loads a new page",
+     "styles an element",
+     "creates a database"
+    ],
+    "a": 0,
+    "why": "It responds to user actions such as clicks and key presses."
    }
   ]
  },
@@ -3727,6 +4165,24 @@ window.LAB404_CONTENT = {
     "h": "Revising and editing",
     "body": "First drafts are supposed to be rough; the magic is in revision. When revising, read for the big things: Is the main idea clear? Is every paragraph on topic? Does it flow in a logical order? Is anything missing or repeated? Don't be afraid to cut — removing weak parts almost always makes writing stronger.\n\nEditing comes last and is about correctness: spelling, grammar, punctuation, and word choice. Reading aloud catches awkward sentences and errors your eye skips. Good writers also seek feedback — a fresh reader spots confusion the writer can't see. Writing is rewriting; the willingness to revise is what separates strong writing from weak.",
     "tip": "Revise for meaning and flow first; edit for correctness last. Cutting weak parts makes writing stronger."
+   },
+   {
+    "h": "Thesis statements and topic sentences",
+    "body": "Strong writing is organized around clear claims. A thesis statement is the main argument of an entire essay, stated in one specific, arguable sentence, usually at the end of the introduction. A topic sentence does the same job for a single paragraph — it announces that paragraph's one main idea.\n\nTogether they form a roadmap: the thesis promises what the essay will argue, and each topic sentence delivers one piece of that promise.",
+    "example": "Thesis: School should start later because teens learn better with more sleep.\nTopic sentence: Later start times improve test scores.",
+    "tip": "A thesis is the essay's main claim; a topic sentence is a paragraph's main claim. Both should be specific and arguable."
+   },
+   {
+    "h": "Transitions and coherence",
+    "body": "Coherence is the sense that ideas connect and flow. Transitions are the words and phrases that signal how one idea relates to the next: 'however' signals contrast, 'therefore' a result, 'for example' an illustration, 'in addition' more of the same.\n\nWithout transitions, even good points feel like a list; with them, the reader is guided smoothly from one thought to the next. Use them between sentences and especially between paragraphs.",
+    "example": "Contrast: however, on the other hand\nResult: therefore, as a result\nAddition: moreover, in addition",
+    "tip": "Transitions tell the reader how ideas connect. Pick the word that matches the relationship: contrast, cause, example, or addition."
+   },
+   {
+    "h": "Evidence, quoting, and plagiarism",
+    "body": "Claims need support. Evidence — facts, examples, data, or quotations — proves your point and makes writing persuasive. When you use someone else's exact words, put them in quotation marks and name the source; when you restate an idea in your own words (paraphrase), you still credit the source.\n\nUsing another's work or ideas without credit is plagiarism, a serious offense. Citing sources isn't just a rule — it shows your work is grounded and builds your credibility.",
+    "example": "Quote: The report states, \"rates fell sharply\" (Lee, 2025).\nParaphrase (still cite): Lee found that rates dropped quickly (2025).",
+    "tip": "Quote exact words in quotation marks and cite them; paraphrases need credit too. Using ideas without credit is plagiarism."
    }
   ],
   "cards": [
@@ -3966,6 +4422,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Your ear catches what your eye skips."
+   },
+   {
+    "q": "A thesis statement gives the main argument of:",
+    "options": [
+     "an entire essay",
+     "one paragraph",
+     "a single word",
+     "the title"
+    ],
+    "a": 0,
+    "why": "A thesis states the whole essay's claim."
+   },
+   {
+    "q": "A topic sentence states the main idea of:",
+    "options": [
+     "a paragraph",
+     "the whole essay",
+     "a quotation",
+     "the conclusion only"
+    ],
+    "a": 0,
+    "why": "Each paragraph's topic sentence announces its one idea."
+   },
+   {
+    "q": "Which transition signals contrast?",
+    "options": [
+     "however",
+     "therefore",
+     "for example",
+     "in addition"
+    ],
+    "a": 0,
+    "why": "'However' marks an opposing idea."
+   },
+   {
+    "q": "When you use someone's exact words you must:",
+    "options": [
+     "quote and cite them",
+     "change one word",
+     "ignore the source",
+     "make it longer"
+    ],
+    "a": 0,
+    "why": "Exact words need quotation marks and a citation."
+   },
+   {
+    "q": "Using someone's ideas without credit is:",
+    "options": [
+     "plagiarism",
+     "paraphrasing",
+     "quoting",
+     "editing"
+    ],
+    "a": 0,
+    "why": "Plagiarism is presenting others' work as your own."
    }
   ]
  },
@@ -7402,6 +7913,24 @@ window.LAB404_CONTENT = {
     "visual": "<svg viewBox=\"0 0 210 210\" width=\"200\" role=\"img\" aria-label=\"A coordinate plane with the point 3 comma 2 plotted\"><line x1=\"35\" y1=\"15\" x2=\"35\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"35\" x2=\"195\" y2=\"35\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"55\" y1=\"15\" x2=\"55\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"55\" x2=\"195\" y2=\"55\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"75\" y1=\"15\" x2=\"75\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"75\" x2=\"195\" y2=\"75\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"95\" y1=\"15\" x2=\"95\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"95\" x2=\"195\" y2=\"95\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"115\" y1=\"15\" x2=\"115\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"115\" x2=\"195\" y2=\"115\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"135\" y1=\"15\" x2=\"135\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"135\" x2=\"195\" y2=\"135\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"155\" y1=\"15\" x2=\"155\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"155\" x2=\"195\" y2=\"155\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"175\" y1=\"15\" x2=\"175\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"175\" x2=\"195\" y2=\"175\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"195\" y1=\"15\" x2=\"195\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"195\" x2=\"195\" y2=\"195\" stroke=\"#1f2a40\" stroke-width=\"1\"/><line x1=\"15\" y1=\"105\" x2=\"195\" y2=\"105\" stroke=\"#4f9cf0\" stroke-width=\"2\"/><line x1=\"105\" y1=\"195\" x2=\"105\" y2=\"15\" stroke=\"#4f9cf0\" stroke-width=\"2\"/><polygon points=\"195,105 187,101 187,109\" fill=\"#4f9cf0\"/><polygon points=\"105,15 101,23 109,23\" fill=\"#4f9cf0\"/><line x1=\"105\" y1=\"65\" x2=\"165\" y2=\"65\" stroke=\"#e8b84b\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><line x1=\"165\" y1=\"105\" x2=\"165\" y2=\"65\" stroke=\"#e8b84b\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><circle cx=\"165\" cy=\"65\" r=\"4.5\" fill=\"#e8b84b\"/><text x=\"172\" y=\"59\" fill=\"#e7edf7\" font-size=\"12\" font-family=\"monospace\">(3, 2)</text><text x=\"199\" y=\"109\" fill=\"#9aa6c0\" font-size=\"11\">x</text><text x=\"99\" y=\"14\" fill=\"#9aa6c0\" font-size=\"11\">y</text></svg>",
     "caption": "A point (x, y): go x right/left from the origin, then y up/down. Here, (3, 2).",
     "tip": "Order matters: (3, 2) and (2, 3) are different points. Always x first, then y."
+   },
+   {
+    "h": "Exponents and square roots",
+    "body": "An exponent tells how many times to multiply a base by itself: 5^2 ('5 squared') is 5 times 5 = 25. A square root asks the reverse — what number times itself gives this? The square root of 25 is 5. Perfect squares (1, 4, 9, 16, 25...) have whole-number roots; most numbers don't.\n\nThese ideas reappear constantly: area uses squares, the Pythagorean theorem uses both, and exponents build toward scientific notation.",
+    "example": "4^2 = 16        the square root of 16 = 4\n2^3 = 8          2 cubed\n10^2 = 100",
+    "tip": "Squaring and taking a square root are opposites. Memorize the perfect squares up to 144 — it speeds up everything later."
+   },
+   {
+    "h": "Percent problems",
+    "body": "Percent means 'per hundred', so 25% equals 25/100 = 0.25. Three everyday questions cover most percent work: finding a percent OF a number (multiply), finding a percent increase or decrease (find the change, then add or subtract), and finding what percent one number is of another (divide).\n\nConverting between percents, decimals, and fractions fluently is the real skill — move the decimal two places to switch between percent and decimal.",
+    "example": "20% of 80 = 0.20 * 80 = 16\nA $50 item, 10% off = $50 - $5 = $45\n15 is what percent of 60?  15/60 = 0.25 = 25%",
+    "tip": "'Of' means multiply. To turn a percent into a decimal, move the decimal point two places left (25% = 0.25)."
+   },
+   {
+    "h": "Inequalities",
+    "body": "An inequality compares values that aren't necessarily equal, using <, >, or the 'or-equal' versions. 'x > 3' means every number greater than 3 — a whole range, not one answer. You solve inequalities just like equations, isolating the variable, with one rule: flip the sign if you multiply or divide by a negative.\n\nInequalities describe real limits — a speed limit, a minimum age, a budget ceiling — so they're a practical bridge from arithmetic into algebra.",
+    "example": "x + 4 > 9   ->   x > 5\n-2x <= 6    ->   x >= -3   (sign flips)",
+    "tip": "An inequality's answer is a range of numbers. Flip the sign only when multiplying or dividing by a negative."
    }
   ],
   "cards": [
@@ -7641,6 +8170,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "A ratio compares the two quantities in order, 2 to 3."
+   },
+   {
+    "q": "What is 6 squared?",
+    "options": [
+     "36",
+     "12",
+     "66",
+     "18"
+    ],
+    "a": 0,
+    "why": "6 squared is 6 times 6 = 36."
+   },
+   {
+    "q": "The square root of 49 is:",
+    "options": [
+     "7",
+     "24.5",
+     "9",
+     "14"
+    ],
+    "a": 0,
+    "why": "7 times 7 equals 49."
+   },
+   {
+    "q": "What is 20% of 80?",
+    "options": [
+     "16",
+     "160",
+     "4",
+     "20"
+    ],
+    "a": 0,
+    "why": "'Of' means multiply: 0.20 times 80 = 16."
+   },
+   {
+    "q": "Write 25% as a decimal.",
+    "options": [
+     "0.25",
+     "2.5",
+     "25.0",
+     "0.025"
+    ],
+    "a": 0,
+    "why": "Move the decimal two places left."
+   },
+   {
+    "q": "Solve: x + 4 > 9.",
+    "options": [
+     "x > 5",
+     "x > 13",
+     "x < 5",
+     "x > 36"
+    ],
+    "a": 0,
+    "why": "Subtract 4 from both sides."
    }
   ]
  },
@@ -7696,6 +8280,24 @@ window.LAB404_CONTENT = {
     "caption": "The hypotenuse (c) is opposite the right angle; the legs a and b form it.",
     "example": "A right triangle has legs 6 and 8. Find the hypotenuse:\nc² = 6² + 8² = 36 + 64 = 100\nc = √100 = 10",
     "tip": "The hypotenuse (c) is always the longest side and always sits opposite the right angle — never a leg."
+   },
+   {
+    "h": "Quadrilaterals and polygons",
+    "body": "A polygon is a closed figure made of straight sides. Four-sided polygons (quadrilaterals) include the square, rectangle, parallelogram, rhombus, and trapezoid, each defined by its sides and angles. The angles of any quadrilateral add to 360 degrees; for any polygon, the interior angles sum to 180 times (number of sides minus 2).\n\nKnowing a shape's properties lets you find missing angles and lengths without measuring.",
+    "example": "Triangle angles sum: 180 degrees\nQuadrilateral: 360 degrees\nPentagon (5 sides): 180 * (5-2) = 540 degrees",
+    "tip": "Interior angle sum = 180 * (n - 2), where n is the number of sides. A quadrilateral's angles always total 360 degrees."
+   },
+   {
+    "h": "Surface area and volume",
+    "body": "Area measures a flat surface in square units; volume measures the space inside a 3-D solid in cubic units. Surface area is the total area of all the faces of a solid — think of the wrapping paper needed to cover a box. Volume is how much the solid holds.\n\nFor a rectangular box: volume is length times width times height; surface area adds up the six faces. For a cylinder, volume is the base circle's area times the height.",
+    "example": "Box 2 by 3 by 4:\n  Volume = 2 * 3 * 4 = 24 cubic units\nCylinder r=3, h=5:\n  Volume = pi * 3^2 * 5 = 45 pi",
+    "tip": "Volume uses cubic units (space inside); surface area uses square units (the outside skin). Match the unit to the measurement."
+   },
+   {
+    "h": "Similar and congruent figures",
+    "body": "Two figures are congruent if they are the same shape and the same size — one can be slid, turned, or flipped onto the other exactly. They are similar if they are the same shape but possibly different sizes, like a photo and its enlargement; corresponding angles are equal and corresponding sides are proportional.\n\nSimilarity lets you find unknown lengths using proportions, which is the basis of scale drawings, maps, and indirect measurement.",
+    "example": "Two similar triangles, small side 3 matches large side 9 (scale 3x).\nIf the small triangle's other side is 4, the large one is 12.",
+    "tip": "Congruent = same shape AND size. Similar = same shape, scaled size, with proportional sides. Use proportions on similar figures."
    }
   ],
   "cards": [
@@ -7935,6 +8537,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Diameter = 2r — straight across through the center."
+   },
+   {
+    "q": "The interior angles of any quadrilateral add up to:",
+    "options": [
+     "360 degrees",
+     "180 degrees",
+     "90 degrees",
+     "540 degrees"
+    ],
+    "a": 0,
+    "why": "A quadrilateral's angles total 360 degrees."
+   },
+   {
+    "q": "The interior angles of a pentagon sum to:",
+    "options": [
+     "540 degrees",
+     "360 degrees",
+     "180 degrees",
+     "720 degrees"
+    ],
+    "a": 0,
+    "why": "180 times (5 - 2) = 540."
+   },
+   {
+    "q": "The volume of a 2 by 3 by 4 box is:",
+    "options": [
+     "24 cubic units",
+     "9 cubic units",
+     "26 cubic units",
+     "48 cubic units"
+    ],
+    "a": 0,
+    "why": "Volume = length times width times height."
+   },
+   {
+    "q": "Volume is measured in:",
+    "options": [
+     "cubic units",
+     "square units",
+     "linear units",
+     "degrees"
+    ],
+    "a": 0,
+    "why": "Volume measures 3-D space, so cubic units."
+   },
+   {
+    "q": "Two figures that are the same shape but different sizes are:",
+    "options": [
+     "similar",
+     "congruent",
+     "equal",
+     "identical"
+    ],
+    "a": 0,
+    "why": "Similar figures have proportional sides and equal angles."
    }
   ]
  },
@@ -7984,6 +8641,24 @@ window.LAB404_CONTENT = {
    {
     "h": "Where trigonometry is used",
     "body": "Trig turns 'unreachable' measurements into simple calculations. Surveyors and builders use it to find heights and distances they can't measure directly — sight the angle to the top of a tree, measure your distance to its base, and tangent gives the height. Navigation and GPS triangulate position from angles.\n\nIn science and engineering, the periodic nature of sine and cosine describes every kind of wave and oscillation — from music and radio signals to the orbits of planets. Learn the three ratios well and you hold a tool used across nearly every technical field."
+   },
+   {
+    "h": "The Pythagorean identity",
+    "body": "Trig ratios are tied together by identities — equations true for every angle. The most important comes straight from the unit circle and the Pythagorean theorem: sine squared plus cosine squared equals 1. From it you can find one ratio when you know another.\n\nTwo more follow from the definitions: tangent equals sine over cosine, and the reciprocal ratios (cosecant, secant, cotangent) are just 1 over sine, cosine, and tangent.",
+    "example": "sin^2(x) + cos^2(x) = 1\nIf sin(x) = 0.6, then cos^2(x) = 1 - 0.36 = 0.64, so cos(x) = 0.8",
+    "tip": "sin^2 + cos^2 = 1 is the identity you'll use most. tan = sin/cos ties the three main ratios together."
+   },
+   {
+    "h": "Law of sines and law of cosines",
+    "body": "SOH-CAH-TOA only works in right triangles. For any triangle, two laws handle the rest. The law of sines relates each side to the sine of its opposite angle and is used when you know an angle and its opposite side. The law of cosines generalizes the Pythagorean theorem and is used when you know two sides and the angle between them, or all three sides.\n\nTogether they let you solve any triangle.",
+    "example": "Law of sines:  a/sin A = b/sin B = c/sin C\nLaw of cosines:  c^2 = a^2 + b^2 - 2ab*cos(C)",
+    "tip": "Use the law of sines with an angle-and-opposite-side pair; use the law of cosines when the right angle is missing but you know two sides and their included angle."
+   },
+   {
+    "h": "Graphs of sine and cosine",
+    "body": "Because angles repeat as you go around the circle, sine and cosine produce waves that repeat forever — they are periodic. The basic sine wave rises and falls between -1 and 1, completing one full cycle every 360 degrees (2 pi radians). Cosine is the same wave shifted a quarter cycle.\n\nThese waves model anything that cycles: sound, light, tides, alternating current, seasons. The amplitude is the height, and the period is the length of one cycle.",
+    "example": "sin(x): starts at 0, peaks at 1 (90 degrees), back to 0 (180), down to -1 (270), back to 0 (360).",
+    "tip": "Sine and cosine are waves that repeat every 2 pi. Amplitude is the height; period is the width of one full cycle."
    }
   ],
   "cards": [
@@ -8223,6 +8898,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Their repeating (periodic) nature matches anything that cycles."
+   },
+   {
+    "q": "The identity sin^2(x) + cos^2(x) equals:",
+    "options": [
+     "1",
+     "0",
+     "2",
+     "the angle x"
+    ],
+    "a": 0,
+    "why": "This is the Pythagorean identity, true for every angle."
+   },
+   {
+    "q": "tan(x) equals:",
+    "options": [
+     "sin(x)/cos(x)",
+     "cos(x)/sin(x)",
+     "sin(x)*cos(x)",
+     "1/sin(x)"
+    ],
+    "a": 0,
+    "why": "Tangent is sine over cosine."
+   },
+   {
+    "q": "The law of sines relates a side to:",
+    "options": [
+     "the sine of its opposite angle",
+     "the longest side",
+     "the right angle only",
+     "the perimeter"
+    ],
+    "a": 0,
+    "why": "a/sin A = b/sin B = c/sin C."
+   },
+   {
+    "q": "The law of cosines is a generalization of:",
+    "options": [
+     "the Pythagorean theorem",
+     "the law of sines",
+     "the unit circle",
+     "SOH-CAH-TOA only"
+    ],
+    "a": 0,
+    "why": "With a 90-degree angle, cos is 0 and it reduces to a^2 + b^2 = c^2."
+   },
+   {
+    "q": "Sine and cosine graphs are described as:",
+    "options": [
+     "periodic waves",
+     "straight lines",
+     "parabolas",
+     "single points"
+    ],
+    "a": 0,
+    "why": "They repeat every full cycle (2 pi)."
    }
   ]
  },
@@ -8266,6 +8996,24 @@ window.LAB404_CONTENT = {
     "h": "The idea of a limit",
     "body": "The limit is the single idea that separates pre-calculus from calculus. A limit asks: as the input gets closer and closer to some value, what value does the output approach? It's about approaching, not necessarily reaching — a function can have a limit at a point even where it isn't defined.\n\nFor example, as x gets close to 2, the function f(x) = x + 3 approaches 5. That seems obvious here, but the power of limits is that they let us talk rigorously about instantaneous rates of change and the exact behavior at a single point — the two questions all of calculus is built to answer.",
     "tip": "A limit is about where a function is headed as you approach a point, not necessarily the value it has there."
+   },
+   {
+    "h": "Transformations of functions",
+    "body": "Once you know a function's basic graph, you can move and reshape it with predictable transformations. Adding outside the function shifts it up or down; adding inside shifts left or right (and in the opposite direction you'd expect). A negative flips it, and a multiplier stretches or squashes it.\n\nRecognizing these lets you graph a complicated-looking function by starting from a parent shape you already know.",
+    "example": "f(x) + 3   shifts up 3\nf(x - 2)   shifts right 2\n-f(x)      flips over the x-axis\n2*f(x)     stretches vertically by 2",
+    "tip": "Changes OUTSIDE the parentheses move the graph vertically as expected; changes INSIDE move it horizontally the opposite way."
+   },
+   {
+    "h": "Polynomial and rational functions",
+    "body": "A polynomial is a sum of power terms like 3x^3 - 2x + 1; its degree (highest power) controls its overall shape and how many times it can cross the x-axis. The zeros (roots) are where it equals 0. A rational function is one polynomial divided by another; where the bottom is zero but the top isn't, the graph shoots off to a vertical asymptote.\n\nThese functions model curves, growth, and relationships throughout science and economics.",
+    "example": "f(x) = (x-1)(x+2)(x-3)  has zeros at x = 1, -2, 3\ng(x) = 1/(x-2)  has a vertical asymptote at x = 2",
+    "tip": "A polynomial's degree caps its number of real roots. A rational function has an asymptote where its denominator is zero."
+   },
+   {
+    "h": "Sequences and series",
+    "body": "A sequence is an ordered list of numbers following a rule; a series is their sum. Two patterns are fundamental. An arithmetic sequence adds a constant difference each step (2, 5, 8, 11...); a geometric sequence multiplies by a constant ratio (3, 6, 12, 24...).\n\nFormulas give any term or the total directly, without listing everything — essential for finance (compound interest is geometric) and for the limits that open calculus.",
+    "example": "Arithmetic: 2, 5, 8, 11 ... (add 3)\nGeometric: 3, 6, 12, 24 ... (multiply by 2)",
+    "tip": "Arithmetic sequences ADD a fixed amount; geometric sequences MULTIPLY by a fixed ratio. Compound interest is geometric."
    }
   ],
   "cards": [
@@ -8505,6 +9253,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Limits let calculus define instantaneous rates and exact accumulation."
+   },
+   {
+    "q": "The graph of f(x) + 3 compared to f(x) is:",
+    "options": [
+     "shifted up 3",
+     "shifted right 3",
+     "flipped",
+     "stretched by 3"
+    ],
+    "a": 0,
+    "why": "Adding outside the function moves it vertically."
+   },
+   {
+    "q": "The graph of f(x - 2) is f(x):",
+    "options": [
+     "shifted right 2",
+     "shifted left 2",
+     "shifted up 2",
+     "flipped"
+    ],
+    "a": 0,
+    "why": "Changes inside the parentheses move horizontally the opposite way."
+   },
+   {
+    "q": "The zeros of a polynomial are where it:",
+    "options": [
+     "equals 0",
+     "is largest",
+     "has an asymptote",
+     "is undefined"
+    ],
+    "a": 0,
+    "why": "Zeros (roots) are x-values making the function 0."
+   },
+   {
+    "q": "A rational function has a vertical asymptote where its:",
+    "options": [
+     "denominator is zero",
+     "numerator is zero",
+     "degree is even",
+     "graph is flat"
+    ],
+    "a": 0,
+    "why": "The function blows up where the bottom is 0 but the top isn't."
+   },
+   {
+    "q": "Which sequence is geometric?",
+    "options": [
+     "3, 6, 12, 24",
+     "2, 5, 8, 11",
+     "1, 2, 3, 4",
+     "10, 8, 6, 4"
+    ],
+    "a": 0,
+    "why": "Each term is multiplied by a constant ratio (2)."
    }
   ]
  },
@@ -8550,6 +9353,24 @@ window.LAB404_CONTENT = {
    {
     "h": "Why calculus matters",
     "body": "Calculus is the language of change, so it appears anywhere things move, grow, or accumulate. Physics uses it for motion, forces, and energy; engineering for designing everything from bridges to circuits; economics for marginal cost and optimization; biology for population and disease models; and computer graphics and machine learning rely on derivatives to optimize.\n\nYou don't need calculus for daily life, but it's the gateway to nearly every quantitative field. Understanding its two ideas — rate of change and accumulation — is understanding how modern science describes a changing world."
+   },
+   {
+    "h": "Rules of differentiation",
+    "body": "The power rule handles single terms, but real functions combine them. The sum rule lets you differentiate term by term. The product rule and quotient rule handle functions multiplied or divided. The chain rule — the workhorse — differentiates a function inside another: take the outside derivative, then multiply by the inside's derivative.\n\nWith these four rules you can differentiate almost any function you'll meet.",
+    "example": "d/dx [x^2 * sin x] = 2x*sin x + x^2*cos x   (product rule)\nd/dx [(3x+1)^5] = 5(3x+1)^4 * 3   (chain rule)",
+    "tip": "The chain rule is the one you'll use most: derivative of the outside, times derivative of the inside."
+   },
+   {
+    "h": "Using derivatives: max, min, and motion",
+    "body": "A derivative is a rate of change, which makes it powerful. Where the derivative is zero, a curve levels off — these critical points locate maximums and minimums, the key to optimization (largest area, lowest cost). In motion, the derivative of position is velocity, and the derivative of velocity is acceleration.\n\nThis is why calculus runs through physics, engineering, and economics: it finds the best value and describes how things move.",
+    "example": "Position s(t) = t^2\nVelocity = s'(t) = 2t\nAcceleration = s''(t) = 2",
+    "tip": "Set the derivative to zero to find maximums and minimums. Derivative of position = velocity; of velocity = acceleration."
+   },
+   {
+    "h": "Integration and area",
+    "body": "Integration is the reverse of differentiation and it accumulates — it adds up infinitely many tiny pieces. A definite integral gives the exact area under a curve between two points, which also means total accumulated change: distance from speed, total cost from a rate.\n\nThe area between two curves is found by integrating the top function minus the bottom one. This turns a hard geometry problem into a routine calculation.",
+    "example": "The integral of 2x is x^2 + C.\nArea under y = 2x from 0 to 3 = 3^2 - 0 = 9.",
+    "tip": "A definite integral is the exact area under a curve, and equals the total accumulated change. It undoes a derivative."
    }
   ],
   "cards": [
@@ -8789,6 +9610,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Bring the exponent down and reduce it by one."
+   },
+   {
+    "q": "Which rule differentiates a function inside another function?",
+    "options": [
+     "the chain rule",
+     "the sum rule",
+     "the power rule",
+     "the zero rule"
+    ],
+    "a": 0,
+    "why": "The chain rule: outside derivative times inside derivative."
+   },
+   {
+    "q": "Where the derivative equals zero, a curve has a:",
+    "options": [
+     "maximum or minimum",
+     "vertical asymptote",
+     "root",
+     "discontinuity"
+    ],
+    "a": 0,
+    "why": "Critical points locate peaks and valleys."
+   },
+   {
+    "q": "The derivative of position with respect to time is:",
+    "options": [
+     "velocity",
+     "acceleration",
+     "distance",
+     "area"
+    ],
+    "a": 0,
+    "why": "Rate of change of position is velocity."
+   },
+   {
+    "q": "Integration is the reverse of:",
+    "options": [
+     "differentiation",
+     "addition",
+     "graphing",
+     "factoring"
+    ],
+    "a": 0,
+    "why": "An integral undoes a derivative."
+   },
+   {
+    "q": "A definite integral gives the:",
+    "options": [
+     "area under a curve",
+     "slope at a point",
+     "highest point",
+     "number of roots"
+    ],
+    "a": 0,
+    "why": "It accumulates area between two bounds."
    }
   ]
  },
@@ -8836,6 +9712,22 @@ window.LAB404_CONTENT = {
    {
     "h": "How statistics mislead",
     "body": "Numbers can be technically true yet deeply misleading. Watch for a few classic tricks: a misleading graph (a y-axis that doesn't start at zero exaggerates tiny differences); a biased or tiny sample (a survey of your friends isn't the whole country); cherry-picked data (showing only the years that support a point); and confusing correlation with causation.\n\nBeing statistically literate doesn't mean distrusting all numbers — it means asking good questions: Who collected this, and how? Compared to what? Is the sample representative? Good statistics illuminate; bad statistics manipulate, and now you can tell them apart."
+   },
+   {
+    "h": "Displaying data",
+    "body": "A good graph reveals what a column of numbers hides. A bar chart compares categories; a histogram shows the shape of a numeric distribution by grouping values into bins; a box plot summarizes the spread with quartiles and highlights outliers; a scatter plot shows the relationship between two variables.\n\nThe shape of a distribution matters: it can be symmetric (like the bell curve), or skewed, with a long tail pulling to one side.",
+    "example": "A histogram of test scores clustered near 85 with a tail toward low scores is 'skewed left'.",
+    "tip": "Match the display to the data: bars for categories, histograms for distributions, scatter plots for relationships between two variables."
+   },
+   {
+    "h": "Sampling and bias",
+    "body": "We rarely measure everyone, so we study a sample and infer about the whole population. The catch: a conclusion is only as good as the sample. A random sample, where everyone has an equal chance of selection, is the gold standard. Bias creeps in when some groups are over- or under-represented — a survey only of people with landlines, or a poll of volunteers.\n\nBigger isn't automatically better; a huge biased sample is still biased.",
+    "tip": "A random sample represents the population; a convenient or self-selected one usually doesn't. Watch for who was left out."
+   },
+   {
+    "h": "The idea of significance",
+    "body": "When two groups differ in an experiment, is it a real effect or just chance? Statistical significance is how we judge. We ask: if there were truly no effect, how surprising would a difference this big be? If it's very unlikely to happen by chance, we call the result significant.\n\nSignificance is not the same as importance — with enough data a tiny, meaningless difference can be 'significant' — so always ask how big the effect is, not just whether it passed a test.",
+    "tip": "Statistically significant means 'unlikely to be mere chance', NOT 'large or important'. Always ask about the size of the effect too."
    }
   ],
   "cards": [
@@ -9075,6 +9967,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Ask who collected it, how, compared to what, and whether the sample fits."
+   },
+   {
+    "q": "Which display best shows the shape of a numeric distribution?",
+    "options": [
+     "a histogram",
+     "a bar chart of categories",
+     "a single number",
+     "a pie of one slice"
+    ],
+    "a": 0,
+    "why": "A histogram bins values to reveal the distribution's shape."
+   },
+   {
+    "q": "A distribution with a long tail to one side is called:",
+    "options": [
+     "skewed",
+     "symmetric",
+     "normal",
+     "random"
+    ],
+    "a": 0,
+    "why": "Skew means the tail pulls to one side."
+   },
+   {
+    "q": "The gold standard for a trustworthy sample is that it is:",
+    "options": [
+     "random",
+     "large only",
+     "made of volunteers",
+     "from one neighborhood"
+    ],
+    "a": 0,
+    "why": "Random sampling gives everyone an equal chance and avoids bias."
+   },
+   {
+    "q": "A huge but biased sample is:",
+    "options": [
+     "still biased",
+     "automatically accurate",
+     "always random",
+     "a population"
+    ],
+    "a": 0,
+    "why": "Size does not fix bias."
+   },
+   {
+    "q": "Statistically significant means a result is:",
+    "options": [
+     "unlikely to be due to chance",
+     "very large and important",
+     "always correct",
+     "from a big sample"
+    ],
+    "a": 0,
+    "why": "Significance is about chance, not importance or size."
    }
   ]
  },
@@ -10810,6 +11757,24 @@ window.LAB404_CONTENT = {
    {
     "h": "Living things and their environment",
     "body": "No organism lives alone; each is part of an ecosystem — a community of living things interacting with their nonliving surroundings of water, soil, air, and sunlight. Organisms are adapted to their environment: a cactus stores water for the desert; a polar bear has thick fur for the cold.\n\nThese adaptations are the result of evolution over long stretches of time. When the environment changes, organisms that happen to be well-suited survive and reproduce, slowly shifting the whole population. Understanding life means understanding not just the organism but the web of relationships it lives within."
+   },
+   {
+    "h": "Plant structure and function",
+    "body": "Plants are built from parts that each do a job. Roots anchor the plant and absorb water and minerals. The stem supports the plant and carries water up and food down. Leaves are the food factories, catching sunlight for photosynthesis. Flowers handle reproduction, making seeds.\n\nUnderstanding these parts explains why plants need light, water, and healthy soil, and how they make the oxygen and food the rest of life depends on.",
+    "example": "Roots -> absorb water   Stem -> support & transport\nLeaves -> photosynthesis   Flowers -> reproduction",
+    "tip": "Each plant part has a role: roots absorb, stems transport and support, leaves make food, flowers make seeds."
+   },
+   {
+    "h": "Adaptation and survival",
+    "body": "An adaptation is a feature that helps an organism survive and reproduce in its environment — a cactus's water-storing stem, a polar bear's thick fur, a moth's camouflage. Adaptations can be physical (body parts) or behavioral (migration, hibernation).\n\nOver many generations, organisms better suited to their surroundings tend to survive and pass on their traits, which is how species come to fit their habitats so well.",
+    "example": "Desert: cactus stores water, spines reduce water loss.\nArctic: thick fur and fat keep heat in.",
+    "tip": "An adaptation is any trait that improves survival in a particular environment. It can be a body feature or a behavior."
+   },
+   {
+    "h": "Heredity and traits",
+    "body": "Offspring resemble their parents because traits are passed down through genes. Some traits are inherited (eye color, flower shape); others are acquired during life (a scar, a learned skill) and are not passed on. Each parent contributes genes, so offspring are a mix of both.\n\nThis is why family members share features but aren't identical, and why selective breeding of plants and animals works.",
+    "example": "Inherited: eye color, height tendency, petal color.\nAcquired (not passed on): a suntan, a learned language.",
+    "tip": "Inherited traits come from genes and pass to offspring; acquired traits develop during life and do not."
    }
   ],
   "cards": [
@@ -11049,6 +12014,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "An ecosystem includes organisms and their physical environment."
+   },
+   {
+    "q": "Which plant part makes food through photosynthesis?",
+    "options": [
+     "leaves",
+     "roots",
+     "flowers",
+     "the stem"
+    ],
+    "a": 0,
+    "why": "Leaves capture sunlight to make glucose."
+   },
+   {
+    "q": "Roots mainly:",
+    "options": [
+     "anchor the plant and absorb water",
+     "make seeds",
+     "catch sunlight",
+     "release oxygen"
+    ],
+    "a": 0,
+    "why": "Roots absorb water and minerals and hold the plant in place."
+   },
+   {
+    "q": "A polar bear's thick fur is an example of:",
+    "options": [
+     "an adaptation",
+     "an acquired trait",
+     "a food chain",
+     "photosynthesis"
+    ],
+    "a": 0,
+    "why": "It is a feature that aids survival in its environment."
+   },
+   {
+    "q": "Which is an inherited trait?",
+    "options": [
+     "eye color",
+     "a suntan",
+     "a learned language",
+     "a scar"
+    ],
+    "a": 0,
+    "why": "Inherited traits are passed through genes."
+   },
+   {
+    "q": "Offspring resemble their parents because they inherit:",
+    "options": [
+     "genes",
+     "behaviors only",
+     "scars",
+     "nothing"
+    ],
+    "a": 0,
+    "why": "Genes carry traits from parents to offspring."
    }
   ]
  },
@@ -11095,6 +12115,24 @@ window.LAB404_CONTENT = {
    {
     "h": "Physical vs. chemical changes",
     "body": "It's worth distinguishing two kinds of change. A physical change alters a substance's form but not its identity — melting ice, dissolving sugar, tearing paper. The substance is still the same chemically, and the change can often be reversed.\n\nA chemical change creates new substances with new properties — burning, rusting, baking, digesting. Signs of a chemical change include a color change, gas bubbles, heat or light released, or a new smell. Learning to tell them apart is a basic chemistry skill: has the substance merely changed shape, or become something new?"
+   },
+   {
+    "h": "The periodic table and trends",
+    "body": "The periodic table organizes all the elements by atomic number (number of protons). Its layout is meaningful: a column (group) shares similar chemical behavior because its elements have the same number of outer electrons, and a row (period) fills up a shell from left to right. Metals sit on the left, nonmetals on the right, with metalloids between.\n\nBecause of this order, the table predicts how an element will react before you ever test it.",
+    "example": "Group 1 (alkali metals): very reactive, 1 outer electron.\nGroup 18 (noble gases): full shells, nearly unreactive.",
+    "tip": "Elements in the same column behave alike because they share the same number of outer electrons. The table is ordered by atomic number."
+   },
+   {
+    "h": "Acids, bases, and pH",
+    "body": "Acids and bases are two opposite kinds of substances. Acids release hydrogen ions and taste sour (lemon, vinegar); bases feel slippery and neutralize acids (soap, baking soda). The pH scale measures this from 0 to 14: below 7 is acidic, 7 is neutral (pure water), above 7 is basic.\n\nWhen an acid and base combine they neutralize each other, forming water and a salt — the chemistry behind antacids and many cleaners.",
+    "example": "pH 2: lemon juice (strong acid)\npH 7: pure water (neutral)\npH 12: bleach (strong base)",
+    "tip": "pH below 7 is acidic, 7 is neutral, above 7 is basic. An acid plus a base neutralizes to water and a salt."
+   },
+   {
+    "h": "Mixtures, solutions, and separation",
+    "body": "Not everything is a pure substance. A mixture combines materials that keep their own properties and can be separated physically. In a solution, one substance dissolves evenly in another — salt in water — so you can't see the parts. Mixtures where you can see the parts (sand and water) are heterogeneous.\n\nBecause no new substance forms, mixtures can be separated by physical means: filtering, evaporation, or distillation.",
+    "example": "Salt water: a solution -> evaporate the water, the salt remains.\nSand + iron filings: separate with a magnet.",
+    "tip": "In a mixture, substances keep their properties and can be separated physically — by filtering, evaporating, or a magnet."
    }
   ],
   "cards": [
@@ -11334,6 +12372,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "The atomic number equals the number of protons."
+   },
+   {
+    "q": "The periodic table is arranged by:",
+    "options": [
+     "atomic number",
+     "weight in grams",
+     "color",
+     "alphabet"
+    ],
+    "a": 0,
+    "why": "Elements are ordered by their number of protons."
+   },
+   {
+    "q": "Elements in the same column (group) tend to:",
+    "options": [
+     "react similarly",
+     "have identical mass",
+     "be the same color",
+     "be unreactive always"
+    ],
+    "a": 0,
+    "why": "They share the same number of outer electrons."
+   },
+   {
+    "q": "A pH of 2 is:",
+    "options": [
+     "acidic",
+     "basic",
+     "neutral",
+     "impossible"
+    ],
+    "a": 0,
+    "why": "Below 7 on the pH scale is acidic."
+   },
+   {
+    "q": "An acid plus a base produces:",
+    "options": [
+     "water and a salt",
+     "only an acid",
+     "pure metal",
+     "a gas only"
+    ],
+    "a": 0,
+    "why": "They neutralize each other."
+   },
+   {
+    "q": "Salt dissolved evenly in water is a:",
+    "options": [
+     "solution",
+     "heterogeneous mixture",
+     "pure element",
+     "compound you can't separate"
+    ],
+    "a": 0,
+    "why": "A solution is an evenly mixed dissolution; evaporation recovers the salt."
    }
   ]
  },
@@ -11383,6 +12476,24 @@ window.LAB404_CONTENT = {
    {
     "h": "Why physics is the base of science",
     "body": "Physics is often called the most fundamental science because its laws underlie all the others. Chemistry is, at bottom, physics applied to atoms and their electrons; biology runs on the chemistry of living cells; astronomy applies physics to stars and galaxies.\n\nThe same laws of motion and gravity that describe a thrown ball describe a spacecraft's trajectory to Mars. This universality is what makes physics so powerful: learn the core principles, and you hold a key that unlocks phenomena across every scale of the universe."
+   },
+   {
+    "h": "Work, power, and simple machines",
+    "body": "In physics, work means using a force to move something: work equals force times distance. No movement means no work, no matter how hard you push a wall. Power is how fast work is done — work divided by time.\n\nSimple machines (lever, pulley, ramp, wheel-and-axle) don't reduce the total work, but they trade force for distance, letting a small force do a big job. A ramp lets you raise a load with less force over a longer path.",
+    "example": "Lift a 10 N box 2 m: work = 10 * 2 = 20 joules.\nA ramp: less force, but you push over a longer distance.",
+    "tip": "Work = force times distance (only when something moves). Machines trade more distance for less force; total work stays the same."
+   },
+   {
+    "h": "Electricity and circuits",
+    "body": "Electric current is the flow of charge (electrons) through a conductor. For current to flow it needs a complete loop — a circuit — a push (voltage) from a battery or outlet, and something to resist the flow (resistance). Ohm's law ties them together: voltage equals current times resistance.\n\nComponents wired in series share one path (one break stops all); wired in parallel they each have their own path (one can fail while others run), which is how house wiring works.",
+    "example": "Ohm's law:  V = I * R\nSeries: one path, one break stops everything.\nParallel: separate paths, independent.",
+    "tip": "A circuit needs a complete loop, a voltage source, and resistance. Parallel branches keep working if one fails; series do not."
+   },
+   {
+    "h": "Heat and temperature",
+    "body": "Temperature measures the average motion of particles; heat is the energy that flows from a hotter object to a cooler one. They aren't the same — a spark is very hot but carries little heat, while a warm bathtub holds a lot. Heat always flows hot to cold until temperatures even out.\n\nHeat travels three ways: conduction (through direct contact), convection (through moving fluids like air or water), and radiation (through waves, like the Sun's warmth).",
+    "example": "Conduction: a metal spoon heats in soup.\nConvection: hot air rises, cool air sinks.\nRadiation: the Sun warms your face.",
+    "tip": "Temperature is average particle motion; heat is energy flowing hot to cold. Its three paths are conduction, convection, and radiation."
    }
   ],
   "cards": [
@@ -11622,6 +12733,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Wavelength determines color across the visible spectrum."
+   },
+   {
+    "q": "In physics, work is done only when:",
+    "options": [
+     "a force moves something",
+     "you feel tired",
+     "you push a wall hard",
+     "time passes"
+    ],
+    "a": 0,
+    "why": "Work = force times distance; no movement means no work."
+   },
+   {
+    "q": "A ramp lets you lift a load with:",
+    "options": [
+     "less force over a longer distance",
+     "no work at all",
+     "more force",
+     "no distance"
+    ],
+    "a": 0,
+    "why": "Machines trade force for distance; total work is unchanged."
+   },
+   {
+    "q": "Ohm's law is:",
+    "options": [
+     "V = I * R",
+     "E = m * c^2",
+     "F = m * a",
+     "P = I * V only"
+    ],
+    "a": 0,
+    "why": "Voltage equals current times resistance."
+   },
+   {
+    "q": "In a parallel circuit, if one branch fails the others:",
+    "options": [
+     "keep working",
+     "all stop",
+     "catch fire",
+     "lose voltage to zero"
+    ],
+    "a": 0,
+    "why": "Each parallel branch has its own path."
+   },
+   {
+    "q": "Heat always flows from:",
+    "options": [
+     "hotter to cooler objects",
+     "cooler to hotter",
+     "big to small",
+     "light to dark"
+    ],
+    "a": 0,
+    "why": "Heat moves hot to cold until temperatures equalize."
    }
   ]
  },
@@ -11671,6 +12837,24 @@ window.LAB404_CONTENT = {
     "h": "Stars, galaxies, and the universe",
     "body": "The Sun is just one of hundreds of billions of stars in our galaxy, the Milky Way — a vast spinning disk of stars, gas, and dust. A star is a giant ball of gas that shines by fusing hydrogen into helium in its core, releasing enormous energy; our Sun does this every second.\n\nGalaxies themselves number in the hundreds of billions across the observable universe. The distances are staggering: light from the Sun takes 8 minutes to reach us, but light from other stars takes years, and from other galaxies, millions of years. When you look at the night sky, you're looking back in time.",
     "tip": "The Sun is one star in one galaxy (the Milky Way); there are billions of galaxies, each with billions of stars."
+   },
+   {
+    "h": "Weather and the atmosphere",
+    "body": "Weather is the day-to-day state of the atmosphere — temperature, moisture, wind, and pressure. The Sun heats Earth unevenly, setting air in motion: warm air rises and cools, water vapor condenses into clouds, and precipitation falls. Areas of high and low pressure drive wind and storms.\n\nClimate is the long-term average of weather for a region. Weather changes hourly; climate describes what's typical over decades.",
+    "example": "Warm moist air rises -> cools -> clouds form -> rain.\nWeather = today; climate = the long-term pattern.",
+    "tip": "Weather is the atmosphere right now; climate is the decades-long average. The Sun's uneven heating drives both."
+   },
+   {
+    "h": "Earth's history and fossils",
+    "body": "Earth is about 4.6 billion years old, and its rocks record that history in layers. Generally, deeper layers are older (the law of superposition). Fossils — preserved remains or traces of once-living things — appear in these layers, so they reveal which organisms lived when and how life changed over time.\n\nBy matching rock layers and fossils around the world, scientists reconstruct a timeline of continents moving, climates shifting, and species rising and vanishing.",
+    "example": "Lower rock layer = older; upper layer = younger.\nFossils in a layer tell us what lived at that time.",
+    "tip": "Deeper rock layers are usually older. Fossils in each layer show what lived then, building a timeline of Earth's past."
+   },
+   {
+    "h": "The Moon, tides, and seasons",
+    "body": "The Moon orbits Earth about every month, and the changing angle of sunlight on it gives us the phases, from new to full and back. The Moon's gravity (with the Sun's) pulls on the oceans to create tides — two high and two low each day.\n\nSeasons come not from distance to the Sun but from Earth's tilt: the hemisphere tilted toward the Sun gets more direct light and longer days — summer — while the other has winter.",
+    "example": "Seasons: Earth's 23.5-degree tilt, not its distance.\nTides: the Moon's gravity pulls the oceans.",
+    "tip": "Seasons come from Earth's tilt, not its distance from the Sun. Tides come from the Moon's (and Sun's) gravity on the oceans."
    }
   ],
   "cards": [
@@ -11910,6 +13094,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Stars release energy by nuclear fusion of hydrogen into helium."
+   },
+   {
+    "q": "The difference between weather and climate is:",
+    "options": [
+     "weather is now, climate is the long-term average",
+     "they are the same",
+     "climate changes hourly",
+     "weather lasts centuries"
+    ],
+    "a": 0,
+    "why": "Climate is the decades-long pattern; weather is day to day."
+   },
+   {
+    "q": "In undisturbed rock, the deeper layers are usually:",
+    "options": [
+     "older",
+     "younger",
+     "the same age",
+     "always fossil-free"
+    ],
+    "a": 0,
+    "why": "The law of superposition: deeper is older."
+   },
+   {
+    "q": "Fossils help scientists learn:",
+    "options": [
+     "what lived in the past and how life changed",
+     "tomorrow's weather",
+     "the Moon's phase",
+     "a rock's color"
+    ],
+    "a": 0,
+    "why": "Fossils record past life in rock layers."
+   },
+   {
+    "q": "Earth's seasons are caused by:",
+    "options": [
+     "its tilt",
+     "its distance from the Sun",
+     "the Moon",
+     "ocean tides"
+    ],
+    "a": 0,
+    "why": "The 23.5-degree tilt changes how directly sunlight hits each hemisphere."
+   },
+   {
+    "q": "Ocean tides are caused mainly by:",
+    "options": [
+     "the Moon's gravity",
+     "wind",
+     "Earth's tilt",
+     "the rock cycle"
+    ],
+    "a": 0,
+    "why": "The Moon's gravitational pull raises the oceans."
    }
   ]
  },
@@ -11957,6 +13196,24 @@ window.LAB404_CONTENT = {
    {
     "h": "Biodiversity and why it matters",
     "body": "Biodiversity is the variety of life in an ecosystem — the number and range of different species. High biodiversity makes ecosystems more stable and resilient: when many species fill different roles, the system can absorb shocks like disease or drought without collapsing.\n\nBiodiversity also directly benefits people. Different plants give us food and medicines; healthy, varied ecosystems clean our water, pollinate crops, and build soil. Protecting biodiversity isn't only about saving individual species — it's about keeping the whole web of life, which we depend on, intact and working."
+   },
+   {
+    "h": "Climate change and the greenhouse effect",
+    "body": "Certain gases in the atmosphere — carbon dioxide, methane, water vapor — trap heat, keeping Earth warm enough for life. That's the natural greenhouse effect. The problem is that burning fossil fuels has raised carbon dioxide sharply, strengthening the effect and warming the planet faster than natural cycles.\n\nThe results include rising temperatures, melting ice, higher seas, and more extreme weather. Reducing greenhouse emissions is the central challenge.",
+    "example": "Sunlight warms Earth -> Earth radiates heat -> greenhouse gases trap some of it -> the planet stays warm (too much = warming).",
+    "tip": "Greenhouse gases trap heat; that's natural and necessary. Burning fossil fuels adds too much CO2, driving global warming."
+   },
+   {
+    "h": "Pollution: air, water, and land",
+    "body": "Pollution is harmful material released into the environment. Air pollution (from vehicles, factories, burning) harms lungs and forms smog and acid rain. Water pollution (sewage, chemicals, plastic, fertilizer runoff) poisons drinking water and kills aquatic life. Land pollution (trash, toxic waste) damages soil and ecosystems.\n\nMuch pollution crosses borders and lingers for decades, so prevention — cleaner energy, less waste, proper disposal — beats cleanup.",
+    "example": "Fertilizer runoff -> algae bloom -> oxygen drops -> fish die (a 'dead zone').",
+    "tip": "Pollution harms air, water, and land, often far from its source. Preventing it is far cheaper than cleaning it up."
+   },
+   {
+    "h": "Renewable and nonrenewable resources",
+    "body": "Natural resources fall into two groups. Nonrenewable resources — coal, oil, natural gas, most minerals — exist in fixed amounts and run out once used; burning them also releases greenhouse gases. Renewable resources — sunlight, wind, water, and (if managed) forests — replenish naturally on a human timescale.\n\nShifting toward renewables and using all resources efficiently (reduce, reuse, recycle) is the heart of sustainability: meeting today's needs without using up tomorrow's.",
+    "example": "Nonrenewable: coal, oil, natural gas.\nRenewable: solar, wind, hydro, geothermal.",
+    "tip": "Nonrenewable resources run out and pollute; renewables replenish. Sustainability means not using up what future generations need."
    }
   ],
   "cards": [
@@ -12196,6 +13453,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Many species filling different roles help absorb shocks."
+   },
+   {
+    "q": "The greenhouse effect is caused by gases that:",
+    "options": [
+     "trap heat in the atmosphere",
+     "block all sunlight",
+     "cool the planet",
+     "remove oxygen"
+    ],
+    "a": 0,
+    "why": "Greenhouse gases trap heat radiating from Earth."
+   },
+   {
+    "q": "The main human driver of recent climate change is:",
+    "options": [
+     "burning fossil fuels",
+     "the Moon",
+     "ocean tides",
+     "volcanoes only"
+    ],
+    "a": 0,
+    "why": "Fossil fuels add large amounts of carbon dioxide."
+   },
+   {
+    "q": "Fertilizer runoff into a lake can cause:",
+    "options": [
+     "algae blooms and dead zones",
+     "cleaner water",
+     "more oxygen",
+     "no effect"
+    ],
+    "a": 0,
+    "why": "Excess nutrients trigger blooms that starve the water of oxygen."
+   },
+   {
+    "q": "Which is a nonrenewable resource?",
+    "options": [
+     "coal",
+     "wind",
+     "sunlight",
+     "flowing water"
+    ],
+    "a": 0,
+    "why": "Coal exists in a fixed amount and runs out."
+   },
+   {
+    "q": "Sustainability means meeting today's needs:",
+    "options": [
+     "without using up future resources",
+     "as fast as possible",
+     "by ignoring pollution",
+     "using only coal"
+    ],
+    "a": 0,
+    "why": "It balances present use with the future."
    }
   ]
  },
@@ -12239,6 +13551,23 @@ window.LAB404_CONTENT = {
     "h": "Becoming a strong reader",
     "body": "Reading is a skill that grows with practice, like a muscle. The single best way to improve is to read a lot — a little every day, across many kinds of texts: stories, facts, poems, instructions. The more you read, the more words you recognize and the easier it becomes.\n\nChoosing books at the right level helps: not so easy they're boring, not so hard they're frustrating — a comfortable stretch. And reading should be enjoyable; a reader who finds books they love will read more, and a reader who reads more becomes a strong reader. Confidence and curiosity carry the rest.",
     "tip": "Read a little every day. The right book is a comfortable stretch — and one you actually enjoy."
+   },
+   {
+    "h": "Syllables and decoding longer words",
+    "body": "Long words feel hard until you break them into syllables — beats, each with a vowel sound. Splitting a word into chunks lets a reader sound out 'fantastic' as fan-tas-tic instead of stalling. Common patterns help: a word often splits between two consonants (bas-ket) and before a consonant-plus-'le' ending (ta-ble).\n\nDecoding by syllable is the bridge from sounding out small words to reading anything.",
+    "example": "fantastic -> fan-tas-tic\nbasket -> bas-ket\ntable -> ta-ble",
+    "tip": "Break a long word into syllables (one vowel sound each) and sound out each chunk. It turns scary words into easy ones."
+   },
+   {
+    "h": "Reading comprehension strategies",
+    "body": "Reading the words isn't the same as understanding them. Strong readers do active things: they predict what's coming, ask questions as they go, picture the scene, connect it to what they know, and summarize in their own words. When something stops making sense, they notice and reread.\n\nThese habits turn passive eye-movement into real understanding, and they can be practiced until they become automatic.",
+    "example": "Before: What might this be about?\nDuring: Does this make sense? Reread if not.\nAfter: What were the main points?",
+    "tip": "Good readers predict, question, visualize, connect, and summarize. Noticing confusion and rereading is the key habit."
+   },
+   {
+    "h": "Fluency and reading stamina",
+    "body": "Fluency is reading smoothly, at a good pace, with expression — not word by word. It matters because a reader struggling to decode every word has no attention left to understand. Fluency grows with practice: rereading familiar passages, reading aloud, and reading a lot overall.\n\nStamina is the ability to keep reading for longer stretches. Both build the same way — by reading regularly, a little more each time, at a level that's comfortable but not too easy.",
+    "tip": "Fluency (smooth, expressive reading) frees your mind to understand. Build it by rereading, reading aloud, and reading often."
    }
   ],
   "cards": [
@@ -12478,6 +13807,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Summarizing shows real understanding."
+   },
+   {
+    "q": "A syllable always contains one:",
+    "options": [
+     "vowel sound",
+     "consonant only",
+     "sentence",
+     "paragraph"
+    ],
+    "a": 0,
+    "why": "Each syllable is a beat built around a vowel sound."
+   },
+   {
+    "q": "How does 'fantastic' break into syllables?",
+    "options": [
+     "fan-tas-tic",
+     "fa-ntas-tic",
+     "fant-astic",
+     "f-antastic"
+    ],
+    "a": 0,
+    "why": "Each chunk has one vowel sound."
+   },
+   {
+    "q": "A strong reader who stops understanding should:",
+    "options": [
+     "reread",
+     "skip the whole book",
+     "read faster",
+     "ignore it"
+    ],
+    "a": 0,
+    "why": "Noticing confusion and rereading restores understanding."
+   },
+   {
+    "q": "Reading smoothly with good pace and expression is called:",
+    "options": [
+     "fluency",
+     "decoding",
+     "spelling",
+     "skimming"
+    ],
+    "a": 0,
+    "why": "Fluency frees attention for comprehension."
+   },
+   {
+    "q": "The best way to build fluency is to:",
+    "options": [
+     "practice reading regularly",
+     "only read once",
+     "memorize the dictionary",
+     "avoid reading aloud"
+    ],
+    "a": 0,
+    "why": "Rereading and frequent reading grow fluency."
    }
   ]
  },
@@ -12522,6 +13906,24 @@ window.LAB404_CONTENT = {
     "h": "Growing your vocabulary for life",
     "body": "Vocabulary grows mostly through exposure, and the number-one source is reading. Readers constantly meet new words in context and absorb them naturally; it's why avid readers tend to have large vocabularies. Reading widely — not just one kind of book — exposes you to the most words.\n\nYou can speed it up deliberately: keep a list of new words you encounter, look up ones context can't crack, and actually use a new word a few times until it sticks. Pay attention to words in conversation, podcasts, and shows too. A growing vocabulary is a lifelong project that quietly makes everything else — reading, writing, thinking — easier.",
     "tip": "Read widely, note new words, and use each one a few times until it's yours. Vocabulary grows for life."
+   },
+   {
+    "h": "Connotation and denotation",
+    "body": "A word's denotation is its literal dictionary meaning; its connotation is the feeling or association it carries. 'Thrifty', 'frugal', and 'cheap' all denote spending little, but their connotations differ sharply — 'thrifty' is positive, 'cheap' is negative.\n\nChoosing words for connotation, not just denotation, is how writers set tone and persuade. The 'right' synonym is the one whose feeling fits.",
+    "example": "slim (positive) / thin (neutral) / scrawny (negative)\nAll denote 'not fat' but feel very different.",
+    "tip": "Denotation is the literal meaning; connotation is the feeling. Synonyms can share a meaning but carry different attitudes."
+   },
+   {
+    "h": "Using a dictionary and thesaurus well",
+    "body": "A dictionary gives a word's meaning, part of speech, and pronunciation; a thesaurus lists synonyms. Both are powerful if used carefully. The common mistake is grabbing an impressive synonym from a thesaurus without checking that it actually fits — synonyms are rarely identical in connotation or usage.\n\nLook up an unfamiliar synonym in the dictionary before using it, and read the example sentence to see how it's really used.",
+    "example": "Thesaurus lists 'incensed' for 'angry' — but check: it's much stronger. Use it only if you mean furious.",
+    "tip": "A thesaurus suggests; a dictionary confirms. Always check a new synonym's real meaning and feel before using it."
+   },
+   {
+    "h": "Academic and domain words",
+    "body": "Beyond everyday words, two kinds matter for school and work. Academic words (analyze, evaluate, significant, hypothesis) show up across all subjects and in test questions — knowing them helps you understand assignments. Domain-specific words belong to one field (photosynthesis in biology, denominator in math).\n\nLearning the key words of a subject is half of learning the subject itself, because the ideas are built on them.",
+    "example": "Academic (all subjects): analyze, summarize, infer, justify.\nDomain (one field): mitosis, sonnet, hypotenuse.",
+    "tip": "Learn academic words (used everywhere, like 'analyze') and the key terms of each subject. Vocabulary is the gateway to the content."
    }
   ],
   "cards": [
@@ -12761,6 +14163,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Denotation is the literal definition; connotation is the tone."
+   },
+   {
+    "q": "A word's literal dictionary meaning is its:",
+    "options": [
+     "denotation",
+     "connotation",
+     "synonym",
+     "antonym"
+    ],
+    "a": 0,
+    "why": "Denotation is the literal meaning."
+   },
+   {
+    "q": "'Cheap' and 'thrifty' share a meaning but differ in:",
+    "options": [
+     "connotation",
+     "spelling only",
+     "number of letters",
+     "part of speech"
+    ],
+    "a": 0,
+    "why": "Connotation is the feeling a word carries."
+   },
+   {
+    "q": "Before using a new synonym from a thesaurus, you should:",
+    "options": [
+     "check its meaning in a dictionary",
+     "use it immediately",
+     "make it plural",
+     "capitalize it"
+    ],
+    "a": 0,
+    "why": "Synonyms are rarely identical; confirm the fit."
+   },
+   {
+    "q": "Which is an academic word used across subjects?",
+    "options": [
+     "analyze",
+     "photosynthesis",
+     "hypotenuse",
+     "sonnet"
+    ],
+    "a": 0,
+    "why": "Academic words appear in many subjects and test prompts."
+   },
+   {
+    "q": "A domain-specific word belongs to:",
+    "options": [
+     "one field of study",
+     "every subject",
+     "no subject",
+     "only poetry"
+    ],
+    "a": 0,
+    "why": "Domain words are specific to a field, like 'mitosis' in biology."
    }
   ]
  },
@@ -12809,6 +14266,24 @@ window.LAB404_CONTENT = {
    {
     "h": "Reading like an analyst",
     "body": "Reading literature deeply means going beyond 'what happened' to 'what does it mean and how does the writer do it.' Analytical readers ask questions: Why did the character make that choice? What does this setting or object represent? What is the author really saying about life?\n\nThey notice patterns, pay attention to word choice, and support their interpretations with evidence from the text. There's rarely one 'right' answer, but good interpretations are grounded in the words on the page. This is the real reward of literature: it trains you to read carefully, think deeply, and understand experiences far beyond your own."
+   },
+   {
+    "h": "Theme and the author's message",
+    "body": "A theme is the deeper message or insight about life that a story explores — not its subject, but what it says about that subject. 'War' is a topic; 'war destroys innocence' is a theme. Themes are usually implied through the plot, characters, and their choices rather than stated outright.\n\nTo find a theme, ask what the main character learns, or what idea the whole story keeps circling back to.",
+    "example": "Topic: friendship.\nTheme: true friendship requires sacrifice.",
+    "tip": "A theme is the story's message about life, not just its topic. Find it by asking what the characters learn or what idea recurs."
+   },
+   {
+    "h": "Symbolism and imagery",
+    "body": "Writers add depth with figurative tools. A symbol is an object, color, or action that stands for a larger idea — a storm for conflict, a dove for peace. Imagery is vivid language that appeals to the senses, letting you see, hear, or feel the scene.\n\nNoticing these moves you from reading what happens to understanding what it means. When a detail seems to carry extra weight, it's often a symbol.",
+    "example": "Symbol: a wilting flower for fading hope.\nImagery: 'the icy wind clawed at her face'.",
+    "tip": "A symbol stands for a bigger idea; imagery paints a sensory picture. A detail that recurs or feels weighted is often symbolic."
+   },
+   {
+    "h": "Poetry: form and sound",
+    "body": "Poetry packs meaning into few words and uses sound as part of that meaning. Rhythm (meter) is the beat of stressed and unstressed syllables; rhyme links line endings. Devices like alliteration (repeated starting sounds) and onomatopoeia (words that sound like their meaning) make lines musical.\n\nForm matters too: a sonnet has 14 lines, free verse has no set pattern. Reading a poem aloud reveals sound effects the eye misses.",
+    "example": "Alliteration: 'wild and windy'.\nOnomatopoeia: 'buzz', 'crash', 'hiss'.",
+    "tip": "Poetry uses sound — rhythm, rhyme, alliteration — as part of its meaning. Read it aloud to hear what the words are doing."
    }
   ],
   "cards": [
@@ -13048,6 +14523,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Analysis goes beyond plot to meaning and craft, backed by evidence."
+   },
+   {
+    "q": "A theme is best described as:",
+    "options": [
+     "the story's message about life",
+     "the main character's name",
+     "the setting",
+     "the number of chapters"
+    ],
+    "a": 0,
+    "why": "Theme is the deeper insight, not just the topic."
+   },
+   {
+    "q": "'War destroys innocence' is a:",
+    "options": [
+     "theme",
+     "topic",
+     "character",
+     "setting"
+    ],
+    "a": 0,
+    "why": "It states an insight about the topic of war."
+   },
+   {
+    "q": "A storm used to represent conflict is a:",
+    "options": [
+     "symbol",
+     "rhyme",
+     "syllable",
+     "paragraph"
+    ],
+    "a": 0,
+    "why": "A symbol stands for a larger idea."
+   },
+   {
+    "q": "Language that appeals to the senses is called:",
+    "options": [
+     "imagery",
+     "a thesis",
+     "a syllable",
+     "an antonym"
+    ],
+    "a": 0,
+    "why": "Imagery lets the reader see, hear, or feel the scene."
+   },
+   {
+    "q": "Repeated beginning sounds, as in 'wild and windy', is:",
+    "options": [
+     "alliteration",
+     "onomatopoeia",
+     "rhyme",
+     "meter"
+    ],
+    "a": 0,
+    "why": "Alliteration repeats initial consonant sounds."
    }
   ]
  },
@@ -14219,6 +15749,24 @@ window.LAB404_CONTENT = {
    {
     "h": "Thinking like a computer scientist",
     "body": "Computer science is less about memorizing and more about a way of thinking, often called computational thinking. It has a few key moves. Decomposition means breaking a big problem into smaller, manageable parts. Pattern recognition means spotting similarities you can reuse. Abstraction means focusing on the essentials and ignoring irrelevant detail.\n\nTogether with algorithm design — laying out clear steps — these let you tackle problems far too complex to hold in your head at once. This way of thinking is useful far beyond computers: it's a general method for solving hard problems in any field, which is why computer science has become a foundational skill."
+   },
+   {
+    "h": "Data structures: lists, stacks, and queues",
+    "body": "A data structure is a way to organize data so it's easy to use. A list (or array) holds items in order by position. A stack is last-in-first-out, like a pile of plates — you add and remove from the top; it powers the undo button and the call stack. A queue is first-in-first-out, like a line at a store — the first to arrive is the first served; it's used for printer jobs and task scheduling.\n\nChoosing the right structure makes a program simpler and faster. The structure should match how you'll add, remove, and find items.",
+    "example": "Stack (LIFO):  push A, push B, pop -> B\nQueue (FIFO):  enqueue A, enqueue B, dequeue -> A",
+    "tip": "Stack = last in, first out (undo). Queue = first in, first out (a line). The difference is which end you remove from."
+   },
+   {
+    "h": "Big-O: how fast is an algorithm?",
+    "body": "Big-O notation describes how an algorithm's work grows as the input grows — it's about scaling, not seconds on one computer. O(1) is constant (a dictionary lookup) no matter the size. O(n) is linear — double the data, double the work, like scanning a list once. O(n squared) grows fast — nested loops over the same data — and becomes slow on large inputs.\n\nYou don't need the math to use the idea: prefer algorithms that grow slowly. A faster algorithm often beats a faster computer as data gets large.",
+    "example": "Finding a name in a sorted phone book:\n  check every page  -> O(n)\n  split in half each time (binary search) -> O(log n), much faster",
+    "tip": "Lower growth wins at scale: O(log n) beats O(n) beats O(n squared). Binary search is the classic O(log n) win."
+   },
+   {
+    "h": "The internet: how data travels",
+    "body": "The internet is a network of networks. When you load a page, your request is broken into small packets, each stamped with a destination IP address, and routed independently across many machines until they reassemble at the other end. This is why the internet is resilient — packets can take different paths.\n\nNames like example.com are human-friendly; DNS (the Domain Name System) translates them into the numeric IP addresses computers actually use. Protocols — agreed rules like HTTP for web pages and TCP/IP for delivery — let different devices understand each other.",
+    "example": "You type a name  ->  DNS finds its IP address\n  ->  request split into packets  ->  routed to the server\n  ->  server sends the page back in packets  ->  browser reassembles it",
+    "tip": "DNS is the internet's phone book: it turns a name into an IP address. Data moves as independently-routed packets."
    }
   ],
   "cards": [
@@ -14458,6 +16006,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Design the algorithm before coding."
+   },
+   {
+    "q": "A stack removes items in what order?",
+    "options": [
+     "last in, first out",
+     "first in, first out",
+     "random order",
+     "alphabetical order"
+    ],
+    "a": 0,
+    "why": "A stack is LIFO, like a pile of plates."
+   },
+   {
+    "q": "A queue removes items in what order?",
+    "options": [
+     "first in, first out",
+     "last in, first out",
+     "largest first",
+     "random order"
+    ],
+    "a": 0,
+    "why": "A queue is FIFO, like a line at a store."
+   },
+   {
+    "q": "What does Big-O notation describe?",
+    "options": [
+     "how an algorithm scales as input grows",
+     "the exact seconds a program takes",
+     "the size of a file",
+     "the color of code"
+    ],
+    "a": 0,
+    "why": "Big-O is about growth rate, not a fixed time."
+   },
+   {
+    "q": "Which is fastest as the data gets very large?",
+    "options": [
+     "O(log n)",
+     "O(n)",
+     "O(n squared)",
+     "O(n cubed)"
+    ],
+    "a": 0,
+    "why": "Lower growth wins at scale; log n grows slowest here."
+   },
+   {
+    "q": "What does DNS do?",
+    "options": [
+     "turns a domain name into an IP address",
+     "stores your passwords",
+     "speeds up your CPU",
+     "designs web pages"
+    ],
+    "a": 0,
+    "why": "DNS is the internet's phone book for names to addresses."
    }
   ]
  },
@@ -14502,6 +16105,23 @@ window.LAB404_CONTENT = {
     "h": "Data in the real world",
     "body": "Databases power almost everything digital: your bank balance, a store's inventory, a social network's posts, a hospital's records. Small, simple data often lives in a spreadsheet (like Excel), which is fine for a few hundred rows; databases take over when data gets large, shared by many users, or needs strict structure and reliability.\n\nWith great data comes responsibility. Much data is personal and sensitive, so protecting it matters — through security (keeping it from thieves) and privacy (using it only as people expect and consent to). As data grows ever more central, understanding how it's stored, queried, and protected is a skill that touches nearly every career.",
     "tip": "Spreadsheets suit small data; databases scale to large, shared, structured data. Always protect personal data."
+   },
+   {
+    "h": "Data types and validation",
+    "body": "Every field in a database has a type that controls what it can hold: text (names), integer (counts), decimal (prices), date, and boolean (true/false). Choosing the right type saves space, prevents mistakes, and lets the database sort and calculate correctly — you can't add up numbers stored as text.\n\nValidation is checking that incoming data is sensible before storing it: an email has an @, an age is a positive number, a required field isn't blank. Good validation keeps a database trustworthy; garbage in means garbage out.",
+    "example": "Field        Type      Example\nname         text      \"Maria\"\nage          integer   34\nsigned_up    date      2026-02-14\nis_active    boolean   true",
+    "tip": "Store numbers as number types, not text, or you can't sort or do math on them. Validate at the point data enters the system."
+   },
+   {
+    "h": "Joining tables",
+    "body": "Relational databases split information across tables to avoid repeating it — customers in one table, orders in another. A join recombines them by matching a key: each order stores a customer_id that points to a row in the customers table. This is the heart of relational data.\n\nJoining lets you answer questions that span tables, like every order with the customer's name attached. Without joins you'd either repeat the customer's details in every order (wasteful and error-prone) or be unable to connect them at all.",
+    "example": "SELECT orders.id, customers.name\nFROM orders\nJOIN customers ON orders.customer_id = customers.id;",
+    "tip": "A join matches a foreign key in one table to the primary key in another. It's how split-up data is brought back together."
+   },
+   {
+    "h": "Big data, privacy, and backups",
+    "body": "Modern systems collect enormous amounts of data — too big for one machine, so it's spread across many (the idea behind 'big data' tools). More data can mean better decisions, but it also raises real responsibilities.\n\nPrivacy means collecting only what you need, protecting it, and respecting laws about personal information. Backups are copies kept elsewhere so a crash, mistake, or attack doesn't destroy everything; a backup you've never tested restoring may not actually work. Together, validation, privacy, and backups make data not just useful but safe.",
+    "tip": "Collect the minimum personal data you need, protect it, and keep tested backups. A backup you can't restore is not a backup."
    }
   ],
   "cards": [
@@ -14741,6 +16361,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "Personal data must be kept secure and used as people consent."
+   },
+   {
+    "q": "Why store a price as a decimal rather than text?",
+    "options": [
+     "so you can sort and calculate with it",
+     "it uses more color",
+     "text is not allowed",
+     "to make it longer"
+    ],
+    "a": 0,
+    "why": "Number types allow math and correct sorting; text does not."
+   },
+   {
+    "q": "What is validation?",
+    "options": [
+     "checking data is sensible before storing it",
+     "deleting old data",
+     "joining two tables",
+     "backing up a file"
+    ],
+    "a": 0,
+    "why": "Validation rejects bad input, like an age that is negative."
+   },
+   {
+    "q": "What does a JOIN do?",
+    "options": [
+     "combines rows from tables by matching a key",
+     "deletes a table",
+     "renames a column",
+     "sorts one table"
+    ],
+    "a": 0,
+    "why": "A join matches a foreign key to a primary key across tables."
+   },
+   {
+    "q": "A customer_id stored in an orders table is a:",
+    "options": [
+     "foreign key",
+     "primary key of orders",
+     "password",
+     "backup"
+    ],
+    "a": 0,
+    "why": "It points to the primary key in the customers table."
+   },
+   {
+    "q": "A good backup practice is to:",
+    "options": [
+     "keep a copy elsewhere and test restoring it",
+     "store it in the same table",
+     "never make one",
+     "email it to everyone"
+    ],
+    "a": 0,
+    "why": "An untested backup may fail when you actually need it."
    }
   ]
  },
@@ -14784,6 +16459,23 @@ window.LAB404_CONTENT = {
     "h": "Limits and ethics of AI",
     "body": "AI is powerful but far from perfect, and its flaws matter. Models can be biased: if they learn from biased data, they repeat and amplify those biases (for example, in hiring or lending). They can be confidently wrong, producing false information that sounds convincing. And they don't truly understand — they match patterns, which is why they can fail in strange ways a human never would.\n\nThis raises serious ethical questions: about privacy (AI runs on personal data), fairness, accountability (who's responsible when AI errs?), and the impact on jobs and truth. Using AI wisely means knowing its limits, checking its output, and thinking about its effects on people. The technology is a tool — powerful, but only as good and as fair as the humans who build and use it.",
     "tip": "AI can be biased, confidently wrong, and doesn't truly understand — always check its output and consider its effects on people."
+   },
+   {
+    "h": "Training, testing, and overfitting",
+    "body": "A machine-learning model learns from a training set of examples, then is checked on a separate test set it never saw. Keeping them separate is essential: testing on the training data tells you only that the model memorized, not that it learned.\n\nOverfitting is the classic failure — the model memorizes the training examples, including their noise, and does great on them but poorly on anything new. The goal is generalization: good performance on fresh data. More varied training data and simpler models help avoid overfitting.",
+    "example": "Split the data:\n  80% training  -> the model learns from this\n  20% testing   -> measures how it does on unseen data",
+    "tip": "Always judge a model on data it did not train on. High training accuracy with low test accuracy is the signature of overfitting."
+   },
+   {
+    "h": "Large language models and generative AI",
+    "body": "Generative AI creates new content — text, images, code — rather than just classifying. Large language models (LLMs), the technology behind modern chat assistants, are trained on huge amounts of text to predict the next word over and over, which lets them write, summarize, translate, and answer.\n\nThey don't look things up or 'know' facts; they generate the most statistically likely continuation. That's why they're fluent and flexible, but also why they can state wrong things confidently — a 'hallucination'. Treat their output as a capable draft to verify, not an authority.",
+    "tip": "An LLM predicts likely words; it does not verify facts. Fluent does not mean correct — always check important claims."
+   },
+   {
+    "h": "Prompting and using AI well",
+    "body": "Because a model responds to what you ask, how you ask matters. A clear prompt gives context, states the goal, and shows the format you want. Vague prompts get vague answers; specific prompts with examples get far better ones.\n\nUsing AI well also means knowing its limits: verify facts, never paste secrets or private data into a tool you don't control, and keep a human in charge of decisions that matter. AI is a powerful assistant that amplifies a skilled person — it works best as a partner you check, not a replacement you trust blindly.",
+    "example": "Weak prompt:  \"write about dogs\"\nStrong prompt: \"Write a 100-word paragraph for 5th graders on why dogs make good pets, with three reasons.\"",
+    "tip": "Give context, the goal, and the format. Verify what matters, and never share private data with a tool you don't control."
    }
   ],
   "cards": [
@@ -15023,6 +16715,61 @@ window.LAB404_CONTENT = {
     ],
     "a": 0,
     "why": "It reflects the choices and data of the people behind it."
+   },
+   {
+    "q": "Why test a model on separate data from its training set?",
+    "options": [
+     "to check it generalizes, not just memorizes",
+     "to make training faster",
+     "to use less data",
+     "it is not necessary"
+    ],
+    "a": 0,
+    "why": "Testing on unseen data measures real learning."
+   },
+   {
+    "q": "What is overfitting?",
+    "options": [
+     "memorizing training data and failing on new data",
+     "training too little",
+     "using too much test data",
+     "a type of hardware"
+    ],
+    "a": 0,
+    "why": "An overfit model does well on training but poorly on fresh inputs."
+   },
+   {
+    "q": "A large language model fundamentally works by:",
+    "options": [
+     "predicting the next word",
+     "looking up a database of facts",
+     "copying web pages exactly",
+     "asking a human each time"
+    ],
+    "a": 0,
+    "why": "LLMs generate likely continuations of text."
+   },
+   {
+    "q": "Why can an AI chatbot state wrong things confidently?",
+    "options": [
+     "it generates likely text, not verified facts",
+     "it is broken",
+     "it is lying on purpose",
+     "it ran out of memory"
+    ],
+    "a": 0,
+    "why": "A 'hallucination' is fluent but unverified output."
+   },
+   {
+    "q": "A strong prompt usually includes:",
+    "options": [
+     "context, the goal, and the desired format",
+     "only one vague word",
+     "your password",
+     "nothing specific"
+    ],
+    "a": 0,
+    "why": "Specific prompts with context get far better answers."
    }
   ]
  },
