@@ -155,7 +155,7 @@
       (parent.adopt || []).forEach(function (childKey) {
         if (!memberMeta[childKey] || adoptedBy[childKey] || grouped[childKey]) return;
         var pf = FOLDER_CONTENTS["folder-" + parent.key];
-        if (pf && pf.apps) pf.apps.push({ app: "folder-" + childKey, icon: memberMeta[childKey].icon, label: memberMeta[childKey].short });
+        if (pf && pf.apps) pf.apps.push({ app: "folder-" + childKey, icon: memberMeta[childKey].icon, label: memberMeta[childKey].short, adopted: true });
         adoptedBy[childKey] = parent.key;
       });
     });
@@ -1048,12 +1048,21 @@
         return;
       }
 
-      var iconsHtml = folder.apps.map(function (item) {
+      function _folderIcon(item) {
         return '<div class="folder-app-icon" data-app="' + escHtml(item.app) + '" role="button" tabindex="0" aria-label="Open ' + escHtml(item.label) + '">' +
           '<div class="folder-app-img">' + item.icon + '</div>' +
           '<div class="folder-app-label">' + escHtml(item.label) + '</div>' +
         '</div>';
-      }).join("");
+      }
+      /* Adopted child folders (e.g. Psychology inside Science) are shown in their own
+         always-visible block, so they don't get hidden with the topic-lessons grid when
+         the subject has graded courses. Topic lessons stay in iconsHtml. */
+      var adoptedApps = folder.apps.filter(function (it) { return it.adopted; });
+      var topicApps = folder.apps.filter(function (it) { return !it.adopted; });
+      var iconsHtml = topicApps.map(_folderIcon).join("");
+      var adoptedHtml = adoptedApps.length
+        ? ('<div class="folder-lessons-h">🔗 Related folders</div><div class="folder-apps-grid">' + adoptedApps.map(_folderIcon).join("") + '</div>')
+        : "";
 
       /* Grade-aware subject view: the K–12 grade is the structure, the subject is the content.
          An academic subject shows a shared grade picker, the graded course FOR that grade as the
@@ -1101,7 +1110,7 @@
 
       content.innerHTML =
         '<div class="folder-header">' + escHtml(folder.desc) + '</div>' +
-        courseHtml + lessonsBlock;
+        adoptedHtml + courseHtml + lessonsBlock;
 
       content.querySelectorAll(".gp-tab[data-level]").forEach(function (b) {
         b.addEventListener("click", function () { try { localStorage.setItem("lab404.folderLevel", this.getAttribute("data-level")); } catch (e) {} Desktop._renderFolder(winId, folderApp); });
