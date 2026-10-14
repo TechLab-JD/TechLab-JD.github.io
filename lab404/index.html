@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lab404 Study Hub</title>
   <meta name="description" content="A free study hub for every subject — CompTIA certifications, math, science, English, social studies, coding and more. Concept cards, flashcards, glossaries and practice tests, K-12 through college.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0a0e17">
+  <link rel="icon" href="icons/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Lab404">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none';">
   <link id="theme-stylesheet" rel="stylesheet" href="css/dark.css">
   <link rel="stylesheet" href="css/base.css">
@@ -135,6 +143,14 @@
 <script src="js/desktop.js"></script>
 <script src="js/search.js"></script>
 <script src="js/boot.js"></script>
+<script>
+/* Register the service worker so the hub installs and works offline. */
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("sw.js").catch(function () {});
+  });
+}
+</script>
 <script>
 /* ── Pomodoro Study Timer ── */
 (function () {
