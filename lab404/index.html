@@ -59,7 +59,11 @@
     <div class="brand">Lab404</div>
     <div class="sub">Study Hub — every subject, free</div>
   </div>
+  <div class="start-search">
+    <input id="startSearchInput" type="search" class="start-search-input" placeholder="Search everything…" aria-label="Search the study hub" autocomplete="off" spellcheck="false">
+  </div>
   <div class="start-menu-items">
+    <div id="startSearchResults" class="start-search-results" role="listbox" aria-label="Search results"></div>
     <div class="start-menu-section-label">Subjects</div>
     <div id="startSubjects"></div>
     <div class="start-menu-divider"></div>
@@ -129,6 +133,7 @@
 <script src="js/mastery.js"></script>
 <script src="js/course-loader.js"></script>
 <script src="js/desktop.js"></script>
+<script src="js/search.js"></script>
 <script src="js/boot.js"></script>
 <script>
 /* ── Pomodoro Study Timer ── */
