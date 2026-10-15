@@ -101,7 +101,7 @@
 <script>
 var S=Steady;S.initShell();
 function read(k){try{var r=localStorage.getItem(k);return r?JSON.parse(r):null;}catch(e){return null;}}
-var M=read("steadyMoney.v1"),H=read("steady.health.v1"),ST=read("steady.study.v1"),W=read("steady.work.v1"),HM=read("steady.home.v1"),BZ=read("steady.biz.v1"),EV=read("steady.events.v1"),MV=read("steady.move.v1"),PT=read("steady.pets.v1");
+var M=read("steadyMoney.v1"),H=read("steady.health.v1"),ST=read("steady.study.v1"),W=read("steady.work.v1"),HM=read("steady.home.v1"),BZ=read("steady.biz.v1"),EV=read("steady.events.v1"),MV=read("steady.move.v1"),PT=read("steady.pets.v1"),WD=read("steady.wedding.v1");
 function tm(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0");}
 function dkey(dt){return dt.getFullYear()+"-"+String(dt.getMonth()+1).padStart(2,"0")+"-"+String(dt.getDate()).padStart(2,"0");}
 (function(){
@@ -192,6 +192,13 @@ if(PT&&(PT.pets||[]).length){function ptDTo(d){if(!d)return null;var t=new Date(
   var cm2=tm(),yr2=String(new Date().getFullYear());
   pets={count:(PT.pets||[]).length,due30:pdue,spentMo:(PT.expenses||[]).filter(function(e){return (e.date||"").slice(0,7)===cm2;}).reduce(function(a,b){return a+n(b.amount);},0),spentYr:(PT.expenses||[]).filter(function(e){return (e.date||"").slice(0,4)===yr2;}).reduce(function(a,b){return a+n(b.amount);},0)};}
 
+/* ---- wedding ---- */
+var wedding=null;
+if(WD&&((WD.wed&&WD.wed.date)||(WD.guests||[]).length||(WD.budget||[]).length)){function wdDTo(d){if(!d)return null;var t=new Date();t.setHours(0,0,0,0);return Math.round((new Date(d+"T00:00:00")-t)/86400000);}
+  wedding={hasDate:!!(WD.wed||{}).date,days:wdDTo((WD.wed||{}).date),todosLeft:(WD.todos||[]).filter(function(x){return !x.done;}).length,
+    yes:(WD.guests||[]).filter(function(x){return x.status==="Yes";}).reduce(function(a,b){return a+(Number(b.count)||1);},0),
+    spent:(WD.budget||[]).reduce(function(a,c){return a+(Number(c.act)||0);},0)};}
+
 /* ---- hero + headline ---- */
 function M0(v){return S.money0(v);}
 S.el("ov-date").textContent=new Date().toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"});
@@ -199,7 +206,7 @@ S.el("ov-nw").textContent=money?M0(money.nw):"—";
 S.el("ov-earn").textContent=work?M0(work.earnMo):"—";
 S.el("ov-gpa").textContent=study&&study.gpa!==null?study.gpa.toFixed(2):"—";
 S.el("ov-hab").textContent=health?(health.habToday+"/"+health.habCount):"—";
-var any=money||work||health||study||biz||events||move||pets;
+var any=money||work||health||study||biz||events||move||pets||wedding;
 if(!any){S.el("ov-head").textContent="Nothing yet";S.el("ov-sub").innerHTML='Open any app and your data shows up here. <a href="index.html">See the apps →</a>';}
 else{var headParts=[];if(money)headParts.push(M0(money.nw)+" net worth");if(work&&work.earnMo)headParts.push(M0(work.earnMo)+" earned");
   S.el("ov-head").textContent=headParts.length?headParts.join(" · "):"You're set up";}
@@ -246,6 +253,8 @@ doms+=domCard("#e5674e","🏪","Steady Biz","biz.html",!!biz,
   biz?stat("Revenue this mo",M0(biz.rev))+stat("Gross profit",M0(biz.profit))+stat("Orders this mo",biz.orders)+stat("Low stock",biz.low):"","No business data yet.");
 doms+=domCard("#d6468f","🎉","Steady Events","events.html",!!events,
   events?stat("Events",events.count)+stat("Next up",events.next?(events.nextDays===0?"today":events.nextDays+"d"):"—")+stat("To-dos left",events.todosLeft)+stat("RSVP yes",events.yes):"","No events yet.");
+doms+=domCard("#b5698a","💍","Steady Wedding","wedding.html",!!wedding,
+  wedding?stat("Days to go",wedding.hasDate?(wedding.days>0?wedding.days+"d":wedding.days===0?"today":"married!"):"—")+stat("Checklist left",wedding.todosLeft)+stat("RSVP yes",wedding.yes)+stat("Spent",M0(wedding.spent)):"","No wedding planned yet.");
 doms+=domCard("#4c7ef3","🚚","Steady Move","move.html",!!move,
   move?stat("Moving in",move.hasDate?(move.days>0?move.days+"d":move.days===0?"today":"done"):"—")+stat("Checklist",move.pct+"%")+stat("Boxes",move.boxes)+stat("To notify",move.notify):"","No move planned yet.");
 doms+=domCard("#3fa86b","🐾","Steady Pets","pets.html",!!pets,
@@ -262,7 +271,8 @@ var bal=[
   {bl:"Home",c:"#E8A33C",v:home?score([home.cleanTotal>0,home.maint>0,home.meals>0,home.docs>0]):0},
   {bl:"Biz",c:"#e5674e",v:biz?score([biz.products>0,biz.sales>0,biz.customers>0]):0},
   {bl:"Move",c:"#4c7ef3",v:move?score([move.hasDate,move.pct>0,move.boxes>0,(MV.notify||[]).length>0]):0},
-  {bl:"Pets",c:"#3fa86b",v:pets?score([pets.count>0,(PT.health||[]).length>0,(PT.weights||[]).length>0,(PT.expenses||[]).length>0]):0}
+  {bl:"Pets",c:"#3fa86b",v:pets?score([pets.count>0,(PT.health||[]).length>0,(PT.weights||[]).length>0,(PT.expenses||[]).length>0]):0},
+  {bl:"Wedding",c:"#b5698a",v:wedding?score([wedding.hasDate,(WD.todos||[]).length>0,(WD.guests||[]).length>0,(WD.budget||[]).length>0]):0}
 ];
 S.el("ov-balance").innerHTML=bal.map(b=>'<div class="balrow"><span class="bl">'+b.bl+'</span><div class="bar"><span style="width:'+b.v+'%;background:'+b.c+'"></span></div><span style="font:700 13px var(--display);width:38px;text-align:right">'+b.v+'%</span></div>').join("");
 
@@ -278,6 +288,7 @@ if(biz&&biz.low>0)ins.push(["📦","<b>"+biz.low+"</b> product"+(biz.low===1?" i
 if(biz&&biz.rev>0)ins.push(["🏪","You've booked <b>"+M0(biz.rev)+"</b> in sales this month (Steady Biz), about <b>"+M0(biz.profit)+"</b> gross profit after cost of goods."]);
 if(move&&move.hasDate&&move.days!=null&&move.days>=0)ins.push(["🚚","You're moving in <b>"+move.days+" day"+(move.days===1?"":"s")+"</b> and your checklist is <b>"+move.pct+"%</b> done (Steady Move)"+(move.notify>0?" — "+move.notify+" more to tell your new address":"")+"."]);
 if(pets&&pets.due30>0)ins.push(["🐾","<b>"+pets.due30+"</b> pet "+(pets.due30===1?"item is":"items are")+" due in the next 30 days (Steady Pets) — a vaccine, med or visit."]);
+if(wedding&&wedding.hasDate&&wedding.days!=null&&wedding.days>=0)ins.push(["💍","<b>"+wedding.days+" day"+(wedding.days===1?"":"s")+"</b> until the wedding (Steady Wedding)"+(wedding.todosLeft>0?" — "+wedding.todosLeft+" checklist task"+(wedding.todosLeft===1?"":"s")+" left":"")+"."]);
 if(!ins.length)ins.push(["👋","Use a couple of the apps and real cross-app insights will show up here — or hit <b>Load demo data</b> below to see the whole thing filled in."]);
 S.el("ov-insights").innerHTML=ins.map(i=>'<div class="insight"><span class="b">'+i[0]+'</span><span>'+i[1]+'</span></div>').join("");
 
