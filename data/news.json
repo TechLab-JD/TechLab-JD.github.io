@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-14T23:00:25Z",
- "generated_human": "Oct 14, 2026 · 23:00 UTC",
+ "generated": "2026-10-15T00:00:27Z",
+ "generated_human": "Oct 15, 2026 · 00:00 UTC",
  "sources": [
   {
    "name": "NPR",
@@ -206,80 +206,80 @@
    "count": 12
   }
  ],
- "n_articles": 338,
+ "n_articles": 335,
  "n_videos": 0,
  "trending": [
   {
    "term": "trump",
-   "n": 21
+   "n": 22
+  },
+  {
+   "term": "ukraine",
+   "n": 10
   },
   {
    "term": "voters",
-   "n": 11
-  },
-  {
-   "term": "social",
    "n": 9
   },
   {
    "term": "security",
-   "n": 9
-  },
-  {
-   "term": "ukraine",
-   "n": 9
-  },
-  {
-   "term": "midterms",
-   "n": 9
+   "n": 8
   },
   {
    "term": "inflation",
    "n": 8
   },
   {
+   "term": "court",
+   "n": 8
+  },
+  {
+   "term": "ilhan",
+   "n": 8
+  },
+  {
+   "term": "omar",
+   "n": 8
+  },
+  {
+   "term": "social",
+   "n": 7
+  },
+  {
    "term": "pope",
    "n": 7
   },
   {
-   "term": "starlink",
+   "term": "midterm",
    "n": 7
   },
   {
-   "term": "midterm",
-   "n": 6
-  },
-  {
    "term": "california",
+   "n": 7
+  },
+  {
+   "term": "support",
    "n": 6
   },
   {
-   "term": "court",
+   "term": "republicans",
    "n": 6
   },
   {
-   "term": "omar",
-   "n": 6
+   "term": "game",
+   "n": 5
   },
   {
-   "term": "ilhan",
-   "n": 6
-  },
-  {
-   "term": "house",
-   "n": 6
-  },
-  {
-   "term": "saudi",
-   "n": 6
+   "term": "military",
+   "n": 5
   }
  ],
  "videos": [],
  "stories": [
   {
-   "title": "Trump is taking his midterms anger out on Ukraine",
-   "summary": "This story appeared in The Logoff, a daily newsletter that helps you stay informed about the Trump administration without letting political news take over your life. Subscribe here. Welcome to The Logoff: Is Trump turning on Ukraine? What’s happening? Ukraine says its access to S",
-   "category": "World",
+   "title": "Trump’s revenge campaign comes for Ilhan Omar",
+   "summary": "This story appeared in Today, Explained, a daily newsletter that helps you understand the most compelling news and stories of the day. Subscribe here. When life gives you lemons, make it rain. Or…something like that! On Tuesday morning, Minnesota Rep. Ilhan Omar launched a fundra",
+   "category": "Politics",
    "leans": [
     -2,
     -1,
@@ -290,95 +290,9 @@
    "span": 4,
    "n_sources": 8,
    "balance": {
-    "l": 3,
-    "c": 3,
-    "r": 2
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Vox",
-     "lean": -2,
-     "label": "Left",
-     "title": "Trump is taking his midterms anger out on Ukraine",
-     "url": "https://www.vox.com/the-logoff-newsletter-trump/506446/trump-russia-ukraine-zelenskyy-diesel-refineries-starlink"
-    },
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Ukraine accuses SpaceX of restricting Starlink, disrupting military amid Trump pressure",
-     "url": "https://www.nbcnews.com/world/ukraine/ukraine-starlink-restrictions-military-intel-trump-zelenskyy-russia-rcna603412"
-    },
-    {
-     "name": "The Atlantic",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "How Trump Is Selling Out Ukraine",
-     "url": "https://www.theatlantic.com/podcasts/2026/10/david-frum-show-illia-ponomarenko-ukraine-trump/688994/?utm_source=feed"
-    },
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Musk says any limits on Ukraine's Starlink access down to US, not his firm",
-     "url": "https://www.bbc.co.uk/news/articles/c8wy9veedgygo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Confusion swirls around Starlink restrictions in Ukraine",
-     "url": "https://thehill.com/newsletters/technology/6149274-confusion-swirls-around-starlink-restrictions-in-ukraine/"
-    },
-    {
-     "name": "Axios",
-     "lean": 0,
-     "label": "Center",
-     "title": "Ukraine's Starlink restrictions raise suspicions of Musk, Trump retaliation",
-     "url": "https://www.axios.com/2026/10/14/ukraine-starlink-zelensky-spacex-musk-trump"
-    },
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Musk blames Trump and US military for Ukraine’s Starshield restrictions",
-     "url": "https://www.washingtonexaminer.com/policy/technology/4766151/musk-trump-us-military-ukraine-starshield/"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Sen. Tillis to Musk: Explain Ukraine's Starlink Curbs",
-     "url": "https://www.newsmax.com/newsfront/thom-tillis-elon-musk-starlink/2026/10/14/id/1272803"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Musk: US Military, Trump Control Ukraine's Starshield Limits",
-     "url": "https://www.newsmax.com/newsfront/elon-musk-starshield-donald-trump/2026/10/14/id/1272797"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Trump’s revenge campaign comes for Ilhan Omar",
-   "summary": "This story appeared in Today, Explained, a daily newsletter that helps you understand the most compelling news and stories of the day. Subscribe here. When life gives you lemons, make it rain. Or…something like that! On Tuesday morning, Minnesota Rep. Ilhan Omar launched a fundra",
-   "category": "Politics",
-   "leans": [
-    -2,
-    -1,
-    0,
-    1
-   ],
-   "span": 3,
-   "n_sources": 6,
-   "balance": {
     "l": 4,
     "c": 1,
-    "r": 1
+    "r": 3
    },
    "blindspot": null,
    "sources": [
@@ -430,6 +344,99 @@
      "label": "Lean Right",
      "title": "What to Make of the Trump DOJ’s Investigation of Ilhan Omar",
      "url": "https://www.nationalreview.com/2026/10/what-to-make-of-the-trump-dojs-investigation-of-ilhan-omar/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Federal agents seize phone of Rep Ilhan Omar in raid tied to immigration fraud probe",
+     "url": "https://www.foxnews.com/politics/federal-agents-seize-phone-rep-ilhan-omar-raid-tied-immigration-fraud-probe"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Feds Subpoena Ilhan Omar’s Family, Seize Her Phone In Raid",
+     "url": "https://www.dailywire.com/news/feds-subpoena-ilhan-omars-family-seize-her-phone-in-raid"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Ilhan Omar: 18 rumors we've examined",
+     "link": "https://www.snopes.com/collections/ilhan-omar-rumors-collection/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "Trump is taking his midterms anger out on Ukraine",
+   "summary": "This story appeared in The Logoff, a daily newsletter that helps you stay informed about the Trump administration without letting political news take over your life. Subscribe here. Welcome to The Logoff: Is Trump turning on Ukraine? What’s happening? Ukraine says its access to S",
+   "category": "World",
+   "leans": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 4,
+   "n_sources": 7,
+   "balance": {
+    "l": 3,
+    "c": 2,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Trump is taking his midterms anger out on Ukraine",
+     "url": "https://www.vox.com/the-logoff-newsletter-trump/506446/trump-russia-ukraine-zelenskyy-diesel-refineries-starlink"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Ukraine accuses SpaceX of restricting Starlink, disrupting military amid Trump pressure",
+     "url": "https://www.nbcnews.com/world/ukraine/ukraine-starlink-restrictions-military-intel-trump-zelenskyy-russia-rcna603412"
+    },
+    {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How Trump Is Selling Out Ukraine",
+     "url": "https://www.theatlantic.com/podcasts/2026/10/david-frum-show-illia-ponomarenko-ukraine-trump/688994/?utm_source=feed"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "The Memo: Crisis and chaos hit Ukraine as questions multiply over Trump’s role",
+     "url": "https://thehill.com/homenews/6149569-starshield-access-restriction-turmoil/"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Ukraine's Starlink restrictions raise suspicions of Musk, Trump retaliation",
+     "url": "https://www.axios.com/2026/10/14/ukraine-starlink-zelensky-spacex-musk-trump"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Musk blames Trump and US military for Ukraine’s Starshield restrictions",
+     "url": "https://www.washingtonexaminer.com/policy/technology/4766151/musk-trump-us-military-ukraine-starshield/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Sen. Tillis to Musk: Explain Ukraine's Starlink Curbs",
+     "url": "https://www.newsmax.com/newsfront/thom-tillis-elon-musk-starlink/2026/10/14/id/1272803"
     }
    ],
    "factchecks": [],
@@ -607,83 +614,6 @@
    "videos": []
   },
   {
-   "title": "Houthis Escalate Saudi Attacks, Threaten More Hits Despite Trump Warning",
-   "summary": "Iran-backed Houthis vowed to continue attacking airports and oil infrastructure in Saudi Arabia on Wednesday in defiance of President Donald Trump's warnings, launching one of their most consequential attacks on the headquarters of Saudi oil giant Aramco.The overnight...",
-   "category": "World",
-   "leans": [
-    -1,
-    2
-   ],
-   "span": 3,
-   "n_sources": 2,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Houthis launch new attack on Saudi capital as Trump mulls strikes",
-     "url": "https://www.cbsnews.com/live-updates/iran-war-us-houthi-saudi-arabia-trump/"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Houthis Escalate Saudi Attacks, Threaten More Hits Despite Trump Warning",
-     "url": "https://www.newsmax.com/newsfront/Houthis-Escalate-Saudi-Attacks-Threaten-More-Hits-Despite-Trump-Warning/2026/10/14/id/1272785"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Pope Leo XIV has lung cancer called adenocarcinoma. Here's what that means",
-   "summary": "Pope Leo XIV had the lower section of his right lung removed after doctors diagnosed him with the most common form of lung cancer. While lung cancer is a leading killer, survival rates can be high if it's caught early, as the pope's tumor appears to have been. Here are some thing",
-   "category": "Economy",
-   "leans": [
-    -1,
-    1
-   ],
-   "span": 2,
-   "n_sources": 3,
-   "balance": {
-    "l": 2,
-    "c": 0,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Zelenskyy sits down with NPR. And, Pope Leo diagnosed with lung cancer",
-     "url": "https://www.npr.org/2026/10/14/g-s1-148040/up-first-newsletter-volodymyr-zelenskyy-pope-leo-kimberly-guilfoyle-media-free-speech"
-    },
-    {
-     "name": "Time",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "What to Know About Pope Leo's Lung Cancer Diagnosis",
-     "url": "https://time.com/article/2026/10/14/pope-leo-lung-cancer-what-to-know/"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Pope Leo XIV has lung cancer called adenocarcinoma. Here's what that means",
-     "url": "https://www.washingtontimes.com/news/2026/oct/14/pope-leo-lung-cancer-called-adenocarcinoma-heres-means/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Trump says leakers should be shot: 'They're the scum of the earth'",
    "summary": "President Trump suggested Wednesday at a campaign rally in Arizona that leakers should be shot, in an apparent reference to leaks surrounding U.S. airstrikes on Iran's nuclear facilities. “Somebody leaked, some sleazebag. They ought to go to jail and be shot. For the rest of thei",
    "category": "World",
@@ -727,18 +657,187 @@
    "videos": []
   },
   {
-   "title": "Social Security recipients will see rise in monthly payments next year",
-   "summary": "Data: Social Security Administration; Chart: Neil Irwin/Axios Social Security recipients will see the largest rise in their monthly payments in four years in January, with a 3.6% cost-of-living adjustment. Driving the news: The Social Security Administration announced the 2027 CO",
+   "title": "Watch live: Trump rallies Montana Republicans with key House seat on the line",
+   "summary": "President Trump is campaigning Wednesday evening in Montana, as Republicans fight to hold on to their majorities in both chambers of Congress. Trump is expected to rally supporters for GOP candidate Aaron Flint, who is facing Democrat Sam Forstag in the race to replace retiring R",
+   "category": "Politics",
+   "leans": [
+    -1,
+    0,
+    1
+   ],
+   "span": 2,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH LIVE: Rep. Begich faces challenger Hill in a debate for Alaska's at-large House seat",
+     "url": "https://www.pbs.org/newshour/politics/watch-live-rep-begich-faces-challenger-hill-in-a-debate-for-alaskas-at-large-house-seat"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Watch live: Trump rallies Montana Republicans with key House seat on the line",
+     "url": "https://thehill.com/video-clips/6149034-watch-live-donald-trump-montana-rally-aaron-flint-house-race/"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "WATCH LIVE: Trump headlines Montana rally to boost GOP in midterm elections",
+     "url": "https://www.washingtonexaminer.com/news/white-house/4766249/watch-live-trump-rally-republican-candidates-midterms/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Mookie Betts could be the answer to the Dodgers’ Shohei Ohtani problem",
+   "summary": "Before the Dodgers became Shohei Ohtani’s team, they were Mookie Betts’ team. Manager Dave Roberts used to say that as Betts went, the Dodgers went. Betts was the best player on the 2020 championship team. He finished in the top five in National League MVP voting three of his fir",
    "category": "General",
+   "leans": [
+    0,
+    1,
+    2
+   ],
+   "span": 2,
+   "n_sources": 3,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Dodgers Reveal Surprising Shohei Ohtani Change for Game 3 vs. Brewers",
+     "url": "https://www.newsweek.com/sports/mlb/dodgers-reveal-surprising-shohei-ohtani-change-for-game-3-vs-brewers-12570072"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Mookie Betts could be the answer to the Dodgers’ Shohei Ohtani problem",
+     "url": "https://nypost.com/2026/10/14/sports/dodgers-need-mookie-betts-to-lead-offense-with-shohei-ohtani-struggling-in-nlcs/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Dodgers star Will Smith's wife delivers third 'October baby' just before Dodgers Game 3 bout vs Brewers",
+     "url": "https://www.foxnews.com/outkick-sports/dodgers-star-will-smith-wife-delivers-third-october-baby-before-dodgers-game-3-brewers"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Greenland Pushes Back on Trump's 'Massive' Oil Exploration Claim",
+   "summary": "Greenland's government on Wednesday disputed President Donald Trump's claim that large-scale oil, gas, and mineral exploration is about to begin in the Arctic territory, saying existing projects remain years away from producing results, CNN reported.",
+   "category": "Politics",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Denmark pushes back as Trump touts Greenland oil and mineral deals",
+     "url": "https://www.aljazeera.com/news/2026/10/14/denmark-pushes-back-as-trump-touts-greenland-oil-and-mineral-deals?traffic_source=rss"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Greenland Pushes Back on Trump's 'Massive' Oil Exploration Claim",
+     "url": "https://www.newsmax.com/newsfront/greenland-trump-oil/2026/10/14/id/1272805"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "Trump Touts Medicaid Drug Savings, But Details Remain Murky",
+     "link": "https://www.factcheck.org/2026/10/trump-touts-medicaid-drug-savings-but-details-remain-murky/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "New inflation warning sign",
+   "summary": "America's inflation problem is becoming harder to contain, with new evidence Wednesday that price pressures are extending beyond the war-related energy shock rattling the global economy . Why it matters: Inflation is squeezing household budgets and dimming hopes for relief. It is",
+   "category": "World",
    "leans": [
     -1,
     0
    ],
    "span": 1,
-   "n_sources": 4,
+   "n_sources": 3,
    "balance": {
-    "l": 3,
-    "c": 1,
+    "l": 1,
+    "c": 2,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "In Kansas, a newly competitive Senate race tests limit of Trump's unpopular policies",
+     "url": "https://www.npr.org/2026/10/14/nx-s1-5995633/kansas-senate-race-hamilton-marshall-tossup"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "New inflation warning sign",
+     "url": "https://www.axios.com/2026/10/14/inflation-warning-sign-cpi"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Republicans Get New Midterm Warning Sign as Kansas Senate Race Shifts",
+     "url": "https://www.newsweek.com/republicans-get-new-midterm-warning-sign-as-kansas-senate-race-shifts-12569771"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Coalition of states sue OpenAI, alleging it misled users on safety",
+   "summary": "A group of state attorneys general are suing the artificial intelligence firm OpenAI, accusing the ChatGPT-maker of illegally misleading users over the safety of its chatbot. Eight states filed lawsuits Wednesday, alleging OpenAI pushed forward with development of its AI products",
+   "category": "World",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 2,
     "r": 0
    },
    "blindspot": null,
@@ -747,9 +846,44 @@
      "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Social Security recipients will receive a 3.6% cost-of-living increase in 2027",
-     "url": "https://www.nbcnews.com/business/personal-finance/social-security-cola-2027-increase-rcna603284"
+     "title": "Eight states sue OpenAI over ChatGPT’s alleged harms to users",
+     "url": "https://www.nbcnews.com/tech/tech-news/openai-sued-eight-states-alleged-harm-chatgpt-rcna603614"
     },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Coalition of states sue OpenAI, alleging it misled users on safety",
+     "url": "https://thehill.com/policy/technology/6149365-states-sue-openai-safety/"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "OpenAI sued by 8 states over ChatGPT safety concerns",
+     "url": "https://www.cnbc.com/2026/10/14/openai-sued-by-8-states-over-chatgpt-safety-concerns-.html"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Social Security recipients will see rise in monthly payments next year",
+   "summary": "Data: Social Security Administration; Chart: Neil Irwin/Axios Social Security recipients will see the largest rise in their monthly payments in four years in January, with a 3.6% cost-of-living adjustment. Driving the news: The Social Security Administration announced the 2027 CO",
+   "category": "General",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 3,
+   "balance": {
+    "l": 2,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
     {
      "name": "ABC News",
      "lean": -1,
@@ -846,9 +980,9 @@
    "videos": []
   },
   {
-   "title": "Attorney for banned outlets on legal fight over White House press access",
-   "summary": "A federal judge has once again ordered the White House to restore access for three news organizations President Trump banned last month over their coverage of his administration. The judge ordered full access for CNN, MS NOW and Politico while their legal challenge moves forward.",
-   "category": "World",
+   "title": "Lisa Cook's lawyers call Trump's investigation committee 'demonstrably biased'",
+   "summary": "Lawyers for Federal Reserve board of governors member Lisa Cook called President Trump’s investigation committee into her “demonstrably biased.” \"A hearing with demonstrably biased members, unspecified additional allegations, and an unclear schedule for the disclosure of any addi",
+   "category": "Politics",
    "leans": [
     -1,
     0
@@ -866,15 +1000,15 @@
      "name": "PBS NewsHour",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Attorney for banned outlets on legal fight over White House press access",
-     "url": "https://www.pbs.org/newshour/show/attorney-for-banned-outlets-on-legal-fight-over-white-house-press-access"
+     "title": "Lawyers for Federal Reserve's Lisa Cook say White House hearing set up by Trump is 'biased'",
+     "url": "https://www.pbs.org/newshour/politics/lawyers-for-federal-reserves-lisa-cook-say-white-house-hearing-set-up-by-trump-is-biased"
     },
     {
      "name": "The Hill",
      "lean": 0,
      "label": "Center",
-     "title": "Spicer weighs in on Zacharia's White House press briefing: 'I felt bad for her'",
-     "url": "https://thehill.com/homenews/media/6149284-spicer-felt-bad-zacharia-press-secretary/"
+     "title": "Lisa Cook's lawyers call Trump's investigation committee 'demonstrably biased'",
+     "url": "https://thehill.com/business/6149573-cook-challenges-trump-inquiry-bias/"
     }
    ],
    "factchecks": [],
@@ -916,41 +1050,6 @@
    "videos": []
   },
   {
-   "title": "Sen. Cruz: El-Sayed Poses 'Acute National Security Risk,' Cites Muslim Brotherhood Ties",
-   "summary": "Sen. Ted Cruz, R-Texas, warned on his latest \"Verdict\" podcast that Michigan Democrat Senate candidate Abdul El-Sayed could pose a serious national security threat if elected, citing connections to the Muslim Brotherhood.",
-   "category": "World",
-   "leans": [
-    1,
-    2
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Abdul El-Sayed’s denial on Muslim Brotherhood ties provides opening for Mike Rogers",
-     "url": "https://nypost.com/2026/10/14/us-news/abdul-el-sayeds-denial-on-muslim-brotherhood-ties-provides-opening-for-mike-rogers/"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Sen. Cruz: El-Sayed Poses 'Acute National Security Risk,' Cites Muslim Brotherhood Ties",
-     "url": "https://www.newsmax.com/newsfront/ted-cruz-abdul-el-sayed-national-security/2026/10/14/id/1272793"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Hilary Swank Is Pregnant Again At An Age That Turns Heads",
    "summary": "Oscar-winning actress Hilary Swank announced Wednesday that she is expecting her third child at 52, three years after welcoming twins. “A lot of people have been asking what project I’m doing next, this one releases in December,” Swank wrote on Instagram alongside a video of her ",
    "category": "General",
@@ -980,6 +1079,47 @@
      "label": "Right",
      "title": "Hilary Swank Is Pregnant Again At An Age That Turns Heads",
      "url": "https://www.dailywire.com/news/hilary-swank-is-pregnant-again-at-an-age-that-turns-heads"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Zelenskyy sits down with NPR. And, Pope Leo diagnosed with lung cancer",
+   "summary": "Ukrainian President Volodymyr Zelenskyy has a sit-down interview with NPR as Russia's full-scale invasion nears the 5-year mark. And, Pope Leo XIV has been diagnosed with lung cancer.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 3,
+   "balance": {
+    "l": 3,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Zelenskyy sits down with NPR. And, Pope Leo diagnosed with lung cancer",
+     "url": "https://www.npr.org/2026/10/14/g-s1-148040/up-first-newsletter-volodymyr-zelenskyy-pope-leo-kimberly-guilfoyle-media-free-speech"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump, Chicagoans show outpouring of support for Pope Leo amid cancer diagnosis",
+     "url": "https://www.cbsnews.com/video/trump-chicagoans-support-pope-leo-cancer-diagnosis/"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "What to Know About Pope Leo's Lung Cancer Diagnosis",
+     "url": "https://time.com/article/2026/10/14/pope-leo-lung-cancer-what-to-know/"
     }
    ],
    "factchecks": [],
@@ -1020,6 +1160,40 @@
    "videos": []
   },
   {
+   "title": "Man arrested in ex-fiancée's disappearance 15 years after going on \"The People's Court\" together",
+   "summary": "In Orlando, police said they broke a cold case that began nearly 15 years ago, when a couple appeared on \"The People's Court.\" The woman disappeared soon after, and now her ex-fiancée is under arrest. Cristian Benavides reports.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "A mom vanished after going on ‘The People’s Court’ with her ex-fiancé over her ring. 15 years later, he’s accused of murder.",
+     "url": "https://www.nbcnews.com/news/us-news/man-whose-ex-fiancee-vanished-2011-peoples-court-appearance-arrested-m-rcna603584"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Man arrested in ex-fiancée's disappearance 15 years after going on \"The People's Court\" together",
+     "url": "https://www.cbsnews.com/video/man-arrested-ex-fiances-disappearance-15-years-peoples-court-together/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "World’s oldest shipwreck found off coast of Turkiye",
    "summary": "Clay analysis traces recovered storage jars to early history workshops operating across the Jordan Valley.",
    "category": "General",
@@ -1048,40 +1222,6 @@
      "label": "Center",
      "title": "World’s oldest shipwreck found off coast of Turkiye",
      "url": "https://www.aljazeera.com/news/2026/10/14/worlds-oldest-shipwreck-found-off-coast-of-turkiye?traffic_source=rss"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Coalition of states sue OpenAI, alleging it misled users on safety",
-   "summary": "A group of state attorneys general are suing the artificial intelligence firm OpenAI, accusing the ChatGPT-maker of illegally misleading users over the safety of its chatbot. Eight states filed lawsuits Wednesday, alleging OpenAI pushed forward with development of its AI products",
-   "category": "World",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 2,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Coalition of states sue OpenAI, alleging it misled users on safety",
-     "url": "https://thehill.com/policy/technology/6149365-states-sue-openai-safety/"
-    },
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "OpenAI sued by 8 states over ChatGPT safety concerns",
-     "url": "https://www.cnbc.com/2026/10/14/openai-sued-by-8-states-over-chatgpt-safety-concerns-.html"
     }
    ],
    "factchecks": [],
@@ -1122,34 +1262,34 @@
    "videos": []
   },
   {
-   "title": "New inflation warning sign",
-   "summary": "America's inflation problem is becoming harder to contain, with new evidence Wednesday that price pressures are extending beyond the war-related energy shock rattling the global economy . Why it matters: Inflation is squeezing household budgets and dimming hopes for relief. It is",
-   "category": "World",
+   "title": "Supreme Court reverses ‘inappropriate’ ruling in FCC fight over favorable campaign ad rate rules",
+   "summary": "The Supreme Court handed the Federal Communications Commission a victory on Wednesday in a legal battle over who is entitled to favorable advertising rates in the closing weeks of the costly, hotly contested midterm elections. The high court ruled 7-2 to halt a ruling by the U.S.",
+   "category": "Politics",
    "leans": [
-    0
+    1
    ],
    "span": 0,
    "n_sources": 2,
    "balance": {
     "l": 0,
-    "c": 2,
-    "r": 0
+    "c": 0,
+    "r": 2
    },
-   "blindspot": null,
+   "blindspot": "left",
    "sources": [
     {
-     "name": "Axios",
-     "lean": 0,
-     "label": "Center",
-     "title": "New inflation warning sign",
-     "url": "https://www.axios.com/2026/10/14/inflation-warning-sign-cpi"
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Supreme Court reverses ‘inappropriate’ ruling in FCC fight over favorable campaign ad rate rules",
+     "url": "https://www.washingtonexaminer.com/news/supreme-court/4766308/supreme-court-reverses-ruling-fcc-fight-favorable-campaign-ad-rate-rules/"
     },
     {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Republicans Get New Midterm Warning Sign as Kansas Senate Race Shifts",
-     "url": "https://www.newsweek.com/republicans-get-new-midterm-warning-sign-as-kansas-senate-race-shifts-12569771"
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Supreme Court allows FCC ad rules that benefit GOP to remain for 2026 election",
+     "url": "https://www.washingtontimes.com/news/2026/oct/14/supreme-court-allows-fcc-ad-rules-benefit-gop-remain-2026-election/"
     }
    ],
    "factchecks": [],
@@ -1295,39 +1435,6 @@
    "videos": []
   },
   {
-   "title": "Susan Collins ‘outclassed’ opponent Troy Jackson on knowledge during debate: Guy Benson",
-   "summary": "Washington Examiner columnist Guy Benson said Sen. Susan Collins (R-ME) “outclassed” her opponent Troy Jackson during their latest senatorial debate, schooling him in government knowledge. “It did seem like Troy Jackson was trying to attack Senator Collins on one large federal pr",
-   "category": "World",
-   "leans": [
-    1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Susan Collins ‘outclassed’ opponent Troy Jackson on knowledge during debate: Guy Benson",
-     "url": "https://www.washingtonexaminer.com/news/campaigns/congressional/4766200/collins-outclassed-jackson-debate-guy-benson/"
-    }
-   ],
-   "factchecks": [
-    {
-     "org": "Snopes",
-     "title": "Ad targeting Maine Sen. Susan Collins' opponent Troy Jackson ran in wrong state. Who paid?",
-     "link": "https://www.snopes.com/fact-check/troy-jackson-maine-senate-ad-error/"
-    }
-   ],
-   "videos": []
-  },
-  {
    "title": "Aboard an icebreaker, a writer got a closer look at the Arctic's 'Sea Change'",
    "summary": "As polar ice melts in the Arctic, shipping lanes are opening up, making the region a new zone of superpower competition. Writer Rana Foroohar explains the stakes in Sea Change.",
    "category": "General",
@@ -1409,60 +1516,6 @@
    "videos": []
   },
   {
-   "title": "The skincare scheme that led to consumer complaints, lawsuits and a federal investigation",
-   "summary": "Free samples, high-pressure pitches and $50,000 bills: An NPR investigation reveals how a network of mall skincare stores systematically targeted older adults and people with disabilities across the U.S.",
-   "category": "Economy",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "The skincare scheme that led to consumer complaints, lawsuits and a federal investigation",
-     "url": "https://www.npr.org/2026/10/14/nx-s1-5550974/skincare-scheme-mazal-group-investigation"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "VIDEO: The skincare sample is free. What happens next can cost thousands",
-   "summary": "For years, customers have complained of aggressive sales tactics and charges at mall skincare stores. NPR investigated the business that connects many of them.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "VIDEO: The skincare sample is free. What happens next can cost thousands",
-     "url": "https://www.npr.org/2026/10/14/nx-s1-6000621/mazal-group-investigation-documentary"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Civil rights advocates plan to send thousands of observers to midterm polling places",
    "summary": "For many election cycles, civil rights groups and political parties have fanned out to monitor polling places, but the charged midterm environment has many organizations stepping up efforts this year.",
    "category": "Politics",
@@ -1511,6 +1564,33 @@
      "label": "Lean Left",
      "title": "'They're stealing from the poor': A major source of SNAP fraud robs recipients of millions",
      "url": "https://www.npr.org/2026/10/14/nx-s1-5985198/snap-fraud-ebt-card-skimming-chip-cards"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "The skincare scheme that led to consumer complaints, lawsuits and a federal investigation",
+   "summary": "Free samples, high-pressure pitches and $50,000 bills: An NPR investigation reveals how a network of mall skincare stores systematically targeted older adults and people with disabilities across the U.S.",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "The skincare scheme that led to consumer complaints, lawsuits and a federal investigation",
+     "url": "https://www.npr.org/2026/10/14/nx-s1-5550974/skincare-scheme-mazal-group-investigation"
     }
    ],
    "factchecks": [],
@@ -1895,62 +1975,8 @@
    "videos": []
   },
   {
-   "title": "How the House landscape is evolving: From the Politics Desk",
-   "summary": "Welcome to From the Politics Desk, a daily newsletter that brings you the NBC News Politics team’s latest reporting and analysis from the White House, Capitol Hill and the campaign trail.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "How the House landscape is evolving: From the Politics Desk",
-     "url": "https://www.nbcnews.com/politics/politics-news/house-landscape-evolving-politics-desk-rcna603597"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Send your questions for Steve Kornacki on the midterms",
-   "summary": "With less than three weeks before Election Day, Steve Kornacki is ready to answer your questions on all things midterms.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Send your questions for Steve Kornacki on the midterms",
-     "url": "https://www.nbcnews.com/politics/2026-election/steve-kornacki-midterms-qa-rcna603534"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "It’s doll coming back to me now: Celine Dion gets her own Barbie",
-   "summary": "Celine Dion is being made into a Barbie doll, one that will be sought by fans near, far, wherever they are.",
+   "title": "Kentucky police arrest 8 in child abuse, trafficking and rape investigation",
+   "summary": "Eight people living in the Kentucky home were arrested in a sweeping child abuse and sexual abuse case involving seven victims, ages 1 to 17, officials said Wednesday.",
    "category": "General",
    "leans": [
     -1
@@ -1968,8 +1994,35 @@
      "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "It’s doll coming back to me now: Celine Dion gets her own Barbie",
-     "url": "https://www.nbcnews.com/pop-culture/pop-culture-news/s-doll-coming-back-now-celine-dion-gets-barbie-rcna603566"
+     "title": "Kentucky police arrest 8 in child abuse, trafficking and rape investigation",
+     "url": "https://www.nbcnews.com/news/us-news/kentucky-police-arrest-8-child-abuse-trafficking-rape-investigation-rcna603573"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "U.S. may have withheld warnings to Ukraine on deadly Kyiv strikes",
+   "summary": "The Trump administration may have withheld intelligence warnings to Ukraine about Russian strikes that killed 6 and cut power to 600,000 people, sources say.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "U.S. may have withheld warnings to Ukraine on deadly Kyiv strikes",
+     "url": "https://www.cbsnews.com/news/us-ukraine-intelligence-russia-war-missile-strikes-kyiv-power-outages/"
     }
    ],
    "factchecks": [],
@@ -1977,41 +2030,6 @@
   }
  ],
  "blindspots": [
-  {
-   "title": "Sen. Cruz: El-Sayed Poses 'Acute National Security Risk,' Cites Muslim Brotherhood Ties",
-   "summary": "Sen. Ted Cruz, R-Texas, warned on his latest \"Verdict\" podcast that Michigan Democrat Senate candidate Abdul El-Sayed could pose a serious national security threat if elected, citing connections to the Muslim Brotherhood.",
-   "category": "World",
-   "leans": [
-    1,
-    2
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Abdul El-Sayed’s denial on Muslim Brotherhood ties provides opening for Mike Rogers",
-     "url": "https://nypost.com/2026/10/14/us-news/abdul-el-sayeds-denial-on-muslim-brotherhood-ties-provides-opening-for-mike-rogers/"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Sen. Cruz: El-Sayed Poses 'Acute National Security Risk,' Cites Muslim Brotherhood Ties",
-     "url": "https://www.newsmax.com/newsfront/ted-cruz-abdul-el-sayed-national-security/2026/10/14/id/1272793"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
   {
    "title": "Hilary Swank Is Pregnant Again At An Age That Turns Heads",
    "summary": "Oscar-winning actress Hilary Swank announced Wednesday that she is expecting her third child at 52, three years after welcoming twins. “A lot of people have been asking what project I’m doing next, this one releases in December,” Swank wrote on Instagram alongside a video of her ",
@@ -2048,6 +2066,47 @@
    "videos": []
   },
   {
+   "title": "Zelenskyy sits down with NPR. And, Pope Leo diagnosed with lung cancer",
+   "summary": "Ukrainian President Volodymyr Zelenskyy has a sit-down interview with NPR as Russia's full-scale invasion nears the 5-year mark. And, Pope Leo XIV has been diagnosed with lung cancer.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 3,
+   "balance": {
+    "l": 3,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Zelenskyy sits down with NPR. And, Pope Leo diagnosed with lung cancer",
+     "url": "https://www.npr.org/2026/10/14/g-s1-148040/up-first-newsletter-volodymyr-zelenskyy-pope-leo-kimberly-guilfoyle-media-free-speech"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump, Chicagoans show outpouring of support for Pope Leo amid cancer diagnosis",
+     "url": "https://www.cbsnews.com/video/trump-chicagoans-support-pope-leo-cancer-diagnosis/"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "What to Know About Pope Leo's Lung Cancer Diagnosis",
+     "url": "https://time.com/article/2026/10/14/pope-leo-lung-cancer-what-to-know/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "Trump's ambassador to Greece, Kimberly Guilfoyle, resigns after allegations of improper conduct",
    "summary": "The White House publicly asked for U.S. Ambassador to Greece Kimberly Guilfoyle's resignation on Tuesday as she faced mounting accusations of improper conduct.",
    "category": "Politics",
@@ -2076,6 +2135,74 @@
      "label": "Lean Left",
      "title": "Kimberly Guilfoyle Broke Trump’s Most Important Rule",
      "url": "https://www.theatlantic.com/ideas/2026/10/kimberly-guilfoyle-trump-greece-davos/688996/?utm_source=feed"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Man arrested in ex-fiancée's disappearance 15 years after going on \"The People's Court\" together",
+   "summary": "In Orlando, police said they broke a cold case that began nearly 15 years ago, when a couple appeared on \"The People's Court.\" The woman disappeared soon after, and now her ex-fiancée is under arrest. Cristian Benavides reports.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "A mom vanished after going on ‘The People’s Court’ with her ex-fiancé over her ring. 15 years later, he’s accused of murder.",
+     "url": "https://www.nbcnews.com/news/us-news/man-whose-ex-fiancee-vanished-2011-peoples-court-appearance-arrested-m-rcna603584"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Man arrested in ex-fiancée's disappearance 15 years after going on \"The People's Court\" together",
+     "url": "https://www.cbsnews.com/video/man-arrested-ex-fiances-disappearance-15-years-peoples-court-together/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Supreme Court reverses ‘inappropriate’ ruling in FCC fight over favorable campaign ad rate rules",
+   "summary": "The Supreme Court handed the Federal Communications Commission a victory on Wednesday in a legal battle over who is entitled to favorable advertising rates in the closing weeks of the costly, hotly contested midterm elections. The high court ruled 7-2 to halt a ruling by the U.S.",
+   "category": "Politics",
+   "leans": [
+    1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Supreme Court reverses ‘inappropriate’ ruling in FCC fight over favorable campaign ad rate rules",
+     "url": "https://www.washingtonexaminer.com/news/supreme-court/4766308/supreme-court-reverses-ruling-fcc-fight-favorable-campaign-ad-rate-rules/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Supreme Court allows FCC ad rules that benefit GOP to remain for 2026 election",
+     "url": "https://www.washingtontimes.com/news/2026/oct/14/supreme-court-allows-fcc-ad-rules-benefit-gop-remain-2026-election/"
     }
    ],
    "factchecks": [],
