@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-15T00:00:27Z",
- "generated_human": "Oct 15, 2026 · 00:00 UTC",
+ "generated": "2026-10-15T01:00:28Z",
+ "generated_human": "Oct 15, 2026 · 01:00 UTC",
  "sources": [
   {
    "name": "NPR",
@@ -206,43 +206,39 @@
    "count": 12
   }
  ],
- "n_articles": 335,
+ "n_articles": 336,
  "n_videos": 0,
  "trending": [
   {
    "term": "trump",
-   "n": 22
-  },
-  {
-   "term": "ukraine",
-   "n": 10
-  },
-  {
-   "term": "voters",
-   "n": 9
-  },
-  {
-   "term": "security",
-   "n": 8
-  },
-  {
-   "term": "inflation",
-   "n": 8
-  },
-  {
-   "term": "court",
-   "n": 8
+   "n": 20
   },
   {
    "term": "ilhan",
-   "n": 8
+   "n": 9
   },
   {
    "term": "omar",
+   "n": 9
+  },
+  {
+   "term": "ukraine",
+   "n": 9
+  },
+  {
+   "term": "voters",
    "n": 8
   },
   {
    "term": "social",
+   "n": 7
+  },
+  {
+   "term": "security",
+   "n": 7
+  },
+  {
+   "term": "inflation",
    "n": 7
   },
   {
@@ -258,20 +254,24 @@
    "n": 7
   },
   {
+   "term": "court",
+   "n": 7
+  },
+  {
+   "term": "iran",
+   "n": 7
+  },
+  {
+   "term": "back",
+   "n": 6
+  },
+  {
    "term": "support",
    "n": 6
   },
   {
-   "term": "republicans",
+   "term": "fight",
    "n": 6
-  },
-  {
-   "term": "game",
-   "n": 5
-  },
-  {
-   "term": "military",
-   "n": 5
   }
  ],
  "videos": [],
@@ -288,11 +288,11 @@
     2
    ],
    "span": 4,
-   "n_sources": 8,
+   "n_sources": 9,
    "balance": {
     "l": 4,
     "c": 1,
-    "r": 3
+    "r": 4
    },
    "blindspot": null,
    "sources": [
@@ -332,6 +332,13 @@
      "url": "https://www.csmonitor.com/USA/Politics/2026/1014/democrat-omar-fbi-raid-immigration?icid=rss"
     },
     {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Rep. Ilhan Omar’s phone seized by feds during DHS raid tied to potential immigration fraud",
+     "url": "https://nypost.com/2026/10/14/us-news/rep-ilhan-omars-phone-seized-by-feds-during-dhs-raid-tied-to-potential-immigration-fraud/"
+    },
+    {
      "name": "National Review",
      "lean": 1,
      "label": "Lean Right",
@@ -349,8 +356,15 @@
      "name": "Fox News",
      "lean": 2,
      "label": "Right",
-     "title": "Federal agents seize phone of Rep Ilhan Omar in raid tied to immigration fraud probe",
+     "title": "Federal agents seize phone of Rep. Ilhan Omar in raid tied to immigration fraud probe",
      "url": "https://www.foxnews.com/politics/federal-agents-seize-phone-rep-ilhan-omar-raid-tied-immigration-fraud-probe"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Ultimate Aim Of Ilhan Omar Probe Is To Strip Her Citizenship And Deport Her",
+     "url": "https://www.dailywire.com/news/ultimate-aim-of-ilhan-omar-probe-is-to-strip-her-citizenship-and-deport-her"
     },
     {
      "name": "The Daily Wire",
@@ -361,6 +375,11 @@
     }
    ],
    "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Does image show protester removed from crowd at Trump rally in Ohio? Don't be fooled",
+     "link": "https://www.snopes.com/fact-check/image-ohio-trump-rally-protester/"
+    },
     {
      "org": "Snopes",
      "title": "Ilhan Omar: 18 rumors we've examined",
@@ -381,9 +400,9 @@
     2
    ],
    "span": 4,
-   "n_sources": 7,
+   "n_sources": 6,
    "balance": {
-    "l": 3,
+    "l": 2,
     "c": 2,
     "r": 2
    },
@@ -395,13 +414,6 @@
      "label": "Left",
      "title": "Trump is taking his midterms anger out on Ukraine",
      "url": "https://www.vox.com/the-logoff-newsletter-trump/506446/trump-russia-ukraine-zelenskyy-diesel-refineries-starlink"
-    },
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Ukraine accuses SpaceX of restricting Starlink, disrupting military amid Trump pressure",
-     "url": "https://www.nbcnews.com/world/ukraine/ukraine-starlink-restrictions-military-intel-trump-zelenskyy-russia-rcna603412"
     },
     {
      "name": "The Atlantic",
@@ -428,8 +440,8 @@
      "name": "Washington Examiner",
      "lean": 1,
      "label": "Lean Right",
-     "title": "Musk blames Trump and US military for Ukraine’s Starshield restrictions",
-     "url": "https://www.washingtonexaminer.com/policy/technology/4766151/musk-trump-us-military-ukraine-starshield/"
+     "title": "Will Trump’s contempt for Zelensky force Ukraine to choose between an election and survival?",
+     "url": "https://www.washingtonexaminer.com/news/world/4765570/trump-contempt-zelensky-force-ukraine-choose-election-survival/"
     },
     {
      "name": "Newsmax",
@@ -437,6 +449,57 @@
      "label": "Right",
      "title": "Sen. Tillis to Musk: Explain Ukraine's Starlink Curbs",
      "url": "https://www.newsmax.com/newsfront/thom-tillis-elon-musk-starlink/2026/10/14/id/1272803"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Trump says leakers should be shot: 'They're the scum of the earth'",
+   "summary": "President Trump suggested Wednesday at a campaign rally in Arizona that leakers should be shot, in an apparent reference to leaks surrounding U.S. airstrikes on Iran's nuclear facilities. “Somebody leaked, some sleazebag. They ought to go to jail and be shot. For the rest of thei",
+   "category": "World",
+   "leans": [
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 4,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump says government officials who leak to the media ‘should be shot’",
+     "url": "https://www.nbcnews.com/politics/donald-trump/president-says-government-officials-who-leak-to-media-should-be-shot-rcna603613"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump says leakers should be shot: 'They're the scum of the earth'",
+     "url": "https://thehill.com/homenews/6149366-trump-rally-leakers-shot/"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump says government ‘leakers should be shot’",
+     "url": "https://www.washingtonexaminer.com/news/white-house/4766320/trump-says-government-leakers-should-be-shot/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Says Iran Raid Leakers 'Should Be Shot'",
+     "url": "https://www.newsmax.com/newsfront/iran-leakers-trump/2026/10/14/id/1272817"
     }
    ],
    "factchecks": [],
@@ -544,119 +607,6 @@
    "videos": []
   },
   {
-   "title": "Seniors Set For A Social Security Raise To Combat Rising Inflation",
-   "summary": "Social Security is upping monthly payments by $75 to counter inflation. About 7.3 million seniors will see increased payments starting in December, and over 72 million Social Security beneficiaries will see the $75 monthly adjustment starting in January 2027, the administration a",
-   "category": "Economy",
-   "leans": [
-    -1,
-    2
-   ],
-   "span": 3,
-   "n_sources": 2,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Inflation sizzled in September — and Social Security benefits will get a boost",
-     "url": "https://www.npr.org/2026/10/14/nx-s1-6000593/inflation-consumer-prices-cpi-social-security-benefits"
-    },
-    {
-     "name": "The Daily Wire",
-     "lean": 2,
-     "label": "Right",
-     "title": "Seniors Set For A Social Security Raise To Combat Rising Inflation",
-     "url": "https://www.dailywire.com/news/seniors-set-for-a-social-security-raise-to-combat-rising-inflation"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "DOJ threatens emergency legal action against California over suspected noncitizen voters",
-   "summary": "The Justice Department threatens emergency legal action against California over suspected noncitizens on voter rolls ahead of midterm elections.",
-   "category": "Politics",
-   "leans": [
-    -1,
-    2
-   ],
-   "span": 3,
-   "n_sources": 2,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Justice Department threatens legal action against California over alleged noncitizen voters",
-     "url": "https://www.nbcnews.com/politics/2026-election/justice-department-threatens-legal-action-california-noncitizens-rcna603536"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "DOJ threatens emergency legal action against California over suspected noncitizen voters",
-     "url": "https://www.foxnews.com/politics/doj-threatens-emergency-legal-action-california-suspected-noncitizen-voters"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Trump says leakers should be shot: 'They're the scum of the earth'",
-   "summary": "President Trump suggested Wednesday at a campaign rally in Arizona that leakers should be shot, in an apparent reference to leaks surrounding U.S. airstrikes on Iran's nuclear facilities. “Somebody leaked, some sleazebag. They ought to go to jail and be shot. For the rest of thei",
-   "category": "World",
-   "leans": [
-    -1,
-    0,
-    1
-   ],
-   "span": 2,
-   "n_sources": 3,
-   "balance": {
-    "l": 1,
-    "c": 1,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Watchdog group sues Trump administration over Jared Kushner’s government work",
-     "url": "https://www.nbcnews.com/politics/trump-administration/watchdog-group-sues-trump-administration-jared-kushners-government-wor-rcna603563"
-    },
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Trump says leakers should be shot: 'They're the scum of the earth'",
-     "url": "https://thehill.com/homenews/6149366-trump-rally-leakers-shot/"
-    },
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Trump says government ‘leakers should be shot’",
-     "url": "https://www.washingtonexaminer.com/news/white-house/4766320/trump-says-government-leakers-should-be-shot/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Watch live: Trump rallies Montana Republicans with key House seat on the line",
    "summary": "President Trump is campaigning Wednesday evening in Montana, as Republicans fight to hold on to their majorities in both chambers of Congress. Trump is expected to rally supporters for GOP candidate Aaron Flint, who is facing Democrat Sam Forstag in the race to replace retiring R",
    "category": "Politics",
@@ -694,49 +644,6 @@
      "label": "Lean Right",
      "title": "WATCH LIVE: Trump headlines Montana rally to boost GOP in midterm elections",
      "url": "https://www.washingtonexaminer.com/news/white-house/4766249/watch-live-trump-rally-republican-candidates-midterms/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Mookie Betts could be the answer to the Dodgers’ Shohei Ohtani problem",
-   "summary": "Before the Dodgers became Shohei Ohtani’s team, they were Mookie Betts’ team. Manager Dave Roberts used to say that as Betts went, the Dodgers went. Betts was the best player on the 2020 championship team. He finished in the top five in National League MVP voting three of his fir",
-   "category": "General",
-   "leans": [
-    0,
-    1,
-    2
-   ],
-   "span": 2,
-   "n_sources": 3,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 2
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Dodgers Reveal Surprising Shohei Ohtani Change for Game 3 vs. Brewers",
-     "url": "https://www.newsweek.com/sports/mlb/dodgers-reveal-surprising-shohei-ohtani-change-for-game-3-vs-brewers-12570072"
-    },
-    {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Mookie Betts could be the answer to the Dodgers’ Shohei Ohtani problem",
-     "url": "https://nypost.com/2026/10/14/sports/dodgers-need-mookie-betts-to-lead-offense-with-shohei-ohtani-struggling-in-nlcs/"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Dodgers star Will Smith's wife delivers third 'October baby' just before Dodgers Game 3 bout vs Brewers",
-     "url": "https://www.foxnews.com/outkick-sports/dodgers-star-will-smith-wife-delivers-third-october-baby-before-dodgers-game-3-brewers"
     }
    ],
    "factchecks": [],
@@ -784,18 +691,53 @@
    "videos": []
   },
   {
-   "title": "New inflation warning sign",
-   "summary": "America's inflation problem is becoming harder to contain, with new evidence Wednesday that price pressures are extending beyond the war-related energy shock rattling the global economy . Why it matters: Inflation is squeezing household budgets and dimming hopes for relief. It is",
+   "title": "Iran war live: Tehran vows to fight until US yields as ships sink in Hormuz",
+   "summary": "Iran says it does not seek an endless war, but vows to fight until the US accepts its demands as ships sink in Hormuz.",
+   "category": "World",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Iran war live: Tehran vows to fight until US yields as ships sink in Hormuz",
+     "url": "https://www.aljazeera.com/news/liveblog/2026/10/15/iran-war-live-tehran-vows-to-fight-until-us-yields-as-ships-sink-in-hormuz?traffic_source=rss"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "More Ships Sink As Iran Makes Ominous Claim About Deadly Attacks",
+     "url": "https://www.dailywire.com/news/live-updates-iranian-protests-intensify-as-citizens-demand-end-to-ayatollah-rule"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Zelenskyy sits down with NPR. And, Pope Leo diagnosed with lung cancer",
+   "summary": "Ukrainian President Volodymyr Zelenskyy has a sit-down interview with NPR as Russia's full-scale invasion nears the 5-year mark. And, Pope Leo XIV has been diagnosed with lung cancer.",
    "category": "World",
    "leans": [
     -1,
     0
    ],
    "span": 1,
-   "n_sources": 3,
+   "n_sources": 4,
    "balance": {
-    "l": 1,
-    "c": 2,
+    "l": 3,
+    "c": 1,
     "r": 0
    },
    "blindspot": null,
@@ -804,22 +746,29 @@
      "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "In Kansas, a newly competitive Senate race tests limit of Trump's unpopular policies",
-     "url": "https://www.npr.org/2026/10/14/nx-s1-5995633/kansas-senate-race-hamilton-marshall-tossup"
+     "title": "Zelenskyy sits down with NPR. And, Pope Leo diagnosed with lung cancer",
+     "url": "https://www.npr.org/2026/10/14/g-s1-148040/up-first-newsletter-volodymyr-zelenskyy-pope-leo-kimberly-guilfoyle-media-free-speech"
     },
     {
-     "name": "Axios",
-     "lean": 0,
-     "label": "Center",
-     "title": "New inflation warning sign",
-     "url": "https://www.axios.com/2026/10/14/inflation-warning-sign-cpi"
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Pope Leo recovers after lung surgery",
+     "url": "https://www.nbcnews.com/nightly-news/video/pope-leo-recovers-after-lung-surgery-271593541966"
     },
     {
-     "name": "Newsweek",
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "What to Know About Pope Leo's Lung Cancer Diagnosis",
+     "url": "https://time.com/article/2026/10/14/pope-leo-lung-cancer-what-to-know/"
+    },
+    {
+     "name": "BBC News",
      "lean": 0,
      "label": "Center",
-     "title": "Republicans Get New Midterm Warning Sign as Kansas Senate Race Shifts",
-     "url": "https://www.newsweek.com/republicans-get-new-midterm-warning-sign-as-kansas-senate-race-shifts-12569771"
+     "title": "Pope walking and recovering 'as expected' after surgery, doctors say",
+     "url": "https://www.bbc.co.uk/news/articles/cwx28r0zvm6lo?at_medium=RSS&at_campaign=rss"
     }
    ],
    "factchecks": [],
@@ -834,9 +783,9 @@
     0
    ],
    "span": 1,
-   "n_sources": 3,
+   "n_sources": 4,
    "balance": {
-    "l": 1,
+    "l": 2,
     "c": 2,
     "r": 0
    },
@@ -848,6 +797,13 @@
      "label": "Lean Left",
      "title": "Eight states sue OpenAI over ChatGPT’s alleged harms to users",
      "url": "https://www.nbcnews.com/tech/tech-news/openai-sued-eight-states-alleged-harm-chatgpt-rcna603614"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "OpenAI sued by 8 states over claims ChatGPT coached kids to harm themselves",
+     "url": "https://www.cbsnews.com/video/openai-sued-by-8-states-over-claims-chatgpt-coached-kids-to-harm-themselves/"
     },
     {
      "name": "The Hill",
@@ -895,7 +851,7 @@
      "name": "PBS NewsHour",
      "lean": -1,
      "label": "Lean Left",
-     "title": "What is the Social Security COLA for 2027? Here's how it could affect you",
+     "title": "The Social Security COLA for 2027 is set. Here's what experts say you need to know",
      "url": "https://www.pbs.org/newshour/economy/what-is-the-social-security-cola-for-2027-heres-how-it-could-affect-you"
     },
     {
@@ -904,41 +860,6 @@
      "label": "Center",
      "title": "Social Security recipients will see rise in monthly payments next year",
      "url": "https://www.axios.com/2026/10/14/social-security-cola-inflation"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Vatican says Pope Leo's lung surgery recovery is 'proceeding as expected'",
-   "summary": "Pope Leo XIV underwent thoracic surgery after being diagnosed with adenocarcinoma, a type of non-small cell lung cancer. NBC News' Claudio Lavanga shares the latest updates from the Vatican, while Dr. Natalie Azar breaks down the diagnosis and recovery outlook.",
-   "category": "General",
-   "leans": [
-    -1,
-    0
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 1,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Vatican says Pope Leo's lung surgery recovery is 'proceeding as expected'",
-     "url": "https://www.nbcnews.com/video/vatican-says-pope-leo-s-lung-surgery-recovery-is-proceeding-as-expected-271564357749"
-    },
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Pope walking and recovering 'as expected' after surgery, doctors say",
-     "url": "https://www.bbc.co.uk/news/articles/cwx28r0zvm6lo?at_medium=RSS&at_campaign=rss"
     }
    ],
    "factchecks": [],
@@ -1015,6 +936,41 @@
    "videos": []
   },
   {
+   "title": "Iran-backed Houthis strike Saudi oil company Aramco's headquarters, officials say",
+   "summary": "Iran-backed Houthi rebels hit the headquarters of the Saudi state-owned oil company Aramco in an overnight strike, two regional officials said Wednesday, damaging the offices of the firm's chief executive and other top officials.",
+   "category": "World",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Iran-backed Houthis strike Saudi oil company Aramco's headquarters, officials say",
+     "url": "https://www.pbs.org/newshour/world/iran-backed-houthis-strike-saudi-oil-company-aramcos-headquarters-officials-say"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Iran says it’s ‘counting the moments’ until it can strike U.S. warships; Saudi Aramco facilities attacked",
+     "url": "https://www.cnbc.com/2026/10/14/us-iran-war-trump-hormuz-saudi.html"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "OpenAI bugging suspect booked one-way ticket to Saudi Arabia with family before arrest",
    "summary": "\"Like countless Americans, Mr. Alfozan came to this country years ago as a young person with a dream,\" his criminal defense lawyer said Wednesday.",
    "category": "Tech",
@@ -1085,47 +1041,6 @@
    "videos": []
   },
   {
-   "title": "Zelenskyy sits down with NPR. And, Pope Leo diagnosed with lung cancer",
-   "summary": "Ukrainian President Volodymyr Zelenskyy has a sit-down interview with NPR as Russia's full-scale invasion nears the 5-year mark. And, Pope Leo XIV has been diagnosed with lung cancer.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 3,
-   "balance": {
-    "l": 3,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": "right",
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Zelenskyy sits down with NPR. And, Pope Leo diagnosed with lung cancer",
-     "url": "https://www.npr.org/2026/10/14/g-s1-148040/up-first-newsletter-volodymyr-zelenskyy-pope-leo-kimberly-guilfoyle-media-free-speech"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Trump, Chicagoans show outpouring of support for Pope Leo amid cancer diagnosis",
-     "url": "https://www.cbsnews.com/video/trump-chicagoans-support-pope-leo-cancer-diagnosis/"
-    },
-    {
-     "name": "Time",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "What to Know About Pope Leo's Lung Cancer Diagnosis",
-     "url": "https://time.com/article/2026/10/14/pope-leo-lung-cancer-what-to-know/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Trump's ambassador to Greece, Kimberly Guilfoyle, resigns after allegations of improper conduct",
    "summary": "The White House publicly asked for U.S. Ambassador to Greece Kimberly Guilfoyle's resignation on Tuesday as she faced mounting accusations of improper conduct.",
    "category": "Politics",
@@ -1160,9 +1075,9 @@
    "videos": []
   },
   {
-   "title": "Man arrested in ex-fiancée's disappearance 15 years after going on \"The People's Court\" together",
-   "summary": "In Orlando, police said they broke a cold case that began nearly 15 years ago, when a couple appeared on \"The People's Court.\" The woman disappeared soon after, and now her ex-fiancée is under arrest. Cristian Benavides reports.",
-   "category": "General",
+   "title": "Advocates fear potential witnesses handcuffed in back of ICE vehicle that struck Houston man could be deported",
+   "summary": "Nidia Delfín said her brother was handcuffed in the back of the ICE vehicle when it hit a man, adding that he has no arrest warrants and that he was getting his green card when he was arrested.",
+   "category": "World",
    "leans": [
     -1
    ],
@@ -1179,49 +1094,15 @@
      "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "A mom vanished after going on ‘The People’s Court’ with her ex-fiancé over her ring. 15 years later, he’s accused of murder.",
-     "url": "https://www.nbcnews.com/news/us-news/man-whose-ex-fiancee-vanished-2011-peoples-court-appearance-arrested-m-rcna603584"
+     "title": "Advocates fear potential witnesses handcuffed in back of ICE vehicle that struck Houston man could be deported",
+     "url": "https://www.nbcnews.com/news/us-news/advocates-fear-potential-witnesses-handcuffed-back-ice-vehicle-struck-rcna603445"
     },
     {
-     "name": "CBS News",
+     "name": "ABC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Man arrested in ex-fiancée's disappearance 15 years after going on \"The People's Court\" together",
-     "url": "https://www.cbsnews.com/video/man-arrested-ex-fiances-disappearance-15-years-peoples-court-together/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "World’s oldest shipwreck found off coast of Turkiye",
-   "summary": "Clay analysis traces recovered storage jars to early history workshops operating across the Jordan Valley.",
-   "category": "General",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 2,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "World's oldest shipwreck found off coast of Turkey",
-     "url": "https://www.bbc.co.uk/news/articles/c6gr80rk1yyko?at_medium=RSS&at_campaign=rss"
-    },
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "World’s oldest shipwreck found off coast of Turkiye",
-     "url": "https://www.aljazeera.com/news/2026/10/14/worlds-oldest-shipwreck-found-off-coast-of-turkiye?traffic_source=rss"
+     "title": "DA looking to interview 2 witnesses in backseat of ICE vehicle in Houston incident",
+     "url": "https://abcnews.com/US/da-searching-2-people-allegedly-backseat-ice-vehicle/story?id=137267050"
     }
    ],
    "factchecks": [],
@@ -1262,9 +1143,9 @@
    "videos": []
   },
   {
-   "title": "Supreme Court reverses ‘inappropriate’ ruling in FCC fight over favorable campaign ad rate rules",
-   "summary": "The Supreme Court handed the Federal Communications Commission a victory on Wednesday in a legal battle over who is entitled to favorable advertising rates in the closing weeks of the costly, hotly contested midterm elections. The high court ruled 7-2 to halt a ruling by the U.S.",
-   "category": "Politics",
+   "title": "Florida \"Addictive Features\" Social Media Restrictions on Minors Likely Constitutional, Eleventh Circuit Holds",
+   "summary": "Some short excerpts from the long opinion in Computer & Comm. Indus. Ass'n v. Uthmeier, decided today by Judge Kevin… The post Florida \"Addictive Features\" Social Media Restrictions on Minors Likely Constitutional, Eleventh Circuit Holds appeared first on Reason Magazine.",
+   "category": "Tech",
    "leans": [
     1
    ],
@@ -1278,18 +1159,18 @@
    "blindspot": "left",
    "sources": [
     {
-     "name": "Washington Examiner",
+     "name": "Reason",
      "lean": 1,
      "label": "Lean Right",
-     "title": "Supreme Court reverses ‘inappropriate’ ruling in FCC fight over favorable campaign ad rate rules",
-     "url": "https://www.washingtonexaminer.com/news/supreme-court/4766308/supreme-court-reverses-ruling-fcc-fight-favorable-campaign-ad-rate-rules/"
+     "title": "Florida \"Addictive Features\" Social Media Restrictions on Minors Likely Constitutional, Eleventh Circuit Holds",
+     "url": "https://reason.com/volokh/2026/10/14/florida-addictive-features-social-media-restrictions-on-minors-likely-constitutional-eleventh-circuit-holds/"
     },
     {
-     "name": "Washington Times",
+     "name": "New York Post",
      "lean": 1,
      "label": "Lean Right",
-     "title": "Supreme Court allows FCC ad rules that benefit GOP to remain for 2026 election",
-     "url": "https://www.washingtontimes.com/news/2026/oct/14/supreme-court-allows-fcc-ad-rules-benefit-gop-remain-2026-election/"
+     "title": "Florida wins key ruling allowing it to enforce social media law targeting young teens",
+     "url": "https://nypost.com/2026/10/14/us-news/florida-wins-key-ruling-allowing-it-to-enforce-social-media-law-targeting-young-teens/"
     }
    ],
    "factchecks": [],
@@ -1324,40 +1205,6 @@
      "label": "Right",
      "title": "Jack Smith’s FBI Probe Obtained Personal Data Of 640,000 Everyday Republicans, MAGA Hat Buyers",
      "url": "https://dailycaller.com/2026/10/14/jack-smith-fbi-probe-personal-date-republicans-maga-hat"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Whatley Pauses TV Ads in North Carolina Senate Race",
-   "summary": "Michael Whatley's Senate campaign is temporarily not on the airwaves in North Carolina.Whatley, the Republican nominee, does not have future linear television ad reservations booked in the race, according to Politico.",
-   "category": "Politics",
-   "leans": [
-    2
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Whatley Pauses TV Ads in North Carolina Senate Race",
-     "url": "https://www.newsmax.com/newsfront/michael-whatley-roy-cooper-senate/2026/10/14/id/1272801"
-    },
-    {
-     "name": "Daily Caller",
-     "lean": 2,
-     "label": "Right",
-     "title": "Michael Whatley Goes Dark In North Carolina",
-     "url": "https://dailycaller.com/2026/10/14/michael-whatley-north-carolina-senate-ad-reservations"
     }
    ],
    "factchecks": [],
@@ -1435,6 +1282,39 @@
    "videos": []
   },
   {
+   "title": "Trump torches Democrats at Arizona rally, warns they will ‘destroy our country’ ahead of midterms",
+   "summary": "Trump rallied for Andy Biggs in Bullhead City, blasting Dem Gov. Katie Hobbs and urging Arizona voters to turn the state red in honor of Charlie Kirk.",
+   "category": "World",
+   "leans": [
+    2
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump torches Democrats at Arizona rally, warns they will ‘destroy our country’ ahead of midterms",
+     "url": "https://www.foxnews.com/politics/trump-torches-democrats-arizona-rally-warns-destroy-country-ahead-midterms"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Trump's quote about being 'last Republican president' is real, but missing context",
+     "link": "https://www.snopes.com/fact-check/trump-last-republican-president/"
+    }
+   ],
+   "videos": []
+  },
+  {
    "title": "Aboard an icebreaker, a writer got a closer look at the Arctic's 'Sea Change'",
    "summary": "As polar ice melts in the Arctic, shipping lanes are opening up, making the region a new zone of superpower competition. Writer Rana Foroohar explains the stakes in Sea Change.",
    "category": "General",
@@ -1456,6 +1336,33 @@
      "label": "Lean Left",
      "title": "Aboard an icebreaker, a writer got a closer look at the Arctic's 'Sea Change'",
      "url": "https://www.npr.org/2026/10/14/nx-s1-6001592/arctic-sea-change-rana-foroohar"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Inflation sizzled in September — and Social Security benefits will get a boost",
+   "summary": "Consumer prices in September jumped 3.7% from a year ago. The Social Security Administration said benefits will increase next year to help keep pace with the rising cost of living.",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Inflation sizzled in September — and Social Security benefits will get a boost",
+     "url": "https://www.npr.org/2026/10/14/nx-s1-6000593/inflation-consumer-prices-cpi-social-security-benefits"
     }
    ],
    "factchecks": [],
@@ -1564,6 +1471,33 @@
      "label": "Lean Left",
      "title": "'They're stealing from the poor': A major source of SNAP fraud robs recipients of millions",
      "url": "https://www.npr.org/2026/10/14/nx-s1-5985198/snap-fraud-ebt-card-skimming-chip-cards"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "In Kansas, a newly competitive Senate race tests limit of Trump's unpopular policies",
+   "summary": "Kansas voters could send a Democrat to the Senate for the first time in nearly a century — and flip the governor's office back to Republican control, even in what could be a tough year for the GOP.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "In Kansas, a newly competitive Senate race tests limit of Trump's unpopular policies",
+     "url": "https://www.npr.org/2026/10/14/nx-s1-5995633/kansas-senate-race-hamilton-marshall-tossup"
     }
    ],
    "factchecks": [],
@@ -1921,6 +1855,60 @@
    "videos": []
   },
   {
+   "title": "Inside Michigan’s critical midterm Senate battle",
+   "summary": "NBC Nightly News anchor Tom Llamas speaks to Democrat Abdul El-Sayed, Republican Mike Rogers, and voters in Michigan.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Inside Michigan’s critical midterm Senate battle",
+     "url": "https://www.nbcnews.com/nightly-news/video/inside-michigan-s-critical-midterm-senate-battle-271594053925"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Justice Department threatens legal action against California over alleged noncitizen voters",
+   "summary": "The DOJ demanded election officials review a list of possible noncitizens within 48 hours and “segregate” any mail ballots they sent in.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Justice Department threatens legal action against California over alleged noncitizen voters",
+     "url": "https://www.nbcnews.com/politics/2026-election/justice-department-threatens-legal-action-california-noncitizens-rcna603536"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "Investigation Underway Into France Supermarket Cyberattack",
    "summary": "An investigation is underway into an unprecedented cyberattack on hundreds of French supermarkets that is still spreading across the country. Hackers are taking over refrigeration systems, overriding temperature settings and pushing some refrigeration units above 120 degrees whil",
    "category": "Economy",
@@ -1976,7 +1964,7 @@
   },
   {
    "title": "Kentucky police arrest 8 in child abuse, trafficking and rape investigation",
-   "summary": "Eight people living in the Kentucky home were arrested in a sweeping child abuse and sexual abuse case involving seven victims, ages 1 to 17, officials said Wednesday.",
+   "summary": "The seven victims are ages 1 to 17, police in Richmond said.",
    "category": "General",
    "leans": [
     -1
@@ -2002,9 +1990,9 @@
    "videos": []
   },
   {
-   "title": "U.S. may have withheld warnings to Ukraine on deadly Kyiv strikes",
-   "summary": "The Trump administration may have withheld intelligence warnings to Ukraine about Russian strikes that killed 6 and cut power to 600,000 people, sources say.",
-   "category": "World",
+   "title": "A mom vanished after she and her ex-fiancé were on ‘The People’s Court.’ Now he’s accused of murder.",
+   "summary": "An Orlando man has been arrested in the disappearance of his ex-fiancée, who vanished in 2011 hours after the pair appeared in a pretaped episode of “The People’s Court,” police said.",
+   "category": "General",
    "leans": [
     -1
    ],
@@ -2018,11 +2006,11 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "CBS News",
+     "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "U.S. may have withheld warnings to Ukraine on deadly Kyiv strikes",
-     "url": "https://www.cbsnews.com/news/us-ukraine-intelligence-russia-war-missile-strikes-kyiv-power-outages/"
+     "title": "A mom vanished after she and her ex-fiancé were on ‘The People’s Court.’ Now he’s accused of murder.",
+     "url": "https://www.nbcnews.com/news/us-news/man-whose-ex-fiancee-vanished-2011-peoples-court-appearance-arrested-m-rcna603584"
     }
    ],
    "factchecks": [],
@@ -2066,47 +2054,6 @@
    "videos": []
   },
   {
-   "title": "Zelenskyy sits down with NPR. And, Pope Leo diagnosed with lung cancer",
-   "summary": "Ukrainian President Volodymyr Zelenskyy has a sit-down interview with NPR as Russia's full-scale invasion nears the 5-year mark. And, Pope Leo XIV has been diagnosed with lung cancer.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 3,
-   "balance": {
-    "l": 3,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": "right",
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Zelenskyy sits down with NPR. And, Pope Leo diagnosed with lung cancer",
-     "url": "https://www.npr.org/2026/10/14/g-s1-148040/up-first-newsletter-volodymyr-zelenskyy-pope-leo-kimberly-guilfoyle-media-free-speech"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Trump, Chicagoans show outpouring of support for Pope Leo amid cancer diagnosis",
-     "url": "https://www.cbsnews.com/video/trump-chicagoans-support-pope-leo-cancer-diagnosis/"
-    },
-    {
-     "name": "Time",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "What to Know About Pope Leo's Lung Cancer Diagnosis",
-     "url": "https://time.com/article/2026/10/14/pope-leo-lung-cancer-what-to-know/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Trump's ambassador to Greece, Kimberly Guilfoyle, resigns after allegations of improper conduct",
    "summary": "The White House publicly asked for U.S. Ambassador to Greece Kimberly Guilfoyle's resignation on Tuesday as she faced mounting accusations of improper conduct.",
    "category": "Politics",
@@ -2141,9 +2088,9 @@
    "videos": []
   },
   {
-   "title": "Man arrested in ex-fiancée's disappearance 15 years after going on \"The People's Court\" together",
-   "summary": "In Orlando, police said they broke a cold case that began nearly 15 years ago, when a couple appeared on \"The People's Court.\" The woman disappeared soon after, and now her ex-fiancée is under arrest. Cristian Benavides reports.",
-   "category": "General",
+   "title": "Advocates fear potential witnesses handcuffed in back of ICE vehicle that struck Houston man could be deported",
+   "summary": "Nidia Delfín said her brother was handcuffed in the back of the ICE vehicle when it hit a man, adding that he has no arrest warrants and that he was getting his green card when he was arrested.",
+   "category": "World",
    "leans": [
     -1
    ],
@@ -2160,24 +2107,24 @@
      "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "A mom vanished after going on ‘The People’s Court’ with her ex-fiancé over her ring. 15 years later, he’s accused of murder.",
-     "url": "https://www.nbcnews.com/news/us-news/man-whose-ex-fiancee-vanished-2011-peoples-court-appearance-arrested-m-rcna603584"
+     "title": "Advocates fear potential witnesses handcuffed in back of ICE vehicle that struck Houston man could be deported",
+     "url": "https://www.nbcnews.com/news/us-news/advocates-fear-potential-witnesses-handcuffed-back-ice-vehicle-struck-rcna603445"
     },
     {
-     "name": "CBS News",
+     "name": "ABC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Man arrested in ex-fiancée's disappearance 15 years after going on \"The People's Court\" together",
-     "url": "https://www.cbsnews.com/video/man-arrested-ex-fiances-disappearance-15-years-peoples-court-together/"
+     "title": "DA looking to interview 2 witnesses in backseat of ICE vehicle in Houston incident",
+     "url": "https://abcnews.com/US/da-searching-2-people-allegedly-backseat-ice-vehicle/story?id=137267050"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Supreme Court reverses ‘inappropriate’ ruling in FCC fight over favorable campaign ad rate rules",
-   "summary": "The Supreme Court handed the Federal Communications Commission a victory on Wednesday in a legal battle over who is entitled to favorable advertising rates in the closing weeks of the costly, hotly contested midterm elections. The high court ruled 7-2 to halt a ruling by the U.S.",
-   "category": "Politics",
+   "title": "Florida \"Addictive Features\" Social Media Restrictions on Minors Likely Constitutional, Eleventh Circuit Holds",
+   "summary": "Some short excerpts from the long opinion in Computer & Comm. Indus. Ass'n v. Uthmeier, decided today by Judge Kevin… The post Florida \"Addictive Features\" Social Media Restrictions on Minors Likely Constitutional, Eleventh Circuit Holds appeared first on Reason Magazine.",
+   "category": "Tech",
    "leans": [
     1
    ],
@@ -2191,18 +2138,18 @@
    "blindspot": "left",
    "sources": [
     {
-     "name": "Washington Examiner",
+     "name": "Reason",
      "lean": 1,
      "label": "Lean Right",
-     "title": "Supreme Court reverses ‘inappropriate’ ruling in FCC fight over favorable campaign ad rate rules",
-     "url": "https://www.washingtonexaminer.com/news/supreme-court/4766308/supreme-court-reverses-ruling-fcc-fight-favorable-campaign-ad-rate-rules/"
+     "title": "Florida \"Addictive Features\" Social Media Restrictions on Minors Likely Constitutional, Eleventh Circuit Holds",
+     "url": "https://reason.com/volokh/2026/10/14/florida-addictive-features-social-media-restrictions-on-minors-likely-constitutional-eleventh-circuit-holds/"
     },
     {
-     "name": "Washington Times",
+     "name": "New York Post",
      "lean": 1,
      "label": "Lean Right",
-     "title": "Supreme Court allows FCC ad rules that benefit GOP to remain for 2026 election",
-     "url": "https://www.washingtontimes.com/news/2026/oct/14/supreme-court-allows-fcc-ad-rules-benefit-gop-remain-2026-election/"
+     "title": "Florida wins key ruling allowing it to enforce social media law targeting young teens",
+     "url": "https://nypost.com/2026/10/14/us-news/florida-wins-key-ruling-allowing-it-to-enforce-social-media-law-targeting-young-teens/"
     }
    ],
    "factchecks": [],
@@ -2237,40 +2184,6 @@
      "label": "Right",
      "title": "Jack Smith’s FBI Probe Obtained Personal Data Of 640,000 Everyday Republicans, MAGA Hat Buyers",
      "url": "https://dailycaller.com/2026/10/14/jack-smith-fbi-probe-personal-date-republicans-maga-hat"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Whatley Pauses TV Ads in North Carolina Senate Race",
-   "summary": "Michael Whatley's Senate campaign is temporarily not on the airwaves in North Carolina.Whatley, the Republican nominee, does not have future linear television ad reservations booked in the race, according to Politico.",
-   "category": "Politics",
-   "leans": [
-    2
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Whatley Pauses TV Ads in North Carolina Senate Race",
-     "url": "https://www.newsmax.com/newsfront/michael-whatley-roy-cooper-senate/2026/10/14/id/1272801"
-    },
-    {
-     "name": "Daily Caller",
-     "lean": 2,
-     "label": "Right",
-     "title": "Michael Whatley Goes Dark In North Carolina",
-     "url": "https://dailycaller.com/2026/10/14/michael-whatley-north-carolina-senate-ad-reservations"
     }
    ],
    "factchecks": [],
