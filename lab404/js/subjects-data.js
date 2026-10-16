@@ -115,7 +115,9 @@ window.LAB404_SUBJECTS = {
         { t: "Spanish", band: "all", grades: ["6", "7", "8", "9", "10", "11", "12"] },
         { t: "French", band: "all", grades: ["6", "7", "8", "9", "10", "11", "12"] },
         { t: "German", band: "all", grades: ["6", "7", "8", "9", "10", "11", "12"] },
-        { t: "American Sign Language", band: "all", grades: ["6", "7", "8", "9", "10", "11", "12"] }
+        { t: "American Sign Language", band: "all", grades: ["6", "7", "8", "9", "10", "11", "12"] },
+        { t: "Italian", band: "all", grades: ["6", "7", "8", "9", "10", "11", "12", "C"] },
+        { t: "Mandarin Chinese", band: "all", grades: ["6", "7", "8", "9", "10", "11", "12", "C"] }
       ]
     },
     {
@@ -172,7 +174,9 @@ window.LAB404_SUBJECTS = {
         { t: "Painting", band: "all", grades: ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"] },
         { t: "Music Theory", band: "all", grades: ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"] },
         { t: "Playing an Instrument", band: "all", grades: ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"] },
-        { t: "Photography", band: "all", grades: ["4", "5", "6", "7", "8", "9", "10", "11", "12"] }
+        { t: "Photography", band: "all", grades: ["4", "5", "6", "7", "8", "9", "10", "11", "12"] },
+        { t: "Color Theory", band: "all", grades: ["3", "4", "5", "6", "7", "8", "9", "10", "11", "12"] },
+        { t: "Reading Sheet Music", band: "all", grades: ["3", "4", "5", "6", "7", "8", "9", "10", "11", "12"] }
       ]
     },
     {
@@ -216,7 +220,9 @@ window.LAB404_SUBJECTS = {
         { t: "Home Repairs", band: "all", grades: ["7", "8", "9", "10", "11", "12"] },
         { t: "Plumbing Basics", band: "all", grades: ["7", "8", "9", "10", "11", "12"] },
         { t: "Electrical Basics", band: "all", grades: ["7", "8", "9", "10", "11", "12"] },
-        { t: "Car Maintenance", band: "all", grades: ["7", "8", "9", "10", "11", "12"] }
+        { t: "Car Maintenance", band: "all", grades: ["7", "8", "9", "10", "11", "12"] },
+        { t: "Woodworking", band: "all", grades: ["6", "7", "8", "9", "10", "11", "12", "C"] },
+        { t: "Welding Basics", band: "all", grades: ["9", "10", "11", "12", "C"] }
       ]
     },
     {
