@@ -72,6 +72,8 @@ window.CourseLoader = (function () {
   function deepSection(sec) {  // textbook-depth lesson section
     return (sec.h ? '<div class="cv-ds-h">' + esc(sec.h) + "</div>" : "") +
       paras(sec.body) +
+      /* I2: optional inline SVG diagram (authored, trusted) */
+      (sec.visual ? '<figure class="cv-fig">' + sec.visual + (sec.caption ? '<figcaption class="cv-fig-cap">' + esc(sec.caption) + "</figcaption>" : "") + "</figure>" : "") +
       (sec.example ? '<div class="cv-ex"><span class="cv-ex-l">Worked example</span>' + esc(sec.example) + "</div>" : "") +
       (sec.tip ? '<div class="cv-tip">💡 ' + esc(sec.tip) + "</div>" : "") +
       (sec.watch ? '<div class="cv-warn">⚠️ Watch out: ' + esc(sec.watch) + "</div>" : "");
@@ -132,6 +134,9 @@ window.CourseLoader = (function () {
       ".cv-ex{background:rgba(127,127,127,.12);border-radius:8px;padding:8px 11px;margin:4px 0 10px;font-size:.82rem}" +
       ".cv-ex-l{display:block;font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text-muted,#9aa);margin-bottom:3px}" +
       ".cv-ds-h{font-weight:800;font-size:.8rem;color:var(--accent2,#4a90e2);margin:12px 0 5px}" +
+      ".cv-fig{margin:12px auto;max-width:380px;text-align:center;background:#fff;border:1px solid var(--border,#334);border-radius:10px;padding:12px 14px}" +
+      ".cv-fig svg{max-width:100%;height:auto;display:block;margin:0 auto}" +
+      ".cv-fig-cap{font-size:.72rem;color:#556;margin-top:6px;text-align:center}" +
       ".cv-tip{background:rgba(60,190,110,.12);border-left:3px solid #3cbe6e;border-radius:6px;padding:7px 11px;margin:6px 0 10px;font-size:.82rem}" +
       ".cv-warn{background:rgba(230,160,40,.12);border-left:3px solid #e0a93c;border-radius:6px;padding:7px 11px;margin:6px 0 10px;font-size:.82rem}" +
       ".cv-learn-btn{border:1px solid var(--accent2,#4a90e2);background:transparent;color:var(--accent2,#4a90e2);border-radius:8px;padding:5px 10px;font:inherit;font-size:.72rem;font-weight:700;cursor:pointer;white-space:nowrap}" +
