@@ -48,6 +48,7 @@
     "assign":     { title: "Assignment",                icon: "📋" },
     "writing":    { title: "Writing Practice",          icon: "✍️" },
     "esglossary": { title: "Bilingual Glossary",        icon: "🌐" },
+    "sims":       { title: "Science Lab",                icon: "🔬" },
   };
 
   /* ── Cert human-readable labels ── */
@@ -355,6 +356,7 @@
       if (app === "assign")  { winEl.style.width = "660px"; winEl.style.height = "600px"; }
       if (app === "writing") { winEl.style.width = "680px"; winEl.style.height = "620px"; }
       if (app === "esglossary") { winEl.style.width = "700px"; winEl.style.height = "620px"; }
+      if (app === "sims")    { winEl.style.width = "700px"; winEl.style.height = "640px"; }
       if (app === "myprogress") { winEl.style.width = "620px"; winEl.style.height = "600px"; }
       if (app === "bygrade") { winEl.style.width = "740px"; winEl.style.height = "640px"; }
       if (app === "course")  { winEl.style.width = "780px"; winEl.style.height = "660px"; }
@@ -885,6 +887,9 @@
       } else if (app === "esglossary") {
         if (window.Lab404EsGlossary) window.Lab404EsGlossary.render(content);
         else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Glossary not available.</div>';
+      } else if (app === "sims") {
+        if (window.Lab404Sims) window.Lab404Sims.render(content);
+        else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Science Lab not available.</div>';
       }
     },
 
