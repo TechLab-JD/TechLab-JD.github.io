@@ -929,52 +929,87 @@
           ".ff .ff-go:hover{border-color:var(--accent2,#39e3c8);color:var(--accent2,#39e3c8)}";
         document.head.appendChild(st);
       }
-      content.innerHTML =
-        '<div class="ff">' +
-          '<h2>👪 For Parents &amp; Teachers</h2>' +
-          '<p class="ff-lead">Everything here is free, needs no account, and keeps a learner’s work on their own device. Here’s how to use it with a child or a class.</p>' +
+      /* R4-6: the guide is offered in English and Spanish for bilingual families. */
+      function ffLang() {
+        try { var s = localStorage.getItem("lab404.ffLang"); if (s === "es" || s === "en") return s;
+          return localStorage.getItem("lab404.lang") === "es" ? "es" : "en"; } catch (e) { return "en"; }
+      }
+      var GUIDE = {
+        en: {
+          toggle: "Español",
+          body:
+            '<h2>👪 For Parents &amp; Teachers</h2>' +
+            '<p class="ff-lead">Everything here is free, needs no account, and keeps a learner’s work on their own device. Here’s how to use it with a child or a class.</p>' +
+            '<div class="ff-priv"><b>🔒 No sign-up, no tracking.</b> Nothing is uploaded. Progress, scores and streaks are saved only in this browser. Using a shared or school computer? Give each learner their own <b>profile</b> (LAUNCH → the profile button) so their work stays separate.</div>' +
+            '<h3>Getting a learner started</h3>' +
+            '<div class="ff-step"><div class="ff-num">1</div><div>On first open, the hub asks <b>what grade</b> they’re in and drops them into that grade’s subjects. K–2 switches to a bigger, friendlier <b>Junior</b> layout automatically.</div></div>' +
+            '<div class="ff-step"><div class="ff-num">2</div><div>Tap <b>LAUNCH → My Grade</b> any time to jump back. Young children can be locked into one grade with <b>Kid Mode</b> (LAUNCH → Kid Mode).</div></div>' +
+            '<div class="ff-step"><div class="ff-num">3</div><div>Each subject has <b>concept cards</b>, <b>flashcards</b>, a <b>glossary</b>, and <b>practice questions</b>. Getting questions right builds mastery, XP and a daily streak.</div></div>' +
+            '<h3>Assigning a specific lesson</h3>' +
+            '<p style="margin:2px 0 8px">Open any course and tap <b>Share / Assign</b> — it copies a link that opens straight to that lesson. No roster or login needed.</p>' +
+            '<h3>Seeing how they’re doing</h3>' +
+            '<ul><li><b>Skill Overview</b> — mastery across every subject at a glance.</li>' +
+            '<li><b>My Progress</b> — level, streak, what to study next, and a <b>Print progress sheet</b> button.</li>' +
+            '<li><b>Data Manager</b> — back up all progress to a file and move it to another device, no account.</li></ul>' +
+            '<div class="ff-card"><b>Bilingual help:</b> switch the whole interface to Spanish with the 🌐 button in the taskbar, and turn on <b>Español in lessons</b> inside any course to see key terms in Spanish. There’s also a <b>Bilingual Glossary</b> in LAUNCH.</div>' +
+            '<h3>Works offline</h3>' +
+            '<p style="margin:2px 0 10px">After the first visit the hub keeps working with no internet, and you can <b>install it</b> like an app. Great for a bus ride or a spotty connection.</p>',
+          btn: { bygrade: "🎓 Browse by Grade", skills: "📊 Skill Overview", myprogress: "📈 My Progress", cohort: "👩‍🏫 Class View (teachers)", assign: "📋 Create an assignment", weekly: "🗓️ Print weekly plan" }
+        },
+        es: {
+          toggle: "English",
+          body:
+            '<h2>👪 Para padres y maestros</h2>' +
+            '<p class="ff-lead">Todo aquí es gratis, no necesita cuenta y guarda el trabajo del estudiante en su propio dispositivo. Así se usa con un niño o una clase.</p>' +
+            '<div class="ff-priv"><b>🔒 Sin registro, sin rastreo.</b> No se sube nada. El progreso, los puntajes y las rachas se guardan solo en este navegador. ¿Usan una computadora compartida o de la escuela? Dele a cada estudiante su propio <b>perfil</b> (LAUNCH → botón de perfil) para separar su trabajo.</div>' +
+            '<h3>Cómo empezar</h3>' +
+            '<div class="ff-step"><div class="ff-num">1</div><div>Al abrir por primera vez, el sitio pregunta <b>en qué grado</b> está y lo lleva a las materias de ese grado. De K a 2.º cambia a la vista <b>Junior</b>, más grande y amigable.</div></div>' +
+            '<div class="ff-step"><div class="ff-num">2</div><div>Toque <b>LAUNCH → Mi grado</b> para volver. A los niños pequeños se les puede bloquear en un solo grado con el <b>Modo Niño</b> (LAUNCH → Kid Mode).</div></div>' +
+            '<div class="ff-step"><div class="ff-num">3</div><div>Cada materia tiene <b>tarjetas de conceptos</b>, <b>tarjetas de estudio</b>, un <b>glosario</b> y <b>preguntas de práctica</b>. Acertar construye dominio, XP y una racha diaria.</div></div>' +
+            '<h3>Asignar una lección</h3>' +
+            '<p style="margin:2px 0 8px">Abra cualquier curso y toque <b>Compartir / Asignar</b>: copia un enlace que abre esa lección directamente. No se necesita lista ni inicio de sesión.</p>' +
+            '<h3>Ver cómo le va</h3>' +
+            '<ul><li><b>Resumen de destrezas</b> — el dominio de cada materia de un vistazo.</li>' +
+            '<li><b>Mi progreso</b> — nivel, racha, qué estudiar y un botón para <b>imprimir la hoja de progreso</b>.</li>' +
+            '<li><b>Gestor de datos</b> — respalde todo el progreso en un archivo y páselo a otro dispositivo, sin cuenta.</li></ul>' +
+            '<div class="ff-card"><b>Ayuda bilingüe:</b> cambie toda la interfaz al español con el botón 🌐 de la barra, y active <b>Español en las lecciones</b> dentro de un curso para ver los términos clave en español. También hay un <b>Glosario bilingüe</b> en LAUNCH.</div>' +
+            '<h3>Funciona sin conexión</h3>' +
+            '<p style="margin:2px 0 10px">Después de la primera visita el sitio funciona sin internet, y puede <b>instalarlo</b> como una app. Ideal para el autobús o una conexión débil.</p>',
+          btn: { bygrade: "🎓 Explorar por grado", skills: "📊 Resumen de destrezas", myprogress: "📈 Mi progreso", cohort: "👩‍🏫 Vista de clase (maestros)", assign: "📋 Crear una asignación", weekly: "🗓️ Imprimir plan semanal" }
+        }
+      };
 
-          '<div class="ff-priv"><b>🔒 No sign-up, no tracking.</b> Nothing is uploaded. Progress, scores and streaks are saved only in this browser. Using a shared or school computer? Give each learner their own <b>profile</b> (LAUNCH → the profile button) so their work stays separate.</div>' +
-
-          '<h3>Getting a learner started</h3>' +
-          '<div class="ff-step"><div class="ff-num">1</div><div>On first open, the hub asks <b>what grade</b> they’re in and drops them into that grade’s subjects. K–2 switches to a bigger, friendlier <b>Junior</b> layout automatically.</div></div>' +
-          '<div class="ff-step"><div class="ff-num">2</div><div>Tap <b>LAUNCH → My Grade</b> any time to jump back to their grade. Or open <b>Browse by Grade</b> to pick any grade and subject.</div></div>' +
-          '<div class="ff-step"><div class="ff-num">3</div><div>Each subject has <b>concept cards</b>, <b>flashcards</b>, a <b>glossary</b>, and <b>practice questions</b>. Getting questions right builds mastery, XP and a daily streak.</div></div>' +
-
-          '<h3>Assigning a specific lesson</h3>' +
-          '<p style="margin:2px 0 8px">Open any course and tap <b>Share / Assign</b> — it copies a link that opens straight to that lesson. Paste it into your class chat, an email, or a worksheet. No roster or login needed; the link just opens the lesson.</p>' +
-
-          '<h3>Seeing how they’re doing</h3>' +
-          '<ul>' +
-            '<li><b>Skill Overview</b> (LAUNCH menu) — mastery across every subject at a glance.</li>' +
-            '<li><b>My Progress</b> — level, streak, what to study next, and a <b>Print progress sheet</b> button for a clean paper/PDF report.</li>' +
-            '<li><b>Download certificate</b> — a shareable PNG of what they’ve mastered.</li>' +
-          '</ul>' +
-
-          '<div class="ff-card"><b>Classroom tip:</b> have students use <b>Print progress sheet</b> or export their backup (LAUNCH → profile → Export) and hand it in — that’s your gradebook, with no accounts to manage. A <b>⌨ Report</b> button on each course lets them flag a confusing question.</div>' +
-
-          '<h3>Works offline</h3>' +
-          '<p style="margin:2px 0 10px">After the first visit the hub keeps working with no internet, and you can <b>install it</b> like an app (look for the install banner, or your browser’s “Install” option). Great for a bus ride or a spotty connection.</p>' +
-
-          '<div style="margin-top:14px">' +
-            '<button class="ff-go" data-ff="bygrade">🎓 Browse by Grade</button>' +
-            '<button class="ff-go" data-ff="skills">📊 Skill Overview</button>' +
-            '<button class="ff-go" data-ff="myprogress">📈 My Progress</button>' +
-            '<button class="ff-go" data-ff="cohort">👩‍🏫 Class View (teachers)</button>' +
-            '<button class="ff-go" data-ff="assign">📋 Create an assignment</button>' +
-            '<button class="ff-go" id="ff-weekly">🗓️ Print weekly plan</button>' +
-          '</div>' +
-        '</div>';
-      content.querySelectorAll(".ff-go[data-ff]").forEach(function (b) {
-        b.addEventListener("click", function () { Desktop.openWindow(this.getAttribute("data-ff")); });
-      });
-      var wkBtn = content.querySelector("#ff-weekly");
-      if (wkBtn) wkBtn.addEventListener("click", function () {   /* R6: printable weekly plan */
-        if (!window.Lab404WeeklyPlan) return;
-        var go = function () { window.Lab404WeeklyPlan.print(); };
-        if (window.Lab404Data && !window.Lab404Data.isLoaded()) window.Lab404Data.ensure().then(go).catch(go);
-        else go();
-      });
+      function draw() {
+        var lang = ffLang(), g = GUIDE[lang];
+        content.innerHTML =
+          '<div class="ff">' +
+            '<div style="text-align:right;margin-bottom:4px"><button class="ff-go" id="ff-lang">🌐 ' + g.toggle + '</button></div>' +
+            g.body +
+            '<div style="margin-top:14px">' +
+              '<button class="ff-go" data-ff="bygrade">' + g.btn.bygrade + '</button>' +
+              '<button class="ff-go" data-ff="skills">' + g.btn.skills + '</button>' +
+              '<button class="ff-go" data-ff="myprogress">' + g.btn.myprogress + '</button>' +
+              '<button class="ff-go" data-ff="cohort">' + g.btn.cohort + '</button>' +
+              '<button class="ff-go" data-ff="assign">' + g.btn.assign + '</button>' +
+              '<button class="ff-go" id="ff-weekly">' + g.btn.weekly + '</button>' +
+            '</div>' +
+          '</div>';
+        content.querySelectorAll(".ff-go[data-ff]").forEach(function (b) {
+          b.addEventListener("click", function () { Desktop.openWindow(this.getAttribute("data-ff")); });
+        });
+        content.querySelector("#ff-lang").addEventListener("click", function () {
+          try { localStorage.setItem("lab404.ffLang", lang === "es" ? "en" : "es"); } catch (e) {}
+          draw();
+        });
+        var wkBtn = content.querySelector("#ff-weekly");
+        if (wkBtn) wkBtn.addEventListener("click", function () {   /* R6/R4-6: printable weekly plan, in the guide's language */
+          if (!window.Lab404WeeklyPlan) return;
+          var go = function () { window.Lab404WeeklyPlan.print(null, ffLang()); };
+          if (window.Lab404Data && !window.Lab404Data.isLoaded()) window.Lab404Data.ensure().then(go).catch(go);
+          else go();
+        });
+      }
+      draw();
     },
 
     _renderMyProgress: function (winId) {

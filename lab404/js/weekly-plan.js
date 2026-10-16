@@ -6,14 +6,30 @@
 (function () {
   "use strict";
 
-  var SUBJECTS = [
-    { key: "math", label: "Math" }, { key: "science", label: "Science" },
-    { key: "english", label: "English / Reading" }, { key: "social", label: "Social Studies" },
-    { key: "coding", label: "Coding & CS" }
-  ];
-  var DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+  /* R4-6: bilingual (EN/ES) so a Spanish-speaking parent gets the same plan. */
+  var T = {
+    en: {
+      days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      subj: { math: "Math", science: "Science", english: "English / Reading", social: "Social Studies", coding: "Coding & CS", review: "Review & Catch-up" },
+      task: { core: "Read 1 lesson, then do a short practice set.", english: "Read 1 lesson + practice; read a book for 15 minutes.", coding: "Try 1 coding lesson + practice.", review: "Review the week: retake a Full Practice Test and fix any misses." },
+      title: "Weekly Study Plan", sub: "Lab404 Study Hub · a suggested five-day plan",
+      name: "Name", week: "Week of", th: ["Day", "Subject", "What to do", "Done"],
+      tip: function (g) { return "Tip: open the subject on the Study Hub, pick " + g + ", and start the course. Each lesson has read-aloud and a short quiz. Check the box when the day is finished. Weekends are for free reading or a fun elective."; }
+    },
+    es: {
+      days: ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"],
+      subj: { math: "Matemáticas", science: "Ciencias", english: "Inglés / Lectura", social: "Estudios Sociales", coding: "Programación", review: "Repaso y recuperación" },
+      task: { core: "Lee 1 lección y haz una práctica corta.", english: "Lee 1 lección y practica; lee un libro 15 minutos.", coding: "Haz 1 lección de programación + práctica.", review: "Repasa la semana: vuelve a hacer un examen de práctica completo y corrige los errores." },
+      title: "Plan de estudio semanal", sub: "Lab404 Study Hub · un plan sugerido de cinco días",
+      name: "Nombre", week: "Semana del", th: ["Día", "Materia", "Qué hacer", "Hecho"],
+      tip: function (g) { return "Consejo: abre la materia en el Study Hub, elige " + g + " y comienza el curso. Cada lección tiene lectura en voz alta y un examen corto. Marca la casilla al terminar el día. Los fines de semana son para leer libremente o una materia optativa divertida."; }
+    }
+  };
 
-  function gradeLabel(g) { return g === "K" ? "Kindergarten" : g === "C" ? "College" : "Grade " + g; }
+  function gradeLabel(g, lang) {
+    if (lang === "es") return g === "K" ? "Kínder" : g === "C" ? "Universidad" : "Grado " + g;
+    return g === "K" ? "Kindergarten" : g === "C" ? "College" : "Grade " + g;
+  }
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
 
   function coursesFor(grade) {
@@ -41,23 +57,24 @@
     document.head.appendChild(s);
   }
 
-  function print(grade) {
+  function print(grade, lang) {
     style();
+    lang = (lang === "es") ? "es" : "en";
+    var t = T[lang];
     grade = grade || (function () { try { return localStorage.getItem("lab404.myGrade"); } catch (e) { return null; } })() || "4";
     var cmap = coursesFor(grade);
     /* Mon-Thu rotate the four core subjects; Friday is coding (if the grade has it) or review. */
     var plan = [
-      { subj: "math", task: "Read 1 lesson, then do a short practice set." },
-      { subj: "science", task: "Read 1 lesson, then do a short practice set." },
-      { subj: "english", task: "Read 1 lesson + practice; read a book for 15 minutes." },
-      { subj: "social", task: "Read 1 lesson, then do a short practice set." },
-      { subj: cmap.coding ? "coding" : null, task: cmap.coding ? "Try 1 coding lesson + practice." : "Review the week: retake a Full Practice Test and fix any misses." }
+      { subj: "math", task: t.task.core },
+      { subj: "science", task: t.task.core },
+      { subj: "english", task: t.task.english },
+      { subj: "social", task: t.task.core },
+      { subj: cmap.coding ? "coding" : null, task: cmap.coding ? t.task.coding : t.task.review }
     ];
-    function label(k) { var s = SUBJECTS.filter(function (x) { return x.key === k; })[0]; return s ? s.label : "Review"; }
 
-    var rows = DAYS.map(function (day, i) {
+    var rows = t.days.map(function (day, i) {
       var p = plan[i];
-      var subjLabel = p.subj ? label(p.subj) : "Review & Catch-up";
+      var subjLabel = p.subj ? t.subj[p.subj] : t.subj.review;
       var course = p.subj && cmap[p.subj] ? cmap[p.subj] : "";
       return '<tr><td class="wp-day">' + esc(day) + '</td>' +
         '<td><b>' + esc(subjLabel) + '</b>' + (course ? '<br><span style="font-size:9.5pt;color:#444">' + esc(course) + '</span>' : "") + '</td>' +
@@ -65,14 +82,15 @@
         '<td class="wp-box">☐</td></tr>';
     }).join("");
 
+    var gl = gradeLabel(grade, lang);
     var wp = document.getElementById("wp-print");
     if (!wp) { wp = document.createElement("div"); wp.id = "wp-print"; document.body.appendChild(wp); }
     wp.innerHTML =
-      '<h1>Weekly Study Plan — ' + esc(gradeLabel(grade)) + '</h1>' +
-      '<div class="wp-sub">Lab404 Study Hub · a suggested five-day plan</div>' +
-      '<div class="wp-meta">Name: ____________________________   Week of: ____________</div>' +
-      '<table><tr><th>Day</th><th>Subject</th><th>What to do</th><th>Done</th></tr>' + rows + '</table>' +
-      '<p class="wp-note">Tip: open the subject on the Study Hub, pick ' + esc(gradeLabel(grade)) + ', and start the course. Each lesson has read-aloud and a short quiz. Check the box when the day is finished. Weekends are for free reading or a fun elective.</p>';
+      '<h1>' + esc(t.title) + ' — ' + esc(gl) + '</h1>' +
+      '<div class="wp-sub">' + esc(t.sub) + '</div>' +
+      '<div class="wp-meta">' + esc(t.name) + ': ____________________________   ' + esc(t.week) + ': ____________</div>' +
+      '<table><tr><th>' + t.th.map(esc).join('</th><th>') + '</th></tr>' + rows + '</table>' +
+      '<p class="wp-note">' + esc(t.tip(gl)) + '</p>';
 
     function cleanup() { document.body.classList.remove("wp-printing"); window.removeEventListener("afterprint", cleanup); }
     window.addEventListener("afterprint", cleanup);
