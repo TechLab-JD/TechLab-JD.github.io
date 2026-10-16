@@ -55,7 +55,13 @@
     });
     var grade = "";
     try { grade = data["lab404.myGrade"] || ""; } catch (e) {}
-    return { name: payload.name || "Student", grade: grade, exported: payload.exported || "", subjects: subj };
+    /* keep the raw per-course mastery state so assignment completion (R8) can be checked */
+    var mastery = {};
+    Object.keys(data).forEach(function (k) {
+      if (k.indexOf("lab404.mastery.") !== 0) return;
+      try { mastery[k.slice("lab404.mastery.".length)] = JSON.parse(data[k]); } catch (e) {}
+    });
+    return { name: payload.name || "Student", grade: grade, exported: payload.exported || "", subjects: subj, mastery: mastery };
   }
 
   function cellColor(pct) {
@@ -85,7 +91,9 @@
       ".co-blank{color:var(--text-faint,#667)}" +
       ".co-avg td{font-weight:800;background:rgba(127,127,127,.08)}" +
       ".co-rm{background:none;border:0;color:var(--text-faint,#778);cursor:pointer;font-size:.9rem;padding:0 4px}" +
-      ".co-rm:hover{color:#e0484a}";
+      ".co-rm:hover{color:#e0484a}" +
+      ".co-asg{margin-top:20px;border-top:1px solid var(--border,#334);padding-top:14px}" +
+      ".co-asg-h{font-weight:700;font-size:.9rem;margin:0 0 4px}";
     document.head.appendChild(s);
   }
 
@@ -139,6 +147,10 @@
           '</div>' +
           '<input id="co-file" type="file" accept="application/json,.json" multiple style="display:none">' +
           tableHtml +
+          (roster.length ? '<div class="co-asg"><div class="co-asg-h">📋 Check an assignment</div>' +
+            '<p style="font-size:.78rem;color:var(--text-muted,#9aa);margin:0 0 8px">Paste the assignment link you shared to see who finished its skills.</p>' +
+            '<div class="co-row"><input id="co-asg-link" type="text" placeholder="Paste assignment link…" style="flex:1;min-width:0;border:1px solid var(--border,#334);background:var(--surface,#10171f);color:var(--text,#dfe);border-radius:9px;padding:8px 11px;font:inherit;font-size:.82rem">' +
+            '<button class="co-btn" id="co-asg-go">Check</button></div><div id="co-asg-out"></div></div>' : "") +
         '</div>';
 
       var fileInput = content.querySelector("#co-file");
@@ -174,7 +186,41 @@
       content.querySelectorAll("[data-rm]").forEach(function (b) {
         b.addEventListener("click", function () { roster.splice(+this.getAttribute("data-rm"), 1); save(roster); draw(); });
       });
+      var asgGo = content.querySelector("#co-asg-go");
+      if (asgGo) asgGo.addEventListener("click", function () {
+        var link = (content.querySelector("#co-asg-link").value || "").trim();
+        var token = (link.match(/[?&]a=([^&]+)/) || [])[1] || link;   /* accept full link or bare token */
+        var a = (window.Lab404Assign && Lab404Assign.decode) ? Lab404Assign.decode(token) : null;
+        var out = content.querySelector("#co-asg-out");
+        if (!a || !a.c || !a.o) { out.innerHTML = '<p style="color:#e0484a;font-size:.8rem;margin-top:8px">That doesn’t look like a valid assignment link.</p>'; return; }
+        out.innerHTML = renderAssignment(a);
+      });
     }
+
+    /* R8: per-student completion of an assignment's objectives, from imported mastery state. */
+    function renderAssignment(a) {
+      var M = window.LAB404_MASTERY, CO = window.LAB404_COURSES || {};
+      var cTitle = (CO[a.c] && CO[a.c].title) || a.c;
+      var rows = roster.map(function (stu) {
+        var st = stu.mastery && stu.mastery[a.c];
+        var done = 0, started = 0;
+        a.o.forEach(function (code) {
+          if (!st) return;
+          var s = M.objStats(a.c, code, st);
+          if (s.band === "mastered") done++;
+          else if (s.seen > 0) started++;
+        });
+        var total = a.o.length;
+        var pct = total ? Math.round(done / total * 100) : 0;
+        var label = done + "/" + total + " done" + (started ? " · " + started + " in progress" : "");
+        return '<tr><td class="name">' + esc(stu.name) + '</td>' +
+          '<td><span class="co-cell" style="background:' + cellColor(pct) + '">' + pct + '%</span></td>' +
+          '<td style="font-size:.76rem;color:var(--text-muted,#9aa)">' + label + '</td></tr>';
+      }).join("");
+      return '<div style="margin-top:10px;font-size:.82rem"><b>' + esc(a.t || "Assignment") + '</b> · ' + esc(cTitle) + ' · ' + a.o.length + ' skill' + (a.o.length > 1 ? 's' : '') + '</div>' +
+        '<table class="co-table" style="margin-top:6px"><tr><th>Student</th><th>Done</th><th>Detail</th></tr>' + rows + '</table>';
+    }
+
     draw();
   }
 

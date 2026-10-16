@@ -228,6 +228,10 @@ window.CourseLoader = (function () {
     try { if (window.Lab404Lib) Lab404Lib.setLastCourse(courseId, course.title); } catch (e) {}  /* B4: resume */
     loadAudioManifest();
     renderDash();
+    /* R8: open straight into a specific objective's practice (used by assignments). */
+    if (params && params.practice && M.questionsFor(courseId, params.practice).length) {
+      startQuiz("objective", params.practice);
+    }
   }
 
   /* C2: build a stateless deep link to this course and copy it */
