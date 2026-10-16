@@ -21,6 +21,7 @@
     d.answered++; if (ok) d.correct++;
     try { localStorage.setItem(DKEY, JSON.stringify(d)); } catch (e) {}
     try { localStorage.setItem(TKEY, String((parseInt(localStorage.getItem(TKEY) || "0", 10) || 0) + 1)); } catch (e) {}
+    try { window.dispatchEvent(new CustomEvent("lab404:answered")); } catch (e) {}  /* R4-4: live tray update */
   }
 
   function daily() {

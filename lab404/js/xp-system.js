@@ -136,6 +136,15 @@
         streakEl.style.display = "none";
       }
     }
+
+    /* R4-4: ambient daily-goal progress, always visible so the target is clear. */
+    var goalEl = document.getElementById("trayGoal");
+    if (goalEl && window.Lab404Goals && Lab404Goals.daily) {
+      var dg = Lab404Goals.daily();
+      goalEl.textContent = dg.met ? "\uD83C\uDFAF \u2713" : "\uD83C\uDFAF " + dg.answered + "/" + dg.goal;
+      goalEl.title = dg.met ? "Daily goal met! " + dg.answered + " answered today" : (dg.answered + " of " + dg.goal + " questions today");
+      goalEl.style.display = "";
+    }
   }
 
   /* Init */
@@ -147,6 +156,12 @@
   setInterval(refresh, 30000);
   document.addEventListener("visibilitychange", function () {
     if (!document.hidden) refresh();
+  });
+  window.addEventListener("lab404:answered", refresh);   /* R4-4: update the moment a question is answered */
+  /* Clicking the goal chip opens My Progress. */
+  document.addEventListener("click", function (e) {
+    var g = e.target && e.target.closest && e.target.closest("#trayGoal");
+    if (g && window.Desktop && Desktop.openWindow) Desktop.openWindow("myprogress");
   });
 
   /* Level + progress-to-next-level, for the My Progress dashboard. */
