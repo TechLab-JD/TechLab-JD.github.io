@@ -8,6 +8,20 @@ window.CourseLoader = (function () {
   var audio = { base: "", have: null, autoplay: false, cur: null };  // pre-rendered Kokoro clips (optional per course)
   var learnText = {};  // plain-text per objective for the read-aloud layer
 
+  /* ── D1: standards crosswalk — surface the standard on each objective, switchable framework ── */
+  var FW = [["cc", "Common Core", "CCSS"], ["ma", "MA Frameworks", "MA"]];  // only the two populated frameworks
+  function curFw() { try { return localStorage.getItem("lab404.stdFramework") === "ma" ? "ma" : "cc"; } catch (e) { return "cc"; } }
+  function stdChip(ob) {
+    var x = ob.xwalk || {}, fw = curFw();
+    var useKey = x[fw] ? fw : (x.cc ? "cc" : (x.ma ? "ma" : null));
+    if (!useKey) return "";
+    var abbr = useKey === "cc" ? "CCSS" : "MA";
+    var parts = [];
+    if (x.cc) parts.push("Common Core " + x.cc);
+    if (x.ma) parts.push("MA " + x.ma);
+    return ' <span class="cv-std-chip" title="Aligned to: ' + esc(parts.join("  ·  ")) + '">📏 ' + abbr + ' ' + esc(x[useKey]) + '</span>';
+  }
+
   function objPlain(ob) {
     var t = (ob.title ? ob.title + ". " : "") + (ob.teach ? ob.teach + " " : "");
     if (ob.deep && ob.deep.length) {
@@ -61,7 +75,11 @@ window.CourseLoader = (function () {
       ".cv-rt span{font-size:.6rem;color:var(--text-muted,#9aa);text-transform:uppercase;letter-spacing:.5px}" +
       ".cv-hmeta{flex:1;min-width:180px}" +
       ".cv-title{font-size:1.15rem;font-weight:800;margin:0 0 2px;color:var(--accent2,#4a90e2)}" +
-      ".cv-std{font-size:.7rem;color:var(--text-muted,#9aa);margin:0 0 8px}" +
+      ".cv-std{font-size:.7rem;color:var(--text-muted,#9aa);margin:0 0 6px}" +
+      ".cv-fw{font-size:.68rem;color:var(--text-muted,#9aa);display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:0 0 8px}" +
+      ".cv-fw-btn{font:inherit;font-size:.66rem;font-weight:700;border:1px solid var(--border,#334);background:transparent;color:var(--text-muted,#9aa);border-radius:6px;padding:3px 9px;cursor:pointer}" +
+      ".cv-fw-btn.on{background:var(--accent2,#4a90e2);border-color:var(--accent2,#4a90e2);color:#fff}" +
+      ".cv-std-chip{display:inline-block;font-family:system-ui,sans-serif;font-size:.58rem;font-weight:700;color:var(--accent2,#4a90e2);background:rgba(74,144,226,.12);border:1px solid rgba(74,144,226,.3);border-radius:5px;padding:1px 6px;margin-left:6px;vertical-align:middle;white-space:nowrap}" +
       ".cv-grade{display:flex;gap:16px;align-items:baseline}" +
       ".cv-grade .lg{font-size:1.8rem;font-weight:800}" +
       ".cv-grade small{font-size:.66rem;color:var(--text-muted,#9aa);display:block;font-weight:600}" +
@@ -176,7 +194,7 @@ window.CourseLoader = (function () {
         var hasDeep = !!(ob.deep && ob.deep.length);
         var hasLearn = !!(ob.teach || hasDeep);
         var head = '<div class="cv-obj">' +
-          '<div class="cv-obj-main"><div class="cv-obj-code">' + esc(ob.code) + ' · ' + esc((ob.xwalk && ob.xwalk.cc) || "") + '</div>' +
+          '<div class="cv-obj-main"><div class="cv-obj-code">' + esc(ob.code) + stdChip(ob) + '</div>' +
           '<div class="cv-obj-title">' + esc(ob.title) + '</div>' +
           '<div class="cv-obj-bar"><span class="cv-b-' + s.band + '" style="width:' + Math.round(s.pct * 100) + '%"></span></div></div>' +
           pill(s.band, s.bandLabel + (s.seen ? " · " + Math.round(s.pct * 100) + "%" : "") + (s.dueForReview ? " · review due" : "")) +
@@ -203,6 +221,9 @@ window.CourseLoader = (function () {
         '<div class="cv-head">' + ringSvg(r.pct, r.letter) +
           '<div class="cv-hmeta"><div class="cv-title">' + esc(course.title) + '</div>' +
             '<div class="cv-std">' + esc(course.standard) + '</div>' +
+            '<div class="cv-fw" role="group" aria-label="Standards framework"><span>📏 Standards:</span> ' +
+              FW.map(function (f) { return '<button class="cv-fw-btn' + (f[0] === curFw() ? " on" : "") + '" data-fw="' + f[0] + '">' + f[1] + '</button>'; }).join("") +
+            '</div>' +
             '<div class="cv-grade"><div><span class="lg">' + r.letter + '</span><small>Grade</small></div>' +
               '<div><span class="lg">' + r.gpa.toFixed(1) + '</span><small>GPA</small></div>' +
               '<div><span class="lg">' + r.mastered + "/" + r.total + '</span><small>Mastered</small></div></div>' +
@@ -210,9 +231,15 @@ window.CourseLoader = (function () {
         banner +
         doms +
         '<div class="cv-row"><button class="cv-btn ghost sm" data-act="reset">Reset progress</button></div>' +
-        '<p class="cv-note">Grades are <b>living</b>: your % / letter / GPA reflect your <i>current</i> mastery and climb toward an A as objectives reach <b>Mastered</b> (85%+, shown consistently). Objectives map to the Massachusetts Curriculum Frameworks (Common Core codes shown). Multi-state crosswalk (TEKS / VA SOL / FL B.E.S.T.) is pending.</p>' +
+        '<p class="cv-note">Grades are <b>living</b>: your % / letter / GPA reflect your <i>current</i> mastery and climb toward an A as objectives reach <b>Mastered</b> (85%+, shown consistently). Objectives are aligned to <b>Common Core</b> and the <b>Massachusetts Curriculum Frameworks</b> — switch frameworks above, and each objective shows its standard code. (Texas / VA SOL / FL B.E.S.T. crosswalks are planned.)</p>' +
       '</div>';
 
+    el.querySelectorAll("[data-fw]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        try { localStorage.setItem("lab404.stdFramework", this.getAttribute("data-fw")); } catch (e) {}
+        renderDash();
+      });
+    });
     el.querySelectorAll("[data-act]").forEach(function (b) {
       b.addEventListener("click", function () {
         var a = this.getAttribute("data-act");
