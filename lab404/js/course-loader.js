@@ -80,6 +80,8 @@ window.CourseLoader = (function () {
       ".cv-hmeta{flex:1;min-width:180px}" +
       ".cv-title{font-size:1.15rem;font-weight:800;margin:0 0 2px;color:var(--accent2,#4a90e2)}" +
       ".cv-std{font-size:.7rem;color:var(--text-muted,#9aa);margin:0 0 6px}" +
+      ".cv-bm{background:none;border:0;color:#E8A33C;font-size:1.05rem;line-height:1;cursor:pointer;vertical-align:middle;padding:0 3px}" +
+      ".cv-bm:hover{transform:scale(1.15)}" +
       ".cv-fw{font-size:.68rem;color:var(--text-muted,#9aa);display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:0 0 8px}" +
       ".cv-fw-btn{font:inherit;font-size:.66rem;font-weight:700;border:1px solid var(--border,#334);background:transparent;color:var(--text-muted,#9aa);border-radius:6px;padding:3px 9px;cursor:pointer}" +
       ".cv-fw-btn.on{background:var(--accent2,#4a90e2);border-color:var(--accent2,#4a90e2);color:#fff}" +
@@ -163,6 +165,7 @@ window.CourseLoader = (function () {
     course = (window.LAB404_COURSES || {})[courseId];
     injectStyle();
     if (!course || !M) { el.innerHTML = '<div class="cv-wrap">Course not available.</div>'; return; }
+    try { if (window.Lab404Lib) Lab404Lib.setLastCourse(courseId, course.title); } catch (e) {}  /* B4: resume */
     loadAudioManifest();
     renderDash();
   }
@@ -250,7 +253,9 @@ window.CourseLoader = (function () {
     el.innerHTML =
       '<div class="cv-wrap">' +
         '<div class="cv-head">' + ringSvg(r.pct, r.letter) +
-          '<div class="cv-hmeta"><div class="cv-title">' + esc(course.title) + '</div>' +
+          '<div class="cv-hmeta"><div class="cv-title">' + esc(course.title) +
+            ' <button class="cv-bm" data-bm="1" title="Bookmark this course" aria-label="Bookmark this course">' +
+            ((window.Lab404Lib && Lab404Lib.isBookmarked(courseId)) ? "★" : "☆") + '</button></div>' +
             '<div class="cv-std">' + esc(course.standard) + '</div>' +
             '<div class="cv-fw" role="group" aria-label="Standards framework"><span>📏 Standards:</span> ' +
               FW.map(function (f) { return '<button class="cv-fw-btn' + (f[0] === curFw() ? " on" : "") + '" data-fw="' + f[0] + '">' + f[1] + '</button>'; }).join("") +
@@ -271,6 +276,12 @@ window.CourseLoader = (function () {
       b.addEventListener("click", function () {
         try { localStorage.setItem("lab404.stdFramework", this.getAttribute("data-fw")); } catch (e) {}
         renderDash();
+      });
+    });
+    el.querySelectorAll("[data-bm]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        if (!window.Lab404Lib) return;
+        this.textContent = Lab404Lib.toggleBookmark(courseId, course.title) ? "★" : "☆";
       });
     });
     el.querySelectorAll("[data-act]").forEach(function (b) {

@@ -8,7 +8,7 @@
   var PKEY = "lab404.profiles", AKEY = "lab404.activeProfile", SNAP = "lab404.profile.";
   /* The learning state that belongs to a learner (everything else is device-level). */
   var OWNED_EXACT = ["lab404.myGrade", "lab404.junior", "lab404.stdFramework", "lab404.progress",
-    "study-streak-count", "study-streak-date", "aplus-theme",
+    "study-streak-count", "study-streak-date", "aplus-theme", "lab404.lastCourse", "lab404.bookmarks",
     "aplus-checklist-c1", "aplus-checklist-c2", "aplus-checklist-terms-c1", "aplus-checklist-terms-c2"];
   var OWNED_PREFIX = ["lab404.mastery."];
   var EMOJI = ["🦊", "🐼", "🐵", "🦁", "🐸", "🐙", "🦄", "🐱", "🐶", "🐯", "🐷", "🐨"];

@@ -901,6 +901,24 @@
           }).join("")
         : '<div class="mp-empty">You’re all caught up. Open a subject and take a quiz to build your level — every subject counts. 🎉</div>';
 
+      /* B4 resume + B5 bookmarks */
+      var lib = window.Lab404Lib, last = lib && lib.lastCourse(), bms = (lib && lib.bookmarks()) || [];
+      var resumeHtml = "";
+      if (last && COURSES[last.id]) {
+        var rr = (M && M.readiness) ? M.readiness(last.id) : null;
+        var rsub = rr ? (rr.pct + "% ready · " + rr.mastered + "/" + rr.total + " mastered") : "pick up where you left off";
+        resumeHtml = '<div class="mp-h">▶️ Continue</div><button class="mp-item" data-resume="' + escHtml(last.id) + '">' +
+          '<span class="ic">🎯</span><span style="min-width:0"><span class="lab">' + escHtml(last.title) + '</span><span class="sb">' + escHtml(rsub) + '</span></span></button>';
+      }
+      var bmHtml = "";
+      var bmShow = bms.filter(function (b) { return COURSES[b.id]; });
+      if (bmShow.length) {
+        bmHtml = '<div class="mp-h">⭐ Bookmarked</div>' + bmShow.map(function (b) {
+          return '<button class="mp-item" data-resume="' + escHtml(b.id) + '"><span class="ic">📘</span>' +
+            '<span style="min-width:0"><span class="lab">' + escHtml(b.title) + '</span></span></button>';
+        }).join("");
+      }
+
       content.innerHTML =
         '<div class="mp-wrap">' +
           '<div class="mp-head">' +
@@ -916,7 +934,9 @@
             '<div class="mp-stat"><b>' + objMastered + '<span style="font-size:.9rem;color:var(--text-faint,#778)">/' + objTot + '</span></b><small>Objectives mastered</small></div>' +
             '<div class="mp-stat"><b>' + startedN + '</b><small>Courses started</small></div>' +
           '</div>' +
+          resumeHtml +
           '<div class="mp-h">🎯 Study next</div>' + nextHtml +
+          bmHtml +
           '<div class="mp-links">' +
             '<button class="mp-link" data-open="bygrade">🎓 Browse by Grade</button>' +
             '<button class="mp-link" data-open="transcript">📋 Report Card</button>' +
@@ -928,6 +948,9 @@
 
       content.querySelectorAll(".mp-item[data-i]").forEach(function (b) {
         b.addEventListener("click", function () { var n = next[+this.getAttribute("data-i")]; if (n) Desktop.openWindow(n.app, n.params); });
+      });
+      content.querySelectorAll(".mp-item[data-resume]").forEach(function (b) {
+        b.addEventListener("click", function () { Desktop.openWindow("course", { course: this.getAttribute("data-resume") }); });
       });
       content.querySelectorAll(".mp-link[data-open]").forEach(function (b) {
         b.addEventListener("click", function () { Desktop.openWindow(this.getAttribute("data-open")); });
