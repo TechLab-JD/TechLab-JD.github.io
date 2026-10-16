@@ -1583,9 +1583,14 @@ body.is-resizing * { user-select: none !important; cursor: inherit !important; }
     border-top: none !important;
   }
   .os-window.maximized { bottom: 44px !important; }
-  /* A full-screen sheet can't be dragged, so don't hint that it can */
+  /* A full-screen sheet can't be dragged or resized, so don't hint that it can.
+     R4-1: also kill the touch-unfriendly resize handles and the redundant
+     maximize control (the window already fills the screen). Drag/resize are
+     additionally no-ops in desktop.js via Desktop._isMobile(). */
   .os-window-titlebar { cursor: default; }
   .os-window-title { font-size: 0.82rem; }
+  .os-window .rz { display: none !important; }
+  .os-window-btn.btn-maximize { display: none !important; }
 
   /* Start menu: full width so subjects are easy to tap */
   .start-menu {

@@ -630,6 +630,13 @@
       });
     },
 
+    /* R4-1: on phones the windows are forced full-screen by CSS, so drag/resize
+       are meaningless and would only write overridden inline styles. */
+    _isMobile: function () {
+      try { return window.matchMedia && window.matchMedia("(max-width: 640px)").matches; }
+      catch (e) { return false; }
+    },
+
     _makeDraggable: function (winId) {
       var w = Desktop.windows[winId];
       if (!w) return;
@@ -644,7 +651,7 @@
 
       titleBar.addEventListener("mousedown", function (e) {
         if (e.target.classList.contains("os-window-btn")) return;
-        if (w.maximized) return;
+        if (w.maximized || Desktop._isMobile()) return;
         dragging = true;
         startX = e.clientX;
         startY = e.clientY;
@@ -716,7 +723,7 @@
         var handle = el.querySelector(".rz-" + dir);
         if (!handle) return;
         handle.addEventListener("mousedown", function (e) {
-          if (w.maximized) return;
+          if (w.maximized || Desktop._isMobile()) return;
           activeDir = dir;
           startX    = e.clientX;
           startY    = e.clientY;
