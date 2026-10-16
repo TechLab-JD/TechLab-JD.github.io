@@ -2204,10 +2204,12 @@
     }
     function syncGrade() {
       var gl = gradeLbl();
+      var es = (window.Lab404I18n && Lab404I18n.get() === "es");   /* F5: match UI language */
+      var txt = gl ? (es ? "Mi grado · " : "My Grade · ") + gl : (es ? "Explorar por grado" : "Browse by Grade");
       var pm = document.getElementById("pm-bygrade");
-      if (pm) pm.innerHTML = '<span>🎓</span> ' + (gl ? "My Grade · " + gl : "Browse by Grade");
+      if (pm) pm.innerHTML = '<span>🎓</span> ' + txt;
       var sm = document.getElementById("smMyGrade");
-      if (sm) { var lbl = sm.querySelector("span:last-child"); if (lbl) lbl.textContent = gl ? "My Grade · " + gl : "Browse by Grade"; }
+      if (sm) { var lbl = sm.querySelector("span:last-child"); if (lbl) lbl.textContent = txt; }
     }
     Desktop._syncGrade = syncGrade;
     syncGrade();

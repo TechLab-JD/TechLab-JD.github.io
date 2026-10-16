@@ -24,7 +24,7 @@
 <!-- ── Boot Screen ── -->
 <div id="boot-screen" role="status" aria-live="polite">
   <div class="boot-header">LAB404 STUDY OS</div>
-  <div class="boot-tagline">Free learning for every subject &middot; K&ndash;12 to college &middot; private &amp; offline</div>
+  <div class="boot-tagline" data-i18n="boot.tagline">Free learning for every subject &middot; K&ndash;12 to college &middot; private &amp; offline</div>
   <div id="bootLog" class="boot-log"></div>
   <div class="boot-bar-wrap"><div id="bootBar" class="boot-bar" style="width:0%"></div></div>
 </div>
@@ -44,7 +44,7 @@
       <path class="start-flame" d="M7.5 17Q9 20.5 10.5 17"/>
       <circle cx="9" cy="8" r="1.8"/>
     </svg>
-    LAUNCH
+    <span data-i18n="nav.launch">LAUNCH</span>
   </button>
   <div class="taskbar-windows" id="taskbarWindows" role="list" aria-label="Open windows"></div>
   <div class="taskbar-tray">
@@ -66,52 +66,52 @@
 <div class="start-menu" id="startMenu" hidden role="menu" aria-label="Start menu">
   <div class="start-menu-header">
     <div class="brand">Lab404</div>
-    <div class="sub">Study Hub — every subject, free</div>
+    <div class="sub" data-i18n="brand.sub">Study Hub — every subject, free</div>
   </div>
   <div class="start-search">
-    <input id="startSearchInput" type="search" class="start-search-input" placeholder="Search everything…" aria-label="Search the study hub" autocomplete="off" spellcheck="false">
+    <input id="startSearchInput" type="search" class="start-search-input" placeholder="Search everything…" data-i18n-ph="search.ph" aria-label="Search the study hub" autocomplete="off" spellcheck="false">
   </div>
   <div class="start-menu-items">
     <div id="startSearchResults" class="start-search-results" role="listbox" aria-label="Search results"></div>
     <button class="start-menu-item" id="smMyGrade" data-app="bygrade" role="menuitem">
-      <span class="menu-icon">&#127891;</span><span>My Grade</span>
+      <span class="menu-icon">&#127891;</span><span data-i18n="nav.myGrade">My Grade</span>
     </button>
     <div class="start-menu-divider"></div>
-    <div class="start-menu-section-label">Subjects</div>
+    <div class="start-menu-section-label" data-i18n="sec.subjects">Subjects</div>
     <div id="startSubjects"></div>
     <div class="start-menu-divider"></div>
-    <div class="start-menu-section-label">Study Tools</div>
+    <div class="start-menu-section-label" data-i18n="sec.tools">Study Tools</div>
     <button class="start-menu-item" data-app="practice" role="menuitem">
-      <span class="menu-icon">🎯</span> Practice Test
+      <span class="menu-icon">🎯</span> <span data-i18n="tool.practice">Practice Test</span>
     </button>
     <button class="start-menu-item" data-app="flashcards" role="menuitem">
-      <span class="menu-icon">🃏</span> Flashcards
+      <span class="menu-icon">🃏</span> <span data-i18n="tool.flashcards">Flashcards</span>
     </button>
     <button class="start-menu-item" data-app="review" role="menuitem">
-      <span class="menu-icon">📋</span> Review Checklist
+      <span class="menu-icon">📋</span> <span data-i18n="tool.review">Review Checklist</span>
     </button>
     <button class="start-menu-item" data-app="glossary" role="menuitem">
-      <span class="menu-icon">📖</span> Glossary
+      <span class="menu-icon">📖</span> <span data-i18n="tool.glossary">Glossary</span>
     </button>
     <div class="start-menu-divider"></div>
     <button class="start-menu-item" data-app="notepad" role="menuitem">
-      <span class="menu-icon">📝</span> Notepad
+      <span class="menu-icon">📝</span> <span data-i18n="tool.notepad">Notepad</span>
     </button>
     <button class="start-menu-item" data-app="data" role="menuitem">
-      <span class="menu-icon">💾</span> Data Manager
+      <span class="menu-icon">💾</span> <span data-i18n="tool.data">Data Manager</span>
     </button>
     <button class="start-menu-item" data-app="skills" role="menuitem">
-      <span class="menu-icon">📊</span> Skill Overview
+      <span class="menu-icon">📊</span> <span data-i18n="tool.skills">Skill Overview</span>
     </button>
     <button class="start-menu-item" data-app="typing" role="menuitem">
-      <span class="menu-icon">⌨️</span> Typing Tutor
+      <span class="menu-icon">⌨️</span> <span data-i18n="tool.typing">Typing Tutor</span>
     </button>
     <button class="start-menu-item" data-app="forfamilies" role="menuitem">
-      <span class="menu-icon">👪</span> For Parents &amp; Teachers
+      <span class="menu-icon">👪</span> <span data-i18n="tool.families">For Parents &amp; Teachers</span>
     </button>
   </div>
   <div class="start-menu-privacy" style="padding:9px 14px;border-top:1px solid var(--border,#2a3432);font-size:.66rem;color:var(--text-faint,#778);letter-spacing:.02em;text-align:center">
-    🔒 No accounts &middot; No ads &middot; No tracking &middot; Works offline
+    <span data-i18n="privacy.badge">🔒 No accounts &middot; No ads &middot; No tracking &middot; Works offline</span>
   </div>
 </div>
 
@@ -123,19 +123,20 @@
 
 <!-- ── Right-click context menu ── -->
 <div id="ctx-menu" class="ctx-menu" role="menu" aria-label="Desktop context menu">
-  <button class="ctx-item" data-ctx="comptia"    role="menuitem">🎓 Open CompTIA</button>
-  <button class="ctx-item" data-ctx="practice"   role="menuitem">🎯 Practice Test</button>
-  <button class="ctx-item" data-ctx="flashcards" role="menuitem">🃏 Flashcards</button>
-  <button class="ctx-item" data-ctx="review"     role="menuitem">📋 Review List</button>
-  <button class="ctx-item" data-ctx="glossary"   role="menuitem">📖 Glossary</button>
+  <button class="ctx-item" data-ctx="comptia"    role="menuitem">🎓 <span data-i18n="ctx.comptia">Open CompTIA</span></button>
+  <button class="ctx-item" data-ctx="practice"   role="menuitem">🎯 <span data-i18n="tool.practice">Practice Test</span></button>
+  <button class="ctx-item" data-ctx="flashcards" role="menuitem">🃏 <span data-i18n="tool.flashcards">Flashcards</span></button>
+  <button class="ctx-item" data-ctx="review"     role="menuitem">📋 <span data-i18n="ctx.review">Review List</span></button>
+  <button class="ctx-item" data-ctx="glossary"   role="menuitem">📖 <span data-i18n="tool.glossary">Glossary</span></button>
   <div class="ctx-divider" role="separator"></div>
-  <button class="ctx-item" data-ctx="notepad"    role="menuitem">📝 Notepad</button>
+  <button class="ctx-item" data-ctx="notepad"    role="menuitem">📝 <span data-i18n="tool.notepad">Notepad</span></button>
   <div class="ctx-divider" role="separator"></div>
-  <button class="ctx-item" data-ctx="resetlayout" role="menuitem">↺ Reset icon layout</button>
-  <button class="ctx-item" data-ctx="about"      role="menuitem">ℹ️ About</button>
+  <button class="ctx-item" data-ctx="resetlayout" role="menuitem">↺ <span data-i18n="ctx.reset">Reset icon layout</span></button>
+  <button class="ctx-item" data-ctx="about"      role="menuitem">ℹ️ <span data-i18n="ctx.about">About</span></button>
 </div>
 
 <script src="js/theme.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/a11y.js"></script>
 <script src="js/utils.js"></script>
 <script src="js/accordion.js"></script>
