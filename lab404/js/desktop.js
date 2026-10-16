@@ -922,6 +922,7 @@
             '<button class="mp-link" data-open="transcript">📋 Report Card</button>' +
             '<button class="mp-link" data-print="1">🖨 Print progress sheet</button>' +
             '<button class="mp-link" data-cert="1">🎓 Download certificate</button>' +
+            '<button class="mp-link" data-compare="1">👥 Compare with a friend</button>' +
           '</div>' +
         '</div>';
 
@@ -1018,6 +1019,62 @@
       }
       var certBtn = content.querySelector('.mp-link[data-cert]');
       if (certBtn) certBtn.addEventListener("click", drawCertificate);
+
+      /* ── E2: opt-in friend compare via a local share code (no accounts/server) ── */
+      function b64enc(s) { return btoa(unescape(encodeURIComponent(s))); }
+      function b64dec(s) { return decodeURIComponent(escape(atob(s))); }
+      function myStats() {
+        var name = ""; try { if (window.Lab404Profiles && Lab404Profiles.current()) name = Lab404Profiles.current().name; } catch (e) {}
+        return { n: name || "You", lv: li.level || 1, xp: li.xp || 0, tm: topicMastered, om: objMastered };
+      }
+      function myCode() { return b64enc(JSON.stringify(myStats())); }
+      function parseCode(code) { try { var o = JSON.parse(b64dec((code || "").trim())); if (o && typeof o.lv === "number" && typeof o.xp === "number") return o; } catch (e) {} return null; }
+      function showCompare() {
+        var ov = document.getElementById("mp-compare-ov");
+        if (!ov) {
+          ov = document.createElement("div"); ov.id = "mp-compare-ov";
+          ov.style.cssText = "position:fixed;inset:0;z-index:9998;display:flex;align-items:center;justify-content:center;padding:18px;background:rgba(4,8,10,.72)";
+          ov.innerHTML =
+            '<div style="box-sizing:border-box;width:min(440px,100%);max-height:88vh;overflow:auto;background:#0f1619;border:1px solid #223;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.6);padding:20px;color:#dfecea;font-family:system-ui,sans-serif;position:relative">' +
+              '<button id="mpc-x" aria-label="Close" style="position:absolute;top:12px;right:14px;background:none;border:0;color:#73857f;font-size:22px;cursor:pointer">×</button>' +
+              '<div style="font:600 11px/1 ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:#39e3c8">Opt-in · stays on your device</div>' +
+              '<h2 style="margin:8px 0 4px;font-size:20px;color:#fff">Compare with a friend</h2>' +
+              '<p style="margin:0 0 14px;font-size:12.5px;color:#9fb0ad">Share your code, or paste a friend’s, to compare levels. No accounts — nothing is uploaded.</p>' +
+              '<div style="font-size:12px;color:#9fb0ad;margin-bottom:5px">Your code (share it)</div>' +
+              '<div style="display:flex;gap:7px;margin-bottom:12px"><input id="mpc-mine" readonly style="flex:1;min-width:0;background:#11141a;border:1px solid #2a3b3a;border-radius:7px;padding:8px;color:#eaf4f2;font:11px monospace"><button id="mpc-copy" style="background:#2a3b3a;border:0;color:#dfecea;border-radius:7px;padding:8px 12px;font:600 12px system-ui;cursor:pointer">Copy</button></div>' +
+              '<div style="font-size:12px;color:#9fb0ad;margin-bottom:5px">Friend’s code</div>' +
+              '<div style="display:flex;gap:7px"><input id="mpc-friend" placeholder="Paste their code…" style="flex:1;min-width:0;background:#11141a;border:1px solid #2a3b3a;border-radius:7px;padding:8px;color:#eaf4f2;font:11px monospace"><button id="mpc-go" style="background:#39e3c8;border:0;color:#06201c;border-radius:7px;padding:8px 14px;font:600 13px system-ui;cursor:pointer">Compare</button></div>' +
+              '<div id="mpc-result" style="margin-top:14px"></div>' +
+            '</div>';
+          document.body.appendChild(ov);
+          ov.addEventListener("click", function (e) { if (e.target === ov) ov.style.display = "none"; });
+          ov.querySelector("#mpc-x").onclick = function () { ov.style.display = "none"; };
+          ov.querySelector("#mpc-copy").onclick = function () {
+            var i = document.getElementById("mpc-mine"); i.focus(); i.select();
+            var b = this; try { if (navigator.clipboard) navigator.clipboard.writeText(i.value); else document.execCommand("copy"); } catch (e) { try { document.execCommand("copy"); } catch (x) {} }
+            b.textContent = "Copied!"; setTimeout(function () { b.textContent = "Copy"; }, 1500);
+          };
+          ov.querySelector("#mpc-go").onclick = function () {
+            var fo = parseCode(document.getElementById("mpc-friend").value);
+            var res = document.getElementById("mpc-result");
+            if (!fo) { res.innerHTML = '<div style="font-size:12.5px;color:#f0695c">That code didn’t work — check you pasted the whole thing.</div>'; return; }
+            var me = myStats();
+            function row(label, m, f) {
+              return '<div style="display:flex;gap:8px;padding:6px 0;border-bottom:1px solid #1c2524;font-size:13px"><span style="flex:1;color:#9fb0ad">' + label + '</span>' +
+                '<span style="width:72px;text-align:right;font-weight:700;color:' + (m >= f ? "#39e3c8" : "#dfecea") + '">' + m + '</span>' +
+                '<span style="width:72px;text-align:right;font-weight:700;color:' + (f >= m ? "#39e3c8" : "#dfecea") + '">' + f + '</span></div>';
+            }
+            res.innerHTML = '<div style="display:flex;gap:8px;padding:4px 0;font-size:11px;color:#73857f;text-transform:uppercase;letter-spacing:.05em"><span style="flex:1"></span><span style="width:72px;text-align:right">You</span><span style="width:72px;text-align:right">' + escHtml((fo.n || "Friend").slice(0, 10)) + '</span></div>' +
+              row("Level", me.lv, fo.lv) + row("XP", me.xp, fo.xp) + row("Topics mastered", me.tm, fo.tm) + row("Objectives mastered", me.om, fo.om);
+          };
+        }
+        ov.style.display = "flex";
+        document.getElementById("mpc-mine").value = myCode();
+        document.getElementById("mpc-friend").value = "";
+        document.getElementById("mpc-result").innerHTML = "";
+      }
+      var cmpBtn = content.querySelector('.mp-link[data-compare]');
+      if (cmpBtn) cmpBtn.addEventListener("click", showCompare);
     },
 
     _renderTranscript: function (winId) {
