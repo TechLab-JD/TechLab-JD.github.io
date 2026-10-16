@@ -11,7 +11,7 @@
   try { localStorage.setItem("lab404.guide.seen.v1", "1"); } catch (e) {}
   var id = qp("id"), grade = qp("grade");
   /* Non-content utility apps that are safe to open from a shared link. */
-  var SAFE_APPS = ["forfamilies", "skills", "myprogress", "missed", "typing", "cohort", "stickers", "writing", "esglossary", "sims", "kidmode", "practice", "flashcards", "review", "glossary"];
+  var SAFE_APPS = ["forfamilies", "skills", "myprogress", "missed", "typing", "cohort", "stickers", "writing", "esglossary", "sims", "kidmode", "examready", "practice", "flashcards", "review", "glossary"];
 
   /* H4: give a shared/bookmarked deep link a descriptive page title.
      Course/topic data is lazy-loaded, so wait for it if it isn't ready yet. */

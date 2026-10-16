@@ -50,6 +50,7 @@
     "esglossary": { title: "Bilingual Glossary",        icon: "🌐" },
     "sims":       { title: "Science Lab",                icon: "🔬" },
     "kidmode":    { title: "Kid Mode",                   icon: "🔒" },
+    "examready":  { title: "Exam Readiness",             icon: "🎓" },
   };
 
   /* ── Cert human-readable labels ── */
@@ -359,6 +360,7 @@
       if (app === "esglossary") { winEl.style.width = "700px"; winEl.style.height = "620px"; }
       if (app === "sims")    { winEl.style.width = "700px"; winEl.style.height = "640px"; }
       if (app === "kidmode") { winEl.style.width = "560px"; winEl.style.height = "500px"; }
+      if (app === "examready") { winEl.style.width = "660px"; winEl.style.height = "620px"; }
       if (app === "myprogress") { winEl.style.width = "620px"; winEl.style.height = "600px"; }
       if (app === "bygrade") { winEl.style.width = "740px"; winEl.style.height = "640px"; }
       if (app === "course")  { winEl.style.width = "780px"; winEl.style.height = "660px"; }
@@ -902,6 +904,9 @@
       } else if (app === "kidmode") {
         if (window.Lab404Kid) window.Lab404Kid.renderSetup(content);
         else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Kid Mode not available.</div>';
+      } else if (app === "examready") {
+        if (window.Lab404ExamReady) window.Lab404ExamReady.render(content);
+        else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Exam Readiness not available.</div>';
       }
     },
 
