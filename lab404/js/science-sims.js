@@ -361,11 +361,18 @@
         '<div id="sim-stage"></div>' +
       '</div>';
     var stage = content.querySelector("#sim-stage");
+    function a11y() {   /* R5-B: labels aren't tied to the range inputs (siblings), and some canvases lack a name */
+      stage.querySelectorAll(".sim-ctrl").forEach(function (c) {
+        var l = c.querySelector("label"), i = c.querySelector("input");
+        if (l && i && !i.getAttribute("aria-label")) i.setAttribute("aria-label", l.textContent.replace(/\s+/g, " ").trim());
+      });
+      stage.querySelectorAll("canvas:not([aria-label])").forEach(function (cv) { cv.setAttribute("role", "img"); cv.setAttribute("aria-label", "Interactive simulation"); });
+    }
     function show(id) {
       active = id;
       content.querySelectorAll(".sim-tab").forEach(function (t) { t.setAttribute("aria-pressed", t.getAttribute("data-id") === id ? "true" : "false"); });
       var s = SIMS.filter(function (x) { return x.id === id; })[0];
-      if (s) s.fn(stage);
+      if (s) { s.fn(stage); a11y(); }
     }
     content.querySelectorAll(".sim-tab").forEach(function (t) { t.addEventListener("click", function () { show(this.getAttribute("data-id")); }); });
     show(active);

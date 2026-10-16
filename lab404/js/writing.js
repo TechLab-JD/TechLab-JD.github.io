@@ -121,7 +121,7 @@
           '<div class="wr-frames"><div class="wr-frames-h">✏️ Sentence starters — tap one to add it</div>' +
             (FRAMES[pr.type] || FRAMES.explain).map(function (f) { return '<button class="wr-frame" type="button">' + esc(f) + '</button>'; }).join("") +
           '</div>' +
-          '<textarea class="wr-ta" id="wr-ta" placeholder="Write your answer here…">' + esc(d.text) + '</textarea>' +
+          '<textarea class="wr-ta" id="wr-ta" aria-label="Your written answer" placeholder="Write your answer here…">' + esc(d.text) + '</textarea>' +
           '<div class="wr-meta"><span id="wr-wc">' + words(d.text) + ' words</span><span id="wr-saved">Saved automatically</span></div>' +
           '<div class="wr-row"><button class="wr-btn" id="wr-check">✓ Check my work</button>' +
             (MODELS[pr.id] ? '<button class="wr-btn ghost" id="wr-model">👀 Show a model answer</button>' : "") + '</div>' +

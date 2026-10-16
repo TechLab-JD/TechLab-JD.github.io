@@ -126,7 +126,7 @@
       '<div class="esg"><h2>🌐 Bilingual Glossary · Glosario bilingüe</h2>' +
         '<p class="esg-lead">Key school words in English and Spanish. Lessons are in English — use this to look up a term. / Palabras escolares clave en inglés y español. Las lecciones están en inglés; usa esto para buscar un término.</p>' +
         '<div class="esg-bar">' +
-          '<input class="esg-search" id="esg-q" type="search" placeholder="Search / Buscar…" autocomplete="off">' +
+          '<input class="esg-search" id="esg-q" type="search" aria-label="Search terms / Buscar términos" placeholder="Search / Buscar…" autocomplete="off">' +
           '<span class="esg-seg" role="group" aria-label="Show language">' +
             '<button data-m="both">Both</button><button data-m="en">EN</button><button data-m="es">ES</button>' +
           '</span>' +
