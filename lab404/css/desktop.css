@@ -1169,8 +1169,17 @@ body.is-resizing * { user-select: none !important; cursor: inherit !important; }
   font-size: 0.72rem;
   letter-spacing: 0.35em;
   color: rgba(0, 255, 204, 0.35);
-  margin-bottom: 28px;
+  margin-bottom: 10px;
   text-transform: uppercase;
+}
+
+.boot-tagline {
+  font-size: 0.74rem;
+  color: rgba(220, 235, 232, 0.7);
+  letter-spacing: 0.02em;
+  margin-bottom: 26px;
+  text-align: center;
+  max-width: 92vw;
 }
 
 .boot-log {

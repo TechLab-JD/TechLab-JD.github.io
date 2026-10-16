@@ -1,4 +1,4 @@
-/* concept-map.js — Exam Objective Star Map — Lab404 A+ Study Hub */
+/* concept-map.js — Exam Objective Star Map — Lab404 Lab404 Study Hub */
 
 (function () {
   "use strict";

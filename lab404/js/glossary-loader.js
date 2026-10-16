@@ -1,4 +1,4 @@
-/* glossary-loader.js — Searchable glossary for A+ Study Hub */
+/* glossary-loader.js — Searchable glossary for the Lab404 Study Hub */
 (function () {
   "use strict";
 

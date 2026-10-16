@@ -1,4 +1,4 @@
-/* flashcard-loader.js — Flashcard study tool for A+ Study Hub */
+/* flashcard-loader.js — Flashcard study tool for the Lab404 Study Hub */
 (function () {
   "use strict";
 

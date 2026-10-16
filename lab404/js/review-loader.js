@@ -919,7 +919,7 @@
       var date = new Date().toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
       var coreLabel = isSec() ? "Security+ (SY0-701)" : "Core " + state.core;
       var html = '<h1>' + escHtml(coreLabel + " — Complete Study Pack") + '</h1>';
-      html += '<p class="print-date">Generated: ' + escHtml(date) + ' &nbsp;|&nbsp; Lab404 A+ Study Hub</p>';
+      html += '<p class="print-date">Generated: ' + escHtml(date) + ' &nbsp;|&nbsp; Lab404 Study Hub</p>';
       html += '<hr style="border:1pt solid #ccc;margin:1em 0;">';
 
       /* ── Part 1: Study Notes ── */

@@ -1,4 +1,4 @@
-/* desktop.js — OS Window Manager for A+ Study Hub */
+/* desktop.js — OS Window Manager for the Lab404 Study Hub */
 (function () {
   "use strict";
 

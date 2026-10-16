@@ -1,4 +1,4 @@
-/* utils.js — Shared utilities for A+ Study Hub */
+/* utils.js — Shared utilities for the Lab404 Study Hub */
 (function (root) {
   "use strict";
 
