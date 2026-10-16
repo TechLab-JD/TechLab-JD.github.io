@@ -317,6 +317,67 @@
       "g7-math-m7s8a": ["Two coins give 4 equally likely outcomes; only HH is both heads.", "1 ÷ 4.", "= 0.25."],
       "g7-math-m7s8d": ["Multiply independent events: (1/2) × (1/6) = 1/12.", "1 ÷ 12 = 0.0833...", "Rounded to 3 places: 0.083."]
     },
+    "g8-math": {
+      // exponents & roots
+      "g8-math-x8n2c": ["√49 = 7 and √64 = 8.", "50 is just above 49, so √50 is between 7 and 8.", "Lower whole number = 7."],
+      "g8-math-x8e1b": ["Same base, so add the exponents: 2^(3+2) = 2^5.", "2^5 = 32.", "= 32."],
+      "g8-math-x8e1d": ["Any nonzero number to the 0 power equals 1.", "= 1."],
+      "g8-math-x8e2a": ["Take the square root of both sides.", "√49 = 7.", "x = 7."],
+      "g8-math-x8e2b": ["Take the cube root of both sides.", "∛27 = 3 (3 × 3 × 3 = 27).", "x = 3."],
+      "g8-math-x8e2c": ["Ask: what number times itself is 81?", "9 × 9 = 81.", "= 9."],
+      "g8-math-x8e2d": ["Ask: what number cubed is 64?", "4 × 4 × 4 = 64.", "= 4."],
+      "g8-math-ns2u1": ["3 × 3 = 9.", "= 3."],
+      "g8-math-ns2u2": ["4 × 4 = 16.", "= 4."],
+      "g8-math-ns2u5": ["5 × 5 = 25.", "= 5."],
+      "g8-math-ee1u6": ["2 × 2 × 2 × 2.", "4 → 8 → 16.", "= 16."],
+      "g8-math-ee2u1": ["Take the square root: √49 = 7.", "x = 7."],
+      "g8-math-ee2u2": ["Take the cube root: ∛27 = 3.", "x = 3."],
+      "g8-math-ee2u4": ["2 × 2 × 2 = 8, so the cube root of 8 is 2.", "= 2."],
+      "g8-math-ee2u5": ["Take the square root: √100 = 10.", "x = 10."],
+      // slope
+      "g8-math-x8e5a": ["Slope = rise ÷ run = change in y ÷ change in x.", "(6 − 0) ÷ (2 − 0) = 6 ÷ 2.", "= 3."],
+      "g8-math-x8e5c": ["Slope from the origin to (4, 12) = 12 ÷ 4.", "= 3."],
+      "g8-math-ee5u6": ["Slope = rise ÷ run = 6 ÷ 2.", "= 3."],
+      // linear functions / evaluating
+      "g8-math-x8e6c": ["Substitute x = 3: 2 × 3 + 5.", "6 + 5.", "= 11."],
+      "g8-math-x8e6d": ["The y-intercept is the value when x = 0: 4(0) − 1.", "= −1."],
+      "g8-math-ee6u5": ["Substitute x = 2: 4 × 2 + 1.", "8 + 1.", "= 9."],
+      "g8-math-x8f2c": ["The two functions differ only by the +4 constant.", "So at any x, B − A = 4.", "= 4."],
+      "g8-math-x8f4b": ["Substitute x = 5 into y = 2x + 3: 2 × 5 + 3.", "10 + 3.", "= $13."],
+      "g8-math-f4u2": ["The line is y = 3x + 2.", "At x = 1: 3 × 1 + 2.", "= 5."],
+      "g8-math-f4u4": ["Cost = 20 + 10 × 3.", "20 + 30.", "= $50."],
+      // linear equations
+      "g8-math-x8e7a": ["Subtract 5: 3x = 15.", "Divide by 3: x = 5."],
+      "g8-math-x8e7b": ["Divide both sides by 2: x − 1 = 5.", "Add 1: x = 6."],
+      "g8-math-x8e7c": ["Collect the x's: 5x − 2x = 9 + 3, so 3x = 12.", "Divide by 3: x = 4."],
+      "g8-math-ee7u1": ["Subtract 5: 2x = 8.", "Divide by 2: x = 4."],
+      "g8-math-ee7u2": ["Add 7: 3x = 15.", "Divide by 3: x = 5."],
+      "g8-math-ee7u3": ["Divide both sides by 4: x − 1 = 3.", "Add 1: x = 4."],
+      "g8-math-ee7u4": ["Subtract 2x from both sides: 3x = 9.", "Divide by 3: x = 3."],
+      "g8-math-ee7u5": ["Subtract 2: x/3 = 3.", "Multiply by 3: x = 9."],
+      "g8-math-ee7u6": ["Add 4: 6x = 18.", "Divide by 6: x = 3."],
+      // systems
+      "g8-math-x8e8a": ["y = x and y = 4, so x must equal 4.", "x = 4."],
+      "g8-math-x8e8d": ["Set the two equal: 2x = x + 3.", "Subtract x: x = 3."],
+      "g8-math-ee8u2": ["y = x and y = 4, so x = 4.", "x = 4."],
+      "g8-math-ee8u5": ["Substitute x = 6: 6 + y = 10.", "y = 10 − 6 = 4."],
+      // triangle angles
+      "g8-math-x8g5a": ["The angles of a triangle add to 180°.", "180 − 50 − 60.", "= 70°."],
+      "g8-math-x8g5d": ["An exterior angle equals the sum of the two remote interior angles.", "40 + 70.", "= 110°."],
+      "g8-math-g5u2": ["Angles of a triangle add to 180°.", "180 − 60 − 70.", "= 50°."],
+      "g8-math-g5u5": ["Angles on a straight line add to 180°.", "180 − 120.", "= 60°."],
+      // Pythagorean theorem
+      "g8-math-x8g7a": ["a² + b² = c²: 3² + 4² = 9 + 16 = 25.", "c = √25.", "= 5."],
+      "g8-math-x8g7b": ["6² + 8² = 36 + 64 = 100.", "c = √100.", "= 10."],
+      "g8-math-x8g7d": ["5² + 12² = 25 + 144 = 169.", "c = √169.", "= 13."],
+      "g8-math-g7u2": ["3² + 4² = 9 + 16 = 25; c = √25.", "= 5."],
+      "g8-math-g7u3": ["6² + 8² = 36 + 64 = 100; c = √100.", "= 10."],
+      "g8-math-g7u6": ["5² + 12² = 25 + 144 = 169; c = √169.", "= 13."],
+      // cylinder volume
+      "g8-math-x8g9b": ["Volume = π × r² × h = 3.14 × 2² × 5.", "2² = 4, so 3.14 × 4 × 5 = 3.14 × 20.", "= 62.8."],
+      // two-way table
+      "g8-math-x8s4d": ["With no overlap, just add the two groups.", "12 + 8.", "= 20 students."]
+    },
     "sat-math": {
       "sat-math-m1-1": ["Start with 3x + 5 = 20.", "Subtract 5 from both sides: 3x = 15.", "Divide both sides by 3: x = 5."],
       "sat-math-m1-5": ["Start with 2x − 4 = 10.", "Add 4 to both sides: 2x = 14.", "Divide both sides by 2: x = 7."],
