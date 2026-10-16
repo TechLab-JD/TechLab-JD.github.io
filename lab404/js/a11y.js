@@ -4,7 +4,7 @@
 (function () {
   "use strict";
   var KEY = "lab404.a11y";
-  var def = { tsize: "normal", readable: false, motion: false, nightdim: false };
+  var def = { tsize: "normal", readable: false, motion: false, nightdim: false, raRate: 1 };
   var st = def;
   try { var r = localStorage.getItem(KEY); if (r) st = Object.assign({}, def, JSON.parse(r)); } catch (e) {}
 
@@ -29,6 +29,7 @@
     h.classList.toggle("a11y-readable", !!st.readable);
     h.classList.toggle("a11y-reduce-motion", !!st.motion);
     applyNight();
+    if (window.ReadAloud && window.ReadAloud.setRate) window.ReadAloud.setRate(st.raRate || 1);  /* R4 */
   }
 
   function css() {
@@ -76,6 +77,9 @@
       '<div class="a11y-grp"><div class="a11y-lbl">Text size</div>' +
         '<div class="a11y-seg" id="a11y-tsize">' +
           '<button data-sz="normal">A</button><button data-sz="lg">A+</button><button data-sz="xl">A++</button></div></div>' +
+      '<div class="a11y-grp"><div class="a11y-lbl">Reading speed</div>' +
+        '<div class="a11y-seg" id="a11y-rate">' +
+          '<button data-rate="0.75">Slow</button><button data-rate="1">Normal</button><button data-rate="1.3">Fast</button></div></div>' +
       '<div class="a11y-grp"><div class="a11y-tog" id="a11y-readable"><span>Readable font</span><span class="a11y-pip"></span></div></div>' +
       '<div class="a11y-grp"><div class="a11y-tog" id="a11y-motion"><span>Reduce motion</span><span class="a11y-pip"></span></div></div>' +
       '<div class="a11y-grp" style="margin-bottom:0"><div class="a11y-tog" id="a11y-night"><span>Night dim (8pm–6am)</span><span class="a11y-pip"></span></div></div>';
@@ -87,6 +91,12 @@
     document.getElementById("a11y-readable").addEventListener("click", function () { st.readable = !st.readable; save(); apply(); sync(); });
     document.getElementById("a11y-motion").addEventListener("click", function () { st.motion = !st.motion; save(); apply(); sync(); });
     document.getElementById("a11y-night").addEventListener("click", function () { st.nightdim = !st.nightdim; save(); apply(); sync(); });
+    pop.querySelectorAll("#a11y-rate button").forEach(function (b) {
+      b.addEventListener("click", function () {
+        st.raRate = parseFloat(b.dataset.rate); save(); apply(); sync();
+        if (window.ReadAloud && window.ReadAloud.speak) window.ReadAloud.speak("This is the reading speed.");  /* preview */
+      });
+    });
     sync();
   }
   function sync() {
@@ -95,6 +105,7 @@
     document.getElementById("a11y-readable").classList.toggle("on", !!st.readable);
     document.getElementById("a11y-motion").classList.toggle("on", !!st.motion);
     document.getElementById("a11y-night").classList.toggle("on", !!st.nightdim);
+    pop.querySelectorAll("#a11y-rate button").forEach(function (b) { b.classList.toggle("on", parseFloat(b.dataset.rate) === (st.raRate || 1)); });
   }
   function place(btn) {
     var r = btn.getBoundingClientRect();

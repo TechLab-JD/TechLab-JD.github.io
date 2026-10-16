@@ -7,8 +7,11 @@
 window.ReadAloud = (function () {
   var synth = window.speechSynthesis || null;
   var speaking = false, curBtn = null, chunks = [], idx = 0, voice = null, keepAlive = null;
+  var rate = 1;  /* R4: adjustable reading speed */
+  try { var rr = parseFloat(localStorage.getItem("lab404.raRate")); if (rr >= 0.5 && rr <= 2) rate = rr; } catch (e) {}
 
   function supported() { return !!synth; }
+  function setRate(r) { if (r >= 0.5 && r <= 2) { rate = r; try { localStorage.setItem("lab404.raRate", String(r)); } catch (e) {} } }
 
   function loadVoice() {
     if (!synth) return null;
@@ -59,7 +62,7 @@ window.ReadAloud = (function () {
     var u = new SpeechSynthesisUtterance(chunks[idx++]);
     if (!voice) loadVoice();
     if (voice) u.voice = voice;
-    u.rate = 0.98; u.pitch = 1; u.volume = 1;
+    u.rate = rate * 0.98; u.pitch = 1; u.volume = 1;
     u.onend = function () { if (speaking) run(); };
     u.onerror = function () { stop(); };
     synth.speak(u);
@@ -85,5 +88,5 @@ window.ReadAloud = (function () {
   window.addEventListener("beforeunload", stop);
   document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); });
 
-  return { supported: supported, toggle: toggle, speak: speak, stop: stop };
+  return { supported: supported, toggle: toggle, speak: speak, stop: stop, setRate: setRate };
 })();

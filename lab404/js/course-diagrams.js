@@ -21,13 +21,14 @@
   }
   function pyramid() {
     return '<svg viewBox="0 0 260 170" role="img" aria-label="An energy pyramid: producers at the wide base, then consumers above, with about ten percent of energy passing up each level" ' + FF + '>' +
-      '<polygon points="20,150 240,150 190,110 70,110" fill="#22c55e"/>' +
-      '<polygon points="70,110 190,110 160,75 100,75" fill="#eab308"/>' +
-      '<polygon points="100,75 160,75 145,45 115,45" fill="#f97316"/>' +
-      '<polygon points="115,45 145,45 130,20" fill="#ef4444"/>' +
-      '<text x="130" y="144" text-anchor="middle" font-size="11" fill="#06310f">Producers (100%)</text>' +
-      '<text x="130" y="100" text-anchor="middle" font-size="10" fill="#3b2f00">1st consumers (~10%)</text>' +
-      '<text x="130" y="67" text-anchor="middle" font-size="9" fill="#5a2600">2nd (~1%)</text></svg>';
+      /* Okabe-Ito colorblind-safe sequential blue -> orange */
+      '<polygon points="20,150 240,150 190,110 70,110" fill="#0072B2"/>' +
+      '<polygon points="70,110 190,110 160,75 100,75" fill="#56B4E9"/>' +
+      '<polygon points="100,75 160,75 145,45 115,45" fill="#E69F00"/>' +
+      '<polygon points="115,45 145,45 130,20" fill="#D55E00"/>' +
+      '<text x="130" y="144" text-anchor="middle" font-size="11" fill="#fff">Producers (100%)</text>' +
+      '<text x="130" y="100" text-anchor="middle" font-size="10" fill="#063a52">1st consumers (~10%)</text>' +
+      '<text x="130" y="67" text-anchor="middle" font-size="9" fill="#4a3300">2nd (~1%)</text></svg>';
   }
   function wave() {
     return '<svg viewBox="0 0 300 150" role="img" aria-label="A wave showing one wavelength measured crest to crest and the amplitude measured from the midline to a crest" ' + FF + '>' +
@@ -53,13 +54,13 @@
   function states() {
     var s = '<svg viewBox="0 0 300 130" role="img" aria-label="Particles in a solid are packed in a fixed pattern, in a liquid are close but free to move, and in a gas are far apart" ' + FF + '>';
     s += '<rect x="10" y="20" width="80" height="80" fill="none" stroke="#1e293b" stroke-width="1.5"/>';
-    for (var i = 0; i < 9; i++) s += '<circle cx="' + (25 + (i % 3) * 25) + '" cy="' + (35 + Math.floor(i / 3) * 25) + '" r="6" fill="#2563eb"/>';
+    for (var i = 0; i < 9; i++) s += '<circle cx="' + (25 + (i % 3) * 25) + '" cy="' + (35 + Math.floor(i / 3) * 25) + '" r="6" fill="#0072B2"/>';   /* colorblind-safe: blue */
     s += '<text x="50" y="118" text-anchor="middle" font-size="11" fill="#1e293b">Solid</text>';
     s += '<rect x="110" y="20" width="80" height="80" fill="none" stroke="#1e293b" stroke-width="1.5"/>';
-    for (i = 0; i < 7; i++) s += '<circle cx="' + (125 + (i % 3) * 22 + (i % 2) * 4) + '" cy="' + (40 + Math.floor(i / 3) * 22) + '" r="6" fill="#16a34a"/>';
+    for (i = 0; i < 7; i++) s += '<circle cx="' + (125 + (i % 3) * 22 + (i % 2) * 4) + '" cy="' + (40 + Math.floor(i / 3) * 22) + '" r="6" fill="#E69F00"/>';   /* orange */
     s += '<text x="150" y="118" text-anchor="middle" font-size="11" fill="#1e293b">Liquid</text>';
     s += '<rect x="210" y="20" width="80" height="80" fill="none" stroke="#1e293b" stroke-width="1.5"/>';
-    for (i = 0; i < 4; i++) s += '<circle cx="' + (230 + (i % 2) * 40) + '" cy="' + (40 + Math.floor(i / 2) * 35) + '" r="6" fill="#ef4444"/>';
+    for (i = 0; i < 4; i++) s += '<circle cx="' + (230 + (i % 2) * 40) + '" cy="' + (40 + Math.floor(i / 2) * 35) + '" r="6" fill="#CC79A7"/>';   /* reddish-purple */
     s += '<text x="250" y="118" text-anchor="middle" font-size="11" fill="#1e293b">Gas</text></svg>';
     return s;
   }
