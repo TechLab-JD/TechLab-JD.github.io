@@ -733,7 +733,7 @@
 
       /* H1: these views need the lazy-loaded study data — wait for it, then render. */
       var needsData = app.indexOf("folder-") === 0 ||
-        ["myprogress", "bygrade", "course", "transcript"].indexOf(app) >= 0;
+        ["myprogress", "bygrade", "course", "transcript", "skills"].indexOf(app) >= 0;
       if (needsData && window.Lab404Data && !window.Lab404Data.isLoaded()) {
         content.innerHTML = '<div class="loading-state" style="padding:2.4rem;text-align:center;color:var(--text-muted,#9aa)">Loading study content…</div>';
         window.Lab404Data.ensure().then(function () { Desktop._loadApp(winId, app, params); })
@@ -1605,60 +1605,65 @@
     _renderSkillOverview: function (winId) {
       var content = document.getElementById(winId + "-content");
       if (!content) return;
+      var COURSES = window.LAB404_COURSES || {}, C = window.LAB404_CONTENT || {}, M = window.LAB404_MASTERY;
+      var prog = Desktop._progGet();
+      var li = (window.XPSystem && window.XPSystem.levelInfo) ? window.XPSystem.levelInfo() : { xp: 0, tag: "LV.1" };
+      var streak = parseInt(localStorage.getItem("study-streak-count") || "0", 10);
 
-      /* A+ max XP: ~350 chapter topics × 10 + ~400 terms × 5 + 200 practice = ~5700; cap at 6000 */
-      var APLUS_MAX_XP = 6000;
-
-      var CERTS = [
-        { key: "aplus",      label: "A+",       desc: "CompTIA A+ \u00b7 220-1201 & 220-1202", active: true  },
-        { key: "netplus",    label: "Net+",      desc: "CompTIA Network+",                       active: false },
-        { key: "secplus",    label: "Sec+",      desc: "CompTIA Security+",                      active: false },
-        { key: "linuxplus",  label: "Linux+",    desc: "CompTIA Linux+",                         active: false },
-        { key: "cloudplus",  label: "Cloud+",    desc: "CompTIA Cloud+",                         active: false },
-        { key: "serverplus", label: "Server+",   desc: "CompTIA Server+",                        active: false },
-        { key: "cysa",       label: "CySA+",     desc: "CompTIA CySA+",                          active: false },
-        { key: "pentest",    label: "PenTest+",  desc: "CompTIA PenTest+",                       active: false },
-        { key: "securityx",  label: "SecurityX", desc: "CompTIA SecurityX",                      active: false },
-        { key: "dataplus",   label: "Data+",     desc: "CompTIA Data+",                          active: false },
-      ];
-
-      var aplusXP = (window.XPSystem && window.XPSystem.getXP) ? window.XPSystem.getXP() : 0;
-
-      var rows = CERTS.map(function (cert) {
-        var level = 0;
-        var xpLabel = "Coming soon";
-
-        if (cert.active) {
-          level = Math.min(100, Math.round((aplusXP / APLUS_MAX_XP) * 100));
-          xpLabel = aplusXP + " XP";
-        }
-
-        var barFill = level > 0
-          ? '<div class="sk-bar-fill" style="width:' + level + '%"></div>'
-          : "";
-
-        return '<div class="sk-row' + (cert.active ? " sk-row-active" : " sk-row-dim") + '">' +
-          '<div class="sk-cert-col">' +
-            '<span class="sk-cert-label">' + escHtml(cert.label) + '</span>' +
-            '<span class="sk-cert-desc">' + escHtml(cert.desc) + '</span>' +
-          '</div>' +
-          '<div class="sk-bar-col">' +
-            '<div class="sk-bar"><div class="sk-bar-track">' + barFill + '</div></div>' +
-            '<span class="sk-xp-label">' + escHtml(xpLabel) + '</span>' +
-          '</div>' +
-          '<div class="sk-level-col">' +
-            '<span class="sk-level-num">' + level + '</span>' +
-            '<span class="sk-level-max">/100</span>' +
-          '</div>' +
+      function row(icon, label, desc, pct, valLabel, active) {
+        pct = Math.max(0, Math.min(100, Math.round(pct || 0)));
+        var fill = pct > 0 ? '<div class="sk-bar-fill" style="width:' + pct + '%"></div>' : "";
+        return '<div class="sk-row ' + (active ? "sk-row-active" : "sk-row-dim") + '">' +
+          '<div class="sk-cert-col"><span class="sk-cert-label">' + icon + " " + escHtml(label) + '</span>' +
+            '<span class="sk-cert-desc">' + escHtml(desc) + '</span></div>' +
+          '<div class="sk-bar-col"><div class="sk-bar"><div class="sk-bar-track">' + fill + '</div></div>' +
+            '<span class="sk-xp-label">' + escHtml(valLabel) + '</span></div>' +
+          '<div class="sk-level-col"><span class="sk-level-num">' + pct + '</span><span class="sk-level-max">/100</span></div>' +
         '</div>';
+      }
+      function sec(t) { return '<div style="font:700 .72rem system-ui,sans-serif;text-transform:uppercase;letter-spacing:.5px;color:var(--text-muted,#9aa);margin:18px 0 8px">' + t + '</div>'; }
+
+      /* Core academic subjects: objectives mastered across each subject's graded courses */
+      var SUBJ = [["math", "🔢", "Math"], ["science", "🔬", "Science"],
+        ["english", "📖", "English (ELA)"], ["social", "🏛️", "Social Studies"]];
+      var acad = SUBJ.map(function (s) {
+        var tot = 0, mas = 0, started = false;
+        Object.keys(COURSES).forEach(function (id) {
+          if (COURSES[id].subjectKey !== s[0]) return;
+          if (M && M.readiness) { var r = M.readiness(id); if (r) { tot += r.total; mas += r.mastered; if (r.started) started = true; } }
+        });
+        return row(s[1], s[2], "K–College · " + mas + " of " + tot + " objectives mastered",
+          tot ? mas / tot * 100 : 0, tot ? mas + "/" + tot : "—", started || mas > 0);
+      }).join("");
+
+      /* Life & enrichment: the 106 elective topics */
+      var ck = Object.keys(C), eTot = ck.length, eMas = 0, eExp = 0;
+      ck.forEach(function (k) { var e = prog[k]; if (e && e.attempts) { eExp++; if ((e.best || 0) >= 0.85) eMas++; } });
+      var elec = row("🌱", "Life & Enrichment", "Money, cooking, coding, survival, arts & 15 more areas",
+        eTot ? eMas / eTot * 100 : 0, eExp + " of " + eTot + " topics explored", eExp > 0);
+
+      /* Certifications (CompTIA) */
+      var APLUS_MAX_XP = 6000;
+      var aplusXP = (window.XPSystem && window.XPSystem.getXP) ? window.XPSystem.getXP() : 0;
+      var CERTS = [
+        ["A+", "CompTIA A+ · 220-1201 & 220-1202", true],
+        ["Sec+", "CompTIA Security+ · SY0-701", true],
+        ["Net+", "CompTIA Network+ · coming soon", false],
+        ["Linux+", "CompTIA Linux+ · coming soon", false],
+        ["CySA+", "CompTIA CySA+ · coming soon", false]
+      ];
+      var certRows = CERTS.map(function (c) {
+        var pct = c[2] ? aplusXP / APLUS_MAX_XP * 100 : 0;
+        return row("🎓", c[0], c[1], pct, c[2] ? aplusXP + " XP" : "Coming soon", c[2]);
       }).join("");
 
       content.innerHTML =
-        '<div class="sk-header">' +
-          '<h2>Skill Overview</h2>' +
-          '<p class="sk-subtitle">CompTIA certification progress &mdash; Level 100 = exam ready</p>' +
-        '</div>' +
-        '<div class="sk-list">' + rows + '</div>';
+        '<div class="sk-header"><h2>Skill Overview</h2>' +
+          '<p class="sk-subtitle">Your progress across every subject &middot; <b>' + escHtml(li.tag) + '</b> &middot; ' + li.xp + ' XP' +
+            (streak > 0 ? ' &middot; 🔥 ' + streak + '-day streak' : '') + '</p></div>' +
+        sec("📚 Core subjects") + '<div class="sk-list">' + acad + '</div>' +
+        sec("✨ Life &amp; enrichment") + '<div class="sk-list">' + elec + '</div>' +
+        sec("🎓 Certifications") + '<div class="sk-list">' + certRows + '</div>';
     },
 
     _renderNotepad: function (winId) {
