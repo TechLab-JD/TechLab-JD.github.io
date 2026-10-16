@@ -6,6 +6,8 @@ window.CourseLoader = (function () {
   var M = window.LAB404_MASTERY;
   var el, courseId, course, quiz = null;
   var audio = { base: "", have: null, autoplay: false, cur: null };  // pre-rendered Kokoro clips (optional per course)
+  var testTimer = null;  // R5: count-up timer for the full practice test
+  function fmtTime(ms) { var s = Math.floor(ms / 1000), m = Math.floor(s / 60); return m + ":" + (s % 60 < 10 ? "0" : "") + (s % 60); }
   var learnText = {};  // plain-text per objective for the read-aloud layer
 
   /* ── D1: standards crosswalk — surface the standard on each objective, switchable framework ── */
@@ -386,7 +388,9 @@ window.CourseLoader = (function () {
             '<div class="cv-counts">' + counts + '</div></div></div>' +
         banner +
         doms +
-        '<div class="cv-row"><button class="cv-btn ghost sm" data-act="reset">Reset progress</button>' +
+        '<div class="cv-row">' +
+          (course.questions && course.questions.length >= 5 ? '<button class="cv-btn sm" data-act="test">📝 Full practice test</button>' : "") +
+          '<button class="cv-btn ghost sm" data-act="reset">Reset progress</button>' +
           '<button class="cv-btn ghost sm" data-act="share">🔗 Share / Assign</button>' +
           '<button class="cv-btn ghost sm" data-act="worksheet">🖨 Print worksheet</button></div>' +
         '<div class="cv-share" id="cv-share" style="display:none"></div>' +
@@ -414,6 +418,7 @@ window.CourseLoader = (function () {
         else if (a === "reset") { if (confirm("Reset all progress for this course?")) { M.reset(courseId); renderDash(); } }
         else if (a === "share") { showShare(); }
         else if (a === "worksheet") { printWorksheet(); }
+        else if (a === "test") { startQuiz("test"); }
       });
     });
     el.querySelectorAll("[data-practice]").forEach(function (b) {
@@ -452,9 +457,19 @@ window.CourseLoader = (function () {
     } else if (mode === "review") {
       M.dueReview(courseId).forEach(function (c) { qs = qs.concat(M.questionsFor(courseId, c)); });
       shuffle(qs);
+    } else if (mode === "test") {
+      /* R5: a cumulative test drawing from every objective in the course */
+      qs = shuffle((course.questions || []).slice());
+      var cap = (code && +code) || 20;
+      qs = qs.slice(0, Math.min(cap, qs.length));
     }
     if (!qs.length) { renderDash(); return; }
     quiz = { mode: mode, qs: qs, i: 0, correct: 0, answered: false };
+    if (testTimer) { clearInterval(testTimer); testTimer = null; }
+    if (mode === "test") {
+      quiz.startTime = Date.now();
+      testTimer = setInterval(function () { var t = document.getElementById("cv-timer"); if (t && quiz) t.textContent = "⏱ " + fmtTime(Date.now() - quiz.startTime); }, 500);
+    }
     renderQ();
   }
 
@@ -462,7 +477,8 @@ window.CourseLoader = (function () {
     stopClip();
     if (window.ReadAloud) window.ReadAloud.stop();  /* F2: stop any prior read-aloud */
     var q = quiz.qs[quiz.i];
-    var title = quiz.mode === "placement" ? "Placement check" : quiz.mode === "weakest" ? "Practice — weakest objectives" : quiz.mode === "review" ? "🔁 Review — due objectives" : "Practice — " + q.obj;
+    var title = quiz.mode === "placement" ? "Placement check" : quiz.mode === "weakest" ? "Practice — weakest objectives" : quiz.mode === "review" ? "🔁 Review — due objectives" : quiz.mode === "test" ? "📝 Full practice test" : "Practice — " + q.obj;
+    var timerSpan = quiz.mode === "test" ? '<span id="cv-timer" style="font-variant-numeric:tabular-nums">⏱ ' + fmtTime(Date.now() - quiz.startTime) + "</span>" : "";
     var body;
     if (q.type === "numeric") {
       body = '<input class="cv-num" id="cv-in" type="text" inputmode="decimal" autocomplete="off" placeholder="Your answer">' +
@@ -481,7 +497,7 @@ window.CourseLoader = (function () {
       ? '<button class="cv-btn ghost sm cv-readaloud" id="cv-ra" aria-pressed="false" title="Read this question aloud"><span class="ra-lbl">🔊 Listen</span></button>' : "";
     el.innerHTML =
       '<div class="cv-wrap"><div class="cv-q">' +
-        '<div class="cv-prog"><span>' + esc(title) + '</span><span>' + (quiz.i + 1) + " / " + quiz.qs.length + '</span></div>' +
+        '<div class="cv-prog"><span>' + esc(title) + '</span>' + timerSpan + '<span>' + (quiz.i + 1) + " / " + quiz.qs.length + '</span></div>' +
         '<div class="cv-qtext">' + esc(q.q) + '</div>' +
         spk + ra +
         body +
@@ -514,7 +530,7 @@ window.CourseLoader = (function () {
     if (raBtn) raBtn.addEventListener("click", function () { window.ReadAloud.toggle(qReadText(q), raBtn); });
     /* D4: non-readers (K-2 / Junior) hear the question + options read automatically. */
     if (!hasClip(q.id) && audioFirst()) setTimeout(function () { if (quiz && !quiz.answered) window.ReadAloud.speak(qReadText(q)); }, 350);
-    document.getElementById("cv-quit").addEventListener("click", function () { if (window.ReadAloud) window.ReadAloud.stop(); stopClip(); quiz = null; renderDash(); });
+    document.getElementById("cv-quit").addEventListener("click", function () { if (window.ReadAloud) window.ReadAloud.stop(); stopClip(); if (testTimer) { clearInterval(testTimer); testTimer = null; } quiz = null; renderDash(); });
     var flagBtn = document.getElementById("cv-flag");
     if (flagBtn) flagBtn.addEventListener("click", function () {  /* G3: report a question (local) */
       try { var r = JSON.parse(localStorage.getItem("lab404.reported") || "[]"); r.push({ course: courseId, obj: q.obj, qid: q.id, ts: Date.now() }); localStorage.setItem("lab404.reported", JSON.stringify(r)); } catch (e) {}
@@ -576,20 +592,27 @@ window.CourseLoader = (function () {
 
   function finish() {
     stopClip();
+    if (testTimer) { clearInterval(testTimer); testTimer = null; }
     if (quiz.mode === "placement") M.markPlaced(courseId);
     var s = quiz, r = M.readiness(courseId); quiz = null;
+    var pct = s.qs.length ? Math.round(s.correct / s.qs.length * 100) : 0;
+    var timeLine = (s.mode === "test" && s.startTime) ? ' · time ' + fmtTime(Date.now() - s.startTime) : "";
     el.innerHTML =
       '<div class="cv-wrap"><div class="cv-done">' +
-        '<h2 style="margin:4px 0 2px">' + (s.mode === "placement" ? "Placement complete" : "Practice complete") + '</h2>' +
-        '<p style="color:var(--text-muted,#9aa);font-size:.85rem">You got <b>' + s.correct + " / " + s.qs.length + '</b> this round.</p>' +
+        '<h2 style="margin:4px 0 2px">' + (s.mode === "placement" ? "Placement complete" : s.mode === "test" ? "📝 Test complete" : "Practice complete") + '</h2>' +
+        (s.mode === "test" ? '<p style="font-size:1.4rem;font-weight:800;margin:6px 0;color:var(--accent2,#4a90e2)">' + pct + '%</p>' : "") +
+        '<p style="color:var(--text-muted,#9aa);font-size:.85rem">You got <b>' + s.correct + " / " + s.qs.length + '</b>' + timeLine + '.</p>' +
         ringSvg(r.pct, r.letter) +
         '<p style="margin-top:8px">Course grade: <b>' + r.letter + '</b> · GPA ' + r.gpa.toFixed(1) + ' · ' + r.mastered + "/" + r.total + ' objectives mastered</p>' +
         '<div class="cv-row" style="justify-content:center"><button class="cv-btn" data-act="back">Back to course</button>' +
-        (r.complete ? "" : '<button class="cv-btn ghost" data-act="again">Practice weakest</button>') + '</div>' +
+        (s.mode === "test" ? '<button class="cv-btn ghost" data-act="retest">📝 Retake test</button>' : (r.complete ? "" : '<button class="cv-btn ghost" data-act="again">Practice weakest</button>')) + '</div>' +
       '</div></div>';
     el.querySelectorAll("[data-act]").forEach(function (b) {
       b.addEventListener("click", function () {
-        if (this.getAttribute("data-act") === "again") startQuiz("weakest"); else renderDash();
+        var a = this.getAttribute("data-act");
+        if (a === "again") startQuiz("weakest");
+        else if (a === "retest") startQuiz("test");
+        else renderDash();
       });
     });
   }
