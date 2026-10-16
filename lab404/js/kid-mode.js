@@ -93,6 +93,11 @@
         '<span class="ke" aria-hidden="true">' + sk.emoji + '</span>' +
         '<span class="kn">' + sk.name + '</span></button>';
     }).join("") : '<div class="kiosk-empty">No lessons for this grade yet. Ask a grown-up to pick another grade.</div>';
+    /* R5-C: the youngest grades get the picture/audio Coding Play (no MC coding course exists for K-2). */
+    if (grade === "K" || grade === "1" || grade === "2") {
+      tiles += '<button class="kiosk-tile" data-app="kcoding" data-say="Coding Play">' +
+        '<span class="ke" aria-hidden="true">🐢</span><span class="kn">Coding Play</span></button>';
+    }
 
     overlay.innerHTML =
       '<div class="kiosk-top"><h1>⭐ ' + glabel(grade) + '</h1>' +
@@ -101,10 +106,13 @@
       '<div class="kiosk-foot">Kid Mode — tap a subject to start. A grown-up can unlock with the 🔒 button.</div>';
     document.body.appendChild(overlay);
 
-    overlay.querySelectorAll("[data-course]").forEach(function (b) {
+    overlay.querySelectorAll(".kiosk-tile").forEach(function (b) {
       b.addEventListener("click", function () {
         speak(this.getAttribute("data-say"));
-        if (window.Desktop && Desktop.openWindow) Desktop.openWindow("course", { course: this.getAttribute("data-course") });
+        if (!(window.Desktop && Desktop.openWindow)) return;
+        var course = this.getAttribute("data-course");
+        if (course) Desktop.openWindow("course", { course: course });
+        else if (this.getAttribute("data-app")) Desktop.openWindow(this.getAttribute("data-app"));
       });
     });
     overlay.querySelector("#kiosk-exit").addEventListener("click", gate);

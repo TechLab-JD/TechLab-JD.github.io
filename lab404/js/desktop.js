@@ -53,6 +53,7 @@
     "examready":  { title: "Exam Readiness",             icon: "🎓" },
     "focus":      { title: "Focus Mode",                 icon: "🎯" },
     "thisweek":   { title: "This Week",                  icon: "📅" },
+    "kcoding":    { title: "Coding Play",                icon: "🐢" },
   };
 
   /* ── Cert human-readable labels ── */
@@ -365,6 +366,7 @@
       if (app === "examready") { winEl.style.width = "660px"; winEl.style.height = "620px"; }
       if (app === "focus")   { winEl.style.width = "520px"; winEl.style.height = "560px"; }
       if (app === "thisweek") { winEl.style.width = "560px"; winEl.style.height = "520px"; }
+      if (app === "kcoding") { winEl.style.width = "560px"; winEl.style.height = "640px"; }
       if (app === "myprogress") { winEl.style.width = "620px"; winEl.style.height = "600px"; }
       if (app === "bygrade") { winEl.style.width = "740px"; winEl.style.height = "640px"; }
       if (app === "course")  { winEl.style.width = "780px"; winEl.style.height = "660px"; }
@@ -917,6 +919,9 @@
       } else if (app === "thisweek") {
         if (window.Lab404Week) window.Lab404Week.render(content);
         else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Weekly summary not available.</div>';
+      } else if (app === "kcoding") {
+        if (window.Lab404KCoding) window.Lab404KCoding.render(content);
+        else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Coding Play not available.</div>';
       }
     },
 
