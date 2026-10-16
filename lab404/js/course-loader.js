@@ -80,6 +80,10 @@ window.CourseLoader = (function () {
       ".cv-fw-btn{font:inherit;font-size:.66rem;font-weight:700;border:1px solid var(--border,#334);background:transparent;color:var(--text-muted,#9aa);border-radius:6px;padding:3px 9px;cursor:pointer}" +
       ".cv-fw-btn.on{background:var(--accent2,#4a90e2);border-color:var(--accent2,#4a90e2);color:#fff}" +
       ".cv-std-chip{display:inline-block;font-family:system-ui,sans-serif;font-size:.58rem;font-weight:700;color:var(--accent2,#4a90e2);background:rgba(74,144,226,.12);border:1px solid rgba(74,144,226,.3);border-radius:5px;padding:1px 6px;margin-left:6px;vertical-align:middle;white-space:nowrap}" +
+      ".cv-share{margin-top:10px;border:1px solid var(--accent2,#4a90e2);border-radius:10px;padding:11px 13px;background:rgba(74,144,226,.06)}" +
+      ".cv-share-l{font-size:.74rem;color:var(--text-muted,#9aa);margin-bottom:7px}" +
+      ".cv-share-row{display:flex;gap:7px}" +
+      ".cv-share-row input{flex:1;min-width:0;background:var(--bg,#0d1117);border:1px solid var(--border,#334);border-radius:7px;padding:7px 9px;color:var(--text,#eee);font:.72rem monospace}" +
       ".cv-grade{display:flex;gap:16px;align-items:baseline}" +
       ".cv-grade .lg{font-size:1.8rem;font-weight:800}" +
       ".cv-grade small{font-size:.66rem;color:var(--text-muted,#9aa);display:block;font-weight:600}" +
@@ -159,6 +163,29 @@ window.CourseLoader = (function () {
     renderDash();
   }
 
+  /* C2: build a stateless deep link to this course and copy it */
+  function showShare() {
+    var box = document.getElementById("cv-share"); if (!box) return;
+    var url = location.origin + location.pathname + "?go=course&id=" + encodeURIComponent(courseId);
+    box.innerHTML =
+      '<div class="cv-share-l">Share this course — anyone who opens the link lands right here, no sign-in needed:</div>' +
+      '<div class="cv-share-row"><input id="cv-share-url" readonly value="' + esc(url) + '">' +
+      '<button class="cv-btn sm" id="cv-share-copy">Copy</button></div>';
+    box.style.display = "block";
+    var inp = document.getElementById("cv-share-url");
+    document.getElementById("cv-share-copy").onclick = function () {
+      var self = this;
+      inp.focus(); inp.select(); try { inp.setSelectionRange(0, 99999); } catch (e) {}
+      function done() { self.textContent = "Copied!"; setTimeout(function () { self.textContent = "Copy"; }, 1600); }
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done, function () { try { document.execCommand("copy"); } catch (e) {} done(); });
+        } else { document.execCommand("copy"); done(); }
+      } catch (e) { try { document.execCommand("copy"); } catch (x) {} done(); }
+    };
+    inp.focus();
+  }
+
   function renderDash() {
     learnText = {};
     var r = M.readiness(courseId);
@@ -230,7 +257,9 @@ window.CourseLoader = (function () {
             '<div class="cv-counts">' + counts + '</div></div></div>' +
         banner +
         doms +
-        '<div class="cv-row"><button class="cv-btn ghost sm" data-act="reset">Reset progress</button></div>' +
+        '<div class="cv-row"><button class="cv-btn ghost sm" data-act="reset">Reset progress</button>' +
+          '<button class="cv-btn ghost sm" data-act="share">🔗 Share / Assign</button></div>' +
+        '<div class="cv-share" id="cv-share" style="display:none"></div>' +
         '<p class="cv-note">Grades are <b>living</b>: your % / letter / GPA reflect your <i>current</i> mastery and climb toward an A as objectives reach <b>Mastered</b> (85%+, shown consistently). Objectives are aligned to <b>Common Core</b> and the <b>Massachusetts Curriculum Frameworks</b> — switch frameworks above, and each objective shows its standard code. (Texas / VA SOL / FL B.E.S.T. crosswalks are planned.)</p>' +
       '</div>';
 
@@ -247,6 +276,7 @@ window.CourseLoader = (function () {
         else if (a === "weakest") startQuiz("weakest");
         else if (a === "review") startQuiz("review");
         else if (a === "reset") { if (confirm("Reset all progress for this course?")) { M.reset(courseId); renderDash(); } }
+        else if (a === "share") { showShare(); }
       });
     });
     el.querySelectorAll("[data-practice]").forEach(function (b) {
