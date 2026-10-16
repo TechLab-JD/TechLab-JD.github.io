@@ -167,6 +167,14 @@ window.CourseLoader = (function () {
       ".cv-fb{border-radius:10px;padding:11px 14px;margin-top:14px;font-size:.84rem;line-height:1.5}" +
       ".cv-fb.ok{background:rgba(60,190,110,.14);border:1px solid #3cbe6e}" +
       ".cv-fb.no{background:rgba(224,72,72,.12);border:1px solid #e0484a}" +
+      /* R2: step-by-step solution panel */
+      ".cv-sol{margin-top:10px}" +
+      ".cv-sol-h{font-weight:800;font-size:.72rem;text-transform:uppercase;letter-spacing:.5px;color:var(--accent2,#4a90e2);margin:0 0 6px}" +
+      ".cv-sol-btn{border:1px solid var(--border,#334);background:transparent;color:var(--accent2,#4a90e2);border-radius:8px;padding:6px 11px;font:inherit;font-size:.78rem;font-weight:700;cursor:pointer}" +
+      ".cv-sol-btn:hover{background:rgba(74,144,226,.1)}" +
+      ".cv-steps{margin:4px 0 0;padding-left:22px;font-size:.86rem;line-height:1.6}" +
+      ".cv-steps li{margin:3px 0;padding-left:3px}" +
+      ".cv-steps li::marker{color:var(--accent2,#4a90e2);font-weight:700}" +
       ".cv-row{display:flex;gap:10px;align-items:center;margin-top:16px;flex-wrap:wrap}" +
       ".cv-done{text-align:center;padding:10px}" +
       /* D8: printable worksheet (screen-hidden; shown only when printing) */
@@ -513,12 +521,23 @@ window.CourseLoader = (function () {
     } else {
       var inp = document.getElementById("cv-in"); if (inp) inp.disabled = true;
     }
-    var ansText = q.type === "numeric" ? ("Answer: " + q.answer) :
-      q.type === "mc" ? ("Answer: " + q.options[q.a]) :
-      ("Answer: " + q.correct.map(function (i) { return q.options[i]; }).join(", "));
+    var ansPlain = q.type === "numeric" ? String(q.answer) :
+      q.type === "mc" ? q.options[q.a] :
+      q.correct.map(function (i) { return q.options[i]; }).join(", ");
+    /* R2: step-by-step solution. Use authored q.steps when present, else the one-line why. */
+    var steps = (q.steps && q.steps.length) ? q.steps : (q.why ? [q.why] : []);
+    var stepsOl = steps.length ? '<ol class="cv-steps">' + steps.map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("") + "</ol>" : "";
+    var solHtml = "";
+    if (stepsOl) {
+      solHtml = ok
+        ? '<div class="cv-sol"><button class="cv-sol-btn" id="cv-sol-btn" type="button">🧩 Show the steps</button><div class="cv-sol-body hide" id="cv-sol-body">' + stepsOl + "</div></div>"
+        : '<div class="cv-sol"><div class="cv-sol-h">🧩 How to solve it</div>' + stepsOl + "</div>";
+    }
     document.getElementById("cv-fb").innerHTML =
-      '<div class="cv-fb ' + (ok ? "ok" : "no") + '">' + (ok ? "✅ Correct. " : "❌ Not quite. " + esc(ansText) + ". ") + esc(q.why || "") + '</div>';
-    if (audioFirst()) window.ReadAloud.speak((ok ? "Correct! " : "Not quite. " + ansText + ". ") + (q.why || ""));  /* D4: read feedback to non-readers */
+      '<div class="cv-fb ' + (ok ? "ok" : "no") + '">' + (ok ? "✅ Correct." : "❌ Not quite — the answer is " + esc(ansPlain) + ".") + "</div>" + solHtml;
+    var solBtn = document.getElementById("cv-sol-btn");
+    if (solBtn) solBtn.addEventListener("click", function () { var b = document.getElementById("cv-sol-body"); if (b) { b.classList.remove("hide"); this.classList.add("hide"); } });
+    if (audioFirst()) window.ReadAloud.speak((ok ? "Correct! " : "Not quite. The answer is " + ansPlain + ". ") + steps.join(". "));  /* D4 */
     var row = document.getElementById("cv-row");
     var last = quiz.i >= quiz.qs.length - 1;
     row.innerHTML = '<button class="cv-btn" id="cv-next">' + (last ? "See results" : "Next →") + '</button>';
