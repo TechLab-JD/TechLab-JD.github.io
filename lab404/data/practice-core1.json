@@ -8,7 +8,7 @@
    "Keyboard backlight"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "Laptops expose RAM and storage under a bottom access panel so they can be upgraded without a full teardown.",
   "objective": "1.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -36,7 +36,7 @@
    "eSATA"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "Modern ultrabooks use NVMe M.2 SSDs — compact and far faster than SATA.",
   "objective": "1.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -50,7 +50,7 @@
    "Mini PCIe or M.2"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "Laptop Wi-Fi cards are usually Mini PCIe or (newer) M.2 modules.",
   "objective": "1.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -64,7 +64,7 @@
    "Plastic pry tool"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "An ESD/anti-static wrist strap drains static charge so you don't damage sensitive components.",
   "objective": "1.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -78,7 +78,7 @@
    "Run a keyboard diagnostic"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "After a spill, cut power and remove the battery first to prevent a short before doing anything else.",
   "objective": "1.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -86,13 +86,13 @@
  {
   "q": "What does the acronym SO-DIMM stand for?",
   "options": [
-   "Incompatible RAM speed",
-   "Wrong SO-DIMM slot",
-   "RAM not fully seated",
-   "Bad motherboard"
+   "Small Outline Dual In-line Memory Module",
+   "Serial Optical Dual Inline Module",
+   "Standard Onboard DIMM",
+   "Solid-state Output Memory Module"
   ],
-  "answer": 2,
-  "explanation": "",
+  "answer": 0,
+  "explanation": "SO-DIMM stands for Small Outline Dual In-line Memory Module — the compact RAM form factor used in laptops.",
   "objective": "1.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -106,7 +106,7 @@
    "Higher pin count and lower voltage"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "DDR4 SO-DIMMs have more pins (260 vs DDR3's 204) and run at a lower voltage (1.2 V vs 1.5 V).",
   "objective": "1.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -120,7 +120,7 @@
    "Low battery"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "A clicking laptop drive means failing read/write heads — a mechanical failure, so back up immediately.",
   "objective": "1.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -134,7 +134,7 @@
    "mSATA"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "The 2.5-inch form factor (SATA SSD or HDD) is the common laptop drive size.",
   "objective": "1.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -148,7 +148,7 @@
    "Remove the fan only, leave the heatsink"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "Clean off the old thermal paste with isopropyl alcohol before applying fresh paste for good heat transfer.",
   "objective": "1.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -162,7 +162,7 @@
    "Expands connectivity with external ports"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "A docking station expands a laptop's connectivity with extra ports (display, USB, Ethernet, etc.).",
   "objective": "1.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -176,7 +176,7 @@
    "Grounds the chassis"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "A heat pipe moves heat from the CPU to the heatsink and fan, where it is dissipated.",
   "objective": "1.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -190,7 +190,7 @@
    "Touchpad hardware failure"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "A touchpad that dies right after reassembly usually has its ribbon cable unseated.",
   "objective": "1.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -204,7 +204,7 @@
    "Hard drive boot sector"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "The BIOS/UEFI firmware is stored on an EEPROM/flash chip on the motherboard.",
   "objective": "1.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -232,7 +232,7 @@
    "VA"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "OLED turns individual pixels fully off, giving the best contrast ratio and true blacks.",
   "objective": "1.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -246,7 +246,7 @@
    "Display cable"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "A dim but readable image points to a failed backlight (inverter/LED driver), not the LCD data path.",
   "objective": "1.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -260,7 +260,7 @@
    "DVI"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "Internal laptop panels connect via eDP (Embedded DisplayPort), which carries video and power.",
   "objective": "1.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -274,7 +274,7 @@
    "The LCD panel is damaged, not the GPU"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "An image on an external monitor while the laptop screen is cracked confirms the LCD panel is at fault, not the GPU.",
   "objective": "1.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -288,7 +288,7 @@
    "Manages display resolution"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "A digitizer converts touch or pen contact into digital X-Y coordinates the OS can use.",
   "objective": "1.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -302,7 +302,7 @@
    "OLED"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "TN panels have the fastest response times, which is why gamers favor them (trading off color and viewing angles).",
   "objective": "1.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -316,7 +316,7 @@
    "Incorrect aspect ratio"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "A dimmer replacement panel usually means a mismatched backlight voltage or an incompatible panel model.",
   "objective": "1.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -330,7 +330,7 @@
    "LCD"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "LCDs rely on a separate backlight, so they cannot switch pixels fully off for true black.",
   "objective": "1.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -344,7 +344,7 @@
    "Motherboard"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "Flicker on the laptop screen but not on an external display points to the laptop's display cable or LCD panel.",
   "objective": "1.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -358,7 +358,7 @@
    "Resolution standard"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "Glossy vs matte describes the screen coating — glossy looks vivid but reflects glare, matte diffuses it.",
   "objective": "1.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -372,7 +372,7 @@
    "Optical touch"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "An active digitizer (EMR) senses the pen's electromagnetic signal for precise stylus input.",
   "objective": "1.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -386,7 +386,7 @@
    "Touchscreen calibration or digitizer issue"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "Touches registering in the wrong spot indicate a digitizer fault or a touchscreen calibration problem.",
   "objective": "1.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -400,7 +400,7 @@
    "Remove the battery"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "Always disconnect power and remove the battery first before opening a laptop to replace the display.",
   "objective": "1.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -414,7 +414,7 @@
    "Contrast ratio"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "PPI (pixels per inch) measures pixel density — a higher PPI looks sharper.",
   "objective": "1.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -428,7 +428,7 @@
    "Overheating CPU"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "Vertical colored lines on the laptop screen but a clean external image point to a damaged LCD panel or loose video cable.",
   "objective": "1.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -442,7 +442,7 @@
    "USB-C hub with Ethernet port"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "A USB-C hub (or dock) with an Ethernet port adds wired networking to a laptop that has only USB-C.",
   "objective": "1.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -456,7 +456,7 @@
    "HDMI 1.4"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "Thunderbolt 3/4 carries both data and video at up to 40 Gbps over a USB-C connector.",
   "objective": "1.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -470,7 +470,7 @@
    "USB OTG"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "Set the phone's USB mode to MTP/file-transfer (not 'charging only') to move files.",
   "objective": "1.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -484,7 +484,7 @@
    "Mirror the display"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "USB OTG lets a phone act as a USB host so it can use drives, keyboards, and other peripherals.",
   "objective": "1.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -498,7 +498,7 @@
    "HDMI to VGA active adapter"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "A legacy VGA projector needs an active HDMI-to-VGA adapter, which converts the digital signal to analog.",
   "objective": "1.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -512,7 +512,7 @@
    "Bluetooth is not available on this laptop"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "Bluetooth grayed out usually means a hardware or software wireless kill switch is engaged.",
   "objective": "1.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -526,7 +526,7 @@
    "300 meters"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "Bluetooth Class 2 (most phones and laptops) has a range of about 10 meters.",
   "objective": "1.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -540,7 +540,7 @@
    "Update BIOS"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "First try a different USB port to rule out one bad port before suspecting the device itself.",
   "objective": "1.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -554,7 +554,7 @@
    "Digital wallet (e.g., Apple Pay, Google Pay)"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "Digital wallets like Apple Pay and Google Pay use NFC for contactless tap-to-pay.",
   "objective": "1.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -568,7 +568,7 @@
    "USB-B"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "Most modern Android phones charge and transfer data over USB-C.",
   "objective": "1.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -582,7 +582,7 @@
    "USB-A to DisplayPort"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "A Thunderbolt 4 dock can drive dual displays and charge the laptop over a single cable.",
   "objective": "1.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -596,7 +596,7 @@
    "Back up data automatically"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "A port replicator adds extra ports to a laptop — a simpler alternative to a full docking station.",
   "objective": "1.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -610,7 +610,7 @@
    "AirDrop or Nearby Share (using Wi-Fi Direct and Bluetooth)"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "Sending files to nearby devices without pairing uses AirDrop/Nearby Share (Wi-Fi Direct plus Bluetooth).",
   "objective": "1.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -624,7 +624,7 @@
    "USB 1.1"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "USB-C introduced the reversible connector, so there is no wrong-way-up orientation.",
   "objective": "1.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -638,7 +638,7 @@
    "Check BIOS for SD support"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "If the SD card works in another device, check the laptop's card-format compatibility and reader driver.",
   "objective": "1.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -652,7 +652,7 @@
    "Remove carrier restrictions"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "Developer mode exposes advanced debugging features, including USB debugging, on a mobile device.",
   "objective": "1.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -666,7 +666,7 @@
    "TCP"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "TCP is connection-oriented and guarantees ordered, reliable delivery; UDP is connectionless and does not.",
   "objective": "2.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -680,7 +680,7 @@
    "25"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "HTTP uses TCP port 80 by default.",
   "objective": "2.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -694,7 +694,7 @@
    "SSH"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "HTTPS (encrypted web traffic) uses port 443.",
   "objective": "2.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -708,7 +708,7 @@
    "Telnet"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "SFTP or FTPS adds encryption, so use them instead of plaintext FTP for secure transfers.",
   "objective": "2.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -722,7 +722,7 @@
    "25"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "SMTP sends outgoing email on port 25.",
   "objective": "2.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -730,13 +730,13 @@
  {
   "q": "POP3 uses port ___ to retrieve email from a server.",
   "options": [
-   "IMAP",
-   "SMTP",
-   "POP3",
-   "HTTP"
+   "110",
+   "25",
+   "143",
+   "443"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "POP3 retrieves email from the server on TCP port 110.",
   "objective": "2.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -750,7 +750,7 @@
    "SSH"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "SMB handles Windows file sharing over ports 137-139 and 445.",
   "objective": "2.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -758,13 +758,13 @@
  {
   "q": "What port does RDP (Remote Desktop Protocol) use?",
   "options": [
-   "TCP",
-   "UDP",
-   "ICMP",
-   "ARP"
+   "3389",
+   "443",
+   "22",
+   "23"
   ],
-  "answer": 2,
-  "explanation": "",
+  "answer": 0,
+  "explanation": "RDP uses TCP port 3389.",
   "objective": "2.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -778,7 +778,7 @@
    "Managed switches allow configuration of VLANs, QoS, and port monitoring"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "Managed switches let you configure VLANs, QoS, and port monitoring; unmanaged switches cannot be configured.",
   "objective": "2.5",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -792,7 +792,7 @@
    "Bridge"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "A router works at OSI Layer 3 and routes traffic between different networks using IP addresses.",
   "objective": "2.5",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -806,7 +806,7 @@
    "Modem"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "A switch forwards frames based on MAC addresses, connecting devices within a LAN.",
   "objective": "2.5",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -820,7 +820,7 @@
    "VPN termination"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "Power over Ethernet carries both power and data on one cable to devices like IP cameras and access points.",
   "objective": "2.5",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -834,7 +834,7 @@
    "Provides centralized termination points for structured cabling"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "A patch panel is a central termination point for structured cabling, keeping cable runs organized.",
   "objective": "2.5",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -848,7 +848,7 @@
    "Firewall"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "A wireless repeater/extender receives the signal and rebroadcasts it to extend coverage.",
   "objective": "2.5",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -862,7 +862,7 @@
    "Wireless router"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "A DSL modem connects the computer to the telephone line for DSL internet.",
   "objective": "2.5",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -870,13 +870,13 @@
  {
   "q": "What is the maximum number of devices that can be directly connected to a standard 24-port switch?",
   "options": [
-   "Switch",
-   "Hub",
-   "Router",
-   "Access point"
+   "24",
+   "12",
+   "48",
+   "254"
   ],
-  "answer": 2,
-  "explanation": "",
+  "answer": 0,
+  "explanation": "A 24-port switch directly connects 24 devices; more can be added via uplinks or stacking.",
   "objective": "2.5",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -890,7 +890,7 @@
    "Layer 2"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "A NIC operates at Layer 2 (Data Link), handling MAC addressing and frames.",
   "objective": "2.5",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -904,7 +904,7 @@
    "802.11n"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "Wi-Fi 5 (802.11ac) runs on the 5 GHz band with multi-gigabit theoretical speeds.",
   "objective": "2.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -932,7 +932,7 @@
    "WPA2-AES"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "WPA3 is currently the strongest Wi-Fi security protocol.",
   "objective": "2.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -940,13 +940,13 @@
  {
   "q": "What does SSID stand for?",
   "options": [
-   "Wrong password",
-   "MAC address filtering",
-   "Router malfunction",
-   "The device does not support 5 GHz (single-band adapter)"
+   "Service Set Identifier (the wireless network name)",
+   "Secure Socket ID",
+   "System Service Identifier",
+   "Signal Strength Indicator"
   ],
-  "answer": 3,
-  "explanation": "",
+  "answer": 0,
+  "explanation": "SSID stands for Service Set Identifier — the broadcast name of a wireless network.",
   "objective": "2.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -960,7 +960,7 @@
    "802.11ad"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "802.11ax is branded Wi-Fi 6.",
   "objective": "2.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -968,13 +968,13 @@
  {
   "q": "What does MIMO stand for in wireless networking?",
   "options": [
-   "Channels 1, 5, and 9",
-   "Channels 1, 6, and 11",
-   "Channels 2, 7, and 12",
-   "Channels 3, 6, and 9"
+   "Multiple Input, Multiple Output",
+   "Managed Input, Managed Output",
+   "Multi-band Interference Management Option",
+   "Minimum In, Maximum Out"
   ],
-  "answer": 1,
-  "explanation": "",
+  "answer": 0,
+  "explanation": "MIMO = Multiple Input, Multiple Output — multiple antennas send and receive streams at once to raise throughput.",
   "objective": "2.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -988,7 +988,7 @@
    "DES"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "WPA2 uses AES (CCMP) for encryption.",
   "objective": "2.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1002,7 +1002,7 @@
    "802.11ad (WiGig)"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "802.11ad (WiGig) uses the 60 GHz band for very high bandwidth over short range.",
   "objective": "2.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1016,7 +1016,7 @@
    "MAC addresses to hostnames"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "DNS resolves human-readable hostnames to IP addresses.",
   "objective": "2.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1030,7 +1030,7 @@
    "FTP server"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "A mail server sends and receives email using SMTP, IMAP, and POP3.",
   "objective": "2.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1044,7 +1044,7 @@
    "Provides internet access"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "A file server provides centralized network storage and shared file access.",
   "objective": "2.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1058,7 +1058,7 @@
    "Acts as an intermediary between clients and the internet, providing caching and filtering"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "A proxy sits between clients and the internet, adding caching and content filtering.",
   "objective": "2.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1072,7 +1072,7 @@
    "FTP"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "Active Directory (via LDAP) authenticates and manages users in a Windows domain.",
   "objective": "2.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1086,7 +1086,7 @@
    "Provide NTP services"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "A syslog server collects and stores log messages from network devices for review.",
   "objective": "2.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1100,7 +1100,7 @@
    "TFTP"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "NTP (Network Time Protocol) synchronizes clocks across network devices.",
   "objective": "2.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1114,7 +1114,7 @@
    "Network device firmware updates and booting diskless workstations"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "TFTP is simple and unauthenticated — used for device firmware pushes and booting diskless workstations.",
   "objective": "2.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1128,7 +1128,7 @@
    "Provide DNS and DHCP services"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "A UTM appliance bundles firewall, IDS/IPS, antivirus, and more into a single device.",
   "objective": "2.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1142,7 +1142,7 @@
    "169.254.0.0/16"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "Most home routers hand out addresses on 192.168.1.0/24 by default.",
   "objective": "2.6",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1156,7 +1156,7 @@
    "Port forwarding"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "MAC address filtering allows or denies specific devices by their hardware (MAC) address.",
   "objective": "2.6",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1170,7 +1170,7 @@
    "Hides the network name from casual scanning (security through obscurity)"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "Disabling SSID broadcast hides the network name from casual scans — security through obscurity, not real protection.",
   "objective": "2.6",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1178,13 +1178,13 @@
  {
   "q": "A technician is setting up a SOHO network using 192.168.1.0. What subnet mask should be used for a standard home network?",
   "options": [
-   "Direct incoming internet traffic on a specific port to a specific internal device",
-   "Increase internet speed",
-   "Create a guest wireless network",
-   "Block outgoing traffic"
+   "255.255.255.0 (/24)",
+   "255.255.0.0 (/16)",
+   "255.0.0.0 (/8)",
+   "255.255.255.255 (/32)"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "A standard home network uses 255.255.255.0 (/24), which gives 254 usable host addresses.",
   "objective": "2.6",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1198,7 +1198,7 @@
    "Serial cable"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "SOHO Ethernet uses Cat5e or Cat6 twisted-pair cabling.",
   "objective": "2.6",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1212,7 +1212,7 @@
    "Check ISP status"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "A device on Wi-Fi but with no internet usually has a bad IP configuration — check IP, subnet mask, gateway, and DNS first.",
   "objective": "2.6",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1226,7 +1226,7 @@
    "Translates private internal IPs to a single public IP for internet access"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "NAT translates many private internal IP addresses to one public IP for internet access.",
   "objective": "2.6",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1240,7 +1240,7 @@
    "VLAN configuration"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "Parental/content-filtering controls with time limits restrict a child's access during set hours.",
   "objective": "2.6",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1254,7 +1254,7 @@
    "Assign static IPs"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "QoS prioritizes latency-sensitive traffic like video calls and gaming over bulk traffic.",
   "objective": "2.6",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1268,7 +1268,7 @@
    "A VPN tunnel"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "A VLAN logically separates one physical switch into independent networks.",
   "objective": "2.4",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1282,7 +1282,7 @@
    "Routes traffic from the local network to external networks"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "The default gateway routes traffic from the local network out to other (external) networks.",
   "objective": "2.4",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1290,13 +1290,13 @@
  {
   "q": "A device has IP 192.168.1.50 with subnet mask 255.255.255.0. What is the network address?",
   "options": [
-   "Class A",
-   "Class B",
-   "Class C",
-   "Class D"
+   "192.168.1.0",
+   "192.168.1.1",
+   "192.168.1.255",
+   "192.168.0.0"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "With a /24 mask the host portion zeroes out, so the network address is 192.168.1.0.",
   "objective": "2.4",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1310,7 +1310,7 @@
    "Class B network only"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "A /24 uses 24 network bits and 8 host bits, giving 254 usable host addresses.",
   "objective": "2.4",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1324,7 +1324,7 @@
    "CNAME"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "An A record maps a hostname to an IPv4 address (AAAA is used for IPv6).",
   "objective": "2.4",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1338,7 +1338,7 @@
    "Corrupting DNS cache entries to redirect users to malicious sites"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "DNS cache poisoning corrupts cached entries to redirect users to malicious sites.",
   "objective": "2.4",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1352,7 +1352,7 @@
    "Satellite"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "DSL rides telephone wiring and needs filters to separate voice from data signals.",
   "objective": "2.7",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1366,7 +1366,7 @@
    "PAN"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "A LAN covers a single building or campus.",
   "objective": "2.7",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1380,7 +1380,7 @@
    "Cable"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "Internet access over cell towers is cellular (4G/5G).",
   "objective": "2.7",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1408,7 +1408,7 @@
    "Floors within one building only"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "A WAN links multiple LANs across large geographic distances.",
   "objective": "2.7",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1422,7 +1422,7 @@
    "DSL"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "Powerline Communication (HomePlug) carries network data over a home's electrical wiring.",
   "objective": "2.7",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1436,7 +1436,7 @@
    "SAN"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "A MAN spans a city or large campus — bigger than a LAN, smaller than a WAN.",
   "objective": "2.7",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1450,7 +1450,7 @@
    "Cable"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "Cable internet is shared among neighborhood users, so speeds can drop during peak hours.",
   "objective": "2.7",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1618,7 +1618,7 @@
    "Fiber optic"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "Fiber carries light pulses, so it is immune to electromagnetic interference and spans long distances.",
   "objective": "3.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1632,7 +1632,7 @@
    "LC"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "Cat5e and Cat6 Ethernet cable terminates in an RJ-45 connector.",
   "objective": "3.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1646,7 +1646,7 @@
    "Serial"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "Coaxial cable (a center conductor surrounded by shielding) is used for cable TV and cable internet.",
   "objective": "3.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1660,7 +1660,7 @@
    "FC"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "The LC fiber connector is small with a push-pull latch, common in data-center patch panels.",
   "objective": "3.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1674,7 +1674,7 @@
    "Cat6"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "Cat6 supports 10 Gbps up to about 55 meters (Cat6a extends 10G to 100 m).",
   "objective": "3.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1688,7 +1688,7 @@
    "DVI-A"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "HDMI carries both audio and video over a single cable.",
   "objective": "3.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1702,7 +1702,7 @@
    "Coaxial RG-6"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "Plenum-rated cable (CMP) has a fire-resistant jacket required in HVAC plenum airspace.",
   "objective": "3.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1716,7 +1716,7 @@
    "10 Gbps"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "USB 2.0 (Hi-Speed) tops out at 480 Mbps.",
   "objective": "3.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1884,7 +1884,7 @@
    "One stick in each bank regardless of slot"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "Dual-channel needs a matched pair of modules installed in the correct (usually alternating) slots per the motherboard manual.",
   "objective": "3.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1898,7 +1898,7 @@
    "ECC RAM"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "ECC RAM detects and corrects memory errors and is used primarily in servers.",
   "objective": "3.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1912,7 +1912,7 @@
    "CPU overheating"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "Beep codes right after a RAM install usually mean the module is not fully seated or is incompatible.",
   "objective": "3.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1926,7 +1926,7 @@
    "3200 nanosecond latency"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "'DDR4-3200' means DDR4 memory with a 3200 MT/s transfer rate.",
   "objective": "3.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1934,13 +1934,13 @@
  {
   "q": "Which Windows feature uses hard disk space as an overflow area when physical RAM is full?",
   "options": [
-   "Upgrade the CPU",
-   "Increase the page file size only",
-   "Add more physical RAM",
-   "Replace the hard drive with SSD only"
+   "Virtual memory (the page file, pagefile.sys)",
+   "ReadyBoost",
+   "Disk Cleanup",
+   "Prefetch"
   ],
-  "answer": 2,
-  "explanation": "",
+  "answer": 0,
+  "explanation": "Virtual memory uses the page file (pagefile.sys) on disk as overflow when physical RAM fills up.",
   "objective": "3.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1954,7 +1954,7 @@
    "DIMM (288-pin for DDR4)"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "Desktops use full-size DIMMs (288-pin for DDR4).",
   "objective": "3.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1968,7 +1968,7 @@
    "1.35V operating voltage"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "CAS latency is written as CL16 (or timings like 16-18-18-38); lower is faster.",
   "objective": "3.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -1982,7 +1982,7 @@
    "Format the drive first"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "Before handling RAM, power off and discharge static with an ESD strap or by touching the chassis.",
   "objective": "3.3",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2010,7 +2010,7 @@
    "SSD"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "An SSD has no moving parts and stores data on flash memory chips.",
   "objective": "3.4",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2024,7 +2024,7 @@
    "RAID 10"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "RAID 1 mirrors data across drives for redundancy, with no striping.",
   "objective": "3.4",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2038,7 +2038,7 @@
    "RAID 6"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "RAID 5 stripes data with distributed parity and needs at least 3 drives.",
   "objective": "3.4",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2046,13 +2046,13 @@
  {
   "q": "A user wants maximum storage capacity across two drives with no redundancy. Which RAID level should be used?",
   "options": [
-   "Only NVMe SSDs",
-   "Only SATA SSDs",
-   "A small form factor connector that supports both SATA and NVMe SSDs depending on keying",
-   "A USB storage standard"
+   "RAID 0",
+   "RAID 1",
+   "RAID 5",
+   "RAID 10"
   ],
-  "answer": 2,
-  "explanation": "",
+  "answer": 0,
+  "explanation": "RAID 0 stripes data across both drives for maximum capacity and speed but provides no redundancy.",
   "objective": "3.4",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2066,7 +2066,7 @@
    "HDD"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "A hard drive (HDD) uses spinning magnetic platters and a read/write head.",
   "objective": "3.4",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2080,7 +2080,7 @@
    "15,000 RPM"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "7200 RPM is typical for a performance desktop hard drive.",
   "objective": "3.4",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2094,7 +2094,7 @@
    "It spins faster"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "SSDs are faster mainly because they have no moving parts and use flash for near-instant random access.",
   "objective": "3.4",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2136,7 +2136,7 @@
    "E-ATX"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "ATX is the most common desktop motherboard form factor.",
   "objective": "3.5",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2150,7 +2150,7 @@
    "Prevents corrosion on the CPU die"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "Thermal paste fills microscopic air gaps between the CPU and cooler to improve heat transfer.",
   "objective": "3.5",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2164,7 +2164,7 @@
    "PCIe x8"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "Graphics cards use the PCIe x16 slot.",
   "objective": "3.5",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2178,7 +2178,7 @@
    "Communication between the CPU, RAM, storage, and I/O devices"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "The chipset manages communication between the CPU, RAM, storage, and I/O devices.",
   "objective": "3.5",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2192,7 +2192,7 @@
    "Reinstall the OS"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "A black screen after installing a GPU — first confirm it is fully seated in the x16 slot with all power connectors attached.",
   "objective": "3.5",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2206,7 +2206,7 @@
    "Charges the laptop battery"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "The CMOS battery maintains BIOS/UEFI settings and the real-time clock while the system is powered off.",
   "objective": "3.5",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2220,7 +2220,7 @@
    "SATA throughput"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "Memory bus speed (front-side bus) describes how fast data moves between the CPU and RAM.",
   "objective": "3.5",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2234,7 +2234,7 @@
    "Southbridge or PCH (Platform Controller Hub)"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "The southbridge/PCH handles USB, SATA, audio, and other I/O functions.",
   "objective": "3.5",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2276,7 +2276,7 @@
    "Flex ATX"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "Standard ATX desktop cases use the ATX PSU form factor.",
   "objective": "3.6",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2290,7 +2290,7 @@
    "Insufficient or failing power supply"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "Random shutdowns under heavy load most often come from an insufficient or failing power supply.",
   "objective": "3.6",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2304,7 +2304,7 @@
    "Safety compliance standard"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "80 Plus certifies a PSU is at least 80% efficient under standard load conditions.",
   "objective": "3.6",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2318,7 +2318,7 @@
    "8-pin EPS CPU connector"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "The 24-pin ATX main connector supplies primary power to the motherboard.",
   "objective": "3.6",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2332,7 +2332,7 @@
    "24-pin ATX"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "A 6- or 8-pin PCIe power connector feeds supplemental power to high-end graphics cards.",
   "objective": "3.6",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2346,7 +2346,7 @@
    "Adequate wattage with approximately 20-30% headroom above calculated load"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "Pick a PSU with enough wattage plus about 20-30% headroom above the calculated load.",
   "objective": "3.6",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2374,7 +2374,7 @@
    "Provides CMOS battery backup"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "The 4/8-pin EPS12V connector delivers dedicated 12V power to the CPU's voltage regulator modules.",
   "objective": "3.6",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2388,7 +2388,7 @@
    "Back up all data on the drives"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "Before replacing a PSU, unplug the AC cord and press the power button to discharge the capacitors.",
   "objective": "3.6",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2402,7 +2402,7 @@
    "How the 12V output power is distributed — single rail has one large 12V output vs. multiple smaller rails"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "Single- vs multi-rail describes whether the 12V output is one large rail or several smaller ones.",
   "objective": "3.6",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2416,7 +2416,7 @@
    "Thermal"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "A laser printer uses a laser to draw an electrostatic image on a drum, then applies toner to it.",
   "objective": "3.7",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2430,7 +2430,7 @@
    "Corona wire"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "The transfer roller/belt moves the toner image from the drum onto the paper.",
   "objective": "3.7",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2444,7 +2444,7 @@
    "Transferring"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "The exposing (writing) step uses the laser to draw the image on the photosensitive drum.",
   "objective": "3.7",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2472,7 +2472,7 @@
    "SNMP"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "WSD (or Bonjour) lets Windows automatically discover and install network printers.",
   "objective": "3.7",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2486,7 +2486,7 @@
    "Inkjet"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "Impact (dot matrix) printers physically strike the paper, so they can print multipart carbon forms.",
   "objective": "3.7",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2500,7 +2500,7 @@
    "Provides wireless encryption for print jobs"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "A DHCP reservation keeps the printer on the same IP address so clients always find it.",
   "objective": "3.7",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2514,7 +2514,7 @@
    "Verify the printer IP address has not changed and the correct port is configured"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "A printer 'offline' but powered on — first verify its IP has not changed and the correct port is configured.",
   "objective": "3.7",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2528,7 +2528,7 @@
    "Bluetooth printing"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "Cloud printing services let any device print to a compatible printer over the internet without local drivers.",
   "objective": "3.7",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2556,7 +2556,7 @@
    "Transfer belt"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "The toner cartridge is the most frequently replaced laser-printer consumable.",
   "objective": "3.8",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2570,7 +2570,7 @@
    "Charge, Expose, Develop, Transfer, Fuse, Clean"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "The laser printing process is Charge, Expose, Develop, Transfer, Fuse, Clean.",
   "objective": "3.8",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2598,7 +2598,7 @@
    "Thermal"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "Impact (dot matrix) printers use a ribbon and pins that strike the paper to form characters.",
   "objective": "3.8",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2612,7 +2612,7 @@
    "Reset the NVRAM"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "After installing new inkjet cartridges, calibrate the printer and run a printhead cleaning cycle.",
   "objective": "3.8",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2626,7 +2626,7 @@
    "Paper loaded backward with the non-coated side facing the printhead"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "Blank thermal receipts usually mean the paper is loaded backward, with the coated (heat-sensitive) side facing away from the head.",
   "objective": "3.8",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2640,7 +2640,7 @@
    "No protection is needed"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "Wear nitrile or latex gloves and a dust mask when handling laser toner.",
   "objective": "3.8",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2654,7 +2654,7 @@
    "Rinse with water and discard"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "Dispose of used toner through manufacturer recycling or designated e-waste centers, not the regular trash.",
   "objective": "3.8",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2696,7 +2696,7 @@
    "Update BIOS"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "If a different USB port does not help, check Device Manager for driver issues or an unrecognized device.",
   "objective": "3.8",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2710,7 +2710,7 @@
    "Brightness"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "Resolution sets how many pixels are displayed horizontally and vertically.",
   "objective": "3.8",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2724,7 +2724,7 @@
    "GPU driver version"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "A duplicated second monitor is fixed by switching the display mode from Duplicate to Extend.",
   "objective": "3.8",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2732,13 +2732,13 @@
  {
   "q": "What is the standard refresh rate for most consumer monitors?",
   "options": [
-   "Replace the monitor",
-   "Update BIOS",
-   "Reinstall the OS",
-   "Recalibrate the touchscreen through system settings"
+   "60 Hz",
+   "120 Hz",
+   "24 Hz",
+   "240 Hz"
   ],
-  "answer": 3,
-  "explanation": "",
+  "answer": 0,
+  "explanation": "Most consumer monitors run at a standard 60 Hz refresh rate.",
   "objective": "3.8",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2752,7 +2752,7 @@
    "Drum scanner"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "A flatbed scanner passes a light source over the document and reads the reflected light.",
   "objective": "3.8",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2766,7 +2766,7 @@
    "Digitizer tablet"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "A scanner converts physical documents or drawings into digital files.",
   "objective": "3.8",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2780,7 +2780,7 @@
    "Manage inventory databases directly"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "A barcode reader scans and decodes barcode data for point-of-sale systems.",
   "objective": "3.8",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2794,7 +2794,7 @@
    "IaaS"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "IaaS provides virtualized compute (VMs, storage, networking) delivered over the internet.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2808,7 +2808,7 @@
    "Hybrid cloud"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "A private cloud is used exclusively by a single organization.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2822,7 +2822,7 @@
    "Multi-cloud"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "Using on-premises infrastructure together with a public cloud is a hybrid cloud.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2836,7 +2836,7 @@
    "Data center geographic redundancy"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "Elasticity is automatically scaling resources up or down based on current demand.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2850,7 +2850,7 @@
    "On-demand self-service"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "On-demand self-service lets users provision resources themselves, without provider interaction.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2864,7 +2864,7 @@
    "Better security than all local storage options"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "Cloud file storage lets you reach files from any device, with automatic backup and synchronization.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2878,7 +2878,7 @@
    "FaaS"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "PaaS provides a ready development platform — OS, middleware, and runtime — to build applications on.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2892,7 +2892,7 @@
    "Multiple administrators managing one cloud account"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "Multi-tenancy means multiple customers share the same physical infrastructure, kept logically separate.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2906,7 +2906,7 @@
    "Broad network access"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "Broad network access means the service is reachable from any device and location over the network.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2920,7 +2920,7 @@
    "Limited storage capacity"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "The main concern is data privacy, compliance requirements, and shared-infrastructure security risk.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2934,7 +2934,7 @@
    "AWS Lambda"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "Microsoft 365 and Google Workspace are SaaS — ready-to-use applications delivered over the web.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2948,7 +2948,7 @@
    "Cloud storage backup"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "A CDN caches content on servers geographically closer to users to reduce latency.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2962,7 +2962,7 @@
    "Automatically offloading excess workloads to the public cloud when on-premises capacity is exceeded"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "Cloud bursting offloads overflow workloads to the public cloud when on-premises capacity is exceeded.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2976,7 +2976,7 @@
    "On-demand self-service"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "Measured service meters resource usage for billing and auditing.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -2990,7 +2990,7 @@
    "Private cloud"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "Moving email to Microsoft 365 is consuming a finished application, which is SaaS.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3004,7 +3004,7 @@
    "Provide CDN services"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "A CASB enforces security policies between cloud users and cloud service providers.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3018,7 +3018,7 @@
    "Cloud migration"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "Cloud migration is the process of moving applications and data from on-premises to the cloud.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3032,7 +3032,7 @@
    "DNS delivered as a service"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "DaaS (Desktop as a Service) delivers cloud-hosted virtual desktops that users access remotely.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3046,7 +3046,7 @@
    "Private cloud"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "A business that wants software with no servers or platforms to manage should use SaaS.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3060,7 +3060,7 @@
    "Full unrestricted database access"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "With a managed database service the provider handles patching, backups, scaling, and availability.",
   "objective": "4.2",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3074,7 +3074,7 @@
    "Hypervisor"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "A hypervisor is the software layer that lets multiple VMs run on one physical host.",
   "objective": "4.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3088,7 +3088,7 @@
    "Citrix XenServer"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "VMware Workstation is a Type 2 (hosted) hypervisor that runs on top of a normal host OS.",
   "objective": "4.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3102,7 +3102,7 @@
    "Cloud backup location"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "A sandbox is an isolated VM for testing software safely without affecting the host.",
   "objective": "4.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3116,7 +3116,7 @@
    "XMP memory profile"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "Hardware virtualization (Intel VT-x or AMD-V) must be enabled in BIOS/UEFI to run VMs.",
   "objective": "4.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3130,7 +3130,7 @@
    "Provides isolated environments that can be rolled back or discarded after testing"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "VMs give isolated environments that can be rolled back or discarded after testing.",
   "objective": "4.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3144,7 +3144,7 @@
    "RAID storage array"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "A VM host needs enough RAM, CPU cores, and storage to run the host plus all guests at once.",
   "objective": "4.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3158,7 +3158,7 @@
    "Windows Sandbox only"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "Hyper-V is the hypervisor built into Windows 10/11 Pro and later.",
   "objective": "4.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3172,7 +3172,7 @@
    "External network speed"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "Too little RAM allocated to a VM is the most common cause of poor VM performance.",
   "objective": "4.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3186,7 +3186,7 @@
    "The operating system running inside the virtual machine"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "The guest OS is the operating system running inside the virtual machine.",
   "objective": "4.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3200,7 +3200,7 @@
    "Prevents the VM from accessing any network"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "Bridged networking makes the VM appear as a separate device on the physical network with its own IP.",
   "objective": "4.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3214,7 +3214,7 @@
    "Use a separate partition on the same drive"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "Test malware in an isolated VM with no network access so it cannot spread.",
   "objective": "4.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3228,7 +3228,7 @@
    "VM cloning"
   ],
   "answer": 2,
-  "explanation": "",
+  "explanation": "Disk/device passthrough gives a VM direct access to physical hardware, bypassing the hypervisor storage layer.",
   "objective": "4.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3242,7 +3242,7 @@
    "Creates an identical copy of a VM for rapid deployment or testing"
   ],
   "answer": 3,
-  "explanation": "",
+  "explanation": "VM cloning makes an identical copy of a VM for rapid deployment or testing.",
   "objective": "4.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3256,7 +3256,7 @@
    "Limits VM network bandwidth"
   ],
   "answer": 0,
-  "explanation": "",
+  "explanation": "CPU affinity pins specific physical CPU cores to a VM for dedicated processing.",
   "objective": "4.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
@@ -3270,7 +3270,7 @@
    "Windows Sandbox"
   ],
   "answer": 1,
-  "explanation": "",
+  "explanation": "VMware Workstation is the tool used to manage VMware virtual machines on a desktop.",
   "objective": "4.1",
   "chapter": 1,
   "chapter_title": "IT Foundations & Troubleshooting Methodology"
