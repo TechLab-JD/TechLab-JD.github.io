@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Lab404 Study Hub — free learning for every subject</title>
+  <meta name="description" content="Lab404 Study Hub is a free, private, offline study hub for K-12 through college: lessons, flashcards and practice across 20+ subjects plus CompTIA & SAT/ACT prep. No accounts, no ads. A plain overview of what it is and how it works.">
+  <link rel="canonical" href="https://techlab-jd.github.io/lab404/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lab404 Study Hub">
+  <meta property="og:title" content="About Lab404 Study Hub — free learning for every subject">
+  <meta property="og:description" content="Free, private, offline study hub for K-12 through college: lessons, flashcards and practice across 20+ subjects. No accounts, no ads.">
+  <meta property="og:url" content="https://techlab-jd.github.io/lab404/about.html">
+  <meta property="og:image" content="https://techlab-jd.github.io/lab404/icons/icon-192.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="About Lab404 Study Hub">
+  <meta name="twitter:description" content="A free, private, offline study hub for K-12 through college. No accounts, no ads.">
+  <meta name="twitter:image" content="https://techlab-jd.github.io/lab404/icons/icon-192.png">
+  <meta name="theme-color" content="#0a0e17">
+  <link rel="icon" href="icons/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none';">
+  <style>
+    :root{
+      --bg:#0a0e17; --surface:#111726; --surface-2:#161d2e; --border:#243049;
+      --text:#e6edf6; --muted:#9fb0c8; --faint:#6b7a94;
+      --accent:#39e3c8; --accent2:#5aa9ff; --radius:14px;
+      --maxw:980px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.6; -webkit-font-smoothing:antialiased;
+    }
+    a{color:var(--accent)}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+    .btn{
+      display:inline-block; border-radius:11px; padding:13px 22px; font-weight:700;
+      text-decoration:none; font-size:1rem; border:1px solid transparent; cursor:pointer;
+    }
+    .btn-primary{background:var(--accent); color:#04231f; border-color:var(--accent)}
+    .btn-primary:hover{filter:brightness(1.08)}
+    .btn-ghost{background:transparent; color:var(--text); border-color:var(--border)}
+    .btn-ghost:hover{border-color:var(--accent)}
+
+    /* ── Hero ── */
+    header.hero{
+      padding:70px 0 54px; text-align:center;
+      background:
+        radial-gradient(1100px 420px at 50% -120px, rgba(57,227,200,.16), transparent 70%),
+        radial-gradient(900px 380px at 80% 0, rgba(90,169,255,.12), transparent 70%);
+      border-bottom:1px solid var(--border);
+    }
+    .badge{
+      display:inline-block; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--accent); border:1px solid var(--border); border-radius:999px;
+      padding:5px 14px; margin-bottom:20px; background:var(--surface);
+    }
+    .hero h1{font-size:clamp(2rem,6vw,3.3rem); line-height:1.1; margin:0 0 14px; letter-spacing:-.02em}
+    .hero h1 .mark{color:var(--accent)}
+    .hero p.lead{font-size:clamp(1.05rem,2.6vw,1.3rem); color:var(--muted); max-width:640px; margin:0 auto 28px}
+    .cta-row{display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
+    .cta-note{margin-top:16px; font-size:.82rem; color:var(--faint)}
+
+    section{padding:52px 0; border-bottom:1px solid var(--border)}
+    section h2{font-size:clamp(1.4rem,3.4vw,1.9rem); margin:0 0 6px; letter-spacing:-.01em; text-align:center}
+    section .sub{text-align:center; color:var(--muted); max-width:620px; margin:0 auto 34px}
+
+    /* ── At a glance ── */
+    .glance{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:16px}
+    .gcard{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:20px}
+    .gcard .ic{font-size:1.6rem; display:block; margin-bottom:8px}
+    .gcard h3{margin:0 0 5px; font-size:1.04rem}
+    .gcard p{margin:0; color:var(--muted); font-size:.9rem}
+
+    /* ── Subjects ── */
+    .subjects{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:12px}
+    .subj{
+      display:flex; gap:12px; align-items:flex-start; background:var(--surface);
+      border:1px solid var(--border); border-radius:12px; padding:14px 15px;
+    }
+    .subj .ic{font-size:1.5rem; line-height:1; flex:none}
+    .subj h4{margin:0 0 2px; font-size:.96rem}
+    .subj p{margin:0; color:var(--faint); font-size:.8rem; line-height:1.45}
+
+    /* ── How it works ── */
+    .steps{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; counter-reset:step}
+    .step{position:relative; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:22px 20px 20px}
+    .step::before{
+      counter-increment:step; content:counter(step);
+      display:flex; align-items:center; justify-content:center;
+      width:34px; height:34px; border-radius:50%; background:var(--accent); color:#04231f;
+      font-weight:800; margin-bottom:12px;
+    }
+    .step h3{margin:0 0 6px; font-size:1.08rem}
+    .step p{margin:0; color:var(--muted); font-size:.92rem}
+
+    /* ── Families ── */
+    .fam{background:var(--surface-2); border:1px solid var(--border); border-radius:var(--radius); padding:28px; max-width:760px; margin:0 auto}
+    .fam h2{text-align:left; margin-bottom:10px}
+    .fam ul{margin:0 0 20px; padding-left:20px; color:var(--muted)}
+    .fam li{margin-bottom:7px}
+    .fam .cta-row{justify-content:flex-start}
+
+    footer{padding:40px 0 56px; text-align:center; color:var(--faint); font-size:.82rem}
+    footer p{max-width:620px; margin:0 auto 10px}
+    footer a{color:var(--muted)}
+
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap">
+      <span class="badge">Free · Private · Offline</span>
+      <h1><span class="mark">Lab404</span> Study Hub</h1>
+      <p class="lead">Free learning for every subject, K&ndash;12 through college. Lessons, flashcards and practice that track what you&rsquo;ve mastered &mdash; no accounts, no ads, works offline.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="./">Open the Study Hub &rarr;</a>
+        <a class="btn btn-ghost" href="#subjects">See the subjects</a>
+      </div>
+      <p class="cta-note">Nothing to install. Nothing to sign up for. Opens in any browser.</p>
+    </div>
+  </header>
+
+  <section id="glance">
+    <div class="wrap">
+      <h2>What it is, at a glance</h2>
+      <p class="sub">A single place to learn and practice any subject &mdash; built so a kid, a parent, a teacher, or an adult going back to study can all just open it and start.</p>
+      <div class="glance">
+        <div class="gcard"><span class="ic">🎓</span><h3>K&ndash;12 to college</h3><p>Lessons organized by grade band, from early elementary through college and certification prep.</p></div>
+        <div class="gcard"><span class="ic">🧠</span><h3>It tracks mastery</h3><p>Every topic shows what you&rsquo;re strong on and what needs review, with spaced practice that brings back what you&rsquo;re about to forget.</p></div>
+        <div class="gcard"><span class="ic">🔒</span><h3>Private by design</h3><p>Your progress stays on your device. No account, no login, no tracking, no ads &mdash; ever.</p></div>
+        <div class="gcard"><span class="ic">📶</span><h3>Works offline</h3><p>Install it like an app and keep studying with no connection &mdash; good for spotty Wi-Fi or a shared device.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="subjects">
+    <div class="wrap">
+      <h2>20+ subjects, one hub</h2>
+      <p class="sub">Core academics plus the practical things school tends to skip &mdash; and the CompTIA certification tracks that started it all.</p>
+      <div class="subjects">
+        <div class="subj"><span class="ic">🖥️</span><div><h4>CompTIA Certifications</h4><p>A+ (Core 1 &amp; 2) and Security+ prep with original practice questions.</p></div></div>
+        <div class="subj"><span class="ic">🔢</span><div><h4>Mathematics</h4><p>Counting to calculus &mdash; arithmetic, algebra, geometry &amp; statistics.</p></div></div>
+        <div class="subj"><span class="ic">🔬</span><div><h4>Science</h4><p>Biology, chemistry, physics &amp; earth science.</p></div></div>
+        <div class="subj"><span class="ic">📖</span><div><h4>English &amp; Language Arts</h4><p>Grammar, vocabulary, reading &amp; literature.</p></div></div>
+        <div class="subj"><span class="ic">🏛️</span><div><h4>Social Studies</h4><p>History, civics, geography &amp; economics.</p></div></div>
+        <div class="subj"><span class="ic">💻</span><div><h4>Computer Science &amp; Coding</h4><p>How computers think, plus Python and the web.</p></div></div>
+        <div class="subj"><span class="ic">🌍</span><div><h4>World Languages</h4><p>Speak, read and understand another language.</p></div></div>
+        <div class="subj"><span class="ic">✍️</span><div><h4>Writing &amp; Journalism</h4><p>Stories, essays, journalism &amp; copy.</p></div></div>
+        <div class="subj"><span class="ic">🎨</span><div><h4>Arts &amp; Music</h4><p>Drawing, painting, music &amp; photography.</p></div></div>
+        <div class="subj"><span class="ic">🧠</span><div><h4>Psychology &amp; Philosophy</h4><p>How people think &mdash; psychology, logic &amp; ethics.</p></div></div>
+        <div class="subj"><span class="ic">🩺</span><div><h4>Health &amp; Medicine</h4><p>First aid, anatomy, nutrition &amp; more.</p></div></div>
+        <div class="subj"><span class="ic">💪</span><div><h4>Fitness &amp; Wellness</h4><p>Training, recovery &amp; managing stress.</p></div></div>
+        <div class="subj"><span class="ic">💵</span><div><h4>Money &amp; Investing</h4><p>Budgeting, debt, banking, investing &amp; tax.</p></div></div>
+        <div class="subj"><span class="ic">📈</span><div><h4>Business &amp; Entrepreneurship</h4><p>Marketing, money, management &amp; sales.</p></div></div>
+        <div class="subj"><span class="ic">⚖️</span><div><h4>Law &amp; Your Rights</h4><p>Contracts, tenant &amp; consumer law, small claims.</p></div></div>
+        <div class="subj"><span class="ic">🧭</span><div><h4>Life Skills &amp; Finance</h4><p>The practical stuff &mdash; money, work &amp; everyday know-how.</p></div></div>
+        <div class="subj"><span class="ic">🍳</span><div><h4>Cooking &amp; Nutrition</h4><p>Techniques, recipes, baking &amp; food safety.</p></div></div>
+        <div class="subj"><span class="ic">🔧</span><div><h4>Home &amp; Auto Repair</h4><p>Home repairs, tools, plumbing, electrical &amp; cars.</p></div></div>
+        <div class="subj"><span class="ic">🏕️</span><div><h4>Survival &amp; Preparedness</h4><p>Outdoor and emergency skills &mdash; be ready for anything.</p></div></div>
+        <div class="subj"><span class="ic">🌱</span><div><h4>Gardening &amp; Homesteading</h4><p>Gardens, vegetables, herbs, compost &amp; preserving.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="sub">Pick a subject, learn the idea, then prove it &mdash; the hub keeps score so you always know what to study next.</p>
+      <div class="steps">
+        <div class="step"><h3>Learn the concept</h3><p>Each lesson explains the idea in plain language with worked examples and diagrams &mdash; no jargon walls.</p></div>
+        <div class="step"><h3>Practice &amp; check</h3><p>Answer questions, get step-by-step solutions when you miss, and write in the open-response practice.</p></div>
+        <div class="step"><h3>Track mastery</h3><p>A simple grade shows what&rsquo;s mastered and what&rsquo;s weak, and spaced review brings topics back right before you&rsquo;d forget them.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="families">
+    <div class="wrap">
+      <div class="fam">
+        <h2>For parents &amp; teachers</h2>
+        <p style="color:var(--muted); margin-top:0">You don&rsquo;t need an account or a dashboard login. A few built-in tools make it easy to point a child or a class in the right direction:</p>
+        <ul>
+          <li><strong>Browse by grade</strong> &mdash; jump straight to what fits a learner&rsquo;s level.</li>
+          <li><strong>Weekly plans &amp; printables</strong> &mdash; a ready-to-go Mon&ndash;Fri plan and printable practice.</li>
+          <li><strong>Assignments</strong> &mdash; share a link that opens a specific set of practice; see who finished.</li>
+          <li><strong>A class view</strong> &mdash; a simple heat-map of strengths and gaps across subjects.</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="./?go=app&amp;id=forfamilies">Open the For Parents &amp; Teachers guide</a>
+          <a class="btn btn-ghost" href="./?go=bygrade">Browse by grade</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p><strong>Lab404 Study Hub</strong> &mdash; a free, independent learning project. All lessons and practice questions are original.</p>
+      <p style="margin-top:16px"><a href="./">Open the Study Hub &rarr;</a></p>
+    </div>
+  <div class="lab404-disclaimer" style="max-width:900px;margin:18px auto 8px;padding:0 20px;font-size:12px;line-height:1.5;color:var(--text-muted,#9090bb);text-align:center">Free, independent study material from the Lab404 series by <a href="https://techlab-jd.github.io" style="color:inherit">Jordan Dorman</a>. All practice questions are original and written for study; they are not real exam questions. Not affiliated with or endorsed by CompTIA. CompTIA, A+ and Security+ are trademarks of CompTIA, Inc.</div>
+</footer>
+
+</body>
+</html>
