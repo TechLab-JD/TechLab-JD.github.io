@@ -874,8 +874,13 @@
           ".mp-empty{color:var(--text-muted,#9aa);font-size:.82rem;padding:8px 0 4px;line-height:1.6}" +
           ".mp-links{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}" +
           ".mp-link{flex:1;min-width:130px;border:1px solid var(--border,#334);border-radius:10px;padding:10px;text-align:center;cursor:pointer;background:transparent;color:var(--text);font-family:inherit;font-size:.8rem;font-weight:700}" +
-          ".mp-link:hover{background:rgba(0,255,204,.08);border-color:rgba(0,255,204,.3)}";
+          ".mp-link:hover{background:rgba(0,255,204,.08);border-color:rgba(0,255,204,.3)}" +
+          "#mp-print{display:none}" +
+          "@media print{body.mp-printing>*:not(#mp-print){display:none!important}body.mp-printing #mp-print{display:block!important}@page{margin:14mm}}";
         document.head.appendChild(st);
+      }
+      if (!document.getElementById("mp-print")) {
+        var pdiv = document.createElement("div"); pdiv.id = "mp-print"; document.body.appendChild(pdiv);
       }
 
       var pct = li.span ? Math.max(0, Math.min(100, Math.round(li.into / li.span * 100))) : 0;
@@ -905,6 +910,7 @@
           '<div class="mp-links">' +
             '<button class="mp-link" data-open="bygrade">🎓 Browse by Grade</button>' +
             '<button class="mp-link" data-open="transcript">📋 Report Card</button>' +
+            '<button class="mp-link" data-print="1">🖨 Print progress sheet</button>' +
           '</div>' +
         '</div>';
 
@@ -913,6 +919,56 @@
       });
       content.querySelectorAll(".mp-link[data-open]").forEach(function (b) {
         b.addEventListener("click", function () { Desktop.openWindow(this.getAttribute("data-open")); });
+      });
+
+      /* ── C1: printable progress sheet (local data only, nothing uploaded) ── */
+      function buildSheet() {
+        var grade = ""; try { grade = localStorage.getItem("lab404.myGrade") || ""; } catch (e) {}
+        var gLbl = grade === "K" ? "Kindergarten" : grade === "C" ? "College" : grade ? "Grade " + grade : "";
+        var dateStr = new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+        var started = [];
+        if (M && M.readiness) Object.keys(COURSES).forEach(function (id) {
+          var r = M.readiness(id); if (r && r.started) {
+            started.push({ t: COURSES[id].title, m: r.mastered, tot: r.total, p: r.total ? Math.round(r.mastered / r.total * 100) : 0 });
+          }
+        });
+        var weak = [];
+        Object.keys(C).forEach(function (k) { var e = prog[k]; if (e && e.attempts && (e.best || 0) < 0.85) weak.push({ t: C[k].title, best: Math.round((e.best || 0) * 100) }); });
+        function sec(t) { return '<h2 style="font-size:14px;color:#2b5fa6;border-bottom:2px solid #4a90e2;padding-bottom:3px;margin:16px 0 7px">' + t + '</h2>'; }
+        function row(a, b) { return '<div style="display:flex;justify-content:space-between;font-size:12.5px;padding:3px 0;border-bottom:1px solid #eee"><span>' + a + '</span><span style="color:#555;text-align:right">' + b + '</span></div>'; }
+        return '<div style="font-family:Arial,Helvetica,sans-serif;color:#111;max-width:680px;margin:0 auto;padding:6px">' +
+          '<div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid #4a90e2;padding-bottom:8px">' +
+            '<div><div style="font-size:22px;font-weight:800;color:#2b5fa6">Study Progress Report</div>' +
+            '<div style="font-size:12px;color:#666">Lab404 Study Hub' + (gLbl ? ' &middot; ' + gLbl : '') + '</div></div>' +
+            '<div style="font-size:12px;color:#666">' + dateStr + '</div></div>' +
+          sec('Overview') +
+            row('Level', escHtml(li.tag) + ' (' + li.xp + ' XP)') +
+            (streak > 0 ? row('Study streak', streak + ' days') : '') +
+            row('Topics explored', topicExplored + ' of ' + topicTotal) +
+            row('Topics mastered (85%+)', String(topicMastered)) +
+            row('Course objectives mastered', objMastered + ' of ' + objTot) +
+            row('Courses started', String(startedN)) +
+          sec('Courses in progress') +
+            (started.length ? started.map(function (c) { return row(escHtml(c.t), c.m + '/' + c.tot + ' objectives &middot; ' + c.p + '%'); }).join('')
+                            : '<div style="font-size:12px;color:#777">No mastery courses started yet.</div>') +
+          sec('Focus next') +
+            ((reviewCourses.length || weak.length)
+              ? (reviewCourses.map(function (rc) { return row('Review: ' + escHtml(rc.title), rc.n + ' objective' + (rc.n > 1 ? 's' : '') + ' due'); }).join('') +
+                 weak.slice(0, 12).map(function (w) { return row('Practice: ' + escHtml(w.t), 'best ' + w.best + '%'); }).join(''))
+              : '<div style="font-size:12px;color:#777">All caught up. &#127881;</div>') +
+          '<p style="font-size:10px;color:#999;margin-top:22px">Generated on this device from the learner’s saved progress &mdash; nothing was uploaded. Lab404 Study Hub.</p>' +
+        '</div>';
+      }
+      var printBtn = content.querySelector('.mp-link[data-print]');
+      if (printBtn) printBtn.addEventListener("click", function () {
+        var box = document.getElementById("mp-print"); if (!box) return;
+        box.innerHTML = buildSheet();
+        document.body.classList.add("mp-printing");
+        if (!Desktop._mpAfterPrint) {
+          Desktop._mpAfterPrint = true;
+          window.addEventListener("afterprint", function () { document.body.classList.remove("mp-printing"); });
+        }
+        window.print();
       });
     },
 
