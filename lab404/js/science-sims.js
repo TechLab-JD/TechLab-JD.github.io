@@ -251,15 +251,109 @@
     requestAnimationFrame(frame);
   }
 
+  /* ─────────────────────── Forces (F = m·a) ─────────────────────── */
+  function forces(stage) {
+    var W = 620, H = 220;
+    stage.innerHTML =
+      '<div class="sim-stage"><canvas class="sim-canvas" id="sim-fc" width="' + W + '" height="' + H + '"></canvas></div>' +
+      '<div class="sim-ctrls">' +
+        '<div class="sim-ctrl"><label>Push force <b><span id="fo-f">10</span> N</b></label><input type="range" id="fo-force" min="0" max="20" value="10"></div>' +
+        '<div class="sim-ctrl"><label>Mass of box <b><span id="fo-m">2</span> kg</b></label><input type="range" id="fo-mass" min="1" max="10" value="2"></div>' +
+      '</div>' +
+      '<div class="sim-row"><span class="sim-seg"><button id="fo-fric" aria-pressed="false">Friction: off</button></span>' +
+        '<button class="sim-btn ghost" id="fo-reset">↺ Reset box</button></div>' +
+      '<div class="sim-read">' +
+        '<div class="r"><div class="k">Force F</div><div class="v"><span id="fo-rf">10</span> N</div></div>' +
+        '<div class="r"><div class="k">Mass m</div><div class="v"><span id="fo-rm">2</span> kg</div></div>' +
+        '<div class="r"><div class="k">Acceleration a = F/m</div><div class="v"><span id="fo-ra">5.0</span> m/s²</div></div>' +
+      '</div>' +
+      '<div class="sim-eq" id="fo-eq"></div>' +
+      '<div class="sim-note">Newton’s second law: <b>a = F / m</b>. The same push accelerates a light box more than a heavy one. Friction pushes back, so it lowers the net force — and if the push is smaller than friction, the box doesn’t move at all.</div>';
+    var cv = stage.querySelector("#sim-fc"), ctx = cv.getContext("2d");
+    var F = 10, m = 2, fric = false, x = 60, v = 0, lastT = 0;
+    var accent = getComputedStyle(document.documentElement).getPropertyValue("--accent2").trim() || "#5aa9ff";
+    function netForce() { var f = fric ? 4 : 0; return Math.max(0, F) - (v > 0.01 || F > f ? f : 0); }
+    function readouts() {
+      var a = (F - (fric ? 4 : 0)) / m, aEff = Math.max(0, a);
+      stage.querySelector("#fo-rf").textContent = F;
+      stage.querySelector("#fo-rm").textContent = m;
+      stage.querySelector("#fo-ra").textContent = aEff.toFixed(1);
+      stage.querySelector("#fo-eq").innerHTML = "a = " + (fric ? "(" + F + " − 4) N" : F + " N") + " / " + m + " kg = <b>" + aEff.toFixed(1) + " m/s²</b>" + (a <= 0 ? " — too little force to overcome friction" : "");
+    }
+    function frame(ts) {
+      if (!document.body.contains(cv)) return;
+      var dt = lastT ? Math.min(0.05, (ts - lastT) / 1000) : 0; lastT = ts;
+      var a = netForce() / m;
+      v += a * dt * 40; v *= 0.999; x += v * dt;
+      if (x > W - 56) { x = W - 56; v = 0; } if (x < 60) { x = 60; v = 0; }
+      ctx.clearRect(0, 0, W, H);
+      ctx.strokeStyle = "rgba(127,140,170,.3)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(0, H - 40); ctx.lineTo(W, H - 40); ctx.stroke();
+      if (fric) { ctx.fillStyle = "rgba(230,159,0,.25)"; for (var i = 0; i < W; i += 14) ctx.fillRect(i, H - 40, 7, 6); }
+      var sz = 26 + m * 3;
+      ctx.fillStyle = accent; ctx.fillRect(x, H - 40 - sz, sz, sz);
+      ctx.fillStyle = "#04231f"; ctx.font = "bold 12px system-ui"; ctx.fillText(m + "kg", x + 4, H - 40 - sz / 2 + 4);
+      if (F > 0) { ctx.strokeStyle = "#e0603a"; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(x - 4, H - 40 - sz / 2); ctx.lineTo(x - 4 - F * 1.5, H - 40 - sz / 2); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(x - 4, H - 40 - sz / 2); ctx.lineTo(x - 10, H - 44 - sz / 2); ctx.lineTo(x - 10, H - 36 - sz / 2); ctx.closePath(); ctx.fillStyle = "#e0603a"; ctx.fill(); }
+      requestAnimationFrame(frame);
+    }
+    stage.querySelector("#fo-force").addEventListener("input", function () { F = +this.value; stage.querySelector("#fo-f").textContent = F; readouts(); });
+    stage.querySelector("#fo-mass").addEventListener("input", function () { m = +this.value; stage.querySelector("#fo-m").textContent = m; readouts(); });
+    stage.querySelector("#fo-fric").addEventListener("click", function () { fric = !fric; this.setAttribute("aria-pressed", fric ? "true" : "false"); this.textContent = "Friction: " + (fric ? "on" : "off"); readouts(); });
+    stage.querySelector("#fo-reset").addEventListener("click", function () { x = 60; v = 0; });
+    readouts(); requestAnimationFrame(frame);
+  }
+
+  /* ─────────────────────── Solar system ─────────────────────── */
+  function solar(stage) {
+    var W = 620, H = 300;
+    stage.innerHTML =
+      '<div class="sim-stage"><canvas class="sim-canvas" id="sim-sc" width="' + W + '" height="' + H + '"></canvas></div>' +
+      '<div class="sim-ctrls"><div class="sim-ctrl"><label>Speed <b><span id="so-sv">1.0</span>×</b></label><input type="range" id="so-speed" min="0" max="40" value="10"></div></div>' +
+      '<div class="sim-row"><span class="sim-seg"><button id="so-orbits" aria-pressed="true">Orbit paths: on</button></span></div>' +
+      '<div class="sim-note">Planets closer to the Sun travel a shorter path <b>and</b> move faster, so they finish a “year” much sooner. Mercury rounds the Sun in 88 days; Neptune takes 165 Earth-years. Watch the inner planets lap the outer ones.</div>';
+    var cv = stage.querySelector("#sim-sc"), ctx = cv.getContext("2d");
+    var cx = W / 2, cy = H / 2, speed = 1, showOrbits = true, lastT = 0;
+    /* name, orbit radius (px), relative angular speed, colour, size */
+    var planets = [
+      { n: "Mercury", r: 42, w: 1.6, c: "#b7a08a", s: 3 },
+      { n: "Venus", r: 66, w: 1.15, c: "#e0b25a", s: 5 },
+      { n: "Earth", r: 92, w: 1.0, c: "#5aa9ff", s: 5 },
+      { n: "Mars", r: 118, w: 0.8, c: "#d1603a", s: 4 },
+      { n: "Jupiter", r: 158, w: 0.44, c: "#d9a66b", s: 11 },
+      { n: "Saturn", r: 196, w: 0.32, c: "#e6cf94", s: 9 },
+      { n: "Neptune", r: 230, w: 0.18, c: "#4a7fe0", s: 7 }
+    ];
+    var ang = planets.map(function () { return Math.random() * Math.PI * 2; });
+    function frame(ts) {
+      if (!document.body.contains(cv)) return;
+      var dt = lastT ? (ts - lastT) / 1000 : 0; lastT = ts;
+      ctx.clearRect(0, 0, W, H);
+      if (showOrbits) { ctx.strokeStyle = "rgba(127,140,170,.18)"; ctx.lineWidth = 1; planets.forEach(function (p) { ctx.beginPath(); ctx.arc(cx, cy, p.r, 0, Math.PI * 2); ctx.stroke(); }); }
+      var g = ctx.createRadialGradient(cx, cy, 2, cx, cy, 16); g.addColorStop(0, "#ffe680"); g.addColorStop(1, "#e8a33c");
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, 13, 0, Math.PI * 2); ctx.fill();
+      planets.forEach(function (p, i) {
+        ang[i] += p.w * speed * dt * 0.6;
+        var px = cx + Math.cos(ang[i]) * p.r, py = cy + Math.sin(ang[i]) * p.r;
+        ctx.fillStyle = p.c; ctx.beginPath(); ctx.arc(px, py, p.s, 0, Math.PI * 2); ctx.fill();
+      });
+      requestAnimationFrame(frame);
+    }
+    stage.querySelector("#so-speed").addEventListener("input", function () { speed = +this.value / 10; stage.querySelector("#so-sv").textContent = speed.toFixed(1); });
+    stage.querySelector("#so-orbits").addEventListener("click", function () { showOrbits = !showOrbits; this.setAttribute("aria-pressed", showOrbits ? "true" : "false"); this.textContent = "Orbit paths: " + (showOrbits ? "on" : "off"); });
+    requestAnimationFrame(frame);
+  }
+
   var SIMS = [
     { id: "wave", label: "🌊 Waves", fn: wave },
     { id: "circuit", label: "💡 Circuits", fn: circuit },
-    { id: "matter", label: "🧊 States of Matter", fn: matter }
+    { id: "forces", label: "📦 Forces", fn: forces },
+    { id: "matter", label: "🧊 States of Matter", fn: matter },
+    { id: "solar", label: "🪐 Solar System", fn: solar }
   ];
 
-  function render(content) {
+  function render(content, startId) {
     style();
-    var active = "wave";
+    var active = (startId && SIMS.some(function (s) { return s.id === startId; })) ? startId : "wave";
     content.innerHTML =
       '<div class="sim"><h2>🔬 Science Lab</h2>' +
         '<p class="sim-lead">Hands-on simulations for ideas a still picture can’t show. Drag the sliders and watch the numbers — each one uses the real formula.</p>' +

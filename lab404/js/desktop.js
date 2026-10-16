@@ -903,7 +903,7 @@
         if (window.Lab404EsGlossary) window.Lab404EsGlossary.render(content);
         else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Glossary not available.</div>';
       } else if (app === "sims") {
-        if (window.Lab404Sims) window.Lab404Sims.render(content);
+        if (window.Lab404Sims) window.Lab404Sims.render(content, params && params.sim);
         else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Science Lab not available.</div>';
       } else if (app === "kidmode") {
         if (window.Lab404Kid) window.Lab404Kid.renderSetup(content);

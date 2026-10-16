@@ -38,6 +38,7 @@
         setTitle("Browse by Grade");
       }
       else if (go === "app" && id && SAFE_APPS.indexOf(id) >= 0) { Desktop.openWindow(id); }
+      else if (go === "sim" && id) { Desktop.openWindow("sims", { sim: id }); setTitle("Science Lab"); }   /* R5-A: deep link to one sim */
       else if (go === "assign") {   /* R8: open a teacher assignment */
         var a = (window.Lab404Assign && Lab404Assign.decode) ? Lab404Assign.decode(qp("a")) : null;
         Desktop.openWindow("assign", a ? { assign: a } : {});

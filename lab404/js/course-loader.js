@@ -414,7 +414,12 @@ window.CourseLoader = (function () {
     if (course.subjectKey && window.Desktop) {
       var hb = ['<button class="cv-help-btn" data-tool="esglossary">🌐 Key terms (EN/ES)</button>'];
       hb.push('<button class="cv-help-btn' + (esInlineOn() ? " on" : "") + '" id="cv-es-toggle" aria-pressed="' + (esInlineOn() ? "true" : "false") + '">🌐 Español in lessons: ' + (esInlineOn() ? "On" : "Off") + '</button>');
-      if (course.subjectKey === "science") hb.push('<button class="cv-help-btn" data-tool="sims">🔬 Science Lab</button>');
+      if (course.subjectKey === "science") hb.push(   /* R5-A: jump straight to the relevant interactive sim */
+        '<button class="cv-help-btn" data-sim="wave">🌊 Waves</button>' +
+        '<button class="cv-help-btn" data-sim="circuit">💡 Circuits</button>' +
+        '<button class="cv-help-btn" data-sim="forces">📦 Forces</button>' +
+        '<button class="cv-help-btn" data-sim="matter">🧊 Matter</button>' +
+        '<button class="cv-help-btn" data-sim="solar">🪐 Solar System</button>');
       if (course.subjectKey === "english") hb.push('<button class="cv-help-btn" data-tool="writing">✍️ Writing Practice</button>');
       helpers = '<div class="cv-helpers"><span class="cv-help-lbl">Helpful here:</span>' + hb.join("") + '</div>';
     }
@@ -493,6 +498,11 @@ window.CourseLoader = (function () {
     el.querySelectorAll("[data-tool]").forEach(function (b) {   /* R4-3 */
       b.addEventListener("click", function () {
         if (window.Desktop && Desktop.openWindow) Desktop.openWindow(this.getAttribute("data-tool"));
+      });
+    });
+    el.querySelectorAll("[data-sim]").forEach(function (b) {   /* R5-A: open a specific Science Lab sim */
+      b.addEventListener("click", function () {
+        if (window.Desktop && Desktop.openWindow) Desktop.openWindow("sims", { sim: this.getAttribute("data-sim") });
       });
     });
     var esToggle = document.getElementById("cv-es-toggle");   /* R4-5 */
