@@ -148,7 +148,13 @@
           '<div class="pf-emrow" id="pf-emrow"></div>' +
           '<button class="pf-go" id="pf-addbtn">+ Add learner</button>' +
         '</div>' +
-        '<p class="pf-note">Switching or adding a learner reloads the page so everything shows the right progress.</p>' +
+        '<div class="pf-add" style="display:flex;gap:7px;align-items:center;flex-wrap:wrap">' +
+          '<span style="font-size:11px;color:#73857f;flex:1;min-width:120px">Back up or move this learner’s progress:</span>' +
+          '<button class="pf-sw" id="pf-export">⬇ Export</button>' +
+          '<button class="pf-sw" id="pf-import">⬆ Import</button>' +
+          '<input type="file" id="pf-file" accept="application/json,.json" hidden>' +
+        '</div>' +
+        '<p class="pf-note">Switching or adding a learner reloads the page so everything shows the right progress. Backups are plain files saved on your device — nothing is uploaded.</p>' +
       '</div>';
     document.body.appendChild(overlay);
     overlay.addEventListener("click", function (e) { if (e.target === overlay) closeModal(); });
@@ -162,6 +168,31 @@
     overlay.querySelector("#pf-addbtn").addEventListener("click", function () {
       var n = overlay.querySelector("#pf-name").value.trim();
       add(n, pickEmoji);
+    });
+    /* H3: export / import this learner's progress (local backup file) */
+    overlay.querySelector("#pf-export").addEventListener("click", function () {
+      var c = current();
+      var payload = { kind: "lab404-progress", name: c ? c.name : "Learner", exported: new Date().toISOString(), data: snapshotLive() };
+      var blob = new Blob([JSON.stringify(payload, null, 1)], { type: "application/json" });
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "lab404-" + ((c && c.name) || "learner").replace(/[^a-z0-9]+/gi, "-").toLowerCase() + "-backup.json";
+      a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); }, 2000);
+    });
+    var fileEl = overlay.querySelector("#pf-file");
+    overlay.querySelector("#pf-import").addEventListener("click", function () { fileEl.click(); });
+    fileEl.addEventListener("change", function () {
+      var f = fileEl.files && fileEl.files[0]; if (!f) return;
+      var r = new FileReader();
+      r.onload = function () {
+        var p; try { p = JSON.parse(r.result); } catch (e) { return; }
+        var data = p && p.data; if (!data || typeof data !== "object") return;
+        if (!confirm("Import this backup into the current learner? It replaces their progress on this device.")) { fileEl.value = ""; return; }
+        clearOwned();
+        Object.keys(data).forEach(function (k) { if (data[k] != null) set(k, data[k]); });
+        location.reload();
+      };
+      r.readAsText(f);
     });
     document.addEventListener("keydown", escClose);
   }
