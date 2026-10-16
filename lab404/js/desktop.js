@@ -956,6 +956,18 @@
           ".mp-item>span:last-child{display:flex;flex-direction:column;min-width:0}" +
           ".mp-item .lab{display:block;font-weight:700;font-size:.85rem}.mp-item .sb{display:block;font-size:.66rem;color:var(--text-muted,#9aa);margin-top:1px}" +
           ".mp-empty{color:var(--text-muted,#9aa);font-size:.82rem;padding:8px 0 4px;line-height:1.6}" +
+          ".mp-goal{border:1px solid var(--border,#334);border-radius:12px;padding:12px 14px;margin-bottom:14px}" +
+          ".mp-goal-top{display:flex;align-items:baseline;gap:8px;font-size:.82rem;margin-bottom:8px}" +
+          ".mp-goal-top b{font-size:.95rem}.mp-goal-top .done{color:#3cbe6e;font-weight:700;margin-left:auto}" +
+          ".mp-goal-top .cnt{margin-left:auto;color:var(--text-muted,#9aa);font-weight:700}" +
+          ".mp-goal-bar{height:8px;background:var(--border,#334);border-radius:4px;overflow:hidden}" +
+          ".mp-goal-bar span{display:block;height:100%;background:linear-gradient(90deg,var(--accent2,#39e3c8),var(--accent,#4a90e2));border-radius:4px}" +
+          ".mp-badges{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:8px;margin-bottom:4px}" +
+          ".mp-badge{border:1px solid var(--border,#334);border-radius:10px;padding:10px 6px;text-align:center}" +
+          ".mp-badge .bi{font-size:1.5rem;display:block;filter:grayscale(1);opacity:.35}" +
+          ".mp-badge.on .bi{filter:none;opacity:1}" +
+          ".mp-badge .bl{display:block;font-size:.6rem;font-weight:700;margin-top:4px;color:var(--text-muted,#9aa)}" +
+          ".mp-badge.on .bl{color:var(--text,#dfe)}" +
           ".mp-links{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}" +
           ".mp-link{flex:1;min-width:130px;border:1px solid var(--border,#334);border-radius:10px;padding:10px;text-align:center;cursor:pointer;background:transparent;color:var(--text);font-family:inherit;font-size:.8rem;font-weight:700}" +
           ".mp-link:hover{background:rgba(0,255,204,.08);border-color:rgba(0,255,204,.3)}" +
@@ -993,6 +1005,24 @@
           '<span class="sb">' + missedN + ' question' + (missedN > 1 ? 's' : '') + ' to try again</span></span></button>';
       }
 
+      /* E4: daily goal + badges */
+      var goalHtml = "", badgesHtml = "";
+      if (window.Lab404Goals) {
+        var dg = Lab404Goals.daily();
+        var gpct = Math.max(0, Math.min(100, Math.round(dg.answered / dg.goal * 100)));
+        goalHtml = '<div class="mp-h">🎯 Today’s goal</div><div class="mp-goal">' +
+          '<div class="mp-goal-top"><b>Answer ' + dg.goal + ' questions</b>' +
+            (dg.met ? '<span class="done">✅ Done! +streak</span>' : '<span class="cnt">' + dg.answered + ' / ' + dg.goal + '</span>') +
+          '</div><div class="mp-goal-bar"><span style="width:' + gpct + '%"></span></div></div>';
+        var bl = Lab404Goals.badges();
+        var earned = bl.filter(function (b) { return b.earned; }).length;
+        badgesHtml = '<div class="mp-h">🏅 Badges · ' + earned + ' / ' + bl.length + '</div><div class="mp-badges">' +
+          bl.map(function (b) {
+            return '<div class="mp-badge' + (b.earned ? " on" : "") + '" title="' + escHtml(b.desc) + (b.earned ? "" : " (locked)") + '">' +
+              '<span class="bi">' + b.icon + '</span><span class="bl">' + escHtml(b.label) + '</span></div>';
+          }).join("") + '</div>';
+      }
+
       var bmHtml = "";
       var bmShow = bms.filter(function (b) { return COURSES[b.id]; });
       if (bmShow.length) {
@@ -1017,10 +1047,12 @@
             '<div class="mp-stat"><b>' + objMastered + '<span style="font-size:.9rem;color:var(--text-faint,#778)">/' + objTot + '</span></b><small>Objectives mastered</small></div>' +
             '<div class="mp-stat"><b>' + startedN + '</b><small>Courses started</small></div>' +
           '</div>' +
+          goalHtml +
           resumeHtml +
           missedHtml +
           '<div class="mp-h">🎯 Study next</div>' + nextHtml +
           bmHtml +
+          badgesHtml +
           '<div class="mp-links">' +
             '<button class="mp-link" data-open="bygrade">🎓 Browse by Grade</button>' +
             '<button class="mp-link" data-open="transcript">📋 Report Card</button>' +

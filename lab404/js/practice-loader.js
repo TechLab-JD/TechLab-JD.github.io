@@ -427,6 +427,7 @@
       if (checkBtn) checkBtn.disabled = true;
 
       state.answered++;
+      if (window.Lab404Goals) window.Lab404Goals.bump(right);  /* E4: daily goal count */
       if (right) {
         state.correct++;
       } else {

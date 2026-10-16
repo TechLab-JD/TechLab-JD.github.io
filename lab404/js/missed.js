@@ -163,6 +163,7 @@
       if (ok) quiz.cleared++;
       M.record(it.course, q.obj, ok);   /* feed the real mastery engine */
       record(it.course, q, ok);          /* clears it from the queue when right */
+      if (window.Lab404Goals) window.Lab404Goals.bump(ok);  /* E4: daily goal count */
 
       if (q.type !== "numeric") {
         content.querySelectorAll(".mq-opt").forEach(function (b) {

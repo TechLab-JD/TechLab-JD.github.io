@@ -3,7 +3,7 @@
    shell on install, then serve same-origin GETs stale-while-revalidate (fast
    from cache, refreshed in the background). Large media (audio/video/pdf) is
    passed straight to the network so the cache stays small. */
-var CACHE = "lab404-hub-v21";
+var CACHE = "lab404-hub-v22";
 
 var SHELL = [
   "./",
@@ -37,6 +37,7 @@ var SHELL = [
   "./js/courses-data.js",
   "./js/read-aloud.js",
   "./js/mastery.js",
+  "./js/goals.js",
   "./js/missed.js",
   "./js/course-loader.js",
   "./js/desktop.js",
