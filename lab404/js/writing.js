@@ -17,6 +17,29 @@
   };
   var TYPE_LABEL = { explain: "Explanation", opinion: "Opinion paragraph", narrative: "Narrative", compare: "Compare & contrast", essay: "Essay", mathexplain: "Math explanation" };
 
+  /* R4-11: sentence starters by type — scaffolds so a stuck writer can begin. */
+  var FRAMES = {
+    explain: ["___ happens because ___.", "First, ___. This means ___.", "For example, ___.", "In short, ___."],
+    opinion: ["I think that ___.", "One reason is ___.", "Another reason is ___.", "For these reasons, ___."],
+    narrative: ["One day, ___.", "First ___, then ___.", "I felt ___ because ___.", "In the end, ___."],
+    compare: ["___ and ___ are alike because both ___.", "One difference is ___.", "However, ___.", "Overall, ___."],
+    essay: ["Many people believe ___, but I will argue ___.", "First, ___.", "In addition, ___.", "In conclusion, ___."],
+    mathexplain: ["To solve this, first ___.", "Next, ___ because ___.", "For example, ___.", "So the answer is ___, which makes sense because ___."]
+  };
+  /* A short model answer per prompt, hidden until the writer asks — encourages a real attempt first. */
+  var MODELS = {
+    "w-daynight": "Earth spins like a top on its axis. The side facing the Sun gets light, so it is day there. At the same time the other side faces away and is dark, so it is night. As Earth keeps turning, each place moves from day into night and back again about every 24 hours.",
+    "w-plant": "A plant makes its own food through photosynthesis. Its leaves take in sunlight, air (carbon dioxide), and water from the roots. Inside the leaves, these are turned into sugar, which the plant uses for energy, and oxygen, which is released into the air.",
+    "w-learned": "When I learned to ride a bike, I was nervous and kept falling. First my dad held the seat, then he let go without telling me. I wobbled, but I kept pedaling and stayed up. I felt proud and a little scared at the same time, and I couldn't wait to try again.",
+    "w-seasons": "Summer and winter are both seasons, and both can be fun outside. They are different because summer is hot and the days are long, while winter is cold and the days are short. In summer I swim; in winter I wear a coat. Both have their own activities I enjoy.",
+    "w-homework": "I think students should have a small amount of homework. One reason is that practicing at home helps ideas stick. Another reason is that it teaches responsibility and time management. Too much is stressful, but a little homework each night is helpful.",
+    "w-fractions": "To add fractions with different denominators, first find a common denominator (a number both bottoms divide into). Next, rewrite each fraction with that denominator by multiplying the top and bottom by the same number. Then add the numerators and keep the denominator. For example, 1/2 + 1/3 becomes 3/6 + 2/6 = 5/6.",
+    "w-goal": "One goal I have is to read 20 books this year. To reach it, I will read for 15 minutes every night and keep a list of what I finish. If I fall behind, I'll read a little longer on weekends. Breaking a big goal into small daily steps makes it possible.",
+    "w-photo-resp": "Photosynthesis and cellular respiration are opposites that work together. In photosynthesis, plants use sunlight to turn carbon dioxide and water into sugar and oxygen. In respiration, living things break sugar and oxygen back down to release energy, giving off carbon dioxide and water. The outputs of one are the inputs of the other.",
+    "w-uniforms": "Schools should require uniforms. First, uniforms reduce pressure about clothes and bullying over brands. Second, they save families money because students re-wear the same outfits. Third, they create a sense of belonging and help mornings go faster. For these reasons, uniforms do more good than harm.",
+    "w-tech": "Technology has made life better overall, though it has costs. It connects people across the world, puts vast knowledge a tap away, and improves medicine and safety. The downsides are real—distraction, privacy loss, and screen overuse—but these can be managed. Used wisely, technology expands what people can do."
+  };
+
   var PROMPTS = [
     { id: "w-daynight", lvl: "Grades 3–5", subj: "Science", type: "explain", p: "Explain in your own words why we have day and night." },
     { id: "w-plant", lvl: "Grades 4–6", subj: "Science", type: "explain", p: "Explain how a plant makes its own food." },
@@ -57,7 +80,13 @@
       ".wr-rubric h3{font-size:.95rem;margin:0 0 4px}" +
       ".wr-crit{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--border,#334)}" +
       ".wr-crit:last-child{border-bottom:0}.wr-crit input{margin-top:3px}" +
-      ".wr-score{font-weight:700;margin-top:10px;font-size:.9rem}";
+      ".wr-score{font-weight:700;margin-top:10px;font-size:.9rem}" +
+      ".wr-frames{margin:0 0 10px}" +
+      ".wr-frames-h{font-size:.72rem;color:var(--text-muted,#9aa);margin-bottom:5px;font-weight:600}" +
+      ".wr-frame{display:inline-block;border:1px dashed var(--border,#334);background:transparent;color:var(--text-muted,#9aa);border-radius:999px;padding:4px 10px;margin:0 5px 5px 0;font:inherit;font-size:.76rem;cursor:pointer}" +
+      ".wr-frame:hover{border-color:var(--accent2,#39e3c8);color:var(--text,#dfe)}" +
+      ".wr-model{border:1px solid var(--accent2,#39e3c8);background:rgba(57,227,200,.06);border-radius:10px;padding:11px 13px;margin-top:10px;font-size:.9rem;line-height:1.55}" +
+      ".wr-model-h{font-size:.72rem;font-weight:700;color:var(--accent2,#39e3c8);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}";
     document.head.appendChild(st);
   }
 
@@ -89,9 +118,14 @@
           '<button class="wr-btn ghost" id="wr-back" style="margin-bottom:12px">← All prompts</button>' +
           '<div class="wr-chip">' + esc(TYPE_LABEL[pr.type]) + '</div><span style="font-size:.72rem;color:var(--text-muted,#9aa)">' + esc(pr.subj) + ' · ' + esc(pr.lvl) + '</span>' +
           '<div class="wr-prompt">' + esc(pr.p) + '</div>' +
+          '<div class="wr-frames"><div class="wr-frames-h">✏️ Sentence starters — tap one to add it</div>' +
+            (FRAMES[pr.type] || FRAMES.explain).map(function (f) { return '<button class="wr-frame" type="button">' + esc(f) + '</button>'; }).join("") +
+          '</div>' +
           '<textarea class="wr-ta" id="wr-ta" placeholder="Write your answer here…">' + esc(d.text) + '</textarea>' +
           '<div class="wr-meta"><span id="wr-wc">' + words(d.text) + ' words</span><span id="wr-saved">Saved automatically</span></div>' +
-          '<div class="wr-row"><button class="wr-btn" id="wr-check">✓ Check my work</button></div>' +
+          '<div class="wr-row"><button class="wr-btn" id="wr-check">✓ Check my work</button>' +
+            (MODELS[pr.id] ? '<button class="wr-btn ghost" id="wr-model">👀 Show a model answer</button>' : "") + '</div>' +
+          '<div id="wr-model-wrap"></div>' +
           '<div id="wr-rubric-wrap"></div>' +
         '</div>';
       var ta = content.querySelector("#wr-ta");
@@ -99,6 +133,21 @@
       ta.addEventListener("input", function () {
         content.querySelector("#wr-wc").textContent = words(ta.value) + " words";
         persist();
+      });
+      content.querySelectorAll(".wr-frame").forEach(function (b) {   /* R4-11: insert a sentence starter */
+        b.addEventListener("click", function () {
+          var s = this.textContent;
+          ta.value = ta.value + (ta.value && !/\n$/.test(ta.value) ? "\n" : "") + s + " ";
+          ta.dispatchEvent(new Event("input", { bubbles: true }));
+          ta.focus();
+        });
+      });
+      var modelBtn = content.querySelector("#wr-model");
+      if (modelBtn) modelBtn.addEventListener("click", function () {   /* R4-11: reveal a model answer */
+        var w = content.querySelector("#wr-model-wrap");
+        if (w.innerHTML) { w.innerHTML = ""; this.textContent = "👀 Show a model answer"; return; }
+        w.innerHTML = '<div class="wr-model"><div class="wr-model-h">One strong answer (yours can be different):</div>' + esc(MODELS[pr.id]) + '</div>';
+        this.textContent = "Hide model answer";
       });
       content.querySelector("#wr-back").addEventListener("click", function () { persist(); list(); });
       content.querySelector("#wr-check").addEventListener("click", function () { persist(); rubric(pr, d); });
