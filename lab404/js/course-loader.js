@@ -400,6 +400,7 @@ window.CourseLoader = (function () {
     var ok = M.check(q, resp);
     if (ok) quiz.correct++;
     M.record(courseId, q.obj, ok);
+    if (window.Lab404Missed) window.Lab404Missed.record(courseId, q, ok);  /* B3b: collect/clear misses */
     // mark options
     if (q.type !== "numeric") {
       el.querySelectorAll(".cv-opt").forEach(function (b) {

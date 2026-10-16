@@ -41,6 +41,7 @@
     "skills":     { title: "Skill Overview",           icon: "📊" },
     "about":      { title: "About Lab404 Study Hub",  icon: "🚀" },
     "forfamilies": { title: "For Parents & Teachers",  icon: "👪" },
+    "missed":     { title: "Practice What You Missed", icon: "🔁" },
   };
 
   /* ── Cert human-readable labels ── */
@@ -336,6 +337,7 @@
       if (app === "skills")  { winEl.style.width = "620px"; winEl.style.height = "580px"; }
       if (app === "about")   { winEl.style.width = "400px"; winEl.style.height = "340px"; }
       if (app === "forfamilies") { winEl.style.width = "640px"; winEl.style.height = "620px"; }
+      if (app === "missed")  { winEl.style.width = "640px"; winEl.style.height = "580px"; }
       if (app === "myprogress") { winEl.style.width = "620px"; winEl.style.height = "600px"; }
       if (app === "bygrade") { winEl.style.width = "740px"; winEl.style.height = "640px"; }
       if (app === "course")  { winEl.style.width = "780px"; winEl.style.height = "660px"; }
@@ -735,7 +737,7 @@
 
       /* H1: these views need the lazy-loaded study data — wait for it, then render. */
       var needsData = app.indexOf("folder-") === 0 ||
-        ["myprogress", "bygrade", "course", "transcript", "skills"].indexOf(app) >= 0;
+        ["myprogress", "bygrade", "course", "transcript", "skills", "missed"].indexOf(app) >= 0;
       if (needsData && window.Lab404Data && !window.Lab404Data.isLoaded()) {
         content.innerHTML = '<div class="loading-state" style="padding:2.4rem;text-align:center;color:var(--text-muted,#9aa)">Loading study content…</div>';
         window.Lab404Data.ensure().then(function () { Desktop._loadApp(winId, app, params); })
@@ -827,6 +829,9 @@
         if (affb) affb.addEventListener("click", function () { Desktop.openWindow("forfamilies"); });
       } else if (app === "forfamilies") {
         Desktop._renderForFamilies(winId);
+      } else if (app === "missed") {
+        if (window.Lab404Missed) window.Lab404Missed.render(content);
+        else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Missed-questions practice not available.</div>';
       }
     },
 
@@ -979,6 +984,15 @@
         resumeHtml = '<div class="mp-h">▶️ Continue</div><button class="mp-item" data-resume="' + escHtml(last.id) + '">' +
           '<span class="ic">🎯</span><span style="min-width:0"><span class="lab">' + escHtml(last.title) + '</span><span class="sb">' + escHtml(rsub) + '</span></span></button>';
       }
+      /* B3b: practice-what-you-missed card */
+      var missedHtml = "";
+      var missedN = (window.Lab404Missed && window.Lab404Missed.count) ? window.Lab404Missed.count() : 0;
+      if (missedN > 0) {
+        missedHtml = '<div class="mp-h">🔁 Fix your misses</div><button class="mp-item" data-missed="1">' +
+          '<span class="ic">🔁</span><span style="min-width:0"><span class="lab">Practice what you missed</span>' +
+          '<span class="sb">' + missedN + ' question' + (missedN > 1 ? 's' : '') + ' to try again</span></span></button>';
+      }
+
       var bmHtml = "";
       var bmShow = bms.filter(function (b) { return COURSES[b.id]; });
       if (bmShow.length) {
@@ -1004,6 +1018,7 @@
             '<div class="mp-stat"><b>' + startedN + '</b><small>Courses started</small></div>' +
           '</div>' +
           resumeHtml +
+          missedHtml +
           '<div class="mp-h">🎯 Study next</div>' + nextHtml +
           bmHtml +
           '<div class="mp-links">' +
@@ -1020,6 +1035,9 @@
       });
       content.querySelectorAll(".mp-item[data-resume]").forEach(function (b) {
         b.addEventListener("click", function () { Desktop.openWindow("course", { course: this.getAttribute("data-resume") }); });
+      });
+      content.querySelectorAll(".mp-item[data-missed]").forEach(function (b) {
+        b.addEventListener("click", function () { Desktop.openWindow("missed"); });
       });
       content.querySelectorAll(".mp-link[data-open]").forEach(function (b) {
         b.addEventListener("click", function () { Desktop.openWindow(this.getAttribute("data-open")); });
