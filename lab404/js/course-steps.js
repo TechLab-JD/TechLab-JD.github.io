@@ -378,6 +378,56 @@
       // two-way table
       "g8-math-x8s4d": ["With no overlap, just add the two groups.", "12 + 8.", "= 20 students."]
     },
+    "g9-math": {
+      // roots & rational exponents
+      "g9-math-a91c": ["A 1/2 exponent means the square root.", "√16 = 4.", "= 4."],
+      "g9-math-a92a": ["Ask: what number squared is 36?", "6 × 6 = 36.", "= 6."],
+      "g9-math-a92c": ["√9 = 3 and √16 = 4.", "Add them: 3 + 4.", "= 7."],
+      "g9-math-a1n2u5": ["9 × 9 = 81.", "= 9."],
+      // linear equations
+      "g9-math-a9a4a": ["Subtract 7: 2x = 8.", "Divide by 2: x = 4."],
+      "g9-math-a9a4b": ["Collect the x's: 5x − 2x = 12 + 3, so 3x = 15.", "Divide by 3: x = 5."],
+      "g9-math-a9a4c": ["Divide both sides by 3: x − 2 = 3.", "Add 2: x = 5."],
+      "g9-math-a9a4d": ["Subtract 1: x/4 = 3.", "Multiply by 4: x = 12."],
+      "g9-math-a1a4u1": ["Subtract 7: 2x = 8.", "Divide by 2: x = 4."],
+      "g9-math-a1a4u2": ["Add 5: 3x = 15.", "Divide by 3: x = 5."],
+      "g9-math-a1a4u3": ["Divide both sides by 4: x − 2 = 3.", "Add 2: x = 5."],
+      "g9-math-a1a4u4": ["Collect the x's: 5x − 2x = 12 − 3, so 3x = 9.", "Divide by 3: x = 3."],
+      "g9-math-a1a4u5": ["Multiply both sides by 4.", "x = 24."],
+      "g9-math-a1a4u6": ["Add 2: 7x = 21.", "Divide by 7: x = 3."],
+      // systems
+      "g9-math-a9a6a": ["Set the two equal: x + 1 = 2x − 3.", "Move x's and numbers: 1 + 3 = 2x − x.", "x = 4."],
+      "g9-math-a9a6d": ["Add the two equations so y cancels: 2x = 12.", "Divide by 2: x = 6."],
+      "g9-math-a1a6u1": ["2x = 8.", "Divide by 2: x = 4."],
+      "g9-math-a1a6u3": ["Add the equations so y cancels: 2x = 12.", "x = 6."],
+      "g9-math-a1a6u5": ["x + 1 = 5.", "Subtract 1: x = 4."],
+      // modeling / word problems
+      "g9-math-a9a7b": ["Substitute m = 6 into C = 15m + 20: 15 × 6 + 20.", "90 + 20.", "= $110."],
+      "g9-math-a9a7d": ["'Tripled equals 21' means 3n = 21.", "Divide by 3.", "n = 7."],
+      "g9-math-a1a7u2": ["Cost = 3 + 2 × 4.", "3 + 8.", "= $11."],
+      "g9-math-a1a7u4": ["8 × 5.", "= $40."],
+      "g9-math-a1a7u6": ["5 × 6.", "= $30."],
+      // quadratic (square-root method)
+      "g9-math-a9a9c": ["Take the square root of both sides.", "√81 = 9.", "x = 9."],
+      "g9-math-a1a9u5": ["Take the square root: √49 = 7.", "x = 7."],
+      // functions
+      "g9-math-a9f1a": ["Substitute x = 4: 2 × 4 + 3.", "8 + 3.", "= 11."],
+      "g9-math-a9f1b": ["Substitute x = 3: 3² − 1.", "9 − 1.", "= 8."],
+      "g9-math-a9f1d": ["Substitute x = 2: 5 − 2.", "= 3."],
+      "g9-math-a1f1u4": ["Substitute x = 5: 3 × 5.", "= 15."],
+      "g9-math-a9f4c": ["Substitute x = 2: 4 × 2 − 3.", "8 − 3.", "= 5."],
+      "g9-math-a1f4u4": ["Substitute x = 3: 2 × 3 + 1.", "6 + 1.", "= 7."],
+      // slope
+      "g9-math-a9f3a": ["Slope = (y₂ − y₁) ÷ (x₂ − x₁) = (8 − 2) ÷ (3 − 1).", "6 ÷ 2.", "= 3."],
+      "g9-math-a9f3c": ["Slope = (5 − 1) ÷ (2 − 0) = 4 ÷ 2.", "= 2."],
+      "g9-math-a1f3u5": ["Slope = rise ÷ run = 8 ÷ 2.", "= 4."],
+      // statistics
+      "g9-math-a9s1a": ["Add: 4 + 8 + 6 = 18.", "Divide by 3.", "= 6."],
+      "g9-math-a9s1b": ["Already in order; with 5 values the middle (3rd) is the median.", "= 9."],
+      "g9-math-a1s1u1": ["Add: 4 + 6 + 8 = 18.", "Divide by 3.", "= 6."],
+      "g9-math-a1s1u2": ["In order, the middle value is 5.", "= 5."],
+      "g9-math-a1s1u6": ["Range = highest − lowest = 10 − 3.", "= 7."]
+    },
     "sat-math": {
       "sat-math-m1-1": ["Start with 3x + 5 = 20.", "Subtract 5 from both sides: 3x = 15.", "Divide both sides by 3: x = 5."],
       "sat-math-m1-5": ["Start with 2x − 4 = 10.", "Add 4 to both sides: 2x = 14.", "Divide both sides by 2: x = 7."],
