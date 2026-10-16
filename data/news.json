@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-16T04:49:18Z",
- "generated_human": "Oct 16, 2026 · 04:49 UTC",
+ "generated": "2026-10-16T05:00:37Z",
+ "generated_human": "Oct 16, 2026 · 05:00 UTC",
  "sources": [
   {
    "name": "NPR",
@@ -215,15 +215,11 @@
   },
   {
    "term": "ukraine",
-   "n": 13
+   "n": 12
   },
   {
    "term": "senate",
    "n": 12
-  },
-  {
-   "term": "children",
-   "n": 11
   },
   {
    "term": "school",
@@ -231,11 +227,15 @@
   },
   {
    "term": "oregon",
-   "n": 11
+   "n": 10
+  },
+  {
+   "term": "children",
+   "n": 10
   },
   {
    "term": "shooting",
-   "n": 10
+   "n": 9
   },
   {
    "term": "gets",
@@ -254,11 +254,11 @@
    "n": 8
   },
   {
-   "term": "maine",
+   "term": "debate",
    "n": 8
   },
   {
-   "term": "debate",
+   "term": "maine",
    "n": 8
   },
   {
@@ -270,7 +270,7 @@
    "n": 7
   },
   {
-   "term": "three",
+   "term": "midterms",
    "n": 7
   }
  ],
@@ -413,13 +413,6 @@
      "label": "Center",
      "title": "Peshawar mourns children killed in school roof collapse",
      "url": "https://www.aljazeera.com/video/newsfeed/2026/10/16/peshawar-mourns-children-killed-in-school-roof-collapse?traffic_source=rss"
-    },
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "Three children, one teacher killed in Oregon school shooting",
-     "url": "https://www.aljazeera.com/news/2026/10/15/at-least-4-including-3-children-killed-in-us-elementary-school-shooting?traffic_source=rss"
     },
     {
      "name": "Washington Examiner",
@@ -675,6 +668,49 @@
      "label": "Right",
      "title": "DOJ Sues California, Alleging 20K Noncitizens Are Registered On State Voter Roll",
      "url": "https://dailycaller.com/2026/10/15/doj-sues-california-20k-noncitizens-registered-to-vote-gavin-newsom"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "WATCH:  Seahawks, Broncos face off in Thursday night NFL matchup",
+   "summary": "ESPN’s Omar Ruiz previews the Seahawks-Broncos showdown in Denver, including how Seattle’s top-ranked defense could challenge Bo Nix and whether Sam Darnold can bounce back after two interceptions.",
+   "category": "General",
+   "leans": [
+    -1,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  Seahawks, Broncos face off in Thursday night NFL matchup",
+     "url": "https://abcnews.com/video/137303571/"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Sam Darnold’s second interception sinks Seahawks as Broncos prevail in overtime",
+     "url": "https://nypost.com/2026/10/16/sports/sam-darnolds-second-interception-sinks-seahawks-as-broncos-prevail-in-overtime/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Denver Broncos survive ugly offensive night to beat Seattle Seahawks 17-14 in overtime",
+     "url": "https://www.foxnews.com/outkick-sports/denver-broncos-survive-ugly-offensive-night-beat-seattle-seahawks-17-14-overtime"
     }
    ],
    "factchecks": [],
@@ -2075,33 +2111,6 @@
      "label": "Lean Left",
      "title": "Bus crash in Canada leaves 3 dead and multiple people injured, police say",
      "url": "https://abcnews.com/International/wireStory/bus-crash-canada-leaves-3-dead-multiple-people-137304062"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  Rhode Island farmer sets new record for world's biggest pumpkin",
-   "summary": "David Muir reports on the new world record for heaviest pumpkin, which weighs 3,156 pounds – smashing the previous record of 2,856 pounds set merely a week ago.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  Rhode Island farmer sets new record for world's biggest pumpkin",
-     "url": "https://abcnews.com/video/137305086/"
     }
    ],
    "factchecks": [],
