@@ -42,6 +42,7 @@
     "about":      { title: "About Lab404 Study Hub",  icon: "🚀" },
     "forfamilies": { title: "For Parents & Teachers",  icon: "👪" },
     "missed":     { title: "Practice What You Missed", icon: "🔁" },
+    "typing":     { title: "Typing Tutor",             icon: "⌨️" },
   };
 
   /* ── Cert human-readable labels ── */
@@ -343,6 +344,7 @@
       if (app === "about")   { winEl.style.width = "400px"; winEl.style.height = "340px"; }
       if (app === "forfamilies") { winEl.style.width = "640px"; winEl.style.height = "620px"; }
       if (app === "missed")  { winEl.style.width = "640px"; winEl.style.height = "580px"; }
+      if (app === "typing")  { winEl.style.width = "660px"; winEl.style.height = "580px"; }
       if (app === "myprogress") { winEl.style.width = "620px"; winEl.style.height = "600px"; }
       if (app === "bygrade") { winEl.style.width = "740px"; winEl.style.height = "640px"; }
       if (app === "course")  { winEl.style.width = "780px"; winEl.style.height = "660px"; }
@@ -855,6 +857,9 @@
       } else if (app === "missed") {
         if (window.Lab404Missed) window.Lab404Missed.render(content);
         else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Missed-questions practice not available.</div>';
+      } else if (app === "typing") {
+        if (window.Lab404Typing) window.Lab404Typing.render(content);
+        else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Typing tutor not available.</div>';
       }
     },
 
