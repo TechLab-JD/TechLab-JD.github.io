@@ -1556,6 +1556,8 @@
       if (document.getElementById("lhm-style")) return;
       var s = document.createElement("style"); s.id = "lhm-style";
       s.textContent =
+        ".qz-ra{border:1px solid var(--border,#334);background:transparent;color:var(--text-muted,#9aa);border-radius:6px;padding:1px 6px;font-size:.8rem;cursor:pointer;line-height:1;vertical-align:middle}" +
+        ".qz-ra:hover{border-color:var(--accent2,#4a90e2);color:var(--accent2,#4a90e2)}.qz-ra.playing{background:var(--accent2,#4a90e2);color:#fff;border-color:var(--accent2,#4a90e2)}" +
         ".lsn-coursetie{display:flex;align-items:center;gap:8px;width:100%;text-align:left;border:1px solid var(--accent2,#4a90e2);background:rgba(74,144,226,.1);color:var(--text,#eee);border-radius:10px;padding:9px 13px;font:inherit;font-weight:700;font-size:.82rem;cursor:pointer;margin:0 0 14px}" +
         ".lsn-coursetie span{margin-left:auto;color:var(--accent2,#4a90e2);font-size:1rem}" +
         ".lsn-coursetie:hover{background:rgba(74,144,226,.18)}" +
@@ -1615,9 +1617,11 @@
         '<p class="lsn-src">Original Lab404 lesson, written for study. ' + (d.disclaimer ? esc(d.disclaimer) : "Double-check anything important against an authoritative source.") + '</p></div>';
       var flashView = '<div class="lsn-view hide" data-v="flash"><div class="fc" id="' + winId + '-fc"></div>' +
         '<div class="fc-ctrl"><button class="lsn-btn" data-fprev>‹ Prev</button><span class="fc-count" id="' + winId + '-fcn"></span><button class="lsn-btn" data-fnext>Next ›</button></div></div>';
+      var raOK = !!(window.ReadAloud && window.ReadAloud.supported());
       var quizView = '<div class="lsn-view hide" data-v="quiz"><div class="qz-score" id="' + winId + '-qs"></div>' +
         (d.quiz || []).map(function (q, qi) {
-          return '<div class="qz-q" data-qi="' + qi + '"><div class="qz-qt">' + (qi + 1) + ". " + esc(q.q) + '</div>' +
+          return '<div class="qz-q" data-qi="' + qi + '"><div class="qz-qt">' + (qi + 1) + ". " + esc(q.q) +
+            (raOK ? ' <button class="qz-ra" data-qi="' + qi + '" type="button" title="Read question aloud" aria-label="Read question aloud">🔊</button>' : "") + '</div>' +
             q.options.map(function (o, oi) { return '<button class="qz-opt" data-qi="' + qi + '" data-oi="' + oi + '">' + esc(o) + '</button>'; }).join("") +
             '<div class="qz-why hide">' + esc(q.why || "") + '</div></div>';
         }).join("") + '</div>';
@@ -1698,6 +1702,12 @@
           tab.classList.add("on");
           content.querySelectorAll(".lsn-view").forEach(function (v) { v.classList.toggle("hide", v.getAttribute("data-v") !== tab.getAttribute("data-view")); });
           if (tab.getAttribute("data-view") === "progress") renderProgress();
+          return;
+        }
+        var qra = e.target.closest(".qz-ra");
+        if (qra && window.ReadAloud) {
+          var rq = d.quiz[+qra.getAttribute("data-qi")];
+          if (rq) { var rt = rq.q + ". Options: " + rq.options.map(function (o, i) { return String.fromCharCode(65 + i) + ". " + o; }).join(". "); window.ReadAloud.toggle(rt, qra); }
           return;
         }
         if (e.target.closest("[data-flip]")) { flipped = !flipped; drawFC(); return; }

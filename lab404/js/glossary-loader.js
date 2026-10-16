@@ -181,12 +181,15 @@
       var entries = groups[letter].map(function(t) {
         var dLabel = domainLabel(t.domain);
         var dColor = domainColor(t.domain);
+        var ra = (window.ReadAloud && window.ReadAloud.supported())
+          ? '<button class="gl-ra" type="button" title="Read this term aloud" aria-label="Read aloud: ' + escHtml(t.term) + '" data-ra-term="' + escHtml(t.term) + '" data-ra-def="' + escHtml(t.definition) + '">🔊</button>' : '';
         return '<div class="glossary-entry">' +
           '<div class="glossary-term">' + escHtml(t.term) + '</div>' +
           '<div class="glossary-def">' + escHtml(t.definition) + '</div>' +
           '<div style="display:flex;flex-direction:column;gap:0.3rem;align-items:flex-end;min-width:100px;">' +
             (dLabel ? '<span class="badge" style="font-size:0.65rem;' + dColor + '">' + escHtml(dLabel) + '</span>' : '') +
             (t.objective ? '<span class="badge badge-objective" style="font-size:0.65rem;">' + escHtml(t.objective) + '</span>' : '') +
+            ra +
           '</div>' +
         '</div>';
       }).join("");
@@ -198,7 +201,27 @@
     }).join("");
 
     listEl.innerHTML = html;
+
+    /* F2: read a term + definition aloud (one delegated handler) */
+    if (!listEl._raWired) {
+      listEl._raWired = true;
+      listEl.addEventListener("click", function (e) {
+        var b = e.target.closest ? e.target.closest(".gl-ra") : null;
+        if (!b || !window.ReadAloud) return;
+        var txt = (b.getAttribute("data-ra-term") || "") + ". " + (b.getAttribute("data-ra-def") || "");
+        window.ReadAloud.toggle(txt, b);
+      });
+    }
   }
+
+  /* inject the small listen-button style once */
+  (function glStyle() {
+    if (document.getElementById("gl-ra-style")) return;
+    var s = document.createElement("style"); s.id = "gl-ra-style";
+    s.textContent = ".gl-ra{border:1px solid var(--border);background:transparent;color:var(--text-muted);border-radius:6px;padding:2px 6px;font-size:.8rem;cursor:pointer;line-height:1}" +
+      ".gl-ra:hover{border-color:var(--accent);color:var(--accent)}.gl-ra.playing{background:var(--accent);color:#fff;border-color:var(--accent)}";
+    document.head.appendChild(s);
+  })();
 
   function domainColor(d) {
     if (isSec()) return "background:var(--accent-dim);color:var(--accent);";

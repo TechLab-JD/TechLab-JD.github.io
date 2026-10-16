@@ -58,6 +58,14 @@ window.CourseLoader = (function () {
 
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]; }); }
   function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  /* F2: spoken form of a question — prompt plus lettered options. */
+  function qReadText(q) {
+    var t = String(q.q || "");
+    if (q.options && q.options.length) {
+      t += ". Options: " + q.options.map(function (o, i) { return String.fromCharCode(65 + i) + ". " + o; }).join(". ");
+    }
+    return t;
+  }
   function paras(t) { return String(t == null ? "" : t).split(/\n\n+/).map(function (p) { return p.trim() ? "<p>" + esc(p.trim()) + "</p>" : ""; }).join(""); }
   function deepSection(sec) {  // textbook-depth lesson section
     return (sec.h ? '<div class="cv-ds-h">' + esc(sec.h) + "</div>" : "") +
@@ -400,6 +408,7 @@ window.CourseLoader = (function () {
 
   function renderQ() {
     stopClip();
+    if (window.ReadAloud) window.ReadAloud.stop();  /* F2: stop any prior read-aloud */
     var q = quiz.qs[quiz.i];
     var title = quiz.mode === "placement" ? "Placement check" : quiz.mode === "weakest" ? "Practice — weakest objectives" : quiz.mode === "review" ? "🔁 Review — due objectives" : "Practice — " + q.obj;
     var body;
@@ -415,11 +424,14 @@ window.CourseLoader = (function () {
         }).join("") + '</div>';
     }
     var spk = hasClip(q.id) ? '<button class="cv-spk" id="cv-spk">🔊 Listen</button>' : "";
+    /* F2: text-to-speech fallback for any question without a recorded clip */
+    var ra = (!hasClip(q.id) && window.ReadAloud && window.ReadAloud.supported())
+      ? '<button class="cv-btn ghost sm cv-readaloud" id="cv-ra" aria-pressed="false" title="Read this question aloud"><span class="ra-lbl">🔊 Listen</span></button>' : "";
     el.innerHTML =
       '<div class="cv-wrap"><div class="cv-q">' +
         '<div class="cv-prog"><span>' + esc(title) + '</span><span>' + (quiz.i + 1) + " / " + quiz.qs.length + '</span></div>' +
         '<div class="cv-qtext">' + esc(q.q) + '</div>' +
-        spk +
+        spk + ra +
         body +
         '<div id="cv-fb"></div>' +
         '<div class="cv-row" id="cv-row"><button class="cv-btn" id="cv-check">Check</button>' +
@@ -445,7 +457,9 @@ window.CourseLoader = (function () {
     var spkBtn = document.getElementById("cv-spk");
     if (spkBtn) spkBtn.addEventListener("click", function () { playClip(q.id); });
     if (spkBtn && audio.autoplay) playClip(q.id);  // early grades (K-3): read the question aloud automatically
-    document.getElementById("cv-quit").addEventListener("click", function () { stopClip(); quiz = null; renderDash(); });
+    var raBtn = document.getElementById("cv-ra");   /* F2 */
+    if (raBtn) raBtn.addEventListener("click", function () { window.ReadAloud.toggle(qReadText(q), raBtn); });
+    document.getElementById("cv-quit").addEventListener("click", function () { if (window.ReadAloud) window.ReadAloud.stop(); stopClip(); quiz = null; renderDash(); });
     var flagBtn = document.getElementById("cv-flag");
     if (flagBtn) flagBtn.addEventListener("click", function () {  /* G3: report a question (local) */
       try { var r = JSON.parse(localStorage.getItem("lab404.reported") || "[]"); r.push({ course: courseId, obj: q.obj, qid: q.id, ts: Date.now() }); localStorage.setItem("lab404.reported", JSON.stringify(r)); } catch (e) {}

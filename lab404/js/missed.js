@@ -108,7 +108,13 @@
 
     function courseTitle(id) { return (COURSES[id] && COURSES[id].title) || id; }
 
+    function raText(q) {
+      var t = String(q.q || "");
+      if (q.options && q.options.length) t += ". Options: " + q.options.map(function (o, i) { return String.fromCharCode(65 + i) + ". " + o; }).join(". ");
+      return t;
+    }
     function renderQ() {
+      if (window.ReadAloud) window.ReadAloud.stop();  /* F2 */
       var it = quiz.qs[quiz.i], q = it.q;
       var body;
       if (q.type === "numeric") {
@@ -129,7 +135,9 @@
           body +
           '<div id="mq-fb"></div>' +
           '<div class="mq-row" id="mq-row"><button class="mq-btn" id="mq-check">Check</button>' +
-            '<button class="mq-btn ghost" id="mq-quit">Quit</button></div>' +
+            '<button class="mq-btn ghost" id="mq-quit">Quit</button>' +
+            ((window.ReadAloud && window.ReadAloud.supported()) ? '<button class="mq-btn ghost cv-readaloud" id="mq-ra" aria-pressed="false" title="Read this question aloud"><span class="ra-lbl">🔊 Listen</span></button>' : "") +
+          '</div>' +
         '</div>';
 
       var sel = q.type === "multi" ? [] : null;
@@ -147,7 +155,9 @@
           }
         });
       });
-      content.querySelector("#mq-quit").addEventListener("click", function () { render(content); });
+      content.querySelector("#mq-quit").addEventListener("click", function () { if (window.ReadAloud) window.ReadAloud.stop(); render(content); });
+      var mqra = content.querySelector("#mq-ra");
+      if (mqra) mqra.addEventListener("click", function () { window.ReadAloud.toggle(raText(q), mqra); });
       content.querySelector("#mq-check").addEventListener("click", function () {
         if (quiz.answered) return;
         var resp = q.type === "numeric" ? (document.getElementById("mq-in") || {}).value : sel;
