@@ -810,15 +810,15 @@
           '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:2rem;text-align:center;gap:0.6rem;">' +
             '<div style="font-size:2.8rem;">🚀</div>' +
             '<h2 style="font-size:1.1rem;color:var(--accent2);margin:0;">Lab404 Study Hub</h2>' +
-            '<p style="font-size:0.8rem;color:var(--text-muted);margin:0;">CompTIA certification study hub &mdash; OS Edition</p>' +
+            '<p style="font-size:0.8rem;color:var(--text-muted);margin:0;">Free learning for every subject &mdash; OS Edition</p>' +
             '<div style="width:160px;height:1px;background:var(--border);margin:0.8rem auto;"></div>' +
             '<p style="font-size:0.75rem;color:var(--text-faint);margin:0;line-height:1.8;">' +
-              '10 Certification Tracks &bull; Chapter Study Guides<br>' +
-              'Flashcards &bull; Practice Tests &bull; Review Checklists<br>' +
-              'XP &amp; Level System &bull; Study Streak Tracker' +
+              'Math &bull; Science &bull; English &bull; Social Studies &bull; Coding<br>' +
+              'Life skills &amp; electives &bull; CompTIA A+ and Security+<br>' +
+              'Flashcards &bull; Practice Tests &bull; XP &amp; Levels &bull; Streaks' +
             '</p>' +
             '<div style="width:160px;height:1px;background:var(--border);margin:0.8rem auto;"></div>' +
-            '<p style="font-size:0.68rem;color:var(--text-faint);margin:0;">Built for CompTIA A+ 220-1201/1202 and beyond</p>' +
+            '<p style="font-size:0.68rem;color:var(--text-faint);margin:0;">K&ndash;12 through college &bull; private &bull; works offline</p>' +
           '</div>';
       }
     },
