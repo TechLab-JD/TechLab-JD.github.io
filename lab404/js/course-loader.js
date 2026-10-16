@@ -148,7 +148,19 @@ window.CourseLoader = (function () {
       ".cv-fb.ok{background:rgba(60,190,110,.14);border:1px solid #3cbe6e}" +
       ".cv-fb.no{background:rgba(224,72,72,.12);border:1px solid #e0484a}" +
       ".cv-row{display:flex;gap:10px;align-items:center;margin-top:16px;flex-wrap:wrap}" +
-      ".cv-done{text-align:center;padding:10px}";
+      ".cv-done{text-align:center;padding:10px}" +
+      /* D8: printable worksheet (screen-hidden; shown only when printing) */
+      "#ws-print{display:none}" +
+      "@media print{body.ws-printing>*:not(#ws-print){display:none!important}" +
+        "body.ws-printing #ws-print{display:block!important;color:#000;font-family:Georgia,'Times New Roman',serif;font-size:12pt;line-height:1.5}" +
+        "#ws-print h1{font-size:17pt;margin:0 0 2pt}#ws-print .ws-sub{font-size:10pt;color:#333;margin:0 0 10pt}" +
+        "#ws-print .ws-meta{font-size:10pt;margin:0 0 14pt;border-bottom:1px solid #000;padding-bottom:8pt}" +
+        "#ws-print .ws-q{margin:0 0 11pt;page-break-inside:avoid}" +
+        "#ws-print .ws-qn{font-weight:bold}#ws-print .ws-opts{margin:3pt 0 0 16pt}#ws-print .ws-opt{margin:1pt 0}" +
+        "#ws-print .ws-blank{margin:4pt 0 0 16pt;color:#333}" +
+        "#ws-print .ws-key{page-break-before:always;margin-top:0}#ws-print .ws-key h2{font-size:14pt}" +
+        "#ws-print .ws-key .ws-kq{font-size:11pt;margin:2pt 0}" +
+        "@page{margin:16mm}}";
     document.head.appendChild(s);
   }
 
@@ -193,6 +205,57 @@ window.CourseLoader = (function () {
       } catch (e) { try { document.execCommand("copy"); } catch (x) {} done(); }
     };
     inp.focus();
+  }
+
+  /* D8: build a printable practice worksheet (up to 2 questions/objective) + answer key. */
+  function letterFor(i) { return String.fromCharCode(65 + i); }
+  function printWorksheet() {
+    var items = [];
+    (course.objectives || []).forEach(function (ob) {
+      var pool = shuffle(M.questionsFor(courseId, ob.code).slice()).slice(0, 2);
+      pool.forEach(function (q) { items.push(q); });
+    });
+    if (!items.length) { alert("No practice questions available for this worksheet yet."); return; }
+
+    var qHtml = "", keyHtml = "";
+    items.forEach(function (q, idx) {
+      var n = idx + 1;
+      var block = '<div class="ws-q"><div class="ws-qn">' + n + ". " + esc(q.q) + '</div>';
+      if (q.type === "numeric") {
+        block += '<div class="ws-blank">Answer: ______________</div>';
+        keyHtml += '<div class="ws-kq">' + n + ". " + esc(String(q.answer)) + '</div>';
+      } else {
+        block += '<div class="ws-opts">' + q.options.map(function (op, i) {
+          return '<div class="ws-opt">' + letterFor(i) + ") " + esc(op) + '</div>';
+        }).join("") + '</div>';
+        if (q.type === "multi") {
+          block += '<div class="ws-blank">(Select all that apply)</div>';
+          keyHtml += '<div class="ws-kq">' + n + ". " + (q.correct || []).map(letterFor).join(", ") + '</div>';
+        } else {
+          keyHtml += '<div class="ws-kq">' + n + ". " + letterFor(q.a) + '</div>';
+        }
+      }
+      block += '</div>';
+      qHtml += block;
+    });
+
+    var ws = document.getElementById("ws-print");
+    if (!ws) { ws = document.createElement("div"); ws.id = "ws-print"; document.body.appendChild(ws); }
+    var today = new Date().toLocaleDateString();
+    ws.innerHTML =
+      '<h1>' + esc(course.title) + ' — Practice Worksheet</h1>' +
+      '<div class="ws-sub">' + esc(course.standard || "") + '</div>' +
+      '<div class="ws-meta">Name: ____________________________   Date: ____________   Score: ______ / ' + items.length + '</div>' +
+      qHtml +
+      '<div class="ws-key"><h2>Answer Key</h2>' +
+        '<div class="ws-sub">' + esc(course.title) + ' · ' + esc(today) + '</div>' +
+        keyHtml +
+      '</div>';
+
+    function cleanup() { document.body.classList.remove("ws-printing"); window.removeEventListener("afterprint", cleanup); }
+    window.addEventListener("afterprint", cleanup);
+    document.body.classList.add("ws-printing");
+    window.print();
   }
 
   function renderDash() {
@@ -269,7 +332,8 @@ window.CourseLoader = (function () {
         banner +
         doms +
         '<div class="cv-row"><button class="cv-btn ghost sm" data-act="reset">Reset progress</button>' +
-          '<button class="cv-btn ghost sm" data-act="share">🔗 Share / Assign</button></div>' +
+          '<button class="cv-btn ghost sm" data-act="share">🔗 Share / Assign</button>' +
+          '<button class="cv-btn ghost sm" data-act="worksheet">🖨 Print worksheet</button></div>' +
         '<div class="cv-share" id="cv-share" style="display:none"></div>' +
         '<p class="cv-note">Grades are <b>living</b>: your % / letter / GPA reflect your <i>current</i> mastery and climb toward an A as objectives reach <b>Mastered</b> (85%+, shown consistently). Objectives are aligned to <b>Common Core</b> and the <b>Massachusetts Curriculum Frameworks</b> — switch frameworks above, and each objective shows its standard code. (Texas / VA SOL / FL B.E.S.T. crosswalks are planned.)</p>' +
       '</div>';
@@ -294,6 +358,7 @@ window.CourseLoader = (function () {
         else if (a === "review") startQuiz("review");
         else if (a === "reset") { if (confirm("Reset all progress for this course?")) { M.reset(courseId); renderDash(); } }
         else if (a === "share") { showShare(); }
+        else if (a === "worksheet") { printWorksheet(); }
       });
     });
     el.querySelectorAll("[data-practice]").forEach(function (b) {
