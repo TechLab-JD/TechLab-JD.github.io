@@ -194,6 +194,11 @@ window.CourseLoader = (function () {
       ".cv-steps li{margin:3px 0;padding-left:3px}" +
       ".cv-steps li::marker{color:var(--accent2,#4a90e2);font-weight:700}" +
       ".cv-row{display:flex;gap:10px;align-items:center;margin-top:16px;flex-wrap:wrap}" +
+      /* R4-3: contextual tool strip so learners find the glossary / sims / writing without hunting the menu */
+      ".cv-helpers{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:14px 0 2px}" +
+      ".cv-help-lbl{font-size:.72rem;color:var(--text-muted,#9aa);font-weight:600}" +
+      ".cv-help-btn{border:1px solid var(--border,#334);background:var(--surface-2,rgba(127,127,127,.08));color:var(--text,#dfe);border-radius:999px;padding:5px 12px;font:inherit;font-size:.76rem;cursor:pointer}" +
+      ".cv-help-btn:hover{border-color:var(--accent2,#4a90e2)}" +
       ".cv-done{text-align:center;padding:10px}" +
       /* D8: printable worksheet (screen-hidden; shown only when printing) */
       "#ws-print{display:none}" +
@@ -343,6 +348,16 @@ window.CourseLoader = (function () {
           '<button class="cv-btn" data-act="review">🔁 Review now</button></div>';
     }
 
+    /* R4-3: subject-aware tool strip. Everyone gets the bilingual glossary;
+       science adds the Science Lab sims, English adds Writing Practice. */
+    var helpers = "";
+    if (course.subjectKey && window.Desktop) {
+      var hb = ['<button class="cv-help-btn" data-tool="esglossary">🌐 Key terms (EN/ES)</button>'];
+      if (course.subjectKey === "science") hb.push('<button class="cv-help-btn" data-tool="sims">🔬 Science Lab</button>');
+      if (course.subjectKey === "english") hb.push('<button class="cv-help-btn" data-tool="writing">✍️ Writing Practice</button>');
+      helpers = '<div class="cv-helpers"><span class="cv-help-lbl">Helpful here:</span>' + hb.join("") + '</div>';
+    }
+
     var doms = (course.domains || []).map(function (dm) {
       var objs = (course.objectives || []).filter(function (o) { return o.domain === dm.code; });
       if (!objs.length) return "";
@@ -391,6 +406,7 @@ window.CourseLoader = (function () {
                 '<div><span class="lg">' + r.mastered + "/" + r.total + '</span><small>Mastered</small></div></div>') +
             '<div class="cv-counts">' + counts + '</div></div></div>' +
         banner +
+        helpers +
         doms +
         '<div class="cv-row">' +
           (course.questions && course.questions.length >= 5 ? '<button class="cv-btn sm" data-act="test">📝 Full practice test</button>' : "") +
@@ -411,6 +427,11 @@ window.CourseLoader = (function () {
       b.addEventListener("click", function () {
         if (!window.Lab404Lib) return;
         this.textContent = Lab404Lib.toggleBookmark(courseId, course.title) ? "★" : "☆";
+      });
+    });
+    el.querySelectorAll("[data-tool]").forEach(function (b) {   /* R4-3 */
+      b.addEventListener("click", function () {
+        if (window.Desktop && Desktop.openWindow) Desktop.openWindow(this.getAttribute("data-tool"));
       });
     });
     el.querySelectorAll("[data-act]").forEach(function (b) {
@@ -580,10 +601,17 @@ window.CourseLoader = (function () {
         ? '<div class="cv-sol"><button class="cv-sol-btn" id="cv-sol-btn" type="button">🧩 Show the steps</button><div class="cv-sol-body hide" id="cv-sol-body">' + stepsOl + "</div></div>"
         : '<div class="cv-sol"><div class="cv-sol-h">🧩 How to solve it</div>' + stepsOl + "</div>";
     }
+    /* R4-3: when a learner misses on an academic course, offer the bilingual
+       glossary right there — the "where stuck" moment the panel flagged. */
+    var stuckNudge = (!ok && course.subjectKey && window.Desktop)
+      ? '<button class="cv-help-btn" id="cv-stuck-gloss" style="margin-top:8px">🌐 Stuck on a word? Open Key terms (EN/ES)</button>'
+      : "";
     document.getElementById("cv-fb").innerHTML =
-      '<div class="cv-fb ' + (ok ? "ok" : "no") + '">' + (ok ? "✅ Correct." : "❌ Not quite — the answer is " + esc(ansPlain) + ".") + "</div>" + solHtml;
+      '<div class="cv-fb ' + (ok ? "ok" : "no") + '">' + (ok ? "✅ Correct." : "❌ Not quite — the answer is " + esc(ansPlain) + ".") + "</div>" + solHtml + stuckNudge;
     var solBtn = document.getElementById("cv-sol-btn");
     if (solBtn) solBtn.addEventListener("click", function () { var b = document.getElementById("cv-sol-body"); if (b) { b.classList.remove("hide"); this.classList.add("hide"); } });
+    var stuckBtn = document.getElementById("cv-stuck-gloss");
+    if (stuckBtn) stuckBtn.addEventListener("click", function () { if (window.Desktop && Desktop.openWindow) Desktop.openWindow("esglossary"); });
     if (audioFirst()) window.ReadAloud.speak((ok ? "Correct! " : "Not quite. The answer is " + ansPlain + ". ") + steps.join(". "));  /* D4 */
     var row = document.getElementById("cv-row");
     var last = quiz.i >= quiz.qs.length - 1;
