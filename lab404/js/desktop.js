@@ -2056,73 +2056,56 @@
         return;
       }
 
-      var KEY_LABELS = {
-        "aplus-checklist-c1":       "A+ Core 1 Checklist",
-        "aplus-checklist-c2":       "A+ Core 2 Checklist",
-        "aplus-checklist-terms-c1": "A+ Core 1 Term Checklist",
-        "aplus-checklist-terms-c2": "A+ Core 2 Term Checklist",
-        "aplus-checklist-c3":       "Security+ Checklist",
-        "aplus-checklist-terms-c3": "Security+ Term Checklist",
-        "aplus-wrong":              "A+ Missed Questions",
-        "aplus-theme":              "Theme Preference",
-        "aplus-notes":              "A+ Notes",
-        "netplus-notes":            "Net+ Notes",
-        "secplus-notes":            "Sec+ Notes",
-        "linuxplus-notes":          "Linux+ Notes",
-        "cloudplus-notes":          "Cloud+ Notes",
-        "serverplus-notes":         "Server+ Notes",
-        "cysa-notes":               "CySA+ Notes",
-        "pentest-notes":            "PenTest+ Notes",
-        "securityx-notes":          "SecurityX Notes",
-        "dataplus-notes":           "Data+ Notes",
-      };
-
       function render() {
-        var stats = window.AplusData.getStats();
-        var totalBytes = 0;
-        Object.keys(stats).forEach(function (k) { totalBytes += stats[k].bytes; });
+        var s = window.AplusData.summary();
+        var kb = (s.totalBytes / 1024).toFixed(1);
 
-        var rows = window.AplusData.KEYS.map(function (key) {
-          var s = stats[key] || { present: false, bytes: 0 };
-          var label = KEY_LABELS[key] || key;
-          return '<tr class="dm-row' + (s.present ? "" : " dm-row-empty") + '">' +
-            '<td class="dm-key-name">' + escHtml(label) + '</td>' +
+        var rows = s.groups.map(function (g) {
+          return '<tr class="dm-row' + (g.present ? "" : " dm-row-empty") + '">' +
+            '<td class="dm-key-name">' + escHtml(g.label) + '</td>' +
             '<td class="dm-key-status">' +
-              (s.present
-                ? '<span class="dm-dot dm-dot-ok">\u25cf</span> Saved'
-                : '<span class="dm-dot dm-dot-no">\u25cb</span> Empty') +
+              (g.present
+                ? '<span class="dm-dot dm-dot-ok">\u25cf</span> ' + escHtml(g.detail)
+                : '<span class="dm-dot dm-dot-no">\u25cb</span> none yet') +
             '</td>' +
-            '<td class="dm-key-size">' + (s.present ? s.bytes + " B" : "\u2014") + '</td>' +
           '</tr>';
         }).join("");
 
         content.innerHTML =
           '<div class="dm-header">' +
             '<h2>Study Data Manager</h2>' +
-            '<p class="dm-subtitle">Backup and restore your study progress across devices.</p>' +
+            '<p class="dm-subtitle">Back up your progress to a file, carry it to another device, and print a record. No account needed \u2014 everything stays on your device.</p>' +
           '</div>' +
           '<div class="dm-storage-info">' +
-            '<span class="dm-total">Total stored: ' + totalBytes + ' bytes</span>' +
+            '<span class="dm-total">' + s.totalKeys + ' items saved \u00b7 ' + kb + ' KB</span>' +
           '</div>' +
           '<table class="dm-table">' +
-            '<thead><tr><th>Data</th><th>Status</th><th>Size</th></tr></thead>' +
+            '<thead><tr><th>What\u2019s saved</th><th>Status</th></tr></thead>' +
             '<tbody>' + rows + '</tbody>' +
           '</table>' +
           '<div class="dm-actions">' +
             '<div class="dm-section">' +
-              '<h3>Export</h3>' +
-              '<p>Download all study progress as a JSON backup file.</p>' +
-              '<button class="dm-export-btn" id="' + winId + '-dm-export">\ud83d\udcbe Export Study Data</button>' +
+              '<h3>Back up</h3>' +
+              '<p>Download all your progress as one file you can keep or move to another device.</p>' +
+              '<button class="dm-export-btn" id="' + winId + '-dm-export">\ud83d\udcbe Save my progress to a file</button>' +
             '</div>' +
             '<div class="dm-section">' +
-              '<h3>Import</h3>' +
-              '<p>Restore progress from a previously exported JSON file.</p>' +
-              '<label class="dm-import-label" for="' + winId + '-dm-import">\ud83d\udcc2 Choose File</label>' +
+              '<h3>Restore</h3>' +
+              '<p>Load progress from a backup file. This merges into what\u2019s on this device.</p>' +
+              '<label class="dm-import-label" for="' + winId + '-dm-import">\ud83d\udcc2 Choose a backup file</label>' +
               '<input type="file" id="' + winId + '-dm-import" accept=".json"' +
                 ' style="display:none" aria-label="Import study data file">' +
             '</div>' +
+            '<div class="dm-section">' +
+              '<h3>Printable record</h3>' +
+              '<p>Open the Report Card for a printable transcript of grades and mastery.</p>' +
+              '<button class="dm-export-btn" id="' + winId + '-dm-record" style="background:transparent;color:var(--accent2,#4a90e2);border:1px solid var(--accent2,#4a90e2)">\ud83d\udccb Open Report Card</button>' +
+            '</div>' +
           '</div>' +
           '<div class="dm-msg" id="' + winId + '-dm-msg" style="display:none"></div>';
+
+        var recordBtn = document.getElementById(winId + "-dm-record");
+        if (recordBtn) recordBtn.addEventListener("click", function () { Desktop.openWindow("transcript"); });
 
         var exportBtn = document.getElementById(winId + "-dm-export");
         if (exportBtn) {
