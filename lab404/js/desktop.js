@@ -43,6 +43,7 @@
     "forfamilies": { title: "For Parents & Teachers",  icon: "👪" },
     "missed":     { title: "Practice What You Missed", icon: "🔁" },
     "typing":     { title: "Typing Tutor",             icon: "⌨️" },
+    "cohort":     { title: "Class View",               icon: "👩‍🏫" },
   };
 
   /* ── Cert human-readable labels ── */
@@ -345,6 +346,7 @@
       if (app === "forfamilies") { winEl.style.width = "640px"; winEl.style.height = "620px"; }
       if (app === "missed")  { winEl.style.width = "640px"; winEl.style.height = "580px"; }
       if (app === "typing")  { winEl.style.width = "660px"; winEl.style.height = "580px"; }
+      if (app === "cohort")  { winEl.style.width = "720px"; winEl.style.height = "600px"; }
       if (app === "myprogress") { winEl.style.width = "620px"; winEl.style.height = "600px"; }
       if (app === "bygrade") { winEl.style.width = "740px"; winEl.style.height = "640px"; }
       if (app === "course")  { winEl.style.width = "780px"; winEl.style.height = "660px"; }
@@ -762,7 +764,7 @@
 
       /* H1: these views need the lazy-loaded study data — wait for it, then render. */
       var needsData = app.indexOf("folder-") === 0 ||
-        ["myprogress", "bygrade", "course", "transcript", "skills", "missed"].indexOf(app) >= 0;
+        ["myprogress", "bygrade", "course", "transcript", "skills", "missed", "cohort"].indexOf(app) >= 0;
       if (needsData && window.Lab404Data && !window.Lab404Data.isLoaded()) {
         content.innerHTML = '<div class="loading-state" style="padding:2.4rem;text-align:center;color:var(--text-muted,#9aa)">Loading study content…</div>';
         window.Lab404Data.ensure().then(function () { Desktop._loadApp(winId, app, params); })
@@ -860,6 +862,9 @@
       } else if (app === "typing") {
         if (window.Lab404Typing) window.Lab404Typing.render(content);
         else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Typing tutor not available.</div>';
+      } else if (app === "cohort") {
+        if (window.Lab404Cohort) window.Lab404Cohort.render(content);
+        else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Class view not available.</div>';
       }
     },
 
@@ -918,6 +923,7 @@
             '<button class="ff-go" data-ff="bygrade">🎓 Browse by Grade</button>' +
             '<button class="ff-go" data-ff="skills">📊 Skill Overview</button>' +
             '<button class="ff-go" data-ff="myprogress">📈 My Progress</button>' +
+            '<button class="ff-go" data-ff="cohort">👩‍🏫 Class View (teachers)</button>' +
           '</div>' +
         '</div>';
       content.querySelectorAll(".ff-go").forEach(function (b) {
