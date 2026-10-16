@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-16T01:00:29Z",
- "generated_human": "Oct 16, 2026 · 01:00 UTC",
+ "generated": "2026-10-16T04:49:18Z",
+ "generated_human": "Oct 16, 2026 · 04:49 UTC",
  "sources": [
   {
    "name": "NPR",
@@ -211,14 +211,18 @@
  "trending": [
   {
    "term": "trump",
-   "n": 22
+   "n": 19
   },
   {
    "term": "ukraine",
+   "n": 13
+  },
+  {
+   "term": "senate",
    "n": 12
   },
   {
-   "term": "california",
+   "term": "children",
    "n": 11
   },
   {
@@ -226,27 +230,23 @@
    "n": 11
   },
   {
-   "term": "senate",
-   "n": 10
-  },
-  {
    "term": "oregon",
-   "n": 9
+   "n": 11
   },
   {
    "term": "shooting",
-   "n": 9
+   "n": 10
+  },
+  {
+   "term": "gets",
+   "n": 8
+  },
+  {
+   "term": "california",
+   "n": 8
   },
   {
    "term": "dead",
-   "n": 9
-  },
-  {
-   "term": "execution",
-   "n": 9
-  },
-  {
-   "term": "court",
    "n": 8
   },
   {
@@ -254,7 +254,15 @@
    "n": 8
   },
   {
-   "term": "midterms",
+   "term": "maine",
+   "n": 8
+  },
+  {
+   "term": "debate",
+   "n": 8
+  },
+  {
+   "term": "execution",
    "n": 8
   },
   {
@@ -262,23 +270,15 @@
    "n": 7
   },
   {
-   "term": "gets",
-   "n": 7
-  },
-  {
-   "term": "killed",
-   "n": 7
-  },
-  {
-   "term": "texas",
+   "term": "three",
    "n": 7
   }
  ],
  "videos": [],
  "stories": [
   {
-   "title": "School safety expert discusses Oregon shooting",
-   "summary": "A bystander shot and killed the 16-year-old suspect who opened fire at Silver Rail Elementary School in Bend, Oregon, on Thursday, sources say. At least three children and one adult were killed in the shooting, multiple law enforcement sources told CBS News. Kieran Carroll, schoo",
+   "title": "16-year-old suspect in Bend, Oregon used long gun to shoot at school's locked doors, police say",
+   "summary": "Authorities said the 16-year-old shooter forced entry into the school by shooting at locked doors using a long gun. NBC News' Tom Winter discusses the damage a long gun is capable of, the heroism of a community member to pursue the suspect and the misinformation that accumulates ",
    "category": "General",
    "leans": [
     -1,
@@ -289,8 +289,8 @@
    "span": 3,
    "n_sources": 11,
    "balance": {
-    "l": 3,
-    "c": 4,
+    "l": 4,
+    "c": 3,
     "r": 4
    },
    "blindspot": null,
@@ -299,8 +299,50 @@
      "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Multiple dead, including gunman, following shooting at Bend, Oregon elementary school",
-     "url": "https://www.nbcnews.com/video/multiple-people-dead-in-shooting-at-bend-oregon-elementary-school-271659589854"
+     "title": "Oregon police say four victims dead, including three children, in school shooting",
+     "url": "https://www.nbcnews.com/video/oregon-police-say-four-victims-dead-including-three-children-in-school-shooting-271665733617"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "‘This is a horrible day’: Oregon Gov. Kotek offers support to Bend community following shooting",
+     "url": "https://www.nbcnews.com/now/video/oregon-gov-kotek-offers-support-to-bend-community-following-shooting-271666245989"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "16-year-old suspect in Bend, Oregon used long gun to shoot at school's locked doors, police say",
+     "url": "https://www.nbcnews.com/video/16-year-old-suspect-in-bend-oregon-used-long-gun-to-shoot-at-school-s-locked-doors-271667781627"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Aunt of fifth grader at Oregon school shooting says he sounded ‘very scared’ in call to family",
+     "url": "https://www.nbcnews.com/video/aunt-of-5th-grader-at-oregon-school-shooting-says-he-sounded-very-scared-in-call-to-family-271665733591"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Bend resident recalls hearing gunshots near elementary school shooting",
+     "url": "https://www.nbcnews.com/video/bend-resident-recalls-hearing-gunshots-near-elementary-school-shooting-271659589741"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Bend mayor says vigil planned for victims of school shooting",
+     "url": "https://www.nbcnews.com/now/video/bend-mayor-says-vigil-planned-for-victims-of-school-shooting-271667269718"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Superintendent calls Oregon elementary school shooting ’senseless tragedy’",
+     "url": "https://www.nbcnews.com/video/superintendent-calls-oregon-elementary-school-shooting-senseless-tragedy-271659589586"
     },
     {
      "name": "CBS News",
@@ -313,6 +355,13 @@
      "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
+     "title": "Oregon police give details on elementary school shooting",
+     "url": "https://www.cbsnews.com/video/oregon-police-give-details-elementary-school-shooting/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
      "title": "School safety expert discusses Oregon shooting",
      "url": "https://www.cbsnews.com/video/school-safety-expert-discusses-oregon-shooting/"
     },
@@ -320,15 +369,29 @@
      "name": "ABC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "LIVE:  Press conference on Oregon school shooting: ABC News Live",
-     "url": "https://abcnews.com/video/41463246/"
+     "title": "Teen shooter kills 3 children, 1 teacher at elementary school in Bend, Oregon: Police",
+     "url": "https://abcnews.com/US/multiple-people-injured-shooting-oregon-elementary-school-suspect/story?id=137303119"
     },
     {
-     "name": "ABC News",
+     "name": "Time",
      "lean": -1,
      "label": "Lean Left",
-     "title": "3 children, 1 teacher killed in shooting at Bend, Oregon, elementary school",
-     "url": "https://abcnews.com/US/multiple-people-injured-shooting-oregon-elementary-school-suspect/story?id=137303119"
+     "title": "What We Know So Far About the Elementary School Shooting in Bend, Oregon",
+     "url": "https://time.com/article/2026/10/16/bend-oregon-shooting-silver-rail-elementary-school/"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Three children and teacher killed in US primary school shooting",
+     "url": "https://www.bbc.co.uk/news/articles/cm89zp48k4kzo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "'It's really hard to believe' - How Oregon primary school shooting unfolded",
+     "url": "https://www.bbc.co.uk/news/videos/cwe8r29mjd05o?at_medium=RSS&at_campaign=rss"
     },
     {
      "name": "BBC News",
@@ -341,22 +404,22 @@
      "name": "The Hill",
      "lean": 0,
      "label": "Center",
-     "title": "Multiple victims reported after shooting at Oregon elementary school",
+     "title": "5 dead, including suspect, after Oregon elementary school shooting",
      "url": "https://thehill.com/homenews/state-watch/6152592-bend-oregon-elementary-school-shooting/"
     },
     {
      "name": "Al Jazeera",
      "lean": 0,
      "label": "Center",
-     "title": "At least 4, including 3 children, killed in US elementary school shooting",
-     "url": "https://www.aljazeera.com/news/2026/10/15/at-least-4-including-3-children-killed-in-us-elementary-school-shooting?traffic_source=rss"
+     "title": "Peshawar mourns children killed in school roof collapse",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/10/16/peshawar-mourns-children-killed-in-school-roof-collapse?traffic_source=rss"
     },
     {
-     "name": "Newsweek",
+     "name": "Al Jazeera",
      "lean": 0,
      "label": "Center",
-     "title": "At Least 5 Believed Dead in Oregon Elementary School Shooting",
-     "url": "https://www.newsweek.com/active-shooter-reported-at-oregon-elementary-school-what-we-know-12575787"
+     "title": "Three children, one teacher killed in Oregon school shooting",
+     "url": "https://www.aljazeera.com/news/2026/10/15/at-least-4-including-3-children-killed-in-us-elementary-school-shooting?traffic_source=rss"
     },
     {
      "name": "Washington Examiner",
@@ -369,7 +432,7 @@
      "name": "Washington Times",
      "lean": 1,
      "label": "Lean Right",
-     "title": "Police: 5 dead in Bend, Oregon elementary school shooting",
+     "title": "Three children among the dead in Bend, Oregon elementary school shooting",
      "url": "https://www.washingtontimes.com/news/2026/oct/15/bend-oregon-elementary-school-shooting-leaves-5-dead/"
     },
     {
@@ -390,8 +453,8 @@
      "name": "Newsmax",
      "lean": 2,
      "label": "Right",
-     "title": "5 Believed Killed, Shooter Dead at Oregon School",
-     "url": "https://www.newsmax.com/newsfront/oregon-school-shooting-silver-rail-elementary/2026/10/15/id/1272945"
+     "title": "3 Children, 1Teacher Killed in Oregon School Shooting",
+     "url": "https://www.newsmax.com/newsfront/oregon-school-shooting-silver-rail-elementary/2026/10/15/id/1272963"
     }
    ],
    "factchecks": [
@@ -399,14 +462,19 @@
      "org": "Snopes",
      "title": "Hegseth said Pentagon planned to livestream Fort Hood shooter's execution. Is that legal?",
      "link": "https://www.snopes.com/news/2026/10/09/nidal-hasan-execution-livestream-legal/"
+    },
+    {
+     "org": "FactCheck.org",
+     "title": "Republican Ads Distort the Facts in Claiming Democratic Support for ‘Sex Changes’ for Kids",
+     "link": "https://www.factcheck.org/2026/10/republican-ads-distort-the-facts-in-claiming-democratic-support-for-sex-changes-for-kids/"
     }
    ],
    "videos": []
   },
   {
-   "title": "Ukraine resumes strikes on energy targets, saying Russia never stopped its attacks",
-   "summary": "The tense alliance between Ukrainian President Zelenskyy and President Trump is nearing a new low point. After days of bitter back-and-forth between the two leaders, Ukraine has resumed strikes on Russian energy targets. Trump had demanded an \"energy ceasefire\" this past Sunday b",
-   "category": "World",
+   "title": "Collins, Jackson trade jabs in final Maine Senate debate: 3 takeaways",
+   "summary": "Sen. Susan Collins (R-Maine) faced off against Democratic candidate Troy Jackson on Thursday in the final Senate debate before Maine voters head to the polls. The two traded jabs over President Trump, campaign financing, immigration reform and their voting record as the Senate ra",
+   "category": "Politics",
    "leans": [
     -1,
     0,
@@ -414,10 +482,132 @@
     2
    ],
    "span": 3,
-   "n_sources": 8,
+   "n_sources": 7,
    "balance": {
-    "l": 3,
-    "c": 3,
+    "l": 1,
+    "c": 2,
+    "r": 4
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump looms as tensions flare in final Maine Senate debate",
+     "url": "https://www.nbcnews.com/politics/2026-election/trump-looms-tensions-flare-final-maine-senate-debate-rcna603636"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Collins, Jackson trade jabs in final Maine Senate debate: 3 takeaways",
+     "url": "https://thehill.com/homenews/campaign/6152820-susan-collins-troy-jackson-debate-takeaways/"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "\"Oh, shut up\": Maine Senate debate gets testy",
+     "url": "https://www.axios.com/2026/10/16/susan-collins-troy-jackson-maine-senate-debate"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Maine Senate debate gets testy as Troy Jackson tells Collins to ‘shut up’: Top takeaways",
+     "url": "https://www.washingtonexaminer.com/news/campaigns/congressional/4768372/maine-senate-debate-troy-jackson-susan-collins-shut-up/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "'Shut up': Senate debate between Troy Jackson and Susan Collins in Maine gets heated",
+     "url": "https://www.washingtontimes.com/news/2026/oct/15/troy-jackson-susan-collins-senate-debate-maine-gets-heated/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "'Oh, shut up!': Democrat snaps at Collins after heckler drives Maine Senate debate off the rails",
+     "url": "https://www.foxnews.com/politics/shut-democrat-snaps-collins-heckler-drives-maine-senate-debate-rails"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "‘Shut Up’: Dem Snaps At Susan Collins In Fiery Maine Senate Debate",
+     "url": "https://www.dailywire.com/news/shut-up-dem-snaps-at-susan-collins-in-fiery-maine-senate-debate"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Brewers sweep Dodgers to reach World Series for first time since 1982",
+   "summary": "Milwaukee will face either the Cleveland Guardians or the Tampa Bay Rays in the Fall Classic. The NLCS result ends Los Angeles’ bid to win three straight MLB championships.",
+   "category": "General",
+   "leans": [
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 4,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Brewers sweep Dodgers to reach World Series for first time since 1982",
+     "url": "https://www.nbcnews.com/sports/mlb/milwaukee-brewers-los-angeles-dodgers-mlb-nlcs-world-series-rcna603783"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Brewers' Shane Drohan Had Unreported Elbow Issue Prior to NLCS Game 4",
+     "url": "https://www.newsweek.com/sports/mlb/brewers-shane-drohan-had-unreported-elbow-issue-prior-to-nlcs-game-4-12576540"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Dodgers manager sends direct message to Brewers after crushing NLCS sweep",
+     "url": "https://nypost.com/2026/10/16/sports/dodgers-manager-sends-direct-message-to-brewers-after-crushing-nlcs-sweep/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Brewers officially end Dodgers dynasty with ridiculous 6-4 comeback in game four to complete NLCS sweep",
+     "url": "https://www.foxnews.com/outkick-sports/brewers-officially-end-dodgers-dynasty-ridiculous-6-4-comeback-game-four-complete-nlcs-sweep"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Social Security benefits to get a boost. And, Hasan Piker defends his rhetoric",
+   "summary": "Social Security benefits are set to get a boost to offset rising consumer prices. And, streamer Hasan Piker says the GOP's \"guilt-by-association politics\" won't drag Democrats down in the midterms.",
+   "category": "Politics",
+   "leans": [
+    -1,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 0,
     "r": 2
    },
    "blindspot": null,
@@ -426,72 +616,30 @@
      "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Ukraine resumes attacks on Russian oil refineries, officials say, after brief truce",
-     "url": "https://www.npr.org/2026/10/15/g-s1-148194/russia-ukraine-war"
+     "title": "Social Security benefits to get a boost. And, Hasan Piker defends his rhetoric",
+     "url": "https://www.npr.org/2026/10/15/g-s1-148199/up-first-newsletter-inflation-social-security-ukraine-russia-yemen-saudi-arabia"
     },
     {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Ukraine resumes strikes on energy targets, saying Russia never stopped its attacks",
-     "url": "https://www.pbs.org/newshour/show/ukraine-resumes-strikes-on-energy-targets-saying-russia-never-stopped-its-attacks"
-    },
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Ukraine less reliant on U.S. as Trump-Zelenskyy rift deepens, former ambassador says",
-     "url": "https://www.pbs.org/newshour/show/ukraine-less-reliant-on-u-s-as-trump-zelenskyy-rift-deepens-former-ambassador-says"
-    },
-    {
-     "name": "The Atlantic",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Ukraine Finds a New Set of Targets",
-     "url": "https://www.theatlantic.com/national-security/2026/10/ukraine-russia-trump-putin-war/689002/?utm_source=feed"
-    },
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Russia accuses Ukraine of attacking oil refinery after Zelensky says strikes to resume",
-     "url": "https://www.bbc.co.uk/news/articles/cqwyrnwd9dw1o?at_medium=RSS&at_campaign=rss"
-    },
-    {
-     "name": "Axios",
-     "lean": 0,
-     "label": "Center",
-     "title": "Ukraine hits Russian refinery as Starlink satellite services are restored",
-     "url": "https://www.axios.com/2026/10/15/ukraine-starlink-restored-strikes-russia-trump-musk"
-    },
-    {
-     "name": "The Christian Science Monitor",
-     "lean": 0,
-     "label": "Center",
-     "title": "US intel pause, Starlink outages leave Ukraine vulnerable to Russian attack",
-     "url": "https://www.csmonitor.com/World/Europe/2026/1015/ukraine-starlink-russia-energy-truce-trump-drone-interceptors?icid=rss"
-    },
-    {
-     "name": "Washington Times",
+     "name": "Reason",
      "lean": 1,
      "label": "Lean Right",
-     "title": "Ukraine abandons truce, attacks Russian oil refinery as Zelenskyy says he feels betrayed by Trump",
-     "url": "https://www.washingtontimes.com/news/2026/oct/15/ukraine-abandons-truce-attacks-russian-oil-refinery-zelenskyy-says/"
+     "title": "Social Security Is Running Out of Money. Benefits Are Rising 3.6% Next Year Anyway.",
+     "url": "https://reason.com/2026/10/15/social-security-is-running-out-of-money-benefits-are-rising-3-6-next-year-anyway/"
     },
     {
-     "name": "Newsmax",
+     "name": "Fox News",
      "lean": 2,
      "label": "Right",
-     "title": "Trump to Newsmax: Not Fan of Zelenskyy as Kyiv Resumes Refinery Strikes",
-     "url": "https://www.newsmax.com/newsfront/donald-trump-russia-ukraine/2026/10/15/id/1272958"
+     "title": "Hasan Piker defends using incendiary terms like 'inbred' or 'Zionist pig' against opponents",
+     "url": "https://www.foxnews.com/media/hasan-piker-defends-using-incendiary-terms-like-inbred-zionist-pig-against-opponents"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Justice Dept. sues California, claims noncitizens were sent ballots",
-   "summary": "The Justice Department sued California, alleging that the federal government has identified more than 20,000 noncitizens who are unlawfully registered to vote.",
+   "title": "Trump sues California to prevent counting 20,000 voters' ballots",
+   "summary": "The Trump administration is suing California and two election officials over claims that there are suspected ineligible voters who received mail-in ballots for this November's election . Why it matters: The lawsuit is asking the court to prevent about 20,000 voters from having th",
    "category": "Politics",
    "leans": [
     -1,
@@ -499,10 +647,10 @@
     2
    ],
    "span": 3,
-   "n_sources": 4,
+   "n_sources": 3,
    "balance": {
     "l": 1,
-    "c": 2,
+    "c": 1,
     "r": 1
    },
    "blindspot": null,
@@ -515,18 +663,11 @@
      "url": "https://www.cbsnews.com/news/justice-department-california-lawsuit-mail-ballots-noncitizens/"
     },
     {
-     "name": "Al Jazeera",
+     "name": "Axios",
      "lean": 0,
      "label": "Center",
-     "title": "Trump administration sues California over noncitizens on voter rolls",
-     "url": "https://www.aljazeera.com/news/2026/10/15/trump-administration-sues-california-over-noncitizens-on-voter-rolls?traffic_source=rss"
-    },
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "How Trump DOJ Flagged 20K California Voters Feds Suspect Are Noncitizens",
-     "url": "https://www.newsweek.com/trump-doj-california-voters-methodology-lawsuit-12576337"
+     "title": "Trump sues California to prevent counting 20,000 voters' ballots",
+     "url": "https://www.axios.com/2026/10/15/trump-doj-california-voters-ballots-lawsuit"
     },
     {
      "name": "Daily Caller",
@@ -534,92 +675,6 @@
      "label": "Right",
      "title": "DOJ Sues California, Alleging 20K Noncitizens Are Registered On State Voter Roll",
      "url": "https://dailycaller.com/2026/10/15/doj-sues-california-20k-noncitizens-registered-to-vote-gavin-newsom"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Trump invokes executive privilege over Kennedy Center documents in legal battle with Joyce Beatty",
-   "summary": "President Donald Trump invoked his executive privilege in the lawsuit his administration is facing over the Kennedy Center from Rep. Joyce Beatty (D-OH). White House associate counsel Josh Hoyt wrote in a court declaration on Thursday that Trump was declaring his presidential com",
-   "category": "Politics",
-   "leans": [
-    -1,
-    1,
-    2
-   ],
-   "span": 3,
-   "n_sources": 3,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Trump invokes executive privilege in Kennedy Center court fight",
-     "url": "https://www.nbcnews.com/politics/donald-trump/president-invokes-executive-privilege-kennedy-center-court-fight-rcna603701"
-    },
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Trump invokes executive privilege over Kennedy Center documents in legal battle with Joyce Beatty",
-     "url": "https://www.washingtonexaminer.com/news/justice/4767965/trump-executive-privilege-kennedy-center-joyce-beatty/"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Trump Invokes Executive Privilege in Kennedy Center Fight",
-     "url": "https://www.newsmax.com/newsfront/donald-trump-kennedy-center-executive-privilege/2026/10/15/id/1272951"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Democratic cities urge Supreme Court to stop deal ending Biden-era immigration rule",
-   "summary": "A coalition of Democratic-run cities asked the Supreme Court on Thursday to halt a June ruling in a federal court that would block a Biden administration immigration rule allowing judges to close deportation proceedings indefinitely, after the Trump administration declined to def",
-   "category": "Politics",
-   "leans": [
-    -1,
-    1,
-    2
-   ],
-   "span": 3,
-   "n_sources": 3,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Time",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Can the Public See DOGE’s Records? The Supreme Court Takes Up a Key Fight",
-     "url": "https://time.com/article/2026/10/14/can-the-public-see-doge-s-records-the-supreme-court-takes-up-a-key-fight/"
-    },
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Democratic cities urge Supreme Court to stop deal ending Biden-era immigration rule",
-     "url": "https://www.washingtonexaminer.com/news/supreme-court/4767628/democratic-cities-urge-supreme-court-stop-ending-biden-era-immigration-rule/"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Can cooking for terrorists bar asylum? Supreme Court takes up unusual case with broader immigration stakes",
-     "url": "https://www.foxnews.com/politics/cooking-terrorists-bar-asylum-supreme-court-unusual-case-broader-immigration-stakes"
     }
    ],
    "factchecks": [],
@@ -635,9 +690,9 @@
     0
    ],
    "span": 2,
-   "n_sources": 7,
+   "n_sources": 6,
    "balance": {
-    "l": 4,
+    "l": 3,
     "c": 3,
     "r": 0
    },
@@ -649,13 +704,6 @@
      "label": "Left",
      "title": "Trump Calls Off Execution Livestream",
      "url": "https://www.motherjones.com/politics/2026/10/trump-calls-off-execution-livestream-nidal-hasan-hegseth/"
-    },
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Trump says execution of Fort Hood shooter will not be livestreamed",
-     "url": "https://www.nbcnews.com/video/trump-says-execution-of-fort-hood-shooter-will-not-be-livestreamed-271625285609"
     },
     {
      "name": "PBS NewsHour",
@@ -708,6 +756,62 @@
    "videos": []
   },
   {
+   "title": "Katie Zacharia defends use of ‘lawyer’ title despite failing bar: ‘I was very careful’",
+   "summary": "White House press secretary Katie Zacharia addressed newly raised questions regarding her legal credentials after claiming she is a lawyer, even though she never passed the bar exam. In an interview with conservative commentator Jack Posobiec on Thursday, Zacharia confirmed she f",
+   "category": "Politics",
+   "leans": [
+    0,
+    1,
+    2
+   ],
+   "span": 2,
+   "n_sources": 4,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 3
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "White House defends new press secretary over her legal credentials",
+     "url": "https://www.bbc.co.uk/news/articles/ckqxne2evqreo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Katie Zacharia defends use of ‘lawyer’ title despite failing bar: ‘I was very careful’",
+     "url": "https://www.washingtonexaminer.com/news/white-house/4768236/katie-zacharia-legal-credentials-bar-lawyer/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "White House press secretary Katie Zacharia defends her legal background and short first briefing",
+     "url": "https://www.washingtontimes.com/news/2026/oct/15/white-house-press-secretary-katie-zacharia-defends-legal-background/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Katie Zacharia addresses brevity of first press briefing, defends legal credentials after criticism",
+     "url": "https://www.foxnews.com/media/katie-zacharia-addresses-brevity-first-press-briefing-defends-legal-credentials-criticism"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Did Katie Zacharia pass the bar exam? What we know about her legal credentials",
+     "link": "https://www.snopes.com/news/2026/10/14/katie-zacharia-pass-bar-exam/"
+    }
+   ],
+   "videos": []
+  },
+  {
    "title": "Trump names scapegoats as Republicans sweat in Texas",
    "summary": "President Trump is preemptively blaming Sen. John Cornyn and Karl Rove for \"doing everything possible to make it hard for Ken Paxton\" to win the Texas Senate race. Why it matters: The president is publicly spinning what would be a disaster for Republicans on election night. Texas",
    "category": "Politics",
@@ -717,11 +821,11 @@
     1
    ],
    "span": 2,
-   "n_sources": 5,
+   "n_sources": 3,
    "balance": {
     "l": 1,
-    "c": 2,
-    "r": 2
+    "c": 1,
+    "r": 1
    },
    "blindspot": null,
    "sources": [
@@ -733,13 +837,6 @@
      "url": "https://www.politico.com/news/2026/10/15/trump-lashes-out-at-republicans-as-ken-paxtron-struggles-in-texas-01122111"
     },
     {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "Trump says 'if Ken Paxton loses' Texas Senate race, blame Cornyn and Karl Rove",
-     "url": "https://www.cnbc.com/2026/10/15/trump-paxton-texas-talarico.html"
-    },
-    {
      "name": "Axios",
      "lean": 0,
      "label": "Center",
@@ -747,53 +844,11 @@
      "url": "https://www.axios.com/2026/10/16/trump-texas-paxton-cornyn-rove-talarico"
     },
     {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Trump preemptively blames Cornyn and Rove should Paxton lose Texas Senate race",
-     "url": "https://www.washingtonexaminer.com/news/campaigns/congressional/4768013/trump-cornyn-rove-paxton-texas-senate/"
-    },
-    {
      "name": "Washington Times",
      "lean": 1,
      "label": "Lean Right",
      "title": "Trump accuses Sen. Cornyn, Karl Rove of sabotaging Ken Paxton in Texas",
      "url": "https://www.washingtontimes.com/news/2026/oct/15/trump-accuses-sen-john-cornyn-karl-rove-sabotaging-ken-paxton-texas/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Social Security benefits to get a boost. And, Hasan Piker defends his rhetoric",
-   "summary": "Social Security benefits are set to get a boost to offset rising consumer prices. And, streamer Hasan Piker says the GOP's \"guilt-by-association politics\" won't drag Democrats down in the midterms.",
-   "category": "Politics",
-   "leans": [
-    -1,
-    1
-   ],
-   "span": 2,
-   "n_sources": 2,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Social Security benefits to get a boost. And, Hasan Piker defends his rhetoric",
-     "url": "https://www.npr.org/2026/10/15/g-s1-148199/up-first-newsletter-inflation-social-security-ukraine-russia-yemen-saudi-arabia"
-    },
-    {
-     "name": "Reason",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Social Security Is Running Out of Money. Benefits Are Rising 3.6% Next Year Anyway.",
-     "url": "https://reason.com/2026/10/15/social-security-is-running-out-of-money-benefits-are-rising-3-6-next-year-anyway/"
     }
    ],
    "factchecks": [],
@@ -835,87 +890,52 @@
    "videos": []
   },
   {
-   "title": "\"Oh, shut up\": Maine Senate debate gets testy",
-   "summary": "Maine Republican Sen. Susan Collins and her Democratic challenger Troy Jackson were sparring in a testy debate Thursday night when a protester loudly interrupted them. \"So this is obviously one of Troy's supporters,\" Collins said. \"Oh, shut up,\" Jackson shot back. \"I don't even k",
-   "category": "Politics",
-   "leans": [
-    0,
-    2
-   ],
-   "span": 2,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Axios",
-     "lean": 0,
-     "label": "Center",
-     "title": "\"Oh, shut up\": Maine Senate debate gets testy",
-     "url": "https://www.axios.com/2026/10/16/susan-collins-troy-jackson-maine-senate-debate"
-    },
-    {
-     "name": "The Daily Wire",
-     "lean": 2,
-     "label": "Right",
-     "title": "‘Shut Up’: Dem Snaps At Susan Collins In Fiery Maine Senate Debate",
-     "url": "https://www.dailywire.com/news/shut-up-dem-snaps-at-susan-collins-in-fiery-maine-senate-debate"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Bears QB Caleb Williams shuts down reporters asking about his hamstring injury: 'It's not deserving'",
-   "summary": "Chicago Bears QB Caleb Williams returned to full practice but refused to reveal his hamstring tear grade, calling national reports about his diagnosis wrong.",
+   "title": "Heroes and zeros: Dodgers’ October nightmare ends with a whimper",
+   "summary": "Heroes, zeros and other observations from the Dodgers’ 6-4, season-ending loss to the Brewers in Game 4 of the National League Championship Series, which completed a pennant-clinching sweep for Milwaukee: Zero: The Dodgers’ offense –– after the second inning In 2004, one clutch s",
    "category": "General",
    "leans": [
-    0,
-    2
+    -1,
+    1
    ],
    "span": 2,
    "n_sources": 2,
    "balance": {
-    "l": 0,
-    "c": 1,
+    "l": 1,
+    "c": 0,
     "r": 1
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Bears Get Major Caleb Williams Injury Update Ahead of Falcons Game",
-     "url": "https://www.newsweek.com/sports/nfl/bears-get-major-caleb-williams-injury-update-ahead-of-falcons-game-12575822"
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "A Bold Era in Hollywood Ends With a Whimper",
+     "url": "https://www.theatlantic.com/newsletters/2026/10/warner-bros-pam-abdy-michael-de-luca-exit-video-village/689016/?utm_source=feed"
     },
     {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Bears QB Caleb Williams shuts down reporters asking about his hamstring injury: 'It's not deserving'",
-     "url": "https://www.foxnews.com/sports/bears-qb-caleb-williams-shuts-down-reporters-asking-about-hamstring-injury-not-deserving"
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Heroes and zeros: Dodgers’ October nightmare ends with a whimper",
+     "url": "https://nypost.com/2026/10/15/sports/heroes-and-zeros-six-leads-zero-answers-as-brewers-finish-off-dodgers/"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Suspicious mailings to election officials, congressional offices under investigation",
-   "summary": "The FBI and U.S. Postal Inspection Service are looking into the mailings, some of which included an unidentified powdery white substance.",
-   "category": "Politics",
+   "title": "Ukraine resumes strikes on energy targets, saying Russia never stopped its attacks",
+   "summary": "The tense alliance between Ukrainian President Zelenskyy and President Trump is nearing a new low point. After days of bitter back-and-forth between the two leaders, Ukraine has resumed strikes on Russian energy targets. Trump had demanded an \"energy ceasefire\" this past Sunday b",
+   "category": "World",
    "leans": [
     -1,
     0
    ],
    "span": 1,
-   "n_sources": 3,
+   "n_sources": 4,
    "balance": {
-    "l": 2,
+    "l": 3,
     "c": 1,
     "r": 0
    },
@@ -925,22 +945,29 @@
      "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Suspicious mailings to election officials, congressional offices under investigation",
-     "url": "https://www.npr.org/2026/10/15/nx-s1-6003857/suspicious-mailings-election-congressional-offices"
+     "title": "Ukraine resumes attacks on Russian oil refineries, officials say, after brief truce",
+     "url": "https://www.npr.org/2026/10/15/g-s1-148194/russia-ukraine-war"
     },
     {
-     "name": "NBC News",
+     "name": "PBS NewsHour",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Feds investigate suspicious letters sent to lawmakers and election officials",
-     "url": "https://www.nbcnews.com/politics/2026-election/authorities-investigate-suspicious-mailings-congressional-offices-rcna603712"
+     "title": "Ukraine resumes strikes on energy targets, saying Russia never stopped its attacks",
+     "url": "https://www.pbs.org/newshour/show/ukraine-resumes-strikes-on-energy-targets-saying-russia-never-stopped-its-attacks"
+    },
+    {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Ukraine Finds a New Set of Targets",
+     "url": "https://www.theatlantic.com/national-security/2026/10/ukraine-russia-trump-putin-war/689002/?utm_source=feed"
     },
     {
      "name": "BBC News",
      "lean": 0,
      "label": "Center",
-     "title": "Letters with 'suspicious substances' sent to US senators and election offices",
-     "url": "https://www.bbc.co.uk/news/articles/cmq8n513x523o?at_medium=RSS&at_campaign=rss"
+     "title": "Russia accuses Ukraine of attacking oil refinery after Zelensky says strikes to resume",
+     "url": "https://www.bbc.co.uk/news/articles/cqwyrnwd9dw1o?at_medium=RSS&at_campaign=rss"
     }
    ],
    "factchecks": [],
@@ -982,9 +1009,9 @@
    "videos": []
   },
   {
-   "title": "Saudi diplomat says Iran is encouraging Houthi escalation of attacks on the kingdom",
-   "summary": "The escalation between the Saudis and the rebels in neighboring Yemen has exposed the kingdom's challenges in intercepting the attacks in the latest front in the Iran war, while further rattling global markets.",
-   "category": "World",
+   "title": "One Singapore ship was sunk, but here's why others are still transiting the Strait of Hormuz",
+   "summary": "Singapore vessels are set to continue navigating the perilous Strait of Hormuz despite attacks on two container ships, said maritime experts.",
+   "category": "General",
    "leans": [
     -1,
     0
@@ -999,61 +1026,26 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "PBS NewsHour",
+     "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Saudi diplomat says Iran is encouraging Houthi escalation of attacks on the kingdom",
-     "url": "https://www.pbs.org/newshour/world/saudi-diplomat-says-iran-is-encouraging-houthi-escalation-of-attacks-on-the-kingdom"
+     "title": "Strait of Hormuz still unsafe for ships, maritime group warns",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-us-houthi-saudi-arabia-trump/"
     },
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "Iran war live: Saudi blasts Houthi ‘war crimes’; US warns on Saudi airports",
-     "url": "https://www.aljazeera.com/news/liveblog/2026/10/16/iran-war-live-saudi-blasts-houthi-war-crimes-us-warns-on-saudi-airports?traffic_source=rss"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Netflix Chief Content Officer Bela Bajaria is leaving, will be replaced by Peter Rice",
-   "summary": "Netflix announced Bela Bajaria will be replaced by former Disney exec Peter Rice as the company's chief content officer.",
-   "category": "General",
-   "leans": [
-    0,
-    1
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
     {
      "name": "CNBC",
      "lean": 0,
      "label": "Center",
-     "title": "Netflix Chief Content Officer Bela Bajaria is leaving, will be replaced by Peter Rice",
-     "url": "https://www.cnbc.com/2026/10/15/netflix-bela-bajaria-peter-rice.html"
-    },
-    {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Netflix big Bela Bajaria out after decade calling shots on shows. Peter Rice is streamer’s new chief content officer",
-     "url": "https://nypost.com/2026/10/15/business/netflix-big-bela-bajaria-out-after-decade-calling-shots-on-shows-peter-rice-is-steamers-new-chief-content-officer/"
+     "title": "One Singapore ship was sunk, but here's why others are still transiting the Strait of Hormuz",
+     "url": "https://www.cnbc.com/2026/10/16/strait-hormuz-singapore-ships-attacked.html"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "MS NOW retracts report that FBI Director Kash Patel landed in Russia",
-   "summary": "MS NOW retracted a report that FBI Director Kash Patel had landed in Russia, after the FBI showed he was at a law enforcement event in Lynchburg, Virginia, when the claim aired.",
+   "title": "‘Like a tiny nuclear bomb’: Trump details proposed heavy ordnance against Iran",
+   "summary": "President Donald Trump spoke about his reported plan to deploy the largest nonnuclear bomb in the U.S. military’s arsenal, known as the “mother of all bombs,” to force an end to the war in Iran. The GBU-43/B Massive Ordnance Air Blast, or MOAB, bomb would be used in possible stri",
    "category": "World",
    "leans": [
     1,
@@ -1069,26 +1061,61 @@
    "blindspot": "left",
    "sources": [
     {
-     "name": "Washington Times",
+     "name": "Washington Examiner",
      "lean": 1,
      "label": "Lean Right",
-     "title": "MS NOW retracts report that FBI Director Kash Patel landed in Russia",
-     "url": "https://www.washingtontimes.com/news/2026/oct/15/ms-retracts-report-fbi-director-kash-patel-landed-russia/"
+     "title": "‘Like a tiny nuclear bomb’: Trump details proposed heavy ordnance against Iran",
+     "url": "https://www.washingtonexaminer.com/policy/defense/4768311/tiny-nuclear-bomb-trump-moab-iran/"
     },
     {
-     "name": "Fox News",
+     "name": "Newsmax",
      "lean": 2,
      "label": "Right",
-     "title": "Kash Patel demands MS NOW apologize after network's false report claiming FBI director visited Russia",
-     "url": "https://www.foxnews.com/media/kash-patel-demands-ms-now-apologize-after-networks-false-report-claiming-fbi-director-visited-russia"
+     "title": "Trump to Newsmax: Non-Nuclear Mother of All Bombs Option in Iran",
+     "url": "https://www.newsmax.com/newsfront/donald-trump-iran-war/2026/10/15/id/1272966"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Cornell president faces contentious faculty senate meeting over Jane Doe allegations",
-   "summary": "Cornell University’s president was met with scrutiny and sharp questions from its faculty senate Wednesday, when the group convened to discuss a no-confidence vote over the university’s handling of an alleged 2024 sexual assault at a fraternity house, according to an audio record",
+   "title": "Trump invokes executive privilege over Kennedy Center documents in legal battle with Joyce Beatty",
+   "summary": "President Donald Trump invoked his executive privilege in the lawsuit his administration is facing over the Kennedy Center from Rep. Joyce Beatty (D-OH). White House associate counsel Josh Hoyt wrote in a court declaration on Thursday that Trump was declaring his presidential com",
+   "category": "Politics",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump invokes executive privilege over Kennedy Center documents in legal battle with Joyce Beatty",
+     "url": "https://www.washingtonexaminer.com/news/justice/4767965/trump-executive-privilege-kennedy-center-joyce-beatty/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Invokes Executive Privilege in Kennedy Center Fight",
+     "url": "https://www.newsmax.com/newsfront/donald-trump-kennedy-center-executive-privilege/2026/10/15/id/1272951"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Suspicious mailings to election officials, congressional offices under investigation",
+   "summary": "The FBI and U.S. Postal Inspection Service are looking into the mailings, some of which included an unidentified powdery white substance.",
    "category": "Politics",
    "leans": [
     -1
@@ -1103,27 +1130,27 @@
    "blindspot": "right",
    "sources": [
     {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Suspicious mailings to election officials, congressional offices under investigation",
+     "url": "https://www.npr.org/2026/10/15/nx-s1-6003857/suspicious-mailings-election-congressional-offices"
+    },
+    {
      "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Cornell president faces contentious faculty senate meeting over Jane Doe allegations",
-     "url": "https://www.nbcnews.com/news/us-news/cornell-president-faces-contentious-faculty-senate-meeting-jane-doe-al-rcna603703"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Cornell's president grilled by faculty over handling of former student's gang rape allegations",
-     "url": "https://www.cbsnews.com/video/cornells-president-grilled-faculty-handling-former-students-gang-rape-allegations/"
+     "title": "Feds investigate suspicious letters sent to lawmakers and election officials",
+     "url": "https://www.nbcnews.com/politics/2026-election/authorities-investigate-suspicious-mailings-congressional-offices-rcna603712"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "At least 7 crew members missing after drone attacks on ships in Black Sea",
-   "summary": "Emergency teams are searching for 7 missing crew after two chemical tankers were attacked in the Black Sea.",
-   "category": "General",
+   "title": "Ukraine hits Russian refinery as Starlink satellite services are restored",
+   "summary": "Ukraine's Starlink and Starshield satellite services — critical tools in its war against Russia that were unexpectedly throttled this week — have been restored to full capacity, a Ukrainian official tells Axios. The official also said that Ukraine conducted a strike overnight aga",
+   "category": "World",
    "leans": [
     0
    ],
@@ -1137,18 +1164,18 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "BBC News",
+     "name": "Axios",
      "lean": 0,
      "label": "Center",
-     "title": "Seven crew missing after drone attack leaves tanker ablaze off Romania's coast",
-     "url": "https://www.bbc.co.uk/news/articles/c60qkgpp592yo?at_medium=RSS&at_campaign=rss"
+     "title": "Ukraine hits Russian refinery as Starlink satellite services are restored",
+     "url": "https://www.axios.com/2026/10/15/ukraine-starlink-restored-strikes-russia-trump-musk"
     },
     {
-     "name": "Al Jazeera",
+     "name": "The Christian Science Monitor",
      "lean": 0,
      "label": "Center",
-     "title": "At least 7 crew members missing after drone attacks on ships in Black Sea",
-     "url": "https://www.aljazeera.com/video/newsfeed/2026/10/15/at-least-7-crew-members-missing-after-drone-attacks-on-ships-in-black-sea?traffic_source=rss"
+     "title": "US intel pause, Starlink outages leave Ukraine vulnerable to Russian attack",
+     "url": "https://www.csmonitor.com/World/Europe/2026/1015/ukraine-starlink-russia-energy-truce-trump-drone-interceptors?icid=rss"
     }
    ],
    "factchecks": [],
@@ -1226,27 +1253,27 @@
    "videos": []
   },
   {
-   "title": "Katie Zacharia defends use of ‘lawyer’ title despite failing bar: ‘I was very careful’",
-   "summary": "White House press secretary Katie Zacharia addressed newly raised questions regarding her legal credentials after claiming she is a lawyer, even though she never passed the bar exam. In an interview with conservative commentator Jack Posobiec on Thursday, Zacharia confirmed she f",
+   "title": "Zacharia confirms she did not pass bar exam",
+   "summary": "White House press secretary Katie Zacharia said late Thursday that she did not pass the bar exam after her legal background prior to joining the Trump administration was called into question. Zacharia, who has previously claimed to be a lawyer and was described as an “attorney” b",
    "category": "Politics",
    "leans": [
-    1
+    0
    ],
    "span": 0,
    "n_sources": 1,
    "balance": {
     "l": 0,
-    "c": 0,
-    "r": 1
+    "c": 1,
+    "r": 0
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Katie Zacharia defends use of ‘lawyer’ title despite failing bar: ‘I was very careful’",
-     "url": "https://www.washingtonexaminer.com/news/white-house/4768236/katie-zacharia-legal-credentials-bar-lawyer/"
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Zacharia confirms she did not pass bar exam",
+     "url": "https://thehill.com/homenews/administration/6152937-zacharia-bar-exam-white-house/"
     }
    ],
    "factchecks": [
@@ -1292,8 +1319,8 @@
    "videos": []
   },
   {
-   "title": "Ilhan Omar's citizenship, marriages and finances give feds plenty of avenues to probe",
-   "summary": "Rep. Ilhan Omar could face decades behind bars, lose her American citizenship and, along with it, her House seat if federal investigators uncover evidence of criminal wrongdoing, legal experts warn about the probe that brought federal agents to her doorstep.",
+   "title": "Judge upholds NYC sanctuary policy; Trump administration can't commandeer locals to help ICE",
+   "summary": "A federal judge ruled Thursday in favor of New York City's sanctuary policy, saying the federal government can't force local authorities to assist in arresting and deporting illegal immigrants.",
    "category": "World",
    "leans": [
     1
@@ -1311,15 +1338,15 @@
      "name": "Washington Times",
      "lean": 1,
      "label": "Lean Right",
-     "title": "Ilhan Omar's citizenship, marriages and finances give feds plenty of avenues to probe",
-     "url": "https://www.washingtontimes.com/news/2026/oct/15/ilhan-omars-citizenship-marriages-finances-give-feds-plenty-avenues/"
+     "title": "Judge upholds NYC sanctuary policy; Trump administration can't commandeer locals to help ICE",
+     "url": "https://www.washingtontimes.com/news/2026/oct/15/judge-upholds-nyc-sanctuary-policy-trump-administration-cant/"
     }
    ],
    "factchecks": [
     {
-     "org": "Snopes",
-     "title": "Did Ilhan Omar change her birth year in official records?",
-     "link": "https://www.snopes.com/fact-check/ilhan-omar-birthdate-records/"
+     "org": "FactCheck.org",
+     "title": "Trump Officials Mislead About Electrical Grid Reliability",
+     "link": "https://www.factcheck.org/2026/10/trump-officials-mislead-about-electrical-grid-reliability/"
     }
    ],
    "videos": []
@@ -1811,144 +1838,9 @@
    "videos": []
   },
   {
-   "title": "Kevin Warsh speech could offer clues on whether Fed will raise interest rates this month",
-   "summary": "Two inflation reports this week set the stage for a rate hike potentially sooner than previously expected.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Kevin Warsh speech could offer clues on whether Fed will raise interest rates this month",
-     "url": "https://www.nbcnews.com/business/economy/will-fed-raise-interest-rates-kevin-warsh-offer-clues-rcna603661"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "ICE agent driving vehicle that struck and injured Houston man is placed on administrative leave",
-   "summary": "The Harris County DA has interviewed a key witness who was in the ICE vehicle when it hit Miguel Parra Hernandez.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "ICE agent driving vehicle that struck and injured Houston man is placed on administrative leave",
-     "url": "https://www.nbcnews.com/news/us-news/ice-agent-driving-vehicle-struck-injured-houston-man-placed-administra-rcna603716"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Cracks are beginning to show in the stock market as doubts about AI investments grow",
-   "summary": "Consumers already face a host of stressors. If AI spending and tech stocks show signs of sustained decline, U.S. economic growth could be at risk.",
-   "category": "Economy",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Cracks are beginning to show in the stock market as doubts about AI investments grow",
-     "url": "https://www.nbcnews.com/business/markets/stock-market-ai-data-centers-doubts-rcna603710"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Four years after discovery, remains found in a barrel in Lake Mead identified as those of 1980s murder victim",
-   "summary": "The bones with remnants of clothing were found in a deteriorated drum in 2022 as the waters of Lake Mead in Nevada receded. Who killed Edward Lelburian Jackson is still unknown.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Four years after discovery, remains found in a barrel in Lake Mead identified as those of 1980s murder victim",
-     "url": "https://www.nbcnews.com/news/us-news/man-found-barrel-lake-mead-identified-murder-victim-1980s-rcna603634"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Why AOC was in a deep-red part of Michigan: From the Politics Desk",
-   "summary": "Rep. Alexandria Ocasio-Cortez’s campaign swing with Michigan Democratic Senate nominee Abdul El-Sayed today was about much more than boosting him on Election Day in November.",
+   "title": "Musk donates over $150 million to Senate GOP group, assisting Paxton",
+   "summary": "Billionaire Elon Musk is offering a nine-figure assist to Texas GOP Senate candidate Ken Paxton, a decisive return to large-scale political giving for the world's richest man.",
    "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Why AOC was in a deep-red part of Michigan: From the Politics Desk",
-     "url": "https://www.nbcnews.com/politics/politics-news/aoc-was-deep-red-part-michigan-politics-desk-rcna603795"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Strait of Hormuz still unsafe for ships, maritime group warns",
-   "summary": "Vessels in the Strait of Hormuz still face \"indiscriminate attacks\" even if they switch off tracking systems, a maritime risk firm warns.",
-   "category": "World",
    "leans": [
     -1
    ],
@@ -1965,8 +1857,8 @@
      "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Strait of Hormuz still unsafe for ships, maritime group warns",
-     "url": "https://www.cbsnews.com/live-updates/iran-war-us-houthi-saudi-arabia-trump/"
+     "title": "Musk donates over $150 million to Senate GOP group, assisting Paxton",
+     "url": "https://www.cbsnews.com/news/elon-musk-midterm-donations-texas-ken-paxton/"
     }
    ],
    "factchecks": [],
@@ -2052,12 +1944,174 @@
    ],
    "factchecks": [],
    "videos": []
+  },
+  {
+   "title": "Maine couple forced to choose food or heat as oil prices skyrocket",
+   "summary": "Along with diesel and gas, the price of heating oil is up, and no state depends on it more than Maine. Meg Oliver spoke with residents there, now forced to make some tough decisions.",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Maine couple forced to choose food or heat as oil prices skyrocket",
+     "url": "https://www.cbsnews.com/video/maine-couple-forced-choose-food-heat-heating-oil-prices-skyrocket/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "New book explores sonic attacks on American diplomats known as \"Havana Syndrome\"",
+   "summary": "A new book, \"The Havana Syndrome,\" investigates the alleged sonic attacks against American diplomats overseas that left many with symptoms including insomnia and memory loss. Co-authors Oriana Zill de Granados and Michael Ray share more details.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "New book explores sonic attacks on American diplomats known as \"Havana Syndrome\"",
+     "url": "https://www.cbsnews.com/video/new-book-explores-sonic-attacks-on-american-diplomats-known-as-havana-syndrome/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "LIVE:  ABC News Live",
+   "summary": "24/7 coverage of breaking news and live events",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "LIVE:  ABC News Live",
+     "url": "https://abcnews.com/video/41463246/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Soaring diesel prices taking a toll on Oklahoma rancher",
+   "summary": "\"It's probably the most stressful time in my life,\" Scott Belden told ABC News.",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Soaring diesel prices taking a toll on Oklahoma rancher",
+     "url": "https://abcnews.com/Politics/soaring-diesel-prices-taking-toll-oklahoma-rancher/story?id=137288017"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Bus crash in Canada leaves 3 dead and multiple people injured, police say",
+   "summary": "Three people are dead and multiple people are injured following a fire involving a city transit bus in Calgary, police said",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Bus crash in Canada leaves 3 dead and multiple people injured, police say",
+     "url": "https://abcnews.com/International/wireStory/bus-crash-canada-leaves-3-dead-multiple-people-137304062"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "WATCH:  Rhode Island farmer sets new record for world's biggest pumpkin",
+   "summary": "David Muir reports on the new world record for heaviest pumpkin, which weighs 3,156 pounds – smashing the previous record of 2,856 pounds set merely a week ago.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  Rhode Island farmer sets new record for world's biggest pumpkin",
+     "url": "https://abcnews.com/video/137305086/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
   }
  ],
  "blindspots": [
   {
-   "title": "MS NOW retracts report that FBI Director Kash Patel landed in Russia",
-   "summary": "MS NOW retracted a report that FBI Director Kash Patel had landed in Russia, after the FBI showed he was at a law enforcement event in Lynchburg, Virginia, when the claim aired.",
+   "title": "‘Like a tiny nuclear bomb’: Trump details proposed heavy ordnance against Iran",
+   "summary": "President Donald Trump spoke about his reported plan to deploy the largest nonnuclear bomb in the U.S. military’s arsenal, known as the “mother of all bombs,” to force an end to the war in Iran. The GBU-43/B Massive Ordnance Air Blast, or MOAB, bomb would be used in possible stri",
    "category": "World",
    "leans": [
     1,
@@ -2073,26 +2127,61 @@
    "blindspot": "left",
    "sources": [
     {
-     "name": "Washington Times",
+     "name": "Washington Examiner",
      "lean": 1,
      "label": "Lean Right",
-     "title": "MS NOW retracts report that FBI Director Kash Patel landed in Russia",
-     "url": "https://www.washingtontimes.com/news/2026/oct/15/ms-retracts-report-fbi-director-kash-patel-landed-russia/"
+     "title": "‘Like a tiny nuclear bomb’: Trump details proposed heavy ordnance against Iran",
+     "url": "https://www.washingtonexaminer.com/policy/defense/4768311/tiny-nuclear-bomb-trump-moab-iran/"
     },
     {
-     "name": "Fox News",
+     "name": "Newsmax",
      "lean": 2,
      "label": "Right",
-     "title": "Kash Patel demands MS NOW apologize after network's false report claiming FBI director visited Russia",
-     "url": "https://www.foxnews.com/media/kash-patel-demands-ms-now-apologize-after-networks-false-report-claiming-fbi-director-visited-russia"
+     "title": "Trump to Newsmax: Non-Nuclear Mother of All Bombs Option in Iran",
+     "url": "https://www.newsmax.com/newsfront/donald-trump-iran-war/2026/10/15/id/1272966"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Cornell president faces contentious faculty senate meeting over Jane Doe allegations",
-   "summary": "Cornell University’s president was met with scrutiny and sharp questions from its faculty senate Wednesday, when the group convened to discuss a no-confidence vote over the university’s handling of an alleged 2024 sexual assault at a fraternity house, according to an audio record",
+   "title": "Trump invokes executive privilege over Kennedy Center documents in legal battle with Joyce Beatty",
+   "summary": "President Donald Trump invoked his executive privilege in the lawsuit his administration is facing over the Kennedy Center from Rep. Joyce Beatty (D-OH). White House associate counsel Josh Hoyt wrote in a court declaration on Thursday that Trump was declaring his presidential com",
+   "category": "Politics",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump invokes executive privilege over Kennedy Center documents in legal battle with Joyce Beatty",
+     "url": "https://www.washingtonexaminer.com/news/justice/4767965/trump-executive-privilege-kennedy-center-joyce-beatty/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Invokes Executive Privilege in Kennedy Center Fight",
+     "url": "https://www.newsmax.com/newsfront/donald-trump-kennedy-center-executive-privilege/2026/10/15/id/1272951"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Suspicious mailings to election officials, congressional offices under investigation",
+   "summary": "The FBI and U.S. Postal Inspection Service are looking into the mailings, some of which included an unidentified powdery white substance.",
    "category": "Politics",
    "leans": [
     -1
@@ -2107,18 +2196,18 @@
    "blindspot": "right",
    "sources": [
     {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Suspicious mailings to election officials, congressional offices under investigation",
+     "url": "https://www.npr.org/2026/10/15/nx-s1-6003857/suspicious-mailings-election-congressional-offices"
+    },
+    {
      "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Cornell president faces contentious faculty senate meeting over Jane Doe allegations",
-     "url": "https://www.nbcnews.com/news/us-news/cornell-president-faces-contentious-faculty-senate-meeting-jane-doe-al-rcna603703"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Cornell's president grilled by faculty over handling of former student's gang rape allegations",
-     "url": "https://www.cbsnews.com/video/cornells-president-grilled-faculty-handling-former-students-gang-rape-allegations/"
+     "title": "Feds investigate suspicious letters sent to lawmakers and election officials",
+     "url": "https://www.nbcnews.com/politics/2026-election/authorities-investigate-suspicious-mailings-congressional-offices-rcna603712"
     }
    ],
    "factchecks": [],
