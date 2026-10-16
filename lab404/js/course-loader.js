@@ -140,6 +140,8 @@ window.CourseLoader = (function () {
       ".cv-opt.sel{border-color:var(--accent2,#4a90e2);background:rgba(74,144,226,.1)}" +
       ".cv-opt.correct{border-color:#3cbe6e;background:rgba(60,190,110,.14)}" +
       ".cv-opt.wrong{border-color:#e0484a;background:rgba(224,72,72,.12)}" +
+      ".cv-flag{margin-left:auto;background:none;border:0;color:var(--text-faint,#778);font:inherit;font-size:.72rem;cursor:pointer;padding:5px 8px}" +
+      ".cv-flag:hover{color:#e0a93c}.cv-flag:disabled{color:#3cbe6e;cursor:default}" +
       ".cv-num{width:160px;font-size:1.1rem;padding:10px 12px;border:1.5px solid var(--border,#334);border-radius:10px;background:transparent;color:var(--text,#eee);font:inherit}" +
       ".cv-hint{font-size:.7rem;color:var(--text-faint,#778);margin-top:6px}" +
       ".cv-fb{border-radius:10px;padding:11px 14px;margin-top:14px;font-size:.84rem;line-height:1.5}" +
@@ -356,7 +358,8 @@ window.CourseLoader = (function () {
         body +
         '<div id="cv-fb"></div>' +
         '<div class="cv-row" id="cv-row"><button class="cv-btn" id="cv-check">Check</button>' +
-          '<button class="cv-btn ghost sm" id="cv-quit">Quit</button></div>' +
+          '<button class="cv-btn ghost sm" id="cv-quit">Quit</button>' +
+          '<button class="cv-flag" id="cv-flag" type="button" title="Report a problem with this question">⚑ Report</button></div>' +
       '</div></div>';
 
     var sel = q.type === "multi" ? [] : null;
@@ -378,6 +381,11 @@ window.CourseLoader = (function () {
     if (spkBtn) spkBtn.addEventListener("click", function () { playClip(q.id); });
     if (spkBtn && audio.autoplay) playClip(q.id);  // early grades (K-3): read the question aloud automatically
     document.getElementById("cv-quit").addEventListener("click", function () { stopClip(); quiz = null; renderDash(); });
+    var flagBtn = document.getElementById("cv-flag");
+    if (flagBtn) flagBtn.addEventListener("click", function () {  /* G3: report a question (local) */
+      try { var r = JSON.parse(localStorage.getItem("lab404.reported") || "[]"); r.push({ course: courseId, obj: q.obj, qid: q.id, ts: Date.now() }); localStorage.setItem("lab404.reported", JSON.stringify(r)); } catch (e) {}
+      flagBtn.textContent = "✓ Reported — thanks"; flagBtn.disabled = true;
+    });
     document.getElementById("cv-check").addEventListener("click", function () {
       if (quiz.answered) return;
       var resp = q.type === "numeric" ? document.getElementById("cv-in").value : sel;
