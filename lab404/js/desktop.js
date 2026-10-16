@@ -921,6 +921,7 @@
             '<button class="mp-link" data-open="bygrade">🎓 Browse by Grade</button>' +
             '<button class="mp-link" data-open="transcript">📋 Report Card</button>' +
             '<button class="mp-link" data-print="1">🖨 Print progress sheet</button>' +
+            '<button class="mp-link" data-cert="1">🎓 Download certificate</button>' +
           '</div>' +
         '</div>';
 
@@ -980,6 +981,43 @@
         }
         window.print();
       });
+
+      /* ── E3: shareable certificate (canvas -> PNG download, local data only) ── */
+      function drawCertificate() {
+        var name = "Learner";
+        try { if (window.Lab404Profiles && Lab404Profiles.current()) name = Lab404Profiles.current().name || name; } catch (e) {}
+        var grade = ""; try { grade = localStorage.getItem("lab404.myGrade") || ""; } catch (e) {}
+        var gLbl = grade === "K" ? "Kindergarten" : grade === "C" ? "College" : grade ? "Grade " + grade : "";
+        var dateStr = new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+        var W = 1000, H = 700, cv = document.createElement("canvas"); cv.width = W; cv.height = H;
+        var x = cv.getContext("2d");
+        x.fillStyle = "#0f1b2d"; x.fillRect(0, 0, W, H);
+        x.fillStyle = "#13233b"; x.fillRect(30, 30, W - 60, H - 60);
+        x.strokeStyle = "#39e3c8"; x.lineWidth = 4; x.strokeRect(40, 40, W - 80, H - 80);
+        x.strokeStyle = "rgba(74,144,226,.5)"; x.lineWidth = 1; x.strokeRect(52, 52, W - 104, H - 104);
+        x.textAlign = "center";
+        x.fillStyle = "#39e3c8"; x.font = "700 20px Georgia, serif"; x.fillText("LAB404 STUDY HUB", W / 2, 120);
+        x.fillStyle = "#ffffff"; x.font = "700 46px Georgia, serif"; x.fillText("Certificate of Progress", W / 2, 190);
+        x.strokeStyle = "#39e3c8"; x.lineWidth = 2; x.beginPath(); x.moveTo(W / 2 - 160, 214); x.lineTo(W / 2 + 160, 214); x.stroke();
+        x.fillStyle = "#9fb0ad"; x.font = "18px Arial"; x.fillText("This certifies that", W / 2, 268);
+        x.fillStyle = "#ffffff"; x.font = "700 40px Georgia, serif"; x.fillText(name, W / 2, 322);
+        x.fillStyle = "#cfe0dc"; x.font = "18px Arial";
+        x.fillText("has reached " + li.tag + " with " + li.xp + " XP" + (gLbl ? " in " + gLbl : ""), W / 2, 372);
+        var stats = [["Topics mastered", topicMastered], ["Objectives mastered", objMastered], ["Courses started", startedN]];
+        if (streak > 0) stats.push(["Day streak", streak]);
+        var gap = W / (stats.length + 1);
+        stats.forEach(function (s, i) {
+          var cx = gap * (i + 1);
+          x.fillStyle = "#39e3c8"; x.font = "700 34px Georgia, serif"; x.fillText(String(s[1]), cx, 470);
+          x.fillStyle = "#9fb0ad"; x.font = "13px Arial"; x.fillText(s[0], cx, 496);
+        });
+        x.fillStyle = "#9fb0ad"; x.font = "16px Arial"; x.fillText("Awarded " + dateStr, W / 2, 572);
+        x.fillStyle = "#6b7573"; x.font = "12px Arial"; x.fillText("Free learning for every subject · techlab-jd.github.io/lab404", W / 2, 642);
+        var a = document.createElement("a");
+        a.download = "lab404-certificate.png"; a.href = cv.toDataURL("image/png"); a.click();
+      }
+      var certBtn = content.querySelector('.mp-link[data-cert]');
+      if (certBtn) certBtn.addEventListener("click", drawCertificate);
     },
 
     _renderTranscript: function (winId) {
