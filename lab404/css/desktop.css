@@ -1609,10 +1609,25 @@ body.is-resizing * { user-select: none !important; cursor: inherit !important; }
   .lsn-content .lsn-nav { margin: 0 -14px 12px; padding: 10px 14px 6px; }
 
   /* Nothing should force horizontal page scroll */
-  .os-window-content { overflow-wrap: anywhere; }
+  .os-window-content { overflow-wrap: anywhere; overflow-x: hidden !important; box-sizing: border-box; }
+  .os-window-content * { max-width: 100%; }
   .os-window-content img,
   .os-window-content table,
   .os-window-content pre { max-width: 100%; }
+  .cv-obj-title, .cv-obj-code, .cv-std, .gd-tt { overflow-wrap: anywhere !important; white-space: normal !important; }
+
+  /* Mastery course / by-grade / progress views: keep padding inside the screen
+     and let objective rows wrap so the Learn / Practice buttons never clip.
+     !important because course-loader.js injects its .cv-* styles at runtime,
+     landing after this file in the cascade. */
+  .cv-wrap, .gd-wrap, .mp-wrap, .tc-wrap { box-sizing: border-box !important; }
+  .cv-obj { flex-wrap: wrap !important; }
+  .cv-obj-main { flex: 1 1 100% !important; min-width: 0 !important; }
+  .cv-std-chip { white-space: normal !important; }
+  .cv-head, .cv-hmeta { min-width: 0 !important; }
+  .cv-banner { flex-wrap: wrap !important; }
+  .cv-banner p { min-width: 0 !important; }
+  .cv-banner .cv-btn, .gd-cbtn { white-space: normal !important; }
 }
 
 /* ── Global search (Start menu) ────────────────────────────── */
