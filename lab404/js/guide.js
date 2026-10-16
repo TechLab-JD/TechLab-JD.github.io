@@ -5,6 +5,10 @@
 (function () {
   "use strict";
   var SEEN_KEY = "lab404.guide.seen.v1";
+  var GRADE_KEY = "lab404.myGrade";
+  var GRADES = ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "C"];
+  function gradeSet() { try { return GRADES.indexOf(localStorage.getItem(GRADE_KEY)) >= 0; } catch (e) { return false; } }
+  function gLabel(g) { return g === "K" ? "K" : g === "C" ? "College" : g; }
 
   var STEPS = [
     ["🖥️", "The desktop", "Each icon down the left is a subject — Math, Science, Social Studies, Tech, Languages, Life Skills and Arts. Open one to pick your grade and start."],
@@ -39,6 +43,15 @@
       ".lab404-guide-go:hover{background:#5ef0d9}",
       ".lab404-guide-x{position:absolute;top:14px;right:16px;background:none;border:0;color:#73857f;font-size:22px;line-height:1;cursor:pointer}",
       ".lab404-guide-x:hover{color:#dfecea}",
+      ".lab404-guide-grades{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin:18px 0 4px}",
+      "@media (max-width:460px){.lab404-guide-grades{grid-template-columns:repeat(5,1fr)}}",
+      ".lab404-guide-grade{border:1px solid #2a3b3a;background:#141d1f;color:#dfecea;border-radius:10px;padding:12px 4px;font:600 15px/1 system-ui,sans-serif;cursor:pointer;transition:.12s}",
+      ".lab404-guide-grade:hover{border-color:#39e3c8;color:#39e3c8;background:rgba(57,227,200,.08)}",
+      ".lab404-guide-grade.col{grid-column:span 2;font-size:13px}",
+      ".lab404-guide-skip{background:none;border:0;color:#73857f;font:13px system-ui;cursor:pointer;text-decoration:underline;padding:6px 0}",
+      ".lab404-guide-skip:hover{color:#dfecea}",
+      ".lab404-guide-back{background:none;border:0;color:#73857f;font:13px system-ui;cursor:pointer;padding:0}",
+      ".lab404-guide-back:hover{color:#dfecea}",
       "@media (prefers-reduced-motion:reduce){.lab404-guide-ov,.lab404-guide-card{transition:none}}"
     ].join("");
     document.head.appendChild(s);
@@ -56,26 +69,63 @@
       return '<div class="lab404-guide-step"><div class="lab404-guide-ic">' + s[0] +
         '</div><div><h3>' + s[1] + '</h3><p>' + s[2] + '</p></div></div>';
     }).join("");
+    var grades = GRADES.map(function (g) {
+      return '<button class="lab404-guide-grade' + (g === "C" ? " col" : "") + '" data-g="' + g + '">' + gLabel(g) + '</button>';
+    }).join("");
     overlay.innerHTML =
       '<div class="lab404-guide-card" style="position:relative">' +
-        '<button class="lab404-guide-x" aria-label="Close guide">×</button>' +
-        '<div class="lab404-guide-eyebrow">Quick guide</div>' +
-        '<h2>Welcome to the Study Hub</h2>' +
-        '<p class="sub">Free, and built for studying anything — every subject from kindergarten through college. Nothing you do here leaves this device.</p>' +
-        '<div class="lab404-guide-steps">' + steps + '</div>' +
-        '<div class="lab404-guide-foot">' +
-          '<span class="lab404-guide-hint">Need this again? Tap the <b>?</b> in the bottom-right anytime.</span>' +
-          '<button class="lab404-guide-go">Start learning</button>' +
+        '<button class="lab404-guide-x" aria-label="Close">×</button>' +
+        '<div class="lab404-guide-screen" data-screen="welcome">' +
+          '<div class="lab404-guide-eyebrow">Quick guide</div>' +
+          '<h2>Welcome to the Study Hub</h2>' +
+          '<p class="sub">Free, and built for studying anything — every subject from kindergarten through college. Nothing you do here leaves this device.</p>' +
+          '<div class="lab404-guide-steps">' + steps + '</div>' +
+          '<div class="lab404-guide-foot">' +
+            '<span class="lab404-guide-hint">Need this again? Tap the <b>?</b> in the bottom-right anytime.</span>' +
+            '<button class="lab404-guide-go" data-act="next">Start learning</button>' +
+          '</div>' +
+        '</div>' +
+        '<div class="lab404-guide-screen" data-screen="grade" hidden>' +
+          '<div class="lab404-guide-eyebrow">One quick thing</div>' +
+          '<h2>What grade are you in?</h2>' +
+          '<p class="sub">We’ll take you straight to your subjects. You can change this anytime from <b>Browse by Grade</b>.</p>' +
+          '<div class="lab404-guide-grades">' + grades + '</div>' +
+          '<div class="lab404-guide-foot">' +
+            '<button class="lab404-guide-back" data-act="back">← Back</button>' +
+            '<button class="lab404-guide-skip" data-act="skip">Skip for now</button>' +
+          '</div>' +
         '</div>' +
       '</div>';
     document.body.appendChild(overlay);
-    overlay.addEventListener("click", function (e) { if (e.target === overlay) close(); });
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay) return close();
+      var act = e.target.getAttribute && e.target.getAttribute("data-act");
+      if (act === "next") { gradeSet() ? close() : showGrade(true); }
+      else if (act === "back") showGrade(false);
+      else if (act === "skip") close();
+      var g = e.target.getAttribute && e.target.getAttribute("data-g");
+      if (g) pickGrade(g);
+    });
     overlay.querySelector(".lab404-guide-x").addEventListener("click", close);
-    overlay.querySelector(".lab404-guide-go").addEventListener("click", close);
+  }
+
+  function showGrade(on) {
+    if (!overlay) return;
+    overlay.querySelector('[data-screen="welcome"]').hidden = on;
+    overlay.querySelector('[data-screen="grade"]').hidden = !on;
+    var focusBtn = overlay.querySelector(on ? '.lab404-guide-grade' : '.lab404-guide-go');
+    if (focusBtn) focusBtn.focus();
+  }
+
+  function pickGrade(g) {
+    try { localStorage.setItem(GRADE_KEY, g); } catch (e) {}
+    close();
+    try { if (window.Desktop && Desktop.openWindow) Desktop.openWindow("bygrade"); } catch (e) {}
   }
 
   function open() {
     if (!overlay) build();
+    showGrade(false); /* always start on the welcome screen */
     lastFocus = document.activeElement;
     overlay.style.display = "flex";
     requestAnimationFrame(function () { overlay.classList.add("on"); });
