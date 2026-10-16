@@ -178,5 +178,5 @@
     draw();
   }
 
-  window.Lab404EsGlossary = { render: render, count: TERMS.length };
+  window.Lab404EsGlossary = { render: render, count: TERMS.length, terms: TERMS };
 })();

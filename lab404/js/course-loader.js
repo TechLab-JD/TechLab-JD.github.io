@@ -10,6 +10,63 @@ window.CourseLoader = (function () {
   function fmtTime(ms) { var s = Math.floor(ms / 1000), m = Math.floor(s / 60); return m + ":" + (s % 60 < 10 ? "0" : "") + (s % 60); }
   var learnText = {};  // plain-text per objective for the read-aloud layer
 
+  /* ── R4-5: in-lesson Spanish key-term toggle ──
+     Reuses the bilingual glossary bank. When on, the first time a known key term
+     appears in an opened lesson it's annotated inline with its Spanish term. */
+  function esInlineOn() { try { return localStorage.getItem("lab404.esInline") === "1"; } catch (e) { return false; } }
+  var _esMap = null;
+  function esMap() {
+    if (_esMap) return _esMap;
+    _esMap = {};
+    var terms = (window.Lab404EsGlossary && Lab404EsGlossary.terms) || [];
+    terms.forEach(function (t) {
+      if (/^[A-Za-z]+$/.test(t.en)) _esMap[t.en.toLowerCase()] = String(t.es).split("/")[0].trim();
+    });
+    return _esMap;
+  }
+  function annotateES(root) {
+    if (!root) return;
+    var map = esMap(); if (!Object.keys(map).length) return;
+    var used = {};
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        if (!n.nodeValue || !n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        var p = n.parentNode;
+        while (p && p !== root) {
+          if (p.classList && p.classList.contains("cv-es-term")) return NodeFilter.FILTER_REJECT;
+          p = p.parentNode;
+        }
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var nodes = [], n;
+    while ((n = walker.nextNode())) nodes.push(n);
+    nodes.forEach(function (node) {
+      var text = node.nodeValue, lower = text.toLowerCase(), best = -1, bestTerm = null;
+      for (var term in map) {
+        if (used[term]) continue;
+        var re = new RegExp("\\b" + term + "\\b", "i");
+        var m = re.exec(text);
+        if (m && (best === -1 || m.index < best)) { best = m.index; bestTerm = term; }
+      }
+      if (bestTerm == null) return;
+      var re2 = new RegExp("\\b" + bestTerm + "\\b", "i");
+      var mm = re2.exec(text); if (!mm) return;
+      used[bestTerm] = 1;
+      var frag = document.createDocumentFragment();
+      frag.appendChild(document.createTextNode(text.slice(0, mm.index)));
+      var span = document.createElement("span");
+      span.className = "cv-es-term";
+      span.appendChild(document.createTextNode(mm[0]));
+      var es = document.createElement("span");
+      es.className = "cv-es"; es.textContent = " (" + map[bestTerm] + ")";
+      span.appendChild(es);
+      frag.appendChild(span);
+      frag.appendChild(document.createTextNode(text.slice(mm.index + mm[0].length)));
+      node.parentNode.replaceChild(frag, node);
+    });
+  }
+
   /* ── D1: standards crosswalk — surface the standard on each objective, switchable framework ── */
   var FW = [["cc", "Common Core", "CCSS"], ["ma", "MA Frameworks", "MA"]];  // only the two populated frameworks
   function curFw() { try { return localStorage.getItem("lab404.stdFramework") === "ma" ? "ma" : "cc"; } catch (e) { return "cc"; } }
@@ -199,6 +256,9 @@ window.CourseLoader = (function () {
       ".cv-help-lbl{font-size:.72rem;color:var(--text-muted,#9aa);font-weight:600}" +
       ".cv-help-btn{border:1px solid var(--border,#334);background:var(--surface-2,rgba(127,127,127,.08));color:var(--text,#dfe);border-radius:999px;padding:5px 12px;font:inherit;font-size:.76rem;cursor:pointer}" +
       ".cv-help-btn:hover{border-color:var(--accent2,#4a90e2)}" +
+      ".cv-help-btn.on{background:var(--accent2,#4a90e2);color:#fff;border-color:var(--accent2,#4a90e2)}" +
+      ".cv-es-term{border-bottom:1px dashed var(--accent2,#4a90e2)}" +
+      ".cv-es{color:var(--accent2,#4a90e2);font-style:italic;font-size:.92em}" +
       ".cv-done{text-align:center;padding:10px}" +
       /* D8: printable worksheet (screen-hidden; shown only when printing) */
       "#ws-print{display:none}" +
@@ -353,6 +413,7 @@ window.CourseLoader = (function () {
     var helpers = "";
     if (course.subjectKey && window.Desktop) {
       var hb = ['<button class="cv-help-btn" data-tool="esglossary">🌐 Key terms (EN/ES)</button>'];
+      hb.push('<button class="cv-help-btn' + (esInlineOn() ? " on" : "") + '" id="cv-es-toggle" aria-pressed="' + (esInlineOn() ? "true" : "false") + '">🌐 Español in lessons: ' + (esInlineOn() ? "On" : "Off") + '</button>');
       if (course.subjectKey === "science") hb.push('<button class="cv-help-btn" data-tool="sims">🔬 Science Lab</button>');
       if (course.subjectKey === "english") hb.push('<button class="cv-help-btn" data-tool="writing">✍️ Writing Practice</button>');
       helpers = '<div class="cv-helpers"><span class="cv-help-lbl">Helpful here:</span>' + hb.join("") + '</div>';
@@ -434,6 +495,11 @@ window.CourseLoader = (function () {
         if (window.Desktop && Desktop.openWindow) Desktop.openWindow(this.getAttribute("data-tool"));
       });
     });
+    var esToggle = document.getElementById("cv-es-toggle");   /* R4-5 */
+    if (esToggle) esToggle.addEventListener("click", function () {
+      try { localStorage.setItem("lab404.esInline", esInlineOn() ? "" : "1"); } catch (e) {}
+      renderDash();   /* re-render so the state + any open lessons reflect it */
+    });
     el.querySelectorAll("[data-act]").forEach(function (b) {
       b.addEventListener("click", function () {
         var a = this.getAttribute("data-act");
@@ -455,6 +521,7 @@ window.CourseLoader = (function () {
         var panel = document.getElementById("cv-learn-" + code);
         if (panel) {
           var open = panel.classList.toggle("hide"); this.classList.toggle("on", !open);
+          if (!open && esInlineOn()) annotateES(panel);   /* R4-5: Spanish key terms, once shown */
           if (open && window.ReadAloud) window.ReadAloud.stop();
           else if (!open && audioFirst()) window.ReadAloud.speak(learnText[code] || "");  /* D4: read the lesson to non-readers */
         }
