@@ -52,6 +52,7 @@
     "kidmode":    { title: "Kid Mode",                   icon: "🔒" },
     "examready":  { title: "Exam Readiness",             icon: "🎓" },
     "focus":      { title: "Focus Mode",                 icon: "🎯" },
+    "thisweek":   { title: "This Week",                  icon: "📅" },
   };
 
   /* ── Cert human-readable labels ── */
@@ -363,6 +364,7 @@
       if (app === "kidmode") { winEl.style.width = "560px"; winEl.style.height = "500px"; }
       if (app === "examready") { winEl.style.width = "660px"; winEl.style.height = "620px"; }
       if (app === "focus")   { winEl.style.width = "520px"; winEl.style.height = "560px"; }
+      if (app === "thisweek") { winEl.style.width = "560px"; winEl.style.height = "520px"; }
       if (app === "myprogress") { winEl.style.width = "620px"; winEl.style.height = "600px"; }
       if (app === "bygrade") { winEl.style.width = "740px"; winEl.style.height = "640px"; }
       if (app === "course")  { winEl.style.width = "780px"; winEl.style.height = "660px"; }
@@ -912,6 +914,9 @@
       } else if (app === "focus") {
         if (window.Lab404Focus) window.Lab404Focus.renderSetup(content);
         else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Focus mode not available.</div>';
+      } else if (app === "thisweek") {
+        if (window.Lab404Week) window.Lab404Week.render(content);
+        else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Weekly summary not available.</div>';
       }
     },
 
@@ -964,7 +969,7 @@
             '<div class="ff-card"><b>Bilingual help:</b> switch the whole interface to Spanish with the 🌐 button in the taskbar, and turn on <b>Español in lessons</b> inside any course to see key terms in Spanish. There’s also a <b>Bilingual Glossary</b> in LAUNCH.</div>' +
             '<h3>Works offline</h3>' +
             '<p style="margin:2px 0 10px">After the first visit the hub keeps working with no internet, and you can <b>install it</b> like an app. Great for a bus ride or a spotty connection.</p>',
-          btn: { bygrade: "🎓 Browse by Grade", skills: "📊 Skill Overview", myprogress: "📈 My Progress", cohort: "👩‍🏫 Class View (teachers)", assign: "📋 Create an assignment", weekly: "🗓️ Print weekly plan" }
+          btn: { thisweek: "📅 This Week", bygrade: "🎓 Browse by Grade", skills: "📊 Skill Overview", myprogress: "📈 My Progress", cohort: "👩‍🏫 Class View (teachers)", assign: "📋 Create an assignment", weekly: "🗓️ Print weekly plan" }
         },
         es: {
           toggle: "English",
@@ -985,7 +990,7 @@
             '<div class="ff-card"><b>Ayuda bilingüe:</b> cambie toda la interfaz al español con el botón 🌐 de la barra, y active <b>Español en las lecciones</b> dentro de un curso para ver los términos clave en español. También hay un <b>Glosario bilingüe</b> en LAUNCH.</div>' +
             '<h3>Funciona sin conexión</h3>' +
             '<p style="margin:2px 0 10px">Después de la primera visita el sitio funciona sin internet, y puede <b>instalarlo</b> como una app. Ideal para el autobús o una conexión débil.</p>',
-          btn: { bygrade: "🎓 Explorar por grado", skills: "📊 Resumen de destrezas", myprogress: "📈 Mi progreso", cohort: "👩‍🏫 Vista de clase (maestros)", assign: "📋 Crear una asignación", weekly: "🗓️ Imprimir plan semanal" }
+          btn: { thisweek: "📅 Esta semana", bygrade: "🎓 Explorar por grado", skills: "📊 Resumen de destrezas", myprogress: "📈 Mi progreso", cohort: "👩‍🏫 Vista de clase (maestros)", assign: "📋 Crear una asignación", weekly: "🗓️ Imprimir plan semanal" }
         }
       };
 
@@ -996,6 +1001,7 @@
             '<div style="text-align:right;margin-bottom:4px"><button class="ff-go" id="ff-lang">🌐 ' + g.toggle + '</button></div>' +
             g.body +
             '<div style="margin-top:14px">' +
+              '<button class="ff-go" data-ff="thisweek">' + g.btn.thisweek + '</button>' +
               '<button class="ff-go" data-ff="bygrade">' + g.btn.bygrade + '</button>' +
               '<button class="ff-go" data-ff="skills">' + g.btn.skills + '</button>' +
               '<button class="ff-go" data-ff="myprogress">' + g.btn.myprogress + '</button>' +
@@ -1180,6 +1186,7 @@
           badgesHtml +
           '<div class="mp-links">' +
             '<button class="mp-link" data-open="bygrade">🎓 Browse by Grade</button>' +
+            '<button class="mp-link" data-open="thisweek">📅 This Week</button>' +
             '<button class="mp-link" data-open="stickers">🌟 Sticker Book</button>' +
             '<button class="mp-link" data-open="transcript">📋 Report Card</button>' +
             '<button class="mp-link" data-print="1">🖨 Print progress sheet</button>' +
