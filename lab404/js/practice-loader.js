@@ -65,6 +65,95 @@
     return a;
   }
 
+  /* ── Academic (K-12) practice: route to the per-course mastery runner ── (B1b) */
+  var SUBJECTS = [
+    { key: "math",    icon: "🔢", label: "Math" },
+    { key: "science", icon: "🔬", label: "Science" },
+    { key: "english", icon: "📖", label: "English (ELA)" },
+    { key: "social",  icon: "🏛️", label: "Social Studies" },
+    { key: "coding",  icon: "💻", label: "Coding & CS" }
+  ];
+  var GRADES = ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "C"];
+  function gradeLabel(g) { return g === "K" ? "K" : g === "C" ? "College" : g; }
+
+  function inHub() { return !!(window.Desktop && Desktop.openWindow); }
+
+  function renderAcademic(container) {
+    /* needs the lazy-loaded course data */
+    if (window.Lab404Data && !window.Lab404Data.isLoaded()) {
+      container.innerHTML = '<div class="loading-state"><div class="spinner"></div><p>Loading subjects…</p></div>';
+      window.Lab404Data.ensure().then(function () { renderAcademic(container); })
+        .catch(function () { container.innerHTML = '<div class="error-state container" style="padding-top:3rem;"><h2>Couldn’t load subjects</h2><p>Check your connection and reopen this window.</p></div>'; });
+      return;
+    }
+    var CO = window.LAB404_COURSES || {};
+    /* which grades actually have courses */
+    var have = {};
+    Object.keys(CO).forEach(function (id) { have[CO[id].grade] = true; });
+    var grades = GRADES.filter(function (g) { return have[g]; });
+
+    var saved = "";
+    try { saved = localStorage.getItem("lab404.myGrade") || ""; } catch (e) {}
+    var sel = grades.indexOf(saved) >= 0 ? saved : (grades.indexOf("4") >= 0 ? "4" : grades[0]);
+
+    function draw() {
+      var courses = Object.keys(CO).filter(function (id) { return CO[id].grade === sel; })
+        .map(function (id) { return CO[id]; });
+      /* order subjects by the SUBJECTS list */
+      courses.sort(function (a, b) {
+        var ia = SUBJECTS.map(function (s) { return s.key; }).indexOf(a.subjectKey);
+        var ib = SUBJECTS.map(function (s) { return s.key; }).indexOf(b.subjectKey);
+        return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+      });
+      function subjMeta(k) { for (var i = 0; i < SUBJECTS.length; i++) if (SUBJECTS[i].key === k) return SUBJECTS[i]; return { icon: "📘", label: k }; }
+
+      container.innerHTML =
+        '<div class="container" style="padding-top:2.5rem;padding-bottom:4rem;max-width:680px;">' +
+          '<div class="section-header">' +
+            '<span class="section-label">Practice Mode</span>' +
+            '<h1 style="font-size:clamp(1.5rem,3.5vw,2.25rem);margin-bottom:0.5rem;">Practice by Subject</h1>' +
+            '<p class="text-muted text-sm">Pick a grade and subject — you’ll jump into that course’s practice, with live mastery tracking.</p>' +
+          '</div>' +
+          '<div style="display:flex;gap:0.5rem;margin:1.25rem 0 1rem;">' +
+            '<button class="btn btn-secondary" id="toCompTIA">🎓 CompTIA exams</button>' +
+            '<button class="btn btn-primary" id="toAcademic">🏫 School subjects (K–12)</button>' +
+          '</div>' +
+          '<div class="card" style="display:flex;flex-direction:column;gap:1.1rem;">' +
+            '<div>' +
+              '<label class="text-sm" style="font-weight:600;display:block;margin-bottom:0.5rem;">Grade</label>' +
+              '<div style="display:flex;gap:0.4rem;flex-wrap:wrap;">' +
+                grades.map(function (g) {
+                  return '<button class="btn ' + (g === sel ? "btn-primary" : "btn-secondary") + ' acg-btn" data-g="' + g + '" style="min-width:42px;">' + gradeLabel(g) + '</button>';
+                }).join("") +
+              '</div>' +
+            '</div>' +
+            '<div>' +
+              '<label class="text-sm" style="font-weight:600;display:block;margin-bottom:0.5rem;">Subject — Grade ' + gradeLabel(sel) + '</label>' +
+              '<div style="display:flex;flex-direction:column;gap:0.5rem;">' +
+                (courses.length ? courses.map(function (c) {
+                  var m = subjMeta(c.subjectKey);
+                  return '<button class="btn btn-secondary acs-btn" data-course="' + escHtml(c.id) + '" style="text-align:left;display:flex;align-items:center;gap:0.6rem;justify-content:flex-start;">' +
+                    '<span style="font-size:1.2rem;">' + m.icon + '</span><span>' + escHtml(c.title) + '</span></button>';
+                }).join("") : '<p class="text-sm text-muted">No subjects for this grade yet.</p>') +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+
+      container.querySelector("#toCompTIA").addEventListener("click", function () { renderSetup(container); });
+      container.querySelectorAll(".acg-btn").forEach(function (b) {
+        b.addEventListener("click", function () { sel = this.getAttribute("data-g"); draw(); });
+      });
+      container.querySelectorAll(".acs-btn").forEach(function (b) {
+        b.addEventListener("click", function () {
+          var id = this.getAttribute("data-course");
+          if (inHub()) Desktop.openWindow("course", { course: id });
+        });
+      });
+    }
+    draw();
+  }
+
   /* ── Setup screen ── */
   function renderSetup(container) {
     container.innerHTML =
@@ -79,6 +168,12 @@
           '<h1 style="font-size:clamp(1.5rem,3.5vw,2.25rem);margin-bottom:0.5rem;">Configure Your Practice Test</h1>' +
           '<p class="text-muted text-sm">Customize your session before starting.</p>' +
         '</div>' +
+        (inHub()
+          ? '<div style="display:flex;gap:0.5rem;margin:1.25rem 0 0;">' +
+              '<button class="btn btn-primary" id="toCompTIA">🎓 CompTIA exams</button>' +
+              '<button class="btn btn-secondary" id="toAcademic">🏫 School subjects (K–12)</button>' +
+            '</div>'
+          : "") +
         '<div class="card" style="margin-top:1.5rem;display:flex;flex-direction:column;gap:1.25rem;">' +
 
           '<div>' +
@@ -193,6 +288,8 @@
       state.qset = selectedSet;
       loadAndStart(container, selectedCount, selectedMins);
     });
+    var toAcademic = container.querySelector("#toAcademic");
+    if (toAcademic) toAcademic.addEventListener("click", function () { renderAcademic(container); });
   }
 
   function loadAndStart(container, count, mins) {
