@@ -40,6 +40,7 @@
     "data":       { title: "Data Manager",             icon: "💾" },
     "skills":     { title: "Skill Overview",           icon: "📊" },
     "about":      { title: "About Lab404 Study Hub",  icon: "🚀" },
+    "forfamilies": { title: "For Parents & Teachers",  icon: "👪" },
   };
 
   /* ── Cert human-readable labels ── */
@@ -334,6 +335,7 @@
       if (app === "data")    { winEl.style.width = "580px"; winEl.style.height = "520px"; }
       if (app === "skills")  { winEl.style.width = "620px"; winEl.style.height = "580px"; }
       if (app === "about")   { winEl.style.width = "400px"; winEl.style.height = "340px"; }
+      if (app === "forfamilies") { winEl.style.width = "640px"; winEl.style.height = "620px"; }
       if (app === "myprogress") { winEl.style.width = "620px"; winEl.style.height = "600px"; }
       if (app === "bygrade") { winEl.style.width = "740px"; winEl.style.height = "640px"; }
       if (app === "course")  { winEl.style.width = "780px"; winEl.style.height = "660px"; }
@@ -819,8 +821,75 @@
             '</p>' +
             '<div style="width:160px;height:1px;background:var(--border);margin:0.8rem auto;"></div>' +
             '<p style="font-size:0.68rem;color:var(--text-faint);margin:0;">K&ndash;12 through college &bull; private &bull; works offline</p>' +
+            '<button id="about-ff" style="margin-top:.7rem;border:1px solid var(--border);background:var(--surface,#1a2230);color:var(--text,#dfe);border-radius:9px;padding:6px 12px;font-size:.72rem;cursor:pointer">👪 For Parents &amp; Teachers</button>' +
           '</div>';
+        var affb = document.getElementById("about-ff");
+        if (affb) affb.addEventListener("click", function () { Desktop.openWindow("forfamilies"); });
+      } else if (app === "forfamilies") {
+        Desktop._renderForFamilies(winId);
       }
+    },
+
+    /* C4 — a short, friendly guide for a parent or teacher using the hub with a child/class. */
+    _renderForFamilies: function (winId) {
+      var content = document.getElementById(winId + "-content");
+      if (!content) return;
+      if (!document.getElementById("ff-style")) {
+        var st = document.createElement("style"); st.id = "ff-style";
+        st.textContent =
+          ".ff{padding:18px 20px;font-size:.9rem;line-height:1.6;max-width:600px;margin:0 auto;box-sizing:border-box}" +
+          ".ff h2{font-size:1.15rem;color:var(--accent2,#39e3c8);margin:0 0 2px}" +
+          ".ff .ff-lead{color:var(--text-muted,#9aa);margin:0 0 16px;font-size:.82rem}" +
+          ".ff h3{font-size:.95rem;margin:18px 0 6px;color:var(--text,#dfe)}" +
+          ".ff .ff-step{display:flex;gap:10px;align-items:flex-start;margin:0 0 10px}" +
+          ".ff .ff-num{flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:var(--accent2,#39e3c8);color:#04201b;font-weight:800;font-size:.72rem;display:flex;align-items:center;justify-content:center;margin-top:1px}" +
+          ".ff .ff-step > div:last-child{flex:1}" +
+          ".ff .ff-step b{color:var(--text,#dfe)}" +
+          ".ff .ff-card{border:1px solid var(--border,#334);border-radius:12px;padding:12px 14px;margin:12px 0}" +
+          ".ff .ff-card b{color:var(--accent2,#39e3c8)}" +
+          ".ff ul{margin:6px 0;padding-left:20px}" +
+          ".ff li{margin:3px 0}" +
+          ".ff .ff-priv{border:1px solid var(--border,#334);border-radius:12px;padding:12px 14px;margin:14px 0;background:rgba(57,227,200,.06)}" +
+          ".ff .ff-go{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border,#334);background:var(--surface,#1a2230);color:var(--text,#dfe);border-radius:9px;padding:7px 12px;font-size:.78rem;cursor:pointer;margin:4px 6px 4px 0}" +
+          ".ff .ff-go:hover{border-color:var(--accent2,#39e3c8);color:var(--accent2,#39e3c8)}";
+        document.head.appendChild(st);
+      }
+      content.innerHTML =
+        '<div class="ff">' +
+          '<h2>👪 For Parents &amp; Teachers</h2>' +
+          '<p class="ff-lead">Everything here is free, needs no account, and keeps a learner’s work on their own device. Here’s how to use it with a child or a class.</p>' +
+
+          '<div class="ff-priv"><b>🔒 No sign-up, no tracking.</b> Nothing is uploaded. Progress, scores and streaks are saved only in this browser. Using a shared or school computer? Give each learner their own <b>profile</b> (LAUNCH → the profile button) so their work stays separate.</div>' +
+
+          '<h3>Getting a learner started</h3>' +
+          '<div class="ff-step"><div class="ff-num">1</div><div>On first open, the hub asks <b>what grade</b> they’re in and drops them into that grade’s subjects. K–2 switches to a bigger, friendlier <b>Junior</b> layout automatically.</div></div>' +
+          '<div class="ff-step"><div class="ff-num">2</div><div>Tap <b>LAUNCH → My Grade</b> any time to jump back to their grade. Or open <b>Browse by Grade</b> to pick any grade and subject.</div></div>' +
+          '<div class="ff-step"><div class="ff-num">3</div><div>Each subject has <b>concept cards</b>, <b>flashcards</b>, a <b>glossary</b>, and <b>practice questions</b>. Getting questions right builds mastery, XP and a daily streak.</div></div>' +
+
+          '<h3>Assigning a specific lesson</h3>' +
+          '<p style="margin:2px 0 8px">Open any course and tap <b>Share / Assign</b> — it copies a link that opens straight to that lesson. Paste it into your class chat, an email, or a worksheet. No roster or login needed; the link just opens the lesson.</p>' +
+
+          '<h3>Seeing how they’re doing</h3>' +
+          '<ul>' +
+            '<li><b>Skill Overview</b> (LAUNCH menu) — mastery across every subject at a glance.</li>' +
+            '<li><b>My Progress</b> — level, streak, what to study next, and a <b>Print progress sheet</b> button for a clean paper/PDF report.</li>' +
+            '<li><b>Download certificate</b> — a shareable PNG of what they’ve mastered.</li>' +
+          '</ul>' +
+
+          '<div class="ff-card"><b>Classroom tip:</b> have students use <b>Print progress sheet</b> or export their backup (LAUNCH → profile → Export) and hand it in — that’s your gradebook, with no accounts to manage. A <b>⌨ Report</b> button on each course lets them flag a confusing question.</div>' +
+
+          '<h3>Works offline</h3>' +
+          '<p style="margin:2px 0 10px">After the first visit the hub keeps working with no internet, and you can <b>install it</b> like an app (look for the install banner, or your browser’s “Install” option). Great for a bus ride or a spotty connection.</p>' +
+
+          '<div style="margin-top:14px">' +
+            '<button class="ff-go" data-ff="bygrade">🎓 Browse by Grade</button>' +
+            '<button class="ff-go" data-ff="skills">📊 Skill Overview</button>' +
+            '<button class="ff-go" data-ff="myprogress">📈 My Progress</button>' +
+          '</div>' +
+        '</div>';
+      content.querySelectorAll(".ff-go").forEach(function (b) {
+        b.addEventListener("click", function () { Desktop.openWindow(this.getAttribute("data-ff")); });
+      });
     },
 
     _renderMyProgress: function (winId) {

@@ -10,6 +10,8 @@
   /* Arrived via an assignment link: skip the first-launch welcome, go to the content. */
   try { localStorage.setItem("lab404.guide.seen.v1", "1"); } catch (e) {}
   var id = qp("id"), grade = qp("grade");
+  /* Non-content utility apps that are safe to open from a shared link. */
+  var SAFE_APPS = ["forfamilies", "skills", "myprogress", "practice", "flashcards", "review", "glossary"];
 
   function run() {
     try {
@@ -19,6 +21,7 @@
         if (grade) { try { localStorage.setItem("lab404.myGrade", grade); } catch (e) {} }
         Desktop.openWindow("bygrade");
       }
+      else if (go === "app" && id && SAFE_APPS.indexOf(id) >= 0) { Desktop.openWindow(id); }
     } catch (e) {}
   }
 
