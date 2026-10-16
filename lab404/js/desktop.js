@@ -309,10 +309,15 @@
       var top = Math.min(60 + offset, maxTop);
 
       /* Build window element */
+      /* F3: remember who opened this window so focus can return on close */
+      var opener = (document.activeElement && document.activeElement !== document.body) ? document.activeElement : null;
+
       var winEl = document.createElement("div");
       winEl.className = "os-window focused";
       winEl.id = winId;
       winEl.setAttribute("role", "dialog");
+      winEl.setAttribute("aria-modal", "false");
+      winEl.setAttribute("tabindex", "-1");
       winEl.setAttribute("aria-label", appDef.title);
       winEl.style.left = left + "px";
       winEl.style.top = top + "px";
@@ -387,7 +392,18 @@
         minimized: false,
         maximized: false,
         prevRect: null,
+        opener: opener,
       };
+
+      /* F3: Escape closes the window (unless typing in a field), and open moves focus in */
+      winEl.addEventListener("keydown", function (e) {
+        if (e.key !== "Escape") return;
+        var t = e.target;
+        if (t && /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)) return;  /* let fields handle Esc first */
+        e.stopPropagation();
+        Desktop.closeWindow(winId);
+      });
+      setTimeout(function () { if (Desktop.windows[winId]) { try { winEl.focus(); } catch (e) {} } }, 30);
 
       /* Wire controls */
       Desktop._wireControls(winId);
@@ -453,9 +469,16 @@
     closeWindow: function (winId) {
       var w = Desktop.windows[winId];
       if (!w) return;
+      if (window.ReadAloud) window.ReadAloud.stop();  /* F2/F3: stop any speech from this window */
+      var opener = w.opener;
       w.el.remove();
       delete Desktop.windows[winId];
       Desktop.updateTaskbar();
+      /* F3: return keyboard focus to whatever opened the window, else the Start button */
+      try {
+        if (opener && document.body.contains(opener) && opener.offsetParent !== null) opener.focus();
+        else { var sb = document.getElementById("startBtn"); if (sb) sb.focus(); }
+      } catch (e) {}
     },
 
     minimizeWindow: function (winId) {

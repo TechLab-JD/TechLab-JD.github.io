@@ -1676,3 +1676,28 @@ body.is-resizing * { user-select: none !important; cursor: inherit !important; }
 .start-menu.searching #startSubjects,
 .start-menu.searching .start-menu-divider,
 .start-menu.searching .start-menu-item { display: none !important; }
+
+/* ── F3: visible keyboard focus ring (keyboard nav only; mouse clicks stay clean) ── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible,
+[role="button"]:focus-visible,
+.cv-opt:focus-visible,
+.mq-opt:focus-visible,
+.qz-opt:focus-visible,
+.option-btn:focus-visible,
+.start-menu-item:focus-visible,
+.start-search-item:focus-visible,
+.start-search-input:focus-visible,
+.glossary-search:focus-visible,
+.desktop-icon:focus-visible,
+.folder-app-icon:focus-visible {
+  outline: 2px solid var(--accent2, #39e3c8) !important;
+  outline-offset: 2px !important;
+  border-radius: 6px;
+}
+/* The dialog receives programmatic focus on open (for screen readers); no harsh box. */
+.os-window:focus { outline: none; }
