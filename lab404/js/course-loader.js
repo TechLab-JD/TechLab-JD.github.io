@@ -14,7 +14,11 @@ window.CourseLoader = (function () {
   function stdChip(ob) {
     var x = ob.xwalk || {}, fw = curFw();
     var useKey = x[fw] ? fw : (x.cc ? "cc" : (x.ma ? "ma" : null));
-    if (!useKey) return "";
+    if (!useKey) {
+      /* coding/CS objectives align to CSTA, not Common Core / state math-ELA frameworks */
+      if (x.csta) return ' <span class="cv-std-chip" title="CSTA K-12 Computer Science Standards">📏 CSTA ' + esc(x.csta) + '</span>';
+      return "";
+    }
     var abbr = useKey === "cc" ? "CCSS" : "MA";
     var parts = [];
     if (x.cc) parts.push("Common Core " + x.cc);

@@ -1625,7 +1625,8 @@
 
       /* Core academic subjects: objectives mastered across each subject's graded courses */
       var SUBJ = [["math", "🔢", "Math"], ["science", "🔬", "Science"],
-        ["english", "📖", "English (ELA)"], ["social", "🏛️", "Social Studies"]];
+        ["english", "📖", "English (ELA)"], ["social", "🏛️", "Social Studies"],
+        ["coding", "💻", "Coding & CS"]];
       var acad = SUBJ.map(function (s) {
         var tot = 0, mas = 0, started = false;
         Object.keys(COURSES).forEach(function (id) {
