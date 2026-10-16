@@ -46,6 +46,7 @@
     "cohort":     { title: "Class View",               icon: "👩‍🏫" },
     "stickers":   { title: "Sticker Book",              icon: "🌟" },
     "assign":     { title: "Assignment",                icon: "📋" },
+    "writing":    { title: "Writing Practice",          icon: "✍️" },
   };
 
   /* ── Cert human-readable labels ── */
@@ -351,6 +352,7 @@
       if (app === "cohort")  { winEl.style.width = "720px"; winEl.style.height = "600px"; }
       if (app === "stickers") { winEl.style.width = "640px"; winEl.style.height = "560px"; }
       if (app === "assign")  { winEl.style.width = "660px"; winEl.style.height = "600px"; }
+      if (app === "writing") { winEl.style.width = "680px"; winEl.style.height = "620px"; }
       if (app === "myprogress") { winEl.style.width = "620px"; winEl.style.height = "600px"; }
       if (app === "bygrade") { winEl.style.width = "740px"; winEl.style.height = "640px"; }
       if (app === "course")  { winEl.style.width = "780px"; winEl.style.height = "660px"; }
@@ -875,6 +877,9 @@
       } else if (app === "assign") {
         if (window.Lab404Assign) { if (params && params.assign) window.Lab404Assign.renderStudent(content, params.assign); else window.Lab404Assign.renderBuilder(content); }
         else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Assignments not available.</div>';
+      } else if (app === "writing") {
+        if (window.Lab404Writing) window.Lab404Writing.render(content);
+        else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Writing practice not available.</div>';
       }
     },
 
