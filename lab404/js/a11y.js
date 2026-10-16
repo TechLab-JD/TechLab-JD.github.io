@@ -4,17 +4,31 @@
 (function () {
   "use strict";
   var KEY = "lab404.a11y";
-  var def = { tsize: "normal", readable: false, motion: false };
+  var def = { tsize: "normal", readable: false, motion: false, nightdim: false };
   var st = def;
   try { var r = localStorage.getItem(KEY); if (r) st = Object.assign({}, def, JSON.parse(r)); } catch (e) {}
 
   function save() { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) {} }
+
+  /* F4: night-friendly dim — when on, warm/dim the screen during evening hours only. */
+  function isEvening() { var h = new Date().getHours(); return h >= 20 || h < 6; }
+  function applyNight() {
+    if (!document.body) return;
+    var on = !!st.nightdim && isEvening();
+    var ov = document.getElementById("lab404-night");
+    if (on && !ov) {
+      ov = document.createElement("div"); ov.id = "lab404-night"; ov.setAttribute("aria-hidden", "true");
+      document.body.appendChild(ov);
+    } else if (!on && ov) { ov.parentNode.removeChild(ov); }
+  }
+
   function apply() {
     var h = document.documentElement;
     h.classList.toggle("a11y-tsz-lg", st.tsize === "lg");
     h.classList.toggle("a11y-tsz-xl", st.tsize === "xl");
     h.classList.toggle("a11y-readable", !!st.readable);
     h.classList.toggle("a11y-reduce-motion", !!st.motion);
+    applyNight();
   }
 
   function css() {
@@ -29,6 +43,8 @@
       "html.a11y-readable code,html.a11y-readable pre,html.a11y-readable .cv-obj-code,html.a11y-readable .mono{font-family:\"Consolas\",\"SF Mono\",monospace;letter-spacing:0}",
       "html.a11y-reduce-motion *{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important;scroll-behavior:auto!important}",
       "html.a11y-reduce-motion #wallpaper-canvas{display:none}",
+      /* F4 night dim: warm, semi-transparent overlay that sits above the page but takes no clicks */
+      "#lab404-night{position:fixed;inset:0;z-index:9996;pointer-events:none;background:rgba(255,168,76,.16);mix-blend-mode:multiply}",
       /* control + popup */
       ".a11y-btn{display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:26px;padding:0 5px;border-radius:7px;border:1px solid var(--border,#2a3432);background:transparent;color:inherit;font:700 13px/1 system-ui,sans-serif;cursor:pointer;opacity:.82}",
       ".a11y-btn:hover{opacity:1;border-color:var(--accent2,#39e3c8);color:var(--accent2,#39e3c8)}",
@@ -61,7 +77,8 @@
         '<div class="a11y-seg" id="a11y-tsize">' +
           '<button data-sz="normal">A</button><button data-sz="lg">A+</button><button data-sz="xl">A++</button></div></div>' +
       '<div class="a11y-grp"><div class="a11y-tog" id="a11y-readable"><span>Readable font</span><span class="a11y-pip"></span></div></div>' +
-      '<div class="a11y-grp" style="margin-bottom:0"><div class="a11y-tog" id="a11y-motion"><span>Reduce motion</span><span class="a11y-pip"></span></div></div>';
+      '<div class="a11y-grp"><div class="a11y-tog" id="a11y-motion"><span>Reduce motion</span><span class="a11y-pip"></span></div></div>' +
+      '<div class="a11y-grp" style="margin-bottom:0"><div class="a11y-tog" id="a11y-night"><span>Night dim (8pm–6am)</span><span class="a11y-pip"></span></div></div>';
     document.body.appendChild(pop);
     pop.addEventListener("click", function (e) { e.stopPropagation(); });
     pop.querySelectorAll("#a11y-tsize button").forEach(function (b) {
@@ -69,6 +86,7 @@
     });
     document.getElementById("a11y-readable").addEventListener("click", function () { st.readable = !st.readable; save(); apply(); sync(); });
     document.getElementById("a11y-motion").addEventListener("click", function () { st.motion = !st.motion; save(); apply(); sync(); });
+    document.getElementById("a11y-night").addEventListener("click", function () { st.nightdim = !st.nightdim; save(); apply(); sync(); });
     sync();
   }
   function sync() {
@@ -76,6 +94,7 @@
     pop.querySelectorAll("#a11y-tsize button").forEach(function (b) { b.classList.toggle("on", b.dataset.sz === st.tsize); });
     document.getElementById("a11y-readable").classList.toggle("on", !!st.readable);
     document.getElementById("a11y-motion").classList.toggle("on", !!st.motion);
+    document.getElementById("a11y-night").classList.toggle("on", !!st.nightdim);
   }
   function place(btn) {
     var r = btn.getBoundingClientRect();
@@ -93,7 +112,7 @@
     var btn = document.createElement("button");
     btn.className = "a11y-btn"; btn.id = "a11yBtn"; btn.type = "button";
     btn.textContent = "Aa";
-    btn.title = "Accessibility — text size, readable font, reduce motion";
+    btn.title = "Accessibility — text size, readable font, reduce motion, night dim";
     btn.setAttribute("aria-label", "Accessibility options");
     btn.addEventListener("click", function (e) { e.stopPropagation(); toggle(btn); });
     var clock = document.getElementById("taskbarClock");
@@ -103,6 +122,7 @@
   }
 
   css(); apply();
+  setInterval(applyNight, 5 * 60 * 1000);  /* F4: re-evaluate as the evening window starts/ends */
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", addButton);
   else addButton();
 })();
