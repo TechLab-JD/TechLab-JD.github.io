@@ -495,6 +495,61 @@
       "g10-math-ggpe1u4": ["Distance = √(3² + 4²) = √(9 + 16) = √25.", "= 5."],
       "g10-math-ggpe1u5": ["Midpoint x = (2 + 6) ÷ 2.", "= 4."]
     },
+    "g11-math": {
+      // quadratics
+      "g11-math-k113a": ["Factor the perfect-square trinomial: (x − 3)² = 0.", "Set x − 3 = 0.", "x = 3."],
+      "g11-math-k1112b": ["Set x² = 4.", "Take the positive square root: √4.", "x = 2."],
+      "g11-math-a23u3": ["Take the square root: √36 = 6.", "x = 6."],
+      // rational equations
+      "g11-math-k116a": ["Multiply both sides by x: 6 = 3x.", "Divide by 3: x = 2."],
+      "g11-math-k116b": ["Multiply both sides by 4.", "x = 20."],
+      "g11-math-k116d": ["Multiply both sides by (x + 1): 10 = 2(x + 1).", "10 = 2x + 2, so 2x = 8.", "x = 4."],
+      "g11-math-a26u1": ["Multiply both sides by 2.", "x = 10."],
+      "g11-math-a26u2": ["Multiply both sides by x: 6 = 2x.", "Divide by 2: x = 3."],
+      "g11-math-a26u4": ["Multiply both sides by x: 10 = 5x.", "Divide by 5: x = 2."],
+      "g11-math-a26u6": ["Multiply both sides by 3.", "x = 12."],
+      // radical equations
+      "g11-math-k117a": ["Square both sides to undo the root.", "x = 5² = 25."],
+      "g11-math-k117c": ["Square both sides: x + 1 = 16.", "Subtract 1: x = 15."],
+      "g11-math-a27u3": ["Square both sides: x = 5² = 25."],
+      "g11-math-a27u6": ["Square both sides: x = 3² = 9."],
+      // rational exponents
+      "g11-math-k118a": ["A 1/3 exponent means the cube root.", "∛8 = 2 (2 × 2 × 2 = 8).", "= 2."],
+      "g11-math-k118c": ["Cube root of 27: 3 × 3 × 3 = 27.", "= 3."],
+      // exponential functions
+      "g11-math-k119c": ["Compute 2³ = 8.", "Multiply by 5: 5 × 8.", "= 40."],
+      // logarithms
+      "g11-math-k1110b": ["Ask: 2 to what power is 8?", "2³ = 8.", "= 3."],
+      "g11-math-k1110c": ["Ask: 10 to what power is 1000?", "10³ = 1000.", "= 3."],
+      // exponential / log equations
+      "g11-math-k1111a": ["Write 16 as a power of 2: 16 = 2⁴.", "So x = 4."],
+      "g11-math-k1111b": ["100 = 10².", "So x = 2."],
+      "g11-math-k1111c": ["Rewrite log₃x = 2 as 3² = x.", "x = 9."],
+      "g11-math-k1111d": ["125 = 5³.", "So x = 3."],
+      // sequences
+      "g11-math-k1116a": ["Subtract consecutive terms: 7 − 3.", "= 4."],
+      "g11-math-k1116b": ["The common difference is 4; the 4th term is 15.", "Add one more: 15 + 4.", "= 19."],
+      "g11-math-k1116d": ["Add in pairs: (1 + 5) + (2 + 4) + 3 = 6 + 6 + 3.", "= 15."],
+      "g11-math-k1117a": ["Divide consecutive terms: 6 ÷ 2.", "= 3."],
+      "g11-math-k1117b": ["The ratio is 2; the 3rd term is 20.", "Multiply by 2: 20 × 2.", "= 40."],
+      "g11-math-a216u2": ["Subtract consecutive terms: 5 − 2.", "= 3."],
+      "g11-math-a216u3": ["The difference is 4; 18 + 4.", "= 22."],
+      "g11-math-a216u5": ["Subtract consecutive terms: 7 − 3.", "= 4."],
+      "g11-math-a216u6": ["Terms: 5, 7, 9.", "The 3rd term is 9."],
+      "g11-math-a217u2": ["Divide consecutive terms: 6 ÷ 2.", "= 3."],
+      "g11-math-a217u3": ["The ratio is 2; 12 × 2.", "= 24."],
+      "g11-math-a217u5": ["Divide consecutive terms: 2 ÷ 1.", "= 2."],
+      "g11-math-a217u6": ["Terms: 5, 10, 20.", "The 3rd term is 20."],
+      // absolute value & counting
+      "g11-math-k1118a": ["Absolute value is the distance from zero.", "|−7| = 7."],
+      "g11-math-k1118d": ["|x| = 9 means x is 9 or −9.", "Positive solution: x = 9."],
+      "g11-math-k1119a": ["3! = 3 × 2 × 1.", "= 6."],
+      "g11-math-k1119d": ["4C2 = (4 × 3) ÷ (2 × 1).", "12 ÷ 2.", "= 6."],
+      "g11-math-a218u1": ["Absolute value = distance from zero.", "|−7| = 7."],
+      "g11-math-a219u3": ["3! = 3 × 2 × 1.", "= 6."],
+      "g11-math-a219u4": ["4! = 4 × 3 × 2 × 1.", "= 24."],
+      "g11-math-a219u6": ["5! = 5 × 4 × 3 × 2 × 1.", "= 120."]
+    },
     "sat-math": {
       "sat-math-m1-1": ["Start with 3x + 5 = 20.", "Subtract 5 from both sides: 3x = 15.", "Divide both sides by 3: x = 5."],
       "sat-math-m1-5": ["Start with 2x − 4 = 10.", "Add 4 to both sides: 2x = 14.", "Divide both sides by 2: x = 7."],
