@@ -120,6 +120,7 @@
   function pickGrade(g) {
     try { localStorage.setItem(GRADE_KEY, g); } catch (e) {}
     try { if (window.Lab404Junior) window.Lab404Junior.refresh(); } catch (e) {} /* auto Junior mode for K-2 */
+    try { if (window.Desktop && Desktop._syncGrade) Desktop._syncGrade(); } catch (e) {} /* B2: update grade shortcuts */
     close();
     try { if (window.Desktop && Desktop.openWindow) Desktop.openWindow("bygrade"); } catch (e) {}
   }

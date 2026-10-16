@@ -1833,6 +1833,7 @@
       e.stopPropagation();
       var isHidden = startMenu.hasAttribute("hidden");
       if (isHidden) {
+        try { if (Desktop._syncGrade) Desktop._syncGrade(); } catch (x) {} /* B2: keep "My Grade" label current */
         startMenu.removeAttribute("hidden");
         startBtn.classList.add("active");
         startBtn.setAttribute("aria-expanded", "true");
@@ -1895,16 +1896,31 @@
     menu.innerHTML =
       '<div class="progress-menu-h">Your progress</div>' +
       '<button class="progress-menu-item" data-app="myprogress"><span>📈</span> My Progress</button>' +
-      '<button class="progress-menu-item" data-app="bygrade"><span>🎓</span> Browse by Grade</button>' +
+      '<button class="progress-menu-item" id="pm-bygrade" data-app="bygrade"><span>🎓</span> Browse by Grade</button>' +
       '<button class="progress-menu-item" data-app="transcript"><span>📋</span> Report Card</button>';
     document.body.appendChild(menu);
+
+    /* B2: reflect the learner's chosen grade on the grade shortcuts (progress menu + LAUNCH) */
+    function gradeLbl() {
+      var g = ""; try { g = localStorage.getItem("lab404.myGrade") || ""; } catch (e) {}
+      return g === "K" ? "Kindergarten" : g === "C" ? "College" : g ? "Grade " + g : "";
+    }
+    function syncGrade() {
+      var gl = gradeLbl();
+      var pm = document.getElementById("pm-bygrade");
+      if (pm) pm.innerHTML = '<span>🎓</span> ' + (gl ? "My Grade · " + gl : "Browse by Grade");
+      var sm = document.getElementById("smMyGrade");
+      if (sm) { var lbl = sm.querySelector("span:last-child"); if (lbl) lbl.textContent = gl ? "My Grade · " + gl : "Browse by Grade"; }
+    }
+    Desktop._syncGrade = syncGrade;
+    syncGrade();
 
     function place() {
       var r = badge.getBoundingClientRect();
       menu.style.right = Math.max(8, window.innerWidth - r.right) + "px";
       menu.style.bottom = (window.innerHeight - r.top + 8) + "px";
     }
-    function open() { place(); menu.removeAttribute("hidden"); badge.setAttribute("aria-expanded", "true"); }
+    function open() { syncGrade(); place(); menu.removeAttribute("hidden"); badge.setAttribute("aria-expanded", "true"); }
     function close() { menu.setAttribute("hidden", ""); badge.setAttribute("aria-expanded", "false"); }
 
     badge.addEventListener("click", function (e) { e.stopPropagation(); if (menu.hasAttribute("hidden")) open(); else close(); });
