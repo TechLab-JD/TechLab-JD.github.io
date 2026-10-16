@@ -17,6 +17,8 @@ window.CourseLoader = (function () {
     if (!useKey) {
       /* coding/CS objectives align to CSTA, not Common Core / state math-ELA frameworks */
       if (x.csta) return ' <span class="cv-std-chip" title="CSTA K-12 Computer Science Standards">📏 CSTA ' + esc(x.csta) + '</span>';
+      /* science objectives align to the Next Generation Science Standards */
+      if (x.ngss) return ' <span class="cv-std-chip" title="Next Generation Science Standards">📏 NGSS ' + esc(x.ngss) + '</span>';
       return "";
     }
     var abbr = useKey === "cc" ? "CCSS" : "MA";
