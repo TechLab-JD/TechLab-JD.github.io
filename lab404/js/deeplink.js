@@ -13,13 +13,29 @@
   /* Non-content utility apps that are safe to open from a shared link. */
   var SAFE_APPS = ["forfamilies", "skills", "myprogress", "missed", "typing", "cohort", "practice", "flashcards", "review", "glossary"];
 
+  /* H4: give a shared/bookmarked deep link a descriptive page title.
+     Course/topic data is lazy-loaded, so wait for it if it isn't ready yet. */
+  function setTitle(name) { try { if (name) document.title = name + " · Lab404 Study Hub"; } catch (e) {} }
+  function titleFromData(getName) {
+    if (getName()) return;
+    var once = function () { if (getName()) window.removeEventListener("lab404:data-ready", once); };
+    window.addEventListener("lab404:data-ready", once);
+  }
+
   function run() {
     try {
-      if (go === "course" && id) { Desktop.openWindow("course", { course: id }); }
-      else if (go === "topic" && id) { Desktop.openWindow("folder-" + id); }
+      if (go === "course" && id) {
+        Desktop.openWindow("course", { course: id });
+        titleFromData(function () { var co = (window.LAB404_COURSES || {})[id]; if (co) { setTitle(co.title); return true; } return false; });
+      }
+      else if (go === "topic" && id) {
+        Desktop.openWindow("folder-" + id);
+        titleFromData(function () { var tp = (window.LAB404_CONTENT || {})[id]; if (tp) { setTitle(tp.title); return true; } return false; });
+      }
       else if (go === "bygrade") {
         if (grade) { try { localStorage.setItem("lab404.myGrade", grade); } catch (e) {} }
         Desktop.openWindow("bygrade");
+        setTitle("Browse by Grade");
       }
       else if (go === "app" && id && SAFE_APPS.indexOf(id) >= 0) { Desktop.openWindow(id); }
     } catch (e) {}
