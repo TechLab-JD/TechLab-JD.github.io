@@ -51,9 +51,19 @@
   var FADE_START = LINES.length * STEP + 200;   /* begin fade right after the last line */
   var FADE_DONE  = FADE_START + 300;
 
+  var BOOTED = "lab404.booted";
+
   function init() {
     var screen = document.getElementById("boot-screen");
     if (!screen) return;
+
+    /* R4-2: the full BIOS sequence is a nice first impression, but returning
+       visitors just want the desktop. After the first boot, skip straight in. */
+    var seen = false;
+    try { seen = localStorage.getItem(BOOTED) === "1"; } catch (e) {}
+    if (seen) { screen.style.display = "none"; return; }
+    try { localStorage.setItem(BOOTED, "1"); } catch (e) {}
+
     var log   = document.getElementById("bootLog");
     var bar   = document.getElementById("bootBar");
     if (!log || !bar) return;
