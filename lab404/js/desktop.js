@@ -731,6 +731,16 @@
       var content = document.getElementById(winId + "-content");
       if (!content) return;
 
+      /* H1: these views need the lazy-loaded study data — wait for it, then render. */
+      var needsData = app.indexOf("folder-") === 0 ||
+        ["myprogress", "bygrade", "course", "transcript"].indexOf(app) >= 0;
+      if (needsData && window.Lab404Data && !window.Lab404Data.isLoaded()) {
+        content.innerHTML = '<div class="loading-state" style="padding:2.4rem;text-align:center;color:var(--text-muted,#9aa)">Loading study content…</div>';
+        window.Lab404Data.ensure().then(function () { Desktop._loadApp(winId, app, params); })
+          .catch(function () { content.innerHTML = '<div style="padding:2rem;color:var(--text-muted,#9aa)">Couldn’t load the study data. Check your connection and reopen this window.</div>'; });
+        return;
+      }
+
       if (app.indexOf("folder-") === 0) {
         Desktop._renderFolder(winId, app);
       } else if (app === "myprogress") {
