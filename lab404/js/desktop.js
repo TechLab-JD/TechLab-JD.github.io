@@ -924,10 +924,18 @@
             '<button class="ff-go" data-ff="skills">📊 Skill Overview</button>' +
             '<button class="ff-go" data-ff="myprogress">📈 My Progress</button>' +
             '<button class="ff-go" data-ff="cohort">👩‍🏫 Class View (teachers)</button>' +
+            '<button class="ff-go" id="ff-weekly">🗓️ Print weekly plan</button>' +
           '</div>' +
         '</div>';
-      content.querySelectorAll(".ff-go").forEach(function (b) {
+      content.querySelectorAll(".ff-go[data-ff]").forEach(function (b) {
         b.addEventListener("click", function () { Desktop.openWindow(this.getAttribute("data-ff")); });
+      });
+      var wkBtn = content.querySelector("#ff-weekly");
+      if (wkBtn) wkBtn.addEventListener("click", function () {   /* R6: printable weekly plan */
+        if (!window.Lab404WeeklyPlan) return;
+        var go = function () { window.Lab404WeeklyPlan.print(); };
+        if (window.Lab404Data && !window.Lab404Data.isLoaded()) window.Lab404Data.ensure().then(go).catch(go);
+        else go();
       });
     },
 
