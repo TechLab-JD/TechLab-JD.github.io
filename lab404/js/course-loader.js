@@ -51,6 +51,11 @@ window.CourseLoader = (function () {
     } catch (e) { audio.have = {}; }
   }
   function hasClip(qid) { return !!(audio.have && audio.have[qid]); }
+  /* D4: audio-first mode — auto read-aloud for non-readers (K-2, or Junior mode on). */
+  function audioFirst() {
+    return !!(window.ReadAloud && window.ReadAloud.supported() &&
+      (/^(K|1|2)$/.test(String(course && course.grade)) || document.documentElement.classList.contains("lab404-junior")));
+  }
   function stopClip() { if (audio.cur) { try { audio.cur.pause(); } catch (e) {} audio.cur = null; } }
   function playClip(qid) {
     if (!hasClip(qid)) return;
@@ -381,8 +386,13 @@ window.CourseLoader = (function () {
     });
     el.querySelectorAll("[data-learn]").forEach(function (b) {
       b.addEventListener("click", function () {
-        var panel = document.getElementById("cv-learn-" + this.getAttribute("data-learn"));
-        if (panel) { var open = panel.classList.toggle("hide"); this.classList.toggle("on", !open); if (open && window.ReadAloud) window.ReadAloud.stop(); }
+        var code = this.getAttribute("data-learn");
+        var panel = document.getElementById("cv-learn-" + code);
+        if (panel) {
+          var open = panel.classList.toggle("hide"); this.classList.toggle("on", !open);
+          if (open && window.ReadAloud) window.ReadAloud.stop();
+          else if (!open && audioFirst()) window.ReadAloud.speak(learnText[code] || "");  /* D4: read the lesson to non-readers */
+        }
       });
     });
     el.querySelectorAll("[data-readaloud]").forEach(function (b) {
@@ -459,6 +469,7 @@ window.CourseLoader = (function () {
           el.querySelectorAll(".cv-opt").forEach(function (x) { x.classList.remove("sel"); });
           this.classList.add("sel");
         }
+        if (audioFirst()) window.ReadAloud.speak(q.options[i]);  /* D4: tap an answer to hear it */
       });
     });
     var spkBtn = document.getElementById("cv-spk");
@@ -466,6 +477,8 @@ window.CourseLoader = (function () {
     if (spkBtn && audio.autoplay) playClip(q.id);  // early grades (K-3): read the question aloud automatically
     var raBtn = document.getElementById("cv-ra");   /* F2 */
     if (raBtn) raBtn.addEventListener("click", function () { window.ReadAloud.toggle(qReadText(q), raBtn); });
+    /* D4: non-readers (K-2 / Junior) hear the question + options read automatically. */
+    if (!hasClip(q.id) && audioFirst()) setTimeout(function () { if (quiz && !quiz.answered) window.ReadAloud.speak(qReadText(q)); }, 350);
     document.getElementById("cv-quit").addEventListener("click", function () { if (window.ReadAloud) window.ReadAloud.stop(); stopClip(); quiz = null; renderDash(); });
     var flagBtn = document.getElementById("cv-flag");
     if (flagBtn) flagBtn.addEventListener("click", function () {  /* G3: report a question (local) */
@@ -505,6 +518,7 @@ window.CourseLoader = (function () {
       ("Answer: " + q.correct.map(function (i) { return q.options[i]; }).join(", "));
     document.getElementById("cv-fb").innerHTML =
       '<div class="cv-fb ' + (ok ? "ok" : "no") + '">' + (ok ? "✅ Correct. " : "❌ Not quite. " + esc(ansText) + ". ") + esc(q.why || "") + '</div>';
+    if (audioFirst()) window.ReadAloud.speak((ok ? "Correct! " : "Not quite. " + ansText + ". ") + (q.why || ""));  /* D4: read feedback to non-readers */
     var row = document.getElementById("cv-row");
     var last = quiz.i >= quiz.qs.length - 1;
     row.innerHTML = '<button class="cv-btn" id="cv-next">' + (last ? "See results" : "Next →") + '</button>';
