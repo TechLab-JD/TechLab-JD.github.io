@@ -53,8 +53,19 @@ window.CourseLoader = (function () {
   function hasClip(qid) { return !!(audio.have && audio.have[qid]); }
   /* D4: audio-first mode — auto read-aloud for non-readers (K-2, or Junior mode on). */
   function audioFirst() {
-    return !!(window.ReadAloud && window.ReadAloud.supported() &&
-      (/^(K|1|2)$/.test(String(course && course.grade)) || document.documentElement.classList.contains("lab404-junior")));
+    return !!(window.ReadAloud && window.ReadAloud.supported() && kidMode());
+  }
+  /* R3: Play Mode — K-2 (or Junior mode) sees stars + encouragement instead of a letter grade / GPA. */
+  function kidMode() {
+    return /^(K|1|2)$/.test(String(course && course.grade)) || document.documentElement.classList.contains("lab404-junior");
+  }
+  function kidStars(r) {
+    var filled = r.total ? Math.round(r.mastered / r.total * 3) : 0;
+    var enc = r.complete ? "You did it! 🎉" : (r.mastered > 0 ? "Great job — keep going! 🌟" : "Let’s start! 🚀");
+    var stars = "";
+    for (var i = 1; i <= 3; i++) stars += '<span class="cv-star' + (i <= filled ? " on" : "") + '">★</span>';
+    return '<div class="cv-stars"><div class="cv-stars-row">' + stars + '</div>' +
+      '<div class="cv-stars-txt">You mastered <b>' + r.mastered + '</b> of ' + r.total + '! ' + enc + '</div></div>';
   }
   function stopClip() { if (audio.cur) { try { audio.cur.pause(); } catch (e) {} audio.cur = null; } }
   function playClip(qid) {
@@ -108,6 +119,11 @@ window.CourseLoader = (function () {
       ".cv-share-row{display:flex;gap:7px}" +
       ".cv-share-row input{flex:1;min-width:0;background:var(--bg,#0d1117);border:1px solid var(--border,#334);border-radius:7px;padding:7px 9px;color:var(--text,#eee);font:.72rem monospace}" +
       ".cv-grade{display:flex;gap:16px;align-items:baseline}" +
+      ".cv-stars{margin-top:8px}" +
+      ".cv-stars-row{letter-spacing:4px;line-height:1}" +
+      ".cv-star{font-size:2rem;color:var(--border,#334)}" +
+      ".cv-star.on{color:#f5c518}" +
+      ".cv-stars-txt{font-size:.95rem;color:var(--text,#eee);margin-top:7px}" +
       ".cv-grade .lg{font-size:1.8rem;font-weight:800}" +
       ".cv-grade small{font-size:.66rem;color:var(--text-muted,#9aa);display:block;font-weight:600}" +
       ".cv-counts{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}" +
@@ -289,6 +305,7 @@ window.CourseLoader = (function () {
   function renderDash() {
     learnText = {};
     var r = M.readiness(courseId);
+    var kid = kidMode();  /* R3 */
     var pill = function (b, n) { return '<span class="cv-pill cv-' + b + '">' + n + '</span>'; };
     var counts = '<span class="cv-pill cv-mastered">' + r.counts.mastered + ' mastered</span>' +
       '<span class="cv-pill cv-strong">' + r.counts.strong + ' strong</span>' +
@@ -298,18 +315,26 @@ window.CourseLoader = (function () {
 
     var banner = "";
     if (!r.placed) {
-      banner = '<div class="cv-banner"><p><b>Start with a quick placement check.</b> A few questions across every objective tells us where you’re strong and what to focus on — no studying needed, just answer honestly.</p>' +
-        '<button class="cv-btn" data-act="placement">🧭 Take placement test</button></div>';
+      banner = kid
+        ? '<div class="cv-banner"><p>👋 <b>Tap Practice to start!</b> Answer a few questions and watch your stars grow.</p><button class="cv-btn" data-act="placement">⭐ Start</button></div>'
+        : '<div class="cv-banner"><p><b>Start with a quick placement check.</b> A few questions across every objective tells us where you’re strong and what to focus on — no studying needed, just answer honestly.</p>' +
+          '<button class="cv-btn" data-act="placement">🧭 Take placement test</button></div>';
     } else if (r.complete) {
-      banner = '<div class="cv-banner"><p>🎉 <b>Course mastered!</b> Every objective is at the 85% mastery bar. Keep practicing to hold it — mastery fades if you never revisit it.</p></div>';
+      banner = kid
+        ? '<div class="cv-banner"><p>🎉 <b>You mastered them all!</b> Amazing work! Keep playing to stay sharp.</p></div>'
+        : '<div class="cv-banner"><p>🎉 <b>Course mastered!</b> Every objective is at the 85% mastery bar. Keep practicing to hold it — mastery fades if you never revisit it.</p></div>';
     } else {
-      banner = '<div class="cv-banner"><p><b>Keep going.</b> Practice your weakest objectives to raise your readiness toward an A.</p>' +
-        '<button class="cv-btn" data-act="weakest">🎯 Practice weakest</button></div>';
+      banner = kid
+        ? '<div class="cv-banner"><p>🌟 <b>Great job!</b> Let’s practice a little more to earn more stars.</p><button class="cv-btn" data-act="weakest">🎯 Keep going</button></div>'
+        : '<div class="cv-banner"><p><b>Keep going.</b> Practice your weakest objectives to raise your readiness toward an A.</p>' +
+          '<button class="cv-btn" data-act="weakest">🎯 Practice weakest</button></div>';
     }
     if (r.placed && r.reviewDue) {  // spaced review takes priority — stale mastery is dragging the grade down
-      banner = '<div class="cv-banner"><p>🔁 <b>' + r.reviewDue + ' objective' + (r.reviewDue > 1 ? 's' : '') + ' due for review.</b> ' +
-        'Mastery fades over time — a quick review locks it back in and restores your grade.</p>' +
-        '<button class="cv-btn" data-act="review">🔁 Review now</button></div>';
+      banner = kid
+        ? '<div class="cv-banner"><p>🔁 <b>Time to practice again!</b> A quick review keeps your stars shiny.</p><button class="cv-btn" data-act="review">🔁 Review</button></div>'
+        : '<div class="cv-banner"><p>🔁 <b>' + r.reviewDue + ' objective' + (r.reviewDue > 1 ? 's' : '') + ' due for review.</b> ' +
+          'Mastery fades over time — a quick review locks it back in and restores your grade.</p>' +
+          '<button class="cv-btn" data-act="review">🔁 Review now</button></div>';
     }
 
     var doms = (course.domains || []).map(function (dm) {
@@ -349,13 +374,15 @@ window.CourseLoader = (function () {
           '<div class="cv-hmeta"><div class="cv-title">' + esc(course.title) +
             ' <button class="cv-bm" data-bm="1" title="Bookmark this course" aria-label="Bookmark this course">' +
             ((window.Lab404Lib && Lab404Lib.isBookmarked(courseId)) ? "★" : "☆") + '</button></div>' +
-            '<div class="cv-std">' + esc(course.standard) + '</div>' +
-            '<div class="cv-fw" role="group" aria-label="Standards framework"><span>📏 Standards:</span> ' +
-              FW.map(function (f) { return '<button class="cv-fw-btn' + (f[0] === curFw() ? " on" : "") + '" data-fw="' + f[0] + '">' + f[1] + '</button>'; }).join("") +
-            '</div>' +
-            '<div class="cv-grade"><div><span class="lg">' + r.letter + '</span><small>Grade</small></div>' +
-              '<div><span class="lg">' + r.gpa.toFixed(1) + '</span><small>GPA</small></div>' +
-              '<div><span class="lg">' + r.mastered + "/" + r.total + '</span><small>Mastered</small></div></div>' +
+            (kid ? "" :
+              '<div class="cv-std">' + esc(course.standard) + '</div>' +
+              '<div class="cv-fw" role="group" aria-label="Standards framework"><span>📏 Standards:</span> ' +
+                FW.map(function (f) { return '<button class="cv-fw-btn' + (f[0] === curFw() ? " on" : "") + '" data-fw="' + f[0] + '">' + f[1] + '</button>'; }).join("") +
+              '</div>') +
+            (kid ? kidStars(r) :
+              '<div class="cv-grade"><div><span class="lg">' + r.letter + '</span><small>Grade</small></div>' +
+                '<div><span class="lg">' + r.gpa.toFixed(1) + '</span><small>GPA</small></div>' +
+                '<div><span class="lg">' + r.mastered + "/" + r.total + '</span><small>Mastered</small></div></div>') +
             '<div class="cv-counts">' + counts + '</div></div></div>' +
         banner +
         doms +
