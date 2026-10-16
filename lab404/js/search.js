@@ -6,6 +6,7 @@
   "use strict";
 
   var INDEX = null;
+  window.addEventListener("lab404:data-ready", function () { INDEX = null; });  /* rebuild once the lazy-loaded data arrives (H1) */
 
   function slug(s) {
     return String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
@@ -112,13 +113,23 @@
     var startBtn = document.getElementById("startBtn");
     if (!input || !results || !menu) return;
 
+    var filterType = "all";
     function render(list, q) {
+      results._full = list; results._q = q;
       if (!list.length) {
         results.innerHTML = '<div class="start-search-empty">No matches for “' + esc(q) + '”.</div>';
         results._list = [];
         return;
       }
-      results.innerHTML = list.map(function (e, i) {
+      var types = []; list.forEach(function (e) { if (types.indexOf(e.type) < 0) types.push(e.type); });
+      if (filterType !== "all" && types.indexOf(filterType) < 0) filterType = "all";
+      var shown = filterType === "all" ? list : list.filter(function (e) { return e.type === filterType; });
+      var chips = "";
+      if (types.length > 1) {
+        chips = '<div class="ss-filters"><button class="ss-chip' + (filterType === "all" ? " on" : "") + '" data-f="all">All ' + list.length + '</button>' +
+          types.map(function (t) { var n = list.filter(function (e) { return e.type === t; }).length; return '<button class="ss-chip' + (filterType === t ? " on" : "") + '" data-f="' + t + '">' + esc(t) + ' ' + n + '</button>'; }).join("") + '</div>';
+      }
+      results.innerHTML = chips + shown.map(function (e, i) {
         var line = (e.type === "Lesson") ? (e.sub + " · Lesson") : e.type;
         return '<button class="start-search-item" data-i="' + i + '" role="menuitem">' +
           '<span class="menu-icon">' + e.icon + '</span>' +
@@ -127,7 +138,7 @@
             '<span class="ss-sub">' + esc(line) + '</span>' +
           '</span></button>';
       }).join("");
-      results._list = list;
+      results._list = shown;
     }
 
     function run() {
@@ -154,6 +165,8 @@
     /* keep typing in the menu from closing it (menu already stops propagation) */
 
     results.addEventListener("click", function (e) {
+      var chip = e.target.closest ? e.target.closest(".ss-chip") : null;
+      if (chip) { e.stopPropagation(); filterType = chip.getAttribute("data-f"); if (results._full) render(results._full, results._q || ""); return; }
       var btn = e.target.closest ? e.target.closest(".start-search-item") : null;
       if (!btn || !results._list) return;
       var item = results._list[+btn.getAttribute("data-i")];

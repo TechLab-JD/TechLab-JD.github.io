@@ -1667,6 +1667,10 @@ body.is-resizing * { user-select: none !important; cursor: inherit !important; }
 .ss-label { font-size: 0.82rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .ss-sub { font-size: 0.66rem; color: var(--text-faint); }
 .start-search-empty { padding: 14px; font-size: 0.75rem; color: var(--text-faint); }
+.ss-filters { display: flex; flex-wrap: wrap; gap: 5px; padding: 6px 10px 8px; border-bottom: 1px solid var(--border, #2a3432); }
+.ss-chip { font: 600 0.66rem/1 inherit; border: 1px solid var(--border, #334); background: transparent; color: var(--text-muted, #9aa); border-radius: 999px; padding: 4px 9px; cursor: pointer; }
+.ss-chip:hover { border-color: var(--accent2, #4a90e2); color: var(--text, #eee); }
+.ss-chip.on { background: var(--accent2, #4a90e2); border-color: var(--accent2, #4a90e2); color: #fff; }
 /* While searching, hide the normal browse list and show only results */
 .start-menu.searching .start-menu-section-label,
 .start-menu.searching #startSubjects,
