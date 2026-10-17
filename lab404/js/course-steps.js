@@ -743,6 +743,16 @@
       "sat-math-m5-2": ["Find two numbers that multiply to 6 and add to 5.", "Those numbers are 2 and 3.", "So x² − 5x + 6 factors to (x − 2)(x − 3)."],
       "sat-math-m6-2": ["Use the Pythagorean theorem: a² + b² = c².", "Square the legs: 3² + 4² = 9 + 16 = 25.", "The hypotenuse is √25 = 5."]
     },
+    "g10-science": {
+      "g10-science-h102c": ["Mass number = protons + neutrons.", "6 + 8.", "= 14."],
+      "g10-science-ch2u6": ["Mass number = protons + neutrons = 6 + 8.", "= 14."],
+      "g10-science-h105c": ["For main-group elements, the group-6A (16) column has 6 valence electrons.", "= 6."],
+      "g10-science-h108d": ["H₂O has 2 hydrogen atoms + 1 oxygen atom.", "2 + 1.", "= 3 atoms."],
+      "g10-science-ch8u5": ["The subscript 2 on H means 2 hydrogen atoms.", "= 2."],
+      "g10-science-h109c": ["O₂ has 2 oxygen atoms, so you need 2 H₂O to balance oxygen.", "2 H₂ + O₂ → 2 H₂O.", "Coefficient = 2."],
+      "g10-science-h1011a": ["Mass is conserved in a chemical reaction — nothing is created or destroyed.", "So the products weigh the same as the reactants.", "= 20 g."],
+      "g10-science-ch15u4": ["Pure water is neutral.", "On the pH scale, neutral is 7.", "= 7."]
+    },
     "g11-science": {
       // kinematics
       "g11-science-p112a": ["Speed = distance ÷ time.", "100 ÷ 20.", "= 5 m/s."],

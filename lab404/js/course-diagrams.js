@@ -248,9 +248,23 @@
       '<text x="120" y="135" text-anchor="middle" font-size="13" fill="#1e40af">F = m × a   (a = F ÷ m)</text></svg>';
   }
 
+  function phscale() {
+    return '<svg viewBox="0 0 300 110" role="img" aria-label="The pH scale from 0 to 14: below 7 is acidic, 7 is neutral, above 7 is basic" ' + FF + '>' +
+      '<rect x="20" y="35" width="120" height="26" fill="#ef4444"/>' +
+      '<rect x="140" y="35" width="20" height="26" fill="#22c55e"/>' +
+      '<rect x="160" y="35" width="120" height="26" fill="#2563eb"/>' +
+      '<text x="22" y="78" font-size="11" fill="#1e293b">0</text>' +
+      '<text x="146" y="78" font-size="11" fill="#1e293b">7</text>' +
+      '<text x="270" y="78" font-size="11" fill="#1e293b">14</text>' +
+      '<text x="80" y="27" text-anchor="middle" font-size="10" fill="#b91c1c">acidic</text>' +
+      '<text x="150" y="27" text-anchor="middle" font-size="9" fill="#15803d">neutral</text>' +
+      '<text x="220" y="27" text-anchor="middle" font-size="10" fill="#1d4ed8">basic</text>' +
+      '<text x="150" y="98" text-anchor="middle" font-size="9" fill="#64748b">pure water = 7</text></svg>';
+  }
+
   /* ----- course -> objective -> [svg, caption] ----- */
   var D = {
-    "g10-science": { "CH.1": [atom, "Protons (+) and neutrons sit in the nucleus; electrons (-) orbit around it."] },
+    "g10-science": { "CH.1": [atom, "Protons (+) and neutrons sit in the nucleus; electrons (-) orbit around it."], "CH.12": [states, "Solid, liquid, and gas differ in how tightly the particles are packed."], "CH.15": [phscale, "Below 7 is acidic, 7 is neutral, above 7 is basic."] },
     "g9-science": { "B.LS2.1": [pyramid, "Only ~10% of energy passes to each higher level, so food chains are short."] },
     "g11-science": { "PH.5": [fma, "Newton's second law: a bigger force means more acceleration; more mass means less."], "PH.12": [wave, "A wave's wavelength and amplitude."], "PH.15": [circuit, "Ohm's law: V = I × R."] },
     "g8-science": { "MS-PS1-4": [states, "Particles are packed in a solid, looser in a liquid, far apart in a gas."], "MS-PS4-1": [wave, "Amplitude and wavelength of a wave."] },
