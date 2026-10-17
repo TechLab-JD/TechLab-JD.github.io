@@ -262,10 +262,37 @@
       '<text x="150" y="98" text-anchor="middle" font-size="9" fill="#64748b">pure water = 7</text></svg>';
   }
 
+  function punnett() {
+    return '<svg viewBox="0 0 200 195" role="img" aria-label="A Punnett square for Tt crossed with Tt: the four boxes are TT, Tt, Tt and tt, so one in four offspring is recessive" ' + FF + '>' +
+      '<text x="70" y="22" text-anchor="middle" font-size="13" fill="#1e293b">T</text>' +
+      '<text x="130" y="22" text-anchor="middle" font-size="13" fill="#1e293b">t</text>' +
+      '<text x="24" y="78" text-anchor="middle" font-size="13" fill="#1e293b">T</text>' +
+      '<text x="24" y="138" text-anchor="middle" font-size="13" fill="#1e293b">t</text>' +
+      '<rect x="40" y="40" width="60" height="60" fill="#dbeafe" stroke="#1e293b"/><text x="70" y="78" text-anchor="middle" font-size="14">TT</text>' +
+      '<rect x="100" y="40" width="60" height="60" fill="#dbeafe" stroke="#1e293b"/><text x="130" y="78" text-anchor="middle" font-size="14">Tt</text>' +
+      '<rect x="40" y="100" width="60" height="60" fill="#dbeafe" stroke="#1e293b"/><text x="70" y="138" text-anchor="middle" font-size="14">Tt</text>' +
+      '<rect x="100" y="100" width="60" height="60" fill="#fecaca" stroke="#1e293b"/><text x="130" y="138" text-anchor="middle" font-size="14">tt</text>' +
+      '<text x="100" y="184" text-anchor="middle" font-size="10" fill="#b91c1c">tt = 1 of 4 is recessive</text></svg>';
+  }
+  function dna() {
+    var s = '<svg viewBox="0 0 200 190" role="img" aria-label="A DNA double helix: two strands joined by base pairs, A pairs with T and C pairs with G" ' + FF + '>';
+    s += '<path d="M60 12 C 110 42, 110 72, 60 102 C 10 132, 10 162, 60 182" fill="none" stroke="#2563eb" stroke-width="2.5"/>';
+    s += '<path d="M140 12 C 90 42, 90 72, 140 102 C 190 132, 190 162, 140 182" fill="none" stroke="#2563eb" stroke-width="2.5"/>';
+    var pairs = ["A–T", "C–G", "T–A", "G–C", "A–T"];
+    for (var i = 0; i < 5; i++) { var y = 30 + i * 35; s += '<line x1="72" y1="' + y + '" x2="128" y2="' + y + '" stroke="#94a3b8"/><text x="100" y="' + (y - 4) + '" text-anchor="middle" font-size="9" fill="#166534">' + pairs[i] + '</text>'; }
+    return s + '</svg>';
+  }
+
   /* ----- course -> objective -> [svg, caption] ----- */
   var D = {
     "g10-science": { "CH.1": [atom, "Protons (+) and neutrons sit in the nucleus; electrons (-) orbit around it."], "CH.12": [states, "Solid, liquid, and gas differ in how tightly the particles are packed."], "CH.15": [phscale, "Below 7 is acidic, 7 is neutral, above 7 is basic."] },
-    "g9-science": { "B.LS2.1": [pyramid, "Only ~10% of energy passes to each higher level, so food chains are short."] },
+    "g9-science": {
+      "B.LS2.1": [pyramid, "Only ~10% of energy passes to each higher level, so food chains are short."],
+      "B.LS1.2": [cell, "The cell: a membrane enclosing cytoplasm, with a nucleus."],
+      "B.LS1.4": [photosynthesis, "Photosynthesis captures sunlight to make sugar and releases oxygen."],
+      "B.LS3.1": [dna, "DNA is a double helix; bases pair A–T and C–G."],
+      "B.LS3.2": [punnett, "A Tt × Tt cross: TT, Tt, Tt, tt — one in four is recessive."]
+    },
     "g11-science": { "PH.5": [fma, "Newton's second law: a bigger force means more acceleration; more mass means less."], "PH.12": [wave, "A wave's wavelength and amplitude."], "PH.15": [circuit, "Ohm's law: V = I × R."] },
     "g8-science": { "MS-PS1-4": [states, "Particles are packed in a solid, looser in a liquid, far apart in a gas."], "MS-PS4-1": [wave, "Amplitude and wavelength of a wave."] },
     "g5-science": { "5-PS3-1": [foodchain, "Energy flows from the sun through producers to consumers."], "5-PS1-1": [states, "All matter is made of tiny particles — packed in solids, looser in liquids, far apart in gases."] },

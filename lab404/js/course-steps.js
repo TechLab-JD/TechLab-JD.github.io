@@ -743,6 +743,9 @@
       "sat-math-m5-2": ["Find two numbers that multiply to 6 and add to 5.", "Those numbers are 2 and 3.", "So x² − 5x + 6 factors to (x − 2)(x − 3)."],
       "sat-math-m6-2": ["Use the Pythagorean theorem: a² + b² = c².", "Square the legs: 3² + 4² = 9 + 16 = 25.", "The hypotenuse is √25 = 5."]
     },
+    "g9-science": {
+      "g9-science-b32b": ["In a Tt × Tt Punnett square the four boxes are TT, Tt, Tt, tt.", "Only tt shows the recessive trait — 1 of the 4 boxes.", "= 1/4."]
+    },
     "g10-science": {
       "g10-science-h102c": ["Mass number = protons + neutrons.", "6 + 8.", "= 14."],
       "g10-science-ch2u6": ["Mass number = protons + neutrons = 6 + 8.", "= 14."],
