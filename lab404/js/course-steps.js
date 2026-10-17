@@ -743,6 +743,29 @@
       "sat-math-m5-2": ["Find two numbers that multiply to 6 and add to 5.", "Those numbers are 2 and 3.", "So x² − 5x + 6 factors to (x − 2)(x − 3)."],
       "sat-math-m6-2": ["Use the Pythagorean theorem: a² + b² = c².", "Square the legs: 3² + 4² = 9 + 16 = 25.", "The hypotenuse is √25 = 5."]
     },
+    "g11-science": {
+      // kinematics
+      "g11-science-p112a": ["Speed = distance ÷ time.", "100 ÷ 20.", "= 5 m/s."],
+      "g11-science-p112c": ["Acceleration = change in velocity ÷ time.", "30 ÷ 6.", "= 5 m/s²."],
+      "g11-science-p113a": ["Gravity near Earth's surface is about 9.8 m/s².", "Rounded to the nearest whole number.", "≈ 10 m/s²."],
+      "g11-science-p113c": ["From rest, speed = g × time = 10 × 2.", "= 20 m/s."],
+      // Newton's second law
+      "g11-science-p115a": ["Newton's second law: F = m × a.", "10 × 2.", "= 20 N."],
+      "g11-science-p115c": ["Rearrange F = ma to a = F ÷ m.", "50 ÷ 10.", "= 5 m/s²."],
+      "g11-science-ph5u2": ["a = F ÷ m = 10 ÷ 2.", "= 5 m/s²."],
+      "g11-science-ph5u5": ["a = F ÷ m = 12 ÷ 4.", "= 3 m/s²."],
+      // momentum
+      "g11-science-p118a": ["Momentum = mass × velocity.", "2 × 5.", "= 10 kg·m/s."],
+      "g11-science-p118c": ["Momentum = mass × velocity = 4 × 3.", "= 12 kg·m/s."],
+      "g11-science-ph8u6": ["Momentum = mass × velocity = 2 × 3.", "= 6 kg·m/s."],
+      // work & power
+      "g11-science-p1110a": ["Work = force × distance.", "10 × 3.", "= 30 J."],
+      "g11-science-p1110c": ["Power = work ÷ time.", "100 ÷ 5.", "= 20 W."],
+      // Ohm's law
+      "g11-science-p1115b": ["Ohm's law: I = V ÷ R.", "12 ÷ 4.", "= 3 A."],
+      "g11-science-p1115d": ["Ohm's law: V = I × R.", "2 × 5.", "= 10 V."],
+      "g11-science-ph15u5": ["Ohm's law: V = I × R = 2 × 3.", "= 6 V."]
+    },
     "g12-apphys": {
       "g12-apphys-p1-3": ["Acceleration = change in velocity ÷ time.", "The velocity changes 0 → 20 m/s over 4 s, so that's 20 ÷ 4.", "20 ÷ 4 = 5 m/s²."],
       "g12-apphys-p5-3": ["Use Ohm’s law rearranged for current: I = V ÷ R.", "Plug in the voltage and resistance: 12 ÷ 3.", "12 ÷ 3 = 4 amps."]

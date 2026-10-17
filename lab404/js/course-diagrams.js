@@ -237,11 +237,22 @@
       '<text x="240" y="92" font-size="9" fill="#1e293b">sugar = food</text></svg>';
   }
 
+  function fma() {
+    return '<svg viewBox="0 0 260 150" role="img" aria-label="A box of mass m pushed by a force F to the right, accelerating; Newton\'s second law says force equals mass times acceleration" ' + FF + '>' +
+      '<line x1="20" y1="110" x2="240" y2="110" stroke="#94a3b8" stroke-width="1.5"/>' +
+      '<rect x="90" y="66" width="60" height="44" fill="#dbeafe" stroke="#1e293b" stroke-width="2"/>' +
+      '<text x="120" y="93" text-anchor="middle" font-size="13" fill="#1e293b">m</text>' +
+      '<line x1="150" y1="88" x2="215" y2="88" stroke="#ef4444" stroke-width="3"/>' +
+      '<polygon points="215,88 205,82 205,94" fill="#ef4444"/>' +
+      '<text x="185" y="78" text-anchor="middle" font-size="11" fill="#b91c1c">F</text>' +
+      '<text x="120" y="135" text-anchor="middle" font-size="13" fill="#1e40af">F = m × a   (a = F ÷ m)</text></svg>';
+  }
+
   /* ----- course -> objective -> [svg, caption] ----- */
   var D = {
     "g10-science": { "CH.1": [atom, "Protons (+) and neutrons sit in the nucleus; electrons (-) orbit around it."] },
     "g9-science": { "B.LS2.1": [pyramid, "Only ~10% of energy passes to each higher level, so food chains are short."] },
-    "g11-science": { "PH.12": [wave, "A wave's wavelength and amplitude."], "PH.15": [circuit, "Ohm's law: V = I × R."] },
+    "g11-science": { "PH.5": [fma, "Newton's second law: a bigger force means more acceleration; more mass means less."], "PH.12": [wave, "A wave's wavelength and amplitude."], "PH.15": [circuit, "Ohm's law: V = I × R."] },
     "g8-science": { "MS-PS1-4": [states, "Particles are packed in a solid, looser in a liquid, far apart in a gas."], "MS-PS4-1": [wave, "Amplitude and wavelength of a wave."] },
     "g5-science": { "5-PS3-1": [foodchain, "Energy flows from the sun through producers to consumers."], "5-PS1-1": [states, "All matter is made of tiny particles — packed in solids, looser in liquids, far apart in gases."] },
     "g6-science": {
