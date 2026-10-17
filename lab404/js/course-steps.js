@@ -692,6 +692,49 @@
       "g3-math-md8u3": ["Add the sides: 3 + 4 + 5.", "= 12."],
       "g3-math-md8u5": ["Perimeter of a square = 4 × 6.", "= 24."]
     },
+    "gC-math": {
+      // linear equations
+      "gC-math-eq1a": ["Add 5: 3x = 15.", "Divide by 3: x = 5."],
+      "gC-math-eq1b": ["Subtract 4: 2x = 10.", "Divide by 2: x = 5."],
+      "gC-math-eq1d": ["Subtract 3: 5x = 25.", "Divide by 5: x = 5."],
+      "gC-math-ceq1u1": ["Subtract 3: 2x = 8.", "Divide by 2: x = 4."],
+      "gC-math-ceq1u2": ["Add 5: 3x = 15.", "Divide by 3: x = 5."],
+      "gC-math-ceq1u4": ["Divide both sides by 4: x − 1 = 3.", "Add 1: x = 4."],
+      "gC-math-ceq1u5": ["Subtract 2x: 3x = 9.", "Divide by 3: x = 3."],
+      "gC-math-ceq3u5": ["Take the square root: √49 = 7.", "x = 7."],
+      // systems
+      "gC-math-ceq4u1": ["2x = 8.", "Divide by 2: x = 4."],
+      "gC-math-ceq4u3": ["Add the two equations so y cancels: 2x = 12.", "x = 6."],
+      "gC-math-ceq4u5": ["x + 1 = 5.", "Subtract 1: x = 4."],
+      // exponents
+      "gC-math-eq2b": ["Any nonzero number to the 0 power equals 1.", "= 1."],
+      "gC-math-eq2c": ["Power of a power: multiply the exponents, 2^(3×2) = 2^6.", "2^6 = 64.", "= 64."],
+      "gC-math-ceq2u6": ["2 × 2 × 2 × 2.", "= 16."],
+      // functions
+      "gC-math-fn1a": ["Substitute x = 3: 2 × 3 + 1.", "6 + 1.", "= 7."],
+      "gC-math-fn1b": ["Substitute x = −2: (−2)².", "(−2)(−2) = 4.", "= 4."],
+      "gC-math-fn1d": ["Substitute x = 5: 3 × 5 − 4.", "15 − 4.", "= 11."],
+      "gC-math-cfn1u2": ["Substitute x = 4: 4².", "= 16."],
+      "gC-math-cfn1u4": ["Substitute x = 5: 3 × 5.", "= 15."],
+      "gC-math-cfn2u3": ["Substitute x = 3: 2 × 3 + 1.", "= 7."],
+      // slope
+      "gC-math-fn2a": ["Slope = (6 − 2) ÷ (2 − 0) = 4 ÷ 2.", "= 2."],
+      "gC-math-fn2d": ["Slope = (7 − 1) ÷ (3 − 1) = 6 ÷ 2.", "= 3."],
+      "gC-math-cfn2u6": ["Slope = rise ÷ run = 6 ÷ 2.", "= 3."],
+      // quadratic vertex
+      "gC-math-fn3b": ["Vertex x = −b/(2a); here a = 1, b = −4.", "−(−4) ÷ (2 × 1) = 4 ÷ 2.", "= 2."],
+      "gC-math-fn3d": ["Vertex x = −b/(2a) = −(−6) ÷ 2.", "6 ÷ 2.", "= 3."],
+      // exponential growth
+      "gC-math-fn4b": ["Compute 1.10² = 1.21.", "Multiply by 100: 100 × 1.21.", "= $121."],
+      // statistics
+      "gC-math-sp1a": ["Add: 2 + 4 + 4 + 6 + 9 = 25.", "Divide by 5.", "= 5."],
+      "gC-math-sp1b": ["In order, 5 values, so the middle (3rd) is the median.", "= 4."],
+      "gC-math-sp1d": ["The mode appears most often.", "7 appears three times.", "= 7."],
+      "gC-math-csp1u1": ["Add: 4 + 6 + 8 = 18.", "Divide by 3.", "= 6."],
+      "gC-math-csp1u2": ["The middle value is 5.", "= 5."],
+      "gC-math-csp1u3": ["2 appears most often.", "= 2."],
+      "gC-math-csp1u5": ["Range = highest − lowest = 10 − 3.", "= 7."]
+    },
     "sat-math": {
       "sat-math-m1-1": ["Start with 3x + 5 = 20.", "Subtract 5 from both sides: 3x = 15.", "Divide both sides by 3: x = 5."],
       "sat-math-m1-5": ["Start with 2x − 4 = 10.", "Add 4 to both sides: 2x = 14.", "Divide both sides by 2: x = 7."],
