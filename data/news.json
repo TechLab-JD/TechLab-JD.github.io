@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-17T12:27:07Z",
- "generated_human": "Oct 17, 2026 · 12:27 UTC",
+ "generated": "2026-10-17T12:33:07Z",
+ "generated_human": "Oct 17, 2026 · 12:33 UTC",
  "sources": [
   {
    "name": "NPR",
@@ -218,11 +218,11 @@
    "n": 12
   },
   {
-   "term": "house",
+   "term": "katie",
    "n": 11
   },
   {
-   "term": "katie",
+   "term": "house",
    "n": 11
   },
   {
@@ -258,19 +258,19 @@
    "n": 8
   },
   {
+   "term": "killed",
+   "n": 7
+  },
+  {
    "term": "sanctions",
    "n": 7
   },
   {
+   "term": "midterm",
+   "n": 6
+  },
+  {
    "term": "ahead",
-   "n": 6
-  },
-  {
-   "term": "police",
-   "n": 6
-  },
-  {
-   "term": "killed",
    "n": 6
   }
  ],
@@ -1103,6 +1103,41 @@
      "label": "Lean Right",
      "title": "Canadian Prime Minister Carney and Alberta premier unite against separation ahead of referendum",
      "url": "https://www.washingtontimes.com/news/2026/oct/16/canadian-prime-minister-mark-carney-alberta-premier-unite-separation/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Trump administration says painting Eisenhower building would hurt landmark's history",
+   "summary": "The Trump administration’s plan to put a coat of white paint on the exterior of the Eisenhower Executive Office Building would diminish the historic character of the 19th-century landmark, according to a draft environmental assessment published Friday. \"The unpainted exterior gra",
+   "category": "Politics",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump administration says painting Eisenhower building would hurt landmark's history",
+     "url": "https://thehill.com/homenews/administration/6155709-eisenhower-building-landmark-painting/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Report: Painting Eisenhower Building Hurts Historic Setting",
+     "url": "https://www.newsmax.com/newsfront/eisenhower-building-eeob-white-house/2026/10/16/id/1273079"
     }
    ],
    "factchecks": [],
@@ -2321,33 +2356,6 @@
      "label": "Lean Left",
      "title": "WATCH:  Rhode Island farmer sets new record for world's biggest pumpkin",
      "url": "https://abcnews.com/video/137305086/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  Seahawks, Broncos face off in Thursday night NFL matchup",
-   "summary": "ESPN’s Omar Ruiz previews the Seahawks-Broncos showdown in Denver, including how Seattle’s top-ranked defense could challenge Bo Nix and whether Sam Darnold can bounce back after two interceptions.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  Seahawks, Broncos face off in Thursday night NFL matchup",
-     "url": "https://abcnews.com/video/137303571/"
     }
    ],
    "factchecks": [],
