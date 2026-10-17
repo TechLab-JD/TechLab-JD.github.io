@@ -550,6 +550,37 @@
       "g11-math-a219u4": ["4! = 4 × 3 × 2 × 1.", "= 24."],
       "g11-math-a219u6": ["5! = 5 × 4 × 3 × 2 × 1.", "= 120."]
     },
+    "g12-math": {
+      // composite functions
+      "g12-math-q121b": ["Work inside-out: g(3) = 3 + 1 = 4.", "Then f(4) = 2 × 4.", "= 8."],
+      "g12-math-q121d": ["Inside first: g(4) = 4 − 1 = 3.", "Then f(3) = 3².", "= 9."],
+      "g12-math-pc1u6": ["Substitute x = 4: 4².", "= 16."],
+      // exponential functions
+      "g12-math-q125c": ["Compute 2⁴ = 16.", "Multiply by 3: 3 × 16.", "= 48."],
+      // logarithms
+      "g12-math-q126a": ["Ask: 2 to what power is 32?", "2⁵ = 32.", "= 5."],
+      "g12-math-q126c": ["Ask: 5 to what power is 25?", "5² = 25.", "= 2."],
+      // exponential / log equations
+      "g12-math-q127a": ["81 = 3⁴.", "So x = 4."],
+      "g12-math-q127b": ["Rewrite log₂x = 5 as 2⁵ = x.", "x = 32."],
+      "g12-math-q127c": ["10000 = 10⁴.", "So x = 4."],
+      "g12-math-q127d": ["64 = 2⁶.", "So x = 6."],
+      // trigonometry
+      "g12-math-q129c": ["Cosine = adjacent ÷ hypotenuse.", "4 ÷ 5.", "= 0.8."],
+      // sequences & series
+      "g12-math-q1214a": ["Divide consecutive terms: 6 ÷ 3.", "= 2."],
+      "g12-math-q1214b": ["Add in pairs: (2 + 10) + (4 + 8) + 6 = 12 + 12 + 6.", "= 30."],
+      "g12-math-q1214d": ["Common difference is 3; terms are 2, 5, 8, 11, 14.", "The 5th term is 14."],
+      "g12-math-pc14u1": ["Subtract consecutive terms: 7 − 3.", "= 4."],
+      "g12-math-pc14u2": ["Divide consecutive terms: 6 ÷ 2.", "= 3."],
+      "g12-math-pc14u6": ["The ratio is 2; 20 × 2.", "= 40."],
+      // factorials & combinations
+      "g12-math-q1218a": ["4! = 4 × 3 × 2 × 1.", "= 24."],
+      "g12-math-q1218c": ["5C2 = (5 × 4) ÷ (2 × 1).", "20 ÷ 2.", "= 10."],
+      "g12-math-pc18u1": ["4! = 4 × 3 × 2 × 1.", "= 24."],
+      "g12-math-pc18u4": ["3! = 3 × 2 × 1.", "= 6."],
+      "g12-math-pc18u6": ["5! = 5 × 4 × 3 × 2 × 1.", "= 120."]
+    },
     "sat-math": {
       "sat-math-m1-1": ["Start with 3x + 5 = 20.", "Subtract 5 from both sides: 3x = 15.", "Divide both sides by 3: x = 5."],
       "sat-math-m1-5": ["Start with 2x − 4 = 10.", "Add 4 to both sides: 2x = 14.", "Divide both sides by 2: x = 7."],
