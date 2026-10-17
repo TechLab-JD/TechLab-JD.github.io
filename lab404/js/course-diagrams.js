@@ -336,8 +336,9 @@
     "g11-coding": { "11.CS.2": [binary, "Every letter is stored as bits: 'A' is 01000001 (65)."] },
     "sat-math": { "SM.6": [righttri, "Pythagorean theorem: 3² + 4² = 25 = 5²."], "SM.5": [parabola, "A quadratic graphs as a parabola; roots are where it crosses zero."] },
     "gC-stats": { "STAT.4": [bell, "About 68% of values lie within one standard deviation of the mean."] },
-    "g12-apphys": { "APP.5": [circuit, "Ohm's law: V = I × R."], "APP.6": [wave, "Wave speed = frequency × wavelength."] },
-    "g12-apbio": { "APB.6": [pyramid, "~10% of energy passes to each higher trophic level."] }
+    "g12-apphys": { "APP.2": [fma, "Newton's second law: F = m × a."], "APP.5": [circuit, "Ohm's law: V = I × R."], "APP.6": [wave, "Wave speed = frequency × wavelength."] },
+    "g12-apchem": { "APC.1": [atom, "Atoms — the particles the mole and stoichiometry count."], "APC.5": [phscale, "Below 7 is acidic, 7 is neutral, above 7 is basic."] },
+    "g12-apbio": { "APB.2": [photosynthesis, "Cellular energetics: photosynthesis captures light energy as sugar."], "APB.3": [dna, "The central dogma starts with DNA; bases pair A–T and C–G."], "APB.6": [pyramid, "~10% of energy passes to each higher trophic level."] }
   };
 
   function apply() {
