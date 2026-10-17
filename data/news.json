@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-17T12:33:07Z",
- "generated_human": "Oct 17, 2026 · 12:33 UTC",
+ "generated": "2026-10-17T13:00:38Z",
+ "generated_human": "Oct 17, 2026 · 13:00 UTC",
  "sources": [
   {
    "name": "NPR",
@@ -211,7 +211,7 @@
  "trending": [
   {
    "term": "trump",
-   "n": 23
+   "n": 22
   },
   {
    "term": "zacharia",
@@ -234,10 +234,6 @@
    "n": 10
   },
   {
-   "term": "time",
-   "n": 9
-  },
-  {
    "term": "press",
    "n": 8
   },
@@ -254,11 +250,11 @@
    "n": 8
   },
   {
-   "term": "attack",
+   "term": "time",
    "n": 8
   },
   {
-   "term": "killed",
+   "term": "ahead",
    "n": 7
   },
   {
@@ -266,15 +262,43 @@
    "n": 7
   },
   {
-   "term": "midterm",
-   "n": 6
+   "term": "attack",
+   "n": 7
   },
   {
-   "term": "ahead",
+   "term": "wants",
+   "n": 7
+  },
+  {
+   "term": "midterm",
    "n": 6
   }
  ],
  "videos": [
+  {
+   "videoId": "cpWrYJlVgZk",
+   "title": "Red Sea crisis: Egypt on sidelines for how long? | DW News",
+   "thumb": "https://i.ytimg.com/vi/cpWrYJlVgZk/hqdefault.jpg",
+   "channel": "DW News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "NNn5RMTxas4",
+   "title": "Four-legged investigators sniff out spotted lanternfly eggs to slow the spread of invasive pest",
+   "thumb": "https://i.ytimg.com/vi/NNn5RMTxas4/hqdefault.jpg",
+   "channel": "AP",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "Q3iJw94NZzc",
+   "title": "A dangerous moment for Zelenskyy: How Trump is helping Putin | DW News",
+   "thumb": "https://i.ytimg.com/vi/Q3iJw94NZzc/hqdefault.jpg",
+   "channel": "DW News",
+   "lean": 0,
+   "label": "Center"
+  },
   {
    "videoId": "cAPecOxHrYw",
    "title": "Sunday Morning with... Ayesha Hazarika",
@@ -325,7 +349,7 @@
   },
   {
    "videoId": "aGqF3xadMiA",
-   "title": "Zelenskyy says Russia launched largest-ever energy attack as UK troops prepare for Poland wargames",
+   "title": "Zelenskyy warns of blackouts as British troops prepare for military exercises in Poland",
    "thumb": "https://i.ytimg.com/vi/aGqF3xadMiA/hqdefault.jpg",
    "channel": "Sky News",
    "lean": 0,
@@ -378,30 +402,6 @@
    "channel": "BBC News",
    "lean": 0,
    "label": "Center"
-  },
-  {
-   "videoId": "qxzOX9AlbVE",
-   "title": "Russian strikes kill civilians, injure dozens across Ukraine | AJ #shorts",
-   "thumb": "https://i.ytimg.com/vi/qxzOX9AlbVE/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "Som-QhOE2DI",
-   "title": "France demonstrations: Mass protests to unite students, teachers & unions",
-   "thumb": "https://i.ytimg.com/vi/Som-QhOE2DI/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "aGyljhX4PSA",
-   "title": "What exactly is a Hi-Fi listening bar?",
-   "thumb": "https://i.ytimg.com/vi/aGyljhX4PSA/hqdefault.jpg",
-   "channel": "CNN",
-   "lean": -1,
-   "label": "Lean Left"
   }
  ],
  "stories": [
@@ -765,6 +765,63 @@
    ]
   },
   {
+   "title": "Pope Leo to be discharged from the hospital after lung cancer surgery",
+   "summary": "Pope Leo XIV will be discharged from the hospital on Saturday after undergoing surgery to remove a cancerous nodule from his right lung, the Vatican said, and will make an appearance to lead prayer on Sunday.",
+   "category": "Health",
+   "leans": [
+    -1,
+    0,
+    2
+   ],
+   "span": 3,
+   "n_sources": 5,
+   "balance": {
+    "l": 3,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Pope Leo to be discharged from the hospital after lung cancer surgery",
+     "url": "https://www.nbcnews.com/world/pope-leo-xiv/pope-leo-discharged-hospital-lung-cancer-surgery-rcna604005"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Pope Leo to be discharged from hospital on Saturday, Vatican says",
+     "url": "https://www.cbsnews.com/news/pope-leo-hospital-released-discharged-saturday-appearance/"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Pope Leo XIV to be discharged from hospital and return to Vatican",
+     "url": "https://abcnews.com/International/pope-leo-xiv-discharged-hospital-return-vatican/story?id=137343868"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Pope to be discharged days after lung cancer surgery",
+     "url": "https://www.bbc.co.uk/news/articles/c5x2vkddrkrko?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Pope Leo XIV to be discharged from hospital and return to Vatican after surgery to remove lung cancer",
+     "url": "https://www.foxnews.com/world/pope-leo-xiv-discharged-hospital-return-vatican-surgery-remove-lung-cancer"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "West Bank settlers brutally attack a Washington Post journalist",
    "summary": "This story appeared in Today, Explained, a daily newsletter that helps you understand the most compelling news and stories of the day. Subscribe here. On Friday, Israeli settlers attacked Palestinians living in the West Bank, as well as a Washington Post photographer, who was hos",
    "category": "World",
@@ -775,10 +832,10 @@
     1
    ],
    "span": 3,
-   "n_sources": 4,
+   "n_sources": 5,
    "balance": {
     "l": 2,
-    "c": 1,
+    "c": 2,
     "r": 1
    },
    "blindspot": null,
@@ -803,6 +860,13 @@
      "label": "Center",
      "title": "Palestinians and US journalist injured by Israeli settlers in West Bank harvest attack",
      "url": "https://www.bbc.co.uk/news/articles/c65ynk7212vqo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Child, four women among Palestinians injured in West Bank pogroms",
+     "url": "https://www.aljazeera.com/news/2026/10/17/several-palestinians-injured-detained-in-ongoing-west-bank-pogrom?traffic_source=rss"
     },
     {
      "name": "Washington Times",
@@ -839,48 +903,6 @@
      "label": "Center"
     }
    ]
-  },
-  {
-   "title": "Pope Leo to be discharged from the hospital after lung cancer surgery",
-   "summary": "Pope Leo XIV will be discharged from the hospital on Saturday after undergoing surgery to remove a cancerous nodule from his right lung, the Vatican said, and will make an appearance to lead prayer on Sunday.",
-   "category": "Health",
-   "leans": [
-    -1,
-    2
-   ],
-   "span": 3,
-   "n_sources": 3,
-   "balance": {
-    "l": 2,
-    "c": 0,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Pope Leo to be discharged from the hospital after lung cancer surgery",
-     "url": "https://www.nbcnews.com/world/pope-leo-xiv/pope-leo-discharged-hospital-lung-cancer-surgery-rcna604005"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Pope Leo to be discharged from hospital on Saturday, Vatican says",
-     "url": "https://www.cbsnews.com/news/pope-leo-hospital-released-discharged-saturday-appearance/"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Pope Leo XIV to be discharged from hospital and return to Vatican after surgery to remove lung cancer",
-     "url": "https://www.foxnews.com/world/pope-leo-xiv-discharged-hospital-return-vatican-surgery-remove-lung-cancer"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
   },
   {
    "title": "DOJ says California officials who process ballots from suspected noncitizens risk prosecution",
@@ -1238,48 +1260,6 @@
    ]
   },
   {
-   "title": "Judge dismisses child sexual abuse charges against actor Timothy Busfield",
-   "summary": "A New Mexico judge dismissed child sexual abuse charges against \"West Wing\" and \"Field of Dreams\" actor Timothy Busfield over prosecutor misconduct. Busfield has repeatedly denied the allegations, describing them as lies motivated by revenge.",
-   "category": "General",
-   "leans": [
-    -1,
-    0
-   ],
-   "span": 1,
-   "n_sources": 3,
-   "balance": {
-    "l": 2,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Judge dismisses child sexual abuse charges against actor Timothy Busfield",
-     "url": "https://www.nbcnews.com/video/judge-dismisses-child-sexual-abuse-charges-against-actor-timothy-busfield-271724613627"
-    },
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Judge tosses indictment against actor Timothy Busfield",
-     "url": "https://abcnews.com/GMA/Culture/judge-tosses-indictment-actor-timothy-busfield/story?id=137332942"
-    },
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Judge throws out child sex abuse charges against actor Timothy Busfield",
-     "url": "https://www.bbc.co.uk/news/articles/c8vgxwq4q5r2o?at_medium=RSS&at_campaign=rss"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Mexican judge sentences three men to 158 years in prison for murders of Australian and US surfers​",
    "summary": "Australian ​brothers Jake ​and Callum Robinson, and ​their ‌American friend Carter Rhoad, were killed while on a surf trip in Baja California in 2024 Get our breaking news email , free app or daily news podcast A Mexican ⁠judge ⁠has sentenced ​three men to 158 years ⁠and nine mon",
    "category": "General",
@@ -1344,6 +1324,41 @@
      "label": "Center",
      "title": "Brazil sees record fall in Amazon deforestation as key election looms",
      "url": "https://www.bbc.co.uk/news/articles/cqe8rzg6zl00o?at_medium=RSS&at_campaign=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Judge dismisses child sexual abuse charges against actor Timothy Busfield",
+   "summary": "A New Mexico judge dismissed child sexual abuse charges against \"West Wing\" and \"Field of Dreams\" actor Timothy Busfield over prosecutor misconduct. Busfield has repeatedly denied the allegations, describing them as lies motivated by revenge.",
+   "category": "General",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Judge dismisses child sexual abuse charges against actor Timothy Busfield",
+     "url": "https://www.nbcnews.com/video/judge-dismisses-child-sexual-abuse-charges-against-actor-timothy-busfield-271724613627"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Judge throws out child sex abuse charges against actor Timothy Busfield",
+     "url": "https://www.bbc.co.uk/news/articles/c8vgxwq4q5r2o?at_medium=RSS&at_campaign=rss"
     }
    ],
    "factchecks": [],
