@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steady College</title>
+<meta name="description" content="Steady College — track every college application, deadline, essay and recommendation in one private place. Compare schools and plan financial aid. Your data stays on your device.">
+<link rel="stylesheet" href="shared.css">
+<style>:root{--accent:#5a5fe0;--accent-2:#8389f0;--accent-dark:#4044c0}
+.minisel{width:auto!important;padding:5px 7px;border-radius:8px;font-size:12.5px;min-width:0}
+.cmptable{border-collapse:collapse;width:100%;font-size:12.5px}
+.cmptable th,.cmptable td{border:1px solid var(--line);padding:5px 7px;text-align:center}
+.cmptable th{background:color-mix(in srgb,var(--accent) 12%,transparent);font:600 12px var(--display);white-space:nowrap}
+.cmptable td:first-child,.cmptable th:first-child{text-align:left}
+.cmptable .minisel{padding:3px 5px}</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div style="display:flex;align-items:center;gap:10px"><button class="icon-btn hamb" id="hambBtn" title="Menu">☰</button><a class="brand" href="index.html"><span class="logo">S</span> Steady <b>College</b></a></div>
+  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="premhdr" data-steady="premium">⭐ Premium</button><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
+</div></header>
+<div class="shell">
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side">
+  <div class="navgroup"><div class="navhead">Dashboard</div>
+    <button class="snav active" data-panel="home">📊 Overview</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Applying</div>
+    <button class="snav" data-panel="schools">🏫 Applications</button>
+    <button class="snav" data-panel="dates">📅 Deadlines</button>
+    <button class="snav" data-panel="essays">✍️ Essays</button>
+    <button class="snav" data-panel="recs">📨 Recommenders</button>
+    <button class="snav" data-panel="tasks">✅ Checklist</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Deciding</div>
+    <button class="snav" data-panel="compare">⚖️ Compare<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="aid">💰 Aid & Cost<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="timeline">🗓️ Season Plan<span class="lk">🔒</span></button>
+  </div>
+  <div class="navgroup"><div class="navhead">You</div>
+    <button class="snav" data-panel="rewards">🏆 Progress</button>
+  </div>
+</aside>
+<main class="main">
+  <section class="panel active" id="panel-home">
+    <div class="hero"><div class="lbl">Next deadline</div><div class="big" id="h-next">—</div><div class="meta" id="h-nextname">add an application to start the countdown</div>
+      <div class="mini"><div>Schools<b id="h-schools">0</b></div><div>Submitted<b id="h-sub">0</b></div><div>Essays done<b id="h-essays">0</b></div><div>Checklist<b id="h-tasks">0%</b></div></div></div>
+    <div class="grid2">
+      <div class="card"><h2>Deadlines coming up</h2><p class="sub">Soonest first — applications and key dates together</p><div id="home-dead"></div></div>
+      <div class="card"><h2>What's left per school</h2><p class="sub">Essays and recs still open</p><div id="home-open"></div></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-schools">
+    <div class="card"><h2>Applications</h2><p class="sub">One row per school. Mark each a reach, match or safety, set the deadline, and move the status along as you go.</p>
+      <div class="addform" style="grid-template-columns:1fr 130px 150px auto"><div class="field"><label>School</label><input id="sc-name" placeholder="State University"></div><div class="field"><label>Type</label><select id="sc-tier"><option>Reach</option><option>Match</option><option>Safety</option></select></div><div class="field"><label>Deadline</label><input id="sc-due" type="date"></div><button class="btn" id="sc-add">Add</button></div>
+      <div id="sc-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-dates">
+    <div class="card"><h2>Key dates</h2><p class="sub">FAFSA, test dates, housing, deposits — anything with a deadline. The countdown keeps them from sneaking up.</p>
+      <div class="addform" style="grid-template-columns:1fr 150px auto"><div class="field"><label>What</label><input id="dt-name" placeholder="FAFSA opens, SAT, housing deposit…"></div><div class="field"><label>Date</label><input id="dt-date" type="date"></div><button class="btn" id="dt-add">Add</button></div>
+      <div id="dt-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-essays">
+    <div class="grid2" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Essays</div><div class="val" id="es-total">0</div></div>
+      <div class="stat"><div class="label">Done</div><div class="val" id="es-done">0</div></div>
+    </div>
+    <div class="card"><h2>Essay tracker</h2><p class="sub">Every main and supplemental essay, with a status so none gets forgotten.</p>
+      <div class="addform" style="grid-template-columns:150px 1fr 140px auto"><div class="field"><label>School</label><input id="es-school" placeholder="State U / Common App"></div><div class="field"><label>Prompt</label><input id="es-prompt" placeholder="Why us? (250 words)"></div><div class="field"><label>Status</label><select id="es-status"><option>Not started</option><option>Drafting</option><option>Revising</option><option>Done</option></select></div><button class="btn" id="es-add">Add</button></div>
+      <div id="es-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-recs">
+    <div class="card"><h2>Recommenders</h2><p class="sub">Who you asked, and where each letter stands. Ask early — 3 to 4 weeks before your first deadline.</p>
+      <div class="addform" style="grid-template-columns:1fr 150px 150px auto"><div class="field"><label>Name</label><input id="rc-name" placeholder="Ms. Rivera"></div><div class="field"><label>Relationship</label><input id="rc-rel" placeholder="AP Bio teacher"></div><div class="field"><label>Status</label><select id="rc-status"><option>To ask</option><option>Asked</option><option>Agreed</option><option>Submitted</option></select></div><button class="btn" id="rc-add">Add</button></div>
+      <div id="rc-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-tasks">
+    <div class="grid2" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Done</div><div class="val" id="tk-done">0</div></div>
+      <div class="stat"><div class="label">Progress</div><div class="val" id="tk-pct">0%</div></div>
+    </div>
+    <div class="card"><h2>Application checklist</h2><p class="sub">The usual steps. Check them off, or add your own.</p>
+      <div class="addform" style="grid-template-columns:1fr auto"><input id="tk-text" placeholder="Add a step…"><button class="btn" id="tk-add">Add</button></div>
+      <div id="tk-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-compare">
+    <div class="card"><h2>Comparison scorecard</h2><p class="sub">Score each school 1–5 on what matters to you, set how much each factor weighs, and let the numbers rank your best fit.</p>
+      <div id="cmp-weights"></div>
+      <div id="cmp-grid" style="margin-top:14px;overflow-x:auto"></div>
+      <div id="cmp-rank" style="margin-top:14px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-aid">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Schools costed</div><div class="val" id="aid-n">0</div></div>
+      <div class="stat"><div class="label">Lowest net cost</div><div class="val" id="aid-low">—</div></div>
+      <div class="stat"><div class="label">Scholarships out</div><div class="val" id="aid-scholN">0</div></div>
+    </div>
+    <div class="card"><h2>Net cost by school</h2><p class="sub">Sticker price minus grants, scholarships and work-study — what you'd actually pay. Enter dollars.</p>
+      <div class="addform" style="grid-template-columns:1fr 110px 110px 110px auto"><div class="field"><label>School</label><input id="ad-school" placeholder="State U"></div><div class="field"><label>Cost / yr</label><input id="ad-cost" type="number" inputmode="numeric" placeholder="28000"></div><div class="field"><label>Grants+schol</label><input id="ad-aid" type="number" inputmode="numeric" placeholder="15000"></div><div class="field"><label>Work-study</label><input id="ad-ws" type="number" inputmode="numeric" placeholder="2500"></div><button class="btn" id="ad-add">Add</button></div>
+      <div id="ad-list" style="margin-top:12px"></div>
+    </div>
+    <div class="card"><h2>Scholarships</h2><p class="sub">Track what you've applied for and what came through.</p>
+      <div class="addform" style="grid-template-columns:1fr 110px 140px auto"><div class="field"><label>Scholarship</label><input id="ad-sname" placeholder="Local Rotary"></div><div class="field"><label>Amount</label><input id="ad-samt" type="number" inputmode="numeric" placeholder="1000"></div><div class="field"><label>Status</label><select id="ad-sstat"><option>Applied</option><option>Submitted</option><option>Won</option><option>Declined</option></select></div><button class="btn" id="ad-sadd">Add</button></div>
+      <div id="ad-slist" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-timeline">
+    <div class="card"><h2>Application season plan</h2><p class="sub">A month-by-month view of what usually happens, with your own open items folded in. Confirm exact dates with each school.</p>
+      <div id="tl-list"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-rewards">
+    <div class="hero"><div class="lbl">Progress</div><div class="big" id="rw-sub">0</div><div class="meta">applications submitted</div>
+      <div class="mini"><div>Essays done<b id="rw-ess">0</b></div><div>Badges<b id="rw-count">0</b></div></div></div>
+    <div class="card"><h2>Your level</h2><p class="sub">Adding schools, finishing essays and submitting apps all earn XP.</p><div id="xp-card"></div></div>
+    <div class="card"><h2>Today's goals</h2><p class="sub">Small steps that move applications forward.</p><div id="quests"></div></div>
+    <div class="card"><h2>Milestones</h2><p class="sub">They unlock as you work through the season.</p><div class="badgegrid" id="rw-badges"></div></div>
+  </section>
+</main>
+</div>
+<footer class="ft">Steady College · a Steady Systems app · your data stays on this device · general guidance, not financial or admissions advice</footer>
+<div id="toasts"></div>
+<script src="shared.js"></script>
+<script>
+var DEF={schools:[],dates:[],essays:[],recs:[],tasks:[],scholarships:[],weights:{},scores:{}};
+var db=Steady.load("college",DEF);var S=Steady;
+var CRIT=["Net cost","My major","Location","Size & feel","Housing","Financial aid","Career / internships","Graduation rate"];
+function daysTo(d){var t=new Date();t.setHours(0,0,0,0);var x=new Date(d+"T00:00:00");return Math.round((x-t)/86400000);}
+function fmtDate(d){return new Date(d+"T00:00:00").toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"});}
+function money(n){n=Number(n)||0;return "$"+n.toLocaleString("en-US");}
+function ddPill(d){var dd=daysTo(d),cls=dd<0?"bad":dd<=7?"warn":"good",txt=dd<0?"passed":dd===0?"today":dd+"d";return {dd:dd,cls:cls,txt:txt};}
+
+/* applications */
+var TIERCLS={Reach:"warn",Match:"good",Safety:""};
+var SCSTEPS=["Not started","In progress","Ready","Submitted","Decision in"];
+function renderSchools(){
+  var a=db.schools.slice().sort(function(x,y){return (x.due||"9").localeCompare(y.due||"9");});
+  var l=S.el("sc-list");l.innerHTML=a.length?"":'<div class="empty">No applications yet. Add the schools you\'re applying to.</div>';
+  a.forEach(function(e){
+    var r=document.createElement("div");r.className="row";
+    var left=document.createElement("div");left.style.flex="1";
+    var meta=(e.tier||"")+(e.due?" · "+(ddPill(e.due).dd<0?"deadline passed":ddPill(e.due).txt+" · "+fmtDate(e.due)):" · no deadline set");
+    left.innerHTML='<div class="nm">'+e.name+'</div><div class="meta">'+meta+'</div>';
+    var tier=document.createElement("span");tier.className="pill "+(TIERCLS[e.tier]||"");tier.textContent=e.tier||"";tier.style.marginRight="6px";
+    var sel=document.createElement("select");sel.className="minisel";
+    SCSTEPS.forEach(function(s){var o=document.createElement("option");o.textContent=s;if(s===e.status)o.selected=true;sel.appendChild(o);});
+    sel.onchange=function(){e.status=sel.value;S.save();renderSchools();renderHome();renderRewards();};
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.schools=db.schools.filter(x=>x.id!==e.id);S.save();renderSchools();renderHome();renderCompare();renderRewards();};
+    r.appendChild(left);r.appendChild(tier);r.appendChild(sel);r.appendChild(del);l.appendChild(r);
+  });
+}
+S.el("sc-add").onclick=function(){var n=S.val("sc-name");if(!n)return;db.schools.push({id:S.uid(),name:n,tier:S.val("sc-tier"),due:S.val("sc-due"),status:"Not started"});S.save();S.clr("sc-name","sc-due");renderSchools();renderHome();renderCompare();renderRewards();S.toast("Added",1);};
+
+/* key dates */
+function renderDates(){
+  var e=db.dates.slice().filter(x=>x.date).sort((a,b)=>a.date.localeCompare(b.date));
+  var l=S.el("dt-list");l.innerHTML=e.length?"":'<div class="empty">No key dates yet.</div>';
+  e.forEach(function(x){var p=ddPill(x.date);var r=document.createElement("div");r.className="row";
+    r.innerHTML='<span class="nm">'+x.name+'<div class="meta">'+fmtDate(x.date)+'</div></span><span class="pill '+p.cls+'">'+p.txt+'</span>';
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.dates=db.dates.filter(y=>y.id!==x.id);S.save();renderDates();renderHome();};r.appendChild(del);l.appendChild(r);});
+}
+S.el("dt-add").onclick=function(){var n=S.val("dt-name"),d=S.val("dt-date");if(!n||!d)return;db.dates.push({id:S.uid(),name:n,date:d});S.save();S.clr("dt-name","dt-date");renderDates();renderHome();S.toast("Added",1);};
+
+/* essays */
+var ESCLS={"Not started":"bad","Drafting":"warn","Revising":"warn","Done":"good"};
+function renderEssays(){
+  var l=S.el("es-list");l.innerHTML=db.essays.length?"":'<div class="empty">No essays tracked yet.</div>';
+  db.essays.forEach(function(e){var r=document.createElement("div");r.className="row";
+    var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+e.prompt+'</div><div class="meta">'+(e.school||"")+'</div>';
+    var sel=document.createElement("select");sel.className="minisel";
+    ["Not started","Drafting","Revising","Done"].forEach(function(s){var o=document.createElement("option");o.textContent=s;if(s===e.status)o.selected=true;sel.appendChild(o);});
+    sel.onchange=function(){e.status=sel.value;S.save();renderEssays();renderHome();renderRewards();};
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.essays=db.essays.filter(x=>x.id!==e.id);S.save();renderEssays();renderHome();renderRewards();};
+    r.appendChild(left);r.appendChild(sel);r.appendChild(del);l.appendChild(r);});
+  S.el("es-total").textContent=db.essays.length;
+  S.el("es-done").textContent=db.essays.filter(e=>e.status==="Done").length;
+}
+S.el("es-add").onclick=function(){var p=S.val("es-prompt");if(!p)return;db.essays.push({id:S.uid(),school:S.val("es-school"),prompt:p,status:S.val("es-status")});S.save();S.clr("es-school","es-prompt");renderEssays();renderHome();renderRewards();S.toast("Added",1);};
+
+/* recommenders */
+var RCCLS={"To ask":"bad","Asked":"warn","Agreed":"warn","Submitted":"good"};
+function renderRecs(){
+  var l=S.el("rc-list");l.innerHTML=db.recs.length?"":'<div class="empty">No recommenders yet.</div>';
+  db.recs.forEach(function(e){var r=document.createElement("div");r.className="row";
+    var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+e.name+'</div><div class="meta">'+(e.rel||"")+'</div>';
+    var sel=document.createElement("select");sel.className="minisel";
+    ["To ask","Asked","Agreed","Submitted"].forEach(function(s){var o=document.createElement("option");o.textContent=s;if(s===e.status)o.selected=true;sel.appendChild(o);});
+    sel.onchange=function(){e.status=sel.value;S.save();renderRecs();renderRewards();};
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.recs=db.recs.filter(x=>x.id!==e.id);S.save();renderRecs();renderRewards();};
+    r.appendChild(left);r.appendChild(sel);r.appendChild(del);l.appendChild(r);});
+}
+S.el("rc-add").onclick=function(){var n=S.val("rc-name");if(!n)return;db.recs.push({id:S.uid(),name:n,rel:S.val("rc-rel"),status:S.val("rc-status")});S.save();S.clr("rc-name","rc-rel");renderRecs();renderRewards();S.toast("Added",1);};
+
+/* checklist */
+var STARTER=["Build my college list (reach / match / safety)","Register for the SAT or ACT","Create my application accounts (Common App, etc.)","Ask for recommendation letters","Draft my personal statement","Submit the FAFSA / financial-aid forms","Finish supplemental essays","Request my transcript be sent","Review and submit each application","Compare offers and decide"];
+function renderTasks(){
+  if(!db.tasks.length&&!db._seeded){db._seeded=true;STARTER.forEach(function(t){db.tasks.push({id:S.uid(),text:t,done:false});});S.save();}
+  var l=S.el("tk-list");l.innerHTML=db.tasks.length?"":'<div class="empty">No steps yet — add your own.</div>';
+  db.tasks.forEach(function(e){var r=document.createElement("div");r.className="row";
+    var box=document.createElement("div");box.className="boxcell";box.style.cssText="width:22px;height:22px;aspect-ratio:auto;flex:none";if(e.done){box.classList.add("on");box.textContent="✓";}
+    box.onclick=function(){e.done=!e.done;S.save();renderTasks();renderHome();renderRewards();};
+    var left=document.createElement("div");left.style.flex="1";left.innerHTML='<div class="nm" style="'+(e.done?"text-decoration:line-through;opacity:.6":"")+'">'+e.text+'</div>';
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.tasks=db.tasks.filter(x=>x.id!==e.id);S.save();renderTasks();renderHome();renderRewards();};
+    r.appendChild(box);r.appendChild(left);r.appendChild(del);l.appendChild(r);});
+  var done=db.tasks.filter(t=>t.done).length,pct=db.tasks.length?Math.round(done/db.tasks.length*100):0;
+  S.el("tk-done").textContent=done;S.el("tk-pct").textContent=pct+"%";
+}
+S.el("tk-add").onclick=function(){var t=S.val("tk-text");if(!t)return;db.tasks.push({id:S.uid(),text:t,done:false});S.save();S.clr("tk-text");renderTasks();renderHome();S.toast("Added",1);};
+
+/* overview */
+function allDeadlines(){
+  var items=[];
+  db.schools.forEach(function(s){if(s.due&&s.status!=="Submitted"&&s.status!=="Decision in")items.push({name:s.name+" application",date:s.due});});
+  db.dates.forEach(function(d){if(d.date)items.push({name:d.name,date:d.date});});
+  return items.filter(x=>daysTo(x.date)>=0).sort((a,b)=>a.date.localeCompare(b.date));
+}
+function renderHome(){
+  S.el("h-schools").textContent=db.schools.length;
+  S.el("h-sub").textContent=db.schools.filter(s=>s.status==="Submitted"||s.status==="Decision in").length;
+  S.el("h-essays").textContent=db.essays.filter(e=>e.status==="Done").length;
+  var done=db.tasks.filter(t=>t.done).length,pct=db.tasks.length?Math.round(done/db.tasks.length*100):0;
+  S.el("h-tasks").textContent=pct+"%";
+  var dl=allDeadlines();
+  if(dl.length){S.el("h-next").textContent=daysTo(dl[0].date)===0?"Today":daysTo(dl[0].date)+"d";S.el("h-nextname").textContent=dl[0].name+" · "+fmtDate(dl[0].date);}
+  else{S.el("h-next").textContent="—";S.el("h-nextname").textContent="add an application or key date to start the countdown";}
+  var hd=S.el("home-dead");
+  hd.innerHTML=dl.length?dl.slice(0,6).map(function(x){var p=ddPill(x.date);return '<div class="row"><span class="nm">'+x.name+'<div class="meta">'+fmtDate(x.date)+'</div></span><span class="pill '+p.cls+'">'+p.txt+'</span></div>';}).join(""):'<div class="empty">Nothing scheduled yet.</div>';
+  var open=[];
+  db.schools.forEach(function(s){
+    var es=db.essays.filter(e=>e.school&&s.name&&e.school.toLowerCase().indexOf(s.name.toLowerCase().split(" ")[0])>=0&&e.status!=="Done").length;
+    if(s.status!=="Submitted"&&s.status!=="Decision in")open.push({name:s.name,essays:es});
+  });
+  var ho=S.el("home-open");
+  ho.innerHTML=open.length?open.slice(0,6).map(function(o){return '<div class="row"><span class="nm">'+o.name+'</span><span class="pill '+(o.essays?"warn":"good")+'">'+(o.essays?o.essays+" essay"+(o.essays>1?"s":"")+" open":"no open essays")+'</span></div>';}).join(""):'<div class="empty">Add applications to see what\'s left.</div>';
+}
+
+/* compare (premium) */
+function renderCompare(){
+  var schools=db.schools;
+  var wbox=S.el("cmp-weights");
+  if(!schools.length){wbox.innerHTML="";S.el("cmp-grid").innerHTML='<div class="empty">Add a few schools on the Applications tab, then score them here.</div>';S.el("cmp-rank").innerHTML="";return;}
+  wbox.innerHTML='<p class="sub" style="margin:0 0 6px">How much each factor matters (1–5):</p>';
+  var wg=document.createElement("div");wg.style.cssText="display:flex;flex-wrap:wrap;gap:8px";
+  CRIT.forEach(function(c){
+    var w=document.createElement("div");w.style.cssText="display:flex;align-items:center;gap:5px;font-size:12.5px;color:var(--muted)";
+    var sel=document.createElement("select");sel.className="minisel";
+    for(var i=1;i<=5;i++){var o=document.createElement("option");o.textContent=i;if((db.weights[c]||3)===i)o.selected=true;sel.appendChild(o);}
+    sel.onchange=function(){db.weights[c]=Number(sel.value);S.save();renderCompare();};
+    w.appendChild(document.createTextNode(c));w.appendChild(sel);wg.appendChild(w);
+  });
+  wbox.appendChild(wg);
+  // grid: rows=criteria, cols=schools
+  var t='<table class="cmptable"><thead><tr><th>Criterion</th>'+schools.map(s=>'<th>'+s.name+'</th>').join("")+'</tr></thead><tbody>';
+  CRIT.forEach(function(c){
+    t+='<tr><td>'+c+'</td>'+schools.map(function(s){
+      var v=(db.scores[s.id]&&db.scores[s.id][c])||0;
+      var opts='<option value="0">–</option>';for(var i=1;i<=5;i++)opts+='<option value="'+i+'"'+(v===i?" selected":"")+'>'+i+'</option>';
+      return '<td><select class="minisel cmpscore" data-s="'+s.id+'" data-c="'+c+'">'+opts+'</select></td>';
+    }).join("")+'</tr>';
+  });
+  t+='</tbody></table>';
+  S.el("cmp-grid").innerHTML=t;
+  Array.prototype.forEach.call(document.querySelectorAll(".cmpscore"),function(sel){
+    sel.onchange=function(){var sid=sel.getAttribute("data-s"),c=sel.getAttribute("data-c");if(!db.scores[sid])db.scores[sid]={};db.scores[sid][c]=Number(sel.value);S.save();renderCompare();};
+  });
+  // ranking
+  var ranked=schools.map(function(s){
+    var tot=0,wsum=0;CRIT.forEach(function(c){var w=db.weights[c]||3,v=(db.scores[s.id]&&db.scores[s.id][c])||0;tot+=w*v;wsum+=w*5;});
+    return {name:s.name,score:tot,pct:wsum?Math.round(tot/wsum*100):0};
+  }).sort((a,b)=>b.score-a.score);
+  var any=ranked.some(r=>r.score>0);
+  S.el("cmp-rank").innerHTML='<h2 style="margin:4px 0 8px">Best fit</h2>'+(any?ranked.map(function(r,i){return '<div class="row"><span class="nm">'+(i===0?"🥇 ":i===1?"🥈 ":i===2?"🥉 ":"")+r.name+'</span><div class="bar" style="max-width:220px"><span style="width:'+r.pct+'%;background:var(--accent)"></span></div><span class="amt">'+r.pct+'%</span></div>';}).join(""):'<div class="empty">Score the schools above to see them ranked.</div>');
+}
+
+/* aid (premium) */
+function renderAid(){
+  var l=S.el("ad-list");l.innerHTML=db.schools.filter(s=>s.aid!==undefined||s.cost!==undefined).length?"":"";
+  var costed=db._aid||[];
+  if(!db._aid)db._aid=[];
+  var rows=db._aid;
+  l.innerHTML=rows.length?"":'<div class="empty">Add a school\'s cost and aid to see what you\'d actually pay.</div>';
+  var low=null;
+  rows.forEach(function(e){
+    var net=Math.max(0,(Number(e.cost)||0)-(Number(e.aid)||0)-(Number(e.ws)||0));
+    if(low===null||net<low.net)low={net:net,name:e.school};
+    var r=document.createElement("div");r.className="row";
+    r.innerHTML='<span class="nm">'+e.school+'<div class="meta">'+money(e.cost)+' − '+money(e.aid)+' aid − '+money(e.ws)+' work-study</div></span><span class="pill '+(net===0?"good":"") +'">'+money(net)+'/yr</span>';
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db._aid=db._aid.filter(x=>x.id!==e.id);S.save();renderAid();};r.appendChild(del);l.appendChild(r);
+  });
+  S.el("aid-n").textContent=rows.length;
+  S.el("aid-low").textContent=low?money(low.net):"—";
+  var sl=S.el("ad-slist");sl.innerHTML=db.scholarships.length?"":'<div class="empty">No scholarships tracked yet.</div>';
+  db.scholarships.forEach(function(e){var cls=e.status==="Won"?"good":e.status==="Declined"?"bad":"warn";var r=document.createElement("div");r.className="row";
+    r.innerHTML='<span class="nm">'+e.name+'<div class="meta">'+money(e.amount)+'</div></span><span class="pill '+cls+'">'+e.status+'</span>';
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.scholarships=db.scholarships.filter(x=>x.id!==e.id);S.save();renderAid();};r.appendChild(del);sl.appendChild(r);});
+  S.el("aid-scholN").textContent=db.scholarships.filter(s=>s.status==="Submitted"||s.status==="Applied").length;
+}
+S.el("ad-add").onclick=function(){var n=S.val("ad-school");if(!n)return;if(!db._aid)db._aid=[];db._aid.push({id:S.uid(),school:n,cost:S.val("ad-cost"),aid:S.val("ad-aid"),ws:S.val("ad-ws")});S.save();S.clr("ad-school","ad-cost","ad-aid","ad-ws");renderAid();S.toast("Added",1);};
+S.el("ad-sadd").onclick=function(){var n=S.val("ad-sname");if(!n)return;db.scholarships.push({id:S.uid(),name:n,amount:S.val("ad-samt"),status:S.val("ad-sstat")});S.save();S.clr("ad-sname","ad-samt");renderAid();S.toast("Added",1);};
+
+/* season plan (premium) */
+var SEASON=[
+ ["Summer","Build your list; start the main essay; line up recommenders"],
+ ["September","Finalize the list; open application accounts; ask for rec letters"],
+ ["October","FAFSA opens; finish early-action / early-decision essays"],
+ ["November","Early action & early decision deadlines (often Nov 1 or 15)"],
+ ["December","Early results arrive; keep polishing regular-decision essays"],
+ ["January","Regular-decision deadlines (often Jan 1 or 15); submit aid forms"],
+ ["February","Mid-year reports; watch for aid and scholarship requests"],
+ ["March","Most regular decisions arrive; compare offers and aid"],
+ ["April","Decide; the common reply date is May 1; submit your deposit"],
+ ["May","Final transcripts; AP/IB exams; thank your recommenders"]
+];
+function renderTimeline(){
+  var now=new Date(),mi=now.getMonth();
+  var monthIdx={"Summer":[5,6,7],"September":[8],"October":[9],"November":[10],"December":[11],"January":[0],"February":[1],"March":[2],"April":[3],"May":[4]};
+  var html="";
+  SEASON.forEach(function(row){
+    var idxs=monthIdx[row[0]],isNow=idxs.indexOf(mi)>=0;
+    html+='<div class="card" style="margin-bottom:10px;padding:13px 15px;'+(isNow?"border-color:var(--accent)":"")+'"><b style="font:700 13px var(--display);color:'+(isNow?"var(--accent)":"inherit")+'">'+row[0]+(isNow?" · you're here":"")+'</b><div style="font-size:12.5px;color:var(--muted);margin-top:3px">'+row[1]+'</div></div>';
+  });
+  // fold in the user's nearest open items
+  var dl=allDeadlines().slice(0,4);
+  if(dl.length)html='<div class="card" style="margin-bottom:12px"><h2 style="margin-top:0">Your next deadlines</h2>'+dl.map(function(x){var p=ddPill(x.date);return '<div class="row"><span class="nm">'+x.name+'<div class="meta">'+fmtDate(x.date)+'</div></span><span class="pill '+p.cls+'">'+p.txt+'</span></div>';}).join("")+'</div>'+html;
+  S.el("tl-list").innerHTML=html;
+}
+
+/* rewards */
+var BADGES=[
+ {id:"first",ic:"🏫",title:"On the Map",desc:"Added your first school",cond:c=>c.schools>0},
+ {id:"list",ic:"📋",title:"The List",desc:"3+ schools, with a reach, match & safety",cond:c=>c.schools>=3&&c.tiers>=3},
+ {id:"essay1",ic:"✍️",title:"First Draft",desc:"Marked an essay Done",cond:c=>c.essaysDone>=1},
+ {id:"essays",ic:"📚",title:"Wordsmith",desc:"3 essays done",cond:c=>c.essaysDone>=3},
+ {id:"recs",ic:"📨",title:"Backed Up",desc:"A recommendation submitted",cond:c=>c.recsIn>=1},
+ {id:"sub1",ic:"🚀",title:"Submitted!",desc:"First application in",cond:c=>c.sub>=1},
+ {id:"sub3",ic:"🎯",title:"Full Court",desc:"3 applications submitted",cond:c=>c.sub>=3},
+ {id:"aid",ic:"💰",title:"Money Smart",desc:"Compared aid or scholarships",cond:c=>c.aid>0}
+];
+function renderRewards(){
+  var sub=db.schools.filter(s=>s.status==="Submitted"||s.status==="Decision in").length;
+  var essaysDone=db.essays.filter(e=>e.status==="Done").length;
+  S.el("rw-sub").textContent=sub;S.el("rw-ess").textContent=essaysDone;
+  var tiers=new Set(db.schools.map(s=>s.tier)).size;
+  var ctx={schools:db.schools.length,tiers:tiers,essaysDone:essaysDone,recsIn:db.recs.filter(r=>r.status==="Submitted").length,
+    sub:sub,aid:(db._aid?db._aid.length:0)+db.scholarships.length};
+  var earned=S.renderBadges(S.el("rw-badges"),BADGES,ctx);
+  S.el("rw-count").textContent=earned;
+  var done=db.tasks.filter(t=>t.done).length;
+  var xp=earned*40+sub*25+essaysDone*12+db.schools.length*6+done*5+ctx.recsIn*10;
+  S.gamify({xp:xp,badges:earned,container:S.el("xp-card")});
+  var t=S.todayISO();
+  S.renderQuests(S.el("quests"),[
+    {label:"Move one application forward",xp:10,done:db.schools.some(s=>s.status==="Ready"||s.status==="Submitted")},
+    {label:"Finish an essay",xp:10,done:essaysDone>0},
+    {label:"Check off a checklist step",xp:10,done:done>0}
+  ]);
+}
+
+function SAMPLE(){var t=new Date();function d(off){var x=new Date(t.getFullYear(),t.getMonth(),t.getDate()+off);return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0");}
+  return {schools:[{id:S.uid(),name:"State University",tier:"Match",due:d(21),status:"In progress"},{id:S.uid(),name:"City College",tier:"Safety",due:d(40),status:"Ready"},{id:S.uid(),name:"Dream Tech",tier:"Reach",due:d(12),status:"Not started"}],
+    dates:[{id:S.uid(),name:"FAFSA submitted",date:d(7)},{id:S.uid(),name:"SAT test date",date:d(16)},{id:S.uid(),name:"Housing deposit",date:d(55)}],
+    essays:[{id:S.uid(),school:"Common App",prompt:"Personal statement (650 words)",status:"Revising"},{id:S.uid(),school:"Dream Tech",prompt:"Why us? (250 words)",status:"Not started"},{id:S.uid(),school:"State University",prompt:"Community essay (300 words)",status:"Done"}],
+    recs:[{id:S.uid(),name:"Ms. Rivera",rel:"AP Bio teacher",status:"Agreed"},{id:S.uid(),name:"Coach Dale",rel:"Track coach",status:"Submitted"}],
+    tasks:STARTER.map(function(x,i){return {id:S.uid(),text:x,done:i<4};}),
+    scholarships:[{id:S.uid(),name:"Local Rotary",amount:"1000",status:"Submitted"},{id:S.uid(),name:"STEM Futures",amount:"2500",status:"Applied"}],
+    weights:{"Net cost":5,"My major":5,"Financial aid":4,"Career / internships":4},
+    scores:{},_seeded:true,
+    _aid:[{id:S.uid(),school:"State University",cost:"24000",aid:"14000",ws:"2500"},{id:S.uid(),school:"City College",cost:"12000",aid:"8000",ws:"1500"}]};
+}
+
+function renderAll(){renderSchools();renderDates();renderEssays();renderRecs();renderTasks();renderCompare();renderAid();renderTimeline();renderHome();renderRewards();S.applyPremium();}
+S.el("sc-due").value="";
+S.initShell();
+S.initAccount({name:"steady-college",defaults:DEF,sample:SAMPLE,render:renderAll});
+S.initPremium({title:"Steady College Premium",price:"1.25",desc:"Just $1.25/mo for this section — the tools that help you decide.",veil:"Unlock the weighted school comparison, the aid & net-cost tracker, and your season plan.",
+  features:["⚖️ Comparison scorecard — weighted ranking of your schools","💰 Aid & net-cost tracker — what you'd actually pay","🎓 Scholarship tracker","🗓️ Season plan — month-by-month, with your deadlines folded in"],render:renderAll});
+renderAll();
+S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady College</h2><p>Every application, deadline, essay and recommendation in one private place — so nothing slips during the busiest year.</p></div><div class="feat"><div class="fi">🏫</div><div><b>One list, all the schools</b><p>Reach, match and safety — with deadlines and status.</p></div></div><div class="feat"><div class="fi">⚖️</div><div><b>Decide with a clear head</b><p>Compare schools and real net cost when offers come in.</p></div></div>',sample:SAMPLE,render:renderAll});
+</script>
+</body>
+</html>

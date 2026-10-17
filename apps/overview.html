@@ -101,7 +101,7 @@
 <script>
 var S=Steady;S.initShell();
 function read(k){try{var r=localStorage.getItem(k);return r?JSON.parse(r):null;}catch(e){return null;}}
-var M=read("steadyMoney.v1"),H=read("steady.health.v1"),ST=read("steady.study.v1"),W=read("steady.work.v1"),HM=read("steady.home.v1"),BZ=read("steady.biz.v1"),EV=read("steady.events.v1"),MV=read("steady.move.v1"),PT=read("steady.pets.v1"),WD=read("steady.wedding.v1");
+var M=read("steadyMoney.v1"),H=read("steady.health.v1"),ST=read("steady.study.v1"),W=read("steady.work.v1"),HM=read("steady.home.v1"),BZ=read("steady.biz.v1"),EV=read("steady.events.v1"),MV=read("steady.move.v1"),PT=read("steady.pets.v1"),WD=read("steady.wedding.v1"),KT=read("steady.kitchen.v1"),CO=read("steady.college.v1");
 function tm(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0");}
 function dkey(dt){return dt.getFullYear()+"-"+String(dt.getMonth()+1).padStart(2,"0")+"-"+String(dt.getDate()).padStart(2,"0");}
 (function(){
@@ -199,6 +199,22 @@ if(WD&&((WD.wed&&WD.wed.date)||(WD.guests||[]).length||(WD.budget||[]).length)){
     yes:(WD.guests||[]).filter(function(x){return x.status==="Yes";}).reduce(function(a,b){return a+(Number(b.count)||1);},0),
     spent:(WD.budget||[]).reduce(function(a,c){return a+(Number(c.act)||0);},0)};}
 
+/* ---- kitchen ---- */
+var kitchen=null;
+if(KT&&((KT.plan||[]).length||(KT.grocery||[]).length||(KT.recipes||[]).length||(KT.pantry||[]).length)){function ktDTo(d){if(!d)return null;var t=new Date();t.setHours(0,0,0,0);return Math.round((new Date(d+"T00:00:00")-t)/86400000);}
+  kitchen={meals:(KT.plan||[]).length,groc:(KT.grocery||[]).filter(function(x){return !x.got;}).length,recipes:(KT.recipes||[]).length,
+    soon:(KT.expiry||[]).filter(function(x){var d=ktDTo(x.date);return d!==null&&d<=3;}).length};}
+
+/* ---- college ---- */
+var college=null;
+if(CO&&((CO.schools||[]).length||(CO.essays||[]).length||(CO.dates||[]).length)){function coDTo(d){if(!d)return null;var t=new Date();t.setHours(0,0,0,0);return Math.round((new Date(d+"T00:00:00")-t)/86400000);}
+  var coOpen=[];(CO.schools||[]).forEach(function(s){if(s.due&&s.status!=="Submitted"&&s.status!=="Decision in")coOpen.push(coDTo(s.due));});
+  (CO.dates||[]).forEach(function(d){if(d.date)coOpen.push(coDTo(d.date));});
+  coOpen=coOpen.filter(function(d){return d!=null&&d>=0;}).sort(function(a,b){return a-b;});
+  college={schools:(CO.schools||[]).length,submitted:(CO.schools||[]).filter(function(s){return s.status==="Submitted"||s.status==="Decision in";}).length,
+    essaysDone:(CO.essays||[]).filter(function(e){return e.status==="Done";}).length,essaysTotal:(CO.essays||[]).length,
+    nextDeadline:coOpen.length?coOpen[0]:null};}
+
 /* ---- hero + headline ---- */
 function M0(v){return S.money0(v);}
 S.el("ov-date").textContent=new Date().toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"});
@@ -206,7 +222,7 @@ S.el("ov-nw").textContent=money?M0(money.nw):"—";
 S.el("ov-earn").textContent=work?M0(work.earnMo):"—";
 S.el("ov-gpa").textContent=study&&study.gpa!==null?study.gpa.toFixed(2):"—";
 S.el("ov-hab").textContent=health?(health.habToday+"/"+health.habCount):"—";
-var any=money||work||health||study||biz||events||move||pets||wedding;
+var any=money||work||health||study||biz||events||move||pets||wedding||kitchen||college;
 if(!any){S.el("ov-head").textContent="Nothing yet";S.el("ov-sub").innerHTML='Open any app and your data shows up here. <a href="index.html">See the apps →</a>';}
 else{var headParts=[];if(money)headParts.push(M0(money.nw)+" net worth");if(work&&work.earnMo)headParts.push(M0(work.earnMo)+" earned");
   S.el("ov-head").textContent=headParts.length?headParts.join(" · "):"You're set up";}
@@ -259,6 +275,10 @@ doms+=domCard("#4c7ef3","🚚","Steady Move","move.html",!!move,
   move?stat("Moving in",move.hasDate?(move.days>0?move.days+"d":move.days===0?"today":"done"):"—")+stat("Checklist",move.pct+"%")+stat("Boxes",move.boxes)+stat("To notify",move.notify):"","No move planned yet.");
 doms+=domCard("#3fa86b","🐾","Steady Pets","pets.html",!!pets,
   pets?stat("Pets",pets.count)+stat("Due in 30d",pets.due30)+stat("Spent this mo",M0(pets.spentMo))+stat("This year",M0(pets.spentYr)):"","No pets added yet.");
+doms+=domCard("#e0733c","🍳","Steady Kitchen","kitchen.html",!!kitchen,
+  kitchen?stat("Meals planned",kitchen.meals)+stat("Groceries left",kitchen.groc)+stat("Recipes",kitchen.recipes)+stat("Expiring soon",kitchen.soon):"","No kitchen data yet.");
+doms+=domCard("#5a5fe0","🏫","Steady College","college.html",!!college,
+  college?stat("Schools",college.schools)+stat("Submitted",college.submitted)+stat("Essays done",college.essaysTotal?college.essaysDone+"/"+college.essaysTotal:"0")+stat("Next deadline",college.nextDeadline!==null?(college.nextDeadline===0?"today":college.nextDeadline+"d"):"—"):"","No college apps yet.");
 S.el("ov-doms").innerHTML=doms;
 
 /* ---- balance ---- */
@@ -272,7 +292,9 @@ var bal=[
   {bl:"Biz",c:"#e5674e",v:biz?score([biz.products>0,biz.sales>0,biz.customers>0]):0},
   {bl:"Move",c:"#4c7ef3",v:move?score([move.hasDate,move.pct>0,move.boxes>0,(MV.notify||[]).length>0]):0},
   {bl:"Pets",c:"#3fa86b",v:pets?score([pets.count>0,(PT.health||[]).length>0,(PT.weights||[]).length>0,(PT.expenses||[]).length>0]):0},
-  {bl:"Wedding",c:"#b5698a",v:wedding?score([wedding.hasDate,(WD.todos||[]).length>0,(WD.guests||[]).length>0,(WD.budget||[]).length>0]):0}
+  {bl:"Wedding",c:"#b5698a",v:wedding?score([wedding.hasDate,(WD.todos||[]).length>0,(WD.guests||[]).length>0,(WD.budget||[]).length>0]):0},
+  {bl:"Kitchen",c:"#e0733c",v:kitchen?score([(KT.plan||[]).length>0,(KT.grocery||[]).length>0,(KT.recipes||[]).length>0,(KT.pantry||[]).length>0]):0},
+  {bl:"College",c:"#5a5fe0",v:college?score([(CO.schools||[]).length>0,(CO.essays||[]).length>0,(CO.recs||[]).length>0,(CO.dates||[]).length>0]):0}
 ];
 S.el("ov-balance").innerHTML=bal.map(b=>'<div class="balrow"><span class="bl">'+b.bl+'</span><div class="bar"><span style="width:'+b.v+'%;background:'+b.c+'"></span></div><span style="font:700 13px var(--display);width:38px;text-align:right">'+b.v+'%</span></div>').join("");
 
@@ -289,6 +311,8 @@ if(biz&&biz.rev>0)ins.push(["🏪","You've booked <b>"+M0(biz.rev)+"</b> in sale
 if(move&&move.hasDate&&move.days!=null&&move.days>=0)ins.push(["🚚","You're moving in <b>"+move.days+" day"+(move.days===1?"":"s")+"</b> and your checklist is <b>"+move.pct+"%</b> done (Steady Move)"+(move.notify>0?" — "+move.notify+" more to tell your new address":"")+"."]);
 if(pets&&pets.due30>0)ins.push(["🐾","<b>"+pets.due30+"</b> pet "+(pets.due30===1?"item is":"items are")+" due in the next 30 days (Steady Pets) — a vaccine, med or visit."]);
 if(wedding&&wedding.hasDate&&wedding.days!=null&&wedding.days>=0)ins.push(["💍","<b>"+wedding.days+" day"+(wedding.days===1?"":"s")+"</b> until the wedding (Steady Wedding)"+(wedding.todosLeft>0?" — "+wedding.todosLeft+" checklist task"+(wedding.todosLeft===1?"":"s")+" left":"")+"."]);
+if(kitchen&&kitchen.soon>0)ins.push(["🍳","<b>"+kitchen.soon+"</b> item"+(kitchen.soon===1?"":"s")+" expiring in the next 3 days (Steady Kitchen) — plan a meal around "+(kitchen.soon===1?"it":"them")+"."]);
+if(college&&college.nextDeadline!==null)ins.push(["🏫","Your next college deadline is <b>"+(college.nextDeadline===0?"today":"in "+college.nextDeadline+" day"+(college.nextDeadline===1?"":"s"))+"</b> (Steady College)"+(college.essaysTotal>college.essaysDone?" — "+(college.essaysTotal-college.essaysDone)+" essay"+(college.essaysTotal-college.essaysDone===1?"":"s")+" still open":"")+"."]);
 if(!ins.length)ins.push(["👋","Use a couple of the apps and real cross-app insights will show up here — or hit <b>Load demo data</b> below to see the whole thing filled in."]);
 S.el("ov-insights").innerHTML=ins.map(i=>'<div class="insight"><span class="b">'+i[0]+'</span><span>'+i[1]+'</span></div>').join("");
 
@@ -314,8 +338,8 @@ S.el("seed-btn").onclick=function(){if(confirm("This loads demo data into all th
 
 /* ---- month calendar ---- */
 (function(){
-  var APPC={money:"#19c3ad",study:"#4a90e2",work:"#8168f2",home:"#e0a93c",health:"#2fae5f",move:"#4c7ef3",pets:"#3fa86b"};
-  var APPURL={money:"money/index.html",study:"study.html",work:"work.html",home:"home.html",health:"health.html",move:"move.html",pets:"pets.html"};
+  var APPC={money:"#19c3ad",study:"#4a90e2",work:"#8168f2",home:"#e0a93c",health:"#2fae5f",move:"#4c7ef3",pets:"#3fa86b",college:"#5a5fe0"};
+  var APPURL={money:"money/index.html",study:"study.html",work:"work.html",home:"home.html",health:"health.html",move:"move.html",pets:"pets.html",college:"college.html"};
   function evRow(e,k,showDate){
     var date=showDate?'<span style="color:var(--muted);font-size:12px;min-width:50px;flex:none">'+new Date(k+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'</span>':"";
     return '<a href="'+(APPURL[e.app]||"#")+'" class="calev calrow" style="text-decoration:none;color:var(--ink)"><span class="cdot" style="background:'+(APPC[e.app]||"#888")+'"></span>'+date+'<span>'+e.icon+' '+e.label+'</span><span style="margin-left:auto;color:var(--muted);font-size:12px">›</span></a>';
@@ -340,6 +364,8 @@ S.el("seed-btn").onclick=function(){if(confirm("This loads demo data into all th
     if(H&&H.workouts)H.workouts.forEach(function(w){add(dayOf(w.date),"🏃","Workout: "+(w.type||"session")+(w.min?" ("+w.min+"m)":""),"health");});
     if(MV&&MV.move&&MV.move.date)add(dayOf(MV.move.date),"🚚","Moving day"+(MV.move.to?" → "+MV.move.to:""),"move");
     if(PT&&PT.health){var pmap={};(PT.pets||[]).forEach(function(p){pmap[p.id]=p.name;});PT.health.forEach(function(h){if(h.next)add(dayOf(h.next),"💉",(h.name||"Due")+(pmap[h.petId]?(" — "+pmap[h.petId]):""),"pets");});}
+    if(CO&&CO.schools)CO.schools.forEach(function(s){if(s.due)add(dayOf(s.due),(s.status==="Submitted"||s.status==="Decision in"?"✅":"🏫"),(s.status==="Submitted"?"Submitted: ":"Due: ")+s.name,"college");});
+    if(CO&&CO.dates)CO.dates.forEach(function(x){add(dayOf(x.date),"📌",x.name,"college");});
     return ev;
   }
   function render(){
@@ -366,7 +392,7 @@ S.el("seed-btn").onclick=function(){if(confirm("This loads demo data into all th
         ev[selD].map(function(e){return evRow(e,selKey,false);}).join("");
     } else if(selD){dd.innerHTML='<div class="empty">Nothing on '+new Date(selKey+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'.</div>';}
     else{dd.innerHTML="";}
-    S.el("cal-legend").innerHTML=[["money","💳 Money"],["work","🧾 Work"],["study","📝 Study"],["home","🔧 Home"],["health","🏃 Health"],["move","🚚 Move"],["pets","💉 Pets"]].map(function(x){return '<span style="display:inline-flex;align-items:center;gap:5px"><span class="cdot" style="background:'+APPC[x[0]]+'"></span>'+x[1]+'</span>';}).join("");
+    S.el("cal-legend").innerHTML=[["money","💳 Money"],["work","🧾 Work"],["study","📝 Study"],["home","🔧 Home"],["health","🏃 Health"],["move","🚚 Move"],["pets","💉 Pets"],["college","🏫 College"]].map(function(x){return '<span style="display:inline-flex;align-items:center;gap:5px"><span class="cdot" style="background:'+APPC[x[0]]+'"></span>'+x[1]+'</span>';}).join("");
   }
   S.el("cal-prev").onclick=function(){cur.setMonth(cur.getMonth()-1);render();};
   S.el("cal-next").onclick=function(){cur.setMonth(cur.getMonth()+1);render();};

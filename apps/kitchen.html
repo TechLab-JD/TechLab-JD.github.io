@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steady Kitchen</title>
+<meta name="description" content="Steady Kitchen — run your whole kitchen in one calm place: a weekly meal plan, a shopping list sorted by aisle, a recipe box, pantry & freezer inventory, a food-expiry tracker, leftovers log, cost-per-meal, conversions and a printable kitchen binder. Private; your data stays on your device.">
+<link rel="stylesheet" href="shared.css">
+<style>:root{--accent:#e0733c;--accent-2:#ea9166;--accent-dark:#b4551f}
+  .rc-card{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px;background:var(--card-2,#fff)}
+  .rc-card h3{margin:0 0 2px;font:800 15px var(--display)}
+  .rc-card pre{white-space:pre-wrap;font:inherit;margin:6px 0 0;color:var(--muted)}
+  .aisle-h{font:800 12px var(--display);color:var(--accent-dark);text-transform:uppercase;letter-spacing:.04em;margin:14px 0 4px}
+  #kt-print{display:none}
+  @media print{body.printing>*:not(#kt-print){display:none!important}body.printing #kt-print{display:block!important}@page{margin:16mm}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div style="display:flex;align-items:center;gap:10px"><button class="icon-btn hamb" id="hambBtn" title="Menu">☰</button><a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Kitchen</b></a></div>
+  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="premhdr" data-steady="premium">⭐ Premium</button><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
+</div></header>
+<div class="shell">
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side">
+  <div class="navgroup"><div class="navhead">Dashboard</div>
+    <button class="snav active" data-panel="home">🍳 Overview</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Plan &amp; shop</div>
+    <button class="snav" data-panel="plan">🍽️ Meal plan</button>
+    <button class="snav" data-panel="grocery">🛒 Grocery list</button>
+    <button class="snav" data-panel="recipes">📖 Recipe box</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Keep track</div>
+    <button class="snav" data-panel="pantry">🧊 Pantry &amp; freezer</button>
+    <button class="snav" data-panel="expiry">⏳ Expiry tracker</button>
+    <button class="snav" data-panel="leftovers">♻️ Leftovers</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Premium</div>
+    <button class="snav" data-panel="cost">💲 Cost per meal<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="convert">📐 Conversions<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="binder">📘 Kitchen binder<span class="lk">🔒</span></button>
+  </div>
+  <div class="navgroup"><div class="navhead">You</div>
+    <button class="snav" data-panel="rewards">🏆 Rewards</button>
+  </div>
+</aside>
+<main class="main">
+  <section class="panel active" id="panel-home">
+    <div class="hero"><div class="lbl">This week in the kitchen</div><div class="big" id="h-meals">0</div><div class="meta">meals planned</div>
+      <div class="mini"><div>Groceries left<b id="h-groc">0</b></div><div>Recipes saved<b id="h-rec">0</b></div><div>Expiring soon<b id="h-exp">0</b></div><div>In pantry<b id="h-pan">0</b></div></div></div>
+    <div class="grid2">
+      <div class="card"><h2>This week's meals</h2><p class="sub">What's on the plan</p><div id="ov-plan"></div></div>
+      <div class="card"><h2>Use it up soon</h2><p class="sub">Food closest to its date</p><div id="ov-exp"></div></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-plan">
+    <div class="card"><h2>Weekly meal plan</h2><p class="sub">Batch-cook friendly: plan each day's meals so the grocery list and prep write themselves.</p>
+      <div class="addform" style="grid-template-columns:110px 140px 1fr auto"><div class="field"><label>Day</label><select id="pl-day"><option>Mon</option><option>Tue</option><option>Wed</option><option>Thu</option><option>Fri</option><option>Sat</option><option>Sun</option></select></div><div class="field"><label>Meal</label><select id="pl-meal"><option>Breakfast</option><option>Lunch</option><option>Dinner</option><option>Snack</option></select></div><div class="field"><label>Dish</label><input id="pl-dish" placeholder="Sheet-pan chicken & veg…"></div><button class="btn" id="pl-add">Add</button></div>
+      <div id="pl-list" style="margin-top:12px"></div>
+      <div style="margin-top:10px"><button class="btn ghost sm" id="pl-seed">✨ Add a sample week</button></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-grocery">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">On the list</div><div class="val" id="g-total">0</div></div>
+      <div class="stat"><div class="label">In the cart</div><div class="val" id="g-got">0</div></div>
+      <div class="stat"><div class="label">Still to grab</div><div class="val" id="g-left">0</div></div>
+    </div>
+    <div class="card"><h2>Shopping list — by aisle</h2><p class="sub">Add items with their aisle and the list groups itself, so you shop in one smooth loop.</p>
+      <div class="addform" style="grid-template-columns:1fr 180px auto"><div class="field"><label>Item</label><input id="gr-item" placeholder="Chicken thighs, spinach…"></div><div class="field"><label>Aisle</label><select id="gr-aisle"></select></div><button class="btn" id="gr-add">Add</button></div>
+      <div id="gr-list" style="margin-top:12px"></div>
+      <div style="margin-top:10px" id="gr-tools"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-recipes">
+    <div class="card"><h2>Recipe box</h2><p class="sub">Keep the ones you actually cook — ingredients and steps, with servings so cost-per-meal can do the math.</p>
+      <div class="addform" style="grid-template-columns:1fr 120px auto"><div class="field"><label>Recipe name</label><input id="rc-name" placeholder="Weeknight chili"></div><div class="field"><label>Servings</label><input id="rc-serv" type="number" inputmode="numeric" placeholder="4"></div><button class="btn" id="rc-add">Add</button></div>
+      <div class="field" style="margin-top:9px"><label>Ingredients (one per line)</label><textarea id="rc-ing" rows="3" placeholder="1 lb ground beef&#10;1 can beans&#10;1 onion"></textarea></div>
+      <div class="field" style="margin-top:9px"><label>Steps</label><textarea id="rc-steps" rows="3" placeholder="Brown the beef. Add the rest. Simmer 30 min."></textarea></div>
+      <div id="rc-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-pantry">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Pantry</div><div class="val" id="p-pan">0</div></div>
+      <div class="stat"><div class="label">Fridge</div><div class="val" id="p-fri">0</div></div>
+      <div class="stat"><div class="label">Freezer</div><div class="val" id="p-fre">0</div></div>
+    </div>
+    <div class="card"><h2>Pantry &amp; freezer inventory</h2><p class="sub">Know what you already have before you shop — no three jars of cumin and no mystery freezer bags.</p>
+      <div class="addform" style="grid-template-columns:1fr 140px 110px auto"><div class="field"><label>Item</label><input id="pn-item" placeholder="Ground beef, rice, frozen peas…"></div><div class="field"><label>Where</label><select id="pn-loc"><option>Pantry</option><option>Fridge</option><option>Freezer</option></select></div><div class="field"><label>Qty</label><input id="pn-qty" placeholder="2 lb, 1 bag…"></div><button class="btn" id="pn-add">Add</button></div>
+      <div id="pn-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-expiry">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Tracked</div><div class="val" id="e-total">0</div></div>
+      <div class="stat"><div class="label">Expiring ≤3 days</div><div class="val" id="e-soon">0</div></div>
+      <div class="stat"><div class="label">Expired</div><div class="val" id="e-bad">0</div></div>
+    </div>
+    <div class="card"><h2>Food-expiry tracker</h2><p class="sub">Add a date and it sorts by what to use first — the pill turns amber as it gets close and red when it's past.</p>
+      <div class="addform" style="grid-template-columns:1fr 140px 160px auto"><div class="field"><label>Item</label><input id="ex-item" placeholder="Milk, chicken, yogurt…"></div><div class="field"><label>Where</label><select id="ex-loc"><option>Fridge</option><option>Freezer</option><option>Pantry</option></select></div><div class="field"><label>Use by</label><input id="ex-date" type="date"></div><button class="btn" id="ex-add">Add</button></div>
+      <div id="ex-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-leftovers">
+    <div class="card"><h2>Leftovers log</h2><p class="sub">Log what's in the fridge and when you made it — it tells you how long it's good for so nothing turns into a science experiment.</p>
+      <div class="addform" style="grid-template-columns:1fr 150px 150px auto"><div class="field"><label>Dish</label><input id="lo-dish" placeholder="Chili, roast veg…"></div><div class="field"><label>Made on</label><input id="lo-made" type="date"></div><div class="field"><label>Good for</label><select id="lo-days"><option value="2">2 days</option><option value="3">3 days</option><option value="4" selected>4 days</option><option value="5">5 days</option><option value="7">1 week</option></select></div><button class="btn" id="lo-add">Add</button></div>
+      <div id="lo-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-cost">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Meals costed</div><div class="val" id="c-count">0</div></div>
+      <div class="stat"><div class="label">Avg / serving</div><div class="val" id="c-avg">$0</div></div>
+      <div class="stat"><div class="label">Best value</div><div class="val" id="c-best">—</div></div>
+    </div>
+    <div class="card"><h2>Cost per meal</h2><p class="sub">Enter what a dish cost to make and how many servings — see the real price per plate and which meals stretch furthest.</p>
+      <div class="addform" style="grid-template-columns:1fr 120px 110px auto"><div class="field"><label>Dish</label><input id="co-dish" placeholder="Weeknight chili"></div><div class="field"><label>Total cost $</label><input id="co-cost" type="number" inputmode="decimal" placeholder="12.00"></div><div class="field"><label>Servings</label><input id="co-serv" type="number" inputmode="numeric" placeholder="4"></div><button class="btn" id="co-add">Add</button></div>
+      <div id="co-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-convert">
+    <div class="card"><h2>Kitchen converter</h2><p class="sub">Convert cups, spoons, ounces and grams in a tap — volume with volume, weight with weight.</p>
+      <div class="addform" style="grid-template-columns:120px 1fr 1fr"><div class="field"><label>Amount</label><input id="cv-amt" type="number" inputmode="decimal" value="1"></div><div class="field"><label>From</label><select id="cv-from"></select></div><div class="field"><label>To</label><select id="cv-to"></select></div></div>
+      <div class="hero" style="margin-top:14px"><div class="lbl">Result</div><div class="big" id="cv-res" style="font-size:30px">—</div><div class="meta" id="cv-note"></div></div>
+    </div>
+    <div class="card"><h2>Common conversions</h2><p class="sub">The ones you look up mid-recipe.</p><div id="cv-ref"></div></div>
+  </section>
+
+  <section class="panel locked" id="panel-binder">
+    <div class="card"><h2>Kitchen binder</h2><p class="sub">One printable sheet with your meal plan, grocery list, recipes and pantry — stick it on the fridge or save as PDF.</p>
+      <button class="btn" id="bn-print">🖨 Print / Save as PDF</button>
+    </div>
+    <div class="card"><h2>Preview</h2><div id="bn-prev"></div></div>
+  </section>
+
+  <section class="panel" id="panel-rewards">
+    <div class="hero"><div class="lbl">Kitchen level</div><div class="big" id="rw-meals">0</div><div class="meta">meals planned so far</div>
+      <div class="mini"><div>Badges<b id="rw-count">0</b></div></div></div>
+    <div class="card"><h2>Your level</h2><p class="sub">Planning meals, saving recipes and using food up earns XP and levels you up.</p><div id="xp-card"></div></div>
+    <div class="card"><h2>Today's goals</h2><p class="sub">Little wins toward a calmer kitchen.</p><div id="quests"></div></div>
+    <div class="card"><h2>Achievements</h2><p class="sub">Milestones unlock as you cook.</p><div class="badgegrid" id="rw-badges"></div></div>
+  </section>
+</main>
+</div>
+<footer class="ft">Steady Kitchen · a Steady Systems app · your data stays on this device</footer>
+<div id="toasts"></div>
+<div id="kt-print"></div>
+<script src="shared.js"></script>
+<script>
+var DEF={plan:[],grocery:[],recipes:[],pantry:[],expiry:[],leftovers:[],costs:[]};
+var db=Steady.load("kitchen",DEF);var S=Steady;
+["plan","grocery","recipes","pantry","expiry","leftovers","costs"].forEach(function(k){if(!db[k])db[k]=[];});
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+var DAYS=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],MEALS=["Breakfast","Lunch","Dinner","Snack"];
+var AISLES=["Produce","Meat & seafood","Dairy & eggs","Bakery","Frozen","Pantry & dry goods","Canned & jarred","Snacks","Beverages","Household","Other"];
+function dayIx(d){var i=DAYS.indexOf(d);return i<0?99:i;}
+function mealIx(m){var i=MEALS.indexOf(m);return i<0?99:i;}
+function todayISO(){var x=new Date();return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0");}
+function daysTo(d){if(!d)return null;var t=new Date();t.setHours(0,0,0,0);return Math.round((new Date(d+"T00:00:00")-t)/86400000);}
+function fmtDate(d){return d?new Date(d+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"}):"—";}
+function addDaysISO(d,n){var x=new Date(d+"T00:00:00");x.setDate(x.getDate()+n);return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0");}
+function duePill(d){var dd=daysTo(d);if(dd===null)return{cls:"",txt:"—"};if(dd<0)return{cls:"bad",txt:"expired"};if(dd===0)return{cls:"warn",txt:"today"};if(dd<=3)return{cls:"warn",txt:"in "+dd+"d"};return{cls:"good",txt:"in "+dd+"d"};}
+
+/* ---- init selects ---- */
+S.el("gr-aisle").innerHTML=AISLES.map(function(a){return '<option>'+a+'</option>';}).join("");
+
+/* ---- meal plan ---- */
+function renderPlan(){
+  var p=db.plan.slice().sort(function(a,b){return dayIx(a.day)-dayIx(b.day)||mealIx(a.meal)-mealIx(b.meal);});
+  var l=S.el("pl-list");l.innerHTML=p.length?"":'<div class="empty">No meals yet. Add one above, or tap "sample week".</div>';
+  var curDay="";
+  p.forEach(function(x){
+    if(x.day!==curDay){curDay=x.day;var h=document.createElement("div");h.className="aisle-h";h.textContent=x.day;l.appendChild(h);}
+    var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+esc(x.dish)+' <span class="meta">'+esc(x.meal)+'</span></div>';
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.plan=db.plan.filter(function(y){return y.id!==x.id;});S.save();renderPlan();renderOverview();renderRewards();};
+    r.appendChild(left);r.appendChild(del);l.appendChild(r);});
+}
+S.el("pl-add").onclick=function(){var n=S.val("pl-dish");if(!n)return;db.plan.push({id:S.uid(),day:S.el("pl-day").value,meal:S.el("pl-meal").value,dish:n});S.save();S.clr("pl-dish");renderPlan();renderOverview();renderRewards();S.toast("Added",1);};
+var PLSEED=[["Mon","Dinner","Sheet-pan chicken & veg"],["Tue","Dinner","Taco night"],["Wed","Dinner","Pasta & salad"],["Thu","Dinner","Stir-fry with rice"],["Fri","Dinner","Homemade pizza"],["Sat","Dinner","Slow-cooker chili"],["Sun","Dinner","Roast + batch-cook sides"],["Mon","Lunch","Chili (leftovers)"],["Mon","Breakfast","Overnight oats"]];
+S.el("pl-seed").onclick=function(){PLSEED.forEach(function(s){db.plan.push({id:S.uid(),day:s[0],meal:s[1],dish:s[2]});});S.save();renderPlan();renderOverview();renderRewards();S.toast("Sample week added",1);};
+
+/* ---- grocery ---- */
+function renderGrocery(){
+  var g=db.grocery;
+  S.el("g-total").textContent=g.length;
+  var got=g.filter(function(x){return x.got;}).length;
+  S.el("g-got").textContent=got;S.el("g-left").textContent=g.length-got;
+  var l=S.el("gr-list");l.innerHTML=g.length?"":'<div class="empty">Nothing on the list yet. Add items and they group by aisle.</div>';
+  AISLES.forEach(function(a){
+    var items=g.filter(function(x){return x.aisle===a;});if(!items.length)return;
+    var h=document.createElement("div");h.className="aisle-h";h.textContent=a;l.appendChild(h);
+    items.forEach(function(x){var r=document.createElement("div");r.className="row";
+      var box=document.createElement("div");box.className="boxcell";box.style.cssText="width:22px;height:22px;aspect-ratio:auto;flex:none";if(x.got){box.classList.add("on");box.textContent="✓";}
+      box.onclick=function(){x.got=!x.got;S.save();renderGrocery();};
+      var nm=document.createElement("span");nm.className="nm";nm.style.flex="1";nm.textContent=x.item;if(x.got)nm.style.cssText+=";text-decoration:line-through;opacity:.6;flex:1";
+      var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.grocery=g.filter(function(y){return y.id!==x.id;});S.save();renderGrocery();renderOverview();renderRewards();};
+      r.appendChild(box);r.appendChild(nm);r.appendChild(del);l.appendChild(r);});
+  });
+  var tools=S.el("gr-tools");tools.innerHTML="";
+  if(got){var clr=document.createElement("button");clr.className="btn ghost sm";clr.textContent="Clear "+got+" checked";clr.onclick=function(){db.grocery=g.filter(function(x){return !x.got;});S.save();renderGrocery();renderOverview();renderRewards();S.toast("Cleared",1);};tools.appendChild(clr);}
+}
+S.el("gr-add").onclick=function(){var n=S.val("gr-item");if(!n)return;db.grocery.push({id:S.uid(),item:n,aisle:S.el("gr-aisle").value,got:false});S.save();S.clr("gr-item");renderGrocery();renderOverview();renderRewards();S.toast("Added",1);};
+
+/* ---- recipes ---- */
+function renderRecipes(){
+  var r=db.recipes,l=S.el("rc-list");l.innerHTML=r.length?"":'<div class="empty">No recipes yet. Save the ones you actually cook.</div>';
+  r.forEach(function(x){var c=document.createElement("div");c.className="rc-card";
+    var ing=(x.ing||"").trim(),steps=(x.steps||"").trim();
+    c.innerHTML='<div style="display:flex;justify-content:space-between;align-items:start"><h3>'+esc(x.name)+(x.serv?' <span class="meta">serves '+esc(x.serv)+'</span>':'')+'</h3></div>'+
+      (ing?'<div class="meta" style="margin-top:6px"><b>Ingredients</b></div><pre>'+esc(ing)+'</pre>':'')+
+      (steps?'<div class="meta" style="margin-top:6px"><b>Steps</b></div><pre>'+esc(steps)+'</pre>':'');
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.style.cssText="float:right";del.onclick=function(){db.recipes=r.filter(function(y){return y.id!==x.id;});S.save();renderRecipes();renderOverview();renderRewards();};
+    c.querySelector("div").appendChild(del);l.appendChild(c);});
+}
+S.el("rc-add").onclick=function(){var n=S.val("rc-name");if(!n)return;db.recipes.push({id:S.uid(),name:n,serv:S.val("rc-serv"),ing:S.val("rc-ing"),steps:S.val("rc-steps")});S.save();S.clr("rc-name","rc-serv","rc-ing","rc-steps");renderRecipes();renderOverview();renderRewards();S.toast("Recipe saved",1);};
+
+/* ---- pantry ---- */
+function renderPantry(){
+  var p=db.pantry;
+  S.el("p-pan").textContent=p.filter(function(x){return x.loc==="Pantry";}).length;
+  S.el("p-fri").textContent=p.filter(function(x){return x.loc==="Fridge";}).length;
+  S.el("p-fre").textContent=p.filter(function(x){return x.loc==="Freezer";}).length;
+  var l=S.el("pn-list");l.innerHTML=p.length?"":'<div class="empty">Nothing logged yet. Add what you already have.</div>';
+  ["Pantry","Fridge","Freezer"].forEach(function(loc){
+    var items=p.filter(function(x){return x.loc===loc;});if(!items.length)return;
+    var h=document.createElement("div");h.className="aisle-h";h.textContent=loc;l.appendChild(h);
+    items.forEach(function(x){var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+      left.innerHTML='<div class="nm">'+esc(x.item)+(x.qty?' <span class="meta">'+esc(x.qty)+'</span>':'')+'</div>';
+      var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.pantry=p.filter(function(y){return y.id!==x.id;});S.save();renderPantry();renderOverview();renderRewards();};
+      r.appendChild(left);r.appendChild(del);l.appendChild(r);});
+  });
+}
+S.el("pn-add").onclick=function(){var n=S.val("pn-item");if(!n)return;db.pantry.push({id:S.uid(),item:n,loc:S.el("pn-loc").value,qty:S.val("pn-qty")});S.save();S.clr("pn-item","pn-qty");renderPantry();renderOverview();renderRewards();S.toast("Added",1);};
+
+/* ---- expiry ---- */
+function renderExpiry(){
+  var e=db.expiry.slice().sort(function(a,b){return (a.date||"9999").localeCompare(b.date||"9999");});
+  S.el("e-total").textContent=e.length;
+  S.el("e-soon").textContent=e.filter(function(x){var d=daysTo(x.date);return d!==null&&d>=0&&d<=3;}).length;
+  S.el("e-bad").textContent=e.filter(function(x){var d=daysTo(x.date);return d!==null&&d<0;}).length;
+  var l=S.el("ex-list");l.innerHTML=e.length?"":'<div class="empty">Nothing tracked yet. Add perishables with a use-by date.</div>';
+  e.forEach(function(x){var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+esc(x.item)+' <span class="meta">'+esc(x.loc)+' · '+fmtDate(x.date)+'</span></div>';
+    var p=duePill(x.date);var pill=document.createElement("span");pill.className="pill "+p.cls;pill.textContent=p.txt;
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.expiry=db.expiry.filter(function(y){return y.id!==x.id;});S.save();renderExpiry();renderOverview();renderRewards();};
+    r.appendChild(left);r.appendChild(pill);r.appendChild(del);l.appendChild(r);});
+}
+S.el("ex-add").onclick=function(){var n=S.val("ex-item");if(!n)return;db.expiry.push({id:S.uid(),item:n,loc:S.el("ex-loc").value,date:S.val("ex-date")});S.save();S.clr("ex-item","ex-date");renderExpiry();renderOverview();renderRewards();S.toast("Added",1);};
+
+/* ---- leftovers ---- */
+function renderLeftovers(){
+  var lo=db.leftovers.slice().sort(function(a,b){var ea=a.made?addDaysISO(a.made,Number(a.days)||0):"9999",eb=b.made?addDaysISO(b.made,Number(b.days)||0):"9999";return ea.localeCompare(eb);});
+  var l=S.el("lo-list");l.innerHTML=lo.length?"":'<div class="empty">No leftovers logged. Add what\'s in the fridge.</div>';
+  lo.forEach(function(x){var eatBy=x.made?addDaysISO(x.made,Number(x.days)||0):"";var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+esc(x.dish)+' <span class="meta">made '+fmtDate(x.made)+' · eat by '+fmtDate(eatBy)+'</span></div>';
+    var p=duePill(eatBy);var pill=document.createElement("span");pill.className="pill "+p.cls;pill.textContent=p.cls==="bad"?"toss it":p.txt;
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.leftovers=db.leftovers.filter(function(y){return y.id!==x.id;});S.save();renderLeftovers();renderRewards();};
+    r.appendChild(left);r.appendChild(pill);r.appendChild(del);l.appendChild(r);});
+}
+S.el("lo-add").onclick=function(){var n=S.val("lo-dish");if(!n)return;db.leftovers.push({id:S.uid(),dish:n,made:S.val("lo-made")||todayISO(),days:S.el("lo-days").value});S.save();S.clr("lo-dish","lo-made");renderLeftovers();renderRewards();S.toast("Added",1);};
+
+/* ---- cost per meal (premium) ---- */
+function renderCost(){
+  var c=db.costs;S.el("c-count").textContent=c.length;
+  var pers=c.map(function(x){return (Number(x.cost)||0)/(Number(x.serv)||1);});
+  var avg=pers.length?pers.reduce(function(a,b){return a+b;},0)/pers.length:0;
+  S.el("c-avg").textContent=S.money(avg);
+  var best="—";if(c.length){var bi=0;for(var i=1;i<c.length;i++)if(pers[i]<pers[bi])bi=i;best=c[bi].dish+" · "+S.money(pers[bi]);}
+  S.el("c-best").textContent=best;S.el("c-best").style.fontSize="15px";
+  var l=S.el("co-list");l.innerHTML=c.length?"":'<div class="empty">No meals costed yet. Add a dish, its cost and servings.</div>';
+  c.forEach(function(x){var per=(Number(x.cost)||0)/(Number(x.serv)||1);var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+esc(x.dish)+' <span class="meta">'+S.money(Number(x.cost)||0)+' ÷ '+(Number(x.serv)||1)+' servings</span></div>';
+    var pill=document.createElement("span");pill.className="pill good";pill.textContent=S.money(per)+"/serving";
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.costs=c.filter(function(y){return y.id!==x.id;});S.save();renderCost();};
+    r.appendChild(left);r.appendChild(pill);r.appendChild(del);l.appendChild(r);});
+}
+S.el("co-add").onclick=function(){var n=S.val("co-dish");if(!n)return;db.costs.push({id:S.uid(),dish:n,cost:S.val("co-cost"),serv:S.val("co-serv")||1});S.save();S.clr("co-dish","co-cost","co-serv");renderCost();S.toast("Added",1);};
+
+/* ---- converter (premium) ---- */
+var UNITS={"tsp":{f:4.92892,t:"v"},"tbsp":{f:14.7868,t:"v"},"fl oz":{f:29.5735,t:"v"},"cup":{f:236.588,t:"v"},"pint":{f:473.176,t:"v"},"quart":{f:946.353,t:"v"},"liter":{f:1000,t:"v"},"ml":{f:1,t:"v"},"oz":{f:28.3495,t:"w"},"lb":{f:453.592,t:"w"},"gram":{f:1,t:"w"},"kg":{f:1000,t:"w"}};
+var REF=[["1 tbsp","3 tsp"],["1 cup","16 tbsp"],["1 cup","8 fl oz"],["1 pint","2 cups"],["1 quart","4 cups"],["1 gallon","4 quarts"],["1 lb","16 oz"],["1 oz","≈ 28 g"],["1 cup flour","≈ 120 g"],["1 stick butter","8 tbsp = ½ cup"],["350°F","≈ 175°C"],["400°F","≈ 205°C"]];
+function initConvert(){
+  var opts=Object.keys(UNITS).map(function(u){return '<option>'+u+'</option>';}).join("");
+  S.el("cv-from").innerHTML=opts;S.el("cv-to").innerHTML=opts;
+  S.el("cv-from").value="cup";S.el("cv-to").value="ml";
+  S.el("cv-ref").innerHTML=REF.map(function(r){return '<div class="row"><span class="nm">'+r[0]+'</span><span class="pill">'+r[1]+'</span></div>';}).join("");
+  ["cv-amt","cv-from","cv-to"].forEach(function(id){S.el(id).oninput=doConvert;S.el(id).onchange=doConvert;});
+  doConvert();
+}
+function doConvert(){
+  var amt=Number(S.el("cv-amt").value),fu=UNITS[S.el("cv-from").value],tu=UNITS[S.el("cv-to").value];
+  if(!fu||!tu||isNaN(amt)){S.el("cv-res").textContent="—";S.el("cv-note").textContent="";return;}
+  if(fu.t!==tu.t){S.el("cv-res").textContent="—";S.el("cv-note").textContent="Pick two volume units or two weight units.";return;}
+  var out=amt*fu.f/tu.f;
+  S.el("cv-res").textContent=(Math.round(out*1000)/1000)+" "+S.el("cv-to").value;
+  S.el("cv-note").textContent=amt+" "+S.el("cv-from").value+" = "+(Math.round(out*1000)/1000)+" "+S.el("cv-to").value;
+}
+
+/* ---- binder (premium) ---- */
+function buildBinderHTML(){
+  function sec(t){return '<h2 style="font-size:15px;color:#b4551f;margin:18px 0 6px;border-bottom:2px solid #e0733c;padding-bottom:3px">'+t+'</h2>';}
+  function rowL(a,b){return '<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #eee;font-size:13px"><span>'+a+'</span><span style="color:#555;text-align:right">'+b+'</span></div>';}
+  var none='<div style="color:#777;font-size:13px">None yet.</div>';
+  var plan=db.plan.slice().sort(function(a,b){return dayIx(a.day)-dayIx(b.day)||mealIx(a.meal)-mealIx(b.meal);});
+  var planH=plan.length?plan.map(function(x){return rowL(esc(x.day)+" · "+esc(x.meal),esc(x.dish));}).join(""):none;
+  var groc="";AISLES.forEach(function(a){var it=db.grocery.filter(function(x){return x.aisle===a;});if(it.length)groc+='<div style="font-weight:700;font-size:12px;color:#b4551f;margin:6px 0 2px">'+a+'</div>'+it.map(function(x){return rowL((x.got?"✓ ":"☐ ")+esc(x.item),"");}).join("");});
+  if(!groc)groc=none;
+  var rec=db.recipes.length?db.recipes.map(function(x){return rowL(esc(x.name),x.serv?"serves "+esc(x.serv):"");}).join(""):none;
+  var pan="";["Pantry","Fridge","Freezer"].forEach(function(loc){var it=db.pantry.filter(function(x){return x.loc===loc;});if(it.length)pan+='<div style="font-weight:700;font-size:12px;color:#b4551f;margin:6px 0 2px">'+loc+'</div>'+it.map(function(x){return rowL(esc(x.item),esc(x.qty||""));}).join("");});
+  if(!pan)pan=none;
+  return '<div style="font-family:Arial,sans-serif;color:#111;max-width:680px;margin:0 auto;padding:20px">'+
+    '<h1 style="font-size:24px;color:#b4551f;margin:0 0 2px">My Kitchen Binder</h1>'+
+    '<div style="color:#555;font-size:12px;margin-bottom:6px">Made with Steady Kitchen</div>'+
+    sec("This week's meals")+planH+
+    sec("Shopping list")+groc+
+    sec("Recipes")+rec+
+    sec("Pantry & freezer")+pan+
+    '<p style="font-size:10px;color:#999;margin-top:26px">Made with Steady Kitchen · syssteady.gumroad.com</p></div>';
+}
+function renderBinder(){S.el("bn-prev").innerHTML='<div style="background:#fff;border-radius:10px;overflow:auto">'+buildBinderHTML()+'</div>';}
+S.el("bn-print").onclick=function(){S.el("kt-print").innerHTML=buildBinderHTML();document.body.classList.add("printing");window.print();};
+window.onafterprint=function(){document.body.classList.remove("printing");};
+
+/* ---- overview ---- */
+function renderOverview(){
+  S.el("h-meals").textContent=db.plan.length;
+  S.el("h-groc").textContent=db.grocery.filter(function(x){return !x.got;}).length;
+  S.el("h-rec").textContent=db.recipes.length;
+  S.el("h-exp").textContent=db.expiry.filter(function(x){var d=daysTo(x.date);return d!==null&&d<=3;}).length;
+  S.el("h-pan").textContent=db.pantry.length;
+  var plan=db.plan.slice().sort(function(a,b){return dayIx(a.day)-dayIx(b.day)||mealIx(a.meal)-mealIx(b.meal);}).slice(0,6);
+  S.el("ov-plan").innerHTML=plan.length?plan.map(function(x){return '<div class="row"><span class="nm">'+esc(x.dish)+'</span><span class="pill">'+esc(x.day)+' · '+esc(x.meal)+'</span></div>';}).join(""):'<div class="empty">Plan your week on the Meal plan tab. ✨</div>';
+  var exp=db.expiry.concat(db.leftovers.map(function(x){return {item:x.dish,date:x.made?addDaysISO(x.made,Number(x.days)||0):"",loc:"leftovers"};}))
+    .filter(function(x){return x.date;}).sort(function(a,b){return a.date.localeCompare(b.date);}).slice(0,6);
+  S.el("ov-exp").innerHTML=exp.length?exp.map(function(x){var p=duePill(x.date);return '<div class="row"><span class="nm">'+esc(x.item)+'</span><span class="pill '+p.cls+'">'+p.txt+'</span></div>';}).join(""):'<div class="empty">Track perishables on the Expiry tab.</div>';
+}
+
+/* ---- rewards ---- */
+var BADGES=[
+ {id:"plan",ic:"🍽️",title:"Meal Mapper",desc:"Planned 5+ meals",cond:c=>c.plan>=5},
+ {id:"week",ic:"🗓️",title:"Full Week",desc:"Planned 7+ meals",cond:c=>c.plan>=7},
+ {id:"groc",ic:"🛒",title:"Stocked Up",desc:"Built a grocery list",cond:c=>c.groc>0},
+ {id:"shop",ic:"✅",title:"Shopping Done",desc:"Checked off a grocery item",cond:c=>c.got>0},
+ {id:"rec",ic:"📖",title:"Recipe Box",desc:"Saved a recipe",cond:c=>c.rec>0},
+ {id:"pan",ic:"🧊",title:"Well Stocked",desc:"Logged pantry items",cond:c=>c.pan>=3},
+ {id:"exp",ic:"⏳",title:"Nothing Wasted",desc:"Tracked an expiry date",cond:c=>c.exp>0},
+ {id:"left",ic:"♻️",title:"Zero Waste",desc:"Logged leftovers",cond:c=>c.left>0},
+ {id:"cost",ic:"💲",title:"Budget Chef",desc:"Costed a meal",cond:c=>c.cost>0}
+];
+function renderRewards(){
+  S.el("rw-meals").textContent=db.plan.length;
+  var ctx={plan:db.plan.length,groc:db.grocery.length,got:db.grocery.filter(function(x){return x.got;}).length,
+    rec:db.recipes.length,pan:db.pantry.length,exp:db.expiry.length,left:db.leftovers.length,cost:db.costs.length};
+  var earned=S.renderBadges(S.el("rw-badges"),BADGES,ctx);S.el("rw-count").textContent=earned;
+  var xp=earned*40+ctx.plan*3+ctx.rec*5+ctx.got*2+ctx.pan*2+ctx.exp*2+ctx.left*3+ctx.cost*3;
+  S.gamify({xp:xp,badges:earned,container:S.el("xp-card")});
+  S.renderQuests(S.el("quests"),[
+    {label:"Plan a meal",xp:10,done:ctx.plan>0},
+    {label:"Add something to the grocery list",xp:10,done:ctx.groc>0},
+    {label:"Save a recipe",xp:10,done:ctx.rec>0}
+  ]);
+}
+
+function renderAll(){renderPlan();renderGrocery();renderRecipes();renderPantry();renderExpiry();renderLeftovers();renderCost();renderBinder();renderOverview();renderRewards();S.applyPremium();}
+
+function SAMPLE(){
+  var t=todayISO();
+  return {
+    plan:[{id:S.uid(),day:"Mon",meal:"Dinner",dish:"Sheet-pan chicken & veg"},{id:S.uid(),day:"Tue",meal:"Dinner",dish:"Taco night"},{id:S.uid(),day:"Wed",meal:"Dinner",dish:"Pasta & salad"},{id:S.uid(),day:"Thu",meal:"Dinner",dish:"Stir-fry with rice"},{id:S.uid(),day:"Fri",meal:"Dinner",dish:"Homemade pizza"},{id:S.uid(),day:"Sat",meal:"Dinner",dish:"Slow-cooker chili"},{id:S.uid(),day:"Mon",meal:"Breakfast",dish:"Overnight oats"}],
+    grocery:[{id:S.uid(),item:"Chicken thighs",aisle:"Meat & seafood",got:false},{id:S.uid(),item:"Spinach",aisle:"Produce",got:true},{id:S.uid(),item:"Bell peppers",aisle:"Produce",got:false},{id:S.uid(),item:"Milk",aisle:"Dairy & eggs",got:false},{id:S.uid(),item:"Tortillas",aisle:"Bakery",got:false},{id:S.uid(),item:"Canned beans",aisle:"Canned & jarred",got:false},{id:S.uid(),item:"Rice",aisle:"Pantry & dry goods",got:true}],
+    recipes:[{id:S.uid(),name:"Weeknight chili",serv:"6",ing:"1 lb ground beef\n2 cans beans\n1 onion\n1 can tomatoes\nchili powder",steps:"Brown the beef & onion.\nAdd everything else.\nSimmer 30 min."},{id:S.uid(),name:"Overnight oats",serv:"1",ing:"1/2 cup oats\n1/2 cup milk\n1 tbsp chia\nhoney + fruit",steps:"Mix, fridge overnight, top with fruit."}],
+    pantry:[{id:S.uid(),item:"Rice",loc:"Pantry",qty:"2 lb"},{id:S.uid(),item:"Ground beef",loc:"Freezer",qty:"2 lb"},{id:S.uid(),item:"Milk",loc:"Fridge",qty:"1 gal"},{id:S.uid(),item:"Canned beans",loc:"Pantry",qty:"4 cans"}],
+    expiry:[{id:S.uid(),item:"Milk",loc:"Fridge",date:addDaysISO(t,3)},{id:S.uid(),item:"Chicken thighs",loc:"Fridge",date:addDaysISO(t,1)},{id:S.uid(),item:"Yogurt",loc:"Fridge",date:addDaysISO(t,6)}],
+    leftovers:[{id:S.uid(),dish:"Slow-cooker chili",made:addDaysISO(t,-1),days:"4"},{id:S.uid(),dish:"Roast veg",made:addDaysISO(t,-3),days:"4"}],
+    costs:[{id:S.uid(),dish:"Weeknight chili",cost:"12",serv:"6"},{id:S.uid(),dish:"Homemade pizza",cost:"8",serv:"4"}]
+  };
+}
+
+S.initShell();
+S.initAccount({name:"steady-kitchen",defaults:DEF,sample:SAMPLE,render:renderAll});
+S.initPremium({title:"Steady Kitchen Premium",price:"1.25",desc:"Just $1.25/mo — the pro kitchen tools to cook smarter and waste less.",veil:"Unlock the pro kitchen tools — cost-per-meal, the kitchen converter and a printable binder.",
+  features:["💲 Cost per meal — see the real price per plate and which meals stretch furthest","📐 Kitchen converter — cups, spoons, ounces and grams in a tap","📘 Kitchen binder — one printable sheet of your plan, list, recipes & pantry","🖨 Stick it on the fridge or save as PDF"],render:renderAll});
+initConvert();
+renderAll();
+S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Kitchen</h2><p>Run your whole kitchen in one calm place — a weekly meal plan, a grocery list that sorts by aisle, a recipe box and trackers that stop food going to waste.</p></div><div class="feat"><div class="fi">🍽️</div><div><b>Plan the week</b><p>Map your meals and the grocery list writes itself.</p></div></div><div class="feat"><div class="fi">⏳</div><div><b>Waste less</b><p>Expiry and leftover trackers tell you what to use first.</p></div></div>',sample:SAMPLE,render:renderAll});
+</script>
+</body>
+</html>
