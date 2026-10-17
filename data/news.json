@@ -1,7 +1,35 @@
 {
- "generated": "2026-10-17T19:04:31Z",
- "generated_human": "Oct 17, 2026 · 19:04 UTC",
+ "generated": "2026-10-17T20:00:26Z",
+ "generated_human": "Oct 17, 2026 · 20:00 UTC",
  "sources": [
+  {
+   "name": "NPR",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 10
+  },
+  {
+   "name": "The Guardian",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "NBC News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "CBS News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
   {
    "name": "ABC News",
    "lean": -1,
@@ -178,7 +206,7 @@
    "count": 12
   }
  ],
- "n_articles": 290,
+ "n_articles": 336,
  "n_videos": 140,
  "trending": [
   {
@@ -187,66 +215,186 @@
   },
   {
    "term": "russia",
-   "n": 13
+   "n": 12
   },
   {
    "term": "sanctions",
-   "n": 12
+   "n": 11
   },
   {
    "term": "house",
    "n": 11
   },
   {
-   "term": "white",
+   "term": "pope",
    "n": 10
   },
   {
    "term": "attack",
-   "n": 7
+   "n": 10
   },
   {
-   "term": "america",
-   "n": 7
-  },
-  {
-   "term": "pope",
-   "n": 7
+   "term": "ukraine",
+   "n": 9
   },
   {
    "term": "days",
-   "n": 7
-  },
-  {
-   "term": "time",
-   "n": 7
-  },
-  {
-   "term": "zacharia",
-   "n": 7
-  },
-  {
-   "term": "katie",
-   "n": 7
-  },
-  {
-   "term": "musk",
-   "n": 6
-  },
-  {
-   "term": "ahead",
-   "n": 6
-  },
-  {
-   "term": "congress",
-   "n": 6
+   "n": 8
   },
   {
    "term": "surgery",
-   "n": 6
+   "n": 8
+  },
+  {
+   "term": "cancer",
+   "n": 8
+  },
+  {
+   "term": "america",
+   "n": 8
+  },
+  {
+   "term": "time",
+   "n": 8
+  },
+  {
+   "term": "white",
+   "n": 8
+  },
+  {
+   "term": "lung",
+   "n": 7
+  },
+  {
+   "term": "ahead",
+   "n": 7
+  },
+  {
+   "term": "judge",
+   "n": 7
   }
  ],
  "videos": [
+  {
+   "videoId": "zgo4sg-UCHw",
+   "title": "Guests asleep as fire kills 10 at Cox's Bazar resort | DW News",
+   "thumb": "https://i.ytimg.com/vi/zgo4sg-UCHw/hqdefault.jpg",
+   "channel": "DW News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "wgpOxwTUDgg",
+   "title": "Artemis II crew receive Stephen Hawking Medal",
+   "thumb": "https://i.ytimg.com/vi/wgpOxwTUDgg/hqdefault.jpg",
+   "channel": "Sky News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "yeq_dW5yu88",
+   "title": "'Escalating violence' in France as protesters clash with police over living costs",
+   "thumb": "https://i.ytimg.com/vi/yeq_dW5yu88/hqdefault.jpg",
+   "channel": "Sky News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "LjJFZKshQI8",
+   "title": "Paris police use tear gas and water cannons to disperse protesters",
+   "thumb": "https://i.ytimg.com/vi/LjJFZKshQI8/hqdefault.jpg",
+   "channel": "AP",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "6ycqSnEyC1I",
+   "title": "Scientists welcome rainforest’s reprieve, but warn it still faces a looming tipping point | DW News",
+   "thumb": "https://i.ytimg.com/vi/6ycqSnEyC1I/hqdefault.jpg",
+   "channel": "DW News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "mavViEhkqwM",
+   "title": "Super El Niño threatens Latin America with droughts, floods and food shortages",
+   "thumb": "https://i.ytimg.com/vi/mavViEhkqwM/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "6xbiorDJRYM",
+   "title": "Naomi Klein on the end of capitalism | BBC Radical",
+   "thumb": "https://i.ytimg.com/vi/6xbiorDJRYM/hqdefault.jpg",
+   "channel": "BBC News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "_N7PG8KinNk",
+   "title": "Thanksgiving food forecast",
+   "thumb": "https://i.ytimg.com/vi/_N7PG8KinNk/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "1i4_tFz8z30",
+   "title": "Danielle Bernstein embraces a major fashion reset",
+   "thumb": "https://i.ytimg.com/vi/1i4_tFz8z30/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "IoyyQclxpGU",
+   "title": "Protests escalate across France as thousands take to the streets",
+   "thumb": "https://i.ytimg.com/vi/IoyyQclxpGU/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "sXBT5IBPJbQ",
+   "title": "Neighbor of Bend gunman describes hearing arguments",
+   "thumb": "https://i.ytimg.com/vi/sXBT5IBPJbQ/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "kgySv7CVVeY",
+   "title": "French police clash with protesters",
+   "thumb": "https://i.ytimg.com/vi/kgySv7CVVeY/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "4ilu1zRYtMo",
+   "title": "Russell Brand's second accuser gives evidence",
+   "thumb": "https://i.ytimg.com/vi/4ilu1zRYtMo/hqdefault.jpg",
+   "channel": "Sky News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "KCfOEDUaqXk",
+   "title": "Hundreds rally in Kyiv to demand the resignation of Mayor Vitali Klitschko",
+   "thumb": "https://i.ytimg.com/vi/KCfOEDUaqXk/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "h9ysEyhhMP8",
+   "title": "GOP panic, inflation up, Zacharia out & more | Erin Burnett OutFront this week",
+   "thumb": "https://i.ytimg.com/vi/h9ysEyhhMP8/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
   {
    "videoId": "_zwo411Kj4I",
    "title": "This is an INTERNATIONAL movement to DESTABILIZE the West: Paul Mauro",
@@ -254,126 +402,6 @@
    "channel": "Fox News",
    "lean": 2,
    "label": "Right"
-  },
-  {
-   "videoId": "XcV2YJlIW2Q",
-   "title": "EXCLUSIVE: Lawyer for accused Cornell student talks client's case #shorts",
-   "thumb": "https://i.ytimg.com/vi/XcV2YJlIW2Q/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
-  {
-   "videoId": "g-NG0CVANmw",
-   "title": "Why Is Trump Criticising Zelensky And Complimenting Putin? | BBC Newscast",
-   "thumb": "https://i.ytimg.com/vi/g-NG0CVANmw/hqdefault.jpg",
-   "channel": "BBC News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "sQEHqRbf-zU",
-   "title": "Is the US Embassy in Jerusalem for Israel or America?",
-   "thumb": "https://i.ytimg.com/vi/sQEHqRbf-zU/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "oIWZV4AXkPI",
-   "title": "Protesters out in force on the streets of France | DW News",
-   "thumb": "https://i.ytimg.com/vi/oIWZV4AXkPI/hqdefault.jpg",
-   "channel": "DW News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "3fn8qs3FFmk",
-   "title": "Artemis II astronauts awarded Stephen Hawking Medal in Tenerife after historic lunar flyby",
-   "thumb": "https://i.ytimg.com/vi/3fn8qs3FFmk/hqdefault.jpg",
-   "channel": "Sky News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "bgHaeFIFBbA",
-   "title": "Canada could face division if these Alberta separatist voters have their way",
-   "thumb": "https://i.ytimg.com/vi/bgHaeFIFBbA/hqdefault.jpg",
-   "channel": "CBS News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "UcZZn3cakeY",
-   "title": "12-foot alligator caught after deadly attack in Florida",
-   "thumb": "https://i.ytimg.com/vi/UcZZn3cakeY/hqdefault.jpg",
-   "channel": "NBC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "azCToDh0htw",
-   "title": "Elon Musk's stance on flying cars changes over years #shorts",
-   "thumb": "https://i.ytimg.com/vi/azCToDh0htw/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
-  {
-   "videoId": "LLJi-XFqIjs",
-   "title": "'BE PREPARED': Former WH press aides share inside look at demands of the job",
-   "thumb": "https://i.ytimg.com/vi/LLJi-XFqIjs/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
-  {
-   "videoId": "x7Mpow-ilYA",
-   "title": "Inside Ukraine’s ‘Kill Zone,’ soldiers face swarming drones",
-   "thumb": "https://i.ytimg.com/vi/x7Mpow-ilYA/hqdefault.jpg",
-   "channel": "NBC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "DjAlKmOJBSU",
-   "title": "Good Morning America Full Broadcast — Saturday, October 17, 2026",
-   "thumb": "https://i.ytimg.com/vi/DjAlKmOJBSU/hqdefault.jpg",
-   "channel": "ABC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "kSSDwdY5iP0",
-   "title": "WATCH: Trump delivers remarks at a rally in Highland Heights, Kentucky",
-   "thumb": "https://i.ytimg.com/vi/kSSDwdY5iP0/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
-  {
-   "videoId": "ZmbI8xZtd7A",
-   "title": "'All of us were screaming': Oregon student recounts shooting",
-   "thumb": "https://i.ytimg.com/vi/ZmbI8xZtd7A/hqdefault.jpg",
-   "channel": "CNN",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "7PVFiACt_PI",
-   "title": "At least 10 people killed in a fire at a Bangladesh beach resort ",
-   "thumb": "https://i.ytimg.com/vi/7PVFiACt_PI/hqdefault.jpg",
-   "channel": "AP",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "yQhmMi71v_s",
-   "title": "Zelenskyy turns to EU for help as relations with Trump nosedive | Inside Story",
-   "thumb": "https://i.ytimg.com/vi/yQhmMi71v_s/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
   }
  ],
  "stories": [
@@ -388,10 +416,10 @@
     2
    ],
    "span": 4,
-   "n_sources": 9,
+   "n_sources": 10,
    "balance": {
     "l": 4,
-    "c": 3,
+    "c": 4,
     "r": 2
    },
    "blindspot": null,
@@ -444,6 +472,13 @@
      "label": "Center",
      "title": "Katie Zacharia ousted as White House press secretary",
      "url": "https://www.axios.com/2026/10/16/trump-katie-zacharia-press-secretary"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "George Santos Says He’d ‘Jump’ at Chance to Be Trump’s Press Secretary",
+     "url": "https://www.newsweek.com/george-santos-says-hed-jump-at-chance-to-be-trumps-press-secretary-12584111"
     },
     {
      "name": "The Daily Wire",
@@ -526,12 +561,19 @@
    "span": 3,
    "n_sources": 12,
    "balance": {
-    "l": 3,
+    "l": 4,
     "c": 5,
-    "r": 4
+    "r": 3
    },
    "blindspot": null,
    "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Zelenskyy urges support for new US sanctions on Russia after Trump puts them on hold",
+     "url": "https://www.npr.org/2026/10/17/nx-s1-6006745/us-sanctions-russia"
+    },
     {
      "name": "ABC News",
      "lean": -1,
@@ -571,7 +613,7 @@
      "name": "CNBC",
      "lean": 0,
      "label": "Center",
-     "title": "Trump waives broad new Russia sanctions and tariffs under Graham Act, citing national interest",
+     "title": "Trump waives broad new Russia sanctions, Zelenskyy condemns it as 'wrong'",
      "url": "https://www.cnbc.com/2026/10/17/trump-waives-russia-related-sanctions-tariffs-before-they-take-effect-.html"
     },
     {
@@ -608,13 +650,6 @@
      "label": "Lean Right",
      "title": "Massie offers rare praise for Trump on waiving Lindsey Graham’s Russia sanctions",
      "url": "https://www.washingtonexaminer.com/news/house/4769896/massie-praise-trump-waive-russia-sanction/"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Trump waives placing new sanctions on Russia",
-     "url": "https://www.washingtontimes.com/news/2026/oct/17/trump-waives-placing-new-sanctions-russia/"
     },
     {
      "name": "Newsmax",
@@ -677,14 +712,35 @@
     2
    ],
    "span": 3,
-   "n_sources": 6,
+   "n_sources": 9,
    "balance": {
-    "l": 1,
+    "l": 4,
     "c": 3,
     "r": 2
    },
    "blindspot": null,
    "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Pope Leo XIV leaves hospital days after lung cancer surgery",
+     "url": "https://www.npr.org/2026/10/17/nx-s1-6006762/pope-leo-xiv-leaves-hospital-days-after-lung-cancer-surgery"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Pope Leo discharged from hospital after lung cancer surgery",
+     "url": "https://www.nbcnews.com/world/pope-leo-xiv/pope-leo-discharged-hospital-lung-cancer-surgery-rcna604005"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Pope's surgeon details operating on \"ideal patient\" after lung cancer discovered",
+     "url": "https://www.cbsnews.com/news/pope-leo-surgeon-details-operation-lung-cancer/"
+    },
     {
      "name": "PBS NewsHour",
      "lean": -1,
@@ -712,13 +768,6 @@
      "label": "Center",
      "title": "Pope Leo returns to Vatican after lung cancer surgery",
      "url": "https://www.aljazeera.com/news/2026/10/17/pope-leo-returns-to-vatican-after-lung-cancer-surgery?traffic_source=rss"
-    },
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "Pope Leo leaves hospital after lung cancer surgery",
-     "url": "https://www.aljazeera.com/video/newsfeed/2026/10/17/pope-leo-leaves-hospital-after-lung-cancer-surgery?traffic_source=rss"
     },
     {
      "name": "Washington Examiner",
@@ -762,6 +811,216 @@
      "label": "Lean Left"
     }
    ]
+  },
+  {
+   "title": "West Bank settlers brutally attack a Washington Post journalist",
+   "summary": "This story appeared in Today, Explained, a daily newsletter that helps you understand the most compelling news and stories of the day. Subscribe here. On Friday, Israeli settlers attacked Palestinians living in the West Bank, as well as a Washington Post photographer, who was hos",
+   "category": "World",
+   "leans": [
+    -2,
+    -1,
+    0,
+    1
+   ],
+   "span": 3,
+   "n_sources": 6,
+   "balance": {
+    "l": 3,
+    "c": 2,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "West Bank settlers brutally attack a Washington Post journalist",
+     "url": "https://www.vox.com/today-explained-newsletter/506707/heidi-levine-photojournalist-attack-settlers-west-bank"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "EU diplomats say they were attacked by settlers in West Bank",
+     "url": "https://www.cbsnews.com/news/european-diplomats-attacked-west-bank/"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Masked settlers attack European diplomats in the occupied West Bank",
+     "url": "https://www.pbs.org/newshour/world/masked-settlers-attack-european-diplomats-in-the-occupied-west-bank"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Israeli settlers attack Palestinians during West Bank olive harvest and beat U.S. photojournalist",
+     "url": "https://www.pbs.org/newshour/world/israeli-settlers-attack-palestinians-during-west-bank-olive-harvest-and-beat-u-s-photojournalist"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Palestinians and US journalist injured by Israeli settlers in West Bank harvest attack",
+     "url": "https://www.bbc.co.uk/news/articles/c65ynk7212vqo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Jerusalem Daily: Israeli settlers attack farmers and journalists",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/10/17/aje-onl-nf_yt-dnrbltn-261017-salehm-jerusalem_daily-171026?traffic_source=rss"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Masked settlers attack European diplomats in the occupied West Bank",
+     "url": "https://www.washingtontimes.com/news/2026/oct/17/masked-settlers-attack-group-european-diplomats-occupied-west-bank/"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "-oRNRHBL1tg",
+     "title": "Israeli settlers attack American journalist and Palestinians during olive harvest in West Bank",
+     "thumb": "https://i.ytimg.com/vi/-oRNRHBL1tg/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "05GDaF5zS-k",
+     "title": "Israeli settlers attack Palestinians in West Bank during olive harvest | BBC News",
+     "thumb": "https://i.ytimg.com/vi/05GDaF5zS-k/hqdefault.jpg",
+     "channel": "BBC News",
+     "lean": 0,
+     "label": "Center"
+    },
+    {
+     "videoId": "p78aEPdNf4A",
+     "title": "Israeli settlers attack Palestinians during olive harvest",
+     "thumb": "https://i.ytimg.com/vi/p78aEPdNf4A/hqdefault.jpg",
+     "channel": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Mexican judge sentences three men to 158 years in prison for murders of Australian and US surfers​",
+   "summary": "Australian ​brothers Jake ​and Callum Robinson, and ​their ‌American friend Carter Rhoad, were killed while on a surf trip in Baja California in 2024 Get our breaking news email , free app or daily news podcast A Mexican ⁠judge ⁠has sentenced ​three men to 158 years ⁠and nine mon",
+   "category": "General",
+   "leans": [
+    -1,
+    0,
+    2
+   ],
+   "span": 3,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Mexican judge sentences three men to 158 years in prison for murders of Australian and US surfers​",
+     "url": "https://www.theguardian.com/australia-news/2026/oct/17/mexican-judge-sentences-three-men-to-158-years-in-prison-for-murders-of-australian-and-us-surfers-ntwnfb"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Three men jailed for 158 years each for murdering Australian and US surfers in Mexico",
+     "url": "https://www.bbc.co.uk/news/articles/c3kgqjkzw29wo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Three men get 158 years each for murdering American and Australian surfers, dumping bodies in Mexican well",
+     "url": "https://www.foxnews.com/world/three-men-158-years-murdering-american-australian-surfers-dumping-bodies-mexican-well"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "ICJ judge Navi Pillay wins Nobel peace prize for promoting international law",
+   "summary": "Committee recognises work of South African who chaired UN commission that concluded Israel was guilty of genocide in Gaza The Nobel peace prize has been awarded to Navi Pillay, the South African former UN human rights chief who chaired the UN commission that concluded Israel was ",
+   "category": "World",
+   "leans": [
+    -1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "ICJ judge Navi Pillay wins Nobel peace prize for promoting international law",
+     "url": "https://www.theguardian.com/world/2026/oct/09/navanethem-navi-pillay-wins-nobel-peace-prize"
+    },
+    {
+     "name": "The Federalist",
+     "lean": 2,
+     "label": "Right",
+     "title": "Nobel Peace Prize Goes To Pro-Hamas Supporter Of Chinese Genocide",
+     "url": "https://thefederalist.com/2026/10/16/nobel-peace-prize-goes-to-pro-hamas-supporter-of-chinese-genocide/?utm_source=rss&utm_medium=rss&utm_campaign=nobel-peace-prize-goes-to-pro-hamas-supporter-of-chinese-genocide"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Oregon Father Confronts Gunman in Mass Shooting",
+   "summary": "Few mass shootings in the U.S. end like the deadly attack on an Oregon elementary school: with an armed civilian opening fire on the gunman. President Donald Trump joined others Friday in praising a father of two girls who confronted a teenage gunman.",
+   "category": "Politics",
+   "leans": [
+    -1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Oregon father is the latest armed civilian to confront a gunman in a U.S. mass shooting",
+     "url": "https://www.pbs.org/newshour/nation/oregon-father-is-the-latest-armed-civilian-to-confront-a-gunman-in-a-u-s-mass-shooting"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Oregon Father Confronts Gunman in Mass Shooting",
+     "url": "https://www.newsmax.com/newsfront/oregon-bend-school-shooting-father-Kaylub-Giamanco/2026/10/17/id/1273120"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
   },
   {
    "title": "House Speaker Mike Johnson draws on faith as he fights to hold the Republican majority",
@@ -808,11 +1067,11 @@
     2
    ],
    "span": 2,
-   "n_sources": 6,
+   "n_sources": 4,
    "balance": {
     "l": 0,
     "c": 2,
-    "r": 4
+    "r": 2
    },
    "blindspot": null,
    "sources": [
@@ -845,25 +1104,11 @@
      "url": "https://www.washingtonexaminer.com/policy/defense/4769878/zelensky-starshield-still-restrict-ukraine/"
     },
     {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Stephen A. Smith defends White House dinner with Trump: 'He didn't run from any questions'",
-     "url": "https://www.washingtontimes.com/news/2026/oct/17/stephen-smith-defends-white-house-dinner-trump-didnt-run-questions/"
-    },
-    {
      "name": "Newsmax",
      "lean": 2,
      "label": "Right",
      "title": "White House: Trump Arch Security Plans Remain Intact",
      "url": "https://www.newsmax.com/newsfront/donald-trump-triumphal-arch-national-security/2026/10/17/id/1273129"
-    },
-    {
-     "name": "Daily Caller",
-     "lean": 2,
-     "label": "Right",
-     "title": "‘It Was Epic’: Kid Rock Discusses Trump Dinner With Stephen A. Smith, Bill Maher",
-     "url": "https://dailycaller.com/2026/10/17/kid-rock-trump-white-house-dinner-maher-stephen-a-smith"
     }
    ],
    "factchecks": [
@@ -876,88 +1121,6 @@
    "videos": []
   },
   {
-   "title": "West Bank settlers brutally attack a Washington Post journalist",
-   "summary": "This story appeared in Today, Explained, a daily newsletter that helps you understand the most compelling news and stories of the day. Subscribe here. On Friday, Israeli settlers attacked Palestinians living in the West Bank, as well as a Washington Post photographer, who was hos",
-   "category": "World",
-   "leans": [
-    -2,
-    -1,
-    0
-   ],
-   "span": 2,
-   "n_sources": 4,
-   "balance": {
-    "l": 2,
-    "c": 2,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Vox",
-     "lean": -2,
-     "label": "Left",
-     "title": "West Bank settlers brutally attack a Washington Post journalist",
-     "url": "https://www.vox.com/today-explained-newsletter/506707/heidi-levine-photojournalist-attack-settlers-west-bank"
-    },
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Masked settlers attack European diplomats in the occupied West Bank",
-     "url": "https://www.pbs.org/newshour/world/masked-settlers-attack-european-diplomats-in-the-occupied-west-bank"
-    },
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Israeli settlers attack Palestinians during West Bank olive harvest and beat U.S. photojournalist",
-     "url": "https://www.pbs.org/newshour/world/israeli-settlers-attack-palestinians-during-west-bank-olive-harvest-and-beat-u-s-photojournalist"
-    },
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Palestinians and US journalist injured by Israeli settlers in West Bank harvest attack",
-     "url": "https://www.bbc.co.uk/news/articles/c65ynk7212vqo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "Jerusalem Daily: Israeli settlers attack farmers and journalists",
-     "url": "https://www.aljazeera.com/video/newsfeed/2026/10/17/aje-onl-nf_yt-dnrbltn-261017-salehm-jerusalem_daily-171026?traffic_source=rss"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "-oRNRHBL1tg",
-     "title": "Israeli settlers attack American journalist and Palestinians during olive harvest in West Bank",
-     "thumb": "https://i.ytimg.com/vi/-oRNRHBL1tg/hqdefault.jpg",
-     "channel": "CBS News",
-     "lean": -1,
-     "label": "Lean Left"
-    },
-    {
-     "videoId": "05GDaF5zS-k",
-     "title": "Israeli settlers attack Palestinians in West Bank during olive harvest | BBC News",
-     "thumb": "https://i.ytimg.com/vi/05GDaF5zS-k/hqdefault.jpg",
-     "channel": "BBC News",
-     "lean": 0,
-     "label": "Center"
-    },
-    {
-     "videoId": "p78aEPdNf4A",
-     "title": "Israeli settlers attack Palestinians during olive harvest",
-     "thumb": "https://i.ytimg.com/vi/p78aEPdNf4A/hqdefault.jpg",
-     "channel": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
-  },
-  {
    "title": "5 midterm money takeaways: Democrats have candidate cash. Republicans have Elon Musk",
    "summary": "Democrats outraise Republicans in key Congress races as Elon Musk funds Ken Paxton in Texas and GOP groups aligned with Trump.",
    "category": "Politics",
@@ -967,9 +1130,9 @@
     0
    ],
    "span": 2,
-   "n_sources": 3,
+   "n_sources": 4,
    "balance": {
-    "l": 2,
+    "l": 3,
     "c": 1,
     "r": 0
    },
@@ -981,6 +1144,13 @@
      "label": "Left",
      "title": "It Was Elon Musk All Along",
      "url": "https://slate.com/news-and-politics/2026/10/elon-musk-campaign-spending-senate-midterms.html?via=rss"
+    },
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Perspective: Midterm money madness",
+     "url": "https://www.npr.org/2026/10/17/nx-s1-5997474/perspective-midterm-money-madness"
     },
     {
      "name": "ABC News",
@@ -1001,35 +1171,112 @@
    "videos": []
   },
   {
-   "title": "Three men get 158 years each for murdering American and Australian surfers, dumping bodies in Mexican well",
-   "summary": "Three men were sentenced to 158 years each in Ensenada, Baja California, for the murders of surfers Callum and Jake Robinson and Carter Redd Rhoad.",
-   "category": "General",
+   "title": "Russia Says It Hit Ukraine Steel Plants, Power, Ships",
+   "summary": "Russia said on Saturday it had carried out a large-scale overnight attack on Ukrainian and infrastructure targets including the country's largest steelworks in the city ‌of Kryvyi Rih, and vessels ​using the Ukrainian port of Odesa.",
+   "category": "World",
    "leans": [
     0,
     2
    ],
    "span": 2,
-   "n_sources": 2,
+   "n_sources": 3,
    "balance": {
     "l": 0,
-    "c": 1,
+    "c": 2,
     "r": 1
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "BBC News",
+     "name": "Al Jazeera",
      "lean": 0,
      "label": "Center",
-     "title": "Three men jailed for 158 years each for murdering Australian and US surfers in Mexico",
-     "url": "https://www.bbc.co.uk/news/articles/c3kgqjkzw29wo?at_medium=RSS&at_campaign=rss"
+     "title": "Will the EU come to Ukraine’s rescue in war against Russia?",
+     "url": "https://www.aljazeera.com/video/inside-story/2026/10/17/will-the-eu-come-to-ukraines-rescue-in-war-against-russia?traffic_source=rss"
     },
     {
-     "name": "Fox News",
+     "name": "The Christian Science Monitor",
+     "lean": 0,
+     "label": "Center",
+     "title": "With US and Ukraine at odds, Russia cautiously tries to take advantage",
+     "url": "https://www.csmonitor.com/World/Europe/2026/1016/russia-ukraine-trump-diesel-deal-drone-strikes?icid=rss"
+    },
+    {
+     "name": "Newsmax",
      "lean": 2,
      "label": "Right",
-     "title": "Three men get 158 years each for murdering American and Australian surfers, dumping bodies in Mexican well",
-     "url": "https://www.foxnews.com/world/three-men-158-years-murdering-american-australian-surfers-dumping-bodies-mexican-well"
+     "title": "Russia Says It Hit Ukraine Steel Plants, Power, Ships",
+     "url": "https://www.newsmax.com/newsfront/russia-odesa-plant/2026/10/17/id/1273124"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "'Me and Dolly, we are eternal': Miley Cyrus mourns Parton onstage during concert",
+   "summary": "Miley Cyrus broke down in tears Friday night at the Hollywood Bowl as she paid tribute to her late godmother, Dolly Parton, before performing \"Jolene\" in her honor.",
+   "category": "General",
+   "leans": [
+    -1,
+    1
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Miley Cyrus Honors Late Godmother Dolly Parton With Emotional Performance",
+     "url": "https://www.today.com/video/miley-cyrus-honors-late-godmother-dolly-parton-with-emotional-performance-271755845517"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "'Me and Dolly, we are eternal': Miley Cyrus mourns Parton onstage during concert",
+     "url": "https://www.washingtontimes.com/news/2026/oct/17/dolly-eternal-miley-cyrus-mourns-parton-onstage-concert/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "No Kings rallies across America urge voters to cast ballots early ahead of midterms",
+   "summary": "Rallies organized by the No Kings network opposed to President Trump were being held Saturday in cities and communities across the U.S., with an aim of getting people out to vote early in the midterm elections.",
+   "category": "Politics",
+   "leans": [
+    -1,
+    1
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "No Kings rallies across U.S. urge voters to cast ballots early ahead of midterms",
+     "url": "https://www.pbs.org/newshour/nation/no-kings-rallies-across-u-s-urge-voters-to-cast-ballots-early-ahead-of-midterms"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "No Kings rallies across America urge voters to cast ballots early ahead of midterms",
+     "url": "https://www.washingtontimes.com/news/2026/oct/17/no-kings-rallies-across-america-urge-voters-cast-ballots-early-ahead/"
     }
    ],
    "factchecks": [],
@@ -1071,9 +1318,9 @@
    "videos": []
   },
   {
-   "title": "College Football Playoff expansion is just the latest example of why 'growing the game' isn't always healthy",
-   "summary": "The college football playoff expansion to 24 teams takes \"grow the game\" too far, raising the question: if 12 wasn't enough, where does it end?",
-   "category": "Health",
+   "title": "Nick Saban and Tim Tebow give their thoughts on expanding the College Football Playoff to 24 teams",
+   "summary": "Nick Saban says there aren't 24 College Football Playoff teams that can win a title, warning bowl games and the SEC Championship Game face extinction.",
+   "category": "World",
    "leans": [
     0,
     2
@@ -1095,11 +1342,60 @@
      "url": "https://www.newsweek.com/sports/ncaa/nick-saban-reveals-his-biggest-fear-with-24-team-college-football-playoff-12583914"
     },
     {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Nick Saban Names the 4 Legit National Championship Teams in College Football",
+     "url": "https://www.newsweek.com/sports/ncaa/nick-saban-names-the-4-legit-national-championship-teams-in-college-football-12583850"
+    },
+    {
      "name": "Fox News",
      "lean": 2,
      "label": "Right",
-     "title": "College Football Playoff expansion is just the latest example of why 'growing the game' isn't always healthy",
-     "url": "https://www.foxnews.com/outkick-sports/college-football-playoff-expansion-latest-example-why-growing-game-isnt-always-healthy"
+     "title": "Nick Saban and Tim Tebow give their thoughts on expanding the College Football Playoff to 24 teams",
+     "url": "https://www.foxnews.com/outkick-sports/nick-saban-tim-tebow-thoughts-expanding-college-football-playoff-24-teams"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "LSU stays alive in College Football Playoff race with blowout win over No 16 Mississippi State",
+     "url": "https://www.foxnews.com/outkick-sports/lsu-stays-alive-college-football-playoff-race-blowout-win-no-16-mississippi-state"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Brazilian Amazon deforestation falls to lowest on record as pivotal vote looms",
+   "summary": "Forest clearance at smallest total since records began in 1988 in success for Lula ahead of presidential run-off Deforestation in the Brazilian Amazon has fallen to its lowest level since records began, new government data shows. But whether this globally important success is mai",
+   "category": "Politics",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Brazilian Amazon deforestation falls to lowest on record as pivotal vote looms",
+     "url": "https://www.theguardian.com/environment/2026/oct/16/brazil-amazon-deforestation-lowest-on-record-election"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Brazil sees record fall in Amazon deforestation as key election looms",
+     "url": "https://www.bbc.co.uk/news/articles/cqe8rzg6zl00o?at_medium=RSS&at_campaign=rss"
     }
    ],
    "factchecks": [],
@@ -1150,9 +1446,44 @@
    ]
   },
   {
-   "title": "Kenya's Ebola cases rise to 7, including health workers who cared for the first patient",
-   "summary": "Three Kenyan health workers have tested positive for Ebola after caring for the country's first confirmed case, the Health Ministry said Saturday.",
-   "category": "Health",
+   "title": "WATCH LIVE: Trump holds Kentucky midterm rally in Highland Heights",
+   "summary": "President Donald Trump on Saturday afternoon is rallying voters in Kentucky to boost Republican House candidate Ed Gallrein and other GOP contenders as the midterm elections approach. 2026 MIDTERM ELECTIONS LIVE UPDATES: LATEST NEWS, RESULTS AND ANALYSIS The president is speaking",
+   "category": "Politics",
+   "leans": [
+    0,
+    1
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump touts his power at Kentucky rally to energize voters ahead of midterm elections",
+     "url": "https://www.cnbc.com/2026/10/17/trump-touts-his-power-at-kentucky-rally-ahead-of-midterms.html"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "WATCH LIVE: Trump holds Kentucky midterm rally in Highland Heights",
+     "url": "https://www.washingtonexaminer.com/news/campaigns/congressional/4769857/watch-live-trump-kentucky-midterm-rally-highland-heights/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Egypt prepared to defend Saudi Arabia after deadly Houthi airport attack",
+   "summary": "Egyptian President Abdel Fattah el-Sisi said his country’s military is prepared to protect Saudi Arabia from escalating attacks by the Iran-backed Houthis, raising the prospect of a wider regional conflict after a deadly strike on a Riyadh airport killed 13 people, including an A",
+   "category": "World",
    "leans": [
     0,
     1
@@ -1170,23 +1501,32 @@
      "name": "Al Jazeera",
      "lean": 0,
      "label": "Center",
-     "title": "Kenya confirms four more Ebola cases, bringing total to seven",
-     "url": "https://www.aljazeera.com/news/2026/10/17/kenya-confirms-four-more-ebola-cases-bringing-total-to-seven?traffic_source=rss"
+     "title": "Egypt’s el-Sisi vows to defend Saudi Arabia from Houthi attacks",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/10/17/10-17-egypt-saudi-houths-clip?traffic_source=rss"
     },
     {
-     "name": "Washington Times",
+     "name": "New York Post",
      "lean": 1,
      "label": "Lean Right",
-     "title": "Kenya's Ebola cases rise to 7, including health workers who cared for the first patient",
-     "url": "https://www.washingtontimes.com/news/2026/oct/17/kenyas-ebola-cases-rise-7-including-health-workers-who-cared-first/"
+     "title": "Egypt prepared to defend Saudi Arabia after deadly Houthi airport attack",
+     "url": "https://nypost.com/2026/10/17/world-news/egypt-prepared-to-defend-saudi-arabia-after-deadly-houthi-airport-attack/"
     }
    ],
    "factchecks": [],
-   "videos": []
+   "videos": [
+    {
+     "videoId": "V3pO3X407sw",
+     "title": "Egypt's el-Sisi vows to defend Saudi Arabia from Houthi attacks",
+     "thumb": "https://i.ytimg.com/vi/V3pO3X407sw/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
   },
   {
-   "title": "Oregon school shooter attacked special education classroom, police say",
-   "summary": "Police in Bend, Oregon, are still investigating the motive behind the deadly shooting at Silver Rail Elementary School. Four people were killed, including three young children and a teacher. Police identified the shooter as a 16-year-old who previously attended the school. They s",
+   "title": "Museum releases historical photos of island where Amelia Earhart may have crashed",
+   "summary": "Images from New Zealand aerial survey of Nikumaroro in 1938 offer new clues over aviator’s disappearance A New Zealand museum has released nearly 50 photos from a 1938 aerial survey of the island where Amelia Earhart is believed to have crash-landed, offering amateur sleuths new ",
    "category": "General",
    "leans": [
     -1
@@ -1201,6 +1541,54 @@
    "blindspot": "right",
    "sources": [
     {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Museum releases historical photos of island where Amelia Earhart may have crashed",
+     "url": "https://www.theguardian.com/us-news/2026/oct/16/amelia-earhart-new-zeland-museum-aerial-survey-photos-nikumaroro-island"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Amelia Earhart and her plane vanished in 1937. A team is scouring a remote island for evidence.",
+     "url": "https://www.cbsnews.com/video/amelia-earhart-and-her-plane-vanished-in-1937-a-team-is-scouring-a-remote-island-for-evidence/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Oregon police say teacher tackled suspected shooter, who previously attended Silver Rail Elementary",
+   "summary": "A teacher \"fought\" and \"tackled\" the suspected shooter by throwing her cell phone at him, according to Bend Police Chief Mike Krantz. The victim, who has been identified as Griffin J. John II, previously attended Silver Rail Elementary. The investigation is still active and under",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Oregon police say teacher tackled suspected shooter, who previously attended Silver Rail Elementary",
+     "url": "https://www.nbcnews.com/video/oregon-police-say-teacher-tackled-suspected-shooter-who-previously-attended-silver-rail-elementary-271718469831"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Oregon school shooting victims include 5-year-old whose family is ‘broken and lost’",
+     "url": "https://www.nbcnews.com/news/us-news/oregon-school-shooting-victims-include-5-year-old-rhoam-summer-whose-f-rcna603946"
+    },
+    {
      "name": "ABC News",
      "lean": -1,
      "label": "Lean Left",
@@ -1208,19 +1596,19 @@
      "url": "https://abcnews.com/US/multiple-people-injured-shooting-oregon-elementary-school-suspect/story?id=137303119"
     },
     {
-     "name": "PBS NewsHour",
+     "name": "ABC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Oregon school shooter attacked special education classroom, police say",
-     "url": "https://www.pbs.org/newshour/show/oregon-school-shooter-attacked-special-education-classroom-police-say"
+     "title": "WATCH:  Hero who stopped Oregon elementary school shooting suspect identified",
+     "url": "https://abcnews.com/video/137332472/"
     }
    ],
    "factchecks": [],
    "videos": [
     {
-     "videoId": "UxVee8ECIbg",
-     "title": "Oregon Gov. Tina Kotek discusses Bend elementary school shooting",
-     "thumb": "https://i.ytimg.com/vi/UxVee8ECIbg/hqdefault.jpg",
+     "videoId": "-1EAm_SFa0Q",
+     "title": "Hero dad stopped shooter from killing more at Silver Rail Elementary School",
+     "thumb": "https://i.ytimg.com/vi/-1EAm_SFa0Q/hqdefault.jpg",
      "channel": "CBS News",
      "lean": -1,
      "label": "Lean Left"
@@ -1234,14 +1622,48 @@
      "label": "Lean Left"
     },
     {
-     "videoId": "rmzIc9dq6vA",
-     "title": "Teen shooter who killed 4 at an Oregon school was a former student, police say",
-     "thumb": "https://i.ytimg.com/vi/rmzIc9dq6vA/hqdefault.jpg",
-     "channel": "AP",
+     "videoId": "9bzMUDn0bVw",
+     "title": "Mourners grieve after Oregon elementary school shooting",
+     "thumb": "https://i.ytimg.com/vi/9bzMUDn0bVw/hqdefault.jpg",
+     "channel": "Reuters",
      "lean": 0,
      "label": "Center"
     }
    ]
+  },
+  {
+   "title": "WATCH:  Authorities: Fatal alligator attack in Winter Garden, Florida",
+   "summary": "Police say the man was fishing along the shoreline at a park when he was attacked and killed by an alligator.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "71-year-old man dies after alligator attack while fishing in Florida, police say",
+     "url": "https://www.nbcnews.com/news/us-news/man-dies-alligator-attack-florida-rcna604017"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  Authorities: Fatal alligator attack in Winter Garden, Florida",
+     "url": "https://abcnews.com/video/137338151/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
   },
   {
    "title": "Perseverance drives Angel Reese – and WNBA – into the 2026 championship",
@@ -1272,6 +1694,40 @@
      "label": "Center",
      "title": "Sophie Cunningham Calls Out 'Dangerous' Angel Reese Plays Before WNBA Finals",
      "url": "https://www.newsweek.com/sports/sophie-cunningham-calls-out-dangerous-angel-reese-plays-before-wnba-finals-12583693"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Netanyahu And Obama Reignite Decade-Old Feud Over Israel’s Right To Its Land",
+   "summary": "Israeli Prime Minister Benjamin Netanyahu struck back at former President Barack Obama on Friday, rejecting Obama’s claim that Jews seized land from its inhabitants when they founded Israel and reopening one of the most bitter rivalries of the Obama years. “The Jewish people are ",
+   "category": "World",
+   "leans": [
+    2
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Netanyahu And Obama Reignite Decade-Old Feud Over Israel’s Right To Its Land",
+     "url": "https://www.dailywire.com/news/netanyahu-and-obama-reignite-decade-old-feud-over-israels-right-to-its-land"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Netanyahu to Obama: 'Our Land Is Not Stolen Land'",
+     "url": "https://www.newsmax.com/newsfront/netanyahu-obama-stolen/2026/10/17/id/1273130"
     }
    ],
    "factchecks": [],
@@ -1377,8 +1833,8 @@
    "videos": []
   },
   {
-   "title": "LIVE:  ABC News Live",
-   "summary": "24/7 coverage of breaking news and live events",
+   "title": "Scuffles and fires break out as protesters rally across France, joining students",
+   "summary": "Demonstrators across France converged with students Saturday to protest rising living costs, as the country's fiscal crisis deepens.",
    "category": "General",
    "leans": [
     -1
@@ -1393,19 +1849,46 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "ABC News",
+     "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "LIVE:  ABC News Live",
-     "url": "https://abcnews.com/video/41463246/"
+     "title": "Scuffles and fires break out as protesters rally across France, joining students",
+     "url": "https://www.npr.org/2026/10/17/nx-s1-6006773/student-protests-france"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Fisherman, 71, attacked and killed by 12-foot alligator alongside Florida lake",
-   "summary": "The presence of other active alligators complicated any chance of rescuing him.",
+   "title": "Fraud, affordability and Trump policies drive friction in Minnesota Senate debate",
+   "summary": "The major party candidates for Minnesota's U.S. Senate seat faced off in an hourlong debate Friday on MPR News with fraud, affordability and fallout from the Trump administration's policies as key points of friction.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Fraud, affordability and Trump policies drive friction in Minnesota Senate debate",
+     "url": "https://www.npr.org/2026/10/17/nx-s1-6004910/minn-us-senate-race"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Dozens of critically endangered orangutans rescued from Indonesian wildfires",
+   "summary": "Rescuers in Indonesia have saved dozens of orangutans from wildfires. The critically endangered species is fighting for their lives and habitats during this deadly wildfire season.",
    "category": "General",
    "leans": [
     -1
@@ -1420,19 +1903,127 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "ABC News",
+     "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Fisherman, 71, attacked and killed by 12-foot alligator alongside Florida lake",
-     "url": "https://abcnews.com/US/wireStory/fisherman-71-attacked-killed-12-foot-alligator-florida-137349474"
+     "title": "Dozens of critically endangered orangutans rescued from Indonesian wildfires",
+     "url": "https://www.npr.org/2026/10/17/nx-s1-6004881/dozens-of-critically-endangered-orangutans-rescued-from-indonesian-wildfires"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "WATCH:  Authorities: Fatal alligator attack in Winter Garden, Florida",
-   "summary": "Police say the man was fishing along the shoreline at a park when he was attacked and killed by an alligator.",
+   "title": "Decades after apartheid, South Africans seek justice for crimes of the past",
+   "summary": "More than three decades after the end of apartheid, families of victims of some of the worst crimes of South Africa's past are still fighting for justice. As survivors and perpetrators grow older, a new wave of legal efforts is seeking truth, accountability and reparations before",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Decades after apartheid, South Africans seek justice for crimes of the past",
+     "url": "https://www.npr.org/2026/10/17/nx-s1-5987671/south-africa-justice-sharpeville-apartheid"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Sidewalk sleepers: They have nowhere else to stay while a loved one is in the hospital",
+   "summary": "Patients travel miles to be treated at public hospitals in Delhi. Those in need get financial aid for their care. But for overnight accommodations, families are often on their own — and on the street.",
+   "category": "Health",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Sidewalk sleepers: They have nowhere else to stay while a loved one is in the hospital",
+     "url": "https://www.npr.org/2026/10/17/g-s1-147874/hospital-diagnosis-patients-india-sidewalk"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Trump promised a swing district blitz. He's going to a lot of very red states",
+   "summary": "President Trump's midterm travel blitz ahead of Election Day includes several red states he won easily 2 years ago, showing the electoral landscape is more challenging for Republicans.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump promised a swing district blitz. He's going to a lot of very red states",
+     "url": "https://www.npr.org/2026/10/17/nx-s1-6004276/trump-travel-midterms"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "No Kings turns its focus to voting this weekend. Here's what we know",
+   "summary": "The coalition behind nationwide anti-Trump protests is shifting its strategies this weekend to focus on voter turnout. Organizers say Saturday's events are a nonpartisan effort to get people to the polls.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "No Kings turns its focus to voting this weekend. Here's what we know",
+     "url": "https://www.npr.org/2026/10/17/nx-s1-6004887/no-kings-voting-trump"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "LGBTQ+ people go into hiding in Senegal as hundreds are arrested",
+   "summary": "At least 320 people detained for ‘acts against nature’ after law criminalising homosexuality toughened, HRW reports Mass arrests, forced HIV testing and barriers to legal representation are part of an escalating crackdown against LGBTQ+ people in Senegal, according to a new repor",
    "category": "General",
    "leans": [
     -1
@@ -1447,19 +2038,127 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "ABC News",
+     "name": "The Guardian",
      "lean": -1,
      "label": "Lean Left",
-     "title": "WATCH:  Authorities: Fatal alligator attack in Winter Garden, Florida",
-     "url": "https://abcnews.com/video/137338151/"
+     "title": "LGBTQ+ people go into hiding in Senegal as hundreds are arrested",
+     "url": "https://www.theguardian.com/global-development/2026/oct/15/senegal-homosexuality-criminalised-anti-lgbtq-arrests-hiv-testing-human-rights-watch"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "WATCH:  Hero who stopped Oregon elementary school shooting suspect identified",
-   "summary": "ABC News contributor Don Mihalek discusses the bystander credited with stopping the suspected gunman and ongoing investigations.",
+   "title": "Zimbabwean author Simbarashe Kundizeza denies using AI to write prize-winning story",
+   "summary": "Article in Atlantic claims The Blue Fighter was artificially generated, days after it won Caine prize for African writers The Zimbabwean writer Simbarashe Kundizeza has denied using AI to write a prize-winning short story after an article in the Atlantic said software had flagged",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Zimbabwean author Simbarashe Kundizeza denies using AI to write prize-winning story",
+     "url": "https://www.theguardian.com/technology/2026/oct/14/zimbabwean-author-simbarashe-kundizeza-denies-ai-story"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Guinea-Bissau denies it has approved controversial vaccine trial in newborns",
+   "summary": "Health minister says government ‘did not authorize’ Danish-led hepatitis B trial in babies backed by RFK Jr Guinea-Bissau has not approved the controversial hepatitis B study in newborns that would be funded by the US government and private partners, the African country’s ministe",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Guinea-Bissau denies it has approved controversial vaccine trial in newborns",
+     "url": "https://www.theguardian.com/world/2026/oct/14/guinea-bissau-vaccine-hepatitis-b-trial-denial"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Controversial vaccine trial touted by RFK Jr gets go-ahead in Guinea-Bissau",
+   "summary": "Recommended dose of hepatitis B vaccine will be withheld from thousands of newborns by Danish researchers A controversial research trial that will withhold hepatitis B vaccines from some African newborns was given approval to move forward this week. It is a central part of the va",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Controversial vaccine trial touted by RFK Jr gets go-ahead in Guinea-Bissau",
+     "url": "https://www.theguardian.com/society/2026/oct/09/vaccine-trial-guinea-bissau-rfk-jr"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Brazil’s Lula says he now backs lowering age of criminal responsibility to 16",
+   "summary": "Lula reverses position on age of responsibility for ‘heinous’ crimes in what many see as a desperate electoral gambit Brazil’s president, Luiz Inácio Lula da Silva, has announced that he now supports lowering the age of criminal responsibility for “heinous” crimes from 18 to 16, ",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Brazil’s Lula says he now backs lowering age of criminal responsibility to 16",
+     "url": "https://www.theguardian.com/world/2026/oct/16/brazil-lula-age-criminal-responsibility"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "‘Opening the lid of a horrible secret’: Jamaicans confront enslavement with taboo-busting stories on screen",
+   "summary": "As violent spirits are unleashed in Sky’s Possession, observers see confident creatives reclaiming the island’s narratives in a form of ‘cultural reparation’ A woman opens a 300‑year‑old box, unleashing a violent spirit – it is the spirit of colonialism and oppression roaring bac",
    "category": "General",
    "leans": [
     -1
@@ -1473,6 +2172,351 @@
    },
    "blindspot": null,
    "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "‘Opening the lid of a horrible secret’: Jamaicans confront enslavement with taboo-busting stories on screen",
+     "url": "https://www.theguardian.com/news/2026/oct/16/jamaicans-confront-enslavement-taboo-busting-stories-on-screen-possession"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Nicolás Maduro tells New York court new torture allegations are ‘false’",
+   "summary": "Rewritten indictment accuses ex-Venezuela president and wife Cilia Flores of leading campaign of torture Nicolás Maduro insisted on Thursday during an appearance in a New York court that torture allegations in a rewritten drug trafficking indictment against the deposed Venezuelan",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Nicolás Maduro tells New York court new torture allegations are ‘false’",
+     "url": "https://www.theguardian.com/world/2026/oct/15/nicolas-maduro-torture-allegations-cilia-flores"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "No 10 leaves option open to impose Chinese EV tariffs if UK joins EU scheme",
+   "summary": "Beijing warns against ‘discriminatory’ step after France drops opposition to British role in Made in Europe package No 10 has left the door open to imposing tariffs on Chinese-made electric vehicles as part of the Made in Europe package, prompting a warning from Beijing that such",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "No 10 leaves option open to impose Chinese EV tariffs if UK joins EU scheme",
+     "url": "https://www.theguardian.com/politics/2026/oct/16/uk-chinese-electric-vehicle-ev-tariffs-eu-made-in-europe-scheme"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Inside Ukraine's 'Kill Zone' where soldiers face swarming drones in new age of war",
+   "summary": "The 'Kill Zone' runs along the 750-mile front between Ukraine and Russia and is about 20 miles wide. It's likely one of the deadliest places on earth right now, as swarms of new high-tech drones act as killing machines. NBC News' Richard Engel talks to Ukrainian soldiers fighting",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Inside Ukraine's 'Kill Zone' where soldiers face swarming drones in new age of war",
+     "url": "https://www.nbcnews.com/video/inside-ukraine-s-kill-zone-where-soldiers-face-swarming-killer-drones-271735365853"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "x7Mpow-ilYA",
+     "title": "Inside Ukraine’s ‘Kill Zone,’ soldiers face swarming drones",
+     "thumb": "https://i.ytimg.com/vi/x7Mpow-ilYA/hqdefault.jpg",
+     "channel": "NBC News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Father of two and teacher credited for saving lives at deadly school shooting that killed four",
+   "summary": "Authorities tonight are crediting a father of two who happened to be driving by the school on his lunch break when he heard gun shots, along with a teacher who threw a cell phone and tackled the gunman, for saving lives. NBC News’ Liz Kreutz reports.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Father of two and teacher credited for saving lives at deadly school shooting that killed four",
+     "url": "https://www.nbcnews.com/nightly-news/video/father-of-two-and-teacher-credited-for-saving-lives-at-deadly-school-shooting-that-killed-four-271725125719"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "WN39pZ-Kxs0",
+     "title": "Father fatally shoots gunman during deadly school shooting",
+     "thumb": "https://i.ytimg.com/vi/WN39pZ-Kxs0/hqdefault.jpg",
+     "channel": "NBC News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "The pope goes under the knife, and a new dinosaur species is discovered: The news quiz",
+   "summary": "An investigation forces the resignation of a U.S. ambassador, a family dog braves the Yellowstone wilderness, and a celebrity gets into a public feud with a New York City shop.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "The pope goes under the knife, and a new dinosaur species is discovered: The news quiz",
+     "url": "https://www.nbcnews.com/news/news-quiz/pope-leo-news-quiz-rcna603755"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Is Iowa a Battleground Again?",
+   "summary": "How the Hawkeye State became one of the most closely watched battlegrounds of the midterms",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Is Iowa a Battleground Again?",
+     "url": "https://www.nbcnews.com/video/is-iowa-a-battleground-again-271654981932"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "‘The house was toast’: Surf swallows California homes",
+   "summary": "The worst of El Niño is still months away, but Southern California’s fragile coastline is already being transformed by record-setting king tides and storm surges.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "‘The house was toast’: Surf swallows California homes",
+     "url": "https://www.nbcnews.com/news/us-news/beachfront-homes-destroyed-california-coastal-erosion-el-nino-bring-hi-rcna603211"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Reported attacks on ships around Hormuz reach record highs",
+   "summary": "Data from a monitoring agency shows attacks around the Strait of Hormuz at a record high, as two more vessels report being attacked on Friday.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Reported attacks on ships around Hormuz reach record highs",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-yemen-houthis-saudi-arabia/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Attorneys for Rep. Ilhan Omar accuse DOJ of violating judge's orders",
+   "summary": "Omar's attorneys asked the government to immediately return the congresswoman's property, and also demanded all video and audio recordings of the search be preserved.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Attorneys for Rep. Ilhan Omar accuse DOJ of violating judge's orders",
+     "url": "https://www.cbsnews.com/news/attorneys-ilhan-omar-doj-violating-judge-orders/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  }
+ ],
+ "blindspots": [
+  {
+   "title": "Museum releases historical photos of island where Amelia Earhart may have crashed",
+   "summary": "Images from New Zealand aerial survey of Nikumaroro in 1938 offer new clues over aviator’s disappearance A New Zealand museum has released nearly 50 photos from a 1938 aerial survey of the island where Amelia Earhart is believed to have crash-landed, offering amateur sleuths new ",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Museum releases historical photos of island where Amelia Earhart may have crashed",
+     "url": "https://www.theguardian.com/us-news/2026/oct/16/amelia-earhart-new-zeland-museum-aerial-survey-photos-nikumaroro-island"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Amelia Earhart and her plane vanished in 1937. A team is scouring a remote island for evidence.",
+     "url": "https://www.cbsnews.com/video/amelia-earhart-and-her-plane-vanished-in-1937-a-team-is-scouring-a-remote-island-for-evidence/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Oregon police say teacher tackled suspected shooter, who previously attended Silver Rail Elementary",
+   "summary": "A teacher \"fought\" and \"tackled\" the suspected shooter by throwing her cell phone at him, according to Bend Police Chief Mike Krantz. The victim, who has been identified as Griffin J. John II, previously attended Silver Rail Elementary. The investigation is still active and under",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Oregon police say teacher tackled suspected shooter, who previously attended Silver Rail Elementary",
+     "url": "https://www.nbcnews.com/video/oregon-police-say-teacher-tackled-suspected-shooter-who-previously-attended-silver-rail-elementary-271718469831"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Oregon school shooting victims include 5-year-old whose family is ‘broken and lost’",
+     "url": "https://www.nbcnews.com/news/us-news/oregon-school-shooting-victims-include-5-year-old-rhoam-summer-whose-f-rcna603946"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Bend, Oregon, shooting: Suspect ID'd, had attended elementary school, police say",
+     "url": "https://abcnews.com/US/multiple-people-injured-shooting-oregon-elementary-school-suspect/story?id=137303119"
+    },
     {
      "name": "ABC News",
      "lean": -1,
@@ -1483,6 +2527,14 @@
    ],
    "factchecks": [],
    "videos": [
+    {
+     "videoId": "-1EAm_SFa0Q",
+     "title": "Hero dad stopped shooter from killing more at Silver Rail Elementary School",
+     "thumb": "https://i.ytimg.com/vi/-1EAm_SFa0Q/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
     {
      "videoId": "ZPzVzIp-SqY",
      "title": "At least four dead, as well as suspect, after Oregon elementary school shooting",
@@ -1498,778 +2550,12 @@
      "channel": "Reuters",
      "lean": 0,
      "label": "Center"
-    },
-    {
-     "videoId": "-1EAm_SFa0Q",
-     "title": "Hero dad stopped shooter from killing more at Silver Rail Elementary School",
-     "thumb": "https://i.ytimg.com/vi/-1EAm_SFa0Q/hqdefault.jpg",
-     "channel": "CBS News",
-     "lean": -1,
-     "label": "Lean Left"
     }
    ]
   },
   {
-   "title": "WATCH:  Nat Geo's 'Moment on the Earth' spotlights the wonders of elephants",
-   "summary": "National Geographic shares a closer look at elephants, including how they can eat up to 18 hours a day and even use their trunks to \"hug.\" \"Secrets of the Elephants\" is streaming now.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  Nat Geo's 'Moment on the Earth' spotlights the wonders of elephants",
-     "url": "https://abcnews.com/video/137328854/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  Rhode Island farmer sets new record for world's biggest pumpkin",
-   "summary": "David Muir reports on the new world record for heaviest pumpkin, which weighs 3,156 pounds – smashing the previous record of 2,856 pounds set merely a week ago.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  Rhode Island farmer sets new record for world's biggest pumpkin",
-     "url": "https://abcnews.com/video/137305086/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  Seahawks, Broncos face off in Thursday night NFL matchup",
-   "summary": "ESPN’s Omar Ruiz previews the Seahawks-Broncos showdown in Denver, including how Seattle’s top-ranked defense could challenge Bo Nix and whether Sam Darnold can bounce back after two interceptions.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  Seahawks, Broncos face off in Thursday night NFL matchup",
-     "url": "https://abcnews.com/video/137303571/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  Rising number of young adults living with parents",
-   "summary": "ABC News’ Juju Chang reports on the growing trend of “boomerang kids” returning to live with their parents amid housing costs and financial concerns.",
-   "category": "Economy",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  Rising number of young adults living with parents",
-     "url": "https://abcnews.com/video/137290474/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  DIY Halloween costumes for this year’s viral trends",
-   "summary": "Lori Bergamotto shares easy, last-minute DIY Halloween costume ideas inspired by the people and pop culture moments that made headlines this year.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  DIY Halloween costumes for this year’s viral trends",
-     "url": "https://abcnews.com/video/137285460/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "No Kings rallies across U.S. urge voters to cast ballots early ahead of midterms",
-   "summary": "The hundreds of planned events were being billed as nonpartisan, though they sought to build on nearly two years' worth of No Kings marches and demonstrations by people upset with Trump's presidency.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "No Kings rallies across U.S. urge voters to cast ballots early ahead of midterms",
-     "url": "https://www.pbs.org/newshour/nation/no-kings-rallies-across-u-s-urge-voters-to-cast-ballots-early-ahead-of-midterms"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "How Alberta separatism went from fringe cause to referendum",
-   "summary": "Alberta is not voting to leave Canada on Oct. 19. Instead, voters will decide whether the province should remain in Canada or begin the legal process toward a future referendum on separation.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "How Alberta separatism went from fringe cause to referendum",
-     "url": "https://www.pbs.org/newshour/world/how-alberta-separatism-went-from-fringe-cause-to-referendum"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Fundraising to protect key natural sites falls short ahead of UN biodiversity summit",
-   "summary": "Efforts to raise hundreds of billions of dollars to preserve the world's oceans, forests, rivers, lakes and other parts of the natural world have fallen short ahead of a key U.N. summit on biodiversity.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Fundraising to protect key natural sites falls short ahead of UN biodiversity summit",
-     "url": "https://www.pbs.org/newshour/world/fundraising-to-protect-key-natural-sites-falls-short-ahead-of-un-biodiversity-summit"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "‘Is this like a hit piece or what?': Dan Sullivan's MAGA balancing act",
-   "summary": "The senator in an interview with POLITICO declined to put distance between himself and President Donald Trump.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Politico",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "‘Is this like a hit piece or what?': Dan Sullivan's MAGA balancing act",
-     "url": "https://www.politico.com/news/2026/10/17/alaska-senate-sullivan-trump-peltola-01125231"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "A sleeper Senate battleground has turned into a real Republican liability",
-   "summary": "The newest addition to the Senate map is giving Republicans headaches.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Politico",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "A sleeper Senate battleground has turned into a real Republican liability",
-     "url": "https://www.politico.com/news/2026/10/17/kansas-senate-roger-marshall-struggles-01122060"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Haley Stevens is everywhere — except on the trail for El-Sayed",
-   "summary": "The former Senate candidate has endorsed her former primary foe — but is not pushing hard for former backers to do the same.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Politico",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Haley Stevens is everywhere — except on the trail for El-Sayed",
-     "url": "https://www.politico.com/news/2026/10/16/haley-stevens-talks-abdul-el-sayed-01122744"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "The nation’s cartoonists on the week in politics",
-   "summary": "Every week political cartoonists throughout the country and across the political spectrum apply their ink-stained skills to capture the foibles, memes, hypocrisies and other head-slapping events in the world of politics. The fruits of these labors are hundreds of cartoons that en",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Politico",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "The nation’s cartoonists on the week in politics",
-     "url": "https://www.politico.com/gallery/2026/10/16/the-nations-cartoonists-on-the-week-in-politics-01121382"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Senate Republicans are getting smoked in fundraising",
-   "summary": "James Talarico alone outraised ten of the top GOP Senate candidates combined over the past three months",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Politico",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Senate Republicans are getting smoked in fundraising",
-     "url": "https://www.politico.com/news/2026/10/16/senate-republicans-are-getting-smoked-in-fundraising-01122911"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Inside the democratic socialists’ plan to shake up Congress",
-   "summary": "Inside the democratic socialists’ plan to shake up Congress lead image",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Politico",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Inside the democratic socialists’ plan to shake up Congress",
-     "url": "https://www.politico.com/video/2026/10/15/inside-the-democratic-socialists-plan-to-shake-up-congress-2201513"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Trump lashes out at Republicans as Ken Paxton struggles in Texas",
-   "summary": "The president singled out Karl Rove and incumbent Sen. John Cornyn as his endorsed candidate appears to be in a tight race with James Talarico.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Politico",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Trump lashes out at Republicans as Ken Paxton struggles in Texas",
-     "url": "https://www.politico.com/news/2026/10/15/trump-lashes-out-at-republicans-as-ken-paxtron-struggles-in-texas-01122111"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Mitch Daniels rebukes JD Vance over free-market retreat",
-   "summary": "Daniels said the Republican Party’s evolution under Trump could create an opening for a party to champion economic freedom.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Politico",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Mitch Daniels rebukes JD Vance over free-market retreat",
-     "url": "https://www.politico.com/news/2026/10/15/mitch-daniels-jd-vance-free-market-01120839"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "2 women accuse Matt Gaetz of sex trafficking in new lawsuit",
-   "summary": "Gaetz said he would vigorously contest the allegations in the lawsuit.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Politico",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "2 women accuse Matt Gaetz of sex trafficking in new lawsuit",
-     "url": "https://www.politico.com/news/2026/10/15/matt-gaetz-lawsuit-trafficking-florida-01120754"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "‘I think Alaska’s turning blue’: Republicans fret Sullivan’s path to reelection",
-   "summary": "Alaska strategists and voters acknowledge GOP Sen. Dan Sullivan is facing a difficult road, despite Trump’s support and the outside money pouring in.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Politico",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "‘I think Alaska’s turning blue’: Republicans fret Sullivan’s path to reelection",
-     "url": "https://www.politico.com/news/2026/10/14/alaska-sullivan-trump-maga-01118073"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "House control all but gone, top Republicans privately concede",
-   "summary": "Republican groups are trying to limit their losses. But few in the party believe they have a good shot at keeping control of Congress.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Politico",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "House control all but gone, top Republicans privately concede",
-     "url": "https://www.politico.com/news/2026/10/14/house-republicans-private-lost-cause-01117673"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Republicans have a huge fundraising advantage. Will it matter?",
-   "summary": "Polls and pundits alike are widely — if sometimes cautiously — predicting a blue wave in the midterm elections on November 3. But there’s an important caveat to predictions of a Democratic triumph: Republicans have far more cash at their disposal. President Donald Trump’s super P",
-   "category": "Politics",
-   "leans": [
-    -2
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Vox",
-     "lean": -2,
-     "label": "Left",
-     "title": "Republicans have a huge fundraising advantage. Will it matter?",
-     "url": "https://www.vox.com/america-actually/506329/republicans-fundraising-midterms-advantage"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "AI can help us talk with the dead. Should we?",
-   "summary": "It’s now possible to create AI chatbots of loved ones to interact with after their death. But that raises some difficult questions, like: If you do, how might the experience shape your grief? This is one of the questions driving a global study of digital “deadbots” — AI models tr",
-   "category": "Tech",
-   "leans": [
-    -2
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Vox",
-     "lean": -2,
-     "label": "Left",
-     "title": "AI can help us talk with the dead. Should we?",
-     "url": "https://www.vox.com/podcasts/506698/deadbots-ai-chatbots-ethics-talking-d"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "The case for data centers, explained by a person who wants you to like them",
-   "summary": "Lately, AI data centers are public enemy No. 1. The concerns are legion: how much water and electricity they consume, the noise they generate, the sprawling buildings they bring to communities, and the technology they’re powering that may or may not take all of our jobs and usher",
-   "category": "Economy",
-   "leans": [
-    -2
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Vox",
-     "lean": -2,
-     "label": "Left",
-     "title": "The case for data centers, explained by a person who wants you to like them",
-     "url": "https://www.vox.com/podcasts/506325/data-center-backlash-public-relations-change-minds"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Vermont once dreamed of universal healthcare. This Democrat wants to try again — with a twist.",
-   "summary": "Twelve years ago, Vermont Democrats tried to make their state the first in the nation to have a single-payer government-financed healthcare system — a bold experiment to push the limits of American health coverage when Obamacare was just being launched. Their plan failed, and reb",
-   "category": "Politics",
-   "leans": [
-    -2
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Vox",
-     "lean": -2,
-     "label": "Left",
-     "title": "Vermont once dreamed of universal healthcare. This Democrat wants to try again — with a twist.",
-     "url": "https://www.vox.com/politics/506637/amanda-janoo-single-payer-primary-care-vermont-governor"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "I outsourced my life to AI agents for two weeks. It went…weirdly.",
-   "summary": "If there’s one thing a busy person doesn’t need, it’s more information. More emails, more notifications, more infinite feeds — the steady drip of data spells doom for the overstimulated American. And if you’re a busy parent, like me, sometimes it feels like a flood: school emails",
-   "category": "Tech",
-   "leans": [
-    -2
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Vox",
-     "lean": -2,
-     "label": "Left",
-     "title": "I outsourced my life to AI agents for two weeks. It went…weirdly.",
-     "url": "https://www.vox.com/advice/506547/muse-instinct-chatgpt-dots-ai-personal-agent"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Trump’s plan to deport a member of Congress",
-   "summary": "This story appeared in The Logoff, a daily newsletter that helps you stay informed about the Trump administration without letting political news take over your life. Subscribe here. Welcome to The Logoff: Donald Trump wants to deport a member of Congress. What’s happening? On Mon",
-   "category": "Politics",
-   "leans": [
-    -2
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Vox",
-     "lean": -2,
-     "label": "Left",
-     "title": "Trump’s plan to deport a member of Congress",
-     "url": "https://www.vox.com/the-logoff-newsletter-trump/506572/trump-ilhan-omar-investigation-citizenship-deport"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Cold weather and high prices could flip the Senate",
-   "summary": "This story appeared in Today, Explained, a daily newsletter that helps you understand the most compelling news and stories of the day. Subscribe here. Throughout his second term, President Donald Trump has saddled his party with no shortage of political liabilities — from the mas",
-   "category": "Politics",
-   "leans": [
-    -2
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Vox",
-     "lean": -2,
-     "label": "Left",
-     "title": "Cold weather and high prices could flip the Senate",
-     "url": "https://www.vox.com/today-explained-newsletter/506611/midterms-prices-maine-heating-oil-collins"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Why your health insurance is dropping GLP-1 coverage",
-   "summary": "The promise of GLP-1 drugs has always depended on people being able to afford them. These drugs still cost hundreds of dollars per month if you’re paying cash, at which point access becomes a privilege: The higher-income executive who wants to trim a few pounds might be able to a",
-   "category": "Health",
-   "leans": [
-    -2
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Vox",
-     "lean": -2,
-     "label": "Left",
-     "title": "Why your health insurance is dropping GLP-1 coverage",
-     "url": "https://www.vox.com/good-medicine-newsletter/506555/glp-1-wegovy-zepbound-cost-health-insurance"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "I Promised My Boyfriend I’d Have Sex a Certain Way for a Year. I Can Already Tell It’s Not Going to Work.",
-   "summary": "I cannot turn down another request from a hot guy.",
-   "category": "General",
-   "leans": [
-    -2
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Slate",
-     "lean": -2,
-     "label": "Left",
-     "title": "I Promised My Boyfriend I’d Have Sex a Certain Way for a Year. I Can Already Tell It’s Not Going to Work.",
-     "url": "https://slate.com/advice/2026/10/sex-advice-gay-male-boyfriend-monogamy-open-relationship.html?via=rss"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  }
- ],
- "blindspots": [
-  {
-   "title": "Oregon school shooter attacked special education classroom, police say",
-   "summary": "Police in Bend, Oregon, are still investigating the motive behind the deadly shooting at Silver Rail Elementary School. Four people were killed, including three young children and a teacher. Police identified the shooter as a 16-year-old who previously attended the school. They s",
+   "title": "WATCH:  Authorities: Fatal alligator attack in Winter Garden, Florida",
+   "summary": "Police say the man was fishing along the shoreline at a park when he was attacked and killed by an alligator.",
    "category": "General",
    "leans": [
     -1
@@ -2284,47 +2570,56 @@
    "blindspot": "right",
    "sources": [
     {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "71-year-old man dies after alligator attack while fishing in Florida, police say",
+     "url": "https://www.nbcnews.com/news/us-news/man-dies-alligator-attack-florida-rcna604017"
+    },
+    {
      "name": "ABC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Bend, Oregon, shooting: Suspect ID'd, had attended elementary school, police say",
-     "url": "https://abcnews.com/US/multiple-people-injured-shooting-oregon-elementary-school-suspect/story?id=137303119"
-    },
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Oregon school shooter attacked special education classroom, police say",
-     "url": "https://www.pbs.org/newshour/show/oregon-school-shooter-attacked-special-education-classroom-police-say"
+     "title": "WATCH:  Authorities: Fatal alligator attack in Winter Garden, Florida",
+     "url": "https://abcnews.com/video/137338151/"
     }
    ],
    "factchecks": [],
-   "videos": [
+   "videos": []
+  },
+  {
+   "title": "Netanyahu And Obama Reignite Decade-Old Feud Over Israel’s Right To Its Land",
+   "summary": "Israeli Prime Minister Benjamin Netanyahu struck back at former President Barack Obama on Friday, rejecting Obama’s claim that Jews seized land from its inhabitants when they founded Israel and reopening one of the most bitter rivalries of the Obama years. “The Jewish people are ",
+   "category": "World",
+   "leans": [
+    2
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
     {
-     "videoId": "UxVee8ECIbg",
-     "title": "Oregon Gov. Tina Kotek discusses Bend elementary school shooting",
-     "thumb": "https://i.ytimg.com/vi/UxVee8ECIbg/hqdefault.jpg",
-     "channel": "CBS News",
-     "lean": -1,
-     "label": "Lean Left"
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Netanyahu And Obama Reignite Decade-Old Feud Over Israel’s Right To Its Land",
+     "url": "https://www.dailywire.com/news/netanyahu-and-obama-reignite-decade-old-feud-over-israels-right-to-its-land"
     },
     {
-     "videoId": "ZPzVzIp-SqY",
-     "title": "At least four dead, as well as suspect, after Oregon elementary school shooting",
-     "thumb": "https://i.ytimg.com/vi/ZPzVzIp-SqY/hqdefault.jpg",
-     "channel": "Washington Post",
-     "lean": -1,
-     "label": "Lean Left"
-    },
-    {
-     "videoId": "rmzIc9dq6vA",
-     "title": "Teen shooter who killed 4 at an Oregon school was a former student, police say",
-     "thumb": "https://i.ytimg.com/vi/rmzIc9dq6vA/hqdefault.jpg",
-     "channel": "AP",
-     "lean": 0,
-     "label": "Center"
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Netanyahu to Obama: 'Our Land Is Not Stolen Land'",
+     "url": "https://www.newsmax.com/newsfront/netanyahu-obama-stolen/2026/10/17/id/1273130"
     }
-   ]
+   ],
+   "factchecks": [],
+   "videos": []
   }
  ],
  "factchecks": [
