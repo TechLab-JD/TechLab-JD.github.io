@@ -6,7 +6,7 @@
    window.ReadAloud.toggle(text, buttonEl) | .stop() | .supported() */
 window.ReadAloud = (function () {
   var synth = window.speechSynthesis || null;
-  var speaking = false, curBtn = null, chunks = [], idx = 0, voice = null, keepAlive = null;
+  var speaking = false, curBtn = null, chunks = [], idx = 0, voice = null, keepAlive = null, curLang = "";
   var rate = 1;  /* R4: adjustable reading speed */
   try { var rr = parseFloat(localStorage.getItem("lab404.raRate")); if (rr >= 0.5 && rr <= 2) rate = rr; } catch (e) {}
 
@@ -56,22 +56,34 @@ window.ReadAloud = (function () {
     setBtn(false);
   }
 
+  /* R6: pick a voice matching a requested language (e.g., "es"), falling back to the default. */
+  function voiceFor(lang) {
+    if (!lang || !synth) return voice;
+    var vs = synth.getVoices() || [];
+    var m = vs.filter(function (v) { return new RegExp("^" + lang, "i").test(v.lang); });
+    if (!m.length) return voice;
+    return m.filter(function (v) { return /google|natural|microsoft|mónica|monica|paulina|helena/i.test(v.name); })[0] || m[0];
+  }
+
   function run() {
     if (!synth) return;
     if (idx >= chunks.length) { stop(); return; }
     var u = new SpeechSynthesisUtterance(chunks[idx++]);
     if (!voice) loadVoice();
-    if (voice) u.voice = voice;
+    var v = curLang ? voiceFor(curLang) : voice;
+    if (v) u.voice = v;
+    if (curLang) u.lang = curLang; else if (v && v.lang) u.lang = v.lang;
     u.rate = rate * 0.98; u.pitch = 1; u.volume = 1;
     u.onend = function () { if (speaking) run(); };
     u.onerror = function () { stop(); };
     synth.speak(u);
   }
 
-  function speak(text, btn) {
+  function speak(text, btn, lang) {
     if (!synth) return;
     stop();
     curBtn = btn || curBtn;
+    curLang = lang || "";
     chunks = chunk(text);
     if (!chunks.length) return;
     idx = 0; speaking = true; setBtn(true);
@@ -80,9 +92,9 @@ window.ReadAloud = (function () {
     run();
   }
 
-  function toggle(text, btn) {
+  function toggle(text, btn, lang) {
     if (speaking && curBtn === btn) { stop(); return; }
-    speak(text, btn);
+    speak(text, btn, lang);
   }
 
   window.addEventListener("beforeunload", stop);

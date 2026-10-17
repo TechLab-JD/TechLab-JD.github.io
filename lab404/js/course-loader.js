@@ -9,6 +9,7 @@ window.CourseLoader = (function () {
   var testTimer = null;  // R5: count-up timer for the full practice test
   function fmtTime(ms) { var s = Math.floor(ms / 1000), m = Math.floor(s / 60); return m + ":" + (s % 60 < 10 ? "0" : "") + (s % 60); }
   var learnText = {};  // plain-text per objective for the read-aloud layer
+  var esActive = {};   // R6-1: which objectives are currently showing their full Spanish lesson
 
   /* ── R4-5: in-lesson Spanish key-term toggle ──
      Reuses the bilingual glossary bank. When on, the first time a known key term
@@ -26,6 +27,7 @@ window.CourseLoader = (function () {
   }
   function annotateES(root) {
     if (!root) return;
+    if (root.classList && root.classList.contains("cv-learn-es")) return;  /* R6-1: already full Spanish */
     var map = esMap(); if (!Object.keys(map).length) return;
     var used = {};
     var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
@@ -259,6 +261,8 @@ window.CourseLoader = (function () {
       ".cv-help-btn.on{background:var(--accent2,#4a90e2);color:#fff;border-color:var(--accent2,#4a90e2)}" +
       ".cv-es-term{border-bottom:1px dashed var(--accent2,#4a90e2)}" +
       ".cv-es{color:var(--accent2,#4a90e2);font-style:italic;font-size:.92em}" +
+      ".cv-es-note{font-size:.68rem;font-weight:700;letter-spacing:.04em;color:var(--accent2,#4a90e2);margin-bottom:6px}" +
+      ".cv-cap{font-size:.72rem;color:var(--text-muted,#9aa);text-align:center;margin-top:3px}" +
       ".cv-done{text-align:center;padding:10px}" +
       /* D8: printable worksheet (screen-hidden; shown only when printing) */
       "#ws-print{display:none}" +
@@ -374,7 +378,7 @@ window.CourseLoader = (function () {
   }
 
   function renderDash() {
-    learnText = {};
+    learnText = {}; esActive = {};
     var r = M.readiness(courseId);
     var kid = kidMode();  /* R3 */
     var pill = function (b, n) { return '<span class="cv-pill cv-' + b + '">' + n + '</span>'; };
@@ -440,11 +444,24 @@ window.CourseLoader = (function () {
           (hasLearn ? '<button class="cv-learn-btn" data-learn="' + esc(ob.code) + '">📖 Learn</button>' : "") +
           '<button class="cv-btn ghost sm" data-practice="' + esc(ob.code) + '"' + (nq ? "" : " disabled") + '>Practice</button>' +
           '</div>';
-        var body = hasDeep
-          ? (ob.teach ? paras(ob.teach) : "") + ob.deep.map(deepSection).join("")
-          : (ob.teach ? paras(ob.teach) : "") + (ob.ex ? '<div class="cv-ex"><span class="cv-ex-l">Worked example</span>' + esc(ob.ex) + '</div>' : "");
-        if (hasLearn) learnText[ob.code] = objPlain(ob);
-        var learn = hasLearn ? '<div class="cv-learn hide" id="cv-learn-' + esc(ob.code) + '">' +
+        /* R6-1: full-lesson Spanish when the toggle is on and a translation exists. */
+        var useES = esInlineOn() && ob.esFull && ob.esFull.sections;
+        var body;
+        if (useES) {
+          body = '<div class="cv-es-note">🌐 Traducción al español</div>' +
+            paras(ob.esFull.teach) +
+            ob.esFull.sections.map(function (txt, i) {
+              var d = ob.deep && ob.deep[i];
+              var vis = (d && d.visual) ? ('<div class="cv-fig">' + d.visual + (d.caption ? '<div class="cv-cap">' + esc(d.caption) + '</div>' : "") + '</div>') : "";
+              return vis + paras(txt);
+            }).join("");
+        } else {
+          body = hasDeep
+            ? (ob.teach ? paras(ob.teach) : "") + ob.deep.map(deepSection).join("")
+            : (ob.teach ? paras(ob.teach) : "") + (ob.ex ? '<div class="cv-ex"><span class="cv-ex-l">Worked example</span>' + esc(ob.ex) + '</div>' : "");
+        }
+        if (hasLearn) { learnText[ob.code] = useES ? (ob.esFull.teach + " " + ob.esFull.sections.join(" ")) : objPlain(ob); esActive[ob.code] = !!useES; }
+        var learn = hasLearn ? '<div class="cv-learn hide' + (useES ? ' cv-learn-es' : '') + '" id="cv-learn-' + esc(ob.code) + '">' +
           body +
           '<div class="cv-learn-foot">' +
           '<button class="cv-btn sm" data-practice="' + esc(ob.code) + '"' + (nq ? "" : " disabled") + '>🎯 Practice this objective</button>' +
@@ -533,13 +550,13 @@ window.CourseLoader = (function () {
           var open = panel.classList.toggle("hide"); this.classList.toggle("on", !open);
           if (!open && esInlineOn()) annotateES(panel);   /* R4-5: Spanish key terms, once shown */
           if (open && window.ReadAloud) window.ReadAloud.stop();
-          else if (!open && audioFirst()) window.ReadAloud.speak(learnText[code] || "");  /* D4: read the lesson to non-readers */
+          else if (!open && audioFirst()) window.ReadAloud.speak(learnText[code] || "", null, esActive[code] ? "es-ES" : "");  /* D4: read the lesson to non-readers */
         }
       });
     });
     el.querySelectorAll("[data-readaloud]").forEach(function (b) {
       if (!(window.ReadAloud && window.ReadAloud.supported())) { b.style.display = "none"; return; }
-      b.addEventListener("click", function () { window.ReadAloud.toggle(learnText[this.getAttribute("data-readaloud")] || "", this); });
+      b.addEventListener("click", function () { var cd = this.getAttribute("data-readaloud"); window.ReadAloud.toggle(learnText[cd] || "", this, esActive[cd] ? "es-ES" : ""); });
     });
   }
 
