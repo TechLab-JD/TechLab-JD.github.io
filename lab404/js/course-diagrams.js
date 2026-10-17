@@ -161,13 +161,119 @@
       '<text x="150" y="14" text-anchor="middle" font-size="10" fill="#1e293b">normal distribution</text></svg>';
   }
 
+  function numberline() {
+    var s = '<svg viewBox="0 0 300 90" role="img" aria-label="A number line from negative 3 to positive 3 with zero in the middle; negative numbers are to the left, positive to the right" ' + FF + '>';
+    s += '<line x1="20" y1="45" x2="280" y2="45" stroke="#1e293b" stroke-width="2"/>';
+    for (var i = -3; i <= 3; i++) { var x = 150 + i * 40; s += '<line x1="' + x + '" y1="38" x2="' + x + '" y2="52" stroke="#1e293b"/>'; s += '<text x="' + x + '" y="72" text-anchor="middle" font-size="12" fill="' + (i < 0 ? "#b91c1c" : i > 0 ? "#15803d" : "#1e293b") + '">' + i + '</text>'; }
+    s += '<text x="70" y="22" text-anchor="middle" font-size="10" fill="#b91c1c">negative</text><text x="230" y="22" text-anchor="middle" font-size="10" fill="#15803d">positive</text>';
+    return s + '</svg>';
+  }
+  function quadrants() {
+    return '<svg viewBox="0 0 200 200" role="img" aria-label="The coordinate plane split into four quadrants by the x and y axes, numbered one through four counterclockwise starting at the top right" ' + FF + '>' +
+      '<line x1="20" y1="100" x2="180" y2="100" stroke="#1e293b" stroke-width="1.5"/>' +
+      '<line x1="100" y1="20" x2="100" y2="180" stroke="#1e293b" stroke-width="1.5"/>' +
+      '<text x="140" y="62" text-anchor="middle" font-size="13" fill="#2563eb">I</text>' +
+      '<text x="60" y="62" text-anchor="middle" font-size="13" fill="#2563eb">II</text>' +
+      '<text x="60" y="150" text-anchor="middle" font-size="13" fill="#2563eb">III</text>' +
+      '<text x="140" y="150" text-anchor="middle" font-size="13" fill="#2563eb">IV</text>' +
+      '<text x="150" y="46" text-anchor="middle" font-size="8" fill="#15803d">(+,+)</text>' +
+      '<text x="186" y="96" font-size="10" fill="#64748b">x</text><text x="104" y="26" font-size="10" fill="#64748b">y</text></svg>';
+  }
+  function array() {
+    var s = '<svg viewBox="0 0 220 150" role="img" aria-label="A 3 by 4 array of dots: 3 rows of 4 is 12, showing multiplication as equal groups" ' + FF + '>';
+    for (var r = 0; r < 3; r++) for (var c = 0; c < 4; c++) s += '<circle cx="' + (55 + c * 37) + '" cy="' + (30 + r * 32) + '" r="10" fill="#60a5fa"/>';
+    s += '<text x="110" y="140" text-anchor="middle" font-size="13" fill="#1e40af">3 rows × 4 = 12</text>';
+    return s + '</svg>';
+  }
+  function trianglesum() {
+    return '<svg viewBox="0 0 240 165" role="img" aria-label="A triangle with its three interior angles marked a, b and c, which always add up to 180 degrees" ' + FF + '>' +
+      '<polygon points="30,130 210,130 90,30" fill="#dbeafe" stroke="#1e293b" stroke-width="2"/>' +
+      '<text x="50" y="123" font-size="12" fill="#b91c1c">a</text>' +
+      '<text x="192" y="123" font-size="12" fill="#b91c1c">b</text>' +
+      '<text x="88" y="54" font-size="12" fill="#b91c1c">c</text>' +
+      '<text x="120" y="154" text-anchor="middle" font-size="12" fill="#1e40af">a + b + c = 180°</text></svg>';
+  }
+  function slopefig() {
+    return '<svg viewBox="0 0 220 175" role="img" aria-label="A line on a grid that rises 2 up for every 3 across, so its slope is rise over run" ' + FF + '>' +
+      '<line x1="30" y1="150" x2="200" y2="150" stroke="#cbd5e1"/><line x1="40" y1="20" x2="40" y2="160" stroke="#cbd5e1"/>' +
+      '<line x1="40" y1="140" x2="180" y2="45" stroke="#2563eb" stroke-width="2.5"/>' +
+      '<line x1="80" y1="113" x2="140" y2="113" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="3 3"/>' +
+      '<line x1="140" y1="113" x2="140" y2="72" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3 3"/>' +
+      '<text x="110" y="128" text-anchor="middle" font-size="10" fill="#15803d">run</text>' +
+      '<text x="146" y="98" font-size="10" fill="#b91c1c">rise</text>' +
+      '<text x="120" y="170" text-anchor="middle" font-size="11" fill="#1e40af">slope = rise ÷ run</text></svg>';
+  }
+  function circlearea() {
+    return '<svg viewBox="0 0 200 180" role="img" aria-label="A circle with a radius drawn from the center to the edge; its area is pi times the radius squared" ' + FF + '>' +
+      '<circle cx="100" cy="80" r="60" fill="#dbeafe" stroke="#1e293b" stroke-width="2"/>' +
+      '<line x1="100" y1="80" x2="160" y2="80" stroke="#ef4444" stroke-width="2"/>' +
+      '<circle cx="100" cy="80" r="3" fill="#1e293b"/>' +
+      '<text x="128" y="74" text-anchor="middle" font-size="12" fill="#b91c1c">r</text>' +
+      '<text x="100" y="166" text-anchor="middle" font-size="12" fill="#1e40af">Area = π r²   Circumference = 2π r</text></svg>';
+  }
+  function watercycle() {
+    return '<svg viewBox="0 0 300 170" role="img" aria-label="The water cycle: the sun evaporates water, it condenses into clouds, falls as precipitation, and collects in oceans and lakes, then repeats" ' + FF + '>' +
+      '<circle cx="38" cy="32" r="15" fill="#fde047"/>' +
+      '<ellipse cx="155" cy="40" rx="48" ry="20" fill="#cbd5e1"/><text x="155" y="44" text-anchor="middle" font-size="9" fill="#334155">condensation</text>' +
+      '<rect x="20" y="132" width="260" height="30" fill="#93c5fd"/><text x="80" y="152" text-anchor="middle" font-size="9" fill="#0c4a6e">ocean / lake</text>' +
+      '<text x="70" y="104" text-anchor="middle" font-size="9" fill="#2563eb">evaporation ↑</text>' +
+      '<text x="220" y="104" text-anchor="middle" font-size="9" fill="#1d4ed8">precipitation ↓</text>' +
+      '<path d="M70 130 Q 55 85 112 56" fill="none" stroke="#2563eb" stroke-dasharray="3 3"/>' +
+      '<path d="M198 56 Q 222 95 220 130" fill="none" stroke="#1d4ed8" stroke-dasharray="3 3"/></svg>';
+  }
+  function cell() {
+    return '<svg viewBox="0 0 220 170" role="img" aria-label="A cell: the membrane encloses the cytoplasm with a nucleus in the center" ' + FF + '>' +
+      '<ellipse cx="110" cy="80" rx="90" ry="62" fill="#dcfce7" stroke="#166534" stroke-width="2"/>' +
+      '<circle cx="110" cy="80" r="26" fill="#86efac" stroke="#166534"/><text x="110" y="84" text-anchor="middle" font-size="9" fill="#14532d">nucleus</text>' +
+      '<circle cx="60" cy="52" r="7" fill="#4ade80"/><circle cx="165" cy="104" r="7" fill="#4ade80"/>' +
+      '<text x="110" y="160" text-anchor="middle" font-size="9" fill="#166534">membrane encloses the cytoplasm</text></svg>';
+  }
+  function photosynthesis() {
+    return '<svg viewBox="0 0 300 150" role="img" aria-label="Photosynthesis: a plant uses sunlight, carbon dioxide and water to make sugar and release oxygen" ' + FF + '>' +
+      '<circle cx="36" cy="30" r="14" fill="#fde047"/><text x="36" y="58" text-anchor="middle" font-size="8" fill="#334155">sunlight</text>' +
+      '<text x="120" y="72" text-anchor="middle" font-size="34">🌱</text>' +
+      '<text x="120" y="112" text-anchor="middle" font-size="10" fill="#166534">CO₂ + H₂O → sugar + O₂</text>' +
+      '<text x="240" y="50" font-size="9" fill="#15803d">oxygen out →</text>' +
+      '<text x="240" y="92" font-size="9" fill="#1e293b">sugar = food</text></svg>';
+  }
+
   /* ----- course -> objective -> [svg, caption] ----- */
   var D = {
     "g10-science": { "CH.1": [atom, "Protons (+) and neutrons sit in the nucleus; electrons (-) orbit around it."] },
     "g9-science": { "B.LS2.1": [pyramid, "Only ~10% of energy passes to each higher level, so food chains are short."] },
     "g11-science": { "PH.12": [wave, "A wave's wavelength and amplitude."], "PH.15": [circuit, "Ohm's law: V = I × R."] },
     "g8-science": { "MS-PS1-4": [states, "Particles are packed in a solid, looser in a liquid, far apart in a gas."], "MS-PS4-1": [wave, "Amplitude and wavelength of a wave."] },
-    "g5-science": { "5-PS3-1": [foodchain, "Energy flows from the sun through producers to consumers."] },
+    "g5-science": { "5-PS3-1": [foodchain, "Energy flows from the sun through producers to consumers."], "5-PS1-1": [states, "All matter is made of tiny particles — packed in solids, looser in liquids, far apart in gases."] },
+    "g6-science": {
+      "6.ESS.1": [watercycle, "Water evaporates, condenses into clouds, falls as precipitation, and collects — over and over."],
+      "6.LS.1": [cell, "The cell is life's basic unit: a membrane around cytoplasm with a nucleus."],
+      "6.LS.3": [photosynthesis, "Plants turn sunlight, CO₂ and water into sugar (food) and release oxygen."],
+      "6.LS.4": [foodchain, "Energy flows from the sun through producers to consumers."]
+    },
+    "g7-science": {
+      "MS-LS1-2": [cell, "A cell's parts: the membrane, cytoplasm, and nucleus."],
+      "MS-LS1-6": [photosynthesis, "Photosynthesis stores light energy as sugar and gives off oxygen."],
+      "MS-LS2-4": [foodchain, "Energy passes along a food chain from one organism to the next."]
+    },
+    "g3-math": {
+      "3.OA.1": [array, "Multiplication is equal groups: 3 rows of 4 is 3 × 4 = 12."],
+      "3.MD.7": [rectangle, "Area of a rectangle = length × width."]
+    },
+    "g6-math": {
+      "6.NS.5": [numberline, "Negative numbers sit left of zero, positives to the right."],
+      "6.NS.6": [quadrants, "The x and y axes split the plane into four quadrants."]
+    },
+    "g8-math": {
+      "8.G.5": [trianglesum, "A triangle's three angles always add to 180°."],
+      "8.G.7": [righttri, "Pythagorean theorem: a² + b² = c²."],
+      "8.EE.6": [slopefig, "Slope is rise over run — how steep a line is."]
+    },
+    "g10-math": {
+      "G.CO.4": [trianglesum, "The three interior angles of a triangle sum to 180°."],
+      "G.SRT.2": [righttri, "Pythagorean theorem: a² + b² = c²."],
+      "G.GMD.1": [rectangle, "Area = length × width; perimeter is the distance around."],
+      "G.C.1": [circlearea, "Circle area = π r²; circumference = 2π r."]
+    },
     "g4-math": {
       "4.NF.1": [fractions, "1/2 and 2/4 shade the same amount — equivalent fractions."],
       "4.MD.3": [rectangle, "Area = length × width; perimeter is the distance around."],
