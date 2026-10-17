@@ -25,6 +25,7 @@
   var DISC = [
     [/biolog/i, "🧬"], [/chemist/i, "🧪"], [/physics/i, "⚛️"], [/environmental/i, "🌍"],
     [/statistic/i, "📊"], [/psycholog/i, "🧠"], [/govern|civic/i, "🏛️"], [/\beconom/i, "💵"],
+    [/sat\s*math/i, "📐"], [/act\s*science/i, "🔭"], [/sat\s*(reading|writing)/i, "✍️"],
     [/\bsat\b|\bact\b|prep/i, "📝"], [/precalc|calculus|algebra|geometr|quantitative|trigonom/i, "🔢"],
     [/english|reading|writing|composition|literature/i, "📖"], [/cod|computer/i, "💻"]
   ];
