@@ -18,6 +18,27 @@
     social:  { emoji: "🏛️", name: "Social Studies" },
     coding:  { emoji: "💻", name: "Coding" }
   };
+  var SUBJ_ORDER = ["math", "science", "english", "social", "coding"];
+  /* When a grade has more than one course in a subject (e.g. Grade 12 science =
+     Environmental Science + AP Bio/Chem/Phys), the tiles must not all read "Science".
+     These give each discipline its own picture + name so they're told apart. */
+  var DISC = [
+    [/biolog/i, "🧬"], [/chemist/i, "🧪"], [/physics/i, "⚛️"], [/environmental/i, "🌍"],
+    [/statistic/i, "📊"], [/psycholog/i, "🧠"], [/govern|civic/i, "🏛️"], [/\beconom/i, "💵"],
+    [/\bsat\b|\bact\b|prep/i, "📝"], [/precalc|calculus|algebra|geometr|quantitative|trigonom/i, "🔢"],
+    [/english|reading|writing|composition|literature/i, "📖"], [/cod|computer/i, "💻"]
+  ];
+  function discIcon(title, fallback) {
+    for (var i = 0; i < DISC.length; i++) if (DISC[i][0].test(title)) return DISC[i][1];
+    return fallback;
+  }
+  function shortTitle(t) {
+    return String(t || "").replace(/\s*\([^)]*\)/g, "").replace(/\s*\bPrep\b/i, "")
+      .replace(/^Grade\s+\d+\s+/i, "").replace(/^College\s+/i, "").replace(/\s{2,}/g, " ").trim();
+  }
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
 
   function get() { try { return localStorage.getItem(KEY) || ""; } catch (e) { return ""; } }
   function isOn() { return !!get(); }
@@ -86,12 +107,23 @@
     overlay.setAttribute("role", "region");
     overlay.setAttribute("aria-label", "Kid mode home");
 
-    var list = coursesFor(grade);
+    var list = coursesFor(grade).slice();
+    /* group same-subject tiles next to each other so the grid reads tidily */
+    list.sort(function (a, b) {
+      var ai = SUBJ_ORDER.indexOf(a.subjectKey); if (ai < 0) ai = 99;
+      var bi = SUBJ_ORDER.indexOf(b.subjectKey); if (bi < 0) bi = 99;
+      return ai - bi;
+    });
+    var counts = {};
+    list.forEach(function (co) { counts[co.subjectKey] = (counts[co.subjectKey] || 0) + 1; });
     var tiles = list.length ? list.map(function (co) {
       var sk = SUBJ[co.subjectKey] || { emoji: "⭐", name: co.title };
-      return '<button class="kiosk-tile" data-course="' + co.id + '" data-say="' + (sk.name) + '">' +
-        '<span class="ke" aria-hidden="true">' + sk.emoji + '</span>' +
-        '<span class="kn">' + sk.name + '</span></button>';
+      var dup = counts[co.subjectKey] > 1;               /* several courses share this subject */
+      var name = dup ? shortTitle(co.title) : sk.name;   /* use the course's own name so they differ */
+      var emoji = dup ? discIcon(co.title, sk.emoji) : sk.emoji;
+      return '<button class="kiosk-tile" data-course="' + co.id + '" data-say="' + esc(name) + '">' +
+        '<span class="ke" aria-hidden="true">' + emoji + '</span>' +
+        '<span class="kn">' + esc(name) + '</span></button>';
     }).join("") : '<div class="kiosk-empty">No lessons for this grade yet. Ask a grown-up to pick another grade.</div>';
     /* R5-C: the youngest grades get the picture/audio Coding Play (no MC coding course exists for K-2). */
     if (grade === "K" || grade === "1" || grade === "2") {
