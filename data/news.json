@@ -1,7 +1,14 @@
 {
- "generated": "2026-10-19T12:35:15Z",
- "generated_human": "Oct 19, 2026 · 12:35 UTC",
+ "generated": "2026-10-19T13:00:29Z",
+ "generated_human": "Oct 19, 2026 · 13:00 UTC",
  "sources": [
+  {
+   "name": "NPR",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 10
+  },
   {
    "name": "The Guardian",
    "lean": -1,
@@ -199,16 +206,20 @@
    "count": 12
   }
  ],
- "n_articles": 324,
+ "n_articles": 334,
  "n_videos": 140,
  "trending": [
   {
    "term": "trump",
-   "n": 21
+   "n": 22
   },
   {
    "term": "ukraine",
    "n": 9
+  },
+  {
+   "term": "senate",
+   "n": 8
   },
   {
    "term": "iran",
@@ -219,55 +230,123 @@
    "n": 8
   },
   {
-   "term": "senate",
-   "n": 8
+   "term": "injured",
+   "n": 7
+  },
+  {
+   "term": "protests",
+   "n": 7
+  },
+  {
+   "term": "netanyahu",
+   "n": 7
+  },
+  {
+   "term": "golf",
+   "n": 7
+  },
+  {
+   "term": "course",
+   "n": 7
+  },
+  {
+   "term": "military",
+   "n": 7
+  },
+  {
+   "term": "australian",
+   "n": 6
+  },
+  {
+   "term": "voters",
+   "n": 6
+  },
+  {
+   "term": "israeli",
+   "n": 6
   },
   {
    "term": "killed",
    "n": 6
   },
   {
-   "term": "military",
-   "n": 6
-  },
-  {
-   "term": "france",
-   "n": 6
-  },
-  {
-   "term": "protests",
-   "n": 6
-  },
-  {
-   "term": "injured",
-   "n": 6
-  },
-  {
-   "term": "member",
-   "n": 6
-  },
-  {
-   "term": "next",
-   "n": 6
-  },
-  {
-   "term": "netanyahu",
-   "n": 6
-  },
-  {
-   "term": "congress",
-   "n": 6
-  },
-  {
-   "term": "america",
-   "n": 6
-  },
-  {
-   "term": "have",
+   "term": "data",
    "n": 6
   }
  ],
  "videos": [
+  {
+   "videoId": "CwWKZOsDWL8",
+   "title": "LIVE: French President Macron visits the UAE",
+   "thumb": "https://i.ytimg.com/vi/CwWKZOsDWL8/hqdefault.jpg",
+   "channel": "AP",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "i3kfwSTRzwk",
+   "title": "Military service member dies from fall at college football game",
+   "thumb": "https://i.ytimg.com/vi/i3kfwSTRzwk/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "jQxbQyi8EOg",
+   "title": "This Morning’s Top Headlines – Oct. 19 | Morning News NOW",
+   "thumb": "https://i.ytimg.com/vi/jQxbQyi8EOg/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "UkKmO1b76fk",
+   "title": "Zelenskyy says US gave no warning before Russian missile attack on Kyiv",
+   "thumb": "https://i.ytimg.com/vi/UkKmO1b76fk/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "G1uGk0xJR1c",
+   "title": "Nor’easter gains strength off Atlantic Coast",
+   "thumb": "https://i.ytimg.com/vi/G1uGk0xJR1c/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "7JDwcZ9a4RI",
+   "title": "LIVE: Trump to sign an executive order",
+   "thumb": "https://i.ytimg.com/vi/7JDwcZ9a4RI/hqdefault.jpg",
+   "channel": "AP",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "EIgnEIRvjWI",
+   "title": "Italian police clash with protesters over cost of living",
+   "thumb": "https://i.ytimg.com/vi/EIgnEIRvjWI/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "OOYulN5hH_o",
+   "title": "WATCH LIVE: Trump makes major announcement at White House signing ceremony",
+   "thumb": "https://i.ytimg.com/vi/OOYulN5hH_o/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "kViW8ZsEdwQ",
+   "title": "LIVE: Texas begins voting in US midterm elections",
+   "thumb": "https://i.ytimg.com/vi/kViW8ZsEdwQ/hqdefault.jpg",
+   "channel": "Reuters",
+   "lean": 0,
+   "label": "Center"
+  },
   {
    "videoId": "RhMIPNwQsu4",
    "title": "France arrests thousands for rioting and looting as protests turn violent",
@@ -275,6 +354,14 @@
    "channel": "AP",
    "lean": 0,
    "label": "Center"
+  },
+  {
+   "videoId": "eNbijCXb-wo",
+   "title": "US intelligence-sharing resumes, Zelenskyy says, and Trump waives Russian sanctions",
+   "thumb": "https://i.ytimg.com/vi/eNbijCXb-wo/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
   },
   {
    "videoId": "xlLavfA5eRo",
@@ -315,86 +402,6 @@
    "channel": "BBC News",
    "lean": 0,
    "label": "Center"
-  },
-  {
-   "videoId": "fOYTgBg1nXk",
-   "title": "Ukraine intelligence, Alberta referendum, France unrest | Reuters World News",
-   "thumb": "https://i.ytimg.com/vi/fOYTgBg1nXk/hqdefault.jpg",
-   "channel": "Reuters",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "TAFdzknTDhk",
-   "title": "LIVE: Albanian student protests enter seventh day",
-   "thumb": "https://i.ytimg.com/vi/TAFdzknTDhk/hqdefault.jpg",
-   "channel": "Reuters",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "pEPDrSP1aCc",
-   "title": "'MULTIPLE FRONTS' for Omar search warrant",
-   "thumb": "https://i.ytimg.com/vi/pEPDrSP1aCc/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
-  {
-   "videoId": "Qwak249GPYk",
-   "title": "Ethiopian gains in Tigray risk wider war with Eritrea, analyst warns",
-   "thumb": "https://i.ytimg.com/vi/Qwak249GPYk/hqdefault.jpg",
-   "channel": "AP",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "P00BcYx_xRs",
-   "title": "Qatar to unveil regional defence partnership",
-   "thumb": "https://i.ytimg.com/vi/P00BcYx_xRs/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "tTlY8xjsqgg",
-   "title": "Can Netanyahu survive his last big fight? | DW News",
-   "thumb": "https://i.ytimg.com/vi/tTlY8xjsqgg/hqdefault.jpg",
-   "channel": "DW News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "kIWcF6wemeI",
-   "title": "LIVE: Global Security Forum in Doha, Qatar",
-   "thumb": "https://i.ytimg.com/vi/kIWcF6wemeI/hqdefault.jpg",
-   "channel": "Reuters",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "UVVCj0EmZMU",
-   "title": "Ukraine defies Trump, launches major strikes on Russia",
-   "thumb": "https://i.ytimg.com/vi/UVVCj0EmZMU/hqdefault.jpg",
-   "channel": "CNN",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "x9e0tfSyivM",
-   "title": "Houthi missiles strike military base in Yemen, killing at least 18",
-   "thumb": "https://i.ytimg.com/vi/x9e0tfSyivM/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "99M2UwgDGuY",
-   "title": "Historic French town hall set ablaze during protests",
-   "thumb": "https://i.ytimg.com/vi/99M2UwgDGuY/hqdefault.jpg",
-   "channel": "NBC News",
-   "lean": -1,
-   "label": "Lean Left"
   }
  ],
  "stories": [
@@ -406,14 +413,15 @@
     -2,
     -1,
     0,
+    1,
     2
    ],
    "span": 4,
-   "n_sources": 5,
+   "n_sources": 6,
    "balance": {
-    "l": 2,
-    "c": 2,
-    "r": 1
+    "l": 3,
+    "c": 1,
+    "r": 2
    },
    "blindspot": null,
    "sources": [
@@ -425,18 +433,18 @@
      "url": "https://www.motherjones.com/politics/2026/10/trump-golf-course-east-potomac-park-washington-dc/"
     },
     {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump to close and renovate D.C. golf course, despite legal battle",
+     "url": "https://www.npr.org/2026/10/18/nx-s1-6007384/trump-to-close-and-renovate-d-c-golf-course-despite-legal-battle"
+    },
+    {
      "name": "PBS NewsHour",
      "lean": -1,
      "label": "Lean Left",
      "title": "Trump says he will close historic D.C. golf course for 15 months of renovations",
      "url": "https://www.pbs.org/newshour/politics/trump-says-he-will-close-historic-d-c-golf-course-for-15-months-of-renovations"
-    },
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Bulldozed trees spike DC tensions: Inside Trump’s takeover of East Potomac Park",
-     "url": "https://thehill.com/newsletters/keeping-score/6155056-trump-east-potomac-park-plans/"
     },
     {
      "name": "Newsweek",
@@ -446,11 +454,11 @@
      "url": "https://www.newsweek.com/katie-zacharia-trump-east-potomac-golf-course-plan-12586975"
     },
     {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Trump Reveals East Potomac Park Golf Plans: 6 Major Changes",
-     "url": "https://www.newsweek.com/potomac-park-golf-plans-compared-key-changes-12586991"
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump vows golf course renovation work to start ‘immediately’ despite legal dispute",
+     "url": "https://www.washingtonexaminer.com/news/white-house/4770310/trump-east-potomac-golf-course-renovation-work-start-immediately-legal-dispute/"
     },
     {
      "name": "Newsmax",
@@ -464,8 +472,8 @@
    "videos": []
   },
   {
-   "title": "Trump tests GOP resolve on Russia, Ukraine",
-   "summary": "In today's issue: ▪ Zelensky raises pressure ▪ No Kings protest as early vote starts ▪ Experts see weak measles messaging ▪ Trump endorses Netanyahu Republicans are growing increasingly frustrated over President Trump’s recent moves that have advantaged Russia on the battlefield ",
+   "title": "Wicker calls on Trump, Zelensky to broker deal to stop strikes on Russian energy infrastructure",
+   "summary": "Senate Armed Services Committee Chairman Roger Wicker (R-Miss.) is calling on President Trump and Ukrainian President Volodymyr Zelensky to reach a deal to suspend Kyiv's strikes on Russian petroleum facilities, which Trump has blamed for high domestic gas prices. Trump earlier t",
    "category": "World",
    "leans": [
     -1,
@@ -520,6 +528,20 @@
      "name": "The Hill",
      "lean": 0,
      "label": "Center",
+     "title": "Wicker calls on Trump, Zelensky to broker deal to stop strikes on Russian energy infrastructure",
+     "url": "https://thehill.com/homenews/senate/6157442-wicker-urges-donald-trump-zelensky-deal/"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Live updates: GOP airs frustration over Russia sanctions waiver; Trump heads to Kansas",
+     "url": "https://thehill.com/homenews/administration/6156709-live-updates-trump-russia-sanctions-gop-midterms/"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
      "title": "Trump tests GOP resolve on Russia, Ukraine",
      "url": "https://thehill.com/newsletters/morning-report/6157316-donald-trump-gop-frustration-russia-ukraine/"
     },
@@ -548,11 +570,23 @@
      "name": "Daily Caller",
      "lean": 2,
      "label": "Right",
+     "title": "Zelenskyy Would Halt Strikes On Russian Energy For US Targeting Help, GOP Senator Says",
+     "url": "https://dailycaller.com/2026/10/18/kevin-cramer-margaret-brennan-face-the-nation-volodymyr-zelenskyy-starshield-targeting-russian-energy-strikes-roger-wicker"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
      "title": "Zelenskyy Warns Trump’s Diesel Deal With Russia Is ‘Very Dangerous’",
      "url": "https://dailycaller.com/2026/10/18/volodymyr-zelenskyy-kristen-welker-meet-the-press-russia-sanctions-waiver-diesel-deal-scott-bessent"
     }
    ],
    "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Trump didn't accuse Ukraine of election interference after strikes on Russian 'bot farms,' despite claims",
+     "link": "https://www.snopes.com/fact-check/ukraine-russia-bot-farms-satire/"
+    },
     {
      "org": "FactCheck.org",
      "title": "Trump Officials Mislead About Electrical Grid Reliability",
@@ -567,6 +601,147 @@
      "channel": "DW News",
      "lean": 0,
      "label": "Center"
+    },
+    {
+     "videoId": "eNbijCXb-wo",
+     "title": "US intelligence-sharing resumes, Zelenskyy says, and Trump waives Russian sanctions",
+     "thumb": "https://i.ytimg.com/vi/eNbijCXb-wo/hqdefault.jpg",
+     "channel": "ABC News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "UVVCj0EmZMU",
+     "title": "Trump slams Zelensky after Ukraine's major attack on Russia",
+     "thumb": "https://i.ytimg.com/vi/UVVCj0EmZMU/hqdefault.jpg",
+     "channel": "CNN",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Australian lawmaker struck by SUV in what prime minister called a ‘deliberate act’",
+   "summary": "An Australian lawmaker was struck by an SUV on Monday and hospitalized after what Prime Minister Anthony Albanese called a “deliberate act.” Helen Haines, a 65-year-old independent federal legislator, was hit by a Toyota Land Cruiser outside of her office in Wangaratta, Victoria,",
+   "category": "Economy",
+   "leans": [
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 5,
+   "balance": {
+    "l": 2,
+    "c": 1,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Australian prime minister says lawmaker critically injured by car is 'no accident'",
+     "url": "https://www.npr.org/2026/10/19/g-s1-148737/australia-lawmaker-critically-injured"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Australian lawmaker critically injured by car is 'no accident,' prime minister says",
+     "url": "https://www.pbs.org/newshour/world/australian-lawmaker-critically-injured-by-car-is-no-accident-prime-minister-says"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Australian MP Helen Haines critically injured in ‘deliberate’ car ramming",
+     "url": "https://www.aljazeera.com/news/2026/10/19/australian-mp-helen-haines-critically-injured-in-deliberate-car-ramming?traffic_source=rss"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Australian lawmaker struck by SUV in what prime minister called a ‘deliberate act’",
+     "url": "https://www.washingtonexaminer.com/news/world/4770307/australian-lawmaker-struck-suv-prime-minister-deliberate-act/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Australian PM: Lawmaker Critically Injured by Car Is 'No Accident'",
+     "url": "https://www.newsmax.com/newsfront/australia-lawmaker-car/2026/10/19/id/1273221"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Trump tells Axios why he endorsed Netanyahu's reelection",
+   "summary": "President Trump endorsed Israeli Prime Minister Benjamin Netanyahu on Sunday, just nine days before Israel's Oct. 27 elections. Why it matters: Trump's decision to weigh in nine days ahead of the election could give Netanyahu a boost at a critical moment in the Israeli leader's f",
+   "category": "World",
+   "leans": [
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 5,
+   "balance": {
+    "l": 2,
+    "c": 1,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump endorses embattled Israeli Prime Minister Benjamin Netanyahu for reelection",
+     "url": "https://www.npr.org/2026/10/19/g-s1-148731/trump-endorses-netanyahu"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump Endorses Netanyahu Days Before Israeli Election as Iran War Tests Friendship",
+     "url": "https://time.com/article/2026/10/19/trump-netanyahu-israel-election-endorsement/"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump tells Axios why he endorsed Netanyahu's reelection",
+     "url": "https://www.axios.com/2026/10/18/trump-endorses-netanyahu-israel-election-iran"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Netanyahu gets Trump endorsement in reelection bid just nine days ahead of Israeli election",
+     "url": "https://www.washingtontimes.com/news/2026/oct/18/trump-endorses-netanyahu-reelection-bid-nine-days-ahead-israeli/"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Makes Endorsement Ahead Of Israeli Elections",
+     "url": "https://www.dailywire.com/news/trump-makes-endorsement-ahead-of-israeli-elections"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "D7Xu6-Gdnls",
+     "title": "President Trump throws his support behind Benjamin Netanyahu days before Israeli election",
+     "thumb": "https://i.ytimg.com/vi/D7Xu6-Gdnls/hqdefault.jpg",
+     "channel": "CNN",
+     "lean": -1,
+     "label": "Lean Left"
     }
    ]
   },
@@ -688,160 +863,6 @@
    ]
   },
   {
-   "title": "Australian lawmaker struck by SUV in what prime minister called a ‘deliberate act’",
-   "summary": "An Australian lawmaker was struck by an SUV on Monday and hospitalized after what Prime Minister Anthony Albanese called a “deliberate act.” Helen Haines, a 65-year-old independent federal legislator, was hit by a Toyota Land Cruiser outside of her office in Wangaratta, Victoria,",
-   "category": "Economy",
-   "leans": [
-    -1,
-    0,
-    1,
-    2
-   ],
-   "span": 3,
-   "n_sources": 4,
-   "balance": {
-    "l": 1,
-    "c": 1,
-    "r": 2
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Australian lawmaker critically injured by car is 'no accident,' prime minister says",
-     "url": "https://www.pbs.org/newshour/world/australian-lawmaker-critically-injured-by-car-is-no-accident-prime-minister-says"
-    },
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "Australian MP Helen Haines critically injured in ‘deliberate’ car ramming",
-     "url": "https://www.aljazeera.com/news/2026/10/19/australian-mp-helen-haines-critically-injured-in-deliberate-car-ramming?traffic_source=rss"
-    },
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Australian lawmaker struck by SUV in what prime minister called a ‘deliberate act’",
-     "url": "https://www.washingtonexaminer.com/news/world/4770307/australian-lawmaker-struck-suv-prime-minister-deliberate-act/"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Australian PM: Lawmaker Critically Injured by Car Is 'No Accident'",
-     "url": "https://www.newsmax.com/newsfront/australia-lawmaker-car/2026/10/19/id/1273221"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Trump tells Axios why he endorsed Netanyahu's reelection",
-   "summary": "President Trump endorsed Israeli Prime Minister Benjamin Netanyahu on Sunday, just nine days before Israel's Oct. 27 elections. Why it matters: Trump's decision to weigh in nine days ahead of the election could give Netanyahu a boost at a critical moment in the Israeli leader's f",
-   "category": "World",
-   "leans": [
-    -1,
-    0,
-    1,
-    2
-   ],
-   "span": 3,
-   "n_sources": 4,
-   "balance": {
-    "l": 1,
-    "c": 1,
-    "r": 2
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Time",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Trump Endorses Netanyahu Days Before Israeli Election as Iran War Tests Friendship",
-     "url": "https://time.com/article/2026/10/19/trump-netanyahu-israel-election-endorsement/"
-    },
-    {
-     "name": "Axios",
-     "lean": 0,
-     "label": "Center",
-     "title": "Trump tells Axios why he endorsed Netanyahu's reelection",
-     "url": "https://www.axios.com/2026/10/18/trump-endorses-netanyahu-israel-election-iran"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Netanyahu gets Trump endorsement in reelection bid just nine days ahead of Israeli election",
-     "url": "https://www.washingtontimes.com/news/2026/oct/18/trump-endorses-netanyahu-reelection-bid-nine-days-ahead-israeli/"
-    },
-    {
-     "name": "The Daily Wire",
-     "lean": 2,
-     "label": "Right",
-     "title": "Trump Makes Endorsement Ahead Of Israeli Elections",
-     "url": "https://www.dailywire.com/news/trump-makes-endorsement-ahead-of-israeli-elections"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "D7Xu6-Gdnls",
-     "title": "President Trump throws his support behind Benjamin Netanyahu days before Israeli election",
-     "thumb": "https://i.ytimg.com/vi/D7Xu6-Gdnls/hqdefault.jpg",
-     "channel": "CNN",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
-  },
-  {
-   "title": "Troy Jackson doesn't regret telling opponent Susan Collins to 'shut up'",
-   "summary": "Democrat Troy Jackson said on Sunday he does not regret telling his opponent Sen. Susan Collins (R-Maine) to “shut up” during a candidate debate that was interrupted by an anti-data center protester. During an interview on CNN’s “State of the Union,\" host Dana Bash asked Jackson ",
-   "category": "Politics",
-   "leans": [
-    -1,
-    0,
-    2
-   ],
-   "span": 3,
-   "n_sources": 3,
-   "balance": {
-    "l": 1,
-    "c": 1,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Jackson doesn't regret telling Collins to 'shut up' after protester interrupted Maine Senate debate",
-     "url": "https://www.pbs.org/newshour/politics/jackson-doesnt-regret-telling-collins-to-shut-up-after-protester-interrupted-maine-senate-debate"
-    },
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Troy Jackson doesn't regret telling opponent Susan Collins to 'shut up'",
-     "url": "https://thehill.com/homenews/campaign/6157216-troy-jackson-doesnt-regret-telling-susan-collins-shut-up/"
-    },
-    {
-     "name": "The Daily Wire",
-     "lean": 2,
-     "label": "Right",
-     "title": "Troy Jackson Doubles Down, Doesn’t Regret Telling Susan Collins To ‘Shut Up’",
-     "url": "https://www.dailywire.com/news/troy-jackson-doubles-down-doesnt-regret-telling-susan-collins-to-shut-up"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Falling crucifix kills priest during livestreamed Mass in Ecuador",
    "summary": "\"Father, Father! Call an ambulance!\" people at the church could be heard shouting just before a livestreamed broadcast cuts out.",
    "category": "General",
@@ -886,9 +907,9 @@
    ]
   },
   {
-   "title": "Air Force Airman Dies After Falling During Pregame Rappelling Demo",
-   "summary": "An Air Force airman died after falling from the rafters of the Alamodome in San Antonio, Texas, during a pregame demonstration before Saturday’s college football game between the University of Texas at San Antonio and Navy. Nellis Air Force Base Public Affairs confirmed Sunday th",
-   "category": "General",
+   "title": "Troy Jackson Doubles Down, Doesn’t Regret Telling Susan Collins To ‘Shut Up’",
+   "summary": "Maine Democratic Senate candidate Troy Jackson doubled down on Sunday, saying that he did not regret telling incumbent Senator Susan Collins (R-ME) to “shut up” during their most recent debate. Speaking to CNN anchor Dana Bash on Sunday’s broadcast of “State of the Union,” Jackso",
+   "category": "World",
    "leans": [
     -1,
     2
@@ -903,18 +924,60 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "CBS News",
+     "name": "PBS NewsHour",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Air Force member dies in rappelling incident at UT San Antonio football game",
-     "url": "https://www.cbsnews.com/news/us-air-force-member-dies-injury-ut-san-antonio-football-stadium/"
+     "title": "Jackson doesn't regret telling Collins to 'shut up' after protester interrupted Maine Senate debate",
+     "url": "https://www.pbs.org/newshour/politics/jackson-doesnt-regret-telling-collins-to-shut-up-after-protester-interrupted-maine-senate-debate"
     },
     {
      "name": "The Daily Wire",
      "lean": 2,
      "label": "Right",
-     "title": "Air Force Airman Dies After Falling During Pregame Rappelling Demo",
-     "url": "https://www.dailywire.com/news/air-force-airman-dies-after-falling-during-pregame-rappelling-demo"
+     "title": "Troy Jackson Doubles Down, Doesn’t Regret Telling Susan Collins To ‘Shut Up’",
+     "url": "https://www.dailywire.com/news/troy-jackson-doubles-down-doesnt-regret-telling-susan-collins-to-shut-up"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Macron condemns those who 'sought to bring down the Republic' after rioting mars nationwide protests",
+   "summary": "French President Emmanuel Macron on Sunday voiced the public's \"anger\" and \"shame\" over rioting and looting during nationwide protests against rising living costs and poor conditions in schools. At least 2,400 people were arrested.",
+   "category": "General",
+   "leans": [
+    -1,
+    1
+   ],
+   "span": 2,
+   "n_sources": 3,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "2026 midterms could be the most expensive on record. And, Macron condemns protests",
+     "url": "https://www.npr.org/2026/10/19/g-s1-148733/up-first-newsletter-ukraine-russia-campaign-finances-france-protests"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Macron condemns those who 'sought to bring down the Republic' after rioting mars nationwide protests",
+     "url": "https://www.pbs.org/newshour/world/frances-macron-vows-to-hold-accountable-those-who-sought-to-bring-down-the-republic"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Macron condemns those who 'sought to bring down the Republic' after rioting mars nationwide protests",
+     "url": "https://www.washingtontimes.com/news/2026/oct/18/macron-condemns-who-sought-bring-republic-rioting-mars-nationwide/"
     }
    ],
    "factchecks": [],
@@ -991,39 +1054,48 @@
    "videos": []
   },
   {
-   "title": "Macron condemns those who 'sought to bring down the Republic' after rioting mars nationwide protests",
-   "summary": "French President Emmanuel Macron on Sunday voiced the public's \"anger\" and \"shame\" over rioting and looting during nationwide protests against rising living costs and poor conditions in schools. At least 2,400 people were arrested.",
-   "category": "General",
+   "title": "18 Killed in Yemen Military Camp Attack, Sources Say",
+   "summary": "At least 18 people were killed in an attack on Monday by the Iran-aligned Houthi movement on a Yemeni government military training camp in Yemen's Shabwa province, four government and medical ​sources told Reuters. The government sources said the attack, which targeted...",
+   "category": "World",
    "leans": [
-    -1,
-    1
+    0,
+    2
    ],
    "span": 2,
    "n_sources": 2,
    "balance": {
-    "l": 1,
-    "c": 0,
+    "l": 0,
+    "c": 1,
     "r": 1
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Macron condemns those who 'sought to bring down the Republic' after rioting mars nationwide protests",
-     "url": "https://www.pbs.org/newshour/world/frances-macron-vows-to-hold-accountable-those-who-sought-to-bring-down-the-republic"
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "At least 18 killed in Houthi attack on military camp in Yemen’s Shabwa",
+     "url": "https://www.aljazeera.com/news/2026/10/19/at-least-18-killed-in-houthi-attack-on-military-camp-in-yemens-shabwa?traffic_source=rss"
     },
     {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Macron condemns those who 'sought to bring down the Republic' after rioting mars nationwide protests",
-     "url": "https://www.washingtontimes.com/news/2026/oct/18/macron-condemns-who-sought-bring-republic-rioting-mars-nationwide/"
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "18 Killed in Yemen Military Camp Attack, Sources Say",
+     "url": "https://www.newsmax.com/newsfront/houthis-yemen-shabwa/2026/10/19/id/1273225"
     }
    ],
    "factchecks": [],
-   "videos": []
+   "videos": [
+    {
+     "videoId": "x9e0tfSyivM",
+     "title": "Houthi missiles strike military base in Yemen, killing at least 18",
+     "thumb": "https://i.ytimg.com/vi/x9e0tfSyivM/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
   },
   {
    "title": "Israeli Police Arrest 10 Following Weekend Attacks by Settlers on Journalist and Diplomats",
@@ -1167,8 +1239,8 @@
    "span": 1,
    "n_sources": 4,
    "balance": {
-    "l": 2,
-    "c": 2,
+    "l": 3,
+    "c": 1,
     "r": 0
    },
    "blindspot": null,
@@ -1179,6 +1251,13 @@
      "label": "Lean Left",
      "title": "Four people killed in ‘violent, fast-moving’ fire at Canadian military base",
      "url": "https://www.theguardian.com/world/2026/oct/18/serious-incident-alberta-military-base-deaths-injuries-canada-carney-cfb-wainwright"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "4 dead, dozens injured after fire at Canadian military base, officials say",
+     "url": "https://www.cbsnews.com/news/deadly-incident-fire-alberta-canada-military-base-cfb-wainwright/"
     },
     {
      "name": "The Atlantic",
@@ -1193,21 +1272,14 @@
      "label": "Center",
      "title": "Deadly fire at Canada military base moved a kilometre 'in 30 to 60 seconds'",
      "url": "https://www.bbc.co.uk/news/articles/ckj0ly6qnp1lo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "How a grass fire at a Canadian military base killed four soldiers",
-     "url": "https://www.aljazeera.com/news/2026/10/19/how-a-grass-fire-at-a-canadian-military-base-killed-four-soldiers?traffic_source=rss"
     }
    ],
    "factchecks": [],
    "videos": [
     {
-     "videoId": "cDOkx7b5qvo",
-     "title": "4 Canadian Soldiers Dead After Grass Fire Erupts. What You Need To Know - October 19",
-     "thumb": "https://i.ytimg.com/vi/cDOkx7b5qvo/hqdefault.jpg",
+     "videoId": "kiTHe2DFLwM",
+     "title": "4 dead, 39 injured in explosion at Canadian military training base",
+     "thumb": "https://i.ytimg.com/vi/kiTHe2DFLwM/hqdefault.jpg",
      "channel": "ABC News",
      "lean": -1,
      "label": "Lean Left"
@@ -1307,40 +1379,6 @@
    "videos": []
   },
   {
-   "title": "Presley Gerber’s Family Breaks Silence: ‘Beyond Heartbroken’",
-   "summary": "Nearly a month after the sudden death of Presley Gerber, mother Cindy Crawford, father Rande Gerber and sister Kaia Gerber are breaking their silence and sharing heartfelt remembrances. “We are so proud how he showed up in the world, with kindness and vulnerability,” his parents ",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 2,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": "right",
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Presley Gerber’s Family Breaks Silence: ‘Beyond Heartbroken’",
-     "url": "https://www.today.com/video/cindy-crawford-kaia-gerber-speak-on-presley-gerber-s-death-271807557971"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Cindy Crawford and family break silence on Presley Gerber's death",
-     "url": "https://www.cbsnews.com/news/presley-gerber-death-cindy-crawford-rande-kaia-break-silence/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Rubio heads to Central Asia as some wonder if he's keeping the most pressing matters at a distance",
    "summary": "This tour is intended to promote U.S. economic and security ties with Central and South Asia. But it has only tangential links to the Trump administration's current main foreign policy dilemmas in the Middle East and with the Russia-Ukraine war.",
    "category": "World",
@@ -1409,6 +1447,78 @@
    "videos": []
   },
   {
+   "title": "Google says it can build data centers the right way. Some experts and residents are skeptical",
+   "summary": "Google says its Minnesota AI data center will add clean energy to the grid and protect ratepayers. Experts question whether grid upgrades are needed.",
+   "category": "Economy",
+   "leans": [
+    0
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 2,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Google says it can build data centers the right way. Some experts and residents are skeptical",
+     "url": "https://www.cnbc.com/2026/10/19/how-data-centers-are-reshaping-americas-aging-grid-pine-island-minnesota-google.html"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Data Centers Should Build Skills, Not Just Capacity | Opinion",
+     "url": "https://www.newsweek.com/data-centers-must-build-lasting-local-workforce-12587592"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Michigan's Democratic Senate candidate Abdul El-Sayed campaigns in GOP stronghold",
+   "summary": "Michigan's Democratic U.S. Senate candidate Abdul El-Sayed is campaigning in the GOP stronghold of Michigan's Upper Peninsula, an area that hasn't voted for a Democrat in Congress in over a decade.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Michigan's Democratic Senate candidate Abdul El-Sayed campaigns in GOP stronghold",
+     "url": "https://www.npr.org/2026/10/19/nx-s1-6005195/michigans-democratic-senate-candidate-abdul-el-sayed-campaigns-in-gop-stronghold"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "Talarico’s Campaign-Trail Absence Sparks False Rumor",
+     "link": "https://www.factcheck.org/2026/10/talaricos-campaign-trail-absence-sparks-false-rumor/"
+    },
+    {
+     "org": "FactCheck.org",
+     "title": "Republican Ads Attack El-Sayed for Past Comments, Positions on Policing and Prisons",
+     "link": "https://www.factcheck.org/2026/10/republican-ads-attack-el-sayed-for-past-comments-positions-on-policing-and-prisons/"
+    }
+   ],
+   "videos": []
+  },
+  {
    "title": "Before, during, after: Outside groups race to counter any election interference by Trump",
    "summary": "Outside good-government groups are scrambling this month to secure the midterm results, bracing for the possibility that the Trump administration will interfere in the process to keep Republicans in power. The campaign, which features a who’s who of pro-democracy advocates, comes",
    "category": "Politics",
@@ -1437,6 +1547,39 @@
      "org": "Snopes",
      "title": "Trump didn't accuse Ukraine of election interference after strikes on Russian 'bot farms,' despite claims",
      "link": "https://www.snopes.com/fact-check/ukraine-russia-bot-farms-satire/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "French police arrest 1,800 after violent clashes and looting mar protests",
+   "summary": "Demonstrators denounced rising living costs and poor school conditions. Authorities said masked groups set fires and attacked public buildings in several cities.",
+   "category": "General",
+   "leans": [
+    0
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Christian Science Monitor",
+     "lean": 0,
+     "label": "Center",
+     "title": "French police arrest 1,800 after violent clashes and looting mar protests",
+     "url": "https://www.csmonitor.com/World/2026/1018/france-protests-arrests?icid=rss"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Full Fact",
+     "title": "Old video shared as French student protests",
+     "link": "https://fullfact.org/world/2023-video-shared-as-recent-french-student-protests/"
     }
    ],
    "videos": []
@@ -1505,6 +1648,141 @@
      "link": "https://www.snopes.com/fact-check/ilhan-omar-flee-morocco/"
     }
    ],
+   "videos": []
+  },
+  {
+   "title": "The real reason it's going to take a while to know who won in some midterm races",
+   "summary": "Hint: It's not only because California counts slowly.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "The real reason it's going to take a while to know who won in some midterm races",
+     "url": "https://www.npr.org/2026/10/19/nx-s1-5982027/california-vote-counting-margins"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "A Kelvin wave raised sea levels on the West Coast. More are coming",
+   "summary": "A large underwater wave moved up the West Coast, raising sea levels. Scientists say it's driven by El Niño and it's going to happen again.",
+   "category": "Science",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "A Kelvin wave raised sea levels on the West Coast. More are coming",
+     "url": "https://www.npr.org/2026/10/19/nx-s1-6001744/el-nino-kelvin-wave-west-coast"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Morning news brief",
+   "summary": "Ukraine and Russia exchange strikes as relations between U.S. and Ukraine deteriorate, the midterms are on track to be the most expensive on record, French president denounces violent protests.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Morning news brief",
+     "url": "https://www.npr.org/2026/10/19/nx-s1-6003499/morning-news-brief"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Solar power is changing agriculture in Pakistan, but some fear it could cause issues",
+   "summary": "Solar power is transforming agriculture in Pakistan. But in a country already facing water scarcity and extreme weather, some fear their widespread use could cause problems.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Solar power is changing agriculture in Pakistan, but some fear it could cause issues",
+     "url": "https://www.npr.org/2026/10/19/nx-s1-5993523/solar-power-is-changing-agriculture-in-pakistan-but-some-fear-it-could-cause-issues"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Alberta voters weigh future in Canada",
+   "summary": "On Monday voters in the oil-rich Canadian province of Alberta are deciding whether to take the first step toward a future referendum on independence.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Alberta voters weigh future in Canada",
+     "url": "https://www.npr.org/2026/10/18/nx-s1-6004877/alberta-referendum-canada-vote"
+    }
+   ],
+   "factchecks": [],
    "videos": []
   },
   {
@@ -1967,6 +2245,33 @@
    "videos": []
   },
   {
+   "title": "Presley Gerber’s Family Breaks Silence: ‘Beyond Heartbroken’",
+   "summary": "Nearly a month after the sudden death of Presley Gerber, mother Cindy Crawford, father Rande Gerber and sister Kaia Gerber are breaking their silence and sharing heartfelt remembrances. “We are so proud how he showed up in the world, with kindness and vulnerability,” his parents ",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Presley Gerber’s Family Breaks Silence: ‘Beyond Heartbroken’",
+     "url": "https://www.today.com/video/cindy-crawford-kaia-gerber-speak-on-presley-gerber-s-death-271807557971"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "‘The house was toast’: Surf swallows California homes",
    "summary": "The worst of El Niño is still months away, but Southern California’s fragile coastline is already being transformed by record-setting king tides and storm surges.",
    "category": "Politics",
@@ -1988,231 +2293,6 @@
      "label": "Lean Left",
      "title": "‘The house was toast’: Surf swallows California homes",
      "url": "https://www.nbcnews.com/news/us-news/beachfront-homes-destroyed-california-coastal-erosion-el-nino-bring-hi-rcna603211"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Miley Cyrus Honors Late Godmother Dolly Parton With Emotional Performance",
-   "summary": "Miley Cyrus performed a passionate rendition of her “Aunt Dolly’s” classic “Jolene” during her performance at the Hollywood Bowl in Los Angeles.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Miley Cyrus Honors Late Godmother Dolly Parton With Emotional Performance",
-     "url": "https://www.today.com/video/miley-cyrus-honors-late-godmother-dolly-parton-with-emotional-performance-271755845517"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "France moves to impose curfews as it reels from worst violence in years",
-   "summary": "Only shattered glass and the skeletal frame of the Haussmannian roof remain of Limoges’s 19th-century town hall.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "France moves to impose curfews as it reels from worst violence in years",
-     "url": "https://www.nbcnews.com/world/europe/france-violence-riots-looting-paris-limoges-curfews-macron-protests-rcna604292"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Russian envoy says visit to Iran aimed at averting return to war",
-   "summary": "Russia's top diplomat is visiting Tehran for the first time since the U.S. launched its war with Iran, aiming, he says, to avert a return to major hostilities.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Russian envoy says visit to Iran aimed at averting return to war",
-     "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-talks-russia-strait-of-hormuz/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Extended Interview: Sacha Baron Cohen",
-   "summary": "In an extended interview, Sacha Baron Cohen tells 60 Minutes about early influences, creating his iconic characters and why he brought back Ali G.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Extended Interview: Sacha Baron Cohen",
-     "url": "https://www.cbsnews.com/video/extended-interview-sacha-baron-cohen/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Boy among 2 killed after truck drives onto Wichita soccer field",
-   "summary": "A 6-year-old boy and a 35-year-old man were killed during a soccer game at Stryker Soccer Complex in Wichita, Kansas, according to police.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Boy among 2 killed after truck drives onto Wichita soccer field",
-     "url": "https://www.cbsnews.com/news/driver-soccer-field-wichita-kansas/"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "k8Hpd4L7XkI",
-     "title": "Two killed after truck drives through Wichita soccer game",
-     "thumb": "https://i.ytimg.com/vi/k8Hpd4L7XkI/hqdefault.jpg",
-     "channel": "NBC News",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
-  },
-  {
-   "title": "Cartel members linked to murders of 10 workers from Canadian company",
-   "summary": "The bodies of the 10 men, two of whom were engineers and one a geologist, were later found buried in clandestine graves.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Cartel members linked to murders of 10 workers from Canadian company",
-     "url": "https://www.cbsnews.com/news/mexico-arrests-suspects-murders-workers-canada-mining-company/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Trump spurs states to dump laws regulating new hospitals",
-   "summary": "The Trump administration has tied billions in rural health funding for states partly to the policy commitments they make, including ending their certificate of need, or CON, laws governing the construction of new hospitals.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Trump spurs states to dump laws regulating new hospitals",
-     "url": "https://www.cbsnews.com/news/trump-rural-health-funding-hospital-laws/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Could Dems, GOP get full control of government in these states?",
-   "summary": "The balance of power in state governments is on the ballot in many states in the midterm elections.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Could Dems, GOP get full control of government in these states?",
-     "url": "https://abcnews.com/Politics/democrats-republicans-seek-trifectas-2026-midterms/story?id=137293503"
     }
    ],
    "factchecks": [],
@@ -2302,40 +2382,6 @@
      "link": "https://www.snopes.com/articles/474209/elections-ballots-fires/"
     }
    ],
-   "videos": []
-  },
-  {
-   "title": "Presley Gerber’s Family Breaks Silence: ‘Beyond Heartbroken’",
-   "summary": "Nearly a month after the sudden death of Presley Gerber, mother Cindy Crawford, father Rande Gerber and sister Kaia Gerber are breaking their silence and sharing heartfelt remembrances. “We are so proud how he showed up in the world, with kindness and vulnerability,” his parents ",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 2,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": "right",
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Presley Gerber’s Family Breaks Silence: ‘Beyond Heartbroken’",
-     "url": "https://www.today.com/video/cindy-crawford-kaia-gerber-speak-on-presley-gerber-s-death-271807557971"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Cindy Crawford and family break silence on Presley Gerber's death",
-     "url": "https://www.cbsnews.com/news/presley-gerber-death-cindy-crawford-rande-kaia-break-silence/"
-    }
-   ],
-   "factchecks": [],
    "videos": []
   },
   {
@@ -2508,15 +2554,15 @@
   },
   {
    "org": "Full Fact",
-   "title": "Video of woman being dragged by uniformed men does not show forced conscription in Ukraine",
-   "link": "https://fullfact.org/conflict/video-does-not-show-forced-conscription-ukraine/",
-   "summary": "The footage dates back to a recent protest in Kyiv over the felling of trees for a new heating pipeline."
+   "title": "Old video shared as French student protests",
+   "link": "https://fullfact.org/world/2023-video-shared-as-recent-french-student-protests/",
+   "summary": "A clip showing police with shields and batons has been online since at least March 2023, and does not show the recent student protests in France."
   },
   {
    "org": "Full Fact",
-   "title": "Fake image of wildlife park tiger attack circulates online",
-   "link": "https://fullfact.org/culture-and-society/fake-image-of-tiger-attack-shared/",
-   "summary": "An image widely shared on social media after a man was killed by a tiger is not genuine and was created using AI."
+   "title": "Video of woman being dragged by uniformed men does not show forced conscription in Ukraine",
+   "link": "https://fullfact.org/conflict/video-does-not-show-forced-conscription-ukraine/",
+   "summary": "The footage dates back to a recent protest in Kyiv over the felling of trees for a new heating pipeline."
   }
  ]
 }
