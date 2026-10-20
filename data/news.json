@@ -1,7 +1,14 @@
 {
- "generated": "2026-10-20T12:45:09Z",
- "generated_human": "Oct 20, 2026 · 12:45 UTC",
+ "generated": "2026-10-20T12:49:38Z",
+ "generated_human": "Oct 20, 2026 · 12:49 UTC",
  "sources": [
+  {
+   "name": "NPR",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 10
+  },
   {
    "name": "The Guardian",
    "lean": -1,
@@ -199,16 +206,24 @@
    "count": 12
   }
  ],
- "n_articles": 323,
+ "n_articles": 333,
  "n_videos": 140,
  "trending": [
   {
    "term": "trump",
-   "n": 22
+   "n": 23
   },
   {
    "term": "ukraine",
    "n": 9
+  },
+  {
+   "term": "america",
+   "n": 9
+  },
+  {
+   "term": "voters",
+   "n": 8
   },
   {
    "term": "attack",
@@ -231,16 +246,8 @@
    "n": 8
   },
   {
-   "term": "america",
-   "n": 8
-  },
-  {
    "term": "france",
    "n": 8
-  },
-  {
-   "term": "voters",
-   "n": 7
   },
   {
    "term": "texas",
@@ -255,19 +262,35 @@
    "n": 7
   },
   {
-   "term": "zelenskyy",
+   "term": "democrats",
    "n": 6
   },
   {
-   "term": "netanyahu",
+   "term": "federal",
    "n": 6
   },
   {
-   "term": "money",
+   "term": "world",
    "n": 6
   }
  ],
  "videos": [
+  {
+   "videoId": "ALXFCRhc9zc",
+   "title": "Market Talk: US gas prices 'still elevated' despite Trump moves",
+   "thumb": "https://i.ytimg.com/vi/ALXFCRhc9zc/hqdefault.jpg",
+   "channel": "Reuters",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "fSNb2bhZZzQ",
+   "title": "ICE arrest of US citizen",
+   "thumb": "https://i.ytimg.com/vi/fSNb2bhZZzQ/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
   {
    "videoId": "beD7860iYt8",
    "title": "Man arrested for alleged threats to kill Trump",
@@ -291,14 +314,6 @@
    "channel": "DW News",
    "lean": 0,
    "label": "Center"
-  },
-  {
-   "videoId": "JNrRtn4hV98",
-   "title": "EXCLUSIVE: Omar's sister talks to feds",
-   "thumb": "https://i.ytimg.com/vi/JNrRtn4hV98/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
   },
   {
    "videoId": "leK1U5VB404",
@@ -326,7 +341,7 @@
   },
   {
    "videoId": "rXDMREe7Uho",
-   "title": "WATCH: Ukraine’s Zelenskyy meets with King Haakon VIII in Norway",
+   "title": "LIVE: Ukraine’s Zelenskyy visits Norway",
    "thumb": "https://i.ytimg.com/vi/rXDMREe7Uho/hqdefault.jpg",
    "channel": "AP",
    "lean": 0,
@@ -387,14 +402,6 @@
    "channel": "Al Jazeera",
    "lean": 0,
    "label": "Center"
-  },
-  {
-   "videoId": "kG5UcXPaCOc",
-   "title": "Jewelry store looted during France protests",
-   "thumb": "https://i.ytimg.com/vi/kG5UcXPaCOc/hqdefault.jpg",
-   "channel": "NBC News",
-   "lean": -1,
-   "label": "Lean Left"
   }
  ],
  "stories": [
@@ -471,14 +478,21 @@
     2
    ],
    "span": 3,
-   "n_sources": 3,
+   "n_sources": 4,
    "balance": {
-    "l": 1,
+    "l": 2,
     "c": 0,
     "r": 2
    },
    "blindspot": null,
    "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Rays will face Brewers in World Series to produce a first-time champion",
+     "url": "https://www.npr.org/2026/10/20/nx-s1-6008836/rays-brewers-world-series"
+    },
     {
      "name": "NBC News",
      "lean": -1,
@@ -793,15 +807,15 @@
      "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Trump faces bipartisan backlash over waiving Russia sanctions",
-     "url": "https://www.cbsnews.com/news/trump-faces-bipartisan-backlash-over-waiving-russia-sanctions/"
+     "title": "Iran touts closest ever ties with Russia, contradicting Trump",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-talks-russia-strait-of-hormuz/"
     },
     {
      "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Iran touts closest ever ties with Russia, contradicting Trump",
-     "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-talks-russia-strait-of-hormuz/"
+     "title": "Trump faces bipartisan backlash over waiving Russia sanctions",
+     "url": "https://www.cbsnews.com/news/trump-faces-bipartisan-backlash-over-waiving-russia-sanctions/"
     },
     {
      "name": "PBS NewsHour",
@@ -866,14 +880,21 @@
     1
    ],
    "span": 2,
-   "n_sources": 4,
+   "n_sources": 5,
    "balance": {
-    "l": 2,
+    "l": 3,
     "c": 1,
     "r": 1
    },
    "blindspot": null,
    "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Alberta voters reject a move toward independence in referendum backing Canadian unity",
+     "url": "https://www.npr.org/2026/10/20/nx-s1-6008832/alberta-referendum-canada"
+    },
     {
      "name": "The Guardian",
      "lean": -1,
@@ -904,7 +925,89 @@
     }
    ],
    "factchecks": [],
-   "videos": []
+   "videos": [
+    {
+     "videoId": "j9o8r3iZ_kM",
+     "title": "Albertans reject referendum on independence from Canada",
+     "thumb": "https://i.ytimg.com/vi/j9o8r3iZ_kM/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "Why the Trump administration is fighting over a golf course",
+   "summary": "This story appeared in The Logoff, a daily newsletter that helps you stay informed about the Trump administration without letting political news take over your life. Subscribe here. Welcome to The Logoff: Donald Trump is trying to take over a public park. What’s happening? On Sun",
+   "category": "Politics",
+   "leans": [
+    -2,
+    -1,
+    0
+   ],
+   "span": 2,
+   "n_sources": 4,
+   "balance": {
+    "l": 3,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Why the Trump administration is fighting over a golf course",
+     "url": "https://www.vox.com/the-logoff-newsletter-trump/506955/trump-east-potomac-golf-links-takeover"
+    },
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Judge chastises Trump administration plan to push ahead overhaul of DC golf course",
+     "url": "https://www.npr.org/2026/10/19/nx-s1-6007746/golf-course-potomac-white-house-tree-removal"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "News Wrap: Federal judge clashes with DOJ over D.C. golf course",
+     "url": "https://www.pbs.org/newshour/show/news-wrap-federal-judge-clashes-with-doj-over-d-c-golf-course"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "The Memo: Trump plan for golf course becomes battle over court's power",
+     "url": "https://thehill.com/homenews/analysis/6159286-trump-dc-golf-course-battle/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "Trump Officials Mislead About Electrical Grid Reliability",
+     "link": "https://www.factcheck.org/2026/10/trump-officials-mislead-about-electrical-grid-reliability/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "C4hnxGzBz7k",
+     "title": "News Wrap: Federal judge clashes with DOJ over D.C. golf course",
+     "thumb": "https://i.ytimg.com/vi/C4hnxGzBz7k/hqdefault.jpg",
+     "channel": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "uNfAJRg1g7I",
+     "title": "Tensions flare at court hearing on Trump’s golf course renovation",
+     "thumb": "https://i.ytimg.com/vi/uNfAJRg1g7I/hqdefault.jpg",
+     "channel": "CNN",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
   },
   {
    "title": "UK to Fly RAF Missions Defending Saudi Arabia Against Houthi Attacks",
@@ -1057,56 +1160,6 @@
    ],
    "factchecks": [],
    "videos": []
-  },
-  {
-   "title": "Why the Trump administration is fighting over a golf course",
-   "summary": "This story appeared in The Logoff, a daily newsletter that helps you stay informed about the Trump administration without letting political news take over your life. Subscribe here. Welcome to The Logoff: Donald Trump is trying to take over a public park. What’s happening? On Sun",
-   "category": "Politics",
-   "leans": [
-    -2,
-    0
-   ],
-   "span": 2,
-   "n_sources": 2,
-   "balance": {
-    "l": 1,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Vox",
-     "lean": -2,
-     "label": "Left",
-     "title": "Why the Trump administration is fighting over a golf course",
-     "url": "https://www.vox.com/the-logoff-newsletter-trump/506955/trump-east-potomac-golf-links-takeover"
-    },
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "The Memo: Trump plan for golf course becomes battle over court's power",
-     "url": "https://thehill.com/homenews/analysis/6159286-trump-dc-golf-course-battle/"
-    }
-   ],
-   "factchecks": [
-    {
-     "org": "FactCheck.org",
-     "title": "Trump Officials Mislead About Electrical Grid Reliability",
-     "link": "https://www.factcheck.org/2026/10/trump-officials-mislead-about-electrical-grid-reliability/"
-    }
-   ],
-   "videos": [
-    {
-     "videoId": "uNfAJRg1g7I",
-     "title": "Tensions flare at court hearing on Trump’s golf course renovation",
-     "thumb": "https://i.ytimg.com/vi/uNfAJRg1g7I/hqdefault.jpg",
-     "channel": "CNN",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
   },
   {
    "title": "Minnesota teen accused of plotting terror attack at Mall of America to remain jailed",
@@ -1332,6 +1385,41 @@
      "label": "Lean Left"
     }
    ]
+  },
+  {
+   "title": "Far-left French rioter on national securty watchlist busted over fire that gutted historic town hall",
+   "summary": "An \"ultra-left\" militant who was already on a security watchlist has been arrested for the devastating fire that gutted a 140-year-old city hall during ongoing riots across France, according to officials.",
+   "category": "General",
+   "leans": [
+    0,
+    1
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Suspect arrested after historic town hall set alight - French media",
+     "url": "https://www.bbc.co.uk/news/articles/cw5yn5e8mezvo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Far-left French rioter on national securty watchlist busted over fire that gutted historic town hall",
+     "url": "https://nypost.com/2026/10/20/world-news/far-left-french-rioter-on-national-securty-watchlist-busted-over-fire-that-gutted-historic-town-hall/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
   },
   {
    "title": "Ex-OpenAI worker accused of bugging conference room planned to fly to Saudi Arabia, prosecutors say",
@@ -1631,6 +1719,195 @@
      "link": "https://www.factcheck.org/2026/10/talaricos-campaign-trail-absence-sparks-false-rumor/"
     }
    ],
+   "videos": []
+  },
+  {
+   "title": "DOJ charges 28 with voting crimes. And, TikTok ignored staff's child safety concerns",
+   "summary": "The Justice Department has charged 28 people in California with voting crimes as Election Day nears. And, TikTok staff raised child safety concerns with executives, who failed to act, court records show.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "DOJ charges 28 with voting crimes. And, TikTok ignored staff's child safety concerns",
+     "url": "https://www.npr.org/2026/10/20/g-s1-148877/up-first-newsletter-california-elections-doj-midterms-trump-tiktok"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "What if an AI bubble bursts — and that accelerates AI job losses?",
+   "summary": "Research on past recessions suggests downturns can accelerate automation. That raises the specter of a double whammy for workers.",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "What if an AI bubble bursts — and that accelerates AI job losses?",
+     "url": "https://www.npr.org/sections/planet-money/2026/10/20/g-s1-148305/what-if-an-ai-bubble-bursts-and-that-accelerates-ai-job-losses"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "TikTok staff raised child safety alarms. Court records show executives failed to act",
+   "summary": "The warnings surfaced in a trove of unreported court records. \"I have been fighting about fixing this for months with people who didn't think the harms are severe enough,\" wrote one executive.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "TikTok staff raised child safety alarms. Court records show executives failed to act",
+     "url": "https://www.npr.org/2026/10/20/nx-s1-6005809/tiktok-child-safety-money-laundering"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Can the new federal voucher program help public schools? Democrats are torn",
+   "summary": "The new scholarship tax credit program could help public school families pay for some educational services, but advocates worry it could do more harm than good.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Can the new federal voucher program help public schools? Democrats are torn",
+     "url": "https://www.npr.org/2026/10/20/nx-s1-5979065/public-school-private-school-federal-voucher-scholarship-democrats"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Why are some food prices up and others down? Here are the stories of 5 items",
+   "summary": "Here's what's behind the fluctuating costs of everyday grocery items such as ground beef, eggs and chocolate chip cookies.",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Why are some food prices up and others down? Here are the stories of 5 items",
+     "url": "https://www.npr.org/2026/10/20/nx-s1-5989636/grocery-prices-eggs-coffee-inflation"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Morning news brief",
+   "summary": "Trump presses to find an end to the war in Ukraine while courting Russia, campaigning reaches fever pitch with Election Day two weeks away, DOJ charges 28 people in California with voting crimes.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Morning news brief",
+     "url": "https://www.npr.org/2026/10/20/nx-s1-6003501/morning-news-brief"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "DOJ charges 28 in California with voting crimes as election tensions escalate",
+   "summary": "The DOJ also filed an emergency request in federal court to stop California from processing ballots returned by people on the voter rolls the federal government says are \"likely noncitizens.\"",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "DOJ charges 28 in California with voting crimes as election tensions escalate",
+     "url": "https://www.npr.org/2026/10/19/nx-s1-6007908/election-tensions-escalate-in-california-as-doj-charges-28-people-with-voting-crimes"
+    }
+   ],
+   "factchecks": [],
    "videos": []
   },
   {
@@ -2006,222 +2283,6 @@
      "label": "Lean Left",
      "title": "17 best deals from Amazon’s Holiday Beauty Event, according to a beauty editor",
      "url": "https://www.nbcnews.com/select/shopping/amazon-holiday-beauty-event-2026-rcna604406"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "How to watch the 2026 NBA season even if you don’t have cable",
-   "summary": "Here’s everything you need to know about the 2026 NBA season, including when it starts and where to watch or stream the games.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "How to watch the 2026 NBA season even if you don’t have cable",
-     "url": "https://www.nbcnews.com/select/shopping/how-to-watch-the-nba-rcna604384"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Shark kills woman swimming off popular beach in South Africa",
-   "summary": "Local media reported the woman was a regular swimmer and had been swimming with a group when the attack occurred.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Shark kills woman swimming off popular beach in South Africa",
-     "url": "https://www.cbsnews.com/news/shark-kills-woman-orient-beach-south-africa/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Are You Smarter Than a High Schooler? | Money Moves with Jill Schlesinger",
-   "summary": "Could you pass the AP Business with Personal Finance Exam? In this episode, Jill, Mark, and special guest AJ Ayers put their financial knowledge to the test with sample exam questions to find out. Plus, how many bank accounts do you need? Let's break it down.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Are You Smarter Than a High Schooler? | Money Moves with Jill Schlesinger",
-     "url": "https://www.cbsnews.com/video/are-you-smarter-than-a-high-schooler-money-moves-with-jill-schlesinger/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Israel detains 40 ultra-Orthodox men accused of draft dodging",
-   "summary": "At least 40 ultra-Orthodox Jewish men were arrested at Israel's Ben Gurion Airport on suspicion of attempting to evade the country's military draft.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Israel detains 40 ultra-Orthodox men accused of draft dodging",
-     "url": "https://www.cbsnews.com/news/israel-ultra-orthodox-jewish-men-arrested-evading-military-draft/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Dems demand tougher standards for companies running Medicaid systems",
-   "summary": "Contractors, including Deloitte, receive billions in taxpayer dollars to build complex computer systems determining Medicaid eligibility.",
-   "category": "Health",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Dems demand tougher standards for companies running Medicaid systems",
-     "url": "https://www.cbsnews.com/news/democrats-standards-medicaid-systems/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Zelenskyy says it's Putin who wants an endless war, not him",
-   "summary": "Ukraine's leader rejects Trump's accusations, says Putin is refusing peace, not him, and the U.S. military is delaying \"vital supplies.\"",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Zelenskyy says it's Putin who wants an endless war, not him",
-     "url": "https://www.cbsnews.com/news/russia-ukraine-war-zelenskyy-trump-putin-strikes-no-intelligence/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "California billionaire tax could backfire, Stanford study says",
-   "summary": "A new analysis from Stanford economists cautions that enacting a billionaire tax could have unintended consequences.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "California billionaire tax could backfire, Stanford study says",
-     "url": "https://www.cbsnews.com/news/california-billionaire-tax-stanford-study/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Iran live updates: Trump says US is winning war, 'can leave right now'",
-   "summary": "President Donald Trump announced \"major combat operations\" against Iran on Feb. 28.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Iran live updates: Trump says US is winning war, 'can leave right now'",
-     "url": "https://abcnews.com/International/live-updates/iran-live-updates/?id=137370653"
     }
    ],
    "factchecks": [],
