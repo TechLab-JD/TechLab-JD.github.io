@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-21T14:00:33Z",
- "generated_human": "Oct 21, 2026 · 14:00 UTC",
+ "generated": "2026-10-21T15:00:25Z",
+ "generated_human": "Oct 21, 2026 · 15:00 UTC",
  "sources": [
   {
    "name": "NPR",
@@ -136,13 +136,6 @@
    "count": 12
   },
   {
-   "name": "Reason",
-   "lean": 1,
-   "label": "Lean Right",
-   "fact": "Mostly",
-   "count": 12
-  },
-  {
    "name": "New York Post",
    "lean": 1,
    "label": "Lean Right",
@@ -206,63 +199,47 @@
    "count": 12
   }
  ],
- "n_articles": 335,
+ "n_articles": 323,
  "n_videos": 140,
  "trending": [
   {
    "term": "trump",
-   "n": 24
+   "n": 22
+  },
+  {
+   "term": "russia",
+   "n": 13
   },
   {
    "term": "ukraine",
    "n": 13
   },
   {
-   "term": "russia",
-   "n": 12
+   "term": "putin",
+   "n": 10
   },
   {
    "term": "talks",
-   "n": 9
+   "n": 8
   },
   {
-   "term": "putin",
-   "n": 9
+   "term": "midterms",
+   "n": 8
   },
   {
-   "term": "musk",
-   "n": 9
+   "term": "ohio",
+   "n": 8
   },
   {
    "term": "hubbard",
-   "n": 8
+   "n": 7
   },
   {
    "term": "stephen",
-   "n": 8
-  },
-  {
-   "term": "campaign",
-   "n": 8
-  },
-  {
-   "term": "just",
-   "n": 8
-  },
-  {
-   "term": "america",
-   "n": 8
+   "n": 7
   },
   {
    "term": "case",
-   "n": 7
-  },
-  {
-   "term": "voters",
-   "n": 7
-  },
-  {
-   "term": "american",
    "n": 7
   },
   {
@@ -270,95 +247,39 @@
    "n": 7
   },
   {
-   "term": "midterms",
+   "term": "chemical",
    "n": 7
+  },
+  {
+   "term": "musk",
+   "n": 7
+  },
+  {
+   "term": "america",
+   "n": 7
+  },
+  {
+   "term": "americans",
+   "n": 6
+  },
+  {
+   "term": "millions",
+   "n": 6
   }
  ],
  "videos": [
   {
-   "videoId": "Vib_D3g3aQA",
-   "title": "Memphis fails to pass 1-year data center moratorium during heated city council meeting",
-   "thumb": "https://i.ytimg.com/vi/Vib_D3g3aQA/hqdefault.jpg",
-   "channel": "CBS News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "yrXX5TQUids",
-   "title": "Ramaswamy's attack ad is \"absolutely despicable,\" Rep. Dingell says",
-   "thumb": "https://i.ytimg.com/vi/yrXX5TQUids/hqdefault.jpg",
-   "channel": "CBS News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "EtVLn7hI8Xc",
-   "title": "LIVE: New Orleans Saints press conference ahead of NFL game vs Pittsburgh Steelers in Paris",
-   "thumb": "https://i.ytimg.com/vi/EtVLn7hI8Xc/hqdefault.jpg",
-   "channel": "AP",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "R68bRG_bPgk",
-   "title": "Witkoff meets Hubbard in Russia after his release",
-   "thumb": "https://i.ytimg.com/vi/R68bRG_bPgk/hqdefault.jpg",
-   "channel": "NBC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "BF5S-wnen7g",
-   "title": "WATCH: Sasha Alex Sloan performs new song 'Glitter'",
-   "thumb": "https://i.ytimg.com/vi/BF5S-wnen7g/hqdefault.jpg",
+   "videoId": "t_P0La5o6Tc",
+   "title": "Vance not endorsing Netanyahu ahead of Israeli elections",
+   "thumb": "https://i.ytimg.com/vi/t_P0La5o6Tc/hqdefault.jpg",
    "channel": "PBS NewsHour",
    "lean": -1,
    "label": "Lean Left"
   },
   {
-   "videoId": "953aHmIciQY",
-   "title": "Police complaints hit record high as more than 100,000 cases logged in 2025",
-   "thumb": "https://i.ytimg.com/vi/953aHmIciQY/hqdefault.jpg",
-   "channel": "Sky News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "n3glPSbsy7Q",
-   "title": "Peter Doocy: Trump has been VERY critical",
-   "thumb": "https://i.ytimg.com/vi/n3glPSbsy7Q/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
-  {
-   "videoId": "Cs0xHtP8_r8",
-   "title": "Rescue attempt of shark stranded in South Korea canal. #Shark #BBCNews",
-   "thumb": "https://i.ytimg.com/vi/Cs0xHtP8_r8/hqdefault.jpg",
-   "channel": "BBC News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "SaUTO6_V2XQ",
-   "title": "I broke my back in a car crash. As a working American, why didn't I have healthcare?",
-   "thumb": "https://i.ytimg.com/vi/SaUTO6_V2XQ/hqdefault.jpg",
-   "channel": "The Guardian",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "jxJ_7vQSSek",
-   "title": "Michael Clarke Q&A | Can Ukraine survive if Trump withdraws support? What could AI mean for war?",
-   "thumb": "https://i.ytimg.com/vi/jxJ_7vQSSek/hqdefault.jpg",
-   "channel": "Sky News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "QYeOoxVMnFc",
-   "title": "Too many Birkins on the market? The Hermes bag is losing its exclusivity",
-   "thumb": "https://i.ytimg.com/vi/QYeOoxVMnFc/hqdefault.jpg",
+   "videoId": "xlTJeGOFoOs",
+   "title": "LIVE: UK Prime Minister Burnham holds PMQs",
+   "thumb": "https://i.ytimg.com/vi/xlTJeGOFoOs/hqdefault.jpg",
    "channel": "Reuters",
    "lean": 0,
    "label": "Center"
@@ -372,36 +293,108 @@
    "label": "Lean Left"
   },
   {
-   "videoId": "-LudYM0nDEY",
-   "title": "Jane Doe says she felt 'unsupported and disbelieved' by Cornell president",
-   "thumb": "https://i.ytimg.com/vi/-LudYM0nDEY/hqdefault.jpg",
+   "videoId": "jCaMTLxzKPo",
+   "title": "WATCH LIVE: Vance speaks about combatting fraud on visit to Cincinnati FBI office",
+   "thumb": "https://i.ytimg.com/vi/jCaMTLxzKPo/hqdefault.jpg",
+   "channel": "PBS NewsHour",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "YT2FyIWMaXg",
+   "title": "Witkoff meets with American after Russian prison release",
+   "thumb": "https://i.ytimg.com/vi/YT2FyIWMaXg/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "Qk0Y5_Y4Fmc",
+   "title": "Ilhan Omar BREAKS SILENCE, asks for donations amid federal probes #foxnews #news #shorts #world",
+   "thumb": "https://i.ytimg.com/vi/Qk0Y5_Y4Fmc/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "9vDPEl8zgWk",
+   "title": "LIVE: UK Prime Minister Burnham holds PMQs",
+   "thumb": "https://i.ytimg.com/vi/9vDPEl8zgWk/hqdefault.jpg",
+   "channel": "Reuters",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "I713f1NC0XA",
+   "title": "Inside Adelanto: California influencer fights to free forgotten ICE detainees",
+   "thumb": "https://i.ytimg.com/vi/I713f1NC0XA/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "3UZHTFJZVqA",
+   "title": "Driver escapes truck dangling over San Diego highway",
+   "thumb": "https://i.ytimg.com/vi/3UZHTFJZVqA/hqdefault.jpg",
    "channel": "ABC News",
    "lean": -1,
    "label": "Lean Left"
   },
   {
-   "videoId": "fbekukQufZ0",
-   "title": "Minister faces questions on North Sea gas drilling",
-   "thumb": "https://i.ytimg.com/vi/fbekukQufZ0/hqdefault.jpg",
+   "videoId": "p8ZJSmZpv8Y",
+   "title": "LIVE: Trump hosts cybercrime roundtable",
+   "thumb": "https://i.ytimg.com/vi/p8ZJSmZpv8Y/hqdefault.jpg",
+   "channel": "AP",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "WfqSHEhwsyc",
+   "title": "Education Secretary statement on antisemitism report",
+   "thumb": "https://i.ytimg.com/vi/WfqSHEhwsyc/hqdefault.jpg",
    "channel": "Sky News",
    "lean": 0,
    "label": "Center"
   },
   {
-   "videoId": "0g1DYfpDjWs",
-   "title": "Ilhan Omar's daughter SPOTTED at scene of DC raid #shorts",
-   "thumb": "https://i.ytimg.com/vi/0g1DYfpDjWs/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
+   "videoId": "bOiRKuYpcjc",
+   "title": "US envoy Witkoff calls Russia’s Putin a ‘humanitarian’ | AJ #shorts",
+   "thumb": "https://i.ytimg.com/vi/bOiRKuYpcjc/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
   },
   {
-   "videoId": "VYBGrzEEzog",
-   "title": "WATCH LIVE: Vance shares Fraud Task Force updates",
-   "thumb": "https://i.ytimg.com/vi/VYBGrzEEzog/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
+   "videoId": "e6r-PONSnKY",
+   "title": "Thousands of people continue protesting for affordable housing in Portugal",
+   "thumb": "https://i.ytimg.com/vi/e6r-PONSnKY/hqdefault.jpg",
+   "channel": "AP",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "W-tlvxC518E",
+   "title": "LIVE: Trump holds roundtable on cybercrime | NBC News",
+   "thumb": "https://i.ytimg.com/vi/W-tlvxC518E/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "9B4_9iNtoYQ",
+   "title": "Qatar, Turkiye, Pakistan and Indonesia sign defence production agreement",
+   "thumb": "https://i.ytimg.com/vi/9B4_9iNtoYQ/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "eHQ5hZnfKIE",
+   "title": "Uproar in Ohio governor's race with 13 days until midterm elections",
+   "thumb": "https://i.ytimg.com/vi/eHQ5hZnfKIE/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
   }
  ],
  "stories": [
@@ -419,9 +412,9 @@
    "span": 4,
    "n_sources": 16,
    "balance": {
-    "l": 7,
+    "l": 8,
     "c": 4,
-    "r": 5
+    "r": 4
    },
    "blindspot": null,
    "sources": [
@@ -452,6 +445,20 @@
      "label": "Lean Left",
      "title": "Who is Stephen Hubbard, the retired American teacher freed by Russia?",
      "url": "https://www.nbcnews.com/world/ukraine/stephen-hubbard-retired-american-teacher-freed-russia-rcna604735"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Witkoff blasted for calling Putin a \"humanitarian\"",
+     "url": "https://www.cbsnews.com/news/steve-witkoff-putin-humanitarian-backlash/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Witkoff says he hopes Ukraine included in U.S., Russia talks",
+     "url": "https://www.cbsnews.com/news/russia-ukraine-war-witkoff-putin-trump-zelenskyy/"
     },
     {
      "name": "ABC News",
@@ -492,7 +499,7 @@
      "name": "The Atlantic",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Why Trump is Furious at Ukraine",
+     "title": "Why Trump Is Furious at Ukraine",
      "url": "https://www.theatlantic.com/national-security/2026/10/trump-putin-russia-ukraine-midterms/689096/?utm_source=feed"
     },
     {
@@ -513,22 +520,8 @@
      "name": "The Hill",
      "lean": 0,
      "label": "Center",
-     "title": "Live updates: Trump lauds Russia's release of American; Vance to campaign with Ramaswamy in Ohio",
-     "url": "https://thehill.com/homenews/administration/6161584-trump-midterm-tour-clemson/"
-    },
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Trump: Implementing Russia sanctions would have halted Stephen Hubbard release talks",
-     "url": "https://thehill.com/homenews/administration/6161902-donald-trump-stephen-hubbard-russia-sanctions-waiver/"
-    },
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Who is Stephen Hubbard, imprisoned American released by Russia?",
-     "url": "https://thehill.com/policy/international/6161825-stephen-hubbard-released-russia-mercenary-charges/"
+     "title": "Witkoff faces backlash after calling Putin a 'humanitarian'",
+     "url": "https://thehill.com/homenews/administration/6162316-steve-witkoff-vladimir-putin-humanitarian-backlash/"
     },
     {
      "name": "CNBC",
@@ -550,13 +543,6 @@
      "label": "Center",
      "title": "Witkoff to present Putin with peace proposal after talks with Zelensky",
      "url": "https://www.axios.com/2026/10/20/putin-witkoff-russia-ukraine-war"
-    },
-    {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Trump envoy Steve Witkoff praises Putin as ‘humanitarian’ as Ukraine peace talks hang in the balance",
-     "url": "https://nypost.com/2026/10/21/us-news/trump-envoy-steve-witkoff-praises-putin-as-humanitarian-as-ukraine-peace-talks-hang-in-the-balance/"
     },
     {
      "name": "National Review",
@@ -597,6 +583,13 @@
      "name": "Newsmax",
      "lean": 2,
      "label": "Right",
+     "title": "Putin Agrees to Restart Trilateral Peace Talks on Ukraine War With Kyiv and Washington",
+     "url": "https://www.newsmax.com/newsfront/russia-ukraine-witkoff/2026/10/21/id/1273521"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
      "title": "Russia Has Freed US Citizen Stephen Hubbard",
      "url": "https://www.newsmax.com/newsfront/russia-american-stephen-hubbard/2026/10/21/id/1273488"
     },
@@ -606,13 +599,6 @@
      "label": "Right",
      "title": "Trump: Hubbard's Release Not Part of Russia Swap",
      "url": "https://www.newsmax.com/newsfront/stephen-hubbard-donald-trump-vladimir-putin/2026/10/21/id/1273494"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Trump Envoy Witkoff Meets Putin in Push for Ukraine Peace",
-     "url": "https://www.newsmax.com/newsfront/russia-ukraine-witkoff/2026/10/21/id/1273485"
     }
    ],
    "factchecks": [
@@ -623,37 +609,113 @@
     },
     {
      "org": "FactCheck.org",
-     "title": "Trump Officials Mislead About Electrical Grid Reliability",
-     "link": "https://www.factcheck.org/2026/10/trump-officials-mislead-about-electrical-grid-reliability/"
-    },
-    {
-     "org": "FactCheck.org",
      "title": "The Context for Trump’s ‘Take Out’ Los Angeles, San Diego Remarks",
      "link": "https://www.factcheck.org/2026/10/the-context-for-trumps-take-out-los-angeles-san-diego-remarks/"
     }
    ],
    "videos": [
     {
-     "videoId": "8Yxhe7zBAck",
-     "title": "Detained American Stephen Hubbard released by Russia as Witkoff meets with Putin",
-     "thumb": "https://i.ytimg.com/vi/8Yxhe7zBAck/hqdefault.jpg",
-     "channel": "ABC News",
+     "videoId": "R68bRG_bPgk",
+     "title": "Steve Witkoff meets Stephen Hubbard in Russia after his release",
+     "thumb": "https://i.ytimg.com/vi/R68bRG_bPgk/hqdefault.jpg",
+     "channel": "NBC News",
      "lean": -1,
      "label": "Lean Left"
     },
     {
-     "videoId": "z1nAN8NSt_8",
-     "title": "WATCH: US envoy Steve Witkoff meets with Putin in Russia",
-     "thumb": "https://i.ytimg.com/vi/z1nAN8NSt_8/hqdefault.jpg",
-     "channel": "AP",
+     "videoId": "7vOSqwyjbiU",
+     "title": "Russia releases jailed US teacher as Witkoff meets Putin | DW News",
+     "thumb": "https://i.ytimg.com/vi/7vOSqwyjbiU/hqdefault.jpg",
+     "channel": "DW News",
      "lean": 0,
      "label": "Center"
     },
     {
-     "videoId": "XeLuOQb7WE4",
-     "title": "Witkoff thanks Putin for release of retired American teacher",
-     "thumb": "https://i.ytimg.com/vi/XeLuOQb7WE4/hqdefault.jpg",
-     "channel": "NBC News",
+     "videoId": "YT2FyIWMaXg",
+     "title": "Witkoff meets with American after Russian prison release",
+     "thumb": "https://i.ytimg.com/vi/YT2FyIWMaXg/hqdefault.jpg",
+     "channel": "CNN",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Chemical spill in Toledo prompts limited evacuation",
+   "summary": "A chemical spill in Toledo, Ohio, prompted an evacuation order for parts of the city, and a shelter-in-place order for more. On Tuesday, Toledo Fire and Rescue ordered everyone within a one-mile radius of an MC Tank Terminal at 1266 Progress Ave. to evacuate over a “hazardous mat",
+   "category": "General",
+   "leans": [
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 7,
+   "balance": {
+    "l": 3,
+    "c": 1,
+    "r": 3
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Hazardous Chemical Leak in Ohio Prompts Evacuations",
+     "url": "https://www.today.com/video/ohio-chemical-leak-forces-home-and-business-evacuations-271956549521"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Chemical leak in Toledo forces evacuations, shelter-in-place",
+     "url": "https://www.cbsnews.com/news/hazardous-materials-evacuation-shelter-in-place-orders-toledo/"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Chemical tank explodes in Ohio, forcing evacuations",
+     "url": "https://abcnews.com/US/wireStory/chemical-tank-explodes-ohio-forcing-evacuations-prompting-fears-137440182"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Ohio Chemical Leak Evacuation: Map of Toledo Residents Urged to Leave",
+     "url": "https://www.newsweek.com/ohio-toledo-chemical-leak-evacuation-glycidyl-methacrylate-map-12599973"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Chemical spill in Toledo prompts limited evacuation",
+     "url": "https://www.washingtonexaminer.com/news/4773563/chemical-spill-toledo-prompts-limited-evacuation/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Ohio authorities order evacuations, shelter-in-place in Toledo after chemical release",
+     "url": "https://www.washingtontimes.com/news/2026/oct/21/ohio-authorities-order-evacuations-shelter-place-toledo-chemical/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Ohio Chemical Explosion Prompts Evacuations, Fears of Another Blast",
+     "url": "https://www.newsmax.com/newsfront/toledo-ohio-chemical-release/2026/10/21/id/1273520"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "-T2WuZjQvUM",
+     "title": "Unknown chemical leak in Ohio prompts evacuations and shelter-in-place",
+     "thumb": "https://i.ytimg.com/vi/-T2WuZjQvUM/hqdefault.jpg",
+     "channel": "ABC News",
      "lean": -1,
      "label": "Lean Left"
     }
@@ -669,9 +731,9 @@
     2
    ],
    "span": 3,
-   "n_sources": 5,
+   "n_sources": 4,
    "balance": {
-    "l": 3,
+    "l": 2,
     "c": 1,
     "r": 1
    },
@@ -683,13 +745,6 @@
      "label": "Lean Left",
      "title": "Ohio gubernatorial candidate Amy Acton condemns ad featuring her estranged mother",
      "url": "https://www.nbcnews.com/meet-the-press/video/ohio-gubernatorial-candidate-amy-acton-condemns-ad-featuring-her-estranged-mother-271918661841"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Ohio race takes ugly turn with Ramaswamy ad featuring Acton's mom",
-     "url": "https://www.cbsnews.com/news/ohio-governor-amy-acton-mother-ramaswamy/"
     },
     {
      "name": "ABC News",
@@ -706,11 +761,11 @@
      "url": "https://www.axios.com/2026/10/21/ramaswamy-ad-acton-mother-ohio"
     },
     {
-     "name": "Daily Caller",
+     "name": "The Daily Wire",
      "lean": 2,
      "label": "Right",
-     "title": "Attack Ad Featuring Ohio Democrat’s ‘Abusive’ Mom Backfires On Vivek Ramaswamy",
-     "url": "https://dailycaller.com/2026/10/20/ohio-governor-race-video-amy-acton-mom-vivek-ramaswamy-sexual-abuse-allegations"
+     "title": "Ramaswamy Bets Millions On Bombshell Ad Featuring Dem’s Estranged Mother",
+     "url": "https://www.dailywire.com/news/ramaswamy-bets-millions-on-bombshell-ad-featuring-dems-estranged-mother"
     }
    ],
    "factchecks": [
@@ -723,18 +778,19 @@
    "videos": []
   },
   {
-   "title": "80 Israelis and Americans, including NY Democrat Brad Lander, detained in West Bank",
-   "summary": "U.S. Democratic congressional nominee Brad Lander was detained along with about 80 American and Israeli rabbis and activists by Israeli security forces as they helped Palestinian olive harvesters.",
-   "category": "World",
+   "title": "LeBron James curses out Knicks fan in heated exchange: 'I don't know what the f--- you talking about'",
+   "summary": "LeBron James fired back at a Knicks fan during his Philadelphia 76ers debut at Madison Square Garden, defending his Ohio roots in a heated exchange.",
+   "category": "General",
    "leans": [
     -1,
+    0,
     2
    ],
    "span": 3,
    "n_sources": 3,
    "balance": {
-    "l": 2,
-    "c": 0,
+    "l": 1,
+    "c": 1,
     "r": 1
    },
    "blindspot": null,
@@ -743,22 +799,22 @@
      "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "80 Israelis and Americans, including NY Democrat Brad Lander, detained in West Bank",
-     "url": "https://www.npr.org/2026/10/21/nx-s1-6010460/brad-lander-detained-west-bank-israel-palestinians"
+     "title": "LeBron James talks smack with Knicks fans in victorious 76ers debut",
+     "url": "https://www.npr.org/2026/10/21/nx-s1-6010350/lebron-knicks-76ers"
     },
     {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "New York congressional candidate Brad Lander says he was detained by IDF in the occupied West Bank",
-     "url": "https://www.nbcnews.com/politics/politics-news/new-york-congressional-candidate-brad-lander-detained-west-bank-rcna604741"
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "LeBron James Makes Noteworthy Admission After Knicks’ Opening Night Loss",
+     "url": "https://www.newsweek.com/sports/nba/lebron-james-makes-noteworthy-admission-after-knicks-opening-night-loss-12598329"
     },
     {
      "name": "Fox News",
      "lean": 2,
      "label": "Right",
-     "title": "Mamdani-backed congressional candidate says he was detained by Israeli military",
-     "url": "https://www.foxnews.com/politics/mamdani-backed-congressional-candidate-detained-israeli-military"
+     "title": "LeBron James curses out Knicks fan in heated exchange: 'I don't know what the f--- you talking about'",
+     "url": "https://www.foxnews.com/outkick-sports/lebron-james-curses-knicks-fan-heated-exchange-dont-know-what-f-talking-about"
     }
    ],
    "factchecks": [],
@@ -806,9 +862,9 @@
    "videos": []
   },
   {
-   "title": "Florida Executes 77-Year-Old in 18th Execution This Year",
-   "summary": "Florida carried out its 18th execution of the year on Tuesday under Republican Gov. Ron DeSantis ' aggressive use of the death penalty in his final term. William Reaves, 77, was pronounced dead at 6:12 p.m. following a three-drug injection at Florida State Prison near...",
-   "category": "Politics",
+   "title": "Florida puts 77-year-old man to death, carrying out its 18th execution of the year",
+   "summary": "Last year, Florida set a state record with 19 executions in a year, and it's poised to tie that mark if another execution is carried out next month as scheduled.",
+   "category": "General",
    "leans": [
     -1,
     2
@@ -876,53 +932,19 @@
    "videos": []
   },
   {
-   "title": "Nutjob Judge Ana Reyes Rages Over Trump’s Attempt To Fix Up Ugly Golf Course",
-   "summary": "A couple dozen attorneys are listed on the case, including Norm Eisen and Abbe Lowell, and the roll call of law firms is a laundry list of D.C. powerhouses like Covington & Burling.",
-   "category": "Politics",
+   "title": "Congressional candidate Brad Lander says he was detained by IDF in West Bank",
+   "summary": "New York congressional candidate Brad Lander (D) said Wednesday that he has been detained by the Israel Defense Forces (IDF) in the West Bank while “harvesting olives in a grove near Nehalim.” “The occupation is a crime under international law. Harvesting olives isn’t a crime und",
+   "category": "World",
    "leans": [
     -1,
-    2
-   ],
-   "span": 3,
-   "n_sources": 2,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Atlantic",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Donald Trump Really Wants This Golf Course",
-     "url": "https://www.theatlantic.com/culture/2026/10/trump-golf-course/689086/?utm_source=feed"
-    },
-    {
-     "name": "The Federalist",
-     "lean": 2,
-     "label": "Right",
-     "title": "Nutjob Judge Ana Reyes Rages Over Trump’s Attempt To Fix Up Ugly Golf Course",
-     "url": "https://thefederalist.com/2026/10/21/nutjob-judge-ana-reyes-rages-over-trumps-attempt-to-fix-up-ugly-golf-course/?utm_source=rss&utm_medium=rss&utm_campaign=nutjob-judge-ana-reyes-rages-over-trumps-attempt-to-fix-up-ugly-golf-course"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "New fake polling scandal riles Democrats ahead of midterm elections",
-   "summary": "Another fake polling scandal has hit less than two weeks before the midterm elections, ripping open old wounds about the Michigan Democratic Senate primary and renewing skepticism about pollsters as they increasingly forecast a blue wave on Nov. 3. An outfit called Wedgewood Poll",
-   "category": "Politics",
-   "leans": [
-    -1,
+    0,
     1
    ],
    "span": 2,
-   "n_sources": 2,
+   "n_sources": 5,
    "balance": {
-    "l": 1,
-    "c": 0,
+    "l": 2,
+    "c": 2,
     "r": 1
    },
    "blindspot": null,
@@ -931,171 +953,56 @@
      "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Trump leans into unprecedented power ahead of midterm elections",
-     "url": "https://www.npr.org/2026/10/21/nx-s1-6009395/trump-power-midterm-elections"
+     "title": "80 Israelis and Americans, including NY Democrat Brad Lander, detained in West Bank",
+     "url": "https://www.npr.org/2026/10/21/nx-s1-6010460/brad-lander-detained-west-bank-israel-palestinians"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "New York congressional candidate Brad Lander says he was detained by IDF in the occupied West Bank",
+     "url": "https://www.nbcnews.com/politics/politics-news/new-york-congressional-candidate-brad-lander-detained-west-bank-rcna604741"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Congressional candidate Brad Lander says he was detained by IDF in West Bank",
+     "url": "https://thehill.com/homenews/campaign/6162296-brad-lander-idf-detained-west-bank/"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "US congressional candidate Brad Lander freed after West Bank detention",
+     "url": "https://www.aljazeera.com/news/2026/10/21/us-congressional-candidate-brad-lander-freed-after-west-bank-detention?traffic_source=rss"
     },
     {
      "name": "Washington Examiner",
      "lean": 1,
      "label": "Lean Right",
-     "title": "New fake polling scandal riles Democrats ahead of midterm elections",
-     "url": "https://www.washingtonexaminer.com/news/campaigns/congressional/4773509/new-fake-polling-scandal-riles-democrats-midterm-elections/"
-    }
-   ],
-   "factchecks": [
-    {
-     "org": "Snopes",
-     "title": "Did Trump say 'everyone gets healthcare' if Democrats win?",
-     "link": "https://www.snopes.com/fact-check/trump-healthcare-democrats-win-quote/"
-    }
-   ],
-   "videos": []
-  },
-  {
-   "title": "Ohio authorities order evacuations, shelter-in-place in Toledo after chemical release",
-   "summary": "Authorities in Ohio ordered some residents in Toledo to evacuate and others to shelter-in-place after a \"hazardous materials release\" in the city late Tuesday.",
-   "category": "General",
-   "leans": [
-    -1,
-    1
-   ],
-   "span": 2,
-   "n_sources": 2,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Chemical leak in Toledo forces evacuations, shelter-in-place",
-     "url": "https://www.cbsnews.com/news/hazardous-materials-evacuation-shelter-in-place-orders-toledo/"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Ohio authorities order evacuations, shelter-in-place in Toledo after chemical release",
-     "url": "https://www.washingtontimes.com/news/2026/oct/21/ohio-authorities-order-evacuations-shelter-place-toledo-chemical/"
+     "title": "New York House candidate Brad Lander briefly detained by Israeli military with group visiting West Bank",
+     "url": "https://www.washingtonexaminer.com/news/world/4773639/brad-lander-detained-west-bank/"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Trump hammers Roy Cooper over release of DeCarlos Brown Jr., other North Carolina prisoners",
-   "summary": "President Trump on Tuesday hammered Democratic North Carolina Gov. Roy Cooper over the release of prisoners who went on to commit further crimes, including a man accused of one of the state's most notorious murders.",
-   "category": "Politics",
+   "title": "SpaceX jumps 10%, Tesla rises on stunning revenue surge and possible merger",
+   "summary": "The rocket and satellite firm was up 10% Wednesday morning after reporting third-quarter revenue of $14.6 billion – up a whopping 161% from the previous year.",
+   "category": "Science",
    "leans": [
     -1,
+    0,
     1
    ],
    "span": 2,
-   "n_sources": 2,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Trump heckled by protesters at North Carolina rally",
-     "url": "https://www.cbsnews.com/video/trump-heckled-by-protesters-at-north-carolina-rally/"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Trump hammers Roy Cooper over release of DeCarlos Brown Jr., other North Carolina prisoners",
-     "url": "https://www.washingtontimes.com/news/2026/oct/20/trump-hammers-roy-cooper-release-decarlos-brown-jr-north-carolina/"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "6PUtBmb7FPI",
-     "title": "WATCH LIVE: Trump holds GOP midterm rally in North Carolina",
-     "thumb": "https://i.ytimg.com/vi/6PUtBmb7FPI/hqdefault.jpg",
-     "channel": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
-  },
-  {
-   "title": "Pope Leo returns to St. Peter’s Square, hold first audience since cancer surgery",
-   "summary": "Pope Leo returned to St. Peter's Square, waving to pilgrims from his open-air popemobile as he held his first general audience at the Vatican since undergoing lung cancer surgery.",
-   "category": "General",
-   "leans": [
-    -1,
-    1
-   ],
-   "span": 2,
-   "n_sources": 2,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  Pope Leo makes 1st public appearance since surgery",
-     "url": "https://abcnews.com/video/137445403/"
-    },
-    {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Pope Leo returns to St. Peter’s Square, hold first audience since cancer surgery",
-     "url": "https://nypost.com/2026/10/21/world-news/pope-leo-returns-to-st-peters-square-hold-first-audience-since-cancer-surgery/"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "6TNeWmM5jEg",
-     "title": "Pope Leo seen ahead of his first general audience since cancer surgery",
-     "thumb": "https://i.ytimg.com/vi/6TNeWmM5jEg/hqdefault.jpg",
-     "channel": "CNN",
-     "lean": -1,
-     "label": "Lean Left"
-    },
-    {
-     "videoId": "9Q5XfSz-X94",
-     "title": "Pope Leo rides popemobile for first time since surgery",
-     "thumb": "https://i.ytimg.com/vi/9Q5XfSz-X94/hqdefault.jpg",
-     "channel": "NBC News",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
-  },
-  {
-   "title": "SpaceX stock jumps 8% after earnings beat and Musk hints at Tesla tie-up",
-   "summary": "SpaceX shares jumped after the company reported surging revenue growth in its third quarter, and owner Elon Musk floated a potential SpaceX-Tesla merger.",
-   "category": "Economy",
-   "leans": [
-    -1,
-    0
-   ],
-   "span": 1,
-   "n_sources": 3,
+   "n_sources": 4,
    "balance": {
     "l": 1,
     "c": 2,
-    "r": 0
+    "r": 1
    },
    "blindspot": null,
    "sources": [
@@ -1119,6 +1026,13 @@
      "label": "Center",
      "title": "SpaceX stock jumps 8% after earnings beat and Musk hints at Tesla tie-up",
      "url": "https://www.cnbc.com/2026/10/21/spacex-spcx-stock-musk-merger-tesla.html"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "SpaceX jumps 10%, Tesla rises on stunning revenue surge and possible merger",
+     "url": "https://nypost.com/2026/10/21/business/spacex-jumps-10-tesla-rises-on-stunning-revenue-surge-and-possible-merger/"
     }
    ],
    "factchecks": [
@@ -1126,6 +1040,47 @@
      "org": "Snopes",
      "title": "Who ordered Starlink, Starshield slowdown in Ukraine? What we know",
      "link": "https://www.snopes.com/news/2026/10/21/starlink-starshield-slowdown-ukraine/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "Thune makes bold prediction about Republicans' Senate chances as GOP pulls millions from key races",
+   "summary": "John Thune says Republicans will outperform the polls in toss-up senate races despite shifting campaign cash away from Georgia and into Kansas.",
+   "category": "Politics",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Map Shows Where Republicans Outspending Democrats in Key Senate Races",
+     "url": "https://www.newsweek.com/map-shows-where-republicans-outspending-democrats-in-key-senate-races-12598301"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Thune makes bold prediction about Republicans' Senate chances as GOP pulls millions from key races",
+     "url": "https://www.foxnews.com/politics/thune-makes-bold-prediction-republicans-senate-chances-gop-pulls-millions-key-races"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "Misleading GOP Attacks Over Taxes on Tips, Overtime, Social Security",
+     "link": "https://www.factcheck.org/2026/10/misleading-gop-attacks-over-taxes-on-tips-overtime-social-security/"
     }
    ],
    "videos": []
@@ -1190,48 +1145,6 @@
    ]
   },
   {
-   "title": "Corporate Media Construct Conspiracy Theories About Trump Bringing Down Diesel Prices",
-   "summary": "The possibility that the agreement might deliver relief is just a side note for the media, because their real objective is insinuating that Trump is really serving Putin.",
-   "category": "World",
-   "leans": [
-    1,
-    2
-   ],
-   "span": 1,
-   "n_sources": 3,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 3
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Reason",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Trump's $8 Billion Diesel Bailout Pays Farmers for a Problem He Created",
-     "url": "https://reason.com/2026/10/20/trumps-8-billion-diesel-bailout-pays-farmers-for-a-problem-he-created/"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Trump administration to provide $8 billion to farmers amid high diesel prices",
-     "url": "https://www.washingtontimes.com/news/2026/oct/21/trump-administration-provide-8-billion-farmers-amid-high-diesel/"
-    },
-    {
-     "name": "The Federalist",
-     "lean": 2,
-     "label": "Right",
-     "title": "Corporate Media Construct Conspiracy Theories About Trump Bringing Down Diesel Prices",
-     "url": "https://thefederalist.com/2026/10/20/corporate-media-construct-conspiracy-theories-about-trump-bringing-down-diesel-prices/?utm_source=rss&utm_medium=rss&utm_campaign=corporate-media-construct-conspiracy-theories-about-trump-bringing-down-diesel-prices"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Inside Philadelphia's preparations for Election Day",
    "summary": "In the final sprint to Election Day, more than 12 million votes have already been cast nationwide. That includes more than 65,000 in Philadelphia. The city's voting processes have drawn President Trump's ire for more than a decade. In partnership with the Pulitzer Center, Lisa De",
    "category": "Politics",
@@ -1276,9 +1189,9 @@
    ]
   },
   {
-   "title": "Alberta's decisive decision to stay in Canada gives Carney backing to take on Trump",
-   "summary": "The overwhelming vote by Alberta to stay in Canada gives Mark Carney political capital to focus on remaking the country's economy, writes the BBC's Lyse Doucet.",
-   "category": "Politics",
+   "title": "Trump on remarks about GOP senator's 'a--': 'This guy’s a monster!'",
+   "summary": "President Trump on Tuesday again complimented the behind of Sen. John Husted (R-Ohio), something he has done multiple times on the campaign trail as the midterms near. “I looked at his a--, and then I looked at his legs, and my — I said, ‘His ass is like, it's like a pile of musc",
+   "category": "World",
    "leans": [
     -1,
     0
@@ -1293,18 +1206,18 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "Time",
+     "name": "Politico",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Alberta Voted to Stay in Canada. That Doesn’t Quite Settle the Separatist Debate",
-     "url": "https://time.com/article/2026/10/20/alberta-voted-to-stay-in-canada-that-doesn-t-quite-settle-the-separatist-debate/"
+     "title": "Retiring Republican Senator warns GOP: Trump's coalition may not last",
+     "url": "https://www.politico.com/video/2026/10/20/retiring-republican-senator-warns-gop-trumps-coalition-may-not-last-2204947"
     },
     {
-     "name": "BBC News",
+     "name": "The Hill",
      "lean": 0,
      "label": "Center",
-     "title": "Alberta's decisive decision to stay in Canada gives Carney backing to take on Trump",
-     "url": "https://www.bbc.co.uk/news/articles/cr62ylj832vxo?at_medium=RSS&at_campaign=rss"
+     "title": "Trump on remarks about GOP senator's 'a--': 'This guy’s a monster!'",
+     "url": "https://thehill.com/homenews/administration/6161958-trump-on-remarks-about-gop-senators-a-this-guys-a-monster/"
     }
    ],
    "factchecks": [],
@@ -1363,6 +1276,41 @@
    ]
   },
   {
+   "title": "Corporate Media Construct Conspiracy Theories About Trump Bringing Down Diesel Prices",
+   "summary": "The possibility that the agreement might deliver relief is just a side note for the media, because their real objective is insinuating that Trump is really serving Putin.",
+   "category": "World",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump administration to provide $8 billion to farmers amid high diesel prices",
+     "url": "https://www.washingtontimes.com/news/2026/oct/21/trump-administration-provide-8-billion-farmers-amid-high-diesel/"
+    },
+    {
+     "name": "The Federalist",
+     "lean": 2,
+     "label": "Right",
+     "title": "Corporate Media Construct Conspiracy Theories About Trump Bringing Down Diesel Prices",
+     "url": "https://thefederalist.com/2026/10/20/corporate-media-construct-conspiracy-theories-about-trump-bringing-down-diesel-prices/?utm_source=rss&utm_medium=rss&utm_campaign=corporate-media-construct-conspiracy-theories-about-trump-bringing-down-diesel-prices"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "News Wrap: Britain sending air support to Saudi Arabia amid Houthi attacks",
    "summary": "In our news wrap Tuesday, British authorities say they're sending air support to Saudi Arabia to protect against missiles and drones launched by Iran-backed Houthi rebels in Yemen, Vice President Vance says he's not endorsing Benjamin Netanyahu ahead of Israeli elections and vote",
    "category": "World",
@@ -1394,16 +1342,41 @@
     }
    ],
    "factchecks": [],
-   "videos": [
+   "videos": []
+  },
+  {
+   "title": "The Supreme Court is about to decide whether to ban trans women from women’s sports",
+   "summary": "One of the last decade’s most consequential changes to how the Supreme Court operates is the growth of the so-called shadow docket — a process that allows the justices to decide cases unusually quickly, and often without full briefing or oral argument. Historically, the Court wou",
+   "category": "Politics",
+   "leans": [
+    -2
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
     {
-     "videoId": "84Y1GwQxZtc",
-     "title": "News Wrap: Britain sending air support to Saudi Arabia amid Houthi attacks",
-     "thumb": "https://i.ytimg.com/vi/84Y1GwQxZtc/hqdefault.jpg",
-     "channel": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left"
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "The Supreme Court is about to decide whether to ban trans women from women’s sports",
+     "url": "https://www.vox.com/politics/507025/supreme-court-kmk-washington-transgender-sports"
+    },
+    {
+     "name": "Slate",
+     "lean": -2,
+     "label": "Left",
+     "title": "The Supreme Court Is Poised to Undo a Basic Trans Right That Has Been in Place for Three Decades",
+     "url": "https://slate.com/news-and-politics/2026/10/supreme-court-trans-rights-trump-fail.html?via=rss"
     }
-   ]
+   ],
+   "factchecks": [],
+   "videos": []
   },
   {
    "title": "Corruption is finally breaking through to voters this time",
@@ -1483,40 +1456,6 @@
    ]
   },
   {
-   "title": "Enes Kanter Freedom says he’s in touch with FBI after death threats over WNBA Finals plans",
-   "summary": "Enes Kanter Freedom says he's in contact with the FBI after receiving death threats ahead of his planned appearance at WNBA Finals Game 3 in Atlanta.",
-   "category": "General",
-   "leans": [
-    2
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Enes Kanter Freedom says he’s in touch with FBI after death threats over WNBA Finals plans",
-     "url": "https://www.foxnews.com/outkick-sports/enes-kanter-freedom-touch-fbi-death-threats-wnba-finals-plans"
-    },
-    {
-     "name": "Daily Caller",
-     "lean": 2,
-     "label": "Right",
-     "title": "Enes Kanter Freedom And Royce White, Who Tried To Join WNBA, Are ‘Both Men,’ League Commissioner Tells Congress",
-     "url": "https://dailycaller.com/2026/10/20/enes-kanter-freedom-royce-white-wnba-men-congress-cathy-engelbert"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Hegseth Quietly Meets Netanyahu As Trump Weighs Massive New Iran Offensive",
    "summary": "‘Things are about to get spicy’",
    "category": "World",
@@ -1585,6 +1524,81 @@
    "videos": []
   },
   {
+   "title": "Trump leans into unprecedented power ahead of midterm elections",
+   "summary": "Less than two weeks before the election, Trump continues to crash through barriers that he wouldn't dare cross in his first term.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump leans into unprecedented power ahead of midterm elections",
+     "url": "https://www.npr.org/2026/10/21/nx-s1-6009395/trump-power-midterm-elections"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Did Trump say 'everyone gets healthcare' if Democrats win?",
+     "link": "https://www.snopes.com/fact-check/trump-healthcare-democrats-win-quote/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "San Diego mayor on affordability crisis, Trump suggesting Iran to \"take out\" his city",
+   "summary": "Americans are struggling with rising prices as the Iran war worsens economic issues. Mayor Todd Gloria of San Diego, California, speaks about his \"National Affordability Tour\" as part of the U.S. Conference of Mayors.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "San Diego mayor on affordability crisis, Trump suggesting Iran to \"take out\" his city",
+     "url": "https://www.cbsnews.com/video/san-diego-mayor-on-affordability-crisis-trump-suggesting-iran-take-out-his-city/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "The Context for Trump’s ‘Take Out’ Los Angeles, San Diego Remarks",
+     "link": "https://www.factcheck.org/2026/10/the-context-for-trumps-take-out-los-angeles-san-diego-remarks/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "inKoZG5lr3w",
+     "title": "San Diego mayor on affordability crisis, Trump suggesting Iran to \"take out\" his city",
+     "thumb": "https://i.ytimg.com/vi/inKoZG5lr3w/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
    "title": "Donald Trump Asked Texas for Five More Republicans. Voters Might Have Other Plans.",
    "summary": "Johnny Garcia, the Democratic nominee in Texas’ 35th Congressional District, spent one of the last mornings before the start of early voting meeting with veterans over breakfast tacos and boxed coffee at a VFW hall in San Antonio’s Southside. That’s not surprising for a candidate",
    "category": "Politics",
@@ -1618,100 +1632,34 @@
    "videos": []
   },
   {
-   "title": "Map Shows Where Republicans Outspending Democrats in Key Senate Races",
-   "summary": "Republicans have maintained a significant edge when it comes to ad spending in this year's contests.",
-   "category": "Politics",
+   "title": "U.S. Midterms Loom Over a Deadlock Between Trump and Tehran",
+   "summary": "Renewed military conflict before or after the midterms won’t resolve the disputes the United States and Iran will eventually have to confront across the negotiating table.",
+   "category": "World",
    "leans": [
-    0
+    -1
    ],
    "span": 0,
    "n_sources": 1,
    "balance": {
-    "l": 0,
-    "c": 1,
+    "l": 1,
+    "c": 0,
     "r": 0
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Map Shows Where Republicans Outspending Democrats in Key Senate Races",
-     "url": "https://www.newsweek.com/map-shows-where-republicans-outspending-democrats-in-key-senate-races-12598301"
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "U.S. Midterms Loom Over a Deadlock Between Trump and Tehran",
+     "url": "https://time.com/article/2026/10/21/trump-iran-war-midterm-elections-deadlock/"
     }
    ],
    "factchecks": [
     {
      "org": "FactCheck.org",
-     "title": "Misleading GOP Attacks Over Taxes on Tips, Overtime, Social Security",
-     "link": "https://www.factcheck.org/2026/10/misleading-gop-attacks-over-taxes-on-tips-overtime-social-security/"
-    }
-   ],
-   "videos": []
-  },
-  {
-   "title": "Fake Polling Firm Duped Media in ‘Social Experiment’",
-   "summary": "Wedgewood Polls' surveys were reproduced by prominent media outlets, including Newsweek.",
-   "category": "General",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Fake Polling Firm Duped Media in ‘Social Experiment’",
-     "url": "https://www.newsweek.com/fake-polling-firm-duped-media-in-social-experiment-12599153"
-    }
-   ],
-   "factchecks": [
-    {
-     "org": "Full Fact",
-     "title": "Fake image of wildlife park tiger attack circulates online",
-     "link": "https://fullfact.org/culture-and-society/fake-image-of-tiger-attack-shared/"
-    }
-   ],
-   "videos": []
-  },
-  {
-   "title": "Michigan Senate Polling as Rogers, El-Sayed Head into Second Debate",
-   "summary": "El-Sayed holds a slim polling edge over Rogers ahead of their final Michigan Senate debate.",
-   "category": "Politics",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Michigan Senate Polling as Rogers, El-Sayed Head into Second Debate",
-     "url": "https://www.newsweek.com/michigan-senate-debate-mike-rogers-abdul-el-sayed-12596649"
-    }
-   ],
-   "factchecks": [
-    {
-     "org": "FactCheck.org",
-     "title": "Republican Ads Attack El-Sayed for Past Comments, Positions on Policing and Prisons",
-     "link": "https://www.factcheck.org/2026/10/republican-ads-attack-el-sayed-for-past-comments-positions-on-policing-and-prisons/"
+     "title": "Trump’s Numbers, October 2026 Update",
+     "link": "https://www.factcheck.org/2026/10/trumps-numbers-october-2026-update/"
     }
    ],
    "videos": []
@@ -1786,33 +1734,6 @@
    "videos": []
   },
   {
-   "title": "Expecting a baby? 5 tips to help you prepare for pregnancy costs",
-   "summary": "The cost of having a baby is difficult to predict. The amount families pay varies widely. Here are five tips to help you prepare for the often unexpected costs of pregnancy and giving birth.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Expecting a baby? 5 tips to help you prepare for pregnancy costs",
-     "url": "https://www.npr.org/2026/10/21/nx-s1-5996849/insurance-cost-baby-pregnancy"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "2025 policing trend: Fewer serious crimes, more minor arrests",
    "summary": "Arrests for more minor offenses, including vagrancy, rose in the U.S., even as violent crime rates dropped to historic lows, according to an analysis from criminal justice reform advocacy group FWD.us",
    "category": "Economy",
@@ -1834,6 +1755,33 @@
      "label": "Lean Left",
      "title": "2025 policing trend: Fewer serious crimes, more minor arrests",
      "url": "https://www.npr.org/2026/10/21/nx-s1-6003663/crime-data-down-low-level-offenses-increase"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Expecting a baby? 5 tips to help you prepare for pregnancy costs",
+   "summary": "The cost of having a baby is difficult to predict. The amount families pay varies widely. Here are five tips to help you prepare for the often unexpected costs of pregnancy and giving birth.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Expecting a baby? 5 tips to help you prepare for pregnancy costs",
+     "url": "https://www.npr.org/2026/10/21/nx-s1-5996849/insurance-cost-baby-pregnancy"
     }
    ],
    "factchecks": [],
@@ -1894,44 +1842,8 @@
    "videos": []
   },
   {
-   "title": "LeBron James talks smack with Knicks fans in victorious 76ers debut",
-   "summary": "The Sixers got a first look at the potent lineup they put together this summer in hopes of winning their first title since 1983.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "LeBron James talks smack with Knicks fans in victorious 76ers debut",
-     "url": "https://www.npr.org/2026/10/21/nx-s1-6010350/lebron-knicks-76ers"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "3d65QOdG1Js",
-     "title": "LeBron James making debut with 76ers as NBA season kicks off",
-     "thumb": "https://i.ytimg.com/vi/3d65QOdG1Js/hqdefault.jpg",
-     "channel": "CBS News",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
-  },
-  {
-   "title": "Severely ill ICE detainees targeted for imminent deportation in Florida, advocates say",
-   "summary": "Flights to unknown countries in Africa are scheduled as early as Wednesday, relatives detail Relatives of gravely ill detainees at two Florida immigration jails say authorities are about to deport their loved ones to unknown countries in Africa despite worsening medical condition",
+   "title": "Severely ill ICE detainees face imminent deportation to unknown African states, advocates say",
+   "summary": "Flights to third countries where the detainees have no ties are scheduled as early as Wednesday, relatives detail Relatives of gravely ill detainees at two Florida immigration jails say authorities are about to deport their loved ones to unknown countries in Africa despite worsen",
    "category": "World",
    "leans": [
     -1
@@ -1949,7 +1861,7 @@
      "name": "The Guardian",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Severely ill ICE detainees targeted for imminent deportation in Florida, advocates say",
+     "title": "Severely ill ICE detainees face imminent deportation to unknown African states, advocates say",
      "url": "https://www.theguardian.com/us-news/2026/oct/21/ice-detention-illness-deportation-florida"
     }
    ],
@@ -2173,8 +2085,8 @@
    "videos": []
   },
   {
-   "title": "The night watch: the YouTubers who were guardians of a shark stuck in a South Korean canal",
-   "summary": "Wearing hi-vis and carrying selfie sticks, livestreamers watched over an animal that was trapped for a month and drew more than 1.6m visitors before being guided out In South Korea , they call them jagyeongdan , a word whose meaning sits somewhere between vigilante group and neig",
+   "title": "Shark trapped for a month in South Korean canal is finally freed",
+   "summary": "Bukang-i successfully guided out after month in which it drew 1.6m visitors and was watched over by YouTubers In South Korea , they call them jagyeongdan , a word whose meaning sits somewhere between vigilante group and neighbourhood watch. Each night they put on hi-vis vests, pi",
    "category": "General",
    "leans": [
     -1
@@ -2192,12 +2104,21 @@
      "name": "The Guardian",
      "lean": -1,
      "label": "Lean Left",
-     "title": "The night watch: the YouTubers who were guardians of a shark stuck in a South Korean canal",
+     "title": "Shark trapped for a month in South Korean canal is finally freed",
      "url": "https://www.theguardian.com/world/2026/oct/21/youtube-watch-over-shark-stuck-south-korea-canal-busan-bukang-i"
     }
    ],
    "factchecks": [],
-   "videos": []
+   "videos": [
+    {
+     "videoId": "Oj0GiacBrYw",
+     "title": "South Korean authorities make third attempt to return trapped shark to open sea",
+     "thumb": "https://i.ytimg.com/vi/Oj0GiacBrYw/hqdefault.jpg",
+     "channel": "AP",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
   },
   {
    "title": "China’s economy grows faster than forecast after AI boom boosts exports",
@@ -2369,6 +2290,87 @@
    ],
    "factchecks": [],
    "videos": []
+  },
+  {
+   "title": "Russians locked out of bank accounts and apartments as Ukraine hits data centers",
+   "summary": "The strikes that took place over several days earlier this month were the first publicized attacks on Russian data centers.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Russians locked out of bank accounts and apartments as Ukraine hits data centers",
+     "url": "https://www.nbcnews.com/world/russia/russia-ukraine-yandex-data-centers-attacks-trump-rcna602753"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Iran says indirect talks with U.S. on ceasefire proposal continue",
+   "summary": "Iran says the U.S. is seeking changes to a seven-day ceasefire proposal Trump rejected last month as indirect talks continue.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Iran says indirect talks with U.S. on ceasefire proposal continue",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-ceasefire-talks-ongoing/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Trump weighs moving White House press corps out of building",
+   "summary": "Outside allies of President Trump have recently pushed the idea of moving the White House press corps to another building, including former Trump strategist Steve Bannon, one source said.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump weighs moving White House press corps out of building",
+     "url": "https://www.cbsnews.com/news/trump-white-house-press-corps/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
   }
  ],
  "blindspots": [
@@ -2381,21 +2383,14 @@
     2
    ],
    "span": 1,
-   "n_sources": 3,
+   "n_sources": 2,
    "balance": {
     "l": 0,
     "c": 0,
-    "r": 3
+    "r": 2
    },
    "blindspot": "left",
    "sources": [
-    {
-     "name": "Reason",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Trump's $8 Billion Diesel Bailout Pays Farmers for a Problem He Created",
-     "url": "https://reason.com/2026/10/20/trumps-8-billion-diesel-bailout-pays-farmers-for-a-problem-he-created/"
-    },
     {
      "name": "Washington Times",
      "lean": 1,
@@ -2446,16 +2441,41 @@
     }
    ],
    "factchecks": [],
-   "videos": [
+   "videos": []
+  },
+  {
+   "title": "The Supreme Court is about to decide whether to ban trans women from women’s sports",
+   "summary": "One of the last decade’s most consequential changes to how the Supreme Court operates is the growth of the so-called shadow docket — a process that allows the justices to decide cases unusually quickly, and often without full briefing or oral argument. Historically, the Court wou",
+   "category": "Politics",
+   "leans": [
+    -2
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
     {
-     "videoId": "84Y1GwQxZtc",
-     "title": "News Wrap: Britain sending air support to Saudi Arabia amid Houthi attacks",
-     "thumb": "https://i.ytimg.com/vi/84Y1GwQxZtc/hqdefault.jpg",
-     "channel": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left"
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "The Supreme Court is about to decide whether to ban trans women from women’s sports",
+     "url": "https://www.vox.com/politics/507025/supreme-court-kmk-washington-transgender-sports"
+    },
+    {
+     "name": "Slate",
+     "lean": -2,
+     "label": "Left",
+     "title": "The Supreme Court Is Poised to Undo a Basic Trans Right That Has Been in Place for Three Decades",
+     "url": "https://slate.com/news-and-politics/2026/10/supreme-court-trans-rights-trump-fail.html?via=rss"
     }
-   ]
+   ],
+   "factchecks": [],
+   "videos": []
   },
   {
    "title": "Corruption is finally breaking through to voters this time",
@@ -2486,40 +2506,6 @@
      "label": "Left",
      "title": "Voters Are Furious About Corruption",
      "url": "https://www.motherjones.com/politics/2026/10/voters-corruption-donald-trum/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Enes Kanter Freedom says he’s in touch with FBI after death threats over WNBA Finals plans",
-   "summary": "Enes Kanter Freedom says he's in contact with the FBI after receiving death threats ahead of his planned appearance at WNBA Finals Game 3 in Atlanta.",
-   "category": "General",
-   "leans": [
-    2
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Enes Kanter Freedom says he’s in touch with FBI after death threats over WNBA Finals plans",
-     "url": "https://www.foxnews.com/outkick-sports/enes-kanter-freedom-touch-fbi-death-threats-wnba-finals-plans"
-    },
-    {
-     "name": "Daily Caller",
-     "lean": 2,
-     "label": "Right",
-     "title": "Enes Kanter Freedom And Royce White, Who Tried To Join WNBA, Are ‘Both Men,’ League Commissioner Tells Congress",
-     "url": "https://dailycaller.com/2026/10/20/enes-kanter-freedom-royce-white-wnba-men-congress-cathy-engelbert"
     }
    ],
    "factchecks": [],
@@ -2669,6 +2655,12 @@
   },
   {
    "org": "FactCheck.org",
+   "title": "Trump’s Numbers, October 2026 Update",
+   "link": "https://www.factcheck.org/2026/10/trumps-numbers-october-2026-update/",
+   "summary": "Our latest quarterly report on various statistical indicators of how the country is faring as the midterms loom. The post Trump’s Numbers, October 2026 Update appeared first on FactCheck.org ."
+  },
+  {
+   "org": "FactCheck.org",
    "title": "Ads in Maine Make Misleading Tax Claims About Jackson",
    "link": "https://www.factcheck.org/2026/10/ads-in-maine-make-misleading-tax-claims-about-jackson/",
    "summary": "In the Maine Senate race, ads from pro-Republican groups give Democratic candidate Troy Jackson the nickname “Taxin’ Jackson,” but they make misleading claims about his proposal for Social Security taxes and his votes on some other issues. The post Ads in Maine Make Misleading Ta"
@@ -2722,22 +2714,16 @@
    "summary": "President Donald Trump’s remarks about the possibility that Iran could “take out” Los Angeles and San Diego have sparked a firestorm of criticism, with Democrats claiming the president was either calling for a foreign adversary to attack the U.S. or portraying the destruction of "
   },
   {
-   "org": "FactCheck.org",
-   "title": "MAGA Inc.",
-   "link": "https://www.factcheck.org/2026/10/maga-inc-3/",
-   "summary": "A political action committee affiliated with President Donald Trump. The post MAGA Inc. appeared first on FactCheck.org ."
+   "org": "Full Fact",
+   "title": "How much of the fall in pensioner poverty is ‘thanks’ to the Conservatives?",
+   "link": "https://fullfact.org/economy/helen-whately-conservatives-pensioner-poverty/",
+   "summary": "Conservative shadow minister Helen Whately claimed that the halving of pensioner poverty was “in no small part” thanks to her party. But most of that fall happened when Labour was in power."
   },
   {
    "org": "Full Fact",
    "title": "Photo of elderly French couple ‘stripped and robbed’ during riots is AI",
    "link": "https://fullfact.org/world/photo-elderly-french-couple-stripped-ai/",
    "summary": "A viral image appears to show an elderly French couple in their underwear after supposedly being stripped and robbed during the recent riots in France. But it isn’t real and was made with AI."
-  },
-  {
-   "org": "Full Fact",
-   "title": "Video of Palestine and Jordan flags flying from top of Eiffel Tower is AI-generated",
-   "link": "https://fullfact.org/world/palestine-and-jordan-flags-eiffel-tower-ai-generated/",
-   "summary": "Footage appearing to show the Palestinian and Jordanian flags flying from the Eiffel Tower contains visual inconsistencies indicating it was created or edited using artificial intelligence."
   }
  ]
 }
