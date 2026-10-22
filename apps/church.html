@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steady Church</title>
+<meta name="description" content="Steady Church — a calm, private way to run a church or ministry: prayer requests, volunteers, events, giving, small-group attendance, meetings and thank-yous. Your data stays on your device.">
+<link rel="stylesheet" href="shared.css">
+<style>:root{--accent:#a3465f;--accent-2:#c05a76;--accent-dark:#853a4e}
+  #church-print{display:none}
+  @media print{body.printing>*:not(#church-print){display:none!important}body.printing #church-print{display:block!important}@page{margin:16mm}}
+  .att-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+  .att-chip{display:flex;align-items:center;gap:8px;background:var(--surface2,#1c2745);border:1px solid var(--line,#243150);border-radius:10px;padding:8px 10px;cursor:pointer}
+  .att-chip.on{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 16%,transparent)}
+  .att-chip .b{width:20px;height:20px;border-radius:6px;border:1.5px solid var(--line,#243150);display:grid;place-items:center;font-size:12px;flex:none}
+  .att-chip.on .b{background:var(--accent);border-color:var(--accent);color:#fff}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div style="display:flex;align-items:center;gap:10px"><button class="icon-btn hamb" id="hambBtn" title="Menu">☰</button><a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Church</b></a></div>
+  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="premhdr" data-steady="premium">⭐ Premium</button><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
+</div></header>
+<div class="shell">
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side">
+  <div class="navgroup"><div class="navhead">Dashboard</div>
+    <button class="snav active" data-panel="dash">📊 This week</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Ministry</div>
+    <button class="snav" data-panel="prayer">🙏 Prayer list</button>
+    <button class="snav" data-panel="vol">🙌 Volunteers</button>
+    <button class="snav" data-panel="events">📅 Events</button>
+    <button class="snav" data-panel="groups">👥 Small groups</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Giving</div>
+    <button class="snav" data-panel="give">💝 Giving &amp; goals</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Premium</div>
+    <button class="snav" data-panel="meet">📝 Meetings<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="members">📇 Directory<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="thanks">💌 Thank-yous<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="binder">📘 Bulletin<span class="lk">🔒</span></button>
+  </div>
+  <div class="navgroup"><div class="navhead">You</div>
+    <button class="snav" data-panel="rewards">🏆 Rewards</button>
+  </div>
+</aside>
+<main class="main">
+  <section class="panel active" id="panel-dash">
+    <div class="hero"><div class="lbl" id="d-date">Steady Church</div><div class="big" id="d-attn">0</div><div class="meta">things that need attention this week</div>
+      <div class="mini"><div>Upcoming events<b id="d-events">0</b></div><div>Prayers open<b id="d-prayers">0</b></div><div>Volunteers<b id="d-vol">0</b></div><div>Given this month<b id="d-give">$0</b></div></div></div>
+    <div class="grid2">
+      <div class="card"><h2>Coming up</h2><p class="sub">Your next events and what's unfinished</p><div id="d-upcoming"></div></div>
+      <div class="card"><h2>On the prayer list</h2><p class="sub">Lifting these up right now</p><div id="d-pray"></div></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-prayer">
+    <div class="card"><h2>Prayer requests</h2><p class="sub">Keep the congregation's prayer list in one place. Mark a request answered and celebrate the win.</p>
+      <div class="addform" style="grid-template-columns:1fr 150px auto"><div class="field"><label>Request</label><input id="pr-text" placeholder="Healing for… / travel safety / a job…"></div><div class="field"><label>For whom (optional)</label><input id="pr-who" placeholder="Name or family"></div><button class="btn" id="pr-add">Add</button></div>
+      <div class="seg" id="pr-seg" style="max-width:360px;margin-top:12px"><button class="on" data-f="open">🙏 Open</button><button data-f="answered">✅ Answered</button><button data-f="all">All</button></div>
+      <div id="pr-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-vol">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Volunteers</div><div class="val" id="vo-count">0</div></div>
+      <div class="stat"><div class="label">Ministries</div><div class="val" id="vo-min">0</div></div>
+      <div class="stat"><div class="label">Hours logged</div><div class="val" id="vo-hours">0</div></div>
+    </div>
+    <div class="card"><h2>Volunteer roster</h2><p class="sub">Who serves where — and the hours they give. Tap <b>+1h</b> after they serve.</p>
+      <div class="addform" style="grid-template-columns:1fr 150px 140px auto"><div class="field"><label>Name</label><input id="vo-name" placeholder="Volunteer name"></div><div class="field"><label>Ministry / role</label><input id="vo-role" placeholder="Greeter, worship, kids…"></div><div class="field"><label>Phone (optional)</label><input id="vo-phone" placeholder="(555) 555-5555"></div><button class="btn" id="vo-add">Add</button></div>
+      <div id="vo-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-events">
+    <div class="card"><h2>Events &amp; planning</h2><p class="sub">Every service, outreach and fundraiser — with a checklist for each so nothing gets missed.</p>
+      <div class="addform" style="grid-template-columns:1fr 150px auto"><div class="field"><label>Event</label><input id="ev-name" placeholder="Easter service, food drive…"></div><div class="field"><label>Date</label><input id="ev-date" type="date"></div><button class="btn" id="ev-add">Add</button></div>
+      <div id="ev-list" style="margin-top:14px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-groups">
+    <div class="card"><h2>Small groups</h2><p class="sub">Track your groups and take attendance in a tap. Add a group, add people, then "Take attendance" each time you meet.</p>
+      <div class="addform" style="grid-template-columns:1fr 150px auto"><div class="field"><label>Group name</label><input id="gp-name" placeholder="Tuesday Bible study…"></div><div class="field"><label>Meets on</label><select id="gp-day"><option value="">—</option><option>Sun</option><option>Mon</option><option>Tue</option><option>Wed</option><option>Thu</option><option>Fri</option><option>Sat</option></select></div><button class="btn" id="gp-add">Add</button></div>
+      <div id="gp-list" style="margin-top:14px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-give">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">This month</div><div class="val" id="gv-month">$0</div></div>
+      <div class="stat"><div class="label">This year</div><div class="val" id="gv-year">$0</div></div>
+      <div class="stat"><div class="label">Gifts logged</div><div class="val" id="gv-count">0</div></div>
+    </div>
+    <div class="grid2">
+      <div class="card"><h2>Fundraiser goal</h2><p class="sub">Set a target and watch it fill as gifts come in.</p>
+        <div class="addform" style="grid-template-columns:1fr 130px auto"><div class="field"><label>What for</label><input id="gl-label" placeholder="Building fund, missions trip…"></div><div class="field"><label>Target $</label><input id="gl-target" type="number" inputmode="decimal" placeholder="5000"></div><button class="btn" id="gl-set">Set</button></div>
+        <div id="gv-goal" style="display:flex;justify-content:center;margin-top:14px"></div>
+      </div>
+      <div class="card"><h2>By fund</h2><p class="sub">Where giving is going</p><div id="gv-breakdown" style="display:flex;justify-content:center;align-items:center;min-height:150px"></div></div>
+    </div>
+    <div class="card"><h2>Log a gift</h2><p class="sub">Record tithes, offerings and donations. Leave the name blank to keep it anonymous.</p>
+      <div class="addform" style="grid-template-columns:130px 1fr 140px 130px auto"><div class="field"><label>Date</label><input id="gv-date" type="date"></div><div class="field"><label>From (optional)</label><input id="gv-src" placeholder="Name / Anonymous"></div><div class="field"><label>Fund</label><select id="gv-fund"><option>General</option><option>Tithe</option><option>Missions</option><option>Building</option><option>Benevolence</option><option>Youth</option></select></div><div class="field"><label>Amount $</label><input id="gv-amt" type="number" inputmode="decimal" placeholder="0"></div><button class="btn" id="gv-add">Add</button></div>
+      <div id="gv-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-meet">
+    <div class="card"><h2>Meetings</h2><p class="sub">Build an agenda before, capture minutes after — board, staff or ministry team. One record per meeting.</p>
+      <div class="addform" style="grid-template-columns:1fr 150px auto"><div class="field"><label>Meeting</label><input id="mt-title" placeholder="Board meeting, staff sync…"></div><div class="field"><label>Date</label><input id="mt-date" type="date"></div><button class="btn" id="mt-add">Add</button></div>
+      <div id="mt-list" style="margin-top:14px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-members">
+    <div class="card"><h2>Member directory</h2><p class="sub">Keep contact details for your congregation in one private place — one-tap call.</p>
+      <div class="addform" style="grid-template-columns:1fr 140px 1fr auto"><div class="field"><label>Name</label><input id="me-name" placeholder="Member name"></div><div class="field"><label>Phone</label><input id="me-phone" placeholder="(555) 555-5555"></div><div class="field"><label>Email</label><input id="me-email" placeholder="name@email.com"></div><button class="btn" id="me-add">Add</button></div>
+      <div class="field" style="margin-top:9px"><input id="me-note" placeholder="Notes (family, ministry, needs a ride…)"></div>
+      <div id="me-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-thanks">
+    <div class="card"><h2>Thank-you tracker</h2><p class="sub">Nobody slips through the cracks — note who to thank and why, then mark it sent.</p>
+      <div class="addform" style="grid-template-columns:1fr 1fr auto"><div class="field"><label>Who</label><input id="th-name" placeholder="Name"></div><div class="field"><label>For what</label><input id="th-reason" placeholder="A gift, volunteering, hosting…"></div><button class="btn" id="th-add">Add</button></div>
+      <div class="seg" id="th-seg" style="max-width:300px;margin-top:12px"><button class="on" data-f="todo">To send</button><button data-f="sent">Sent</button></div>
+      <div id="th-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-binder">
+    <div class="card"><h2>Weekly bulletin</h2><p class="sub">One printable sheet — this week's events, the prayer list and the giving update. Print it for Sunday or save as a PDF.</p>
+      <button class="btn" id="bn-print">🖨 Print / Save as PDF</button>
+    </div>
+    <div class="card"><h2>Preview</h2><div id="bn-prev"></div></div>
+  </section>
+
+  <section class="panel" id="panel-rewards">
+    <div class="hero"><div class="lbl">Faithful &amp; steady</div><div class="big" id="rw-answered">0</div><div class="meta">prayers marked answered</div>
+      <div class="mini"><div>Badges<b id="rw-count">0</b></div></div></div>
+    <div class="card"><h2>Your level</h2><p class="sub">Shepherding the details — prayers, people and events — earns XP.</p><div id="xp-card"></div></div>
+    <div class="card"><h2>Today's goals</h2><p class="sub">Small, steady acts of care.</p><div id="quests"></div></div>
+    <div class="card"><h2>Achievements</h2><p class="sub">Milestones as your ministry stays steady.</p><div class="badgegrid" id="rw-badges"></div></div>
+  </section>
+</main>
+</div>
+<footer class="ft">Steady Church · a Steady Systems app · your data stays on this device</footer>
+<div id="toasts"></div>
+<div id="church-print"></div>
+<script src="shared.js"></script>
+<script>
+var DEF={prayers:[],volunteers:[],events:[],giving:[],goal:{label:"",target:0},groups:[],meetings:[],members:[],thanks:[]};
+var db=Steady.load("church",DEF);var S=Steady;
+function daysTo(d){if(!d)return null;var t=new Date();t.setHours(0,0,0,0);return Math.round((new Date(d+"T00:00:00")-t)/86400000);}
+function fmtDate(d){return d?new Date(d+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}):"";}
+function fmtShort(d){return d?new Date(d+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"}):"";}
+function thisMonth(){return S.todayISO().slice(0,7);}
+function thisYear(){return S.todayISO().slice(0,4);}
+
+/* ---------- prayer ---------- */
+var prFilter="open";
+function renderPrayer(){
+  var l=S.el("pr-list");var arr=db.prayers.slice().sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+  if(prFilter==="open")arr=arr.filter(p=>!p.answered);
+  else if(prFilter==="answered")arr=arr.filter(p=>p.answered);
+  l.innerHTML=arr.length?"":'<div class="empty">No '+(prFilter==="all"?"":prFilter+" ")+'prayer requests yet.</div>';
+  arr.forEach(function(p){var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm"'+(p.answered?' style="text-decoration:line-through;opacity:.65"':'')+'>'+esc(p.text)+'<div class="meta">'+(p.who?esc(p.who)+" · ":"")+fmtShort(p.date)+(p.answered?" · answered 🙌":"")+'</div></div>';
+    var btn=document.createElement("button");btn.className="btn sm"+(p.answered?" ghost":"");btn.textContent=p.answered?"Reopen":"Answered";btn.style.marginLeft="6px";
+    btn.onclick=function(){p.answered=!p.answered;if(p.answered)S.confetti();S.save();renderPrayer();renderDash();renderRewards();S.toast(p.answered?"Praise! Marked answered 🙌":"Reopened",1);};
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.prayers=db.prayers.filter(x=>x.id!==p.id);S.save();renderPrayer();renderDash();renderRewards();};
+    r.appendChild(left);r.appendChild(btn);r.appendChild(del);l.appendChild(r);});
+}
+S.el("pr-add").onclick=function(){var t=S.val("pr-text");if(!t)return;db.prayers.push({id:S.uid(),text:t,who:S.val("pr-who"),answered:false,date:S.todayISO()});S.save();S.clr("pr-text","pr-who");renderPrayer();renderDash();renderRewards();S.toast("Added to the prayer list 🙏",1);};
+document.querySelectorAll("#pr-seg button").forEach(function(b){b.onclick=function(){document.querySelectorAll("#pr-seg button").forEach(x=>x.classList.remove("on"));b.classList.add("on");prFilter=b.dataset.f;renderPrayer();};});
+
+/* ---------- volunteers ---------- */
+function renderVol(){
+  var mins={};db.volunteers.forEach(v=>{if(v.role)mins[v.role.toLowerCase()]=1;});
+  S.el("vo-count").textContent=db.volunteers.length;
+  S.el("vo-min").textContent=Object.keys(mins).length;
+  S.el("vo-hours").textContent=db.volunteers.reduce((a,b)=>a+(Number(b.hours)||0),0);
+  var l=S.el("vo-list");l.innerHTML=db.volunteers.length?"":'<div class="empty">No volunteers yet. Add your greeters, worship team, kids helpers…</div>';
+  db.volunteers.slice().sort((a,b)=>(a.role||"").localeCompare(b.role||"")||(a.name||"").localeCompare(b.name||"")).forEach(function(v){
+    var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+esc(v.name)+'<div class="meta">'+(v.role?esc(v.role):"—")+" · "+(Number(v.hours)||0)+"h"+(v.phone?" · "+esc(v.phone):"")+'</div></div>';
+    var plus=document.createElement("button");plus.className="btn sm";plus.textContent="+1h";plus.style.marginLeft="6px";plus.onclick=function(){v.hours=(Number(v.hours)||0)+1;S.save();renderVol();renderRewards();S.toast("Logged an hour — thank them! 🙌",1);};
+    var call=v.phone?'<a class="btn ghost sm" style="margin-left:6px" href="tel:'+v.phone.replace(/[^0-9+]/g,"")+'">Call</a>':"";
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.volunteers=db.volunteers.filter(x=>x.id!==v.id);S.save();renderVol();renderRewards();};
+    r.appendChild(left);r.appendChild(plus);if(call){var s=document.createElement("span");s.innerHTML=call;r.appendChild(s.firstChild);}r.appendChild(del);l.appendChild(r);});
+}
+S.el("vo-add").onclick=function(){var n=S.val("vo-name");if(!n)return;db.volunteers.push({id:S.uid(),name:n,role:S.val("vo-role"),phone:S.val("vo-phone"),hours:0});S.save();S.clr("vo-name","vo-role","vo-phone");renderVol();renderRewards();S.toast("Added",1);};
+
+/* ---------- events ---------- */
+function renderEvents(){
+  var l=S.el("ev-list");var arr=db.events.slice().sort((a,b)=>(a.date||"9").localeCompare(b.date||"9"));
+  l.innerHTML=arr.length?"":'<div class="empty">No events yet. Add your next service, outreach or fundraiser.</div>';
+  arr.forEach(function(ev){
+    var dd=daysTo(ev.date),done=ev.tasks.filter(t=>t.done).length,tot=ev.tasks.length;
+    var cls=dd===null?"":dd<0?"":dd<=7?"warn":"good",txt=dd===null?"":dd<0?"past":dd===0?"today":dd===1?"tomorrow":"in "+dd+"d";
+    var card=document.createElement("div");card.className="card";card.style.margin="0 0 12px";
+    var head=document.createElement("div");head.style.cssText="display:flex;align-items:center;gap:8px;flex-wrap:wrap";
+    head.innerHTML='<b style="font-size:16px">'+esc(ev.name)+'</b>'+(ev.date?'<span class="meta">'+fmtDate(ev.date)+'</span>':"")+(txt?' <span class="pill '+cls+'">'+txt+'</span>':"")+'<span class="meta" style="margin-left:auto">'+done+'/'+tot+' done</span>';
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.style.marginLeft="6px";del.onclick=function(){db.events=db.events.filter(x=>x.id!==ev.id);S.save();renderEvents();renderDash();renderRewards();};
+    head.appendChild(del);card.appendChild(head);
+    var tl=document.createElement("div");tl.style.marginTop="8px";
+    ev.tasks.forEach(function(t){var r=document.createElement("div");r.className="row";
+      var box=document.createElement("div");box.className="boxcell";box.style.cssText="width:22px;height:22px;aspect-ratio:auto;flex:none";if(t.done){box.classList.add("on");box.textContent="✓";}box.onclick=function(){t.done=!t.done;S.save();renderEvents();renderDash();renderRewards();};
+      var nm=document.createElement("span");nm.className="nm";nm.textContent=t.text;nm.style.cssText=t.done?"text-decoration:line-through;opacity:.6":"";
+      var x=document.createElement("button");x.className="del";x.textContent="×";x.onclick=function(){ev.tasks=ev.tasks.filter(y=>y.id!==t.id);S.save();renderEvents();renderDash();};
+      r.appendChild(box);r.appendChild(nm);r.appendChild(x);tl.appendChild(r);});
+    var af=document.createElement("div");af.className="addform";af.style.cssText="grid-template-columns:1fr auto;margin-top:8px";
+    var inp=document.createElement("input");inp.placeholder="Add a to-do (book room, print flyers…)";
+    var addb=document.createElement("button");addb.className="btn sm";addb.textContent="Add";
+    function addTask(){var v=inp.value.trim();if(!v)return;ev.tasks.push({id:S.uid(),text:v,done:false});S.save();renderEvents();renderDash();}
+    addb.onclick=addTask;inp.onkeydown=function(e){if(e.key==="Enter")addTask();};
+    af.appendChild(inp);af.appendChild(addb);card.appendChild(tl);card.appendChild(af);l.appendChild(card);});
+}
+S.el("ev-add").onclick=function(){var n=S.val("ev-name");if(!n)return;db.events.push({id:S.uid(),name:n,date:S.val("ev-date"),tasks:[]});S.save();S.clr("ev-name","ev-date");renderEvents();renderDash();renderRewards();S.toast("Event added",1);};
+
+/* ---------- small groups ---------- */
+var takingFor=null;
+function groupRate(g){if(!g.sessions.length)return null;var tot=0,present=0;g.sessions.forEach(function(s){tot+=g.roster.length;present+=s.present.length;});return tot?Math.round(present/tot*100):null;}
+function renderGroups(){
+  var l=S.el("gp-list");l.innerHTML=db.groups.length?"":'<div class="empty">No groups yet. Add a small group, then add its members.</div>';
+  db.groups.forEach(function(g){
+    var card=document.createElement("div");card.className="card";card.style.margin="0 0 12px";
+    var rate=groupRate(g);
+    var head=document.createElement("div");head.style.cssText="display:flex;align-items:center;gap:8px;flex-wrap:wrap";
+    head.innerHTML='<b style="font-size:16px">'+esc(g.name)+'</b>'+(g.day?'<span class="meta">'+g.day+'s</span>':"")+'<span class="meta">'+g.roster.length+' people · '+g.sessions.length+' met</span>'+(rate!=null?' <span class="pill '+(rate>=70?"good":rate>=40?"warn":"")+'">'+rate+'% present</span>':"");
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.style.marginLeft="auto";del.onclick=function(){db.groups=db.groups.filter(x=>x.id!==g.id);S.save();renderGroups();S.toast("Group removed");};
+    head.appendChild(del);card.appendChild(head);
+    if(takingFor===g.id){
+      var box=document.createElement("div");box.style.marginTop="10px";
+      box.innerHTML='<p class="sub" style="margin:0 0 8px">Tap everyone who\'s here today ('+fmtShort(S.todayISO())+'):</p>';
+      var grid=document.createElement("div");grid.className="att-grid";var chosen={};
+      g.roster.forEach(function(m){var chip=document.createElement("div");chip.className="att-chip";chip.innerHTML='<span class="b"></span><span>'+esc(m)+'</span>';
+        chip.onclick=function(){chosen[m]=!chosen[m];chip.classList.toggle("on",!!chosen[m]);chip.querySelector(".b").textContent=chosen[m]?"✓":"";};grid.appendChild(chip);});
+      box.appendChild(grid);
+      var row=document.createElement("div");row.style.cssText="display:flex;gap:8px;margin-top:10px";
+      var save=document.createElement("button");save.className="btn sm";save.textContent="Save attendance";
+      save.onclick=function(){var present=Object.keys(chosen).filter(k=>chosen[k]);g.sessions.push({date:S.todayISO(),present:present});takingFor=null;S.save();renderGroups();renderRewards();S.toast(present.length+" marked present ✅",1);};
+      var cancel=document.createElement("button");cancel.className="btn ghost sm";cancel.textContent="Cancel";cancel.onclick=function(){takingFor=null;renderGroups();};
+      row.appendChild(save);row.appendChild(cancel);box.appendChild(row);card.appendChild(box);
+    }else{
+      if(g.roster.length){var pr=document.createElement("div");pr.className="meta";pr.style.margin="8px 0";pr.textContent=g.roster.join(" · ");card.appendChild(pr);}
+      var af=document.createElement("div");af.className="addform";af.style.cssText="grid-template-columns:1fr auto auto;margin-top:8px";
+      var inp=document.createElement("input");inp.placeholder="Add a person";
+      var addb=document.createElement("button");addb.className="btn ghost sm";addb.textContent="Add person";
+      function addM(){var v=inp.value.trim();if(!v)return;g.roster.push(v);S.save();renderGroups();}
+      addb.onclick=addM;inp.onkeydown=function(e){if(e.key==="Enter")addM();};
+      var take=document.createElement("button");take.className="btn sm";take.textContent="Take attendance";take.onclick=function(){if(!g.roster.length){S.toast("Add people first");return;}takingFor=g.id;renderGroups();};
+      af.appendChild(inp);af.appendChild(addb);af.appendChild(take);card.appendChild(af);
+    }
+    l.appendChild(card);});
+}
+S.el("gp-add").onclick=function(){var n=S.val("gp-name");if(!n)return;db.groups.push({id:S.uid(),name:n,day:S.el("gp-day").value,roster:[],sessions:[]});S.save();S.clr("gp-name");renderGroups();S.toast("Group added",1);};
+
+/* ---------- giving ---------- */
+var FUNDCOLORS={General:"#a3465f",Tithe:"#c05a76",Missions:"#4a90e2",Building:"#E8A33C",Benevolence:"#2fae5f",Youth:"#8168f2"};
+function renderGive(){
+  var mo=thisMonth(),yr=thisYear();
+  var m=db.giving.filter(g=>(g.date||"").slice(0,7)===mo).reduce((a,b)=>a+(Number(b.amount)||0),0);
+  var y=db.giving.filter(g=>(g.date||"").slice(0,4)===yr).reduce((a,b)=>a+(Number(b.amount)||0),0);
+  S.el("gv-month").textContent=S.money0(m);S.el("gv-year").textContent=S.money0(y);S.el("gv-count").textContent=db.giving.length;
+  /* goal */
+  var gc=S.el("gv-goal");
+  if(db.goal&&Number(db.goal.target)>0){var raised=db.giving.filter(g=>!db.goal.fund||g.fund===db.goal.fund).reduce((a,b)=>a+(Number(b.amount)||0),0);
+    if(db.goal.fund){raised=db.giving.filter(g=>g.fund===db.goal.fund).reduce((a,b)=>a+(Number(b.amount)||0),0);}else{raised=y;}
+    var pct=raised/Number(db.goal.target);
+    gc.innerHTML=S.ring(pct,150,S.money0(raised),"of "+S.money0(db.goal.target))+'<div style="width:100%;text-align:center;margin-top:8px" class="meta">'+esc(db.goal.label||"Goal")+' · '+Math.round(pct*100)+'%</div>';
+  }else gc.innerHTML='<div class="empty">Set a fundraiser goal above to track progress.</div>';
+  /* breakdown */
+  var funds={};db.giving.forEach(function(g){var f=g.fund||"General";funds[f]=(funds[f]||0)+(Number(g.amount)||0);});
+  var data=Object.keys(funds).map(f=>({value:funds[f],color:FUNDCOLORS[f]||"#6C748F",label:f}));
+  var bd=S.el("gv-breakdown");
+  if(data.length&&data.some(d=>d.value>0)){bd.innerHTML=S.donut(data,150)+'<div style="margin-left:14px">'+data.map(d=>'<div class="meta" style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:'+d.color+'"></span>'+d.label+' · '+S.money0(d.value)+'</div>').join("")+'</div>';}
+  else bd.innerHTML='<div class="empty">No gifts logged yet.</div>';
+  /* list */
+  var l=S.el("gv-list");var arr=db.giving.slice().sort((a,b)=>(b.date||"").localeCompare(a.date||"")).slice(0,40);
+  l.innerHTML=db.giving.length?"":'<div class="empty">No gifts yet.</div>';
+  arr.forEach(function(g){var r=document.createElement("div");r.className="row";
+    r.innerHTML='<span class="nm">'+S.money(Number(g.amount)||0)+' <span class="meta">'+(g.source?esc(g.source)+" · ":"")+(g.fund||"General")+" · "+fmtShort(g.date)+'</span></span>';
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.giving=db.giving.filter(x=>x.id!==g.id);S.save();renderGive();renderDash();renderRewards();};
+    r.appendChild(del);l.appendChild(r);});
+}
+S.el("gv-add").onclick=function(){var a=S.val("gv-amt");if(!a||Number(a)<=0){S.toast("Enter an amount");return;}db.giving.push({id:S.uid(),date:S.val("gv-date")||S.todayISO(),source:S.val("gv-src"),fund:S.el("gv-fund").value,amount:Number(a)});S.save();S.clr("gv-src","gv-amt");renderGive();renderDash();renderRewards();S.toast("Gift logged 💝",1);};
+S.el("gl-set").onclick=function(){db.goal={label:S.val("gl-label"),target:Number(S.val("gl-target"))||0,fund:""};S.save();S.clr("gl-label","gl-target");renderGive();S.toast("Goal set",1);};
+
+/* ---------- meetings (premium) ---------- */
+function renderMeet(){
+  var l=S.el("mt-list");var arr=db.meetings.slice().sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+  l.innerHTML=arr.length?"":'<div class="empty">No meetings yet. Add one, build its agenda, then jot the minutes.</div>';
+  arr.forEach(function(mt){
+    var card=document.createElement("div");card.className="card";card.style.margin="0 0 12px";
+    var head=document.createElement("div");head.style.cssText="display:flex;align-items:center;gap:8px;flex-wrap:wrap";
+    head.innerHTML='<b style="font-size:16px">'+esc(mt.title)+'</b>'+(mt.date?'<span class="meta">'+fmtDate(mt.date)+'</span>':"");
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.style.marginLeft="auto";del.onclick=function(){db.meetings=db.meetings.filter(x=>x.id!==mt.id);S.save();renderMeet();};
+    head.appendChild(del);card.appendChild(head);
+    var ah=document.createElement("div");ah.className="sub";ah.style.margin="10px 0 4px";ah.textContent="Agenda";card.appendChild(ah);
+    var al=document.createElement("div");
+    mt.agenda.forEach(function(it,i){var r=document.createElement("div");r.className="row";r.innerHTML='<span class="nm">'+(i+1)+'. '+esc(it.text)+'</span>';
+      var x=document.createElement("button");x.className="del";x.textContent="×";x.onclick=function(){mt.agenda=mt.agenda.filter(y=>y.id!==it.id);S.save();renderMeet();};r.appendChild(x);al.appendChild(r);});
+    card.appendChild(al);
+    var af=document.createElement("div");af.className="addform";af.style.cssText="grid-template-columns:1fr auto;margin-top:6px";
+    var inp=document.createElement("input");inp.placeholder="Add an agenda item";var addb=document.createElement("button");addb.className="btn ghost sm";addb.textContent="Add";
+    function addA(){var v=inp.value.trim();if(!v)return;mt.agenda.push({id:S.uid(),text:v});S.save();renderMeet();}
+    addb.onclick=addA;inp.onkeydown=function(e){if(e.key==="Enter")addA();};af.appendChild(inp);af.appendChild(addb);card.appendChild(af);
+    var mh=document.createElement("div");mh.className="sub";mh.style.margin="12px 0 4px";mh.textContent="Minutes & decisions";card.appendChild(mh);
+    var ta=document.createElement("textarea");ta.value=mt.minutes||"";ta.placeholder="What was decided, who's doing what by when…";ta.style.cssText="width:100%;min-height:80px;background:var(--surface2,#1c2745);border:1px solid var(--line,#243150);border-radius:10px;color:var(--text,#e9e4d6);padding:10px;font:inherit;resize:vertical";
+    ta.oninput=function(){mt.minutes=ta.value;S.save();};card.appendChild(ta);l.appendChild(card);});
+}
+S.el("mt-add").onclick=function(){var t=S.val("mt-title");if(!t)return;db.meetings.push({id:S.uid(),title:t,date:S.val("mt-date")||S.todayISO(),agenda:[],minutes:""});S.save();S.clr("mt-title","mt-date");renderMeet();S.toast("Meeting added",1);};
+
+/* ---------- directory (premium) ---------- */
+function renderMembers(){
+  var l=S.el("me-list");l.innerHTML=db.members.length?"":'<div class="empty">No members yet.</div>';
+  db.members.slice().sort((a,b)=>(a.name||"").localeCompare(b.name||"")).forEach(function(x){
+    var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+esc(x.name)+'<div class="meta">'+[x.phone,x.email,x.note].filter(Boolean).map(esc).join(" · ")+'</div></div>';
+    r.appendChild(left);
+    if(x.phone){var a=document.createElement("a");a.className="btn ghost sm";a.href="tel:"+x.phone.replace(/[^0-9+]/g,"");a.textContent="Call";a.style.marginLeft="6px";r.appendChild(a);}
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.members=db.members.filter(y=>y.id!==x.id);S.save();renderMembers();};
+    r.appendChild(del);l.appendChild(r);});
+}
+S.el("me-add").onclick=function(){var n=S.val("me-name");if(!n)return;db.members.push({id:S.uid(),name:n,phone:S.val("me-phone"),email:S.val("me-email"),note:S.val("me-note")});S.save();S.clr("me-name","me-phone","me-email","me-note");renderMembers();S.toast("Added",1);};
+
+/* ---------- thank-yous (premium) ---------- */
+var thFilter="todo";
+function renderThanks(){
+  var l=S.el("th-list");var arr=db.thanks.filter(t=>thFilter==="sent"?t.sent:!t.sent);
+  l.innerHTML=arr.length?"":'<div class="empty">'+(thFilter==="sent"?"Nothing sent yet.":"Nobody waiting — you're all caught up. 💌")+'</div>';
+  arr.forEach(function(t){var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm"'+(t.sent?' style="text-decoration:line-through;opacity:.65"':'')+'>'+esc(t.name)+'<div class="meta">'+esc(t.reason||"")+'</div></div>';
+    var btn=document.createElement("button");btn.className="btn sm"+(t.sent?" ghost":"");btn.textContent=t.sent?"Undo":"Mark sent";btn.style.marginLeft="6px";btn.onclick=function(){t.sent=!t.sent;S.save();renderThanks();renderRewards();S.toast(t.sent?"Marked sent 💌":"Reopened",1);};
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.thanks=db.thanks.filter(x=>x.id!==t.id);S.save();renderThanks();renderRewards();};
+    r.appendChild(left);r.appendChild(btn);r.appendChild(del);l.appendChild(r);});
+}
+S.el("th-add").onclick=function(){var n=S.val("th-name");if(!n)return;db.thanks.push({id:S.uid(),name:n,reason:S.val("th-reason"),sent:false});S.save();S.clr("th-name","th-reason");renderThanks();renderRewards();S.toast("Added",1);};
+document.querySelectorAll("#th-seg button").forEach(function(b){b.onclick=function(){document.querySelectorAll("#th-seg button").forEach(x=>x.classList.remove("on"));b.classList.add("on");thFilter=b.dataset.f;renderThanks();};});
+
+/* ---------- bulletin (premium) ---------- */
+function buildBulletinHTML(){
+  function sec(t){return '<h2 style="font-size:15px;color:#7a2f44;margin:18px 0 6px;border-bottom:2px solid #7a2f44;padding-bottom:3px">'+t+'</h2>';}
+  function rowL(a,b){return '<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #eee;font-size:13px"><span>'+a+'</span><span style="color:#555;text-align:right">'+b+'</span></div>';}
+  var none='<div style="color:#777;font-size:13px">None.</div>';
+  var up=db.events.slice().filter(e=>!e.date||daysTo(e.date)>=-1).sort((a,b)=>(a.date||"9").localeCompare(b.date||"9"));
+  var ev=up.length?up.map(e=>rowL(esc(e.name),fmtDate(e.date))).join(""):none;
+  var pr=db.prayers.filter(p=>!p.answered).slice(0,20);
+  var prh=pr.length?pr.map(p=>rowL(esc(p.text),esc(p.who||""))).join(""):none;
+  var mo=thisMonth(),m=db.giving.filter(g=>(g.date||"").slice(0,7)===mo).reduce((a,b)=>a+(Number(b.amount)||0),0);
+  var goal="";if(db.goal&&Number(db.goal.target)>0){var raised=db.giving.filter(g=>(g.date||"").slice(0,4)===thisYear()).reduce((a,b)=>a+(Number(b.amount)||0),0);goal=rowL(esc(db.goal.label||"Goal"),S.money0(raised)+" of "+S.money0(db.goal.target));}
+  return '<div style="font-family:Georgia,serif;color:#111;max-width:680px;margin:0 auto;padding:20px">'+
+    '<h1 style="font-size:26px;color:#7a2f44;margin:0 0 2px;text-align:center">Weekly Bulletin</h1>'+
+    '<div style="color:#555;font-size:12px;margin-bottom:6px;text-align:center">'+new Date().toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric",year:"numeric"})+'</div>'+
+    sec("This week")+ev+
+    sec("Prayer list")+prh+
+    sec("Giving")+rowL("Given this month",S.money0(m))+goal+
+    '<p style="font-size:10px;color:#999;margin-top:26px;text-align:center">Made with Steady Church · syssteady.gumroad.com</p></div>';
+}
+function renderBinder(){S.el("bn-prev").innerHTML='<div style="background:#fff;border-radius:10px;overflow:auto">'+buildBulletinHTML()+'</div>';}
+S.el("bn-print").onclick=function(){S.el("church-print").innerHTML=buildBulletinHTML();document.body.classList.add("printing");window.print();};
+window.onafterprint=function(){document.body.classList.remove("printing");};
+
+/* ---------- dashboard ---------- */
+function renderDash(){
+  S.el("d-date").textContent=new Date().toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"});
+  var soon=db.events.filter(e=>{var d=daysTo(e.date);return d!==null&&d>=0&&d<=7;});
+  var openPr=db.prayers.filter(p=>!p.answered).length;
+  var openTasks=0;db.events.forEach(function(e){var d=daysTo(e.date);if(d!==null&&d>=0&&d<=14)openTasks+=e.tasks.filter(t=>!t.done).length;});
+  S.el("d-attn").textContent=soon.length+openTasks;
+  S.el("d-events").textContent=db.events.filter(e=>{var d=daysTo(e.date);return d===null||d>=0;}).length;
+  S.el("d-prayers").textContent=openPr;S.el("d-vol").textContent=db.volunteers.length;
+  var mo=thisMonth();S.el("d-give").textContent=S.money0(db.giving.filter(g=>(g.date||"").slice(0,7)===mo).reduce((a,b)=>a+(Number(b.amount)||0),0));
+  var up=S.el("d-upcoming"),items=db.events.slice().filter(e=>{var d=daysTo(e.date);return d===null||d>=0;}).sort((a,b)=>(a.date||"9").localeCompare(b.date||"9")).slice(0,6);
+  up.innerHTML=items.length?items.map(function(e){var d=daysTo(e.date),left=e.tasks.filter(t=>!t.done).length;var cls=d!==null&&d<=7?"warn":"good",txt=d===null?"no date":d===0?"today":d===1?"tomorrow":"in "+d+"d";return '<div class="row"><span class="nm">'+esc(e.name)+' <span class="meta">'+(left?left+" to-do":"ready")+'</span></span><span class="pill '+cls+'">'+txt+'</span></div>';}).join(""):'<div class="empty">No upcoming events. Add one on the Events tab.</div>';
+  var pr=S.el("d-pray"),open=db.prayers.filter(p=>!p.answered).slice(0,6);
+  pr.innerHTML=open.length?open.map(p=>'<div class="row"><span class="nm">🙏 '+esc(p.text)+(p.who?' <span class="meta">'+esc(p.who)+'</span>':"")+'</span></div>').join(""):'<div class="empty">No open prayer requests. 🕊️</div>';
+}
+
+/* ---------- rewards ---------- */
+var BADGES=[
+ {id:"first",ic:"⛪",title:"Open the Doors",desc:"Added your first item",cond:c=>c.any>0},
+ {id:"pray",ic:"🙏",title:"Prayer Warrior",desc:"5+ prayer requests",cond:c=>c.prayers>=5},
+ {id:"answered",ic:"🕊️",title:"Answered!",desc:"Marked a prayer answered",cond:c=>c.answered>0},
+ {id:"team",ic:"🙌",title:"Many Hands",desc:"5+ volunteers",cond:c=>c.vol>=5},
+ {id:"served",ic:"⏱️",title:"Faithful Servants",desc:"25+ volunteer hours",cond:c=>c.hours>=25},
+ {id:"plan",ic:"📅",title:"Well Planned",desc:"An event fully checked off",cond:c=>c.eventDone>0},
+ {id:"flock",ic:"👥",title:"Shepherd",desc:"Took attendance for a group",cond:c=>c.sessions>0},
+ {id:"give",ic:"💝",title:"Generous",desc:"10+ gifts logged",cond:c=>c.gifts>=10},
+ {id:"goal",ic:"🎯",title:"Goal Reached",desc:"Hit a fundraiser goal",cond:c=>c.goalHit},
+ {id:"thanks",ic:"💌",title:"Grateful Heart",desc:"Sent 5 thank-yous",cond:c=>c.thanksSent>=5}
+];
+function renderRewards(){
+  var answered=db.prayers.filter(p=>p.answered).length;S.el("rw-answered").textContent=answered;
+  var hours=db.volunteers.reduce((a,b)=>a+(Number(b.hours)||0),0);
+  var sessions=db.groups.reduce((a,b)=>a+b.sessions.length,0);
+  var gifts=db.giving.length,gy=db.giving.filter(g=>(g.date||"").slice(0,4)===thisYear()).reduce((a,b)=>a+(Number(b.amount)||0),0);
+  var goalHit=db.goal&&Number(db.goal.target)>0&&gy>=Number(db.goal.target);
+  var eventDone=db.events.filter(e=>e.tasks.length&&e.tasks.every(t=>t.done)).length;
+  var ctx={any:db.prayers.length+db.volunteers.length+db.events.length+db.giving.length,prayers:db.prayers.length,answered:answered,vol:db.volunteers.length,hours:hours,eventDone:eventDone,sessions:sessions,gifts:gifts,goalHit:goalHit,thanksSent:db.thanks.filter(t=>t.sent).length};
+  var earned=S.renderBadges(S.el("rw-badges"),BADGES,ctx);S.el("rw-count").textContent=earned;
+  var xp=earned*40+db.prayers.length*2+answered*5+db.volunteers.length*3+Math.floor(hours)+db.events.length*4+eventDone*10+sessions*5+gifts*2+db.members.length*2+ctx.thanksSent*4;
+  S.gamify({xp:xp,badges:earned,container:S.el("xp-card")});
+  S.renderQuests(S.el("quests"),[
+    {label:"Add or update a prayer request",xp:10,done:db.prayers.some(p=>p.date===S.todayISO())},
+    {label:"No events with overdue to-dos",xp:10,done:!db.events.some(e=>{var d=daysTo(e.date);return d!==null&&d<0&&e.tasks.some(t=>!t.done);})},
+    {label:"Log this week's giving",xp:10,done:db.giving.some(g=>daysTo(g.date)!==null&&daysTo(g.date)>=-7)}
+  ]);
+}
+
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+function renderAll(){renderPrayer();renderVol();renderEvents();renderGroups();renderGive();renderMeet();renderMembers();renderThanks();renderBinder();renderDash();renderRewards();S.applyPremium();}
+
+function SAMPLE(){var t=new Date();function iso(off){var x=new Date(t.getFullYear(),t.getMonth(),t.getDate()+off);return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0");}
+  return {
+    prayers:[{id:S.uid(),text:"Healing for Brother James' surgery",who:"James R.",answered:false,date:iso(-2)},{id:S.uid(),text:"Safe travels for the missions team",who:"Missions team",answered:false,date:iso(-5)},{id:S.uid(),text:"Job for the Alvarez family",who:"Alvarez family",answered:false,date:iso(-9)},{id:S.uid(),text:"Baby Grace home from the hospital",who:"The Lees",answered:true,date:iso(-14)}],
+    volunteers:[{id:S.uid(),name:"Maria Santos",role:"Worship",phone:"(555) 210-4417",hours:36},{id:S.uid(),name:"David Kim",role:"Greeter",phone:"",hours:12},{id:S.uid(),name:"Aisha Bello",role:"Kids ministry",phone:"(555) 882-0190",hours:28},{id:S.uid(),name:"Tom Becker",role:"Sound",phone:"",hours:20},{id:S.uid(),name:"Grace Lee",role:"Hospitality",phone:"",hours:15}],
+    events:[{id:S.uid(),name:"Sunday service",date:iso(3),tasks:[{id:S.uid(),text:"Print bulletins",done:false},{id:S.uid(),text:"Confirm worship set",done:true},{id:S.uid(),text:"Set up nursery",done:false}]},{id:S.uid(),name:"Community food drive",date:iso(12),tasks:[{id:S.uid(),text:"Book the hall",done:true},{id:S.uid(),text:"Flyers to local shops",done:false},{id:S.uid(),text:"Recruit 6 volunteers",done:false}]},{id:S.uid(),name:"Youth game night",date:iso(6),tasks:[{id:S.uid(),text:"Buy snacks",done:false}]}],
+    giving:[{id:S.uid(),date:iso(-3),source:"Anonymous",fund:"Tithe",amount:250},{id:S.uid(),date:iso(-3),source:"The Kims",fund:"General",amount:120},{id:S.uid(),date:iso(-10),source:"Anonymous",fund:"Missions",amount:300},{id:S.uid(),date:iso(-10),source:"M. Santos",fund:"Building",amount:500},{id:S.uid(),date:iso(-17),source:"Anonymous",fund:"General",amount:85},{id:S.uid(),date:iso(-1),source:"Benevolence box",fund:"Benevolence",amount:60}],
+    goal:{label:"New roof fund",target:8000,fund:""},
+    groups:[{id:S.uid(),name:"Tuesday Bible study",day:"Tue",roster:["Maria","David","Aisha","Tom","Grace","Sam"],sessions:[{date:iso(-6),present:["Maria","David","Aisha","Tom"]},{date:iso(-13),present:["Maria","Aisha","Tom","Grace","Sam"]}]},{id:S.uid(),name:"Men's breakfast",day:"Sat",roster:["David","Tom","Sam","Luis"],sessions:[{date:iso(-4),present:["David","Tom","Luis"]}]}],
+    meetings:[{id:S.uid(),title:"Board meeting",date:iso(-7),agenda:[{id:S.uid(),text:"Budget review"},{id:S.uid(),text:"Roof repair bids"},{id:S.uid(),text:"Fall outreach plan"}],minutes:"Approved the roof fund goal of $8,000. David to collect two more contractor bids by next meeting. Food drive set for later this month."}],
+    members:[{id:S.uid(),name:"Maria Santos",phone:"(555) 210-4417",email:"maria@email.com",note:"Worship lead"},{id:S.uid(),name:"David Kim",phone:"(555) 771-3356",email:"",note:"Deacon"},{id:S.uid(),name:"The Alvarez family",phone:"",email:"","note":"New — needs a ride Sundays"}],
+    thanks:[{id:S.uid(),name:"Maria Santos",reason:"Leading worship all month",sent:false},{id:S.uid(),name:"The Kims",reason:"Building fund gift",sent:false},{id:S.uid(),name:"Volunteer team",reason:"Food drive setup",sent:true}]
+  };
+}
+
+S.el("ev-date").value=S.todayISO();S.el("gv-date").value=S.todayISO();S.el("mt-date").value=S.todayISO();
+S.initShell();
+S.initAccount({name:"steady-church",defaults:DEF,sample:SAMPLE,render:renderAll});
+S.initPremium({title:"Steady Church Premium",price:"1.25",desc:"Just $1.25/mo for this section — the tools to run the whole ministry.",veil:"Unlock Meetings, the Member Directory, the Thank-you tracker and the printable Weekly Bulletin.",
+  features:["📝 Meetings — agendas before, minutes after","📇 Member directory — contacts with one-tap call","💌 Thank-you tracker — nobody slips through","📘 Weekly Bulletin — one printable sheet for Sunday","🙌 Everything stays private on your device"],render:renderAll});
+renderAll();
+S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Church</h2><p>A calm, private place to run a church or ministry — prayer, volunteers, events, giving and groups, all on your device.</p></div><div class="feat"><div class="fi">🙏</div><div><b>Keep the prayer list</b><p>Add requests, celebrate the answered ones.</p></div></div><div class="feat"><div class="fi">👥</div><div><b>People &amp; giving</b><p>Volunteers, small-group attendance and a giving tracker with goals.</p></div></div>',sample:SAMPLE,render:renderAll});
+</script>
+</body>
+</html>

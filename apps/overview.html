@@ -82,7 +82,15 @@
     <div id="cal-legend" style="margin-top:12px;display:flex;flex-wrap:wrap;gap:10px 16px;font-size:11.5px;color:var(--muted)"></div>
   </div>
 
-  <div class="sectlabel" style="font:700 12px var(--display);color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin:4px 2px 10px">By app</div>
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin:4px 2px 10px">
+    <div class="sectlabel" style="font:700 12px var(--display);color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin:0">By app</div>
+    <button class="btn ghost sm" id="ov-customize">⚙ Choose apps</button>
+  </div>
+  <div class="card" id="ov-custpanel" style="display:none">
+    <h2 style="margin:0 0 4px">Show on your overview</h2>
+    <p class="sub">Turn off the apps you don't use — they disappear from the cards and the activity bars below. Only changes this page, and you can turn them back on anytime.</p>
+    <div id="ov-custlist" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:8px"></div>
+  </div>
   <div class="grid2" id="ov-doms"></div>
 
   <div class="grid2">
@@ -101,7 +109,10 @@
 <script>
 var S=Steady;S.initShell();
 function read(k){try{var r=localStorage.getItem(k);return r?JSON.parse(r):null;}catch(e){return null;}}
-var M=read("steadyMoney.v1"),H=read("steady.health.v1"),ST=read("steady.study.v1"),W=read("steady.work.v1"),HM=read("steady.home.v1"),BZ=read("steady.biz.v1"),EV=read("steady.events.v1"),MV=read("steady.move.v1"),PT=read("steady.pets.v1"),WD=read("steady.wedding.v1"),KT=read("steady.kitchen.v1"),CO=read("steady.college.v1");
+var M=read("steadyMoney.v1"),H=read("steady.health.v1"),ST=read("steady.study.v1"),W=read("steady.work.v1"),HM=read("steady.home.v1"),BZ=read("steady.biz.v1"),EV=read("steady.events.v1"),MV=read("steady.move.v1"),PT=read("steady.pets.v1"),WD=read("steady.wedding.v1"),KT=read("steady.kitchen.v1"),CO=read("steady.college.v1"),CH=read("steady.church.v1");
+var OVHIDE=read("steady.overview.hidden")||[];
+function ovHidden(k){return OVHIDE.indexOf(k)>=0;}
+function saveHide(){try{localStorage.setItem("steady.overview.hidden",JSON.stringify(OVHIDE));}catch(e){}}
 function tm(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0");}
 function dkey(dt){return dt.getFullYear()+"-"+String(dt.getMonth()+1).padStart(2,"0")+"-"+String(dt.getDate()).padStart(2,"0");}
 (function(){
@@ -215,6 +226,13 @@ if(CO&&((CO.schools||[]).length||(CO.essays||[]).length||(CO.dates||[]).length))
     essaysDone:(CO.essays||[]).filter(function(e){return e.status==="Done";}).length,essaysTotal:(CO.essays||[]).length,
     nextDeadline:coOpen.length?coOpen[0]:null};}
 
+/* ---- church ---- */
+var church=null;
+if(CH&&((CH.prayers||[]).length||(CH.volunteers||[]).length||(CH.events||[]).length||(CH.giving||[]).length)){
+  var cm3=tm();
+  church={prayersOpen:(CH.prayers||[]).filter(function(p){return !p.answered;}).length,volunteers:(CH.volunteers||[]).length,
+    events:(CH.events||[]).length,giveMo:(CH.giving||[]).filter(function(g){return (g.date||"").slice(0,7)===cm3;}).reduce(function(a,b){return a+n(b.amount);},0)};}
+
 /* ---- hero + headline ---- */
 function M0(v){return S.money0(v);}
 S.el("ov-date").textContent=new Date().toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"});
@@ -222,7 +240,7 @@ S.el("ov-nw").textContent=money?M0(money.nw):"—";
 S.el("ov-earn").textContent=work?M0(work.earnMo):"—";
 S.el("ov-gpa").textContent=study&&study.gpa!==null?study.gpa.toFixed(2):"—";
 S.el("ov-hab").textContent=health?(health.habToday+"/"+health.habCount):"—";
-var any=money||work||health||study||biz||events||move||pets||wedding||kitchen||college;
+var any=money||work||health||study||biz||events||move||pets||wedding||kitchen||college||church;
 if(!any){S.el("ov-head").textContent="Nothing yet";S.el("ov-sub").innerHTML='Open any app and your data shows up here. <a href="index.html">See the apps →</a>';}
 else{var headParts=[];if(money)headParts.push(M0(money.nw)+" net worth");if(work&&work.earnMo)headParts.push(M0(work.earnMo)+" earned");
   S.el("ov-head").textContent=headParts.length?headParts.join(" · "):"You're set up";}
@@ -254,49 +272,70 @@ function domCard(c,ic,title,link,open,rows,empty){
   return '<div class="card domcard" style="--c:'+c+'"><div class="dh"><div class="di">'+ic+'</div><h2>'+title+'</h2><a class="go" href="'+link+'" style="margin-left:auto">'+(open?"open →":"")+'</a></div>'+
     (open?('<div style="display:flex;gap:14px;flex-wrap:wrap">'+rows+'</div>'):('<div class="empty">'+empty+' <a href="'+link+'">Open '+title+' →</a></div>'))+'</div>';
 }
-var doms="";
-doms+=domCard("#19c3ad","💰","Steady Money","money/index.html",!!money,
-  money?stat("Net worth",M0(money.nw))+stat("Budget income",M0(money.incomePlan))+stat("Spent this mo",M0(money.spendMo))+stat("Debt",M0(money.debt)):"","No money data yet.");
-doms+=domCard("#8168f2","🧰","Steady Work","work.html",!!work,
-  work?stat("Earned this mo",M0(work.earnMo))+stat("Billable logged",M0(work.billable))+stat("Clients",work.clients)+stat("Goal",M0(work.goal)):"","No work data yet.");
-doms+=domCard("#2fae5f","🏃","Steady Health","health.html",!!health,
-  health?stat("Habits today",health.habToday+"/"+health.habCount)+stat("Water",health.water+"/"+health.waterGoal)+stat("Workouts (7d)",health.workouts.filter(x=>keys.indexOf(x.date)>=0).length)+stat("Logged moods",health.mood.length):"","No health data yet.");
-doms+=domCard("#4a90e2","🎓","Steady Study","study.html",!!study,
-  study?stat("GPA",study.gpa!==null?study.gpa.toFixed(2):"—")+stat("Due this week",study.dueWeek)+stat("Overdue",study.overdue)+stat("Next exam",study.nextExam!==null?study.nextExam+"d":"—"):"","No study data yet.");
-doms+=domCard("#E8A33C","🏠","Steady Home","home.html",!!home,
-  home?stat("Cleaning due",home.cleanDue+"/"+home.cleanTotal)+stat("Maintenance due",home.maintDue)+stat("Meals planned",home.meals+"/7")+stat("Documents",home.docs):"","No home data yet.");
-doms+=domCard("#e5674e","🏪","Steady Biz","biz.html",!!biz,
-  biz?stat("Revenue this mo",M0(biz.rev))+stat("Gross profit",M0(biz.profit))+stat("Orders this mo",biz.orders)+stat("Low stock",biz.low):"","No business data yet.");
-doms+=domCard("#d6468f","🎉","Steady Events","events.html",!!events,
-  events?stat("Events",events.count)+stat("Next up",events.next?(events.nextDays===0?"today":events.nextDays+"d"):"—")+stat("To-dos left",events.todosLeft)+stat("RSVP yes",events.yes):"","No events yet.");
-doms+=domCard("#b5698a","💍","Steady Wedding","wedding.html",!!wedding,
-  wedding?stat("Days to go",wedding.hasDate?(wedding.days>0?wedding.days+"d":wedding.days===0?"today":"married!"):"—")+stat("Checklist left",wedding.todosLeft)+stat("RSVP yes",wedding.yes)+stat("Spent",M0(wedding.spent)):"","No wedding planned yet.");
-doms+=domCard("#4c7ef3","🚚","Steady Move","move.html",!!move,
-  move?stat("Moving in",move.hasDate?(move.days>0?move.days+"d":move.days===0?"today":"done"):"—")+stat("Checklist",move.pct+"%")+stat("Boxes",move.boxes)+stat("To notify",move.notify):"","No move planned yet.");
-doms+=domCard("#3fa86b","🐾","Steady Pets","pets.html",!!pets,
-  pets?stat("Pets",pets.count)+stat("Due in 30d",pets.due30)+stat("Spent this mo",M0(pets.spentMo))+stat("This year",M0(pets.spentYr)):"","No pets added yet.");
-doms+=domCard("#e0733c","🍳","Steady Kitchen","kitchen.html",!!kitchen,
-  kitchen?stat("Meals planned",kitchen.meals)+stat("Groceries left",kitchen.groc)+stat("Recipes",kitchen.recipes)+stat("Expiring soon",kitchen.soon):"","No kitchen data yet.");
-doms+=domCard("#5a5fe0","🏫","Steady College","college.html",!!college,
-  college?stat("Schools",college.schools)+stat("Submitted",college.submitted)+stat("Essays done",college.essaysTotal?college.essaysDone+"/"+college.essaysTotal:"0")+stat("Next deadline",college.nextDeadline!==null?(college.nextDeadline===0?"today":college.nextDeadline+"d"):"—"):"","No college apps yet.");
-S.el("ov-doms").innerHTML=doms;
+var DOMS=[
+  {k:"money",icon:"💰",short:"Money",html:domCard("#19c3ad","💰","Steady Money","money/index.html",!!money,
+    money?stat("Net worth",M0(money.nw))+stat("Budget income",M0(money.incomePlan))+stat("Spent this mo",M0(money.spendMo))+stat("Debt",M0(money.debt)):"","No money data yet.")},
+  {k:"work",icon:"🧰",short:"Work",html:domCard("#8168f2","🧰","Steady Work","work.html",!!work,
+    work?stat("Earned this mo",M0(work.earnMo))+stat("Billable logged",M0(work.billable))+stat("Clients",work.clients)+stat("Goal",M0(work.goal)):"","No work data yet.")},
+  {k:"health",icon:"🏃",short:"Health",html:domCard("#2fae5f","🏃","Steady Health","health.html",!!health,
+    health?stat("Habits today",health.habToday+"/"+health.habCount)+stat("Water",health.water+"/"+health.waterGoal)+stat("Workouts (7d)",health.workouts.filter(x=>keys.indexOf(x.date)>=0).length)+stat("Logged moods",health.mood.length):"","No health data yet.")},
+  {k:"study",icon:"🎓",short:"Study",html:domCard("#4a90e2","🎓","Steady Study","study.html",!!study,
+    study?stat("GPA",study.gpa!==null?study.gpa.toFixed(2):"—")+stat("Due this week",study.dueWeek)+stat("Overdue",study.overdue)+stat("Next exam",study.nextExam!==null?study.nextExam+"d":"—"):"","No study data yet.")},
+  {k:"home",icon:"🏠",short:"Home",html:domCard("#E8A33C","🏠","Steady Home","home.html",!!home,
+    home?stat("Cleaning due",home.cleanDue+"/"+home.cleanTotal)+stat("Maintenance due",home.maintDue)+stat("Meals planned",home.meals+"/7")+stat("Documents",home.docs):"","No home data yet.")},
+  {k:"biz",icon:"🏪",short:"Biz",html:domCard("#e5674e","🏪","Steady Biz","biz.html",!!biz,
+    biz?stat("Revenue this mo",M0(biz.rev))+stat("Gross profit",M0(biz.profit))+stat("Orders this mo",biz.orders)+stat("Low stock",biz.low):"","No business data yet.")},
+  {k:"church",icon:"⛪",short:"Church",html:domCard("#a3465f","⛪","Steady Church","church.html",!!church,
+    church?stat("Prayers open",church.prayersOpen)+stat("Volunteers",church.volunteers)+stat("Events",church.events)+stat("Given this mo",M0(church.giveMo)):"","No church data yet.")},
+  {k:"events",icon:"🎉",short:"Events",html:domCard("#d6468f","🎉","Steady Events","events.html",!!events,
+    events?stat("Events",events.count)+stat("Next up",events.next?(events.nextDays===0?"today":events.nextDays+"d"):"—")+stat("To-dos left",events.todosLeft)+stat("RSVP yes",events.yes):"","No events yet.")},
+  {k:"wedding",icon:"💍",short:"Wedding",html:domCard("#b5698a","💍","Steady Wedding","wedding.html",!!wedding,
+    wedding?stat("Days to go",wedding.hasDate?(wedding.days>0?wedding.days+"d":wedding.days===0?"today":"married!"):"—")+stat("Checklist left",wedding.todosLeft)+stat("RSVP yes",wedding.yes)+stat("Spent",M0(wedding.spent)):"","No wedding planned yet.")},
+  {k:"move",icon:"🚚",short:"Move",html:domCard("#4c7ef3","🚚","Steady Move","move.html",!!move,
+    move?stat("Moving in",move.hasDate?(move.days>0?move.days+"d":move.days===0?"today":"done"):"—")+stat("Checklist",move.pct+"%")+stat("Boxes",move.boxes)+stat("To notify",move.notify):"","No move planned yet.")},
+  {k:"pets",icon:"🐾",short:"Pets",html:domCard("#3fa86b","🐾","Steady Pets","pets.html",!!pets,
+    pets?stat("Pets",pets.count)+stat("Due in 30d",pets.due30)+stat("Spent this mo",M0(pets.spentMo))+stat("This year",M0(pets.spentYr)):"","No pets added yet.")},
+  {k:"kitchen",icon:"🍳",short:"Kitchen",html:domCard("#e0733c","🍳","Steady Kitchen","kitchen.html",!!kitchen,
+    kitchen?stat("Meals planned",kitchen.meals)+stat("Groceries left",kitchen.groc)+stat("Recipes",kitchen.recipes)+stat("Expiring soon",kitchen.soon):"","No kitchen data yet.")},
+  {k:"college",icon:"🏫",short:"College",html:domCard("#5a5fe0","🏫","Steady College","college.html",!!college,
+    college?stat("Schools",college.schools)+stat("Submitted",college.submitted)+stat("Essays done",college.essaysTotal?college.essaysDone+"/"+college.essaysTotal:"0")+stat("Next deadline",college.nextDeadline!==null?(college.nextDeadline===0?"today":college.nextDeadline+"d"):"—"):"","No college apps yet.")}
+];
+function renderDoms(){
+  var shown=DOMS.filter(function(d){return !ovHidden(d.k);});
+  S.el("ov-doms").innerHTML=shown.length?shown.map(function(d){return d.html;}).join(""):'<div class="card" style="grid-column:1/-1"><div class="empty">Every app is hidden. Use <b>⚙ Choose apps</b> above to show the ones you use.</div></div>';
+}
+function renderCust(){
+  S.el("ov-custlist").innerHTML=DOMS.map(function(d){var on=!ovHidden(d.k);
+    return '<label style="display:flex;align-items:center;gap:8px;background:var(--card-2);border:1px solid '+(on?"var(--accent)":"var(--line)")+';border-radius:9px;padding:8px 10px;cursor:pointer;font-size:13px"><input type="checkbox" data-k="'+d.k+'"'+(on?" checked":"")+' style="accent-color:var(--accent);width:16px;height:16px"> '+d.icon+' '+d.short+'</label>';
+  }).join("");
+  document.querySelectorAll("#ov-custlist input[data-k]").forEach(function(c){c.onchange=function(){var k=c.getAttribute("data-k");
+    if(c.checked){OVHIDE=OVHIDE.filter(function(x){return x!==k;});}else if(OVHIDE.indexOf(k)<0){OVHIDE.push(k);}
+    saveHide();renderDoms();renderBalance();renderCust();};});
+}
+S.el("ov-customize").onclick=function(){var p=S.el("ov-custpanel");var open=p.style.display==="none";p.style.display=open?"block":"none";if(open)renderCust();};
+renderDoms();
 
 /* ---- balance ---- */
 function score(parts){return Math.round(parts.reduce((a,b)=>a+(b?1:0),0)/parts.length*100);}
 var bal=[
-  {bl:"Money",c:"#19c3ad",v:money?score([money.incomePlan>0,(M.categories||[]).length>0,(M.assets||[]).length||(M.debts||[]).length,money.log.length>0]):0},
-  {bl:"Work",c:"#8168f2",v:work?score([work.entries.length>0,work.time.length>0,work.clients>0]):0},
-  {bl:"Health",c:"#2fae5f",v:health?score([health.habCount>0,health.workouts.length>0,health.water>0,health.mood.length>0]):0},
-  {bl:"Study",c:"#4a90e2",v:study?score([(ST.courses||[]).length>0,study.assign.length>0,study.exams.length>0]):0},
-  {bl:"Home",c:"#E8A33C",v:home?score([home.cleanTotal>0,home.maint>0,home.meals>0,home.docs>0]):0},
-  {bl:"Biz",c:"#e5674e",v:biz?score([biz.products>0,biz.sales>0,biz.customers>0]):0},
-  {bl:"Move",c:"#4c7ef3",v:move?score([move.hasDate,move.pct>0,move.boxes>0,(MV.notify||[]).length>0]):0},
-  {bl:"Pets",c:"#3fa86b",v:pets?score([pets.count>0,(PT.health||[]).length>0,(PT.weights||[]).length>0,(PT.expenses||[]).length>0]):0},
-  {bl:"Wedding",c:"#b5698a",v:wedding?score([wedding.hasDate,(WD.todos||[]).length>0,(WD.guests||[]).length>0,(WD.budget||[]).length>0]):0},
-  {bl:"Kitchen",c:"#e0733c",v:kitchen?score([(KT.plan||[]).length>0,(KT.grocery||[]).length>0,(KT.recipes||[]).length>0,(KT.pantry||[]).length>0]):0},
-  {bl:"College",c:"#5a5fe0",v:college?score([(CO.schools||[]).length>0,(CO.essays||[]).length>0,(CO.recs||[]).length>0,(CO.dates||[]).length>0]):0}
+  {bl:"Money",k:"money",c:"#19c3ad",v:money?score([money.incomePlan>0,(M.categories||[]).length>0,(M.assets||[]).length||(M.debts||[]).length,money.log.length>0]):0},
+  {bl:"Work",k:"work",c:"#8168f2",v:work?score([work.entries.length>0,work.time.length>0,work.clients>0]):0},
+  {bl:"Health",k:"health",c:"#2fae5f",v:health?score([health.habCount>0,health.workouts.length>0,health.water>0,health.mood.length>0]):0},
+  {bl:"Study",k:"study",c:"#4a90e2",v:study?score([(ST.courses||[]).length>0,study.assign.length>0,study.exams.length>0]):0},
+  {bl:"Home",k:"home",c:"#E8A33C",v:home?score([home.cleanTotal>0,home.maint>0,home.meals>0,home.docs>0]):0},
+  {bl:"Biz",k:"biz",c:"#e5674e",v:biz?score([biz.products>0,biz.sales>0,biz.customers>0]):0},
+  {bl:"Church",k:"church",c:"#a3465f",v:church?score([(CH.prayers||[]).length>0,(CH.volunteers||[]).length>0,(CH.events||[]).length>0,(CH.giving||[]).length>0]):0},
+  {bl:"Events",k:"events",c:"#d6468f",v:events?score([(EV.events||[]).length>0,events.yes>0,events.todosLeft>=0&&events.count>0]):0},
+  {bl:"Move",k:"move",c:"#4c7ef3",v:move?score([move.hasDate,move.pct>0,move.boxes>0,(MV.notify||[]).length>0]):0},
+  {bl:"Pets",k:"pets",c:"#3fa86b",v:pets?score([pets.count>0,(PT.health||[]).length>0,(PT.weights||[]).length>0,(PT.expenses||[]).length>0]):0},
+  {bl:"Wedding",k:"wedding",c:"#b5698a",v:wedding?score([wedding.hasDate,(WD.todos||[]).length>0,(WD.guests||[]).length>0,(WD.budget||[]).length>0]):0},
+  {bl:"Kitchen",k:"kitchen",c:"#e0733c",v:kitchen?score([(KT.plan||[]).length>0,(KT.grocery||[]).length>0,(KT.recipes||[]).length>0,(KT.pantry||[]).length>0]):0},
+  {bl:"College",k:"college",c:"#5a5fe0",v:college?score([(CO.schools||[]).length>0,(CO.essays||[]).length>0,(CO.recs||[]).length>0,(CO.dates||[]).length>0]):0}
 ];
-S.el("ov-balance").innerHTML=bal.map(b=>'<div class="balrow"><span class="bl">'+b.bl+'</span><div class="bar"><span style="width:'+b.v+'%;background:'+b.c+'"></span></div><span style="font:700 13px var(--display);width:38px;text-align:right">'+b.v+'%</span></div>').join("");
+function renderBalance(){
+  S.el("ov-balance").innerHTML=bal.filter(function(b){return !ovHidden(b.k);}).map(b=>'<div class="balrow"><span class="bl">'+b.bl+'</span><div class="bar"><span style="width:'+b.v+'%;background:'+b.c+'"></span></div><span style="font:700 13px var(--display);width:38px;text-align:right">'+b.v+'%</span></div>').join("");
+}
+renderBalance();
 
 /* ---- insights ---- */
 var ins=[];
@@ -338,8 +377,8 @@ S.el("seed-btn").onclick=function(){if(confirm("This loads demo data into all th
 
 /* ---- month calendar ---- */
 (function(){
-  var APPC={money:"#19c3ad",study:"#4a90e2",work:"#8168f2",home:"#e0a93c",health:"#2fae5f",move:"#4c7ef3",pets:"#3fa86b",college:"#5a5fe0"};
-  var APPURL={money:"money/index.html",study:"study.html",work:"work.html",home:"home.html",health:"health.html",move:"move.html",pets:"pets.html",college:"college.html"};
+  var APPC={money:"#19c3ad",study:"#4a90e2",work:"#8168f2",home:"#e0a93c",health:"#2fae5f",move:"#4c7ef3",pets:"#3fa86b",college:"#5a5fe0",church:"#a3465f"};
+  var APPURL={money:"money/index.html",study:"study.html",work:"work.html",home:"home.html",health:"health.html",move:"move.html",pets:"pets.html",college:"college.html",church:"church.html"};
   function evRow(e,k,showDate){
     var date=showDate?'<span style="color:var(--muted);font-size:12px;min-width:50px;flex:none">'+new Date(k+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'</span>':"";
     return '<a href="'+(APPURL[e.app]||"#")+'" class="calev calrow" style="text-decoration:none;color:var(--ink)"><span class="cdot" style="background:'+(APPC[e.app]||"#888")+'"></span>'+date+'<span>'+e.icon+' '+e.label+'</span><span style="margin-left:auto;color:var(--muted);font-size:12px">›</span></a>';
@@ -366,6 +405,8 @@ S.el("seed-btn").onclick=function(){if(confirm("This loads demo data into all th
     if(PT&&PT.health){var pmap={};(PT.pets||[]).forEach(function(p){pmap[p.id]=p.name;});PT.health.forEach(function(h){if(h.next)add(dayOf(h.next),"💉",(h.name||"Due")+(pmap[h.petId]?(" — "+pmap[h.petId]):""),"pets");});}
     if(CO&&CO.schools)CO.schools.forEach(function(s){if(s.due)add(dayOf(s.due),(s.status==="Submitted"||s.status==="Decision in"?"✅":"🏫"),(s.status==="Submitted"?"Submitted: ":"Due: ")+s.name,"college");});
     if(CO&&CO.dates)CO.dates.forEach(function(x){add(dayOf(x.date),"📌",x.name,"college");});
+    if(CH&&CH.events&&!ovHidden("church"))CH.events.forEach(function(e){add(dayOf(e.date),"⛪",e.name,"church");});
+    if(CH&&CH.meetings&&!ovHidden("church"))CH.meetings.forEach(function(m){add(dayOf(m.date),"📝","Meeting: "+m.title,"church");});
     return ev;
   }
   function render(){
@@ -392,7 +433,7 @@ S.el("seed-btn").onclick=function(){if(confirm("This loads demo data into all th
         ev[selD].map(function(e){return evRow(e,selKey,false);}).join("");
     } else if(selD){dd.innerHTML='<div class="empty">Nothing on '+new Date(selKey+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+'.</div>';}
     else{dd.innerHTML="";}
-    S.el("cal-legend").innerHTML=[["money","💳 Money"],["work","🧾 Work"],["study","📝 Study"],["home","🔧 Home"],["health","🏃 Health"],["move","🚚 Move"],["pets","💉 Pets"],["college","🏫 College"]].map(function(x){return '<span style="display:inline-flex;align-items:center;gap:5px"><span class="cdot" style="background:'+APPC[x[0]]+'"></span>'+x[1]+'</span>';}).join("");
+    S.el("cal-legend").innerHTML=[["money","💳 Money"],["work","🧾 Work"],["study","📝 Study"],["home","🔧 Home"],["health","🏃 Health"],["move","🚚 Move"],["pets","💉 Pets"],["college","🏫 College"],["church","⛪ Church"]].map(function(x){return '<span style="display:inline-flex;align-items:center;gap:5px"><span class="cdot" style="background:'+APPC[x[0]]+'"></span>'+x[1]+'</span>';}).join("");
   }
   S.el("cal-prev").onclick=function(){cur.setMonth(cur.getMonth()-1);render();};
   S.el("cal-next").onclick=function(){cur.setMonth(cur.getMonth()+1);render();};
