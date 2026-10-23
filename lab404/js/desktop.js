@@ -54,6 +54,7 @@
     "focus":      { title: "Focus Mode",                 icon: "🎯" },
     "thisweek":   { title: "This Week",                  icon: "📅" },
     "kcoding":    { title: "Coding Play",                icon: "🐢" },
+    "dailymix":   { title: "Daily Mix",                  icon: "🎲" },
   };
 
   /* ── Cert human-readable labels ── */
@@ -355,6 +356,7 @@
       if (app === "about")   { winEl.style.width = "400px"; winEl.style.height = "340px"; }
       if (app === "forfamilies") { winEl.style.width = "640px"; winEl.style.height = "620px"; }
       if (app === "missed")  { winEl.style.width = "640px"; winEl.style.height = "580px"; }
+      if (app === "dailymix") { winEl.style.width = "640px"; winEl.style.height = "580px"; }
       if (app === "typing")  { winEl.style.width = "660px"; winEl.style.height = "580px"; }
       if (app === "cohort")  { winEl.style.width = "720px"; winEl.style.height = "600px"; }
       if (app === "stickers") { winEl.style.width = "640px"; winEl.style.height = "560px"; }
@@ -791,7 +793,7 @@
 
       /* H1: these views need the lazy-loaded study data — wait for it, then render. */
       var needsData = app.indexOf("folder-") === 0 ||
-        ["myprogress", "bygrade", "course", "transcript", "skills", "missed", "cohort", "stickers", "assign"].indexOf(app) >= 0;
+        ["myprogress", "bygrade", "course", "transcript", "skills", "missed", "cohort", "stickers", "assign", "dailymix"].indexOf(app) >= 0;
       if (needsData && window.Lab404Data && !window.Lab404Data.isLoaded()) {
         content.innerHTML = '<div class="loading-state" style="padding:2.4rem;text-align:center;color:var(--text-muted,#9aa)">Loading study content…</div>';
         window.Lab404Data.ensure().then(function () { Desktop._loadApp(winId, app, params); })
@@ -886,6 +888,9 @@
       } else if (app === "missed") {
         if (window.Lab404Missed) window.Lab404Missed.render(content);
         else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Missed-questions practice not available.</div>';
+      } else if (app === "dailymix") {
+        if (window.Lab404DailyMix) window.Lab404DailyMix.render(content);
+        else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Daily Mix not available.</div>';
       } else if (app === "typing") {
         if (window.Lab404Typing) window.Lab404Typing.render(content);
         else content.innerHTML = '<div style="padding:2rem;color:var(--text-muted);">Typing tutor not available.</div>';
@@ -1159,6 +1164,15 @@
           }).join("") + '</div>';
       }
 
+      /* R6-3: Daily Mix card — a cross-subject session of weak/overdue skills */
+      var dmxHtml = "";
+      if (window.Lab404DailyMix && Lab404DailyMix.available()) {
+        var dmxDone = Lab404DailyMix.doneToday();
+        dmxHtml = '<div class="mp-h">🎲 Daily Mix</div><button class="mp-item" data-dmx="1">' +
+          '<span class="ic">🎲</span><span style="min-width:0"><span class="lab">' + (dmxDone ? "Do another Daily Mix" : "Start your Daily Mix") + '</span>' +
+          '<span class="sb">' + (dmxDone ? "✓ done today — one more keeps your streak" : "~10 questions across your weakest skills, all subjects") + '</span></span></button>';
+      }
+
       var bmHtml = "";
       var bmShow = bms.filter(function (b) { return COURSES[b.id]; });
       if (bmShow.length) {
@@ -1184,6 +1198,7 @@
             '<div class="mp-stat"><b>' + startedN + '</b><small>Courses started</small></div>' +
           '</div>' +
           goalHtml +
+          dmxHtml +
           resumeHtml +
           missedHtml +
           '<div class="mp-h">🎯 Study next</div>' + nextHtml +
@@ -1208,6 +1223,9 @@
       });
       content.querySelectorAll(".mp-item[data-missed]").forEach(function (b) {
         b.addEventListener("click", function () { Desktop.openWindow("missed"); });
+      });
+      content.querySelectorAll(".mp-item[data-dmx]").forEach(function (b) {
+        b.addEventListener("click", function () { Desktop.openWindow("dailymix"); });
       });
       content.querySelectorAll(".mp-link[data-open]").forEach(function (b) {
         b.addEventListener("click", function () { Desktop.openWindow(this.getAttribute("data-open")); });
