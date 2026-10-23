@@ -1,7 +1,14 @@
 {
- "generated": "2026-10-23T12:49:50Z",
- "generated_human": "Oct 23, 2026 · 12:49 UTC",
+ "generated": "2026-10-23T13:00:27Z",
+ "generated_human": "Oct 23, 2026 · 13:00 UTC",
  "sources": [
+  {
+   "name": "NPR",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 10
+  },
   {
    "name": "The Guardian",
    "lean": -1,
@@ -199,12 +206,12 @@
    "count": 12
   }
  ],
- "n_articles": 327,
+ "n_articles": 336,
  "n_videos": 140,
  "trending": [
   {
    "term": "trump",
-   "n": 19
+   "n": 20
   },
   {
    "term": "election",
@@ -212,6 +219,14 @@
   },
   {
    "term": "attack",
+   "n": 9
+  },
+  {
+   "term": "israel",
+   "n": 8
+  },
+  {
+   "term": "west",
    "n": 8
   },
   {
@@ -219,20 +234,8 @@
    "n": 8
   },
   {
-   "term": "have",
-   "n": 8
-  },
-  {
    "term": "america",
    "n": 8
-  },
-  {
-   "term": "israel",
-   "n": 7
-  },
-  {
-   "term": "west",
-   "n": 7
   },
   {
    "term": "iran",
@@ -243,11 +246,23 @@
    "n": 7
   },
   {
+   "term": "have",
+   "n": 7
+  },
+  {
    "term": "democrats",
    "n": 7
   },
   {
-   "term": "omar",
+   "term": "bank",
+   "n": 6
+  },
+  {
+   "term": "democratic",
+   "n": 6
+  },
+  {
+   "term": "state",
    "n": 6
   },
   {
@@ -257,33 +272,9 @@
   {
    "term": "2026",
    "n": 6
-  },
-  {
-   "term": "france",
-   "n": 6
-  },
-  {
-   "term": "voters",
-   "n": 5
   }
  ],
  "videos": [
-  {
-   "videoId": "wotZtpj4dk8",
-   "title": "WATCH: Mayor CHARGES at resident during CHAOTIC town meeting #shorts",
-   "thumb": "https://i.ytimg.com/vi/wotZtpj4dk8/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
-  {
-   "videoId": "BKii0CFM6Pg",
-   "title": "NEW: Ilhan Omar identity controversy ERUPTS after court filing",
-   "thumb": "https://i.ytimg.com/vi/BKii0CFM6Pg/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
   {
    "videoId": "uWJ_7U7gfL0",
    "title": "18-year-old dies after falling from carnival ride in Mexico",
@@ -291,6 +282,14 @@
    "channel": "ABC News",
    "lean": -1,
    "label": "Lean Left"
+  },
+  {
+   "videoId": "9HTLyZYkGpA",
+   "title": "The fight to protect India’s 600-year-old mosque in Ujjain | #AJ shorts",
+   "thumb": "https://i.ytimg.com/vi/9HTLyZYkGpA/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
   },
   {
    "videoId": "StR7zvWz53g",
@@ -317,10 +316,26 @@
    "label": "Center"
   },
   {
+   "videoId": "CX2pWaprvw0",
+   "title": "From jewelry to bars: China’s rush to gold as a safe haven",
+   "thumb": "https://i.ytimg.com/vi/CX2pWaprvw0/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
    "videoId": "SgXPtNtaCpA",
    "title": "Trump ordered to be deposed & DOJ probes Trump ally: Ex-Trump lawyer reacts",
    "thumb": "https://i.ytimg.com/vi/SgXPtNtaCpA/hqdefault.jpg",
    "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "d--iHPCldPM",
+   "title": "Why chocolate prices might scare you this Halloween",
+   "thumb": "https://i.ytimg.com/vi/d--iHPCldPM/hqdefault.jpg",
+   "channel": "PBS NewsHour",
    "lean": -1,
    "label": "Lean Left"
   },
@@ -387,14 +402,6 @@
    "channel": "Fox News",
    "lean": 2,
    "label": "Right"
-  },
-  {
-   "videoId": "QqxVhGcavt0",
-   "title": "The battle inside the Green Party",
-   "thumb": "https://i.ytimg.com/vi/QqxVhGcavt0/hqdefault.jpg",
-   "channel": "Sky News",
-   "lean": 0,
-   "label": "Center"
   }
  ],
  "stories": [
@@ -428,15 +435,15 @@
      "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Trump hopes to flatter Putin into negotiating on Ukraine",
-     "url": "https://www.nbcnews.com/politics/donald-trump/trump-hopes-flatter-putin-negotiating-ukraine-experts-say-rcna604770"
+     "title": "Russian diesel tanker heads to the U.S., the first since Trump’s deal with Putin",
+     "url": "https://www.nbcnews.com/business/energy/russian-diesel-tanker-heads-us-trump-deal-putin-ukraine-war-rcna605187"
     },
     {
      "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Russian diesel tanker heads to the U.S., the first since Trump’s deal with Putin",
-     "url": "https://www.nbcnews.com/business/energy/russian-diesel-tanker-heads-us-trump-deal-putin-ukraine-war-rcna605187"
+     "title": "Trump hopes to flatter Putin into negotiating on Ukraine",
+     "url": "https://www.nbcnews.com/politics/donald-trump/trump-hopes-flatter-putin-negotiating-ukraine-experts-say-rcna604770"
     },
     {
      "name": "ABC News",
@@ -487,11 +494,11 @@
     2
    ],
    "span": 4,
-   "n_sources": 6,
+   "n_sources": 5,
    "balance": {
     "l": 2,
     "c": 1,
-    "r": 3
+    "r": 2
    },
    "blindspot": null,
    "sources": [
@@ -529,13 +536,6 @@
      "label": "Right",
      "title": "Trump Mocks Ilhan Omar’s Answer When Asked If She Married Her Brother",
      "url": "https://www.dailywire.com/news/trump-mocks-ilhan-omars-answer-when-asked-if-she-married-her-brother"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Trump Calls for Omar's Resignation Over Name Dispute",
-     "url": "https://www.newsmax.com/newsfront/donald-trump-ilhan-omar-congress/2026/10/22/id/1273747"
     }
    ],
    "factchecks": [],
@@ -592,8 +592,8 @@
    "videos": []
   },
   {
-   "title": "Israel orders ‘full lockdown’ of occupied West Bank after 2 soldiers killed in shooting attack",
-   "summary": "Prime Minister Benjamin Netanyahu ordered a “full lockdown” of the occupied West Bank on Friday after Israel’s military said it killed two Palestinians accused of launching a shooting attack that killed two soldiers and injured three others in the city of Hebron.",
+   "title": "Israel orders full West Bank lockdown after deadly shooting attack",
+   "summary": "Israeli Prime Minister Benjamin Netanyahu ordered the Israel Defense Forces to impose a closure of the city of Hebron and also told them to prepare for a \"full lockdown\" of the occupied West Bank. NBC News' Claudio Lavanga reports the latest on the situation.",
    "category": "World",
    "leans": [
     -1,
@@ -601,27 +601,27 @@
     2
    ],
    "span": 3,
-   "n_sources": 5,
+   "n_sources": 6,
    "balance": {
-    "l": 3,
+    "l": 4,
     "c": 1,
     "r": 1
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "NBC News",
+     "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Israel orders full West Bank lockdown after deadly shooting attack",
-     "url": "https://www.nbcnews.com/now/video/israel-orders-full-west-bank-lockdown-after-deadly-shooting-attack-272097861757"
+     "title": "Israel orders closure of West Bank after soldiers kill 2 men behind an alleged attack",
+     "url": "https://www.npr.org/2026/10/23/nx-s1-6013333/netanyahu-closure-west-bank"
     },
     {
      "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Israel orders ‘full lockdown’ of occupied West Bank after 2 soldiers killed in shooting attack",
-     "url": "https://www.nbcnews.com/world/middle-east/israel-orders-west-bank-lockdown-hebron-shooting-attack-rcna605176"
+     "title": "Israel orders full West Bank lockdown after deadly shooting attack",
+     "url": "https://www.nbcnews.com/now/video/israel-orders-full-west-bank-lockdown-after-deadly-shooting-attack-272097861757"
     },
     {
      "name": "CBS News",
@@ -1117,41 +1117,6 @@
    "videos": []
   },
   {
-   "title": "Scoop: Some Freedom Caucus members want Brandon Gill out",
-   "summary": "A small group of Rep. Brandon Gill's fellow House Freedom Caucus members are privately questioning whether he still belongs in the hardline group, Axios has learned. Why it matters: The 32-year-old Texas freshman's rapid rise through House Republican ranks has transformed him int",
-   "category": "Politics",
-   "leans": [
-    0,
-    2
-   ],
-   "span": 2,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Axios",
-     "lean": 0,
-     "label": "Center",
-     "title": "Scoop: Some Freedom Caucus members want Brandon Gill out",
-     "url": "https://www.axios.com/2026/10/22/texas-brandon-gill-freedom-caucus-house-republican"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Report: Freedom Caucus Members Discuss Ousting Rep. Gill",
-     "url": "https://www.newsmax.com/newsfront/brandon-gill-house-freedom-caucus/2026/10/22/id/1273746"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Magnitude-7 earthquake hits Tibet, killing at least 16 and destroying hundreds of homes",
    "summary": "Search and rescue efforts under way after quake strikes region’s north, with at least seven aftershocks recorded A magnitude-7 earthquake has hit Tibet, killing at least 16 people, injuring 54 and destroying hundreds of homes in the northern regional city of Nagqu, official media",
    "category": "General",
@@ -1283,6 +1248,40 @@
      "label": "Lean Right",
      "title": "Could This Time Be Different on Ukraine?",
      "url": "https://www.nationalreview.com/2026/10/could-this-time-be-different-on-ukraine/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Flavio Bolsonaro’s ‘corrupto’ stunt sparks viral meme before Brazil election runoff",
+   "summary": "Far-right presidential candidate’s TV debate swipe at rival backfires as people take to social media to parody it To Flávio Bolsonaro and his publicists, it must have seemed an ingenious idea that would expose his rival’s supposed crookedness on the eve of Brazil’s presidential e",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Brazil's runoff: Lula's legacy vs. Bolsonaro's dynasty",
+     "url": "https://www.npr.org/2026/10/23/nx-s1-6004277/brazil-vote-runoff-lula-bolsonaro"
+    },
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Flavio Bolsonaro’s ‘corrupto’ stunt sparks viral meme before Brazil election runoff",
+     "url": "https://www.theguardian.com/world/2026/oct/20/flavio-bolsonaro-corrupto-viral-meme-brazil-election-runoff"
     }
    ],
    "factchecks": [],
@@ -1555,6 +1554,222 @@
    "videos": []
   },
   {
+   "title": "Authorities investigating whether first Kenyan and Nigerian Ebola cases crossed paths",
+   "summary": "Nigeria this week recorded its first case of Ebola in the current outbreak, which has spread from the epicenter in Congo to several other African countries.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Authorities investigating whether first Kenyan and Nigerian Ebola cases crossed paths",
+     "url": "https://www.npr.org/2026/10/23/g-s1-149515/africa-ebola-outbreak"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Military reinforcements move to Mideast. And, millions of Americans vote early",
+   "summary": "Military reinforcements are heading to the Middle East and some personnel have left the region, pointing to a potential attack on Iran. And, millions of Americans have already voted in the midterms.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Military reinforcements move to Mideast. And, millions of Americans vote early",
+     "url": "https://www.npr.org/2026/10/23/g-s1-149514/up-first-newsletter-iran-war-midterm-voting-trump-bbc"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Why Meta is charging to post more hyperlinks",
+   "summary": "Social media sites aren't the biggest fans of people leaving via hyperlinks. In fact, Meta has made it subscription-worthy for a Facebook Page to post more than two hyperlinks per month. What's the rationale for companies want to keep you on their site?",
+   "category": "Tech",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Why Meta is charging to post more hyperlinks",
+     "url": "https://www.npr.org/sections/planet-money/2026/10/23/nx-s1-6012726/why-meta-is-charging-to-post-more-hyperlinks"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Hacking attempts rise after flaws found in program affecting 70 percent of websites",
+   "summary": "Governments around the world are rushing to implement safety measures after AI technology found 'severe' vulnerabilities in a key programming language called PHP.",
+   "category": "Tech",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Hacking attempts rise after flaws found in program affecting 70 percent of websites",
+     "url": "https://www.npr.org/2026/10/23/g-s1-149503/hacking-php-flaws"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "What if you gave yourself a day to cancel all the plans you dread?",
+   "summary": "It's a day to think about all the upcoming appointments and commitments you're dreading — and then decline some of them. Writer Caroline Sylge shares a suggested schedule for the day.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "What if you gave yourself a day to cancel all the plans you dread?",
+     "url": "https://www.npr.org/2026/10/23/nx-s1-6011089/how-to-plan-a-say-no-retreat"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Amid Trump's assaults on DEI, how one university is elevating Black students",
+   "summary": "As many colleges roll back or eliminate such programs, Sacramento State has expanded its offerings for students of color.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Amid Trump's assaults on DEI, how one university is elevating Black students",
+     "url": "https://www.npr.org/2026/10/23/nx-s1-5797959/one-university-elevating-black-students"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "With jet fuel prices near a record, holiday airfares soar higher",
+   "summary": "If you're planning to fly this holiday season, be prepared to pay more than you did last year. The price of jet fuel — one of airlines' biggest expenses — is close to an all-time high in the U.S.",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "With jet fuel prices near a record, holiday airfares soar higher",
+     "url": "https://www.npr.org/2026/10/23/nx-s1-6009506/jet-fuel-price-holiday-airfare"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "After nearly 6 years, ex-Myanmar leader Aung San Suu Kyi's son hears her voice",
+   "summary": "Kim Aris tells NPR his mother sounds strong but is in pain. He says she is held at a residence in the capital.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "After nearly 6 years, ex-Myanmar leader Aung San Suu Kyi's son hears her voice",
+     "url": "https://www.npr.org/2026/10/23/nx-s1-6012784/aung-san-suu-kyi-son-phone-call-myanmar"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "Lewis Hamilton aims to extend career till early 2030s so he can race in African Grand Prix",
    "summary": "41-year-old set on ‘dream to be able to race in Africa’ Rwanda to host despite criticism of human rights record Lewis Hamilton has said he hopes to remain racing in Formula One until he can take part in the African Grand Prix which is set to take place in Rwanda in the 2030s . Th",
    "category": "World",
@@ -1792,33 +2007,6 @@
      "label": "Lean Left",
      "title": "‘Bad decisions’: Man convicted for taking Peachy the flamingo from Las Vegas hotel",
      "url": "https://www.theguardian.com/us-news/2026/oct/20/man-convicted-peachy-the-flamingo-las-vegas-hotel"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Flavio Bolsonaro’s ‘corrupto’ stunt sparks viral meme before Brazil election runoff",
-   "summary": "Far-right presidential candidate’s TV debate swipe at rival backfires as people take to social media to parody it To Flávio Bolsonaro and his publicists, it must have seemed an ingenious idea that would expose his rival’s supposed crookedness on the eve of Brazil’s presidential e",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Flavio Bolsonaro’s ‘corrupto’ stunt sparks viral meme before Brazil election runoff",
-     "url": "https://www.theguardian.com/world/2026/oct/20/flavio-bolsonaro-corrupto-viral-meme-brazil-election-runoff"
     }
    ],
    "factchecks": [],
@@ -2075,224 +2263,44 @@
    ],
    "factchecks": [],
    "videos": []
-  },
-  {
-   "title": "Horse-drawn carriage ban approved by NYC Council",
-   "summary": "The New York City Council voted Thursday on Romanch's Law, which will ban horse-drawn carriage rides in the city by 2028.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Horse-drawn carriage ban approved by NYC Council",
-     "url": "https://www.cbsnews.com/news/horse-carriage-ban-bill-nyc-council/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Why Are We All So Thirsty For Reality TV Again? | Straight Up with Kelly and Vlad",
-   "summary": "Dancing With the Stars is breaking voting records even after 35 seasons, cringe Love Is Blind clips are breaking the internet, and Love Island is still breaking hearts week after week... It seems we are having a reality TV renaissance. But what's behind it? Are we yearning for pe",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Why Are We All So Thirsty For Reality TV Again? | Straight Up with Kelly and Vlad",
-     "url": "https://www.cbsnews.com/video/why-thirsty-reality-tv-again-straight-up-kelly-vlad/"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "OIcjF8icWVg",
-     "title": "Why Are We All So Thirsty For Reality TV Again? | Straight Up with Kelly and Vlad",
-     "thumb": "https://i.ytimg.com/vi/OIcjF8icWVg/hqdefault.jpg",
-     "channel": "CBS News",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
-  },
-  {
-   "title": "What to know about ACA open enrollment this year",
-   "summary": "As open enrollment for Affordable Care Act health insurance kicks off, consumers face rising premiums, additional identity checks, and fewer brokers.",
-   "category": "Health",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "What to know about ACA open enrollment this year",
-     "url": "https://www.cbsnews.com/news/aca-open-enrollment-premiums-rules-brokers/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "2 pilots eject from military training jet in Texas after landing gear issue",
-   "summary": "The pilots were aboard a T-6A Texan II assigned to the 12th Flying Training Wing when they ejected from the aircraft.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "2 pilots eject from military training jet in Texas after landing gear issue",
-     "url": "https://www.cbsnews.com/news/2-pilots-eject-military-aircraft-texas-joint-base-san-antonio/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Trump focuses on farmers in Iowa visit, as GOP struggles on fertile ground",
-   "summary": "Speaking from a crowded airplane hangar in ruby-red western Iowa, President Trump delivered a pitch to farmers — a key group as Republicans fight to hold on to a Senate seat.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Trump focuses on farmers in Iowa visit, as GOP struggles on fertile ground",
-     "url": "https://www.cbsnews.com/news/trump-iowa-farmers-rally-senate-hinson-turek/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "LIVE:  ABC News Live",
-   "summary": "24/7 coverage of breaking news and live events",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "LIVE:  ABC News Live",
-     "url": "https://abcnews.com/video/41463246/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  New Jersey mayor defends charging critic during town hall meeting",
-   "summary": "Chaos unfolded during a town hall meeting in Pemberton, New Jersey, after Mayor Matthew Bianchini charged at a critic before being restrained by a former police chief.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  New Jersey mayor defends charging critic during town hall meeting",
-     "url": "https://abcnews.com/video/137503458/"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "cyzVmbJEK8w",
-     "title": "New Jersey mayor defends charging critic during town hall meeting",
-     "thumb": "https://i.ytimg.com/vi/cyzVmbJEK8w/hqdefault.jpg",
-     "channel": "ABC News",
-     "lean": -1,
-     "label": "Lean Left"
-    },
-    {
-     "videoId": "wotZtpj4dk8",
-     "title": "WATCH: Mayor CHARGES at resident during CHAOTIC town meeting #shorts",
-     "thumb": "https://i.ytimg.com/vi/wotZtpj4dk8/hqdefault.jpg",
-     "channel": "Fox News",
-     "lean": 2,
-     "label": "Right"
-    }
-   ]
   }
  ],
- "blindspots": [],
+ "blindspots": [
+  {
+   "title": "Flavio Bolsonaro’s ‘corrupto’ stunt sparks viral meme before Brazil election runoff",
+   "summary": "Far-right presidential candidate’s TV debate swipe at rival backfires as people take to social media to parody it To Flávio Bolsonaro and his publicists, it must have seemed an ingenious idea that would expose his rival’s supposed crookedness on the eve of Brazil’s presidential e",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Brazil's runoff: Lula's legacy vs. Bolsonaro's dynasty",
+     "url": "https://www.npr.org/2026/10/23/nx-s1-6004277/brazil-vote-runoff-lula-bolsonaro"
+    },
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Flavio Bolsonaro’s ‘corrupto’ stunt sparks viral meme before Brazil election runoff",
+     "url": "https://www.theguardian.com/world/2026/oct/20/flavio-bolsonaro-corrupto-viral-meme-brazil-election-runoff"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  }
+ ],
  "factchecks": [
   {
    "org": "Snopes",
