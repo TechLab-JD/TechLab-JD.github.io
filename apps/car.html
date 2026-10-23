@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steady Car</title>
+<meta name="description" content="Steady Car — a private way to run your vehicle: fuel & MPG log, maintenance schedule with reminders, repair history, and document renewals. Your data stays on your device.">
+<link rel="stylesheet" href="shared.css">
+<style>:root{--accent:#2e8bc0;--accent-2:#4aa3d4;--accent-dark:#246f99}
+  #car-print{display:none}
+  @media print{body.printing>*:not(#car-print){display:none!important}body.printing #car-print{display:block!important}@page{margin:16mm}}
+  .vehpick{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+  .vehchip{background:var(--surface2,#1c2745);border:1px solid var(--line,#243150);border-radius:999px;padding:6px 13px;cursor:pointer;font-size:13px;font-weight:600}
+  .vehchip.on{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent)}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div style="display:flex;align-items:center;gap:10px"><button class="icon-btn hamb" id="hambBtn" title="Menu">☰</button><a class="brand" href="index.html"><span class="logo">S</span> Steady <b>Car</b></a></div>
+  <div class="top-actions"><a class="hublink" href="index.html">All apps</a><button class="premhdr" data-steady="premium">⭐ Premium</button><button class="icon-btn" data-steady="account" title="Settings">⚙</button></div>
+</div></header>
+<div class="shell">
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side">
+  <div class="navgroup"><div class="navhead">Dashboard</div>
+    <button class="snav active" data-panel="dash">📊 Overview</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Garage</div>
+    <button class="snav" data-panel="veh">🚗 Vehicles</button>
+    <button class="snav" data-panel="fuel">⛽ Fuel &amp; MPG</button>
+    <button class="snav" data-panel="maint">🔧 Maintenance</button>
+    <button class="snav" data-panel="repairs">🛠️ Repairs</button>
+    <button class="snav" data-panel="docs">📄 Documents</button>
+  </div>
+  <div class="navgroup"><div class="navhead">Premium</div>
+    <button class="snav" data-panel="trips">🧾 Mileage log<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="report">📈 Cost report<span class="lk">🔒</span></button>
+    <button class="snav" data-panel="binder">📘 Service record<span class="lk">🔒</span></button>
+  </div>
+  <div class="navgroup"><div class="navhead">You</div>
+    <button class="snav" data-panel="rewards">🏆 Rewards</button>
+  </div>
+</aside>
+<main class="main">
+  <section class="panel active" id="panel-dash">
+    <div class="hero"><div class="lbl" id="d-date">Your garage</div><div class="big" id="d-attn">0</div><div class="meta">things that need attention</div>
+      <div class="mini"><div>Vehicles<b id="d-veh">0</b></div><div>Avg MPG<b id="d-mpg">—</b></div><div>Spent this year<b id="d-spent">$0</b></div><div>Docs expiring<b id="d-docs">0</b></div></div></div>
+    <div class="grid2">
+      <div class="card"><h2>Needs attention</h2><p class="sub">Maintenance due and documents expiring soon</p><div id="d-list"></div></div>
+      <div class="card"><h2>Recent fuel</h2><p class="sub">Your last few fill-ups and their MPG</p><div id="d-fuel"></div></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-veh">
+    <div class="card"><h2>Your vehicles</h2><p class="sub">Add each vehicle once. The current odometer drives your maintenance reminders — keep it updated (logging fuel updates it too).</p>
+      <div class="addform" style="grid-template-columns:1fr 70px 110px 100px auto"><div class="field"><label>Name / nickname</label><input id="v-name" placeholder="The Xterra, Daily, etc."></div><div class="field"><label>Year</label><input id="v-year" type="number" inputmode="numeric" placeholder="2006"></div><div class="field"><label>Make &amp; model</label><input id="v-mm" placeholder="Nissan Xterra"></div><div class="field"><label>Odometer</label><input id="v-odo" type="number" inputmode="numeric" placeholder="174490"></div><button class="btn" id="v-add">Add</button></div>
+      <div class="addform" style="grid-template-columns:1fr 1fr;margin-top:8px"><div class="field"><label>Plate (optional)</label><input id="v-plate" placeholder="ABC-1234"></div><div class="field"><label>VIN (optional)</label><input id="v-vin" placeholder="VIN"></div></div>
+      <div id="v-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-fuel">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Avg MPG</div><div class="val" id="fu-mpg">—</div></div>
+      <div class="stat"><div class="label">Cost / mile</div><div class="val" id="fu-cpm">—</div></div>
+      <div class="stat"><div class="label">Fill-ups logged</div><div class="val" id="fu-count">0</div></div>
+    </div>
+    <div class="card"><h2>MPG trend</h2><p class="sub">Miles per gallon on your full fill-ups over time</p><div id="fu-chart"></div></div>
+    <div class="card"><h2>Log a fill-up</h2><p class="sub">Enter the odometer, gallons and cost. Mark "full tank" so MPG calculates correctly between full fills.</p>
+      <div class="addform" style="grid-template-columns:1fr 120px 110px 90px 90px auto"><div class="field"><label>Vehicle</label><select id="fu-veh"></select></div><div class="field"><label>Date</label><input id="fu-date" type="date"></div><div class="field"><label>Odometer</label><input id="fu-odo" type="number" inputmode="numeric"></div><div class="field"><label>Gallons</label><input id="fu-gal" type="number" inputmode="decimal"></div><div class="field"><label>Cost $</label><input id="fu-cost" type="number" inputmode="decimal"></div><button class="btn" id="fu-add">Add</button></div>
+      <div class="fld chk" style="margin-top:8px;display:flex;align-items:center;gap:7px"><input type="checkbox" id="fu-full" checked style="width:16px;height:16px"><label for="fu-full" style="font-size:13px">Filled it all the way up</label></div>
+      <div id="fu-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-maint">
+    <div class="card"><h2>Maintenance schedule</h2><p class="sub">Add each service with how often it's due — by miles, by months, or both. It tells you what's due now and what's coming.</p>
+      <div class="addform" style="grid-template-columns:1fr 1fr 110px 90px 90px auto"><div class="field"><label>Vehicle</label><select id="mt-veh"></select></div><div class="field"><label>Service</label><input id="mt-task" placeholder="Oil change, tire rotation…"></div><div class="field"><label>Last done (odo)</label><input id="mt-odo" type="number" inputmode="numeric"></div><div class="field"><label>Every (mi)</label><input id="mt-mi" type="number" inputmode="numeric" placeholder="5000"></div><div class="field"><label>Every (mo)</label><input id="mt-mo" type="number" inputmode="numeric" placeholder="6"></div><button class="btn" id="mt-add">Add</button></div>
+      <div class="addform" style="grid-template-columns:200px;margin-top:8px"><div class="field"><label>Last done (date)</label><input id="mt-date" type="date"></div></div>
+      <div id="mt-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-repairs">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Repairs logged</div><div class="val" id="rp-count">0</div></div>
+      <div class="stat"><div class="label">Spent this year</div><div class="val" id="rp-year">$0</div></div>
+      <div class="stat"><div class="label">All-time</div><div class="val" id="rp-all">$0</div></div>
+    </div>
+    <div class="card"><h2>Repair &amp; service history</h2><p class="sub">Every repair and service, what it cost and who did it — your vehicle's story, and a resale selling point.</p>
+      <div class="addform" style="grid-template-columns:1fr 120px 1fr 100px 110px auto"><div class="field"><label>Vehicle</label><select id="rp-veh"></select></div><div class="field"><label>Date</label><input id="rp-date" type="date"></div><div class="field"><label>What</label><input id="rp-what" placeholder="New battery, brakes…"></div><div class="field"><label>Cost $</label><input id="rp-cost" type="number" inputmode="decimal"></div><div class="field"><label>Odometer</label><input id="rp-odo" type="number" inputmode="numeric"></div><button class="btn" id="rp-add">Add</button></div>
+      <div class="field" style="margin-top:8px"><input id="rp-shop" placeholder="Shop / who did it + notes (optional)"></div>
+      <div id="rp-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-docs">
+    <div class="card"><h2>Documents &amp; renewals</h2><p class="sub">Insurance, registration and inspection — with their expiry dates, so a lapse never sneaks up on you.</p>
+      <div class="addform" style="grid-template-columns:1fr 150px 1fr 130px auto"><div class="field"><label>Vehicle</label><select id="dc-veh"></select></div><div class="field"><label>Type</label><select id="dc-type"><option>Insurance</option><option>Registration</option><option>Inspection</option><option>Warranty</option><option>Loan / title</option><option>Other</option></select></div><div class="field"><label>Provider / number</label><input id="dc-prov" placeholder="Dairyland · policy #…"></div><div class="field"><label>Expires</label><input id="dc-exp" type="date"></div><button class="btn" id="dc-add">Add</button></div>
+      <div id="dc-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-trips">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Business miles (yr)</div><div class="val" id="tr-miles">0</div></div>
+      <div class="stat"><div class="label">Est. deduction</div><div class="val" id="tr-ded">$0</div></div>
+      <div class="stat"><div class="label">Trips logged</div><div class="val" id="tr-count">0</div></div>
+    </div>
+    <div class="card"><h2>Mileage log</h2><p class="sub">Log business trips for tax time. The estimated deduction uses the rate below — it's an estimate, not tax advice.</p>
+      <div class="addform" style="grid-template-columns:120px 1fr 100px 110px auto"><div class="field"><label>Date</label><input id="tr-date" type="date"></div><div class="field"><label>Purpose / destination</label><input id="tr-purp" placeholder="Client visit, supply run…"></div><div class="field"><label>Miles</label><input id="tr-mi" type="number" inputmode="decimal"></div><div class="field"><label>Type</label><select id="tr-type"><option>Business</option><option>Personal</option><option>Medical</option><option>Charity</option></select></div><button class="btn" id="tr-add">Add</button></div>
+      <div class="addform" style="grid-template-columns:200px;margin-top:8px"><div class="field"><label>Rate $/mile (business)</label><input id="tr-rate" type="number" inputmode="decimal" value="0.70"></div></div>
+      <div id="tr-list" style="margin-top:12px"></div>
+    </div>
+  </section>
+
+  <section class="panel locked" id="panel-report">
+    <div class="grid3" style="margin-bottom:16px">
+      <div class="stat"><div class="label">Total this year</div><div class="val" id="re-year">$0</div></div>
+      <div class="stat"><div class="label">Cost / mile (all-in)</div><div class="val" id="re-cpm">—</div></div>
+      <div class="stat"><div class="label">Avg / month</div><div class="val" id="re-mo">$0</div></div>
+    </div>
+    <div class="card"><h2>Where the money goes</h2><p class="sub">Fuel vs maintenance vs repairs — the true cost of ownership</p><div id="re-break" style="display:flex;justify-content:center;align-items:center;min-height:160px"></div></div>
+    <div class="card"><h2>By vehicle</h2><div id="re-veh"></div></div>
+  </section>
+
+  <section class="panel locked" id="panel-binder">
+    <div class="card"><h2>Printable service record</h2><p class="sub">One clean sheet per vehicle — specs, maintenance and full repair history. Print it for the glovebox or hand it to a buyer at resale.</p>
+      <div class="addform" style="grid-template-columns:1fr auto"><div class="field"><label>Vehicle</label><select id="bn-veh"></select></div><button class="btn" id="bn-print">🖨 Print / Save as PDF</button></div>
+    </div>
+    <div class="card"><h2>Preview</h2><div id="bn-prev"></div></div>
+  </section>
+
+  <section class="panel" id="panel-rewards">
+    <div class="hero"><div class="lbl">Well maintained</div><div class="big" id="rw-ontime">0</div><div class="meta">services up to date</div>
+      <div class="mini"><div>Badges<b id="rw-count">0</b></div></div></div>
+    <div class="card"><h2>Your level</h2><p class="sub">Keeping your car logged and maintained earns XP.</p><div id="xp-card"></div></div>
+    <div class="card"><h2>Today's goals</h2><p class="sub">A car that won't surprise you.</p><div id="quests"></div></div>
+    <div class="card"><h2>Achievements</h2><p class="sub">Milestones for a well-kept vehicle.</p><div class="badgegrid" id="rw-badges"></div></div>
+  </section>
+</main>
+</div>
+<footer class="ft">Steady Car · a Steady Systems app · your data stays on this device</footer>
+<div id="toasts"></div>
+<div id="car-print"></div>
+<script src="shared.js"></script>
+<script>
+var DEF={vehicles:[],fuel:[],maint:[],repairs:[],docs:[],trips:[]};
+var db=Steady.load("car",DEF);var S=Steady;
+function daysTo(d){if(!d)return null;var t=new Date();t.setHours(0,0,0,0);return Math.round((new Date(d+"T00:00:00")-t)/86400000);}
+function monthsBetween(d){if(!d)return 1e9;var then=new Date(d+"T00:00:00"),now=new Date();return (now-then)/(86400000*30.44);}
+function fmtShort(d){return d?new Date(d+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"}):"";}
+function fmtDate(d){return d?new Date(d+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}):"";}
+function nn(v){var x=parseFloat(String(v).replace(/[^0-9.\-]/g,""));return isNaN(x)?0:x;}
+function thisYear(){return S.todayISO().slice(0,4);}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+
+function vehName(id){var v=db.vehicles.filter(function(x){return x.id===id;})[0];return v?v.name:"—";}
+function currentOdo(vid){var v=db.vehicles.filter(function(x){return x.id===vid;})[0];var o=v?nn(v.odometer):0;
+  db.fuel.forEach(function(x){if(x.vehicleId===vid)o=Math.max(o,nn(x.odometer));});
+  db.repairs.forEach(function(x){if(x.vehicleId===vid)o=Math.max(o,nn(x.odometer));});
+  return o;}
+function fillVehSelects(){
+  var opts=db.vehicles.map(function(v){return '<option value="'+v.id+'">'+esc(v.name)+'</option>';}).join("");
+  ["fu-veh","mt-veh","rp-veh","dc-veh","bn-veh"].forEach(function(id){var e=S.el(id);if(e){var cur=e.value;e.innerHTML=opts||'<option value="">Add a vehicle first</option>';if(cur)e.value=cur;}});
+}
+
+/* ---------- vehicles ---------- */
+function renderVeh(){
+  var l=S.el("v-list");l.innerHTML=db.vehicles.length?"":'<div class="empty">No vehicles yet. Add your first above.</div>';
+  db.vehicles.forEach(function(v){var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+esc(v.name)+' <span class="meta">'+[v.year,esc(v.mm||"")].filter(Boolean).join(" ")+' · '+nn(currentOdo(v.id)).toLocaleString()+' mi'+(v.plate?" · "+esc(v.plate):"")+'</span></div>';
+    var edit=document.createElement("button");edit.className="btn ghost sm";edit.textContent="Set odo";edit.style.marginLeft="6px";
+    edit.onclick=function(){var n=prompt("Current odometer for "+v.name+":",currentOdo(v.id));if(n!==null){v.odometer=nn(n);S.save();renderAll();S.toast("Odometer updated",1);}};
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){if(confirm("Remove "+v.name+" and keep its logs? The logs stay but lose their vehicle name.")){db.vehicles=db.vehicles.filter(function(x){return x.id!==v.id;});S.save();renderAll();}};
+    r.appendChild(left);r.appendChild(edit);r.appendChild(del);l.appendChild(r);});
+}
+S.el("v-add").onclick=function(){var n=S.val("v-name");if(!n)return;db.vehicles.push({id:S.uid(),name:n,year:S.val("v-year"),mm:S.val("v-mm"),odometer:S.val("v-odo"),plate:S.val("v-plate"),vin:S.val("v-vin")});S.save();S.clr("v-name","v-year","v-mm","v-odo","v-plate","v-vin");renderAll();S.toast("Vehicle added 🚗",1);};
+
+/* ---------- fuel ---------- */
+function mpgSeries(vid){
+  var fs=db.fuel.filter(function(x){return x.vehicleId===vid&&x.full;}).sort(function(a,b){return nn(a.odometer)-nn(b.odometer);});
+  var out=[];
+  for(var i=1;i<fs.length;i++){var miles=nn(fs[i].odometer)-nn(fs[i-1].odometer),gal=nn(fs[i].gallons);
+    if(miles>0&&gal>0)out.push({date:fs[i].date,mpg:miles/gal});}
+  return out;
+}
+function renderFuel(){
+  var allMpg=[],totMiles=0,totCost=0;
+  db.vehicles.forEach(function(v){mpgSeries(v.id).forEach(function(s){allMpg.push(s.mpg);});});
+  db.fuel.forEach(function(x){totCost+=nn(x.cost);});
+  // cost/mile across all vehicles: total fuel cost / total miles driven (max-min odo per vehicle)
+  db.vehicles.forEach(function(v){var fs=db.fuel.filter(function(x){return x.vehicleId===v.id;}).map(function(x){return nn(x.odometer);}).filter(function(o){return o>0;});if(fs.length>1)totMiles+=Math.max.apply(null,fs)-Math.min.apply(null,fs);});
+  var avg=allMpg.length?allMpg.reduce(function(a,b){return a+b;},0)/allMpg.length:null;
+  S.el("fu-mpg").textContent=avg?avg.toFixed(1):"—";
+  S.el("fu-cpm").textContent=totMiles>0?S.money(totCost/totMiles):"—";
+  S.el("fu-count").textContent=db.fuel.length;
+  // chart: most-logged vehicle's mpg series, else combined order
+  var series=[];db.vehicles.forEach(function(v){mpgSeries(v.id).forEach(function(s){series.push(s.mpg);});});
+  S.el("fu-chart").innerHTML=series.length>=2?S.area(series,600,120,"var(--accent)"):'<div class="empty">Log at least two full fill-ups to see your MPG trend.</div>';
+  var l=S.el("fu-list");var arr=db.fuel.slice().sort(function(a,b){return (b.date||"").localeCompare(a.date||"")||nn(b.odometer)-nn(a.odometer);}).slice(0,40);
+  l.innerHTML=db.fuel.length?"":'<div class="empty">No fill-ups logged yet.</div>';
+  // precompute mpg per fuel entry id
+  var mpgById={};db.vehicles.forEach(function(v){var fs=db.fuel.filter(function(x){return x.vehicleId===v.id&&x.full;}).sort(function(a,b){return nn(a.odometer)-nn(b.odometer);});for(var i=1;i<fs.length;i++){var m=nn(fs[i].odometer)-nn(fs[i-1].odometer),g=nn(fs[i].gallons);if(m>0&&g>0)mpgById[fs[i].id]=m/g;}});
+  arr.forEach(function(x){var r=document.createElement("div");r.className="row";
+    var mpg=mpgById[x.id];
+    r.innerHTML='<span class="nm">'+S.money(nn(x.cost))+' <span class="meta">'+vehName(x.vehicleId)+' · '+nn(x.gallons)+' gal · '+nn(x.odometer).toLocaleString()+' mi · '+fmtShort(x.date)+(x.full?"":" · partial")+'</span></span>'+(mpg?'<span class="pill good">'+mpg.toFixed(1)+' mpg</span>':"");
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.fuel=db.fuel.filter(function(y){return y.id!==x.id;});S.save();renderAll();};
+    r.appendChild(del);l.appendChild(r);});
+}
+S.el("fu-add").onclick=function(){if(!db.vehicles.length){S.toast("Add a vehicle first");return;}var o=S.val("fu-odo");db.fuel.push({id:S.uid(),vehicleId:S.el("fu-veh").value,date:S.val("fu-date")||S.todayISO(),odometer:o,gallons:S.val("fu-gal"),cost:S.val("fu-cost"),full:S.el("fu-full").checked});S.save();S.clr("fu-odo","fu-gal","fu-cost");renderAll();S.toast("Fill-up logged ⛽",1);};
+
+/* ---------- maintenance ---------- */
+function maintStatus(m){
+  var odo=currentOdo(m.vehicleId),milesSince=m.lastOdo?odo-nn(m.lastOdo):null;
+  var moSince=m.lastDate?monthsBetween(m.lastDate):null;
+  var milesLeft=(m.intervalMi&&m.lastOdo)?nn(m.intervalMi)-milesSince:null;
+  var moLeft=(m.intervalMo&&m.lastDate)?nn(m.intervalMo)-moSince:null;
+  var due=(milesLeft!==null&&milesLeft<=0)||(moLeft!==null&&moLeft<=0);
+  var soon=!due&&((milesLeft!==null&&milesLeft<=500)||(moLeft!==null&&moLeft<=1));
+  var txt;
+  if(milesLeft!==null&&moLeft!==null)txt=(milesLeft<=0||moLeft<=0)?"due now":("in "+Math.max(0,Math.round(milesLeft)).toLocaleString()+" mi / "+Math.max(0,Math.round(moLeft))+" mo");
+  else if(milesLeft!==null)txt=milesLeft<=0?"due now":"in "+Math.max(0,Math.round(milesLeft)).toLocaleString()+" mi";
+  else if(moLeft!==null)txt=moLeft<=0?"due now":"in "+Math.max(0,Math.round(moLeft))+" mo";
+  else txt="set a baseline";
+  return {due:due,soon:soon,txt:txt};
+}
+function renderMaint(){
+  var l=S.el("mt-list");l.innerHTML=db.maint.length?"":'<div class="empty">No maintenance items yet. Add oil changes, tire rotations, filters…</div>';
+  db.maint.slice().sort(function(a,b){var sa=maintStatus(a),sb=maintStatus(b);return (sb.due?2:sb.soon?1:0)-(sa.due?2:sa.soon?1:0);}).forEach(function(m){
+    var st=maintStatus(m);var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+esc(m.task)+' <span class="meta">'+vehName(m.vehicleId)+(m.intervalMi?" · every "+nn(m.intervalMi).toLocaleString()+" mi":"")+(m.intervalMo?" · every "+nn(m.intervalMo)+" mo":"")+'</span></div>';
+    var pill=document.createElement("span");pill.className="pill "+(st.due?"bad":st.soon?"warn":"good");pill.textContent=st.txt;
+    var done=document.createElement("button");done.className="btn sm"+(st.due?"":" ghost");done.textContent="Done";done.style.marginLeft="6px";
+    done.onclick=function(){m.lastOdo=currentOdo(m.vehicleId);m.lastDate=S.todayISO();S.save();renderAll();S.toast("Logged "+m.task+" ✅",1);};
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.maint=db.maint.filter(function(y){return y.id!==m.id;});S.save();renderAll();};
+    r.appendChild(left);r.appendChild(pill);r.appendChild(done);r.appendChild(del);l.appendChild(r);});
+}
+S.el("mt-add").onclick=function(){if(!db.vehicles.length){S.toast("Add a vehicle first");return;}var t=S.val("mt-task");if(!t)return;db.maint.push({id:S.uid(),vehicleId:S.el("mt-veh").value,task:t,lastOdo:S.val("mt-odo"),lastDate:S.val("mt-date"),intervalMi:S.val("mt-mi"),intervalMo:S.val("mt-mo")});S.save();S.clr("mt-task","mt-odo","mt-mi","mt-mo","mt-date");renderAll();S.toast("Added",1);};
+
+/* ---------- repairs ---------- */
+function renderRepairs(){
+  var yr=thisYear(),y=0,all=0;
+  db.repairs.forEach(function(x){all+=nn(x.cost);if((x.date||"").slice(0,4)===yr)y+=nn(x.cost);});
+  S.el("rp-count").textContent=db.repairs.length;S.el("rp-year").textContent=S.money0(y);S.el("rp-all").textContent=S.money0(all);
+  var l=S.el("rp-list");var arr=db.repairs.slice().sort(function(a,b){return (b.date||"").localeCompare(a.date||"");});
+  l.innerHTML=db.repairs.length?"":'<div class="empty">No repairs logged yet.</div>';
+  arr.forEach(function(x){var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+esc(x.what)+' <span class="meta">'+vehName(x.vehicleId)+' · '+S.money(nn(x.cost))+(x.odometer?" · "+nn(x.odometer).toLocaleString()+" mi":"")+' · '+fmtShort(x.date)+(x.shop?" · "+esc(x.shop):"")+'</span></div>';
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.repairs=db.repairs.filter(function(y){return y.id!==x.id;});S.save();renderAll();};
+    r.appendChild(left);r.appendChild(del);l.appendChild(r);});
+}
+S.el("rp-add").onclick=function(){if(!db.vehicles.length){S.toast("Add a vehicle first");return;}var w=S.val("rp-what");if(!w)return;db.repairs.push({id:S.uid(),vehicleId:S.el("rp-veh").value,date:S.val("rp-date")||S.todayISO(),what:w,cost:S.val("rp-cost"),odometer:S.val("rp-odo"),shop:S.val("rp-shop")});S.save();S.clr("rp-what","rp-cost","rp-odo","rp-shop");renderAll();S.toast("Repair logged",1);};
+
+/* ---------- documents ---------- */
+function renderDocs(){
+  var l=S.el("dc-list");var arr=db.docs.slice().sort(function(a,b){return (a.expiry||"9").localeCompare(b.expiry||"9");});
+  l.innerHTML=db.docs.length?"":'<div class="empty">No documents yet. Add insurance, registration and inspection with their expiry dates.</div>';
+  arr.forEach(function(x){var dd=x.expiry?daysTo(x.expiry):null,cls=dd===null?"":dd<0?"bad":dd<=30?"warn":"good",txt=dd===null?"":dd<0?"expired":dd<=30?"in "+dd+"d":"valid";
+    var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+esc(x.type)+' <span class="meta">'+vehName(x.vehicleId)+(x.prov?" · "+esc(x.prov):"")+(x.expiry?" · expires "+fmtDate(x.expiry):"")+'</span></div>';
+    if(txt){var pill=document.createElement("span");pill.className="pill "+cls;pill.textContent=txt;r.appendChild(left);r.appendChild(pill);}else r.appendChild(left);
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.docs=db.docs.filter(function(y){return y.id!==x.id;});S.save();renderAll();};
+    r.appendChild(del);l.appendChild(r);});
+}
+S.el("dc-add").onclick=function(){if(!db.vehicles.length){S.toast("Add a vehicle first");return;}db.docs.push({id:S.uid(),vehicleId:S.el("dc-veh").value,type:S.el("dc-type").value,prov:S.val("dc-prov"),expiry:S.val("dc-exp")});S.save();S.clr("dc-prov","dc-exp");renderAll();S.toast("Document added",1);};
+
+/* ---------- trips (premium) ---------- */
+function renderTrips(){
+  var yr=thisYear(),rate=nn(S.val("tr-rate"))||0.70;
+  var biz=db.trips.filter(function(t){return t.type==="Business"&&(t.date||"").slice(0,4)===yr});
+  var miles=biz.reduce(function(a,b){return a+nn(b.miles);},0);
+  S.el("tr-miles").textContent=Math.round(miles).toLocaleString();
+  S.el("tr-ded").textContent=S.money0(miles*rate);
+  S.el("tr-count").textContent=db.trips.length;
+  var l=S.el("tr-list");var arr=db.trips.slice().sort(function(a,b){return (b.date||"").localeCompare(a.date||"");}).slice(0,50);
+  l.innerHTML=db.trips.length?"":'<div class="empty">No trips logged yet.</div>';
+  arr.forEach(function(x){var r=document.createElement("div");r.className="row";var left=document.createElement("div");left.style.flex="1";
+    left.innerHTML='<div class="nm">'+esc(x.purpose||"Trip")+' <span class="meta">'+nn(x.miles)+' mi · '+esc(x.type)+' · '+fmtShort(x.date)+'</span></div>';
+    var del=document.createElement("button");del.className="del";del.textContent="×";del.onclick=function(){db.trips=db.trips.filter(function(y){return y.id!==x.id;});S.save();renderTrips();renderRewards();};
+    r.appendChild(left);r.appendChild(del);l.appendChild(r);});
+}
+S.el("tr-add").onclick=function(){var m=S.val("tr-mi");if(!m){S.toast("Enter miles");return;}db.trips.push({id:S.uid(),date:S.val("tr-date")||S.todayISO(),purpose:S.val("tr-purp"),miles:m,type:S.el("tr-type").value});S.save();S.clr("tr-purp","tr-mi");renderTrips();renderRewards();S.toast("Trip logged 🧾",1);};
+S.el("tr-rate").oninput=function(){renderTrips();};
+
+/* ---------- cost report (premium) ---------- */
+function renderReport(){
+  var yr=thisYear();
+  var fuelY=db.fuel.filter(function(x){return (x.date||"").slice(0,4)===yr;}).reduce(function(a,b){return a+nn(b.cost);},0);
+  var repY=db.repairs.filter(function(x){return (x.date||"").slice(0,4)===yr;}).reduce(function(a,b){return a+nn(b.cost);},0);
+  var docY=db.docs.reduce(function(a,b){return a+nn(b.cost);},0);
+  var totalY=fuelY+repY;
+  S.el("re-year").textContent=S.money0(totalY);
+  var totMiles=0;db.vehicles.forEach(function(v){var fs=db.fuel.filter(function(x){return x.vehicleId===v.id;}).map(function(x){return nn(x.odometer);}).filter(function(o){return o>0;});if(fs.length>1)totMiles+=Math.max.apply(null,fs)-Math.min.apply(null,fs);});
+  S.el("re-cpm").textContent=totMiles>0?S.money((fuelY+repY)/totMiles):"—";
+  var mo=Math.max(1,new Date().getMonth()+1);
+  S.el("re-mo").textContent=S.money0(totalY/mo);
+  var data=[{value:fuelY,color:"#2e8bc0",label:"Fuel"},{value:repY,color:"#e8a33c",label:"Repairs"}].filter(function(d){return d.value>0;});
+  S.el("re-break").innerHTML=data.length?S.donut(data,160)+'<div style="margin-left:14px">'+data.map(function(d){return '<div class="meta" style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:'+d.color+'"></span>'+d.label+' · '+S.money0(d.value)+'</div>';}).join("")+'</div>':'<div class="empty">Log fuel and repairs to see your cost breakdown.</div>';
+  var l=S.el("re-veh");l.innerHTML=db.vehicles.length?"":'<div class="empty">No vehicles yet.</div>';
+  db.vehicles.forEach(function(v){var fc=db.fuel.filter(function(x){return x.vehicleId===v.id&&(x.date||"").slice(0,4)===yr;}).reduce(function(a,b){return a+nn(b.cost);},0);
+    var rc=db.repairs.filter(function(x){return x.vehicleId===v.id&&(x.date||"").slice(0,4)===yr;}).reduce(function(a,b){return a+nn(b.cost);},0);
+    var r=document.createElement("div");r.className="row";r.innerHTML='<span class="nm">'+esc(v.name)+' <span class="meta">fuel '+S.money0(fc)+' · repairs '+S.money0(rc)+'</span></span><span class="pill">'+S.money0(fc+rc)+'</span>';l.appendChild(r);});
+}
+
+/* ---------- service record (premium printable) ---------- */
+function buildRecordHTML(vid){
+  var v=db.vehicles.filter(function(x){return x.id===vid;})[0];if(!v)return '<div style="padding:20px">Pick a vehicle.</div>';
+  function sec(t){return '<h2 style="font-size:15px;color:#1f5f80;margin:18px 0 6px;border-bottom:2px solid #1f5f80;padding-bottom:3px">'+t+'</h2>';}
+  function rowL(a,b){return '<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #eee;font-size:13px"><span>'+a+'</span><span style="color:#555;text-align:right">'+b+'</span></div>';}
+  var none='<div style="color:#777;font-size:13px">None logged.</div>';
+  var maint=db.maint.filter(function(m){return m.vehicleId===vid;});
+  var reps=db.repairs.filter(function(x){return x.vehicleId===vid;}).sort(function(a,b){return (b.date||"").localeCompare(a.date||"");});
+  var docs=db.docs.filter(function(x){return x.vehicleId===vid;});
+  var mH=maint.length?maint.map(function(m){var st=maintStatus(m);return rowL(esc(m.task),st.txt);}).join(""):none;
+  var rH=reps.length?reps.map(function(x){return rowL(fmtDate(x.date)+" — "+esc(x.what)+(x.odometer?" @ "+nn(x.odometer).toLocaleString()+"mi":""),S.money(nn(x.cost))+(x.shop?" · "+esc(x.shop):""));}).join(""):none;
+  var dH=docs.length?docs.map(function(x){return rowL(esc(x.type)+(x.prov?" — "+esc(x.prov):""),x.expiry?"expires "+fmtDate(x.expiry):"");}).join(""):none;
+  var spent=reps.reduce(function(a,b){return a+nn(b.cost);},0);
+  return '<div style="font-family:Arial,sans-serif;color:#111;max-width:680px;margin:0 auto;padding:20px">'+
+    '<h1 style="font-size:24px;color:#1f5f80;margin:0 0 2px">'+esc(v.name)+' — Service Record</h1>'+
+    '<div style="color:#555;font-size:12px;margin-bottom:6px">'+[v.year,esc(v.mm||"")].filter(Boolean).join(" ")+' · '+nn(currentOdo(vid)).toLocaleString()+' mi'+(v.vin?" · VIN "+esc(v.vin):"")+(v.plate?" · "+esc(v.plate):"")+' · generated '+new Date().toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"})+'</div>'+
+    sec("Maintenance schedule")+mH+
+    sec("Repair & service history — "+S.money(spent)+" total")+rH+
+    sec("Documents")+dH+
+    '<p style="font-size:10px;color:#999;margin-top:26px">Made with Steady Car · syssteady.gumroad.com</p></div>';
+}
+function renderBinder(){var vid=S.el("bn-veh").value;S.el("bn-prev").innerHTML='<div style="background:#fff;border-radius:10px;overflow:auto">'+buildRecordHTML(vid)+'</div>';}
+S.el("bn-veh").onchange=renderBinder;
+S.el("bn-print").onclick=function(){S.el("car-print").innerHTML=buildRecordHTML(S.el("bn-veh").value);document.body.classList.add("printing");window.print();};
+window.onafterprint=function(){document.body.classList.remove("printing");};
+
+/* ---------- dashboard ---------- */
+function attnItems(){
+  var items=[];
+  db.maint.forEach(function(m){var st=maintStatus(m);if(st.due)items.push(["🔧",m.task+" — "+vehName(m.vehicleId),"due"]);});
+  db.docs.forEach(function(x){if(x.expiry){var dd=daysTo(x.expiry);if(dd!==null&&dd<=30)items.push(["📄",x.type+" — "+vehName(x.vehicleId),dd<0?"expired":"in "+dd+"d"]);}});
+  return items;
+}
+function renderDash(){
+  S.el("d-date").textContent=new Date().toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"});
+  var items=attnItems();
+  S.el("d-attn").textContent=items.length;
+  S.el("d-veh").textContent=db.vehicles.length;
+  var allMpg=[];db.vehicles.forEach(function(v){mpgSeries(v.id).forEach(function(s){allMpg.push(s.mpg);});});
+  S.el("d-mpg").textContent=allMpg.length?(allMpg.reduce(function(a,b){return a+b;},0)/allMpg.length).toFixed(1):"—";
+  var yr=thisYear(),spent=0;db.fuel.forEach(function(x){if((x.date||"").slice(0,4)===yr)spent+=nn(x.cost);});db.repairs.forEach(function(x){if((x.date||"").slice(0,4)===yr)spent+=nn(x.cost);});
+  S.el("d-spent").textContent=S.money0(spent);
+  S.el("d-docs").textContent=db.docs.filter(function(x){return x.expiry&&daysTo(x.expiry)!==null&&daysTo(x.expiry)<=30;}).length;
+  S.el("d-list").innerHTML=items.length?items.slice(0,8).map(function(i){return '<div class="row"><span class="nm">'+i[0]+' '+esc(i[1])+'</span><span class="pill '+(i[2]==="expired"||i[2]==="due"?"bad":"warn")+'">'+i[2]+'</span></div>';}).join(""):'<div class="empty">All caught up — nothing due. ✨</div>';
+  var rf=db.fuel.slice().sort(function(a,b){return (b.date||"").localeCompare(a.date||"");}).slice(0,5);
+  var mpgById={};db.vehicles.forEach(function(v){var fs=db.fuel.filter(function(x){return x.vehicleId===v.id&&x.full;}).sort(function(a,b){return nn(a.odometer)-nn(b.odometer);});for(var i=1;i<fs.length;i++){var m=nn(fs[i].odometer)-nn(fs[i-1].odometer),g=nn(fs[i].gallons);if(m>0&&g>0)mpgById[fs[i].id]=m/g;}});
+  S.el("d-fuel").innerHTML=rf.length?rf.map(function(x){var mpg=mpgById[x.id];return '<div class="row"><span class="nm">'+S.money(nn(x.cost))+' <span class="meta">'+vehName(x.vehicleId)+' · '+fmtShort(x.date)+'</span></span>'+(mpg?'<span class="pill good">'+mpg.toFixed(1)+' mpg</span>':"")+'</div>';}).join(""):'<div class="empty">No fuel logged yet.</div>';
+}
+
+/* ---------- rewards ---------- */
+var BADGES=[
+ {id:"first",ic:"🚗",title:"In the Garage",desc:"Added your first vehicle",cond:c=>c.veh>0},
+ {id:"fuel",ic:"⛽",title:"Topped Off",desc:"Logged 5 fill-ups",cond:c=>c.fuel>=5},
+ {id:"mpg",ic:"📊",title:"MPG Nerd",desc:"Enough fill-ups to track MPG",cond:c=>c.hasMpg},
+ {id:"sched",ic:"🔧",title:"On Schedule",desc:"3+ maintenance items",cond:c=>c.maint>=3},
+ {id:"ontime",ic:"✅",title:"Caught Up",desc:"Nothing overdue",cond:c=>c.maint>0&&c.due===0},
+ {id:"history",ic:"🛠️",title:"Paper Trail",desc:"Logged 5 repairs",cond:c=>c.repairs>=5},
+ {id:"docs",ic:"📄",title:"Covered",desc:"Tracking your documents",cond:c=>c.docs>0},
+ {id:"valid",ic:"🛡️",title:"All Valid",desc:"No expired documents",cond:c=>c.docs>0&&c.expired===0},
+ {id:"miles",ic:"🧾",title:"Mileage Minder",desc:"Logged business miles",cond:c=>c.trips>0}
+];
+function renderRewards(){
+  var due=db.maint.filter(function(m){return maintStatus(m).due;}).length;
+  var ontime=db.maint.length-due;S.el("rw-ontime").textContent=Math.max(0,ontime);
+  var hasMpg=false;db.vehicles.forEach(function(v){if(mpgSeries(v.id).length>0)hasMpg=true;});
+  var ctx={veh:db.vehicles.length,fuel:db.fuel.length,hasMpg:hasMpg,maint:db.maint.length,due:due,
+    repairs:db.repairs.length,docs:db.docs.length,expired:db.docs.filter(function(x){return x.expiry&&daysTo(x.expiry)<0;}).length,trips:db.trips.length};
+  var earned=S.renderBadges(S.el("rw-badges"),BADGES,ctx);S.el("rw-count").textContent=earned;
+  var xp=earned*40+db.vehicles.length*5+db.fuel.length*2+db.maint.length*4+Math.max(0,ontime)*5+db.repairs.length*3+db.docs.length*3+db.trips.length*2;
+  S.gamify({xp:xp,badges:earned,container:S.el("xp-card")});
+  S.renderQuests(S.el("quests"),[
+    {label:"No maintenance overdue",xp:10,done:db.maint.length>0&&due===0},
+    {label:"No expired documents",xp:10,done:db.docs.length>0&&ctx.expired===0},
+    {label:"Log a fill-up this week",xp:10,done:db.fuel.some(function(x){return daysTo(x.date)!==null&&daysTo(x.date)>=-7;})}
+  ]);
+}
+
+function renderAll(){fillVehSelects();renderVeh();renderFuel();renderMaint();renderRepairs();renderDocs();renderTrips();renderReport();renderBinder();renderDash();renderRewards();S.applyPremium();}
+
+function SAMPLE(){var t=new Date();function iso(off){var x=new Date(t.getFullYear(),t.getMonth(),t.getDate()+off);return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0");}
+  var v1="veh_xt",v2="veh_civ";
+  return {
+    vehicles:[{id:v1,name:"The Xterra",year:"2006",mm:"Nissan Xterra",odometer:"175200",plate:"",vin:"5N1AN08U66C500812"},
+              {id:v2,name:"Commuter",year:"2014",mm:"Honda Civic",odometer:"98400",plate:"",vin:""}],
+    fuel:[{id:S.uid(),vehicleId:v1,date:iso(-28),odometer:"174600",gallons:"18.1",cost:"62",full:true},
+          {id:S.uid(),vehicleId:v1,date:iso(-16),odometer:"174950",gallons:"17.4",cost:"59",full:true},
+          {id:S.uid(),vehicleId:v1,date:iso(-4),odometer:"175200",gallons:"16.8",cost:"57",full:true},
+          {id:S.uid(),vehicleId:v2,date:iso(-10),odometer:"98100",gallons:"9.2",cost:"31",full:true},
+          {id:S.uid(),vehicleId:v2,date:iso(-2),odometer:"98400",gallons:"8.9",cost:"30",full:true}],
+    maint:[{id:S.uid(),vehicleId:v1,task:"Oil change",lastOdo:"172000",lastDate:iso(-120),intervalMi:"5000",intervalMo:"6"},
+           {id:S.uid(),vehicleId:v1,task:"Tire rotation",lastOdo:"170000",lastDate:iso(-150),intervalMi:"6000",intervalMo:""},
+           {id:S.uid(),vehicleId:v1,task:"Add external trans cooler",lastOdo:"",lastDate:"",intervalMi:"",intervalMo:""},
+           {id:S.uid(),vehicleId:v2,task:"Oil change",lastOdo:"95000",lastDate:iso(-60),intervalMi:"5000",intervalMo:"6"}],
+    repairs:[{id:S.uid(),vehicleId:v1,date:iso(-6),what:"New battery",cost:"140",odometer:"175100",shop:"DIY"},
+             {id:S.uid(),vehicleId:v1,date:iso(-40),what:"Front brake pads",cost:"210",odometer:"174200",shop:"Corner Auto"},
+             {id:S.uid(),vehicleId:v2,date:iso(-70),what:"Serpentine belt",cost:"130",odometer:"94800",shop:"Corner Auto"}],
+    docs:[{id:S.uid(),vehicleId:v1,type:"Insurance",prov:"Dairyland · liability",expiry:iso(160)},
+          {id:S.uid(),vehicleId:v1,type:"Registration",prov:"TX",expiry:iso(22)},
+          {id:S.uid(),vehicleId:v1,type:"Inspection",prov:"TX state",expiry:iso(-3)},
+          {id:S.uid(),vehicleId:v2,type:"Insurance",prov:"full coverage",expiry:iso(95)}],
+    trips:[{id:S.uid(),date:iso(-5),purpose:"Client site visit",miles:"34",type:"Business"},
+           {id:S.uid(),date:iso(-12),purpose:"Supply run",miles:"18",type:"Business"}]
+  };
+}
+
+S.el("fu-date").value=S.todayISO();S.el("rp-date").value=S.todayISO();S.el("dc-exp").value="";S.el("tr-date").value=S.todayISO();
+S.initShell();
+S.initAccount({name:"steady-car",defaults:DEF,sample:SAMPLE,render:renderAll});
+S.initPremium({title:"Steady Car Premium",price:"1.25",desc:"Just $1.25/mo for this section — the tools that pay for themselves.",veil:"Unlock the mileage log for taxes, the cost-of-ownership report and the printable service record.",
+  features:["🧾 Mileage log — business miles + estimated deduction for taxes","📈 Cost report — fuel vs repairs, true cost per mile","📘 Service record — one printable sheet per vehicle for resale","🛡️ Everything stays private on your device"],render:renderAll});
+renderAll();
+S.onboard({html:'<div class="welcome-hero"><div class="logo">S</div><h2>Welcome to Steady Car</h2><p>Everything your vehicle needs in one private place — fuel, maintenance, repairs and renewals, all on your device.</p></div><div class="feat"><div class="fi">⛽</div><div><b>Know your real numbers</b><p>Log fill-ups and get MPG and cost-per-mile automatically.</p></div></div><div class="feat"><div class="fi">🔧</div><div><b>Never miss a service</b><p>Maintenance reminders by miles and months, plus document-renewal alerts.</p></div></div>',sample:SAMPLE,render:renderAll});
+</script>
+</body>
+</html>
