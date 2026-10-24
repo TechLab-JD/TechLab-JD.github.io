@@ -1,12 +1,2595 @@
 {
- "generated": "2026-10-24T01:41:37Z",
- "generated_human": "Oct 24, 2026 · 01:41 UTC",
- "sources": [],
- "n_articles": 0,
- "n_videos": 0,
- "trending": [],
- "videos": [],
- "stories": [],
- "blindspots": [],
- "factchecks": []
+ "generated": "2026-10-24T02:00:38Z",
+ "generated_human": "Oct 24, 2026 · 02:00 UTC",
+ "sources": [
+  {
+   "name": "NPR",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 10
+  },
+  {
+   "name": "The Guardian",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "NBC News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "CBS News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "ABC News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "PBS NewsHour",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Politico",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Vox",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "Slate",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Mother Jones",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "The Atlantic",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Time",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "BBC News",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "The Hill",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "CNBC",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Axios",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Al Jazeera",
+   "lean": 0,
+   "label": "Center",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "The Christian Science Monitor",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 10
+  },
+  {
+   "name": "Newsweek",
+   "lean": 0,
+   "label": "Center",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Reason",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "New York Post",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Washington Examiner",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "National Review",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Washington Times",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Fox News",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "The Daily Wire",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "The Federalist",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Newsmax",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Daily Caller",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  }
+ ],
+ "n_articles": 338,
+ "n_videos": 30,
+ "trending": [
+  {
+   "term": "trump",
+   "n": 24
+  },
+  {
+   "term": "senate",
+   "n": 12
+  },
+  {
+   "term": "election",
+   "n": 9
+  },
+  {
+   "term": "alaska",
+   "n": 9
+  },
+  {
+   "term": "race",
+   "n": 8
+  },
+  {
+   "term": "some",
+   "n": 8
+  },
+  {
+   "term": "political",
+   "n": 7
+  },
+  {
+   "term": "judge",
+   "n": 7
+  },
+  {
+   "term": "attack",
+   "n": 6
+  },
+  {
+   "term": "ukraine",
+   "n": 6
+  },
+  {
+   "term": "school",
+   "n": 6
+  },
+  {
+   "term": "results",
+   "n": 6
+  },
+  {
+   "term": "republicans",
+   "n": 6
+  },
+  {
+   "term": "democrat",
+   "n": 6
+  },
+  {
+   "term": "ohio",
+   "n": 5
+  },
+  {
+   "term": "change",
+   "n": 5
+  }
+ ],
+ "videos": [
+  {
+   "videoId": "XFK9Ui-lx14",
+   "title": "Trump Says He Ordered DOJ Lawsuit Over Senate Race in Alaska",
+   "thumb": "https://i.ytimg.com/vi/XFK9Ui-lx14/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "mWv7AxHWj3I",
+   "title": "Mike Rogers: If we don't fix this, we're all in trouble",
+   "thumb": "https://i.ytimg.com/vi/mWv7AxHWj3I/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "wkdxzwA-Tb8",
+   "title": "We 'knew this was coming': Trump orders DOJ to sue Alaska",
+   "thumb": "https://i.ytimg.com/vi/wkdxzwA-Tb8/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "N60IuM9GPXU",
+   "title": "Watters: Don’t count the Republicans out yet",
+   "thumb": "https://i.ytimg.com/vi/N60IuM9GPXU/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "hi1qUDU6PcA",
+   "title": "‘STOP THERE’: Abdul El-Sayed says he has never been a member of the Muslim Brotherhood",
+   "thumb": "https://i.ytimg.com/vi/hi1qUDU6PcA/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "KF4DWhkugTM",
+   "title": "Modern Warfare 4 cast on the 'epic conclusion' of the saga | BBC News",
+   "thumb": "https://i.ytimg.com/vi/KF4DWhkugTM/hqdefault.jpg",
+   "channel": "BBC News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "gqCE2LjqroI",
+   "title": "New Jersey township meeting erupts in chaos",
+   "thumb": "https://i.ytimg.com/vi/gqCE2LjqroI/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "IF2P3zcjx2s",
+   "title": "Muddy water rages near golf course amid heavy flooding in Utah",
+   "thumb": "https://i.ytimg.com/vi/IF2P3zcjx2s/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "gykYkU22NbU",
+   "title": "'COMPLETELY GONE': Iran's oil reserves reportedly DEPLETED",
+   "thumb": "https://i.ytimg.com/vi/gykYkU22NbU/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "7sAITRqU90o",
+   "title": "Iranian media is defiant as hardliners brace for war | BBC News",
+   "thumb": "https://i.ytimg.com/vi/7sAITRqU90o/hqdefault.jpg",
+   "channel": "BBC News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "DUkibisrjO4",
+   "title": "Trump earns 'worst ever' rating among this group going into midterms",
+   "thumb": "https://i.ytimg.com/vi/DUkibisrjO4/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "1ykbOdTWmjQ",
+   "title": "Jesse Watters: This is the ‘REAL THREAT’",
+   "thumb": "https://i.ytimg.com/vi/1ykbOdTWmjQ/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "ahhALwFOzjI",
+   "title": "Why we shame each other",
+   "thumb": "https://i.ytimg.com/vi/ahhALwFOzjI/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "U4Up7g4YvWY",
+   "title": "Melania Trump helps SECURE localized ceasefire in Ukraine",
+   "thumb": "https://i.ytimg.com/vi/U4Up7g4YvWY/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "DS7KnX9mXHU",
+   "title": "What happened to missing journalist Austin Tice?",
+   "thumb": "https://i.ytimg.com/vi/DS7KnX9mXHU/hqdefault.jpg",
+   "channel": "BBC News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "AfhWpGJKanM",
+   "title": "Trump SPARS with reporter over Ramaswmay ad: 'FAIR GAME'",
+   "thumb": "https://i.ytimg.com/vi/AfhWpGJKanM/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  }
+ ],
+ "stories": [
+  {
+   "title": "Can Trump block the Alaska Senate election?",
+   "summary": "This story appeared in The Logoff, a daily newsletter that helps you stay informed about the Trump administration without letting political news take over your life. Subscribe here. Welcome to The Logoff: The Trump administration is getting a head start on litigating the midterms",
+   "category": "Politics",
+   "leans": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 4,
+   "n_sources": 8,
+   "balance": {
+    "l": 4,
+    "c": 1,
+    "r": 3
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Can Trump block the Alaska Senate election?",
+     "url": "https://www.vox.com/the-logoff-newsletter-trump/507722/trump-alaska-senate-lawsuit-dans-sullivan-peltola"
+    },
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "DOJ Is Suing to Decertify Alaska’s Senate Results—But Only If Republicans Lose",
+     "url": "https://www.motherjones.com/politics/2026/10/doj-dan-sullivan-alaska-peltola-lawsuit-decertify-election/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Justice Department attempts to block certification of Alaska Senate race if Republican loses",
+     "url": "https://www.cbsnews.com/video/justice-department-attempts-to-block-certification-of-alaska-senate-race-if-republican-loses-1/"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump says he ordered suit to block Alaska Senate results if GOP loses",
+     "url": "https://www.pbs.org/newshour/show/trump-says-he-ordered-suit-to-block-alaska-senate-results-if-gop-loses"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Capehart and Ponnuru on Trump's threat to block Alaska election results",
+     "url": "https://www.pbs.org/newshour/show/capehart-and-ponnuru-on-trumps-threat-to-block-alaska-election-results"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "DOJ sues to delay Alaska election results if GOP incumbent loses",
+     "url": "https://www.axios.com/2026/10/23/trump-administration-sues-alaska-dan-sullivan"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump ordered to sit for deposition in $10 billion BBC lawsuit",
+     "url": "https://www.axios.com/2026/10/22/trump-bbc-lawsuit-december-deposition-deadline"
+    },
+    {
+     "name": "Reason",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump Sues to Block Alaska Senate Election Results Because of Potential Voter \"Confusion\"",
+     "url": "https://reason.com/volokh/2026/10/23/trump-sues-to-block-alaska-senate-election-results-because-potential-voter-confusion/"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump says he personally ordered DOJ lawsuit intervening in Alaska Senate election",
+     "url": "https://www.washingtonexaminer.com/news/white-house/4777960/trump-personal-order-doj-lawsuit-alaska-senate-election/"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump DOJ Sues To Block Alaska Senate Results If Dan Sullivan Loses Because Of Another Dan Sullivan",
+     "url": "https://dailycaller.com/2026/10/23/doj-sues-block-alaska-senate-results-dan-sullivan"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "Alaska Ad Missing Context in Attacking Peltola’s Border Votes",
+     "link": "https://www.factcheck.org/2026/10/alaska-ad-missing-context-in-attacking-peltolas-border-votes/"
+    },
+    {
+     "org": "FactCheck.org",
+     "title": "Ads in Maine Make Misleading Tax Claims About Jackson",
+     "link": "https://www.factcheck.org/2026/10/ads-in-maine-make-misleading-tax-claims-about-jackson/"
+    },
+    {
+     "org": "FactCheck.org",
+     "title": "Alaska Ad Criticizing Sullivan’s Votes Leaves Out Context, Makes False Suggestion",
+     "link": "https://www.factcheck.org/2026/10/alaska-ad-criticizing-sullivans-votes-leaves-out-context-makes-false-suggestion/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "XFK9Ui-lx14",
+     "title": "Trump Says He Ordered DOJ Lawsuit Over Senate Race in Alaska",
+     "thumb": "https://i.ytimg.com/vi/XFK9Ui-lx14/hqdefault.jpg",
+     "channel": "CNN",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Putin Is Meddling in the Midterms to Help Trump by Spreading False Sex Abuse Claims",
+   "summary": "On Tuesday, an X account attributed to a Texas man named Zyron Lewis posted a video of Lewis claiming that in 2012, when he was a middle school student, he was sexually assaulted by James Talarico, the Democratic Senate candidate in Texas. This allegation—which zapped across the ",
+   "category": "World",
+   "leans": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 4,
+   "n_sources": 7,
+   "balance": {
+    "l": 4,
+    "c": 1,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "Putin Is Meddling in the Midterms to Help Trump by Spreading False Sex Abuse Claims",
+     "url": "https://www.motherjones.com/politics/2026/10/putin-russia-meddling-interference-us-midterm-elections-helping-trump-sex-abuse-fake-videos-talarico-walz-disinformation-campaign/"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump hopes to flatter Putin into negotiating on Ukraine",
+     "url": "https://www.nbcnews.com/politics/donald-trump/trump-hopes-flatter-putin-negotiating-ukraine-experts-say-rcna604770"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "News Wrap: White House says Melania Trump brokered localized ceasefire deal in Oleshky",
+     "url": "https://www.pbs.org/newshour/show/news-wrap-white-house-says-melania-trump-brokered-localized-ceasefire-deal-in-oleshky"
+    },
+    {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Why Trump Can’t Sell Putin a Deal",
+     "url": "https://www.theatlantic.com/international/2026/10/trump-putin-ukraine-nato/689118/?utm_source=feed"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "White House says Melania Trump brokered truce for Ukraine city 'on brink of disaster'",
+     "url": "https://www.bbc.co.uk/news/articles/c6vgxkvl4w5eo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Reason",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Why Would Trump Make A Deal With A Judge Who Ruled Illegal Aliens Have A Right To \"Locomotion\" In The United States?",
+     "url": "https://reason.com/volokh/2026/10/23/why-would-trump-make-a-deal-with-a-judge-who-ruled-illegal-aliens-have-a-right-to-locomotion-in-the-united-states/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Revive Trump Playbook for Midterms With God",
+     "url": "https://www.newsmax.com/newsfront/donald-trump-midterms-religion/2026/10/23/id/1273846"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Trump admin chopping down trees: 4 claims, investigated",
+     "link": "https://www.snopes.com/collections/trump-admin-cutting-trees-rumor-collection/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "kolOjI1K6jE",
+     "title": "White House says Melania Trump brokers truce for Ukraine city 'on brink of disaster' | BBC News",
+     "thumb": "https://i.ytimg.com/vi/kolOjI1K6jE/hqdefault.jpg",
+     "channel": "BBC News",
+     "lean": 0,
+     "label": "Center"
+    },
+    {
+     "videoId": "rjnHvbngtKU",
+     "title": "Melania Trump says she secured a one-city ceasefire between Russia and Ukraine",
+     "thumb": "https://i.ytimg.com/vi/rjnHvbngtKU/hqdefault.jpg",
+     "channel": "CNN",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "U4Up7g4YvWY",
+     "title": "Melania Trump helps SECURE localized ceasefire in Ukraine",
+     "thumb": "https://i.ytimg.com/vi/U4Up7g4YvWY/hqdefault.jpg",
+     "channel": "Fox News",
+     "lean": 2,
+     "label": "Right"
+    }
+   ]
+  },
+  {
+   "title": "Mamdani on Trump, Floods, and the Fight Over Data Centers",
+   "summary": "His name might not be on the ballot this November, but New York City Mayor Zohran Mamdani is undoubtedly one of the most influential figures in American politics right now. After his barrier-breaking victory late last year, Mamdani has emerged as the face of the no-holds-barred p",
+   "category": "Politics",
+   "leans": [
+    -2,
+    1,
+    2
+   ],
+   "span": 4,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "Mamdani on Trump, Floods, and the Fight Over Data Centers",
+     "url": "https://www.motherjones.com/politics/2026/10/mamdani-trump-stress-test-video-podcast-climate-midterms/"
+    },
+    {
+     "name": "Reason",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump Wants To Force Data Centers To 'Make Their Own Electricity.' Deregulation Would Work Better.",
+     "url": "https://reason.com/2026/10/23/trump-wants-to-force-data-centers-to-make-their-own-electricity-deregulation-would-work-better/"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Wants More Gas And Diesel Made At Home, And He’s Paying $150 Million To Make It Happen",
+     "url": "https://dailycaller.com/2026/10/23/defense-production-act-refineries-energy-department-chris-wright-matt-mcmanus-afpm"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Seeking to help Collins in Maine, Trump exempts some Canadian imports from his 50% tariffs",
+   "summary": "Collins, locked in a tight race with Democratic challenger Troy Jackson, issued a statement saying she'd spoken with Trump's top trade negotiator, Jamieson Greer, and Commerce Secretary Howard Lutnick \"about the toll tariffs are taking on Maine families, businesses, farmers, and ",
+   "category": "World",
+   "leans": [
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 5,
+   "balance": {
+    "l": 2,
+    "c": 1,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump administration cancels some Canada tariffs amid close midterm races",
+     "url": "https://www.nbcnews.com/business/economy/trump-cancels-canada-tariffs-susan-collins-rcna605270"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Seeking to help Collins in Maine, Trump exempts some Canadian imports from his 50% tariffs",
+     "url": "https://www.pbs.org/newshour/politics/seeking-to-help-collins-in-maine-trump-exempts-some-canadian-imports-from-his-50-tariffs"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump dropping some Canada tariffs but 'replacing' them with other products",
+     "url": "https://www.cnbc.com/2026/10/23/trump-tariffs-canada-susan-collins.html"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump exempts some Canadian products from tariffs, enthusing border-state GOP Sen. Susan Collins",
+     "url": "https://www.washingtontimes.com/news/2026/oct/23/trump-exempts-canadian-products-tariffs-enthusing-border-state-gop/"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Susan Collins Gets An Unexpected Lifeline From Trump In Senate Nail-Biter",
+     "url": "https://www.dailywire.com/news/susan-collins-gets-an-unexpected-lifeline-from-trump-in-senate-nail-biter"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "Ads in Maine Make Misleading Tax Claims About Jackson",
+     "link": "https://www.factcheck.org/2026/10/ads-in-maine-make-misleading-tax-claims-about-jackson/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "Deadly Paris shooting suspected to be ‘racist terrorist attack’",
+   "summary": "French President Emmanuel Macron announced that a series of drive-by shootings in the suburbs of Paris was a “racist terrorist attack” that killed one person and injured five others, including a 12-year-old girl. “These people were targeted because of their skin color or perceive",
+   "category": "General",
+   "leans": [
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 5,
+   "balance": {
+    "l": 2,
+    "c": 1,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Israel orders closure of West Bank after soldiers kill 2 men behind an alleged attack",
+     "url": "https://www.npr.org/2026/10/23/nx-s1-6013333/netanyahu-closure-west-bank"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Israel orders full West Bank 'lockdown' after deadly shooting attack",
+     "url": "https://www.nbcnews.com/now/video/israel-orders-full-west-bank-lockdown-after-deadly-shooting-attack-272097861757"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Deadly shooting near Paris is a 'racist terrorist attack', Macron says",
+     "url": "https://www.bbc.co.uk/news/articles/c6ev38dj1g8zo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Deadly Paris shooting suspected to be ‘racist terrorist attack’",
+     "url": "https://www.washingtonexaminer.com/news/world/4778114/paris-shooting-racist-terrorist-attack/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Macron Condemns 'Racist Terrorist Attack' Near Paris",
+     "url": "https://www.newsmax.com/newsfront/france-macron-terrorist/2026/10/23/id/1273847"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Rubio tells Cubans ‘now is the time’ to act to see political change",
+   "summary": "US secretary of state makes comments after Trump tells US rally warships could intervene on return from Iran Marco Rubio urged Cubans seeking political change in their country to act, saying “now is the time” moments after Donald Trump told a Friday rally for candidates in south ",
+   "category": "World",
+   "leans": [
+    -1,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 4,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 3
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Rubio tells Cubans ‘now is the time’ to act to see political change",
+     "url": "https://www.theguardian.com/us-news/2026/oct/23/marco-rubio-cuba-trump"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Rubio calls for Cubans to partner with CIA",
+     "url": "https://www.washingtonexaminer.com/policy/foreign-policy/4778294/rubio-cubans-partner-with-cia/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Rubio urges Cubans to work with CIA to bring political change to communist-run island",
+     "url": "https://www.foxnews.com/world/rubio-urges-cubans-work-cia-bring-political-change-communist-run-island"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Rubio Urges Cubans to Work With CIA, But Warns: Be Discreet",
+     "url": "https://www.newsmax.com/newsfront/marco-rubio-cia-cuba/2026/10/23/id/1273855"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Former FBI Officials Charged With Lying To Congress About Hunter Biden Probes",
+   "summary": "'When senior officials entrusted with safeguarding our nation’s security choose deception over duty, they undermine the very institutions they swore to uphold.'",
+   "category": "Politics",
+   "leans": [
+    -1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Ex-FBI employees charged with lying to Congress over Hunter Biden inquiries",
+     "url": "https://www.npr.org/2026/10/23/g-s1-149534/justice-fbi-charged-hunter-biden-laptop"
+    },
+    {
+     "name": "The Federalist",
+     "lean": 2,
+     "label": "Right",
+     "title": "Former FBI Officials Charged With Lying To Congress About Hunter Biden Probes",
+     "url": "https://thefederalist.com/2026/10/23/former-fbi-officials-charged-with-lying-to-congress-about-hunter-biden-probes/?utm_source=rss&utm_medium=rss&utm_campaign=former-fbi-officials-charged-with-lying-to-congress-about-hunter-biden-probes"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Meghan Markle responds as estranged father investigated for alleged child porn posession",
+   "summary": "Meghan Markle, the Duchess of Sussex, said in a statement Friday that she's \"deeply distressed\" by reports that her father, Thomas Markle, is under investigation in the Philippines for alleged possession of child sexual abuse materials. CBS News reporter Emmet Lyons has more.",
+   "category": "General",
+   "leans": [
+    -1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Meghan Markle responds as estranged father investigated for alleged child porn posession",
+     "url": "https://www.cbsnews.com/video/meghan-markles-estranged-father-investigated-for-alleged-child-porn-posession/"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Meghan Markle Admits To Being Aware Of Father’s Child Porn Allegations For Years, Kept Her Kids Away",
+     "url": "https://dailycaller.com/2026/10/23/meghan-markle-thomas-markle-child-pornography-allegations-explicit-images"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "rxn-NJHbzaI",
+     "title": "Meghan Markle “distressed” after learning of “sickening” allegations against her father | BBC News",
+     "thumb": "https://i.ytimg.com/vi/rxn-NJHbzaI/hqdefault.jpg",
+     "channel": "BBC News",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "Cook Political Report shifts Ohio governor's race from toss-up to lean Democrat",
+   "summary": "The Cook Political Report is shifting a closely watched gubernatorial contest toward Democrats after a controversial campaign ad shook up the race. The nonpartisan election forecaster moved the governor’s race in Ohio from “toss up” to “lean Democrat,” now favoring Amy Acton (D) ",
+   "category": "World",
+   "leans": [
+    0,
+    1,
+    2
+   ],
+   "span": 2,
+   "n_sources": 3,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Cook Political Report shifts Ohio governor's race from toss-up to lean Democrat",
+     "url": "https://thehill.com/homenews/campaign/6169489-cook-political-report-shifts-ohio/"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Cook Political Report shifts Ohio governor race in favor of Democrat after Ramaswamy ad controversy",
+     "url": "https://www.washingtonexaminer.com/news/campaigns/state/4778332/ohio-governor-race-shifts-favor-of-democrat-ramaswamy-ad/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Cook Moves Ohio Governor Race to 'Lean Democrat'",
+     "url": "https://www.newsmax.com/newsfront/vivek-ramaswamy-amy-acton-ohio/2026/10/23/id/1273849"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "Controversial Ohio Ad Calls Acton a ‘Liar,’ But Records Back Her Account of Childhood",
+     "link": "https://www.factcheck.org/2026/10/controversial-ohio-ad-calls-acton-a-liar-but-records-back-her-account-of-childhood/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "Kenya announces 2nd Ebola death, a close relative of the first patient",
+   "summary": "Kenya's Health Ministry announced the country's second Ebola death Friday, saying a 65-year-old woman who was a close relative of the first patient died after developing symptoms while in quarantine.",
+   "category": "Health",
+   "leans": [
+    -1,
+    0,
+    1
+   ],
+   "span": 2,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Authorities investigating whether first Kenya and Nigeria Ebola cases crossed paths",
+     "url": "https://www.npr.org/2026/10/23/g-s1-149515/africa-ebola-outbreak"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Kenya announces second Ebola death, says ‘no evidence’ of community spread",
+     "url": "https://www.aljazeera.com/news/2026/10/23/kenya-announces-second-ebola-death-says-no-evidence-of-community-spread?traffic_source=rss"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Kenya announces 2nd Ebola death, a close relative of the first patient",
+     "url": "https://www.washingtontimes.com/news/2026/oct/23/kenya-announces-second-ebola-death-close-relative-first-patient/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Mississippi officer who fatally shot 1-year-old resigns",
+   "summary": "The Mississippi police officer who fired the shot that killed one-year-old Kohen Wiley in a Walmart parking lot in June during an alleged shoplifting pursuit resigned.",
+   "category": "General",
+   "leans": [
+    -1,
+    1
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Mississippi officer who fatally shot 1-year-old resigns",
+     "url": "https://abcnews.com/US/mississippi-police-officer-fatally-shot-1-year-kohen/story?id=137514853"
+    },
+    {
+     "name": "Reason",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Mississippi Cop Who Shot 1-Year-Old Kohen Wiley Resigns After State Calls Shooting 'Justified'",
+     "url": "https://reason.com/2026/10/23/mississippi-cop-who-shot-1-year-old-kohen-wiley-resigns-after-state-calls-shooting-justified/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "West Virginia attorney general subpoenas environmental groups",
+   "summary": "West Virginia’s attorney general has sent investigative subpoenas to environmental advocacy organizations — something the groups are describing as a retaliatory attack on their First Amendment rights. West Virginia Rivers Coalition and 350.org filed a lawsuit this week saying the",
+   "category": "Science",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "West Virginia attorney general subpoenas environmental groups",
+     "url": "https://thehill.com/policy/energy-environment/6169430-wv-ag-subpoenas-environmental-groups/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Environmental Groups Sue W.Va. AG Over Climate Subpoenas",
+     "url": "https://www.newsmax.com/newsfront/west-virginia-jb-mccuskey-environmental-groups/2026/10/23/id/1273852"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Scoop: U.S. intel memo warns of \"advanced\" Iranian plots to kill officials abroad",
+   "summary": "U.S. intelligence finds Iran has \"substantially increased\" its efforts to target American diplomats and officials in the Middle East and beyond, with lethal plots reaching \"advanced stages,\" according to an Oct. 23 memo to Secretary of State Marco Rubio obtained by Axios. Why it ",
+   "category": "World",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Scoop: U.S. intel memo warns of \"advanced\" Iranian plots to kill officials abroad",
+     "url": "https://www.axios.com/2026/10/24/iran-war-us-embassies-evacuations-threat"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Iran Assassination Plots at 'Advanced Stages': US Intel",
+     "url": "https://www.newsmax.com/newsfront/Iran-Assassination-Plots-at-Advanced-Stages-US-Intel/2026/10/23/id/1273860"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Vanessa Trump 'finally cancer-free,' she says after health battle in emotional video with daughter Kai",
+   "summary": "Months after revealing her breast cancer diagnosis in April, Vanessa Trump announces she is cancer-free in an emotional video with daughter Kai Trump.",
+   "category": "Politics",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Vanessa Trump Reveals She's Cancer Free 6 Months After Diagnosis",
+     "url": "https://www.newsweek.com/vanessa-trump-reveals-shes-cancer-free-6-months-after-diagnosis-12613866"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Vanessa Trump 'finally cancer-free,' she says after health battle in emotional video with daughter Kai",
+     "url": "https://www.foxnews.com/lifestyle/vanessa-trump-finally-cancer-free-after-health-battle-emotional-video-daughter-kai"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Feds put California school districts’ ‘TMI’ student questionnaires on notice",
+   "summary": "When are lefty California school districts going to learn? It’s wrong to promote radical gender ideology in schools. And it’s unconscionable to hide such efforts from parents. As The California Post reported exclusively, the US Department of Education on Friday announced investig",
+   "category": "Economy",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Feds put California school districts’ ‘TMI’ student questionnaires on notice",
+     "url": "https://nypost.com/2026/10/23/opinion/feds-put-california-school-districts-student-questionnaires-on-notice/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Report: Feds Probe 3 Calif. Districts Over Student Surveys",
+     "url": "https://www.newsmax.com/newsfront/linda-mcmahon-education-california/2026/10/23/id/1273859"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "NASA Adopting Apollo's Urgency to Build Moon Base",
+   "summary": "NASA is moving fast on its plans to build a moon base and return astronauts to the lunar surface in as little as two years.Administrator Jared Isaacman said Friday that the space agency is still on track to launch Artemis III next summer on a docking exercise with Elon...",
+   "category": "Science",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "NASA adopting Apollo's urgency to build a moon base and land astronauts within two years",
+     "url": "https://www.washingtontimes.com/news/2026/oct/23/nasa-adopts-apollos-urgency-build-moon-base-land-astronauts-within/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "NASA Adopting Apollo's Urgency to Build Moon Base",
+     "url": "https://www.newsmax.com/newsfront/nasa-artemis-moon-astronauts-space/2026/10/23/id/1273850"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "'There's babies in there': Oregon father describes stopping school shooter",
+   "summary": "Kaylub Giamanco is the father who stopped a school shooter in Bend, Oregon, a week ago. The teen gunman entered the school and killed three students and a teacher before Giamanco stopped him. In a new interview with Oregon Public Broadcasting, Giamanco describes the moments leadi",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 4,
+   "balance": {
+    "l": 4,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Hero who stopped Bend school shooter haunted by encounter: ‘I didn’t save everybody’",
+     "url": "https://www.nbcnews.com/news/us-news/hero-stopped-bend-school-shooter-haunted-encounter-didnt-everybody-rcna605265"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Hero dad who stopped Oregon school shooter shares his story",
+     "url": "https://www.cbsnews.com/news/hero-kaylub-giamanco-bend-oregon-shooting/"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Hero dad who took down school shooter speaks out: 'I was supposed to be there'",
+     "url": "https://abcnews.com/US/hero-dad-school-shooter-speaks-supposed/story?id=137526493"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "'There's babies in there': Oregon father describes stopping school shooter",
+     "url": "https://www.pbs.org/newshour/show/theres-babies-in-there-oregon-father-describes-stopping-school-shooter"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Trump's U.N. ambassador says Iran war could drag on for another year",
+   "summary": "The U.S. ambassador to the U.N. says the war with Iran could last another year, but he hopes Tehran will \"come to the table\" sooner.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump's U.N. ambassador says Iran war could drag on for another year",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-oil-gas-prices-strait-of-hormuz-midterms/"
+    },
+    {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump’s Gamble to End the Iran War",
+     "url": "https://www.theatlantic.com/national-security/2026/10/trump-iran-war-strikes-after-midterms/689121/?utm_source=feed"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "How a Fake Pollster May Have Hurt Real Candidates",
+   "summary": "Wedgewood Polls admitted to using fabricated data in its surveys, claiming the stunt was an “experimental project” intended to showcase the “vulnerabilities” of the polling industry.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "Politico",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How a fake pollster may have moved some 2026 elections",
+     "url": "https://www.politico.com/news/2026/10/22/how-a-fake-pollster-may-have-moved-some-2026-elections-01131675"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How a Fake Pollster May Have Hurt Real Candidates",
+     "url": "https://time.com/article/2026/10/23/what-fake-wedgewood-polls-scandal-reveals-about-election-polling/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Masked gunmen kill seven in attack on church funeral in Jordan",
+   "summary": "At least seven people were killed and 34 wounded after two masked gunmen opened fire at a church in Karak, Jordan.",
+   "category": "General",
+   "leans": [
+    0
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 2,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Seven shot dead by gunmen at church funeral in Jordan, officials say",
+     "url": "https://www.bbc.co.uk/news/articles/ck87zlpzny15o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Masked gunmen kill seven in attack on church funeral in Jordan",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/10/23/aje-onl-nf_masked-gunmen-kill-seven-in-attack-on-church-jordan-231026?traffic_source=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Argentina drops investigation into President Milei over crypto fraud",
+   "summary": "Javier Milei had denied acting fraudulently when a cryptocurrency nosedived after he deleted a social media post about it.",
+   "category": "Tech",
+   "leans": [
+    0
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 2,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Argentina drops investigation into President Milei over crypto fraud",
+     "url": "https://www.bbc.co.uk/news/articles/c64g1eplpvddo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Argentinian judge drops fraud investigation into Milei over crypto scandal",
+     "url": "https://www.aljazeera.com/news/2026/10/24/argentinian-judge-drops-fraud-investigation-into-milei-over-crypto-scandal?traffic_source=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Musk's SpaceX is still restricting Starlink in Ukraine and the toll is rising",
+   "summary": "Since last week, Ukraine has reported restrictions on Starshield, a version of SpaceX's Starlink, hampering its military operations against Russia.",
+   "category": "World",
+   "leans": [
+    0
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 2,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Ukraine says Starlink still restricted after Trump says limits lifted",
+     "url": "https://www.bbc.co.uk/news/articles/cq74pjpmx0e8o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Musk's SpaceX is still restricting Starlink in Ukraine and the toll is rising",
+     "url": "https://www.cnbc.com/2026/10/23/ukraine-says-starlink-restrictions-remain-despite-trump-assurances.html"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Appeals court sides with Trump on indefinite illegal immigrant detention policy",
+   "summary": "An appeals court on Friday ruled the Trump administration can continue detaining certain illegal immigrants without giving them bond hearings while their immigration cases move through court. The Friday ruling by the full 17-member 5th U.S. Circuit Court of Appeals was a major vi",
+   "category": "World",
+   "leans": [
+    1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Appeals court sides with Trump on indefinite illegal immigrant detention policy",
+     "url": "https://www.washingtonexaminer.com/policy/immigration/4777908/appeals-court-sides-with-trump-on-indefinite-illegal-immigrant-detention-policy/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Appeals court says Trump's immigration detention policies are constitutional",
+     "url": "https://www.washingtontimes.com/news/2026/oct/23/appeals-court-says-trumps-immigration-detention-policies/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Ramaswamy says ad featuring Acton’s mother had nothing to do with allegations of sexual abuse",
+   "summary": "Ohio Republican gubernatorial candidate Vivek Ramaswamy is defending the ad featuring his opponent Amy Acton’s estranged mother despite backlash from both parties. NBC News’ Priscilla Thompson explains.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Ramaswamy says ad featuring Acton’s mother had nothing to do with allegations of sexual abuse",
+     "url": "https://www.nbcnews.com/video/ramaswamy-says-ad-featuring-acton-s-mother-had-nothing-to-do-with-allegations-of-sexual-abuse-272145989925"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "Controversial Ohio Ad Calls Acton a ‘Liar,’ But Records Back Her Account of Childhood",
+     "link": "https://www.factcheck.org/2026/10/controversial-ohio-ad-calls-acton-a-liar-but-records-back-her-account-of-childhood/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "Trump's Potomac Golf Course Fight: Judge Orders Phone Records Preserved",
+   "summary": "A judge has ordered a Trump official to preserve his personal phone’s contents in the latest update in a golf course legal battle.",
+   "category": "Politics",
+   "leans": [
+    0
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump's Potomac Golf Course Fight: Judge Orders Phone Records Preserved",
+     "url": "https://www.newsweek.com/trumps-potomac-golf-course-fight-judge-orders-phone-records-preserved-12612063"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Trump admin chopping down trees: 4 claims, investigated",
+     "link": "https://www.snopes.com/collections/trump-admin-cutting-trees-rumor-collection/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "James Talarico Wants To Win Texas In Republican Drag",
+   "summary": "Why does a Democrat running for Senate in Texas need to borrow the cultural packaging of conservatism?",
+   "category": "Politics",
+   "leans": [
+    2
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Federalist",
+     "lean": 2,
+     "label": "Right",
+     "title": "James Talarico Wants To Win Texas In Republican Drag",
+     "url": "https://thefederalist.com/2026/10/23/james-talarico-wants-to-win-texas-in-republican-drag/?utm_source=rss&utm_medium=rss&utm_campaign=james-talarico-wants-to-win-texas-in-republican-drag"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "Talarico’s Campaign-Trail Absence Sparks False Rumor",
+     "link": "https://www.factcheck.org/2026/10/talaricos-campaign-trail-absence-sparks-false-rumor/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "Severe flooding hits Four Corners region, more expected through the weekend",
+   "summary": "Intense rainfall slammed the Four Corners region late this week. As rivers flooded, towns declared evacuations and emergencies and made rescues.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Severe flooding hits Four Corners region, more expected through the weekend",
+     "url": "https://www.npr.org/2026/10/23/nx-s1-6014742/flooding-weather-four-corners"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "The Pentagon's guidelines for \"responsible AI\" aren't always followed, report shows",
+   "summary": "The Pentagon is building weapons and projects with AI capabilities that officials say don't always closely adhere to the agency's own guidelines for AI, according to a congressional watchdog report published in October.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "The Pentagon's guidelines for \"responsible AI\" aren't always followed, report shows",
+     "url": "https://www.npr.org/2026/10/23/nx-s1-6012296/ai-department-of-defense-war"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Ohio could decide control of the Senate. Its rural voters might decide the winner",
+   "summary": "Ohio has been a reliably red state for several elections but it's competitive this year. If Democrats want to prevail, they'll have to win people who have backed Republicans, like rural voters.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Ohio could decide control of the Senate. Its rural voters might decide the winner",
+     "url": "https://www.npr.org/2026/10/23/nx-s1-6012809/ohio-senate-governor-election-rural-voters"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "A D.C. park was made 'for the pleasure of the people.' Trump's plan would change that",
+   "summary": "Trump's most recent rendering of East Potomac Park overtakes the D.C. peninsula with a sprawling golf course, without the grassy areas and road beloved by locals. That's prompted grassroots pushback.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "A D.C. park was made 'for the pleasure of the people.' Trump's plan would change that",
+     "url": "https://www.npr.org/2026/10/23/nx-s1-6010488/east-potomac-trump-golf-hains-point"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Will a macaque eat a grape sitting on a pile of poo? A study on germophobia",
+   "summary": "When an outbreak strikes, humans try to avoid germs. (Remember wiping off groceries at the start of the pandemic?) What about ... monkeys?",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Will a macaque eat a grape sitting on a pile of poo? A study on germophobia",
+     "url": "https://www.npr.org/2026/10/23/nx-s1-6009527/monkey-macaque-germs-virus-outbreak"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Military reinforcements move to Mideast. And, millions of Americans vote early",
+   "summary": "Military reinforcements are heading to the Middle East and some personnel have left the region, pointing to a potential attack on Iran. And, millions of Americans have already voted in the midterms.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Military reinforcements move to Mideast. And, millions of Americans vote early",
+     "url": "https://www.npr.org/2026/10/23/g-s1-149514/up-first-newsletter-iran-war-midterm-voting-trump-bbc"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Why Meta is charging to post more hyperlinks",
+   "summary": "Social media sites aren't the biggest fans of people leaving via hyperlinks. In fact, Meta has made it subscription-worthy for a Facebook Page to post more than two hyperlinks per month. What's the rationale for companies want to keep you on their site?",
+   "category": "Tech",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Why Meta is charging to post more hyperlinks",
+     "url": "https://www.npr.org/sections/planet-money/2026/10/23/nx-s1-6012726/why-meta-is-charging-to-post-more-hyperlinks"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Mystery over source of Ebola infection in Nigeria fuels concern about spread of virus",
+   "summary": "Switzerland says patient is wife of Swiss diplomat and believed to have contracted virus while travelling in Uganda Health officials across Africa are racing to determine how Nigeria’s first Ebola patient ⁠in more than a decade ⁠became infected, amid fears ​the outbreak could spr",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Mystery over source of Ebola infection in Nigeria fuels concern about spread of virus",
+     "url": "https://www.theguardian.com/world/2026/oct/23/ebola-swiss-patient-nigeria-dr-congo-concerns-virus-spread"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Lewis Hamilton aims to extend career till early 2030s so he can race in African Grand Prix",
+   "summary": "41-year-old set on ‘dream to be able to race in Africa’ Rwanda to host despite criticism of human rights record Lewis Hamilton has said he hopes to remain racing in Formula One until he can take part in the African Grand Prix which is set to take place in Rwanda in the 2030s . Th",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Lewis Hamilton aims to extend career till early 2030s so he can race in African Grand Prix",
+     "url": "https://www.theguardian.com/sport/2026/oct/22/lewis-hamilton-aims-to-extend-career-till-early-2030s-so-he-can-race-in-african-grand-prix"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Controversial US-backed vaccine trial in African newborns halted",
+   "summary": "Hepatitis B study in Guinea-Bissau that was to be funded by CDC and that drew global backlash ‘will not move forward’ The US-backed hepatitis B vaccine trial in African newborns that drew global backlash was halted, the lead researcher said on Wednesday. It was “now clear” that t",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Controversial US-backed vaccine trial in African newborns halted",
+     "url": "https://www.theguardian.com/world/2026/oct/21/us-vaccine-trial-african-newborns-hepatitis-b"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Severely ill ICE detainees face imminent deportation to unknown African states, advocates say",
+   "summary": "Flights to third countries where the detainees have no ties are scheduled as early as Wednesday, relatives detail Send us your questions about immigration and the midterms Relatives of gravely ill detainees at two Florida immigration jails say authorities are about to deport thei",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Severely ill ICE detainees face imminent deportation to unknown African states, advocates say",
+     "url": "https://www.theguardian.com/us-news/2026/oct/21/ice-detention-illness-deportation-florida"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Nigeria confirms Ebola case as outbreak spreads into western Africa",
+   "summary": "Case in Africa’s most populous country was detected in a woman who had travelled from Uganda Nigeria has confirmed an Ebola case in its capital, Abuja, after a woman who arrived from Uganda tested positive for the virus, the health ministry said. The woman began showing symptoms ",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Nigeria confirms Ebola case as outbreak spreads into western Africa",
+     "url": "https://www.theguardian.com/world/2026/oct/21/nigeria-first-ebola-case-africa-outbreak-latest"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Brazil’s election and the battle for the Amazon – podcast",
+   "summary": "Our Latin America correspondent, Tom Phillips, heads to Roraima to hear what’s at stake for the rainforest and the communities that live there in the Brazilian presidential runoff on Sunday. Send your comments and questions to tif.questions@theguardian.com For the Amazon and the ",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Brazil’s election and the battle for the Amazon – podcast",
+     "url": "https://www.theguardian.com/news/audio/2026/oct/23/brazil-election-battle-for-amazon-podcast"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Alberta welcomed migrant workers. Now, it wants to restrict their rights",
+   "summary": "‘Scapegoating non-permanent residents is not going to lower the cost of living,’ Vanesa Ortiz says When Vanesa Ortiz came to Calgary from Mexico, she found herself in a city gripped by winter. Outside the airport, it was -15C (5F). “I would come to understand that this was not an",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Alberta welcomed migrant workers. Now, it wants to restrict their rights",
+     "url": "https://www.theguardian.com/world/2026/oct/22/canada-alberta-migrant-workers"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Alberta voters overwhelmingly reject plan to leave Canada in referendum",
+   "summary": "Result is a victory for prime minister Mark Carney and supporters of Canadian unity Voters in Canada’s Alberta have overwhelmingly rejected a proposal to begin the process of independence, delivering a decisive victory for supporters of Canadian unity and deepening divisions with",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Alberta voters overwhelmingly reject plan to leave Canada in referendum",
+     "url": "https://www.theguardian.com/world/2026/oct/20/canada-alberta-rejects-independence-succession-referendum"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "‘Bad decisions’: Man convicted for taking Peachy the flamingo from Las Vegas hotel",
+   "summary": "Mitchell Fairbarn found guilty of animal cruelty after prosecutors say he hurt and frightened the 27-year-old bird A Canadian man was convicted of animal cruelty charges on Monday for snatching a flamingo named Peachy from its enclosure at an iconic Las Vegas hotel. Prosecutors s",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "‘Bad decisions’: Man convicted for taking Peachy the flamingo from Las Vegas hotel",
+     "url": "https://www.theguardian.com/us-news/2026/oct/20/man-convicted-peachy-the-flamingo-las-vegas-hotel"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Duchess of Sussex ‘deeply distressed’ over child sexual abuse image claims against father",
+   "summary": "Meghan reveals she was made aware of ‘disturbing allegations’ against him in 2018 by Met police The Duchess of Sussex has said she is “deeply distressed” over accusations involving child sexual abuse images against her estranged father, Thomas Markle Sr, and revealed she was made",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Duchess of Sussex ‘deeply distressed’ over child sexual abuse image claims against father",
+     "url": "https://www.theguardian.com/uk-news/2026/oct/23/meghan-duchess-of-sussex-distressed-child-sexual-abuse-image-claims-against-father"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Magnitude-7 earthquake hits Tibet, killing at least 16 and destroying hundreds of homes",
+   "summary": "Search and rescue efforts under way after quake strikes region’s north, with at least seven aftershocks recorded A magnitude-7 earthquake has hit Tibet, killing at least 16 people, injuring 54 and destroying hundreds of homes in the northern regional city of Nagqu, official media",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Magnitude-7 earthquake hits Tibet, killing at least 16 and destroying hundreds of homes",
+     "url": "https://www.theguardian.com/world/2026/oct/23/magnitude-7-earthquake-hits-china-tibet"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Focus group: Supporters of losing primary candidates in Michigan & Texas weigh general election vote",
+   "summary": "Syracuse University’s Margaret Talev talks to a group of voters whose candidates lost primary races in Michigan and Texas. The focus groups were produced by Syracuse University and the research firms Engagious and Sago, observed by NBC News.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Focus group: Supporters of losing primary candidates in Michigan & Texas weigh general election vote",
+     "url": "https://www.nbcnews.com/meet-the-press/video/focus-group-supporters-of-losing-primary-candidates-in-michigan-texas-weigh-general-election-vote-272134725683"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "How Starlink slowdown hit Ukraine’s front line soldiers pushing Russia back",
+   "summary": "The drone unit he leads has been helping push back Russian troops on the front lines in southeastern Ukraine.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How Starlink slowdown hit Ukraine’s front line soldiers pushing Russia back",
+     "url": "https://www.nbcnews.com/world/ukraine/starlink-slowdown-hit-ukraines-front-line-soldiers-pushing-russia-back-rcna604732"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "World Series set to start as potential MLB lockout or strike looms for next season",
+   "summary": "With the World Series starting soon, owners and players will head to the negotiating table to figure out the next collective bargaining agreement. If neither side can come to an agreement, the 2027 season may be in jeopardy. NBC News' Steven Romo reports.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "World Series set to start as potential MLB lockout or strike looms for next season",
+     "url": "https://www.nbcnews.com/video/world-series-starts-as-mlb-labor-negotiations-loom-272072261961"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "'Wildwood' embraces handmade artistry in the age of AI",
+   "summary": "LAIKA Studios spent over six years crafting \"Wildwood\" by hand— 233 puppets, 1,000-plus artists, and zero AI. As the film earns Oscar buzz, animators say handmade art is having a resurgence. NBC News' Chloe Melas reports.",
+   "category": "Tech",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "'Wildwood' embraces handmade artistry in the age of AI",
+     "url": "https://www.nbcnews.com/now/video/-wildwood-movie-laika-s-stop-motion-film-challenges-ai-272132165931"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Debbie Shields speaks out on her viral moment riffing with Conan O'Brien",
+   "summary": "Internet sensation Debbie Shields speaks with NBC News’ Yasmin Vossoughian about her recent viral video, where she stood out during an improvised conversation with Conan O'Brien on the popular internet talk show “Subway Takes.”",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Debbie Shields speaks out on her viral moment riffing with Conan O'Brien",
+     "url": "https://www.nbcnews.com/video/debbie-shields-speaks-out-on-her-viral-moment-riffing-with-conan-o-brien-272080965792"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Send your questions for Steve Kornacki on the midterm elections",
+   "summary": "Election Day is quickly approaching and, with just over a week to go, Steve Kornacki is ready to answer your questions.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Send your questions for Steve Kornacki on the midterm elections",
+     "url": "https://www.nbcnews.com/politics/elections/send-questions-steve-kornacki-midterm-elections-rcna605264"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  }
+ ],
+ "blindspots": [
+  {
+   "title": "Feds put California school districts’ ‘TMI’ student questionnaires on notice",
+   "summary": "When are lefty California school districts going to learn? It’s wrong to promote radical gender ideology in schools. And it’s unconscionable to hide such efforts from parents. As The California Post reported exclusively, the US Department of Education on Friday announced investig",
+   "category": "Economy",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Feds put California school districts’ ‘TMI’ student questionnaires on notice",
+     "url": "https://nypost.com/2026/10/23/opinion/feds-put-california-school-districts-student-questionnaires-on-notice/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Report: Feds Probe 3 Calif. Districts Over Student Surveys",
+     "url": "https://www.newsmax.com/newsfront/linda-mcmahon-education-california/2026/10/23/id/1273859"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "NASA Adopting Apollo's Urgency to Build Moon Base",
+   "summary": "NASA is moving fast on its plans to build a moon base and return astronauts to the lunar surface in as little as two years.Administrator Jared Isaacman said Friday that the space agency is still on track to launch Artemis III next summer on a docking exercise with Elon...",
+   "category": "Science",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "NASA adopting Apollo's urgency to build a moon base and land astronauts within two years",
+     "url": "https://www.washingtontimes.com/news/2026/oct/23/nasa-adopts-apollos-urgency-build-moon-base-land-astronauts-within/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "NASA Adopting Apollo's Urgency to Build Moon Base",
+     "url": "https://www.newsmax.com/newsfront/nasa-artemis-moon-astronauts-space/2026/10/23/id/1273850"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "'There's babies in there': Oregon father describes stopping school shooter",
+   "summary": "Kaylub Giamanco is the father who stopped a school shooter in Bend, Oregon, a week ago. The teen gunman entered the school and killed three students and a teacher before Giamanco stopped him. In a new interview with Oregon Public Broadcasting, Giamanco describes the moments leadi",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 4,
+   "balance": {
+    "l": 4,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Hero who stopped Bend school shooter haunted by encounter: ‘I didn’t save everybody’",
+     "url": "https://www.nbcnews.com/news/us-news/hero-stopped-bend-school-shooter-haunted-encounter-didnt-everybody-rcna605265"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Hero dad who stopped Oregon school shooter shares his story",
+     "url": "https://www.cbsnews.com/news/hero-kaylub-giamanco-bend-oregon-shooting/"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Hero dad who took down school shooter speaks out: 'I was supposed to be there'",
+     "url": "https://abcnews.com/US/hero-dad-school-shooter-speaks-supposed/story?id=137526493"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "'There's babies in there': Oregon father describes stopping school shooter",
+     "url": "https://www.pbs.org/newshour/show/theres-babies-in-there-oregon-father-describes-stopping-school-shooter"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Trump's U.N. ambassador says Iran war could drag on for another year",
+   "summary": "The U.S. ambassador to the U.N. says the war with Iran could last another year, but he hopes Tehran will \"come to the table\" sooner.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump's U.N. ambassador says Iran war could drag on for another year",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-oil-gas-prices-strait-of-hormuz-midterms/"
+    },
+    {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump’s Gamble to End the Iran War",
+     "url": "https://www.theatlantic.com/national-security/2026/10/trump-iran-war-strikes-after-midterms/689121/?utm_source=feed"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "How a Fake Pollster May Have Hurt Real Candidates",
+   "summary": "Wedgewood Polls admitted to using fabricated data in its surveys, claiming the stunt was an “experimental project” intended to showcase the “vulnerabilities” of the polling industry.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "Politico",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How a fake pollster may have moved some 2026 elections",
+     "url": "https://www.politico.com/news/2026/10/22/how-a-fake-pollster-may-have-moved-some-2026-elections-01131675"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How a Fake Pollster May Have Hurt Real Candidates",
+     "url": "https://time.com/article/2026/10/23/what-fake-wedgewood-polls-scandal-reveals-about-election-polling/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Appeals court sides with Trump on indefinite illegal immigrant detention policy",
+   "summary": "An appeals court on Friday ruled the Trump administration can continue detaining certain illegal immigrants without giving them bond hearings while their immigration cases move through court. The Friday ruling by the full 17-member 5th U.S. Circuit Court of Appeals was a major vi",
+   "category": "World",
+   "leans": [
+    1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Appeals court sides with Trump on indefinite illegal immigrant detention policy",
+     "url": "https://www.washingtonexaminer.com/policy/immigration/4777908/appeals-court-sides-with-trump-on-indefinite-illegal-immigrant-detention-policy/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Appeals court says Trump's immigration detention policies are constitutional",
+     "url": "https://www.washingtontimes.com/news/2026/oct/23/appeals-court-says-trumps-immigration-detention-policies/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  }
+ ],
+ "factchecks": [
+  {
+   "org": "Snopes",
+   "title": "Does video show Trump making strange noise during South Carolina rally?",
+   "link": "https://www.snopes.com/fact-check/trump-makes-strange-noise-rally/",
+   "summary": "The president made some strange utterances during a campaign speech on behalf of Sen. Darline Graham."
+  },
+  {
+   "org": "Snopes",
+   "title": "Illinois voting machines aren't flagging Republican picks as unpopular, despite video claiming otherwise",
+   "link": "https://www.snopes.com/fact-check/illinois-voting-machines-republicans/",
+   "summary": "Voting machines sometimes notify voters if they have not made all available selections on their ballot."
+  },
+  {
+   "org": "Snopes",
+   "title": "Trump admin chopping down trees: 4 claims, investigated",
+   "link": "https://www.snopes.com/collections/trump-admin-cutting-trees-rumor-collection/",
+   "summary": "We revisited our coverage as the government remains at odds with a a judge who attempted to block trees being cut at a Washington, D.C., golf course."
+  },
+  {
+   "org": "Snopes",
+   "title": "Watch out for these 8 claims about polling stations, ballots",
+   "link": "https://www.snopes.com/collections/polling-stations-ballots-election-rumors/",
+   "summary": "Election fraud and lost ballots rumors we've investigated are spreading widely ahead of the midterm elections."
+  },
+  {
+   "org": "Snopes",
+   "title": "Does video show 2026 'No Kings' rallies in 7 US cities?",
+   "link": "https://www.snopes.com/fact-check/no-kings-aerial-video/",
+   "summary": "People reposted the video after recent \"No Kings: Vote Early\" events without clarifying when it was filmed."
+  },
+  {
+   "org": "Snopes",
+   "title": "Kim Jong Un death rumors are spreading again. Is there any evidence?",
+   "link": "https://www.snopes.com/news/2026/10/21/kim-jong-un-death-rumors/",
+   "summary": "We examined photos released by North Korean state media claiming to show Kim alive on Oct. 19."
+  },
+  {
+   "org": "Snopes",
+   "title": "Image allegedly shows Paris burning amid ongoing unrest. Is it real?",
+   "link": "https://www.snopes.com/fact-check/image-paris-burning-riots/",
+   "summary": "While real photos authentically show fires on the streets of the city, this particular claim needs a fact check."
+  },
+  {
+   "org": "Snopes",
+   "title": "10 Kim Jong Un rumors we've investigated over the years",
+   "link": "https://www.snopes.com/collections/kim-jong-un-rumors/",
+   "summary": "Reports of the North Korean supreme leader's death have once again been greatly exaggerated."
+  },
+  {
+   "org": "Snopes",
+   "title": "Poll workers may mark your ballot. Here's why you shouldn't worry",
+   "link": "https://www.snopes.com/fact-check/poll-worker-mark-ballot-disqualified/",
+   "summary": "We spoke to elections officials about the legitimate reasons poll workers sometimes write on ballots."
+  },
+  {
+   "org": "Snopes",
+   "title": "10 rumors we've investigated involving Pope Leo XIV",
+   "link": "https://www.snopes.com/collections/pope-leo-xiv-rumors-collection/",
+   "summary": "We revisited our past coverage of the pope amid news that a tumor was removed from his right lung."
+  },
+  {
+   "org": "Snopes",
+   "title": "Did Texas make marijuana possession a felony after 70% of voters supported legalization? Claim distorts facts",
+   "link": "https://www.snopes.com/fact-check/marijuana-possession-texas-legalization/",
+   "summary": "Under state law, possession of 2 ounces or less of marijuana remains a misdemeanor."
+  },
+  {
+   "org": "Snopes",
+   "title": "16 claims about Hegseth we've debunked",
+   "link": "https://www.snopes.com/collections/pete-hegseth-false-rumors-collection/",
+   "summary": "Snopes often fact-checks false rumors that satirize credible reports about the defense secretary."
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Alaska Ad Missing Context in Attacking Peltola’s Border Votes",
+   "link": "https://www.factcheck.org/2026/10/alaska-ad-missing-context-in-attacking-peltolas-border-votes/",
+   "summary": "An ad from the campaign of Republican Sen. Dan Sullivan in Alaska features a mother whose 22-year-old son died from fentanyl and who claims Democratic Senate candidate Mary Peltola took contributions from \"liberals [who] opened our borders to the drug cartels\" and then \"voted wit"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Paxton Ad Takes Talarico Taxes Comments Out of Context",
+   "link": "https://www.factcheck.org/2026/10/paxton-ad-takes-talarico-taxes-comments-out-of-context/",
+   "summary": "In late August, Democrat James Talarico said that he had told \"every ... wealthy person\" that \"if you are OK with getting taxed more, if you're OK with me limiting your influence in politics, you are welcome to join this movement that we are building.\" But an ad from his Republic"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Controversial Ohio Ad Calls Acton a ‘Liar,’ But Records Back Her Account of Childhood",
+   "link": "https://www.factcheck.org/2026/10/controversial-ohio-ad-calls-acton-a-liar-but-records-back-her-account-of-childhood/",
+   "summary": "The campaign of Vivek Ramaswamy, the Republican running for governor in Ohio, sparked controversy this week with an ad featuring the estranged mother of his Democratic opponent, Dr. Amy Acton. In the ad, Acton’s mother calls her a “liar” who is being dishonest about her past. The"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Trump’s Numbers, October 2026 Update",
+   "link": "https://www.factcheck.org/2026/10/trumps-numbers-october-2026-update/",
+   "summary": "Our latest quarterly report on various statistical indicators of how the country is faring as the midterms loom. The post Trump’s Numbers, October 2026 Update appeared first on FactCheck.org ."
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Ads in Maine Make Misleading Tax Claims About Jackson",
+   "link": "https://www.factcheck.org/2026/10/ads-in-maine-make-misleading-tax-claims-about-jackson/",
+   "summary": "In the Maine Senate race, ads from pro-Republican groups give Democratic candidate Troy Jackson the nickname “Taxin’ Jackson,” but they make misleading claims about his proposal for Social Security taxes and his votes on some other issues. The post Ads in Maine Make Misleading Ta"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Democratic Ads Exaggerate GOP Law’s Impact on Medicare",
+   "link": "https://www.factcheck.org/2026/10/democratic-ads-exaggerate-gop-laws-impact-on-medicare/",
+   "summary": "Democratic ads in multiple congressional races are accusing Republican candidates of “gutting Medicare,” voting for “huge cuts to Medicare” and “cheering on Trump’s attack on Medicare.” Several ads cite President Donald Trump's major domestic policy law, the One Big Beautiful Bil"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Alaska Ad Criticizing Sullivan’s Votes Leaves Out Context, Makes False Suggestion",
+   "link": "https://www.factcheck.org/2026/10/alaska-ad-criticizing-sullivans-votes-leaves-out-context-makes-false-suggestion/",
+   "summary": "An ad from a Democratic-aligned super PAC claims Republican Sen. Dan Sullivan \"voted to raise Alaskans' healthcare costs by $1,800 and on that same day voted to give himself a $500,000 taxpayer-funded payout.\" But that's not the whole story, and the ad leaves the false impression"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Talarico’s Campaign-Trail Absence Sparks False Rumor",
+   "link": "https://www.factcheck.org/2026/10/talaricos-campaign-trail-absence-sparks-false-rumor/",
+   "summary": "Q: Claims about James Talarico being hospitalized in a mental health facility. Is this true? A: No. An Ohio mental health center rebutted false online rumors that Talarico, the Democratic candidate for U.S. Senate in Texas, had been there as a patient. Talarico said he was off th"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Trump Officials Mislead About Electrical Grid Reliability",
+   "link": "https://www.factcheck.org/2026/10/trump-officials-mislead-about-electrical-grid-reliability/",
+   "summary": "In partially repealing a Biden-era regulation that limited carbon emissions from power plants, Trump administration officials have misleadingly cast the prior administration’s policy as a threat to grid reliability. Experts say that’s unfounded. The post Trump Officials Mislead A"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Republican Ads Distort the Facts in Claiming Democratic Support for ‘Sex Changes’ for Kids",
+   "link": "https://www.factcheck.org/2026/10/republican-ads-distort-the-facts-in-claiming-democratic-support-for-sex-changes-for-kids/",
+   "summary": "In several congressional races, Republican ads are claiming that Democratic candidates support \"sex changes\" for children or support taxpayer money being used for such surgeries. But the allegations are flawed. The post Republican Ads Distort the Facts in Claiming Democratic Supp"
+  },
+  {
+   "org": "Full Fact",
+   "title": "False claim Henry Nowak’s killer has been attacked in prison circulates online again",
+   "link": "https://fullfact.org/crime/claims-vickrum-digwa-attacked-prison-again-false/",
+   "summary": "False claims that Vickrum Digwa, who killed Henry Nowak, has been attacked in prison are being widely shared on social media again."
+  },
+  {
+   "org": "Full Fact",
+   "title": "Viral image of French woman with ‘refugees welcome here’ sign has been edited",
+   "link": "https://fullfact.org/world/viral-image-french-woman-refugees-welcome-sign-edited/",
+   "summary": "A photo of a woman who tried to stop looters at a Paris supermarket has been superimposed onto an old image of protesters holding a ‘refugees welcome here’ sign."
+  }
+ ]
 }
