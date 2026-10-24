@@ -1,7 +1,98 @@
 {
- "generated": "2026-10-24T12:49:23Z",
- "generated_human": "Oct 24, 2026 · 12:49 UTC",
+ "generated": "2026-10-24T13:36:38Z",
+ "generated_human": "Oct 24, 2026 · 13:36 UTC",
  "sources": [
+  {
+   "name": "NPR",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 10
+  },
+  {
+   "name": "The Guardian",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "NBC News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "CBS News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "ABC News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "PBS NewsHour",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Politico",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Vox",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "Slate",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Mother Jones",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "The Atlantic",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Time",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "BBC News",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
   {
    "name": "The Hill",
    "lean": 0,
@@ -115,75 +206,171 @@
    "count": 12
   }
  ],
- "n_articles": 186,
+ "n_articles": 333,
  "n_videos": 140,
  "trending": [
   {
    "term": "trump",
-   "n": 11
+   "n": 21
   },
   {
    "term": "election",
-   "n": 6
-  },
-  {
-   "term": "senate",
-   "n": 5
+   "n": 12
   },
   {
    "term": "alaska",
-   "n": 5
+   "n": 11
   },
   {
-   "term": "results",
-   "n": 5
-  },
-  {
-   "term": "republicans",
-   "n": 5
-  },
-  {
-   "term": "security",
-   "n": 5
+   "term": "senate",
+   "n": 10
   },
   {
    "term": "ukraine",
-   "n": 4
-  },
-  {
-   "term": "race",
-   "n": 4
-  },
-  {
-   "term": "voters",
-   "n": 4
-  },
-  {
-   "term": "take",
-   "n": 4
+   "n": 10
   },
   {
    "term": "some",
-   "n": 4
+   "n": 9
   },
   {
-   "term": "state",
-   "n": 4
+   "term": "elections",
+   "n": 8
+  },
+  {
+   "term": "voters",
+   "n": 7
+  },
+  {
+   "term": "have",
+   "n": 7
+  },
+  {
+   "term": "starlink",
+   "n": 7
+  },
+  {
+   "term": "warns",
+   "n": 6
+  },
+  {
+   "term": "france",
+   "n": 6
+  },
+  {
+   "term": "block",
+   "n": 6
+  },
+  {
+   "term": "results",
+   "n": 6
+  },
+  {
+   "term": "republicans",
+   "n": 6
   },
   {
    "term": "student",
-   "n": 4
-  },
-  {
-   "term": "judge",
-   "n": 4
-  },
-  {
-   "term": "states",
-   "n": 3
+   "n": 6
   }
  ],
  "videos": [
+  {
+   "videoId": "97WiJLEf150",
+   "title": "\"How is that not Nazi rhetoric?\" | Head to Head #shorts",
+   "thumb": "https://i.ytimg.com/vi/97WiJLEf150/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "tFJ_0C2rIYo",
+   "title": "Netanyahu floats Crypto to bypass sanctions",
+   "thumb": "https://i.ytimg.com/vi/tFJ_0C2rIYo/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "i2ZfGUuInao",
+   "title": "Armed Israeli settlers try to break into Palestinian grandfather’s home | AJ #shorts",
+   "thumb": "https://i.ytimg.com/vi/i2ZfGUuInao/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "MZaziMX3C3Y",
+   "title": "IDF helmet cam shows gunfight with Palestinian gunmen",
+   "thumb": "https://i.ytimg.com/vi/MZaziMX3C3Y/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "YDe0HIf7u0w",
+   "title": "How one pilot sparked America's UFO frenzy",
+   "thumb": "https://i.ytimg.com/vi/YDe0HIf7u0w/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "eHDK7RQV_bQ",
+   "title": "Election Edition: The AI Backlash Hits the Ballot Box",
+   "thumb": "https://i.ytimg.com/vi/eHDK7RQV_bQ/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "nI9Bx0X8BgY",
+   "title": "DeSantis greets Trump with a coin upon visit to Florida #shorts #foxnews #trump",
+   "thumb": "https://i.ytimg.com/vi/nI9Bx0X8BgY/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "8rPYpnnr6S0",
+   "title": "Should lawmakers be AI experts to regulate it?",
+   "thumb": "https://i.ytimg.com/vi/8rPYpnnr6S0/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "-ke8iAAAKpM",
+   "title": "Rural rage at Trump, Talarico's midterm edge & more | Enten roundup",
+   "thumb": "https://i.ytimg.com/vi/-ke8iAAAKpM/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "NQHGeOmzZn4",
+   "title": "France deploys 70,000 officers, security personnel ahead of renewed protests",
+   "thumb": "https://i.ytimg.com/vi/NQHGeOmzZn4/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "YVdEap5Ma-E",
+   "title": "Starlink, Ukraine and Iran: how the US requested changes to Musk's network | Reuters World News",
+   "thumb": "https://i.ytimg.com/vi/YVdEap5Ma-E/hqdefault.jpg",
+   "channel": "Reuters",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "ZkrqiJnVKyc",
+   "title": "Major museums in Paris closed as authorities deploy police ahead of protests",
+   "thumb": "https://i.ytimg.com/vi/ZkrqiJnVKyc/hqdefault.jpg",
+   "channel": "AP",
+   "lean": 0,
+   "label": "Center"
+  },
   {
    "videoId": "-zIxb3lQlPc",
    "title": "Israeli forces intensify ‘collective punishment’ in occupied West Bank",
@@ -215,186 +402,78 @@
    "channel": "CNN",
    "lean": -1,
    "label": "Lean Left"
-  },
-  {
-   "videoId": "L8YfiKp0AvM",
-   "title": "Occupied West Bank shooting: Hebron faces Israeli military lockdown and siege",
-   "thumb": "https://i.ytimg.com/vi/L8YfiKp0AvM/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "UZ8BqaneLsw",
-   "title": "Personalized mRNA vaccine lowers melanoma risk",
-   "thumb": "https://i.ytimg.com/vi/UZ8BqaneLsw/hqdefault.jpg",
-   "channel": "CNN",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "a-yqGc8VJJc",
-   "title": "Serbia elections test student movement demanding justice for 16 victims",
-   "thumb": "https://i.ytimg.com/vi/a-yqGc8VJJc/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "w7dlU3E3zF8",
-   "title": "Barcelona housing activists evicted by police from residential building | AJ #shorts",
-   "thumb": "https://i.ytimg.com/vi/w7dlU3E3zF8/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "_zgNquIsHzA",
-   "title": "Ilhan Omar DODGES questions on immigration probe",
-   "thumb": "https://i.ytimg.com/vi/_zgNquIsHzA/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
-  {
-   "videoId": "fqLnawhkv7k",
-   "title": "Winter is coming, so are the bills",
-   "thumb": "https://i.ytimg.com/vi/fqLnawhkv7k/hqdefault.jpg",
-   "channel": "CNN",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "g939vofdjJg",
-   "title": "House Republican trying to hold onto his seat amidst anger at his party",
-   "thumb": "https://i.ytimg.com/vi/g939vofdjJg/hqdefault.jpg",
-   "channel": "CNN",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "BWpXI69am_8",
-   "title": "Are there too many Birkins on the market?",
-   "thumb": "https://i.ytimg.com/vi/BWpXI69am_8/hqdefault.jpg",
-   "channel": "Reuters",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "BCwDnUohQaY",
-   "title": "Ilhan Omar reveals her 'real name' amid conflicting reports #shorts",
-   "thumb": "https://i.ytimg.com/vi/BCwDnUohQaY/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
-  {
-   "videoId": "Z7IUjkHTQUw",
-   "title": "Hunting the fraudster who stole millions in VAT - Behind The Investigation | BBC News",
-   "thumb": "https://i.ytimg.com/vi/Z7IUjkHTQUw/hqdefault.jpg",
-   "channel": "BBC News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "5Qj_Z6bxc60",
-   "title": "My mom feels critiqued whenever I make different parenting decisions than she did. What should I do?",
-   "thumb": "https://i.ytimg.com/vi/5Qj_Z6bxc60/hqdefault.jpg",
-   "channel": "Washington Post",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "b1qMJAic2eI",
-   "title": "Drone footage tells the story of occupied Oleshky in Ukraine | The Insiders",
-   "thumb": "https://i.ytimg.com/vi/b1qMJAic2eI/hqdefault.jpg",
-   "channel": "Sky News",
-   "lean": 0,
-   "label": "Center"
   }
  ],
  "stories": [
   {
-   "title": "Susan Collins Gets An Unexpected Lifeline From Trump In Senate Nail-Biter",
-   "summary": "President Donald Trump is lifting tariffs on some Canadian goods, a move that could boost Maine Republican Sen. Susan Collins in her reelection fight, though the White House said it would impose tariffs on other Canadian products, including valves and carpets, in their place. The",
+   "title": "Can Trump block the Alaska Senate election?",
+   "summary": "This story appeared in The Logoff, a daily newsletter that helps you stay informed about the Trump administration without letting political news take over your life. Subscribe here. Welcome to The Logoff: The Trump administration is getting a head start on litigating the midterms",
    "category": "Politics",
    "leans": [
+    -2,
+    -1,
     0,
     1,
     2
    ],
-   "span": 2,
-   "n_sources": 5,
+   "span": 4,
+   "n_sources": 9,
    "balance": {
-    "l": 0,
+    "l": 5,
     "c": 2,
-    "r": 3
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "Trump dropping some Canada tariffs but 'replacing' them with other products",
-     "url": "https://www.cnbc.com/2026/10/23/trump-tariffs-canada-susan-collins.html"
-    },
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Susan Collins Gets Trump Boost As New Poll Erases Jackson’s Lead",
-     "url": "https://www.newsweek.com/susan-collins-donald-trump-boost-poll-troy-jackson-12614003"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Trump exempts some Canadian products from tariffs, enthusing border-state GOP Sen. Susan Collins",
-     "url": "https://www.washingtontimes.com/news/2026/oct/23/trump-exempts-canadian-products-tariffs-enthusing-border-state-gop/"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Canada is feeling the pain from Trump's tariffs — but the trade fight didn't start overnight",
-     "url": "https://www.foxnews.com/politics/canada-feeling-pain-trumps-tariffs-trade-fight-didnt-start-overnight"
-    },
-    {
-     "name": "The Daily Wire",
-     "lean": 2,
-     "label": "Right",
-     "title": "Susan Collins Gets An Unexpected Lifeline From Trump In Senate Nail-Biter",
-     "url": "https://www.dailywire.com/news/susan-collins-gets-an-unexpected-lifeline-from-trump-in-senate-nail-biter"
-    }
-   ],
-   "factchecks": [
-    {
-     "org": "FactCheck.org",
-     "title": "Ads in Maine Make Misleading Tax Claims About Jackson",
-     "link": "https://www.factcheck.org/2026/10/ads-in-maine-make-misleading-tax-claims-about-jackson/"
-    }
-   ],
-   "videos": []
-  },
-  {
-   "title": "DOJ sues to delay Alaska election results if GOP incumbent loses",
-   "summary": "The Trump administration sued Alaska on Thursday to delay certification of election results if incumbent Republican Sen. Dan Sullivan loses. Why it matters: The race between incumbent Sullivan, Democrat Mary Peltola , and retired teacher Dan Sullivan has been marked by controvers",
-   "category": "Politics",
-   "leans": [
-    0,
-    1,
-    2
-   ],
-   "span": 2,
-   "n_sources": 3,
-   "balance": {
-    "l": 0,
-    "c": 1,
     "r": 2
    },
    "blindspot": null,
    "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Can Trump block the Alaska Senate election?",
+     "url": "https://www.vox.com/the-logoff-newsletter-trump/507722/trump-alaska-senate-lawsuit-dans-sullivan-peltola"
+    },
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "DOJ Is Suing to Decertify Alaska’s Senate Results—But Only If Republicans Lose",
+     "url": "https://www.motherjones.com/politics/2026/10/doj-dan-sullivan-alaska-peltola-lawsuit-decertify-election/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "DOJ sues to block Alaska Senate certification if Sullivan loses",
+     "url": "https://www.cbsnews.com/news/trump-admin-sues-to-block-alaska-senate-certification-if-sen-dan-sullivan-loses/"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump says he ordered suit to block Alaska Senate results if GOP loses",
+     "url": "https://www.pbs.org/newshour/show/trump-says-he-ordered-suit-to-block-alaska-senate-results-if-gop-loses"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Capehart and Ponnuru on Trump's threat to block Alaska election results",
+     "url": "https://www.pbs.org/newshour/show/capehart-and-ponnuru-on-trumps-threat-to-block-alaska-election-results"
+    },
+    {
+     "name": "Politico",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump makes Alaska the latest frontier in his election power grab",
+     "url": "https://www.politico.com/news/2026/10/24/trump-alaska-election-justice-department-01134590"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump administration sues to block certification of upcoming Alaska election",
+     "url": "https://www.bbc.co.uk/news/articles/c678pv4krx37o?at_medium=RSS&at_campaign=rss"
+    },
     {
      "name": "Axios",
      "lean": 0,
@@ -422,17 +501,19 @@
      "org": "FactCheck.org",
      "title": "Alaska Ad Missing Context in Attacking Peltola’s Border Votes",
      "link": "https://www.factcheck.org/2026/10/alaska-ad-missing-context-in-attacking-peltolas-border-votes/"
+    },
+    {
+     "org": "FactCheck.org",
+     "title": "Alaska Ad Criticizing Sullivan’s Votes Leaves Out Context, Makes False Suggestion",
+     "link": "https://www.factcheck.org/2026/10/alaska-ad-criticizing-sullivans-votes-leaves-out-context-makes-false-suggestion/"
+    },
+    {
+     "org": "FactCheck.org",
+     "title": "Trump Officials Mislead About Electrical Grid Reliability",
+     "link": "https://www.factcheck.org/2026/10/trump-officials-mislead-about-electrical-grid-reliability/"
     }
    ],
    "videos": [
-    {
-     "videoId": "wnNPMpmIaSM",
-     "title": "Trump's DOJ sues to block Alaska Senate results",
-     "thumb": "https://i.ytimg.com/vi/wnNPMpmIaSM/hqdefault.jpg",
-     "channel": "CNN",
-     "lean": -1,
-     "label": "Lean Left"
-    },
     {
      "videoId": "6bqaBgHVqAo",
      "title": "Capehart and Ponnuru on Trump's threat to block Alaska election results",
@@ -442,12 +523,226 @@
      "label": "Lean Left"
     },
     {
-     "videoId": "xwo9dauwOXE",
-     "title": "Trump admin. sues to block Alaska Senate certification",
-     "thumb": "https://i.ytimg.com/vi/xwo9dauwOXE/hqdefault.jpg",
-     "channel": "NBC News",
+     "videoId": "B1zFScrsy4U",
+     "title": "Legal expert on DOJ lawsuit to block certification of Alaska Senate election if Republican loses",
+     "thumb": "https://i.ytimg.com/vi/B1zFScrsy4U/hqdefault.jpg",
+     "channel": "CBS News",
      "lean": -1,
      "label": "Lean Left"
+    },
+    {
+     "videoId": "01xUnHF16LU",
+     "title": "On Trump's orders, DOJ sues to potentially block result of Alaska's key Senate race",
+     "thumb": "https://i.ytimg.com/vi/01xUnHF16LU/hqdefault.jpg",
+     "channel": "ABC News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "France Deploys Thousands of Police to Curb Cost-of-Living Protests",
+   "summary": "France deployed thousands of police Saturday for fresh protests over school funding and soaring living costs, seeking to prevent another weekend of looting, burned cars and attacks on public buildings. In Paris, authorities restricted the main march to the city's...",
+   "category": "General",
+   "leans": [
+    -2,
+    -1,
+    0,
+    2
+   ],
+   "span": 4,
+   "n_sources": 5,
+   "balance": {
+    "l": 2,
+    "c": 2,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Slate",
+     "lean": -2,
+     "label": "Left",
+     "title": "France’s Protests Are a Warning for America",
+     "url": "https://slate.com/news-and-politics/2026/10/france-riots-protests-violence-politics-fascism-right-wing.html?via=rss"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Police fire tear gas, arrest dozens as France braces for more protests",
+     "url": "https://www.cbsnews.com/news/paris-france-new-protests-riots-museums-shops/"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "What next for France as riots rattle markets? Three questions facing investors ahead of more protests",
+     "url": "https://www.cnbc.com/2026/10/24/france-riots-paris-unrest-debt-budget.html"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "France protests live: 135 arrested as marches held under tight security",
+     "url": "https://www.aljazeera.com/news/liveblog/2026/10/24/france-protests-live-135-arrested-as-marches-held-under-tight-security?traffic_source=rss"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "France Deploys Thousands of Police to Curb Cost-of-Living Protests",
+     "url": "https://www.newsmax.com/newsfront/france-police-cost/2026/10/24/id/1273876"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "NQHGeOmzZn4",
+     "title": "France deploys 70,000 officers, security personnel ahead of renewed protests",
+     "thumb": "https://i.ytimg.com/vi/NQHGeOmzZn4/hqdefault.jpg",
+     "channel": "Fox News",
+     "lean": 2,
+     "label": "Right"
+    }
+   ]
+  },
+  {
+   "title": "Mamdani on Trump, Floods, and the Fight Over Data Centers",
+   "summary": "His name might not be on the ballot this November, but New York City Mayor Zohran Mamdani is undoubtedly one of the most influential figures in American politics right now. After his barrier-breaking victory late last year, Mamdani has emerged as the face of the no-holds-barred p",
+   "category": "Politics",
+   "leans": [
+    -2,
+    1,
+    2
+   ],
+   "span": 4,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "Mamdani on Trump, Floods, and the Fight Over Data Centers",
+     "url": "https://www.motherjones.com/politics/2026/10/mamdani-trump-stress-test-video-podcast-climate-midterms/"
+    },
+    {
+     "name": "Reason",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump Wants To Force Data Centers To 'Make Their Own Electricity.' Deregulation Would Work Better.",
+     "url": "https://reason.com/2026/10/23/trump-wants-to-force-data-centers-to-make-their-own-electricity-deregulation-would-work-better/"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Wants More Gas And Diesel Made At Home, And He’s Paying $150 Million To Make It Happen",
+     "url": "https://dailycaller.com/2026/10/23/defense-production-act-refineries-energy-department-chris-wright-matt-mcmanus-afpm"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Putin Is Meddling in the Midterms to Help Trump by Spreading False Sex Abuse Claims",
+   "summary": "On Tuesday, an X account attributed to a Texas man named Zyron Lewis posted a video of Lewis claiming that in 2012, when he was a middle school student, he was sexually assaulted by James Talarico, the Democratic Senate candidate in Texas. This allegation—which zapped across the ",
+   "category": "World",
+   "leans": [
+    -2,
+    -1,
+    0,
+    1
+   ],
+   "span": 3,
+   "n_sources": 6,
+   "balance": {
+    "l": 4,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "Putin Is Meddling in the Midterms to Help Trump by Spreading False Sex Abuse Claims",
+     "url": "https://www.motherjones.com/politics/2026/10/putin-russia-meddling-interference-us-midterm-elections-helping-trump-sex-abuse-fake-videos-talarico-walz-disinformation-campaign/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Melania Trump secures \"temporary ceasefire\" in Ukrainian city",
+     "url": "https://www.cbsnews.com/news/first-lady-melania-trump-temporary-ceasefire-russia-ukraine-oleshky/"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "News Wrap: White House says Melania Trump brokered localized ceasefire deal in Oleshky",
+     "url": "https://www.pbs.org/newshour/show/news-wrap-white-house-says-melania-trump-brokered-localized-ceasefire-deal-in-oleshky"
+    },
+    {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Why Trump Can’t Sell Putin a Deal",
+     "url": "https://www.theatlantic.com/international/2026/10/trump-putin-ukraine-nato/689118/?utm_source=feed"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "White House says Melania Trump brokered truce for Ukraine city 'on brink of disaster'",
+     "url": "https://www.bbc.co.uk/news/articles/c6vgxkvl4w5eo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Reason",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Why Would Trump Make A Deal With A Judge Who Ruled Illegal Aliens Have A Right To \"Locomotion\" In The United States?",
+     "url": "https://reason.com/volokh/2026/10/23/why-would-trump-make-a-deal-with-a-judge-who-ruled-illegal-aliens-have-a-right-to-locomotion-in-the-united-states/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Trump admin chopping down trees: 4 claims, investigated",
+     "link": "https://www.snopes.com/collections/trump-admin-cutting-trees-rumor-collection/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "XLtz2VQoaVo",
+     "title": "Melania Trump brokers ceasefire in Ukrainian city hit by food crisis",
+     "thumb": "https://i.ytimg.com/vi/XLtz2VQoaVo/hqdefault.jpg",
+     "channel": "Reuters",
+     "lean": 0,
+     "label": "Center"
+    },
+    {
+     "videoId": "GzYJFAhztE0",
+     "title": "How Melania Trump helped secure a ceasefire in occupied Ukraine | DW News",
+     "thumb": "https://i.ytimg.com/vi/GzYJFAhztE0/hqdefault.jpg",
+     "channel": "DW News",
+     "lean": 0,
+     "label": "Center"
+    },
+    {
+     "videoId": "j-0JJ8uqpAI",
+     "title": "Russia and Ukraine praise surprise statement from US First Lady Melania Trump | BBC News",
+     "thumb": "https://i.ytimg.com/vi/j-0JJ8uqpAI/hqdefault.jpg",
+     "channel": "BBC News",
+     "lean": 0,
+     "label": "Center"
     }
    ]
   },
@@ -456,18 +751,33 @@
    "summary": "Iranian plots to target and kill U.S. officials in the Middle East have \"substantially increased,\" according to a declassified intelligence memo dated Friday, with these efforts reportedly reaching \"advanced stages.\" The warning, addressed to Secretary of State Marco Rubio from D",
    "category": "World",
    "leans": [
+    -1,
     0,
     2
    ],
-   "span": 2,
-   "n_sources": 3,
+   "span": 3,
+   "n_sources": 5,
    "balance": {
-    "l": 0,
+    "l": 2,
     "c": 2,
     "r": 1
    },
    "blindspot": null,
    "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Iranian plots to kill U.S. officials in Middle East have reached ‘advanced stages,’ intel memo warns",
+     "url": "https://www.nbcnews.com/world/middle-east/iranian-plots-kill-us-officials-middle-east-reached-advanced-stages-in-rcna605360"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Iran has \"increased efforts to target U.S. personnel,\" intel chief warns",
+     "url": "https://www.cbsnews.com/news/iran-target-u-s-personnel/"
+    },
     {
      "name": "The Hill",
      "lean": 0,
@@ -494,126 +804,288 @@
    "videos": []
   },
   {
-   "title": "Axios ahead: 2028 and beyond",
-   "summary": "Media is changing at AI speed : the open web deteriorating, search shriveling, LLMs rising, hyper-personalization surging, old revenue models breaking. AI threatens to finish what the algorithms started: wholly upending journalism as we know it. The only certainty: What follows w",
-   "category": "Tech",
+   "title": "Speed restrictions on Musk's Starlink lifted in Ukraine, defense ministry says",
+   "summary": "The speed of the Elon Musk-owned satellite system used by the Ukrainian military has been fully restored after two weeks of restrictions, the country's ministry of defense said in a statement on Saturday. Why it matters: The restrictions limited the Ukrainian military from using ",
+   "category": "World",
    "leans": [
+    -1,
     0,
     2
    ],
-   "span": 2,
-   "n_sources": 2,
+   "span": 3,
+   "n_sources": 4,
    "balance": {
-    "l": 0,
+    "l": 1,
+    "c": 2,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Ukraine says Starlink speed restored after long disruption",
+     "url": "https://www.cbsnews.com/news/ukraine-starlink-drone-spacex-musk-speed-restriction/"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Ukraine says Starlink and Starshield high speed restrictions have been lifted",
+     "url": "https://www.cnbc.com/2026/10/24/ukraine-starlink-starshield-service-restored.html"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Speed restrictions on Musk's Starlink lifted in Ukraine, defense ministry says",
+     "url": "https://www.axios.com/2026/10/24/musk-ukraine-starlink-starshield-speed"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Ukraine: Starlink, Starshield Speed Restrictions Lifted",
+     "url": "https://www.newsmax.com/newsfront/russia-ukraine-war/2026/10/24/id/1273878"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "‘Cornell 7’ Accuser Can Keep Her Identity Secret, Judge Rules",
+   "summary": "A New York judge handed a legal win to the woman known as “Jane Doe” in the high-profile “Cornell 7” gang-rape civil lawsuit, ruling Friday that she can continue pursuing her claims without publicly revealing her identity. Judge Phaedra Perry-Bond, a Democrat elected to the New Y",
+   "category": "Politics",
+   "leans": [
+    -1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Jane Doe in Cornell lawsuit to remain anonymous as judge warns against threats",
+     "url": "https://abcnews.com/US/jane-doe-cornell-lawsuit-remain-anonymous-judge-warns/story?id=137524611"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Cornell rape accuser can remain 'Jane Doe' as judge warns threats could lead to federal charges",
+     "url": "https://www.foxnews.com/us/cornell-rape-accuser-remain-jane-doe-judge-warns-threats-could-lead-federal-charges"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "‘Cornell 7’ Accuser Can Keep Her Identity Secret, Judge Rules",
+     "url": "https://www.dailywire.com/news/cornell-7-accuser-can-keep-her-identity-secret-judge-rules"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Seeking to help Collins in Maine, Trump exempts some Canadian imports from his 50% tariffs",
+   "summary": "Collins, locked in a tight race with Democratic challenger Troy Jackson, issued a statement saying she'd spoken with Trump's top trade negotiator, Jamieson Greer, and Commerce Secretary Howard Lutnick \"about the toll tariffs are taking on Maine families, businesses, farmers, and ",
+   "category": "World",
+   "leans": [
+    -1,
+    0,
+    1
+   ],
+   "span": 2,
+   "n_sources": 7,
+   "balance": {
+    "l": 2,
+    "c": 3,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Send your questions for Steve Kornacki on the midterm elections",
+     "url": "https://www.nbcnews.com/politics/elections/send-questions-steve-kornacki-midterm-elections-rcna605264"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Seeking to help Collins in Maine, Trump exempts some Canadian imports from his 50% tariffs",
+     "url": "https://www.pbs.org/newshour/politics/seeking-to-help-collins-in-maine-trump-exempts-some-canadian-imports-from-his-50-tariffs"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "White House lifts tariffs on some Canadian goods as midterm elections loom",
+     "url": "https://www.bbc.co.uk/news/articles/c60qk573yzz8o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump dropping some Canada tariffs but 'replacing' them with other products",
+     "url": "https://www.cnbc.com/2026/10/23/trump-tariffs-canada-susan-collins.html"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Susan Collins Gets Trump Boost As New Poll Erases Jackson’s Lead",
+     "url": "https://www.newsweek.com/susan-collins-donald-trump-boost-poll-troy-jackson-12614003"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "If life matters, so do the midterm elections",
+     "url": "https://www.washingtonexaminer.com/restoring-america/community-family/4776387/pro-life-voting-midterm-elections/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump exempts some Canadian products from tariffs, enthusing border-state GOP Sen. Susan Collins",
+     "url": "https://www.washingtontimes.com/news/2026/oct/23/trump-exempts-canadian-products-tariffs-enthusing-border-state-gop/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Poll workers may mark your ballot. Here's why you shouldn't worry",
+     "link": "https://www.snopes.com/fact-check/poll-worker-mark-ballot-disqualified/"
+    },
+    {
+     "org": "FactCheck.org",
+     "title": "Ads in Maine Make Misleading Tax Claims About Jackson",
+     "link": "https://www.factcheck.org/2026/10/ads-in-maine-make-misleading-tax-claims-about-jackson/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "British woman dies trying to save sons on Bahamas snorkelling trip",
+   "summary": "Mother, 36, died after current off North Bimini reportedly swept away two boys, who were later rescued, police say A British woman has died in the Bahamas while trying to rescue her two sons after a current swept them away as they were snorkelling. The Royal Bahamas police force ",
+   "category": "General",
+   "leans": [
+    -1,
+    0,
+    1
+   ],
+   "span": 2,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
     "c": 1,
     "r": 1
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "Axios",
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "British woman dies trying to save sons on Bahamas snorkelling trip",
+     "url": "https://www.theguardian.com/world/2026/oct/24/british-woman-dies-trying-to-save-sons-on-bahamas-snorkelling-trip"
+    },
+    {
+     "name": "BBC News",
      "lean": 0,
      "label": "Center",
-     "title": "Axios ahead: 2028 and beyond",
-     "url": "https://www.axios.com/2026/10/24/axios-ahead-2028"
+     "title": "British woman dies after trying to rescue sons swept away at sea in the Bahamas",
+     "url": "https://www.bbc.co.uk/news/articles/cm86z5n0yvy6o?at_medium=RSS&at_campaign=rss"
     },
     {
-     "name": "The Federalist",
-     "lean": 2,
-     "label": "Right",
-     "title": "The DSA Plans To Incite Nationwide Violence Ahead Of 2028 Election",
-     "url": "https://thefederalist.com/2026/10/23/the-dsa-plans-to-incite-nationwide-violence-ahead-of-2028-election/?utm_source=rss&utm_medium=rss&utm_campaign=the-dsa-plans-to-incite-nationwide-violence-ahead-of-2028-election"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Trump Wants To Force Data Centers To 'Make Their Own Electricity.' Deregulation Would Work Better.",
-   "summary": "The president joins a long list of politicians who think the government knows best when it comes to data centers.",
-   "category": "Politics",
-   "leans": [
-    1,
-    2
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Reason",
+     "name": "New York Post",
      "lean": 1,
      "label": "Lean Right",
-     "title": "Trump Wants To Force Data Centers To 'Make Their Own Electricity.' Deregulation Would Work Better.",
-     "url": "https://reason.com/2026/10/23/trump-wants-to-force-data-centers-to-make-their-own-electricity-deregulation-would-work-better/"
-    },
-    {
-     "name": "Daily Caller",
-     "lean": 2,
-     "label": "Right",
-     "title": "Trump Wants More Gas And Diesel Made At Home, And He’s Paying $150 Million To Make It Happen",
-     "url": "https://dailycaller.com/2026/10/23/defense-production-act-refineries-energy-department-chris-wright-matt-mcmanus-afpm"
+     "title": "Hero mom who died trying to save kids in Bahamas ID’d — as husband’s desperate ‘kiss of life’ attempt revealed",
+     "url": "https://nypost.com/2026/10/24/world-news/mom-who-died-trying-to-save-kids-in-bahamas-idd-as-leanne-gregory/"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "NASA Adopting Apollo's Urgency to Build Moon Base",
-   "summary": "NASA is moving fast on its plans to build a moon base and return astronauts to the lunar surface in as little as two years.Administrator Jared Isaacman said Friday that the space agency is still on track to launch Artemis III next summer on a docking exercise with Elon...",
-   "category": "Science",
-   "leans": [
-    1,
-    2
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "NASA adopting Apollo's urgency to build a moon base and land astronauts within two years",
-     "url": "https://www.washingtontimes.com/news/2026/oct/23/nasa-adopts-apollos-urgency-build-moon-base-land-astronauts-within/"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "NASA Adopting Apollo's Urgency to Build Moon Base",
-     "url": "https://www.newsmax.com/newsfront/nasa-artemis-moon-astronauts-space/2026/10/23/id/1273850"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "German police detain suspect after fire engulfs Hitler’s Eagle’s Nest",
-   "summary": "No injuries were reported at the building, while police said a ‘suspicious person’ had been taken into custody.",
+   "title": "German teen arrested on suspicion of murder in connection with US girl's death",
+   "summary": "The 18-year-old is accused of manipulating an Indiana teen over a social platform, according to prosecutors in Germany.",
    "category": "General",
    "leans": [
-    0
+    -1,
+    1
    ],
-   "span": 0,
+   "span": 2,
    "n_sources": 2,
    "balance": {
-    "l": 0,
-    "c": 2,
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "German teen arrested on suspicion of murder in connection with US girl's death",
+     "url": "https://abcnews.com/US/german-teen-arrested-suspicion-murder-connection-us-girls/story?id=137525700"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Chilling new details emerge in teen girl’s alleged murder by 20-year-old ex in LA suburb — as his secret exposed",
+     "url": "https://nypost.com/2026/10/24/us-news/new-details-in-arcadia-teen-murder-as-accused-killer-exposed/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Arrest made after fire at Hitler's mountaintop Eagle's Nest retreat",
+   "summary": "Around 200 emergency personnel are deployed to fight the blaze at the Nazi dictator's Alpine residence in Germany.",
+   "category": "General",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 4,
+   "balance": {
+    "l": 1,
+    "c": 3,
     "r": 0
    },
    "blindspot": null,
    "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "1 arrested after fire at Hitler's Eagle's Nest mountain retreat",
+     "url": "https://www.cbsnews.com/news/hitler-eagles-nest-mountain-retreat-fire-nazi/"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Arrest made after fire at Hitler's mountaintop Eagle's Nest retreat",
+     "url": "https://www.bbc.co.uk/news/articles/cr93zwjw1k4qo?at_medium=RSS&at_campaign=rss"
+    },
     {
      "name": "Al Jazeera",
      "lean": 0,
@@ -650,8 +1122,266 @@
    ]
   },
   {
-   "title": "Bolsonaro Lead Over Lula Shrinks as Trump Stays on Brazil Election Sideline",
-   "summary": "Trump has stayed out of Brazil’s runoff as Bolsonaro’s lead over Lula shrinks, a silence experts say is helping his ally.",
+   "title": "DOJ demands California counties identify noncitizen voters: Reports",
+   "summary": "The Department of Justice (DOJ) on Friday sent letters to election officials in every California county asking that they identify potential noncitizens on their voter rolls, according to several reports. The letter warned local officials would “risk significant federal scrutiny” ",
+   "category": "World",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 3,
+   "balance": {
+    "l": 2,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "DOJ demands California counties help identify noncitizen voters",
+     "url": "https://www.nbcnews.com/politics/2026-election/doj-demands-california-counties-help-identify-noncitizen-voters-rcna605356"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "DOJ demands that some California counties set aside alleged noncitizen ballots",
+     "url": "https://www.cbsnews.com/news/doj-california-counties-set-aside-verify-certain-ballots-noncitizens/"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "DOJ demands California counties identify noncitizen voters: Reports",
+     "url": "https://thehill.com/homenews/administration/6169959-doj-warns-california-election-officials/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Ukraine reports Starlink operating again after slowdown",
+   "summary": "Ukraine’s Starlink satellite links have been restored after the country experienced limitations with accessing this critical technology, the Ukrainian defense minister said Saturday. SpaceX’s military-grade version of Starlink, called Starshield, supports Ukraine’s drone operatio",
+   "category": "World",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How Starlink slowdown hit Ukraine’s front line soldiers pushing Russia back",
+     "url": "https://www.nbcnews.com/world/ukraine/starlink-slowdown-hit-ukraines-front-line-soldiers-pushing-russia-back-rcna604732"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Ukraine reports Starlink operating again after slowdown",
+     "url": "https://thehill.com/policy/international/6169915-starlink-starshield-access-restored/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "As Israeli election looms, Trump advisers see opportunity beyond Netanyahu",
+   "summary": "President Trump has endorsed Benjamin Netanyahu in Tuesday's Israeli election, but some of his advisers see opportunity for his Middle East agenda in a government led by someone else, U.S. officials tell Axios. Why it matters: Trump has never worked with an Israeli prime minister",
+   "category": "World",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Signs of fraying loyalty emerge in Netanyahu stronghold before Israeli election",
+     "url": "https://www.pbs.org/newshour/world/signs-of-fraying-loyalty-emerge-in-netanyahu-stronghold-before-israeli-election"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "As Israeli election looms, Trump advisers see opportunity beyond Netanyahu",
+     "url": "https://www.axios.com/2026/10/24/israel-election-trump-netanyahu-advisers"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "'There's babies in there': Oregon father describes stopping school shooter",
+   "summary": "Kaylub Giamanco is the father who stopped a school shooter in Bend, Oregon, a week ago. The teen gunman entered the school and killed three students and a teacher before Giamanco stopped him. In a new interview with Oregon Public Broadcasting, Giamanco describes the moments leadi",
+   "category": "General",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "'There's babies in there': Oregon father describes stopping school shooter",
+     "url": "https://www.pbs.org/newshour/show/theres-babies-in-there-oregon-father-describes-stopping-school-shooter"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Father who killed Oregon school gunman describes anguish over children he couldn't save",
+     "url": "https://www.bbc.co.uk/news/articles/crgj9ndwvj9jo?at_medium=RSS&at_campaign=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Kenya announces 2nd Ebola death, a close relative of the first patient",
+   "summary": "Kenya's Health Ministry announced the country's second Ebola death Friday, saying a 65-year-old woman who was a close relative of the first patient died after developing symptoms while in quarantine.",
+   "category": "Health",
+   "leans": [
+    0,
+    1
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Woman, 65, becomes second patient to die of Ebola in Kenya",
+     "url": "https://www.bbc.co.uk/news/articles/c6x2355448eyo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Kenya announces 2nd Ebola death, a close relative of the first patient",
+     "url": "https://www.washingtontimes.com/news/2026/oct/23/kenya-announces-second-ebola-death-close-relative-first-patient/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "WATCH: Simple Question About Terror Ties Sends Abdul El-Sayed Reeling",
+   "summary": "Michigan Democratic Senate nominee Abdul El-Sayed clashed with Fox News anchor Bret Baier in a tense exchange when pressed about his past support for Egypt’s Muslim Brotherhood and questions about his family’s reported ties to the Islamist movement. During an interview Friday, Ba",
+   "category": "Politics",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Abdul El-Sayed Is No JFK",
+     "url": "https://www.nationalreview.com/2026/10/abdul-el-sayed-is-no-jfk/"
+    },
+    {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "The Problem with Abdul El-Sayed’s JFK Analogy",
+     "url": "https://www.nationalreview.com/2026/10/the-problem-with-abdul-el-sayeds-jfk-analogy/"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "WATCH: Simple Question About Terror Ties Sends Abdul El-Sayed Reeling",
+     "url": "https://www.dailywire.com/news/watch-simple-question-about-terror-ties-sends-abdul-el-sayed-reeling"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "How a Fake Pollster May Have Hurt Real Candidates",
+   "summary": "Wedgewood Polls admitted to using fabricated data in its surveys, claiming the stunt was an “experimental project” intended to showcase the “vulnerabilities” of the polling industry.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "Politico",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How a fake pollster may have moved some 2026 elections",
+     "url": "https://www.politico.com/news/2026/10/22/how-a-fake-pollster-may-have-moved-some-2026-elections-01131675"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How a Fake Pollster May Have Hurt Real Candidates",
+     "url": "https://time.com/article/2026/10/23/what-fake-wedgewood-polls-scandal-reveals-about-election-polling/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Student movement takes Serbia's Vučić to the wire in neck-and-neck election",
+   "summary": "The Student List has emerged from almost two years of anti-corruption protests to form the biggest challenge to Vučić's rule.",
    "category": "Politics",
    "leans": [
     0
@@ -666,22 +1396,31 @@
    "blindspot": null,
    "sources": [
     {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Student movement takes Serbia's Vučić to the wire in neck-and-neck election",
+     "url": "https://www.bbc.co.uk/news/articles/cm1dwz311476o?at_medium=RSS&at_campaign=rss"
+    },
+    {
      "name": "Al Jazeera",
      "lean": 0,
      "label": "Center",
-     "title": "Brazil’s Lula and Bolsonaro debate policy proposals before run-off",
-     "url": "https://www.aljazeera.com/news/2026/10/24/brazils-lula-and-bolsonaro-debate-policy-proposals-before-run-off?traffic_source=rss"
-    },
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Bolsonaro Lead Over Lula Shrinks as Trump Stays on Brazil Election Sideline",
-     "url": "https://www.newsweek.com/bolsonaro-lead-over-lula-shrinks-as-trump-stays-on-brazil-election-sideline-12613289"
+     "title": "Serbia elections test student movement demanding justice for 16 victims",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/10/24/serbia-elections-test-student-movement-demanding-justice-for-16-victims?traffic_source=rss"
     }
    ],
    "factchecks": [],
-   "videos": []
+   "videos": [
+    {
+     "videoId": "a-yqGc8VJJc",
+     "title": "Serbia elections test student movement demanding justice for 16 victims",
+     "thumb": "https://i.ytimg.com/vi/a-yqGc8VJJc/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
   },
   {
    "title": "Mamdani weaponizing $1.6M taxpayer-funded ads to push ballot questions that ‘take power from the people’: critics",
@@ -712,81 +1451,6 @@
      "label": "Lean Right",
      "title": "Mamdani weaponizing $1.6M taxpayer-funded ads to push ballot questions that ‘take power from the people’: critics",
      "url": "https://nypost.com/2026/10/24/us-news/nycs-zohran-mamdani-weaponizing-ads-to-push-ballot-questions-that-would-take-power-from-the-people-critics/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Abdul El-Sayed parlayed his race-obsessed medical research to fast-track, fund journey to Congress: critics",
-   "summary": "Abdul El-Sayed used race-based, identity politics to propel his journey from academia to the doorstep of the US Senate.",
-   "category": "Politics",
-   "leans": [
-    1
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Abdul El-Sayed parlayed his race-obsessed medical research to fast-track, fund journey to Congress: critics",
-     "url": "https://nypost.com/2026/10/24/us-news/abdul-el-sayed-parlayed-his-race-obsessed-medical-research-to-fast-track-fund-his-journey-to-congress-critics/"
-    },
-    {
-     "name": "National Review",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Abdul El-Sayed Is No JFK",
-     "url": "https://www.nationalreview.com/2026/10/abdul-el-sayed-is-no-jfk/"
-    },
-    {
-     "name": "National Review",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "The Problem with Abdul El-Sayed’s JFK Analogy",
-     "url": "https://www.nationalreview.com/2026/10/the-problem-with-abdul-el-sayeds-jfk-analogy/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "‘Cornell 7’ Accuser Can Keep Her Identity Secret, Judge Rules",
-   "summary": "A New York judge handed a legal win to the woman known as “Jane Doe” in the high-profile “Cornell 7” gang-rape civil lawsuit, ruling Friday that she can continue pursuing her claims without publicly revealing her identity. Judge Phaedra Perry-Bond, a Democrat elected to the New Y",
-   "category": "Politics",
-   "leans": [
-    2
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Cornell rape accuser can remain 'Jane Doe' as judge warns threats could lead to federal charges",
-     "url": "https://www.foxnews.com/us/cornell-rape-accuser-remain-jane-doe-judge-warns-threats-could-lead-federal-charges"
-    },
-    {
-     "name": "The Daily Wire",
-     "lean": 2,
-     "label": "Right",
-     "title": "‘Cornell 7’ Accuser Can Keep Her Identity Secret, Judge Rules",
-     "url": "https://www.dailywire.com/news/cornell-7-accuser-can-keep-her-identity-secret-judge-rules"
     }
    ],
    "factchecks": [],
@@ -826,1053 +1490,792 @@
    "videos": []
   },
   {
-   "title": "Ukraine reports Starlink operating again after slowdown",
-   "summary": "Ukraine’s Starlink satellite links have been restored after the country experienced limitations with accessing this critical technology, the Ukrainian defense minister said Saturday. SpaceX’s military-grade version of Starlink, called Starshield, supports Ukraine’s drone operatio",
-   "category": "World",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Ukraine reports Starlink operating again after slowdown",
-     "url": "https://thehill.com/policy/international/6169915-starlink-starshield-access-restored/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Critics should do their homework before attacking Arabic language programs",
-   "summary": "Arabic should not be treated differently from German, Spanish, Italian or Japanese because of contemporary politics.",
+   "title": "Perspective: The next James Bond",
+   "summary": "A new James Bond is nigh, to replace the last actor in the 64 year-old movie franchise. What evil forces will the new 007 face? Killer Drones? Killer AI? Killer lettuce?",
    "category": "General",
    "leans": [
-    0
+    -1
    ],
    "span": 0,
    "n_sources": 1,
    "balance": {
-    "l": 0,
-    "c": 1,
+    "l": 1,
+    "c": 0,
     "r": 0
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Critics should do their homework before attacking Arabic language programs",
-     "url": "https://thehill.com/opinion/education/6168525-american-arabic-language-education/"
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Perspective: The next James Bond",
+     "url": "https://www.npr.org/2026/10/24/nx-s1-6004258/perspective-the-next-james-bond"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Early voting surges in battleground states as Democrats outpace GOP gains",
-   "summary": "Early voting is surging in several key battleground states, giving Democrats hope that their strength in midterm polling could translate into a turnout advantage in November. In North Carolina, more than 1.2 million early ballots have been accepted, a 37 percent increase from the",
-   "category": "Politics",
+   "title": "Gunmen open fire at a church during a funeral in Jordan, killing 7 and wounding 40",
+   "summary": "Footage broadcast on Jordanian state television showed three gunmen firing shots at a Greek Orthodox church in the city of Karak on Friday.",
+   "category": "General",
    "leans": [
-    0
+    -1
    ],
    "span": 0,
    "n_sources": 1,
    "balance": {
-    "l": 0,
-    "c": 1,
+    "l": 1,
+    "c": 0,
     "r": 0
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Early voting surges in battleground states as Democrats outpace GOP gains",
-     "url": "https://thehill.com/homenews/campaign/6169626-early-voting-battleground-states-democrats-republicans/"
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Gunmen open fire at a church during a funeral in Jordan, killing 7 and wounding 40",
+     "url": "https://www.npr.org/2026/10/24/nx-s1-6015414/shooting-church-jordan"
     }
    ],
    "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Why a blue wave might miss Minnesota's Senate race",
-   "summary": "Political headwinds are blowing in Democrats’ favor nationally, with high gas prices and President Trump’s record-low approval rating creating a difficult midterm environment for Republicans. But in Minnesota’s open Senate race to replace retiring Sen. Tina Smith (D), Democrats a",
-   "category": "Politics",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
+   "videos": [
     {
-     "name": "The Hill",
+     "videoId": "LXwSEsP6o90",
+     "title": "Gunmen open fire at church in Jordan | DW News",
+     "thumb": "https://i.ytimg.com/vi/LXwSEsP6o90/hqdefault.jpg",
+     "channel": "DW News",
      "lean": 0,
-     "label": "Center",
-     "title": "Why a blue wave might miss Minnesota's Senate race",
-     "url": "https://thehill.com/homenews/campaign/6169517-minnesota-senate-flanagan-tafoya/"
+     "label": "Center"
     }
-   ],
-   "factchecks": [],
-   "videos": []
+   ]
   },
   {
-   "title": "Trump’s $8 billion farm lifeline won’t fully solve farmers’ diesel problem",
-   "summary": "The Trump administration’s $8 billion relief program for farmers is throwing a lifeline to the industry, but producers are still facing lower margins due to high diesel prices amid the Iran war — and experts say the move might only buy time for solving deeper challenges. Through ",
-   "category": "World",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Trump’s $8 billion farm lifeline won’t fully solve farmers’ diesel problem",
-     "url": "https://thehill.com/business/6169485-trump-farm-relief-diesel-prices/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Rubio floats CIA 'partnership' to Cubans tired of 'failed promises, corruption'",
-   "summary": "Secretary of State Marco Rubio offered Cubans a discreet CIA partnership opportunity in a Friday social media post, saying \"now is the time\" for those looking to \"create positive change” in the Caribbean country. “The disappointment of failed promises, corruption, and the privile",
-   "category": "Tech",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Rubio floats CIA 'partnership' to Cubans tired of 'failed promises, corruption'",
-     "url": "https://thehill.com/homenews/administration/6169754-rubio-offers-cia-cuban-partnership/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Peltola calls Alaska lawsuit a 'desperate attempt' for GOP to 'cling to power'",
-   "summary": "Alaska Senate candidate Mary Peltola (D) responded to the Justice Department's (DOJ) lawsuit seeking to block her state from certifying its election results should her Republican challenger lose, saying Friday the move was \"frivolous.\" “This is clearly corruption. This is clearly",
-   "category": "Politics",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Peltola calls Alaska lawsuit a 'desperate attempt' for GOP to 'cling to power'",
-     "url": "https://thehill.com/blogs/ballot-box/6169725-peltola-slams-alaska-doj-lawsuit-sullivan/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Kennedy rolls out US-caught seafood labeling, Seafood.gov",
-   "summary": "The Trump administration unveiled new initiatives for U.S. fishermen Friday, including a new government website known as Seafood.gov. At a rally in Fort Myers, Fla., Health and Human Services (HHS) Secretary Robert F. Kennedy Jr. announced the creation of a voluntary label made f",
-   "category": "Politics",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Kennedy rolls out US-caught seafood labeling, Seafood.gov",
-     "url": "https://thehill.com/homenews/administration/6169656-trump-rfk-unveil-us-seafood-label/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "About half concerned Republicans could try to overturn midterm results: Survey",
-   "summary": "A new poll released Friday suggests half of Americans are concerned Republicans may try to overturn the results of November’s midterm election. Fifty percent of respondents to the New York Times/Siena University survey said they were either \"very\" or \"somewhat worried\" the GOP ma",
-   "category": "Politics",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "About half concerned Republicans could try to overturn midterm results: Survey",
-     "url": "https://thehill.com/blogs/ballot-box/6169602-americans-fear-gop-overturning-election-poll/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "US officially doubles last year's measles numbers",
-   "summary": "Click in for more news from The Hill {beacon} Healthcare Healthcare The Big Story US officially doubles last year's measles numbers The U.S. has officially doubled the number of measles cases it saw in 2025 according to the most up-to-date information from the Centers for Disease",
+   "title": "Is your Medicare Advantage plan ending next year? Here's what to know",
+   "summary": "Medicare open enrollment runs through Dec. 7, and for as many as 5 million seniors, it will be important to log on and pick a new plan.",
    "category": "Health",
    "leans": [
-    0
+    -1
    ],
    "span": 0,
    "n_sources": 1,
    "balance": {
-    "l": 0,
-    "c": 1,
+    "l": 1,
+    "c": 0,
     "r": 0
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "US officially doubles last year's measles numbers",
-     "url": "https://thehill.com/newsletters/healthcare/6169627-us-officially-doubles-last-years-measles-numbers/"
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Is your Medicare Advantage plan ending next year? Here's what to know",
+     "url": "https://www.npr.org/2026/10/24/nx-s1-6014612/medicare-advantage-open-enrollment-cancelled-plan"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Pressure mounts on Trump administration over Starlink slowdown",
-   "summary": "Welcome to The Hill's Defense & NatSec newsletter {beacon} Defense &National Security Defense &National Security The Big Story Pressure increases on Trump administration over Starlink slowdown Pressure is increasing on the Trump administration to restore and expand Ukraine’s acce",
+   "title": "U.S. birth rate drops to record low, but older women are having more babies",
+   "summary": "The U.S. birth rate fell to its lowest level ever recorded, according to a report from the Centers for Disease Control and Prevention. The drop would have been greater, but women over age 30 are having more children.",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "U.S. birth rate drops to record low, but older women are having more babies",
+     "url": "https://www.npr.org/2026/10/24/nx-s1-6012804/birth-rate-population-cdc"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "This decade has been missing its big-impact midterm",
+   "summary": "Every other decade over the past hundred years has produced at least one midterm that made a big difference in Congress and in national politics more broadly.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "This decade has been missing its big-impact midterm",
+     "url": "https://www.npr.org/2026/10/24/nx-s1-6014811/midterm-election-history-house-senate"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Drinking water supplies dwindle in Yemeni city besieged by Houthi rebels",
+   "summary": "Taiz, a city in southwestern Yemen, faces a severe water crisis as Houthi rebels backed by Iran tighten their encirclement. The city has struggled with water issues for over a decade, but the situation has worsened in recent weeks.",
    "category": "World",
    "leans": [
-    0
+    -1
    ],
    "span": 0,
    "n_sources": 1,
    "balance": {
-    "l": 0,
-    "c": 1,
+    "l": 1,
+    "c": 0,
     "r": 0
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Pressure mounts on Trump administration over Starlink slowdown",
-     "url": "https://thehill.com/newsletters/defense-national-security/6169593-pressure-mounts-on-trump-administration-over-starlink-slowdown/"
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Drinking water supplies dwindle in Yemeni city besieged by Houthi rebels",
+     "url": "https://www.npr.org/2026/10/24/g-s1-149729/drinking-water-supplies-dwindle-in-yemeni-city-besieged-by-houthi-rebels"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Trump is pushing a massive AI buildout. His own voters are wary of what comes with it",
-   "summary": "A new CNBC survey finds broad voter opposition to nearby AI data centers, creating a political challenge for Trump and Republicans ahead of the midterm election.",
+   "title": "Severe flooding hits Four Corners region, more expected through the weekend",
+   "summary": "Intense rainfall slammed the Four Corners region late this week. As rivers flooded, towns declared evacuations and emergencies and made rescues.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Severe flooding hits Four Corners region, more expected through the weekend",
+     "url": "https://www.npr.org/2026/10/23/nx-s1-6014742/flooding-weather-four-corners"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Russia steps up election influence efforts in final stretch of midterms",
+   "summary": "Researchers who track online influence operations say Kremlin-backed groups are renewing tactics they've used to sow distrust and discord in previous elections in the U.S. and around the world.",
    "category": "World",
    "leans": [
-    0
+    -1
    ],
    "span": 0,
    "n_sources": 1,
    "balance": {
-    "l": 0,
-    "c": 1,
+    "l": 1,
+    "c": 0,
     "r": 0
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "Trump is pushing a massive AI buildout. His own voters are wary of what comes with it",
-     "url": "https://www.cnbc.com/2026/10/24/trump-ai-data-centers-voter-backlash-midterms.html"
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Russia steps up election influence efforts in final stretch of midterms",
+     "url": "https://www.npr.org/2026/10/23/nx-s1-5995508/russia-midterms-election-influence"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Nvidia's role as AI financier faces first big test as neoclouds take market hit",
-   "summary": "As Nvidia has gone from chipmaker to industry financier, some investors see the company taking on outsized risk tied to the AI buildout.",
-   "category": "Economy",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "Nvidia's role as AI financier faces first big test as neoclouds take market hit",
-     "url": "https://www.cnbc.com/2026/10/24/nvidias-role-as-ai-financier-faces-first-big-test-as-neoclouds-take-market-hit.html"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Why popular airplanes are getting scrapped years early",
-   "summary": "Airplanes are getting dismantled for parts years ahead of schedule because engines and other components are in short supply.",
-   "category": "General",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "Why popular airplanes are getting scrapped years early",
-     "url": "https://www.cnbc.com/2026/10/24/spirit-airlines-planes-scrapped-engine-shortage.html"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "What next for France as riots rattle markets? Three questions facing investors ahead of more protests",
-   "summary": "French unrest pushed bond yields to a 24-year high as investors weigh budget, growth and sectors risks ahead of more protests.",
-   "category": "Economy",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "What next for France as riots rattle markets? Three questions facing investors ahead of more protests",
-     "url": "https://www.cnbc.com/2026/10/24/france-riots-paris-unrest-debt-budget.html"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Apple is set to take back the market-cap crown from Nvidia. Upcoming earnings may push it over the top",
-   "summary": "Apple stock is trading near record highs and closing in on Nvidia's market cap. Portfolio manager Jeff Kilburg explains what's driving the rally and why he thinks the momentum could continue.",
-   "category": "Economy",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "Apple is set to take back the market-cap crown from Nvidia. Upcoming earnings may push it over the top",
-     "url": "https://www.cnbc.com/2026/10/23/apple-nvidia-market-cap-earnings.html"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "AI's 'Black October': Critical PHP flaws set off global security scramble",
-   "summary": "Governments and businesses around the globe are scrambling to contain the fallout after the PHP vulnerabilities leaked online.",
-   "category": "General",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "AI's 'Black October': Critical PHP flaws set off global security scramble",
-     "url": "https://www.cnbc.com/2026/10/23/php-vulnerabilities-ai-cybersecurity.html"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Turmoil hits AI buildout as neoclouds face pressure, credit risks mount and Solidigm pulls IPO",
-   "summary": "Stock slumps, pulled IPOs and rising spreads on credit default swaps this week sets stage for hyperscaler earnings.",
-   "category": "Economy",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "Turmoil hits AI buildout as neoclouds face pressure, credit risks mount and Solidigm pulls IPO",
-     "url": "https://www.cnbc.com/2026/10/23/ai-turmoil-neoclouds-struggle-credit-risks-jump-solidigm-pulls-ipo.html"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Moody's holds steady on France's credit rating as country grapples with turmoil and higher yields",
-   "summary": "Moody's left its credit rating on France at Aa3, giving the country some relief in a week of unrest.",
-   "category": "Tech",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "Moody's holds steady on France's credit rating as country grapples with turmoil and higher yields",
-     "url": "https://www.cnbc.com/2026/10/23/moodys-holds-steady-on-frances-credit-rating-as-country-grapples-with-turmoil-and-higher-yields.html"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "What a day in customer service looks like — as AI changes everything",
-   "summary": "Customer service can be a \"really, really difficult job.\" Will AI make it easier — or cause even more headaches?",
-   "category": "Tech",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "What a day in customer service looks like — as AI changes everything",
-     "url": "https://www.cnbc.com/2026/10/24/ai-customer-service-jobs-work.html"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Scalpers offer Apple iPhone Duo buyers hundreds extra outside Beijing launch",
-   "summary": "Apple's global launch of the foldable iPhone Duo brought scalpers to the Beijing flagship store looking to pay big for the already pricey devices.",
-   "category": "Economy",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "Scalpers offer Apple iPhone Duo buyers hundreds extra outside Beijing launch",
-     "url": "https://www.cnbc.com/2026/10/23/apple-iphone-duo-china-launch.html"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Trump's executive order targets mortgage insurance, refinance costs. What it means for borrowers",
-   "summary": "Trump's executive order on housing aims to lower mortgage costs. Here's what it means for homeowners and buyers.",
+   "title": "The Pentagon's guidelines for \"responsible AI\" aren't always followed, report shows",
+   "summary": "The Pentagon is building weapons and projects with AI capabilities that officials say don't always closely adhere to the agency's own guidelines for AI, according to a congressional watchdog report published in October.",
    "category": "Politics",
    "leans": [
-    0
+    -1
    ],
    "span": 0,
    "n_sources": 1,
    "balance": {
-    "l": 0,
-    "c": 1,
+    "l": 1,
+    "c": 0,
     "r": 0
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "Trump's executive order targets mortgage insurance, refinance costs. What it means for borrowers",
-     "url": "https://www.cnbc.com/2026/10/23/trump-mortgage-executive-order-costs.html"
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "The Pentagon's guidelines for \"responsible AI\" aren't always followed, report shows",
+     "url": "https://www.npr.org/2026/10/23/nx-s1-6012296/ai-department-of-defense-war"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Speed restrictions on Musk's Starlink lifted in Ukraine, defense ministry says",
-   "summary": "The speed of the Elon Musk-owned satellite system used by the Ukrainian military has been fully restored after two weeks of restrictions, the country's ministry of defense said in a statement on Saturday. Why it matters: The restrictions limited the Ukrainian military from using ",
+   "title": "Ohio could decide control of the Senate. Its rural voters might decide the winner",
+   "summary": "Ohio has been a reliably red state for several elections but it's competitive this year. If Democrats want to prevail, they'll have to win people who have backed Republicans, like rural voters.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Ohio could decide control of the Senate. Its rural voters might decide the winner",
+     "url": "https://www.npr.org/2026/10/23/nx-s1-6012809/ohio-senate-governor-election-rural-voters"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Mystery over source of Ebola infection in Nigeria fuels concern about spread of virus",
+   "summary": "Switzerland says patient is wife of Swiss diplomat and believed to have contracted virus while travelling in Uganda Health officials across Africa are racing to determine how Nigeria’s first Ebola patient ⁠in more than a decade ⁠became infected, amid fears ​the outbreak could spr",
    "category": "World",
    "leans": [
-    0
+    -1
    ],
    "span": 0,
    "n_sources": 1,
    "balance": {
-    "l": 0,
-    "c": 1,
+    "l": 1,
+    "c": 0,
     "r": 0
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "Axios",
-     "lean": 0,
-     "label": "Center",
-     "title": "Speed restrictions on Musk's Starlink lifted in Ukraine, defense ministry says",
-     "url": "https://www.axios.com/2026/10/24/musk-ukraine-starlink-starshield-speed"
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Mystery over source of Ebola infection in Nigeria fuels concern about spread of virus",
+     "url": "https://www.theguardian.com/world/2026/oct/23/ebola-swiss-patient-nigeria-dr-congo-concerns-virus-spread"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Washington's message to AI execs: please shut up",
-   "summary": "Washington has always viewed Silicon Valley as culturally strange, but the current crop of AI leaders is becoming a political liability, sources close to the White House and Congress tell Axios. Why it matters : Lawmakers, hill staffers and Washington insiders in both parties wis",
-   "category": "Politics",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Axios",
-     "lean": 0,
-     "label": "Center",
-     "title": "Washington's message to AI execs: please shut up",
-     "url": "https://www.axios.com/2026/10/24/ai-ceos-washington-political-liability"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "\"People are tired of theater\": The left sours on \"performative\" Trump impeachment",
-   "summary": "Progressive House members and candidates are taking a stark turn away from what they describe as \"performative\" efforts to impeach President Trump . Why it matters: This is a drastic shift in tone from Trump's first term, when progressives were some of the loudest voices in favor",
-   "category": "Politics",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Axios",
-     "lean": 0,
-     "label": "Center",
-     "title": "\"People are tired of theater\": The left sours on \"performative\" Trump impeachment",
-     "url": "https://www.axios.com/2026/10/23/trump-impeachment-democrats-darializa-tlaib-left"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Mysterious \"flying triangle\" sighting leads new government release of UFO documents",
-   "summary": "On a recent evening near a secure U.S. facility, three federal agents saw a flying object they couldn't identify: a large \"matte black triangle\" that moved as fast as a fighter jet, made no sound and then disappeared, according to FBI and Defense Department reports. Why it matter",
-   "category": "Economy",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Axios",
-     "lean": 0,
-     "label": "Center",
-     "title": "Mysterious \"flying triangle\" sighting leads new government release of UFO documents",
-     "url": "https://www.axios.com/2026/10/23/new-ufo-documents-flying-triangle"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Wall Street prepares for AI's \"day after\"",
-   "summary": "America's largest banks are working to prevent AI worst-case scenarios. But they're also preparing for the \"day after\" a catastrophe, Axios has learned. Why it matters: America's financial institutions have joined the largest AI companies in scenario-planning for disaster, a prud",
-   "category": "Tech",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Axios",
-     "lean": 0,
-     "label": "Center",
-     "title": "Wall Street prepares for AI's \"day after\"",
-     "url": "https://www.axios.com/2026/10/23/ai-catastrophe-wall-street"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Why soaring prices aren't breaking America's diesel habit",
-   "summary": "The quickest and most affordable response to historically high diesel prices is also the simplest: Use less of it. Why it matters: Diesel is so entrenched in farming, trucking and other industries that even soaring prices aren't enough — at least not yet — to prompt a wholesale s",
-   "category": "Economy",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Axios",
-     "lean": 0,
-     "label": "Center",
-     "title": "Why soaring prices aren't breaking America's diesel habit",
-     "url": "https://www.axios.com/2026/10/23/soaring-prices-diesel-habit"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "The religious left makes a play for red-state conservatives",
-   "summary": "Democrats in a pair of deep-red states are testing the religious right's dominance by putting their Christian faith at the center of their campaigns — potentially creating a template for the party to compete in similarly forbidding terrain. Why it matters: Upsets by Texas' James ",
-   "category": "Politics",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Axios",
-     "lean": 0,
-     "label": "Center",
-     "title": "The religious left makes a play for red-state conservatives",
-     "url": "https://www.axios.com/2026/10/23/democrats-religious-left-texas-kansas-talarico-hamilton"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Senate control hinges on unwanted nominees",
-   "summary": "Senate Majority Leader John Thune (R-S.D.) and Minority Leader Chuck Schumer (D-N.Y.) are living out their midterm nightmares — with nominees they didn't want and former colleagues they no longer control. Why it matters: Together, Schumer and Thune are stuck with five Senate race",
-   "category": "Politics",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Axios",
-     "lean": 0,
-     "label": "Center",
-     "title": "Senate control hinges on unwanted nominees",
-     "url": "https://www.axios.com/2026/10/23/senate-midterms-2026-elections-thune-schumer"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Scoop: Some Freedom Caucus members want Brandon Gill out",
-   "summary": "A small group of Rep. Brandon Gill's fellow House Freedom Caucus members are privately questioning whether he still belongs in the hardline group, Axios has learned. Why it matters: The 32-year-old Texas freshman's rapid rise through House Republican ranks has transformed him int",
-   "category": "Politics",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Axios",
-     "lean": 0,
-     "label": "Center",
-     "title": "Scoop: Some Freedom Caucus members want Brandon Gill out",
-     "url": "https://www.axios.com/2026/10/22/texas-brandon-gill-freedom-caucus-house-republican"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Serbia elections test student movement demanding justice for 16 victims",
-   "summary": "Serbia elections test student movement demanding justice for 16 victims",
-   "category": "Politics",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "Serbia elections test student movement demanding justice for 16 victims",
-     "url": "https://www.aljazeera.com/video/newsfeed/2026/10/24/serbia-elections-test-student-movement-demanding-justice-for-16-victims?traffic_source=rss"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "a-yqGc8VJJc",
-     "title": "Serbia elections test student movement demanding justice for 16 victims",
-     "thumb": "https://i.ytimg.com/vi/a-yqGc8VJJc/hqdefault.jpg",
-     "channel": "Al Jazeera",
-     "lean": 0,
-     "label": "Center"
-    }
-   ]
-  },
-  {
-   "title": "Barcelona housing activists evicted by police from residential building",
-   "summary": "Housing activists in Barcelona seized a mostly empty building to house vulnerable families and create a community hub.",
-   "category": "Politics",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "Barcelona housing activists evicted by police from residential building",
-     "url": "https://www.aljazeera.com/video/newsfeed/2026/10/24/barcelona-housing-activists-evicted-by-police-from-residential-building?traffic_source=rss"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "w7dlU3E3zF8",
-     "title": "Barcelona housing activists evicted by police from residential building | AJ #shorts",
-     "thumb": "https://i.ytimg.com/vi/w7dlU3E3zF8/hqdefault.jpg",
-     "channel": "Al Jazeera",
-     "lean": 0,
-     "label": "Center"
-    }
-   ]
-  },
-  {
-   "title": "Barcelona vs Real Madrid: Top 5 El Clasico matches between La Liga giants",
-   "summary": "Matches between Barca and Real are among the biggest in world football, with their rivalry spanning more than a century.",
-   "category": "General",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "Barcelona vs Real Madrid: Top 5 El Clasico matches between La Liga giants",
-     "url": "https://www.aljazeera.com/sports/2026/10/24/barcelona-vs-real-madrid-top-5-el-clasico-matches-between-la-liga-giants?traffic_source=rss"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Czech Republic advances media funding overhaul despite criticism",
-   "summary": "Journalists prepare to strike as politicians push through changes that critics say threaten independence.",
-   "category": "General",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "Czech Republic advances media funding overhaul despite criticism",
-     "url": "https://www.aljazeera.com/news/2026/10/24/czech-republic-advances-media-funding-overhaul-despite-criticism?traffic_source=rss"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Democracy by ZIP Code: Two Americas, one election",
-   "summary": "How can Americans living just miles apart experience completely different versions of the American dream?",
-   "category": "Politics",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "Democracy by ZIP Code: Two Americas, one election",
-     "url": "https://www.aljazeera.com/video/newsfeed/2026/10/24/democracy-by-zip-code-two-americas-one-election?traffic_source=rss"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "lmFo2z_wJ5E",
-     "title": "Democracy by ZIP Code: Two Americas, one election",
-     "thumb": "https://i.ytimg.com/vi/lmFo2z_wJ5E/hqdefault.jpg",
-     "channel": "Al Jazeera",
-     "lean": 0,
-     "label": "Center"
-    }
-   ]
-  },
-  {
-   "title": "Bayern say coach Kompany ‘stable’ in hospital but will be out for weeks",
-   "summary": "Bayern Munich coach Vincent Kompany collapsed during training on Friday but is said to be 'stable' in hospital.",
-   "category": "Health",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "Bayern say coach Kompany ‘stable’ in hospital but will be out for weeks",
-     "url": "https://www.aljazeera.com/sports/2026/10/24/bayern-say-coach-kompany-stable-in-hospital-but-will-be-out-for-weeks?traffic_source=rss"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Deadly ‘racist’ attack in France: Are hate crimes rising in Europe?",
-   "summary": "Monitoring group reports more Muslims in Europe face racial discrimination as 'terrorist' attack kills one in France.",
+   "title": "Lewis Hamilton aims to extend career till early 2030s so he can race in African Grand Prix",
+   "summary": "41-year-old set on ‘dream to be able to race in Africa’ Rwanda to host despite criticism of human rights record Lewis Hamilton has said he hopes to remain racing in Formula One until he can take part in the African Grand Prix which is set to take place in Rwanda in the 2030s . Th",
    "category": "World",
    "leans": [
-    0
+    -1
    ],
    "span": 0,
    "n_sources": 1,
    "balance": {
-    "l": 0,
-    "c": 1,
+    "l": 1,
+    "c": 0,
     "r": 0
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "Deadly ‘racist’ attack in France: Are hate crimes rising in Europe?",
-     "url": "https://www.aljazeera.com/news/2026/10/24/deadly-racist-attack-in-france-are-hate-crimes-rising-in-europe?traffic_source=rss"
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Lewis Hamilton aims to extend career till early 2030s so he can race in African Grand Prix",
+     "url": "https://www.theguardian.com/sport/2026/oct/22/lewis-hamilton-aims-to-extend-career-till-early-2030s-so-he-can-race-in-african-grand-prix"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Controversial US-backed vaccine trial in African newborns halted",
+   "summary": "Hepatitis B study in Guinea-Bissau that was to be funded by CDC and that drew global backlash ‘will not move forward’ The US-backed hepatitis B vaccine trial in African newborns that drew global backlash was halted, the lead researcher said on Wednesday. It was “now clear” that t",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Controversial US-backed vaccine trial in African newborns halted",
+     "url": "https://www.theguardian.com/world/2026/oct/21/us-vaccine-trial-african-newborns-hepatitis-b"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Severely ill ICE detainees face imminent deportation to unknown African states, advocates say",
+   "summary": "Flights to third countries where the detainees have no ties are scheduled as early as Wednesday, relatives detail Send us your questions about immigration and the midterms Relatives of gravely ill detainees at two Florida immigration jails say authorities are about to deport thei",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Severely ill ICE detainees face imminent deportation to unknown African states, advocates say",
+     "url": "https://www.theguardian.com/us-news/2026/oct/21/ice-detention-illness-deportation-florida"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Nigeria confirms Ebola case as outbreak spreads into western Africa",
+   "summary": "Case in Africa’s most populous country was detected in a woman who had travelled from Uganda Nigeria has confirmed an Ebola case in its capital, Abuja, after a woman who arrived from Uganda tested positive for the virus, the health ministry said. The woman began showing symptoms ",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Nigeria confirms Ebola case as outbreak spreads into western Africa",
+     "url": "https://www.theguardian.com/world/2026/oct/21/nigeria-first-ebola-case-africa-outbreak-latest"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Rubio tells Cubans ‘now is the time’ to act to see political change",
+   "summary": "US secretary of state makes comments after Trump tells US rally warships could intervene on return from Iran Marco Rubio urged Cubans seeking political change in their country to act, saying “now is the time” moments after Donald Trump told a Friday rally for candidates in south ",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Rubio tells Cubans ‘now is the time’ to act to see political change",
+     "url": "https://www.theguardian.com/us-news/2026/oct/23/marco-rubio-cuba-trump"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Brazil’s election and the battle for the Amazon – podcast",
+   "summary": "Our Latin America correspondent, Tom Phillips, heads to Roraima to hear what’s at stake for the rainforest and the communities that live there in the Brazilian presidential runoff on Sunday. Send your comments and questions to tif.questions@theguardian.com For the Amazon and the ",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Brazil’s election and the battle for the Amazon – podcast",
+     "url": "https://www.theguardian.com/news/audio/2026/oct/23/brazil-election-battle-for-amazon-podcast"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Alberta welcomed migrant workers. Now, it wants to restrict their rights",
+   "summary": "‘Scapegoating non-permanent residents is not going to lower the cost of living,’ Vanesa Ortiz says When Vanesa Ortiz came to Calgary from Mexico, she found herself in a city gripped by winter. Outside the airport, it was -15C (5F). “I would come to understand that this was not an",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Alberta welcomed migrant workers. Now, it wants to restrict their rights",
+     "url": "https://www.theguardian.com/world/2026/oct/22/canada-alberta-migrant-workers"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Alberta voters overwhelmingly reject plan to leave Canada in referendum",
+   "summary": "Result is a victory for prime minister Mark Carney and supporters of Canadian unity Voters in Canada’s Alberta have overwhelmingly rejected a proposal to begin the process of independence, delivering a decisive victory for supporters of Canadian unity and deepening divisions with",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Alberta voters overwhelmingly reject plan to leave Canada in referendum",
+     "url": "https://www.theguardian.com/world/2026/oct/20/canada-alberta-rejects-independence-succession-referendum"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Kim Jong-un crosses newly opened bridge into China",
+   "summary": "North Korean leader travels over New Yalu River Bridge to meet senior Communist party member Kim Jong-un has visited China, inaugurating a bridge that connects the two countries and saying he hopes to expand cooperation with his neighbour. The North Korean leader arrived in the C",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Kim Jong-un crosses newly opened bridge into China",
+     "url": "https://www.theguardian.com/world/2026/oct/24/kim-jong-un-crosses-newly-opened-bridge-into-china"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Typhoon Champi kills one and injures more than 500 in Taiwan as it heads to China",
+   "summary": "Super typhoon weakening but large parts of Taiwan, including Taipei, still mostly closed and flights cancelled Typhoon Champi swept past Taiwan on Saturday killing one person, injuring more than 500, and uprooting trees and severing power as it weakened and ⁠headed north toward ⁠",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Typhoon Champi kills one and injures more than 500 in Taiwan as it heads to China",
+     "url": "https://www.theguardian.com/world/2026/oct/24/typhoon-champi-kills-one-and-injures-more-than-500-in-taiwan-as-it-heads-to-china"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "The U.S. fertility rate keeps declining, and a legendary journalist prepares to sign off: The news quiz",
+   "summary": "A wounded soldier is evacuated by a drone, a much-loved TV show is getting the reboot treatment, and a Canadian province votes to remain.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "The U.S. fertility rate keeps declining, and a legendary journalist prepares to sign off: The news quiz",
+     "url": "https://www.nbcnews.com/news/news-quiz/world-series-news-quiz-rcna605040"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Debbie Shields speaks out on her viral moment riffing with Conan O'Brien",
+   "summary": "Internet sensation Debbie Shields speaks with NBC News’ Yasmin Vossoughian about her recent viral video, where she stood out during an improvised conversation with Conan O'Brien on the popular internet talk show “Subway Takes.”",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Debbie Shields speaks out on her viral moment riffing with Conan O'Brien",
+     "url": "https://www.nbcnews.com/video/debbie-shields-speaks-out-on-her-viral-moment-riffing-with-conan-o-brien-272080965792"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Vanessa Trump says she is ‘cancer-free’ six months after diagnosis",
+   "summary": "Vanessa Trump, the ex-wife of Donald Trump Jr., revealed Friday that she is cancer-free after beginning treatment for breast cancer earlier this year.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Vanessa Trump says she is ‘cancer-free’ six months after diagnosis",
+     "url": "https://www.nbcnews.com/politics/politics-news/vanessa-trump-cancer-free-breast-cancer-diagnosis-surgery-treatment-rcna605339"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "More candidates are using AI in political ads to get your vote",
+   "summary": "At least 220 ads— mostly Republican— generated or enhanced with artificial intelligence have circulated in the leadup to the midterms, at a cost of almost $137 million.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "More candidates are using AI in political ads to get your vote",
+     "url": "https://www.nbcnews.com/tech/tech-news/deciding-fake-images-candidates-are-using-ai-political-ads-get-vote-rcna605243"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "The Detective and the Chewing Gum Sting | Post Mortem",
+   "summary": "In the season premiere of \"48 Hours Post Mortem,\" correspondents Anne-Marie Green and Peter Van Sant discuss the brilliant undercover operation that used chewing gum to catch a killer in two cold cases. They reveal how Detective Susan Logothetti and her colleagues developed the r",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "The Detective and the Chewing Gum Sting | Post Mortem",
+     "url": "https://www.cbsnews.com/video/102426-48-hours-post-mortem/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Iran says U.S. military not allowed in Gulf \"under any circumstance\"",
+   "summary": "The U.S. ambassador to the U.N. says the war with Iran could last another year, but he hopes Tehran will \"come to the table\" sooner.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Iran says U.S. military not allowed in Gulf \"under any circumstance\"",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-oil-gas-prices-strait-of-hormuz-midterms/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "U.K. police confirm it received letter with claims against Meghan's father",
+   "summary": "On Friday, it was reported that Meghan's father, Thomas Markle, is under investigation by authorities in the Philippines for alleged possession of child sexual abuse materials.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "U.K. police confirm it received letter with claims against Meghan's father",
+     "url": "https://www.cbsnews.com/news/uk-police-letter-claims-meghan-duchess-sussex-thomas-markle-allegations/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Clinical trial saves man initially given weeks to live: \"Not done yet\"",
+   "summary": "A father of three thought his knee pain had a benign cause. Doctors found advanced, treatment-resistant cancer.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Clinical trial saves man initially given weeks to live: \"Not done yet\"",
+     "url": "https://www.cbsnews.com/news/acute-myeloid-leukemia-cancer-treatment-florida-sylvester-cancer-center/"
     }
    ],
    "factchecks": [],
@@ -1881,8 +2284,8 @@
  ],
  "blindspots": [
   {
-   "title": "Trump Wants To Force Data Centers To 'Make Their Own Electricity.' Deregulation Would Work Better.",
-   "summary": "The president joins a long list of politicians who think the government knows best when it comes to data centers.",
+   "title": "WATCH: Simple Question About Terror Ties Sends Abdul El-Sayed Reeling",
+   "summary": "Michigan Democratic Senate nominee Abdul El-Sayed clashed with Fox News anchor Bret Baier in a tense exchange when pressed about his past support for Egypt’s Muslim Brotherhood and questions about his family’s reported ties to the Islamist movement. During an interview Friday, Ba",
    "category": "Politics",
    "leans": [
     1,
@@ -1898,53 +2301,59 @@
    "blindspot": "left",
    "sources": [
     {
-     "name": "Reason",
+     "name": "National Review",
      "lean": 1,
      "label": "Lean Right",
-     "title": "Trump Wants To Force Data Centers To 'Make Their Own Electricity.' Deregulation Would Work Better.",
-     "url": "https://reason.com/2026/10/23/trump-wants-to-force-data-centers-to-make-their-own-electricity-deregulation-would-work-better/"
+     "title": "Abdul El-Sayed Is No JFK",
+     "url": "https://www.nationalreview.com/2026/10/abdul-el-sayed-is-no-jfk/"
     },
     {
-     "name": "Daily Caller",
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "The Problem with Abdul El-Sayed’s JFK Analogy",
+     "url": "https://www.nationalreview.com/2026/10/the-problem-with-abdul-el-sayeds-jfk-analogy/"
+    },
+    {
+     "name": "The Daily Wire",
      "lean": 2,
      "label": "Right",
-     "title": "Trump Wants More Gas And Diesel Made At Home, And He’s Paying $150 Million To Make It Happen",
-     "url": "https://dailycaller.com/2026/10/23/defense-production-act-refineries-energy-department-chris-wright-matt-mcmanus-afpm"
+     "title": "WATCH: Simple Question About Terror Ties Sends Abdul El-Sayed Reeling",
+     "url": "https://www.dailywire.com/news/watch-simple-question-about-terror-ties-sends-abdul-el-sayed-reeling"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "NASA Adopting Apollo's Urgency to Build Moon Base",
-   "summary": "NASA is moving fast on its plans to build a moon base and return astronauts to the lunar surface in as little as two years.Administrator Jared Isaacman said Friday that the space agency is still on track to launch Artemis III next summer on a docking exercise with Elon...",
-   "category": "Science",
+   "title": "How a Fake Pollster May Have Hurt Real Candidates",
+   "summary": "Wedgewood Polls admitted to using fabricated data in its surveys, claiming the stunt was an “experimental project” intended to showcase the “vulnerabilities” of the polling industry.",
+   "category": "General",
    "leans": [
-    1,
-    2
+    -1
    ],
-   "span": 1,
+   "span": 0,
    "n_sources": 2,
    "balance": {
-    "l": 0,
+    "l": 2,
     "c": 0,
-    "r": 2
+    "r": 0
    },
-   "blindspot": "left",
+   "blindspot": "right",
    "sources": [
     {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "NASA adopting Apollo's urgency to build a moon base and land astronauts within two years",
-     "url": "https://www.washingtontimes.com/news/2026/oct/23/nasa-adopts-apollos-urgency-build-moon-base-land-astronauts-within/"
+     "name": "Politico",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How a fake pollster may have moved some 2026 elections",
+     "url": "https://www.politico.com/news/2026/10/22/how-a-fake-pollster-may-have-moved-some-2026-elections-01131675"
     },
     {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "NASA Adopting Apollo's Urgency to Build Moon Base",
-     "url": "https://www.newsmax.com/newsfront/nasa-artemis-moon-astronauts-space/2026/10/23/id/1273850"
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How a Fake Pollster May Have Hurt Real Candidates",
+     "url": "https://time.com/article/2026/10/23/what-fake-wedgewood-polls-scandal-reveals-about-election-polling/"
     }
    ],
    "factchecks": [],
@@ -1979,81 +2388,6 @@
      "label": "Lean Right",
      "title": "Mamdani weaponizing $1.6M taxpayer-funded ads to push ballot questions that ‘take power from the people’: critics",
      "url": "https://nypost.com/2026/10/24/us-news/nycs-zohran-mamdani-weaponizing-ads-to-push-ballot-questions-that-would-take-power-from-the-people-critics/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Abdul El-Sayed parlayed his race-obsessed medical research to fast-track, fund journey to Congress: critics",
-   "summary": "Abdul El-Sayed used race-based, identity politics to propel his journey from academia to the doorstep of the US Senate.",
-   "category": "Politics",
-   "leans": [
-    1
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Abdul El-Sayed parlayed his race-obsessed medical research to fast-track, fund journey to Congress: critics",
-     "url": "https://nypost.com/2026/10/24/us-news/abdul-el-sayed-parlayed-his-race-obsessed-medical-research-to-fast-track-fund-his-journey-to-congress-critics/"
-    },
-    {
-     "name": "National Review",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Abdul El-Sayed Is No JFK",
-     "url": "https://www.nationalreview.com/2026/10/abdul-el-sayed-is-no-jfk/"
-    },
-    {
-     "name": "National Review",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "The Problem with Abdul El-Sayed’s JFK Analogy",
-     "url": "https://www.nationalreview.com/2026/10/the-problem-with-abdul-el-sayeds-jfk-analogy/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "‘Cornell 7’ Accuser Can Keep Her Identity Secret, Judge Rules",
-   "summary": "A New York judge handed a legal win to the woman known as “Jane Doe” in the high-profile “Cornell 7” gang-rape civil lawsuit, ruling Friday that she can continue pursuing her claims without publicly revealing her identity. Judge Phaedra Perry-Bond, a Democrat elected to the New Y",
-   "category": "Politics",
-   "leans": [
-    2
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Cornell rape accuser can remain 'Jane Doe' as judge warns threats could lead to federal charges",
-     "url": "https://www.foxnews.com/us/cornell-rape-accuser-remain-jane-doe-judge-warns-threats-could-lead-federal-charges"
-    },
-    {
-     "name": "The Daily Wire",
-     "lean": 2,
-     "label": "Right",
-     "title": "‘Cornell 7’ Accuser Can Keep Her Identity Secret, Judge Rules",
-     "url": "https://www.dailywire.com/news/cornell-7-accuser-can-keep-her-identity-secret-judge-rules"
     }
    ],
    "factchecks": [],
