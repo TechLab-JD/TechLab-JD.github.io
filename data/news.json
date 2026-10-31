@@ -1,7 +1,35 @@
 {
- "generated": "2026-10-30T23:57:13Z",
- "generated_human": "Oct 30, 2026 · 23:57 UTC",
+ "generated": "2026-10-31T00:00:50Z",
+ "generated_human": "Oct 31, 2026 · 00:00 UTC",
  "sources": [
+  {
+   "name": "NPR",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 10
+  },
+  {
+   "name": "The Guardian",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "NBC News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "CBS News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
   {
    "name": "ABC News",
    "lean": -1,
@@ -178,79 +206,208 @@
    "count": 12
   }
  ],
- "n_articles": 291,
- "n_videos": 0,
+ "n_articles": 338,
+ "n_videos": 20,
  "trending": [
   {
    "term": "trump",
-   "n": 16
-  },
-  {
-   "term": "election",
-   "n": 13
+   "n": 19
   },
   {
    "term": "alaska",
-   "n": 12
+   "n": 15
   },
   {
-   "term": "court",
-   "n": 10
+   "term": "election",
+   "n": 15
   },
   {
    "term": "senate",
-   "n": 10
+   "n": 13
+  },
+  {
+   "term": "court",
+   "n": 11
   },
   {
    "term": "race",
-   "n": 8
+   "n": 10
   },
   {
    "term": "judge",
-   "n": 8
+   "n": 9
   },
   {
    "term": "midterm",
-   "n": 7
+   "n": 9
   },
   {
    "term": "democrats",
+   "n": 8
+  },
+  {
+   "term": "time",
+   "n": 8
+  },
+  {
+   "term": "texas",
+   "n": 7
+  },
+  {
+   "term": "case",
+   "n": 7
+  },
+  {
+   "term": "midterms",
+   "n": 7
+  },
+  {
+   "term": "billion",
+   "n": 7
+  },
+  {
+   "term": "california",
    "n": 7
   },
   {
    "term": "back",
    "n": 7
-  },
-  {
-   "term": "israel",
-   "n": 7
-  },
-  {
-   "term": "vote",
-   "n": 6
-  },
-  {
-   "term": "final",
-   "n": 6
-  },
-  {
-   "term": "officials",
-   "n": 6
-  },
-  {
-   "term": "probe",
-   "n": 6
-  },
-  {
-   "term": "california",
-   "n": 6
   }
  ],
- "videos": [],
+ "videos": [
+  {
+   "videoId": "ZVrvA4Wt204",
+   "title": "Netanyahu accuses Palestinian Israeli parties of election theft; commission: no systematic fraud",
+   "thumb": "https://i.ytimg.com/vi/ZVrvA4Wt204/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "j3XkfGmBdRo",
+   "title": "Milwaukee celebrates World Series win in championship parade",
+   "thumb": "https://i.ytimg.com/vi/j3XkfGmBdRo/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "hZFSSbUtMRI",
+   "title": "Fans voice support on final night of Macklemore’s ‘Free Palestine’ tour | AJ #shorts",
+   "thumb": "https://i.ytimg.com/vi/hZFSSbUtMRI/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "8IDIIVPBus4",
+   "title": "Pennsylvania’s Latino midterm test",
+   "thumb": "https://i.ytimg.com/vi/8IDIIVPBus4/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "FxGPeNr4_QY",
+   "title": "Iran’s IRGC says supertankers hit mines in Strait of Hormuz, as US says strait is open",
+   "thumb": "https://i.ytimg.com/vi/FxGPeNr4_QY/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "G7wK8TfPzKE",
+   "title": "Did 'Mothman' stalk this town?",
+   "thumb": "https://i.ytimg.com/vi/G7wK8TfPzKE/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "Z25JS2SsalA",
+   "title": "Comedians roast Trump, Musk & final midterms push | Have I Got News for You",
+   "thumb": "https://i.ytimg.com/vi/Z25JS2SsalA/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "YoKd_fJiwDU",
+   "title": "Can Dominion’s new owner rebuild trust in voting machines?",
+   "thumb": "https://i.ytimg.com/vi/YoKd_fJiwDU/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "fNfzwUv9y7w",
+   "title": "Why Pope Leo’s US midterm vote is making history",
+   "thumb": "https://i.ytimg.com/vi/fNfzwUv9y7w/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "fvZwMR6zdXg",
+   "title": "Midterm Matters - Ohio reemerges as a key battleground state",
+   "thumb": "https://i.ytimg.com/vi/fvZwMR6zdXg/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "itH54l3XX-I",
+   "title": "Europe and Canada to deepen partnership",
+   "thumb": "https://i.ytimg.com/vi/itH54l3XX-I/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "iCGn4i08OJg",
+   "title": "Trump says Alaskans 'don't know what incumbent means'; voters respond",
+   "thumb": "https://i.ytimg.com/vi/iCGn4i08OJg/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "4ir5kXRG2BU",
+   "title": "What do you do if your name is Jeffrey Epstein?",
+   "thumb": "https://i.ytimg.com/vi/4ir5kXRG2BU/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "JxcoeqlHrzY",
+   "title": "Ireland's bat rescuers fight fear and falling populations",
+   "thumb": "https://i.ytimg.com/vi/JxcoeqlHrzY/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "y--fchKoVJM",
+   "title": "US Midterms 2026 Latest: The Arab-Americans turning on Trump",
+   "thumb": "https://i.ytimg.com/vi/y--fchKoVJM/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "BZLRzKj_91E",
+   "title": "Israeli siege on Hebron forces more than 530 families from their homes",
+   "thumb": "https://i.ytimg.com/vi/BZLRzKj_91E/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  }
+ ],
  "stories": [
   {
-   "title": "Top federal prosecutor in Alaska says criminal probe underway over would-be spoiler Senate candidate",
-   "summary": "Separately, the U.S. Department of Justice — as part of an ongoing lawsuit filed last week — asked a federal judge to order that state elections officials isolate ballots ranking Dan J. Sullivan to investigate potential voter \"confusion\" with the two-term incumbent Republican Dan",
+   "title": "Federal prosecutors announce investigation into Alaska Senate race",
+   "summary": "Federal prosecutors announced that they are pursuing a criminal probe into the Alaska Senate race, where Democrats are facing allegations of election fraud. Democratic Alaskan Senate candidate Mary Peltola says she knew nothing about efforts to get another Dan Sullivan on the bal",
    "category": "Politics",
    "leans": [
     -2,
@@ -260,9 +417,9 @@
     2
    ],
    "span": 4,
-   "n_sources": 11,
+   "n_sources": 14,
    "balance": {
-    "l": 2,
+    "l": 5,
     "c": 3,
     "r": 6
    },
@@ -274,6 +431,27 @@
      "label": "Left",
      "title": "The Truth About the Alaska Dan Sullivan Shenanigans",
      "url": "https://slate.com/news-and-politics/2026/10/2026-election-news-alaska-dan-sullivan-shenanigans.html?via=rss"
+    },
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Alaska's Senate race faces claims of spoiler candidate. And, Hegseth ousts Army general",
+     "url": "https://www.npr.org/2026/10/30/g-s1-150889/up-first-newsletter-midterm-elections-iran-war-veteran-affairs-loans"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Federal prosecutors announce investigation into Alaska Senate race",
+     "url": "https://www.nbcnews.com/video/federal-prosecutors-announce-investigation-into-alaska-senate-race-272570438002"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Top DOJ attorney in Alaska calls Alaska Senate allegations \"troubling\"",
+     "url": "https://www.cbsnews.com/news/alaska-us-attorney-senate-race-two-dan-sullivans/"
     },
     {
      "name": "PBS NewsHour",
@@ -397,14 +575,21 @@
     2
    ],
    "span": 3,
-   "n_sources": 6,
+   "n_sources": 7,
    "balance": {
-    "l": 1,
+    "l": 2,
     "c": 2,
     "r": 3
    },
    "blindspot": null,
    "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Judge orders an inquiry into potential DOJ misconduct in Trump's golf course case",
+     "url": "https://www.npr.org/2026/10/30/nx-s1-6023328/east-potomac-reyes-misconduct-inquiry-doj"
+    },
     {
      "name": "PBS NewsHour",
      "lean": -1,
@@ -459,22 +644,29 @@
    "videos": []
   },
   {
-   "title": "Selma Blair breaks silence weeks after arrest for alleged assault",
-   "summary": "Selma Blair on Friday broke her silence weeks after being arrested for alleged assault.",
+   "title": "Selma Blair apologizes to the ‘people that I dissapointed’ after plane incident arrest",
+   "summary": "Selma Blair has spoken out publicly for the first time since her arrest on assault charges after an incident on a plane earlier this month, apologizing to “the people that I disappointed.”",
    "category": "General",
    "leans": [
     -1,
     2
    ],
    "span": 3,
-   "n_sources": 2,
+   "n_sources": 3,
    "balance": {
-    "l": 1,
+    "l": 2,
     "c": 0,
     "r": 1
    },
    "blindspot": null,
    "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Selma Blair apologizes to the ‘people that I dissapointed’ after plane incident arrest",
+     "url": "https://www.nbcnews.com/news/us-news/selma-blair-apologizes-people-dissapointed-plane-incident-arrest-rcna606651"
+    },
     {
      "name": "ABC News",
      "lean": -1,
@@ -567,14 +759,21 @@
     1
    ],
    "span": 2,
-   "n_sources": 3,
+   "n_sources": 4,
    "balance": {
-    "l": 1,
+    "l": 2,
     "c": 1,
     "r": 1
    },
    "blindspot": null,
    "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Appeals court again rejects DOJ’s bid to segregate over 20,000 alleged noncitizen ballots in California",
+     "url": "https://www.nbcnews.com/politics/trump-administration/appeals-court-rejects-justice-department-noncitizen-ballots-rcna606604"
+    },
     {
      "name": "PBS NewsHour",
      "lean": -1,
@@ -595,6 +794,49 @@
      "label": "Lean Right",
      "title": "Appeals court rejects DOJ effort to set aside 20,000 mail-in ballots, teeing up Supreme Court gambit",
      "url": "https://www.washingtonexaminer.com/news/justice/4786513/appeals-court-rejects-doj-mail-in-ballots-supreme-court/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "U.S. approves a proposed $2.1 billion sale of Patriot interceptors to Ukraine after alleged holdup",
+   "summary": "The Trump administration said Friday that it has approved a proposed $2.1 billion sale of Patriot air defense interceptors for Ukraine after Kyiv had accused the Pentagon of delaying delivery of the vital munition needed to stop Russian ballistic missiles.",
+   "category": "World",
+   "leans": [
+    -1,
+    0,
+    1
+   ],
+   "span": 2,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "U.S. approves $2.1 billion sale of Patriot interceptors to Ukraine",
+     "url": "https://www.nbcnews.com/world/ukraine/us-approves-21-billion-sale-patriot-interceptors-ukraine-rcna606641"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "US approves sale of 500 Patriot missiles to Ukraine",
+     "url": "https://www.bbc.co.uk/news/articles/c3vgxznlx7jzo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "U.S. approves a proposed $2.1 billion sale of Patriot interceptors to Ukraine after alleged holdup",
+     "url": "https://www.washingtontimes.com/news/2026/oct/30/us-approves-proposed-21-billion-sale-patriot-interceptors-ukraine/"
     }
    ],
    "factchecks": [],
@@ -685,6 +927,47 @@
    "videos": []
   },
   {
+   "title": "WATCH LIVE: Trump holds rally in Daytona Beach",
+   "summary": "President Donald Trump is set to speak at a rally in Daytona Beach, Florida, on Friday at 7 p.m. as he works to shore up Republican support just days before the 2026 midterm elections. The president is expected to boost several GOP candidates in the Sunshine State, including Byro",
+   "category": "Politics",
+   "leans": [
+    -1,
+    1
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "\"Trump holds 27th campaign rally as midterms near \"",
+     "url": "https://www.cbsnews.com/video/trump-holds-27th-campaign-rally-as-midterms-near/"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "WATCH LIVE: Trump holds rally in Daytona Beach",
+     "url": "https://www.washingtonexaminer.com/news/white-house/4786840/watch-live-trump-rally-daytona-beach/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "FactChecking Claims from Trump’s Midterm Rallies",
+     "link": "https://www.factcheck.org/2026/10/factchecking-claims-from-trumps-midterm-rallies/"
+    }
+   ],
+   "videos": []
+  },
+  {
    "title": "Cruz warns GOP could lose 8 Senate seats, get swept in Texas",
    "summary": "Sen. Ted Cruz (R-Texas) is warning that Republicans could lose as many as eight Senate seats in the midterm elections and get swept in all of the statewide Texas races, including the Senate contest between Republican Ken Paxton and Democrat James Talarico, if the GOP has a bad da",
    "category": "World",
@@ -723,6 +1006,41 @@
      "link": "https://www.factcheck.org/2026/10/talarico-ad-omits-details-of-crystal-masons-illegal-voting-case/"
     }
    ],
+   "videos": []
+  },
+  {
+   "title": "Steve Kornacki analyzes midterm election results live all night long",
+   "summary": "Follow NBC News Chief Data Analyst Steve Kornacki on camera and behind-the-scenes as he breaks down real-time vote tallies for the 2026 midterm elections.",
+   "category": "Politics",
+   "leans": [
+    -1,
+    1
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Steve Kornacki analyzes midterm election results live all night long",
+     "url": "https://www.nbcnews.com/video/watch-live-steve-kornacki-analyzes-midterm-election-results-live-all-night-long-272551493776"
+    },
+    {
+     "name": "Reason",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Freed Up: Live Midterm Reactions",
+     "url": "https://reason.com/podcast/2026/10/30/freed-up-live-midterm-reactions/"
+    }
+   ],
+   "factchecks": [],
    "videos": []
   },
   {
@@ -790,6 +1108,90 @@
      "label": "Right",
      "title": "Texas Grand Jury Indicts ICE Agent in Houston SUV Crash",
      "url": "https://www.newsmax.com/newsfront/mario-alberto-morales-ice-sean-teare/2026/10/30/id/1274624"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "How crypto hacking funds isolated North Korea’s nuclear programme",
+   "summary": "Cryptocurrency theft is estimated to generate half of the country’s foreign currency income North Korea plays by its own rules. The isolated, secretive and autocratic country is largely cut off from the world’s economic system – but when it comes to generating foreign earnings it",
+   "category": "Economy",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 7,
+   "balance": {
+    "l": 4,
+    "c": 3,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Blockchain intelligence firms link North Korea to $6.3B hack on Binance",
+     "url": "https://www.npr.org/2026/10/30/g-s1-150902/blockchain-intelligence-firms-link-north-korea-to-6-3b-hack-on-binance"
+    },
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Binance flags 'potential security issue,' says approximately $6.3 billion impacted",
+     "url": "https://www.npr.org/2026/10/30/nx-s1-6023109/binance-security-issue"
+    },
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How crypto hacking funds isolated North Korea’s nuclear programme",
+     "url": "https://www.theguardian.com/world/2026/oct/30/how-crypto-hacking-funds-isolated-north-korea-nuclear-programme"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Tech stocks wipe out $1 trillion in value as concerns deepen about the AI boom",
+     "url": "https://www.nbcnews.com/business/markets/tech-stocks-nasdaq-ai-boom-fears-deepen-rcna606512"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How hard is it to recover the $6 billion stolen from Binance?",
+     "url": "https://www.cbsnews.com/news/binance-crypto-hack-stolen-funds-recovery/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Tech stocks plunge amid AI concerns as $6.3 billion Binance hack raises security fears",
+     "url": "https://www.cbsnews.com/video/tech-stocks-plunge-amid-ai-concerns-6-3-billion-dollar-binance-hack-raises-security-fears/"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Crypto giant Binance attempting to recover $6.3bn stolen in hack linked to North Korea",
+     "url": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump says US looking into Binance hack: 'We don't know' if North Korea responsible",
+     "url": "https://thehill.com/policy/technology/6185518-trump-binance-crypto-hack-north-korea/"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Binance hack: Investigators in a 'cat and mouse game' to recover $6.3 billion in stolen funds",
+     "url": "https://www.cnbc.com/2026/10/30/binance-hack-stolen-crypto-recovery.html"
     }
    ],
    "factchecks": [],
@@ -936,41 +1338,6 @@
    "videos": []
   },
   {
-   "title": "U.S. approves a proposed $2.1 billion sale of Patriot interceptors to Ukraine after alleged holdup",
-   "summary": "The Trump administration said Friday that it has approved a proposed $2.1 billion sale of Patriot air defense interceptors for Ukraine after Kyiv had accused the Pentagon of delaying delivery of the vital munition needed to stop Russian ballistic missiles.",
-   "category": "World",
-   "leans": [
-    0,
-    1
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "US approves sale of 500 Patriot missiles to Ukraine",
-     "url": "https://www.bbc.co.uk/news/articles/c3vgxznlx7jzo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "U.S. approves a proposed $2.1 billion sale of Patriot interceptors to Ukraine after alleged holdup",
-     "url": "https://www.washingtontimes.com/news/2026/oct/30/us-approves-proposed-21-billion-sale-patriot-interceptors-ukraine/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Hundreds evacuate Ukrainian city of Oleshky as part of Melania Trump-brokered ceasefire",
    "summary": "Hundreds of Ukrainian civilians who had been trapped in the Russian-occupied front-line city of Oleshky were evacuated on Friday as a part of the ceasefire first lady Melania Trump recently brokered. The town itself is located in the southern Ukrainian region of Kherson, and it h",
    "category": "World",
@@ -1000,47 +1367,6 @@
      "label": "Lean Right",
      "title": "Hundreds evacuate Ukrainian city of Oleshky as part of Melania Trump-brokered ceasefire",
      "url": "https://www.washingtonexaminer.com/policy/defense/4786300/hundreds-evacuate-ukrainian-city-oleshky-melania-trump-ceasefire/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Trump says US looking into Binance hack: 'We don't know' if North Korea responsible",
-   "summary": "President Trump said Friday his administration is looking into the $6.3 billion hacking of the cryptocurrency exchange Binance, the largest such hack on record. “We don’t know,” Trump said in the Oval Office when asked if the hack should be attributed to a suspected North Korean ",
-   "category": "Politics",
-   "leans": [
-    0
-   ],
-   "span": 0,
-   "n_sources": 3,
-   "balance": {
-    "l": 0,
-    "c": 3,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Crypto giant Binance attempting to recover $6.3bn stolen in hack linked to North Korea",
-     "url": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Trump says US looking into Binance hack: 'We don't know' if North Korea responsible",
-     "url": "https://thehill.com/policy/technology/6185518-trump-binance-crypto-hack-north-korea/"
-    },
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "Binance hack: Investigators in a 'cat and mouse game' to recover $6.3 billion in stolen funds",
-     "url": "https://www.cnbc.com/2026/10/30/binance-hack-stolen-crypto-recovery.html"
     }
    ],
    "factchecks": [],
@@ -1146,224 +1472,8 @@
    "videos": []
   },
   {
-   "title": "Ranked choice voting explained as voters in 2 states rank congressional picks",
-   "summary": "Ranked choice voting has grown as a voting measure for years, and experts say it presents voters with a better opportunity to reflect their opinions.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Ranked choice voting explained as voters in 2 states rank congressional picks",
-     "url": "https://abcnews.com/Politics/ranked-choice-voting-explained-voters-2-states-rank/story?id=137476649"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "LIVE:  ABC News Live",
-   "summary": "24/7 coverage of breaking news and live events",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "LIVE:  ABC News Live",
-     "url": "https://abcnews.com/video/41463246/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "4 adults struck by lightning outside elementary school",
-   "summary": "Four people were struck by lightning at an elementary school bus drop off in Arizona on Friday, according to officials.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "4 adults struck by lightning outside elementary school",
-     "url": "https://abcnews.com/US/4-adults-struck-lightning-arizona-elementary-school/story?id=137714868"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  How to keep pets safe on Halloween",
-   "summary": "Experts say some candy can contain ingredients that owners may not know are dangerous. Dr. Gary Richter, veterinarian and founder of \"Ultimate Pet Nutrition,\" shares more pet safety tips.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  How to keep pets safe on Halloween",
-     "url": "https://abcnews.com/video/137720799/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  What we know about Binance security breach",
-   "summary": "Dave Merkel, co-founder and CEO of cybersecurity company Expel, talks about the major breach.",
-   "category": "Tech",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  What we know about Binance security breach",
-     "url": "https://abcnews.com/video/137711374/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  Baby loons play with their moms in must-see video",
-   "summary": "You can see more about the baby loons and other animals on \"Inside the Enchanted Waterways\" on Disney+.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  Baby loons play with their moms in must-see video",
-     "url": "https://abcnews.com/video/137715680/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  State of the race with 4 days until midterm vote",
-   "summary": "Nearly 45 million people have already turned out to vote, and those early voting numbers have surpassed where the numbers were at this point in the 2022 midterm election.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  State of the race with 4 days until midterm vote",
-     "url": "https://abcnews.com/video/137700177/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  Cruise cancels global trip over rising fuel costs, strands 200 passengers in Cambodia",
-   "summary": "Some passengers sold their home to live on the cruise ship full-time.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  Cruise cancels global trip over rising fuel costs, strands 200 passengers in Cambodia",
-     "url": "https://abcnews.com/video/137690059/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  Remembering Patrick Stewart in his own words",
-   "summary": "As tributes pour in for Sir Patrick Stewart, World News Tonight remembers his interview with Diane Sawyer – sharing how theater became his safe space and his home.",
+   "title": "Despite concerns, the Trump administration still sends pregnant migrant minors to south Texas",
+   "summary": "Several children have had to leave the state to receive medical care, including abortions, that is unavailable in Texas.",
    "category": "World",
    "leans": [
     -1
@@ -1378,73 +1488,19 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "ABC News",
+     "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "WATCH:  Remembering Patrick Stewart in his own words",
-     "url": "https://abcnews.com/video/137689806/"
+     "title": "Despite concerns, the Trump administration still sends pregnant migrant minors to south Texas",
+     "url": "https://www.npr.org/2026/10/30/nx-s1-6022578/minors-pregnant-migrant-texas-trump"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "WATCH:  See National Geographic's best destinations for 2026",
-   "summary": "ABC News' Sam Champion highlights some of the must-visit places featured on National Geographic's annual list of the world's best travel destinations.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  See National Geographic's best destinations for 2026",
-     "url": "https://abcnews.com/video/137679246/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  NICU babies dressed up for Halloween",
-   "summary": "The tiniest patients of the Cleveland Clinic Children's Hospital wear their first-ever Halloween costumes.",
-   "category": "Health",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  NICU babies dressed up for Halloween",
-     "url": "https://abcnews.com/video/137668603/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Candidates make final midterm stops as early voting surges",
-   "summary": "Candidates around the country are making their final campaign stops before Election Day with just the weekend left to go. President Trump is in Florida and will then head to Iowa and Kansas -- a last-minute change after initially cancelling those rallies. Lisa Desjardins reports.",
+   "title": "ICE activity is surging ahead of midterms. So is voter turnout.",
+   "summary": "Across the country, there are reports of heightened ICE activity. Advocates worry about how close it is to midterms, but so far voter turnout is surging.",
    "category": "Politics",
    "leans": [
     -1
@@ -1459,20 +1515,20 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "PBS NewsHour",
+     "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Candidates make final midterm stops as early voting surges",
-     "url": "https://www.pbs.org/newshour/show/candidates-make-final-midterm-stops-as-early-voting-surges"
+     "title": "ICE activity is surging ahead of midterms. So is voter turnout.",
+     "url": "https://www.npr.org/2026/10/30/nx-s1-6023331/ice-activity-surge-midterms"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "$6 billion cryptocurrency heist puts investors on edge",
-   "summary": "Binance, the world's largest cryptocurrency exchange, says it's working to recover funds after the biggest crypto heist in history. The company halted withdrawals after hackers made off with $6 billion in assets. The cyber heist is raising questions about the security of crypto a",
-   "category": "Tech",
+   "title": "NPR special: 5 takeaways from a year of listening to swing voters",
+   "summary": "Every election, there is a crucial sliver of voters who help determine which candidates win. Here are five takeaways from a year of listening to voters who backed Biden in 2020 and then Trump in 2024.",
+   "category": "Politics",
    "leans": [
     -1
    ],
@@ -1486,19 +1542,19 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "PBS NewsHour",
+     "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "$6 billion cryptocurrency heist puts investors on edge",
-     "url": "https://www.pbs.org/newshour/show/6-billion-cryptocurrency-heist-puts-investors-on-edge"
+     "title": "NPR special: 5 takeaways from a year of listening to swing voters",
+     "url": "https://www.npr.org/2026/10/30/nx-s1-6008113/npr-special-swing-voter-focus-groups"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Inside a Ukrainian city hit by Russian drones during the Starlink disruption",
-   "summary": "In Ukraine, President Zelenskyy made the clearest indication yet that a disruption of Starlink technology contributed to civilian deaths. Elon Musk admitted last week to ordering the slowdown of the service. The intentional hindrance of Ukrainian defenses led to bipartisan anger ",
+   "title": "Why is the Cheesecake Factory at the center of the latest culture war?",
+   "summary": "A joke by former President Obama has gone viral and received backlash from the Trump administration as the issue of affordability looms large over next week's midterm elections.",
    "category": "World",
    "leans": [
     -1
@@ -1513,208 +1569,19 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "PBS NewsHour",
+     "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Inside a Ukrainian city hit by Russian drones during the Starlink disruption",
-     "url": "https://www.pbs.org/newshour/show/inside-a-ukrainian-city-hit-by-russian-drones-during-the-starlink-disruption"
+     "title": "Why is the Cheesecake Factory at the center of the latest culture war?",
+     "url": "https://www.npr.org/2026/10/30/nx-s1-6023106/cheesecake-factory-culture-war-affordability-trump-obama"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Trump should 'take stock' and 'own' election outcome, Sen. Tillis says",
-   "summary": "Republican Sen. Thom Tillis of North Carolina is sounding the alarm about the future of his own party. In his new book, \"How to Lose Friends and Antagonize Presidents,\" Tillis warns that GOP lawmakers are afraid to challenge President Trump, Congress is surrendering its power, an",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Trump should 'take stock' and 'own' election outcome, Sen. Tillis says",
-     "url": "https://www.pbs.org/newshour/show/trump-should-take-stock-and-own-election-outcome-sen-tillis-says"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "'A down payment on change': Rahm Emanuel on what Democrats should do after midterms",
-   "summary": "On Election Day, Democrats are looking to do what they did 20 years ago – turn widespread dissatisfaction with a Republican president into a sweeping congressional victory. Rahm Emanuel helped engineer that victory in 2006. Now, as his party looks to regain power, Geoff Bennett s",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "'A down payment on change': Rahm Emanuel on what Democrats should do after midterms",
-     "url": "https://www.pbs.org/newshour/show/a-down-payment-on-change-rahm-emanuel-on-what-democrats-should-do-after-midterms"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Capehart and Continetti on closing messages and midterm predictions",
-   "summary": "Jonathan Capehart of MS NOW and Wall Street Journal opinion columnist Matthew Continetti join Amna Nawaz to discuss the week in politics, including the last week of the midterm campaigns, predictions on which party will control Congress and the closing messages from President Tru",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Capehart and Continetti on closing messages and midterm predictions",
-     "url": "https://www.pbs.org/newshour/show/capehart-and-continetti-on-closing-messages-and-midterm-predictions"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "As early voting surges, Trump reshuffles his schedule to add back rallies in Iowa and Kansas",
-   "summary": "The Republican president will now visit Iowa and Kansas for back-to-back campaign rallies on Sunday. Both events had previously been canceled for a slew of telerallies.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "As early voting surges, Trump reshuffles his schedule to add back rallies in Iowa and Kansas",
-     "url": "https://www.pbs.org/newshour/politics/as-early-voting-surges-trump-reshuffles-his-schedule-to-add-back-rallies-in-iowa-and-kansas"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Canada is taking steps toward becoming European Union's first associate member",
-   "summary": "Prime Minister Mark Carney said he would attend a meeting of European leaders in June to conclude negotiations on the proposed relationship.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Canada is taking steps toward becoming European Union's first associate member",
-     "url": "https://www.pbs.org/newshour/world/canada-is-taking-steps-toward-becoming-european-unions-first-associate-member"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "'A wave can hide a lot of weaknesses': Dems question if they'll learn anything",
-   "summary": "A favorable political environment has allowed the Democratic Party to paper over persistent problems.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Politico",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "'A wave can hide a lot of weaknesses': Dems question if they'll learn anything",
-     "url": "https://www.politico.com/news/2026/10/30/democrats-message-voters-2026-01141508"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Josh Shapiro aims for a strong finish in a campaign with 2028 implications",
-   "summary": "The Pennsylvania governor has more at stake Tuesday than other 2028 contenders.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Politico",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Josh Shapiro aims for a strong finish in a campaign with 2028 implications",
-     "url": "https://www.politico.com/news/2026/10/30/josh-shapiro-campaign-2028-implications-01141906"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Shapiro takes the inside track",
-   "summary": "Shapiro takes the inside track lead image",
+   "title": "The two most interesting risks to Anthropic",
+   "summary": "Anthropic gave a 94-page list of risk factors in its S-1 this week. Two of them stood out.",
    "category": "General",
    "leans": [
     -1
@@ -1729,19 +1596,46 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "Politico",
+     "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Shapiro takes the inside track",
-     "url": "https://www.politico.com/video/2026/10/30/shapiro-takes-the-inside-track-2215851"
+     "title": "The two most interesting risks to Anthropic",
+     "url": "https://www.npr.org/sections/planet-money/2026/10/30/nx-s1-6022515/the-two-most-interesting-risks-to-anthropic"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "‘It could be quite a brutal evening’: GOP braces for some once-unthinkable losses",
-   "summary": "Some GOP incumbents are still begging for more money in the final stretch.",
+   "title": "Democrats seek to weaken the Republican lead in state legislatures",
+   "summary": "Republicans control 10 more state legislatures than Democrats. That's where most laws on taxes, abortion, crime and schools are made.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Democrats seek to weaken the Republican lead in state legislatures",
+     "url": "https://www.npr.org/2026/10/30/nx-s1-6022353/midterms-state-legislatures-pennsylvania"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Sinkholes, scarred land and scapegoats: the scourge of illegal gold mining in Johannesburg",
+   "summary": "There is no end in sight for the drivers of illegal mining, while police action appears ineffective Cora Bailey has been encountering illegal miners ever since she first started treating injured animals in the townships around Roodepoort, west of Johannesburg, in 1991. But as the",
    "category": "General",
    "leans": [
     -1
@@ -1756,19 +1650,19 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "Politico",
+     "name": "The Guardian",
      "lean": -1,
      "label": "Lean Left",
-     "title": "‘It could be quite a brutal evening’: GOP braces for some once-unthinkable losses",
-     "url": "https://www.politico.com/news/2026/10/30/republicans-brace-for-losses-2026-midterms-01141576"
+     "title": "Sinkholes, scarred land and scapegoats: the scourge of illegal gold mining in Johannesburg",
+     "url": "https://www.theguardian.com/business/2026/oct/30/sinkholes-scarred-land-scapegoats-illegal-gold-mining-johannesburg"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Why the midterms are a warning sign for both parties",
-   "summary": "Why the midterms are a warning sign for both parties lead image",
+   "title": "Sudanese diaspora and human rights groups denounce UAE nominee for UN top job",
+   "summary": "Critics cite Lana Nusseibeh’s denial of accusations the UAE is fuelling Sudan war by supporting paramilitary RSF Members of the Sudanese diaspora and international human rights monitors have denounced the candidature of an Emirati diplomat for the top job at the UN, citing her de",
    "category": "World",
    "leans": [
     -1
@@ -1783,19 +1677,127 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "Politico",
+     "name": "The Guardian",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Why the midterms are a warning sign for both parties",
-     "url": "https://www.politico.com/video/2026/10/29/why-the-midterms-are-a-warning-sign-for-both-parties-2215580"
+     "title": "Sudanese diaspora and human rights groups denounce UAE nominee for UN top job",
+     "url": "https://www.theguardian.com/world/2026/oct/30/sudanese-diaspora-human-rights-groups-denounce-uae-nominee-un-top-job"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Turning Point rests its reputation on Andy Biggs’ race. It’s not looking good.",
-   "summary": "The group founded by the late Charlie Kirk has thrown big money into the race to boost the last candidate Kirk endorsed before he was killed last year.",
+   "title": "Egypt fines prominent editor Lina Attalah and shuts independent news outlet Mada Masr",
+   "summary": "Warnings of escalating clampdown on press freedom come after Cairo court convicts Attalah of managing an unlicensed website Lina Attalah, a prominent Egyptian journalist and the editor-in-chief of the news outlet Mada Masr, has been released from detention by Egypt’s authorities ",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Egypt fines prominent editor Lina Attalah and shuts independent news outlet Mada Masr",
+     "url": "https://www.theguardian.com/world/2026/oct/28/egypt-lina-attalah-mada-masr-press-freedom-clampdown"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Africa’s ‘unprecedented’ Ebola outbreak could reach UK, says top health official",
+   "summary": "Jean Kaseya, of the Africa CDC, warns of the illness spreading like Covid unless more funding is secured to increase preparedness and possible treatment The “unprecedented” spread of the Ebola outbreak means it could reach the UK and other countries, according to one of Africa’s ",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Africa’s ‘unprecedented’ Ebola outbreak could reach UK, says top health official",
+     "url": "https://www.theguardian.com/global-development/2026/oct/28/africa-ebola-outbreak-could-reach-uk-says-top-health-official"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "UK sanctions Sudanese military leaders implicated in El Fasher ‘campaign of rape’",
+   "summary": "Commanders suspected of sexual violence during the largest and fastest slaughter of civilians in more than 30 years have been subjected to travel ban and asset freeze Senior Sudanese commanders implicated in a “campaign of rape” have been targeted by the UK on the first anniversa",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "UK sanctions Sudanese military leaders implicated in El Fasher ‘campaign of rape’",
+     "url": "https://www.theguardian.com/global-development/2026/oct/26/uk-sanctions-sudanese-military-leaders-implicated-in-el-fasher-campaign-of"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Canada and EU announce new alliance open to like-minded countries",
+   "summary": "Alliance for the Future, unveiled at Montreal summit and open to other countries, conceived for world ‘shaken by new storms’ Canada and Europe have announced a new alliance of like-minded nations to serve as both a “protective canopy under which our citizens can thrive” and a pow",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Canada and EU announce new alliance open to like-minded countries",
+     "url": "https://www.theguardian.com/world/2026/oct/30/canada-european-union-alliance"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "‘Amateur morons’: Flávio Bolsonaro’s short-lived ‘president-elect’ claim met with mockery",
+   "summary": "Brazilian media ridicule defeated candidate over ‘shameful’ absconsion to US and bizarre letter with wrong coat of arms Flávio Bolsonaro had hoped that by Sunday night people would be calling him the next president of Brazil. Instead, the far-right politician’s decision to flee t",
    "category": "General",
    "leans": [
     -1
@@ -1810,19 +1812,181 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "Politico",
+     "name": "The Guardian",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Turning Point rests its reputation on Andy Biggs’ race. It’s not looking good.",
-     "url": "https://www.politico.com/news/2026/10/29/charlie-kirk-arizona-andy-biggs-turning-point-struggles-01140510"
+     "title": "‘Amateur morons’: Flávio Bolsonaro’s short-lived ‘president-elect’ claim met with mockery",
+     "url": "https://www.theguardian.com/world/2026/oct/30/flavio-bolsonaros-president-elect-claim-mockery-brazil"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Moderates put the left on notice",
-   "summary": "Moderates put the left on notice lead image",
+   "title": "Severe rainfall and flood warnings issued for central Greece and western Turkey",
+   "summary": "Turkey has been hit by powerful thunderstorms and a fatal tornado this week with more heavy rain expected Heavy rain and strong winds will continue to affect parts of south-eastern Europe and Turkey over the next few days, as an area of low pressure in the region has allowed for ",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Severe rainfall and flood warnings issued for central Greece and western Turkey",
+     "url": "https://www.theguardian.com/environment/2026/oct/30/severe-rainfall-flood-warnings-greece-turkey"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Cuts like a knife: Canadian rocker Bryan Adams trolls Trump with new song",
+   "summary": "Musician wrote a ‘love letter’ to Canada with a new album – and some pointed commentary about the US president Lake Ontario, the vast body of water that straddles the US-Canada border, has gone by many names over the centuries: Lac Saint-Louis, Lacus Ontarius, Skaniadorio, Catara",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Cuts like a knife: Canadian rocker Bryan Adams trolls Trump with new song",
+     "url": "https://www.theguardian.com/world/2026/oct/29/bryan-adams-donald-trump-song"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Brazil’s victory for the planet and democracy: seven lessons from Lula’s win",
+   "summary": "The trouncing of the far right provides a playbook for social and environmental movements in other countries facing elections, including the US, Spain and France Thank you, Brazil, for demonstrating how the far right can be trounced while protection for the Amazon is strengthened",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Brazil’s victory for the planet and democracy: seven lessons from Lula’s win",
+     "url": "https://www.theguardian.com/world/2026/oct/29/brazil-victory-planet-democracy-lessons-lula-win"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Beijing Queer film festival cancelled after harassment from authorities",
+   "summary": "Forums for discussion of feminist and LGBTQ+ views face growing intolerance from Chinese state, say experts Beijing’s annual independent queer film festival has been cancelled after what is understood to have been a campaign of sustained harassment from authorities. Beijing Queer",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Beijing Queer film festival cancelled after harassment from authorities",
+     "url": "https://www.theguardian.com/world/2026/oct/30/beijing-queer-film-festival-cancelled-after-police-harassment"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Go Behind the Scenes of NBC News’ Decision Desk",
+   "summary": "TODAY’s Savannah Guthrie goes behind-the-scenes with the NBC News team tasked with calling election night’s pivotal races from coast-to-coast.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Go Behind the Scenes of NBC News’ Decision Desk",
+     "url": "https://www.today.com/video/go-behind-the-scenes-of-nbc-news-decision-desk-272458309564"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Video shows ICE puncture Oregon couple’s car tire with a knife",
+   "summary": "Video captured by an Oregon couple appears to show ICE officers chasing them and puncturing their car tire with a knife.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Video shows ICE puncture Oregon couple’s car tire with a knife",
+     "url": "https://www.nbcnews.com/video/video-shows-ice-puncture-oregon-couple-s-car-tire-with-a-knife-272572485762"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Italy’s PM deploys troops as nation faces widespread strikes and port blockades",
+   "summary": "ROME — Tens of thousands of people took to the streets of Rome, Milan and other Italian cities Friday as part of nationwide demonstrations against the cost of living and high military spending.",
    "category": "Economy",
    "leans": [
     -1
@@ -1837,19 +2001,100 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "Politico",
+     "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Moderates put the left on notice",
-     "url": "https://www.politico.com/video/2026/10/29/moderates-put-the-left-on-notice-2215191"
+     "title": "Italy’s PM deploys troops as nation faces widespread strikes and port blockades",
+     "url": "https://www.nbcnews.com/world/italy/italy-strikes-violent-protests-rome-colosseum-meloni-army-rome-milan-rcna606503"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "El-Sayed’s allies fear Trump’s anti-Muslim attacks are reaching undecided voters",
-   "summary": "After Trump called him a “jihadist,” Abdul El-Sayed brushed off the “desperate, bad faith attacks”",
+   "title": "Daylight Saving Time for 2026 Ends on Halloween Weekend",
+   "summary": "On Sunday morning, most Americans will “fall back” and switch their clocks back an hour to Standard time — and this year, the change is happening on Halloween weekend! NBC’s Joe Fryer reports for TODAY.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Daylight Saving Time for 2026 Ends on Halloween Weekend",
+     "url": "https://www.today.com/video/daylight-saving-time-for-2026-ends-on-halloween-weekend-272527429945"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Outcry prompts ‘Call of Duty’ to cut Seoul tragedy footage",
+   "summary": "American video game publisher Activision said Friday that it was removing controversial footage from its newly released “Call of Duty” game after an outcry in South Korea over the inclusion of real-life footage from a deadly 2022 Halloween crowd crush in Seoul.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Outcry prompts ‘Call of Duty’ to cut Seoul tragedy footage",
+     "url": "https://www.nbcnews.com/world/asia/outcry-prompts-call-duty-cut-seoul-tragedy-footage-rcna606496"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Many on ACA plans face a new crisis in 2027: Insurers fleeing the market",
+   "summary": "Eleven insurers have announced plans to leave some state ACA marketplaces in 2027.",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Many on ACA plans face a new crisis in 2027: Insurers fleeing the market",
+     "url": "https://www.nbcnews.com/health/health-care/many-aca-coverage-face-new-crisis-2027-insurers-fleeing-market-rcna606211"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Midterm Updates: Trump heading to Florida for rally as election nears",
+   "summary": "The November 2026 midterm elections are just four days away. Candidates in key races — and President Trump — are making their closing arguments to voters.",
    "category": "Politics",
    "leans": [
     -1
@@ -1864,19 +2109,73 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "Politico",
+     "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "El-Sayed’s allies fear Trump’s anti-Muslim attacks are reaching undecided voters",
-     "url": "https://www.politico.com/news/2026/10/29/trump-muslim-attacks-michigan-el-sayed-01140171"
+     "title": "Midterm Updates: Trump heading to Florida for rally as election nears",
+     "url": "https://www.cbsnews.com/live-updates/2026-midterm-elections-campaigns-weekend-before/"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Republicans rethink their attacks on AOC",
-   "summary": "Republicans rethink their attacks on AOC lead image",
+   "title": "Documents show funding scramble before around-the-world \"forever cruise\" was stranded",
+   "summary": "The company behind a \"forever cruise\" that stranded more than 200 passengers in Cambodia this week blames rising fuel costs for halting the trip. But documents obtained by CBS News reveal a longer history of financial trouble. Cristian Benavides reports.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Documents show funding scramble before around-the-world \"forever cruise\" was stranded",
+     "url": "https://www.cbsnews.com/video/documents-show-funding-scramble-before-around-the-world-forever-cruise-was-stranded/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Manhunt underway after Toronto family violently attacked in home invasion",
+   "summary": "Toronto police are searching for three masked suspects who allegedly forced their way into a family's home early Thursday, armed with guns and a hammer. All four family members inside at the time were wounded and remain hospitalized. Lilia Luciano has more.",
+   "category": "Health",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Manhunt underway after Toronto family violently attacked in home invasion",
+     "url": "https://www.cbsnews.com/video/manhunt-underway-after-toronto-family-violently-attacked-in-home-invasion/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Here's what the numbers show about key races 4 days ahead of midterms",
+   "summary": "Zach Donnini, head of data science at VoteHub, joins \"The Takeout\" to break down the latest numbers with midterms just a couple of days away.",
    "category": "Politics",
    "leans": [
     -1
@@ -1891,22 +2190,22 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "Politico",
+     "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Republicans rethink their attacks on AOC",
-     "url": "https://www.politico.com/video/2026/10/28/republicans-rethink-their-attacks-on-aoc-2214551"
+     "title": "Here's what the numbers show about key races 4 days ahead of midterms",
+     "url": "https://www.cbsnews.com/video/heres-what-the-numbers-show-about-key-races-4-days-ahead-of-midterms/"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Forget tainted candy: The scariest thing on Halloween is parked in your driveway",
-   "summary": "As is the custom, millions of children in the United States will be out in the streets this Halloween to trick-or-treat, decked out in costumes. Also as is custom, adults will fret about the mostly mythical dangers children may face. Once upon a time it was razor blades in apples",
-   "category": "Tech",
+   "title": "Gen Z turns to books and puzzles to reduce time spent doomscrolling",
+   "summary": "A new trend called \"brain stacking\" is encouraging Gen Zers to spend less time on their phones. Crystal Bell, digital culture editor at Mashable, joins \"The Daily Report\" to share more.",
+   "category": "General",
    "leans": [
-    -2
+    -1
    ],
    "span": 0,
    "n_sources": 1,
@@ -1918,38 +2217,11 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "Vox",
-     "lean": -2,
-     "label": "Left",
-     "title": "Forget tainted candy: The scariest thing on Halloween is parked in your driveway",
-     "url": "https://www.vox.com/future-perfect/2022/10/31/23427256/halloween-children-car-deaths-pedestrian-safety"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "The right is rehabbing…Richard Nixon?",
-   "summary": "President Donald Trump is approaching the halfway point of his second term, raising the question of what — and who — comes next. And, more existentially: Can the MAGA movement survive without him? To answer that question, some younger conservatives on the “New Right” are looking ",
-   "category": "Politics",
-   "leans": [
-    -2
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Vox",
-     "lean": -2,
-     "label": "Left",
-     "title": "The right is rehabbing…Richard Nixon?",
-     "url": "https://www.vox.com/podcasts/508138/richard-nixon-maga-rehab-deep-state-trump"
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Gen Z turns to books and puzzles to reduce time spent doomscrolling",
+     "url": "https://www.cbsnews.com/video/gen-z-turns-to-books-and-puzzles-to-reduce-time-spent-doomscrolling/"
     }
    ],
    "factchecks": [],
