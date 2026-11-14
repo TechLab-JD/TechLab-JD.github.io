@@ -1,7 +1,14 @@
 {
- "generated": "2026-11-14T04:07:31Z",
- "generated_human": "Nov 14, 2026 · 04:07 UTC",
+ "generated": "2026-11-14T05:02:01Z",
+ "generated_human": "Nov 14, 2026 · 05:02 UTC",
  "sources": [
+  {
+   "name": "NPR",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 10
+  },
   {
    "name": "The Guardian",
    "lean": -1,
@@ -199,36 +206,40 @@
    "count": 12
   }
  ],
- "n_articles": 328,
+ "n_articles": 338,
  "n_videos": 0,
  "trending": [
   {
    "term": "trump",
-   "n": 17
+   "n": 18
   },
   {
    "term": "stop",
-   "n": 16
+   "n": 17
   },
   {
    "term": "ground",
-   "n": 15
+   "n": 16
   },
   {
    "term": "nationwide",
    "n": 12
   },
   {
-   "term": "nvidia",
-   "n": 10
+   "term": "democrats",
+   "n": 12
   },
   {
-   "term": "democrats",
-   "n": 10
+   "term": "nvidia",
+   "n": 11
   },
   {
    "term": "outage",
    "n": 9
+  },
+  {
+   "term": "flight",
+   "n": 8
   },
   {
    "term": "lutnick",
@@ -239,7 +250,15 @@
    "n": 8
   },
   {
-   "term": "flight",
+   "term": "right",
+   "n": 8
+  },
+  {
+   "term": "state",
+   "n": 7
+  },
+  {
+   "term": "administration",
    "n": 7
   },
   {
@@ -251,19 +270,7 @@
    "n": 7
   },
   {
-   "term": "cruise",
-   "n": 7
-  },
-  {
    "term": "china",
-   "n": 7
-  },
-  {
-   "term": "senate",
-   "n": 7
-  },
-  {
-   "term": "have",
    "n": 7
   }
  ],
@@ -281,11 +288,11 @@
     2
    ],
    "span": 4,
-   "n_sources": 13,
+   "n_sources": 14,
    "balance": {
     "l": 6,
     "c": 3,
-    "r": 4
+    "r": 5
    },
    "blindspot": null,
    "sources": [
@@ -395,6 +402,13 @@
      "url": "https://www.dailywire.com/news/bessent-calls-out-lutnicks-department-as-nvidia-scandal-grows"
     },
     {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Musk Joins Trump's Asia Trip Amid Nvidia Fallout",
+     "url": "https://www.newsmax.com/newsfront/elon-musk-jensen-huang-nvidia/2026/11/13/id/1276283"
+    },
+    {
      "name": "Daily Caller",
      "lean": 2,
      "label": "Right",
@@ -412,9 +426,9 @@
    "videos": []
   },
   {
-   "title": "Duffy, Mullin call for $50B air travel 'overhaul' in fiery ground stop briefing",
-   "summary": "Trump administration officials reupped their calls for a multi-billion-dollar investment into updating the U.S.'s \"incredibly old\" air traffic control systems, calling out Congress for \"[kicking] the can down the road\" on improvements they argued could have prevented Friday night",
-   "category": "Politics",
+   "title": "AI company behind FAA's SMART tool denies link to ground stop, Duffy confirms",
+   "summary": "Air Space Intelligence (ASI), the company behind a recently deployed Federal Aviation Administration (FAA) AI tool, denied any link to the nationwide ground stop issued Friday afternoon. “The current ground stop is not based on or a result of the SMART system, any product of ASI ",
+   "category": "Economy",
    "leans": [
     -1,
     0,
@@ -422,14 +436,42 @@
     2
    ],
    "span": 3,
-   "n_sources": 16,
+   "n_sources": 17,
    "balance": {
-    "l": 5,
+    "l": 6,
     "c": 6,
     "r": 5
    },
    "blindspot": null,
    "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "DHS head Markwayne Mullin says there is not a threat to the U.S. amid FAA ground stop",
+     "url": "https://www.npr.org/2026/11/13/nx-s1-6040418/dhs-head-markwayne-mullin-says-there-is-not-a-threat-to-the-u-s-amid-faa-ground-stop"
+    },
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Stuck on the tarmac without information: Travelers share their ground stop experiences",
+     "url": "https://www.npr.org/2026/11/13/nx-s1-6040397/stuck-on-the-tarmac-without-information-travelers-share-their-ground-stop-experiences"
+    },
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "What we know about the FAA nationwide ground stop",
+     "url": "https://www.npr.org/2026/11/13/nx-s1-6040388/what-we-know-about-the-faa-nationwide-ground-stop"
+    },
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Old tech blamed for the ground stop that caused flight chaos: 'It got overloaded'",
+     "url": "https://www.npr.org/2026/11/13/nx-s1-6040403/faa-nationwide-groundstop-airports"
+    },
     {
      "name": "NBC News",
      "lean": -1,
@@ -441,7 +483,7 @@
      "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "FAA lifts nationwide ground stop that halted thousands of flights",
+     "title": "FAA lifts nationwide ground stop that disrupted thousands of flights",
      "url": "https://www.cbsnews.com/news/faa-issues-nationwide-ground-stop/"
     },
     {
@@ -469,6 +511,13 @@
      "name": "The Atlantic",
      "lean": -1,
      "label": "Lean Left",
+     "title": "How to Land 4,000 Planes During a Ground Stop",
+     "url": "https://www.theatlantic.com/technology/2026/11/flight-stop-safety/689447/?utm_source=feed"
+    },
+    {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
      "title": "Scenes From the Nationwide Ground Stop",
      "url": "https://www.theatlantic.com/photography/2026/11/photography-faa-nationwide-ground-stop/689445/?utm_source=feed"
     },
@@ -485,6 +534,13 @@
      "label": "Lean Left",
      "title": "Airport Chaos Began Long Before the Ground Stop",
      "url": "https://www.theatlantic.com/ideas/2026/11/faa-grounding-flights-airlines/689441/?utm_source=feed"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "AI company behind FAA's SMART tool denies link to ground stop, Duffy confirms",
+     "url": "https://thehill.com/policy/transportation/6220416-faa-smart-ai-ground-stop-denial/"
     },
     {
      "name": "The Hill",
@@ -536,20 +592,6 @@
      "url": "https://www.aljazeera.com/news/2026/11/14/faa-ground-stop-lifted-why-were-us-flights-grounded-and-whats-next?traffic_source=rss"
     },
     {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "LIVE: FAA reopens airspace after ground stop blamed on ‘outdated equipment’",
-     "url": "https://www.aljazeera.com/news/liveblog/2026/11/13/groundling-live?traffic_source=rss"
-    },
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "US flights resume after FAA lifts hours-long nationwide ground stop",
-     "url": "https://www.aljazeera.com/news/2026/11/13/us-grounds-all-flights-after-communication-issue?traffic_source=rss"
-    },
-    {
      "name": "The Christian Science Monitor",
      "lean": 0,
      "label": "Center",
@@ -562,6 +604,13 @@
      "label": "Center",
      "title": "Multiple College Football Start Times Could Move Amidst FAA Pausing Flights",
      "url": "https://www.newsweek.com/sports/ncaa/multiple-college-football-start-times-could-move-faa-pausing-flights-12714720"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "FAA’s modernization push faces renewed scrutiny after nationwide outage: What to know",
+     "url": "https://www.washingtonexaminer.com/policy/infrastructure/4803634/faa-modernization-renewed-scrutiny-nationwide-outage-what-to-know/"
     },
     {
      "name": "Washington Examiner",
@@ -632,10 +681,10 @@
     2
    ],
    "span": 3,
-   "n_sources": 8,
+   "n_sources": 7,
    "balance": {
     "l": 3,
-    "c": 4,
+    "c": 3,
     "r": 1
    },
    "blindspot": null,
@@ -681,13 +730,6 @@
      "label": "Center",
      "title": "Mississippi River cruise crash has no fatalities, critical injuries",
      "url": "https://www.axios.com/2026/11/13/new-orleans-cruise-ship-tanker-strike"
-    },
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "32 passengers taken to hospital after tanker hits river cruise boat in US",
-     "url": "https://www.aljazeera.com/news/2026/11/13/rescue-efforts-under-way-after-tanker-strikes-river-cruise-boat-in-us?traffic_source=rss"
     },
     {
      "name": "Daily Caller",
@@ -772,85 +814,6 @@
    "videos": []
   },
   {
-   "title": "Why the left and right are both cheering Jensen Huang’s downfall",
-   "summary": "Former Nvidia CEO Jensen Huang’s sudden downfall is in a sense shocking, considering his wealth, global fame, and role leading what was until recently the world’s most valuable company. But Huang’s immense influence in Washington — and particularly in President Donald Trump’s Was",
-   "category": "Politics",
-   "leans": [
-    -2,
-    -1,
-    0,
-    1
-   ],
-   "span": 3,
-   "n_sources": 5,
-   "balance": {
-    "l": 2,
-    "c": 2,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Vox",
-     "lean": -2,
-     "label": "Left",
-     "title": "Why the left and right are both cheering Jensen Huang’s downfall",
-     "url": "https://www.vox.com/politics/510820/jensen-huang-nvidia-critics-hawks-populists-ai-safety"
-    },
-    {
-     "name": "Vox",
-     "lean": -2,
-     "label": "Left",
-     "title": "Jensen Huang is out. What now?",
-     "url": "https://www.vox.com/podcasts/510560/jensen-huang-nvidia-ceo-china-spying-ai-national-security"
-    },
-    {
-     "name": "Politico",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Jensen Huang’s Washington fallout",
-     "url": "https://www.politico.com/video/2026/11/13/jensen-huangs-washington-fallout-2229409"
-    },
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "Nvidia is done with Jensen Huang. The fallout in Washington is just beginning",
-     "url": "https://www.cnbc.com/2026/11/13/nvidia-jensen-huang-washington-congress.html"
-    },
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "After Jensen Huang’s exit, what top financial advisors are doing with Nvidia: Exclusive CNBC poll",
-     "url": "https://www.cnbc.com/2026/11/13/nvidia-stock-advisors-jensen-huang-exit-exclusive-poll.html"
-    },
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Jensen Huang Built the AI Meme Machine. Now It's Turning on Him",
-     "url": "https://www.newsweek.com/jensen-huang-nvidia-resignation-ai-memes-deepfakes-12714595"
-    },
-    {
-     "name": "National Review",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Trump’s People May Have to Answer for Jensen Huang",
-     "url": "https://www.nationalreview.com/article/trump-s-people-may-have-to-answer-for-jensen-huang"
-    },
-    {
-     "name": "National Review",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "The Week: Jensen Huang, Honeytrapped",
-     "url": "https://www.nationalreview.com/article/the-week-jensen-huang-honeytrapped"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Trump administration delays Medicaid work requirement enforcement",
    "summary": "The Trump administration is delaying the implementation of controversial Medicaid work requirements, giving states an extra six months to prepare. The work requirements, which Republicans established in the One Big Beautiful Bill Act last year, will still technically go into effe",
    "category": "Politics",
@@ -895,6 +858,78 @@
      "label": "Right",
      "title": "Talarico: Democrats Must Work With Trump",
      "url": "https://www.newsmax.com/newsfront/james-talarico-senate-texas/2026/11/13/id/1276284"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Why the left and right are both cheering Jensen Huang’s downfall",
+   "summary": "Former Nvidia CEO Jensen Huang’s sudden downfall is in a sense shocking, considering his wealth, global fame, and role leading what was until recently the world’s most valuable company. But Huang’s immense influence in Washington — and particularly in President Donald Trump’s Was",
+   "category": "Politics",
+   "leans": [
+    -2,
+    -1,
+    0,
+    1
+   ],
+   "span": 3,
+   "n_sources": 4,
+   "balance": {
+    "l": 2,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Why the left and right are both cheering Jensen Huang’s downfall",
+     "url": "https://www.vox.com/politics/510820/jensen-huang-nvidia-critics-hawks-populists-ai-safety"
+    },
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Jensen Huang is out. What now?",
+     "url": "https://www.vox.com/podcasts/510560/jensen-huang-nvidia-ceo-china-spying-ai-national-security"
+    },
+    {
+     "name": "Politico",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Jensen Huang’s Washington fallout",
+     "url": "https://www.politico.com/video/2026/11/13/jensen-huangs-washington-fallout-2229409"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Nvidia is done with Jensen Huang. The fallout in Washington is just beginning",
+     "url": "https://www.cnbc.com/2026/11/13/nvidia-jensen-huang-washington-congress.html"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "After Jensen Huang’s exit, what top financial advisors are doing with Nvidia: Exclusive CNBC poll",
+     "url": "https://www.cnbc.com/2026/11/13/nvidia-stock-advisors-jensen-huang-exit-exclusive-poll.html"
+    },
+    {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump’s People May Have to Answer for Jensen Huang",
+     "url": "https://www.nationalreview.com/article/trump-s-people-may-have-to-answer-for-jensen-huang"
+    },
+    {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "The Week: Jensen Huang, Honeytrapped",
+     "url": "https://www.nationalreview.com/article/the-week-jensen-huang-honeytrapped"
     }
    ],
    "factchecks": [],
@@ -1015,10 +1050,10 @@
     0
    ],
    "span": 2,
-   "n_sources": 5,
+   "n_sources": 4,
    "balance": {
     "l": 3,
-    "c": 2,
+    "c": 1,
     "r": 0
    },
    "blindspot": null,
@@ -1050,13 +1085,6 @@
      "label": "Center",
      "title": "Democratic Senate leader Schumer set to face leadership challenge",
      "url": "https://www.bbc.co.uk/news/articles/cmy4930jq749o?at_medium=RSS&at_campaign=rss"
-    },
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "DSA Backs Challenge to Schumer as Senate Democratic Leader",
-     "url": "https://www.newsweek.com/chuck-schumer-senate-democratic-leader-challenge-dsa-12714492"
     }
    ],
    "factchecks": [
@@ -1111,41 +1139,6 @@
      "label": "Right",
      "title": "Report: US Loses Measles-Free Status After Continued Spread",
      "url": "https://www.newsmax.com/newsfront/who-pan-american-health-organization-measles/2026/11/13/id/1276281"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Brooklyn building collapse raises questions about city oversight and safety precautions",
-   "summary": "Thousands of building construction projects are underway in New York on any given day. The deadly collapse of a building next to one of those work sites has raised questions about the city's oversight and the safety precautions taken by contractors.",
-   "category": "General",
-   "leans": [
-    -1,
-    1
-   ],
-   "span": 2,
-   "n_sources": 2,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Father whose wife and sons were inside Brooklyn building during collapse shares his story",
-     "url": "https://www.cbsnews.com/video/father-whose-wife-and-sons-were-inside-brooklyn-building-during-collapse-shares-his-story/"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Brooklyn building collapse raises questions about city oversight and safety precautions",
-     "url": "https://www.washingtontimes.com/news/2026/nov/13/brooklyn-building-collapse-raising-questions-city-oversight-safety/"
     }
    ],
    "factchecks": [],
@@ -1500,6 +1493,201 @@
      "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
     }
    ],
+   "videos": []
+  },
+  {
+   "title": "Marco Rubio’s daughter steals the show at his first post-midterm speech: ‘I don’t know where she got this!’",
+   "summary": "“I don't know where she got this,” Rubio said of his daughter's public speaking skills. “There’s no stage fright. She's not afraid to speak. I don't really like public speaking that much, but she, on the other hand – that's fantastic.”",
+   "category": "General",
+   "leans": [
+    1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Marco Rubio’s daughter steals the show at his first post-midterm speech: ‘I don’t know where she got this!’",
+     "url": "https://nypost.com/2026/11/13/us-news/marco-rubios-daughter-steals-the-show-at-his-first-post-midterm-speech-i-dont-know-where-she-got-this/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "FactChecking Trump’s Post-Election ‘60 Minutes’ Interview",
+     "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "GOP state officials push to revive Trump's mail voting restrictions for 2028 election",
+   "summary": "Some Republican state officials are reviving a bid for mail-in voting restrictions for the 2028 election by appealing a court order blocking the Postal Service from carrying out a revised ballot rule.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "GOP state officials push to revive Trump's mail voting restrictions for 2028 election",
+     "url": "https://www.npr.org/2026/11/13/nx-s1-6040409/trump-mail-in-voting"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "With his challenge to Schumer, Van Hollen forces a debate over Democrats' mandate",
+   "summary": "Democrats say they have a mandate to deliver change, but as the party gets ready to retake the majority in both the House and Senate, there are divides over who should lead it.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "With his challenge to Schumer, Van Hollen forces a debate over Democrats' mandate",
+     "url": "https://www.npr.org/2026/11/13/nx-s1-6040044/dem-senate-leader-fight"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "The government says it will close a beloved D.C. park Sunday. Will a judge step in?",
+   "summary": "Federal judge Ana Reyes grilled the government on Friday about its plans for East Potomac Park, and indicated she could order it to remain open despite President Trump's renovation wishes.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "The government says it will close a beloved D.C. park Sunday. Will a judge step in?",
+     "url": "https://www.npr.org/2026/11/13/nx-s1-6039273/east-po-hearing-nov-13"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "What's Trump's strategy now with Iran? To keep things as they are",
+   "summary": "President Trump says the \"status quo\" is what Gulf Arab allies want as the Iran war hits a stalemate and the U.S. midterms force a pivot from threats of attacks to economic pressure.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "What's Trump's strategy now with Iran? To keep things as they are",
+     "url": "https://www.npr.org/2026/11/13/g-s1-153578/whats-trumps-strategy-now-with-iran-to-keep-things-as-they-are"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "The Trump administration's voter roll crusade could continue",
+   "summary": "Election officials are preparing for the Trump administration's pressure tactics over potential noncitizens on state voter rolls to continue, though recent court rulings pose new obstacles.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "The Trump administration's voter roll crusade could continue",
+     "url": "https://www.npr.org/2026/11/13/nx-s1-6034016/voter-fraud-search-trump-california"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Does Europe regret its bet on U.S. defense?",
+   "summary": "Europe bet big on American defense technology and they're now paying the price. Years-long backlogs are underway due to production delays and the U.S. own military needs.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Does Europe regret its bet on U.S. defense?",
+     "url": "https://www.npr.org/sections/planet-money/2026/11/13/nx-s1-6039196/does-europe-regret-its-bet-on-u-s-defense"
+    }
+   ],
+   "factchecks": [],
    "videos": []
   },
   {
@@ -1908,6 +2096,33 @@
    "videos": []
   },
   {
+   "title": "U.N. watchdog agency pushes for access to key Iran nuclear site",
+   "summary": "As Trump signals he may let the Iran war fester, the U.N. nuclear agency is \"increasingly concerned\" about access to a key uranium facility, according to a leaked report.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "U.N. watchdog agency pushes for access to key Iran nuclear site",
+     "url": "https://www.cbsnews.com/live-updates/us-iran-war-trump-nuclear-material-no-deal/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "How \"Banana Man\" took a small Indiana town by storm",
    "summary": "Banana Man began popping up around Linton, Indiana, a few months ago. Videos that also began circulating on social media appeared to show a boy biking all over town in a banana suit.",
    "category": "Tech",
@@ -2091,195 +2306,6 @@
      "label": "Lean Left",
      "title": "WATCH:  Heartwarming update on Punch the Monkey",
      "url": "https://abcnews.com/video/138104775/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  School's ultimate class trip heads to Antarctica",
-   "summary": "ABC News' Danny New reports on a group of middle schoolers in Maryland who are about to get the snow day of their lives in the form of a class trip to Antarctica.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  School's ultimate class trip heads to Antarctica",
-     "url": "https://abcnews.com/video/138103628/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  41-year-old firefighter’s life saved by heart transplant",
-   "summary": "Nico Ratto, a dad of two from New Jersey, spent 45 days hospitalized before receiving a lifesaving heart transplant.",
-   "category": "Health",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  41-year-old firefighter’s life saved by heart transplant",
-     "url": "https://abcnews.com/video/138107216/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  Empire State Building climbers appear in court",
-   "summary": "The daredevil couple who were arrested after climbing to the top of the Empire State Building were in court on Thursday to face criminal charges and possible deportation.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  Empire State Building climbers appear in court",
-     "url": "https://abcnews.com/video/138104770/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  Tanker truck driver narrowly avoids train crash in Fort Worth",
-   "summary": "A tanker truck driver managed to escape from his vehicle just seconds before a train slammed into his truck.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  Tanker truck driver narrowly avoids train crash in Fort Worth",
-     "url": "https://abcnews.com/video/138096388/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  United Airlines banning AI bots from booking flights",
-   "summary": "The airline says customers who give their personal and credit card information to AI businesses run the risk of having their sensitive data exposed.",
-   "category": "Tech",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  United Airlines banning AI bots from booking flights",
-     "url": "https://abcnews.com/video/138074238/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  Mom becomes first woman to run 100 miles in Antarctica",
-   "summary": "ABC News' Danny New talks to a Canadian ultramarathoner becoming the first woman ever to run 100 continuous miles in Antarctica.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  Mom becomes first woman to run 100 miles in Antarctica",
-     "url": "https://abcnews.com/video/138072943/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  ABC's Bob Woodruff's foundation honors  wounded soldiers and their families",
-   "summary": "David Muir speaks with \"The Resilient\" – a band made up of wounded soldiers – backstage at Bob Woodruff's annual Stand Up for Heroes, raising millions for veterans and military families.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  ABC's Bob Woodruff's foundation honors  wounded soldiers and their families",
-     "url": "https://abcnews.com/video/138062712/"
     }
    ],
    "factchecks": [],
