@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-14T01:07:32Z",
- "generated_human": "Nov 14, 2026 · 01:07 UTC",
+ "generated": "2026-11-14T02:01:28Z",
+ "generated_human": "Nov 14, 2026 · 02:01 UTC",
  "sources": [
   {
    "name": "NPR",
@@ -122,6 +122,13 @@
    "count": 12
   },
   {
+   "name": "The Christian Science Monitor",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 10
+  },
+  {
    "name": "Newsweek",
    "lean": 0,
    "label": "Center",
@@ -143,7 +150,21 @@
    "count": 12
   },
   {
+   "name": "Washington Examiner",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
    "name": "National Review",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Washington Times",
    "lean": 1,
    "label": "Lean Right",
    "fact": "Mostly",
@@ -185,35 +206,43 @@
    "count": 12
   }
  ],
- "n_articles": 304,
- "n_videos": 10,
+ "n_articles": 335,
+ "n_videos": 0,
  "trending": [
   {
-   "term": "trump",
-   "n": 16
+   "term": "stop",
+   "n": 18
   },
   {
-   "term": "stop",
-   "n": 12
+   "term": "trump",
+   "n": 18
   },
   {
    "term": "ground",
-   "n": 11
-  },
-  {
-   "term": "democrats",
-   "n": 11
+   "n": 17
   },
   {
    "term": "nationwide",
-   "n": 10
+   "n": 14
+  },
+  {
+   "term": "outage",
+   "n": 11
   },
   {
    "term": "nvidia",
    "n": 10
   },
   {
-   "term": "outage",
+   "term": "democrats",
+   "n": 9
+  },
+  {
+   "term": "tanker",
+   "n": 9
+  },
+  {
+   "term": "microsoft",
    "n": 9
   },
   {
@@ -221,11 +250,11 @@
    "n": 8
   },
   {
-   "term": "tanker",
+   "term": "orleans",
    "n": 8
   },
   {
-   "term": "microsoft",
+   "term": "spacex",
    "n": 8
   },
   {
@@ -233,108 +262,19 @@
    "n": 7
   },
   {
+   "term": "democratic",
+   "n": 7
+  },
+  {
+   "term": "leader",
+   "n": 7
+  },
+  {
    "term": "flight",
    "n": 7
-  },
-  {
-   "term": "scandal",
-   "n": 7
-  },
-  {
-   "term": "orleans",
-   "n": 7
-  },
-  {
-   "term": "spacex",
-   "n": 7
-  },
-  {
-   "term": "cruise",
-   "n": 7
   }
  ],
- "videos": [
-  {
-   "videoId": "m263TSl9Fys",
-   "title": "Microsoft services begin recovering after global outage | AJ Shorts",
-   "thumb": "https://i.ytimg.com/vi/m263TSl9Fys/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "oP7OkoeQZVY",
-   "title": "FAA grounds all fights across the US over ‘telecommunication outage’ | AJ Shorts",
-   "thumb": "https://i.ytimg.com/vi/oP7OkoeQZVY/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "qDQuw_SAb-s",
-   "title": "US ground stop: Mullin says it is a telecoms outage, not another 9/11, as FAA grounds flights",
-   "thumb": "https://i.ytimg.com/vi/qDQuw_SAb-s/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "ic3fKpBz2rI",
-   "title": "BREAKING: US FAA suspends all flight departures nationwide until further notice",
-   "thumb": "https://i.ytimg.com/vi/ic3fKpBz2rI/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "8TE1JlqqDe8",
-   "title": "IRGC says tanker caught fire after hitting mines in Strait of Hormuz",
-   "thumb": "https://i.ytimg.com/vi/8TE1JlqqDe8/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "3exoFbEV3_c",
-   "title": "Pope Leo cheered on return to Peru city where he served as bishop",
-   "thumb": "https://i.ytimg.com/vi/3exoFbEV3_c/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "5dYBKPkKp7M",
-   "title": "Qatar and Turkiye send message of deterrence with new defence pact | AJ #shorts",
-   "thumb": "https://i.ytimg.com/vi/5dYBKPkKp7M/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "uzoJWIhyfx4",
-   "title": "Central African Republic protests over rising fuel prices",
-   "thumb": "https://i.ytimg.com/vi/uzoJWIhyfx4/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "Kul-Ek5at88",
-   "title": "Australia captain Cummins denies involvement in ‘Sandpapergate’",
-   "thumb": "https://i.ytimg.com/vi/Kul-Ek5at88/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "jkPIEfREQ0k",
-   "title": "The Midterm Results: The political and institutional consequences of the elections | This Is America",
-   "thumb": "https://i.ytimg.com/vi/jkPIEfREQ0k/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  }
- ],
+ "videos": [],
  "stories": [
   {
    "title": "Nvidia scandal: US treasury chief blames Lutnick’s commerce department over alleged lack of action",
@@ -344,14 +284,15 @@
     -2,
     -1,
     0,
+    1,
     2
    ],
    "span": 4,
-   "n_sources": 8,
+   "n_sources": 13,
    "balance": {
-    "l": 4,
+    "l": 6,
     "c": 3,
-    "r": 1
+    "r": 4
    },
    "blindspot": null,
    "sources": [
@@ -377,6 +318,20 @@
      "url": "https://www.nbcnews.com/video/commerce-secretary-lutnick-agrees-to-testify-about-nvidia-273452613709"
     },
     {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Bessent upset Lutnick didn't ban Nvidia chip exports to China-linked firm",
+     "url": "https://www.cbsnews.com/video/bessent-upset-lutnick-didnt-ban-nvidia-chip-exports-to-china-linked-firm/"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump to meet with Putin and Xi in China next week, US officials say",
+     "url": "https://abcnews.com/Politics/trump-meet-putin-xi-china-week-us-officials/story?id=138128914"
+    },
+    {
      "name": "PBS NewsHour",
      "lean": -1,
      "label": "Lean Left",
@@ -394,8 +349,15 @@
      "name": "The Hill",
      "lean": 0,
      "label": "Center",
-     "title": "Lutnick in hot seat over Nvidia-Megaspeed scandal",
-     "url": "https://thehill.com/newsletters/technology/6219929-lutnick-in-hot-seat-over-nvidia-megaspeed-scandal/"
+     "title": "Trump, Putin and Xi to meet in first trilateral meeting between leaders",
+     "url": "https://thehill.com/homenews/administration/6220278-trump-putin-xi-trilateral-meeting/"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump doesn’t plan to raise Nvidia, spy issue during China trip: U.S. officials",
+     "url": "https://www.cnbc.com/2026/11/13/trump-nvidia-huang-china.html"
     },
     {
      "name": "CNBC",
@@ -405,14 +367,41 @@
      "url": "https://www.cnbc.com/2026/11/13/howard-lutnick-nvidia-jensen-huang-china-cantor-fitzgerald.html"
     },
     {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Did Payments by Huang’s Nvidia Influence Trump’s Policy on Chip Exports to China?",
+     "url": "https://www.nationalreview.com/article/did-payments-by-huang-s-nvidia-influence-trump-s-policy-on-chip-exports-to-china"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump to attend trilateral meeting with Xi, Putin in China, White House confirms",
+     "url": "https://www.washingtontimes.com/news/2026/nov/13/trump-attend-trilateral-meeting-xi-putin-china-white-house-confirms/"
+    },
+    {
      "name": "The Daily Wire",
      "lean": 2,
      "label": "Right",
      "title": "Bessent Calls Out Lutnick’s Department As Nvidia Scandal Grows",
      "url": "https://www.dailywire.com/news/bessent-calls-out-lutnicks-department-as-nvidia-scandal-grows"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Bessent Throws Lutnick Under The Bus On Trump’s Chip Export Fiasco",
+     "url": "https://dailycaller.com/2026/11/13/treasury-secretary-scott-bessent-commerce-howard-lutnick-china-nvidia-ceo-jensen-huang-megaspeed"
     }
    ],
-   "factchecks": [],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "FactChecking Trump’s Post-Election ‘60 Minutes’ Interview",
+     "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
+    }
+   ],
    "videos": []
   },
   {
@@ -492,23 +481,31 @@
    "videos": []
   },
   {
-   "title": "Multiple college football teams in flight limbo due to FAA ground stop",
-   "summary": "The nationwide ground stop issued by the Federal Aviation Administration Friday afternoon has impacted travel plans for college football teams scheduled to fly to their destinations. Among teams impacted are four schools in the NCAA's Big 12 Conference, Baylor University, Kansas ",
-   "category": "Economy",
+   "title": "Watch: Duffy, Mullin hold press briefing on FAA nationwide ground stop",
+   "summary": "Homeland Security Secretary Markwayne Mullin and Transportation Secretary Sean Duffy will hold a press briefing at the White House on Friday night to provide an update on the Federal Aviation Administration's (FAA) nationwide ground stop. “The @FAANews [FAA] issued a nationwide g",
+   "category": "Politics",
    "leans": [
     -1,
     0,
+    1,
     2
    ],
    "span": 3,
-   "n_sources": 11,
+   "n_sources": 18,
    "balance": {
-    "l": 5,
-    "c": 3,
-    "r": 3
+    "l": 6,
+    "c": 5,
+    "r": 7
    },
    "blindspot": null,
    "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "DHS head Markwayne Mullin says there is not a threat to the U.S. amid FAA ground stop",
+     "url": "https://www.npr.org/2026/11/13/nx-s1-6040418/dhs-head-markwayne-mullin-says-there-is-not-a-threat-to-the-u-s-amid-faa-ground-stop"
+    },
     {
      "name": "NPR",
      "lean": -1,
@@ -520,7 +517,7 @@
      "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "FAA issues nationwide ground stop for all U.S. airports",
+     "title": "FAA lifts the nationwide ground stop for all U.S. airports",
      "url": "https://www.npr.org/2026/11/13/nx-s1-6040403/faa-nationwide-groundstop-airports"
     },
     {
@@ -541,50 +538,15 @@
      "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "FAA issues nationwide ground stop, stranding thousands",
+     "title": "FAA lifts nationwide ground stop",
      "url": "https://www.cbsnews.com/news/faa-issues-nationwide-ground-stop/"
     },
     {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Stranded passenger in Las Vegas on nationwide ground stop: \"Nobody has answers\"",
-     "url": "https://www.cbsnews.com/video/stranded-passenger-in-las-vegas-on-nationwide-ground-stop/"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Travelers facing uncertainty amid nationwide ground stop",
-     "url": "https://www.cbsnews.com/video/travelers-facing-uncertainty-amid-nationwide-ground-stop/"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Some international flights allowed to depart U.S. amid FAA ground stop",
-     "url": "https://www.cbsnews.com/video/some-international-flights-allowed-to-depart-us-amid-faa-ground-stop/"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Commercial pilot explains what crews are going through amid nationwide ground stop",
-     "url": "https://www.cbsnews.com/video/commercial-airline-pilot-explains-what-crews-are-going-through-amid-faa-ground-stop/"
-    },
-    {
      "name": "ABC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "FAA ground stop live updates: 5,000 flights canceled, no indication a 'nefarious' act",
+     "title": "FAA ground stop live updates: Duffy blames 'overloaded' routers after stop lifted",
      "url": "https://abcnews.com/US/live-updates/faa-ground-stop-live-updates-hundreds-flights-canceled/?id=138125140"
-    },
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "FAA issues rare nationwide ground stop; no indication of 'nefarious attack'",
-     "url": "https://abcnews.com/US/nationwide-ground-stop-ordered-airports-faa/story?id=138121848"
     },
     {
      "name": "PBS NewsHour",
@@ -594,6 +556,20 @@
      "url": "https://www.pbs.org/newshour/show/faa-issues-rare-nationwide-ground-stop-due-to-extraordinary-circumstances"
     },
     {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Airport Chaos Began Long Before the Ground Stop",
+     "url": "https://www.theatlantic.com/ideas/2026/11/faa-grounding-flights-airlines/689441/?utm_source=feed"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Watch: Duffy, Mullin hold press briefing on FAA nationwide ground stop",
+     "url": "https://thehill.com/video-clips/6220247-watch-duffy-mullin-hold-press-briefing-on-faa-nationwide-ground-stop/"
+    },
+    {
      "name": "The Hill",
      "lean": 0,
      "label": "Center",
@@ -601,11 +577,18 @@
      "url": "https://thehill.com/policy/sports-gaming/6220145-faa-ground-stop-impacts-college-football/"
     },
     {
-     "name": "The Hill",
+     "name": "CNBC",
      "lean": 0,
      "label": "Center",
-     "title": "Mullin: No indication of 'nefarious attack' on FAA as DHS investigates root cause of telecom outage",
-     "url": "https://thehill.com/policy/transportation/6219936-mullin-faa-telecommunication-outage-ground-stop/"
+     "title": "FAA lifts ground stop after four hours, but flight cancellations will stretch into the weekend",
+     "url": "https://www.cnbc.com/2026/11/13/faa-ground-stop.html"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "FAA ends hours-long nationwide ground stop",
+     "url": "https://www.axios.com/2026/11/13/faa-nationwide-ground-stop"
     },
     {
      "name": "Al Jazeera",
@@ -622,10 +605,45 @@
      "url": "https://www.newsweek.com/sports/ncaa/multiple-college-football-start-times-could-move-faa-pausing-flights-12714720"
     },
     {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "JetBlue cancels most remaining flights due to FAA ground stop — and predicts chaos won’t end soon",
+     "url": "https://nypost.com/2026/11/13/us-news/jetblue-cancels-most-remaining-flights-due-to-faa-ground-stop-predicts-chaos-wont-end-soon/"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "FAA lifts nationwide ground stop following historic halt on all air travel",
+     "url": "https://www.washingtonexaminer.com/policy/national-security/4803692/faa-lifts-nationwide-ground-stop-halt-air-travel/"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "WATCH LIVE: Sean Duffy and Markwayne Mullin brief media on FAA ground stop",
+     "url": "https://www.washingtonexaminer.com/news/4803659/watch-live-sean-duffy-markwayne-mullin-faa-ground-stop/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "FAA expanded AI air traffic tool to all centers days before nationwide ground stop",
+     "url": "https://www.washingtontimes.com/news/2026/nov/13/faa-expanded-ai-air-traffic-tool-centers-days-nationwide-ground-stop/"
+    },
+    {
      "name": "Fox News",
      "lean": 2,
      "label": "Right",
-     "title": "FAA ground stop leaves College Football teams stranded on eve of crucial Saturday showdowns",
+     "title": "NBA and NHL teams battle delays due to nationwide FAA ground stop disrupts weekend sports travel",
+     "url": "https://www.foxnews.com/outkick-sports/nba-nhl-teams-scramble-nationwide-faa-ground-stop-disrupts-weekend-sports-travel"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "FAA ground stop lifted on Friday night, but some college football teams still scrambling to travel",
      "url": "https://www.foxnews.com/outkick-sports/faa-ground-stop-leaves-college-football-teams-stranded-eve-crucial-saturday-showdowns"
     },
     {
@@ -636,6 +654,13 @@
      "url": "https://www.dailywire.com/news/faa-orders-nationwide-ground-stop-at-all-u-s-airports"
     },
     {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "FAA Cancels Nationwide Ground Stop After Hours of Chaos, Uncertainty",
+     "url": "https://www.newsmax.com/newsfront/FAA-Canceling-Nationwide-Ground-Stop-After-Hours-of-Chaos-Uncertainty/2026/11/13/id/1276277"
+    },
+    {
      "name": "Daily Caller",
      "lean": 2,
      "label": "Right",
@@ -644,16 +669,7 @@
     }
    ],
    "factchecks": [],
-   "videos": [
-    {
-     "videoId": "qDQuw_SAb-s",
-     "title": "US ground stop: Mullin says it is a telecoms outage, not another 9/11, as FAA grounds flights",
-     "thumb": "https://i.ytimg.com/vi/qDQuw_SAb-s/hqdefault.jpg",
-     "channel": "Al Jazeera",
-     "lean": 0,
-     "label": "Center"
-    }
-   ]
+   "videos": []
   },
   {
    "title": "News Wrap: Tanker crashes into river cruise boat in New Orleans",
@@ -662,14 +678,15 @@
    "leans": [
     -1,
     0,
+    1,
     2
    ],
    "span": 3,
-   "n_sources": 10,
+   "n_sources": 11,
    "balance": {
     "l": 4,
     "c": 4,
-    "r": 2
+    "r": 3
    },
    "blindspot": null,
    "sources": [
@@ -691,8 +708,8 @@
      "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "All accounted for after tanker hits river cruise ship in New Orleans, 32 hospitalized",
-     "url": "https://www.cbsnews.com/video/all-accounted-for-after-tanker-hits-river-cruise-ship-in-new-orleans-32-hospitalized/"
+     "title": "No fatalities after tanker hits river cruise ship in New Orleans, officials say",
+     "url": "https://www.cbsnews.com/video/no-fatalities-after-tanker-hits-river-cruise-ship-in-new-orleans-officials-say/"
     },
     {
      "name": "ABC News",
@@ -737,6 +754,13 @@
      "url": "https://www.aljazeera.com/news/2026/11/13/rescue-efforts-under-way-after-tanker-strikes-river-cruise-boat-in-us?traffic_source=rss"
     },
     {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Rescue underway after tanker hits riverboat with 129 passengers at Port of New Orleans",
+     "url": "https://www.washingtontimes.com/news/2026/nov/13/rescue-underway-tanker-hits-riverboat-129-passengers-port-new-orleans/"
+    },
+    {
      "name": "The Daily Wire",
      "lean": 2,
      "label": "Right",
@@ -761,14 +785,15 @@
    "leans": [
     -1,
     0,
+    1,
     2
    ],
    "span": 3,
-   "n_sources": 6,
+   "n_sources": 7,
    "balance": {
     "l": 3,
     "c": 2,
-    "r": 1
+    "r": 2
    },
    "blindspot": null,
    "sources": [
@@ -783,8 +808,8 @@
      "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "SpaceX launches first-of-its-kind Starship test flight",
-     "url": "https://www.cbsnews.com/news/spacex-launches-starship-flight-rocket/"
+     "title": "SpaceX launches huge Starship rocket on 15th test flight",
+     "url": "https://www.cbsnews.com/video/spacex-launches-huge-starship-rocket-on-15th-test-flight/"
     },
     {
      "name": "PBS NewsHour",
@@ -806,6 +831,13 @@
      "label": "Center",
      "title": "SpaceX launches Starship in key test flight of massive rocket",
      "url": "https://www.cnbc.com/2026/11/13/spacex-launches-starship-in-key-test-flight-of-massive-rocket.html"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "SpaceX to use its giant 'chopsticks' to catch booster and spacecraft after latest space mission",
+     "url": "https://www.washingtontimes.com/news/2026/nov/13/spacex-use-giant-chopsticks-catch-booster-spacecraft-latest-space/"
     },
     {
      "name": "The Daily Wire",
@@ -898,78 +930,20 @@
    "videos": []
   },
   {
-   "title": "Update to network connecting air traffic control system led to outage before ground stop, sources ay",
-   "summary": "An update to the private communications network that connects America's air traffic control system caused the system to reboot, leading to a crash and a communications outage, multiple sources told CBS News. Lindsey Reiser anchors continuing coverage.",
-   "category": "General",
-   "leans": [
-    -1,
-    0,
-    2
-   ],
-   "span": 3,
-   "n_sources": 4,
-   "balance": {
-    "l": 1,
-    "c": 2,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Update to network connecting air traffic control system led to outage before ground stop, sources ay",
-     "url": "https://www.cbsnews.com/video/update-to-network-connecting-air-traffic-control-system-led-to-outage-before-ground-stop-sources-ay/"
-    },
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "FAA grounds departing flights nationwide, citing air traffic communication system outage",
-     "url": "https://www.cnbc.com/2026/11/13/faa-ground-stop.html"
-    },
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "FAA grounds US flights nationwide after ‘communication issue’",
-     "url": "https://www.aljazeera.com/news/2026/11/13/us-grounds-all-flights-after-communication-issue?traffic_source=rss"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "FAA Grounds Flights Nationwide Amid Radar Frequency Failure; Major Airports Shut Down",
-     "url": "https://www.newsmax.com/newsfront/faa-transportation-secretary-sean-duffy/2026/11/13/id/1276246"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "qDQuw_SAb-s",
-     "title": "US ground stop: Mullin says it is a telecoms outage, not another 9/11, as FAA grounds flights",
-     "thumb": "https://i.ytimg.com/vi/qDQuw_SAb-s/hqdefault.jpg",
-     "channel": "Al Jazeera",
-     "lean": 0,
-     "label": "Center"
-    }
-   ]
-  },
-  {
    "title": "Rep. Lauren Boebert, conservative firebrand from Colorado, loses her race for re-election",
    "summary": "The Colorado Republican changed to a more conservative district after a close re-election call in 2022. But this year’s blue tsunami has swept her out of office, NBC News projects.",
    "category": "Politics",
    "leans": [
     -1,
+    1,
     2
    ],
    "span": 3,
-   "n_sources": 2,
+   "n_sources": 3,
    "balance": {
     "l": 1,
     "c": 0,
-    "r": 1
+    "r": 2
    },
    "blindspot": null,
    "sources": [
@@ -979,6 +953,13 @@
      "label": "Lean Left",
      "title": "Rep. Lauren Boebert, conservative firebrand from Colorado, loses her race for re-election",
      "url": "https://www.nbcnews.com/politics/2026-election/rep-lauren-boebert-conservative-firebrand-colorado-loses-race-re-elect-rcna607652"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "MAGA firebrand Rep. Lauren Boebert of Colorado loses race",
+     "url": "https://www.washingtontimes.com/news/2026/nov/13/maga-firebrand-rep-lauren-boebert-colorado-loses-race/"
     },
     {
      "name": "Daily Caller",
@@ -1097,6 +1078,63 @@
    "videos": []
   },
   {
+   "title": "FAA grounds all flights across U.S. due to telecommunications outage",
+   "summary": "The Federal Aviation Administration grounded all departing flights across the U.S. Friday due to telecommunications issues and for \"extraordinary circumstances\" and \"reasons of safety,\" snarling thousands of air travelers nationwide.",
+   "category": "Economy",
+   "leans": [
+    0,
+    1,
+    2
+   ],
+   "span": 2,
+   "n_sources": 4,
+   "balance": {
+    "l": 0,
+    "c": 2,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "FAA grounds all fights across the US over ‘telecommunication outage’",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/13/faa-grounds-all-fights-across-the-us-over-telecommunication?traffic_source=rss"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "FAA grounds US flights nationwide after ‘communication issue’",
+     "url": "https://www.aljazeera.com/news/2026/11/13/us-grounds-all-flights-after-communication-issue?traffic_source=rss"
+    },
+    {
+     "name": "The Christian Science Monitor",
+     "lean": 0,
+     "label": "Center",
+     "title": "FAA grounds flights nationwide, citing communications outage",
+     "url": "https://www.csmonitor.com/Business/2026/1113/faa-nationwide-ground-stop-airlines?icid=rss"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "FAA grounds all flights across U.S. due to telecommunications outage",
+     "url": "https://www.washingtontimes.com/news/2026/nov/13/faa-grounds-flights-across-us-due-telecommunications-outage/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "FAA Grounds Flights Nationwide Amid Radar Frequency Failure; Major Airports Shut Down",
+     "url": "https://www.newsmax.com/newsfront/faa-transportation-secretary-sean-duffy/2026/11/13/id/1276246"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "Do the Dems need new leadership?",
    "summary": "This story appeared in Today, Explained, a daily newsletter that helps you understand the most compelling news and stories of the day. Subscribe here. Hi readers, happy Friday! Today, we’re saying farewell — for now — to “Democrats in array.” Not quite two weeks after winning the",
    "category": "Politics",
@@ -1126,6 +1164,41 @@
      "label": "Center",
      "title": "Senate Dems break 32-year drought on leadership challenges",
      "url": "https://www.axios.com/2026/11/13/senate-democrats-van-hollen-schumer-election"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "WATCH LIVE: Marco Rubio delivers remarks at the Federalist Society",
+   "summary": "Secretary of State Marco Rubio will deliver remarks Friday night at 5 p.m. at the Federalist Society’s National Lawyers Convention in Washington, D.C. RUBIO REPEATEDLY SAYS HE’S NOT GOING TO TALK ABOUT 2028: ‘WASTING YOUR TIME’ The event is intended to celebrate “250 years of exc",
+   "category": "Economy",
+   "leans": [
+    -1,
+    1
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "The Shamelessness of Marco Rubio",
+     "url": "https://www.theatlantic.com/culture/2026/11/marco-rubio-flights-football/689424/?utm_source=feed"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "WATCH LIVE: Marco Rubio delivers remarks at the Federalist Society",
+     "url": "https://www.washingtonexaminer.com/news/white-house/4803226/watch-live-marco-rubio-remark-federalist-society-national-lawyers-convention/"
     }
    ],
    "factchecks": [],
@@ -1213,16 +1286,56 @@
     }
    ],
    "factchecks": [],
-   "videos": [
+   "videos": []
+  },
+  {
+   "title": "Ex-CIA chief’s son charged with ‘transportation of child pornography’",
+   "summary": "The son of former CIA chief John Brennan was arrested on Friday and charged with “transportation of child pornography,” according to an affidavit signed by a special agent with the FBI. Kyle Brennan, 40, was arrested in Warrenton, Virginia, following investigators uncovering a tw",
+   "category": "World",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 4,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 4
+   },
+   "blindspot": "left",
+   "sources": [
     {
-     "videoId": "m263TSl9Fys",
-     "title": "Microsoft services begin recovering after global outage | AJ Shorts",
-     "thumb": "https://i.ytimg.com/vi/m263TSl9Fys/hqdefault.jpg",
-     "channel": "Al Jazeera",
-     "lean": 0,
-     "label": "Center"
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Ex-CIA chief’s son charged with ‘transportation of child pornography’",
+     "url": "https://www.washingtonexaminer.com/news/justice/4803505/ex-cia-chief-son-kyle-brennan-charged-transportation-child-pornography/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Son of ex-CIA Director John Brennan charged with child pornography",
+     "url": "https://www.washingtontimes.com/news/2026/nov/13/son-ex-cia-director-john-brennan-charged-child-pornography/"
+    },
+    {
+     "name": "The Federalist",
+     "lean": 2,
+     "label": "Right",
+     "title": "Ex-CIA Director John Brennan’s Son Arrested For Alleged Possession Of Child Sexual Abuse Material",
+     "url": "https://thefederalist.com/2026/11/13/ex-cia-director-john-brennans-son-arrested-for-alleged-possession-of-child-sexual-abuse-material/?utm_source=rss&utm_medium=rss&utm_campaign=ex-cia-director-john-brennans-son-arrested-for-alleged-possession-of-child-sexual-abuse-material"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Ex-CIA Director John Brennan’s Son Arrested On Child Porn Charges",
+     "url": "https://dailycaller.com/2026/11/13/cia-john-brennan-son-kyle-arrested-child-pornoraphy-charges-eastern-district-virginia-fbi"
     }
-   ]
+   ],
+   "factchecks": [],
+   "videos": []
   },
   {
    "title": "Trump administration delays Medicaid work requirement enforcement",
@@ -1261,41 +1374,6 @@
      "label": "Center",
      "title": "Trump administration delays Medicaid work requirements by six months",
      "url": "https://www.axios.com/2026/11/13/medicaid-work-requirements-six-month-delay"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Did Payments by Huang’s Nvidia Influence Trump’s Policy on Chip Exports to China?",
-   "summary": "While correlation doesn’t necessarily mean causation, there is an undeniable correlation between Nvidia’s payments and Trump’s loosening of export restrictions.",
-   "category": "World",
-   "leans": [
-    0,
-    1
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "Trump doesn’t plan to raise Nvidia, spy issue during China trip: U.S. officials",
-     "url": "https://www.cnbc.com/2026/11/13/trump-nvidia-huang-china.html"
-    },
-    {
-     "name": "National Review",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Did Payments by Huang’s Nvidia Influence Trump’s Policy on Chip Exports to China?",
-     "url": "https://www.nationalreview.com/article/did-payments-by-huang-s-nvidia-influence-trump-s-policy-on-chip-exports-to-china"
     }
    ],
    "factchecks": [],
@@ -1367,49 +1445,6 @@
     }
    ],
    "factchecks": [],
-   "videos": [
-    {
-     "videoId": "3exoFbEV3_c",
-     "title": "Pope Leo cheered on return to Peru city where he served as bishop",
-     "thumb": "https://i.ytimg.com/vi/3exoFbEV3_c/hqdefault.jpg",
-     "channel": "Al Jazeera",
-     "lean": 0,
-     "label": "Center"
-    }
-   ]
-  },
-  {
-   "title": "Ex-CIA Director John Brennan’s Son Arrested For Alleged Possession Of Child Sexual Abuse Material",
-   "summary": "Editor’s note: This article addresses the alleged possession and distribution of sexually explicit images of children. The son of former CIA Director John Brennan was arrested Friday for alleged possession of child sexual abuse material, otherwise known as child pornography. The ",
-   "category": "General",
-   "leans": [
-    2
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "The Federalist",
-     "lean": 2,
-     "label": "Right",
-     "title": "Ex-CIA Director John Brennan’s Son Arrested For Alleged Possession Of Child Sexual Abuse Material",
-     "url": "https://thefederalist.com/2026/11/13/ex-cia-director-john-brennans-son-arrested-for-alleged-possession-of-child-sexual-abuse-material/?utm_source=rss&utm_medium=rss&utm_campaign=ex-cia-director-john-brennans-son-arrested-for-alleged-possession-of-child-sexual-abuse-material"
-    },
-    {
-     "name": "Daily Caller",
-     "lean": 2,
-     "label": "Right",
-     "title": "Ex-CIA Director John Brennan’s Son Arrested On Child Porn Charges",
-     "url": "https://dailycaller.com/2026/11/13/cia-john-brennan-son-kyle-arrested-child-pornoraphy-charges-eastern-district-virginia-fbi"
-    }
-   ],
-   "factchecks": [],
    "videos": []
   },
   {
@@ -1476,66 +1511,6 @@
      "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
     }
    ],
-   "videos": []
-  },
-  {
-   "title": "Trump must clean house before Democrats’ ‘investigation’ assault begins",
-   "summary": "Corruption was a top voter concern in the midterms, so even the appearance of impropriety can further damage Trump's team.",
-   "category": "Politics",
-   "leans": [
-    1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Trump must clean house before Democrats’ ‘investigation’ assault begins",
-     "url": "https://nypost.com/2026/11/13/opinion/trump-must-clean-house-before-democrats-investigation-assault-begins/"
-    }
-   ],
-   "factchecks": [
-    {
-     "org": "FactCheck.org",
-     "title": "FactChecking Trump’s Post-Election ‘60 Minutes’ Interview",
-     "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
-    }
-   ],
-   "videos": []
-  },
-  {
-   "title": "DHS head Markwayne Mullin says there is not a threat to the U.S. amid FAA ground stop",
-   "summary": "Department of Homeland Security Secretary Markwayne Mullin spoke to at the White House on Friday afternoon after the FAA issues a total ground stop. NPR was there for the briefing.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "DHS head Markwayne Mullin says there is not a threat to the U.S. amid FAA ground stop",
-     "url": "https://www.npr.org/2026/11/13/nx-s1-6040418/dhs-head-markwayne-mullin-says-there-is-not-a-threat-to-the-u-s-amid-faa-ground-stop"
-    }
-   ],
-   "factchecks": [],
    "videos": []
   },
   {
@@ -2079,8 +2054,8 @@
    "videos": []
   },
   {
-   "title": "Naresh Bhatt Convicted: The Road to Justice for Mamta's Family | Case by Case | \"48 Hours\" Podcast",
-   "summary": "A Virginia jury has found Naresh Bhatt guilty of murdering his wife, Mamta Kafle Bhatt, whose body has never been found. Just days before the verdict, Bhatt stunned the courtroom when he admitted to dismembering and disposing of his wife's body, but denied killing her. WUSA9 repo",
+   "title": "Man whose wife, son were injured in building collapse wants answers",
+   "summary": "The world crumbled around Anderson Velez's family on Wednesday when the multi-use Brooklyn building where they resided collapsed.",
    "category": "General",
    "leans": [
     -1
@@ -2098,17 +2073,125 @@
      "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Naresh Bhatt Convicted: The Road to Justice for Mamta's Family | Case by Case | \"48 Hours\" Podcast",
-     "url": "https://www.cbsnews.com/video/111326-48-hours-case-by-case-episode-30/"
+     "title": "Man whose wife, son were injured in building collapse wants answers",
+     "url": "https://www.cbsnews.com/news/brooklyn-building-collapse-residents-want-answers/"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Lauren Boebert will lose her seat in Congress to Democrat Laubacher, AP projects",
-   "summary": "Colorado Republican Rep. Lauren Boebert will lose her House seat to Democratic challenger Eileen Laubacher, The Associated Press projected Friday.",
-   "category": "Politics",
+   "title": "West Coast braces for storm system that could unleash 50-foot waves",
+   "summary": "The West Coast is bracing for severe weather over the weekend after the East Coast saw tornadoes this week. Rob Marciano has more.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "West Coast braces for storm system that could unleash 50-foot waves",
+     "url": "https://www.cbsnews.com/video/west-coast-braces-for-storm-system-that-could-unleash-50-foot-waves/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Father whose wife and sons were inside Brooklyn building during collapse shares his story",
+   "summary": "Anderson Velez, who lived in the Brooklyn building that collapsed on Wednesday while his wife and two children were inside, tells Lilia Luciano what he thought when he saw video of the moment the building came down.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Father whose wife and sons were inside Brooklyn building during collapse shares his story",
+     "url": "https://www.cbsnews.com/video/father-whose-wife-and-sons-were-inside-brooklyn-building-during-collapse-shares-his-story/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Latest developments on FAA's national ground stop",
+   "summary": "The Federal Aviation Administration ordered a national ground stop on Friday, with officials citing \"extraordinary circumstances\" and safety concerns. Kris Van Cleave reports.",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Latest developments on FAA's national ground stop",
+     "url": "https://www.cbsnews.com/video/latest-developments-on-faas-national-ground-stop/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Former FAA chief spokesperson says ATC system is \"horribly outdated\" amid ground stop",
+   "summary": "Former FAA chief spokesperson Scott Brenner joins CBS News to discuss Friday's nationwide ground stop and the age of America's air traffic control system. Then, Lindsay Gutierrez, a passenger stranded at JFK Airport, joins to share her experience.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Former FAA chief spokesperson says ATC system is \"horribly outdated\" amid ground stop",
+     "url": "https://www.cbsnews.com/video/former-faa-chief-spokesperson-says-atc-system-is-horribly-outdated-amid-ground-stop/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Microsoft apologizes for email disruption, says AI agents not responsible",
+   "summary": "Microsoft is reporting \"issues\" with users accessing Outlook and Teams.",
+   "category": "Tech",
    "leans": [
     -1
    ],
@@ -2125,8 +2208,8 @@
      "name": "ABC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Lauren Boebert will lose her seat in Congress to Democrat Laubacher, AP projects",
-     "url": "https://abcnews.com/Politics/lauren-boebert-lose-seat-congress-ap-projects/story?id=138121829"
+     "title": "Microsoft apologizes for email disruption, says AI agents not responsible",
+     "url": "https://abcnews.com/US/outlook-down-microsoft-outage-reported-mail/story?id=138088203"
     }
    ],
    "factchecks": [],
@@ -2239,63 +2322,58 @@
    ],
    "factchecks": [],
    "videos": []
-  },
-  {
-   "title": "WATCH:  Empire State Building climbers appear in court",
-   "summary": "The daredevil couple who were arrested after climbing to the top of the Empire State Building were in court on Thursday to face criminal charges and possible deportation.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  Empire State Building climbers appear in court",
-     "url": "https://abcnews.com/video/138104770/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  Tanker truck driver narrowly avoids train crash in Fort Worth",
-   "summary": "A tanker truck driver managed to escape from his vehicle just seconds before a train slammed into his truck.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  Tanker truck driver narrowly avoids train crash in Fort Worth",
-     "url": "https://abcnews.com/video/138096388/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
   }
  ],
  "blindspots": [
+  {
+   "title": "Ex-CIA chief’s son charged with ‘transportation of child pornography’",
+   "summary": "The son of former CIA chief John Brennan was arrested on Friday and charged with “transportation of child pornography,” according to an affidavit signed by a special agent with the FBI. Kyle Brennan, 40, was arrested in Warrenton, Virginia, following investigators uncovering a tw",
+   "category": "World",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 4,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 4
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Ex-CIA chief’s son charged with ‘transportation of child pornography’",
+     "url": "https://www.washingtonexaminer.com/news/justice/4803505/ex-cia-chief-son-kyle-brennan-charged-transportation-child-pornography/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Son of ex-CIA Director John Brennan charged with child pornography",
+     "url": "https://www.washingtontimes.com/news/2026/nov/13/son-ex-cia-director-john-brennan-charged-child-pornography/"
+    },
+    {
+     "name": "The Federalist",
+     "lean": 2,
+     "label": "Right",
+     "title": "Ex-CIA Director John Brennan’s Son Arrested For Alleged Possession Of Child Sexual Abuse Material",
+     "url": "https://thefederalist.com/2026/11/13/ex-cia-director-john-brennans-son-arrested-for-alleged-possession-of-child-sexual-abuse-material/?utm_source=rss&utm_medium=rss&utm_campaign=ex-cia-director-john-brennans-son-arrested-for-alleged-possession-of-child-sexual-abuse-material"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Ex-CIA Director John Brennan’s Son Arrested On Child Porn Charges",
+     "url": "https://dailycaller.com/2026/11/13/cia-john-brennan-son-kyle-arrested-child-pornoraphy-charges-eastern-district-virginia-fbi"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
   {
    "title": "Rebuilding a World That Never Existed",
    "summary": "Attempts to reconstruct the past might be doomed to fail, but that doesn’t mean they aren’t noble, or even beautiful.",
@@ -2329,43 +2407,15 @@
    ],
    "factchecks": [],
    "videos": []
-  },
-  {
-   "title": "Ex-CIA Director John Brennan’s Son Arrested For Alleged Possession Of Child Sexual Abuse Material",
-   "summary": "Editor’s note: This article addresses the alleged possession and distribution of sexually explicit images of children. The son of former CIA Director John Brennan was arrested Friday for alleged possession of child sexual abuse material, otherwise known as child pornography. The ",
-   "category": "General",
-   "leans": [
-    2
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "The Federalist",
-     "lean": 2,
-     "label": "Right",
-     "title": "Ex-CIA Director John Brennan’s Son Arrested For Alleged Possession Of Child Sexual Abuse Material",
-     "url": "https://thefederalist.com/2026/11/13/ex-cia-director-john-brennans-son-arrested-for-alleged-possession-of-child-sexual-abuse-material/?utm_source=rss&utm_medium=rss&utm_campaign=ex-cia-director-john-brennans-son-arrested-for-alleged-possession-of-child-sexual-abuse-material"
-    },
-    {
-     "name": "Daily Caller",
-     "lean": 2,
-     "label": "Right",
-     "title": "Ex-CIA Director John Brennan’s Son Arrested On Child Porn Charges",
-     "url": "https://dailycaller.com/2026/11/13/cia-john-brennan-son-kyle-arrested-child-pornoraphy-charges-eastern-district-virginia-fbi"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
   }
  ],
  "factchecks": [
+  {
+   "org": "Snopes",
+   "title": "Did Dunkin' ban word 'Christmas' after celebrating Ramadan and Pride Month in 2026?",
+   "link": "https://www.snopes.com/fact-check/dunkin-ban-christmas-ramadan-pride/",
+   "summary": "The latest chapter in the \"war on Christmas\" involved a popular video and a whole lot of poorly supported claims."
+  },
   {
    "org": "Snopes",
    "title": "Unfounded rumor claims Hegseth awarded medal to Tomb of the Unknown Soldier guard's body double",
@@ -2377,12 +2427,6 @@
    "title": "Were some Democrats who missed Hegseth impeachment vote at AIPAC event?",
    "link": "https://www.snopes.com/news/2026/11/13/democrats-missed-hegseth-vote-aipac/",
    "summary": "The event in question was reportedly hosted by Elect Democrat Women, which has ties to the pro-Israel lobbying group."
-  },
-  {
-   "org": "Snopes",
-   "title": "Did Dunkin' ban word 'Christmas' after celebrating Ramadan and Pride Month in 2026?",
-   "link": "https://www.snopes.com/fact-check/dunkin-ban-christmas-ramadan-pride/",
-   "summary": "The latest chapter in the \"war on Christmas\" involved a popular video and a whole lot of poorly-supported claims."
   },
   {
    "org": "Snopes",
