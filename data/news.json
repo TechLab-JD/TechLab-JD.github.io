@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-14T00:31:10Z",
- "generated_human": "Nov 14, 2026 · 00:31 UTC",
+ "generated": "2026-11-14T01:07:32Z",
+ "generated_human": "Nov 14, 2026 · 01:07 UTC",
  "sources": [
   {
    "name": "NPR",
@@ -66,18 +66,60 @@
    "count": 12
   },
   {
+   "name": "Mother Jones",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "The Atlantic",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Time",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "BBC News",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "The Hill",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "CNBC",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Axios",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
    "name": "Al Jazeera",
    "lean": 0,
    "label": "Center",
    "fact": "Mostly",
    "count": 12
-  },
-  {
-   "name": "The Christian Science Monitor",
-   "lean": 0,
-   "label": "Center",
-   "fact": "High",
-   "count": 10
   },
   {
    "name": "Newsweek",
@@ -101,21 +143,7 @@
    "count": 12
   },
   {
-   "name": "Washington Examiner",
-   "lean": 1,
-   "label": "Lean Right",
-   "fact": "Mostly",
-   "count": 10
-  },
-  {
    "name": "National Review",
-   "lean": 1,
-   "label": "Lean Right",
-   "fact": "Mostly",
-   "count": 12
-  },
-  {
-   "name": "Washington Times",
    "lean": 1,
    "label": "Lean Right",
    "fact": "Mostly",
@@ -157,218 +185,490 @@
    "count": 12
   }
  ],
- "n_articles": 252,
- "n_videos": 20,
+ "n_articles": 304,
+ "n_videos": 10,
  "trending": [
   {
    "term": "trump",
-   "n": 13
+   "n": 16
   },
   {
-   "term": "democrats",
-   "n": 10
-  },
-  {
-   "term": "stephen",
-   "n": 9
-  },
-  {
-   "term": "miller",
-   "n": 7
-  },
-  {
-   "term": "nationwide",
-   "n": 7
-  },
-  {
-   "term": "democratic",
-   "n": 6
-  },
-  {
-   "term": "2026",
-   "n": 6
-  },
-  {
-   "term": "flights",
-   "n": 6
+   "term": "stop",
+   "n": 12
   },
   {
    "term": "ground",
-   "n": 6
+   "n": 11
   },
   {
-   "term": "people",
-   "n": 5
+   "term": "democrats",
+   "n": 11
   },
   {
-   "term": "election",
-   "n": 5
+   "term": "nationwide",
+   "n": 10
   },
   {
-   "term": "historic",
-   "n": 5
+   "term": "nvidia",
+   "n": 10
   },
   {
-   "term": "arrested",
-   "n": 5
+   "term": "outage",
+   "n": 9
   },
   {
-   "term": "week",
-   "n": 5
+   "term": "lutnick",
+   "n": 8
   },
   {
-   "term": "child",
-   "n": 5
+   "term": "tanker",
+   "n": 8
   },
   {
-   "term": "midterms",
-   "n": 5
+   "term": "microsoft",
+   "n": 8
+  },
+  {
+   "term": "schumer",
+   "n": 7
+  },
+  {
+   "term": "flight",
+   "n": 7
+  },
+  {
+   "term": "scandal",
+   "n": 7
+  },
+  {
+   "term": "orleans",
+   "n": 7
+  },
+  {
+   "term": "spacex",
+   "n": 7
+  },
+  {
+   "term": "cruise",
+   "n": 7
   }
  ],
  "videos": [
   {
-   "videoId": "Q8UPGXZpoVQ",
-   "title": "Stranded passenger in Las Vegas on nationwide ground stop: \"Nobody has answers\"",
-   "thumb": "https://i.ytimg.com/vi/Q8UPGXZpoVQ/hqdefault.jpg",
-   "channel": "CBS News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "X2iMSfvl874",
-   "title": "Travelers facing uncertainty amid nationwide ground stop",
-   "thumb": "https://i.ytimg.com/vi/X2iMSfvl874/hqdefault.jpg",
-   "channel": "CBS News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "gKSYS30zWec",
-   "title": "Update to network connecting air traffic control system led to outage before ground stop, sources ay",
-   "thumb": "https://i.ytimg.com/vi/gKSYS30zWec/hqdefault.jpg",
-   "channel": "CBS News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "YPkCVWFoYdg",
-   "title": "\"48 Hours\" Full Episodes: Unusual Signs",
-   "thumb": "https://i.ytimg.com/vi/YPkCVWFoYdg/hqdefault.jpg",
-   "channel": "CBS News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "T9YUz-yeW1A",
-   "title": "All accounted for after tanker hits river cruise ship in New Orleans, 32 hospitalized",
-   "thumb": "https://i.ytimg.com/vi/T9YUz-yeW1A/hqdefault.jpg",
-   "channel": "CBS News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "xB8-VOXhLrY",
-   "title": "Drone video shows a river boat on its side in New Orleans tanker crash",
-   "thumb": "https://i.ytimg.com/vi/xB8-VOXhLrY/hqdefault.jpg",
-   "channel": "AP",
+   "videoId": "m263TSl9Fys",
+   "title": "Microsoft services begin recovering after global outage | AJ Shorts",
+   "thumb": "https://i.ytimg.com/vi/m263TSl9Fys/hqdefault.jpg",
+   "channel": "Al Jazeera",
    "lean": 0,
    "label": "Center"
   },
   {
-   "videoId": "NH-N6xKat-4",
-   "title": "Some international flights allowed to depart U.S. amid FAA ground stop",
-   "thumb": "https://i.ytimg.com/vi/NH-N6xKat-4/hqdefault.jpg",
-   "channel": "CBS News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "JmlgADNgZLo",
-   "title": "Watch: Funnel cloud captured on video in Delaware #shorts",
-   "thumb": "https://i.ytimg.com/vi/JmlgADNgZLo/hqdefault.jpg",
-   "channel": "CBS News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "g3E_g8iKFl0",
-   "title": "SpaceX launches Starship's 15th test flight, attempting historic double catch",
-   "thumb": "https://i.ytimg.com/vi/g3E_g8iKFl0/hqdefault.jpg",
-   "channel": "CBS News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "XFpLtIv9E2M",
-   "title": "Watch: Severe storms bring hail to New Jersey #shorts",
-   "thumb": "https://i.ytimg.com/vi/XFpLtIv9E2M/hqdefault.jpg",
-   "channel": "CBS News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "eovfYT36ezI",
-   "title": "Gunman in D.C. shooting targeted building manager over HOA conflict, officials say #shorts",
-   "thumb": "https://i.ytimg.com/vi/eovfYT36ezI/hqdefault.jpg",
-   "channel": "CBS News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "C_h0jX7cS5g",
-   "title": "Homeland Security secretary Mullin says currently no indication of an attack after FAA ground stop",
-   "thumb": "https://i.ytimg.com/vi/C_h0jX7cS5g/hqdefault.jpg",
-   "channel": "AP",
+   "videoId": "oP7OkoeQZVY",
+   "title": "FAA grounds all fights across the US over ‘telecommunication outage’ | AJ Shorts",
+   "thumb": "https://i.ytimg.com/vi/oP7OkoeQZVY/hqdefault.jpg",
+   "channel": "Al Jazeera",
    "lean": 0,
    "label": "Center"
   },
   {
-   "videoId": "cP0yg8BM5r4",
-   "title": "Tanker hits a river cruise boat on the Mississippi River in New Orleans",
-   "thumb": "https://i.ytimg.com/vi/cP0yg8BM5r4/hqdefault.jpg",
-   "channel": "AP",
+   "videoId": "qDQuw_SAb-s",
+   "title": "US ground stop: Mullin says it is a telecoms outage, not another 9/11, as FAA grounds flights",
+   "thumb": "https://i.ytimg.com/vi/qDQuw_SAb-s/hqdefault.jpg",
+   "channel": "Al Jazeera",
    "lean": 0,
    "label": "Center"
   },
   {
-   "videoId": "42i1Czr7DA8",
-   "title": "LIVE: FAA grounds all flights across the US",
-   "thumb": "https://i.ytimg.com/vi/42i1Czr7DA8/hqdefault.jpg",
-   "channel": "AP",
+   "videoId": "ic3fKpBz2rI",
+   "title": "BREAKING: US FAA suspends all flight departures nationwide until further notice",
+   "thumb": "https://i.ytimg.com/vi/ic3fKpBz2rI/hqdefault.jpg",
+   "channel": "Al Jazeera",
    "lean": 0,
    "label": "Center"
   },
   {
-   "videoId": "ySssh9si5x4",
-   "title": "FAA grounds all flights across the U.S. due to air traffic control communications problems",
-   "thumb": "https://i.ytimg.com/vi/ySssh9si5x4/hqdefault.jpg",
-   "channel": "AP",
+   "videoId": "8TE1JlqqDe8",
+   "title": "IRGC says tanker caught fire after hitting mines in Strait of Hormuz",
+   "thumb": "https://i.ytimg.com/vi/8TE1JlqqDe8/hqdefault.jpg",
+   "channel": "Al Jazeera",
    "lean": 0,
    "label": "Center"
   },
   {
-   "videoId": "n1YFMadqs_0",
-   "title": "Protesters shout at Rep. Hakeem Jeffries at Democratic conference",
-   "thumb": "https://i.ytimg.com/vi/n1YFMadqs_0/hqdefault.jpg",
-   "channel": "AP",
+   "videoId": "3exoFbEV3_c",
+   "title": "Pope Leo cheered on return to Peru city where he served as bishop",
+   "thumb": "https://i.ytimg.com/vi/3exoFbEV3_c/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "5dYBKPkKp7M",
+   "title": "Qatar and Turkiye send message of deterrence with new defence pact | AJ #shorts",
+   "thumb": "https://i.ytimg.com/vi/5dYBKPkKp7M/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "uzoJWIhyfx4",
+   "title": "Central African Republic protests over rising fuel prices",
+   "thumb": "https://i.ytimg.com/vi/uzoJWIhyfx4/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "Kul-Ek5at88",
+   "title": "Australia captain Cummins denies involvement in ‘Sandpapergate’",
+   "thumb": "https://i.ytimg.com/vi/Kul-Ek5at88/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "jkPIEfREQ0k",
+   "title": "The Midterm Results: The political and institutional consequences of the elections | This Is America",
+   "thumb": "https://i.ytimg.com/vi/jkPIEfREQ0k/hqdefault.jpg",
+   "channel": "Al Jazeera",
    "lean": 0,
    "label": "Center"
   }
  ],
  "stories": [
   {
-   "title": "What Trump picking Stephen Miller for chief of staff signals about his agenda",
-   "summary": "Trump has replaced White House chief of staff Susie Wiles with Stephen Miller, the hardline architect of his immigration agenda, after a crushing midterm defeat. Immigration, once a political strength for Trump, became a liability after two years of mass detentions, deportations ",
+   "title": "Nvidia scandal: US treasury chief blames Lutnick’s commerce department over alleged lack of action",
+   "summary": "US commerce secretary faces sack as questions emerge over senior Trump officials’ knowledge of alleged Chinese spy’s ties to Jensen Huang US politics – live updates The US commerce secretary, Howard Lutnick, is facing growing pressure over his apparent lack of action over the Nvi",
+   "category": "World",
+   "leans": [
+    -2,
+    -1,
+    0,
+    2
+   ],
+   "span": 4,
+   "n_sources": 8,
+   "balance": {
+    "l": 4,
+    "c": 3,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Slate",
+     "lean": -2,
+     "label": "Left",
+     "title": "The Nvidia Scandal Is Getting Worse and Worse—for Trump",
+     "url": "https://slate.com/news-and-politics/2026/11/nvidia-jensen-huang-affair-scandal-trump-lutnick-bessent.html?via=rss"
+    },
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Nvidia scandal: US treasury chief blames Lutnick’s commerce department over alleged lack of action",
+     "url": "https://www.theguardian.com/technology/2026/nov/13/nvidia-scandal-sparks-us-national-security-concerns-china"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Commerce Secretary Lutnick agrees to testify about Nvidia",
+     "url": "https://www.nbcnews.com/video/commerce-secretary-lutnick-agrees-to-testify-about-nvidia-273452613709"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Bessent accuses Lutnick of failing to prevent China from obtaining Nvidia chips",
+     "url": "https://www.pbs.org/newshour/show/bessent-accuses-lutnick-of-failing-to-prevent-china-from-obtaining-nvidia-chips"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Nvidia scandal fallout widens as Trump's treasury secretary blames cabinet colleague",
+     "url": "https://www.bbc.co.uk/news/articles/cqvg2d1eg7zro?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Lutnick in hot seat over Nvidia-Megaspeed scandal",
+     "url": "https://thehill.com/newsletters/technology/6219929-lutnick-in-hot-seat-over-nvidia-megaspeed-scandal/"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Lutnick faces questions over Nvidia spy scandal. His sons' firm has deep ties to the chipmaker",
+     "url": "https://www.cnbc.com/2026/11/13/howard-lutnick-nvidia-jensen-huang-china-cantor-fitzgerald.html"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Bessent Calls Out Lutnick’s Department As Nvidia Scandal Grows",
+     "url": "https://www.dailywire.com/news/bessent-calls-out-lutnicks-department-as-nvidia-scandal-grows"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Van Hollen Pledges to “Shake Things Up” in Majority Leader Announcement",
+   "summary": "After a week of speculation about his intentions, Maryland Democratic Sen. Chris Van Hollen announced on Thursday that he plans to challenge Sen. Chuck Schumer (D-N.Y.) for the position of Senate Majority Leader in the 120th Congress. The Democrats’ historic sweep of both legisla",
    "category": "Politics",
    "leans": [
+    -2,
     -1,
+    0,
+    2
+   ],
+   "span": 4,
+   "n_sources": 6,
+   "balance": {
+    "l": 3,
+    "c": 2,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "Van Hollen Pledges to “Shake Things Up” in Majority Leader Announcement",
+     "url": "https://www.motherjones.com/politics/2026/11/van-hollen-senate-majority-leader-campaign-schumer-congress-democrats/"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Does Van Hollen have enough support to beat Schumer in Senate leadership race?",
+     "url": "https://www.pbs.org/newshour/show/does-van-hollen-have-enough-support-to-beat-schumer-in-senate-leadership-race"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Van Hollen Challenges Schumer for Senate Majority Leader",
+     "url": "https://time.com/article/2026/11/13/chris-van-hollen-senate-majority-leader-chuck-schumer-progressive-democrats/"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Democratic Senate leader Schumer set to face leadership challenge",
+     "url": "https://www.bbc.co.uk/news/articles/cmy4930jq749o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "DSA Backs Challenge to Schumer as Senate Democratic Leader",
+     "url": "https://www.newsweek.com/chuck-schumer-senate-democratic-leader-challenge-dsa-12714492"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Union Urges Schumer Not to Seek Majority Leader",
+     "url": "https://www.newsmax.com/newsfront/chuck-schumer-union-senate-majority-leader/2026/11/13/id/1276254"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "In Kansas, Both Sides Twist the Facts in Accusations of Protecting Pedophiles",
+     "link": "https://www.factcheck.org/2026/11/in-kansas-both-sides-twist-the-facts-in-accusations-of-protecting-pedophiles/"
+    },
+    {
+     "org": "FactCheck.org",
+     "title": "NH Ad Distorts the Facts in Claiming Pappas Grew Rich in Office",
+     "link": "https://www.factcheck.org/2026/10/nh-ad-distorts-the-facts-in-claiming-pappas-grew-rich-in-office/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "Multiple college football teams in flight limbo due to FAA ground stop",
+   "summary": "The nationwide ground stop issued by the Federal Aviation Administration Friday afternoon has impacted travel plans for college football teams scheduled to fly to their destinations. Among teams impacted are four schools in the NCAA's Big 12 Conference, Baylor University, Kansas ",
+   "category": "Economy",
+   "leans": [
+    -1,
+    0,
     2
    ],
    "span": 3,
-   "n_sources": 5,
+   "n_sources": 11,
    "balance": {
-    "l": 3,
-    "c": 0,
+    "l": 5,
+    "c": 3,
+    "r": 3
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Stuck on the tarmac without information: Travelers share their ground stop experiences",
+     "url": "https://www.npr.org/2026/11/13/nx-s1-6040397/stuck-on-the-tarmac-without-information-travelers-share-their-ground-stop-experiences"
+    },
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "FAA issues nationwide ground stop for all U.S. airports",
+     "url": "https://www.npr.org/2026/11/13/nx-s1-6040403/faa-nationwide-groundstop-airports"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Nationwide ground stop brings America’s airports to a standstill",
+     "url": "https://www.nbcnews.com/nightly-news/video/nationwide-ground-stop-brings-america-s-airports-to-a-standstill-273485381855"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Some airports beginning to run out of space for planes amid nationwide ground stop",
+     "url": "https://www.nbcnews.com/video/some-airports-beginning-to-run-out-of-space-for-planes-amid-nationwide-ground-stop-273478213938"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "FAA issues nationwide ground stop, stranding thousands",
+     "url": "https://www.cbsnews.com/news/faa-issues-nationwide-ground-stop/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Stranded passenger in Las Vegas on nationwide ground stop: \"Nobody has answers\"",
+     "url": "https://www.cbsnews.com/video/stranded-passenger-in-las-vegas-on-nationwide-ground-stop/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Travelers facing uncertainty amid nationwide ground stop",
+     "url": "https://www.cbsnews.com/video/travelers-facing-uncertainty-amid-nationwide-ground-stop/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Some international flights allowed to depart U.S. amid FAA ground stop",
+     "url": "https://www.cbsnews.com/video/some-international-flights-allowed-to-depart-us-amid-faa-ground-stop/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Commercial pilot explains what crews are going through amid nationwide ground stop",
+     "url": "https://www.cbsnews.com/video/commercial-airline-pilot-explains-what-crews-are-going-through-amid-faa-ground-stop/"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "FAA ground stop live updates: 5,000 flights canceled, no indication a 'nefarious' act",
+     "url": "https://abcnews.com/US/live-updates/faa-ground-stop-live-updates-hundreds-flights-canceled/?id=138125140"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "FAA issues rare nationwide ground stop; no indication of 'nefarious attack'",
+     "url": "https://abcnews.com/US/nationwide-ground-stop-ordered-airports-faa/story?id=138121848"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "FAA issues rare nationwide ground stop due to 'extraordinary circumstances'",
+     "url": "https://www.pbs.org/newshour/show/faa-issues-rare-nationwide-ground-stop-due-to-extraordinary-circumstances"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Multiple college football teams in flight limbo due to FAA ground stop",
+     "url": "https://thehill.com/policy/sports-gaming/6220145-faa-ground-stop-impacts-college-football/"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Mullin: No indication of 'nefarious attack' on FAA as DHS investigates root cause of telecom outage",
+     "url": "https://thehill.com/policy/transportation/6219936-mullin-faa-telecommunication-outage-ground-stop/"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "LIVE: FAA issues US ground stop, some international flights to depart",
+     "url": "https://www.aljazeera.com/news/liveblog/2026/11/13/groundling-live?traffic_source=rss"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Multiple College Football Start Times Could Move Amidst FAA Pausing Flights",
+     "url": "https://www.newsweek.com/sports/ncaa/multiple-college-football-start-times-could-move-faa-pausing-flights-12714720"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "FAA ground stop leaves College Football teams stranded on eve of crucial Saturday showdowns",
+     "url": "https://www.foxnews.com/outkick-sports/faa-ground-stop-leaves-college-football-teams-stranded-eve-crucial-saturday-showdowns"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "FAA Orders Nationwide Ground Stop At All U.S. Airports",
+     "url": "https://www.dailywire.com/news/faa-orders-nationwide-ground-stop-at-all-u-s-airports"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "FAA Issues Nationwide Ground Stop, Halting All US Flight Departures",
+     "url": "https://dailycaller.com/2026/11/13/faa-nationwide-ground-stop-us-flight-departures-sean-duffy"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "qDQuw_SAb-s",
+     "title": "US ground stop: Mullin says it is a telecoms outage, not another 9/11, as FAA grounds flights",
+     "thumb": "https://i.ytimg.com/vi/qDQuw_SAb-s/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "News Wrap: Tanker crashes into river cruise boat in New Orleans",
+   "summary": "In our news wrap Friday, a ship collided with a river cruise boat in New Orleans, causing it to sink in the Mississippi River, some Microsoft users were offline for a second day as the company scrambled to restore its widely used suite of workplace software and the White House is",
+   "category": "World",
+   "leans": [
+    -1,
+    0,
+    2
+   ],
+   "span": 3,
+   "n_sources": 10,
+   "balance": {
+    "l": 4,
+    "c": 4,
     "r": 2
    },
    "blindspot": null,
@@ -377,135 +677,64 @@
      "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Stephen Miller named as new White House chief of staff",
-     "url": "https://www.nbcnews.com/nightly-news/video/stephen-miller-named-as-new-white-house-chief-of-staff-273042501821"
+     "title": "All accounted for after tanker crashes into New Orleans riverboat",
+     "url": "https://www.nbcnews.com/nightly-news/video/all-accounted-for-after-tanker-crashes-into-new-orleans-riverboat-273486405725"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Passengers rescued after tanker hit river cruise in New Orleans",
+     "url": "https://www.cbsnews.com/news/tanker-cruise-collision-mississippi-river-new-orleans/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "All accounted for after tanker hits river cruise ship in New Orleans, 32 hospitalized",
+     "url": "https://www.cbsnews.com/video/all-accounted-for-after-tanker-hits-river-cruise-ship-in-new-orleans-32-hospitalized/"
     },
     {
      "name": "ABC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Trump says chief of staff Susie Wiles out, Stephen Miller will replace her",
-     "url": "https://abcnews.com/Politics/trump-chief-staff-susie-wiles-miller-replace/story?id=137921244"
+     "title": "'Miracle': All rescued from capsized New Orleans riverboat in tanker collision",
+     "url": "https://abcnews.com/US/vessel-collision-port-new-orleans-emergency-crews-responding/story?id=138119847"
     },
     {
      "name": "PBS NewsHour",
      "lean": -1,
      "label": "Lean Left",
-     "title": "What Trump picking Stephen Miller for chief of staff signals about his agenda",
-     "url": "https://www.pbs.org/newshour/show/what-trump-picking-stephen-miller-for-chief-of-staff-signals-about-his-agenda"
+     "title": "News Wrap: Tanker crashes into river cruise boat in New Orleans",
+     "url": "https://www.pbs.org/newshour/show/news-wrap-tanker-crashes-into-river-cruise-boat-in-new-orleans"
     },
     {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Stephen Miller Tightens WH Lobbyist Access With New Rule",
-     "url": "https://www.newsmax.com/newsfront/white-house-lobbyists-stephen-miller/2026/11/13/id/1276239"
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "'Miracle on Mississippi' - All passengers rescued after New Orleans cruise ship collision",
+     "url": "https://www.bbc.co.uk/news/articles/cw20xmy0m5yyo?at_medium=RSS&at_campaign=rss"
     },
     {
-     "name": "Daily Caller",
-     "lean": 2,
-     "label": "Right",
-     "title": "Stephen Miller Makes Life ‘Impossible’ For Lobbyists Seeking Access To Trump White House",
-     "url": "https://dailycaller.com/2026/11/13/white-house-staffers-stephen-millerlobbyists-memo"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Dems won the midterms. How should they work with Trump?",
-   "summary": "Just days after big wins in the midterms, Democrats are celebrating historic victories. But what can we actually learn from these wins? David Axelrod is a Democratic strategist and the man behind Barack Obama’s two presidential victories. He’s not a senior political commentator a",
-   "category": "Politics",
-   "leans": [
-    -2,
-    -1,
-    1
-   ],
-   "span": 3,
-   "n_sources": 4,
-   "balance": {
-    "l": 3,
-    "c": 0,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Vox",
-     "lean": -2,
-     "label": "Left",
-     "title": "Dems won the midterms. How should they work with Trump?",
-     "url": "https://www.vox.com/america-actually/509818/dems-won-the-midterms-how-should-they-work-with-trump"
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Rescues underway in New Orleans after a tanker hits a river cruise boat on the Mississippi River",
+     "url": "https://www.cnbc.com/2026/11/13/tanker-hits-cruise-boat-in-new-orleans-rescues-underway.html"
     },
     {
-     "name": "Slate",
-     "lean": -2,
-     "label": "Left",
-     "title": "Did Trump Learn Anything From the Midterms? We Already Have Our Answer.",
-     "url": "https://slate.com/news-and-politics/2026/11/stephen-miller-chief-of-staff-trump-midterms.html?via=rss"
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Mississippi River cruise crash has no fatalities, critical injuries",
+     "url": "https://www.axios.com/2026/11/13/new-orleans-cruise-ship-tanker-strike"
     },
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Former Sen. Flake, outspoken Trump critic, on the GOP reckoning post-midterms",
-     "url": "https://www.pbs.org/newshour/show/former-sen-flake-outspoken-trump-critic-on-the-gop-reckoning-post-midterms"
-    },
-    {
-     "name": "National Review",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Trump’s People May Have to Answer for Jensen Huang",
-     "url": "https://www.nationalreview.com/article/trump-s-people-may-have-to-answer-for-jensen-huang"
-    }
-   ],
-   "factchecks": [
-    {
-     "org": "FactCheck.org",
-     "title": "Common Themes in the 2026 Midterms",
-     "link": "https://www.factcheck.org/2026/11/common-themes-in-the-2026-midterms/"
-    }
-   ],
-   "videos": []
-  },
-  {
-   "title": "Tanker crashes into river cruise ship carrying over 100 passengers in Port of New Orleans",
-   "summary": "All of the passengers aboard a cruise ship on the Mississippi River have been accounted for after the boat collided with a tanker near the Port of New Orleans on Friday afternoon, prompting a large emergency response. The incident occurred around 12:30 p.m. when an Atlantic Aspha",
-   "category": "General",
-   "leans": [
-    0,
-    1,
-    2
-   ],
-   "span": 2,
-   "n_sources": 5,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 4
-   },
-   "blindspot": null,
-   "sources": [
     {
      "name": "Al Jazeera",
      "lean": 0,
      "label": "Center",
      "title": "32 passengers taken to hospital after tanker hits river cruise boat in US",
      "url": "https://www.aljazeera.com/news/2026/11/13/rescue-efforts-under-way-after-tanker-strikes-river-cruise-boat-in-us?traffic_source=rss"
-    },
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Tanker crashes into river cruise ship carrying over 100 passengers in Port of New Orleans",
-     "url": "https://www.washingtonexaminer.com/news/4803302/tanker-crash-river-cruise-ship-new-orleans-port/"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Rescue underway after tanker hits riverboat with 129 passengers at Port of New Orleans",
-     "url": "https://www.washingtontimes.com/news/2026/nov/13/rescue-underway-tanker-hits-riverboat-129-passengers-port-new-orleans/"
     },
     {
      "name": "The Daily Wire",
@@ -523,49 +752,182 @@
     }
    ],
    "factchecks": [],
-   "videos": [
-    {
-     "videoId": "cP0yg8BM5r4",
-     "title": "Tanker hits a river cruise boat on the Mississippi River in New Orleans",
-     "thumb": "https://i.ytimg.com/vi/cP0yg8BM5r4/hqdefault.jpg",
-     "channel": "AP",
-     "lean": 0,
-     "label": "Center"
-    },
-    {
-     "videoId": "T9YUz-yeW1A",
-     "title": "All accounted for after tanker hits river cruise ship in New Orleans, 32 hospitalized",
-     "thumb": "https://i.ytimg.com/vi/T9YUz-yeW1A/hqdefault.jpg",
-     "channel": "CBS News",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
+   "videos": []
   },
   {
-   "title": "FAA grounds all flights across U.S. due to telecommunications outage",
-   "summary": "The Federal Aviation Administration grounded all flights across the U.S. Friday due to telecommunications issues and for \"extraordinary circumstances\" and \"reasons of safety,\" snarling thousands of air travelers nationwide.",
-   "category": "Economy",
+   "title": "SpaceX Aims For Historic First In Daring Starship Recovery Attempt",
+   "summary": "SpaceX is preparing for a historic first with the launch and retrieval of the largest and most powerful rocket ever built. Starship Flight 15 is set to take off on Friday from Starbase in South Texas in a monumental attempt to catch both stages of the rocket on its return to Eart",
+   "category": "Science",
    "leans": [
+    -1,
     0,
-    1,
     2
    ],
-   "span": 2,
-   "n_sources": 4,
+   "span": 3,
+   "n_sources": 6,
    "balance": {
-    "l": 0,
+    "l": 3,
     "c": 2,
-    "r": 2
+    "r": 1
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "Al Jazeera",
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "SpaceX historic test flight takes off",
+     "url": "https://www.nbcnews.com/nightly-news/video/spacex-historic-test-flight-takes-off-273485893908"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "SpaceX launches first-of-its-kind Starship test flight",
+     "url": "https://www.cbsnews.com/news/spacex-launches-starship-flight-rocket/"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "SpaceX's Starship soars into orbit after booster malfunction thwarts double catch attempt",
+     "url": "https://www.pbs.org/newshour/science/spacexs-starship-soars-into-orbit-after-booster-malfunction-thwarts-double-catch-attempt"
+    },
+    {
+     "name": "BBC News",
      "lean": 0,
      "label": "Center",
-     "title": "FAA grounds all fights across the US over ‘telecommunication outage’",
-     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/13/faa-grounds-all-fights-across-the-us-over-telecommunication?traffic_source=rss"
+     "title": "Setback for SpaceX Starship rocket's double-catch test",
+     "url": "https://www.bbc.co.uk/news/articles/ckregdgnl0xpo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "SpaceX launches Starship in key test flight of massive rocket",
+     "url": "https://www.cnbc.com/2026/11/13/spacex-launches-starship-in-key-test-flight-of-massive-rocket.html"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "SpaceX Aims For Historic First In Daring Starship Recovery Attempt",
+     "url": "https://www.dailywire.com/news/spacex-aims-for-historic-first-in-daring-starship-recovery-attempt"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Why the left and right are both cheering Jensen Huang’s downfall",
+   "summary": "Former Nvidia CEO Jensen Huang’s sudden downfall is in a sense shocking, considering his wealth, global fame, and role leading what was until recently the world’s most valuable company. But Huang’s immense influence in Washington — and particularly in President Donald Trump’s Was",
+   "category": "Politics",
+   "leans": [
+    -2,
+    -1,
+    0,
+    1
+   ],
+   "span": 3,
+   "n_sources": 5,
+   "balance": {
+    "l": 2,
+    "c": 2,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Why the left and right are both cheering Jensen Huang’s downfall",
+     "url": "https://www.vox.com/politics/510820/jensen-huang-nvidia-critics-hawks-populists-ai-safety"
+    },
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Jensen Huang is out. What now?",
+     "url": "https://www.vox.com/podcasts/510560/jensen-huang-nvidia-ceo-china-spying-ai-national-security"
+    },
+    {
+     "name": "Politico",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Jensen Huang’s Washington fallout",
+     "url": "https://www.politico.com/video/2026/11/13/jensen-huangs-washington-fallout-2229409"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Nvidia is done with Jensen Huang. The fallout in Washington is just beginning",
+     "url": "https://www.cnbc.com/2026/11/13/nvidia-jensen-huang-washington-congress.html"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "After Jensen Huang’s exit, what top financial advisors are doing with Nvidia: Exclusive CNBC poll",
+     "url": "https://www.cnbc.com/2026/11/13/nvidia-stock-advisors-jensen-huang-exit-exclusive-poll.html"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Jensen Huang Built the AI Meme Machine. Now It's Turning on Him",
+     "url": "https://www.newsweek.com/jensen-huang-nvidia-resignation-ai-memes-deepfakes-12714595"
+    },
+    {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump’s People May Have to Answer for Jensen Huang",
+     "url": "https://www.nationalreview.com/article/trump-s-people-may-have-to-answer-for-jensen-huang"
+    },
+    {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "The Week: Jensen Huang, Honeytrapped",
+     "url": "https://www.nationalreview.com/article/the-week-jensen-huang-honeytrapped"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Update to network connecting air traffic control system led to outage before ground stop, sources ay",
+   "summary": "An update to the private communications network that connects America's air traffic control system caused the system to reboot, leading to a crash and a communications outage, multiple sources told CBS News. Lindsey Reiser anchors continuing coverage.",
+   "category": "General",
+   "leans": [
+    -1,
+    0,
+    2
+   ],
+   "span": 3,
+   "n_sources": 4,
+   "balance": {
+    "l": 1,
+    "c": 2,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Update to network connecting air traffic control system led to outage before ground stop, sources ay",
+     "url": "https://www.cbsnews.com/video/update-to-network-connecting-air-traffic-control-system-led-to-outage-before-ground-stop-sources-ay/"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "FAA grounds departing flights nationwide, citing air traffic communication system outage",
+     "url": "https://www.cnbc.com/2026/11/13/faa-ground-stop.html"
     },
     {
      "name": "Al Jazeera",
@@ -573,20 +935,6 @@
      "label": "Center",
      "title": "FAA grounds US flights nationwide after ‘communication issue’",
      "url": "https://www.aljazeera.com/news/2026/11/13/us-grounds-all-flights-after-communication-issue?traffic_source=rss"
-    },
-    {
-     "name": "The Christian Science Monitor",
-     "lean": 0,
-     "label": "Center",
-     "title": "FAA grounds flights nationwide, citing communications outage",
-     "url": "https://www.csmonitor.com/Business/2026/1113/faa-nationwide-ground-stop-airlines?icid=rss"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "FAA grounds all flights across U.S. due to telecommunications outage",
-     "url": "https://www.washingtontimes.com/news/2026/nov/13/faa-grounds-flights-across-us-due-telecommunications-outage/"
     },
     {
      "name": "Newsmax",
@@ -599,24 +947,24 @@
    "factchecks": [],
    "videos": [
     {
-     "videoId": "ySssh9si5x4",
-     "title": "FAA grounds all flights across the U.S. due to air traffic control communications problems",
-     "thumb": "https://i.ytimg.com/vi/ySssh9si5x4/hqdefault.jpg",
-     "channel": "AP",
+     "videoId": "qDQuw_SAb-s",
+     "title": "US ground stop: Mullin says it is a telecoms outage, not another 9/11, as FAA grounds flights",
+     "thumb": "https://i.ytimg.com/vi/qDQuw_SAb-s/hqdefault.jpg",
+     "channel": "Al Jazeera",
      "lean": 0,
      "label": "Center"
     }
    ]
   },
   {
-   "title": "New York Republican says Stephen Miller can leverage MAGA reputation to cut immigration deal",
-   "summary": "Rep. Nick LaLota (R-NY) this week pushed back against the idea that President Donald Trump’s move to name Stephen Miller his White House chief of staff put a possible immigration deal at risk. As dismal results trickled in for Republicans on election night last week, Trump first ",
+   "title": "Rep. Lauren Boebert, conservative firebrand from Colorado, loses her race for re-election",
+   "summary": "The Colorado Republican changed to a more conservative district after a close re-election call in 2022. But this year’s blue tsunami has swept her out of office, NBC News projects.",
    "category": "Politics",
    "leans": [
     -1,
-    1
+    2
    ],
-   "span": 2,
+   "span": 3,
    "n_sources": 2,
    "balance": {
     "l": 1,
@@ -626,54 +974,426 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "PBS NewsHour",
+     "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "In his words: Stephen Miller is an immigration hardliner and a bombastic critic of Democrats",
-     "url": "https://www.pbs.org/newshour/politics/in-his-words-stephen-miller-is-an-immigration-hardliner-and-a-bombastic-critic-of-democrats"
+     "title": "Rep. Lauren Boebert, conservative firebrand from Colorado, loses her race for re-election",
+     "url": "https://www.nbcnews.com/politics/2026-election/rep-lauren-boebert-conservative-firebrand-colorado-loses-race-re-elect-rcna607652"
     },
     {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "New York Republican says Stephen Miller can leverage MAGA reputation to cut immigration deal",
-     "url": "https://www.washingtonexaminer.com/policy/immigration/4803207/nick-lalota-stephen-miller-leverage-reputation-immigration-deal/"
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Lauren Boebert Loses Reelection Bid Years After Fleeing To Redder District",
+     "url": "https://dailycaller.com/2026/11/13/lauren-boebert-loses-eileen-laubacher-colorado"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Ex-CIA chief’s son charged with ‘transportation of child pornography’",
-   "summary": "The son of former CIA chief John Brennan was arrested on Friday and charged with “transportation of child pornography,” according to an affidavit signed by a special agent with the FBI. Kyle Brennan, 40, was arrested in Warrenton, Virginia, following investigators uncovering a tw",
+   "title": "The GOP Midterm Loss Is Not A Mandate For Amnesty",
+   "summary": "Republicans want to use the midterms as a pretext for an 'immigration deal' that would reward big business with cheap foreign labor.",
    "category": "World",
    "leans": [
-    1,
+    -1,
     2
    ],
+   "span": 3,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Democrats strategize on how to deliver on midterm mandate",
+     "url": "https://www.cbsnews.com/news/democrats-post-election-voters-economy-trump-factor/"
+    },
+    {
+     "name": "The Federalist",
+     "lean": 2,
+     "label": "Right",
+     "title": "The GOP Midterm Loss Is Not A Mandate For Amnesty",
+     "url": "https://thefederalist.com/2026/11/13/the-gop-midterm-loss-is-not-a-mandate-for-amnesty/?utm_source=rss&utm_medium=rss&utm_campaign=the-gop-midterm-loss-is-not-a-mandate-for-amnesty"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Is this the end of the Electoral College?",
+   "summary": "This story appeared in Today, Explained, a daily newsletter that helps you understand the most compelling news and stories of the day. Subscribe here. I don’t know how much time you spend in the more feverish right-wing corners of the internet, but some conservative commentators ",
+   "category": "General",
+   "leans": [
+    -2,
+    1
+   ],
+   "span": 3,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Is this the end of the Electoral College?",
+     "url": "https://www.vox.com/today-explained-newsletter/510466/national-popular-vote-compact-2026"
+    },
+    {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "How the Electoral College Dies",
+     "url": "https://www.nationalreview.com/article/how-the-electoral-college-dies"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Slate SoundBites for November 13, 2026",
+   "summary": "Build your answer from the sound up with our new game, SoundBites!",
+   "category": "General",
+   "leans": [
+    -2,
+    1
+   ],
+   "span": 3,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Slate",
+     "lean": -2,
+     "label": "Left",
+     "title": "Slate SoundBites for November 13, 2026",
+     "url": "https://slate.com/life/2026/11/slate-soundbites-for-november-13-2026.html?via=rss"
+    },
+    {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Cartoons of the Day: November 13, 2026",
+     "url": "https://www.nationalreview.com/article/cartoons-of-the-day-november-13-2026-1"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Do the Dems need new leadership?",
+   "summary": "This story appeared in Today, Explained, a daily newsletter that helps you understand the most compelling news and stories of the day. Subscribe here. Hi readers, happy Friday! Today, we’re saying farewell — for now — to “Democrats in array.” Not quite two weeks after winning the",
+   "category": "Politics",
+   "leans": [
+    -2,
+    0
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Do the Dems need new leadership?",
+     "url": "https://www.vox.com/today-explained-newsletter/510728/democrats-new-leadership"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Senate Dems break 32-year drought on leadership challenges",
+     "url": "https://www.axios.com/2026/11/13/senate-democrats-van-hollen-schumer-election"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Microsoft scrambles to recover after massive outage",
+   "summary": "The company says it doesn’t have a timeline for a full recovery and blamed a “technical issue” for the outage, saying it was not the result of a cyberattack or artificial intelligence. NBC News’ Christine Romans reports.",
+   "category": "Tech",
+   "leans": [
+    -1,
+    0
+   ],
    "span": 1,
-   "n_sources": 4,
+   "n_sources": 7,
+   "balance": {
+    "l": 4,
+    "c": 3,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Microsoft scrambles to recover after massive outage",
+     "url": "https://www.nbcnews.com/nightly-news/video/microsoft-scrambles-to-recover-after-massive-outage-273485381533"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Microsoft seeing \"continued recovery\" amid major worldwide outage",
+     "url": "https://www.cbsnews.com/news/microsoft-battling-major-outage/"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "What to know about Microsoft's outage and why it takes so long to restore email services",
+     "url": "https://www.pbs.org/newshour/science/what-to-know-about-microsofts-outage-and-why-it-takes-so-long-to-restore-email-services"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Microsoft Struggles to Repair Worldwide Outage. Here's What You Need to Know",
+     "url": "https://time.com/article/2026/11/13/microsoft-outage-worldwide-disruption-teams-outlook-emails/"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Microsoft 'deeply sorry' for global outage after almost 24 hours of disruption",
+     "url": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Why is Microsoft's outage lasting so long and will emails be lost?",
+     "url": "https://www.bbc.co.uk/news/articles/cwvg238zrnm5o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Watch: How a server outage took down Microsoft Teams and Outlook",
+     "url": "https://www.bbc.co.uk/news/videos/cqzjr903n01po?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Microsoft apologizes for massive outage that took down Outlook and other 365 services",
+     "url": "https://www.cnbc.com/2026/11/12/microsoft-outage-outlook-aws-google.html"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Microsoft services begin recovering after global outage",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/14/microsoft-services-begin-recovering-after-global-outage?traffic_source=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "m263TSl9Fys",
+     "title": "Microsoft services begin recovering after global outage | AJ Shorts",
+     "thumb": "https://i.ytimg.com/vi/m263TSl9Fys/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "Trump administration delays Medicaid work requirement enforcement",
+   "summary": "The Trump administration is delaying the implementation of controversial Medicaid work requirements, giving states an extra six months to prepare. The work requirements, which Republicans established in the One Big Beautiful Bill Act last year, will still technically go into effe",
+   "category": "Politics",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 2,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump administration delays Medicaid work requirements by six months",
+     "url": "https://www.nbcnews.com/politics/politics-news/trump-administration-delays-medicaid-work-requirements-six-months-rcna609256"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump administration delays Medicaid work requirement enforcement",
+     "url": "https://thehill.com/policy/healthcare/6220069-trump-delays-medicaid-work-requirements/"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump administration delays Medicaid work requirements by six months",
+     "url": "https://www.axios.com/2026/11/13/medicaid-work-requirements-six-month-delay"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Did Payments by Huang’s Nvidia Influence Trump’s Policy on Chip Exports to China?",
+   "summary": "While correlation doesn’t necessarily mean causation, there is an undeniable correlation between Nvidia’s payments and Trump’s loosening of export restrictions.",
+   "category": "World",
+   "leans": [
+    0,
+    1
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump doesn’t plan to raise Nvidia, spy issue during China trip: U.S. officials",
+     "url": "https://www.cnbc.com/2026/11/13/trump-nvidia-huang-china.html"
+    },
+    {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Did Payments by Huang’s Nvidia Influence Trump’s Policy on Chip Exports to China?",
+     "url": "https://www.nationalreview.com/article/did-payments-by-huang-s-nvidia-influence-trump-s-policy-on-chip-exports-to-china"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Rebuilding a World That Never Existed",
+   "summary": "Attempts to reconstruct the past might be doomed to fail, but that doesn’t mean they aren’t noble, or even beautiful.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Rebuilding a World That Never Existed",
+     "url": "https://www.theatlantic.com/newsletters/2026/11/books-briefing-writers-reconstruct-past-lamela/689429/?utm_source=feed"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Fatih Birol: The Energy World Will Never Be the Same As Before the Iran War",
+     "url": "https://time.com/article/2026/11/13/fatih-birol-iran-war-energy-cop31/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Pope Leo cheered on return to Peru city where he served as bishop",
+   "summary": "An estimated 1.5 million people have welcomed Pope Leo XIV back to the city in Peru where he once served as bishop.",
+   "category": "General",
+   "leans": [
+    0
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 2,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "The Peruvian city that has embraced Pope Leo as one of its own",
+     "url": "https://www.bbc.co.uk/news/articles/cwg7l8n7dx5mo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Pope Leo cheered on return to Peru city where he served as bishop",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/13/pope-leo-cheered-on-return-to-peru-city-where-he-served-as-bishop?traffic_source=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "3exoFbEV3_c",
+     "title": "Pope Leo cheered on return to Peru city where he served as bishop",
+     "thumb": "https://i.ytimg.com/vi/3exoFbEV3_c/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "Ex-CIA Director John Brennan’s Son Arrested For Alleged Possession Of Child Sexual Abuse Material",
+   "summary": "Editor’s note: This article addresses the alleged possession and distribution of sexually explicit images of children. The son of former CIA Director John Brennan was arrested Friday for alleged possession of child sexual abuse material, otherwise known as child pornography. The ",
+   "category": "General",
+   "leans": [
+    2
+   ],
+   "span": 0,
+   "n_sources": 2,
    "balance": {
     "l": 0,
     "c": 0,
-    "r": 4
+    "r": 2
    },
    "blindspot": "left",
    "sources": [
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Ex-CIA chief’s son charged with ‘transportation of child pornography’",
-     "url": "https://www.washingtonexaminer.com/news/justice/4803505/ex-cia-chief-son-kyle-brennan-charged-transportation-child-pornography/"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Son of ex-CIA Director John Brennan charged with child pornography",
-     "url": "https://www.washingtontimes.com/news/2026/nov/13/son-ex-cia-director-john-brennan-charged-child-pornography/"
-    },
     {
      "name": "The Federalist",
      "lean": 2,
@@ -693,377 +1413,34 @@
    "videos": []
   },
   {
-   "title": "FAA imposes nationwide ground stop on all flights",
-   "summary": "The Federal Aviation Administration halted all flight departures nationwide Friday afternoon due to a “rolling frequency outage” affecting facilities that monitor planes in the air. The cause remained unclear Friday, and Homeland Security Secretary Markwayne Mullin said Friday ev",
-   "category": "Economy",
-   "leans": [
-    1,
-    2
-   ],
-   "span": 1,
-   "n_sources": 4,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 4
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "FAA imposes nationwide ground stop on all flights",
-     "url": "https://www.washingtonexaminer.com/policy/infrastructure/4802941/faa-imposes-nationwide-ground-stop-on-all-flights/"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "FAA expanded AI air traffic tool to all centers days before nationwide ground stop",
-     "url": "https://www.washingtontimes.com/news/2026/nov/13/faa-expanded-ai-air-traffic-tool-centers-days-nationwide-ground-stop/"
-    },
-    {
-     "name": "The Daily Wire",
-     "lean": 2,
-     "label": "Right",
-     "title": "FAA Orders Nationwide Ground Stop At All U.S. Airports",
-     "url": "https://www.dailywire.com/news/faa-orders-nationwide-ground-stop-at-all-u-s-airports"
-    },
-    {
-     "name": "Daily Caller",
-     "lean": 2,
-     "label": "Right",
-     "title": "FAA Issues Nationwide Ground Stop, Halting All US Flight Departures",
-     "url": "https://dailycaller.com/2026/11/13/faa-nationwide-ground-stop-us-flight-departures-sean-duffy"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Jensen Huang Built the AI Meme Machine. Now It's Turning on Him",
-   "summary": "Viral AI-generated memes parody Jensen Huang after his Nvidia resignation, using technology he helped bring into the mainstream.",
-   "category": "Economy",
-   "leans": [
-    0,
-    1
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Jensen Huang Built the AI Meme Machine. Now It's Turning on Him",
-     "url": "https://www.newsweek.com/jensen-huang-nvidia-resignation-ai-memes-deepfakes-12714595"
-    },
-    {
-     "name": "National Review",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "The Week: Jensen Huang, Honeytrapped",
-     "url": "https://www.nationalreview.com/article/the-week-jensen-huang-honeytrapped"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "MAGA firebrand Rep. Lauren Boebert of Colorado loses race",
-   "summary": "Republican Rep. Lauren Boebert has lost her race in Colorado's reddest district.",
+   "title": "Nobody wants to run against Hakeem Jeffries for speaker",
+   "summary": "The movement to prevent House Democratic Leader Hakeem Jeffries (D-N.Y.) from becoming speaker is struggling to get off the ground due to a fatal flaw: Nobody else wants the job. Why it matters: Despite the phone calls and online petitions, the demands from progressive holdouts, ",
    "category": "Politics",
    "leans": [
-    1,
-    2
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "MAGA firebrand Rep. Lauren Boebert of Colorado loses race",
-     "url": "https://www.washingtontimes.com/news/2026/nov/13/maga-firebrand-rep-lauren-boebert-colorado-loses-race/"
-    },
-    {
-     "name": "Daily Caller",
-     "lean": 2,
-     "label": "Right",
-     "title": "Lauren Boebert Loses Reelection Bid Years After Fleeing To Redder District",
-     "url": "https://dailycaller.com/2026/11/13/lauren-boebert-loses-eileen-laubacher-colorado"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Ousted Paraguay president under house arrest after banking crisis leaves 60% of country unable to access accounts",
-   "summary": "Santiago Peña was detained minutes after he was impeached by Congress, as protesters took to the streets demanding answers after the suspension of the Ueno bank Paraguay’s rightwing president has been placed under house arrest minutes after he was impeached by Congress, amid a se",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 3,
-   "balance": {
-    "l": 3,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": "right",
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Ousted Paraguayan president appears before prosecutors",
-     "url": "https://www.npr.org/2026/11/07/nx-s1-6033373/paraguay-president-ousted-bank-collapse"
-    },
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Ousted Paraguay president under house arrest after banking crisis leaves 60% of country unable to access accounts",
-     "url": "https://www.theguardian.com/world/2026/nov/07/ousted-paraguay-president-under-house-arrest-after-banking-crisis-leaves-60-of-country-unable-to-access-accounts"
-    },
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Paraguay’s president quits after millions of people’s savings frozen in bank crisis",
-     "url": "https://www.theguardian.com/world/2026/nov/05/paraguay-president-santiago-pena-resigns"
-    },
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Paraguay's ousted president faces prosecutors after his removal over bank collapse",
-     "url": "https://www.pbs.org/newshour/world/paraguays-ousted-president-faces-prosecutors-after-his-removal-over-bank-collapse"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Six people killed, at least a dozen injured in shooting at main market square of Krakow, Poland",
-   "summary": "Authorities in Poland are investigating a shooting that left six people dead and at least a 15 injured in the Main Market Square in Krakow, a cultural center of the historic city, according to officials.",
-   "category": "Economy",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 3,
-   "balance": {
-    "l": 3,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": "right",
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Six people killed, at least a dozen injured in shooting at main market square of Krakow, Poland",
-     "url": "https://www.nbcnews.com/world/europe/poland-krakow-shooting-rcna608001"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Mass shooting in Polish market leaves at least 6 dead, 15 injured",
-     "url": "https://www.cbsnews.com/news/shooting-main-market-square-krakow-poland/"
-    },
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "At least 6 killed, several injured in shooting at Polish market square: Police",
-     "url": "https://abcnews.com/International/5-killed-injured-shooting-polish-market-square/story?id=137941731"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "The ‘slam dunk’ that wasn’t: Promising cholesterol drug fails to prevent heart attacks or stroke",
-   "summary": "An experimental drug that held great promise in driving down a dangerous form of cholesterol didn’t show any measurable impact on heart attack or stroke in a clinical trial.",
-   "category": "Health",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 2,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": "right",
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "A promising new medicine against heart disease fails unexpectedly",
-     "url": "https://www.npr.org/2026/11/07/nx-s1-6026379/lpa-drug-lipoproteina-heart-attack"
-    },
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "The ‘slam dunk’ that wasn’t: Promising cholesterol drug fails to prevent heart attacks or stroke",
-     "url": "https://www.nbcnews.com/health/health-news/cholesterol-drug-lipoprotein-a-fails-heart-attacks-stroke-trial-rcna607237"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Supreme Court takes up challenge to Trump’s southern border asylum ban",
-   "summary": "The Supreme Court announced Friday it will hear a case over the legality of President Donald Trump’s January 2025 executive order that largely barred people from applying for asylum at the southern border. The high court will hear Mullin v. Refugee and Immigrant Center for Educat",
-   "category": "World",
-   "leans": [
-    1
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Supreme Court takes up challenge to Trump’s southern border asylum ban",
-     "url": "https://www.washingtonexaminer.com/news/supreme-court/4803086/supreme-court-takes-up-challenge-trump-southern-border-asylum-ban/"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Supreme Court to hear case challenging Trump's asylum ban",
-     "url": "https://www.washingtontimes.com/news/2026/nov/13/supreme-court-hear-case-challenging-trumps-asylum-ban/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Democrats Clash Over Plan to Confront Trump",
-   "summary": "Democrats are headed for an internal fight over how to confront President Donald Trump when they take control of Congress in January, with the far left pushing a massive spending and tax package designed to force a showdown with the White House.",
-   "category": "Politics",
-   "leans": [
-    2
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Democrats Clash Over Plan to Confront Trump",
-     "url": "https://www.newsmax.com/newsfront/democrats-donald-trump-congress/2026/11/13/id/1276247"
-    },
-    {
-     "name": "Daily Caller",
-     "lean": 2,
-     "label": "Right",
-     "title": "Zombie Amnesty Plan Shambles On In Lame Duck Congress Amid Trump Floating Deal With Democrats",
-     "url": "https://dailycaller.com/2026/11/13/amnesty-push-lives-on-in-lame-duck-congress-as-trump-floats-deal-with-democrats-glenn-thompson-mullin-illegal-immigrants-agriculture"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  Senator-elect Abdul El-Sayed’s grandparents react to historic win in Michigan",
-   "summary": "Jan and Judy Johnson, grandparents of Sen.-elect Abdul El-Sayed, join ABC News Live to reflect on his Senate victory, their blended interfaith family and the traditions that bring them together.",
-   "category": "World",
-   "leans": [
-    -1
+    0
    ],
    "span": 0,
    "n_sources": 1,
    "balance": {
-    "l": 1,
-    "c": 0,
+    "l": 0,
+    "c": 1,
     "r": 0
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  Senator-elect Abdul El-Sayed’s grandparents react to historic win in Michigan",
-     "url": "https://abcnews.com/video/137925710/"
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Nobody wants to run against Hakeem Jeffries for speaker",
+     "url": "https://www.axios.com/2026/11/13/jeffries-speaker-house-democrats-pressley-raskin"
     }
    ],
    "factchecks": [
     {
      "org": "Snopes",
-     "title": "Uncovering the facts behind 10 Abdul El-Sayed rumors",
-     "link": "https://www.snopes.com/collections/el-sayed-rumors-collection/"
-    }
-   ],
-   "videos": []
-  },
-  {
-   "title": "Sen.-elect Hamilton reflects on why Kansas voters chose a Democrat for U.S. Senate",
-   "summary": "Democrats' midterm wins have reached red states across the country, including Kansas, which has not sent a Democrat to the U.S. Senate since 1932. That will soon change after Rev. Adam Hamilton, who leads the largest United Methodist church in the country, defeated Republican inc",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Sen.-elect Hamilton reflects on why Kansas voters chose a Democrat for U.S. Senate",
-     "url": "https://www.pbs.org/newshour/show/sen-elect-hamilton-reflects-on-why-kansas-voters-chose-a-democrat-for-u-s-senate"
-    }
-   ],
-   "factchecks": [
-    {
-     "org": "FactCheck.org",
-     "title": "Talarico Ad Omits Details of Crystal Mason’s Illegal Voting Case",
-     "link": "https://www.factcheck.org/2026/10/talarico-ad-omits-details-of-crystal-masons-illegal-voting-case/"
+     "title": "Did Hakeem Jeffries threaten to withhold committee assignments from those against his bid for House speaker?",
+     "link": "https://www.snopes.com/news/2026/11/12/jeffries-withhold-committee/"
     }
    ],
    "videos": []
@@ -1102,8 +1479,41 @@
    "videos": []
   },
   {
-   "title": "Democrats plan to widen their probes of fatal ICE shootings",
-   "summary": "The killings of Renee Good and Alex Pretti during the ICE surge in Minneapolis last winter was a pivotal moment for the country. After Democrats' sweeping wins this week, their deaths at the hands of immigration agents will likely be the targets of renewed investigations.",
+   "title": "Trump must clean house before Democrats’ ‘investigation’ assault begins",
+   "summary": "Corruption was a top voter concern in the midterms, so even the appearance of impropriety can further damage Trump's team.",
+   "category": "Politics",
+   "leans": [
+    1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump must clean house before Democrats’ ‘investigation’ assault begins",
+     "url": "https://nypost.com/2026/11/13/opinion/trump-must-clean-house-before-democrats-investigation-assault-begins/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "FactChecking Trump’s Post-Election ‘60 Minutes’ Interview",
+     "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "DHS head Markwayne Mullin says there is not a threat to the U.S. amid FAA ground stop",
+   "summary": "Department of Homeland Security Secretary Markwayne Mullin spoke to at the White House on Friday afternoon after the FAA issues a total ground stop. NPR was there for the briefing.",
    "category": "Politics",
    "leans": [
     -1
@@ -1121,97 +1531,16 @@
      "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Democrats plan to widen their probes of fatal ICE shootings",
-     "url": "https://www.npr.org/2026/11/07/nx-s1-6029659/democrats-investigate-fatal-ice-shootings"
+     "title": "DHS head Markwayne Mullin says there is not a threat to the U.S. amid FAA ground stop",
+     "url": "https://www.npr.org/2026/11/13/nx-s1-6040418/dhs-head-markwayne-mullin-says-there-is-not-a-threat-to-the-u-s-amid-faa-ground-stop"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Perspective: Simon Winchester was here to tell a story",
-   "summary": "British American reporter and author Simon Winchester died of a heart attack Nov. 3. We take a moment to remember his long career, which included covering Bloody Sunday and Watergate.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Perspective: Simon Winchester was here to tell a story",
-     "url": "https://www.npr.org/2026/11/07/nx-s1-6023225/perspective-simon-winchester-was-here-to-tell-a-story"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "This teen boy set out to get people talking about periods. He's now a Diana honoree",
-   "summary": "This year's the Princess Diana honor roll highlights 198 inspiring young activists and advocates — including an 18-year-old guy in India who founded Team Period.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "This teen boy set out to get people talking about periods. He's now a Diana honoree",
-     "url": "https://www.npr.org/2026/11/07/g-s1-152225/princess-diana-honor-menstruation-stigma"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "An unexpected activist emerged to help block a $5 billion data center in Maryland",
-   "summary": "Thousands across the U.S. have gotten involved to oppose data centers. One is a Maryland woman who'd been evicted after a pay cut and became a leader of a community effort that blocked a vast project.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "An unexpected activist emerged to help block a $5 billion data center in Maryland",
-     "url": "https://www.npr.org/2026/11/07/nx-s1-6007770/data-centers-activist-moratorium"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "The economy propelled Democrats to victory. What can they actually do about it?",
-   "summary": "The party's success was fueled by frustrations over the cost of living. But in divided government, they'll face opposition from Republicans in Congress and a president vowing to use his veto pen.",
+   "title": "GOP state officials push to revive Trump's mail voting restrictions for 2028 election",
+   "summary": "Some Republican state officials are reviving a bid for mail-in voting restrictions for the 2028 election by appealing a court order blocking the Postal Service from carrying out a revised ballot rule.",
    "category": "Politics",
    "leans": [
     -1
@@ -1229,16 +1558,70 @@
      "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "The economy propelled Democrats to victory. What can they actually do about it?",
-     "url": "https://www.npr.org/2026/11/06/nx-s1-6026662/the-economy-propelled-democrats-to-victory-what-can-they-actually-do-about-it"
+     "title": "GOP state officials push to revive Trump's mail voting restrictions for 2028 election",
+     "url": "https://www.npr.org/2026/11/13/nx-s1-6040409/trump-mail-in-voting"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Israel's Arab-led parties in spotlight after inconclusive election",
-   "summary": "Israel's center-right opposition has a chance to unseat Netanyahu — but backing of Arab-led parties will be key.",
+   "title": "With his challenge to Schumer, Van Hollen forces a debate over Democrats' mandate",
+   "summary": "Democrats say they have a mandate to deliver change, but as the party gets ready to retake the majority in both the House and Senate, there are divides over who should lead it.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "With his challenge to Schumer, Van Hollen forces a debate over Democrats' mandate",
+     "url": "https://www.npr.org/2026/11/13/nx-s1-6040044/dem-senate-leader-fight"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "The government says it will close a beloved D.C. park Sunday. Will a judge step in?",
+   "summary": "Federal judge Ana Reyes grilled the government on Friday about its plans for East Potomac Park, and indicated she could order it to remain open despite President Trump's renovation wishes.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "The government says it will close a beloved D.C. park Sunday. Will a judge step in?",
+     "url": "https://www.npr.org/2026/11/13/nx-s1-6039273/east-po-hearing-nov-13"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "What's Trump's strategy now with Iran? To keep things as they are",
+   "summary": "President Trump says the \"status quo\" is what Gulf Arab allies want as the Iran war hits a stalemate and the U.S. midterms force a pivot from threats of attacks to economic pressure.",
    "category": "World",
    "leans": [
     -1
@@ -1256,43 +1639,16 @@
      "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Israel's Arab-led parties in spotlight after inconclusive election",
-     "url": "https://www.npr.org/2026/11/06/g-s1-152138/israel-election-palestinian-arab-parties"
+     "title": "What's Trump's strategy now with Iran? To keep things as they are",
+     "url": "https://www.npr.org/2026/11/13/g-s1-153578/whats-trumps-strategy-now-with-iran-to-keep-things-as-they-are"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "The incoming class of U.S. senators is full of historic firsts",
-   "summary": "From the first Native American woman elected to the U.S. Senate and the first Muslim who will join the upper chamber to the Senate's first Paralympian, voters elected historic candidates on Tuesday.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "The incoming class of U.S. senators is full of historic firsts",
-     "url": "https://www.npr.org/2026/11/06/nx-s1-6032814/senate-history-election-pappas-andrews-el-sayed"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Trump's global health strategy is emerging. What will the Democratic Congress say?",
-   "summary": "The Trump Administration has ushered in a fundamental shift in the U.S. approach to global health aid. How will the newly elected Democratic Congress weigh in?",
+   "title": "The Trump administration's voter roll crusade could continue",
+   "summary": "Election officials are preparing for the Trump administration's pressure tactics over potential noncitizens on state voter rolls to continue, though recent court rulings pose new obstacles.",
    "category": "Politics",
    "leans": [
     -1
@@ -1310,8 +1666,170 @@
      "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Trump's global health strategy is emerging. What will the Democratic Congress say?",
-     "url": "https://www.npr.org/2026/11/06/nx-s1-6028828/global-health-usaid-trump-democrats-congress"
+     "title": "The Trump administration's voter roll crusade could continue",
+     "url": "https://www.npr.org/2026/11/13/nx-s1-6034016/voter-fraud-search-trump-california"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Does Europe regret its bet on U.S. defense?",
+   "summary": "Europe bet big on American defense technology and they're now paying the price. Years-long backlogs are underway due to production delays and the U.S. own military needs.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Does Europe regret its bet on U.S. defense?",
+     "url": "https://www.npr.org/sections/planet-money/2026/11/13/nx-s1-6039196/does-europe-regret-its-bet-on-u-s-defense"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "How Sen. Chris Van Hollen plans to flex Democratic power on the foreign aid front",
+   "summary": "He's the ranking member of the Senate Foreign Relations Subcommittee that oversees health aid and he's just announced he's running for Majority Leader. He spoke to NPR about his foreign aid vision.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How Sen. Chris Van Hollen plans to flex Democratic power on the foreign aid front",
+     "url": "https://www.npr.org/2026/11/13/g-s1-153350/senator-chris-van-hollen-global-health-development-aid"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Zimbabwean author Simbarashe Kundizeza cleared of using AI to write prize-winning story",
+   "summary": "After a month-long investigation it was concluded that Kundizeza’s story The Blue Fighter, which won the £10,000 Caine prize, was ‘human-written’ The Zimbabwean author Simbarashe Kundizeza has been cleared of using AI to write a prize-winning short story, after the prestigious Ca",
+   "category": "Tech",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Zimbabwean author Simbarashe Kundizeza cleared of using AI to write prize-winning story",
+     "url": "https://www.theguardian.com/books/2026/nov/12/zimbabwean-author-simbarashe-kundizeza-cleared-ai-caine-prize-winning-story"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Lewis Hamilton visits Egypt’s Rafah crossing and Gaza aid facilities",
+   "summary": "Seven-time F1 world champion tours border area and logistics warehouses operated by Egyptian Red Crescent Lewis Hamilton has visited Egypt’s Rafah border crossing with the Gaza Strip to meet organisations sending humanitarian aid to the territory. The seven-time Formula One world",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Lewis Hamilton visits Egypt’s Rafah crossing and Gaza aid facilities",
+     "url": "https://www.theguardian.com/world/2026/nov/10/lewis-hamilton-egypt-rafah-crossing-gaza-aid-facilities"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Collision of two trains in Egypt kills at least seven",
+   "summary": "President orders prompt investigation after one train derails in collision in al-Ayyat about 50km from Cairo Seven people were killed and at least 125 injured when two trains collided on Sunday south of the Egyptian capital, Cairo, officials said. The crash occurred in al-Ayyat d",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Collision of two trains in Egypt kills at least seven",
+     "url": "https://www.theguardian.com/world/2026/nov/08/egypt-two-trains-deadly-collision"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "How African philosophies inspired a new approach to staging film festivals in Manchester",
+   "summary": "See My World, an event highlighting the pan-African thought via film, poetry and dance, builds on momentum sparked by local activists and creatives African philosophies including exploring how lessons from the past can shape the present and near future have inspired a film festiv",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How African philosophies inspired a new approach to staging film festivals in Manchester",
+     "url": "https://www.theguardian.com/news/2026/nov/08/african-philosophies-see-my-world-film-festival-manchester"
     }
    ],
    "factchecks": [],
@@ -1345,8 +1863,8 @@
    "videos": []
   },
   {
-   "title": "ANC faces bruising defeat in South African local elections with 80% of ballots counted",
-   "summary": "Former liberation movement’s share of national vote almost 14 percentage points below 2021 result The African National Congress is on course to suffer a bruising defeat in South Africa’s local elections, with the once dominant party of Nelson Mandela falling to under a third of t",
+   "title": "Storm Charles causes floods and flight cancellations across southern Europe",
+   "summary": "Heavy rain and strong winds have also caused disruption across British Columbia, Canada, over the last week Storm Charles has brought destructive weather to the Iberian peninsula this week, particularly in Portugal and the far south of Spain. Heavy rain and strong south-westerly ",
    "category": "World",
    "leans": [
     -1
@@ -1364,43 +1882,16 @@
      "name": "The Guardian",
      "lean": -1,
      "label": "Lean Left",
-     "title": "ANC faces bruising defeat in South African local elections with 80% of ballots counted",
-     "url": "https://www.theguardian.com/world/2026/nov/06/anc-faces-defeat-south-african-local-elections"
+     "title": "Storm Charles causes floods and flight cancellations across southern Europe",
+     "url": "https://www.theguardian.com/environment/2026/nov/13/storm-charles-floods-flight-cancellations-southern-europe-weather"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "British healthcare worker with Ebola evacuated from DR Congo to UK",
-   "summary": "Patient is ⁠in ​stable condition and will be transferred to a specialist ‘high consequence’ infectious disease unit A British healthcare worker with Ebola is being evacuated from the Democratic Republic of the Congo to the UK for medical treatment, it has been confirmed. “A Briti",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "British healthcare worker with Ebola evacuated from DR Congo to UK",
-     "url": "https://www.theguardian.com/world/2026/nov/04/british-healthcare-worker-ebola-evacuated-drc-to-uk-document-shows"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "ANC faces anger over poor services as South Africans vote in local elections",
-   "summary": "Party expected to get less than a third of the vote amid frustration over water outages and power cuts The African National Congress is on course for a bruising result in South Africa’s local elections on Wednesday as voters go to the polls amid deep discontent over water outages",
+   "title": "Two skulls likely belonging to enslaved people returned to Brazil after Harvard used them in eugenics studies",
+   "summary": "Remains believed to have belonged to Africans or Afro-Brazilians repatriated after being flown back by diplomats Two skulls, including that of a man believed to have taken part in Brazil’s greatest slave revolt but whose remains were taken to the United States and used in racist ",
    "category": "World",
    "leans": [
     -1
@@ -1418,70 +1909,16 @@
      "name": "The Guardian",
      "lean": -1,
      "label": "Lean Left",
-     "title": "ANC faces anger over poor services as South Africans vote in local elections",
-     "url": "https://www.theguardian.com/world/2026/nov/04/anc-south-africa-local-elections-water-outages-power-cuts"
+     "title": "Two skulls likely belonging to enslaved people returned to Brazil after Harvard used them in eugenics studies",
+     "url": "https://www.theguardian.com/news/2026/nov/11/harvard-skulls-repatriated-brazil"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Sinkholes, scarred land and scapegoats: the scourge of illegal gold mining in Johannesburg",
-   "summary": "There is no end in sight for the drivers of illegal mining, while police action appears ineffective Cora Bailey has been encountering illegal miners ever since she first started treating injured animals in the townships around Roodepoort, west of Johannesburg, in 1991. But as the",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Sinkholes, scarred land and scapegoats: the scourge of illegal gold mining in Johannesburg",
-     "url": "https://www.theguardian.com/business/2026/oct/30/sinkholes-scarred-land-scapegoats-illegal-gold-mining-johannesburg"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Sebastián Lelio, director of A Fantastic Woman and Gloria, dies aged 52",
-   "summary": "The Chilean film-maker, whose films starred Florence Pugh, Julianne Moore and Rachel Weisz, died at his home in Santiago Chilean film-maker Sebastián Lelio has died at the age of 52. He was best known for the Oscar-winning trans drama A Fantastic Woman and his English-language fi",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Sebastián Lelio, director of A Fantastic Woman and Gloria, dies aged 52",
-     "url": "https://www.theguardian.com/film/2026/nov/06/sebastian-lelio-chilean-director-dies"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Flávio Bolsonaro battles to remain relevant as he speaks at rightwing conference at Mar-a-Lago",
-   "summary": "Far-right politician addresses Conservative Political Action Conference and makes unsubstantiated claims about election fraud Flávio Bolsonaro, the far-right politician who lost Brazil’s presidential election last month, has insisted his defeat is not “the end for Brazil” as he b",
+   "title": "Ex-member of radical Marxist group scales balcony, escapes house arrest in Argentina",
+   "summary": "Leonardo Bertulazzi, 74, awaiting extradition to Italy, reportedly used harness to flee custody A 74-year-old former member of Italy ’s radical Marxist group the Red Brigades has escaped from house arrest in Argentina , the country’s security ministry confirmed on Wednesday, afte",
    "category": "Politics",
    "leans": [
     -1
@@ -1499,16 +1936,16 @@
      "name": "The Guardian",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Flávio Bolsonaro battles to remain relevant as he speaks at rightwing conference at Mar-a-Lago",
-     "url": "https://www.theguardian.com/world/2026/nov/06/flavio-bolsonaro-upbeat-brazil-election-us"
+     "title": "Ex-member of radical Marxist group scales balcony, escapes house arrest in Argentina",
+     "url": "https://www.theguardian.com/world/2026/nov/11/red-brigades-leonardo-bertulazzi-escapes-house-arrest-argentina"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Low pressure in US midwest brings unseasonable heat to New York and Boston",
-   "summary": "Further south this week, severe thunderstorms affected midterms voting in Florida, Oklahoma and Colorado Despite the rapid descent into autumn in the northern hemisphere, parts of eastern North America have experienced an exceptionally late taste of summer in recent days. Tempera",
+   "title": "Argentinian lawyer mocks UK’s sovereignty claim in Falklands oil case",
+   "summary": "Lawyer says Britain wrong to believe in historic doctrine that crown has sovereignty over parts of oceans Britain should not be permitted to act as a 17th-century colonial power treating the waters around the Falkland Islands as a Dominium maris Britannici , Argentina has told an",
    "category": "General",
    "leans": [
     -1
@@ -1526,16 +1963,43 @@
      "name": "The Guardian",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Low pressure in US midwest brings unseasonable heat to New York and Boston",
-     "url": "https://www.theguardian.com/environment/2026/nov/06/new-york-boston-us-weather-tracker"
+     "title": "Argentinian lawyer mocks UK’s sovereignty claim in Falklands oil case",
+     "url": "https://www.theguardian.com/uk-news/2026/nov/11/argentine-lawyer-mocks-uk-sovereignty-claim-in-falklands-oil-case"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "New Zealand faces weeks of uncertainty with election ‘too close to call’",
-   "summary": "National party will be largest in parliament but ultimate shape of next government won’t be settled for some time New Zealand could be facing a weeks-long wait to know the shape of its next government, after its nail-biting election failed to hand a decisive victory to either the",
+   "title": "Killing of journalist underscores deteriorating conditions in Ecuador",
+   "summary": "Tomás Beltrán was shot dead amid gang warfare that has turned Latin American country into one of its most violent Tomás Beltrán was manoeuvring his car into his garage on Sunday night when the Ecuadorian journalist was shot dead. Beltrán ran a Facebook page with news about Calcet",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Killing of journalist underscores deteriorating conditions in Ecuador",
+     "url": "https://www.theguardian.com/world/2026/nov/11/ecuador-journalist-killing"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Teen prodigy, Netflix star, prisoner: the story of Hong Kong dissident Joshua Wong – podcast",
+   "summary": "Pro-democracy activist Nathan Law and journalist Danny Vincent on the sentencing of the iconic Hong Kong campaigner Joshua Wong to another 10 years in prison. Send your comments and questions to tif.questions@theguardian.com He has been leading protests since he was 14. Joshua Wo",
    "category": "Politics",
    "leans": [
     -1
@@ -1553,259 +2017,16 @@
      "name": "The Guardian",
      "lean": -1,
      "label": "Lean Left",
-     "title": "New Zealand faces weeks of uncertainty with election ‘too close to call’",
-     "url": "https://www.theguardian.com/world/2026/nov/07/new-zealand-election-too-close-to-call-vote-count"
+     "title": "Teen prodigy, Netflix star, prisoner: the story of Hong Kong dissident Joshua Wong – podcast",
+     "url": "https://www.theguardian.com/news/audio/2026/nov/13/teen-prodigy-netflix-star-prisoner-the-story-of-hong-kong-dissident-joshua-wong-podcast"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "New Zealand election coalition talks will likely take weeks – as it happened",
-   "summary": "This blog is closed, you can read our report on the New Zealand election here Another update here with 8% of the vote counted . National on 31.2%, Labour 28.4%, the Greens 12.9%, Act 11.2%, NZ First 9.6%, Opportunity 5.7% and Te Pāti Māori 0.4%. On these numbers, we would have a ",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "New Zealand election coalition talks will likely take weeks – as it happened",
-     "url": "https://www.theguardian.com/world/live/2026/nov/07/nz-general-election-2026-live-updates-results-new-zealand-polls"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "An election night of firsts, and a soccer legend steps off the international stage: The news quiz",
-   "summary": "Bob Dylan meets the pope, a Republican plan backfires, and the Met Gala unveils its 2027 theme (again).",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "An election night of firsts, and a soccer legend steps off the international stage: The news quiz",
-     "url": "https://www.nbcnews.com/news/news-quiz/midterm-election-firsts-news-quiz-rcna607716"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "U.S. on verge of losing measles elimination status as number of cases grows",
-   "summary": "The United States is on the verge of losing its measles elimination status as cases top 5,000 nationwide for the first time in more than three decades. Pennsylvania, New York and Wisconsin have all reported measles-related deaths this week.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "U.S. on verge of losing measles elimination status as number of cases grows",
-     "url": "https://www.nbcnews.com/video/u-s-on-verge-of-losing-measles-elimination-status-as-number-of-cases-grows-273037893563"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "We want to hear your experience with changes to student loan repayment plans",
-   "summary": "If you’re a student borrower who was required to transition to another plan this year, share your story.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "We want to hear your experience with changes to student loan repayment plans",
-     "url": "https://www.nbcnews.com/news/education/changes-student-loan-repayment-plans-share-experience-rcna607624"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "2026 Rockefeller Center Christmas Tree Arrives in New York City",
-   "summary": "A magnificent Norway spruce has made its journey from West Edmeston, New York, to Rockefeller Center. The tree will undergo a glow-up ahead of the lighting ceremony on Dec. 2.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "2026 Rockefeller Center Christmas Tree Arrives in New York City",
-     "url": "https://www.today.com/video/2026-rockefeller-center-christmas-tree-arrives-in-new-york-city-273069125683"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "South Carolina man arrested after leaving sleeping 6-year-old daughter in line for Pokémon card release, police say",
-   "summary": "A man was arrested in Charleston, South Carolina, on Friday after leaving his 6-year-old daughter asleep outside a Target to hold his place in line for the release of a new Pokémon trading card set, police said.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "South Carolina man arrested after leaving sleeping 6-year-old daughter in line for Pokémon card release, police say",
-     "url": "https://www.nbcnews.com/news/us-news/man-arrested-leaving-sleeping-6-year-old-daughter-pokemon-rcna607993"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Carson Daly Makes Debut as Saturday TODAY Co-Anchor",
-   "summary": "TODAY’s Carson Daly celebrates his first day as permanent co-anchor of Saturday TODAY alongside Laura Jarrett. Daly will continue his weekday TODAY duties and serving as host and executive producer of “The Voice.”",
-   "category": "Economy",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Carson Daly Makes Debut as Saturday TODAY Co-Anchor",
-     "url": "https://www.today.com/video/carson-daly-makes-debut-as-saturday-today-co-anchor-273068101935"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "This week on \"Sunday Morning\" (Nov. 8)",
-   "summary": "A look at the features for this week's broadcast of the Emmy-winning program, hosted by Jane Pauley.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "This week on \"Sunday Morning\" (Nov. 8)",
-     "url": "https://www.cbsnews.com/news/this-week-on-sunday-morning-nov-8-2026/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Sunday on 60 Minutes: France on fire",
-   "summary": "For weeks, protests have swept across France — businesses ransacked, police injured. One person who could gain from the turmoil? Right-wing populist Marine Le Pen. Watch our report on the unrest, Sunday on 60 Minutes.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Sunday on 60 Minutes: France on fire",
-     "url": "https://www.cbsnews.com/video/sunday-on-60-minutes-france-on-fire/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Pope Leo calls for universal healthcare weeks after lung cancer surgery",
-   "summary": "Pope Leo XIV spoke about access to healthcare on his first stop in Uruguay during his 12-day Latin American tour.",
+   "title": "U.S. measles deaths rise to 10 after new reports in Pennsylvania and Wisconsin",
+   "summary": "Total measles deaths in the United States this year rose to 10 on Friday, a grim milestone in an outbreak that has seen a record number of infections and prompted state and local health departments to ramp up vaccination efforts.",
    "category": "Health",
    "leans": [
     -1
@@ -1820,20 +2041,47 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "CBS News",
+     "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Pope Leo calls for universal healthcare weeks after lung cancer surgery",
-     "url": "https://www.cbsnews.com/news/pope-leo-xiv-universal-healthcare-uruguay/"
+     "title": "U.S. measles deaths rise to 10 after new reports in Pennsylvania and Wisconsin",
+     "url": "https://www.nbcnews.com/health/health-news/us-measles-deaths-rise-10-new-reports-pennsylvania-wisconsin-rcna609245"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "\"Face the Nation with Margaret Brennan\" guests for Nov. 8, 2026",
-   "summary": "This week's guests include Democratic Sen. Elizabeth Warren, Republican Rep. French Hill and Democratic Rep.-elect Nancy Lacore.",
-   "category": "World",
+   "title": "As AI looms over Hollywood, Oscar hopefuls make the case for human craft",
+   "summary": "In this week’s ON THE LOT, we’re looking at Universal’s “Odyssey” Oscar push, Skydance’s next chapter and Sofia Franklyn’s “Daddy Issues.”",
+   "category": "Tech",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "As AI looms over Hollywood, Oscar hopefuls make the case for human craft",
+     "url": "https://www.nbcnews.com/pop-culture/pop-culture-news/hollywood-oscar-campaigns-the-odyssey-lean-into-human-craftsmanship-rcna608419"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Naresh Bhatt Convicted: The Road to Justice for Mamta's Family | Case by Case | \"48 Hours\" Podcast",
+   "summary": "A Virginia jury has found Naresh Bhatt guilty of murdering his wife, Mamta Kafle Bhatt, whose body has never been found. Just days before the verdict, Bhatt stunned the courtroom when he admitted to dismembering and disposing of his wife's body, but denied killing her. WUSA9 repo",
+   "category": "General",
    "leans": [
     -1
    ],
@@ -1850,16 +2098,16 @@
      "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "\"Face the Nation with Margaret Brennan\" guests for Nov. 8, 2026",
-     "url": "https://www.cbsnews.com/news/face-the-nation-guests-11-08-2026/"
+     "title": "Naresh Bhatt Convicted: The Road to Justice for Mamta's Family | Case by Case | \"48 Hours\" Podcast",
+     "url": "https://www.cbsnews.com/video/111326-48-hours-case-by-case-episode-30/"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "More races called as Democratic majority comes into focus",
-   "summary": "President Trump is swapping out his chief of staff after Republicans' losses in the midterms, with more than two dozen House races unresolved. Follow live updates.",
+   "title": "Lauren Boebert will lose her seat in Congress to Democrat Laubacher, AP projects",
+   "summary": "Colorado Republican Rep. Lauren Boebert will lose her House seat to Democratic challenger Eileen Laubacher, The Associated Press projected Friday.",
    "category": "Politics",
    "leans": [
     -1
@@ -1874,19 +2122,19 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "CBS News",
+     "name": "ABC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "More races called as Democratic majority comes into focus",
-     "url": "https://www.cbsnews.com/live-updates/midterm-election-results-2026-democrats-house-senate-trump/"
+     "title": "Lauren Boebert will lose her seat in Congress to Democrat Laubacher, AP projects",
+     "url": "https://abcnews.com/Politics/lauren-boebert-lose-seat-congress-ap-projects/story?id=138121829"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Duchess Meghan's estranged father charged with possessing child sex abuse materials",
-   "summary": "Duchess Meghan's estranged father Thomas Markle Sr. has been arrested in Florida and charged with possessing child sex abuse materials.",
+   "title": "Authorities say DC gunman held long-standing feud with building management",
+   "summary": "The 55-year-old medical doctor harbored a long-standing grievance with the building's condo association, according to court documents.",
    "category": "General",
    "leans": [
     -1
@@ -1901,19 +2149,19 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "CBS News",
+     "name": "ABC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Duchess Meghan's estranged father charged with possessing child sex abuse materials",
-     "url": "https://www.cbsnews.com/video/duchess-meghans-estranged-father-charged-with-possessing-child-sex-abuse-materials/"
+     "title": "Authorities say DC gunman held long-standing feud with building management",
+     "url": "https://abcnews.com/US/authorities-dc-gunman-held-long-standing-feud-building/story?id=138109234"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Comedian Nimesh Patel talks SNL, Netflix special",
-   "summary": "Comedian Nimesh Patel stars in new Netflix comedy special \"Buy the Dip.\"",
+   "title": "WATCH:  School's ultimate class trip heads to Antarctica",
+   "summary": "ABC News' Danny New reports on a group of middle schoolers in Maryland who are about to get the snow day of their lives in the form of a class trip to Antarctica.",
    "category": "General",
    "leans": [
     -1
@@ -1928,46 +2176,19 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "CBS News",
+     "name": "ABC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Comedian Nimesh Patel talks SNL, Netflix special",
-     "url": "https://www.cbsnews.com/video/comedian-nimesh-patel-talks-snl-netflix-special/"
+     "title": "WATCH:  School's ultimate class trip heads to Antarctica",
+     "url": "https://abcnews.com/video/138103628/"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Saturday Sessions: Kings of Leon perform \"Rose\"",
-   "summary": "Four-time Grammy Award winners Kings of Leon are beloved for their transformative, warm sound. Their tenth album \"O My Beloved\" explores themes of family and gratitude. Here's Kings of Leon with \"Rose.\"",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Saturday Sessions: Kings of Leon perform \"Rose\"",
-     "url": "https://www.cbsnews.com/video/saturday-sessions-kings-of-leon-perform-rose/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Inside the \"Hospital of Emotions\"",
-   "summary": "St. Vincent Medical Center in Los Angeles has become a vibrant canvas to express difficult emotions. Artists at the \"Hospital of Emotion\" embrace and explore life, death and healing in a former medical center.",
+   "title": "WATCH:  41-year-old firefighter’s life saved by heart transplant",
+   "summary": "Nico Ratto, a dad of two from New Jersey, spent 45 days hospitalized before receiving a lifesaving heart transplant.",
    "category": "Health",
    "leans": [
     -1
@@ -1982,11 +2203,92 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "CBS News",
+     "name": "ABC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Inside the \"Hospital of Emotions\"",
-     "url": "https://www.cbsnews.com/video/inside-the-hospital-of-emotions/"
+     "title": "WATCH:  41-year-old firefighter’s life saved by heart transplant",
+     "url": "https://abcnews.com/video/138107216/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "WATCH:  Heartwarming update on Punch the Monkey",
+   "summary": "The baby macaque at Japan’s Ichikawa City Zoo became a viral sensation after turning to an IKEA toy for comfort. Nine months later, Punch has joined the troop and taken an interest in a baby macaque.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  Heartwarming update on Punch the Monkey",
+     "url": "https://abcnews.com/video/138104775/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "WATCH:  Empire State Building climbers appear in court",
+   "summary": "The daredevil couple who were arrested after climbing to the top of the Empire State Building were in court on Thursday to face criminal charges and possible deportation.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  Empire State Building climbers appear in court",
+     "url": "https://abcnews.com/video/138104770/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "WATCH:  Tanker truck driver narrowly avoids train crash in Fort Worth",
+   "summary": "A tanker truck driver managed to escape from his vehicle just seconds before a train slammed into his truck.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  Tanker truck driver narrowly avoids train crash in Fort Worth",
+     "url": "https://abcnews.com/video/138096388/"
     }
    ],
    "factchecks": [],
@@ -1995,36 +2297,55 @@
  ],
  "blindspots": [
   {
-   "title": "Ex-CIA chief’s son charged with ‘transportation of child pornography’",
-   "summary": "The son of former CIA chief John Brennan was arrested on Friday and charged with “transportation of child pornography,” according to an affidavit signed by a special agent with the FBI. Kyle Brennan, 40, was arrested in Warrenton, Virginia, following investigators uncovering a tw",
-   "category": "World",
+   "title": "Rebuilding a World That Never Existed",
+   "summary": "Attempts to reconstruct the past might be doomed to fail, but that doesn’t mean they aren’t noble, or even beautiful.",
+   "category": "General",
    "leans": [
-    1,
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Rebuilding a World That Never Existed",
+     "url": "https://www.theatlantic.com/newsletters/2026/11/books-briefing-writers-reconstruct-past-lamela/689429/?utm_source=feed"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Fatih Birol: The Energy World Will Never Be the Same As Before the Iran War",
+     "url": "https://time.com/article/2026/11/13/fatih-birol-iran-war-energy-cop31/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Ex-CIA Director John Brennan’s Son Arrested For Alleged Possession Of Child Sexual Abuse Material",
+   "summary": "Editor’s note: This article addresses the alleged possession and distribution of sexually explicit images of children. The son of former CIA Director John Brennan was arrested Friday for alleged possession of child sexual abuse material, otherwise known as child pornography. The ",
+   "category": "General",
+   "leans": [
     2
    ],
-   "span": 1,
-   "n_sources": 4,
+   "span": 0,
+   "n_sources": 2,
    "balance": {
     "l": 0,
     "c": 0,
-    "r": 4
+    "r": 2
    },
    "blindspot": "left",
    "sources": [
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Ex-CIA chief’s son charged with ‘transportation of child pornography’",
-     "url": "https://www.washingtonexaminer.com/news/justice/4803505/ex-cia-chief-son-kyle-brennan-charged-transportation-child-pornography/"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Son of ex-CIA Director John Brennan charged with child pornography",
-     "url": "https://www.washingtontimes.com/news/2026/nov/13/son-ex-cia-director-john-brennan-charged-child-pornography/"
-    },
     {
      "name": "The Federalist",
      "lean": 2,
@@ -2042,284 +2363,27 @@
    ],
    "factchecks": [],
    "videos": []
-  },
-  {
-   "title": "FAA imposes nationwide ground stop on all flights",
-   "summary": "The Federal Aviation Administration halted all flight departures nationwide Friday afternoon due to a “rolling frequency outage” affecting facilities that monitor planes in the air. The cause remained unclear Friday, and Homeland Security Secretary Markwayne Mullin said Friday ev",
-   "category": "Economy",
-   "leans": [
-    1,
-    2
-   ],
-   "span": 1,
-   "n_sources": 4,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 4
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "FAA imposes nationwide ground stop on all flights",
-     "url": "https://www.washingtonexaminer.com/policy/infrastructure/4802941/faa-imposes-nationwide-ground-stop-on-all-flights/"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "FAA expanded AI air traffic tool to all centers days before nationwide ground stop",
-     "url": "https://www.washingtontimes.com/news/2026/nov/13/faa-expanded-ai-air-traffic-tool-centers-days-nationwide-ground-stop/"
-    },
-    {
-     "name": "The Daily Wire",
-     "lean": 2,
-     "label": "Right",
-     "title": "FAA Orders Nationwide Ground Stop At All U.S. Airports",
-     "url": "https://www.dailywire.com/news/faa-orders-nationwide-ground-stop-at-all-u-s-airports"
-    },
-    {
-     "name": "Daily Caller",
-     "lean": 2,
-     "label": "Right",
-     "title": "FAA Issues Nationwide Ground Stop, Halting All US Flight Departures",
-     "url": "https://dailycaller.com/2026/11/13/faa-nationwide-ground-stop-us-flight-departures-sean-duffy"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "MAGA firebrand Rep. Lauren Boebert of Colorado loses race",
-   "summary": "Republican Rep. Lauren Boebert has lost her race in Colorado's reddest district.",
-   "category": "Politics",
-   "leans": [
-    1,
-    2
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "MAGA firebrand Rep. Lauren Boebert of Colorado loses race",
-     "url": "https://www.washingtontimes.com/news/2026/nov/13/maga-firebrand-rep-lauren-boebert-colorado-loses-race/"
-    },
-    {
-     "name": "Daily Caller",
-     "lean": 2,
-     "label": "Right",
-     "title": "Lauren Boebert Loses Reelection Bid Years After Fleeing To Redder District",
-     "url": "https://dailycaller.com/2026/11/13/lauren-boebert-loses-eileen-laubacher-colorado"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Ousted Paraguay president under house arrest after banking crisis leaves 60% of country unable to access accounts",
-   "summary": "Santiago Peña was detained minutes after he was impeached by Congress, as protesters took to the streets demanding answers after the suspension of the Ueno bank Paraguay’s rightwing president has been placed under house arrest minutes after he was impeached by Congress, amid a se",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 3,
-   "balance": {
-    "l": 3,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": "right",
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Ousted Paraguayan president appears before prosecutors",
-     "url": "https://www.npr.org/2026/11/07/nx-s1-6033373/paraguay-president-ousted-bank-collapse"
-    },
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Ousted Paraguay president under house arrest after banking crisis leaves 60% of country unable to access accounts",
-     "url": "https://www.theguardian.com/world/2026/nov/07/ousted-paraguay-president-under-house-arrest-after-banking-crisis-leaves-60-of-country-unable-to-access-accounts"
-    },
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Paraguay’s president quits after millions of people’s savings frozen in bank crisis",
-     "url": "https://www.theguardian.com/world/2026/nov/05/paraguay-president-santiago-pena-resigns"
-    },
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Paraguay's ousted president faces prosecutors after his removal over bank collapse",
-     "url": "https://www.pbs.org/newshour/world/paraguays-ousted-president-faces-prosecutors-after-his-removal-over-bank-collapse"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Six people killed, at least a dozen injured in shooting at main market square of Krakow, Poland",
-   "summary": "Authorities in Poland are investigating a shooting that left six people dead and at least a 15 injured in the Main Market Square in Krakow, a cultural center of the historic city, according to officials.",
-   "category": "Economy",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 3,
-   "balance": {
-    "l": 3,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": "right",
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Six people killed, at least a dozen injured in shooting at main market square of Krakow, Poland",
-     "url": "https://www.nbcnews.com/world/europe/poland-krakow-shooting-rcna608001"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Mass shooting in Polish market leaves at least 6 dead, 15 injured",
-     "url": "https://www.cbsnews.com/news/shooting-main-market-square-krakow-poland/"
-    },
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "At least 6 killed, several injured in shooting at Polish market square: Police",
-     "url": "https://abcnews.com/International/5-killed-injured-shooting-polish-market-square/story?id=137941731"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "The ‘slam dunk’ that wasn’t: Promising cholesterol drug fails to prevent heart attacks or stroke",
-   "summary": "An experimental drug that held great promise in driving down a dangerous form of cholesterol didn’t show any measurable impact on heart attack or stroke in a clinical trial.",
-   "category": "Health",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 2,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": "right",
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "A promising new medicine against heart disease fails unexpectedly",
-     "url": "https://www.npr.org/2026/11/07/nx-s1-6026379/lpa-drug-lipoproteina-heart-attack"
-    },
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "The ‘slam dunk’ that wasn’t: Promising cholesterol drug fails to prevent heart attacks or stroke",
-     "url": "https://www.nbcnews.com/health/health-news/cholesterol-drug-lipoprotein-a-fails-heart-attacks-stroke-trial-rcna607237"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Supreme Court takes up challenge to Trump’s southern border asylum ban",
-   "summary": "The Supreme Court announced Friday it will hear a case over the legality of President Donald Trump’s January 2025 executive order that largely barred people from applying for asylum at the southern border. The high court will hear Mullin v. Refugee and Immigrant Center for Educat",
-   "category": "World",
-   "leans": [
-    1
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Supreme Court takes up challenge to Trump’s southern border asylum ban",
-     "url": "https://www.washingtonexaminer.com/news/supreme-court/4803086/supreme-court-takes-up-challenge-trump-southern-border-asylum-ban/"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Supreme Court to hear case challenging Trump's asylum ban",
-     "url": "https://www.washingtontimes.com/news/2026/nov/13/supreme-court-hear-case-challenging-trumps-asylum-ban/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Democrats Clash Over Plan to Confront Trump",
-   "summary": "Democrats are headed for an internal fight over how to confront President Donald Trump when they take control of Congress in January, with the far left pushing a massive spending and tax package designed to force a showdown with the White House.",
-   "category": "Politics",
-   "leans": [
-    2
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Democrats Clash Over Plan to Confront Trump",
-     "url": "https://www.newsmax.com/newsfront/democrats-donald-trump-congress/2026/11/13/id/1276247"
-    },
-    {
-     "name": "Daily Caller",
-     "lean": 2,
-     "label": "Right",
-     "title": "Zombie Amnesty Plan Shambles On In Lame Duck Congress Amid Trump Floating Deal With Democrats",
-     "url": "https://dailycaller.com/2026/11/13/amnesty-push-lives-on-in-lame-duck-congress-as-trump-floats-deal-with-democrats-glenn-thompson-mullin-illegal-immigrants-agriculture"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
   }
  ],
  "factchecks": [
+  {
+   "org": "Snopes",
+   "title": "Unfounded rumor claims Hegseth awarded medal to Tomb of the Unknown Soldier guard's body double",
+   "link": "https://www.snopes.com/news/2026/11/13/hegseth-medal-soldier-body-double/",
+   "summary": "The U.S. Army sentinel reprimanded the defense secretary and his entourage after one of them talked and laughed at the monument."
+  },
+  {
+   "org": "Snopes",
+   "title": "Were some Democrats who missed Hegseth impeachment vote at AIPAC event?",
+   "link": "https://www.snopes.com/news/2026/11/13/democrats-missed-hegseth-vote-aipac/",
+   "summary": "The event in question was reportedly hosted by Elect Democrat Women, which has ties to the pro-Israel lobbying group."
+  },
+  {
+   "org": "Snopes",
+   "title": "Did Dunkin' ban word 'Christmas' after celebrating Ramadan and Pride Month in 2026?",
+   "link": "https://www.snopes.com/fact-check/dunkin-ban-christmas-ramadan-pride/",
+   "summary": "The latest chapter in the \"war on Christmas\" involved a popular video and a whole lot of poorly-supported claims."
+  },
   {
    "org": "Snopes",
    "title": "Did Apple release 'Live Listen' update that lets someone else remotely access your phone?",
@@ -2373,24 +2437,6 @@
    "title": "Video allegedly shows Muslim NYPD officers taking away woman's dog for Shariah. Here's what we know",
    "link": "https://www.snopes.com/news/2026/11/12/muslim-nypd-dog-shariah/",
    "summary": "The video features an incident involving NYPD officers and pedestrians in Manhattan's Murray Hill neighborhood on Nov. 8."
-  },
-  {
-   "org": "Snopes",
-   "title": "Does video show real AI job interview for Burger King?",
-   "link": "https://www.snopes.com/fact-check/burger-king-ai-interview/",
-   "summary": "The company denied using the AI interviewer featured in the recording."
-  },
-  {
-   "org": "Snopes",
-   "title": "Did Winston Churchill say Americans always 'do the right thing' after all other options are exhausted?",
-   "link": "https://www.snopes.com/articles/474396/winston-churchill-americans-quote/",
-   "summary": "The phenomenon of crediting Churchill and other historical figures with punchy quotes is so common it has a name, \"Churchillian Drift.\""
-  },
-  {
-   "org": "Snopes",
-   "title": "Did bald eagle take down government drone?",
-   "link": "https://www.snopes.com/fact-check/eagle-take-down-drone/",
-   "summary": "The drone belonged to a Michigan state agency often referred to as … EGLE."
   },
   {
    "org": "FactCheck.org",
