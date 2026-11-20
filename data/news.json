@@ -1,7 +1,14 @@
 {
- "generated": "2026-11-20T15:44:49Z",
- "generated_human": "Nov 20, 2026 · 15:44 UTC",
+ "generated": "2026-11-20T16:00:42Z",
+ "generated_human": "Nov 20, 2026 · 16:00 UTC",
  "sources": [
+  {
+   "name": "NPR",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 10
+  },
   {
    "name": "The Guardian",
    "lean": -1,
@@ -199,43 +206,47 @@
    "count": 12
   }
  ],
- "n_articles": 324,
+ "n_articles": 334,
  "n_videos": 140,
  "trending": [
   {
    "term": "trump",
-   "n": 20
+   "n": 21
   },
   {
    "term": "putin",
-   "n": 11
+   "n": 12
+  },
+  {
+   "term": "iran",
+   "n": 9
   },
   {
    "term": "anthropic",
    "n": 9
   },
   {
+   "term": "meeting",
+   "n": 8
+  },
+  {
+   "term": "russian",
+   "n": 8
+  },
+  {
    "term": "cyber",
    "n": 8
   },
   {
-   "term": "america",
-   "n": 8
+   "term": "senate",
+   "n": 7
   },
   {
-   "term": "iran",
-   "n": 8
+   "term": "florida",
+   "n": 7
   },
   {
    "term": "china",
-   "n": 7
-  },
-  {
-   "term": "russian",
-   "n": 7
-  },
-  {
-   "term": "house",
    "n": 7
   },
   {
@@ -243,31 +254,67 @@
    "n": 7
   },
   {
-   "term": "meeting",
+   "term": "house",
    "n": 7
+  },
+  {
+   "term": "america",
+   "n": 7
+  },
+  {
+   "term": "texas",
+   "n": 6
+  },
+  {
+   "term": "just",
+   "n": 6
   },
   {
    "term": "plan",
-   "n": 7
-  },
-  {
-   "term": "genocide",
-   "n": 6
-  },
-  {
-   "term": "myanmar",
-   "n": 6
-  },
-  {
-   "term": "senate",
-   "n": 6
-  },
-  {
-   "term": "national",
    "n": 6
   }
  ],
  "videos": [
+  {
+   "videoId": "H-PAMAa4v9s",
+   "title": "Jerusalem Daily: Palestinians return home to ruins | AJ #shorts",
+   "thumb": "https://i.ytimg.com/vi/H-PAMAa4v9s/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "6_Uhc2rBrgU",
+   "title": "One third of attacks on children worldwide recorded in Palestine | AJ #shorts",
+   "thumb": "https://i.ytimg.com/vi/6_Uhc2rBrgU/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "pGcdtbwmsss",
+   "title": "Qatar’s emir and Germany’s Chancellor hold energy and security talks in Berlin",
+   "thumb": "https://i.ytimg.com/vi/pGcdtbwmsss/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "KwXhweRgctw",
+   "title": "Loud bang, black smoke: Poland hit by objects",
+   "thumb": "https://i.ytimg.com/vi/KwXhweRgctw/hqdefault.jpg",
+   "channel": "Reuters",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "IlLnYG5hMZE",
+   "title": "European leaders, President Trump clash over summit with China and Russia",
+   "thumb": "https://i.ytimg.com/vi/IlLnYG5hMZE/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
   {
    "videoId": "OIJzGkMqLZ0",
    "title": "Tusk demands peace talks role as Poland is 'most vulnerable' to Russia",
@@ -355,46 +402,6 @@
    "channel": "Al Jazeera",
    "lean": 0,
    "label": "Center"
-  },
-  {
-   "videoId": "8NLDKDTsmXQ",
-   "title": "The Wrap | Friday 20 November",
-   "thumb": "https://i.ytimg.com/vi/8NLDKDTsmXQ/hqdefault.jpg",
-   "channel": "Sky News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "V3mWoae0uZ0",
-   "title": "Anthropic IPO mints new billionaires as AI models advance at faster pace, study shows",
-   "thumb": "https://i.ytimg.com/vi/V3mWoae0uZ0/hqdefault.jpg",
-   "channel": "CBS News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "2_8hEIHT1Ys",
-   "title": "LIVE: US media heir James Cox Chambers Jr. leaves Aranjuez prison",
-   "thumb": "https://i.ytimg.com/vi/2_8hEIHT1Ys/hqdefault.jpg",
-   "channel": "Reuters",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "ibc0N2jPchQ",
-   "title": "Video from moving train shows alleged sneaker heist in action",
-   "thumb": "https://i.ytimg.com/vi/ibc0N2jPchQ/hqdefault.jpg",
-   "channel": "ABC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "M82asp2ch94",
-   "title": "Gas prices fall, airfare prices remain high ahead of Thanksgiving",
-   "thumb": "https://i.ytimg.com/vi/M82asp2ch94/hqdefault.jpg",
-   "channel": "ABC News",
-   "lean": -1,
-   "label": "Lean Left"
   }
  ],
  "stories": [
@@ -409,14 +416,21 @@
     2
    ],
    "span": 3,
-   "n_sources": 12,
+   "n_sources": 13,
    "balance": {
-    "l": 3,
+    "l": 4,
     "c": 4,
     "r": 5
    },
    "blindspot": null,
    "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump to hold press conference after meeting with Xi and Putin",
+     "url": "https://www.npr.org/2026/11/20/nx-s1-6047594/trump-asia-trip-xi-putin-press-conference"
+    },
     {
      "name": "CBS News",
      "lean": -1,
@@ -463,15 +477,15 @@
      "name": "The Hill",
      "lean": 0,
      "label": "Center",
-     "title": "Bolton: 'No substance' to Trump meeting with Putin, Xi",
-     "url": "https://thehill.com/policy/international/6232720-john-bolton-trump-putin-xi-trilateral-meeting/"
+     "title": "Poland says likely Russian missiles violated airspace",
+     "url": "https://thehill.com/policy/international/6233039-poland-accuses-russia-missile-drone-incursion/"
     },
     {
      "name": "The Hill",
      "lean": 0,
      "label": "Center",
-     "title": "Live updates: Trump to brief on China summit; GOP at odds over reconciliation",
-     "url": "https://thehill.com/homenews/administration/6232240-live-updates-trump-asia-trip-putin-xi-summit-gop-reconciliation-defense-spending/"
+     "title": "Bolton: 'No substance' to Trump meeting with Putin, Xi",
+     "url": "https://thehill.com/policy/international/6232720-john-bolton-trump-putin-xi-trilateral-meeting/"
     },
     {
      "name": "CNBC",
@@ -540,9 +554,9 @@
    "factchecks": [],
    "videos": [
     {
-     "videoId": "gudemojA1Ak",
-     "title": "World reacts to Trump's meeting with Xi Jinping and Vladimir Putin",
-     "thumb": "https://i.ytimg.com/vi/gudemojA1Ak/hqdefault.jpg",
+     "videoId": "DTMaBaKJPvg",
+     "title": "Russia launches brutal attacks in Ukraine hours after Trump-Putin meeting, missiles reach Poland",
+     "thumb": "https://i.ytimg.com/vi/DTMaBaKJPvg/hqdefault.jpg",
      "channel": "CBS News",
      "lean": -1,
      "label": "Lean Left"
@@ -564,6 +578,151 @@
      "label": "Center"
     }
    ]
+  },
+  {
+   "title": "“How Do You Do, Fellow Gamers?” The Right Discovers Grand Theft Auto",
+   "summary": "Grand Theft Auto VI is the biggest game launch in years, and politically conservative state leaders are desperate to get in on it. It makes sense for these out-of-touch guys—the game has already generated over $1.8 billion in revenue since its midnight release on Thursday. For co",
+   "category": "Economy",
+   "leans": [
+    -2,
+    -1,
+    0,
+    1
+   ],
+   "span": 3,
+   "n_sources": 5,
+   "balance": {
+    "l": 3,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "“How Do You Do, Fellow Gamers?” The Right Discovers Grand Theft Auto",
+     "url": "https://www.motherjones.com/politics/2026/11/how-do-you-do-fellow-gamers-the-right-discovers-grand-theft-auto/"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  Grand Theft Auto VI is back and shattering records",
+     "url": "https://abcnews.com/video/138313101/"
+    },
+    {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "<em>Grand Theft Auto VI</em> Is Really Weird",
+     "url": "https://www.theatlantic.com/ideas/2026/11/grand-theft-auto-vi-review/689514/?utm_source=feed"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Burchett says you're a 'bad parent' if you let your child play 'Grand Theft Auto VI'",
+     "url": "https://thehill.com/homenews/house/6232789-gop-rep-warns-parents-gta-6/"
+    },
+    {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "<i>Grand Theft Auto VI</i> and How We Spend Our Time",
+     "url": "https://www.nationalreview.com/article/grand-theft-auto-vi-and-how-we-spend-our-time"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Mamdani announces plan to close Rikers Island prison ‘once and for all’",
+   "summary": "New York City Mayor Zohran Mamdani unveiled a plan Friday to close the Rikers Island jail complex by the end of 2032. At a City Hall news conference, Mamdani said the extended timeline was necessary after “resistance” from the previous administration, arguing that efforts to shut",
+   "category": "General",
+   "leans": [
+    -1,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "New York City unveils a bold plan to move its jails off Rikers Island",
+     "url": "https://www.npr.org/2026/11/20/nx-s1-5981356/new-york-city-rikers-jail-plans-germany-prison-model"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Mamdani announces plan to close Rikers Island prison ‘once and for all’",
+     "url": "https://www.washingtonexaminer.com/news/crime/4809823/mamdani-announces-plan-to-close-rikers-island-prison-once-and-for-all/"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Mamdani’s Plan To Close Rikers Comes With A Dangerous Catch",
+     "url": "https://www.dailywire.com/news/mamdanis-plan-to-close-rikers-comes-with-a-dangerous-catch"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "NtWEsVBD5_M",
+     "title": "Mamdani announces plan to close NYC’s notorious Rikers Island jail",
+     "thumb": "https://i.ytimg.com/vi/NtWEsVBD5_M/hqdefault.jpg",
+     "channel": "AP",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "The Melania Series Has One Accidental Purpose",
+   "summary": "It’s hard to evince the logic of Melania, The Series, the two-episode follow-up to the first lady’s documentary film. The opening scenes are nearly identical to the slog of airbrushed nothingness we saw in January, leaving the viewer reeling from a mix of deja-vu and irritation. ",
+   "category": "General",
+   "leans": [
+    -2,
+    1
+   ],
+   "span": 3,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "The Melania Series Has One Accidental Purpose",
+     "url": "https://www.motherjones.com/politics/2026/11/the-melania-series-has-one-accidental-purpose/"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Here’s how to watch ‘Melania: The Series’ for free",
+     "url": "https://nypost.com/2026/11/20/entertainment/how-to-watch-melania-the-series-for-free/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
   },
   {
    "title": "White House National Cyber Director Departs Amid Tech Outages",
@@ -678,113 +837,47 @@
    ]
   },
   {
-   "title": "“How Do You Do, Fellow Gamers?” The Right Discovers Grand Theft Auto",
-   "summary": "Grand Theft Auto VI is the biggest game launch in years, and politically conservative state leaders are desperate to get in on it. It makes sense for these out-of-touch guys—the game has already generated over $1.8 billion in revenue since its midnight release on Thursday. For co",
-   "category": "Economy",
+   "title": "Texas execution took over an hour as staff struggled to find vein; Reinaldo Dennes moaned about pain",
+   "summary": "The execution followed renewed scrutiny of capital punishment in the U.S. in the aftermath of Tennessee’s failed execution in September of Christa Pike, who survived two doses of pentobarbital that her lawyers say probably did not enter her bloodstream correctly and instead poole",
+   "category": "General",
    "leans": [
-    -2,
     -1,
-    0
+    0,
+    1
    ],
    "span": 2,
-   "n_sources": 4,
+   "n_sources": 3,
    "balance": {
-    "l": 3,
+    "l": 1,
     "c": 1,
-    "r": 0
+    "r": 1
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "Mother Jones",
-     "lean": -2,
-     "label": "Left",
-     "title": "“How Do You Do, Fellow Gamers?” The Right Discovers Grand Theft Auto",
-     "url": "https://www.motherjones.com/politics/2026/11/how-do-you-do-fellow-gamers-the-right-discovers-grand-theft-auto/"
-    },
-    {
-     "name": "ABC News",
+     "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "WATCH:  Grand Theft Auto VI is back and shattering records",
-     "url": "https://abcnews.com/video/138313101/"
-    },
-    {
-     "name": "The Atlantic",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "<em>Grand Theft Auto VI</em> Is Really Weird",
-     "url": "https://www.theatlantic.com/ideas/2026/11/grand-theft-auto-vi-review/689514/?utm_source=feed"
+     "title": "Texas execution took over an hour as staff struggled to find vein; Reinaldo Dennes moaned about pain",
+     "url": "https://www.npr.org/2026/11/20/nx-s1-6048461/texas-execution-dennes-moaned-pain"
     },
     {
      "name": "The Hill",
      "lean": 0,
      "label": "Center",
-     "title": "Burchett says you're a 'bad parent' if you let your child play 'Grand Theft Auto VI'",
-     "url": "https://thehill.com/homenews/house/6232789-gop-rep-warns-parents-gta-6/"
+     "title": "Texas execution took over an hour as staff struggled to find vein; Reinaldo Dennes moaned about pain",
+     "url": "https://thehill.com/homenews/state-watch/6232419-texas-execution-staff-struggled-to-find-vein-reinaldo-dennes/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Texas execution took over an hour as staff struggled to find vein; Reinaldo Dennes moaned about pain",
+     "url": "https://www.washingtontimes.com/news/2026/nov/19/texas-execution-reinaldo-dennes-took-hour-staff-struggled-find-vein/"
     }
    ],
    "factchecks": [],
    "videos": []
-  },
-  {
-   "title": "Mamdani announces plan to close Rikers Island prison ‘once and for all’",
-   "summary": "New York City Mayor Zohran Mamdani unveiled a plan Friday to close the Rikers Island jail complex by the end of 2032. At a City Hall news conference, Mamdani said the extended timeline was necessary after “resistance” from the previous administration, arguing that efforts to shut",
-   "category": "General",
-   "leans": [
-    0,
-    1,
-    2
-   ],
-   "span": 2,
-   "n_sources": 4,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 3
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Mamdani Announces Plan To Close Notorious Rikers Island Jail",
-     "url": "https://www.newsweek.com/zohran-mamdani-announces-plan-close-notorious-rikers-island-jail-12746612"
-    },
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Mamdani announces plan to close Rikers Island prison ‘once and for all’",
-     "url": "https://www.washingtonexaminer.com/news/crime/4809823/mamdani-announces-plan-to-close-rikers-island-prison-once-and-for-all/"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "NYC Mayor Mamdani announces delayed plan to close city's largest jail",
-     "url": "https://www.foxnews.com/us/nyc-mayor-mamdani-announces-delayed-plan-close-citys-largest-jail"
-    },
-    {
-     "name": "The Daily Wire",
-     "lean": 2,
-     "label": "Right",
-     "title": "Mamdani’s Plan To Close Rikers Comes With A Dangerous Catch",
-     "url": "https://www.dailywire.com/news/mamdanis-plan-to-close-rikers-comes-with-a-dangerous-catch"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "NtWEsVBD5_M",
-     "title": "Mamdani announces plan to close NYC’s notorious Rikers Island jail",
-     "thumb": "https://i.ytimg.com/vi/NtWEsVBD5_M/hqdefault.jpg",
-     "channel": "AP",
-     "lean": 0,
-     "label": "Center"
-    }
-   ]
   },
   {
    "title": "Senate passes Trump-backed permitting bill",
@@ -805,11 +898,11 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "NBC News",
+     "name": "NPR",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Senate passes bill simplifying permitting rules to build in America, sending it to House",
-     "url": "https://www.nbcnews.com/politics/congress/senate-passes-sweeping-bill-simplifying-permitting-rules-build-america-rcna610196"
+     "title": "Senate passes bipartisan energy bill amid environmental concerns",
+     "url": "https://www.npr.org/2026/11/20/g-s1-154579/senate-bipartisan-energy-bill"
     },
     {
      "name": "Axios",
@@ -826,13 +919,42 @@
      "url": "https://www.washingtontimes.com/news/2026/nov/19/senate-passes-bipartisan-american-affordability-jobs-act-without/"
     }
    ],
-   "factchecks": [
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Zinke says Republicans 'moving on' from Trump",
+   "summary": "GOP Rep. Ryan Zinke (Mont.) on Thursday evening indicated that Republican lawmakers are distancing themselves from President Trump after they lost control of Congress in the midterm elections. “They're moving on, but no doubt, the president took a little pain off them,” Zinke tol",
+   "category": "Politics",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
     {
-     "org": "FactCheck.org",
-     "title": "FactChecking Trump’s Post-Election ‘60 Minutes’ Interview",
-     "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Zinke says Republicans 'moving on' from Trump",
+     "url": "https://thehill.com/homenews/house/6233182-zinke-says-gop-distancing-trump-midterms/"
+    },
+    {
+     "name": "The Federalist",
+     "lean": 2,
+     "label": "Right",
+     "title": "No, Republicans Didn’t Lose Because of Trump’s Immigration Policies",
+     "url": "https://thefederalist.com/2026/11/20/no-republicans-didnt-lose-because-of-trumps-immigration-policies/?utm_source=rss&utm_medium=rss&utm_campaign=no-republicans-didnt-lose-because-of-trumps-immigration-policies"
     }
    ],
+   "factchecks": [],
    "videos": []
   },
   {
@@ -924,38 +1046,93 @@
    ]
   },
   {
-   "title": "Magnitude 4.4 earthquake hits near downtown Los Angeles",
-   "summary": "A magnitude 4.4 earthquake hit the Los Angeles area early Friday morning, according to the United States Geological Survey",
-   "category": "General",
+   "title": "Anthropic shares slump on second day of trading as markets reel AI sell-off",
+   "summary": "Asian markets record worst week since 2020 as investors question huge sums being poured into AI build-out Business live – latest updates Anthropic’s shares have slumped at the start of a second day of trading, as its record-breaking IPO failed to stem a sell-off in AI-linked comp",
+   "category": "Economy",
    "leans": [
     -1,
     0
    ],
    "span": 1,
-   "n_sources": 2,
+   "n_sources": 3,
    "balance": {
-    "l": 1,
+    "l": 2,
     "c": 1,
     "r": 0
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "ABC News",
+     "name": "The Guardian",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Magnitude 4.4 earthquake hits near downtown Los Angeles",
-     "url": "https://abcnews.com/US/magnitude-44-earthquake-hits-downtown-los-angeles/story?id=138315998"
+     "title": "Anthropic shares slump on second day of trading as markets reel AI sell-off",
+     "url": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off"
     },
     {
-     "name": "The Hill",
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Markets react to Anthropic’s IPO",
+     "url": "https://www.nbcnews.com/video/markets-react-to-anthropic-s-ipo-273889349674"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Anthropic shares tank after huge IPO, as markets struggle to shake off a bad week",
+     "url": "https://www.nbcnews.com/business/markets/anthropic-shares-markets-selloff-nasdaq-rcna610394"
+    },
+    {
+     "name": "CNBC",
      "lean": 0,
      "label": "Center",
-     "title": "Magnitude 4.4 earthquake rocks Los Angeles County",
-     "url": "https://thehill.com/homenews/state-watch/6232627-los-angeles-earthquake-magnitude-4-4/"
+     "title": "As Anthropic shares tank, investors scramble to hedge. It could be very expensive",
+     "url": "https://www.cnbc.com/2026/11/20/as-anthropic-shares-tank-investors-scramble-to-hedge-it-could-be-very-expensive.html"
     }
    ],
    "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "The Army Is Detonating a Toxic “Lead Bomb” in Iowa. It Forgot to Warn People.",
+   "summary": "Update, November 19: Acting Secretary of the Army Adam Telle has announced that the detonation will be postponed until November 23. On Friday, the US Army is scheduled to detonate roughly 11,000 pounds of lead azide, an unstable bomb-making chemical, in southeastern Iowa. The exp",
+   "category": "World",
+   "leans": [
+    -2,
+    -1
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "The Army Is Detonating a Toxic “Lead Bomb” in Iowa. It Forgot to Warn People.",
+     "url": "https://www.motherjones.com/politics/2026/11/army-military-iowa-lead-azide-toxic-detonation-dust-health/"
+    },
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Dems aim to block Iran war funding. And, Army delays lead azide detonation in Iowa",
+     "url": "https://www.npr.org/2026/11/20/g-s1-154582/up-first-newsletter-democrats-iran-war-trump-xi-jinping-iowa-army"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Is US Army planning to detonate massive amount of lead azide in Middletown, Iowa?",
+     "link": "https://www.snopes.com/fact-check/lead-azide-detonation-army-iowa/"
+    }
+   ],
    "videos": []
   },
   {
@@ -1058,82 +1235,6 @@
      "label": "Right",
      "title": "Democrats Talked Big Game About Getting Tough With Israel. They Supported Hakeem Jeffries For Speaker Anywas.",
      "url": "https://dailycaller.com/2026/11/19/democrats-israel-hakeem-jeffries-nominated-speaker"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Watchdog: Pentagon lacks 'overarching plan' for munitions shortfalls, no single office in charge",
-   "summary": "The Pentagon lacks an \"overarching plan\" to address shortfalls of key U.S. munitions and does not have a specific military office guiding the push to refill stockpiles of Patriot interceptors, Tomahawk missiles and other tools, a government watchdog said in a major new report thi",
-   "category": "Economy",
-   "leans": [
-    1,
-    2
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Watchdog: Pentagon lacks 'overarching plan' for munitions shortfalls, no single office in charge",
-     "url": "https://www.washingtontimes.com/news/2026/nov/20/watchdog-pentagon-lacks-overarching-plan-munitions-shortfalls-no/"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "GAO: Pentagon Has No Plan to Fix Critical Munitions Shortages",
-     "url": "https://www.newsmax.com/newsfront/pentagon-government-accountability-office-iran-war/2026/11/19/id/1276922"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Anthropic shares slump on second day of trading as stock markets reel from AI sell-off",
-   "summary": "Asian markets record their worst week since 2020 as investors question huge sums being poured into AI build-out Business live – latest updates Anthropic’s shares have slumped at the start of a second day of trading, as its record-breaking IPO failed to stem a sell-off in AI-linke",
-   "category": "Economy",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 2,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": "right",
-   "sources": [
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Anthropic shares slump on second day of trading as stock markets reel from AI sell-off",
-     "url": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off"
-    },
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Markets react to Anthropic’s IPO",
-     "url": "https://www.nbcnews.com/video/markets-react-to-anthropic-s-ipo-273889349674"
-    },
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Anthropic shares dip after blockbuster IPO, as markets struggle to shake off a bad week",
-     "url": "https://www.nbcnews.com/business/markets/anthropic-shares-markets-selloff-nasdaq-rcna610394"
     }
    ],
    "factchecks": [],
@@ -1276,11 +1377,11 @@
    ]
   },
   {
-   "title": "The Army Is Detonating a Toxic “Lead Bomb” in Iowa. It Forgot to Warn People.",
-   "summary": "Update, November 19: Acting Secretary of the Army Adam Telle has announced that the detonation will be postponed until November 23. On Friday, the US Army is scheduled to detonate roughly 11,000 pounds of lead azide, an unstable bomb-making chemical, in southeastern Iowa. The exp",
+   "title": "Just how vulnerable are we to cyberattacks?",
+   "summary": "In a week of outages, we're thinking about the rising threat of AI-powered cyberattacks. But sometimes, it's not the most sophisticated attack that's concerning, but the easy targets buried in old software.",
    "category": "World",
    "leans": [
-    -2
+    -1
    ],
    "span": 0,
    "n_sources": 1,
@@ -1292,53 +1393,122 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "Mother Jones",
-     "lean": -2,
-     "label": "Left",
-     "title": "The Army Is Detonating a Toxic “Lead Bomb” in Iowa. It Forgot to Warn People.",
-     "url": "https://www.motherjones.com/politics/2026/11/army-military-iowa-lead-azide-toxic-detonation-dust-health/"
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Just how vulnerable are we to cyberattacks?",
+     "url": "https://www.npr.org/sections/planet-money/2026/11/20/nx-s1-6047750/just-how-vulnerable-are-we-to-cyberattacks"
     }
    ],
-   "factchecks": [
-    {
-     "org": "Snopes",
-     "title": "Is US Army planning to detonate massive amount of lead azide in Middletown, Iowa?",
-     "link": "https://www.snopes.com/fact-check/lead-azide-detonation-army-iowa/"
-    }
-   ],
+   "factchecks": [],
    "videos": []
   },
   {
-   "title": "Regularly drinking beer, hard liquor puts you at higher risk of sudden organ damage: study",
-   "summary": "The elevated risk among beer and liquor drinkers continued even after researchers considered liver disease and a wide range of other health and lifestyle factors.",
-   "category": "Health",
+   "title": "GOP Sen. Johnson rejects tying government funding to an end to the Iran war",
+   "summary": "\"We're not going to shut down the war,\" Sen. Ron Johnson said as Republicans and Democrats struggle to reach a government funding deal.",
+   "category": "World",
    "leans": [
-    1
+    -1
    ],
    "span": 0,
    "n_sources": 1,
    "balance": {
-    "l": 0,
+    "l": 1,
     "c": 0,
-    "r": 1
+    "r": 0
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Regularly drinking beer, hard liquor puts you at higher risk of sudden organ damage: study",
-     "url": "https://nypost.com/2026/11/20/health/beer-hard-liquor-linked-to-sudden-kidney-damage-in-14-year-study/"
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "GOP Sen. Johnson rejects tying government funding to an end to the Iran war",
+     "url": "https://www.npr.org/2026/11/20/nx-s1-6047473/government-shutdown-funding-iran-war"
     }
    ],
-   "factchecks": [
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "How exactly did Trump get so rich on crypto? We explain",
+   "summary": "President Trump has made billions of dollars in his second term — most of it in cryptocurrencies. Democrats are vowing to probe his businesses as they gear up to take over Congress next year.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
     {
-     "org": "FactCheck.org",
-     "title": "Florida’s Surgeon General Spins State COVID-19 Vaccine Comparison Study",
-     "link": "https://www.factcheck.org/2026/11/floridas-surgeon-general-spins-state-covid-19-vaccine-comparison-study/"
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How exactly did Trump get so rich on crypto? We explain",
+     "url": "https://www.npr.org/2026/11/20/nx-s1-6038969/trump-crypto-profits-corruption-meme-coin-world-liberty-explainer"
     }
    ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Critics are calling what brand-new release a masterpiece? The quiz knows",
+   "summary": "Plus: Are you up to date on your James Bond news? If so, you'll get at least one question right.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Critics are calling what brand-new release a masterpiece? The quiz knows",
+     "url": "https://www.npr.org/2026/11/20/g-s1-154337/florida-starship-bond-schumer-ai-flu-alaska-news-quiz"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Young people record their older relatives for The Great Listen",
+   "summary": "Young people sit down to record their elders as part of the annual holiday tradition from StoryCorps called The Great Listen.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Young people record their older relatives for The Great Listen",
+     "url": "https://www.npr.org/2026/11/20/nx-s1-6045879/young-people-record-their-older-relatives-for-the-great-listen"
+    }
+   ],
+   "factchecks": [],
    "videos": []
   },
   {
@@ -1719,6 +1889,60 @@
    "videos": []
   },
   {
+   "title": "Talking Shop with comedian Heather McMahan",
+   "summary": "Comedian Heather McMahan is going on tour in 2027. She’s not traveling without her favorite packing cubes, snacks, lashes and compression socks.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Talking Shop with comedian Heather McMahan",
+     "url": "https://www.nbcnews.com/select/shopping/heather-mcmahan-favorite-things-rcna610295"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "New UFO files show contractor planned vault for \"exotic material\"",
+   "summary": "The Pentagon's latest batch of UFO files includes a report from a government contractor detailing plans for an underground vault to store \"exotic material or tissue\" it was seeking.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "New UFO files show contractor planned vault for \"exotic material\"",
+     "url": "https://www.cbsnews.com/news/ufo-files-pentagon-contractor/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "Trump insists he's \"not rushing to make any decisions on Iran\"",
    "summary": "Despite rising tension, President Trump told an Israeli outlet he may not make a decision on his next move in the Iran war until 2027.",
    "category": "World",
@@ -1780,6 +2004,33 @@
      "label": "Lean Left"
     }
    ]
+  },
+  {
+   "title": "Melissa Etheridge is cheering for the Kansas City Current in the NWSL final",
+   "summary": "Rock star Melissa Etheridge is a huge fan of the National Women's Soccer League and loves supporting the Kansas City Current.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Melissa Etheridge is cheering for the Kansas City Current in the NWSL final",
+     "url": "https://www.cbsnews.com/video/melissa-etheridge-is-cheering-for-the-kansas-city-current-in-the-nwsl-final/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
   },
   {
    "title": "American Beverage's Good to Know initiative gets a spotlight at the NWSL Championship",
@@ -1926,8 +2177,8 @@
    ]
   },
   {
-   "title": "\"48 Hours\" show schedule",
-   "summary": "\"48 Hours\" uncovers the narrative behind true crime cases with unmatched reporting and suspense.",
+   "title": "Magnitude 4.4 earthquake hits near downtown Los Angeles",
+   "summary": "A magnitude 4.4 earthquake hit the Los Angeles area early Friday morning, according to the United States Geological Survey",
    "category": "General",
    "leans": [
     -1
@@ -1942,38 +2193,11 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "CBS News",
+     "name": "ABC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "\"48 Hours\" show schedule",
-     "url": "https://www.cbsnews.com/48-hours/episode-schedule/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Robbers film California train heist",
-   "summary": "An alleged train heist ring targeted dozens of freight trains, California prosecutors say. Ash-har Quraishi reports.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Robbers film California train heist",
-     "url": "https://www.cbsnews.com/video/robbers-film-california-train-heist/"
+     "title": "Magnitude 4.4 earthquake hits near downtown Los Angeles",
+     "url": "https://abcnews.com/US/magnitude-44-earthquake-hits-downtown-los-angeles/story?id=138315998"
     }
    ],
    "factchecks": [],
@@ -2086,216 +2310,50 @@
    ],
    "factchecks": [],
    "videos": []
-  },
-  {
-   "title": "WATCH:  New video angle shows moment of Brooklyn apartment building's deadly collapse",
-   "summary": "Dash cam video from a bus passing by shows the terrifying moment a three-story Brooklyn apartment building buckled and crumbled to the ground, killing eight people and injuring multiple others.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  New video angle shows moment of Brooklyn apartment building's deadly collapse",
-     "url": "https://abcnews.com/video/138305617/"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "Egs0ON7RCFs",
-     "title": "Protesters marched following the deadly  Brooklyn building collapse",
-     "thumb": "https://i.ytimg.com/vi/Egs0ON7RCFs/hqdefault.jpg",
-     "channel": "Washington Post",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
-  },
-  {
-   "title": "WATCH:  Man reunited with long-lost cat after 3.5 years",
-   "summary": "ABC News' Danny New talks to a woman in Oregon who helped reunite a missing cat with its owner in South Carolina.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  Man reunited with long-lost cat after 3.5 years",
-     "url": "https://abcnews.com/video/138280718/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  'Kenan and Kel' star has a mission to give back",
-   "summary": "Actor Kel Mitchell shares how he's using his star power to help families in need.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  'Kenan and Kel' star has a mission to give back",
-     "url": "https://abcnews.com/video/138288957/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Iran war has permanently reshaped energy priorities, IEA report says",
-   "summary": "The repercussions from the Iran war will \"leave lasting marks\" on the world's energy sector, said the Paris-based IEA, founded after the 1973-74 oil crisis.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Iran war has permanently reshaped energy priorities, IEA report says",
-     "url": "https://www.pbs.org/newshour/world/iran-war-has-permanently-reshaped-energy-priorities-iea-report-says"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Do you need a measles booster shot now that the U.S. has lost its elimination status?",
-   "summary": "The U.S., Mexico and Bolivia lost their measles-free status this week after stubborn outbreaks erased decades of progress.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Do you need a measles booster shot now that the U.S. has lost its elimination status?",
-     "url": "https://www.pbs.org/newshour/health/do-you-need-a-measles-booster-shot-now-that-the-u-s-has-lost-its-elimination-status"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "FCC votes to allow state prisons to jam signals from contraband cellphones",
-   "summary": "The Federal Communications Commission on Thursday acted to allow state prisons across the United States to jam the signals of cellphones smuggled to inmates as the federal government cracks down on devices that authorities say are the No. 1 security threat in the nation's correct",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "FCC votes to allow state prisons to jam signals from contraband cellphones",
-     "url": "https://www.pbs.org/newshour/nation/fcc-votes-to-allow-state-prisons-to-jam-signals-from-contraband-cellphones"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Experts assess what was addressed and overlooked at trilateral meeting in China",
-   "summary": "For perspective on the Trump, Xi and Putin summit in China, Amna Nawaz spoke with Dennis Wilder and Fred Fleitz. Wilder was senior director for East Asia and special assistant to President George W. Bush and was the editor of the president's daily brief during the Obama administr",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Experts assess what was addressed and overlooked at trilateral meeting in China",
-     "url": "https://www.pbs.org/newshour/show/experts-assess-what-was-addressed-and-overlooked-at-trilateral-meeting-in-china"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "OI0lFh1MVKM",
-     "title": "Experts assess what was addressed and overlooked at trilateral meeting in China",
-     "thumb": "https://i.ytimg.com/vi/OI0lFh1MVKM/hqdefault.jpg",
-     "channel": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
   }
  ],
  "blindspots": [
+  {
+   "title": "The Army Is Detonating a Toxic “Lead Bomb” in Iowa. It Forgot to Warn People.",
+   "summary": "Update, November 19: Acting Secretary of the Army Adam Telle has announced that the detonation will be postponed until November 23. On Friday, the US Army is scheduled to detonate roughly 11,000 pounds of lead azide, an unstable bomb-making chemical, in southeastern Iowa. The exp",
+   "category": "World",
+   "leans": [
+    -2,
+    -1
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "The Army Is Detonating a Toxic “Lead Bomb” in Iowa. It Forgot to Warn People.",
+     "url": "https://www.motherjones.com/politics/2026/11/army-military-iowa-lead-azide-toxic-detonation-dust-health/"
+    },
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Dems aim to block Iran war funding. And, Army delays lead azide detonation in Iowa",
+     "url": "https://www.npr.org/2026/11/20/g-s1-154582/up-first-newsletter-democrats-iran-war-trump-xi-jinping-iowa-army"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Is US Army planning to detonate massive amount of lead azide in Middletown, Iowa?",
+     "link": "https://www.snopes.com/fact-check/lead-azide-detonation-army-iowa/"
+    }
+   ],
+   "videos": []
+  },
   {
    "title": "Has Hakeem Jeffries Lost His Mind?",
    "summary": "His commitment to massively increase entitlements is reckless in the extreme.",
@@ -2326,82 +2384,6 @@
      "label": "Right",
      "title": "Democrats Talked Big Game About Getting Tough With Israel. They Supported Hakeem Jeffries For Speaker Anywas.",
      "url": "https://dailycaller.com/2026/11/19/democrats-israel-hakeem-jeffries-nominated-speaker"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Watchdog: Pentagon lacks 'overarching plan' for munitions shortfalls, no single office in charge",
-   "summary": "The Pentagon lacks an \"overarching plan\" to address shortfalls of key U.S. munitions and does not have a specific military office guiding the push to refill stockpiles of Patriot interceptors, Tomahawk missiles and other tools, a government watchdog said in a major new report thi",
-   "category": "Economy",
-   "leans": [
-    1,
-    2
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Watchdog: Pentagon lacks 'overarching plan' for munitions shortfalls, no single office in charge",
-     "url": "https://www.washingtontimes.com/news/2026/nov/20/watchdog-pentagon-lacks-overarching-plan-munitions-shortfalls-no/"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "GAO: Pentagon Has No Plan to Fix Critical Munitions Shortages",
-     "url": "https://www.newsmax.com/newsfront/pentagon-government-accountability-office-iran-war/2026/11/19/id/1276922"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Anthropic shares slump on second day of trading as stock markets reel from AI sell-off",
-   "summary": "Asian markets record their worst week since 2020 as investors question huge sums being poured into AI build-out Business live – latest updates Anthropic’s shares have slumped at the start of a second day of trading, as its record-breaking IPO failed to stem a sell-off in AI-linke",
-   "category": "Economy",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 2,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": "right",
-   "sources": [
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Anthropic shares slump on second day of trading as stock markets reel from AI sell-off",
-     "url": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off"
-    },
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Markets react to Anthropic’s IPO",
-     "url": "https://www.nbcnews.com/video/markets-react-to-anthropic-s-ipo-273889349674"
-    },
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Anthropic shares dip after blockbuster IPO, as markets struggle to shake off a bad week",
-     "url": "https://www.nbcnews.com/business/markets/anthropic-shares-markets-selloff-nasdaq-rcna610394"
     }
    ],
    "factchecks": [],
