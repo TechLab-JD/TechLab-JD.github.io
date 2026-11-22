@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-22T06:00:33Z",
- "generated_human": "Nov 22, 2026 · 06:00 UTC",
+ "generated": "2026-11-22T07:00:41Z",
+ "generated_human": "Nov 22, 2026 · 07:00 UTC",
  "sources": [
   {
    "name": "NPR",
@@ -206,7 +206,7 @@
    "count": 12
   }
  ],
- "n_articles": 335,
+ "n_articles": 336,
  "n_videos": 140,
  "trending": [
   {
@@ -218,11 +218,11 @@
    "n": 11
   },
   {
-   "term": "mexico",
-   "n": 9
+   "term": "cartel",
+   "n": 8
   },
   {
-   "term": "cartel",
+   "term": "mexico",
    "n": 8
   },
   {
@@ -232,6 +232,10 @@
   {
    "term": "hack",
    "n": 8
+  },
+  {
+   "term": "house",
+   "n": 7
   },
   {
    "term": "america",
@@ -246,7 +250,7 @@
    "n": 7
   },
   {
-   "term": "work",
+   "term": "washington",
    "n": 7
   },
   {
@@ -254,19 +258,15 @@
    "n": 7
   },
   {
+   "term": "work",
+   "n": 7
+  },
+  {
    "term": "anthropic",
    "n": 7
   },
   {
-   "term": "house",
-   "n": 6
-  },
-  {
    "term": "thanksgiving",
-   "n": 6
-  },
-  {
-   "term": "washington",
    "n": 6
   },
   {
@@ -275,6 +275,38 @@
   }
  ],
  "videos": [
+  {
+   "videoId": "i2v8twROFgg",
+   "title": "Youth wing of India’s Congress party protests against Meta over alleged account removals",
+   "thumb": "https://i.ytimg.com/vi/i2v8twROFgg/hqdefault.jpg",
+   "channel": "AP",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "-PhhyGs2pgA",
+   "title": "Mamdani announces plan to CLOSE Rikers Island ‘once and for all’",
+   "thumb": "https://i.ytimg.com/vi/-PhhyGs2pgA/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "eAshcLzGd0E",
+   "title": "Everyone is panicking about cyberattacks. But something doesn't add up",
+   "thumb": "https://i.ytimg.com/vi/eAshcLzGd0E/hqdefault.jpg",
+   "channel": "Sky News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "Bgq63inaAlw",
+   "title": "Faith under FIRE as tension rises on ‘The Vow’",
+   "thumb": "https://i.ytimg.com/vi/Bgq63inaAlw/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
   {
    "videoId": "ILo22hYC8Gs",
    "title": "How a group of young architects fights to save a forgotten European landmark | Focus on Europe",
@@ -370,38 +402,6 @@
    "channel": "DW News",
    "lean": 0,
    "label": "Center"
-  },
-  {
-   "videoId": "TKNq7E6FYCI",
-   "title": "Gutfeld: This is the state that said you couldn’t have plastic straws",
-   "thumb": "https://i.ytimg.com/vi/TKNq7E6FYCI/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
-  {
-   "videoId": "odnb8id7VaU",
-   "title": "Trump unlikely to accept Iran deal that looks like failure: Analysis",
-   "thumb": "https://i.ytimg.com/vi/odnb8id7VaU/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "3PG4r4TTW4c",
-   "title": "Activist wins long legal struggle to overturn anti-gay laws in Trinidad and Tobago | DW News",
-   "thumb": "https://i.ytimg.com/vi/3PG4r4TTW4c/hqdefault.jpg",
-   "channel": "DW News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "tv6kdVPMDMY",
-   "title": "NBC Nightly News Full Episode - Nov. 21",
-   "thumb": "https://i.ytimg.com/vi/tv6kdVPMDMY/hqdefault.jpg",
-   "channel": "NBC News",
-   "lean": -1,
-   "label": "Lean Left"
   }
  ],
  "stories": [
@@ -898,6 +898,85 @@
    "videos": []
   },
   {
+   "title": "Athlete swims Strait of Hormuz to highlight Iran war's wildlife toll",
+   "summary": "British endurance swimmer Lewis Pugh has swum the Strait of Hormuz to highlight environmental threats during ongoing conflict.",
+   "category": "World",
+   "leans": [
+    -1,
+    1
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Athlete swims Strait of Hormuz to highlight Iran war's wildlife toll",
+     "url": "https://www.cbsnews.com/news/athlete-swims-strait-of-hormuz-iran-war-wildlife/"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Endurance athlete Lewis Pugh braves Strait of Hormuz amid explosions to highlight Iran war’s impact on wildlife",
+     "url": "https://nypost.com/2026/11/22/world-news/british-swimmer-lewis-pugh-braves-strait-of-hormuz-amid-explosions-to-highlight-iran-wars-impact-on-wildlife/"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "VJPCo1pCWXo",
+     "title": "British athlete swims through Strait of Hormuz amid attacks",
+     "thumb": "https://i.ytimg.com/vi/VJPCo1pCWXo/hqdefault.jpg",
+     "channel": "Sky News",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "Mercury gets its first visitor in years as a pair of spacecraft loop into orbit in $2B mission",
+   "summary": "A pair of spacecraft slipped into orbit around Mercury on Saturday after an eight-year cruise through the inner solar system to unravel our littlest planet’s mountain of mysteries.",
+   "category": "Science",
+   "leans": [
+    -1,
+    1
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Mercury gets its first visitor in years as a pair of spacecraft loop into orbit",
+     "url": "https://abcnews.com/Technology/wireStory/mercury-gets-visitor-years-pair-spacecraft-loop-orbit-138351997"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Mercury gets its first visitor in years as a pair of spacecraft loop into orbit in $2B mission",
+     "url": "https://nypost.com/2026/11/22/science/mercury-visited-by-european-japanese-spacecraft-bepicolombo-in-rare-mission/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "Trump secretary's Christian messages to staff went \"too far,\" judge rules",
    "summary": "A federal judge said Thursday that Agriculture Secretary Brooke Rollins' overtly Christian messages to department employees went \"too far\" and put enough pressure on staff to raise a First Amendment violation. The big picture: The Supreme Court has repeatedly weighed the boundari",
    "category": "Politics",
@@ -1003,6 +1082,41 @@
      "label": "Center",
      "title": "Man convicted of starting Palisades fire in Los Angeles",
      "url": "https://www.bbc.co.uk/news/articles/c64gn0gy8rj3o?at_medium=RSS&at_campaign=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Kansas City Current capture first NWSL trophy",
+   "summary": "The Kansas City Current made history Saturday, capturing their first NWSL Championship title with a 2-1 win over the Washington Spirit.",
+   "category": "General",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Kansas City Current capture first NWSL trophy",
+     "url": "https://www.cbsnews.com/news/nwsl-championship-kansas-city-current-washington-spirit/"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Kansas City Current defeat Washington Spirit 2-1 to lift first NWSL title",
+     "url": "https://www.aljazeera.com/sports/2026/11/22/kansas-city-current-nwsl-2026-final-washington-spirit-womens-soccer?traffic_source=rss"
     }
    ],
    "factchecks": [],
@@ -2052,42 +2166,6 @@
    "videos": []
   },
   {
-   "title": "Russia escalates attacks on Ukraine as concerns grow in Europe",
-   "summary": "Following President Trump’s high-stakes meeting with Russian President Vladimir Putin, there are growing concerns for the future of Ukraine and also Europe. Poland’s leader says a Russian missile that hit Polish territory was likely “intentional.” NBC News’ Keir Simmons reports.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Russia escalates attacks on Ukraine as concerns grow in Europe",
-     "url": "https://www.nbcnews.com/nightly-news/video/russia-escalates-attacks-on-ukraine-as-concerns-grow-in-europe-273965125962"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "8UiAAT2hJSA",
-     "title": "Russia escalates attacks on Ukraine as concerns grow in Europe",
-     "thumb": "https://i.ytimg.com/vi/8UiAAT2hJSA/hqdefault.jpg",
-     "channel": "NBC News",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
-  },
-  {
    "title": "Meet the ‘GTA’ superfans who turned the game’s release into a major life event",
    "summary": "From transforming their homes into “Grand Theft Auto”-inspired playgrounds to clearing their calendars at all costs, die-hard fans of the franchise pulled out all the stops for the arrival of “GTA VI.”",
    "category": "General",
@@ -2190,60 +2268,6 @@
      "label": "Lean Left",
      "title": "Early Black Friday deals are here, and I’m tracking the 57+ best ones daily: Amazon, Apple, PlayStation and more",
      "url": "https://www.nbcnews.com/select/shopping/best-early-black-friday-deals-2026-rcna609512"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Apple AirPods Pro 3 are currently at their low Prime Day price",
-   "summary": "The Apple AirPods Pro 3 are 28% off on Amazon, down to $179 from $249. They have stronger noise cancellation, heart rate tracking and 8-hour battery life.",
-   "category": "Economy",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Apple AirPods Pro 3 are currently at their low Prime Day price",
-     "url": "https://www.nbcnews.com/select/shopping/apple-airpods-pro-3-deal-of-the-day-rcna610526"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Get the 47+ best Advent calendars of the year before they sell out",
-   "summary": "Popular Advent calendars sell out before December, so get yours now. Shop the best ones from Bonne Maman, Anthropologie, Squishmallows and more.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Get the 47+ best Advent calendars of the year before they sell out",
-     "url": "https://www.nbcnews.com/select/shopping/best-advent-calendars-2026-rcna603495"
     }
    ],
    "factchecks": [],
