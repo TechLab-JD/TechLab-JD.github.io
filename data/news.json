@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-22T02:00:32Z",
- "generated_human": "Nov 22, 2026 · 02:00 UTC",
+ "generated": "2026-11-22T03:00:30Z",
+ "generated_human": "Nov 22, 2026 · 03:00 UTC",
  "sources": [
   {
    "name": "NPR",
@@ -206,23 +206,23 @@
    "count": 12
   }
  ],
- "n_articles": 336,
+ "n_articles": 335,
  "n_videos": 140,
  "trending": [
   {
    "term": "trump",
-   "n": 20
+   "n": 21
   },
   {
    "term": "democrats",
-   "n": 10
-  },
-  {
-   "term": "america",
-   "n": 8
+   "n": 11
   },
   {
    "term": "mexico",
+   "n": 8
+  },
+  {
+   "term": "china",
    "n": 8
   },
   {
@@ -242,19 +242,15 @@
    "n": 7
   },
   {
+   "term": "america",
+   "n": 7
+  },
+  {
    "term": "cartel",
    "n": 7
   },
   {
-   "term": "china",
-   "n": 7
-  },
-  {
-   "term": "tech",
-   "n": 7
-  },
-  {
-   "term": "game",
+   "term": "president",
    "n": 7
   },
   {
@@ -262,19 +258,55 @@
    "n": 7
   },
   {
-   "term": "president",
+   "term": "work",
+   "n": 7
+  },
+  {
+   "term": "tech",
    "n": 6
   },
   {
-   "term": "week",
+   "term": "game",
    "n": 6
   },
   {
-   "term": "interest",
+   "term": "washington",
    "n": 6
   }
  ],
  "videos": [
+  {
+   "videoId": "MbCb-tXoE20",
+   "title": "Bessent confirms he’s living on US military base over Iran fears | AJ #shorts",
+   "thumb": "https://i.ytimg.com/vi/MbCb-tXoE20/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "BMwKuWACIHo",
+   "title": "President Trump says deal with Iran would be ‘permanent’",
+   "thumb": "https://i.ytimg.com/vi/BMwKuWACIHo/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "j-Zam_DkCAw",
+   "title": "Florida floods: thousands of homes submerged as National Guard carries out rescues",
+   "thumb": "https://i.ytimg.com/vi/j-Zam_DkCAw/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "6TruNnFbhg8",
+   "title": "Princess Catherine reflects on life after cancer diagnosis in a new documentary",
+   "thumb": "https://i.ytimg.com/vi/6TruNnFbhg8/hqdefault.jpg",
+   "channel": "AP",
+   "lean": 0,
+   "label": "Center"
+  },
   {
    "videoId": "ShLjolXiag0",
    "title": "Trump attempts to put ‘positive spin’ on apparent FBI security breach",
@@ -370,38 +402,6 @@
    "channel": "NBC News",
    "lean": -1,
    "label": "Lean Left"
-  },
-  {
-   "videoId": "8UiAAT2hJSA",
-   "title": "Russia escalates attacks on Ukraine as concerns grow in Europe",
-   "thumb": "https://i.ytimg.com/vi/8UiAAT2hJSA/hqdefault.jpg",
-   "channel": "NBC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "hDaU9IkXfaE",
-   "title": "Deadly raid captures top cartel boss in Mexico",
-   "thumb": "https://i.ytimg.com/vi/hDaU9IkXfaE/hqdefault.jpg",
-   "channel": "NBC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "SUwOE2iKYe4",
-   "title": "Thanksgiving travel rush kicks off after FAA meltdown",
-   "thumb": "https://i.ytimg.com/vi/SUwOE2iKYe4/hqdefault.jpg",
-   "channel": "NBC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "dtc2s41zvWE",
-   "title": "English village of Barnham votes to 'leave the UK' in protest at asylum accommodation plan",
-   "thumb": "https://i.ytimg.com/vi/dtc2s41zvWE/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
   }
  ],
  "stories": [
@@ -738,10 +738,10 @@
     2
    ],
    "span": 3,
-   "n_sources": 7,
+   "n_sources": 8,
    "balance": {
     "l": 2,
-    "c": 2,
+    "c": 3,
     "r": 3
    },
    "blindspot": null,
@@ -773,6 +773,13 @@
      "label": "Center",
      "title": "Trump says he'd work with Dems to cap credit card interest, fees",
      "url": "https://www.axios.com/2026/11/21/trump-credit-cards-rates-warren"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump Shares El-Sayed’s ‘TrumpCare’ Plan, Says He May Work with Democrats",
+     "url": "https://www.newsweek.com/trump-shares-el-sayeds-trumpcare-plan-says-he-may-work-with-democrats-12753203"
     },
     {
      "name": "Washington Examiner",
@@ -867,6 +874,47 @@
     }
    ],
    "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Florida man sentenced to death for 'cold, calculated' murder of attorney whose body was never found",
+   "summary": "Former Florida plastic surgeon Tomasz Kosowski got the death penalty for murdering lawyer Cozzi, whose remains were never recovered after the 2023 killing.",
+   "category": "General",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Florida plastic surgeon Tomasz Kosowski sentenced to death for murdering lawyer",
+     "url": "https://www.washingtontimes.com/news/2026/nov/21/florida-plastic-surgeon-tomasz-kosowski-sentenced-death-murdering/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Florida man sentenced to death for 'cold, calculated' murder of attorney whose body was never found",
+     "url": "https://www.foxnews.com/us/florida-man-sentenced-death-cold-calculated-murder-attorney-body-never-found"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "Florida’s Surgeon General Spins State COVID-19 Vaccine Comparison Study",
+     "link": "https://www.factcheck.org/2026/11/floridas-surgeon-general-spins-state-covid-19-vaccine-comparison-study/"
+    }
+   ],
    "videos": []
   },
   {
@@ -1080,6 +1128,41 @@
    "videos": []
   },
   {
+   "title": "Broadcaster is most UCLA fans yelling ‘go’ at backup quarterback during overtime loss to Michigan",
+   "summary": "Madden Iamaleava hasn't had many opportunities under center during his college football career, and in Saturday's overtime loss against Michigan, it showed.",
+   "category": "General",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Broadcaster is most UCLA fans yelling ‘go’ at backup quarterback during overtime loss to Michigan",
+     "url": "https://nypost.com/2026/11/21/sports/charles-davis-yells-go-at-madden-iamaleava-during-hesitant-play/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "UCLA QB concerns deepen as Ty Dieffenbach is carted off in triple-overtime upset loss to Michigan",
+     "url": "https://www.foxnews.com/outkick-sports/ucla-qb-concerns-deepen-ty-dieffenbach-carted-off-triple-overtime-upset-loss-michigan"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "Florida, San Franciso Brace for Massive Tides as Travel Caution Urged",
    "summary": "Scattered rain continued to exacerbate the impacts of historic flooding across central Florida on Saturday, even as officials in Northern California braced for an unprecedented deluge during high tides heading into the heavy Thanksgiving travel week. San Francisco Mayor...",
    "category": "General",
@@ -1206,6 +1289,46 @@
      "org": "Snopes",
      "title": "Did Trump say planes will have to 'fly a little bit slower'?",
      "link": "https://www.snopes.com/fact-check/trump-planes-fly-little-slower/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "A lame-duck Trump was exactly what Xi and Putin wanted",
+   "summary": "Xi Jinping welcomed Donald Trump to Shenzhen with the honors reserved for a great power. Vladimir Putin joined them for an unprecedented trilateral summit on Thursday. Three leaders representing the world’s largest nuclear powers emerged with a four-point declaration promising pe",
+   "category": "World",
+   "leans": [
+    1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Michael Goodwin: Don’t expect Trump to be a lame duck president despite the midterm shellacking",
+     "url": "https://nypost.com/2026/11/21/opinion/michael-goodwin-dont-expect-trump-to-be-a-lame-duck-president-despite-the-midterm-shellacking/"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "A lame-duck Trump was exactly what Xi and Putin wanted",
+     "url": "https://www.washingtonexaminer.com/in_focus/4810832/lame-duck-trump-what-xi-putin-wanted/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "FactChecking Trump’s Post-Election ‘60 Minutes’ Interview",
+     "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
     }
    ],
    "videos": []
@@ -2097,99 +2220,85 @@
    ],
    "factchecks": [],
    "videos": []
-  },
-  {
-   "title": "Trump says he wants \"permanent\" deal with Iran",
-   "summary": "Despite rising tension, President Trump told an Israeli outlet he may not make a decision on his next move in the Iran war until 2027.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Trump says he wants \"permanent\" deal with Iran",
-     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-tehran-denies-chemical-weapons/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Athlete swims Strait of Hormuz to highlight Iran war's wildlife toll",
-   "summary": "British endurance swimmer Lewis Pugh has swum the Strait of Hormuz to highlight environmental threats during ongoing conflict.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Athlete swims Strait of Hormuz to highlight Iran war's wildlife toll",
-     "url": "https://www.cbsnews.com/news/athlete-swims-strait-of-hormuz-iran-war-wildlife/"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "VJPCo1pCWXo",
-     "title": "British athlete swims through Strait of Hormuz amid attacks",
-     "thumb": "https://i.ytimg.com/vi/VJPCo1pCWXo/hqdefault.jpg",
-     "channel": "Sky News",
-     "lean": 0,
-     "label": "Center"
-    }
-   ]
-  },
-  {
-   "title": "This week on \"Sunday Morning\" (Nov. 22): The Food Issue",
-   "summary": "Jane Pauley hosts our annual \"Eat, Drink & Be Merry\" holiday broadcast exploring all things epicurean! Check out our menu...",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "This week on \"Sunday Morning\" (Nov. 22): The Food Issue",
-     "url": "https://www.cbsnews.com/news/this-week-on-sunday-morning-nov-22-2026-the-food-issue/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
   }
  ],
  "blindspots": [
+  {
+   "title": "Florida man sentenced to death for 'cold, calculated' murder of attorney whose body was never found",
+   "summary": "Former Florida plastic surgeon Tomasz Kosowski got the death penalty for murdering lawyer Cozzi, whose remains were never recovered after the 2023 killing.",
+   "category": "General",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Florida plastic surgeon Tomasz Kosowski sentenced to death for murdering lawyer",
+     "url": "https://www.washingtontimes.com/news/2026/nov/21/florida-plastic-surgeon-tomasz-kosowski-sentenced-death-murdering/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Florida man sentenced to death for 'cold, calculated' murder of attorney whose body was never found",
+     "url": "https://www.foxnews.com/us/florida-man-sentenced-death-cold-calculated-murder-attorney-body-never-found"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "Florida’s Surgeon General Spins State COVID-19 Vaccine Comparison Study",
+     "link": "https://www.factcheck.org/2026/11/floridas-surgeon-general-spins-state-covid-19-vaccine-comparison-study/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "Broadcaster is most UCLA fans yelling ‘go’ at backup quarterback during overtime loss to Michigan",
+   "summary": "Madden Iamaleava hasn't had many opportunities under center during his college football career, and in Saturday's overtime loss against Michigan, it showed.",
+   "category": "General",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Broadcaster is most UCLA fans yelling ‘go’ at backup quarterback during overtime loss to Michigan",
+     "url": "https://nypost.com/2026/11/21/sports/charles-davis-yells-go-at-madden-iamaleava-during-hesitant-play/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "UCLA QB concerns deepen as Ty Dieffenbach is carted off in triple-overtime upset loss to Michigan",
+     "url": "https://www.foxnews.com/outkick-sports/ucla-qb-concerns-deepen-ty-dieffenbach-carted-off-triple-overtime-upset-loss-michigan"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
   {
    "title": "Florida, San Franciso Brace for Massive Tides as Travel Caution Urged",
    "summary": "Scattered rain continued to exacerbate the impacts of historic flooding across central Florida on Saturday, even as officials in Northern California braced for an unprecedented deluge during high tides heading into the heavy Thanksgiving travel week. San Francisco Mayor...",
@@ -2317,6 +2426,46 @@
      "org": "Snopes",
      "title": "Did Trump say planes will have to 'fly a little bit slower'?",
      "link": "https://www.snopes.com/fact-check/trump-planes-fly-little-slower/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "A lame-duck Trump was exactly what Xi and Putin wanted",
+   "summary": "Xi Jinping welcomed Donald Trump to Shenzhen with the honors reserved for a great power. Vladimir Putin joined them for an unprecedented trilateral summit on Thursday. Three leaders representing the world’s largest nuclear powers emerged with a four-point declaration promising pe",
+   "category": "World",
+   "leans": [
+    1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Michael Goodwin: Don’t expect Trump to be a lame duck president despite the midterm shellacking",
+     "url": "https://nypost.com/2026/11/21/opinion/michael-goodwin-dont-expect-trump-to-be-a-lame-duck-president-despite-the-midterm-shellacking/"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "A lame-duck Trump was exactly what Xi and Putin wanted",
+     "url": "https://www.washingtonexaminer.com/in_focus/4810832/lame-duck-trump-what-xi-putin-wanted/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "FactChecking Trump’s Post-Election ‘60 Minutes’ Interview",
+     "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
     }
    ],
    "videos": []
