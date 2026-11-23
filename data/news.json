@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-23T02:02:17Z",
- "generated_human": "Nov 23, 2026 · 02:02 UTC",
+ "generated": "2026-11-23T03:00:38Z",
+ "generated_human": "Nov 23, 2026 · 03:00 UTC",
  "sources": [
   {
    "name": "NPR",
@@ -136,6 +136,13 @@
    "count": 12
   },
   {
+   "name": "Reason",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
    "name": "New York Post",
    "lean": 1,
    "label": "Lean Right",
@@ -199,36 +206,24 @@
    "count": 12
   }
  ],
- "n_articles": 323,
+ "n_articles": 334,
  "n_videos": 140,
  "trending": [
   {
    "term": "trump",
-   "n": 18
+   "n": 19
   },
   {
    "term": "democrats",
-   "n": 16
-  },
-  {
-   "term": "house",
    "n": 14
   },
   {
-   "term": "largest",
-   "n": 10
-  },
-  {
-   "term": "majority",
-   "n": 10
-  },
-  {
-   "term": "since",
-   "n": 9
+   "term": "house",
+   "n": 13
   },
   {
    "term": "climate",
-   "n": 8
+   "n": 9
   },
   {
    "term": "talks",
@@ -236,14 +231,26 @@
   },
   {
    "term": "california",
+   "n": 8
+  },
+  {
+   "term": "largest",
+   "n": 8
+  },
+  {
+   "term": "majority",
+   "n": 8
+  },
+  {
+   "term": "thanksgiving",
+   "n": 8
+  },
+  {
+   "term": "army",
    "n": 7
   },
   {
-   "term": "1992",
-   "n": 7
-  },
-  {
-   "term": "tech",
+   "term": "since",
    "n": 7
   },
   {
@@ -251,11 +258,11 @@
    "n": 7
   },
   {
-   "term": "delays",
+   "term": "tech",
    "n": 7
   },
   {
-   "term": "thanksgiving",
+   "term": "delays",
    "n": 7
   },
   {
@@ -263,16 +270,96 @@
    "n": 7
   },
   {
-   "term": "army",
-   "n": 6
+   "term": "iowa",
+   "n": 7
   }
  ],
  "videos": [
+  {
+   "videoId": "wc0_xSLc_OU",
+   "title": "Drone strike damages Russian ship in Benghazi, say Libyan officials | DW News",
+   "thumb": "https://i.ytimg.com/vi/wc0_xSLc_OU/hqdefault.jpg",
+   "channel": "DW News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "3oJKXU-8_Fg",
+   "title": "Gas pipeline fire shoots flames into the air in Alabama",
+   "thumb": "https://i.ytimg.com/vi/3oJKXU-8_Fg/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "P7bmuW8R-ac",
+   "title": "Why Americans are struggling to afford prescription medicines",
+   "thumb": "https://i.ytimg.com/vi/P7bmuW8R-ac/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "tKxTFDw73do",
+   "title": "Chaotic scene unfolds at Seattle airport as masked ICE agents arrest man and woman",
+   "thumb": "https://i.ytimg.com/vi/tKxTFDw73do/hqdefault.jpg",
+   "channel": "CBS News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "fs4SiGJ4oaU",
+   "title": "Fear over imminent detonation of bomb materials in Iowa",
+   "thumb": "https://i.ytimg.com/vi/fs4SiGJ4oaU/hqdefault.jpg",
+   "channel": "CBS News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "EP475swljLU",
+   "title": "Severe weather impacts Thanksgiving travel as airports already grapple with delays",
+   "thumb": "https://i.ytimg.com/vi/EP475swljLU/hqdefault.jpg",
+   "channel": "CBS News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "AZii6uJRj5g",
+   "title": "‘BEAUTY BANDIT’: Raccoon INTERRUPTS woman’s makeup routine #shorts",
+   "thumb": "https://i.ytimg.com/vi/AZii6uJRj5g/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
   {
    "videoId": "jaagssqSwnM",
    "title": "Is Germany's army ready for a war with Russia? | DW News",
    "thumb": "https://i.ytimg.com/vi/jaagssqSwnM/hqdefault.jpg",
    "channel": "DW News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "EFgz33RecYQ",
+   "title": "China has 'PLAYED ON FEAR,' Clay Travis warns",
+   "thumb": "https://i.ytimg.com/vi/EFgz33RecYQ/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "hXuuPUisPRQ",
+   "title": "Major escalations in Iran and Ukraine conflicts",
+   "thumb": "https://i.ytimg.com/vi/hXuuPUisPRQ/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "kcB8VMhzHcY",
+   "title": "Democrats make history after flipping North Carolina seat in US midterms | BBC News",
+   "thumb": "https://i.ytimg.com/vi/kcB8VMhzHcY/hqdefault.jpg",
+   "channel": "BBC News",
    "lean": 0,
    "label": "Center"
   },
@@ -315,86 +402,6 @@
    "channel": "ABC News",
    "lean": -1,
    "label": "Lean Left"
-  },
-  {
-   "videoId": "bDbi5l4xF04",
-   "title": "Army moves ahead with plans to detonate chemical explosives",
-   "thumb": "https://i.ytimg.com/vi/bDbi5l4xF04/hqdefault.jpg",
-   "channel": "ABC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "hpBd9iZLbg4",
-   "title": "ICE officers face scrutiny over a Seattle- Tacoma International Airport arrest",
-   "thumb": "https://i.ytimg.com/vi/hpBd9iZLbg4/hqdefault.jpg",
-   "channel": "ABC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "dmYM0J7w0Gg",
-   "title": "After 86 days in the NICU, ‘little miracle’ makes it home in time for Thanksgiving",
-   "thumb": "https://i.ytimg.com/vi/dmYM0J7w0Gg/hqdefault.jpg",
-   "channel": "Washington Post",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "U4tJI-M04DU",
-   "title": "Thousands march in Istanbul to defend media freedom | DW News",
-   "thumb": "https://i.ytimg.com/vi/U4tJI-M04DU/hqdefault.jpg",
-   "channel": "DW News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "UphzeNWwZ4g",
-   "title": "East Coast BRACES for heavy rain, travel delays after historic Florida flooding",
-   "thumb": "https://i.ytimg.com/vi/UphzeNWwZ4g/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
-  {
-   "videoId": "2i5wF22xhZA",
-   "title": "All Karoline Leavitt wants for her kids’ Christmas is… #christmas #shorts #faith",
-   "thumb": "https://i.ytimg.com/vi/2i5wF22xhZA/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
-  {
-   "videoId": "8vDen6GFVFE",
-   "title": "Miley Cyrus and Maxx Morando tie the knot in Palm Springs",
-   "thumb": "https://i.ytimg.com/vi/8vDen6GFVFE/hqdefault.jpg",
-   "channel": "CNN",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "df1oVn9pbd4",
-   "title": "Peru's transport workers turn to armoured buses as crime persists",
-   "thumb": "https://i.ytimg.com/vi/df1oVn9pbd4/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "Kghu8a7-Mak",
-   "title": "NBC Nightly News Full Episode - Nov. 22",
-   "thumb": "https://i.ytimg.com/vi/Kghu8a7-Mak/hqdefault.jpg",
-   "channel": "NBC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "5RyfVopGS3A",
-   "title": "Iowa deputies use Taser on pet kangaroo that escaped from its pen",
-   "thumb": "https://i.ytimg.com/vi/5RyfVopGS3A/hqdefault.jpg",
-   "channel": "ABC News",
-   "lean": -1,
-   "label": "Lean Left"
   }
  ],
  "stories": [
@@ -409,10 +416,10 @@
     2
    ],
    "span": 3,
-   "n_sources": 11,
+   "n_sources": 9,
    "balance": {
     "l": 3,
-    "c": 5,
+    "c": 3,
     "r": 3
    },
    "blindspot": null,
@@ -453,32 +460,11 @@
      "url": "https://thehill.com/homenews/house/6236301-democrats-secure-house-majority/"
     },
     {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Foxx concedes to Hubbard in North Carolina House race",
-     "url": "https://thehill.com/homenews/6236031-foxx-concedes-nc-5th/"
-    },
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "Democrats win largest House majority since 1992 with North Carolina seat",
-     "url": "https://www.aljazeera.com/news/2026/11/22/democrats-win-largest-house-majority-since-1992-with-north-carolina-seat?traffic_source=rss"
-    },
-    {
      "name": "The Christian Science Monitor",
      "lean": 0,
      "label": "Center",
      "title": "With 258 seats, Democrats clinch largest House majority since 1992",
      "url": "https://www.csmonitor.com/USA/2026/1122/With-258-seats-Democrats-clinch-largest-House-majority-since-1992?icid=rss"
-    },
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Democrats Secure Largest House Majority of 21st Century",
-     "url": "https://www.newsweek.com/democrats-house-chuck-hubbard-majority-win-midterms-republicans-12754533"
     },
     {
      "name": "Washington Examiner",
@@ -507,13 +493,6 @@
      "label": "Right",
      "title": "Chuck Hubbard Defeats Rep. Virginia Foxx After Recount in Their North Carolina House Race",
      "url": "https://www.newsmax.com/newsfront/chuck-hubbard-virginia-foxx-north-carolina/2026/11/22/id/1277181"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Dems Secure 258 House Seats, Most Since 1992",
-     "url": "https://www.newsmax.com/newsfront/democrats-election-representatives/2026/11/22/id/1277177"
     }
    ],
    "factchecks": [
@@ -529,6 +508,14 @@
      "title": "Democrats secure their largest House majority since 1992",
      "thumb": "https://i.ytimg.com/vi/4TspU3hnuNo/hqdefault.jpg",
      "channel": "AP",
+     "lean": 0,
+     "label": "Center"
+    },
+    {
+     "videoId": "kcB8VMhzHcY",
+     "title": "Democrats make history after flipping North Carolina seat in US midterms | BBC News",
+     "thumb": "https://i.ytimg.com/vi/kcB8VMhzHcY/hqdefault.jpg",
+     "channel": "BBC News",
      "lean": 0,
      "label": "Center"
     }
@@ -565,13 +552,6 @@
      "label": "Lean Left",
      "title": "Delta Air Lines hit with delays after baggage network system issue",
      "url": "https://www.cbsnews.com/news/delta-air-lines-nationwide-delays-amid-baggage-network-system-issue/"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Delta Air Lines says it's resolved network issue, but severe weather could cause more delays",
-     "url": "https://www.cbsnews.com/video/ddelta-air-lines-says-resolved-network-issue-severe-weather-delays/"
     },
     {
      "name": "ABC News",
@@ -684,50 +664,16 @@
     }
    ],
    "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Trump to Host Crypto Investors at Exclusive Dinner",
-   "summary": "President Donald Trump will host top investors in his namesake cryptocurrency at an exclusive dinner Sunday at his golf club outside Washington, with celebrities including \"Shark Tank\" star Kevin O'Leary expected to attend, The Wall Street Journal reported.",
-   "category": "Politics",
-   "leans": [
-    -1,
-    0,
-    2
-   ],
-   "span": 3,
-   "n_sources": 3,
-   "balance": {
-    "l": 1,
-    "c": 1,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
+   "videos": [
     {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Trump hosts exclusive dinner for investors in his declining meme coin",
-     "url": "https://www.nbcnews.com/politics/donald-trump/trump-hosts-exclusive-dinner-investors-declining-meme-coin-rcna610757"
-    },
-    {
-     "name": "Al Jazeera",
+     "videoId": "wc0_xSLc_OU",
+     "title": "Drone strike damages Russian ship in Benghazi, say Libyan officials | DW News",
+     "thumb": "https://i.ytimg.com/vi/wc0_xSLc_OU/hqdefault.jpg",
+     "channel": "DW News",
      "lean": 0,
-     "label": "Center",
-     "title": "Trump to host private dinner for largest owners of his meme coin",
-     "url": "https://www.aljazeera.com/news/2026/11/22/trump-to-host-private-dinner-for-largest-owners-of-his-meme-coin?traffic_source=rss"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Trump to Host Crypto Investors at Exclusive Dinner",
-     "url": "https://www.newsmax.com/newsfront/donald-trump-host-cryptocurrency/2026/11/22/id/1277179"
+     "label": "Center"
     }
-   ],
-   "factchecks": [],
-   "videos": []
+   ]
   },
   {
    "title": "WATCH:  Grand Theft Auto VI is back and shattering records",
@@ -816,6 +762,41 @@
    "videos": []
   },
   {
+   "title": "Trump to Host Crypto Investors at Exclusive Dinner",
+   "summary": "President Donald Trump will host top investors in his namesake cryptocurrency at an exclusive dinner Sunday at his golf club outside Washington, with celebrities including \"Shark Tank\" star Kevin O'Leary expected to attend, The Wall Street Journal reported.",
+   "category": "Politics",
+   "leans": [
+    -1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump hosts exclusive dinner for investors in his declining meme coin",
+     "url": "https://www.nbcnews.com/politics/donald-trump/trump-hosts-exclusive-dinner-investors-declining-meme-coin-rcna610757"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump to Host Crypto Investors at Exclusive Dinner",
+     "url": "https://www.newsmax.com/newsfront/donald-trump-host-cryptocurrency/2026/11/22/id/1277179"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "What Trump’s Summit in China Reveals",
    "summary": "Panelists on Washington Week With The Atlantic joined to discuss the president’s week in China with Xi Jinping and Vladimir Putin.",
    "category": "World",
@@ -851,102 +832,6 @@
    "videos": []
   },
   {
-   "title": "Global Climate Talks Fail Over Fossil Fuel Dispute",
-   "summary": "On the day the largest global climate summit started earlier this month, my colleague Rachel Santarsiero posed a key question: “Will anyone finally say ‘fossil fuels’?” The past three decades of discussions have largely sidestepped the issue despite the fact that fossil fuels are",
-   "category": "Science",
-   "leans": [
-    -2,
-    -1,
-    0
-   ],
-   "span": 2,
-   "n_sources": 6,
-   "balance": {
-    "l": 4,
-    "c": 2,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Mother Jones",
-     "lean": -2,
-     "label": "Left",
-     "title": "Global Climate Talks Fail Over Fossil Fuel Dispute",
-     "url": "https://www.motherjones.com/politics/2026/11/global-climate-talks-fail-over-fossil-fuel-dispute/"
-    },
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Climate change talks fall apart in final hours over fossil fuels",
-     "url": "https://www.npr.org/2026/11/22/nx-s1-6046195/cop31-climate-talks-close-disappointment"
-    },
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "COP31 climate talks break down after angry dispute over fossil fuels",
-     "url": "https://www.nbcnews.com/science/climate-change/cop31-climate-talks-break-angry-dispute-fossil-fuels-rcna610656"
-    },
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "In their own words: Leaders at UN climate talks discuss why negotiations ended without deal",
-     "url": "https://www.pbs.org/newshour/world/in-their-own-words-leaders-at-un-climate-talks-discuss-why-negotiations-ended-without-deal"
-    },
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "COP31 fails to reach major climate deal as talks expose deep divisions",
-     "url": "https://www.bbc.co.uk/news/articles/cqwy06zrd26lo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "What's next after no deal at COP31 climate talks?",
-     "url": "https://www.bbc.co.uk/news/videos/cr1ewge81q4qo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "Netanyahu’s Likud, Eisenkot’s Yashar end coalition talks without deal",
-     "url": "https://www.aljazeera.com/news/2026/11/22/netanyahus-likud-eisenkots-yashar-end-coalition-talks-without-deal?traffic_source=rss"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "vjTVJrhEGQ4",
-     "title": "COP31 climate talks fail to agree deal as EU and others reject draft over fossil fuel row | BBC News",
-     "thumb": "https://i.ytimg.com/vi/vjTVJrhEGQ4/hqdefault.jpg",
-     "channel": "BBC News",
-     "lean": 0,
-     "label": "Center"
-    },
-    {
-     "videoId": "_v5u2KaH10U",
-     "title": "UN climate talks end without an overarching agreement after fossil fuel dispute",
-     "thumb": "https://i.ytimg.com/vi/_v5u2KaH10U/hqdefault.jpg",
-     "channel": "AP",
-     "lean": 0,
-     "label": "Center"
-    },
-    {
-     "videoId": "k7rdzyGqtLE",
-     "title": "COP31 climate talks collapse over fossil fuel language | DW News",
-     "thumb": "https://i.ytimg.com/vi/k7rdzyGqtLE/hqdefault.jpg",
-     "channel": "DW News",
-     "lean": 0,
-     "label": "Center"
-    }
-   ]
-  },
-  {
    "title": "Army moves forward with plans to detonate 5 tons of toxic materials in Iowa",
    "summary": "The Army warned that freezing temperatures could risk an accidental toxic explosion at a munitions plant in Middletown, Iowa. The Trump administration declared an emergency and is moving ahead with a plan to blow up the unstable explosives despite a federal court order. Ian Lee h",
    "category": "World",
@@ -956,10 +841,10 @@
     1
    ],
    "span": 2,
-   "n_sources": 5,
+   "n_sources": 6,
    "balance": {
     "l": 2,
-    "c": 1,
+    "c": 2,
     "r": 2
    },
    "blindspot": null,
@@ -991,6 +876,13 @@
      "label": "Center",
      "title": "US Army to detonate tonnes of unstable explosives in Iowa despite court order",
      "url": "https://www.bbc.co.uk/news/articles/cvglrx764gdxo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "‘Extremely concerning’: Inside a US Army plan to detonate Iowa lead stores",
+     "url": "https://www.aljazeera.com/news/2026/11/23/extremely-concerning-inside-a-us-army-plan-to-detonate-iowa-lead-stores?traffic_source=rss"
     },
     {
      "name": "Washington Examiner",
@@ -1042,9 +934,112 @@
    ]
   },
   {
-   "title": "Fire at confectionery factory in Indonesia leaves at least three dead and dozens missing",
-   "summary": "Relatives of the missing victims flocked to the factory’s entrance, seeking updates about their loved ones A fire at a confectionery factory west of Jakarta has killed three people with 36 remaining missing, an Indonesian rescue official says. Drone footage showed large parts of ",
-   "category": "General",
+   "title": "Global Climate Talks Fail Over Fossil Fuel Dispute",
+   "summary": "On the day the largest global climate summit started earlier this month, my colleague Rachel Santarsiero posed a key question: “Will anyone finally say ‘fossil fuels’?” The past three decades of discussions have largely sidestepped the issue despite the fact that fossil fuels are",
+   "category": "Science",
+   "leans": [
+    -2,
+    -1,
+    0
+   ],
+   "span": 2,
+   "n_sources": 6,
+   "balance": {
+    "l": 5,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "Global Climate Talks Fail Over Fossil Fuel Dispute",
+     "url": "https://www.motherjones.com/politics/2026/11/global-climate-talks-fail-over-fossil-fuel-dispute/"
+    },
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Climate change talks fall apart in final hours over fossil fuels",
+     "url": "https://www.npr.org/2026/11/22/nx-s1-6046195/cop31-climate-talks-close-disappointment"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "COP31 climate talks break down after angry dispute over fossil fuels",
+     "url": "https://www.nbcnews.com/science/climate-change/cop31-climate-talks-break-angry-dispute-fossil-fuels-rcna610656"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "U.N. climate summit ends without deal after contentious fossil fuel debate",
+     "url": "https://www.cbsnews.com/news/un-cop31-climate-conference-ends-no-agreement-fossil-fuel-debate-standstill/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "International climate talks fall apart over fossil fuels",
+     "url": "https://www.cbsnews.com/video/international-climate-talks-fall-apart-over-fossil-fuels/"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "In their own words: Leaders at UN climate talks discuss why negotiations ended without deal",
+     "url": "https://www.pbs.org/newshour/world/in-their-own-words-leaders-at-un-climate-talks-discuss-why-negotiations-ended-without-deal"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "COP31 fails to reach major climate deal as talks expose deep divisions",
+     "url": "https://www.bbc.co.uk/news/articles/cqwy06zrd26lo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "What's next after no deal at COP31 climate talks?",
+     "url": "https://www.bbc.co.uk/news/videos/cr1ewge81q4qo?at_medium=RSS&at_campaign=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "vjTVJrhEGQ4",
+     "title": "COP31 climate talks fail to agree deal as EU and others reject draft over fossil fuel row | BBC News",
+     "thumb": "https://i.ytimg.com/vi/vjTVJrhEGQ4/hqdefault.jpg",
+     "channel": "BBC News",
+     "lean": 0,
+     "label": "Center"
+    },
+    {
+     "videoId": "_v5u2KaH10U",
+     "title": "UN climate talks end without an overarching agreement after fossil fuel dispute",
+     "thumb": "https://i.ytimg.com/vi/_v5u2KaH10U/hqdefault.jpg",
+     "channel": "AP",
+     "lean": 0,
+     "label": "Center"
+    },
+    {
+     "videoId": "pk_61JC0OXs",
+     "title": "COP31 ends without agreement as countries reject climate deal",
+     "thumb": "https://i.ytimg.com/vi/pk_61JC0OXs/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "Denmark expels Russian official, limits visas after alleging plot to kill U.S.-Ukrainian rapper",
+   "summary": "Denmark accused Russian intelligence operatives of trying to kill a U.S.-Ukrainian rapper while he was in Denmark, prompting the government to expel Russia's defense attache and announce a stop to nonessential visas for Russian citizens.",
+   "category": "World",
    "leans": [
     -1,
     0,
@@ -1060,54 +1055,72 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "The Guardian",
+     "name": "PBS NewsHour",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Fire at confectionery factory in Indonesia leaves at least three dead and dozens missing",
-     "url": "https://www.theguardian.com/world/2026/nov/22/fire-confectionary-factory-indonesia-jakarta"
+     "title": "Poland says Russia allegedly twice tried to kill a Ukrainian American rapper",
+     "url": "https://www.pbs.org/newshour/world/poland-says-russia-allegedly-twice-tried-to-kill-a-ukrainian-american-rapper"
     },
     {
-     "name": "BBC News",
+     "name": "Al Jazeera",
      "lean": 0,
      "label": "Center",
-     "title": "Three killed and dozens missing after fire at Indonesian factory",
-     "url": "https://www.bbc.co.uk/news/articles/cw8dvg5pgm0eo?at_medium=RSS&at_campaign=rss"
+     "title": "Poland says Russia tried to assassinate Ukrainian rapper twice",
+     "url": "https://www.aljazeera.com/news/2026/11/23/poland-says-russia-tried-to-assassinate-ukrainian-rapper-twice?traffic_source=rss"
     },
     {
-     "name": "New York Post",
+     "name": "Washington Times",
      "lean": 1,
      "label": "Lean Right",
-     "title": "Mass overdose leaves two dead, three critical at California home",
-     "url": "https://nypost.com/2026/11/22/us-news/mass-overdose-leaves-two-dead-three-critical-at-california-home/"
+     "title": "Denmark expels Russian official, limits visas after alleging plot to kill U.S.-Ukrainian rapper",
+     "url": "https://www.washingtontimes.com/news/2026/nov/22/denmark-removes-russian-official-limits-russia-visas/"
     }
    ],
    "factchecks": [],
-   "videos": [
+   "videos": []
+  },
+  {
+   "title": "DNI Jay Clayton supports Trump calling Russian President Vladimir Putin 'my friend'",
+   "summary": "Director of National Intelligence Jay Clayton said President Trump \"is the greatest conductor of foreign policy in a very challenging time\" and supported Mr. Trump's twice calling Russian President Vladimir Putin \"my friend.\"",
+   "category": "World",
+   "leans": [
+    -1,
+    0,
+    1
+   ],
+   "span": 2,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
     {
-     "videoId": "yuk215UjSC0",
-     "title": "Three killed and dozens missing after fire at Indonesian factory. #Indonesia #Fire #News #BBCNews",
-     "thumb": "https://i.ytimg.com/vi/yuk215UjSC0/hqdefault.jpg",
-     "channel": "BBC News",
-     "lean": 0,
-     "label": "Center"
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "U.S. intelligence chief says Trump's description of Putin as a 'friend' is 'entirely appropriate'",
+     "url": "https://www.pbs.org/newshour/world/u-s-intelligence-chief-says-trumps-description-of-putin-as-a-friend-is-entirely-appropriate"
     },
     {
-     "videoId": "p7ecIXaxLfw",
-     "title": "At least three dead in candy factory fire in Indonesia | DW News",
-     "thumb": "https://i.ytimg.com/vi/p7ecIXaxLfw/hqdefault.jpg",
-     "channel": "DW News",
+     "name": "Al Jazeera",
      "lean": 0,
-     "label": "Center"
+     "label": "Center",
+     "title": "US intelligence chief defends Trump’s comments calling Putin his ‘friend’",
+     "url": "https://www.aljazeera.com/news/2026/11/23/us-intelligence-chief-defends-trumps-comments-calling-putin-his?traffic_source=rss"
     },
     {
-     "videoId": "5XwfXHAWTjo",
-     "title": "Fifty people remain missing after a fire at an Indonesian candy factory",
-     "thumb": "https://i.ytimg.com/vi/5XwfXHAWTjo/hqdefault.jpg",
-     "channel": "Reuters",
-     "lean": 0,
-     "label": "Center"
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "DNI Jay Clayton supports Trump calling Russian President Vladimir Putin 'my friend'",
+     "url": "https://www.washingtontimes.com/news/2026/nov/22/dni-jay-clayton-supports-trump-calling-russian-president-vladimir/"
     }
-   ]
+   ],
+   "factchecks": [],
+   "videos": []
   },
   {
    "title": "Trump: Will be ‘very hard’ to work with Schumer if elected majority leader",
@@ -1221,76 +1234,6 @@
    "videos": []
   },
   {
-   "title": "Denmark expels Russian official, limits visas after alleging plot to kill U.S.-Ukrainian rapper",
-   "summary": "Denmark accused Russian intelligence operatives of trying to kill a U.S.-Ukrainian rapper while he was in Denmark, prompting the government to expel Russia's defense attache and announce a stop to nonessential visas for Russian citizens.",
-   "category": "World",
-   "leans": [
-    -1,
-    1
-   ],
-   "span": 2,
-   "n_sources": 2,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Poland says Russia allegedly twice tried to kill a Ukrainian American rapper",
-     "url": "https://www.pbs.org/newshour/world/poland-says-russia-allegedly-twice-tried-to-kill-a-ukrainian-american-rapper"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Denmark expels Russian official, limits visas after alleging plot to kill U.S.-Ukrainian rapper",
-     "url": "https://www.washingtontimes.com/news/2026/nov/22/denmark-removes-russian-official-limits-russia-visas/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "DNI Jay Clayton supports Trump calling Russian President Vladimir Putin 'my friend'",
-   "summary": "Director of National Intelligence Jay Clayton said President Trump \"is the greatest conductor of foreign policy in a very challenging time\" and supported Mr. Trump's twice calling Russian President Vladimir Putin \"my friend.\"",
-   "category": "World",
-   "leans": [
-    -1,
-    1
-   ],
-   "span": 2,
-   "n_sources": 2,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "U.S. intelligence chief says Trump's description of Putin as a 'friend' is 'entirely appropriate'",
-     "url": "https://www.pbs.org/newshour/world/u-s-intelligence-chief-says-trumps-description-of-putin-as-a-friend-is-entirely-appropriate"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "DNI Jay Clayton supports Trump calling Russian President Vladimir Putin 'my friend'",
-     "url": "https://www.washingtontimes.com/news/2026/nov/22/dni-jay-clayton-supports-trump-calling-russian-president-vladimir/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Paolo Bulgari, Italian Jeweler Who Turned Family Business Into Global Luxury Brand, Dies at 89",
    "summary": "Paolo Bulgari, the grandson of a Greek silversmith who helped transform the family jewelry business into a global luxury brand synonymous with Italian glamour and design, has died. He was 89.His family announced his death Saturday, describing him as \"the greatest jeweler of...",
    "category": "General",
@@ -1394,6 +1337,73 @@
    ],
    "factchecks": [],
    "videos": []
+  },
+  {
+   "title": "Fire at confectionery factory in Indonesia leaves at least three dead and dozens missing",
+   "summary": "Relatives of the missing victims flocked to the factory’s entrance, seeking updates about their loved ones A fire at a confectionery factory west of Jakarta has killed three people with 36 remaining missing, an Indonesian rescue official says. Drone footage showed large parts of ",
+   "category": "General",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 2,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Fire at confectionery factory in Indonesia leaves at least three dead and dozens missing",
+     "url": "https://www.theguardian.com/world/2026/nov/22/fire-confectionary-factory-indonesia-jakarta"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Three killed and dozens missing after fire at Indonesian factory",
+     "url": "https://www.bbc.co.uk/news/articles/cw8dvg5pgm0eo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Indonesian police remove 24 body bags from factory fire site",
+     "url": "https://www.aljazeera.com/news/2026/11/23/indonesian-police-remove-24-body-bags-from-factory-fire-site?traffic_source=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "yuk215UjSC0",
+     "title": "Three killed and dozens missing after fire at Indonesian factory. #Indonesia #Fire #News #BBCNews",
+     "thumb": "https://i.ytimg.com/vi/yuk215UjSC0/hqdefault.jpg",
+     "channel": "BBC News",
+     "lean": 0,
+     "label": "Center"
+    },
+    {
+     "videoId": "p7ecIXaxLfw",
+     "title": "At least three dead in candy factory fire in Indonesia | DW News",
+     "thumb": "https://i.ytimg.com/vi/p7ecIXaxLfw/hqdefault.jpg",
+     "channel": "DW News",
+     "lean": 0,
+     "label": "Center"
+    },
+    {
+     "videoId": "5XwfXHAWTjo",
+     "title": "Fifty people remain missing after a fire at an Indonesian candy factory",
+     "thumb": "https://i.ytimg.com/vi/5XwfXHAWTjo/hqdefault.jpg",
+     "channel": "Reuters",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
   },
   {
    "title": "Alleged Mexican drug cartel boss ‘El Chapo Isidro’ arrested in special forces raid",
@@ -1545,42 +1555,35 @@
    "videos": []
   },
   {
-   "title": "Titans Continue Historically Awful Stretch With Blowout Loss to Cowboys",
-   "summary": "The Tennessee Titans have played historically bad defenses in their last three games, including Sunday's 51-30 loss.",
-   "category": "General",
+   "title": "Urgent warning issued to cruise passengers about strict new law in Mexico",
+   "summary": "Cruise passengers visiting Mexico with minors need passports, birth certificates and notarized letters under a new law. The government passed the measure to combat child trafficking.",
+   "category": "World",
    "leans": [
-    0,
-    1
+    1,
+    2
    ],
    "span": 1,
    "n_sources": 2,
    "balance": {
     "l": 0,
-    "c": 1,
-    "r": 1
+    "c": 0,
+    "r": 2
    },
-   "blindspot": null,
+   "blindspot": "left",
    "sources": [
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Titans Continue Historically Awful Stretch With Blowout Loss to Cowboys",
-     "url": "https://www.newsweek.com/sports/nfl/titans-continue-historically-awful-stretch-with-blowout-loss-to-cowboys-12754833"
-    },
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Titans HC Robert Saleh Rips Team’s Effort in Loss to Cowboys",
-     "url": "https://www.newsweek.com/sports/nfl/titans-hc-robert-saleh-rips-teams-effort-in-loss-to-cowboys-12754846"
-    },
     {
      "name": "New York Post",
      "lean": 1,
      "label": "Lean Right",
-     "title": "Robert Saleh may have hit Titans breaking point after giving up 51 points in ‘disgusting’ loss to Cowboys",
-     "url": "https://nypost.com/2026/11/22/sports/robert-saleh-rages-after-titans-give-up-51-points-in-loss-to-cowboys/"
+     "title": "Cruise passengers visiting Mexico with kids must provide extra documentation: new law",
+     "url": "https://nypost.com/2026/11/22/world-news/cruise-passengers-visiting-mexico-with-kids-must-provide-extra-documentation-new-law/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Urgent warning issued to cruise passengers about strict new law in Mexico",
+     "url": "https://www.foxnews.com/travel/urgent-warning-issued-cruise-passengers-about-strict-new-law-mexico"
     }
    ],
    "factchecks": [],
@@ -1632,34 +1635,34 @@
    "videos": []
   },
   {
-   "title": "Mamdani releases 84,000 more 9/11 records",
-   "summary": "New York City Mayor Zohran Mamdani (D) released 84,000 more records pertaining to the Sept. 11, 2001, attacks following a previous release that showed city leaders lied about air quality. “After the horrific terror attacks of September 11th and the devastating health consequences",
-   "category": "Health",
+   "title": "Trump Admin to Target Campus Liberal Bias in 2027",
+   "summary": "The Trump administration is targeting what it considers liberal bias in higher education, using the college accreditation system to promote greater intellectual diversity at universities. New rules set to take effect in July will require accrediting agencies to evaluate...",
+   "category": "Politics",
    "leans": [
-    0
+    2
    ],
    "span": 0,
    "n_sources": 2,
    "balance": {
     "l": 0,
-    "c": 2,
-    "r": 0
+    "c": 0,
+    "r": 2
    },
-   "blindspot": null,
+   "blindspot": "left",
    "sources": [
     {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Mamdani releases 84,000 more 9/11 records",
-     "url": "https://thehill.com/homenews/state-watch/6236426-zohran-mamdani-releases-new-911-records/"
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Admin to Target Campus Liberal Bias in 2027",
+     "url": "https://www.newsmax.com/newsfront/donald-trump-liberal-bias-higher-education/2026/11/22/id/1277190"
     },
     {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Mamdani Releases 84,000 More 9/11 Records as Survivors Seek Proof",
-     "url": "https://www.newsweek.com/mamdani-releases-84000-more-9-11-records-as-survivors-seek-proof-12754721"
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Admin Keeps Michigan Coal Plant Open Into 2027 After Court Tossed Its First Order",
+     "url": "https://dailycaller.com/2026/11/21/chris-wright-campbell-coal-plant-michigan-emergency-order-2027"
     }
    ],
    "factchecks": [],
@@ -1729,6 +1732,33 @@
      "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
     }
    ],
+   "videos": []
+  },
+  {
+   "title": "Do not feed the animals. Vets explain why hats, coins and shoes can be deadly.",
+   "summary": "It's not easy to retrieve foreign objects from animals once ingested. Some things can be grabbed using an endoscope. But if an item gets far into the intestinal tract, surgery isn't always possible.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Do not feed the animals. Vets explain why hats, coins and shoes can be deadly.",
+     "url": "https://www.npr.org/2026/11/22/nx-s1-6049723/do-not-feed-the-animals-vets-explain-why-hats-coins-and-shoes-can-be-deadly"
+    }
+   ],
+   "factchecks": [],
    "videos": []
   },
   {
@@ -1915,33 +1945,6 @@
      "label": "Lean Left",
      "title": "NPR's Senior Podcast Challenge: Early entries we love",
      "url": "https://www.npr.org/2026/11/22/nx-s1-6044221/npr-senior-podcast-challenge-early-entries"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Google employees protest AI in schools policy",
-   "summary": "More than 550 Google employees signed a petition to allow schools access to Search without AI. Parents and educators protested outside Google offices in 6 cities last week for the same ask.",
-   "category": "Tech",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Google employees protest AI in schools policy",
-     "url": "https://www.npr.org/2026/11/21/nx-s1-6048599/google-employees-protest-ai-in-schools-policy"
     }
    ],
    "factchecks": [],
@@ -2271,9 +2274,9 @@
    "factchecks": [],
    "videos": [
     {
-     "videoId": "S5wu6uPsoR4",
-     "title": "New escalations in conflicts in Iran and Ukraine",
-     "thumb": "https://i.ytimg.com/vi/S5wu6uPsoR4/hqdefault.jpg",
+     "videoId": "hXuuPUisPRQ",
+     "title": "Major escalations in Iran and Ukraine conflicts",
+     "thumb": "https://i.ytimg.com/vi/hXuuPUisPRQ/hqdefault.jpg",
      "channel": "NBC News",
      "lean": -1,
      "label": "Lean Left"
@@ -2335,8 +2338,8 @@
    "videos": []
   },
   {
-   "title": "ICE officers arrest 2 passengers boarding flight in Seattle",
-   "summary": "Masked immigration officers arrested two passengers on a crowded airport jet bridge in Seattle as people were boarding Saturday",
+   "title": "Tom Jackson, former Broncos star and sports broadcaster, dies at 75",
+   "summary": "Tom Jackson, a former Denver Broncos player and ESPN analyst, has died at 75.",
    "category": "General",
    "leans": [
     -1
@@ -2354,8 +2357,8 @@
      "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "ICE officers arrest 2 passengers boarding flight in Seattle",
-     "url": "https://www.cbsnews.com/news/ice-arrest-alaska-airlines-flight-seattle/"
+     "title": "Tom Jackson, former Broncos star and sports broadcaster, dies at 75",
+     "url": "https://www.cbsnews.com/news/tom-jackson-former-broncos-star-sports-broadcaster-dies-75/"
     }
    ],
    "factchecks": [],
@@ -2363,6 +2366,41 @@
   }
  ],
  "blindspots": [
+  {
+   "title": "Urgent warning issued to cruise passengers about strict new law in Mexico",
+   "summary": "Cruise passengers visiting Mexico with minors need passports, birth certificates and notarized letters under a new law. The government passed the measure to combat child trafficking.",
+   "category": "World",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Cruise passengers visiting Mexico with kids must provide extra documentation: new law",
+     "url": "https://nypost.com/2026/11/22/world-news/cruise-passengers-visiting-mexico-with-kids-must-provide-extra-documentation-new-law/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Urgent warning issued to cruise passengers about strict new law in Mexico",
+     "url": "https://www.foxnews.com/travel/urgent-warning-issued-cruise-passengers-about-strict-new-law-mexico"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
   {
    "title": "Senate GOP Rushes Trump Picks Before Democrats Take Over",
    "summary": "Senate Republicans are racing to confirm as many of President Donald Trump's nominees as possible before Democrats take control in January, but some say the White House has offered little direction, Politico reported Sunday.",
@@ -2406,6 +2444,40 @@
      "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
     }
    ],
+   "videos": []
+  },
+  {
+   "title": "Trump Admin to Target Campus Liberal Bias in 2027",
+   "summary": "The Trump administration is targeting what it considers liberal bias in higher education, using the college accreditation system to promote greater intellectual diversity at universities. New rules set to take effect in July will require accrediting agencies to evaluate...",
+   "category": "Politics",
+   "leans": [
+    2
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Admin to Target Campus Liberal Bias in 2027",
+     "url": "https://www.newsmax.com/newsfront/donald-trump-liberal-bias-higher-education/2026/11/22/id/1277190"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Admin Keeps Michigan Coal Plant Open Into 2027 After Court Tossed Its First Order",
+     "url": "https://dailycaller.com/2026/11/21/chris-wright-campbell-coal-plant-michigan-emergency-order-2027"
+    }
+   ],
+   "factchecks": [],
    "videos": []
   }
  ],
