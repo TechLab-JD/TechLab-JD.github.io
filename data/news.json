@@ -1,12 +1,2776 @@
 {
- "generated": "2026-11-23T14:00:11Z",
- "generated_human": "Nov 23, 2026 · 14:00 UTC",
- "sources": [],
- "n_articles": 0,
- "n_videos": 0,
- "trending": [],
- "videos": [],
- "stories": [],
- "blindspots": [],
- "factchecks": []
+ "generated": "2026-11-23T15:00:49Z",
+ "generated_human": "Nov 23, 2026 · 15:00 UTC",
+ "sources": [
+  {
+   "name": "NPR",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 10
+  },
+  {
+   "name": "The Guardian",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "NBC News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "CBS News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "ABC News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "PBS NewsHour",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Politico",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Vox",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "Slate",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Mother Jones",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "The Atlantic",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Time",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "BBC News",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "The Hill",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "CNBC",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Axios",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Al Jazeera",
+   "lean": 0,
+   "label": "Center",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "The Christian Science Monitor",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 10
+  },
+  {
+   "name": "Newsweek",
+   "lean": 0,
+   "label": "Center",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Reason",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "New York Post",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Washington Examiner",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "National Review",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Washington Times",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Fox News",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "The Daily Wire",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "The Federalist",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Newsmax",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Daily Caller",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  }
+ ],
+ "n_articles": 334,
+ "n_videos": 140,
+ "trending": [
+  {
+   "term": "trump",
+   "n": 16
+  },
+  {
+   "term": "huang",
+   "n": 14
+  },
+  {
+   "term": "democrats",
+   "n": 14
+  },
+  {
+   "term": "nvidia",
+   "n": 13
+  },
+  {
+   "term": "jensen",
+   "n": 12
+  },
+  {
+   "term": "warship",
+   "n": 12
+  },
+  {
+   "term": "russian",
+   "n": 11
+  },
+  {
+   "term": "naval",
+   "n": 10
+  },
+  {
+   "term": "climate",
+   "n": 10
+  },
+  {
+   "term": "ukrainian",
+   "n": 9
+  },
+  {
+   "term": "libya",
+   "n": 9
+  },
+  {
+   "term": "world",
+   "n": 9
+  },
+  {
+   "term": "america",
+   "n": 9
+  },
+  {
+   "term": "talks",
+   "n": 8
+  },
+  {
+   "term": "deal",
+   "n": 7
+  },
+  {
+   "term": "thanksgiving",
+   "n": 7
+  }
+ ],
+ "videos": [
+  {
+   "videoId": "1zGhIirSvsU",
+   "title": "Nvidia reinstates Jensen Huang as CEO | full coverage",
+   "thumb": "https://i.ytimg.com/vi/1zGhIirSvsU/hqdefault.jpg",
+   "channel": "CBS News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "wACJ3f1F1VA",
+   "title": "Nvidia board received input from 'senior levels' of U.S. government on Huang reinstatement",
+   "thumb": "https://i.ytimg.com/vi/wACJ3f1F1VA/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "9EKWnQafxzI",
+   "title": "Nvidia board unanimously reinstates Jensen Huang as CEO and chairman",
+   "thumb": "https://i.ytimg.com/vi/9EKWnQafxzI/hqdefault.jpg",
+   "channel": "AP",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "SiC7-ZzXgNM",
+   "title": "Zelenskiy says Ukraine hit Russian vessels in Libya",
+   "thumb": "https://i.ytimg.com/vi/SiC7-ZzXgNM/hqdefault.jpg",
+   "channel": "Reuters",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "Arggk37QUgQ",
+   "title": "Jensen Huang back as Nvidia CEO days after quitting following affair | BBC News",
+   "thumb": "https://i.ytimg.com/vi/Arggk37QUgQ/hqdefault.jpg",
+   "channel": "BBC News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "yAq-qnGq6H0",
+   "title": "LIVE: Protest against government budget cuts in Brussels",
+   "thumb": "https://i.ytimg.com/vi/yAq-qnGq6H0/hqdefault.jpg",
+   "channel": "AP",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "hQiUMK-QDjU",
+   "title": "Jensen Huang reinstated as Nvidia CEO: What to know",
+   "thumb": "https://i.ytimg.com/vi/hQiUMK-QDjU/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "DchPZEvtmow",
+   "title": "Jensen Huang reinstated as Nvidia CEO | Special Report",
+   "thumb": "https://i.ytimg.com/vi/DchPZEvtmow/hqdefault.jpg",
+   "channel": "CBS News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "VzDxQAwtSkg",
+   "title": "Police clash with protesters in Belgium",
+   "thumb": "https://i.ytimg.com/vi/VzDxQAwtSkg/hqdefault.jpg",
+   "channel": "Sky News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "F1e-9NQLayI",
+   "title": "Fallout after ICE arrests two on busy airport jetway",
+   "thumb": "https://i.ytimg.com/vi/F1e-9NQLayI/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "arZ-Td3jSqc",
+   "title": "Several injured after Amtrak train collides with semi-truck on tracks",
+   "thumb": "https://i.ytimg.com/vi/arZ-Td3jSqc/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "9Dp3GIixooE",
+   "title": "Nvidia reinstates Jensen Huang as CEO after unanimous board vote",
+   "thumb": "https://i.ytimg.com/vi/9Dp3GIixooE/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "Unk7x-nMuM8",
+   "title": "Flu season starting earlier than usual this year",
+   "thumb": "https://i.ytimg.com/vi/Unk7x-nMuM8/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "EwNuxPABaHs",
+   "title": "Ukraine claims drone strikes that sank Russian warship off Libya",
+   "thumb": "https://i.ytimg.com/vi/EwNuxPABaHs/hqdefault.jpg",
+   "channel": "CBS News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "qFcl7JRivVI",
+   "title": "LIVE: Nvidia board reinstates Jensen Huang, shares surge",
+   "thumb": "https://i.ytimg.com/vi/qFcl7JRivVI/hqdefault.jpg",
+   "channel": "Reuters",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "DJuXriCQ_KE",
+   "title": "LIVE: Nvidia board reinstates Jensen Huang, shares surge",
+   "thumb": "https://i.ytimg.com/vi/DJuXriCQ_KE/hqdefault.jpg",
+   "channel": "Reuters",
+   "lean": 0,
+   "label": "Center"
+  }
+ ],
+ "stories": [
+  {
+   "title": "The Supreme Court is about to decide whether to gut countless federal laws",
+   "summary": "Nearly five decades ago, in Cannon v. University v. Chicago (1979), the Supreme Court held that Title IX, the federal law forbidding most schools from engaging in sex discrimination, could be enforced by private plaintiffs filing individual lawsuits against those schools. It was ",
+   "category": "Politics",
+   "leans": [
+    -2,
+    1,
+    2
+   ],
+   "span": 4,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "The Supreme Court is about to decide whether to gut countless federal laws",
+     "url": "https://www.vox.com/politics/510249/supreme-court-crowther-university-georgia-title-ix"
+    },
+    {
+     "name": "Reason",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Has the Supreme Court Undercut the Courts?",
+     "url": "https://reason.com/volokh/2026/11/22/has-the-supreme-court-undercut-the-courts/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "ADAM KRAUT: The Supreme Court must defend the Second Amendment in key case",
+     "url": "https://www.foxnews.com/opinion/adam-kraut-supreme-court-must-defend-second-amendment-key-case"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "“MAGA Is Dead. Trump Killed It.”",
+   "summary": "“It’s not just okay to be white,” Joel Webbon declared. “It’s good to be white. Praise God.” It was a Thursday night at a boxy, echoing convention center in Irving, Texas and Webbon was addressing a crowd of around 1,000 people, who kept bobbing to their feet for standing ovation",
+   "category": "Politics",
+   "leans": [
+    -2,
+    2
+   ],
+   "span": 4,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "“MAGA Is Dead. Trump Killed It.”",
+     "url": "https://www.motherjones.com/politics/2026/11/joel-webbon-christ-is-king-christian-nationalist-conference/"
+    },
+    {
+     "name": "The Federalist",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Is Right: Veering From MAGA Costs Republicans",
+     "url": "https://thefederalist.com/2026/11/20/trump-is-right-veering-from-maga-costs-republicans/?utm_source=rss&utm_medium=rss&utm_campaign=trump-is-right-veering-from-maga-costs-republicans"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Jensen Huang returns as Nvidia CEO",
+   "summary": "Jensen Huang will return as Nvidia’s president and CEO, the company’s board announced Monday in a stunning reversal for an executive who resigned two weeks ago following revelations of extramarital affairs, including one with a woman U.S. intelligence believes to be a Chinese spy",
+   "category": "Tech",
+   "leans": [
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 14,
+   "balance": {
+    "l": 5,
+    "c": 4,
+    "r": 5
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Nvidia's board of directors brings Jensen Huang back as CEO",
+     "url": "https://www.npr.org/2026/11/23/nx-s1-6050910/nvidias-jensen-huang-trump"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Jensen Huang returns as Nvidia CEO",
+     "url": "https://www.nbcnews.com/tech/tech-news/nvidia-reinstates-jensen-huang-rcna610864"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Markets react to Jensen Huang’s return",
+     "url": "https://www.nbcnews.com/video/markets-react-to-jensen-huang-s-return-274009157981"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "S&P 500 surges 5% after Nvidia reinstates Jensen Huang as CEO",
+     "url": "https://www.nbcnews.com/business/markets/stocks-rebound-ai-tech-selloff-nvidia-rcna610833"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Jensen Huang reinstated as Nvidia CEO | Special Report",
+     "url": "https://www.cbsnews.com/video/jensen-huang-reinstated-as-nvidia-ceo-special-report/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Nvidia reinstates Jensen Huang as CEO",
+     "url": "https://www.cbsnews.com/news/nvidia-reinstates-jensen-huang-ceo/"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Nvidia reinstates Jensen Huang as CEO",
+     "url": "https://abcnews.com/Business/nvidia-reinstates-jensen-huang-ceo/story?id=138375516"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Nvidia board unanimously reinstates Jensen Huang as CEO and chairman",
+     "url": "https://www.pbs.org/newshour/nation/nvidia-board-unanimously-reinstates-jensen-huang-as-ceo-and-chairman"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump praises Nvidia's move reinstating Huang",
+     "url": "https://thehill.com/homenews/administration/6236924-trump-praises-nvidia-ceo-reinstatement/"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Live updates: Nvidia makes U-turn on Jensen Huang, Trump praises decision",
+     "url": "https://thehill.com/homenews/administration/6236287-live-updates-donald-trump-goverment-spending-senate-leadership-fight-iran-war/"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Jensen Huang reinstated as Nvidia CEO",
+     "url": "https://thehill.com/policy/technology/6236752-jensen-huang-reinstated-nvidia-ceo/"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Nvidia skyrockets 30% on Huang’s return as CEO, recovering nearly all the losses since he disclosed affair",
+     "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "CoreWeave, Oracle soar as Huang’s return relieves Nvidia AI financing fears",
+     "url": "https://www.cnbc.com/2026/11/23/stocks-moving-the-most-today-live-updates.html"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Nvidia board Reinstates Jensen Huang as CEO",
+     "url": "https://www.aljazeera.com/economy/2026/11/23/nvidia-board-reinstates-jensen-huang-as-ceo?traffic_source=rss"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Jensen Huang Reinstated at Nvidia After Unanimous Vote",
+     "url": "https://www.newsweek.com/jensen-huang-reinstated-at-nvidia-after-unanimous-vote-12756778"
+    },
+    {
+     "name": "Reason",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Huang Is Back",
+     "url": "https://reason.com/2026/11/23/huang-is-back/"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Nvidia reinstates Jensen Huang as president and CEO",
+     "url": "https://www.washingtonexaminer.com/policy/technology/4812128/nvidia-reinstates-jensen-huang-president-ceo/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump celebrates Jensen Huang's return to Nvidia, says DOJ saw no violation of law",
+     "url": "https://www.washingtontimes.com/news/2026/nov/23/trump-celebrates-jensen-huangs-return-nvidia-says-doj-saw-no/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Nvidia returns Jensen Huang to CEO post after scandal",
+     "url": "https://www.washingtontimes.com/news/2026/nov/23/nvidia-returns-jensen-huang-ceo-post-scandal/"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Jensen Huang Gets His Job Back At Nvidia After Board Reveals Who Weighed In",
+     "url": "https://www.dailywire.com/news/jensen-huang-gets-his-job-back-at-nvidia-after-board-reveals-who-weighed-in"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Nvidia Unanimously Reinstates Jensen Huang as CEO",
+     "url": "https://www.newsmax.com/newsfront/nvidia-jensen-huang-ceo/2026/11/23/id/1277216"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Praises Nvidia Board for Reinstating Huang",
+     "url": "https://www.newsmax.com/newsfront/trump-praise-nvidia/2026/11/23/id/1277218"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "Trump’s Misguided Claim That ‘They’ Waited to Lower Gas Prices Until After the Midterms",
+     "link": "https://www.factcheck.org/2026/11/trumps-misguided-claim-that-they-waited-to-lower-gas-prices-until-after-the-midterms/"
+    },
+    {
+     "org": "FactCheck.org",
+     "title": "Trump Makes False and Misleading Claims About Funding for HBCUs",
+     "link": "https://www.factcheck.org/2026/11/trump-makes-false-and-misleading-claims-about-funding-for-hbcus/"
+    },
+    {
+     "org": "FactCheck.org",
+     "title": "FactChecking Trump’s Post-Election ‘60 Minutes’ Interview",
+     "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "9EKWnQafxzI",
+     "title": "Nvidia board unanimously reinstates Jensen Huang as CEO and chairman",
+     "thumb": "https://i.ytimg.com/vi/9EKWnQafxzI/hqdefault.jpg",
+     "channel": "AP",
+     "lean": 0,
+     "label": "Center"
+    },
+    {
+     "videoId": "9Dp3GIixooE",
+     "title": "Nvidia reinstates Jensen Huang as CEO after unanimous board vote",
+     "thumb": "https://i.ytimg.com/vi/9Dp3GIixooE/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    },
+    {
+     "videoId": "qFcl7JRivVI",
+     "title": "LIVE: Nvidia board reinstates Jensen Huang, shares surge",
+     "thumb": "https://i.ytimg.com/vi/qFcl7JRivVI/hqdefault.jpg",
+     "channel": "Reuters",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "Ukraine confirms it used naval drones to strike two Russian ships off Libya",
+   "summary": "Ukraine’s security service says seven drones were launched from mothership in operation that sank Merkury warship Europe live – latest updates Ukraine has confirmed it deployed naval drones in strikes on two Russian vessels off Libya on Sunday, including one that sank the corvett",
+   "category": "World",
+   "leans": [
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 12,
+   "balance": {
+    "l": 7,
+    "c": 2,
+    "r": 3
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Ukrainian drones hit a Russian warship at a naval base in Libya, Zelenskyy says",
+     "url": "https://www.npr.org/2026/11/23/g-s1-155017/ukraine-attack-russian-warship-libya"
+    },
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Ukraine confirms it used naval drones to strike two Russian ships off Libya",
+     "url": "https://www.theguardian.com/world/2026/nov/23/ukraine-naval-drones-strike-russian-warship-libya"
+    },
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Russian warship sinks in Benghazi after suspected Ukrainian drone attack",
+     "url": "https://www.theguardian.com/world/2026/nov/22/blast-russian-ship-suspected-drone-attack-benghazi-libya"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Ukrainian naval drone sinks Russian warship off the coast of Libya",
+     "url": "https://www.nbcnews.com/video/ukrainian-naval-drone-sinks-russian-warship-off-the-coast-of-libya-274001989802"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Ukraine attacks Russian ships in Libya",
+     "url": "https://www.cbsnews.com/video/ukraine-attacks-russian-ships-in-libya/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Ukraine claims drone strikes that sank Russian warship off Libya",
+     "url": "https://www.cbsnews.com/video/ukraine-claims-drone-strikes-on-russian-warship-off-libya/"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Ukrainian naval drones sank Russia's Merkury warship in Libya, Zelenskyy confirms",
+     "url": "https://abcnews.com/International/ukrainian-naval-drones-sank-russias-merkury-warship-libya/story?id=138369738"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Zelenskyy hails Ukraine's attack on a Russian warship docked at a naval base in Libya",
+     "url": "https://www.pbs.org/newshour/world/zelenskyy-hails-ukraines-attack-on-a-russian-warship-docked-at-a-naval-base-in-libya"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Zelensky Says Ukraine Sank Russian Warship at Naval Base in Libya",
+     "url": "https://time.com/article/2026/11/23/zelensky-says-ukraine-sank-russian-warship-at-naval-base-in-libya/"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Russian warship hit by Ukrainian drones in Libya, Zelensky says",
+     "url": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Boy, 7, pulled alive from rubble hours after Russian strike on Ukraine, rescuers say",
+     "url": "https://www.bbc.co.uk/news/articles/cqdr15l32d3go?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Zelenskyy praises ‘exemplary’ drone operation that sank Russian warship in a Libyan port",
+     "url": "https://www.cnbc.com/2026/11/23/ukraine-russia-warship-libya.html"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Ukraine claims strike on Russian warship and cargo tanker in Libyan port",
+     "url": "https://www.washingtonexaminer.com/news/world/4811959/ukraine-strike-russian-warship-tanker-libya/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Ukrainian drones hit a Russian warship at a naval base in Libya, Zelenskyy says",
+     "url": "https://www.washingtontimes.com/news/2026/nov/23/ukrainian-drones-strike-russian-warship-naval-base-libya-zelenskyy/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Zelenskyy: Ukrainian Drones Hit Russian Warship at Libyan Naval Base",
+     "url": "https://www.newsmax.com/newsfront/ukraine-russia-zelenskyy/2026/11/23/id/1277199"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Full Fact",
+     "title": "Video of red lights in the sky predates suspected drone incident at RAF Lakenheath",
+     "link": "https://fullfact.org/conflict/video-red-lights-predates-raf-lakenheath/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "EwNuxPABaHs",
+     "title": "Ukraine claims drone strikes that sank Russian warship off Libya",
+     "thumb": "https://i.ytimg.com/vi/EwNuxPABaHs/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "K3wcjjDjjL0",
+     "title": "Ukrainian drones hit Russian warship at naval base in Libya",
+     "thumb": "https://i.ytimg.com/vi/K3wcjjDjjL0/hqdefault.jpg",
+     "channel": "AP",
+     "lean": 0,
+     "label": "Center"
+    },
+    {
+     "videoId": "oyao_32wS60",
+     "title": "Boy pulled alive from rubble after Russian strike on Ukraine. #Ukraine #Russia #BBCNews",
+     "thumb": "https://i.ytimg.com/vi/oyao_32wS60/hqdefault.jpg",
+     "channel": "BBC News",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "DNC limits 2028 primary candidates' ties to big-money groups",
+   "summary": "Democratic National Committee chair Ken Martin is moving to restrict candidates' ties to super PACs and dark-money groups in the party's 2028 presidential primary, a shift that could shake up the race for the White House. Why it matters: Most likely Democratic candidates for pres",
+   "category": "Politics",
+   "leans": [
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 7,
+   "balance": {
+    "l": 2,
+    "c": 1,
+    "r": 4
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Democratic National Committee sets broad rules for the party’s 2028 presidential debates",
+     "url": "https://www.nbcnews.com/politics/2028-election/democratic-national-committee-sets-broad-rules-partys-2028-presidentia-rcna610439"
+    },
+    {
+     "name": "Politico",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Democratic Governors’ 2028 picks",
+     "url": "https://www.politico.com/video/2026/11/20/democratic-governors-2028-picks-2235294"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "DNC limits 2028 primary candidates' ties to big-money groups",
+     "url": "https://www.axios.com/2026/11/23/dnc-super-pacs-limits-2028-primary"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Democrats plan 12 debates ahead of 2028 presidential cycle",
+     "url": "https://www.washingtonexaminer.com/news/campaigns/presidential/4811966/democrats-plan-12-debates-2028-elections/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "DNC requires 2028 presidential candidates to make dark money ban",
+     "url": "https://www.washingtontimes.com/news/2026/nov/23/dnc-requires-2028-presidential-candidates-make-dark-money-ban/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Democrats unveil 2028 debate rules with new dark money restrictions for presidential hopefuls",
+     "url": "https://www.foxnews.com/politics/democrats-unveil-2028-debate-rules-new-dark-money-restrictions-presidential-hopefuls"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Democrats Plan 12 Debates for Their 2028 Presidential Primary, With the First in June",
+     "url": "https://www.newsmax.com/newsfront/democratic-debates-dnc-2028/2026/11/23/id/1277201"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Dem Raskin Won't Rule Out 2028 Presidential Bid",
+     "url": "https://www.newsmax.com/newsfront/jamie-raskin-maryland-president/2026/11/22/id/1277193"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "System Outages, Weather Issues Impact Thanksgiving Travel",
+   "summary": "Thanksgiving week is off to a messy start with weather and air travel issues impacting hundreds of flights. The FAA had to briefly shut down Delta flights to Atlanta’s Hartsfield-Jackson Airport on Sunday morning after an outage involving one of the airline’s calculation systems,",
+   "category": "General",
+   "leans": [
+    -1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 3,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "System Outages, Weather Issues Impact Thanksgiving Travel",
+     "url": "https://www.today.com/video/delta-restores-service-after-bumpy-start-to-thanksgiving-week-274004549752"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Automation system problem at Delta causes flight delays as Americans travel for Thanksgiving",
+     "url": "https://www.pbs.org/newshour/nation/automation-system-problem-at-delta-causes-flight-delays-as-americans-travel-for-thanksgiving"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Automation Glitch Delays More Than 1K Delta Flights",
+     "url": "https://www.newsmax.com/newsfront/delta-atlanta-flight-delays/2026/11/22/id/1277180"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "XZmUORvYyI8",
+     "title": "Delta automation issues cause widespread flight delays",
+     "thumb": "https://i.ytimg.com/vi/XZmUORvYyI8/hqdefault.jpg",
+     "channel": "NBC News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "F0gO02mYFYE",
+     "title": "Delta outage causes nationwide delays as holiday travel takes off",
+     "thumb": "https://i.ytimg.com/vi/F0gO02mYFYE/hqdefault.jpg",
+     "channel": "ABC News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "Dw182ywiTkA",
+     "title": "Delta computer outage delays THOUSANDS of flights amid holiday travel",
+     "thumb": "https://i.ytimg.com/vi/Dw182ywiTkA/hqdefault.jpg",
+     "channel": "Fox News",
+     "lean": 2,
+     "label": "Right"
+    }
+   ]
+  },
+  {
+   "title": "Concert Evacuated After Unknown Substance Released Into Crowd",
+   "summary": "More than 12,000 concert attendees were evacuated from Manchester’s Co-op Live arena Sunday night after an unknown substance, initially suspected to be tear gas, was released into the crowd of a Don Toliver show. Emergency responders say more than 50 people were assessed at the s",
+   "category": "General",
+   "leans": [
+    -1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Concert Evacuated After Unknown Substance Released Into Crowd",
+     "url": "https://www.today.com/video/concert-evacuated-after-unknown-substance-released-into-crowd-274008133595"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "12,000 Evacuated After Unknown Substance Released at Concert",
+     "url": "https://www.newsmax.com/newsfront/manchester-concert-evacuation/2026/11/23/id/1277202"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "9-fPv52ohrQ",
+     "title": "Thousands evacuated from Manchester concert after ‘unknown substance’ released into crowd | BBC News",
+     "thumb": "https://i.ytimg.com/vi/9-fPv52ohrQ/hqdefault.jpg",
+     "channel": "BBC News",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "Global Climate Talks Fail Over Fossil Fuel Dispute",
+   "summary": "On the day the largest global climate summit started earlier this month, my colleague Rachel Santarsiero posed a key question: “Will anyone finally say ‘fossil fuels’?” The past three decades of discussions have largely sidestepped the issue despite the fact that fossil fuels are",
+   "category": "Science",
+   "leans": [
+    -2,
+    -1,
+    0
+   ],
+   "span": 2,
+   "n_sources": 6,
+   "balance": {
+    "l": 3,
+    "c": 3,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "Global Climate Talks Fail Over Fossil Fuel Dispute",
+     "url": "https://www.motherjones.com/politics/2026/11/global-climate-talks-fail-over-fossil-fuel-dispute/"
+    },
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "What it's like at a climate conference as talks collapse",
+     "url": "https://www.npr.org/2026/11/22/nx-s1-6050248/what-its-like-at-a-climate-conference-as-talks-collapse"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "In their own words: Leaders at UN climate talks discuss why negotiations ended without deal",
+     "url": "https://www.pbs.org/newshour/world/in-their-own-words-leaders-at-un-climate-talks-discuss-why-negotiations-ended-without-deal"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Longest-ever UN climate talks end with no deal as deep divisions exposed",
+     "url": "https://www.bbc.co.uk/news/articles/cqwy06zrd26lo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "‘Worst COP ever’: Climate talks collapse after draft deal fails to include fossil fuels",
+     "url": "https://www.cnbc.com/2026/11/23/cop31-climate-summit-fossil-fuels.html"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "COP31: What next after UN climate talks collapse",
+     "url": "https://www.aljazeera.com/news/2026/11/23/cop31-what-next-after-un-climate-talks-collapse?traffic_source=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "k7rdzyGqtLE",
+     "title": "COP31 climate talks collapse over fossil fuel language | DW News",
+     "thumb": "https://i.ytimg.com/vi/k7rdzyGqtLE/hqdefault.jpg",
+     "channel": "DW News",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "Iran vows to end U.S. naval blockade by \"all available means\"",
+   "summary": "Iran vows to force the U.S. to lift its blockade as Trump acknowledges the regime's increasing attacks, but says they've \"done no damage.\"",
+   "category": "World",
+   "leans": [
+    -1,
+    0,
+    1
+   ],
+   "span": 2,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Iran vows to end U.S. naval blockade by \"all available means\"",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-blockade-strait-of-hormuz-ship-attacks/"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Iran says it will use ‘all available means’ to counter US blockade",
+     "url": "https://www.aljazeera.com/news/2026/11/23/iran-says-it-will-use-all-available-means-to-counter-us-blockade?traffic_source=rss"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Iran threatens response to any attack amid naval blockade",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/23/iran-threatens-response-to-any-attack-amid-naval-blockade?traffic_source=rss"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Iran promises to use 'all available means' to break U.S. blockade",
+     "url": "https://www.washingtontimes.com/news/2026/nov/23/iran-promises-use-available-means-break-us-blockade/"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "mdzJdG_OP7Q",
+     "title": "Iran threatens response to any attack amid naval blockade",
+     "thumb": "https://i.ytimg.com/vi/mdzJdG_OP7Q/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "WATCH:  Grand Theft Auto VI is back and shattering records",
+   "summary": "The excitement around the release of GTA VI is causing gamers to “call out sick” to play and has lit up Miami in Vice City colors. ABC News’ Ashan Singh dives into what the hype is all about.",
+   "category": "General",
+   "leans": [
+    -1,
+    1
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  Grand Theft Auto VI is back and shattering records",
+     "url": "https://abcnews.com/video/138313101/"
+    },
+    {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "What Is the Fantasy in <i>Grand Theft Auto</i> Really All About?",
+     "url": "https://www.nationalreview.com/article/what-is-the-fantasy-in-grand-theft-auto-really-all-about"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Poland says Russia allegedly twice tried to kill a Ukrainian American rapper",
+   "summary": "Denmark is expected to ask the European Union this week for more decisive action stemming from the case, perhaps restricting Russian citizens from entering and traveling freely within the EU. Poland said it would support such measures.",
+   "category": "World",
+   "leans": [
+    -1,
+    1
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Poland says Russia allegedly twice tried to kill a Ukrainian American rapper",
+     "url": "https://www.pbs.org/newshour/world/poland-says-russia-allegedly-twice-tried-to-kill-a-ukrainian-american-rapper"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Poland says Russia allegedly twice tried to kill a Ukrainian American rapper",
+     "url": "https://nypost.com/2026/11/23/world-news/poland-says-russia-allegedly-twice-tried-to-kill-a-ukrainian-american-rapper/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Democrats win House by largest margin in 50 years. And, COP31 ends with no deal",
+   "summary": "Democrats have currently flipped 47 House seats and could flip 49 total. And, climate change talks at COP31 ran two days longer than expected, becoming the longest conference in the summit's history.",
+   "category": "Politics",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 2,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Democrats win House by largest margin in 50 years. And, COP31 ends with no deal",
+     "url": "https://www.npr.org/2026/11/23/g-s1-155021/up-first-newsletter-midterms-house-ai-stocks-poland-nato-cop31"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Democrats win largest House majority since 1992 after flipping North Carolina seat",
+     "url": "https://www.bbc.co.uk/news/articles/c6vg29g7dlyno?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "The Christian Science Monitor",
+     "lean": 0,
+     "label": "Center",
+     "title": "With 258 seats, Democrats clinch largest House majority since 1992",
+     "url": "https://www.csmonitor.com/USA/2026/1122/With-258-seats-Democrats-clinch-largest-House-majority-since-1992?icid=rss"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "FactChecking Trump’s Post-Election ‘60 Minutes’ Interview",
+     "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "kcB8VMhzHcY",
+     "title": "Democrats make history after flipping North Carolina seat in US midterms | BBC News",
+     "thumb": "https://i.ytimg.com/vi/kcB8VMhzHcY/hqdefault.jpg",
+     "channel": "BBC News",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "South Korean minister quits after AI cheating scandal engulfs university exams",
+   "summary": "Choi Kyo-jin says he ‘failed to prepare adequately’ for entrance exams following last-minute scramble to tighten measures South Korea’s education minister has resigned after an AI-assisted cheating scandal that erupted in the lead-up to key university entrance exams last week. Th",
+   "category": "Tech",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 3,
+   "balance": {
+    "l": 2,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "South Korean minister quits after AI cheating scandal engulfs university exams",
+     "url": "https://www.theguardian.com/world/2026/nov/22/south-korea-education-minister-resigns-after-ai-cheating-scandal-engulfs-university-exams"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "South Korean Education Minister Resigns After Backlash Toward Anti-AI Measures",
+     "url": "https://time.com/article/2026/11/23/south-korea-education-minister-resigns-college-exam-suneung-ai-cheating/"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "South Korea education minister resigns over exam cheating scandal",
+     "url": "https://www.bbc.co.uk/news/articles/cw3dgk29d37no?at_medium=RSS&at_campaign=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "At least 24 killed and dozens missing in confectionery factory fire in Indonesia",
+   "summary": "Rescuers brave unstable structures in search for missing as DNA needed to identify victims Indonesia has confirmed the deaths of 24 people in a fire that tore ⁠through a factory, as rescuers braved unstable structures in the burned wreckage to search for ⁠about 30 people ⁠still m",
+   "category": "General",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "At least 24 killed and dozens missing in confectionery factory fire in Indonesia",
+     "url": "https://www.theguardian.com/world/2026/nov/22/fire-confectionary-factory-indonesia-jakarta"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Search continues for dozens missing after Indonesia candy factory fire",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/23/search-continues-for-dozens-missing-after-indonesia-candy-factory-fire?traffic_source=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "uDoGmo-n-M8",
+     "title": "Search continues for dozens missing after Indonesia candy factory fire | AJ #shorts",
+     "thumb": "https://i.ytimg.com/vi/uDoGmo-n-M8/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "Trump hosts crypto gala as his meme coin falls below $1",
+   "summary": "Donald Trump hosted a dinner for top holders of his meme coin that has fallen to under $1. Bitcoin rebounded after falling to lowest level since September 2024.",
+   "category": "Politics",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Inside Trump's third crypto gala",
+     "url": "https://www.cbsnews.com/video/inside-trumps-third-crypto-gala/"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump hosts crypto gala as his meme coin falls below $1",
+     "url": "https://www.cnbc.com/2026/11/23/trump-meme-coin-gala.html"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Rise and shine! A century of Macy’s balloons.",
+   "summary": "On the 100th Thanksgiving Day Parade, one man is credited with stringing it all together.",
+   "category": "General",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "The Rise and Fall of the Telephone Century",
+     "url": "https://www.theatlantic.com/magazine/2027/01/james-gleick-telephone-new-history-review/689413/?utm_source=feed"
+    },
+    {
+     "name": "The Christian Science Monitor",
+     "lean": 0,
+     "label": "Center",
+     "title": "Rise and shine! A century of Macy’s balloons.",
+     "url": "https://www.csmonitor.com/The-Home-Forum/2026/1122/macy-parade-balloons?icid=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Ebola’s Death Toll Tops 5,700. Can the Outbreak Be Contained?",
+   "summary": "Ebola is spreading faster than Congo’s health workers can respond. To save lives, they need stronger frontline clinics, community trust, and a vaccine.",
+   "category": "Health",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Ebola’s Death Toll Tops 5,700. Can the Outbreak Be Contained?",
+     "url": "https://time.com/article/2026/11/21/ebola-s-death-toll-tops-5-700-can-the-outbreak-be-contained-/"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Ebola Outbreak With 50% Death Rate Is Getting Worse: Three Key Reasons Why",
+     "url": "https://www.newsweek.com/ebola-outbreak-with-50-death-rate-is-getting-worse-three-key-reasons-why-12756341"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "SpaceX sued by Oregon and Virginia over AI deepfake porn, Grok safety claims",
+   "summary": "The states are seeking civil penalties and injunctions to stop Grok and X from creation and distribution of nonconsensual sexualized images.",
+   "category": "Tech",
+   "leans": [
+    0,
+    1
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "SpaceX sued by Oregon and Virginia over AI deepfake porn, Grok safety claims",
+     "url": "https://www.cnbc.com/2026/11/23/oregon-virginia-spacex-grok-deepfake-lawsuits.html"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Virginia and Oregon sue SpaceX over sexual deepfakes",
+     "url": "https://www.washingtontimes.com/news/2026/nov/23/spacex-sued-virginia-oregon-sexual-deepfakes/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Jeffries presents Democrats' plan as Trump slams Schumer amid Senate leadership debate",
+   "summary": "Democratic leaders are proposing potential projects to work with President Trump on as questions linger about Chuck Schumer's future as Senate majority leader. CBS News' Taurean Small reports.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Jeffries presents Democrats' plan as Trump slams Schumer amid Senate leadership debate",
+     "url": "https://www.cbsnews.com/video/jeffries-presents-democrats-plan-as-trump-slams-schumer-amid-senate-leadership-debate/"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump Praises Jeffries and Schumer, Sees Room For Deals With Democrats in 2027",
+     "url": "https://time.com/article/2026/11/20/trump-praises-hakeem-jeffries-schumer/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Do Senate Democrats want to take away Trump's power to pardon himself?",
+     "link": "https://www.snopes.com/fact-check/senate-democrats-president-pardon/"
+    },
+    {
+     "org": "FactCheck.org",
+     "title": "FactChecking Trump’s Post-Election ‘60 Minutes’ Interview",
+     "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "UwfZHtjsWMc",
+     "title": "Jeffries presents Democrats' plan as Trump slams Schumer amid Senate leadership debate",
+     "thumb": "https://i.ytimg.com/vi/UwfZHtjsWMc/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "ICE Officers Arrest 2 Passenger Boarding Flight, Sparking Outrage",
+   "summary": "Distressing video shows two passengers, a father and his adult daughter, being arrested while boarding a flight in Seattle over the weekend, with the masked agents forcibly removing them from the jetbridge. The encounter is now prompting sharp rebukes from several local and state",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "ICE Officers Arrest 2 Passenger Boarding Flight, Sparking Outrage",
+     "url": "https://www.today.com/video/video-shows-distressing-ice-arrests-of-father-and-daughter-274005061831"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "ICE officers arrest 2 passengers boarding flight in Seattle",
+     "url": "https://www.cbsnews.com/news/ice-arrest-alaska-airlines-flight-seattle/"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "X04aA5Xg-DA",
+     "title": "Masked ICE officers arrest 2 passengers on crowded airport jet bridge in Seattle #shorts",
+     "thumb": "https://i.ytimg.com/vi/X04aA5Xg-DA/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Trump Admin to Target Campus Liberal Bias in 2027",
+   "summary": "The Trump administration is targeting what it considers liberal bias in higher education, using the college accreditation system to promote greater intellectual diversity at universities. New rules set to take effect in July will require accrediting agencies to evaluate...",
+   "category": "Politics",
+   "leans": [
+    2
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Admin to Target Campus Liberal Bias in 2027",
+     "url": "https://www.newsmax.com/newsfront/donald-trump-liberal-bias-higher-education/2026/11/22/id/1277190"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Admin Keeps Michigan Coal Plant Open Into 2027 After Court Tossed Its First Order",
+     "url": "https://dailycaller.com/2026/11/21/chris-wright-campbell-coal-plant-michigan-emergency-order-2027"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "U.S. Army plans to invoke emergency provisions to detonate bomb-making chemicals in Iowa",
+   "summary": "Environmental groups criticized the government's move, decrying it as a maneuver to get around a court order and avoid public demands for safety and transparency.",
+   "category": "Science",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "U.S. Army plans to invoke emergency provisions to detonate bomb-making chemicals in Iowa",
+     "url": "https://www.pbs.org/newshour/nation/u-s-army-plans-to-invoke-emergency-provisions-to-detonate-bomb-making-chemicals-in-iowa"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Is US Army planning to detonate massive amount of lead azide in Middletown, Iowa?",
+     "link": "https://www.snopes.com/fact-check/lead-azide-detonation-army-iowa/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "in2VfnSnwfk",
+     "title": "Court halts Army detonation of bomb chemicals in Iowa",
+     "thumb": "https://i.ytimg.com/vi/in2VfnSnwfk/hqdefault.jpg",
+     "channel": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "LwktbuX1j8s",
+     "title": "US Army plans to detonate explosives in Iowa as residents fear lead exposure",
+     "thumb": "https://i.ytimg.com/vi/LwktbuX1j8s/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "Army detonation of lead azide moved to Wednesday in Iowa",
+   "summary": "The U.S. Army announced it will detonate more than 60 barrels of lead azide later this week, following a legal battle that placed two different blocks on the planned explosion. The controlled detonation at the Iowa Army Ammunition Plant is now scheduled for Wednesday, Nov. 25, ac",
+   "category": "General",
+   "leans": [
+    0
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Army detonation of lead azide moved to Wednesday in Iowa",
+     "url": "https://thehill.com/homenews/state-watch/6236662-iowa-army-detonation-lead-azide-resecheduled/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Is US Army planning to detonate massive amount of lead azide in Middletown, Iowa?",
+     "link": "https://www.snopes.com/fact-check/lead-azide-detonation-army-iowa/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "Reactor Permits Pile Up Under Trump As Democrats Prepare To Take Over Nuclear Oversight",
+   "summary": "‘We delivered on the 18-month schedule’",
+   "category": "Politics",
+   "leans": [
+    2
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Reactor Permits Pile Up Under Trump As Democrats Prepare To Take Over Nuclear Oversight",
+     "url": "https://dailycaller.com/2026/11/22/nrc-reactor-permits-long-mott-dow-texas-democrats-congress-nuclear-oversight"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Do Senate Democrats want to take away Trump's power to pardon himself?",
+     "link": "https://www.snopes.com/fact-check/senate-democrats-president-pardon/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "Seniors embrace Tesla automated driving technology despite questions about safety",
+   "summary": "Older drivers are using Tesla's automated driving technology to stay on the road longer. But safety experts warn the company may be over-selling what its cars can do.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Seniors embrace Tesla automated driving technology despite questions about safety",
+     "url": "https://www.npr.org/2026/11/23/nx-s1-6020559/senior-drivers-tesla-automated-driving-safety"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Let's talk turkey: Here's how Thanksgiving meal costs have changed this year",
+   "summary": "Grocery costs have been on the rise, but food-price analysts say it's unclear if you'll spend more on the Thanksgiving meal this year. Some people are deciding not to host or are hosting fewer guests.",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Let's talk turkey: Here's how Thanksgiving meal costs have changed this year",
+     "url": "https://www.npr.org/2026/11/23/nx-s1-6044207/thanksgiving-meal-costs"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Mushroom supplements promise health benefits. What does the science say?",
+   "summary": "Wellness influencers say mushroom supplements can help with your gut health, focus and immune system. Here is where research suggests there are some links.",
+   "category": "Health",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Mushroom supplements promise health benefits. What does the science say?",
+     "url": "https://www.npr.org/2026/11/23/nx-s1-6047791/mushroom-supplements-health-research"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "K is for kindness, but families worry the world has less of it",
+   "summary": "A decade after first asking families about kindness, Sesame Workshop asked parents similar questions. They responded that their kids are getting kinder even as the wider world becomes less so.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "K is for kindness, but families worry the world has less of it",
+     "url": "https://www.npr.org/2026/11/23/nx-s1-6035702/kindness-kids-sesame-street-parents-survey"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Morning news brief",
+   "summary": "A look at how artificial intelligence is affecting the economy, NATO to meet after Russian missiles hit Poland, negotiators fail to reach a deal as COP31 comes to an end.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Morning news brief",
+     "url": "https://www.npr.org/2026/11/23/nx-s1-6045619/morning-news-brief"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Do not feed the animals. Vets explain why hats, coins and shoes can be deadly",
+   "summary": "It's not easy to retrieve foreign objects from animals once ingested. Some things can be grabbed using an endoscope. But if an item gets far into the intestinal tract, surgery isn't always possible.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Do not feed the animals. Vets explain why hats, coins and shoes can be deadly",
+     "url": "https://www.npr.org/2026/11/22/nx-s1-6049723/do-not-feed-the-animals-vets-explain-why-hats-coins-and-shoes-can-be-deadly"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "California’s coastal communities on alert as biggest waves in years hit state",
+   "summary": "Hazard warnings issued throughout week after powerful swells and waves of more than 9 metres recorded Multiple coastal hazard warnings were issued this week across California as successive areas of low pressure generated powerful swells and large breaking waves for coastal commun",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "California’s coastal communities on alert as biggest waves in years hit state",
+     "url": "https://www.theguardian.com/us-news/2026/nov/20/california-coastal-communities-alert-big-waves-hit-state"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Race to replant five South African baobabs after export blocked",
+   "summary": "The trees, intended for an unnamed buyer in Georgia, were reportedly dug up without the necessary permits Environmentalists in South Africa are racing to replant five centuries-old baobabs after the 20-tonne trees were dug up by an exporter, who tried to ship them thousands of mi",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Race to replant five South African baobabs after export blocked",
+     "url": "https://www.theguardian.com/environment/2026/nov/19/baobab-five-trees-south-africa-dug-up-export-blocked-georgia-aoe"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "One in four women globally unable to refuse sex within marriage, says UN",
+   "summary": "Almost half of women in west and central Africa cannot withhold consent, with girls worst affected, UNFPA finds One in four women around the world have no power of consent if their husband or partner demands sex, according to a UN report. In west and central Africa, almost half o",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "One in four women globally unable to refuse sex within marriage, says UN",
+     "url": "https://www.theguardian.com/global-development/2026/nov/19/women-girls-rights-rape-sexual-violence-africa-marriage-unfpa"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Trump administration deported US citizen to Mexico, DoJ admits in court",
+   "summary": "Brian Morales García of Texas seeks damages after he was wrongly identified as undocumented in case White House wants dropped The Trump administration recently admitted in federal court that it deported a US citizen to Mexico after American authorities incorrectly concluded he wa",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump administration deported US citizen to Mexico, DoJ admits in court",
+     "url": "https://www.theguardian.com/us-news/2026/nov/23/trump-administration-deported-citizen-mexico"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Bank of England directors illegally profited from post-abolition enslavement in Cuba",
+   "summary": "New research finds that the British-led Cobre Mining Company helped industrialise Manchester via copper deposits and enslaved African people • Slave-trade wealth was embedded in Britain’s financial system, research finds British businesses run by long-serving directors of the Ban",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Bank of England directors illegally profited from post-abolition enslavement in Cuba",
+     "url": "https://www.theguardian.com/news/2026/nov/22/bank-of-england-directors-illegally-profited-enslavement-cuba"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Alleged Mexican drug cartel boss ‘El Chapo Isidro’ arrested in special forces raid",
+   "summary": "Fausto Isidro Meza Flores was one of FBI’s most wanted fugitives and evaded capture for more than a decade The Mexican military captured one of the FBI’s 10 most wanted fugitives during a special forces raid in the Mexican state of Sinaloa on Friday night. Fausto Isidro Meza Flor",
+   "category": "Health",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Alleged Mexican drug cartel boss ‘El Chapo Isidro’ arrested in special forces raid",
+     "url": "https://www.theguardian.com/world/2026/nov/21/alleged-mexican-drug-cartel-boss-el-chapo-isidro-meza-flores-arrested"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Haitians excited but uneasy as El Salvador troops fight gangs",
+   "summary": "Foreign combatants in Port-au-Prince welcomed by many after years of gang control but some fear offensive could exacerbate volatile situation A bullet-peppered mural of the Haitian striker Emmanuel Sanon covers the facade of Port-au-Prince’s main football ground. But more than tw",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Haitians excited but uneasy as El Salvador troops fight gangs",
+     "url": "https://www.theguardian.com/world/2026/nov/21/excitement-unease-haiti-el-salvador-troops-gangs-war-bukele"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "‘Weak and dizzy’: the secretive ICE force-feeding tactics that ended a Cuban father’s hunger strike",
+   "summary": "Exclusive: Luis Alejandro Cora Pérez says in messages to Guardian from inside Texas facility pain of force-feeding caused him to break strike The text message that came from inside the Immigration and Customs Enforcement (ICE) detention center was stark: “I have spent five days e",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "‘Weak and dizzy’: the secretive ICE force-feeding tactics that ended a Cuban father’s hunger strike",
+     "url": "https://www.theguardian.com/us-news/2026/nov/20/ice-cuba-hunger-strike-force-feeding"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "NFL Week 11: A Travis Kelce game years in the making, and Dak Prescott keeps dealing",
+   "summary": "Week 11 of the NFL season featured a throwback performance by Travis Kelce, a nail-biter in New York, and the second start for Raiders rookie quarterback Fernando Mendoza.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "NFL Week 11: A Travis Kelce game years in the making, and Dak Prescott keeps dealing",
+     "url": "https://www.nbcnews.com/sports/nfl/nfl-week-11-travis-kelce-chiefs-dak-prescott-cowboys-rcna610773"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "2026 Rockefeller Center Christmas Tree Arrives in New York City",
+   "summary": "A magnificent Norway spruce has made its journey from West Edmeston, New York, to Rockefeller Center. The tree will undergo a glow-up ahead of the lighting ceremony on Dec. 2.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "2026 Rockefeller Center Christmas Tree Arrives in New York City",
+     "url": "https://www.today.com/video/2026-rockefeller-center-christmas-tree-arrives-in-new-york-city-273069125683"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "New Netflix documentary does deep dive into Karen Read trial",
+   "summary": "A new Netflix documentary is showing never-before-seen details of the Karen Read trial. Matt Gutman reports.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "New Netflix documentary does deep dive into Karen Read trial",
+     "url": "https://www.cbsnews.com/video/new-netflix-documentary-does-deep-dive-into-karen-read-trial/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Delta tech outage slams flight operations at world's busiest airport",
+   "summary": "A technology outage disrupted operations for Delta Air Lines as the holiday travel season begins. CBS News' Kris Van Cleave reports.",
+   "category": "Tech",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Delta tech outage slams flight operations at world's busiest airport",
+     "url": "https://www.cbsnews.com/video/delta-tech-outage-slams-flight-operations-at-worlds-busiest-airport/"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "bZSnehv9RrU",
+     "title": "Delta tech outage slams flight operations at world's busiest airport",
+     "thumb": "https://i.ytimg.com/vi/bZSnehv9RrU/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Dramatic jet bridge ICE arrest draws criticism",
+   "summary": "An ICE arrest caught on video is drawing criticism after agents grabbed a father and daughter on the jet bridge of an Alaska Airlines flight. Camilo Montoya Galvez reports.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Dramatic jet bridge ICE arrest draws criticism",
+     "url": "https://www.cbsnews.com/video/dramatic-jet-bridge-ice-arrest-draws-criticism/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Stock futures rise, erasing some losses after tech rout",
+   "summary": "U.S. stock index futures regained ground on Monday, but Wall Street analysts think it's too soon to sound the all-clear.",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Stock futures rise, erasing some losses after tech rout",
+     "url": "https://www.cbsnews.com/news/us-stock-futures-rebound-tech-rout/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "LIVE:  ABC News Live",
+   "summary": "24/7 coverage of breaking news and live events",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "LIVE:  ABC News Live",
+     "url": "https://abcnews.com/video/41463246/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Tom Jackson, Broncos star and ESPN 'Sunday NFL Countdown' analyst, dead at 75",
+   "summary": "Tom Jackson, a cornerstone of the Orange Crush defense with the Denver Broncos who went on to even more fame as an ESPN broadcaster, has died at 75",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Tom Jackson, Broncos star and ESPN 'Sunday NFL Countdown' analyst, dead at 75",
+     "url": "https://abcnews.com/Entertainment/wireStory/tom-jackson-broncos-star-espn-sunday-nfl-countdown-138360147"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "WATCH:  NFL Sunday’s biggest moments",
+   "summary": "“GMA” has highlights from the San Francisco 49ers-Minnesota Vikings and Kansas City Chiefs-Arizona Cardinals games, plus a preview of Monday night's Cincinnati Bengals-Washington Commanders matchup.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  NFL Sunday’s biggest moments",
+     "url": "https://abcnews.com/video/138373307/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "WATCH:  Tips for hosting Friendsgiving this year",
+   "summary": "Digital creator Kerra Masella shares her tips for planning and hosting a Friendsgiving celebration, from getting organized ahead of time to making friends feel welcome around the table.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  Tips for hosting Friendsgiving this year",
+     "url": "https://abcnews.com/video/138331305/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "WATCH:  Is travel insurance worth it after the FAA ground stop?",
+   "summary": "Katy Nastro, travel correspondent at Flighty, shares what travelers can do to protect themselves.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  Is travel insurance worth it after the FAA ground stop?",
+     "url": "https://abcnews.com/video/138330689/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "WATCH:  New health warning on doomscrolling: What to know and tips to break the habit",
+   "summary": "A Lancet Psychiatry report calls problematic internet use a global health concern, affecting more than 1 in 10 people. ABC News’ Dr. Jennifer Miao explains the impact and how to protect yourself.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  New health warning on doomscrolling: What to know and tips to break the habit",
+     "url": "https://abcnews.com/video/138324954/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  }
+ ],
+ "blindspots": [
+  {
+   "title": "Jeffries presents Democrats' plan as Trump slams Schumer amid Senate leadership debate",
+   "summary": "Democratic leaders are proposing potential projects to work with President Trump on as questions linger about Chuck Schumer's future as Senate majority leader. CBS News' Taurean Small reports.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Jeffries presents Democrats' plan as Trump slams Schumer amid Senate leadership debate",
+     "url": "https://www.cbsnews.com/video/jeffries-presents-democrats-plan-as-trump-slams-schumer-amid-senate-leadership-debate/"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump Praises Jeffries and Schumer, Sees Room For Deals With Democrats in 2027",
+     "url": "https://time.com/article/2026/11/20/trump-praises-hakeem-jeffries-schumer/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Do Senate Democrats want to take away Trump's power to pardon himself?",
+     "link": "https://www.snopes.com/fact-check/senate-democrats-president-pardon/"
+    },
+    {
+     "org": "FactCheck.org",
+     "title": "FactChecking Trump’s Post-Election ‘60 Minutes’ Interview",
+     "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "UwfZHtjsWMc",
+     "title": "Jeffries presents Democrats' plan as Trump slams Schumer amid Senate leadership debate",
+     "thumb": "https://i.ytimg.com/vi/UwfZHtjsWMc/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "ICE Officers Arrest 2 Passenger Boarding Flight, Sparking Outrage",
+   "summary": "Distressing video shows two passengers, a father and his adult daughter, being arrested while boarding a flight in Seattle over the weekend, with the masked agents forcibly removing them from the jetbridge. The encounter is now prompting sharp rebukes from several local and state",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "ICE Officers Arrest 2 Passenger Boarding Flight, Sparking Outrage",
+     "url": "https://www.today.com/video/video-shows-distressing-ice-arrests-of-father-and-daughter-274005061831"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "ICE officers arrest 2 passengers boarding flight in Seattle",
+     "url": "https://www.cbsnews.com/news/ice-arrest-alaska-airlines-flight-seattle/"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "X04aA5Xg-DA",
+     "title": "Masked ICE officers arrest 2 passengers on crowded airport jet bridge in Seattle #shorts",
+     "thumb": "https://i.ytimg.com/vi/X04aA5Xg-DA/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Trump Admin to Target Campus Liberal Bias in 2027",
+   "summary": "The Trump administration is targeting what it considers liberal bias in higher education, using the college accreditation system to promote greater intellectual diversity at universities. New rules set to take effect in July will require accrediting agencies to evaluate...",
+   "category": "Politics",
+   "leans": [
+    2
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Admin to Target Campus Liberal Bias in 2027",
+     "url": "https://www.newsmax.com/newsfront/donald-trump-liberal-bias-higher-education/2026/11/22/id/1277190"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Admin Keeps Michigan Coal Plant Open Into 2027 After Court Tossed Its First Order",
+     "url": "https://dailycaller.com/2026/11/21/chris-wright-campbell-coal-plant-michigan-emergency-order-2027"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  }
+ ],
+ "factchecks": [
+  {
+   "org": "Snopes",
+   "title": "Video doesn't show supposed Muslim group 'Soldiers of Allah' demanding Shariah in Manchester",
+   "link": "https://www.snopes.com/fact-check/shariah-law-manchester-video/",
+   "summary": "The video actually shows Shiite Muslims marking Ashura, an annual religious event."
+  },
+  {
+   "org": "Snopes",
+   "title": "Image comparing size of White House ballroom to other structures doesn't hit the mark",
+   "link": "https://www.snopes.com/fact-check/white-house-ballroom-size-comparison/",
+   "summary": "The Taj Mahal, Colosseum and Sydney Opera House are far larger than the White House and therefore larger than its ballroom, too."
+  },
+  {
+   "org": "Snopes",
+   "title": "Nature video features authentic data center sound from separate recording",
+   "link": "https://www.snopes.com/fact-check/video-data-center-sound/",
+   "summary": "The organization that posted the video noted it added the audio to the clip to raise awareness about environmental impact."
+  },
+  {
+   "org": "Snopes",
+   "title": "Does new Etsy policy allow AI training on artists' work?",
+   "link": "https://www.snopes.com/news/2026/11/23/etsy-ai-policy-artists/",
+   "summary": "Etsy says it does not use creative work posted on its platform to train AI — even though its terms of use may give it permission to do just that."
+  },
+  {
+   "org": "Snopes",
+   "title": "25 rumors about hacks and cyberattacks, fact-checked",
+   "link": "https://www.snopes.com/collections/coverage-hacking-cyberattacks/",
+   "summary": "From power grid failures to alleged Facebook account and website hacks, we've covered it all."
+  },
+  {
+   "org": "Snopes",
+   "title": "Did US join Russia in abstaining from vote on UN resolution to protect women and girls?",
+   "link": "https://www.snopes.com/fact-check/us-russia-un-womens-rights-resolution/",
+   "summary": "The U.S. pushed back on specific language within the resolution, calling it \"disappointing.\""
+  },
+  {
+   "org": "Snopes",
+   "title": "Did Elon Musk once describe himself as 'dark, gothic MAGA'?",
+   "link": "https://www.snopes.com/fact-check/elon-musk-dark-gothic-maga/",
+   "summary": "Speaking after the midterms, Musk backed away from the label, saying he felt \"pretty foolish\" for his spending on Republican candidates."
+  },
+  {
+   "org": "Snopes",
+   "title": "Did DOGE lay off 400 FAA technicians responsible for maintaining critical navigational systems?",
+   "link": "https://www.snopes.com/fact-check/doge-cuts-to-faa/",
+   "summary": "People tied the supposed cuts to a nationwide ground stop involving the FAA's older communications network."
+  },
+  {
+   "org": "Snopes",
+   "title": "Is the Pentagon unable to account for $2T in taxpayer money? Breaking down its annual audit",
+   "link": "https://www.snopes.com/news/2026/11/20/pentagon-2-trillion-taxpayer-money/",
+   "summary": "The Department of Defense has never passed an audit. Here’s how the agency performed in 2026."
+  },
+  {
+   "org": "Snopes",
+   "title": "Do Senate Democrats want to take away Trump's power to pardon himself?",
+   "link": "https://www.snopes.com/fact-check/senate-democrats-president-pardon/",
+   "summary": "Senators introduced a bill titled \"Abuse of the Pardon Prevention Act of 2026\" in August to curb the president's right to issue pardons."
+  },
+  {
+   "org": "Snopes",
+   "title": "Is US Army planning to detonate massive amount of lead azide in Middletown, Iowa?",
+   "link": "https://www.snopes.com/fact-check/lead-azide-detonation-army-iowa/",
+   "summary": "The best way to safely dispose of the explosive waste is to detonate it in place, according to the Army."
+  },
+  {
+   "org": "Snopes",
+   "title": "12 rumors about the Federal Aviation Administration we grounded in truth",
+   "link": "https://www.snopes.com/collections/faa-rumors/",
+   "summary": "The agency faces scrutiny ranging from theories about shutdowns to questions about its leadership."
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Trump’s Misguided Claim That ‘They’ Waited to Lower Gas Prices Until After the Midterms",
+   "link": "https://www.factcheck.org/2026/11/trumps-misguided-claim-that-they-waited-to-lower-gas-prices-until-after-the-midterms/",
+   "summary": "Gasoline prices have been trending downward, dropping about 75 cents per gallon since Sept. 24, though prices are still about 69 cents higher than this time a year ago. In a social media post on Nov. 17, President Donald Trump wrongly suggested there was a political motivation be"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Former Trump Administration Health Adviser Misleads About mRNA Flu Vaccine",
+   "link": "https://www.factcheck.org/2026/11/former-trump-administration-health-adviser-misleads-about-mrna-flu-vaccine/",
+   "summary": "Former Health and Human Services Department adviser Calley Means has misleadingly suggested that the new mRNA influenza vaccine from Moderna isn’t safe and doesn’t work well. Less is known about it because it is a new vaccine, but trial data suggest it works better than standard "
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Trump Makes False and Misleading Claims About Funding for HBCUs",
+   "link": "https://www.factcheck.org/2026/11/trump-makes-false-and-misleading-claims-about-funding-for-hbcus/",
+   "summary": "President Donald Trump falsely claimed that former Presidents Barack Obama and Joe Biden “did nothing” in terms of funding for historically Black colleges and universities that Trump said he “saved” from bankruptcy. The post Trump Makes False and Misleading Claims About Funding f"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Unpacking the Partisan Finger-Pointing Over FAA Funding",
+   "link": "https://www.factcheck.org/2026/11/unpacking-the-partisan-finger-pointing-over-faa-funding/",
+   "summary": "The grounding of thousands of flights on Nov. 13 set off a round of partisan finger-pointing over who’s to blame for the state of the nation’s aging air traffic control system. The post Unpacking the Partisan Finger-Pointing Over FAA Funding appeared first on FactCheck.org ."
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Our Annual Fundraising Drive",
+   "link": "https://www.factcheck.org/2026/11/our-annual-fundraising-drive/",
+   "summary": "Please consider giving a donation to FactCheck.org during our annual end-of-year fundraising drive, which starts today and lasts until the end of the year. The post Our Annual Fundraising Drive appeared first on FactCheck.org ."
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Florida’s Surgeon General Spins State COVID-19 Vaccine Comparison Study",
+   "link": "https://www.factcheck.org/2026/11/floridas-surgeon-general-spins-state-covid-19-vaccine-comparison-study/",
+   "summary": "A new analysis of data from Florida found a higher risk of mortality in those receiving the Pfizer versus the Moderna COVID-19 vaccine in the year after a first dose. It does not establish that the Pfizer vaccine was dangerous or caused deaths, contrary to suggestions by the stat"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "FactChecking Trump’s Post-Election ‘60 Minutes’ Interview",
+   "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/",
+   "summary": "In his first sit-down interview since the midterm elections that saw Democrats retake control of both the House and Senate, President Donald Trump blamed Republicans’ poor showing on “bad messaging” of his second term accomplishments. But in his recounting of events, Trump repeat"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Explaining the U.S. Defense Agreement with Greenland and Denmark",
+   "link": "https://www.factcheck.org/2026/11/explaining-the-u-s-defense-agreement-with-greenland-and-denmark/",
+   "summary": "Under the terms of a new defense agreement between Greenland, Denmark and the United States, Greenland remains a self-governed territory of Denmark with the right to declare its independence in the future. The U.S. did not \"get” Greenland, nor does it now \"own\" Greenland, as Pres"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Wright’s Misleading Claims About Electricity Prices in Red vs. Blue States",
+   "link": "https://www.factcheck.org/2026/11/wrights-misleading-claims-about-electricity-prices-in-red-vs-blue-states/",
+   "summary": "Energy Secretary Chris Wright has blamed high electricity prices in Democrat-led states on climate policies. Prices do tend to be higher in blue states than red states, but climate policies at most explain a modest portion of the price difference. The post Wright’s Misleading Cla"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "The 2026 FactCheck Awards",
+   "link": "https://www.factcheck.org/2026/11/the-2026-factcheck-awards/",
+   "summary": "As fact-checkers, we watch a lot of ads in the lead-up to elections, and we only write about a fraction of them. Some of them are downright bizarre. As we first started doing 20 years ago -- just for fun -- on Election Day, we're giving out pretend awards to some of the notable a"
+  },
+  {
+   "org": "Full Fact",
+   "title": "The National Wealth Fund committed £1 billion for offshore wind off the coast of Norfolk, not Scotland",
+   "link": "https://fullfact.org/environment/andy-burnham-national-wealth-fund-scotland/",
+   "summary": "A claim made by Andy Burnham at Prime Minister’s Questions last week wasn’t correct."
+  },
+  {
+   "org": "Full Fact",
+   "title": "Work and pensions secretary corrects comparison of Labour and Conservative records on employment",
+   "link": "https://fullfact.org/economy/work-and-pensions-secretary-corrects-comparison-of-labour-and-conservative-records-on-employment/",
+   "summary": "Pat McFadden MP wrongly claimed that the employment rate ‘today’ was higher than in every year but one during the Conservatives’ 14 years in power."
+  }
+ ]
 }
