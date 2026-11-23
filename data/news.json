@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-23T03:00:38Z",
- "generated_human": "Nov 23, 2026 · 03:00 UTC",
+ "generated": "2026-11-23T04:00:33Z",
+ "generated_human": "Nov 23, 2026 · 04:00 UTC",
  "sources": [
   {
    "name": "NPR",
@@ -206,7 +206,7 @@
    "count": 12
   }
  ],
- "n_articles": 334,
+ "n_articles": 335,
  "n_videos": 140,
  "trending": [
   {
@@ -215,14 +215,18 @@
   },
   {
    "term": "democrats",
-   "n": 14
-  },
-  {
-   "term": "house",
    "n": 13
   },
   {
+   "term": "house",
+   "n": 12
+  },
+  {
    "term": "climate",
+   "n": 9
+  },
+  {
+   "term": "california",
    "n": 9
   },
   {
@@ -230,11 +234,7 @@
    "n": 8
   },
   {
-   "term": "california",
-   "n": 8
-  },
-  {
-   "term": "largest",
+   "term": "army",
    "n": 8
   },
   {
@@ -242,12 +242,8 @@
    "n": 8
   },
   {
-   "term": "thanksgiving",
+   "term": "largest",
    "n": 8
-  },
-  {
-   "term": "army",
-   "n": 7
   },
   {
    "term": "since",
@@ -258,15 +254,19 @@
    "n": 7
   },
   {
-   "term": "tech",
-   "n": 7
-  },
-  {
    "term": "delays",
    "n": 7
   },
   {
-   "term": "iran",
+   "term": "tech",
+   "n": 7
+  },
+  {
+   "term": "week",
+   "n": 7
+  },
+  {
+   "term": "thanksgiving",
    "n": 7
   },
   {
@@ -275,6 +275,38 @@
   }
  ],
  "videos": [
+  {
+   "videoId": "1KZAq5ySbtc",
+   "title": "Don Toliver concert chaos after ‘substance’ let off in crowd",
+   "thumb": "https://i.ytimg.com/vi/1KZAq5ySbtc/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "DRDR6uEhAZg",
+   "title": "Ukraine is in an 'EXISTENTIAL' fight for its survival, expert says",
+   "thumb": "https://i.ytimg.com/vi/DRDR6uEhAZg/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "ELYN-hc0xn4",
+   "title": "FLASHBACK: Resurfaced video shows Mamdani detained by NYPD unit he’s disbanding #shorts",
+   "thumb": "https://i.ytimg.com/vi/ELYN-hc0xn4/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "w_s5SQWkn-4",
+   "title": "ABC World News Tonight with David Muir Full Broadcast - Nov. 22, 2026",
+   "thumb": "https://i.ytimg.com/vi/w_s5SQWkn-4/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
   {
    "videoId": "wc0_xSLc_OU",
    "title": "Drone strike damages Russian ship in Benghazi, say Libyan officials | DW News",
@@ -370,38 +402,6 @@
    "channel": "Al Jazeera",
    "lean": 0,
    "label": "Center"
-  },
-  {
-   "videoId": "HUzpiJhZTxk",
-   "title": "Israeli forces continue house demolitions in southern Lebanon",
-   "thumb": "https://i.ytimg.com/vi/HUzpiJhZTxk/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "0jKKBv4Kkws",
-   "title": "Emotional tribute to the NFL's Tom Jackson",
-   "thumb": "https://i.ytimg.com/vi/0jKKBv4Kkws/hqdefault.jpg",
-   "channel": "ABC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "CGgW9u1aM3w",
-   "title": "America Is Losing the War Against Measles",
-   "thumb": "https://i.ytimg.com/vi/CGgW9u1aM3w/hqdefault.jpg",
-   "channel": "CNN",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "XoLwefWyJv8",
-   "title": "FBI: Mexican special forces take down cartel leader in Mexico",
-   "thumb": "https://i.ytimg.com/vi/XoLwefWyJv8/hqdefault.jpg",
-   "channel": "ABC News",
-   "lean": -1,
-   "label": "Lean Left"
   }
  ],
  "stories": [
@@ -416,9 +416,9 @@
     2
    ],
    "span": 3,
-   "n_sources": 9,
+   "n_sources": 8,
    "balance": {
-    "l": 3,
+    "l": 2,
     "c": 3,
     "r": 3
    },
@@ -430,13 +430,6 @@
      "label": "Lean Left",
      "title": "Democrats win the largest House majority since 1992",
      "url": "https://www.nbcnews.com/politics/congress/house-democrats-win-largest-house-majority-hubbard-north-carolina-rcna610708"
-    },
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Democrat Chuck Hubbard wins recount, flips North Carolina US House seat",
-     "url": "https://abcnews.com/Politics/democrat-chuck-hubbard-wins-recount-north-carolina-us/story?id=138362634"
     },
     {
      "name": "PBS NewsHour",
@@ -841,9 +834,9 @@
     1
    ],
    "span": 2,
-   "n_sources": 6,
+   "n_sources": 7,
    "balance": {
-    "l": 2,
+    "l": 3,
     "c": 2,
     "r": 2
    },
@@ -853,7 +846,7 @@
      "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Army plans to carry out detonation at Iowa plant despite indefinite pause",
+     "title": "Army plans to carry out detonation at Iowa plant on Wednesday",
      "url": "https://www.cbsnews.com/news/us-army-iowa-plant-detonation-court-records/"
     },
     {
@@ -862,6 +855,13 @@
      "label": "Lean Left",
      "title": "Army moves forward with plans to detonate 5 tons of toxic materials in Iowa",
      "url": "https://www.cbsnews.com/video/army-moves-forward-plans-detonate-5-tons-toxic-materials-iowa/"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Army moves detonation of 10,000 pounds of lead azide to Wednesday",
+     "url": "https://abcnews.com/US/army-moves-detonation-10000-pounds-lead-azide-wedneday/story?id=138330909"
     },
     {
      "name": "PBS NewsHour",
@@ -1234,41 +1234,6 @@
    "videos": []
   },
   {
-   "title": "Paolo Bulgari, Italian Jeweler Who Turned Family Business Into Global Luxury Brand, Dies at 89",
-   "summary": "Paolo Bulgari, the grandson of a Greek silversmith who helped transform the family jewelry business into a global luxury brand synonymous with Italian glamour and design, has died. He was 89.His family announced his death Saturday, describing him as \"the greatest jeweler of...",
-   "category": "General",
-   "leans": [
-    0,
-    2
-   ],
-   "span": 2,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Italian jeweller and businessman Paolo Bulgari dies aged 89",
-     "url": "https://www.bbc.co.uk/news/articles/c8e39qk5vrpdo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Paolo Bulgari, Italian Jeweler Who Turned Family Business Into Global Luxury Brand, Dies at 89",
-     "url": "https://www.newsmax.com/newsfront/Italy-Greece-Paolo-Bulgari-jewelry-luxury-LVMH/2026/11/21/id/1277140"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "DNI Clayton Says Recent Tech Outages Were ‘Not Coordinated’ Or ‘State-Sponsored’",
    "summary": "Let me tell you what we know, and be very clear with the American people: the incidents that we saw during the course this week. We know that they were not coordinated and they were not state-sponsored.",
    "category": "Tech",
@@ -1339,6 +1304,41 @@
    "videos": []
   },
   {
+   "title": "Cam Skattebo ignores his own backflip celebration retirement promise at end of Giants victory over Jaguars",
+   "summary": "Cam Skattebo vowed to retire his backflip celebration, then did one anyway after the New York Giants clinched their 23-18 win over Jacksonville.",
+   "category": "General",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Cam Skattebo Broke His Own Promise During Win vs Jaguars",
+     "url": "https://www.newsweek.com/sports/nfl/cam-skattebo-broke-his-own-promise-during-win-vs-jaguars-12755118"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Cam Skattebo ignores his own backflip celebration retirement promise at end of Giants victory over Jaguars",
+     "url": "https://www.foxnews.com/outkick-sports/cam-skattebo-ignores-backflip-celebration-retirement-promise-end-giants-victory-jaguars"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "Fire at confectionery factory in Indonesia leaves at least three dead and dozens missing",
    "summary": "Relatives of the missing victims flocked to the factory’s entrance, seeking updates about their loved ones A fire at a confectionery factory west of Jakarta has killed three people with 36 remaining missing, an Indonesian rescue official says. Drone footage showed large parts of ",
    "category": "General",
@@ -1402,50 +1402,6 @@
      "channel": "Reuters",
      "lean": 0,
      "label": "Center"
-    }
-   ]
-  },
-  {
-   "title": "Alleged Mexican drug cartel boss ‘El Chapo Isidro’ arrested in special forces raid",
-   "summary": "Fausto Isidro Meza Flores was one of FBI’s most wanted fugitives and evaded capture for more than a decade The Mexican military captured one of the FBI’s 10 most wanted fugitives during a special forces raid in the Mexican state of Sinaloa on Friday night. Fausto Isidro Meza Flor",
-   "category": "Health",
-   "leans": [
-    -1,
-    0
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 1,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Alleged Mexican drug cartel boss ‘El Chapo Isidro’ arrested in special forces raid",
-     "url": "https://www.theguardian.com/world/2026/nov/21/alleged-mexican-drug-cartel-boss-el-chapo-isidro-meza-flores-arrested"
-    },
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Mexican drug lord on FBI's 10 most wanted list arrested in shoot-out",
-     "url": "https://www.bbc.co.uk/news/articles/ckz749ey0r75o?at_medium=RSS&at_campaign=rss"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "XoLwefWyJv8",
-     "title": "FBI: Mexican special forces take down cartel leader in Mexico",
-     "thumb": "https://i.ytimg.com/vi/XoLwefWyJv8/hqdefault.jpg",
-     "channel": "ABC News",
-     "lean": -1,
-     "label": "Lean Left"
     }
    ]
   },
@@ -1555,86 +1511,6 @@
    "videos": []
   },
   {
-   "title": "Urgent warning issued to cruise passengers about strict new law in Mexico",
-   "summary": "Cruise passengers visiting Mexico with minors need passports, birth certificates and notarized letters under a new law. The government passed the measure to combat child trafficking.",
-   "category": "World",
-   "leans": [
-    1,
-    2
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Cruise passengers visiting Mexico with kids must provide extra documentation: new law",
-     "url": "https://nypost.com/2026/11/22/world-news/cruise-passengers-visiting-mexico-with-kids-must-provide-extra-documentation-new-law/"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Urgent warning issued to cruise passengers about strict new law in Mexico",
-     "url": "https://www.foxnews.com/travel/urgent-warning-issued-cruise-passengers-about-strict-new-law-mexico"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Senate GOP Rushes Trump Picks Before Democrats Take Over",
-   "summary": "Senate Republicans are racing to confirm as many of President Donald Trump's nominees as possible before Democrats take control in January, but some say the White House has offered little direction, Politico reported Sunday.",
-   "category": "Politics",
-   "leans": [
-    2
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Senate GOP Rushes Trump Picks Before Democrats Take Over",
-     "url": "https://www.newsmax.com/newsfront/donald-trump-nominees-confirm/2026/11/22/id/1277178"
-    },
-    {
-     "name": "Daily Caller",
-     "lean": 2,
-     "label": "Right",
-     "title": "Reactor Permits Pile Up Under Trump As Democrats Prepare To Take Over Nuclear Oversight",
-     "url": "https://dailycaller.com/2026/11/22/nrc-reactor-permits-long-mott-dow-texas-democrats-congress-nuclear-oversight"
-    }
-   ],
-   "factchecks": [
-    {
-     "org": "Snopes",
-     "title": "Do Senate Democrats want to take away Trump's power to pardon himself?",
-     "link": "https://www.snopes.com/fact-check/senate-democrats-president-pardon/"
-    },
-    {
-     "org": "FactCheck.org",
-     "title": "FactChecking Trump’s Post-Election ‘60 Minutes’ Interview",
-     "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
-    }
-   ],
-   "videos": []
-  },
-  {
    "title": "Trump Admin to Target Campus Liberal Bias in 2027",
    "summary": "The Trump administration is targeting what it considers liberal bias in higher education, using the college accreditation system to promote greater intellectual diversity at universities. New rules set to take effect in July will require accrediting agencies to evaluate...",
    "category": "Politics",
@@ -1730,6 +1606,72 @@
      "org": "FactCheck.org",
      "title": "FactChecking Trump’s Post-Election ‘60 Minutes’ Interview",
      "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "Yemen's Houthis claim attacks on Saudi oil refinery as Trump warns of new strikes next year",
+   "summary": "Yemen's Iran-aligned Houthis claimed an operation against Saudi Arabia's Rabigh oil refinery, as diplomatic efforts to end the war face long odds.",
+   "category": "World",
+   "leans": [
+    0
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Yemen's Houthis claim attacks on Saudi oil refinery as Trump warns of new strikes next year",
+     "url": "https://www.cnbc.com/2026/11/23/trump-iran-war-hormuz-saudi-.html"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "Trump’s Misguided Claim That ‘They’ Waited to Lower Gas Prices Until After the Midterms",
+     "link": "https://www.factcheck.org/2026/11/trumps-misguided-claim-that-they-waited-to-lower-gas-prices-until-after-the-midterms/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "Reactor Permits Pile Up Under Trump As Democrats Prepare To Take Over Nuclear Oversight",
+   "summary": "‘We delivered on the 18-month schedule’",
+   "category": "Politics",
+   "leans": [
+    2
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Reactor Permits Pile Up Under Trump As Democrats Prepare To Take Over Nuclear Oversight",
+     "url": "https://dailycaller.com/2026/11/22/nrc-reactor-permits-long-mott-dow-texas-democrats-congress-nuclear-oversight"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Do Senate Democrats want to take away Trump's power to pardon himself?",
+     "link": "https://www.snopes.com/fact-check/senate-democrats-president-pardon/"
     }
    ],
    "videos": []
@@ -2086,6 +2028,42 @@
    "videos": []
   },
   {
+   "title": "Alleged Mexican drug cartel boss ‘El Chapo Isidro’ arrested in special forces raid",
+   "summary": "Fausto Isidro Meza Flores was one of FBI’s most wanted fugitives and evaded capture for more than a decade The Mexican military captured one of the FBI’s 10 most wanted fugitives during a special forces raid in the Mexican state of Sinaloa on Friday night. Fausto Isidro Meza Flor",
+   "category": "Health",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Alleged Mexican drug cartel boss ‘El Chapo Isidro’ arrested in special forces raid",
+     "url": "https://www.theguardian.com/world/2026/nov/21/alleged-mexican-drug-cartel-boss-el-chapo-isidro-meza-flores-arrested"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "XoLwefWyJv8",
+     "title": "FBI: Mexican special forces take down cartel leader in Mexico",
+     "thumb": "https://i.ytimg.com/vi/XoLwefWyJv8/hqdefault.jpg",
+     "channel": "ABC News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
    "title": "Haitians excited but uneasy as El Salvador troops fight gangs",
    "summary": "Foreign combatants in Port-au-Prince welcomed by many after years of gang control but some fear offensive could exacerbate volatile situation A bullet-peppered mural of the Haitian striker Emmanuel Sanon covers the facade of Port-au-Prince’s main football ground. But more than tw",
    "category": "General",
@@ -2284,33 +2262,6 @@
    ]
   },
   {
-   "title": "Princeton neuroscientist detained by ICE at D.C. airport after leaving conference",
-   "summary": "U.S. Immigration and Customs Enforcement arrested a Princeton University Ph.D.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Princeton neuroscientist detained by ICE at D.C. airport after leaving conference",
-     "url": "https://www.nbcnews.com/news/us-news/princeton-neuroscientist-eva-yi-xie-ice-detained-rcna610603"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "2026 Rockefeller Center Christmas Tree Arrives in New York City",
    "summary": "A magnificent Norway spruce has made its journey from West Edmeston, New York, to Rockefeller Center. The tree will undergo a glow-up ahead of the lighting ceremony on Dec. 2.",
    "category": "General",
@@ -2363,89 +2314,45 @@
    ],
    "factchecks": [],
    "videos": []
-  }
- ],
- "blindspots": [
+  },
   {
-   "title": "Urgent warning issued to cruise passengers about strict new law in Mexico",
-   "summary": "Cruise passengers visiting Mexico with minors need passports, birth certificates and notarized letters under a new law. The government passed the measure to combat child trafficking.",
-   "category": "World",
+   "title": "Hall of Fame sports broadcaster Tom Jackson dies at 75",
+   "summary": "The Denver Broncos announced that Hall of Fame sports broadcaster Tom Jackson has died at 75.",
+   "category": "General",
    "leans": [
-    1,
-    2
+    -1
    ],
-   "span": 1,
-   "n_sources": 2,
+   "span": 0,
+   "n_sources": 1,
    "balance": {
-    "l": 0,
+    "l": 1,
     "c": 0,
-    "r": 2
+    "r": 0
    },
-   "blindspot": "left",
+   "blindspot": null,
    "sources": [
     {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Cruise passengers visiting Mexico with kids must provide extra documentation: new law",
-     "url": "https://nypost.com/2026/11/22/world-news/cruise-passengers-visiting-mexico-with-kids-must-provide-extra-documentation-new-law/"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Urgent warning issued to cruise passengers about strict new law in Mexico",
-     "url": "https://www.foxnews.com/travel/urgent-warning-issued-cruise-passengers-about-strict-new-law-mexico"
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Hall of Fame sports broadcaster Tom Jackson dies at 75",
+     "url": "https://www.cbsnews.com/video/hall-of-fame-sports-broadcaster-tom-jackson-dies-75/"
     }
    ],
    "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Senate GOP Rushes Trump Picks Before Democrats Take Over",
-   "summary": "Senate Republicans are racing to confirm as many of President Donald Trump's nominees as possible before Democrats take control in January, but some say the White House has offered little direction, Politico reported Sunday.",
-   "category": "Politics",
-   "leans": [
-    2
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
+   "videos": [
     {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Senate GOP Rushes Trump Picks Before Democrats Take Over",
-     "url": "https://www.newsmax.com/newsfront/donald-trump-nominees-confirm/2026/11/22/id/1277178"
-    },
-    {
-     "name": "Daily Caller",
-     "lean": 2,
-     "label": "Right",
-     "title": "Reactor Permits Pile Up Under Trump As Democrats Prepare To Take Over Nuclear Oversight",
-     "url": "https://dailycaller.com/2026/11/22/nrc-reactor-permits-long-mott-dow-texas-democrats-congress-nuclear-oversight"
+     "videoId": "p0H7QF6zwF8",
+     "title": "Hall-of-fame broadcaster Tom Jackson dies",
+     "thumb": "https://i.ytimg.com/vi/p0H7QF6zwF8/hqdefault.jpg",
+     "channel": "ABC News",
+     "lean": -1,
+     "label": "Lean Left"
     }
-   ],
-   "factchecks": [
-    {
-     "org": "Snopes",
-     "title": "Do Senate Democrats want to take away Trump's power to pardon himself?",
-     "link": "https://www.snopes.com/fact-check/senate-democrats-president-pardon/"
-    },
-    {
-     "org": "FactCheck.org",
-     "title": "FactChecking Trump’s Post-Election ‘60 Minutes’ Interview",
-     "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/"
-    }
-   ],
-   "videos": []
-  },
+   ]
+  }
+ ],
+ "blindspots": [
   {
    "title": "Trump Admin to Target Campus Liberal Bias in 2027",
    "summary": "The Trump administration is targeting what it considers liberal bias in higher education, using the college accreditation system to promote greater intellectual diversity at universities. New rules set to take effect in July will require accrediting agencies to evaluate...",
