@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-24T08:00:52Z",
- "generated_human": "Nov 24, 2026 · 08:00 UTC",
+ "generated": "2026-11-24T09:00:34Z",
+ "generated_human": "Nov 24, 2026 · 09:00 UTC",
  "sources": [
   {
    "name": "NPR",
@@ -136,6 +136,13 @@
    "count": 12
   },
   {
+   "name": "Reason",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
    "name": "New York Post",
    "lean": 1,
    "label": "Lean Right",
@@ -199,28 +206,28 @@
    "count": 12
   }
  ],
- "n_articles": 325,
+ "n_articles": 337,
  "n_videos": 140,
  "trending": [
   {
    "term": "trump",
-   "n": 23
+   "n": 24
   },
   {
    "term": "huang",
    "n": 22
   },
   {
+   "term": "nvidia",
+   "n": 21
+  },
+  {
    "term": "jensen",
    "n": 20
   },
   {
-   "term": "nvidia",
-   "n": 19
-  },
-  {
    "term": "return",
-   "n": 13
+   "n": 12
   },
   {
    "term": "court",
@@ -228,6 +235,10 @@
   },
   {
    "term": "army",
+   "n": 12
+  },
+  {
+   "term": "iowa",
    "n": 11
   },
   {
@@ -235,15 +246,15 @@
    "n": 10
   },
   {
-   "term": "iowa",
-   "n": 9
-  },
-  {
    "term": "china",
+   "n": 10
+  },
+  {
+   "term": "detonation",
    "n": 9
   },
   {
-   "term": "death",
+   "term": "federal",
    "n": 8
   },
   {
@@ -259,20 +270,128 @@
    "n": 7
   },
   {
-   "term": "detonation",
-   "n": 7
-  },
-  {
    "term": "omar",
    "n": 7
   }
  ],
  "videos": [
   {
+   "videoId": "uLXh4CFpotI",
+   "title": "Three soldiers from El Salvador killed in Haiti",
+   "thumb": "https://i.ytimg.com/vi/uLXh4CFpotI/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "wc_mO5Y28ac",
+   "title": "Breaking down Jensen Huang's comeback at Nvidia",
+   "thumb": "https://i.ytimg.com/vi/wc_mO5Y28ac/hqdefault.jpg",
+   "channel": "Reuters",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "OM6P1lnnrwE",
+   "title": "Turkeys chase woman down Massachusetts sidewalk",
+   "thumb": "https://i.ytimg.com/vi/OM6P1lnnrwE/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "U4JZHO_Cl68",
+   "title": "THOUSANDS evacuate concert after ‘unknown substance’ sparks panic",
+   "thumb": "https://i.ytimg.com/vi/U4JZHO_Cl68/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "-VzKRuE7yac",
+   "title": "Sen John Kennedy: Without free speech, how would we know who the IDIOTS are?",
+   "thumb": "https://i.ytimg.com/vi/-VzKRuE7yac/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "3wFWW31BC7Q",
+   "title": "Google & Meta's Submarine Cable Power Grab: Why Big Tech wants the ocean | DW  News",
+   "thumb": "https://i.ytimg.com/vi/3wFWW31BC7Q/hqdefault.jpg",
+   "channel": "DW News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "33hzkvUKFPk",
+   "title": "Amazon delivery drone slams into Michigan home",
+   "thumb": "https://i.ytimg.com/vi/33hzkvUKFPk/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "60rFnooSqus",
+   "title": "The internet had a field day with Jensen Huang's return",
+   "thumb": "https://i.ytimg.com/vi/60rFnooSqus/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "8aBogRyiI9c",
+   "title": "Nvidia’s back, but is the AI sell-off over? | Analysis from Wilfred Frost",
+   "thumb": "https://i.ytimg.com/vi/8aBogRyiI9c/hqdefault.jpg",
+   "channel": "Sky News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "LRuQ4tjsmyo",
+   "title": "Moment Mexican troops captured cartel leader ‘El Chapo Isidro’",
+   "thumb": "https://i.ytimg.com/vi/LRuQ4tjsmyo/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "qvFZ4pszGnQ",
+   "title": "True Crime Vault: The Sinfluencer of Soho",
+   "thumb": "https://i.ytimg.com/vi/qvFZ4pszGnQ/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "qGAigxl5x4A",
+   "title": "The revolt of the Cockroaches | The Listening Post",
+   "thumb": "https://i.ytimg.com/vi/qGAigxl5x4A/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "IkHBec9NJYk",
+   "title": "LIVE: Manchester United players train under new manager ahead of Champions League match",
+   "thumb": "https://i.ytimg.com/vi/IkHBec9NJYk/hqdefault.jpg",
+   "channel": "AP",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
    "videoId": "Gx3seEbdEXk",
    "title": "Iran warns of military action to break US blockade",
    "thumb": "https://i.ytimg.com/vi/Gx3seEbdEXk/hqdefault.jpg",
    "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "Q23XRuE5lFQ",
+   "title": "Nvidia CEO gets hero's welcome after reinstatement",
+   "thumb": "https://i.ytimg.com/vi/Q23XRuE5lFQ/hqdefault.jpg",
+   "channel": "Reuters",
    "lean": 0,
    "label": "Center"
   },
@@ -283,118 +402,6 @@
    "channel": "Sky News",
    "lean": 0,
    "label": "Center"
-  },
-  {
-   "videoId": "1kUNRE5pyqs",
-   "title": "FBI crime database HACKED as jitters over tech outages persist",
-   "thumb": "https://i.ytimg.com/vi/1kUNRE5pyqs/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
-  {
-   "videoId": "za2xzSmKSLM",
-   "title": "Did Donald Trump lean on Nvidia to bring Jensen Huang back?",
-   "thumb": "https://i.ytimg.com/vi/za2xzSmKSLM/hqdefault.jpg",
-   "channel": "Sky News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "OeERM_ANTn8",
-   "title": "Rep Debbie Dingell sounds the alarm on healthcare access crisis #shorts",
-   "thumb": "https://i.ytimg.com/vi/OeERM_ANTn8/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
-  {
-   "videoId": "OaNVfe57G08",
-   "title": "Qatar PM meets US Secretary of State to revive US-Iran diplomacy",
-   "thumb": "https://i.ytimg.com/vi/OaNVfe57G08/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "ff1qDHUzuIo",
-   "title": "Rishi Sunak sets out the most immediate risks posed by AI",
-   "thumb": "https://i.ytimg.com/vi/ff1qDHUzuIo/hqdefault.jpg",
-   "channel": "Sky News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "_HwzBPRV1cU",
-   "title": "The rise of porch pirates and AI defenses during the holiday season",
-   "thumb": "https://i.ytimg.com/vi/_HwzBPRV1cU/hqdefault.jpg",
-   "channel": "ABC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "xl9Z9itTwSM",
-   "title": "How a woman's surgery photos were leaked on WhatsApp",
-   "thumb": "https://i.ytimg.com/vi/xl9Z9itTwSM/hqdefault.jpg",
-   "channel": "Sky News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "mJxCwE1crN4",
-   "title": "Waymo halts San Francisco service ahead of severe weather",
-   "thumb": "https://i.ytimg.com/vi/mJxCwE1crN4/hqdefault.jpg",
-   "channel": "NBC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "8SyiKH3u30Y",
-   "title": "Determined squirrel doesn't give up on bird feeder",
-   "thumb": "https://i.ytimg.com/vi/8SyiKH3u30Y/hqdefault.jpg",
-   "channel": "ABC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "44w5YKp9rKo",
-   "title": "Bayern bosses criticized over Musiala injury comments | DW News",
-   "thumb": "https://i.ytimg.com/vi/44w5YKp9rKo/hqdefault.jpg",
-   "channel": "DW News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "e_0pU1EHvxM",
-   "title": "British swimmer passes burning ships in Strait of Hormuz",
-   "thumb": "https://i.ytimg.com/vi/e_0pU1EHvxM/hqdefault.jpg",
-   "channel": "Reuters",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "qdKViTtRbMI",
-   "title": "Nvidia reinstates Jensen Huang as CEO amid political backlash",
-   "thumb": "https://i.ytimg.com/vi/qdKViTtRbMI/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "kgMfhJ0QPGw",
-   "title": "'RIDICULOUS': Cruise ship crash survivors BLAST captain's early release",
-   "thumb": "https://i.ytimg.com/vi/kgMfhJ0QPGw/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
-  {
-   "videoId": "Tu5VZREjkPE",
-   "title": "Stocks soar as Nvidia reinstates Huang as CEO",
-   "thumb": "https://i.ytimg.com/vi/Tu5VZREjkPE/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
   }
  ],
  "stories": [
@@ -412,9 +419,9 @@
    "span": 4,
    "n_sources": 20,
    "balance": {
-    "l": 10,
+    "l": 9,
     "c": 6,
-    "r": 4
+    "r": 5
    },
    "blindspot": null,
    "sources": [
@@ -487,13 +494,6 @@
      "label": "Lean Left",
      "title": "Experts, reporters and lawmakers dig into Nvidia reinstalling Jensen Huang as CEO",
      "url": "https://www.cbsnews.com/video/experts-reporters-lawmakers-dig-nvidia-reinstalling-jensen-huang-ceo/"
-    },
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Some Republicans condemn Jensen Huang's reinstatement at Nvidia after Trump steps in",
-     "url": "https://abcnews.com/Politics/republicans-condemn-jensen-huangs-reinstatement-nvidia-after-trump/story?id=138384161"
     },
     {
      "name": "PBS NewsHour",
@@ -590,7 +590,7 @@
      "name": "CNBC",
      "lean": 0,
      "label": "Center",
-     "title": "Stock futures rise as traders see whether Nvidia can extend rally from Jensen Huang’s return: Live updates",
+     "title": "Nasdaq futures turn lower after Nvidia rally as Jensen Huang returns: Live updates",
      "url": "https://www.cnbc.com/2026/11/23/stock-market-today-live-updates.html"
     },
     {
@@ -648,6 +648,13 @@
      "label": "Center",
      "title": "In Jensen Huang’s return, are national security concerns being shoved aside?",
      "url": "https://www.csmonitor.com/Business/2026/1123/trump-jensen-huang-nvidia-security?icid=rss"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump shrugs off GOP concerns that Jensen Huang is a national security risk, hails his return as Nvidia CEO: ‘The public has spoken’",
+     "url": "https://nypost.com/2026/11/24/us-news/trump-shrugs-off-gop-concerns-that-jensen-huang-is-a-national-security-risk-hails-his-return-as-nvidia-ceo-the-public-has-spoken/"
     },
     {
      "name": "Washington Examiner",
@@ -720,12 +727,12 @@
      "label": "Lean Left"
     },
     {
-     "videoId": "SEYwwrTNkMM",
-     "title": "Trump’s role in Huang's Nvidia return met with criticism",
-     "thumb": "https://i.ytimg.com/vi/SEYwwrTNkMM/hqdefault.jpg",
-     "channel": "NBC News",
-     "lean": -1,
-     "label": "Lean Left"
+     "videoId": "za2xzSmKSLM",
+     "title": "Did Donald Trump lean on Nvidia to bring Jensen Huang back?",
+     "thumb": "https://i.ytimg.com/vi/za2xzSmKSLM/hqdefault.jpg",
+     "channel": "Sky News",
+     "lean": 0,
+     "label": "Center"
     }
    ]
   },
@@ -741,10 +748,10 @@
     2
    ],
    "span": 4,
-   "n_sources": 10,
+   "n_sources": 12,
    "balance": {
-    "l": 4,
-    "c": 3,
+    "l": 5,
+    "c": 4,
     "r": 3
    },
    "blindspot": null,
@@ -769,6 +776,13 @@
      "label": "Lean Left",
      "title": "Appeals court clears way for Army to detonate Iowa explosives",
      "url": "https://www.cbsnews.com/news/army-iowa-explosives-trump-appeals-court/"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Federal appeals court denies bid to halt Iowa lead explosives detonation",
+     "url": "https://abcnews.com/Politics/trump-ordered-military-hold-off-iowa-explosives-detonation/story?id=138384845"
     },
     {
      "name": "PBS NewsHour",
@@ -825,6 +839,13 @@
      "label": "Center",
      "title": "Trump presses pause on Army's Iowa lead detonation",
      "url": "https://www.axios.com/2026/11/23/iowa-lead-detonation-delayed-trump"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "US army says detonation of lead explosives in Iowa will proceed",
+     "url": "https://www.aljazeera.com/news/2026/11/24/us-army-says-detonation-of-lead-explosives-in-iowa-will-proceed?traffic_source=rss"
     },
     {
      "name": "Washington Examiner",
@@ -904,6 +925,41 @@
      "label": "Center"
     }
    ]
+  },
+  {
+   "title": "FAA Braces for Busiest Thanksgiving in 16 Years",
+   "summary": "Thanksgiving air traffic is projected to reach its highest level in 16 years, with the holiday travel rush posing a major test of the nation's aviation system following a nationwide ground stop earlier this month that disrupted thousands of flights.",
+   "category": "General",
+   "leans": [
+    -2,
+    2
+   ],
+   "span": 4,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Slate",
+     "lean": -2,
+     "label": "Left",
+     "title": "We’ve Kept Up a Charade on Thanksgiving for the Sake of My Aunt for Years",
+     "url": "https://slate.com/advice/2026/11/family-advice-thanksgiving-lie-aunt.html?via=rss"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "FAA Braces for Busiest Thanksgiving in 16 Years",
+     "url": "https://www.newsmax.com/newsfront/faa-busiest-thanksgiving/2026/11/23/id/1277312"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
   },
   {
    "title": "“MAGA Is Dead. Trump Killed It.”",
@@ -1104,16 +1160,7 @@
     }
    ],
    "factchecks": [],
-   "videos": [
-    {
-     "videoId": "eZQM7VTm2o8",
-     "title": "House report: Rep. Gomez made unwanted sexual advances toward former Hill staffer",
-     "thumb": "https://i.ytimg.com/vi/eZQM7VTm2o8/hqdefault.jpg",
-     "channel": "CNN",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
+   "videos": []
   },
   {
    "title": "Heavily redacted documents detailing raid on Omar's house unsealed",
@@ -1185,16 +1232,7 @@
     }
    ],
    "factchecks": [],
-   "videos": [
-    {
-     "videoId": "s5h6xxz_Fu0",
-     "title": "OMAR FILES DROP: Judge releases search warrant documents",
-     "thumb": "https://i.ytimg.com/vi/s5h6xxz_Fu0/hqdefault.jpg",
-     "channel": "Fox News",
-     "lean": 2,
-     "label": "Right"
-    }
-   ]
+   "videos": []
   },
   {
    "title": "Wind and rain threaten Macy’s Thanksgiving Day Parade",
@@ -1313,63 +1351,6 @@
    "videos": []
   },
   {
-   "title": "Commanders stun Bengals on walk-off field goal as Jayden Daniels leads improbable drive",
-   "summary": "Jayden Daniels connected with rookie Antonio Williams on two long pass plays, moving the Commanders 64 yards in 34 seconds to set up Drew Stevens’ 26-yard field goal as time expired.",
-   "category": "General",
-   "leans": [
-    0,
-    1,
-    2
-   ],
-   "span": 2,
-   "n_sources": 3,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 2
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Commanders Stadium’s Lights Turn Off Mid-Game vs Bengals",
-     "url": "https://www.newsweek.com/sports/nfl/commanders-stadiums-lights-turn-off-mid-game-vs-bengals-12760649"
-    },
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Cameras Catch Stefon Diggs Yelling at Jayden Daniels During Commanders Game",
-     "url": "https://www.newsweek.com/sports/nfl/cameras-catch-stefon-diggs-yelling-at-jayden-daniels-during-commanders-game-12760558"
-    },
-    {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Commanders stun Bengals on walk-off field goal as Jayden Daniels leads improbable drive",
-     "url": "https://nypost.com/2026/11/24/sports/commanders-jayden-daniels-stun-bengals-on-walk-off-field-goal/"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Commanders' Jayden Daniels spoils Joe Burrow's night, leads team to game-winning drive vs Bengals",
-     "url": "https://www.foxnews.com/outkick-sports/commanders-jayden-daniels-spoils-joe-burrow-night-leads-team-game-winning-drive-vs-bengals"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Stadium lights go out during Bengals-Commanders game because vendor forgot about Monday Night Football",
-     "url": "https://www.foxnews.com/outkick-sports/stadium-lights-go-out-during-bengals-commanders-game-because-vendor-forgot-about-monday-night-football"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "China sentences an official to death for spying and leaking national secrets",
    "summary": "A Chinese official has been sentenced to death for spying for a foreign country, a government-linked publisher said Monday.",
    "category": "World",
@@ -1399,6 +1380,55 @@
      "label": "Lean Right",
      "title": "China sentences an official to death for spying and leaking national secrets",
      "url": "https://www.washingtontimes.com/news/2026/nov/23/official-sentenced-death-china-spying-leaking-national-secrets/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Commanders' Jayden Daniels spoils Joe Burrow's night, leads team to game-winning drive vs Bengals",
+   "summary": "Jayden Daniels' game-winning drive stunned Joe Burrow and the Cincinnati Bengals, 20-19, on \"Monday Night Football\" as Drew Stevens drilled the winner.",
+   "category": "General",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Commanders Stadium’s Lights Turn Off Mid-Game vs Bengals",
+     "url": "https://www.newsweek.com/sports/nfl/commanders-stadiums-lights-turn-off-mid-game-vs-bengals-12760649"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Cameras Catch Stefon Diggs Yelling at Jayden Daniels During Commanders Game",
+     "url": "https://www.newsweek.com/sports/nfl/cameras-catch-stefon-diggs-yelling-at-jayden-daniels-during-commanders-game-12760558"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Commanders' Jayden Daniels spoils Joe Burrow's night, leads team to game-winning drive vs Bengals",
+     "url": "https://www.foxnews.com/outkick-sports/commanders-jayden-daniels-spoils-joe-burrow-night-leads-team-game-winning-drive-vs-bengals"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Stadium lights go out during Bengals-Commanders game because vendor forgot about Monday Night Football",
+     "url": "https://www.foxnews.com/outkick-sports/stadium-lights-go-out-during-bengals-commanders-game-because-vendor-forgot-about-monday-night-football"
     }
    ],
    "factchecks": [],
@@ -1482,48 +1512,6 @@
      "label": "Center"
     }
    ]
-  },
-  {
-   "title": "Pennsylvania confirms 9th measles-related death",
-   "summary": "Pennsylvania health officials on Monday confirmed the state’s ninth measles-related death this year, less than a week after the U.S. lost its measles elimination status after more than 25 years. The Pennsylvania Department of Health said an unvaccinated Centre County resident die",
-   "category": "Health",
-   "leans": [
-    -1,
-    0
-   ],
-   "span": 1,
-   "n_sources": 3,
-   "balance": {
-    "l": 1,
-    "c": 2,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "9th measles death recorded in Pennsylvania amid ongoing outbreak",
-     "url": "https://www.cbsnews.com/news/pennsylvania-measles-outbreak-death/"
-    },
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Pennsylvania confirms 9th measles-related death",
-     "url": "https://thehill.com/policy/healthcare/6238800-pennsylvania-confirms-ninth-measles-death/"
-    },
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "Pennsylvania reports ninth measles death in ongoing state outbreak",
-     "url": "https://www.aljazeera.com/news/2026/11/24/pennsylvania-reports-ninth-measles-death-in-ongoing-state-outbreak?traffic_source=rss"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
   },
   {
    "title": "Army Sgt. Pleads Guilty to Selling Defense Info to China",
@@ -1644,6 +1632,120 @@
    "videos": []
   },
   {
+   "title": "Alleged Mexican drug cartel boss ‘El Chapo Isidro’ arrested in special forces raid",
+   "summary": "Fausto Isidro Meza Flores was one of FBI’s most wanted fugitives and evaded capture for more than a decade The Mexican military captured one of the FBI’s 10 most wanted fugitives during a special forces raid in the Mexican state of Sinaloa on Friday night. Fausto Isidro Meza Flor",
+   "category": "Health",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Alleged Mexican drug cartel boss ‘El Chapo Isidro’ arrested in special forces raid",
+     "url": "https://www.theguardian.com/world/2026/nov/21/alleged-mexican-drug-cartel-boss-el-chapo-isidro-meza-flores-arrested"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Moment Mexican troops captured cartel leader ‘El Chapo Isidro’",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/24/moment-mexican-troops-captured-cartel-leader-el-chapo?traffic_source=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "LRuQ4tjsmyo",
+     "title": "Moment Mexican troops captured cartel leader ‘El Chapo Isidro’",
+     "thumb": "https://i.ytimg.com/vi/LRuQ4tjsmyo/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "Malaysia to send thousands of migrants back to Myanmar as PM acknowledges junta’s ‘atrocities’",
+   "summary": "Prime minister Anwar Ibrahim’s announcement comes days after the ICJ found Myanmar had committed genocide against the Rohingya minority Malaysia says it will send thousands of migrants and refugees back to Myanmar, despite acknowledging that many asylum seekers in the country had",
+   "category": "World",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Malaysia to send thousands of migrants back to Myanmar as PM acknowledges junta’s ‘atrocities’",
+     "url": "https://www.theguardian.com/world/2026/nov/24/malaysia-to-send-thousands-of-migrants-back-to-myanmar"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Malaysia set to return thousands of Rohingya refugees to Myanmar",
+     "url": "https://www.aljazeera.com/news/2026/11/24/malaysia-set-to-return-thousands-of-rohingya-refugees-to-myanmar-2?traffic_source=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Pennsylvania confirms 9th measles-related death",
+   "summary": "Pennsylvania health officials on Monday confirmed the state’s ninth measles-related death this year, less than a week after the U.S. lost its measles elimination status after more than 25 years. The Pennsylvania Department of Health said an unvaccinated Centre County resident die",
+   "category": "Health",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "9th measles death recorded in Pennsylvania amid ongoing outbreak",
+     "url": "https://www.cbsnews.com/news/pennsylvania-measles-outbreak-death/"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Pennsylvania confirms 9th measles-related death",
+     "url": "https://thehill.com/policy/healthcare/6238800-pennsylvania-confirms-ninth-measles-death/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "Army wants to resume helicopter flights near Reagan National airport",
    "summary": "The Army is seeking federal approval to resume helicopter training flights near Ronald Reagan Washington National Airport, drawing safety concerns nearly two years after a deadly midair collision over the Potomac River killed 67 people. Rep. Don Beyer (D-Va.), whose district incl",
    "category": "Economy",
@@ -1673,6 +1775,41 @@
      "label": "Lean Right",
      "title": "Rep. Don Beyer raises ‘grave concerns’ over resuming Army training flights near Reagan Airport",
      "url": "https://www.washingtonexaminer.com/policy/defense/4813080/don-beyer-concerned-resuming-army-training-flights-dc-reagan-airport/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Trump Wants To Cap Credit Card Rates For One Year. Here’s His Number.",
+   "summary": "President Donald Trump proposed a credit card interest rate cap that would keep credit card interest rates from going above 10% for one year. “I know that some people say it’s not free enterprise but what’s free enterprise when you are sitting at home and you get a bill that some",
+   "category": "Politics",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Reason",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "The Flawed Economic Populism of Capping Credit Card Interest Rates",
+     "url": "https://reason.com/2026/11/23/the-flawed-economic-populism-of-capping-credit-card-interest-rates/"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Wants To Cap Credit Card Rates For One Year. Here’s His Number.",
+     "url": "https://www.dailywire.com/news/trump-wants-to-cap-credit-card-rates-for-one-year-heres-his-number"
     }
    ],
    "factchecks": [],
@@ -1904,33 +2041,6 @@
    "videos": []
   },
   {
-   "title": "K is for kindness, but families worry the world has less of it",
-   "summary": "A decade after first asking families about kindness, Sesame Workshop asked parents similar questions. They responded that their kids are getting kinder even as the wider world becomes less so.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "K is for kindness, but families worry the world has less of it",
-     "url": "https://www.npr.org/2026/11/23/nx-s1-6035702/kindness-kids-sesame-street-parents-survey"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Mushroom supplements promise health benefits. What does the science say?",
    "summary": "Wellness influencers say mushroom supplements can help with your gut health, focus and immune system. Here is where research suggests there are some links.",
    "category": "Health",
@@ -1952,6 +2062,33 @@
      "label": "Lean Left",
      "title": "Mushroom supplements promise health benefits. What does the science say?",
      "url": "https://www.npr.org/2026/11/23/nx-s1-6047791/mushroom-supplements-health-research"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "K is for kindness, but families worry the world has less of it",
+   "summary": "A decade after first asking families about kindness, Sesame Workshop asked parents similar questions. They responded that their kids are getting kinder even as the wider world becomes less so.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "K is for kindness, but families worry the world has less of it",
+     "url": "https://www.npr.org/2026/11/23/nx-s1-6035702/kindness-kids-sesame-street-parents-survey"
     }
    ],
    "factchecks": [],
@@ -2114,60 +2251,6 @@
      "label": "Lean Left",
      "title": "Bank of England directors illegally profited from post-abolition enslavement in Cuba",
      "url": "https://www.theguardian.com/news/2026/nov/22/bank-of-england-directors-illegally-profited-enslavement-cuba"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Alleged Mexican drug cartel boss ‘El Chapo Isidro’ arrested in special forces raid",
-   "summary": "Fausto Isidro Meza Flores was one of FBI’s most wanted fugitives and evaded capture for more than a decade The Mexican military captured one of the FBI’s 10 most wanted fugitives during a special forces raid in the Mexican state of Sinaloa on Friday night. Fausto Isidro Meza Flor",
-   "category": "Health",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Alleged Mexican drug cartel boss ‘El Chapo Isidro’ arrested in special forces raid",
-     "url": "https://www.theguardian.com/world/2026/nov/21/alleged-mexican-drug-cartel-boss-el-chapo-isidro-meza-flores-arrested"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Malaysia to send thousands of migrants back to Myanmar as PM acknowledges junta’s ‘atrocities’",
-   "summary": "Prime minister Anwar Ibrahim’s announcement comes days after the ICJ found Myanmar had committed genocide against the Rohingya minority Malaysia says it will send thousands of migrants and refugees back to Myanmar, despite acknowledging that many asylum seekers in the country had",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Malaysia to send thousands of migrants back to Myanmar as PM acknowledges junta’s ‘atrocities’",
-     "url": "https://www.theguardian.com/world/2026/nov/24/malaysia-to-send-thousands-of-migrants-back-to-myanmar"
     }
    ],
    "factchecks": [],
@@ -2595,60 +2678,6 @@
    ],
    "factchecks": [],
    "videos": []
-  },
-  {
-   "title": "WATCH:  Celebrating Tom Jackson's extraordinary life and legacy",
-   "summary": "The ESPN legend and former All-Pro linebacker died at 75.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  Celebrating Tom Jackson's extraordinary life and legacy",
-     "url": "https://abcnews.com/video/138372830/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  NFL Sunday’s biggest moments",
-   "summary": "“GMA” has highlights from the San Francisco 49ers-Minnesota Vikings and Kansas City Chiefs-Arizona Cardinals games, plus a preview of Monday night's Cincinnati Bengals-Washington Commanders matchup.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  NFL Sunday’s biggest moments",
-     "url": "https://abcnews.com/video/138373307/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
   }
  ],
  "blindspots": [
@@ -2689,6 +2718,41 @@
      "label": "Right",
      "title": "Army Sgt. Pleads Guilty to Selling Defense Info to China",
      "url": "https://www.newsmax.com/newsfront/u-s-army-sergeant-guilty/2026/11/23/id/1277321"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Trump Wants To Cap Credit Card Rates For One Year. Here’s His Number.",
+   "summary": "President Donald Trump proposed a credit card interest rate cap that would keep credit card interest rates from going above 10% for one year. “I know that some people say it’s not free enterprise but what’s free enterprise when you are sitting at home and you get a bill that some",
+   "category": "Politics",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Reason",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "The Flawed Economic Populism of Capping Credit Card Interest Rates",
+     "url": "https://reason.com/2026/11/23/the-flawed-economic-populism-of-capping-credit-card-interest-rates/"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Wants To Cap Credit Card Rates For One Year. Here’s His Number.",
+     "url": "https://www.dailywire.com/news/trump-wants-to-cap-credit-card-rates-for-one-year-heres-his-number"
     }
    ],
    "factchecks": [],
