@@ -81,59 +81,114 @@
  ],
  "practice_questions": [
   {
-   "q": "Which channels are non-overlapping in the 2.4 GHz band?",
-   "options": [
-    "All channels overlap",
-    "2, 7, and 12",
-    "1, 6, and 11",
-    "1, 5, and 9"
-   ],
-   "answer": 2,
-   "explanation": "Channels 1, 6, and 11 do not overlap in 2.4 GHz and should be used to avoid interference."
-  },
-  {
-   "q": "Which wireless security standard uses SAE to resist offline password cracking?",
-   "options": [
-    "WPA-TKIP",
-    "WPA3",
-    "WPA2-PSK",
-    "WEP"
-   ],
-   "answer": 1,
-   "explanation": "WPA3 replaces the PSK handshake with SAE, defeating offline dictionary attacks."
-  },
-  {
-   "q": "An organization wants per-user Wi-Fi authentication against a central server. Which should it deploy?",
-   "options": [
-    "An open network with a captive portal",
-    "WPA2-Personal with a shared PSK",
-    "WPA2/3-Enterprise with 802.1X/RADIUS",
-    "WEP with MAC filtering"
-   ],
-   "answer": 2,
-   "explanation": "Enterprise mode uses 802.1X and RADIUS for individual user credentials."
-  },
-  {
-   "q": "Which band does Wi-Fi 6E add support for?",
+   "q": "Which Wi-Fi band offers better range and wall penetration but is more congested?",
    "options": [
     "6 GHz",
-    "900 MHz",
-    "2.4 GHz only",
-    "60 GHz"
+    "60 GHz",
+    "5 GHz",
+    "2.4 GHz"
    ],
-   "answer": 0,
-   "explanation": "Wi-Fi 6E extends 802.11ax into the 6 GHz band."
+   "answer": 3,
+   "explanation": "2.4 GHz travels farther and penetrates better but is slower and crowded."
   },
   {
-   "q": "For a long-distance point-to-point wireless bridge between two buildings, which antenna is best?",
+   "q": "Which 802.11 standard introduced OFDMA and operates on 2.4, 5, and 6 GHz?",
    "options": [
-    "Dipole",
-    "Directional (parabolic/Yagi)",
-    "Rubber duck",
-    "Omnidirectional"
+    "802.11ac",
+    "802.11n",
+    "802.11ax (Wi-Fi 6/6E)",
+    "802.11g"
+   ],
+   "answer": 2,
+   "explanation": "Wi-Fi 6/6E (802.11ax) adds OFDMA and, with 6E, the 6 GHz band."
+  },
+  {
+   "q": "Which encryption should you avoid because it is easily cracked?",
+   "options": [
+    "WPA2-AES",
+    "WEP",
+    "WPA2-Enterprise",
+    "WPA3"
    ],
    "answer": 1,
-   "explanation": "Directional antennas focus the signal into a narrow beam for long point-to-point links."
+   "explanation": "WEP is obsolete and trivially broken; never use it."
+  },
+  {
+   "q": "Which authentication mode uses a single shared passphrase for everyone?",
+   "options": [
+    "RADIUS-based",
+    "WPA2/3-Personal (PSK)",
+    "802.1X",
+    "WPA2/3-Enterprise"
+   ],
+   "answer": 1,
+   "explanation": "Personal mode uses one shared pre-shared key; Enterprise uses per-user 802.1X credentials."
+  },
+  {
+   "q": "Which set of 2.4 GHz channels is non-overlapping?",
+   "options": [
+    "1, 3, 5",
+    "4, 8, 12",
+    "1, 6, 11",
+    "2, 6, 10"
+   ],
+   "answer": 2,
+   "explanation": "Channels 1, 6, and 11 are the standard non-overlapping choices in 2.4 GHz."
+  },
+  {
+   "q": "A focused, narrow-beam antenna for a long point-to-point link is:",
+   "options": [
+    "Rubber duck",
+    "Omnidirectional",
+    "Directional (Yagi/parabolic)",
+    "Dipole"
+   ],
+   "answer": 2,
+   "explanation": "Directional antennas concentrate signal into a beam for distance or point-to-point links."
+  },
+  {
+   "q": "Multiple APs sharing one SSID so clients can roam form a(n):",
+   "options": [
+    "VLAN",
+    "BSS",
+    "PAN",
+    "ESS (Extended Service Set)"
+   ],
+   "answer": 3,
+   "explanation": "An ESS is several APs under one SSID enabling seamless roaming; a BSS is a single AP's cell."
+  },
+  {
+   "q": "What should you perform before deploying APs to plan coverage and channels?",
+   "options": [
+    "A zone transfer",
+    "A wireless site survey / heat map",
+    "A port scan",
+    "A packet capture only"
+   ],
+   "answer": 1,
+   "explanation": "A site survey maps signal strength to place APs and plan channels effectively."
+  },
+  {
+   "q": "Which WPA3 feature defeats offline password-guessing on the handshake?",
+   "options": [
+    "WPS PIN",
+    "SAE (Simultaneous Authentication of Equals)",
+    "MAC filtering",
+    "TKIP"
+   ],
+   "answer": 1,
+   "explanation": "SAE replaces the PSK four-way handshake and resists offline dictionary attacks."
+  },
+  {
+   "q": "Which feature should be disabled because its PIN can be brute-forced?",
+   "options": [
+    "WPS",
+    "WPA3",
+    "SAE",
+    "802.1X"
+   ],
+   "answer": 0,
+   "explanation": "Wi-Fi Protected Setup (WPS) PINs are vulnerable to brute force and should be disabled."
   }
  ]
 }

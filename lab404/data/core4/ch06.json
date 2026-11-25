@@ -90,6 +90,72 @@
  ],
  "practice_questions": [
   {
+   "q": "What is the usable host range for the subnet containing 192.168.1.200/28?",
+   "options": [
+    "192.168.1.200 – 192.168.1.214",
+    "192.168.1.194 – 192.168.1.207",
+    "192.168.1.192 – 192.168.1.207",
+    "192.168.1.193 – 192.168.1.206"
+   ],
+   "answer": 3,
+   "explanation": "/28 block size 16: .192 block covers 192–207. Network .192, broadcast .207, usable .193–.206. 200 is inside."
+  },
+  {
+   "q": "Which private range is defined by RFC 1918 for the 172 block?",
+   "options": [
+    "172.16.0.0 – 172.16.255.255",
+    "172.32.0.0 – 172.63.255.255",
+    "172.0.0.0 – 172.255.255.255",
+    "172.16.0.0 – 172.31.255.255"
+   ],
+   "answer": 3,
+   "explanation": "RFC 1918 reserves 172.16.0.0/12, i.e., 172.16.0.0 through 172.31.255.255."
+  },
+  {
+   "q": "How many /26 subnets can be created from a single /24?",
+   "options": [
+    "4",
+    "2",
+    "16",
+    "8"
+   ],
+   "answer": 0,
+   "explanation": "Borrowing 2 bits (24→26) yields 2^2 = 4 subnets."
+  },
+  {
+   "q": "Which address is the loopback used to test a host's own TCP/IP stack?",
+   "options": [
+    "169.254.0.1",
+    "0.0.0.0",
+    "255.255.255.255",
+    "127.0.0.1"
+   ],
+   "answer": 3,
+   "explanation": "127.0.0.1 is the IPv4 loopback; pinging it confirms the local TCP/IP stack works without touching the network."
+  },
+  {
+   "q": "Which CIDR prefix provides exactly 2 usable host addresses for a point-to-point link?",
+   "options": [
+    "/30",
+    "/28",
+    "/29",
+    "/31"
+   ],
+   "answer": 0,
+   "explanation": "/30 = 2 host bits = 2^2 − 2 = 2 usable addresses."
+  },
+  {
+   "q": "What IPv6 address type begins with fe80:: and stays on the local link?",
+   "options": [
+    "Global unicast",
+    "Unique local",
+    "Link-local",
+    "Multicast"
+   ],
+   "answer": 2,
+   "explanation": "fe80::/10 is link-local; every IPv6 interface auto-configures one."
+  },
+  {
    "q": "A host has the IP 192.168.10.100/26. What is its network address?",
    "options": [
     "192.168.10.96",
@@ -132,72 +198,6 @@
    ],
    "answer": 0,
    "explanation": "A /30 provides exactly 2 usable addresses, ideal for a point-to-point link."
-  },
-  {
-   "q": "Which of these is a valid shortening of 2001:0db8:0000:0000:0000:ff00:0042:8329?",
-   "options": [
-    "2001:db8::ff00::42:8329",
-    "2001:db8:0:ff00:42:8329",
-    "2001:0db8:ff00:42:8329",
-    "2001:db8::ff00:42:8329"
-   ],
-   "answer": 3,
-   "explanation": "Drop leading zeros and replace one run of zero groups with '::' (used only once)."
-  },
-  {
-   "q": "What is the broadcast address of the subnet containing 10.20.30.70/27?",
-   "options": [
-    "10.20.30.63",
-    "10.20.30.127",
-    "10.20.30.96",
-    "10.20.30.95"
-   ],
-   "answer": 3,
-   "explanation": "A /27 has block size 32 (.64, .96). 70 is in the .64 block (64–95), so the broadcast is 10.20.30.95."
-  },
-  {
-   "q": "How many usable host addresses does a /28 subnet provide?",
-   "options": [
-    "30",
-    "12",
-    "16",
-    "14"
-   ],
-   "answer": 3,
-   "explanation": "A /28 has 4 host bits: 2^4 − 2 = 14 usable addresses."
-  },
-  {
-   "q": "You need at least 500 hosts in one subnet. What is the smallest prefix that works?",
-   "options": [
-    "/22",
-    "/25",
-    "/24",
-    "/23"
-   ],
-   "answer": 3,
-   "explanation": "/23 gives 2^9 − 2 = 510 usable hosts; /24 gives only 254."
-  },
-  {
-   "q": "Which subnet does the address 172.16.140.10/22 belong to?",
-   "options": [
-    "172.16.144.0",
-    "172.16.136.0",
-    "172.16.140.0",
-    "172.16.128.0"
-   ],
-   "answer": 2,
-   "explanation": "A /22 has block size 4 in the third octet (…136, 140, 144). 140 falls on a boundary, so the network is 172.16.140.0."
-  },
-  {
-   "q": "What subnet mask does a /19 correspond to?",
-   "options": [
-    "255.255.240.0",
-    "255.255.192.0",
-    "255.255.255.224",
-    "255.255.224.0"
-   ],
-   "answer": 3,
-   "explanation": "/19 = 11111111.11111111.11100000.00000000 = 255.255.224.0."
   }
  ]
 }

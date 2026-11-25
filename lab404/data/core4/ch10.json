@@ -81,48 +81,114 @@
  ],
  "practice_questions": [
   {
-   "q": "Which data-center layout improves cooling efficiency?",
+   "q": "How tall is 1U in a standard equipment rack?",
    "options": [
+    "3 inches",
+    "2.5 inches",
+    "1.75 inches",
+    "1 inch"
+   ],
+   "answer": 2,
+   "explanation": "A rack unit (U) is 1.75 inches of vertical mounting space."
+  },
+  {
+   "q": "Which layout separates cold intake air from hot exhaust air in a data center?",
+   "options": [
+    "Raised floor only",
     "Single shared aisle",
-    "All exhausts facing one wall",
-    "Hot aisle / cold aisle",
-    "Random rack placement"
+    "Open rack grid",
+    "Hot aisle / cold aisle"
    ],
-   "answer": 2,
-   "explanation": "Hot aisle/cold aisle keeps cold intake and hot exhaust air separated for efficient cooling."
+   "answer": 3,
+   "explanation": "Hot aisle/cold aisle faces intakes toward cold aisles and exhausts toward hot aisles."
   },
   {
-   "q": "Which device provides short-term battery backup and clean shutdown during a power outage?",
-   "options": [
-    "Transformer",
-    "UPS",
-    "Generator",
-    "PDU"
-   ],
-   "answer": 1,
-   "explanation": "A UPS provides battery ride-through and conditioning; a generator covers long outages."
-  },
-  {
-   "q": "Which component distributes and often meters power to equipment within a rack?",
+   "q": "Which provides battery ride-through and a clean shutdown during a brief outage?",
    "options": [
     "UPS",
-    "KVM",
     "PDU",
-    "MDF"
-   ],
-   "answer": 2,
-   "explanation": "A Power Distribution Unit distributes (and may meter/switch) power to rack devices."
-  },
-  {
-   "q": "Why keep data cabling away from fluorescent light ballasts and power lines?",
-   "options": [
-    "To avoid electromagnetic interference (EMI)",
-    "To shorten the run",
-    "To reduce attenuation",
-    "To increase PoE wattage"
+    "Transformer",
+    "Generator"
    ],
    "answer": 0,
-   "explanation": "Ballasts and power lines emit EMI that corrupts data on nearby unshielded copper."
+   "explanation": "A UPS supplies battery power for short outages and conditioning; a generator covers long outages."
+  },
+  {
+   "q": "Which distributes and often meters power to devices within a rack?",
+   "options": [
+    "MDF",
+    "KVM",
+    "PDU",
+    "UPS"
+   ],
+   "answer": 2,
+   "explanation": "A Power Distribution Unit distributes rack power and may meter or switch outlets."
+  },
+  {
+   "q": "Why keep data cabling away from fluorescent ballasts and power conduits?",
+   "options": [
+    "To avoid EMI that corrupts data",
+    "To reduce rack units",
+    "To increase PoE wattage",
+    "To shorten patch cords"
+   ],
+   "answer": 0,
+   "explanation": "Ballasts and power lines emit EMI that interferes with unshielded copper."
+  },
+  {
+   "q": "What is the building's primary wiring hub called?",
+   "options": [
+    "IDF",
+    "Demarc",
+    "Patch panel",
+    "MDF (Main Distribution Frame)"
+   ],
+   "answer": 3,
+   "explanation": "The MDF is the main hub; IDFs are intermediate closets that connect back to it."
+  },
+  {
+   "q": "Which practice most speeds up future cable troubleshooting?",
+   "options": [
+    "Zip-tying cables tightly",
+    "Labeling both ends and keeping port maps",
+    "Mixing power and data in one bundle",
+    "Removing all labels for a cleaner look"
+   ],
+   "answer": 1,
+   "explanation": "Clear labels and documentation turn tracing a cable into a quick lookup."
+  },
+  {
+   "q": "Supplying critical equipment from two independent power sources is called:",
+   "options": [
+    "Daisy chaining",
+    "Series wiring",
+    "A/B (dual) power feeds",
+    "Single feed"
+   ],
+   "answer": 2,
+   "explanation": "Dual A/B feeds with dual power supplies let one feed fail without downtime."
+  },
+  {
+   "q": "Why control humidity in an equipment room?",
+   "options": [
+    "It changes IP addressing",
+    "It affects VLAN tagging",
+    "Too low causes static/ESD; too high causes condensation/corrosion",
+    "It increases bandwidth"
+   ],
+   "answer": 2,
+   "explanation": "Humidity extremes cause either electrostatic discharge or corrosion, so it must be regulated."
+  },
+  {
+   "q": "Which fire-suppression approach is preferred in equipment rooms?",
+   "options": [
+    "Foam",
+    "Clean-agent (gas) suppression",
+    "Dry sand",
+    "Standard water sprinklers"
+   ],
+   "answer": 1,
+   "explanation": "Clean agents extinguish fire without damaging electronics, unlike water."
   }
  ]
 }

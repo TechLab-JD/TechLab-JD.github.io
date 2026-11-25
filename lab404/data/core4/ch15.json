@@ -82,114 +82,114 @@
  ],
  "practice_questions": [
   {
-   "q": "After identifying the problem, what is the NEXT step in the troubleshooting method?",
+   "q": "What is the first step of the CompTIA troubleshooting methodology?",
    "options": [
-    "Verify full functionality",
-    "Document findings",
+    "Identify the problem",
+    "Establish a theory",
     "Implement the solution",
-    "Establish a theory of probable cause"
-   ],
-   "answer": 3,
-   "explanation": "The order is: identify, theory of cause, test theory, plan, implement, verify, document."
-  },
-  {
-   "q": "A cable run shows high error rates and signal loss over a long distance. What is the likely cause?",
-   "options": [
-    "Plenum rating",
-    "Correct wiremap",
-    "Too short a cable",
-    "Attenuation from exceeding the length limit"
-   ],
-   "answer": 3,
-   "explanation": "Attenuation is signal loss over distance; exceeding ~100 m copper causes errors."
-  },
-  {
-   "q": "What is always the final step of the CompTIA troubleshooting methodology?",
-   "options": [
-    "Test the theory",
-    "Escalate to a vendor",
-    "Establish a plan of action",
-    "Document findings, actions, and outcomes"
-   ],
-   "answer": 3,
-   "explanation": "Documentation is the last step so the fix and lessons are recorded."
-  },
-  {
-   "q": "Which tool identifies a specific cable within a large bundle?",
-   "options": [
-    "Multimeter",
-    "Protocol analyzer",
-    "Tone generator and probe",
-    "Loopback plug"
-   ],
-   "answer": 2,
-   "explanation": "The 'fox and hound' tone generator and probe trace and identify a specific cable."
-  },
-  {
-   "q": "A user reports an issue. Which question is most useful first?",
-   "options": [
-    "What is your MAC address?",
-    "What changed recently?",
-    "What is the server's RPO?",
-    "Which OSPF area are you in?"
-   ],
-   "answer": 1,
-   "explanation": "Most incidents follow a recent change; identifying it narrows the cause quickly."
-  },
-  {
-   "q": "A link runs extremely slowly with many collisions and errors. What should you check?",
-   "options": [
-    "A duplex/speed mismatch between the two ends",
-    "The default route",
-    "The DNS server",
-    "The DHCP scope"
-   ],
-   "answer": 0,
-   "explanation": "A duplex mismatch (one full, one half) causes collisions, errors, and poor throughput."
-  },
-  {
-   "q": "You confirmed your theory of probable cause. What is the next step?",
-   "options": [
-    "Establish a plan of action and identify potential effects",
-    "Verify functionality",
-    "Question the user again",
     "Document findings"
    ],
    "answer": 0,
-   "explanation": "After the theory is confirmed, establish a plan of action before implementing."
+   "explanation": "Step 1 is identifying the problem by gathering information and asking what changed."
   },
   {
-   "q": "A newly made patch cable gives no link. A tester shows pins crossed. What is the fault?",
+   "q": "A new cable fails a wiremap test showing pins 1 and 2 crossed. The fault is:",
    "options": [
     "Duplex mismatch",
-    "Attenuation",
     "EMI",
+    "Attenuation",
     "Miswire / incorrect pinout"
    ],
    "answer": 3,
-   "explanation": "A failed wiremap with crossed pins indicates a miswire/incorrect pinout from termination."
+   "explanation": "A failed wiremap with crossed pins indicates termination/pinout error."
   },
   {
-   "q": "Your tested theory is NOT confirmed. What should you do?",
+   "q": "After establishing a plan of action, what comes next?",
    "options": [
-    "Establish a new theory or escalate",
-    "Document and close",
-    "Reboot everything",
-    "Implement a fix anyway"
+    "Document findings",
+    "Implement the solution or escalate",
+    "Identify the problem",
+    "Establish a theory"
    ],
-   "answer": 0,
-   "explanation": "If the theory isn't confirmed, form a new one or escalate — don't proceed to a fix."
+   "answer": 1,
+   "explanation": "Implementation (or escalation) follows the plan of action."
   },
   {
-   "q": "Which tool measures the distance to a break in a copper cable?",
+   "q": "Signal weakening over an overly long run causing errors is:",
    "options": [
-    "TDR (time-domain reflectometer)",
-    "Light meter",
-    "Loopback plug",
-    "Toner probe"
+    "Reflection",
+    "EMI",
+    "Attenuation",
+    "Crosstalk"
    ],
-   "answer": 0,
-   "explanation": "A TDR sends a pulse and measures reflection time to locate a copper fault's distance."
+   "answer": 2,
+   "explanation": "Attenuation is loss of signal strength with distance; exceeding length limits causes errors."
+  },
+  {
+   "q": "You implemented a fix. What must you do before documenting?",
+   "options": [
+    "Close the ticket immediately",
+    "Verify full system functionality and apply preventive measures",
+    "Escalate to the vendor",
+    "Reboot all devices"
+   ],
+   "answer": 1,
+   "explanation": "Verify the fix works end-to-end (and prevent recurrence) before documenting."
+  },
+  {
+   "q": "Signal bleeding between adjacent wire pairs is:",
+   "options": [
+    "Attenuation",
+    "Jitter",
+    "Crosstalk",
+    "Latency"
+   ],
+   "answer": 2,
+   "explanation": "Crosstalk (e.g., NEXT) is interference between pairs, often from split or untwisted pairs."
+  },
+  {
+   "q": "Which troubleshooting approach starts at a middle OSI layer and moves up or down?",
+   "options": [
+    "Trial and error",
+    "Divide and conquer",
+    "Bottom-up only",
+    "Top-down only"
+   ],
+   "answer": 1,
+   "explanation": "Divide-and-conquer begins mid-stack and narrows direction based on results."
+  },
+  {
+   "q": "Interference from nearby power lines or motors on copper is:",
+   "options": [
+    "Attenuation",
+    "Reflection",
+    "EMI",
+    "Dispersion"
+   ],
+   "answer": 2,
+   "explanation": "Electromagnetic interference corrupts signals on unshielded copper; use STP or fiber or reroute."
+  },
+  {
+   "q": "A single user reports an outage. What should you gather first?",
+   "options": [
+    "A new switch",
+    "Information on symptoms and recent changes",
+    "Vendor RMA paperwork",
+    "A packet capture of the whole network"
+   ],
+   "answer": 1,
+   "explanation": "Identifying the problem starts with symptoms and what changed."
+  },
+  {
+   "q": "A fiber link has high loss and intermittent errors after a move. What is a common first check?",
+   "options": [
+    "Increase the MTU",
+    "Enable jumbo frames",
+    "Clean the fiber connectors",
+    "Change the VLAN"
+   ],
+   "answer": 2,
+   "explanation": "Dirty/contaminated fiber connectors are a leading cause of loss; clean before replacing."
   }
  ]
 }

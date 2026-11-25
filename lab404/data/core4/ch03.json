@@ -80,15 +80,15 @@
  ],
  "practice_questions": [
   {
-   "q": "In which cloud service model does the customer manage the operating system and applications but not the physical hardware?",
+   "q": "In which cloud model does the provider manage the OS and runtime while the customer deploys only their application?",
    "options": [
+    "DaaS",
+    "SaaS",
     "PaaS",
-    "FaaS",
-    "IaaS",
-    "SaaS"
+    "IaaS"
    ],
    "answer": 2,
-   "explanation": "With IaaS the provider supplies infrastructure (VMs, storage, networking) and the customer manages the OS and up."
+   "explanation": "Platform as a Service manages the OS/runtime; the customer provides just the app/code."
   },
   {
    "q": "A retailer wants one service that combines SD-WAN with cloud-delivered firewall and zero-trust access. What is this?",
@@ -102,15 +102,15 @@
    "explanation": "SASE converges SD-WAN networking with cloud-delivered security (firewall, CASB, zero trust) into one service."
   },
   {
-   "q": "Under the cloud shared responsibility model, who is responsible for a misconfigured storage bucket exposing data?",
+   "q": "Microsoft 365 and Salesforce are examples of which cloud service model?",
    "options": [
-    "The customer",
-    "No one — it is automatic",
-    "The cloud provider",
-    "The ISP"
+    "PaaS",
+    "IaaS",
+    "FaaS",
+    "SaaS"
    ],
-   "answer": 0,
-   "explanation": "Customers are responsible for securing what they put in the cloud, including configurations and access."
+   "answer": 3,
+   "explanation": "Software as a Service delivers a complete, provider-run application to the user."
   },
   {
    "q": "Which practice deploys network infrastructure from version-controlled templates for repeatable, auditable builds?",
@@ -124,59 +124,70 @@
    "explanation": "IaC defines infrastructure in version-controlled files (Terraform/Ansible) so deployments are repeatable and reviewable."
   },
   {
-   "q": "Which connection gives a private, dedicated, predictable-performance link to a cloud provider?",
+   "q": "A company keeps sensitive workloads on dedicated infrastructure but bursts to a public provider at peak. What deployment model is this?",
    "options": [
-    "APIPA",
-    "Direct Connect / ExpressRoute",
-    "A forward proxy",
-    "Site-to-site VPN over the internet"
-   ],
-   "answer": 1,
-   "explanation": "Direct Connect/ExpressRoute is a dedicated private circuit; an internet VPN is cheaper but variable."
-  },
-  {
-   "q": "Which technology separates the network control plane from the data plane using a central controller?",
-   "options": [
-    "SDN",
-    "NAT",
-    "STP",
-    "VLAN"
-   ],
-   "answer": 0,
-   "explanation": "Software-Defined Networking (SDN) decouples the control plane from the data plane with a central controller."
-  },
-  {
-   "q": "A company runs its own virtual network, subnets, and security groups inside a public cloud. What is this called?",
-   "options": [
-    "A DMZ",
-    "A VLAN",
-    "A VPC (Virtual Private Cloud)",
-    "A honeypot"
-   ],
-   "answer": 2,
-   "explanation": "A VPC is a logically isolated virtual network within a public cloud provider."
-  },
-  {
-   "q": "Which approach dynamically steers branch traffic across MPLS, broadband, and LTE based on application needs?",
-   "options": [
-    "Spanning Tree",
-    "APIPA",
-    "Port mirroring",
-    "SD-WAN"
+    "Community cloud",
+    "Public cloud",
+    "Private cloud",
+    "Hybrid cloud"
    ],
    "answer": 3,
-   "explanation": "SD-WAN selects the best transport per application across multiple WAN links."
+   "explanation": "Hybrid combines private and public clouds, connected so workloads can move between them."
   },
   {
-   "q": "Provisioning network infrastructure from version-controlled templates instead of manual configuration is called what?",
+   "q": "Which technology uses a central controller to program forwarding decisions on switches?",
    "options": [
-    "Infrastructure as Code (IaC)",
-    "Software as a Service",
-    "Network Address Translation",
-    "Quality of Service"
+    "VRRP",
+    "SDN",
+    "STP",
+    "NAT"
+   ],
+   "answer": 1,
+   "explanation": "Software-Defined Networking separates the control plane into a central controller that programs the data plane."
+  },
+  {
+   "q": "Running firewalls and load balancers as software instances instead of dedicated hardware is called:",
+   "options": [
+    "SDN",
+    "NFV (Network Functions Virtualization)",
+    "IaC",
+    "VLAN"
+   ],
+   "answer": 1,
+   "explanation": "NFV virtualizes network functions (router, firewall, LB) as software."
+  },
+  {
+   "q": "A branch office intelligently load-balances traffic across MPLS, broadband, and LTE by application. This is:",
+   "options": [
+    "A default route",
+    "MPLS only",
+    "SD-WAN",
+    "Spanning Tree"
+   ],
+   "answer": 2,
+   "explanation": "SD-WAN dynamically selects the best transport per application across multiple WAN links."
+  },
+  {
+   "q": "Which cloud security construct applies firewall rules to instances or subnets within a VPC?",
+   "options": [
+    "Patch panel",
+    "Default route",
+    "Spanning Tree",
+    "Security group / NSG"
+   ],
+   "answer": 3,
+   "explanation": "Security groups / network security groups are the cloud's instance/subnet-level firewall rules."
+  },
+  {
+   "q": "Zero trust is best summarized as:",
+   "options": [
+    "Never trust, always verify — authenticate every request",
+    "Trust after one login for the day",
+    "Trust based on IP address",
+    "Trust everything inside the perimeter"
    ],
    "answer": 0,
-   "explanation": "Infrastructure as Code defines and deploys infrastructure through version-controlled files (Terraform, Ansible)."
+   "explanation": "Zero trust verifies every request and enforces least privilege regardless of location."
   }
  ]
 }

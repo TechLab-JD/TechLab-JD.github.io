@@ -89,114 +89,114 @@
  ],
  "practice_questions": [
   {
-   "q": "At which OSI layer do routers make forwarding decisions?",
+   "q": "Which OSI layer is responsible for logical addressing and path selection between networks?",
    "options": [
-    "Layer 1 (Physical)",
     "Layer 2 (Data Link)",
+    "Layer 3 (Network)",
     "Layer 4 (Transport)",
+    "Layer 1 (Physical)"
+   ],
+   "answer": 1,
+   "explanation": "The Network layer handles logical (IP) addressing and routing between networks."
+  },
+  {
+   "q": "Which device forwards frames based only on MAC addresses?",
+   "options": [
+    "Load balancer",
+    "Switch",
+    "Firewall",
+    "Router"
+   ],
+   "answer": 1,
+   "explanation": "A switch builds a MAC table and forwards frames by destination MAC at Layer 2."
+  },
+  {
+   "q": "At which OSI layer do hubs and repeaters operate?",
+   "options": [
+    "Layer 2 (Data Link)",
+    "Layer 1 (Physical)",
+    "Layer 7 (Application)",
     "Layer 3 (Network)"
    ],
-   "answer": 3,
-   "explanation": "Routers forward packets based on IP addresses, which operate at Layer 3 (Network)."
+   "answer": 1,
+   "explanation": "Hubs and repeaters just regenerate electrical signals/bits, which is Layer 1 work."
   },
   {
-   "q": "A technician wants each switch port to be its own collision domain but keep one broadcast domain. Which device already does this?",
+   "q": "A forward proxy primarily represents and protects whom?",
    "options": [
-    "A media converter",
-    "A hub",
-    "A router",
-    "A switch"
+    "Internal clients making outbound requests",
+    "The ISP router",
+    "DNS root servers",
+    "Public-facing servers"
    ],
-   "answer": 3,
-   "explanation": "A switch gives each port its own collision domain while forwarding broadcasts, so all ports share one broadcast domain."
+   "answer": 0,
+   "explanation": "A forward proxy sits in front of clients, handling caching, filtering, and anonymity for outbound traffic."
   },
   {
-   "q": "What is the Layer 4 (Transport) data unit called?",
+   "q": "Which protocol data unit (PDU) is used at the Data Link layer?",
    "options": [
-    "Segment",
-    "Bit",
     "Packet",
-    "Frame"
-   ],
-   "answer": 0,
-   "explanation": "The Transport layer unit is the segment; Layer 3 uses packets, Layer 2 frames, Layer 1 bits."
-  },
-  {
-   "q": "Which device separates broadcast domains?",
-   "options": [
-    "Unmanaged switch",
-    "Hub",
-    "Router",
-    "Repeater"
-   ],
-   "answer": 2,
-   "explanation": "Routers do not forward broadcasts, so they separate broadcast domains; switches forward them."
-  },
-  {
-   "q": "Which OSI layer adds both a header and a trailer during encapsulation?",
-   "options": [
-    "Layer 3 (Network)",
-    "Layer 7 (Application)",
-    "Layer 2 (Data Link)",
-    "Layer 4 (Transport)"
-   ],
-   "answer": 2,
-   "explanation": "The Data Link layer frames data with a header and a trailer (FCS); other layers add only a header."
-  },
-  {
-   "q": "Which security appliance sits in-line and can actively block malicious traffic?",
-   "options": [
-    "IPS",
-    "Syslog server",
-    "IDS",
-    "Forward proxy"
-   ],
-   "answer": 0,
-   "explanation": "An IPS is in-line and can drop traffic; an IDS is passive/out-of-band and only alerts."
-  },
-  {
-   "q": "In the TCP/IP model, which OSI layers does the Application layer cover?",
-   "options": [
-    "Layers 1 and 2",
-    "Layers 5, 6, and 7",
-    "Layer 4 only",
-    "Layers 3 and 4"
+    "Frame",
+    "Segment",
+    "Bit"
    ],
    "answer": 1,
-   "explanation": "The TCP/IP Application layer combines OSI Session, Presentation, and Application (5, 6, 7)."
+   "explanation": "Layer 2 uses frames; Layer 3 packets, Layer 4 segments, Layer 1 bits."
   },
   {
-   "q": "Which storage technology provides block-level access over a dedicated high-speed fabric?",
+   "q": "Which appliance caches and distributes content geographically close to users?",
    "options": [
+    "IDS",
+    "Patch panel",
     "VPN concentrator",
-    "CDN",
-    "SAN",
-    "NAS"
+    "CDN (Content Delivery Network)"
    ],
-   "answer": 2,
-   "explanation": "A SAN provides block-level storage over a dedicated fabric; a NAS provides file-level storage over the LAN."
+   "answer": 3,
+   "explanation": "A CDN places cached copies near users to reduce latency and origin load."
   },
   {
-   "q": "Encryption and data formatting occur at which OSI layer?",
+   "q": "Which OSI layer establishes, manages, and terminates sessions between applications?",
    "options": [
+    "Layer 4 (Transport)",
     "Layer 6 (Presentation)",
     "Layer 5 (Session)",
-    "Layer 7 (Application)",
-    "Layer 4 (Transport)"
+    "Layer 7 (Application)"
    ],
-   "answer": 0,
-   "explanation": "The Presentation layer handles formatting, encryption, and compression (e.g., TLS, JPEG)."
+   "answer": 2,
+   "explanation": "The Session layer sets up, maintains, and tears down dialogues between hosts."
   },
   {
-   "q": "Which device distributes incoming requests across a pool of servers for scalability?",
+   "q": "Which provides file-level storage over the existing LAN?",
    "options": [
-    "Media converter",
-    "Load balancer",
-    "Proxy",
-    "IDS"
+    "SAN",
+    "WLC",
+    "NAS",
+    "CDN"
+   ],
+   "answer": 2,
+   "explanation": "A NAS serves files over the LAN; a SAN provides block-level storage over a dedicated fabric."
+  },
+  {
+   "q": "MAC addresses are used at which OSI layer?",
+   "options": [
+    "Layer 4 (Transport)",
+    "Layer 2 (Data Link)",
+    "Layer 3 (Network)",
+    "Layer 1 (Physical)"
    ],
    "answer": 1,
-   "explanation": "A load balancer spreads client requests across multiple servers using methods like round-robin."
+   "explanation": "MAC (hardware) addressing is a Layer 2 Data Link function."
+  },
+  {
+   "q": "Which device terminates many simultaneous VPN tunnels for remote users?",
+   "options": [
+    "Media converter",
+    "VPN concentrator",
+    "Repeater",
+    "Patch panel"
+   ],
+   "answer": 1,
+   "explanation": "A VPN concentrator (headend) terminates and manages large numbers of VPN connections."
   }
  ]
 }

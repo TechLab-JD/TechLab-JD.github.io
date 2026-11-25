@@ -81,48 +81,114 @@
  ],
  "practice_questions": [
   {
-   "q": "What is the maximum run length for twisted-pair copper Ethernet?",
+   "q": "Which copper category supports 10 Gbps over the full 100 meters?",
    "options": [
-    "550 meters",
-    "305 meters",
-    "55 meters",
-    "100 meters"
-   ],
-   "answer": 3,
-   "explanation": "Copper Ethernet is limited to about 100 m (90 m horizontal + 10 m patch); beyond that use fiber."
-  },
-  {
-   "q": "Which fiber type uses a laser and a small core for very long distances?",
-   "options": [
-    "Multimode OM3",
-    "Single-mode",
+    "Cat 5e",
     "Cat 6a",
-    "Multimode OM4"
+    "Cat 6",
+    "Cat 3"
    ],
    "answer": 1,
-   "explanation": "Single-mode fiber has a ~9-micron core and uses laser light for kilometer-plus distances."
+   "explanation": "Cat 6a supports 10GBASE-T to 100 m; Cat 6 only reaches 10G to ~55 m."
   },
   {
-   "q": "Which transceiver form factor supports 100 Gbps?",
+   "q": "Which fiber connector is small-form-factor and the most common in modern data centers?",
    "options": [
-    "SFP+",
-    "QSFP28",
-    "QSFP+",
-    "SFP"
+    "LC",
+    "SC",
+    "MPO",
+    "ST"
    ],
-   "answer": 1,
+   "answer": 0,
+   "explanation": "LC is a compact duplex connector and the current standard; MPO is for high-density ribbon."
+  },
+  {
+   "q": "Which transceiver supports 10 Gbps?",
+   "options": [
+    "QSFP28",
+    "SFP",
+    "SFP+",
+    "QSFP+"
+   ],
+   "answer": 2,
    "explanation": "SFP=1G, SFP+=10G, QSFP+=40G, QSFP28=100G."
   },
   {
-   "q": "A cable run must pass through an air-handling ceiling space. Which cable is required?",
+   "q": "A run must reach 400 meters between buildings. Which medium is appropriate?",
    "options": [
-    "Plenum-rated (CMP)",
-    "Riser-rated (CMR)",
-    "Standard PVC",
-    "Direct-burial"
+    "Multimode or single-mode fiber",
+    "Cat 5e copper",
+    "Cat 6a copper",
+    "Coaxial RG-6"
    ],
    "answer": 0,
-   "explanation": "Plenum spaces require fire-resistant, low-smoke plenum-rated (CMP) cable by code."
+   "explanation": "Copper tops out at 100 m; fiber is required for 400 m."
+  },
+  {
+   "q": "Which cable is required by code in air-handling plenum spaces?",
+   "options": [
+    "PVC",
+    "Direct-burial",
+    "Riser-rated (CMR)",
+    "Plenum-rated (CMP)"
+   ],
+   "answer": 3,
+   "explanation": "Plenum spaces require low-smoke, fire-resistant CMP cable."
+  },
+  {
+   "q": "Which connects two like devices when Auto-MDIX is unavailable?",
+   "options": [
+    "A loopback plug",
+    "A rollover cable",
+    "A straight-through cable",
+    "A crossover cable"
+   ],
+   "answer": 3,
+   "explanation": "Crossover cables (T568A one end, T568B the other) connect like devices; Auto-MDIX now automates this."
+  },
+  {
+   "q": "Which fiber type uses a laser and a ~9-micron core for the longest distances?",
+   "options": [
+    "Multimode OM3",
+    "Single-mode",
+    "Multimode OM1",
+    "Multimode OM4"
+   ],
+   "answer": 1,
+   "explanation": "Single-mode's small core and laser source carry signals kilometers."
+  },
+  {
+   "q": "Which device extends a copper link by converting it to fiber?",
+   "options": [
+    "Repeater hub",
+    "KVM switch",
+    "Media converter",
+    "Patch panel"
+   ],
+   "answer": 2,
+   "explanation": "A media converter bridges copper to fiber to exceed copper's 100 m limit."
+  },
+  {
+   "q": "A technician configures a console connection to a router. Which cable is typically used?",
+   "options": [
+    "Rollover (console) cable",
+    "Fiber patch",
+    "Crossover",
+    "Straight-through"
+   ],
+   "answer": 0,
+   "explanation": "A rollover cable connects a computer's serial/USB console to a router/switch console port."
+  },
+  {
+   "q": "Which 100-meter figure correctly describes a structured copper run?",
+   "options": [
+    "80 m horizontal + 40 m patch",
+    "50 m horizontal + 50 m patch",
+    "90 m horizontal + 10 m patch cords",
+    "100 m patch only"
+   ],
+   "answer": 2,
+   "explanation": "The TIA model allows 90 m of solid horizontal cable plus up to 10 m of patch cords."
   }
  ]
 }

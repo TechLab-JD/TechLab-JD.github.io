@@ -79,6 +79,94 @@
  ],
  "practice_questions": [
   {
+   "q": "Which port does the secure version of LDAP (LDAPS) use?",
+   "options": [
+    "TCP 389",
+    "TCP 636",
+    "UDP 161",
+    "TCP 443"
+   ],
+   "answer": 1,
+   "explanation": "LDAP is TCP/UDP 389; LDAPS (over TLS) uses TCP 636."
+  },
+  {
+   "q": "SNMP traps are sent to the manager on which port?",
+   "options": [
+    "UDP 161",
+    "UDP 123",
+    "UDP 162",
+    "TCP 25"
+   ],
+   "answer": 2,
+   "explanation": "SNMP polling uses UDP 161; device-initiated traps use UDP 162."
+  },
+  {
+   "q": "Which protocol and port transfer files securely over an SSH session?",
+   "options": [
+    "FTPS, TCP 990",
+    "TFTP, UDP 69",
+    "SFTP, TCP 22",
+    "FTP, TCP 21"
+   ],
+   "answer": 2,
+   "explanation": "SFTP runs over SSH on TCP 22; FTPS (separate) uses 990."
+  },
+  {
+   "q": "Which protocol retrieves email and keeps it synchronized across multiple devices?",
+   "options": [
+    "SNMP (UDP 161)",
+    "POP3 (TCP 110)",
+    "SMTP (TCP 25)",
+    "IMAP (TCP 143)"
+   ],
+   "answer": 3,
+   "explanation": "IMAP syncs mail across devices; POP3 typically downloads and removes it."
+  },
+  {
+   "q": "Windows file and printer sharing uses which protocol and port?",
+   "options": [
+    "NFS, TCP 2049",
+    "FTP, TCP 21",
+    "RDP, TCP 3389",
+    "SMB, TCP 445"
+   ],
+   "answer": 3,
+   "explanation": "SMB (Server Message Block) uses TCP 445 for Windows file/printer sharing."
+  },
+  {
+   "q": "A broadcast frame is sent to which type of audience?",
+   "options": [
+    "The nearest host",
+    "Every host on the local subnet",
+    "One specific host",
+    "A subscribed group"
+   ],
+   "answer": 1,
+   "explanation": "Broadcast reaches all hosts on the subnet; it does not cross a router."
+  },
+  {
+   "q": "Which protocol provides connectionless, best-effort delivery with no handshake?",
+   "options": [
+    "TCP",
+    "ICMP",
+    "UDP",
+    "ARP"
+   ],
+   "answer": 2,
+   "explanation": "UDP is connectionless and best-effort — no handshake, acknowledgements, or retransmission."
+  },
+  {
+   "q": "Which statement about IPv6 traffic types is correct?",
+   "options": [
+    "IPv6 uses only unicast",
+    "IPv6 removes multicast",
+    "IPv6 adds a new broadcast range",
+    "IPv6 uses multicast and anycast but has no broadcast"
+   ],
+   "answer": 3,
+   "explanation": "IPv6 replaces broadcast with multicast and anycast."
+  },
+  {
    "q": "Which port and transport does HTTPS use?",
    "options": [
     "UDP 443",
@@ -99,61 +187,6 @@
    ],
    "answer": 3,
    "explanation": "SSH uses TCP 22 and encrypts the session; Telnet (23) is cleartext."
-  },
-  {
-   "q": "A host sends a DNS zone transfer. Which transport protocol is used?",
-   "options": [
-    "TCP",
-    "UDP",
-    "ICMP",
-    "GRE"
-   ],
-   "answer": 0,
-   "explanation": "DNS uses UDP 53 for queries but TCP 53 for zone transfers and large responses."
-  },
-  {
-   "q": "Which delivery type sends traffic to the nearest of several hosts sharing one address?",
-   "options": [
-    "Unicast",
-    "Anycast",
-    "Multicast",
-    "Broadcast"
-   ],
-   "answer": 1,
-   "explanation": "Anycast routes to the nearest host advertising the shared address; common for DNS root servers and CDNs."
-  },
-  {
-   "q": "Which port does SMTP use to send mail between servers?",
-   "options": [
-    "TCP 143",
-    "TCP 110",
-    "TCP 993",
-    "TCP 25"
-   ],
-   "answer": 3,
-   "explanation": "SMTP uses TCP 25; POP3 is 110, IMAP is 143."
-  },
-  {
-   "q": "A technician needs secure, encrypted remote desktop to a Windows server. Which port is RDP?",
-   "options": [
-    "TCP 443",
-    "TCP 22",
-    "TCP 3389",
-    "TCP 23"
-   ],
-   "answer": 2,
-   "explanation": "RDP (Remote Desktop Protocol) uses TCP 3389."
-  },
-  {
-   "q": "Which protocol synchronizes device clocks and uses UDP 123?",
-   "options": [
-    "DNS",
-    "Syslog",
-    "NTP",
-    "SNMP"
-   ],
-   "answer": 2,
-   "explanation": "Network Time Protocol uses UDP 123 to synchronize clocks."
   }
  ]
 }

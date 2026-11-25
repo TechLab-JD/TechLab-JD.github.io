@@ -81,6 +81,72 @@
  ],
  "practice_questions": [
   {
+   "q": "Which firewall type tracks connection state and auto-allows return traffic?",
+   "options": [
+    "Repeater",
+    "Stateless packet filter",
+    "Stateful firewall",
+    "Hub"
+   ],
+   "answer": 2,
+   "explanation": "Stateful firewalls track sessions and permit return traffic for allowed connections."
+  },
+  {
+   "q": "Where should internet-facing servers be placed?",
+   "options": [
+    "On the management VLAN",
+    "In a screened subnet (DMZ)",
+    "On the internal user VLAN",
+    "Directly exposed with no firewall"
+   ],
+   "answer": 1,
+   "explanation": "A DMZ isolates public servers from the internal LAN behind firewall boundaries."
+  },
+  {
+   "q": "Which switch feature stops ARP spoofing by validating ARP against DHCP snooping data?",
+   "options": [
+    "PortFast",
+    "Dynamic ARP Inspection",
+    "Jumbo frames",
+    "Trunking"
+   ],
+   "answer": 1,
+   "explanation": "Dynamic ARP Inspection drops forged ARP packets."
+  },
+  {
+   "q": "Which checks a device's patch and antivirus posture before granting access?",
+   "options": [
+    "NAT",
+    "QoS",
+    "STP",
+    "NAC"
+   ],
+   "answer": 3,
+   "explanation": "Network Access Control enforces identity and posture checks before admission."
+  },
+  {
+   "q": "An ACL has no matching permit for some traffic. What happens?",
+   "options": [
+    "It is logged and permitted",
+    "It is permitted",
+    "It is routed to the DMZ",
+    "The implicit deny drops it"
+   ],
+   "answer": 3,
+   "explanation": "ACLs end with an implicit deny; unmatched traffic is dropped."
+  },
+  {
+   "q": "Which limits the number of MAC addresses allowed on a switch port and can disable it on violation?",
+   "options": [
+    "Spanning Tree",
+    "QoS",
+    "LACP",
+    "Port security"
+   ],
+   "answer": 3,
+   "explanation": "Port security restricts MACs per port and can shut the port on a violation."
+  },
+  {
    "q": "What are the three roles in 802.1X authentication?",
    "options": [
     "Host, switch, router",
@@ -123,50 +189,6 @@
    ],
    "answer": 3,
    "explanation": "NAC verifies a device's identity and health (patches, AV) before granting network access."
-  },
-  {
-   "q": "Which switch feature validates ARP replies against DHCP snooping data?",
-   "options": [
-    "BPDU Guard",
-    "Dynamic ARP Inspection",
-    "Port mirroring",
-    "Jumbo frames"
-   ],
-   "answer": 1,
-   "explanation": "Dynamic ARP Inspection drops forged ARP packets, defeating ARP spoofing."
-  },
-  {
-   "q": "Where should an organization place its public web and mail servers?",
-   "options": [
-    "On the guest Wi-Fi",
-    "On the management network",
-    "On the internal VLAN",
-    "In a screened subnet (DMZ)"
-   ],
-   "answer": 3,
-   "explanation": "Public-facing servers belong in a screened subnet/DMZ isolated from the internal LAN."
-  },
-  {
-   "q": "Which solution checks a laptop's patch level and antivirus before allowing it on the network?",
-   "options": [
-    "QoS",
-    "NAC",
-    "STP",
-    "DHCP"
-   ],
-   "answer": 1,
-   "explanation": "Network Access Control enforces posture checks (patches, AV) before granting access."
-  },
-  {
-   "q": "A firewall rule list ends with no explicit allow for unmatched traffic. What happens to it?",
-   "options": [
-    "It is logged and allowed",
-    "It is denied by the implicit deny",
-    "It is sent to the DMZ",
-    "It is allowed by default"
-   ],
-   "answer": 1,
-   "explanation": "ACLs end with an implicit deny, so traffic not explicitly permitted is dropped."
   }
  ]
 }

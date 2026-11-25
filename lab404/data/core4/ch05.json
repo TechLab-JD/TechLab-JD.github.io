@@ -78,48 +78,114 @@
  ],
  "practice_questions": [
   {
-   "q": "Which topology is the standard for modern wired LANs?",
+   "q": "Which topology connects every node to a central switch and is standard for LANs?",
    "options": [
     "Star",
     "Ring",
-    "Bus",
-    "Full mesh"
-   ],
-   "answer": 0,
-   "explanation": "The star topology (hosts to a central switch) is the standard LAN layout."
-  },
-  {
-   "q": "Which data-center architecture is optimized for east-west server-to-server traffic?",
-   "options": [
-    "Spine-and-leaf",
-    "Three-tier core/distribution/access",
-    "Token ring",
+    "Mesh",
     "Bus"
    ],
    "answer": 0,
-   "explanation": "Spine-and-leaf connects every leaf to every spine, giving low-latency east-west paths."
+   "explanation": "The star topology centers on a switch and is the dominant wired-LAN layout."
   },
   {
-   "q": "Name the three layers of the hierarchical campus model.",
+   "q": "How many links does a full mesh of 5 nodes require?",
    "options": [
-    "Core, Distribution, Access",
-    "Spine, Leaf, Edge",
-    "Client, Server, Peer",
-    "Physical, Logical, Virtual"
+    "20",
+    "10",
+    "5",
+    "25"
+   ],
+   "answer": 1,
+   "explanation": "Full mesh links = n(n-1)/2 = 5*4/2 = 10."
+  },
+  {
+   "q": "Traffic flowing between servers inside a data center is described as:",
+   "options": [
+    "Broadcast",
+    "North-south",
+    "Upstream",
+    "East-west"
+   ],
+   "answer": 3,
+   "explanation": "East-west is server-to-server traffic within the data center; north-south is client-to-server."
+  },
+  {
+   "q": "Which modern data-center design connects every access switch to every spine switch?",
+   "options": [
+    "Three-tier only",
+    "Bus",
+    "Spine-and-leaf",
+    "Ring"
+   ],
+   "answer": 2,
+   "explanation": "Spine-and-leaf gives predictable low latency and scales horizontally for east-west traffic."
+  },
+  {
+   "q": "In the three-tier model, which layer provides the high-speed backbone with no packet manipulation?",
+   "options": [
+    "Core",
+    "Edge",
+    "Distribution",
+    "Access"
    ],
    "answer": 0,
-   "explanation": "The three-tier model is Core (backbone), Distribution (routing/policy), and Access (end devices)."
+   "explanation": "The core layer moves traffic as fast as possible; policy/routing happens at distribution."
   },
   {
-   "q": "Which topology connects a central hub site to multiple branch sites?",
+   "q": "Which network type spans a single metropolitan area?",
+   "options": [
+    "WAN",
+    "LAN",
+    "MAN",
+    "PAN"
+   ],
+   "answer": 2,
+   "explanation": "A Metropolitan Area Network covers a city-sized area, larger than a campus (CAN), smaller than a WAN."
+  },
+  {
+   "q": "A Bluetooth connection between a phone and headset forms which type of network?",
+   "options": [
+    "LAN",
+    "MAN",
+    "PAN",
+    "WAN"
+   ],
+   "answer": 2,
+   "explanation": "A Personal Area Network spans a few meters around a person's devices."
+  },
+  {
+   "q": "Which design merges the core and distribution layers for smaller networks?",
+   "options": [
+    "Bus",
+    "Collapsed core",
+    "Spine-and-leaf",
+    "Full mesh"
+   ],
+   "answer": 1,
+   "explanation": "A collapsed core combines core and distribution where a separate backbone isn't needed."
+  },
+  {
+   "q": "In which architecture do hosts share resources directly with no central server?",
+   "options": [
+    "Three-tier",
+    "Spine-and-leaf",
+    "Peer-to-peer",
+    "Client-server"
+   ],
+   "answer": 2,
+   "explanation": "Peer-to-peer shares resources between equal hosts; client-server centralizes on servers."
+  },
+  {
+   "q": "Which WAN topology has branch 'spoke' sites all connecting to one central site?",
    "options": [
     "Full mesh",
     "Hub-and-spoke",
-    "Ring",
-    "Bus"
+    "Bus",
+    "Ring"
    ],
    "answer": 1,
-   "explanation": "Hub-and-spoke links branch 'spoke' sites to one central 'hub' site, common in WANs."
+   "explanation": "Hub-and-spoke centralizes connectivity through a hub site; simple but the hub is critical."
   }
  ]
 }

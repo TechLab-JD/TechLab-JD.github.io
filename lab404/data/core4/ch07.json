@@ -79,70 +79,114 @@
  ],
  "practice_questions": [
   {
-   "q": "When two routes to the same network exist, which is chosen first?",
+   "q": "A route to 10.1.1.0/24 exists via both OSPF and a static route. Which is installed?",
    "options": [
-    "The one with the higher hop count",
-    "The one learned by RIP",
-    "The oldest route",
-    "The one with the lower administrative distance"
+    "Neither",
+    "The static route (AD 1)",
+    "The OSPF route (AD 110)",
+    "Both are load-balanced"
    ],
-   "answer": 3,
-   "explanation": "Administrative distance ranks route trustworthiness; the lowest AD wins (e.g., static 1 beats OSPF 110)."
+   "answer": 1,
+   "explanation": "Lower administrative distance wins; static (1) beats OSPF (110)."
   },
   {
-   "q": "Which routing protocol is used between autonomous systems on the internet?",
-   "options": [
-    "OSPF",
-    "EIGRP",
-    "RIP",
-    "BGP"
-   ],
-   "answer": 3,
-   "explanation": "BGP is the path-vector exterior gateway protocol that routes between autonomous systems."
-  },
-  {
-   "q": "A home router lets many internal devices share one public IP using port numbers. What is this?",
-   "options": [
-    "Proxy ARP",
-    "Static NAT",
-    "DHCP",
-    "PAT (NAT overload)"
-   ],
-   "answer": 3,
-   "explanation": "PAT maps many private addresses to a single public IP, distinguishing sessions by port."
-  },
-  {
-   "q": "Which mechanism prioritizes VoIP traffic to reduce latency and jitter?",
-   "options": [
-    "NAT",
-    "STP",
-    "VLAN pruning",
-    "QoS"
-   ],
-   "answer": 3,
-   "explanation": "Quality of Service marks and queues delay-sensitive traffic like VoIP ahead of best-effort traffic."
-  },
-  {
-   "q": "Which has the lowest administrative distance and is therefore most preferred?",
-   "options": [
-    "An OSPF route",
-    "A static route",
-    "A RIP route",
-    "A directly connected route"
-   ],
-   "answer": 3,
-   "explanation": "Connected routes have AD 0, static 1, OSPF 110, RIP 120 — lowest wins."
-  },
-  {
-   "q": "A link-state protocol that uses cost based on bandwidth and scales with areas is:",
+   "q": "Which routing protocol has a maximum hop count of 15?",
    "options": [
     "OSPF",
     "BGP",
-    "PAT",
-    "RIP"
+    "RIP",
+    "EIGRP"
+   ],
+   "answer": 2,
+   "explanation": "RIP counts hops with 16 meaning unreachable, so 15 is the maximum usable."
+  },
+  {
+   "q": "A router receives a packet matching both a /24 and a /26 route. Which does it use?",
+   "options": [
+    "The /26 (longest prefix match)",
+    "It drops the packet",
+    "Whichever is older",
+    "The /24"
    ],
    "answer": 0,
-   "explanation": "OSPF is a link-state IGP that computes shortest paths by cost and organizes large networks into areas."
+   "explanation": "Routers always use the most specific (longest prefix) matching route."
+  },
+  {
+   "q": "Which NAT type maps many internal hosts to one public IP using port numbers?",
+   "options": [
+    "PAT / NAT overload",
+    "Dynamic NAT one-to-one",
+    "Proxy ARP",
+    "Static NAT"
+   ],
+   "answer": 0,
+   "explanation": "PAT distinguishes many internal sessions behind one public IP by source port."
+  },
+  {
+   "q": "Which protocol would you use to route between two different companies over the internet?",
+   "options": [
+    "OSPF",
+    "BGP",
+    "RIP",
+    "EIGRP"
+   ],
+   "answer": 1,
+   "explanation": "BGP exchanges routes between autonomous systems and is the internet's routing protocol."
+  },
+  {
+   "q": "Marking traffic with DSCP values is part of which function?",
+   "options": [
+    "QoS",
+    "DHCP",
+    "NAT",
+    "STP"
+   ],
+   "answer": 0,
+   "explanation": "DSCP marking classifies packets so QoS can prioritize them."
+  },
+  {
+   "q": "Which QoS mechanism buffers and smooths bursts of traffic to a defined rate?",
+   "options": [
+    "Flooding",
+    "Trunking",
+    "Policing (dropping)",
+    "Traffic shaping"
+   ],
+   "answer": 3,
+   "explanation": "Shaping buffers excess traffic to smooth it; policing simply drops/remarks over the limit."
+  },
+  {
+   "q": "What address does a host use to reach destinations outside its own subnet?",
+   "options": [
+    "127.0.0.1",
+    "The default gateway",
+    "Its own IP",
+    "The broadcast address"
+   ],
+   "answer": 1,
+   "explanation": "Off-subnet traffic is sent to the default gateway (the local router interface)."
+  },
+  {
+   "q": "Which describes a link-state routing protocol?",
+   "options": [
+    "Uses only static entries",
+    "Shares its entire table with neighbors by hop count",
+    "Builds a full map of the network and runs shortest-path-first",
+    "Floods all traffic"
+   ],
+   "answer": 2,
+   "explanation": "Link-state protocols (OSPF) compute paths from a complete topology map using Dijkstra's SPF."
+  },
+  {
+   "q": "A static route configured as 0.0.0.0/0 is known as a:",
+   "options": [
+    "Host route",
+    "Loopback",
+    "Summary of all VLANs",
+    "Default route"
+   ],
+   "answer": 3,
+   "explanation": "0.0.0.0/0 matches any destination and is the default (gateway of last resort) route."
   }
  ]
 }

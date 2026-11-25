@@ -73,114 +73,114 @@
  ],
  "practice_questions": [
   {
-   "q": "What do the three A's in AAA stand for?",
+   "q": "Which triad defines the core goals of information security?",
    "options": [
-    "Authentication, Access, Auditing",
+    "People, Process, Technology",
     "Authentication, Authorization, Accounting",
-    "Authorization, Availability, Accounting",
-    "Access, Audit, Availability"
-   ],
-   "answer": 1,
-   "explanation": "AAA = Authentication (who you are), Authorization (what you can do), Accounting (what you did)."
-  },
-  {
-   "q": "An attacker forges ARP replies to intercept LAN traffic. What attack is this?",
-   "options": [
-    "Deauthentication",
-    "ARP spoofing (enabling on-path/MITM)",
-    "DNS poisoning",
-    "VLAN hopping"
-   ],
-   "answer": 1,
-   "explanation": "ARP spoofing associates the attacker's MAC with another host's IP to intercept traffic on the LAN."
-  },
-  {
-   "q": "Granting users only the access they need to do their job describes which principle?",
-   "options": [
-    "Zero trust",
-    "Separation of duties",
-    "Least privilege",
-    "Defense in depth"
+    "Confidentiality, Integrity, Availability",
+    "Detect, Respond, Recover"
    ],
    "answer": 2,
-   "explanation": "Least privilege minimizes access rights, limiting the damage from a compromised account."
+   "explanation": "The CIA triad — Confidentiality, Integrity, Availability — frames security objectives."
   },
   {
-   "q": "A rogue access point impersonates a legitimate SSID to capture clients. This is a:",
+   "q": "Forging ARP replies to intercept LAN traffic is which attack?",
    "options": [
-    "Jump box",
-    "Bastion host",
-    "Honeypot",
-    "Evil twin"
-   ],
-   "answer": 3,
-   "explanation": "An evil twin is a malicious AP broadcasting a trusted SSID to lure clients."
-  },
-  {
-   "q": "Which security model assumes no implicit trust and verifies every request?",
-   "options": [
-    "Open trust",
-    "Zero trust",
-    "Transitive trust",
-    "Perimeter security"
-   ],
-   "answer": 1,
-   "explanation": "Zero trust authenticates and authorizes every request regardless of network location."
-  },
-  {
-   "q": "Flooding a switch's MAC table so it floods frames out all ports is called:",
-   "options": [
-    "MAC flooding",
-    "ARP poisoning",
-    "Smurf attack",
-    "DNS spoofing"
+    "ARP spoofing/poisoning",
+    "DNS poisoning",
+    "VLAN hopping",
+    "MAC flooding"
    ],
    "answer": 0,
-   "explanation": "MAC flooding overflows the CAM/MAC table, forcing the switch to flood frames (enabling sniffing)."
+   "explanation": "ARP spoofing maps the attacker's MAC to a victim's IP to intercept traffic (enabling on-path)."
   },
   {
-   "q": "Which protocol provides AAA and is commonly used with 802.1X?",
+   "q": "Which protocol provides centralized AAA and is used with 802.1X?",
    "options": [
-    "NTP",
-    "SNMP",
     "RADIUS",
-    "ICMP"
+    "NTP",
+    "ICMP",
+    "SNMP"
+   ],
+   "answer": 0,
+   "explanation": "RADIUS centralizes authentication, authorization, and accounting for network access."
+  },
+  {
+   "q": "An attacker relays and may alter traffic between two parties. This is a(n):",
+   "options": [
+    "Rogue DHCP",
+    "On-path (MITM) attack",
+    "DoS",
+    "Phishing"
+   ],
+   "answer": 1,
+   "explanation": "An on-path/man-in-the-middle attacker sits between endpoints to read or modify traffic."
+  },
+  {
+   "q": "Granting a user only the permissions needed for their job is which principle?",
+   "options": [
+    "Defense in depth",
+    "Least privilege",
+    "Implicit allow",
+    "Separation of duties"
+   ],
+   "answer": 1,
+   "explanation": "Least privilege minimizes rights to limit the impact of a compromise."
+  },
+  {
+   "q": "Overflowing a switch's MAC table to force it to flood frames is:",
+   "options": [
+    "Smurf attack",
+    "ARP poisoning",
+    "MAC flooding",
+    "DNS spoofing"
    ],
    "answer": 2,
-   "explanation": "RADIUS is an AAA server protocol widely used for 802.1X network authentication."
+   "explanation": "MAC flooding fills the CAM table so the switch floods frames, enabling sniffing."
   },
   {
-   "q": "Which attack floods a target from many compromised hosts to exhaust resources?",
+   "q": "Splitting a critical task so no single person controls it end-to-end is:",
    "options": [
-    "On-path",
-    "DDoS",
-    "Phishing",
-    "VLAN hopping"
-   ],
-   "answer": 1,
-   "explanation": "A Distributed Denial-of-Service uses a botnet of many hosts to overwhelm the target."
-  },
-  {
-   "q": "Separating a task so no single person controls it end-to-end is which principle?",
-   "options": [
-    "Implicit deny",
-    "Separation of duties",
+    "Dual stack",
     "Least privilege",
-    "Defense in depth"
+    "Zero trust",
+    "Separation of duties"
    ],
-   "answer": 1,
-   "explanation": "Separation of duties splits critical tasks among multiple people to reduce fraud/error."
+   "answer": 3,
+   "explanation": "Separation of duties reduces fraud/error by dividing control of sensitive tasks."
   },
   {
-   "q": "Clients are disconnected from Wi-Fi by forged management frames. Which attack is this?",
+   "q": "A fake access point impersonating a legitimate SSID is a(n):",
    "options": [
-    "DNS poisoning",
-    "ARP spoofing",
-    "MAC flooding",
+    "Honeypot",
+    "Evil twin",
+    "Jump box",
+    "Bastion host"
+   ],
+   "answer": 1,
+   "explanation": "An evil twin mimics a trusted SSID to capture client connections and data."
+  },
+  {
+   "q": "Layering multiple independent security controls is called:",
+   "options": [
+    "Defense in depth",
+    "Single sign-on",
+    "Implicit deny",
+    "Flat network"
+   ],
+   "answer": 0,
+   "explanation": "Defense in depth stacks controls so one failure doesn't breach everything."
+  },
+  {
+   "q": "Forged 802.11 frames knocking Wi-Fi clients off the network is a:",
+   "options": [
+    "ARP spoof",
+    "DNS poison",
+    "SQL injection",
     "Deauthentication attack"
    ],
    "answer": 3,
-   "explanation": "A deauth attack sends forged 802.11 deauthentication frames to knock clients off the WLAN (wireless DoS)."
+   "explanation": "Deauth attacks spoof management frames to disconnect clients (a wireless DoS)."
   }
  ]
 }

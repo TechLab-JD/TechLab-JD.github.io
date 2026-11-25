@@ -82,14 +82,14 @@
  ],
  "practice_questions": [
   {
-   "q": "Put the DHCP lease steps in order.",
+   "q": "Which is the correct DHCP message order?",
    "options": [
-    "Offer, Discover, Acknowledge, Request",
-    "Discover, Request, Offer, Acknowledge",
-    "Discover, Offer, Request, Acknowledge",
-    "Request, Offer, Discover, Acknowledge"
+    "Offer, Request, Discover, Acknowledge",
+    "Request, Discover, Offer, Acknowledge",
+    "Discover, Request, Acknowledge, Offer",
+    "Discover, Offer, Request, Acknowledge"
    ],
-   "answer": 2,
+   "answer": 3,
    "explanation": "DHCP follows DORA: Discover, Offer, Request, Acknowledge."
   },
   {
@@ -104,15 +104,15 @@
    "explanation": "Console access is out-of-band — a separate path that works before (or when) the production network is unavailable."
   },
   {
-   "q": "Which DNS record maps a hostname to an IPv6 address?",
+   "q": "Which DNS record maps a hostname to an IPv4 address?",
    "options": [
-    "AAAA",
-    "CNAME",
     "A",
-    "MX"
+    "AAAA",
+    "MX",
+    "CNAME"
    ],
    "answer": 0,
-   "explanation": "AAAA maps a name to an IPv6 address; A is for IPv4."
+   "explanation": "An A record maps a name to an IPv4 address; AAAA is for IPv6."
   },
   {
    "q": "Which remote-access method creates an encrypted tunnel for a remote user over the public internet?",
@@ -126,62 +126,40 @@
    "explanation": "A remote-access VPN encrypts the user's traffic over the internet back to the corporate network."
   },
   {
-   "q": "DHCP clients are on a subnet without a DHCP server. What forwards their requests to the server?",
-   "options": [
-    "A DHCP relay / IP helper",
-    "A default route",
-    "Spanning Tree",
-    "A CNAME record"
-   ],
-   "answer": 0,
-   "explanation": "Routers don't forward broadcasts, so a DHCP relay/IP helper forwards requests to a server on another subnet."
-  },
-  {
-   "q": "Which management method still works when the production network is down?",
-   "options": [
-    "SNMP polling",
-    "In-band SSH",
-    "Out-of-band (console or dedicated mgmt port)",
-    "In-band HTTPS"
-   ],
-   "answer": 2,
-   "explanation": "Out-of-band management uses a separate path (console/modem/mgmt port) independent of the production network."
-  },
-  {
-   "q": "A host must always receive the same IP from DHCP. What should be configured?",
-   "options": [
-    "A shorter lease",
-    "An exclusion",
-    "A relay",
-    "A reservation (IP tied to the MAC)"
-   ],
-   "answer": 3,
-   "explanation": "A DHCP reservation binds a specific IP to a device's MAC address."
-  },
-  {
-   "q": "A hardened host that admins connect through to reach internal devices is called a:",
-   "options": [
-    "Honeypot",
-    "Proxy ARP",
-    "Jump box / bastion host",
-    "Load balancer"
-   ],
-   "answer": 2,
-   "explanation": "A jump box (bastion host) is a secured intermediary for administrative access to internal systems."
-  },
-  {
-   "q": "Which DNS record identifies the mail server for a domain?",
+   "q": "Which DNS record is an alias pointing one name to another name?",
    "options": [
     "A",
+    "NS",
     "PTR",
-    "MX",
-    "TXT"
+    "CNAME"
    ],
-   "answer": 2,
-   "explanation": "The MX record specifies the mail exchanger for a domain."
+   "answer": 3,
+   "explanation": "A CNAME aliases one hostname to another canonical name."
   },
   {
-   "q": "Which protocol should replace Telnet for secure device management?",
+   "q": "Which management access works even when the production network is down?",
+   "options": [
+    "In-band HTTPS",
+    "In-band SSH",
+    "Out-of-band (console/dedicated mgmt port)",
+    "SNMP"
+   ],
+   "answer": 2,
+   "explanation": "Out-of-band paths are independent of the production network."
+  },
+  {
+   "q": "Which DNS record holds SPF or DKIM data for email validation?",
+   "options": [
+    "TXT",
+    "SRV",
+    "MX",
+    "PTR"
+   ],
+   "answer": 0,
+   "explanation": "TXT records store SPF, DKIM, and domain-verification text."
+  },
+  {
+   "q": "Which should replace Telnet for device management?",
    "options": [
     "SNMPv1",
     "FTP",
@@ -189,7 +167,29 @@
     "HTTP"
    ],
    "answer": 2,
-   "explanation": "SSH encrypts management sessions; Telnet sends everything in cleartext."
+   "explanation": "SSH encrypts the management session; Telnet is cleartext."
+  },
+  {
+   "q": "Clients on a subnet without a DHCP server can still get addresses if the router is configured with a:",
+   "options": [
+    "DHCP relay / IP helper",
+    "Loopback",
+    "Static ARP",
+    "Default route"
+   ],
+   "answer": 0,
+   "explanation": "An IP helper forwards DHCP broadcasts to a server on another subnet."
+  },
+  {
+   "q": "A hardened gateway administrators connect through to reach internal systems is a:",
+   "options": [
+    "Load balancer",
+    "Honeypot",
+    "Jump box / bastion host",
+    "Proxy ARP"
+   ],
+   "answer": 2,
+   "explanation": "A jump box is a secured intermediary for administrative access."
   }
  ]
 }

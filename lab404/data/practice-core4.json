@@ -138,6 +138,1915 @@
   "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
  },
  {
+  "q": "Which OSI layer is responsible for logical addressing and path selection between networks?",
+  "options": [
+   "Layer 2 (Data Link)",
+   "Layer 3 (Network)",
+   "Layer 4 (Transport)",
+   "Layer 1 (Physical)"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "The Network layer handles logical (IP) addressing and routing between networks.",
+  "objective": "1.1",
+  "objectives": [
+   "1.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "At which OSI layer do hubs and repeaters operate?",
+  "options": [
+   "Layer 2 (Data Link)",
+   "Layer 1 (Physical)",
+   "Layer 7 (Application)",
+   "Layer 3 (Network)"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Hubs and repeaters just regenerate electrical signals/bits, which is Layer 1 work.",
+  "objective": "1.1",
+  "objectives": [
+   "1.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "Which protocol data unit (PDU) is used at the Data Link layer?",
+  "options": [
+   "Packet",
+   "Frame",
+   "Segment",
+   "Bit"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Layer 2 uses frames; Layer 3 packets, Layer 4 segments, Layer 1 bits.",
+  "objective": "1.1",
+  "objectives": [
+   "1.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "Which OSI layer establishes, manages, and terminates sessions between applications?",
+  "options": [
+   "Layer 4 (Transport)",
+   "Layer 6 (Presentation)",
+   "Layer 5 (Session)",
+   "Layer 7 (Application)"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "The Session layer sets up, maintains, and tears down dialogues between hosts.",
+  "objective": "1.1",
+  "objectives": [
+   "1.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "MAC addresses are used at which OSI layer?",
+  "options": [
+   "Layer 4 (Transport)",
+   "Layer 2 (Data Link)",
+   "Layer 3 (Network)",
+   "Layer 1 (Physical)"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "MAC (hardware) addressing is a Layer 2 Data Link function.",
+  "objective": "1.1",
+  "objectives": [
+   "1.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "In the TCP/IP model, which layer contains both TCP and UDP?",
+  "options": [
+   "Internet",
+   "Link/Network Access",
+   "Application",
+   "Transport"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "TCP and UDP are Transport-layer protocols in both the TCP/IP and OSI models.",
+  "objective": "1.1",
+  "objectives": [
+   "1.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "Up to which OSI layer can a next-generation firewall inspect traffic?",
+  "options": [
+   "Layer 3 (Network)",
+   "Layer 7 (Application)",
+   "Layer 4 (Transport)",
+   "Layer 2 (Data Link)"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "NGFWs add application awareness, inspecting all the way up to Layer 7.",
+  "objective": "1.1",
+  "objectives": [
+   "1.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "Which lists OSI layers 1 through 4 in the correct order?",
+  "options": [
+   "Physical, Data Link, Network, Transport",
+   "Physical, Network, Data Link, Transport",
+   "Network, Transport, Data Link, Physical",
+   "Data Link, Physical, Transport, Network"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "Bottom-up: Physical (1), Data Link (2), Network (3), Transport (4).",
+  "objective": "1.1",
+  "objectives": [
+   "1.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "A technician is troubleshooting and starts at the cable, then moves up the stack. Which layer did they start at?",
+  "options": [
+   "Layer 7 (Application)",
+   "Layer 4 (Transport)",
+   "Layer 1 (Physical)",
+   "Layer 3 (Network)"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Cabling and physical connectivity are Layer 1; a bottom-up approach starts there.",
+  "objective": "1.1",
+  "objectives": [
+   "1.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "Which OSI layer is responsible for reliable, connection-oriented delivery with acknowledgements?",
+  "options": [
+   "Layer 2 (Data Link)",
+   "Layer 3 (Network)",
+   "Layer 4 (Transport)",
+   "Layer 5 (Session)"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "TCP's reliability, sequencing, and acknowledgements live at the Transport layer.",
+  "objective": "1.1",
+  "objectives": [
+   "1.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "A Layer 3 switch adds which capability to a standard Layer 2 switch?",
+  "options": [
+   "Terminating fiber",
+   "Regenerating bits",
+   "Applying electrical power",
+   "Routing between VLANs/subnets"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "A Layer 3 switch performs inter-VLAN routing at wire speed in addition to Layer 2 switching.",
+  "objective": "1.1",
+  "objectives": [
+   "1.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "Which device forwards frames based only on MAC addresses?",
+  "options": [
+   "Load balancer",
+   "Switch",
+   "Firewall",
+   "Router"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "A switch builds a MAC table and forwards frames by destination MAC at Layer 2.",
+  "objective": "1.2",
+  "objectives": [
+   "1.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "A forward proxy primarily represents and protects whom?",
+  "options": [
+   "Internal clients making outbound requests",
+   "The ISP router",
+   "DNS root servers",
+   "Public-facing servers"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "A forward proxy sits in front of clients, handling caching, filtering, and anonymity for outbound traffic.",
+  "objective": "1.2",
+  "objectives": [
+   "1.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "Which appliance caches and distributes content geographically close to users?",
+  "options": [
+   "IDS",
+   "Patch panel",
+   "VPN concentrator",
+   "CDN (Content Delivery Network)"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "A CDN places cached copies near users to reduce latency and origin load.",
+  "objective": "1.2",
+  "objectives": [
+   "1.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "Which provides file-level storage over the existing LAN?",
+  "options": [
+   "SAN",
+   "WLC",
+   "NAS",
+   "CDN"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "A NAS serves files over the LAN; a SAN provides block-level storage over a dedicated fabric.",
+  "objective": "1.2",
+  "objectives": [
+   "1.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "Which device terminates many simultaneous VPN tunnels for remote users?",
+  "options": [
+   "Media converter",
+   "VPN concentrator",
+   "Repeater",
+   "Patch panel"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "A VPN concentrator (headend) terminates and manages large numbers of VPN connections.",
+  "objective": "1.2",
+  "objectives": [
+   "1.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "A security team wants to detect suspicious traffic without affecting its flow. Which device fits?",
+  "options": [
+   "IDS (out-of-band)",
+   "Switch",
+   "IPS (in-line)",
+   "Router"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "An IDS passively monitors (often via a tap/SPAN) and alerts without sitting in the traffic path.",
+  "objective": "1.2",
+  "objectives": [
+   "1.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "Which device centrally manages many lightweight wireless access points?",
+  "options": [
+   "Media converter",
+   "PDU",
+   "Wireless LAN controller (WLC)",
+   "KVM switch"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "A WLC configures APs, coordinates channels/power, and handles roaming centrally.",
+  "objective": "1.2",
+  "objectives": [
+   "1.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "A hub creates how many collision domains across all its ports?",
+  "options": [
+   "One per VLAN",
+   "None",
+   "One per port",
+   "One shared collision domain"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "A hub repeats bits to every port, so all ports share a single collision domain.",
+  "objective": "1.2",
+  "objectives": [
+   "1.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "Which appliance inspects and filters HTTP/HTTPS to protect web applications from attacks like SQL injection?",
+  "options": [
+   "NTP server",
+   "Layer 2 switch",
+   "WAF (Web Application Firewall)",
+   "Media converter"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "A WAF operates at Layer 7 to filter web application traffic for attacks like XSS and SQL injection.",
+  "objective": "1.2",
+  "objectives": [
+   "1.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "What does a router do to broadcast domains?",
+  "options": [
+   "Has no effect",
+   "Doubles them per port",
+   "Separates them",
+   "Merges them"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Routers do not forward broadcasts, so each router interface bounds a separate broadcast domain.",
+  "objective": "1.2",
+  "objectives": [
+   "1.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "Which load-balancing method sends each new request to the server with the fewest active sessions?",
+  "options": [
+   "Anycast",
+   "Least connections",
+   "Round robin",
+   "Broadcast"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Least-connections balancing favors the server currently handling the fewest sessions.",
+  "objective": "1.2",
+  "objectives": [
+   "1.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 1,
+  "chapter_title": "The OSI Model & What's on the Network"
+ },
+ {
+  "q": "In which cloud model does the provider manage the OS and runtime while the customer deploys only their application?",
+  "options": [
+   "DaaS",
+   "SaaS",
+   "PaaS",
+   "IaaS"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Platform as a Service manages the OS/runtime; the customer provides just the app/code.",
+  "objective": "1.3",
+  "objectives": [
+   "1.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "Microsoft 365 and Salesforce are examples of which cloud service model?",
+  "options": [
+   "PaaS",
+   "IaaS",
+   "FaaS",
+   "SaaS"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Software as a Service delivers a complete, provider-run application to the user.",
+  "objective": "1.3",
+  "objectives": [
+   "1.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "A company keeps sensitive workloads on dedicated infrastructure but bursts to a public provider at peak. What deployment model is this?",
+  "options": [
+   "Community cloud",
+   "Public cloud",
+   "Private cloud",
+   "Hybrid cloud"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Hybrid combines private and public clouds, connected so workloads can move between them.",
+  "objective": "1.3",
+  "objectives": [
+   "1.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "Running firewalls and load balancers as software instances instead of dedicated hardware is called:",
+  "options": [
+   "SDN",
+   "NFV (Network Functions Virtualization)",
+   "IaC",
+   "VLAN"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "NFV virtualizes network functions (router, firewall, LB) as software.",
+  "objective": "1.3",
+  "objectives": [
+   "1.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "Which cloud security construct applies firewall rules to instances or subnets within a VPC?",
+  "options": [
+   "Patch panel",
+   "Default route",
+   "Spanning Tree",
+   "Security group / NSG"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Security groups / network security groups are the cloud's instance/subnet-level firewall rules.",
+  "objective": "1.3",
+  "objectives": [
+   "1.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "A deployment model shared by several organizations with common compliance needs is a:",
+  "options": [
+   "Hybrid cloud",
+   "Private cloud",
+   "Public cloud",
+   "Community cloud"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "A community cloud is shared by organizations with similar requirements (e.g., regulatory).",
+  "objective": "1.3",
+  "objectives": [
+   "1.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "Which offers the most customer control over the OS, middleware, and applications?",
+  "options": [
+   "IaaS",
+   "FaaS",
+   "SaaS",
+   "PaaS"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "With IaaS the provider supplies only infrastructure; the customer manages everything above it.",
+  "objective": "1.3",
+  "objectives": [
+   "1.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "A gateway that lets instances in a private subnet reach the internet for updates without being directly reachable is a:",
+  "options": [
+   "NAT gateway",
+   "Load balancer",
+   "Internet gateway with public IPs",
+   "VPN concentrator"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "A NAT gateway provides outbound internet access for private-subnet instances while keeping them unreachable inbound.",
+  "objective": "1.3",
+  "objectives": [
+   "1.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "Under the shared responsibility model, which is always the customer's responsibility in IaaS?",
+  "options": [
+   "The physical data center",
+   "Securing the guest OS, data, and access",
+   "The provider's network backbone",
+   "The hypervisor"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "In IaaS the customer secures the OS and up; the provider secures the underlying infrastructure.",
+  "objective": "1.3",
+  "objectives": [
+   "1.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "Which connection type is cheapest but offers variable performance to the cloud?",
+  "options": [
+   "Direct Connect",
+   "Site-to-site VPN over the internet",
+   "ExpressRoute",
+   "A dedicated leased circuit"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "An internet VPN is inexpensive but subject to internet congestion, unlike a dedicated private link.",
+  "objective": "1.3",
+  "objectives": [
+   "1.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "What is a VPC?",
+  "options": [
+   "A VPN client",
+   "A logically isolated virtual network inside a public cloud",
+   "A physical data center",
+   "A virtual private network protocol"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "A Virtual Private Cloud is your own isolated, subnetted virtual network within a provider's cloud.",
+  "objective": "1.3",
+  "objectives": [
+   "1.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "Which cloud characteristic lets resources scale up or down automatically with demand?",
+  "options": [
+   "Attenuation",
+   "Multiplexing",
+   "Elasticity",
+   "Convergence"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Elasticity is the automatic scaling of resources to match current demand.",
+  "objective": "1.3",
+  "objectives": [
+   "1.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "Which port does the secure version of LDAP (LDAPS) use?",
+  "options": [
+   "TCP 389",
+   "TCP 636",
+   "UDP 161",
+   "TCP 443"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "LDAP is TCP/UDP 389; LDAPS (over TLS) uses TCP 636.",
+  "objective": "1.4",
+  "objectives": [
+   "1.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 2,
+  "chapter_title": "Ports, Protocols & Traffic Types"
+ },
+ {
+  "q": "SNMP traps are sent to the manager on which port?",
+  "options": [
+   "UDP 161",
+   "UDP 123",
+   "UDP 162",
+   "TCP 25"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "SNMP polling uses UDP 161; device-initiated traps use UDP 162.",
+  "objective": "1.4",
+  "objectives": [
+   "1.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 2,
+  "chapter_title": "Ports, Protocols & Traffic Types"
+ },
+ {
+  "q": "Which protocol and port transfer files securely over an SSH session?",
+  "options": [
+   "FTPS, TCP 990",
+   "TFTP, UDP 69",
+   "SFTP, TCP 22",
+   "FTP, TCP 21"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "SFTP runs over SSH on TCP 22; FTPS (separate) uses 990.",
+  "objective": "1.4",
+  "objectives": [
+   "1.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 2,
+  "chapter_title": "Ports, Protocols & Traffic Types"
+ },
+ {
+  "q": "Which protocol retrieves email and keeps it synchronized across multiple devices?",
+  "options": [
+   "SNMP (UDP 161)",
+   "POP3 (TCP 110)",
+   "SMTP (TCP 25)",
+   "IMAP (TCP 143)"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "IMAP syncs mail across devices; POP3 typically downloads and removes it.",
+  "objective": "1.4",
+  "objectives": [
+   "1.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 2,
+  "chapter_title": "Ports, Protocols & Traffic Types"
+ },
+ {
+  "q": "Windows file and printer sharing uses which protocol and port?",
+  "options": [
+   "NFS, TCP 2049",
+   "FTP, TCP 21",
+   "RDP, TCP 3389",
+   "SMB, TCP 445"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "SMB (Server Message Block) uses TCP 445 for Windows file/printer sharing.",
+  "objective": "1.4",
+  "objectives": [
+   "1.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 2,
+  "chapter_title": "Ports, Protocols & Traffic Types"
+ },
+ {
+  "q": "A broadcast frame is sent to which type of audience?",
+  "options": [
+   "The nearest host",
+   "Every host on the local subnet",
+   "One specific host",
+   "A subscribed group"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Broadcast reaches all hosts on the subnet; it does not cross a router.",
+  "objective": "1.4",
+  "objectives": [
+   "1.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 2,
+  "chapter_title": "Ports, Protocols & Traffic Types"
+ },
+ {
+  "q": "Which protocol provides connectionless, best-effort delivery with no handshake?",
+  "options": [
+   "TCP",
+   "ICMP",
+   "UDP",
+   "ARP"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "UDP is connectionless and best-effort — no handshake, acknowledgements, or retransmission.",
+  "objective": "1.4",
+  "objectives": [
+   "1.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 2,
+  "chapter_title": "Ports, Protocols & Traffic Types"
+ },
+ {
+  "q": "Which statement about IPv6 traffic types is correct?",
+  "options": [
+   "IPv6 uses only unicast",
+   "IPv6 removes multicast",
+   "IPv6 adds a new broadcast range",
+   "IPv6 uses multicast and anycast but has no broadcast"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "IPv6 replaces broadcast with multicast and anycast.",
+  "objective": "1.4",
+  "objectives": [
+   "1.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 2,
+  "chapter_title": "Ports, Protocols & Traffic Types"
+ },
+ {
+  "q": "Which copper category supports 10 Gbps over the full 100 meters?",
+  "options": [
+   "Cat 5e",
+   "Cat 6a",
+   "Cat 6",
+   "Cat 3"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Cat 6a supports 10GBASE-T to 100 m; Cat 6 only reaches 10G to ~55 m.",
+  "objective": "1.5",
+  "objectives": [
+   "1.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 4,
+  "chapter_title": "Cabling, Media & Transceivers"
+ },
+ {
+  "q": "Which fiber connector is small-form-factor and the most common in modern data centers?",
+  "options": [
+   "LC",
+   "SC",
+   "MPO",
+   "ST"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "LC is a compact duplex connector and the current standard; MPO is for high-density ribbon.",
+  "objective": "1.5",
+  "objectives": [
+   "1.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 4,
+  "chapter_title": "Cabling, Media & Transceivers"
+ },
+ {
+  "q": "Which transceiver supports 10 Gbps?",
+  "options": [
+   "QSFP28",
+   "SFP",
+   "SFP+",
+   "QSFP+"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "SFP=1G, SFP+=10G, QSFP+=40G, QSFP28=100G.",
+  "objective": "1.5",
+  "objectives": [
+   "1.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 4,
+  "chapter_title": "Cabling, Media & Transceivers"
+ },
+ {
+  "q": "A run must reach 400 meters between buildings. Which medium is appropriate?",
+  "options": [
+   "Multimode or single-mode fiber",
+   "Cat 5e copper",
+   "Cat 6a copper",
+   "Coaxial RG-6"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "Copper tops out at 100 m; fiber is required for 400 m.",
+  "objective": "1.5",
+  "objectives": [
+   "1.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 4,
+  "chapter_title": "Cabling, Media & Transceivers"
+ },
+ {
+  "q": "Which cable is required by code in air-handling plenum spaces?",
+  "options": [
+   "PVC",
+   "Direct-burial",
+   "Riser-rated (CMR)",
+   "Plenum-rated (CMP)"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Plenum spaces require low-smoke, fire-resistant CMP cable.",
+  "objective": "1.5",
+  "objectives": [
+   "1.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 4,
+  "chapter_title": "Cabling, Media & Transceivers"
+ },
+ {
+  "q": "Which connects two like devices when Auto-MDIX is unavailable?",
+  "options": [
+   "A loopback plug",
+   "A rollover cable",
+   "A straight-through cable",
+   "A crossover cable"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Crossover cables (T568A one end, T568B the other) connect like devices; Auto-MDIX now automates this.",
+  "objective": "1.5",
+  "objectives": [
+   "1.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 4,
+  "chapter_title": "Cabling, Media & Transceivers"
+ },
+ {
+  "q": "Which fiber type uses a laser and a ~9-micron core for the longest distances?",
+  "options": [
+   "Multimode OM3",
+   "Single-mode",
+   "Multimode OM1",
+   "Multimode OM4"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Single-mode's small core and laser source carry signals kilometers.",
+  "objective": "1.5",
+  "objectives": [
+   "1.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 4,
+  "chapter_title": "Cabling, Media & Transceivers"
+ },
+ {
+  "q": "Which device extends a copper link by converting it to fiber?",
+  "options": [
+   "Repeater hub",
+   "KVM switch",
+   "Media converter",
+   "Patch panel"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "A media converter bridges copper to fiber to exceed copper's 100 m limit.",
+  "objective": "1.5",
+  "objectives": [
+   "1.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 4,
+  "chapter_title": "Cabling, Media & Transceivers"
+ },
+ {
+  "q": "A technician configures a console connection to a router. Which cable is typically used?",
+  "options": [
+   "Rollover (console) cable",
+   "Fiber patch",
+   "Crossover",
+   "Straight-through"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "A rollover cable connects a computer's serial/USB console to a router/switch console port.",
+  "objective": "1.5",
+  "objectives": [
+   "1.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 4,
+  "chapter_title": "Cabling, Media & Transceivers"
+ },
+ {
+  "q": "Which 100-meter figure correctly describes a structured copper run?",
+  "options": [
+   "80 m horizontal + 40 m patch",
+   "50 m horizontal + 50 m patch",
+   "90 m horizontal + 10 m patch cords",
+   "100 m patch only"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "The TIA model allows 90 m of solid horizontal cable plus up to 10 m of patch cords.",
+  "objective": "1.5",
+  "objectives": [
+   "1.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 4,
+  "chapter_title": "Cabling, Media & Transceivers"
+ },
+ {
+  "q": "Which connector is a round, bayonet-style fiber connector now considered legacy?",
+  "options": [
+   "ST",
+   "RJ45",
+   "LC",
+   "MPO"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "ST (straight tip) is an older bayonet fiber connector; LC/MPO are modern.",
+  "objective": "1.5",
+  "objectives": [
+   "1.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 4,
+  "chapter_title": "Cabling, Media & Transceivers"
+ },
+ {
+  "q": "What transceiver form factor supports 40 Gbps?",
+  "options": [
+   "QSFP+",
+   "SFP",
+   "GBIC",
+   "SFP+"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "QSFP+ (Quad SFP) bundles four lanes for 40 Gbps; SFP is 1G, SFP+ 10G, and QSFP28 100G.",
+  "objective": "1.5",
+  "objectives": [
+   "1.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 4,
+  "chapter_title": "Cabling, Media & Transceivers"
+ },
+ {
+  "q": "Which topology connects every node to a central switch and is standard for LANs?",
+  "options": [
+   "Star",
+   "Ring",
+   "Mesh",
+   "Bus"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "The star topology centers on a switch and is the dominant wired-LAN layout.",
+  "objective": "1.6",
+  "objectives": [
+   "1.6"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 5,
+  "chapter_title": "Topologies & Network Architectures"
+ },
+ {
+  "q": "How many links does a full mesh of 5 nodes require?",
+  "options": [
+   "20",
+   "10",
+   "5",
+   "25"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Full mesh links = n(n-1)/2 = 5*4/2 = 10.",
+  "objective": "1.6",
+  "objectives": [
+   "1.6"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 5,
+  "chapter_title": "Topologies & Network Architectures"
+ },
+ {
+  "q": "Traffic flowing between servers inside a data center is described as:",
+  "options": [
+   "Broadcast",
+   "North-south",
+   "Upstream",
+   "East-west"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "East-west is server-to-server traffic within the data center; north-south is client-to-server.",
+  "objective": "1.6",
+  "objectives": [
+   "1.6"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 5,
+  "chapter_title": "Topologies & Network Architectures"
+ },
+ {
+  "q": "Which modern data-center design connects every access switch to every spine switch?",
+  "options": [
+   "Three-tier only",
+   "Bus",
+   "Spine-and-leaf",
+   "Ring"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Spine-and-leaf gives predictable low latency and scales horizontally for east-west traffic.",
+  "objective": "1.6",
+  "objectives": [
+   "1.6"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 5,
+  "chapter_title": "Topologies & Network Architectures"
+ },
+ {
+  "q": "In the three-tier model, which layer provides the high-speed backbone with no packet manipulation?",
+  "options": [
+   "Core",
+   "Edge",
+   "Distribution",
+   "Access"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "The core layer moves traffic as fast as possible; policy/routing happens at distribution.",
+  "objective": "1.6",
+  "objectives": [
+   "1.6"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 5,
+  "chapter_title": "Topologies & Network Architectures"
+ },
+ {
+  "q": "Which network type spans a single metropolitan area?",
+  "options": [
+   "WAN",
+   "LAN",
+   "MAN",
+   "PAN"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "A Metropolitan Area Network covers a city-sized area, larger than a campus (CAN), smaller than a WAN.",
+  "objective": "1.6",
+  "objectives": [
+   "1.6"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 5,
+  "chapter_title": "Topologies & Network Architectures"
+ },
+ {
+  "q": "A Bluetooth connection between a phone and headset forms which type of network?",
+  "options": [
+   "LAN",
+   "MAN",
+   "PAN",
+   "WAN"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "A Personal Area Network spans a few meters around a person's devices.",
+  "objective": "1.6",
+  "objectives": [
+   "1.6"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 5,
+  "chapter_title": "Topologies & Network Architectures"
+ },
+ {
+  "q": "Which design merges the core and distribution layers for smaller networks?",
+  "options": [
+   "Bus",
+   "Collapsed core",
+   "Spine-and-leaf",
+   "Full mesh"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "A collapsed core combines core and distribution where a separate backbone isn't needed.",
+  "objective": "1.6",
+  "objectives": [
+   "1.6"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 5,
+  "chapter_title": "Topologies & Network Architectures"
+ },
+ {
+  "q": "In which architecture do hosts share resources directly with no central server?",
+  "options": [
+   "Three-tier",
+   "Spine-and-leaf",
+   "Peer-to-peer",
+   "Client-server"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Peer-to-peer shares resources between equal hosts; client-server centralizes on servers.",
+  "objective": "1.6",
+  "objectives": [
+   "1.6"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 5,
+  "chapter_title": "Topologies & Network Architectures"
+ },
+ {
+  "q": "Which WAN topology has branch 'spoke' sites all connecting to one central site?",
+  "options": [
+   "Full mesh",
+   "Hub-and-spoke",
+   "Bus",
+   "Ring"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Hub-and-spoke centralizes connectivity through a hub site; simple but the hub is critical.",
+  "objective": "1.6",
+  "objectives": [
+   "1.6"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 5,
+  "chapter_title": "Topologies & Network Architectures"
+ },
+ {
+  "q": "Which legacy topology fails entirely if the single backbone cable breaks?",
+  "options": [
+   "Bus",
+   "Star",
+   "Mesh",
+   "Spine-and-leaf"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "In a bus topology all nodes share one cable; a break takes down the segment.",
+  "objective": "1.6",
+  "objectives": [
+   "1.6"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 5,
+  "chapter_title": "Topologies & Network Architectures"
+ },
+ {
+  "q": "Which network type connects several nearby buildings owned by one organization?",
+  "options": [
+   "PAN",
+   "MAN",
+   "WAN",
+   "CAN (Campus Area Network)"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "A Campus Area Network links buildings across a campus using the owner's own media.",
+  "objective": "1.6",
+  "objectives": [
+   "1.6"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 5,
+  "chapter_title": "Topologies & Network Architectures"
+ },
+ {
+  "q": "What is the usable host range for the subnet containing 192.168.1.200/28?",
+  "options": [
+   "192.168.1.200 – 192.168.1.214",
+   "192.168.1.194 – 192.168.1.207",
+   "192.168.1.192 – 192.168.1.207",
+   "192.168.1.193 – 192.168.1.206"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "/28 block size 16: .192 block covers 192–207. Network .192, broadcast .207, usable .193–.206. 200 is inside.",
+  "objective": "1.7",
+  "objectives": [
+   "1.7"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 6,
+  "chapter_title": "IPv4 Addressing & Subnetting"
+ },
+ {
+  "q": "Which private range is defined by RFC 1918 for the 172 block?",
+  "options": [
+   "172.16.0.0 – 172.16.255.255",
+   "172.32.0.0 – 172.63.255.255",
+   "172.0.0.0 – 172.255.255.255",
+   "172.16.0.0 – 172.31.255.255"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "RFC 1918 reserves 172.16.0.0/12, i.e., 172.16.0.0 through 172.31.255.255.",
+  "objective": "1.7",
+  "objectives": [
+   "1.7"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 6,
+  "chapter_title": "IPv4 Addressing & Subnetting"
+ },
+ {
+  "q": "How many /26 subnets can be created from a single /24?",
+  "options": [
+   "4",
+   "2",
+   "16",
+   "8"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "Borrowing 2 bits (24→26) yields 2^2 = 4 subnets.",
+  "objective": "1.7",
+  "objectives": [
+   "1.7"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 6,
+  "chapter_title": "IPv4 Addressing & Subnetting"
+ },
+ {
+  "q": "Which address is the loopback used to test a host's own TCP/IP stack?",
+  "options": [
+   "169.254.0.1",
+   "0.0.0.0",
+   "255.255.255.255",
+   "127.0.0.1"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "127.0.0.1 is the IPv4 loopback; pinging it confirms the local TCP/IP stack works without touching the network.",
+  "objective": "1.7",
+  "objectives": [
+   "1.7"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 6,
+  "chapter_title": "IPv4 Addressing & Subnetting"
+ },
+ {
+  "q": "Which CIDR prefix provides exactly 2 usable host addresses for a point-to-point link?",
+  "options": [
+   "/30",
+   "/28",
+   "/29",
+   "/31"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "/30 = 2 host bits = 2^2 − 2 = 2 usable addresses.",
+  "objective": "1.7",
+  "objectives": [
+   "1.7"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 6,
+  "chapter_title": "IPv4 Addressing & Subnetting"
+ },
+ {
+  "q": "What IPv6 address type begins with fe80:: and stays on the local link?",
+  "options": [
+   "Global unicast",
+   "Unique local",
+   "Link-local",
+   "Multicast"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "fe80::/10 is link-local; every IPv6 interface auto-configures one.",
+  "objective": "1.7",
+  "objectives": [
+   "1.7"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 6,
+  "chapter_title": "IPv4 Addressing & Subnetting"
+ },
+ {
+  "q": "Which technology uses a central controller to program forwarding decisions on switches?",
+  "options": [
+   "VRRP",
+   "SDN",
+   "STP",
+   "NAT"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Software-Defined Networking separates the control plane into a central controller that programs the data plane.",
+  "objective": "1.8",
+  "objectives": [
+   "1.8"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "A branch office intelligently load-balances traffic across MPLS, broadband, and LTE by application. This is:",
+  "options": [
+   "A default route",
+   "MPLS only",
+   "SD-WAN",
+   "Spanning Tree"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "SD-WAN dynamically selects the best transport per application across multiple WAN links.",
+  "objective": "1.8",
+  "objectives": [
+   "1.8"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "Zero trust is best summarized as:",
+  "options": [
+   "Never trust, always verify — authenticate every request",
+   "Trust after one login for the day",
+   "Trust based on IP address",
+   "Trust everything inside the perimeter"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "Zero trust verifies every request and enforces least privilege regardless of location.",
+  "objective": "1.8",
+  "objectives": [
+   "1.8"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "Which converges SD-WAN with cloud-delivered security into a single service?",
+  "options": [
+   "PoE",
+   "NAT",
+   "VLAN",
+   "SASE"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Secure Access Service Edge merges networking (SD-WAN) and security (firewall, zero trust) in the cloud.",
+  "objective": "1.8",
+  "objectives": [
+   "1.8"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "What is the main benefit of Infrastructure as Code?",
+  "options": [
+   "Longer cable runs",
+   "More PoE wattage",
+   "Repeatable, version-controlled, auditable deployments",
+   "Faster cabling"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "IaC defines infrastructure in code (Terraform/Ansible) so builds are consistent and reviewable.",
+  "objective": "1.8",
+  "objectives": [
+   "1.8"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "Fine-grained isolation of individual workloads to limit lateral movement is called:",
+  "options": [
+   "Microsegmentation",
+   "Trunking",
+   "Link aggregation",
+   "Broadcast flooding"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "Microsegmentation isolates workloads from each other, a core zero-trust technique.",
+  "objective": "1.8",
+  "objectives": [
+   "1.8"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "A large number of low-power sensors reporting to the network are examples of:",
+  "options": [
+   "Core routers",
+   "Spine switches",
+   "VPN concentrators",
+   "IoT devices"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Internet of Things devices are a major driver of modern, segmented network designs.",
+  "objective": "1.8",
+  "objectives": [
+   "1.8"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "Which is a key reason organizations adopt IPv6?",
+  "options": [
+   "IPv6 is slower",
+   "IPv6 has fewer addresses",
+   "IPv6 requires NAT",
+   "IPv4 public address exhaustion"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "IPv6's vast address space addresses IPv4 exhaustion and removes the need for NAT.",
+  "objective": "1.8",
+  "objectives": [
+   "1.8"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "Running IPv4 and IPv6 simultaneously on the same devices is called:",
+  "options": [
+   "Anycast",
+   "Tunneling",
+   "Dual stack",
+   "Translation"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Dual stack runs both protocols at once, the most common IPv6 migration method.",
+  "objective": "1.8",
+  "objectives": [
+   "1.8"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "In SDN, the component that actually forwards packets is the:",
+  "options": [
+   "Control plane",
+   "Application plane",
+   "Management plane",
+   "Data plane"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "SDN separates the control plane (decisions) from the data plane (forwarding).",
+  "objective": "1.8",
+  "objectives": [
+   "1.8"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
+  "q": "Which cloud-era practice replaces manual device configuration with declarative templates?",
+  "options": [
+   "ARP caching",
+   "Spanning Tree",
+   "Port security",
+   "Infrastructure as Code"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "IaC declares the desired state in templates instead of manual, click-by-click configuration.",
+  "objective": "1.8",
+  "objectives": [
+   "1.8"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 3,
+  "chapter_title": "Cloud & Modern Network Environments"
+ },
+ {
   "q": "At which OSI layer do routers make forwarding decisions?",
   "options": [
    "Layer 1 (Physical)",
@@ -1128,6 +3037,949 @@
   "chapter_title": "Cloud & Modern Network Environments"
  },
  {
+  "q": "A route to 10.1.1.0/24 exists via both OSPF and a static route. Which is installed?",
+  "options": [
+   "Neither",
+   "The static route (AD 1)",
+   "The OSPF route (AD 110)",
+   "Both are load-balanced"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Lower administrative distance wins; static (1) beats OSPF (110).",
+  "objective": "2.1",
+  "objectives": [
+   "2.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 7,
+  "chapter_title": "Routing & Bandwidth Management"
+ },
+ {
+  "q": "Which routing protocol has a maximum hop count of 15?",
+  "options": [
+   "OSPF",
+   "BGP",
+   "RIP",
+   "EIGRP"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "RIP counts hops with 16 meaning unreachable, so 15 is the maximum usable.",
+  "objective": "2.1",
+  "objectives": [
+   "2.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 7,
+  "chapter_title": "Routing & Bandwidth Management"
+ },
+ {
+  "q": "A router receives a packet matching both a /24 and a /26 route. Which does it use?",
+  "options": [
+   "The /26 (longest prefix match)",
+   "It drops the packet",
+   "Whichever is older",
+   "The /24"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "Routers always use the most specific (longest prefix) matching route.",
+  "objective": "2.1",
+  "objectives": [
+   "2.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 7,
+  "chapter_title": "Routing & Bandwidth Management"
+ },
+ {
+  "q": "Which NAT type maps many internal hosts to one public IP using port numbers?",
+  "options": [
+   "PAT / NAT overload",
+   "Dynamic NAT one-to-one",
+   "Proxy ARP",
+   "Static NAT"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "PAT distinguishes many internal sessions behind one public IP by source port.",
+  "objective": "2.1",
+  "objectives": [
+   "2.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 7,
+  "chapter_title": "Routing & Bandwidth Management"
+ },
+ {
+  "q": "Which protocol would you use to route between two different companies over the internet?",
+  "options": [
+   "OSPF",
+   "BGP",
+   "RIP",
+   "EIGRP"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "BGP exchanges routes between autonomous systems and is the internet's routing protocol.",
+  "objective": "2.1",
+  "objectives": [
+   "2.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 7,
+  "chapter_title": "Routing & Bandwidth Management"
+ },
+ {
+  "q": "Marking traffic with DSCP values is part of which function?",
+  "options": [
+   "QoS",
+   "DHCP",
+   "NAT",
+   "STP"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "DSCP marking classifies packets so QoS can prioritize them.",
+  "objective": "2.1",
+  "objectives": [
+   "2.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 7,
+  "chapter_title": "Routing & Bandwidth Management"
+ },
+ {
+  "q": "Which QoS mechanism buffers and smooths bursts of traffic to a defined rate?",
+  "options": [
+   "Flooding",
+   "Trunking",
+   "Policing (dropping)",
+   "Traffic shaping"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Shaping buffers excess traffic to smooth it; policing simply drops/remarks over the limit.",
+  "objective": "2.1",
+  "objectives": [
+   "2.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 7,
+  "chapter_title": "Routing & Bandwidth Management"
+ },
+ {
+  "q": "What address does a host use to reach destinations outside its own subnet?",
+  "options": [
+   "127.0.0.1",
+   "The default gateway",
+   "Its own IP",
+   "The broadcast address"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Off-subnet traffic is sent to the default gateway (the local router interface).",
+  "objective": "2.1",
+  "objectives": [
+   "2.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 7,
+  "chapter_title": "Routing & Bandwidth Management"
+ },
+ {
+  "q": "Which describes a link-state routing protocol?",
+  "options": [
+   "Uses only static entries",
+   "Shares its entire table with neighbors by hop count",
+   "Builds a full map of the network and runs shortest-path-first",
+   "Floods all traffic"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Link-state protocols (OSPF) compute paths from a complete topology map using Dijkstra's SPF.",
+  "objective": "2.1",
+  "objectives": [
+   "2.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 7,
+  "chapter_title": "Routing & Bandwidth Management"
+ },
+ {
+  "q": "A static route configured as 0.0.0.0/0 is known as a:",
+  "options": [
+   "Host route",
+   "Loopback",
+   "Summary of all VLANs",
+   "Default route"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "0.0.0.0/0 matches any destination and is the default (gateway of last resort) route.",
+  "objective": "2.1",
+  "objectives": [
+   "2.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 7,
+  "chapter_title": "Routing & Bandwidth Management"
+ },
+ {
+  "q": "Which protocol tags frames to carry multiple VLANs over one trunk link?",
+  "options": [
+   "802.1Q",
+   "802.1X",
+   "802.3af",
+   "802.11ac"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "802.1Q inserts a VLAN tag into Ethernet frames on trunk links.",
+  "objective": "2.2",
+  "objectives": [
+   "2.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 8,
+  "chapter_title": "Switching Technologies & Features"
+ },
+ {
+  "q": "What must be configured to allow devices in different VLANs to communicate?",
+  "options": [
+   "Port mirroring",
+   "A longer DHCP lease",
+   "Inter-VLAN routing (router or Layer 3 switch)",
+   "A crossover cable"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "VLANs are separate broadcast domains; routing between them requires a router or Layer 3 switch.",
+  "objective": "2.2",
+  "objectives": [
+   "2.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 8,
+  "chapter_title": "Switching Technologies & Features"
+ },
+ {
+  "q": "Which feature protects an access port by disabling it if it receives STP BPDUs?",
+  "options": [
+   "Jumbo frames",
+   "PortFast alone",
+   "Trunking",
+   "BPDU Guard"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "BPDU Guard shuts a port that unexpectedly receives BPDUs, blocking rogue switches.",
+  "objective": "2.2",
+  "objectives": [
+   "2.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 8,
+  "chapter_title": "Switching Technologies & Features"
+ },
+ {
+  "q": "Which switch feature moves an access port directly to forwarding, skipping STP listening/learning?",
+  "options": [
+   "Root Guard",
+   "BPDU Guard",
+   "LACP",
+   "PortFast"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "PortFast speeds up end-device ports by bypassing the STP transitional states.",
+  "objective": "2.2",
+  "objectives": [
+   "2.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 8,
+  "chapter_title": "Switching Technologies & Features"
+ },
+ {
+  "q": "What is the main purpose of Spanning Tree Protocol?",
+  "options": [
+   "Encrypt frames",
+   "Route between subnets",
+   "Assign IP addresses",
+   "Prevent switching loops on redundant links"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "STP blocks redundant paths to avoid loops and broadcast storms.",
+  "objective": "2.2",
+  "objectives": [
+   "2.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 8,
+  "chapter_title": "Switching Technologies & Features"
+ },
+ {
+  "q": "A switch receives a frame for an unknown destination MAC. What does it do?",
+  "options": [
+   "Floods it out all ports in the VLAN except the source",
+   "Sends it only to the default gateway",
+   "Drops it",
+   "Returns it to the sender"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "Unknown-unicast frames are flooded within the VLAN until the switch learns the MAC.",
+  "objective": "2.2",
+  "objectives": [
+   "2.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 8,
+  "chapter_title": "Switching Technologies & Features"
+ },
+ {
+  "q": "Which standard delivers up to ~100W over Ethernet?",
+  "options": [
+   "802.3at (PoE+)",
+   "802.3bt (PoE++)",
+   "802.3af (PoE)",
+   "802.1Q"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "802.3bt (PoE++) supplies up to ~60–100W; af is ~15W and at is ~30W.",
+  "objective": "2.2",
+  "objectives": [
+   "2.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 8,
+  "chapter_title": "Switching Technologies & Features"
+ },
+ {
+  "q": "An MTU of ~9000 bytes used to boost throughput on storage links describes:",
+  "options": [
+   "Fragmented frames",
+   "Runt frames",
+   "Jumbo frames",
+   "Baby giants only"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Jumbo frames carry ~9000-byte payloads to reduce overhead on high-throughput links.",
+  "objective": "2.2",
+  "objectives": [
+   "2.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 8,
+  "chapter_title": "Switching Technologies & Features"
+ },
+ {
+  "q": "Which feature validates that DHCP replies come only from trusted ports?",
+  "options": [
+   "Spanning Tree",
+   "DHCP snooping",
+   "QoS marking",
+   "Port mirroring"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "DHCP snooping permits DHCP server replies only on configured trusted ports, blocking rogue servers.",
+  "objective": "2.2",
+  "objectives": [
+   "2.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 8,
+  "chapter_title": "Switching Technologies & Features"
+ },
+ {
+  "q": "Which Wi-Fi band offers better range and wall penetration but is more congested?",
+  "options": [
+   "6 GHz",
+   "60 GHz",
+   "5 GHz",
+   "2.4 GHz"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "2.4 GHz travels farther and penetrates better but is slower and crowded.",
+  "objective": "2.3",
+  "objectives": [
+   "2.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 9,
+  "chapter_title": "Wireless Networking"
+ },
+ {
+  "q": "Which 802.11 standard introduced OFDMA and operates on 2.4, 5, and 6 GHz?",
+  "options": [
+   "802.11ac",
+   "802.11n",
+   "802.11ax (Wi-Fi 6/6E)",
+   "802.11g"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Wi-Fi 6/6E (802.11ax) adds OFDMA and, with 6E, the 6 GHz band.",
+  "objective": "2.3",
+  "objectives": [
+   "2.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 9,
+  "chapter_title": "Wireless Networking"
+ },
+ {
+  "q": "Which encryption should you avoid because it is easily cracked?",
+  "options": [
+   "WPA2-AES",
+   "WEP",
+   "WPA2-Enterprise",
+   "WPA3"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "WEP is obsolete and trivially broken; never use it.",
+  "objective": "2.3",
+  "objectives": [
+   "2.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 9,
+  "chapter_title": "Wireless Networking"
+ },
+ {
+  "q": "Which authentication mode uses a single shared passphrase for everyone?",
+  "options": [
+   "RADIUS-based",
+   "WPA2/3-Personal (PSK)",
+   "802.1X",
+   "WPA2/3-Enterprise"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Personal mode uses one shared pre-shared key; Enterprise uses per-user 802.1X credentials.",
+  "objective": "2.3",
+  "objectives": [
+   "2.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 9,
+  "chapter_title": "Wireless Networking"
+ },
+ {
+  "q": "Which set of 2.4 GHz channels is non-overlapping?",
+  "options": [
+   "1, 3, 5",
+   "4, 8, 12",
+   "1, 6, 11",
+   "2, 6, 10"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Channels 1, 6, and 11 are the standard non-overlapping choices in 2.4 GHz.",
+  "objective": "2.3",
+  "objectives": [
+   "2.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 9,
+  "chapter_title": "Wireless Networking"
+ },
+ {
+  "q": "A focused, narrow-beam antenna for a long point-to-point link is:",
+  "options": [
+   "Rubber duck",
+   "Omnidirectional",
+   "Directional (Yagi/parabolic)",
+   "Dipole"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Directional antennas concentrate signal into a beam for distance or point-to-point links.",
+  "objective": "2.3",
+  "objectives": [
+   "2.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 9,
+  "chapter_title": "Wireless Networking"
+ },
+ {
+  "q": "Multiple APs sharing one SSID so clients can roam form a(n):",
+  "options": [
+   "VLAN",
+   "BSS",
+   "PAN",
+   "ESS (Extended Service Set)"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "An ESS is several APs under one SSID enabling seamless roaming; a BSS is a single AP's cell.",
+  "objective": "2.3",
+  "objectives": [
+   "2.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 9,
+  "chapter_title": "Wireless Networking"
+ },
+ {
+  "q": "What should you perform before deploying APs to plan coverage and channels?",
+  "options": [
+   "A zone transfer",
+   "A wireless site survey / heat map",
+   "A port scan",
+   "A packet capture only"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "A site survey maps signal strength to place APs and plan channels effectively.",
+  "objective": "2.3",
+  "objectives": [
+   "2.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 9,
+  "chapter_title": "Wireless Networking"
+ },
+ {
+  "q": "Which WPA3 feature defeats offline password-guessing on the handshake?",
+  "options": [
+   "WPS PIN",
+   "SAE (Simultaneous Authentication of Equals)",
+   "MAC filtering",
+   "TKIP"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "SAE replaces the PSK four-way handshake and resists offline dictionary attacks.",
+  "objective": "2.3",
+  "objectives": [
+   "2.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 9,
+  "chapter_title": "Wireless Networking"
+ },
+ {
+  "q": "Which feature should be disabled because its PIN can be brute-forced?",
+  "options": [
+   "WPS",
+   "WPA3",
+   "SAE",
+   "802.1X"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "Wi-Fi Protected Setup (WPS) PINs are vulnerable to brute force and should be disabled.",
+  "objective": "2.3",
+  "objectives": [
+   "2.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 9,
+  "chapter_title": "Wireless Networking"
+ },
+ {
+  "q": "Which band does Wi-Fi 6E add that Wi-Fi 6 does not use?",
+  "options": [
+   "900 MHz",
+   "5 GHz",
+   "6 GHz",
+   "2.4 GHz"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Wi-Fi 6E extends 802.11ax into the newly available 6 GHz spectrum.",
+  "objective": "2.3",
+  "objectives": [
+   "2.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 9,
+  "chapter_title": "Wireless Networking"
+ },
+ {
+  "q": "How tall is 1U in a standard equipment rack?",
+  "options": [
+   "3 inches",
+   "2.5 inches",
+   "1.75 inches",
+   "1 inch"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "A rack unit (U) is 1.75 inches of vertical mounting space.",
+  "objective": "2.4",
+  "objectives": [
+   "2.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 10,
+  "chapter_title": "Physical Installations"
+ },
+ {
+  "q": "Which layout separates cold intake air from hot exhaust air in a data center?",
+  "options": [
+   "Raised floor only",
+   "Single shared aisle",
+   "Open rack grid",
+   "Hot aisle / cold aisle"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Hot aisle/cold aisle faces intakes toward cold aisles and exhausts toward hot aisles.",
+  "objective": "2.4",
+  "objectives": [
+   "2.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 10,
+  "chapter_title": "Physical Installations"
+ },
+ {
+  "q": "Which provides battery ride-through and a clean shutdown during a brief outage?",
+  "options": [
+   "UPS",
+   "PDU",
+   "Transformer",
+   "Generator"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "A UPS supplies battery power for short outages and conditioning; a generator covers long outages.",
+  "objective": "2.4",
+  "objectives": [
+   "2.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 10,
+  "chapter_title": "Physical Installations"
+ },
+ {
+  "q": "Which distributes and often meters power to devices within a rack?",
+  "options": [
+   "MDF",
+   "KVM",
+   "PDU",
+   "UPS"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "A Power Distribution Unit distributes rack power and may meter or switch outlets.",
+  "objective": "2.4",
+  "objectives": [
+   "2.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 10,
+  "chapter_title": "Physical Installations"
+ },
+ {
+  "q": "Why keep data cabling away from fluorescent ballasts and power conduits?",
+  "options": [
+   "To avoid EMI that corrupts data",
+   "To reduce rack units",
+   "To increase PoE wattage",
+   "To shorten patch cords"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "Ballasts and power lines emit EMI that interferes with unshielded copper.",
+  "objective": "2.4",
+  "objectives": [
+   "2.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 10,
+  "chapter_title": "Physical Installations"
+ },
+ {
+  "q": "What is the building's primary wiring hub called?",
+  "options": [
+   "IDF",
+   "Demarc",
+   "Patch panel",
+   "MDF (Main Distribution Frame)"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "The MDF is the main hub; IDFs are intermediate closets that connect back to it.",
+  "objective": "2.4",
+  "objectives": [
+   "2.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 10,
+  "chapter_title": "Physical Installations"
+ },
+ {
+  "q": "Which practice most speeds up future cable troubleshooting?",
+  "options": [
+   "Zip-tying cables tightly",
+   "Labeling both ends and keeping port maps",
+   "Mixing power and data in one bundle",
+   "Removing all labels for a cleaner look"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Clear labels and documentation turn tracing a cable into a quick lookup.",
+  "objective": "2.4",
+  "objectives": [
+   "2.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 10,
+  "chapter_title": "Physical Installations"
+ },
+ {
+  "q": "Supplying critical equipment from two independent power sources is called:",
+  "options": [
+   "Daisy chaining",
+   "Series wiring",
+   "A/B (dual) power feeds",
+   "Single feed"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Dual A/B feeds with dual power supplies let one feed fail without downtime.",
+  "objective": "2.4",
+  "objectives": [
+   "2.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 10,
+  "chapter_title": "Physical Installations"
+ },
+ {
+  "q": "Why control humidity in an equipment room?",
+  "options": [
+   "It changes IP addressing",
+   "It affects VLAN tagging",
+   "Too low causes static/ESD; too high causes condensation/corrosion",
+   "It increases bandwidth"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Humidity extremes cause either electrostatic discharge or corrosion, so it must be regulated.",
+  "objective": "2.4",
+  "objectives": [
+   "2.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 10,
+  "chapter_title": "Physical Installations"
+ },
+ {
+  "q": "Which fire-suppression approach is preferred in equipment rooms?",
+  "options": [
+   "Foam",
+   "Clean-agent (gas) suppression",
+   "Dry sand",
+   "Standard water sprinklers"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Clean agents extinguish fire without damaging electronics, unlike water.",
+  "objective": "2.4",
+  "objectives": [
+   "2.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 10,
+  "chapter_title": "Physical Installations"
+ },
+ {
+  "q": "Where should heavy equipment be mounted in a rack?",
+  "options": [
+   "Outside the rack",
+   "At the very top",
+   "Only in the middle",
+   "Low, for stability"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Mounting heavy gear low keeps the rack's center of gravity stable.",
+  "objective": "2.4",
+  "objectives": [
+   "2.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 10,
+  "chapter_title": "Physical Installations"
+ },
+ {
   "q": "When two routes to the same network exist, which is chosen first?",
   "options": [
    "The one with the higher hop count",
@@ -1658,6 +4510,1248 @@
   "chapter_title": "Physical Installations"
  },
  {
+  "q": "Which process controls how network changes are requested, approved, and rolled back?",
+  "options": [
+   "Incident response",
+   "Capacity planning",
+   "Asset disposal",
+   "Change management"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Change management governs the lifecycle of changes to reduce unplanned outages.",
+  "objective": "3.1",
+  "objectives": [
+   "3.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "A document defining guaranteed uptime and response times is a(n):",
+  "options": [
+   "NDA",
+   "MOU",
+   "SLA",
+   "AUP"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "A Service-Level Agreement specifies measurable service commitments.",
+  "objective": "3.1",
+  "objectives": [
+   "3.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Which agreement defines acceptable use of company network resources by employees?",
+  "options": [
+   "MOU",
+   "SOW",
+   "SLA",
+   "AUP (Acceptable Use Policy)"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "An AUP sets the rules for how users may use the organization's systems and network.",
+  "objective": "3.1",
+  "objectives": [
+   "3.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Which document holds the step-by-step procedures to operate or recover a service?",
+  "options": [
+   "Runbook",
+   "Baseline",
+   "NDA",
+   "SLA"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "A runbook contains operational procedures; an SLA defines commitments, not steps.",
+  "objective": "3.1",
+  "objectives": [
+   "3.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Tracking and versioning device configurations to detect drift is called:",
+  "options": [
+   "Load balancing",
+   "Penetration testing",
+   "Change freeze",
+   "Configuration management"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Configuration management maintains known-good baselines and detects unauthorized drift.",
+  "objective": "3.1",
+  "objectives": [
+   "3.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Which diagram shows how devices are logically connected (IPs, VLANs, routing), not their physical placement?",
+  "options": [
+   "Logical network diagram",
+   "Physical diagram",
+   "Rack elevation",
+   "Floor plan"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "A logical diagram shows addressing and data flow; a physical diagram shows cabling/placement.",
+  "objective": "3.1",
+  "objectives": [
+   "3.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Which system tracks IP address assignments and available ranges?",
+  "options": [
+   "WLC",
+   "SIEM",
+   "IPAM",
+   "PDU"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "IP Address Management (IPAM) tracks allocations, subnets, and free space.",
+  "objective": "3.1",
+  "objectives": [
+   "3.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "A scheduled period for performing disruptive changes is called a:",
+  "options": [
+   "Maintenance window",
+   "Change freeze",
+   "Rollback",
+   "Baseline"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "A maintenance window is the approved time to make changes with minimal user impact.",
+  "objective": "3.1",
+  "objectives": [
+   "3.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Which agreement protects confidential information shared between parties?",
+  "options": [
+   "NDA",
+   "SLA",
+   "AUP",
+   "SOW"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "A Non-Disclosure Agreement legally protects shared confidential information.",
+  "objective": "3.1",
+  "objectives": [
+   "3.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Before a risky change, what ensures you can return to the prior working state?",
+  "options": [
+   "Skipping approval",
+   "A documented rollback/backout plan",
+   "Disabling logging",
+   "Deleting old configs"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "A rollback plan (plus a config backup) lets you revert if the change fails.",
+  "objective": "3.1",
+  "objectives": [
+   "3.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "A policy governing employees using personal devices on the corporate network is a:",
+  "options": [
+   "NDA",
+   "Runbook",
+   "SLA",
+   "BYOD policy"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "A Bring Your Own Device policy sets rules for personal devices accessing company resources.",
+  "objective": "3.1",
+  "objectives": [
+   "3.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Which protocol polls devices for health metrics and can receive event traps?",
+  "options": [
+   "SMTP",
+   "ARP",
+   "SNMP",
+   "NTP"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "SNMP polls managed devices (161) and receives traps (162) for monitoring.",
+  "objective": "3.2",
+  "objectives": [
+   "3.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Which SNMP version provides authentication and encryption?",
+  "options": [
+   "SNMPv1",
+   "SNMPv2c",
+   "SNMPv2",
+   "SNMPv3"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Only SNMPv3 adds authentication and encryption; v1/v2c use cleartext community strings.",
+  "objective": "3.2",
+  "objectives": [
+   "3.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Which centralizes log messages rated by severity levels 0–7?",
+  "options": [
+   "SNMP traps",
+   "DNS",
+   "NetFlow",
+   "Syslog"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Syslog sends severity-ranked event messages to a central collector, usually UDP 514.",
+  "objective": "3.2",
+  "objectives": [
+   "3.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Which data source shows which hosts exchanged the most traffic (top talkers)?",
+  "options": [
+   "Flow data (NetFlow/sFlow/IPFIX)",
+   "A ping sweep",
+   "An ARP table",
+   "Syslog"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "Flow records summarize conversations and byte counts, revealing top talkers.",
+  "objective": "3.2",
+  "objectives": [
+   "3.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "What is the purpose of establishing a performance baseline?",
+  "options": [
+   "To encrypt traffic",
+   "To assign IPs",
+   "To define normal so anomalies can be detected",
+   "To block broadcasts"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "A baseline captures normal metrics so deviations stand out later.",
+  "objective": "3.2",
+  "objectives": [
+   "3.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Which platform aggregates and correlates logs and alerts for security analysis?",
+  "options": [
+   "WLC",
+   "PDU",
+   "IPAM",
+   "SIEM"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "A SIEM centralizes, correlates, and alerts on security event data.",
+  "objective": "3.2",
+  "objectives": [
+   "3.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Rising interface 'discards' most directly indicate what?",
+  "options": [
+   "A DHCP scope issue",
+   "A DNS error",
+   "Congestion or buffer overruns dropping packets",
+   "Correct operation"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Discards are packets dropped (often due to congestion/queue limits), signaling a performance problem.",
+  "objective": "3.2",
+  "objectives": [
+   "3.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Which metric measures the variation in packet delay over time?",
+  "options": [
+   "Bandwidth",
+   "Jitter",
+   "Latency",
+   "Throughput"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Jitter is the variability in latency; high jitter harms real-time media.",
+  "objective": "3.2",
+  "objectives": [
+   "3.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "An SNMP manager receives an unsolicited alert from a device. This is a:",
+  "options": [
+   "Poll",
+   "Trap",
+   "Zone transfer",
+   "Baseline"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Traps are device-initiated SNMP notifications sent without being polled.",
+  "objective": "3.2",
+  "objectives": [
+   "3.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Which tool would best verify end-to-end latency over time between two sites?",
+  "options": [
+   "A cable certifier",
+   "A punchdown tool",
+   "A tone generator",
+   "A continuous ping/latency monitor (e.g., mtr/pathping)"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Latency monitors like mtr/pathping sample round-trip time over time to trend performance.",
+  "objective": "3.2",
+  "objectives": [
+   "3.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Which approach samples a subset of packets to estimate traffic statistics at scale?",
+  "options": [
+   "Full packet capture of everything",
+   "Syslog",
+   "ARP inspection",
+   "sFlow"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "sFlow samples packets to scale flow monitoring on high-speed links.",
+  "objective": "3.2",
+  "objectives": [
+   "3.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Which metric defines how quickly a service must be restored after an outage?",
+  "options": [
+   "SLA",
+   "MTBF",
+   "RTO",
+   "RPO"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Recovery Time Objective is the target time to restore service.",
+  "objective": "3.3",
+  "objectives": [
+   "3.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Backups run every hour. Which metric does that interval primarily satisfy?",
+  "options": [
+   "MTTR",
+   "RTO",
+   "RPO",
+   "MTBF"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "RPO (tolerable data loss) drives backup frequency.",
+  "objective": "3.3",
+  "objectives": [
+   "3.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "A fully equipped, continuously running alternate facility is a:",
+  "options": [
+   "Cold site",
+   "Warm site",
+   "Demilitarized zone",
+   "Hot site"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "A hot site mirrors production for near-instant failover.",
+  "objective": "3.3",
+  "objectives": [
+   "3.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "A site with space and power but no installed equipment is a:",
+  "options": [
+   "Hot site",
+   "Cold site",
+   "Edge site",
+   "Warm site"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "A cold site is the cheapest and slowest; gear and data must be brought in.",
+  "objective": "3.3",
+  "objectives": [
+   "3.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Which protocol provides a redundant virtual default gateway?",
+  "options": [
+   "VRRP/HSRP (FHRP)",
+   "SNMP",
+   "STP",
+   "OSPF"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "First-Hop Redundancy Protocols share a virtual gateway IP across redundant routers.",
+  "objective": "3.3",
+  "objectives": [
+   "3.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Which backup type copies only data changed since the last FULL backup and does not reset the archive bit?",
+  "options": [
+   "Incremental",
+   "Full",
+   "Snapshot",
+   "Differential"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Differential backups grow until the next full; incrementals copy changes since the last backup of any type.",
+  "objective": "3.3",
+  "objectives": [
+   "3.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "The 3-2-1 backup rule recommends:",
+  "options": [
+   "3 copies all on one server",
+   "3 sites, 2 admins, 1 vendor",
+   "3 drives, 2 clouds, 1 tape only",
+   "3 copies, 2 media types, 1 offsite"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "3-2-1: three copies on two different media with one stored offsite.",
+  "objective": "3.3",
+  "objectives": [
+   "3.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Which reliability metric is the average time a component runs before failing?",
+  "options": [
+   "RPO",
+   "MTTR",
+   "MTBF",
+   "RTO"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Mean Time Between Failures estimates average uptime between failures; MTTR is repair time.",
+  "objective": "3.3",
+  "objectives": [
+   "3.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Adding one spare component beyond the minimum needed is called:",
+  "options": [
+   "N+1 redundancy",
+   "Full mesh",
+   "Round robin",
+   "Zero redundancy"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "N+1 provides one extra unit (power supply, fan, device) for resilience.",
+  "objective": "3.3",
+  "objectives": [
+   "3.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Why should backups be tested with periodic restores?",
+  "options": [
+   "To increase RPO",
+   "To use more storage",
+   "To verify the backups are actually recoverable",
+   "To disable logging"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "An untested backup may be corrupt or incomplete; test restores prove recoverability.",
+  "objective": "3.3",
+  "objectives": [
+   "3.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "A partially prepared recovery site with equipment staged but needing setup and data is a:",
+  "options": [
+   "Cold site",
+   "Hot site",
+   "Mobile site",
+   "Warm site"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "A warm site has hardware ready but requires configuration and recent data to go live.",
+  "objective": "3.3",
+  "objectives": [
+   "3.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 11,
+  "chapter_title": "Operations: Processes, DR & Monitoring"
+ },
+ {
+  "q": "Which is the correct DHCP message order?",
+  "options": [
+   "Offer, Request, Discover, Acknowledge",
+   "Request, Discover, Offer, Acknowledge",
+   "Discover, Request, Acknowledge, Offer",
+   "Discover, Offer, Request, Acknowledge"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "DHCP follows DORA: Discover, Offer, Request, Acknowledge.",
+  "objective": "3.4",
+  "objectives": [
+   "3.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "Which DNS record maps a hostname to an IPv4 address?",
+  "options": [
+   "A",
+   "AAAA",
+   "MX",
+   "CNAME"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "An A record maps a name to an IPv4 address; AAAA is for IPv6.",
+  "objective": "3.4",
+  "objectives": [
+   "3.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "Which DNS record is an alias pointing one name to another name?",
+  "options": [
+   "A",
+   "NS",
+   "PTR",
+   "CNAME"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "A CNAME aliases one hostname to another canonical name.",
+  "objective": "3.4",
+  "objectives": [
+   "3.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "Which DNS record holds SPF or DKIM data for email validation?",
+  "options": [
+   "TXT",
+   "SRV",
+   "MX",
+   "PTR"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "TXT records store SPF, DKIM, and domain-verification text.",
+  "objective": "3.4",
+  "objectives": [
+   "3.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "Clients on a subnet without a DHCP server can still get addresses if the router is configured with a:",
+  "options": [
+   "DHCP relay / IP helper",
+   "Loopback",
+   "Static ARP",
+   "Default route"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "An IP helper forwards DHCP broadcasts to a server on another subnet.",
+  "objective": "3.4",
+  "objectives": [
+   "3.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "Which service keeps device clocks synchronized for logging and authentication?",
+  "options": [
+   "SNMP",
+   "NTP",
+   "DNS",
+   "DHCP"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Network Time Protocol (UDP 123) synchronizes clocks, which logs, certs, and Kerberos depend on.",
+  "objective": "3.4",
+  "objectives": [
+   "3.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "A host self-configures its IPv6 address from a router advertisement using:",
+  "options": [
+   "NAT64",
+   "APIPA",
+   "DHCPv4",
+   "SLAAC"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Stateless Address Autoconfiguration builds an IPv6 address from router advertisements.",
+  "objective": "3.4",
+  "objectives": [
+   "3.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "Which DNS record provides reverse resolution (IP to name)?",
+  "options": [
+   "PTR",
+   "A",
+   "AAAA",
+   "MX"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "PTR records map an IP address back to a hostname in reverse zones.",
+  "objective": "3.4",
+  "objectives": [
+   "3.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "A DHCP entry that always gives a printer the same IP by its MAC is a:",
+  "options": [
+   "Scope option",
+   "Reservation",
+   "Relay",
+   "Exclusion"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "A reservation binds a specific address to a device's MAC.",
+  "objective": "3.4",
+  "objectives": [
+   "3.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "Which DNS value controls how long other servers cache a record?",
+  "options": [
+   "MX priority",
+   "SOA refresh only",
+   "Prefix length",
+   "TTL"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "The record's Time To Live determines its caching duration.",
+  "objective": "3.4",
+  "objectives": [
+   "3.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "Which management access works even when the production network is down?",
+  "options": [
+   "In-band HTTPS",
+   "In-band SSH",
+   "Out-of-band (console/dedicated mgmt port)",
+   "SNMP"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Out-of-band paths are independent of the production network.",
+  "objective": "3.5",
+  "objectives": [
+   "3.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "Which should replace Telnet for device management?",
+  "options": [
+   "SNMPv1",
+   "FTP",
+   "SSH",
+   "HTTP"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "SSH encrypts the management session; Telnet is cleartext.",
+  "objective": "3.5",
+  "objectives": [
+   "3.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "A hardened gateway administrators connect through to reach internal systems is a:",
+  "options": [
+   "Load balancer",
+   "Honeypot",
+   "Jump box / bastion host",
+   "Proxy ARP"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "A jump box is a secured intermediary for administrative access.",
+  "objective": "3.5",
+  "objectives": [
+   "3.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "Which VPN type connects an individual remote worker's device to the corporate network?",
+  "options": [
+   "GRE without encryption",
+   "Client-to-site (remote-access) VPN",
+   "Site-to-site VPN",
+   "A console cable"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "A remote-access VPN tunnels a single user's traffic to the corporate network.",
+  "objective": "3.5",
+  "objectives": [
+   "3.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "Which VPN type permanently links two office networks over the internet?",
+  "options": [
+   "SSL portal for one user",
+   "Site-to-site VPN",
+   "Client-to-site VPN",
+   "Dial-up"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Site-to-site VPNs connect entire networks (e.g., branch to HQ) via gateways.",
+  "objective": "3.5",
+  "objectives": [
+   "3.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "Secure web-based management of a device should use which protocol?",
+  "options": [
+   "Telnet",
+   "TFTP",
+   "HTTP",
+   "HTTPS"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "HTTPS encrypts web management traffic; HTTP sends it in the clear.",
+  "objective": "3.5",
+  "objectives": [
+   "3.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "Which cable connects a laptop to a switch's console port for initial setup?",
+  "options": [
+   "Fiber patch",
+   "Crossover",
+   "Rollover (console) cable",
+   "Straight-through"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "A rollover/console cable connects to the device's console port for out-of-band CLI setup.",
+  "objective": "3.5",
+  "objectives": [
+   "3.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "Which protocol allows encrypted file transfer within an SSH session?",
+  "options": [
+   "FTP",
+   "SFTP",
+   "TFTP",
+   "Telnet"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "SFTP runs over SSH (TCP 22), encrypting file transfers.",
+  "objective": "3.5",
+  "objectives": [
+   "3.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "A dedicated physical port used only to manage a device is called a:",
+  "options": [
+   "Management (out-of-band) port",
+   "Mirror port",
+   "Trunk port",
+   "Uplink port"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "A separate management port isolates administrative access from production traffic.",
+  "objective": "3.5",
+  "objectives": [
+   "3.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "Why is NTP important to out-of-band and in-band management security?",
+  "options": [
+   "It encrypts SSH",
+   "It assigns IP addresses",
+   "Accurate time keeps certificates and logs valid and correlated",
+   "It routes between VLANs"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Synchronized time is required for valid TLS certs, Kerberos, and correlating logs across devices.",
+  "objective": "3.5",
+  "objectives": [
+   "3.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
+  "q": "A browser-based VPN requiring no client software typically uses:",
+  "options": [
+   "GRE",
+   "IPsec transport mode only",
+   "L2TP without IPsec",
+   "SSL/TLS (clientless) VPN"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Clientless SSL VPNs provide access through the browser using TLS.",
+  "objective": "3.5",
+  "objectives": [
+   "3.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 12,
+  "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
+ },
+ {
   "q": "What is the purpose of a formal change-management process?",
   "options": [
    "Encrypt management traffic",
@@ -2164,6 +6258,651 @@
   "chapter_title": "Network Services & Access Methods (IPv4/IPv6)"
  },
  {
+  "q": "Which triad defines the core goals of information security?",
+  "options": [
+   "People, Process, Technology",
+   "Authentication, Authorization, Accounting",
+   "Confidentiality, Integrity, Availability",
+   "Detect, Respond, Recover"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "The CIA triad — Confidentiality, Integrity, Availability — frames security objectives.",
+  "objective": "4.1",
+  "objectives": [
+   "4.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "Which protocol provides centralized AAA and is used with 802.1X?",
+  "options": [
+   "RADIUS",
+   "NTP",
+   "ICMP",
+   "SNMP"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "RADIUS centralizes authentication, authorization, and accounting for network access.",
+  "objective": "4.1",
+  "objectives": [
+   "4.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "Granting a user only the permissions needed for their job is which principle?",
+  "options": [
+   "Defense in depth",
+   "Least privilege",
+   "Implicit allow",
+   "Separation of duties"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Least privilege minimizes rights to limit the impact of a compromise.",
+  "objective": "4.1",
+  "objectives": [
+   "4.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "Splitting a critical task so no single person controls it end-to-end is:",
+  "options": [
+   "Dual stack",
+   "Least privilege",
+   "Zero trust",
+   "Separation of duties"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Separation of duties reduces fraud/error by dividing control of sensitive tasks.",
+  "objective": "4.1",
+  "objectives": [
+   "4.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "Layering multiple independent security controls is called:",
+  "options": [
+   "Defense in depth",
+   "Single sign-on",
+   "Implicit deny",
+   "Flat network"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "Defense in depth stacks controls so one failure doesn't breach everything.",
+  "objective": "4.1",
+  "objectives": [
+   "4.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "Which AAA component logs what a user did after authenticating?",
+  "options": [
+   "Authorization",
+   "Accounting",
+   "Attestation",
+   "Authentication"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Accounting records actions/usage; authentication verifies identity and authorization grants access.",
+  "objective": "4.1",
+  "objectives": [
+   "4.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "A model that trusts no device or user by default and verifies every request is:",
+  "options": [
+   "Transitive trust",
+   "Zero trust",
+   "Open trust",
+   "Perimeter security"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Zero trust authenticates and least-privileges every request regardless of location.",
+  "objective": "4.1",
+  "objectives": [
+   "4.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "Which term is a weakness that could be exploited?",
+  "options": [
+   "Risk",
+   "Vulnerability",
+   "Exploit",
+   "Threat"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "A vulnerability is a weakness; a threat is a potential cause; an exploit is the attack; risk is likelihood × impact.",
+  "objective": "4.1",
+  "objectives": [
+   "4.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "A security control that discourages or stops an attack before it happens is:",
+  "options": [
+   "Preventive",
+   "Forensic",
+   "Detective",
+   "Corrective"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "Preventive controls (locks, ACLs, MFA) stop incidents; detective controls find them.",
+  "objective": "4.1",
+  "objectives": [
+   "4.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "Multi-factor authentication combines which categories?",
+  "options": [
+   "Something you know, have, and/or are",
+   "Two passwords",
+   "Two usernames",
+   "Two IP addresses"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "MFA combines factors from different categories (knowledge, possession, inherence).",
+  "objective": "4.1",
+  "objectives": [
+   "4.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "Which protocol is a Cisco AAA alternative to RADIUS that encrypts the entire payload?",
+  "options": [
+   "Kerberos",
+   "LDAP",
+   "SNMP",
+   "TACACS+"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "TACACS+ provides AAA (often for device administration) and encrypts the full packet body.",
+  "objective": "4.1",
+  "objectives": [
+   "4.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "Forging ARP replies to intercept LAN traffic is which attack?",
+  "options": [
+   "ARP spoofing/poisoning",
+   "DNS poisoning",
+   "VLAN hopping",
+   "MAC flooding"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "ARP spoofing maps the attacker's MAC to a victim's IP to intercept traffic (enabling on-path).",
+  "objective": "4.2",
+  "objectives": [
+   "4.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "An attacker relays and may alter traffic between two parties. This is a(n):",
+  "options": [
+   "Rogue DHCP",
+   "On-path (MITM) attack",
+   "DoS",
+   "Phishing"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "An on-path/man-in-the-middle attacker sits between endpoints to read or modify traffic.",
+  "objective": "4.2",
+  "objectives": [
+   "4.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "Overflowing a switch's MAC table to force it to flood frames is:",
+  "options": [
+   "Smurf attack",
+   "ARP poisoning",
+   "MAC flooding",
+   "DNS spoofing"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "MAC flooding fills the CAM table so the switch floods frames, enabling sniffing.",
+  "objective": "4.2",
+  "objectives": [
+   "4.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "A fake access point impersonating a legitimate SSID is a(n):",
+  "options": [
+   "Honeypot",
+   "Evil twin",
+   "Jump box",
+   "Bastion host"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "An evil twin mimics a trusted SSID to capture client connections and data.",
+  "objective": "4.2",
+  "objectives": [
+   "4.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "Forged 802.11 frames knocking Wi-Fi clients off the network is a:",
+  "options": [
+   "ARP spoof",
+   "DNS poison",
+   "SQL injection",
+   "Deauthentication attack"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Deauth attacks spoof management frames to disconnect clients (a wireless DoS).",
+  "objective": "4.2",
+  "objectives": [
+   "4.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "Reaching VLANs beyond the assigned one via double-tagging is:",
+  "options": [
+   "VLAN hopping",
+   "Smurf",
+   "Teardrop",
+   "Evil twin"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "VLAN hopping uses double-tagging or switch spoofing to reach other VLANs.",
+  "objective": "4.2",
+  "objectives": [
+   "4.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "An impostor DHCP server handing out malicious gateway/DNS settings is a:",
+  "options": [
+   "Honeypot",
+   "Proxy",
+   "Rogue DHCP server",
+   "Rogue AP"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "A rogue DHCP server poisons clients with attacker-controlled network settings; DHCP snooping blocks it.",
+  "objective": "4.2",
+  "objectives": [
+   "4.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "Corrupting DNS responses to redirect users to malicious sites is:",
+  "options": [
+   "ARP spoofing",
+   "MAC flooding",
+   "Deauth",
+   "DNS poisoning/spoofing"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "DNS poisoning injects false records so names resolve to attacker-controlled IPs.",
+  "objective": "4.2",
+  "objectives": [
+   "4.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "Tricking a person into revealing credentials via a fake email is:",
+  "options": [
+   "Phishing (social engineering)",
+   "Fuzzing",
+   "Port scanning",
+   "ARP spoofing"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "Phishing targets the human to harvest credentials or deliver malware.",
+  "objective": "4.2",
+  "objectives": [
+   "4.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "A flood of traffic from thousands of compromised hosts is a:",
+  "options": [
+   "SQL injection",
+   "On-path attack",
+   "Tailgating",
+   "DDoS attack"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "A Distributed Denial-of-Service uses a botnet to overwhelm a target.",
+  "objective": "4.2",
+  "objectives": [
+   "4.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 13,
+  "chapter_title": "Security Concepts & Attacks"
+ },
+ {
+  "q": "Which firewall type tracks connection state and auto-allows return traffic?",
+  "options": [
+   "Repeater",
+   "Stateless packet filter",
+   "Stateful firewall",
+   "Hub"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Stateful firewalls track sessions and permit return traffic for allowed connections.",
+  "objective": "4.3",
+  "objectives": [
+   "4.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 14,
+  "chapter_title": "Network Defense Techniques & Solutions"
+ },
+ {
+  "q": "Where should internet-facing servers be placed?",
+  "options": [
+   "On the management VLAN",
+   "In a screened subnet (DMZ)",
+   "On the internal user VLAN",
+   "Directly exposed with no firewall"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "A DMZ isolates public servers from the internal LAN behind firewall boundaries.",
+  "objective": "4.3",
+  "objectives": [
+   "4.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 14,
+  "chapter_title": "Network Defense Techniques & Solutions"
+ },
+ {
+  "q": "Which switch feature stops ARP spoofing by validating ARP against DHCP snooping data?",
+  "options": [
+   "PortFast",
+   "Dynamic ARP Inspection",
+   "Jumbo frames",
+   "Trunking"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Dynamic ARP Inspection drops forged ARP packets.",
+  "objective": "4.3",
+  "objectives": [
+   "4.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 14,
+  "chapter_title": "Network Defense Techniques & Solutions"
+ },
+ {
+  "q": "Which checks a device's patch and antivirus posture before granting access?",
+  "options": [
+   "NAT",
+   "QoS",
+   "STP",
+   "NAC"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Network Access Control enforces identity and posture checks before admission.",
+  "objective": "4.3",
+  "objectives": [
+   "4.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 14,
+  "chapter_title": "Network Defense Techniques & Solutions"
+ },
+ {
+  "q": "An ACL has no matching permit for some traffic. What happens?",
+  "options": [
+   "It is logged and permitted",
+   "It is permitted",
+   "It is routed to the DMZ",
+   "The implicit deny drops it"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "ACLs end with an implicit deny; unmatched traffic is dropped.",
+  "objective": "4.3",
+  "objectives": [
+   "4.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 14,
+  "chapter_title": "Network Defense Techniques & Solutions"
+ },
+ {
+  "q": "Which limits the number of MAC addresses allowed on a switch port and can disable it on violation?",
+  "options": [
+   "Spanning Tree",
+   "QoS",
+   "LACP",
+   "Port security"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Port security restricts MACs per port and can shut the port on a violation.",
+  "objective": "4.3",
+  "objectives": [
+   "4.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 14,
+  "chapter_title": "Network Defense Techniques & Solutions"
+ },
+ {
+  "q": "Two basic device-hardening steps are to: (Choose two.)",
+  "options": [
+   "Enable Telnet",
+   "Change default credentials",
+   "Disable unused ports and services",
+   "Leave firmware unpatched"
+  ],
+  "answer": 1,
+  "answers": [
+   1,
+   2
+  ],
+  "multi": true,
+  "explanation": "Hardening changes defaults and reduces attack surface; Telnet and unpatched firmware are risks.",
+  "objective": "4.3",
+  "objectives": [
+   "4.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 14,
+  "chapter_title": "Network Defense Techniques & Solutions"
+ },
+ {
   "q": "What do the three A's in AAA stand for?",
   "options": [
    "Authentication, Access, Auditing",
@@ -2623,6 +7362,1317 @@
   "original": true,
   "chapter": 14,
   "chapter_title": "Network Defense Techniques & Solutions"
+ },
+ {
+  "q": "What is the first step of the CompTIA troubleshooting methodology?",
+  "options": [
+   "Identify the problem",
+   "Establish a theory",
+   "Implement the solution",
+   "Document findings"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "Step 1 is identifying the problem by gathering information and asking what changed.",
+  "objective": "5.1",
+  "objectives": [
+   "5.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "After establishing a plan of action, what comes next?",
+  "options": [
+   "Document findings",
+   "Implement the solution or escalate",
+   "Identify the problem",
+   "Establish a theory"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Implementation (or escalation) follows the plan of action.",
+  "objective": "5.1",
+  "objectives": [
+   "5.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "You implemented a fix. What must you do before documenting?",
+  "options": [
+   "Close the ticket immediately",
+   "Verify full system functionality and apply preventive measures",
+   "Escalate to the vendor",
+   "Reboot all devices"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Verify the fix works end-to-end (and prevent recurrence) before documenting.",
+  "objective": "5.1",
+  "objectives": [
+   "5.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "Which troubleshooting approach starts at a middle OSI layer and moves up or down?",
+  "options": [
+   "Trial and error",
+   "Divide and conquer",
+   "Bottom-up only",
+   "Top-down only"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Divide-and-conquer begins mid-stack and narrows direction based on results.",
+  "objective": "5.1",
+  "objectives": [
+   "5.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "A single user reports an outage. What should you gather first?",
+  "options": [
+   "A new switch",
+   "Information on symptoms and recent changes",
+   "Vendor RMA paperwork",
+   "A packet capture of the whole network"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Identifying the problem starts with symptoms and what changed.",
+  "objective": "5.1",
+  "objectives": [
+   "5.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "Your theory is confirmed after testing. What is next?",
+  "options": [
+   "Escalate",
+   "Establish a plan of action",
+   "Document and close",
+   "Form a new theory"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "A confirmed theory leads to planning the fix.",
+  "objective": "5.1",
+  "objectives": [
+   "5.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "Your tested theory is disproven. What should you do?",
+  "options": [
+   "Replace all hardware",
+   "Establish a new theory or escalate",
+   "Document and close the ticket",
+   "Implement a fix anyway"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "If not confirmed, re-theorize or escalate rather than proceed to a fix.",
+  "objective": "5.1",
+  "objectives": [
+   "5.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "Why is 'what changed recently?' a key troubleshooting question?",
+  "options": [
+   "It encrypts traffic",
+   "Most incidents follow a recent change",
+   "It assigns IP addresses",
+   "It resets the switch"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Recent changes are the most common root cause, so identifying them narrows the search fast.",
+  "objective": "5.1",
+  "objectives": [
+   "5.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "A bottom-up approach begins at which OSI layer?",
+  "options": [
+   "Layer 3 (Network)",
+   "Layer 7 (Application)",
+   "Layer 4 (Transport)",
+   "Layer 1 (Physical)"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Bottom-up starts at the physical layer (check the cable/link) and works upward.",
+  "objective": "5.1",
+  "objectives": [
+   "5.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "What is the final step of the methodology?",
+  "options": [
+   "Implement the solution",
+   "Test the theory",
+   "Verify functionality",
+   "Document findings, actions, and outcomes"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Documentation is always the last step, so the fix and lessons learned are recorded for next time.",
+  "objective": "5.1",
+  "objectives": [
+   "5.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "A problem exceeds your access or expertise. The methodology says to:",
+  "options": [
+   "Guess repeatedly",
+   "Escalate",
+   "Close the ticket",
+   "Ignore it"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Escalation is appropriate when a fix is beyond your scope, rather than trial-and-error.",
+  "objective": "5.1",
+  "objectives": [
+   "5.1"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "A new cable fails a wiremap test showing pins 1 and 2 crossed. The fault is:",
+  "options": [
+   "Duplex mismatch",
+   "EMI",
+   "Attenuation",
+   "Miswire / incorrect pinout"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "A failed wiremap with crossed pins indicates termination/pinout error.",
+  "objective": "5.2",
+  "objectives": [
+   "5.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "Signal weakening over an overly long run causing errors is:",
+  "options": [
+   "Reflection",
+   "EMI",
+   "Attenuation",
+   "Crosstalk"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Attenuation is loss of signal strength with distance; exceeding length limits causes errors.",
+  "objective": "5.2",
+  "objectives": [
+   "5.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "Signal bleeding between adjacent wire pairs is:",
+  "options": [
+   "Attenuation",
+   "Jitter",
+   "Crosstalk",
+   "Latency"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Crosstalk (e.g., NEXT) is interference between pairs, often from split or untwisted pairs.",
+  "objective": "5.2",
+  "objectives": [
+   "5.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "Interference from nearby power lines or motors on copper is:",
+  "options": [
+   "Attenuation",
+   "Reflection",
+   "EMI",
+   "Dispersion"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Electromagnetic interference corrupts signals on unshielded copper; use STP or fiber or reroute.",
+  "objective": "5.2",
+  "objectives": [
+   "5.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "A fiber link has high loss and intermittent errors after a move. What is a common first check?",
+  "options": [
+   "Increase the MTU",
+   "Enable jumbo frames",
+   "Clean the fiber connectors",
+   "Change the VLAN"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Dirty/contaminated fiber connectors are a leading cause of loss; clean before replacing.",
+  "objective": "5.2",
+  "objectives": [
+   "5.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "One side is set full duplex, the other half. The result is:",
+  "options": [
+   "Collisions, errors, and poor throughput",
+   "A new VLAN",
+   "Faster speeds",
+   "Encrypted traffic"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "A duplex mismatch causes late collisions and drastically reduced throughput.",
+  "objective": "5.2",
+  "objectives": [
+   "5.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "No link light and a tester shows an open on one conductor. The fault is a:",
+  "options": [
+   "Correct wiremap",
+   "Short",
+   "Broken conductor (open)",
+   "Duplex mismatch"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "An open is a broken conductor; a short is two conductors touching.",
+  "objective": "5.2",
+  "objectives": [
+   "5.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "A 10GBASE-T link won't come up on Cat 5e at 95 m. The likely issue is:",
+  "options": [
+   "Bad default gateway",
+   "Cable category/length can't support 10G at that distance",
+   "Wrong VLAN",
+   "DNS failure"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Cat 5e doesn't support 10G; Cat 6 reaches 10G only to ~55 m, Cat 6a to 100 m.",
+  "objective": "5.2",
+  "objectives": [
+   "5.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "An SFP won't link to the far end though both show 'up'. A common cause is:",
+  "options": [
+   "ACL implicit deny",
+   "Wrong DHCP scope",
+   "Transceiver/wavelength or TX/RX mismatch",
+   "Expired certificate"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Mismatched optics (type/wavelength) or swapped TX/RX fibers prevent a fiber link.",
+  "objective": "5.2",
+  "objectives": [
+   "5.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "Which quickly tests whether a NIC/port is functional by looping its signal?",
+  "options": [
+   "Toner probe",
+   "Crimper",
+   "Loopback plug",
+   "Punchdown tool"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "A loopback plug reflects the port's signal back to test the interface.",
+  "objective": "5.2",
+  "objectives": [
+   "5.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "Which condition describes two conductors touching, causing a fault?",
+  "options": [
+   "Short",
+   "Crosstalk",
+   "Open",
+   "Split pair"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "A short is an unintended connection between two conductors.",
+  "objective": "5.2",
+  "objectives": [
+   "5.2"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 15,
+  "chapter_title": "Troubleshooting Methodology, Cabling & Physical"
+ },
+ {
+  "q": "A host pings an IP successfully but cannot resolve any hostnames. The issue is:",
+  "options": [
+   "Physical cabling",
+   "Default gateway",
+   "Duplex mismatch",
+   "DNS"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "IP works but names fail points to DNS resolution.",
+  "objective": "5.3",
+  "objectives": [
+   "5.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "Several PCs show 169.254.x.x addresses. The likely cause is:",
+  "options": [
+   "Bad individual cables",
+   "DNS outage",
+   "DHCP server or relay failure (APIPA)",
+   "Wrong subnet masks typed manually"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Multiple APIPA addresses indicate no DHCP response reaching the clients.",
+  "objective": "5.3",
+  "objectives": [
+   "5.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "A client reaches local hosts but nothing on other subnets. Check the:",
+  "options": [
+   "DNS cache",
+   "Wi-Fi SSID",
+   "Patch cable to the PC",
+   "Default gateway / routing"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Local works but remote fails usually means a gateway or routing problem.",
+  "objective": "5.3",
+  "objectives": [
+   "5.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "A web service is up but unreachable on its port from clients. What should you check?",
+  "options": [
+   "The monitor cable",
+   "The rack height",
+   "Firewall/ACL rules blocking the port",
+   "The DNS TTL"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "A running service unreachable on its port is typically blocked by a firewall/ACL.",
+  "objective": "5.3",
+  "objectives": [
+   "5.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "TLS certificate errors appear across many devices after a power event. A likely cause is:",
+  "options": [
+   "A bad patch panel",
+   "DHCP exhaustion",
+   "A duplex mismatch",
+   "Clocks are out of sync (NTP failure)"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Wrong time invalidates certificates (and Kerberos); check NTP synchronization.",
+  "objective": "5.3",
+  "objectives": [
+   "5.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "nslookup returns the wrong IP for a known site. This suggests:",
+  "options": [
+   "A duplex mismatch",
+   "DNS poisoning or a stale/incorrect record",
+   "A broken gateway",
+   "Attenuation"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Incorrect name-to-IP answers point to DNS poisoning or bad/cached records.",
+  "objective": "5.3",
+  "objectives": [
+   "5.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "DHCP clients intermittently fail to get addresses during busy hours. A likely cause is:",
+  "options": [
+   "DNS TTL too high",
+   "Wrong cable category",
+   "EMI on fiber",
+   "Scope/address-pool exhaustion"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "A depleted DHCP scope leaves new clients unable to lease addresses.",
+  "objective": "5.3",
+  "objectives": [
+   "5.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "After moving a server, users can ping it but a specific application won't connect. Check:",
+  "options": [
+   "The application's port and firewall rules",
+   "The DNS reverse zone only",
+   "The server's rack unit",
+   "The power feed"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "Reachable by ping but not by app usually means the app's port is blocked or the service is down.",
+  "objective": "5.3",
+  "objectives": [
+   "5.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "A single workstation can't reach anything, but others on the switch are fine. Start by checking:",
+  "options": [
+   "That host's cable, NIC, and IP configuration",
+   "The entire VLAN",
+   "The core router",
+   "The DNS server"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "An isolated single-host failure points to local cabling, NIC, or IP config.",
+  "objective": "5.3",
+  "objectives": [
+   "5.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "Users report a site is down, but it loads by IP. Which service is implicated?",
+  "options": [
+   "DHCP",
+   "SNMP",
+   "NTP",
+   "DNS"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Loads by IP but not by name = DNS resolution problem.",
+  "objective": "5.3",
+  "objectives": [
+   "5.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "A newly added device can't communicate and has an IP in a different subnet than its peers. Check the:",
+  "options": [
+   "PoE budget",
+   "Fiber connector cleanliness",
+   "Rack grounding",
+   "IP address/subnet mask configuration"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "A wrong IP/mask places the host on the wrong subnet, breaking local communication.",
+  "objective": "5.3",
+  "objectives": [
+   "5.3"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "VoIP audio is choppy though average latency is low. The most likely cause is:",
+  "options": [
+   "MTU size",
+   "Administrative distance",
+   "Bandwidth",
+   "Jitter"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Jitter (variation in latency) disrupts real-time audio even at low average latency.",
+  "objective": "5.4",
+  "objectives": [
+   "5.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "A video call freezes repeatedly though bandwidth is plentiful. Check for:",
+  "options": [
+   "Correct VLAN",
+   "Packet loss",
+   "High bandwidth",
+   "Low administrative distance"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Packet loss forces retransmits and stutters real-time media.",
+  "objective": "5.4",
+  "objectives": [
+   "5.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "A gigabit link transfers at ~10 Mbps with late collisions. The cause is likely:",
+  "options": [
+   "QoS",
+   "Duplex mismatch",
+   "Jumbo frames",
+   "DNS"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "A duplex mismatch produces late collisions and very low throughput.",
+  "objective": "5.4",
+  "objectives": [
+   "5.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "Rising interface error and discard counters indicate a problem at which layer area?",
+  "options": [
+   "DHCP",
+   "Application logic",
+   "Physical/data-link (cabling, duplex, hardware)",
+   "DNS"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "Error/discard counters climb from cabling, duplex, or failing hardware.",
+  "objective": "5.4",
+  "objectives": [
+   "5.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "What is the difference between bandwidth and throughput?",
+  "options": [
+   "They are identical",
+   "Throughput is always higher",
+   "Bandwidth measures latency",
+   "Bandwidth is capacity; throughput is actual achieved rate"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Throughput is real data delivered after overhead, congestion, and errors; bandwidth is the theoretical max.",
+  "objective": "5.4",
+  "objectives": [
+   "5.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "A saturated uplink during peak hours causing slowness is a:",
+  "options": [
+   "Certificate error",
+   "Bandwidth bottleneck / congestion",
+   "DNS misconfiguration",
+   "Rogue DHCP"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "A congested link is a bottleneck; QoS or more capacity is the remedy.",
+  "objective": "5.4",
+  "objectives": [
+   "5.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "Wireless clients far from the AP get slow, dropping connections. A likely cause is:",
+  "options": [
+   "Wrong DNS",
+   "High administrative distance",
+   "Too many VLANs",
+   "Low RSSI / weak signal"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Weak received signal strength (RSSI) at range reduces rate and reliability.",
+  "objective": "5.4",
+  "objectives": [
+   "5.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "Which metric is the one-way or round-trip delay a packet experiences?",
+  "options": [
+   "Jitter",
+   "Bandwidth",
+   "Throughput",
+   "Latency"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Latency is delay; jitter is the variation in that delay.",
+  "objective": "5.4",
+  "objectives": [
+   "5.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "Adjacent APs set to the same channel cause which performance problem?",
+  "options": [
+   "Attenuation on fiber",
+   "ARP poisoning",
+   "Co-channel interference",
+   "Duplex mismatch"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "APs on the same channel contend for airtime, reducing throughput (co-channel interference).",
+  "objective": "5.4",
+  "objectives": [
+   "5.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "To guarantee VoIP performance on a congested link, apply:",
+  "options": [
+   "A longer DHCP lease",
+   "A new DNS record",
+   "QoS prioritization",
+   "Port mirroring"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "QoS prioritizes delay-sensitive traffic so voice isn't starved during congestion.",
+  "objective": "5.4",
+  "objectives": [
+   "5.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "A device's CPU is pegged at 100%, slowing all its traffic. This is a:",
+  "options": [
+   "DNS issue",
+   "Cabling fault",
+   "Resource/device bottleneck",
+   "VLAN hopping"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "An overloaded device CPU bottlenecks throughput regardless of link speed.",
+  "objective": "5.4",
+  "objectives": [
+   "5.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "Large transfers fail across a VPN while small pings succeed. A likely cause is:",
+  "options": [
+   "Expired DHCP lease",
+   "MTU/fragmentation mismatch",
+   "DNS poisoning",
+   "Wrong default gateway"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "Tunnels reduce the usable MTU; without proper MSS/MTU handling, large packets drop.",
+  "objective": "5.4",
+  "objectives": [
+   "5.4"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "Which command tests reachability and round-trip time to a host?",
+  "options": [
+   "netstat",
+   "route",
+   "ping",
+   "arp"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "ping uses ICMP echo to test reachability and measure RTT.",
+  "objective": "5.5",
+  "objectives": [
+   "5.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "Which shows the hop-by-hop path and where delay or loss begins?",
+  "options": [
+   "ipconfig",
+   "ping",
+   "nslookup",
+   "traceroute / tracert"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "traceroute/tracert lists each hop and its latency, revealing where the path degrades.",
+  "objective": "5.5",
+  "objectives": [
+   "5.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "Which queries DNS to troubleshoot name resolution?",
+  "options": [
+   "arp -a",
+   "route print",
+   "netstat",
+   "nslookup / dig"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "nslookup and dig query DNS servers for records to diagnose resolution issues.",
+  "objective": "5.5",
+  "objectives": [
+   "5.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "Which Windows command displays the DHCP and DNS servers a host received?",
+  "options": [
+   "tracert",
+   "ipconfig /all",
+   "ping -t",
+   "arp -d"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "ipconfig /all shows full configuration including DHCP server and DNS servers.",
+  "objective": "5.5",
+  "objectives": [
+   "5.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "Which tool captures and inspects individual packets?",
+  "options": [
+   "ipconfig",
+   "ping",
+   "nslookup",
+   "Wireshark / tcpdump"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "Wireshark (GUI) and tcpdump (CLI) are protocol analyzers that capture packets.",
+  "objective": "5.5",
+  "objectives": [
+   "5.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "Which displays the local IP-to-MAC resolution table?",
+  "options": [
+   "nslookup",
+   "route print",
+   "netstat -r",
+   "arp -a"
+  ],
+  "answer": 3,
+  "answers": [
+   3
+  ],
+  "multi": false,
+  "explanation": "arp -a lists the cached IP-to-MAC mappings the host has learned on its local segment.",
+  "objective": "5.5",
+  "objectives": [
+   "5.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "Which scans a host or subnet for open ports and running services?",
+  "options": [
+   "arp",
+   "ping",
+   "nmap",
+   "nslookup"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "nmap discovers hosts and scans for open ports/services.",
+  "objective": "5.5",
+  "objectives": [
+   "5.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "Which combines ping and traceroute to show per-hop loss over time?",
+  "options": [
+   "netstat",
+   "arp",
+   "pathping / mtr",
+   "ipconfig"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "pathping (Windows) and mtr (Linux) sample each hop over time for latency and loss.",
+  "objective": "5.5",
+  "objectives": [
+   "5.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "Which shows active connections and listening ports on a host?",
+  "options": [
+   "netstat (or ss)",
+   "tracert",
+   "nslookup",
+   "arp"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "netstat/ss list sockets, active connections, and listening ports.",
+  "objective": "5.5",
+  "objectives": [
+   "5.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "You suspect TCP port 443 is blocked to a server. Which best confirms port reachability?",
+  "options": [
+   "arp -a",
+   "telnet/Test-NetConnection to the host on 443",
+   "nslookup the host",
+   "ping the host"
+  ],
+  "answer": 1,
+  "answers": [
+   1
+  ],
+  "multi": false,
+  "explanation": "ping tests ICMP, not a port; connecting to the port confirms it's reachable.",
+  "objective": "5.5",
+  "objectives": [
+   "5.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "Which command renews a host's DHCP lease on Windows?",
+  "options": [
+   "ipconfig /renew",
+   "ipconfig /flushdns",
+   "arp -d",
+   "route add"
+  ],
+  "answer": 0,
+  "answers": [
+   0
+  ],
+  "multi": false,
+  "explanation": "ipconfig /renew requests a fresh DHCP lease (preceded by /release if needed).",
+  "objective": "5.5",
+  "objectives": [
+   "5.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
+ },
+ {
+  "q": "A host resolves names to stale IPs after a DNS change. Which command clears its resolver cache (Windows)?",
+  "options": [
+   "ipconfig /renew",
+   "arp -a",
+   "ipconfig /flushdns",
+   "netstat -an"
+  ],
+  "answer": 2,
+  "answers": [
+   2
+  ],
+  "multi": false,
+  "explanation": "ipconfig /flushdns clears the local DNS resolver cache so new lookups occur.",
+  "objective": "5.5",
+  "objectives": [
+   "5.5"
+  ],
+  "combined": false,
+  "original": true,
+  "chapter": 16,
+  "chapter_title": "Troubleshooting Services, Performance & Tools"
  },
  {
   "q": "After identifying the problem, what is the NEXT step in the troubleshooting method?",

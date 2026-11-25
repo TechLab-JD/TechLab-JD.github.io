@@ -83,114 +83,114 @@
  ],
  "practice_questions": [
   {
-   "q": "A host can ping 8.8.8.8 but cannot reach www.example.com. What is the likely issue?",
+   "q": "A host pings an IP successfully but cannot resolve any hostnames. The issue is:",
    "options": [
-    "DNS resolution",
-    "Bad cable",
-    "Default gateway down",
-    "Duplex mismatch"
+    "Physical cabling",
+    "Default gateway",
+    "Duplex mismatch",
+    "DNS"
    ],
-   "answer": 0,
-   "explanation": "Reaching an IP but not a name points to DNS; the connectivity itself works."
+   "answer": 3,
+   "explanation": "IP works but names fail points to DNS resolution."
   },
   {
-   "q": "VoIP calls are choppy though average latency is low. Which metric is most likely the culprit?",
+   "q": "VoIP audio is choppy though average latency is low. The most likely cause is:",
    "options": [
+    "MTU size",
     "Administrative distance",
-    "Jitter",
     "Bandwidth",
-    "MTU size"
+    "Jitter"
+   ],
+   "answer": 3,
+   "explanation": "Jitter (variation in latency) disrupts real-time audio even at low average latency."
+  },
+  {
+   "q": "Which command tests reachability and round-trip time to a host?",
+   "options": [
+    "netstat",
+    "route",
+    "ping",
+    "arp"
+   ],
+   "answer": 2,
+   "explanation": "ping uses ICMP echo to test reachability and measure RTT."
+  },
+  {
+   "q": "Several PCs show 169.254.x.x addresses. The likely cause is:",
+   "options": [
+    "Bad individual cables",
+    "DNS outage",
+    "DHCP server or relay failure (APIPA)",
+    "Wrong subnet masks typed manually"
+   ],
+   "answer": 2,
+   "explanation": "Multiple APIPA addresses indicate no DHCP response reaching the clients."
+  },
+  {
+   "q": "A video call freezes repeatedly though bandwidth is plentiful. Check for:",
+   "options": [
+    "Correct VLAN",
+    "Packet loss",
+    "High bandwidth",
+    "Low administrative distance"
    ],
    "answer": 1,
-   "explanation": "Jitter (variation in latency) degrades real-time audio even when average latency looks fine."
+   "explanation": "Packet loss forces retransmits and stutters real-time media."
   },
   {
-   "q": "Which command shows the full hop-by-hop path to a destination and where latency appears?",
+   "q": "Which shows the hop-by-hop path and where delay or loss begins?",
    "options": [
-    "ipconfig /all",
-    "arp -a",
+    "ipconfig",
     "ping",
+    "nslookup",
     "traceroute / tracert"
    ],
    "answer": 3,
-   "explanation": "traceroute/tracert lists each hop and its round-trip time, revealing where the path degrades."
+   "explanation": "traceroute/tracert lists each hop and its latency, revealing where the path degrades."
   },
   {
-   "q": "A PC shows a 169.254.x.x address. What failed?",
+   "q": "A client reaches local hosts but nothing on other subnets. Check the:",
    "options": [
-    "The default gateway",
-    "NTP synchronization",
-    "DNS resolution",
-    "It could not reach a DHCP server (APIPA)"
+    "DNS cache",
+    "Wi-Fi SSID",
+    "Patch cable to the PC",
+    "Default gateway / routing"
    ],
    "answer": 3,
-   "explanation": "A 169.254 APIPA address means no DHCP server responded."
+   "explanation": "Local works but remote fails usually means a gateway or routing problem."
   },
   {
-   "q": "Rising interface error and discard counters most likely indicate what?",
+   "q": "A gigabit link transfers at ~10 Mbps with late collisions. The cause is likely:",
    "options": [
-    "A DNS misconfiguration",
-    "A missing AAAA record",
-    "An expired DHCP lease",
-    "A physical or duplex/speed problem on the link"
-   ],
-   "answer": 3,
-   "explanation": "Error/discard counters climb from cabling, duplex mismatch, or failing hardware at the physical layer."
-  },
-  {
-   "q": "Which tool captures and inspects individual packets for deep analysis?",
-   "options": [
-    "Wireshark (protocol analyzer)",
-    "ping",
-    "nmap",
-    "nslookup"
-   ],
-   "answer": 0,
-   "explanation": "Wireshark (or tcpdump on the CLI) captures packets for protocol-level troubleshooting."
-  },
-  {
-   "q": "A host reaches other devices on its own subnet but nothing remote. What is the likely cause?",
-   "options": [
-    "Default gateway or routing problem",
-    "DNS cache poisoning",
-    "Wrong SSID",
-    "Bad patch cable to the PC"
-   ],
-   "answer": 0,
-   "explanation": "Local works but remote fails points to the default gateway or a routing issue."
-  },
-  {
-   "q": "A gigabit link only achieves ~10 Mbps with many late collisions. What is the likely cause?",
-   "options": [
-    "Jumbo frames enabled",
+    "QoS",
     "Duplex mismatch",
-    "QoS misconfiguration",
-    "Wrong DNS"
+    "Jumbo frames",
+    "DNS"
    ],
    "answer": 1,
-   "explanation": "A duplex mismatch (one full, one half) causes late collisions and drastically reduced throughput."
+   "explanation": "A duplex mismatch produces late collisions and very low throughput."
   },
   {
-   "q": "Which command on Windows shows the DHCP server and DNS servers a host received?",
+   "q": "Which queries DNS to troubleshoot name resolution?",
    "options": [
-    "ping -a",
-    "arp -d",
+    "arp -a",
     "route print",
-    "ipconfig /all"
+    "netstat",
+    "nslookup / dig"
    ],
    "answer": 3,
-   "explanation": "ipconfig /all displays full IP configuration including DHCP server and DNS servers."
+   "explanation": "nslookup and dig query DNS servers for records to diagnose resolution issues."
   },
   {
-   "q": "nslookup resolves names fine, but the browser can't load any site, while pinging IPs works. What next?",
+   "q": "A web service is up but unreachable on its port from clients. What should you check?",
    "options": [
-    "Check the proxy/firewall or the application, not DNS or connectivity",
-    "Renew the DHCP lease",
-    "Reseat the NIC",
-    "Replace the network cable"
+    "The monitor cable",
+    "The rack height",
+    "Firewall/ACL rules blocking the port",
+    "The DNS TTL"
    ],
-   "answer": 0,
-   "explanation": "If DNS resolves and IPs ping, name resolution and L1–L3 are fine; look higher (proxy/app/port filtering)."
+   "answer": 2,
+   "explanation": "A running service unreachable on its port is typically blocked by a firewall/ACL."
   }
  ]
 }
