@@ -36,17 +36,21 @@
   }
 
   function isSec() { return state.core === 3; }
+  /* core 3 = Security+, core 4 = Network+ — both single-exam certs with d1–d5 domains. */
+  function isCert() { return state.core === 3 || state.core === 4; }
+  function certShort() { return (window.AplusUtils && window.AplusUtils.certShort(state.core)) || ""; }
+  function certLabel() { return (window.AplusUtils && window.AplusUtils.certLabel(state.core)) || certShort(); }
 
   function inScope(c) {
     return state.core === 0 ? (c === 1 || c === 2) : c === state.core;
   }
 
-  function secDomains() {
-    return (window.AplusUtils && window.AplusUtils.SECPLUS_DOMAINS) || {};
+  function certDomains() {
+    return (window.AplusUtils && window.AplusUtils.certDomains(state.core)) || {};
   }
 
   function domainLabel(d) {
-    if (isSec()) return secDomains()[d] || d;
+    if (isCert()) return certDomains()[d] || d;
     return DOMAIN_LABELS[d] || (d ? d.charAt(0).toUpperCase() + d.slice(1) : "");
   }
 
@@ -79,7 +83,7 @@
             '<span>Glossary</span>' +
           '</nav>' +
           '<span class="section-label">Reference</span>' +
-          '<h1 style="font-size:clamp(1.5rem,3.5vw,2.25rem);margin-bottom:0.5rem;">' + (isSec() ? "Security+ Glossary" : "A+ Glossary") + '</h1>' +
+          '<h1 style="font-size:clamp(1.5rem,3.5vw,2.25rem);margin-bottom:0.5rem;">' + (isCert() ? certShort() + " Glossary" : "A+ Glossary") + '</h1>' +
           '<p class="text-muted text-sm" id="termCount">Loading terms...</p>' +
         '</div>' +
 
@@ -91,15 +95,15 @@
 
         /* Core + Domain chips */
         '<div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;" id="coreChips">' +
-          (state.locked && isSec()
-            ? '<span class="filter-btn active" style="cursor:default;">Security+ (SY0-701)</span>'
+          (state.locked && isCert()
+            ? '<span class="filter-btn active" style="cursor:default;">' + certLabel() + '</span>'
             : '<button class="filter-btn' + (state.core === 0 ? " active" : "") + '" data-core="0">Both</button>' +
               '<button class="filter-btn' + (state.core === 1 ? " active" : "") + '" data-core="1">Core 1</button>' +
               '<button class="filter-btn' + (state.core === 2 ? " active" : "") + '" data-core="2">Core 2</button>') +
         '</div>' +
         '<div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1rem;" id="domainChips">' +
           '<button class="filter-btn' + (state.domain === "all" ? " active" : "") + '" data-domain="all">All</button>' +
-          (isSec() ? Object.keys(secDomains()) : DOMAINS).map(function(d) {
+          (isCert() ? Object.keys(certDomains()) : DOMAINS).map(function(d) {
             return '<button class="filter-btn' + (state.domain === d ? " active" : "") + '" data-domain="' + d + '">' + domainLabel(d) + '</button>';
           }).join("") +
         '</div>' +
@@ -224,7 +228,7 @@
   })();
 
   function domainColor(d) {
-    if (isSec()) return "background:var(--accent-dim);color:var(--accent);";
+    if (isCert()) return "background:var(--accent-dim);color:var(--accent);";
     var colors = {
       hardware: "background:var(--accent-dim);color:var(--accent);",
       networking: "background:var(--accent2-dim);color:var(--accent2);",

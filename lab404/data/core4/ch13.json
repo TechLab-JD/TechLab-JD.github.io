@@ -1,0 +1,186 @@
+{
+ "core": 4,
+ "chapter": 13,
+ "title": "Security Concepts & Attacks",
+ "exam_objectives": [
+  "4.1",
+  "4.2"
+ ],
+ "coverage": "COVERED",
+ "domain": "d4",
+ "domain_label": "Network Security",
+ "sections": [
+  {
+   "title": "Core Security Concepts",
+   "content": "CIA triad: Confidentiality (only authorized access), Integrity (data unaltered), Availability (accessible when needed).\nAAA: Authentication (who you are), Authorization (what you can do), Accounting (what you did). Enforced via RADIUS or TACACS+ with a central server.\nLeast privilege and separation of duties limit damage. Defense in depth layers controls.\nZero trust — never trust, always verify; authenticate every request, segment heavily (microsegmentation).\nThreat/risk terms: vulnerability (weakness), threat (potential cause), exploit (the attack), risk (likelihood × impact).\nControl types: preventive, detective, corrective; and technical, administrative, physical.",
+   "exam_tips": [
+    "AAA = Authentication, Authorization, Accounting (RADIUS/TACACS+ provide it).",
+    "Least privilege + defense in depth + zero trust are the recurring design principles.",
+    "CIA: Confidentiality, Integrity, Availability."
+   ]
+  },
+  {
+   "title": "Common Attacks",
+   "content": "Know these cold:\nDoS/DDoS — overwhelm a target; distributed uses a botnet.\nOn-path (MITM) — attacker relays/alters traffic between two parties.\nARP spoofing/poisoning — forges ARP replies to redirect LAN traffic (enables MITM).\nMAC flooding — overflows the switch MAC table so it floods frames (sniffing).\nDNS poisoning/spoofing — corrupts DNS answers to redirect users.\nVLAN hopping — reaches other VLANs via double-tagging or switch spoofing.\nRogue DHCP / evil twin AP — impostor services that hijack clients.\nDeauthentication — forces Wi-Fi clients off (wireless DoS).\nSocial engineering — phishing, pretexting, tailgating (attacks the human).\nSpoofing — forging source IP/MAC. On-path + spoofing underlie many LAN attacks.",
+   "exam_tips": [
+    "ARP spoofing enables on-path (MITM) attacks on a LAN; mitigate with dynamic ARP inspection.",
+    "An 'evil twin' is a rogue AP impersonating a legitimate SSID to capture clients.",
+    "MAC flooding overflows the switch table to force frame flooding (sniffing)."
+   ]
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "The three security goals: Confidentiality, Integrity, and Availability.",
+   "concept": "CIA triad",
+   "summary": "Objective 4.1"
+  },
+  {
+   "hook": "Authentication, Authorization, and Accounting — centrally provided by RADIUS or TACACS+.",
+   "concept": "AAA",
+   "summary": "Objective 4.1"
+  },
+  {
+   "hook": "Granting users and systems only the minimum access needed to do their job, limiting the blast radius of compromise.",
+   "concept": "Least privilege",
+   "summary": "Objective 4.1"
+  },
+  {
+   "hook": "An attacker secretly relays and may alter communication between two parties, often set up via ARP spoofing.",
+   "concept": "On-path (MITM) attack",
+   "summary": "Objective 4.2"
+  },
+  {
+   "hook": "Forging ARP replies to associate the attacker's MAC with another host's IP, redirecting LAN traffic for interception.",
+   "concept": "ARP spoofing",
+   "summary": "Objective 4.2"
+  },
+  {
+   "hook": "A rogue access point broadcasting a legitimate SSID to trick clients into connecting so traffic can be captured.",
+   "concept": "Evil twin",
+   "summary": "Objective 4.2"
+  },
+  {
+   "hook": "An attack that reaches VLANs a port shouldn't, via double-tagging or switch spoofing.",
+   "concept": "VLAN hopping",
+   "summary": "Objective 4.2"
+  },
+  {
+   "hook": "A Distributed Denial-of-Service attack that floods a target from many compromised hosts (a botnet) to exhaust its resources.",
+   "concept": "DDoS",
+   "summary": "Objective 4.2"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "What do the three A's in AAA stand for?",
+   "options": [
+    "Authentication, Access, Auditing",
+    "Authentication, Authorization, Accounting",
+    "Authorization, Availability, Accounting",
+    "Access, Audit, Availability"
+   ],
+   "answer": 1,
+   "explanation": "AAA = Authentication (who you are), Authorization (what you can do), Accounting (what you did)."
+  },
+  {
+   "q": "An attacker forges ARP replies to intercept LAN traffic. What attack is this?",
+   "options": [
+    "Deauthentication",
+    "ARP spoofing (enabling on-path/MITM)",
+    "DNS poisoning",
+    "VLAN hopping"
+   ],
+   "answer": 1,
+   "explanation": "ARP spoofing associates the attacker's MAC with another host's IP to intercept traffic on the LAN."
+  },
+  {
+   "q": "Granting users only the access they need to do their job describes which principle?",
+   "options": [
+    "Zero trust",
+    "Separation of duties",
+    "Least privilege",
+    "Defense in depth"
+   ],
+   "answer": 2,
+   "explanation": "Least privilege minimizes access rights, limiting the damage from a compromised account."
+  },
+  {
+   "q": "A rogue access point impersonates a legitimate SSID to capture clients. This is a:",
+   "options": [
+    "Jump box",
+    "Bastion host",
+    "Honeypot",
+    "Evil twin"
+   ],
+   "answer": 3,
+   "explanation": "An evil twin is a malicious AP broadcasting a trusted SSID to lure clients."
+  },
+  {
+   "q": "Which security model assumes no implicit trust and verifies every request?",
+   "options": [
+    "Open trust",
+    "Zero trust",
+    "Transitive trust",
+    "Perimeter security"
+   ],
+   "answer": 1,
+   "explanation": "Zero trust authenticates and authorizes every request regardless of network location."
+  },
+  {
+   "q": "Flooding a switch's MAC table so it floods frames out all ports is called:",
+   "options": [
+    "MAC flooding",
+    "ARP poisoning",
+    "Smurf attack",
+    "DNS spoofing"
+   ],
+   "answer": 0,
+   "explanation": "MAC flooding overflows the CAM/MAC table, forcing the switch to flood frames (enabling sniffing)."
+  },
+  {
+   "q": "Which protocol provides AAA and is commonly used with 802.1X?",
+   "options": [
+    "NTP",
+    "SNMP",
+    "RADIUS",
+    "ICMP"
+   ],
+   "answer": 2,
+   "explanation": "RADIUS is an AAA server protocol widely used for 802.1X network authentication."
+  },
+  {
+   "q": "Which attack floods a target from many compromised hosts to exhaust resources?",
+   "options": [
+    "On-path",
+    "DDoS",
+    "Phishing",
+    "VLAN hopping"
+   ],
+   "answer": 1,
+   "explanation": "A Distributed Denial-of-Service uses a botnet of many hosts to overwhelm the target."
+  },
+  {
+   "q": "Separating a task so no single person controls it end-to-end is which principle?",
+   "options": [
+    "Implicit deny",
+    "Separation of duties",
+    "Least privilege",
+    "Defense in depth"
+   ],
+   "answer": 1,
+   "explanation": "Separation of duties splits critical tasks among multiple people to reduce fraud/error."
+  },
+  {
+   "q": "Clients are disconnected from Wi-Fi by forged management frames. Which attack is this?",
+   "options": [
+    "DNS poisoning",
+    "ARP spoofing",
+    "MAC flooding",
+    "Deauthentication attack"
+   ],
+   "answer": 3,
+   "explanation": "A deauth attack sends forged 802.11 deauthentication frames to knock clients off the WLAN (wireless DoS)."
+  }
+ ]
+}

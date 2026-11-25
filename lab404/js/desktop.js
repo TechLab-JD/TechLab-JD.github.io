@@ -29,6 +29,7 @@
     /* Apps */
     "chapters-1": { title: "Core 1 \u2014 Chapters", icon: "📚" },
     "chapters-2": { title: "Core 2 \u2014 Chapters", icon: "📗" },
+    "chapters-4": { title: "Network+ \u2014 Chapters", icon: "\ud83c\udf10" },
     "chapters-3": { title: "Security+ \u2014 Chapters", icon: "🛡️" },
     "synapse":    { title: "Synapse — Security+ Study Hub", icon: "🧠" },
     "practice":   { title: "Practice Test",           icon: "🎯" },
@@ -102,6 +103,21 @@
       apps: [
         { app: "synapse",    icon: "🧠", label: "Synapse" },
         { app: "chapters-3", icon: "🛡️", label: "Chapters" },
+        { app: "practice",   icon: "🎯", label: "Practice Test" },
+        { app: "flashcards", icon: "🃏", label: "Flashcards" },
+        { app: "review",     icon: "📋", label: "Review List" },
+        { app: "glossary",   icon: "📖", label: "Glossary" },
+        { app: "notepad",    icon: "📝", label: "Notepad" },
+        { app: "data",       icon: "💾", label: "Data Manager" },
+      ]
+    },
+    /* Network+ is one exam (no cores). core: 4 is the internal slot the loaders key on. */
+    "folder-netplus": {
+      desc: "CompTIA Network+ · N10-009",
+      certKey: "netplus",
+      core: 4,
+      apps: [
+        { app: "chapters-4", icon: "🌐", label: "Chapters" },
         { app: "practice",   icon: "🎯", label: "Practice Test" },
         { app: "flashcards", icon: "🃏", label: "Flashcards" },
         { app: "review",     icon: "📋", label: "Review List" },
@@ -478,10 +494,14 @@
 
     _buildTitle: function (app, params, defaultTitle) {
       if (app === "chapter" && params) {
-        return (params.core === 3 ? "Security+" : "Core " + params.core) + " \u2014 Ch " + String(params.ch).padStart(2, "0");
+        var cName = params.core === 3 ? "Security+" : params.core === 4 ? "Network+" : "Core " + params.core;
+        return cName + " \u2014 Ch " + String(params.ch).padStart(2, "0");
       }
       if (params && params.core === 3 && ["practice", "flashcards", "review", "glossary"].indexOf(app) >= 0) {
         return "Security+ \u2014 " + defaultTitle;
+      }
+      if (params && params.core === 4 && ["practice", "flashcards", "review", "glossary"].indexOf(app) >= 0) {
+        return "Network+ \u2014 " + defaultTitle;
       }
       if (app === "notepad") {
         var ck = params && params.certKey;
@@ -818,6 +838,8 @@
         Desktop._renderChapterList(winId, 2);
       } else if (app === "chapters-3") {
         Desktop._renderChapterList(winId, 3);
+      } else if (app === "chapters-4") {
+        Desktop._renderChapterList(winId, 4);
       } else if (app === "synapse") {
         /* Synapse is a standalone app (built by study-materials/security-plus/study-zone/build_public.py) */
         content.style.padding = "0";
@@ -1912,7 +1934,7 @@
 
       content.innerHTML =
         '<div class="win-chapter-header">' +
-          '<h2>' + (core === 3 ? 'Security+ (SY0-701)' : 'Core ' + core) + ' &mdash; ' + chapters.length + ' Chapters</h2>' +
+          '<h2>' + (core === 3 ? 'Security+ (SY0-701)' : core === 4 ? 'Network+ (N10-009)' : 'Core ' + core) + ' &mdash; ' + chapters.length + ' Chapters</h2>' +
           '<div class="win-search-bar">' +
             '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>' +
             '<input type="search" id="' + winId + '-search" placeholder="Search chapters..." aria-label="Search chapters">' +

@@ -16,7 +16,9 @@
     2: { label: "A+ Core 2 (220-1102)", pass: 78, len: 40,
       dom: { "1": ["Operating Systems", 31], "2": ["Security", 25], "3": ["Software Troubleshooting", 22], "4": ["Operational Procedures", 22] } },
     3: { label: "Security+ (SY0-701)", pass: 83, len: 40,
-      dom: { "1": ["General Security Concepts", 12], "2": ["Threats, Vulnerabilities & Mitigations", 22], "3": ["Security Architecture", 18], "4": ["Security Operations", 28], "5": ["Security Program Management & Oversight", 20] } }
+      dom: { "1": ["General Security Concepts", 12], "2": ["Threats, Vulnerabilities & Mitigations", 22], "3": ["Security Architecture", 18], "4": ["Security Operations", 28], "5": ["Security Program Management & Oversight", 20] } },
+    4: { label: "Network+ (N10-009)", pass: 80, len: 90,
+      dom: { "1": ["Networking Concepts", 23], "2": ["Network Implementation", 20], "3": ["Network Operations", 19], "4": ["Network Security", 14], "5": ["Network Troubleshooting", 24] } }
   };
 
   function rkey(c) { return "lab404.examReady." + c; }

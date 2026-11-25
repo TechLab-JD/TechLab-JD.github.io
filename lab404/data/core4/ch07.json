@@ -1,0 +1,148 @@
+{
+ "core": 4,
+ "chapter": 7,
+ "title": "Routing & Bandwidth Management",
+ "exam_objectives": [
+  "2.1"
+ ],
+ "coverage": "COVERED",
+ "domain": "d2",
+ "domain_label": "Network Implementation",
+ "sections": [
+  {
+   "title": "Routing Fundamentals",
+   "content": "A router forwards packets between networks using the destination IP and its routing table. For each packet it finds the most specific match (longest prefix) and sends it out the matching next hop/interface.\nHow entries get into the table:\nDirectly connected — networks on the router's own interfaces.\nStatic routes — manually configured; precise and low-overhead, but don't adapt to changes. A default route (0.0.0.0/0) is a static catch-all pointing to the gateway of last resort.\nDynamic routes — learned from a routing protocol; adapt automatically as the network changes.\nAdministrative distance (AD) ranks trust when multiple sources offer a route: Connected 0, Static 1, eBGP 20, OSPF 110, RIP 120. Lower AD wins. Within one protocol, a metric picks the best path.",
+   "exam_tips": [
+    "Longest prefix match wins: a /30 route beats a /24 for an address inside it.",
+    "Lower administrative distance = more trusted source. Static (1) beats OSPF (110) beats RIP (120).",
+    "0.0.0.0/0 is the default route — used when nothing more specific matches."
+   ]
+  },
+  {
+   "title": "Dynamic Routing Protocols",
+   "content": "Interior Gateway Protocols (within one organization):\nRIP — distance-vector, metric = hop count (max 15). Simple, slow to converge, legacy.\nOSPF — link-state, metric = cost (based on bandwidth). Fast convergence, scalable, uses areas. The common enterprise IGP.\nEIGRP — Cisco's advanced distance-vector (hybrid), fast convergence.\nExterior Gateway Protocol (between organizations / the internet):\nBGP — path-vector, the routing protocol of the internet; chooses paths by policy across autonomous systems (AS).\nDistance-vector (RIP) shares its whole table with neighbors ('routing by rumor'); link-state (OSPF) builds a full map of the network and runs shortest-path first (Dijkstra).",
+   "exam_tips": [
+    "OSPF = link-state, cost metric, areas. RIP = distance-vector, hop-count, max 15 hops.",
+    "BGP is the internet's routing protocol — path-vector, between autonomous systems."
+   ]
+  },
+  {
+   "title": "NAT & Bandwidth Management",
+   "content": "NAT (Network Address Translation) lets many private hosts share public IPs.\nStatic NAT — one-to-one private-to-public mapping.\nDynamic NAT — maps from a pool.\nPAT (overload) — many private hosts to ONE public IP, distinguished by port number. This is what home/office routers do.\nBandwidth & traffic management:\nQoS (Quality of Service) — prioritizes latency-sensitive traffic (VoIP, video) using marking (DSCP/CoS), queuing, and policing/shaping.\nTraffic shaping buffers and smooths bursts; policing drops/remarks traffic over a limit.\nA 'default gateway' is the router a host sends off-subnet traffic to.",
+   "exam_tips": [
+    "PAT (NAT overload) maps many private IPs to one public IP using port numbers — the home-router default.",
+    "QoS prioritizes real-time traffic (VoIP/video); mark with DSCP, then queue/shape."
+   ]
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "A ranking of how trustworthy a route source is (Connected 0, Static 1, OSPF 110, RIP 120). The lowest AD wins when sources conflict.",
+   "concept": "Administrative distance",
+   "summary": "Objective 2.1"
+  },
+  {
+   "hook": "The router forwards using the most specific (longest subnet mask) matching route in its table.",
+   "concept": "Longest prefix match",
+   "summary": "Objective 2.1"
+  },
+  {
+   "hook": "0.0.0.0/0 — the catch-all route used when no more specific entry matches; points to the gateway of last resort.",
+   "concept": "Default route",
+   "summary": "Objective 2.1"
+  },
+  {
+   "hook": "A link-state interior gateway protocol that builds a full topology map and picks paths by cost (bandwidth). Fast-converging and scalable with areas.",
+   "concept": "OSPF",
+   "summary": "Objective 2.1"
+  },
+  {
+   "hook": "Border Gateway Protocol — the path-vector routing protocol of the internet, exchanging routes between autonomous systems by policy.",
+   "concept": "BGP",
+   "summary": "Objective 2.1"
+  },
+  {
+   "hook": "Port Address Translation — maps many private IPs to a single public IP, keeping sessions separate by port number.",
+   "concept": "PAT (NAT overload)",
+   "summary": "Objective 2.1"
+  },
+  {
+   "hook": "Quality of Service — prioritizing delay-sensitive traffic (VoIP/video) through marking (DSCP), queuing, shaping, and policing.",
+   "concept": "QoS",
+   "summary": "Objective 2.1"
+  },
+  {
+   "hook": "Distance-vector (RIP) shares its whole table with neighbors by hop count; link-state (OSPF) maps the whole network and runs shortest-path-first.",
+   "concept": "Distance-vector vs link-state",
+   "summary": "Objective 2.1"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "When two routes to the same network exist, which is chosen first?",
+   "options": [
+    "The one with the higher hop count",
+    "The one learned by RIP",
+    "The oldest route",
+    "The one with the lower administrative distance"
+   ],
+   "answer": 3,
+   "explanation": "Administrative distance ranks route trustworthiness; the lowest AD wins (e.g., static 1 beats OSPF 110)."
+  },
+  {
+   "q": "Which routing protocol is used between autonomous systems on the internet?",
+   "options": [
+    "OSPF",
+    "EIGRP",
+    "RIP",
+    "BGP"
+   ],
+   "answer": 3,
+   "explanation": "BGP is the path-vector exterior gateway protocol that routes between autonomous systems."
+  },
+  {
+   "q": "A home router lets many internal devices share one public IP using port numbers. What is this?",
+   "options": [
+    "Proxy ARP",
+    "Static NAT",
+    "DHCP",
+    "PAT (NAT overload)"
+   ],
+   "answer": 3,
+   "explanation": "PAT maps many private addresses to a single public IP, distinguishing sessions by port."
+  },
+  {
+   "q": "Which mechanism prioritizes VoIP traffic to reduce latency and jitter?",
+   "options": [
+    "NAT",
+    "STP",
+    "VLAN pruning",
+    "QoS"
+   ],
+   "answer": 3,
+   "explanation": "Quality of Service marks and queues delay-sensitive traffic like VoIP ahead of best-effort traffic."
+  },
+  {
+   "q": "Which has the lowest administrative distance and is therefore most preferred?",
+   "options": [
+    "An OSPF route",
+    "A static route",
+    "A RIP route",
+    "A directly connected route"
+   ],
+   "answer": 3,
+   "explanation": "Connected routes have AD 0, static 1, OSPF 110, RIP 120 — lowest wins."
+  },
+  {
+   "q": "A link-state protocol that uses cost based on bandwidth and scales with areas is:",
+   "options": [
+    "OSPF",
+    "BGP",
+    "PAT",
+    "RIP"
+   ],
+   "answer": 0,
+   "explanation": "OSPF is a link-state IGP that computes shortest paths by cost and organizes large networks into areas."
+  }
+ ]
+}

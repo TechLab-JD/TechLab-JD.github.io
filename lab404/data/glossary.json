@@ -10890,5 +10890,894 @@
   "core": 3,
   "objective": "",
   "domain": "d3"
+ },
+ {
+  "term": "Encapsulation",
+  "definition": "Wrapping data with each layer's header as it moves down the OSI stack (and stripping them on the way up); the reverse is de-encapsulation.",
+  "core": 4,
+  "objective": "1.1",
+  "domain": "d1"
+ },
+ {
+  "term": "Collision domain",
+  "definition": "A network segment where devices share bandwidth and frames can collide. A switch gives each port its own collision domain.",
+  "core": 4,
+  "objective": "1.2",
+  "domain": "d1"
+ },
+ {
+  "term": "Broadcast domain",
+  "definition": "The set of devices that receive one another's broadcast frames. A router (or a VLAN boundary) separates broadcast domains.",
+  "core": 4,
+  "objective": "1.2",
+  "domain": "d1"
+ },
+ {
+  "term": "Stateful firewall",
+  "definition": "A firewall that tracks the state of active connections and allows return traffic for sessions it has already permitted.",
+  "core": 4,
+  "objective": "1.2",
+  "domain": "d1"
+ },
+ {
+  "term": "Reverse proxy",
+  "definition": "A proxy placed in front of servers that receives client requests on their behalf — used for SSL offload, caching, and security.",
+  "core": 4,
+  "objective": "1.2",
+  "domain": "d1"
+ },
+ {
+  "term": "IDS vs IPS",
+  "definition": "Intrusion Detection System alerts on suspicious traffic (passive, out-of-band); Intrusion Prevention System sits in-line and can block it (active).",
+  "core": 4,
+  "objective": "1.2",
+  "domain": "d1"
+ },
+ {
+  "term": "SAN",
+  "definition": "Storage Area Network — provides block-level storage over a dedicated high-speed fabric (Fibre Channel or iSCSI), appearing to servers as local disks.",
+  "core": 4,
+  "objective": "1.2",
+  "domain": "d1"
+ },
+ {
+  "term": "Layer 3 switch",
+  "definition": "A switch that also routes between VLANs/subnets at wire speed, combining Layer 2 switching with Layer 3 IP forwarding.",
+  "core": 4,
+  "objective": "1.2",
+  "domain": "d1"
+ },
+ {
+  "term": "Three-way handshake",
+  "definition": "TCP's connection setup: SYN, then SYN-ACK, then ACK. Establishes sequence numbers before data flows.",
+  "core": 4,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "Unicast",
+  "definition": "One-to-one delivery to a single specific destination address — the bulk of network traffic.",
+  "core": 4,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "Multicast",
+  "definition": "One-to-many delivery to a group of subscribed receivers, using the 224.0.0.0/4 range in IPv4.",
+  "core": 4,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "Anycast",
+  "definition": "One address shared by many hosts; traffic is routed to the nearest one. Used by DNS root servers and CDNs.",
+  "core": 4,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "SNMP trap",
+  "definition": "An unsolicited alert a managed device sends to the SNMP manager (UDP 162) when an event occurs, instead of waiting to be polled.",
+  "core": 4,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "TFTP",
+  "definition": "Trivial File Transfer Protocol (UDP 69) — a lightweight, no-authentication file transfer used for firmware, configs, and PXE boot.",
+  "core": 4,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "ARP",
+  "definition": "Address Resolution Protocol — resolves a known IPv4 address to its MAC address on the local link so frames can be delivered.",
+  "core": 4,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "Syslog",
+  "definition": "A standard for sending event/log messages to a central collector, typically over UDP 514.",
+  "core": 4,
+  "objective": "1.4",
+  "domain": "d1"
+ },
+ {
+  "term": "IaaS / PaaS / SaaS",
+  "definition": "Cloud service tiers by how much the provider manages: IaaS (VMs/networking), PaaS (runtime/platform), SaaS (full application). More abstraction = less you manage.",
+  "core": 4,
+  "objective": "1.3",
+  "domain": "d1"
+ },
+ {
+  "term": "Shared responsibility model",
+  "definition": "The provider secures the cloud infrastructure; the customer secures their data, configurations, and access within it.",
+  "core": 4,
+  "objective": "1.3",
+  "domain": "d1"
+ },
+ {
+  "term": "VPC",
+  "definition": "Virtual Private Cloud — a logically isolated virtual network inside a public cloud, divided into your own subnets and security groups.",
+  "core": 4,
+  "objective": "1.3",
+  "domain": "d1"
+ },
+ {
+  "term": "Direct Connect / ExpressRoute",
+  "definition": "A private, dedicated physical circuit from your site to a cloud provider, giving consistent performance versus an internet VPN.",
+  "core": 4,
+  "objective": "1.3",
+  "domain": "d1"
+ },
+ {
+  "term": "SDN",
+  "definition": "Software-Defined Networking — decouples the control plane from the data plane so a central controller can program forwarding behavior.",
+  "core": 4,
+  "objective": "1.8",
+  "domain": "d1"
+ },
+ {
+  "term": "SD-WAN",
+  "definition": "Software-defined WAN that dynamically steers traffic across multiple transports (MPLS, broadband, LTE) based on application needs and link health.",
+  "core": 4,
+  "objective": "1.8",
+  "domain": "d1"
+ },
+ {
+  "term": "Infrastructure as Code (IaC)",
+  "definition": "Provisioning and managing infrastructure through version-controlled definition files (Terraform, Ansible) rather than manual configuration.",
+  "core": 4,
+  "objective": "1.8",
+  "domain": "d1"
+ },
+ {
+  "term": "Zero trust",
+  "definition": "A security model that trusts no user or device by default, verifying and least-privileging every request regardless of network location.",
+  "core": 4,
+  "objective": "1.8",
+  "domain": "d1"
+ },
+ {
+  "term": "100-meter rule",
+  "definition": "The maximum run for twisted-pair copper Ethernet (90 m horizontal + 10 m patch). Beyond it, signal degrades — use fiber.",
+  "core": 4,
+  "objective": "1.5",
+  "domain": "d1"
+ },
+ {
+  "term": "Single-mode fiber",
+  "definition": "Fiber with a ~9-micron core carrying laser light over very long distances (kilometers); yellow jacket, used for WAN/long-haul.",
+  "core": 4,
+  "objective": "1.5",
+  "domain": "d1"
+ },
+ {
+  "term": "Multimode fiber",
+  "definition": "Fiber with a 50/62.5-micron core carrying LED/VCSEL light over shorter distances (up to ~550 m); aqua/orange jacket, used inside buildings.",
+  "core": 4,
+  "objective": "1.5",
+  "domain": "d1"
+ },
+ {
+  "term": "SFP/SFP+/QSFP28",
+  "definition": "Hot-swappable fiber transceiver form factors: SFP=1 Gbps, SFP+=10 Gbps, QSFP28=100 Gbps. Must match the fiber and wavelength on both ends.",
+  "core": 4,
+  "objective": "1.5",
+  "domain": "d1"
+ },
+ {
+  "term": "Plenum cable (CMP)",
+  "definition": "Cable with fire-resistant, low-smoke jacketing required by code in air-handling (plenum) spaces like drop ceilings.",
+  "core": 4,
+  "objective": "1.5",
+  "domain": "d1"
+ },
+ {
+  "term": "Straight-through vs crossover",
+  "definition": "Straight-through (same T568 standard both ends) connects unlike devices; crossover (A/B) connects like devices. Auto-MDIX now negotiates this automatically.",
+  "core": 4,
+  "objective": "1.5",
+  "domain": "d1"
+ },
+ {
+  "term": "Media converter",
+  "definition": "A device that converts between media types (e.g., copper to fiber) to extend a link past copper's distance limit.",
+  "core": 4,
+  "objective": "1.5",
+  "domain": "d1"
+ },
+ {
+  "term": "Demarcation point",
+  "definition": "The physical point where the service provider's network ends and the customer's network begins; the responsibility boundary.",
+  "core": 4,
+  "objective": "1.5",
+  "domain": "d1"
+ },
+ {
+  "term": "Star topology",
+  "definition": "Every node connects to a central switch. The standard LAN layout — easy to manage, but the central device is a single point of failure.",
+  "core": 4,
+  "objective": "1.6",
+  "domain": "d1"
+ },
+ {
+  "term": "Full mesh",
+  "definition": "A topology where every node links directly to every other node, giving maximum redundancy at high cost: n(n-1)/2 links.",
+  "core": 4,
+  "objective": "1.6",
+  "domain": "d1"
+ },
+ {
+  "term": "Three-tier model",
+  "definition": "A hierarchical campus design of Core (fast backbone), Distribution (routing/policy), and Access (end-device ports).",
+  "core": 4,
+  "objective": "1.6",
+  "domain": "d1"
+ },
+ {
+  "term": "Spine-and-leaf",
+  "definition": "A data-center architecture where every leaf switch connects to every spine switch, giving predictable low latency for east-west traffic and easy horizontal scaling.",
+  "core": 4,
+  "objective": "1.6",
+  "domain": "d1"
+ },
+ {
+  "term": "North-south vs east-west",
+  "definition": "North-south is client-to-server traffic in/out of the data center; east-west is server-to-server traffic within it.",
+  "core": 4,
+  "objective": "1.6",
+  "domain": "d1"
+ },
+ {
+  "term": "Collapsed core",
+  "definition": "A design that merges the core and distribution layers into one, used in smaller networks that don't need a separate backbone layer.",
+  "core": 4,
+  "objective": "1.6",
+  "domain": "d1"
+ },
+ {
+  "term": "Hub-and-spoke",
+  "definition": "A WAN topology with a central hub site to which all branch (spoke) sites connect, simplifying management but making the hub critical.",
+  "core": 4,
+  "objective": "1.6",
+  "domain": "d1"
+ },
+ {
+  "term": "Client-server vs peer-to-peer",
+  "definition": "Client-server centralizes resources and control on dedicated servers; peer-to-peer shares resources directly between equal hosts with no central server.",
+  "core": 4,
+  "objective": "1.6",
+  "domain": "d1"
+ },
+ {
+  "term": "Subnet mask",
+  "definition": "A 32-bit value marking which bits of an IP are network (1s) vs host (0s). /24 = 255.255.255.0.",
+  "core": 4,
+  "objective": "1.7",
+  "domain": "d1"
+ },
+ {
+  "term": "Block size",
+  "definition": "256 minus the mask value in the interesting octet. Counting up by the block size gives the subnet boundaries — the core subnetting shortcut.",
+  "core": 4,
+  "objective": "1.7",
+  "domain": "d1"
+ },
+ {
+  "term": "Usable hosts formula",
+  "definition": "2^(number of host bits) - 2. The minus two accounts for the network address and the broadcast address.",
+  "core": 4,
+  "objective": "1.7",
+  "domain": "d1"
+ },
+ {
+  "term": "RFC 1918 private ranges",
+  "definition": "Non-internet-routable address space: 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16.",
+  "core": 4,
+  "objective": "1.7",
+  "domain": "d1"
+ },
+ {
+  "term": "APIPA",
+  "definition": "Automatic Private IP Addressing (169.254.0.0/16) — a host self-assigns here when no DHCP server responds; a telltale sign of a DHCP failure.",
+  "core": 4,
+  "objective": "1.7",
+  "domain": "d1"
+ },
+ {
+  "term": "VLSM",
+  "definition": "Variable Length Subnet Masking — sizing each subnet to its host count (largest first) so address space isn't wasted.",
+  "core": 4,
+  "objective": "1.7",
+  "domain": "d1"
+ },
+ {
+  "term": "CIDR notation",
+  "definition": "Classless addressing that writes the mask as a bit count (/26) instead of dotted decimal, decoupling networks from the old A/B/C classes.",
+  "core": 4,
+  "objective": "1.7",
+  "domain": "d1"
+ },
+ {
+  "term": "IPv6 :: shorthand",
+  "definition": "A double colon that replaces one run of consecutive all-zero 16-bit groups in an IPv6 address; it may be used only once per address.",
+  "core": 4,
+  "objective": "1.7",
+  "domain": "d1"
+ },
+ {
+  "term": "Administrative distance",
+  "definition": "A ranking of how trustworthy a route source is (Connected 0, Static 1, OSPF 110, RIP 120). The lowest AD wins when sources conflict.",
+  "core": 4,
+  "objective": "2.1",
+  "domain": "d2"
+ },
+ {
+  "term": "Longest prefix match",
+  "definition": "The router forwards using the most specific (longest subnet mask) matching route in its table.",
+  "core": 4,
+  "objective": "2.1",
+  "domain": "d2"
+ },
+ {
+  "term": "Default route",
+  "definition": "0.0.0.0/0 — the catch-all route used when no more specific entry matches; points to the gateway of last resort.",
+  "core": 4,
+  "objective": "2.1",
+  "domain": "d2"
+ },
+ {
+  "term": "OSPF",
+  "definition": "A link-state interior gateway protocol that builds a full topology map and picks paths by cost (bandwidth). Fast-converging and scalable with areas.",
+  "core": 4,
+  "objective": "2.1",
+  "domain": "d2"
+ },
+ {
+  "term": "BGP",
+  "definition": "Border Gateway Protocol — the path-vector routing protocol of the internet, exchanging routes between autonomous systems by policy.",
+  "core": 4,
+  "objective": "2.1",
+  "domain": "d2"
+ },
+ {
+  "term": "PAT (NAT overload)",
+  "definition": "Port Address Translation — maps many private IPs to a single public IP, keeping sessions separate by port number.",
+  "core": 4,
+  "objective": "2.1",
+  "domain": "d2"
+ },
+ {
+  "term": "QoS",
+  "definition": "Quality of Service — prioritizing delay-sensitive traffic (VoIP/video) through marking (DSCP), queuing, shaping, and policing.",
+  "core": 4,
+  "objective": "2.1",
+  "domain": "d2"
+ },
+ {
+  "term": "Distance-vector vs link-state",
+  "definition": "Distance-vector (RIP) shares its whole table with neighbors by hop count; link-state (OSPF) maps the whole network and runs shortest-path-first.",
+  "core": 4,
+  "objective": "2.1",
+  "domain": "d2"
+ },
+ {
+  "term": "VLAN",
+  "definition": "A Virtual LAN that logically splits a switch into separate broadcast domains; inter-VLAN traffic needs a router or Layer-3 switch.",
+  "core": 4,
+  "objective": "2.2",
+  "domain": "d2"
+ },
+ {
+  "term": "802.1Q trunk",
+  "definition": "A switch link that carries multiple VLANs by tagging frames with a VLAN ID; the native VLAN is sent untagged.",
+  "core": 4,
+  "objective": "2.2",
+  "domain": "d2"
+ },
+ {
+  "term": "Spanning Tree Protocol (STP)",
+  "definition": "Prevents switching loops by blocking redundant links, keeping one active path and failing over if it breaks.",
+  "core": 4,
+  "objective": "2.2",
+  "domain": "d2"
+ },
+ {
+  "term": "Link aggregation (LACP)",
+  "definition": "Bundling several physical links (802.3ad) into one logical connection for added bandwidth and redundancy.",
+  "core": 4,
+  "objective": "2.2",
+  "domain": "d2"
+ },
+ {
+  "term": "Port security",
+  "definition": "A switch feature limiting which or how many MAC addresses a port accepts, able to disable the port on a violation.",
+  "core": 4,
+  "objective": "2.2",
+  "domain": "d2"
+ },
+ {
+  "term": "PoE / PoE+ / PoE++",
+  "definition": "Power over Ethernet standards delivering power with data: 802.3af ~15W, 802.3at ~30W, 802.3bt up to ~100W.",
+  "core": 4,
+  "objective": "2.2",
+  "domain": "d2"
+ },
+ {
+  "term": "DHCP snooping",
+  "definition": "A switch security feature that trusts DHCP replies only from approved ports, blocking rogue DHCP servers.",
+  "core": 4,
+  "objective": "2.2",
+  "domain": "d2"
+ },
+ {
+  "term": "Broadcast storm",
+  "definition": "A flood of broadcast/looped frames that saturates a switched network; prevented by Spanning Tree Protocol.",
+  "core": 4,
+  "objective": "2.2",
+  "domain": "d2"
+ },
+ {
+  "term": "2.4 GHz vs 5 GHz",
+  "definition": "2.4 GHz has longer range and better wall penetration but is slower and crowded; 5 GHz is faster with more channels but shorter range.",
+  "core": 4,
+  "objective": "2.3",
+  "domain": "d2"
+ },
+ {
+  "term": "Non-overlapping channels",
+  "definition": "In the 2.4 GHz band, channels 1, 6, and 11 don't overlap — use them to avoid interference.",
+  "core": 4,
+  "objective": "2.3",
+  "domain": "d2"
+ },
+ {
+  "term": "WPA3",
+  "definition": "The current Wi-Fi security standard, using SAE to resist offline password cracking and adding forward secrecy.",
+  "core": 4,
+  "objective": "2.3",
+  "domain": "d2"
+ },
+ {
+  "term": "WPA2/3-Enterprise",
+  "definition": "Wireless auth using 802.1X and a RADIUS server for per-user credentials, versus Personal mode's single shared passphrase.",
+  "core": 4,
+  "objective": "2.3",
+  "domain": "d2"
+ },
+ {
+  "term": "SSID / BSS / ESS",
+  "definition": "SSID is the network name; a BSS is one AP's coverage cell; an ESS is multiple APs sharing an SSID to allow roaming.",
+  "core": 4,
+  "objective": "2.3",
+  "domain": "d2"
+ },
+ {
+  "term": "Wireless LAN controller",
+  "definition": "A device that centrally configures and manages many lightweight access points and coordinates roaming and channels.",
+  "core": 4,
+  "objective": "2.3",
+  "domain": "d2"
+ },
+ {
+  "term": "Site survey / heat map",
+  "definition": "Measuring signal strength across a space before deployment to plan AP placement, coverage, and channels.",
+  "core": 4,
+  "objective": "2.3",
+  "domain": "d2"
+ },
+ {
+  "term": "Omnidirectional vs directional antenna",
+  "definition": "Omnidirectional radiates signal all around for general coverage; directional (Yagi/parabolic) focuses it for distance or point-to-point links.",
+  "core": 4,
+  "objective": "2.3",
+  "domain": "d2"
+ },
+ {
+  "term": "Rack unit (U)",
+  "definition": "The 1.75-inch vertical increment of a 19-inch equipment rack; gear height is rated in U (1U, 2U, …).",
+  "core": 4,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "Hot aisle / cold aisle",
+  "definition": "A data-center layout that faces equipment intakes toward cold aisles and exhausts toward hot aisles to cool efficiently.",
+  "core": 4,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "UPS",
+  "definition": "Uninterruptible Power Supply — battery backup that rides through short outages, conditions power, and allows clean shutdown.",
+  "core": 4,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "PDU",
+  "definition": "Power Distribution Unit — distributes (and often meters/switches) electrical power to devices in a rack.",
+  "core": 4,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "MDF / IDF",
+  "definition": "Main Distribution Frame (building's primary wiring hub) and Intermediate Distribution Frames (floor closets that connect back to it).",
+  "core": 4,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "Structured cabling",
+  "definition": "A standardized cabling system of horizontal runs (to jacks), backbone runs (between frames), patch panels, and documentation.",
+  "core": 4,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "A/B power feeds",
+  "definition": "Supplying critical gear from two independent power sources (and dual power supplies) so one feed can fail without downtime.",
+  "core": 4,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "Bend radius",
+  "definition": "The minimum curve a cable can take without degrading signal or damaging conductors/fiber; tight bends cause errors.",
+  "core": 4,
+  "objective": "2.4",
+  "domain": "d2"
+ },
+ {
+  "term": "Change management",
+  "definition": "A formal process to request, approve, schedule, implement, and roll back network changes to avoid unplanned outages.",
+  "core": 4,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "SLA",
+  "definition": "Service-Level Agreement — a contract defining guaranteed uptime, performance, and response times between a provider and customer.",
+  "core": 4,
+  "objective": "3.1",
+  "domain": "d3"
+ },
+ {
+  "term": "SNMP",
+  "definition": "Simple Network Management Protocol — polls devices for health data and receives traps on events; use v3 for authentication and encryption.",
+  "core": 4,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "Baseline",
+  "definition": "A recorded sample of normal performance (throughput, latency, utilization) used as a reference to detect anomalies.",
+  "core": 4,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "NetFlow / flow data",
+  "definition": "Records of traffic conversations (source, destination, volume) used to see top talkers and analyze usage — not packet contents.",
+  "core": 4,
+  "objective": "3.2",
+  "domain": "d3"
+ },
+ {
+  "term": "RTO vs RPO",
+  "definition": "Recovery Time Objective is how quickly service must be restored; Recovery Point Objective is the maximum tolerable data loss, which sets backup frequency.",
+  "core": 4,
+  "objective": "3.3",
+  "domain": "d3"
+ },
+ {
+  "term": "Hot / warm / cold site",
+  "definition": "Disaster-recovery sites by readiness: hot (fully running, instant), warm (equipment staged), cold (space and power only).",
+  "core": 4,
+  "objective": "3.3",
+  "domain": "d3"
+ },
+ {
+  "term": "FHRP (VRRP/HSRP)",
+  "definition": "First-Hop Redundancy Protocols that present a virtual default gateway so hosts stay reachable if one router fails.",
+  "core": 4,
+  "objective": "3.3",
+  "domain": "d3"
+ },
+ {
+  "term": "DHCP DORA",
+  "definition": "The four-step DHCP lease process: Discover, Offer, Request, Acknowledge.",
+  "core": 4,
+  "objective": "3.4",
+  "domain": "d3"
+ },
+ {
+  "term": "DHCP relay (IP helper)",
+  "definition": "Forwards DHCP broadcast requests to a server on another subnet, since routers don't forward broadcasts.",
+  "core": 4,
+  "objective": "3.4",
+  "domain": "d3"
+ },
+ {
+  "term": "DNS record types",
+  "definition": "A (IPv4), AAAA (IPv6), CNAME (alias), MX (mail), NS (name server), PTR (reverse), TXT (SPF/DKIM), SOA, SRV.",
+  "core": 4,
+  "objective": "3.4",
+  "domain": "d3"
+ },
+ {
+  "term": "PTR record",
+  "definition": "A DNS reverse-lookup record mapping an IP address back to a hostname (used in reverse zones).",
+  "core": 4,
+  "objective": "3.4",
+  "domain": "d3"
+ },
+ {
+  "term": "NTP",
+  "definition": "Network Time Protocol (UDP 123) that synchronizes device clocks; stratum ranks how close a source is to the reference clock.",
+  "core": 4,
+  "objective": "3.4",
+  "domain": "d3"
+ },
+ {
+  "term": "In-band vs out-of-band",
+  "definition": "In-band management rides the production network (SSH/HTTPS); out-of-band uses a separate path (console/mgmt port) that works during outages.",
+  "core": 4,
+  "objective": "3.5",
+  "domain": "d3"
+ },
+ {
+  "term": "Jump box (bastion host)",
+  "definition": "A hardened intermediary host that administrators connect through to reach and manage internal systems securely.",
+  "core": 4,
+  "objective": "3.5",
+  "domain": "d3"
+ },
+ {
+  "term": "SLAAC",
+  "definition": "Stateless Address Autoconfiguration — how an IPv6 host builds its own address from a router advertisement without a DHCP server.",
+  "core": 4,
+  "objective": "3.5",
+  "domain": "d3"
+ },
+ {
+  "term": "CIA triad",
+  "definition": "The three security goals: Confidentiality, Integrity, and Availability.",
+  "core": 4,
+  "objective": "4.1",
+  "domain": "d4"
+ },
+ {
+  "term": "AAA",
+  "definition": "Authentication, Authorization, and Accounting — centrally provided by RADIUS or TACACS+.",
+  "core": 4,
+  "objective": "4.1",
+  "domain": "d4"
+ },
+ {
+  "term": "Least privilege",
+  "definition": "Granting users and systems only the minimum access needed to do their job, limiting the blast radius of compromise.",
+  "core": 4,
+  "objective": "4.1",
+  "domain": "d4"
+ },
+ {
+  "term": "On-path (MITM) attack",
+  "definition": "An attacker secretly relays and may alter communication between two parties, often set up via ARP spoofing.",
+  "core": 4,
+  "objective": "4.2",
+  "domain": "d4"
+ },
+ {
+  "term": "ARP spoofing",
+  "definition": "Forging ARP replies to associate the attacker's MAC with another host's IP, redirecting LAN traffic for interception.",
+  "core": 4,
+  "objective": "4.2",
+  "domain": "d4"
+ },
+ {
+  "term": "Evil twin",
+  "definition": "A rogue access point broadcasting a legitimate SSID to trick clients into connecting so traffic can be captured.",
+  "core": 4,
+  "objective": "4.2",
+  "domain": "d4"
+ },
+ {
+  "term": "VLAN hopping",
+  "definition": "An attack that reaches VLANs a port shouldn't, via double-tagging or switch spoofing.",
+  "core": 4,
+  "objective": "4.2",
+  "domain": "d4"
+ },
+ {
+  "term": "DDoS",
+  "definition": "A Distributed Denial-of-Service attack that floods a target from many compromised hosts (a botnet) to exhaust its resources.",
+  "core": 4,
+  "objective": "4.2",
+  "domain": "d4"
+ },
+ {
+  "term": "Screened subnet (DMZ)",
+  "definition": "An isolated network segment for public-facing servers, separated from the internal LAN by firewall boundaries.",
+  "core": 4,
+  "objective": "4.3",
+  "domain": "d4"
+ },
+ {
+  "term": "802.1X",
+  "definition": "Port-based network access control where a supplicant authenticates through the switch/AP to a RADIUS server before the port is opened.",
+  "core": 4,
+  "objective": "4.3",
+  "domain": "d4"
+ },
+ {
+  "term": "NAC",
+  "definition": "Network Access Control — admits devices only after verifying identity and security posture (patches, AV, config).",
+  "core": 4,
+  "objective": "4.3",
+  "domain": "d4"
+ },
+ {
+  "term": "ACL",
+  "definition": "Access Control List — ordered permit/deny rules filtering traffic by IP, port, and protocol, with first-match and an implicit deny.",
+  "core": 4,
+  "objective": "4.3",
+  "domain": "d4"
+ },
+ {
+  "term": "Dynamic ARP inspection",
+  "definition": "A switch feature that validates ARP packets against DHCP snooping data to block ARP spoofing.",
+  "core": 4,
+  "objective": "4.3",
+  "domain": "d4"
+ },
+ {
+  "term": "Microsegmentation",
+  "definition": "Fine-grained network segmentation that isolates workloads from each other to limit lateral movement after a breach.",
+  "core": 4,
+  "objective": "4.3",
+  "domain": "d4"
+ },
+ {
+  "term": "Device hardening",
+  "definition": "Reducing attack surface by changing defaults, patching, disabling unused services/ports, and using secure protocols + MFA.",
+  "core": 4,
+  "objective": "4.3",
+  "domain": "d4"
+ },
+ {
+  "term": "7-step troubleshooting method",
+  "definition": "Identify → theory of cause → test theory → plan of action → implement/escalate → verify + prevent → document.",
+  "core": 4,
+  "objective": "5.1",
+  "domain": "d5"
+ },
+ {
+  "term": "Divide and conquer",
+  "definition": "A troubleshooting approach that starts at a middle OSI layer and moves up or down based on results, instead of strictly bottom-up or top-down.",
+  "core": 4,
+  "objective": "5.1",
+  "domain": "d5"
+ },
+ {
+  "term": "Attenuation",
+  "definition": "The weakening of a signal over distance; exceeding cable length limits causes it, leading to errors or no link.",
+  "core": 4,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "Crosstalk (NEXT)",
+  "definition": "Signal bleeding between adjacent wire pairs, often from split pairs or untwisting, which corrupts data.",
+  "core": 4,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "Duplex mismatch",
+  "definition": "One side set to full duplex and the other to half, causing collisions, errors, and very slow throughput.",
+  "core": 4,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "Tone generator and probe",
+  "definition": "The 'fox and hound' pair used to trace and identify a specific cable within a bundle or at a patch panel.",
+  "core": 4,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "TDR / OTDR",
+  "definition": "A Time-Domain Reflectometer locates the distance to a copper cable fault; an OTDR does the same for fiber and measures loss.",
+  "core": 4,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "Wiremap",
+  "definition": "A test verifying each pin connects correctly end to end, detecting opens, shorts, and miswires.",
+  "core": 4,
+  "objective": "5.2",
+  "domain": "d5"
+ },
+ {
+  "term": "ping",
+  "definition": "A tool using ICMP echo to test reachability and round-trip time to a host; pinging 127.0.0.1 tests the local TCP/IP stack.",
+  "core": 4,
+  "objective": "5.5",
+  "domain": "d5"
+ },
+ {
+  "term": "traceroute / tracert",
+  "definition": "Shows the hop-by-hop path to a destination and reveals where latency or packet loss begins.",
+  "core": 4,
+  "objective": "5.5",
+  "domain": "d5"
+ },
+ {
+  "term": "nslookup / dig",
+  "definition": "Command-line tools that query DNS records to diagnose name-resolution problems.",
+  "core": 4,
+  "objective": "5.5",
+  "domain": "d5"
+ },
+ {
+  "term": "Protocol analyzer (Wireshark)",
+  "definition": "Software that captures and inspects packets to diagnose protocol-level issues; tcpdump is the CLI equivalent.",
+  "core": 4,
+  "objective": "5.5",
+  "domain": "d5"
+ },
+ {
+  "term": "APIPA diagnosis",
+  "definition": "A host with a 169.254.x.x address never reached a DHCP server — the clue points to a DHCP or connectivity failure.",
+  "core": 4,
+  "objective": "5.3",
+  "domain": "d5"
+ },
+ {
+  "term": "Jitter",
+  "definition": "Variation in packet latency; high jitter degrades real-time traffic like VoIP and video even when average latency is fine.",
+  "core": 4,
+  "objective": "5.4",
+  "domain": "d5"
+ },
+ {
+  "term": "Packet loss",
+  "definition": "Packets that never arrive, forcing retransmissions and causing choppy audio/video and slow transfers.",
+  "core": 4,
+  "objective": "5.4",
+  "domain": "d5"
+ },
+ {
+  "term": "Bandwidth vs throughput",
+  "definition": "Bandwidth is the link's theoretical capacity; throughput is the actual data rate achieved after overhead, congestion, and errors.",
+  "core": 4,
+  "objective": "5.4",
+  "domain": "d5"
  }
 ]

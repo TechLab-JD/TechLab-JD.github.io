@@ -1,0 +1,195 @@
+{
+ "core": 4,
+ "chapter": 12,
+ "title": "Network Services & Access Methods (IPv4/IPv6)",
+ "exam_objectives": [
+  "3.4",
+  "3.5"
+ ],
+ "coverage": "COVERED",
+ "domain": "d3",
+ "domain_label": "Network Operations",
+ "sections": [
+  {
+   "title": "DHCP",
+   "content": "DHCP automatically assigns IP, mask, gateway, and DNS to hosts. The handshake is DORA: Discover (client broadcasts), Offer (server proposes), Request (client asks for it), Acknowledge (server confirms + lease).\nComponents: scope (range of assignable addresses), exclusions, reservations (fixed IP by MAC), lease time, and options (gateway, DNS, NTP).\nDHCP relay / IP helper — forwards DHCP broadcasts across subnets to a central server (since broadcasts don't cross routers).\nTroubleshooting clue: a host with a 169.254.x.x (APIPA) address failed to reach DHCP.",
+   "exam_tips": [
+    "DHCP handshake = DORA (Discover, Offer, Request, Acknowledge).",
+    "Use a DHCP relay / IP helper when the server is on another subnet (broadcasts don't route).",
+    "A reservation ties a specific IP to a MAC address for consistent addressing."
+   ]
+  },
+  {
+   "title": "DNS",
+   "content": "DNS resolves names to IPs (UDP 53 for queries, TCP 53 for zone transfers).\nRecord types:\nA (name → IPv4) · AAAA (name → IPv6) · CNAME (alias → another name) · MX (mail server) · NS (name server) · PTR (reverse: IP → name) · TXT (SPF/DKIM/verification) · SOA (zone authority) · SRV (service location).\nResolution flow: resolver checks cache → recursive query to root → TLD → authoritative server. TTL controls how long answers are cached.\nForward zone = name→IP; reverse zone = IP→name. Internal vs external (split-horizon) DNS serves different answers inside vs outside.",
+   "exam_tips": [
+    "A = IPv4, AAAA = IPv6, CNAME = alias, MX = mail, PTR = reverse lookup, TXT = SPF/DKIM.",
+    "DNS is UDP 53 for lookups, TCP 53 for zone transfers.",
+    "TTL sets how long a record is cached before re-querying."
+   ]
+  },
+  {
+   "title": "Time, IPv6 Services & Access/Management Methods",
+   "content": "NTP (UDP 123) synchronizes clocks — critical for logs, certificates, and authentication (Kerberos). Stratum numbers rank clock sources (lower = closer to the reference clock).\nIPv6 services: SLAAC (host self-configures from router advertisements), DHCPv6, and EUI-64 for interface IDs.\nAccessing & managing devices:\nIn-band — manage over the production network (SSH on 22, HTTPS). Avoid Telnet (23)/HTTP — cleartext.\nOut-of-band — a separate path (console port, dedicated mgmt port, or modem) that works even if the production network is down.\nJump box / bastion host — a hardened gateway you connect through to reach internal devices.\nVPN — encrypted remote access (site-to-site or client/remote-access); console access for initial/last-resort config.",
+   "exam_tips": [
+    "NTP (UDP 123) keeps clocks in sync — essential for logging, certs, and Kerberos auth.",
+    "Use SSH (22) not Telnet (23); HTTPS not HTTP — manage devices encrypted.",
+    "Out-of-band management (console/dedicated mgmt port) works even when the production network is down."
+   ]
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "The four-step DHCP lease process: Discover, Offer, Request, Acknowledge.",
+   "concept": "DHCP DORA",
+   "summary": "Objective 3.4"
+  },
+  {
+   "hook": "Forwards DHCP broadcast requests to a server on another subnet, since routers don't forward broadcasts.",
+   "concept": "DHCP relay (IP helper)",
+   "summary": "Objective 3.4"
+  },
+  {
+   "hook": "A (IPv4), AAAA (IPv6), CNAME (alias), MX (mail), NS (name server), PTR (reverse), TXT (SPF/DKIM), SOA, SRV.",
+   "concept": "DNS record types",
+   "summary": "Objective 3.4"
+  },
+  {
+   "hook": "A DNS reverse-lookup record mapping an IP address back to a hostname (used in reverse zones).",
+   "concept": "PTR record",
+   "summary": "Objective 3.4"
+  },
+  {
+   "hook": "Network Time Protocol (UDP 123) that synchronizes device clocks; stratum ranks how close a source is to the reference clock.",
+   "concept": "NTP",
+   "summary": "Objective 3.4"
+  },
+  {
+   "hook": "In-band management rides the production network (SSH/HTTPS); out-of-band uses a separate path (console/mgmt port) that works during outages.",
+   "concept": "In-band vs out-of-band",
+   "summary": "Objective 3.5"
+  },
+  {
+   "hook": "A hardened intermediary host that administrators connect through to reach and manage internal systems securely.",
+   "concept": "Jump box (bastion host)",
+   "summary": "Objective 3.5"
+  },
+  {
+   "hook": "Stateless Address Autoconfiguration — how an IPv6 host builds its own address from a router advertisement without a DHCP server.",
+   "concept": "SLAAC",
+   "summary": "Objective 3.5"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "Put the DHCP lease steps in order.",
+   "options": [
+    "Offer, Discover, Acknowledge, Request",
+    "Discover, Request, Offer, Acknowledge",
+    "Discover, Offer, Request, Acknowledge",
+    "Request, Offer, Discover, Acknowledge"
+   ],
+   "answer": 2,
+   "explanation": "DHCP follows DORA: Discover, Offer, Request, Acknowledge."
+  },
+  {
+   "q": "An admin connects to a switch's console port with a rollover cable to perform initial setup. This is an example of:",
+   "options": [
+    "SNMP polling",
+    "In-band management",
+    "A VPN tunnel",
+    "Out-of-band management"
+   ],
+   "answer": 3,
+   "explanation": "Console access is out-of-band — a separate path that works before (or when) the production network is unavailable."
+  },
+  {
+   "q": "Which DNS record maps a hostname to an IPv6 address?",
+   "options": [
+    "AAAA",
+    "CNAME",
+    "A",
+    "MX"
+   ],
+   "answer": 0,
+   "explanation": "AAAA maps a name to an IPv6 address; A is for IPv4."
+  },
+  {
+   "q": "Which remote-access method creates an encrypted tunnel for a remote user over the public internet?",
+   "options": [
+    "Telnet",
+    "An unencrypted HTTP session",
+    "A console connection",
+    "Client-to-site (remote-access) VPN"
+   ],
+   "answer": 3,
+   "explanation": "A remote-access VPN encrypts the user's traffic over the internet back to the corporate network."
+  },
+  {
+   "q": "DHCP clients are on a subnet without a DHCP server. What forwards their requests to the server?",
+   "options": [
+    "A DHCP relay / IP helper",
+    "A default route",
+    "Spanning Tree",
+    "A CNAME record"
+   ],
+   "answer": 0,
+   "explanation": "Routers don't forward broadcasts, so a DHCP relay/IP helper forwards requests to a server on another subnet."
+  },
+  {
+   "q": "Which management method still works when the production network is down?",
+   "options": [
+    "SNMP polling",
+    "In-band SSH",
+    "Out-of-band (console or dedicated mgmt port)",
+    "In-band HTTPS"
+   ],
+   "answer": 2,
+   "explanation": "Out-of-band management uses a separate path (console/modem/mgmt port) independent of the production network."
+  },
+  {
+   "q": "A host must always receive the same IP from DHCP. What should be configured?",
+   "options": [
+    "A shorter lease",
+    "An exclusion",
+    "A relay",
+    "A reservation (IP tied to the MAC)"
+   ],
+   "answer": 3,
+   "explanation": "A DHCP reservation binds a specific IP to a device's MAC address."
+  },
+  {
+   "q": "A hardened host that admins connect through to reach internal devices is called a:",
+   "options": [
+    "Honeypot",
+    "Proxy ARP",
+    "Jump box / bastion host",
+    "Load balancer"
+   ],
+   "answer": 2,
+   "explanation": "A jump box (bastion host) is a secured intermediary for administrative access to internal systems."
+  },
+  {
+   "q": "Which DNS record identifies the mail server for a domain?",
+   "options": [
+    "A",
+    "PTR",
+    "MX",
+    "TXT"
+   ],
+   "answer": 2,
+   "explanation": "The MX record specifies the mail exchanger for a domain."
+  },
+  {
+   "q": "Which protocol should replace Telnet for secure device management?",
+   "options": [
+    "SNMPv1",
+    "FTP",
+    "SSH",
+    "HTTP"
+   ],
+   "answer": 2,
+   "explanation": "SSH encrypts management sessions; Telnet sends everything in cleartext."
+  }
+ ]
+}

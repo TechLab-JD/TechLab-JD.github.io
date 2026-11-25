@@ -1,0 +1,159 @@
+{
+ "core": 4,
+ "chapter": 2,
+ "title": "Ports, Protocols & Traffic Types",
+ "exam_objectives": [
+  "1.4"
+ ],
+ "coverage": "COVERED",
+ "domain": "d1",
+ "domain_label": "Networking Concepts",
+ "sections": [
+  {
+   "title": "Ports & Protocols You Must Memorize",
+   "content": "Port numbers identify the Layer-4 service. Memorize these cold — the exam tests them directly.\nPort | Protocol | Transport | Purpose\n20/21 | FTP | TCP | File transfer (20 data, 21 control)\n22 | SSH / SCP / SFTP | TCP | Secure remote shell & file transfer\n23 | Telnet | TCP | Remote CLI — insecure, cleartext\n25 | SMTP | TCP | Sending email between servers\n53 | DNS | TCP & UDP | Name resolution (UDP queries, TCP zone transfers)\n67/68 | DHCP | UDP | Automatic IP configuration (67 server, 68 client)\n69 | TFTP | UDP | Trivial file transfer (no auth) — firmware, PXE\n80 | HTTP | TCP | Web, cleartext\n110 | POP3 | TCP | Retrieve email (download)\n123 | NTP | UDP | Time synchronization\n143 | IMAP | TCP | Retrieve email (sync across devices)\n161/162 | SNMP | UDP | Monitor/manage devices (162 = traps)\n389 | LDAP | TCP/UDP | Directory services\n443 | HTTPS | TCP | Web over TLS\n445 | SMB | TCP | Windows file/printer sharing\n514 | Syslog | UDP | Log messages to a collector\n636 | LDAPS | TCP | Secure LDAP\n993 | IMAPS | TCP | Secure IMAP\n995 | POP3S | TCP | Secure POP3\n3389 | RDP | TCP | Remote Desktop (Windows GUI)\n",
+   "exam_tips": [
+    "Secure pairs: HTTP 80 -> HTTPS 443, FTP 21 -> SFTP 22, LDAP 389 -> LDAPS 636, Telnet 23 -> SSH 22.",
+    "DNS uses UDP 53 for lookups but TCP 53 for zone transfers and large responses.",
+    "SNMP get/set is UDP 161; SNMP traps (device-initiated alerts) are UDP 162."
+   ]
+  },
+  {
+   "title": "TCP vs UDP",
+   "content": "Both are Layer-4 transport protocols; the choice is reliability vs speed.\nTCP (Transmission Control Protocol) — connection-oriented, reliable. Uses the three-way handshake (SYN, SYN-ACK, ACK) to set up a session, sequences and acknowledges segments, retransmits loss, and controls flow. Used by web, email, file transfer, RDP.\nUDP (User Datagram Protocol) — connectionless, best-effort. No handshake, no acknowledgements, no retransmit. Lower overhead and latency. Used by DNS, DHCP, NTP, SNMP, VoIP, streaming, and online games where speed beats perfect delivery.\nThree-way handshake: Host A -> SYN -> Host B; Host B -> SYN/ACK -> Host A; Host A -> ACK -> Host B. Teardown uses FIN/ACK exchanges.",
+   "exam_tips": [
+    "Reliable, ordered, acknowledged = TCP. Fast, lightweight, real-time = UDP.",
+    "Memorize the handshake order: SYN, SYN-ACK, ACK."
+   ]
+  },
+  {
+   "title": "Traffic Types & Protocol Concepts",
+   "content": "Traffic delivery types:\nUnicast — one sender to one specific receiver (most traffic).\nBroadcast — one sender to every host on the subnet (e.g., ARP requests). IPv4 only; stops at the router.\nMulticast — one sender to a group of interested receivers (e.g., streaming, routing updates). Uses 224.0.0.0/4.\nAnycast — one sender to the nearest of several hosts sharing one address (common for DNS root servers, CDNs).\nIPv6 note: IPv6 has no broadcast — it uses multicast and anycast instead.\nOther key protocols: ICMP (ping, traceroute, error messages — Layer 3), ARP (resolves IP to MAC on the local link), GRE and IPsec (tunneling/VPN), and IP itself (connectionless Layer-3 delivery).",
+   "exam_tips": [
+    "IPv6 replaces broadcast entirely with multicast/anycast.",
+    "ARP maps IP -> MAC on the local segment; it is a Layer 2/3 helper, not routable."
+   ]
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "TCP's connection setup: SYN, then SYN-ACK, then ACK. Establishes sequence numbers before data flows.",
+   "concept": "Three-way handshake",
+   "summary": "Objective 1.4"
+  },
+  {
+   "hook": "One-to-one delivery to a single specific destination address — the bulk of network traffic.",
+   "concept": "Unicast",
+   "summary": "Objective 1.4"
+  },
+  {
+   "hook": "One-to-many delivery to a group of subscribed receivers, using the 224.0.0.0/4 range in IPv4.",
+   "concept": "Multicast",
+   "summary": "Objective 1.4"
+  },
+  {
+   "hook": "One address shared by many hosts; traffic is routed to the nearest one. Used by DNS root servers and CDNs.",
+   "concept": "Anycast",
+   "summary": "Objective 1.4"
+  },
+  {
+   "hook": "An unsolicited alert a managed device sends to the SNMP manager (UDP 162) when an event occurs, instead of waiting to be polled.",
+   "concept": "SNMP trap",
+   "summary": "Objective 1.4"
+  },
+  {
+   "hook": "Trivial File Transfer Protocol (UDP 69) — a lightweight, no-authentication file transfer used for firmware, configs, and PXE boot.",
+   "concept": "TFTP",
+   "summary": "Objective 1.4"
+  },
+  {
+   "hook": "Address Resolution Protocol — resolves a known IPv4 address to its MAC address on the local link so frames can be delivered.",
+   "concept": "ARP",
+   "summary": "Objective 1.4"
+  },
+  {
+   "hook": "A standard for sending event/log messages to a central collector, typically over UDP 514.",
+   "concept": "Syslog",
+   "summary": "Objective 1.4"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "Which port and transport does HTTPS use?",
+   "options": [
+    "UDP 443",
+    "TCP 80",
+    "TCP 8080",
+    "TCP 443"
+   ],
+   "answer": 3,
+   "explanation": "HTTPS (HTTP over TLS) uses TCP port 443."
+  },
+  {
+   "q": "Which protocol and port provide secure remote shell access?",
+   "options": [
+    "FTP, TCP 21",
+    "Telnet, TCP 23",
+    "RDP, TCP 3389",
+    "SSH, TCP 22"
+   ],
+   "answer": 3,
+   "explanation": "SSH uses TCP 22 and encrypts the session; Telnet (23) is cleartext."
+  },
+  {
+   "q": "A host sends a DNS zone transfer. Which transport protocol is used?",
+   "options": [
+    "TCP",
+    "UDP",
+    "ICMP",
+    "GRE"
+   ],
+   "answer": 0,
+   "explanation": "DNS uses UDP 53 for queries but TCP 53 for zone transfers and large responses."
+  },
+  {
+   "q": "Which delivery type sends traffic to the nearest of several hosts sharing one address?",
+   "options": [
+    "Unicast",
+    "Anycast",
+    "Multicast",
+    "Broadcast"
+   ],
+   "answer": 1,
+   "explanation": "Anycast routes to the nearest host advertising the shared address; common for DNS root servers and CDNs."
+  },
+  {
+   "q": "Which port does SMTP use to send mail between servers?",
+   "options": [
+    "TCP 143",
+    "TCP 110",
+    "TCP 993",
+    "TCP 25"
+   ],
+   "answer": 3,
+   "explanation": "SMTP uses TCP 25; POP3 is 110, IMAP is 143."
+  },
+  {
+   "q": "A technician needs secure, encrypted remote desktop to a Windows server. Which port is RDP?",
+   "options": [
+    "TCP 443",
+    "TCP 22",
+    "TCP 3389",
+    "TCP 23"
+   ],
+   "answer": 2,
+   "explanation": "RDP (Remote Desktop Protocol) uses TCP 3389."
+  },
+  {
+   "q": "Which protocol synchronizes device clocks and uses UDP 123?",
+   "options": [
+    "DNS",
+    "Syslog",
+    "NTP",
+    "SNMP"
+   ],
+   "answer": 2,
+   "explanation": "Network Time Protocol uses UDP 123 to synchronize clocks."
+  }
+ ]
+}

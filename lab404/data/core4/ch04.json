@@ -1,0 +1,128 @@
+{
+ "core": 4,
+ "chapter": 4,
+ "title": "Cabling, Media & Transceivers",
+ "exam_objectives": [
+  "1.5"
+ ],
+ "coverage": "COVERED",
+ "domain": "d1",
+ "domain_label": "Networking Concepts",
+ "sections": [
+  {
+   "title": "Copper Cabling & Standards",
+   "content": "Twisted-pair copper is the workhorse of the LAN. Twisting reduces crosstalk and EMI.\nCategory | Max speed | Max distance | Notes\nCat 5e | 1 Gbps | 100 m | Minimum for modern Gigabit\nCat 6 | 1 Gbps (10G to 55 m) | 100 m / 55 m | Tighter twist, less crosstalk\nCat 6a | 10 Gbps | 100 m | Shielded options; 10G full distance\nCat 7 | 10 Gbps | 100 m | Fully shielded (S/FTP), GG45\nCat 8 | 25-40 Gbps | 30 m | Data center short runs\nThe 100-meter rule: copper Ethernet is limited to ~100 m (90 m horizontal + 10 m patch). Beyond that, use fiber.\nShielding: UTP (unshielded) is cheapest and common; STP/FTP (shielded) resists interference in noisy environments.\nTermination standards: T568A and T568B define the pin-out. Straight-through (same standard both ends) connects unlike devices; a crossover (A on one end, B on the other) connects like devices — though Auto-MDIX now handles this automatically.\nPlenum-rated cable (CMP) has fire-resistant, low-smoke jacketing required in air-handling spaces.",
+   "exam_tips": [
+    "Copper Ethernet max run = 100 meters. Need farther = fiber.",
+    "Cat 6a is the common choice for 10 Gbps over the full 100 m.",
+    "Plenum (CMP) cable is required in air-handling spaces for fire safety."
+   ]
+  },
+  {
+   "title": "Fiber Optic Cabling",
+   "content": "Fiber carries light, immune to EMI, with huge distance and bandwidth.\nSingle-mode (SMF) — tiny 9-micron core, laser light, very long distance (km+), yellow jacket. Long-haul, campus/WAN.\nMultimode (MMF) — larger 50/62.5-micron core, LED/VCSEL, shorter distance (up to ~550 m), aqua/orange jacket. Within buildings/data centers. OM3/OM4/OM5 grades.\nConnectors: LC (small form, duplex, most common today), SC (square, push-pull), ST (round bayonet, older), MPO/MTP (multi-fiber ribbon for high density).\nTransceivers (pluggable optics):\nSFP — 1 Gbps.\nSFP+ — 10 Gbps.\nQSFP / QSFP+ — 40 Gbps (quad).\nQSFP28 — 100 Gbps.\nMatch the transceiver to the fiber type and wavelength on BOTH ends.",
+   "exam_tips": [
+    "Single-mode = long distance (laser, small core); multimode = shorter runs (LED, larger core).",
+    "LC is the most common modern fiber connector; MPO/MTP is for high-density ribbon.",
+    "SFP=1G, SFP+=10G, QSFP+=40G, QSFP28=100G."
+   ]
+  },
+  {
+   "title": "Transceivers, Media Converters & Distribution",
+   "content": "Media converter — bridges two media types (e.g., copper to fiber) to extend a link beyond copper's 100 m.\nTransceiver form factors are hot-swappable; 'BiDi' optics send/receive on one strand using two wavelengths.\nStructured cabling components:\nMDF (Main Distribution Frame) — the building's primary wiring hub.\nIDF (Intermediate Distribution Frame) — floor/wing closets that connect back to the MDF.\nPatch panel — terminates permanent cable runs; patch cables jumper to switches.\n66/110 blocks — punch-down termination (110 is modern data; 66 is legacy voice).\nDemarcation point (demarc) — where the ISP's responsibility ends and yours begins.",
+   "exam_tips": [
+    "Use a media converter (or fiber) when a run exceeds copper's 100 m limit.",
+    "MDF = main hub; IDF = intermediate closet that links back to the MDF.",
+    "The demarc is the ISP/customer responsibility boundary."
+   ]
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "The maximum run for twisted-pair copper Ethernet (90 m horizontal + 10 m patch). Beyond it, signal degrades — use fiber.",
+   "concept": "100-meter rule",
+   "summary": "Objective 1.5"
+  },
+  {
+   "hook": "Fiber with a ~9-micron core carrying laser light over very long distances (kilometers); yellow jacket, used for WAN/long-haul.",
+   "concept": "Single-mode fiber",
+   "summary": "Objective 1.5"
+  },
+  {
+   "hook": "Fiber with a 50/62.5-micron core carrying LED/VCSEL light over shorter distances (up to ~550 m); aqua/orange jacket, used inside buildings.",
+   "concept": "Multimode fiber",
+   "summary": "Objective 1.5"
+  },
+  {
+   "hook": "Hot-swappable fiber transceiver form factors: SFP=1 Gbps, SFP+=10 Gbps, QSFP28=100 Gbps. Must match the fiber and wavelength on both ends.",
+   "concept": "SFP/SFP+/QSFP28",
+   "summary": "Objective 1.5"
+  },
+  {
+   "hook": "Cable with fire-resistant, low-smoke jacketing required by code in air-handling (plenum) spaces like drop ceilings.",
+   "concept": "Plenum cable (CMP)",
+   "summary": "Objective 1.5"
+  },
+  {
+   "hook": "Straight-through (same T568 standard both ends) connects unlike devices; crossover (A/B) connects like devices. Auto-MDIX now negotiates this automatically.",
+   "concept": "Straight-through vs crossover",
+   "summary": "Objective 1.5"
+  },
+  {
+   "hook": "A device that converts between media types (e.g., copper to fiber) to extend a link past copper's distance limit.",
+   "concept": "Media converter",
+   "summary": "Objective 1.5"
+  },
+  {
+   "hook": "The physical point where the service provider's network ends and the customer's network begins; the responsibility boundary.",
+   "concept": "Demarcation point",
+   "summary": "Objective 1.5"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "What is the maximum run length for twisted-pair copper Ethernet?",
+   "options": [
+    "550 meters",
+    "305 meters",
+    "55 meters",
+    "100 meters"
+   ],
+   "answer": 3,
+   "explanation": "Copper Ethernet is limited to about 100 m (90 m horizontal + 10 m patch); beyond that use fiber."
+  },
+  {
+   "q": "Which fiber type uses a laser and a small core for very long distances?",
+   "options": [
+    "Multimode OM3",
+    "Single-mode",
+    "Cat 6a",
+    "Multimode OM4"
+   ],
+   "answer": 1,
+   "explanation": "Single-mode fiber has a ~9-micron core and uses laser light for kilometer-plus distances."
+  },
+  {
+   "q": "Which transceiver form factor supports 100 Gbps?",
+   "options": [
+    "SFP+",
+    "QSFP28",
+    "QSFP+",
+    "SFP"
+   ],
+   "answer": 1,
+   "explanation": "SFP=1G, SFP+=10G, QSFP+=40G, QSFP28=100G."
+  },
+  {
+   "q": "A cable run must pass through an air-handling ceiling space. Which cable is required?",
+   "options": [
+    "Plenum-rated (CMP)",
+    "Riser-rated (CMR)",
+    "Standard PVC",
+    "Direct-burial"
+   ],
+   "answer": 0,
+   "explanation": "Plenum spaces require fire-resistant, low-smoke plenum-rated (CMP) cable by code."
+  }
+ ]
+}

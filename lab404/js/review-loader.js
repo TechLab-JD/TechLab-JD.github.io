@@ -3,7 +3,7 @@
   "use strict";
 
   /* "core" 3 = Security+ (one exam, no cores; the number is only an internal slot) */
-  var TOTAL_CHAPTERS = { 1: 25, 2: 20, 3: 16 };
+  var TOTAL_CHAPTERS = { 1: 25, 2: 20, 3: 16, 4: 16 };
 
   var DOMAIN_LABELS = {
     hardware: "Hardware",
@@ -65,14 +65,32 @@
   }
 
   function isSec() { return state.core === 3; }
+  /* core 3 = Security+, core 4 = Network+ — both single-exam certs sharing d1–d5 domain keys. */
+  function isCert() { return state.core === 3 || state.core === 4; }
+  function certShort() { return (window.AplusUtils && window.AplusUtils.certShort(state.core)) || ""; }
+  function certLabel() { return (window.AplusUtils && window.AplusUtils.certLabel(state.core)) || certShort(); }
 
-  /* Flashcard "Both" (0) = A+ Core 1 + Core 2 only; Security+ never mixes with A+. */
+  /* Core-aware domain label/weight: d1–d5 mean different things for Security+ vs Network+. */
+  function dlab(d) {
+    if (state.core === 4 && window.AplusUtils) {
+      var m = window.AplusUtils.NETPLUS_DOMAINS;
+      if (m && m[d]) return m[d];
+    }
+    return DOMAIN_LABELS[d] || (d ? d.charAt(0).toUpperCase() + d.slice(1) : "");
+  }
+  var NET_WEIGHTS = { d1: "23%", d2: "20%", d3: "19%", d4: "14%", d5: "24%" };
+  function dwt(d) {
+    if (state.core === 4 && NET_WEIGHTS[d]) return NET_WEIGHTS[d];
+    return DOMAIN_WEIGHTS[d];
+  }
+
+  /* Flashcard "Both" (0) = A+ Core 1 + Core 2 only; a cert (3/4) never mixes with A+. */
   function fcInScope(c) {
     return state.fc.core === 0 ? (c === 1 || c === 2) : c === state.fc.core;
   }
 
   function fcDomainLabel(d) {
-    return DOMAIN_LABELS[d] || (d ? d.charAt(0).toUpperCase() + d.slice(1) : "");
+    return dlab(d);
   }
 
   function domainColor(d) {
@@ -329,7 +347,7 @@
 
   var APLUS_DOMAINS_LIST = ["hardware","networking","mobile","cloud","troubleshooting","os","security","operational"];
   var SEC_DOMAINS_LIST = ["d1","d2","d3","d4","d5"];
-  function domainsList() { return isSec() ? SEC_DOMAINS_LIST : APLUS_DOMAINS_LIST; }
+  function domainsList() { return isCert() ? SEC_DOMAINS_LIST : APLUS_DOMAINS_LIST; }
 
   function renderRoot(container) {
     var isGlossary = state.tab === "glossary";
@@ -347,7 +365,7 @@
             '<a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Review</span>' +
           '</nav>' +
           '<span class="section-label">Study Tool</span>' +
-          '<h1 style="font-size:clamp(1.5rem,3.5vw,2.25rem);margin-bottom:0.5rem;">' + (isSec() ? "Security+ Review &amp; Study" : "Review &amp; Study") + '</h1>' +
+          '<h1 style="font-size:clamp(1.5rem,3.5vw,2.25rem);margin-bottom:0.5rem;">' + (isCert() ? certShort() + " Review &amp; Study" : "Review &amp; Study") + '</h1>' +
           '<p class="text-muted text-sm">Mark sections as Got It or Focus, study with flashcards, and export a targeted PDF study guide.</p>' +
         '</div>' +
 
@@ -356,7 +374,7 @@
           '<div style="display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;">' +
             /* Core tabs — show Both only for flashcards */
             (state.locked
-              ? '<div class="core-tab-bar" style="margin:0;" id="coreTabs"><span class="core-tab active" style="cursor:default;">Security+ (SY0-701)</span></div>'
+              ? '<div class="core-tab-bar" style="margin:0;" id="coreTabs"><span class="core-tab active" style="cursor:default;">' + certLabel() + '</span></div>'
               : isFlashcards
               ? '<div class="core-tab-bar" style="margin:0;" id="coreTabs">' +
                   '<button class="core-tab' + (state.fc.core === 1 ? " active" : "") + '" data-fccore="1">Core 1</button>' +
@@ -428,7 +446,7 @@
     if (clearBtn) {
       clearBtn.addEventListener("click", function() {
         var label = state.tab === "terms" ? "Key Terms" : "Chapters";
-        if (confirm("Clear all Got It and Focus marks for " + label + " (" + (isSec() ? "Security+" : "Core " + state.core) + ")?")) {
+        if (confirm("Clear all Got It and Focus marks for " + label + " (" + (isCert() ? certShort() : "Core " + state.core) + ")?")) {
           clearAll();
           if (state.tab === "chapters") { renderChecklist(container); }
           else { renderTermsChecklist(container); }
@@ -497,8 +515,8 @@
     body.innerHTML = Object.keys(domains).map(function(domain) {
       var chs = domains[domain];
       var prog = domainProgress(domain, chs);
-      var dLabel = DOMAIN_LABELS[domain] || domain;
-      var dWeight = DOMAIN_WEIGHTS[domain] ? " (" + DOMAIN_WEIGHTS[domain] + ")" : "";
+      var dLabel = dlab(domain);
+      var dWeight = dwt(domain) ? " (" + dwt(domain) + ")" : "";
       var isCollapsed = state.collapsed[domain];
       return '<div class="checklist-domain">' +
         '<div class="checklist-domain-header" data-domain-toggle="' + domain + '">' +
@@ -580,7 +598,7 @@
     body.innerHTML = Object.keys(domains).sort().map(function(domain) {
       var terms = domains[domain];
       var prog = termDomainProgress(terms);
-      var dLabel = DOMAIN_LABELS[domain] || domain;
+      var dLabel = dlab(domain);
       var isCollapsed = state.domainCollapsed[domain];
       return '<div class="checklist-domain">' +
         '<div class="checklist-domain-header" data-term-domain-toggle="' + domain + '">' +
@@ -660,7 +678,7 @@
         '<div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.6rem;" id="gDomainChips">' +
           '<button class="filter-btn' + (domFilt === "all" ? " active" : "") + '" data-gdom="all">All</button>' +
           domainsList().map(function(d) {
-            return '<button class="filter-btn' + (domFilt === d ? " active" : "") + '" data-gdom="' + d + '">' + (DOMAIN_LABELS[d] || d) + '</button>';
+            return '<button class="filter-btn' + (domFilt === d ? " active" : "") + '" data-gdom="' + d + '">' + (dlab(d)) + '</button>';
           }).join("") +
         '</div>' +
         '<div class="glossary-alpha-bar" style="margin:.6rem 0 0;">' +
@@ -678,7 +696,7 @@
             return '<div class="glossary-group" id="gal-' + letter + '">' +
               '<div class="glossary-letter">' + letter + '</div>' +
               groups[letter].map(function(t) {
-                var dLabel = DOMAIN_LABELS[t.domain] || t.domain || "";
+                var dLabel = dlab(t.domain) || "";
                 return '<div class="glossary-entry">' +
                   '<div class="glossary-term">' + escHtml(t.term) + '</div>' +
                   '<div class="glossary-def">' + escHtml(t.definition) + '</div>' +
@@ -733,7 +751,7 @@
       '<div id="fcDomainRow" style="display:' + (fc.mode === "terms" || fc.mode === "acronyms" ? "flex" : "none") + ';flex-wrap:wrap;gap:.35rem;margin-bottom:1rem;">' +
         '<button class="filter-btn' + (fc.domain === "all" ? " active" : "") + '" data-fcdom="all">All Domains</button>' +
         domainsList().map(function(d) {
-          return '<button class="filter-btn' + (fc.domain === d ? " active" : "") + '" data-fcdom="' + d + '">' + (DOMAIN_LABELS[d] || d) + '</button>';
+          return '<button class="filter-btn' + (fc.domain === d ? " active" : "") + '" data-fcdom="' + d + '">' + (dlab(d)) + '</button>';
         }).join("") +
       '</div>' +
 
@@ -917,7 +935,7 @@
 
     Promise.all([p1, p2]).then(function() {
       var date = new Date().toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
-      var coreLabel = isSec() ? "Security+ (SY0-701)" : "Core " + state.core;
+      var coreLabel = isCert() ? certLabel() : "Core " + state.core;
       var html = '<h1>' + escHtml(coreLabel + " — Complete Study Pack") + '</h1>';
       html += '<p class="print-date">Generated: ' + escHtml(date) + ' &nbsp;|&nbsp; Lab404 Study Hub</p>';
       html += '<hr style="border:1pt solid #ccc;margin:1em 0;">';
@@ -947,7 +965,7 @@
         noteDomains[d][ck].sections.push(item.sec);
       });
       Object.keys(noteDomains).forEach(function(domain) {
-        html += '<h3>' + escHtml(DOMAIN_LABELS[domain] || domain) + '</h3>';
+        html += '<h3>' + escHtml(dlab(domain)) + '</h3>';
         Object.keys(noteDomains[domain]).sort(function(a,b){return +a - +b;}).forEach(function(cNum) {
           var entry = noteDomains[domain][cNum];
           html += '<h4>Ch' + String(entry.ch.chapter).padStart(2,"0") + ' &mdash; ' + escHtml(entry.ch.title) + '</h4>';
@@ -981,7 +999,7 @@
           termDomains[d].push(t);
         });
         Object.keys(termDomains).sort().forEach(function(domain) {
-          html += '<h3>' + escHtml(DOMAIN_LABELS[domain] || domain) + '</h3>';
+          html += '<h3>' + escHtml(dlab(domain)) + '</h3>';
           termDomains[domain].forEach(function(t) {
             html += '<div class="print-fc-card"><h4>' + escHtml(t.term) + '</h4><p>' + escHtml(t.definition) + '</p></div>';
           });
@@ -1004,7 +1022,7 @@
           conceptDomains[c.domain].push(c);
         });
         Object.keys(conceptDomains).sort().forEach(function(d) {
-          html += '<h3>' + escHtml(DOMAIN_LABELS[d] || d) + '</h3>';
+          html += '<h3>' + escHtml(dlab(d)) + '</h3>';
           conceptDomains[d].forEach(function(c) {
             html += '<div class="print-fc-card"><h4>' + escHtml(c.front) + '</h4><p>' + escHtml(c.back) + '</p></div>';
           });
@@ -1029,7 +1047,7 @@
           acDomains[d].push(t);
         });
         Object.keys(acDomains).sort().forEach(function(d) {
-          html += '<h3>' + escHtml(DOMAIN_LABELS[d] || d) + '</h3>';
+          html += '<h3>' + escHtml(dlab(d)) + '</h3>';
           acDomains[d].forEach(function(t) {
             html += '<div class="print-fc-card"><h4>' + escHtml(t.term) + '</h4><p>' + escHtml(t.definition) + '</p></div>';
           });
@@ -1054,14 +1072,14 @@
   function init(rootEl, opts) {
     var container = rootEl || document.getElementById("review-root");
     if (!container) return;
-    var wasSec = isSec();
-    if (opts && opts.core === 3) {
-      state.core = 3; state.fc.core = 3; state.locked = true;
+    var wasCert = isCert();
+    if (opts && (opts.core === 3 || opts.core === 4)) {
+      state.core = opts.core; state.fc.core = opts.core; state.locked = true;
     } else {
       state.locked = false;
-      if (wasSec) { state.core = 1; state.fc.core = 1; }
+      if (wasCert) { state.core = 1; state.fc.core = 1; }
     }
-    if (isSec() !== wasSec) {
+    if (isCert() !== wasCert) {
       state.chapters = []; state.glossaryDomain = "all"; state.fc.domain = "all";
       state.fc.cards = []; state.fc.queue = [];
     }

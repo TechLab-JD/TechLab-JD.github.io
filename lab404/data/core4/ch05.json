@@ -1,0 +1,125 @@
+{
+ "core": 4,
+ "chapter": 5,
+ "title": "Topologies & Network Architectures",
+ "exam_objectives": [
+  "1.6"
+ ],
+ "coverage": "COVERED",
+ "domain": "d1",
+ "domain_label": "Networking Concepts",
+ "sections": [
+  {
+   "title": "Physical & Logical Topologies",
+   "content": "A topology is how a network is arranged (physical = the wiring; logical = how data actually flows).\nStar — every node connects to a central switch. The dominant LAN topology: easy to troubleshoot, one failed link affects only one host, but the central device is a single point of failure.\nMesh — nodes interconnect with many paths. Full mesh = every node to every other (maximum redundancy, expensive); partial mesh balances cost and redundancy. Common in WANs.\nBus — all nodes share one backbone cable (legacy; one break kills the segment).\nRing — each node connects to two neighbors in a loop (legacy; token-based).\nHybrid — a mix, e.g., a star-of-stars (star-bus). Most real networks are hybrids.\nPoint-to-point — a direct link between exactly two nodes (a WAN leased line).\nHub-and-spoke — a central hub site with branch spokes (common WAN design).",
+   "exam_tips": [
+    "Star is the standard LAN topology; its weakness is the central switch as a single point of failure.",
+    "Full mesh gives maximum redundancy but cost grows fast: n(n-1)/2 links."
+   ]
+  },
+  {
+   "title": "Network Architectures",
+   "content": "Three-tier hierarchical model (campus):\nCore — high-speed backbone that moves traffic fast; no packet manipulation.\nDistribution (aggregation) — policy, routing between VLANs, ACLs, redundancy.\nAccess (edge) — where end devices plug in; switch ports, PoE, VLAN assignment.\nCollapsed core — combines core and distribution into one layer for smaller networks.\nSpine-and-leaf — the modern data center design: every leaf (access) switch connects to every spine switch. Predictable low latency, easy to scale horizontally, ideal for east-west (server-to-server) traffic.\nTraffic flows: north-south = client-to-server (in/out of the data center); east-west = server-to-server (within it). Virtualization and microservices made east-west traffic dominant, which spine-leaf handles well.",
+   "exam_tips": [
+    "Three-tier = Core / Distribution / Access. Collapsed core merges core + distribution for smaller sites.",
+    "Spine-and-leaf is built for east-west (server-to-server) data-center traffic."
+   ]
+  },
+  {
+   "title": "Network Types & Scope",
+   "content": "By geographic scope:\nPAN — Personal Area Network (Bluetooth, a few meters).\nLAN — Local Area Network (a building/campus).\nWLAN — Wireless LAN (Wi-Fi).\nCAN — Campus Area Network (a group of nearby buildings).\nMAN — Metropolitan Area Network (a city).\nWAN — Wide Area Network (across cities/countries; the internet is the biggest WAN).\nSpecialized: SAN (Storage Area Network — block storage fabric), SDWAN, and the difference between a WAN (you connect sites over provider links) and a LAN (you own the local gear).\nClient-server vs peer-to-peer: client-server centralizes resources/management on servers; peer-to-peer shares resources directly between hosts with no central server (simpler, harder to secure/manage at scale).",
+   "exam_tips": [
+    "Scope order small to large: PAN -> LAN -> CAN -> MAN -> WAN.",
+    "Don't confuse SAN (storage fabric) with WAN (wide-area). They sound alike but are unrelated."
+   ]
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "Every node connects to a central switch. The standard LAN layout — easy to manage, but the central device is a single point of failure.",
+   "concept": "Star topology",
+   "summary": "Objective 1.6"
+  },
+  {
+   "hook": "A topology where every node links directly to every other node, giving maximum redundancy at high cost: n(n-1)/2 links.",
+   "concept": "Full mesh",
+   "summary": "Objective 1.6"
+  },
+  {
+   "hook": "A hierarchical campus design of Core (fast backbone), Distribution (routing/policy), and Access (end-device ports).",
+   "concept": "Three-tier model",
+   "summary": "Objective 1.6"
+  },
+  {
+   "hook": "A data-center architecture where every leaf switch connects to every spine switch, giving predictable low latency for east-west traffic and easy horizontal scaling.",
+   "concept": "Spine-and-leaf",
+   "summary": "Objective 1.6"
+  },
+  {
+   "hook": "North-south is client-to-server traffic in/out of the data center; east-west is server-to-server traffic within it.",
+   "concept": "North-south vs east-west",
+   "summary": "Objective 1.6"
+  },
+  {
+   "hook": "A design that merges the core and distribution layers into one, used in smaller networks that don't need a separate backbone layer.",
+   "concept": "Collapsed core",
+   "summary": "Objective 1.6"
+  },
+  {
+   "hook": "A WAN topology with a central hub site to which all branch (spoke) sites connect, simplifying management but making the hub critical.",
+   "concept": "Hub-and-spoke",
+   "summary": "Objective 1.6"
+  },
+  {
+   "hook": "Client-server centralizes resources and control on dedicated servers; peer-to-peer shares resources directly between equal hosts with no central server.",
+   "concept": "Client-server vs peer-to-peer",
+   "summary": "Objective 1.6"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "Which topology is the standard for modern wired LANs?",
+   "options": [
+    "Star",
+    "Ring",
+    "Bus",
+    "Full mesh"
+   ],
+   "answer": 0,
+   "explanation": "The star topology (hosts to a central switch) is the standard LAN layout."
+  },
+  {
+   "q": "Which data-center architecture is optimized for east-west server-to-server traffic?",
+   "options": [
+    "Spine-and-leaf",
+    "Three-tier core/distribution/access",
+    "Token ring",
+    "Bus"
+   ],
+   "answer": 0,
+   "explanation": "Spine-and-leaf connects every leaf to every spine, giving low-latency east-west paths."
+  },
+  {
+   "q": "Name the three layers of the hierarchical campus model.",
+   "options": [
+    "Core, Distribution, Access",
+    "Spine, Leaf, Edge",
+    "Client, Server, Peer",
+    "Physical, Logical, Virtual"
+   ],
+   "answer": 0,
+   "explanation": "The three-tier model is Core (backbone), Distribution (routing/policy), and Access (end devices)."
+  },
+  {
+   "q": "Which topology connects a central hub site to multiple branch sites?",
+   "options": [
+    "Full mesh",
+    "Hub-and-spoke",
+    "Ring",
+    "Bus"
+   ],
+   "answer": 1,
+   "explanation": "Hub-and-spoke links branch 'spoke' sites to one central 'hub' site, common in WANs."
+  }
+ ]
+}

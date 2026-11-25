@@ -1,0 +1,196 @@
+{
+ "core": 4,
+ "chapter": 16,
+ "title": "Troubleshooting Services, Performance & Tools",
+ "exam_objectives": [
+  "5.3",
+  "5.4",
+  "5.5"
+ ],
+ "coverage": "COVERED",
+ "domain": "d5",
+ "domain_label": "Network Troubleshooting",
+ "sections": [
+  {
+   "title": "Command-Line & Software Tools",
+   "content": "ping — tests reachability + round-trip time (ICMP echo). ping 127.0.0.1 tests the local stack.\ntraceroute / tracert — shows the hop-by-hop path and where latency/loss starts.\nipconfig (Windows) / ip / ifconfig (Linux) — view/renew IP config; ipconfig /all shows DHCP/DNS; /release and /renew.\nnslookup / dig — query DNS records to diagnose name resolution.\narp -a — view the IP-to-MAC table.\nnetstat — active connections and listening ports; ss on Linux.\nnmap — scan hosts/ports and discover devices.\ntcpdump / Wireshark — capture and inspect packets (protocol analyzer).\npathping / mtr — combine ping + traceroute over time.\nSpeed test / iperf — measure throughput.",
+   "exam_tips": [
+    "ping tests reachability; traceroute/tracert shows the path and where it breaks.",
+    "nslookup/dig diagnose DNS; ipconfig /all shows the DHCP/DNS a host received.",
+    "Wireshark/tcpdump capture packets; nmap scans ports/hosts."
+   ]
+  },
+  {
+   "title": "Diagnosing Service Issues",
+   "content": "DNS problems — can ping an IP but not a name = DNS. Check the resolver, records, and TTL; flush the cache; try nslookup.\nDHCP problems — a 169.254.x.x (APIPA) address means no DHCP response; check scope exhaustion, the relay/IP helper, and reachability to the server.\nGateway/routing — can reach the local subnet but not remote = default gateway or routing issue (traceroute to find where it stops).\nTime (NTP) — bad clocks break certificates/TLS and Kerberos auth.\nName vs IP test isolates the layer: if the IP works but the name doesn't, it's DNS; if neither works, it's connectivity/routing.\nBlocked ports / firewall/ACL — service up but unreachable on its port; verify rules and test with telnet/Test-NetConnection to the port.",
+   "exam_tips": [
+    "Ping by IP works but by name fails → DNS problem.",
+    "169.254.x.x address → DHCP failure (no server reached).",
+    "Reach local but not remote hosts → default gateway / routing problem."
+   ]
+  },
+  {
+   "title": "Performance Issues",
+   "content": "Latency — delay (ms); high latency hurts real-time apps. Jitter — variation in latency; ruins VoIP/video. Packet loss — dropped packets cause retransmits and choppy media.\nBottlenecks — a saturated link, overloaded device CPU, or duplex mismatch. Check interface utilization and error/discard counters.\nBandwidth vs throughput — the pipe size vs what you actually get. Congestion and contention reduce throughput; apply QoS.\nWireless performance — low RSSI, interference, co-channel overlap, too many clients per AP, or wrong band.\nCommon causes: duplex/speed mismatch (collisions), MTU/fragmentation issues, failing hardware, broadcast storms, and asymmetrical routing.\nFix: baseline, isolate the segment, check errors, and correct the specific bottleneck.",
+   "exam_tips": [
+    "Jitter (varying latency) and packet loss degrade VoIP/video — mitigate with QoS.",
+    "A duplex mismatch causes collisions, errors, and very low throughput.",
+    "Rising interface errors/discards point to a physical or duplex/speed problem."
+   ]
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "A tool using ICMP echo to test reachability and round-trip time to a host; pinging 127.0.0.1 tests the local TCP/IP stack.",
+   "concept": "ping",
+   "summary": "Objective 5.5"
+  },
+  {
+   "hook": "Shows the hop-by-hop path to a destination and reveals where latency or packet loss begins.",
+   "concept": "traceroute / tracert",
+   "summary": "Objective 5.5"
+  },
+  {
+   "hook": "Command-line tools that query DNS records to diagnose name-resolution problems.",
+   "concept": "nslookup / dig",
+   "summary": "Objective 5.5"
+  },
+  {
+   "hook": "Software that captures and inspects packets to diagnose protocol-level issues; tcpdump is the CLI equivalent.",
+   "concept": "Protocol analyzer (Wireshark)",
+   "summary": "Objective 5.5"
+  },
+  {
+   "hook": "A host with a 169.254.x.x address never reached a DHCP server — the clue points to a DHCP or connectivity failure.",
+   "concept": "APIPA diagnosis",
+   "summary": "Objective 5.3"
+  },
+  {
+   "hook": "Variation in packet latency; high jitter degrades real-time traffic like VoIP and video even when average latency is fine.",
+   "concept": "Jitter",
+   "summary": "Objective 5.4"
+  },
+  {
+   "hook": "Packets that never arrive, forcing retransmissions and causing choppy audio/video and slow transfers.",
+   "concept": "Packet loss",
+   "summary": "Objective 5.4"
+  },
+  {
+   "hook": "Bandwidth is the link's theoretical capacity; throughput is the actual data rate achieved after overhead, congestion, and errors.",
+   "concept": "Bandwidth vs throughput",
+   "summary": "Objective 5.4"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "A host can ping 8.8.8.8 but cannot reach www.example.com. What is the likely issue?",
+   "options": [
+    "DNS resolution",
+    "Bad cable",
+    "Default gateway down",
+    "Duplex mismatch"
+   ],
+   "answer": 0,
+   "explanation": "Reaching an IP but not a name points to DNS; the connectivity itself works."
+  },
+  {
+   "q": "VoIP calls are choppy though average latency is low. Which metric is most likely the culprit?",
+   "options": [
+    "Administrative distance",
+    "Jitter",
+    "Bandwidth",
+    "MTU size"
+   ],
+   "answer": 1,
+   "explanation": "Jitter (variation in latency) degrades real-time audio even when average latency looks fine."
+  },
+  {
+   "q": "Which command shows the full hop-by-hop path to a destination and where latency appears?",
+   "options": [
+    "ipconfig /all",
+    "arp -a",
+    "ping",
+    "traceroute / tracert"
+   ],
+   "answer": 3,
+   "explanation": "traceroute/tracert lists each hop and its round-trip time, revealing where the path degrades."
+  },
+  {
+   "q": "A PC shows a 169.254.x.x address. What failed?",
+   "options": [
+    "The default gateway",
+    "NTP synchronization",
+    "DNS resolution",
+    "It could not reach a DHCP server (APIPA)"
+   ],
+   "answer": 3,
+   "explanation": "A 169.254 APIPA address means no DHCP server responded."
+  },
+  {
+   "q": "Rising interface error and discard counters most likely indicate what?",
+   "options": [
+    "A DNS misconfiguration",
+    "A missing AAAA record",
+    "An expired DHCP lease",
+    "A physical or duplex/speed problem on the link"
+   ],
+   "answer": 3,
+   "explanation": "Error/discard counters climb from cabling, duplex mismatch, or failing hardware at the physical layer."
+  },
+  {
+   "q": "Which tool captures and inspects individual packets for deep analysis?",
+   "options": [
+    "Wireshark (protocol analyzer)",
+    "ping",
+    "nmap",
+    "nslookup"
+   ],
+   "answer": 0,
+   "explanation": "Wireshark (or tcpdump on the CLI) captures packets for protocol-level troubleshooting."
+  },
+  {
+   "q": "A host reaches other devices on its own subnet but nothing remote. What is the likely cause?",
+   "options": [
+    "Default gateway or routing problem",
+    "DNS cache poisoning",
+    "Wrong SSID",
+    "Bad patch cable to the PC"
+   ],
+   "answer": 0,
+   "explanation": "Local works but remote fails points to the default gateway or a routing issue."
+  },
+  {
+   "q": "A gigabit link only achieves ~10 Mbps with many late collisions. What is the likely cause?",
+   "options": [
+    "Jumbo frames enabled",
+    "Duplex mismatch",
+    "QoS misconfiguration",
+    "Wrong DNS"
+   ],
+   "answer": 1,
+   "explanation": "A duplex mismatch (one full, one half) causes late collisions and drastically reduced throughput."
+  },
+  {
+   "q": "Which command on Windows shows the DHCP server and DNS servers a host received?",
+   "options": [
+    "ping -a",
+    "arp -d",
+    "route print",
+    "ipconfig /all"
+   ],
+   "answer": 3,
+   "explanation": "ipconfig /all displays full IP configuration including DHCP server and DNS servers."
+  },
+  {
+   "q": "nslookup resolves names fine, but the browser can't load any site, while pinging IPs works. What next?",
+   "options": [
+    "Check the proxy/firewall or the application, not DNS or connectivity",
+    "Renew the DHCP lease",
+    "Reseat the NIC",
+    "Replace the network cable"
+   ],
+   "answer": 0,
+   "explanation": "If DNS resolves and IPs ping, name resolution and L1–L3 are fine; look higher (proxy/app/port filtering)."
+  }
+ ]
+}

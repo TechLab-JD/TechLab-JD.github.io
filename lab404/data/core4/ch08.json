@@ -1,0 +1,161 @@
+{
+ "core": 4,
+ "chapter": 8,
+ "title": "Switching Technologies & Features",
+ "exam_objectives": [
+  "2.2"
+ ],
+ "coverage": "COVERED",
+ "domain": "d2",
+ "domain_label": "Network Implementation",
+ "sections": [
+  {
+   "title": "How Switches Work + VLANs",
+   "content": "A switch learns which MAC address lives on which port (building a MAC address table) and forwards frames only out the correct port. Unknown-destination and broadcast frames are flooded to all ports in the VLAN.\nVLAN (Virtual LAN) — logically segments one physical switch into separate broadcast domains. Hosts in different VLANs can't talk without a router/Layer-3 switch (inter-VLAN routing). Benefits: segmentation, security, less broadcast traffic.\nAccess port — carries one VLAN, connects to an end device.\nTrunk port — carries many VLANs between switches, tagging frames with 802.1Q. The native VLAN on a trunk is sent untagged.\nVoice VLAN — a separate VLAN for IP phones on the same port as a PC.",
+   "exam_tips": [
+    "VLANs separate broadcast domains; you need a router or Layer-3 switch to route between them.",
+    "802.1Q is the trunking/VLAN-tagging standard. The native VLAN is untagged.",
+    "Access port = one VLAN to a device; trunk port = many VLANs between switches."
+   ]
+  },
+  {
+   "title": "Spanning Tree & Redundancy",
+   "content": "Redundant switch links create loops, and loops cause broadcast storms. STP (Spanning Tree Protocol, 802.1D) prevents them by blocking redundant paths, leaving one active path; if the active link fails, a blocked one activates.\nKey terms: the root bridge is elected (lowest bridge ID); ports become root/designated (forwarding) or blocking. RSTP (802.1w) converges faster.\nPort roles/features: PortFast moves access ports straight to forwarding; BPDU Guard disables a port that unexpectedly receives STP BPDUs (protects against rogue switches).\nLink aggregation (LACP / 802.3ad) bundles multiple physical links into one logical link for more bandwidth and redundancy.",
+   "exam_tips": [
+    "STP prevents switching loops/broadcast storms by blocking redundant links.",
+    "Link aggregation (LACP/802.3ad) combines ports for bandwidth + redundancy.",
+    "BPDU Guard protects access ports from rogue switches sending BPDUs."
+   ]
+  },
+  {
+   "title": "PoE, Port Security & Switch Features",
+   "content": "PoE (Power over Ethernet) delivers power + data over one cable to APs, phones, cameras.\n802.3af (PoE) ~15.4W · 802.3at (PoE+) ~30W · 802.3bt (PoE++) up to ~60–100W. Budget the switch's total PoE wattage across ports.\nPort security — limits which/how many MAC addresses a port accepts; can shut down on violation (stops MAC flooding and rogue devices).\nMAC filtering, DHCP snooping (blocks rogue DHCP servers), and dynamic ARP inspection harden the access layer.\nJumbo frames (MTU ~9000) boost throughput for storage/data-center links.\nMDIX/Auto-MDIX auto-detects straight-through vs crossover.",
+   "exam_tips": [
+    "PoE standards: 802.3af (15W), 802.3at/PoE+ (30W), 802.3bt/PoE++ (60–100W).",
+    "Port security limits MACs per port and can disable the port on violation.",
+    "DHCP snooping blocks rogue DHCP servers; dynamic ARP inspection stops ARP spoofing."
+   ]
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "A Virtual LAN that logically splits a switch into separate broadcast domains; inter-VLAN traffic needs a router or Layer-3 switch.",
+   "concept": "VLAN",
+   "summary": "Objective 2.2"
+  },
+  {
+   "hook": "A switch link that carries multiple VLANs by tagging frames with a VLAN ID; the native VLAN is sent untagged.",
+   "concept": "802.1Q trunk",
+   "summary": "Objective 2.2"
+  },
+  {
+   "hook": "Prevents switching loops by blocking redundant links, keeping one active path and failing over if it breaks.",
+   "concept": "Spanning Tree Protocol (STP)",
+   "summary": "Objective 2.2"
+  },
+  {
+   "hook": "Bundling several physical links (802.3ad) into one logical connection for added bandwidth and redundancy.",
+   "concept": "Link aggregation (LACP)",
+   "summary": "Objective 2.2"
+  },
+  {
+   "hook": "A switch feature limiting which or how many MAC addresses a port accepts, able to disable the port on a violation.",
+   "concept": "Port security",
+   "summary": "Objective 2.2"
+  },
+  {
+   "hook": "Power over Ethernet standards delivering power with data: 802.3af ~15W, 802.3at ~30W, 802.3bt up to ~100W.",
+   "concept": "PoE / PoE+ / PoE++",
+   "summary": "Objective 2.2"
+  },
+  {
+   "hook": "A switch security feature that trusts DHCP replies only from approved ports, blocking rogue DHCP servers.",
+   "concept": "DHCP snooping",
+   "summary": "Objective 2.2"
+  },
+  {
+   "hook": "A flood of broadcast/looped frames that saturates a switched network; prevented by Spanning Tree Protocol.",
+   "concept": "Broadcast storm",
+   "summary": "Objective 2.2"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "Two switches must carry multiple VLANs over a single link. What should the link be configured as?",
+   "options": [
+    "An 802.1Q trunk port",
+    "A mirror port",
+    "An access port",
+    "A loopback"
+   ],
+   "answer": 0,
+   "explanation": "Trunk ports carry multiple VLANs between switches by tagging frames with 802.1Q."
+  },
+  {
+   "q": "What prevents switching loops in a network with redundant links?",
+   "options": [
+    "DHCP snooping",
+    "Port mirroring",
+    "Link aggregation",
+    "Spanning Tree Protocol"
+   ],
+   "answer": 3,
+   "explanation": "STP blocks redundant paths to prevent loops and broadcast storms."
+  },
+  {
+   "q": "Which standard delivers up to ~30W of power over Ethernet?",
+   "options": [
+    "802.1X",
+    "802.3at (PoE+)",
+    "802.3af (PoE)",
+    "802.3bt (PoE++)"
+   ],
+   "answer": 1,
+   "explanation": "802.3at (PoE+) supplies ~30W; 802.3af is ~15W and 802.3bt up to ~100W."
+  },
+  {
+   "q": "Which feature limits how many MAC addresses a switch port will accept?",
+   "options": [
+    "NAT",
+    "Port security",
+    "QoS",
+    "Trunking"
+   ],
+   "answer": 1,
+   "explanation": "Port security restricts the MAC addresses on a port and can disable it on violation."
+  },
+  {
+   "q": "A frame on a trunk arrives without a VLAN tag. Which VLAN is it assigned to?",
+   "options": [
+    "The highest-numbered VLAN",
+    "It is dropped",
+    "The native VLAN",
+    "VLAN 1 always"
+   ],
+   "answer": 2,
+   "explanation": "Untagged frames on an 802.1Q trunk belong to the native VLAN."
+  },
+  {
+   "q": "Which feature bundles multiple physical switch links into one logical link?",
+   "options": [
+    "Trunking",
+    "Spanning Tree",
+    "Link aggregation (LACP)",
+    "Port mirroring"
+   ],
+   "answer": 2,
+   "explanation": "LACP (802.3ad) aggregates links for more bandwidth and redundancy."
+  },
+  {
+   "q": "An IP camera needs both power and data over one Ethernet cable. What provides this?",
+   "options": [
+    "NAT",
+    "QoS",
+    "PoE",
+    "VLAN"
+   ],
+   "answer": 2,
+   "explanation": "Power over Ethernet delivers electrical power along with data over the Ethernet cable."
+  }
+ ]
+}

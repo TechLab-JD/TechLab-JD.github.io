@@ -1,0 +1,172 @@
+{
+ "core": 4,
+ "chapter": 14,
+ "title": "Network Defense Techniques & Solutions",
+ "exam_objectives": [
+  "4.3"
+ ],
+ "coverage": "COVERED",
+ "domain": "d4",
+ "domain_label": "Network Security",
+ "sections": [
+  {
+   "title": "Perimeter & Segmentation Defenses",
+   "content": "Firewalls filter traffic by rules.\nStateless (ACL) filters per-packet; stateful tracks connections; NGFW adds app/user awareness + IPS.\nA screened subnet (DMZ) isolates public-facing servers between two firewall boundaries.\nSegmentation limits lateral movement: VLANs, subnets, and microsegmentation. Put untrusted/guest devices and IoT on their own segments.\nACLs permit/deny by source/dest IP, port, protocol — order matters (first match wins, implicit deny at the end).\nProxies, content filters, and a WAF (web application firewall) protect application traffic. IDS detects; IPS blocks in-line.",
+   "exam_tips": [
+    "Stateful firewalls track connection state; NGFW adds application awareness + IPS.",
+    "A screened subnet/DMZ isolates internet-facing servers from the internal LAN.",
+    "ACLs are first-match with an implicit deny at the end — order the rules carefully."
+   ]
+  },
+  {
+   "title": "Access Control & Port Hardening",
+   "content": "NAC (Network Access Control) checks a device's identity and posture (patches, AV) before admitting it, often with 802.1X.\n802.1X — port-based authentication: the supplicant (client) authenticates to the authenticator (switch/AP) against a RADIUS authentication server before the port opens.\nSwitch-port hardening: port security (limit MACs), DHCP snooping (block rogue DHCP), dynamic ARP inspection (stop ARP spoofing), BPDU guard, disabling unused ports, and putting them in an unused VLAN.\nControl plane: change default credentials, use role-based access control, and management out-of-band.",
+   "exam_tips": [
+    "802.1X roles: supplicant (client) → authenticator (switch/AP) → authentication server (RADIUS).",
+    "NAC verifies device identity + health posture before granting network access.",
+    "Harden access ports: port security, DHCP snooping, dynamic ARP inspection, disable unused ports."
+   ]
+  },
+  {
+   "title": "Hardening, Physical & Operational Security",
+   "content": "Device hardening: change default passwords, disable unused services/ports, patch firmware, use secure protocols (SSH/HTTPS/SNMPv3), and enforce strong auth (MFA).\nPhysical security: locked racks/rooms, badge access, mantraps, cameras, cable locks, and asset tags — physical access can defeat most logical controls.\nEncryption in transit (TLS, IPsec) and at rest; certificates and PKI establish trust.\nKey management & logging: centralize logs (SIEM), keep time synced (NTP), and monitor for anomalies.\nHoneypots lure and study attackers. Security policies + user training address the human layer.",
+   "exam_tips": [
+    "Hardening basics: change defaults, patch, disable unused services, use SSH/HTTPS/SNMPv3, enable MFA.",
+    "Physical access can bypass logical controls — lock racks/rooms and control entry.",
+    "Encrypt in transit with TLS/IPsec; use PKI/certificates for trust."
+   ]
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "A firewall that tracks active connection state and automatically permits return traffic for sessions it allowed.",
+   "concept": "Stateful firewall",
+   "summary": "Objective 4.3"
+  },
+  {
+   "hook": "An isolated network segment for public-facing servers, separated from the internal LAN by firewall boundaries.",
+   "concept": "Screened subnet (DMZ)",
+   "summary": "Objective 4.3"
+  },
+  {
+   "hook": "Port-based network access control where a supplicant authenticates through the switch/AP to a RADIUS server before the port is opened.",
+   "concept": "802.1X",
+   "summary": "Objective 4.3"
+  },
+  {
+   "hook": "Network Access Control — admits devices only after verifying identity and security posture (patches, AV, config).",
+   "concept": "NAC",
+   "summary": "Objective 4.3"
+  },
+  {
+   "hook": "Access Control List — ordered permit/deny rules filtering traffic by IP, port, and protocol, with first-match and an implicit deny.",
+   "concept": "ACL",
+   "summary": "Objective 4.3"
+  },
+  {
+   "hook": "A switch feature that validates ARP packets against DHCP snooping data to block ARP spoofing.",
+   "concept": "Dynamic ARP inspection",
+   "summary": "Objective 4.3"
+  },
+  {
+   "hook": "Fine-grained network segmentation that isolates workloads from each other to limit lateral movement after a breach.",
+   "concept": "Microsegmentation",
+   "summary": "Objective 4.3"
+  },
+  {
+   "hook": "Reducing attack surface by changing defaults, patching, disabling unused services/ports, and using secure protocols + MFA.",
+   "concept": "Device hardening",
+   "summary": "Objective 4.3"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "What are the three roles in 802.1X authentication?",
+   "options": [
+    "Host, switch, router",
+    "Supplicant, authenticator, authentication server",
+    "Client, proxy, gateway",
+    "User, admin, auditor"
+   ],
+   "answer": 1,
+   "explanation": "The supplicant (client) authenticates via the authenticator (switch/AP) to a RADIUS authentication server."
+  },
+  {
+   "q": "Which switch feature blocks rogue DHCP servers?",
+   "options": [
+    "Port mirroring",
+    "Spanning Tree",
+    "DHCP snooping",
+    "Jumbo frames"
+   ],
+   "answer": 2,
+   "explanation": "DHCP snooping only trusts DHCP replies from approved ports, blocking rogue servers."
+  },
+  {
+   "q": "Where should public-facing web servers be placed relative to the internal LAN?",
+   "options": [
+    "On the management network",
+    "On the internal user VLAN",
+    "In a screened subnet (DMZ)",
+    "Directly on the internet with no firewall"
+   ],
+   "answer": 2,
+   "explanation": "A screened subnet/DMZ isolates internet-facing servers from the internal network behind firewall boundaries."
+  },
+  {
+   "q": "Which control admits devices only after checking identity and security posture?",
+   "options": [
+    "QoS",
+    "STP",
+    "NAT",
+    "NAC (Network Access Control)"
+   ],
+   "answer": 3,
+   "explanation": "NAC verifies a device's identity and health (patches, AV) before granting network access."
+  },
+  {
+   "q": "Which switch feature validates ARP replies against DHCP snooping data?",
+   "options": [
+    "BPDU Guard",
+    "Dynamic ARP Inspection",
+    "Port mirroring",
+    "Jumbo frames"
+   ],
+   "answer": 1,
+   "explanation": "Dynamic ARP Inspection drops forged ARP packets, defeating ARP spoofing."
+  },
+  {
+   "q": "Where should an organization place its public web and mail servers?",
+   "options": [
+    "On the guest Wi-Fi",
+    "On the management network",
+    "On the internal VLAN",
+    "In a screened subnet (DMZ)"
+   ],
+   "answer": 3,
+   "explanation": "Public-facing servers belong in a screened subnet/DMZ isolated from the internal LAN."
+  },
+  {
+   "q": "Which solution checks a laptop's patch level and antivirus before allowing it on the network?",
+   "options": [
+    "QoS",
+    "NAC",
+    "STP",
+    "DHCP"
+   ],
+   "answer": 1,
+   "explanation": "Network Access Control enforces posture checks (patches, AV) before granting access."
+  },
+  {
+   "q": "A firewall rule list ends with no explicit allow for unmatched traffic. What happens to it?",
+   "options": [
+    "It is logged and allowed",
+    "It is denied by the implicit deny",
+    "It is sent to the DMZ",
+    "It is allowed by default"
+   ],
+   "answer": 1,
+   "explanation": "ACLs end with an implicit deny, so traffic not explicitly permitted is dropped."
+  }
+ ]
+}

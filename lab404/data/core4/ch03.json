@@ -1,0 +1,182 @@
+{
+ "core": 4,
+ "chapter": 3,
+ "title": "Cloud & Modern Network Environments",
+ "exam_objectives": [
+  "1.3",
+  "1.8"
+ ],
+ "coverage": "COVERED",
+ "domain": "d1",
+ "domain_label": "Networking Concepts",
+ "sections": [
+  {
+   "title": "Cloud Service & Deployment Models",
+   "content": "Service models — who manages what:\nIaaS (Infrastructure as a Service) — provider gives VMs, storage, networking; you manage OS and up. (AWS EC2, Azure VMs.)\nPaaS (Platform as a Service) — provider manages OS/runtime; you deploy just your app/code.\nSaaS (Software as a Service) — provider runs the whole app; you just use it. (Microsoft 365, Salesforce.)\nMnemonic: the higher you go (IaaS -> PaaS -> SaaS), the LESS you manage.\nDeployment models:\nPublic — shared provider infrastructure, multi-tenant.\nPrivate — dedicated to one organization.\nHybrid — mix of public and private, connected.\nCommunity — shared by organizations with common needs.\nShared responsibility model: the provider secures the cloud (hardware, hypervisor); the customer secures what they put IN the cloud (data, configs, access). Misconfiguration is the customer's fault.",
+   "exam_tips": [
+    "IaaS = most customer control/responsibility; SaaS = least.",
+    "In the shared responsibility model, cloud misconfigurations are the customer's responsibility."
+   ]
+  },
+  {
+   "title": "Cloud Connectivity & Networking",
+   "content": "Getting to and within the cloud:\nVPC (Virtual Private Cloud) — your isolated virtual network inside a public cloud, carved into subnets.\nVPN — encrypted tunnel over the public internet to the cloud (cheap, variable performance).\nDirect Connect / ExpressRoute — a private, dedicated circuit to the cloud provider (consistent, higher performance, more cost).\nNetwork security group (NSG) / security group — cloud firewall rules applied to subnets or instances.\nCloud gateway — NAT gateway, internet gateway, or VPN gateway that controls traffic in/out of the VPC.\nNFV (Network Functions Virtualization) — running routers, firewalls, and load balancers as software instances instead of dedicated hardware.",
+   "exam_tips": [
+    "Direct Connect/ExpressRoute = private dedicated link (predictable); site-to-site VPN = encrypted over the internet (cheaper, variable).",
+    "A VPC is your logically isolated slice of the provider's network."
+   ]
+  },
+  {
+   "title": "Modern & Evolving Network Environments",
+   "content": "SDN (Software-Defined Networking) — separates the control plane (decisions about where traffic goes) from the data plane (actually forwarding it). A central controller programs the switches, enabling automation and central policy.\nSD-WAN — applies SDN to WAN links; intelligently steers traffic across MPLS, broadband, and LTE based on application and link quality. Great for connecting branch offices to cloud apps.\nSASE (Secure Access Service Edge) — converges SD-WAN with cloud-delivered security (firewall, CASB, zero trust) into one service.\nInfrastructure as Code (IaC) — defining and deploying network/infrastructure through version-controlled scripts/templates (Terraform, Ansible) instead of manual clicks — repeatable and auditable.\nZero trust — 'never trust, always verify': authenticate and authorize every request regardless of location, with least privilege and microsegmentation.\nIPv6 adoption, IoT, and cloud-first designs are the main drivers pushing these changes.",
+   "exam_tips": [
+    "SDN splits the control plane from the data plane, with a central controller.",
+    "SD-WAN chooses the best path across multiple WAN transports per application.",
+    "Zero trust assumes breach: verify every request, enforce least privilege, segment heavily."
+   ]
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "Cloud service tiers by how much the provider manages: IaaS (VMs/networking), PaaS (runtime/platform), SaaS (full application). More abstraction = less you manage.",
+   "concept": "IaaS / PaaS / SaaS",
+   "summary": "Objective 1.3"
+  },
+  {
+   "hook": "The provider secures the cloud infrastructure; the customer secures their data, configurations, and access within it.",
+   "concept": "Shared responsibility model",
+   "summary": "Objective 1.3"
+  },
+  {
+   "hook": "Virtual Private Cloud — a logically isolated virtual network inside a public cloud, divided into your own subnets and security groups.",
+   "concept": "VPC",
+   "summary": "Objective 1.3"
+  },
+  {
+   "hook": "A private, dedicated physical circuit from your site to a cloud provider, giving consistent performance versus an internet VPN.",
+   "concept": "Direct Connect / ExpressRoute",
+   "summary": "Objective 1.3"
+  },
+  {
+   "hook": "Software-Defined Networking — decouples the control plane from the data plane so a central controller can program forwarding behavior.",
+   "concept": "SDN",
+   "summary": "Objective 1.8"
+  },
+  {
+   "hook": "Software-defined WAN that dynamically steers traffic across multiple transports (MPLS, broadband, LTE) based on application needs and link health.",
+   "concept": "SD-WAN",
+   "summary": "Objective 1.8"
+  },
+  {
+   "hook": "Provisioning and managing infrastructure through version-controlled definition files (Terraform, Ansible) rather than manual configuration.",
+   "concept": "Infrastructure as Code (IaC)",
+   "summary": "Objective 1.8"
+  },
+  {
+   "hook": "A security model that trusts no user or device by default, verifying and least-privileging every request regardless of network location.",
+   "concept": "Zero trust",
+   "summary": "Objective 1.8"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "In which cloud service model does the customer manage the operating system and applications but not the physical hardware?",
+   "options": [
+    "PaaS",
+    "FaaS",
+    "IaaS",
+    "SaaS"
+   ],
+   "answer": 2,
+   "explanation": "With IaaS the provider supplies infrastructure (VMs, storage, networking) and the customer manages the OS and up."
+  },
+  {
+   "q": "A retailer wants one service that combines SD-WAN with cloud-delivered firewall and zero-trust access. What is this?",
+   "options": [
+    "MPLS",
+    "SASE (Secure Access Service Edge)",
+    "VPN concentrator",
+    "NAT gateway"
+   ],
+   "answer": 1,
+   "explanation": "SASE converges SD-WAN networking with cloud-delivered security (firewall, CASB, zero trust) into one service."
+  },
+  {
+   "q": "Under the cloud shared responsibility model, who is responsible for a misconfigured storage bucket exposing data?",
+   "options": [
+    "The customer",
+    "No one — it is automatic",
+    "The cloud provider",
+    "The ISP"
+   ],
+   "answer": 0,
+   "explanation": "Customers are responsible for securing what they put in the cloud, including configurations and access."
+  },
+  {
+   "q": "Which practice deploys network infrastructure from version-controlled templates for repeatable, auditable builds?",
+   "options": [
+    "Spanning Tree",
+    "Port mirroring",
+    "Infrastructure as Code (IaC)",
+    "Static routing"
+   ],
+   "answer": 2,
+   "explanation": "IaC defines infrastructure in version-controlled files (Terraform/Ansible) so deployments are repeatable and reviewable."
+  },
+  {
+   "q": "Which connection gives a private, dedicated, predictable-performance link to a cloud provider?",
+   "options": [
+    "APIPA",
+    "Direct Connect / ExpressRoute",
+    "A forward proxy",
+    "Site-to-site VPN over the internet"
+   ],
+   "answer": 1,
+   "explanation": "Direct Connect/ExpressRoute is a dedicated private circuit; an internet VPN is cheaper but variable."
+  },
+  {
+   "q": "Which technology separates the network control plane from the data plane using a central controller?",
+   "options": [
+    "SDN",
+    "NAT",
+    "STP",
+    "VLAN"
+   ],
+   "answer": 0,
+   "explanation": "Software-Defined Networking (SDN) decouples the control plane from the data plane with a central controller."
+  },
+  {
+   "q": "A company runs its own virtual network, subnets, and security groups inside a public cloud. What is this called?",
+   "options": [
+    "A DMZ",
+    "A VLAN",
+    "A VPC (Virtual Private Cloud)",
+    "A honeypot"
+   ],
+   "answer": 2,
+   "explanation": "A VPC is a logically isolated virtual network within a public cloud provider."
+  },
+  {
+   "q": "Which approach dynamically steers branch traffic across MPLS, broadband, and LTE based on application needs?",
+   "options": [
+    "Spanning Tree",
+    "APIPA",
+    "Port mirroring",
+    "SD-WAN"
+   ],
+   "answer": 3,
+   "explanation": "SD-WAN selects the best transport per application across multiple WAN links."
+  },
+  {
+   "q": "Provisioning network infrastructure from version-controlled templates instead of manual configuration is called what?",
+   "options": [
+    "Infrastructure as Code (IaC)",
+    "Software as a Service",
+    "Network Address Translation",
+    "Quality of Service"
+   ],
+   "answer": 0,
+   "explanation": "Infrastructure as Code defines and deploys infrastructure through version-controlled files (Terraform, Ansible)."
+  }
+ ]
+}

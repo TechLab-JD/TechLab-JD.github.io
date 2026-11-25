@@ -1,0 +1,203 @@
+{
+ "core": 4,
+ "chapter": 6,
+ "title": "IPv4 Addressing & Subnetting",
+ "exam_objectives": [
+  "1.7"
+ ],
+ "coverage": "COVERED",
+ "domain": "d1",
+ "domain_label": "Networking Concepts",
+ "sections": [
+  {
+   "title": "IPv4 Address Basics",
+   "content": "An IPv4 address is 32 bits, written as four octets (0-255) in dotted-decimal, e.g. 192.168.1.10. It has a network portion and a host portion; the subnet mask (or CIDR prefix) says where the split is.\nClasses (legacy, still tested):\nClass | First octet | Default mask | Use\nA | 1-126 | /8 (255.0.0.0) | Huge networks\nB | 128-191 | /16 (255.255.0.0) | Medium\nC | 192-223 | /24 (255.255.255.0) | Small\nD | 224-239 | — | Multicast\nE | 240-255 | — | Experimental\n127.x.x.x is loopback (127.0.0.1 = localhost).\nPrivate ranges (RFC 1918, not routable on the internet):\n10.0.0.0/8  |  172.16.0.0 - 172.31.255.255 (/12)  |  192.168.0.0/16\nAPIPA: 169.254.0.0/16 — a host self-assigns here when DHCP fails (a troubleshooting clue: 'I have a 169.254 address' means no DHCP).",
+   "exam_tips": [
+    "Memorize the three RFC1918 private ranges and APIPA (169.254.x.x = DHCP failed).",
+    "127.0.0.1 is loopback; 169.254.x.x is APIPA self-assignment.",
+    "Class is set by the first octet: A 1-126, B 128-191, C 192-223."
+   ]
+  },
+  {
+   "title": "Subnet Masks & CIDR",
+   "content": "The mask marks network bits (1s) and host bits (0s). CIDR notation counts the network bits: /24 = 255.255.255.0.\nKey mask values per octet come from the host bits:\nCIDR | Mask (last octet) | Block size | Usable hosts\n/24 | 0 | 256 | 254\n/25 | 128 | 128 | 126\n/26 | 192 | 64 | 62\n/27 | 224 | 32 | 30\n/28 | 240 | 16 | 14\n/29 | 248 | 8 | 6\n/30 | 252 | 4 | 2\nFormulas (h = number of host bits = 32 - prefix):\nTotal addresses in the block = 2^h.\nUsable hosts = 2^h - 2 (subtract network address + broadcast address).\nNumber of subnets when borrowing b bits = 2^b.\nThe /30 (2 usable hosts) is the classic point-to-point link mask. A /31 (RFC 3021) is used for point-to-point links where the 2-host subtraction is waived.",
+   "exam_tips": [
+    "Usable hosts = 2^(host bits) - 2. The -2 is the network and broadcast addresses.",
+    "Common masks: /30=2 hosts, /29=6, /28=14, /27=30, /26=62, /25=126.",
+    "/30 is the standard mask for a router-to-router point-to-point link."
+   ]
+  },
+  {
+   "title": "How to Subnet — Step by Step",
+   "content": "Goal: given an IP and prefix, find the network, broadcast, and host range.\nWork in the 'interesting octet' — the one the mask splits.\n1. Find the block size: 256 - (mask value in that octet). Example /26 -> mask 192 -> 256-192 = 64.\n2. List the subnet boundaries by counting up by the block size: for 192.168.10.x /26 -> .0, .64, .128, .192.\n3. Place your address in a block: 192.168.10.100 falls in the .64 block (64-127).\n4. Network address = the start (192.168.10.64). Broadcast = next boundary minus 1 (192.168.10.127). Usable hosts = .65 to .126.\nSecond example: 172.16.0.0/20. Prefix 20 -> the third octet is interesting (mask 255.255.240.0). Block size = 256-240 = 16 in the third octet -> subnets 0, 16, 32... A host at 172.16.18.5 is in the 172.16.16.0 subnet (16-31), broadcast 172.16.31.255, hosts 172.16.16.1 - 172.16.31.254.\nVLSM (Variable Length Subnet Masking): size each subnet to its need — allocate the largest subnets first, then carve smaller ones from what's left — to avoid wasting addresses.",
+   "exam_tips": [
+    "Block size = 256 - the mask value in the interesting octet. This single trick solves most subnetting questions.",
+    "Network address = block start; broadcast = next block start minus 1.",
+    "VLSM: assign the largest subnet first to avoid overlaps and waste."
+   ]
+  },
+  {
+   "title": "IPv6 Essentials",
+   "content": "IPv6 is 128 bits, written as eight groups of four hex digits, e.g. 2001:0db8:0000:0000:0000:ff00:0042:8329. Shorten with two rules: drop leading zeros in a group, and replace ONE run of all-zero groups with '::' (only once). So that becomes 2001:db8::ff00:42:8329.\nAddress types: global unicast (routable, like public IPv4), link-local (fe80::/10, auto-configured, stays on the local link), unique local (fc00::/7, private), and multicast (ff00::/8). IPv6 has NO broadcast.\nSLAAC (Stateless Address Autoconfiguration) lets a host build its own address from the router advertisement — no DHCP server required (though DHCPv6 exists for extra options).\nDual stack (run IPv4 and IPv6 together) and tunneling (6to4, Teredo) are common migration methods.\nWhy IPv6: IPv4's ~4.3 billion addresses ran out; IPv6 provides a practically unlimited space and removes the need for NAT.",
+   "exam_tips": [
+    "'::' can appear only once in an IPv6 address; it replaces the longest run of zero groups.",
+    "fe80::/10 = link-local (every IPv6 interface has one). IPv6 has no broadcast — it uses multicast.",
+    "SLAAC = host self-configures its IPv6 address from router advertisements."
+   ]
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "A 32-bit value marking which bits of an IP are network (1s) vs host (0s). /24 = 255.255.255.0.",
+   "concept": "Subnet mask",
+   "summary": "Objective 1.7"
+  },
+  {
+   "hook": "256 minus the mask value in the interesting octet. Counting up by the block size gives the subnet boundaries — the core subnetting shortcut.",
+   "concept": "Block size",
+   "summary": "Objective 1.7"
+  },
+  {
+   "hook": "2^(number of host bits) - 2. The minus two accounts for the network address and the broadcast address.",
+   "concept": "Usable hosts formula",
+   "summary": "Objective 1.7"
+  },
+  {
+   "hook": "Non-internet-routable address space: 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16.",
+   "concept": "RFC 1918 private ranges",
+   "summary": "Objective 1.7"
+  },
+  {
+   "hook": "Automatic Private IP Addressing (169.254.0.0/16) — a host self-assigns here when no DHCP server responds; a telltale sign of a DHCP failure.",
+   "concept": "APIPA",
+   "summary": "Objective 1.7"
+  },
+  {
+   "hook": "Variable Length Subnet Masking — sizing each subnet to its host count (largest first) so address space isn't wasted.",
+   "concept": "VLSM",
+   "summary": "Objective 1.7"
+  },
+  {
+   "hook": "Classless addressing that writes the mask as a bit count (/26) instead of dotted decimal, decoupling networks from the old A/B/C classes.",
+   "concept": "CIDR notation",
+   "summary": "Objective 1.7"
+  },
+  {
+   "hook": "A double colon that replaces one run of consecutive all-zero 16-bit groups in an IPv6 address; it may be used only once per address.",
+   "concept": "IPv6 :: shorthand",
+   "summary": "Objective 1.7"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "A host has the IP 192.168.10.100/26. What is its network address?",
+   "options": [
+    "192.168.10.96",
+    "192.168.10.128",
+    "192.168.10.64",
+    "192.168.10.0"
+   ],
+   "answer": 2,
+   "explanation": "A /26 has block size 64 (.0, .64, .128, .192). 100 falls in the .64 block, so the network is 192.168.10.64."
+  },
+  {
+   "q": "How many usable hosts are in a /29 subnet?",
+   "options": [
+    "8",
+    "6",
+    "14",
+    "2"
+   ],
+   "answer": 1,
+   "explanation": "A /29 has 3 host bits: 2^3 - 2 = 6 usable addresses."
+  },
+  {
+   "q": "A workstation shows an address of 169.254.12.5. What does this indicate?",
+   "options": [
+    "It is on the loopback interface",
+    "It failed to reach a DHCP server and self-assigned APIPA",
+    "It has a valid public IP",
+    "It is using IPv6 link-local"
+   ],
+   "answer": 1,
+   "explanation": "169.254.0.0/16 is APIPA — assigned when DHCP fails, signaling a DHCP connectivity problem."
+  },
+  {
+   "q": "Which subnet mask is standard for a router-to-router point-to-point link with exactly two hosts?",
+   "options": [
+    "/30",
+    "/16",
+    "/24",
+    "/28"
+   ],
+   "answer": 0,
+   "explanation": "A /30 provides exactly 2 usable addresses, ideal for a point-to-point link."
+  },
+  {
+   "q": "Which of these is a valid shortening of 2001:0db8:0000:0000:0000:ff00:0042:8329?",
+   "options": [
+    "2001:db8::ff00::42:8329",
+    "2001:db8:0:ff00:42:8329",
+    "2001:0db8:ff00:42:8329",
+    "2001:db8::ff00:42:8329"
+   ],
+   "answer": 3,
+   "explanation": "Drop leading zeros and replace one run of zero groups with '::' (used only once)."
+  },
+  {
+   "q": "What is the broadcast address of the subnet containing 10.20.30.70/27?",
+   "options": [
+    "10.20.30.63",
+    "10.20.30.127",
+    "10.20.30.96",
+    "10.20.30.95"
+   ],
+   "answer": 3,
+   "explanation": "A /27 has block size 32 (.64, .96). 70 is in the .64 block (64–95), so the broadcast is 10.20.30.95."
+  },
+  {
+   "q": "How many usable host addresses does a /28 subnet provide?",
+   "options": [
+    "30",
+    "12",
+    "16",
+    "14"
+   ],
+   "answer": 3,
+   "explanation": "A /28 has 4 host bits: 2^4 − 2 = 14 usable addresses."
+  },
+  {
+   "q": "You need at least 500 hosts in one subnet. What is the smallest prefix that works?",
+   "options": [
+    "/22",
+    "/25",
+    "/24",
+    "/23"
+   ],
+   "answer": 3,
+   "explanation": "/23 gives 2^9 − 2 = 510 usable hosts; /24 gives only 254."
+  },
+  {
+   "q": "Which subnet does the address 172.16.140.10/22 belong to?",
+   "options": [
+    "172.16.144.0",
+    "172.16.136.0",
+    "172.16.140.0",
+    "172.16.128.0"
+   ],
+   "answer": 2,
+   "explanation": "A /22 has block size 4 in the third octet (…136, 140, 144). 140 falls on a boundary, so the network is 172.16.140.0."
+  },
+  {
+   "q": "What subnet mask does a /19 correspond to?",
+   "options": [
+    "255.255.240.0",
+    "255.255.192.0",
+    "255.255.255.224",
+    "255.255.224.0"
+   ],
+   "answer": 3,
+   "explanation": "/19 = 11111111.11111111.11100000.00000000 = 255.255.224.0."
+  }
+ ]
+}

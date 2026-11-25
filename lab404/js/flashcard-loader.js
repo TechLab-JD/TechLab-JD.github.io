@@ -156,14 +156,18 @@
   }
 
   function isSec() { return state.core === 3; }
+  /* core 3 = Security+, core 4 = Network+ — both are single-exam certs with d1–d5 domains. */
+  function isCert() { return state.core === 3 || state.core === 4; }
+  function certShort() { return (window.AplusUtils && window.AplusUtils.certShort(state.core)) || ""; }
+  function certLabel() { return (window.AplusUtils && window.AplusUtils.certLabel(state.core)) || certShort(); }
 
-  /* A+ "Both" (0) = Core 1 + Core 2 only; Security+ never mixes with A+. */
+  /* A+ "Both" (0) = Core 1 + Core 2 only; a cert (3/4) never mixes with A+. */
   function inScope(c) {
     return state.core === 0 ? (c === 1 || c === 2) : c === state.core;
   }
 
-  function secDomains() {
-    return (window.AplusUtils && window.AplusUtils.SECPLUS_DOMAINS) || {};
+  function certDomains() {
+    return (window.AplusUtils && window.AplusUtils.certDomains(state.core)) || {};
   }
 
   var APLUS_DOMAIN_BTNS = [
@@ -172,8 +176,8 @@
   ];
 
   function domainButtons() {
-    var list = isSec()
-      ? Object.keys(secDomains()).map(function(k) { return [k, secDomains()[k]]; })
+    var list = isCert()
+      ? Object.keys(certDomains()).map(function(k) { return [k, certDomains()[k]]; })
       : APLUS_DOMAIN_BTNS;
     return list.map(function(p) {
       return '<button class="filter-btn' + (state.domain === p[0] ? " active" : "") + '" data-domain="' + p[0] + '">' + p[1] + '</button>';
@@ -181,7 +185,7 @@
   }
 
   function domainLabel(d) {
-    if (isSec()) return secDomains()[d] || d;
+    if (isCert()) return certDomains()[d] || d;
     var map = {
       hardware: "Hardware", networking: "Networking", mobile: "Mobile Devices",
       cloud: "Cloud & Virt", troubleshooting: "Troubleshooting",
@@ -203,7 +207,7 @@
             '<span>Flashcards</span>' +
           '</nav>' +
           '<span class="section-label">Study Tool</span>' +
-          '<h1 style="font-size:clamp(1.5rem,3.5vw,2.25rem);margin-bottom:0.5rem;">' + (isSec() ? "Security+ Flashcards" : "Flashcards") + '</h1>' +
+          '<h1 style="font-size:clamp(1.5rem,3.5vw,2.25rem);margin-bottom:0.5rem;">' + (isCert() ? certShort() + " Flashcards" : "Flashcards") + '</h1>' +
         '</div>' +
 
         /* Mode tabs */
@@ -217,8 +221,8 @@
         /* Filter row */
         '<div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.5rem;align-items:center;" id="filterRow">' +
           '<div class="filter-bar" id="coreFilter" style="margin:0;">' +
-            (state.locked && isSec()
-              ? '<span class="filter-btn active" style="cursor:default;">Security+ (SY0-701)</span>'
+            (state.locked && isCert()
+              ? '<span class="filter-btn active" style="cursor:default;">' + certLabel() + '</span>'
               : '<button class="filter-btn' + (state.core === 1 ? " active" : "") + '" data-core="1">Core 1</button>' +
                 '<button class="filter-btn' + (state.core === 2 ? " active" : "") + '" data-core="2">Core 2</button>' +
                 '<button class="filter-btn' + (state.core === 0 ? " active" : "") + '" data-core="0">Both</button>') +
@@ -433,10 +437,10 @@
   function init(rootEl, opts) {
     var container = rootEl || document.getElementById("flashcard-root");
     if (!container) return;
-    var wasSec = isSec();
+    var wasCert = isCert();
     if (opts && opts.core) { state.core = opts.core; state.locked = true; }
-    else { state.locked = false; if (wasSec) state.core = 1; }
-    if (isSec() !== wasSec) state.domain = "all";
+    else { state.locked = false; if (wasCert) state.core = 1; }
+    if (isCert() !== wasCert) state.domain = "all";
     renderRoot(container);
   }
 

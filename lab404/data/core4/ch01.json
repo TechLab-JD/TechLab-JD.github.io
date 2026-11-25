@@ -1,0 +1,202 @@
+{
+ "core": 4,
+ "chapter": 1,
+ "title": "The OSI Model & What's on the Network",
+ "exam_objectives": [
+  "1.1",
+  "1.2"
+ ],
+ "coverage": "COVERED",
+ "domain": "d1",
+ "domain_label": "Networking Concepts",
+ "sections": [
+  {
+   "title": "The OSI Model — 7 Layers",
+   "content": "The OSI (Open Systems Interconnection) model is a 7-layer framework for how data moves across a network. It is conceptual — real stacks (TCP/IP) collapse some layers — but the exam uses it to locate problems and describe where devices and protocols operate.\nLayer | Name | Job | Data unit\n7 | Application | Interface to the user's apps (HTTP, DNS, SMTP) | Data\n6 | Presentation | Formatting, encryption, compression (TLS, ASCII, JPEG) | Data\n5 | Session | Starts/maintains/ends conversations between hosts | Data\n4 | Transport | End-to-end delivery, segmentation, TCP/UDP, port numbers | Segment\n3 | Network | Logical addressing + routing between networks (IP) | Packet\n2 | Data Link | Framing + MAC addressing on the local link (switches) | Frame\n1 | Physical | Bits on the wire — cables, connectors, voltages, radio | Bits\nMnemonic (7 to 1): All People Seem To Need Data Processing.\nEncapsulation: as data moves DOWN the stack on the sender, each layer wraps it with its own header (and L2 adds a trailer). On the receiver it moves UP, and each layer strips its header. A unit named by the layer below it is 'encapsulated' inside that frame/packet/segment.",
+   "exam_tips": [
+    "Know the data unit per layer: segment (L4), packet (L3), frame (L2), bits (L1).",
+    "A switch is Layer 2 (MAC); a router is Layer 3 (IP). A 'Layer 3 switch' does both.",
+    "Port numbers live at Layer 4; IP addresses at Layer 3; MAC addresses at Layer 2."
+   ]
+  },
+  {
+   "title": "Where Devices & Protocols Live",
+   "content": "Mapping appliances to OSI layers is a favorite exam move.\nLayer 1 (Physical): hubs, repeaters, media converters, cables, transceivers (SFP), patch panels. A hub repeats bits to every port — one big collision domain.\nLayer 2 (Data Link): switches and bridges forward frames by MAC address. Each switch port is its own collision domain; a VLAN or the switch defines a broadcast domain. NICs operate here (and L1).\nLayer 3 (Network): routers forward packets between networks by IP and separate broadcast domains. Layer 3 switches route between VLANs.\nLayer 4-7: firewalls (L3/L4 stateful, up to L7 next-gen), load balancers (L4 or L7), proxies (L7), IDS/IPS, and WAFs (L7).\nCollision domain vs broadcast domain: a switch BREAKS UP collision domains (one per port) but forwards broadcasts, so all switch ports share one broadcast domain. A router BREAKS UP broadcast domains.",
+   "exam_tips": [
+    "Switch = more collision domains, same broadcast domain. Router = separate broadcast domains.",
+    "Next-gen firewalls (NGFW) and WAFs inspect up to Layer 7 (application content)."
+   ]
+  },
+  {
+   "title": "Networking Appliances & Functions",
+   "content": "Common boxes and what they do:\nRouter — connects different networks, forwards by IP, runs routing protocols, often does NAT at the edge.\nSwitch — connects hosts on the same network, forwards by MAC, supports VLANs, trunking, PoE.\nFirewall — permits/denies traffic by rules; stateful firewalls track connection state. NGFW adds app awareness, IDS/IPS, and user identity.\nLoad balancer — distributes client requests across a server pool for scale and availability (round-robin, least-connections).\nProxy — forward proxy sits in front of clients (caching, filtering, anonymity); reverse proxy sits in front of servers (offload, security).\nIDS/IPS — Intrusion Detection (alerts, out-of-band) vs Intrusion Prevention (blocks, in-line).\nVPN concentrator / headend — terminates many VPN tunnels.\nWireless controller (WLC) — centrally manages many access points.\nNAS/SAN — network-attached storage (file-level, over the LAN) vs storage area network (block-level, dedicated fabric like Fibre Channel/iSCSI).\nContent delivery network (CDN) — geographically distributed caches that serve content close to users.",
+   "exam_tips": [
+    "IDS detects and alerts (passive); IPS sits in-line and can drop traffic (active).",
+    "Forward proxy protects/represents clients; reverse proxy protects/represents servers.",
+    "NAS = file-level over existing LAN; SAN = block-level over a dedicated high-speed fabric."
+   ]
+  },
+  {
+   "title": "TCP/IP Model vs OSI",
+   "content": "The TCP/IP (DoD) model is the one the internet actually runs on, with 4 layers that map onto OSI:\nTCP/IP layer | OSI layers it covers\nApplication | 7, 6, 5 (Application, Presentation, Session)\nTransport | 4 (Transport) — TCP and UDP\nInternet | 3 (Network) — IP, ICMP, routing\nLink / Network Access | 2, 1 (Data Link, Physical)\nSo HTTP/DNS/TLS all sit in TCP/IP 'Application', while OSI splits them across L5-L7. The exam may ask you to translate between the two models.",
+   "exam_tips": [
+    "TCP/IP Application layer = OSI layers 5, 6, and 7 combined.",
+    "Both models share the Transport (L4) and Network/Internet (L3) layers one-to-one."
+   ]
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "Wrapping data with each layer's header as it moves down the OSI stack (and stripping them on the way up); the reverse is de-encapsulation.",
+   "concept": "Encapsulation",
+   "summary": "Objective 1.1"
+  },
+  {
+   "hook": "A network segment where devices share bandwidth and frames can collide. A switch gives each port its own collision domain.",
+   "concept": "Collision domain",
+   "summary": "Objective 1.2"
+  },
+  {
+   "hook": "The set of devices that receive one another's broadcast frames. A router (or a VLAN boundary) separates broadcast domains.",
+   "concept": "Broadcast domain",
+   "summary": "Objective 1.2"
+  },
+  {
+   "hook": "A firewall that tracks the state of active connections and allows return traffic for sessions it has already permitted.",
+   "concept": "Stateful firewall",
+   "summary": "Objective 1.2"
+  },
+  {
+   "hook": "A proxy placed in front of servers that receives client requests on their behalf — used for SSL offload, caching, and security.",
+   "concept": "Reverse proxy",
+   "summary": "Objective 1.2"
+  },
+  {
+   "hook": "Intrusion Detection System alerts on suspicious traffic (passive, out-of-band); Intrusion Prevention System sits in-line and can block it (active).",
+   "concept": "IDS vs IPS",
+   "summary": "Objective 1.2"
+  },
+  {
+   "hook": "Storage Area Network — provides block-level storage over a dedicated high-speed fabric (Fibre Channel or iSCSI), appearing to servers as local disks.",
+   "concept": "SAN",
+   "summary": "Objective 1.2"
+  },
+  {
+   "hook": "A switch that also routes between VLANs/subnets at wire speed, combining Layer 2 switching with Layer 3 IP forwarding.",
+   "concept": "Layer 3 switch",
+   "summary": "Objective 1.2"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "At which OSI layer do routers make forwarding decisions?",
+   "options": [
+    "Layer 1 (Physical)",
+    "Layer 2 (Data Link)",
+    "Layer 4 (Transport)",
+    "Layer 3 (Network)"
+   ],
+   "answer": 3,
+   "explanation": "Routers forward packets based on IP addresses, which operate at Layer 3 (Network)."
+  },
+  {
+   "q": "A technician wants each switch port to be its own collision domain but keep one broadcast domain. Which device already does this?",
+   "options": [
+    "A media converter",
+    "A hub",
+    "A router",
+    "A switch"
+   ],
+   "answer": 3,
+   "explanation": "A switch gives each port its own collision domain while forwarding broadcasts, so all ports share one broadcast domain."
+  },
+  {
+   "q": "What is the Layer 4 (Transport) data unit called?",
+   "options": [
+    "Segment",
+    "Bit",
+    "Packet",
+    "Frame"
+   ],
+   "answer": 0,
+   "explanation": "The Transport layer unit is the segment; Layer 3 uses packets, Layer 2 frames, Layer 1 bits."
+  },
+  {
+   "q": "Which device separates broadcast domains?",
+   "options": [
+    "Unmanaged switch",
+    "Hub",
+    "Router",
+    "Repeater"
+   ],
+   "answer": 2,
+   "explanation": "Routers do not forward broadcasts, so they separate broadcast domains; switches forward them."
+  },
+  {
+   "q": "Which OSI layer adds both a header and a trailer during encapsulation?",
+   "options": [
+    "Layer 3 (Network)",
+    "Layer 7 (Application)",
+    "Layer 2 (Data Link)",
+    "Layer 4 (Transport)"
+   ],
+   "answer": 2,
+   "explanation": "The Data Link layer frames data with a header and a trailer (FCS); other layers add only a header."
+  },
+  {
+   "q": "Which security appliance sits in-line and can actively block malicious traffic?",
+   "options": [
+    "IPS",
+    "Syslog server",
+    "IDS",
+    "Forward proxy"
+   ],
+   "answer": 0,
+   "explanation": "An IPS is in-line and can drop traffic; an IDS is passive/out-of-band and only alerts."
+  },
+  {
+   "q": "In the TCP/IP model, which OSI layers does the Application layer cover?",
+   "options": [
+    "Layers 1 and 2",
+    "Layers 5, 6, and 7",
+    "Layer 4 only",
+    "Layers 3 and 4"
+   ],
+   "answer": 1,
+   "explanation": "The TCP/IP Application layer combines OSI Session, Presentation, and Application (5, 6, 7)."
+  },
+  {
+   "q": "Which storage technology provides block-level access over a dedicated high-speed fabric?",
+   "options": [
+    "VPN concentrator",
+    "CDN",
+    "SAN",
+    "NAS"
+   ],
+   "answer": 2,
+   "explanation": "A SAN provides block-level storage over a dedicated fabric; a NAS provides file-level storage over the LAN."
+  },
+  {
+   "q": "Encryption and data formatting occur at which OSI layer?",
+   "options": [
+    "Layer 6 (Presentation)",
+    "Layer 5 (Session)",
+    "Layer 7 (Application)",
+    "Layer 4 (Transport)"
+   ],
+   "answer": 0,
+   "explanation": "The Presentation layer handles formatting, encryption, and compression (e.g., TLS, JPEG)."
+  },
+  {
+   "q": "Which device distributes incoming requests across a pool of servers for scalability?",
+   "options": [
+    "Media converter",
+    "Load balancer",
+    "Proxy",
+    "IDS"
+   ],
+   "answer": 1,
+   "explanation": "A load balancer spreads client requests across multiple servers using methods like round-robin."
+  }
+ ]
+}

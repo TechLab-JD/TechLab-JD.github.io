@@ -1,0 +1,128 @@
+{
+ "core": 4,
+ "chapter": 10,
+ "title": "Physical Installations",
+ "exam_objectives": [
+  "2.4"
+ ],
+ "coverage": "COVERED",
+ "domain": "d2",
+ "domain_label": "Network Implementation",
+ "sections": [
+  {
+   "title": "Racks, Cabling & Documentation",
+   "content": "Equipment mounts in 19-inch racks measured in U (1U = 1.75 in). Plan airflow: use a hot aisle / cold aisle layout so intakes face cold aisles and exhausts face hot aisles.\nStructured cabling: horizontal runs from the IDF to wall jacks, backbone/vertical runs between MDF and IDFs. Terminate on patch panels (110 blocks) and jumper with patch cables.\nDocument everything: label both ends of every cable, keep a rack diagram/elevation, port maps, and an up-to-date network diagram. Good labeling is the difference between a 5-minute fix and an hour of tracing.\nCable management (trays, hooks, Velcro) keeps airflow and serviceability; avoid tight zip-tie bends that damage cable.",
+   "exam_tips": [
+    "Hot aisle/cold aisle arranges racks so cold intake air and hot exhaust air don't mix.",
+    "Label both ends of every cable and keep rack diagrams + port maps current.",
+    "MDF = main distribution frame; IDFs connect back to it (star of closets)."
+   ]
+  },
+  {
+   "title": "Power & Environment",
+   "content": "Power protection:\nUPS (Uninterruptible Power Supply) — battery backup for ride-through during outages and clean shutdown; also conditions power.\nPDU (Power Distribution Unit) — distributes (and often meters/switches) power to rack gear.\nGenerator — long-term backup power.\nPlan redundant power supplies and dual feeds (A/B power) for critical gear.\nEnvironment: control temperature and humidity (HVAC); too humid = corrosion, too dry = static (ESD). Monitor with sensors. Fire suppression uses clean agents (not water) in equipment rooms.\nGrounding/bonding and surge protection guard against electrical damage.",
+   "exam_tips": [
+    "UPS = short-term battery (ride-through + clean shutdown); generator = long-term power.",
+    "A PDU distributes rack power; dual power supplies + A/B feeds give redundancy.",
+    "Control humidity: too low causes static/ESD, too high causes condensation/corrosion."
+   ]
+  },
+  {
+   "title": "Installation Factors & Safety",
+   "content": "Follow cable standards and limits: 100 m copper max, keep data cable away from power lines and fluorescent ballasts (EMI), respect bend radius, and use plenum-rated cable in air-handling spaces.\nMDF/IDF placement: central, secure, climate-controlled, with physical access control.\nUse the right cable for the job (shielded in noisy areas, fiber for distance/EMI immunity, outdoor/direct-burial where needed).\nSafety: lift properly, don't overload circuits, maintain an MSDS/SDS for chemicals, and keep clear egress. Rack-mount heavy gear low for stability.",
+   "exam_tips": [
+    "Keep copper data cable away from power lines and ballasts to avoid EMI; use STP or fiber in noisy areas.",
+    "Plenum-rated cable is required in air-handling (plenum) spaces.",
+    "Mount heavy equipment low in the rack for stability and plan the PoE power budget."
+   ]
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "The 1.75-inch vertical increment of a 19-inch equipment rack; gear height is rated in U (1U, 2U, …).",
+   "concept": "Rack unit (U)",
+   "summary": "Objective 2.4"
+  },
+  {
+   "hook": "A data-center layout that faces equipment intakes toward cold aisles and exhausts toward hot aisles to cool efficiently.",
+   "concept": "Hot aisle / cold aisle",
+   "summary": "Objective 2.4"
+  },
+  {
+   "hook": "Uninterruptible Power Supply — battery backup that rides through short outages, conditions power, and allows clean shutdown.",
+   "concept": "UPS",
+   "summary": "Objective 2.4"
+  },
+  {
+   "hook": "Power Distribution Unit — distributes (and often meters/switches) electrical power to devices in a rack.",
+   "concept": "PDU",
+   "summary": "Objective 2.4"
+  },
+  {
+   "hook": "Main Distribution Frame (building's primary wiring hub) and Intermediate Distribution Frames (floor closets that connect back to it).",
+   "concept": "MDF / IDF",
+   "summary": "Objective 2.4"
+  },
+  {
+   "hook": "A standardized cabling system of horizontal runs (to jacks), backbone runs (between frames), patch panels, and documentation.",
+   "concept": "Structured cabling",
+   "summary": "Objective 2.4"
+  },
+  {
+   "hook": "Supplying critical gear from two independent power sources (and dual power supplies) so one feed can fail without downtime.",
+   "concept": "A/B power feeds",
+   "summary": "Objective 2.4"
+  },
+  {
+   "hook": "The minimum curve a cable can take without degrading signal or damaging conductors/fiber; tight bends cause errors.",
+   "concept": "Bend radius",
+   "summary": "Objective 2.4"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "Which data-center layout improves cooling efficiency?",
+   "options": [
+    "Single shared aisle",
+    "All exhausts facing one wall",
+    "Hot aisle / cold aisle",
+    "Random rack placement"
+   ],
+   "answer": 2,
+   "explanation": "Hot aisle/cold aisle keeps cold intake and hot exhaust air separated for efficient cooling."
+  },
+  {
+   "q": "Which device provides short-term battery backup and clean shutdown during a power outage?",
+   "options": [
+    "Transformer",
+    "UPS",
+    "Generator",
+    "PDU"
+   ],
+   "answer": 1,
+   "explanation": "A UPS provides battery ride-through and conditioning; a generator covers long outages."
+  },
+  {
+   "q": "Which component distributes and often meters power to equipment within a rack?",
+   "options": [
+    "UPS",
+    "KVM",
+    "PDU",
+    "MDF"
+   ],
+   "answer": 2,
+   "explanation": "A Power Distribution Unit distributes (and may meter/switch) power to rack devices."
+  },
+  {
+   "q": "Why keep data cabling away from fluorescent light ballasts and power lines?",
+   "options": [
+    "To avoid electromagnetic interference (EMI)",
+    "To shorten the run",
+    "To reduce attenuation",
+    "To increase PoE wattage"
+   ],
+   "answer": 0,
+   "explanation": "Ballasts and power lines emit EMI that corrupts data on nearby unshielded copper."
+  }
+ ]
+}

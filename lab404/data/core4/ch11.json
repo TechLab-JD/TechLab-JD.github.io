@@ -1,0 +1,196 @@
+{
+ "core": 4,
+ "chapter": 11,
+ "title": "Operations: Processes, DR & Monitoring",
+ "exam_objectives": [
+  "3.1",
+  "3.2",
+  "3.3"
+ ],
+ "coverage": "COVERED",
+ "domain": "d3",
+ "domain_label": "Network Operations",
+ "sections": [
+  {
+   "title": "Organizational Processes & Documentation",
+   "content": "Operations run on documentation and change control.\nChange management — a formal process to request, review, approve, test, and roll back changes, with a maintenance window and rollback plan. Prevents 'cowboy' changes that cause outages.\nConfiguration management — track known-good configs, baselines, and versioning so you can detect drift and restore.\nKey documents: physical & logical network diagrams, rack diagrams, IP address management (IPAM), asset inventory, and a wiring/port map.\nPolicies & agreements: SLA (service-level agreement — uptime/response commitments), MOU, NDA, AUP (acceptable use), and a BYOD policy. Site documentation plus a runbook speeds recovery.",
+   "exam_tips": [
+    "Change management = request → approve → scheduled window → implement → rollback plan.",
+    "An SLA defines uptime/response commitments between provider and customer.",
+    "Keep both physical and logical network diagrams current; use IPAM for addressing."
+   ]
+  },
+  {
+   "title": "Network Monitoring",
+   "content": "You can't manage what you don't measure.\nSNMP — polls devices for status (interfaces, CPU, errors); devices send traps on events (UDP 161/162). SNMPv3 adds authentication + encryption.\nSyslog — centralizes log messages (UDP 514), rated by severity (0 emergency … 7 debug).\nFlow data — NetFlow/sFlow/IPFIX report who-talked-to-whom and how much, for traffic analysis and baselining.\nSIEM — aggregates and correlates logs/alerts for security.\nEstablish a baseline of normal performance (throughput, latency, utilization) so anomalies stand out. Track metrics: bandwidth/utilization, latency, jitter, packet loss, and error/discard counters. Use dashboards and alerting thresholds.",
+   "exam_tips": [
+    "SNMP polls + traps for device health (use v3 for security); Syslog centralizes logs (severity 0–7).",
+    "NetFlow/sFlow show traffic flows (top talkers/conversations), not packet contents.",
+    "Baseline normal performance first so you can spot anomalies later."
+   ]
+  },
+  {
+   "title": "Disaster Recovery & High Availability",
+   "content": "Plan for failure.\nKey metrics: RTO (Recovery Time Objective — how fast you must be back) and RPO (Recovery Point Objective — how much data loss is tolerable, i.e., backup frequency). MTTR (mean time to repair) and MTBF (mean time between failures) describe reliability.\nSite types: hot site (fully running, instant failover), warm site (equipment ready, some setup), cold site (space/power only, slowest). \nHigh availability: redundancy (N+1), failover clustering, load balancing, FHRP (first-hop redundancy — VRRP/HSRP) so hosts keep a working default gateway.\nBackups: full/incremental/differential; follow 3-2-1 (3 copies, 2 media, 1 offsite) and test restores.",
+   "exam_tips": [
+    "RTO = how fast you recover; RPO = how much data you can afford to lose (drives backup frequency).",
+    "Hot site = instant failover; cold site = space/power only (slowest, cheapest).",
+    "FHRP (VRRP/HSRP) provides a redundant default gateway for high availability."
+   ]
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "A formal process to request, approve, schedule, implement, and roll back network changes to avoid unplanned outages.",
+   "concept": "Change management",
+   "summary": "Objective 3.1"
+  },
+  {
+   "hook": "Service-Level Agreement — a contract defining guaranteed uptime, performance, and response times between a provider and customer.",
+   "concept": "SLA",
+   "summary": "Objective 3.1"
+  },
+  {
+   "hook": "Simple Network Management Protocol — polls devices for health data and receives traps on events; use v3 for authentication and encryption.",
+   "concept": "SNMP",
+   "summary": "Objective 3.2"
+  },
+  {
+   "hook": "A recorded sample of normal performance (throughput, latency, utilization) used as a reference to detect anomalies.",
+   "concept": "Baseline",
+   "summary": "Objective 3.2"
+  },
+  {
+   "hook": "Records of traffic conversations (source, destination, volume) used to see top talkers and analyze usage — not packet contents.",
+   "concept": "NetFlow / flow data",
+   "summary": "Objective 3.2"
+  },
+  {
+   "hook": "Recovery Time Objective is how quickly service must be restored; Recovery Point Objective is the maximum tolerable data loss, which sets backup frequency.",
+   "concept": "RTO vs RPO",
+   "summary": "Objective 3.3"
+  },
+  {
+   "hook": "Disaster-recovery sites by readiness: hot (fully running, instant), warm (equipment staged), cold (space and power only).",
+   "concept": "Hot / warm / cold site",
+   "summary": "Objective 3.3"
+  },
+  {
+   "hook": "First-Hop Redundancy Protocols that present a virtual default gateway so hosts stay reachable if one router fails.",
+   "concept": "FHRP (VRRP/HSRP)",
+   "summary": "Objective 3.3"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "Which document records the step-by-step procedure to restore a specific service after failure?",
+   "options": [
+    "An NDA",
+    "An SLA",
+    "An AUP",
+    "A runbook"
+   ],
+   "answer": 3,
+   "explanation": "A runbook holds the operational steps to recover or operate a service; an SLA defines commitments, not steps."
+  },
+  {
+   "q": "Which protocol centralizes device log messages to a collector, rated by severity 0–7?",
+   "options": [
+    "NetFlow",
+    "LDAP",
+    "Syslog",
+    "SMTP"
+   ],
+   "answer": 2,
+   "explanation": "Syslog sends event messages (severity 0 emergency to 7 debug) to a central server, usually UDP 514."
+  },
+  {
+   "q": "Which metric defines the maximum acceptable amount of data loss, driving backup frequency?",
+   "options": [
+    "MTBF",
+    "MTTR",
+    "RPO",
+    "RTO"
+   ],
+   "answer": 2,
+   "explanation": "The Recovery Point Objective sets how much data loss is tolerable, which determines how often you back up."
+  },
+  {
+   "q": "Before a planned core-switch upgrade, which practice ensures you can revert if it fails?",
+   "options": [
+    "Remove the old documentation",
+    "Back up the current config and document a rollback plan",
+    "Disable logging during the change",
+    "Skip the maintenance window"
+   ],
+   "answer": 1,
+   "explanation": "Configuration management + a documented rollback plan let you restore the known-good config if the change goes wrong."
+  },
+  {
+   "q": "Why establish a performance baseline?",
+   "options": [
+    "To recognize abnormal behavior by comparing against normal",
+    "To encrypt SNMP traffic",
+    "To assign IP addresses",
+    "To block rogue DHCP servers"
+   ],
+   "answer": 0,
+   "explanation": "A baseline of normal metrics lets you spot anomalies and degradation later."
+  },
+  {
+   "q": "A recovery facility is fully equipped and running for near-instant failover. What is it?",
+   "options": [
+    "Screened subnet",
+    "Cold site",
+    "Warm site",
+    "Hot site"
+   ],
+   "answer": 3,
+   "explanation": "A hot site mirrors production and can take over almost immediately."
+  },
+  {
+   "q": "What is the purpose of a formal change-management process?",
+   "options": [
+    "Encrypt management traffic",
+    "Replace network documentation",
+    "Review, approve, and schedule changes with a rollback plan to avoid outages",
+    "Let any admin change configs instantly"
+   ],
+   "answer": 2,
+   "explanation": "Change management controls how changes are requested, approved, implemented, and rolled back."
+  },
+  {
+   "q": "Which tool shows top talkers and traffic conversations (not packet contents)?",
+   "options": [
+    "Wireshark",
+    "NetFlow",
+    "nslookup",
+    "ping"
+   ],
+   "answer": 1,
+   "explanation": "Flow data (NetFlow/sFlow) reports source, destination, and volume of conversations."
+  },
+  {
+   "q": "Which protocol provides a redundant default gateway so hosts stay reachable if a router fails?",
+   "options": [
+    "STP",
+    "OSPF",
+    "SNMP",
+    "FHRP (VRRP/HSRP)"
+   ],
+   "answer": 3,
+   "explanation": "First-Hop Redundancy Protocols present a virtual gateway IP shared by redundant routers."
+  },
+  {
+   "q": "Which document defines the uptime and response commitments between a provider and customer?",
+   "options": [
+    "AUP",
+    "SLA",
+    "MOU",
+    "NDA"
+   ],
+   "answer": 1,
+   "explanation": "A Service-Level Agreement specifies guaranteed availability and response times."
+  }
+ ]
+}

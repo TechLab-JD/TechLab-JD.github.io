@@ -17,19 +17,23 @@
     finished: false,
   };
 
-  /* "core" 3 = Security+ (one exam, no cores; the number is only an internal slot) */
-  var TOTAL = { 1: 25, 2: 20, 3: 16 };
+  /* "core" 3 = Security+, 4 = Network+ (each one exam, no cores; the number is only an internal slot) */
+  var TOTAL = { 1: 25, 2: 20, 3: 16, 4: 16 };
 
   function isSec() { return state.core === 3; }
+  function isNet() { return state.core === 4; }
+  function isCert() { return isSec() || isNet(); }
 
-  function passPct() { return isSec() ? 83 : 78; } /* ~750/900 for SY0-701, ~700/900 for A+ */
+  function passPct() { return isNet() ? 80 : isSec() ? 83 : 78; } /* ~720/900 N10-009, ~750/900 SY0-701, ~700/900 A+ */
 
   function examLabel() {
-    return isSec() ? "Security+ (SY0-701)" : "Core " + state.core + " (220-120" + state.core + ")";
+    return isSec() ? "Security+ (SY0-701)"
+      : isNet() ? "Network+ (N10-009)"
+      : "Core " + state.core + " (220-120" + state.core + ")";
   }
 
   function chaptersHref() {
-    return isSec() ? "index.html" : (state.core === 1 ? "core1.html" : "core2.html");
+    return isCert() ? "index.html" : (state.core === 1 ? "core1.html" : "core2.html");
   }
 
   function getParams() {
@@ -37,7 +41,7 @@
     var core = parseInt(params.get("core"), 10);
     var chRaw = params.get("ch");
     var ch = chRaw ? parseInt(chRaw, 10) : null;
-    var safeCore = [1, 2, 3].includes(core) ? core : 1;
+    var safeCore = [1, 2, 3, 4].includes(core) ? core : 1;
     var safeCh = (ch !== null && !isNaN(ch) && ch >= 1 && ch <= (TOTAL[safeCore] || 99)) ? ch : null;
     return { core: safeCore, ch: safeCh };
   }
@@ -181,10 +185,13 @@
             '<div style="display:flex;gap:0.5rem;">' +
               (isSec()
                 ? '<button class="btn btn-primary core-select-btn" data-core="3" id="coreBtn3">Security+ (SY0-701)</button>'
+                : isNet()
+                ? '<button class="btn btn-primary core-select-btn" data-core="4" id="coreBtn4">Network+ (N10-009)</button>'
                 : '<button class="btn btn-secondary core-select-btn" data-core="1" id="coreBtn1">Core 1 (220-1201)</button>' +
                   '<button class="btn btn-secondary core-select-btn" data-core="2" id="coreBtn2">Core 2 (220-1202)</button>') +
             '</div>' +
             (isSec() ? '<p class="text-xs text-muted" style="margin-top:0.5rem;">Includes select-two/select-three questions. Passing is about 83% (750 of 900).</p>' : '') +
+            (isNet() ? '<p class="text-xs text-muted" style="margin-top:0.5rem;">N10-009 has up to 90 questions; passing is about 80% (720 of 900).</p>' : '') +
           '</div>' +
 
           (isSec()

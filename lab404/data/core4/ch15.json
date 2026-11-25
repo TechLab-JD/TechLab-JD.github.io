@@ -1,0 +1,195 @@
+{
+ "core": 4,
+ "chapter": 15,
+ "title": "Troubleshooting Methodology, Cabling & Physical",
+ "exam_objectives": [
+  "5.1",
+  "5.2"
+ ],
+ "coverage": "COVERED",
+ "domain": "d5",
+ "domain_label": "Network Troubleshooting",
+ "sections": [
+  {
+   "title": "The Troubleshooting Methodology",
+   "content": "CompTIA's 7-step method — know the order:\n1. Identify the problem (gather info, question users, note what changed).\n2. Establish a theory of probable cause (question the obvious; consider OSI layers).\n3. Test the theory. If confirmed, move on; if not, form a new theory or escalate.\n4. Establish a plan of action and identify potential effects.\n5. Implement the solution or escalate.\n6. Verify full system functionality and (if applicable) implement preventive measures.\n7. Document findings, actions, and outcomes.\nApproach the OSI stack bottom-up (check the cable/link first) or divide-and-conquer. Always ask 'what changed?' — recent changes cause most incidents.",
+   "exam_tips": [
+    "Memorize the 7 steps in order; the test loves 'what is the NEXT step?' questions.",
+    "After identifying the problem, the next step is to establish a theory of probable cause.",
+    "The LAST step is always to document findings, actions, and outcomes."
+   ]
+  },
+  {
+   "title": "Cabling & Physical Issues",
+   "content": "Common copper faults:\nOpen (broken conductor) / short (two conductors touching).\nIncorrect pinout / miswire — failed wiremap; split pairs cause crosstalk.\nCrosstalk (NEXT) — signal bleed between pairs; attenuation (dB loss) — signal weakens over distance.\nEMI — interference from power lines/motors; use shielded cable or reroute.\nBad/decayed connectors, exceeding 100 m, or wrong cable category.\nFiber faults: dirty/scratched connectors (clean them), too-tight bends, wavelength/mode mismatch, and excessive loss.\nTransceiver mismatch (wrong SFP), duplex/speed mismatch, and bad ports.\nSymptoms: no link light, intermittent connectivity, high error counts.",
+   "exam_tips": [
+    "A failed wiremap = miswire/open/short; crosstalk often comes from split pairs.",
+    "Attenuation = signal loss over distance (exceeding cable length limits); EMI needs shielding/rerouting.",
+    "Dirty fiber connectors are a top fiber fault — clean before replacing."
+   ]
+  },
+  {
+   "title": "Physical-Layer Tools",
+   "content": "Cable tester — verifies continuity and wiremap (opens/shorts/miswires).\nWiremap tester — checks pin-to-pin correctness.\nTone generator & probe (fox and hound) — traces/identifies a specific cable in a bundle.\nTDR (time-domain reflectometer) — finds the distance to a copper fault; OTDR does the same for fiber.\nCable certifier — verifies a run meets a category's performance spec.\nLight meter / OTDR — measures fiber loss.\nLoopback plug — tests a port/NIC.\nMultimeter — electrical checks. Punchdown tool — terminates on 110 blocks. Crimper — attaches RJ45 connectors.",
+   "exam_tips": [
+    "Tone generator + probe (fox and hound) locates/identifies a specific cable in a bundle.",
+    "A TDR finds the distance to a copper fault; an OTDR does it for fiber.",
+    "A cable certifier proves a run meets the category spec (Cat 6, etc.)."
+   ]
+  }
+ ],
+ "concept_cards": [
+  {
+   "hook": "Identify → theory of cause → test theory → plan of action → implement/escalate → verify + prevent → document.",
+   "concept": "7-step troubleshooting method",
+   "summary": "Objective 5.1"
+  },
+  {
+   "hook": "A troubleshooting approach that starts at a middle OSI layer and moves up or down based on results, instead of strictly bottom-up or top-down.",
+   "concept": "Divide and conquer",
+   "summary": "Objective 5.1"
+  },
+  {
+   "hook": "The weakening of a signal over distance; exceeding cable length limits causes it, leading to errors or no link.",
+   "concept": "Attenuation",
+   "summary": "Objective 5.2"
+  },
+  {
+   "hook": "Signal bleeding between adjacent wire pairs, often from split pairs or untwisting, which corrupts data.",
+   "concept": "Crosstalk (NEXT)",
+   "summary": "Objective 5.2"
+  },
+  {
+   "hook": "One side set to full duplex and the other to half, causing collisions, errors, and very slow throughput.",
+   "concept": "Duplex mismatch",
+   "summary": "Objective 5.2"
+  },
+  {
+   "hook": "The 'fox and hound' pair used to trace and identify a specific cable within a bundle or at a patch panel.",
+   "concept": "Tone generator and probe",
+   "summary": "Objective 5.2"
+  },
+  {
+   "hook": "A Time-Domain Reflectometer locates the distance to a copper cable fault; an OTDR does the same for fiber and measures loss.",
+   "concept": "TDR / OTDR",
+   "summary": "Objective 5.2"
+  },
+  {
+   "hook": "A test verifying each pin connects correctly end to end, detecting opens, shorts, and miswires.",
+   "concept": "Wiremap",
+   "summary": "Objective 5.2"
+  }
+ ],
+ "practice_questions": [
+  {
+   "q": "After identifying the problem, what is the NEXT step in the troubleshooting method?",
+   "options": [
+    "Verify full functionality",
+    "Document findings",
+    "Implement the solution",
+    "Establish a theory of probable cause"
+   ],
+   "answer": 3,
+   "explanation": "The order is: identify, theory of cause, test theory, plan, implement, verify, document."
+  },
+  {
+   "q": "A cable run shows high error rates and signal loss over a long distance. What is the likely cause?",
+   "options": [
+    "Plenum rating",
+    "Correct wiremap",
+    "Too short a cable",
+    "Attenuation from exceeding the length limit"
+   ],
+   "answer": 3,
+   "explanation": "Attenuation is signal loss over distance; exceeding ~100 m copper causes errors."
+  },
+  {
+   "q": "What is always the final step of the CompTIA troubleshooting methodology?",
+   "options": [
+    "Test the theory",
+    "Escalate to a vendor",
+    "Establish a plan of action",
+    "Document findings, actions, and outcomes"
+   ],
+   "answer": 3,
+   "explanation": "Documentation is the last step so the fix and lessons are recorded."
+  },
+  {
+   "q": "Which tool identifies a specific cable within a large bundle?",
+   "options": [
+    "Multimeter",
+    "Protocol analyzer",
+    "Tone generator and probe",
+    "Loopback plug"
+   ],
+   "answer": 2,
+   "explanation": "The 'fox and hound' tone generator and probe trace and identify a specific cable."
+  },
+  {
+   "q": "A user reports an issue. Which question is most useful first?",
+   "options": [
+    "What is your MAC address?",
+    "What changed recently?",
+    "What is the server's RPO?",
+    "Which OSPF area are you in?"
+   ],
+   "answer": 1,
+   "explanation": "Most incidents follow a recent change; identifying it narrows the cause quickly."
+  },
+  {
+   "q": "A link runs extremely slowly with many collisions and errors. What should you check?",
+   "options": [
+    "A duplex/speed mismatch between the two ends",
+    "The default route",
+    "The DNS server",
+    "The DHCP scope"
+   ],
+   "answer": 0,
+   "explanation": "A duplex mismatch (one full, one half) causes collisions, errors, and poor throughput."
+  },
+  {
+   "q": "You confirmed your theory of probable cause. What is the next step?",
+   "options": [
+    "Establish a plan of action and identify potential effects",
+    "Verify functionality",
+    "Question the user again",
+    "Document findings"
+   ],
+   "answer": 0,
+   "explanation": "After the theory is confirmed, establish a plan of action before implementing."
+  },
+  {
+   "q": "A newly made patch cable gives no link. A tester shows pins crossed. What is the fault?",
+   "options": [
+    "Duplex mismatch",
+    "Attenuation",
+    "EMI",
+    "Miswire / incorrect pinout"
+   ],
+   "answer": 3,
+   "explanation": "A failed wiremap with crossed pins indicates a miswire/incorrect pinout from termination."
+  },
+  {
+   "q": "Your tested theory is NOT confirmed. What should you do?",
+   "options": [
+    "Establish a new theory or escalate",
+    "Document and close",
+    "Reboot everything",
+    "Implement a fix anyway"
+   ],
+   "answer": 0,
+   "explanation": "If the theory isn't confirmed, form a new one or escalate — don't proceed to a fix."
+  },
+  {
+   "q": "Which tool measures the distance to a break in a copper cable?",
+   "options": [
+    "TDR (time-domain reflectometer)",
+    "Light meter",
+    "Loopback plug",
+    "Toner probe"
+   ],
+   "answer": 0,
+   "explanation": "A TDR sends a pulse and measures reflection time to locate a copper fault's distance."
+  }
+ ]
+}

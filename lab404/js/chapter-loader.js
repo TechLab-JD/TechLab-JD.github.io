@@ -2,14 +2,14 @@
 (function () {
   "use strict";
 
-  /* "core" 3 = Security+ (one exam, no cores; the number is only an internal slot) */
-  var TOTAL = { 1: 25, 2: 20, 3: 16 };
+  /* "core" 3 = Security+, 4 = Network+ (each one exam, no cores; the number is only an internal slot) */
+  var TOTAL = { 1: 25, 2: 20, 3: 16, 4: 16 };
 
   function getParams() {
     var params = new URLSearchParams(window.location.search);
     var core = parseInt(params.get("core"), 10);
     var ch = parseInt(params.get("ch"), 10);
-    if (![1, 2, 3].includes(core) || isNaN(ch) || ch < 1) return null;
+    if (![1, 2, 3, 4].includes(core) || isNaN(ch) || ch < 1) return null;
     var max = TOTAL[core] || 0;
     if (ch > max) return null;
     return { core: core, ch: ch };
@@ -53,8 +53,10 @@
     var ch = params.ch;
     var total = TOTAL[core];
     var isSec = core === 3;
-    var coreLabel = isSec ? "Security+" : "Core " + core;
-    var coreHref = isSec ? "index.html" : "core" + core + ".html";
+    var isNet = core === 4;
+    var isCert = isSec || isNet;
+    var coreLabel = isSec ? "Security+" : isNet ? "Network+" : "Core " + core;
+    var coreHref = isCert ? "index.html" : "core" + core + ".html";
 
     /* ── Page title ── */
     var safeTitle = window.AplusUtils ? window.AplusUtils.safeTitle(data.title) : String(data.title || "").replace(/[<>"'&]/g, "");
@@ -85,7 +87,7 @@
 
       cardsHtml = '<section class="section-sm" aria-labelledby="concepts-heading">' +
         '<div class="section-label" id="concepts-heading">Concept Cards</div>' +
-        '<p class="text-sm text-muted" style="margin-bottom:1rem;">' + data.concept_cards.length + ' concept' + (data.concept_cards.length > 1 ? 's' : '') + (isSec ? ' for this chapter\'s objectives' : ' from the Lab404 shorts') + '</p>' +
+        '<p class="text-sm text-muted" style="margin-bottom:1rem;">' + data.concept_cards.length + ' concept' + (data.concept_cards.length > 1 ? 's' : '') + (isCert ? ' for this chapter\'s objectives' : ' from the Lab404 shorts') + '</p>' +
         '<div class="concept-cards-track" role="list" id="cardsTrack">' + cards + '</div>' +
         '<div class="concept-cards-nav" aria-label="Concept card navigation">' +
           '<button class="card-nav-btn" id="cardPrev" aria-label="Previous card">&#8592;</button>' +
