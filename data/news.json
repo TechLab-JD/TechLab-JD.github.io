@@ -1,12 +1,2773 @@
 {
- "generated": "2026-11-25T02:00:14Z",
- "generated_human": "Nov 25, 2026 · 02:00 UTC",
- "sources": [],
- "n_articles": 0,
- "n_videos": 0,
- "trending": [],
- "videos": [],
- "stories": [],
- "blindspots": [],
- "factchecks": []
+ "generated": "2026-11-25T03:02:02Z",
+ "generated_human": "Nov 25, 2026 · 03:02 UTC",
+ "sources": [
+  {
+   "name": "NPR",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 10
+  },
+  {
+   "name": "The Guardian",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "NBC News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "CBS News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "ABC News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "PBS NewsHour",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Politico",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Vox",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "Slate",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Mother Jones",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "The Atlantic",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Time",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "BBC News",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "The Hill",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "CNBC",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Axios",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Al Jazeera",
+   "lean": 0,
+   "label": "Center",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "The Christian Science Monitor",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 10
+  },
+  {
+   "name": "Newsweek",
+   "lean": 0,
+   "label": "Center",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Reason",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "New York Post",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Washington Examiner",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "National Review",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Washington Times",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Fox News",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "The Daily Wire",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "The Federalist",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Newsmax",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Daily Caller",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  }
+ ],
+ "n_articles": 336,
+ "n_videos": 140,
+ "trending": [
+  {
+   "term": "trump",
+   "n": 22
+  },
+  {
+   "term": "huang",
+   "n": 19
+  },
+  {
+   "term": "jensen",
+   "n": 17
+  },
+  {
+   "term": "nvidia",
+   "n": 15
+  },
+  {
+   "term": "thanksgiving",
+   "n": 12
+  },
+  {
+   "term": "return",
+   "n": 11
+  },
+  {
+   "term": "army",
+   "n": 9
+  },
+  {
+   "term": "back",
+   "n": 8
+  },
+  {
+   "term": "government",
+   "n": 6
+  },
+  {
+   "term": "south",
+   "n": 6
+  },
+  {
+   "term": "kilmar",
+   "n": 6
+  },
+  {
+   "term": "leaving",
+   "n": 6
+  },
+  {
+   "term": "abrego",
+   "n": 6
+  },
+  {
+   "term": "garcia",
+   "n": 6
+  },
+  {
+   "term": "chinese",
+   "n": 6
+  },
+  {
+   "term": "plan",
+   "n": 6
+  }
+ ],
+ "videos": [
+  {
+   "videoId": "B2au-nv6dUU",
+   "title": "NBC Nightly News with Tom Llamas Full Episode - Nov. 24",
+   "thumb": "https://i.ytimg.com/vi/B2au-nv6dUU/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "Gxl0ywSKgZs",
+   "title": "NY Post: Trump Says Huang Pardon “Always an Option”",
+   "thumb": "https://i.ytimg.com/vi/Gxl0ywSKgZs/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "6x5bXPHoESY",
+   "title": "Hostage drama inside Colombia supermarket",
+   "thumb": "https://i.ytimg.com/vi/6x5bXPHoESY/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "4bFQHOa97Vc",
+   "title": "Watters: The most POWERFUL CEO in the world owes Trump EVERYTHING",
+   "thumb": "https://i.ytimg.com/vi/4bFQHOa97Vc/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "DWRgknjMcfc",
+   "title": "Pakistani astronaut launches into space aboard Chinese rocket",
+   "thumb": "https://i.ytimg.com/vi/DWRgknjMcfc/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "UzgnYTb8yd8",
+   "title": "How risky was this launch? | DW News",
+   "thumb": "https://i.ytimg.com/vi/UzgnYTb8yd8/hqdefault.jpg",
+   "channel": "DW News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "bLoPJ8ON65s",
+   "title": "Nvidia’s board lost, then made back billions with Huang’s exit and return",
+   "thumb": "https://i.ytimg.com/vi/bLoPJ8ON65s/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "AVbDU1GVVis",
+   "title": "Moment Chinese rocket blasts off into space with Pakistani astronaut. #BBCNews",
+   "thumb": "https://i.ytimg.com/vi/AVbDU1GVVis/hqdefault.jpg",
+   "channel": "BBC News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "SOlCaAMBiXo",
+   "title": "ABC World News Tonight with David Muir Full Broadcast - Nov. 24, 2026",
+   "thumb": "https://i.ytimg.com/vi/SOlCaAMBiXo/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "qa2QCNv0IkI",
+   "title": "Holiday storm, Huang pardon, fear in Iowa & more | CNN Primetime Roundup",
+   "thumb": "https://i.ytimg.com/vi/qa2QCNv0IkI/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "W901gO_JH4M",
+   "title": "Laura Ingraham: This would be a ‘TOTAL NIGHTMARE’ #shorts #foxnews #fox #news",
+   "thumb": "https://i.ytimg.com/vi/W901gO_JH4M/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "7wHSUodovSE",
+   "title": "UK disability benefits review calls for major overhaul amid rising claims",
+   "thumb": "https://i.ytimg.com/vi/7wHSUodovSE/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "6wK7czIs1t4",
+   "title": "Watch skier trigger avalanche in Colorado",
+   "thumb": "https://i.ytimg.com/vi/6wK7czIs1t4/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "uRUjAxh50n0",
+   "title": "Evacuations in Iowa ahead of Army's detonation of unstable explosives",
+   "thumb": "https://i.ytimg.com/vi/uRUjAxh50n0/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "EGU7w95uz5M",
+   "title": "CDC director aims to restore trust in agency amid calls to resign, U.S. measles outbreak",
+   "thumb": "https://i.ytimg.com/vi/EGU7w95uz5M/hqdefault.jpg",
+   "channel": "AP",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "jrsbTqjHKCU",
+   "title": "Top Story with Tom Llamas - Nov. 24 | NBC News NOW",
+   "thumb": "https://i.ytimg.com/vi/jrsbTqjHKCU/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  }
+ ],
+ "stories": [
+  {
+   "title": "Jensen Huang’s return to Nvidia takes founder worship to a dangerous level",
+   "summary": "The news of Jensen Huang’s resurrection at Nvidia felt like a practical joke or an Onion headline. Here was a cofounder and CEO of a trillion-dollar company who did just about all the bad things a CEO could do — including maybe involvement in espionage — who’d gotten his comeuppa",
+   "category": "Tech",
+   "leans": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 4,
+   "n_sources": 19,
+   "balance": {
+    "l": 9,
+    "c": 5,
+    "r": 5
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Jensen Huang’s return to Nvidia takes founder worship to a dangerous level",
+     "url": "https://www.vox.com/technology/512088/jensen-huang-nvidia-return-ceo-myth"
+    },
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Why Trump saved Jensen Huang",
+     "url": "https://www.vox.com/the-logoff-newsletter-trump/511773/trump-jensen-huang-nvidia-board-why"
+    },
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Can the Nvidia scandal possibly get weirder?",
+     "url": "https://www.vox.com/today-explained-newsletter/511366/jensen-huang-nvidia-reinstated"
+    },
+    {
+     "name": "Slate",
+     "lean": -2,
+     "label": "Left",
+     "title": "The Scariest Part of the Jensen Huang Scandal Is What Will Happen Next",
+     "url": "https://slate.com/technology/2026/11/trump-jensen-huang-nvidia-ceo-return.html?via=rss"
+    },
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "Todd Blanche Suddenly Knows Nothing About the Jensen Huang Investigation",
+     "url": "https://www.motherjones.com/politics/2026/11/ag-todd-blanche-nvidia-jensen-huang-press-conference-ignorance/"
+    },
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "“Sex Sells” and a Red Bra: Trump’s Vulgar Response to Jensen Huang’s Return",
+     "url": "https://www.motherjones.com/politics/2026/11/trump-jensen-huang-return-vulgar-response/"
+    },
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "Nvidia Restores Huang After Pressure From Trump",
+     "url": "https://www.motherjones.com/politics/2026/11/nvidia-restores-jensen-huang-after-pressure-from-trump/"
+    },
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Jensen Huang returns to Nvidia. And, Rep. Gomez resigns amid alleged sexual misconduct",
+     "url": "https://www.npr.org/2026/11/24/g-s1-155227/up-first-newsletter-nvidia-jensen-huang-trump-ukraine-russia-jimmy-gomez"
+    },
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "For workplace culture champions, Jensen Huang's return is 'unfathomable'",
+     "url": "https://www.npr.org/2026/11/24/nx-s1-6051583/nvidia-huang-dei-trump-women"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Tech stocks take a dip as Jensen Huang comes back as Nvidia CEO",
+     "url": "https://www.nbcnews.com/video/tech-stocks-take-a-dip-as-jensen-huange-comes-back-as-nvidia-ceo-274123333801"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump says pardon is always an option for Jensen Huang, and that invoking the Fifth isn’t necessary",
+     "url": "https://www.nbcnews.com/politics/donald-trump/pardon-always-option-nvidia-jensen-huang-pleading-fifth-not-necessary-rcna611219"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Legal expert breaks down Trump's involvement in Huang reinstatement at Nvidia",
+     "url": "https://www.cbsnews.com/video/legal-expert-breaks-down-trumps-involvement-in-nvidia-scandal-huang-reinstatement/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Where China stands in the AI chip race amid Huang's return to Nvidia",
+     "url": "https://www.cbsnews.com/video/heres-where-china-stands-in-the-ai-chip-race-amid-huangs-return-to-nvidia/"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How Trump may have profited from Huang's return to Nvidia",
+     "url": "https://www.pbs.org/newshour/show/how-trump-may-have-profited-from-huangs-return-to-nvidia"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "What's next for Nvidia and Jensen Huang after Trump's intervention",
+     "url": "https://www.pbs.org/newshour/show/whats-next-for-nvidia-and-jensen-huang-after-trumps-intervention"
+    },
+    {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Jensen Huang Isn’t Worried. But You Should Be.",
+     "url": "https://www.theatlantic.com/ideas/2026/11/nvidia-stock-market-crisis/689557/?utm_source=feed"
+    },
+    {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Jensen Huang and Silicon Valley’s Short-Term Thinking",
+     "url": "https://www.theatlantic.com/podcasts/2026/11/ra-nvidia/689551/?utm_source=feed"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Representative Jimmy Gomez Resigns After House Ethics Panel Finds Evidence of Sexual Misconduct",
+     "url": "https://time.com/article/2026/11/24/jimmy-gomez-congress-california-democrat-sexual-misconduct/"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Jensen Huang and the Cult of the Male Tech Founder",
+     "url": "https://time.com/article/2026/11/24/jensen-huang-ceo-male-tech-founder/"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "What Jensen Huang's return teaches China's Xi about Trump",
+     "url": "https://www.bbc.co.uk/news/articles/c63rgpy50x98o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Chip restrictions in the spotlight after Huang's return",
+     "url": "https://thehill.com/newsletters/technology/6241465-chip-restrictions-in-the-spotlight-after-huangs-return/"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Jensen Huang’s Nvidia return adds momentum to chip export controls",
+     "url": "https://thehill.com/policy/technology/6241448-trump-pressures-nvidia-huang-return/"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Jensen Huang tells staff that Nvidia doesn't need a succession plan",
+     "url": "https://www.cnbc.com/2026/11/24/jensen-huang-nvidia-employee-meeting.html"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump open to pardoning Jensen Huang if needed: NY Post",
+     "url": "https://www.cnbc.com/2026/11/25/trump-huang-pardon-politics.html"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump wanted Jensen Huang back. Now, the president is all alone in Washington",
+     "url": "https://www.cnbc.com/2026/11/24/trump-jensen-huang-nvidia.html"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Jensen Huang's Nvidia return shows the U.S.-China AI race is about more than chips",
+     "url": "https://www.cnbc.com/2026/11/25/jensen-huang-nvidia-ai-talent-race.html"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Jensen Huang to face DC grilling the same day Nvidia releases new products at GTC",
+     "url": "https://www.cnbc.com/2026/11/24/jensen-huang-nvidia-congress-gtc.html"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Nvidia's one-man board: How Trump inherited Jensen Huang's scandal",
+     "url": "https://www.axios.com/2026/11/24/nvidias-one-man-board-how-trump-inherited-jensen-huangs-scandal"
+    },
+    {
+     "name": "The Christian Science Monitor",
+     "lean": 0,
+     "label": "Center",
+     "title": "In Jensen Huang’s return, are national security concerns being shoved aside?",
+     "url": "https://www.csmonitor.com/Business/2026/1123/trump-jensen-huang-nvidia-security?icid=rss"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "‘The View’ co-host Sunny Hostin praises Hillary Clinton’s anti-Trump rant after Jensen Huang’s Nvidia return",
+     "url": "https://nypost.com/2026/11/24/media/sunny-hostin-praises-hillary-clintons-anti-trump-rant-after-jensen-huangs-nvidia-return/"
+    },
+    {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Huang’s Surprise Return Doesn’t End Nvidia Questions",
+     "url": "https://www.nationalreview.com/article/huang-s-surprise-return-doesn-t-end-nvidia-questions"
+    },
+    {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "How Long Can Jensen Huang and Nvidia Defy Gravity?",
+     "url": "https://www.nationalreview.com/article/how-long-can-jensen-huang-and-nvidia-defy-gravity"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Everything You Need To Know About The Jensen Huang Scandal",
+     "url": "https://www.dailywire.com/news/everything-you-need-to-know-about-the-jensen-huang-scandal"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Why Nvidia’s Spy Scandal Gets Hotter Outside The Bedroom",
+     "url": "https://www.dailywire.com/news/why-nvidias-spy-scandal-gets-hotter-outside-the-bedroom"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Tells Huang Not to Plead the Fifth Before Congress, Floats Pardon",
+     "url": "https://www.newsmax.com/newsfront/donald-trump-jensen-huang-plead-fifth/2026/11/24/id/1277441"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Says Pardoning Jensen Huang Is ‘Always An Option,’ But Probably Won’t Be ‘Necessary’",
+     "url": "https://dailycaller.com/2026/11/24/trump-jensen-huang-pardon-nvidia-congress-testimony"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "19 rumors about insider trading, prediction markets we've investigated",
+     "link": "https://www.snopes.com/collections/insider-trading-prediction-markets-collection/"
+    },
+    {
+     "org": "Snopes",
+     "title": "Did Trump post meme of Jensen Huang holding red bra in Butler rally photo?",
+     "link": "https://www.snopes.com/fact-check/trump-huang-red-bra-image/"
+    },
+    {
+     "org": "Snopes",
+     "title": "Did Chicago HSI send inaccurate warning about Apple's 'Live Listen' feature?",
+     "link": "https://www.snopes.com/fact-check/homeland-security-live-listen-warning/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "AnSnptTBnnE",
+     "title": "Legal expert breaks down Trump's involvement in Huang reinstatement at Nvidia",
+     "thumb": "https://i.ytimg.com/vi/AnSnptTBnnE/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "B3C69rl3RZw",
+     "title": "What's next for Nvidia and Jensen Huang after Trump's intervention",
+     "thumb": "https://i.ytimg.com/vi/B3C69rl3RZw/hqdefault.jpg",
+     "channel": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "fhbfVqhZG5Q",
+     "title": "Jensen Huang reportedly tells staff he's in therapy as he returns to Nvidia",
+     "thumb": "https://i.ytimg.com/vi/fhbfVqhZG5Q/hqdefault.jpg",
+     "channel": "ABC News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Trump Blocks Army’s Toxic “Lead Bomb”—and Blames Rob Sand for the Fallout",
+   "summary": "President Donald Trump shut down the Army’s plan to override a court order and intentionally detonate five tons of toxic, lead-containing explosive material in Iowa on Monday afternoon, despite the Army’s announcement Sunday that it would disregard a court-ordered pause on the co",
+   "category": "Politics",
+   "leans": [
+    -2,
+    2
+   ],
+   "span": 4,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "Trump Blocks Army’s Toxic “Lead Bomb”—and Blames Rob Sand for the Fallout",
+     "url": "https://www.motherjones.com/politics/2026/11/iowa-middletown-army-lead-azide-explosion-court-order-rob-sand-democrat/"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Army Releases New Map Showing Projected Path Of Toxic Lead Dust Plume",
+     "url": "https://dailycaller.com/2026/11/24/us-army-new-map-lead-dust-plume-iowa-army-ammunition-plant-lead-azide-detonation"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Kilmar Ábrego García, man at center of Trump deportation battle, leaving US",
+   "summary": "Salvadorian man, who was deported in March 2025 and returned to US after supreme court ruling, leaving of own volition for Spain Kilmar Ábrego García is leaving the United States of his own volition, his lawyers confirmed on Tuesday. Ábrego is leaving the US for Spain on Tuesday ",
+   "category": "Politics",
+   "leans": [
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 7,
+   "balance": {
+    "l": 2,
+    "c": 1,
+    "r": 4
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Kilmar Ábrego García, man at center of Trump deportation battle, leaving US",
+     "url": "https://www.theguardian.com/us-news/2026/nov/24/kilmar-abrego-garcia-leaves-us"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Kilmar Abrego Garcia is leaving the U.S. a ‘free man,’ Van Hollen says",
+     "url": "https://www.nbcnews.com/news/us-news/kilmar-abrego-garcia-rcna611215"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Van Hollen: Abrego Garcia leaving US, 'will be safe' amid self-deportation reports",
+     "url": "https://thehill.com/policy/international/6241572-kilmar-abrego-garcia-self-deports/"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Kilmar Abrego Garcia to leave US immediately for Spain",
+     "url": "https://www.washingtonexaminer.com/policy/immigration/4814596/kilmar-abrego-garcia-leave-us-spain/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Kilmar Abrego Garcia voluntarily leaves U.S., ending year-long battle with Trump administration",
+     "url": "https://www.washingtontimes.com/news/2026/nov/24/kilmar-abrego-garcia-accept-deportation-ending-year-long-battle-trump/"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Kilmar Abrego Garcia Is Leaving America. He’s Not Going Where Trump Wanted.",
+     "url": "https://www.dailywire.com/news/kilmar-abrego-garcia-is-leaving-america-hes-not-going-where-trump-wanted"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Kilmar Abrego Garcia Leaving U.S. For Spain",
+     "url": "https://www.newsmax.com/newsfront/kilmar-abrego-garcia-spain-u-s/2026/11/24/id/1277446"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "Former Trump Administration Health Adviser Misleads About mRNA Flu Vaccine",
+     "link": "https://www.factcheck.org/2026/11/former-trump-administration-health-adviser-misleads-about-mrna-flu-vaccine/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "NMYdKyQ_rh8",
+     "title": "Kilmar Abrego Garcia leaving U.S. for Europe, sources say",
+     "thumb": "https://i.ytimg.com/vi/NMYdKyQ_rh8/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Chinese Tech Titan Convicted Of Plotting To Steal American Trade Secrets",
+   "summary": "Chinese telecommunications giant Huawei Technologies was convicted Tuesday on 10 federal criminal counts, including conspiring to steal trade secrets from American companies, defrauding banks, and violating U.S. sanctions. A federal jury in Brooklyn found Huawei and three of its ",
+   "category": "Economy",
+   "leans": [
+    -1,
+    0,
+    2
+   ],
+   "span": 3,
+   "n_sources": 6,
+   "balance": {
+    "l": 2,
+    "c": 2,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Chinese tech giant Huawei convicted of federal charges, including fraud",
+     "url": "https://www.nbcnews.com/news/us-news/chinese-tech-company-huawei-convicted-federal-charges-rcna611189"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "U.S. jury finds Chinese tech giant Huawei guilty of conspiracy to steal trade secrets, bank fraud",
+     "url": "https://www.pbs.org/newshour/nation/u-s-jury-finds-chinese-tech-giant-huawei-guilty-of-conspiracy-to-steal-trade-secrets-bank-fraud"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Huawei found guilty of stealing trade secrets but acquitted of racketeering",
+     "url": "https://www.bbc.co.uk/news/articles/cmy49ngydqzpo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "U.S. jury convicts Huawei in a criminal trial over fraud and trade secrets",
+     "url": "https://www.cnbc.com/2026/11/25/huawei-fraud-trade-trial.html"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Chinese Tech Titan Convicted Of Plotting To Steal American Trade Secrets",
+     "url": "https://www.dailywire.com/news/chinese-tech-titan-convicted-of-plotting-to-steal-american-trade-secrets"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Chinese Telecom Giant Huawei Found Guilty Of Stealing US Trade Secrets, Bank Fraud",
+     "url": "https://dailycaller.com/2026/11/24/chinese-telecom-giant-huawei-guilty-of-stealing-us-trade-secrets-bank-fraud"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Three Fort Hood shooting survivors barred from witnessing Nidal Hasan execution",
+   "summary": "The Army has barred three survivors of the 2009 Fort Hood shooting from witnessing the scheduled execution of shooter Nidal Hasan, a decision survivors argue discounts the emotional trauma they endured because they were not physically wounded by gunfire. Three individuals who sur",
+   "category": "General",
+   "leans": [
+    -1,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 5,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 3
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Fort Hood mass shooter makes legal move to stop Pentagon’s firing squad execution",
+     "url": "https://www.nbcnews.com/news/us-news/fort-hood-nidal-hasan-firing-squad-execution-rcna611217"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Fort Hood shooter Nidal Hasan will petition to delay his execution",
+     "url": "https://www.cbsnews.com/news/nidal-hasan-delay-execution-petition/"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Three Fort Hood shooting survivors barred from witnessing Nidal Hasan execution",
+     "url": "https://www.washingtonexaminer.com/policy/defense/4814574/fort-hood-shooting-survivors-nidal-hasan-execution/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Fort Hood shooter Nidal Hasan asks federal judge to halt execution",
+     "url": "https://www.foxnews.com/us/fort-hood-shooter-nidal-hasan-asks-federal-judge-halt-execution"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Fort Hood Shooter Seeks Execution Delay to Fight Sentence",
+     "url": "https://www.newsmax.com/newsfront/fort-hood-nidal-hasan-execution-delay/2026/11/24/id/1277449"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Life expectancy in Cuba falls for first time since 1950 amid economic crisis",
+   "summary": "WHO chief says life expectancy has fallen from 78.8 years in 2020 to 74.4 in 2025, figures that predate US fuel blockade Life expectancy has fallen for the first time in Cuba since 1950 as the island reels from a severe economic crisis, the head of the World Health Organization (",
+   "category": "Health",
+   "leans": [
+    -1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 3,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Life expectancy in Cuba falls for first time since 1950 amid economic crisis",
+     "url": "https://www.theguardian.com/world/2026/nov/24/cuba-life-expectancy-decline"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How Will Severe Storm Impact Macy’s Thanksgiving Day Parade?",
+     "url": "https://www.today.com/video/severe-weather-could-ground-macy-s-iconic-giant-balloons-274082373962"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Macy’s Thanksgiving Day Parade Set For Doom And Gloom, Would Be First Time Since 1971",
+     "url": "https://dailycaller.com/2026/11/24/macys-thanksgiving-day-parade-balloons-floats-performers-list-storms-new-york-city-weather-report"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Police negotiating with hostage-takers at supermarket in Colombia",
+   "summary": "Around 20 people are being held against their will in Cartagena, Colombia, after a group of armed gunmen stormed a supermarket. This followed a botched robbery attempt on an armored truck. CBS News national correspondent Lilia Luciano has more.",
+   "category": "Economy",
+   "leans": [
+    -1,
+    0,
+    2
+   ],
+   "span": 3,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Police negotiating with hostage-takers at supermarket in Colombia",
+     "url": "https://www.cbsnews.com/video/police-negotiating-hostage-takers-supermarket-colombia/"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Gunmen hold dozens hostage in Colombia supermarket",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/25/gunmen-hold-dozens-hostage-in-colombia-supermarket?traffic_source=rss"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Gunmen Hold Dozens Hostage at Colombia Supermarket",
+     "url": "https://www.newsmax.com/newsfront/colombia-cartagena-abelardo-de-la-espriella/2026/11/24/id/1277448"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "HEFjJGg5fv8",
+     "title": "Police negotiating with hostage-takers at supermarket in Colombia",
+     "thumb": "https://i.ytimg.com/vi/HEFjJGg5fv8/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "xZz1HAS3DJw",
+     "title": "Gunmen hold dozens hostage in Colombia supermarket",
+     "thumb": "https://i.ytimg.com/vi/xZz1HAS3DJw/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    },
+    {
+     "videoId": "FTNnkk3VVCk",
+     "title": "Armed men hold people hostage in a supermarket in Colombia",
+     "thumb": "https://i.ytimg.com/vi/FTNnkk3VVCk/hqdefault.jpg",
+     "channel": "NBC News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Plane carrying 6 people crashes off Mississippi coast, search ongoing: US Coast Guard",
+   "summary": "The Federal Aviation Administration said preliminarily that the Cessna 210 aircraft crashed around 3:30 p.m. local time southwest of Pascagoula, Mississippi.",
+   "category": "Economy",
+   "leans": [
+    -1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Plane carrying 6 people crashes off Mississippi coast, search ongoing: US Coast Guard",
+     "url": "https://abcnews.com/US/plane-carrying-6-people-crashes-off-mississippi-coast/story?id=138427173"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Coast Guard searching for 2 children, 4 adults after plane crashes off Mississippi coast",
+     "url": "https://www.foxnews.com/us/coast-guard-searching-2-children-4-adults-after-plane-crashes-off-mississippi-coast"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Pope Francis’s diaries recount visions of hell, attacks by Satan throughout later life",
+   "summary": "A curated selection of personal writings from the late Pope Francis describe the Holy Father’s reaction to being selected for the office, his spiritual practices, and visions of the devil that plagued him throughout his episcopacy. The Private Diary of Pope Francis, a slim volume",
+   "category": "Politics",
+   "leans": [
+    -1,
+    0,
+    1
+   ],
+   "span": 2,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Pope Francis' diary reveals he had visions of the devil, saw gates of Hell",
+     "url": "https://www.cbsnews.com/video/late-pope-francis-diary-reveals-he-had-visions-of-the-devil/"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Pope Francis' diary reveals claims he saw the devil three times",
+     "url": "https://www.bbc.co.uk/news/articles/cm78270l4z7no?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Pope Francis’s diaries recount visions of hell, attacks by Satan throughout later life",
+     "url": "https://www.washingtonexaminer.com/news/world/4814431/pope-francis-diaries-hell-visions-satan-attacks/"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "GYEjPP2njJ8",
+     "title": "Pope Francis' diary reveals he had visions of the devil, saw gates of Hell",
+     "thumb": "https://i.ytimg.com/vi/GYEjPP2njJ8/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "CXE5PXM5HWI",
+     "title": "Pope Francis saw the 'gates of hell' when he realized the depths of the sexual abuse crisis",
+     "thumb": "https://i.ytimg.com/vi/CXE5PXM5HWI/hqdefault.jpg",
+     "channel": "AP",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "FAA issues and lifts ground stop at Chicago's O'Hare",
+   "summary": "The Federal Aviation Administration (FAA) on Tuesday issued a ground stop at O’Hare International Airport in Chicago — the second brief pause on flights in two days. The ground stop was placed in effect until 4:15 p.m. local time due to an equipment outage with a ​ground surveill",
+   "category": "Economy",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 3,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "FAA issues and lifts ground stop at Chicago's O'Hare",
+     "url": "https://thehill.com/homenews/administration/6241322-faa-ohare-ground-stop/"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "FAA Issues Another Ground Stop At One Of America’s Busiest Airports",
+     "url": "https://www.dailywire.com/news/faa-issues-another-ground-stop-at-one-of-americas-busiest-airportss"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Radar Outage Triggers O'Hare Ground Stop",
+     "url": "https://www.newsmax.com/newsfront/ohare-international-airport-chicago-faa/2026/11/24/id/1277440"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Gavin Newsom jets around the world playing president while his White House ambitions crumble back home",
+   "summary": "Gavin Newsom has a few weeks left as governor of California. He's spending them playing president.",
+   "category": "Politics",
+   "leans": [
+    -1,
+    1
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Politico",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Gavin Newsom’s 2028 audition",
+     "url": "https://www.politico.com/video/2026/11/23/gavin-newsoms-2028-audition-2236370"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Gavin Newsom jets around the world playing president while his White House ambitions crumble back home",
+     "url": "https://nypost.com/2026/11/24/opinion/gavin-newsom-jets-around-the-world-playing-president-while-his-white-house-ambitions-crumble-back-home/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Trump says he'll meet with El-Sayed to discuss 'Trumpcare'",
+   "summary": "President Trump said he will meet with Sen.-elect Abdul El-Sayed (D-Mich.) to discuss his rebranding of a single-payer healthcare bill, also known as “Medicare for All,” with the name “TrumpCare.” In an interview with the New York Post, Trump called El-Sayed “very smart” for the ",
+   "category": "Politics",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump says he'll meet with El-Sayed to discuss 'Trumpcare'",
+     "url": "https://thehill.com/homenews/administration/6241682-trump-el-sayed-trumpcare-healthcare/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump to Meet With El-Sayed on 'Trumpcare' Pitch",
+     "url": "https://www.newsmax.com/newsfront/donald-trump-meet-abdul-el-sayed/2026/11/24/id/1277445"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Nearly 1 in 3 Americans have 'very little' faith in FAA: Poll",
+   "summary": "Nearly a third of Americans have “very little” faith in the Federal Aviation Administration (FAA), according to a new survey. In The Economist/YouGov poll, 28 percent of respondents said they have “very little” confidence in the FAA, while 44 percent said they have “some” and 19 ",
+   "category": "Economy",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Nearly 1 in 3 Americans have 'very little' faith in FAA: Poll",
+     "url": "https://thehill.com/policy/transportation/6241364-faa-faith-poll-low/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Poll: Nearly a Third of Americans Have Little Faith in FAA",
+     "url": "https://www.newsmax.com/newsfront/poll-faa-travel/2026/11/24/id/1277439"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Israel's Eisenkot Secures 1st Pact to Form Government",
+   "summary": "Israel's Yashar party, led by former military chief Gadi Eisenkot, said on Tuesday it agreed to sign a coalition pact with a conservative opposition party as it seeks to form a government following last month's election.",
+   "category": "World",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Israel’s Eisenkot secures first coalition partner in bid to form government",
+     "url": "https://www.aljazeera.com/news/2026/11/25/israels-eisenkot-secures-first-coalition-partner-in-bid-to-form-government?traffic_source=rss"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Israel's Eisenkot Secures 1st Pact to Form Government",
+     "url": "https://www.newsmax.com/newsfront/israel-gadi-eisenkot-isaac-herzog/2026/11/24/id/1277436"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Navy Rules Out Renaming USS Doris Miller After Trump",
+   "summary": "The Navy said it will retain the name of the USS Doris Miller, an aircraft carrier honoring a Black World War II hero, following reports that the service was considering renaming the warship after President Donald Trump.",
+   "category": "World",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Republican Backed USS Doris Miller Amid Trump Renaming Push",
+     "url": "https://www.newsweek.com/republican-backed-uss-doris-miller-amid-trump-renaming-push-12765724"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Navy Rules Out Renaming USS Doris Miller After Trump",
+     "url": "https://www.newsmax.com/newsfront/doris-miller-navy-donald-trump/2026/11/24/id/1277435"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Why the Army wants to detonate toxic explosives in Iowa",
+   "summary": "This story appeared in Today, Explained, a daily newsletter that helps you understand the most compelling news and stories of the day. Subscribe here. In Iowa, the Pentagon is preparing to send a toxic plume of lead dust into the sky the day before Thanksgiving — by blowing up ab",
+   "category": "General",
+   "leans": [
+    -2,
+    -1
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Why the Army wants to detonate toxic explosives in Iowa",
+     "url": "https://www.vox.com/today-explained-newsletter/511830/iowa-lead-azide-explosives-detonation-plume"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Army to detonate unstable explosives in Iowa Wednesday morning",
+     "url": "https://www.cbsnews.com/news/army-iowa-explosives-trump-appeals-court/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Director of Iowa environmental group says plan to detonate explosives is safest path forward",
+     "url": "https://www.cbsnews.com/video/army-to-blow-up-5-tons-of-toxic-materials-in-iowa-on-wednesday/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Is US Army planning to detonate massive amount of lead azide in Middletown, Iowa?",
+     "link": "https://www.snopes.com/fact-check/lead-azide-detonation-army-iowa/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "uRUjAxh50n0",
+     "title": "Evacuations in Iowa ahead of Army's detonation of unstable explosives",
+     "thumb": "https://i.ytimg.com/vi/uRUjAxh50n0/hqdefault.jpg",
+     "channel": "ABC News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Trump talks turkey, and his ballroom, at pardoning event",
+   "summary": "President Trump honored a time-worn Washington tradition Tuesday: pardoning poultry — after using the pulpit to praise his White House ballroom and deliver a rally-reminiscent speech. The big picture: Freedom and Feathers, this year's honored birds, continue a bizarre American tr",
+   "category": "Politics",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  President Trump holds Thanksgiving turkey pardoning ceremony",
+     "url": "https://abcnews.com/video/138420700/"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump talks turkey, and his ballroom, at pardoning event",
+     "url": "https://www.axios.com/2026/11/24/trump-turkey-pardon-ballroom"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "SRCB92oCLic",
+     "title": "VIP UPGRADE: 2027 Turkey pardoning to be in new ballroom #trump #shorts #turkey",
+     "thumb": "https://i.ytimg.com/vi/SRCB92oCLic/hqdefault.jpg",
+     "channel": "Fox News",
+     "lean": 2,
+     "label": "Right"
+    }
+   ]
+  },
+  {
+   "title": "Cities and States Sue to Block HUD Rule Against Mixed-Status Families",
+   "summary": "A Department of Housing and Urban Development rule that could force thousands of mixed-immigration-status families to either move out of their homes or separate has been hit with further legal challenges: one filed by a group of cities facing affordable housing shortages, includi",
+   "category": "Economy",
+   "leans": [
+    -2,
+    -1
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "Cities and States Sue to Block HUD Rule Against Mixed-Status Families",
+     "url": "https://www.motherjones.com/politics/2026/11/hud-lawsuit-mixed-status-undocumented-immigrants-federal-housing-assistance-rule-evictions/"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "States sue HUD over a rule that would end housing aid for mixed-status families",
+     "url": "https://www.pbs.org/newshour/nation/states-sue-hud-over-a-rule-that-would-end-housing-aid-for-mixed-status-families"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Florida butcher shop, including 4 illegal migrant workers, unleash ‘pure evil’ in horrific animal slaughter event: officials",
+   "summary": "“This was not a typical butcher shop; this was a place that facilitated the most egregious of torture and animal cruelty,” Florida Attorney General James Uthmeier said.",
+   "category": "World",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Florida butcher shop, including 4 illegal migrant workers, unleash ‘pure evil’ in horrific animal slaughter event: officials",
+     "url": "https://nypost.com/2026/11/24/us-news/florida-butcher-shop-including-4-illegal-migrant-workers-unleash-pure-evil-in-horrific-animal-slaughter-event-officials/"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "‘Pure Evil’: State AG Announces Arrest Of 4 Illegal Immigrants In Slaughterhouse Torture Case",
+     "url": "https://dailycaller.com/2026/11/24/florida-ag-james-uthmeier-arrest-illegal-immigrants-halal-slaughterhouse-torture-videos-raid-lambs-sheep"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Trump Gives ‘America’s Mayor’ the Presidential Medal of Freedom",
+   "summary": "Rudy Giuliani rose to national prominence after 9/11 and later helped lead Trump’s effort to overturn the 2020 election results.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump awards Medal of Freedom to former NYC Mayor Rudy Giuliani",
+     "url": "https://abcnews.com/Politics/trump-award-medal-freedom-former-nyc-mayor-rudy/story?id=138411544"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump Gives ‘America’s Mayor’ the Presidential Medal of Freedom",
+     "url": "https://time.com/article/2026/11/24/trump-awards-rudy-giuliani-presidential-medal-of-freedom/"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "TZJnehiO-BU",
+     "title": "Trump to award Medal of Freedom to Rudy Giuliani",
+     "thumb": "https://i.ytimg.com/vi/TZJnehiO-BU/hqdefault.jpg",
+     "channel": "NBC News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "South Africa convicts Zimbabwean who tried to fight Ukraine for Russia",
+   "summary": "The Zimbabwean man was arrested on November 8 at a Johannesburg airport while attempting to board a flight to Russia.",
+   "category": "World",
+   "leans": [
+    0
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 2,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Zimbabwean convicted in South Africa of trying to fight in Ukraine",
+     "url": "https://www.bbc.co.uk/news/articles/cmqj5qlj5yz9o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "South Africa convicts Zimbabwean who tried to fight Ukraine for Russia",
+     "url": "https://www.aljazeera.com/news/2026/11/24/south-africa-convicts-zimbabwean-who-tried-to-fight-ukraine-for-russia?traffic_source=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Potential health effects of Army's detonation of nearly 5 tons of lead azide",
+   "summary": "The U.S. Army is planning a controlled detonation of explosive material at an ammunition plant in rural Iowa on Wednesday. There could be potential health effects.",
+   "category": "Health",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Potential health effects of Army's detonation of nearly 5 tons of lead azide",
+     "url": "https://abcnews.com/Health/potential-health-effects-armys-controlled-detonation-5-tons/story?id=138415656"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Is US Army planning to detonate massive amount of lead azide in Middletown, Iowa?",
+     "link": "https://www.snopes.com/fact-check/lead-azide-detonation-army-iowa/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "Army plans explosive detonation in Iowa despite residents' concerns",
+   "summary": "The U.S. Army is moving ahead with plans to detonate a highly volatile explosive compound in Iowa. The lead azide is used in military munitions and has been deteriorating underground. The detonation could send a plume of toxic lead dust across the area, but Army officials insist ",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Army plans explosive detonation in Iowa despite residents' concerns",
+     "url": "https://www.pbs.org/newshour/show/army-plans-explosive-detonation-in-iowa-despite-residents-concerns"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Is US Army planning to detonate massive amount of lead azide in Middletown, Iowa?",
+     "link": "https://www.snopes.com/fact-check/lead-azide-detonation-army-iowa/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "ND1vt-58N4c",
+     "title": "Army plans explosive detonation in Iowa despite residents' concerns",
+     "thumb": "https://i.ytimg.com/vi/ND1vt-58N4c/hqdefault.jpg",
+     "channel": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Oil's downward trend is pushing gasoline lower",
+   "summary": "Data: Financial Modeling Prep ; Chart: Ben Geman/Axios Brent crude is trading below $90 per barrel to start the week and briefly dipped to its lowest level since late August. Why it matters: Recent declines should help gasoline prices keep falling. The average U.S. retail price i",
+   "category": "World",
+   "leans": [
+    0
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Oil's downward trend is pushing gasoline lower",
+     "url": "https://www.axios.com/2026/11/24/crude-oil-gasoline-prices-down"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "Trump’s Misguided Claim That ‘They’ Waited to Lower Gas Prices Until After the Midterms",
+     "link": "https://www.factcheck.org/2026/11/trumps-misguided-claim-that-they-waited-to-lower-gas-prices-until-after-the-midterms/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "Trump’s AG Calls Out Hole In Nvidia CEO Spy Probe Rumors",
+   "summary": "Attorney General Todd Blanche on Tuesday pushed back on reporters’ questions about Nvidia CEO Jensen Huang’s alleged affair with a suspected Chinese spy, saying they were relying on leaks and assumptions. “Sir, that’s not for Director Patel or me to make that decision and when yo",
+   "category": "Politics",
+   "leans": [
+    2
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump’s AG Calls Out Hole In Nvidia CEO Spy Probe Rumors",
+     "url": "https://www.dailywire.com/news/trumps-ag-calls-out-hole-in-nvidia-ceo-spy-probe-rumors"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "19 rumors about insider trading, prediction markets we've investigated",
+     "link": "https://www.snopes.com/collections/insider-trading-prediction-markets-collection/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "How tariffs, fuel and fertilizer costs are squeezing the U.S.'s biggest apple region",
+   "summary": "Washington's $9 billion industry grows more than 70% of the nation's fresh apples. Farmers are being pressed by high costs, tariffs and a strong dollar that diminishes foreign purchasing power.",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How tariffs, fuel and fertilizer costs are squeezing the U.S.'s biggest apple region",
+     "url": "https://www.npr.org/sections/the-picture-show/2026/11/24/g-s1-154620/how-high-costs-are-squeezing-apple-producers"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "The U.S. government is investigating Iranian ties to as many as 50 hacked commercial vessels",
+   "summary": "The attacks, if officials who spoke to NPR are correct, may be the latest example of Iranian cyberattacks against global critical infrastructure during the war with the U.S.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "The U.S. government is investigating Iranian ties to as many as 50 hacked commercial vessels",
+     "url": "https://www.npr.org/2026/11/24/nx-s1-6052994/hack-commercial-vessels-iran"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Who really owns the Albanian land Jared Kushner wants to turn into a 5-star resort?",
+   "summary": "Albania's Prime Minister Edi Rama has vowed that Kushner's resort project will go ahead as planned. But an ongoing investigation by Albania's state prosecutor into forged land titles could halt the project.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Who really owns the Albanian land Jared Kushner wants to turn into a 5-star resort?",
+     "url": "https://www.npr.org/2026/11/24/g-s1-154623/albania-jared-kushner-land-deal-protests"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "What should it cost to insure a home in wildfire country?",
+   "summary": "Some California homeowners have spent thousands making their homes safer from wildfires. Yet all that work has barely made a dent in their insurance bills. Should they be getting a bigger break?",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "What should it cost to insure a home in wildfire country?",
+     "url": "https://www.npr.org/sections/planet-money/2026/11/24/g-s1-154477/what-should-it-cost-to-insure-a-home-in-wildfire-country"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Doctors struggle to save babies after parents refuse vitamin K",
+   "summary": "Doctors are fighting an uphill battle against disinformation about routine vitamin K shots given to newborns in the hospital. It helps prevent a rare but devastating bleeding disorder.",
+   "category": "Health",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Doctors struggle to save babies after parents refuse vitamin K",
+     "url": "https://www.npr.org/2026/11/24/nx-s1-6001723/vitamin-k-deficiency-refusal-vaccine-misinformation-newborn-bleeding"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "They attended Trump's meme coin dinner.  It didn't go well",
+   "summary": "Trump's meme coin dinners have sparked intense controversy. These two guests attended his latest on Sunday — and agreed to provide NPR inside access.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "They attended Trump's meme coin dinner.  It didn't go well",
+     "url": "https://www.npr.org/2026/11/24/nx-s1-6051604/trump-crypto-corruption-meme-coin-dinner"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Black travelers on Route 66 weren't welcome at most gas stations — except this one",
+   "summary": "Threatt Filling Station in Luther, Okla., was the first Black-owned gas station on Route 66. At a time when Black families needed the Green Book to find places to stay, eat, use the bathroom, it provided fuel and respite.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Black travelers on Route 66 weren't welcome at most gas stations — except this one",
+     "url": "https://www.npr.org/2026/11/24/nx-s1-5928337/threatt-filling-station-oklahoma-route-66"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Democrats probe whether Trump Jr.-aligned businesses benefit from government access",
+   "summary": "Investigators say companies with ties to Donald Trump Jr's investment firm, 1789 Capital, have profited since his father's reelection.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Democrats probe whether Trump Jr.-aligned businesses benefit from government access",
+     "url": "https://www.npr.org/2026/11/24/nx-s1-6051028/jamie-raskin-donald-trump-jr-1789-capital-democrats-investigation"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "More than 300 Russians killed as Moscow props up Mali’s junta, leaked data reveals",
+   "summary": "Exclusive: Records list 349 deaths in three years in Mali and also shed light on Russia’s military activity elsewhere in Africa When the attack on Kidal began before dawn on 25 April this year, the Russian fighters were caught off guard. Within the first hour, checkpoints on the ",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "More than 300 Russians killed as Moscow props up Mali’s junta, leaked data reveals",
+     "url": "https://www.theguardian.com/world/2026/nov/24/russian-fighters-killed-in-mali-africa-leaked-data"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Ukraine confirms it used naval drones to strike two Russian ships off Libya",
+   "summary": "Ukraine’s security service says seven drones were launched from mothership in operation that sank Merkury warship Ukraine has confirmed it deployed naval drones in strikes on two Russian vessels off Libya on Sunday, including one that sank the corvette Merkury, one of Russia’s ne",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Ukraine confirms it used naval drones to strike two Russian ships off Libya",
+     "url": "https://www.theguardian.com/world/2026/nov/23/ukraine-naval-drones-strike-russian-warship-libya"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Russian warship sinks in Benghazi after suspected Ukrainian drone attack",
+   "summary": "No one has claimed responsibility for the strike on the vessel, which had docked on its way back to Russia A Russian warship docked in the Libyan port city of Benghazi was struck in the early hours of Sunday in a suspected Ukrainian sea drone attack, causing a dramatic night-time",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Russian warship sinks in Benghazi after suspected Ukrainian drone attack",
+     "url": "https://www.theguardian.com/world/2026/nov/22/blast-russian-ship-suspected-drone-attack-benghazi-libya"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "California’s coastal communities on alert as biggest waves in years hit state",
+   "summary": "Hazard warnings issued throughout week after powerful swells and waves of more than 9 metres recorded Multiple coastal hazard warnings were issued this week across California as successive areas of low pressure generated powerful swells and large breaking waves for coastal commun",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "California’s coastal communities on alert as biggest waves in years hit state",
+     "url": "https://www.theguardian.com/us-news/2026/nov/20/california-coastal-communities-alert-big-waves-hit-state"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Race to replant five South African baobabs after export blocked",
+   "summary": "The trees, intended for an unnamed buyer in Georgia, were reportedly dug up without the necessary permits Environmentalists in South Africa are racing to replant five centuries-old baobabs after the 20-tonne trees were dug up by an exporter, who tried to ship them thousands of mi",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Race to replant five South African baobabs after export blocked",
+     "url": "https://www.theguardian.com/environment/2026/nov/19/baobab-five-trees-south-africa-dug-up-export-blocked-georgia-aoe"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Armed men hold hostages at supermarket in top Colombian tourist destination",
+   "summary": "Police say at least 20 held in supermarket and Cartagena incident stems from botched robbery by ‘common criminals’ Armed and masked men are holding at least 20 people hostage in a supermarket in Cartagena, one of Colombia’s most popular tourist cities. About 30 people were initia",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Armed men hold hostages at supermarket in top Colombian tourist destination",
+     "url": "https://www.theguardian.com/world/2026/nov/24/cartagena-colombia-hostages-supermarket"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Butt of the joke: Trump impersonator mocks president at Canada press dinner",
+   "summary": "Carney watches on as comedian lampoons US leader and his interest in men’s backsides at correspondents’ event Ottawa Canada’s prime minister, Mark Carney, was joined on stage in Ottawa by a Donald Trump impersonator who mocked the US president to raucous laughter from a crowd of ",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Butt of the joke: Trump impersonator mocks president at Canada press dinner",
+     "url": "https://www.theguardian.com/world/2026/nov/23/canada-trump-impersonator-press-dinner"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Barbados town’s three-year deal with Bristol ‘part of the reparative process’",
+   "summary": "Island’s labour minister, Colin Jordan, says agreement acknowledges links between Speightstown and UK city are rooted in slave trade A town in Barbados known as “Little Bristol” has signed a “twinning’” agreement with the UK city, marking a new chapter in a centuries-long relatio",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Barbados town’s three-year deal with Bristol ‘part of the reparative process’",
+     "url": "https://www.theguardian.com/news/2026/nov/23/barbados-minister-speightstown-bristol-deal-slave-trade-reparations"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "China investigates politburo star in Xi Jinping’s latest purge",
+   "summary": "Chen Jining, regarded as a contender for higher office, becomes the fourth member of China’s elite politburo to be investigated since 2025 China has launched an investigation into Shanghai’s Communist party chief Chen Jining, a member of the country’s elite politburo, the state-r",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "China investigates politburo star in Xi Jinping’s latest purge",
+     "url": "https://www.theguardian.com/world/2026/nov/25/china-investigates-politburo-chen-jining-xi-jinping-purge"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "The Nvidia case is just the latest episode of Trump disregarding intelligence",
+   "summary": "Trump’s reaction to sensitive information that contradicts his worldview mirrors his conduct towards war with Iran Donald Trump’s unwillingness to heed warnings of suspected Chinese penetration of the tech giant Nvidia follows a pattern of the US president ignoring sensitive inte",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "The Nvidia case is just the latest episode of Trump disregarding intelligence",
+     "url": "https://www.theguardian.com/technology/2026/nov/24/nvidia-trump-huang-intelligence"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "‘Shocking’ decline seen in hep B vaccination against incurable virus, including babies with infected mothers",
+   "summary": "Fewer newborns are being vaccinated against hepatitis B, an incurable infection that can lead to liver disease, a large new analysis has found.",
+   "category": "Health",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "‘Shocking’ decline seen in hep B vaccination against incurable virus, including babies with infected mothers",
+     "url": "https://www.nbcnews.com/health/health-news/hepatitis-b-vaccination-decline-newborns-liver-disease-study-rcna611070"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Sen. Gillibrand says 60-seat Senate majority ‘on the table’ in 2028",
+   "summary": "NBC News’ Sahil Kapur goes one-on-one with DSCC Chair Sen. Kirsten Gillibrand (D-N.Y.) on Democrats’ path to expanding their Senate majority in 2028 and whether a filibuster-proof majority is within reach.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Sen. Gillibrand says 60-seat Senate majority ‘on the table’ in 2028",
+     "url": "https://www.nbcnews.com/meet-the-press/video/sen-gillibrand-says-60-seat-senate-majority-on-the-table-in-2028-274118725698"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Meet the ‘GTA’ superfans who turned the game’s release into a major life event",
+   "summary": "From transforming their homes into “Grand Theft Auto”-inspired playgrounds to clearing their calendars at all costs, die-hard fans of the franchise pulled out all the stops for the arrival of “GTA VI.”",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Meet the ‘GTA’ superfans who turned the game’s release into a major life event",
+     "url": "https://www.nbcnews.com/pop-culture/pop-culture-news/grand-theft-auto-six-fans-reaction-celebration-player-profiles-rcna609640"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "2026 Rockefeller Center Christmas Tree Arrives in New York City",
+   "summary": "A magnificent Norway spruce has made its journey from West Edmeston, New York, to Rockefeller Center. The tree will undergo a glow-up ahead of the lighting ceremony on Dec. 2.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "2026 Rockefeller Center Christmas Tree Arrives in New York City",
+     "url": "https://www.today.com/video/2026-rockefeller-center-christmas-tree-arrives-in-new-york-city-273069125683"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Nearly 6 decades after teen was killed while leaving job, Canada authorities know who did it",
+   "summary": "Authorities in Canada have identified a man accused of killing a Canadian teen nearly six decades ago, police said Monday.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Nearly 6 decades after teen was killed while leaving job, Canada authorities know who did it",
+     "url": "https://www.nbcnews.com/world/canada/nearly-6-decades-teen-was-killed-leaving-job-canada-authorities-know-rcna611227"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Maps show how far lead dust from Iowa detonation could travel",
+   "summary": "Maps of the planned lead azide detonation in Middletown show the shaded area stretching from near Burlington toward Macon, Missouri, by noon Wednesday. The forecasts will change with the weather.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Maps show how far lead dust from Iowa detonation could travel",
+     "url": "https://www.cbsnews.com/news/maps-show-how-far-lead-dust-from-about-5-tons-of-iowa-explosives-could-spread/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Iran developing chemical weapons, Israeli defense minister says",
+   "summary": "Israeli Defense Minister Israel Katz said Iran was developing chemical weapons and left open the possibility of preemptive strikes if necessary.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Iran developing chemical weapons, Israeli defense minister says",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-blockade-strait-of-hormuz-ship-attacks/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  }
+ ],
+ "blindspots": [
+  {
+   "title": "Why the Army wants to detonate toxic explosives in Iowa",
+   "summary": "This story appeared in Today, Explained, a daily newsletter that helps you understand the most compelling news and stories of the day. Subscribe here. In Iowa, the Pentagon is preparing to send a toxic plume of lead dust into the sky the day before Thanksgiving — by blowing up ab",
+   "category": "General",
+   "leans": [
+    -2,
+    -1
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Why the Army wants to detonate toxic explosives in Iowa",
+     "url": "https://www.vox.com/today-explained-newsletter/511830/iowa-lead-azide-explosives-detonation-plume"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Army to detonate unstable explosives in Iowa Wednesday morning",
+     "url": "https://www.cbsnews.com/news/army-iowa-explosives-trump-appeals-court/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Director of Iowa environmental group says plan to detonate explosives is safest path forward",
+     "url": "https://www.cbsnews.com/video/army-to-blow-up-5-tons-of-toxic-materials-in-iowa-on-wednesday/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Is US Army planning to detonate massive amount of lead azide in Middletown, Iowa?",
+     "link": "https://www.snopes.com/fact-check/lead-azide-detonation-army-iowa/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "uRUjAxh50n0",
+     "title": "Evacuations in Iowa ahead of Army's detonation of unstable explosives",
+     "thumb": "https://i.ytimg.com/vi/uRUjAxh50n0/hqdefault.jpg",
+     "channel": "ABC News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Cities and States Sue to Block HUD Rule Against Mixed-Status Families",
+   "summary": "A Department of Housing and Urban Development rule that could force thousands of mixed-immigration-status families to either move out of their homes or separate has been hit with further legal challenges: one filed by a group of cities facing affordable housing shortages, includi",
+   "category": "Economy",
+   "leans": [
+    -2,
+    -1
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "Cities and States Sue to Block HUD Rule Against Mixed-Status Families",
+     "url": "https://www.motherjones.com/politics/2026/11/hud-lawsuit-mixed-status-undocumented-immigrants-federal-housing-assistance-rule-evictions/"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "States sue HUD over a rule that would end housing aid for mixed-status families",
+     "url": "https://www.pbs.org/newshour/nation/states-sue-hud-over-a-rule-that-would-end-housing-aid-for-mixed-status-families"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Florida butcher shop, including 4 illegal migrant workers, unleash ‘pure evil’ in horrific animal slaughter event: officials",
+   "summary": "“This was not a typical butcher shop; this was a place that facilitated the most egregious of torture and animal cruelty,” Florida Attorney General James Uthmeier said.",
+   "category": "World",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Florida butcher shop, including 4 illegal migrant workers, unleash ‘pure evil’ in horrific animal slaughter event: officials",
+     "url": "https://nypost.com/2026/11/24/us-news/florida-butcher-shop-including-4-illegal-migrant-workers-unleash-pure-evil-in-horrific-animal-slaughter-event-officials/"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "‘Pure Evil’: State AG Announces Arrest Of 4 Illegal Immigrants In Slaughterhouse Torture Case",
+     "url": "https://dailycaller.com/2026/11/24/florida-ag-james-uthmeier-arrest-illegal-immigrants-halal-slaughterhouse-torture-videos-raid-lambs-sheep"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Trump Gives ‘America’s Mayor’ the Presidential Medal of Freedom",
+   "summary": "Rudy Giuliani rose to national prominence after 9/11 and later helped lead Trump’s effort to overturn the 2020 election results.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump awards Medal of Freedom to former NYC Mayor Rudy Giuliani",
+     "url": "https://abcnews.com/Politics/trump-award-medal-freedom-former-nyc-mayor-rudy/story?id=138411544"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump Gives ‘America’s Mayor’ the Presidential Medal of Freedom",
+     "url": "https://time.com/article/2026/11/24/trump-awards-rudy-giuliani-presidential-medal-of-freedom/"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "TZJnehiO-BU",
+     "title": "Trump to award Medal of Freedom to Rudy Giuliani",
+     "thumb": "https://i.ytimg.com/vi/TZJnehiO-BU/hqdefault.jpg",
+     "channel": "NBC News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  }
+ ],
+ "factchecks": [
+  {
+   "org": "Snopes",
+   "title": "Real video of NYC lawmaker Jordan Wright's eye roll fuels lizard conspiracy theory",
+   "link": "https://www.snopes.com/fact-check/nyc-assemblyman-eye-roll-lizard/",
+   "summary": "“Obviously I’m a human being,” Wright reportedly told the New York Post."
+  },
+  {
+   "org": "Snopes",
+   "title": "Does new Etsy policy allow AI training on artists' work?",
+   "link": "https://www.snopes.com/news/2026/11/23/etsy-ai-policy-artists/",
+   "summary": "Etsy says it does not use creative work posted on its platform to train AI — even though its terms of use may give it permission to do just that."
+  },
+  {
+   "org": "Snopes",
+   "title": "Investigating claims Trump and Epstein spent Thanksgiving 2017 together",
+   "link": "https://www.snopes.com/news/2026/11/24/epstein-trump-thanksgiving/",
+   "summary": "An email exchange published in the Epstein files suggested both men were in Palm Beach, Florida, for that holiday."
+  },
+  {
+   "org": "Snopes",
+   "title": "Can wasps remember human faces?",
+   "link": "https://www.snopes.com/fact-check/wasps-remember-faces/",
+   "summary": "We talked to experts to determine if the long-standing rumor is just social media buzz."
+  },
+  {
+   "org": "Snopes",
+   "title": "19 rumors about insider trading, prediction markets we've investigated",
+   "link": "https://www.snopes.com/collections/insider-trading-prediction-markets-collection/",
+   "summary": "Trump’s critics suspect the president engaged in insider trading after Nvidia CEO Jensen Huang returned to the company."
+  },
+  {
+   "org": "Snopes",
+   "title": "Did Trump post meme of Jensen Huang holding red bra in Butler rally photo?",
+   "link": "https://www.snopes.com/fact-check/trump-huang-red-bra-image/",
+   "summary": "The doctored image appeared to allude to the reinstated Nvidia CEO’s affair with Chinese businesswoman and alleged government spy Alice Huang."
+  },
+  {
+   "org": "Snopes",
+   "title": "Are US banks warning customers they could be responsible for AI agents' errors?",
+   "link": "https://www.snopes.com/fact-check/banks-ai-agents-customer-responsible/",
+   "summary": "Some AI agents can log into a person's bank account and make transactions for them. Banks would generally prefer they didn't."
+  },
+  {
+   "org": "Snopes",
+   "title": "Did Trump propose these rules limiting Congress members' privileges?",
+   "link": "https://www.snopes.com/fact-check/trump-rules-congress-copypasta/",
+   "summary": "Snopes has debunked variants of this proposal since 2009."
+  },
+  {
+   "org": "Snopes",
+   "title": "Was Mamdani furious about 'Jesus Is Coming' billboard in Times Square?",
+   "link": "https://www.snopes.com/fact-check/mamdani-jesus-billboard-times-square/",
+   "summary": "Posts featuring video of billboards promoting Jesus Christ also circulated in 2025, before Mamdani took office."
+  },
+  {
+   "org": "Snopes",
+   "title": "Hoax message spreads across US warning of KKK attacks against Black women",
+   "link": "https://www.snopes.com/fact-check/hoax-kkk-attacks-black-women/",
+   "summary": "Versions of the false warning have circulated since at least the 2024 U.S. presidential election."
+  },
+  {
+   "org": "Snopes",
+   "title": "Did Chicago HSI send inaccurate warning about Apple's 'Live Listen' feature?",
+   "link": "https://www.snopes.com/fact-check/homeland-security-live-listen-warning/",
+   "summary": "The notice advised agents to disable the feature due to alleged concerns of surveillance from Apple devices after a Homeland Security data leak."
+  },
+  {
+   "org": "Snopes",
+   "title": "Is US Army planning to detonate massive amount of lead azide in Middletown, Iowa?",
+   "link": "https://www.snopes.com/fact-check/lead-azide-detonation-army-iowa/",
+   "summary": "The best way to safely dispose of the explosive waste is to detonate it in place, according to the Army."
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "FactChecking Trump’s Auto Plants Claims",
+   "link": "https://www.factcheck.org/2026/11/factchecking-trumps-auto-plants-claims/",
+   "summary": "In declaring his high tariffs on imported vehicles a success, President Donald Trump often makes false and unsubstantiated claims about auto manufacturing plants in the United States. The post FactChecking Trump’s Auto Plants Claims appeared first on FactCheck.org ."
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Trump’s Misguided Claim That ‘They’ Waited to Lower Gas Prices Until After the Midterms",
+   "link": "https://www.factcheck.org/2026/11/trumps-misguided-claim-that-they-waited-to-lower-gas-prices-until-after-the-midterms/",
+   "summary": "Gasoline prices have been trending downward, dropping about 75 cents per gallon since Sept. 24, though prices are still about 69 cents higher than this time a year ago. In a social media post on Nov. 17, President Donald Trump wrongly suggested there was a political motivation be"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Former Trump Administration Health Adviser Misleads About mRNA Flu Vaccine",
+   "link": "https://www.factcheck.org/2026/11/former-trump-administration-health-adviser-misleads-about-mrna-flu-vaccine/",
+   "summary": "Former Health and Human Services Department adviser Calley Means has misleadingly suggested that the new mRNA influenza vaccine from Moderna isn’t safe and doesn’t work well. Less is known about it because it is a new vaccine, but trial data suggest it works better than standard "
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Trump Makes False and Misleading Claims About Funding for HBCUs",
+   "link": "https://www.factcheck.org/2026/11/trump-makes-false-and-misleading-claims-about-funding-for-hbcus/",
+   "summary": "President Donald Trump falsely claimed that former Presidents Barack Obama and Joe Biden “did nothing” in terms of funding for historically Black colleges and universities that Trump said he “saved” from bankruptcy. The post Trump Makes False and Misleading Claims About Funding f"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Unpacking the Partisan Finger-Pointing Over FAA Funding",
+   "link": "https://www.factcheck.org/2026/11/unpacking-the-partisan-finger-pointing-over-faa-funding/",
+   "summary": "The grounding of thousands of flights on Nov. 13 set off a round of partisan finger-pointing over who’s to blame for the state of the nation’s aging air traffic control system. The post Unpacking the Partisan Finger-Pointing Over FAA Funding appeared first on FactCheck.org ."
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Our Annual Fundraising Drive",
+   "link": "https://www.factcheck.org/2026/11/our-annual-fundraising-drive/",
+   "summary": "Please consider giving a donation to FactCheck.org during our annual end-of-year fundraising drive, which starts today and lasts until the end of the year. The post Our Annual Fundraising Drive appeared first on FactCheck.org ."
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Florida’s Surgeon General Spins State COVID-19 Vaccine Comparison Study",
+   "link": "https://www.factcheck.org/2026/11/floridas-surgeon-general-spins-state-covid-19-vaccine-comparison-study/",
+   "summary": "A new analysis of data from Florida found a higher risk of mortality in those receiving the Pfizer versus the Moderna COVID-19 vaccine in the year after a first dose. It does not establish that the Pfizer vaccine was dangerous or caused deaths, contrary to suggestions by the stat"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "FactChecking Trump’s Post-Election ‘60 Minutes’ Interview",
+   "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/",
+   "summary": "In his first sit-down interview since the midterm elections that saw Democrats retake control of both the House and Senate, President Donald Trump blamed Republicans’ poor showing on “bad messaging” of his second term accomplishments. But in his recounting of events, Trump repeat"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Explaining the U.S. Defense Agreement with Greenland and Denmark",
+   "link": "https://www.factcheck.org/2026/11/explaining-the-u-s-defense-agreement-with-greenland-and-denmark/",
+   "summary": "Under the terms of a new defense agreement between Greenland, Denmark and the United States, Greenland remains a self-governed territory of Denmark with the right to declare its independence in the future. The U.S. did not \"get” Greenland, nor does it now \"own\" Greenland, as Pres"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Wright’s Misleading Claims About Electricity Prices in Red vs. Blue States",
+   "link": "https://www.factcheck.org/2026/11/wrights-misleading-claims-about-electricity-prices-in-red-vs-blue-states/",
+   "summary": "Energy Secretary Chris Wright has blamed high electricity prices in Democrat-led states on climate policies. Prices do tend to be higher in blue states than red states, but climate policies at most explain a modest portion of the price difference. The post Wright’s Misleading Cla"
+  },
+  {
+   "org": "Full Fact",
+   "title": "Viral video from Paris shows French royalist march",
+   "link": "https://fullfact.org/europe/Paris-French-royalist-march/",
+   "summary": "A video with a caption suggesting it shows a Christian procession is of a 2025 march in Paris in memory of King Louis XVI, organised by French royalists."
+  },
+  {
+   "org": "Full Fact",
+   "title": "Image of Asda ‘Diwali Tree’ is fake",
+   "link": "https://fullfact.org/culture-and-society/asda-diwali-tree-image-fake/",
+   "summary": "An image of a “Diwali Tree” supposedly being sold in Asda has been shared widely online, but it’s been edited with AI."
+  }
+ ]
 }
