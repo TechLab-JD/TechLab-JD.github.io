@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-25T23:00:43Z",
- "generated_human": "Nov 25, 2026 · 23:00 UTC",
+ "generated": "2026-11-26T00:00:42Z",
+ "generated_human": "Nov 26, 2026 · 00:00 UTC",
  "sources": [
   {
    "name": "NPR",
@@ -211,11 +211,15 @@
  "trending": [
   {
    "term": "thanksgiving",
-   "n": 22
+   "n": 20
   },
   {
    "term": "trump",
    "n": 20
+  },
+  {
+   "term": "china",
+   "n": 11
   },
   {
    "term": "parade",
@@ -226,10 +230,6 @@
    "n": 11
   },
   {
-   "term": "lead",
-   "n": 10
-  },
-  {
    "term": "army",
    "n": 10
   },
@@ -238,82 +238,154 @@
    "n": 10
   },
   {
-   "term": "free",
-   "n": 9
-  },
-  {
-   "term": "china",
-   "n": 9
-  },
-  {
-   "term": "democrats",
-   "n": 8
-  },
-  {
    "term": "tariffs",
+   "n": 10
+  },
+  {
+   "term": "lead",
+   "n": 9
+  },
+  {
+   "term": "free",
    "n": 8
+  },
+  {
+   "term": "nvidia",
+   "n": 7
   },
   {
    "term": "postponed",
    "n": 7
   },
   {
-   "term": "nvidia",
-   "n": 6
+   "term": "blast",
+   "n": 7
   },
   {
    "term": "time",
    "n": 6
   },
   {
-   "term": "military",
+   "term": "ukraine",
    "n": 6
   },
   {
-   "term": "aaron",
+   "term": "military",
    "n": 6
   }
  ],
  "videos": [
   {
-   "videoId": "sDP0Ujj4HBA",
-   "title": "Army calls Iowa detonation a success, EPA says no lead in air around plant",
-   "thumb": "https://i.ytimg.com/vi/sDP0Ujj4HBA/hqdefault.jpg",
-   "channel": "CBS News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "1MPxKI57lqA",
-   "title": "Public react on-camera to Thanksgiving parade delay",
-   "thumb": "https://i.ytimg.com/vi/1MPxKI57lqA/hqdefault.jpg",
-   "channel": "NBC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "9IVoxGcG2D4",
-   "title": "Aerial video shows a king tide in San Francisco amplified by the super El Niño",
-   "thumb": "https://i.ytimg.com/vi/9IVoxGcG2D4/hqdefault.jpg",
-   "channel": "AP",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "xSHMrqaF60E",
-   "title": "Macy’s Thanksgiving Day Parade postponed to Saturday",
-   "thumb": "https://i.ytimg.com/vi/xSHMrqaF60E/hqdefault.jpg",
+   "videoId": "c_HQe3oOAsY",
+   "title": "Steelers coach reacts to Aaron Rodgers interview post-firing",
+   "thumb": "https://i.ytimg.com/vi/c_HQe3oOAsY/hqdefault.jpg",
    "channel": "CNN",
    "lean": -1,
    "label": "Lean Left"
   },
   {
-   "videoId": "FEGRk8l7jbU",
-   "title": "Deadly truck fire is latest of Egypt’s transport disasters | AJ #shorts",
-   "thumb": "https://i.ytimg.com/vi/FEGRk8l7jbU/hqdefault.jpg",
-   "channel": "Al Jazeera",
+   "videoId": "HT8Uc2r16Qs",
+   "title": "Ben Shapiro and Amna Nawaz discuss GOP's future on 'Settle In'",
+   "thumb": "https://i.ytimg.com/vi/HT8Uc2r16Qs/hqdefault.jpg",
+   "channel": "PBS NewsHour",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "gVX7yoUrsog",
+   "title": "Former Israeli generals protect Palestinians from settler attacks during olive harvest",
+   "thumb": "https://i.ytimg.com/vi/gVX7yoUrsog/hqdefault.jpg",
+   "channel": "PBS NewsHour",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "lwOK3aZ76Qs",
+   "title": "‘The Five’: High winds PUSH Macy’s Thanksgiving parade to Saturday",
+   "thumb": "https://i.ytimg.com/vi/lwOK3aZ76Qs/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "K_hQRoPX_wA",
+   "title": "At least 31 killed in fuel tanker fire in Egypt",
+   "thumb": "https://i.ytimg.com/vi/K_hQRoPX_wA/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "KfyM7P9x914",
+   "title": "Your Thanksgiving weekend food, travel, and NFL questions answered & other stories | Searched",
+   "thumb": "https://i.ytimg.com/vi/KfyM7P9x914/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "2Z-Yt8LfIxA",
+   "title": "How soldiers in Poland are spending Thanksgiving",
+   "thumb": "https://i.ytimg.com/vi/2Z-Yt8LfIxA/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "wlDHwkZVilA",
+   "title": "Tips for staying healthy and keeping the peace at the Thanksgiving table",
+   "thumb": "https://i.ytimg.com/vi/wlDHwkZVilA/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "y7b2mfeKFfo",
+   "title": "NYC Mayor Mamdani speaks after Macy's Thanksgiving parade is postponed",
+   "thumb": "https://i.ytimg.com/vi/y7b2mfeKFfo/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "eKHFr9W10Gk",
+   "title": "NYC Mayor Mamdani speaks after Macy's Thanksgiving parade is postponed",
+   "thumb": "https://i.ytimg.com/vi/eKHFr9W10Gk/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "O8S8A1knLrY",
+   "title": "LIVE: Mamdani gives a briefing after the Macy’s Thanksgiving Day Parade was postponed",
+   "thumb": "https://i.ytimg.com/vi/O8S8A1knLrY/hqdefault.jpg",
+   "channel": "AP",
    "lean": 0,
    "label": "Center"
+  },
+  {
+   "videoId": "eo_0CgoQJpg",
+   "title": "NYC officials hold security briefing after Macy's Thanksgiving Day Parade postponed",
+   "thumb": "https://i.ytimg.com/vi/eo_0CgoQJpg/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "M-kone3vQTQ",
+   "title": "News Wrap: Severe weather threatens holiday travel for millions",
+   "thumb": "https://i.ytimg.com/vi/M-kone3vQTQ/hqdefault.jpg",
+   "channel": "PBS NewsHour",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "z1BQg3rAJQc",
+   "title": "Watch live: Mamdani, other NYC officials give update on postponed Macy’s Thanksgiving Day Parade",
+   "thumb": "https://i.ytimg.com/vi/z1BQg3rAJQc/hqdefault.jpg",
+   "channel": "CBS News",
+   "lean": -1,
+   "label": "Lean Left"
   },
   {
    "videoId": "12xwWDlJT8I",
@@ -324,327 +396,15 @@
    "label": "Lean Left"
   },
   {
-   "videoId": "Nl13uO4xOdM",
-   "title": "How a new generation of AI agents could change holiday shopping",
-   "thumb": "https://i.ytimg.com/vi/Nl13uO4xOdM/hqdefault.jpg",
-   "channel": "CBS News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "XwnPqvF_Q-4",
-   "title": "Pittsburgh Steelers release Aaron Rodgers",
-   "thumb": "https://i.ytimg.com/vi/XwnPqvF_Q-4/hqdefault.jpg",
-   "channel": "NBC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "8J8seB0ZSXc",
-   "title": "Why did the US army need to detonate 5 tons of lead azide?",
-   "thumb": "https://i.ytimg.com/vi/8J8seB0ZSXc/hqdefault.jpg",
-   "channel": "AP",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "K4Ss1659O_c",
-   "title": "What to know as weather postpones Macy's Thanksgiving Day Parade",
-   "thumb": "https://i.ytimg.com/vi/K4Ss1659O_c/hqdefault.jpg",
-   "channel": "CBS News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "095WxaQX-20",
-   "title": "Biden’s memoir is a ‘chance to set the record straight,’ says longtime aide Steve Ricchetti",
-   "thumb": "https://i.ytimg.com/vi/095WxaQX-20/hqdefault.jpg",
-   "channel": "NBC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "-dVXSLomZNg",
-   "title": "Weather forecast for new Macy's Thanksgiving Day Parade date is 'best case scenario'",
-   "thumb": "https://i.ytimg.com/vi/-dVXSLomZNg/hqdefault.jpg",
-   "channel": "NBC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "07W4hiTBEaU",
-   "title": "US Army says controlled blast of explosives in Iowa was “huge success”. #BBCNews",
-   "thumb": "https://i.ytimg.com/vi/07W4hiTBEaU/hqdefault.jpg",
-   "channel": "BBC News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "IaV9cMmZ0LA",
-   "title": "Protesters host ‘retirement party’ for Chuck Schumer outside his Brooklyn home",
-   "thumb": "https://i.ytimg.com/vi/IaV9cMmZ0LA/hqdefault.jpg",
-   "channel": "Washington Post",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "O3TLVr9uTxI",
-   "title": "US Army says detonation of Iowa explosives exceeded expectations",
-   "thumb": "https://i.ytimg.com/vi/O3TLVr9uTxI/hqdefault.jpg",
-   "channel": "Reuters",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "Zu-RNyYVz9E",
-   "title": "WATCH: Vance defends Iowa lead azide detonation as he visits Air Force troops in Ohio",
-   "thumb": "https://i.ytimg.com/vi/Zu-RNyYVz9E/hqdefault.jpg",
+   "videoId": "DFT80onrsz8",
+   "title": "How Trump's newest tariffs could impact Americans and the economy",
+   "thumb": "https://i.ytimg.com/vi/DFT80onrsz8/hqdefault.jpg",
    "channel": "PBS NewsHour",
    "lean": -1,
    "label": "Lean Left"
   }
  ],
  "stories": [
-  {
-   "title": "Why the Army detonated toxic explosives in Iowa",
-   "summary": "This story appeared in Today, Explained, a daily newsletter that helps you understand the most compelling news and stories of the day. Subscribe here. On Wednesday, the Pentagon blew up about five tons of lead azide, an unstable explosive stored at an ammunition plant in Iowa, in",
-   "category": "General",
-   "leans": [
-    -2,
-    -1,
-    0,
-    1,
-    2
-   ],
-   "span": 4,
-   "n_sources": 17,
-   "balance": {
-    "l": 6,
-    "c": 6,
-    "r": 5
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Vox",
-     "lean": -2,
-     "label": "Left",
-     "title": "Why the Army detonated toxic explosives in Iowa",
-     "url": "https://www.vox.com/today-explained-newsletter/511830/iowa-lead-azide-explosives-detonation-plume"
-    },
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Army to detonate tons of lead azide after delays. And, Abrego Garcia leaves U.S.",
-     "url": "https://www.npr.org/2026/11/25/g-s1-155493/up-first-newsletter-iowa-detonation-kilmar-abrego-garcia-nvidia-jensen-huang"
-    },
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Macy's Thanksgiving Day Parade postponed, will air on NBC on Saturday morning",
-     "url": "https://www.nbcnews.com/video/macy-s-thanksgiving-day-parade-postponed-will-air-on-nbc-on-saturday-morning-274189381737"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Army calls Iowa detonation a success, EPA says no lead in air around plant",
-     "url": "https://www.cbsnews.com/video/army-calls-iowa-detonation-a-success/"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "What to know as weather postpones Macy's Thanksgiving Day Parade",
-     "url": "https://www.cbsnews.com/video/what-to-know-as-weather-postpones-macys-thanksgiving-day/"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Macy's Thanksgiving Day Parade postponed for 1st time in history",
-     "url": "https://www.cbsnews.com/news/macys-thanksgiving-day-parade-postponed/"
-    },
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Macy's Thanksgiving Day parade postponed due to weather",
-     "url": "https://abcnews.com/US/macys-thanksgiving-day-parade-postponed-sources/story?id=138452401"
-    },
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Federal officials say 'zero' airborne lead detected after Iowa munitions blast",
-     "url": "https://abcnews.com/US/iowa-detonation-lead-azide-army/story?id=138425051"
-    },
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Macy's Thanksgiving Day Parade postponed to Saturday due to expected bad weather",
-     "url": "https://www.pbs.org/newshour/nation/macys-thanksgiving-day-parade-postponed-to-saturday-due-to-expected-bad-weather"
-    },
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Macy's Thanksgiving Day Parade to celebrate a milestone with Blue Hippo, Bluey and Megan Moroney",
-     "url": "https://www.pbs.org/newshour/nation/macys-thanksgiving-day-parade-to-celebrate-a-milestone-with-blue-hippo-bluey-and-megan-moroney"
-    },
-    {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH: Army offers update after detonating lead azide stockpile in Iowa",
-     "url": "https://www.pbs.org/newshour/nation/watch-live-army-offers-update-after-detonating-lead-azide-stockpile-in-iowa"
-    },
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "US Army says controlled blast of explosives in Iowa was 'huge success'",
-     "url": "https://www.bbc.co.uk/news/articles/cwg7l5ve251ko?at_medium=RSS&at_campaign=rss"
-    },
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Live updates: Army calls Iowa detonation 'successful'; Thanksgiving storm delays Macy's parade",
-     "url": "https://thehill.com/homenews/administration/6241678-live-updates-trump-army-lead-azide-thanksgiving-2026/"
-    },
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Trump: Iowa Gov.-elect Sand was 'absolutely no help' in controlled lead blast",
-     "url": "https://thehill.com/homenews/administration/6243848-trump-criticizes-sand-iowa-lead-blast/"
-    },
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "New York delays Macy's Thanksgiving parade because of severe weather",
-     "url": "https://thehill.com/homenews/state-watch/6243709-nyc-macys-parade-set-saturday/"
-    },
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "Macy's postpones Thanksgiving Day Parade due to severe weather",
-     "url": "https://www.cnbc.com/2026/11/25/macys-thanksgiving-day-parade-postponed.html"
-    },
-    {
-     "name": "Axios",
-     "lean": 0,
-     "label": "Center",
-     "title": "Macy's Thanksgiving parade postponed for the first time in the event's history",
-     "url": "https://www.axios.com/2026/11/25/macys-thanksgiving-parade-2026-balloons-weather"
-    },
-    {
-     "name": "Axios",
-     "lean": 0,
-     "label": "Center",
-     "title": "Army detonates Iowa explosives amid toxic lead fears",
-     "url": "https://www.axios.com/2026/11/25/iowa-army-lead-detonation"
-    },
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "US Army declares Iowa lead azide detonation ‘tremendously successful’",
-     "url": "https://www.aljazeera.com/news/2026/11/25/us-army-declares-iowa-lead-azide-detonation-tremendously-successful?traffic_source=rss"
-    },
-    {
-     "name": "The Christian Science Monitor",
-     "lean": 0,
-     "label": "Center",
-     "title": "Army’s planned Iowa blast raises questions about aging military stockpiles",
-     "url": "https://www.csmonitor.com/USA/Military/2026/1124/iowa-detonate-explosives-lead-azide-us-military-safer-alternatives?icid=rss"
-    },
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Nor’easter pushes Macy’s Thanksgiving Day Parade to Saturday in historic first",
-     "url": "https://www.washingtonexaminer.com/news/entertainment/4815798/macys-thanksgiving-day-parade-postponed/"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Macy's Thanksgiving Day Parade moved to Saturday due to high winds, storms on East Coast",
-     "url": "https://www.washingtontimes.com/news/2026/nov/25/macys-thanksgiving-day-parade-moved-saturday-due-high-winds-storms/"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "100th Macy’s Thanksgiving Day Parade postponed: What to know",
-     "url": "https://www.foxnews.com/us/100th-macys-thanksgiving-day-parade-postponed-what-know"
-    },
-    {
-     "name": "The Daily Wire",
-     "lean": 2,
-     "label": "Right",
-     "title": "Macy’s Thanksgiving Day Parade Postponed For The First Time Ever",
-     "url": "https://www.dailywire.com/news/macys-thanksgiving-day-parade-postponed-for-the-first-time-ever"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Duffy: Weather Caused Half of Flight Delays as Thanksgiving Travel Surged",
-     "url": "https://www.newsmax.com/newsfront/sean-duffy-travel-thanksgiving/2026/11/25/id/1277553"
-    }
-   ],
-   "factchecks": [
-    {
-     "org": "Snopes",
-     "title": "Did Army detonate lead azide stockpile in crucial area for US food supply? Here's context",
-     "link": "https://www.snopes.com/fact-check/army-lead-azide-food-supply/"
-    },
-    {
-     "org": "Snopes",
-     "title": "Is US Army planning to detonate massive amount of lead azide in Middletown, Iowa?",
-     "link": "https://www.snopes.com/fact-check/lead-azide-detonation-army-iowa/"
-    },
-    {
-     "org": "FactCheck.org",
-     "title": "FactChecking Trump’s Auto Plants Claims",
-     "link": "https://www.factcheck.org/2026/11/factchecking-trumps-auto-plants-claims/"
-    }
-   ],
-   "videos": [
-    {
-     "videoId": "ssC9DCtBXpA",
-     "title": "WATCH LIVE: Army offers update after detonating lead azide stockpile in Iowa",
-     "thumb": "https://i.ytimg.com/vi/ssC9DCtBXpA/hqdefault.jpg",
-     "channel": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left"
-    },
-    {
-     "videoId": "Aa-c9hUHprI",
-     "title": "Army calls controlled detonation of unstable lead explosives in Iowa \"tremendously successful\"",
-     "thumb": "https://i.ytimg.com/vi/Aa-c9hUHprI/hqdefault.jpg",
-     "channel": "CBS News",
-     "lean": -1,
-     "label": "Lean Left"
-    },
-    {
-     "videoId": "Kovzy1slh-I",
-     "title": "Macy's Thanksgiving Day Parade postponed to Saturday due to expected severe weather",
-     "thumb": "https://i.ytimg.com/vi/Kovzy1slh-I/hqdefault.jpg",
-     "channel": "NBC News",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
-  },
   {
    "title": "Trump just can’t quit tariffs",
    "summary": "This story appeared in The Logoff, a daily newsletter that helps you stay informed about the Trump administration without letting political news take over your life. Subscribe here. Welcome to The Logoff: The Trump administration is trying to keep its trade war alive with new tar",
@@ -657,11 +417,11 @@
     2
    ],
    "span": 4,
-   "n_sources": 14,
+   "n_sources": 16,
    "balance": {
-    "l": 5,
+    "l": 6,
     "c": 4,
-    "r": 5
+    "r": 6
    },
    "blindspot": null,
    "sources": [
@@ -685,6 +445,13 @@
      "label": "Lean Left",
      "title": "Trump proposes new tariffs on China, the European Union and other trade partners",
      "url": "https://www.nbcnews.com/video/trump-proposes-new-tariffs-on-china-the-european-union-and-other-trade-partners-274166853924"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump introduces new tariffs on China, EU and major trading partners",
+     "url": "https://www.cbsnews.com/video/trump-introduces-new-tariffs-on-china-eu-and-major-trading-partners/"
     },
     {
      "name": "ABC News",
@@ -764,6 +531,13 @@
      "url": "https://www.nationalreview.com/article/chris-van-hollen-s-anti-israel-turn"
     },
     {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Takes Another Swing At Tariffs After Supreme Court Setback",
+     "url": "https://www.dailywire.com/news/trump-takes-another-swing-at-tariffs-after-supreme-court-setback"
+    },
+    {
      "name": "The Federalist",
      "lean": 2,
      "label": "Right",
@@ -792,6 +566,14 @@
    ],
    "videos": [
     {
+     "videoId": "ytCQahA2dIs",
+     "title": "Trump introduces new tariffs on China, EU and major trading partners",
+     "thumb": "https://i.ytimg.com/vi/ytCQahA2dIs/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
      "videoId": "rpscxtd6OMM",
      "title": "US announces new tariff proposals on EU, China, and other trade partners. #BBCNews",
      "thumb": "https://i.ytimg.com/vi/rpscxtd6OMM/hqdefault.jpg",
@@ -800,26 +582,251 @@
      "label": "Center"
     },
     {
-     "videoId": "TohCOE9twxk",
-     "title": "Kilmar Abrego Garcia releases statement after leaving U.S. for Spain",
-     "thumb": "https://i.ytimg.com/vi/TohCOE9twxk/hqdefault.jpg",
+     "videoId": "FlM-DV10zdY",
+     "title": "Trump targets China & EU with new tariffs; will he restart the trade war?",
+     "thumb": "https://i.ytimg.com/vi/FlM-DV10zdY/hqdefault.jpg",
+     "channel": "CNN",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Why the Army detonated toxic explosives in Iowa",
+   "summary": "This story appeared in Today, Explained, a daily newsletter that helps you understand the most compelling news and stories of the day. Subscribe here. On Wednesday, the Pentagon blew up about five tons of lead azide, an unstable explosive stored at an ammunition plant in Iowa, in",
+   "category": "General",
+   "leans": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 4,
+   "n_sources": 15,
+   "balance": {
+    "l": 5,
+    "c": 5,
+    "r": 5
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Why the Army detonated toxic explosives in Iowa",
+     "url": "https://www.vox.com/today-explained-newsletter/511830/iowa-lead-azide-explosives-detonation-plume"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Macy's Thanksgiving Day Parade postponed, will air on NBC on Saturday morning",
+     "url": "https://www.nbcnews.com/video/macy-s-thanksgiving-day-parade-postponed-will-air-on-nbc-on-saturday-morning-274189381737"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Macy’s Thanksgiving Day Parade pushed back to Saturday due to weather",
+     "url": "https://www.nbcnews.com/news/us-news/macys-thanksgiving-day-parade-weather-delay-rcna611355"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Army detonates toxic explosives at Iowa plant despite concerns",
+     "url": "https://www.cbsnews.com/news/iowa-army-ammunition-plant-unstable-explosives-detonation/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Macy's Thanksgiving Day Parade postponed for 1st time in history",
+     "url": "https://www.cbsnews.com/news/macys-thanksgiving-day-parade-postponed/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Army calls Iowa detonation a success, EPA says no lead in air around plant",
+     "url": "https://www.cbsnews.com/video/army-calls-iowa-detonation-a-success/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "What to know as weather postpones Macy's Thanksgiving Day Parade",
+     "url": "https://www.cbsnews.com/video/what-to-know-as-weather-postpones-macys-thanksgiving-day/"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Macy's Thanksgiving Day parade postponed due to weather",
+     "url": "https://abcnews.com/US/macys-thanksgiving-day-parade-postponed-sources/story?id=138452401"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Federal officials say 'zero' airborne lead detected after Iowa munitions blast",
+     "url": "https://abcnews.com/US/iowa-detonation-lead-azide-army/story?id=138425051"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "What the Army's Iowa detonation means for nearby communities",
+     "url": "https://www.pbs.org/newshour/show/what-the-armys-iowa-detonation-means-for-nearby-communities"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Macy's Thanksgiving Day Parade postponed to Saturday due to expected bad weather",
+     "url": "https://www.pbs.org/newshour/nation/macys-thanksgiving-day-parade-postponed-to-saturday-due-to-expected-bad-weather"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Macy's Thanksgiving Day Parade to celebrate a milestone with Blue Hippo, Bluey and Megan Moroney",
+     "url": "https://www.pbs.org/newshour/nation/macys-thanksgiving-day-parade-to-celebrate-a-milestone-with-blue-hippo-bluey-and-megan-moroney"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "US Army says controlled blast of explosives in Iowa was 'huge success'",
+     "url": "https://www.bbc.co.uk/news/articles/cwg7l5ve251ko?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Live updates: Army calls Iowa detonation 'successful'; Thanksgiving storm delays Macy's parade",
+     "url": "https://thehill.com/homenews/administration/6241678-live-updates-trump-army-lead-azide-thanksgiving-2026/"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump: Iowa Gov.-elect Sand was 'absolutely no help' in controlled lead blast",
+     "url": "https://thehill.com/homenews/administration/6243848-trump-criticizes-sand-iowa-lead-blast/"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Macy's postpones Thanksgiving Day Parade due to severe weather",
+     "url": "https://www.cnbc.com/2026/11/25/macys-thanksgiving-day-parade-postponed.html"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Macy's Thanksgiving parade postponed for the first time in the event's history",
+     "url": "https://www.axios.com/2026/11/25/macys-thanksgiving-parade-2026-balloons-weather"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Army detonates Iowa explosives amid toxic lead fears",
+     "url": "https://www.axios.com/2026/11/25/iowa-army-lead-detonation"
+    },
+    {
+     "name": "The Christian Science Monitor",
+     "lean": 0,
+     "label": "Center",
+     "title": "Army’s planned Iowa blast raises questions about aging military stockpiles",
+     "url": "https://www.csmonitor.com/USA/Military/2026/1124/iowa-detonate-explosives-lead-azide-us-military-safer-alternatives?icid=rss"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Nor’easter pushes Macy’s Thanksgiving Day Parade to Saturday in historic first",
+     "url": "https://www.washingtonexaminer.com/news/entertainment/4815798/macys-thanksgiving-day-parade-postponed/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Macy's Thanksgiving Day Parade moved to Saturday due to high winds, storms on East Coast",
+     "url": "https://www.washingtontimes.com/news/2026/nov/25/macys-thanksgiving-day-parade-moved-saturday-due-high-winds-storms/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "100th Macy’s Thanksgiving Day Parade postponed: What to know",
+     "url": "https://www.foxnews.com/us/100th-macys-thanksgiving-day-parade-postponed-what-know"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Macy’s Thanksgiving Day Parade Postponed For The First Time Ever",
+     "url": "https://www.dailywire.com/news/macys-thanksgiving-day-parade-postponed-for-the-first-time-ever"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Experts Fan Out to Test for Lead After Iowa Army Blast",
+     "url": "https://www.newsmax.com/newsfront/iowa-army-explosives/2026/11/25/id/1277575"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Did Army detonate lead azide stockpile in crucial area for US food supply? Here's context",
+     "link": "https://www.snopes.com/fact-check/army-lead-azide-food-supply/"
+    },
+    {
+     "org": "Snopes",
+     "title": "Is US Army planning to detonate massive amount of lead azide in Middletown, Iowa?",
+     "link": "https://www.snopes.com/fact-check/lead-azide-detonation-army-iowa/"
+    },
+    {
+     "org": "FactCheck.org",
+     "title": "FactChecking Trump’s Auto Plants Claims",
+     "link": "https://www.factcheck.org/2026/11/factchecking-trumps-auto-plants-claims/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "sDP0Ujj4HBA",
+     "title": "Army calls Iowa detonation a success, EPA says no lead in air around plant",
+     "thumb": "https://i.ytimg.com/vi/sDP0Ujj4HBA/hqdefault.jpg",
      "channel": "CBS News",
      "lean": -1,
      "label": "Lean Left"
     },
     {
-     "videoId": "CFlD7aNekKU",
-     "title": "China, EU and India among trading partners targeted by the new US tariffs | DW News",
-     "thumb": "https://i.ytimg.com/vi/CFlD7aNekKU/hqdefault.jpg",
-     "channel": "DW News",
+     "videoId": "k6nMinF_Uwc",
+     "title": "Macy’s postpones Thanksgiving Day Parade to Saturday due to expected bad weather",
+     "thumb": "https://i.ytimg.com/vi/k6nMinF_Uwc/hqdefault.jpg",
+     "channel": "AP",
+     "lean": 0,
+     "label": "Center"
+    },
+    {
+     "videoId": "m53bU25OUfU",
+     "title": "Macy's Thanksgiving Day Parade postponed, Iowa detonation, Trump tariffs | Reuters World News",
+     "thumb": "https://i.ytimg.com/vi/m53bU25OUfU/hqdefault.jpg",
+     "channel": "Reuters",
      "lean": 0,
      "label": "Center"
     }
    ]
   },
   {
-   "title": "Steelers releasing quarterback Aaron Rodgers, reports say",
-   "summary": "The Steelers are releasing quarterback Aaron Rodgers after he was benched for Friday's game, multiple reports say. Rodgers appeared on \"The Pat McAfee Show\" on Wednesday and said he wouldn't return to the Steelers while taking shots at head coach Mike McCarthy. CBS Sports HQ NFL ",
+   "title": "Mike McCarthy explains ‘ultimatum’ behind decision to bench Aaron Rodgers",
+   "summary": "Mike McCarthy said the decision to bench Aaron Rodgers for Friday’s game against the Broncos was his — after the future Hall of Fame quarterback issued an “ultimatum” to the Steelers head coach. The decision that came down late Tuesday night kicked off a wild day in Steelers coun",
    "category": "General",
    "leans": [
     -1,
@@ -828,9 +835,9 @@
     2
    ],
    "span": 3,
-   "n_sources": 6,
+   "n_sources": 5,
    "balance": {
-    "l": 2,
+    "l": 1,
     "c": 1,
     "r": 3
    },
@@ -840,29 +847,50 @@
      "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Steelers cut Aaron Rodgers after he blasts coach Mike McCarthy in fiery exit interview",
-     "url": "https://www.nbcnews.com/sports/nfl/aaron-rodgers-blasts-steelers-coach-mike-mccarthy-benching-re-unhealth-rcna611340"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Steelers releasing quarterback Aaron Rodgers, reports say",
-     "url": "https://www.cbsnews.com/video/steelers-releasing-quarterback-aaron-rodgers-reports-say/"
+     "title": "Steelers release Aaron Rodgers after he blasts head coach over benching",
+     "url": "https://www.nbcnews.com/video/steelers-release-aaron-rodgers-after-he-blasts-head-coach-over-benching-274192965784"
     },
     {
      "name": "Newsweek",
      "lean": 0,
      "label": "Center",
-     "title": "Yankees Hire Former AL East Manager to Aaron Boone's Coaching Staff",
-     "url": "https://www.newsweek.com/sports/mlb/yankees-hire-former-al-east-manager-to-aaron-boones-coaching-staff-12768838"
+     "title": "Steelers HC Mike McCarthy Gives Blunt Response on Benching Aaron Rodgers",
+     "url": "https://www.newsweek.com/sports/nfl/steelers-hc-mike-mccarthy-gives-blunt-response-on-benching-aaron-rodgers-12769122"
     },
     {
      "name": "New York Post",
      "lean": 1,
      "label": "Lean Right",
-     "title": "The troubling response to Aaron Rodgers’ bombshell claims against Mike McCarthy",
-     "url": "https://nypost.com/2026/11/25/sports/the-troubling-response-to-aaron-rodgers-bombshell-claims-against-mike-mccarthy/"
+     "title": "Aaron Rodgers’ NFL options dwindling after ugly Steelers divorce",
+     "url": "https://nypost.com/2026/11/25/sports/aaron-rodgers-nfl-options-dwindling-after-ugly-steelers-divorce/"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Mike McCarthy explains ‘ultimatum’ behind decision to bench Aaron Rodgers",
+     "url": "https://nypost.com/2026/11/25/sports/mike-mccarthy-benched-aaron-rodgers-after-qbs-ultimatum/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Steelers officially release Aaron Rodgers and keep coach Mike McCarthy on the job despite embarrassing claims",
+     "url": "https://www.foxnews.com/outkick-sports/steelers-officially-release-aaron-rodgers-keep-coach-mike-mccarthy-job-despite-embarrassing-claims"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Mike McCarthy's Cowboys comments resurface amid Aaron Rodgers debacle",
+     "url": "https://www.foxnews.com/outkick-sports/mike-mccarthy-cowboys-comments-resurface-amid-aaron-rodgers-debacle"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Aaron Rodgers interview is exactly why ESPN pays Pat McAfee | Bobby Burack",
+     "url": "https://www.foxnews.com/outkick-sports/aaron-rodgers-interview-exactly-why-espn-pays-pat-mcafee-bobby-burack"
     },
     {
      "name": "Fox News",
@@ -896,18 +924,26 @@
    "factchecks": [],
    "videos": [
     {
-     "videoId": "ZriZb7MDoSw",
-     "title": "Pittsburgh Steelers releasing quarterback Aaron Rodgers, ESPN reports",
-     "thumb": "https://i.ytimg.com/vi/ZriZb7MDoSw/hqdefault.jpg",
-     "channel": "ABC News",
+     "videoId": "hxjWYARKqb0",
+     "title": "Steelers release Aaron Rodgers after he blasts head coach over benching",
+     "thumb": "https://i.ytimg.com/vi/hxjWYARKqb0/hqdefault.jpg",
+     "channel": "NBC News",
      "lean": -1,
      "label": "Lean Left"
     },
     {
-     "videoId": "b_O2G80w91o",
-     "title": "Steelers releasing quarterback Aaron Rodgers, reports say",
-     "thumb": "https://i.ytimg.com/vi/b_O2G80w91o/hqdefault.jpg",
-     "channel": "CBS News",
+     "videoId": "c_HQe3oOAsY",
+     "title": "Steelers coach reacts to Aaron Rodgers interview post-firing",
+     "thumb": "https://i.ytimg.com/vi/c_HQe3oOAsY/hqdefault.jpg",
+     "channel": "CNN",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "ZriZb7MDoSw",
+     "title": "Pittsburgh Steelers releasing quarterback Aaron Rodgers, ESPN reports",
+     "thumb": "https://i.ytimg.com/vi/ZriZb7MDoSw/hqdefault.jpg",
+     "channel": "ABC News",
      "lean": -1,
      "label": "Lean Left"
     }
@@ -919,13 +955,14 @@
    "category": "World",
    "leans": [
     -2,
+    -1,
     0,
     1
    ],
    "span": 3,
-   "n_sources": 3,
+   "n_sources": 4,
    "balance": {
-    "l": 1,
+    "l": 2,
     "c": 1,
     "r": 1
    },
@@ -937,6 +974,13 @@
      "label": "Left",
      "title": "Todd Blanche Suddenly Knows Nothing About the Jensen Huang Investigation",
      "url": "https://www.motherjones.com/politics/2026/11/ag-todd-blanche-nvidia-jensen-huang-press-conference-ignorance/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump says he would be willing to pardon Jensen Huang if necessary",
+     "url": "https://www.cbsnews.com/video/trump-says-he-would-be-willing-to-pardon-jensen-huang-if-necessary/"
     },
     {
      "name": "CNBC",
@@ -954,6 +998,58 @@
     }
    ],
    "factchecks": [],
+   "videos": [
+    {
+     "videoId": "Ox1L6iBQuH8",
+     "title": "Trump says he would be willing to pardon Jensen Huang if necessary",
+     "thumb": "https://i.ytimg.com/vi/Ox1L6iBQuH8/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Navarro: Democratic probes a recipe for 2028 GOP president or 'civil war'",
+   "summary": "Top trade adviser Peter Navarro said likely Democratic investigations into the Trump administration next Congress will lead to Republicans holding the White House in two years or a “civil war.” “Congressional Democrats won the midterms on gas and grocery prices. Now, they promise",
+   "category": "World",
+   "leans": [
+    -1,
+    0,
+    2
+   ],
+   "span": 3,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Politico",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Democratic Governors’ 2028 picks",
+     "url": "https://www.politico.com/video/2026/11/20/democratic-governors-2028-picks-2235294"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Navarro: Democratic probes a recipe for 2028 GOP president or 'civil war'",
+     "url": "https://thehill.com/homenews/administration/6243798-navarro-warns-trump-investigations-civil-war/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Peter Navarro: Dem Probes Recipe for GOP '28 Win or 'Civil War'",
+     "url": "https://www.newsmax.com/newsfront/peter-navarro-democrats-donald-trump/2026/11/25/id/1277573"
+    }
+   ],
+   "factchecks": [],
    "videos": []
   },
   {
@@ -965,10 +1061,10 @@
     2
    ],
    "span": 2,
-   "n_sources": 2,
+   "n_sources": 3,
    "balance": {
     "l": 0,
-    "c": 1,
+    "c": 2,
     "r": 1
    },
    "blindspot": null,
@@ -981,46 +1077,18 @@
      "url": "https://thehill.com/homenews/senate/6243899-cruz-talarico-bipartisan-trump-space-academy/"
     },
     {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Cruz, Talarico Unite on Texas Bid for US Space Academy",
-     "url": "https://www.newsmax.com/newsfront/ted-cruz-james-talarico-texas/2026/11/25/id/1277561"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Saudi Accused of Bugging OpenAI Freed on $1 Million Bond",
-   "summary": "Abdulrahman Alfozan, a Saudi national accused of secretly recording conversations in an OpenAI conference room, was released on $1 million bond after prosecutors' last-minute effort to keep him jailed came too late...",
-   "category": "Tech",
-   "leans": [
-    0,
-    2
-   ],
-   "span": 2,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CNBC",
+     "name": "Newsweek",
      "lean": 0,
      "label": "Center",
-     "title": "Saudi national in OpenAI bugging case is out on bond after DOJ tries to block release",
-     "url": "https://www.cnbc.com/2026/11/25/openai-bugging-aflozan-bond-release-saudi.html"
+     "title": "Ted Cruz and James Talarico Unite on Space Academy Bid After Election Clash",
+     "url": "https://www.newsweek.com/ted-cruz-james-talarico-texas-space-academy-bid-12768803"
     },
     {
      "name": "Newsmax",
      "lean": 2,
      "label": "Right",
-     "title": "Saudi Accused of Bugging OpenAI Freed on $1 Million Bond",
-     "url": "https://www.newsmax.com/newsfront/abdulrahman-alfozan-openai-saudi-arabia/2026/11/25/id/1277547"
+     "title": "Cruz, Talarico Unite on Texas Bid for US Space Academy",
+     "url": "https://www.newsmax.com/newsfront/ted-cruz-james-talarico-texas/2026/11/25/id/1277561"
     }
    ],
    "factchecks": [],
@@ -1229,7 +1297,16 @@
     }
    ],
    "factchecks": [],
-   "videos": []
+   "videos": [
+    {
+     "videoId": "K_hQRoPX_wA",
+     "title": "At least 31 killed in fuel tanker fire in Egypt",
+     "thumb": "https://i.ytimg.com/vi/K_hQRoPX_wA/hqdefault.jpg",
+     "channel": "CNN",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
   },
   {
    "title": "Ukraine confirms it used naval drones to strike two Russian ships off Libya",
@@ -1302,44 +1379,9 @@
    "videos": []
   },
   {
-   "title": "Navarro: Democratic probes a recipe for 2028 GOP president or 'civil war'",
-   "summary": "Top trade adviser Peter Navarro said likely Democratic investigations into the Trump administration next Congress will lead to Republicans holding the White House in two years or a “civil war.” “Congressional Democrats won the midterms on gas and grocery prices. Now, they promise",
+   "title": "King tides and strong waves destroy part of Pacifica pier as officials warn of coastal flooding",
+   "summary": "King tides combined with powerful waves destroyed part of a pier in Northern California on Wednesday, and officials warned more beachfront homes are at risk of flooding.",
    "category": "World",
-   "leans": [
-    -1,
-    0
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 1,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Politico",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Democratic Governors’ 2028 picks",
-     "url": "https://www.politico.com/video/2026/11/20/democratic-governors-2028-picks-2235294"
-    },
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Navarro: Democratic probes a recipe for 2028 GOP president or 'civil war'",
-     "url": "https://thehill.com/homenews/administration/6243798-navarro-warns-trump-investigations-civil-war/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
-   "summary": "SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.",
-   "category": "Science",
    "leans": [
     0,
     1
@@ -1354,18 +1396,62 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "CNBC",
+     "name": "Al Jazeera",
      "lean": 0,
      "label": "Center",
-     "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
-     "url": "https://www.cnbc.com/2026/11/25/spacex-fcc-satellite-approval.html"
+     "title": "King tides and big waves batter coastal California",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/25/king-tides-and-big-waves-batter-coastal-california?traffic_source=rss"
     },
     {
-     "name": "New York Post",
+     "name": "Washington Times",
      "lean": 1,
      "label": "Lean Right",
-     "title": "Elon Musk’s plan for SpaceX to launch 1 million satellites for ‘constellation’ of data centers approved by FCC",
-     "url": "https://nypost.com/2026/11/25/business/fcc-approves-elon-musks-spacex-to-launch-1-million-satellites-for-data-centers-in-space/"
+     "title": "King tides and strong waves destroy part of Pacifica pier as officials warn of coastal flooding",
+     "url": "https://www.washingtontimes.com/news/2026/nov/25/part-pacifica-pier-destroyed-king-tides-strong-waves-officials-warn/"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "QR9Uvn6VWpA",
+     "title": "King tides and big waves batter coastal California | AJ #shorts",
+     "thumb": "https://i.ytimg.com/vi/QR9Uvn6VWpA/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "Major League Baseball asks court to declare lockout is legal in suit against players' union",
+   "summary": "Signaling the likely start next week of a long and acrimonious lockout, Major League Baseball sued its players' association in federal court on Wednesday, trying to head off any attempt by the union to decertify and challenge the work stoppage with an antitrust case.",
+   "category": "Economy",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Major League Baseball asks court to declare lockout is legal in suit against players' union",
+     "url": "https://www.washingtontimes.com/news/2026/nov/25/major-league-baseball-asks-court-declare-lockout-legal-suit-players/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Major League Baseball owners sue MLB Players Association ahead of rapidly approaching lockout",
+     "url": "https://www.foxnews.com/outkick-sports/major-league-baseball-owners-sue-mlb-players-association-ahead-rapidly-approaching-lockout"
     }
    ],
    "factchecks": [],
@@ -1391,7 +1477,7 @@
      "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Judge halts order requiring Fulton County to turn over copies of 2020 ballots to Georgia election board",
+     "title": "Judge halts order requiring Fulton County to turn over copies of 2020 ballots",
      "url": "https://www.nbcnews.com/politics/elections/judge-halts-order-fulton-county-copies-2020-ballots-georgia-election-rcna611353"
     },
     {
@@ -1406,8 +1492,8 @@
    "videos": []
   },
   {
-   "title": "Shane Gillis wishes ex-girlfriend 'the best' after tell-all essay accusing him of cheating and 'red flags'",
-   "summary": "Comedian Shane Gillis wished ex-girlfriend Grace Brassel \"the best\" after she published an essay in The Cut alleging cheating and mistreatment during their yearlong romance.",
+   "title": "Tony Romo Joins Jake Paul’s Betting Company As ‘Chief Predictions Officer’",
+   "summary": "Tony Romo is back in the saddle after a drunk-driving arrest derailed his broadcasting career. The former Cowboys quarterback announced Wednesday that he would make his return to camera under the auspices of a sports betting company. Romo is teaming up with Betr, a sports gamblin",
    "category": "General",
    "leans": [
     2
@@ -1425,15 +1511,15 @@
      "name": "Fox News",
      "lean": 2,
      "label": "Right",
-     "title": "Shane Gillis wishes ex-girlfriend 'the best' after tell-all essay accusing him of cheating and 'red flags'",
-     "url": "https://www.foxnews.com/media/shane-gillis-wishes-ex-girlfriend-best-after-tell-all-essay-accusing-him-cheating-red-flags"
+     "title": "Tony Romo lands new job at sports gaming company Betr months after his CBS departure over OWI arrest",
+     "url": "https://www.foxnews.com/sports/tony-romo-lands-new-job-sports-gaming-company-betr-months-after-cbs-departure-owi-arrest"
     },
     {
-     "name": "Daily Caller",
+     "name": "The Daily Wire",
      "lean": 2,
      "label": "Right",
-     "title": "DUKE: Shane Gillis’ Ex-Girlfriend’s Attempt To Humiliate Him Backfires Spectacularly",
-     "url": "https://dailycaller.com/2026/11/25/duke-shane-gillis-grace-brassel-relationship-bad-breakup-expose-humiliation"
+     "title": "Tony Romo Joins Jake Paul’s Betting Company As ‘Chief Predictions Officer’",
+     "url": "https://www.dailywire.com/news/tony-romo-joins-jake-pauls-betting-company-as-chief-predictions-officer"
     }
    ],
    "factchecks": [],
@@ -1506,6 +1592,53 @@
    ],
    "factchecks": [],
    "videos": []
+  },
+  {
+   "title": "Army to detonate tons of lead azide after delays. And, Abrego Garcia leaves U.S.",
+   "summary": "Authorities have evacuated a 5-mile radius to prepare to dispose of thousands of pounds of lead azide. And, after a nearly two-year legal battle, Kilmar Abrego Garcia's has voluntarily left the U.S.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Army to detonate tons of lead azide after delays. And, Abrego Garcia leaves U.S.",
+     "url": "https://www.npr.org/2026/11/25/g-s1-155493/up-first-newsletter-iowa-detonation-kilmar-abrego-garcia-nvidia-jensen-huang"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Did Army detonate lead azide stockpile in crucial area for US food supply? Here's context",
+     "link": "https://www.snopes.com/fact-check/army-lead-azide-food-supply/"
+    },
+    {
+     "org": "Snopes",
+     "title": "Is US Army planning to detonate massive amount of lead azide in Middletown, Iowa?",
+     "link": "https://www.snopes.com/fact-check/lead-azide-detonation-army-iowa/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "8J8seB0ZSXc",
+     "title": "Why did the US army need to detonate 5 tons of lead azide?",
+     "thumb": "https://i.ytimg.com/vi/8J8seB0ZSXc/hqdefault.jpg",
+     "channel": "AP",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
   },
   {
    "title": "At this Little Free Bakery in Austin, neighbors come for the pastries and stay for community connection",
@@ -2209,9 +2342,9 @@
    "videos": []
   },
   {
-   "title": "2026 Rockefeller Center Christmas Tree Arrives in New York City",
-   "summary": "A magnificent Norway spruce has made its journey from West Edmeston, New York, to Rockefeller Center. The tree will undergo a glow-up ahead of the lighting ceremony on Dec. 2.",
-   "category": "General",
+   "title": "How to protect yourself from identity theft and fraud during the holidays",
+   "summary": "A report form cybersecurity firm SentiLink warns that fraud rates jump by about a third on Thanksgiving and Christmas. David Maimon, SentiLink's head of fraud insights, joins CBS News to discuss.",
+   "category": "World",
    "leans": [
     -1
    ],
@@ -2225,11 +2358,38 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "NBC News",
+     "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "2026 Rockefeller Center Christmas Tree Arrives in New York City",
-     "url": "https://www.today.com/video/2026-rockefeller-center-christmas-tree-arrives-in-new-york-city-273069125683"
+     "title": "How to protect yourself from identity theft and fraud during the holidays",
+     "url": "https://www.cbsnews.com/video/how-to-protect-yourself-from-identity-theft-and-fraud-during-the-holidays/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "U.S.-based firms helping China access Nvidia's most advanced chips",
+   "summary": "It's not just Megaspeed. A CBS News investigation reveals that at least two California-based Nvidia customers have Chinese ownership — giving the U.S. adversary potential access to Nvidia's most advanced technology.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "U.S.-based firms helping China access Nvidia's most advanced chips",
+     "url": "https://www.cbsnews.com/news/nvidia-china-ai-chips-computing-sales/"
     }
    ],
    "factchecks": [],
@@ -2324,69 +2484,6 @@
    ],
    "factchecks": [],
    "videos": []
-  },
-  {
-   "title": "How to move through holiday travel in the most efficient, respectful way possible",
-   "summary": "Airlines have reported more than 1,500 unruly passenger incidents so far this year. Pamela Eyring, president of the Protocol School of Washington, joins CBS News to discuss how to move through airport travel in the most respectful and efficient way.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "How to move through holiday travel in the most efficient, respectful way possible",
-     "url": "https://www.cbsnews.com/video/how-move-through-holiday-travel-most-efficient-respectful-way/"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "ljsI5wx32KM",
-     "title": "How to move through holiday travel in the most efficient, respectful way possible",
-     "thumb": "https://i.ytimg.com/vi/ljsI5wx32KM/hqdefault.jpg",
-     "channel": "CBS News",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
-  },
-  {
-   "title": "Iran denounces U.S. use of AI in war",
-   "summary": "Iran's U.N. envoy claims the U.S. military used Palantir and Anthropic AI systems to select some 2,000 targets over just four days.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Iran denounces U.S. use of AI in war",
-     "url": "https://www.cbsnews.com/live-updates/iran-war-us-military-ai-weapons-oil/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
   }
  ],
  "blindspots": [
@@ -2433,6 +2530,41 @@
    "videos": []
   },
   {
+   "title": "Major League Baseball asks court to declare lockout is legal in suit against players' union",
+   "summary": "Signaling the likely start next week of a long and acrimonious lockout, Major League Baseball sued its players' association in federal court on Wednesday, trying to head off any attempt by the union to decertify and challenge the work stoppage with an antitrust case.",
+   "category": "Economy",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Major League Baseball asks court to declare lockout is legal in suit against players' union",
+     "url": "https://www.washingtontimes.com/news/2026/nov/25/major-league-baseball-asks-court-declare-lockout-legal-suit-players/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Major League Baseball owners sue MLB Players Association ahead of rapidly approaching lockout",
+     "url": "https://www.foxnews.com/outkick-sports/major-league-baseball-owners-sue-mlb-players-association-ahead-rapidly-approaching-lockout"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "Georgia's Fulton County ordered to give copy of 2020 election records seized by FBI to state board",
    "summary": "A judge on Tuesday ordered Georgia's Fulton County to turn over a digital copy of ballots and other election records seized by the FBI earlier this year to the State Election Board, which had been trying for more than two years to obtain certain records from the 2020 election in ",
    "category": "Politics",
@@ -2452,7 +2584,7 @@
      "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Judge halts order requiring Fulton County to turn over copies of 2020 ballots to Georgia election board",
+     "title": "Judge halts order requiring Fulton County to turn over copies of 2020 ballots",
      "url": "https://www.nbcnews.com/politics/elections/judge-halts-order-fulton-county-copies-2020-ballots-georgia-election-rcna611353"
     },
     {
@@ -2467,8 +2599,8 @@
    "videos": []
   },
   {
-   "title": "Shane Gillis wishes ex-girlfriend 'the best' after tell-all essay accusing him of cheating and 'red flags'",
-   "summary": "Comedian Shane Gillis wished ex-girlfriend Grace Brassel \"the best\" after she published an essay in The Cut alleging cheating and mistreatment during their yearlong romance.",
+   "title": "Tony Romo Joins Jake Paul’s Betting Company As ‘Chief Predictions Officer’",
+   "summary": "Tony Romo is back in the saddle after a drunk-driving arrest derailed his broadcasting career. The former Cowboys quarterback announced Wednesday that he would make his return to camera under the auspices of a sports betting company. Romo is teaming up with Betr, a sports gamblin",
    "category": "General",
    "leans": [
     2
@@ -2486,15 +2618,15 @@
      "name": "Fox News",
      "lean": 2,
      "label": "Right",
-     "title": "Shane Gillis wishes ex-girlfriend 'the best' after tell-all essay accusing him of cheating and 'red flags'",
-     "url": "https://www.foxnews.com/media/shane-gillis-wishes-ex-girlfriend-best-after-tell-all-essay-accusing-him-cheating-red-flags"
+     "title": "Tony Romo lands new job at sports gaming company Betr months after his CBS departure over OWI arrest",
+     "url": "https://www.foxnews.com/sports/tony-romo-lands-new-job-sports-gaming-company-betr-months-after-cbs-departure-owi-arrest"
     },
     {
-     "name": "Daily Caller",
+     "name": "The Daily Wire",
      "lean": 2,
      "label": "Right",
-     "title": "DUKE: Shane Gillis’ Ex-Girlfriend’s Attempt To Humiliate Him Backfires Spectacularly",
-     "url": "https://dailycaller.com/2026/11/25/duke-shane-gillis-grace-brassel-relationship-bad-breakup-expose-humiliation"
+     "title": "Tony Romo Joins Jake Paul’s Betting Company As ‘Chief Predictions Officer’",
+     "url": "https://www.dailywire.com/news/tony-romo-joins-jake-pauls-betting-company-as-chief-predictions-officer"
     }
    ],
    "factchecks": [],
