@@ -125,6 +125,38 @@
       '</section>';
     }
 
+    /* ── Interactive subnet drill (Network+ ch6 only) ── */
+    var drillHtml = "";
+    if (data.subnet_drill) {
+      var fld = function (id, label, ph) {
+        return '<label style="display:block;margin-bottom:0.75rem;font-size:0.9rem;">' +
+          '<span style="display:block;color:var(--text-muted,#9aa);margin-bottom:0.25rem;">' + label + '</span>' +
+          '<input id="' + id + '" type="text" autocomplete="off" spellcheck="false" placeholder="' + ph + '" ' +
+          'style="width:100%;max-width:260px;padding:0.55rem 0.7rem;border-radius:8px;border:1px solid var(--border,#334);background:var(--bg-elev,#1a1f29);color:var(--text,#e8eef5);font-family:ui-monospace,monospace;font-size:0.95rem;">' +
+          '</label>';
+      };
+      drillHtml = '<section class="section-sm" aria-labelledby="drill-heading">' +
+        '<div class="section-label" id="drill-heading">Interactive Subnet Drill</div>' +
+        '<p class="text-sm text-muted" style="margin-bottom:1rem;">Work the problem by hand, fill in each field, then check yourself. Hit <em>New Problem</em> for a fresh one.</p>' +
+        '<div style="border:1px solid var(--border,#334);border-radius:12px;padding:1.25rem;background:var(--bg-elev,#141922);">' +
+          '<p id="sdProblem" style="font-size:1.05rem;font-family:ui-monospace,monospace;margin-bottom:1.1rem;"></p>' +
+          '<div style="display:flex;flex-wrap:wrap;gap:0 1.5rem;">' +
+            fld("sdNet", "Network address", "e.g. 10.0.0.0") +
+            fld("sdBcast", "Broadcast address", "e.g. 10.0.0.255") +
+            fld("sdFirst", "First usable host", "") +
+            fld("sdLast", "Last usable host", "") +
+            fld("sdHosts", "Usable host count", "e.g. 254") +
+          '</div>' +
+          '<div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:0.5rem;">' +
+            '<button class="btn btn-primary btn-sm" id="sdCheck" type="button">Check Answers</button>' +
+            '<button class="btn btn-outline btn-sm" id="sdNew" type="button">New Problem</button>' +
+            '<button class="btn btn-secondary btn-sm" id="sdReveal" type="button">Reveal</button>' +
+          '</div>' +
+          '<div id="sdResult" aria-live="polite" style="margin-top:1rem;"></div>' +
+        '</div>' +
+      '</section>';
+    }
+
     /* ── Inline practice questions ── */
     var practiceHtml = "";
     if (data.practice_questions && data.practice_questions.length) {
@@ -200,7 +232,9 @@
         cardsHtml +
         (cardsHtml && sectionsHtml ? '<div class="divider"></div>' : '') +
         sectionsHtml +
-        (sectionsHtml && practiceHtml ? '<div class="divider"></div>' : '') +
+        (sectionsHtml && drillHtml ? '<div class="divider"></div>' : '') +
+        drillHtml +
+        ((sectionsHtml || drillHtml) && practiceHtml ? '<div class="divider"></div>' : '') +
         practiceHtml +
 
         '<div class="divider"></div>' +
@@ -213,7 +247,81 @@
     }
     wireConceptCardNav(root, data.concept_cards ? data.concept_cards.length : 0);
     wirePracticeAnswers(root);
+    if (data.subnet_drill) wireSubnetDrill(root);
     wireNavFadeIns(root);
+  }
+
+  /* Interactive subnet drill: generates a random IPv4 + prefix and checks the user's work. */
+  function wireSubnetDrill(root) {
+    var box = root.querySelector("#subnetDrill, #sdProblem");
+    if (!root.querySelector("#sdProblem")) return;
+    var cur = null;
+
+    function randInt(a, b) { return Math.floor(Math.random() * (b - a + 1)) + a; }
+    function intToIp(n) {
+      return [(n >>> 24) & 255, (n >>> 16) & 255, (n >>> 8) & 255, n & 255].join(".");
+    }
+    function gen() {
+      var prefix = randInt(8, 30);
+      var ip = (((randInt(1, 223) << 24) >>> 0) | (randInt(0, 255) << 16) | (randInt(0, 255) << 8) | randInt(0, 255)) >>> 0;
+      var mask = (0xFFFFFFFF << (32 - prefix)) >>> 0;
+      var net = (ip & mask) >>> 0;
+      var bcast = (net | (~mask >>> 0)) >>> 0;
+      var hostBits = 32 - prefix;
+      cur = {
+        prefix: prefix, ip: intToIp(ip),
+        net: intToIp(net), bcast: intToIp(bcast),
+        first: intToIp((net + 1) >>> 0), last: intToIp((bcast - 1) >>> 0),
+        hosts: Math.pow(2, hostBits) - 2
+      };
+      var pEl = root.querySelector("#sdProblem");
+      if (pEl) pEl.innerHTML = "Given the address <strong>" + cur.ip + "/" + cur.prefix + "</strong> (mask " + intToIp(mask) + "), find:";
+      ["sdNet", "sdBcast", "sdFirst", "sdLast", "sdHosts"].forEach(function (id) {
+        var el = root.querySelector("#" + id);
+        if (el) { el.value = ""; el.style.borderColor = "var(--border,#334)"; }
+      });
+      var r = root.querySelector("#sdResult");
+      if (r) r.innerHTML = "";
+    }
+    function row(label, got, want, ok) {
+      var color = ok ? "var(--success,#3ad29f)" : "var(--danger,#ff6b6b)";
+      return '<div style="font-family:ui-monospace,monospace;font-size:0.9rem;margin:0.15rem 0;color:' + color + ';">' +
+        (ok ? "✓ " : "✗ ") + label + ": " + (ok ? want : ("<s>" + (got || "—") + "</s> → " + want)) + "</div>";
+    }
+    function val(id) { var el = root.querySelector("#" + id); return el ? el.value.trim() : ""; }
+    function mark(id, ok) {
+      var el = root.querySelector("#" + id);
+      if (el) el.style.borderColor = ok ? "var(--success,#3ad29f)" : "var(--danger,#ff6b6b)";
+    }
+    function check(reveal) {
+      if (!cur) return;
+      var fields = [
+        ["sdNet", "Network", cur.net], ["sdBcast", "Broadcast", cur.bcast],
+        ["sdFirst", "First usable", cur.first], ["sdLast", "Last usable", cur.last],
+        ["sdHosts", "Usable hosts", String(cur.hosts)]
+      ];
+      var html = "", right = 0;
+      fields.forEach(function (f) {
+        var got = val(f[0]);
+        var ok = !reveal && got.replace(/\s/g, "") === f[2].replace(/\s/g, "");
+        if (ok) right++;
+        mark(f[0], ok);
+        html += row(f[1], got, f[2], ok);
+      });
+      var head = reveal
+        ? '<p style="margin-bottom:0.4rem;font-weight:600;">Answers:</p>'
+        : '<p style="margin-bottom:0.4rem;font-weight:600;">' + right + ' / 5 correct</p>';
+      var r = root.querySelector("#sdResult");
+      if (r) r.innerHTML = head + html;
+    }
+
+    var cBtn = root.querySelector("#sdCheck");
+    var nBtn = root.querySelector("#sdNew");
+    var rBtn = root.querySelector("#sdReveal");
+    if (cBtn) cBtn.addEventListener("click", function () { check(false); });
+    if (nBtn) nBtn.addEventListener("click", gen);
+    if (rBtn) rBtn.addEventListener("click", function () { check(true); });
+    gen();
   }
 
   function wireConceptCardNav(root, totalCards) {

@@ -145,15 +145,15 @@
    "explanation": "/30 = 2 host bits = 2^2 − 2 = 2 usable addresses."
   },
   {
-   "q": "What IPv6 address type begins with fe80:: and stays on the local link?",
+   "q": "What IPv6 address type begins with fe80:: and is never forwarded by a router?",
    "options": [
-    "Global unicast",
     "Unique local",
+    "Global unicast",
     "Link-local",
     "Multicast"
    ],
    "answer": 2,
-   "explanation": "fe80::/10 is link-local; every IPv6 interface auto-configures one."
+   "explanation": "fe80::/10 is link-local; every IPv6 interface auto-configures one and routers never forward it."
   },
   {
    "q": "A host has the IP 192.168.10.100/26. What is its network address?",
@@ -199,5 +199,6 @@
    "answer": 0,
    "explanation": "A /30 provides exactly 2 usable addresses, ideal for a point-to-point link."
   }
- ]
+ ],
+ "subnet_drill": true
 }
