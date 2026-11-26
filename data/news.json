@@ -1,12 +1,2675 @@
 {
- "generated": "2026-11-26T16:00:12Z",
- "generated_human": "Nov 26, 2026 · 16:00 UTC",
- "sources": [],
- "n_articles": 0,
- "n_videos": 0,
- "trending": [],
- "videos": [],
- "stories": [],
- "blindspots": [],
- "factchecks": []
+ "generated": "2026-11-26T17:00:42Z",
+ "generated_human": "Nov 26, 2026 · 17:00 UTC",
+ "sources": [
+  {
+   "name": "NPR",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 10
+  },
+  {
+   "name": "The Guardian",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "NBC News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "CBS News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "ABC News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "PBS NewsHour",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Politico",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Vox",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "Slate",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Mother Jones",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "The Atlantic",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Time",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "BBC News",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "The Hill",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "CNBC",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Axios",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Al Jazeera",
+   "lean": 0,
+   "label": "Center",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "The Christian Science Monitor",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 10
+  },
+  {
+   "name": "Newsweek",
+   "lean": 0,
+   "label": "Center",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Reason",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "New York Post",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Washington Examiner",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "National Review",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Washington Times",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Fox News",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "The Daily Wire",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "The Federalist",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Newsmax",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Daily Caller",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  }
+ ],
+ "n_articles": 335,
+ "n_videos": 140,
+ "trending": [
+  {
+   "term": "trump",
+   "n": 22
+  },
+  {
+   "term": "thanksgiving",
+   "n": 22
+  },
+  {
+   "term": "american",
+   "n": 9
+  },
+  {
+   "term": "tariffs",
+   "n": 9
+  },
+  {
+   "term": "travel",
+   "n": 7
+  },
+  {
+   "term": "free",
+   "n": 7
+  },
+  {
+   "term": "parade",
+   "n": 7
+  },
+  {
+   "term": "macy",
+   "n": 7
+  },
+  {
+   "term": "holiday",
+   "n": 7
+  },
+  {
+   "term": "china",
+   "n": 7
+  },
+  {
+   "term": "iowa",
+   "n": 7
+  },
+  {
+   "term": "back",
+   "n": 7
+  },
+  {
+   "term": "your",
+   "n": 7
+  },
+  {
+   "term": "russia",
+   "n": 6
+  },
+  {
+   "term": "ukraine",
+   "n": 6
+  },
+  {
+   "term": "food",
+   "n": 5
+  }
+ ],
+ "videos": [
+  {
+   "videoId": "TjHqGlhW3MU",
+   "title": "LIVE: Flooding hits California as El Nino storms fuel king tides",
+   "thumb": "https://i.ytimg.com/vi/TjHqGlhW3MU/hqdefault.jpg",
+   "channel": "Reuters",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "9sXRbOSPgwQ",
+   "title": "Macy’s parade floats halted as bad weather forces postponement",
+   "thumb": "https://i.ytimg.com/vi/9sXRbOSPgwQ/hqdefault.jpg",
+   "channel": "AP",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "4IMAFnGvQ9o",
+   "title": "Airbnb host catches dozens at party on smart doorbell. #Airbnb #Party #BBCNews",
+   "thumb": "https://i.ytimg.com/vi/4IMAFnGvQ9o/hqdefault.jpg",
+   "channel": "BBC News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "EtlJrl5Et40",
+   "title": "Christmas market CANCELS bookings after AI backlash. #BBCNews",
+   "thumb": "https://i.ytimg.com/vi/EtlJrl5Et40/hqdefault.jpg",
+   "channel": "BBC News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "WPk_TvgSb_k",
+   "title": "Woman at center of mass UK rape trial first thought police had made a mistake",
+   "thumb": "https://i.ytimg.com/vi/WPk_TvgSb_k/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "4PZtklG3_R4",
+   "title": "Even Denny's is celebrating Jensen Huang's return",
+   "thumb": "https://i.ytimg.com/vi/4PZtklG3_R4/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "2xCh3I8AzTM",
+   "title": "Will Elon Musk's plan to have data centers in orbit take off? | DW News",
+   "thumb": "https://i.ytimg.com/vi/2xCh3I8AzTM/hqdefault.jpg",
+   "channel": "DW News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "HGYvjnUvxUA",
+   "title": "Huntingdon train attacker found guilty of all 14 counts of attempted murder | BBC News",
+   "thumb": "https://i.ytimg.com/vi/HGYvjnUvxUA/hqdefault.jpg",
+   "channel": "BBC News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "7lY9Uu4Y4yo",
+   "title": "Storm's impact on Thanksgiving travel",
+   "thumb": "https://i.ytimg.com/vi/7lY9Uu4Y4yo/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "CawNFlXccnY",
+   "title": "Vance says he doesn’t think Jensen Huang needs a pardon, has seen no evidence he “committed a crime”",
+   "thumb": "https://i.ytimg.com/vi/CawNFlXccnY/hqdefault.jpg",
+   "channel": "AP",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "KScJf2G7cSQ",
+   "title": "Can Spain's Pedro Sanchez survive snap elections? | DW News",
+   "thumb": "https://i.ytimg.com/vi/KScJf2G7cSQ/hqdefault.jpg",
+   "channel": "DW News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "aIHzaRKFswI",
+   "title": "NEW: Israel WARNS Iran is developing chemical weapons plans",
+   "thumb": "https://i.ytimg.com/vi/aIHzaRKFswI/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "FHficc6yTNY",
+   "title": "Will Spain's housing crisis bring the far right to power?",
+   "thumb": "https://i.ytimg.com/vi/FHficc6yTNY/hqdefault.jpg",
+   "channel": "The Guardian",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "URA4vMZtflQ",
+   "title": "WATCH: Iconic Pacifica Pier COLLAPSES into Pacific Ocean",
+   "thumb": "https://i.ytimg.com/vi/URA4vMZtflQ/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "6xaAh8kYdeg",
+   "title": "We asked an AI toy to spell. It struggled.",
+   "thumb": "https://i.ytimg.com/vi/6xaAh8kYdeg/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "NTxNYFd1hx8",
+   "title": "Diesel tanker capsizes near Ibiza, killing crew member",
+   "thumb": "https://i.ytimg.com/vi/NTxNYFd1hx8/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  }
+ ],
+ "stories": [
+  {
+   "title": "Trump just can’t quit tariffs",
+   "summary": "This story appeared in The Logoff, a daily newsletter that helps you stay informed about the Trump administration without letting political news take over your life. Subscribe here. Welcome to The Logoff: The Trump administration is trying to keep its trade war alive with new tar",
+   "category": "World",
+   "leans": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 4,
+   "n_sources": 11,
+   "balance": {
+    "l": 5,
+    "c": 2,
+    "r": 4
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Trump just can’t quit tariffs",
+     "url": "https://www.vox.com/the-logoff-newsletter-trump/512425/trump-tariffs-china-eu-trade"
+    },
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Kilmar Abrego Garcia’s deportation saga ends on his terms",
+     "url": "https://www.vox.com/today-explained-newsletter/512193/kilmar-abrego-garcia-self-deportation-spain-trump"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump Administration Defends Iowa Detonation, Unveils New Tariffs",
+     "url": "https://www.today.com/video/trump-administration-defends-iowa-detonation-unveils-new-tariffs-274221125815"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH: Vance defends Iowa lead azide detonation as he visits Air Force troops in Ohio",
+     "url": "https://www.pbs.org/newshour/politics/watch-vance-defends-iowa-lead-azide-detonation-as-he-visits-air-force-troops-in-ohio"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How Trump's newest tariffs could impact Americans and the economy",
+     "url": "https://www.pbs.org/newshour/show/how-trumps-newest-tariffs-could-impact-americans-and-the-economy"
+    },
+    {
+     "name": "The Atlantic",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "What Could Replace the Trump Style of Politics?",
+     "url": "https://www.theatlantic.com/books/2026/11/hannah-arendt-friendship-model-politics/689579/?utm_source=feed"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump Administration Unveils New Tariffs for China, the European Union, and More",
+     "url": "https://time.com/article/2026/11/25/trump-administration-new-tariffs-china-european-union-india/"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump rips Obama, CNN as he touts ‘perfect’ Iowa detonation",
+     "url": "https://thehill.com/homenews/administration/6244532-trump-obama-cnn-army-iowa-lead-azide-detonation/"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump prepares new round of tariffs on China, other U.S. trading partners",
+     "url": "https://www.axios.com/2026/11/25/trump-tariffs-china"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump is following his conviction on tariffs, not politics",
+     "url": "https://www.washingtonexaminer.com/op-eds/4816147/trump-tariffs-leadership-conviction/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Democrats face rocky path to repealing Trump tariffs, despite post-election appetite",
+     "url": "https://www.washingtontimes.com/news/2026/nov/26/democrats-face-rocky-path-repealing-trump-tariffs-despite-post/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Vance serves up turkey and 'unfiltered' conversation to Air Force troops at an Ohio base",
+     "url": "https://www.washingtontimes.com/news/2026/nov/26/vp-jd-vances-offers-unfiltered-conversation-air-force-troops-ohio/"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump Takes Another Swing At Tariffs After Supreme Court Setback",
+     "url": "https://www.dailywire.com/news/trump-takes-another-swing-at-tariffs-after-supreme-court-setback"
+    },
+    {
+     "name": "The Federalist",
+     "lean": 2,
+     "label": "Right",
+     "title": "Sen. Chris Van Hollen Just Can’t Quit Alleged ‘Human Trafficker’ Kilmar Abrego Garcia",
+     "url": "https://thefederalist.com/2026/11/25/sen-chris-van-hollen-just-cant-quit-alleged-human-trafficker-kilmar-abrego-garcia/?utm_source=rss&utm_medium=rss&utm_campaign=sen-chris-van-hollen-just-cant-quit-alleged-human-trafficker-kilmar-abrego-garcia"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Did Army plan to detonate chemicals other than lead azide in Iowa?",
+     "link": "https://www.snopes.com/news/2026/11/25/redacted-memo-lead-azide-iowa/"
+    },
+    {
+     "org": "Snopes",
+     "title": "Did Army detonate lead azide stockpile in crucial area for US food supply? Here's context",
+     "link": "https://www.snopes.com/fact-check/army-lead-azide-food-supply/"
+    },
+    {
+     "org": "Snopes",
+     "title": "Is US Army planning to detonate massive amount of lead azide in Middletown, Iowa?",
+     "link": "https://www.snopes.com/fact-check/lead-azide-detonation-army-iowa/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "DFT80onrsz8",
+     "title": "How Trump's newest tariffs could impact Americans and the economy",
+     "thumb": "https://i.ytimg.com/vi/DFT80onrsz8/hqdefault.jpg",
+     "channel": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "tAgULY9Re3U",
+     "title": "Iowa farmer worried about impact of Army detonation of lead explosives on his cattle #shorts",
+     "thumb": "https://i.ytimg.com/vi/tAgULY9Re3U/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Macy’s Thanksgiving Day Parade Postponed for First Time Ever",
+   "summary": "For the first time in its 100-year history, the world-famous Macy’s Thanksgiving Day Parade has been postponed. The unprecedented decision by Macy’s and New York City was made after forecasters warned of potentially dangerous storm conditions. NBC’s Erin McLaughlin reports for TO",
+   "category": "World",
+   "leans": [
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 8,
+   "balance": {
+    "l": 4,
+    "c": 1,
+    "r": 3
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Storms disrupt Thanksgiving travel. And, FCC violated ABC's free speech, judge says",
+     "url": "https://www.npr.org/2026/11/26/g-s1-155950/up-first-newsletter-thanksgiving-weather-travel-trump-tariffs-iowa-detonation-fcc-free-speech"
+    },
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Powerful storms disrupt holiday travel, as Macy's Thanksgiving Day Parade is postponed",
+     "url": "https://www.npr.org/2026/11/26/nx-s1-6054079/storms-expected-on-both-coasts-as-millions-travel-for-thanksgiving"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Macy’s Thanksgiving Day Parade Postponed for First Time Ever",
+     "url": "https://www.today.com/video/macy-s-thanksgiving-day-parade-postponed-for-first-time-ever-274220101982"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Texas band raises $350,000 to stay for Macy's Thanksgiving parade",
+     "url": "https://www.cbsnews.com/news/macys-thanksgiving-parade-marching-bands-delay-cost/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Maps show where Thanksgiving storms could disrupt holiday",
+     "url": "https://www.cbsnews.com/news/maps-thanksgiving-storms-disrupt-holiday-festivities-travel/"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Connection Must Be More Than a Holiday Tradition",
+     "url": "https://time.com/article/2026/11/26/connection-must-be-more-than-a-holiday-tradition/"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Macy's Thanksgiving parade postponed for the first time in the event's history",
+     "url": "https://www.axios.com/2026/11/25/macys-thanksgiving-parade-2026-balloons-weather"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Bizarre conspiracy theories explaining Macy’s Thanksgiving Parade delay from ‘quantum leap’ to corporate cash",
+     "url": "https://nypost.com/2026/11/26/lifestyle/macys-thanksgiving-day-parade-postponement-sparks-wild-conspiracy-theories/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Macy’s Thanksgiving Day Parade postponed: Has the holiday tradition ever been canceled?",
+     "url": "https://www.foxnews.com/us/macys-thanksgiving-day-parade-postponed-has-holiday-tradition-ever-been-canceled"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Macy’s Thanksgiving Parade Postponed For First Time Ever",
+     "url": "https://dailycaller.com/2026/11/25/macys-thanksgiving-parade-postponed-noreaster-new-york-city"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "eaYYLxlf2vk",
+     "title": "Severe storms disrupt Thanksgiving travel across the country",
+     "thumb": "https://i.ytimg.com/vi/eaYYLxlf2vk/hqdefault.jpg",
+     "channel": "NBC News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "sSqKzTEvgng",
+     "title": "Watch: New York City kid reacts to Macy’s Thanksgiving Day parade being postponed #shorts",
+     "thumb": "https://i.ytimg.com/vi/sSqKzTEvgng/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Andy Taylor, guitarist of new wave icons Duran Duran, dies at 65",
+   "summary": "Taylor revealed his battle with Stage 4 metastatic prostate cancer in 2022. He was the guitarist of the 1980s English band Duran Duran, whose pop hits included \"Hungry Like the Wolf\" and \"Rio\".",
+   "category": "Tech",
+   "leans": [
+    -1,
+    0,
+    2
+   ],
+   "span": 3,
+   "n_sources": 4,
+   "balance": {
+    "l": 2,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Andy Taylor, guitarist of new wave icons Duran Duran, dies at 65",
+     "url": "https://www.npr.org/2026/11/26/g-s1-155934/andy-taylor-duran-duran-obit"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Artists and Fans Pay Tribute to Duran Duran Guitarist Andy Taylor",
+     "url": "https://time.com/article/2026/11/26/andy-taylor-death-duran-duran-music-tributes-obituary/"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Tributes for Duran Duran guitarist Andy Taylor after his death aged 65",
+     "url": "https://www.bbc.co.uk/news/articles/cmp3vk6vr44po?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Duran Duran’s Longtime Guitarist Andy Taylor Dead At 65",
+     "url": "https://dailycaller.com/2026/11/26/80s-guitarist-duran-duran-andy-taylor-dead-65-prostate-cancer"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "keueXXekthE",
+     "title": "Andy Taylor, guitarist of Duran Duran dies at 65",
+     "thumb": "https://i.ytimg.com/vi/keueXXekthE/hqdefault.jpg",
+     "channel": "NBC News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "French actor Gerard Depardieu to stand trial on rape charge, lawyer says",
+   "summary": "French actor Gerard Depardieu has been ordered to stand trial on a charge of raping an actress at his Paris home in 2018, one of his lawyers told The Associated Press on Thursday, less than two weeks after the cinema star abandoned his appeal of a sexual assault conviction in a s",
+   "category": "General",
+   "leans": [
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 4,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "French actor Gérard Depardieu to stand trial on rape charge",
+     "url": "https://www.cbsnews.com/news/gerard-depardieu-trial-alleged-rape-paris/"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Gérard Depardieu to stand trial for alleged rape of actress in 2018, court rules",
+     "url": "https://www.bbc.co.uk/news/articles/cmlyd76kyx44o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "French actor Gerard Depardieu to stand trial on rape charge, lawyer says",
+     "url": "https://www.washingtontimes.com/news/2026/nov/26/gerard-depardieu-stand-trial-rape-charge-lawyer-says/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "French Actor Gérard Depardieu to Stand Trial on Rape Charge, Lawyer Says",
+     "url": "https://www.newsmax.com/newsfront/france-depardieu-rape-allegations/2026/11/26/id/1277621"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "At least 31 killed as fuel tanker crash ignites large fire on Cairo highway",
+   "summary": "Blaze on ring road surrounding Egyptian capital injures at least 21 people and leaves cars and motorcycles charred A crash involving a fuel tanker ignited a huge fire on a highway surrounding Cairo on Wednesday, killing at least 31 people, Egyptian authorities said. The blaze on ",
+   "category": "General",
+   "leans": [
+    -1,
+    0,
+    2
+   ],
+   "span": 3,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "At least 31 killed as fuel tanker crash ignites large fire on Cairo highway",
+     "url": "https://www.theguardian.com/world/2026/nov/25/people-killed-fuel-tanker-crash-ignites-large-fire-cairo-highway"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Egyptian authorities arrest motorist over tanker crash that killed 31",
+     "url": "https://www.bbc.co.uk/news/articles/c3gre90l0g45o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Egypt detains driver suspected of causing Cairo fuel tanker crash and inferno that left 31 dead",
+     "url": "https://www.foxnews.com/world/egypt-detains-driver-suspected-causing-cairo-fuel-tanker-crash-inferno-left-31-dead"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "NXT1LVgYZ68",
+     "title": "Egyptian authorities arrest driver over tanker crash and massive fire that killed 31 | BBC News",
+     "thumb": "https://i.ytimg.com/vi/NXT1LVgYZ68/hqdefault.jpg",
+     "channel": "BBC News",
+     "lean": 0,
+     "label": "Center"
+    },
+    {
+     "videoId": "Lb09ITMLiTs",
+     "title": "At least 31 killed after fuel tanker crashes in Giza, Cairo, causing massive fire",
+     "thumb": "https://i.ytimg.com/vi/Lb09ITMLiTs/hqdefault.jpg",
+     "channel": "AP",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "Aaron Rodgers Released by Pittsburgh Steelers Amid Public Feud",
+   "summary": "The Pittsburgh Steelers released quarterback Aaron Rodgers, hours after he blasted the team’s head coach Mike McCarthy during a surprise appearance on “The Pat McAfee Show.” NBC’s Ryan Chandler reports for TODAY.",
+   "category": "General",
+   "leans": [
+    -1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Aaron Rodgers Released by Pittsburgh Steelers Amid Public Feud",
+     "url": "https://www.today.com/video/steelers-release-aaron-rodgers-after-public-criticism-of-coach-274222149664"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Aaron Rodgers may be a diva, but he was right to expose his coach and dysfunction in Pittsburgh | Matt Calkins",
+     "url": "https://www.foxnews.com/outkick-sports/rodgers-diva-right-expose-mccarthy-dysfunction-pittsburgh-matt-calkins"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Former NFL players defend Aaron Rodgers after Steelers release him amid Mike McCarthy dispute",
+     "url": "https://www.foxnews.com/outkick-sports/former-nfl-players-defend-aaron-rodgers-steelers-release-him-amid-mike-mccarthy-dispute"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "D9jS3XAiW4Y",
+     "title": "Aaron Rodgers released as Pittsburgh Steelers quarterback #shorts",
+     "thumb": "https://i.ytimg.com/vi/D9jS3XAiW4Y/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Holder says 2028 Democratic presidential candidates must campaign for restoring US as a 'DEI-infused nation'",
+   "summary": "Obama Attorney General Eric Holder says no Democrat can win the 2028 nomination without pledging to return America to a \"DEI-infused nation.\"",
+   "category": "Politics",
+   "leans": [
+    -1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Politico",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Democratic Governors’ 2028 picks",
+     "url": "https://www.politico.com/video/2026/11/20/democratic-governors-2028-picks-2235294"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Holder says 2028 Democratic presidential candidates must campaign for restoring US as a 'DEI-infused nation'",
+     "url": "https://www.foxnews.com/media/holder-says-2028-democratic-presidential-candidates-must-campaign-restoring-us-dei-infused-nation"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Trump demands probe into preelection GDP data, alleges ‘purposeful’ error",
+   "summary": "President Trump on Thursday called for an investigation into economic data released ahead of the midterm elections after the federal government revised its estimate of third-quarter growth upward. The president, in a Thanksgiving Day post on Truth Social, alleged without providin",
+   "category": "World",
+   "leans": [
+    -1,
+    0,
+    1
+   ],
+   "span": 2,
+   "n_sources": 4,
+   "balance": {
+    "l": 1,
+    "c": 2,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump calls GDP figures 'fake' and demands an investigation of Commerce Department",
+     "url": "https://www.pbs.org/newshour/politics/trump-calls-gdp-figures-fake-and-demands-an-investigation-of-commerce-department"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump demands probe into preelection GDP data, alleges ‘purposeful’ error",
+     "url": "https://thehill.com/homenews/administration/6244608-trump-revised-gdp-data-probe/"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump demands investigation into GDP data revisions",
+     "url": "https://www.axios.com/2026/11/26/trump-gdp-investigation-economy-statistics"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump orders investigation into ‘fake’ GDP figures changed after midterms, alleges ‘purposeful’ error",
+     "url": "https://nypost.com/2026/11/26/us-news/president-trump-calls-for-probe-into-why-economic-growth-figures-revised-up-so-sharply-after-election-alleges-purposeful-error/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "Former Trump Administration Health Adviser Misleads About mRNA Flu Vaccine",
+     "link": "https://www.factcheck.org/2026/11/former-trump-administration-health-adviser-misleads-about-mrna-flu-vaccine/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "Why the Army detonated toxic explosives in Iowa",
+   "summary": "This story appeared in Today, Explained, a daily newsletter that helps you understand the most compelling news and stories of the day. Subscribe here. On Wednesday, the Pentagon blew up about five tons of lead azide, an unstable explosive stored at an ammunition plant in Iowa, in",
+   "category": "General",
+   "leans": [
+    -2,
+    0
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Why the Army detonated toxic explosives in Iowa",
+     "url": "https://www.vox.com/today-explained-newsletter/511830/iowa-lead-azide-explosives-detonation-plume"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Army detonates Iowa explosives amid toxic lead fears",
+     "url": "https://www.axios.com/2026/11/25/iowa-army-lead-detonation"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Did Army plan to detonate chemicals other than lead azide in Iowa?",
+     "link": "https://www.snopes.com/news/2026/11/25/redacted-memo-lead-azide-iowa/"
+    },
+    {
+     "org": "Snopes",
+     "title": "Is US Army planning to detonate massive amount of lead azide in Middletown, Iowa?",
+     "link": "https://www.snopes.com/fact-check/lead-azide-detonation-army-iowa/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "tAgULY9Re3U",
+     "title": "Iowa farmer worried about impact of Army detonation of lead explosives on his cattle #shorts",
+     "thumb": "https://i.ytimg.com/vi/tAgULY9Re3U/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "1VTr2BugUjM",
+     "title": "Army detonates nearly 10,000 pounds of lead-based explosives",
+     "thumb": "https://i.ytimg.com/vi/1VTr2BugUjM/hqdefault.jpg",
+     "channel": "Washington Post",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "North Korea's Kim vows to build more nuclear weapons after ignoring Trump's overture",
+   "summary": "Leader Kim Jong Un reportedly visited facilities that produce nuclear ingredients and called for building more nuclear weapons to cope with threats from the U.S. and South Korea.",
+   "category": "Politics",
+   "leans": [
+    -1,
+    1
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "North Korea's Kim vows to build more nuclear weapons after ignoring Trump's overture",
+     "url": "https://www.npr.org/2026/11/26/g-s1-155955/north-korea-kim-nuclear-weapons-trump"
+    },
+    {
+     "name": "National Review",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "For ‘Denuclearization,’ Trump Should Build Up to Build Down",
+     "url": "https://www.nationalreview.com/article/for-denuclearization-trump-should-build-up-to-build-down"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Trump tells Putin to 'pull back' military aggression in Europe to negotiate deal with Ukraine",
+   "summary": "President Trump said he asked Russian President Vladimir Putin to pull back on his military aggression throughout Europe in an effort to reach a peace deal with Ukraine.",
+   "category": "World",
+   "leans": [
+    -1,
+    1
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Could the Black Sea pull the U.S. into war in Europe?",
+     "url": "https://www.cbsnews.com/news/black-sea-incidents-nato-russia-ukraine-war/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump tells Putin to 'pull back' military aggression in Europe to negotiate deal with Ukraine",
+     "url": "https://www.washingtontimes.com/news/2026/nov/26/trump-tells-putin-pull-back-military-aggression-europe-negotiate-deal/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Judge blocks FCC from early license review for ABC, which network says has had a chilling effect",
+   "summary": "A federal judge on Wednesday blocked the Federal Communications Commission from conducting an early review of ABC's broadcast licenses, agreeing with the network that the Trump administration was chilling the network's free speech rights.",
+   "category": "Politics",
+   "leans": [
+    -1,
+    1
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Judge blocks FCC from early license review for ABC, which network says has had a chilling effect",
+     "url": "https://www.pbs.org/newshour/nation/judge-blocks-fcc-from-early-license-review-for-abc-which-network-says-has-had-a-chilling-effect"
+    },
+    {
+     "name": "Reason",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Court Blocks FCC from Early Review of ABC Broadcast Licenses",
+     "url": "https://reason.com/volokh/2026/11/25/court-blocks-fcc-from-early-review-of-abc-broadcast-licenses/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Denny’s celebrates Jensen Huang return to Nvidia: ‘Your booth is waiting’",
+   "summary": "Denny’s, the popular breakfast spot, celebrated Jensen Huang’s return as Nvidia CEO on Wednesday, highlighting its decadeslong ties to the embattled tech executive. The diner chain said it restored a plaque marking the booth at its San Jose, Calif., restaurant where Huang and his",
+   "category": "Economy",
+   "leans": [
+    0,
+    1
+   ],
+   "span": 1,
+   "n_sources": 4,
+   "balance": {
+    "l": 0,
+    "c": 3,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Denny’s celebrates Jensen Huang return to Nvidia: ‘Your booth is waiting’",
+     "url": "https://thehill.com/policy/technology/6244572-dennys-jensen-huang-nvidia-comeback-trump-administration/"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "‘Your booth is waiting’: Denny’s welcomes Jensen Huang back as Nvidia CEO",
+     "url": "https://www.cnbc.com/2026/11/26/dennys-jensen-huang-nvidia.html"
+    },
+    {
+     "name": "The Christian Science Monitor",
+     "lean": 0,
+     "label": "Center",
+     "title": "In Jensen Huang’s return, are national security concerns being shoved aside?",
+     "url": "https://www.csmonitor.com/Business/2026/1123/trump-jensen-huang-nvidia-security?icid=rss"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Denny’s brings back Jensen Huang tribute booth",
+     "url": "https://www.washingtonexaminer.com/news/entertainment/4816194/dennys-brings-back-jensen-huang-tribute-booth/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Did Trump invest $3M in Nvidia before it reinstated Jensen Huang?",
+     "link": "https://www.snopes.com/news/2026/11/25/trump-nvidia-jensen-huang/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "4PZtklG3_R4",
+     "title": "Even Denny's is celebrating Jensen Huang's return",
+     "thumb": "https://i.ytimg.com/vi/4PZtklG3_R4/hqdefault.jpg",
+     "channel": "CNN",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "China reserves right to take ‘necessary measures’ after Trump’s new tariff proposals",
+   "summary": "Beijing says new levies amount to ‘political manipulation’, while Brazil ‘will not yield to this type of threat’ Trump proposing new tariffs on 14 partners including China and EU Beijing has said it reserves the right to take “necessary measures” after Donald Trump’s administrati",
+   "category": "World",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 3,
+   "balance": {
+    "l": 2,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "China reserves right to take ‘necessary measures’ after Trump’s new tariff proposals",
+     "url": "https://www.theguardian.com/us-news/2026/nov/26/brazil-china-react-to-new-trump-tariffs-threat"
+    },
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "China and Brazil Lead Pushback Against Trump’s ‘Unacceptable’ Tariff Threats",
+     "url": "https://time.com/article/2026/11/26/china-brazil-eu-push-back-against-trump-tariffs/"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "China, others bash Trump’s latest tariff gambit: ‘Trade wars serve no one’s interests’",
+     "url": "https://thehill.com/policy/international/6244629-trump-global-tariffs-china-japan-eu-fallout/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "News Wrap: Severe weather threatens holiday travel for millions",
+   "summary": "In our news wrap Wednesday, severe weather is threatening Thanksgiving travel for millions of Americans, authorities in Egypt say at least 30 are dead after a crash involving a fuel tanker sparked a massive fire near Cairo and the Treasury Department's financial crimes enforcemen",
+   "category": "General",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 2,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "News Wrap: Severe weather threatens holiday travel for millions",
+     "url": "https://www.pbs.org/newshour/show/news-wrap-severe-weather-threatens-holiday-travel-for-millions"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Hundreds of flights cancelled as severe weather disrupts Thanksgiving travel in US",
+     "url": "https://www.bbc.co.uk/news/articles/ckm2mz3prq77o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Severe weather wreaks havoc on Thanksgiving travel, festivities",
+     "url": "https://thehill.com/policy/energy-environment/6244557-severe-weather-thanksgiving-travel-delays/"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "M-kone3vQTQ",
+     "title": "News Wrap: Severe weather threatens holiday travel for millions",
+     "thumb": "https://i.ytimg.com/vi/M-kone3vQTQ/hqdefault.jpg",
+     "channel": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Trump, NATO chief urge Russia not to expand war in Ukraine",
+   "summary": "President Trump and NATO Secretary General Mark Rutte urged Russia not to expand its war with Ukraine, as peace talks between the countries have made little headway in recent weeks and as the conflict nears five years. Trump and Rutte, following a meeting Wednesday at the preside",
+   "category": "World",
+   "leans": [
+    0,
+    1
+   ],
+   "span": 1,
+   "n_sources": 3,
+   "balance": {
+    "l": 0,
+    "c": 2,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump, NATO chief urge Russia not to expand war in Ukraine",
+     "url": "https://thehill.com/policy/international/6244695-donald-trump-mark-rutte-meeting-russia-ukraine-war/"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump, NATO chief caution Russia as attacks on Ukraine’s energy infrastructure intensify",
+     "url": "https://www.cnbc.com/2026/11/26/trump-nato-rutte-russia-ukraine-war.html"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump says he had ‘outstanding’ meeting with NATO chief over Iran, Russia wars",
+     "url": "https://www.washingtonexaminer.com/news/white-house/4816225/trump-outstanding-meeting-nato-chief-iran-russia/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Leaders choose Spain's former central bank head as next European Central Bank president",
+   "summary": "European leaders have chosen the former head of Spain's central bank, Pablo Hernandez de Cos, to succeed Christine Lagarde as president of the European Central Bank as the key EU institution confronts inflation driven by the war in Iran and worries about high government debt and ",
+   "category": "World",
+   "leans": [
+    0,
+    1
+   ],
+   "span": 1,
+   "n_sources": 3,
+   "balance": {
+    "l": 0,
+    "c": 2,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Spain’s Pablo Hernández de Cos set to lead European Central Bank",
+     "url": "https://www.cnbc.com/2026/11/26/pablo-hernandez-de-cos-ecb-president.html"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Spanish economist to become new European Central Bank chief",
+     "url": "https://www.aljazeera.com/news/2026/11/26/spanish-economist-to-become-new-european-central-bank-chief?traffic_source=rss"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Leaders choose Spain's former central bank head as next European Central Bank president",
+     "url": "https://www.washingtontimes.com/news/2026/nov/26/leaders-choose-spains-former-central-bank-head-next-european-central/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "US Troops in Poland Get a Taste of Thanksgiving",
+   "summary": "Under the frozen skies of northern Poland, American troops are running combat drills, training to perform under pressure in cramped cabins and assembling the communications antennas that are so critical to modern warfare. Although the troops can’t make it home, the military does ",
+   "category": "World",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "US Troops in Poland Get a Taste of Thanksgiving",
+     "url": "https://www.today.com/video/how-us-troops-stationed-in-poland-celebrate-thanksgiving-274222149700"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Bad taste: Why is Disney serving up witchcraft for Thanksgiving?",
+     "url": "https://thehill.com/opinion/technology/6240303-disney-witchcraft-thanksgiving-controversy/"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "_aaakO2SFpY",
+     "title": "U.S. troops based in Poland get a taste of Thanksgiving",
+     "thumb": "https://i.ytimg.com/vi/_aaakO2SFpY/hqdefault.jpg",
+     "channel": "NBC News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Thanksgiving travel chaos grows as storm brings widespread flight disruptions and power outages",
+   "summary": "A massive coastal storm is causing widespread flight disruptions and power outages as strong winds, heavy rain, and flooding batter the eastern United States on Thursday. Over 550 flights within, into, or out of the U.S. have been delayed, and 366 were canceled as of Thursday aro",
+   "category": "General",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Thanksgiving travel chaos grows as storm brings widespread flight disruptions and power outages",
+     "url": "https://www.washingtonexaminer.com/policy/infrastructure/4816191/thanksgiving-travel-chaos-flight-disruptions-power-outages/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Storm Slams East; Travel Delays, Power Outages Mount",
+     "url": "https://www.newsmax.com/newsfront/storms-holiday-travel/2026/11/26/id/1277618"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Zelenskyy warns of imminent major Russian attack on Ukraine's power grid",
+   "summary": "Russia is preparing another major attack on Ukraine's energy infrastructure, logistics and critical services, President Volodymyr Zelenskyy said Thursday, as U.S. envoy Jared Kushner said President Vladimir Putin has \"shown restraint\" in the war by agreeing not to use nuclear wea",
+   "category": "World",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Zelenskyy warns of imminent major Russian attack on Ukraine's power grid",
+     "url": "https://www.washingtontimes.com/news/2026/nov/26/volodymyr-zelenskyy-warns-imminent-major-russian-attack-ukraines/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Zelenskyy Warns of Imminent Major Russian Attack on Ukraine's Power Grid",
+     "url": "https://www.newsmax.com/newsfront/russia-ukraine-war/2026/11/26/id/1277629"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Food banks overwhelmed as people struggle to afford Thanksgiving meals",
+   "summary": "Food banks and resource centers are overwhelmed this season, with nearly 6.5 million fewer Americans receiving food assistance this year. Jason Allen reports.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Food banks overwhelmed as people struggle to afford Thanksgiving meals",
+     "url": "https://www.cbsnews.com/video/food-banks-overwhelmed-as-people-struggle-to-afford-thanksgiving-meals/"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  DoorDash aims to deliver 2M meals to food banks for free",
+     "url": "https://abcnews.com/video/138442558/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Diesel tanker capsizes near Ibiza, killing crew member",
+   "summary": "Aerial footage shows the capsized Maltese-flagged Med Emre chemical tanker off the Spanish island of Ibiza.",
+   "category": "General",
+   "leans": [
+    0
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 2,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Diesel tanker carrying up to 7,000 tonnes capsizes near Ibiza, killing one",
+     "url": "https://www.bbc.co.uk/news/articles/c9gklryvj24do?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Diesel tanker capsizes near Ibiza, killing crew member",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/26/aje-onl-nf_loaded-diesel-tanker-capsizes-off-ibiza-killing-one-261126?traffic_source=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "NTxNYFd1hx8",
+     "title": "Diesel tanker capsizes near Ibiza, killing crew member",
+     "thumb": "https://i.ytimg.com/vi/NTxNYFd1hx8/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "Musk makes $18 billion SpaceX stock pledge for every kid in America",
+   "summary": "Elon Musk on Wednesday pledged two SpaceX shares for every child in America, doubling an offer he made just last month. Why it matters: The $18 billion-plus giveaway roughly triples Michael Dell's once record-breaking Trump accounts gift . What they're saying: \" Every child in Am",
+   "category": "Politics",
+   "leans": [
+    0
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 2,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "SpaceX, Musk pledge to donate a share each to active Trump Accounts",
+     "url": "https://www.cnbc.com/2026/11/25/spacex-musk-trump-account-stock.html"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Musk makes $18 billion SpaceX stock pledge for every kid in America",
+     "url": "https://www.axios.com/2026/11/26/musk-spacex-shares-trump-accounts"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "This Year, I’m Thankful For That Famous J.D. Vance Tweet About Iran",
+   "summary": "We now know who's being honest about the state of the Republican Party and who's willing to hand the entire country over to Democrats.",
+   "category": "World",
+   "leans": [
+    2
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "The Federalist",
+     "lean": 2,
+     "label": "Right",
+     "title": "This Year, I’m Thankful For That Famous J.D. Vance Tweet About Iran",
+     "url": "https://thefederalist.com/2026/11/25/this-year-im-thankful-for-that-famous-j-d-vance-tweet-about-iran/?utm_source=rss&utm_medium=rss&utm_campaign=this-year-im-thankful-for-that-famous-j-d-vance-tweet-about-iran"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "RON HART: What I’m Thankful — And Not So Thankful — For This Year",
+     "url": "https://dailycaller.com/2026/11/25/ron-hart-annual-thanksgiving-thankful-list-donald-trump-jensen-huang-mamdani"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Fake online stores may fool AI shopping bots on Black Friday",
+   "summary": "AI bots are accidentally steering shoppers toward websites and online shops created by scammers using AI.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Fake online stores may fool AI shopping bots on Black Friday",
+     "url": "https://www.cbsnews.com/news/ai-shopping-agents-fake-online-stores-black-friday/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "15 shopping-related rumors just in time for Black Friday",
+     "link": "https://www.snopes.com/collections/retail-shopping-collection/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "What the Army's Iowa detonation means for nearby communities",
+   "summary": "The Army blew up a highly volatile lead chemical compound in Iowa after a federal court gave the green light. Officials called the operation a success, but did not take questions from reporters. Surrounding communities remain on alert, and three states say they're monitoring the ",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "What the Army's Iowa detonation means for nearby communities",
+     "url": "https://www.pbs.org/newshour/show/what-the-armys-iowa-detonation-means-for-nearby-communities"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Did Army plan to detonate chemicals other than lead azide in Iowa?",
+     "link": "https://www.snopes.com/news/2026/11/25/redacted-memo-lead-azide-iowa/"
+    }
+   ],
+   "videos": [
+    {
+     "videoId": "jQs2yZnFOUA",
+     "title": "What the Army's Iowa detonation means for nearby communities",
+     "thumb": "https://i.ytimg.com/vi/jQs2yZnFOUA/hqdefault.jpg",
+     "channel": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "The Army’s “Lead Bomb” Plan Is Back On—Now Timed For Thanksgiving",
+   "summary": "After a lawsuit, shifting delays, and massive public outcry, the US Army now plans to detonate 68 barrels of lead azide explosives in Middletown, Iowa on Wednesday morning—instructing hundreds of residents, especially pregnant women, children, and the chronically ill, to evacuate",
+   "category": "General",
+   "leans": [
+    -2
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "The Army’s “Lead Bomb” Plan Is Back On—Now Timed For Thanksgiving",
+     "url": "https://www.motherjones.com/environment/2026/11/iowa-lead-azide-detonation-ammunition-day-zimmermann-ordnance-illinois-toxic-dust/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Did Army plan to detonate chemicals other than lead azide in Iowa?",
+     "link": "https://www.snopes.com/news/2026/11/25/redacted-memo-lead-azide-iowa/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "Haley Stevens and Abdul El-Sayed's Thanksgiving Posts Compared",
+   "summary": "The Democratic rivals offered two very different messages for Michiganders in their Thanksgiving posts.",
+   "category": "Politics",
+   "leans": [
+    0
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Haley Stevens and Abdul El-Sayed's Thanksgiving Posts Compared",
+     "url": "https://www.newsweek.com/haley-stevens-and-abdul-el-sayeds-thanksgiving-posts-compared-12771205"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Did Abdul El-Sayed suggest making Second Amendment the 'right to have healthcare'?",
+     "link": "https://www.snopes.com/news/2026/11/25/second-amendment-abdul-el-sayed/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "Congo Ebola outbreak reaches 12,000 cases as some responders evacuate",
+   "summary": "As the fast-moving outbreak continues to spread in eastern Congo, fighting between rebels and the army is disrupting efforts to contain the spread of the disease.",
+   "category": "Health",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Congo Ebola outbreak reaches 12,000 cases as some responders evacuate",
+     "url": "https://www.npr.org/2026/11/26/g-s1-155957/congo-ebola-responders"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "'Memories of a Good Meal': How food made a difference during WWII",
+   "summary": "New Orleans Chef Alon Shaya's new cookbook shares stories of resilience from World War II, centered around food.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "'Memories of a Good Meal': How food made a difference during WWII",
+     "url": "https://www.npr.org/2026/11/26/nx-s1-6028781/memories-of-a-good-meal-cookbook-chef-alon-shaya"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "At Albuquerque's Indian Pueblo Kitchen, Native American dishes are the main course",
+   "summary": "At an Albuquerque, N.M., museum, the restaurant is just as much of a draw as the exhibitions, with dishes like green chile stew and sweet biscochitos flavored with anise and cinnamon.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "At Albuquerque's Indian Pueblo Kitchen, Native American dishes are the main course",
+     "url": "https://www.npr.org/2026/11/26/nx-s1-5983712/indian-pueblo-kitchen-native-american-food-albuquerque"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "A dish with a story, Thanksgiving with culinary historian Michael Twitty",
+   "summary": "NPR's Leila Fadel welcomes culinary historian Michael Twitty into her kitchen for a Thanksgiving cooking session on making Kush, the forerunner to Southern cornbread dressing.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "A dish with a story, Thanksgiving with culinary historian Michael Twitty",
+     "url": "https://www.npr.org/2026/11/26/nx-s1-6044602/michael-twitty-thanksgiving-food-culinary-history"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Court lets Puerto Rico governor fire firm that runs the island's troubled power grid",
+   "summary": "LUMA Energy took over the electric grid five years ago. The court's ruling nullifies its contract, and gives the government a year to find a new operator.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Court lets Puerto Rico governor fire firm that runs the island's troubled power grid",
+     "url": "https://www.npr.org/2026/11/26/nx-s1-6054139/court-rules-puerto-ricos-governor-can-fire-company-that-runs-troubled-power-grid"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "FCC says SpaceX can deploy 1 million satellites for data centers in space. Scientists are skeptical",
+   "summary": "The Trump administration gave Elon Musk's SpaceX the green light to deploy 1 million satellites that it said would create data centers in space, a move that has raised skepticism among scientists.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "FCC says SpaceX can deploy 1 million satellites for data centers in space. Scientists are skeptical",
+     "url": "https://www.npr.org/2026/11/26/g-s1-155940/fcc-spacex-satellites-data-centers-in-space"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "‘I’m no longer a UAE official’: UN hopeful Lana Nusseibeh tries to shake off Sudan record",
+   "summary": "The US and Russia’s candidate for secretary general is on a charm offensive. Can she overcome London’s resistance to her bid? Lana Nusseibeh is in Britain this week, attempting to present herself as a potential future UN secretary general, and shift the focus from her past as a U",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "‘I’m no longer a UAE official’: UN hopeful Lana Nusseibeh tries to shake off Sudan record",
+     "url": "https://www.theguardian.com/world/2026/nov/26/lana-nusseibeh-uae-sudan-un-secretary-general"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Swiss tourist killed and British and Americans injured by elephants in Cameroon",
+   "summary": "Alain Throo, insurance executive based in London, reportedly gored and later died on hike near Mount Cameroon national park A Swiss tourist has been killed and British and American tourists have been injured when a group of hikers encountered a herd of elephants in Cameroon. The ",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Swiss tourist killed and British and Americans injured by elephants in Cameroon",
+     "url": "https://www.theguardian.com/environment/2026/nov/25/swiss-tourist-killed-british-americans-injured-elephants-cameroon"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Sri Lankan asylum seeker killed himself after being sent by UK to Eswatini",
+   "summary": "Kishanth Peramalya was denied entry due to sexual assault convictions and sent to Africa where he had no connections The UK sent a Sri Lankan asylum seeker who had been convicted of sexual assault to Eswatini, a southern African country to which he had no connection and where he ",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Sri Lankan asylum seeker killed himself after being sent by UK to Eswatini",
+     "url": "https://www.theguardian.com/uk-news/2026/nov/25/sri-lanka-asylum-seeker-convicted-sexual-assault-uk-kills-himself-eswatini"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "More than 300 Russians killed as Moscow props up Mali’s junta, leaked data reveals",
+   "summary": "Exclusive: Records list 349 deaths in three years in Mali and also shed light on Russia’s military activity elsewhere in Africa When the attack on Kidal began before dawn on 25 April this year, the Russian fighters were caught off guard. Within the first hour, checkpoints on the ",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "More than 300 Russians killed as Moscow props up Mali’s junta, leaked data reveals",
+     "url": "https://www.theguardian.com/world/2026/nov/24/russian-fighters-killed-in-mali-africa-leaked-data"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "All hostages rescued after Colombian security forces storm supermarket, police say",
+   "summary": "Unclear if ‘hostage-taker’ who was killed may have been a hostage as daylong siege in Cartagena shopping centre ends Colombian police have stormed a supermarket in one of the country’s most popular tourist cities, ending a daylong siege in which all the hostages were freed and on",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "All hostages rescued after Colombian security forces storm supermarket, police say",
+     "url": "https://www.theguardian.com/world/2026/nov/25/hostages-freed-colombia-security-forces-storm-cartagena-supermarket"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Lululemon founder stuns Canadian women’s leadership conference with sexist comments",
+   "summary": "Chip Wilson said men importing brides from Thailand was due to women waiting too long to have children The controversial founder of Lululemon suggested women in Canada are having too few children and this could lead some men to bring in brides from Thailand , in remarks that stun",
+   "category": "Tech",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Lululemon founder stuns Canadian women’s leadership conference with sexist comments",
+     "url": "https://www.theguardian.com/world/2026/nov/25/lululemon-founder-comments-canada-womens-leadership-conference"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Colombia’s president arrives at scene of supermarket hostage siege in tourist city",
+   "summary": "Abelardo de la Espriella to take control of operation trying to free at least 20 hostages Colombia’s president has arrived at the scene of an hours-long standoff between security services and gunmen holding at least 20 people hostage inside a supermarket in Cartagena, a popular t",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Colombia’s president arrives at scene of supermarket hostage siege in tourist city",
+     "url": "https://www.theguardian.com/world/2026/nov/24/cartagena-colombia-hostages-supermarket"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Kilmar Ábrego García, man at center of Trump deportation battle, leaves US",
+   "summary": "Salvadorian man, who was deported in March 2025 and returned to US after supreme court ruling, leaving of own volition for Spain Kilmar Ábrego García has left the United States of his own volition, his lawyers confirmed on Tuesday, with the Department of Homeland Security confirm",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Kilmar Ábrego García, man at center of Trump deportation battle, leaves US",
+     "url": "https://www.theguardian.com/us-news/2026/nov/24/kilmar-abrego-garcia-leaves-us"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Canada says it ‘does not report to the US’ after Pentagon criticizes military spending",
+   "summary": "Scathing US document memo supposedly ‘atrophied’ defence capabilities of its northern neighbour Canada is a “sovereign nation” that does not “report” to the United States, the country’s defense minister said after the Pentagon released a scathing memo that criticized the supposed",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Canada says it ‘does not report to the US’ after Pentagon criticizes military spending",
+     "url": "https://www.theguardian.com/world/2026/nov/24/canada-sovereign-nation-us-relations-defence-pentagon-memo"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "‘Trapped in grief’: wife of Japanese journalist detained by Russia pleads for his release",
+   "summary": "Yuki Imai being held in Moscow on allegations he conducted ‘espionage’ while working for a newspaper in Sakhalin island in Russia’s far east The wife of a Japanese journalist who has been detained in Russia for more than a month on suspicion of spying has issued an emotive appeal",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "‘Trapped in grief’: wife of Japanese journalist detained by Russia pleads for his release",
+     "url": "https://www.theguardian.com/world/2026/nov/26/japanese-journalist-yuki-imai-detained-in-russia-wife-pleads-his-release"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Thanksgiving travelers face long airport lines and packed roads",
+   "summary": "Thousands of flights are canceled or delayed because of storms on one of the busiest travel days of the year. On the roads, families are ending up in standstill traffic.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Thanksgiving travelers face long airport lines and packed roads",
+     "url": "https://www.today.com/video/thanksgiving-travelers-face-long-airport-lines-and-packed-roads-274224197586"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Children’s Hospital Throws Thanksgiving Parade for Patients",
+   "summary": "Doctors, nurses and staffers at New York-Presbyterian Morgan Stanley Children’s Hospital got an early start to the Thanksgiving holiday spirit. They threw a special parade complete with floats, balloons and costumes all chosen and designed by patients themselves. TODAY’s Laura Ja",
+   "category": "Health",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Children’s Hospital Throws Thanksgiving Parade for Patients",
+     "url": "https://www.today.com/video/children-s-hospital-throws-thanksgiving-parade-for-patients-274221126000"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Steve Kornacki Breaks Down NFL Thanksgiving Matchups",
+   "summary": "NBC’s chief data analyst Steve Kornacki joins TODAY to break down the lineup of NFL games around the Thanksgiving holiday and share trivia for one of the most-watched events of the season.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Steve Kornacki Breaks Down NFL Thanksgiving Matchups",
+     "url": "https://www.today.com/video/steve-kornacki-breaks-down-nfl-thanksgiving-matchups-274163781586"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "American entrepreneurs move to China’s tech hub",
+   "summary": "NBC Nightly News anchor Tom Llamas reports from Shenzhen, where some American entrepreneurs are betting on China’s tech boom despite its weakening economy.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "American entrepreneurs move to China’s tech hub",
+     "url": "https://www.nbcnews.com/nightly-news/video/american-entrepreneurs-move-to-china-s-tech-hub-273861701583"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "A rising political star in China is the latest victim of Xi’s purge",
+   "summary": "He was on the rise among China’s political elite, hosting tech leaders and senior American officials.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "A rising political star in China is the latest victim of Xi’s purge",
+     "url": "https://www.nbcnews.com/world/china/rising-star-china-latest-victim-xis-purge-chen-jining-rcna611258"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Black Friday deals are here, and they’re actually really good — I’m tracking the best ones live",
+   "summary": "Shop Black Friday 2026 deals on tech, home, kitchen, beauty, fashion and more. NBC Selected editors reviewed thousands of discounts to find top-rated products and standout savings worth shopping now.",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Black Friday deals are here, and they’re actually really good — I’m tracking the best ones live",
+     "url": "https://www.nbcnews.com/select/shopping/best-black-friday-deals-11-26-2026-rcna611358"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  }
+ ],
+ "blindspots": [
+  {
+   "title": "Thanksgiving travel chaos grows as storm brings widespread flight disruptions and power outages",
+   "summary": "A massive coastal storm is causing widespread flight disruptions and power outages as strong winds, heavy rain, and flooding batter the eastern United States on Thursday. Over 550 flights within, into, or out of the U.S. have been delayed, and 366 were canceled as of Thursday aro",
+   "category": "General",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Thanksgiving travel chaos grows as storm brings widespread flight disruptions and power outages",
+     "url": "https://www.washingtonexaminer.com/policy/infrastructure/4816191/thanksgiving-travel-chaos-flight-disruptions-power-outages/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Storm Slams East; Travel Delays, Power Outages Mount",
+     "url": "https://www.newsmax.com/newsfront/storms-holiday-travel/2026/11/26/id/1277618"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Zelenskyy warns of imminent major Russian attack on Ukraine's power grid",
+   "summary": "Russia is preparing another major attack on Ukraine's energy infrastructure, logistics and critical services, President Volodymyr Zelenskyy said Thursday, as U.S. envoy Jared Kushner said President Vladimir Putin has \"shown restraint\" in the war by agreeing not to use nuclear wea",
+   "category": "World",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Zelenskyy warns of imminent major Russian attack on Ukraine's power grid",
+     "url": "https://www.washingtontimes.com/news/2026/nov/26/volodymyr-zelenskyy-warns-imminent-major-russian-attack-ukraines/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Zelenskyy Warns of Imminent Major Russian Attack on Ukraine's Power Grid",
+     "url": "https://www.newsmax.com/newsfront/russia-ukraine-war/2026/11/26/id/1277629"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Food banks overwhelmed as people struggle to afford Thanksgiving meals",
+   "summary": "Food banks and resource centers are overwhelmed this season, with nearly 6.5 million fewer Americans receiving food assistance this year. Jason Allen reports.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Food banks overwhelmed as people struggle to afford Thanksgiving meals",
+     "url": "https://www.cbsnews.com/video/food-banks-overwhelmed-as-people-struggle-to-afford-thanksgiving-meals/"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  DoorDash aims to deliver 2M meals to food banks for free",
+     "url": "https://abcnews.com/video/138442558/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "This Year, I’m Thankful For That Famous J.D. Vance Tweet About Iran",
+   "summary": "We now know who's being honest about the state of the Republican Party and who's willing to hand the entire country over to Democrats.",
+   "category": "World",
+   "leans": [
+    2
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "The Federalist",
+     "lean": 2,
+     "label": "Right",
+     "title": "This Year, I’m Thankful For That Famous J.D. Vance Tweet About Iran",
+     "url": "https://thefederalist.com/2026/11/25/this-year-im-thankful-for-that-famous-j-d-vance-tweet-about-iran/?utm_source=rss&utm_medium=rss&utm_campaign=this-year-im-thankful-for-that-famous-j-d-vance-tweet-about-iran"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "RON HART: What I’m Thankful — And Not So Thankful — For This Year",
+     "url": "https://dailycaller.com/2026/11/25/ron-hart-annual-thanksgiving-thankful-list-donald-trump-jensen-huang-mamdani"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  }
+ ],
+ "factchecks": [
+  {
+   "org": "Snopes",
+   "title": "Is Islam the fastest growing religion in the US? We checked the data",
+   "link": "https://www.snopes.com/fact-check/islam-us-growth/",
+   "summary": "Versions of the rumor have been making the rounds on social media for more than 20 years."
+  },
+  {
+   "org": "Snopes",
+   "title": "15 shopping-related rumors just in time for Black Friday",
+   "link": "https://www.snopes.com/collections/retail-shopping-collection/",
+   "summary": "We scoured our archives for stories involving Target, Walmart, Sears and other retailers."
+  },
+  {
+   "org": "Snopes",
+   "title": "Is there arsenic in Nerds, Snickers, other US candies? We asked experts",
+   "link": "https://www.snopes.com/news/2026/11/26/arsenic-candy-products/",
+   "summary": "Critics of a Florida study claimed its method of testing looks for inorganic arsenic in soil and water rather than food."
+  },
+  {
+   "org": "Snopes",
+   "title": "Black Friday: The history behind the name",
+   "link": "https://www.snopes.com/articles/474461/black-friday-history-name/",
+   "summary": "Some holidays have names with obvious origins. Black Friday isn't one of them."
+  },
+  {
+   "org": "Snopes",
+   "title": "Alleged footage of children locked in cages isn't from Epstein files",
+   "link": "https://www.snopes.com/fact-check/video-children-cages-epstein-files/",
+   "summary": "The original video appeared on a horror YouTube channel in 2025."
+  },
+  {
+   "org": "Snopes",
+   "title": "Did Army plan to detonate chemicals other than lead azide in Iowa?",
+   "link": "https://www.snopes.com/news/2026/11/25/redacted-memo-lead-azide-iowa/",
+   "summary": "Multiple official EPA documents about the detonation featured redactions, fueling the claim."
+  },
+  {
+   "org": "Snopes",
+   "title": "Did Trump invest $3M in Nvidia before it reinstated Jensen Huang?",
+   "link": "https://www.snopes.com/news/2026/11/25/trump-nvidia-jensen-huang/",
+   "summary": "The president has traded millions worth of Nvidia stock — but claims that he traded $3 million right before Jensen's return are not based in fact."
+  },
+  {
+   "org": "Snopes",
+   "title": "Did Russia use Nvidia hardware in drone that killed civilians in Ukraine? What we know",
+   "link": "https://www.snopes.com/news/2026/11/25/russia-ukraine-nvidia-drone/",
+   "summary": "The New York Times reported in August that Russia was using computer modules from the U.S. technology company Nvidia to pilot autonomous drones."
+  },
+  {
+   "org": "Snopes",
+   "title": "Did Abdul El-Sayed suggest making Second Amendment the 'right to have healthcare'?",
+   "link": "https://www.snopes.com/news/2026/11/25/second-amendment-abdul-el-sayed/",
+   "summary": "Posts also claimed the Michigan Democratic senator-elect wanted to ban fireworks from Independence Day celebrations."
+  },
+  {
+   "org": "Snopes",
+   "title": "Did Army detonate lead azide stockpile in crucial area for US food supply? Here's context",
+   "link": "https://www.snopes.com/fact-check/army-lead-azide-food-supply/",
+   "summary": "People shared a map claiming to show the Army’s detonation was located in an area with a high concentration of agriculture production."
+  },
+  {
+   "org": "Snopes",
+   "title": "Is US Army planning to detonate massive amount of lead azide in Middletown, Iowa?",
+   "link": "https://www.snopes.com/fact-check/lead-azide-detonation-army-iowa/",
+   "summary": "The best way to safely dispose of the explosive waste is to detonate it in place, according to the Army."
+  },
+  {
+   "org": "Snopes",
+   "title": "Real video of NYC lawmaker Jordan Wright's eye roll fuels lizard conspiracy theory",
+   "link": "https://www.snopes.com/fact-check/nyc-assemblyman-eye-roll-lizard/",
+   "summary": "“Obviously I’m a human being,” Wright reportedly told the New York Post."
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Trump Officials Overstate Role in Drug-Death Decline",
+   "link": "https://www.factcheck.org/2026/11/trump-officials-overstate-role-in-drug-death-decline/",
+   "summary": "Trump administration officials, and the president himself, have taken credit for a decline in fatal overdoses, citing a \"sealed\" or \"secure\" border and actions against cartels, including airstrikes on alleged drug boats. But overdose deaths were already falling when Trump took of"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "FactChecking Trump’s Auto Plants Claims",
+   "link": "https://www.factcheck.org/2026/11/factchecking-trumps-auto-plants-claims/",
+   "summary": "In declaring his high tariffs on imported vehicles a success, President Donald Trump often makes false and unsubstantiated claims about auto manufacturing plants in the United States. The post FactChecking Trump’s Auto Plants Claims appeared first on FactCheck.org ."
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Trump’s Misguided Claim That ‘They’ Waited to Lower Gas Prices Until After the Midterms",
+   "link": "https://www.factcheck.org/2026/11/trumps-misguided-claim-that-they-waited-to-lower-gas-prices-until-after-the-midterms/",
+   "summary": "Gasoline prices have been trending downward, dropping about 75 cents per gallon since Sept. 24, though prices are still about 69 cents higher than this time a year ago. In a social media post on Nov. 17, President Donald Trump wrongly suggested there was a political motivation be"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Former Trump Administration Health Adviser Misleads About mRNA Flu Vaccine",
+   "link": "https://www.factcheck.org/2026/11/former-trump-administration-health-adviser-misleads-about-mrna-flu-vaccine/",
+   "summary": "Former Health and Human Services Department adviser Calley Means has misleadingly suggested that the new mRNA influenza vaccine from Moderna isn’t safe and doesn’t work well. Less is known about it because it is a new vaccine, but trial data suggest it works better than standard "
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Trump Makes False and Misleading Claims About Funding for HBCUs",
+   "link": "https://www.factcheck.org/2026/11/trump-makes-false-and-misleading-claims-about-funding-for-hbcus/",
+   "summary": "President Donald Trump falsely claimed that former Presidents Barack Obama and Joe Biden “did nothing” in terms of funding for historically Black colleges and universities that Trump said he “saved” from bankruptcy. The post Trump Makes False and Misleading Claims About Funding f"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Unpacking the Partisan Finger-Pointing Over FAA Funding",
+   "link": "https://www.factcheck.org/2026/11/unpacking-the-partisan-finger-pointing-over-faa-funding/",
+   "summary": "The grounding of thousands of flights on Nov. 13 set off a round of partisan finger-pointing over who’s to blame for the state of the nation’s aging air traffic control system. The post Unpacking the Partisan Finger-Pointing Over FAA Funding appeared first on FactCheck.org ."
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Our Annual Fundraising Drive",
+   "link": "https://www.factcheck.org/2026/11/our-annual-fundraising-drive/",
+   "summary": "Please consider giving a donation to FactCheck.org during our annual end-of-year fundraising drive, which starts today and lasts until the end of the year. The post Our Annual Fundraising Drive appeared first on FactCheck.org ."
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Florida’s Surgeon General Spins State COVID-19 Vaccine Comparison Study",
+   "link": "https://www.factcheck.org/2026/11/floridas-surgeon-general-spins-state-covid-19-vaccine-comparison-study/",
+   "summary": "A new analysis of data from Florida found a higher risk of mortality in those receiving the Pfizer versus the Moderna COVID-19 vaccine in the year after a first dose. It does not establish that the Pfizer vaccine was dangerous or caused deaths, contrary to suggestions by the stat"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "FactChecking Trump’s Post-Election ‘60 Minutes’ Interview",
+   "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/",
+   "summary": "In his first sit-down interview since the midterm elections that saw Democrats retake control of both the House and Senate, President Donald Trump blamed Republicans’ poor showing on “bad messaging” of his second term accomplishments. But in his recounting of events, Trump repeat"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Explaining the U.S. Defense Agreement with Greenland and Denmark",
+   "link": "https://www.factcheck.org/2026/11/explaining-the-u-s-defense-agreement-with-greenland-and-denmark/",
+   "summary": "Under the terms of a new defense agreement between Greenland, Denmark and the United States, Greenland remains a self-governed territory of Denmark with the right to declare its independence in the future. The U.S. did not \"get” Greenland, nor does it now \"own\" Greenland, as Pres"
+  },
+  {
+   "org": "Full Fact",
+   "title": "Video of large anti-immigration protest in London is AI",
+   "link": "https://fullfact.org/immigration/video-large-immigration-protest-london-ai/",
+   "summary": "A video of people marching through London demanding tighter border controls has been shared on Facebook. But the clip is fake and was made with AI."
+  },
+  {
+   "org": "Full Fact",
+   "title": "Fake video of British Army convoy on UK street shared on social media",
+   "link": "https://fullfact.org/culture-and-society/fake-british-army-convoy-video/",
+   "summary": ""
+  }
+ ]
 }
