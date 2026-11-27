@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-27T05:00:35Z",
- "generated_human": "Nov 27, 2026 · 05:00 UTC",
+ "generated": "2026-11-27T06:00:45Z",
+ "generated_human": "Nov 27, 2026 · 06:00 UTC",
  "sources": [
   {
    "name": "NPR",
@@ -207,7 +207,7 @@
   }
  ],
  "n_articles": 338,
- "n_videos": 140,
+ "n_videos": 110,
  "trending": [
   {
    "term": "trump",
@@ -219,10 +219,10 @@
   },
   {
    "term": "iran",
-   "n": 10
+   "n": 9
   },
   {
-   "term": "holiday",
+   "term": "putin",
    "n": 9
   },
   {
@@ -234,19 +234,23 @@
    "n": 8
   },
   {
-   "term": "putin",
+   "term": "holiday",
    "n": 8
-  },
-  {
-   "term": "parade",
-   "n": 7
   },
   {
    "term": "macy",
    "n": 7
   },
   {
+   "term": "parade",
+   "n": 7
+  },
+  {
    "term": "killed",
+   "n": 7
+  },
+  {
+   "term": "storm",
    "n": 7
   },
   {
@@ -258,10 +262,6 @@
    "n": 7
   },
   {
-   "term": "money",
-   "n": 7
-  },
-  {
    "term": "free",
    "n": 6
   },
@@ -270,11 +270,43 @@
    "n": 6
   },
   {
-   "term": "storm",
+   "term": "history",
    "n": 6
   }
  ],
  "videos": [
+  {
+   "videoId": "GCsYkO3KsrY",
+   "title": "Ebola deaths could be much higher than reported | DW News",
+   "thumb": "https://i.ytimg.com/vi/GCsYkO3KsrY/hqdefault.jpg",
+   "channel": "DW News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "88GbfXLTKN8",
+   "title": "LISTEN: ATC audio captures moment FedEx cargo jet overshoots runway",
+   "thumb": "https://i.ytimg.com/vi/88GbfXLTKN8/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "HsQIYKMY6Zg",
+   "title": "Trump CALLS OUT Minnesota fraud: ‘Stole billions and billions’",
+   "thumb": "https://i.ytimg.com/vi/HsQIYKMY6Zg/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "YQtNaSFQPIo",
+   "title": "New Zealand’s Opportunity Party poised to become election kingmaker | AJ #shorts",
+   "thumb": "https://i.ytimg.com/vi/YQtNaSFQPIo/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
   {
    "videoId": "lscTtOeqPew",
    "title": "The workers caught in Germany's industrial transition | DW News",
@@ -370,38 +402,6 @@
    "channel": "Al Jazeera",
    "lean": 0,
    "label": "Center"
-  },
-  {
-   "videoId": "r9mgbYhBy8Q",
-   "title": "Trump says Putin can attend G20 if he wants",
-   "thumb": "https://i.ytimg.com/vi/r9mgbYhBy8Q/hqdefault.jpg",
-   "channel": "Reuters",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "h7obQwQWOds",
-   "title": "Zelensky questions 'strange' Trump-Putin friendship | BBC News",
-   "thumb": "https://i.ytimg.com/vi/h7obQwQWOds/hqdefault.jpg",
-   "channel": "BBC News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "IIpqz5GA7Sw",
-   "title": "Storm brings Thanksgiving travel chaos | DW News",
-   "thumb": "https://i.ytimg.com/vi/IIpqz5GA7Sw/hqdefault.jpg",
-   "channel": "DW News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "FAYjE1rH4Cs",
-   "title": "Report: Nvidia to suspend sales to four counties in Southeast Asia",
-   "thumb": "https://i.ytimg.com/vi/FAYjE1rH4Cs/hqdefault.jpg",
-   "channel": "ABC News",
-   "lean": -1,
-   "label": "Lean Left"
   }
  ],
  "stories": [
@@ -605,11 +605,11 @@
     2
    ],
    "span": 3,
-   "n_sources": 7,
+   "n_sources": 8,
    "balance": {
     "l": 1,
     "c": 3,
-    "r": 3
+    "r": 4
    },
    "blindspot": null,
    "sources": [
@@ -640,6 +640,13 @@
      "label": "Center",
      "title": "Zelensky Rips Trump Over Putin Embrace, Compares It to Befriending Hitler",
      "url": "https://www.newsweek.com/zelensky-rips-trump-over-putin-embrace-compares-it-to-befriending-hitler-12772292"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Trump says Putin can come to G20 if he wants: ‘I’d like to have him’",
+     "url": "https://nypost.com/2026/11/27/us-news/trump-says-putin-can-come-to-g20-if-he-wants-id-like-to-have-him/"
     },
     {
      "name": "Washington Examiner",
@@ -757,63 +764,6 @@
    ]
   },
   {
-   "title": "Trump: Iran war will be over 'sort of whenever I want it to be'",
-   "summary": "President Trump said the Iran war will be over “sort of whenever I want it to be” as the conflict stretches into its ninth month and pushback against it grows. The president called soldiers at Mar-a-Lago on Thursday alongside first lady Melania Trump, saying they “joined millions",
-   "category": "World",
-   "leans": [
-    -1,
-    0,
-    2
-   ],
-   "span": 3,
-   "n_sources": 5,
-   "balance": {
-    "l": 1,
-    "c": 3,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Iran accused of carrying out drone attack killing 2 Italians in Kuwait",
-     "url": "https://www.cbsnews.com/live-updates/iran-war-us-military-ai-weapons-oil/"
-    },
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Two Italians killed in strike in Kuwait, as Iran denies responsibility",
-     "url": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o?at_medium=RSS&at_campaign=rss"
-    },
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Trump: Iran war will be over 'sort of whenever I want it to be'",
-     "url": "https://thehill.com/homenews/administration/6245034-trump-says-iran-war-ends-whenever/"
-    },
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "Two Italians killed in Kuwait drone attack; Trump says Iran war ends ‘whenever I want it’",
-     "url": "https://www.cnbc.com/2026/11/27/us-iran-war-trump-hormuz-italian-killed-trump.html"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Iran accuses Zelenskyy of 'false flag' Kuwait drone strike op to get Trump's attention",
-     "url": "https://www.foxnews.com/world/iran-accuses-zelenskyy-false-flag-kuwait-drone-strike-op-get-trumps-attention"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Trump approves $100 million in Florida disaster relief on Thanksgiving",
    "summary": "President Donald Trump signed $100 million in disaster relief for Florida on Thanksgiving, as the state grapples with rebuilding after flooding and prolonged heavy storms. The president returned to his state of residence for the weekend to celebrate Thanksgiving, but he also held",
    "category": "Politics",
@@ -915,6 +865,47 @@
    "videos": []
   },
   {
+   "title": "Black Friday deals are here, and they’re actually really good — I’m tracking the best ones live",
+   "summary": "Shop Black Friday 2026 deals on tech, home, kitchen, beauty, fashion and more. NBC Selected editors reviewed thousands of discounts to find top-rated products and standout savings worth shopping now.",
+   "category": "Economy",
+   "leans": [
+    -1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Black Friday deals are here, and they’re actually really good — I’m tracking the best ones live",
+     "url": "https://www.nbcnews.com/select/shopping/best-black-friday-deals-11-26-2026-rcna611358"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Shopping with Friends: 8 Black Friday deals to shop now",
+     "url": "https://www.foxnews.com/deals/shopping-with-friends-black-friday-deals"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "15 shopping-related rumors just in time for Black Friday",
+     "link": "https://www.snopes.com/collections/retail-shopping-collection/"
+    }
+   ],
+   "videos": []
+  },
+  {
    "title": "Stormy Thanksgiving weather causes delays and damages for many Americans",
    "summary": "A stormy Thanksgiving day led to serious flooding, major power outages and disrupted travel plans. By Thursday evening, more than 900,000 customers were without power in at least eight states. The East Coast is grappling with a pair of storm systems affecting people from Maine to",
    "category": "General",
@@ -924,14 +915,21 @@
     1
    ],
    "span": 2,
-   "n_sources": 5,
+   "n_sources": 7,
    "balance": {
-    "l": 3,
-    "c": 1,
+    "l": 4,
+    "c": 2,
     "r": 1
    },
    "blindspot": null,
    "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Monster East Coast storm leaves hundreds of thousands without power",
+     "url": "https://www.nbcnews.com/nightly-news/video/monster-east-coast-storm-leaves-hundreds-of-thousands-without-power-274244677776"
+    },
     {
      "name": "CBS News",
      "lean": -1,
@@ -961,6 +959,13 @@
      "url": "https://www.bbc.co.uk/news/articles/ckm2mz3prq77o?at_medium=RSS&at_campaign=rss"
     },
     {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Monster Thanksgiving Storm Brings Sandy-Level Flooding to East Coast",
+     "url": "https://www.newsweek.com/monster-thanksgiving-storm-brings-sandy-level-flooding-to-east-coast-12772384"
+    },
+    {
      "name": "Washington Times",
      "lean": 1,
      "label": "Lean Right",
@@ -970,6 +975,14 @@
    ],
    "factchecks": [],
    "videos": [
+    {
+     "videoId": "7oQDD-SXuDE",
+     "title": "Monster East Coast storm leaves hundreds of thousands without power on Thanksgiving",
+     "thumb": "https://i.ytimg.com/vi/7oQDD-SXuDE/hqdefault.jpg",
+     "channel": "NBC News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
     {
      "videoId": "q340LbMRoU8",
      "title": "Major Thanksgiving storm brings flooding, flight delays across US. #BBCNews",
@@ -1073,6 +1086,56 @@
    "videos": []
   },
   {
+   "title": "Mike Tomlin calls Steelers situation following Aaron Rodgers vs. Mike McCarthy feud 'a dumpster fire'",
+   "summary": "Mike Tomlin calls the Steelers situation following the Aaron Rodgers vs. Mike McCarthy feud a \"dumpster fire\" and admits he's sad and upset.",
+   "category": "General",
+   "leans": [
+    0,
+    1,
+    2
+   ],
+   "span": 2,
+   "n_sources": 3,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Tom Brady Blasts Aaron Rodgers for Public Comments on Mike McCarthy",
+     "url": "https://www.newsweek.com/sports/nfl/tom-brady-blasts-aaron-rodgers-for-public-comments-on-mike-mccarthy-12772251"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Steelers Owner Throws Aaron Rodgers Under the Bus After Pat McAfee Interview",
+     "url": "https://www.newsweek.com/sports/nfl/steelers-owner-throws-aaron-rodgers-under-the-bus-after-pat-mcafee-interview-12772272"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Mike Tomlin responds to Steelers ‘dumpster fire’ after Aaron Rodgers debacle",
+     "url": "https://nypost.com/2026/11/27/sports/mike-tomlin-responds-to-steelers-dumpster-fire-after-aaron-rodgers-debacle/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Mike Tomlin calls Steelers situation following Aaron Rodgers vs. Mike McCarthy feud 'a dumpster fire'",
+     "url": "https://www.foxnews.com/outkick-sports/mike-tomlin-calls-steelers-situation-following-aaron-rodgers-vs-mike-mccarthy-feud-dumpster-fire"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "Why the Army detonated toxic explosives in Iowa",
    "summary": "This story appeared in Today, Explained, a daily newsletter that helps you understand the most compelling news and stories of the day. Subscribe here. On Wednesday, the Pentagon blew up about five tons of lead azide, an unstable explosive stored at an ammunition plant in Iowa, in",
    "category": "General",
@@ -1117,14 +1180,6 @@
      "title": "Iowa farmer worried about impact of Army detonation of lead explosives on his cattle #shorts",
      "thumb": "https://i.ytimg.com/vi/tAgULY9Re3U/hqdefault.jpg",
      "channel": "CBS News",
-     "lean": -1,
-     "label": "Lean Left"
-    },
-    {
-     "videoId": "1VTr2BugUjM",
-     "title": "Army detonates nearly 10,000 pounds of lead-based explosives",
-     "thumb": "https://i.ytimg.com/vi/1VTr2BugUjM/hqdefault.jpg",
-     "channel": "Washington Post",
      "lean": -1,
      "label": "Lean Left"
     }
@@ -1201,42 +1256,49 @@
    "videos": []
   },
   {
-   "title": "Mike Tomlin calls Steelers situation following Aaron Rodgers vs. Mike McCarthy feud 'a dumpster fire'",
-   "summary": "Mike Tomlin calls the Steelers situation following the Aaron Rodgers vs. Mike McCarthy feud a \"dumpster fire\" and admits he's sad and upset.",
-   "category": "General",
+   "title": "Trump: Iran war will be over 'sort of whenever I want it to be'",
+   "summary": "President Trump said the Iran war will be over “sort of whenever I want it to be” as the conflict stretches into its ninth month and pushback against it grows. The president called soldiers at Mar-a-Lago on Thursday alongside first lady Melania Trump, saying they “joined millions",
+   "category": "World",
    "leans": [
-    0,
-    2
+    -1,
+    0
    ],
-   "span": 2,
-   "n_sources": 2,
+   "span": 1,
+   "n_sources": 4,
    "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 1
+    "l": 1,
+    "c": 3,
+    "r": 0
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Tom Brady Blasts Aaron Rodgers for Public Comments on Mike McCarthy",
-     "url": "https://www.newsweek.com/sports/nfl/tom-brady-blasts-aaron-rodgers-for-public-comments-on-mike-mccarthy-12772251"
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Iran accused of carrying out drone attack killing 2 Italians in Kuwait",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-us-military-ai-weapons-oil/"
     },
     {
-     "name": "Newsweek",
+     "name": "BBC News",
      "lean": 0,
      "label": "Center",
-     "title": "Steelers Owner Throws Aaron Rodgers Under the Bus After Pat McAfee Interview",
-     "url": "https://www.newsweek.com/sports/nfl/steelers-owner-throws-aaron-rodgers-under-the-bus-after-pat-mcafee-interview-12772272"
+     "title": "Two Italians killed in strike in Kuwait, as Iran denies responsibility",
+     "url": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o?at_medium=RSS&at_campaign=rss"
     },
     {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Mike Tomlin calls Steelers situation following Aaron Rodgers vs. Mike McCarthy feud 'a dumpster fire'",
-     "url": "https://www.foxnews.com/outkick-sports/mike-tomlin-calls-steelers-situation-following-aaron-rodgers-vs-mike-mccarthy-feud-dumpster-fire"
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump: Iran war will be over 'sort of whenever I want it to be'",
+     "url": "https://thehill.com/homenews/administration/6245034-trump-says-iran-war-ends-whenever/"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Two Italians killed in Kuwait drone attack; Trump says Iran war ends ‘whenever I want it’",
+     "url": "https://www.cnbc.com/2026/11/27/us-iran-war-trump-hormuz-italian-killed-trump.html"
     }
    ],
    "factchecks": [],
@@ -1290,6 +1352,57 @@
    ],
    "factchecks": [],
    "videos": []
+  },
+  {
+   "title": "New Zealand election: final results show ruling coalition needs minor party to govern",
+   "summary": "Incumbent prime minister Christopher Luxon loses majority and needs support of Opportunity party to remain in power, or country faces another election The final results of New Zealand’s general election show the incumbent rightwing coalition will need the support of a centrist ne",
+   "category": "Politics",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 3,
+   "balance": {
+    "l": 1,
+    "c": 2,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "New Zealand election: final results show ruling coalition needs minor party to govern",
+     "url": "https://www.theguardian.com/world/2026/nov/27/new-zealand-nz-election-2026-final-results"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "New Zealand's ruling coalition falls short of parliamentary majority by one seat",
+     "url": "https://www.bbc.co.uk/news/articles/c670278qk879o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "New Zealand’s Opportunity Party poised to become election kingmaker",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/27/new-zealands-opportunity-party-poised-to-become-election-kingmaker?traffic_source=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "YQtNaSFQPIo",
+     "title": "New Zealand’s Opportunity Party poised to become election kingmaker | AJ #shorts",
+     "thumb": "https://i.ytimg.com/vi/YQtNaSFQPIo/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
   },
   {
    "title": "Thanksgiving storms ground DC flights, knock out power for more than 850K",
@@ -1368,14 +1481,6 @@
    "factchecks": [],
    "videos": [
     {
-     "videoId": "Lb09ITMLiTs",
-     "title": "Fuel tanker crash causes a massive fire and kills at least 31 people in Egypt",
-     "thumb": "https://i.ytimg.com/vi/Lb09ITMLiTs/hqdefault.jpg",
-     "channel": "AP",
-     "lean": 0,
-     "label": "Center"
-    },
-    {
      "videoId": "GEKBZCHNH3o",
      "title": "Why fuel tanker crash in Cairo was so deadly. #Cairo #BBCNews",
      "thumb": "https://i.ytimg.com/vi/GEKBZCHNH3o/hqdefault.jpg",
@@ -1392,41 +1497,6 @@
      "label": "Right"
     }
    ]
-  },
-  {
-   "title": "New Zealand election: final results show ruling coalition needs minor party to govern",
-   "summary": "Incumbent prime minister Christopher Luxon loses majority and needs support of Opportunity party to remain in power, or country faces another election The final results of New Zealand’s general election show the incumbent rightwing coalition will need the support of a centrist ne",
-   "category": "Politics",
-   "leans": [
-    -1,
-    0
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 1,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "New Zealand election: final results show ruling coalition needs minor party to govern",
-     "url": "https://www.theguardian.com/world/2026/nov/27/new-zealand-nz-election-2026-final-results"
-    },
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "New Zealand's ruling coalition falls short of parliamentary majority by one seat",
-     "url": "https://www.bbc.co.uk/news/articles/c670278qk879o?at_medium=RSS&at_campaign=rss"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
   },
   {
    "title": "Pregnant inmate escapes from New Mexico corrections facility",
@@ -1493,76 +1563,6 @@
      "label": "Center",
      "title": "Trump says the US has ‘close to 50%’ of world’s oil",
      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/27/trump-says-the-us-has-close-to-50-of-worlds-oil?traffic_source=rss"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Argentina bans its central bank from printing money for the government",
-   "summary": "Argentina's Congress voted Thursday to bar the central bank from printing money to pay the government's bills, enshrining in law a key pillar of President Javier Milei's fight against the country's notoriously high inflation.",
-   "category": "Politics",
-   "leans": [
-    0,
-    1
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "Argentina bars Central Bank from printing money to fund government spending",
-     "url": "https://www.aljazeera.com/news/2026/11/27/argentina-bars-central-bank-from-printing-money-to-fund-government-spending?traffic_source=rss"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Argentina bans its central bank from printing money for the government",
-     "url": "https://www.washingtontimes.com/news/2026/nov/26/central-bank-argentina-banned-printing-money-government/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Unforgiving rim denies Arkansas a miracle comeback against Michigan State on Thanksgiving",
-   "summary": "No. 11 Michigan State escaped with a 70-67 Thanksgiving win after Jordan Smith Jr.’s potential tying three rattled out in the final seconds.",
-   "category": "General",
-   "leans": [
-    1,
-    2
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "This Thanksgiving, let’s celebrate the miracle of capitalism",
-     "url": "https://nypost.com/2026/11/26/opinion/this-thanksgiving-lets-celebrate-the-miracle-of-capitalism/"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Unforgiving rim denies Arkansas a miracle comeback against Michigan State on Thanksgiving",
-     "url": "https://www.foxnews.com/outkick-sports/unforgiving-rim-denies-arkansas-miracle-comeback-michigan-state-thanksgiving"
     }
    ],
    "factchecks": [],
@@ -1967,16 +1967,7 @@
     }
    ],
    "factchecks": [],
-   "videos": [
-    {
-     "videoId": "lange6_8ERM",
-     "title": "FCC says SpaceX can deploy 1 million satellites for data centers in space",
-     "thumb": "https://i.ytimg.com/vi/lange6_8ERM/hqdefault.jpg",
-     "channel": "AP",
-     "lean": 0,
-     "label": "Center"
-    }
-   ]
+   "videos": []
   },
   {
    "title": "‘I’m no longer a UAE official’: UN hopeful Lana Nusseibeh tries to shake off Sudan record",
@@ -2249,42 +2240,6 @@
    "videos": []
   },
   {
-   "title": "Monster East Coast storm leaves hundreds of thousands without power",
-   "summary": "A major storm along the Eastern Seaboard is bringing heavy rain, strong winds and major coastal flooding on the Thanksgiving holiday. NBC News’ Steven Romo reports from the storm zone in New Jersey.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Monster East Coast storm leaves hundreds of thousands without power",
-     "url": "https://www.nbcnews.com/nightly-news/video/monster-east-coast-storm-leaves-hundreds-of-thousands-without-power-274244677776"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "7oQDD-SXuDE",
-     "title": "Monster East Coast storm leaves hundreds of thousands without power on Thanksgiving",
-     "thumb": "https://i.ytimg.com/vi/7oQDD-SXuDE/hqdefault.jpg",
-     "channel": "NBC News",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
-  },
-  {
    "title": "Families navigate Thanksgiving after toxic chemical detonation",
    "summary": "In and around Middletown, Iowa, residents are navigating the Thanksgiving holiday after the U.S. Army detonated tons of toxic chemicals in the region. And while officials say no airborne lead has been detected, some families are still concerned. NBC News’ Shaquille Brewster repor",
    "category": "General",
@@ -2348,33 +2303,6 @@
    "videos": []
   },
   {
-   "title": "Black Friday deals are here, and they’re actually really good — I’m tracking the best ones live",
-   "summary": "Shop Black Friday 2026 deals on tech, home, kitchen, beauty, fashion and more. NBC Selected editors reviewed thousands of discounts to find top-rated products and standout savings worth shopping now.",
-   "category": "Economy",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Black Friday deals are here, and they’re actually really good — I’m tracking the best ones live",
-     "url": "https://www.nbcnews.com/select/shopping/best-black-friday-deals-11-26-2026-rcna611358"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "How are you affording the holidays?",
    "summary": "After a year of high gas prices, inflation ticking back up and a lot of Americans feeling pessimistic about the economy, we want to know how people are affording the annual wave of holiday gifts, travel and entertainment costs.",
    "category": "Economy",
@@ -2400,44 +2328,90 @@
    ],
    "factchecks": [],
    "videos": []
-  }
- ],
- "blindspots": [
+  },
   {
-   "title": "Unforgiving rim denies Arkansas a miracle comeback against Michigan State on Thanksgiving",
-   "summary": "No. 11 Michigan State escaped with a 70-67 Thanksgiving win after Jordan Smith Jr.’s potential tying three rattled out in the final seconds.",
-   "category": "General",
+   "title": "‘Shocking’ decline seen in hep B vaccination against incurable virus, including babies with infected mothers",
+   "summary": "Fewer newborns are being vaccinated against hepatitis B, an incurable infection that can lead to liver disease, a large new analysis has found.",
+   "category": "Health",
    "leans": [
-    1,
-    2
+    -1
    ],
-   "span": 1,
-   "n_sources": 2,
+   "span": 0,
+   "n_sources": 1,
    "balance": {
-    "l": 0,
+    "l": 1,
     "c": 0,
-    "r": 2
+    "r": 0
    },
-   "blindspot": "left",
+   "blindspot": null,
    "sources": [
     {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "This Thanksgiving, let’s celebrate the miracle of capitalism",
-     "url": "https://nypost.com/2026/11/26/opinion/this-thanksgiving-lets-celebrate-the-miracle-of-capitalism/"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Unforgiving rim denies Arkansas a miracle comeback against Michigan State on Thanksgiving",
-     "url": "https://www.foxnews.com/outkick-sports/unforgiving-rim-denies-arkansas-miracle-comeback-michigan-state-thanksgiving"
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "‘Shocking’ decline seen in hep B vaccination against incurable virus, including babies with infected mothers",
+     "url": "https://www.nbcnews.com/health/health-news/hepatitis-b-vaccination-decline-newborns-liver-disease-study-rcna611070"
     }
    ],
    "factchecks": [],
    "videos": []
   },
+  {
+   "title": "More than 700,000 Russian soldiers killed in Ukraine war, new estimate suggests",
+   "summary": "More than 700,000 Russian soldiers have been killed in Ukraine, according to a new projection based on leaked official data, an estimate that sheds new light on the staggering cost of President Vladimir Putin’s war.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "More than 700,000 Russian soldiers killed in Ukraine war, new estimate suggests",
+     "url": "https://www.nbcnews.com/world/ukraine/russia-soldiers-killed-ukraine-war-new-estimate-suggests-700000-rcna611048"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "2026 Rockefeller Center Christmas Tree Arrives in New York City",
+   "summary": "A magnificent Norway spruce has made its journey from West Edmeston, New York, to Rockefeller Center. The tree will undergo a glow-up ahead of the lighting ceremony on Dec. 2.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "2026 Rockefeller Center Christmas Tree Arrives in New York City",
+     "url": "https://www.today.com/video/2026-rockefeller-center-christmas-tree-arrives-in-new-york-city-273069125683"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  }
+ ],
+ "blindspots": [
   {
    "title": "Strobe Talbott, former Time magazine reporter and deputy secretary of state, has died",
    "summary": "Strobe Talbott, a former Time magazine reporter who later served as deputy secretary of state under President Bill Clinton and then headed the Brookings Institution, died Thursday. He was 80.",
