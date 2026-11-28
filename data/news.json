@@ -1,12 +1,2661 @@
 {
- "generated": "2026-11-28T02:00:11Z",
- "generated_human": "Nov 28, 2026 · 02:00 UTC",
- "sources": [],
- "n_articles": 0,
- "n_videos": 0,
- "trending": [],
- "videos": [],
- "stories": [],
- "blindspots": [],
- "factchecks": []
+ "generated": "2026-11-28T03:00:35Z",
+ "generated_human": "Nov 28, 2026 · 03:00 UTC",
+ "sources": [
+  {
+   "name": "NPR",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 10
+  },
+  {
+   "name": "The Guardian",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "NBC News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "CBS News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "ABC News",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "PBS NewsHour",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Politico",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Vox",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "Slate",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Mother Jones",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "The Atlantic",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Time",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "BBC News",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "The Hill",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "CNBC",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Axios",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 12
+  },
+  {
+   "name": "Al Jazeera",
+   "lean": 0,
+   "label": "Center",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "The Christian Science Monitor",
+   "lean": 0,
+   "label": "Center",
+   "fact": "High",
+   "count": 10
+  },
+  {
+   "name": "Newsweek",
+   "lean": 0,
+   "label": "Center",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Reason",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "New York Post",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Washington Examiner",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "National Review",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Washington Times",
+   "lean": 1,
+   "label": "Lean Right",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Fox News",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "The Daily Wire",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "The Federalist",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Newsmax",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  },
+  {
+   "name": "Daily Caller",
+   "lean": 2,
+   "label": "Right",
+   "fact": "Mixed",
+   "count": 12
+  }
+ ],
+ "n_articles": 335,
+ "n_videos": 140,
+ "trending": [
+  {
+   "term": "thanksgiving",
+   "n": 15
+  },
+  {
+   "term": "trump",
+   "n": 13
+  },
+  {
+   "term": "black",
+   "n": 11
+  },
+  {
+   "term": "friday",
+   "n": 11
+  },
+  {
+   "term": "american",
+   "n": 9
+  },
+  {
+   "term": "back",
+   "n": 8
+  },
+  {
+   "term": "star",
+   "n": 7
+  },
+  {
+   "term": "court",
+   "n": 7
+  },
+  {
+   "term": "parade",
+   "n": 7
+  },
+  {
+   "term": "iran",
+   "n": 7
+  },
+  {
+   "term": "national",
+   "n": 7
+  },
+  {
+   "term": "military",
+   "n": 7
+  },
+  {
+   "term": "another",
+   "n": 7
+  },
+  {
+   "term": "storm",
+   "n": 6
+  },
+  {
+   "term": "holiday",
+   "n": 6
+  },
+  {
+   "term": "your",
+   "n": 6
+  }
+ ],
+ "videos": [
+  {
+   "videoId": "9cFiEb7yAkE",
+   "title": "Pager: Miller Could Be “Very Aggressive” Pushing WH Agenda",
+   "thumb": "https://i.ytimg.com/vi/9cFiEb7yAkE/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "j9NE4ZEDEds",
+   "title": "Parade scramble, Israel could splinter, Dem investigations & more | CNN Primetime Roundup",
+   "thumb": "https://i.ytimg.com/vi/j9NE4ZEDEds/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "3LJ3Q6f5z3U",
+   "title": "Zelenskyy questions 'strange' Trump-Putin friendship | DW News",
+   "thumb": "https://i.ytimg.com/vi/3LJ3Q6f5z3U/hqdefault.jpg",
+   "channel": "DW News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "NEddP5X9KcM",
+   "title": "Kim Jong Un calls for MORE nuclear weapons during facility visit #shorts",
+   "thumb": "https://i.ytimg.com/vi/NEddP5X9KcM/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "kIxUb4A4ADc",
+   "title": "‘TONE DEAF’: Obama 'wingman' faces backlash push for DEI in 2028",
+   "thumb": "https://i.ytimg.com/vi/kIxUb4A4ADc/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "eFhljvQvbmM",
+   "title": "This Taiwanese comedian mocked Xi Jinping. Then came the threats | DW News",
+   "thumb": "https://i.ytimg.com/vi/eFhljvQvbmM/hqdefault.jpg",
+   "channel": "DW News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "zAdk8UvvYBE",
+   "title": "Bulgarians demand action by French after Marseille match violence | AJ #shorts",
+   "thumb": "https://i.ytimg.com/vi/zAdk8UvvYBE/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "wWO-mRZ9Ih8",
+   "title": "Mamdani recovering after ‘successful’ Achilles surgery",
+   "thumb": "https://i.ytimg.com/vi/wWO-mRZ9Ih8/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "qXPFoNcTQ50",
+   "title": "Top Story with Tom Llamas - Nov. 27 | NBC News NOW",
+   "thumb": "https://i.ytimg.com/vi/qXPFoNcTQ50/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "EatxZQQpAU0",
+   "title": "Israel kills two MSF staff in targeted strike on Gaza clinic | AJ #shorts",
+   "thumb": "https://i.ytimg.com/vi/EatxZQQpAU0/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "671Z-lIAe4k",
+   "title": "Hallie Jackson NOW - Nov. 27 | NBC News NOW",
+   "thumb": "https://i.ytimg.com/vi/671Z-lIAe4k/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "3dNMb65i19Y",
+   "title": "Pregnant inmate escapes in stolen vehicle #shorts",
+   "thumb": "https://i.ytimg.com/vi/3dNMb65i19Y/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "6S-1fjkuYlk",
+   "title": "Boy’s final wish gives hospitalized children a place to ‘simply be kids’",
+   "thumb": "https://i.ytimg.com/vi/6S-1fjkuYlk/hqdefault.jpg",
+   "channel": "Washington Post",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "VvIQ4p5YyzA",
+   "title": "ART OF THE DEAL: Trump to meet El-Sayed over healthcare policy",
+   "thumb": "https://i.ytimg.com/vi/VvIQ4p5YyzA/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "EXGz0eh28jw",
+   "title": "How marching bands raised thousands overnight to stay for the Macy's parade",
+   "thumb": "https://i.ytimg.com/vi/EXGz0eh28jw/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "iLZM52t7-SE",
+   "title": "NBC Nightly News with Tom Llamas Full Episode - Nov. 27",
+   "thumb": "https://i.ytimg.com/vi/iLZM52t7-SE/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  }
+ ],
+ "stories": [
+  {
+   "title": "Trump just can’t quit tariffs",
+   "summary": "This story appeared in The Logoff, a daily newsletter that helps you stay informed about the Trump administration without letting political news take over your life. Subscribe here. Welcome to The Logoff: The Trump administration is trying to keep its trade war alive with new tar",
+   "category": "World",
+   "leans": [
+    -2,
+    -1,
+    2
+   ],
+   "span": 4,
+   "n_sources": 4,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Trump just can’t quit tariffs",
+     "url": "https://www.vox.com/the-logoff-newsletter-trump/512425/trump-tariffs-china-eu-trade"
+    },
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Kilmar Abrego Garcia’s deportation saga ends on his terms",
+     "url": "https://www.vox.com/today-explained-newsletter/512193/kilmar-abrego-garcia-self-deportation-spain-trump"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Brooks and Capehart on Trump's new tariffs, Nvidia's future and Democratic leadership",
+     "url": "https://www.pbs.org/newshour/show/brooks-and-capehart-on-trumps-new-tariffs-nvidias-future-and-democratic-leadership"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Just Let It Die: ‘The View’ Resurrects The ‘Trump Is A Foreign Asset’ Narrative",
+     "url": "https://www.dailywire.com/news/just-let-it-die-the-view-resurrects-the-trump-is-a-foreign-asset-narrative"
+    },
+    {
+     "name": "The Federalist",
+     "lean": 2,
+     "label": "Right",
+     "title": "Sen. Chris Van Hollen Just Can’t Quit Alleged ‘Human Trafficker’ Kilmar Abrego Garcia",
+     "url": "https://thefederalist.com/2026/11/25/sen-chris-van-hollen-just-cant-quit-alleged-human-trafficker-kilmar-abrego-garcia/?utm_source=rss&utm_medium=rss&utm_campaign=sen-chris-van-hollen-just-cant-quit-alleged-human-trafficker-kilmar-abrego-garcia"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "IRbLJ-asqIU",
+     "title": "Brooks and Capehart on Trump's new tariffs, Nvidia's future and Democratic leadership",
+     "thumb": "https://i.ytimg.com/vi/IRbLJ-asqIU/hqdefault.jpg",
+     "channel": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "The Blue Wave Is a Generational Chance to Expand (And Fund) Obamacare",
+   "summary": "After enhanced subsidies for the Affordable Care Act expired at the end of 2025—despite a Democratic-led congressional standoff to preserve them—millions of Americans fell off federal health care rolls. Those tax credits, initially part of the congressional response to Covid, wer",
+   "category": "Politics",
+   "leans": [
+    -2,
+    2
+   ],
+   "span": 4,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Mother Jones",
+     "lean": -2,
+     "label": "Left",
+     "title": "The Blue Wave Is a Generational Chance to Expand (And Fund) Obamacare",
+     "url": "https://www.motherjones.com/politics/2026/11/new-mexico-texas-aca-subsidies-obamacare-health-insurance-blue-wave-georgia-pennsylvania-legislature/"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Will The Blue Wave Be Followed By A Green Wave?",
+     "url": "https://dailycaller.com/2026/11/27/opinion-democrats-midterms-green-wave-bonner-cohen"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Mass power outages after Thanksgiving Day storms",
+   "summary": "Dramatic video shows firefighters battling a blaze in the height of a storm that also caused flooding in coastal neighborhoods and toppled trees across the Northeast. Hundreds of thousands are still without power in the Midwest and Northeast. NBC News’ Steven Romo reports from th",
+   "category": "General",
+   "leans": [
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 9,
+   "balance": {
+    "l": 5,
+    "c": 1,
+    "r": 3
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Thanksgiving storm batters East Coast. And, Black Friday sales to hit record levels",
+     "url": "https://www.npr.org/2026/11/27/g-s1-156004/up-first-newsletter-thanksgiving-storm-black-friday-shopping-asylum-supreme-court"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Mass power outages after Thanksgiving Day storms",
+     "url": "https://www.nbcnews.com/nightly-news/video/mass-power-outages-after-thanksgiving-day-storms-274286149762"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Shoppers expected to spend nearly $13 billion this Black Friday, Adobe says",
+     "url": "https://www.cbsnews.com/video/shoppers-expected-to-spend-nearly-13-billion-this-black-friday-adobe-says/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Power being slowly restored as heavy Thanksgiving storm eases",
+     "url": "https://www.cbsnews.com/news/east-coast-thanksgiving-storm-power-outages-cleanup/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How severe weather rocked this Thanksgiving, from power outages to flight delays",
+     "url": "https://www.cbsnews.com/video/how-severe-weather-rocked-this-thanksgiving-from-power-outages-to-flight-delays/"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Millions clean up after massive Thanksgiving storms on East Coast",
+     "url": "https://abcnews.com/US/millions-clean-after-massive-thanksgiving-storms-flood-streets/story?id=138484179"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "News Wrap: Crews work to restore power for thousands after Thanksgiving storm",
+     "url": "https://www.pbs.org/newshour/show/news-wrap-crews-work-to-restore-power-for-thousands-after-thanksgiving-storm"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Inflation has shoppers hunting for value. That bodes well for Black Friday",
+     "url": "https://www.cnbc.com/2026/11/27/black-friday-2026-inflation-value-deals.html"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Keep online activity private and save 75% with Proton VPN’s Black Friday Deal",
+     "url": "https://nypost.com/2026/11/27/shopping/save-75-with-proton-vpns-black-friday-deal/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Parts of the U.S. clean up, power outages being restored after Thanksgiving storm soaks East Coast",
+     "url": "https://www.washingtontimes.com/news/2026/nov/27/parts-us-clean-power-outages-slowly-restored-thanksgiving-storm-soaks/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Adobe: US Black Friday Online Sales to Top $13 Billion",
+     "url": "https://www.newsmax.com/newsfront/adobe-analytics-black-friday-cyber-monday/2026/11/27/id/1277741"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "LZPdMu17AEk",
+     "title": "Parts of the US clean up, power outages being restored after Thanksgiving storm soaks East Coast",
+     "thumb": "https://i.ytimg.com/vi/LZPdMu17AEk/hqdefault.jpg",
+     "channel": "AP",
+     "lean": 0,
+     "label": "Center"
+    },
+    {
+     "videoId": "uNYdEzmCOY0",
+     "title": "News Wrap: Crews work to restore power for thousands after Thanksgiving storm",
+     "thumb": "https://i.ytimg.com/vi/uNYdEzmCOY0/hqdefault.jpg",
+     "channel": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "unIUhMGh0zc",
+     "title": "Mass power outages after Thanksgiving Day storms",
+     "thumb": "https://i.ytimg.com/vi/unIUhMGh0zc/hqdefault.jpg",
+     "channel": "NBC News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Macy’s Thanksgiving Day Parade Postponed for First Time Ever",
+   "summary": "For the first time in its 100-year history, the world-famous Macy’s Thanksgiving Day Parade has been postponed. The unprecedented decision by Macy’s and New York City was made after forecasters warned of potentially dangerous storm conditions. NBC’s Erin McLaughlin reports for TO",
+   "category": "World",
+   "leans": [
+    -1,
+    0,
+    2
+   ],
+   "span": 3,
+   "n_sources": 6,
+   "balance": {
+    "l": 2,
+    "c": 3,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "New balloons will fly in the postponed 100th Macy's Thanksgiving Day Parade",
+     "url": "https://www.npr.org/2026/11/27/nx-s1-6043796/new-balloons-will-fly-in-the-postponed-100th-macys-thanksgiving-day-parade"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Macy’s Thanksgiving Day Parade Postponed for First Time Ever",
+     "url": "https://www.today.com/video/macy-s-thanksgiving-day-parade-postponed-for-first-time-ever-274220101982"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "'We couldn't give up that easily': Marching bands scramble to cover costs after Thanksgiving parade rearranged",
+     "url": "https://www.bbc.co.uk/news/articles/ckd71ypy9e8eo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Weather delay will cost $700,000 for Hawaii All-Star band performing at Macy's Thanksgiving Day parade",
+     "url": "https://thehill.com/homenews/state-watch/6245658-macys-thanksgiving-day-parade-weather-delay-hawaii-band/"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Macy's Thanksgiving parade postponed for the first time in the event's history",
+     "url": "https://www.axios.com/2026/11/25/macys-thanksgiving-parade-2026-balloons-weather"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Thanksgiving Parade Delay Costs Hawaii Band $700K",
+     "url": "https://www.newsmax.com/newsfront/hawaii-band-macys/2026/11/27/id/1277738"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "2ACxeAbLsFk",
+     "title": "Bands scramble after Macy's Thanksgiving Day Parade delay",
+     "thumb": "https://i.ytimg.com/vi/2ACxeAbLsFk/hqdefault.jpg",
+     "channel": "ABC News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "PyPJqJ48hYM",
+     "title": "Severe weather chaos on Thanksgiving; World awaits postponed Macy's parade in NYC",
+     "thumb": "https://i.ytimg.com/vi/PyPJqJ48hYM/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "nwOUJNb28Ak",
+     "title": "Macy’s Thanksgiving Day Parade marches on after delay",
+     "thumb": "https://i.ytimg.com/vi/nwOUJNb28Ak/hqdefault.jpg",
+     "channel": "NBC News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "US strikes commercial ship in Gulf of Oman for attempting to run naval blockade after leaving Iran",
+   "summary": "The U.S. military struck and disabled a commercial vessel on Thursday in the Gulf of Oman, which connects to the Strait of Hormuz, for attempting to run a U.S. naval blockade after leaving an Iranian port, according to U.S. Central Command. “U.S. Central Command (CENTCOM) disable",
+   "category": "World",
+   "leans": [
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 6,
+   "balance": {
+    "l": 2,
+    "c": 1,
+    "r": 3
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "U.S. forces disable commercial ship that allegedly tried to breach Iran blockade",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-threats-diplomacy-strait-of-hormuz/"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "U.S. military says it disabled another ship that tried to breach naval blockade on Iranian ports",
+     "url": "https://www.pbs.org/newshour/world/u-s-military-says-it-disabled-another-ship-that-tried-to-breach-naval-blockade-on-iranian-ports"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "US disables ship attempting to breach Iran blockade",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/27/us-disables-ship-attempting-to-breach-iran-blockade?traffic_source=rss"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "US military says it disabled merchant ship trying to breach Iran blockade",
+     "url": "https://www.aljazeera.com/news/2026/11/27/us-military-says-it-disabled-merchant-ship-trying-to-breach-iran-blockade?traffic_source=rss"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "US strikes commercial ship in Gulf of Oman for attempting to run naval blockade after leaving Iran",
+     "url": "https://www.washingtonexaminer.com/news/world/4816605/us-strikes-commercial-ship-gulf-of-oman/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "U.S. military says it disabled another ship that tried to breach naval blockade on Iranian ports",
+     "url": "https://www.washingtontimes.com/news/2026/nov/27/us-military-says-disabled-another-ship-attempted-breach-naval/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "US Disables Cargo Ship Trying to Breach Iran Blockade",
+     "url": "https://www.newsmax.com/newsfront/centcom-blockade-iran/2026/11/27/id/1277732"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "ffu4KwubJt8",
+     "title": "US disables ship attempting to breach Iran blockade | AJ #shorts",
+     "thumb": "https://i.ytimg.com/vi/ffu4KwubJt8/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "Canada’s top court upholds Quebec law barring public sector workers from wearing religious symbols",
+   "summary": "Closely watched decision exposes tensions between minority rights and the power of government to override those rights Canada’s top court has largely upheld a controversial secularism law in the province of Quebec barring public sector workers from wearing conspicuous religious s",
+   "category": "General",
+   "leans": [
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 5,
+   "balance": {
+    "l": 2,
+    "c": 1,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Canada’s top court upholds Quebec law barring public sector workers from wearing religious symbols",
+     "url": "https://www.theguardian.com/world/2026/nov/27/canadas-top-court-upholds-quebec-law-barring-public-sector-workers-from-wearing-religious-symbols"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Canada's Supreme Court largely upholds a Quebec ban on religious symbols for public servants",
+     "url": "https://www.pbs.org/newshour/world/canadas-supreme-court-largely-upholds-a-quebec-ban-on-religious-symbols-for-public-servants"
+    },
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Canada's top court largely upholds Quebec ban on religious symbols for public servants",
+     "url": "https://www.bbc.co.uk/news/articles/cq3dgpy9lem3o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Canadian Supreme Court largely upholds Quebec’s ban on religious symbols for public sector workers",
+     "url": "https://www.washingtonexaminer.com/news/world/4816704/canada-supreme-court-upholds-quebec-ban-religious-symbols-public-workers/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Canada's Top Court Upholds Quebec Religious Symbols Ban",
+     "url": "https://www.newsmax.com/newsfront/canada-quebec-religious-symbols/2026/11/27/id/1277734"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Two American Airlines planes clip wings at Reagan National Airport",
+   "summary": "Two American Airlines planes clipped wings while preparing for departure at Ronald Reagan Washington National Airport on Friday evening, prompting an arriving aircraft to abort its landing. Dallas-bound American Airlines Flight 638 struck the wing of Chicago-bound Flight 2152 at ",
+   "category": "General",
+   "leans": [
+    -1,
+    0,
+    1,
+    2
+   ],
+   "span": 3,
+   "n_sources": 5,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 3
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "2 American Airlines jets clip wings on tarmac of Reagan Airport",
+     "url": "https://www.cbsnews.com/news/american-airlines-jets-clip-wings-reagan-airport/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "2 American Airlines jets clip their wings at Reagan National Airport",
+     "url": "https://www.cbsnews.com/video/2-american-airlines-jets-clip-their-wings-at-reagan-national-airport/"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Two American Airlines Jets Clip Wings at Reagan National Airport",
+     "url": "https://www.newsweek.com/two-american-airlines-jets-clip-wings-at-reagan-national-airport-12775271"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Two American Airlines planes clip wings at Reagan National Airport",
+     "url": "https://www.washingtonexaminer.com/travel/4816749/american-airlines-planes-clip-wings-washington-national-airport/"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "American Airlines planes clip wings during busy holiday travel weekend at Reagan National in DC",
+     "url": "https://www.foxnews.com/us/american-airlines-planes-clip-wings-busy-holiday-travel-weekend-reagan-national-dc"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "American Airlines Jet Clips Another At Reagan National, Breaking Off Piece Of Wing",
+     "url": "https://www.dailywire.com/news/american-airlines-jet-clips-another-at-reagan-national-breaking-off-piece-of-wing"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "From Thanksgiving blackouts to Black Friday, a holiday hit by wild weather and economic woes",
+   "summary": "A storm battered much of the country on Thursday, knocking out power to thousands of homes and disrupting travel. Today, Black Friday shopping deals kick off, and on Saturday New York City will hold the postponed Macy's Thanksgiving Day Parade.",
+   "category": "General",
+   "leans": [
+    -1,
+    0,
+    1
+   ],
+   "span": 2,
+   "n_sources": 4,
+   "balance": {
+    "l": 2,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "From Thanksgiving blackouts to Black Friday, a holiday hit by wild weather and economic woes",
+     "url": "https://www.npr.org/2026/11/27/nx-s1-6054884/thanksgiving-weather-black-friday"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Biggest Black Friday deals as holiday retail rush kicks in",
+     "url": "https://www.nbcnews.com/nightly-news/video/biggest-black-friday-deals-as-holiday-retail-rush-kicks-in-274286149626"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Live updates: The best Black Friday deals up to 70% off, handpicked by a shopping expert",
+     "url": "https://www.nbcnews.com/select/shopping/best-black-friday-deals-11-27-2026-rcna611358"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Dow rallies nearly 600 points to close out best week since 2022: Live updates",
+     "url": "https://www.cnbc.com/2026/11/26/stock-market-today-live-updates.html"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Apple of our eye: Black Friday deals slash up to 40% off AirPods, iPads and more",
+     "url": "https://nypost.com/shopping/apple-black-friday-deals-2026/"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Shear delight: UGG Black Friday deals take 50% off boots and slippers",
+     "url": "https://nypost.com/shopping/black-friday-uggs-deals-sales-2026/"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "From CBD gummies to sauna blankets — 37 Black Friday wellness deals I’m obsessed with",
+     "url": "https://nypost.com/shopping/black-friday-health-wellness-deals-2026/"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "Y-vWMDVu-2I",
+     "title": "Biggest Black Friday deals as holiday retail rush kicks in",
+     "thumb": "https://i.ytimg.com/vi/Y-vWMDVu-2I/hqdefault.jpg",
+     "channel": "NBC News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Sen. Deb Fischer's office says her husband died by suicide",
+   "summary": "A spokesperson for Sen. Deb Fischer (R-Neb.) said Friday her husband, Bruce Fischer, whose death was announced earlier in the week, had died by suicide. “There has been a sad update in the death of Senator Fischer’s husband, Bruce,” the spokesperson, who did not offer their name,",
+   "category": "World",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 3,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Sen. Deb Fischer's office says her husband died by suicide",
+     "url": "https://thehill.com/homenews/senate/6245545-deb-fischer-nebraska/"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Republican Senator Discloses Her Husband Committed Suicide",
+     "url": "https://www.dailywire.com/news/republican-senator-discloses-her-husband-committed-suicide"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "GOP Senator Deb Fischer’s Late Husband Died By Suicide",
+     "url": "https://dailycaller.com/2026/11/27/deb-fischer-husband-bruce-died-suicide"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Aaron Rodgers Exposes How Compromised NFL Media Is After Shining Light On Steelers",
+   "summary": "This article was written by Karen Crouse and published on Sport & State, a new media company founded by Clay Travis that is built around sports, culture, original voices, and live conversation.* * * * * Good on Aaron Rodgers for shining a light in the dark corner that is the inte",
+   "category": "General",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 3,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 2
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Mike McCarthy Gets Honest About Steelers’ Win After Aaron Rodgers Drama",
+     "url": "https://www.newsweek.com/sports/nfl/mike-mccarthy-gets-honest-about-steelers-win-after-aaron-rodgers-drama-12775262"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Steelers QB Mason Rudolph Credits 'Adversity' for Black Friday Win Over Broncos",
+     "url": "https://www.newsweek.com/sports/nfl/steelers-qb-mason-rudolph-credits-adversity-for-black-friday-win-over-broncos-12775195"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Aaron Rodgers claims he was barred from Steelers facility before infamous interview in message to Al Michaels",
+     "url": "https://www.foxnews.com/outkick-sports/aaron-rodgers-claims-barred-steelers-facility-infamous-interview-message-al-michaels"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Steelers silence the Aaron Rodgers noise, cruise past Broncos to remain perfect at home on Black Friday",
+     "url": "https://www.foxnews.com/outkick-sports/steelers-silence-aaron-rodgers-noise-cruise-past-broncos-remain-perfect-home-black-friday"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Aaron Rodgers Exposes How Compromised NFL Media Is After Shining Light On Steelers",
+     "url": "https://www.dailywire.com/news/aaron-rodgers-exposes-how-compromised-nfl-media-is-after-shining-light-on-steelers"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Aaron Rodgers Took His Shots At Mike McCarthy. Now NFL Media Is Firing Back.",
+     "url": "https://www.dailywire.com/news/aaron-rodgers-took-his-shots-at-mike-mccarthy-now-nfl-media-is-firing-back"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Russian sabotage spikes in Europe, including 'risk of mass-casualty incident': Analysis",
+   "summary": "Incidents of sabotage blamed on Russia in Europe were up 16 percent year-over-year in September, according to a new report, which warns about the potential for a future “mass-casualty” event by Moscow. The report from the International Institute for Strategic Studies (IISS) said ",
+   "category": "World",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Russian sabotage spikes in Europe, including 'risk of mass-casualty incident': Analysis",
+     "url": "https://thehill.com/policy/international/6245694-russian-sabotage-ukraine-war-zelensky-trump-putin-friend/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Report: Russian Sabotage Risks Mass-Casualty Attack",
+     "url": "https://www.newsmax.com/newsfront/russia-volodymyr-zelenskyy-ukraine/2026/11/27/id/1277743"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "b6FP0jCl9SU",
+     "title": "New report warns Russian sabotage campaign is expanding across Europe | DW News",
+     "thumb": "https://i.ytimg.com/vi/b6FP0jCl9SU/hqdefault.jpg",
+     "channel": "DW News",
+     "lean": 0,
+     "label": "Center"
+    }
+   ]
+  },
+  {
+   "title": "Justin Herbert ruled out against Patriots as DJ Uiagalelei gets first career start for Chargers",
+   "summary": "Justin Herbert lands in concussion protocol as the 1-9 Los Angeles Chargers turn to DJ Uiagalelei for his first career start against the Patriots.",
+   "category": "General",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Chargers Make Decision About Justin Herbert vs Patriots",
+     "url": "https://www.newsweek.com/sports/nfl/chargers-make-decision-about-justin-herbert-vs-patriots-12775153"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Justin Herbert ruled out against Patriots as DJ Uiagalelei gets first career start for Chargers",
+     "url": "https://www.foxnews.com/outkick-sports/justin-herbert-ruled-out-patriots-dj-uiagalelei-first-career-start-chargers"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Seahawks, 49ers matchup changes drastically as Brock Purdy ruled out while Sam Darnold returns from injury",
+   "summary": "The Seattle Seahawks will start Sam Darnold as he is back from injury, while the San Francisco 49ers will be without Brock Purdy ahead of a pivotal matchup with an ankle injury.",
+   "category": "General",
+   "leans": [
+    0,
+    2
+   ],
+   "span": 2,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "49ers Make Final Call on QB Brock Purdy Before Seahawks Game",
+     "url": "https://www.newsweek.com/sports/nfl/49ers-make-final-call-on-qb-brock-purdy-before-seahawks-game-12775139"
+    },
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Seahawks Make Quarterback Decision for Week 12 Matchup Against 49ers",
+     "url": "https://www.newsweek.com/sports/nfl/seahawks-make-quarterback-decision-for-week-12-matchup-against-49ers-12775080"
+    },
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "Seahawks, 49ers matchup changes drastically as Brock Purdy ruled out while Sam Darnold returns from injury",
+     "url": "https://www.foxnews.com/outkick-sports/seahawks-49ers-matchup-changes-drastically-brock-purdy-ruled-out-sam-darnold-returns-injury"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Cyber attack on U.S. Air Force cloud-based platform",
+   "summary": "A U.S. official confirms the Air Force’s cloud-based platform “Cloud One” was breached by hackers. An Air Force spokesperson would not offer any details about the severity of the hack and who may be responsible. NBC News’ Kelly O’Donnell reports.",
+   "category": "Tech",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 3,
+   "balance": {
+    "l": 2,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Cyber attack on U.S. Air Force cloud-based platform",
+     "url": "https://www.nbcnews.com/nightly-news/video/cyber-attack-on-u-s-air-force-cloud-based-platform-274285637711"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "U.S. Air Force cloud platform breached by hackers, report says",
+     "url": "https://www.cbsnews.com/news/u-s-air-force-cloud-platform-breached-by-hackers/"
+    },
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Hackers breach U.S. Air Force flagship Cloud One computing platform",
+     "url": "https://www.cnbc.com/2026/11/27/hackers-breach-us-air-force-flagship-cloud-one-computing-platform.html"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "rvBjxvPOC7E",
+     "title": "Cyber attack on U.S. Air Force cloud-based platform",
+     "thumb": "https://i.ytimg.com/vi/rvBjxvPOC7E/hqdefault.jpg",
+     "channel": "NBC News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "tmwDQtK8MYY",
+     "title": "Hackers break into US Air Force cloud platform: Report",
+     "thumb": "https://i.ytimg.com/vi/tmwDQtK8MYY/hqdefault.jpg",
+     "channel": "ABC News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Mamdani recovering after 'successful' Achilles surgery",
+   "summary": "New York City Mayor Zohran Mamdani is recovering at Gracie Mansion—the mayor's official residence—following a “successful” surgery on his injured Achilles, which was caused by a recreational soccer game earlier this month. “Today, Mayor Zohran Kwame Mamdani underwent a surgical p",
+   "category": "General",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 3,
+   "balance": {
+    "l": 2,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Zohran Mamdani has successful surgery for torn Achilles and will make full recovery, staff says",
+     "url": "https://www.nbcnews.com/news/us-news/zohran-mamdani-surgery-torn-achilles-successful-ll-make-full-recovery-rcna611501"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "NYC Mayor Mamdani has 'successful' surgery on torn Achilles tendon",
+     "url": "https://abcnews.com/US/nyc-mayor-mamdani-successful-surgery-torn-achilles-tendon/story?id=138488280"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Mamdani recovering after 'successful' Achilles surgery",
+     "url": "https://thehill.com/homenews/state-watch/6245795-nyc-mayor-achilles-surgery-success/"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "wWO-mRZ9Ih8",
+     "title": "Mamdani recovering after ‘successful’ Achilles surgery",
+     "thumb": "https://i.ytimg.com/vi/wWO-mRZ9Ih8/hqdefault.jpg",
+     "channel": "NBC News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Kenya cult leader found guilty of manslaughter of over 100 followers asked to starve to meet Jesus",
+   "summary": "Kenyan cult leader Paul Mackenzie was on Friday found guilty of the manslaughter of 123 of his followers, the latest in a series of convictions against him for the deaths of hundreds of his followers.",
+   "category": "General",
+   "leans": [
+    0,
+    1
+   ],
+   "span": 1,
+   "n_sources": 3,
+   "balance": {
+    "l": 0,
+    "c": 2,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "BBC News",
+     "lean": 0,
+     "label": "Center",
+     "title": "Kenyan doomsday cult leader convicted over further 123 deaths",
+     "url": "https://www.bbc.co.uk/news/articles/cmy49de4xx1zo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Kenyan cult leader guilty of manslaughter more than 123 starvation deaths",
+     "url": "https://www.aljazeera.com/news/2026/11/27/kenyan-cult-leader-guilty-of-manslaughter-more-than-123-starvation-deaths?traffic_source=rss"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Kenya cult leader found guilty of manslaughter of over 100 followers asked to starve to meet Jesus",
+     "url": "https://www.washingtontimes.com/news/2026/nov/27/kenya-cult-leader-found-guilty-manslaughter-100-followers-asked/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Threat from China looms large over Taiwan’s local elections",
+   "summary": "Taiwanese officials raise alarm over interference by China in elections that will shape fortunes of ruling party Taiwanese voters go to the polls on Saturday in closely watched local elections that will shape the fortunes of the ruling Democratic Progressive party (DPP) as it nav",
+   "category": "World",
+   "leans": [
+    -1,
+    0
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 1,
+    "c": 1,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Threat from China looms large over Taiwan’s local elections",
+     "url": "https://www.theguardian.com/world/2026/nov/27/threat-from-china-looms-large-over-taiwan-local-elections"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Taiwan votes in local elections to choose mayors, other leaders",
+     "url": "https://www.aljazeera.com/news/2026/11/28/taiwan-votes-in-local-elections-to-choose-mayors-other-leaders?traffic_source=rss"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "15 hospitalized in potential Thanksgiving food poisoning at Florida medical center",
+   "summary": "Fifteen people were hospitalized due to possible food poisoning from Leon Medical Center headquarters' Thanksgiving event, according to Miami-Dade Fire Rescue officials. Miami-Dade Fire Rescue told a local NBC affiliate that crews responded to reports of potential food poisoning ",
+   "category": "Health",
+   "leans": [
+    0,
+    1
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "15 hospitalized in potential Thanksgiving food poisoning at Florida medical center",
+     "url": "https://thehill.com/homenews/state-watch/6245776-leon-medical-center-food-poisoning/"
+    },
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Pre-Thanksgiving meal at Miami-area workplace sickens 15 with food poisoning",
+     "url": "https://www.washingtontimes.com/news/2026/nov/27/pre-thanksgiving-meal-miami-area-workplace-sickens-15-food-poisoning/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "OpenAI countersues Apple for allegedly stealing trade secrets",
+   "summary": "OpenAI is accusing Apple of stealing trade secrets, escalating a legal battle between the technology giants over competing efforts to develop artificial intelligence-powered devices. In a countersuit filed Friday in federal court in the Northern District of California, OpenAI all",
+   "category": "Economy",
+   "leans": [
+    0,
+    1
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "OpenAI countersues Apple for stealing trade secrets",
+     "url": "https://www.cnbc.com/2026/11/27/openai-countersues-apple-for-stealing-trade-secrets-ft-reports.html"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "OpenAI countersues Apple for allegedly stealing trade secrets",
+     "url": "https://www.washingtonexaminer.com/news/business/4816737/openai-countersues-apple-allegedly-stealing-trade-secrets/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Warriors Rule Stephen Curry Out for Additional Games With Injury",
+   "summary": "The Golden State Warriors have said Stephen Curry will miss additional games as he continues to recover from an oblique injury.",
+   "category": "World",
+   "leans": [
+    0,
+    1
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Warriors Rule Stephen Curry Out for Additional Games With Injury",
+     "url": "https://www.newsweek.com/sports/nba/warriors-rule-stephen-curry-out-for-additional-games-with-injury-12775312"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Warriors receive good Steph Curry news amid oblique injury",
+     "url": "https://nypost.com/2026/11/27/sports/warriors-receive-good-steph-curry-news-amid-oblique-injury/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Biden’s first-week book sales lag behind Obama’s and Clinton’s",
+   "summary": "New data show first-week sales of former President Joe Biden’s memoir, Promise Me, America, trailed those of former Presidents Barack Obama and Bill Clinton. According to Circana, Biden’s memoir sold roughly 21,000 copies in its first week, the Associated Press reported, topping ",
+   "category": "Politics",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Biden’s first-week book sales lag behind Obama’s and Clinton’s",
+     "url": "https://www.washingtonexaminer.com/news/white-house/4816641/biden-book-sales-trail-obama-clinton/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Biden Memoir Sells 21,000 Copies, Trailing Obama and Clinton",
+     "url": "https://www.newsmax.com/newsfront/joe-biden-barack-obama-bill-clinton/2026/11/27/id/1277729"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "NBC yanks controversial anti-Israel ad",
+   "summary": "NBC has pulled an anti-Israel commercial that ran on the \"Saturday Night Live\" Thanksgiving special and that sparked heavy backlash from critics calling it antisemitic.",
+   "category": "World",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "NBC yanks controversial anti-Israel ad",
+     "url": "https://www.washingtontimes.com/news/2026/nov/27/nbc-yanks-controversial-anti-israel-ad/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "NBC Airs Anti-Israel Ad During 'SNL' Thanksgiving Special",
+     "url": "https://www.newsmax.com/newsfront/nbc-thanksgiving-snl/2026/11/27/id/1277730"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "New Look at Upcoming Doc on Kate Middleton’s Cancer Journey",
+   "summary": "In a new clip from the highly anticipated documentary, “Heal,” Kate Middleton describes being faced with her own mortality after being diagnosed with cancer and how she found comfort in speaking to others. NBC’s Daniele Hamadjian reports for TODAY.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 3,
+   "balance": {
+    "l": 3,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "New Look at Upcoming Doc on Kate Middleton’s Cancer Journey",
+     "url": "https://www.today.com/video/new-clip-released-from-kate-middleton-s-upcoming-doc-heal-274261061810"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Princess Kate wants people to learn from her cancer journey in vulnerable new documentary",
+     "url": "https://www.nbcnews.com/world/united-kingdom/princess-kate-wants-people-learn-cancer-journey-vulnerable-new-documen-rcna611259"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Documentary clip reveals new details on Princess Kate's cancer journey",
+     "url": "https://www.cbsnews.com/video/documentary-clip-reveals-new-details-on-princess-kates-cancer-journey/"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Kate Middleton becomes patron of cancer center charity",
+     "url": "https://abcnews.com/GMA/Culture/kate-middleton-patron-cancer-center-charity/story?id=138480841"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Trump demands investigation into GDP data revisions",
+   "summary": "President Trump called for an investigation into the government's economic statistics on Thursday, alleging without evidence that growth figures released before the midterm elections were deliberately understated. Why it matters: Revisions to GDP are routine and reflect more comp",
+   "category": "Politics",
+   "leans": [
+    0
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 2,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump demands probe into 'record setting error' after third-quarter GDP data gets massive revision higher",
+     "url": "https://www.cnbc.com/2026/11/26/trump-gdp-revision-investigation.html"
+    },
+    {
+     "name": "Axios",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump demands investigation into GDP data revisions",
+     "url": "https://www.axios.com/2026/11/26/trump-gdp-investigation-economy-statistics"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "‘Not a Close Case’: Judge Strikes Down Trump Administration’s Targeting of ABC",
+   "summary": "The Federal Communications Commission cannot subject ABC stations to early license review, a federal judge ruled, citing the President’s public statements attacking the network.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Time",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "‘Not a Close Case’: Judge Strikes Down Trump Administration’s Targeting of ABC",
+     "url": "https://time.com/article/2026/11/26/fcc-abc-disney-broadcast-license-early-review-judge-injunction/"
+    }
+   ],
+   "factchecks": [
+    {
+     "org": "Snopes",
+     "title": "Did Mamdani administration close migrant shelter where ICE sought names of residents?",
+     "link": "https://www.snopes.com/fact-check/mamdani-migrant-shelter-ice/"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "title": "French cinema star Gérard Depardieu ordered to stand trial for rape and sexual assault",
+   "summary": "The case has become one of the most prominent in France's reckoning with sexual violence, as the #MeToo movement has faced resistance in the country, particularly in the arts.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "French cinema star Gérard Depardieu ordered to stand trial for rape and sexual assault",
+     "url": "https://www.npr.org/2026/11/27/nx-s1-6055559/gerard-depardieu-trial-rape-france"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "6DVNlmZD56c",
+     "title": "French court orders actor Depardieu to trial on rape charge",
+     "thumb": "https://i.ytimg.com/vi/6DVNlmZD56c/hqdefault.jpg",
+     "channel": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Can luxury save Macy's?",
+   "summary": "This week's celebration of Macy's 100th Thanksgiving parade finds the department store at a turning point. After years of losing sales, the retailer is reimagining itself — as a higher-end destination.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Can luxury save Macy's?",
+     "url": "https://www.npr.org/2026/11/27/nx-s1-6026486/macys-tries-to-reinvent-with-luxury"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Screen-free tweens try their hand at Dungeons & Dragons",
+   "summary": "Some parents, fed up with screens, have found an analog oasis in the role-playing game invented in the 1970s.",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Screen-free tweens try their hand at Dungeons & Dragons",
+     "url": "https://www.npr.org/2026/11/27/nx-s1-6042445/screen-free-tweens-try-their-hand-at-dungeons-dragons"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "12 strategies to cut your risk of dementia. Take this quiz to start",
+   "summary": "Here's something you can do as you gather with family and friends this holiday season: Take a free, five-minute quiz to assess your brain health. You'll learn simple changes to keep your mind sharp.",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "12 strategies to cut your risk of dementia. Take this quiz to start",
+     "url": "https://www.npr.org/2026/11/27/nx-s1-6050867/prevent-dementia-alzheimers-your-turn"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Trump effectively ended asylum. Advocates look to the Supreme Court to restore it",
+   "summary": "Trump's sweeping immigration changes — an asylum ban, mass firings and new legal maneuvers — have all but ended asylum. The high court will soon consider whether some shifts deny people due process.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump effectively ended asylum. Advocates look to the Supreme Court to restore it",
+     "url": "https://www.npr.org/2026/11/27/nx-s1-6037854/trump-effectively-ended-asylum-supreme-court"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Morning news brief",
+   "summary": "Thanksgiving storm pummels the East Coast, Americans expected to spend record amount on Black Friday, Israeli rival factions consider deals in race to form a new government.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Morning news brief",
+     "url": "https://www.npr.org/2026/11/27/nx-s1-6047116/morning-news-brief"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Eagles rally to stun Cowboys coming back from 21 points behind",
+   "summary": "Eagles QB Joe Milton threw two long touchdowns against the quarterback's former team, the Dallas Cowboys, for the the start of quite a comeback, after being down 31-10 early in the third quarter.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Eagles rally to stun Cowboys coming back from 21 points behind",
+     "url": "https://www.npr.org/2026/11/27/nx-s1-6055519/eagles-stun-cowboys"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Mad about mara: the DIY dance movement helping young Nigerians escape the daily grind",
+   "summary": "What started as one artist’s response to being cut out of a music video has exploded, becoming a driving force in Nigeria’s cultural landscape As a student in the central Nigerian city of Ilorin, Lawal Habeeb Kola loved staying in his hostel room to produce beats rather than retu",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Mad about mara: the DIY dance movement helping young Nigerians escape the daily grind",
+     "url": "https://www.theguardian.com/world/2026/nov/27/mad-about-mara-the-diy-dance-movement-helping-young-nigerians-escape-the-daily-grind"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "‘I’m no longer a UAE official’: UN hopeful Lana Nusseibeh tries to shake off Sudan record",
+   "summary": "The US and Russia’s candidate for secretary general is on a charm offensive. Can she overcome London’s resistance to her bid? Lana Nusseibeh is in Britain this week, attempting to present herself as a potential future UN secretary general, and shift the focus from her past as a U",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "‘I’m no longer a UAE official’: UN hopeful Lana Nusseibeh tries to shake off Sudan record",
+     "url": "https://www.theguardian.com/world/2026/nov/26/lana-nusseibeh-uae-sudan-un-secretary-general"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "At least 31 killed as fuel tanker crash ignites large fire on Cairo highway",
+   "summary": "Blaze on ring road surrounding Egyptian capital injures at least 21 people and leaves cars and motorcycles charred A crash involving a fuel tanker ignited a huge fire on a highway surrounding Cairo on Wednesday, killing at least 31 people, Egyptian authorities said. The blaze on ",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "At least 31 killed as fuel tanker crash ignites large fire on Cairo highway",
+     "url": "https://www.theguardian.com/world/2026/nov/25/people-killed-fuel-tanker-crash-ignites-large-fire-cairo-highway"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Swiss tourist killed and British and Americans injured by elephants in Cameroon",
+   "summary": "Alain Throo, insurance executive based in London, reportedly gored and later died on hike near Mount Cameroon national park A Swiss tourist has been killed and British and American tourists have been injured when a group of hikers encountered a herd of elephants in Cameroon. The ",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Swiss tourist killed and British and Americans injured by elephants in Cameroon",
+     "url": "https://www.theguardian.com/environment/2026/nov/25/swiss-tourist-killed-british-americans-injured-elephants-cameroon"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Sri Lankan asylum seeker killed himself after being sent by UK to Eswatini",
+   "summary": "Kishanth Peramalya was denied entry due to sexual assault convictions and sent to Africa where he had no connections The UK sent a Sri Lankan asylum seeker who had been convicted of sexual assault to Eswatini, a southern African country to which he had no connection and where he ",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Sri Lankan asylum seeker killed himself after being sent by UK to Eswatini",
+     "url": "https://www.theguardian.com/uk-news/2026/nov/25/sri-lanka-asylum-seeker-convicted-sexual-assault-uk-kills-himself-eswatini"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "‘Abusive and insulting to Canadians’: campaign to oust US ambassador presented to parliament",
+   "summary": "Hundreds of thousands of Canadians call for Pete Hoekstra to be declared ‘persona non grata’ A petition signed by nearly 290,000 Canadians calling on Mark Carney’s government to oust Pete Hoekstra as US ambassador to Canada was formally presented to the House of Commons on Thursd",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "‘Abusive and insulting to Canadians’: campaign to oust US ambassador presented to parliament",
+     "url": "https://www.theguardian.com/world/2026/nov/27/pete-hoekstra-canada-us-ambassador-petition"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "All hostages rescued after Colombian security forces storm supermarket, police say",
+   "summary": "Unclear if ‘hostage-taker’ who was killed may have been a hostage as daylong siege in Cartagena shopping centre ends Colombian police have stormed a supermarket in one of the country’s most popular tourist cities, ending a daylong siege in which all the hostages were freed and on",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "All hostages rescued after Colombian security forces storm supermarket, police say",
+     "url": "https://www.theguardian.com/world/2026/nov/25/hostages-freed-colombia-security-forces-storm-cartagena-supermarket"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Lululemon founder stuns Canadian women’s leadership conference with sexist comments",
+   "summary": "Chip Wilson said men importing brides from Thailand was due to women waiting too long to have children The controversial founder of Lululemon suggested women in Canada are having too few children and this could lead some men to bring in brides from Thailand , in remarks that stun",
+   "category": "Tech",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Lululemon founder stuns Canadian women’s leadership conference with sexist comments",
+     "url": "https://www.theguardian.com/world/2026/nov/25/lululemon-founder-comments-canada-womens-leadership-conference"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Colombia’s president arrives at scene of supermarket hostage siege in tourist city",
+   "summary": "Abelardo de la Espriella to take control of operation trying to free at least 20 hostages Colombia’s president has arrived at the scene of an hours-long standoff between security services and gunmen holding at least 20 people hostage inside a supermarket in Cartagena, a popular t",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Colombia’s president arrives at scene of supermarket hostage siege in tourist city",
+     "url": "https://www.theguardian.com/world/2026/nov/24/cartagena-colombia-hostages-supermarket"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "New Zealand election: final results show ruling coalition needs minor party to govern",
+   "summary": "Incumbent prime minister Christopher Luxon loses majority and needs support of Opportunity party to remain in power, or country faces another election The final results of New Zealand’s general election show the incumbent rightwing coalition will need the support of a centrist ne",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "New Zealand election: final results show ruling coalition needs minor party to govern",
+     "url": "https://www.theguardian.com/world/2026/nov/27/new-zealand-nz-election-2026-final-results"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Luka Dončić is a scoring machine. The NBA has rarely seen anything like it.",
+   "summary": "Most NBA teams wouldn’t choose to let a player considered perhaps the greatest ever walk away in free agency.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Luka Dončić is a scoring machine. The NBA has rarely seen anything like it.",
+     "url": "https://www.nbcnews.com/sports/nba/luka-doncc-scoring-machine-nba-rarely-seen-anything-rcna610109"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "How are you affording the holidays?",
+   "summary": "After a year of high gas prices, inflation ticking back up and a lot of Americans feeling pessimistic about the economy, we want to know how people are affording the annual wave of holiday gifts, travel and entertainment costs.",
+   "category": "Economy",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "How are you affording the holidays?",
+     "url": "https://www.nbcnews.com/news/us-news/holidays-affording-presents-spending-rcna610963"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "‘Shocking’ decline seen in hep B vaccination against incurable virus, including babies with infected mothers",
+   "summary": "Fewer newborns are being vaccinated against hepatitis B, an incurable infection that can lead to liver disease, a large new analysis has found.",
+   "category": "Health",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "‘Shocking’ decline seen in hep B vaccination against incurable virus, including babies with infected mothers",
+     "url": "https://www.nbcnews.com/health/health-news/hepatitis-b-vaccination-decline-newborns-liver-disease-study-rcna611070"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "2026 Rockefeller Center Christmas Tree Arrives in New York City",
+   "summary": "A magnificent Norway spruce has made its journey from West Edmeston, New York, to Rockefeller Center. The tree will undergo a glow-up ahead of the lighting ceremony on Dec. 2.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "2026 Rockefeller Center Christmas Tree Arrives in New York City",
+     "url": "https://www.today.com/video/2026-rockefeller-center-christmas-tree-arrives-in-new-york-city-273069125683"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Woman surprises hospital valet who supported her through cancer treatment with Bills tickets",
+   "summary": "Breast cancer survivor Kate Fink credits hospital valet Jon Avery with helping her fight the disease. She surprised the Buffalo Bills fan with tickets and field passes. Steve Hartman goes on the road.",
+   "category": "Health",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Woman surprises hospital valet who supported her through cancer treatment with Bills tickets",
+     "url": "https://www.cbsnews.com/video/woman-surprises-hospital-valet-who-supported-her-through-cancer-treatment-with-bills-tickets/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Pittsburgh Steelers take the field for first game since star quarterback Rodgers' release",
+   "summary": "The Pittsburgh Steelers took the field Friday for their first game after star quarterback Aaron Rodgers was released following comments accusing coach Mike McCarthy of sleeping through meetings and more. Jason Allen has the story.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Pittsburgh Steelers take the field for first game since star quarterback Rodgers' release",
+     "url": "https://www.cbsnews.com/video/pittsburgh-steelers-take-the-field-for-first-game-since-star-quarterback-rodgers-release/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Lawmakers ask Trump to rescind Putin's G20 invitation over alleged intelligence-sharing with Iran",
+   "summary": "President Trump is facing renewed criticism over his friendship with Vladimir Putin, with a group of bipartisan lawmakers urging him to disinvite the Russian leader from next month's G20 summit in Florida. Weijia Jiang has more.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Lawmakers ask Trump to rescind Putin's G20 invitation over alleged intelligence-sharing with Iran",
+     "url": "https://www.cbsnews.com/video/lawmakers-ask-trump-to-rescind-putins-g20-invitation-over-alleged-intelligence-sharing-with-iran/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "LIVE:  ABC News Live",
+   "summary": "24/7 coverage of breaking news and live events",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "LIVE:  ABC News Live",
+     "url": "https://abcnews.com/video/41463246/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  }
+ ],
+ "blindspots": [
+  {
+   "title": "Biden’s first-week book sales lag behind Obama’s and Clinton’s",
+   "summary": "New data show first-week sales of former President Joe Biden’s memoir, Promise Me, America, trailed those of former Presidents Barack Obama and Bill Clinton. According to Circana, Biden’s memoir sold roughly 21,000 copies in its first week, the Associated Press reported, topping ",
+   "category": "Politics",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Biden’s first-week book sales lag behind Obama’s and Clinton’s",
+     "url": "https://www.washingtonexaminer.com/news/white-house/4816641/biden-book-sales-trail-obama-clinton/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Biden Memoir Sells 21,000 Copies, Trailing Obama and Clinton",
+     "url": "https://www.newsmax.com/newsfront/joe-biden-barack-obama-bill-clinton/2026/11/27/id/1277729"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "NBC yanks controversial anti-Israel ad",
+   "summary": "NBC has pulled an anti-Israel commercial that ran on the \"Saturday Night Live\" Thanksgiving special and that sparked heavy backlash from critics calling it antisemitic.",
+   "category": "World",
+   "leans": [
+    1,
+    2
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "NBC yanks controversial anti-Israel ad",
+     "url": "https://www.washingtontimes.com/news/2026/nov/27/nbc-yanks-controversial-anti-israel-ad/"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "NBC Airs Anti-Israel Ad During 'SNL' Thanksgiving Special",
+     "url": "https://www.newsmax.com/newsfront/nbc-thanksgiving-snl/2026/11/27/id/1277730"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "New Look at Upcoming Doc on Kate Middleton’s Cancer Journey",
+   "summary": "In a new clip from the highly anticipated documentary, “Heal,” Kate Middleton describes being faced with her own mortality after being diagnosed with cancer and how she found comfort in speaking to others. NBC’s Daniele Hamadjian reports for TODAY.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 3,
+   "balance": {
+    "l": 3,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "New Look at Upcoming Doc on Kate Middleton’s Cancer Journey",
+     "url": "https://www.today.com/video/new-clip-released-from-kate-middleton-s-upcoming-doc-heal-274261061810"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Princess Kate wants people to learn from her cancer journey in vulnerable new documentary",
+     "url": "https://www.nbcnews.com/world/united-kingdom/princess-kate-wants-people-learn-cancer-journey-vulnerable-new-documen-rcna611259"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Documentary clip reveals new details on Princess Kate's cancer journey",
+     "url": "https://www.cbsnews.com/video/documentary-clip-reveals-new-details-on-princess-kates-cancer-journey/"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Kate Middleton becomes patron of cancer center charity",
+     "url": "https://abcnews.com/GMA/Culture/kate-middleton-patron-cancer-center-charity/story?id=138480841"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  }
+ ],
+ "factchecks": [
+  {
+   "org": "Snopes",
+   "title": "Did Trump offer press secretary job to wrong Dana White?",
+   "link": "https://www.snopes.com/news/2026/11/09/trump-press-secretary-dana-white/",
+   "summary": "Posts claimed Trump mistakenly offered the gig to the UFC chief instead of a communications professional who once worked at the Department of Defense."
+  },
+  {
+   "org": "Snopes",
+   "title": "Did Katie Miller say car seat mandates would 'kill the birth rate'?",
+   "link": "https://www.snopes.com/fact-check/kate-miller-car-seats/",
+   "summary": "A 2024 study suggested that car seat requirements could discourage some families from having a third child."
+  },
+  {
+   "org": "Snopes",
+   "title": "Real video of NYC lawmaker Jordan Wright's eye roll fuels lizard conspiracy theory",
+   "link": "https://www.snopes.com/fact-check/nyc-assemblyman-eye-roll-lizard/",
+   "summary": "“Obviously I’m a human being,” Wright reportedly told the New York Post."
+  },
+  {
+   "org": "Snopes",
+   "title": "19 rumors about insider trading, prediction markets we've investigated",
+   "link": "https://www.snopes.com/collections/insider-trading-prediction-markets-collection/",
+   "summary": "Trump’s critics suspect the president engaged in insider trading after Nvidia CEO Jensen Huang returned to the company."
+  },
+  {
+   "org": "Snopes",
+   "title": "Video doesn't show supposed Muslim group 'Soldiers of Allah' demanding Shariah in Manchester",
+   "link": "https://www.snopes.com/fact-check/shariah-law-manchester-video/",
+   "summary": "The video actually shows Shiite Muslims marking Ashura, an annual religious event."
+  },
+  {
+   "org": "Snopes",
+   "title": "Did DOGE lay off 400 FAA technicians responsible for maintaining critical navigational systems?",
+   "link": "https://www.snopes.com/fact-check/doge-cuts-to-faa/",
+   "summary": "People tied the supposed cuts to a nationwide ground stop involving the FAA's older communications network."
+  },
+  {
+   "org": "Snopes",
+   "title": "6 stories about Transportation Secretary Sean Duffy",
+   "link": "https://www.snopes.com/collections/transportation-sean-duffy-fact-check/",
+   "summary": "We compiled our fact checks on Duffy’s FAA funding votes, theories about his ties to an AI company and more."
+  },
+  {
+   "org": "Snopes",
+   "title": "Did Apollo 11 astronauts sign autographs as insurance covers?",
+   "link": "https://www.snopes.com/news/2026/11/27/apollo-11-astronauts-insurance/",
+   "summary": "Posts claimed the astronauts signed customized postal envelopes that were postmarked on landmark dates."
+  },
+  {
+   "org": "Snopes",
+   "title": "Did Texas ICE facility serve employee-only Thanksgiving dinner in front of detained families?",
+   "link": "https://www.snopes.com/news/2026/11/27/thanksgiving-texas-ice-dinner/",
+   "summary": "Spokespeople for DHS and Dilley Immigration Processing Center’s operator called the claim false."
+  },
+  {
+   "org": "Snopes",
+   "title": "Is Islam the fastest-growing religion in the US? We checked the data",
+   "link": "https://www.snopes.com/fact-check/islam-us-growth/",
+   "summary": "Versions of the rumor have been making the rounds on social media for more than 20 years."
+  },
+  {
+   "org": "Snopes",
+   "title": "Did Mamdani administration close migrant shelter where ICE sought names of residents?",
+   "link": "https://www.snopes.com/fact-check/mamdani-migrant-shelter-ice/",
+   "summary": "A federal judge ordered on Nov. 6 that the Mamdani administration obey a subpeona for the names of the residents at the Bruckner migrant shelter."
+  },
+  {
+   "org": "Snopes",
+   "title": "Does wrapping your doorknob in foil keep you safe if alone at night?",
+   "link": "https://www.snopes.com/fact-check/foil-doorknob-alone-night/",
+   "summary": "The rumor is an example of advertising arbitrage, where users are encouraged to click through to websites for profit."
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Trump Officials Overstate Role in Drug-Death Decline",
+   "link": "https://www.factcheck.org/2026/11/trump-officials-overstate-role-in-drug-death-decline/",
+   "summary": "Trump administration officials, and the president himself, have taken credit for a decline in fatal overdoses, citing a \"sealed\" or \"secure\" border and actions against cartels, including airstrikes on alleged drug boats. But overdose deaths were already falling when Trump took of"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "FactChecking Trump’s Auto Plants Claims",
+   "link": "https://www.factcheck.org/2026/11/factchecking-trumps-auto-plants-claims/",
+   "summary": "In declaring his high tariffs on imported vehicles a success, President Donald Trump often makes false and unsubstantiated claims about auto manufacturing plants in the United States. The post FactChecking Trump’s Auto Plants Claims appeared first on FactCheck.org ."
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Trump’s Misguided Claim That ‘They’ Waited to Lower Gas Prices Until After the Midterms",
+   "link": "https://www.factcheck.org/2026/11/trumps-misguided-claim-that-they-waited-to-lower-gas-prices-until-after-the-midterms/",
+   "summary": "Gasoline prices have been trending downward, dropping about 75 cents per gallon since Sept. 24, though prices are still about 69 cents higher than this time a year ago. In a social media post on Nov. 17, President Donald Trump wrongly suggested there was a political motivation be"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Former Trump Administration Health Adviser Misleads About mRNA Flu Vaccine",
+   "link": "https://www.factcheck.org/2026/11/former-trump-administration-health-adviser-misleads-about-mrna-flu-vaccine/",
+   "summary": "Former Health and Human Services Department adviser Calley Means has misleadingly suggested that the new mRNA influenza vaccine from Moderna isn’t safe and doesn’t work well. Less is known about it because it is a new vaccine, but trial data suggest it works better than standard "
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Trump Makes False and Misleading Claims About Funding for HBCUs",
+   "link": "https://www.factcheck.org/2026/11/trump-makes-false-and-misleading-claims-about-funding-for-hbcus/",
+   "summary": "President Donald Trump falsely claimed that former Presidents Barack Obama and Joe Biden “did nothing” in terms of funding for historically Black colleges and universities that Trump said he “saved” from bankruptcy. The post Trump Makes False and Misleading Claims About Funding f"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Unpacking the Partisan Finger-Pointing Over FAA Funding",
+   "link": "https://www.factcheck.org/2026/11/unpacking-the-partisan-finger-pointing-over-faa-funding/",
+   "summary": "The grounding of thousands of flights on Nov. 13 set off a round of partisan finger-pointing over who’s to blame for the state of the nation’s aging air traffic control system. The post Unpacking the Partisan Finger-Pointing Over FAA Funding appeared first on FactCheck.org ."
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Our Annual Fundraising Drive",
+   "link": "https://www.factcheck.org/2026/11/our-annual-fundraising-drive/",
+   "summary": "Please consider giving a donation to FactCheck.org during our annual end-of-year fundraising drive, which starts today and lasts until the end of the year. The post Our Annual Fundraising Drive appeared first on FactCheck.org ."
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Florida’s Surgeon General Spins State COVID-19 Vaccine Comparison Study",
+   "link": "https://www.factcheck.org/2026/11/floridas-surgeon-general-spins-state-covid-19-vaccine-comparison-study/",
+   "summary": "A new analysis of data from Florida found a higher risk of mortality in those receiving the Pfizer versus the Moderna COVID-19 vaccine in the year after a first dose. It does not establish that the Pfizer vaccine was dangerous or caused deaths, contrary to suggestions by the stat"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "FactChecking Trump’s Post-Election ‘60 Minutes’ Interview",
+   "link": "https://www.factcheck.org/2026/11/factchecking-trumps-post-election-60-minutes-interview/",
+   "summary": "In his first sit-down interview since the midterm elections that saw Democrats retake control of both the House and Senate, President Donald Trump blamed Republicans’ poor showing on “bad messaging” of his second term accomplishments. But in his recounting of events, Trump repeat"
+  },
+  {
+   "org": "FactCheck.org",
+   "title": "Explaining the U.S. Defense Agreement with Greenland and Denmark",
+   "link": "https://www.factcheck.org/2026/11/explaining-the-u-s-defense-agreement-with-greenland-and-denmark/",
+   "summary": "Under the terms of a new defense agreement between Greenland, Denmark and the United States, Greenland remains a self-governed territory of Denmark with the right to declare its independence in the future. The U.S. did not \"get” Greenland, nor does it now \"own\" Greenland, as Pres"
+  },
+  {
+   "org": "Full Fact",
+   "title": "No, King Charles hasn’t welcomed a ‘new global order’ and a ‘single global government’ based in Tel Aviv",
+   "link": "https://fullfact.org/culture-and-society/king-charles-hasnt-welcomed-single-global-government/",
+   "summary": "Claims about a supposed Royal Family announcement last month have had thousands of shares on social media."
+  },
+  {
+   "org": "Full Fact",
+   "title": "AI-generated protest video shared thousands of times online",
+   "link": "https://fullfact.org/politics/ai-generated-march-video/",
+   "summary": "The video of people marching while carrying Union Jacks and St George’s Cross flags contains visual glitches typical of AI."
+  }
+ ]
 }
