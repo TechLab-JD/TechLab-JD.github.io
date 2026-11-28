@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-28T03:00:35Z",
- "generated_human": "Nov 28, 2026 · 03:00 UTC",
+ "generated": "2026-11-28T04:00:57Z",
+ "generated_human": "Nov 28, 2026 · 04:00 UTC",
  "sources": [
   {
    "name": "NPR",
@@ -211,11 +211,11 @@
  "trending": [
   {
    "term": "thanksgiving",
-   "n": 15
+   "n": 16
   },
   {
    "term": "trump",
-   "n": 13
+   "n": 14
   },
   {
    "term": "black",
@@ -230,11 +230,19 @@
    "n": 9
   },
   {
+   "term": "parade",
+   "n": 8
+  },
+  {
    "term": "back",
    "n": 8
   },
   {
-   "term": "star",
+   "term": "another",
+   "n": 8
+  },
+  {
+   "term": "storm",
    "n": 7
   },
   {
@@ -242,11 +250,7 @@
    "n": 7
   },
   {
-   "term": "parade",
-   "n": 7
-  },
-  {
-   "term": "iran",
+   "term": "your",
    "n": 7
   },
   {
@@ -254,15 +258,7 @@
    "n": 7
   },
   {
-   "term": "military",
-   "n": 7
-  },
-  {
-   "term": "another",
-   "n": 7
-  },
-  {
-   "term": "storm",
+   "term": "star",
    "n": 6
   },
   {
@@ -270,11 +266,47 @@
    "n": 6
   },
   {
-   "term": "your",
+   "term": "power",
+   "n": 6
+  },
+  {
+   "term": "iran",
    "n": 6
   }
  ],
  "videos": [
+  {
+   "videoId": "ewXjIvHBRHw",
+   "title": "Turkey appears to crash into Utah home",
+   "thumb": "https://i.ytimg.com/vi/ewXjIvHBRHw/hqdefault.jpg",
+   "channel": "NBC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "9mW3he9soK0",
+   "title": "‘VICTORY AT HAND’: President Trump insists Iran will ‘never have a nuclear weapon’",
+   "thumb": "https://i.ytimg.com/vi/9mW3he9soK0/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "NQnzkUrFM5Q",
+   "title": "Swiftie reacts to Taylor Swift’s ex-classmate saying the singer got 'LUCKY’",
+   "thumb": "https://i.ytimg.com/vi/NQnzkUrFM5Q/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "8Ngt0uYxzB4",
+   "title": "Aid cuts and withdrawals leave northern Yemen in dire need, says NRC chief",
+   "thumb": "https://i.ytimg.com/vi/8Ngt0uYxzB4/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
   {
    "videoId": "9cFiEb7yAkE",
    "title": "Pager: Miller Could Be “Very Aggressive” Pushing WH Agenda",
@@ -370,38 +402,6 @@
    "channel": "Fox News",
    "lean": 2,
    "label": "Right"
-  },
-  {
-   "videoId": "6S-1fjkuYlk",
-   "title": "Boy’s final wish gives hospitalized children a place to ‘simply be kids’",
-   "thumb": "https://i.ytimg.com/vi/6S-1fjkuYlk/hqdefault.jpg",
-   "channel": "Washington Post",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "VvIQ4p5YyzA",
-   "title": "ART OF THE DEAL: Trump to meet El-Sayed over healthcare policy",
-   "thumb": "https://i.ytimg.com/vi/VvIQ4p5YyzA/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
-  {
-   "videoId": "EXGz0eh28jw",
-   "title": "How marching bands raised thousands overnight to stay for the Macy's parade",
-   "thumb": "https://i.ytimg.com/vi/EXGz0eh28jw/hqdefault.jpg",
-   "channel": "CNN",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "iLZM52t7-SE",
-   "title": "NBC Nightly News with Tom Llamas Full Episode - Nov. 27",
-   "thumb": "https://i.ytimg.com/vi/iLZM52t7-SE/hqdefault.jpg",
-   "channel": "NBC News",
-   "lean": -1,
-   "label": "Lean Left"
   }
  ],
  "stories": [
@@ -517,10 +517,10 @@
     2
    ],
    "span": 3,
-   "n_sources": 9,
+   "n_sources": 10,
    "balance": {
     "l": 5,
-    "c": 1,
+    "c": 2,
     "r": 3
    },
    "blindspot": null,
@@ -533,6 +533,13 @@
      "url": "https://www.npr.org/2026/11/27/g-s1-156004/up-first-newsletter-thanksgiving-storm-black-friday-shopping-asylum-supreme-court"
     },
     {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "From Thanksgiving blackouts to Black Friday, a holiday hit by wild weather and economic woes",
+     "url": "https://www.npr.org/2026/11/27/nx-s1-6054884/thanksgiving-weather-black-friday"
+    },
+    {
      "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
@@ -540,11 +547,18 @@
      "url": "https://www.nbcnews.com/nightly-news/video/mass-power-outages-after-thanksgiving-day-storms-274286149762"
     },
     {
-     "name": "CBS News",
+     "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Shoppers expected to spend nearly $13 billion this Black Friday, Adobe says",
-     "url": "https://www.cbsnews.com/video/shoppers-expected-to-spend-nearly-13-billion-this-black-friday-adobe-says/"
+     "title": "Biggest Black Friday deals as holiday retail rush kicks in",
+     "url": "https://www.nbcnews.com/nightly-news/video/biggest-black-friday-deals-as-holiday-retail-rush-kicks-in-274286149626"
+    },
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Live updates: The best Black Friday deals up to 70% off, handpicked by a shopping expert",
+     "url": "https://www.nbcnews.com/select/shopping/best-black-friday-deals-11-27-2026-rcna611358"
     },
     {
      "name": "CBS News",
@@ -552,6 +566,13 @@
      "label": "Lean Left",
      "title": "Power being slowly restored as heavy Thanksgiving storm eases",
      "url": "https://www.cbsnews.com/news/east-coast-thanksgiving-storm-power-outages-cleanup/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Shoppers expected to spend nearly $13 billion this Black Friday, Adobe says",
+     "url": "https://www.cbsnews.com/video/shoppers-expected-to-spend-nearly-13-billion-this-black-friday-adobe-says/"
     },
     {
      "name": "CBS News",
@@ -582,11 +603,39 @@
      "url": "https://www.cnbc.com/2026/11/27/black-friday-2026-inflation-value-deals.html"
     },
     {
+     "name": "CNBC",
+     "lean": 0,
+     "label": "Center",
+     "title": "Dow rallies nearly 600 points to close out best week since 2022: Live updates",
+     "url": "https://www.cnbc.com/2026/11/26/stock-market-today-live-updates.html"
+    },
+    {
+     "name": "Al Jazeera",
+     "lean": 0,
+     "label": "Center",
+     "title": "Parts of US clean up after Thanksgiving storm lashes East Coast",
+     "url": "https://www.aljazeera.com/news/2026/11/28/parts-of-us-clean-up-after-thanksgiving-storm-lashes-east-coast?traffic_source=rss"
+    },
+    {
      "name": "New York Post",
      "lean": 1,
      "label": "Lean Right",
-     "title": "Keep online activity private and save 75% with Proton VPN’s Black Friday Deal",
-     "url": "https://nypost.com/2026/11/27/shopping/save-75-with-proton-vpns-black-friday-deal/"
+     "title": "Dress to impress, spend less: 71+ Black Friday clothing deals for men and women",
+     "url": "https://nypost.com/shopping/black-friday-clothing-fashion-shoes-deals-sales-2026/"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Don’t refresh your screen: 21+ Black Friday laptop deals still live",
+     "url": "https://nypost.com/shopping/black-friday-laptop-deals-2026/"
+    },
+    {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Apple of our eye: Black Friday deals slash up to 40% off AirPods, iPads and more",
+     "url": "https://nypost.com/shopping/apple-black-friday-deals-2026/"
     },
     {
      "name": "Washington Times",
@@ -603,7 +652,13 @@
      "url": "https://www.newsmax.com/newsfront/adobe-analytics-black-friday-cyber-monday/2026/11/27/id/1277741"
     }
    ],
-   "factchecks": [],
+   "factchecks": [
+    {
+     "org": "FactCheck.org",
+     "title": "Former Trump Administration Health Adviser Misleads About mRNA Flu Vaccine",
+     "link": "https://www.factcheck.org/2026/11/former-trump-administration-health-adviser-misleads-about-mrna-flu-vaccine/"
+    }
+   ],
    "videos": [
     {
      "videoId": "LZPdMu17AEk",
@@ -622,9 +677,9 @@
      "label": "Lean Left"
     },
     {
-     "videoId": "unIUhMGh0zc",
-     "title": "Mass power outages after Thanksgiving Day storms",
-     "thumb": "https://i.ytimg.com/vi/unIUhMGh0zc/hqdefault.jpg",
+     "videoId": "Y-vWMDVu-2I",
+     "title": "Biggest Black Friday deals as holiday retail rush kicks in",
+     "thumb": "https://i.ytimg.com/vi/Y-vWMDVu-2I/hqdefault.jpg",
      "channel": "NBC News",
      "lean": -1,
      "label": "Lean Left"
@@ -638,14 +693,15 @@
    "leans": [
     -1,
     0,
+    1,
     2
    ],
    "span": 3,
-   "n_sources": 6,
+   "n_sources": 8,
    "balance": {
-    "l": 2,
+    "l": 3,
     "c": 3,
-    "r": 1
+    "r": 2
    },
    "blindspot": null,
    "sources": [
@@ -664,11 +720,32 @@
      "url": "https://www.today.com/video/macy-s-thanksgiving-day-parade-postponed-for-first-time-ever-274220101982"
     },
     {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Zohran Mamdani has successful surgery for torn Achilles and will make full recovery, staff says",
+     "url": "https://www.nbcnews.com/news/us-news/zohran-mamdani-surgery-torn-achilles-successful-ll-make-full-recovery-rcna611501"
+    },
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "NYC Mayor Mamdani has 'successful' surgery on torn Achilles tendon",
+     "url": "https://abcnews.com/US/nyc-mayor-mamdani-successful-surgery-torn-achilles-tendon/story?id=138488280"
+    },
+    {
      "name": "BBC News",
      "lean": 0,
      "label": "Center",
      "title": "'We couldn't give up that easily': Marching bands scramble to cover costs after Thanksgiving parade rearranged",
      "url": "https://www.bbc.co.uk/news/articles/ckd71ypy9e8eo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "Mamdani recovering after 'successful' Achilles surgery",
+     "url": "https://thehill.com/homenews/state-watch/6245795-nyc-mayor-achilles-surgery-success/"
     },
     {
      "name": "The Hill",
@@ -683,6 +760,13 @@
      "label": "Center",
      "title": "Macy's Thanksgiving parade postponed for the first time in the event's history",
      "url": "https://www.axios.com/2026/11/25/macys-thanksgiving-parade-2026-balloons-weather"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Mamdani has successful surgery on torn Achilles but will miss rescheduled Macy’s Thanksgiving Day Parade",
+     "url": "https://www.washingtonexaminer.com/news/4816785/mamdani-successful-surgery-skip-macys-thanksgiving-day-parade/"
     },
     {
      "name": "Newsmax",
@@ -703,27 +787,27 @@
      "label": "Lean Left"
     },
     {
+     "videoId": "wWO-mRZ9Ih8",
+     "title": "Mamdani recovering after ‘successful’ Achilles surgery",
+     "thumb": "https://i.ytimg.com/vi/wWO-mRZ9Ih8/hqdefault.jpg",
+     "channel": "NBC News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
      "videoId": "PyPJqJ48hYM",
      "title": "Severe weather chaos on Thanksgiving; World awaits postponed Macy's parade in NYC",
      "thumb": "https://i.ytimg.com/vi/PyPJqJ48hYM/hqdefault.jpg",
      "channel": "CBS News",
      "lean": -1,
      "label": "Lean Left"
-    },
-    {
-     "videoId": "nwOUJNb28Ak",
-     "title": "Macy’s Thanksgiving Day Parade marches on after delay",
-     "thumb": "https://i.ytimg.com/vi/nwOUJNb28Ak/hqdefault.jpg",
-     "channel": "NBC News",
-     "lean": -1,
-     "label": "Lean Left"
     }
    ]
   },
   {
-   "title": "US strikes commercial ship in Gulf of Oman for attempting to run naval blockade after leaving Iran",
-   "summary": "The U.S. military struck and disabled a commercial vessel on Thursday in the Gulf of Oman, which connects to the Strait of Hormuz, for attempting to run a U.S. naval blockade after leaving an Iranian port, according to U.S. Central Command. “U.S. Central Command (CENTCOM) disable",
-   "category": "World",
+   "title": "Two American Airlines planes clip wings at Reagan National Airport",
+   "summary": "Two American Airlines planes clipped wings while preparing for departure at Ronald Reagan Washington National Airport on Friday evening, prompting an arriving aircraft to abort its landing. Dallas-bound American Airlines Flight 638 struck the wing of Chicago-bound Flight 2152 at ",
+   "category": "General",
    "leans": [
     -1,
     0,
@@ -733,9 +817,9 @@
    "span": 3,
    "n_sources": 6,
    "balance": {
-    "l": 2,
+    "l": 1,
     "c": 1,
-    "r": 3
+    "r": 4
    },
    "blindspot": null,
    "sources": [
@@ -743,63 +827,54 @@
      "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "U.S. forces disable commercial ship that allegedly tried to breach Iran blockade",
-     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-threats-diplomacy-strait-of-hormuz/"
+     "title": "2 American Airlines jets clip wings on tarmac of Reagan Airport",
+     "url": "https://www.cbsnews.com/news/american-airlines-jets-clip-wings-reagan-airport/"
     },
     {
-     "name": "PBS NewsHour",
+     "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "U.S. military says it disabled another ship that tried to breach naval blockade on Iranian ports",
-     "url": "https://www.pbs.org/newshour/world/u-s-military-says-it-disabled-another-ship-that-tried-to-breach-naval-blockade-on-iranian-ports"
+     "title": "2 American Airlines jets clip their wings at Reagan National Airport",
+     "url": "https://www.cbsnews.com/video/2-american-airlines-jets-clip-their-wings-at-reagan-national-airport/"
     },
     {
-     "name": "Al Jazeera",
+     "name": "Newsweek",
      "lean": 0,
      "label": "Center",
-     "title": "US disables ship attempting to breach Iran blockade",
-     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/27/us-disables-ship-attempting-to-breach-iran-blockade?traffic_source=rss"
-    },
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "US military says it disabled merchant ship trying to breach Iran blockade",
-     "url": "https://www.aljazeera.com/news/2026/11/27/us-military-says-it-disabled-merchant-ship-trying-to-breach-iran-blockade?traffic_source=rss"
+     "title": "Two American Airlines Jets Clip Wings at Reagan National Airport",
+     "url": "https://www.newsweek.com/two-american-airlines-jets-clip-wings-at-reagan-national-airport-12775271"
     },
     {
      "name": "Washington Examiner",
      "lean": 1,
      "label": "Lean Right",
-     "title": "US strikes commercial ship in Gulf of Oman for attempting to run naval blockade after leaving Iran",
-     "url": "https://www.washingtonexaminer.com/news/world/4816605/us-strikes-commercial-ship-gulf-of-oman/"
+     "title": "Two American Airlines planes clip wings at Reagan National Airport",
+     "url": "https://www.washingtonexaminer.com/travel/4816749/american-airlines-planes-clip-wings-washington-national-airport/"
     },
     {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "U.S. military says it disabled another ship that tried to breach naval blockade on Iranian ports",
-     "url": "https://www.washingtontimes.com/news/2026/nov/27/us-military-says-disabled-another-ship-attempted-breach-naval/"
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "American Airlines planes clip wings during busy holiday travel weekend at Reagan National in DC",
+     "url": "https://www.foxnews.com/us/american-airlines-planes-clip-wings-busy-holiday-travel-weekend-reagan-national-dc"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "American Airlines Jet Clips Another At Reagan National, Breaking Off Piece Of Wing",
+     "url": "https://www.dailywire.com/news/american-airlines-jet-clips-another-at-reagan-national-breaking-off-piece-of-wing"
     },
     {
      "name": "Newsmax",
      "lean": 2,
      "label": "Right",
-     "title": "US Disables Cargo Ship Trying to Breach Iran Blockade",
-     "url": "https://www.newsmax.com/newsfront/centcom-blockade-iran/2026/11/27/id/1277732"
+     "title": "Plane Clips Wing of Aircraft at Reagan Airport",
+     "url": "https://www.newsmax.com/newsfront/american-airlines-plane-faa/2026/11/27/id/1277746"
     }
    ],
    "factchecks": [],
-   "videos": [
-    {
-     "videoId": "ffu4KwubJt8",
-     "title": "US disables ship attempting to breach Iran blockade | AJ #shorts",
-     "thumb": "https://i.ytimg.com/vi/ffu4KwubJt8/hqdefault.jpg",
-     "channel": "Al Jazeera",
-     "lean": 0,
-     "label": "Center"
-    }
-   ]
+   "videos": []
   },
   {
    "title": "Canada’s top court upholds Quebec law barring public sector workers from wearing religious symbols",
@@ -860,9 +935,9 @@
    "videos": []
   },
   {
-   "title": "Two American Airlines planes clip wings at Reagan National Airport",
-   "summary": "Two American Airlines planes clipped wings while preparing for departure at Ronald Reagan Washington National Airport on Friday evening, prompting an arriving aircraft to abort its landing. Dallas-bound American Airlines Flight 638 struck the wing of Chicago-bound Flight 2152 at ",
-   "category": "General",
+   "title": "U.S. military says it disabled another ship that tried to breach naval blockade on Iranian ports",
+   "summary": "A military aircraft fired \"precision munitions\" at the stern of the Palau-flagged M/V Pacific Archer on Thursday, and the \"ship's propulsion was ultimately disabled and the civilian crew was unharmed,\" U.S. Central Command said in a statement.",
+   "category": "World",
    "leans": [
     -1,
     0,
@@ -872,135 +947,57 @@
    "span": 3,
    "n_sources": 5,
    "balance": {
-    "l": 1,
-    "c": 1,
-    "r": 3
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "2 American Airlines jets clip wings on tarmac of Reagan Airport",
-     "url": "https://www.cbsnews.com/news/american-airlines-jets-clip-wings-reagan-airport/"
-    },
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "2 American Airlines jets clip their wings at Reagan National Airport",
-     "url": "https://www.cbsnews.com/video/2-american-airlines-jets-clip-their-wings-at-reagan-national-airport/"
-    },
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Two American Airlines Jets Clip Wings at Reagan National Airport",
-     "url": "https://www.newsweek.com/two-american-airlines-jets-clip-wings-at-reagan-national-airport-12775271"
-    },
-    {
-     "name": "Washington Examiner",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Two American Airlines planes clip wings at Reagan National Airport",
-     "url": "https://www.washingtonexaminer.com/travel/4816749/american-airlines-planes-clip-wings-washington-national-airport/"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "American Airlines planes clip wings during busy holiday travel weekend at Reagan National in DC",
-     "url": "https://www.foxnews.com/us/american-airlines-planes-clip-wings-busy-holiday-travel-weekend-reagan-national-dc"
-    },
-    {
-     "name": "The Daily Wire",
-     "lean": 2,
-     "label": "Right",
-     "title": "American Airlines Jet Clips Another At Reagan National, Breaking Off Piece Of Wing",
-     "url": "https://www.dailywire.com/news/american-airlines-jet-clips-another-at-reagan-national-breaking-off-piece-of-wing"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "From Thanksgiving blackouts to Black Friday, a holiday hit by wild weather and economic woes",
-   "summary": "A storm battered much of the country on Thursday, knocking out power to thousands of homes and disrupting travel. Today, Black Friday shopping deals kick off, and on Saturday New York City will hold the postponed Macy's Thanksgiving Day Parade.",
-   "category": "General",
-   "leans": [
-    -1,
-    0,
-    1
-   ],
-   "span": 2,
-   "n_sources": 4,
-   "balance": {
     "l": 2,
     "c": 1,
-    "r": 1
+    "r": 2
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "NPR",
+     "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "From Thanksgiving blackouts to Black Friday, a holiday hit by wild weather and economic woes",
-     "url": "https://www.npr.org/2026/11/27/nx-s1-6054884/thanksgiving-weather-black-friday"
+     "title": "U.S. forces disable commercial ship that allegedly tried to breach Iran blockade",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-threats-diplomacy-strait-of-hormuz/"
     },
     {
-     "name": "NBC News",
+     "name": "PBS NewsHour",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Biggest Black Friday deals as holiday retail rush kicks in",
-     "url": "https://www.nbcnews.com/nightly-news/video/biggest-black-friday-deals-as-holiday-retail-rush-kicks-in-274286149626"
+     "title": "U.S. military says it disabled another ship that tried to breach naval blockade on Iranian ports",
+     "url": "https://www.pbs.org/newshour/world/u-s-military-says-it-disabled-another-ship-that-tried-to-breach-naval-blockade-on-iranian-ports"
     },
     {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Live updates: The best Black Friday deals up to 70% off, handpicked by a shopping expert",
-     "url": "https://www.nbcnews.com/select/shopping/best-black-friday-deals-11-27-2026-rcna611358"
-    },
-    {
-     "name": "CNBC",
+     "name": "Al Jazeera",
      "lean": 0,
      "label": "Center",
-     "title": "Dow rallies nearly 600 points to close out best week since 2022: Live updates",
-     "url": "https://www.cnbc.com/2026/11/26/stock-market-today-live-updates.html"
+     "title": "US disables ship attempting to breach Iran blockade",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/27/us-disables-ship-attempting-to-breach-iran-blockade?traffic_source=rss"
     },
     {
-     "name": "New York Post",
+     "name": "Washington Times",
      "lean": 1,
      "label": "Lean Right",
-     "title": "Apple of our eye: Black Friday deals slash up to 40% off AirPods, iPads and more",
-     "url": "https://nypost.com/shopping/apple-black-friday-deals-2026/"
+     "title": "U.S. military says it disabled another ship that tried to breach naval blockade on Iranian ports",
+     "url": "https://www.washingtontimes.com/news/2026/nov/27/us-military-says-disabled-another-ship-attempted-breach-naval/"
     },
     {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Shear delight: UGG Black Friday deals take 50% off boots and slippers",
-     "url": "https://nypost.com/shopping/black-friday-uggs-deals-sales-2026/"
-    },
-    {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "From CBD gummies to sauna blankets — 37 Black Friday wellness deals I’m obsessed with",
-     "url": "https://nypost.com/shopping/black-friday-health-wellness-deals-2026/"
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "US Disables Cargo Ship Trying to Breach Iran Blockade",
+     "url": "https://www.newsmax.com/newsfront/centcom-blockade-iran/2026/11/27/id/1277732"
     }
    ],
    "factchecks": [],
    "videos": [
     {
-     "videoId": "Y-vWMDVu-2I",
-     "title": "Biggest Black Friday deals as holiday retail rush kicks in",
-     "thumb": "https://i.ytimg.com/vi/Y-vWMDVu-2I/hqdefault.jpg",
-     "channel": "NBC News",
-     "lean": -1,
-     "label": "Lean Left"
+     "videoId": "ffu4KwubJt8",
+     "title": "US disables ship attempting to breach Iran blockade | AJ #shorts",
+     "thumb": "https://i.ytimg.com/vi/ffu4KwubJt8/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
     }
    ]
   },
@@ -1154,41 +1151,6 @@
    ]
   },
   {
-   "title": "Justin Herbert ruled out against Patriots as DJ Uiagalelei gets first career start for Chargers",
-   "summary": "Justin Herbert lands in concussion protocol as the 1-9 Los Angeles Chargers turn to DJ Uiagalelei for his first career start against the Patriots.",
-   "category": "General",
-   "leans": [
-    0,
-    2
-   ],
-   "span": 2,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Chargers Make Decision About Justin Herbert vs Patriots",
-     "url": "https://www.newsweek.com/sports/nfl/chargers-make-decision-about-justin-herbert-vs-patriots-12775153"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Justin Herbert ruled out against Patriots as DJ Uiagalelei gets first career start for Chargers",
-     "url": "https://www.foxnews.com/outkick-sports/justin-herbert-ruled-out-patriots-dj-uiagalelei-first-career-start-chargers"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Seahawks, 49ers matchup changes drastically as Brock Purdy ruled out while Sam Darnold returns from injury",
    "summary": "The Seattle Seahawks will start Sam Darnold as he is back from injury, while the San Francisco 49ers will be without Brock Purdy ahead of a pivotal matchup with an ankle injury.",
    "category": "General",
@@ -1290,99 +1252,6 @@
    ]
   },
   {
-   "title": "Mamdani recovering after 'successful' Achilles surgery",
-   "summary": "New York City Mayor Zohran Mamdani is recovering at Gracie Mansion—the mayor's official residence—following a “successful” surgery on his injured Achilles, which was caused by a recreational soccer game earlier this month. “Today, Mayor Zohran Kwame Mamdani underwent a surgical p",
-   "category": "General",
-   "leans": [
-    -1,
-    0
-   ],
-   "span": 1,
-   "n_sources": 3,
-   "balance": {
-    "l": 2,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Zohran Mamdani has successful surgery for torn Achilles and will make full recovery, staff says",
-     "url": "https://www.nbcnews.com/news/us-news/zohran-mamdani-surgery-torn-achilles-successful-ll-make-full-recovery-rcna611501"
-    },
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "NYC Mayor Mamdani has 'successful' surgery on torn Achilles tendon",
-     "url": "https://abcnews.com/US/nyc-mayor-mamdani-successful-surgery-torn-achilles-tendon/story?id=138488280"
-    },
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Mamdani recovering after 'successful' Achilles surgery",
-     "url": "https://thehill.com/homenews/state-watch/6245795-nyc-mayor-achilles-surgery-success/"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "wWO-mRZ9Ih8",
-     "title": "Mamdani recovering after ‘successful’ Achilles surgery",
-     "thumb": "https://i.ytimg.com/vi/wWO-mRZ9Ih8/hqdefault.jpg",
-     "channel": "NBC News",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
-  },
-  {
-   "title": "Kenya cult leader found guilty of manslaughter of over 100 followers asked to starve to meet Jesus",
-   "summary": "Kenyan cult leader Paul Mackenzie was on Friday found guilty of the manslaughter of 123 of his followers, the latest in a series of convictions against him for the deaths of hundreds of his followers.",
-   "category": "General",
-   "leans": [
-    0,
-    1
-   ],
-   "span": 1,
-   "n_sources": 3,
-   "balance": {
-    "l": 0,
-    "c": 2,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "BBC News",
-     "lean": 0,
-     "label": "Center",
-     "title": "Kenyan doomsday cult leader convicted over further 123 deaths",
-     "url": "https://www.bbc.co.uk/news/articles/cmy49de4xx1zo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-     "name": "Al Jazeera",
-     "lean": 0,
-     "label": "Center",
-     "title": "Kenyan cult leader guilty of manslaughter more than 123 starvation deaths",
-     "url": "https://www.aljazeera.com/news/2026/11/27/kenyan-cult-leader-guilty-of-manslaughter-more-than-123-starvation-deaths?traffic_source=rss"
-    },
-    {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Kenya cult leader found guilty of manslaughter of over 100 followers asked to starve to meet Jesus",
-     "url": "https://www.washingtontimes.com/news/2026/nov/27/kenya-cult-leader-found-guilty-manslaughter-100-followers-asked/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
    "title": "Threat from China looms large over Taiwan’s local elections",
    "summary": "Taiwanese officials raise alarm over interference by China in elections that will shape fortunes of ruling party Taiwanese voters go to the polls on Saturday in closely watched local elections that will shape the fortunes of the ruling Democratic Progressive party (DPP) as it nav",
    "category": "World",
@@ -1453,6 +1322,41 @@
    "videos": []
   },
   {
+   "title": "New York Senate Majority Leader Andrea Stewart-Cousins, first woman in role, dies at 76",
+   "summary": "New York State Sen. Andrea Stewart-Cousins, a Democrat, died Thursday evening, a state official announced on Friday. Stewart-Cousins, 76, was reelected earlier this month as the top Democrat in the Empire State’s Senate. The circumstances of her death are unclear. “It is with pro",
+   "category": "World",
+   "leans": [
+    0,
+    1
+   ],
+   "span": 1,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 1,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Hill",
+     "lean": 0,
+     "label": "Center",
+     "title": "New York State Senate Majority Leader Andrea Stewart-Cousins dies at 76",
+     "url": "https://thehill.com/homenews/state-watch/6245597-new-york-state-senate-majority-leader-andrea-stewart-cousins-dies-at-76/"
+    },
+    {
+     "name": "Washington Examiner",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "New York Senate Majority Leader Andrea Stewart-Cousins, first woman in role, dies at 76",
+     "url": "https://www.washingtonexaminer.com/news/4816799/new-york-senate-majority-leader-andrea-stewart-cousins-dies/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "OpenAI countersues Apple for allegedly stealing trade secrets",
    "summary": "OpenAI is accusing Apple of stealing trade secrets, escalating a legal battle between the technology giants over competing efforts to develop artificial intelligence-powered devices. In a countersuit filed Friday in federal court in the Northern District of California, OpenAI all",
    "category": "Economy",
@@ -1488,43 +1392,8 @@
    "videos": []
   },
   {
-   "title": "Warriors Rule Stephen Curry Out for Additional Games With Injury",
-   "summary": "The Golden State Warriors have said Stephen Curry will miss additional games as he continues to recover from an oblique injury.",
-   "category": "World",
-   "leans": [
-    0,
-    1
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Warriors Rule Stephen Curry Out for Additional Games With Injury",
-     "url": "https://www.newsweek.com/sports/nba/warriors-rule-stephen-curry-out-for-additional-games-with-injury-12775312"
-    },
-    {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Warriors receive good Steph Curry news amid oblique injury",
-     "url": "https://nypost.com/2026/11/27/sports/warriors-receive-good-steph-curry-news-amid-oblique-injury/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Biden’s first-week book sales lag behind Obama’s and Clinton’s",
-   "summary": "New data show first-week sales of former President Joe Biden’s memoir, Promise Me, America, trailed those of former Presidents Barack Obama and Bill Clinton. According to Circana, Biden’s memoir sold roughly 21,000 copies in its first week, the Associated Press reported, topping ",
+   "title": "Taliban reportedly strips women of their names in Afghan province, now being called 'goat' or 'grandmother'",
+   "summary": "The Taliban reportedly banned women's names from official records in an Afghan province, five years after reclaiming power amid Biden's chaotic withdrawal.",
    "category": "Politics",
    "leans": [
     1,
@@ -1540,27 +1409,27 @@
    "blindspot": "left",
    "sources": [
     {
-     "name": "Washington Examiner",
+     "name": "New York Post",
      "lean": 1,
      "label": "Lean Right",
-     "title": "Biden’s first-week book sales lag behind Obama’s and Clinton’s",
-     "url": "https://www.washingtonexaminer.com/news/white-house/4816641/biden-book-sales-trail-obama-clinton/"
+     "title": "Taliban strips women of their names in Afghan province, now being called ‘goat’ or ‘grandmother’",
+     "url": "https://nypost.com/2026/11/27/world-news/taliban-reportedly-strips-womens-names-for-offensive-animal-terms-in-afghanistan/"
     },
     {
-     "name": "Newsmax",
+     "name": "Fox News",
      "lean": 2,
      "label": "Right",
-     "title": "Biden Memoir Sells 21,000 Copies, Trailing Obama and Clinton",
-     "url": "https://www.newsmax.com/newsfront/joe-biden-barack-obama-bill-clinton/2026/11/27/id/1277729"
+     "title": "Taliban reportedly strips women of their names in Afghan province, now being called 'goat' or 'grandmother'",
+     "url": "https://www.foxnews.com/world/taliban-strips-women-names-afghan-province-called-goat-grandmother"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "NBC yanks controversial anti-Israel ad",
-   "summary": "NBC has pulled an anti-Israel commercial that ran on the \"Saturday Night Live\" Thanksgiving special and that sparked heavy backlash from critics calling it antisemitic.",
-   "category": "World",
+   "title": "Michael Knowles’ Mayflower Cigars Launches Black Friday Sale",
+   "summary": "Buy a box of Mayflower Robustos and get the Trinity 8-Cigar Assortment 50% off. Once the Trinity sells out, it won’t be made again. Mayflower Cigars, the premium handmade cigar company founded by Daily Wire host Michael Knowles, has opened its Black Friday sale. The perks are liv",
+   "category": "General",
    "leans": [
     1,
     2
@@ -1575,18 +1444,18 @@
    "blindspot": "left",
    "sources": [
     {
-     "name": "Washington Times",
+     "name": "New York Post",
      "lean": 1,
      "label": "Lean Right",
-     "title": "NBC yanks controversial anti-Israel ad",
-     "url": "https://www.washingtontimes.com/news/2026/nov/27/nbc-yanks-controversial-anti-israel-ad/"
+     "title": "The Oura Ring 5 is on sale for its lowest price ever this Black Friday",
+     "url": "https://pagesix.com/2026/11/27/style/this-oura-ring-5-deal-is-its-lowest-price-ever-for-black-friday/"
     },
     {
-     "name": "Newsmax",
+     "name": "The Daily Wire",
      "lean": 2,
      "label": "Right",
-     "title": "NBC Airs Anti-Israel Ad During 'SNL' Thanksgiving Special",
-     "url": "https://www.newsmax.com/newsfront/nbc-thanksgiving-snl/2026/11/27/id/1277730"
+     "title": "Michael Knowles’ Mayflower Cigars Launches Black Friday Sale",
+     "url": "https://www.dailywire.com/news/michael-knowles-mayflower-cigars-launches-black-friday-sale"
     }
    ],
    "factchecks": [],
@@ -1771,6 +1640,33 @@
    "videos": []
   },
   {
+   "title": "Trump effectively ended asylum. Advocates look to the Supreme Court to restore it",
+   "summary": "Trump's sweeping immigration changes — an asylum ban, mass firings and new legal maneuvers — have all but ended asylum. The high court will soon consider whether some shifts deny people due process.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump effectively ended asylum. Advocates look to the Supreme Court to restore it",
+     "url": "https://www.npr.org/2026/11/27/nx-s1-6037854/trump-effectively-ended-asylum-supreme-court"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "Screen-free tweens try their hand at Dungeons & Dragons",
    "summary": "Some parents, fed up with screens, have found an analog oasis in the role-playing game invented in the 1970s.",
    "category": "Economy",
@@ -1819,33 +1715,6 @@
      "label": "Lean Left",
      "title": "12 strategies to cut your risk of dementia. Take this quiz to start",
      "url": "https://www.npr.org/2026/11/27/nx-s1-6050867/prevent-dementia-alzheimers-your-turn"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Trump effectively ended asylum. Advocates look to the Supreme Court to restore it",
-   "summary": "Trump's sweeping immigration changes — an asylum ban, mass firings and new legal maneuvers — have all but ended asylum. The high court will soon consider whether some shifts deny people due process.",
-   "category": "Politics",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NPR",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Trump effectively ended asylum. Advocates look to the Supreme Court to restore it",
-     "url": "https://www.npr.org/2026/11/27/nx-s1-6037854/trump-effectively-ended-asylum-supreme-court"
     }
    ],
    "factchecks": [],
@@ -2390,12 +2259,120 @@
    ],
    "factchecks": [],
    "videos": []
+  },
+  {
+   "title": "WATCH:  Breaking down the best holiday movies",
+   "summary": "Andscape senior entertainment reporter Kelley Carter discusses what defines a classic holiday film, shares her top picks and weighs in on if \"Die Hard\" qualifies as a holiday movie.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  Breaking down the best holiday movies",
+     "url": "https://abcnews.com/video/138487748/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "WATCH:  The Children's Hospital Thanksgiving Day Parade",
+   "summary": "Staff and families put on their own Thanksgiving Day parade at Cook Children's Medical Center in Fort Worth, Texas.",
+   "category": "Health",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  The Children's Hospital Thanksgiving Day Parade",
+     "url": "https://abcnews.com/video/138479018/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "WATCH:  12-year-old soccer star turns hearing loss into inspiration",
+   "summary": "ABC News' Danny New has the story of Delaney Anbardan, a young soccer player in Southern California who has continued pursuing the sport while navigating progressive hearing loss.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  12-year-old soccer star turns hearing loss into inspiration",
+     "url": "https://abcnews.com/video/138478123/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "WATCH:  Viral Thanksgiving story set to be adapted for small screen",
+   "summary": "Jamal Hinton and Wanda Dench's viral story of a wrong text that led to a decadelong Thanksgiving tradition is set to become a Lifetime production. Will Ganss shares the buzziest stories in Pop News.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "ABC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "WATCH:  Viral Thanksgiving story set to be adapted for small screen",
+     "url": "https://abcnews.com/video/138468539/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
   }
  ],
  "blindspots": [
   {
-   "title": "Biden’s first-week book sales lag behind Obama’s and Clinton’s",
-   "summary": "New data show first-week sales of former President Joe Biden’s memoir, Promise Me, America, trailed those of former Presidents Barack Obama and Bill Clinton. According to Circana, Biden’s memoir sold roughly 21,000 copies in its first week, the Associated Press reported, topping ",
+   "title": "Taliban reportedly strips women of their names in Afghan province, now being called 'goat' or 'grandmother'",
+   "summary": "The Taliban reportedly banned women's names from official records in an Afghan province, five years after reclaiming power amid Biden's chaotic withdrawal.",
    "category": "Politics",
    "leans": [
     1,
@@ -2411,27 +2388,27 @@
    "blindspot": "left",
    "sources": [
     {
-     "name": "Washington Examiner",
+     "name": "New York Post",
      "lean": 1,
      "label": "Lean Right",
-     "title": "Biden’s first-week book sales lag behind Obama’s and Clinton’s",
-     "url": "https://www.washingtonexaminer.com/news/white-house/4816641/biden-book-sales-trail-obama-clinton/"
+     "title": "Taliban strips women of their names in Afghan province, now being called ‘goat’ or ‘grandmother’",
+     "url": "https://nypost.com/2026/11/27/world-news/taliban-reportedly-strips-womens-names-for-offensive-animal-terms-in-afghanistan/"
     },
     {
-     "name": "Newsmax",
+     "name": "Fox News",
      "lean": 2,
      "label": "Right",
-     "title": "Biden Memoir Sells 21,000 Copies, Trailing Obama and Clinton",
-     "url": "https://www.newsmax.com/newsfront/joe-biden-barack-obama-bill-clinton/2026/11/27/id/1277729"
+     "title": "Taliban reportedly strips women of their names in Afghan province, now being called 'goat' or 'grandmother'",
+     "url": "https://www.foxnews.com/world/taliban-strips-women-names-afghan-province-called-goat-grandmother"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "NBC yanks controversial anti-Israel ad",
-   "summary": "NBC has pulled an anti-Israel commercial that ran on the \"Saturday Night Live\" Thanksgiving special and that sparked heavy backlash from critics calling it antisemitic.",
-   "category": "World",
+   "title": "Michael Knowles’ Mayflower Cigars Launches Black Friday Sale",
+   "summary": "Buy a box of Mayflower Robustos and get the Trinity 8-Cigar Assortment 50% off. Once the Trinity sells out, it won’t be made again. Mayflower Cigars, the premium handmade cigar company founded by Daily Wire host Michael Knowles, has opened its Black Friday sale. The perks are liv",
+   "category": "General",
    "leans": [
     1,
     2
@@ -2446,18 +2423,18 @@
    "blindspot": "left",
    "sources": [
     {
-     "name": "Washington Times",
+     "name": "New York Post",
      "lean": 1,
      "label": "Lean Right",
-     "title": "NBC yanks controversial anti-Israel ad",
-     "url": "https://www.washingtontimes.com/news/2026/nov/27/nbc-yanks-controversial-anti-israel-ad/"
+     "title": "The Oura Ring 5 is on sale for its lowest price ever this Black Friday",
+     "url": "https://pagesix.com/2026/11/27/style/this-oura-ring-5-deal-is-its-lowest-price-ever-for-black-friday/"
     },
     {
-     "name": "Newsmax",
+     "name": "The Daily Wire",
      "lean": 2,
      "label": "Right",
-     "title": "NBC Airs Anti-Israel Ad During 'SNL' Thanksgiving Special",
-     "url": "https://www.newsmax.com/newsfront/nbc-thanksgiving-snl/2026/11/27/id/1277730"
+     "title": "Michael Knowles’ Mayflower Cigars Launches Black Friday Sale",
+     "url": "https://www.dailywire.com/news/michael-knowles-mayflower-cigars-launches-black-friday-sale"
     }
    ],
    "factchecks": [],
