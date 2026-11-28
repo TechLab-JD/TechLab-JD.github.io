@@ -1,7 +1,14 @@
 {
- "generated": "2026-11-28T16:01:59Z",
- "generated_human": "Nov 28, 2026 · 16:01 UTC",
+ "generated": "2026-11-28T17:00:46Z",
+ "generated_human": "Nov 28, 2026 · 17:00 UTC",
  "sources": [
+  {
+   "name": "NPR",
+   "lean": -1,
+   "label": "Lean Left",
+   "fact": "High",
+   "count": 10
+  },
   {
    "name": "The Guardian",
    "lean": -1,
@@ -43,6 +50,27 @@
    "label": "Lean Left",
    "fact": "High",
    "count": 12
+  },
+  {
+   "name": "Vox",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 10
+  },
+  {
+   "name": "Slate",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 12
+  },
+  {
+   "name": "Mother Jones",
+   "lean": -2,
+   "label": "Left",
+   "fact": "Mostly",
+   "count": 10
   },
   {
    "name": "The Atlantic",
@@ -178,23 +206,35 @@
    "count": 12
   }
  ],
- "n_articles": 292,
+ "n_articles": 332,
  "n_videos": 140,
  "trending": [
+  {
+   "term": "trump",
+   "n": 19
+  },
   {
    "term": "thanksgiving",
    "n": 14
   },
   {
-   "term": "trump",
+   "term": "black",
    "n": 11
   },
   {
-   "term": "black",
+   "term": "back",
+   "n": 10
+  },
+  {
+   "term": "court",
    "n": 9
   },
   {
-   "term": "iowa",
+   "term": "friday",
+   "n": 8
+  },
+  {
+   "term": "macy",
    "n": 8
   },
   {
@@ -202,19 +242,7 @@
    "n": 8
   },
   {
-   "term": "back",
-   "n": 8
-  },
-  {
-   "term": "court",
-   "n": 7
-  },
-  {
-   "term": "friday",
-   "n": 7
-  },
-  {
-   "term": "macy",
+   "term": "iowa",
    "n": 7
   },
   {
@@ -226,20 +254,20 @@
    "n": 7
   },
   {
-   "term": "iran",
-   "n": 6
+   "term": "democrats",
+   "n": 7
+  },
+  {
+   "term": "your",
+   "n": 7
   },
   {
    "term": "american",
    "n": 6
   },
   {
-   "term": "congress",
-   "n": 6
-  },
-  {
-   "term": "democrats",
-   "n": 6
+   "term": "wave",
+   "n": 5
   },
   {
    "term": "argentina",
@@ -247,6 +275,110 @@
   }
  ],
  "videos": [
+  {
+   "videoId": "E1eCsyfkY68",
+   "title": "Macy’s Thanksgiving Day Parade draws crowds after two-day delay",
+   "thumb": "https://i.ytimg.com/vi/E1eCsyfkY68/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "IT9pQ1vIv3M",
+   "title": "How F1 pit stop teamwork helps doctors cut hospital errors",
+   "thumb": "https://i.ytimg.com/vi/IT9pQ1vIv3M/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "uB7DYpQNPlI",
+   "title": "Violent protests ERUPT in Albania #shorts",
+   "thumb": "https://i.ytimg.com/vi/uB7DYpQNPlI/hqdefault.jpg",
+   "channel": "Fox News",
+   "lean": 2,
+   "label": "Right"
+  },
+  {
+   "videoId": "hoU2PITAbBU",
+   "title": "Rising prices hit Iranians as US pressure tightens",
+   "thumb": "https://i.ytimg.com/vi/hoU2PITAbBU/hqdefault.jpg",
+   "channel": "CNN",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "Wag2IH8yAUs",
+   "title": "Jerusalem Daily: Israel kills MSF staff In Gaza | AJ #shorts",
+   "thumb": "https://i.ytimg.com/vi/Wag2IH8yAUs/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "oOn5wq-ZK44",
+   "title": "Argentina's bid to block Falklands oil drilling rejected by an international tribunal. #BBCNews",
+   "thumb": "https://i.ytimg.com/vi/oOn5wq-ZK44/hqdefault.jpg",
+   "channel": "BBC News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "Ua2wPh1XA24",
+   "title": "DWP pensions and benefits services still down after 'cyber incident' | BBC News",
+   "thumb": "https://i.ytimg.com/vi/Ua2wPh1XA24/hqdefault.jpg",
+   "channel": "BBC News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "cUidTxPzC_Q",
+   "title": "This ‘Abbott Elementary’ star says the time to be yourself is now",
+   "thumb": "https://i.ytimg.com/vi/cUidTxPzC_Q/hqdefault.jpg",
+   "channel": "Washington Post",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "p0jeW3tIaF0",
+   "title": "Urgent search for pregnant escaped prisoner",
+   "thumb": "https://i.ytimg.com/vi/p0jeW3tIaF0/hqdefault.jpg",
+   "channel": "ABC News",
+   "lean": -1,
+   "label": "Lean Left"
+  },
+  {
+   "videoId": "H9qcwW21gPM",
+   "title": "Israeli 'direct hit' on Doctors Without Borders Gaza clinic kills 2 staff",
+   "thumb": "https://i.ytimg.com/vi/H9qcwW21gPM/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "C66U5FyWA38",
+   "title": "At least 14 die on migrant boat near Spain's Canary Islands | DW News",
+   "thumb": "https://i.ytimg.com/vi/C66U5FyWA38/hqdefault.jpg",
+   "channel": "DW News",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "amXl2zcyi_E",
+   "title": "Video shows aftermath of deadly air strike at Myanmar wedding venue | AJ #shorts",
+   "thumb": "https://i.ytimg.com/vi/amXl2zcyi_E/hqdefault.jpg",
+   "channel": "Al Jazeera",
+   "lean": 0,
+   "label": "Center"
+  },
+  {
+   "videoId": "rF1OVMP9584",
+   "title": "What Taiwan's local election results mean for China ties | DW News",
+   "thumb": "https://i.ytimg.com/vi/rF1OVMP9584/hqdefault.jpg",
+   "channel": "DW News",
+   "lean": 0,
+   "label": "Center"
+  },
   {
    "videoId": "7m2MCzGrDq8",
    "title": "Mo Salah's red bus blunder leaves players amused",
@@ -270,113 +402,68 @@
    "channel": "AP",
    "lean": 0,
    "label": "Center"
-  },
-  {
-   "videoId": "y1gs8O0sDOY",
-   "title": "Full coverage | Spain heads to the polls in a snap election",
-   "thumb": "https://i.ytimg.com/vi/y1gs8O0sDOY/hqdefault.jpg",
-   "channel": "Sky News",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "ZgNf76pOFok",
-   "title": "Holiday storm cleanup",
-   "thumb": "https://i.ytimg.com/vi/ZgNf76pOFok/hqdefault.jpg",
-   "channel": "ABC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "nFssLAB4fYg",
-   "title": "'TOTALLY INSANE': Joy Reid claims 'there is no liberal media'",
-   "thumb": "https://i.ytimg.com/vi/nFssLAB4fYg/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
-  {
-   "videoId": "Cumtvmcd2E0",
-   "title": "Gaza documentary ‘Citizen Osama’ captures life under Israeli bombardment",
-   "thumb": "https://i.ytimg.com/vi/Cumtvmcd2E0/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "Xx1EPVsFY80",
-   "title": "Iran's flogging of singer was warning from anxious hardliners, insiders say",
-   "thumb": "https://i.ytimg.com/vi/Xx1EPVsFY80/hqdefault.jpg",
-   "channel": "Reuters",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "qzh_tpB5jgY",
-   "title": "AI-savvy shoppers, migrant deaths cloud Spain's vote and Alaska beer row | Reuters World News",
-   "thumb": "https://i.ytimg.com/vi/qzh_tpB5jgY/hqdefault.jpg",
-   "channel": "Reuters",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "loF3o-efk_E",
-   "title": "Hackers breach US Air Force cloud computing platform: Report",
-   "thumb": "https://i.ytimg.com/vi/loF3o-efk_E/hqdefault.jpg",
-   "channel": "ABC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "cpZXkV5cQzc",
-   "title": "What cheap puffer jackets say about China's battered consumers",
-   "thumb": "https://i.ytimg.com/vi/cpZXkV5cQzc/hqdefault.jpg",
-   "channel": "Reuters",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "jPGhQDKhl78",
-   "title": "Turkey appears to crash into Utah home",
-   "thumb": "https://i.ytimg.com/vi/jPGhQDKhl78/hqdefault.jpg",
-   "channel": "NBC News",
-   "lean": -1,
-   "label": "Lean Left"
-  },
-  {
-   "videoId": "fR4y8lL2jr4",
-   "title": "SEE IT: Powerful Thanksgiving storm FLOODS NJ street #shorts",
-   "thumb": "https://i.ytimg.com/vi/fR4y8lL2jr4/hqdefault.jpg",
-   "channel": "Fox News",
-   "lean": 2,
-   "label": "Right"
-  },
-  {
-   "videoId": "zau6kA-W9sw",
-   "title": "Funeral held in Gaza for two security staff from Doctors Without Borders killed in Israeli strike",
-   "thumb": "https://i.ytimg.com/vi/zau6kA-W9sw/hqdefault.jpg",
-   "channel": "AP",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "uwPebls-5lI",
-   "title": "Violence erupts at anti-government protests in Albania",
-   "thumb": "https://i.ytimg.com/vi/uwPebls-5lI/hqdefault.jpg",
-   "channel": "Al Jazeera",
-   "lean": 0,
-   "label": "Center"
-  },
-  {
-   "videoId": "gC-ULYkwd5o",
-   "title": "Pakistani 'green flag' winning hearts across borders",
-   "thumb": "https://i.ytimg.com/vi/gC-ULYkwd5o/hqdefault.jpg",
-   "channel": "CNN",
-   "lean": -1,
-   "label": "Lean Left"
   }
  ],
  "stories": [
+  {
+   "title": "Trump just can’t quit tariffs",
+   "summary": "This story appeared in The Logoff, a daily newsletter that helps you stay informed about the Trump administration without letting political news take over your life. Subscribe here. Welcome to The Logoff: The Trump administration is trying to keep its trade war alive with new tar",
+   "category": "World",
+   "leans": [
+    -2,
+    -1,
+    2
+   ],
+   "span": 4,
+   "n_sources": 3,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 1
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Trump just can’t quit tariffs",
+     "url": "https://www.vox.com/the-logoff-newsletter-trump/512425/trump-tariffs-china-eu-trade"
+    },
+    {
+     "name": "Vox",
+     "lean": -2,
+     "label": "Left",
+     "title": "Kilmar Abrego Garcia’s deportation saga ends on his terms",
+     "url": "https://www.vox.com/today-explained-newsletter/512193/kilmar-abrego-garcia-self-deportation-spain-trump"
+    },
+    {
+     "name": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Brooks and Capehart on Trump's new tariffs, Nvidia's future and Democratic leadership",
+     "url": "https://www.pbs.org/newshour/show/brooks-and-capehart-on-trumps-new-tariffs-nvidias-future-and-democratic-leadership"
+    },
+    {
+     "name": "The Federalist",
+     "lean": 2,
+     "label": "Right",
+     "title": "Sen. Chris Van Hollen Just Can’t Quit Alleged ‘Human Trafficker’ Kilmar Abrego Garcia",
+     "url": "https://thefederalist.com/2026/11/25/sen-chris-van-hollen-just-cant-quit-alleged-human-trafficker-kilmar-abrego-garcia/?utm_source=rss&utm_medium=rss&utm_campaign=sen-chris-van-hollen-just-cant-quit-alleged-human-trafficker-kilmar-abrego-garcia"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "IRbLJ-asqIU",
+     "title": "Brooks and Capehart on Trump's new tariffs, Nvidia's future and Democratic leadership",
+     "thumb": "https://i.ytimg.com/vi/IRbLJ-asqIU/hqdefault.jpg",
+     "channel": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
   {
    "title": "Live updates: Macy's parade kicks off after historic postponement; Democrats prepare for Congress takeover",
    "summary": "The Macy’s Thanksgiving Day Parade is set to kick off Saturday morning after it was postponed for the first time in the event's 100-year history due to poor weather conditions. Officials opted to delay the iconic New York City celebration as severe storms and flooding rocked the ",
@@ -388,20 +475,41 @@
     2
    ],
    "span": 3,
-   "n_sources": 7,
+   "n_sources": 9,
    "balance": {
-    "l": 2,
+    "l": 3,
     "c": 2,
-    "r": 3
+    "r": 4
    },
    "blindspot": null,
    "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Thanksgiving storm batters East Coast. And, Black Friday sales to hit record levels",
+     "url": "https://www.npr.org/2026/11/27/g-s1-156004/up-first-newsletter-thanksgiving-storm-black-friday-shopping-asylum-supreme-court"
+    },
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "From Thanksgiving blackouts to Black Friday, a holiday hit by wild weather and economic woes",
+     "url": "https://www.npr.org/2026/11/27/nx-s1-6054884/thanksgiving-weather-black-friday"
+    },
     {
      "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
      "title": "Macy's Thanksgiving Day Parade kicks off after being postponed",
      "url": "https://www.cbsnews.com/news/macys-thanksgiving-day-parade-2026-nyc/"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Macy's Thanksgiving Day Parade marches on after weather delay",
+     "url": "https://www.cbsnews.com/video/macys-thanksgiving-day-parade-marches-on-after-weather-delay/"
     },
     {
      "name": "ABC News",
@@ -439,6 +547,13 @@
      "url": "https://www.axios.com/2026/11/25/macys-thanksgiving-parade-2026-balloons-weather"
     },
     {
+     "name": "New York Post",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Savannah Guthrie and Hoda Kotb’s Macy’s Thanksgiving Parade coats are on sale for Black Friday",
+     "url": "https://pagesix.com/2026/11/28/style/savannah-guthrie-and-hoda-kotb-thanksgiving-parade-coats-are-on-sale/"
+    },
+    {
      "name": "Washington Examiner",
      "lean": 1,
      "label": "Lean Right",
@@ -446,11 +561,11 @@
      "url": "https://www.washingtonexaminer.com/news/entertainment/4816841/watch-live-macy-100th-thanksgiving-day-parade-2026-nyc/"
     },
     {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "It's on! Postponed Macy's 100th Thanksgiving Day parade gets a Saturday do-over",
-     "url": "https://www.washingtontimes.com/news/2026/nov/28/saturday-macys-100th-thanksgiving-day-parade-gets-100-balloons-1000/"
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "Michael Knowles’ Mayflower Cigars Launches Black Friday Sale",
+     "url": "https://www.dailywire.com/news/michael-knowles-mayflower-cigars-launches-black-friday-sale"
     },
     {
      "name": "Newsmax",
@@ -458,6 +573,13 @@
      "label": "Right",
      "title": "Macy's 100th Thanksgiving Parade Gets a Do-Over",
      "url": "https://www.newsmax.com/newsfront/macys-thanksgiving-day-parade/2026/11/28/id/1277760"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "East Coast Cleans Up After Brutal Thanksgiving Storm",
+     "url": "https://www.newsmax.com/newsfront/east-coast-thanksgiving/2026/11/28/id/1277759"
     }
    ],
    "factchecks": [],
@@ -471,27 +593,27 @@
      "label": "Center"
     },
     {
+     "videoId": "nwOUJNb28Ak",
+     "title": "Macy’s Thanksgiving Day Parade marches on after delay",
+     "thumb": "https://i.ytimg.com/vi/nwOUJNb28Ak/hqdefault.jpg",
+     "channel": "NBC News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
      "videoId": "PyPJqJ48hYM",
      "title": "Severe weather chaos on Thanksgiving; World awaits postponed Macy's parade in NYC",
      "thumb": "https://i.ytimg.com/vi/PyPJqJ48hYM/hqdefault.jpg",
      "channel": "CBS News",
      "lean": -1,
      "label": "Lean Left"
-    },
-    {
-     "videoId": "zu-EycmdEp0",
-     "title": "Macy’s Thanksgiving Day Parade balloons reinflated ahead of rescheduled event. #NewYork #BBCNews",
-     "thumb": "https://i.ytimg.com/vi/zu-EycmdEp0/hqdefault.jpg",
-     "channel": "BBC News",
-     "lean": 0,
-     "label": "Center"
     }
    ]
   },
   {
-   "title": "No drinking water contamination detected after Iowa lead detonation: EPA",
-   "summary": "Initial lab results from the Environmental Protection Agency (EPA) showed the U.S. Army's controlled munitions detonation in Iowa did not lead to elevated lead levels in drinking water, the agency shared Saturday. “EPA found no lead in the 38 water samples taken post-detonation a",
-   "category": "Science",
+   "title": "EPA says no rise in contamination after Army detonates lead azide stockpile in Iowa",
+   "summary": "The EPA said about 300 people spent Thursday in the field sampling schools, playgrounds, churches and homes across the region. More than 1,500 samples were taken of air, water, soil and dust before the detonation and hundreds of samples, including from homes, parks and drinking w",
+   "category": "Economy",
    "leans": [
     -1,
     0,
@@ -499,20 +621,20 @@
     2
    ],
    "span": 3,
-   "n_sources": 7,
+   "n_sources": 6,
    "balance": {
     "l": 1,
     "c": 3,
-    "r": 3
+    "r": 2
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "CBS News",
+     "name": "PBS NewsHour",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Iowa detonation did not increase levels of lead in water, EPA says",
-     "url": "https://www.cbsnews.com/news/iowa-lead-detonation-epa-testing-results-soon/"
+     "title": "EPA says no rise in contamination after Army detonates lead azide stockpile in Iowa",
+     "url": "https://www.pbs.org/newshour/nation/epa-says-no-rise-in-contamination-after-army-detonates-lead-azide-stockpile-in-iowa"
     },
     {
      "name": "The Hill",
@@ -543,13 +665,6 @@
      "url": "https://www.washingtonexaminer.com/policy/energy-and-environment/4816843/no-elevation-lead-drinking-water-iowa-epa/"
     },
     {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "EPA says no rise in contamination after Army detonates lead azide stockpile in Iowa",
-     "url": "https://www.washingtontimes.com/news/2026/nov/28/no-rise-contamination-army-detonates-lead-azide-stockpile-iowa-epa/"
-    },
-    {
      "name": "Newsmax",
      "lean": 2,
      "label": "Right",
@@ -570,24 +685,30 @@
    ]
   },
   {
-   "title": "An explosion at a school in eastern Afghanistan kills 10, wounds 110",
-   "summary": "An explosion at a primary and middle school in the eastern Afghan province of Kunar Saturday killed 10 people and wounded another 110, most of them children, officials said, adding that the blast appeared to have originated in a neighboring depot for explosives.",
-   "category": "General",
+   "title": "Explosion near Afghan school kills at least 10, injures 110 as children rushed to hospital",
+   "summary": "The Taliban Interior Ministry says a school explosion in Kunar province killed 10 and injured 110, with video showing children rushed to hospital.",
+   "category": "Health",
    "leans": [
     -1,
     0,
-    1,
     2
    ],
    "span": 3,
    "n_sources": 4,
    "balance": {
-    "l": 1,
+    "l": 2,
     "c": 1,
-    "r": 2
+    "r": 1
    },
    "blindspot": null,
    "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "An explosion at a school in eastern Afghanistan kills 10, wounds 110",
+     "url": "https://www.npr.org/2026/11/28/nx-s1-6056284/explosion-school-eastern-afghanistan"
+    },
     {
      "name": "ABC News",
      "lean": -1,
@@ -603,13 +724,6 @@
      "url": "https://www.bbc.co.uk/news/articles/ckp80jyz6dl8o?at_medium=RSS&at_campaign=rss"
     },
     {
-     "name": "Washington Times",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "An explosion at a school in eastern Afghanistan kills 10, wounds 110",
-     "url": "https://www.washingtontimes.com/news/2026/nov/28/eastern-afghanistan-school-explosion-kills-10-wounds-110/"
-    },
-    {
      "name": "Fox News",
      "lean": 2,
      "label": "Right",
@@ -621,35 +735,35 @@
    "videos": []
   },
   {
-   "title": "Live updates: The best Black Friday deals up to 70% off, handpicked by a shopping expert",
-   "summary": "We found the top trending Black Friday 2026 deals across Amazon, Target, Walmart and more. Don’t miss these worthwhile steals before they sell out.",
-   "category": "General",
+   "title": "Trump: D.C. Golf Course Destruction an 'Act of God'",
+   "summary": "President Donald Trump said Saturday that a storm devastated Washington's East Potomac Golf Course, calling the destruction an \"Act of God\" and urging a federal judge to allow his administration to proceed with plans to redevelop the historic public golf facility.",
+   "category": "Politics",
    "leans": [
-    -1,
-    1
+    0,
+    2
    ],
    "span": 2,
    "n_sources": 2,
    "balance": {
-    "l": 1,
-    "c": 0,
+    "l": 0,
+    "c": 1,
     "r": 1
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Live updates: The best Black Friday deals up to 70% off, handpicked by a shopping expert",
-     "url": "https://www.nbcnews.com/select/shopping/best-black-friday-deals-11-27-2026-rcna611358"
+     "name": "Newsweek",
+     "lean": 0,
+     "label": "Center",
+     "title": "Trump Says 'Act of God' Destroyed Golf Course at Center of Legal Battle",
+     "url": "https://www.newsweek.com/donald-trump-golf-course-legal-battle-12775758"
     },
     {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Reddit users are obsessed with these Black Friday weekend deals — and we agree",
-     "url": "https://nypost.com/2026/11/28/shopping/best-black-friday-weekend-deals-according-to-reddit-users/"
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Trump: D.C. Golf Course Destruction an 'Act of God'",
+     "url": "https://www.newsmax.com/newsfront/truth-social-post-flooding-potomac-river/2026/11/28/id/1277766"
     }
    ],
    "factchecks": [],
@@ -704,6 +818,14 @@
    "factchecks": [],
    "videos": [
     {
+     "videoId": "oOn5wq-ZK44",
+     "title": "Argentina's bid to block Falklands oil drilling rejected by an international tribunal. #BBCNews",
+     "thumb": "https://i.ytimg.com/vi/oOn5wq-ZK44/hqdefault.jpg",
+     "channel": "BBC News",
+     "lean": 0,
+     "label": "Center"
+    },
+    {
      "videoId": "GL30VbCRCtA",
      "title": "Argentina's bid to block Falklands oil drilling rejected by international tribunal",
      "thumb": "https://i.ytimg.com/vi/GL30VbCRCtA/hqdefault.jpg",
@@ -714,76 +836,61 @@
    ]
   },
   {
-   "title": "Mass power outages after Thanksgiving Day storms",
-   "summary": "Dramatic video shows firefighters battling a blaze in the height of a storm that also caused flooding in coastal neighborhoods and toppled trees across the Northeast. Hundreds of thousands are still without power in the Midwest and Northeast. NBC News’ Steven Romo reports from th",
-   "category": "General",
+   "title": "American Airlines Jet Clips Another At Reagan National, Breaking Off Piece Of Wing",
+   "summary": "Two American Airlines jets clipped wings on the ground at Ronald Reagan Washington National Airport on Friday evening, as one aircraft clipped the wing of another while taxiing for departure, according to the Federal Aviation Administration (FAA). The collision occurred at approx",
+   "category": "Economy",
    "leans": [
-    -1,
-    0
+    1,
+    2
    ],
    "span": 1,
-   "n_sources": 4,
+   "n_sources": 3,
    "balance": {
-    "l": 3,
-    "c": 1,
-    "r": 0
+    "l": 0,
+    "c": 0,
+    "r": 3
    },
-   "blindspot": null,
+   "blindspot": "left",
    "sources": [
     {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Mass power outages after Thanksgiving Day storms",
-     "url": "https://www.nbcnews.com/nightly-news/video/mass-power-outages-after-thanksgiving-day-storms-274286149762"
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Two American Airlines departures out of Reagan National delayed after planes clip wing tips",
+     "url": "https://www.washingtontimes.com/news/2026/nov/28/two-american-airlines-departures-reagan-national-delayed-planes-clip/"
     },
     {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Power being slowly restored as heavy Thanksgiving storm eases",
-     "url": "https://www.cbsnews.com/news/east-coast-thanksgiving-storm-power-outages-cleanup/"
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "American Airlines Jet Clips Another At Reagan National, Breaking Off Piece Of Wing",
+     "url": "https://www.dailywire.com/news/american-airlines-jet-clips-another-at-reagan-national-breaking-off-piece-of-wing"
     },
     {
-     "name": "PBS NewsHour",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "News Wrap: Crews work to restore power for thousands after Thanksgiving storm",
-     "url": "https://www.pbs.org/newshour/show/news-wrap-crews-work-to-restore-power-for-thousands-after-thanksgiving-storm"
-    },
-    {
-     "name": "Newsweek",
-     "lean": 0,
-     "label": "Center",
-     "title": "Map Shows Where Thousands Still Without Power After Thanksgiving Storms",
-     "url": "https://www.newsweek.com/map-shows-where-thousands-still-without-power-after-thanksgiving-storms-12775509"
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Plane Clips Wing of Aircraft at Reagan Airport",
+     "url": "https://www.newsmax.com/newsfront/american-airlines-plane-faa/2026/11/27/id/1277746"
     }
    ],
    "factchecks": [],
    "videos": [
     {
-     "videoId": "uNYdEzmCOY0",
-     "title": "News Wrap: Crews work to restore power for thousands after Thanksgiving storm",
-     "thumb": "https://i.ytimg.com/vi/uNYdEzmCOY0/hqdefault.jpg",
-     "channel": "PBS NewsHour",
+     "videoId": "mn9mR07_rZ0",
+     "title": "American Airlines jet clips another plane’s wing at DCA",
+     "thumb": "https://i.ytimg.com/vi/mn9mR07_rZ0/hqdefault.jpg",
+     "channel": "CNN",
      "lean": -1,
      "label": "Lean Left"
     },
     {
-     "videoId": "unIUhMGh0zc",
-     "title": "Mass power outages after Thanksgiving Day storms",
-     "thumb": "https://i.ytimg.com/vi/unIUhMGh0zc/hqdefault.jpg",
-     "channel": "NBC News",
-     "lean": -1,
-     "label": "Lean Left"
-    },
-    {
-     "videoId": "b0lvLTp1gpo",
-     "title": "US Thanksgiving storms bring floods, flight delays and power outages",
-     "thumb": "https://i.ytimg.com/vi/b0lvLTp1gpo/hqdefault.jpg",
-     "channel": "Al Jazeera",
-     "lean": 0,
-     "label": "Center"
+     "videoId": "vZ-lxHI5hg0",
+     "title": "American Airlines planes CLIP WINGS before takeoff",
+     "thumb": "https://i.ytimg.com/vi/vZ-lxHI5hg0/hqdefault.jpg",
+     "channel": "Fox News",
+     "lean": 2,
+     "label": "Right"
     }
    ]
   },
@@ -906,60 +1013,7 @@
     }
    ],
    "factchecks": [],
-   "videos": [
-    {
-     "videoId": "3LJ3Q6f5z3U",
-     "title": "Zelenskyy questions 'strange' Trump-Putin friendship | DW News",
-     "thumb": "https://i.ytimg.com/vi/3LJ3Q6f5z3U/hqdefault.jpg",
-     "channel": "DW News",
-     "lean": 0,
-     "label": "Center"
-    }
-   ]
-  },
-  {
-   "title": "Mamdani recovering after 'successful' Achilles surgery",
-   "summary": "New York City Mayor Zohran Mamdani is recovering at Gracie Mansion—the mayor's official residence—following a “successful” surgery on his injured Achilles, which was caused by a recreational soccer game earlier this month. “Today, Mayor Zohran Kwame Mamdani underwent a surgical p",
-   "category": "General",
-   "leans": [
-    -1,
-    0
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 1,
-    "c": 1,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "NBC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Zohran Mamdani has successful surgery for torn Achilles and will make full recovery, staff says",
-     "url": "https://www.nbcnews.com/news/us-news/zohran-mamdani-surgery-torn-achilles-successful-ll-make-full-recovery-rcna611501"
-    },
-    {
-     "name": "The Hill",
-     "lean": 0,
-     "label": "Center",
-     "title": "Mamdani recovering after 'successful' Achilles surgery",
-     "url": "https://thehill.com/homenews/state-watch/6245795-nyc-mayor-achilles-surgery-success/"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "wWO-mRZ9Ih8",
-     "title": "Mamdani recovering after ‘successful’ Achilles surgery",
-     "thumb": "https://i.ytimg.com/vi/wWO-mRZ9Ih8/hqdefault.jpg",
-     "channel": "NBC News",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
+   "videos": []
   },
   {
    "title": "WWE star Bronson Reed dies at 38 due to 'medical complications'",
@@ -1047,9 +1101,9 @@
      "label": "Center"
     },
     {
-     "videoId": "ricvr3xfOsE",
-     "title": "MSF says Israeli drone strike killed two staff members at its Gaza City clinic",
-     "thumb": "https://i.ytimg.com/vi/ricvr3xfOsE/hqdefault.jpg",
+     "videoId": "H9qcwW21gPM",
+     "title": "Israeli 'direct hit' on Doctors Without Borders Gaza clinic kills 2 staff",
+     "thumb": "https://i.ytimg.com/vi/H9qcwW21gPM/hqdefault.jpg",
      "channel": "Al Jazeera",
      "lean": 0,
      "label": "Center"
@@ -1057,8 +1111,8 @@
    ]
   },
   {
-   "title": "Inflation has shoppers hunting for value. That bodes well for Black Friday",
-   "summary": "Even as consumers face macroeconomic headwinds, retailers are expecting robust holiday spending through Black Friday and beyond.",
+   "title": "OCC shutters United Fidelity Bank, marking biggest US bank failure in 2 years",
+   "summary": "Federal regulators closed Indiana-based United Fidelity Bank, handing over its nearly $6 billion assets to First Citizens Bank in the biggest U.S. bank failure in over two years. The Office of the Comptroller of the Currency (OCC) appointed Friday the Federal Deposit Insurance Co",
    "category": "Economy",
    "leans": [
     0,
@@ -1074,109 +1128,52 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "CNBC",
+     "name": "The Hill",
      "lean": 0,
      "label": "Center",
-     "title": "Inflation has shoppers hunting for value. That bodes well for Black Friday",
-     "url": "https://www.cnbc.com/2026/11/27/black-friday-2026-inflation-value-deals.html"
-    },
-    {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Black Friday shoppers turn on designer brands for Quince’s $50 cashmere sweater — ‘Way better’",
-     "url": "https://nypost.com/2026/11/28/shopping/ditch-luxury-for-quinces-50-cashmere-sweater-black-friday-deal/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "The Supreme Court will decide whether assault weapons bans violate the Second Amendment",
-   "summary": "Nicole Hockley was still in a fog of grief when she carried a photo of her 6-year-old son Dylan to the Connecticut Capitol. The image of his bright blue eyes and sweep of brown hair was marked with the year he was born and the year he was killed by shots from an AR-15-style rifle",
-   "category": "Politics",
-   "leans": [
-    0,
-    1
-   ],
-   "span": 1,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 1,
-    "r": 1
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CNBC",
-     "lean": 0,
-     "label": "Center",
-     "title": "Supreme Court will decide whether assault weapons bans violate the Second Amendment",
-     "url": "https://www.cnbc.com/2026/11/28/supreme-court-to-decide-if-assault-weapons-bans-violate-2nd-amendment.html"
+     "title": "OCC shutters United Fidelity Bank, marking biggest US bank failure in 2 years",
+     "url": "https://thehill.com/business/6246057-comptroller-united-fidelity-bank-failure/"
     },
     {
      "name": "Washington Times",
      "lean": 1,
      "label": "Lean Right",
-     "title": "The Supreme Court will decide whether assault weapons bans violate the Second Amendment",
-     "url": "https://www.washingtontimes.com/news/2026/nov/28/supreme-court-take-assault-weapons-bans-second-amendment/"
+     "title": "Feds shut down bank in biggest closure in two years",
+     "url": "https://www.washingtontimes.com/news/2026/nov/28/feds-shut-bank-biggest-closure-two-years/"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "Betr Promo Code FOXNEWS: Unlock $200 in Bonuses and 4 Free Picks for Any CFB Rivalry Week",
-   "summary": "Betr promo code FOXNEWS unlocks $200 in bonuses and four free picks for new users on any CFB Rivalry Week game, including Michigan at Ohio State.",
+   "title": "New Look at Upcoming Doc on Kate Middleton’s Cancer Journey",
+   "summary": "In a new clip from the highly anticipated documentary, “Heal,” Kate Middleton describes being faced with her own mortality after being diagnosed with cancer and how she found comfort in speaking to others. NBC’s Daniele Hamadjian reports for TODAY.",
    "category": "General",
    "leans": [
-    1,
-    2
+    -1
    ],
-   "span": 1,
+   "span": 0,
    "n_sources": 2,
    "balance": {
-    "l": 0,
+    "l": 2,
     "c": 0,
-    "r": 2
+    "r": 0
    },
-   "blindspot": "left",
+   "blindspot": "right",
    "sources": [
     {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Betr promo code NYPBONUS: Get up to $200 back in bonus, four no-sweat tokens, plus a free pick for Rivalry Week",
-     "url": "https://nypost.com/2026/11/28/betting/betr-promo-code-nypbonus-get-up-to-200-back-in-bonus-four-no-sweat-tokens-plus-a-free-pick-for-rivalry-week/"
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "New Look at Upcoming Doc on Kate Middleton’s Cancer Journey",
+     "url": "https://www.today.com/video/new-clip-released-from-kate-middleton-s-upcoming-doc-heal-274261061810"
     },
     {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "BetMGM Bonus Code FOXNEWS: Cover Your First CFB Rivalry Week Bet up to $1500",
-     "url": "https://www.foxnews.com/outkick-betting/betmgm-bonus-code-foxnews-cover-your-first-cfb-rivalry-week-bet-up-1500"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "FanDuel Promo Code: Bet $5, Get $200 for CFB Rivalry Week",
-     "url": "https://www.foxnews.com/outkick-betting/fanduel-promo-code-bet-5-get-200-cfb-rivalry-week"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Underdog Promo Code FOXNEWS Unlocks Play $10, Get $50 on Rivalry Week",
-     "url": "https://www.foxnews.com/outkick-betting/underdog-promo-code-foxnews-unlocks-play-10-get-50-rivalry-week"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Betr Promo Code FOXNEWS: Unlock $200 in Bonuses and 4 Free Picks for Any CFB Rivalry Week",
-     "url": "https://www.foxnews.com/outkick-betting/betr-promo-code-foxnews-unlock-200-bonuses-4-free-picks-any-cfb-rivalry-week"
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "New film explores Princess Kate's cancer recovery journey",
+     "url": "https://www.cbsnews.com/video/new-film-explores-princess-kates-cancer-recovery-journey/"
     }
    ],
    "factchecks": [],
@@ -1217,6 +1214,40 @@
    "videos": []
   },
   {
+   "title": "GOP lawmaker who defied blue wave reveals roadmap to win back Gen Z",
+   "summary": "Clay Fuller says the GOP lost its ability to reach young voters after Charlie Kirk's assassination, urging economic policies to restore the American dream.",
+   "category": "Politics",
+   "leans": [
+    2
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 2
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Fox News",
+     "lean": 2,
+     "label": "Right",
+     "title": "GOP lawmaker who defied blue wave reveals roadmap to win back Gen Z",
+     "url": "https://www.foxnews.com/politics/gop-lawmaker-who-defied-blue-wave-reveals-roadmap-win-back-gen-z"
+    },
+    {
+     "name": "Daily Caller",
+     "lean": 2,
+     "label": "Right",
+     "title": "Will The Blue Wave Be Followed By A Green Wave?",
+     "url": "https://dailycaller.com/2026/11/27/opinion-democrats-midterms-green-wave-bonner-cohen"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "Johnny Depp Brings Scrooge Back From the Dead — And He’s Never Looked Better",
    "summary": "Wrought-iron gates, scepters fashioned from human skulls, dripping candles, smoky cobblestone alleyways teeming with rats, and a crow crawling from a corpse’s mouth to take flight: Such are the festive sights in Ti West’s “Ebenezer,” his Gothic adaptation of Charles Dickens’ “A C",
    "category": "General",
@@ -1249,49 +1280,6 @@
    ],
    "factchecks": [],
    "videos": []
-  },
-  {
-   "title": "American Airlines Jet Clips Another At Reagan National, Breaking Off Piece Of Wing",
-   "summary": "Two American Airlines jets clipped wings on the ground at Ronald Reagan Washington National Airport on Friday evening, as one aircraft clipped the wing of another while taxiing for departure, according to the Federal Aviation Administration (FAA). The collision occurred at approx",
-   "category": "Economy",
-   "leans": [
-    2
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "The Daily Wire",
-     "lean": 2,
-     "label": "Right",
-     "title": "American Airlines Jet Clips Another At Reagan National, Breaking Off Piece Of Wing",
-     "url": "https://www.dailywire.com/news/american-airlines-jet-clips-another-at-reagan-national-breaking-off-piece-of-wing"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Plane Clips Wing of Aircraft at Reagan Airport",
-     "url": "https://www.newsmax.com/newsfront/american-airlines-plane-faa/2026/11/27/id/1277746"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "mn9mR07_rZ0",
-     "title": "American Airlines jet clips another plane’s wing at DCA",
-     "thumb": "https://i.ytimg.com/vi/mn9mR07_rZ0/hqdefault.jpg",
-     "channel": "CNN",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
   },
   {
    "title": "Republican Senator Discloses Her Husband Committed Suicide",
@@ -1328,36 +1316,243 @@
    "videos": []
   },
   {
-   "title": "Old-school Vince Vaughn swaps social media for family book club",
-   "summary": "Vince Vaughn does not have social media, never had a cellphone until one was given to him, and prefers curling up with a good book. Ahead of the Season 2 premiere of his Apple TV series \"Bad Monkey,\" the actor-comedian revealed the last book he's read.",
-   "category": "Tech",
+   "title": "Trump faces scrutiny over support for Jensen Huang, Putin G20 invite",
+   "summary": "President Trump pushed Nvidia to reinstate Jensen Huang as CEO and invited Russian President Vladimir Putin to the the upcoming G20 Summit in Florida, sparking criticism.",
+   "category": "World",
    "leans": [
-    1
+    -1
    ],
    "span": 0,
    "n_sources": 1,
    "balance": {
-    "l": 0,
+    "l": 1,
     "c": 0,
-    "r": 1
+    "r": 0
    },
    "blindspot": null,
    "sources": [
     {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Old-school Vince Vaughn swaps social media for family book club",
-     "url": "https://nypost.com/2026/11/28/entertainment/vince-vaughn-swaps-social-media-for-family-book-club/"
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump faces scrutiny over support for Jensen Huang, Putin G20 invite",
+     "url": "https://www.cbsnews.com/video/trump-faces-scrutiny-over-support-for-jensen-huang-putin-g20-invite/"
     }
    ],
    "factchecks": [
     {
-     "org": "Full Fact",
-     "title": "No, King Charles hasn’t welcomed a ‘new global order’ and a ‘single global government’ based in Tel Aviv",
-     "link": "https://fullfact.org/culture-and-society/king-charles-hasnt-welcomed-single-global-government/"
+     "org": "Snopes",
+     "title": "19 rumors about insider trading, prediction markets we've investigated",
+     "link": "https://www.snopes.com/collections/insider-trading-prediction-markets-collection/"
     }
    ],
+   "videos": [
+    {
+     "videoId": "_mnkhZRrNMc",
+     "title": "Can Trump's support for Nvidia's Jensen Huang come back to bite him?",
+     "thumb": "https://i.ytimg.com/vi/_mnkhZRrNMc/hqdefault.jpg",
+     "channel": "CBS News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "COP31 climate talks fail to reach an agreement on fossil fuel language",
+   "summary": "U.N. climate talks collapsed over whether to mention fossil fuels that cause global warning. Several countries and the E.U. would not accept a final proposal without this.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "COP31 climate talks fail to reach an agreement on fossil fuel language",
+     "url": "https://www.npr.org/2026/11/28/nx-s1-6050187/cop31-talks-fall-apart"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Perspective: A hero's name lives on",
+   "summary": "During Pearl Harbor, sailor Doris Miller carried the wounded to safety and fired a machine gun at Japanese planes. Next week, construction of a new aircraft carrier, the USS Doris Miller, begins.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Perspective: A hero's name lives on",
+     "url": "https://www.npr.org/2026/11/28/nx-s1-6045586/perspective-a-heros-name-lives-on"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "New wave of Democratic attorneys general may reshape the justice system",
+   "summary": "The Democratic victories could have major effects for what alleged crimes are investigated, lawsuits filed and court cases heard across the U.S.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "New wave of Democratic attorneys general may reshape the justice system",
+     "url": "https://www.npr.org/2026/11/28/g-s1-155837/democratic-attorneys-general-justice-system-texas"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Sudan's lost generation: War is stealing the childhood of millions",
+   "summary": "Three years of war have stolen childhood from millions of children in Sudan, leaving them displaced, hungry and fighting for survival instead of learning in a classroom.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Sudan's lost generation: War is stealing the childhood of millions",
+     "url": "https://www.npr.org/2026/11/27/nx-s1-6053049/sudans-lost-generation-war-is-stealing-a-generation-of-childhood"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "French cinema star Gérard Depardieu ordered to stand trial for rape and sexual assault",
+   "summary": "The case has become one of the most prominent in France's reckoning with sexual violence, as the #MeToo movement has faced resistance in the country, particularly in the arts.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "French cinema star Gérard Depardieu ordered to stand trial for rape and sexual assault",
+     "url": "https://www.npr.org/2026/11/27/nx-s1-6055559/gerard-depardieu-trial-rape-france"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "6DVNlmZD56c",
+     "title": "French court orders actor Depardieu to trial on rape charge",
+     "thumb": "https://i.ytimg.com/vi/6DVNlmZD56c/hqdefault.jpg",
+     "channel": "PBS NewsHour",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "Can luxury save Macy's?",
+   "summary": "This week's celebration of Macy's 100th Thanksgiving parade finds the department store at a turning point. After years of losing sales, the retailer is reimagining itself — as a higher-end destination.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Can luxury save Macy's?",
+     "url": "https://www.npr.org/2026/11/27/nx-s1-6026486/macys-tries-to-reinvent-with-luxury"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "Trump effectively ended asylum. Advocates look to the Supreme Court to restore it",
+   "summary": "Trump's sweeping immigration changes — an asylum ban, mass firings and new legal maneuvers — have all but ended asylum. The high court will soon consider whether some shifts deny people due process.",
+   "category": "Politics",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NPR",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump effectively ended asylum. Advocates look to the Supreme Court to restore it",
+     "url": "https://www.npr.org/2026/11/27/nx-s1-6037854/trump-effectively-ended-asylum-supreme-court"
+    }
+   ],
+   "factchecks": [],
    "videos": []
   },
   {
@@ -1496,6 +1691,33 @@
    "videos": []
   },
   {
+   "title": "Trump crackdown shatters US hopes for Guatemalans displaced by climate crisis",
+   "summary": "As drought worsens, more climate migrants are trekking north – but as US deportations ramp up, rural Guatemalans are running out of options The small plots of farmland in Caparrosa, an Indigenous Maya Ch’orti’ village in eastern Guatemala, are bone dry. It’s mid-June, and the rai",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "The Guardian",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Trump crackdown shatters US hopes for Guatemalans displaced by climate crisis",
+     "url": "https://www.theguardian.com/world/2026/nov/28/guatemala-climate-crisis-trump-deportation-crackdown"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
    "title": "‘Abusive and insulting to Canadians’: campaign to oust US ambassador presented to parliament",
    "summary": "Hundreds of thousands of Canadians call for Pete Hoekstra to be declared ‘persona non grata’ A petition signed by nearly 290,000 Canadians calling on Mark Carney’s government to oust Pete Hoekstra as US ambassador to Canada was formally presented to the House of Commons on Thursd",
    "category": "Politics",
@@ -1544,33 +1766,6 @@
      "label": "Lean Left",
      "title": "All hostages rescued after Colombian security forces storm supermarket, police say",
      "url": "https://www.theguardian.com/world/2026/nov/25/hostages-freed-colombia-security-forces-storm-cartagena-supermarket"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Lululemon founder stuns Canadian women’s leadership conference with sexist comments",
-   "summary": "Chip Wilson said men importing brides from Thailand was due to women waiting too long to have children The controversial founder of Lululemon suggested women in Canada are having too few children and this could lead some men to bring in brides from Thailand , in remarks that stun",
-   "category": "Tech",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "The Guardian",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Lululemon founder stuns Canadian women’s leadership conference with sexist comments",
-     "url": "https://www.theguardian.com/world/2026/nov/25/lululemon-founder-comments-canada-womens-leadership-conference"
     }
    ],
    "factchecks": [],
@@ -1631,6 +1826,58 @@
    "videos": []
   },
   {
+   "title": "Mass power outages after Thanksgiving Day storms",
+   "summary": "Dramatic video shows firefighters battling a blaze in the height of a storm that also caused flooding in coastal neighborhoods and toppled trees across the Northeast. Hundreds of thousands are still without power in the Midwest and Northeast. NBC News’ Steven Romo reports from th",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "Mass power outages after Thanksgiving Day storms",
+     "url": "https://www.nbcnews.com/nightly-news/video/mass-power-outages-after-thanksgiving-day-storms-274286149762"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "unIUhMGh0zc",
+     "title": "Mass power outages after Thanksgiving Day storms",
+     "thumb": "https://i.ytimg.com/vi/unIUhMGh0zc/hqdefault.jpg",
+     "channel": "NBC News",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "b0lvLTp1gpo",
+     "title": "US Thanksgiving storms bring floods, flight delays and power outages",
+     "thumb": "https://i.ytimg.com/vi/b0lvLTp1gpo/hqdefault.jpg",
+     "channel": "Al Jazeera",
+     "lean": 0,
+     "label": "Center"
+    },
+    {
+     "videoId": "9K_SQF6ifA0",
+     "title": "Severe Thanksgiving storms trigger FLASH FLOODING, power outages for MILLIONS",
+     "thumb": "https://i.ytimg.com/vi/9K_SQF6ifA0/hqdefault.jpg",
+     "channel": "Fox News",
+     "lean": 2,
+     "label": "Right"
+    }
+   ]
+  },
+  {
    "title": "A toxic detonation in Iowa, and a Founding Father impersonator gets arrested: The news quiz",
    "summary": "A star quarterback gets released, a CEO gets reinstated, and two turkeys get spared.",
    "category": "World",
@@ -1658,8 +1905,8 @@
    "videos": []
   },
   {
-   "title": "New Look at Upcoming Doc on Kate Middleton’s Cancer Journey",
-   "summary": "In a new clip from the highly anticipated documentary, “Heal,” Kate Middleton describes being faced with her own mortality after being diagnosed with cancer and how she found comfort in speaking to others. NBC’s Daniele Hamadjian reports for TODAY.",
+   "title": "Live updates: The best Black Friday deals up to 70% off, handpicked by a shopping expert",
+   "summary": "We found the top trending Black Friday 2026 deals across Amazon, Target, Walmart and more. Don’t miss these worthwhile steals before they sell out.",
    "category": "General",
    "leans": [
     -1
@@ -1677,8 +1924,8 @@
      "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "New Look at Upcoming Doc on Kate Middleton’s Cancer Journey",
-     "url": "https://www.today.com/video/new-clip-released-from-kate-middleton-s-upcoming-doc-heal-274261061810"
+     "title": "Live updates: The best Black Friday deals up to 70% off, handpicked by a shopping expert",
+     "url": "https://www.nbcnews.com/select/shopping/best-black-friday-deals-11-27-2026-rcna611358"
     }
    ],
    "factchecks": [],
@@ -1793,35 +2040,8 @@
    "videos": []
   },
   {
-   "title": "U.S. forces disable commercial ship that allegedly tried to breach Iran blockade",
-   "summary": "A U.S. military aircraft struck a Palau-flagged ship with precision munitions after giving multiple warnings, U.S. Central Command said.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "U.S. forces disable commercial ship that allegedly tried to breach Iran blockade",
-     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-threats-diplomacy-strait-of-hormuz/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Afghan women in U.S. fear returning to Taliban rule",
-   "summary": "The threat of imminent deportation may have subsided, but some Afghan women who fled Taliban rule still face anxiety and legal limbo in America.",
+   "title": "Zohran Mamdani has successful surgery for torn Achilles and will make full recovery, staff says",
+   "summary": "Surgery to repair New York City Mayor Zohran Mamdani’s Achilles tendon went well Friday and he’s now recovering at Gracie Mansion, his press secretary said.",
    "category": "General",
    "leans": [
     -1
@@ -1836,191 +2056,29 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "CBS News",
+     "name": "NBC News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "Afghan women in U.S. fear returning to Taliban rule",
-     "url": "https://www.cbsnews.com/news/afghan-women-us-deportation-threat-taliban/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "This week on \"Sunday Morning\" (Nov. 29)",
-   "summary": "A look at the features for this week's broadcast of the Emmy-winning program, hosted by Jane Pauley.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "This week on \"Sunday Morning\" (Nov. 29)",
-     "url": "https://www.cbsnews.com/news/this-week-on-sunday-morning-nov-29-2026/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "The Mansion Above Dale Hollow Lake | Post Mortem",
-   "summary": "\"48 Hours\" correspondents Peter Van Sant and Natalie Morales go behind the scenes of the murder-for-hire death of Michael Harding. They discuss local rumors that the mansion where he lived with his wife, Julie, was cursed. They also examine Julie's unusual behavior leading up to ",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "The Mansion Above Dale Hollow Lake | Post Mortem",
-     "url": "https://www.cbsnews.com/video/112826-48-hours-post-mortem-episode-6/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Charity honoring veteran who raised millions with walks to be disbanded",
-   "summary": "Capt. Tom Moore raised almost $49 million with daily walks in his yard during the early days of the coronavirus pandemic.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Charity honoring veteran who raised millions with walks to be disbanded",
-     "url": "https://www.cbsnews.com/news/tom-moore-charity-disbanded-coronavirus-fundraiser/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "College student finds golf ball-sized brain tumor: \"There's no way\"",
-   "summary": "A scan of Niko Pitinii's heart, lungs and stomach found a rare brain tumor.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "College student finds golf ball-sized brain tumor: \"There's no way\"",
-     "url": "https://www.cbsnews.com/news/brain-tumor-cleveland-clinic-university-of-pittsburgh-panthers/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Gaza strike kills 2 MSF guards whom Israel claims were Hamas fighters",
-   "summary": "The IDF accused the two men killed of being terrorists posing as humanitarian workers.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Gaza strike kills 2 MSF guards whom Israel claims were Hamas fighters",
-     "url": "https://www.cbsnews.com/news/israel-gaza-msf-doctors-without-borders-strike/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "Spain's election could bring the far-right to power for 1st time in decades",
-   "summary": "For decades, Spain was relatively resistant to the rise of far-right populism seen elsewhere in Europe.",
-   "category": "World",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "CBS News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "Spain's election could bring the far-right to power for 1st time in decades",
-     "url": "https://www.cbsnews.com/news/spain-elections-pedro-sanchez-peoples-party-vox/"
+     "title": "Zohran Mamdani has successful surgery for torn Achilles and will make full recovery, staff says",
+     "url": "https://www.nbcnews.com/news/us-news/zohran-mamdani-surgery-torn-achilles-successful-ll-make-full-recovery-rcna611501"
     }
    ],
    "factchecks": [],
    "videos": [
     {
-     "videoId": "FHficc6yTNY",
-     "title": "Will Spain's housing crisis bring the far right to power?",
-     "thumb": "https://i.ytimg.com/vi/FHficc6yTNY/hqdefault.jpg",
-     "channel": "The Guardian",
+     "videoId": "wWO-mRZ9Ih8",
+     "title": "Mamdani recovering after ‘successful’ Achilles surgery",
+     "thumb": "https://i.ytimg.com/vi/wWO-mRZ9Ih8/hqdefault.jpg",
+     "channel": "NBC News",
      "lean": -1,
      "label": "Lean Left"
     }
    ]
   },
   {
-   "title": "LIVE:  ABC News Live",
-   "summary": "24/7 coverage of breaking news and live events",
-   "category": "General",
+   "title": "Building community with board games",
+   "summary": "Loneliness rates are up among U.S. adults. In Denver, a board game social group is working to build friendships and bring a community together.",
+   "category": "Economy",
    "leans": [
     -1
    ],
@@ -2034,20 +2092,20 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "ABC News",
+     "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "LIVE:  ABC News Live",
-     "url": "https://abcnews.com/video/41463246/"
+     "title": "Building community with board games",
+     "url": "https://www.cbsnews.com/video/building-community-with-board-games/"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "WATCH:  'Ugly pants exchange' trend goes viral among air travelers",
-   "summary": "A new viral trend at airports has emerged among groups of friends traveling together: bringing extra pairs of pants along for a lighthearted swap and reveal.",
-   "category": "General",
+   "title": "Inside a police operation cracking down on train robberies",
+   "summary": "Federal law enforcement is cracking down on train heists. Ash-har Quraishi has more.",
+   "category": "Economy",
    "leans": [
     -1
    ],
@@ -2061,19 +2119,19 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "ABC News",
+     "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "WATCH:  'Ugly pants exchange' trend goes viral among air travelers",
-     "url": "https://abcnews.com/video/138494154/"
+     "title": "Inside a police operation cracking down on train robberies",
+     "url": "https://www.cbsnews.com/video/inside-a-police-operation-cracking-down-on-train-robberies/"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "WATCH:  Breaking down the best holiday movies",
-   "summary": "Andscape senior entertainment reporter Kelley Carter discusses what defines a classic holiday film, shares her top picks and weighs in on if \"Die Hard\" qualifies as a holiday movie.",
+   "title": "Exclusive discounts from CBS Mornings Deals",
+   "summary": "On this edition of CBS Deals, we show you items that could help improve your everyday lifestyle. Visit cbsdeals.com to take advantage of these exclusive deals today. CBS earns commissions on purchases made through cbsdeals.com.",
    "category": "General",
    "leans": [
     -1
@@ -2088,20 +2146,20 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "ABC News",
+     "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "WATCH:  Breaking down the best holiday movies",
-     "url": "https://abcnews.com/video/138487748/"
+     "title": "Exclusive discounts from CBS Mornings Deals",
+     "url": "https://www.cbsnews.com/video/cbs-mornings-deals-112826/"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "WATCH:  12-year-old soccer star turns hearing loss into inspiration",
-   "summary": "ABC News' Danny New has the story of Delaney Anbardan, a young soccer player in Southern California who has continued pursuing the sport while navigating progressive hearing loss.",
-   "category": "General",
+   "title": "Hackers breach key Air Force cloud computing platform",
+   "summary": "Cloud One, a U.S. Air Force computing platform, was breached in a cyberattack, potentially exposing sensitive information.",
+   "category": "World",
    "leans": [
     -1
    ],
@@ -2115,20 +2173,56 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "ABC News",
+     "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "WATCH:  12-year-old soccer star turns hearing loss into inspiration",
-     "url": "https://abcnews.com/video/138478123/"
+     "title": "Hackers breach key Air Force cloud computing platform",
+     "url": "https://www.cbsnews.com/video/hackers-breach-key-air-force-computing-platform/"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "loF3o-efk_E",
+     "title": "Hackers breach US Air Force cloud computing platform: Report",
+     "thumb": "https://i.ytimg.com/vi/loF3o-efk_E/hqdefault.jpg",
+     "channel": "ABC News",
+     "lean": -1,
+     "label": "Lean Left"
+    }
+   ]
+  },
+  {
+   "title": "NATO eyes Black Sea defenses amid Russia-Ukraine war",
+   "summary": "The Black Sea has increasingly become a front for the Russia-Ukraine war. Chris Livesay has more on this.",
+   "category": "World",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 1,
+   "balance": {
+    "l": 1,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": null,
+   "sources": [
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "NATO eyes Black Sea defenses amid Russia-Ukraine war",
+     "url": "https://www.cbsnews.com/video/nato-eyes-black-sea-defenses-amid-russia-ukraine-war/"
     }
    ],
    "factchecks": [],
    "videos": []
   },
   {
-   "title": "WATCH:  Viral Thanksgiving story set to be adapted for small screen",
-   "summary": "Jamal Hinton and Wanda Dench's viral story of a wrong text that led to a decadelong Thanksgiving tradition is set to become a Lifetime production. Will Ganss shares the buzziest stories in Pop News.",
-   "category": "General",
+   "title": "Retailers roll out Cyber Monday deals",
+   "summary": "Americans have already spent billions chasing Black Friday bargains online and in stores. Over the weekend, customers are expected to spend much more.",
+   "category": "Tech",
    "leans": [
     -1
    ],
@@ -2142,38 +2236,11 @@
    "blindspot": null,
    "sources": [
     {
-     "name": "ABC News",
+     "name": "CBS News",
      "lean": -1,
      "label": "Lean Left",
-     "title": "WATCH:  Viral Thanksgiving story set to be adapted for small screen",
-     "url": "https://abcnews.com/video/138468539/"
-    }
-   ],
-   "factchecks": [],
-   "videos": []
-  },
-  {
-   "title": "WATCH:  Man uses balloon art to pay off $400K in student loans",
-   "summary": "ABC News' Danny New talks to a doctor in New York who's using his balloon twisting talents to help him pay off his student loan debt.",
-   "category": "General",
-   "leans": [
-    -1
-   ],
-   "span": 0,
-   "n_sources": 1,
-   "balance": {
-    "l": 1,
-    "c": 0,
-    "r": 0
-   },
-   "blindspot": null,
-   "sources": [
-    {
-     "name": "ABC News",
-     "lean": -1,
-     "label": "Lean Left",
-     "title": "WATCH:  Man uses balloon art to pay off $400K in student loans",
-     "url": "https://abcnews.com/video/138464693/"
+     "title": "Retailers roll out Cyber Monday deals",
+     "url": "https://www.cbsnews.com/video/retailers-roll-out-cyber-monday-deals/"
     }
    ],
    "factchecks": [],
@@ -2182,14 +2249,106 @@
  ],
  "blindspots": [
   {
-   "title": "Betr Promo Code FOXNEWS: Unlock $200 in Bonuses and 4 Free Picks for Any CFB Rivalry Week",
-   "summary": "Betr promo code FOXNEWS unlocks $200 in bonuses and four free picks for new users on any CFB Rivalry Week game, including Michigan at Ohio State.",
-   "category": "General",
+   "title": "American Airlines Jet Clips Another At Reagan National, Breaking Off Piece Of Wing",
+   "summary": "Two American Airlines jets clipped wings on the ground at Ronald Reagan Washington National Airport on Friday evening, as one aircraft clipped the wing of another while taxiing for departure, according to the Federal Aviation Administration (FAA). The collision occurred at approx",
+   "category": "Economy",
    "leans": [
     1,
     2
    ],
    "span": 1,
+   "n_sources": 3,
+   "balance": {
+    "l": 0,
+    "c": 0,
+    "r": 3
+   },
+   "blindspot": "left",
+   "sources": [
+    {
+     "name": "Washington Times",
+     "lean": 1,
+     "label": "Lean Right",
+     "title": "Two American Airlines departures out of Reagan National delayed after planes clip wing tips",
+     "url": "https://www.washingtontimes.com/news/2026/nov/28/two-american-airlines-departures-reagan-national-delayed-planes-clip/"
+    },
+    {
+     "name": "The Daily Wire",
+     "lean": 2,
+     "label": "Right",
+     "title": "American Airlines Jet Clips Another At Reagan National, Breaking Off Piece Of Wing",
+     "url": "https://www.dailywire.com/news/american-airlines-jet-clips-another-at-reagan-national-breaking-off-piece-of-wing"
+    },
+    {
+     "name": "Newsmax",
+     "lean": 2,
+     "label": "Right",
+     "title": "Plane Clips Wing of Aircraft at Reagan Airport",
+     "url": "https://www.newsmax.com/newsfront/american-airlines-plane-faa/2026/11/27/id/1277746"
+    }
+   ],
+   "factchecks": [],
+   "videos": [
+    {
+     "videoId": "mn9mR07_rZ0",
+     "title": "American Airlines jet clips another plane’s wing at DCA",
+     "thumb": "https://i.ytimg.com/vi/mn9mR07_rZ0/hqdefault.jpg",
+     "channel": "CNN",
+     "lean": -1,
+     "label": "Lean Left"
+    },
+    {
+     "videoId": "vZ-lxHI5hg0",
+     "title": "American Airlines planes CLIP WINGS before takeoff",
+     "thumb": "https://i.ytimg.com/vi/vZ-lxHI5hg0/hqdefault.jpg",
+     "channel": "Fox News",
+     "lean": 2,
+     "label": "Right"
+    }
+   ]
+  },
+  {
+   "title": "New Look at Upcoming Doc on Kate Middleton’s Cancer Journey",
+   "summary": "In a new clip from the highly anticipated documentary, “Heal,” Kate Middleton describes being faced with her own mortality after being diagnosed with cancer and how she found comfort in speaking to others. NBC’s Daniele Hamadjian reports for TODAY.",
+   "category": "General",
+   "leans": [
+    -1
+   ],
+   "span": 0,
+   "n_sources": 2,
+   "balance": {
+    "l": 2,
+    "c": 0,
+    "r": 0
+   },
+   "blindspot": "right",
+   "sources": [
+    {
+     "name": "NBC News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "New Look at Upcoming Doc on Kate Middleton’s Cancer Journey",
+     "url": "https://www.today.com/video/new-clip-released-from-kate-middleton-s-upcoming-doc-heal-274261061810"
+    },
+    {
+     "name": "CBS News",
+     "lean": -1,
+     "label": "Lean Left",
+     "title": "New film explores Princess Kate's cancer recovery journey",
+     "url": "https://www.cbsnews.com/video/new-film-explores-princess-kates-cancer-recovery-journey/"
+    }
+   ],
+   "factchecks": [],
+   "videos": []
+  },
+  {
+   "title": "GOP lawmaker who defied blue wave reveals roadmap to win back Gen Z",
+   "summary": "Clay Fuller says the GOP lost its ability to reach young voters after Charlie Kirk's assassination, urging economic policies to restore the American dream.",
+   "category": "Politics",
+   "leans": [
+    2
+   ],
+   "span": 0,
    "n_sources": 2,
    "balance": {
     "l": 0,
@@ -2199,39 +2358,18 @@
    "blindspot": "left",
    "sources": [
     {
-     "name": "New York Post",
-     "lean": 1,
-     "label": "Lean Right",
-     "title": "Betr promo code NYPBONUS: Get up to $200 back in bonus, four no-sweat tokens, plus a free pick for Rivalry Week",
-     "url": "https://nypost.com/2026/11/28/betting/betr-promo-code-nypbonus-get-up-to-200-back-in-bonus-four-no-sweat-tokens-plus-a-free-pick-for-rivalry-week/"
-    },
-    {
      "name": "Fox News",
      "lean": 2,
      "label": "Right",
-     "title": "BetMGM Bonus Code FOXNEWS: Cover Your First CFB Rivalry Week Bet up to $1500",
-     "url": "https://www.foxnews.com/outkick-betting/betmgm-bonus-code-foxnews-cover-your-first-cfb-rivalry-week-bet-up-1500"
+     "title": "GOP lawmaker who defied blue wave reveals roadmap to win back Gen Z",
+     "url": "https://www.foxnews.com/politics/gop-lawmaker-who-defied-blue-wave-reveals-roadmap-win-back-gen-z"
     },
     {
-     "name": "Fox News",
+     "name": "Daily Caller",
      "lean": 2,
      "label": "Right",
-     "title": "FanDuel Promo Code: Bet $5, Get $200 for CFB Rivalry Week",
-     "url": "https://www.foxnews.com/outkick-betting/fanduel-promo-code-bet-5-get-200-cfb-rivalry-week"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Underdog Promo Code FOXNEWS Unlocks Play $10, Get $50 on Rivalry Week",
-     "url": "https://www.foxnews.com/outkick-betting/underdog-promo-code-foxnews-unlocks-play-10-get-50-rivalry-week"
-    },
-    {
-     "name": "Fox News",
-     "lean": 2,
-     "label": "Right",
-     "title": "Betr Promo Code FOXNEWS: Unlock $200 in Bonuses and 4 Free Picks for Any CFB Rivalry Week",
-     "url": "https://www.foxnews.com/outkick-betting/betr-promo-code-foxnews-unlock-200-bonuses-4-free-picks-any-cfb-rivalry-week"
+     "title": "Will The Blue Wave Be Followed By A Green Wave?",
+     "url": "https://dailycaller.com/2026/11/27/opinion-democrats-midterms-green-wave-bonner-cohen"
     }
    ],
    "factchecks": [],
@@ -2270,49 +2408,6 @@
    ],
    "factchecks": [],
    "videos": []
-  },
-  {
-   "title": "American Airlines Jet Clips Another At Reagan National, Breaking Off Piece Of Wing",
-   "summary": "Two American Airlines jets clipped wings on the ground at Ronald Reagan Washington National Airport on Friday evening, as one aircraft clipped the wing of another while taxiing for departure, according to the Federal Aviation Administration (FAA). The collision occurred at approx",
-   "category": "Economy",
-   "leans": [
-    2
-   ],
-   "span": 0,
-   "n_sources": 2,
-   "balance": {
-    "l": 0,
-    "c": 0,
-    "r": 2
-   },
-   "blindspot": "left",
-   "sources": [
-    {
-     "name": "The Daily Wire",
-     "lean": 2,
-     "label": "Right",
-     "title": "American Airlines Jet Clips Another At Reagan National, Breaking Off Piece Of Wing",
-     "url": "https://www.dailywire.com/news/american-airlines-jet-clips-another-at-reagan-national-breaking-off-piece-of-wing"
-    },
-    {
-     "name": "Newsmax",
-     "lean": 2,
-     "label": "Right",
-     "title": "Plane Clips Wing of Aircraft at Reagan Airport",
-     "url": "https://www.newsmax.com/newsfront/american-airlines-plane-faa/2026/11/27/id/1277746"
-    }
-   ],
-   "factchecks": [],
-   "videos": [
-    {
-     "videoId": "mn9mR07_rZ0",
-     "title": "American Airlines jet clips another plane’s wing at DCA",
-     "thumb": "https://i.ytimg.com/vi/mn9mR07_rZ0/hqdefault.jpg",
-     "channel": "CNN",
-     "lean": -1,
-     "label": "Lean Left"
-    }
-   ]
   },
   {
    "title": "Republican Senator Discloses Her Husband Committed Suicide",
